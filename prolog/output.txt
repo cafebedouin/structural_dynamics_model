@@ -1,0 +1,2941 @@
+Welcome to SWI-Prolog (threaded, 64 bits, version 9.2.9)
+SWI-Prolog comes with ABSOLUTELY NO WARRANTY. This is free software.
+Please run ?- license. for legal details.
+
+For online help and background, visit https://www.swi-prolog.org
+For built-in help, use ?- help(Topic). or ?- apropos(Word).
+
+?- [v3_1_stack].
+
+[DOMAIN PRIORS] Module loaded
+[DOMAIN PRIORS] Category distribution:
+  - physical_natural: 7 domains
+  - formal_logic: 81 domains
+  - statutory_formal: 10 domains
+  - extractive_market: 18 domains
+  - narrative_history: 27 domains
+  - unknown_novel: 0 domains
+[DOMAIN PRIORS] Total: 143 mapped domains
+
+====================================================
+   v3.1 STRUCTURAL ANALYSIS STACK INITIALIZED
+====================================================
+Namespace:  Consolidated & Grounded (v3.1)
+Control:    Scenario Manager Active
+Usage:      run_scenario('file.pl', interval_id).
+====================================================
+true.
+
+?- [validation_suite].
+true.
+
+?- run_dynamic_suite.
+--- STARTING DYNAMIC VALIDATION ---
+
+[1] DOMAIN: 26USC469 (./testsets/26usc469.pl)
+
+[SCENARIO MANAGER] Clearing Knowledge Base...
+[OK] Knowledge Base is empty.
+[SCENARIO MANAGER] Loading: ./testsets/26usc469.pl...
+[SCENARIO MANAGER] Performing Global Repair...
+
+[REPAIR] Auditing vectors for: tax_code_section_469...
+! NOTICE: Novel Domain "tax_code_section_469" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(organizational) at T=0
+! NOTICE: Novel Domain "tax_code_section_469" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(organizational) at T=0
+! NOTICE: Novel Domain "tax_code_section_469" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(organizational) at T=0
+! NOTICE: Novel Domain "tax_code_section_469" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(organizational) at T=0
+! NOTICE: Novel Domain "tax_code_section_469" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(organizational) at T=10
+! NOTICE: Novel Domain "tax_code_section_469" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(organizational) at T=10
+! NOTICE: Novel Domain "tax_code_section_469" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(organizational) at T=10
+! NOTICE: Novel Domain "tax_code_section_469" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(organizational) at T=10
+! NOTICE: Novel Domain "tax_code_section_469" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(class) at T=0
+! NOTICE: Novel Domain "tax_code_section_469" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(class) at T=0
+! NOTICE: Novel Domain "tax_code_section_469" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(class) at T=0
+! NOTICE: Novel Domain "tax_code_section_469" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(class) at T=0
+! NOTICE: Novel Domain "tax_code_section_469" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(class) at T=10
+! NOTICE: Novel Domain "tax_code_section_469" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(class) at T=10
+! NOTICE: Novel Domain "tax_code_section_469" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(class) at T=10
+! NOTICE: Novel Domain "tax_code_section_469" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(class) at T=10
+! NOTICE: Novel Domain "tax_code_section_469" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(individual) at T=0
+! NOTICE: Novel Domain "tax_code_section_469" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(individual) at T=0
+! NOTICE: Novel Domain "tax_code_section_469" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(individual) at T=0
+! NOTICE: Novel Domain "tax_code_section_469" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(individual) at T=0
+! NOTICE: Novel Domain "tax_code_section_469" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(individual) at T=10
+! NOTICE: Novel Domain "tax_code_section_469" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(individual) at T=10
+! NOTICE: Novel Domain "tax_code_section_469" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(individual) at T=10
+! NOTICE: Novel Domain "tax_code_section_469" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(individual) at T=10
+
+[REPAIR] Auditing vectors for: tax_code_section_469...
+
+>>> INITIATING v3.1.1 DR-AUDIT SUITE: tax_code_section_469
+[STEP 1] Auditing and Repairing Measurements...
+
+[REPAIR] Auditing vectors for: tax_code_section_469...
+[STEP 2] Verifying Data Integrity...
+
+--- [START] v3.1 DATA INTEGRITY VERIFICATION ---
+[OK] Ontology Schema matches.
+Checking Interval: tax_code_section_469 (0-10)
+Checking Interval: tax_code_section_469 (0-10)
+--- [END] Verification Complete ---
+[OK] Verification passed. Proceeding to audit.
+[STEP 3] Computing System Gradients...
+[STEP 4] DRL Ontological Audit...
+  [OK] No Ontological Fraud detected.
+[STEP 5] Extracting Omega Variables (Ω)...
+  No reasoning blockers (Omegas) identified.
+[STEP 6] Generating Executive Summary...
+
+
+====================================================
+   DEFERENTIAL REALISM (DR) EXECUTIVE SUMMARY
+====================================================
+Timeline:       0 to 10
+Structural Pattern: stable
+Confidence:     high
+
+[CONSTRAINT INVENTORY: REALITY AUDIT]
+  Constraint | Claimed | Actual | Action
+  ----------------------------------------------------------------------
+
+[META-LOGICAL AUDIT: ONTOLOGICAL FRAUD DETECTION]
+  No classification errors detected. System is Ontologically Coherent.
+
+[STRUCTURAL SIGNATURE ANALYSIS]
+
+[UKE_DR FEASIBILITY BRIDGE]
+  Recommendation | UKE Status
+  ----------------------------------------------------------------------
+
+Aggregate Magnitude (Kappa) at Tn: 0.50
+
+[PERSPECTIVAL GAP ANALYSIS]
+====================================================
+[STEP 7] Generating LLM Refinement Manifest...
+
+### START LLM REFINEMENT MANIFEST: tax_code_section_469 ###
+
+[PERSPECTIVAL_GAPS]
+
+[ONTOLOGICAL_MISMATCHES]
+  - None detected.
+
+[UNRESOLVED_OMEGAS]
+  - None detected.
+
+### END REFINEMENT MANIFEST ###
+
+### START LLM REFINEMENT MANIFEST: tax_code_section_469 ###
+
+[PERSPECTIVAL_GAPS]
+
+[ONTOLOGICAL_MISMATCHES]
+  - None detected.
+
+[UNRESOLVED_OMEGAS]
+  - None detected.
+
+### END REFINEMENT MANIFEST ###
+
+[2] DOMAIN: 26USC469_REAL_ESTATE_EXEMPTION (./testsets/26usc469_real_estate_exemption.pl)
+
+[SCENARIO MANAGER] Clearing Knowledge Base...
+[OK] Knowledge Base is empty.
+[SCENARIO MANAGER] Loading: ./testsets/26usc469_real_estate_exemption.pl...
+[SCENARIO MANAGER] Performing Global Repair...
+
+[REPAIR] Auditing vectors for: section_469_c7_professional_threshold...
+! NOTICE: Novel Domain "section_469_c7_professional_threshold" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(organizational) at T=0
+! NOTICE: Novel Domain "section_469_c7_professional_threshold" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(organizational) at T=0
+! NOTICE: Novel Domain "section_469_c7_professional_threshold" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(organizational) at T=0
+! NOTICE: Novel Domain "section_469_c7_professional_threshold" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(organizational) at T=0
+! NOTICE: Novel Domain "section_469_c7_professional_threshold" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(organizational) at T=10
+! NOTICE: Novel Domain "section_469_c7_professional_threshold" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(organizational) at T=10
+! NOTICE: Novel Domain "section_469_c7_professional_threshold" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(organizational) at T=10
+! NOTICE: Novel Domain "section_469_c7_professional_threshold" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(organizational) at T=10
+! NOTICE: Novel Domain "section_469_c7_professional_threshold" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(class) at T=0
+! NOTICE: Novel Domain "section_469_c7_professional_threshold" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(class) at T=0
+! NOTICE: Novel Domain "section_469_c7_professional_threshold" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(class) at T=0
+! NOTICE: Novel Domain "section_469_c7_professional_threshold" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(class) at T=0
+! NOTICE: Novel Domain "section_469_c7_professional_threshold" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(class) at T=10
+! NOTICE: Novel Domain "section_469_c7_professional_threshold" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(class) at T=10
+! NOTICE: Novel Domain "section_469_c7_professional_threshold" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(class) at T=10
+! NOTICE: Novel Domain "section_469_c7_professional_threshold" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(class) at T=10
+! NOTICE: Novel Domain "section_469_c7_professional_threshold" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(individual) at T=0
+! NOTICE: Novel Domain "section_469_c7_professional_threshold" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(individual) at T=0
+! NOTICE: Novel Domain "section_469_c7_professional_threshold" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(individual) at T=0
+! NOTICE: Novel Domain "section_469_c7_professional_threshold" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(individual) at T=0
+! NOTICE: Novel Domain "section_469_c7_professional_threshold" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(individual) at T=10
+! NOTICE: Novel Domain "section_469_c7_professional_threshold" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(individual) at T=10
+! NOTICE: Novel Domain "section_469_c7_professional_threshold" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(individual) at T=10
+! NOTICE: Novel Domain "section_469_c7_professional_threshold" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(individual) at T=10
+
+[REPAIR] Auditing vectors for: section_469_c7_professional_threshold...
+
+>>> INITIATING v3.1.1 DR-AUDIT SUITE: section_469_c7_professional_threshold
+[STEP 1] Auditing and Repairing Measurements...
+
+[REPAIR] Auditing vectors for: section_469_c7_professional_threshold...
+[STEP 2] Verifying Data Integrity...
+
+--- [START] v3.1 DATA INTEGRITY VERIFICATION ---
+[OK] Ontology Schema matches.
+Checking Interval: section_469_c7_professional_threshold (0-10)
+Checking Interval: section_469_c7_professional_threshold (0-10)
+--- [END] Verification Complete ---
+[OK] Verification passed. Proceeding to audit.
+[STEP 3] Computing System Gradients...
+[STEP 4] DRL Ontological Audit...
+  [OK] No Ontological Fraud detected.
+[STEP 5] Extracting Omega Variables (Ω)...
+  No reasoning blockers (Omegas) identified.
+[STEP 6] Generating Executive Summary...
+
+
+====================================================
+   DEFERENTIAL REALISM (DR) EXECUTIVE SUMMARY
+====================================================
+Timeline:       0 to 10
+Structural Pattern: stable
+Confidence:     high
+
+[CONSTRAINT INVENTORY: REALITY AUDIT]
+  Constraint | Claimed | Actual | Action
+  ----------------------------------------------------------------------
+
+[META-LOGICAL AUDIT: ONTOLOGICAL FRAUD DETECTION]
+  No classification errors detected. System is Ontologically Coherent.
+
+[STRUCTURAL SIGNATURE ANALYSIS]
+
+[UKE_DR FEASIBILITY BRIDGE]
+  Recommendation | UKE Status
+  ----------------------------------------------------------------------
+
+Aggregate Magnitude (Kappa) at Tn: 0.50
+
+[PERSPECTIVAL GAP ANALYSIS]
+====================================================
+[STEP 7] Generating LLM Refinement Manifest...
+
+### START LLM REFINEMENT MANIFEST: section_469_c7_professional_threshold ###
+
+[PERSPECTIVAL_GAPS]
+
+[ONTOLOGICAL_MISMATCHES]
+  - None detected.
+
+[UNRESOLVED_OMEGAS]
+  - None detected.
+
+### END REFINEMENT MANIFEST ###
+
+### START LLM REFINEMENT MANIFEST: section_469_c7_professional_threshold ###
+
+[PERSPECTIVAL_GAPS]
+
+[ONTOLOGICAL_MISMATCHES]
+  - None detected.
+
+[UNRESOLVED_OMEGAS]
+  - None detected.
+
+### END REFINEMENT MANIFEST ###
+
+[3] DOMAIN: CLOUDFLARE_DUAL_CLASS_ASYMMETRY (./testsets/cloudflare_dual_class_asymmetry.pl)
+
+[SCENARIO MANAGER] Clearing Knowledge Base...
+[OK] Knowledge Base is empty.
+[SCENARIO MANAGER] Loading: ./testsets/cloudflare_dual_class_asymmetry.pl...
+[SCENARIO MANAGER] Performing Global Repair...
+
+[REPAIR] Auditing vectors for: cloudflare_dual_class_asymmetry...
+! NOTICE: Novel Domain "cloudflare_dual_class_asymmetry" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(organizational) at T=0
+! NOTICE: Novel Domain "cloudflare_dual_class_asymmetry" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(organizational) at T=0
+! NOTICE: Novel Domain "cloudflare_dual_class_asymmetry" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(organizational) at T=0
+! NOTICE: Novel Domain "cloudflare_dual_class_asymmetry" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(organizational) at T=0
+! NOTICE: Novel Domain "cloudflare_dual_class_asymmetry" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(organizational) at T=10
+! NOTICE: Novel Domain "cloudflare_dual_class_asymmetry" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(organizational) at T=10
+! NOTICE: Novel Domain "cloudflare_dual_class_asymmetry" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(organizational) at T=10
+! NOTICE: Novel Domain "cloudflare_dual_class_asymmetry" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(organizational) at T=10
+! NOTICE: Novel Domain "cloudflare_dual_class_asymmetry" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(class) at T=0
+! NOTICE: Novel Domain "cloudflare_dual_class_asymmetry" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(class) at T=0
+! NOTICE: Novel Domain "cloudflare_dual_class_asymmetry" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(class) at T=0
+! NOTICE: Novel Domain "cloudflare_dual_class_asymmetry" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(class) at T=0
+! NOTICE: Novel Domain "cloudflare_dual_class_asymmetry" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(class) at T=10
+! NOTICE: Novel Domain "cloudflare_dual_class_asymmetry" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(class) at T=10
+! NOTICE: Novel Domain "cloudflare_dual_class_asymmetry" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(class) at T=10
+! NOTICE: Novel Domain "cloudflare_dual_class_asymmetry" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(class) at T=10
+! NOTICE: Novel Domain "cloudflare_dual_class_asymmetry" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(individual) at T=0
+! NOTICE: Novel Domain "cloudflare_dual_class_asymmetry" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(individual) at T=0
+! NOTICE: Novel Domain "cloudflare_dual_class_asymmetry" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(individual) at T=0
+! NOTICE: Novel Domain "cloudflare_dual_class_asymmetry" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(individual) at T=0
+! NOTICE: Novel Domain "cloudflare_dual_class_asymmetry" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(individual) at T=10
+! NOTICE: Novel Domain "cloudflare_dual_class_asymmetry" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(individual) at T=10
+! NOTICE: Novel Domain "cloudflare_dual_class_asymmetry" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(individual) at T=10
+! NOTICE: Novel Domain "cloudflare_dual_class_asymmetry" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(individual) at T=10
+
+[REPAIR] Auditing vectors for: cloudflare_dual_class_asymmetry...
+
+>>> INITIATING v3.1.1 DR-AUDIT SUITE: cloudflare_dual_class_asymmetry
+[STEP 1] Auditing and Repairing Measurements...
+
+[REPAIR] Auditing vectors for: cloudflare_dual_class_asymmetry...
+[STEP 2] Verifying Data Integrity...
+
+--- [START] v3.1 DATA INTEGRITY VERIFICATION ---
+[OK] Ontology Schema matches.
+Checking Interval: cloudflare_dual_class_asymmetry (0-10)
+Checking Interval: cloudflare_dual_class_asymmetry (0-10)
+--- [END] Verification Complete ---
+[OK] Verification passed. Proceeding to audit.
+[STEP 3] Computing System Gradients...
+[STEP 4] DRL Ontological Audit...
+  [OK] No Ontological Fraud detected.
+[STEP 5] Extracting Omega Variables (Ω)...
+  No reasoning blockers (Omegas) identified.
+[STEP 6] Generating Executive Summary...
+
+
+====================================================
+   DEFERENTIAL REALISM (DR) EXECUTIVE SUMMARY
+====================================================
+Timeline:       0 to 10
+Structural Pattern: stable
+Confidence:     high
+
+[CONSTRAINT INVENTORY: REALITY AUDIT]
+  Constraint | Claimed | Actual | Action
+  ----------------------------------------------------------------------
+
+[META-LOGICAL AUDIT: ONTOLOGICAL FRAUD DETECTION]
+  No classification errors detected. System is Ontologically Coherent.
+
+[STRUCTURAL SIGNATURE ANALYSIS]
+
+[UKE_DR FEASIBILITY BRIDGE]
+  Recommendation | UKE Status
+  ----------------------------------------------------------------------
+
+Aggregate Magnitude (Kappa) at Tn: 0.50
+
+[PERSPECTIVAL GAP ANALYSIS]
+====================================================
+[STEP 7] Generating LLM Refinement Manifest...
+
+### START LLM REFINEMENT MANIFEST: cloudflare_dual_class_asymmetry ###
+
+[PERSPECTIVAL_GAPS]
+
+[ONTOLOGICAL_MISMATCHES]
+  - None detected.
+
+[UNRESOLVED_OMEGAS]
+  - None detected.
+
+### END REFINEMENT MANIFEST ###
+
+### START LLM REFINEMENT MANIFEST: cloudflare_dual_class_asymmetry ###
+
+[PERSPECTIVAL_GAPS]
+
+[ONTOLOGICAL_MISMATCHES]
+  - None detected.
+
+[UNRESOLVED_OMEGAS]
+  - None detected.
+
+### END REFINEMENT MANIFEST ###
+
+[4] DOMAIN: COLUMBIA_2026_ELECTIONS (./testsets/columbia_2026_elections.pl)
+
+[SCENARIO MANAGER] Clearing Knowledge Base...
+[OK] Knowledge Base is empty.
+[SCENARIO MANAGER] Loading: ./testsets/columbia_2026_elections.pl...
+[SCENARIO MANAGER] Performing Global Repair...
+
+[REPAIR] Auditing vectors for: colombia_2026_presidential_election...
+! NOTICE: Novel Domain "colombia_2026_presidential_election" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(organizational) at T=0
+! NOTICE: Novel Domain "colombia_2026_presidential_election" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(organizational) at T=0
+! NOTICE: Novel Domain "colombia_2026_presidential_election" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(organizational) at T=0
+! NOTICE: Novel Domain "colombia_2026_presidential_election" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(organizational) at T=0
+! NOTICE: Novel Domain "colombia_2026_presidential_election" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(organizational) at T=10
+! NOTICE: Novel Domain "colombia_2026_presidential_election" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(organizational) at T=10
+! NOTICE: Novel Domain "colombia_2026_presidential_election" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(organizational) at T=10
+! NOTICE: Novel Domain "colombia_2026_presidential_election" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(organizational) at T=10
+! NOTICE: Novel Domain "colombia_2026_presidential_election" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(class) at T=0
+! NOTICE: Novel Domain "colombia_2026_presidential_election" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(class) at T=0
+! NOTICE: Novel Domain "colombia_2026_presidential_election" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(class) at T=0
+! NOTICE: Novel Domain "colombia_2026_presidential_election" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(class) at T=0
+! NOTICE: Novel Domain "colombia_2026_presidential_election" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(class) at T=10
+! NOTICE: Novel Domain "colombia_2026_presidential_election" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(class) at T=10
+! NOTICE: Novel Domain "colombia_2026_presidential_election" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(class) at T=10
+! NOTICE: Novel Domain "colombia_2026_presidential_election" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(class) at T=10
+! NOTICE: Novel Domain "colombia_2026_presidential_election" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(individual) at T=0
+! NOTICE: Novel Domain "colombia_2026_presidential_election" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(individual) at T=0
+! NOTICE: Novel Domain "colombia_2026_presidential_election" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(individual) at T=0
+! NOTICE: Novel Domain "colombia_2026_presidential_election" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(individual) at T=0
+! NOTICE: Novel Domain "colombia_2026_presidential_election" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(individual) at T=10
+! NOTICE: Novel Domain "colombia_2026_presidential_election" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(individual) at T=10
+! NOTICE: Novel Domain "colombia_2026_presidential_election" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(individual) at T=10
+! NOTICE: Novel Domain "colombia_2026_presidential_election" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(individual) at T=10
+
+[REPAIR] Auditing vectors for: colombia_2026_presidential_election...
+
+>>> INITIATING v3.1.1 DR-AUDIT SUITE: colombia_2026_presidential_election
+[STEP 1] Auditing and Repairing Measurements...
+
+[REPAIR] Auditing vectors for: colombia_2026_presidential_election...
+[STEP 2] Verifying Data Integrity...
+
+--- [START] v3.1 DATA INTEGRITY VERIFICATION ---
+ERROR: Invalid constraint_claim(colombia_2026_presidential_election,election_cycle)
+[FAIL] Schema mismatch.
+Checking Interval: colombia_2026_presidential_election (0-10)
+Checking Interval: colombia_2026_presidential_election (0-10)
+--- [END] Verification Complete ---
+[OK] Verification passed. Proceeding to audit.
+[STEP 3] Computing System Gradients...
+[STEP 4] DRL Ontological Audit...
+  [OK] No Ontological Fraud detected.
+[STEP 5] Extracting Omega Variables (Ω)...
+  No reasoning blockers (Omegas) identified.
+[STEP 6] Generating Executive Summary...
+
+
+====================================================
+   DEFERENTIAL REALISM (DR) EXECUTIVE SUMMARY
+====================================================
+Timeline:       0 to 10
+Structural Pattern: stable
+Confidence:     high
+
+[CONSTRAINT INVENTORY: REALITY AUDIT]
+  Constraint | Claimed | Actual | Action
+  ----------------------------------------------------------------------
+  colombia_2026_presidential_election | election_cycle | tangled_rope | reform
+
+[META-LOGICAL AUDIT: ONTOLOGICAL FRAUD DETECTION]
+  No classification errors detected. System is Ontologically Coherent.
+
+[STRUCTURAL SIGNATURE ANALYSIS]
+  colombia_2026_presidential_election: constructed_constraint (confidence: low)
+    → CONSTRUCTED CONSTRAINT signature for colombia_2026_presidential_election: Active enforcement detected (suppression=0.35, resistance=0.50) with 0 asymmetric beneficiaries. This is an institutionally maintained rule requiring ongoing suppression energy.
+
+[UKE_DR FEASIBILITY BRIDGE]
+  Recommendation | UKE Status
+  ----------------------------------------------------------------------
+
+Aggregate Magnitude (Kappa) at Tn: 0.50
+
+[PERSPECTIVAL GAP ANALYSIS]
+
+  Analysis for Constraint: colombia_2026_presidential_election
+    - Individual (Powerless): none
+    - Institutional (Manager): none
+====================================================
+[STEP 7] Generating LLM Refinement Manifest...
+
+### START LLM REFINEMENT MANIFEST: colombia_2026_presidential_election ###
+
+[PERSPECTIVAL_GAPS]
+
+[ONTOLOGICAL_MISMATCHES]
+  - None detected.
+
+[UNRESOLVED_OMEGAS]
+  - None detected.
+
+### END REFINEMENT MANIFEST ###
+
+### START LLM REFINEMENT MANIFEST: colombia_2026_presidential_election ###
+
+[PERSPECTIVAL_GAPS]
+
+[ONTOLOGICAL_MISMATCHES]
+  - None detected.
+
+[UNRESOLVED_OMEGAS]
+  - None detected.
+
+### END REFINEMENT MANIFEST ###
+
+[5] DOMAIN: EINSTEINS_RELATIVITY (./testsets/einsteins_relativity.pl)
+
+[SCENARIO MANAGER] Clearing Knowledge Base...
+[OK] Knowledge Base is empty.
+[SCENARIO MANAGER] Loading: ./testsets/einsteins_relativity.pl...
+ERROR: /home/scott/bin/structural_dynamics_model/prolog/testsets/einsteins_relativity.pl:69:96: Syntax error: Operator expected
+ERROR: /home/scott/bin/structural_dynamics_model/prolog/testsets/einsteins_relativity.pl:74:56: Syntax error: Operator expected
+[SCENARIO MANAGER] Performing Global Repair...
+
+[REPAIR] Auditing vectors for: invariant_velocity_of_light...
+! NOTICE: Novel Domain "invariant_velocity_of_light" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(organizational) at T=0
+! NOTICE: Novel Domain "invariant_velocity_of_light" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(organizational) at T=0
+! NOTICE: Novel Domain "invariant_velocity_of_light" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(organizational) at T=0
+! NOTICE: Novel Domain "invariant_velocity_of_light" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(organizational) at T=0
+! NOTICE: Novel Domain "invariant_velocity_of_light" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(organizational) at T=10
+! NOTICE: Novel Domain "invariant_velocity_of_light" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(organizational) at T=10
+! NOTICE: Novel Domain "invariant_velocity_of_light" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(organizational) at T=10
+! NOTICE: Novel Domain "invariant_velocity_of_light" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(organizational) at T=10
+! NOTICE: Novel Domain "invariant_velocity_of_light" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(class) at T=0
+! NOTICE: Novel Domain "invariant_velocity_of_light" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(class) at T=0
+! NOTICE: Novel Domain "invariant_velocity_of_light" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(class) at T=0
+! NOTICE: Novel Domain "invariant_velocity_of_light" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(class) at T=0
+! NOTICE: Novel Domain "invariant_velocity_of_light" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(class) at T=10
+! NOTICE: Novel Domain "invariant_velocity_of_light" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(class) at T=10
+! NOTICE: Novel Domain "invariant_velocity_of_light" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(class) at T=10
+! NOTICE: Novel Domain "invariant_velocity_of_light" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(class) at T=10
+! NOTICE: Novel Domain "invariant_velocity_of_light" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(individual) at T=0
+! NOTICE: Novel Domain "invariant_velocity_of_light" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(individual) at T=0
+! NOTICE: Novel Domain "invariant_velocity_of_light" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(individual) at T=0
+! NOTICE: Novel Domain "invariant_velocity_of_light" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(individual) at T=0
+! NOTICE: Novel Domain "invariant_velocity_of_light" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(individual) at T=10
+! NOTICE: Novel Domain "invariant_velocity_of_light" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(individual) at T=10
+! NOTICE: Novel Domain "invariant_velocity_of_light" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(individual) at T=10
+! NOTICE: Novel Domain "invariant_velocity_of_light" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(individual) at T=10
+
+[REPAIR] Auditing vectors for: invariant_velocity_of_light...
+
+>>> INITIATING v3.1.1 DR-AUDIT SUITE: invariant_velocity_of_light
+[STEP 1] Auditing and Repairing Measurements...
+
+[REPAIR] Auditing vectors for: invariant_velocity_of_light...
+[STEP 2] Verifying Data Integrity...
+
+--- [START] v3.1 DATA INTEGRITY VERIFICATION ---
+ERROR: Invalid constraint_claim(invariant_velocity_of_light,natural_law)
+[FAIL] Schema mismatch.
+Checking Interval: invariant_velocity_of_light (0-10)
+Checking Interval: invariant_velocity_of_light (0-10)
+--- [END] Verification Complete ---
+[OK] Verification passed. Proceeding to audit.
+[STEP 3] Computing System Gradients...
+[STEP 4] DRL Ontological Audit...
+  [OK] No Ontological Fraud detected.
+[STEP 5] Extracting Omega Variables (Ω)...
+  No reasoning blockers (Omegas) identified.
+[STEP 6] Generating Executive Summary...
+
+
+====================================================
+   DEFERENTIAL REALISM (DR) EXECUTIVE SUMMARY
+====================================================
+Timeline:       0 to 10
+Structural Pattern: stable
+Confidence:     high
+
+[CONSTRAINT INVENTORY: REALITY AUDIT]
+  Constraint | Claimed | Actual | Action
+  ----------------------------------------------------------------------
+  invariant_velocity_of_light | natural_law | tangled_rope | accept
+
+[META-LOGICAL AUDIT: ONTOLOGICAL FRAUD DETECTION]
+  No classification errors detected. System is Ontologically Coherent.
+
+[STRUCTURAL SIGNATURE ANALYSIS]
+  invariant_velocity_of_light: constructed_constraint (confidence: low)
+    → CONSTRUCTED CONSTRAINT signature for invariant_velocity_of_light: Active enforcement detected (suppression=0.00, resistance=0.50) with 0 asymmetric beneficiaries. This is an institutionally maintained rule requiring ongoing suppression energy.
+
+[UKE_DR FEASIBILITY BRIDGE]
+  Recommendation | UKE Status
+  ----------------------------------------------------------------------
+
+Aggregate Magnitude (Kappa) at Tn: 0.50
+
+[PERSPECTIVAL GAP ANALYSIS]
+
+  Analysis for Constraint: invariant_velocity_of_light
+    ! GAP: Institutional "Rope" (Coordination) appears as "Mountain" (Natural Law) to the Powerless.
+    - Individual (Powerless): mountain
+    - Institutional (Manager): rope
+====================================================
+[STEP 7] Generating LLM Refinement Manifest...
+
+### START LLM REFINEMENT MANIFEST: invariant_velocity_of_light ###
+
+[PERSPECTIVAL_GAPS]
+  - Constraint "invariant_velocity_of_light": Individual sees mountain, but Institution sees rope.
+
+[ONTOLOGICAL_MISMATCHES]
+  - None detected.
+
+[UNRESOLVED_OMEGAS]
+  - None detected.
+
+### END REFINEMENT MANIFEST ###
+
+### START LLM REFINEMENT MANIFEST: invariant_velocity_of_light ###
+
+[PERSPECTIVAL_GAPS]
+  - Constraint "invariant_velocity_of_light": Individual sees mountain, but Institution sees rope.
+
+[ONTOLOGICAL_MISMATCHES]
+  - None detected.
+
+[UNRESOLVED_OMEGAS]
+  - None detected.
+
+### END REFINEMENT MANIFEST ###
+
+[6] DOMAIN: GITA_KURUKSHETRA (./testsets/gita_kurukshetra.pl)
+
+[SCENARIO MANAGER] Clearing Knowledge Base...
+[OK] Knowledge Base is empty.
+[SCENARIO MANAGER] Loading: ./testsets/gita_kurukshetra.pl...
+[SCENARIO MANAGER] Performing Global Repair...
+
+[REPAIR] Auditing vectors for: dharma_of_kurukshetra...
+! NOTICE: Novel Domain "dharma_of_kurukshetra" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(organizational) at T=0
+! NOTICE: Novel Domain "dharma_of_kurukshetra" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(organizational) at T=0
+! NOTICE: Novel Domain "dharma_of_kurukshetra" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(organizational) at T=0
+! NOTICE: Novel Domain "dharma_of_kurukshetra" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(organizational) at T=0
+! NOTICE: Novel Domain "dharma_of_kurukshetra" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(organizational) at T=10
+! NOTICE: Novel Domain "dharma_of_kurukshetra" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(organizational) at T=10
+! NOTICE: Novel Domain "dharma_of_kurukshetra" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(organizational) at T=10
+! NOTICE: Novel Domain "dharma_of_kurukshetra" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(organizational) at T=10
+! NOTICE: Novel Domain "dharma_of_kurukshetra" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(class) at T=0
+! NOTICE: Novel Domain "dharma_of_kurukshetra" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(class) at T=0
+! NOTICE: Novel Domain "dharma_of_kurukshetra" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(class) at T=0
+! NOTICE: Novel Domain "dharma_of_kurukshetra" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(class) at T=0
+! NOTICE: Novel Domain "dharma_of_kurukshetra" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(class) at T=10
+! NOTICE: Novel Domain "dharma_of_kurukshetra" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(class) at T=10
+! NOTICE: Novel Domain "dharma_of_kurukshetra" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(class) at T=10
+! NOTICE: Novel Domain "dharma_of_kurukshetra" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(class) at T=10
+! NOTICE: Novel Domain "dharma_of_kurukshetra" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(individual) at T=0
+! NOTICE: Novel Domain "dharma_of_kurukshetra" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(individual) at T=0
+! NOTICE: Novel Domain "dharma_of_kurukshetra" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(individual) at T=0
+! NOTICE: Novel Domain "dharma_of_kurukshetra" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(individual) at T=0
+! NOTICE: Novel Domain "dharma_of_kurukshetra" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(individual) at T=10
+! NOTICE: Novel Domain "dharma_of_kurukshetra" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(individual) at T=10
+! NOTICE: Novel Domain "dharma_of_kurukshetra" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(individual) at T=10
+! NOTICE: Novel Domain "dharma_of_kurukshetra" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(individual) at T=10
+
+[REPAIR] Auditing vectors for: dharma_of_kurukshetra...
+
+>>> INITIATING v3.1.1 DR-AUDIT SUITE: dharma_of_kurukshetra
+[STEP 1] Auditing and Repairing Measurements...
+
+[REPAIR] Auditing vectors for: dharma_of_kurukshetra...
+[STEP 2] Verifying Data Integrity...
+
+--- [START] v3.1 DATA INTEGRITY VERIFICATION ---
+[OK] Ontology Schema matches.
+Checking Interval: dharma_of_kurukshetra (0-10)
+Checking Interval: dharma_of_kurukshetra (0-10)
+--- [END] Verification Complete ---
+[OK] Verification passed. Proceeding to audit.
+[STEP 3] Computing System Gradients...
+[STEP 4] DRL Ontological Audit...
+  [OK] No Ontological Fraud detected.
+[STEP 5] Extracting Omega Variables (Ω)...
+  No reasoning blockers (Omegas) identified.
+[STEP 6] Generating Executive Summary...
+
+
+====================================================
+   DEFERENTIAL REALISM (DR) EXECUTIVE SUMMARY
+====================================================
+Timeline:       0 to 10
+Structural Pattern: stable
+Confidence:     high
+
+[CONSTRAINT INVENTORY: REALITY AUDIT]
+  Constraint | Claimed | Actual | Action
+  ----------------------------------------------------------------------
+
+[META-LOGICAL AUDIT: ONTOLOGICAL FRAUD DETECTION]
+  No classification errors detected. System is Ontologically Coherent.
+
+[STRUCTURAL SIGNATURE ANALYSIS]
+
+[UKE_DR FEASIBILITY BRIDGE]
+  Recommendation | UKE Status
+  ----------------------------------------------------------------------
+
+Aggregate Magnitude (Kappa) at Tn: 0.50
+
+[PERSPECTIVAL GAP ANALYSIS]
+====================================================
+[STEP 7] Generating LLM Refinement Manifest...
+
+### START LLM REFINEMENT MANIFEST: dharma_of_kurukshetra ###
+
+[PERSPECTIVAL_GAPS]
+
+[ONTOLOGICAL_MISMATCHES]
+  - None detected.
+
+[UNRESOLVED_OMEGAS]
+  - None detected.
+
+### END REFINEMENT MANIFEST ###
+
+### START LLM REFINEMENT MANIFEST: dharma_of_kurukshetra ###
+
+[PERSPECTIVAL_GAPS]
+
+[ONTOLOGICAL_MISMATCHES]
+  - None detected.
+
+[UNRESOLVED_OMEGAS]
+  - None detected.
+
+### END REFINEMENT MANIFEST ###
+
+[7] DOMAIN: HAMMURABI (./testsets/hammurabi.pl)
+
+[SCENARIO MANAGER] Clearing Knowledge Base...
+[OK] Knowledge Base is empty.
+[SCENARIO MANAGER] Loading: ./testsets/hammurabi.pl...
+ERROR: /home/scott/bin/structural_dynamics_model/prolog/testsets/hammurabi.pl:58:119: Syntax error: Operator expected
+ERROR: /home/scott/bin/structural_dynamics_model/prolog/testsets/hammurabi.pl:63:97: Syntax error: Operator expected
+ERROR: /home/scott/bin/structural_dynamics_model/prolog/testsets/hammurabi.pl:177:3: Syntax error: Operator expected
+[SCENARIO MANAGER] Performing Global Repair...
+
+[REPAIR] Auditing vectors for: hammurabi_lex_talionis...
+! NOTICE: Novel Domain "hammurabi_lex_talionis" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(organizational) at T=0
+! NOTICE: Novel Domain "hammurabi_lex_talionis" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(organizational) at T=0
+! NOTICE: Novel Domain "hammurabi_lex_talionis" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(organizational) at T=0
+! NOTICE: Novel Domain "hammurabi_lex_talionis" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(organizational) at T=0
+! NOTICE: Novel Domain "hammurabi_lex_talionis" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(organizational) at T=10
+! NOTICE: Novel Domain "hammurabi_lex_talionis" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(organizational) at T=10
+! NOTICE: Novel Domain "hammurabi_lex_talionis" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(organizational) at T=10
+! NOTICE: Novel Domain "hammurabi_lex_talionis" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(organizational) at T=10
+! NOTICE: Novel Domain "hammurabi_lex_talionis" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(class) at T=0
+! NOTICE: Novel Domain "hammurabi_lex_talionis" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(class) at T=0
+! NOTICE: Novel Domain "hammurabi_lex_talionis" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(class) at T=0
+! NOTICE: Novel Domain "hammurabi_lex_talionis" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(class) at T=0
+! NOTICE: Novel Domain "hammurabi_lex_talionis" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(class) at T=10
+! NOTICE: Novel Domain "hammurabi_lex_talionis" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(class) at T=10
+! NOTICE: Novel Domain "hammurabi_lex_talionis" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(class) at T=10
+! NOTICE: Novel Domain "hammurabi_lex_talionis" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(class) at T=10
+! NOTICE: Novel Domain "hammurabi_lex_talionis" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(individual) at T=0
+! NOTICE: Novel Domain "hammurabi_lex_talionis" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(individual) at T=0
+! NOTICE: Novel Domain "hammurabi_lex_talionis" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(individual) at T=0
+! NOTICE: Novel Domain "hammurabi_lex_talionis" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(individual) at T=0
+! NOTICE: Novel Domain "hammurabi_lex_talionis" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(individual) at T=10
+! NOTICE: Novel Domain "hammurabi_lex_talionis" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(individual) at T=10
+! NOTICE: Novel Domain "hammurabi_lex_talionis" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(individual) at T=10
+! NOTICE: Novel Domain "hammurabi_lex_talionis" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(individual) at T=10
+
+[REPAIR] Auditing vectors for: hammurabi_lex_talionis...
+
+>>> INITIATING v3.1.1 DR-AUDIT SUITE: hammurabi_lex_talionis
+[STEP 1] Auditing and Repairing Measurements...
+
+[REPAIR] Auditing vectors for: hammurabi_lex_talionis...
+[STEP 2] Verifying Data Integrity...
+
+--- [START] v3.1 DATA INTEGRITY VERIFICATION ---
+[OK] Ontology Schema matches.
+Checking Interval: hammurabi_lex_talionis (0-10)
+Checking Interval: hammurabi_lex_talionis (0-10)
+--- [END] Verification Complete ---
+[OK] Verification passed. Proceeding to audit.
+[STEP 3] Computing System Gradients...
+[STEP 4] DRL Ontological Audit...
+  ! ALERT [severe]: type_1_false_mountain detected for hammurabi_lex_talionis
+[STEP 5] Extracting Omega Variables (Ω)...
+  No reasoning blockers (Omegas) identified.
+[STEP 6] Generating Executive Summary...
+
+
+====================================================
+   DEFERENTIAL REALISM (DR) EXECUTIVE SUMMARY
+====================================================
+Timeline:       0 to 10
+Structural Pattern: stable
+Confidence:     high
+
+[CONSTRAINT INVENTORY: REALITY AUDIT]
+  Constraint | Claimed | Actual | Action
+  ----------------------------------------------------------------------
+  hammurabi_lex_talionis | mountain | tangled_rope | reform
+
+[META-LOGICAL AUDIT: ONTOLOGICAL FRAUD DETECTION]
+  ! ALERT [severe]: type_1_false_mountain detected for hammurabi_lex_talionis
+
+[STRUCTURAL SIGNATURE ANALYSIS]
+  hammurabi_lex_talionis: constructed_constraint (confidence: medium)
+    → CONSTRUCTED CONSTRAINT signature for hammurabi_lex_talionis: Active enforcement detected (suppression=0.80, resistance=0.50) with 0 asymmetric beneficiaries. This is an institutionally maintained rule requiring ongoing suppression energy.
+
+[UKE_DR FEASIBILITY BRIDGE]
+  Recommendation | UKE Status
+  ----------------------------------------------------------------------
+
+Aggregate Magnitude (Kappa) at Tn: 0.50
+
+[PERSPECTIVAL GAP ANALYSIS]
+
+  Analysis for Constraint: hammurabi_lex_talionis
+    - Individual (Powerless): none
+    - Institutional (Manager): none
+====================================================
+[STEP 7] Generating LLM Refinement Manifest...
+
+### START LLM REFINEMENT MANIFEST: hammurabi_lex_talionis ###
+
+[PERSPECTIVAL_GAPS]
+
+[ONTOLOGICAL_MISMATCHES]
+  - hammurabi_lex_talionis: [severe] type_1_false_mountain detected. The claimed status does not match the observed metrics.
+
+[UNRESOLVED_OMEGAS]
+  - None detected.
+
+### END REFINEMENT MANIFEST ###
+
+### START LLM REFINEMENT MANIFEST: hammurabi_lex_talionis ###
+
+[PERSPECTIVAL_GAPS]
+
+[ONTOLOGICAL_MISMATCHES]
+  - hammurabi_lex_talionis: [severe] type_1_false_mountain detected. The claimed status does not match the observed metrics.
+
+[UNRESOLVED_OMEGAS]
+  - None detected.
+
+### END REFINEMENT MANIFEST ###
+
+[8] DOMAIN: KJV_GREAT_AWAKENING (./testsets/kjv_great_awakening.pl)
+
+[SCENARIO MANAGER] Clearing Knowledge Base...
+[OK] Knowledge Base is empty.
+[SCENARIO MANAGER] Loading: ./testsets/kjv_great_awakening.pl...
+Warning: /home/scott/bin/structural_dynamics_model/prolog/testsets/kjv_great_awakening.pl:63:
+Warning:    Redefined static procedure domain_priors:emerges_naturally/1
+Warning:    Previously defined at /home/scott/bin/structural_dynamics_model/prolog/testsets/gita_kurukshetra.pl:68
+[SCENARIO MANAGER] Performing Global Repair...
+
+[REPAIR] Auditing vectors for: great_awakening_rekindling...
+! NOTICE: Novel Domain "great_awakening_rekindling" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(organizational) at T=0
+! NOTICE: Novel Domain "great_awakening_rekindling" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(organizational) at T=0
+! NOTICE: Novel Domain "great_awakening_rekindling" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(organizational) at T=0
+! NOTICE: Novel Domain "great_awakening_rekindling" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(organizational) at T=0
+! NOTICE: Novel Domain "great_awakening_rekindling" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(organizational) at T=10
+! NOTICE: Novel Domain "great_awakening_rekindling" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(organizational) at T=10
+! NOTICE: Novel Domain "great_awakening_rekindling" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(organizational) at T=10
+! NOTICE: Novel Domain "great_awakening_rekindling" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(organizational) at T=10
+! NOTICE: Novel Domain "great_awakening_rekindling" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(class) at T=0
+! NOTICE: Novel Domain "great_awakening_rekindling" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(class) at T=0
+! NOTICE: Novel Domain "great_awakening_rekindling" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(class) at T=0
+! NOTICE: Novel Domain "great_awakening_rekindling" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(class) at T=0
+! NOTICE: Novel Domain "great_awakening_rekindling" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(class) at T=10
+! NOTICE: Novel Domain "great_awakening_rekindling" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(class) at T=10
+! NOTICE: Novel Domain "great_awakening_rekindling" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(class) at T=10
+! NOTICE: Novel Domain "great_awakening_rekindling" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(class) at T=10
+! NOTICE: Novel Domain "great_awakening_rekindling" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(individual) at T=0
+! NOTICE: Novel Domain "great_awakening_rekindling" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(individual) at T=0
+! NOTICE: Novel Domain "great_awakening_rekindling" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(individual) at T=0
+! NOTICE: Novel Domain "great_awakening_rekindling" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(individual) at T=0
+! NOTICE: Novel Domain "great_awakening_rekindling" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(individual) at T=10
+! NOTICE: Novel Domain "great_awakening_rekindling" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(individual) at T=10
+! NOTICE: Novel Domain "great_awakening_rekindling" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(individual) at T=10
+! NOTICE: Novel Domain "great_awakening_rekindling" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(individual) at T=10
+
+[REPAIR] Auditing vectors for: great_awakening_rekindling...
+
+>>> INITIATING v3.1.1 DR-AUDIT SUITE: great_awakening_rekindling
+[STEP 1] Auditing and Repairing Measurements...
+
+[REPAIR] Auditing vectors for: great_awakening_rekindling...
+[STEP 2] Verifying Data Integrity...
+
+--- [START] v3.1 DATA INTEGRITY VERIFICATION ---
+[OK] Ontology Schema matches.
+Checking Interval: great_awakening_rekindling (0-10)
+Checking Interval: great_awakening_rekindling (0-10)
+--- [END] Verification Complete ---
+[OK] Verification passed. Proceeding to audit.
+[STEP 3] Computing System Gradients...
+[STEP 4] DRL Ontological Audit...
+  [OK] No Ontological Fraud detected.
+[STEP 5] Extracting Omega Variables (Ω)...
+  No reasoning blockers (Omegas) identified.
+[STEP 6] Generating Executive Summary...
+
+
+====================================================
+   DEFERENTIAL REALISM (DR) EXECUTIVE SUMMARY
+====================================================
+Timeline:       0 to 10
+Structural Pattern: stable
+Confidence:     high
+
+[CONSTRAINT INVENTORY: REALITY AUDIT]
+  Constraint | Claimed | Actual | Action
+  ----------------------------------------------------------------------
+
+[META-LOGICAL AUDIT: ONTOLOGICAL FRAUD DETECTION]
+  No classification errors detected. System is Ontologically Coherent.
+
+[STRUCTURAL SIGNATURE ANALYSIS]
+
+[UKE_DR FEASIBILITY BRIDGE]
+  Recommendation | UKE Status
+  ----------------------------------------------------------------------
+
+Aggregate Magnitude (Kappa) at Tn: 0.50
+
+[PERSPECTIVAL GAP ANALYSIS]
+====================================================
+[STEP 7] Generating LLM Refinement Manifest...
+
+### START LLM REFINEMENT MANIFEST: great_awakening_rekindling ###
+
+[PERSPECTIVAL_GAPS]
+
+[ONTOLOGICAL_MISMATCHES]
+  - None detected.
+
+[UNRESOLVED_OMEGAS]
+  - None detected.
+
+### END REFINEMENT MANIFEST ###
+
+### START LLM REFINEMENT MANIFEST: great_awakening_rekindling ###
+
+[PERSPECTIVAL_GAPS]
+
+[ONTOLOGICAL_MISMATCHES]
+  - None detected.
+
+[UNRESOLVED_OMEGAS]
+  - None detected.
+
+### END REFINEMENT MANIFEST ###
+
+[9] DOMAIN: KJV_LINGUISTIC_RESIDUE (./testsets/kjv_linguistic_residue.pl)
+
+[SCENARIO MANAGER] Clearing Knowledge Base...
+[OK] Knowledge Base is empty.
+[SCENARIO MANAGER] Loading: ./testsets/kjv_linguistic_residue.pl...
+Warning: /home/scott/bin/structural_dynamics_model/prolog/testsets/kjv_linguistic_residue.pl:62:
+Warning:    Redefined static procedure domain_priors:emerges_naturally/1
+Warning:    Previously defined at /home/scott/bin/structural_dynamics_model/prolog/testsets/kjv_great_awakening.pl:63
+[SCENARIO MANAGER] Performing Global Repair...
+
+[REPAIR] Auditing vectors for: kjv_linguistic_residue...
+! NOTICE: Novel Domain "kjv_linguistic_residue" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(organizational) at T=0
+! NOTICE: Novel Domain "kjv_linguistic_residue" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(organizational) at T=0
+! NOTICE: Novel Domain "kjv_linguistic_residue" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(organizational) at T=0
+! NOTICE: Novel Domain "kjv_linguistic_residue" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(organizational) at T=0
+! NOTICE: Novel Domain "kjv_linguistic_residue" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(organizational) at T=10
+! NOTICE: Novel Domain "kjv_linguistic_residue" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(organizational) at T=10
+! NOTICE: Novel Domain "kjv_linguistic_residue" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(organizational) at T=10
+! NOTICE: Novel Domain "kjv_linguistic_residue" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(organizational) at T=10
+! NOTICE: Novel Domain "kjv_linguistic_residue" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(class) at T=0
+! NOTICE: Novel Domain "kjv_linguistic_residue" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(class) at T=0
+! NOTICE: Novel Domain "kjv_linguistic_residue" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(class) at T=0
+! NOTICE: Novel Domain "kjv_linguistic_residue" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(class) at T=0
+! NOTICE: Novel Domain "kjv_linguistic_residue" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(class) at T=10
+! NOTICE: Novel Domain "kjv_linguistic_residue" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(class) at T=10
+! NOTICE: Novel Domain "kjv_linguistic_residue" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(class) at T=10
+! NOTICE: Novel Domain "kjv_linguistic_residue" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(class) at T=10
+! NOTICE: Novel Domain "kjv_linguistic_residue" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(individual) at T=0
+! NOTICE: Novel Domain "kjv_linguistic_residue" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(individual) at T=0
+! NOTICE: Novel Domain "kjv_linguistic_residue" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(individual) at T=0
+! NOTICE: Novel Domain "kjv_linguistic_residue" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(individual) at T=0
+! NOTICE: Novel Domain "kjv_linguistic_residue" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(individual) at T=10
+! NOTICE: Novel Domain "kjv_linguistic_residue" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(individual) at T=10
+! NOTICE: Novel Domain "kjv_linguistic_residue" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(individual) at T=10
+! NOTICE: Novel Domain "kjv_linguistic_residue" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(individual) at T=10
+
+[REPAIR] Auditing vectors for: kjv_linguistic_residue...
+
+>>> INITIATING v3.1.1 DR-AUDIT SUITE: kjv_linguistic_residue
+[STEP 1] Auditing and Repairing Measurements...
+
+[REPAIR] Auditing vectors for: kjv_linguistic_residue...
+[STEP 2] Verifying Data Integrity...
+
+--- [START] v3.1 DATA INTEGRITY VERIFICATION ---
+[OK] Ontology Schema matches.
+Checking Interval: kjv_linguistic_residue (0-10)
+Checking Interval: kjv_linguistic_residue (0-10)
+--- [END] Verification Complete ---
+[OK] Verification passed. Proceeding to audit.
+[STEP 3] Computing System Gradients...
+[STEP 4] DRL Ontological Audit...
+  [OK] No Ontological Fraud detected.
+[STEP 5] Extracting Omega Variables (Ω)...
+  No reasoning blockers (Omegas) identified.
+[STEP 6] Generating Executive Summary...
+
+
+====================================================
+   DEFERENTIAL REALISM (DR) EXECUTIVE SUMMARY
+====================================================
+Timeline:       0 to 10
+Structural Pattern: stable
+Confidence:     high
+
+[CONSTRAINT INVENTORY: REALITY AUDIT]
+  Constraint | Claimed | Actual | Action
+  ----------------------------------------------------------------------
+
+[META-LOGICAL AUDIT: ONTOLOGICAL FRAUD DETECTION]
+  No classification errors detected. System is Ontologically Coherent.
+
+[STRUCTURAL SIGNATURE ANALYSIS]
+
+[UKE_DR FEASIBILITY BRIDGE]
+  Recommendation | UKE Status
+  ----------------------------------------------------------------------
+
+Aggregate Magnitude (Kappa) at Tn: 0.50
+
+[PERSPECTIVAL GAP ANALYSIS]
+====================================================
+[STEP 7] Generating LLM Refinement Manifest...
+
+### START LLM REFINEMENT MANIFEST: kjv_linguistic_residue ###
+
+[PERSPECTIVAL_GAPS]
+
+[ONTOLOGICAL_MISMATCHES]
+  - None detected.
+
+[UNRESOLVED_OMEGAS]
+  - None detected.
+
+### END REFINEMENT MANIFEST ###
+
+### START LLM REFINEMENT MANIFEST: kjv_linguistic_residue ###
+
+[PERSPECTIVAL_GAPS]
+
+[ONTOLOGICAL_MISMATCHES]
+  - None detected.
+
+[UNRESOLVED_OMEGAS]
+  - None detected.
+
+### END REFINEMENT MANIFEST ###
+
+[10] DOMAIN: KJV_PURITAN_NEW_WORLD_EXIT (./testsets/kjv_puritan_new_world_exit.pl)
+
+[SCENARIO MANAGER] Clearing Knowledge Base...
+[OK] Knowledge Base is empty.
+[SCENARIO MANAGER] Loading: ./testsets/kjv_puritan_new_world_exit.pl...
+Warning: /home/scott/bin/structural_dynamics_model/prolog/testsets/kjv_puritan_new_world_exit.pl:66:
+Warning:    Redefined static procedure domain_priors:emerges_naturally/1
+Warning:    Previously defined at /home/scott/bin/structural_dynamics_model/prolog/testsets/kjv_linguistic_residue.pl:62
+[SCENARIO MANAGER] Performing Global Repair...
+
+[REPAIR] Auditing vectors for: puritan_new_world_pivot...
+! NOTICE: Novel Domain "puritan_new_world_pivot" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(organizational) at T=0
+! NOTICE: Novel Domain "puritan_new_world_pivot" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(organizational) at T=0
+! NOTICE: Novel Domain "puritan_new_world_pivot" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(organizational) at T=0
+! NOTICE: Novel Domain "puritan_new_world_pivot" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(organizational) at T=0
+! NOTICE: Novel Domain "puritan_new_world_pivot" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(organizational) at T=10
+! NOTICE: Novel Domain "puritan_new_world_pivot" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(organizational) at T=10
+! NOTICE: Novel Domain "puritan_new_world_pivot" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(organizational) at T=10
+! NOTICE: Novel Domain "puritan_new_world_pivot" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(organizational) at T=10
+! NOTICE: Novel Domain "puritan_new_world_pivot" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(class) at T=0
+! NOTICE: Novel Domain "puritan_new_world_pivot" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(class) at T=0
+! NOTICE: Novel Domain "puritan_new_world_pivot" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(class) at T=0
+! NOTICE: Novel Domain "puritan_new_world_pivot" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(class) at T=0
+! NOTICE: Novel Domain "puritan_new_world_pivot" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(class) at T=10
+! NOTICE: Novel Domain "puritan_new_world_pivot" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(class) at T=10
+! NOTICE: Novel Domain "puritan_new_world_pivot" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(class) at T=10
+! NOTICE: Novel Domain "puritan_new_world_pivot" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(class) at T=10
+! NOTICE: Novel Domain "puritan_new_world_pivot" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(individual) at T=0
+! NOTICE: Novel Domain "puritan_new_world_pivot" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(individual) at T=0
+! NOTICE: Novel Domain "puritan_new_world_pivot" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(individual) at T=0
+! NOTICE: Novel Domain "puritan_new_world_pivot" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(individual) at T=0
+! NOTICE: Novel Domain "puritan_new_world_pivot" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(individual) at T=10
+! NOTICE: Novel Domain "puritan_new_world_pivot" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(individual) at T=10
+! NOTICE: Novel Domain "puritan_new_world_pivot" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(individual) at T=10
+! NOTICE: Novel Domain "puritan_new_world_pivot" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(individual) at T=10
+
+[REPAIR] Auditing vectors for: puritan_new_world_pivot...
+
+>>> INITIATING v3.1.1 DR-AUDIT SUITE: puritan_new_world_pivot
+[STEP 1] Auditing and Repairing Measurements...
+
+[REPAIR] Auditing vectors for: puritan_new_world_pivot...
+[STEP 2] Verifying Data Integrity...
+
+--- [START] v3.1 DATA INTEGRITY VERIFICATION ---
+[OK] Ontology Schema matches.
+Checking Interval: puritan_new_world_pivot (0-10)
+Checking Interval: puritan_new_world_pivot (0-10)
+--- [END] Verification Complete ---
+[OK] Verification passed. Proceeding to audit.
+[STEP 3] Computing System Gradients...
+[STEP 4] DRL Ontological Audit...
+  [OK] No Ontological Fraud detected.
+[STEP 5] Extracting Omega Variables (Ω)...
+  No reasoning blockers (Omegas) identified.
+[STEP 6] Generating Executive Summary...
+
+
+====================================================
+   DEFERENTIAL REALISM (DR) EXECUTIVE SUMMARY
+====================================================
+Timeline:       0 to 10
+Structural Pattern: stable
+Confidence:     high
+
+[CONSTRAINT INVENTORY: REALITY AUDIT]
+  Constraint | Claimed | Actual | Action
+  ----------------------------------------------------------------------
+
+[META-LOGICAL AUDIT: ONTOLOGICAL FRAUD DETECTION]
+  No classification errors detected. System is Ontologically Coherent.
+
+[STRUCTURAL SIGNATURE ANALYSIS]
+
+[UKE_DR FEASIBILITY BRIDGE]
+  Recommendation | UKE Status
+  ----------------------------------------------------------------------
+
+Aggregate Magnitude (Kappa) at Tn: 0.50
+
+[PERSPECTIVAL GAP ANALYSIS]
+====================================================
+[STEP 7] Generating LLM Refinement Manifest...
+
+### START LLM REFINEMENT MANIFEST: puritan_new_world_pivot ###
+
+[PERSPECTIVAL_GAPS]
+
+[ONTOLOGICAL_MISMATCHES]
+  - None detected.
+
+[UNRESOLVED_OMEGAS]
+  - None detected.
+
+### END REFINEMENT MANIFEST ###
+
+### START LLM REFINEMENT MANIFEST: puritan_new_world_pivot ###
+
+[PERSPECTIVAL_GAPS]
+
+[ONTOLOGICAL_MISMATCHES]
+  - None detected.
+
+[UNRESOLVED_OMEGAS]
+  - None detected.
+
+### END REFINEMENT MANIFEST ###
+
+[11] DOMAIN: KJV_TEXTUAL_AUTHORITY (./testsets/kjv_textual_authority.pl)
+
+[SCENARIO MANAGER] Clearing Knowledge Base...
+[OK] Knowledge Base is empty.
+[SCENARIO MANAGER] Loading: ./testsets/kjv_textual_authority.pl...
+[SCENARIO MANAGER] Performing Global Repair...
+
+[REPAIR] Auditing vectors for: kjv_textual_authority...
+! NOTICE: Novel Domain "kjv_textual_authority" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(organizational) at T=0
+! NOTICE: Novel Domain "kjv_textual_authority" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(organizational) at T=0
+! NOTICE: Novel Domain "kjv_textual_authority" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(organizational) at T=0
+! NOTICE: Novel Domain "kjv_textual_authority" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(organizational) at T=0
+! NOTICE: Novel Domain "kjv_textual_authority" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(organizational) at T=10
+! NOTICE: Novel Domain "kjv_textual_authority" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(organizational) at T=10
+! NOTICE: Novel Domain "kjv_textual_authority" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(organizational) at T=10
+! NOTICE: Novel Domain "kjv_textual_authority" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(organizational) at T=10
+! NOTICE: Novel Domain "kjv_textual_authority" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(class) at T=0
+! NOTICE: Novel Domain "kjv_textual_authority" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(class) at T=0
+! NOTICE: Novel Domain "kjv_textual_authority" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(class) at T=0
+! NOTICE: Novel Domain "kjv_textual_authority" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(class) at T=0
+! NOTICE: Novel Domain "kjv_textual_authority" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(class) at T=10
+! NOTICE: Novel Domain "kjv_textual_authority" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(class) at T=10
+! NOTICE: Novel Domain "kjv_textual_authority" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(class) at T=10
+! NOTICE: Novel Domain "kjv_textual_authority" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(class) at T=10
+! NOTICE: Novel Domain "kjv_textual_authority" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(individual) at T=0
+! NOTICE: Novel Domain "kjv_textual_authority" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(individual) at T=0
+! NOTICE: Novel Domain "kjv_textual_authority" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(individual) at T=0
+! NOTICE: Novel Domain "kjv_textual_authority" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(individual) at T=0
+! NOTICE: Novel Domain "kjv_textual_authority" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(individual) at T=10
+! NOTICE: Novel Domain "kjv_textual_authority" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(individual) at T=10
+! NOTICE: Novel Domain "kjv_textual_authority" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(individual) at T=10
+! NOTICE: Novel Domain "kjv_textual_authority" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(individual) at T=10
+
+[REPAIR] Auditing vectors for: kjv_textual_authority...
+
+>>> INITIATING v3.1.1 DR-AUDIT SUITE: kjv_textual_authority
+[STEP 1] Auditing and Repairing Measurements...
+
+[REPAIR] Auditing vectors for: kjv_textual_authority...
+[STEP 2] Verifying Data Integrity...
+
+--- [START] v3.1 DATA INTEGRITY VERIFICATION ---
+[OK] Ontology Schema matches.
+Checking Interval: kjv_textual_authority (0-10)
+Checking Interval: kjv_textual_authority (0-10)
+--- [END] Verification Complete ---
+[OK] Verification passed. Proceeding to audit.
+[STEP 3] Computing System Gradients...
+[STEP 4] DRL Ontological Audit...
+  [OK] No Ontological Fraud detected.
+[STEP 5] Extracting Omega Variables (Ω)...
+  No reasoning blockers (Omegas) identified.
+[STEP 6] Generating Executive Summary...
+
+
+====================================================
+   DEFERENTIAL REALISM (DR) EXECUTIVE SUMMARY
+====================================================
+Timeline:       0 to 10
+Structural Pattern: stable
+Confidence:     high
+
+[CONSTRAINT INVENTORY: REALITY AUDIT]
+  Constraint | Claimed | Actual | Action
+  ----------------------------------------------------------------------
+
+[META-LOGICAL AUDIT: ONTOLOGICAL FRAUD DETECTION]
+  No classification errors detected. System is Ontologically Coherent.
+
+[STRUCTURAL SIGNATURE ANALYSIS]
+
+[UKE_DR FEASIBILITY BRIDGE]
+  Recommendation | UKE Status
+  ----------------------------------------------------------------------
+
+Aggregate Magnitude (Kappa) at Tn: 0.50
+
+[PERSPECTIVAL GAP ANALYSIS]
+====================================================
+[STEP 7] Generating LLM Refinement Manifest...
+
+### START LLM REFINEMENT MANIFEST: kjv_textual_authority ###
+
+[PERSPECTIVAL_GAPS]
+
+[ONTOLOGICAL_MISMATCHES]
+  - None detected.
+
+[UNRESOLVED_OMEGAS]
+  - None detected.
+
+### END REFINEMENT MANIFEST ###
+
+### START LLM REFINEMENT MANIFEST: kjv_textual_authority ###
+
+[PERSPECTIVAL_GAPS]
+
+[ONTOLOGICAL_MISMATCHES]
+  - None detected.
+
+[UNRESOLVED_OMEGAS]
+  - None detected.
+
+### END REFINEMENT MANIFEST ###
+
+[12] DOMAIN: LEHMAN (./testsets/lehman.pl)
+
+[SCENARIO MANAGER] Clearing Knowledge Base...
+[OK] Knowledge Base is empty.
+[SCENARIO MANAGER] Loading: ./testsets/lehman.pl...
+ERROR: /home/scott/bin/structural_dynamics_model/prolog/testsets/lehman.pl:114:
+ERROR:    PL-Unit: cannot close unit lehman_analysis: no open unit
+Warning: /home/scott/bin/structural_dynamics_model/prolog/testsets/lehman.pl:114:
+Warning:    Goal (directive) failed: lehman_storage_collapse:end_tests(lehman_analysis)
+[SCENARIO MANAGER] Performing Global Repair...
+
+[REPAIR] Auditing vectors for: lehman_storage_collapse...
+! NOTICE: Novel Domain "lehman_storage_collapse" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(organizational) at T=0
+! NOTICE: Novel Domain "lehman_storage_collapse" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(organizational) at T=0
+! NOTICE: Novel Domain "lehman_storage_collapse" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(organizational) at T=0
+! NOTICE: Novel Domain "lehman_storage_collapse" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(organizational) at T=0
+! NOTICE: Novel Domain "lehman_storage_collapse" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(organizational) at T=10
+! NOTICE: Novel Domain "lehman_storage_collapse" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(organizational) at T=10
+! NOTICE: Novel Domain "lehman_storage_collapse" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(organizational) at T=10
+! NOTICE: Novel Domain "lehman_storage_collapse" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(organizational) at T=10
+! NOTICE: Novel Domain "lehman_storage_collapse" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(class) at T=0
+! NOTICE: Novel Domain "lehman_storage_collapse" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(class) at T=0
+! NOTICE: Novel Domain "lehman_storage_collapse" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(class) at T=0
+! NOTICE: Novel Domain "lehman_storage_collapse" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(class) at T=0
+! NOTICE: Novel Domain "lehman_storage_collapse" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(class) at T=10
+! NOTICE: Novel Domain "lehman_storage_collapse" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(class) at T=10
+! NOTICE: Novel Domain "lehman_storage_collapse" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(class) at T=10
+! NOTICE: Novel Domain "lehman_storage_collapse" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(class) at T=10
+! NOTICE: Novel Domain "lehman_storage_collapse" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(individual) at T=0
+! NOTICE: Novel Domain "lehman_storage_collapse" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(individual) at T=0
+! NOTICE: Novel Domain "lehman_storage_collapse" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(individual) at T=0
+! NOTICE: Novel Domain "lehman_storage_collapse" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(individual) at T=0
+! NOTICE: Novel Domain "lehman_storage_collapse" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(individual) at T=10
+! NOTICE: Novel Domain "lehman_storage_collapse" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(individual) at T=10
+! NOTICE: Novel Domain "lehman_storage_collapse" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(individual) at T=10
+! NOTICE: Novel Domain "lehman_storage_collapse" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(individual) at T=10
+
+[REPAIR] Auditing vectors for: lehman_storage_collapse...
+
+>>> INITIATING v3.1.1 DR-AUDIT SUITE: lehman_storage_collapse
+[STEP 1] Auditing and Repairing Measurements...
+
+[REPAIR] Auditing vectors for: lehman_storage_collapse...
+[STEP 2] Verifying Data Integrity...
+
+--- [START] v3.1 DATA INTEGRITY VERIFICATION ---
+[OK] Ontology Schema matches.
+Checking Interval: lehman_storage_collapse (0-10)
+Checking Interval: lehman_storage_collapse (0-10)
+--- [END] Verification Complete ---
+[OK] Verification passed. Proceeding to audit.
+[STEP 3] Computing System Gradients...
+[STEP 4] DRL Ontological Audit...
+  [OK] No Ontological Fraud detected.
+[STEP 5] Extracting Omega Variables (Ω)...
+  No reasoning blockers (Omegas) identified.
+[STEP 6] Generating Executive Summary...
+
+
+====================================================
+   DEFERENTIAL REALISM (DR) EXECUTIVE SUMMARY
+====================================================
+Timeline:       0 to 10
+Structural Pattern: stable
+Confidence:     high
+
+[CONSTRAINT INVENTORY: REALITY AUDIT]
+  Constraint | Claimed | Actual | Action
+  ----------------------------------------------------------------------
+
+[META-LOGICAL AUDIT: ONTOLOGICAL FRAUD DETECTION]
+  No classification errors detected. System is Ontologically Coherent.
+
+[STRUCTURAL SIGNATURE ANALYSIS]
+
+[UKE_DR FEASIBILITY BRIDGE]
+  Recommendation | UKE Status
+  ----------------------------------------------------------------------
+
+Aggregate Magnitude (Kappa) at Tn: 0.50
+
+[PERSPECTIVAL GAP ANALYSIS]
+====================================================
+[STEP 7] Generating LLM Refinement Manifest...
+
+### START LLM REFINEMENT MANIFEST: lehman_storage_collapse ###
+
+[PERSPECTIVAL_GAPS]
+
+[ONTOLOGICAL_MISMATCHES]
+  - None detected.
+
+[UNRESOLVED_OMEGAS]
+  - None detected.
+
+### END REFINEMENT MANIFEST ###
+
+### START LLM REFINEMENT MANIFEST: lehman_storage_collapse ###
+
+[PERSPECTIVAL_GAPS]
+
+[ONTOLOGICAL_MISMATCHES]
+  - None detected.
+
+[UNRESOLVED_OMEGAS]
+  - None detected.
+
+### END REFINEMENT MANIFEST ###
+
+[13] DOMAIN: MEDIEVAL_CHURCH_HEGOMONY (./testsets/medieval_church_hegomony.pl)
+
+[SCENARIO MANAGER] Clearing Knowledge Base...
+[OK] Knowledge Base is empty.
+[SCENARIO MANAGER] Loading: ./testsets/medieval_church_hegomony.pl...
+[SCENARIO MANAGER] Performing Global Repair...
+
+[REPAIR] Auditing vectors for: medieval_church_hegemony...
+! NOTICE: Novel Domain "medieval_church_hegemony" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(organizational) at T=0
+! NOTICE: Novel Domain "medieval_church_hegemony" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(organizational) at T=0
+! NOTICE: Novel Domain "medieval_church_hegemony" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(organizational) at T=0
+! NOTICE: Novel Domain "medieval_church_hegemony" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(organizational) at T=0
+! NOTICE: Novel Domain "medieval_church_hegemony" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(organizational) at T=10
+! NOTICE: Novel Domain "medieval_church_hegemony" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(organizational) at T=10
+! NOTICE: Novel Domain "medieval_church_hegemony" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(organizational) at T=10
+! NOTICE: Novel Domain "medieval_church_hegemony" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(organizational) at T=10
+! NOTICE: Novel Domain "medieval_church_hegemony" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(class) at T=0
+! NOTICE: Novel Domain "medieval_church_hegemony" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(class) at T=0
+! NOTICE: Novel Domain "medieval_church_hegemony" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(class) at T=0
+! NOTICE: Novel Domain "medieval_church_hegemony" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(class) at T=0
+! NOTICE: Novel Domain "medieval_church_hegemony" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(class) at T=10
+! NOTICE: Novel Domain "medieval_church_hegemony" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(class) at T=10
+! NOTICE: Novel Domain "medieval_church_hegemony" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(class) at T=10
+! NOTICE: Novel Domain "medieval_church_hegemony" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(class) at T=10
+! NOTICE: Novel Domain "medieval_church_hegemony" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(individual) at T=0
+! NOTICE: Novel Domain "medieval_church_hegemony" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(individual) at T=0
+! NOTICE: Novel Domain "medieval_church_hegemony" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(individual) at T=0
+! NOTICE: Novel Domain "medieval_church_hegemony" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(individual) at T=0
+! NOTICE: Novel Domain "medieval_church_hegemony" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(individual) at T=10
+! NOTICE: Novel Domain "medieval_church_hegemony" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(individual) at T=10
+! NOTICE: Novel Domain "medieval_church_hegemony" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(individual) at T=10
+! NOTICE: Novel Domain "medieval_church_hegemony" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(individual) at T=10
+
+[REPAIR] Auditing vectors for: medieval_church_hegemony...
+
+>>> INITIATING v3.1.1 DR-AUDIT SUITE: medieval_church_hegemony
+[STEP 1] Auditing and Repairing Measurements...
+
+[REPAIR] Auditing vectors for: medieval_church_hegemony...
+[STEP 2] Verifying Data Integrity...
+
+--- [START] v3.1 DATA INTEGRITY VERIFICATION ---
+[OK] Ontology Schema matches.
+Checking Interval: medieval_church_hegemony (0-10)
+Checking Interval: medieval_church_hegemony (0-10)
+--- [END] Verification Complete ---
+[OK] Verification passed. Proceeding to audit.
+[STEP 3] Computing System Gradients...
+[STEP 4] DRL Ontological Audit...
+  ! ALERT [severe]: type_1_false_mountain detected for medieval_church_hegemony
+[STEP 5] Extracting Omega Variables (Ω)...
+  No reasoning blockers (Omegas) identified.
+[STEP 6] Generating Executive Summary...
+
+
+====================================================
+   DEFERENTIAL REALISM (DR) EXECUTIVE SUMMARY
+====================================================
+Timeline:       0 to 10
+Structural Pattern: stable
+Confidence:     high
+
+[CONSTRAINT INVENTORY: REALITY AUDIT]
+  Constraint | Claimed | Actual | Action
+  ----------------------------------------------------------------------
+  medieval_church_hegemony | mountain | noose | cut
+
+[META-LOGICAL AUDIT: ONTOLOGICAL FRAUD DETECTION]
+  ! ALERT [severe]: type_1_false_mountain detected for medieval_church_hegemony
+
+[STRUCTURAL SIGNATURE ANALYSIS]
+  medieval_church_hegemony: constructed_constraint (confidence: medium)
+    → CONSTRUCTED CONSTRAINT signature for medieval_church_hegemony: Active enforcement detected (suppression=0.90, resistance=0.50) with 0 asymmetric beneficiaries. This is an institutionally maintained rule requiring ongoing suppression energy.
+
+[UKE_DR FEASIBILITY BRIDGE]
+  Recommendation | UKE Status
+  ----------------------------------------------------------------------
+
+Aggregate Magnitude (Kappa) at Tn: 0.50
+
+[PERSPECTIVAL GAP ANALYSIS]
+
+  Analysis for Constraint: medieval_church_hegemony
+    - Individual (Powerless): mountain
+    - Institutional (Manager): none
+====================================================
+[STEP 7] Generating LLM Refinement Manifest...
+
+### START LLM REFINEMENT MANIFEST: medieval_church_hegemony ###
+
+[PERSPECTIVAL_GAPS]
+
+[ONTOLOGICAL_MISMATCHES]
+  - medieval_church_hegemony: [severe] type_1_false_mountain detected. The claimed status does not match the observed metrics.
+
+[UNRESOLVED_OMEGAS]
+  - None detected.
+
+### END REFINEMENT MANIFEST ###
+
+### START LLM REFINEMENT MANIFEST: medieval_church_hegemony ###
+
+[PERSPECTIVAL_GAPS]
+
+[ONTOLOGICAL_MISMATCHES]
+  - medieval_church_hegemony: [severe] type_1_false_mountain detected. The claimed status does not match the observed metrics.
+
+[UNRESOLVED_OMEGAS]
+  - None detected.
+
+### END REFINEMENT MANIFEST ###
+
+[14] DOMAIN: RELATIVITY_OF_SIMULTANEITY (./testsets/relativity_of_simultaneity.pl)
+
+[SCENARIO MANAGER] Clearing Knowledge Base...
+[OK] Knowledge Base is empty.
+[SCENARIO MANAGER] Loading: ./testsets/relativity_of_simultaneity.pl...
+Warning: /home/scott/bin/structural_dynamics_model/prolog/testsets/relativity_of_simultaneity.pl:71:
+Warning:    Redefined static procedure domain_priors:emerges_naturally/1
+Warning:    Previously defined at /home/scott/bin/structural_dynamics_model/prolog/testsets/kjv_puritan_new_world_exit.pl:66
+[SCENARIO MANAGER] Performing Global Repair...
+
+[REPAIR] Auditing vectors for: relativity_of_simultaneity...
+! NOTICE: Novel Domain "relativity_of_simultaneity" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(organizational) at T=0
+! NOTICE: Novel Domain "relativity_of_simultaneity" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(organizational) at T=0
+! NOTICE: Novel Domain "relativity_of_simultaneity" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(organizational) at T=0
+! NOTICE: Novel Domain "relativity_of_simultaneity" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(organizational) at T=0
+! NOTICE: Novel Domain "relativity_of_simultaneity" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(organizational) at T=10
+! NOTICE: Novel Domain "relativity_of_simultaneity" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(organizational) at T=10
+! NOTICE: Novel Domain "relativity_of_simultaneity" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(organizational) at T=10
+! NOTICE: Novel Domain "relativity_of_simultaneity" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(organizational) at T=10
+! NOTICE: Novel Domain "relativity_of_simultaneity" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(class) at T=0
+! NOTICE: Novel Domain "relativity_of_simultaneity" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(class) at T=0
+! NOTICE: Novel Domain "relativity_of_simultaneity" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(class) at T=0
+! NOTICE: Novel Domain "relativity_of_simultaneity" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(class) at T=0
+! NOTICE: Novel Domain "relativity_of_simultaneity" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(class) at T=10
+! NOTICE: Novel Domain "relativity_of_simultaneity" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(class) at T=10
+! NOTICE: Novel Domain "relativity_of_simultaneity" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(class) at T=10
+! NOTICE: Novel Domain "relativity_of_simultaneity" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(class) at T=10
+! NOTICE: Novel Domain "relativity_of_simultaneity" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(individual) at T=0
+! NOTICE: Novel Domain "relativity_of_simultaneity" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(individual) at T=0
+! NOTICE: Novel Domain "relativity_of_simultaneity" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(individual) at T=0
+! NOTICE: Novel Domain "relativity_of_simultaneity" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(individual) at T=0
+! NOTICE: Novel Domain "relativity_of_simultaneity" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(individual) at T=10
+! NOTICE: Novel Domain "relativity_of_simultaneity" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(individual) at T=10
+! NOTICE: Novel Domain "relativity_of_simultaneity" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(individual) at T=10
+! NOTICE: Novel Domain "relativity_of_simultaneity" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(individual) at T=10
+
+[REPAIR] Auditing vectors for: relativity_of_simultaneity...
+
+>>> INITIATING v3.1.1 DR-AUDIT SUITE: relativity_of_simultaneity
+[STEP 1] Auditing and Repairing Measurements...
+
+[REPAIR] Auditing vectors for: relativity_of_simultaneity...
+[STEP 2] Verifying Data Integrity...
+
+--- [START] v3.1 DATA INTEGRITY VERIFICATION ---
+ERROR: Invalid constraint_claim(relativity_of_simultaneity,physical_law)
+[FAIL] Schema mismatch.
+Checking Interval: relativity_of_simultaneity (0-10)
+Checking Interval: relativity_of_simultaneity (0-10)
+--- [END] Verification Complete ---
+[OK] Verification passed. Proceeding to audit.
+[STEP 3] Computing System Gradients...
+[STEP 4] DRL Ontological Audit...
+  [OK] No Ontological Fraud detected.
+[STEP 5] Extracting Omega Variables (Ω)...
+  No reasoning blockers (Omegas) identified.
+[STEP 6] Generating Executive Summary...
+
+
+====================================================
+   DEFERENTIAL REALISM (DR) EXECUTIVE SUMMARY
+====================================================
+Timeline:       0 to 10
+Structural Pattern: stable
+Confidence:     high
+
+[CONSTRAINT INVENTORY: REALITY AUDIT]
+  Constraint | Claimed | Actual | Action
+  ----------------------------------------------------------------------
+  relativity_of_simultaneity | physical_law | tangled_rope | accept
+
+[META-LOGICAL AUDIT: ONTOLOGICAL FRAUD DETECTION]
+  No classification errors detected. System is Ontologically Coherent.
+
+[STRUCTURAL SIGNATURE ANALYSIS]
+  relativity_of_simultaneity: constructed_constraint (confidence: low)
+    → CONSTRUCTED CONSTRAINT signature for relativity_of_simultaneity: Active enforcement detected (suppression=0.00, resistance=0.50) with 0 asymmetric beneficiaries. This is an institutionally maintained rule requiring ongoing suppression energy.
+
+[UKE_DR FEASIBILITY BRIDGE]
+  Recommendation | UKE Status
+  ----------------------------------------------------------------------
+
+Aggregate Magnitude (Kappa) at Tn: 0.50
+
+[PERSPECTIVAL GAP ANALYSIS]
+
+  Analysis for Constraint: relativity_of_simultaneity
+    - Individual (Powerless): mountain
+    - Institutional (Manager): none
+====================================================
+[STEP 7] Generating LLM Refinement Manifest...
+
+### START LLM REFINEMENT MANIFEST: relativity_of_simultaneity ###
+
+[PERSPECTIVAL_GAPS]
+
+[ONTOLOGICAL_MISMATCHES]
+  - None detected.
+
+[UNRESOLVED_OMEGAS]
+  - None detected.
+
+### END REFINEMENT MANIFEST ###
+
+### START LLM REFINEMENT MANIFEST: relativity_of_simultaneity ###
+
+[PERSPECTIVAL_GAPS]
+
+[ONTOLOGICAL_MISMATCHES]
+  - None detected.
+
+[UNRESOLVED_OMEGAS]
+  - None detected.
+
+### END REFINEMENT MANIFEST ###
+
+[15] DOMAIN: RFC9293_INTEROPERABILITY (./testsets/rfc9293_interoperability.pl)
+
+[SCENARIO MANAGER] Clearing Knowledge Base...
+[OK] Knowledge Base is empty.
+[SCENARIO MANAGER] Loading: ./testsets/rfc9293_interoperability.pl...
+[SCENARIO MANAGER] Performing Global Repair...
+
+[REPAIR] Auditing vectors for: tcp_rfc9293_interoperability...
+! NOTICE: Novel Domain "tcp_rfc9293_interoperability" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(organizational) at T=0
+! NOTICE: Novel Domain "tcp_rfc9293_interoperability" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(organizational) at T=0
+! NOTICE: Novel Domain "tcp_rfc9293_interoperability" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(organizational) at T=0
+! NOTICE: Novel Domain "tcp_rfc9293_interoperability" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(organizational) at T=0
+! NOTICE: Novel Domain "tcp_rfc9293_interoperability" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(organizational) at T=10
+! NOTICE: Novel Domain "tcp_rfc9293_interoperability" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(organizational) at T=10
+! NOTICE: Novel Domain "tcp_rfc9293_interoperability" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(organizational) at T=10
+! NOTICE: Novel Domain "tcp_rfc9293_interoperability" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(organizational) at T=10
+! NOTICE: Novel Domain "tcp_rfc9293_interoperability" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(class) at T=0
+! NOTICE: Novel Domain "tcp_rfc9293_interoperability" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(class) at T=0
+! NOTICE: Novel Domain "tcp_rfc9293_interoperability" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(class) at T=0
+! NOTICE: Novel Domain "tcp_rfc9293_interoperability" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(class) at T=0
+! NOTICE: Novel Domain "tcp_rfc9293_interoperability" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(class) at T=10
+! NOTICE: Novel Domain "tcp_rfc9293_interoperability" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(class) at T=10
+! NOTICE: Novel Domain "tcp_rfc9293_interoperability" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(class) at T=10
+! NOTICE: Novel Domain "tcp_rfc9293_interoperability" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(class) at T=10
+! NOTICE: Novel Domain "tcp_rfc9293_interoperability" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(individual) at T=0
+! NOTICE: Novel Domain "tcp_rfc9293_interoperability" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(individual) at T=0
+! NOTICE: Novel Domain "tcp_rfc9293_interoperability" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(individual) at T=0
+! NOTICE: Novel Domain "tcp_rfc9293_interoperability" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(individual) at T=0
+! NOTICE: Novel Domain "tcp_rfc9293_interoperability" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(individual) at T=10
+! NOTICE: Novel Domain "tcp_rfc9293_interoperability" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(individual) at T=10
+! NOTICE: Novel Domain "tcp_rfc9293_interoperability" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(individual) at T=10
+! NOTICE: Novel Domain "tcp_rfc9293_interoperability" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(individual) at T=10
+
+[REPAIR] Auditing vectors for: tcp_rfc9293_interoperability...
+
+>>> INITIATING v3.1.1 DR-AUDIT SUITE: tcp_rfc9293_interoperability
+[STEP 1] Auditing and Repairing Measurements...
+
+[REPAIR] Auditing vectors for: tcp_rfc9293_interoperability...
+[STEP 2] Verifying Data Integrity...
+
+--- [START] v3.1 DATA INTEGRITY VERIFICATION ---
+[OK] Ontology Schema matches.
+Checking Interval: tcp_rfc9293_interoperability (0-10)
+Checking Interval: tcp_rfc9293_interoperability (0-10)
+--- [END] Verification Complete ---
+[OK] Verification passed. Proceeding to audit.
+[STEP 3] Computing System Gradients...
+[STEP 4] DRL Ontological Audit...
+  [OK] No Ontological Fraud detected.
+[STEP 5] Extracting Omega Variables (Ω)...
+  No reasoning blockers (Omegas) identified.
+[STEP 6] Generating Executive Summary...
+
+
+====================================================
+   DEFERENTIAL REALISM (DR) EXECUTIVE SUMMARY
+====================================================
+Timeline:       0 to 10
+Structural Pattern: stable
+Confidence:     high
+
+[CONSTRAINT INVENTORY: REALITY AUDIT]
+  Constraint | Claimed | Actual | Action
+  ----------------------------------------------------------------------
+
+[META-LOGICAL AUDIT: ONTOLOGICAL FRAUD DETECTION]
+  No classification errors detected. System is Ontologically Coherent.
+
+[STRUCTURAL SIGNATURE ANALYSIS]
+
+[UKE_DR FEASIBILITY BRIDGE]
+  Recommendation | UKE Status
+  ----------------------------------------------------------------------
+
+Aggregate Magnitude (Kappa) at Tn: 0.50
+
+[PERSPECTIVAL GAP ANALYSIS]
+====================================================
+[STEP 7] Generating LLM Refinement Manifest...
+
+### START LLM REFINEMENT MANIFEST: tcp_rfc9293_interoperability ###
+
+[PERSPECTIVAL_GAPS]
+
+[ONTOLOGICAL_MISMATCHES]
+  - None detected.
+
+[UNRESOLVED_OMEGAS]
+  - None detected.
+
+### END REFINEMENT MANIFEST ###
+
+### START LLM REFINEMENT MANIFEST: tcp_rfc9293_interoperability ###
+
+[PERSPECTIVAL_GAPS]
+
+[ONTOLOGICAL_MISMATCHES]
+  - None detected.
+
+[UNRESOLVED_OMEGAS]
+  - None detected.
+
+### END REFINEMENT MANIFEST ###
+
+[16] DOMAIN: RFC9293_STATE_MACHINE (./testsets/rfc9293_state_machine.pl)
+
+[SCENARIO MANAGER] Clearing Knowledge Base...
+[OK] Knowledge Base is empty.
+[SCENARIO MANAGER] Loading: ./testsets/rfc9293_state_machine.pl...
+[SCENARIO MANAGER] Performing Global Repair...
+
+[REPAIR] Auditing vectors for: tcp_state_machine_logic...
+! NOTICE: Novel Domain "tcp_state_machine_logic" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(organizational) at T=0
+! NOTICE: Novel Domain "tcp_state_machine_logic" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(organizational) at T=0
+! NOTICE: Novel Domain "tcp_state_machine_logic" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(organizational) at T=0
+! NOTICE: Novel Domain "tcp_state_machine_logic" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(organizational) at T=0
+! NOTICE: Novel Domain "tcp_state_machine_logic" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(organizational) at T=10
+! NOTICE: Novel Domain "tcp_state_machine_logic" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(organizational) at T=10
+! NOTICE: Novel Domain "tcp_state_machine_logic" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(organizational) at T=10
+! NOTICE: Novel Domain "tcp_state_machine_logic" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(organizational) at T=10
+! NOTICE: Novel Domain "tcp_state_machine_logic" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(class) at T=0
+! NOTICE: Novel Domain "tcp_state_machine_logic" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(class) at T=0
+! NOTICE: Novel Domain "tcp_state_machine_logic" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(class) at T=0
+! NOTICE: Novel Domain "tcp_state_machine_logic" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(class) at T=0
+! NOTICE: Novel Domain "tcp_state_machine_logic" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(class) at T=10
+! NOTICE: Novel Domain "tcp_state_machine_logic" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(class) at T=10
+! NOTICE: Novel Domain "tcp_state_machine_logic" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(class) at T=10
+! NOTICE: Novel Domain "tcp_state_machine_logic" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(class) at T=10
+! NOTICE: Novel Domain "tcp_state_machine_logic" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(individual) at T=0
+! NOTICE: Novel Domain "tcp_state_machine_logic" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(individual) at T=0
+! NOTICE: Novel Domain "tcp_state_machine_logic" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(individual) at T=0
+! NOTICE: Novel Domain "tcp_state_machine_logic" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(individual) at T=0
+! NOTICE: Novel Domain "tcp_state_machine_logic" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(individual) at T=10
+! NOTICE: Novel Domain "tcp_state_machine_logic" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(individual) at T=10
+! NOTICE: Novel Domain "tcp_state_machine_logic" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(individual) at T=10
+! NOTICE: Novel Domain "tcp_state_machine_logic" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(individual) at T=10
+
+[REPAIR] Auditing vectors for: tcp_state_machine_logic...
+
+>>> INITIATING v3.1.1 DR-AUDIT SUITE: tcp_state_machine_logic
+[STEP 1] Auditing and Repairing Measurements...
+
+[REPAIR] Auditing vectors for: tcp_state_machine_logic...
+[STEP 2] Verifying Data Integrity...
+
+--- [START] v3.1 DATA INTEGRITY VERIFICATION ---
+[OK] Ontology Schema matches.
+Checking Interval: tcp_state_machine_logic (0-10)
+Checking Interval: tcp_state_machine_logic (0-10)
+--- [END] Verification Complete ---
+[OK] Verification passed. Proceeding to audit.
+[STEP 3] Computing System Gradients...
+[STEP 4] DRL Ontological Audit...
+  [OK] No Ontological Fraud detected.
+[STEP 5] Extracting Omega Variables (Ω)...
+  No reasoning blockers (Omegas) identified.
+[STEP 6] Generating Executive Summary...
+
+
+====================================================
+   DEFERENTIAL REALISM (DR) EXECUTIVE SUMMARY
+====================================================
+Timeline:       0 to 10
+Structural Pattern: stable
+Confidence:     high
+
+[CONSTRAINT INVENTORY: REALITY AUDIT]
+  Constraint | Claimed | Actual | Action
+  ----------------------------------------------------------------------
+
+[META-LOGICAL AUDIT: ONTOLOGICAL FRAUD DETECTION]
+  No classification errors detected. System is Ontologically Coherent.
+
+[STRUCTURAL SIGNATURE ANALYSIS]
+
+[UKE_DR FEASIBILITY BRIDGE]
+  Recommendation | UKE Status
+  ----------------------------------------------------------------------
+
+Aggregate Magnitude (Kappa) at Tn: 0.50
+
+[PERSPECTIVAL GAP ANALYSIS]
+====================================================
+[STEP 7] Generating LLM Refinement Manifest...
+
+### START LLM REFINEMENT MANIFEST: tcp_state_machine_logic ###
+
+[PERSPECTIVAL_GAPS]
+
+[ONTOLOGICAL_MISMATCHES]
+  - None detected.
+
+[UNRESOLVED_OMEGAS]
+  - None detected.
+
+### END REFINEMENT MANIFEST ###
+
+### START LLM REFINEMENT MANIFEST: tcp_state_machine_logic ###
+
+[PERSPECTIVAL_GAPS]
+
+[ONTOLOGICAL_MISMATCHES]
+  - None detected.
+
+[UNRESOLVED_OMEGAS]
+  - None detected.
+
+### END REFINEMENT MANIFEST ###
+
+[17] DOMAIN: ROTATION_SEVEN_BLACK_SOIL (./testsets/rotation_seven_black_soil.pl)
+
+[SCENARIO MANAGER] Clearing Knowledge Base...
+[OK] Knowledge Base is empty.
+[SCENARIO MANAGER] Loading: ./testsets/rotation_seven_black_soil.pl...
+[SCENARIO MANAGER] Performing Global Repair...
+
+[REPAIR] Auditing vectors for: black_soil_toxicity...
+! NOTICE: Novel Domain "black_soil_toxicity" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(organizational) at T=0
+! NOTICE: Novel Domain "black_soil_toxicity" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(organizational) at T=0
+! NOTICE: Novel Domain "black_soil_toxicity" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(organizational) at T=0
+! NOTICE: Novel Domain "black_soil_toxicity" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(organizational) at T=0
+! NOTICE: Novel Domain "black_soil_toxicity" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(organizational) at T=10
+! NOTICE: Novel Domain "black_soil_toxicity" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(organizational) at T=10
+! NOTICE: Novel Domain "black_soil_toxicity" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(organizational) at T=10
+! NOTICE: Novel Domain "black_soil_toxicity" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(organizational) at T=10
+! NOTICE: Novel Domain "black_soil_toxicity" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(class) at T=0
+! NOTICE: Novel Domain "black_soil_toxicity" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(class) at T=0
+! NOTICE: Novel Domain "black_soil_toxicity" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(class) at T=0
+! NOTICE: Novel Domain "black_soil_toxicity" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(class) at T=0
+! NOTICE: Novel Domain "black_soil_toxicity" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(class) at T=10
+! NOTICE: Novel Domain "black_soil_toxicity" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(class) at T=10
+! NOTICE: Novel Domain "black_soil_toxicity" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(class) at T=10
+! NOTICE: Novel Domain "black_soil_toxicity" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(class) at T=10
+! NOTICE: Novel Domain "black_soil_toxicity" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(individual) at T=0
+! NOTICE: Novel Domain "black_soil_toxicity" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(individual) at T=0
+! NOTICE: Novel Domain "black_soil_toxicity" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(individual) at T=0
+! NOTICE: Novel Domain "black_soil_toxicity" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(individual) at T=0
+! NOTICE: Novel Domain "black_soil_toxicity" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(individual) at T=10
+! NOTICE: Novel Domain "black_soil_toxicity" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(individual) at T=10
+! NOTICE: Novel Domain "black_soil_toxicity" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(individual) at T=10
+! NOTICE: Novel Domain "black_soil_toxicity" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(individual) at T=10
+
+[REPAIR] Auditing vectors for: black_soil_toxicity...
+
+>>> INITIATING v3.1.1 DR-AUDIT SUITE: black_soil_toxicity
+[STEP 1] Auditing and Repairing Measurements...
+
+[REPAIR] Auditing vectors for: black_soil_toxicity...
+[STEP 2] Verifying Data Integrity...
+
+--- [START] v3.1 DATA INTEGRITY VERIFICATION ---
+[OK] Ontology Schema matches.
+Checking Interval: black_soil_toxicity (0-10)
+Checking Interval: black_soil_toxicity (0-10)
+--- [END] Verification Complete ---
+[OK] Verification passed. Proceeding to audit.
+[STEP 3] Computing System Gradients...
+[STEP 4] DRL Ontological Audit...
+  [OK] No Ontological Fraud detected.
+[STEP 5] Extracting Omega Variables (Ω)...
+  No reasoning blockers (Omegas) identified.
+[STEP 6] Generating Executive Summary...
+
+
+====================================================
+   DEFERENTIAL REALISM (DR) EXECUTIVE SUMMARY
+====================================================
+Timeline:       0 to 10
+Structural Pattern: stable
+Confidence:     high
+
+[CONSTRAINT INVENTORY: REALITY AUDIT]
+  Constraint | Claimed | Actual | Action
+  ----------------------------------------------------------------------
+
+[META-LOGICAL AUDIT: ONTOLOGICAL FRAUD DETECTION]
+  No classification errors detected. System is Ontologically Coherent.
+
+[STRUCTURAL SIGNATURE ANALYSIS]
+
+[UKE_DR FEASIBILITY BRIDGE]
+  Recommendation | UKE Status
+  ----------------------------------------------------------------------
+
+Aggregate Magnitude (Kappa) at Tn: 0.50
+
+[PERSPECTIVAL GAP ANALYSIS]
+====================================================
+[STEP 7] Generating LLM Refinement Manifest...
+
+### START LLM REFINEMENT MANIFEST: black_soil_toxicity ###
+
+[PERSPECTIVAL_GAPS]
+
+[ONTOLOGICAL_MISMATCHES]
+  - None detected.
+
+[UNRESOLVED_OMEGAS]
+  - None detected.
+
+### END REFINEMENT MANIFEST ###
+
+### START LLM REFINEMENT MANIFEST: black_soil_toxicity ###
+
+[PERSPECTIVAL_GAPS]
+
+[ONTOLOGICAL_MISMATCHES]
+  - None detected.
+
+[UNRESOLVED_OMEGAS]
+  - None detected.
+
+### END REFINEMENT MANIFEST ###
+
+[18] DOMAIN: ROTATION_SEVEN_ISOLATION (./testsets/rotation_seven_isolation.pl)
+
+[SCENARIO MANAGER] Clearing Knowledge Base...
+[OK] Knowledge Base is empty.
+[SCENARIO MANAGER] Loading: ./testsets/rotation_seven_isolation.pl...
+[SCENARIO MANAGER] Performing Global Repair...
+
+[REPAIR] Auditing vectors for: protocol_r7_isolation...
+! NOTICE: Novel Domain "protocol_r7_isolation" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(organizational) at T=0
+! NOTICE: Novel Domain "protocol_r7_isolation" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(organizational) at T=0
+! NOTICE: Novel Domain "protocol_r7_isolation" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(organizational) at T=0
+! NOTICE: Novel Domain "protocol_r7_isolation" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(organizational) at T=0
+! NOTICE: Novel Domain "protocol_r7_isolation" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(organizational) at T=10
+! NOTICE: Novel Domain "protocol_r7_isolation" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(organizational) at T=10
+! NOTICE: Novel Domain "protocol_r7_isolation" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(organizational) at T=10
+! NOTICE: Novel Domain "protocol_r7_isolation" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(organizational) at T=10
+! NOTICE: Novel Domain "protocol_r7_isolation" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(class) at T=0
+! NOTICE: Novel Domain "protocol_r7_isolation" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(class) at T=0
+! NOTICE: Novel Domain "protocol_r7_isolation" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(class) at T=0
+! NOTICE: Novel Domain "protocol_r7_isolation" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(class) at T=0
+! NOTICE: Novel Domain "protocol_r7_isolation" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(class) at T=10
+! NOTICE: Novel Domain "protocol_r7_isolation" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(class) at T=10
+! NOTICE: Novel Domain "protocol_r7_isolation" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(class) at T=10
+! NOTICE: Novel Domain "protocol_r7_isolation" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(class) at T=10
+! NOTICE: Novel Domain "protocol_r7_isolation" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(individual) at T=0
+! NOTICE: Novel Domain "protocol_r7_isolation" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(individual) at T=0
+! NOTICE: Novel Domain "protocol_r7_isolation" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(individual) at T=0
+! NOTICE: Novel Domain "protocol_r7_isolation" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(individual) at T=0
+! NOTICE: Novel Domain "protocol_r7_isolation" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(individual) at T=10
+! NOTICE: Novel Domain "protocol_r7_isolation" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(individual) at T=10
+! NOTICE: Novel Domain "protocol_r7_isolation" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(individual) at T=10
+! NOTICE: Novel Domain "protocol_r7_isolation" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(individual) at T=10
+
+[REPAIR] Auditing vectors for: protocol_r7_isolation...
+
+>>> INITIATING v3.1.1 DR-AUDIT SUITE: protocol_r7_isolation
+[STEP 1] Auditing and Repairing Measurements...
+
+[REPAIR] Auditing vectors for: protocol_r7_isolation...
+[STEP 2] Verifying Data Integrity...
+
+--- [START] v3.1 DATA INTEGRITY VERIFICATION ---
+[OK] Ontology Schema matches.
+Checking Interval: protocol_r7_isolation (0-10)
+Checking Interval: protocol_r7_isolation (0-10)
+--- [END] Verification Complete ---
+[OK] Verification passed. Proceeding to audit.
+[STEP 3] Computing System Gradients...
+[STEP 4] DRL Ontological Audit...
+  [OK] No Ontological Fraud detected.
+[STEP 5] Extracting Omega Variables (Ω)...
+  No reasoning blockers (Omegas) identified.
+[STEP 6] Generating Executive Summary...
+
+
+====================================================
+   DEFERENTIAL REALISM (DR) EXECUTIVE SUMMARY
+====================================================
+Timeline:       0 to 10
+Structural Pattern: stable
+Confidence:     high
+
+[CONSTRAINT INVENTORY: REALITY AUDIT]
+  Constraint | Claimed | Actual | Action
+  ----------------------------------------------------------------------
+
+[META-LOGICAL AUDIT: ONTOLOGICAL FRAUD DETECTION]
+  No classification errors detected. System is Ontologically Coherent.
+
+[STRUCTURAL SIGNATURE ANALYSIS]
+
+[UKE_DR FEASIBILITY BRIDGE]
+  Recommendation | UKE Status
+  ----------------------------------------------------------------------
+
+Aggregate Magnitude (Kappa) at Tn: 0.50
+
+[PERSPECTIVAL GAP ANALYSIS]
+====================================================
+[STEP 7] Generating LLM Refinement Manifest...
+
+### START LLM REFINEMENT MANIFEST: protocol_r7_isolation ###
+
+[PERSPECTIVAL_GAPS]
+
+[ONTOLOGICAL_MISMATCHES]
+  - None detected.
+
+[UNRESOLVED_OMEGAS]
+  - None detected.
+
+### END REFINEMENT MANIFEST ###
+
+### START LLM REFINEMENT MANIFEST: protocol_r7_isolation ###
+
+[PERSPECTIVAL_GAPS]
+
+[ONTOLOGICAL_MISMATCHES]
+  - None detected.
+
+[UNRESOLVED_OMEGAS]
+  - None detected.
+
+### END REFINEMENT MANIFEST ###
+
+[19] DOMAIN: ROTATION_SEVEN_KUBO_RANKING (./testsets/rotation_seven_kubo_ranking.pl)
+
+[SCENARIO MANAGER] Clearing Knowledge Base...
+[OK] Knowledge Base is empty.
+[SCENARIO MANAGER] Loading: ./testsets/rotation_seven_kubo_ranking.pl...
+[SCENARIO MANAGER] Performing Global Repair...
+
+[REPAIR] Auditing vectors for: kubo_ranking_system_r7...
+! NOTICE: Novel Domain "kubo_ranking_system_r7" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(organizational) at T=0
+! NOTICE: Novel Domain "kubo_ranking_system_r7" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(organizational) at T=0
+! NOTICE: Novel Domain "kubo_ranking_system_r7" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(organizational) at T=0
+! NOTICE: Novel Domain "kubo_ranking_system_r7" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(organizational) at T=0
+! NOTICE: Novel Domain "kubo_ranking_system_r7" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(organizational) at T=10
+! NOTICE: Novel Domain "kubo_ranking_system_r7" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(organizational) at T=10
+! NOTICE: Novel Domain "kubo_ranking_system_r7" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(organizational) at T=10
+! NOTICE: Novel Domain "kubo_ranking_system_r7" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(organizational) at T=10
+! NOTICE: Novel Domain "kubo_ranking_system_r7" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(class) at T=0
+! NOTICE: Novel Domain "kubo_ranking_system_r7" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(class) at T=0
+! NOTICE: Novel Domain "kubo_ranking_system_r7" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(class) at T=0
+! NOTICE: Novel Domain "kubo_ranking_system_r7" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(class) at T=0
+! NOTICE: Novel Domain "kubo_ranking_system_r7" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(class) at T=10
+! NOTICE: Novel Domain "kubo_ranking_system_r7" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(class) at T=10
+! NOTICE: Novel Domain "kubo_ranking_system_r7" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(class) at T=10
+! NOTICE: Novel Domain "kubo_ranking_system_r7" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(class) at T=10
+! NOTICE: Novel Domain "kubo_ranking_system_r7" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(individual) at T=0
+! NOTICE: Novel Domain "kubo_ranking_system_r7" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(individual) at T=0
+! NOTICE: Novel Domain "kubo_ranking_system_r7" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(individual) at T=0
+! NOTICE: Novel Domain "kubo_ranking_system_r7" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(individual) at T=0
+! NOTICE: Novel Domain "kubo_ranking_system_r7" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(individual) at T=10
+! NOTICE: Novel Domain "kubo_ranking_system_r7" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(individual) at T=10
+! NOTICE: Novel Domain "kubo_ranking_system_r7" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(individual) at T=10
+! NOTICE: Novel Domain "kubo_ranking_system_r7" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(individual) at T=10
+
+[REPAIR] Auditing vectors for: kubo_ranking_system_r7...
+
+>>> INITIATING v3.1.1 DR-AUDIT SUITE: kubo_ranking_system_r7
+[STEP 1] Auditing and Repairing Measurements...
+
+[REPAIR] Auditing vectors for: kubo_ranking_system_r7...
+[STEP 2] Verifying Data Integrity...
+
+--- [START] v3.1 DATA INTEGRITY VERIFICATION ---
+[OK] Ontology Schema matches.
+Checking Interval: kubo_ranking_system_r7 (0-10)
+Checking Interval: kubo_ranking_system_r7 (0-10)
+--- [END] Verification Complete ---
+[OK] Verification passed. Proceeding to audit.
+[STEP 3] Computing System Gradients...
+[STEP 4] DRL Ontological Audit...
+  [OK] No Ontological Fraud detected.
+[STEP 5] Extracting Omega Variables (Ω)...
+  No reasoning blockers (Omegas) identified.
+[STEP 6] Generating Executive Summary...
+
+
+====================================================
+   DEFERENTIAL REALISM (DR) EXECUTIVE SUMMARY
+====================================================
+Timeline:       0 to 10
+Structural Pattern: stable
+Confidence:     high
+
+[CONSTRAINT INVENTORY: REALITY AUDIT]
+  Constraint | Claimed | Actual | Action
+  ----------------------------------------------------------------------
+
+[META-LOGICAL AUDIT: ONTOLOGICAL FRAUD DETECTION]
+  No classification errors detected. System is Ontologically Coherent.
+
+[STRUCTURAL SIGNATURE ANALYSIS]
+
+[UKE_DR FEASIBILITY BRIDGE]
+  Recommendation | UKE Status
+  ----------------------------------------------------------------------
+
+Aggregate Magnitude (Kappa) at Tn: 0.50
+
+[PERSPECTIVAL GAP ANALYSIS]
+====================================================
+[STEP 7] Generating LLM Refinement Manifest...
+
+### START LLM REFINEMENT MANIFEST: kubo_ranking_system_r7 ###
+
+[PERSPECTIVAL_GAPS]
+
+[ONTOLOGICAL_MISMATCHES]
+  - None detected.
+
+[UNRESOLVED_OMEGAS]
+  - None detected.
+
+### END REFINEMENT MANIFEST ###
+
+### START LLM REFINEMENT MANIFEST: kubo_ranking_system_r7 ###
+
+[PERSPECTIVAL_GAPS]
+
+[ONTOLOGICAL_MISMATCHES]
+  - None detected.
+
+[UNRESOLVED_OMEGAS]
+  - None detected.
+
+### END REFINEMENT MANIFEST ###
+
+[20] DOMAIN: SHANNON_ENTROPY_LIMIT (./testsets/shannon_entropy_limit.pl)
+
+[SCENARIO MANAGER] Clearing Knowledge Base...
+[OK] Knowledge Base is empty.
+[SCENARIO MANAGER] Loading: ./testsets/shannon_entropy_limit.pl...
+Warning: /home/scott/bin/structural_dynamics_model/prolog/testsets/shannon_entropy_limit.pl:66:
+Warning:    Redefined static procedure domain_priors:emerges_naturally/1
+Warning:    Previously defined at /home/scott/bin/structural_dynamics_model/prolog/testsets/relativity_of_simultaneity.pl:71
+[SCENARIO MANAGER] Performing Global Repair...
+
+[REPAIR] Auditing vectors for: shannon_entropy_limit...
+! NOTICE: Novel Domain "shannon_entropy_limit" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(organizational) at T=0
+! NOTICE: Novel Domain "shannon_entropy_limit" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(organizational) at T=0
+! NOTICE: Novel Domain "shannon_entropy_limit" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(organizational) at T=0
+! NOTICE: Novel Domain "shannon_entropy_limit" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(organizational) at T=0
+! NOTICE: Novel Domain "shannon_entropy_limit" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(organizational) at T=10
+! NOTICE: Novel Domain "shannon_entropy_limit" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(organizational) at T=10
+! NOTICE: Novel Domain "shannon_entropy_limit" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(organizational) at T=10
+! NOTICE: Novel Domain "shannon_entropy_limit" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(organizational) at T=10
+! NOTICE: Novel Domain "shannon_entropy_limit" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(class) at T=0
+! NOTICE: Novel Domain "shannon_entropy_limit" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(class) at T=0
+! NOTICE: Novel Domain "shannon_entropy_limit" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(class) at T=0
+! NOTICE: Novel Domain "shannon_entropy_limit" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(class) at T=0
+! NOTICE: Novel Domain "shannon_entropy_limit" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(class) at T=10
+! NOTICE: Novel Domain "shannon_entropy_limit" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(class) at T=10
+! NOTICE: Novel Domain "shannon_entropy_limit" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(class) at T=10
+! NOTICE: Novel Domain "shannon_entropy_limit" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(class) at T=10
+! NOTICE: Novel Domain "shannon_entropy_limit" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(individual) at T=0
+! NOTICE: Novel Domain "shannon_entropy_limit" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(individual) at T=0
+! NOTICE: Novel Domain "shannon_entropy_limit" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(individual) at T=0
+! NOTICE: Novel Domain "shannon_entropy_limit" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(individual) at T=0
+! NOTICE: Novel Domain "shannon_entropy_limit" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(individual) at T=10
+! NOTICE: Novel Domain "shannon_entropy_limit" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(individual) at T=10
+! NOTICE: Novel Domain "shannon_entropy_limit" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(individual) at T=10
+! NOTICE: Novel Domain "shannon_entropy_limit" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(individual) at T=10
+
+[REPAIR] Auditing vectors for: shannon_entropy_limit...
+
+>>> INITIATING v3.1.1 DR-AUDIT SUITE: shannon_entropy_limit
+[STEP 1] Auditing and Repairing Measurements...
+
+[REPAIR] Auditing vectors for: shannon_entropy_limit...
+[STEP 2] Verifying Data Integrity...
+
+--- [START] v3.1 DATA INTEGRITY VERIFICATION ---
+[OK] Ontology Schema matches.
+Checking Interval: shannon_entropy_limit (0-10)
+Checking Interval: shannon_entropy_limit (0-10)
+--- [END] Verification Complete ---
+[OK] Verification passed. Proceeding to audit.
+[STEP 3] Computing System Gradients...
+[STEP 4] DRL Ontological Audit...
+  [OK] No Ontological Fraud detected.
+[STEP 5] Extracting Omega Variables (Ω)...
+  No reasoning blockers (Omegas) identified.
+[STEP 6] Generating Executive Summary...
+
+
+====================================================
+   DEFERENTIAL REALISM (DR) EXECUTIVE SUMMARY
+====================================================
+Timeline:       0 to 10
+Structural Pattern: stable
+Confidence:     high
+
+[CONSTRAINT INVENTORY: REALITY AUDIT]
+  Constraint | Claimed | Actual | Action
+  ----------------------------------------------------------------------
+
+[META-LOGICAL AUDIT: ONTOLOGICAL FRAUD DETECTION]
+  No classification errors detected. System is Ontologically Coherent.
+
+[STRUCTURAL SIGNATURE ANALYSIS]
+
+[UKE_DR FEASIBILITY BRIDGE]
+  Recommendation | UKE Status
+  ----------------------------------------------------------------------
+
+Aggregate Magnitude (Kappa) at Tn: 0.50
+
+[PERSPECTIVAL GAP ANALYSIS]
+====================================================
+[STEP 7] Generating LLM Refinement Manifest...
+
+### START LLM REFINEMENT MANIFEST: shannon_entropy_limit ###
+
+[PERSPECTIVAL_GAPS]
+
+[ONTOLOGICAL_MISMATCHES]
+  - None detected.
+
+[UNRESOLVED_OMEGAS]
+  - None detected.
+
+### END REFINEMENT MANIFEST ###
+
+### START LLM REFINEMENT MANIFEST: shannon_entropy_limit ###
+
+[PERSPECTIVAL_GAPS]
+
+[ONTOLOGICAL_MISMATCHES]
+  - None detected.
+
+[UNRESOLVED_OMEGAS]
+  - None detected.
+
+### END REFINEMENT MANIFEST ###
+
+[21] DOMAIN: SILICON_LEXICON_OVERLOAD (./testsets/silicon_lexicon_overload.pl)
+
+[SCENARIO MANAGER] Clearing Knowledge Base...
+[OK] Knowledge Base is empty.
+[SCENARIO MANAGER] Loading: ./testsets/silicon_lexicon_overload.pl...
+[SCENARIO MANAGER] Performing Global Repair...
+
+[REPAIR] Auditing vectors for: silicon_lexicon_overload...
+! NOTICE: Novel Domain "silicon_lexicon_overload" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(organizational) at T=0
+! NOTICE: Novel Domain "silicon_lexicon_overload" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(organizational) at T=0
+! NOTICE: Novel Domain "silicon_lexicon_overload" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(organizational) at T=0
+! NOTICE: Novel Domain "silicon_lexicon_overload" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(organizational) at T=0
+! NOTICE: Novel Domain "silicon_lexicon_overload" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(organizational) at T=10
+! NOTICE: Novel Domain "silicon_lexicon_overload" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(organizational) at T=10
+! NOTICE: Novel Domain "silicon_lexicon_overload" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(organizational) at T=10
+! NOTICE: Novel Domain "silicon_lexicon_overload" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(organizational) at T=10
+! NOTICE: Novel Domain "silicon_lexicon_overload" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(class) at T=0
+! NOTICE: Novel Domain "silicon_lexicon_overload" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(class) at T=0
+! NOTICE: Novel Domain "silicon_lexicon_overload" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(class) at T=0
+! NOTICE: Novel Domain "silicon_lexicon_overload" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(class) at T=0
+! NOTICE: Novel Domain "silicon_lexicon_overload" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(class) at T=10
+! NOTICE: Novel Domain "silicon_lexicon_overload" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(class) at T=10
+! NOTICE: Novel Domain "silicon_lexicon_overload" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(class) at T=10
+! NOTICE: Novel Domain "silicon_lexicon_overload" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(class) at T=10
+! NOTICE: Novel Domain "silicon_lexicon_overload" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(individual) at T=0
+! NOTICE: Novel Domain "silicon_lexicon_overload" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(individual) at T=0
+! NOTICE: Novel Domain "silicon_lexicon_overload" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(individual) at T=0
+! NOTICE: Novel Domain "silicon_lexicon_overload" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(individual) at T=0
+! NOTICE: Novel Domain "silicon_lexicon_overload" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(individual) at T=10
+! NOTICE: Novel Domain "silicon_lexicon_overload" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(individual) at T=10
+! NOTICE: Novel Domain "silicon_lexicon_overload" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(individual) at T=10
+! NOTICE: Novel Domain "silicon_lexicon_overload" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(individual) at T=10
+
+[REPAIR] Auditing vectors for: silicon_lexicon_overload...
+
+>>> INITIATING v3.1.1 DR-AUDIT SUITE: silicon_lexicon_overload
+[STEP 1] Auditing and Repairing Measurements...
+
+[REPAIR] Auditing vectors for: silicon_lexicon_overload...
+[STEP 2] Verifying Data Integrity...
+
+--- [START] v3.1 DATA INTEGRITY VERIFICATION ---
+[OK] Ontology Schema matches.
+Checking Interval: silicon_lexicon_overload (0-10)
+Checking Interval: silicon_lexicon_overload (0-10)
+--- [END] Verification Complete ---
+[OK] Verification passed. Proceeding to audit.
+[STEP 3] Computing System Gradients...
+[STEP 4] DRL Ontological Audit...
+  [OK] No Ontological Fraud detected.
+[STEP 5] Extracting Omega Variables (Ω)...
+  No reasoning blockers (Omegas) identified.
+[STEP 6] Generating Executive Summary...
+
+
+====================================================
+   DEFERENTIAL REALISM (DR) EXECUTIVE SUMMARY
+====================================================
+Timeline:       0 to 10
+Structural Pattern: stable
+Confidence:     high
+
+[CONSTRAINT INVENTORY: REALITY AUDIT]
+  Constraint | Claimed | Actual | Action
+  ----------------------------------------------------------------------
+
+[META-LOGICAL AUDIT: ONTOLOGICAL FRAUD DETECTION]
+  No classification errors detected. System is Ontologically Coherent.
+
+[STRUCTURAL SIGNATURE ANALYSIS]
+
+[UKE_DR FEASIBILITY BRIDGE]
+  Recommendation | UKE Status
+  ----------------------------------------------------------------------
+
+Aggregate Magnitude (Kappa) at Tn: 0.50
+
+[PERSPECTIVAL GAP ANALYSIS]
+====================================================
+[STEP 7] Generating LLM Refinement Manifest...
+
+### START LLM REFINEMENT MANIFEST: silicon_lexicon_overload ###
+
+[PERSPECTIVAL_GAPS]
+
+[ONTOLOGICAL_MISMATCHES]
+  - None detected.
+
+[UNRESOLVED_OMEGAS]
+  - None detected.
+
+### END REFINEMENT MANIFEST ###
+
+### START LLM REFINEMENT MANIFEST: silicon_lexicon_overload ###
+
+[PERSPECTIVAL_GAPS]
+
+[ONTOLOGICAL_MISMATCHES]
+  - None detected.
+
+[UNRESOLVED_OMEGAS]
+  - None detected.
+
+### END REFINEMENT MANIFEST ###
+
+[22] DOMAIN: STS86_ASCENT_CHECKLIST (./testsets/sts86_ascent_checklist.pl)
+
+[SCENARIO MANAGER] Clearing Knowledge Base...
+[OK] Knowledge Base is empty.
+[SCENARIO MANAGER] Loading: ./testsets/sts86_ascent_checklist.pl...
+[SCENARIO MANAGER] Performing Global Repair...
+
+[REPAIR] Auditing vectors for: sts86_ascent_checklist...
+! NOTICE: Novel Domain "sts86_ascent_checklist" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(organizational) at T=0
+! NOTICE: Novel Domain "sts86_ascent_checklist" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(organizational) at T=0
+! NOTICE: Novel Domain "sts86_ascent_checklist" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(organizational) at T=0
+! NOTICE: Novel Domain "sts86_ascent_checklist" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(organizational) at T=0
+! NOTICE: Novel Domain "sts86_ascent_checklist" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(organizational) at T=10
+! NOTICE: Novel Domain "sts86_ascent_checklist" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(organizational) at T=10
+! NOTICE: Novel Domain "sts86_ascent_checklist" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(organizational) at T=10
+! NOTICE: Novel Domain "sts86_ascent_checklist" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(organizational) at T=10
+! NOTICE: Novel Domain "sts86_ascent_checklist" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(class) at T=0
+! NOTICE: Novel Domain "sts86_ascent_checklist" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(class) at T=0
+! NOTICE: Novel Domain "sts86_ascent_checklist" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(class) at T=0
+! NOTICE: Novel Domain "sts86_ascent_checklist" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(class) at T=0
+! NOTICE: Novel Domain "sts86_ascent_checklist" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(class) at T=10
+! NOTICE: Novel Domain "sts86_ascent_checklist" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(class) at T=10
+! NOTICE: Novel Domain "sts86_ascent_checklist" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(class) at T=10
+! NOTICE: Novel Domain "sts86_ascent_checklist" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(class) at T=10
+! NOTICE: Novel Domain "sts86_ascent_checklist" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(individual) at T=0
+! NOTICE: Novel Domain "sts86_ascent_checklist" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(individual) at T=0
+! NOTICE: Novel Domain "sts86_ascent_checklist" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(individual) at T=0
+! NOTICE: Novel Domain "sts86_ascent_checklist" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(individual) at T=0
+! NOTICE: Novel Domain "sts86_ascent_checklist" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for accessibility_collapse(individual) at T=10
+! NOTICE: Novel Domain "sts86_ascent_checklist" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for stakes_inflation(individual) at T=10
+! NOTICE: Novel Domain "sts86_ascent_checklist" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for suppression(individual) at T=10
+! NOTICE: Novel Domain "sts86_ascent_checklist" detected. Using neutral priors. LLM review required.
+  [FIXED] Imputed 0.5 for resistance(individual) at T=10
+
+[REPAIR] Auditing vectors for: sts86_ascent_checklist...
+
+>>> INITIATING v3.1.1 DR-AUDIT SUITE: sts86_ascent_checklist
+[STEP 1] Auditing and Repairing Measurements...
+
+[REPAIR] Auditing vectors for: sts86_ascent_checklist...
+[STEP 2] Verifying Data Integrity...
+
+--- [START] v3.1 DATA INTEGRITY VERIFICATION ---
+[OK] Ontology Schema matches.
+Checking Interval: sts86_ascent_checklist (0-10)
+Checking Interval: sts86_ascent_checklist (0-10)
+--- [END] Verification Complete ---
+[OK] Verification passed. Proceeding to audit.
+[STEP 3] Computing System Gradients...
+[STEP 4] DRL Ontological Audit...
+  [OK] No Ontological Fraud detected.
+[STEP 5] Extracting Omega Variables (Ω)...
+  No reasoning blockers (Omegas) identified.
+[STEP 6] Generating Executive Summary...
+
+
+====================================================
+   DEFERENTIAL REALISM (DR) EXECUTIVE SUMMARY
+====================================================
+Timeline:       0 to 10
+Structural Pattern: stable
+Confidence:     high
+
+[CONSTRAINT INVENTORY: REALITY AUDIT]
+  Constraint | Claimed | Actual | Action
+  ----------------------------------------------------------------------
+
+[META-LOGICAL AUDIT: ONTOLOGICAL FRAUD DETECTION]
+  No classification errors detected. System is Ontologically Coherent.
+
+[STRUCTURAL SIGNATURE ANALYSIS]
+
+[UKE_DR FEASIBILITY BRIDGE]
+  Recommendation | UKE Status
+  ----------------------------------------------------------------------
+
+Aggregate Magnitude (Kappa) at Tn: 0.50
+
+[PERSPECTIVAL GAP ANALYSIS]
+====================================================
+[STEP 7] Generating LLM Refinement Manifest...
+
+### START LLM REFINEMENT MANIFEST: sts86_ascent_checklist ###
+
+[PERSPECTIVAL_GAPS]
+
+[ONTOLOGICAL_MISMATCHES]
+  - None detected.
+
+[UNRESOLVED_OMEGAS]
+  - None detected.
+
+### END REFINEMENT MANIFEST ###
+
+### START LLM REFINEMENT MANIFEST: sts86_ascent_checklist ###
+
+[PERSPECTIVAL_GAPS]
+
+[ONTOLOGICAL_MISMATCHES]
+  - None detected.
+
+[UNRESOLVED_OMEGAS]
+  - None detected.
+
+### END REFINEMENT MANIFEST ###
+
+DONE: 22 Passed, 0 Failed
+true.
+
+?-
