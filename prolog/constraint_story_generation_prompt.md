@@ -417,6 +417,14 @@ If alternatives exist but are suppressed → often Noose not Rope
 If alternatives don't exist → might be Mountain or Rope
 If alternatives are encouraged → definitely Rope
 
+### 8.  Mandatory Perspectival Classifications
+
+For any constraint with base_extractiveness > 0.3, you MUST provide:
+1. At least one classification from `agent_power(individual_powerless)` 
+2. At least one classification from `agent_power(institutional)`
+
+This enables perspectival gap detection and Ω generation.
+
 ---
 
 ## Omega Extraction Protocol

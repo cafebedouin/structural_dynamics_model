@@ -1,0 +1,108 @@
+?- run_scenario('./testsets/columbia_2026_election.pl', columbia_2026_election).
+
+[SCENARIO MANAGER] Clearing Knowledge Base...
+[OK] Knowledge Base is empty.
+[SCENARIO MANAGER] Loading: ./testsets/columbia_2026_elections.pl...
+[SCENARIO MANAGER] Performing Global Repair...
+
+[REPAIR] Auditing vectors for: colombia_2026_presidential_election...
+  [FIXED] Imputed 0.6 for accessibility_collapse(organizational) at T=0
+  [FIXED] Imputed 0.7 for stakes_inflation(organizational) at T=0
+  [FIXED] Imputed 0.35 for suppression(organizational) at T=0
+  [FIXED] Imputed 0.6 for resistance(organizational) at T=0
+  [FIXED] Imputed 0.6 for accessibility_collapse(organizational) at T=10
+  [FIXED] Imputed 0.7 for stakes_inflation(organizational) at T=10
+  [FIXED] Imputed 0.35 for suppression(organizational) at T=10
+  [FIXED] Imputed 0.6 for resistance(organizational) at T=10
+  [FIXED] Imputed 0.6 for accessibility_collapse(class) at T=0
+  [FIXED] Imputed 0.7 for stakes_inflation(class) at T=0
+  [FIXED] Imputed 0.35 for suppression(class) at T=0
+  [FIXED] Imputed 0.6 for resistance(class) at T=0
+  [FIXED] Imputed 0.6 for accessibility_collapse(class) at T=10
+  [FIXED] Imputed 0.7 for stakes_inflation(class) at T=10
+  [FIXED] Imputed 0.35 for suppression(class) at T=10
+  [FIXED] Imputed 0.6 for resistance(class) at T=10
+  [FIXED] Imputed 0.6 for accessibility_collapse(individual) at T=0
+  [FIXED] Imputed 0.7 for stakes_inflation(individual) at T=0
+  [FIXED] Imputed 0.35 for suppression(individual) at T=0
+  [FIXED] Imputed 0.6 for resistance(individual) at T=0
+  [FIXED] Imputed 0.6 for accessibility_collapse(individual) at T=10
+  [FIXED] Imputed 0.7 for stakes_inflation(individual) at T=10
+  [FIXED] Imputed 0.35 for suppression(individual) at T=10
+  [FIXED] Imputed 0.6 for resistance(individual) at T=10
+
+[REPAIR] Auditing vectors for: columbia_2026_election...
+
+>>> INITIATING v3.1.1 DR-AUDIT SUITE: columbia_2026_election
+[STEP 1] Auditing and Repairing Measurements...
+
+[REPAIR] Auditing vectors for: columbia_2026_election...
+[STEP 2] Verifying Data Integrity...
+
+--- [START] v3.1 DATA INTEGRITY VERIFICATION ---
+--- [START] v3.1 DATA INTEGRITY VERIFICATION ---
+[OK] Ontology Schema matches.
+--- [END] Verification Complete ---
+[OK] Ontology Schema matches.
+Checking Interval: colombia_2026_presidential_election (0-10)
+Checking Interval: columbia_2026_election (0-10)
+--- [END] Verification Complete ---
+[OK] Verification passed. Proceeding to audit.
+[STEP 3] Computing System Gradients...
+[STEP 4] DRL Ontological Audit...
+  [OK] No Ontological Fraud detected.
+[STEP 5] Extracting Omega Variables (Ω)...
+  No reasoning blockers (Omegas) identified.
+[STEP 6] Generating Executive Summary...
+
+
+====================================================
+   DEFERENTIAL REALISM (DR) EXECUTIVE SUMMARY
+====================================================
+Timeline:       0 to 10
+Structural Pattern: stable
+Confidence:     high
+
+[CONSTRAINT INVENTORY: REALITY AUDIT]
+  Constraint | Claimed | Actual | Action
+  ----------------------------------------------------------------------
+  colombia_2026_presidential_election | election_cycle | tangled_rope | reform
+
+[META-LOGICAL AUDIT: ONTOLOGICAL FRAUD DETECTION]
+  No classification errors detected. System is Ontologically Coherent.
+
+[STRUCTURAL SIGNATURE ANALYSIS]
+  colombia_2026_presidential_election: constructed_constraint (confidence: low)
+    → CONSTRUCTED CONSTRAINT signature for colombia_2026_presidential_election: Active enforcement detected (suppression=0.35, resistance=0.50) with 0 asymmetric beneficiaries. This is an institutionally maintained rule requiring ongoing suppression energy.
+
+[UKE_DR FEASIBILITY BRIDGE]
+  Recommendation | UKE Status
+  ----------------------------------------------------------------------
+
+Aggregate Magnitude (Kappa) at Tn: 0.55
+
+[PERSPECTIVAL GAP ANALYSIS]
+
+  Analysis for Constraint: colombia_2026_presidential_election
+    - Individual (Powerless): none
+    - Institutional (Manager): none
+
+[OMEGA GENERATION FROM PERSPECTIVAL GAPS]
+  No perspectival gaps detected requiring Ω tracking.
+====================================================
+[STEP 7] Generating LLM Refinement Manifest...
+
+### START LLM REFINEMENT MANIFEST: columbia_2026_election ###
+
+[PERSPECTIVAL_GAPS]
+
+[ONTOLOGICAL_MISMATCHES]
+  - None detected.
+
+[UNRESOLVED_OMEGAS]
+  - None detected.
+
+### END REFINEMENT MANIFEST ###
+true .
+
+?-

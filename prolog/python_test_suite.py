@@ -8,8 +8,8 @@
 import os
 import re
 
-DATASETS_DIR = './testsets/'
-OUTPUT_FILE = 'validation_suite.pl'
+DATASETS_DIR = '../prolog/testsets/'
+OUTPUT_FILE = '../prolog/validation_suite.pl'
 
 # Captured ID from narrative_ontology:interval(id, ...) or interval(id, ...)
 INTERVAL_REGEX = re.compile(r"(?:narrative_ontology:)?interval\s*\(\s*['\"]?([a-zA-Z0-9_]+)['\"]?\s*,")

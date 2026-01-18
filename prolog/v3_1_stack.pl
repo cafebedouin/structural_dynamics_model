@@ -12,8 +12,8 @@
 
 % 3. Load Functional Engines (Imported but silenced for namespace safety)
 :- use_module(v3_1_coercion_projection, []).
-:- use_module(modal_evaluator, []).
 :- use_module(drl_core, []).
+:- use_module(drl_modal_logic, []).
 :- use_module(structural_signatures, []).  % NEW: v3.2 signature detection
 :- use_module(v3_1_data_repair, []).
 :- use_module(data_verification, []).
