@@ -1,1767 +1,688 @@
-**Label:** Clear direction - build the Individual Practical Battery first, theory/collective can come later.
+# Deferential Realism: Core Principles
+## An Indexed Epistemology for Constraint Classification
+
+**Version 3.1 - Core Principles Document**  
+**Date:** January 2026  
+**Purpose:** Gateway document introducing the complete Deferential Realism framework
 
 ---
 
-## THE INDIVIDUAL PRACTICAL BATTERY
+## About This Document
 
-**Core Principle:** You are situated. You have finite power, finite time, specific location. What should you believe **given your constraints**?
+**Deferential Realism is a five-domain philosophical architecture** integrating:
 
-**Index defaults for this battery:**
-```prolog
-individual_context(context(
-    agent_power(individual_moderate),  % Not powerless, not institutional
-    time_horizon(biographical),        % Planning 20-50 years
-    exit_options(mobile),              % Can change location/systems
-    spatial_scope(national)            % Operating within nation-state
-)).
+- **Epistemology** (this document) - How to classify constraints accurately through indexical specification
+- **Ethics** - How to act appropriately: reality-alignment as honesty-in-practice
+- **Metaphysics** - What exists: constraints constitute entities, not vice versa (entities persist as stable constraint-patterns; what "exists" is defined by what binds it)
+- **Logic** - How to reason validly about constraint-types through formal operators
+- **Aesthetics** - What beauty looks like: elegant alignment vs. grotesque fraud
+
+**Unifying principles across all domains:**
+- **Anti-fraud commitment** - Don't lie about the structure of reality
+- **Energy conservation** - Finite resources demand strategic allocation
+- **Indexical relativity** - Truth relative to position, objective within index
+- **Reality-alignment** - Deference to what actually constrains
+
+**This document focuses on the epistemological foundation** - the core innovation that makes everything else possible. 
+
+**Intellectual lineage:** Deferential Realism inherits its methodological approach from Debugging Philosophy's taxonomy of reasoning errors. Where Type C paradoxes arise from ambiguity-generated contradictions (asking one question that packages multiple distinct queries), DR supplies the indexical specification that dissolves them. See: debugging_philosophy.md for the full trifurcation (Type A: evidence-generated, Type B: structure-generated, Type C: ambiguity-generated).
+
+This document presents the framework in compressed, testable form (~8 pages). For complete treatment of each domain:
+
+- **deferential_realism_ethics.md** - Four cardinal virtues, operational stabilizers, anti-fraud mandate
+- **deferential_realism_metaphysics.md** - Constraint-space ontology, modal profiles
+- **deferential_realism_logic.md** - Formal operators, inference rules, coherence requirements
+- **deferential_realism_aesthetics.md** - Aesthetic qualities of constraint types
+- **deferential_realism_tier3_philosophy.md** - Full philosophical grounding (17,000+ words)
+
+**Read this first.** If the core framework makes sense, the domain extensions follow naturally. If it doesn't, the extensions won't help.
+
+---
+
+## The Central Problem
+
+"Is carbon credit trading a good system?" appears to be a simple question. But consider four different answers, all empirically defensible:
+
+- **Multinational corporation:** "Yes - it's an efficient coordination mechanism that rewards our sustainability investments."
+- **Small business owner:** "Partially - the compliance costs are killing us while big players game the system."
+- **Individual consumer:** "Irrelevant - prices just exist, we have no influence."
+- **Climate activist:** "No - it's extractive greenwashing that delays real action while enriching financial middlemen."
+
+Who is right? Traditional frameworks force a choice: either someone is wrong, or truth is purely subjective. Deferential Realism offers a third path: **all four are objectively true because they're answering different questions from different positions**.
+
+The problem isn't disagreement about facts. It's **indexical underspecification** - asking "What type of constraint is this?" without specifying WHO is evaluating, WHEN, WHERE they're positioned, and HOW MUCH POWER they have. This is a Type C paradox from Debugging Philosophy: an ambiguity-generated question that packages multiple distinct queries into one.
+
+Deferential Realism resolves this by making the indices explicit. It's not a political theory claiming certain constraints are "good" or "bad" - it's a disambiguation framework that maps how constraints function differently for different agents in different positions.
+
+---
+
+## Core Innovation: Indexical Relativity
+
+### The Four Indices
+
+Every constraint classification requires four contextual parameters. **These four dimensions capture the minimal set of variables that determine an agent's experiential exposure to a constraint:** (1) power position relative to the rule-maker, (2) temporal horizon over which evaluation occurs, (3) feasibility of exiting the regime, and (4) spatial reach of the rule. Together they exhaust the degrees of freedom that generate indexical ambiguity.
+
+**1. WHO - Agent Power Position**
+- `individual_powerless`: No exit options, high vulnerability
+- `individual_moderate`: Some mobility, mixed leverage
+- `institutional_manager`: Controls enforcement, maintains structure
+- `analytical_observer`: External evaluator, historical perspective
+
+**2. WHEN - Time Horizon**
+- `biographical`: Single human lifetime (~80 years)
+- `generational`: 2-3 generations (~150 years)
+- `historical`: Centuries to millennia
+- `analytical`: Timeless evaluation
+
+**3. WHERE - Exit Options**
+- `trapped`: No escape possible
+- `mobile`: Can relocate with costs
+- `fluid`: Easy exit available
+- `analytical`: Observer without personal stakes
+
+**4. HOW MUCH - Spatial Scope**
+- `local`: Single institution/community
+- `regional`: Multiple institutions
+- `global`: Worldwide scope
+- `universal`: Applies everywhere by necessity
+
+### Quick Illustration: Traffic Lights
+
+Before the complex carbon credits example, consider something simpler:
+
+**Traffic lights at an intersection:**
+- FOR individual driver [powerless/biographical/trapped/local]: **Mountain** - Cannot personally change, must obey or face consequences, appears as unchangeable rule
+- FOR city traffic engineer [institutional/generational/mobile/regional]: **Rope** - Coordination mechanism requiring maintenance, can be adjusted based on traffic patterns, solves genuine collision problem
+- FOR pedestrian safety advocate [moderate/generational/mobile/local]: **Tangled Rope** - Coordination function exists but timing favors cars over pedestrians, needs reform to rebalance
+- FOR transportation historian [analytical/historical/analytical/global]: **Rope** - Emerged as fair solution to coordination problem, alternatives existed (roundabouts, right-of-way rules) but this worked well
+
+All four classifications are simultaneously true. Different positions → different valid answers → different appropriate strategies (driver: comply; engineer: maintain/optimize; advocate: push for pedestrian priority; historian: study effectiveness patterns).
+
+This is indexical relativity in action: not "whose opinion is right?" but "what is true from each position?"
+
+### Why This Matters
+
+This is **indexical realism**, not epistemic relativism. Each indexed classification is objectively true or false - but the truth *is relative to the index*. 
+
+**Why indices are necessary, not optional:** Without explicit index specification, the question "What type of constraint is this?" collapses into equivocation. The same constraint-statement can be true for multiple distinct index-sets, so any single unindexed answer would be logically incomplete - like asking "What's the velocity?" without specifying reference frame.
+
+Example:
+
+**Medieval Church Doctrine (c. 1200 CE):**
+- FOR serf [powerless/biographical/trapped/local]: **Mountain** - unchangeable like gravity
+- FOR Pope [institutional/generational/fluid/global]: **Rope** - coordination mechanism requiring active maintenance
+- FOR modern historian [analytical/historical/analytical/global]: **Noose** - extractive structure that eventually collapsed
+
+All three classifications are TRUE. Different indices → different valid answers → different appropriate actions.
+
+**Why this framework matters practically:**
+
+1. **Resolves apparent contradictions** - "Is X a Mountain or a Noose?" is ill-formed without index specification
+2. **Explains persistent disagreements** - People evaluate from unstated positions, *revealing the hidden power relations that drive political conflict*
+3. **Guides strategic action** - What appears unchangeable to an individual may be reformable collectively
+4. **Prevents both fatalism and hubris** - Powerless agents shouldn't fight Mountains; powerful agents shouldn't treat Nooses as Mountains
+
+This converts ideological battles into empirical mapping exercises. It's epistemology *as experienced politics* - knowledge claims embedded in power structures.
+
+---
+
+## Five Constraint Categories
+
+Deferential Realism classifies constraints into five types based on their origin, maintenance requirements, and beneficiary distribution:
+
+### 1. Mountain (Natural Constraints)
+**Definition:** Limits rooted in physics, biology, or logic that persist independent of human belief or enforcement.
+
+**Epistemic test:** If everyone stopped believing in this, would it still operate?  
+**Examples:** Gravity, thermodynamics, mortality, logical contradiction  
+**Strategy:** Navigate. Accept. Do not waste energy fighting physics.  
+**Quantification:** κ < 0.05, Suppression ≤ 0.05
+
+### 2. Rope (Coordination Mechanisms)
+**Definition:** Constructed constraints that solve genuine collective action problems with minimal extraction.
+
+**Epistemic test:** Does this solve a problem for most participants?  
+**Examples:** Traffic laws, language standards, TCP/IP protocol  
+**Strategy:** Maintain. Reform carefully if improved coordination is possible.  
+**Quantification:** κ = 0.05-0.35, Extraction ≤ 0.35
+
+### 3. Tangled Rope (Hybrid Constraints) *[NEW CATEGORY]*
+**Definition:** Coordination mechanisms that have accumulated extractive elements but retain coordination function.
+
+**Epistemic test:** If enforcement stopped, would it partly snap back (losing extraction) while maintaining coordination?  
+**Examples:** Copyright law (attribution + excessive terms), professional licensing (quality standards + unnecessary barriers), electoral systems with gerrymandering  
+**Strategy:** Reform - reduce extraction while preserving coordination.  
+**Quantification:** κ = 0.36-0.65, Extraction = 0.36-0.65  
+**Empirical observation:** Common in practice—many real-world constraints blend coordination and extraction rather than being pure types  
+**Empirical prevalence:** ~30% in development testing (observed range: 25-35%)
+
+**Why this category is essential:** Most real-world constraints aren't pure types. Reform requires distinguishing the coordination core from extractive barnacles. "Just remove it" loses coordination benefits; "just maintain it" perpetuates extraction. Tangled Rope identifies the strategic middle path.
+
+### 4. Noose (Extractive Structures)
+**Definition:** Primarily extractive constraints that concentrate power/wealth with minimal coordination benefit.
+
+**Epistemic test:** If enforcement stopped, would the constraint collapse immediately?  
+**Examples:** Slavery, monopolies, predatory lending, artificial scarcity  
+**Strategy:** Replace (with Scaffold if load-bearing). Cut. Exit.  
+**Quantification:** κ > 0.65, Extraction > 0.65
+
+### 5. Zombie (Counterproductive Remnants)
+**Definition:** Constraints that persist despite harming nearly all participants, maintained by inertia, switching costs, or coordination failure rather than any party's benefit.
+
+**Epistemic test:** (1) Does almost everyone involved wish it would disappear? (2) Are there obvious viable alternatives? (3) Yet it persists anyway?  
+
+**Examples:** 
+- Legacy government forms requiring obsolete information nobody uses
+- Vestigial professional licensing for low-risk occupations
+- Outdated compliance procedures that add cost without safety benefit
+- Zombie meetings that accomplish nothing but continue by habit
+
+**Strategy:** Bypass when possible, coordinate to remove when switching costs can be shared. Don't waste energy fighting as if it were a conspiracy - it's organizational autopilot, not malice.  
+
+**Quantification:** κ typically 0.15-0.45 (low-to-moderate coercion), **Coordination < 0.20**, **Beneficiaries ≈ 0** (near-zero beneficiary value)  
+
+**Concrete example - Fax machine requirements in medical records:**
+- Everyone (doctors, patients, insurers, regulators) prefers email/secure messaging
+- Technology exists and is cheaper, faster, more secure
+- Yet many regulations still require fax for "official" transmission
+- Persists due to regulatory inertia, not active beneficiary
+- Classification: Zombie (low coordination value, no beneficiary, high persistence)
+- Action: Route around (use allowed alternatives), coordinate industry pressure for update
+
+**Why separate from Noose:** Nooses have beneficiaries actively maintaining them. Zombies persist despite *absence* of beneficiaries - pure institutional inertia or coordination failure. Confusing the two leads to fighting conspiracies that don't exist.
+
+---
+
+## Multi-Level Hierarchical Analysis
+
+Constraints operate simultaneously at four levels, each requiring independent measurement. **Important:** These levels are not nested hierarchies (where individual sits "inside" class sits "inside" organization). They are simultaneous analytical perspectives with different influence on system behavior. A constraint can be Mountain at individual level while being Noose at class level - both are true at once.
+
+| Level | Influence Weight | What It Measures |
+|-------|-----------------|------------------|
+| **Structural** | 40% | System-wide patterns, meta-rules governing all institutions |
+| **Organizational** | 30% | Institutional dynamics, enforcement mechanisms |
+| **Class** | 20% | Group power positions, collective action capacity |
+| **Individual** | 10% | Personal experience, immediate navigation options |
+
+**Critical insight:** A constraint can be Mountain at individual level (cannot personally change), Rope at organizational level (maintained by institution), and Noose at class level (extracting from specific group). **Single-level analysis yields contradictory results** - you must specify which level you're analyzing.
+
+**Kappa (κ) - Quantifying Magnitude:**
+
+Each level receives a score (0.0-1.0) calculated from four components. **The logic:** Each level yields its own κₗ based on the ASUR vector below; the system-wide κ is then a weighted sum reflecting how much each level contributes to the overall experience of the constraint.
+
+**The ASUR Vector:**
+- **A** = Accessibility Collapse: How inaccessible is compliance?
+- **S** = Stakes Inflation: How amplified are consequences?
+- **U** = Suppression Requirement: How much enforcement needed?
+- **R** = Resistance Capacity: How much organized resistance exists?
+
+Formula: **κₗ = (αₐ·A) + (αₛ·S) + (αᵤ·U) + (αᵣ·R)**
+
+System-wide: **κₛᵧₛ = Σ(wₗ · κₗ)** where wₗ are level influence weights
+
+**Quick Calculation Example:**
+```
+Constraint: Professional licensing requirement
+Individual level: A=0.6, S=0.4, U=0.3, R=0.2
+→ κᵢ = (0.25×0.6) + (0.25×0.4) + (0.25×0.3) + (0.25×0.2)
+→ κᵢ = 0.15 + 0.10 + 0.075 + 0.05 = 0.375
+
+Interpretation: κ=0.375 falls in Tangled Rope range (0.36-0.65)
+Implication: Mixed coordination/extraction, requires reform not removal
 ```
 
-You can adjust these for your actual situation, but this is the **starting assumption** for the battery.
+This provides continuous measurement while categorical labels provide intuitive understanding. Both are needed.
 
 ---
 
-## STRUCTURE: Theory vs Practice Split
+## Structural Signatures: Origin Detection
 
-### TIER 0: THEORY (Sub Specie Aeternitatis)
-**Small set. Deductive. Universal.**
-- Things that are true regardless of WHO/WHEN/WHERE
-- True Mountains (physics, logic, math)
-- Not many questions here - most "deep questions" dissolve
+Beyond present measurements, constraints carry "structural signatures" - traces of their origins:
 
-### TIER 1: PRACTICE - INDIVIDUAL
-**Large set. Pragmatic. Contextual.**
-- What should I believe given my power/time/options?
-- How should I classify constraints I face?
-- Which frames serve my goals?
+### Three Signatures:
+
+**1. Natural Law**
+- No alternatives ever existed
+- Test: Universal inaccessibility (>0.85) + No suppression (<0.15)
+- Examples: Physics, logic, mathematics
+- Implication: Cannot be changed, only navigated
+
+**2. Coordination Scaffold**
+- Alternatives existed, best one won fairly through voluntary adoption
+- Test: Universal adoption (>0.85) + Voluntary compliance (<0.15) + Historical alternatives documented
+- Examples: Metric system, TCP/IP, standard time zones
+- Implication: Can be changed but coordination costs are high
+
+**3. Constructed Constraint**
+- Alternatives existed, power selected winner
+- Test: Active enforcement (>0.20) + Resistance exists (>0.20) + Asymmetric beneficiaries (≥2 classes)
+- Examples: Property law, specific tax codes, regulatory regimes
+- Implication: Can be changed through collective political action
+
+**Why signatures matter:** A constraint can be Mountain (unchangeable NOW) with Constructed signature (was politically chosen, could be reformed collectively). This exposes "ontological fraud" - claims that something is "natural law" when it shows constructed signatures.
 
 ---
 
-## TIER 0: THEORY BATTERY (The Small Set)
+## Complete Worked Example: Carbon Credit Markets
 
-These are questions where **indexical parameters don't matter** - true for all agents, all times, all places.
+### The System
 
-### T1. Are there logical necessities?
-**Question:** Do laws of logic hold universally?
+International carbon trading schemes where companies buy/sell emission permits to meet reduction targets.
 
-**Scaffold-downgrade:**
-- **Accept as Mountain:** Logic is universal (A = A, excluded middle, non-contradiction)
-- **Downgrade:** Logic is convention (constructivism, paraconsistent logic)
+---
 
-**Test:** Can you coherently reject logic while reasoning?
+### Indexed Classifications
 
-**Provisional answer:**
-```prolog
-constraint_classification(logical_necessity, mountain, any_context) :-
-    % Cannot coherently deny logic while using logic to deny it
-    % This is genuine Mountain - no escape via indexing
-    true.
+#### INDEX 1: Multinational Corporation
+- WHO: institutional_manager
+- WHEN: generational
+- WHERE: fluid (can relocate)
+- SCOPE: global
+
+**Classification: ROPE**
+- κ ≈ 0.20-0.30 (low coercion range)
+- Why: Provides coordination mechanism for demonstrating sustainability commitments
+- Benefits: Can offset emissions flexibly, gain ESG credentials
+- Costs: Minimal compliance burden given scale and expertise
+- Action: Maintain system, participate actively
+
+---
+
+#### INDEX 2: Small Manufacturing Business
+- WHO: individual_moderate
+- WHEN: biographical
+- WHERE: mobile (can relocate with significant cost)
+- SCOPE: regional
+
+**Classification: TANGLED ROPE**
+- κ ≈ 0.48-0.56 (moderate coercion range)
+- Why: Coordination function exists (emission accounting) but compliance costs are disproportionate
+- Benefits: Theoretically level playing field
+- Costs: High verification costs, disadvantaged against large players who can afford optimization
+- Extraction: Administrative burden extracts value without commensurate climate benefit
+- Action: Reform toward simpler compliance, maintain core coordination
+
+---
+
+#### INDEX 3: Individual Consumer
+- WHO: individual_powerless
+- WHEN: biographical
+- WHERE: trapped (prices affect all purchases)
+- SCOPE: local
+
+**Classification: MOUNTAIN**
+- κ ≈ 0.10-0.20 (appears as given reality)
+- Why: Prices simply exist, no ability to influence market structure
+- Benefits: None direct (theoretically climate improvement)
+- Costs: Higher prices on affected goods
+- Action: Navigate, adapt consumption, cannot personally change system
+
+---
+
+#### INDEX 4: Climate Activist Organization
+- WHO: analytical_observer
+- WHEN: historical
+- WHERE: analytical (studying effectiveness)
+- SCOPE: global
+
+**Classification: NOOSE**
+- κ ≈ 0.65-0.72 (high coercion relative to benefit)
+- Why: System extracts wealth for financial sector while delivering minimal emission reductions
+- Benefits: Concentrated (trading firms, compliance consultants)
+- Costs: Distributed (delayed climate action, opportunity cost of better policies)
+- Extraction: Rent-seeking through market complexity
+- Action: Replace with more effective policy (carbon tax, direct regulation)
+
+---
+
+### Multi-Level Analysis Summary
+
+| Level | Type | κ Range | Key Insight |
+|-------|------|---------|-------------|
+| **Structural** | Tangled Rope | 0.42-0.48 | Climate coordination needed, current implementation extractive |
+| **Organizational** | Rope/Noose split | 0.30-0.40 / 0.62-0.68 | Works for large firms, fails small firms |
+| **Class** | Noose (developing nations) | 0.68-0.72 | Emission permits favor historical emitters |
+| **Individual** | Mountain | 0.12-0.18 | No personal agency, prices appear as given |
+
+**System Gradient:** Gₛᵧₛ = +0.02/year (increasing extraction)  
+**Trend:** Moving from Rope (initial design) → Tangled Rope (current) → Noose (projected)
+
+---
+
+### Structural Signature Analysis: CONSTRUCTED CONSTRAINT
+
+**Evidence:**
+- Alternatives existed: Carbon tax, direct regulation, cap without trade
+- Power selected winner: Financial sector lobbying preferred tradable credits
+- Asymmetric beneficiaries: Trading firms gain, climate gets minimal benefit
+- Active enforcement: Requires verification infrastructure (U = 0.35)
+- Resistance exists: Multiple countries/groups oppose current structure (R = 0.50)
+
+**Ontological Fraud Detection:**
 ```
-
----
-
-### T2. Are there mathematical truths?
-**Question:** Do mathematical structures exist independent of humans?
-
-**Scaffold-downgrade:**
-- **Accept as Mountain:** Math is discovered (Platonism)
-- **Downgrade:** Math is invented (formalism, fictionalism)
-
-**Test:** Does 2+2=4 depend on who's counting or when?
-
-**Provisional answer:**
-```prolog
-constraint_classification(mathematical_truth, mountain, any_context) :-
-    % 2+2=4 is true regardless of observer
-    % But: which axiom system is another question
-    % Core arithmetic is Mountain
-    true.
-```
-
----
-
-### T3. Are there physical laws?
-**Question:** Does physics constrain all possible worlds?
-
-**Scaffold-downgrade:**
-- **Accept as Mountain:** Thermodynamics, relativity, quantum mechanics are universal
-- **Downgrade:** Physical laws are descriptions, not prescriptions
-
-**Test:** Can you violate conservation of energy by believing differently?
-
-**Provisional answer:**
-```prolog
-constraint_classification(physical_laws, mountain, any_context) :-
-    % No amount of power/time/space changes physics
-    % Genuine Mountain
-    true.
-```
-
----
-
-### T4. Is consciousness substrate-dependent?
-**Question:** Can consciousness exist without physical substrate?
-
-**Scaffold-downgrade:**
-- **Accept as Mountain:** Consciousness requires matter (physicalism)
-- **Downgrade:** Consciousness is substrate-independent (dualism)
-
-**Test:** Is there any evidence of consciousness without brain?
-
-**Provisional answer:**
-```prolog
-constraint_classification(consciousness_substrate, mountain, any_context) :-
-    % All evidence: no consciousness without physical substrate
-    % Provisional Mountain (could be wrong, but no counterexamples)
-    true.
-```
-
-**Note:** This one is **empirically contingent** - could be wrong if we find evidence. But currently: Mountain.
-
----
-
-### T5. Is death final for consciousness?
-**Question:** Does consciousness continue after death?
-
-**Scaffold-downgrade:**
-- **Accept as Mountain:** Death is final (naturalism)
-- **Downgrade:** Consciousness continues (afterlife, reincarnation)
-
-**Dependencies:** 
-- If consciousness is substrate-dependent (T4) → death is final
-- If not substrate-dependent → maybe survives
-
-**Test:** Any evidence of consciousness without functioning brain?
-
-**Provisional answer:**
-```prolog
-constraint_classification(death_finality, mountain, any_context) :-
-    % Given T4 (substrate dependence)
-    % Death destroys substrate → consciousness ends
-    % Provisional Mountain
-    constraint_classification(consciousness_substrate, mountain, any_context).
-```
-
-**Critical implication:** From Gita analysis, you discovered this matters. Eternal soul → subjugation. Mortal soul → urgency.
-
----
-
-**TIER 0 COMPLETE: ~5 questions**
-
-Most "metaphysical questions" dissolve or move to Tier 1 (pragmatic frame choice).
-
----
-
-## TIER 1: PRACTICE - INDIVIDUAL BATTERY
-
-**Context assumption:** Individual, moderate power, biographical timeframe, mobile, national scope.
-
-**Structure:** Each question asks "Given my context, what should I believe?"
-
----
-
-## SECTION 1: AGENCY & CHANGE
-
-### P1. Do I have meaningful agency?
-**Context:** Individual, 50-year horizon, moderate power
-
-**Scaffold-downgrade:**
-- **Accept as Rope:** I can make choices that matter within my constraints
-- **Downgrade:** All choice is illusion (hard determinism)
-
-**Cascade if downgrade:**
-- No point planning
-- No responsibility
-- No meaning in effort
-- Learned helplessness
-
-**Cascade if accept:**
-- Plan makes sense
-- Effort is meaningful
-- Responsibility exists
-- Motivation preserved
-
-**Test:** Which belief leads to better outcomes for you?
-
-**Provisional answer:**
-```prolog
-% For individual in biographical timeframe:
-constraint_classification(meaningful_agency, rope, individual_context) :-
-    % Accepting agency is Rope (functional coordination with self)
-    % Serves planning, motivation, responsibility
-    % Even if determinism is true theoretically
-    functional_utility(accepting_agency, high).
-
-% From theory perspective:
-constraint_classification(meaningful_agency, ambiguous, theory_context) :-
-    % Libertarian free will: probably false
-    % Compatibilist freedom: definitional
-    % Doesn't matter for theory - it's pragmatic choice
-    true.
-```
-
-**Your provisional belief:** "Agency is Rope for me - I should act as if I have it, because that belief enables better life."
-
----
-
-### P2. Can I fundamentally change?
-**Context:** Individual, biographical timeframe
-
-**Scaffold-downgrade:**
-- **Accept as Rope:** Character/habits are malleable through effort
-- **Downgrade to Mountain:** Core traits are fixed (essentialist)
-
-**Cascade if Mountain:**
-- No point in therapy, self-improvement
-- "This is just who I am"
-- Fatalism about personal growth
-
-**Cascade if Rope:**
-- Change is possible but requires work
-- Responsibility for who I become
-- Hope for improvement
-
-**Test:** Have you ever changed substantially? Do you know anyone who has?
-
-**Provisional answer:**
-```prolog
-constraint_classification(personal_change, rope, individual_context) :-
-    % Empirical evidence: people do change
-    % Requires sustained effort (Rope, not free)
-    % But possible within biographical timeframe
-    evidence(personal_transformation, substantial).
-```
-
----
-
-### P3. Is my identity stable or constructed?
-**Context:** Individual, biographical timeframe
-
-**Scaffold-downgrade:**
-- **Accept as Mountain:** Essential self exists (stable core)
-- **Downgrade to Rope:** Narrative identity (constructed continuity)
-- **Further downgrade:** No self at all (bundle theory)
-
-**Cascade with Mountain:**
-- "Finding yourself" makes sense
-- Authenticity is discovering essence
-- Identity crisis = misalignment with essence
-
-**Cascade with Rope:**
-- Identity is created through choices
-- Authenticity is coherent performance
-- Identity crisis = need to rebuild narrative
-
-**Cascade with No-self:**
-- No coherent identity project
-- Reduces anxiety about "who am I"
-- But: hard to maintain motivation
-
-**Test:** When you look back 20 years, are you the same person?
-
-**Provisional answer:**
-```prolog
-constraint_classification(identity_stability, rope, individual_context) :-
-    % Empirically: continuity exists but changes
-    % Memory connects, but personality shifts
-    % Rope: constructed continuity that requires maintenance
-    biographical_continuity(exists_but_mutable).
-```
-
----
-
-## SECTION 2: MEANING & PURPOSE
-
-### P4. Does my life have inherent meaning?
-**Context:** Individual, biographical timeframe
-
-**Scaffold-downgrade:**
-- **Accept as Mountain:** Cosmic meaning exists to discover (teleological)
-- **Downgrade to Rope:** Meaning is constructed by agents (existentialist)
-- **Further downgrade:** No meaning possible (nihilist)
-
-**Cascade with Mountain:**
-- Must find "true purpose"
-- Failure to find = crisis
-- Purpose is discovered, not chosen
-
-**Cascade with Rope:**
-- Create your own meaning
-- Responsibility for meaningfulness
-- Freedom and burden simultaneously
-
-**Cascade with Nihilism:**
-- Liberation from meaning-seeking
-- But: motivation collapse
-- "Why do anything?"
-
-**Test:** If god/universe told you your purpose was X, would you accept it or choose your own?
-
-**Provisional answer:**
-```prolog
-constraint_classification(life_meaning, rope, individual_context) :-
-    % No evidence of cosmic purpose
-    % But: meaning-creation is possible and valuable
-    % Rope: constructed meaning that serves life
-    % Even knowing it's constructed doesn't eliminate value
-    constructed_meaning(possible_and_valuable).
-```
-
-**From Gita analysis:** Cosmic purpose claims can be Nooses (subjugation via "divine duty"). Constructed meaning preserves autonomy.
-
----
-
-### P5. Is suffering meaningful?
-**Context:** Individual, biographical timeframe
-
-**Scaffold-downgrade:**
-- **Accept as Mountain:** Suffering has inherent purpose (theodicy, growth narrative)
-- **Downgrade to Rope:** Suffering can be interpreted meaningfully (meaning-making)
-- **Further downgrade:** Suffering is just pain (no inherent meaning)
-
-**Cascade with Mountain:**
-- "Everything happens for a reason"
-- Suffering must be accepted/embraced
-- Avoidance of suffering is wrong
-
-**Cascade with Rope:**
-- Can extract meaning retrospectively
-- But no obligation to suffer
-- Meaning-making is choice, not discovery
-
-**Cascade with No-meaning:**
-- Suffering is purely negative
-- Avoid when possible, endure when necessary
-- No consolation, but no guilt for avoiding
-
-**Test:** Would you choose suffering if you could avoid it without cost?
-
-**Provisional answer:**
-```prolog
-constraint_classification(suffering_meaning, rope, individual_context) :-
-    % Suffering has no inherent meaning
-    % But: meaning-making from suffering is possible
-    % And sometimes valuable for processing
-    % Rope: optional meaning-creation tool
-    optional_interpretation(suffering, meaning_making, sometimes_useful).
-```
-
-**Critical:** Rejecting "suffering is meaningful" as Mountain blocks Nooses (religious/political systems that demand suffering "for your own good").
-
----
-
-## SECTION 3: RELATIONSHIPS & COMMITMENT
-
-### P6. Do relationships have inherent meaning?
-**Context:** Individual, biographical timeframe
-
-**Scaffold-downgrade:**
-- **Accept as Mountain:** Some bonds are sacred/essential (marriage, blood)
-- **Downgrade to Rope:** Relationships have constructed significance
-- **Further downgrade:** All bonds are contingent preferences
-
-**Cascade with Mountain:**
-- Family obligations are absolute
-- Marriage vows are unbreakable
-- "Blood is thicker than water"
-
-**Cascade with Rope:**
-- Relationships matter because we choose to invest
-- Can exit extractive relationships
-- Chosen family is valid
-
-**Cascade with pure contingency:**
-- No special obligations
-- Pure cost-benefit
-- Loses depth?
-
-**Test:** Would you stay in harmful relationship because "family" or "marriage"?
-
-**Provisional answer:**
-```prolog
-constraint_classification(relationship_meaning, rope, individual_context) :-
-    % No inherent meaning in blood/ceremony
-    % But: investment creates meaning
-    % And: some relationships are Ropes (functional)
-    % Others are Nooses (extractive, claimed as Mountain)
-    relationship_value(constructed_through_investment).
+CLAIM: "Carbon markets are the only economically efficient way to reduce emissions"
+SIGNATURE TEST: Constructed constraint (alternatives existed and were suppressed)
+CONCLUSION: False necessity claim - policy choice presented as natural law
 ```
 
 ---
 
-### P7. Are family obligations natural?
-**Context:** Individual, biographical timeframe
+### Strategic Implications by Index
 
-**Scaffold-downgrade:**
-- **Accept as Mountain:** Blood creates duties (filial piety)
-- **Downgrade to Rope:** Family obligations are cultural
-- **Further downgrade:** No special obligations to kin
+**For Corporation [Rope]:**
+- Participate effectively in current system
+- Optimize credit purchasing strategies
+- Maintain institutional access
 
-**Cascade with Mountain:**
-- Must sacrifice for family even if harmful
-- Estrangement is failure/betrayal
-- Duty is absolute
+**For Small Business [Tangled Rope]:**
+- Push for simplified compliance (reduce extraction)
+- Form industry coalitions for reform
+- Support direct regulation alternatives
 
-**Cascade with Rope:**
-- Obligations are real but bounded
-- Can negotiate or exit if extractive
-- Cultural, not natural
+**For Individual [Mountain]:**
+- Cannot change system personally
+- Adapt consumption where feasible
+- Support collective action politically
 
-**Cascade with No-obligation:**
-- Treat family like any other humans
-- Pure cost-benefit
-- May lose valuable coordination
-
-**Test:** If family demands extraction, must you comply?
-
-**Provisional answer:**
-```prolog
-constraint_classification(family_obligations, rope, individual_context) :-
-    % Not natural Mountain
-    % Often Rope (functional reciprocity)
-    % Sometimes Noose (extractive using "family" claim)
-    % Individual can distinguish and choose
-    evaluate_each_relationship(rope_or_noose).
-```
-
-**Critical:** Rejecting family-as-Mountain blocks common Noose (abusive families claiming natural authority).
+**For Activist [Noose]:**
+- Document extraction mechanisms
+- Build coalition for alternative policies
+- Expose necessity claims as constructed
+- Design replacement system (carbon tax + universal dividend)
 
 ---
 
-## SECTION 4: WORK & VALUE
+### Ethical Guidance by Position
 
-### P8. Is work intrinsically valuable?
-**Context:** Individual, biographical timeframe, modern economy
+**From Deferential Realism Ethics** (see: deferential_realism_ethics.md):
 
-**Scaffold-downgrade:**
-- **Accept as Mountain:** Work is dignifying (Protestant ethic)
-- **Downgrade to Rope:** Work is instrumental (means to ends)
-- **Further downgrade:** Work is extraction (alienation)
+**For Corporation [Rope]:**
+- **Virtue:** Construction - maintain honestly, test reciprocity
+- **Question:** Does this still benefit participants equally, or have we captured it for extraction?
+- **Action:** Enable revision, keep mechanisms transparent
 
-**Cascade with Mountain:**
-- Unemployment is moral failure
-- Retirement is loss of meaning
-- Must work even if unnecessary
+**For Small Business [Tangled Rope]:**
+- **Virtue:** Resistance (selective) - organize to remove extractive elements while preserving coordination
+- **Question:** Which parts genuinely coordinate (keep) vs. which extract unfairly (remove)?
+- **Action:** Coalition-building for compliance simplification
 
-**Cascade with Rope:**
-- Work is tool for securing resources/meaning
-- Can choose work based on value
-- Retirement/automation is liberation
+**For Individual [Mountain]:**
+- **Virtue:** Acceptance - conserve finite energy, don't waste on individual fights
+- **Question:** Can I personally change this, or is this unchangeable from my position?
+- **Action:** Navigate (adapt consumption), support collective political action
 
-**Cascade with pure extraction:**
-- All work is theft of life
-- Minimize work always
-- But: need resources
+**For Activist [Noose]:**
+- **Virtue:** Resistance - but with Scaffold ethic (build replacement before cutting)
+- **Question:** If we remove this, what fills the vacuum? Do we cause worse harm?
+- **Action:** Design carbon tax + dividend as load-bearing alternative, transition carefully
 
-**Test:** If you had secure income without work, would you work?
+**Universal Principles (All Positions):**
+- **Anti-fraud:** Don't misclassify to serve your interests (don't call Rope "Noose" or Noose "Mountain")
+- **Energy accounting:** Allocate finite resources strategically (fight winnable battles from your position)
+- **Calibration:** Update classifications when evidence contradicts you (reality corrects, respond gracefully)
 
-**Provisional answer:**
-```prolog
-constraint_classification(work_value, varies_by_job, individual_context) :-
-    % Work is not inherently valuable
-    % Some work is Rope (chosen, meaningful, well-compensated)
-    % Some work is Noose (extractive, necessary for survival)
-    % Individual should distinguish
-    % And: work-as-Mountain claim is Noose (prevents questioning exploitation)
-    evaluate_each_job(rope_or_noose).
-```
+This is **indexed ethics** - what you should do depends on your position, but the principles of honest classification and appropriate response are universal.
 
 ---
 
-### P9. Should I pursue wealth/status?
-**Context:** Individual, biographical timeframe, capitalist society
+### Key Insight: No Single "Right" Answer
 
-**Scaffold-downgrade:**
-- **Accept as Mountain:** Success requires maximizing wealth/status
-- **Downgrade to Rope:** Wealth/status are tools, not goals
-- **Further downgrade:** Wealth/status pursuit is trap
+There is no universal truth to "Are carbon credits good?" The question is ill-formed without indices. The RIGHT answers are:
+- Good for large institutions (Rope)
+- Mixed for small firms (Tangled Rope - needs reform)
+- Irrelevant for individuals (Mountain - no agency)
+- Bad for climate goals (Noose - extraction without benefit)
 
-**Cascade with Mountain:**
-- Always choose higher-paying job
-- Status anxiety
-- Never enough
-
-**Cascade with Rope:**
-- Pursue sufficient wealth for autonomy
-- Status only if serves other goals
-- Can stop when enough
-
-**Cascade with rejection:**
-- Poverty as virtue
-- Loses practical power
-- May be cope
-
-**Test:** Would you trade autonomy/meaning for wealth/status?
-
-**Provisional answer:**
-```prolog
-constraint_classification(wealth_status_pursuit, rope, individual_context) :-
-    % Not inherent good (not Mountain)
-    % Is Rope: tools for securing autonomy
-    % But: wealth-as-Mountain is Noose (keeps you on treadmill)
-    % Sufficient wealth = freedom from extraction
-    % Excess wealth = diminishing returns
-    pursue_until(autonomy_secured, then_stop).
-```
+All four are simultaneously TRUE. The framework makes this explicit rather than forcing false consensus.
 
 ---
 
-## SECTION 5: BELIEF & EPISTEMIC NORMS
+## How This Changes Everything
 
-### P10. Should beliefs track truth or utility?
-**Context:** Individual, biographical timeframe
+### 1. From Political Debate to Empirical Mapping
 
-**Scaffold-downgrade:**
-- **Accept as Mountain:** Must believe truth regardless of consequences
-- **Downgrade to Rope:** Can choose useful beliefs pragmatically
+**Old approach:** Argue about whether X is "good" or "bad"  
+**New approach:** Map how X functions for different agents in different positions
 
-**Cascade with Mountain (epistemic rationality):**
-- Must accept hard truths even if harmful
-- Self-deception is always wrong
-- Truth is supreme value
+This doesn't eliminate political conflict (different positions have different interests), but it **eliminates false conflict** where people argue past each other from unstated positions.
 
-**Cascade with Rope (instrumental rationality):**
-- Can strategically believe useful falsehoods
-- Self-deception sometimes warranted
-- Utility can trump truth
+### 2. From Binary to Gradient
 
-**Test:** Would you choose comforting false belief over painful truth?
+**Old approach:** Everything is either oppressive or liberating  
+**New approach:** Most things are Tangled Ropes requiring careful reform
 
-**Provisional answer:**
-```prolog
-constraint_classification(belief_norms, context_dependent, individual_context) :-
-    % For high-stakes decisions: truth is critical (Rope for good decisions)
-    % For low-stakes: utility can dominate (believing in yourself)
-    % For personal relationships: sometimes useful beliefs better (love)
-    % For systems-level: truth essential (believing lies about power → subjugation)
-    domain(high_stakes) -> track_truth;
-    domain(low_stakes) -> utility_acceptable;
-    domain(power_analysis) -> track_truth.
-```
+This enables **strategic precision**: preserve coordination function while removing extractive elements. No more "burn it all down" vs "keep everything as is."
 
-**Critical distinction from Gita:** 
-- Believing eternal soul → enables subjugation
-- This is **high-stakes, power-related**
-- Therefore: track truth (mortal soul)
-- Even if eternal soul would be comforting
+### 3. From Static to Dynamic
+
+**Old approach:** Classify once, act forever  
+**New approach:** Track temporal gradients (Gₛᵧₛ), predict transformations
+
+Ropes can become Tangled Ropes (coordination captures). Nooses can become Zombies (extraction stops working). The framework tracks these evolutions.
+
+### 4. From Claimed Necessity to Testable Signatures
+
+**Old approach:** Accept or reject necessity claims based on ideology  
+**New approach:** Test claims against structural signatures empirically
+
+"This is just how markets work" → Test for constructed signature → Expose false naturalization
+
+### 5. From Universal to Indexed
+
+**Old approach:** Seek "the truth" about constraint  
+**New approach:** Map truth-space across all relevant indices
+
+There's no view from nowhere, but there IS a systematic way to map the view from everywhere relevant.
 
 ---
 
-### P11. Can I trust my moral intuitions?
-**Context:** Individual, biographical timeframe
+## Confidence and Uncertainty
 
-**Scaffold-downgrade:**
-- **Accept as Mountain:** Moral intuitions track truth (moral sense)
-- **Downgrade to Rope:** Moral intuitions are cultural programming
-- **Further downgrade:** Moral intuitions are often wrong (biases)
+All classifications include confidence levels:
 
-**Cascade with Mountain:**
-- "If it feels wrong, it is wrong"
-- Don't question intuitions
-- Guilt is guide
+- **HIGH:** Mountains (physics testable), clear Nooses (beneficiaries obvious)
+- **MEDIUM:** Ropes (coordination genuine but improvements possible), Tangled Ropes (extraction measurable but debatable)
+- **LOW:** Zombies (hard to verify no one benefits), edge cases between categories
 
-**Cascade with Rope:**
-- Intuitions are starting point, not endpoint
-- Can be examined and revised
-- Cultural/evolutionary origin doesn't invalidate
+**The framework acknowledges:**
+- Measurement requires access (power limits observation)
+- Classification is intervention (changes power dynamics)
+- Perfect certainty is impossible (embrace "good enough")
+- Updating with new evidence is normal (not failure)
 
-**Cascade with deep skepticism:**
-- All intuitions suspect
-- Analysis paralysis
-- Lose practical guidance
-
-**Test:** Do your moral intuitions vary by culture/time/mood?
-
-**Provisional answer:**
-```prolog
-constraint_classification(moral_intuitions, rope, individual_context) :-
-    % Intuitions are real (not Mountain - they vary)
-    % But useful (not Noose - they guide behavior)
-    % Rope: valuable heuristics that require maintenance
-    % Should examine, not blindly trust
-    % But shouldn't ignore either
-    starting_point_requiring_reflection.
-```
+**Critical limitation:** Where you most need to distinguish reality from power (high extraction, low transparency), you'll have the least certainty. This is fundamental, not fixable.
 
 ---
 
-## SECTION 6: POWER & SYSTEMS
+## Implementation Status
 
-### P12. Are current power structures natural?
-**Context:** Individual, biographical timeframe, contemporary society
+This framework has been **iteratively developed and tested through internal implementation**, not peer-reviewed academic validation. The testing includes:
 
-**Scaffold-downgrade:**
-- **Accept as Mountain:** Current hierarchy/systems are inevitable
-- **Downgrade to Rope:** Current systems are constructed but functional
-- **Further downgrade to Noose:** Current systems are extractive
+- **Case analysis:** Application to 70+ real-world constraints (legal codes, economic systems, social institutions)
+- **Formal implementation:** Prolog-based classification system with measurement protocols
+- **Cross-protocol verification:** Multiple analytical approaches applied to same cases
+- **Self-application:** Framework analyzed using its own methods (demonstrates internal consistency)
+- **Comparative evaluation:** Informal review by multiple analytical perspectives
 
-**Cascade with Mountain:**
-- Cannot be changed
-- Resistance is futile
-- Accept your place
+**These tests validate internal coherence and practical usability**, not empirical truth claims. They demonstrate the framework:
+- Produces consistent classifications across repeated applications
+- Resolves apparent contradictions through indexical specification
+- Identifies structural patterns (signatures, gradients, multi-level effects)
+- Generates useful strategic guidance from different positions
+- Maintains logical consistency when applied to itself
 
-**Cascade with Rope:**
-- Can be reformed
-- Some coordination value
-- Work within system for change
+**Observational patterns (exploratory, not peer-reviewed):**
+- Tangled Rope common (~30% in testing, range 25-35%)
+- Indexical classification resolved contradictions across tested cases
+- Multi-level analysis revealed dynamics missed by single-level approaches
+- Structural signatures distinguished constructed from natural constraints
+- Power position correlated with experienced constraint magnitude
 
-**Cascade with Noose:**
-- Should be cut/exited
-- No legitimacy
-- Resistance necessary
-
-**Test:** Do current systems serve you, or extract from you?
-
-**This is the META-QUESTION that enables all DR analysis.**
-
-**Provisional answer:**
-```prolog
-constraint_classification(current_power_structures, varies, individual_context) :-
-    % Some aspects are Ropes (useful coordination)
-    % Some aspects are Nooses (extractive)
-    % Key skill: distinguishing them
-    % DR framework itself is Scaffold for making this distinction
-    apply_dr_framework(system_by_system_analysis).
-```
-
-**This is why you built the whole framework.**
+**Interpretation:** These patterns suggest the framework captures real structure, but formal validation requires independent replication and peer review.
 
 ---
 
-### P13. Should I participate in extractive systems?
-**Context:** Individual, moderate power, need resources
+### Self-Application: The Framework Analyzing Itself
 
-**Scaffold-downgrade:**
-- **Accept as Mountain:** Must participate to survive (no choice)
-- **Downgrade to Rope:** Participate strategically while working to change
-- **Further downgrade:** Exit or build alternatives
+When Deferential Realism is analyzed using its own framework, it demonstrates honest self-awareness:
 
-**Cascade with Mountain:**
-- Total participation
-- No resistance
-- Internalize exploitation
+**Classification:** Rope (coordination mechanism for constraint analysis)  
+**Structural Signature:** Constructed Constraint (alternatives exist: Marxist analysis, libertarian framework, etc.)  
+**Perspectival Gap Detected:**
+- Individual user [powerless/biographical/trapped/local]: Mountain (cannot personally change framework)
+- Institutional adopter [institutional/generational/mobile/regional]: Rope (can modify or replace)
 
-**Cascade with Rope:**
-- Participate where necessary
-- Build power to change
-- Strategic compromise
+**Generated Omega** (unresolved meta-question requiring further investigation):
+> "If institutions abandon this framework, do individuals have alternative analytical tools, or does this destroy their only navigation mechanism?"
 
-**Cascade with exit:**
-- Don't participate
-- Build alternatives
-- May lose resources
+**Scaffold Ethic Applied:**
+This is EXACTLY what DR ethics demands we ask before cutting any constraint. The framework:
+- Identifies its own constructed nature (anti-fraud)
+- Acknowledges it's one tool among alternatives (no false universalism)
+- Requires load-bearing assessment before removal (Scaffold ethic)
+- Generates same safety question for itself as for other tools (consistency)
 
-**Test:** What's your actual power to exit vs. need to survive?
+This self-consistency demonstrates integrity: DR applies the same ethical principles to itself that it recommends for analyzing other constraints.
 
-**Provisional answer:**
-```prolog
-constraint_classification(participation_in_nooses, rope, individual_context) :-
-    % Given moderate power, need resources:
-    % Pure exit often impossible (need money/healthcare/etc)
-    % Pure participation enables extraction
-    % Rope: Strategic participation + resistance where possible
-    % Use system resources to build power to eventually change system
-    strategic_participation_with_resistance.
-```
+**The framework can identify its own limits** - it's not claiming to be "the only way" or "natural law," just one systematically tested approach to constraint classification.
 
 ---
 
-## BATTERY SUMMARY
+## Connection to Broader Framework
 
-### Tier 0: Theory (5 questions)
-Mountains that hold regardless of context:
-- Logic
-- Math
-- Physics
-- Consciousness substrate-dependence (provisional)
-- Death finality (provisional, follows from substrate)
+This Core Principles document is the foundation for a four-tier architecture:
 
-### Tier 1: Practice - Individual (13 questions so far)
+- **Tier 3 (Philosophy):** Full theoretical grounding (this document's parent)
+- **Tier 2 (Applied Guide):** Practical protocols and case studies
+- **Tier 1 (Core Concept):** 700-word heuristic for immediate use
+- **Tier 0 (Diagnostic Tools):** Operational evaluators for system analysis
 
-**Agency & Change:**
-- P1: Agency (Rope - accept for practical reasons)
-- P2: Personal change (Rope - possible with effort)
-- P3: Identity (Rope - constructed continuity)
+**Domain extensions:**
+- Logic: Formal treatment of indexical operations
+- Aesthetics: Beauty/ugliness of constraint types
+- Metaphysics: Ontological status of indexed properties
+- Ethics: Moral reasoning under indexical relativity
 
-**Meaning & Purpose:**
-- P4: Life meaning (Rope - constructed, not discovered)
-- P5: Suffering meaning (Rope - optional interpretation)
-
-**Relationships:**
-- P6: Relationship meaning (Rope - investment creates value)
-- P7: Family obligations (Rope - cultural, not natural)
-
-**Work & Value:**
-- P8: Work value (Varies - examine each job)
-- P9: Wealth/status (Rope - tools, not goals)
-
-**Epistemic Norms:**
-- P10: Truth vs utility (Context-dependent)
-- P11: Moral intuitions (Rope - useful heuristics)
-
-**Power & Systems:**
-- P12: Power structures (Varies - apply DR framework)
-- P13: Participation (Rope - strategic with resistance)
+Updates to this foundation cascade through all tiers and domains.
 
 ---
 
-**Label:** Completing the Individual Practical Battery - comprehensive belief audit system.
+## What Makes This Different
+
+Most frameworks choose between:
+1. **Absolutism:** Universal truths apply to everyone everywhere
+2. **Relativism:** Truth is purely subjective, no objective standard
+
+Deferential Realism rejects this binary:
+
+**Indexical Realism:** Truth is relative to position, but each indexed claim is objectively true or false. There ARE multiple valid answers, but they're **not arbitrary** - they're constrained by empirical reality at each index.
+
+This is closer to physics (velocity is relative to reference frame, but measurements are objective) than politics (mere opinion).
 
 ---
 
-## SECTION 7: DEATH & RISK
+## Success Criteria
 
-### P14. How should I relate to my mortality?
-**Context:** Individual, biographical timeframe, death is final (from T5)
+This Core Principles document succeeds if:
 
-**Scaffold-downgrade:**
-- **Accept as Mountain:** Death is final, consciousness ends completely
-- **Downgrade to Rope:** Can choose to believe in continuation (useful fiction)
+1. ✅ Indexical relativity is clearly THE organizing principle
+2. ✅ Five categories are justified empirically (Tangled Rope is essential)
+3. ✅ Multi-level structure is explained and demonstrated
+4. ✅ Complete worked example shows all components functioning together
+5. ✅ Connection to Type C paradox resolution is explicit
+6. ✅ Quantification (κ) supplements rather than replaces categories
+7. ✅ Structural signatures are introduced and politically weaponized
+8. ✅ Uncertainty is acknowledged without undermining utility
+9. ✅ Framework is testable, not just theoretical
+10. ✅ Readers can see how it changes practical reasoning
 
-**Cascade with Mountain (death is final):**
-- Urgency: finite time matters
-- No do-overs: choices have weight
-- Focus on this life, not preparing for next
-- Memento mori as motivator
-- Potential: death anxiety
-
-**Cascade with Rope (believe in afterlife for utility):**
-- Reduces death fear
-- May reduce urgency (can do it next life)
-- Enables subjugation (behave now for reward later)
-- May be cope
-
-**Test:** Does believing in afterlife make you more or less present in this life?
-
-**From Gita analysis:** Eternal soul belief → subjugation (can be used to justify demanding your death).
-
-**Provisional answer:**
-```prolog
-constraint_classification(mortality_acceptance, mountain, individual_context) :-
-    % Given T5 (death is final) as Mountain
-    % Cannot choose to believe otherwise for utility
-    % Because: high-stakes, power-related domain
-    % Afterlife beliefs enable Nooses (die for the cause, sacrifice now for later)
-    % Must accept Mountain: death is final
-    % Urgency follows necessarily
-    accepts(death_finality),
-    implication(urgency_in_living).
-```
-
-**Critical:** This is **not** a pragmatic choice. Death finality is Mountain (from T5), so relationship to mortality must accept that constraint.
+If this document works, the full Tier 3 revision will flow naturally. If it doesn't, we've discovered the issue with 4 pages instead of 17,000 words.
 
 ---
 
-### P15. Should I take risks or prioritize safety?
-**Context:** Individual, biographical timeframe, finite resources
+## Status: Internal Validation Complete, Ready for Tier 3 Development
 
-**Scaffold-downgrade:**
-- **Accept as Mountain:** Must maximize expected value (rational risk-taking)
-- **Downgrade to Rope:** Risk tolerance is personal preference
-- **Consider:** Loss aversion vs. gain seeking
+This Core Principles document has undergone **internal testing and iterative refinement**:
 
-**Cascade with Mountain (rational risk-taking):**
-- Calculate EV, always choose highest
-- Ignore emotions/fear
-- May take catastrophic risks (ergodicity problem)
-- Ensemble average ≠ time average
+- **Multiple analytical perspectives** applied (different evaluation approaches)
+- **Implementation testing** (70+ constraint cases analyzed)
+- **Self-consistency check** (framework analyzed using own methods)
+- **Cross-protocol verification** (different analytical lenses applied)
 
-**Cascade with Rope (personal risk tolerance):**
-- Can choose conservative even if lower EV
-- Survival comes first
-- Risk tolerance varies by life stage/resources
-- Non-ergodic systems: don't bet the farm
+**Consensus from internal evaluation:**
+1. ✅ Indexical relativity resolves Type C paradoxes (core mechanism works)
+2. ✅ Tangled Rope fills necessary conceptual gap (hybrid category justified)
+3. ✅ Carbon credits example demonstrates integration (all components visible)
+4. ✅ Multi-level structure prevents contradiction (necessary for coherence)
+5. ✅ Structural signatures detect false necessity (ontological fraud exposure)
+6. ✅ Quantification (κ, ASUR) supplements categories appropriately
 
-**Test:** Would you take 50/50 bet: double wealth or lose everything?
+**Framework is internally coherent and sufficiently stable to justify Tier 3 expansion.**
 
-**Provisional answer:**
-```prolog
-constraint_classification(risk_taking, rope, individual_context) :-
-    % Risk tolerance is personal preference (Rope)
-    % But: constrained by ergodicity (Mountain)
-    % Never risk ruin, even for positive EV
-    % Can choose risk level within survival bounds
-    % Depends on: resources, obligations, life stage
-    personal_preference_within_ergodic_constraints.
-```
-
-**Key insight:** Ergodicity is Mountain (from T-series). Can't violate it by choosing different risk preference. But within ergodic constraints, risk tolerance is Rope.
+**What remains uncertain:**
+- External peer review and independent replication
+- Empirical validation of specific threshold values
+- Cross-cultural applicability of category structure
+- Long-term practical utility in institutional settings
+- Edge cases and boundary conditions requiring refinement
 
 ---
 
-### P16. Should I plan for the future or live in the present?
-**Context:** Individual, biographical timeframe, uncertain future
+## How to Engage Further
 
-**Scaffold-downgrade:**
-- **Accept as Mountain:** Must plan/save for future (rational foresight)
-- **Downgrade to Rope:** Balance is personal preference
-- **Further downgrade:** YOLO, maximize present
+**If this framework makes sense:**
+- **Ethics:** See deferential_realism_ethics.md for four cardinal virtues, anti-fraud mandate
+- **Metaphysics:** See deferential_realism_metaphysics.md for constraint-space ontology
+- **Logic:** See deferential_realism_logic.md for formal operators and inference rules
+- **Aesthetics:** See deferential_realism_aesthetics.md for beauty of alignment vs. ugliness of fraud
+- **Complete Philosophy:** See deferential_realism_tier3_philosophy.md (forthcoming)
 
-**Cascade with Mountain (must plan):**
-- Sacrifice present for future
-- Delayed gratification
-- May over-save, under-live
-- Future you matters more than present you
+**If you have critiques:**
+- Test framework against specific constraint you care about
+- Check if your critique applies to epistemology (this document) or ethics/metaphysics/etc.
+- Distinguish "I disagree with classification" from "classification method is flawed"
+- Note whether objection is to indexical relativity itself or specific category thresholds
 
-**Cascade with Rope (balance):**
-- Some planning necessary (retirement, healthcare)
-- Some present enjoyment necessary (life is now)
-- Ratio is personal preference
+**If you want to apply it:**
+- Start with Tier 1 (700-word heuristic): deferential_realism_tier1_core.md
+- Move to Tier 2 (applied guide): deferential_realism_tier2_applied.md  
+- Use Tier 0 tools for systematic analysis: deferential_realism_tier0_diagnostic_evaluator.md
 
-**Cascade with present-maximizing:**
-- Consume everything now
-- No retirement planning
-- Future you suffers
-
-**Test:** How certain are you that you'll live to enjoy the future you're planning for?
-
-**Provisional answer:**
-```prolog
-constraint_classification(future_planning, rope, individual_context) :-
-    % Some planning is necessary (Rope - coordination with future self)
-    % Some present living is necessary (life is finite)
-    % Optimal balance depends on:
-    %   - Age (young = more future, old = less)
-    %   - Health (uncertainty about reaching future)
-    %   - Resources (wealthy can do both, poor must choose)
-    %   - Personal preference (discount rate)
-    balance_based_on_circumstances.
-```
+**The goal:** Don't waste finite energy fighting gravity. Don't surrender to changeable injustice. Know the difference.
 
 ---
 
-## SECTION 8: TRUST & COOPERATION
+**Questions Previously Asked (Now Answered):**
 
-### P17. Should I default to trust or suspicion?
-**Context:** Individual, biographical timeframe, social world
+~~1. Is indexical relativity convincing as the core innovation?~~  
+**Answer:** Yes - validated by 8 independent reviews
 
-**Scaffold-downgrade:**
-- **Accept as Mountain:** Trust is always correct (naive trust)
-- **Downgrade to Rope:** Trust is strategic choice (conditional cooperation)
-- **Further downgrade:** Suspicion is always correct (paranoia)
+~~2. Does the carbon credits example demonstrate the framework effectively?~~  
+**Answer:** Yes - shows all components working together
 
-**Cascade with Mountain (naive trust):**
-- Get exploited repeatedly
-- "But I was trying to be good"
-- Enables Nooses (trusting authorities who extract)
+~~3. Is Tangled Rope justified as a fifth category?~~  
+**Answer:** Yes - fills necessary gap, common in practice
 
-**Cascade with Rope (conditional trust):**
-- Start with trust, verify
-- Withdraw if betrayed
-- Tit-for-tat strategy
-- Build trust networks
+~~4. Is the multi-level structure clear?~~  
+**Answer:** Yes - table helps, concept is sound
 
-**Cascade with paranoia:**
-- Never cooperate
-- Miss gains from cooperation
-- Social isolation
+~~5. Does structural signature detection seem useful?~~  
+**Answer:** Yes - exposes ontological fraud, politically powerful
 
-**Test:** Do you trust new people until proven untrustworthy, or distrust until proven trustworthy?
+~~6. Is the math (κ, ASUR) helpful or distracting?~~  
+**Answer:** Helpful - provides precision without dominating
 
-**Provisional answer:**
-```prolog
-constraint_classification(trust_default, rope, individual_context) :-
-    % Trust is Rope (coordination mechanism)
-    % Optimal strategy: conditional cooperation
-    % Start with trust (in low-stakes situations)
-    % Verify before high-stakes trust
-    % Withdraw if exploited
-    % Forgive single defections, punish patterns
-    % Adjust based on environment (high-trust vs low-trust society)
-    conditional_cooperation_tit_for_tat.
-```
+~~7. Does this read as epistemology or politics?~~  
+**Answer:** Both - epistemology about political constraints
+
+~~8. Is the tone appropriate?~~  
+**Answer:** Yes - accessible yet rigorous
+
+~~9. What's the strongest part?~~  
+**Answer:** Indexical relativity + complete worked example
+
+~~10. What's the weakest part?~~  
+**Answer:** Zombie category (now strengthened)
 
 ---
 
-### P18. Are other people fundamentally good, bad, or neutral?
-**Context:** Individual, biographical timeframe, mixed experiences
-
-**Scaffold-downgrade:**
-- **Accept as Mountain:** People are inherently good (Rousseau)
-- **Downgrade to Rope:** People are mixed (situational)
-- **Further downgrade to Noose:** People are inherently bad (Hobbes)
-
-**Cascade with inherent good:**
-- Bad behavior is due to systems
-- Everyone deserves trust
-- May enable exploitation
-
-**Cascade with situational:**
-- People respond to incentives
-- Systems matter
-- Can design for cooperation or defection
-
-**Cascade with inherent bad:**
-- Need strong enforcement
-- Justifies authoritarianism
-- Self-fulfilling prophecy
-
-**Test:** Do good systems make good people, or do good people make good systems?
-
-**Provisional answer:**
-```prolog
-constraint_classification(human_nature, rope, individual_context) :-
-    % People are situational (empirical observation)
-    % Not inherently good or bad (both are Nooses - used to justify systems)
-    % "Inherently good" → naive trust → exploitation
-    % "Inherently bad" → authoritarianism → control
-    % Rope: people respond to incentives and culture
-    % Design systems assuming mixed motives
-    situational_with_mixed_motives.
-```
-
-**Critical:** Both "inherently good" and "inherently bad" are Nooses when claimed as Mountains. The first enables exploitation ("just trust everyone"), the second enables authoritarianism ("must control everyone").
-
----
-
-### P19. Should I cooperate with defectors?
-**Context:** Individual, biographical timeframe, iterated games
-
-**Scaffold-downgrade:**
-- **Accept as Mountain:** Must cooperate always (turn other cheek)
-- **Downgrade to Rope:** Punish defectors (enforcement)
-- **Further downgrade:** Defect first (preemptive)
-
-**Cascade with always cooperate:**
-- Get exploited by defectors
-- Defection becomes dominant strategy
-- Cooperation collapses
-
-**Cascade with punishment:**
-- Enforce cooperation norms
-- Costly to punish
-- Enables stable cooperation
-
-**Cascade with preemptive defection:**
-- Coordination collapses
-- Prisoner's dilemma equilibrium
-- Everyone worse off
-
-**Test:** What happens to cooperation if defection goes unpunished?
-
-**Provisional answer:**
-```prolog
-constraint_classification(defector_punishment, rope, individual_context) :-
-    % Punishment is Rope (maintains cooperation)
-    % But costly (uses resources)
-    % Strategy: punish if cost < benefit of maintaining cooperation
-    % Or: exit relationship with defector
-    % Never: always cooperate (enables exploitation)
-    % Never: always defect (destroys cooperation)
-    conditional_punishment_or_exit.
-```
-
----
-
-## SECTION 9: PERSONAL IDENTITY & EXPRESSION
-
-### P20. Should I conform to or resist social expectations?
-**Context:** Individual, biographical timeframe, embedded in culture
-
-**Scaffold-downgrade:**
-- **Accept as Mountain:** Must conform (social harmony essential)
-- **Downgrade to Rope:** Strategic conformity (pick battles)
-- **Further downgrade:** Always resist (rebellion as identity)
-
-**Cascade with must conform:**
-- Suppress authentic preferences
-- Avoid all conflict
-- May enable Nooses (unjust norms)
-
-**Cascade with strategic:**
-- Conform on low-stakes
-- Resist on high-stakes
-- Build capital to resist effectively
-
-**Cascade with always resist:**
-- Constant conflict
-- Social isolation
-- Waste energy on trivial battles
-
-**Test:** Which social expectations actually harm you vs. which are just different preferences?
-
-**Provisional answer:**
-```prolog
-constraint_classification(social_conformity, rope, individual_context) :-
-    % Conformity is Rope (coordination mechanism)
-    % Some norms are functional Ropes (traffic rules, manners)
-    % Some norms are Nooses (oppressive expectations)
-    % Strategy: 
-    %   - Conform to functional Ropes (low cost, high benefit)
-    %   - Resist Nooses (high cost, worth it)
-    %   - Build power to resist effectively
-    distinguish_ropes_from_nooses_then_choose.
-```
-
-**This is DR framework applied recursively:** Use DR to distinguish which social norms are Ropes vs. Nooses, then decide whether to conform or resist.
-
----
-
-### P21. Is gender/sexual identity discovered or chosen?
-**Context:** Individual, biographical timeframe, personal experience
-
-**Scaffold-downgrade:**
-- **Accept as Mountain:** Identity is innate (discovered)
-- **Downgrade to Rope:** Identity is constructed (chosen)
-- **Consider:** Both discovery and construction may be involved
-
-**Cascade with Mountain (innate):**
-- "Born this way"
-- No choice, must accept
-- Protects from "just change" demands
-- But: implies unchangeable if distressing
-
-**Cascade with Rope (constructed):**
-- Identity is created through choices
-- Can change over time
-- Vulnerable to "just choose differently" attacks
-- But: allows evolution and experimentation
-
-**Test:** Does your experience feel like discovery, creation, or both?
-
-**Provisional answer:**
-```prolog
-constraint_classification(gender_sexual_identity, mountain_and_rope, individual_context) :-
-    % Empirically: Some aspects feel discovered (innate)
-    % Some aspects feel constructed (evolved through experience)
-    % Hybrid: underlying orientation may be Mountain
-    % But: expression and understanding are Rope
-    % Strategy: Claim Mountain for protection from coercion
-    % But: allow Rope for personal evolution
-    % Political: "born this way" protects rights
-    % Personal: identity can evolve
-    mountain_core_rope_expression.
-```
-
-**Critical nuance:** What you claim publicly (Mountain - for rights protection) vs. what you experience privately (Rope - allowing evolution) can differ strategically.
-
----
-
-### P22. Should I maintain or discard cultural/religious identity?
-**Context:** Individual, biographical timeframe, inherited identity
-
-**Scaffold-downgrade:**
-- **Accept as Mountain:** Identity is essential (cannot change)
-- **Downgrade to Rope:** Identity is cultural (can modify)
-- **Further downgrade:** Identity is arbitrary (can discard)
-
-**Cascade with Mountain:**
-- "This is who I am"
-- Betrayal to leave
-- Duty to maintain
-- May trap in extractive system
-
-**Cascade with Rope:**
-- Can keep valuable parts
-- Can modify or exit
-- Identity requires active maintenance
-- Can construct hybrid
-
-**Cascade with arbitrary:**
-- Total flexibility
-- But: loses community, continuity
-- Rootlessness
-
-**Test:** Do the benefits of your inherited identity outweigh the costs?
-
-**Provisional answer:**
-```prolog
-constraint_classification(cultural_religious_identity, rope, individual_context) :-
-    % Identity is not innate (not Mountain)
-    % Is constructed through participation (Rope)
-    % Strategy:
-    %   - Evaluate: Is this identity Rope or Noose FOR ME?
-    %   - If Rope (community, meaning, low cost): maintain
-    %   - If Noose (extraction, oppression): exit or reform
-    %   - Can construct hybrid identity
-    % Common Noose: "You must maintain this or betray ancestors"
-    evaluate_then_choose.
-```
-
----
-
-## SECTION 10: CONSUMPTION & RESOURCES
-
-### P23. How much is enough?
-**Context:** Individual, biographical timeframe, consumer society
-
-**Scaffold-downgrade:**
-- **Accept as Mountain:** More is always better (maximization)
-- **Downgrade to Rope:** Enough is a choice (sufficiency)
-- **Further downgrade:** Minimalism is virtue (asceticism)
-
-**Cascade with Mountain (maximization):**
-- Never satisfied
-- Treadmill of consumption
-- Work to consume, consume to justify work
-- Hedonic adaptation
-
-**Cascade with Rope (sufficiency):**
-- Define "enough" based on goals
-- Can stop when reached
-- Autonomy threshold, then diminishing returns
-
-**Cascade with asceticism:**
-- Virtue in deprivation
-- May be cope (sour grapes)
-- Loses practical comfort
-
-**Test:** What would change in your life if you had 10x wealth? If nothing major, you might have enough.
-
-**Provisional answer:**
-```prolog
-constraint_classification(consumption_level, rope, individual_context) :-
-    % "Enough" is personal preference (Rope)
-    % But: subject to hedonic adaptation (Mountain)
-    % Strategy:
-    %   - Secure autonomy threshold (healthcare, housing, food security)
-    %   - Beyond that: diminishing returns on happiness
-    %   - Maximize autonomy, not consumption
-    %   - "More is better" is Noose (keeps you working/consuming)
-    autonomy_threshold_then_choose.
-```
-
----
-
-### P24. Should I optimize for experiences or possessions?
-**Context:** Individual, biographical timeframe, limited resources
-
-**Scaffold-downgrade:**
-- **Accept as Mountain:** Experiences are always better (research suggests)
-- **Downgrade to Rope:** Depends on type and personal preference
-
-**Cascade with Mountain (experiences):**
-- Travel/events over things
-- FOMO culture
-- May sacrifice useful possessions
-
-**Cascade with Rope:**
-- Some possessions enable experiences (instruments, tools)
-- Some experiences are valuable (memories, growth)
-- Some possessions are valuable (home, comfort)
-- Depends on personal values
-
-**Test:** What brings you more sustained satisfaction?
-
-**Provisional answer:**
-```prolog
-constraint_classification(experiences_vs_possessions, rope, individual_context) :-
-    % Personal preference (Rope)
-    % But: research shows experiences generally better
-    % Strategy:
-    %   - Possessions that enable experiences (tools, instruments)
-    %   - Experiences that create lasting value (skills, relationships)
-    %   - Avoid: possessions for status
-    %   - Avoid: experiences for FOMO
-    % Neither is Mountain - choose based on what serves your goals
-    personal_preference_informed_by_evidence.
-```
-
----
-
-### P25. Should I give to charity/mutual aid?
-**Context:** Individual, moderate resources, aware of need
-
-**Scaffold-downgrade:**
-- **Accept as Mountain:** Moral obligation to give (Peter Singer effective altruism)
-- **Downgrade to Rope:** Giving is supererogatory (above duty)
-- **Further downgrade:** No obligation to give
-
-**Cascade with Mountain (obligation):**
-- Must give until marginal utility equals recipient's
-- Implies giving most wealth away
-- High sacrifice
-- May be correct but psychologically unsustainable
-
-**Cascade with Rope (optional):**
-- Can choose to give based on values
-- Can set own threshold
-- Guilt if don't give, but not obligation
-
-**Cascade with no obligation:**
-- Pure self-interest
-- Collective action problem
-- Social safety net collapses
-
-**Test:** Do you feel obligation or choice when giving?
-
-**Provisional answer:**
-```prolog
-constraint_classification(giving_obligation, rope, individual_context) :-
-    % Not Mountain (no absolute obligation)
-    % But: coordination problem (everyone benefits from safety net)
-    % Strategy:
-    %   - Give to maintain social Ropes (mutual aid, safety net)
-    %   - Threshold based on values and resources
-    %   - Prefer systemic solutions (policy) over individual charity
-    %   - Effective altruism is one valid Rope, not only option
-    % "Must give everything" can be Noose (guilt-based extraction)
-    choose_level_based_on_values_and_coordination_benefits.
-```
-
----
-
-## SECTION 11: KNOWLEDGE & LEARNING
-
-### P26. Should I specialize or generalize?
-**Context:** Individual, biographical timeframe, career/learning
-
-**Scaffold-downgrade:**
-- **Accept as Mountain:** Must specialize (economic necessity)
-- **Downgrade to Rope:** Specialize vs. generalize is strategic choice
-- **Consider:** T-shaped vs. polymath
-
-**Cascade with Mountain (must specialize):**
-- Deep expertise
-- Economic returns
-- Narrow competence
-- Fragile to change
-
-**Cascade with Rope (strategic choice):**
-- Can specialize where returns high
-- Can generalize where flexibility valuable
-- T-shaped: deep in one, broad across many
-- Depends on field and goals
-
-**Test:** Does your field reward depth or breadth?
-
-**Provisional answer:**
-```prolog
-constraint_classification(specialization, rope, individual_context) :-
-    % Strategic choice (Rope)
-    % Depends on:
-    %   - Field (some reward specialization, some breadth)
-    %   - Life stage (young = explore, older = specialize)
-    %   - Risk tolerance (generalists more adaptable)
-    %   - Personal interest (flow from mastery vs. variety)
-    % Optimal: T-shaped (deep expertise + broad competence)
-    strategic_based_on_context.
-```
-
----
-
-### P27. Is formal education necessary?
-**Context:** Individual, biographical timeframe, modern economy
-
-**Scaffold-downgrade:**
-- **Accept as Mountain:** Must get degree (credential requirement)
-- **Downgrade to Rope:** Education is tool (valuable but not necessary)
-- **Further downgrade:** Education is Noose (debt trap)
-
-**Cascade with Mountain:**
-- Everyone needs college
-- Debt is worth it
-- No alternatives visible
-
-**Cascade with Rope:**
-- Some fields require credentials (doctor, lawyer)
-- Some fields don't (tech, trades, arts)
-- Education valuable but can be self-directed
-- Choose based on field and ROI
-
-**Cascade with Noose:**
-- Never worth it
-- Student debt is trap
-- Avoid all formal education
-
-**Test:** Does your desired field actually require formal credentials?
-
-**Provisional answer:**
-```prolog
-constraint_classification(formal_education, rope, individual_context) :-
-    % Not Mountain (not necessary for all paths)
-    % Is Rope for credentialed fields (medicine, law, academia)
-    % May be Noose if:
-    %   - High debt for low-return field
-    %   - Credential not actually required but socially expected
-    % Strategy:
-    %   - If field requires credential: necessary Rope
-    %   - If field doesn't require: evaluate ROI
-    %   - Consider alternatives (bootcamps, apprenticeship, self-teaching)
-    field_dependent_cost_benefit.
-```
-
----
-
-### P28. Should I follow curiosity or practicality?
-**Context:** Individual, biographical timeframe, limited time
-
-**Scaffold-downgrade:**
-- **Accept as Mountain:** Must be practical (economic necessity)
-- **Downgrade to Rope:** Balance curiosity and practicality
-- **Further downgrade:** Follow only curiosity (life is short)
-
-**Cascade with Mountain (pure practicality):**
-- Optimize for income
-- Suppress interests
-- May lead to burnout, alienation
-
-**Cascade with Rope (balance):**
-- Secure resources practically
-- Pursue curiosity within constraints
-- May find intersection (paid to learn)
-
-**Cascade with pure curiosity:**
-- Follow all interests
-- May not secure resources
-- Requires independent wealth or low needs
-
-**Test:** Can you find overlap between curiosity and practicality?
-
-**Provisional answer:**
-```prolog
-constraint_classification(curiosity_vs_practicality, rope, individual_context) :-
-    % Balance is strategic choice (Rope)
-    % Depends on resources:
-    %   - If scarce: must prioritize practicality (survival)
-    %   - If sufficient: can follow curiosity
-    %   - Optimal: find intersection (paid for curious work)
-    % Pure practicality is Noose if suppresses all interest
-    % Pure curiosity is privilege requiring independent means
-    seek_intersection_or_secure_base_then_explore.
-```
-
----
-
-## SECTION 12: POLITICAL PARTICIPATION
-
-### P29. Should I participate in electoral politics?
-**Context:** Individual, biographical timeframe, democratic system
-
-**Scaffold-downgrade:**
-- **Accept as Mountain:** Voting is civic duty (must participate)
-- **Downgrade to Rope:** Voting is strategic choice
-- **Further downgrade:** Electoral politics is Noose (don't participate)
-
-**Cascade with Mountain (duty):**
-- Must vote even if low impact
-- Guilt if don't participate
-- "You can't complain if you don't vote"
-
-**Cascade with Rope (strategic):**
-- Vote if expected impact > cost
-- Consider: swing state vs. safe state
-- Consider: down-ballot vs. presidential
-- Participate strategically
-
-**Cascade with Noose (exit):**
-- System is rigged
-- Participation legitimizes
-- Focus on mutual aid/alternatives
-
-**Test:** Does your vote actually change outcomes in your context?
-
-**Provisional answer:**
-```prolog
-constraint_classification(electoral_participation, rope, individual_context) :-
-    % Not Mountain (not absolute duty)
-    % Is Rope (coordination mechanism)
-    % Strategy:
-    %   - Vote if: swing district, down-ballot races matter, low cost
-    %   - Don't vote if: safe district, no time, better uses of energy
-    %   - Electoral politics is one lever among many
-    %   - Don't mistake voting for only political action
-    % "Duty to vote" can be Noose (guilts you into legitimizing bad system)
-    strategic_participation_not_sole_strategy.
-```
-
----
-
-### P30. Should I engage in direct action/mutual aid?
-**Context:** Individual, biographical timeframe, capacity to organize
-
-**Scaffold-downgrade:**
-- **Accept as Mountain:** Must engage in mutual aid (moral obligation)
-- **Downgrade to Rope:** Direct action is strategic choice
-- **Further downgrade:** Focus only on individual life
-
-**Cascade with Mountain:**
-- Guilt if not constantly organizing
-- Burnout from overextension
-- But: builds actual power
-
-**Cascade with Rope:**
-- Engage when high-impact and sustainable
-- Build local resilience
-- Coordinate with others
-- Balance with personal life
-
-**Cascade with pure individualism:**
-- No collective action
-- Free-rider on others' organizing
-- Power structures persist
-
-**Test:** What's your actual capacity for sustained organizing?
-
-**Provisional answer:**
-```prolog
-constraint_classification(direct_action, rope, individual_context) :-
-    % Strategic choice (Rope)
-    % Often more effective than electoral politics
-    % But: requires sustained energy
-    % Strategy:
-    %   - Engage where capacity exists
-    %   - Focus on mutual aid (builds dual power)
-    %   - Don't guilt-trip self into burnout
-    %   - Sustainable > heroic
-    % "Must constantly organize" can become Noose (activist burnout)
-    engage_sustainably_where_effective.
-```
-
----
-
-### P31. Should I prioritize local or global issues?
-**Context:** Individual, biographical timeframe, limited attention
-
-**Scaffold-downgrade:**
-- **Accept as Mountain:** Global issues are most important (scope)
-- **Downgrade to Rope:** Local issues are most tractable (impact)
-- **Consider:** Both matter, limited resources
-
-**Cascade with global priority:**
-- Climate, poverty, existential risk
-- High scope, low tractability
-- May feel powerless
-
-**Cascade with local priority:**
-- Community, neighbors, immediate
-- Low scope, high tractability
-- Tangible impact
-
-**Test:** Where can you actually make measurable difference?
-
-**Provisional answer:**
-```prolog
-constraint_classification(local_vs_global, rope, individual_context) :-
-    % Strategic choice (Rope)
-    % Depends on:
-    %   - Resources (wealthy can affect global, most can affect local)
-    %   - Skills (some expertise is globally valuable)
-    %   - Values (scope-sensitive altruism vs. proximity bias)
-    % Strategy:
-    %   - Act locally where tractable
-    %   - Support global efforts where leverage exists
-    %   - Don't ignore either
-    % "Think globally, act locally" is cliché but reasonable
-    both_with_emphasis_on_tractability.
-```
-
----
-
-## SECTION 13: EXISTENTIAL STANCE
-
-### P32. Should I be optimistic or pessimistic about the future?
-**Context:** Individual, biographical timeframe, uncertain trajectory
-
-**Scaffold-downgrade:**
-- **Accept as Mountain:** Optimism is rational (progress is real)
-- **Downgrade to Rope:** Optimism/pessimism are strategic stances
-- **Further downgrade:** Pessimism is rational (collapse is inevitable)
-
-**Cascade with Mountain (optimism):**
-- Motivated to work for change
-- May ignore real threats
-- "It'll all work out"
-
-**Cascade with Rope (strategic stance):**
-- Choose stance based on what motivates action
-- Pessimism of intellect, optimism of will
-- Can hold both simultaneously
-
-**Cascade with Mountain (pessimism):**
-- Accurate about risks
-- Demotivating
-- Self-fulfilling prophecy
-
-**Test:** Does your stance motivate or paralyze you?
-
-**Provisional answer:**
-```prolog
-constraint_classification(optimism_pessimism, rope, individual_context) :-
-    % Strategic choice (Rope)
-    % Not about what's "true" (future is uncertain)
-    % About what motivates effective action
-    % Strategy:
-    %   - Pessimism about systems (clear-eyed about Nooses)
-    %   - Optimism about agency (can build alternatives)
-    %   - Gramsci: "Pessimism of intellect, optimism of will"
-    % Pure optimism ignores threats
-    % Pure pessimism paralyzes
-    strategic_pessimism_plus_active_optimism.
-```
-
----
-
-### P33. Is the universe meaningful or absurd?
-**Context:** Individual, biographical timeframe, seeking coherence
-
-**Scaffold-downgrade:**
-- **Accept as Mountain:** Universe has inherent meaning (teleological)
-- **Downgrade to Rope:** Meaning is human projection (existentialist)
-- **Further downgrade:** Universe is absurd (Camus)
-
-**Cascade with Mountain (cosmic meaning):**
-- Must discover purpose
-- Meaning exists to be found
-- Failure to find = crisis
-
-**Cascade with Rope (human meaning):**
-- Create your own meaning
-- Freedom and responsibility
-- Meaning is real even if constructed
-
-**Cascade with absurdism:**
-- Accept meaninglessness
-- Revolt against absurd
-- Sisyphus is happy
-
-**Test:** Does cosmic meaning claim serve you or extract from you?
-
-**Provisional answer:**
-```prolog
-constraint_classification(cosmic_meaning, rope, individual_context) :-
-    % No evidence of cosmic meaning (not Mountain)
-    % Human meaning-making is real (Rope)
-    % Strategy:
-    %   - Create meaning through projects, relationships, values
-    %   - Accept that meaning is constructed (doesn't reduce value)
-    %   - Reject cosmic meaning claims as Nooses (divine duty, etc.)
-    % From Gita analysis: cosmic purpose claims enable subjugation
-    % Constructed meaning preserves autonomy
-    construct_meaning_reject_cosmic_claims.
-```
-
-**This connects back to P4 and Gita analysis.**
-
----
-
-### P34. Should I have children?
-**Context:** Individual, biographical timeframe, reproductive capacity
-
-**Scaffold-downgrade:**
-- **Accept as Mountain:** Reproduction is natural duty (biological imperative)
-- **Downgrade to Rope:** Having children is choice
-- **Further downgrade:** Having children is unethical (antinatalism)
-
-**Cascade with Mountain (duty):**
-- "It's what people do"
-- Pressure from family/society
-- No consideration of actual desire or capacity
-
-**Cascade with Rope (choice):**
-- Evaluate: resources, desire, capacity, world conditions
-- Can choose yes or no based on values
-- Neither is default
-
-**Cascade with antinatalism:**
-- Never have children
-- Suffering > non-existence
-- May be correct but limits options
-
-**Test:** Do you actually want children, or do you want to want children?
-
-**Provisional answer:**
-```prolog
-constraint_classification(having_children, rope, individual_context) :-
-    % Not biological imperative (not Mountain)
-    % Is massive commitment (Rope - once chosen, hard to exit)
-    % Strategy:
-    %   - Evaluate actual desire (not social pressure)
-    %   - Evaluate resources and capacity
-    %   - Consider world conditions (climate, etc.)
-    %   - Either choice is valid
-    % "You must have children" is Noose (reproductive coercion)
-    % "You must not have children" is also Noose (forced ideology)
-    genuine_choice_with_full_evaluation.
-```
-
----
-
-### P35. How should I spend my limited time?
-**Context:** Individual, biographical timeframe, ~80 years total
-
-**Scaffold-downgrade:**
-- **Accept as Mountain:** Must maximize productivity (time is money)
-- **Downgrade to Rope:** Time allocation is values choice
-- **Consider:** Relationship between time, meaning, mortality
-
-**Cascade with Mountain (productivity):**
-- Optimize every hour
-- Leisure is wasted time
-- Burnout inevitable
-
-**Cascade with Rope (values-based):**
-- Allocate to what matters to you
-- Balance productivity, relationships, rest, play
-- No single right answer
-
-**Test:** On deathbed, what will you wish you'd done differently?
-
-**Provisional answer:**
-```prolog
-constraint_classification(time_allocation, rope, individual_context) :-
-    % Time is finite (Mountain - biological limit)
-    % How to spend it is choice (Rope)
-    % Given P14 (mortality is final):
-    %   - This is the only life
-    %   - Time spent is time gone forever
-    %   - Choose based on values, not shoulds
-    % "Maximize productivity" is Noose (capitalism internalized)
-    % Strategy:
-    %   - Secure resources (work)
-    %   - Invest in relationships (connection)
-    %   - Pursue projects (meaning)
-    %   - Rest (sustainability)
-    % Ratio is personal, but mortality creates urgency
-    values_based_allocation_with_mortality_urgency.
-```
-
----
-
-## COMPLETE BATTERY SUMMARY
-
-### TIER 0: THEORY (Sub Specie Aeternitatis) - 5 Questions
-
-**Mountains that hold universally:**
-1. T1: Logical necessity (yes)
-2. T2: Mathematical truth (yes)
-3. T3: Physical laws (yes)
-4. T4: Consciousness substrate-dependence (provisional yes)
-5. T5: Death finality (provisional yes, follows from T4)
-
----
-
-### TIER 1: PRACTICE - INDIVIDUAL - 35 Questions
-
-**SECTION 1: AGENCY & CHANGE (3)**
-- P1: Meaningful agency → **Rope** (accept for practical reasons)
-- P2: Personal change possible → **Rope** (yes, with effort)
-- P3: Identity stability → **Rope** (constructed continuity)
-
-**SECTION 2: MEANING & PURPOSE (2)**
-- P4: Life meaning → **Rope** (constructed, not discovered)
-- P5: Suffering meaning → **Rope** (optional interpretation)
-
-**SECTION 3: RELATIONSHIPS (2)**
-- P6: Relationship meaning → **Rope** (investment creates value)
-- P7: Family obligations → **Rope** (cultural, not natural)
-
-**SECTION 4: WORK & VALUE (2)**
-- P8: Work intrinsic value → **Varies** (examine each job)
-- P9: Wealth/status pursuit → **Rope** (tools, not goals)
-
-**SECTION 5: EPISTEMIC NORMS (2)**
-- P10: Truth vs utility → **Context-dependent** (truth for high-stakes)
-- P11: Moral intuitions → **Rope** (useful heuristics, examine)
-
-**SECTION 6: POWER & SYSTEMS (2)**
-- P12: Power structures natural → **Varies** (apply DR framework)
-- P13: Participation in Nooses → **Rope** (strategic with resistance)
-
-**SECTION 7: DEATH & RISK (3)**
-- P14: Mortality acceptance → **Mountain** (death is final, from T5)
-- P15: Risk-taking → **Rope** (personal preference within ergodic constraints)
-- P16: Future planning → **Rope** (balance based on circumstances)
-
-**SECTION 8: TRUST & COOPERATION (3)**
-- P17: Trust default → **Rope** (conditional cooperation)
-- P18: Human nature → **Rope** (situational, not inherently good/bad)
-- P19: Punish defectors → **Rope** (enforce cooperation)
-
-**SECTION 9: IDENTITY & EXPRESSION (3)**
-- P20: Social conformity → **Rope** (distinguish Ropes from Nooses)
-- P21: Gender/sexual identity → **Mountain + Rope** (core + expression)
-- P22: Cultural/religious identity → **Rope** (evaluate then choose)
-
-**SECTION 10: CONSUMPTION & RESOURCES (3)**
-- P23: How much is enough → **Rope** (autonomy threshold then choose)
-- P24: Experiences vs possessions → **Rope** (personal preference)
-- P25: Giving obligation → **Rope** (coordination benefit, not absolute duty)
-
-**SECTION 11: KNOWLEDGE & LEARNING (3)**
-- P26: Specialize vs generalize → **Rope** (strategic choice)
-- P27: Formal education → **Rope** (field-dependent cost-benefit)
-- P28: Curiosity vs practicality → **Rope** (seek intersection)
-
-**SECTION 12: POLITICAL PARTICIPATION (3)**
-- P29: Electoral politics → **Rope** (strategic, not sole strategy)
-- P30: Direct action → **Rope** (engage sustainably where effective)
-- P31: Local vs global → **Rope** (both, emphasize tractability)
-
-**SECTION 13: EXISTENTIAL STANCE (4)**
-- P32: Optimism/pessimism → **Rope** (strategic stance for action)
-- P33: Cosmic meaning → **Rope** (construct meaning, reject cosmic claims)
-- P34: Having children → **Rope** (genuine choice with full evaluation)
-- P35: Time allocation → **Rope** (values-based with mortality urgency)
-
----
-
-## PATTERN ANALYSIS
-
-### What's Actually Mountain (Unchangeable)?
-
-**From Tier 0:**
-- Logic, math, physics
-- Consciousness requires substrate (provisional)
-- Death is final (provisional, follows from substrate)
-
-**From Tier 1:**
-- P14: Mortality (consequence of T5)
-- Ergodic constraints (embedded in P15)
-
-**That's it. ~7 actual Mountains.**
-
-### What's Rope (Strategic Choice)?
-
-**Basically everything else (33 questions).**
-
-Key insight: Most of what feels like "deep metaphysical truth" is actually **pragmatic frame choice**.
-
-### What's Noose (When Claimed as Mountain)?
-
-**Common patterns:**
-- Eternal soul (enables subjugation)
-- Work as dignity (enables extraction)
-- Family as sacred (enables abuse)
-- Conformity as duty (enables oppression)
-- Cosmic purpose (enables control)
-
-**These are the traps: Constructed constraints claimed as natural.**
-
----
-
-## WHAT THE BATTERY REVEALS
-
-### Your Provisional Ontology
-
-**You accept as Mountain:**
-1. Physical reality (logic, math, physics)
-2. Mortality (consciousness ends at death)
-3. Finite time/resources (biological limits)
-
-**You accept as Rope:**
-1. Agency (useful to act as if you have it)
-2. Meaning (construct it, don't discover it)
-3. Identity (build it, don't find it)
-4. Relationships (invest to create value)
-5. All social structures (distinguish Rope from Noose, participate strategically)
-
-**You reject as Noose (when claimed as Mountain):**
-1. Eternal soul / afterlife
-2. Cosmic purpose
-3. Natural hierarchy
-4. Work as inherently dignifying
-5. Family obligations as absolute
-
-### The Meta-Pattern
-
-**You're a pragmatist with materialist foundations.**
-
-- Accept physical reality as constraint
-- Construct meaning within constraints
-- Treat social structures as tools
-- Resist extraction mechanisms
-- Preserve autonomy above all
-
-**The whole DR framework is itself a Rope (Scaffold?) for navigating this.**
-
----
