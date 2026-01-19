@@ -215,3 +215,4 @@ domain_category(trade_secret_law, narrative_history).
 domain_category(traveling_salesperson_problem, narrative_history).
 domain_category(visa_ipo_regulatory_compliance, narrative_history).
 domain_category(visa_judgment_sharing_agreement, narrative_history).
+domain_category(hoa_architectural_covenants, narrative_history).
