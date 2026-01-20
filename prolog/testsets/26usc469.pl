@@ -248,3 +248,9 @@ test(time_horizon_perception) :-
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
+
+
+% --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
+constraint_indexing:constraint_classification(26usc469, mountain, agent_power(analytical)).
+constraint_indexing:constraint_classification(26usc469, rope, agent_power(institutional)).
+constraint_indexing:constraint_classification(26usc469, noose, agent_power(individual_powerless)).

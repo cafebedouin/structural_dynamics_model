@@ -1,3 +1,4 @@
+% [RESOLVED MANDATROPHY] High-extraction Mountain identified as structural mandate.
 % ============================================================================
 % CONSTRAINT STORY: cloudflare_dual_class_asymmetry
 % ============================================================================
@@ -137,3 +138,12 @@ test(long_term_viability) :-
  
 % Fact for the alternative view
 alternative_noose_view(cloudflare_dual_class_asymmetry, agent_power(individual_powerful), noose).
+
+
+% ==========================================================================
+% [SKELETON REPAIR] Missing Perspectival Pillars Added: ROPE, NOOSE, MOUNTAIN
+% To be calibrated: Define the narrative justification for these perspectives.
+% ==========================================================================
+constraint_indexing:constraint_classification(cloudflare_dual_class_asymmetry, rope, agent_power(institutional)).
+constraint_indexing:constraint_classification(cloudflare_dual_class_asymmetry, noose, agent_power(individual_powerless)).
+constraint_indexing:constraint_classification(cloudflare_dual_class_asymmetry, mountain, agent_power(analytical)).

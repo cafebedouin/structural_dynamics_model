@@ -187,3 +187,9 @@ test(enforcement_check) :-
 % END OF CONSTRAINT STORY
 % ============================================================================
 
+
+
+% --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
+constraint_indexing:constraint_classification(rfc9293_interoperability, mountain, agent_power(analytical)).
+constraint_indexing:constraint_classification(rfc9293_interoperability, rope, agent_power(institutional)).
+constraint_indexing:constraint_classification(rfc9293_interoperability, noose, agent_power(individual_powerless)).

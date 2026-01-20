@@ -54,7 +54,7 @@
    ========================================================================== */
 
 narrative_ontology:interval(copyleft_viral_licensing, 0, 10).
-narrative_ontology:constraint_claim(copyleft_viral_licensing, recursive_commons).
+narrative_ontology:constraint_claim(copyleft_viral_licensing, rope).
 
 % Base extractiveness score (0.05)
 % Extremely low extraction; it is designed to explicitly prevent the 

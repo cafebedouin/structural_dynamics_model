@@ -52,7 +52,7 @@
 
 % Required for [STEP 1] and [STEP 2] of the DR-Audit Suite
 narrative_ontology:interval(carbon_credit_markets_2026_int, 0, 10).
-narrative_ontology:constraint_claim(carbon_credit_markets_2026, tangled_rope).
+narrative_ontology:constraint_claim(carbon_credit_markets_2026, rope).
 
 % Base extractiveness score (0.0 = no extraction, 1.0 = full extraction)
 % Rationale: System favors large incumbents and financial intermediaries (0.52-0.68 range in source).

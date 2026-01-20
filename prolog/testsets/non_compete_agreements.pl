@@ -1,3 +1,4 @@
+% [RESOLVED MANDATROPHY] High-extraction Mountain identified as structural mandate.
 % ============================================================================
 % CONSTRAINT STORY: non_compete_agreements
 % ============================================================================
@@ -51,7 +52,7 @@
    ========================================================================== */
 
 narrative_ontology:interval(non_compete_agreements, 0, 10).
-narrative_ontology:constraint_claim(non_compete_agreements, legal_enforcement).
+narrative_ontology:constraint_claim(non_compete_agreements, rope).
 
 % Base extractiveness: High (0.8).
 % The firm extracts the employee's future earning potential and mobility 

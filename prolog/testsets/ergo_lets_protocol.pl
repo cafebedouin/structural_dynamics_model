@@ -56,7 +56,7 @@
    ========================================================================== */
 
 narrative_ontology:interval(ergo_lets_interval, 0, 10).
-narrative_ontology:constraint_claim(ergo_lets_protocol, mutual_credit_integrity).
+narrative_ontology:constraint_claim(ergo_lets_protocol, rope).
 
 % Base extractiveness: Low (0.15)
 % Rationale: The protocol is designed to be non-extractive; fees are 

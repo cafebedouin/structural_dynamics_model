@@ -196,3 +196,9 @@ test(immutability_of_spirit) :-
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
+
+
+% --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
+constraint_indexing:constraint_classification(gita_kurukshetra, mountain, agent_power(analytical)).
+constraint_indexing:constraint_classification(gita_kurukshetra, rope, agent_power(institutional)).
+constraint_indexing:constraint_classification(gita_kurukshetra, noose, agent_power(individual_powerless)).

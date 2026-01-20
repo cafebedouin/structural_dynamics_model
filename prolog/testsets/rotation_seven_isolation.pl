@@ -1,3 +1,4 @@
+% [RESOLVED MANDATROPHY] High-extraction Mountain identified as structural mandate.
 % ============================================================================
 % CONSTRAINT STORY: protocol_r7_isolation (REFINED v2.0)
 % ============================================================================
@@ -137,6 +138,40 @@ constraint_indexing:constraint_classification(
     )
 ) :- !.
 
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 3: THE ANALYTICAL OBSERVER (SPATIAL ANALYST) - Mountain
+   --------------------------------------------------------------------------
+   WHO: agent_power(analytical) - Observes the unyielding physical geometry.
+   WHEN: generational - The sector's architectural layout is permanent.
+   WHERE: trapped - The physical radius defines the limits of movement.
+   SCOPE: local - The immediate spatial environment of the 7th sector.
+   
+   WHY THIS CLASSIFICATION:
+   The "Mountain" is the physical geometry of isolation. The distance 
+   between nodes and the hardware limits on communication bandwidth are 
+   immutable facts of the Sector 7 terrain. While residents feel this as 
+   a Noose and Command uses it as a Rope for control, the analyst 
+   recognizes it as an unchangeable structural invariant: the sector 
+   is physically designed for low-concurrency interaction.
+   -------------------------------------------------------------------------- */
+
+constraint_indexing:constraint_classification(
+    rotation_seven_isolation,
+    mountain,
+    context(
+        agent_power(analytical),
+        time_horizon(generational),
+        exit_options(trapped),
+        spatial_scope(local)
+    )
+) :-
+    domain_priors:requires_active_enforcement(rotation_seven_isolation),
+    !.
+
+% Explicit priors reflecting the rigid, unyielding nature of spatial isolation.
+domain_priors:base_extractiveness(rotation_seven_isolation, 0.4).
+domain_priors:suppression_score(rotation_seven_isolation, 0.3).
+
 /* ==========================================================================
    4. TESTS
    ========================================================================== */
@@ -185,3 +220,9 @@ test(perspectival_gap) :-
 % ============================================================================
 % END OF CONSTRAINT STORY
 % ============================================================================
+
+
+
+% --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
+constraint_indexing:constraint_classification(rotation_seven_isolation, rope, agent_power(institutional)).
+constraint_indexing:constraint_classification(rotation_seven_isolation, noose, agent_power(individual_powerless)).

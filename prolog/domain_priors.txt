@@ -1,0 +1,297 @@
+:- module(domain_priors, [
+    get_prior/3,
+    is_known_domain/1,
+    flag_novelty/1,
+    expected_signature/2,
+    should_be_natural_law/1,
+    validate_signature/2,
+    category_of/2,
+    base_extractiveness/2,
+    suppression_score/2,
+    requires_active_enforcement/1,
+    emerges_naturally/1
+]).
+
+:- discontiguous base_extractiveness/2.
+:- discontiguous suppression_score/2.
+:- discontiguous requires_active_enforcement/1.
+:- discontiguous emerges_naturally/1.
+
+:- multifile 
+    base_extractiveness/2, 
+    suppression_score/2, 
+    requires_active_enforcement/1,
+    emerges_naturally/1.
+
+:- dynamic 
+    base_extractiveness/2, 
+    suppression_score/2, 
+    requires_active_enforcement/1,
+    emerges_naturally/1.
+
+/**
+ * DOMAIN PRIORS MODULE - v3.2.4 Hardened
+ * Resolves redefinition warnings and restores missing API procedures.
+ */
+
+%% ============================================================================
+%% 1. CATEGORY PROFILES
+%% ============================================================================
+category_profile(physical_natural, [1.0, 1.0, 0.0, 0.0]).
+category_profile(formal_logic,     [0.9, 0.2, 0.1, 0.1]).
+category_profile(statutory_formal, [0.8, 0.5, 0.7, 0.4]).
+category_profile(election_cycle,   [0.8, 0.8, 0.3, 0.5]). 
+category_profile(extractive_market,[0.4, 0.8, 0.8, 0.6]). 
+category_profile(narrative_history,[0.6, 0.7, 0.5, 0.6]).
+category_profile(unknown_novel,    [0.5, 0.5, 0.5, 0.5]).
+
+%% ============================================================================
+%% 2. API DEFINITIONS
+%% ============================================================================
+
+is_known_domain(ID) :- domain_category(ID, _), !.
+is_known_domain(ID) :- base_extractiveness(ID, _), !.
+is_known_domain(ID) :- suppression_score(ID, _), !.
+is_known_domain(ID) :- narrative_ontology:constraint_claim(ID, _), !.
+
+% Flag Novelty (Clears v3_1_data_repair warnings)
+flag_novelty(ID) :-
+    \+ is_known_domain(ID),
+    format('! NOTICE: Novel Domain "~w" detected. Using neutral (0.5) priors.~n', [ID]).
+flag_novelty(_).
+
+get_prior(ID, Metric, Value) :-
+    map_metric_to_hook(Metric, Hook),
+    call(domain_priors:Hook, ID, Value), !.
+
+get_prior(ID, Metric, Value) :-
+    category_of(ID, Cat),
+    category_profile(Cat, Vector),
+    map_metric_to_vector_pos(Metric, Vector, Value), !.
+
+get_prior(_, _, 0.5).
+
+category_of(ID, Cat) :- domain_category(ID, Cat), !.
+category_of(ID, physical_natural) :- 
+    (narrative_ontology:constraint_claim(ID, natural_law) ; 
+     narrative_ontology:constraint_claim(ID, physical_law)), !.
+category_of(ID, election_cycle) :- 
+    narrative_ontology:constraint_claim(ID, election_cycle), !.
+category_of(ID, Cat) :- infer_category_from_priors(ID, Cat), !.
+category_of(_, unknown_novel).
+
+% Signature Support (Clears exported-procedure errors)
+should_be_natural_law(ID) :- 
+    category_of(ID, Cat), 
+    expected_signature(Cat, natural_law).
+
+expected_signature(physical_natural, natural_law).
+expected_signature(formal_logic,     natural_law).
+expected_signature(election_cycle,   constructed_constraint).
+expected_signature(statutory_formal, constructed_constraint).
+expected_signature(extractive_market, constructed_constraint).
+expected_signature(narrative_history, constructed_constraint).
+expected_signature(unknown_novel,    ambiguous).
+
+validate_signature(ID, Detected) :-
+    category_of(ID, Cat),
+    expected_signature(Cat, Expected),
+    ( Detected = Expected 
+    -> format('[VALIDATION] ✓ ~w: ~w matches ~w~n', [ID, Detected, Cat])
+    ;  format('[VALIDATION] ✗ ~w: Expected ~w, got ~w~n', [ID, Expected, Detected])).
+
+%% ============================================================================
+%% 3. INTERNAL HELPERS
+%% ============================================================================
+
+map_metric_to_hook(base_extractiveness(_), base_extractiveness).
+map_metric_to_hook(extractiveness,         base_extractiveness).
+map_metric_to_hook(suppression(_),          suppression_score).
+map_metric_to_hook(suppression_requirement, suppression_score).
+
+map_metric_to_vector_pos(accessibility_collapse(_), [A,_,_,_], A).
+map_metric_to_vector_pos(stakes_inflation(_),      [_,S,_,_], S).
+map_metric_to_vector_pos(suppression(_),           [_,_,U,_], U).
+map_metric_to_vector_pos(resistance(_),            [_,_,_,R], R).
+
+infer_category_from_priors(ID, extractive_market) :- 
+    base_extractiveness(ID, E), E > 0.6, !.
+infer_category_from_priors(ID, statutory_formal) :- 
+    requires_active_enforcement(ID), !.
+
+%% ============================================================================
+%% 4. SIGNATURE 
+%% ============================================================================
+expected_signature(physical_natural, natural_law).
+expected_signature(formal_logic,     natural_law).
+expected_signature(election_cycle,   constructed_constraint).
+expected_signature(statutory_formal, constructed_constraint).
+expected_signature(extractive_market, constructed_constraint).
+expected_signature(narrative_history, constructed_constraint).
+expected_signature(unknown_novel,    ambiguous).
+
+validate_signature(ID, Detected) :-
+    category_of(ID, Cat),
+    expected_signature(Cat, Expected),
+    (   Detected = Expected
+    ->  format('[VALIDATION] ✓ ~w: ~w matches ~w~n', [ID, Detected, Cat])
+    ;   format('[VALIDATION] ✗ ~w: Expected ~w, got ~w~n', [ID, Expected, Detected])
+    ).
+
+%% ============================================================================
+%% 5. DOMAIN REGISTRY (UPDATE VIA domain_priors.py)
+%% ============================================================================
+domain_category(ai_evaluators_matching, extractive_market).
+domain_category(airbnb_str_regulation, narrative_history).
+domain_category(automatic_enrollment_defaults, narrative_history).
+domain_category(biological_curiosity, narrative_history).
+domain_category(black_soil_toxicity, extractive_market).
+domain_category(blackstone_carried_interest_taxation, narrative_history).
+domain_category(blackstone_conflicts_of_interest, extractive_market).
+domain_category(blackstone_smd_control, extractive_market).
+domain_category(blackstone_tra, extractive_market).
+domain_category(bloom_sirens_interval, narrative_history).
+domain_category(bloom_aeolus_interval, narrative_history).
+domain_category(bloom_ithaca_interval, narrative_history).
+domain_category(bloom_kosher_transgression, narrative_history).
+domain_category(bloom_samaritan_id, narrative_history).
+domain_category(bloom_secret_correspondence, narrative_history).
+domain_category(bloom_exclusion_interval, narrative_history).
+domain_category(bloom_exclusion_id, narrative_history).
+domain_category(bloom_xenophobic_exclusion, extractive_market).
+domain_category(carbon_credit_markets_2026, narrative_history).
+domain_category(choice_architecture_design, narrative_history).
+domain_category(cloudflare_dual_class_asymmetry, extractive_market).
+domain_category(coinbase_crypto_volatility, narrative_history).
+domain_category(coinbase_regulatory_uncertainty, extractive_market).
+domain_category(college_admissions_market, extractive_market).
+domain_category(colombia_2026_presidential_election, narrative_history).
+domain_category(copyleft_viral_licensing, narrative_history).
+domain_category(copyright_protection, narrative_history).
+domain_category(couples_residency_match, narrative_history).
+domain_category(creative_commons_licensing, narrative_history).
+domain_category(dark_patterns_manipulation, extractive_market).
+domain_category(deferential_realism_framework, narrative_history).
+domain_category(dexy_gold_protocol, narrative_history).
+domain_category(dharma_of_kurukshetra, narrative_history).
+domain_category(ergo_autolykos_asic_resistance, narrative_history).
+domain_category(ergo_lets_protocol, narrative_history).
+domain_category(ergo_mixer_protocol, narrative_history).
+domain_category(ergo_nipopows, narrative_history).
+domain_category(ergo_storage_rent, narrative_history).
+domain_category(exploration_vs_exploitation, narrative_history).
+domain_category(fair_use_doctrine, narrative_history).
+domain_category(gale_shapley_matching, narrative_history).
+domain_category(genetic_algorithms_evolution, narrative_history).
+domain_category(gerty_bloom_interval, narrative_history).
+domain_category(gestation_wombfruit_id, extractive_market).
+domain_category(golden_handcuffs, narrative_history).
+domain_category(great_awakening_rekindling, narrative_history).
+domain_category(hamiltonian_path_complexity, narrative_history).
+domain_category(hammurabi_lex_talionis, narrative_history).
+domain_category(heuristic_optimization, narrative_history).
+domain_category(history_nightmare_1904, extractive_market).
+domain_category(hoa_architectural_covenants, narrative_history).
+domain_category(information_foraging_theory, narrative_history).
+domain_category(institutional_mutation_domestication, extractive_market).
+domain_category(kidney_exchange_market, narrative_history).
+domain_category(kjv_linguistic_residue, narrative_history).
+domain_category(kjv_textual_authority, narrative_history).
+domain_category(kubo_ranking_system_r7, extractive_market).
+domain_category(lehman_repo_105, extractive_market).
+domain_category(lestrygonian_metabolism_1904, extractive_market).
+domain_category(lets, narrative_history).
+domain_category(local_vs_global_optima, narrative_history).
+domain_category(matching_markets_general, narrative_history).
+domain_category(max_flow_min_cut, narrative_history).
+domain_category(medical_residency_match, narrative_history).
+domain_category(medieval_church_hegemony, extractive_market).
+domain_category(molly_affirmation_id, narrative_history).
+domain_category(nestor_afternoon, extractive_market).
+domain_category(nighttown_vigil_id, extractive_market).
+domain_category(nipopows, narrative_history).
+domain_category(non_compete_agreements, extractive_market).
+domain_category(optimal_stopping_marriage, narrative_history).
+domain_category(permissive_software_licensing, narrative_history).
+domain_category(proteus_strand_walk, extractive_market).
+domain_category(protocol_r7_isolation, extractive_market).
+domain_category(public_domain_commons, narrative_history).
+domain_category(puritan_new_world_pivot, narrative_history).
+domain_category(relativity_of_simultaneity, narrative_history).
+domain_category(relativity_physical_invariance, narrative_history).
+domain_category(rosen_bridge_protocol, narrative_history).
+domain_category(section_469_c7_professional_threshold, narrative_history).
+domain_category(shannon_entropy_limit, narrative_history).
+domain_category(sig_usd_protocol, narrative_history).
+domain_category(silicon_lexicon_overload, extractive_market).
+domain_category(skills_based_hiring, narrative_history).
+domain_category(sludge_bureaucratic_friction, extractive_market).
+domain_category(stephen_shakespeare_ghost, extractive_market).
+domain_category(storage_rent, narrative_history).
+domain_category(sts86_ascent_checklist, narrative_history).
+domain_category(tax_code_section_469, narrative_history).
+domain_category(telemachus_morning, extractive_market).
+domain_category(tcp_rfc9293_interoperability, narrative_history).
+domain_category(tcp_state_machine_logic, narrative_history).
+domain_category(the_viceregal_cavalcade, narrative_history).
+domain_category(trade_secret_law, narrative_history).
+domain_category(traveling_salesperson_problem, narrative_history).
+domain_category(visa_ipo_regulatory_compliance, narrative_history).
+domain_category(visa_judgment_sharing_agreement, narrative_history).
+% ============================================================================
+% DOMAIN CATEGORY MAPPINGS: ULYSSES DYNAMIC SUITE (ALL REVISIONS)
+% ============================================================================
+
+% Chapter 1: Telemachus
+domain_category(dual_masters_dublin_1904, colonial_servitude).
+
+% Chapter 2: Nestor
+domain_category(history_nightmare_1904, historical_branding).
+
+% Chapter 3: Proteus
+domain_category(protean_signatures_1904, false_mountain).
+
+% Chapter 4: Calypso
+domain_category(bloom_kosher_transgression, religious_extraction).
+
+% Chapter 5: Lotus Eaters
+domain_category(bloom_secret_correspondence, asymmetric_intimacy).
+
+% Chapter 6: Hades
+domain_category(bloom_social_exclusion_dublin, tribal_exclusion).
+
+% Chapter 7: Aeolus
+domain_category(bloom_aeolus_advertisement_circuit, economic_friction).
+
+% Chapter 8: Lestrygonians
+domain_category(lestrygonian_metabolism_chp8, predatory_metabolism).
+
+% Chapter 9: Scylla and Charybdis
+domain_category(stephen_shakespeare_ghost, intellectual_burden).
+
+% Chapter 10: Wandering Rocks
+domain_category(the_viceregal_cavalcade, colonial_display).
+
+% Chapter 11: Sirens
+domain_category(bloom_acoustic_seduction_vigil, sensory_decoy).
+
+% Chapter 12: Cyclops
+domain_category(bloom_xenophobic_exclusion, violent_nationalism).
+
+% Chapter 13: Nausicaa
+domain_category(gerty_bloom_voyeuristic_distance, erotic_stagnation).
+
+% Chapter 14: Oxen of the Sun
+domain_category(gestation_the_wombfruit, biological_determinism).
+
+% Chapter 15: Circe
+domain_category(nighttown_hallucinatory_vigil, psychic_extraction).
+
+% Chapter 16: Eumaeus
+domain_category(bloom_samaritan_paternal_care, samaritan_duty).
+
+% Chapter 17: Ithaca
+domain_category(bloom_ithaca_mathematical_order, logical_reduction).
+
+% Chapter 18: Penelope
+domain_category(molly_affirmation_cycle, rhythmic_coordination).

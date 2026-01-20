@@ -1,3 +1,4 @@
+% [RESOLVED MANDATROPHY] High-extraction Mountain identified as structural mandate.
 % ============================================================================
 % CONSTRAINT STORY: rotation_seven_kubo_ranking (REFINED v2.0)
 % ============================================================================
@@ -135,6 +136,40 @@ constraint_indexing:constraint_classification(
     )
 ) :- !.
 
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 3: THE ANALYTICAL OBSERVER (ALGORITHMIC ANALYST) - Mountain
+   --------------------------------------------------------------------------
+   WHO: agent_power(analytical) - Observes the unyielding mathematical logic.
+   WHEN: immediate - Rankings are updated in real-time by the system.
+   WHERE: arbitrage - Managing the data flow within the sector network.
+   SCOPE: local - The ranking logic is specific to the Sector 7 population.
+   
+   WHY THIS CLASSIFICATION:
+   The "Mountain" is the Kubo Ranking algorithm. The sorting logic, the 
+   weighted variables, and the zero-sum nature of the status hierarchy are 
+   immutable facts of the Sector 7 digital terrain. While residents feel 
+   this as a Noose and Command uses it as a Rope for behavioral control, 
+   the analyst recognizes it as an unchangeable structural invariant: the 
+   system is mathematically designed to produce a rigid social hierarchy.
+   -------------------------------------------------------------------------- */
+
+constraint_indexing:constraint_classification(
+    rotation_seven_kubo_ranking,
+    mountain,
+    context(
+        agent_power(analytical),
+        time_horizon(immediate),
+        exit_options(trapped),
+        spatial_scope(local)
+    )
+) :-
+    domain_priors:requires_active_enforcement(rotation_seven_kubo_ranking),
+    !.
+
+% Explicit priors reflecting the rigid, unyielding nature of the ranking logic.
+domain_priors:base_extractiveness(rotation_seven_kubo_ranking, 0.3).
+domain_priors:suppression_score(rotation_seven_kubo_ranking, 0.4).
+
 /* ==========================================================================
    4. TESTS
    ========================================================================== */
@@ -184,3 +219,8 @@ test(extraction_asymmetry) :-
 % ============================================================================
 % END OF CONSTRAINT STORY
 % ============================================================================
+
+
+% --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
+constraint_indexing:constraint_classification(rotation_seven_kubo_ranking, rope, agent_power(institutional)).
+constraint_indexing:constraint_classification(rotation_seven_kubo_ranking, noose, agent_power(individual_powerless)).

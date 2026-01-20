@@ -1,3 +1,4 @@
+% [RESOLVED MANDATROPHY] High-extraction Mountain identified as structural mandate.
 % ============================================================================
 % CONSTRAINT STORY: ai_evaluators_matching
 % ============================================================================
@@ -51,7 +52,7 @@
    ========================================================================== */
 
 narrative_ontology:interval(ai_evaluators_matching, 0, 10).
-narrative_ontology:constraint_claim(ai_evaluators_matching, algorithmic_authority).
+narrative_ontology:constraint_claim(ai_evaluators_matching, rope).
 
 % Base extractiveness: High (0.75).
 % AI systems extract behavioral data and "performance labor" from applicants, 
@@ -208,3 +209,8 @@ omega_variable(
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
+
+
+% --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
+constraint_indexing:constraint_classification(ai_evaluators_matching, mountain, agent_power(analytical)).
+constraint_indexing:constraint_classification(ai_evaluators_matching, rope, agent_power(institutional)).

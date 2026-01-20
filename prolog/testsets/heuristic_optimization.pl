@@ -53,7 +53,7 @@
    ========================================================================== */
 
 narrative_ontology:interval(heuristic_optimization, 0, 10).
-narrative_ontology:constraint_claim(heuristic_optimization, pragmatic_coordination).
+narrative_ontology:constraint_claim(heuristic_optimization, rope).
 
 % Base extractiveness score (0.2)
 % Low extraction; users "pay" in sub-optimality, but gain the ability 

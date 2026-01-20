@@ -51,7 +51,7 @@
    ========================================================================== */
 
 narrative_ontology:interval(matching_markets_general, 0, 10).
-narrative_ontology:constraint_claim(matching_markets_general, structural_coordination).
+narrative_ontology:constraint_claim(matching_markets_general, rope).
 
 % Base extractiveness: Moderate (0.4). 
 % Markets extract "signal" (effort, status, credentials) from participants 

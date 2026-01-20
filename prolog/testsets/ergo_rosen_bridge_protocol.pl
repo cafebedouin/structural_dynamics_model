@@ -58,7 +58,7 @@
 
 % Required for system extraction
 narrative_ontology:interval(rosen_bridge_interval, 0, 10).
-narrative_ontology:constraint_claim(rosen_bridge_protocol, cross_chain_settlement).
+narrative_ontology:constraint_claim(rosen_bridge_protocol, rope).
 
 % Base extractiveness: Moderate (0.5)
 % Rationale: High entry barrier for watchers (800 ERG + 30k RSN) and 
@@ -258,3 +258,9 @@ omega_variable(
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
+
+
+% --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
+constraint_indexing:constraint_classification(ergo_rosen_bridge_protocol, mountain, agent_power(analytical)).
+constraint_indexing:constraint_classification(ergo_rosen_bridge_protocol, rope, agent_power(institutional)).
+constraint_indexing:constraint_classification(ergo_rosen_bridge_protocol, noose, agent_power(individual_powerless)).

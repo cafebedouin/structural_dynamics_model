@@ -3,7 +3,7 @@
 % ============================================================================
 % Generated: 2026-01-17
 % Model: Gemini 2.0 Flash
-% Source: Visa Inc. Amendment No. 6 to Form S-1 [cite: 2, 3]
+% Source: Visa Inc. Amendment No. 6 to Form S-1 
 % ============================================================================
 
 :- module(visa_ipo_regulatory_compliance, []).
@@ -28,22 +28,22 @@
  * * constraint_id: visa_ipo_regulatory_compliance
  * human_readable: SEC S-1 Registration Framework
  * domain: economic/political
- * temporal_scope: March 2008 [cite: 4, 77]
- * spatial_scope: United States / Global Financial Markets [cite: 5, 17]
+ * temporal_scope: March 2008 
+ * spatial_scope: United States / Global Financial Markets 
  * * SUMMARY:
  * The mandatory legal framework governing the public offering of securities in 
- * the US, specifically the filing of Form S-1 under the Securities Act of 1933[cite: 13, 16].
+ * the US, specifically the filing of Form S-1 under the Securities Act of 1933.
  * This system requires exhaustive disclosure of financial, legal, and operational 
- * data to the SEC before a company can access public capital markets[cite: 14, 51].
+ * data to the SEC before a company can access public capital markets.
  * * KEY AGENTS:
- * - Visa Inc. (Registrant): The entity seeking to transform its structure and raise capital[cite: 17, 18].
- * - SEC (Regulator): The institutional gatekeeper enforcing transparency and legal compliance[cite: 7, 51].
- * - Individual Investor (The Public): The intended recipient of protections through mandated disclosure[cite: 42, 43].
+ * - Visa Inc. (Registrant): The entity seeking to transform its structure and raise capital.
+ * - SEC (Regulator): The institutional gatekeeper enforcing transparency and legal compliance.
+ * - Individual Investor (The Public): The intended recipient of protections through mandated disclosure.
  * * NARRATIVE ARC:
  * Visa Inc. is in the final stages (Amendment No. 6) of a complex multi-year 
- * transition to a public company[cite: 11, 42]. The constraint functions as a rigid 
+ * transition to a public company. The constraint functions as a rigid 
  * "Mountain" of paperwork and legal liability that must be scaled to achieve 
- * the "Rope" of public market coordination[cite: 51, 77].
+ * the "Rope" of public market coordination.
  */
 
 /* ==========================================================================
@@ -61,7 +61,7 @@ domain_priors:base_extractiveness(visa_ipo_regulatory_compliance, 0.2).
 
 % Suppression score (0.0 = no suppression, 1.0 = full suppression)
 % Rationale: Alternatives to SEC registration for a global IPO do not legally exist 
-% in the US; the system is absolute for this scale of capital[cite: 51].
+% in the US; the system is absolute for this scale of capital.
 domain_priors:suppression_score(visa_ipo_regulatory_compliance, 0.9).
 
 % Enforcement requirements
@@ -83,20 +83,20 @@ constraint_victim(visa_ipo_regulatory_compliance, registrant_legal_budget).
    PERSPECTIVE 1: Joseph W. Saunders (CEO) - Noose
    --------------------------------------------------------------------------
    
-   WHO: individual_powerful / institutional - CEO of the registrant[cite: 27, 28].
-   WHEN: immediate - Focused on the "commencement of proposed sale"[cite: 42].
-   WHERE: trapped - Legally bound by the Securities Act; cannot sell without SEC approval[cite: 51].
-   SCOPE: national / global - Managing a worldwide restructuring[cite: 17, 116].
+   WHO: individual_powerful / institutional - CEO of the registrant.
+   WHEN: immediate - Focused on the "commencement of proposed sale".
+   WHERE: trapped - Legally bound by the Securities Act; cannot sell without SEC approval.
+   SCOPE: national / global - Managing a worldwide restructuring.
    
    WHY THIS CLASSIFICATION:
    From the CEO's perspective, this is a "Noose" because it imposes massive 
    personal liability (signatures required) and slows the organization down 
-   through endless amendments (6 filings)[cite: 2, 80]. It is an asymmetric 
+   through endless amendments (6 filings). It is an asymmetric 
    burden that benefits the state's oversight power.
    
    NARRATIVE EVIDENCE:
    "The Registrant hereby amends this Registration Statement on such date or 
-   dates as may be necessary to delay its effective date..."[cite: 51].
+   dates as may be necessary to delay its effective date...".
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
@@ -120,8 +120,8 @@ constraint_indexing:constraint_classification(
    PERSPECTIVE 2: Individual Retail Investor - Mountain
    --------------------------------------------------------------------------
    
-   WHO: individual_powerless - Has no say in the filing rules[cite: 43].
-   WHEN: biographical - Investment horizon for the "public"[cite: 42].
+   WHO: individual_powerless - Has no say in the filing rules.
+   WHEN: biographical - Investment horizon for the "public".
    WHERE: constrained - Can choose not to buy, but cannot change the disclosure rules.
    SCOPE: local / national.
    
@@ -132,7 +132,7 @@ constraint_indexing:constraint_classification(
    
    NARRATIVE EVIDENCE:
    The document provides a "prospectus constituting Part I" specifically 
-   for the purpose of public information[cite: 59].
+   for the purpose of public information.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
@@ -155,19 +155,19 @@ constraint_indexing:constraint_classification(
    PERSPECTIVE 3: Securities Attorney (White & Case) - Rope
    --------------------------------------------------------------------------
    
-   WHO: analytical / institutional - Service provider facilitating the process[cite: 37, 110].
-   WHEN: historical - Operates within the tradition of the 1933 Act[cite: 16].
+   WHO: analytical / institutional - Service provider facilitating the process.
+   WHEN: historical - Operates within the tradition of the 1933 Act.
    WHERE: arbitrage - Understands how to navigate the rules to achieve client goals.
    SCOPE: continental / global.
    
    WHY THIS CLASSIFICATION:
    For the lawyers, the S-1 is a "Rope." It is a functional coordination mechanism 
    that allows capital to flow safely. While complex, it is a tool they use 
-   to structure the "Amended and Restated Global Restructuring Agreement"[cite: 116].
+   to structure the "Amended and Restated Global Restructuring Agreement".
    
    NARRATIVE EVIDENCE:
    "Opinion of White & Case LLP as to the legality of the securities being 
-   registered..."[cite: 110].
+   registered...".
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
@@ -221,11 +221,11 @@ test(regulatory_barrier_impact) :-
  * 1. EXTRACTIVENESS: Set to 0.2. While the IPO involves billions, the *constraint* * itself (the S-1 filing) doesn't extract the capital; it merely regulates 
  * the flow. The "extraction" is the legal/administrative overhead.
  * 2. SUPPRESSION: Set to 0.9. There is no alternative "unregulated" IPO 
- * at this scale in the US jurisdiction[cite: 51].
+ * at this scale in the US jurisdiction.
  * * PERSPECTIVES:
- * - CEO: Chosen because they sign and bear the risk[cite: 80].
- * - Public: Chosen because they are the "protected" class[cite: 43].
- * - Legal Counsel: Chosen because they treat the law as a functional tool (Rope)[cite: 110].
+ * - CEO: Chosen because they sign and bear the risk.
+ * - Public: Chosen because they are the "protected" class.
+ * - Legal Counsel: Chosen because they treat the law as a functional tool (Rope).
  */
 
 /* ==========================================================================
@@ -248,7 +248,7 @@ omega_variable(
  * VIABLE ALTERNATIVES
  * * ALTERNATIVE 1: Direct Public Offering (DPO)
  * Viability: Historically possible but rare for companies of Visa's size in 2008.
- * Suppression: Market norms and underwriter requirements make this effectively invisible[cite: 110].
+ * Suppression: Market norms and underwriter requirements make this effectively invisible.
  */
 
 /* ==========================================================================
@@ -261,3 +261,9 @@ omega_variable(
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
+
+
+% --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
+constraint_indexing:constraint_classification(s1_visa, mountain, agent_power(analytical)).
+constraint_indexing:constraint_classification(s1_visa, rope, agent_power(institutional)).
+constraint_indexing:constraint_classification(s1_visa, noose, agent_power(individual_powerless)).

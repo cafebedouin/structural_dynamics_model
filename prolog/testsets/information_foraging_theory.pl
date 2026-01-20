@@ -51,7 +51,7 @@
    ========================================================================== */
 
 narrative_ontology:interval(information_foraging_theory, 0, 10).
-narrative_ontology:constraint_claim(information_foraging_theory, cognitive_economy).
+narrative_ontology:constraint_claim(information_foraging_theory, rope).
 
 % Base extractiveness score (0.2)
 % Low extraction; it is a theory of efficiency, though platforms may 

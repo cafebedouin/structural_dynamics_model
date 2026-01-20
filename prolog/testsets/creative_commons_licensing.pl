@@ -52,7 +52,7 @@
    ========================================================================== */
 
 narrative_ontology:interval(creative_commons_licensing, 0, 10).
-narrative_ontology:constraint_claim(creative_commons_licensing, voluntary_coordination).
+narrative_ontology:constraint_claim(creative_commons_licensing, rope).
 
 % Base extractiveness score (0.1)
 % Low extraction; the creator intentionally gives up "extraction rights" 

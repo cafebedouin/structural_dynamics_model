@@ -51,7 +51,7 @@
    ========================================================================== */
 
 narrative_ontology:interval(kidney_exchange_market, 0, 10).
-narrative_ontology:constraint_claim(kidney_exchange_market, biological_limit).
+narrative_ontology:constraint_claim(kidney_exchange_market, mountain).
 
 % Base extractiveness: Low (0.1). 
 % There is no "profit" extraction; the system is designed for maximum life-saving.

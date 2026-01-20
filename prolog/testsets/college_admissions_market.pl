@@ -50,7 +50,7 @@
    ========================================================================== */
 
 narrative_ontology:interval(college_admissions_market, 0, 10).
-narrative_ontology:constraint_claim(college_admissions_market, institutional_sorting).
+narrative_ontology:constraint_claim(college_admissions_market, rope).
 
 % Base extractiveness: High (0.7).
 % Elite colleges extract massive "signaling costs" (tuition, prep-work, emotional labor) 

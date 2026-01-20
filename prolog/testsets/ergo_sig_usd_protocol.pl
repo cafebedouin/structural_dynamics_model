@@ -53,7 +53,7 @@
 
 % Required for system extraction
 narrative_ontology:interval(sig_usd_interval, 0, 10).
-narrative_ontology:constraint_claim(sig_usd_protocol, stability_mechanism).
+narrative_ontology:constraint_claim(sig_usd_protocol, rope).
 
 % Base extractiveness: Moderate (0.4)
 % Rationale: The protocol charges fees (minting/burning) that flow from users 
@@ -257,3 +257,9 @@ omega_variable(
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
+
+
+% --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
+constraint_indexing:constraint_classification(ergo_sig_usd_protocol, mountain, agent_power(analytical)).
+constraint_indexing:constraint_classification(ergo_sig_usd_protocol, rope, agent_power(institutional)).
+constraint_indexing:constraint_classification(ergo_sig_usd_protocol, noose, agent_power(individual_powerless)).

@@ -53,7 +53,7 @@
    ========================================================================== */
 
 narrative_ontology:interval(traveling_salesperson_problem, 0, 10).
-narrative_ontology:constraint_claim(traveling_salesperson_problem, optimization_limit).
+narrative_ontology:constraint_claim(traveling_salesperson_problem, mountain).
 
 % Base extractiveness score (0.4)
 % High because every suboptimal mile "extracts" real-world energy (fuel, labor) 

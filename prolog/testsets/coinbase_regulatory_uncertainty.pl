@@ -215,3 +215,10 @@ omega_variable(
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
+
+
+% ==========================================================================
+% [SKELETON REPAIR] Missing Perspectival Pillars Added: NOOSE
+% To be calibrated: Define the narrative justification for these perspectives.
+% ==========================================================================
+constraint_indexing:constraint_classification(coinbase_regulatory_uncertainty, noose, agent_power(individual_powerless)).

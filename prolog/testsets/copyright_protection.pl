@@ -49,7 +49,7 @@
    ========================================================================== */
 
 narrative_ontology:interval(copyright_protection, 0, 10).
-narrative_ontology:constraint_claim(copyright_protection, intellectual_property_limit).
+narrative_ontology:constraint_claim(copyright_protection, rope).
 
 % Base extractiveness score (0.4)
 % While it allows creators to earn, it extracts "freedom of use" from the 

@@ -199,3 +199,9 @@ test(historical_bedrock_mountain) :-
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
+
+
+% --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
+constraint_indexing:constraint_classification(kjv_great_awakening, mountain, agent_power(analytical)).
+constraint_indexing:constraint_classification(kjv_great_awakening, rope, agent_power(institutional)).
+constraint_indexing:constraint_classification(kjv_great_awakening, noose, agent_power(individual_powerless)).

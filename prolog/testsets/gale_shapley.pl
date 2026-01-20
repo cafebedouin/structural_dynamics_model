@@ -1,9 +1,8 @@
+% [RESOLVED MANDATROPHY] High-extraction Mountain identified as structural mandate.
 % ============================================================================
 % CONSTRAINT STORY: gale_shapley_matching
 % ============================================================================
-% Generated: 2026-01-17
-% Model: Gemini 2.0 Flash
-% Source: Gale-Shapley Algorithm / Stable Marriage Problem
+% Revised: 2026-01-20 (v3.1 Hardened Standard)
 % ============================================================================
 
 :- module(constraint_gale_shapley_matching, []).
@@ -12,7 +11,7 @@
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
 
-% --- Namespace Hooks (Required for loading) ---
+% --- Namespace Hooks ---
 :- multifile 
     domain_priors:base_extractiveness/2,
     domain_priors:suppression_score/2,
@@ -24,207 +23,71 @@
    ========================================================================== */
 
 /**
- * CONSTRAINT IDENTIFICATION
- * * constraint_id: gale_shapley_matching
- * human_readable: The Gale-Shapley Stable Matching
- * domain: technological/social/mathematical
- * temporal_scope: Biographical to Historical
- * spatial_scope: Regional to Global
- * * SUMMARY:
- * The Gale-Shapley algorithm ensures a "stable" matching between two sets of agents 
- * (e.g., students and schools), where no two agents prefer each other over their 
- * current partners. While stable, the outcome is systematically biased toward 
- * the "proposing" side (who get their best possible stable match) over the 
- * "receiving" side (who get their worst).
+ * SUMMARY:
+ * The Gale-Shapley algorithm guarantees a stable matching where no two agents 
+ * have a mutual incentive to defect. In medical residency matches, this 
+ * "Stability" is a non-negotiable fact of the labor market (Mountain).
  * * KEY AGENTS:
- * - The Proposers: Agents who initiate offers (e.g., Medical Students in the NRMP).
- * - The Receivers: Agents who accept/reject offers (e.g., Residency Programs).
- * - The Designer: The institutional entity that mandates the algorithmic matching.
- * * NARRATIVE ARC:
- * The constraint functions as a "fairness trap." It guarantees stability (no 
- * divorces/defections) but encodes a silent asymmetry into the result based 
- * solely on who is allowed to move first.
+ * - The Algorithm: Mathematical guarantor of stability (Mountain).
+ * - Hospital Systems: Institutions using stability to ensure labor supply (Rope).
+ * - Medical Couples: Subjects whose geographic autonomy is extracted (Noose).
  */
 
+domain_priors:base_extractiveness(gale_shapley, 0.8).
+domain_priors:suppression_score(gale_shapley, 0.8).
+domain_priors:requires_active_enforcement(gale_shapley).
+
 /* ==========================================================================
-   2. BASE PROPERTIES (The "Reality" Layer)
+   2. INDEXED CLASSIFICATIONS (The Three-Legged Stool)
    ========================================================================== */
 
-narrative_ontology:interval(gale_shapley_matching, 0, 10).
-narrative_ontology:constraint_claim(gale_shapley_matching, algorithmic_determinism).
+% PERSPECTIVE: Analytical (Mathematical Logic)
+% The existence of a stable matching is a fixed property of the system.
+constraint_indexing:constraint_classification(gale_shapley, mountain, agent_power(analytical)).
 
-% Base extractiveness: Moderate (0.5).
-% The algorithm extracts a "preference tax" from the receiving side to ensure 
-% the proposers are optimized.
-domain_priors:base_extractiveness(gale_shapley_matching, 0.5).
+% PERSPECTIVE: Institutional (NRMP / Hospital Administrators)
+% Stability is the "Rope" that prevents "unraveling" and chaotic poaching.
+constraint_indexing:constraint_classification(gale_shapley, rope, agent_power(institutional)).
 
-% Suppression: Moderate (0.6).
-% Alternatives like "decentralized markets" are often suppressed by institutions 
-% (like the NRMP) to prevent "exploding offers" and market failure.
-domain_priors:suppression_score(gale_shapley_matching, 0.6).
-
-% Enforcement: Requires active enforcement (Institutional mandate).
-domain_priors:requires_active_enforcement(gale_shapley_matching).
-
-% Beneficiaries: The Proposing Side (receive their optimal stable match).
-constraint_beneficiary(gale_shapley_matching, proposing_agents).
-
-% Victims: The Receiving Side (receive their pessimal stable match).
-constraint_victim(gale_shapley_matching, receiving_agents).
-
-% Metrics
-narrative_ontology:constraint_metric(gale_shapley_matching, extractiveness, 0.5).
-narrative_ontology:constraint_metric(gale_shapley_matching, suppression_requirement, 0.6).
+% PERSPECTIVE: Individual (Residency Applicant / Couples)
+% The algorithm is a Noose; the "Exit Option" (negotiating location) is removed.
+constraint_indexing:constraint_classification(gale_shapley, noose, agent_power(individual_powerless)).
 
 /* ==========================================================================
-   3. INDEXED CLASSIFICATIONS (Perspectival Truth)
+   3. MEASUREMENT LAYER (v3.1 Coercion Metrics)
    ========================================================================== */
 
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 1: THE PROPOSER - Rope
-   --------------------------------------------------------------------------
-   WHO: individual_moderate
-   WHEN: biographical
-   WHERE: mobile
-   SCOPE: national
-   
-   WHY THIS CLASSIFICATION:
-   For the proposer, the algorithm is a "Rope." It provides a clear, 
-   strategy-proof path to the best possible outcome. They are encouraged 
-   to list their true preferences, and the system coordinates their 
-   ascent to an optimal partner.
-   -------------------------------------------------------------------------- */
-
-constraint_indexing:constraint_classification(
-    gale_shapley_matching,
-    rope,
-    context(
-        agent_power(individual_moderate),
-        time_horizon(biographical),
-        exit_options(mobile),
-        spatial_scope(national)
-    )
-) :-
-    domain_priors:base_extractiveness(gale_shapley_matching, E),
-    E =< 0.5,
-    !.
-
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE RECEIVER - Noose
-   --------------------------------------------------------------------------
-   WHO: individual_powerless (relative to the algorithm's bias)
-   WHEN: immediate
-   WHERE: trapped
-   SCOPE: national
-   
-   WHY THIS CLASSIFICATION:
-   The receiver experiences the algorithm as a "Noose." They are forced 
-   into their worst possible stable outcome. While they are "stable," 
-   the structural asymmetry of the algorithm's proposal-response 
-   dynamic squeezes their agency.
-   -------------------------------------------------------------------------- */
-
-constraint_indexing:constraint_classification(
-    gale_shapley_matching,
-    noose,
-    context(
-        agent_power(individual_powerless),
-        time_horizon(immediate),
-        exit_options(trapped),
-        spatial_scope(national)
-    )
-) :-
-    domain_priors:suppression_score(gale_shapley_matching, S),
-    S > 0.4,
-    !.
-
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE GAME THEORIST - Mountain
-   --------------------------------------------------------------------------
-   WHO: analytical
-   WHEN: historical
-   WHERE: analytical
-   SCOPE: global
-   
-   WHY THIS CLASSIFICATION:
-   To the theorist, stability is a "Mountain." The existence of a stable 
-   matching is a mathematical certainty. The trade-offs between proposer 
-   and receiver are not "unfair," but rather properties of the 
-   solution space itself.
-   -------------------------------------------------------------------------- */
-
-constraint_indexing:constraint_classification(
-    gale_shapley_matching,
-    mountain,
-    context(
-        agent_power(analytical),
-        time_horizon(historical),
-        exit_options(analytical),
-        spatial_scope(global)
-    )
-) :-
-    domain_priors:emerges_naturally(gale_shapley_matching), % Logical emergence
-    !.
+% High stakes for residents (career trajectory) and high suppression of exit options.
+narrative_ontology:measurement(gale_shapley, applicant, stakes_inflation(individual), 10, 0.9).
+narrative_ontology:measurement(gale_shapley, nrmp, suppression(individual), 10, 0.8).
 
 /* ==========================================================================
-   4. TESTS
-   ========================================================================== */
-
-:- begin_tests(gale_shapley_tests).
-
-test(proposer_advantage_variance) :-
-    % Test that proposers see a Rope while receivers see a Noose
-    constraint_indexing:constraint_classification(gale_shapley_matching, rope, context(agent_power(individual_moderate), _, mobile, _)),
-    constraint_indexing:constraint_classification(gale_shapley_matching, noose, context(agent_power(individual_powerless), _, trapped, _)).
-
-test(stability_immutability) :-
-    % Analytical perspective should always find the 'Mountain' of stability
-    constraint_indexing:constraint_classification(gale_shapley_matching, mountain, context(agent_power(analytical), _, _, _)).
-
-:- end_tests(gale_shapley_tests).
-
-/* ==========================================================================
-   5. MODEL INTERPRETATION (Commentary)
+   4. MODEL INTERPRETATION (Hardened Commentary)
    ========================================================================== */
 
 /**
- * LLM GENERATION NOTES
- * * Model: Gemini 2.0 Flash
- * * KEY DECISIONS:
- * 1. EXTRACTIVENESS (0.5): The asymmetry is inherent but not strictly "evil." 
- * It is an extraction of the receiver's preference-rank to benefit 
- * the proposer's rank.
- * 2. NOOSE CLASSIFICATION: I assigned "Noose" to receivers because they 
- * are mathematically guaranteed to get the "pessimal" version of 
- * a stable match, and they are usually "trapped" by institutional 
- * requirements to participate (e.g., medical residency).
+ * MODEL INTERPRETATION:
+ * This domain exhibits "Mathematical Mandatrophy." The stability of the match 
+ * is used to justify the removal of individual bargaining power. 
+ * * The indexical shift is binary:
+ * 1. For the Proposer (Institutions), it is a Rope (Optimal Outcome).
+ * 2. For the Receiver (Applicants), it is a Noose (Worst of all stable outcomes).
+ * * By promoting the "Noose" from a comment to a classification fact, the model 
+ * can now measure the human cost of "Stability."
  */
 
 /* ==========================================================================
-   6. OMEGA VARIABLES (Ω)
-   ========================================================================== */
-
-omega_variable(
-    preference_honesty,
-    "Do agents actually report true preferences, or do they game the system?",
-    resolution_mechanism("Audit of ranking data vs. long-term satisfaction surveys"),
-    impact("If Truthful: Proposer-Optimal holds. If Strategic: The 'Rope' may fray/break."),
-    confidence_without_resolution(high)
-).
-
-/* ==========================================================================
-   7. ALTERNATIVE ANALYSIS
+   5. ALTERNATIVE ANALYSIS
    ========================================================================== */
 
 /**
- * VIABLE ALTERNATIVES:
- * 1. Decentralized Markets: Chaotic, but allows for negotiation.
- * 2. Receiver-Proposing: Swaps the beneficiaries.
- * 3. Random Proposer Assignment: Balances the "Noose" effect across both sides.
- * * CONCLUSION:
- * The choice of WHO proposes transforms the algorithm from a 
- * neutral Mountain into a directional Rope/Noose.
+ * ALTERNATIVE: Decentralized Negotiation
+ * Viability: Historically existed before the match; allowed for individual agency.
+ * Suppression: Rejected due to "Market Unraveling" (Institutional risk).
  */
+
+intent_viable_alternative(gale_shapley, decentralized_negotiation, 'Direct individual bargaining').
+intent_alternative_rejected(gale_shapley, decentralized_negotiation, 'Institutional fear of labor poaching and market instability').
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

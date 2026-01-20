@@ -1,3 +1,4 @@
+% [RESOLVED MANDATROPHY] High-extraction Mountain identified as structural mandate.
 % ============================================================================
 % CONSTRAINT STORY: blackstone_conflicts_of_interest
 % ============================================================================
@@ -150,6 +151,40 @@ constraint_indexing:constraint_classification(
     E < 0.8,
     !.
 
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 3: THE ANALYTICAL OBSERVER (LEGAL/STRUCTURAL) - Mountain
+   --------------------------------------------------------------------------
+   WHO: agent_power(analytical) - Observes the structural legal limits.
+   WHEN: generational - The partnership structure is fixed for its duration.
+   WHERE: arbitrage - Bound by the specific jurisdiction of Delaware law.
+   SCOPE: global - The impact of this hierarchy affects all units globally.
+   
+   WHY THIS CLASSIFICATION:
+   The "Mountain" is the Delaware legal framework. The partnership agreement 
+   explicitly limits the fiduciary duties of the general partner to a 
+   contractual "good faith" standard, effectively prioritizing the GP's 
+   interests as an unchangeable structural fact. This legal bedrock creates a 
+   permanent "fiduciary hierarchy" that common unitholders enter as an 
+   immutable condition of participation.
+   -------------------------------------------------------------------------- */
+
+constraint_indexing:constraint_classification(
+    blackstone_conflicts_of_interest,
+    mountain,
+    context(
+        agent_power(analytical),
+        time_horizon(generational),
+        exit_options(arbitrage),
+        spatial_scope(global)
+    )
+) :-
+    domain_priors:base_extractiveness(blackstone_conflicts_of_interest, E),
+    E > 0.5.
+
+% Explicit priors reflecting the rigid structural priority of the GP.
+domain_priors:base_extractiveness(blackstone_conflicts_of_interest, 0.7).
+domain_priors:suppression_score(blackstone_conflicts_of_interest, 0.8).
+
 /* ==========================================================================
    4. TESTS
    ========================================================================== */
@@ -214,3 +249,4 @@ omega_variable(
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
+

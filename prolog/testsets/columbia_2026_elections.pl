@@ -53,7 +53,7 @@
 
 % Required for [STEP 1] and [STEP 2] of the DR-Audit Suite
 narrative_ontology:interval(colombia_2026_presidential_election, 0, 10).
-narrative_ontology:constraint_claim(colombia_2026_presidential_election, election_cycle).
+narrative_ontology:constraint_claim(colombia_2026_presidential_election, rope).
 
 % Base extractiveness: Moderate (0.45)
 % Rationale: While elections are coordination mechanisms (Rope), the intense 
@@ -265,3 +265,9 @@ test(time_immutability_fajardo_trap) :-
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
+
+
+% --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
+constraint_indexing:constraint_classification(columbia_2026_elections, mountain, agent_power(analytical)).
+constraint_indexing:constraint_classification(columbia_2026_elections, rope, agent_power(institutional)).
+constraint_indexing:constraint_classification(columbia_2026_elections, noose, agent_power(individual_powerless)).

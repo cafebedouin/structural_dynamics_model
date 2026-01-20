@@ -8,11 +8,10 @@
 :- use_module(library(lists)).
 :- use_module(narrative_ontology).
 :- use_module(v3_1_config).
-:- use_module(intent_engine).
+:- use_module(intent_engine, except([classify_interval/3])).
 :- use_module(v3_1_coercion_projection).
 :- use_module(pattern_analysis).
 :- use_module(constraint_bridge).
-:- use_module(modal_evaluator).
 :- use_module(drl_core).          
 :- use_module(uke_dr_bridge).
 :- use_module(structural_signatures).

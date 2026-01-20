@@ -1,5 +1,6 @@
 :- module(intent_engine, [
-    classify_interval/3
+	classify_interval/3,
+	analyze_intent/1
 ]).
 
 :- use_module(library(lists)).        % Required for sum_list/2
@@ -99,3 +100,11 @@ average_list(List, Avg) :-
 max_by_value((C, D), List) :- 
     member((C, D), List), 
     \+ (member((_, D2), List), D2 > D).
+
+%% analyze_intent(+IntervalID)
+%  Harness wrapper to satisfy test_harness.pl.
+analyze_intent(IntervalID) :-
+    (   classify_interval(IntervalID, Pattern, Confidence)
+    ->  format('  [INTENT] Result: ~w (Confidence: ~w)~n', [Pattern, Confidence])
+    ;   format('  [INTENT] Analysis failed for ~w~n', [IntervalID])
+    ).

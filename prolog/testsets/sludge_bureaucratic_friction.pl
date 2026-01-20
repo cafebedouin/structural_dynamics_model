@@ -50,7 +50,7 @@
    ========================================================================== */
 
 narrative_ontology:interval(sludge_bureaucratic_friction, 0, 10).
-narrative_ontology:constraint_claim(sludge_bureaucratic_friction, administrative_burden).
+narrative_ontology:constraint_claim(sludge_bureaucratic_friction, noose).
 
 % Base extractiveness score (0.7)
 % High; it extracts time and psychological well-being from the most 

@@ -52,7 +52,7 @@
 
 % Required for system integration
 narrative_ontology:interval(optimal_stopping_marriage, 0, 10).
-narrative_ontology:constraint_claim(optimal_stopping_marriage, mathematical_limit).
+narrative_ontology:constraint_claim(optimal_stopping_marriage, mountain).
 
 % Base extractiveness: Low (0.1). 
 % Nature/Math doesn't "profit" from the Searcher, but the "loss" of rejected 
@@ -242,3 +242,9 @@ omega_variable(
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
+
+
+% --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
+constraint_indexing:constraint_classification(marriage_problem, mountain, agent_power(analytical)).
+constraint_indexing:constraint_classification(marriage_problem, rope, agent_power(institutional)).
+constraint_indexing:constraint_classification(marriage_problem, noose, agent_power(individual_powerless)).

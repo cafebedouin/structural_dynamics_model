@@ -51,7 +51,7 @@
    ========================================================================== */
 
 narrative_ontology:interval(skills_based_hiring, 0, 10).
-narrative_ontology:constraint_claim(skills_based_hiring, meritocratic_coordination).
+narrative_ontology:constraint_claim(skills_based_hiring, rope).
 
 % Base extractiveness score (0.3)
 % Lower than college admissions because it reduces the "pre-match" cost of 

@@ -1,0 +1,116 @@
+?- run_scenario('./testsets/mandatropic_margin_collapse.pl', mandatrophy_interval).
+
+[SCENARIO MANAGER] Clearing Knowledge Base...
+[OK] Knowledge Base is empty.
+[SCENARIO MANAGER] Loading: ./testsets/mandatropic_margin_collapse.pl...
+[SCENARIO MANAGER] Performing Global Repair...
+
+[REPAIR] Auditing vectors for: mandatrophy_cycle...
+  [FIXED] Imputed 0.4 for accessibility_collapse(organizational) at T=0
+  [FIXED] Imputed 0.8 for stakes_inflation(organizational) at T=0
+  [FIXED] Imputed 0.8 for suppression(organizational) at T=0
+  [FIXED] Imputed 0.6 for resistance(organizational) at T=0
+  [FIXED] Imputed 0.4 for accessibility_collapse(organizational) at T=10
+  [FIXED] Imputed 0.8 for stakes_inflation(organizational) at T=10
+  [FIXED] Imputed 0.8 for suppression(organizational) at T=10
+  [FIXED] Imputed 0.6 for resistance(organizational) at T=10
+  [FIXED] Imputed 0.4 for accessibility_collapse(class) at T=0
+  [FIXED] Imputed 0.8 for stakes_inflation(class) at T=0
+  [FIXED] Imputed 0.8 for suppression(class) at T=0
+  [FIXED] Imputed 0.6 for resistance(class) at T=0
+  [FIXED] Imputed 0.4 for accessibility_collapse(class) at T=10
+  [FIXED] Imputed 0.8 for stakes_inflation(class) at T=10
+  [FIXED] Imputed 0.8 for suppression(class) at T=10
+  [FIXED] Imputed 0.6 for resistance(class) at T=10
+  [FIXED] Imputed 0.4 for accessibility_collapse(individual) at T=0
+  [FIXED] Imputed 0.8 for stakes_inflation(individual) at T=0
+  [FIXED] Imputed 0.8 for suppression(individual) at T=0
+  [FIXED] Imputed 0.6 for resistance(individual) at T=0
+  [FIXED] Imputed 0.4 for accessibility_collapse(individual) at T=10
+  [FIXED] Imputed 0.8 for stakes_inflation(individual) at T=10
+  [FIXED] Imputed 0.8 for suppression(individual) at T=10
+  [FIXED] Imputed 0.6 for resistance(individual) at T=10
+
+[REPAIR] Auditing vectors for: mandatrophy_interval...
+
+>>> INITIATING v3.1.1 DR-AUDIT SUITE: mandatrophy_interval
+[STEP 1] Auditing and Repairing Measurements...
+
+[REPAIR] Auditing vectors for: mandatrophy_interval...
+[STEP 2] Verifying Data Integrity...
+
+--- [START] v3.1 DATA INTEGRITY VERIFICATION ---
+--- [START] v3.1 DATA INTEGRITY VERIFICATION ---
+[OK] Ontology Schema matches.
+--- [END] Verification Complete ---
+[OK] Ontology Schema matches.
+Checking Interval: mandatrophy_cycle (0-10)
+Checking Interval: mandatrophy_interval (0-10)
+--- [END] Verification Complete ---
+[OK] Verification passed. Proceeding to audit.
+[STEP 3] Computing System Gradients...
+[STEP 4] DRL Ontological Audit...
+  [OK] No Ontological Fraud detected.
+[STEP 5] Extracting Omega Variables (Ω)...
+  No reasoning blockers (Omegas) identified.
+[STEP 6] Generating Executive Summary...
+
+
+====================================================
+   DEFERENTIAL REALISM (DR) EXECUTIVE SUMMARY
+====================================================
+Timeline:       0 to 10
+Structural Pattern: stable
+Confidence:     high
+
+[CONSTRAINT INVENTORY: REALITY AUDIT]
+  Constraint | Claimed | Actual | Action
+  ----------------------------------------------------------------------
+  mandatrophic_margin_collapse | noose | noose | cut
+
+[META-LOGICAL AUDIT: ONTOLOGICAL FRAUD DETECTION]
+  No classification errors detected. System is Ontologically Coherent.
+
+[STRUCTURAL SIGNATURE ANALYSIS]
+  mandatrophic_margin_collapse: constructed_constraint (confidence: medium)
+    → CONSTRUCTED CONSTRAINT signature for mandatrophic_margin_collapse: Active enforcement detected (suppression=0.70, resistance=0.50) with 0 asymmetric beneficiaries. This is an institutionally maintained rule requiring ongoing suppression energy.
+
+[UKE_DR FEASIBILITY BRIDGE]
+  Recommendation | UKE Status
+  ----------------------------------------------------------------------
+
+Aggregate Magnitude (Kappa) at Tn: 0.61
+
+[PERSPECTIVAL GAP ANALYSIS]
+
+  Analysis for Constraint: mandatrophic_margin_collapse
+    ! ALERT: Extractive "Noose" is masked as a functional "Rope" in the Institutional view.
+    ! BLINDNESS: Institutions may not see the extraction they benefit from.
+    - Individual (Powerless): noose
+    - Institutional (Manager): rope
+
+[OMEGA GENERATION FROM PERSPECTIVAL GAPS]
+  Generated 1 Omega variables from perspectival gaps:
+
+  Ω: omega_extraction_blindness_mandatrophic_margin_collapse (conceptual)
+     Question: Constraint mandatrophic_margin_collapse appears extractive (Noose) to individuals but functional (Rope) to institutions. Is this: (a) institutions unaware of extraction, (b) institutions benefiting and obscuring, or (c) different legitimate framings? Policy authority depends on answer.
+     Source: gap(noose_masked_as_rope,noose,rope)
+
+====================================================
+[STEP 7] Generating LLM Refinement Manifest...
+
+### START LLM REFINEMENT MANIFEST: mandatrophy_interval ###
+
+[PERSPECTIVAL_GAPS]
+  - Constraint "mandatrophic_margin_collapse": Individual sees noose, but Institution sees rope.
+
+[ONTOLOGICAL_MISMATCHES]
+  - None detected.
+
+[UNRESOLVED_OMEGAS]
+  - omega_extraction_blindness_mandatrophic_margin_collapse (conceptual): Constraint mandatrophic_margin_collapse appears extractive (Noose) to individuals but functional (Rope) to institutions. Is this: (a) institutions unaware of extraction, (b) institutions benefiting and obscuring, or (c) different legitimate framings? Policy authority depends on answer.
+
+### END REFINEMENT MANIFEST ###
+true .
+
+?-

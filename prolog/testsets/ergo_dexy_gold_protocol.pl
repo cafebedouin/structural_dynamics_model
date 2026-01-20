@@ -57,7 +57,7 @@
    ========================================================================== */
 
 narrative_ontology:interval(dexy_gold_interval, 0, 10).
-narrative_ontology:constraint_claim(dexy_gold_protocol, seigniorage_stability).
+narrative_ontology:constraint_claim(dexy_gold_protocol, rope).
 
 % Base extractiveness: Low (0.2)
 % Rationale: Benefits are largely symmetric; the protocol doesn't rely 
@@ -234,3 +234,9 @@ omega_variable(
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
+
+
+% --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
+constraint_indexing:constraint_classification(ergo_dexy_gold_protocol, mountain, agent_power(analytical)).
+constraint_indexing:constraint_classification(ergo_dexy_gold_protocol, rope, agent_power(institutional)).
+constraint_indexing:constraint_classification(ergo_dexy_gold_protocol, noose, agent_power(individual_powerless)).

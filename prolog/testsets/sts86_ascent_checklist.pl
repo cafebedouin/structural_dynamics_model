@@ -157,3 +157,10 @@ test(omega_variable_physics) :-
 % ============================================================================
 % END OF CONSTRAINT STORY
 % ============================================================================
+
+
+% ==========================================================================
+% [SKELETON REPAIR] Missing Perspectival Pillars Added: NOOSE
+% To be calibrated: Define the narrative justification for these perspectives.
+% ==========================================================================
+constraint_indexing:constraint_classification(sts86_ascent_checklist, noose, agent_power(individual_powerless)).

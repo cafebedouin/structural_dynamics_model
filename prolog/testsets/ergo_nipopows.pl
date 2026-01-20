@@ -53,7 +53,7 @@
    ========================================================================== */
 
 narrative_ontology:interval(ergo_nipopows_interval, 0, 10).
-narrative_ontology:constraint_claim(ergo_nipopows, logarithmic_verification).
+narrative_ontology:constraint_claim(ergo_nipopows, mountain).
 
 % Base extractiveness: Low (0.1)
 % Rationale: It is a pure utility that lowers costs for all participants.

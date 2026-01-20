@@ -53,7 +53,7 @@
    ========================================================================== */
 
 narrative_ontology:interval(hamiltonian_path_complexity, 0, 10).
-narrative_ontology:constraint_claim(hamiltonian_path_complexity, algorithmic_limit).
+narrative_ontology:constraint_claim(hamiltonian_path_complexity, mountain).
 
 % Base extractiveness score (0.1)
 % Pure math doesn't "extract" in a social sense, but the "brute force" 

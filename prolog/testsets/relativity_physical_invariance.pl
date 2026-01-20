@@ -54,7 +54,7 @@
    ========================================================================== */
 
 narrative_ontology:interval(relativity_physical_invariance, 0, 10).
-narrative_ontology:constraint_claim(relativity_physical_invariance, cosmological_limit).
+narrative_ontology:constraint_claim(relativity_physical_invariance, mountain).
 
 % Base extractiveness: Low (0.0). 
 % Physics does not "extract" value in a social sense, but it limits 

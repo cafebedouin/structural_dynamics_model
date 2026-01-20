@@ -55,7 +55,7 @@
    ========================================================================== */
 
 narrative_ontology:interval(dead_sea_effect, 0, 10).
-narrative_ontology:constraint_claim(dead_sea_effect, organizational_decay).
+narrative_ontology:constraint_claim(dead_sea_effect, noose).
 
 % Base extractiveness: Moderate (0.5).
 % The organization extracts the presence/stability of the mediocre at the cost 

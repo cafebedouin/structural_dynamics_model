@@ -1,3 +1,4 @@
+% [RESOLVED MANDATROPHY] High-extraction Mountain identified as structural mandate.
 % ============================================================================
 % CONSTRAINT STORY: dark_patterns_manipulation
 % ============================================================================
@@ -49,7 +50,7 @@
    ========================================================================== */
 
 narrative_ontology:interval(dark_patterns_manipulation, 0, 10).
-narrative_ontology:constraint_claim(dark_patterns_manipulation, cognitive_exploitation).
+narrative_ontology:constraint_claim(dark_patterns_manipulation, noose).
 
 % Base extractiveness score (0.85)
 % High; they are purely designed to extract value (money, data, attention) 

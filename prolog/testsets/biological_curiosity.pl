@@ -51,7 +51,7 @@
    ========================================================================== */
 
 narrative_ontology:interval(biological_curiosity, 0, 10).
-narrative_ontology:constraint_claim(biological_curiosity, intrinsic_motivation).
+narrative_ontology:constraint_claim(biological_curiosity, mountain).
 
 % Base extractiveness score (0.15)
 % Low extraction; curiosity "extracts" energy for search, but usually 

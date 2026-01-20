@@ -39,10 +39,7 @@
 :- dynamic constraint_classification/3.
 
 % Required modules
-:- use_module(domain_priors, [
-    base_extractiveness/2,
-    suppression_score/2
-]).
+:- use_module(drl_core, [base_extractiveness/2, suppression_score/2]).
 
 % ============================================================================
 % INDEX ONTOLOGY

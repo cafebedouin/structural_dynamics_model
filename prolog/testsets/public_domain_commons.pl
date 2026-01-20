@@ -51,7 +51,7 @@
    ========================================================================== */
 
 narrative_ontology:interval(public_domain_commons, 0, 10).
-narrative_ontology:constraint_claim(public_domain_commons, fundamental_commons).
+narrative_ontology:constraint_claim(public_domain_commons, mountain).
 
 % Base extractiveness score (0.0 = no extraction)
 % By definition, the public domain is non-extractive.

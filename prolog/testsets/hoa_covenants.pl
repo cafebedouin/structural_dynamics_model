@@ -70,7 +70,7 @@ constraint_indexing:constraint_classification/3.
 
 % Required for [STEP 1] and [STEP 2] of the DR-Audit Suite
 narrative_ontology:interval(hoa_interval, 0, 10).
-narrative_ontology:constraint_claim(hoa_architectural_covenants, legal_contract).
+narrative_ontology:constraint_claim(hoa_architectural_covenants, rope).
 
 % Base extractiveness: Moderate (0.45)
 % Rationale: While residents pay fees and lose autonomy, they theoretically receive
@@ -347,3 +347,9 @@ confidence_without_resolution(low)
 /* ==========================================================================
 END OF CONSTRAINT STORY
 ========================================================================== */
+
+
+% --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
+constraint_indexing:constraint_classification(hoa_covenants, mountain, agent_power(analytical)).
+constraint_indexing:constraint_classification(hoa_covenants, rope, agent_power(institutional)).
+constraint_indexing:constraint_classification(hoa_covenants, noose, agent_power(individual_powerless)).

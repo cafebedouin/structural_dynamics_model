@@ -56,7 +56,7 @@
    ========================================================================== */
 
 narrative_ontology:interval(permissive_software_licensing, 0, 10).
-narrative_ontology:constraint_claim(permissive_software_licensing, voluntary_coordination).
+narrative_ontology:constraint_claim(permissive_software_licensing, rope).
 
 % Base extractiveness score (0.2)
 % Slightly higher than Copyleft because it allows private entities to 

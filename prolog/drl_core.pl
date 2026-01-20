@@ -36,6 +36,12 @@
     multi_index_report/1,
     compare_perspectives/2,
     discover_my_context/1,
+
+    % Centralize module references
+    base_extractiveness/2,
+    suppression_score/2,
+    requires_active_enforcement/1,
+    emerges_naturally/1,
     
     % Exposed helpers for modal_logic and testing
     is_mountain/3,                  % Indexed version
@@ -51,6 +57,19 @@
 :- use_module(constraint_indexing).
 :- use_module(constraint_instances).
 :- use_module(domain_priors).
+
+% Declare these as multifile to allow other modules to contribute data
+:- multifile 
+    base_extractiveness/2, 
+    suppression_score/2, 
+    requires_active_enforcement/1, 
+    emerges_naturally/1.
+
+% Provide a 'fail-safe' default clause to satisfy the compiler
+base_extractiveness(_, 0.0) :- fail.
+suppression_score(_, 0.0) :- fail.
+requires_active_enforcement(_) :- fail.
+emerges_naturally(_) :- fail.
 
 % Re-export indexed classification predicates from constraint_indexing
 :- reexport(constraint_indexing, [

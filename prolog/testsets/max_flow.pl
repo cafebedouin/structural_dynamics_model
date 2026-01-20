@@ -50,7 +50,7 @@
    ========================================================================== */
 
 narrative_ontology:interval(max_flow_min_cut, 0, 10).
-narrative_ontology:constraint_claim(max_flow_min_cut, physical_limit).
+narrative_ontology:constraint_claim(max_flow_min_cut, mountain).
 
 % Base extractiveness: Moderate (0.4).
 % While it's a math law, in human systems (logistics/telecom), the bottleneck 
@@ -202,3 +202,9 @@ omega_variable(
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
+
+
+% --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
+constraint_indexing:constraint_classification(max_flow, mountain, agent_power(analytical)).
+constraint_indexing:constraint_classification(max_flow, rope, agent_power(institutional)).
+constraint_indexing:constraint_classification(max_flow, noose, agent_power(individual_powerless)).

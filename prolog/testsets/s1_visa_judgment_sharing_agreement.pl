@@ -121,7 +121,7 @@ constraint_indexing:constraint_classification(
    PERSPECTIVE 2: Visa Chief Legal Officer - Rope
    --------------------------------------------------------------------------
    
-   WHO: institutional - Crafting the legal architecture of the IPO[cite: 80].
+   WHO: institutional - Crafting the legal architecture of the IPO.
    WHEN: biographical - Aiming for a stable, public Visa Inc. over the next 20 years.
    WHERE: arbitrage - Using contract law to mitigate judicial risk.
    SCOPE: global.
@@ -217,13 +217,13 @@ test(systemic_stability_logic) :-
  * * Model: Gemini 2.0 Flash
  * * KEY DECISIONS:
  * 1. EXTRACTIVENESS (0.4): Significant because it mandates large payments 
- * from banks to cover settlements[cite: 116, 122].
+ * from banks to cover settlements.
  * 2. CLASSIFICATION: Chose "Rope" for the institution because the JSA is 
  * what enables the "Global Restructuring Agreement". Without it, 
  * the IPO (a larger Rope) would fail.
  * * AMBIGUITIES:
  * The S-1 does not disclose the *exact* percentages of liability sharing, 
- * which are likely in the "confidential treatment" portions[cite: 128].
+ * which are likely in the "confidential treatment" portions.
  */
 
 /* ==========================================================================
@@ -262,3 +262,9 @@ omega_variable(
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
+
+
+% --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
+constraint_indexing:constraint_classification(s1_visa_judgment_sharing_agreement, mountain, agent_power(analytical)).
+constraint_indexing:constraint_classification(s1_visa_judgment_sharing_agreement, rope, agent_power(institutional)).
+constraint_indexing:constraint_classification(s1_visa_judgment_sharing_agreement, noose, agent_power(individual_powerless)).

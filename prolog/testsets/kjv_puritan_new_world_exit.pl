@@ -200,3 +200,9 @@ test(geographic_variance) :-
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
+
+
+% --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
+constraint_indexing:constraint_classification(kjv_puritan_new_world_exit, mountain, agent_power(analytical)).
+constraint_indexing:constraint_classification(kjv_puritan_new_world_exit, rope, agent_power(institutional)).
+constraint_indexing:constraint_classification(kjv_puritan_new_world_exit, noose, agent_power(individual_powerless)).

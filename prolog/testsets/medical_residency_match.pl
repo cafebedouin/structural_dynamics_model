@@ -51,7 +51,7 @@
    ========================================================================== */
 
 narrative_ontology:interval(medical_residency_match, 0, 10).
-narrative_ontology:constraint_claim(medical_residency_match, structural_coordination).
+narrative_ontology:constraint_claim(medical_residency_match, rope).
 
 % Base extractiveness: High (0.6).
 % Hospitals gain significant wage-setting power because students cannot 

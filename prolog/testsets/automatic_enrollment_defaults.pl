@@ -46,7 +46,7 @@
    ========================================================================== */
 
 narrative_ontology:interval(automatic_enrollment_defaults, 0, 10).
-narrative_ontology:constraint_claim(automatic_enrollment_defaults, choice_architecture).
+narrative_ontology:constraint_claim(automatic_enrollment_defaults, rope).
 
 % Base extractiveness score (0.05)
 % Extremely low; it is designed to retain value for the individual 

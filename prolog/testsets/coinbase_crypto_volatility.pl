@@ -152,6 +152,40 @@ constraint_indexing:constraint_classification(
     E < 0.6,
     !.
 
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 3: THE ANALYTICAL OBSERVER (MARKET ANALYST) - Mountain
+   --------------------------------------------------------------------------
+   WHO: agent_power(analytical) - Observes the external market drivers.
+   WHEN: immediate - Volatility events occur with no warning.
+   WHERE: arbitrage - Operates in a global, 24/7 liquid market.
+   SCOPE: global - Crypto asset cycles are a worldwide phenomenon.
+   
+   WHY THIS CLASSIFICATION:
+   The "Mountain" is the exogenous volatility of Bitcoin and Ethereum. 
+   As stated in the S-1, transaction volume and revenue are "driven by 
+   factors that are not within our control." To the analyst, these cycles 
+   are the unyielding physical laws of the crypto terrain. They represent 
+   an immutable structural constraint that Coinbase must inhabit, rather 
+   than a mechanism they can significantly alter.
+   -------------------------------------------------------------------------- */
+
+constraint_indexing:constraint_classification(
+    coinbase_crypto_volatility,
+    mountain,
+    context(
+        agent_power(analytical),
+        time_horizon(immediate),
+        exit_options(arbitrage),
+        spatial_scope(global)
+    )
+) :-
+    domain_priors:suppression_score(coinbase_crypto_volatility, S),
+    S < 0.5.
+
+% Explicit priors reflecting the unyielding nature of market cycles.
+domain_priors:base_extractiveness(coinbase_crypto_volatility, 0.4).
+domain_priors:suppression_score(coinbase_crypto_volatility, 0.3).
+
 /* ==========================================================================
    4. TESTS
    ========================================================================== */
@@ -216,3 +250,4 @@ omega_variable(
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
+

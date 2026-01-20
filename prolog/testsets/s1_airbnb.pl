@@ -268,3 +268,9 @@ omega_variable(
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
+
+
+% --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
+constraint_indexing:constraint_classification(s1_airbnb, mountain, agent_power(analytical)).
+constraint_indexing:constraint_classification(s1_airbnb, rope, agent_power(institutional)).
+constraint_indexing:constraint_classification(s1_airbnb, noose, agent_power(individual_powerless)).

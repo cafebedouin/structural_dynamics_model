@@ -51,7 +51,7 @@
    ========================================================================== */
 
 narrative_ontology:interval(trade_secret_law, 0, 10).
-narrative_ontology:constraint_claim(trade_secret_law, intellectual_property_limit).
+narrative_ontology:constraint_claim(trade_secret_law, rope).
 
 % Base extractiveness: Low (0.2).
 % It protects the firm's investment without extracting the employee's 

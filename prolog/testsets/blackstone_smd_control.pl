@@ -1,3 +1,4 @@
+% [RESOLVED MANDATROPHY] High-extraction Mountain identified as structural mandate.
 % ============================================================================
 % CONSTRAINT STORY: blackstone_smd_control
 % ============================================================================
@@ -148,6 +149,40 @@ constraint_indexing:constraint_classification(
     E < 0.9,
     !.
 
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 3: THE ANALYTICAL OBSERVER (GOVERNANCE/LEGAL) - Mountain
+   --------------------------------------------------------------------------
+   WHO: agent_power(analytical) - Observes the unyielding structural barriers.
+   WHEN: generational - The multi-class structure is a permanent feature of the IPO.
+   WHERE: trapped - Common unitholders have zero degrees of freedom in voting.
+   SCOPE: global - The control mechanism applies across the entire firm.
+   
+   WHY THIS CLASSIFICATION:
+   The "Mountain" is the multi-class unit architecture. Under the partnership 
+   agreement and Delaware law, common unitholders have "no right to elect 
+   the general partner or its directors." This creates a permanent, 
+   non-negotiable structural barrier that locks the firm’s control in the 
+   hands of the SMDs. It is an immutable condition of the capital structure 
+   that cannot be changed through standard shareholder activism.
+   -------------------------------------------------------------------------- */
+
+constraint_indexing:constraint_classification(
+    blackstone_smd_control,
+    mountain,
+    context(
+        agent_power(analytical),
+        time_horizon(generational),
+        exit_options(trapped),
+        spatial_scope(global)
+    )
+) :-
+    domain_priors:requires_active_enforcement(blackstone_smd_control),
+    !.
+
+% Explicit priors reflecting the total lack of exit/influence for unitholders.
+domain_priors:base_extractiveness(blackstone_smd_control, 0.8).
+domain_priors:suppression_score(blackstone_smd_control, 0.9).
+
 /* ==========================================================================
    4. TESTS
    ========================================================================== */
@@ -219,3 +254,4 @@ omega_variable(
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
+

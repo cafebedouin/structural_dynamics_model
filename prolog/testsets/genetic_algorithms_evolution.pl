@@ -50,7 +50,7 @@
    ========================================================================== */
 
 narrative_ontology:interval(genetic_algorithms_evolution, 0, 10).
-narrative_ontology:constraint_claim(genetic_algorithms_evolution, evolutionary_heuristics).
+narrative_ontology:constraint_claim(genetic_algorithms_evolution, rope).
 
 % Base extractiveness score (0.1)
 % Highly efficient; the primary "cost" is the compute required for generations.

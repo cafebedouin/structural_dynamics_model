@@ -54,7 +54,7 @@
    ========================================================================== */
 
 narrative_ontology:interval(relativity_of_simultaneity, 0, 10).
-narrative_ontology:constraint_claim(relativity_of_simultaneity, physical_law).
+narrative_ontology:constraint_claim(relativity_of_simultaneity, mountain).
 
 % Base extractiveness: 0.0
 % Rationale: The law governs the flow of time for all observers equally; 

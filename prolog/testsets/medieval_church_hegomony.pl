@@ -223,3 +223,9 @@ test(tithe_extractiveness) :-
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
+
+
+% --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
+constraint_indexing:constraint_classification(medieval_church_hegomony, mountain, agent_power(analytical)).
+constraint_indexing:constraint_classification(medieval_church_hegomony, rope, agent_power(institutional)).
+constraint_indexing:constraint_classification(medieval_church_hegomony, noose, agent_power(individual_powerless)).

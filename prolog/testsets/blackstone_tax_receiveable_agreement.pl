@@ -1,3 +1,4 @@
+% [RESOLVED MANDATROPHY] High-extraction Mountain identified as structural mandate.
 % ============================================================================
 % CONSTRAINT STORY: blackstone_tax_receivable_agreement
 % ============================================================================
@@ -214,3 +215,15 @@ omega_variable(
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
+
+
+% ==========================================================================
+% [SKELETON REPAIR] Missing Perspectival Pillars Added: MOUNTAIN
+% To be calibrated: Define the narrative justification for these perspectives.
+% ==========================================================================
+constraint_indexing:constraint_classification(blackstone_tax_receiveable_agreement, mountain, agent_power(analytical)).
+
+
+% --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
+constraint_indexing:constraint_classification(blackstone_tax_receiveable_agreement, rope, agent_power(institutional)).
+constraint_indexing:constraint_classification(blackstone_tax_receiveable_agreement, noose, agent_power(individual_powerless)).

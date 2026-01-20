@@ -1,12 +1,12 @@
 % ============================================================================
-% CONSTRAINT STORY: choice_architecture_design
+% CONSTRAINT STORY: rope_design
 % ============================================================================
 % Generated: 2026-01-17
 % Model: Gemini 2.0 Flash
 % Source: Thaler, R. H., & Sunstein, C. R. (2008). Nudge.
 % ============================================================================
 
-:- module(constraint_choice_architecture, []).
+:- module(constraint_rope, []).
 
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
@@ -25,7 +25,7 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: choice_architecture_design
+ * * constraint_id: rope_design
  * human_readable: Choice Architecture (The Silent Director)
  * domain: psychological/economic/social
  * temporal_scope: Immediate to Biographical
@@ -45,24 +45,24 @@
    2. CORE SYSTEM INTEGRATION (Reality Layer)
    ========================================================================== */
 
-narrative_ontology:interval(choice_architecture_design, 0, 10).
-narrative_ontology:constraint_claim(choice_architecture_design, behavioral_nudge).
+narrative_ontology:interval(rope_design, 0, 10).
+narrative_ontology:constraint_claim(rope_design, rope).
 
 % Base extractiveness score (0.2)
 % Low; when used ethically, it provides value by reducing cognitive load. 
 % When used as a "Dark Pattern," it becomes extractive (0.8+).
-domain_priors:base_extractiveness(choice_architecture_design, 0.2).
+domain_priors:base_extractiveness(rope_design, 0.2).
 
 % Suppression score (0.3)
 % Alternatives are rarely "hidden," but they are often "deprioritized" 
 % through framing or physical distance.
-domain_priors:suppression_score(choice_architecture_design, 0.3).
+domain_priors:suppression_score(rope_design, 0.3).
 
-domain_priors:emerges_naturally(choice_architecture_design).
+domain_priors:emerges_naturally(rope_design).
 
 % Metrics
-narrative_ontology:constraint_metric(choice_architecture_design, extractiveness, 0.2).
-narrative_ontology:constraint_metric(choice_architecture_design, suppression_requirement, 0.3).
+narrative_ontology:constraint_metric(rope_design, extractiveness, 0.2).
+narrative_ontology:constraint_metric(rope_design, suppression_requirement, 0.3).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)
@@ -84,7 +84,7 @@ narrative_ontology:constraint_metric(choice_architecture_design, suppression_req
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
-    choice_architecture_design,
+    rope_design,
     rope,
     context(agent_power(individual_moderate), time_horizon(immediate), exit_options(mobile), spatial_scope(local))
 ) :- !.
@@ -105,11 +105,11 @@ constraint_indexing:constraint_classification(
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
-    choice_architecture_design,
+    rope_design,
     noose,
     context(agent_power(individual_powerless), time_horizon(immediate), exit_options(trapped), spatial_scope(global))
 ) :-
-    domain_priors:base_extractiveness(choice_architecture_design, E),
+    domain_priors:base_extractiveness(rope_design, E),
     E > 0.5,
     !.
 
@@ -129,7 +129,7 @@ constraint_indexing:constraint_classification(
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
-    choice_architecture_design,
+    rope_design,
     mountain,
     context(agent_power(analytical), time_horizon(historical), exit_options(analytical), spatial_scope(global))
 ) :- !.
@@ -137,3 +137,9 @@ constraint_indexing:constraint_classification(
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
+
+
+% --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
+constraint_indexing:constraint_classification(choice_architecture_design, mountain, agent_power(analytical)).
+constraint_indexing:constraint_classification(choice_architecture_design, rope, agent_power(institutional)).
+constraint_indexing:constraint_classification(choice_architecture_design, noose, agent_power(individual_powerless)).

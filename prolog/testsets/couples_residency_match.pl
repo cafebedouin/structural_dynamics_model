@@ -52,7 +52,7 @@
    ========================================================================== */
 
 narrative_ontology:interval(couples_residency_match, 0, 10).
-narrative_ontology:constraint_claim(couples_residency_match, algorithmic_determinism).
+narrative_ontology:constraint_claim(couples_residency_match, mountain).
 
 % Base extractiveness score (0.5)
 % The system extracts a "choice penalty." To guarantee being together, 

@@ -1,3 +1,4 @@
+% [RESOLVED MANDATROPHY] High-extraction Mountain identified as structural mandate.
 % ============================================================================
 % CONSTRAINT STORY: black_soil_toxicity
 % ============================================================================
@@ -90,6 +91,66 @@ constraint_indexing:constraint_classification(
     )
 ) :- !.
 
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 2: HIGH COMMAND (STRATEGIC) - Rope
+   --------------------------------------------------------------------------
+   WHO: agent_power(institutional) - High Command managing population flow.
+   WHEN: biographical - Planning the multi-year abandonment of Sector 7.
+   WHERE: arbitrage - Managing resource balance between Sectors 7 and 1.
+   SCOPE: continental - The survival of the entire colony architecture.
+   
+   WHY THIS CLASSIFICATION:
+   High Command uses the "Black Soil" crisis as a Rope. It is a coordination 
+   tool that justifies the "Mandatrophic" necessity of urban migration. By 
+   framing the depletion as absolute, they pull the populace into a more 
+   legible, efficient, and taxable urban core in Sector 1.
+   -------------------------------------------------------------------------- */
+
+constraint_indexing:constraint_classification(
+    rotation_seven_black_soil,
+    rope,
+    context(
+        agent_power(institutional),
+        time_horizon(biographical),
+        exit_options(arbitrage),
+        spatial_scope(continental)
+    )
+) :-
+    domain_priors:requires_active_enforcement(rotation_seven_black_soil),
+    !.
+
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 3: SECTOR 7 AGRARIANS (RESIDENTS) - Noose
+   --------------------------------------------------------------------------
+   WHO: agent_power(individual_powerless) - Those whose margin has collapsed.
+   WHEN: immediate - The current harvest failure and impending hunger.
+   WHERE: trapped - Bound by the soil they can no longer farm.
+   SCOPE: local - Their home, community, and immediate survival.
+   
+   WHY THIS CLASSIFICATION:
+   For the residents, the black soil is a Noose. The depletion is not a 
+   "strategic opportunity" but an extractive trap that has consumed their 
+   autonomy. With a suppression of alternative food sources (0.8) and 
+   existential stakes (0.9), they have no exit but the state's migration 
+   mandate.
+   -------------------------------------------------------------------------- */
+
+constraint_indexing:constraint_classification(
+    rotation_seven_black_soil,
+    noose,
+    context(
+        agent_power(individual_powerless),
+        time_horizon(immediate),
+        exit_options(trapped),
+        spatial_scope(local)
+    )
+) :-
+    !.
+
+% Explicit priors reflecting the high extraction of the "Black Soil" crisis.
+domain_priors:base_extractiveness(rotation_seven_black_soil, 0.8).
+domain_priors:suppression_score(rotation_seven_black_soil, 0.8).
+
 /* ==========================================================================
    4. TESTS
    ========================================================================== */
@@ -138,3 +199,7 @@ test(zero_enforcement_constraint) :-
 % ============================================================================
 % END OF CONSTRAINT STORY
 % ============================================================================
+
+
+% --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
+constraint_indexing:constraint_classification(rotation_seven_black_soil, mountain, agent_power(analytical)).

@@ -151,3 +151,9 @@ omega_variable(
  * Ergo introduces "Biological" constraints: things decay (Rent), systems 
  * compress (NiPoPoWs), and communities breathe through mutual credit (LETS).
  */
+
+
+% --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
+constraint_indexing:constraint_classification(ergo_advanced_mechanisms, mountain, agent_power(analytical)).
+constraint_indexing:constraint_classification(ergo_advanced_mechanisms, rope, agent_power(institutional)).
+constraint_indexing:constraint_classification(ergo_advanced_mechanisms, noose, agent_power(individual_powerless)).

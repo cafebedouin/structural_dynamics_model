@@ -50,7 +50,7 @@
    ========================================================================== */
 
 narrative_ontology:interval(golden_handcuffs, 0, 10).
-narrative_ontology:constraint_claim(golden_handcuffs, economic_incentive_design).
+narrative_ontology:constraint_claim(golden_handcuffs, rope).
 
 % Base extractiveness: Moderate (0.4).
 % While the employee receives high compensation, the organization extracts 

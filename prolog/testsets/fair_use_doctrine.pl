@@ -51,7 +51,7 @@
    ========================================================================== */
 
 narrative_ontology:interval(fair_use_doctrine, 0, 10).
-narrative_ontology:constraint_claim(fair_use_doctrine, statutory_exemption).
+narrative_ontology:constraint_claim(fair_use_doctrine, rope).
 
 % Base extractiveness: Low (0.1).
 % It is designed to *prevent* extraction by allowing free use for 

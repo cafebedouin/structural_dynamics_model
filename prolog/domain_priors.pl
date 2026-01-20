@@ -5,29 +5,30 @@
     expected_signature/2,
     should_be_natural_law/1,
     validate_signature/2,
-    category_of/2,
-    base_extractiveness/2,
-    suppression_score/2,
-    requires_active_enforcement/1,
-    emerges_naturally/1
+    category_of/2
 ]).
 
-:- discontiguous base_extractiveness/2.
-:- discontiguous suppression_score/2.
-:- discontiguous requires_active_enforcement/1.
-:- discontiguous emerges_naturally/1.
+:- use_module(domain_registry).
+:- use_module(drl_core).
 
-:- multifile 
-    base_extractiveness/2, 
-    suppression_score/2, 
-    requires_active_enforcement/1,
-    emerges_naturally/1.
+% 1. Suppress discontiguous warnings by declaring them at the top
+:- discontiguous expected_signature/2.
+:- discontiguous validate_signature/2.
+:- discontiguous infer_category_from_priors/2.
+:- discontiguous is_known_domain/1.
+:- discontiguous flag_novelty/1.
+:- discontiguous get_prior/3.
 
-:- dynamic 
-    base_extractiveness/2, 
-    suppression_score/2, 
-    requires_active_enforcement/1,
-    emerges_naturally/1.
+:- multifile
+    drl_core:base_extractiveness/2,
+    drl_core:suppression_score/2,
+    drl_core:requires_active_enforcement/1,
+    drl_core:emerges_naturally/1.
+
+drl_core:base_extractiveness(_, _) :- fail.
+drl_core:suppression_score(_, _) :- fail.
+drl_core:requires_active_enforcement(_) :- fail.
+drl_core:emerges_naturally(_) :- fail.
 
 /**
  * DOMAIN PRIORS MODULE - v3.2.4 Hardened
@@ -37,13 +38,14 @@
 %% ============================================================================
 %% 1. CATEGORY PROFILES
 %% ============================================================================
-category_profile(physical_natural, [1.0, 1.0, 0.0, 0.0]).
-category_profile(formal_logic,     [0.9, 0.2, 0.1, 0.1]).
-category_profile(statutory_formal, [0.8, 0.5, 0.7, 0.4]).
-category_profile(election_cycle,   [0.8, 0.8, 0.3, 0.5]). 
-category_profile(extractive_market,[0.4, 0.8, 0.8, 0.6]). 
-category_profile(narrative_history,[0.6, 0.7, 0.5, 0.6]).
-category_profile(unknown_novel,    [0.5, 0.5, 0.5, 0.5]).
+category_profile(physical_natural,    [1.00, 1.00, 0.00, 0.00]).  % Mountain
+category_profile(formal_logic,        [0.90, 0.20, 0.10, 0.10]).  % Mountain
+category_profile(statutory_formal,    [0.80, 0.50, 0.70, 0.40]).  % Rope
+category_profile(election_cycle,       [0.80, 0.80, 0.30, 0.50]). % Periodic Rope
+category_profile(extractive_market, [0.40, 0.80, 0.79, 0.60]).    % Calibrated Noose
+category_profile(narrative_history,  [0.6, 0.7, 0.41, 0.6]).      % Calibrated Rope
+category_profile(unknown_novel,      [0.55, 0.72, 0.54, 0.6]).    % Fleet Baseline
+category_profile(mandatrophy_collapse, [0.20, 0.95, 0.90, 0.30]). % Terminal State
 
 %% ============================================================================
 %% 2. API DEFINITIONS
@@ -71,18 +73,15 @@ get_prior(ID, Metric, Value) :-
 
 get_prior(_, _, 0.5).
 
-category_of(ID, Cat) :- domain_category(ID, Cat), !.
-category_of(ID, physical_natural) :- 
-    (narrative_ontology:constraint_claim(ID, natural_law) ; 
+category_of(ID, Cat) :- domain_registry:domain_category(ID, Cat), !.
+category_of(ID, physical_natural) :-
+    (narrative_ontology:constraint_claim(ID, natural_law) ;
      narrative_ontology:constraint_claim(ID, physical_law)), !.
-category_of(ID, election_cycle) :- 
-    narrative_ontology:constraint_claim(ID, election_cycle), !.
-category_of(ID, Cat) :- infer_category_from_priors(ID, Cat), !.
 category_of(_, unknown_novel).
 
 % Signature Support (Clears exported-procedure errors)
-should_be_natural_law(ID) :- 
-    category_of(ID, Cat), 
+should_be_natural_law(ID) :-
+    category_of(ID, Cat),
     expected_signature(Cat, natural_law).
 
 expected_signature(physical_natural, natural_law).
@@ -96,7 +95,7 @@ expected_signature(unknown_novel,    ambiguous).
 validate_signature(ID, Detected) :-
     category_of(ID, Cat),
     expected_signature(Cat, Expected),
-    ( Detected = Expected 
+    ( Detected = Expected
     -> format('[VALIDATION] ✓ ~w: ~w matches ~w~n', [ID, Detected, Cat])
     ;  format('[VALIDATION] ✗ ~w: Expected ~w, got ~w~n', [ID, Expected, Detected])).
 
@@ -114,13 +113,13 @@ map_metric_to_vector_pos(stakes_inflation(_),      [_,S,_,_], S).
 map_metric_to_vector_pos(suppression(_),           [_,_,U,_], U).
 map_metric_to_vector_pos(resistance(_),            [_,_,_,R], R).
 
-infer_category_from_priors(ID, extractive_market) :- 
+infer_category_from_priors(ID, extractive_market) :-
     base_extractiveness(ID, E), E > 0.6, !.
-infer_category_from_priors(ID, statutory_formal) :- 
+infer_category_from_priors(ID, statutory_formal) :-
     requires_active_enforcement(ID), !.
 
 %% ============================================================================
-%% 4. SIGNATURE 
+%% 4. SIGNATURE
 %% ============================================================================
 expected_signature(physical_natural, natural_law).
 expected_signature(formal_logic,     natural_law).
@@ -138,81 +137,16 @@ validate_signature(ID, Detected) :-
     ;   format('[VALIDATION] ✗ ~w: Expected ~w, got ~w~n', [ID, Expected, Detected])
     ).
 
-%% ============================================================================
-%% 5. DOMAIN REGISTRY (UPDATE VIA domain_priors.py)
-%% ============================================================================
-domain_category(ai_evaluators_matching, extractive_market).
-domain_category(airbnb_str_regulation, narrative_history).
-domain_category(automatic_enrollment_defaults, narrative_history).
-domain_category(biological_curiosity, narrative_history).
-domain_category(black_soil_toxicity, extractive_market).
-domain_category(blackstone_carried_interest_taxation, narrative_history).
-domain_category(blackstone_conflicts_of_interest, extractive_market).
-domain_category(blackstone_smd_control, extractive_market).
-domain_category(blackstone_tra, extractive_market).
-domain_category(choice_architecture_design, narrative_history).
-domain_category(cloudflare_dual_class_asymmetry, extractive_market).
-domain_category(coinbase_crypto_volatility, narrative_history).
-domain_category(coinbase_regulatory_uncertainty, extractive_market).
-domain_category(college_admissions_market, extractive_market).
-domain_category(colombia_2026_presidential_election, narrative_history).
-domain_category(copyleft_viral_licensing, narrative_history).
-domain_category(copyright_protection, narrative_history).
-domain_category(couples_residency_match, narrative_history).
-domain_category(creative_commons_licensing, narrative_history).
-domain_category(dark_patterns_manipulation, extractive_market).
-domain_category(dexy_gold_protocol, narrative_history).
-domain_category(dharma_of_kurukshetra, narrative_history).
-domain_category(ergo_autolykos_asic_resistance, narrative_history).
-domain_category(ergo_lets_protocol, narrative_history).
-domain_category(ergo_mixer_protocol, narrative_history).
-domain_category(ergo_nipopows, narrative_history).
-domain_category(ergo_storage_rent, narrative_history).
-domain_category(exploration_vs_exploitation, narrative_history).
-domain_category(fair_use_doctrine, narrative_history).
-domain_category(gale_shapley_matching, narrative_history).
-domain_category(genetic_algorithms_evolution, narrative_history).
-domain_category(golden_handcuffs, narrative_history).
-domain_category(great_awakening_rekindling, narrative_history).
-domain_category(hamiltonian_path_complexity, narrative_history).
-domain_category(hammurabi_lex_talionis, narrative_history).
-domain_category(heuristic_optimization, narrative_history).
-domain_category(information_foraging_theory, narrative_history).
-domain_category(institutional_mutation_domestication, extractive_market).
-domain_category(kidney_exchange_market, narrative_history).
-domain_category(kjv_linguistic_residue, narrative_history).
-domain_category(kjv_textual_authority, narrative_history).
-domain_category(kubo_ranking_system_r7, extractive_market).
-domain_category(lehman_repo_105, extractive_market).
-domain_category(lets, narrative_history).
-domain_category(local_vs_global_optima, narrative_history).
-domain_category(matching_markets_general, narrative_history).
-domain_category(max_flow_min_cut, narrative_history).
-domain_category(medical_residency_match, narrative_history).
-domain_category(medieval_church_hegemony, extractive_market).
-domain_category(nipopows, narrative_history).
-domain_category(non_compete_agreements, extractive_market).
-domain_category(optimal_stopping_marriage, narrative_history).
-domain_category(permissive_software_licensing, narrative_history).
-domain_category(protocol_r7_isolation, extractive_market).
-domain_category(public_domain_commons, narrative_history).
-domain_category(puritan_new_world_pivot, narrative_history).
-domain_category(relativity_of_simultaneity, narrative_history).
-domain_category(relativity_physical_invariance, narrative_history).
-domain_category(rosen_bridge_protocol, narrative_history).
-domain_category(section_469_c7_professional_threshold, narrative_history).
-domain_category(shannon_entropy_limit, narrative_history).
-domain_category(sig_usd_protocol, narrative_history).
-domain_category(silicon_lexicon_overload, extractive_market).
-domain_category(skills_based_hiring, narrative_history).
-domain_category(sludge_bureaucratic_friction, extractive_market).
-domain_category(storage_rent, narrative_history).
-domain_category(sts86_ascent_checklist, narrative_history).
-domain_category(tax_code_section_469, narrative_history).
-domain_category(tcp_rfc9293_interoperability, narrative_history).
-domain_category(tcp_state_machine_logic, narrative_history).
-domain_category(trade_secret_law, narrative_history).
-domain_category(traveling_salesperson_problem, narrative_history).
-domain_category(visa_ipo_regulatory_compliance, narrative_history).
-domain_category(visa_judgment_sharing_agreement, narrative_history).
-domain_category(hoa_architectural_covenants, narrative_history).
+%% flag_novelty(+ID)
+%  Logs a domain that doesn't match existing priors for later calibration.
+flag_novelty(ID) :-
+    format('  [ALERT] Novel domain detected: ~w. Queuing for calibration.~n', [ID]),
+    assertz(attribute(ID, discovery_status, novel)).
+
+%% get_prior(+ID, +Metric, -Value)
+%  Retrieves the baseline value based on the domain's category profile.
+get_prior(ID, Metric, Value) :-
+    category_of(ID, Category),
+    category_profile(Category, Vector),
+    map_metric_to_vector_pos(Metric, Vector, Value), !.
+get_prior(_, _, 0.5). % Default neutral prior

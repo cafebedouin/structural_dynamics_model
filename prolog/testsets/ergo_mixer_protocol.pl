@@ -57,7 +57,7 @@
    ========================================================================== */
 
 narrative_ontology:interval(ergo_mixer_interval, 0, 10).
-narrative_ontology:constraint_claim(ergo_mixer_protocol, privacy_obfuscation).
+narrative_ontology:constraint_claim(ergo_mixer_protocol, rope).
 
 % Base extractiveness: Low (0.1)
 % Rationale: The protocol is non-custodial and serverless; there is no 

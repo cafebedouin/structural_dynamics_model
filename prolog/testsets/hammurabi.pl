@@ -228,3 +228,9 @@ test(social_valuation_asymmetry) :-
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
+
+
+% --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
+constraint_indexing:constraint_classification(hammurabi, mountain, agent_power(analytical)).
+constraint_indexing:constraint_classification(hammurabi, rope, agent_power(institutional)).
+constraint_indexing:constraint_classification(hammurabi, noose, agent_power(individual_powerless)).

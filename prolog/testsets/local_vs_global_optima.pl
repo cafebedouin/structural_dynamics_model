@@ -46,7 +46,7 @@
    ========================================================================== */
 
 narrative_ontology:interval(local_vs_global_optima, 0, 10).
-narrative_ontology:constraint_claim(local_vs_global_optima, mathematical_limit).
+narrative_ontology:constraint_claim(local_vs_global_optima, mountain).
 
 % Base extractiveness score (0.3)
 % Sub-optimality extracts potential value from the system; being stuck at 
