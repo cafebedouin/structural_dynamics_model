@@ -74,7 +74,6 @@ has_mandatrophy_declaration(C) :-
 %% validate_ontology
 %  Master entry point for checking Knowledge Base integrity.
 validate_ontology :-
-    format('--- [START] v3.1 DATA INTEGRITY VERIFICATION ---~n'),
     (   validate_entities,
         validate_intervals,
         validate_events,
@@ -83,10 +82,7 @@ validate_ontology :-
         validate_measurements,
         validate_omegas,
         validate_intent
-    ->  format('[OK] Ontology Schema matches.~n')
-    ;   format('[FAIL] Schema mismatch.~n')
-    ),
-    format('--- [END] Verification Complete ---~n').
+    ).
 
 validate_entities :-
     forall(entity(ID,Type),

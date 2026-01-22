@@ -17,7 +17,6 @@ python3 ../python/structural_linter.py
  fi
 
 echo "Step 2: Updating Domain Registry..."
-# ... rest of your script ...
 
 # 1. Ensure the output directory exists
 mkdir -p "$OUTPUT_DIR"
@@ -27,7 +26,6 @@ echo "Initializing Validation Suite - $(date)" > "$OUTPUT_LOG"
 echo "------------------------------------------" >> "$OUTPUT_LOG"
 
 # 3. Run Domain Registry Generation
-echo "Step 3: Updating Domain Registry..."
 python3 "$PYTHON_DIR/domain_priors.py" --input "$PROLOG_DIR/testsets/" --output "$PROLOG_DIR/domain_registry.pl" >> "$OUTPUT_LOG" 2>&1
 
 if [ $? -eq 0 ]; then
@@ -38,7 +36,7 @@ else
 fi
 
 # 4. Run Test Suite Builder
-echo "Step 4: Building Validation Suite..."
+echo "Step 3: Building Validation Suite..."
 # Changing directory to python folder to ensure internal python paths resolve
 cd "$PYTHON_DIR" || exit
 python3 "python_test_suite.py" >> "$OUTPUT_LOG" 2>&1
@@ -52,7 +50,7 @@ else
 fi
 
 # 5. Run Prolog Validation
-echo "Step 5: Running Prolog Dynamic Suite (this may take a moment)..."
+echo "Step 4: Running Prolog Dynamic Suite (this may take a moment)..."
 # Using absolute paths for the swipl files to ensure they load regardless of CWD
 swipl -g "['$PROLOG_DIR/v3_1_stack'], ['$PROLOG_DIR/validation_suite'], run_dynamic_suite, halt." >> "$OUTPUT_LOG" 2>&1
 
@@ -62,16 +60,16 @@ echo "DONE. Full results available in: $OUTPUT_LOG"
 # Display the final summary from the log
 tail -n 5 "$OUTPUT_LOG"
 
-echo "Step 6: Parsing results for LLM evaluation..."
+echo "Step 5: Parsing results for LLM evaluation..."
 python3 "$PYTHON_DIR/parse_results.py" >> "$OUTPUT_LOG" 2>&1
 
 # New: Summary of Omegas and Fraud
 echo "--- SYSTEM INSIGHTS ---"
-grep "omega_variable" "$OUTPUT_LOG" | wc -l | xargs echo "Omegas Identified:"
+grep "omega_variable" "$OUTPUT_LOG" | wc -l | xargs echo "Omega Warnings Identified:"
 grep "ERROR: Invalid" "$OUTPUT_LOG" | wc -l | xargs echo "Ontological Violations:"
 
 
-echo "Step 7: Generating profile calibration suggestions..."
+echo "Step 6: Generating profile calibration suggestions..."
 python3 "$PYTHON_DIR/calibrate_profiles.py" >> "$OUTPUT_LOG" 2>&1
 
 echo "DONE. Check $OUTPUT_LOG for 'CALIBRATED CATEGORY PROFILES' section."

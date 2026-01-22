@@ -5,6 +5,7 @@
 :- use_module(narrative_ontology).
 :- use_module(v3_1_config).
 :- use_module(domain_priors). % NEW: Hook into the Epistemic Prior Library
+:- use_module(signature_mapper).
 
 % Ensure we can add facts to the ontology's measurement predicate
 :- dynamic narrative_ontology:measurement/5.
@@ -19,13 +20,23 @@
 repair_interval(IntervalID) :-
     (   narrative_ontology:interval(IntervalID, T0, Tn)
     ->  format('~n[REPAIR] Auditing vectors for: ~w...~n', [IntervalID]),
-        % Audit both endpoints for all analytical levels
+        
+        % 1. PILLAR REMAPPING: Fix non-standard claims before verification
+        forall(narrative_ontology:constraint_claim(C, Type),
+               (   signature_mapper:map_custom_pillar(C, Type, Standard),
+                   (Type \= Standard -> 
+                    retract(narrative_ontology:constraint_claim(C, Type)),
+                    assertz(narrative_ontology:constraint_claim(C, Standard)),
+                    format('  [FIXED] Remapped ~w: ~w -> ~w~n', [C, Type, Standard])
+                   ; true)
+               )),
+
+        % 2. VECTOR REPAIR: Impute missing measurements
         forall(v3_1_config:level(L), 
                ( repair_point(L, T0, IntervalID), 
                  repair_point(L, Tn, IntervalID) 
-               )),
-        true
-    ;   format('~n[ERROR] Interval ~w not found in database.~n', [IntervalID]),
+               ))
+    ;   format('~n[ERROR] Interval ~w not found.~n', [IntervalID]),
         false
     ).
 

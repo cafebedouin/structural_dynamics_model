@@ -133,6 +133,13 @@ constraint_victim([constraint_id], [agent_or_class]).
 % If beneficiaries ≠ victims and extractiveness > 0.3 → asymmetric
 % The audit uses this to populate "N asymmetric beneficiaries"
 
+% The Mandatrophy Gate
+% Rule: Any constraint with base_extractiveness > 0.7 is considered a Mandatrophy Risk.
+% Action: You MUST include the token Status: [RESOLVED MANDATROPHY] in the header.
+% Logic: High extraction is only valid if it is indexed. You must demonstrate that while the system is a Rope for the beneficiary, it is a Noose for the victim.
+
+% Verification: The multi_perspective_variance test must prove that the "predatory" nature of the fact disappears when viewed from the beneficiary's index.
+
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)
    ========================================================================== */
@@ -255,7 +262,11 @@ test([domain_specific_insight]) :-
  * 
  * MANDATORY: If your commentary mentions "ambiguity", "uncertain", or
  * "depends on", you MUST formalize it here.
- * 
+ *
+ * If base_extractiveness > 0.7, an Omega MUST be declared to resolve 
+ * whether the extraction is a systemic necessity (Mountain) or an 
+ * intentional/extractive choice by beneficiaries (Noose/Mandatrophy).
+ *
  * FORMAT:
  */
 
@@ -271,6 +282,17 @@ omega_variable(
     ),
     confidence_without_resolution([low/medium/high])  % How much does this matter?
 ).
+
+% Mandatory Omega for high-extraction constraints:
+omega_variable(
+    [constraint_id]_extraction_intent,
+    "Is the [score] extraction a functional necessity for system survival or a predatory choice?",
+    resolution_mechanism("Audit of [beneficiary] resource allocation vs. [victim] survival thresholds"),
+    impact("If necessity: Mountain. If predatory choice: Noose/Mandatrophy."),
+    confidence_without_resolution(medium)
+).
+
+% Additional Omegas for narrative ambiguities...
 
 /**
  * EXAMPLES FROM YOUR NARRATIVE:

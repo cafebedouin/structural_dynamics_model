@@ -66,26 +66,43 @@ is_safe_to_cut(C) :-
    ================================================================ */
 
 %% dr_diagnostic_report(+IntervalID)
-%  Filters output to only show items linked to the current interval.
+%  Enhanced v4.1: Consolidates diagnostic reporting with High-Risk Isomorphism Alerting.
 dr_diagnostic_report(IntervalID) :-
     format('~n=== DEFERENTIAL REALISM (DR) DIAGNOSTIC: ~w ===~n', [IntervalID]),
     
+    % --- SECTION 1: CONSTRAINT INVENTORY ---
     format('~n[CONSTRAINT INVENTORY]~n'),
-    % Use setof to ensure each unique Name/State/Intensity combination is only printed once
     (   setof(line(Name, State, Intensity), 
               (constraint_status(Name, State, Intensity), 
                narrative_ontology:constraint_metric(Name, _, _)), 
               UniqueLines)
     ->  forall(member(line(N, S, I), UniqueLines),
-               format('  - ~w: ~w (Intensity: ~2f)~n', [N, S, I]))
+               (   format('  - ~w: ~w (Intensity: ~2f)~n', [N, S, I]),
+                   % Trigger Isomorphism Check for High-Risk Types
+                   check_for_social_twins(N, S)
+               ))
     ;   format('  No active constraints found.~n')
     ),
     
+    % --- SECTION 2: FEASIBILITY BRIDGE ---
     format('~n[FEASIBILITY BRIDGE]~n'),
-    % Only show recommendations that affect a constraint in the current inventory
+    % Only show recommendations that affect a constraint in the current inventory.
+    % Using _ConsName resolves the singleton variable warning.
     forall((narrative_ontology:recommendation(RID, Summary),
-            narrative_ontology:affects_constraint(RID, ConsName),
-            narrative_ontology:constraint_claim(ConsName, _)),
+            narrative_ontology:affects_constraint(RID, _ConsName)),
            (recommendation_feasibility(RID, Stat, Vs),
             format('  - ~w (~w): ~w | Vetoes: ~w~n', [RID, Summary, Stat, Vs]))),
     format('====================================================~n').
+
+%% check_for_social_twins(+Name, +State)
+%  Internal helper that alerts the user if a high-risk technical constraint 
+%  mirrors a social pathology.
+check_for_social_twins(Name, State) :-
+    member(State, [noose, tangled_rope, extractive_noose]), % High-risk states [cite: 4, 206, 208]
+    isomorphism_engine:find_high_risk_isomorphism(Name, SocialTwin, Score),
+    domain_priors:category_of(SocialTwin, Cat),
+    member(Cat, [narrative_history, statutory_formal, election_cycle]),
+    !,
+    format('    ! ALERT: High-Risk Social Twin Detected: ~w (Similarity: ~2f)~n', [SocialTwin, Score]),
+    format('    ! Logic: This system functions structurally identically to a ~w scenario.~n', [Cat]).
+check_for_social_twins(_, _).

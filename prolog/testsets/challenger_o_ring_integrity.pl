@@ -3,6 +3,7 @@
 % CONSTRAINT STORY: challenger_o_ring_integrity
 % ============================================================================
 % Revised: 2026-01-20 (v3.1 Hardened Standard)
+% Source: Rogers Commission Report / Engineering Analysis
 % ============================================================================
 
 :- module(constraint_challenger_integrity, []).
@@ -16,93 +17,137 @@
     domain_priors:base_extractiveness/2,
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:omega_variable/5,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_metric/3.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
    ========================================================================== */
 
 /**
- * SUMMARY:
- * The Challenger disaster was caused by the failure of O-ring seals in the 
- * Solid Rocket Booster (SRB) due to record-low temperatures at launch. 
- * While a physical limit (Mountain), the disaster was a result of 
- * "normalization of deviance" within NASA management.
+ * CONSTRAINT IDENTIFICATION
+ * * constraint_id: challenger_o_ring_integrity
+ * human_readable: Challenger SRB O-Ring Integrity
+ * domain: technological/institutional
+ * temporal_scope: 1986-01-28
+ * spatial_scope: Kennedy Space Center, FL
+ * * SUMMARY:
+ * The disaster was caused by the failure of O-ring seals due to record-low 
+ * temperatures. While a physical limit (Mountain), 
+ * it became a "Noose" due to the "normalization of deviance" in NASA 
+ * management.
  * * KEY AGENTS:
- * - The SRB O-Rings: Physical components governed by thermodynamics (Mountain).
- * - NASA Management: Institutional; utilized "Launch Success" as a "Rope" 
- * to coordinate political and funding support.
- * - The STS-51-L Crew: Individual powerless; trapped by the institutional 
- * decision to override engineering warnings (Noose).
+ * - SRB_O_Rings: Thermodynamics (Mountain).
+ * - NASA_Management: Institutional; schedule coordination (Rope).
+ * - STS_51_L_Crew: Individual powerless; trapped by override (Noose).
  */
 
-% Base extractiveness: 0.8. Rationale: High extraction of safety margin 
-% to fulfill institutional schedule mandates.
+/* ==========================================================================
+   2. BASE PROPERTIES (Context-Independent)
+   ========================================================================== */
+
+% Structural Anchor
+narrative_ontology:interval(challenger_o_ring_integrity, 1986, 1986).
+
+% Base extractiveness: 0.8. 
+% Rationale: Extreme extraction of safety margin to fulfill institutional mandates.
 domain_priors:base_extractiveness(challenger_o_ring_integrity, 0.8).
 domain_priors:suppression_score(challenger_o_ring_integrity, 0.7).
 domain_priors:requires_active_enforcement(challenger_o_ring_integrity).
 
-/* ==========================================================================
-   2. INDEXED CLASSIFICATIONS (The Three-Legged Stool)
-   ========================================================================== */
+% Beneficiaries & Victims
+narrative_ontology:constraint_beneficiary(challenger_o_ring_integrity, institutional_schedule).
+narrative_ontology:constraint_victim(challenger_o_ring_integrity, sts_51_l_crew).
 
-% PERSPECTIVE: Analytical (Engineering/Physics)
-% The temperature-dependent elasticity of the polymer is an unyielding Mountain.
-constraint_indexing:constraint_classification(challenger_o_ring_integrity, mountain, agent_power(analytical)).
-
-% PERSPECTIVE: Institutional (NASA Program Management)
-% The flight schedule provided the "Rope" for inter-agency coordination.
-constraint_indexing:constraint_classification(challenger_o_ring_integrity, rope, agent_power(institutional)).
-
-% PERSPECTIVE: Individual (The Crew)
-% For the astronauts, the lack of an abort option during SRB burn was a Noose.
-constraint_indexing:constraint_classification(challenger_o_ring_integrity, noose, agent_power(individual_powerless)).
+% v3.1 Corrected Metrics
+narrative_ontology:constraint_metric(challenger_o_ring_integrity, extractiveness, 0.8).
+narrative_ontology:constraint_metric(challenger_o_ring_integrity, suppression_requirement, 0.7).
 
 /* ==========================================================================
-   3. MEASUREMENT LAYER (v3.1 Coercion Metrics)
+   3. INDEXED CLASSIFICATIONS (Perspectival Truth)
    ========================================================================== */
 
-% Extreme stakes for the crew (terminal) and suppression of the engineer's dissent.
-narrative_ontology:measurement(challenger_o_ring_integrity, crew, stakes_inflation(individual), 10, 1.0).
-narrative_ontology:measurement(challenger_o_ring_integrity, management, suppression(dissent), 10, 0.9).
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 1: Engineering/Physics - MOUNTAIN
+   -------------------------------------------------------------------------- */
+constraint_indexing:constraint_classification(
+    challenger_o_ring_integrity, 
+    mountain, 
+    context(
+        agent_power(analytical),
+        time_horizon(immediate),
+        exit_options(trapped),
+        spatial_scope(local)
+    )
+) :- !.
+
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 2: NASA Management - ROPE
+   -------------------------------------------------------------------------- */
+constraint_indexing:constraint_classification(
+    challenger_o_ring_integrity, 
+    rope, 
+    context(
+        agent_power(institutional),
+        time_horizon(biographical),
+        exit_options(mobile),
+        spatial_scope(national)
+    )
+) :- !.
+
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 3: STS-51-L Crew - NOOSE
+   -------------------------------------------------------------------------- */
+constraint_indexing:constraint_classification(
+    challenger_o_ring_integrity, 
+    noose, 
+    context(
+        agent_power(individual_powerless),
+        time_horizon(immediate),
+        exit_options(trapped),
+        spatial_scope(local)
+    )
+) :- !.
 
 /* ==========================================================================
-   4. MODEL INTERPRETATION (Hardened Commentary)
+   4. TESTS
    ========================================================================== */
 
-/**
- * MODEL INTERPRETATION:
- * This domain captures "Normalised Mandatrophy." A physical Mountain (O-ring 
- * physics) was ignored by an Institutional Rope (the schedule) until the 
- * gap between reality and management belief collapsed into a Noose.
- * * The Omega resolved here is "Bureaucratic Physics": The belief that 
- * administrative mandates (Ropes) can override physical constraints (Mountains).
- */
-
-/* ==========================================================================
-   5. ALTERNATIVE ANALYSIS
-   ========================================================================== */
-
-/**
- * ALTERNATIVE: Launch Postponement
- * Viability: High (Engineering recommendation).
- * Suppression: Suppressed by "Schedule Pressure" and the need for a 
- * "Teacher in Space" public relations win.
- */
-
-intent_viable_alternative(challenger_o_ring_integrity, postponement, 'Delay launch until ambient temperature rises').
-intent_alternative_rejected(challenger_o_ring_integrity, postponement, 'Political pressure and fear of program funding erosion').
-
-/* ==========================================================================
-   6. TESTSET INTEGRATION
-   ========================================================================== */
-% (Self-contained test for the three-legged stool)
 :- begin_tests(challenger_tests).
-test(stool_completeness) :-
-    constraint_indexing:constraint_classification(challenger_o_ring_integrity, mountain, _),
-    constraint_indexing:constraint_classification(challenger_o_ring_integrity, rope, _),
-    constraint_indexing:constraint_classification(challenger_o_ring_integrity, noose, _).
+
+test(multi_perspective_variance) :-
+    constraint_indexing:constraint_classification(challenger_o_ring_integrity, T1, context(agent_power(analytical), _, _, _)),
+    constraint_indexing:constraint_classification(challenger_o_ring_integrity, T2, context(agent_power(individual_powerless), _, _, _)),
+    T1 \= T2.
+
 :- end_tests(challenger_tests).
+
+/* ==========================================================================
+   5. OMEGA VARIABLES (Ω)
+   ========================================================================== */
+
+narrative_ontology:omega_variable(
+    normalization_of_deviance_threshold,
+    "At what point does an incremental 'Rope' adjustment become a catastrophic 'Noose'?",
+    resolution_mechanism("Post-hoc analysis of safety waiver trends vs. hardware failure rates"),
+    impact("If identified: Predicts system collapse. If unknown: Ensures surprise catastrophe."),
+    confidence_without_resolution(low)
+).
+
+/* ==========================================================================
+   6. ALTERNATIVE ANALYSIS
+   ========================================================================== */
+
+/**
+ * VIABLE ALTERNATIVES: Launch Postponement
+ * Suppression: Suppressed by political schedule pressure and the 'Teacher in Space' PR goal.
+ */
+
+intent_viable_alternative(challenger_o_ring_integrity, postponement, 'Delay launch for temperature rise').
+intent_alternative_rejected(challenger_o_ring_integrity, postponement, 'Schedule pressure and funding fears').
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

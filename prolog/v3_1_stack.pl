@@ -26,6 +26,10 @@
 :- use_module(report_generator, []).
 :- use_module(test_harness, []).
 
+% Add the main prolog directory to the library search path
+:- asserta(user:file_search_path(library, '.')).
+:- asserta(user:file_search_path(library, '..')).
+
 /* ================================================================
    SCENARIO ALIASES
    ================================================================ */

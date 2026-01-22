@@ -60,7 +60,7 @@ def calibrate_profiles():
     # 4. Generate Calibrated Profiles
     print("\n% ============================================================================")
     print("% CALIBRATED CATEGORY PROFILES")
-    print("% Based on means of imputed vectors from 297 validated instances.")
+    print("% Based on means of imputed vectors from 400+ validated instances.")
     print("% ============================================================================\n")
 
     for cat, pos_values in sorted(agg.items()):

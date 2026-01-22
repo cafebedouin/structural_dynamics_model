@@ -16,13 +16,13 @@
 %% verify_all
 %  Performs a full sweep of the loaded data against the v3.1 schema.
 verify_all :-
-    format('~n--- [START] v3.1 DATA INTEGRITY VERIFICATION ---~n'),
+    format('~n--- [START] Data Verification ---~n'),
     (validate_ontology -> format('[OK] Ontology Schema matches.~n') ; format('[FAIL] Schema mismatch.~n')),
     verify_structure,
     verify_measurements,
     check_paired_measurements,  % NEW: Check for paired temporal measurements
     verify_intent_logic,
-    format('--- [END] Verification Complete ---~n').
+    format('--- [END] Data Verification Complete ---~n').
 
 /* ============================================================
    2. STRUCTURAL & VECTOR COMPLETENESS

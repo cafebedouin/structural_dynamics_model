@@ -1,8 +1,8 @@
+% [RESOLVED MANDATROPHY] High-extraction Mountain identified as structural mandate.
 % ============================================================================
 % CONSTRAINT STORY: planetary_boundaries
 % ============================================================================
-% Generated: 2026-01-20
-% Model: Gemini-v3.1-Hardened
+% Revised: 2026-01-20 (v3.1 Hardened Standard)
 % Source: Stockholm Resilience Centre / Structural Dynamics Fleet
 % ============================================================================
 
@@ -12,81 +12,152 @@
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
 
-% --- Namespace Hooks ---
+% --- Namespace Hooks (Required for loading) ---
 :- multifile 
     domain_priors:base_extractiveness/2,
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:omega_variable/5,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_metric/3.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
    ========================================================================== */
 
 /**
- * SUMMARY:
+ * CONSTRAINT IDENTIFICATION
+ * * constraint_id: planetary_boundaries
+ * human_readable: Planetary Boundaries
+ * domain: environmental/political
+ * temporal_scope: 2009-Present
+ * spatial_scope: Global
+ * * SUMMARY:
  * Planetary Boundaries define the "safe operating space for humanity" across 
- * nine Earth system processes (e.g., climate change, biodiversity loss). 
- * While biophysical in nature, they function as a primary mandate for 
- * global institutional coordination.
+ * nine Earth system processes. While biophysical (Mountain), 
+ * they function as a mandate for global coordination (Rope) that can cap 
+ * economic margins for developing populations (Noose).
  * * KEY AGENTS:
- * - The Biosphere: The physical substrate (Mountain).
- * - Global Governance: Institutions using the boundaries to coordinate policy (Rope).
- * - Developing Populations: Subjects whose economic margin is capped by the boundary (Noose).
+ * - Biosphere: The physical substrate (Mountain).
+ * - Global_Governance: Institutional; coordination via policy (Rope).
+ * - Developing_Populations: Powerless; economic margin capped (Noose).
  */
 
-% [RESOLVED MANDATROPHY] High-extraction Mountain identified as structural mandate.
+/* ==========================================================================
+   2. BASE PROPERTIES (Context-Independent)
+   ========================================================================= */
+
+% Structural Anchor for System Extraction
+narrative_ontology:interval(planetary_boundaries, 2009, 2026).
+
+% Base extractiveness: 0.8. 
+% Rationale: High extraction of developmental potential to maintain biophysical stability.
 domain_priors:base_extractiveness(planetary_boundaries, 0.8).
 domain_priors:suppression_score(planetary_boundaries, 0.8).
 domain_priors:requires_active_enforcement(planetary_boundaries).
 
+% Beneficiaries & Victims
+narrative_ontology:constraint_beneficiary(planetary_boundaries, global_governance_bodies).
+narrative_ontology:constraint_victim(planetary_boundaries, developing_economic_subjects).
+
+% v3.1 Corrected Metrics
+narrative_ontology:constraint_metric(planetary_boundaries, extractiveness, 0.8).
+narrative_ontology:constraint_metric(planetary_boundaries, suppression_requirement, 0.8).
+
 /* ==========================================================================
-   2. INDEXED CLASSIFICATIONS (The Three-Legged Stool)
+   3. INDEXED CLASSIFICATIONS (Perspectival Truth)
    ========================================================================== */
 
-% PERSPECTIVE: Analytical (Sub specie aeternitatis)
-% The boundaries are non-negotiable biophysical limits.
-constraint_indexing:constraint_classification(planetary_boundaries, mountain, agent_power(analytical)).
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 1: Sub Specie Aeternitatis - MOUNTAIN
+   -------------------------------------------------------------------------- */
+constraint_indexing:constraint_classification(
+    planetary_boundaries, 
+    mountain, 
+    context(
+        agent_power(analytical),
+        time_horizon(civilizational),
+        exit_options(trapped),
+        spatial_scope(global)
+    )
+) :- !.
 
-% PERSPECTIVE: Institutional (Global Policy Makers)
-% The boundaries provide the "Rope" for international treaties and carbon markets.
-constraint_indexing:constraint_classification(planetary_boundaries, rope, agent_power(institutional)).
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 2: Global Policy Makers - ROPE
+   -------------------------------------------------------------------------- */
+constraint_indexing:constraint_classification(
+    planetary_boundaries, 
+    rope, 
+    context(
+        agent_power(institutional),
+        time_horizon(generational),
+        exit_options(arbitrage),
+        spatial_scope(national)
+    )
+) :- !.
 
-% PERSPECTIVE: Individual (Economic Subject in Developing Nation)
-% The "Fact" of the boundary is used to enforce a development ceiling.
-constraint_indexing:constraint_classification(planetary_boundaries, noose, agent_power(individual_powerless)).
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 3: Economic Subject (Developing Nation) - NOOSE
+   -------------------------------------------------------------------------- */
+constraint_indexing:constraint_classification(
+    planetary_boundaries, 
+    noose, 
+    context(
+        agent_power(individual_powerless),
+        time_horizon(biographical),
+        exit_options(trapped),
+        spatial_scope(local)
+    )
+) :- !.
 
 /* ==========================================================================
-   3. MEASUREMENT LAYER (v3.1 Coercion Metrics)
+   4. TESTS
    ========================================================================== */
 
-narrative_ontology:measurement(planetary_boundaries, biosphere, stakes_inflation(individual), 10, 0.9).
-narrative_ontology:measurement(planetary_boundaries, governance, suppression(individual), 10, 0.8).
+:- begin_tests(planetary_boundary_tests).
+
+test(multi_perspective_variance) :-
+    constraint_indexing:constraint_classification(planetary_boundaries, T1, context(agent_power(analytical), _, _, _)),
+    constraint_indexing:constraint_classification(planetary_boundaries, T2, context(agent_power(individual_powerless), _, _, _)),
+    T1 \= T2.
+
+:- end_tests(planetary_boundary_tests).
 
 /* ==========================================================================
-   4. GENERATING MODEL COMMENTARY (Section 5 of Template)
+   5. OMEGA VARIABLES (Ω)
+   ========================================================================== */
+
+narrative_ontology:omega_variable(
+    physics_vs_policy_tension,
+    "To what degree is a boundary violation a physical 'Mountain' collapse versus a policy-driven 'Noose' tightening?",
+    resolution_mechanism("Real-time monitoring of Earth system process thresholds vs. policy enforcement latency"),
+    impact("If Mountain: Inevitable collapse. If Noose: Reformable developmental ceilings."),
+    confidence_without_resolution(medium)
+).
+
+/* ==========================================================================
+   6. MODEL INTERPRETATION (Hardened Commentary)
    ========================================================================== */
 
 /**
- * MODEL INTERPRETATION:
- * This domain is the quintessential example of Mandatrophy. The user is right: 
- * the "Noose" dimension is not the first thought, but it is the critical one. 
- * By defining the Noose perspective, we reveal that the "safe operating space" 
- * for the planet is often a "narrowed operating space" for the marginalized. 
- * * The Omega resolved here is the conflict between "Physics" (Mountain) and 
- * "Policy" (Rope/Noose). The model now understands that the Mountain's weight 
- * is the source of the Noose's tension.
+ * LLM GENERATION NOTES
+ * * Model: Gemini-v3.1-Hardened
+ * * KEY DECISIONS:
+ * The "safe operating space" for the planet is often a "narrowed operating space" 
+ * for the marginalized. This represents quintessential Mandatrophy where 
+ * biophysical facts justify developmental extraction.
  */
 
 /* ==========================================================================
-   5. ALTERNATIVE ANALYSIS
+   7. ALTERNATIVE ANALYSIS
    ========================================================================== */
 
 /**
- * ALTERNATIVE: Technological Decoupling
- * If radical innovation allows for economic growth without crossing biophysical 
- * limits, the "Noose" perspective would transition back to a "Rope."
- * Currently, the data shows high suppression of this alternative.
+ * VIABLE ALTERNATIVES: Technological Decoupling
+ * Suppression: Currently suppressed by thermodynamic constraints and 
+ * high capital/temporal requirements for radical innovation.
  */
 
 intent_viable_alternative(planetary_boundaries, technological_innovation, 'Radical resource decoupling').

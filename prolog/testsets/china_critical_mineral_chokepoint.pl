@@ -3,6 +3,7 @@
 % CONSTRAINT STORY: china_critical_mineral_chokepoint
 % ============================================================================
 % Revised: 2026-01-20 (v3.1 Hardened Standard)
+% Source: Global Supply Chain Analysis / Geopolitical Strategy
 % ============================================================================
 
 :- module(constraint_critical_minerals, []).
@@ -16,80 +17,133 @@
     domain_priors:base_extractiveness/2,
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:omega_variable/5,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_metric/3.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
    ========================================================================== */
 
 /**
- * SUMMARY:
- * China's dominance over the processing and supply of critical minerals 
- * (Rare Earths, Lithium, Cobalt) creates a global strategic chokepoint. 
- * While based on geology (Mountain), it is utilized as an instrument of 
- * diplomatic and economic leverage.
+ * CONSTRAINT IDENTIFICATION
+ * * constraint_id: china_critical_mineral_chokepoint
+ * human_readable: China Critical Mineral Chokepoint
+ * domain: economic/technological/political
+ * temporal_scope: 2010-Present
+ * spatial_scope: Global
+ * * SUMMARY:
+ * China's dominance over the processing and supply of critical minerals creates 
+ * a global strategic chokepoint. 
+ * While based on geology (Mountain), it functions as an instrument of 
+ * diplomatic leverage (Rope/Noose).
  * * KEY AGENTS:
- * - Global Tech/Defense Industry: Individual powerless; dependent on 
- * unchangeable supply chain realities (Mountain).
- * - Chinese State Planning: Institutional; uses market dominance as a 
- * "Rope" to coordinate international policy and industrial strategy.
- * - Emerging Market Competitors: Individual; margin and development are 
- * extracted or suppressed by predatory pricing and export quotas (Noose).
+ * - Tech_Defense_Industry: Powerless; dependent on supply chain (Mountain).
+ * - Chinese_State_Planning: Institutional; uses dominance for coordination (Rope).
+ * - Downstream_Manufacturers: Individual; margins extracted by quotas (Noose).
  */
 
-% Base extractiveness: 0.85. Rationale: High strategic extraction via 
-% value-chain dominance and export controls.
+/* ==========================================================================
+   2. BASE PROPERTIES (Context-Independent)
+   ========================================================================== */
+
+% Structural Anchor for System Extraction
+narrative_ontology:interval(china_critical_mineral_chokepoint, 2010, 2026).
+
+% Base extractiveness: 0.85. 
+% Rationale: High strategic extraction via value-chain dominance.
 domain_priors:base_extractiveness(china_critical_mineral_chokepoint, 0.85).
 domain_priors:suppression_score(china_critical_mineral_chokepoint, 0.70).
 domain_priors:requires_active_enforcement(china_critical_mineral_chokepoint).
 
+% Beneficiaries & Victims
+narrative_ontology:constraint_beneficiary(china_critical_mineral_chokepoint, state_industrial_planners).
+narrative_ontology:constraint_victim(china_critical_mineral_chokepoint, downstream_tech_manufacturers).
+
+% v3.1 Corrected Metrics
+narrative_ontology:constraint_metric(china_critical_mineral_chokepoint, extractiveness, 0.85).
+narrative_ontology:constraint_metric(china_critical_mineral_chokepoint, suppression_requirement, 0.70).
+
 /* ==========================================================================
-   2. INDEXED CLASSIFICATIONS (The Three-Legged Stool)
+   3. INDEXED CLASSIFICATIONS (Perspectival Truth)
    ========================================================================== */
 
-% PERSPECTIVE: Analytical (Geological/Infrastructure Reality)
-% The concentrated processing infrastructure is an unyielding Mountain.
-constraint_indexing:constraint_classification(china_critical_mineral_chokepoint, mountain, agent_power(analytical)).
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 1: Geological/Infrastructure Analyst - MOUNTAIN
+   -------------------------------------------------------------------------- */
+constraint_indexing:constraint_classification(
+    china_critical_mineral_chokepoint, 
+    mountain, 
+    context(
+        agent_power(analytical),
+        time_horizon(historical),
+        exit_options(trapped),
+        spatial_scope(global)
+    )
+) :- !.
 
-% PERSPECTIVE: Institutional (Diplomatic/State Level)
-% Dominance provides a "Rope"—a tool for coordinating trade war responses.
-constraint_indexing:constraint_classification(china_critical_mineral_chokepoint, rope, agent_power(institutional)).
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 2: Diplomatic/State Actor - ROPE
+   -------------------------------------------------------------------------- */
+constraint_indexing:constraint_classification(
+    china_critical_mineral_chokepoint, 
+    rope, 
+    context(
+        agent_power(institutional),
+        time_horizon(biographical),
+        exit_options(arbitrage),
+        spatial_scope(national)
+    )
+) :- !.
 
-% PERSPECTIVE: Individual (Downstream Manufacturers)
-% For the single firm, the chokepoint is a Noose; exit options are 
-% non-existent in the short-to-medium term.
-constraint_indexing:constraint_classification(china_critical_mineral_chokepoint, noose, agent_power(individual_powerless)).
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 3: Downstream Firm - NOOSE
+   -------------------------------------------------------------------------- */
+constraint_indexing:constraint_classification(
+    china_critical_mineral_chokepoint, 
+    noose, 
+    context(
+        agent_power(individual_powerless),
+        time_horizon(immediate),
+        exit_options(trapped),
+        spatial_scope(local)
+    )
+) :- !.
 
 /* ==========================================================================
-   3. MEASUREMENT LAYER (v3.1 Coercion Metrics)
+   4. TESTS
    ========================================================================== */
 
-% High strategic stakes for global transition and state-level suppression of alternatives.
-narrative_ontology:measurement(china_critical_mineral_chokepoint, downstream_firm, stakes_inflation(individual), 10, 0.9).
-narrative_ontology:measurement(china_critical_mineral_chokepoint, state_actor, suppression(competition), 10, 0.8).
+:- begin_tests(critical_mineral_tests).
+
+test(multi_perspective_variance) :-
+    constraint_indexing:constraint_classification(china_critical_mineral_chokepoint, T1, context(agent_power(analytical), _, _, _)),
+    constraint_indexing:constraint_classification(china_critical_mineral_chokepoint, T2, context(agent_power(individual_powerless), _, _, _)),
+    T1 \= T2.
+
+:- end_tests(critical_mineral_tests).
 
 /* ==========================================================================
-   4. MODEL INTERPRETATION (Hardened Commentary)
+   5. OMEGA VARIABLES (Ω)
+   ========================================================================== */
+
+narrative_ontology:omega_variable(
+    artificial_scarcity_threshold,
+    "Is the chokepoint a result of physical depletion (Mountain) or managed market access (Rope/Noose)?",
+    resolution_mechanism("Audit of export quota adjustments vs. global geological reserve reports"),
+    impact("If Mountain: Requires deep-sea/extra-planetary mining. If Noose: Requires trade reform."),
+    confidence_without_resolution(medium)
+).
+
+/* ==========================================================================
+   6. ALTERNATIVE ANALYSIS
    ========================================================================== */
 
 /**
- * MODEL INTERPRETATION:
- * This domain represents "Resource Mandatrophy." The "Fact" of geological 
- * distribution (Mountain) is leveraged to create a "Geopolitical Rope" that 
- * tightens into a "Supply Noose" for dependent agents.
- * * The Omega resolved here is "Artificial Scarcity": The physical presence 
- * of the mineral is a Mountain, but the *access* to it is a managed Rope.
- */
-
-/* ==========================================================================
-   5. ALTERNATIVE ANALYSIS
-   ========================================================================== */
-
-/**
- * ALTERNATIVE: Supply Chain Diversification (Friend-shoring)
- * Viability: Medium. Requires decades of infrastructure investment.
- * Suppression: High. Suppressed by the "Mountain" of existing Chinese 
- * economies of scale and environmental regulatory advantages.
+ * VIABLE ALTERNATIVES: Supply Chain Diversification (Friend-shoring)
+ * Suppression: Suppressed by Chinese economies of scale and environmental regulatory advantages.
  */
 
 intent_viable_alternative(china_critical_mineral_chokepoint, diversification, 'Development of domestic processing capacity').

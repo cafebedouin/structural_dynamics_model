@@ -116,3 +116,6 @@ param(coordination_resistance_max,   0.15).  % Minimal opposition
 param(constructed_suppression_min,   0.20).  % Requires enforcement
 param(constructed_resistance_min,    0.20).  % Faces opposition
 param(constructed_beneficiary_min,   2).     % Asymmetric gains threshold
+
+% --- Isomorphism Threshold ---
+param(isomorphism_threshold, 0.85).
