@@ -1,6 +1,7 @@
 :- use_module(scenario_manager).
 :- dynamic test_passed/1.
 :- dynamic test_failed/2.
+:- working_directory(_, '../prolog/').
 
 run_dynamic_suite :-
     retractall(test_passed(_)),
@@ -89,16 +90,16 @@ run_dynamic_suite :-
     test_file('../prolog/testsets/colorado_sbe_decentralization_friction.pl', 'colorado_regulatory_window', 'COLORADO_SBE_DECENTRALIZATION_FRICTION', 81),
     test_file('../prolog/testsets/columbia_2026_elections.pl', 'colombia_2026_presidential_election', 'COLUMBIA_2026_ELECTIONS', 82),
     test_file('../prolog/testsets/comitatus_bond.pl', 'comitatus_era', 'COMITATUS_BOND', 83),
-    test_file('../prolog/testsets/confirmation_bias.pl', 'confirmation_bias_interval', 'CONFIRMATION_BIAS', 84),
-    test_file('../prolog/testsets/constitutional_consecration.pl', 'gettysburg_address_analysis', 'CONSTITUTIONAL_CONSECRATION', 85),
-    test_file('../prolog/testsets/constitutional_supremacy.pl', 'marbury_v_madison_analysis', 'CONSTITUTIONAL_SUPREMACY', 86),
-    test_file('../prolog/testsets/continuum_hypothesis_undecidability.pl', 'continuum_era', 'CONTINUUM_HYPOTHESIS_UNDECIDABILITY', 87),
-    test_file('../prolog/testsets/conversational_dogmas_interuption.pl', 'conversational_dogmas_interval', 'CONVERSATIONAL_DOGMAS_INTERUPTION', 88),
-    test_file('../prolog/testsets/conways_game_of_life_dynamics.pl', 'conway_era', 'CONWAYS_GAME_OF_LIFE_DYNAMICS', 89),
-    test_file('../prolog/testsets/copyleft_viral_licensing.pl', 'copyleft_viral_licensing', 'COPYLEFT_VIRAL_LICENSING', 90),
-    test_file('../prolog/testsets/copyright_protection.pl', 'copyright_protection', 'COPYRIGHT_PROTECTION', 91),
-    test_file('../prolog/testsets/cost_of_observation.pl', 'evolutionary_pressure_01', 'COST_OF_OBSERVATION', 92),
-    test_file('../prolog/testsets/coumpounding_logic.pl', 'compounding_logic_analysis', 'COUMPOUNDING_LOGIC', 93),
+    test_file('../prolog/testsets/compounding_logic.pl', 'compounding_logic_analysis', 'COMPOUNDING_LOGIC', 84),
+    test_file('../prolog/testsets/confirmation_bias.pl', 'confirmation_bias_interval', 'CONFIRMATION_BIAS', 85),
+    test_file('../prolog/testsets/constitutional_consecration.pl', 'gettysburg_address_analysis', 'CONSTITUTIONAL_CONSECRATION', 86),
+    test_file('../prolog/testsets/constitutional_supremacy.pl', 'marbury_v_madison_analysis', 'CONSTITUTIONAL_SUPREMACY', 87),
+    test_file('../prolog/testsets/continuum_hypothesis_undecidability.pl', 'continuum_era', 'CONTINUUM_HYPOTHESIS_UNDECIDABILITY', 88),
+    test_file('../prolog/testsets/conversational_dogmas_interuption.pl', 'conversational_dogmas_interval', 'CONVERSATIONAL_DOGMAS_INTERUPTION', 89),
+    test_file('../prolog/testsets/conways_game_of_life_dynamics.pl', 'conway_era', 'CONWAYS_GAME_OF_LIFE_DYNAMICS', 90),
+    test_file('../prolog/testsets/copyleft_viral_licensing.pl', 'copyleft_viral_licensing', 'COPYLEFT_VIRAL_LICENSING', 91),
+    test_file('../prolog/testsets/copyright_protection.pl', 'copyright_protection', 'COPYRIGHT_PROTECTION', 92),
+    test_file('../prolog/testsets/cost_of_observation.pl', 'evolutionary_pressure_01', 'COST_OF_OBSERVATION', 93),
     test_file('../prolog/testsets/countable_infinity_cardinality.pl', 'countable_infinity_cardinality', 'COUNTABLE_INFINITY_CARDINALITY', 94),
     test_file('../prolog/testsets/couples_residency_match.pl', 'couples_residency_match', 'COUPLES_RESIDENCY_MATCH', 95),
     test_file('../prolog/testsets/cow_field_poop.pl', 'cow_field_poop', 'COW_FIELD_POOP', 96),

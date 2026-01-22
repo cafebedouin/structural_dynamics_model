@@ -13,7 +13,7 @@
 :- use_module(narrative_ontology).
 
 % --- Namespace Hooks (Required for loading) ---
-:- multifile 
+:- multifile
     domain_priors:base_extractiveness/2,
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
@@ -32,9 +32,9 @@
  * temporal_scope: 2025-2030 (Immediate to Biographical)
  * spatial_scope: Global (Multipolar focus)
  * * SUMMARY:
- * The return of Donald Trump has accelerated a shift from a US-led liberal 
- * international order to a multipolar "post-Western" world. This transition 
- * acts as a constraint on European security and US global affinity while 
+ * The return of Donald Trump has accelerated a shift from a US-led liberal
+ * international order to a multipolar "post-Western" world. This transition
+ * acts as a constraint on European security and US global affinity while
  * expanding the agency of "middle powers" and China.
  * * KEY AGENTS:
  * - [cite_start]The Trump Administration: The "Normal Great Power" agent, transactional and predatory[cite: 650].
@@ -42,8 +42,8 @@
  * - [cite_start]Middle Powers (India/Brazil/South Africa): The "Pole-Hoppers," viewing multipolarity as an opportunity for strategic arbitrage[cite: 709, 710].
  * - [cite_start]China: The "Rising Pole," increasingly viewed as a necessary partner or ally[cite: 8, 40].
  * * NARRATIVE ARC:
- * The US moves from being a "Liberal Leviathan" (Rope for allies) to a transactional 
- * great power (Noose for allies, Rope for middle powers). This forces a 
+ * The US moves from being a "Liberal Leviathan" (Rope for allies) to a transactional
+ * great power (Noose for allies, Rope for middle powers). This forces a
  * [cite_start]"geopolitical awakening" in Europe as the Pax Americana ends[cite: 1360].
  */
 
@@ -56,13 +56,13 @@ narrative_ontology:interval(post_trump_return, 2025, 2026).
 narrative_ontology:constraint_claim(trump_making_china_great_2026, noose).
 
 % Base extractiveness: 0.65
-% Rationale: Trump's "America First" approach is explicitly transactional and 
-[cite_start]% predatory[cite: 20, 23]. [cite_start]Tariffs and "seizure of Greenland" threats imply high extraction[cite: 756, 1352].
+% Rationale: Trump's "America First" approach is explicitly transactional and
+% predatory[cite: 20, 23]. [cite_start]Tariffs and "seizure of Greenland" threats imply high extraction[cite: 756, 1352].
 domain_priors:base_extractiveness(trump_making_china_great_2026, 0.65).
 
 % Suppression: 0.40
-% Rationale: Alternatives (liberal order) are visible but being dismantled. 
-[cite_start]% Transactionalism is the new "normal"[cite: 650].
+% Rationale: Alternatives (liberal order) are visible but being dismantled.
+% Transactionalism is the new "normal"[cite: 650].
 domain_priors:suppression_score(trump_making_china_great_2026, 0.40).
 
 % Enforcement: Requires active maintenance (tariffs, summits, intervention in Venezuela)
@@ -178,20 +178,20 @@ test(us_unreliability_effect) :-
  * Date: 2026-01-19
  * * KEY DECISIONS:
  * * 1. EXTRACTIVENESS SCORE (0.65):
- * [cite_start]The document paints a picture of a "predatory" US [cite: 23] and "asymmetric" 
- * [cite_start]threats (Greenland)[cite: 1352]. However, it isn't 1.0 because middle powers 
+ * [cite_start]The document paints a picture of a "predatory" US [cite: 23] and "asymmetric"
+ * [cite_start]threats (Greenland)[cite: 1352]. However, it isn't 1.0 because middle powers
  * [cite_start]can still extract benefits by trading poles[cite: 710].
  * * 2. SUPPRESSION SCORE (0.40):
- * [cite_start]The liberal order isn't invisible—it's just being "disavowed"[cite: 21]. 
+ * [cite_start]The liberal order isn't invisible—it's just being "disavowed"[cite: 21].
  * The shift is visible and being actively analyzed by think tanks like ECFR.
  * * 3. PERSPECTIVE SELECTION:
  * - European Citizen: Represents the "victim" of the shift (Noose).
  * - Middle-Power Diplomat: Represents the "beneficiary" of multipolarity (Rope).
  * - ECFR Researcher: Represents the "analytical" view of the Mountain.
  * * 4. AMBIGUITIES:
- * - [cite_start]The document suggests "expectations of Trump are lower than 12 months ago" [cite: 10] 
+ * - [cite_start]The document suggests "expectations of Trump are lower than 12 months ago" [cite: 10]
  * [cite_start]but also that substantial numbers believe he successfully "defended America's interests"[cite: 649].
- * I resolved this by noting the "Normal Great Power" transition—it's a Noose for allies 
+ * I resolved this by noting the "Normal Great Power" transition—it's a Noose for allies
  * but a successful Rope for the US electorate.
  */
 
@@ -226,8 +226,8 @@ omega_variable(
  * [cite_start]Suppression: Actively disavowed by Trump's "America First"[cite: 20, 21].
  * [cite_start]Evidence: "Donald Trump did not go into politics to make China great again... his aggressive 'America First' approach was driving people closer to China."[cite: 17, 20].
  * * CONCLUSION:
- * The fact that a once-stable "Rope" (NATO/Liberal Order) has been transformed 
- * into a "Noose" or discarded entirely by the current US administration is 
+ * The fact that a once-stable "Rope" (NATO/Liberal Order) has been transformed
+ * into a "Noose" or discarded entirely by the current US administration is
  * what characterizes the 2026 geopolitical environment.
  */
 

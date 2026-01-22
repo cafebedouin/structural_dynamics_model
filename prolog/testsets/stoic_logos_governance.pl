@@ -176,13 +176,14 @@ test(perspectival_shift) :-
    6. OMEGA VARIABLES (Ω)
    ========================================================================== */
 
-omega_variable(internal_sincerity, 
-    "To what extent was Marcus's self-debasement a performance for his own ego?", 
-    "The privacy of the text suggests high sincerity, but the 'Stoic Pose' is a known social construct.").
+% Instead of local facts, use the namespace prefix
+narrative_ontology:omega_variable(internal_sincerity, 
+    'To what extent was Marcus's self-debasement a performance for his own ego?', 
+    'The privacy of the text suggests high sincerity...').
 
-omega_variable(christian_persecution_intent, 
-    "Was the persecution of Christians a direct result of Stoic dogma or administrative inertia?", 
-    "The text suggests he viewed them as irrational, which in Stoicism justifies suppression.").
+narrative_ontology:omega_variable(christian_persecution_intent, 
+    'Was the persecution of Christians a direct result of Stoic dogma or administrative inertia?', 
+    'The text suggests he viewed them as irrational...').
 
 /* ==========================================================================
    7. ALTERNATIVE ANALYSIS

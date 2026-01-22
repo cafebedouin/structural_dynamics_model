@@ -59,11 +59,11 @@ narrative_ontology:constraint_claim(compounding_logic, rope).
 domain_priors:base_extractiveness(compounding_logic, 0.5).
 
 % Suppression score: 0.4
-[cite_start]% Rationale: One can choose not to participate by consuming immediately[cite: 164], 
+% Rationale: One can choose not to participate by consuming immediately[cite: 164], 
 % though the mathematical "rules" of the results cannot be altered.
 domain_priors:suppression_score(compounding_logic, 0.4).
 
-[cite_start]% Enforcement requirements: Requires "stable currency" and "wisdom"[cite: 173].
+% Enforcement requirements: Requires "stable currency" and "wisdom"[cite: 173].
 domain_priors:requires_active_enforcement(compounding_logic).
 
 % Metrics required for Section 1 of the Executive Summary
@@ -92,8 +92,6 @@ constraint_victim(compounding_logic, [the_short_sighted, debtors, the_impatient]
    [cite_start]that turns "tiny" reinvestment into a "mushroomed" result[cite: 165]. It 
    [cite_start]requires the agent to "rest assured" and trust the system[cite: 144].
    -------------------------------------------------------------------------- */
-
-
 
 constraint_indexing:constraint_classification(
     compounding_logic,
@@ -187,7 +185,7 @@ test(alignment_check) :-
     E =< 0.5.
 
 test(enforcement_dependency) :-
-    [cite_start]% Compounding requires active enforcement of "stable currency" [cite: 173]
+    % Compounding requires active enforcement of "stable currency" [cite: 173]
     domain_priors:requires_active_enforcement(compounding_logic).
 
 :- end_tests(compounding_logic_tests).
@@ -218,17 +216,17 @@ test(enforcement_dependency) :-
 
 omega_variable(
     reinvestment_availability,
-    [cite_start]"Will there always be 'really outstanding businesses' or 'gems' available for reinvestment? [cite: 127]",
-    [cite_start]resolution_mechanism("Monitoring market saturation and 'knee-deep' vs 'nothing looks compelling' cycles[cite: 129]."),
-    impact("If gems disappear: The Rope of compounding goes slack, and the system stalls."),
+    'Will there always be \'really outstanding businesses\' or \'gems\' available for reinvestment?',
+    resolution_mechanism('Monitoring market saturation and \'knee-deep\' vs \'nothing looks compelling\' cycles'),
+    impact('If gems disappear: The Rope of compounding goes slack, and the system stalls.'),
     confidence_without_resolution(medium)
 ).
 
 omega_variable(
     monetary_survival,
-    [cite_start]"Can individuals truly 'cope with monetary instability' through equities? [cite: 149]",
-    resolution_mechanism("Historical analysis of equity performance during hyperinflation."),
-    impact("If no: Compounding in paper-denominated assets becomes a Noose."),
+    'Can individuals truly \'cope with monetary instability\' through equities?',
+    resolution_mechanism('Historical analysis of equity performance during hyperinflation.'),
+    impact('If no: Compounding in paper-denominated assets becomes a Noose.'),
     confidence_without_resolution(low)
 ).
 
@@ -254,8 +252,3 @@ omega_variable(
    END OF CONSTRAINT STORY
    ========================================================================== */
 
-
-% --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
-constraint_indexing:constraint_classification(coumpounding_logic, mountain, agent_power(analytical)).
-constraint_indexing:constraint_classification(coumpounding_logic, rope, agent_power(institutional)).
-constraint_indexing:constraint_classification(coumpounding_logic, noose, agent_power(individual_powerless)).

@@ -14,7 +14,7 @@
 :- use_module(narrative_ontology).
 
 % --- Namespace Hooks (Required for loading) ---
-:- multifile 
+:- multifile
     domain_priors:base_extractiveness/2,
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
@@ -32,18 +32,18 @@
  * temporal_scope: 2026 (Modern era / Post-WWII order erosion)
  * spatial_scope: Latin America and the Caribbean
  * * SUMMARY:
- * President Lula of Brazil decries the Jan 3, 2026 US military intervention in 
- * Venezuela as a violation of the sovereign equality of nations. He describes a 
- * shift where "zones of influence" and unilateral force replace the collectively 
+ * President Lula of Brazil decries the Jan 3, 2026 US military intervention in
+ * Venezuela as a violation of the sovereign equality of nations. He describes a
+ * shift where "zones of influence" and unilateral force replace the collectively
  * [cite_start]agreed-upon rules of the UN Charter[cite: 1, 2, 4].
  * * KEY AGENTS:
  * - [cite_start]The United States: Hegemonic power acting unilaterally through "fear and coercion"[cite: 5, 10].
  * - [cite_start]Luiz Inácio Lula da Silva: Institutional leader of a regional power advocating for multipolarity and international law[cite: 6, 7].
  * - [cite_start]The Venezuelan People: Subjects whose self-determination is bypassed by external military force[cite: 11].
  * * NARRATIVE ARC:
- * The post-WWII multilateral order is portrayed as a failing "Rope" being 
- * transformed into a "Noose" by unilateral hegemonic actions. Lula argues that 
- * for Latin America, this represents a return to an "outdated" era of neocolonial 
+ * The post-WWII multilateral order is portrayed as a failing "Rope" being
+ * transformed into a "Noose" by unilateral hegemonic actions. Lula argues that
+ * for Latin America, this represents a return to an "outdated" era of neocolonial
  * [cite_start]incursions[cite: 2, 9].
  */
 
@@ -56,16 +56,16 @@ narrative_ontology:interval(lula_hemisphere_2026, 2026, 2026).
 narrative_ontology:constraint_claim(lula_hemisphere_2026, noose).
 
 % Base extractiveness: 0.75
-% Rationale: Military capture of a president and "neocolonial incursions for 
-[cite_start]% strategic resources" represent high asymmetry and resource extraction[cite: 1, 9, 10].
+% Rationale: Military capture of a president and "neocolonial incursions for
+% strategic resources" represent high asymmetry and resource extraction[cite: 1, 9, 10].
 domain_priors:base_extractiveness(lula_hemisphere_2026, 0.75).
 
 % Suppression: 0.85
-% Rationale: Unilateral force "arrogates to itself the right to deliver justice," 
-[cite_start]% effectively suppressing the alternative of the UN Security Council[cite: 2, 4, 10].
+% Rationale: Unilateral force "arrogates to itself the right to deliver justice,"
+% effectively suppressing the alternative of the UN Security Council[cite: 2, 4, 10].
 domain_priors:suppression_score(lula_hemisphere_2026, 0.85).
 
-[cite_start]% Enforcement: Requires active maintenance (Bombings, President capture)[cite: 1].
+% Enforcement: Requires active maintenance (Bombings, President capture)[cite: 1].
 domain_priors:requires_active_enforcement(lula_hemisphere_2026).
 
 % BENEFICIARIES & VICTIMS
@@ -88,14 +88,14 @@ narrative_ontology:constraint_metric(lula_hemisphere_2026, suppression_requireme
    [cite_start]WHEN: immediate - Survival and safe return home are current necessities[cite: 11].
    [cite_start]WHERE: trapped - Subject to the "anomie" and violence of military attack[cite: 2, 5].
    [cite_start]SCOPE: national - Their entire home country is under direct attack[cite: 5].
-   
+
    WHY THIS CLASSIFICATION:
-   For the individual caught in the conflict, the US military intervention 
-   appears as an unchangeable, overwhelming force of nature (Mountain) that 
+   For the individual caught in the conflict, the US military intervention
+   appears as an unchangeable, overwhelming force of nature (Mountain) that
    [cite_start]removes all agency from the people[cite: 2, 11].
-   
+
    NARRATIVE EVIDENCE:
-   "The future of Venezuela... must remain in the hands of its people... this is 
+   "The future of Venezuela... must remain in the hands of its people... this is
    [cite_start]an essential condition for the millions... sheltered in Brazil to safely return"[cite: 11].
    -------------------------------------------------------------------------- */
 
@@ -120,13 +120,13 @@ constraint_indexing:constraint_classification(
    [cite_start]WHEN: biographical - Spanning 200 years of independent history[cite: 5].
    [cite_start]WHERE: constrained - Trying to maintain dialogue with the US despite attack[cite: 12].
    [cite_start]SCOPE: continental - Defending a hemisphere that "belongs to all of us"[cite: 12].
-   
+
    WHY THIS CLASSIFICATION:
-   Lula views the intervention as a coercive, extractive "Noose" that violates 
+   Lula views the intervention as a coercive, extractive "Noose" that violates
    [cite_start]collectively agreed-upon rules to serve hegemonic interests[cite: 2, 6, 9].
-   
+
    NARRATIVE EVIDENCE:
-   "We will not be subservient to hegemonic endeavors... the division of the 
+   "We will not be subservient to hegemonic endeavors... the division of the
    [cite_start]world into zones of influence... [is] outdated and damaging"[cite: 6, 9].
    -------------------------------------------------------------------------- */
 
@@ -151,13 +151,13 @@ constraint_indexing:constraint_classification(
    [cite_start]WHEN: biographical - Using force as a rule to "resolve disputes"[cite: 2].
    [cite_start]WHERE: arbitrage - Acting unilaterally while bypassing the UN[cite: 4].
    [cite_start]SCOPE: global - Reconfiguring the international system[cite: 2].
-   
+
    WHY THIS CLASSIFICATION:
-   From the hegemonic perspective, the use of force is a functional tool (Rope) 
+   From the hegemonic perspective, the use of force is a functional tool (Rope)
    [cite_start]to achieve strategic goals and "justice" where multilateral systems failed[cite: 1, 4].
-   
+
    NARRATIVE EVIDENCE:
-   "It is not legitimate for another state to arrogate to itself the right to 
+   "It is not legitimate for another state to arrogate to itself the right to
    [cite_start]deliver justice"[cite: 4].
    -------------------------------------------------------------------------- */
 
@@ -204,13 +204,13 @@ test(continental_scope_noose) :-
  * LLM GENERATION NOTES
  * * Model: Gemini 2.0 Flash
  * * KEY DECISIONS:
- * 1. EXTRACTIVENESS SCORE (0.75): High score based on the "capture" of a 
+ * 1. EXTRACTIVENESS SCORE (0.75): High score based on the "capture" of a
  * [cite_start]head of state and "neocolonial incursions" for resources[cite: 1, 9].
- * * 2. SUPPRESSION SCORE (0.85): Reflects the "selective" following of norms 
+ * * 2. SUPPRESSION SCORE (0.85): Reflects the "selective" following of norms
  * [cite_start]and the arrogance of unilateral justice replacing collective rules[cite: 2, 4].
- * * 3. OMEGAS: The central uncertainty is the *motive* for the capture. Lula 
- * [cite_start]attributes it to strategic resources/hegemony[cite: 6, 9], while the US 
- * likely claims "justice/democracy." 
+ * * 3. OMEGAS: The central uncertainty is the *motive* for the capture. Lula
+ * [cite_start]attributes it to strategic resources/hegemony[cite: 6, 9], while the US
+ * likely claims "justice/democracy."
  */
 
 /* ==========================================================================
@@ -219,9 +219,9 @@ test(continental_scope_noose) :-
 
 omega_variable(
     us_intervention_intent,
-    "Was the US capture of the Venezuelan president primarily for human rights justice or strategic resource extraction?",
-    resolution_mechanism("Audit of captured president's trial evidence vs US corporate contracts signed in Venezuela post-capture."),
-    impact("If Justice: order remains a failing Rope. If Extraction: order is a predatory Noose."),
+    'Was the US capture of the Venezuelan president primarily for human rights justice or strategic resource extraction?',
+    resolution_mechanism('Audit of captured president\'s trial evidence vs US corporate contracts signed in Venezuela post-capture.'),
+    impact('If Justice: order remains a failing Rope. If Extraction: order is a predatory Noose.'),
     confidence_without_resolution(medium)
 ).
 

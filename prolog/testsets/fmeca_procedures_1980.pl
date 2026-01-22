@@ -62,17 +62,17 @@ narrative_ontology:constraint_claim(fmeca_procedures_1980, rope).
 % Base extractiveness score (0.0-1.0)
 % Rationale: Moderate (0.4). While it aims for safety, it "extracts" significant 
 % labor and time from contractors to satisfy procuring activity data requirements 
-[cite_start]%[cite: 33, 45, 1056].
+%[cite: 33, 45, 1056].
 domain_priors:base_extractiveness(fmeca_procedures_1980, 0.4).
 
 % Suppression score (0.0-1.0)
 % Rationale: Moderate (0.5). It strictly mandates specific coding systems 
-[cite_start]% (MIL-STD-780) [cite: 198] [cite_start]and worksheet formats[cite: 182], punishing 
+% (MIL-STD-780) [cite: 198] [cite_start]and worksheet formats[cite: 182], punishing 
 % alternative risk-management styles through contract non-compliance.
 domain_priors:suppression_score(fmeca_procedures_1980, 0.5).
 
 % Enforcement: Requires active maintenance by the procuring activity and 
-[cite_start]% contracting officers[cite: 109, 169].
+% contracting officers[cite: 109, 169].
 domain_priors:requires_active_enforcement(fmeca_procedures_1980).
 
 % BENEFICIARIES & VICTIMS
@@ -232,17 +232,17 @@ test(tailoring_as_rope_flexibility) :-
 
 omega_variable(
     fmeca_actual_impact,
-    "Does FMECA actually improve design, or is its criticism as 'limited use' inherently true?",
-    resolution_mechanism("Longitudinal study of failure rates in FMECA-compliant vs non-compliant complex systems"),
-    impact("If Mountain (physics-driven): safety increases. If Noose (bureaucracy-driven): only paperwork increases."),
+    'Does FMECA actually improve design, or is its criticism as \'limited use\' inherently true?',
+    resolution_mechanism('Longitudinal study of failure rates in FMECA-compliant vs non-compliant complex systems'),
+    impact('If Mountain (physics-driven): safety increases. If Noose (bureaucracy-driven): only paperwork increases.'),
     confidence_without_resolution(medium)
 ).
 
 omega_variable(
     tailoring_competence,
-    "Is the procuring activity competent to 'tailor' requirements appropriately, or does it default to maximum suppression?",
-    resolution_mechanism("Audit of tailoring decisions across diverse DoD programs"),
-    impact("If tailored: Rope. If default: Noose for all contractors."),
+    'Is the procuring activity competent to \'tailor\' requirements appropriately, or does it default to maximum suppression?',
+    resolution_mechanism('Audit of tailoring decisions across diverse DoD programs'),
+    impact('If tailored: Rope. If default: Noose for all contractors.'),
     confidence_without_resolution(low)
 ).
 

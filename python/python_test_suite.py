@@ -41,7 +41,8 @@ def build_suite():
     with open(OUTPUT_FILE, 'w') as out:
         out.write(":- use_module(scenario_manager).\n")
         out.write(":- dynamic test_passed/1.\n")
-        out.write(":- dynamic test_failed/2.\n\n")
+        out.write(":- dynamic test_failed/2.\n")
+        out.write(":- working_directory(_, '../prolog/').\n\n")
         out.write("run_dynamic_suite :-\n")
         out.write("    retractall(test_passed(_)),\n")
         out.write("    retractall(test_failed(_, _)),\n")

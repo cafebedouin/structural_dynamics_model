@@ -99,7 +99,7 @@ constraint_victim(hoa_architectural_covenants, individual_homeowners).
 3. INDEXED CLASSIFICATIONS (Perspectival Truth)
 ========================================================================= */
 
-## /* --------------------------------------------------------------------------
+/* --------------------------------------------------------------------------
 PERSPECTIVE 1: INDIVIDUAL HOMEOWNER - Noose
 
 WHO: individual_powerless (subject to arbitrary fines)

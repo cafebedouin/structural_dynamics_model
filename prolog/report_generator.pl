@@ -111,28 +111,7 @@ generate_full_report(IntervalID) :-
     format('====================================================~n').
 
 /* ============================================================================
-   2. ISOMORPHISM LOGIC
-   ============================================================================ */
-
-generate_isomorphism_audit(IntervalID) :-
-    format('~n[CROSS-DOMAIN ISOMORPHISM & RISK AUDIT: ~w]~n', [IntervalID]),
-    (   setof(iso(C, Twin, Score, Type),
-              (narrative_ontology:affects_constraint(IntervalID, C),
-               isomorphism_engine:find_high_risk_isomorphism(C, Twin, Score),
-               drl_core:dr_type(C, Type)),
-              Isos)
-    ->  display_isomorphisms(Isos)
-    ;   format('  No high-risk isomorphisms detected for current constraints.~n')
-    ).
-
-display_isomorphisms([]).
-display_isomorphisms([iso(C, T, S, Ty)|Rest]) :-
-    format('  ! ALERT: ~w (~w) is a Structural Twin to ~w (Score: ~2f)~n', [C, Ty, T, S]),
-    format('    > Strategy: Search for ~w resolutions in KB.~n', [T]),
-    display_isomorphisms(Rest).
-
-/* ============================================================================
-   3. OMEGA GENERATION
+   2. OMEGA GENERATION
    ============================================================================ */
 
 generate_omegas_from_gaps(IntervalID) :-
@@ -206,7 +185,7 @@ assert_omega_if_new(OmegaID, Type, Question) :-
     ).
 
 /* ============================================================================
-   4. INDEXED REPORTING & AUDITS
+   3. INDEXED REPORTING & AUDITS
    ============================================================================ */
 
 perspectival_gap_audit(C) :-
@@ -270,3 +249,21 @@ sublist([H|T], [H|T2]) :- !, sublist(T, T2).
 sublist(Sub, [_|T]) :- sublist(Sub, T).
 
 classify_interval(_IntervalID, stable, high).
+
+% Ensure these are at the BOTTOM of report_generator.pl, NOT inside generate_full_report
+generate_isomorphism_audit(IntervalID) :-
+    format('~n[CROSS-DOMAIN ISOMORPHISM & RISK AUDIT: ~w]~n', [IntervalID]),
+    (   setof(iso(C, Twin, Score, Type),
+              (narrative_ontology:affects_constraint(IntervalID, C),
+               isomorphism_engine:find_high_risk_isomorphism(C, Twin, Score),
+               drl_core:dr_type(C, Type)),
+              Isos)
+    ->  display_isomorphisms(Isos)
+    ;   format('  No high-risk isomorphisms detected for current constraints.~n')
+    ).
+
+display_isomorphisms([]).
+display_isomorphisms([iso(C, T, S, Ty)|Rest]) :-
+    format('  ! ALERT: ~w (~w) is a Structural Twin to ~w (Score: ~2f)~n', [C, Ty, T, S]),
+    format('    > Strategy: Search for ~w resolutions in KB.~n', [T]),
+    display_isomorphisms(Rest).

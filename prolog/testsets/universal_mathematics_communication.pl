@@ -107,7 +107,7 @@ narrative_ontology:constraint_metric(universal_mathematics_communication, suppre
 3. INDEXED CLASSIFICATIONS (Perspectival Truth)
 ========================================================================== */
 
-## /* --------------------------------------------------------------------------
+/* --------------------------------------------------------------------------
 PERSPECTIVE 1: HONEYBEE (Powerless Subject) - Mountain
 
 WHO: individual_powerless - Subjects in human-led experiments.
@@ -143,7 +143,7 @@ domain_priors:suppression_score(universal_mathematics_communication, S),
 S < 0.3,
 !.
 
-## /* --------------------------------------------------------------------------
+/* --------------------------------------------------------------------------
 PERSPECTIVE 2: NASA/SETI SCIENTIST (Institutional) - Rope
 
 WHO: institutional - Backed by state/academic power to send interstellar signals.
@@ -177,7 +177,7 @@ domain_priors:base_extractiveness(universal_mathematics_communication, E),
 E < 0.3,
 !.
 
-## /* --------------------------------------------------------------------------
+/* --------------------------------------------------------------------------
 PERSPECTIVE 3: ANALYTICAL PHILOSOPHER - Rope/Mountain Hybrid
 
 WHO: analytical - Observer questioning the nature of reality.

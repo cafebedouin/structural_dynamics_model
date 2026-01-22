@@ -32,10 +32,10 @@ constraint_indexing:constraint_classification/3.
 
 * human_readable: The AI Task Horizon and Reliability Constraint
 * domain: technological/economic
-* temporal_scope: November 2025 (Pre-Opus 4.5 release) 
+* temporal_scope: November 2025 (Pre-Opus 4.5 release)
 
 
-* spatial_scope: Global 
+* spatial_scope: Global
 
 
 * * SUMMARY:
@@ -86,7 +86,7 @@ constraint_indexing:constraint_classification/3.
 ========================================================================== */
 
 % Required for [STEP 1] and [STEP 2] of the DR-Audit Suite
-narrative_ontology:interval(pre_opus_4_5_era, 0, 10). 
+narrative_ontology:interval(pre_opus_4_5_era, 0, 10).
 narrative_ontology:constraint_claim(ai_task_horizon_reliability, mountain).
 
 % Base extractiveness score (0.0 = no extraction, 1.0 = full extraction)
@@ -111,7 +111,7 @@ narrative_ontology:constraint_metric(ai_task_horizon_reliability, suppression_re
 3. INDEXED CLASSIFICATIONS (Perspectival Truth)
 ========================================================================== */
 
-## /* --------------------------------------------------------------------------
+/* --------------------------------------------------------------------------
 PERSPECTIVE 1: ENTERPRISE API USER - Mountain
 
 WHO: institutional - Automation-dominant enterprise deployments.
@@ -145,7 +145,7 @@ spatial_scope(global)
 domain_priors:emerges_naturally(ai_task_horizon_reliability),
 !.
 
-## /* --------------------------------------------------------------------------
+/* --------------------------------------------------------------------------
 PERSPECTIVE 2: CLAUDE.AI WEB USER - Rope
 
 WHO: individual_moderate - Users with "Skills for workflow customization".
@@ -181,7 +181,7 @@ domain_priors:base_extractiveness(ai_task_horizon_reliability, E),
 E < 0.5,
 !.
 
-## /* --------------------------------------------------------------------------
+/* --------------------------------------------------------------------------
 PERSPECTIVE 3: MACROECONOMIST - Noose (Deskilling Risk)
 
 WHO: analytical - Researchers observing aggregate labor shifts.
@@ -248,10 +248,8 @@ context(individual_moderate, biographical, mobile, _, _, _)
 * Demonstrates that reliability halves the implied economic "speedup."
 */
 test(productivity_halving_effect) :-
-BaselineGain = 1.8, SuccessAdjustedGain = 1.0, 
+BaselineGain = 1.8, SuccessAdjustedGain = 1.0,
 BaselineGain > SuccessAdjustedGain.
-
-
 
 /**
 
@@ -259,10 +257,8 @@ BaselineGain > SuccessAdjustedGain.
 * Short horizons (API) hit the 50% success wall faster than long horizons (Web).
 */
 test(horizon_duration_limit) :-
-APILimit = 3.5, WebLimit = 19.0, 
+APILimit = 3.5, WebLimit = 19.0,
 WebLimit > APILimit.
-
-
 
 :- end_tests(ai_reliability_tests).
 

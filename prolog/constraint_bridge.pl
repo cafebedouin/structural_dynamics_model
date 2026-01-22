@@ -86,8 +86,7 @@ dr_diagnostic_report(IntervalID) :-
     
     % --- SECTION 2: FEASIBILITY BRIDGE ---
     format('~n[FEASIBILITY BRIDGE]~n'),
-    % Only show recommendations that affect a constraint in the current inventory.
-    % Using _ConsName resolves the singleton variable warning.
+    % Using _ConsName resolves the singleton variable warning
     forall((narrative_ontology:recommendation(RID, Summary),
             narrative_ontology:affects_constraint(RID, _ConsName)),
            (recommendation_feasibility(RID, Stat, Vs),

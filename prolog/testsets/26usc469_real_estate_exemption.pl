@@ -179,7 +179,3 @@ test(employment_suppression_logic) :-
  */
 
 
-% --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
-constraint_indexing:constraint_classification(26usc469_real_estate_exemption, mountain, agent_power(analytical)).
-constraint_indexing:constraint_classification(26usc469_real_estate_exemption, rope, agent_power(institutional)).
-constraint_indexing:constraint_classification(26usc469_real_estate_exemption, noose, agent_power(individual_powerless)).

@@ -62,11 +62,11 @@ domain_priors:base_extractiveness(comitatus_bond, 0.4).
 
 % Suppression score
 % Rationale: High. Alternatives to the bond are practically invisible. 
-[cite_start]% To be without a lord is to be a "wanderer" or a "wraith." [cite: 1]
+% To be without a lord is to be a "wanderer" or a "wraith." [cite: 1]
 domain_priors:suppression_score(comitatus_bond, 0.8).
 
 % Enforcement requirements
-[cite_start]% Requires active enforcement (gold-giving) and cultural transmission. [cite: 1]
+% Requires active enforcement (gold-giving) and cultural transmission. [cite: 1]
 domain_priors:requires_active_enforcement(comitatus_bond).
 
 % Metrics required for Section 1 of the Executive Summary
@@ -223,9 +223,9 @@ test(gold_enforcement) :-
 
 omega_variable(
     wyrd_nature,
-    "Is 'Wyrd' (Fate) a literal Mountain constraint or a retrospective Rope used to explain failure?",
-    resolution_mechanism("Textual analysis of whether Beowulf attributes success to God or Fate consistently."),
-    impact("If Mountain: The comitatus is secondary to Fate. If Rope: The comitatus is the primary driver."),
+    'Is \'Wyrd\' (Fate) a literal Mountain constraint or a retrospective Rope used to explain failure?',
+    resolution_mechanism('Textual analysis of whether Beowulf attributes success to God or Fate consistently.'),
+    impact('If Mountain: The comitatus is secondary to Fate. If Rope: The comitatus is the primary driver.'),
     confidence_without_resolution(medium)
 ).
 

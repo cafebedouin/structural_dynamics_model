@@ -91,7 +91,7 @@ narrative_ontology:constraint_metric(necessary_day_job, suppression_requirement,
 3. INDEXED CLASSIFICATIONS (Perspectival Truth)
 ========================================================================== */
 
-## /* --------------------------------------------------------------------------
+/* --------------------------------------------------------------------------
 PERSPECTIVE 1: HERMAN MELVILLE - Mountain
 
 WHO: individual_powerless - A man devastated by criticism, working without raises.
@@ -125,7 +125,7 @@ domain_priors:suppression_score(necessary_day_job, S),
 S > 0.6,
 !.
 
-## /* --------------------------------------------------------------------------
+/* --------------------------------------------------------------------------
 PERSPECTIVE 2: ED SIMON (Adjunct Era) - Noose
 
 WHO: individual_powerless - Facing "ample disrespect" and "nonexistent benefits".
@@ -159,7 +159,7 @@ domain_priors:base_extractiveness(necessary_day_job, E),
 E > 0.5,
 !.
 
-## /* --------------------------------------------------------------------------
+/* --------------------------------------------------------------------------
 PERSPECTIVE 3: WILLIAM CARLOS WILLIAMS / AGATHA CHRISTIE - Rope
 
 WHO: individual_powerful (or moderate) - Professionals with specialized skills.

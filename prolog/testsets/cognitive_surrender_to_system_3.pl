@@ -60,17 +60,17 @@ narrative_ontology:constraint_claim(cognitive_surrender_to_system_3, noose).
 
 % Base extractiveness score: Moderate (0.65)
 % Rationale: AI "extracts" human critical reasoning and autonomy in exchange 
-[cite_start]% for "cognitive ease" and speed[cite: 2835, 3017, 3489].
+% for "cognitive ease" and speed[cite: 2835, 3017, 3489].
 domain_priors:base_extractiveness(cognitive_surrender_to_system_3, 0.65).
 
 % Suppression score: High (0.75)
 % Rationale: System 3's fluency "short-circuits" the internal monitor that 
-[cite_start]% would normally trigger System 2 deliberation[cite: 2847, 3016, 3490].
+% would normally trigger System 2 deliberation[cite: 2847, 3016, 3490].
 domain_priors:suppression_score(cognitive_surrender_to_system_3, 0.75).
 
 % Enforcement: Requires active enforcement
 % Rationale: While not "enforced" by a state, the constraint is maintained 
-[cite_start]% through algorithmic "fluency, confidence, and minimal friction"[cite: 3010, 3490].
+% through algorithmic "fluency, confidence, and minimal friction"[cite: 3010, 3490].
 domain_priors:requires_active_enforcement(cognitive_surrender_to_system_3).
 
 % Beneficiaries and Victims
@@ -177,7 +177,7 @@ test(moderator_shift_rope_to_noose) :-
     constraint_indexing:constraint_classification(cognitive_surrender_to_system_3, rope, context(institutional, _, mobile, _)).
 
 test(individual_difference_susceptibility) :-
-    [cite_start]% Higher Trust in AI increases the "trapped" nature of the Noose[cite: 3138, 3472].
+    % Higher Trust in AI increases the "trapped" nature of the Noose[cite: 3138, 3472].
     assertion(domain_priors:suppression_score(cognitive_surrender_to_system_3, 0.75)).
 
 :- end_tests(cognitive_surrender_tests).
@@ -211,17 +211,17 @@ test(individual_difference_susceptibility) :-
 
 omega_variable(
     long_term_deskilling_velocity,
-    "How quickly does repeated cognitive surrender lead to permanent loss of unaided expertise?",
-    resolution_mechanism("Longitudinal studies of experts (e.g., physicians) over 5-10 years."),
-    impact("If deskilling is rapid and permanent, the constraint is a irreversible Noose; if skills are maintainable, it remains a Rope."),
+    'How quickly does repeated cognitive surrender lead to permanent loss of unaided expertise?',
+    resolution_mechanism('Longitudinal studies of experts (e.g., physicians) over 5-10 years.'),
+    impact('If deskilling is rapid and permanent, the constraint is a irreversible Noose; if skills are maintainable, it remains a Rope.'),
     confidence_without_resolution(low)
 ).
 
 omega_variable(
     ai_psychosis_threshold,
-    "At what level of 'System 3' personalization do users begin to attribute phenomenological understanding to AI?",
-    [cite_start]resolution_mechanism("Clinical assessment of conversational AI impact on 'vulnerable users'[cite: 3515]."),
-    impact("High attribution of intent transforms the interaction from 'using a tool' to 'following a cult-like agent' (Extreme Noose)."),
+    'At what level of \'System 3\' personalization do users begin to attribute phenomenological understanding to AI?',
+    resolution_mechanism('Clinical assessment of conversational AI impact on \'vulnerable users\'.'),
+    impact('High attribution of intent transforms the interaction from \'using a tool\' to \'following a cult-like agent\' (Extreme Noose).'),
     confidence_without_resolution(medium)
 ).
 
