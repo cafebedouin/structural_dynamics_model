@@ -24,12 +24,12 @@ event(ev04_iron_transition, technology_shift, 98, [subject(metallurgy), effect(b
 constraint_claim(tin_trade_dependency, mountain).
 constraint_metric(tin_trade_dependency, accessibility_collapse, 0.98).
 
-% Noose: Interconnected Fragility. A 'multiplier effect' where the failure of one palace (e.g., Ugarit) triggers bankruptcy in others, narrowing survival paths.
-constraint_claim(systemic_interdependency, noose).
+% Snare: Interconnected Fragility. A 'multiplier effect' where the failure of one palace (e.g., Ugarit) triggers bankruptcy in others, narrowing survival paths.
+constraint_claim(systemic_interdependency, snare).
 constraint_metric(systemic_interdependency, stakes_inflation, 0.95).
 
-% Zombie: Palace Redistribution Norm. The dead belief that the King can provide food/security, persisting in administrative tablets even as the stores are empty.
-constraint_claim(palatial_redistribution_myth, zombie).
+% Piton: Palace Redistribution Norm. The dead belief that the King can provide food/security, persisting in administrative tablets even as the stores are empty.
+constraint_claim(palatial_redistribution_myth, piton).
 constraint_metric(palatial_redistribution_myth, suppression, 0.85).
 
 % Rope: Chariot Infrastructure. Ties military capability to expensive, high-maintenance hardware that requires a stable state to function.

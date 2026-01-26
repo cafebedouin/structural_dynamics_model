@@ -40,7 +40,7 @@
  * - The Earth System: The biological/physical reality that dictates temperature stability based on emissions.
  * * NARRATIVE ARC:
  * This constraint represents a "rupture" in climate logic. It shifted the "Rope" of climate policy from 
- * stabilizing atmospheric concentrations to an absolute "Mountain" or "Noose" of zero net emissions.
+ * stabilizing atmospheric concentrations to an absolute "Mountain" or "Snare" of zero net emissions.
  */
 
 /* ==========================================================================
@@ -110,7 +110,7 @@ constraint_indexing:constraint_classification(
     !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE LEGACY EMITTER - Noose
+   PERSPECTIVE 2: THE LEGACY EMITTER - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless (Subject to the new "net zero" target)
@@ -119,7 +119,7 @@ constraint_indexing:constraint_classification(
    SCOPE: national
    
    WHY THIS CLASSIFICATION:
-   For emitters who relied on the "fair chunk" of 2.5Gt emissions, net zero is a Noose 
+   For emitters who relied on the "fair chunk" of 2.5Gt emissions, net zero is a Snare 
    that extracts their ability to operate without costly removals.
    
    NARRATIVE EVIDENCE:
@@ -128,7 +128,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     net_zero_stabilization,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -179,9 +179,9 @@ constraint_indexing:constraint_classification(
 :- begin_tests(net_zero_stabilization_tests).
 
 test(multi_perspective_variance) :-
-    % Scientist (Rope) vs Emitter (Noose) vs System (Mountain)
+    % Scientist (Rope) vs Emitter (Snare) vs System (Mountain)
     constraint_indexing:constraint_classification(net_zero_stabilization, rope, context(analytical, biographical, mobile, global)),
-    constraint_indexing:constraint_classification(net_zero_stabilization, noose, context(individual_powerless, immediate, trapped, national)),
+    constraint_indexing:constraint_classification(net_zero_stabilization, snare, context(individual_powerless, immediate, trapped, national)),
     constraint_indexing:constraint_classification(net_zero_stabilization, mountain, context(institutional, historical, constrained, global)).
 
 test(power_extractiveness_scaling) :-
@@ -206,7 +206,7 @@ test(power_extractiveness_scaling) :-
  * Reasoning: Reaching net zero is an absolute extraction of the "right to emit" 
  * that previously characterized industrialization.
  * * 2. PERSPECTIVE SELECTION:
- * Analyzed from the scientist (Rope), the legacy emitter (Noose), and the Earth 
+ * Analyzed from the scientist (Rope), the legacy emitter (Snare), and the Earth 
  * system (Mountain) to show the discovery of a physical limit.
  * * 3. AMBIGUITIES:
  * The text mentions "balancing removals," which implies a new technological 
@@ -222,7 +222,7 @@ omega_variable(
     net_zero_stabilization_extraction_intent,
     "Is the 0.85 extraction of carbon space a physical necessity (Mountain) or a policy choice that ignores lower-impact alternatives?",
     resolution_mechanism("Audit of global temperature responses to small (2.5Gt) sub-zero emissions over centuries"),
-    impact("If necessity: Mountain. If choice: Noose/Mandatrophy."),
+    impact("If necessity: Mountain. If choice: Snare/Mandatrophy."),
     confidence_without_resolution(medium)
 ).
 
@@ -230,7 +230,7 @@ omega_variable(
     removal_technology_viability,
     "Can 'equivalent removals' actually be achieved at the scale required by the net-zero target?",
     resolution_mechanism("Monitor the gigatonne-scale deployment of Carbon Capture and Storage (CCS) technology"),
-    impact("If viable: Rope. If non-viable: The target becomes a systemic Noose."),
+    impact("If viable: Rope. If non-viable: The target becomes a systemic Snare."),
     confidence_without_resolution(low)
 ).
 

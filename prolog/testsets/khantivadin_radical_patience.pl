@@ -47,7 +47,7 @@
  * * NARRATIVE ARC:
  * 
  * A royal picnic turns into an execution when the King finds his wives listening to 
- * Khantivadin's sermon. The King's jealousy triggers a terminal "Noose" 
+ * Khantivadin's sermon. The King's jealousy triggers a terminal "Snare" 
  * for the sage, but the sage's detachment transforms the physical extraction into a 
  * "Mountain" of moral law.
  */
@@ -87,7 +87,7 @@ constraint_victim(khantivadin_radical_patience, khantivadin_physical_body). % Di
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 1: KHANTIVADIN - Noose (Physical) / Rope (Mind)
+   PERSPECTIVE 1: KHANTIVADIN - Snare (Physical) / Rope (Mind)
    --------------------------------------------------------------------------
    
    WHO: individual_powerless (Tied to a tree, physically helpless)
@@ -96,7 +96,7 @@ constraint_victim(khantivadin_radical_patience, khantivadin_physical_body). % Di
    SCOPE: local (The meadow)
    
    WHY THIS CLASSIFICATION:
-   For Khantivadin's body, the King's knife is a "Noose" of terminal extraction. 
+   For Khantivadin's body, the King's knife is a "Snare" of terminal extraction. 
    However, for his mind, patience is a "Rope"—a tool for coordination with the 
    divine/dhamma that allows him to "not curse anyone" even at death.
    
@@ -109,7 +109,7 @@ constraint_victim(khantivadin_radical_patience, khantivadin_physical_body). % Di
 
 constraint_indexing:constraint_classification(
     khantivadin_radical_patience,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -188,8 +188,8 @@ constraint_indexing:constraint_classification(
 :- begin_tests(khantivadin_radical_patience_tests).
 
 test(multi_perspective_patience) :-
-    % Physical victim sees Noose
-    constraint_indexing:constraint_classification(khantivadin_radical_patience, noose, context(individual_powerless, immediate, trapped, local)),
+    % Physical victim sees Snare
+    constraint_indexing:constraint_classification(khantivadin_radical_patience, snare, context(individual_powerless, immediate, trapped, local)),
     % King (Institutional) sees Rope
     constraint_indexing:constraint_classification(khantivadin_radical_patience, rope, context(institutional, biographical, mobile, national)),
     % Buddha (Analytical) sees Mountain
@@ -227,9 +227,9 @@ test(time_immutability_dhamma) :-
  * * 2. STATUS: [RESOLVED MANDATROPHY]:
  * The extraction is absolute. However, it is "resolved" by the Sage's 
  * indexed detachment (Rope of the mind), which allows him to bypass the 
- * standard "suffering" usually associated with such a Noose.
+ * standard "suffering" usually associated with such a Snare.
  * * 3. PERSPECTIVE SELECTION:
- * Chose Khantivadin (Noose) to show the cost, the King (Rope) to show 
+ * Chose Khantivadin (Snare) to show the cost, the King (Rope) to show 
  * predatory utility, and the Buddha (Mountain) to show the eternal lesson.
  */
 
@@ -240,9 +240,9 @@ test(time_immutability_dhamma) :-
 % Mandatory Omega for high-extraction constraints:
 omega_variable(
     khantivadin_extraction_intent,
-    "Is the dismemberment a functional necessity for the King's authority (Mountain) or an intoxicated predatory choice (Noose)?",
+    "Is the dismemberment a functional necessity for the King's authority (Mountain) or an intoxicated predatory choice (Snare)?",
     resolution_mechanism("Audit of the King's behavior post-sobering to see if the violence remains a policy tool"),
-    impact("If necessity: Political Mountain. If intoxicated choice: Predatory Noose."),
+    impact("If necessity: Political Mountain. If intoxicated choice: Predatory Snare."),
     confidence_without_resolution(medium)
 ).
 
@@ -268,7 +268,7 @@ omega_variable(
  * Suppression: Suppressed by the King's intoxication: "couldn't listen to reason".
  * * CONCLUSION:
  * The King's intoxicated state makes Alternatives 1 and 2 invisible, forcing 
- * the interaction into a Noose for the Sage. Khantivadin's choice to remain 
+ * the interaction into a Snare for the Sage. Khantivadin's choice to remain 
  * patient is a deliberate "Rope" that prevents him from being "poisoned" by the 
  * King's rage.
  */

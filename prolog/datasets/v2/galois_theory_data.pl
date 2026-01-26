@@ -41,7 +41,7 @@ constraint_metric(radical_expression_complexity, snap_back_potential, 0.40).
 constraint_metric(radical_expression_complexity, extractiveness, 0.52).
 
 % NOOSE: Abel-Ruffini Impossibility (The terminal limit for polynomials of degree 5 or higher)
-constraint_claim(quintic_solvability_noose, noose).
+constraint_claim(quintic_solvability_noose, snare).
 constraint_metric(quintic_solvability_noose, intensity, 0.95).
 constraint_metric(quintic_solvability_noose, suppression_requirement, 0.88).
 constraint_metric(quintic_solvability_noose, snap_back_potential, 0.92).

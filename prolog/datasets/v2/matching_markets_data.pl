@@ -40,8 +40,8 @@ constraint_metric(information_asymmetry_friction, suppression_requirement, 0.30)
 constraint_metric(information_asymmetry_friction, snap_back_potential, 0.40).
 constraint_metric(information_asymmetry_friction, extractiveness, 0.55).
 
-% Noose: Market congestion leads to systemic collapse.
-constraint_claim(congestion_trap, noose).
+% Snare: Market congestion leads to systemic collapse.
+constraint_claim(congestion_trap, snare).
 constraint_metric(congestion_trap, intensity, 0.95).
 constraint_metric(congestion_trap, suppression_requirement, 0.75).
 constraint_metric(congestion_trap, snap_back_potential, 0.85).

@@ -42,7 +42,7 @@
  * - The Sun: A solitary, unusually large star (larger than 90% of neighbors) that acts as the system's anchor.
  * - Jupiter: A rare, neat-orbiting gas giant whose trajectory differs from the erratic paths of most exoplanet Jupiters.
  * * NARRATIVE ARC:
- * The "Uniformity Assumption" acted as a conceptual Noose that limited planetary 
+ * The "Uniformity Assumption" acted as a conceptual Snare that limited planetary 
  * discovery models. Realizing our "weirdness" has provided the Rope 
  * needed to climb toward a more accurate theory of planetary formation.
  */
@@ -145,7 +145,7 @@ constraint_indexing:constraint_classification(
     !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: LEGACY UNIFORMITARIANS - Noose
+   PERSPECTIVE 3: LEGACY UNIFORMITARIANS - Snare
    --------------------------------------------------------------------------
    
    WHO: institutional (Rule-making academic paradigms of the 20th century) 
@@ -154,7 +154,7 @@ constraint_indexing:constraint_classification(
    SCOPE: national (Academic consensus groups) 
    
    WHY THIS CLASSIFICATION:
-   The "Normalcy Noose" extracted the ability to detect Earth-like planets by 
+   The "Normalcy Snare" extracted the ability to detect Earth-like planets by 
    assuming they would be found around "sun-like stars" exactly like our own, 
    leading to decades of unmet expectations.
    
@@ -165,7 +165,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     solar_system_weirdness,
-    noose,
+    snare,
     context(
         agent_power(institutional),
         time_horizon(historical),
@@ -184,10 +184,10 @@ constraint_indexing:constraint_classification(
 :- begin_tests(solar_system_weirdness_tests).
 
 test(multi_perspective_variance) :-
-    % Astronomer (Rope) vs Sun (Mountain) vs Legacy Theory (Noose)
+    % Astronomer (Rope) vs Sun (Mountain) vs Legacy Theory (Snare)
     constraint_indexing:constraint_classification(solar_system_weirdness, rope, context(analytical, biographical, arbitrage, global)),
     constraint_indexing:constraint_classification(solar_system_weirdness, mountain, context(individual_powerless, civilizational, trapped, national)),
-    constraint_indexing:constraint_classification(solar_system_weirdness, noose, context(institutional, historical, trapped, national)).
+    constraint_indexing:constraint_classification(solar_system_weirdness, snare, context(institutional, historical, trapped, national)).
 
 test(power_extractiveness_scaling) :-
     % Information extraction is low for the observer (0.2)
@@ -216,7 +216,7 @@ test(time_immutability) :-
  * * 3. PERSPECTIVE SELECTION: 
  * - Astronomer: Represents the "Rewriting" (Rope).
  * - The System itself: Represents the "Physical Facts" (Mountain).
- * - Legacy Theorists: Represents the "Lost Decades" of search (Noose).
+ * - Legacy Theorists: Represents the "Lost Decades" of search (Snare).
  */
 
 /* ==========================================================================
@@ -227,7 +227,7 @@ omega_variable(
     weirdness_degree_calibration,
     "Is the solar system weird at the 1% level or the 1-in-a-million level?",
     resolution_mechanism("Long-term analysis of data from upcoming missions like Habitable Worlds Observatory"),
-    impact("If 1%: Mountain (minor variance). If 1-in-a-million: Noose (Earth is a precarious fluke)."),
+    impact("If 1%: Mountain (minor variance). If 1-in-a-million: Snare (Earth is a precarious fluke)."),
     confidence_without_resolution(medium)
 ).
 

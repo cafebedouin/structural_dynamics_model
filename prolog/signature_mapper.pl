@@ -10,7 +10,7 @@
 %  Maps non-standard terminology to v3.1 standard pillars based on metrics.
 map_custom_pillar(_C, CustomType, StandardType) :-
     % If already standard, do nothing
-    member(CustomType, [mountain, rope, noose]),
+    member(CustomType, [mountain, rope, snare, piton]),
     StandardType = CustomType, !.
 
 map_custom_pillar(C, _CustomType, StandardType) :-
@@ -22,7 +22,9 @@ map_custom_pillar(C, _CustomType, StandardType) :-
 resolve_mapping(natural_law, mountain).
 % Successful voluntary coordination (like decentralized_governance) are Ropes
 resolve_mapping(coordination_scaffold, rope).
+% A scaffold that has decayed into a liability is a Piton
+resolve_mapping(piton_signature, piton).
 % Asymmetric, enforced, or extractive rules are Nooses
-resolve_mapping(constructed_constraint, noose).
+resolve_mapping(constructed_constraint, snare).
 % Fallback for ambiguous data
 resolve_mapping(ambiguous, rope).

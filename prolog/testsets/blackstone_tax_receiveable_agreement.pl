@@ -54,7 +54,7 @@
    ========================================================================== */
 
 narrative_ontology:interval(blackstone_tra_life, 0, 10).
-narrative_ontology:constraint_claim(blackstone_tra, noose).
+narrative_ontology:constraint_claim(blackstone_tra, snare).
 
 % Base extractiveness score (0.0 - 1.0)
 % Rationale: Highly extractive; 85% of a specific cash benefit is diverted 
@@ -82,7 +82,7 @@ constraint_victim(blackstone_tra, public_common_unitholders).
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 1: Public Unitholder - Noose
+   PERSPECTIVE 1: Public Unitholder - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless.
@@ -90,7 +90,7 @@ constraint_victim(blackstone_tra, public_common_unitholders).
    WHERE: trapped - The obligation is a core liability of the units.
    
    WHY THIS CLASSIFICATION:
-   For the public investor, the TRA is a "Noose." It is an asymmetric 
+   For the public investor, the TRA is a "Snare." It is an asymmetric 
    leakage of value. The cash that *could* have been used for dividends 
    or reinvestment is contractually diverted to the founders.
    
@@ -102,7 +102,7 @@ constraint_victim(blackstone_tra, public_common_unitholders).
 
 constraint_indexing:constraint_classification(
     blackstone_tra,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(biographical),
@@ -162,8 +162,8 @@ test(extraction_ratio_audit) :-
     domain_priors:base_extractiveness(blackstone_tra, 0.85).
 
 test(perspectival_flip) :-
-    % Test that same data (85% payout) creates a Noose for one and Rope for another
-    constraint_indexing:constraint_classification(blackstone_tra, noose, context(individual_powerless, _, _, _, _, _)),
+    % Test that same data (85% payout) creates a Snare for one and Rope for another
+    constraint_indexing:constraint_classification(blackstone_tra, snare, context(individual_powerless, _, _, _, _, _)),
     constraint_indexing:constraint_classification(blackstone_tra, rope, context(individual_powerful, _, _, _, _, _)).
 
 :- end_tests(blackstone_tra_tests).
@@ -178,7 +178,7 @@ test(perspectival_flip) :-
  * 1. EXTRACTIVENESS (0.85): This is a direct reflection of the 85% 
  * cash-sharing ratio specified in the S-1.
  * 2. CLASSIFICATION: The TRA is perhaps the most "pure" example of a 
- * Noose in corporate governance, as it is a permanent, asymmetric 
+ * Snare in corporate governance, as it is a permanent, asymmetric 
  * cash transfer from the public entity to its former owners.
  */
 
@@ -190,7 +190,7 @@ omega_variable(
     tax_rate_stability,
     "Will future corporate tax rates decrease, reducing the 'value' of the TRA payments for the SMDs?",
     resolution_mechanism("Congressional legislative tracking on federal corporate tax rate adjustments"),
-    impact("If rates drop: the Noose loosens (less is extracted). If rates rise: the Noose tightens."),
+    impact("If rates drop: the Snare loosens (less is extracted). If rates rise: the Snare tightens."),
     confidence_without_resolution(medium)
 ).
 
@@ -226,4 +226,4 @@ constraint_indexing:constraint_classification(blackstone_tax_receiveable_agreeme
 
 % --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
 constraint_indexing:constraint_classification(blackstone_tax_receiveable_agreement, rope, agent_power(institutional)).
-constraint_indexing:constraint_classification(blackstone_tax_receiveable_agreement, noose, agent_power(individual_powerless)).
+constraint_indexing:constraint_classification(blackstone_tax_receiveable_agreement, snare, agent_power(individual_powerless)).

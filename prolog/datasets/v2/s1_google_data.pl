@@ -26,7 +26,7 @@ omega_variable(omega_c_evil_standard, conceptual, 'Audit criteria for adherence 
 omega_variable(omega_p_growth_vs_margin, preference, 'Investor tolerance for declining operating margins due to Network expansion').
 
 % 3. Constraint Claims & Kinetic Metrics
-constraint_claim(founder_voting_lock, noose).
+constraint_claim(founder_voting_lock, snare).
 constraint_metric(founder_voting_lock, intensity, 0.83).
 constraint_metric(founder_voting_lock, extractiveness, 0.83).
 constraint_metric(founder_voting_lock, suppression_requirement, 0.60).
@@ -38,7 +38,7 @@ constraint_metric(ad_revenue_monoculture, extractiveness, 0.40).
 constraint_metric(ad_revenue_monoculture, suppression_requirement, 0.10).
 constraint_metric(ad_revenue_monoculture, snap_back_potential, 0.90).
 
-constraint_claim(unregistered_securities_liability, zombie).
+constraint_claim(unregistered_securities_liability, piton).
 constraint_metric(unregistered_securities_liability, intensity, 0.12).
 constraint_metric(unregistered_securities_liability, snap_back_potential, 0.25).
 constraint_metric(unregistered_securities_liability, extractiveness, 0.05).

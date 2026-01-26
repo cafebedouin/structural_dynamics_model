@@ -87,7 +87,7 @@ constraint_victim(landscape_of_fear_2026, prey_populations). % Reduced reproduct
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 1: THE ELK/SPARROW - Noose
+   PERSPECTIVE 1: THE ELK/SPARROW - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless (Prey animal at bottom of hierarchy)
@@ -96,7 +96,7 @@ constraint_victim(landscape_of_fear_2026, prey_populations). % Reduced reproduct
    SCOPE: local (Immediate proximity of predator signs)
    
    WHY THIS CLASSIFICATION:
-   For the prey, fear is a "Noose." It is a coercive psychological pressure 
+   For the prey, fear is a "Snare." It is a coercive psychological pressure 
    that strangles their ability to feed and reproduce, forcing them into 
    low-quality habitats even when superior food is nearby.
    
@@ -107,7 +107,7 @@ constraint_victim(landscape_of_fear_2026, prey_populations). % Reduced reproduct
 
 constraint_indexing:constraint_classification(
     landscape_of_fear_2026,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -214,7 +214,7 @@ test(fear_vs_predation_impact) :-
  * Reasoning: The article explicitly states that prey will "completely avoid" 
  * some areas. This is the suppression of alternative feeding sites.
  * * 3. PERSPECTIVE SELECTION:
- * Analyzed the prey (Noose), the predator as rule-setter (Rope), and the 
+ * Analyzed the prey (Snare), the predator as rule-setter (Rope), and the 
  * scientist as observer of the biological law (Mountain).
  * * 4. AMBIGUITIES:
  * It is unclear if the "Landscape of Fear" is equally oppressive for all prey 
@@ -229,7 +229,7 @@ omega_variable(
     fear_acclimation_threshold,
     "Do prey eventually 'habituate' to predator sounds/signs, reducing the fear-constraint over generations?",
     resolution_mechanism("Long-term (multi-generational) study of prey response to chronic predator presence"),
-    impact("If habituation occurs: Noose → Rope. If not: Persistent Noose."),
+    impact("If habituation occurs: Snare → Rope. If not: Persistent Snare."),
     confidence_without_resolution(medium)
 ).
 
@@ -237,7 +237,7 @@ omega_variable(
     human_as_super_predator,
     "Do human-induced 'landscapes of fear' (noises, urban light) create more extraction than natural ones?",
     resolution_mechanism("Comparative analysis of prey reproductive rates in human-dominated vs. wild landscapes"),
-    impact("If human fear is higher: We are an unmatched extractive Noose."),
+    impact("If human fear is higher: We are an unmatched extractive Snare."),
     confidence_without_resolution(high)
 ).
 
@@ -254,7 +254,7 @@ omega_variable(
  * Evidence: "Laundré and others’ observations suggested this was wrong".
  * * CONCLUSION:
  * The "Landscape of Fear" transformed a perceived stochastic kill-rate (Mountain) 
- * into a persistent psychological Noose (for prey) and a biological Rope (for 
+ * into a persistent psychological Snare (for prey) and a biological Rope (for 
  * ecosystem management).
  */
 

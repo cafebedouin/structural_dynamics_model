@@ -35,10 +35,10 @@ constraint_metric(algorithmic_overhead, suppression_requirement, 0.32).
 constraint_metric(algorithmic_overhead, snap_back_potential, 0.65).
 constraint_metric(algorithmic_overhead, extractiveness, 0.48).
 
-% The Halting Problem (The Noose)
+% The Halting Problem (The Snare)
 % The undecidability of whether an arbitrary program stops. This "strangles" total automation.
 % Extractiveness at 0.99 requires an 'oracle_machine' scaffold to hypothesize solutions.
-constraint_claim(undecidability_barrier, noose).
+constraint_claim(undecidability_barrier, snare).
 constraint_metric(undecidability_barrier, intensity, 0.99).
 constraint_metric(undecidability_barrier, suppression_requirement, 0.95).
 constraint_metric(undecidability_barrier, snap_back_potential, 0.01).
@@ -49,7 +49,7 @@ constraint_metric(undecidability_barrier, extractiveness, 0.99).
 recommendation(rec_01, transformation_to_combinatory_logic_for_reduction_simplification).
 affects_constraint(rec_01, algorithmic_overhead).
 
-% Noose (0.99 extractiveness) triggers Cut
+% Snare (0.99 extractiveness) triggers Cut
 % Utilizing 'oracle_machine' scaffold to bypass the halting limit for specific sub-classes.
 recommendation(rec_02, isolate_primitive_recursive_functions_to_ensure_termination).
 affects_constraint(rec_02, undecidability_barrier).

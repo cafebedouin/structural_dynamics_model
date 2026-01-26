@@ -43,7 +43,7 @@
  * * NARRATIVE ARC:
  * The field has shifted from a "Mountain" of sparse fossil data to an "Information Blizzard". 
  * This blizzard acts as a "Rope" for those with the technological means to climb into deep time 
- * (back to 7 million years ago), but acts as a "Noose" for traditional methodologies that cannot 
+ * (back to 7 million years ago), but acts as a "Snare" for traditional methodologies that cannot 
  * process this scale of data.
  */
 
@@ -113,7 +113,7 @@ constraint_indexing:constraint_classification(
     !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE TRADITIONAL EXCAVATOR - Noose
+   PERSPECTIVE 2: THE TRADITIONAL EXCAVATOR - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless (Unable to compete with the "blizzard" of lab data)
@@ -122,7 +122,7 @@ constraint_indexing:constraint_classification(
    SCOPE: local (Limited to specific fossil sites)
    
    WHY THIS CLASSIFICATION:
-   For those without the latest technology, the information blizzard is a Noose. It extracts 
+   For those without the latest technology, the information blizzard is a Snare. It extracts 
    authority from physical fossil discovery and places it into the hands of analytical labs.
    
    NARRATIVE EVIDENCE:
@@ -131,7 +131,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     technological_provenance_arbitrage,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -182,9 +182,9 @@ constraint_indexing:constraint_classification(
 :- begin_tests(technological_provenance_arbitrage_tests).
 
 test(multi_perspective_variance) :-
-    % Lab Researcher (Rope) vs Traditional Excavator (Noose) vs Hominin Lineage (Mountain)
+    % Lab Researcher (Rope) vs Traditional Excavator (Snare) vs Hominin Lineage (Mountain)
     constraint_indexing:constraint_classification(technological_provenance_arbitrage, rope, context(analytical, biographical, arbitrage, global)),
-    constraint_indexing:constraint_classification(technological_provenance_arbitrage, noose, context(individual_powerless, immediate, trapped, local)),
+    constraint_indexing:constraint_classification(technological_provenance_arbitrage, snare, context(individual_powerless, immediate, trapped, local)),
     constraint_indexing:constraint_classification(technological_provenance_arbitrage, mountain, context(institutional, civilizational, constrained, global)).
 
 test(information_density_scaling) :-
@@ -212,7 +212,7 @@ test(information_density_scaling) :-
  * Reasoning: Reflects how the 20th-century Ardipithecus limit was a conceptual 
  * boundary that has only recently been "shattered".
  * * 3. PERSPECTIVE SELECTION:
- * Used the "Traditional Excavator" to show the Noose effect when data-driven 
+ * Used the "Traditional Excavator" to show the Snare effect when data-driven 
  * "blizzards" replace site-based authority.
  * * 4. AMBIGUITIES:
  * - The "quiet description" of species in 2022 suggests a move toward 
@@ -226,9 +226,9 @@ test(information_density_scaling) :-
 % Mandatory Omega for high-extraction constraints:
 omega_variable(
     technological_provenance_arbitrage_extraction_intent,
-    "Is the 'huge amount of information' a purely scientific gain (Rope) or a form of technological colonization over fossil heritage (Noose)?",
+    "Is the 'huge amount of information' a purely scientific gain (Rope) or a form of technological colonization over fossil heritage (Snare)?",
     resolution_mechanism("Audit of data ownership vs. site-of-origin rights for genetic sequencing results"),
-    impact("If scientific: Rope. If exclusionary: Noose/Mandatrophy."),
+    impact("If scientific: Rope. If exclusionary: Snare/Mandatrophy."),
     confidence_without_resolution(medium)
 ).
 
@@ -236,7 +236,7 @@ omega_variable(
     data_authenticity_blizzard,
     "Will the 'blizzard' of information eventually lead to noise that obscures the 'true' evolutionary path?",
     resolution_mechanism("Long-term replication of automated analytical fossil techniques across independent labs"),
-    impact("If noise: Noose (false patterns). If signal: Rope."),
+    impact("If noise: Snare (false patterns). If signal: Rope."),
     confidence_without_resolution(low)
 ).
 

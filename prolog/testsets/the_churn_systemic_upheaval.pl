@@ -111,7 +111,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE DISPOSABLE SUBJECT (The Spy) - Noose
+   PERSPECTIVE 2: THE DISPOSABLE SUBJECT (The Spy) - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless (A "loose end" with no agency)
@@ -120,7 +120,7 @@ constraint_indexing:constraint_classification(
    SCOPE: local
    
    WHY THIS CLASSIFICATION:
-   For the victim, the churn is a "Noose." It is a coercive trap where their death is 
+   For the victim, the churn is a "Snare." It is a coercive trap where their death is 
    predetermined and "doesn't really mean anything" to the system. 
    They are "caught up" in a process they cannot influence or understand.
    
@@ -130,7 +130,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     the_churn_systemic_upheaval,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -177,8 +177,8 @@ constraint_indexing:constraint_classification(
 test(multi_perspective_upheaval) :-
     % Survivor (Moderate) sees Mountain
     constraint_indexing:constraint_classification(the_churn_systemic_upheaval, mountain, context(individual_moderate, _, _, _)),
-    % Victim (Powerless) sees Noose
-    constraint_indexing:constraint_classification(the_churn_systemic_upheaval, noose, context(individual_powerless, _, _, _)),
+    % Victim (Powerless) sees Snare
+    constraint_indexing:constraint_classification(the_churn_systemic_upheaval, snare, context(individual_powerless, _, _, _)),
     % Architect (Institutional) sees Rope
     constraint_indexing:constraint_classification(the_churn_systemic_upheaval, rope, context(institutional, _, _, _)).
 
@@ -202,9 +202,9 @@ test(extraction_scaling) :-
  * The churn extracts the ultimate resource—life—without meaning or compensation.
  * * 2. PERSPECTIVE SELECTION:
  * Chose the "Survivor" (Amos) to show the transition to Mountain-view (radical acceptance), 
- * the "Victim" to show the Noose (liquidation), and the "Boss" to show the Rope (strategic utility).
+ * the "Victim" to show the Snare (liquidation), and the "Boss" to show the Rope (strategic utility).
  * * 3. MANDATROPHY RESOLUTION:
- * The constraint is [RESOLVED MANDATROPHY] because while it is a lethal "Noose" for 
+ * The constraint is [RESOLVED MANDATROPHY] because while it is a lethal "Snare" for 
  * individuals, it is indexed as a necessary "Mountain" or "Rope" for the system's 
  * continuation into "somethin' new".
  */
@@ -225,9 +225,9 @@ omega_variable(
 omega_variable(
     the_churn_extraction_intent,
     "Is the liquidation of 'loose ends' a byproduct of structural collapse (Mountain) 
-     or an intentional predatory strategy by 'Bosses' (Noose)?",
+     or an intentional predatory strategy by 'Bosses' (Snare)?",
     resolution_mechanism("Audit of 'Boss' resource preservation vs. 'loose end' survival rates during the churn"),
-    impact("If intent exists: Mandatrophy Noose. If byproduct: Physical Mountain."),
+    impact("If intent exists: Mandatrophy Snare. If byproduct: Physical Mountain."),
     confidence_without_resolution(medium)
 ).
 

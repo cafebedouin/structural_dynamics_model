@@ -37,7 +37,7 @@
  * for a "muko-yōshi" (adopted son-in-law) to maintain Miyoko's family 
  * lineage functions as an immutable force (Mountain) that nullifies 
  * individual emotion, driving the youth toward a self-destructive 
- * cycle of decadence (Noose) as a failed exit strategy.
+ * cycle of decadence (Snare) as a failed exit strategy.
  * * KEY AGENTS:
  * - Tachibana Sōichi: A powerless individual (individual_powerless). Idealistic but lacks systemic leverage.
  * - Miyoko: A powerless individual and the direct object of the succession constraint.
@@ -46,7 +46,7 @@
  * * NARRATIVE ARC:
  * The constraint initially appears as a "Rope" (necessary social order) to the parents 
  * but reveals itself as a "Mountain" to the lovers. Its enforcement leads to a 
- * psychological "scald," causing the protagonist to retreat into a "Noose" of 
+ * psychological "scald," causing the protagonist to retreat into a "Snare" of 
  * nihilistic dissipation in the red-light districts.
  */
 
@@ -148,7 +148,7 @@ constraint_indexing:constraint_classification(
    
    WHY THIS CLASSIFICATION:
    The "freedom" offered by the red-light district is a false exit. It extracts 
-   Sōichi's health and vitality, tightening like a noose as he tries to 
+   Sōichi's health and vitality, tightening like a snare as he tries to 
    numb the "scald" of his failed love.
    
    NARRATIVE EVIDENCE:
@@ -158,7 +158,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     decadence_spiral,
-    noose,
+    snare,
     context(
         agent_power(individual_moderate),
         time_horizon(immediate),
@@ -227,7 +227,7 @@ omega_variable(
     parental_collusion,
     "Did Sōichi's father and mother agree from the start to sacrifice Sōichi's happiness?",
     resolution_mechanism("Investigation of the private correspondence between Sōichi's mother and Miyoko's mother"),
-    impact("Determines if the constraint was a planned extraction (Noose) or a natural social friction (Mountain)."),
+    impact("Determines if the constraint was a planned extraction (Snare) or a natural social friction (Mountain)."),
     confidence_without_resolution(low)
 ).
 
@@ -271,4 +271,4 @@ omega_variable(
 % --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
 constraint_indexing:constraint_classification(family_succession_and_decadence, mountain, agent_power(analytical)).
 constraint_indexing:constraint_classification(family_succession_and_decadence, rope, agent_power(institutional)).
-constraint_indexing:constraint_classification(family_succession_and_decadence, noose, agent_power(individual_powerless)).
+constraint_indexing:constraint_classification(family_succession_and_decadence, snare, agent_power(individual_powerless)).

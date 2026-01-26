@@ -148,7 +148,7 @@ constraint_indexing:constraint_classification(
     !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: PENTHEUS - Noose
+   PERSPECTIVE 3: PENTHEUS - Snare
    --------------------------------------------------------------------------
 
    [cite_start]WHO: individual_powerful - King of Thebes, "whom I have raised to rule"[cite: 265].
@@ -167,7 +167,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     dionysiac_frenzy,
-    noose,
+    snare,
     context(
         agent_power(individual_powerful),
         time_horizon(immediate),
@@ -217,12 +217,12 @@ test(time_immutability_frenzy) :-
  * [cite_start]The God receives "due meed of majesty" [cite: 338] and establishes
  * his cult.
  * 2. PERSPECTIVE SELECTION: Chose Agave (Powerless), Dionysus (Institutional),
- * and Pentheus (Powerful) to show the full Mountain-Rope-Noose spectrum.
+ * and Pentheus (Powerful) to show the full Mountain-Rope-Snare spectrum.
  * 3. CLASSIFICATION RATIONALE:
  * [cite_start]Agave -> Mountain: She is literally a biological puppet[cite: 1368].
  * Dionysus -> Rope: He treats the frenzy as a "harness" he can apply
  * [cite_start]or remove[cite: 107].
- * Pentheus -> Noose: He views it as a "plot" and "compact" designed
+ * Pentheus -> Snare: He views it as a "plot" and "compact" designed
  * [cite_start]to subvert his kingship[cite: 934, 943].
  */
 
@@ -232,9 +232,9 @@ test(time_immutability_frenzy) :-
 
 omega_variable(
     divine_presence,
-    'Is Dionysus a literal metaphysical entity (Mountain) or a metaphor for socio-psychological mass hysteria (Noose)?',
+    'Is Dionysus a literal metaphysical entity (Mountain) or a metaphor for socio-psychological mass hysteria (Snare)?',
     resolution_mechanism('Requires empirical verification of \'voice from heaven\' vs collective hallucination.'),
-    impact('If Mountain: The play is about man vs law of nature. If Noose: The play is about social breakdown.'),
+    impact('If Mountain: The play is about man vs law of nature. If Snare: The play is about social breakdown.'),
     confidence_without_resolution(low)
 ).
 
@@ -249,7 +249,7 @@ omega_variable(
  * * CONCLUSION:
  * Because Pentheus' alternative (traditional law) is actively suppressed
  * by divine miracles (shaking the house, unloosing gyves), the constraint
- * shifts from Rope to Noose for the Theban state.
+ * shifts from Rope to Snare for the Theban state.
  */
 
 /* ==========================================================================

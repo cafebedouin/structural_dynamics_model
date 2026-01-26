@@ -83,11 +83,11 @@ constraint_indexing:constraint_classification(
     !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 2: The Individual Agent - Noose
+   PERSPECTIVE 2: The Individual Agent - Snare
    -------------------------------------------------------------------------- */
 constraint_indexing:constraint_classification(
     cost_of_observation,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -96,7 +96,7 @@ constraint_indexing:constraint_classification(
     )
 ) :-
     domain_priors:base_extractiveness(cost_of_observation, E),
-    E > 0.8, % High extraction in local frame = Noose
+    E > 0.8, % High extraction in local frame = Snare
     !.
 
 /* --------------------------------------------------------------------------
@@ -126,7 +126,7 @@ test(multi_perspective_variance) :-
         context(individual_powerless, immediate, trapped, local)),
     constraint_indexing:constraint_classification(cost_of_observation, Type2, 
         context(analytical, civilizational, analytical, global)),
-    Type1 = noose,
+    Type1 = snare,
     Type2 = mountain.
 
 test(local_pressure_scaling) :-
@@ -150,7 +150,7 @@ test(local_pressure_scaling) :-
  * omega_variable(metabolic_efficiency_limit,
  * "Is there a theoretical floor to the cost of observation?",
  * resolution_mechanism("Biophysical measurement of cognitive efficiency"),
- * impact("Determines if the Noose is a physical constant."),
+ * impact("Determines if the Snare is a physical constant."),
  * confidence_without_resolution(low)
  * ).
  */

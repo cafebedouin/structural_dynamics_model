@@ -3,10 +3,8 @@ import re
 
 # Standard mapping for non-standard ontologies found in your linter output
 ONTOLOGY_MAP = {
-    "organizational_decay": "noose",
+    "organizational_decay": "snare",
     "election_cycle": "rope",
-    "tangled_rope": "rope",
-    "zombie": "noose",
     "natural_law": "mountain",
     "physical_law": "mountain",
     "algorithmic_determinism": "mountain",
@@ -28,7 +26,7 @@ def repair_file(filepath):
             changed = True
 
     # 2. Inject Missing Pillars (Indexical Relativity Stubs)
-    pillars = ['mountain', 'rope', 'noose']
+    pillars = ['mountain', 'rope', 'snare']
     missing = []
     for p in pillars:
         # Check for constraint_classification(ID, Pillar, ...)

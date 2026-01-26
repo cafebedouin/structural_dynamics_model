@@ -108,7 +108,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE CULTURE CITIZEN - Noose
+   PERSPECTIVE 2: THE CULTURE CITIZEN - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless (A "more stable society" member meeting an Elencher)
@@ -117,7 +117,7 @@ constraint_indexing:constraint_classification(
    SCOPE: local (Between meetings)
    
    WHY THIS CLASSIFICATION:
-   For an outsider, this flux is a "Noose." It strangles the possibility of 
+   For an outsider, this flux is a "Snare." It strangles the possibility of 
    consistent relationship or recognition; you can "never encounter the same 
    entity twice," making the Elencher socially illegible.
    
@@ -130,7 +130,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     elencher_identity_transformation,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -177,8 +177,8 @@ constraint_indexing:constraint_classification(
 test(multi_perspective_flux) :-
     % Institutional (Ship) sees Rope
     constraint_indexing:constraint_classification(elencher_identity_transformation, rope, context(institutional, _, _, _)),
-    % Individual Powerless (Culture Citizen) sees Noose
-    constraint_indexing:constraint_classification(elencher_identity_transformation, noose, context(individual_powerless, _, _, _)),
+    % Individual Powerless (Culture Citizen) sees Snare
+    constraint_indexing:constraint_classification(elencher_identity_transformation, snare, context(individual_powerless, _, _, _)),
     % Analytical sees Mountain
     constraint_indexing:constraint_classification(elencher_identity_transformation, mountain, context(analytical, _, _, _)).
 
@@ -204,7 +204,7 @@ test(extraction_internalization) :-
  * of philosophical "burning" of the old self to fuel the new.
  * * 2. PERSPECTIVE SELECTION:
  * The model contrasts the Elencher's "vocation" (Rope) with the stable 
- * Culture observer's experience of identity erosion (Noose).
+ * Culture observer's experience of identity erosion (Snare).
  * * 3. CLASSIFICATION RATIONALE:
  * The "Mountain" classification for the Analyst reflects the text's 
  * description of "pan-relevant truth" as something that requires a 
@@ -220,7 +220,7 @@ omega_variable(
     "Does 'pan-relevant truth' exist as an objective Mountain, or is it a 
      subjective Rope manufactured by the Elench process?",
     resolution_mechanism("Comparison of Elencher data across multiple divergent civilization encounters"),
-    impact("If Mountain: The Elench mission is valid. If Rope: It is a circular Noose of identity loss."),
+    impact("If Mountain: The Elench mission is valid. If Rope: It is a circular Snare of identity loss."),
     confidence_without_resolution(medium)
 ).
 

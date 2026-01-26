@@ -43,14 +43,46 @@
     assess_scaffold_need/3,         % Added Context parameter
     assess_scaffold_need/2,         % Backward compat
     counterfactual_world/4,         % Added Context parameter
-    counterfactual_world/3          % Backward compat
+    counterfactual_world/3,         % Backward compat
+
+    % Stage 4: Audit
+    possibly/1,
+    necessarily/1,
+    is_noose/1,
+    is_mountain/1,
+    is_rope/1
 ]).
 
+:- use_module(drl_audit_core).
 :- use_module(drl_core).
 :- use_module(constraint_indexing).
 :- use_module(narrative_ontology).
 :- use_module(v3_1_config).
 :- use_module(v3_1_coercion_projection).
+
+:- dynamic agent_index/2.
+:- dynamic constraint_data/2.
+
+% Scaled for the Powerless
+is_noose(C) :- 
+    constraint_data(C, Data),
+    member(base_extractiveness(Base), Data),
+    drl_audit_core:effective_extraction(Base, individual_powerless, Chi),
+    drl_audit_core:structural_signature(Chi, Data, snare).
+
+% Scaled for the Observer
+is_mountain(C) :- 
+    constraint_data(C, Data),
+    member(base_extractiveness(Base), Data),
+    drl_audit_core:effective_extraction(Base, analytical, Chi),
+    drl_audit_core:structural_signature(Chi, Data, mountain).
+
+% Scaled for the Beneficiary
+is_rope(C) :- 
+    constraint_data(C, Data),
+    member(base_extractiveness(Base), Data),
+    drl_audit_core:effective_extraction(Base, institutional, Chi),
+    drl_audit_core:structural_signature(Chi, Data, rope).
 
 /* ================================================================
    MODAL LOGIC EXTENSION FOR DEFERENTIAL REALISM v4.0
@@ -60,12 +92,12 @@
    - All dependency analysis is context-relative
    - "Load-bearing" now indexed to WHO is cutting
    - Scaffold assessment indexed to WHO needs transition
-   - Theorem 3 ("cutting load-bearing Noose requires Scaffold")
+   - Theorem 3 ("cutting load-bearing Snare requires Scaffold")
      now evaluates per perspective
    
    CRITICAL THEOREM 3 UPGRADE:
-   OLD: "If Noose is load-bearing, cutting requires Scaffold"
-   NEW: "If Noose is load-bearing FROM CONTEXT C, cutting from C requires Scaffold"
+   OLD: "If Snare is load-bearing, cutting requires Scaffold"
+   NEW: "If Snare is load-bearing FROM CONTEXT C, cutting from C requires Scaffold"
    
    Example: Property rights
    - FROM powerless context: load-bearing Mountain (shelter dependency)
@@ -108,14 +140,14 @@ composition_rule(mountain, _, mountain) :- !.
 composition_rule(_, mountain, mountain) :- !.
 
 % Extraction Dominance: ⊞C₁ ∧ ⊠ C₂ ∧ Embedded(C₂, C₁) ⇒ ⊠ (C₁ ∧ C₂)
-% When a Noose is embedded in a Rope, the whole becomes extractive
-composition_rule(rope, noose, noose) :- !.
-composition_rule(noose, rope, noose) :- !.
-composition_rule(tangled_rope, noose, noose) :- !.
-composition_rule(noose, tangled_rope, noose) :- !.
+% When a Snare is embedded in a Rope, the whole becomes extractive
+composition_rule(rope, snare, snare) :- !.
+composition_rule(snare, rope, snare) :- !.
+composition_rule(tangled_rope, snare, snare) :- !.
+composition_rule(snare, tangled_rope, snare) :- !.
 
-% Noose Dominance: Multiple Nooses compound
-composition_rule(noose, noose, noose) :- !.
+% Snare Dominance: Multiple Nooses compound
+composition_rule(snare, snare, snare) :- !.
 
 % Rope Composition: ⊞C₁ ∧ ⊞C₂ ∧ Compatible(C₁, C₂) ⇒ ⊞(C₁ ∧ C₂)
 % Compatible Ropes can be composed into compound Ropes
@@ -126,19 +158,19 @@ composition_rule(tangled_rope, tangled_rope, tangled_rope) :- !.
 composition_rule(rope, tangled_rope, tangled_rope) :- !.
 composition_rule(tangled_rope, rope, tangled_rope) :- !.
 
-% Zombie contamination
-composition_rule(zombie, _, zombie) :- !.
-composition_rule(_, zombie, zombie) :- !.
+% Piton contamination
+composition_rule(piton, _, piton) :- !.
+composition_rule(_, piton, piton) :- !.
 
 % Unknown fallback
 composition_rule(_, _, unknown).
 
 %% detect_extraction_dominance(+Composite, -Evidence)
-% Detects when a Rope is corrupted by an embedded Noose
+% Detects when a Rope is corrupted by an embedded Snare
 % NOTE: Uses default analytical context for detection
 detect_extraction_dominance(Composite, Evidence) :-
     narrative_ontology:affects_constraint(Composite, Component),
-    drl_core:dr_type(Component, noose),
+    drl_core:dr_type(Component, snare),
     narrative_ontology:constraint_metric(Component, extractiveness, X),
     X >= 0.66,
     Evidence = embedded_noose(Component, X).
@@ -195,7 +227,7 @@ dr_type_at(C, Time, Context, Type) :-
 
 %% classify_at_time_indexed(+C, +E, +EffectiveX, +Context, -Type)
 % Classification logic using power-scaled extractiveness
-% Recognizes: mountain, rope, noose, tangled_rope, zombie, scaffold
+% Recognizes: mountain, rope, snare, tangled_rope, piton, scaffold
 
 % Scaffold (temporary support structure)
 classify_at_time_indexed(C, _E, X, _Context, scaffold) :-
@@ -209,10 +241,10 @@ classify_at_time_indexed(_C, E, _X, Context, mountain) :-
     E =< Ceil,
     constraint_indexing:effective_immutability_for_context(Context, mountain), !.
 
-% Noose (extractive + enforced + changeable)
-classify_at_time_indexed(_C, E, X, Context, noose) :-
-    v3_1_config:param(noose_extraction_floor, XFloor),
-    v3_1_config:param(noose_suppression_floor, EFloor),
+% Snare (extractive + enforced + changeable)
+classify_at_time_indexed(_C, E, X, Context, snare) :-
+    v3_1_config:param(snare_extraction_floor, XFloor),
+    v3_1_config:param(snare_suppression_floor, EFloor),
     X >= XFloor,
     E >= EFloor,
     constraint_indexing:effective_immutability_for_context(Context, rope), !.
@@ -225,9 +257,9 @@ classify_at_time_indexed(_C, _E, X, Context, tangled_rope) :-
     X =< TangledX,
     constraint_indexing:effective_immutability_for_context(Context, rope), !.
 
-% Zombie (low extraction, high maintenance)
-classify_at_time_indexed(_C, E, X, _Context, zombie) :-
-    v3_1_config:param(zombie_extraction_ceiling, XCeil),
+% Piton (low extraction, high maintenance)
+classify_at_time_indexed(_C, E, X, _Context, piton) :-
+    v3_1_config:param(piton_extraction_ceiling, XCeil),
     X =< XCeil,
     E > XCeil, !.
 
@@ -257,16 +289,16 @@ transformation_detected(C, From, To, T1, T2) :-
 %% transformation_type(+C, +From, +To, +T1, +T2, -Label)
 % Classifies the type of transformation with semantic label
 
-transformation_type(C, rope, noose, T1, T2, capture) :-
-    transformation_detected(C, rope, noose, T1, T2),
+transformation_type(C, rope, snare, T1, T2, capture) :-
+    transformation_detected(C, rope, snare, T1, T2),
     check_capture_between(C, T1, T2).
 
-transformation_type(C, rope, zombie, T1, T2, obsolescence) :-
-    transformation_detected(C, rope, zombie, T1, T2),
+transformation_type(C, rope, piton, T1, T2, obsolescence) :-
+    transformation_detected(C, rope, piton, T1, T2),
     \+ check_capture_between(C, T1, T2).
 
-transformation_type(C, scaffold, noose, T1, T2, calcification) :-
-    transformation_detected(C, scaffold, noose, T1, T2),
+transformation_type(C, scaffold, snare, T1, T2, calcification) :-
+    transformation_detected(C, scaffold, snare, T1, T2),
     narrative_ontology:entity(C, scaffold),
     check_capture_between(C, T1, T2).
 
@@ -274,8 +306,8 @@ transformation_type(C, mountain, rope, T1, T2, discovery) :-
     transformation_detected(C, mountain, rope, T1, T2),
     narrative_ontology:constraint_claim(C, mountain).
 
-transformation_type(C, mountain, noose, T1, T2, discovery) :-
-    transformation_detected(C, mountain, noose, T1, T2),
+transformation_type(C, mountain, snare, T1, T2, discovery) :-
+    transformation_detected(C, mountain, snare, T1, T2),
     narrative_ontology:constraint_claim(C, mountain).
 
 %% canonical_transformation(?C, ?From, ?To, -T1_earliest, -T2_latest, ?Label)
@@ -298,7 +330,7 @@ check_capture_between(C, T1, T2) :-
 %% predict_transformation(+C, +CurrentType, -LikelyFutureType)
 % Predicts likely future transformation based on trajectory
 % NOTE: Uses analytical context for prediction
-predict_transformation(C, rope, noose) :-
+predict_transformation(C, rope, snare) :-
     findall(X, narrative_ontology:measurement(_, C, extractiveness, _, X), Xs),
     length(Xs, N), N >= 2,
     last(Xs, X_latest),
@@ -307,7 +339,7 @@ predict_transformation(C, rope, noose) :-
     Xs = [X_first|_],
     X_latest > X_first.
 
-predict_transformation(C, rope, zombie) :-
+predict_transformation(C, rope, piton) :-
     findall(E, narrative_ontology:measurement(_, C, suppression_requirement, _, E), Es),
     length(Es, N), N >= 2,
     last(Es, E_latest),
@@ -315,7 +347,7 @@ predict_transformation(C, rope, zombie) :-
     narrative_ontology:constraint_metric(C, extractiveness, X),
     X < 0.35.
 
-predict_transformation(C, tangled_rope, noose) :-
+predict_transformation(C, tangled_rope, snare) :-
     narrative_ontology:constraint_metric(C, extractiveness, X),
     X > 0.5.
 
@@ -335,7 +367,7 @@ predict_transformation(C, tangled_rope, noose) :-
 simulate_cut(Constraint, Context, Effects) :-
     constraint_indexing:valid_context(Context),
     drl_core:dr_type(Constraint, Context, Type),
-    (Type = noose ; Type = zombie ; Type = rope),  % Only cut these types
+    (Type = snare ; Type = piton ; Type = rope),  % Only cut these types
     findall(effect(Target, Impact, Reason),
             dependency_chain(Constraint, Target, Impact, Reason, Context),
             Effects).
@@ -388,7 +420,7 @@ context_depends_critically(Target, Source, Context) :-
     
     % Source provides the only perceived stability
     drl_core:dr_type(Source, Context, SourceType),
-    member(SourceType, [rope, noose]),
+    member(SourceType, [rope, snare]),
     
     % Check if Target's stability requires Source
     narrative_ontology:affects_constraint(Source, Target).
@@ -399,7 +431,7 @@ context_depends_critically(Target, Source, Context) :-
 
 estimate_impact_indexed(Source, Target, Context, catastrophic, load_bearing) :-
     % Source is load-bearing FROM THIS CONTEXT
-    drl_core:dr_type(Source, Context, noose),
+    drl_core:dr_type(Source, Context, snare),
     narrative_ontology:constraint_metric(Source, extractiveness, X),
     v3_1_config:param(noose_load_bearing_threshold, T),
     X > T,
@@ -410,7 +442,7 @@ estimate_impact_indexed(Source, Target, Context, catastrophic, load_bearing) :-
 
 estimate_impact_indexed(Source, Target, Context, beneficial, removes_extraction) :-
     % Source is extractive, Target is functional
-    drl_core:dr_type(Source, Context, noose),
+    drl_core:dr_type(Source, Context, snare),
     drl_core:dr_type(Target, Context, rope),
     !.
 
@@ -457,7 +489,7 @@ calculate_coupling_strength([_|T1], [_|T2], S) :-
 assess_scaffold_need(Constraint, Context, Assessment) :-
     constraint_indexing:valid_context(Context),
     drl_core:dr_type(Constraint, Context, Type),
-    member(Type, [noose, zombie, rope]),
+    member(Type, [snare, piton, rope]),
     
     simulate_cut(Constraint, Context, Effects),
     
@@ -488,7 +520,7 @@ counterfactual_world(cut(C), current, Context, after_cut) :-
 
 counterfactual_world(add_scaffold(S, For), current, Context, with_scaffold) :-
     constraint_indexing:valid_context(Context),
-    drl_core:dr_type(For, Context, noose),
+    drl_core:dr_type(For, Context, snare),
     format('In world with scaffold ~w for ~w (from ~w):~n', [S, For, Context]),
     format('  - Temporary support for transition~n'),
     format('  - Allows safe removal of ~w~n', [For]).
@@ -544,6 +576,41 @@ standard_context(context(agent_power(analytical),
                         exit_options(analytical), 
                         spatial_scope(global))).
 
+% ============================================================================
+% NEW: INDEXICAL PERSPECTIVE AUDIT
+% ============================================================================
+% Checks if two agents experience a structural conflict (Risk Gap)
+% Implements Section IV-B
+detect_perspectival_risk(ConstraintID, Agent1, Agent2, RiskLabel) :-
+    % 1. Get the base extraction score for the constraint
+    constraint_data(ConstraintID, Data),
+    member(base_extractiveness(X_base), Data),
+    
+    % 2. Calculate what each agent "sees" based on their power index
+    % Uses the pi scaling function from drl_audit_core
+    agent_index(Agent1, context(Power1, _, _, _)),
+    agent_index(Agent2, context(Power2, _, _, _)),
+    
+    drl_audit_core:effective_extraction(X_base, Power1, Chi1),
+    drl_audit_core:effective_extraction(X_base, Power2, Chi2),
+    
+    % 3. Determine the structural type for each agent
+    drl_audit_core:structural_signature(Chi1, Data, Type1),
+    drl_audit_core:structural_signature(Chi2, Data, Type2),
+    
+    % 4. Match against the Risk Table
+    drl_audit_core:omega_risk(Type1, Type2, RiskLabel, _).
+
+% possibly(C) is true if the constraint is a Rope (changeable/contingent)
+possibly(C) :- 
+    constraint_indexing:default_context(Ctx),
+    drl_core:dr_type(C, Ctx, rope).
+
+% necessarily(C) is true if the constraint is a Mountain (fixed/required)
+necessarily(C) :- 
+    constraint_indexing:default_context(Ctx),
+    drl_core:dr_type(C, Ctx, mountain).
+
 /* ================================================================
    UTILITY PREDICATES
    ================================================================ */
@@ -552,6 +619,10 @@ standard_context(context(agent_power(analytical),
 % Gets the last element of a list
 last([X], X) :- !.
 last([_|Xs], Last) :- last(Xs, Last).
+
+% Provide a fail-safe default so they are "defined" even if no data is loaded
+agent_index(_, _) :- fail.
+constraint_data(_, _) :- fail.
 
 /* ================================================================
    VERSION & MIGRATION INFO
@@ -578,8 +649,8 @@ MIGRATION GUIDE v3.x → v4.0:
   Old: dependency_chain(source, target, impact, reason)
   New: dependency_chain(source, target, impact, reason, context)
   
-  Old: assess_scaffold_need(noose, assessment)
-  New: assess_scaffold_need(noose, context, assessment)
+  Old: assess_scaffold_need(snare, assessment)
+  New: assess_scaffold_need(snare, context, assessment)
   
   CRITICAL NEW REQUIREMENT:
   Before cutting any constraint, MUST evaluate:

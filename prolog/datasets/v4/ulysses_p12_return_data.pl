@@ -6,7 +6,7 @@ entity(db_murphy_sailor, individual).
 entity(skin_the_goat_shelter, structural).
 entity(parnell_mythology, structural).
 entity(samaritan_support_scaffold, scaffold).
-entity(economic_despair_corley, noose).
+entity(economic_despair_corley, snare).
 
 interval(eumaeus_interval, 0100, 0200). % 1:00 AM to 2:00 AM (approximate)
 
@@ -32,8 +32,8 @@ constraint_metric(samaritan_support_scaffold, extractiveness, 0.12).
 constraint_metric(samaritan_support_scaffold, suppression_requirement, 0.08).
 constraint_metric(samaritan_support_scaffold, resistance, 0.05).
 
-% Corley's situation is a terminal Noose (Economic Despair)
-constraint_claim(economic_despair_corley, noose).
+% Corley's situation is a terminal Snare (Economic Despair)
+constraint_claim(economic_despair_corley, snare).
 constraint_metric(economic_despair_corley, extractiveness, 0.95).
 constraint_metric(economic_despair_corley, suppression_requirement, 0.85).
 constraint_metric(economic_despair_corley, resistance, 0.90).

@@ -45,7 +45,7 @@
  * To the engineer, the code is a Mountain: an unchangeable set of physical 
  * and legal requirements. To the public, it is a Rope: a coordination 
  * mechanism providing a baseline of safety. If the code becomes 
- * overly conservative due to lobbying, it risks becoming a Noose for 
+ * overly conservative due to lobbying, it risks becoming a Snare for 
  * affordable development.
  */
 
@@ -140,7 +140,7 @@ constraint_indexing:constraint_classification(
     !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: MARGINAL HOUSING DEVELOPER - Noose
+   PERSPECTIVE 3: MARGINAL HOUSING DEVELOPER - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_moderate - Has some agency but limited capital.
@@ -157,7 +157,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     asce_7_22_seismic_design,
-    noose,
+    snare,
     context(
         agent_power(individual_moderate),
         time_horizon(biographical),
@@ -200,7 +200,7 @@ test(safety_scaling) :-
  * 1. EXTRACTIVENESS SCORE (0.2): Standard engineering codes are rarely 
  * extractive in the sense of transferring wealth unfairly; they are 
  * high-friction safety mechanisms.
- * * 2. PERSPECTIVE SELECTION: Chose the Developer as a "Noose" perspective 
+ * * 2. PERSPECTIVE SELECTION: Chose the Developer as a "Snare" perspective 
  * to highlight that safety constraints have economic externalities.
  */
 
@@ -225,7 +225,7 @@ omega_variable(
  * to approve non-standard designs.
  * * CONCLUSION:
  * The presence of PBSD prevents the code from being a total Mountain, 
- * keeping it in the Rope/Noose transition for sophisticated agents.
+ * keeping it in the Rope/Snare transition for sophisticated agents.
  */
 
 /* ==========================================================================

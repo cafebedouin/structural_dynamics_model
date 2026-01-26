@@ -1,12 +1,13 @@
-% [RESOLVED MANDATROPHY] High-extraction Mountain identified as structural mandate.
 % ============================================================================
 % CONSTRAINT STORY: planetary_boundaries
 % ============================================================================
-% Revised: 2026-01-20 (v3.1 Hardened Standard)
+% Generated: 2026-01-23
+% Model: Gemini Pro (Revised)
 % Source: Stockholm Resilience Centre / Structural Dynamics Fleet
+% Status: [RESOLVED MANDATROPHY]
 % ============================================================================
 
-:- module(planetary_boundaries, []).
+:- module(constraint_planetary_boundaries, []).
 
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
@@ -17,11 +18,7 @@
     domain_priors:base_extractiveness/2,
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
-    constraint_indexing:constraint_classification/3,
-    narrative_ontology:omega_variable/5,
-    narrative_ontology:constraint_beneficiary/2,
-    narrative_ontology:constraint_victim/2,
-    narrative_ontology:constraint_metric/3.
+    constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -29,63 +26,88 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: planetary_boundaries
- * human_readable: Planetary Boundaries
- * domain: environmental/political
+ * 
+ * constraint_id: planetary_boundaries
+ * human_readable: Planetary Boundaries (Earth System Limits)
+ * domain: environmental/political/economic
  * temporal_scope: 2009-Present
  * spatial_scope: Global
- * * SUMMARY:
+ * 
+ * SUMMARY:
  * Planetary Boundaries define the "safe operating space for humanity" across 
  * nine Earth system processes. While biophysical (Mountain), 
  * they function as a mandate for global coordination (Rope) that can cap 
- * economic margins for developing populations (Noose).
- * * KEY AGENTS:
- * - Biosphere: The physical substrate (Mountain).
- * - Global_Governance: Institutional; coordination via policy (Rope).
- * - Developing_Populations: Powerless; economic margin capped (Noose).
+ * economic margins for developing populations (Snare).
+ * 
+ * KEY AGENTS:
+ * - Developing Populations (Individual Powerless): Experience economic margins capped by boundary adherence.
+ * - Global Governance (Institutional): Seeks to coordinate policy to maintain safe operating space.
+ * - Earth System Scientists (Analytical): Define and monitor the biophysical limits of the planet.
  */
 
 /* ==========================================================================
-   2. BASE PROPERTIES (Context-Independent)
-   ========================================================================= */
+   2. CORE SYSTEM INTEGRATION (The "Reality" Layer)
+   ========================================================================== */
 
-% Structural Anchor for System Extraction
-narrative_ontology:interval(planetary_boundaries, 2009, 2026).
+narrative_ontology:interval(planetary_boundaries, 0, 10).
+narrative_ontology:constraint_claim(planetary_boundaries, mountain).
 
 % Base extractiveness: 0.8. 
-% Rationale: High extraction of developmental potential to maintain biophysical stability.
+% High extraction of developmental potential to maintain biophysical stability.
 domain_priors:base_extractiveness(planetary_boundaries, 0.8).
+
+% Suppression score: 0.8.
+% The biophysical limits strongly suppress the alternative of unlimited economic growth
+% and resource consumption, especially for developing nations.
 domain_priors:suppression_score(planetary_boundaries, 0.8).
+
+% Enforcement: Requires active enforcement by global governance bodies and nation-states.
 domain_priors:requires_active_enforcement(planetary_boundaries).
 
-% Beneficiaries & Victims
-narrative_ontology:constraint_beneficiary(planetary_boundaries, global_governance_bodies).
-narrative_ontology:constraint_victim(planetary_boundaries, developing_economic_subjects).
-
-% v3.1 Corrected Metrics
-narrative_ontology:constraint_metric(planetary_boundaries, extractiveness, 0.8).
-narrative_ontology:constraint_metric(planetary_boundaries, suppression_requirement, 0.8).
+% BENEFICIARIES & VICTIMS
+constraint_beneficiary(planetary_boundaries, global_ecosystems).
+constraint_victim(planetary_boundaries, developing_economic_subjects).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 1: Sub Specie Aeternitatis - MOUNTAIN
+   PERSPECTIVE 1: DEVELOPING POPULATIONS - Snare
+   --------------------------------------------------------------------------
+   WHO: individual_powerless (Experience economic margins capped by boundary adherence)
+   WHEN: biographical (Short-to-medium term development goals)
+   WHERE: trapped (Bound by global environmental regulations)
+   
+   WHY THIS CLASSIFICATION:
+   For developing populations, adherence to planetary boundaries can be a 'Snare'. 
+   Their economic development ambitions are constrained, as carbon budgets and
+   resource limits effectively cap their industrial growth, often perceived as
+   "developmental extraction" by already developed nations.
    -------------------------------------------------------------------------- */
 constraint_indexing:constraint_classification(
     planetary_boundaries, 
-    mountain, 
+    snare, 
     context(
-        agent_power(analytical),
-        time_horizon(civilizational),
+        agent_power(individual_powerless),
+        time_horizon(biographical),
         exit_options(trapped),
-        spatial_scope(global)
+        spatial_scope(local)
     )
-) :- !.
+).
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 2: Global Policy Makers - ROPE
+   PERSPECTIVE 2: GLOBAL GOVERNANCE - Rope
+   --------------------------------------------------------------------------
+   WHO: institutional (Seeks to coordinate policy to maintain safe operating space)
+   WHEN: generational (Planning for long-term human well-being)
+   WHERE: arbitrage (Balancing national interests with planetary limits)
+   
+   WHY THIS CLASSIFICATION:
+   For global governance bodies (e.g., UN, IPCC), planetary boundaries are a 'Rope'. 
+   They provide a scientific framework for coordinating international policy and
+   action, offering a tool to guide humanity towards a sustainable future by
+   defining critical thresholds.
    -------------------------------------------------------------------------- */
 constraint_indexing:constraint_classification(
     planetary_boundaries, 
@@ -94,74 +116,126 @@ constraint_indexing:constraint_classification(
         agent_power(institutional),
         time_horizon(generational),
         exit_options(arbitrage),
-        spatial_scope(national)
+        spatial_scope(global)
     )
-) :- !.
+).
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: Economic Subject (Developing Nation) - NOOSE
+   PERSPECTIVE 3: EARTH SYSTEM SCIENTISTS - Mountain
+   --------------------------------------------------------------------------
+   WHO: analytical (Define and monitor the biophysical limits of the planet)
+   WHEN: civilizational (Observing long-term Earth system processes)
+   WHERE: analytical (Understanding immutable natural laws)
+   
+   WHY THIS CLASSIFICATION:
+   To Earth System Scientists, planetary boundaries represent a 'Mountain'. 
+   They are objective biophysical limits that, once crossed, could lead to
+   irreversible environmental changes. These boundaries are immutable natural
+   laws that cannot be negotiated, only respected.
    -------------------------------------------------------------------------- */
 constraint_indexing:constraint_classification(
     planetary_boundaries, 
-    noose, 
+    mountain, 
     context(
-        agent_power(individual_powerless),
-        time_horizon(biographical),
-        exit_options(trapped),
-        spatial_scope(local)
+        agent_power(analytical),
+        time_horizon(civilizational),
+        exit_options(analytical),
+        spatial_scope(global)
     )
-) :- !.
-
-/* ==========================================================================
-   4. TESTS
-   ========================================================================== */
-
-:- begin_tests(planetary_boundary_tests).
-
-test(multi_perspective_variance) :-
-    constraint_indexing:constraint_classification(planetary_boundaries, T1, context(agent_power(analytical), _, _, _)),
-    constraint_indexing:constraint_classification(planetary_boundaries, T2, context(agent_power(individual_powerless), _, _, _)),
-    T1 \= T2.
-
-:- end_tests(planetary_boundary_tests).
-
-/* ==========================================================================
-   5. OMEGA VARIABLES (Ω)
-   ========================================================================== */
-
-narrative_ontology:omega_variable(
-    physics_vs_policy_tension,
-    "To what degree is a boundary violation a physical 'Mountain' collapse versus a policy-driven 'Noose' tightening?",
-    resolution_mechanism("Real-time monitoring of Earth system process thresholds vs. policy enforcement latency"),
-    impact("If Mountain: Inevitable collapse. If Noose: Reformable developmental ceilings."),
-    confidence_without_resolution(medium)
 ).
 
 /* ==========================================================================
-   6. MODEL INTERPRETATION (Hardened Commentary)
+   4. TESTS (What We Learn About Constraints)
+   ========================================================================== */
+
+:- begin_tests(planetary_boundaries_tests).
+
+test(multi_perspective_variance) :-
+    constraint_indexing:constraint_classification(planetary_boundaries, Type1, context(agent_power(individual_powerless), _, _, _)),
+    constraint_indexing:constraint_classification(planetary_boundaries, Type2, context(agent_power(institutional), _, _, _)),
+    constraint_indexing:constraint_classification(planetary_boundaries, Type3, context(agent_power(analytical), _, _, _)),
+    Type1 \= Type2,
+    Type2 \= Type3,
+    Type1 \= Type3.
+
+:- end_tests(planetary_boundaries_tests).
+
+/* ==========================================================================
+   5. MODEL INTERPRETATION (Commentary)
    ========================================================================== */
 
 /**
  * LLM GENERATION NOTES
- * * Model: Gemini-v3.1-Hardened
- * * KEY DECISIONS:
- * The "safe operating space" for the planet is often a "narrowed operating space" 
- * for the marginalized. This represents quintessential Mandatrophy where 
- * biophysical facts justify developmental extraction.
+ * 
+ * Model: Gemini Pro (Revised)
+ * Date: 2026-01-23
+ * 
+ * KEY DECISIONS:
+ * 
+ * 1. MANDATROPHY STATUS: High extractiveness (0.8) and suppression (0.8)
+ *    confirm this as a severe Mandatrophic constraint. It is 'RESOLVED' by
+ *    recognizing that the 'Mountain' of biophysical limits is interpreted as
+ *    a 'Rope' for global coordination, but a 'Snare' for developing economies.
+ * 
+ * 2. CLASSIFICATION RATIONALE:
+ *    - Developing Populations (Snare): Economic growth constrained by limits.
+ *    - Global Governance (Rope): Tool for international environmental policy.
+ *    - Earth System Scientists (Mountain): Immutable biophysical laws.
+ * 
+ * 3. CORE INSIGHT: Planetary Boundaries function as a 'Mountain' of biophysical
+ *    reality. This scientific understanding becomes a 'Rope' for global
+ *    governance, enabling coordination for sustainability. However, this same
+ *    framework can act as an economic 'Snare' for developing nations,
+ *    highlighting a profound tension between environmental imperative and
+ *    developmental equity.
  */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+/**
+ * OMEGA IDENTIFICATION
+ *
+ * Mandatory Omega for high-extraction constraints.
+ */
+
+omega_variable(
+    physics_vs_policy_tension,
+    "To what degree is a boundary violation a physical 'Mountain' collapse versus a policy-driven 'Snare' tightening that could be renegotiated or alleviated?",
+    resolution_mechanism("Real-time monitoring of Earth system process thresholds coupled with political economic analysis of policy enforcement mechanisms and their differential impact on nations."),
+    impact("If Mountain: Inevitable biophysical collapse, regardless of human policy. If Snare: Reformable developmental ceilings imposed by human choice."),
+    confidence_without_resolution(medium)
+).
 
 /* ==========================================================================
    7. ALTERNATIVE ANALYSIS
    ========================================================================== */
-
 /**
- * VIABLE ALTERNATIVES: Technological Decoupling
- * Suppression: Currently suppressed by thermodynamic constraints and 
- * high capital/temporal requirements for radical innovation.
+ * VIABLE ALTERNATIVES
+ *
+ * ALTERNATIVE 1: Unlimited Economic Growth / Resource Consumption
+ *    Viability: The dominant economic paradigm of the 19th and 20th centuries.
+ *    Suppression: Actively suppressed by scientific understanding of finite resources and ecological limits.
+ *
+ * CONCLUSION:
+ * Planetary Boundaries represent an unavoidable 'Mountain' that fundamentally
+ * suppresses the alternative of unlimited growth. While this creates a 'Rope'
+ * for global coordination, it is simultaneously a developmental 'Snare'
+ * for those aspiring to improve their living standards without access to
+ * resource-decoupled technologies.
  */
 
-intent_viable_alternative(planetary_boundaries, technological_innovation, 'Radical resource decoupling').
-intent_alternative_rejected(planetary_boundaries, technological_innovation, 'Thermodynamic and temporal constraints').
+/* ==========================================================================
+   8. INTEGRATION HOOKS
+   ========================================================================== */
+
+/**
+ * TO USE THIS FILE:
+ * 
+ * 1. Load: ?- [constraints/planetary_boundaries].
+ * 2. Multi-perspective: ?- multi_index_report(planetary_boundaries).
+ * 3. Run tests: ?- run_tests(planetary_boundaries_tests).
+ */
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

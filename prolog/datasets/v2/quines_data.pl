@@ -35,10 +35,10 @@ constraint_metric(quoting_mechanism, suppression_requirement, 0.40).
 constraint_metric(quoting_mechanism, snap_back_potential, 0.75).
 constraint_metric(quoting_mechanism, extractiveness, 0.55).
 
-% The External File Dependency (The Noose)
+% The External File Dependency (The Snare)
 % A program that simply reads its own source file is not a Quine; it "strangles" the pure self-reference.
 % Extractiveness at 0.90 requires the 'data_code_bridge' scaffold to resolve internally.
-constraint_claim(io_dependency_exclusion, noose).
+constraint_claim(io_dependency_exclusion, snare).
 constraint_metric(io_dependency_exclusion, intensity, 0.95).
 constraint_metric(io_dependency_exclusion, suppression_requirement, 0.88).
 constraint_metric(io_dependency_exclusion, snap_back_potential, 0.05).
@@ -49,7 +49,7 @@ constraint_metric(io_dependency_exclusion, extractiveness, 0.90).
 recommendation(rec_01, utilize_schematic_repr_to_decouple_logic_from_literal_strings).
 affects_constraint(rec_01, quoting_mechanism).
 
-% Noose (0.90 extractiveness) triggers Cut
+% Snare (0.90 extractiveness) triggers Cut
 % Utilizing 'data_code_bridge' to internalize the source template.
 recommendation(rec_02, cut_filesystem_calls_to_enforce_internal_self_reproduction).
 affects_constraint(rec_02, io_dependency_exclusion).

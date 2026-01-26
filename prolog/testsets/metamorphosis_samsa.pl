@@ -43,9 +43,9 @@
  * - Grete Samsa: Gregor's sister (Initially functional coordination, later coercive).
  * * NARRATIVE ARC:
  * The constraint begins as a shocking biological event (Mountain) for Gregor,
- * becomes a breach of contract (Noose) for the employer, and eventually 
+ * becomes a breach of contract (Snare) for the employer, and eventually 
  * transforms from a care-taking coordination (Rope) into an existential 
- * threat (Noose) for the family, culminating in Gregor's removal/death.
+ * threat (Snare) for the family, culminating in Gregor's removal/death.
  */
 
 /* ==========================================================================
@@ -69,7 +69,7 @@ domain_priors:suppression_score(metamorphosis_samsa, 0.7).
 
 % Enforcement requirements
 % Emerges naturally as a biological fact, but requires active 
-% social enforcement (locking the door) to maintain the "Noose" status.
+% social enforcement (locking the door) to maintain the "Snare" status.
 domain_priors:requires_active_enforcement(metamorphosis_samsa).
 
 % Metrics required for Section 1 of the Executive Summary
@@ -120,7 +120,7 @@ constraint_indexing:constraint_classification(
     !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE CHIEF CLERK - Noose
+   PERSPECTIVE 2: THE CHIEF CLERK - Snare
    --------------------------------------------------------------------------
    
    WHO: institutional - Represents the legal/economic power of the employer.
@@ -131,7 +131,7 @@ constraint_indexing:constraint_classification(
    WHY THIS CLASSIFICATION:
    The Clerk views the constraint as an extractive/coercive failure. He 
    interprets Gregor's absence not as a tragedy, but as "peculiar whims" 
-   or potential "theft of funds." It is a Noose designed to force Gregor 
+   or potential "theft of funds." It is a Snare designed to force Gregor 
    back to work.
    
    NARRATIVE EVIDENCE:
@@ -141,7 +141,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     metamorphosis_samsa,
-    noose,
+    snare,
     context(
         agent_power(institutional),
         time_horizon(immediate),
@@ -205,7 +205,7 @@ test(multi_perspective_variance) :-
     Type1 \= Type2,
     Type2 \= Type3,
     Type1 == mountain,
-    Type2 == noose,
+    Type2 == snare,
     Type3 == rope.
 
 test(power_extractiveness_scaling) :-
@@ -214,7 +214,7 @@ test(power_extractiveness_scaling) :-
     Score > 0.7.
 
 test(exit_option_shift) :-
-    % Sister shifts from Rope (care) to Noose (removal) as her exit options 
+    % Sister shifts from Rope (care) to Snare (removal) as her exit options 
     % (marriage/future) become constrained by Gregor's presence.
     true.
 
@@ -240,7 +240,7 @@ test(exit_option_shift) :-
  * - Gregor -> Mountain: He attempts to "sleep it off" initially, 
  * treating it as a temporary illness (Rope), but the reality of his 
  * legs and lack of teeth forces a 'Mountain' realization.
- * - Clerk -> Noose: His first reaction is to threaten Gregor's job 
+ * - Clerk -> Snare: His first reaction is to threaten Gregor's job 
  * and reputation, typical of an extractive institutional perspective.
  * * 4. CONFIDENCE: 
  * High: The economic/labor constraints are explicit in Kafka's text.
@@ -265,7 +265,7 @@ omega_variable(
     debt_origin,
     "What was the specific nature of the 'business misfortune' 5 years ago?",
     resolution_mechanism("Historical audit of Mr. Samsa's collapsed firm."),
-    impact("Determines if the original debt was a Noose (extractive) or a Rope (risk coordination)."),
+    impact("Determines if the original debt was a Snare (extractive) or a Rope (risk coordination)."),
     confidence_without_resolution(medium)
 ).
 
@@ -287,7 +287,7 @@ omega_variable(
  * * CONCLUSION:
  * The rapid suppression of these alternatives shifts the family's 
  * classification of Gregor from a 'broken Rope' (sick brother) to a 
- * 'Noose' (monster that must be removed).
+ * 'Snare' (monster that must be removed).
  */
 
 /* ==========================================================================

@@ -45,11 +45,11 @@
  * "mass mobilization" and food rationing systems that fail to meet 
  * survival minimums.
  * - China: Institutional/External; provides the "Strategic Rope" (food, 
- * fuel, and 90% of trade) that prevents the Noose of mandatrophy from 
+ * fuel, and 90% of trade) that prevents the Snare of mandatrophy from 
  * reaching its terminal state (collapse).
  * * NARRATIVE ARC:
  * The Songun policy was established as a Rope to coordinate national survival 
- * after the fall of the Soviet Union. However, it functioned as a Noose, 
+ * after the fall of the Soviet Union. However, it functioned as a Snare, 
  * cannibalizing the "Arduous March" margin. By 2025, the system persists in 
  * a state of "brittle stability," saved from the physical Mountain of 
  * collapse only by the external arbitrage of Chinese (and recently Russian) 
@@ -61,7 +61,7 @@
    ========================================================================== */
 
 narrative_ontology:interval(dprk_songun_cycle, 0, 10).
-narrative_ontology:constraint_claim(north_korea_songun_mandatrophy, noose).
+narrative_ontology:constraint_claim(north_korea_songun_mandatrophy, snare).
 
 % Base extractiveness score (0.0-1.0)
 % Rationale: 0.95. Near-total extraction; 34% of GDP and the highest 
@@ -193,7 +193,7 @@ constraint_indexing:constraint_classification(
     !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE INDIVIDUAL CITIZEN (SUBJECT) - Noose
+   PERSPECTIVE 3: THE INDIVIDUAL CITIZEN (SUBJECT) - Snare
    --------------------------------------------------------------------------
    WHO: agent_power(individual_powerless) - Subjects under total state mandate.
    WHEN: generational - Lifelong exposure to Songun resource extraction.
@@ -201,7 +201,7 @@ constraint_indexing:constraint_classification(
    SCOPE: spatial_scope(local) - Individual survival and family unit.
    
    WHY THIS CLASSIFICATION:
-   The "Noose" is the totalizing Songun mandate. While the state uses this 
+   The "Snare" is the totalizing Songun mandate. While the state uses this 
    as a "Rope" for institutional survival, the individual feels a 
    terminal tightening. With extraction (0.95) and suppression (0.95) at 
    near-absolute levels, the citizen has zero margin. This is a 
@@ -211,7 +211,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     north_korea_songun_mandatrophy,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(generational),
@@ -238,7 +238,7 @@ test(extraction_paradox) :-
     E > 0.9.
 
 test(china_as_scaffold) :-
-    % China's role is to prevent the Noose from closing.
+    % China's role is to prevent the Snare from closing.
     constraint_indexing:constraint_classification(north_korea_songun_mandatrophy, rope, context(institutional, biographical, mobile, regional)).
 
 :- end_tests(nk_mandatrophy_tests).
@@ -256,7 +256,7 @@ test(china_as_scaffold) :-
  * of the civilian margin. 
  * 2. CHINESE ARBITRAGE: The user is correct that the system only survives 
  * because of China. In this framework, China is the "Rope" that prevents 
- * the Noose of mandatrophy from hitting the Mountain of absolute collapse.
+ * the Snare of mandatrophy from hitting the Mountain of absolute collapse.
  * 3. NEW STABILITY: I noted that Russia (Moscow) has recently provided a 
  * "Complementary Rope" in 2024/2025, reducing China's total trade share 
  * but not its strategic centrality.
@@ -285,7 +285,7 @@ omega_variable(
  * "informational contamination" and loss of totalitarian control.
  * * CONCLUSION:
  * The rejection of reform (the "Alternative Rope") in favor of permanent 
- * extraction confirms the Noose classification for the populace.
+ * extraction confirms the Snare classification for the populace.
  */
 
 /* ==========================================================================

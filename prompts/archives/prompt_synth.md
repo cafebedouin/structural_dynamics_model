@@ -25,38 +25,103 @@ You must ignore the "surface-level" ecological goals and focus entirely on the *
 * Contrast the `intent_viable_alternative` with the `intent_alternative_rejected` to explain why the system is choosing a more coercive path over a feasible one.
 
 
-3. **The "DR Diagnostic" (Constraint Audit):**
-* List the **Mountains, Nooses, Zombies, and Ropes** defined in the `constraint_claim` facts.
-* For each, describe its "Intensity" or "Stickiness" based on the `constraint_metric`.
-* Specifically explain the **"Zombie"** (the narrative that won't die) and the **"Noose"** (the policy that traps the target).
+List the Mountains, Snares, Pitons, and Ropes defined in the `constraint_claim` facts.
+
+
+*   For each, describe its "Intensity" or "Stickiness" based on the `constraint_metric`.
+
+
+*   Specifically explain the **"Piton"** (the narrative that won't die) and the **"Snare"** (the policy that traps the target).
+
+
+
+
+
+
 
 
 4. **The Veto/Feasibility Gap:**
-* Summarize the `veto_exposed` recommendations.
-* List the specific **Veto Actors** who are blocking the high-value recommendations.
-* Explain the "Structural Coercive Intent" (i.e., if a recommendation solves the problem but is vetoed by the beneficiary, what does that say about the system's true goal?).
+
+
+*   Summarize the `veto_exposed` recommendations.
+
+
+*   List the specific **Veto Actors** who are blocking the high-value recommendations.
+
+
+*   Explain the "Structural Coercive Intent" (i.e., if a recommendation solves the problem but is vetoed by the beneficiary, what does that say about the system's true goal?).
+
+
+
+
+
+
+
+
 
 
 
 **Tone:** Cold, analytical, and deterministic. Avoid "hopeful" language. Focus on structural rigidity and power preservation.
 
+
+
+
+
 ---
+
+
+
+
 
 ### **Why this prompt works for the Wang et al. (2025) data**
 
+
+
+
+
 This prompt forces the AI to look at the "hidden challenges" mentioned in the source. When you feed it the Prolog results based on this study, the output changes from "China is planting trees" to:
 
-* 
-**The Systemic Friction:** While the "reimagined" strategy could contribute 9.8% to Global SDG 2 (Zero Hunger) , the current system is "Zombie-locked" into the Grain-for-Green program which causes a 55% reduction in grain output.
+
+
 
 
 * 
-**The Noose:** Farmers are trapped by a 1,500 yuan  subsidy that is unsustainable (only lasting 5–10 years) , while their actual income losses are far higher (21,129.5 yuan ).
+
+
+**The Systemic Friction:** While the "reimagined" strategy could contribute 9.8% to Global SDG 2 (Zero Hunger) , the current system is "Piton-locked" into the Grain-for-Green program which causes a 55% reduction in grain output.
+
+
+
+
+
+
 
 
 * 
+
+
+**The Snare:** Farmers are trapped by a 1,500 yuan  subsidy that is unsustainable (only lasting 5–10 years) , while their actual income losses are far higher (21,129.5 yuan ).
+
+
+
+
+
+
+
+
+* 
+
+
 **The Veto:** The study notes that mainstream efforts prioritize "short-term greening" over "local livelihoods". In Prolog terms, the **State Forestry & Grassland Administration** acts as a Veto Actor against S3/S4 (pasture cultivation/crop switching) because those strategies prioritize water and income over the "greening" metrics they use to justify their existence.
 
 
 
-**Would you like me to run the specific "Veto/Feasibility Gap" analysis on the S5 and S6 "Radical" strategies mentioned in the paper to see if they are structural "Zombies"?**
+
+
+
+
+
+
+
+
+**Would you like me to run the specific "Veto/Feasibility Gap" analysis on the S5 and S6 "Radical" strategies mentioned in the paper to see if they are structural "Pitons"?**

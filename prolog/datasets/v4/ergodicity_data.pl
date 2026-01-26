@@ -78,7 +78,7 @@ affects_constraint(ergodicity, risk_management_integrity).
 % -----------------------------------------------------------------------------
 % Section 7: Recommendations
 % -----------------------------------------------------------------------------
-recommendation(rec1, 'Accept as Natural Law. Distinguish strictly between "Ensemble Probability" and "Time Probability." If a system is non-ergodic (e.g., gambling to ruin), ensemble averages are a "Noose" that hides individual risk.').
+recommendation(rec1, 'Accept as Natural Law. Distinguish strictly between "Ensemble Probability" and "Time Probability." If a system is non-ergodic (e.g., gambling to ruin), ensemble averages are a "Snare" that hides individual risk.').
 affects_constraint(rec1, ergodicity).
 
 % -----------------------------------------------------------------------------

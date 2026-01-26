@@ -35,10 +35,10 @@ constraint_metric(variance_entrapment, suppression_requirement, 0.30).
 constraint_metric(variance_entrapment, snap_back_potential, 0.55).
 constraint_metric(variance_entrapment, extractiveness, 0.45).
 
-% The Absorbing Barrier (The Noose)
+% The Absorbing Barrier (The Snare)
 % Zero capital is an absorbing state; once reached, the system cannot exit. 
 % Extractiveness at 0.95 requires the 'absorbing_barrier_zero' scaffold to analyze ruin probability.
-constraint_claim(terminal_ruin_bound, noose).
+constraint_claim(terminal_ruin_bound, snare).
 constraint_metric(terminal_ruin_bound, intensity, 0.99).
 constraint_metric(terminal_ruin_bound, suppression_requirement, 0.92).
 constraint_metric(terminal_ruin_bound, snap_back_potential, 0.02).
@@ -49,7 +49,7 @@ constraint_metric(terminal_ruin_bound, extractiveness, 0.95).
 recommendation(rec_01, implement_kelly_criterion_to_optimize_bet_sizing).
 affects_constraint(rec_01, variance_entrapment).
 
-% Noose (0.95 extractiveness) triggers Cut
+% Snare (0.95 extractiveness) triggers Cut
 % Utilizing 'absorbing_barrier_zero' scaffold to define a "stop-loss" exit before ruin.
 recommendation(rec_02, redefine_system_boundary_to_exit_above_zero_threshold).
 affects_constraint(rec_02, terminal_ruin_bound).

@@ -34,7 +34,7 @@
  * This constraint models the condition of Taiwan's existence under persistent 
  * existential threat. It is characterized by the "Silicon Shield" (economic 
  * indispensability) acting as a Rope, while the military imbalance and 
- * diplomatic isolation function as a Noose. For the population, the 
+ * diplomatic isolation function as a Snare. For the population, the 
  * "Status Quo" has become an unyielding Mountain—the only navigable terrain 
  * between the catastrophic extraction of a conflict and the loss of autonomy.
  * * KEY AGENTS:
@@ -43,12 +43,12 @@
  * - The Taiwanese Government: Institutional; manages the "Silicon Shield" and 
  * international alignments as a functional coordination Rope.
  * - PRC (Strategic Actor): Institutional/External; the source of the 
- * coercive Noose designed to extract political unification.
+ * coercive Snare designed to extract political unification.
  * * NARRATIVE ARC:
  * Taiwan’s autonomy is maintained through a delicate "Rope" of global 
  * semiconductor dominance. However, as the military "Gray Zone" tactics 
  * (salami-slicing) increase, this Rope is being tested by a tightening 
- * "Noose" of blockade simulations and diplomatic suppression.
+ * "Snare" of blockade simulations and diplomatic suppression.
  */
 
 /* ==========================================================================
@@ -155,7 +155,7 @@ constraint_indexing:constraint_classification(
     !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: PRC MILITARY STRATEGIST - Noose
+   PERSPECTIVE 3: PRC MILITARY STRATEGIST - Snare
    --------------------------------------------------------------------------
    
    WHO: analytical - Observer of the "Gray Zone" effectiveness.
@@ -164,7 +164,7 @@ constraint_indexing:constraint_classification(
    SCOPE: national - The core interest of the PRC state.
    
    WHY THIS CLASSIFICATION:
-   The strategist sees the Noose. By slowly tightening the physical and 
+   The strategist sees the Snare. By slowly tightening the physical and 
    diplomatic constraints—economic coercion, military drills, and 
    international exclusion—they aim to "choke" Taiwan's options until 
    the extraction of unification becomes the only remaining path.
@@ -172,7 +172,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     taiwan_existential_sovereignty,
-    noose,
+    snare,
     context(
         agent_power(analytical),
         time_horizon(historical),
@@ -247,7 +247,7 @@ test(high_extraction_signature) :-
  * * KEY DECISIONS:
  * 1. THE SILICON SHIELD AS ROPE: The most vital insight is that Taiwan's 
  * primary security constraint is an economic coordination mechanism. If the 
- * world did not need the chips, the Noose would have closed decades ago.
+ * world did not need the chips, the Snare would have closed decades ago.
  * 2. THE MOUNTAIN OF THE STATUS QUO: For the average person, the "Status 
  * Quo" is not a choice; it is the physical terrain of their existence.
  * 3. SUPPRESSION (0.8): The high suppression reflects the total lack of 
@@ -257,7 +257,7 @@ test(high_extraction_signature) :-
 omega_variable(
     semiconductor_diversification_impact,
     "Will the construction of foundries in the US and Germany (Rope loosening) 
-     actually tighten the Noose by reducing Taiwan's strategic value?",
+     actually tighten the Snare by reducing Taiwan's strategic value?",
     resolution_mechanism("Monitor international response to cross-strait 
     tensions as global 'fab' capacity outside Taiwan increases"),
     impact("If response weakens: The Silicon Shield was a temporary Rope. 
@@ -276,7 +276,7 @@ omega_variable(
  * suppressed by the threat of immediate kinetic invasion (Mountain).
  * * ALTERNATIVE 2: "One Country, Two Systems" (Unification)
  * Viability: PRC's proposed Rope; rejected by Taiwan after the 
- * Hong Kong experience (seen as a Noose).
+ * Hong Kong experience (seen as a Snare).
  * * CONCLUSION:
  * The active suppression of both "Extreme" alternatives creates the 
  * unique "Status Quo" Mountain that defines modern Taiwan.

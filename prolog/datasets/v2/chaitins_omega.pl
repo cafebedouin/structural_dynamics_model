@@ -36,11 +36,11 @@ constraint_metric(halting_set_summation, suppression_requirement, 0.45).
 constraint_metric(halting_set_summation, snap_back_potential, 0.85).
 constraint_metric(halting_set_summation, extractiveness, 0.68).
 
-% The Absolute Uncomputability Noose (The Noose)
+% The Absolute Uncomputability Snare (The Snare)
 % Knowing the first $n$ bits of Omega allows one to solve the Halting Problem for all programs of length $n$.
 % This "strangles" any attempt to find a pattern or a generating algorithm.
 % Extractiveness at 1.0 requires the 'algorithmic_information_scaffold' to describe its entropy.
-constraint_claim(halting_oracle_equivalence, noose).
+constraint_claim(halting_oracle_equivalence, snare).
 constraint_metric(halting_oracle_equivalence, intensity, 1.0).
 constraint_metric(halting_oracle_equivalence, suppression_requirement, 0.99).
 constraint_metric(halting_oracle_equivalence, snap_back_potential, 0.0).
@@ -51,7 +51,7 @@ constraint_metric(halting_oracle_equivalence, extractiveness, 1.0).
 recommendation(rec_01, utilize_kolmogorov_complexity_to_measure_bit_irreducibility).
 affects_constraint(rec_01, halting_set_summation).
 
-% Noose (1.0 extractiveness) triggers Cut
+% Snare (1.0 extractiveness) triggers Cut
 % Utilizing 'algorithmic_information_scaffold' to accept Omega as a "random" number with max entropy.
 recommendation(rec_02, abandon_deterministic_prediction_for_statistical_randomness_analysis).
 affects_constraint(rec_02, halting_oracle_equivalence).

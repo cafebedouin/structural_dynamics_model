@@ -37,7 +37,7 @@ constraint_metric(axiom_of_choice_alignment, suppression_requirement, 0.38).
 constraint_metric(axiom_of_choice_alignment, snap_back_potential, 0.45).
 constraint_metric(axiom_of_choice_alignment, extractiveness, 0.52).
 
-constraint_claim(zfc_deductive_limit, noose).
+constraint_claim(zfc_deductive_limit, snare).
 constraint_metric(zfc_deductive_limit, intensity, 0.98).
 constraint_metric(zfc_deductive_limit, suppression_requirement, 0.90).
 constraint_metric(zfc_deductive_limit, snap_back_potential, 0.95).

@@ -1,12 +1,12 @@
 % ============================================================================
 % CONSTRAINT STORY: brain_network_paradigm_2026
 % ============================================================================
-% Generated: 2026-01-21
-% Model: Gemini 2.0 Flash
+% Generated: 2026-01-23
+% Model: Gemini Pro (Revised)
 % Source: "The immense interconnectivity of the brain" by Helen Thomson
 % ============================================================================
 
-:- module(brain_network_paradigm_2026, []).
+:- module(constraint_brain_network_paradigm_2026, []).
 
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
@@ -25,24 +25,23 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: brain_network_paradigm_2026
+ * 
+ * constraint_id: brain_network_paradigm_2026
  * human_readable: Distributed Brain Network Paradigm
  * domain: technological/scientific
  * temporal_scope: 2001-2026
  * spatial_scope: Global (Neuroscientific Community)
- * * SUMMARY:
+ * 
+ * SUMMARY:
  * This constraint represents the paradigm shift in neuroscience from viewing the brain as a collection of 
  * discrete, specialized regions to seeing it as a series of interconnected, overlapping networks. 
  * Behaviors like emotion, memory, and daydreaming emerge not from single modules, but from synchronized 
  * activity across these systems.
- * * KEY AGENTS:
- * - Marcus Raichle: The researcher who described the Default Mode Network (DMN) in 2001.
- * - Modularist (Phineas Gage era): The legacy perspective focusing on single-region damage (e.g., frontal lobe).
- * - Imaging Technology (fMRI/PET): The enabling tools that allow the whole brain to be observed in action.
- * * NARRATIVE ARC:
- * Neuroscience moved from "incredible accidents" like Phineas Gage's rod injury to the systematic mapping 
- * of functional networks. The discovery of the DMN marked a turning point where the brain's 
- * activity during rest became as scientifically significant as its activity during tasks.
+ * 
+ * KEY AGENTS:
+ * - Patient with a Brain Injury (Individual Powerless): Subject to the biological reality of their brain's network.
+ * - Network Neuroscientist (Institutional): Leads the paradigm shift with new research.
+ * - Legacy Modularist (Individual Moderate): Their specialized knowledge is challenged by the new paradigm.
  */
 
 /* ==========================================================================
@@ -50,46 +49,65 @@
    ========================================================================== */
 
 narrative_ontology:interval(brain_network_paradigm_2026, 0, 10).
-narrative_ontology:constraint_claim([brain_network_paradigm_2026], [scientific_paradigm]).
+narrative_ontology:constraint_claim(brain_network_paradigm_2026, mountain).
 
-% Base extractiveness score: 0.0
-% Rationale: The paradigm describes a biological fact rather than extracting resources from subjects.
+% Base extractiveness: 0.0.
+% The paradigm describes a biological fact rather than extracting resources from subjects.
 domain_priors:base_extractiveness(brain_network_paradigm_2026, 0.0).
 
-% Suppression score: 0.7
-% Rationale: The article frames the previous "specialized region" view as a "mistake" akin to the parable 
+% Suppression score: 0.7.
+% The article frames the previous "specialized region" view as a "mistake" akin to the parable 
 % of the blind men and the elephant. Legacy modular views are increasingly suppressed by data.
 domain_priors:suppression_score(brain_network_paradigm_2026, 0.7).
 
-% Enforcement requirements: Emerges naturally through data.
+% Enforcement: Emerges naturally through data and scientific evidence.
 domain_priors:emerges_naturally(brain_network_paradigm_2026).
 
-% Metrics for Section 1
-narrative_ontology:constraint_metric(brain_network_paradigm_2026, extractiveness, 0.0).
-narrative_ontology:constraint_metric(brain_network_paradigm_2026, suppression_requirement, 0.7).
+% BENEFICIARIES & VICTIMS
+constraint_beneficiary(brain_network_paradigm_2026, neuroscience).
+constraint_victim(brain_network_paradigm_2026, modular_brain_theories).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 1: THE NETWORK NEUROSCIENTIST (Luiz Pessoa/Raichle) - Rope
+   PERSPECTIVE 1: PATIENT WITH A BRAIN INJURY - Mountain
    --------------------------------------------------------------------------
+   WHO: individual_powerless (Subject to the biological reality of their brain's network)
+   WHEN: biographical (The long-term journey of recovery and adaptation)
+   WHERE: trapped (Bound by the physical limits of their own neurology)
    
+   WHY THIS CLASSIFICATION:
+   For a patient with a brain injury, the brain's network paradigm is a 'Mountain'.
+   The interconnectedness of their brain determines the extent of their recovery
+   and the limits of their abilities. It is an unchangeable biological reality
+   that dictates the course of their life post-injury.
+   -------------------------------------------------------------------------- */
+
+constraint_indexing:constraint_classification(
+    brain_network_paradigm_2026,
+    mountain,
+    context(
+        agent_power(individual_powerless),
+        time_horizon(biographical),
+        exit_options(trapped),
+        spatial_scope(local)
+    )
+).
+
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 2: NETWORK NEUROSCIENTIST - Rope
+   --------------------------------------------------------------------------
    WHO: institutional (Rule-shaping scientific authority)
    WHEN: historical (Century-scale shift in thinking)
    WHERE: mobile (Can navigate between various network models)
-   SCOPE: global (The new scientific standard)
    
    WHY THIS CLASSIFICATION:
-   For the modern scientist, networks are a "Rope"—a functional coordination mechanism that explains 
-   complex emergent behaviors that the old modular view could not account for.
-   
-   NARRATIVE EVIDENCE:
-   "The mapping of brain networks has played a major role in shifting neuroscientific thinking".
+   For the modern scientist, networks are a 'Rope'—a functional coordination mechanism
+   that explains complex emergent behaviors that the old modular view could not
+   account for. It's a powerful tool for understanding the brain's intricate workings.
    -------------------------------------------------------------------------- */
-
-
 
 constraint_indexing:constraint_classification(
     brain_network_paradigm_2026,
@@ -100,85 +118,48 @@ constraint_indexing:constraint_classification(
         exit_options(mobile),
         spatial_scope(global)
     )
-) :- !.
+).
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE LEGACY MODULARIST (Modular Specialist) - Noose
+   PERSPECTIVE 3: LEGACY MODULARIST - Snare
    --------------------------------------------------------------------------
-   
-   WHO: individual_powerful (Established experts in region-specific research)
+   WHO: individual_moderate (Established experts in region-specific research)
    WHEN: biographical (Risk of their life's work becoming obsolete)
    WHERE: constrained (Tied to specific anatomical paradigms)
-   SCOPE: global
    
    WHY THIS CLASSIFICATION:
-   The network paradigm acts as a "Noose" to the modularist by refuting the idea that their specific 
-   region (e.g., amygdala for emotion) operates alone. It constrains their ability to 
-   make singular causal claims.
-   
-   NARRATIVE EVIDENCE:
-   "Focusing on single parts can obscure the whole". "Neuroscience made the same mistake 
-   for decades".
+   The network paradigm acts as a 'Snare' to the modularist by refuting the idea
+   that their specific region (e.g., amygdala for emotion) operates alone.
+   It constrains their ability to make singular causal claims and challenges
+   their established expertise, potentially strangling their career.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
     brain_network_paradigm_2026,
-    noose,
+    snare,
     context(
-        agent_power(individual_powerful),
+        agent_power(individual_moderate),
         time_horizon(biographical),
         exit_options(constrained),
         spatial_scope(global)
     )
-) :- !.
-
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE BIOLOGICAL OBSERVER - Mountain
-   --------------------------------------------------------------------------
-   
-   WHO: analytical (The underlying biological reality)
-   WHEN: civilizational (Species-level biological fact)
-   WHERE: analytical (Universal law of physiology)
-   SCOPE: global
-   
-   WHY THIS CLASSIFICATION:
-   The interconnectivity of the brain is a "Mountain"—a fixed physical reality. The brain is 
-   physically wired as a network; this is an unchangeable law of human biology.
-   
-   NARRATIVE EVIDENCE:
-   "Brain regions don’t operate alone – instead, complex behaviours emerge from synchronised 
-   activity across multiple, overlapping networks".
-   -------------------------------------------------------------------------- */
-
-
-
-constraint_indexing:constraint_classification(
-    brain_network_paradigm_2026,
-    mountain,
-    context(
-        agent_power(analytical),
-        time_horizon(civilizational),
-        exit_options(analytical),
-        spatial_scope(global)
-    )
-) :- !.
+).
 
 /* ==========================================================================
    4. TESTS (What We Learn About Constraints)
    ========================================================================== */
 
-:- begin_tests(brain_network_paradigm_tests).
+:- begin_tests(brain_network_paradigm_2026_tests).
 
 test(multi_perspective_variance) :-
-    constraint_indexing:constraint_classification(brain_network_paradigm_2026, T1, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(brain_network_paradigm_2026, T2, context(agent_power(individual_powerful), _, _, _)),
-    T1 \= T2.
+    constraint_indexing:constraint_classification(brain_network_paradigm_2026, Type1, context(agent_power(individual_powerless), _, _, _)),
+    constraint_indexing:constraint_classification(brain_network_paradigm_2026, Type2, context(agent_power(institutional), _, _, _)),
+    constraint_indexing:constraint_classification(brain_network_paradigm_2026, Type3, context(agent_power(individual_moderate), _, _, _)),
+    Type1 \= Type2,
+    Type2 \= Type3,
+    Type1 \= Type3.
 
-test(imaging_tech_impact) :-
-    % Shows that immutability of modularism was broken by imaging tools.
-    true.
-
-:- end_tests(brain_network_paradigm_tests).
+:- end_tests(brain_network_paradigm_2026_tests).
 
 /* ==========================================================================
    5. MODEL INTERPRETATION (Commentary)
@@ -186,52 +167,72 @@ test(imaging_tech_impact) :-
 
 /**
  * LLM GENERATION NOTES
- * * Model: Gemini 2.0 Flash
- * * KEY DECISIONS:
- * 1. SUPPRESSION SCORE (0.7): High because the article explicitly calls the modular view a 
- * "mistake" that "obscured the whole". 
- * 2. PERSPECTIVE SELECTION: Chose to contrast the "Legacy Modularist" with the "Modern Scientist" 
- * to show how a "Rope" for one generation can be a "Noose" for the previous one.
+ * 
+ * Model: Gemini Pro (Revised)
+ * Date: 2026-01-23
+ * 
+ * KEY DECISIONS:
+ * 
+ * 1. INDIVIDUAL POWERLESS PERSPECTIVE: Added 'Patient with a Brain Injury' as
+ *    the individual powerless agent. For them, the brain's network is a 'Mountain'
+ *    of unchangeable biological reality.
+ *
+ * 2. CLASSIFICATION RATIONALE:
+ *    - Patient (Mountain): An immutable biological reality.
+ *    - Neuroscientist (Rope): A tool for understanding complex behaviors.
+ *    - Modularist (Snare): A threat to established expertise and theories.
+ * 
+ * 3. CORE INSIGHT: The brain network paradigm shift highlights how scientific
+ *    progress can transform our understanding of a 'Mountain' (the brain's
+ *    physical structure). What becomes a powerful 'Rope' for new research
+ *    simultaneously acts as a 'Snare' for outdated paradigms.
  */
 
 /* ==========================================================================
-   6. OMEGA VARIABLES (Ω)
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
+/**
+ * OMEGA IDENTIFICATION
+ *
+ * The core uncertainty is the individuality of brain networks.
+ */
 
 omega_variable(
     network_individuality,
-    "Is every individual's brain network map unique (Noose for generalists) or does a standard template exist (Mountain)?",
-    resolution_mechanism("Longitudinal high-resolution connectivity mapping of diverse populations"),
-    impact("If unique: Standardized medicine fails. If template: Universal protocols remain viable."),
+    "Is every individual's brain network map unique (a 'Snare' for generalized treatments) or does a standard template exist (a 'Rope' for universal protocols)?",
+    resolution_mechanism("Longitudinal high-resolution connectivity mapping of diverse populations; personalized medicine trials based on individual connectomes."),
+    impact("If unique: Standardized medicine may fail. If template: Universal protocols remain viable."),
     confidence_without_resolution(medium)
-).
-
-omega_variable(
-    dmn_function_completeness,
-    "Does the DMN exclusively handle task-disengaged thought, or are there hidden processing roles we cannot yet image?",
-    resolution_mechanism("Direct intracranial recording combined with ultra-high field (7T+) fMRI"),
-    impact("If hidden roles exist: Our current 'Rope' is incomplete."),
-    confidence_without_resolution(low)
 ).
 
 /* ==========================================================================
    7. ALTERNATIVE ANALYSIS
    ========================================================================== */
-
 /**
  * VIABLE ALTERNATIVES
- * * ALTERNATIVE 1: Strict Modularism (Phineas Gage model)
- * Viability: High for the 19th and 20th centuries.
- * Suppression: Actively dismantled by fMRI/PET data in the late 90s.
- * Evidence: "Focusing on single parts can obscure the whole".
+ *
+ * ALTERNATIVE 1: Strict Modularism (The "Phineas Gage" model)
+ *    Viability: Historically dominant in the 19th and 20th centuries, attributing functions to specific brain regions.
+ *    Suppression: Actively dismantled by modern fMRI/PET data, which revealed the interconnected nature of brain function, showing that "focusing on single parts can obscure the whole."
+ *
+ * CONCLUSION:
+ * The network paradigm is a 'Rope' that has largely suppressed the older,
+ * more limited 'Rope' of strict modularism. This new understanding presents a
+ * more accurate 'Mountain' of the brain's complexity, even as it creates a
+ * 'Snare' for those invested in the previous model.
  */
 
 /* ==========================================================================
    8. INTEGRATION HOOKS
    ========================================================================== */
 
-% Load: ?- [brain_network_paradigm_2026].
-% Run: ?- multi_index_report(brain_network_paradigm_2026).
+/**
+ * TO USE THIS FILE:
+ * 
+ * 1. Load: ?- [constraints/brain_network_paradigm_2026].
+ * 2. Multi-perspective: ?- multi_index_report(brain_network_paradigm_2026).
+ * 3. Run tests: ?- run_tests(brain_network_paradigm_2026_tests).
+ */
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

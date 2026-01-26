@@ -45,7 +45,7 @@
  * * NARRATIVE ARC:
  * The theorem functions as a hard ceiling (Mountain) for finitistic proof. 
  * While it provides a "Rope" for higher-order logicians to justify transfinite 
- * methods, it acts as a "Noose" for the finitist, who is trapped in a 
+ * methods, it acts as a "Snare" for the finitist, who is trapped in a 
  * system where simple arithmetic truths are fundamentally unreachable.
  */
 
@@ -136,7 +136,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE FINITIST SUBJECT - Noose
+   PERSPECTIVE 3: THE FINITIST SUBJECT - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless - Subject to the limits of finitistic rules.
@@ -145,7 +145,7 @@ constraint_indexing:constraint_classification(
    SCOPE: local - Immediate workspace.
    
    WHY THIS CLASSIFICATION:
-   For the finitist, the theorem is a Noose. They are presented with a 
+   For the finitist, the theorem is a Snare. They are presented with a 
    statement that is clearly true (verified by calculation and meta-logic), 
    yet their system strangles their ability to prove it. The harder they 
    try to use standard induction, the more the complexity of the Goodstein 
@@ -154,7 +154,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     kirby_paris_theorem,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -174,11 +174,11 @@ test(multi_perspective_variance) :-
     constraint_indexing:constraint_classification(kirby_paris_theorem, mountain, context(agent_power(analytical), _, _, _)),
     % Perspective 2: Institutional sees Rope
     constraint_indexing:constraint_classification(kirby_paris_theorem, rope, context(agent_power(institutional), _, _, _)),
-    % Perspective 3: Powerless sees Noose
-    constraint_indexing:constraint_classification(kirby_paris_theorem, noose, context(agent_power(individual_powerless), _, _, _)).
+    % Perspective 3: Powerless sees Snare
+    constraint_indexing:constraint_classification(kirby_paris_theorem, snare, context(agent_power(individual_powerless), _, _, _)).
 
 test(power_extractiveness_scaling) :-
-    % Powerless finitists feel the total loss of provability (Noose).
+    % Powerless finitists feel the total loss of provability (Snare).
     % Institutional mathematicians use it to justify stronger systems (Rope).
     ContextPowerless = context(individual_powerless, immediate, trapped, local),
     ContextPowerful = context(institutional, biographical, arbitrage, national),
@@ -204,11 +204,11 @@ test(time_immutability_scale) :-
  * Reasoning: Low. The "extraction" is semantic—the loss of certain 
  * arithmetic closures. It forces the cognitive cost of higher-order logic.
  * * 2. PERSPECTIVE SELECTION:
- * Chose Analyst (Mountain), Mathematician (Rope), and Finitist (Noose) 
+ * Chose Analyst (Mountain), Mathematician (Rope), and Finitist (Snare) 
  * to demonstrate how a single logical fact represents a law, a tool, 
  * or a trap based on the agent's axiomatic commitment.
  * * 3. CLASSIFICATION RATIONALE:
- * The "Noose" for the finitist is particularly apt: they can see the 
+ * The "Snare" for the finitist is particularly apt: they can see the 
  * truth but are logically barred from it.
  */
 
@@ -221,7 +221,7 @@ omega_variable(
     "Do humans possess a 'natural' intuition for epsilon-zero induction 
     (Rope) or are we biologically restricted to finitism (Mountain)?",
     resolution_mechanism("Cognitive study of transfinite reasoning in experts"),
-    impact("If Mountain: Kirby-Paris is a biological Noose. If Rope: It's an 
+    impact("If Mountain: Kirby-Paris is a biological Snare. If Rope: It's an 
     educational challenge."),
     confidence_without_resolution(medium)
 ).
@@ -239,7 +239,7 @@ omega_variable(
  * * CONCLUSION:
  * The existence of Transfinite Induction as an "Exit" to a stronger system 
  * converts the "Mountain" of PA's unprovability into a "Rope" for the 
- * advanced mathematician, while remaining a "Noose" for the finitist.
+ * advanced mathematician, while remaining a "Snare" for the finitist.
  */
 
 /* ==========================================================================

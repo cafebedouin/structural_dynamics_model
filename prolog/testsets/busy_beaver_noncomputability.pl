@@ -42,13 +42,13 @@
  * - The Theoretical Computer Scientist (Institutional): An agent using the
  * Busy Beaver as a "Rope" to define the boundaries of potential computation.
  * - The Brute-Force Searcher (Victim): An agent for whom the function is a
- * "Noose," as they expend infinite energy searching for values that
+ * "Snare," as they expend infinite energy searching for values that
  * mathematics proves they can never algorithmically predict.
  * * NARRATIVE ARC:
  * The Busy Beaver is the "Mountain" of formal systems—a fixed, unyielding
  * truth of state-space geometry. In high-level logic, it is a "Rope" for
  * proving non-computability via reduction. However, for those attempting
- * to solve "provability" through exhaustive simulation, it is a "Noose"
+ * to solve "provability" through exhaustive simulation, it is a "Snare"
  * that extracts time, power, and capital (extraction), eventually "strangling"
  * the project with growth so rapid it exceeds the physical resources
  * of the universe.
@@ -148,7 +148,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE EXPERIMENTAL SEARCHER - Noose
+   PERSPECTIVE 3: THE EXPERIMENTAL SEARCHER - Snare
    --------------------------------------------------------------------------
 
    WHO: individual_moderate - Has agency to search but is bound by the growth rate.
@@ -157,7 +157,7 @@ constraint_indexing:constraint_classification(
    SCOPE: global - Searching through the entire set of possible small machines.
 
    WHY THIS CLASSIFICATION:
-   For the experimenter, the Busy Beaver is a "Noose." It "strangles"
+   For the experimenter, the Busy Beaver is a "Snare." It "strangles"
    computational projects. Because $\Sigma(n)$ grows faster than any
    computable function, it extracts enormous energy and hardware cycles
    (extraction) while "choking" the project with the certainty that most
@@ -168,7 +168,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     busy_beaver_noncomputability,
-    noose,
+    snare,
     context(
         agent_power(individual_moderate),
         time_horizon(historical),
@@ -194,7 +194,7 @@ test(multi_perspective_variance) :-
     Type1 \= Type2.
 
 test(search_extraction_penalty) :-
-    % Searchers feel the 0.4 extraction of resources as a Noose.
+    % Searchers feel the 0.4 extraction of resources as a Snare.
     Context = context(individual_moderate, historical, constrained, global),
     constraint_indexing:extractiveness_for_agent(busy_beaver_noncomputability, Context, Score),
     Score >= 0.3.
@@ -220,7 +220,7 @@ test(natural_emergence) :-
  * the universe's atoms.
  * * 2. PERSPECTIVE SELECTION:
  * Chose Machine (Subject), Scientist (User), and Searcher (Victim)
- * to illustrate how a "Mountain" of logic becomes a "Noose" for
+ * to illustrate how a "Mountain" of logic becomes a "Snare" for
  * experimental verification.
  * * 3. OMEGA IDENTIFICATION:
  * Formalized the "Provability" uncertainty—is there a fixed point where
@@ -232,7 +232,7 @@ omega_variable(
     busy_beaver_unprovability_threshold,
     'At what value of $n$ does the specific value of $Sigma(n)$ become independent of ZFC (Mountain)?',
     resolution_mechanism('Investigation into the smallest Turing machine that simulates a search for a contradiction in ZFC.'),
-    impact('If $n$ is small (e.g., <1000): The \'Noose\' of unprovability is much tighter than we hope.'),
+    impact('If $n$ is small (e.g., <1000): The \'Snare\' of unprovability is much tighter than we hope.'),
     confidence_without_resolution(medium)
 ).
 

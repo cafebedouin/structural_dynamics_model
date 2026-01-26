@@ -39,7 +39,7 @@
  * - The Bureaucrat: The administrator who maintains or enforces the sludge layer.
  * - The Policy Designer: The agent who uses sludge as a "hidden" budget control.
  * * NARRATIVE ARC:
- * Sludge functions as a "Viscous Noose." It does not provide a hard "No," 
+ * Sludge functions as a "Viscous Snare." It does not provide a hard "No," 
  * but it makes the "Yes" so expensive in terms of time and cognitive effort 
  * that agents give up. It is the primary tool for creating a "thin" 
  * matching market in social services.
@@ -50,7 +50,7 @@
    ========================================================================== */
 
 narrative_ontology:interval(sludge_bureaucratic_friction, 0, 10).
-narrative_ontology:constraint_claim(sludge_bureaucratic_friction, noose).
+narrative_ontology:constraint_claim(sludge_bureaucratic_friction, snare).
 
 % Base extractiveness score (0.7)
 % High; it extracts time and psychological well-being from the most 
@@ -79,7 +79,7 @@ constraint_victim(sludge_bureaucratic_friction, low_income_applicants).
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 1: THE ELIGIBLE APPLICANT - Noose
+   PERSPECTIVE 1: THE ELIGIBLE APPLICANT - Snare
    --------------------------------------------------------------------------
    WHO: individual_powerless
    WHEN: immediate (crisis window)
@@ -87,7 +87,7 @@ constraint_victim(sludge_bureaucratic_friction, low_income_applicants).
    SCOPE: local
    
    WHY THIS CLASSIFICATION:
-   For someone in need of emergency aid, sludge is a "Noose." 
+   For someone in need of emergency aid, sludge is a "Snare." 
    The 50-page form and the requirement to mail physical documents 
    strangles their access to survival. Every hour spent in the "waiting 
    room" is an extraction of their limited life-resources.
@@ -95,7 +95,7 @@ constraint_victim(sludge_bureaucratic_friction, low_income_applicants).
 
 constraint_indexing:constraint_classification(
     sludge_bureaucratic_friction,
-    noose,
+    snare,
     context(agent_power(individual_powerless), time_horizon(immediate), exit_options(trapped), spatial_scope(local))
 ) :- !.
 

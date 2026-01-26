@@ -42,7 +42,7 @@
  * * NARRATIVE ARC:
  * Born from the horrors of WWII, the UDHR moves from a proclamation of "natural law"
  * (Mountain) to a functional treaty framework (Rope), though it is often experienced
- * as a coercive limit (Noose) by states or a distant, unreachble ideal (Mountain)
+ * as a coercive limit (Snare) by states or a distant, unreachble ideal (Mountain)
  * by the oppressed.
  */
 
@@ -139,7 +139,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE AUTHORITARIAN REGIME - Noose
+   PERSPECTIVE 3: THE AUTHORITARIAN REGIME - Snare
    --------------------------------------------------------------------------
    WHO: institutional (local) - Power over a specific territory.
    WHEN: immediate - Focused on maintaining current control.
@@ -149,7 +149,7 @@ constraint_indexing:constraint_classification(
    WHY THIS CLASSIFICATION:
    For a regime seeking absolute control, the UDHR is an asymmetric constraint 
    imposed by an external collective (UN). It restricts their "sovereign right" 
-   to suppress dissent, acting as a Noose that tightens via international law.
+   to suppress dissent, acting as a Snare that tightens via international law.
    
    NARRATIVE EVIDENCE:
    "No one shall be subjected to arbitrary arrest... Everyone has the right to leave any country." (Articles 9, 13)
@@ -157,7 +157,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     udhr_1948,
-    noose,
+    snare,
     context(
         agent_power(institutional),
         time_horizon(immediate),
@@ -181,7 +181,7 @@ test(multi_perspective_variance) :-
     Type2 = rope.
 
 test(regime_noose_perception) :-
-    constraint_indexing:constraint_classification(udhr_1948, noose, context(agent_power(institutional), time_horizon(immediate), exit_options(constrained), spatial_scope(national))).
+    constraint_indexing:constraint_classification(udhr_1948, snare, context(agent_power(institutional), time_horizon(immediate), exit_options(constrained), spatial_scope(national))).
 
 test(low_extractiveness_baseline) :-
     domain_priors:base_extractiveness(udhr_1948, E),
@@ -206,10 +206,10 @@ test(low_extractiveness_baseline) :-
  * - Refugee -> Mountain: Because rights are declared "inalienable," they are
  * treated as fixed features of the universe.
  * - UN -> Rope: Because the document is a "standard of achievement" (a goal/tool).
- * - Authoritarian -> Noose: Because it limits the exercise of absolute power.
+ * - Authoritarian -> Snare: Because it limits the exercise of absolute power.
  * * AMBIGUITIES:
  * - The transition from a non-binding "Declaration" to binding "Covenants" (1966)
- * blurs the line between Rope and Noose. I kept the focus on the 1948 Declaration.
+ * blurs the line between Rope and Snare. I kept the focus on the 1948 Declaration.
  */
 
 /* ==========================================================================
@@ -226,9 +226,9 @@ omega_variable(
 
 omega_variable(
     universal_consensus,
-    "Is the UDHR truly universal (Mountain) or a western liberal construct (Rope/Noose)?",
+    "Is the UDHR truly universal (Mountain) or a western liberal construct (Rope/Snare)?",
     resolution_mechanism("Cross-cultural longitudinal survey of value alignment across non-Western states."),
-    impact("If Western only: Noose for non-Western states. If Universal: Mountain for humanity."),
+    impact("If Western only: Snare for non-Western states. If Universal: Mountain for humanity."),
     confidence_without_resolution(low)
 ).
 
@@ -247,7 +247,7 @@ omega_variable(
  * Suppression: UDHR claims "universal" and "without distinction" status.
  * * CONCLUSION:
  * The presence of these alternatives, which the UDHR seeks to supersede or 
- * coordinate, confirms its role as a Rope/Noose depending on power level.
+ * coordinate, confirms its role as a Rope/Snare depending on power level.
  */
 
 /* ==========================================================================
@@ -266,4 +266,4 @@ omega_variable(
 % --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
 constraint_indexing:constraint_classification(udhr_1946, mountain, agent_power(analytical)).
 constraint_indexing:constraint_classification(udhr_1946, rope, agent_power(institutional)).
-constraint_indexing:constraint_classification(udhr_1946, noose, agent_power(individual_powerless)).
+constraint_indexing:constraint_classification(udhr_1946, snare, agent_power(individual_powerless)).

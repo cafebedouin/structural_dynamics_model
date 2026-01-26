@@ -35,10 +35,10 @@ constraint_metric(exponential_base_shift, suppression_requirement, 0.45).
 constraint_metric(exponential_base_shift, snap_back_potential, 0.85).
 constraint_metric(exponential_base_shift, extractiveness, 0.65).
 
-% The PA Unprovability Barrier (The Noose)
+% The PA Unprovability Barrier (The Snare)
 % The proof of termination requires induction up to Epsilon-Zero, which PA cannot perform.
 % Extractiveness at 0.99 requires the 'epsilon_zero_ordinal' scaffold to resolve.
-constraint_claim(transfinite_induction_limit, noose).
+constraint_claim(transfinite_induction_limit, snare).
 constraint_metric(transfinite_induction_limit, intensity, 0.99).
 constraint_metric(transfinite_induction_limit, suppression_requirement, 0.96).
 constraint_metric(transfinite_induction_limit, snap_back_potential, 0.01).
@@ -49,7 +49,7 @@ constraint_metric(transfinite_induction_limit, extractiveness, 0.99).
 recommendation(rec_01, map_goodstein_sequence_to_strictly_decreasing_ordinals).
 affects_constraint(rec_01, exponential_base_shift).
 
-% Noose (0.99 extractiveness) triggers Cut
+% Snare (0.99 extractiveness) triggers Cut
 % Utilizing 'epsilon_zero_ordinal' scaffold to provide the necessary transfinite strength.
 recommendation(rec_02, adopt_second_order_arithmetic_for_termination_proof).
 affects_constraint(rec_02, transfinite_induction_limit).

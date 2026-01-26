@@ -35,7 +35,7 @@
  * as the primary constraints of the modern age. He proposes the "Harm Principle" 
  * as a meta-constraint: society may only coerce an individual to prevent 
  * harm to others. Any other interference (for the person's own good) is 
- * classified as a "Noose" masquerading as a "Rope."
+ * classified as a "Snare" masquerading as a "Rope."
  * * KEY AGENTS:
  * - The Individual (The Eccentric): The victim of social stigma/custom.
  * - The Majority (Public Opinion): The institutional force enforcing uniformity.
@@ -46,7 +46,7 @@
  * to a more insidious struggle against "Social Tyranny" (The Many). 
  * Mill argues that unless "Individuality" is preserved as a "Mountain" of 
  * right, the "Rope" of social coordination will inevitably tighten into 
- * a "Noose" of Chinese-style stationariness.
+ * a "Snare" of Chinese-style stationariness.
  */
 
 /* ==========================================================================
@@ -83,7 +83,7 @@ constraint_victim(harm_principle_liberty, [eccentrics, original_thinkers]).
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 1: THE NON-CONFORMIST - Noose
+   PERSPECTIVE 1: THE NON-CONFORMIST - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless - The person who does "what nobody does."
@@ -92,7 +92,7 @@ constraint_victim(harm_principle_liberty, [eccentrics, original_thinkers]).
    SCOPE: local - Their immediate neighborhood and class.
    
    WHY THIS CLASSIFICATION:
-   For the eccentric, social custom is a "Noose." It is a coercive system 
+   For the eccentric, social custom is a "Snare." It is a coercive system 
    that "dwarfs" their mental expansion to fit a "commonplace" model, 
    offering no exit but "lunacy" proceedings or poverty.
    
@@ -103,7 +103,7 @@ constraint_victim(harm_principle_liberty, [eccentrics, original_thinkers]).
 
 constraint_indexing:constraint_classification(
     harm_principle_liberty,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -190,8 +190,8 @@ constraint_indexing:constraint_classification(
 :- begin_tests(harm_principle_tests).
 
 test(gap_analysis_eccentric_vs_majority) :-
-    % Eccentric sees a Noose; Mill sees a Rope; Majority sees a Mountain.
-    constraint_indexing:constraint_classification(harm_principle_liberty, noose, context(agent_power(individual_powerless), _, _, _, _, _)),
+    % Eccentric sees a Snare; Mill sees a Rope; Majority sees a Mountain.
+    constraint_indexing:constraint_classification(harm_principle_liberty, snare, context(agent_power(individual_powerless), _, _, _, _, _)),
     constraint_indexing:constraint_classification(harm_principle_liberty, rope, context(agent_power(analytical), _, _, _, _, _)),
     constraint_indexing:constraint_classification(harm_principle_liberty, mountain, context(agent_power(institutional), _, _, _, _, _)).
 
@@ -214,7 +214,7 @@ test(enforcement_required) :-
  * * KEY DECISIONS:
  * 1. PERSPECTIVAL GAP: The brilliance of Mill’s analysis is identifying 
  * that what the Majority sees as a "Mountain" (Natural Moral Order) is 
- * actually a "Noose" (Coercive Custom) for the Individual. 
+ * actually a "Snare" (Coercive Custom) for the Individual. 
  * 2. THE HARM PRINCIPLE AS ROPE: I classified the "Principle" itself 
  * as a Rope because it is a "subordinate legislation" or "centralization 
  * of information" meant to facilitate coordination without crushing 
@@ -231,8 +231,8 @@ test(enforcement_required) :-
 omega_variable(
     harm_boundary,
     "Where is the line between 'self-regarding' and 'social' acts in a hyper-connected society?",
-    resolution_mechanism("Requires a recursive 'impact audit'—if every act 'affects' someone through sympathy, the Noose expands."),
-    impact("If the boundary is porous: The Rope of Liberty becomes a Noose of total surveillance."),
+    resolution_mechanism("Requires a recursive 'impact audit'—if every act 'affects' someone through sympathy, the Snare expands."),
+    impact("If the boundary is porous: The Rope of Liberty becomes a Snare of total surveillance."),
     confidence_without_resolution(low)
 ).
 
@@ -251,7 +251,7 @@ omega_variable(
  * against Paganism."
  * * CONCLUSION:
  * The existence of these alternatives (which seek to move the constraint 
- * back to Mountain/Noose) is what necessitates Mill's defensive Rope 
+ * back to Mountain/Snare) is what necessitates Mill's defensive Rope 
  * of "Limited Government."
  */
 

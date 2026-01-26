@@ -36,11 +36,11 @@ constraint_metric(elementary_equivalence, suppression_requirement, 0.30).
 constraint_metric(elementary_equivalence, snap_back_potential, 0.50).
 constraint_metric(elementary_equivalence, extractiveness, 0.40).
 
-% The Categoricity Failure (The Noose)
+% The Categoricity Failure (The Snare)
 % The realization that first-order theories cannot be categorical in infinite powers.
 % This "strangles" the hope of defining a unique structure (like N or R) using only first-order logic.
 % Extractiveness at 0.85 requires the 'tarski_vaught_test' scaffold to resolve submodel existence.
-constraint_claim(non_categoricity_trap, noose).
+constraint_claim(non_categoricity_trap, snare).
 constraint_metric(non_categoricity_trap, intensity, 0.92).
 constraint_metric(non_categoricity_trap, suppression_requirement, 0.80).
 constraint_metric(non_categoricity_trap, snap_back_potential, 0.05).
@@ -51,7 +51,7 @@ constraint_metric(non_categoricity_trap, extractiveness, 0.85).
 recommendation(rec_01, utilize_back_and_forth_method_for_isomorphism_testing).
 affects_constraint(rec_01, elementary_equivalence).
 
-% Noose (0.85 extractiveness) triggers Cut
+% Snare (0.85 extractiveness) triggers Cut
 % Utilizing 'tarski_vaught_test' scaffold to ensure the submodel is elementary.
 recommendation(rec_02, adopt_second_order_logic_to_restore_categorical_definition).
 affects_constraint(rec_02, non_categoricity_trap).

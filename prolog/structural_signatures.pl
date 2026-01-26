@@ -17,7 +17,7 @@
    
    The current DRL classifier uses only metric thresholds:
    - suppression > 0.1 → not a mountain
-   - extractiveness > 0.7 → noose
+   - extractiveness > 0.7 → snare
    
    This causes misclassification of conceptual constraints:
    - Chaitin's Ω: collapse=1.0, suppression=0.0 → classified as mountain
@@ -164,6 +164,9 @@ classify_by_signature(Profile, natural_law) :-
 classify_by_signature(Profile, coordination_scaffold) :-
     coordination_scaffold_signature(Profile), !.
 
+classify_by_signature(Profile, piton_signature) :-
+    piton_signature(Profile), !.
+
 classify_by_signature(Profile, constructed_constraint) :-
     constructed_constraint_signature(Profile), !.
 
@@ -256,7 +259,36 @@ coordination_scaffold_signature(profile(AccessCollapse, Suppression, Resistance,
     HasAlternatives == true.  % KEY: This WAS a choice
 
 /* ================================================================
-   SIGNATURE 3: CONSTRUCTED CONSTRAINT
+   SIGNATURE 3: PITON
+   
+   Diagnostic Pattern:
+   ✓ Variable accessibility collapse
+   ✓ Low suppression (≤ 0.2) - persists through inertia, not force
+   ✓ Positive resistance (> 0.2) - it's now causing friction
+   ✓ Had viable alternatives - it was originally a choice
+   ✓ Temporally evolving - it got worse over time
+   
+   Interpretation:
+   This was once a useful coordination scaffold (a Rope), but has since
+   ossified and now creates more problems than it solves. It persists
+   due to high switching costs and institutional inertia. It is a Piton
+   stuck in the mountain.
+   
+   Examples:
+   - QWERTY Keyboard Layout
+   - Legacy software monoliths
+   ================================================================ */
+
+piton_signature(profile(_AccessCollapse, Suppression, Resistance,
+                                   _BeneficiaryCount, HasAlternatives,
+                                   TemporalStability, _CoordinationSuccess)) :-
+    Suppression =< 0.2,       % Low active enforcement
+    Resistance > 0.2,         % But people are pushing back
+    HasAlternatives == true,  % It was a choice
+    TemporalStability == evolving. % It has decayed or gotten worse
+
+/* ================================================================
+   SIGNATURE 4: CONSTRUCTED CONSTRAINT
    
    Diagnostic Pattern:
    ✓ Variable accessibility collapse
@@ -315,36 +347,102 @@ compute_signature_confidence(Profile, natural_law, Confidence) :-
     ).
 
 compute_signature_confidence(Profile, coordination_scaffold, Confidence) :-
+
     Profile = profile(AccessCollapse, Suppression, _, _, HasAlternatives, _, _),
+
     
+
     % Strong indicators
+
     findall(1, (
+
         (AccessCollapse > 0.95);
+
         (Suppression < 0.05);
+
         (HasAlternatives == true)  % Critical for coordination
+
     ), Indicators),
+
     length(Indicators, Count),
+
     
+
     (   Count >= 3 -> Confidence = high
+
     ;   Count >= 2 -> Confidence = medium
+
     ;   Confidence = low
+
     ).
 
-compute_signature_confidence(Profile, constructed_constraint, Confidence) :-
-    Profile = profile(_, Suppression, Resistance, BeneficiaryCount, _, _, _),
+
+
+compute_signature_confidence(Profile, piton_signature, Confidence) :-
+
+    Profile = profile(_, Suppression, Resistance, _, HasAlternatives, TemporalStability, _),
+
     
-    % Count enforcement indicators
+
+    % Count strong indicators for a piton
+
     findall(1, (
-        (Suppression > 0.5);
+
+        (Suppression =< 0.2);
+
         (Resistance > 0.5);
-        (BeneficiaryCount > 2)
+
+        (HasAlternatives == true);
+
+        (TemporalStability == evolving)
+
     ), Indicators),
+
     length(Indicators, Count),
+
     
-    (   Count >= 2 -> Confidence = high
-    ;   Count >= 1 -> Confidence = medium
+
+    (   Count >= 3 -> Confidence = high
+
+    ;   Count >= 2 -> Confidence = medium
+
     ;   Confidence = low
+
     ).
+
+
+
+compute_signature_confidence(Profile, constructed_constraint, Confidence) :-
+
+    Profile = profile(_, Suppression, Resistance, BeneficiaryCount, _, _, _),
+
+    
+
+    % Count enforcement indicators
+
+    findall(1, (
+
+        (Suppression > 0.5);
+
+        (Resistance > 0.5);
+
+        (BeneficiaryCount > 2)
+
+    ), Indicators),
+
+    length(Indicators, Count),
+
+    
+
+    (   Count >= 2 -> Confidence = high
+
+    ;   Count >= 1 -> Confidence = medium
+
+    ;   Confidence = low
+
+    ).
+
+
 
 compute_signature_confidence(_, ambiguous, low).
 
@@ -366,6 +464,13 @@ explain_signature(C, coordination_scaffold, Explanation) :-
     format(atom(Explanation),
            'COORDINATION SCAFFOLD signature for ~w: Extreme accessibility (collapse=~2f) with minimal enforcement (suppression=~2f). Viable alternatives existed historically, indicating this is a successful coordination standard rather than a natural law. Maintains adoption through symmetric benefits.',
            [C, AC, S]).
+
+explain_signature(C, piton_signature, Explanation) :-
+    get_constraint_profile(C, Profile),
+    Profile = profile(_, S, R, _, _, _, _),
+    format(atom(Explanation),
+           'PITON signature for ~w: Persists through inertia (suppression=~2f) but faces user friction (resistance=~2f). Was once a choice, but has now become an ossified liability. This is a Piton.',
+           [C, S, R]).
 
 explain_signature(C, constructed_constraint, Explanation) :-
     get_constraint_profile(C, Profile),

@@ -42,7 +42,7 @@
  * * NARRATIVE ARC:
  * The constraint functions as a "Demolished Wall." By removing the degree 
  * requirement, the market "thins" the power of elite universities. However, 
- * it replaces the "Degree Noose" with a "Continuous Testing Noose," where 
+ * it replaces the "Degree Snare" with a "Continuous Testing Snare," where 
  * agents must constantly prove their worth in a granular, high-frequency match.
  */
 
@@ -107,7 +107,7 @@ constraint_indexing:constraint_classification(
     !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE MID-TIER GRADUATE - Noose
+   PERSPECTIVE 2: THE MID-TIER GRADUATE - Snare
    --------------------------------------------------------------------------
    WHO: individual_powerless (pedigree is no longer a shield)
    WHEN: immediate
@@ -116,7 +116,7 @@ constraint_indexing:constraint_classification(
    
    WHY THIS CLASSIFICATION:
    For someone who relied on their degree for market access, this shift 
-   is a "Noose." Their primary constraint (the degree) has been 
+   is a "Snare." Their primary constraint (the degree) has been 
    demoted, forcing them into a high-competition skill-arena where 
    their "institutional signal" no longer grants them a safe exit or 
    premium wage.
@@ -124,7 +124,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     skills_based_hiring,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -169,8 +169,8 @@ constraint_indexing:constraint_classification(
 :- begin_tests(skills_hiring_tests).
 
 test(pedigree_devaluation) :-
-    % Testing that 'trapped' traditional grads experience the shift as a Noose.
-    constraint_indexing:constraint_classification(skills_based_hiring, noose, context(_, _, trapped, _)).
+    % Testing that 'trapped' traditional grads experience the shift as a Snare.
+    constraint_indexing:constraint_classification(skills_based_hiring, snare, context(_, _, trapped, _)).
 
 test(access_rope) :-
     % Testing that mobile, skill-heavy agents see the Rope.
@@ -188,7 +188,7 @@ test(access_rope) :-
  * * KEY DECISIONS:
  * Skills-based hiring is a "de-matching" of the traditional 
  * University-Employer pipeline. It reduces extraction by decreasing the 
- * "entry fee" (Degrees), but increases the "monitoring pressure" (Noose) 
+ * "entry fee" (Degrees), but increases the "monitoring pressure" (Snare) 
  * as workers must continuously prove their skills in an AI-gated market.
  */
 
@@ -200,7 +200,7 @@ omega_variable(
     skill_obsolescence_rate,
     "How fast will AI-driven tools make specific human skills obsolete?",
     resolution_mechanism("Tracking half-life of technical certifications in LinkedIn data"),
-    impact("If High: The 'Rope' is constantly breaking; the 'Noose' of re-skilling tightens."),
+    impact("If High: The 'Rope' is constantly breaking; the 'Snare' of re-skilling tightens."),
     confidence_without_resolution(medium)
 ).
 

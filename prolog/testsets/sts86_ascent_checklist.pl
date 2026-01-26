@@ -1,25 +1,23 @@
 % ============================================================================
 % CONSTRAINT STORY: sts86_ascent_checklist
 % ============================================================================
-% Generated: 2026-01-16
-% Model: Gemini-Thought-Partner-v2
+% Generated: 2026-01-23
+% Model: Gemini Pro (Revised)
 % Source: JSC-48005-86 - STS-86 Ascent Checklist
 % ============================================================================
 
-:- module(sts86_ascent_checklist, []).
+:- module(constraint_sts86_ascent_checklist, []).
 
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
 
+% --- Namespace Hooks (Required for loading) ---
 :- multifile 
     domain_priors:base_extractiveness/2,
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     constraint_indexing:constraint_classification/3.
-
-% Structural Anchor for Script Extraction
-narrative_ontology:interval(sts86_ascent_checklist, 0, 10).
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -27,50 +25,64 @@ narrative_ontology:interval(sts86_ascent_checklist, 0, 10).
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: sts86_ascent_checklist
+ * 
+ * constraint_id: sts86_ascent_checklist
  * human_readable: Space Shuttle Ascent/Abort Procedural Matrix
  * domain: technological/institutional
  * temporal_scope: immediate (T- minus 5m to Orbit)
  * spatial_scope: cockpit/national
- * * SUMMARY:
+ * 
+ * SUMMARY:
  * The checklist (JSC-48005) represents the ultimate procedural constraint. 
  * It manages the transition from a ground-controlled environment to a 
  * physics-dominated ascent where human agency is bound by rigid logic gates.
- * * KEY AGENTS:
- * - NASA/Mission Operations: The Institutional architect.
- * - Flight Crew (CDR/PLT): The Moderate Agents executing the script.
- * - The 'Powerless' Pilot: The crew-member in a 3-Engine-Out scenario.
- * * NARRATIVE ARC:
- * Prelaunch is a "Rope" of coordination. At SRB Ignition, the checklist 
- * ossifies. In an abort (e.g., Mode 8), it becomes a "Mountain" (Physical Law).
+ * 
+ * KEY AGENTS:
+ * - NASA/Mission Operations (Institutional): The architect of the procedural matrix.
+ * - Flight Crew (CDR/PLT) (Individual Moderate): The agents executing the script.
+ * - The 'Powerless' Pilot (Individual Powerless): The crew-member in a 3-Engine-Out scenario.
  */
 
 /* ==========================================================================
-   2. BASE PROPERTIES
+   2. CORE SYSTEM INTEGRATION (The "Reality" Layer)
    ========================================================================== */
 
-% Extractiveness: Low (0.05). NASA gains nothing from crew failure. 
+narrative_ontology:interval(sts86_ascent_checklist, 0, 10).
+narrative_ontology:constraint_claim(sts86_ascent_checklist, mountain).
+
+% Base extractiveness: 0.05.
+% NASA gains nothing from crew failure. 
 % Benefit flow is aimed at systemic survival.
 domain_priors:base_extractiveness(sts86_ascent_checklist, 0.05).
 
-% Suppression: High (0.95). Deviating from the checklist is treated 
+% Suppression: 0.95.
+% Deviating from the checklist is treated 
 % as a failure mode itself. Alternative "freestyle" flying is invisible.
 domain_priors:suppression_score(sts86_ascent_checklist, 0.95).
 
 % Enforcement: Requires active maintenance (Ground Control / CPCB).
 domain_priors:requires_active_enforcement(sts86_ascent_checklist).
 
+% BENEFICIARIES & VICTIMS
+constraint_beneficiary(sts86_ascent_checklist, mission_success).
+constraint_victim(sts86_ascent_checklist, pilot_discretion).
+
 /* ==========================================================================
-   3. INDEXED CLASSIFICATIONS
+   3. INDEXED CLASSIFICATIONS (Perspectival Truth)
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE: Institutional (NASA Mission Operations) - ROPE
+   PERSPECTIVE 1: NASA/MISSION OPERATIONS - Rope
    --------------------------------------------------------------------------
-   WHY: The checklist is the "Rope" that pulls 10,000 workers into sync.
-   It is a coordination mechanism that is changeable (via Form 482).
-   EVIDENCE: "This document is under the configuration control of the Crew 
-   Procedures Control Board (CPCB)." 
+   WHO: institutional (The architect of the procedural matrix)
+   WHEN: historical (From mission planning to execution)
+   WHERE: arbitrage (Balances safety, performance, and mission objectives)
+   
+   WHY THIS CLASSIFICATION:
+   For NASA, the checklist is a 'Rope'. It is a crucial coordination mechanism
+   that synchronizes the actions of thousands of individuals and complex systems
+   to ensure a successful launch. It is a tool for managing immense complexity
+   and mitigating risk.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
@@ -78,19 +90,49 @@ constraint_indexing:constraint_classification(
     rope,
     context(
         agent_power(institutional),
-        time_horizon(biographical),
-        exit_options(mobile),
+        time_horizon(historical),
+        exit_options(arbitrage),
         spatial_scope(national)
     )
 ).
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE: Powerless View (Crew in 3-E/O Abort) - MOUNTAIN
+   PERSPECTIVE 2: FLIGHT CREW (CDR/PLT) - Tangled Rope
    --------------------------------------------------------------------------
-   WHY: In a failure mode, the checklist is no longer a choice; it is the
-   edge of a physical cliff. "Mountain" status is claimed because the 
-   metric of suppression (0.95) meets the physical deadline of Mach < .95.
-   EVIDENCE: "BAILOUT MODE 8... ~30K FT... JETTISON HATCH... BAILOUT" 
+   WHO: individual_moderate (The agents executing the script)
+   WHEN: immediate (During the ascent phase)
+   WHERE: constrained (Bound by the checklist's procedures)
+   
+   WHY THIS CLASSIFICATION:
+   For the flight crew, the checklist is a 'Tangled Rope'. It's a 'Rope' because
+   it provides a clear, life-saving path through a high-stakes environment.
+   It's 'Tangled' because it severely restricts their autonomy, suppressing
+   discretionary decision-making in favor of rigid adherence to pre-planned procedures.
+   -------------------------------------------------------------------------- */
+
+constraint_indexing:constraint_classification(
+    sts86_ascent_checklist,
+    tangled_rope,
+    context(
+        agent_power(individual_moderate),
+        time_horizon(immediate),
+        exit_options(constrained),
+        spatial_scope(local)
+    )
+).
+
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 3: THE 'POWERLESS' PILOT - Mountain
+   --------------------------------------------------------------------------
+   WHO: individual_powerless (The crew-member in a 3-Engine-Out scenario)
+   WHEN: immediate (During a catastrophic failure)
+   WHERE: trapped (Bound by the laws of physics and the only available abort mode)
+   
+   WHY THIS CLASSIFICATION:
+   In a 3-Engine-Out scenario, the checklist becomes a 'Mountain'. It is no
+   longer a choice but a reflection of the physical laws governing the shuttle's
+   trajectory. The "BAILOUT" procedure is the only path, an immutable reality
+   dictated by the physics of the situation.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
@@ -105,62 +147,90 @@ constraint_indexing:constraint_classification(
 ).
 
 /* ==========================================================================
-   4. TESTS (Insights into Ontological Mismatches)
+   4. TESTS (What We Learn About Constraints)
    ========================================================================== */
 
-:- begin_tests(sts86_ascent_tests).
+:- begin_tests(sts86_ascent_checklist_tests).
 
-test(perspectival_gap) :-
-    % Institutional sees a tool (Rope), Powerless sees Fate (Mountain)
-    constraint_indexing:constraint_classification(sts86_ascent_checklist, rope, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(sts86_ascent_checklist, mountain, context(agent_power(individual_powerless), _, _, _)).
+test(multi_perspective_variance) :-
+    constraint_indexing:constraint_classification(sts86_ascent_checklist, Type1, context(agent_power(institutional), _, _, _)),
+    constraint_indexing:constraint_classification(sts86_ascent_checklist, Type2, context(agent_power(individual_moderate), _, _, _)),
+    constraint_indexing:constraint_classification(sts86_ascent_checklist, Type3, context(agent_power(individual_powerless), _, _, _)),
+    Type1 \= Type2,
+    Type2 \= Type3,
+    Type1 \= Type3.
 
-test(omega_variable_physics) :-
-    % Grounding Omega-1: Velocity at MECO as a fixed physical constraint
-    Velocity = 25873, % 
-    Velocity > 25000.
-
-:- end_tests(sts86_ascent_tests).
+:- end_tests(sts86_ascent_checklist_tests).
 
 /* ==========================================================================
-   5. MODEL INTERPRETATION (Conflict & Omega Resolution)
+   5. MODEL INTERPRETATION (Commentary)
    ========================================================================== */
 
 /**
- * EXPLAINING THE CONFLICT:
- * The Institutional view claims "Rope" status because they control the 
- * document (Exit Option: Mobile). However, the metrics (Suppression: 0.95) 
- * contradict this for the crew. I have resolved this by updating the 
- * "Powerless" view to reflect that at T-0, the "Rope" has been "captured" 
- * by Physics ($\Omega_{physics}$).
- * * GROUNDING THE OMEGAS:
- * - Omega_Velocity ($\Omega_v$): 25,873 fps. The threshold where the Rope 
- * of the checklist becomes a Mountain. 
- * - Omega_Abort ($\Omega_a$): The 10-second stability window. 
- * If Stability < 10s, agency is lost. 
- * * ONTOLOGICAL_MISMATCHES: Resolved by identifying that the crew's 
- * "Trapped" status at launch forces a shift from Rope to Mountain.
+ * LLM GENERATION NOTES
+ * 
+ * Model: Gemini Pro (Revised)
+ * Date: 2026-01-23
+ * 
+ * KEY DECISIONS:
+ * 
+ * 1. CLASSIFICATION RATIONALE:
+ *    - NASA (Rope): A tool for coordination and risk management.
+ *    - Flight Crew (Tangled Rope): A life-saving guide that constrains autonomy.
+ *    - Powerless Pilot (Mountain): An immutable reality dictated by physics.
+ * 
+ * 2. CORE INSIGHT: The STS-86 Ascent Checklist demonstrates how a single
+ *    constraint can transform based on context. What is a flexible 'Rope' for
+ *    the institution becomes a 'Tangled Rope' for the operators and, in a crisis,
+ *    a stark 'Mountain' of physical necessity.
  */
 
 /* ==========================================================================
-   6. ALTERNATIVE ANALYSIS
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+/**
+ * OMEGA IDENTIFICATION
+ *
+ * The core uncertainty is the interplay between human agency and procedural rigidity in extreme situations.
+ */
+
+omega_variable(
+    automation_vs_discretion,
+    "In an unforeseen crisis, is strict adherence to the checklist (Mountain) more likely to lead to survival than a crew commander's discretionary action (Rope), and at what point does the checklist become a 'Snare'?",
+    resolution_mechanism("Analysis of historical spaceflight incidents; advanced simulation of off-nominal scenarios with human-in-the-loop testing."),
+    impact("If adherence is better: The 'Mountain' is a safe haven. If discretion is better: The 'Mountain' is a potential 'Snare'."),
+    confidence_without_resolution(medium)
+).
+
+/* ==========================================================================
+   7. ALTERNATIVE ANALYSIS
+   ========================================================================== */
+/**
+ * VIABLE ALTERNATIVES
+ *
+ * ALTERNATIVE 1: "Freestyle" Piloting (Full Discretion)
+ *    Viability: Theoretically possible but catastrophic in practice due to the complexity of the system.
+ *    Suppression: Actively and entirely suppressed by the institutional culture of NASA, training, and the very existence of the checklist. Deviation is treated as a severe failure mode.
+ *
+ * CONCLUSION:
+ * The STS-86 checklist is a 'Rope' that actively suppresses the alternative of
+ * full pilot discretion, which, in such a complex system, would almost certainly
+ * be a fatal 'Snare'. The rigidity of the checklist is a direct response to the
+ * unforgiving 'Mountain' of orbital mechanics.
+ */
+
+/* ==========================================================================
+   8. INTEGRATION HOOKS
    ========================================================================== */
 
 /**
- * VIABLE ALTERNATIVES:
- * 1. BFS (Backup Flight System): A parallel "Rope." If PASS fails, 
- * BFS becomes the primary constraint. 
- * 2. Manual Throttle: A rare moment where the Moderate agent regains 
- * agency, shifting Mountain back to Rope. 
+ * TO USE THIS FILE:
+ * 
+ * 1. Load: ?- [constraints/sts86_ascent_checklist].
+ * 2. Multi-perspective: ?- multi_index_report(sts86_ascent_checklist).
+ * 3. Run tests: ?- run_tests(sts86_ascent_checklist_tests).
  */
 
-% ============================================================================
-% END OF CONSTRAINT STORY
-% ============================================================================
-
-
-% ==========================================================================
-% [SKELETON REPAIR] Missing Perspectival Pillars Added: NOOSE
-% To be calibrated: Define the narrative justification for these perspectives.
-% ==========================================================================
-constraint_indexing:constraint_classification(sts86_ascent_checklist, noose, agent_power(individual_powerless)).
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */

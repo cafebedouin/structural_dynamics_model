@@ -30,7 +30,7 @@ constraint_metric(astm_d638, snap_back_potential, 0.0).
 measurement(m1, astm_d638, extractiveness, 0, 0.10).
 measurement(m2, astm_d638, suppression_requirement, 0, 0.05).
 
-% T=80: Transformation into a "Noose"
+% T=80: Transformation into a "Snare"
 measurement(m3, astm_d638, extractiveness, 80, 0.70).
 measurement(m4, astm_d638, suppression_requirement, 80, 0.75).
 

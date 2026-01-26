@@ -111,7 +111,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE ANONYMOUS NEW EDITOR - Noose
+   PERSPECTIVE 2: THE ANONYMOUS NEW EDITOR - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless (A new volunteer with no history)
@@ -120,7 +120,7 @@ constraint_indexing:constraint_classification(
    SCOPE: local (A single article entry)
    
    WHY THIS CLASSIFICATION:
-   A new editor faces a "Noose" of hierarchy. They are "anyone who can edit," 
+   A new editor faces a "Snare" of hierarchy. They are "anyone who can edit," 
    yet their changes are subject to immediate suppression by the "clever 
    system" of established power-users.
    
@@ -133,7 +133,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     wikipedia_crowdsourcing_2026,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -179,7 +179,7 @@ constraint_indexing:constraint_classification(
 
 test(multi_perspective_trust) :-
     constraint_indexing:constraint_classification(wikipedia_crowdsourcing_2026, rope, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(wikipedia_crowdsourcing_2026, noose, context(agent_power(individual_powerless), _, _, _)),
+    constraint_indexing:constraint_classification(wikipedia_crowdsourcing_2026, snare, context(agent_power(individual_powerless), _, _, _)),
     constraint_indexing:constraint_classification(wikipedia_crowdsourcing_2026, mountain, context(agent_power(analytical), _, _, _)).
 
 test(edit_frequency_governance) :-
@@ -217,7 +217,7 @@ test(edit_frequency_governance) :-
 
 omega_variable(
     wikipedia_governance_bottleneck,
-    "Is the hierarchy of editing power a meritocracy (Rope) or a self-reinforcing clique (Noose)?",
+    "Is the hierarchy of editing power a meritocracy (Rope) or a self-reinforcing clique (Snare)?",
     resolution_mechanism("Audit of administrative turnover rates vs. consensus-blocking behaviors"),
     impact("If clique: High extractiveness for new labor. If meritocracy: Scalable Rope."),
     confidence_without_resolution(medium)
@@ -225,7 +225,7 @@ omega_variable(
 
 omega_variable(
     wikipedia_ideological_hijacking,
-    "Does consensus on Wikipedia represent 'Truth' (Mountain) or 'Dominant Ideology' (Noose)?",
+    "Does consensus on Wikipedia represent 'Truth' (Mountain) or 'Dominant Ideology' (Snare)?",
     resolution_mechanism("Comparative analysis of neutral-point-of-view (NPOV) adherence across controversial topics"),
     impact("If ideology: Suppression score increases. If Truth: Becomes a biological/logical Mountain."),
     confidence_without_resolution(low)
@@ -244,7 +244,7 @@ omega_variable(
  * Viability: The standard "internet discord" model.
  * Suppression: Actively rejected by Wikipedia's "clever system" of trust.
  * * CONCLUSION:
- * Wikipedia succeeded by turning the "Chaos" of the internet (Noose) into a 
+ * Wikipedia succeeded by turning the "Chaos" of the internet (Snare) into a 
  * "Vetted Consensus" (Rope).
  */
 

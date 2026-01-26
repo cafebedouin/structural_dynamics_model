@@ -24,12 +24,12 @@ event(ev04_copying_mechanism_note, implication_statement, 95, [subject(genetic_m
 constraint_claim(chemical_stereochemistry_limits, mountain). 
 constraint_metric(chemical_stereochemistry_limits, accessibility_collapse, 0.95). 
 
-% Noose: The specific base-pairing requirements (A-T, G-C). A tautomeric 'trap' that forces a specific sequence.
-constraint_claim(specific_base_pairing_requirement, noose). 
+% Snare: The specific base-pairing requirements (A-T, G-C). A tautomeric 'trap' that forces a specific sequence.
+constraint_claim(specific_base_pairing_requirement, snare). 
 constraint_metric(specific_base_pairing_requirement, stakes_inflation, 0.90). 
 
-% Zombie: The three-chain structure model. A proposed model (Pauling/Fraser) that is functionally 'dead' due to instability but exists in the literature.
-constraint_claim(three_chain_model, zombie). 
+% Piton: The three-chain structure model. A proposed model (Pauling/Fraser) that is functionally 'dead' due to instability but exists in the literature.
+constraint_claim(three_chain_model, piton). 
 constraint_metric(three_chain_model, suppression, 0.75). 
 
 % --- 4. Recommendations & Veto Structure ---

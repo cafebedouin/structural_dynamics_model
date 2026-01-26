@@ -42,7 +42,7 @@
  * - [cite_start]The Venezuelan People: Subjects whose self-determination is bypassed by external military force[cite: 11].
  * * NARRATIVE ARC:
  * The post-WWII multilateral order is portrayed as a failing "Rope" being
- * transformed into a "Noose" by unilateral hegemonic actions. Lula argues that
+ * transformed into a "Snare" by unilateral hegemonic actions. Lula argues that
  * for Latin America, this represents a return to an "outdated" era of neocolonial
  * [cite_start]incursions[cite: 2, 9].
  */
@@ -53,7 +53,7 @@
 
 % Structural Anchor for Audit
 narrative_ontology:interval(lula_hemisphere_2026, 2026, 2026).
-narrative_ontology:constraint_claim(lula_hemisphere_2026, noose).
+narrative_ontology:constraint_claim(lula_hemisphere_2026, snare).
 
 % Base extractiveness: 0.75
 % Rationale: Military capture of a president and "neocolonial incursions for
@@ -114,7 +114,7 @@ constraint_indexing:constraint_classification(
     !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 2: PRESIDENT LULA (BRAZIL) - Noose
+   PERSPECTIVE 2: PRESIDENT LULA (BRAZIL) - Snare
    --------------------------------------------------------------------------
    [cite_start]WHO: institutional - Head of state of a populist democracy[cite: 6, 12].
    [cite_start]WHEN: biographical - Spanning 200 years of independent history[cite: 5].
@@ -122,7 +122,7 @@ constraint_indexing:constraint_classification(
    [cite_start]SCOPE: continental - Defending a hemisphere that "belongs to all of us"[cite: 12].
 
    WHY THIS CLASSIFICATION:
-   Lula views the intervention as a coercive, extractive "Noose" that violates
+   Lula views the intervention as a coercive, extractive "Snare" that violates
    [cite_start]collectively agreed-upon rules to serve hegemonic interests[cite: 2, 6, 9].
 
    NARRATIVE EVIDENCE:
@@ -132,7 +132,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     lula_hemisphere_2026,
-    noose,
+    snare,
     context(
         agent_power(institutional),
         time_horizon(biographical),
@@ -182,7 +182,7 @@ test(multi_perspective_variance) :-
     constraint_indexing:constraint_classification(lula_hemisphere_2026, Type1, context(individual_powerless, immediate, trapped, national)),
     constraint_indexing:constraint_classification(lula_hemisphere_2026, Type2, context(institutional, biographical, constrained, continental)),
     Type1 = mountain,
-    Type2 = noose.
+    Type2 = snare.
 
 test(power_extractiveness_scaling) :-
     ContextPowerless = context(individual_powerless, immediate, trapped, national),
@@ -192,7 +192,7 @@ test(power_extractiveness_scaling) :-
     Score1 > Score2.
 
 test(continental_scope_noose) :-
-    constraint_indexing:constraint_classification(lula_hemisphere_2026, noose, context(institutional, biographical, constrained, continental)).
+    constraint_indexing:constraint_classification(lula_hemisphere_2026, snare, context(institutional, biographical, constrained, continental)).
 
 :- end_tests(lula_hemisphere_2026_tests).
 
@@ -221,7 +221,7 @@ omega_variable(
     us_intervention_intent,
     'Was the US capture of the Venezuelan president primarily for human rights justice or strategic resource extraction?',
     resolution_mechanism('Audit of captured president\'s trial evidence vs US corporate contracts signed in Venezuela post-capture.'),
-    impact('If Justice: order remains a failing Rope. If Extraction: order is a predatory Noose.'),
+    impact('If Justice: order remains a failing Rope. If Extraction: order is a predatory Snare.'),
     confidence_without_resolution(medium)
 ).
 
@@ -229,7 +229,7 @@ omega_variable(
     regional_unity_threshold,
     "Will Latin American states overcome 'ideological differences' to resist hegemonic pressure as Lula hopes?",
     resolution_mechanism("Track voting alignment in OAS/UN and joint infrastructure project funding through 2027."),
-    impact("If Unified: Regional agency creates a counter-Rope. If Divided: States remain trapped in the Noose."),
+    impact("If Unified: Regional agency creates a counter-Rope. If Divided: States remain trapped in the Snare."),
     confidence_without_resolution(low)
 ).
 

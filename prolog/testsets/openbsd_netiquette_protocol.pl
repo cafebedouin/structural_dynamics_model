@@ -46,7 +46,7 @@
  * * NARRATIVE ARC:
  * Communication is framed as a functional "battle" for clarity. The 
  * protocol acts as a "Rope" for the community to coordinate technical progress 
- * but functions as a "Noose" for those who attempt to "vent" or "be lazy" 
+ * but functions as a "Snare" for those who attempt to "vent" or "be lazy" 
  * without preparation.
  */
 
@@ -117,7 +117,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE UNPREPARED NOVICE - Noose
+   PERSPECTIVE 2: THE UNPREPARED NOVICE - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless (Target of "homework" enforcement)
@@ -126,7 +126,7 @@ constraint_indexing:constraint_classification(
    SCOPE: local (The specific mailing list interaction)
    
    WHY THIS CLASSIFICATION:
-   For the person who hasn't "done their homework," the protocol is a "Noose." 
+   For the person who hasn't "done their homework," the protocol is a "Snare." 
    The community's "standard of excellence" extracts their social standing and 
    strangles their request if it doesn't meet the "plain text" or "useful 
    subject" criteria.
@@ -138,7 +138,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     openbsd_netiquette_protocol,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -189,7 +189,7 @@ constraint_indexing:constraint_classification(
 test(multi_perspective_netiquette) :-
     % Contributor (Moderate) sees Rope
     constraint_indexing:constraint_classification(openbsd_netiquette_protocol, Type1, context(individual_moderate, biographical, mobile, global)),
-    % Novice (Powerless) sees Noose
+    % Novice (Powerless) sees Snare
     constraint_indexing:constraint_classification(openbsd_netiquette_protocol, Type2, context(individual_powerless, immediate, trapped, local)),
     % Maintainer (Institutional) sees Mountain
     constraint_indexing:constraint_classification(openbsd_netiquette_protocol, Type3, context(institutional, civilizational, analytical, global)),
@@ -225,7 +225,7 @@ test(time_immutability_homework) :-
  * clarity. 
  * * 2. PERSPECTIVE SELECTION:
  * Contrasted the Contributor (Rope) who gains clarity, with the Novice 
- * (Noose) who is "trapped" by the expectation of preparation.
+ * (Snare) who is "trapped" by the expectation of preparation.
  * * 3. CLASSIFICATION RATIONALE:
  * Maintainer -> Mountain: The source frames the rules as "excellent" 
  * distillations of necessary reality.
@@ -242,9 +242,9 @@ test(time_immutability_homework) :-
 
 omega_variable(
     netiquette_barrier_intent,
-    "Is the 'homework' requirement a functional necessity for clarity (Mountain) or an elitist tool for gatekeeping/exclusion (Noose)?",
+    "Is the 'homework' requirement a functional necessity for clarity (Mountain) or an elitist tool for gatekeeping/exclusion (Snare)?",
     resolution_mechanism("Audit of community growth vs. problem-resolution speed in 'high-homework' vs 'low-homework' lists"),
-    impact("If necessity: Technical Mountain. If gatekeeping: Social Noose."),
+    impact("If necessity: Technical Mountain. If gatekeeping: Social Snare."),
     confidence_without_resolution(medium)
 ).
 
@@ -263,7 +263,7 @@ omega_variable(
  * * CONCLUSION:
  * The existence of Alternative 1 (Rich Text) makes the OpenBSD protocol a 
  * definitive "Rope" for technical coordination, as it rejects the 
- * "Noose" of visual clutter in favor of informational speed.
+ * "Snare" of visual clutter in favor of informational speed.
  */
 
 /* ==========================================================================

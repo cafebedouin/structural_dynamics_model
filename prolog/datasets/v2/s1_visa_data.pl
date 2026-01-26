@@ -13,7 +13,7 @@ omega_variable(omega_regulatory_intent, conceptual, ambiguous_interpretation_of_
 constraint_claim(registration_statement, mountain).
 constraint_claim(underwriting_agreement, rope).
 constraint_claim(executive_compensation_plans, tangled_rope).
-constraint_claim(confidential_omissions, noose).
+constraint_claim(confidential_omissions, snare).
 
 constraint_metric(registration_statement, intensity, 0.90).
 constraint_metric(registration_statement, suppression_requirement, 0.05).

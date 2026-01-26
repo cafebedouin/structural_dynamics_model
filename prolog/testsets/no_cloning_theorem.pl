@@ -43,7 +43,7 @@
  * The theorem functions as a "Mountain" of physical necessity. For the 
  * cryptographer, it is a "Rope" for coordination (security through 
  * physical law). However, for the engineer attempting to scale quantum 
- * hardware, it is a "Noose" that strangles the ability to use classical 
+ * hardware, it is a "Snare" that strangles the ability to use classical 
  * redundancy and debugging techniques.
  */
 
@@ -138,7 +138,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE HARDWARE DEBUGGER - Noose
+   PERSPECTIVE 3: THE HARDWARE DEBUGGER - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless - Subject to the rules of the quantum lab.
@@ -148,7 +148,7 @@ constraint_indexing:constraint_classification(
    
    WHY THIS CLASSIFICATION:
    For the engineer trying to debug a quantum circuit, the theorem is a 
-   Noose. They cannot "snapshot" the state for later analysis; the act 
+   Snare. They cannot "snapshot" the state for later analysis; the act 
     of measurement destroys it, and the inability to clone prevents 
    redundant backups. The harder they try to isolate errors, the tighter 
    the lack of information replication strangles their progress.
@@ -156,7 +156,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     no_cloning_theorem,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -176,11 +176,11 @@ test(multi_perspective_variance) :-
     constraint_indexing:constraint_classification(no_cloning_theorem, mountain, context(analytical, civilizational, trapped, global)),
     % Institutional sees Rope
     constraint_indexing:constraint_classification(no_cloning_theorem, rope, context(institutional, biographical, arbitrage, national)),
-    % Powerless sees Noose
-    constraint_indexing:constraint_classification(no_cloning_theorem, noose, context(individual_powerless, immediate, constrained, local)).
+    % Powerless sees Snare
+    constraint_indexing:constraint_classification(no_cloning_theorem, snare, context(individual_powerless, immediate, constrained, local)).
 
 test(power_extractiveness_cloning) :-
-    % Powerless engineers feel the total extraction of redundancy (Noose).
+    % Powerless engineers feel the total extraction of redundancy (Snare).
     % Institutional cryptographers leverage the "theft" of eavesdropping (Rope).
     ContextPowerless = context(individual_powerless, immediate, constrained, local),
     ContextPowerful = context(institutional, biographical, arbitrage, national),
@@ -209,10 +209,10 @@ test(time_immutability_physics) :-
  * * 2. PERSPECTIVE SELECTION:
  * The Analyst (Physicist) sees the law as a fixed Mountain.
  * The Architect (Cryptographer) sees the law as a useful Rope for security.
- * The Worker (Debugger) sees the law as a Noose strangling their methods.
+ * The Worker (Debugger) sees the law as a Snare strangling their methods.
  * * 3. AMBIGUITIES:
  * - The existence of "Approximate Cloning" creates a boundary condition 
- * where the Noose might be loosened for a high price.
+ * where the Snare might be loosened for a high price.
  */
 
 /* ==========================================================================
@@ -221,11 +221,11 @@ test(time_immutability_physics) :-
 
 omega_variable(
     macro_cloning_threshold,
-    "At what scale of system complexity does the no-cloning 'Noose' 
+    "At what scale of system complexity does the no-cloning 'Snare' 
     effectively vanish into classical 'copyability'?",
     resolution_mechanism("Experimental mapping of the quantum-to-classical transition"),
     impact("If Low: Quantum limits are a pervasive Mountain. If High: They are 
-    only a local Noose for microscopic systems."),
+    only a local Snare for microscopic systems."),
     confidence_without_resolution(medium)
 ).
 
@@ -242,7 +242,7 @@ omega_variable(
  * actively suppress classical-style copying once superposition is involved.
  * * CONCLUSION:
  * The existence of classical computing as a suppressed alternative for quantum 
- * systems confirms that for the quantum engineer, the theorem is a Noose—they 
+ * systems confirms that for the quantum engineer, the theorem is a Snare—they 
  * are denied the very tools (copying) that make classical systems robust.
  */
 

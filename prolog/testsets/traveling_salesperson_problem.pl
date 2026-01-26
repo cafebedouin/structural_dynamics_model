@@ -43,7 +43,7 @@
  * * NARRATIVE ARC:
  * TSP is the "Efficiency Ceiling." For a small set of nodes, it is a 
  * navigable Rope. However, as the network expands, the search space 
- * explodes, creating a computational Noose that drains resources. It 
+ * explodes, creating a computational Snare that drains resources. It 
  * eventually settles as a Mountain of irreducible cost—the "minimum price" 
  * nature demands for connectivity.
  */
@@ -81,7 +81,7 @@ constraint_victim(traveling_salesperson_problem, small_scale_logistics).
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 1: THE DELIVERY DRIVER - Noose
+   PERSPECTIVE 1: THE DELIVERY DRIVER - Snare
    --------------------------------------------------------------------------
    WHO: individual_powerless
    WHEN: immediate
@@ -89,7 +89,7 @@ constraint_victim(traveling_salesperson_problem, small_scale_logistics).
    SCOPE: local
    
    WHY THIS CLASSIFICATION:
-   For a driver, TSP is a "Noose." The algorithm's search for the absolute 
+   For a driver, TSP is a "Snare." The algorithm's search for the absolute 
    minimum path often ignores human factors (fatigue, traffic, bathroom breaks). 
    The mathematical "optimum" becomes a punitive standard they are 
    strangled by during their shift.
@@ -97,7 +97,7 @@ constraint_victim(traveling_salesperson_problem, small_scale_logistics).
 
 constraint_indexing:constraint_classification(
     traveling_salesperson_problem,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -171,8 +171,8 @@ constraint_indexing:constraint_classification(
 :- begin_tests(tsp_tests).
 
 test(algorithmic_pressure) :-
-    % Testing that trapped agents feel the Noose of optimization.
-    constraint_indexing:constraint_classification(traveling_salesperson_problem, noose, context(_, _, trapped, _)).
+    % Testing that trapped agents feel the Snare of optimization.
+    constraint_indexing:constraint_classification(traveling_salesperson_problem, snare, context(_, _, trapped, _)).
 
 test(heuristic_utility) :-
     % Testing that institutional agents use TSP as a Rope for coordination.
@@ -201,7 +201,7 @@ omega_variable(
     quantum_optimization_breakthrough,
     "Will quantum annealing (e.g., D-Wave) provide near-instant optimal TSP solutions?",
     resolution_mechanism("Benchmarking quantum annealers against classical heuristics on $N>1000$ nodes"),
-    impact("If Yes: The Noose for logistics firms vanishes. The Mountain is bypassed by a 'Tunnel'."),
+    impact("If Yes: The Snare for logistics firms vanishes. The Mountain is bypassed by a 'Tunnel'."),
     confidence_without_resolution(medium)
 ).
 

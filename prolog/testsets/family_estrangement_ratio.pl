@@ -77,7 +77,7 @@ constraint_victim(family_estrangement_ratio, individual_safety). % Individual is
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 1: THE ESTRANGED INDIVIDUAL - Noose
+   PERSPECTIVE 1: THE ESTRANGED INDIVIDUAL - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless (Targeted by harm, subject to the "forever" dogma)
@@ -86,7 +86,7 @@ constraint_victim(family_estrangement_ratio, individual_safety). % Individual is
    SCOPE: local (The immediate family thread)
    
    WHY THIS CLASSIFICATION:
-   For the individual, the "forever" model is a "Noose." If they stay, the "bad ratio" strangles 
+   For the individual, the "forever" model is a "Snare." If they stay, the "bad ratio" strangles 
    them; if they leave, the "stigma" and loss of life events tightens around their social existence.
    
    NARRATIVE EVIDENCE:
@@ -98,7 +98,7 @@ constraint_victim(family_estrangement_ratio, individual_safety). % Individual is
 
 constraint_indexing:constraint_classification(
     family_estrangement_ratio,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -179,8 +179,8 @@ constraint_indexing:constraint_classification(
 :- begin_tests(family_estrangement_ratio_tests).
 
 test(multi_perspective_estrangement) :-
-    % Individual sees Noose
-    constraint_indexing:constraint_classification(family_estrangement_ratio, noose, context(individual_powerless, immediate, trapped, local)),
+    % Individual sees Snare
+    constraint_indexing:constraint_classification(family_estrangement_ratio, snare, context(individual_powerless, immediate, trapped, local)),
     % Network sees Rope
     constraint_indexing:constraint_classification(family_estrangement_ratio, rope, context(institutional, generational, mobile, regional)),
     % Analyst sees Mountain
@@ -215,10 +215,10 @@ test(time_immutability_estrangement) :-
  * "silent epidemic" of stigma. This fulfills the Mandatrophy Gate.
  * 2. MANDATROPHY RESOLUTION:
  * Status: [RESOLVED MANDATROPHY]. The constraint is a "Rope" for the Network Observer 
- * (who uses it to maintain familial stability) but a "Noose" for the individual 
+ * (who uses it to maintain familial stability) but a "Snare" for the individual 
  * powerless (who is forced into isolation to maintain safety).
  * 3. PERSPECTIVE SELECTION:
- * Chose the Individual (Noose), the Network Observer (Rope), and the Analyst (Mountain) 
+ * Chose the Individual (Snare), the Network Observer (Rope), and the Analyst (Mountain) 
  * to reflect the source's tension between personal cost and systemic rules.
  * 4. AMBIGUITIES:
  * - The text mentions "something else prioritised over the relationship" (e.g. mental 
@@ -231,9 +231,9 @@ test(time_immutability_estrangement) :-
 
 omega_variable(
     family_estrangement_ratio_extraction_intent,
-    "Is the stigma of estrangement a functional protection of the family unit (Mountain) or an extractive tool to force compliance (Noose)?",
+    "Is the stigma of estrangement a functional protection of the family unit (Mountain) or an extractive tool to force compliance (Snare)?",
     resolution_mechanism("Comparison of health outcomes for individuals in reconcile-at-all-costs families vs. closure-accepting families"),
-    impact("If protection: Institutional Mountain. If extraction: Mandatrophy Noose."),
+    impact("If protection: Institutional Mountain. If extraction: Mandatrophy Snare."),
     confidence_without_resolution(medium)
 ).
 
@@ -241,7 +241,7 @@ omega_variable(
     reconciliation_efficacy_threshold,
     "Can a 'larger family network' actually heal divisions (Rope), or is the prevalence of the 'silent epidemic' proof that the network is a failed Scaffold?",
     resolution_mechanism("Audit of long-term reconciliation rates mediated by extended family networks"),
-    impact("If efficacy high: Network is a Rope. If low: Network is a deceptive Noose."),
+    impact("If efficacy high: Network is a Rope. If low: Network is a deceptive Snare."),
     confidence_without_resolution(low)
 ).
 
@@ -260,7 +260,7 @@ omega_variable(
  * Suppression: Often made impossible by "jerks" who care more about their "beliefs than they do about you".
  * * CONCLUSION:
  * The existence of Alternative 1 shifts the "forever" dogma from a potential Rope into a definitive 
- * Noose for those whose safety depends on ending the contact.
+ * Snare for those whose safety depends on ending the contact.
  */
 
 /* ==========================================================================

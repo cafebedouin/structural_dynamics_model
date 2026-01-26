@@ -40,7 +40,7 @@ constraint_metric(continuum_indeterminacy_friction, snap_back_potential, 0.40).
 constraint_metric(continuum_indeterminacy_friction, extractiveness, 0.55).
 
 % NOOSE: Law of Excluded Middle (LEM) in Infinite Sets
-constraint_claim(classical_logic_trap, noose).
+constraint_claim(classical_logic_trap, snare).
 constraint_metric(classical_logic_trap, intensity, 0.95).
 constraint_metric(classical_logic_trap, suppression_requirement, 0.85).
 constraint_metric(classical_logic_trap, snap_back_potential, 0.90).

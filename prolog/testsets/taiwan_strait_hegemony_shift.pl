@@ -45,12 +45,12 @@
  * - PLAN (People's Liberation Army Navy): Institutional; the enforcer of 
  * the new maritime "Mountain" that dictates regional flow.
  * - Southeast Asian State (e.g., Philippines): Analytical/Trapped; 
- * observing the "Noose" of the South China Sea tighten into a closed lake.
+ * observing the "Snare" of the South China Sea tighten into a closed lake.
  * * NARRATIVE ARC:
  * What was once a Rope (international maritime law coordinating free trade) 
  * transforms into a Mountain (the unchangeable physical presence of Chinese 
  * sensors and missiles on Taiwan's east coast). For Japan, this Mountain 
- * acts as a Noose, extracting sovereignty in exchange for the continued 
+ * acts as a Snare, extracting sovereignty in exchange for the continued 
  * flow of oil and food.
  */
 
@@ -60,7 +60,7 @@
 
 % Required for [STEP 1] and [STEP 2] of the Deferential Realism suite
 narrative_ontology:interval(hegemony_transition_window, 0, 10).
-narrative_ontology:constraint_claim(taiwan_strait_hegemony_shift, noose).
+narrative_ontology:constraint_claim(taiwan_strait_hegemony_shift, snare).
 
 % Base extractiveness score (0.0-1.0)
 % Rationale: 0.9. Total extraction of strategic autonomy. Japan's 
@@ -157,7 +157,7 @@ constraint_indexing:constraint_classification(
     !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE REGIONAL REBEL / DISSIDENT - Noose
+   PERSPECTIVE 3: THE REGIONAL REBEL / DISSIDENT - Snare
    --------------------------------------------------------------------------
    
    WHO: analytical - Observer of the loss of civil and political autonomy.
@@ -166,7 +166,7 @@ constraint_indexing:constraint_classification(
    SCOPE: global - Impact on the rules-based international order.
    
    WHY THIS CLASSIFICATION:
-   The critic sees the Noose. The physical control of Taiwan "chokes" 
+   The critic sees the Snare. The physical control of Taiwan "chokes" 
    the democratic and sovereign aspirations of the region. By extracting 
    the ability to resist, the hegemon turns the entire Pacific rim 
    into a series of vassal states whose "breath" (energy/trade) is 
@@ -177,7 +177,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     taiwan_strait_hegemony_shift,
-    noose,
+    snare,
     context(
         agent_power(analytical),
         time_horizon(historical),
@@ -202,7 +202,7 @@ test(sovereignty_extraction_delta) :-
 
 test(geopolitical_lock_in) :-
     % Check if the analytical view correctly identifies the suppression of alternatives
-    constraint_indexing:constraint_classification(taiwan_strait_hegemony_shift, noose, context(analytical, historical, analytical, global)).
+    constraint_indexing:constraint_classification(taiwan_strait_hegemony_shift, snare, context(analytical, historical, analytical, global)).
 
 :- end_tests(taiwan_hegemony_tests).
 
@@ -215,7 +215,7 @@ test(geopolitical_lock_in) :-
  * * Model: Gemini 2.0 Flash
  * * KEY DECISIONS:
  * 1. THE "CLIENT STATE" MECHANISM: Japan's transformation into a client 
- * state is modeled as an energy-logistics Noose. If 90% of your oil passes 
+ * state is modeled as an energy-logistics Snare. If 90% of your oil passes 
  * through a straw controlled by another, your sovereignty is a fiction.
  * 2. REGIONAL EFFECTS: South Korea and the Philippines are modeled as 
  * "Secondary Nooses"—once Taiwan falls, their own supply lines are 
@@ -227,11 +227,11 @@ test(geopolitical_lock_in) :-
 omega_variable(
     alternative_energy_scaffold,
     "Can Japan develop enough nuclear and renewable autonomy to unloosen 
-     the Noose of the Taiwan Strait?",
+     the Snare of the Taiwan Strait?",
     resolution_mechanism("Evaluation of Japan's 2050 Energy Plan vs. 
     required maritime imports for industrial survival"),
     impact("If Yes: The Strait remains a Rope for trade. If No: It is a 
-            permanent Noose for sovereignty."),
+            permanent Snare for sovereignty."),
     confidence_without_resolution(medium)
 ).
 
@@ -243,14 +243,14 @@ omega_variable(
  * VIABLE ALTERNATIVES
  * * ALTERNATIVE 1: Trans-Pacific Bridge (U.S. Alliance)
  * Viability: Currently the "Rope" that secures Japan.
- * Suppression: Becomes a Noose if the U.S. cannot physically penetrate 
+ * Suppression: Becomes a Snare if the U.S. cannot physically penetrate 
  * the A2/AD envelope created by a Chinese-fortified Taiwan.
  * * ALTERNATIVE 2: Arctic Silk Road (Northern Route)
  * Viability: Possible but seasonally constrained and subject to 
  * Russian/Chinese coordination.
  * * CONCLUSION:
  * The collapse of the U.S. alliance (Rope) in the face of the Taiwan 
- * Mountain leads directly to the Hegemonic Noose for the entire 
+ * Mountain leads directly to the Hegemonic Snare for the entire 
  * First Island Chain.
  */
 

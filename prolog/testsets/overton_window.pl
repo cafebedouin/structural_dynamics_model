@@ -48,7 +48,7 @@
  * Initially, the window acts as a "Mountain" of social consensus. Activists use 
  * "Rope" strategies (pushing extreme positions to make moderate ones look viable). 
  * For those whose lives depend on "unthinkable" policies, the window functions 
- * as a "Noose," strangling the possibility of relief through the democratic process.
+ * as a "Snare," strangling the possibility of relief through the democratic process.
  */
 
 /* ==========================================================================
@@ -154,7 +154,7 @@ constraint_indexing:constraint_classification(
    
    WHY THIS CLASSIFICATION:
    For the reformer whose survival depends on a policy currently outside 
-   the window, the constraint is a Noose. They see the "sensible" center 
+   the window, the constraint is a Snare. They see the "sensible" center 
    ignoring a catastrophe because the solution is "politically impossible." 
    The window's narrowness strangles their ability to even speak the 
    necessary truth in a way that is heard.
@@ -162,7 +162,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     overton_window,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -238,7 +238,7 @@ omega_variable(
  * * ALTERNATIVE 2: Direct Democracy (Bypassing the window via referenda)
  * Viability: Moderate.
  * * CONCLUSION:
- * The window is a Noose because it forces complex social problems into 
+ * The window is a Snare because it forces complex social problems into 
  * a binary or narrow "sensible" range, suppressing radical but 
  * effective alternatives.
  */

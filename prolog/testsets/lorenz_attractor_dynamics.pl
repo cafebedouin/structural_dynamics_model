@@ -42,12 +42,12 @@
  * - The Meteorologist (Institutional): An agent attempting to use the 
  * system as a "Rope" for coordination (weather forecasting).
  * - The Predictive Model (Victim): An agent whose accuracy is "strangled" by 
- * infinitesimal initial errors, turning the math into a "Noose."
+ * infinitesimal initial errors, turning the math into a "Snare."
  * * NARRATIVE ARC:
  * The Lorenz equations are a "Mountain" of physical reality—the rules are 
  * simple and unchangeable. In the short term, they provide a "Rope" for 
  * flight planning and logistics. However, as time $t$ increases, the 
- * sensitivity to initial conditions acts as a "Noose," extracting the 
+ * sensitivity to initial conditions acts as a "Snare," extracting the 
  * possibility of certainty and propping up a "Scaffold" of probability 
  * instead of fact.
  */
@@ -142,7 +142,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE POLICY PLANNER (10-YEAR) - Noose
+   PERSPECTIVE 3: THE POLICY PLANNER (10-YEAR) - Snare
    --------------------------------------------------------------------------
    WHO: individual_powerless - Bound by the "Butterfly Effect" limits of math.
    WHEN: civilizational - Trying to predict long-term climate/social shifts.
@@ -150,7 +150,7 @@ constraint_indexing:constraint_classification(
    SCOPE: global - Global environmental/economic planning.
    
    WHY THIS CLASSIFICATION:
-   For the long-term planner, chaos is a "Noose." It "strangles" their 
+   For the long-term planner, chaos is a "Snare." It "strangles" their 
    ability to provide certain outcomes, extracting enormous political and 
    social capital to fund "scenarios" that can never be fully verified.
    
@@ -163,7 +163,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     lorenz_attractor_dynamics,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(civilizational),
@@ -184,10 +184,10 @@ constraint_indexing:constraint_classification(
 test(lyapunov_time_variance) :-
     % Short term (immediate) -> Mountain/Rope
     constraint_indexing:constraint_classification(lorenz_attractor_dynamics, Type1, context(individual_powerless, immediate, trapped, local)),
-    % Long term (civilizational) -> Noose
+    % Long term (civilizational) -> Snare
     constraint_indexing:constraint_classification(lorenz_attractor_dynamics, Type2, context(individual_powerless, civilizational, constrained, global)),
     Type1 = mountain,
-    Type2 = noose.
+    Type2 = snare.
 
 test(extraction_of_certainty) :-
     % The "powerless" long-term observer suffers high extraction of predictive value.
@@ -225,7 +225,7 @@ omega_variable(
     shadowing_lemma_validity,
     "Do 'shadow' trajectories exist that make numerical simulations a reliable Rope despite Chaos?",
     resolution_mechanism("Numerical verification of hyperbolic vs non-hyperbolic regions in the Lorenz attractor."),
-    impact("If Yes: The Noose is a 'Scaffold' (fake fear). If No: The Noose is a true Mountain."),
+    impact("If Yes: The Snare is a 'Scaffold' (fake fear). If No: The Snare is a true Mountain."),
     confidence_without_resolution(medium)
 ).
 
@@ -245,7 +245,7 @@ omega_variable(
  * physics that *does* allow for short-term coordination.
  * * CONCLUSION:
  * The presence of short-term "Rope" utility (Alternative 2 rejection) 
- * while facing long-term "Noose" limits (Alternative 1 rejection) defines 
+ * while facing long-term "Snare" limits (Alternative 1 rejection) defines 
  * the Lorenz constraint.
  */
 

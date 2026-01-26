@@ -80,7 +80,7 @@ narrative_ontology:constraint_metric(college_admissions_market, suppression_requ
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 1: THE REJECTED APPLICANT - Noose
+   PERSPECTIVE 1: THE REJECTED APPLICANT - Snare
    --------------------------------------------------------------------------
    WHO: individual_powerless
    WHEN: immediate (one-year cycle)
@@ -89,14 +89,14 @@ narrative_ontology:constraint_metric(college_admissions_market, suppression_requ
    
    WHY THIS CLASSIFICATION:
    For the student who spent years building a profile only to be rejected, 
-   the matching logic is a "Noose." The sunk costs are high, and the 
+   the matching logic is a "Snare." The sunk costs are high, and the 
    perceived lack of alternatives (at the same prestige level) feels 
    punitive and extractive.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
     college_admissions_market,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -169,9 +169,9 @@ constraint_indexing:constraint_classification(
 :- begin_tests(college_admissions_tests).
 
 test(prestige_asymmetry) :-
-    % Powerful agents see the coordination (Rope); powerless see the extraction (Noose).
+    % Powerful agents see the coordination (Rope); powerless see the extraction (Snare).
     constraint_indexing:constraint_classification(college_admissions_market, rope, context(individual_powerful, _, _, _)),
-    constraint_indexing:constraint_classification(college_admissions_market, noose, context(individual_powerless, _, _, _)).
+    constraint_indexing:constraint_classification(college_admissions_market, snare, context(individual_powerless, _, _, _)).
 
 test(quota_immutability) :-
     % Institutional perspective views the constraint as a fixed Mountain.
@@ -201,7 +201,7 @@ omega_variable(
     prestige_valuation,
     "Will the market value of elite degrees decline due to skill-based hiring?",
     resolution_mechanism("Tracking hiring data of elite vs. non-elite grads over 10 years"),
-    impact("If Yes: The 'Noose' loosens; students find 'Exit' options (Mountain -> Rope)."),
+    impact("If Yes: The 'Snare' loosens; students find 'Exit' options (Mountain -> Rope)."),
     confidence_without_resolution(medium)
 ).
 
@@ -212,10 +212,10 @@ omega_variable(
 /**
  * VIABLE ALTERNATIVES:
  * 1. Lottery Admissions: (Decreases extraction/stress, but destroys prestige signal).
- * 2. Open Enrollment: (Eliminates the 'Noose' but creates 'Congestion').
+ * 2. Open Enrollment: (Eliminates the 'Snare' but creates 'Congestion').
  * * CONCLUSION:
  * The current system persists as a "Mountain" because elite institutions 
- * benefit from the "Noose" effect—it creates the scarcity that defines their value.
+ * benefit from the "Snare" effect—it creates the scarcity that defines their value.
  */
 
 /* ==========================================================================

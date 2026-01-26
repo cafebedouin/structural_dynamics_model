@@ -141,7 +141,7 @@ constraint_indexing:constraint_classification(
     !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE STEPSISTERS - Noose
+   PERSPECTIVE 3: THE STEPSISTERS - Snare
    --------------------------------------------------------------------------
    WHO: individual_moderate
    WHEN: immediate
@@ -149,14 +149,14 @@ constraint_indexing:constraint_classification(
    SCOPE: local
    
    WHY THIS CLASSIFICATION:
-   The slipper test acts as a "Noose" for the sisters. It is a coercive 
+   The slipper test acts as a "Snare" for the sisters. It is a coercive 
    requirement (marrying the Prince) that they attempt to satisfy but 
    physically cannot. It extracts their pride and reveals their inferiority.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
     midnight_deadline,
-    noose,
+    snare,
     context(
         agent_power(individual_moderate),
         time_horizon(immediate),
@@ -182,8 +182,8 @@ test(perspectival_gap) :-
     constraint_indexing:constraint_classification(midnight_deadline, rope, context(agent_power(institutional), _, _, _, _, _)).
 
 test(extraction_limit) :-
-    % The sisters' failure is the "Noose" experience.
-    constraint_indexing:constraint_classification(midnight_deadline, noose, context(agent_power(individual_moderate), _, _, _, stepsisters, _)).
+    % The sisters' failure is the "Snare" experience.
+    constraint_indexing:constraint_classification(midnight_deadline, snare, context(agent_power(individual_moderate), _, _, _, stepsisters, _)).
 
 :- end_tests(cinderella_tests).
 
@@ -210,7 +210,7 @@ omega_variable(
     temporal_sync,
     "Was the Palace clock synced with the Fairy Godmother's internal clock?",
     resolution_mechanism("Verification of the precise moment of transformation vs. the Prince's observation."),
-    impact("If out of sync, the 'Mountain' becomes a 'Noose' of embarrassment."),
+    impact("If out of sync, the 'Mountain' becomes a 'Snare' of embarrassment."),
     confidence_without_resolution(low)
 ).
 
@@ -223,11 +223,11 @@ omega_variable(
  * * ALTERNATIVE 1: Honest Courting
  * Viability: High. Cinderella could have attended without magic in her best rags.
  * Suppression: Actively suppressed by the stepmother's social exclusion and 
- * chores (the original household Noose).
+ * chores (the original household Snare).
  * Evidence: "It would only make the people laugh to see a Cinderwench at a ball."
  * * CONCLUSION:
  * The magic is only necessary because the social hierarchy of the household 
- * is a Noose that suppresses the "Rope" of normal social interaction.
+ * is a Snare that suppresses the "Rope" of normal social interaction.
  */
 
 /* ==========================================================================
@@ -238,4 +238,4 @@ omega_variable(
 % --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
 constraint_indexing:constraint_classification(cinderella_midnight_deadline, mountain, agent_power(analytical)).
 constraint_indexing:constraint_classification(cinderella_midnight_deadline, rope, agent_power(institutional)).
-constraint_indexing:constraint_classification(cinderella_midnight_deadline, noose, agent_power(individual_powerless)).
+constraint_indexing:constraint_classification(cinderella_midnight_deadline, snare, agent_power(individual_powerless)).

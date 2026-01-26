@@ -45,7 +45,7 @@
  * * NARRATIVE ARC:
  * Criticism begins as an extractive "role assignment" where the critic attempts to use 
  * the subject to make their internal fiction work. The subject can 
- * transform this constraint from a "Noose" of trapped identity into a "Rope" of 
+ * transform this constraint from a "Snare" of trapped identity into a "Rope" of 
  * useful lessons by maintaining a conscious choice about playing the part.
  */
 
@@ -53,9 +53,8 @@
    2. CORE SYSTEM INTEGRATION (The "Reality" Layer)
    ========================================================================== */
 
-% Required for [STEP 1] and [STEP 2] of the DR-Audit Suite
-narrative_ontology:interval(social_narrative_casting_interval, 0, 10).
-narrative_ontology:constraint_claim([social_narrative_casting], [psychological_projection]).
+narrative_ontology:interval(social_narrative_casting, 0, 10).
+narrative_ontology:constraint_claim(social_narrative_casting, [psychological_projection]).
 
 % Base extractiveness score (0.3 = Moderate-Low)
 % Rationale: While the critic attempts to extract the subject's identity for their "brand," 
@@ -73,9 +72,7 @@ domain_priors:suppression_score(social_narrative_casting, 0.6).
 % meaning through stories.
 domain_priors:emerges_naturally(social_narrative_casting).
 
-% Metrics required for Section 1 of the Executive Summary
-narrative_ontology:constraint_metric(social_narrative_casting, extractiveness, 0.3).
-narrative_ontology:constraint_metric(social_narrative_casting, suppression_requirement, 0.6).
+
 
 % BENEFICIARIES & VICTIMS
 % Beneficiary: The Critic's Ego (gains meaning and brand reinforcement).
@@ -88,7 +85,7 @@ constraint_victim(social_narrative_casting, lived_experience).
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 1: THE CRITICIZED SUBJECT (Actor) - Noose
+   PERSPECTIVE 1: THE CRITICIZED SUBJECT (Actor) - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless (Target of "you are X" role assignment)
@@ -97,7 +94,7 @@ constraint_victim(social_narrative_casting, lived_experience).
    SCOPE: local (The immediate social interaction)
    
    WHY THIS CLASSIFICATION:
-   For a subject who internalizes criticism, it is a "Noose." The critic's narrative 
+   For a subject who internalizes criticism, it is a "Snare." The critic's narrative 
    constrains their identity to a "personification of some trait [the critic] doesn’t 
    like about themselves," leaving them trapped in someone else's movie.
    
@@ -110,7 +107,7 @@ constraint_victim(social_narrative_casting, lived_experience).
 
 constraint_indexing:constraint_classification(
     social_narrative_casting,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -119,8 +116,7 @@ constraint_indexing:constraint_classification(
     )
 ) :-
     domain_priors:suppression_score(social_narrative_casting, S),
-    S > 0.5,
-    !.
+    S > 0.5.
 
 /* --------------------------------------------------------------------------
    PERSPECTIVE 2: THE CONSCIOUS AGENT (Aware Actor) - Rope
@@ -150,7 +146,7 @@ constraint_indexing:constraint_classification(
         exit_options(mobile),
         spatial_scope(local)
     )
-) :- !.
+).
 
 /* --------------------------------------------------------------------------
    PERSPECTIVE 3: THE EXISTENTIAL ANALYST (Ego-Breaker) - Mountain
@@ -180,7 +176,34 @@ constraint_indexing:constraint_classification(
         exit_options(analytical),
         spatial_scope(global)
     )
-) :- !.
+).
+
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 4: THE THERAPIST / COACH - Rope
+   --------------------------------------------------------------------------
+   WHO: institutional (Guides others in navigating narratives)
+   WHEN: biographical (Over the course of a client's therapy)
+   WHERE: arbitrage (Can analyze and reframe narratives from a position of professional distance)
+   SCOPE: regional (The scope of a client's life and social interactions)
+   
+   WHY THIS CLASSIFICATION:
+   For a therapist or coach, understanding social narrative casting is a
+   powerful diagnostic and therapeutic tool (Rope). They teach clients to
+   recognize when they are being "cast" in a role, helping them detangle
+   their identity from the projections of others. The concept is a mechanism
+   for building resilience and social awareness.
+   -------------------------------------------------------------------------- */
+
+constraint_indexing:constraint_classification(
+    social_narrative_casting,
+    rope,
+    context(
+        agent_power(institutional),
+        time_horizon(biographical),
+        exit_options(arbitrage),
+        spatial_scope(regional)
+    )
+).
 
 /* ==========================================================================
    4. TESTS (What We Learn About Constraints)
@@ -190,25 +213,27 @@ constraint_indexing:constraint_classification(
 
 /**
  * TEST 1: Multi-perspective variance
- * Demonstrates that belief vs. detachment transforms a Noose into a Rope.
+ * Demonstrates that belief vs. detachment transforms a Snare into a Rope.
  */
 test(multi_perspective_belief) :-
     % Victim who believes the role is life
-    constraint_indexing:constraint_classification(social_narrative_casting, noose, context(individual_powerless, immediate, trapped, local)),
+    constraint_indexing:constraint_classification(social_narrative_casting, snare, context(agent_power(individual_powerless), _, _, _)),
     % Agent who knows it is just a role
-    constraint_indexing:constraint_classification(social_narrative_casting, rope, context(individual_moderate, biographical, mobile, local)),
+    constraint_indexing:constraint_classification(social_narrative_casting, rope, context(agent_power(individual_moderate), _, _, _)),
     % Analyst who sees the underlying biological ego-system
-    constraint_indexing:constraint_classification(social_narrative_casting, mountain, context(analytical, civilizational, analytical, global)).
+    constraint_indexing:constraint_classification(social_narrative_casting, mountain, context(agent_power(analytical), _, _, _)),
+    % Therapist who uses the system as a tool
+    constraint_indexing:constraint_classification(social_narrative_casting, rope, context(agent_power(institutional), _, _, _)).
 
 /**
  * TEST 2: Power-based extractiveness scaling
  * Demonstrates that those who don't choose the part suffer more identity extraction.
  */
 test(power_extractiveness_casting) :-
-    ContextPowerless = context(individual_powerless, immediate, trapped, local),
-    ContextModerate = context(individual_moderate, biographical, mobile, local),
+    ContextPowerless = context(agent_power(individual_powerless), time_horizon(immediate), exit_options(trapped), spatial_scope(local)),
+    ContextInstitutional = context(agent_power(institutional), time_horizon(biographical), exit_options(arbitrage), spatial_scope(regional)),
     constraint_indexing:extractiveness_for_agent(social_narrative_casting, ContextPowerless, Score1),
-    constraint_indexing:extractiveness_for_agent(social_narrative_casting, ContextModerate, Score2),
+    constraint_indexing:extractiveness_for_agent(social_narrative_casting, ContextInstitutional, Score2),
     Score1 > Score2.
 
 /**
@@ -218,7 +243,7 @@ test(power_extractiveness_casting) :-
  */
 test(time_immutability_casting) :-
     % Long horizon = fundamental ego law
-    constraint_indexing:effective_immutability(civilizational, analytical, mountain).
+    constraint_indexing:effective_immutability(time_horizon(civilizational), exit_options(analytical), mountain).
 
 :- end_tests(social_narrative_casting_tests).
 
@@ -228,54 +253,42 @@ test(time_immutability_casting) :-
 
 /**
  * LLM GENERATION NOTES
- * * Model: Gemini 2.0 Flash
- * Date: 2026-01-21
- * * KEY DECISIONS:
- * * 1. BASE EXTRACTIVENESS (0.3):
- * Reasoning: Chose moderate-low because while someone "hiring" you for their villain 
- * role is extractive, the source emphasizes the subject's "choice" and "lessons".
- * * 2. PERSPECTIVE SELECTION:
- * Focused on the transition from "Unconscious Actor" (Noose) to "Conscious Actor" 
- * (Rope) to "Observer" (Mountain) to reflect the source's pedagogical arc.
- * * 3. CLASSIFICATION RATIONALE:
- * [Individual Powerless] → [Noose]: Believing the roles assigned by others makes the 
- * criticism an inescapable trap of identity.
- * [Analytical] → [Mountain]: The ego's storytelling is framed as an inherent, 
- * systemic filter of human experience.
- * * 4. AMBIGUITIES:
- * - The text mentions "lived experience" as the goal but doesn't define it outside 
- * the negative space of "breaking free". Resolved via Omega.
- * * 5. CONFIDENCE:
- * High: Classifications of Noose/Rope based on internal vs external belief.
- * Medium: Extractiveness score (dependent on the severity of the "villain" casting).
+ * 
+ * Model: Gemini 2.0 Flash
+ * Date: 2026-01-23
+ * 
+ * KEY DECISIONS:
+ * 
+ * 1. BASE EXTRACTIVENESS (0.3):
+ *    Reasoning: Chose moderate-low because while someone "hiring" you for their villain 
+ *    role is extractive, the source emphasizes the subject's "choice" and "lessons".
+ * 
+ * 2. PERSPECTIVE SELECTION:
+ *    Focused on the transition from "Unconscious Actor" (Snare) to "Conscious Actor" 
+ *    (Rope) to "Observer" (Mountain) to reflect the source's pedagogical arc. Added 
+ *    "Therapist" (Institutional) to show the constraint as a tool.
+ * 
+ * 3. CLASSIFICATION RATIONALE:
+ *    [Individual Powerless] → [Snare]: Believing the roles assigned by others makes the 
+ *    criticism an inescapable trap of identity.
+ *    [Analytical] → [Mountain]: The ego's storytelling is framed as an inherent, 
+ *    systemic filter of human experience.
+ *    [Institutional] -> [Rope]: A therapist uses the understanding of this system as a tool to help others.
+ * 
+ * 4. AMBIGUITIES:
+ *    - The text mentions "lived experience" as the goal but doesn't define it outside 
+ *    the negative space of "breaking free". Resolved via Omega.
+ * 
+ * 5. OMEGAS 
+ *    Define uncertainty so your analysis is cleaner
+ * 
+ * 6. CONFIDENCE:
+ *    High: Classifications of Snare/Rope based on internal vs external belief.
+ *    Medium: Extractiveness score (dependent on the severity of the "villain" casting).
  */
 
 /* ==========================================================================
-   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
-   ========================================================================== */
-
-% Omega 1: Agency vs. Conditioning
-omega_variable(
-    narrative_belief_agency,
-    "Is it biologically possible to 'play a role' in an obligated circumstance 
-     without eventually internalizing the 'belief in the part'?",
-    resolution_mechanism("Longitudinal psychological study of agents in forced social roles (e.g. method acting or deep-cover work)"),
-    impact("If belief is inevitable: The Rope is actually a slow-acting Noose. If agency holds: Awareness is a true Rope."),
-    confidence_without_resolution(medium)
-).
-
-% Omega 2: Existence of the "Lived Experience"
-omega_variable(
-    lived_experience_definition,
-    "Does 'lived experience' exist as an objective Mountain once all ego-narratives 
-     are removed, or is the concept of 'lived experience' also narrative fiction?",
-    resolution_mechanism("Neurological verification of perception states unmediated by default-mode network storytelling"),
-    impact("If fiction: The analyst's Mountain is actually a Scaffold. If real: Breaking free is a functional Rope."),
-    confidence_without_resolution(low)
-).
-
-/* ==========================================================================
-   7. ALTERNATIVE ANALYSIS
+   6. ALTERNATIVE ANALYSIS (If Applicable)
    ========================================================================== */
 
 /**
@@ -290,15 +303,32 @@ omega_variable(
  * Suppression: Rejected in favor of "breaking free" to get to reality.
  * * CONCLUSION:
  * The source's rejection of alternative 1 (objective criticism) shifts the social 
- * interaction from a potential "Rope" for self-improvement into a "Noose" (projection) 
+ * interaction from a potential "Rope" for self-improvement into a "Snare" (projection) 
  * that requires an external "Rope" (conscious awareness) to survive.
  */
 
 /* ==========================================================================
-   8. INTEGRATION HOOKS
+   7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Load: ?- [constraints/social_narrative_casting].
+/**
+ * TO USE THIS CONSTRAINT:
+ * 
+ * 1. Load into main system:
+ *    ?- [constraints/social_narrative_casting].
+ * 
+ * 2. Run multi-perspective analysis:
+ *    ?- constraint_indexing:multi_index_report(social_narrative_casting).
+ * 
+ * 3. Run tests:
+ *    ?- run_tests(social_narrative_casting_tests).
+ * 
+ * 4. Generate pedagogical report:
+ *    ?- pedagogical_report(social_narrative_casting).
+ * 
+ * 5. Compare with other constraints:
+ *    ?- compare_constraints(social_narrative_casting, [other_id]).
+ */
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

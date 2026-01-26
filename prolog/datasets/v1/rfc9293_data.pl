@@ -24,12 +24,12 @@ event(ev04_connection_termination, finality, 95, [state(fin_wait), result(closed
 constraint_claim(physical_network_limits, mountain).
 constraint_metric(physical_network_limits, accessibility_collapse, 0.95).
 
-% Noose: The 'Reliability Requirement' of TCP. It tightens as packet loss increases.
-constraint_claim(retransmission_coercion, noose).
+% Snare: The 'Reliability Requirement' of TCP. It tightens as packet loss increases.
+constraint_claim(retransmission_coercion, snare).
 constraint_metric(retransmission_coercion, stakes_inflation, 0.90).
 
-% Zombie: Legacy Window Scaling limits. Parameters formerly sufficient but now functionally inadequate for modern speeds.
-constraint_claim(legacy_window_scaling_bias, zombie).
+% Piton: Legacy Window Scaling limits. Parameters formerly sufficient but now functionally inadequate for modern speeds.
+constraint_claim(legacy_window_scaling_bias, piton).
 constraint_metric(legacy_window_scaling_bias, suppression, 0.75).
 
 % Rope: TCP State Machine. Ties all host behavior to a rigid sequence of protocol states.

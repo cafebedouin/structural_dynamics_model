@@ -24,7 +24,7 @@ event(redemption_pivot, transition, 90, [properties([grace, replacement])]).
 
 % Ω Variable Identification
 omega_variable(omega_grace_01, conceptual, 'The specific mechanical threshold where Grace supersedes Law as the primary Agency driver.').
-omega_variable(omega_divine_intent, preference, 'The value-judgment regarding the necessity of the \'Noose\' phase for \'Resilience\' growth.').
+omega_variable(omega_divine_intent, preference, 'The value-judgment regarding the necessity of the \'Snare\' phase for \'Resilience\' growth.').
 
 % --- 3. CONSTRAINT CLAIMS & KINETIC METRICS ---
 
@@ -44,7 +44,7 @@ constraint_claim(levitical_rituals, tangled_rope).
 constraint_metric(levitical_rituals, extractiveness, 0.52).     % Measured in Reform range (0.36-0.65).
 
 % ⊠C: Egyptian Bondage [cite: 35585]
-constraint_claim(egypt_captivity, noose).
+constraint_claim(egypt_captivity, snare).
 constraint_metric(egypt_captivity, extractiveness, 0.88).       % Verified: Above 0.66.
 constraint_metric(egypt_captivity, suppression_requirement, 0.72). % Verified: Above 0.46.
 

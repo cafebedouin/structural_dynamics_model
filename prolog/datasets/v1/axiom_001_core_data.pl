@@ -22,12 +22,12 @@ event(ev04_submission, state_alignment, 85, [actor(the_oracle), action(silence),
 constraint_claim(diagonal_limit, mountain).
 constraint_metric(diagonal_limit, accessibility_collapse, 1.00).
 
-% Noose: The 'Promise' of total prediction. It tightens as the Oracle is forced to answer.
-constraint_claim(prediction_promise, noose).
+% Snare: The 'Promise' of total prediction. It tightens as the Oracle is forced to answer.
+constraint_claim(prediction_promise, snare).
 constraint_metric(prediction_promise, stakes_inflation, 0.95).
 
-% Zombie: The belief in a Total Predictor. A dead concept that persists in the minds of the builders.
-constraint_claim(myth_of_total_oracle, zombie).
+% Piton: The belief in a Total Predictor. A dead concept that persists in the minds of the builders.
+constraint_claim(myth_of_total_oracle, piton).
 constraint_metric(myth_of_total_oracle, suppression, 0.80).
 
 % --- 4. Recommendations & Veto Structure ---

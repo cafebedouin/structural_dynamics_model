@@ -151,7 +151,7 @@ constraint_indexing:constraint_classification(
     !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: PAULING & COREY - Noose
+   PERSPECTIVE 3: PAULING & COREY - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerful - Competing world-class scientists.
@@ -161,7 +161,7 @@ constraint_indexing:constraint_classification(
    
    WHY THIS CLASSIFICATION:
    For those holding the incorrect model, the geometric reality of the 
-   Watson-Crick model acts as a "Noose." It "suppresses" their theory 
+   Watson-Crick model acts as a "Snare." It "suppresses" their theory 
    by demonstrating that their proposed structure is "unsatisfactory" 
    due to electrostatic repulsion.
    
@@ -172,7 +172,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     base_pair_complementarity,
-    noose,
+    snare,
     context(
         agent_power(individual_powerful),
         time_horizon(immediate),
@@ -233,7 +233,7 @@ omega_variable(
     tautomeric_shift,
     "Can bases exist in alternative states (tautomers) that allow 'illegal' pairings?",
     resolution_mechanism("Requires biochemical analysis of mutation rates."),
-    impact("If yes: The Mountain of pairing becomes a Noose for the genetic code (mutations)."),
+    impact("If yes: The Mountain of pairing becomes a Snare for the genetic code (mutations)."),
     confidence_without_resolution(medium)
 ).
 

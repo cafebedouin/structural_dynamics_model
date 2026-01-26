@@ -34,9 +34,9 @@ constraint_metric(bifurcation_memory, suppression_requirement, 0.38).
 constraint_metric(bifurcation_memory, snap_back_potential, 0.60).
 constraint_metric(bifurcation_memory, extractiveness, 0.52).
 
-% Ergodic Covering at r=4 (The Noose)
+% Ergodic Covering at r=4 (The Snare)
 % The system maps the entire interval, destroying specific orbital identity.
-constraint_claim(total_entropy_saturation, noose).
+constraint_claim(total_entropy_saturation, snare).
 constraint_metric(total_entropy_saturation, intensity, 0.98).
 constraint_metric(total_entropy_saturation, suppression_requirement, 0.85).
 constraint_metric(total_entropy_saturation, snap_back_potential, 0.05).
@@ -47,7 +47,7 @@ constraint_metric(total_entropy_saturation, extractiveness, 0.92).
 recommendation(rec_01, parameter_tuning_to_stable_periodic_window).
 affects_constraint(rec_01, bifurcation_memory).
 
-% Noose (0.92 extractiveness) triggers Cut
+% Snare (0.92 extractiveness) triggers Cut
 % Utilizing the 'periodic_window_3' scaffold to interrupt chaos.
 recommendation(rec_02, inject_periodic_scaffold_to_break_ergodicity).
 affects_constraint(rec_02, total_entropy_saturation).

@@ -40,5 +40,5 @@ find_nooses :-
     format('~n=== EXTRACTION POINT DETECTION ===~n'),
     forall(individual_belief_battery:type_1_error(B),
            ( format('  ⚠️  ~w~n', [B]),
-             format('     Actually: Noose (Extractive)~n'),
+             format('     Actually: Snare (Extractive)~n'),
              format('     Claimed:  Mountain (Unchangeable)~n~n'))).

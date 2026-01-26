@@ -42,13 +42,13 @@
  * - The Resource Manager (Institutional): Uses carrying capacity as a "Rope" 
  * to coordinate extraction limits (e.g., fishing quotas, urban planning).
  * - The Subsistence Inhabitant (Individual Powerless): Experiences K as a 
- * "Noose" that strangles growth and extracts life quality when 
+ * "Snare" that strangles growth and extracts life quality when 
  * resources are over-appropriated by others.
  * * NARRATIVE ARC:
  * Carrying capacity functions as a "Mountain" of physical reality—the 
  * hardware limits of the local energy and matter budget. For the 
  * conservationist, it is a "Rope" for collective coordination (preserving 
- * the future). However, in a state of overshoot, it becomes a "Noose" 
+ * the future). However, in a state of overshoot, it becomes a "Snare" 
  * for the individual, where the scarcity of food or space extracts 
  * survival capacity until the population is forcibly corrected.
  */
@@ -154,7 +154,7 @@ constraint_indexing:constraint_classification(
     !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE URBAN SLUM DWELLER - Noose
+   PERSPECTIVE 3: THE URBAN SLUM DWELLER - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless - Subject to high density and resource scarcity.
@@ -163,15 +163,15 @@ constraint_indexing:constraint_classification(
    SCOPE: local - Immediate neighborhood/slum.
    
    WHY THIS CLASSIFICATION:
-   For the person living in an over-capacity urban environment, K is a Noose. 
+   For the person living in an over-capacity urban environment, K is a Snare. 
    The extraction of space and clean air has turned their environment into 
-   a trap. As more people compete for the same fixed resources, the Noose of 
+   a trap. As more people compete for the same fixed resources, the Snare of 
    scarcity tightens, strangling their health and economic survival.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
     carrying_capacity,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -190,10 +190,10 @@ constraint_indexing:constraint_classification(
 :- begin_tests(carrying_capacity_tests).
 
 test(multi_perspective_variance) :-
-    % Analyst sees Mountain, Institutional sees Rope, Powerless sees Noose
+    % Analyst sees Mountain, Institutional sees Rope, Powerless sees Snare
     constraint_indexing:constraint_classification(carrying_capacity, mountain, context(analytical, civilizational, trapped, global)),
     constraint_indexing:constraint_classification(carrying_capacity, rope, context(institutional, biographical, arbitrage, regional)),
-    constraint_indexing:constraint_classification(carrying_capacity, noose, context(individual_powerless, immediate, constrained, local)).
+    constraint_indexing:constraint_classification(carrying_capacity, snare, context(individual_powerless, immediate, constrained, local)).
 
 test(power_extractiveness_resource) :-
     ContextPowerless = context(individual_powerless, immediate, constrained, local),
@@ -238,7 +238,7 @@ omega_variable(
     collapses?",
     resolution_mechanism("Long-term tracking of resource replenishment rates 
     vs. technological throughput"),
-    impact("If Mountain: We can grow indefinitely. If Scaffold: The Noose is 
+    impact("If Mountain: We can grow indefinitely. If Scaffold: The Snare is 
     just hidden for now."),
     confidence_without_resolution(medium)
 ).
@@ -256,7 +256,7 @@ omega_variable(
  * that profit from rapid resource extraction and waste.
  * * CONCLUSION:
  * The existence of circular alternatives that are socially suppressed 
- * confirms that for the individual, Carrying Capacity is often a Noose 
+ * confirms that for the individual, Carrying Capacity is often a Snare 
  * that could be loosened through better systemic design.
  */
 

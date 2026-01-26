@@ -45,7 +45,7 @@
  * the legal burden acts as a Rope (coordination) for the state but a 
  * Mountain (unchangeable protection) for the accused. It defines the 
  * "rules of the game" for civil society to ensure the state's power is 
- * not used as a Noose against its citizens.
+ * not used as a Snare against its citizens.
  */
 
 /* ==========================================================================
@@ -170,7 +170,7 @@ constraint_indexing:constraint_classification(
     !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE DEFENDANT (ACCUSED) - Noose
+   PERSPECTIVE 3: THE DEFENDANT (ACCUSED) - Snare
    --------------------------------------------------------------------------
    WHO: individual_powerless - Subject to the overwhelming power of the state.
    WHEN: immediate - The duration of the trial and pre-trial detention.
@@ -178,7 +178,7 @@ constraint_indexing:constraint_classification(
    SCOPE: local - The individual's life, liberty, and financial solvency.
    
    WHY THIS CLASSIFICATION:
-   The "Noose" is the process of prosecution. While "Beyond a Reasonable Doubt"
+   The "Snare" is the process of prosecution. While "Beyond a Reasonable Doubt"
    is a protection, the individual must still survive the state's extraction of 
    their resources, time, and reputation. For the defendant, the high burden 
    is not a "tool" they use, but a narrow opening in a trap that otherwise 
@@ -187,7 +187,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     burden_of_proof_legal_criminal,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -215,7 +215,7 @@ test(multi_perspective_variance) :-
     T1 \= T2.
 
 test(anti_extraction_nature) :-
-    % High extractiveness would imply a Noose; legal burden should be low.
+    % High extractiveness would imply a Snare; legal burden should be low.
     domain_priors:base_extractiveness(burden_of_proof_legal_criminal, E),
     E < 0.2.
 

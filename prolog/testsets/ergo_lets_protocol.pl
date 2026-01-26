@@ -6,7 +6,7 @@
 % Source: Ergo Platform - Mutual Credit / LETS Design Patterns
 % ============================================================================
 
-:- module(constraint_ergo_lets, []).
+:- module(constraint_ergo_lets_protocol, []).
 
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
@@ -47,7 +47,7 @@
  * LETS transforms currency from a "commodity" to be extracted into a 
  * "public utility" (Rope) for coordination. However, to prevent "leaking" 
  * value (defaults), the protocol imposes rigid entry barriers (Mountain) 
- * that can feel like a "Noose" to those lacking the required initial 
+ * that can feel like a "Snare" to those lacking the required initial 
  * capital or social standing.
  */
 
@@ -105,10 +105,7 @@ constraint_indexing:constraint_classification(
         exit_options(mobile),
         spatial_scope(local)
     )
-) :-
-    domain_priors:base_extractiveness(ergo_lets_protocol, E),
-    E < 0.3,
-    !.
+).
 
 /* --------------------------------------------------------------------------
    PERSPECTIVE 2: Under-collateralized User - MOUNTAIN
@@ -133,10 +130,7 @@ constraint_indexing:constraint_classification(
         exit_options(trapped),
         spatial_scope(local)
     )
-) :-
-    domain_priors:suppression_score(ergo_lets_protocol, S),
-    S < 0.5,
-    !.
+).
 
 /* --------------------------------------------------------------------------
    PERSPECTIVE 3: Protocol Architect/Institutional - MOUNTAIN
@@ -161,10 +155,7 @@ constraint_indexing:constraint_classification(
         exit_options(analytical),
         spatial_scope(global)
     )
-) :-
-    domain_priors:suppression_score(ergo_lets_protocol, S),
-    S < 0.5,
-    !.
+).
 
 /* --------------------------------------------------------------------------
    PERSPECTIVE 4: Over-leveraged Defaulter - NOOSE
@@ -175,24 +166,21 @@ constraint_indexing:constraint_classification(
    SCOPE: local
    
    WHY THIS CLASSIFICATION:
-   When a user defaults, the collateral seizure mechanism becomes a Noose. 
+   When a user defaults, the collateral seizure mechanism becomes a Snare. 
    The constraint "strangles" their assets to repay the pool's debt, 
    acting coercively to maintain the zero-sum balance.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
     ergo_lets_protocol,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
         exit_options(constrained),
         spatial_scope(local)
     )
-) :-
-    domain_priors:base_extractiveness(ergo_lets_protocol, E),
-    E >= 0.1, % Even low extractiveness feels like a Noose during liquidation.
-    !.
+).
 
 /* ==========================================================================
    4. TESTS
@@ -220,12 +208,12 @@ test(zero_sum_immutability) :-
  * * Model: Gemini 2.0 Flash
  * * KEY DECISIONS:
  * 1. PERSPECTIVE ON POWERLESS: I chose to classify the entry barrier as 
- * "Mountain" rather than "Noose" because it is a passive structural 
+ * "Mountain" rather than "Snare" because it is a passive structural 
  * requirement, not an active extraction from those already inside.
  * 2. EXTRACTIVENESS (0.15): Extremely low, reflecting Ergo's ethos of 
  * community-driven, non-rent-seeking financial tools.
  * 3. NOOSE LOGIC: Liquidation is the only point where this "Rope" becomes 
- * "coercive," hence the Noose classification for the defaulter.
+ * "coercive," hence the Snare classification for the defaulter.
  */
 
 /* ==========================================================================

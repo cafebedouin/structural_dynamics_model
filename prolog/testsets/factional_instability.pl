@@ -58,7 +58,7 @@
    ========================================================================== */
 
 narrative_ontology:interval(federalist_10_analysis, 0, 10).
-narrative_ontology:constraint_claim(factional_instability, noose).
+narrative_ontology:constraint_claim(factional_instability, snare).
 
 % Base extractiveness score: High
 % Rationale: Factions inherently seek to extract value or rights from others
@@ -87,7 +87,7 @@ constraint_victim(factional_instability, minority_rights).
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 1: THE MINORITY (Property Owner) - Noose
+   PERSPECTIVE 1: THE MINORITY (Property Owner) - Snare
    --------------------------------------------------------------------------
 
    WHO: individual_powerless - In a pure democracy, a minority has no
@@ -99,7 +99,7 @@ constraint_victim(factional_instability, minority_rights).
    [cite_start]SCOPE: local - Small societies where a common passion is easily felt[cite: 1].
 
    WHY THIS CLASSIFICATION:
-   For the minority owner, faction is a "Noose" because a majority can
+   For the minority owner, faction is a "Snare" because a majority can
    [cite_start]legally use the mechanism of government to extract his property[cite: 1].
    It is asymmetric and coercive.
 
@@ -110,7 +110,7 @@ constraint_victim(factional_instability, minority_rights).
 
 constraint_indexing:constraint_classification(
     factional_instability,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -203,10 +203,10 @@ constraint_indexing:constraint_classification(
 test(multi_perspective_variance) :-
     % Test that Madison (Institutional) and Minority (Powerless) see different types
     constraint_indexing:constraint_classification(factional_instability, rope, context(agent_power(institutional), _, _, _, _, _)),
-    constraint_indexing:constraint_classification(factional_instability, noose, context(agent_power(individual_powerless), _, _, _, _, _)).
+    constraint_indexing:constraint_classification(factional_instability, snare, context(agent_power(individual_powerless), _, _, _, _, _)).
 
 test(extraction_experience) :-
-    % Minority experiences high extraction (Noose)
+    % Minority experiences high extraction (Snare)
     constraint_indexing:extractiveness_for_agent(factional_instability, context(individual_powerless, _, trapped, _, _, _), Score),
     Score > 0.5.
 
@@ -227,12 +227,12 @@ test(immutability_of_liberty) :-
  * * 1. BASE EXTRACTIVENESS (0.7): Madison explicitly defines factions as
  * [cite_start]adverse to the rights of others[cite: 1]. The "debtor/creditor" example
  * [cite_start]highlights a zero-sum extractive struggle[cite: 1].
- * * 2. PERSPECTIVE SELECTION: Analyzed the Minority (Noose) vs. the Legislator
+ * * 2. PERSPECTIVE SELECTION: Analyzed the Minority (Snare) vs. the Legislator
  * (Rope) to demonstrate the core tension of the Federalist project. Added
  * the Analytical (Mountain) view to ground the argument in Madison's
  * [cite_start]"human nature" premise[cite: 1].
  * * 3. CLASSIFICATION RATIONALE:
- * - Minority -> Noose: They are the specific targets of factional
+ * - Minority -> Snare: They are the specific targets of factional
  * [cite_start]extraction in small democracies[cite: 1].
  * - Madison -> Rope: He treats faction as a manageable energy that
  * [cite_start]can be coordinated through constitutional "filtration"[cite: 1].
@@ -241,7 +241,7 @@ test(immutability_of_liberty) :-
  * omega_variable(statesman_availability,
  *	"Can 'enlightened statesmen' be relied upon to adjust interests?",
  *	resolution_mechanism("Historical track record of legislative impartiality"),
- *	impact("If yes: Rope is stable. If no: System reverts to Noose."),
+ *	impact("If yes: Rope is stable. If no: System reverts to Snare."),
  *	confidence_without_resolution(low)
  *	).
  */

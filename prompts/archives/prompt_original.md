@@ -26,7 +26,7 @@ You will generate a Prolog data file for the domain described below. Your output
 entity(ID, Type).
 interval(ID, T0, Tn).
 event(ID, Kind, Time, PropertiesList).
-constraint_claim(Name, Type). % Type ∈ {mountain, rope, noose, zombie}
+constraint_claim(Name, Type). % Type ∈ {mountain, rope, snare, piton}
 constraint_metric(Name, Metric, Value). % Value ∈ [0,1]
 recommendation(ID, Text).
 affects_constraint(RecommendationID, ConstraintName).
@@ -66,7 +66,7 @@ intent_norm_strength(IntervalID, Time, Value).
 * Define at least one **Loser Class** with a `power_change` Delta .
 * Define at least one **viable alternative** that is also **rejected**.
 * Set structural `suppression` and `resistance` for the beneficiary class to .
-3. **Diagnostic Bridge:** You must define at least one of each constraint type (**Mountain, Noose, Zombie**) and provide **Recommendations** linked via `affects_constraint` and `veto_exposed`.
+3. **Diagnostic Bridge:** You must define at least one of each constraint type (**Mountain, Snare, Piton**) and provide **Recommendations** linked via `affects_constraint` and `veto_exposed`.
 
 ### **3. Required Output Order**
 1. **Entities & Intervals**

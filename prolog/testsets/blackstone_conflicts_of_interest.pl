@@ -54,7 +54,7 @@
    ========================================================================== */
 
 narrative_ontology:interval(blackstone_conflict_era, 0, 10).
-narrative_ontology:constraint_claim(blackstone_conflicts_of_interest, noose).
+narrative_ontology:constraint_claim(blackstone_conflicts_of_interest, snare).
 
 % Base extractiveness score (0.0 - 1.0)
 % Rationale: High extraction of trust and legal recourse; public unitholders 
@@ -83,7 +83,7 @@ constraint_victim(blackstone_conflicts_of_interest, public_common_unitholders).
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 1: Public Unitholder - Noose
+   PERSPECTIVE 1: Public Unitholder - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless.
@@ -91,7 +91,7 @@ constraint_victim(blackstone_conflicts_of_interest, public_common_unitholders).
    WHERE: trapped - The liability for conflicts is "locked in" by the S-1.
    
    WHY THIS CLASSIFICATION:
-   For the public investor, this is a "Noose." They are knowingly entering a 
+   For the public investor, this is a "Snare." They are knowingly entering a 
    contract where the other party is legally permitted to act against their 
    interests to satisfy a "higher" duty to fund investors.
    
@@ -103,7 +103,7 @@ constraint_victim(blackstone_conflicts_of_interest, public_common_unitholders).
 
 constraint_indexing:constraint_classification(
     blackstone_conflicts_of_interest,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(biographical),
@@ -193,10 +193,10 @@ domain_priors:suppression_score(blackstone_conflicts_of_interest, 0.8).
 
 test(fiduciary_priority_inversion) :-
     % Test that institutional LPs experience a Rope (protection) 
-    % while Public Investors experience a Noose (extraction of duty)
+    % while Public Investors experience a Snare (extraction of duty)
     constraint_indexing:constraint_classification(blackstone_conflicts_of_interest, rope, 
         context(institutional, _, _, _, _, _)),
-    constraint_indexing:constraint_classification(blackstone_conflicts_of_interest, noose, 
+    constraint_indexing:constraint_classification(blackstone_conflicts_of_interest, snare, 
         context(individual_powerless, _, _, _, _, _)).
 
 :- end_tests(blackstone_conflict_tests).

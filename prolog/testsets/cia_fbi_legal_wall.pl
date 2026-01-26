@@ -42,7 +42,7 @@
  * - Intelligence Community Leadership: Strategic actors attempting to navigate the silo.
  * * NARRATIVE ARC:
  * Originally established to prevent abuses (Rope), the Wall ossified into a 
- * Mountain for the agents on the ground, eventually functioning as a Noose 
+ * Mountain for the agents on the ground, eventually functioning as a Snare 
  * that extracted national security by blinding the FBI to the presence of 
  * hijackers like Mihdhar and Hazmi inside the US.
  */
@@ -58,7 +58,7 @@ narrative_ontology:constraint_claim(cia_fbi_legal_wall, mountain).
 % Base extractiveness score (0.0 = no extraction, 1.0 = full extraction)
 % Rationale: High (0.7). While the intent was protection of rights, the 
 % "extraction" was the systematic denial of safety information to the public 
-%.
+% .
 domain_priors:base_extractiveness(cia_fbi_legal_wall, 0.7).
 
 % Suppression score (0.0 = no suppression, 1.0 = full suppression)
@@ -148,7 +148,7 @@ constraint_indexing:constraint_classification(
     !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: POST-9/11 FAMILIES/COMMISSIONERS - Noose
+   PERSPECTIVE 3: POST-9/11 FAMILIES/COMMISSIONERS - Snare
    --------------------------------------------------------------------------
    
    WHO: analytical - Looking back at the cost of the silo.
@@ -157,7 +157,7 @@ constraint_indexing:constraint_classification(
    SCOPE: global - Recognizing the trans-national consequences of a local silo.
    
    WHY THIS CLASSIFICATION:
-   From a retrospective view, the Wall was a Noose. It tightened the range of 
+   From a retrospective view, the Wall was a Snare. It tightened the range of 
    possible actions until the only outcome left was the success of the 
    terrorist plot.
    
@@ -168,7 +168,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     cia_fbi_legal_wall,
-    noose,
+    snare,
     context(
         agent_power(analytical),
         time_horizon(historical),
@@ -218,7 +218,7 @@ omega_variable(
     civil_liberties_tradeoff,
     "Would a 'Wall-less' system pre-9/11 have resulted in domestic abuses that outweighed the security gain?",
     resolution_mechanism("Simulate domestic surveillance outcomes without 2001 legal constraints"),
-    impact("If Yes: The Wall remains a tragic Rope. If No: The Wall was a pure Noose."),
+    impact("If Yes: The Wall remains a tragic Rope. If No: The Wall was a pure Snare."),
     confidence_without_resolution(low)
 ).
 
@@ -234,7 +234,7 @@ omega_variable(
  * * CONCLUSION:
  * The existence of successful international alternatives suggests that the 
  * American "Wall" was not a natural "Mountain" of law, but a specific 
- * institutional choice (Noose/Rope).
+ * institutional choice (Snare/Rope).
  */
 
 /* ==========================================================================

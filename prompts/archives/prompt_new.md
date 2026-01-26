@@ -14,7 +14,7 @@ You will generate a Prolog data file for the domain described below. Your output
 entity(ID, Type). % Note: Use Type 'scaffold' for transitional supports.
 interval(ID, StartInt, EndInt). % MUST use integers (e.g., 0, 10).
 event(ID, Kind, TimeInt, PropertiesList). % TimeInt MUST be an integer.
-constraint_claim(Name, Type). % Type ∈ {mountain, rope, tangled_rope, noose, zombie}.
+constraint_claim(Name, Type). % Type ∈ {mountain, rope, tangled_rope, snare, piton}.
 
 % KINETIC METRICS (THE PHYSICS GAUGE)
 % Metric ∈ {intensity, suppression_requirement, snap_back_potential, extractiveness}
@@ -41,14 +41,14 @@ Constraint Type,Symbol,Extractiveness (X),Suppression (Y),Action
 Mountain,■C,≤0.05 (N/A),≤0.05,Accept
 Rope,⊞C,≤0.35,≤0.15,Maintain
 Tangled Rope,⊠T,0.36−0.65,0.16−0.45,Reform
-Noose,⊠C,≥0.66,≥0.46,Cut
+Snare,⊠C,≥0.66,≥0.46,Cut
 
-* **Temporal Integrity:** All time variables (`StartInt`, `EndInt`, `TimeInt`) **MUST** be integers. Atoms like `t0` or `tn` will cause a system crash.
-* **Mountain Verification (■C):** Set `suppression_requirement`  `0.05`. Any value above `0.05` triggers a **Severe Type I Error**. Set `snap_back_potential` to `0.0`.
-* **Rope Verification (⊞C):** Set `extractiveness`  `0.35` and `suppression_requirement`  `0.15`.
-* **Tangled Rope Verification (⊠T):** Set `extractiveness` between `0.36` and `0.65`. This triggers a **Reform** recommendation.
-* **Noose Verification (⊠C):** Requires `extractiveness`  `0.66` **AND** `suppression_requirement`  `0.46`. To recommend removing a Noose, you **MUST** define an entity of `type(scaffold)`.
-* **Omega Identification:** Identify at least one **Omega Variable (Ω)**. No placeholders.
+*   **Temporal Integrity:** All time variables (`StartInt`, `EndInt`, `TimeInt`) **MUST** be integers. Atoms like `t0` or `tn` will cause a system crash.
+*   **Mountain Verification (■C):** Set `suppression_requirement`  `0.05`. Any value above `0.05` triggers a **Severe Type I Error**. Set `snap_back_potential` to `0.0`.
+*   **Rope Verification (⊞C):** Set `extractiveness`  `0.35` and `suppression_requirement`  `0.15`.
+*   **Tangled Rope Verification (⊠T):** Set `extractiveness` between `0.36` and `0.65`. This triggers a **Reform** recommendation.
+*   **Snare Verification (⊠C):** Requires `extractiveness`  `0.66` **AND** `suppression_requirement`  `0.46`. To recommend removing a Snare, you **MUST** define an entity of `type(scaffold)`.
+*   **Omega Identification:** Identify at least one **Omega Variable (Ω)**. No placeholders.
     **Omega Classification Requirements:**
     - Empirical ($\Omega_E$): Use for missing observable data. Resolution requires measurement or calculation.
     - Conceptual ($\Omega_C$): Use for ambiguous terms or multiple coherent interpretations. Resolution requires explicit definition.

@@ -43,7 +43,7 @@
  * - Civil Society (Lawyers/Universities/Media): Decreasingly effective buffers against institutional overreach.
  * * NARRATIVE ARC:
  * The "walls are closing in." Freedom, once a "Rope" for societal coordination, 
- * is being replaced by a "Noose" of coercive surveillance and violence. 
+ * is being replaced by a "Snare" of coercive surveillance and violence. 
  * What was once "Mountain-like" (the durability of democracy) is revealed 
  * as a "Scaffold" being rapidly dismantled.
  */
@@ -54,7 +54,7 @@
 
 % Required for DR-Audit Suite
 narrative_ontology:interval(trump_ii_year_one, 2025, 2026).
-narrative_ontology:constraint_claim(trump_authoritarianism_2026, noose).
+narrative_ontology:constraint_claim(trump_authoritarianism_2026, snare).
 
 % Base extractiveness score (0.0-1.0)
 % Rationale: High extraction of safety and civil liberties; "bribes" ($2,000 checks) 
@@ -86,7 +86,7 @@ constraint_victim(trump_authoritarianism_2026, university_researchers).
    ========================================================================= */
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 1: THE PROTESTER (Renee Good/Mental Calculus) - Noose
+   PERSPECTIVE 1: THE PROTESTER (Renee Good/Mental Calculus) - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless - Subject to "summary execution" and state violence.
@@ -96,7 +96,7 @@ constraint_victim(trump_authoritarianism_2026, university_researchers).
    
    WHY THIS CLASSIFICATION:
    For the protester, the state is no longer a neutral arbiter but a coercive 
-   Noose. The penalty for dissent has shifted from legal to lethal.
+   Snare. The penalty for dissent has shifted from legal to lethal.
    
    NARRATIVE EVIDENCE:
    "The execution of Renee Good has surely affected every potential protester’s 
@@ -105,7 +105,7 @@ constraint_victim(trump_authoritarianism_2026, university_researchers).
 
 constraint_indexing:constraint_classification(
     trump_authoritarianism_2026,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -185,7 +185,7 @@ test(multi_perspective_variance) :-
     constraint_indexing:constraint_classification(trump_authoritarianism_2026, Type1, context(individual_powerless, immediate, trapped, local)),
     constraint_indexing:constraint_classification(trump_authoritarianism_2026, Type2, context(individual_moderate, biographical, mobile, national)),
     constraint_indexing:constraint_classification(trump_authoritarianism_2026, Type3, context(analytical, historical, constrained, global)),
-    Type1 = noose,
+    Type1 = snare,
     Type2 = rope,
     Type3 = mountain.
 
@@ -233,7 +233,7 @@ omega_variable(
     lethal_deterrence_threshold,
     "Will the 'lethal mental calculus' of the Renee Good execution permanently suppress mass protest?",
     resolution_mechanism("Compare mass protest turnout levels post-Jan 7 vs previous high-water marks (e.g., 2020)."),
-    impact("If Noose: Public space is effectively dead. If Rope: Movement adapts to paramilitary conditions."),
+    impact("If Snare: Public space is effectively dead. If Rope: Movement adapts to paramilitary conditions."),
     confidence_without_resolution(medium)
 ).
 
@@ -251,7 +251,7 @@ omega_variable(
  * [cite_start]Suppression: Trump is "laying the groundwork" for systematic intimidation and cancelling the vote. [cite: 1]
  * * CONCLUSION:
  * The active suppression of these alternatives shifts the American order from 
- * a coordination Rope to a coercive Noose.
+ * a coordination Rope to a coercive Snare.
  */
 
 /* ==========================================================================
@@ -269,4 +269,4 @@ omega_variable(
 % --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
 constraint_indexing:constraint_classification(trumps_second_term_authoritarianism_2026, mountain, agent_power(analytical)).
 constraint_indexing:constraint_classification(trumps_second_term_authoritarianism_2026, rope, agent_power(institutional)).
-constraint_indexing:constraint_classification(trumps_second_term_authoritarianism_2026, noose, agent_power(individual_powerless)).
+constraint_indexing:constraint_classification(trumps_second_term_authoritarianism_2026, snare, agent_power(individual_powerless)).

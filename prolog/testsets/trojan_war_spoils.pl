@@ -52,7 +52,7 @@
    ========================================================================== */
 
 narrative_ontology:interval(trojan_collapse_interval, 0, 10).
-narrative_ontology:constraint_claim(trojan_war_spoils, noose).
+narrative_ontology:constraint_claim(trojan_war_spoils, snare).
 
 % Base extractiveness score: 1.0
 % Rationale: Total extraction. The city is burned, the men killed, the wealth 
@@ -147,7 +147,7 @@ constraint_indexing:constraint_classification(
     !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: TALTHYBIUS - Noose
+   PERSPECTIVE 3: TALTHYBIUS - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_moderate - A messenger who feels "unclean" in his duty.
@@ -156,7 +156,7 @@ constraint_indexing:constraint_classification(
    SCOPE: local - Within the walls of Troy.
    
    WHY THIS CLASSIFICATION:
-   For Talthybius, the constraint is a "Noose." He recognizes it as a 
+   For Talthybius, the constraint is a "Snare." He recognizes it as a 
    coercive and "bitter" mechanism that extracts the life of an innocent 
    child. He has limited agency—he cannot stop it, but he can feel its weight.
    
@@ -167,7 +167,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     trojan_war_spoils,
-    noose,
+    snare,
     context(
         agent_power(individual_moderate),
         time_horizon(immediate),
@@ -192,10 +192,10 @@ test(total_extraction_check) :-
     domain_priors:base_extractiveness(trojan_war_spoils, 1.0).
 
 test(heralds_gap) :-
-    % Talthybius (Moderate) should see a Noose (coercion), 
+    % Talthybius (Moderate) should see a Snare (coercion), 
     % while Hecuba (Powerless) sees a Mountain (fate).
     constraint_indexing:constraint_classification(trojan_war_spoils, mountain, context(agent_power(individual_powerless), _, _, _, _, _)),
-    constraint_indexing:constraint_classification(trojan_war_spoils, noose, context(agent_power(individual_moderate), _, _, _, _, _)).
+    constraint_indexing:constraint_classification(trojan_war_spoils, snare, context(agent_power(individual_moderate), _, _, _, _, _)).
 
 test(suppression_of_alternative) :-
     % Verify that the alternative (Trojan restoration) has zero survival chance.
@@ -216,9 +216,9 @@ test(suppression_of_alternative) :-
  * complete removal of an agent's future value for the benefit of the 
  * institution.
  * 2. PERSPECTIVAL GAP: The Herald (Talthybius) is the most interesting 
- * data point. He is the "operator" of the Noose. His discomfort shows 
+ * data point. He is the "operator" of the Snare. His discomfort shows 
  * that the constraint is not a Rope (coordination) for him, but a 
- * psychological Noose that forces him into "pitiless" action.
+ * psychological Snare that forces him into "pitiless" action.
  * 3. MOUNTAIN LOGIC: Hecuba's transition from Queen (Institutional) to 
  * Slave (Powerless) represents a collapse from a rule-maker to a 
  * rule-receiver, turning her social "Rope" into a physical "Mountain."
@@ -230,7 +230,7 @@ test(suppression_of_alternative) :-
 
 omega_variable(
     divine_intent,
-    "Is the Trojan defeat a literal Mountain of divine will (Poseidon/Athena) or a geopolitical Noose constructed by Greek strategy?",
+    "Is the Trojan defeat a literal Mountain of divine will (Poseidon/Athena) or a geopolitical Snare constructed by Greek strategy?",
     resolution_mechanism("Textual ambiguity in the Prologue between Poseidon's lament and the Greek outcome."),
     impact("If Divine: The play is about man vs. nature. If Geopolitical: The play is about the ethics of power."),
     confidence_without_resolution(low)
@@ -249,7 +249,7 @@ omega_variable(
  * prevent a future war.
  * * CONCLUSION:
  * The active suppression of Alternative 1 (Ransom) confirms the Greeks 
- * are operating an extractive "Noose" rather than a functional "Rope."
+ * are operating an extractive "Snare" rather than a functional "Rope."
  */
 
 /* ==========================================================================

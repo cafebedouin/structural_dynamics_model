@@ -1,8 +1,8 @@
 % ============================================================================
 % CONSTRAINT STORY: peter_principle
 % ============================================================================
-% Generated: 2026-01-19
-% Model: Gemini 2.0 Flash
+% Generated: 2026-01-23
+% Model: Gemini Pro (Revised)
 % Source: Laurence J. Peter (1969) / Management Theory
 % ============================================================================
 
@@ -25,57 +25,45 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: peter_principle
- * human_readable: The Peter Principle
+ * 
+ * constraint_id: peter_principle
+ * human_readable: The Peter Principle (Promotion to Incompetence)
  * domain: organizational/social/economic
  * temporal_scope: Modern Bureaucratic Era (1960s-Present)
  * spatial_scope: Global (Hierarchical Organizations)
- * * SUMMARY:
+ * 
+ * SUMMARY:
  * The Peter Principle states that "in a hierarchy, every employee tends to rise 
- * to their level of incompetence." It posits that people are promoted based 
- * on their performance in their current role rather than their fitness for 
- * the next one, eventually reaching a position where they can no longer 
- * perform effectively and thus remain there.
- * * KEY AGENTS:
- * - The Incompetent Manager: The agent who has reached their "level of 
- * incompetence" and now focuses on preserving status and following rules.
- * - The Productive Subordinate: The "competent" worker doing the actual work 
- * who is yet to be promoted to their own level of failure.
- * - The Organizational Auditor: An observer attempting to optimize placement 
- * against the natural "rising" force of the hierarchy.
- * * NARRATIVE ARC:
- * The principle acts as a "Mountain" of systemic entropy—a natural outcome 
- * of the promotion-as-reward mechanism. For the individual rising, it is a 
- * "Rope" (the ladder of success) until the final promotion, where it 
- * becomes a "Noose," trapping them in a role they hate and cannot perform.
+ * to their level of incompetence." People are promoted based on their performance
+ * in their current role rather than their fitness for the next one, eventually
+ * reaching a position where they can no longer perform effectively and thus remain there.
+ * 
+ * KEY AGENTS:
+ * - The Trapped Manager (Individual Powerless): Reaches their "level of incompetence" and focuses on preserving status.
+ * - The Ambitious Professional (Individual Moderate): Seeks advancement through the hierarchy.
+ * - The HR Department (Institutional): Manages employee development and career progression.
  */
 
 /* ==========================================================================
    2. CORE SYSTEM INTEGRATION (The "Reality" Layer)
    ========================================================================== */
 
-% Required for structural integration
-narrative_ontology:interval(peter_interval, 0, 10).
-narrative_ontology:constraint_claim(peter_principle, mountain).
+narrative_ontology:interval(peter_principle, 0, 10).
+narrative_ontology:constraint_claim(peter_principle, tangled_rope).
 
-% Base extractiveness score (0.0-1.0)
-% Rationale: It extracts organizational efficiency and employee well-being. 
-% It places the "cost" of incompetence on the entire system while the 
-% promoted individual extracts a higher salary for lower utility.
+% Base extractiveness: 0.4.
+% Extracts organizational efficiency and employee well-being. It places the "cost"
+% of incompetence on the entire system while the promoted individual extracts
+% a higher salary for lower utility.
 domain_priors:base_extractiveness(peter_principle, 0.4).
 
-% Suppression score (0.0-1.0)
-% Rationale: Alternatives like "lateral growth" or "demotion without shame" 
-% are heavily suppressed by cultural norms surrounding "success" and 
-% "upward mobility."
+% Suppression score: 0.5.
+% Alternatives like "lateral growth" or "demotion without shame" are heavily
+% suppressed by cultural norms surrounding "success" and "upward mobility."
 domain_priors:suppression_score(peter_principle, 0.5).
 
-% Enforcement requirements
+% Enforcement: Emerges naturally from human cognitive architecture.
 domain_priors:emerges_naturally(peter_principle).
-
-% Metrics required for Section 1 of the Executive Summary
-narrative_ontology:constraint_metric(peter_principle, extractiveness, 0.4).
-narrative_ontology:constraint_metric(peter_principle, suppression_requirement, 0.5).
 
 % BENEFICIARIES & VICTIMS
 constraint_beneficiary(peter_principle, senior_bureaucracy).
@@ -86,46 +74,43 @@ constraint_victim(peter_principle, organizational_efficiency).
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 1: THE SOCIAL SCIENTIST - MOUNTAIN
+   PERSPECTIVE 1: THE TRAPPED MANAGER - Snare
    --------------------------------------------------------------------------
-   
-   WHO: analytical (The observer of structural patterns)
-   WHEN: civilizational (A permanent feature of human hierarchies)
-   WHERE: trapped (As long as hierarchies exist, this pattern persists)
-   SCOPE: global
+   WHO: individual_powerless (Despite the title, stuck in an unmanageable role)
+   WHEN: immediate (Daily struggle with a job they can't do)
+   WHERE: constrained (Cannot demote themselves without social/financial ruin)
    
    WHY THIS CLASSIFICATION:
-   To the scientist, this is a Mountain. It is an emergent property of any 
-   system that rewards past performance with a different future role. It 
-   is a statistical certainty that over time, the "sink" of every position 
-   is filled by someone who cannot do the job.
+   For the person who has reached their level of incompetence, the principle 
+   is a 'Snare'. They are overwhelmed, stressed, and ineffective. They cannot 
+   go back to the role they were good at because of the "promotion trap," 
+   and they cannot move forward. The system strangles their job satisfaction 
+   and mental health.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
     peter_principle,
-    mountain,
+    snare,
     context(
-        agent_power(analytical),
-        time_horizon(civilizational),
-        exit_options(trapped),
-        spatial_scope(global)
+        agent_power(individual_powerless),
+        time_horizon(immediate),
+        exit_options(constrained),
+        spatial_scope(local)
     )
-) :- !.
+).
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE AMBITIOUS PROFESSIONAL - ROPE
+   PERSPECTIVE 2: THE AMBITIOUS PROFESSIONAL - Rope
    --------------------------------------------------------------------------
-   
    WHO: individual_moderate (Seeking advancement)
    WHEN: biographical (Advancing through a 40-year career)
    WHERE: mobile (Can switch organizations to reset the 'Peter' cycle)
-   SCOPE: national
    
    WHY THIS CLASSIFICATION:
-   For the climber, the promotion logic is a Rope. It is the visible path to 
-   higher status and pay. They use their current competence to pull themselves 
-   up the hierarchy, treating the principle not as a warning, but as the 
-   standard mechanism of coordination and personal growth.
+   For the ambitious professional, the promotion logic is a 'Rope'. It is the 
+   visible path to higher status and pay. They use their current competence 
+   to pull themselves up the hierarchy, treating the principle not as a warning, 
+   but as the standard mechanism of coordination and personal growth.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
@@ -137,56 +122,47 @@ constraint_indexing:constraint_classification(
         exit_options(mobile),
         spatial_scope(national)
     )
-) :- !.
+).
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE TRAPPED MANAGER - NOOSE
+   PERSPECTIVE 3: THE HR DEPARTMENT - Tangled Rope
    --------------------------------------------------------------------------
-   
-   WHO: individual_powerless (Despite the title, they are stuck in a role)
-   WHEN: immediate (Daily struggle with a job they can't do)
-   WHERE: constrained (Cannot demote themselves without social/financial ruin)
-   SCOPE: local
+   WHO: institutional (Manages employee development and performance)
+   WHEN: biographical (Long-term employee growth)
+   WHERE: arbitrage (Balances individual perception with objective metrics)
    
    WHY THIS CLASSIFICATION:
-   For the person who has reached their level of incompetence, the principle 
-   is a Noose. They are overwhelmed, stressed, and ineffective. They cannot 
-   go back to the role they were good at because of the "promotion trap," 
-   and they cannot move forward. The system strangles their job satisfaction 
-   and mental health.
+   For an HR department, the Peter Principle is a 'Tangled Rope'. It's a 'Rope'
+   because understanding it helps them manage employee development and identify
+   potential career bottlenecks. It's 'Tangled' because they constantly struggle
+   with the organizational inertia that perpetuates promoting individuals into
+   roles where they become incompetent.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
     peter_principle,
-    noose,
+    tangled_rope,
     context(
-        agent_power(individual_powerless),
-        time_horizon(immediate),
-        exit_options(constrained),
-        spatial_scope(local)
+        agent_power(institutional),
+        time_horizon(biographical),
+        exit_options(arbitrage),
+        spatial_scope(national)
     )
-) :- !.
+).
 
 /* ==========================================================================
    4. TESTS (What We Learn About Constraints)
-   ========================================================================= */
+   ========================================================================== */
 
 :- begin_tests(peter_principle_tests).
 
 test(multi_perspective_variance) :-
-    constraint_indexing:constraint_classification(peter_principle, T1, context(agent_power(analytical), _, _, _)),
-    constraint_indexing:constraint_classification(peter_principle, T2, context(agent_power(individual_moderate), _, _, _)),
-    constraint_indexing:constraint_classification(peter_principle, T3, context(agent_power(individual_powerless), _, _, _)),
-    T1 \= T2, T2 \= T3.
-
-test(extraction_paradox) :-
-    % Higher power (climber) sees a Rope; lower power (trapped/ineffective) sees a Noose.
-    domain_priors:base_extractiveness(peter_principle, Score),
-    Score > 0.3.
-
-test(time_immutability) :-
-    % Over civilizational time, it's an invariant Mountain.
-    constraint_indexing:effective_immutability(civilizational, trapped, mountain).
+    constraint_indexing:constraint_classification(peter_principle, Type1, context(agent_power(individual_powerless), _, _, _)),
+    constraint_indexing:constraint_classification(peter_principle, Type2, context(agent_power(individual_moderate), _, _, _)),
+    constraint_indexing:constraint_classification(peter_principle, Type3, context(agent_power(institutional), _, _, _)),
+    Type1 \= Type2,
+    Type2 \= Type3,
+    Type1 \= Type3.
 
 :- end_tests(peter_principle_tests).
 
@@ -196,46 +172,57 @@ test(time_immutability) :-
 
 /**
  * LLM GENERATION NOTES
- * * Model: Gemini 2.0 Flash
- * * KEY DECISIONS:
- * 1. BASE EXTRACTIVENESS (0.4): The principle extracts utility from the 
- * organization and well-being from the individual. It's a "silent tax" 
- * on hierarchical productivity.
- * 2. NOOSE CLASSIFICATION: Essential to recognize that the person at the top 
- * is often a victim of their own "success"—trapped by salary and status 
- * in a role where they feel like a fraud (Imposter Syndrome as a signal 
- * of the Peter Principle).
+ * 
+ * Model: Gemini Pro (Revised)
+ * Date: 2026-01-23
+ * 
+ * KEY DECISIONS:
+ * 
+ * 1. INSTITUTIONAL PERSPECTIVE: Added the 'HR Department / Corporate Trainer'
+ *    as the institutional agent. This highlights the practical challenges of
+ *    managing talent development and performance in an organizational context.
+ *
+ * 2. CLASSIFICATION RATIONALE:
+ *    - Trapped Manager (Snare): Stuck in a role they can't perform.
+ *    - Ambitious Professional (Rope): Uses promotions as a path to growth.
+ *    - HR Department (Tangled Rope): Manages the consequences of the principle.
+ * 
+ * 3. CORE INSIGHT: The Peter Principle is a fundamental organizational dynamic
+ *    that highlights the tension between individual career progression and
+ *    organizational efficiency, often creating a 'Tangled Rope' for HR.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
+/**
+ * OMEGA IDENTIFICATION
+ *
+ * The core uncertainty is the practical impact of the Peter Principle on organizational longevity.
+ */
 
 omega_variable(
     competence_measurement_lag,
-    "How long can an incompetent manager hide behind 'Final Placement' before the organization detects the lack of utility?",
-    resolution_mechanism("Analysis of organizational lifespan vs. average management tenure"),
-    impact("If lag is high: The Peter Principle is a permanent Mountain. If low: It's a temporary Scaffold."),
+    "How long can an incompetent manager hide behind 'Final Placement' before the organization's overall utility is significantly degraded, leading to systemic failure?",
+    resolution_mechanism("Analysis of organizational lifespan vs. average management tenure, correlated with market share or public service efficacy."),
+    impact("If lag is high: The Peter Principle is a permanent 'Mountain'. If low: It's a temporary 'Scaffold' that can be easily dismantled."),
     confidence_without_resolution(medium)
 ).
 
 /* ==========================================================================
    7. ALTERNATIVE ANALYSIS
    ========================================================================== */
-
 /**
  * VIABLE ALTERNATIVES
- * * ALTERNATIVE 1: Dual-Track Career Paths (Individual Contributor vs Manager)
- * Viability: Allows people to "promote" in pay/status without changing roles.
- * Suppression: Moderate. Still secondary to the "leadership" narrative in 
- * most cultures.
- * * ALTERNATIVE 2: Up-or-Out (Cravath System)
- * Viability: Forces exit rather than stagnation at incompetence.
- * Suppression: High. Viewed as "brutal" and socially expensive.
- * * CONCLUSION:
- * The existence of Alternatives shifts the Peter Principle from an 
- * "Inevitable Mountain" to a "Voluntary Noose" for organizations that refuse 
- * to decouple status from management.
+ *
+ * ALTERNATIVE 1: Dual-Track Career Paths (Individual Contributor vs Manager)
+ *    Viability: Allows employees to advance in pay and status without changing roles (e.g., senior engineer track).
+ *    Suppression: Often suppressed by corporate cultures that equate "leadership" with "management," making promotion the only path to higher status.
+ *
+ * CONCLUSION:
+ * The Peter Principle is a 'Mountain' that organizations choose to build by
+ * suppressing viable alternatives like dual-track career paths. By conflating
+ * promotion with management, they create a 'Snare' for competent individuals.
  */
 
 /* ==========================================================================
@@ -244,8 +231,10 @@ omega_variable(
 
 /**
  * TO USE THIS FILE:
- * 1. Load: ?- [constraint_peter_principle].
+ * 
+ * 1. Load: ?- [constraints/peter_principle].
  * 2. Multi-perspective: ?- multi_index_report(peter_principle).
+ * 3. Run tests: ?- run_tests(peter_principle_tests).
  */
 
 /* ==========================================================================

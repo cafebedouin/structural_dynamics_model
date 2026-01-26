@@ -1,12 +1,12 @@
 % ============================================================================
 % CONSTRAINT STORY: kidney_exchange_market
 % ============================================================================
-% Generated: 2026-01-17
-% Model: Gemini 2.0 Flash
+% Generated: 2026-01-23
+% Model: Gemini Pro (Revised)
 % Source: Alvin Roth / Market Design / Kidney Exchange Logic
 % ============================================================================
 
-:- module(constraint_kidney_exchange, []).
+:- module(constraint_kidney_exchange_market, []).
 
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
@@ -25,71 +25,61 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: kidney_exchange_market
+ * 
+ * constraint_id: kidney_exchange_market
  * human_readable: Kidney Exchange Cycles/Chains
  * domain: social/technological/biological
  * temporal_scope: Immediate (Critical Survival)
  * spatial_scope: Regional to National
- * * SUMMARY:
+ * 
+ * SUMMARY:
  * Kidney exchange solves the "incompatible donor" problem. When a willing donor 
  * cannot give to their intended recipient due to blood/tissue type, they enter 
- * a swap. This creates a matching market where "Price" is illegal (prohibited 
- * by the National Organ Transplant Act), necessitating algorithmic coordination.
- * * KEY AGENTS:
- * - The Patient: Needs a kidney; has a willing but incompatible donor.
- * - The Incompatible Donor: Willing to give, but only if their partner receives.
- * - The Altruistic Donor: A "non-directed" donor who starts a chain.
- * - The Algorithm: Computes optimal cycles and chains (Institutional power).
- * * NARRATIVE ARC:
- * The constraint is a "Life-Link." Without a central clearinghouse, these pairs 
- * are trapped in a biological dead-end. The algorithm creates a path out, but 
- * the rigid logic of compatibility acts as an immutable physical boundary.
+ * a swap. This creates a matching market where "Price" is illegal, necessitating
+ * algorithmic coordination to save lives.
+ * 
+ * KEY AGENTS:
+ * - The Sensitized Patient (Individual Powerless): Needs a kidney but is hard to match.
+ * - The Algorithm / UNOS (Institutional): Computes optimal cycles and chains.
+ * - The Altruistic Donor (Individual Moderate): Starts a chain by donating a kidney.
  */
 
 /* ==========================================================================
-   2. BASE PROPERTIES (Reality Layer)
+   2. CORE SYSTEM INTEGRATION (The "Reality" Layer)
    ========================================================================== */
 
 narrative_ontology:interval(kidney_exchange_market, 0, 10).
-narrative_ontology:constraint_claim(kidney_exchange_market, mountain).
+narrative_ontology:constraint_claim(kidney_exchange_market, rope).
 
-% Base extractiveness: Low (0.1). 
+% Base extractiveness: 0.1.
 % There is no "profit" extraction; the system is designed for maximum life-saving.
 domain_priors:base_extractiveness(kidney_exchange_market, 0.1).
 
-% Suppression: High (0.9). 
-% Selling kidneys is a felony (NOTA). The legal system suppresses the 
-% "monetary alternative" almost entirely to prevent exploitation.
+% Suppression: 0.9.
+% Selling kidneys is a felony (National Organ Transplant Act). The legal system
+% suppresses the "monetary alternative" almost entirely to prevent exploitation.
 domain_priors:suppression_score(kidney_exchange_market, 0.9).
 
 % Enforcement: Requires active enforcement (Institutional/Legal).
 domain_priors:requires_active_enforcement(kidney_exchange_market).
 
-% Beneficiaries: The Patient (receives life-saving organ).
+% BENEFICIARIES & VICTIMS
 constraint_beneficiary(kidney_exchange_market, organ_recipients).
-
-% Victims: The "Hard-to-Match" (Patients with O-type blood or high antibodies 
-% who wait longer due to the biological scarcity of compatible links).
 constraint_victim(kidney_exchange_market, sensitized_patients).
-
-% Metrics
-narrative_ontology:constraint_metric(kidney_exchange_market, extractiveness, 0.1).
-narrative_ontology:constraint_metric(kidney_exchange_market, suppression_requirement, 0.9).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)
-   ========================================================================= */
+   ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 1: THE SENSITIZED PATIENT - Noose
+   PERSPECTIVE 1: THE SENSITIZED PATIENT - Snare
    --------------------------------------------------------------------------
-   WHO: individual_powerless
-   WHEN: immediate (survival timeframe)
-   WHERE: trapped
-   SCOPE: national
+   WHO: individual_powerless (High antibodies, hard to match)
+   WHEN: immediate (Survival timeframe)
+   WHERE: trapped (Biologically difficult to match)
    
    WHY THIS CLASSIFICATION:
-   For a patient with high antibodies, the matching logic is a "Noose." 
+   For a patient with high antibodies, the matching logic is a 'Snare'. 
    Because they are biologically difficult to match, the system's focus 
    on "max matches" might skip over them repeatedly. The illegality of 
    monetary alternatives leaves them with no other exit options.
@@ -97,55 +87,49 @@ narrative_ontology:constraint_metric(kidney_exchange_market, suppression_require
 
 constraint_indexing:constraint_classification(
     kidney_exchange_market,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
         exit_options(trapped),
         spatial_scope(national)
     )
-) :-
-    domain_priors:suppression_score(kidney_exchange_market, S),
-    S > 0.8,
-    !.
+).
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE ALTRUISTIC DONOR - Rope
+   PERSPECTIVE 2: THE ALGORITHM / UNOS (INSTITUTIONAL) - Rope
    --------------------------------------------------------------------------
-   WHO: individual_moderate
-   WHEN: biographical
-   WHERE: mobile
-   SCOPE: regional
+   WHO: institutional (The central clearinghouse for organ matching)
+   WHEN: biographical (Long-term operation of the exchange program)
+   WHERE: arbitrage (Optimizes matches across a complex network of donors/recipients)
    
    WHY THIS CLASSIFICATION:
-   To an altruistic donor, the exchange is a "Rope." It is a coordination 
-   mechanism that allows their single act of generosity to trigger a 
-   "chain," potentially saving 10+ people. They use the system as a 
-   leverage tool for moral impact.
+   For the algorithm and the United Network for Organ Sharing (UNOS), the kidney
+   exchange market is a 'Rope'. It is a powerful tool for optimizing matches and
+   saving lives by coordinating complex swaps, effectively untying biological
+   dead-ends into life-giving chains.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
     kidney_exchange_market,
     rope,
     context(
-        agent_power(individual_moderate),
+        agent_power(institutional),
         time_horizon(biographical),
-        exit_options(mobile),
-        spatial_scope(regional)
+        exit_options(arbitrage),
+        spatial_scope(national)
     )
-) :-
-    true.
+).
 
 /* --------------------------------------------------------------------------
    PERSPECTIVE 3: THE BIOLOGIST - Mountain
    --------------------------------------------------------------------------
-   WHO: analytical
-   WHEN: historical
-   WHERE: analytical
-   SCOPE: global
+   WHO: analytical (Observing the immutable laws of biology)
+   WHEN: historical (From the discovery of blood types to HLA matching)
+   WHERE: analytical (Universal laws of human compatibility)
    
    WHY THIS CLASSIFICATION:
-   Blood types (A, B, AB, O) and HLA cross-matching are "Mountains." 
+   Blood types (A, B, AB, O) and HLA cross-matching are 'Mountains.' 
    They are immutable natural laws. No amount of social policy can 
    force an A-type kidney to work in a B-type patient without rejection.
    -------------------------------------------------------------------------- */
@@ -159,9 +143,7 @@ constraint_indexing:constraint_classification(
         exit_options(analytical),
         spatial_scope(global)
     )
-) :-
-    domain_priors:emerges_naturally(kidney_exchange_market),
-    !.
+).
 
 /* ==========================================================================
    4. TESTS
@@ -169,14 +151,13 @@ constraint_indexing:constraint_classification(
 
 :- begin_tests(kidney_exchange_tests).
 
-test(altruism_scaling) :-
-    % Testing that altruistic 'mobile' agents perceive the coordination Rope.
-    constraint_indexing:constraint_classification(kidney_exchange_market, rope, context(_, _, mobile, _)).
-
-test(legal_suppression_effect) :-
-    % High suppression of cash markets makes the institutional path a Noose 
-    % for those it cannot help.
-    constraint_indexing:constraint_classification(kidney_exchange_market, noose, context(individual_powerless, _, trapped, _)).
+test(multi_perspective_variance) :-
+    constraint_indexing:constraint_classification(kidney_exchange_market, Type1, context(agent_power(individual_powerless), _, _, _)),
+    constraint_indexing:constraint_classification(kidney_exchange_market, Type2, context(agent_power(institutional), _, _, _)),
+    constraint_indexing:constraint_classification(kidney_exchange_market, Type3, context(agent_power(analytical), _, _, _)),
+    Type1 \= Type2,
+    Type2 \= Type3,
+    Type1 \= Type3.
 
 :- end_tests(kidney_exchange_tests).
 
@@ -186,38 +167,73 @@ test(legal_suppression_effect) :-
 
 /**
  * LLM GENERATION NOTES
- * Model: Gemini 2.0 Flash
- * * KEY DECISIONS:
- * I set extractiveness to 0.1 because, unlike corporate matching markets, 
- * there is no asymmetric "value capture" by the platform—all value is 
- * returned to the patients. However, the high suppression (0.9) of organ 
- * sales makes the "Noose" classification appropriate for those the 
- * system cannot find a match for.
+ * 
+ * Model: Gemini Pro (Revised)
+ * Date: 2026-01-23
+ * 
+ * KEY DECISIONS:
+ * 
+ * 1. INSTITUTIONAL PERSPECTIVE: Added 'The Algorithm / UNOS' as the institutional
+ *    agent. This highlights how a complex algorithmic system can act as a powerful
+ *    'Rope' for coordinating life-saving medical procedures.
+ *
+ * 2. CLASSIFICATION RATIONALE:
+ *    - Sensitized Patient (Snare): Trapped by biological incompatibility.
+ *    - Algorithm/UNOS (Rope): A tool for optimizing matches and saving lives.
+ *    - Biologist (Mountain): Immutable biological laws.
+ * 
+ * 3. CORE INSIGHT: The kidney exchange market is a triumph of market design,
+ *    turning biological 'Mountains' (incompatibility) and legal 'Nooses' (prohibition
+ *    of sales) into a life-saving 'Rope' through intelligent coordination.
  */
 
 /* ==========================================================================
-   6. OMEGA VARIABLES (Ω)
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
+/**
+ * OMEGA IDENTIFICATION
+ *
+ * The core uncertainty is the future role of technology in overcoming biological limits.
+ */
 
 omega_variable(
     immunosuppression_advancement,
-    "Will new drugs eventually allow across-type transplants without matching?",
-    resolution_mechanism("Clinical trial results for next-gen T-cell inhibitors"),
-    impact("If Yes: The 'Mountain' of blood-type compatibility turns into a 'Rope' (optional coordination)."),
+    "Will new drugs or technologies eventually allow across-type transplants without needing perfect matching, or even allow for artificial organ generation?",
+    resolution_mechanism("Clinical trial results for next-generation T-cell inhibitors; breakthroughs in xenotransplantation or bio-3D printing."),
+    impact("If Yes: The 'Mountain' of blood-type compatibility could turn into a 'Rope' (an optional coordination). If No: It remains an enduring 'Mountain' for human biology."),
     confidence_without_resolution(medium)
 ).
 
 /* ==========================================================================
    7. ALTERNATIVE ANALYSIS
    ========================================================================== */
+/**
+ * VIABLE ALTERNATIVES
+ *
+ * ALTERNATIVE 1: Legalized Organ Markets
+ *    Viability: Proposed by some economists to increase supply by offering monetary incentives.
+ *    Suppression: Heavily suppressed by the National Organ Transplant Act (NOTA) and ethical concerns about exploitation and commodification of the human body.
+ *
+ * ALTERNATIVE 2: Desensitization Therapy
+ *    Viability: Costly and difficult medical procedures to reduce antibody levels in highly sensitized patients.
+ *    Suppression: Not actively suppressed, but the limited success rate and high cost make it a less viable option than exchange.
+ *
+ * CONCLUSION:
+ * The kidney exchange market navigates a complex ethical and biological landscape.
+ * By actively suppressing the monetary alternative ('Snare' of exploitation), it
+ * creates a moral 'Rope' to save lives within existing biological 'Mountains'.
+ */
+
+/* ==========================================================================
+   8. INTEGRATION HOOKS
+   ========================================================================== */
 
 /**
- * VIABLE ALTERNATIVES:
- * 1. Legalized Organ Markets: (Suppressed by NOTA; ethically contested).
- * 2. Desensitization Therapy: (Costly/Difficult; only works for some).
- * * CONCLUSION:
- * The Kidney Exchange is the ultimate "Rope" (coordination) built on 
- * the ultimate "Mountain" (biological compatibility).
+ * TO USE THIS FILE:
+ * 
+ * 1. Load: ?- [constraints/kidney_exchange_market].
+ * 2. Multi-perspective: ?- multi_index_report(kidney_exchange_market).
+ * 3. Run tests: ?- run_tests(kidney_exchange_tests).
  */
 
 /* ==========================================================================

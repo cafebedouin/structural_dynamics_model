@@ -16,7 +16,7 @@ interval(protocol_capture_cycle, 0, 10).
 measurement(m1, legacy_protocol, extractiveness, 0, 0.20).
 measurement(m2, legacy_protocol, suppression_requirement, 0, 0.10).
 
-% T=10: Captured state (Noose)
+% T=10: Captured state (Snare)
 measurement(m3, legacy_protocol, extractiveness, 10, 0.85).
 measurement(m4, legacy_protocol, suppression_requirement, 10, 0.75).
 

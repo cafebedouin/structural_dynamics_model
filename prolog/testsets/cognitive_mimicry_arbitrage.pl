@@ -107,7 +107,7 @@ constraint_indexing:constraint_classification(
     !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE TRADITIONAL LINGUIST - Noose
+   PERSPECTIVE 2: THE TRADITIONAL LINGUIST - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless (Rule-based ideas called into question)
@@ -116,7 +116,7 @@ constraint_indexing:constraint_classification(
    SCOPE: local (Limited to theoretical building blocks)
    
    WHY THIS CLASSIFICATION:
-   For the traditionalist, mimicry is a Noose. The "statistical process" of Transformers 
+   For the traditionalist, mimicry is a Snare. The "statistical process" of Transformers 
    extracts the legitimacy of their "fixed symbols" and "rigid rules".
    
    NARRATIVE EVIDENCE:
@@ -125,7 +125,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     cognitive_mimicry_arbitrage,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -176,9 +176,9 @@ constraint_indexing:constraint_classification(
 :- begin_tests(cognitive_mimicry_arbitrage_tests).
 
 test(multi_perspective_variance) :-
-    % Lab (Rope) vs Linguist (Noose) vs Scientist (Mountain)
+    % Lab (Rope) vs Linguist (Snare) vs Scientist (Mountain)
     constraint_indexing:constraint_classification(cognitive_mimicry_arbitrage, rope, context(institutional, biographical, arbitrage, global)),
-    constraint_indexing:constraint_classification(cognitive_mimicry_arbitrage, noose, context(individual_powerless, immediate, trapped, local)),
+    constraint_indexing:constraint_classification(cognitive_mimicry_arbitrage, snare, context(individual_powerless, immediate, trapped, local)),
     constraint_indexing:constraint_classification(cognitive_mimicry_arbitrage, mountain, context(analytical, historical, constrained, global)).
 
 test(power_extractiveness_scaling) :-
@@ -206,7 +206,7 @@ test(power_extractiveness_scaling) :-
  * * 2. MANDATROPHY STATUS:
  * High extraction (82%) is indexed by perspective. For the AI researcher, it is 
  * a Rope for scientific task-leverage. For the 
- * displaced linguist, it is a Noose of theoretical extraction.
+ * displaced linguist, it is a Snare of theoretical extraction.
  * * 3. PERSPECTIVE SELECTION:
  * Included the Human Brain (Mountain) because researchers found that brain responses 
  * in Broca's area peaked later, matching deeper AI layers—revealing a physical limit.
@@ -221,7 +221,7 @@ omega_variable(
     cognitive_mimicry_arbitrage_extraction_intent,
     "Is the 0.82 extraction of human data/patterns a necessity of 'understanding' or a predatory capture of cognitive labour?",
     resolution_mechanism("Audit of model utility gains vs. human data source contribution/compensation"),
-    impact("If necessity: Mountain. If predatory: Noose/Mandatrophy."),
+    impact("If necessity: Mountain. If predatory: Snare/Mandatrophy."),
     confidence_without_resolution(medium)
 ).
 

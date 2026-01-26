@@ -37,16 +37,16 @@
  * * KEY AGENTS:
  * - Leopold Bloom: Individual moderate navigating a "Rope" of identity.
  * - The Ancestral Tradition: The institutional "Mountain" of history.
- * - The Cat: Powerless recipient of the law's logic as a "Noose".
+ * - The Cat: Powerless recipient of the law's logic as a "Snare".
  */
 
 /* ==========================================================================
    2. CORE SYSTEM INTEGRATION (The "Reality" Layer)
    ========================================================================== */
 
-% Fixed: Changed 'dietary_identity' to 'noose' to satisfy schema
+% Fixed: Changed 'dietary_identity' to 'snare' to satisfy schema
 narrative_ontology:interval(bloom_kosher_transgression, 0, 10).
-narrative_ontology:constraint_claim(bloom_kosher_transgression, noose).
+narrative_ontology:constraint_claim(bloom_kosher_transgression, snare).
 
 % Metrics (Section 1 of Executive Summary)
 domain_priors:base_extractiveness(bloom_kosher_transgression, 0.4).
@@ -79,11 +79,11 @@ constraint_indexing:constraint_classification(
     context(agent_power(institutional), time_horizon(historical), exit_options(trapped), spatial_scope(global))
 ) :- !.
 
-% PERSPECTIVE 3: THE CAT - Noose (Asymmetric power/logic trap)
+% PERSPECTIVE 3: THE CAT - Snare (Asymmetric power/logic trap)
 % REQUIRED: agent_power(individual_powerless)
 constraint_indexing:constraint_classification(
     bloom_kosher_transgression,
-    noose,
+    snare,
     context(agent_power(individual_powerless), time_horizon(immediate), exit_options(constrained), spatial_scope(local))
 ) :- !.
 
@@ -108,15 +108,15 @@ test(multi_perspective_variance) :-
 /**
  * LLM GENERATION NOTES:
  * Refactored to eliminate 'dietary_identity' error. Standardizing the claim 
- * as 'noose' allows the system to evaluate if Bloom's relish (Rope) 
- * hides a deeper cultural extraction (Noose).
+ * as 'snare' allows the system to evaluate if Bloom's relish (Rope) 
+ * hides a deeper cultural extraction (Snare).
  */
 
 omega_variable(
     bloom_intent_internalization,
     "Is Bloom's choice an act of conscious modernism or passive loss?",
     resolution_mechanism("Analysis of Ithaca regarding his departure from ritual"),
-    impact("If modernism: Rope. If loss: Noose."),
+    impact("If modernism: Rope. If loss: Snare."),
     confidence_without_resolution(medium)
 ).
 
@@ -128,4 +128,4 @@ omega_variable(
 % --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
 constraint_indexing:constraint_classification(ulysses_chp04, mountain, agent_power(analytical)).
 constraint_indexing:constraint_classification(ulysses_chp04, rope, agent_power(institutional)).
-constraint_indexing:constraint_classification(ulysses_chp04, noose, agent_power(individual_powerless)).
+constraint_indexing:constraint_classification(ulysses_chp04, snare, agent_power(individual_powerless)).

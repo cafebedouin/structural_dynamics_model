@@ -41,13 +41,13 @@
  * - The Civil Engineer: Institutional agent using safety factors and 
  * standardized tensile values to coordinate the safety of public infrastructure.
  * - The Overloaded Component: Individual agent (part) subject to the load, 
- * where the tensile limit acts as a "Noose" that determines the exact 
+ * where the tensile limit acts as a "Snare" that determines the exact 
  * moment of catastrophic failure.
  * * NARRATIVE ARC:
  * Tensile strength functions as a "Mountain" of physical reality—the 
  * intrinsic limit of molecular lattices. To the builder, it is a "Rope" for 
  * coordination (allowing for predictable weight-bearing designs). However, 
- * for a wire or beam pushed beyond its limit, it becomes a "Noose," 
+ * for a wire or beam pushed beyond its limit, it becomes a "Snare," 
  * as the cross-section narrows ("necking") and the material's internal 
  * resistance is extracted until it snaps.
  */
@@ -151,7 +151,7 @@ constraint_indexing:constraint_classification(
     !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE SUSPENSION CABLE - Noose
+   PERSPECTIVE 3: THE SUSPENSION CABLE - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless - A single component subject to extreme tension.
@@ -161,7 +161,7 @@ constraint_indexing:constraint_classification(
    
    WHY THIS CLASSIFICATION:
    For a cable carrying a load beyond its capacity, the tensile limit is 
-   a Noose. As the stress reaches the "Ultimate" point, the material 
+   a Snare. As the stress reaches the "Ultimate" point, the material 
    begins to "neck" (narrow), concentrating the force. The limit 
    strangles the component's ability to hold together, eventually 
    extracting the structural integrity until it snaps.
@@ -169,7 +169,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     material_tensile_strength,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -188,10 +188,10 @@ constraint_indexing:constraint_classification(
 :- begin_tests(material_tensile_strength_tests).
 
 test(multi_perspective_variance) :-
-    % Analyst sees Mountain, Institutional sees Rope, Powerless sees Noose
+    % Analyst sees Mountain, Institutional sees Rope, Powerless sees Snare
     constraint_indexing:constraint_classification(material_tensile_strength, mountain, context(analytical, civilizational, trapped, global)),
     constraint_indexing:constraint_classification(material_tensile_strength, rope, context(institutional, biographical, arbitrage, national)),
-    constraint_indexing:constraint_classification(material_tensile_strength, noose, context(individual_powerless, immediate, trapped, local)).
+    constraint_indexing:constraint_classification(material_tensile_strength, snare, context(individual_powerless, immediate, trapped, local)).
 
 test(power_extractiveness_load) :-
     ContextPowerless = context(individual_powerless, immediate, trapped, local),
@@ -226,10 +226,10 @@ test(power_extractiveness_load) :-
 omega_variable(
     microscopic_flaw_distribution,
     "To what extent does 'Theoretical Strength' (Mountain) differ from 
-    'Actual Strength' due to invisible internal defects (Noose)?",
+    'Actual Strength' due to invisible internal defects (Snare)?",
     resolution_mechanism("Atomic-scale scanning of every unit of material 
     production"),
-    impact("If Mountain: Predictable. If Noose: Hidden traps in all materials."),
+    impact("If Mountain: Predictable. If Snare: Hidden traps in all materials."),
     confidence_without_resolution(medium)
 ).
 

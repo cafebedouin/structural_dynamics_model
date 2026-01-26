@@ -39,7 +39,7 @@
  * (the Ukraine war) has extracted the maintenance margin from public utilities 
  * and aviation. The result is a "Cannibalization Economy" where parts are 
  * stripped from airworthy planes and infrastructure funds are diverted to the 
- * front, tightening a Noose that only becomes visible during physical 
+ * front, tightening a Snare that only becomes visible during physical 
  * failure events (e.g., heating grid collapses or aviation malfunctions).
  * * KEY AGENTS:
  * - The Kremlin / Siloviki: Institutional; rule-makers prioritizing the 
@@ -53,7 +53,7 @@
  * The 2025 budget represents a terminal transition: for the first time, 
  * pure military spending (13.2 trillion rubles) significantly exceeds 
  * social spending. What was initially a Rope (economic stimulus) has 
- * become a Noose, extracting 2.4 million workers from the labor market and 
+ * become a Snare, extracting 2.4 million workers from the labor market and 
  * leaving 1/3 of heating networks in a state of critical decay.
  */
 
@@ -62,7 +62,7 @@
    ========================================================================== */
 
 narrative_ontology:interval(russia_cannibalization_cycle, 0, 10).
-narrative_ontology:constraint_claim(russian_war_cannibalization, noose).
+narrative_ontology:constraint_claim(russian_war_cannibalization, snare).
 
 % Base extractiveness score (0.0-1.0)
 % Rationale: 0.8. High extraction; the 2025 budget redirects 43% of all 
@@ -128,7 +128,7 @@ constraint_indexing:constraint_classification(
     !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE REGIONAL CITIZEN - Noose
+   PERSPECTIVE 2: THE REGIONAL CITIZEN - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless - Living in cities like Chita; subject to 
@@ -138,7 +138,7 @@ constraint_indexing:constraint_classification(
    SCOPE: local - Their home and their physical safety.
    
    WHY THIS CLASSIFICATION:
-   For the citizen, Mandatrophy is a Noose. The "Mandate" (the war) has 
+   For the citizen, Mandatrophy is a Snare. The "Mandate" (the war) has 
    extracted the margin that keeps their pipes from bursting. As heating 
    networks collapse in -25°C, they realize the "stimulus" of the war has 
    choked the basic survival infrastructure of their hometown.
@@ -148,7 +148,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     russian_war_cannibalization,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -206,7 +206,7 @@ test(invisible_mandatrophy_check) :-
     E > 0.7.
 
 test(perspectival_asymmetry) :-
-    % Institutional (Rope) vs Individual (Mountain/Noose)
+    % Institutional (Rope) vs Individual (Mountain/Snare)
     constraint_indexing:constraint_classification(russian_war_cannibalization, T1, context(institutional, biographical, mobile, national)),
     constraint_indexing:constraint_classification(russian_war_cannibalization, T2, context(individual_powerless, immediate, trapped, local)),
     T1 \= T2.
@@ -225,7 +225,7 @@ test(perspectival_asymmetry) :-
  * "Military Keynesianism." Unlike Cuba's empty shelves or Iran's dry taps, 
  * Russia's shelves are full of stimulated demand, but the *foundational* * margins (pipes/planes) are being extracted invisibly.
  * 2. AVIATION DATA: The 4x increase in technical malfunctions (800 in 2025 
- * vs 200 in 2024) is a primary sensor for the tightening Noose.
+ * vs 200 in 2024) is a primary sensor for the tightening Snare.
  * 3. BUDGET (2025): The decision to increase defense spending by 25% to 
  * $140bn while cutting social welfare by 16% is the formal "Mandatrophic 
  * Extraction" event.
@@ -238,7 +238,7 @@ omega_variable(
     resolution_mechanism("Monitoring the ratio of airworthy to grounded 
     foreign-made airframes vs. the rate of mid-flight engine failures"),
     impact("If failures plateau: The Rope holds. If they spike: The 
-            Noose has closed."),
+            Snare has closed."),
     confidence_without_resolution(medium)
 ).
 
@@ -261,7 +261,7 @@ omega_variable(
  * * CONCLUSION:
  * The failure of the "Scaffold" (Import Substitution) and the suppression 
  * of the "Settlement" alternative proves that Russian Mandatrophy is a 
- * terminal Noose.
+ * terminal Snare.
  */
 
 /* ==========================================================================

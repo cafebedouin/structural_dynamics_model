@@ -67,11 +67,11 @@ constraint_victim(social_credit_architecture, [political_dissenters, debt_defaul
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 1: The Blacklisted Defaulter - Noose
+   PERSPECTIVE 1: The Blacklisted Defaulter - Snare
    -------------------------------------------------------------------------- */
 constraint_indexing:constraint_classification(
     social_credit_architecture,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(biographical),
@@ -80,7 +80,7 @@ constraint_indexing:constraint_classification(
     )
 ) :-
     domain_priors:base_extractiveness(social_credit_architecture, E),
-    E > 0.7, % High extraction + trapped = Noose
+    E > 0.7, % High extraction + trapped = Snare
     !.
 
 /* --------------------------------------------------------------------------
@@ -125,7 +125,7 @@ test(multi_perspective_variance) :-
         context(individual_powerless, biographical, trapped, national)),
     constraint_indexing:constraint_classification(social_credit_architecture, Type2, 
         context(individual_moderate, immediate, mobile, local)),
-    Type1 = noose,
+    Type1 = snare,
     Type2 = rope.
 
 test(mandatrophy_validation) :-

@@ -35,7 +35,7 @@
  * CBDCs represent the ultimate evolution of indexical relativity in money. By 
  * digitizing the ledger at the central bank level, the "Rope" of monetary 
  * coordination becomes programmable, allowing the state to toggle between 
- * facilitation and total enforcement (Noose) for specific agent classes.
+ * facilitation and total enforcement (Snare) for specific agent classes.
  * * KEY AGENTS:
  * - State/Central Bank: The architect seeking granular control of velocity.
  * - Retail User: The individual subject to programmable spending/expiry dates.
@@ -75,11 +75,11 @@ constraint_victim(cbdc_implementation, [privacy_conscious_citizens, savers]).
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 1: The Retail User - Noose
+   PERSPECTIVE 1: The Retail User - Snare
    -------------------------------------------------------------------------- */
 constraint_indexing:constraint_classification(
     cbdc_implementation,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -88,7 +88,7 @@ constraint_indexing:constraint_classification(
     )
 ) :-
     domain_priors:base_extractiveness(cbdc_implementation, E),
-    E > 0.7, % High extraction + trapped = Noose
+    E > 0.7, % High extraction + trapped = Snare
     !.
 
 /* --------------------------------------------------------------------------
@@ -135,11 +135,11 @@ test(multi_perspective_variance) :-
         context(individual_powerless, immediate, trapped, national)),
     constraint_indexing:constraint_classification(cbdc_implementation, Type2, 
         context(institutional, historical, arbitrage, global)),
-    Type1 = noose,
+    Type1 = snare,
     Type2 = rope.
 
 test(extraction_indexing) :-
-    % Verify that the high base_extractiveness is accurately reflected in the Noose
+    % Verify that the high base_extractiveness is accurately reflected in the Snare
     domain_priors:base_extractiveness(cbdc_implementation, E),
     E == 0.8.
 
@@ -160,7 +160,7 @@ test(extraction_indexing) :-
  * omega_variable(programmable_intent,
  * "Is the high extractiveness an unintended byproduct or a primary design goal?",
  * resolution_mechanism("Analyze ledger code for 'hard-coded' vs 'dynamic' expiry parameters"),
- * impact("If hard-coded: Pure Noose. If dynamic: Potentially a Rope under high-trust conditions."),
+ * impact("If hard-coded: Pure Snare. If dynamic: Potentially a Rope under high-trust conditions."),
  * confidence_without_resolution(low)
  * ).
  */

@@ -87,7 +87,7 @@ constraint_victim(castration_longevity_choice, reproductive_capability). % Perma
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 1: THE LONGEVITY SEEKER - Noose
+   PERSPECTIVE 1: THE LONGEVITY SEEKER - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless (A man seeking to extend life but blocked by ethics/stigma)
@@ -96,7 +96,7 @@ constraint_victim(castration_longevity_choice, reproductive_capability). % Perma
    SCOPE: local (Individual body)
    
    WHY THIS CLASSIFICATION:
-   The seeker experiences this as a "Noose" because the biological cost is 
+   The seeker experiences this as a "Snare" because the biological cost is 
    extractive and the social path leads to pathologization rather than agency 
   . They are trapped between certain aging and social ridicule.
    
@@ -107,7 +107,7 @@ constraint_victim(castration_longevity_choice, reproductive_capability). % Perma
 
 constraint_indexing:constraint_classification(
     castration_longevity_choice,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(biographical),
@@ -186,8 +186,8 @@ constraint_indexing:constraint_classification(
 :- begin_tests(castration_longevity_choice_tests).
 
 test(multi_perspective_longevity) :-
-    % Seeker sees Noose
-    constraint_indexing:constraint_classification(castration_longevity_choice, noose, context(individual_powerless, biographical, trapped, local)),
+    % Seeker sees Snare
+    constraint_indexing:constraint_classification(castration_longevity_choice, snare, context(individual_powerless, biographical, trapped, local)),
     % Institution sees Mountain
     constraint_indexing:constraint_classification(castration_longevity_choice, mountain, context(institutional, historical, constrained, global)),
     % Analyst sees Rope
@@ -222,7 +222,7 @@ test(social_suppression) :-
  * stigma) with the institution (gatekeepers of "ethics") and the analyst 
  * (objective observer of the longevity gain).
  * * 3. MANDATROPHY RESOLUTION:
- * The constraint is a Rope for longevity (the goal) but a Noose for the 
+ * The constraint is a Rope for longevity (the goal) but a Snare for the 
  * individual's reproductive and social status. This asymmetry is 
  * resolved by the high indexical variance between biological data 
  * and social pathologization.
@@ -236,15 +236,15 @@ omega_variable(
     modern_longevity_translation,
     "Does the 14-19 year longevity benefit seen in historical eunuchs translate to modern males with high-quality healthcare and nutrition?",
     resolution_mechanism("Long-term cohort study of males castrated for prostate cancer or other medical reasons vs. matched controls"),
-    impact("If yes: Longevity-Rope is validated. If no: Sacrifice is a Noose with no payout."),
+    impact("If yes: Longevity-Rope is validated. If no: Sacrifice is a Snare with no payout."),
     confidence_without_resolution(low)
 ).
 
 omega_variable(
     castration_longevity_choice_extraction_intent,
-    "Is the social redirection to psychiatry a functional protection of the subject (Mountain) or an extractive suppression of life-extension agency (Noose)?",
+    "Is the social redirection to psychiatry a functional protection of the subject (Mountain) or an extractive suppression of life-extension agency (Snare)?",
     resolution_mechanism("Audit of IRB decisions regarding life-extending biological modifications"),
-    impact("If protection: Institutional Mountain. If suppression: Mandatrophy Noose."),
+    impact("If protection: Institutional Mountain. If suppression: Mandatrophy Snare."),
     confidence_without_resolution(medium)
 ).
 

@@ -48,7 +48,7 @@
  * defines the limits of what machines can know about each other. In 
  * professional software engineering, it is a "Rope" for coordination, 
  * allowing developers to accept "heuristic" analysis as the standard of 
- * achievement. However, in cybersecurity, it is a "Noose" that extracts 
+ * achievement. However, in cybersecurity, it is a "Snare" that extracts 
  * massive human labor and capital to perform manual audits that the 
  * "Mountain" prevents from being automated.
  */
@@ -142,16 +142,16 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE CYBER DEFENSE ENGINEER - Noose
+   PERSPECTIVE 3: THE CYBER DEFENSE ENGINEER - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_moderate - Has the tools to analyze but is bound by the theorem.
-   WHEN: immediate - Every piece of malware is a new instance of the "Noose."
+   WHEN: immediate - Every piece of malware is a new instance of the "Snare."
    WHERE: constrained - Forced to use imperfect heuristics (AV/EDR).
    SCOPE: national - Protecting state infrastructure.
    
    WHY THIS CLASSIFICATION:
-   For the engineer, the theorem acts as a "Noose." It "strangles" their 
+   For the engineer, the theorem acts as a "Snare." It "strangles" their 
    ability to provide 100% security. It extracts massive cycles of human 
    analysis (extraction) because the "Mountain" of Rice's Theorem means 
    every new behavioral trait must be manually verified or guessed.
@@ -159,7 +159,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     rices_theorem_undecidability,
-    noose,
+    snare,
     context(
         agent_power(individual_moderate),
         time_horizon(immediate),
@@ -214,7 +214,7 @@ test(natural_emergence) :-
  * (Victim) to highlight the gap between "Logic" and "Praxis."
  * * 3. OMEGA IDENTIFICATION:
  * Formalized the uncertainty of "Heuristic Completeness"—can AI 
- * effectively turn this Noose back into a Rope by guessing correctly 
+ * effectively turn this Snare back into a Rope by guessing correctly 
  * 99.9% of the time?
  */
 
@@ -223,7 +223,7 @@ omega_variable(
     heuristic_asymptotic_completeness,
     "Will Large Language Models or Neural Verifiers provide 99.9% behavioral detection?",
     resolution_mechanism("Audit of false-positive rates in AI-driven static analysis across 10 years."),
-    impact("If Yes: The Noose is functionally a Rope. If No: The Noose remains a Mountain."),
+    impact("If Yes: The Snare is functionally a Rope. If No: The Snare remains a Mountain."),
     confidence_without_resolution(medium)
 ).
 

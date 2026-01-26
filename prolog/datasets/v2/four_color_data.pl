@@ -35,7 +35,7 @@ constraint_metric(manual_case_verification, suppression_requirement, 0.38).
 constraint_metric(manual_case_verification, snap_back_potential, 0.45).
 constraint_metric(manual_case_verification, extractiveness, 0.50).
 
-constraint_claim(unavoidable_set_complexity, noose).
+constraint_claim(unavoidable_set_complexity, snare).
 constraint_metric(unavoidable_set_complexity, intensity, 0.92).
 constraint_metric(unavoidable_set_complexity, suppression_requirement, 0.82).
 constraint_metric(unavoidable_set_complexity, snap_back_potential, 0.88).

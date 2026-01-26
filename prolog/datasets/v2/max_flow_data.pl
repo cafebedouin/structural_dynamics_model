@@ -35,7 +35,7 @@ constraint_metric(path_finding_inefficiency, suppression_requirement, 0.35).
 constraint_metric(path_finding_inefficiency, snap_back_potential, 0.40).
 constraint_metric(path_finding_inefficiency, extractiveness, 0.50).
 
-constraint_claim(bottleneck_obstruction, noose).
+constraint_claim(bottleneck_obstruction, snare).
 constraint_metric(bottleneck_obstruction, intensity, 0.95).
 constraint_metric(bottleneck_obstruction, suppression_requirement, 0.85).
 constraint_metric(bottleneck_obstruction, snap_back_potential, 0.90).

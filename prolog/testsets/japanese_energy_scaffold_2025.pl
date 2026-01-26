@@ -33,7 +33,7 @@
  * spatial_scope: National (Japan)
  * * SUMMARY:
  * Japan faces a critical energy self-sufficiency rate of 15.3%, the lowest 
- * among G7 nations. To avoid the "Noose" of maritime 
+ * among G7 nations. To avoid the "Snare" of maritime 
  * interdiction in the Taiwan Strait, Japan has constructed an "Energy 
  * Scaffold"—a comprehensive legislative and technical framework (6th & 7th 
  * Strategic Energy Plans) designed to triple renewable capacity and restart 
@@ -50,7 +50,7 @@
  * * NARRATIVE ARC:
  * Originally, Japan relied on a "Middle East Rope" (securing fossil fuels via 
  * diplomatic ties). Post-2011, the loss of nuclear power 
- * became a Noose, as thermal dependence rose to nearly 73%. 
+ * became a Snare, as thermal dependence rose to nearly 73%. 
  * The current Scaffold serves as a Rope to pull Japan toward 30-40% 
  * independence, though the unyielding physical Mountain of limited 
  * land and deep oceans makes scaling wind and solar difficult.
@@ -158,7 +158,7 @@ constraint_indexing:constraint_classification(
     !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: DEFENSE ANALYST - Noose
+   PERSPECTIVE 3: DEFENSE ANALYST - Snare
    --------------------------------------------------------------------------
    
    WHO: analytical - Observer of the "Taiwan contingency is a Japan contingency" 
@@ -168,10 +168,10 @@ constraint_indexing:constraint_classification(
    SCOPE: global - The intersection of global energy trade and regional war.
    
    WHY THIS CLASSIFICATION:
-   The analyst sees the Noose. Despite the Scaffold, Japan remains 95% 
+   The analyst sees the Snare. Despite the Scaffold, Japan remains 95% 
    dependent on seaborne crude oil from the Middle East. 
    If the Scaffold (nuclear/renewables) fails to reach 40% self-sufficiency, 
-   the Taiwan Strait remains a Noose that can choke Japan's economy in days 
+   the Taiwan Strait remains a Snare that can choke Japan's economy in days 
   .
    -------------------------------------------------------------------------- */
 
@@ -179,7 +179,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     japanese_energy_scaffold_2025,
-    noose,
+    snare,
     context(
         agent_power(analytical),
         time_horizon(historical),
@@ -199,7 +199,7 @@ constraint_indexing:constraint_classification(
 
 test(sufficiency_gap_analysis) :-
     % Self-sufficiency is a "binary" outcome; the scaffold must exceed 30% 
-    % to move from Noose toward Rope.
+    % to move from Snare toward Rope.
     domain_priors:requires_active_enforcement(japanese_energy_scaffold_2025).
 
 test(perspective_shift) :-
@@ -227,10 +227,10 @@ test(perspective_shift) :-
 
 omega_variable(
     nuclear_restart_feasibility,
-    "Can Japan restart all 33 workable reactors by 2040 (Noose removal), 
+    "Can Japan restart all 33 workable reactors by 2040 (Snare removal), 
      or will public opposition remain an unyielding Mountain?",
     resolution_mechanism("Monitor restart approvals for the 8 pending reactors vs. local court injunction rates"),
-    impact("If restarts stall: The Noose of import dependence remains. 
+    impact("If restarts stall: The Snare of import dependence remains. 
             If restarts succeed: The Scaffold becomes a secure Rope."),
     confidence_without_resolution(medium)
 ).

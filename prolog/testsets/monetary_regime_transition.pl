@@ -41,9 +41,9 @@
  * - Global Financial Markets: Analytical observers playing arbitrage between regimes.
  * * NARRATIVE ARC:
  * Gold is perceived as a Mountain by savers (limited supply, unchangeable). 
- * For the State, this Mountain is a Noose (constrains spending). By shifting 
+ * For the State, this Mountain is a Snare (constrains spending). By shifting 
  * to Fiat, the State transforms the constraint into a Rope (coordination via 
- * interest rates) while the Saver experiences a shift toward a Noose (inflationary 
+ * interest rates) while the Saver experiences a shift toward a Snare (inflationary 
  * extraction).
  */
 
@@ -130,7 +130,7 @@ constraint_indexing:constraint_classification(
     !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: The Creditor (Fiat Inflation) - Noose
+   PERSPECTIVE 3: The Creditor (Fiat Inflation) - Snare
    --------------------------------------------------------------------------
    WHO: individual_moderate
    WHEN: biographical
@@ -138,14 +138,14 @@ constraint_indexing:constraint_classification(
    SCOPE: national
    
    WHY THIS CLASSIFICATION:
-   For those holding long-term debt or cash, Fiat can function as a Noose. 
+   For those holding long-term debt or cash, Fiat can function as a Snare. 
    The intentional expansion of the money supply acts as a coercive 
    asymmetric extraction of their future purchasing power.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
     monetary_regime_transition,
-    noose,
+    snare,
     context(
         agent_power(individual_moderate),
         time_horizon(biographical),
@@ -170,8 +170,8 @@ test(regime_shift_as_index_shift) :-
     % State sees Rope (Fiat)
     constraint_indexing:constraint_classification(monetary_regime_transition, rope, 
         context(institutional, generational, arbitrage, national)),
-    % Saver in Fiat sees Noose
-    constraint_indexing:constraint_classification(monetary_regime_transition, noose, 
+    % Saver in Fiat sees Snare
+    constraint_indexing:constraint_classification(monetary_regime_transition, snare, 
         context(individual_moderate, biographical, constrained, national)).
 
 test(extraction_variance) :-
@@ -193,12 +193,12 @@ test(extraction_variance) :-
  * * Model: Gemini 2.0 Flash
  * * KEY DECISIONS:
  * 1. PERSPECTIVES: I mapped Gold to Mountain (perceived scarcity) and Fiat 
- * to Rope (institutional flexibility) and Noose (unintended/intended inflation).
+ * to Rope (institutional flexibility) and Snare (unintended/intended inflation).
  * * 2. OMEGAS:
  * omega_variable(fiat_durability,
- * "Can a credit-based Rope function indefinitely without collapsing into a Noose?",
+ * "Can a credit-based Rope function indefinitely without collapsing into a Snare?",
  * resolution_mechanism("Wait-and-see: Analysis of civilizational debt cycles."),
- * impact("If it collapses: Fiat was always a deferred Noose. If it persists: It's a permanent Rope."),
+ * impact("If it collapses: Fiat was always a deferred Snare. If it persists: It's a permanent Rope."),
  * confidence_without_resolution(low)
  * ).
  * * 3. AMBIGUITIES: The 'extractiveness' of fiat is highly debated. I set it 

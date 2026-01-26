@@ -40,7 +40,7 @@
  * - The Copyright Holder: Attempts to define the limits of "transformative" use.
  * - The Judge: Balances the four statutory factors to determine legality.
  * * NARRATIVE ARC:
- * Fair Use functions as the "Escape Hatch" from the Copyright Noose. 
+ * Fair Use functions as the "Escape Hatch" from the Copyright Snare. 
  * It ensures that the "Mountain" of intellectual property does not 
  * become an impassable wall for new creativity. However, its 
  * case-by-case nature makes it a "Foggy Path"—legally risky to navigate.
@@ -110,7 +110,7 @@ constraint_indexing:constraint_classification(
     !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE UNASSISTED CREATOR - Noose
+   PERSPECTIVE 2: THE UNASSISTED CREATOR - Snare
    --------------------------------------------------------------------------
    WHO: individual_powerless
    WHEN: immediate
@@ -119,14 +119,14 @@ constraint_indexing:constraint_classification(
    
    WHY THIS CLASSIFICATION:
    For a small creator facing a "Cease and Desist" from a major studio, 
-   Fair Use is a "Noose." Because it is an *affirmative defense* (meaning you have to be sued first to prove you are right), 
+   Fair Use is a "Snare." Because it is an *affirmative defense* (meaning you have to be sued first to prove you are right), 
    the legal cost of exercising this right is a bottleneck that 
    strangles their work.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
     fair_use_doctrine,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -171,8 +171,8 @@ constraint_indexing:constraint_classification(
 :- begin_tests(fair_use_tests).
 
 test(defense_cost_noose) :-
-    % Powerless agents see a Noose due to enforcement costs.
-    constraint_indexing:constraint_classification(fair_use_doctrine, noose, context(individual_powerless, _, _, _)).
+    % Powerless agents see a Snare due to enforcement costs.
+    constraint_indexing:constraint_classification(fair_use_doctrine, snare, context(individual_powerless, _, _, _)).
 
 test(free_speech_mountain) :-
     % Institutional/Analytical view sees the Mountain of legal doctrine.
@@ -190,7 +190,7 @@ test(free_speech_mountain) :-
  * * KEY DECISIONS:
  * Fair Use is technically an "Exit Option" for Copyright, but I 
  * profiled it as a standalone constraint because it has its own 
- * rules of access. The "Noose" classification highlights the 
+ * rules of access. The "Snare" classification highlights the 
  * "Fair Use Paradox": it is a right that many are too poor to use.
  */
 
@@ -202,7 +202,7 @@ omega_variable(
     automated_adjudication,
     "Will platforms implement AI judges that can accurately determine Fair Use in real-time?",
     resolution_mechanism("Performance audit of DMCA takedown automation vs. court reversals"),
-    impact("If Yes: The Noose loosens (instant defense). If No: Algorithmic suppression remains the status quo."),
+    impact("If Yes: The Snare loosens (instant defense). If No: Algorithmic suppression remains the status quo."),
     confidence_without_resolution(medium)
 ).
 

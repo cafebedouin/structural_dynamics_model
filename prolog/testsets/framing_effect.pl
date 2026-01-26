@@ -46,7 +46,7 @@
  * To navigate complexity, the brain uses heuristics that act as a "Mountain"—a 
  * fixed feature of human biology. For the architect of choice, these heuristics 
  * are a "Rope" for influence. However, for the person being nudged, the frame 
- * becomes a "Noose," as the emotional manipulation extracts their capacity 
+ * becomes a "Snare," as the emotional manipulation extracts their capacity 
  * for objective reasoning.
  */
 
@@ -56,7 +56,7 @@
 
 % Required for [STEP 1] and [STEP 2] of the DR-Audit Suite
 narrative_ontology:interval(framing_effect_interval, 0, 10).
-narrative_ontology:constraint_claim(framing_effect, noose).
+narrative_ontology:constraint_claim(framing_effect, snare).
 
 % Base extractiveness score (0.0-1.0)
 % Rationale: Moderate (0.5). The effect extracts "objective utility" and 
@@ -159,7 +159,7 @@ constraint_indexing:constraint_classification(
     !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE CONFUSED CONSUMER - Noose
+   PERSPECTIVE 3: THE CONFUSED CONSUMER - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless - Subject to the market's choice architecture.
@@ -168,7 +168,7 @@ constraint_indexing:constraint_classification(
    SCOPE: local - Immediate decision environment.
    
    WHY THIS CLASSIFICATION:
-   For the individual, a deceptive frame is a Noose. They are presented 
+   For the individual, a deceptive frame is a Snare. They are presented 
    with choices that feel intuitive but lead to objectively worse outcomes 
    (e.g., choosing a higher-cost insurance plan because it's framed as 
    "protection"). The frame strangles their rational autonomy, extracting 
@@ -182,7 +182,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     framing_effect,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -201,13 +201,13 @@ constraint_indexing:constraint_classification(
 :- begin_tests(framing_effect_tests).
 
 test(multi_perspective_variance) :-
-    % Scientist sees Mountain, Marketer sees Rope, Consumer sees Noose
+    % Scientist sees Mountain, Marketer sees Rope, Consumer sees Snare
     constraint_indexing:constraint_classification(framing_effect, mountain, context(analytical, civilizational, trapped, global)),
     constraint_indexing:constraint_classification(framing_effect, rope, context(institutional, biographical, arbitrage, national)),
-    constraint_indexing:constraint_classification(framing_effect, noose, context(individual_powerless, immediate, constrained, local)).
+    constraint_indexing:constraint_classification(framing_effect, snare, context(individual_powerless, immediate, constrained, local)).
 
 test(power_extractiveness_bias) :-
-    % Powerless individuals feel the total extraction of their rationality (Noose).
+    % Powerless individuals feel the total extraction of their rationality (Snare).
     % Institutional actors use the bias to coordinate behavior (Rope).
     ContextPowerless = context(individual_powerless, immediate, constrained, local),
     ContextPowerful = context(institutional, biographical, arbitrage, national),
@@ -240,7 +240,7 @@ test(time_immutability_framing) :-
  * * 3. CLASSIFICATION RATIONALE:
  * Analytical → Mountain: It is a law of human cognitive architecture.
  * Institutional → Rope: It is a primary tool for "Choice Architecture."
- * Powerless → Noose: It is a psychological trap that strangles autonomy.
+ * Powerless → Snare: It is a psychological trap that strangles autonomy.
  */
 
 /* ==========================================================================
@@ -249,7 +249,7 @@ test(time_immutability_framing) :-
 
 omega_variable(
     debiasing_efficacy,
-    "Can 'debiasing' training effectively 'untie' the Noose (Rope), or is 
+    "Can 'debiasing' training effectively 'untie' the Snare (Rope), or is 
     the effect fundamentally a Mountain for all human agents?",
     resolution_mechanism("Long-term studies of expert decision-makers 
     trained in cognitive bias mitigation vs. control groups"),
@@ -271,7 +271,7 @@ omega_variable(
  * frames because they are less effective at driving behavior.
  * * CONCLUSION:
  * The existence of suppressed neutral alternatives (Raw Data) confirms that 
- * for the individual, the Framing Effect is often a Noose used by choice 
+ * for the individual, the Framing Effect is often a Snare used by choice 
  * architects to prevent rational arbitrage.
  */
 

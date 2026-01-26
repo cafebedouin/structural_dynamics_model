@@ -35,7 +35,7 @@ constraint_metric(provability_predicate_complexity, suppression_requirement, 0.3
 constraint_metric(provability_predicate_complexity, snap_back_potential, 0.50).
 constraint_metric(provability_predicate_complexity, extractiveness, 0.55).
 
-constraint_claim(absolute_completeness_noose, noose).
+constraint_claim(absolute_completeness_noose, snare).
 constraint_metric(absolute_completeness_noose, intensity, 0.98).
 constraint_metric(absolute_completeness_noose, suppression_requirement, 0.85).
 constraint_metric(absolute_completeness_noose, snap_back_potential, 0.90).

@@ -24,12 +24,12 @@ event(ev04_deposition_of_romulus, final_verification, 476, [actor(odoacer), resu
 constraint_claim(frontier_overstretch, mountain).
 constraint_metric(frontier_overstretch, accessibility_collapse, 0.98).
 
-% Noose: The Foederati Dependency. Rome recruits barbarians to fight barbarians; each cycle narrows the state's autonomous military options.
-constraint_claim(barbarian_military_dependency, noose).
+% Snare: The Foederati Dependency. Rome recruits barbarians to fight barbarians; each cycle narrows the state's autonomous military options.
+constraint_claim(barbarian_military_dependency, snare).
 constraint_metric(barbarian_military_dependency, stakes_inflation, 0.95).
 
-% Zombie: Eternal Rome Ideology. The dead concept that the Mediterranean remains a Roman Lake, persisting in protocol while the borders vanish.
-constraint_claim(eternal_rome_myth, zombie).
+% Piton: Eternal Rome Ideology. The dead concept that the Mediterranean remains a Roman Lake, persisting in protocol while the borders vanish.
+constraint_claim(eternal_rome_myth, piton).
 constraint_metric(eternal_rome_myth, suppression, 0.85).
 
 % Rope: The Colonate System. Rigidly ties the peasantry to the soil to ensure a fixed tax revenue, stripping economic agency.

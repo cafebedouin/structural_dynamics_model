@@ -76,7 +76,7 @@ audit_detailed(Belief) :-
     (type_1_error(Belief) ->
         format('~n[⚠️  EXTRACTION ALERT]~n'),
         format('  This is a Type I Error (False Mountain)~n'),
-        format('  A Noose is being presented as unchangeable natural law~n'),
+        format('  A Snare is being presented as unchangeable natural law~n'),
         format('  Common use: Enable extraction/subjugation~n')
     ; true),
     
@@ -211,7 +211,7 @@ audit_all :-
         (format('  ⚠️  ~w~n', [B]),
          institutional_claim(B, mountain),
          format('      Claimed: Mountain (unchangeable)~n'),
-         format('      Actually: Noose (extraction mechanism)~n~n'))
+         format('      Actually: Snare (extraction mechanism)~n~n'))
     ).
 
 % --- 4. NOOSE DETECTION ---
@@ -328,7 +328,7 @@ compare_to_institution(Belief) :-
     format('~n[ANALYSIS]~n'),
     (type_1_error(Belief) ->
         format('  ⚠️  CONFLICT: Type I Error detected~n'),
-        format('  This Noose is being presented as Mountain~n'),
+        format('  This Snare is being presented as Mountain~n'),
         format('  Effect: Enables extraction/control~n'),
         format('  Strategy: Reject institutional framing~n')
     ;

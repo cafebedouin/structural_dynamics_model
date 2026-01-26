@@ -46,7 +46,7 @@
  * * NARRATIVE ARC:
  * [cite_start]The FMECA starts as an "essential function" [cite: 31] intended to be a 
  * flexible "Rope" for coordination. However, due to "untimeliness" and "isolated 
- * [cite_start]performance"[cite: 39, 40], it often hardens into a "Noose" for contractors 
+ * [cite_start]performance"[cite: 39, 40], it often hardens into a "Snare" for contractors 
  * [cite_start]who must fulfill rigid worksheet requirements [cite: 182] after design 
  * decisions are already finalized.
  */
@@ -62,7 +62,7 @@ narrative_ontology:constraint_claim(fmeca_procedures_1980, rope).
 % Base extractiveness score (0.0-1.0)
 % Rationale: Moderate (0.4). While it aims for safety, it "extracts" significant 
 % labor and time from contractors to satisfy procuring activity data requirements 
-%[cite: 33, 45, 1056].
+% [cite: 33, 45, 1056].
 domain_priors:base_extractiveness(fmeca_procedures_1980, 0.4).
 
 % Suppression score (0.0-1.0)
@@ -90,7 +90,7 @@ narrative_ontology:constraint_metric(fmeca_procedures_1980, suppression_requirem
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 1: JUNIOR DESIGN ENGINEER - Noose
+   PERSPECTIVE 1: JUNIOR DESIGN ENGINEER - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless - Must complete the work without shaping the standard.
@@ -99,7 +99,7 @@ narrative_ontology:constraint_metric(fmeca_procedures_1980, suppression_requirem
    [cite_start]SCOPE: local - Focused on a single component or assembly level[cite: 154].
    
    WHY THIS CLASSIFICATION:
-   The engineer sees FMECA as a coercive "Noose" of paperwork. The "chief causes" 
+   The engineer sees FMECA as a coercive "Snare" of paperwork. The "chief causes" 
    [cite_start]of criticism are its "untimeliness" [cite: 39]—it feels like a post-facto 
    [cite_start]requirement that "extracts" time without improving the design[cite: 38].
    
@@ -110,7 +110,7 @@ narrative_ontology:constraint_metric(fmeca_procedures_1980, suppression_requirem
 
 constraint_indexing:constraint_classification(
     fmeca_procedures_1980,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -189,7 +189,7 @@ constraint_indexing:constraint_classification(
 test(multi_perspective_variance) :-
     constraint_indexing:constraint_classification(fmeca_procedures_1980, Type1, context(individual_powerless, immediate, trapped, local)),
     constraint_indexing:constraint_classification(fmeca_procedures_1980, Type2, context(institutional, biographical, mobile, national)),
-    Type1 = noose,
+    Type1 = snare,
     Type2 = rope.
 
 test(power_extractiveness_scaling) :-
@@ -222,7 +222,7 @@ test(tailoring_as_rope_flexibility) :-
  * * 3. PERSPECTIVE SELECTION: Chose the Engineer (victim of untimeliness), 
  * Manager (agent of tailoring), and Analyst (observer of failure's nature).
  * * 4. AMBIGUITIES: Resolved the "standard vs tailoring" tension by assigning 
- * "Rope" status to those with the power to tailor and "Noose" status to 
+ * "Rope" status to those with the power to tailor and "Snare" status to 
  * those forced to comply with the untailored defaults.
  */
 
@@ -234,7 +234,7 @@ omega_variable(
     fmeca_actual_impact,
     'Does FMECA actually improve design, or is its criticism as \'limited use\' inherently true?',
     resolution_mechanism('Longitudinal study of failure rates in FMECA-compliant vs non-compliant complex systems'),
-    impact('If Mountain (physics-driven): safety increases. If Noose (bureaucracy-driven): only paperwork increases.'),
+    impact('If Mountain (physics-driven): safety increases. If Snare (bureaucracy-driven): only paperwork increases.'),
     confidence_without_resolution(medium)
 ).
 
@@ -242,7 +242,7 @@ omega_variable(
     tailoring_competence,
     'Is the procuring activity competent to \'tailor\' requirements appropriately, or does it default to maximum suppression?',
     resolution_mechanism('Audit of tailoring decisions across diverse DoD programs'),
-    impact('If tailored: Rope. If default: Noose for all contractors.'),
+    impact('If tailored: Rope. If default: Snare for all contractors.'),
     confidence_without_resolution(low)
 ).
 
@@ -261,7 +261,7 @@ omega_variable(
  * * CONCLUSION:
  * The active rejection of informal/qualitative alternatives in favor of 
  * specific worksheet formats shifts the classification from a coordination 
- * Rope to an enforced Noose for those doing the work.
+ * Rope to an enforced Snare for those doing the work.
  */
 
 /* ==========================================================================

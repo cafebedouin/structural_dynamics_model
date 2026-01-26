@@ -20,12 +20,12 @@ event(ev03_convergence, transition, 95, [transformation(time_to_space), identity
 constraint_claim(immutable_landscape_weight, mountain).
 constraint_metric(immutable_landscape_weight, accessibility_collapse, 0.90).
 
-% Noose: The cumulative tracking of the sky (Stars). The past piles up, tightening the statistical baseline.
-constraint_claim(cumulative_history_tracking, noose).
+% Snare: The cumulative tracking of the sky (Stars). The past piles up, tightening the statistical baseline.
+constraint_claim(cumulative_history_tracking, snare).
 constraint_metric(cumulative_history_tracking, stakes_inflation, 0.85).
 
-% Zombie: The 'unmarked point' or 'missing map.' The belief that navigation requires an origin dot.
-constraint_claim(myth_of_the_origin_dot, zombie).
+% Piton: The 'unmarked point' or 'missing map.' The belief that navigation requires an origin dot.
+constraint_claim(myth_of_the_origin_dot, piton).
 constraint_metric(myth_of_the_origin_dot, suppression, 0.70).
 
 % --- 4. Recommendations & Veto Structure ---

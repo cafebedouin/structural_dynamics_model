@@ -42,7 +42,7 @@
  * predict the "point of no return" in complex hardware.
  * * NARRATIVE ARC:
  * Before 1975, the onset of chaos was seen as system-specific. Feigenbaum 
- * revealed a "Mountain" of universal scaling—a hidden geometric "Noose" 
+ * revealed a "Mountain" of universal scaling—a hidden geometric "Snare" 
  * that tightens at a predictable rate as a system approaches turbulence. 
  * For designers, it is a "Rope" for predictive maintenance, but for the 
  * system itself, the constant is an inescapable topological fate.
@@ -138,7 +138,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE PRECISION BOTTLENECK - Noose
+   PERSPECTIVE 3: THE PRECISION BOTTLENECK - Snare
    --------------------------------------------------------------------------
    WHO: individual_powerless - A simulation algorithm limited by bit-depth.
    WHEN: immediate - The threshold where bifurcations occur faster than measurement.
@@ -147,7 +147,7 @@ constraint_indexing:constraint_classification(
    
    WHY THIS CLASSIFICATION:
    As the system approaches the limit point $r_\infty$, the constant acts 
-   as a "Noose." It "strangles" computational accuracy, extracting all 
+   as a "Snare." It "strangles" computational accuracy, extracting all 
    available floating-point precision as the bifurcation intervals shrink 
    toward zero, forcing a total loss of predictability.
    -------------------------------------------------------------------------- */
@@ -156,7 +156,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     feigenbaum_universality,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -183,8 +183,8 @@ test(universal_scaling_variance) :-
     Type2 = rope.
 
 test(computational_squeeze_penalty) :-
-    % A powerless simulation (constrained) sees the geometric shrinkage as a Noose.
-    constraint_indexing:constraint_classification(feigenbaum_universality, noose, context(individual_powerless, immediate, constrained, local)).
+    % A powerless simulation (constrained) sees the geometric shrinkage as a Snare.
+    constraint_indexing:constraint_classification(feigenbaum_universality, snare, context(individual_powerless, immediate, constrained, local)).
 
 test(extraction_is_constant) :-
     % The "cost" of the constant applies regardless of the specific math function used.
@@ -204,7 +204,7 @@ test(extraction_is_constant) :-
  * * KEY DECISIONS:
  * 1. TYPE VARIANCE: I chose to highlight how the *same* constant is a 
  * "Mountain" for the math, a "Rope" for the designer (prediction), 
- * and a "Noose" for the simulator (precision loss).
+ * and a "Snare" for the simulator (precision loss).
  * 2. EXTRACTIVENESS (0.3): While fundamental, the constant "extracts" 
  * the possibility of a linear or slow transition to chaos, forcing 
  * a rapid, accelerating geometric collapse.

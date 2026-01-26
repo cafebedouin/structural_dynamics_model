@@ -41,9 +41,9 @@
  * - Leonhard Euler: The institutional agent who "unlocked" the series by 
  * connecting it to trigonometric functions (sinc product).
  * - The Bernoulli Brothers: Historical agents who failed to find the exact 
- * sum, experiencing the problem as a "Noose" of professional frustration.
+ * sum, experiencing the problem as a "Snare" of professional frustration.
  * * NARRATIVE ARC:
- * The Basel Problem began as a "Noose" for the 17th-century mathematical 
+ * The Basel Problem began as a "Snare" for the 17th-century mathematical 
  * community—a simple-looking question that extracted massive cognitive effort 
  * without resolution. Euler converted it into a "Rope" (the Riemann Zeta 
  * Function) which now coordinates modern physics and cryptography. To the 
@@ -141,7 +141,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE EARLY BERNOULLIS (FRUSTRATED SEARCH) - Noose
+   PERSPECTIVE 3: THE EARLY BERNOULLIS (FRUSTRATED SEARCH) - Snare
    --------------------------------------------------------------------------
    WHO: individual_powerless - Despite their genius, they couldn't solve it.
    WHEN: biographical - Years of their lives spent on a result that eluded them.
@@ -150,14 +150,14 @@ constraint_indexing:constraint_classification(
    
    WHY THIS CLASSIFICATION:
    For those who face the problem without the necessary tools, the Basel 
-   problem is a "Noose." It extracts massive labor and reputation (frustration) 
+   problem is a "Snare." It extracts massive labor and reputation (frustration) 
    without yielding a result, "strangling" the mathematician with its 
    deceptively simple appearance.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
     basel_problem_convergence,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(biographical),
@@ -184,8 +184,8 @@ test(convergence_fate_variance) :-
     Type2 = rope.
 
 test(computational_extraction_penalty) :-
-    % A powerless searcher in a local range sees it as a Noose.
-    constraint_indexing:constraint_classification(basel_problem_convergence, noose, context(individual_powerless, biographical, constrained, local)).
+    % A powerless searcher in a local range sees it as a Snare.
+    constraint_indexing:constraint_classification(basel_problem_convergence, snare, context(individual_powerless, biographical, constrained, local)).
 
 test(natural_emergence) :-
     domain_priors:emerges_naturally(basel_problem_convergence).
@@ -203,7 +203,7 @@ test(natural_emergence) :-
  * 1. CLASSIFICATION: I chose Mountain as the "Actual" type because mathematical 
  * convergence is a natural law.
  * 2. PERSPECTIVE SHIFT: The core insight is that for the searcher (Bernoulli), 
- * the lack of a constructive path makes the constraint an extractive "Noose."
+ * the lack of a constructive path makes the constraint an extractive "Snare."
  * 3. EXTRACTIVENESS (0.2): This reflects the "cost" of the slow convergence. 
  * Summing the first 1,000 terms only gets you 2 decimal places of pi^2/6. 
  * This is a high computational extraction for very little truth gain.
@@ -214,7 +214,7 @@ omega_variable(
     precision_threshold,
     "At what point does the 'Mountain' of the limit become a 'Scaffold' of floating-point error?",
     resolution_mechanism("Numerical audit of double-precision sum drift in the first $10^9$ iterates."),
-    impact("If noise exceeds the delta: The Mountain is functionally a Noose."),
+    impact("If noise exceeds the delta: The Mountain is functionally a Snare."),
     confidence_without_resolution(medium)
 ).
 

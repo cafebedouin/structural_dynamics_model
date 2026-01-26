@@ -43,7 +43,7 @@
  * - President Kennedy: Powerful agent blinded by the suppression of alternatives.
  * * NARRATIVE ARC:
  * The operational secrecy began as a Rope (coordination for surprise) but 
- * mutated into a Noose. By suppressing the JCS's pessimistic 
+ * mutated into a Snare. By suppressing the JCS's pessimistic 
  * assessments and failing to inform the Brigade of the lack of US air 
  * cover, the silo ensured the mission's failure was inevitable.
  */
@@ -53,7 +53,7 @@
    ========================================================================== */
 
 narrative_ontology:interval(operation_zapata_timeline, 0, 10).
-narrative_ontology:constraint_claim(bay_of_pigs_operational_silo, noose).
+narrative_ontology:constraint_claim(bay_of_pigs_operational_silo, snare).
 
 % Base extractiveness score (0.0-1.0)
 % Rationale: 0.9. High extraction of life and political capital from the 
@@ -146,7 +146,7 @@ constraint_indexing:constraint_classification(
     !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE TAYLOR COMMITTEE (POST-MORTEM) - Noose
+   PERSPECTIVE 3: THE TAYLOR COMMITTEE (POST-MORTEM) - Snare
    --------------------------------------------------------------------------
    
    WHO: analytical - Commissioned to find why the failure occurred.
@@ -155,7 +155,7 @@ constraint_indexing:constraint_classification(
    SCOPE: global - Context of the Cold War and future US policy.
    
    WHY THIS CLASSIFICATION:
-   The post-mortem analysis identifies the silo as a Noose. The lack of 
+   The post-mortem analysis identifies the silo as a Snare. The lack of 
    external review meant that the plan's flaws (e.g., the "escaping to the 
    mountains" fallback being 80 miles away) were never corrected, 
    choking the mission to death.
@@ -168,7 +168,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     bay_of_pigs_operational_silo,
-    noose,
+    snare,
     context(
         agent_power(analytical),
         time_horizon(historical),
@@ -210,7 +210,7 @@ test(high_extraction_detection) :-
  * agency maintained its internal culture until the total collapse.
  * * 2. PERSPECTIVE: Kennedy's perspective is complex; he acts as both a 
  * powerful agent and a victim of the analytical suppression. 
- * I focused on the Taylor Committee for the "Noose" perspective to provide 
+ * I focused on the Taylor Committee for the "Snare" perspective to provide 
  * the cleanest "Analytical" view required by the prompt.
  */
 
@@ -220,7 +220,7 @@ omega_variable(
      metaphysical delusion?",
     resolution_mechanism("Analysis of 1961 Cuban internal security records and public sentiment data"),
     impact("If Possible: The silo was a failed Rope. If Delusion: The silo 
-            was a total Noose from inception."),
+            was a total Snare from inception."),
     confidence_without_resolution(low)
 ).
 
@@ -237,7 +237,7 @@ omega_variable(
  * budget and operational direction.
  * * CONCLUSION:
  * The active suppression of the Joint Chiefs of Staff's skepticism confirms 
- * the classification of the silo as a Noose.
+ * the classification of the silo as a Snare.
  */
 
 /* ==========================================================================
@@ -255,4 +255,4 @@ omega_variable(
 % --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
 constraint_indexing:constraint_classification(bap_of_pigs_operational_silo, mountain, agent_power(analytical)).
 constraint_indexing:constraint_classification(bap_of_pigs_operational_silo, rope, agent_power(institutional)).
-constraint_indexing:constraint_classification(bap_of_pigs_operational_silo, noose, agent_power(individual_powerless)).
+constraint_indexing:constraint_classification(bap_of_pigs_operational_silo, snare, agent_power(individual_powerless)).

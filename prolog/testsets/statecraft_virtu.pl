@@ -145,7 +145,7 @@ constraint_indexing:constraint_classification(
     !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE DISPOSSESSED BARON - Noose
+   PERSPECTIVE 3: THE DISPOSSESSED BARON - Snare
    --------------------------------------------------------------------------
    WHO: individual_powerful
    WHEN: immediate
@@ -154,13 +154,13 @@ constraint_indexing:constraint_classification(
    
    WHY THIS CLASSIFICATION:
    To the rival lord whom the Prince has "extinguished," the constraint 
-   system is a "Noose." It is a coercive, asymmetric mechanism designed 
+   system is a "Snare." It is a coercive, asymmetric mechanism designed 
    to extract his power and life to benefit the Prince's consolidation.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
     statecraft_virtu,
-    noose,
+    snare,
     context(
         agent_power(individual_powerful),
         time_horizon(immediate),
@@ -186,8 +186,8 @@ test(perspectival_gap_analysis) :-
     constraint_indexing:constraint_classification(statecraft_virtu, mountain, context(agent_power(individual_powerless), _, _, _, _, _)).
 
 test(extraction_rule) :-
-    % Crushing enemies is a high-extraction event (Noose).
-    constraint_indexing:constraint_classification(statecraft_virtu, noose, context(agent_power(individual_powerful), _, constrained, _, _, _)).
+    % Crushing enemies is a high-extraction event (Snare).
+    constraint_indexing:constraint_classification(statecraft_virtu, snare, context(agent_power(individual_powerful), _, constrained, _, _, _)).
 
 test(fortune_environmental_constraint) :-
     % Fortune acts as an immutable Mountain for all who do not prepare.
@@ -207,7 +207,7 @@ test(fortune_environmental_constraint) :-
  * of freedom for the unprepared. 
  * * The "Prince" uses his Virtù to build "dykes and dams" (foundations), 
  * effectively creating a "Rope" (a functional coordination mechanism) 
- * for himself and a "Noose" for those who would oppose the new order.
+ * for himself and a "Snare" for those who would oppose the new order.
  * * The extractiveness is intentionally high (0.7) because the system 
  * prioritizes the "security and prosperity" of the state over individual 
  * agency, particularly for rival power centers.
@@ -221,7 +221,7 @@ omega_variable(
     prince_competence_ratio,
     "The ratio of the Prince's skill (Virtù) to the randomness of external events (Fortune).",
     resolution_mechanism("Long-term historical survival of the state under pressure."),
-    impact("If too low: The Rope of the State snaps, reverting the People to a Noose of war."),
+    impact("If too low: The Rope of the State snaps, reverting the People to a Snare of war."),
     confidence_without_resolution(low)
 ).
 
@@ -229,7 +229,7 @@ omega_variable(
     mercenary_fidelity,
     "The unpredictable breaking point of a mercenary's 'simulated' coordination.",
     resolution_mechanism("The moment of actual military engagement (e.g., the battle of Vaila)."),
-    impact("If zero: The coordination mechanism is actually a Noose for the Prince hiring them."),
+    impact("If zero: The coordination mechanism is actually a Snare for the Prince hiring them."),
     confidence_without_resolution(medium)
 ).
 
@@ -251,7 +251,7 @@ omega_variable(
  * * CONCLUSION:
  * The existence of alternatives like "National Arms" vs "Mercenary Arms" 
  * fundamentally changes the constraint classification. A Prince relying on 
- * mercenaries is caught in a Noose; a Prince with his own army holds a Rope.
+ * mercenaries is caught in a Snare; a Prince with his own army holds a Rope.
  */
 
 /* ==========================================================================

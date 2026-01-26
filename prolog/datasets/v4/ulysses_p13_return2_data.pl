@@ -33,7 +33,7 @@ constraint_metric(catechetical_prose, extractiveness, 0.15).
 constraint_metric(catechetical_prose, suppression_requirement, 0.10).
 constraint_metric(catechetical_prose, resistance, 0.05).
 
-% Domestic Connubiality (Adultery) functions as a Noose in Bloom's perception
+% Domestic Connubiality (Adultery) functions as a Snare in Bloom's perception
 % Bloom claims it is a "Tangled Rope" (maintained by equanimity)
 constraint_claim(domestic_connubiality, tangled_rope).
 constraint_metric(domestic_connubiality, extractiveness, 0.88).
@@ -89,7 +89,7 @@ intent_power_change(ithaca_interval, bloom_psychic_stability, 0.80).
 recommendation(rec1, 'Accept the Mountain of celestial mechanics as the terminal boundary of individual experience').
 affects_constraint(rec1, celestial_mechanics).
 
-recommendation(rec2, 'Maintain the Equanimity Scaffold to mitigate the extractiveness of the domestic noose').
+recommendation(rec2, 'Maintain the Equanimity Scaffold to mitigate the extractiveness of the domestic snare').
 affects_constraint(rec2, equanimity_logic).
 
 % Section 9: Omega Variables

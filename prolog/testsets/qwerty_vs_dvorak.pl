@@ -43,7 +43,7 @@
  * - The Average Typist: Individual powerless subject to the historical "accident" of the layout.
  * * NARRATIVE ARC:
  * What began as a mechanical "Rope" (to solve jams) became a "Mountain" of 
- * institutional reality. For the typist, it is a "Noose"—an invisible 
+ * institutional reality. For the typist, it is a "Snare"—an invisible 
  * inefficiency that strangles speed and health (RSI), yet is too costly to escape.
  */
 
@@ -53,7 +53,7 @@
 
 % Structural Anchor
 narrative_ontology:interval(qwerty_lockin_interval, 0, 10).
-narrative_ontology:constraint_claim(qwerty_vs_dvorak, noose).
+narrative_ontology:constraint_claim(qwerty_vs_dvorak, snare).
 
 % Base extractiveness score (0.0-1.0)
 % Rationale: Moderate (0.4). It extracts "human efficiency" and "physical health." 
@@ -138,7 +138,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE OFFICE WORKER - Noose
+   PERSPECTIVE 3: THE OFFICE WORKER - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless - Subject to the hardware provided by the employer.
@@ -147,7 +147,7 @@ constraint_indexing:constraint_classification(
    SCOPE: local - Immediate desk/workstation.
    
    WHY THIS CLASSIFICATION:
-   For the worker, QWERTY is a Noose. They must use a layout designed to 
+   For the worker, QWERTY is a Snare. They must use a layout designed to 
    slow them down (initially to prevent jams) which now causes physical 
    strain and limits their output. The "network effect" strangles their 
    individual choice, as using an alternative makes them "incompatible" 
@@ -156,7 +156,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     qwerty_vs_dvorak,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -172,13 +172,13 @@ constraint_indexing:constraint_classification(
 :- begin_tests(qwerty_lockin_tests).
 
 test(multi_perspective_variance) :-
-    % Analyst sees Mountain, Institutional sees Rope, Powerless sees Noose
+    % Analyst sees Mountain, Institutional sees Rope, Powerless sees Snare
     constraint_indexing:constraint_classification(qwerty_vs_dvorak, mountain, context(analytical, civilizational, analytical, global)),
     constraint_indexing:constraint_classification(qwerty_vs_dvorak, rope, context(institutional, biographical, arbitrage, global)),
-    constraint_indexing:constraint_classification(qwerty_vs_dvorak, noose, context(individual_powerless, immediate, trapped, local)).
+    constraint_indexing:constraint_classification(qwerty_vs_dvorak, snare, context(individual_powerless, immediate, trapped, local)).
 
 test(power_extractiveness_efficiency) :-
-    % Powerless individuals feel the extraction of their time/health (Noose).
+    % Powerless individuals feel the extraction of their time/health (Snare).
     % Institutions use the standard to manage global supply chains (Rope).
     ContextPowerless = context(individual_powerless, immediate, trapped, local),
     ContextPowerful = context(institutional, biographical, arbitrage, global),
@@ -187,7 +187,7 @@ test(power_extractiveness_efficiency) :-
     Score1 > Score2.
 
 test(time_immutability_lockin) :-
-    % Short-term trapped = Mountain/Noose.
+    % Short-term trapped = Mountain/Snare.
     constraint_indexing:effective_immutability(biographical, trapped, mountain).
 
 :- end_tests(qwerty_lockin_tests).
@@ -216,11 +216,11 @@ test(time_immutability_lockin) :-
 
 omega_variable(
     llm_input_decoupling,
-    "Will AI/Voice/Neural interfaces untie the QWERTY Noose (Rope), or will the 
+    "Will AI/Voice/Neural interfaces untie the QWERTY Snare (Rope), or will the 
     legacy layout merely persist as a symbolic 'Mountain' of human interaction?",
     resolution_mechanism("Monitor the adoption of non-textual input methods in professional settings"),
     impact("If Rope: Inefficiency is finally escaped. If Mountain: The layout 
-    remains as a cultural artifact/Noose even when the original need is gone."),
+    remains as a cultural artifact/Snare even when the original need is gone."),
     confidence_without_resolution(medium)
 ).
 
@@ -239,7 +239,7 @@ omega_variable(
  * in place while moving common letters to the home row.
  * * CONCLUSION:
  * The existence of superior alternatives (Dvorak/Colemak) that are effectively 
- * unusable due to network effects proves that QWERTY is a Noose for the 
+ * unusable due to network effects proves that QWERTY is a Snare for the 
  * individual, despite being a Rope for global commerce.
  */
 

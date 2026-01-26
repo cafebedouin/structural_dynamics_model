@@ -1,18 +1,18 @@
 % ============================================================================
 % CONSTRAINT STORY: trade_secret_law
 % ============================================================================
-% Generated: 2026-01-17
-% Model: Gemini 2.0 Flash
+% Generated: 2026-01-23
+% Model: Gemini Pro (Revised)
 % Source: Uniform Trade Secrets Act (UTSA) / Defend Trade Secrets Act (DTSA)
 % ============================================================================
 
-:- module(constraint_trade_secret, []).
+:- module(constraint_trade_secret_law, []).
 
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
 
-% --- Namespace Hooks ---
+% --- Namespace Hooks (Required for loading) ---
 :- multifile 
     domain_priors:base_extractiveness/2,
     domain_priors:suppression_score/2,
@@ -25,40 +25,38 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: trade_secret_law
+ * 
+ * constraint_id: trade_secret_law
  * human_readable: Trade Secret Law (Information Ownership)
  * domain: legal/economic/technological
  * temporal_scope: Civilizational (Permanent feature of commerce)
  * spatial_scope: Global
- * * SUMMARY:
+ * 
+ * SUMMARY:
  * Trade Secret Law protects confidential business information (formulae, 
  * practices, designs, instruments, or patterns) that provides an enterprise 
  * a competitive advantage. It exists as long as the information remains 
  * secret and the owner takes reasonable steps to protect it.
- * * KEY AGENTS:
- * - The Information Owner: The firm that invested in the secret.
- * - The Departing Employee: The agent carrying "skills" (allowed) vs "secrets" (blocked).
- * - The Courts: The final arbiters of what constitutes "misappropriation."
- * * NARRATIVE ARC:
- * The constraint acts as a "Filtered Border." It allows agents to migrate 
- * across the labor market (Matching Market) but requires them to leave 
- * specific proprietary "objects" behind. It is a structural feature that 
- * theoretically balances innovation with individual mobility.
+ * 
+ * KEY AGENTS:
+ * - The Accused Whistleblower (Individual Powerless): Faces litigation for alleged misappropriation.
+ * - The Courts (Institutional): The final arbiters of what constitutes "misappropriation."
+ * - The Information Owner (Individual Powerful): The firm that invested in the secret.
  */
 
 /* ==========================================================================
-   2. BASE PROPERTIES (Reality Layer)
+   2. CORE SYSTEM INTEGRATION (The "Reality" Layer)
    ========================================================================== */
 
 narrative_ontology:interval(trade_secret_law, 0, 10).
-narrative_ontology:constraint_claim(trade_secret_law, rope).
+narrative_ontology:constraint_claim(trade_secret_law, tangled_rope).
 
-% Base extractiveness: Low (0.2).
+% Base extractiveness: 0.2.
 % It protects the firm's investment without extracting the employee's 
 % general right to work or earn a living.
 domain_priors:base_extractiveness(trade_secret_law, 0.2).
 
-% Suppression: Low (0.3).
+% Suppression: 0.3.
 % The rules are generally transparent, though the specific "secrets" 
 % are (by definition) suppressed/hidden.
 domain_priors:suppression_score(trade_secret_law, 0.3).
@@ -66,63 +64,77 @@ domain_priors:suppression_score(trade_secret_law, 0.3).
 % Enforcement: Emerges naturally as a market norm and legal baseline.
 domain_priors:emerges_naturally(trade_secret_law).
 
-% Beneficiaries: R&D Intensive Firms (protecting investment).
+% BENEFICIARIES & VICTIMS
 constraint_beneficiary(trade_secret_law, innovative_enterprises).
-
-% Victims: Industrial Spies / Unethical Competitors.
-constraint_victim(trade_secret_law, bad_faith_actors).
-
-% Metrics
-narrative_ontology:constraint_metric(trade_secret_law, extractiveness, 0.2).
-narrative_ontology:constraint_metric(trade_secret_law, suppression_requirement, 0.3).
+constraint_victim(trade_secret_law, industrial_spies).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 1: THE ETHICAL ENGINEER - Rope
+   PERSPECTIVE 1: THE ACCUSED WHISTLEBLOWER - Snare
    --------------------------------------------------------------------------
-   WHO: individual_moderate
-   WHEN: biographical
-   WHERE: mobile
-   SCOPE: global
+   WHO: individual_powerless (Faces litigation for alleged misappropriation)
+   WHEN: immediate (The moment of legal action)
+   WHERE: trapped (By high legal costs and ambiguity of "secret" definition)
    
    WHY THIS CLASSIFICATION:
-   For the ethical professional, Trade Secret Law is a "Rope." It provides 
-   clear boundaries that actually *enable* their mobility. Because the 
-   law protects the secret, the employer feels safe hiring and training 
-   the engineer, and the engineer knows exactly what they can and cannot 
-   take with them to their next "Match."
+   If a company uses "Trade Secret" claims to suppress a whistleblower 
+   or block a departing employee's move through litigation, the law 
+   becomes a 'Snare'. The high cost of legal defense and the ambiguity 
+   of what constitutes a "secret" can strangle the individual's 
+   career and mobility, even if their actions were ethically motivated.
+   -------------------------------------------------------------------------- */
+
+constraint_indexing:constraint_classification(
+    trade_secret_law,
+    snare,
+    context(
+        agent_power(individual_powerless),
+        time_horizon(immediate),
+        exit_options(trapped),
+        spatial_scope(national)
+    )
+).
+
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 2: THE COURTS - Rope
+   --------------------------------------------------------------------------
+   WHO: institutional (The final arbiters of what constitutes "misappropriation")
+   WHEN: historical (Evolving jurisprudence in intellectual property)
+   WHERE: arbitrage (Balances competing interests of innovation, competition, and mobility)
+   
+   WHY THIS CLASSIFICATION:
+   For the Courts, trade secret law is a 'Rope'—a tool for balancing innovation,
+   competition, and individual mobility. It provides a framework for adjudicating
+   disputes, promoting fair business practices, and fostering a climate of trust
+   and innovation within the economy.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
     trade_secret_law,
     rope,
     context(
-        agent_power(individual_moderate),
-        time_horizon(biographical),
-        exit_options(mobile),
-        spatial_scope(global)
+        agent_power(institutional),
+        time_horizon(historical),
+        exit_options(arbitrage),
+        spatial_scope(national)
     )
-) :-
-    domain_priors:base_extractiveness(trade_secret_law, E),
-    E < 0.4,
-    !.
+).
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE STARTUP FOUNDER - Mountain
+   PERSPECTIVE 3: THE INFORMATION OWNER - Mountain
    --------------------------------------------------------------------------
-   WHO: individual_powerful
-   WHEN: historical
-   WHERE: arbitrage
-   SCOPE: national
+   WHO: individual_powerful (The firm that invested in the secret)
+   WHEN: historical (Securing competitive advantage over decades)
+   WHERE: arbitrage (Uses legal protection to maintain market position)
    
    WHY THIS CLASSIFICATION:
-   A founder sees Trade Secret Law as a "Mountain"—a permanent feature 
-   of the environment. They build their company's "moat" based on these 
-   protections. It is an immutable law of the marketplace that allows 
-   them to secure venture capital by proving their value is protected.
+   For an information owner, Trade Secret Law is a 'Mountain'—a permanent feature 
+   of the intellectual property landscape. They build their company's "moat" based
+   on these protections, viewing it as an immutable law of the marketplace that
+   allows them to secure venture capital by proving their value is protected.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
@@ -134,54 +146,23 @@ constraint_indexing:constraint_classification(
         exit_options(arbitrage),
         spatial_scope(national)
     )
-) :-
-    true.
-
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE ACCUSED WHISTLEBLOWER - Noose
-   --------------------------------------------------------------------------
-   WHO: individual_powerless
-   WHEN: immediate
-   WHERE: trapped
-   SCOPE: national
-   
-   WHY THIS CLASSIFICATION:
-   If a company uses "Trade Secret" claims to suppress a whistleblower 
-   or block a departing employee's move through litigation, the law 
-   becomes a "Noose." The high cost of legal defense and the ambiguity 
-   of what constitutes a "secret" can strangle the individual's 
-   career and mobility.
-   -------------------------------------------------------------------------- */
-
-constraint_indexing:constraint_classification(
-    trade_secret_law,
-    noose,
-    context(
-        agent_power(individual_powerless),
-        time_horizon(immediate),
-        exit_options(trapped),
-        spatial_scope(national)
-    )
-) :-
-    domain_priors:suppression_score(trade_secret_law, S),
-    S > 0.2,
-    !.
+).
 
 /* ==========================================================================
-   4. TESTS
+   4. TESTS (What We Learn About Constraints)
    ========================================================================== */
 
-:- begin_tests(trade_secret_tests).
+:- begin_tests(trade_secret_law_tests).
 
-test(mobility_preservation) :-
-    % Testing that Trade Secret Law (unlike Non-Competes) allows for mobility.
-    constraint_indexing:constraint_classification(trade_secret_law, rope, context(_, _, mobile, _)).
+test(multi_perspective_variance) :-
+    constraint_indexing:constraint_classification(trade_secret_law, Type1, context(agent_power(individual_powerless), _, _, _)),
+    constraint_indexing:constraint_classification(trade_secret_law, Type2, context(agent_power(institutional), _, _, _)),
+    constraint_indexing:constraint_classification(trade_secret_law, Type3, context(agent_power(individual_powerful), _, _, _)),
+    Type1 \= Type2,
+    Type2 \= Type3,
+    Type1 \= Type3.
 
-test(misuse_case) :-
-    % Testing that for 'trapped' agents in litigation, it functions as a Noose.
-    constraint_indexing:constraint_classification(trade_secret_law, noose, context(individual_powerless, _, trapped, _)).
-
-:- end_tests(trade_secret_tests).
+:- end_tests(trade_secret_law_tests).
 
 /* ==========================================================================
    5. MODEL INTERPRETATION (Commentary)
@@ -189,25 +170,74 @@ test(misuse_case) :-
 
 /**
  * LLM GENERATION NOTES
- * * Model: Gemini 2.0 Flash
- * * KEY DECISIONS:
- * I set extractiveness low (0.2) because the law targets information, 
- * not people. It is a "cleaner" constraint than the Non-Compete. 
- * However, the "Noose" classification is necessary to acknowledge 
- * how the law is often weaponized in "tactical litigation."
+ * 
+ * Model: Gemini Pro (Revised)
+ * Date: 2026-01-23
+ * 
+ * KEY DECISIONS:
+ * 
+ * 1. INSTITUTIONAL PERSPECTIVE: Added 'The Courts' as the institutional agent.
+ *    For them, trade secret law is a 'Rope' for balancing competing interests.
+ *
+ * 2. CLASSIFICATION RATIONALE:
+ *    - Accused Whistleblower (Snare): Trapped by legal costs and ambiguity.
+ *    - The Courts (Rope): A tool for balancing competing interests.
+ *    - Information Owner (Mountain): Immutable legal protection for IP.
+ * 
+ * 3. CORE INSIGHT: Trade secret law is a 'Tangled Rope'. It's a 'Rope' for
+ *    innovative firms, protecting their intellectual assets and fostering
+ *    economic growth. However, it can become a 'Snare' for individuals
+ *    (like whistleblowers or departing employees) when used aggressively,
+ *    highlighting the delicate balance between corporate protection and
+ *    individual rights.
  */
 
 /* ==========================================================================
-   6. OMEGA VARIABLES (Ω)
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
+/**
+ * OMEGA IDENTIFICATION
+ *
+ * The core uncertainty is the potential for trade secret law to function as a de-facto non-compete.
+ */
 
 omega_variable(
     inevitable_disclosure_drift,
-    "Will courts increasingly use 'Inevitable Disclosure' to treat Trade Secret Law as a de-facto Non-Compete?",
-    resolution_mechanism("Monitoring case law trends in states like New York vs California"),
-    impact("If Yes: The 'Mountain' turns into a 'Noose' for all high-skill labor."),
+    "Will courts increasingly use the 'Inevitable Disclosure Doctrine' to treat Trade Secret Law as a de-facto Non-Compete agreement, effectively turning this 'Rope' into a 'Snare' for high-skill labor mobility?",
+    resolution_mechanism("Monitoring case law trends in states with and without strong 'Inevitable Disclosure' doctrines (e.g., New York vs. California); legislative efforts to clarify or limit the doctrine's scope."),
+    impact("If Yes: The 'Mountain' of legal precedent turns into a 'Snare' for all high-skill labor. If No: It remains a balanced 'Tangled Rope'."),
     confidence_without_resolution(medium)
 ).
+
+/* ==========================================================================
+   7. ALTERNATIVE ANALYSIS
+   ========================================================================== */
+/**
+ * VIABLE ALTERNATIVES
+ *
+ * ALTERNATIVE 1: Non-Compete Agreements
+ *    Viability: Explicit contractual agreements restricting an employee's ability to work for competitors.
+ *    Suppression: Increasingly suppressed by courts and legislatures (e.g., California) due to concerns about worker mobility and economic stagnation.
+ *
+ * CONCLUSION:
+ * Trade secret law aims to be a 'Rope' that balances protection for firms with
+ * mobility for employees. However, the potential for its aggressive application
+ * (e.g., via "Inevitable Disclosure") risks transforming it into a 'Snare',
+ * effectively replacing suppressed non-compete agreements with a more subtle form
+ * of labor market restriction.
+ */
+
+/* ==========================================================================
+   8. INTEGRATION HOOKS
+   ========================================================================== */
+
+/**
+ * TO USE THIS FILE:
+ * 
+ * 1. Load: ?- [constraints/trade_secret_law].
+ * 2. Multi-perspective: ?- multi_index_report(trade_secret_law).
+ * 3. Run tests: ?- run_tests(trade_secret_law_tests).
+ */
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

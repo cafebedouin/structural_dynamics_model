@@ -35,10 +35,10 @@ constraint_metric(viscous_damping, suppression_requirement, 0.25).
 constraint_metric(viscous_damping, snap_back_potential, 0.40).
 constraint_metric(viscous_damping, extractiveness, 0.42).
 
-% The Overdamped Stasis (The Noose)
+% The Overdamped Stasis (The Snare)
 % Excessive damping that prevents oscillation entirely, strangling the frequency.
 % Extractiveness > 0.66 requires a scaffold (critical_damping_threshold) to resolve.
-constraint_claim(overdamped_restriction, noose).
+constraint_claim(overdamped_restriction, snare).
 constraint_metric(overdamped_restriction, intensity, 0.90).
 constraint_metric(overdamped_restriction, suppression_requirement, 0.70).
 constraint_metric(overdamped_restriction, snap_back_potential, 0.05).
@@ -49,7 +49,7 @@ constraint_metric(overdamped_restriction, extractiveness, 0.85).
 recommendation(rec_01, tuning_of_damping_coefficient_to_minimize_settling_time).
 affects_constraint(rec_01, viscous_damping).
 
-% Noose (0.85 extractiveness) triggers Cut
+% Snare (0.85 extractiveness) triggers Cut
 % Utilizing 'critical_damping_threshold' scaffold to restore optimal return-to-zero.
 recommendation(rec_02, reduction_of_viscosity_to_scaffold_limit).
 affects_constraint(rec_02, overdamped_restriction).

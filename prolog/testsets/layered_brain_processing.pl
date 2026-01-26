@@ -41,7 +41,7 @@
  * - AI Models (GPT/Llama): The computational "mirror" for brain activity[cite: 25, 33].
  * * NARRATIVE ARC:
  * Long-held ideas of "fixed symbols" and "rigid hierarchies" [cite: 41] act as a 
- * conceptual "Noose" that suppressed the discovery of the brain's "Mountain" 
+ * conceptual "Snare" that suppressed the discovery of the brain's "Mountain" 
  * of layered biological processing until AI provided the "Rope" (the model) to 
  * map it[cite: 33, 42].
  */
@@ -51,6 +51,7 @@
    ========================================================================== */
 
 narrative_ontology:interval(layered_brain_processing, 0, 10).
+narrative_ontology:constraint_claim(layered_brain_processing, snare).
 
 % Base extractiveness: 0.35 (Moderate)
 % Rationale: AI models extract "contextual representations" from human data[cite: 44].
@@ -101,8 +102,7 @@ constraint_indexing:constraint_classification(
     )
 ) :-
     % Classification based on the perception of "fixed symbols" as law [cite: 41]
-    true, 
-    !.
+    true.
 
 /* --------------------------------------------------------------------------
    PERSPECTIVE 2: THE MODERN NEUROSCIENTIST - Rope
@@ -128,11 +128,10 @@ constraint_indexing:constraint_classification(
 ) :-
     % Classification based on meaning "gradually emerging through context" [cite: 42]
     domain_priors:base_extractiveness(layered_brain_processing, E),
-    E < 0.6,
-    !.
+    E < 0.6.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE INDIVIDUAL LISTENER - Noose
+   PERSPECTIVE 3: THE INDIVIDUAL LISTENER - Snare
    --------------------------------------------------------------------------
    WHO: individual_powerless (Subject to neural steps) [cite: 28]
    WHEN: immediate (Real-time processing) [cite: 44]
@@ -141,13 +140,13 @@ constraint_indexing:constraint_classification(
    
    WHY: The brain "does not grasp meaning all at once"[cite: 27]. Each word 
    must pass through a series of steps[cite: 28]. In the context of 
-   "rule-based" education, this is a noose of cognitive dissonance where 
+   "rule-based" education, this is a snare of cognitive dissonance where 
    learned rules (phonemes) conflict with neural reality[cite: 44].
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
     layered_brain_processing,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -156,8 +155,7 @@ constraint_indexing:constraint_classification(
     )
 ) :-
     domain_priors:suppression_score(layered_brain_processing, S),
-    S > 0.7,
-    !.
+    S > 0.7.
 
 /* ==========================================================================
    4. TESTS (What We Learn About Constraints)
@@ -202,7 +200,7 @@ test(time_unfolding_insight) :-
  * for years, forcing a "false performance" of linguistics that didn't 
  * align with neural data[cite: 21, 41].
  * 3. PERSPECTIVE SELECTION: Focused on the "Rupture" between traditional 
- * linguistics (Mountain/Noose) and the neuroscientific reality (Rope).
+ * linguistics (Mountain/Snare) and the neuroscientific reality (Rope).
  */
 
 /* ==========================================================================
@@ -221,7 +219,7 @@ omega_variable(
     layered_brain_processing_extraction_intent,
     "Is the step-by-step extraction of meaning [cite: 28] a functional necessity for consciousness or a biological constraint that limits comprehension speed?",
     resolution_mechanism("Audit of neural step-speed vs. information density thresholds"),
-    impact("If necessity: Mountain. If predatory/limitation: Noose."),
+    impact("If necessity: Mountain. If predatory/limitation: Snare."),
     confidence_without_resolution(medium)
 ).
 
@@ -236,7 +234,7 @@ omega_variable(
  * Suppression: Now "challenged" as failing to explain real-time activity[cite: 21, 44].
  * * CONCLUSION:
  * The discovery of the "Layered Hierarchy" shifts the domain from a rule-based 
- * Noose to a biological Mountain, mapped by the computational Rope of AI[cite: 13, 33].
+ * Snare to a biological Mountain, mapped by the computational Rope of AI[cite: 13, 33].
  */
 
 /* ==========================================================================

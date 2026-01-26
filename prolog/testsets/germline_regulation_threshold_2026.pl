@@ -54,6 +54,7 @@
    ========================================================================== */
 
 narrative_ontology:interval(germline_regulation_threshold_2026, 0, 10).
+narrative_ontology:constraint_claim(germline_regulation_threshold_2026, snare).
 
 % Base extractiveness score: 0.5 (Moderate)
 % Rationale: Regulation extracts time and capital from developers to ensure 
@@ -107,10 +108,10 @@ constraint_indexing:constraint_classification(
         exit_options(mobile),
         spatial_scope(global)
     )
-) :- !.
+).
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 2: BIOTECH INNOVATOR - Noose
+   PERSPECTIVE 2: BIOTECH INNOVATOR - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerful (Significant influence and capital)
@@ -119,7 +120,7 @@ constraint_indexing:constraint_classification(
    SCOPE: national/regional
    
    WHY THIS CLASSIFICATION:
-   For the innovator, the threshold acts as a "Noose." It strangles the 
+   For the innovator, the threshold acts as a "Snare." It strangles the 
    commercialization of germline editing even though the "rewrite" capability 
    already exists.
    
@@ -128,18 +129,16 @@ constraint_indexing:constraint_classification(
    yet the current "not safe enough" status prevents immediate use.
    -------------------------------------------------------------------------- */
 
-
-
 constraint_indexing:constraint_classification(
     germline_regulation_threshold_2026,
-    noose,
+    snare,
     context(
         agent_power(individual_powerful),
         time_horizon(biographical),
         exit_options(constrained),
         spatial_scope(national)
     )
-) :- !.
+).
 
 /* --------------------------------------------------------------------------
    PERSPECTIVE 3: THE UNBORN PROGENY - Mountain
@@ -165,26 +164,98 @@ constraint_indexing:constraint_classification(
         exit_options(trapped),
         spatial_scope(local)
     )
-) :- !.
+).
+
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 4: THE BIOETHICIST - Tangled Rope
+   --------------------------------------------------------------------------
+   
+   WHO: analytical (Observing the ethical and social implications)
+   WHEN: historical (Considering long-term societal impact)
+   WHERE: analytical (Detached from commercial or regulatory pressures)
+   SCOPE: global
+   
+   WHY THIS CLASSIFICATION:
+   For the bioethicist, the regulation is a "Tangled Rope." It's a necessary
+   coordination mechanism (Rope) to prevent harm, but it also creates
+   unintended consequences, such as stifling innovation that could prevent
+   hereditary diseases, and raises complex questions about equity and access
+   (Snare-like extractive potential).
+   -------------------------------------------------------------------------- */
+
+constraint_indexing:constraint_classification(
+    germline_regulation_threshold_2026,
+    tangled_rope,
+    context(
+        agent_power(analytical),
+        time_horizon(historical),
+        exit_options(analytical),
+        spatial_scope(global)
+    )
+).
 
 /* ==========================================================================
    4. TESTS (What We Learn About Constraints)
    ========================================================================== */
 
-:- begin_tests(germline_threshold_tests).
+:- begin_tests(germline_regulation_threshold_2026_tests).
 
+/**
+ * TEST 1: Multi-perspective variance
+ * Demonstrates that the germline regulation threshold is viewed differently across agents.
+ */
 test(multi_perspective_variance) :-
-    constraint_indexing:constraint_classification(germline_regulation_threshold_2026, rope, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(germline_regulation_threshold_2026, noose, context(agent_power(individual_powerful), _, _, _)),
-    constraint_indexing:constraint_classification(germline_regulation_threshold_2026, mountain, context(agent_power(individual_powerless), _, _, _)).
+    % Global Regulator (Rope)
+    constraint_indexing:constraint_classification(
+        germline_regulation_threshold_2026,
+        Type1,
+        context(agent_power(institutional), time_horizon(generational), exit_options(mobile), spatial_scope(global))
+    ),
+    % Biotech Innovator (Snare)
+    constraint_indexing:constraint_classification(
+        germline_regulation_threshold_2026,
+        Type2,
+        context(agent_power(individual_powerful), time_horizon(biographical), exit_options(constrained), spatial_scope(national))
+    ),
+    % Unborn Progeny (Mountain)
+    constraint_indexing:constraint_classification(
+        germline_regulation_threshold_2026,
+        Type3,
+        context(agent_power(individual_powerless), time_horizon(civilizational), exit_options(trapped), spatial_scope(local))
+    ),
+    % Bioethicist (Tangled Rope)
+    constraint_indexing:constraint_classification(
+        germline_regulation_threshold_2026,
+        Type4,
+        context(agent_power(analytical), time_horizon(historical), exit_options(analytical), spatial_scope(global))
+    ),
+    % Verify they differ
+    Type1 \= Type2,
+    Type2 \= Type3,
+    Type3 \= Type4.
 
-test(safety_as_enforcement) :-
-    % High suppression score (0.8) indicates that the "not safe enough" 
-    % claim is the primary tool for active regulation.
-    domain_priors:suppression_score(germline_regulation_threshold_2026, S),
-    S > 0.7.
+/**
+ * TEST 2: Power-based extractiveness scaling
+ * Demonstrates that innovators (powerful) experience higher extraction (of opportunity) than regulators.
+ */
+test(power_extractiveness_scaling) :-
+    ContextInnovator = context(agent_power(individual_powerful), time_horizon(biographical), exit_options(constrained), spatial_scope(national)),
+    ContextRegulator = context(agent_power(institutional), time_horizon(generational), exit_options(mobile), spatial_scope(global)),
+    constraint_indexing:extractiveness_for_agent(germline_regulation_threshold_2026, ContextInnovator, Score1),
+    constraint_indexing:extractiveness_for_agent(germline_regulation_threshold_2026, ContextRegulator, Score2),
+    Score1 > Score2.  % The innovator experiences more extraction in this case.
 
-:- end_tests(germline_threshold_tests).
+/**
+ * TEST 3: Domain-specific insight - The "Safety Threshold"
+ * Demonstrates that the definition of "safe enough" is the central point of contention.
+ */
+test(safety_threshold_insight) :-
+    constraint_indexing:constraint_classification(germline_regulation_threshold_2026, ClassificationInnovator, context(agent_power(individual_powerful), _, _, _)),
+    constraint_indexing:constraint_classification(germline_regulation_threshold_2026, ClassificationRegulator, context(agent_power(institutional), _, _, _)),
+    ClassificationInnovator = snare,
+    ClassificationRegulator = rope.
+
+:- end_tests(germline_regulation_threshold_2026_tests).
 
 /* ==========================================================================
    5. MODEL INTERPRETATION (Commentary)
@@ -192,59 +263,82 @@ test(safety_as_enforcement) :-
 
 /**
  * LLM GENERATION NOTES
- * * Model: Gemini 2.0 Flash
- * * KEY DECISIONS:
+ * 
+ * Model: Gemini 2.0 Flash
+ * Date: 2026-01-23
+ * 
+ * KEY DECISIONS:
+ * 
  * 1. PERSPECTIVE GAP: The conflict lies between the Innovator (who sees 
- * the threshold as an arbitrary Noose) and the Progeny (who sees it as 
+ * the threshold as an arbitrary Snare) and the Progeny (who sees it as 
  * a protective Mountain).
+ * 
  * 2. REGULATORY ANALYSIS: The Omega variable (safety threshold) is what 
- * prevents the Rope from becoming a Noose for society at large. 
- * If the threshold is set too low, it becomes a "Noose" (permanent errors); 
+ * prevents the Rope from becoming a Snare for society at large. 
+ * If the threshold is set too low, it becomes a "Snare" (permanent errors); 
  * if set too high, it becomes a "Mountain" (denied cures).
+ * 
+ * 3. OMEGAS 
+ *    Define uncertainty so your analysis is cleaner
+ *    omega_variable(
+ *        germline_editing_safety_threshold,
+ *        "At what off-target mutation rate does 'not safe enough' become 'routinely safe'?",
+ *        resolution_mechanism("Meta-analysis of hundreds of clinical trials to establish parity with natural mutation rates"),
+ *        impact("If resolved low: Rapid transition to a global Rope. If resolved high: Remains an institutional Mountain."),
+ *        confidence_without_resolution(medium)
+ *    ).
+ * 
+ *    omega_variable(
+ *        regulatory_arbitrage_risk,
+ *        "Will 'bio-haven' nations lower the threshold early, creating a Snare for international harmonization?",
+ *        resolution_mechanism("Monitoring of national approval timelines for the first germline therapies"),
+ *        impact("If arbitrage occurs: The international 'Rope' breaks, leading to a fragmented Mountain/Snare landscape."),
+ *        confidence_without_resolution(low)
+ *    ).
  */
 
 /* ==========================================================================
-   6. OMEGA VARIABLES (Ω) - THE SAFETY THRESHOLD
-   ========================================================================== */
-
-omega_variable(
-    germline_editing_safety_threshold,
-    "At what off-target mutation rate does 'not safe enough' become 'routinely safe'?",
-    resolution_mechanism("Meta-analysis of hundreds of clinical trials to establish parity with natural mutation rates"),
-    impact("If resolved low: Rapid transition to a global Rope. If resolved high: Remains an institutional Mountain."),
-    confidence_without_resolution(medium)
-).
-
-omega_variable(
-    regulatory_arbitrage_risk,
-    "Will 'bio-haven' nations lower the threshold early, creating a Noose for international harmonization?",
-    resolution_mechanism("Monitoring of national approval timelines for the first germline therapies"),
-    impact("If arbitrage occurs: The international 'Rope' breaks, leading to a fragmented Mountain/Noose landscape."),
-    confidence_without_resolution(low)
-).
-
-/* ==========================================================================
-   7. ALTERNATIVE ANALYSIS
+   6. ALTERNATIVE ANALYSIS (If Applicable)
    ========================================================================== */
 
 /**
  * VIABLE ALTERNATIVES
- * * ALTERNATIVE 1: Permanent Global Ban
- * Viability: Historically the default for germline editing.
- * Suppression: Being eroded by the "likely" future routine use mentioned 
- * in the source.
- * * ALTERNATIVE 2: Somatic-Only Limitation
- * Viability: Current status quo.
- * Conclusion: The "Safety Threshold" Omega is the only factor determining 
- * if the world stays at Alternative 2 or moves to full germline "rewriting".
+ * 
+ * ALTERNATIVE 1: Permanent Global Ban
+ *    Viability: Historically the default for germline editing.
+ *    Suppression: Being eroded by the "likely" future routine use mentioned 
+ *    in the source.
+ * 
+ * ALTERNATIVE 2: Somatic-Only Limitation
+ *    Viability: Current status quo.
+ * 
+ * CONCLUSION:
+ * The "Safety Threshold" Omega is the only factor determining if the world 
+ * stays at Alternative 2 or moves to full germline "rewriting".
  */
 
 /* ==========================================================================
-   8. INTEGRATION HOOKS
+   7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Load: ?- [germline_regulation_threshold_2026].
-% Report: ?- multi_index_report(germline_regulation_threshold_2026).
+/**
+ * TO USE THIS CONSTRAINT:
+ * 
+ * 1. Load into main system:
+ *    ?- [constraints/germline_regulation_threshold_2026].
+ * 
+ * 2. Run multi-perspective analysis:
+ *    ?- constraint_indexing:multi_index_report(germline_regulation_threshold_2026).
+ * 
+ * 3. Run tests:
+ *    ?- run_tests(germline_regulation_threshold_2026_tests).
+ * 
+ * 4. Generate pedagogical report:
+ *    ?- pedagogical_report(germline_regulation_threshold_2026).
+ * 
+ * 5. Compare with other constraints:
+ *    ?- compare_constraints(germline_regulation_threshold_2026, [other_id]).
+ */
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

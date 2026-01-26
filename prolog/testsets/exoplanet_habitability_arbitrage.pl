@@ -115,7 +115,7 @@ constraint_indexing:constraint_classification(
     !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE LEGACY PLANET HUNTER - Noose
+   PERSPECTIVE 2: THE LEGACY PLANET HUNTER - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless (Subject to the pivot away from "typicality")
@@ -125,7 +125,7 @@ constraint_indexing:constraint_classification(
    
    WHY THIS CLASSIFICATION:
    For those hunting for an "Earth 2.0" using old models, the "weirdness" finding 
-   is a Noose—it reveals that their search target might not even exist.
+   is a Snare—it reveals that their search target might not even exist.
    
    NARRATIVE EVIDENCE:
    "We have yet to spot an Earth-like planet around a sun-like star... we’re 
@@ -134,7 +134,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     exoplanetary_habitability_arbitrage,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -185,9 +185,9 @@ constraint_indexing:constraint_classification(
 :- begin_tests(exoplanetary_habitability_arbitrage_tests).
 
 test(multi_perspective_variance) :-
-    % Exobiologist (Rope) vs Hunter (Noose) vs Rare Earth (Mountain)
+    % Exobiologist (Rope) vs Hunter (Snare) vs Rare Earth (Mountain)
     constraint_indexing:constraint_classification(exoplanetary_habitability_arbitrage, rope, context(analytical, biographical, arbitrage, global)),
-    constraint_indexing:constraint_classification(exoplanetary_habitability_arbitrage, noose, context(individual_powerless, immediate, trapped, national)),
+    constraint_indexing:constraint_classification(exoplanetary_habitability_arbitrage, snare, context(individual_powerless, immediate, trapped, national)),
     constraint_indexing:constraint_classification(exoplanetary_habitability_arbitrage, mountain, context(institutional, civilizational, constrained, global)).
 
 test(power_extractiveness_scaling) :-
@@ -211,7 +211,7 @@ test(power_extractiveness_scaling) :-
  * Reasoning: Chosen because the "weirdness" pivot reallocates significant 
  * informational and financial resources toward anomaly search.
  * * 2. PERSPECTIVE SELECTION:
- * Chose to analyze from the Exobiologist (Rope), Legacy Hunter (Noose), and 
+ * Chose to analyze from the Exobiologist (Rope), Legacy Hunter (Snare), and 
  * Rare Earth proponent (Mountain) to illustrate how the same data 
  * signifies tool, trap, and fate.
  * * 3. AMBIGUITIES:
@@ -227,7 +227,7 @@ omega_variable(
     exoplanetary_habitability_arbitrage_extraction_intent,
     "Is the focus on 'weird' systems a functional necessity for finding life or a strategic choice to sustain high-tech funding?",
     resolution_mechanism("Audit of discovery rates for habitable worlds in 'weird' vs 'typical' star systems"),
-    impact("If necessity: Mountain. If strategic choice: Noose."),
+    impact("If necessity: Mountain. If strategic choice: Snare."),
     confidence_without_resolution(medium)
 ).
 
@@ -251,7 +251,7 @@ omega_variable(
  * outliers.
  * * CONCLUSION:
  * The shift from "Typicality" to "Arbitrage" creates a Rope for scientists 
- * but a Noose for legacy theories that can no longer explain the absence 
+ * but a Snare for legacy theories that can no longer explain the absence 
  * of Earth twins.
  */
 

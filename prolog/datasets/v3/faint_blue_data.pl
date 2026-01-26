@@ -58,7 +58,7 @@ measurement(m6, blue_phenethylamine, suppression_requirement, 8, 0.40).
 measurement(m7, blue_phenethylamine, extractiveness, 12, 0.60).  
 measurement(m8, blue_phenethylamine, suppression_requirement, 12, 0.65). 
 
-% T=22: Peak extraction (Noose status)
+% T=22: Peak extraction (Snare status)
 measurement(m9, blue_phenethylamine, extractiveness, 22, 0.95).  
 measurement(m10, blue_phenethylamine, suppression_requirement, 22, 0.98). 
 

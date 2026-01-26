@@ -130,7 +130,7 @@ constraint_indexing:constraint_classification(
     true.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE MONOPOLIST - Noose
+   PERSPECTIVE 3: THE MONOPOLIST - Snare
    --------------------------------------------------------------------------
    WHO: individual_powerful
    WHEN: generational
@@ -139,13 +139,13 @@ constraint_indexing:constraint_classification(
    
    WHY THIS CLASSIFICATION:
    A powerful agent who owns the bottleneck uses the Max-Flow limit as a 
-   "Noose" to squeeze users. They purposefully keep capacity low to maintain 
+   "Snare" to squeeze users. They purposefully keep capacity low to maintain 
    scarcity and high extraction rates.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
     max_flow_min_cut,
-    noose,
+    snare,
     context(
         agent_power(individual_powerful),
         time_horizon(generational),
@@ -184,7 +184,7 @@ test(bottleneck_awareness) :-
  * * KEY DECISIONS:
  * The "Max-Flow" problem is fundamentally about bottlenecks. 
  * While the math is a Mountain, the *application* of that math in 
- * socio-technical systems is often a Noose (extraction) or a Rope (design).
+ * socio-technical systems is often a Snare (extraction) or a Rope (design).
  */
 
 /* ==========================================================================
@@ -207,4 +207,4 @@ omega_variable(
 % --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
 constraint_indexing:constraint_classification(max_flow, mountain, agent_power(analytical)).
 constraint_indexing:constraint_classification(max_flow, rope, agent_power(institutional)).
-constraint_indexing:constraint_classification(max_flow, noose, agent_power(individual_powerless)).
+constraint_indexing:constraint_classification(max_flow, snare, agent_power(individual_powerless)).

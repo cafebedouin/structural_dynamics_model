@@ -44,13 +44,13 @@
  * theorem as a "Rope" to choose which specific "unfairness" (e.g., 
  * susceptibility to tactical voting) to tolerate in a stable system.
  * - The Democratic Reformer (Victim): An agent for whom the theorem acts 
- * as a "Noose," as it "strangles" the search for a perfect voting system.
+ * as a "Snare," as it "strangles" the search for a perfect voting system.
  * * NARRATIVE ARC:
  * Arrow's Theorem is the "Mountain" of political reality—the impossibility 
  * of a perfect social welfare function is a fixed feature of logic. In 
  * legislative design, it is a "Rope" for functional coordination, allowing 
  * architects to prioritize stability over theoretical purity. However, 
- * for the idealist, the theorem acts as a "Noose," extracting the hope 
+ * for the idealist, the theorem acts as a "Snare," extracting the hope 
  * of a "true" collective will (extraction) and "choking" political 
  * energy by proving that every choice is a compromise of axioms.
  */
@@ -151,7 +151,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE VOTING SYSTEM REFORMER - Noose
+   PERSPECTIVE 3: THE VOTING SYSTEM REFORMER - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_moderate - Has the agency to campaign for reform but is bound by the theorem.
@@ -160,7 +160,7 @@ constraint_indexing:constraint_classification(
    SCOPE: global - Universal limit on collective choice.
    
    WHY THIS CLASSIFICATION:
-   For the reformer, Arrow's Theorem is a "Noose." It "strangles" the hope 
+   For the reformer, Arrow's Theorem is a "Snare." It "strangles" the hope 
    for a truly just outcome. It extracts enormous political and intellectual 
    capital (extraction) while "choking" the movement with the realization 
    that every "fix" introduces a new, equally fundamental unfairness.
@@ -168,7 +168,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     arrows_impossibility_theorem,
-    noose,
+    snare,
     context(
         agent_power(individual_moderate),
         time_horizon(historical),
@@ -194,7 +194,7 @@ test(multi_perspective_variance) :-
     Type1 \= Type2.
 
 test(reform_extraction_penalty) :-
-    % Reformers experience the "Noose" of high extraction (0.6).
+    % Reformers experience the "Snare" of high extraction (0.6).
     Context = context(individual_moderate, historical, constrained, global),
     constraint_indexing:extractiveness_for_agent(arrows_impossibility_theorem, Context, Score),
     Score >= 0.5.
@@ -220,7 +220,7 @@ test(natural_emergence) :-
  * political utility.
  * * 2. PERSPECTIVE SELECTION:
  * Chose Voter (Subject), Designer (Institution), and Reformer (Victim) 
- * to show how a "Mountain" of logic becomes a "Noose" for 
+ * to show how a "Mountain" of logic becomes a "Snare" for 
  * political aspiration.
  * * 3. OMEGA IDENTIFICATION:
  * Formalized the "Cardinal Utility" uncertainty—does the Mountain 
@@ -232,7 +232,7 @@ omega_variable(
     cardinal_utility_escape,
     "Is Arrow's 'Mountain' stable if we use Cardinal Utility (e.g., Score Voting) (Scaffold)?",
     resolution_mechanism("Investigation into whether Approval or Score voting evades the IIA/Dictatorship trade-off by including intensity of preference."),
-    impact("If Yes: Arrow is a 'Noose' specifically for ordinal systems. If No: It is a universal Mountain."),
+    impact("If Yes: Arrow is a 'Snare' specifically for ordinal systems. If No: It is a universal Mountain."),
     confidence_without_resolution(medium)
 ).
 
@@ -247,12 +247,12 @@ omega_variable(
  * systems like Range Voting bypass the specific "impossibility" proof, 
  * as they do not rely on ordinal rankings.
  * Suppression: Often suppressed in public discourse in favor of 
- * Ranked Choice (ordinal) which remains subject to the "Noose" of Arrow.
+ * Ranked Choice (ordinal) which remains subject to the "Snare" of Arrow.
  * * ALTERNATIVE 2: Quadratic Voting
  * Viability: Uses "buying" votes with points to reveal preference intensity.
  * * CONCLUSION:
  * The existence of Cardinal Utility alternatives (Alternative 1) proves 
- * that the Arrow "Noose" is the specific price we pay for the "Rope" 
+ * that the Arrow "Snare" is the specific price we pay for the "Rope" 
  * of rank-order simplicity.
  */
 

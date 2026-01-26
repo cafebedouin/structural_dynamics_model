@@ -40,7 +40,7 @@ measurement(m4, section_469, suppression_requirement, 1991, 0.70).
 measurement(m5, section_469, extractiveness, 1993, 0.45).
 measurement(m6, section_469, suppression_requirement, 1993, 0.50). 
 
-% T=2000: Calcification - System remains a "Tangled Rope" but with "Noose" characteristics for small investors
+% T=2000: Calcification - System remains a "Tangled Rope" but with "Snare" characteristics for small investors
 measurement(m7, section_469, extractiveness, 2000, 0.45).
 measurement(m8, section_469, suppression_requirement, 2000, 0.55).
 

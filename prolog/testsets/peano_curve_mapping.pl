@@ -46,7 +46,7 @@
  * Originally a "pathological" counter-example to intuition, the Peano Curve 
  * is a "Mountain" of topological reality. In modern computing, it is a 
  * "Rope" for functional coordination in spatial indexing. However, for 
- * the 1D parameter, the mapping is a "Noose"—it extracts its 1D simplicity 
+ * the 1D parameter, the mapping is a "Snare"—it extracts its 1D simplicity 
  * and forces it to assume the burden of a 2D existence, creating 
  * locality-breaking "jumps" in higher dimensions.
  */
@@ -141,7 +141,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE LOCALITY PRESERVATION - Noose
+   PERSPECTIVE 3: THE LOCALITY PRESERVATION - Snare
    --------------------------------------------------------------------------
    WHO: individual_powerless - The sequence of points bound by the 1D line.
    WHEN: immediate - Encountering a "jump" where 2D neighbors are 1D strangers.
@@ -150,7 +150,7 @@ constraint_indexing:constraint_classification(
    SCOPE: local - A specific discontinuous "jump" in the mapping.
    
    WHY THIS CLASSIFICATION:
-   The Peano mapping acts as a "Noose" for locality. Because a 1D line 
+   The Peano mapping acts as a "Snare" for locality. Because a 1D line 
    cannot be continuously mapped to a 2D square in a way that preserves 
    all neighborhood relations (Netto's Theorem), the curve "strangles" 
    locality. It extracts the 1D proximity of points, forcing distant 1D 
@@ -159,7 +159,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     peano_curve_mapping,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -186,8 +186,8 @@ test(perspective_variance) :-
     Type2 = rope.
 
 test(locality_noose_penalty) :-
-    % A powerless data sequence (constrained) sees the loss of locality as a Noose.
-    constraint_indexing:constraint_classification(peano_curve_mapping, noose, context(individual_powerless, immediate, constrained, local)).
+    % A powerless data sequence (constrained) sees the loss of locality as a Snare.
+    constraint_indexing:constraint_classification(peano_curve_mapping, snare, context(individual_powerless, immediate, constrained, local)).
 
 test(natural_emergence) :-
     domain_priors:emerges_naturally(peano_curve_mapping).
@@ -206,8 +206,8 @@ test(natural_emergence) :-
  * 1. CLASSIFICATION: I classified the Peano mapping as a Mountain for the 
  * individual point because topologicalSurjectivity is non-negotiable. 
  * 2. TYPE SHIFT: I highlighted how the "Rope" of spatial indexing depends on 
- * the "Noose" of locality loss. You cannot fill space (Rope) without 
- * breaking the 1D-2D neighborhood equivalence (Noose).
+ * the "Snare" of locality loss. You cannot fill space (Rope) without 
+ * breaking the 1D-2D neighborhood equivalence (Snare).
  * 3. EXTRACTIVENESS (0.25): Assigned due to the "Tax" on locality. Any 
  * space-filling curve must "extract" some level of linear order to 
  * satisfy the higher-dimensional density.
@@ -218,7 +218,7 @@ omega_variable(
     locality_preservation_limit,
     "Is there a 'Rope' (a different curve) that preserves locality better than Peano?",
     resolution_mechanism("Comparison of Peano vs Hilbert vs Morton curves using the 'Clustering Factor' metric."),
-    impact("If Hilbert is superior: Peano is a 'Noose' compared to the Hilbert 'Rope'."),
+    impact("If Hilbert is superior: Peano is a 'Snare' compared to the Hilbert 'Rope'."),
     confidence_without_resolution(high)
 ).
 
@@ -231,13 +231,13 @@ omega_variable(
  * * ALTERNATIVE 1: Hilbert Curve
  * Viability: Better locality preservation than Peano's original construction.
  * Suppression: Often preferred in engineering, making Peano's original 
- * construction a "Noose" by comparison for practical use.
+ * construction a "Snare" by comparison for practical use.
  * * ALTERNATIVE 2: Morton Order (Z-order)
  * Viability: Simpler to compute (bit-interleaving).
  * Status: A "Rope" used in many low-level CPU operations.
  * * CONCLUSION:
  * The existence of the Hilbert Curve (Alternative 1) transforms the 
- * original Peano Curve into a "Noose" for performance-seeking engineers, 
+ * original Peano Curve into a "Snare" for performance-seeking engineers, 
  * as it extracts more locality for the same space-filling result.
  */
 

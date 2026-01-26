@@ -43,7 +43,7 @@
  * * NARRATIVE ARC:
  * The game functions as a "Mountain" of transfinite necessity. For the 
  * logician, it is a "Rope" used to justify the move to stronger axioms (ZFC). 
- * For a computer attempting to simulate the game, it is a "Noose" that 
+ * For a computer attempting to simulate the game, it is a "Snare" that 
  * consumes all available time and memory long before the first branch is cleared.
  */
 
@@ -144,7 +144,7 @@ constraint_indexing:constraint_classification(
     !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE PHYSICAL COMPUTER - Noose
+   PERSPECTIVE 3: THE PHYSICAL COMPUTER - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless - Subject to the limits of entropy and time.
@@ -153,7 +153,7 @@ constraint_indexing:constraint_classification(
    SCOPE: local - Immediate hardware environment.
    
    WHY THIS CLASSIFICATION:
-   For any physical machine, the game is a Noose. Even though "Hercules 
+   For any physical machine, the game is a Snare. Even though "Hercules 
    wins," the number of steps required is so large that the universe 
    will end before the first major branch is removed. The "computability" 
    of the game strangles the physical resources of the computer.
@@ -161,7 +161,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     hydra_game,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -184,8 +184,8 @@ test(multi_perspective_variance) :-
     constraint_indexing:constraint_classification(hydra_game, mountain, context(analytical, civilizational, trapped, global)),
     % Institutional sees Rope
     constraint_indexing:constraint_classification(hydra_game, rope, context(institutional, biographical, arbitrage, national)),
-    % Powerless sees Noose
-    constraint_indexing:constraint_classification(hydra_game, noose, context(individual_powerless, immediate, constrained, local)).
+    % Powerless sees Snare
+    constraint_indexing:constraint_classification(hydra_game, snare, context(individual_powerless, immediate, constrained, local)).
 
 test(power_extractiveness_realizability) :-
     ContextPowerless = context(individual_powerless, immediate, constrained, local),
@@ -195,7 +195,7 @@ test(power_extractiveness_realizability) :-
     Score1 > Score2.
 
 test(time_immutability_hydra) :-
-    % Immediate horizon + trapped = Mountain/Noose (the wall is hit now)
+    % Immediate horizon + trapped = Mountain/Snare (the wall is hit now)
     constraint_indexing:effective_immutability(immediate, trapped, mountain).
 
 :- end_tests(hydra_game_tests).
@@ -228,7 +228,7 @@ omega_variable(
     merely a linguistic scaffold (Rope) for a finitist brain?",
     resolution_mechanism("Long-term neuro-computational study of transfinite reasoning"),
     impact("If Mountain: We can eventually 'see' the end of the Hydra. 
-    If Rope: The Hydra remains a permanent Noose for us."),
+    If Rope: The Hydra remains a permanent Snare for us."),
     confidence_without_resolution(low)
 ).
 
@@ -244,7 +244,7 @@ omega_variable(
  * Suppression: Standard logic suppresses non-standard models to 
  * maintain intuitive consistency.
  * * CONCLUSION:
- * The existence of stronger transfinite systems converts the "Noose" 
+ * The existence of stronger transfinite systems converts the "Snare" 
  * of the Hydra into a "Rope" for the advanced mathematician.
  */
 

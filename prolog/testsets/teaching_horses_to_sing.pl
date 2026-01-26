@@ -38,7 +38,7 @@
  * "buffer" against stochastic mortality events.
  * * KEY AGENTS:
  * - The Thief (The Prisoner): An agent with no immediate power who uses an absurd 
- * claim to transform a terminal "Noose" into a temporal "Rope".
+ * claim to transform a terminal "Snare" into a temporal "Rope".
  * - The Monarch (The Ruler): An institutional agent who enforces the extraction 
  * (imprisonment and labor) while holding the power of life and death.
  * - The Stablehand (The Cynic): An analytical observer who sees only the 
@@ -46,7 +46,7 @@
  * * NARRATIVE ARC:
  * The thief is "captured and hauled" before a monarch for execution. 
  * He introduces a year-long constraint (teaching the stallion to sing) to replace 
- * the immediate "Noose" of the gallows. While the task is 
+ * the immediate "Snare" of the gallows. While the task is 
  * physically impossible, the thief gambles on the "Mountain" of time—betting 
  * that the king, the horse, or himself might die within the year.
  */
@@ -66,7 +66,7 @@ narrative_ontology:constraint_claim([teaching_horses_to_sing], [existential_arbi
 domain_priors:base_extractiveness(teaching_horses_to_sing, 0.75).
 
 % Suppression score (0.0 = no suppression, 1.0 = full suppression)
-% Rationale: Moderate (0.4). The immediate "Noose" of execution is suppressed by 
+% Rationale: Moderate (0.4). The immediate "Snare" of execution is suppressed by 
 % the Monarch's bemusement, but the biological reality that "horses can't sing" 
 % remains visible to the cynical stablehand.
 domain_priors:suppression_score(teaching_horses_to_sing, 0.4).
@@ -154,7 +154,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE MONARCH (THE RULER) - Noose
+   PERSPECTIVE 3: THE MONARCH (THE RULER) - Snare
    --------------------------------------------------------------------------
    
    WHO: institutional (Rule-making power of life and death)
@@ -163,7 +163,7 @@ constraint_indexing:constraint_classification(
    SCOPE: regional (The Kingdom)
    
    WHY THIS CLASSIFICATION:
-   For the Monarch, the year-long stay is a "Noose." It is an extractive mechanism 
+   For the Monarch, the year-long stay is a "Snare." It is an extractive mechanism 
    that keeps the thief in a state of controlled labor (singing) while maintaining 
    the terminal threat. The Monarch "owns" the time he has granted.
    
@@ -174,7 +174,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     teaching_horses_to_sing,
-    noose,
+    snare,
     context(
         agent_power(institutional),
         time_horizon(biographical),
@@ -194,8 +194,8 @@ test(multi_perspective_gambit) :-
     constraint_indexing:constraint_classification(teaching_horses_to_sing, rope, context(individual_powerless, biographical, mobile, local)),
     % Stablehand (Analytical/Trapped) sees a Mountain
     constraint_indexing:constraint_classification(teaching_horses_to_sing, mountain, context(analytical, immediate, trapped, local)),
-    % Monarch (Institutional/Mobile) sees a Noose
-    constraint_indexing:constraint_classification(teaching_horses_to_sing, noose, context(institutional, biographical, mobile, regional)),
+    % Monarch (Institutional/Mobile) sees a Snare
+    constraint_indexing:constraint_classification(teaching_horses_to_sing, snare, context(institutional, biographical, mobile, regional)),
     % Verify they differ
     Type1 \= Type2,
     Type2 \= Type3.
@@ -231,13 +231,13 @@ test(time_immutability_gallows) :-
  * is liquidated for a year of imprisonment and required labor (singing). 
  * The Monarch "owns" this year.
  * * 2. STATUS: [RESOLVED MANDATROPHY]
- * Reasoning: While the Monarch's extraction is high (Noose), the Thief 
+ * Reasoning: While the Monarch's extraction is high (Snare), the Thief 
  * experiences it as a Rope—a purchased tool for coordination with time and 
  * possibility. This perspectival variance resolves the 
  * apparent predatory nature of the year stay.
  * * 3. PERSPECTIVE SELECTION:
  * The Thief (Rope) illustrates the arbitrage of time; the Stablehand (Mountain) 
- * illustrates biological limits; the Monarch (Noose) illustrates institutional 
+ * illustrates biological limits; the Monarch (Snare) illustrates institutional 
  * containment.
  * * 4. AMBIGUITIES:
  * - The outcome of the singing horse: I resolved this as an Omega variable 
@@ -254,7 +254,7 @@ omega_variable(
     death sentence an inescapable Mountain?",
     resolution_mechanism("Observation of the passage of time over the 365-day period"),
     impact("If a death occurs: The stay was a Rope. If no death occurs: The sing-or-die 
-    clause is a terminal Noose."),
+    clause is a terminal Snare."),
     confidence_without_resolution(medium)
 ).
 
@@ -284,7 +284,7 @@ omega_variable(
  * * CONCLUSION:
  * The existence of Alternative 1 (Death) makes the impossible task a "Rope" 
  * of existential value. Without the threat of the gallows, the stable is 
- * merely a Noose of labor.
+ * merely a Snare of labor.
  */
 
 /* ==========================================================================

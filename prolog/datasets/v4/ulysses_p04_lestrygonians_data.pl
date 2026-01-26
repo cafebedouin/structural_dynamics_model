@@ -8,7 +8,7 @@ entity(molly_bloom, individual).
 entity(city_metabolism, structural).
 entity(commercial_scaffold, scaffold).
 entity(maternal_remorse, rope).
-entity(the_boylan_constraint, noose).
+entity(the_boylan_constraint, snare).
 
 interval(lestrygonians_interval, 13, 14). % 1:00 PM to 2:00 PM
 
@@ -16,7 +16,7 @@ interval(lestrygonians_interval, 13, 14). % 1:00 PM to 2:00 PM
 constraint_claim(city_metabolism, mountain).     % Claimed as "Stream of Life" / Natural Law
 constraint_claim(commercial_scaffold, scaffold). % Claimed as "The Ads" / Coordination
 constraint_claim(maternal_remorse, rope).        % Claimed as "Pity" / Memory
-constraint_claim(the_boylan_constraint, noose).  % The "After Two" deadline
+constraint_claim(the_boylan_constraint, snare).  % The "After Two" deadline
 
 % --- KINETIC METRICS (T=14) ---
 % Bloom's experience with the city's digestive cycle
@@ -78,8 +78,8 @@ intent_power_change(lestrygonians_interval, consumer_class, 0.35).
 /*
 1. MODAL TRANSFORMATION HISTORY:
    - City Metabolism: [Resistance 0.94 -> 0.96 -> 0.95]. Stable "Mountain" status. The "Stream of Life" is measured as a highly extractive but inescapable structural cycle.
-   - The Boylan Constraint: [Resistance 0.40 -> 0.99]. Sudden transformation from a background "Tangled Rope" to a primary "Noose" as the T=14 (2:00 PM) threshold approaches.
-   - Maternal Remorse: [Resistance 0.45]. Remains a "Rope" (tether) rather than a "Noose" (capture) in this interval, processed through the "Cosy smell" of bathwater memories.
+   - The Boylan Constraint: [Resistance 0.40 -> 0.99]. Sudden transformation from a background "Tangled Rope" to a primary "Snare" as the T=14 (2:00 PM) threshold approaches.
+   - Maternal Remorse: [Resistance 0.45]. Remains a "Rope" (tether) rather than a "Snare" (capture) in this interval, processed through the "Cosy smell" of bathwater memories.
 
 2. STRUCTURAL SIGNATURE ANALYSIS (v3.2):
    - City Metabolism: High resistance (0.95), zero viable alternatives, constant extractiveness. 
@@ -98,7 +98,7 @@ intent_power_change(lestrygonians_interval, consumer_class, 0.35).
    - ALERT: 'city_metabolism' claims "Mountain" (Natural Law). Measurement confirms this. No fraud detected.
    - ALERT: The "H.E.L.Y.S." sandwichmen claim "Scaffold" (Coordination). 
    - AUDIT: Low power change for beneficiaries. The Y "lagging behind" indicates a breakdown in coordination utility. 
-   - CLASSIFICATION: Failed Scaffold (Zombie status).
+   - CLASSIFICATION: Failed Scaffold (Piton status).
 
 5. COORDINATION SUMMARY:
    - The interval illustrates a metabolic baseline: "Three hundred kicked the bucket. Other three hundred born." 

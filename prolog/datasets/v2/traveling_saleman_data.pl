@@ -22,14 +22,14 @@ constraint_metric(cycle_completeness, suppression_requirement, 0.05).
 constraint_metric(cycle_completeness, snap_back_potential, 0.0).
 
 % Tangled Rope Verification (⊠T)
-% Current extractiveness (0.72) exceeds Tangled Rope limit (0.65), triggering Noose logic.
-constraint_claim(permutation_density, noose).
+% Current extractiveness (0.72) exceeds Tangled Rope limit (0.65), triggering Snare logic.
+constraint_claim(permutation_density, snare).
 constraint_metric(permutation_density, extractiveness, 0.72).
 constraint_metric(permutation_density, suppression_requirement, 0.46).
 
-% Noose Verification (⊠C)
+% Snare Verification (⊠C)
 % Requires extractiveness >= 0.66 AND suppression_requirement >= 0.46
-constraint_claim(general_case_hardness, noose).
+constraint_claim(general_case_hardness, snare).
 constraint_metric(general_case_hardness, extractiveness, 0.99).
 constraint_metric(general_case_hardness, suppression_requirement, 0.85).
 

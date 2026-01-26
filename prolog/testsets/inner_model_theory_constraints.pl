@@ -43,7 +43,7 @@
  * a "Rope" to prove consistency results and map the "Consistency Strength" 
  * of large cardinals.
  * - The Pluralist Realist (Analytical): An observer for whom a specific 
- * inner model acts as a "Noose," as it "strangles" the rich variety of 
+ * inner model acts as a "Snare," as it "strangles" the rich variety of 
  * the full universe (V) to enforce a rigid, predictable structure.
  * * NARRATIVE ARC:
  * Inner Model Theory represents the "Mountain" of minimal, canonical reality 
@@ -51,7 +51,7 @@
  * coordination tool that allows for the "bootstrapping" of consistency. 
  * However, for those who believe the universe should be "rich" (e.g., the 
  * Axiom of Determinacy or large cardinals), the rigid constraints of $V=L$ 
- * act as a "Noose," extracting the "Fullness of V" (extraction) and 
+ * act as a "Snare," extracting the "Fullness of V" (extraction) and 
  * "choking" the possibility of higher-order symmetry.
  */
 
@@ -150,16 +150,16 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE LARGE CARDINAL PROPONENT - Noose
+   PERSPECTIVE 3: THE LARGE CARDINAL PROPONENT - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_moderate - Has the intelligence to define but is bound by L's limit.
    WHEN: civilizational - Seeking a "Large" universe where Measurable Cardinals exist.
-   WHERE: constrained - $V=L$ is a "Noose" because it denies the existence of $0^{\#}$.
+   WHERE: constrained - $V=L$ is a "Snare" because it denies the existence of $0^{\#}$.
    SCOPE: global - Universal limit on set-theoretic ontology.
    
    WHY THIS CLASSIFICATION:
-   For those seeking a "Large" universe, the constraint of $V=L$ is a "Noose." 
+   For those seeking a "Large" universe, the constraint of $V=L$ is a "Snare." 
    It "strangles" the possibility of Measurable Cardinals (Scott's Theorem). 
    It extracts the "Richness of V" (extraction), "choking" the 
    growth of the transfinite to maintain a "thin" constructible line.
@@ -169,7 +169,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     inner_model_theory_constraints,
-    noose,
+    snare,
     context(
         agent_power(individual_moderate),
         time_horizon(civilizational),
@@ -195,7 +195,7 @@ test(multi_perspective_variance) :-
     Type1 \= Type2.
 
 test(ontological_extraction_penalty) :-
-    % Pluralists feel the 0.3 extraction of "Richness" as a Noose.
+    % Pluralists feel the 0.3 extraction of "Richness" as a Snare.
     Context = context(individual_moderate, civilizational, constrained, global),
     constraint_indexing:extractiveness_for_agent(inner_model_theory_constraints, Context, Score),
     Score >= 0.25.
@@ -220,7 +220,7 @@ test(natural_emergence) :-
  * consistent sub-universe.
  * * 2. CLASSIFICATION RATIONALE:
  * Captured the transition from the "Mountain" of Gödel's L to the 
- * "Noose" it became for those discovering the "Large Cardinal" hierarchy.
+ * "Snare" it became for those discovering the "Large Cardinal" hierarchy.
  */
 
 % OMEGA IDENTIFICATION
@@ -228,7 +228,7 @@ omega_variable(
     inner_model_limit,
     "Does there exist an inner model for a Supercompact Cardinal (Mountain) or is it a logical Scaffold?",
     resolution_mechanism("Development of the 'Ultimate L' conjecture or higher core model theories."),
-    impact("If Mountain: We can reconcile Large Cardinals with Inner Models. If Noose: The two remain forever in conflict."),
+    impact("If Mountain: We can reconcile Large Cardinals with Inner Models. If Snare: The two remain forever in conflict."),
     confidence_without_resolution(medium)
 ).
 
@@ -247,7 +247,7 @@ omega_variable(
  * keeping the "L-like" structure.
  * * CONCLUSION:
  * The existence of Forcing (Alternative 1) is what turns the $V=L$ 
- * "Mountain" into a "Noose" for modern set theorists.
+ * "Mountain" into a "Snare" for modern set theorists.
  */
 
 /* ==========================================================================

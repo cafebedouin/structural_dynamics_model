@@ -35,10 +35,10 @@ constraint_metric(rosser_ordering_entanglement, suppression_requirement, 0.44).
 constraint_metric(rosser_ordering_entanglement, snap_back_potential, 0.80).
 constraint_metric(rosser_ordering_entanglement, extractiveness, 0.62).
 
-% The Incompleteness Barrier (The Noose)
+% The Incompleteness Barrier (The Snare)
 % The formal proof that neither Rho nor its negation can be proven in P.
 % Extractiveness at 0.99 requires the 'rosser_predicate_scaffold' to achieve undecidability.
-constraint_claim(complete_semantic_exhaustion, noose).
+constraint_claim(complete_semantic_exhaustion, snare).
 constraint_metric(complete_semantic_exhaustion, intensity, 0.99).
 constraint_metric(complete_semantic_exhaustion, suppression_requirement, 0.95).
 constraint_metric(complete_semantic_exhaustion, snap_back_potential, 0.01).
@@ -49,7 +49,7 @@ constraint_metric(complete_semantic_exhaustion, extractiveness, 0.99).
 recommendation(rec_01, utilize_witness_comparison_shorthand_for_rosser_predicates).
 affects_constraint(rec_01, rosser_ordering_entanglement).
 
-% Noose (0.99 extractiveness) triggers Cut
+% Snare (0.99 extractiveness) triggers Cut
 % Utilizing 'rosser_predicate_scaffold' to replace the standard Prov(x) with the Rosser-Prov(x).
 recommendation(rec_02, abandon_omega_consistency_requirement_via_rosser_transformation).
 affects_constraint(rec_02, complete_semantic_exhaustion).

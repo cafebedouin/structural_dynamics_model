@@ -27,12 +27,12 @@ event(ev_06_narrative_infection, trauma_transfer, 98, [actor(soh), target(mbatha
 constraint_claim(thermal_inversion, mountain).
 constraint_metric(thermal_inversion, accessibility_collapse, 0.95).
 
-% Noose: Economic Coercion. The 'No one gets paid' threat creates a closing circle.
-constraint_claim(economic_censorship, noose).
+% Snare: Economic Coercion. The 'No one gets paid' threat creates a closing circle.
+constraint_claim(economic_censorship, snare).
 constraint_metric(economic_censorship, stakes_inflation, 0.88).
 
-% Zombie: The Antarctic Treaty Protocol. A 'dead' rule that is cited but bypassed in crisis.
-constraint_claim(treaty_protocol, zombie).
+% Piton: The Antarctic Treaty Protocol. A 'dead' rule that is cited but bypassed in crisis.
+constraint_claim(treaty_protocol, piton).
 constraint_metric(treaty_protocol, suppression, 0.75).
 
 % --- 4. Recommendations & Veto Structure ---

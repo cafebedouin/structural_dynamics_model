@@ -46,7 +46,7 @@
  * The effect functions as a "Mountain" of psychological inertia. For the 
  * salesperson, it is a "Rope" (using "try-before-you-buy" to create ownership). 
  * For the person trapped in an old, inefficient house or bad investment due to 
- * sentiment, it is a "Noose" that strangles their financial mobility.
+ * sentiment, it is a "Snare" that strangles their financial mobility.
  */
 
 /* ==========================================================================
@@ -55,7 +55,7 @@
 
 % Required for structural identification
 narrative_ontology:interval(endowment_interval, 0, 10).
-narrative_ontology:constraint_claim(endowment_effect, noose).
+narrative_ontology:constraint_claim(endowment_effect, snare).
 
 % Base extractiveness score (0.0-1.0)
 % Rationale: It extracts "liquidity" and "efficient allocation" from the market. 
@@ -152,7 +152,7 @@ constraint_indexing:constraint_classification(
    
    WHY THIS CLASSIFICATION:
    For an heir who desperately needs money but cannot bring themselves to 
-   sell a family estate, the effect is a Noose. Their own psychology 
+   sell a family estate, the effect is a Snare. Their own psychology 
    strangles their financial future. The value they ascribe to the "endowment" 
    prevents them from taking the "exit" that market reality offers, 
    extracting their potential wealth and freedom.
@@ -160,7 +160,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     endowment_effect,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -179,10 +179,10 @@ test(multi_perspective_variance) :-
     % Test that different perspectives yield different classifications
     constraint_indexing:constraint_classification(endowment_effect, mountain, context(agent_power(analytical), _, _, _)),
     constraint_indexing:constraint_classification(endowment_effect, rope, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(endowment_effect, noose, context(agent_power(individual_powerless), _, _, _)).
+    constraint_indexing:constraint_classification(endowment_effect, snare, context(agent_power(individual_powerless), _, _, _)).
 
 test(power_extractiveness_asymmetry) :-
-    % Powerless experience more extraction as the "Noose" of sentiment
+    % Powerless experience more extraction as the "Snare" of sentiment
     ContextPowerless = context(individual_powerless, immediate, constrained, local),
     ContextPowerful = context(institutional, biographical, arbitrage, local),
     constraint_indexing:extractiveness_for_agent(endowment_effect, ContextPowerless, Score1),
@@ -213,7 +213,7 @@ test(time_immutability_scale) :-
  * universally, but the internal "noise" of the bias suppresses its 
  * application in high-stakes personal decisions.
  * * 3. PERSPECTIVE SELECTION:
- * Selected Analytical (Mountain), Institutional (Rope), and Powerless (Noose) 
+ * Selected Analytical (Mountain), Institutional (Rope), and Powerless (Snare) 
  * to demonstrate the full spread of indexical types.
  * * 4. OMEGAS:
  * omega_variable(
@@ -240,7 +240,7 @@ test(time_immutability_scale) :-
  * with owned goods.
  * * CONCLUSION:
  * The presence of a rational market alternative (Coase) that is suppressed 
- * by a natural cognitive bias confirms the "Noose" type for the individual 
+ * by a natural cognitive bias confirms the "Snare" type for the individual 
  * actor while remaining a "Mountain" of reality for the observer.
  */
 

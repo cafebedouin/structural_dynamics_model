@@ -40,6 +40,7 @@ def build_suite():
 
     with open(OUTPUT_FILE, 'w') as out:
         out.write(":- use_module(scenario_manager).\n")
+        out.write(":- use_module(data_validation).\n")
         out.write(":- dynamic test_passed/1.\n")
         out.write(":- dynamic test_failed/2.\n")
         out.write(":- working_directory(_, '../prolog/').\n\n")
@@ -48,7 +49,12 @@ def build_suite():
         out.write("    retractall(test_failed(_, _)),\n")
         out.write("    writeln('--- STARTING DYNAMIC VALIDATION ---'),\n")
         out.write(',\n'.join(test_entries) + ',\n')
-        out.write("    count_and_report.\n\n")
+        out.write("    count_and_report,\n")
+        out.write("    run_data_validation.\n\n")
+        out.write("run_data_validation :-\n")
+        out.write("    writeln(''),\n")
+        out.write("    writeln('--- RUNNING DATA QUALITY VALIDATION ---'),\n")
+        out.write("    data_validation:validate_all.\n\n")
         out.write("test_file(Path, ID, Label, N) :-\n")
         out.write("    format('~n[~w] DOMAIN: ~w (~w)~n', [N, Label, Path]),\n")
         out.write("    (   catch(load_and_run(Path, ID), E, (assertz(test_failed(Path, E)), format('[FAIL] Exception: ~w~n', [E]), fail))\n")

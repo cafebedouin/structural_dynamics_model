@@ -24,12 +24,12 @@ event(ev_06_collapse, systemic_failure, 98, [actor(kenji), result(neural_remodel
 constraint_claim(neural_remodeling_limit, mountain).
 constraint_metric(neural_remodeling_limit, accessibility_collapse, 0.95).
 
-% Noose: The Directorship race. The more Kenji succeeds, the more the role demands 'Ken,' tightening the requirement for dosing.
-constraint_claim(directorship_pressure, noose).
+% Snare: The Directorship race. The more Kenji succeeds, the more the role demands 'Ken,' tightening the requirement for dosing.
+constraint_claim(directorship_pressure, snare).
 constraint_metric(directorship_pressure, stakes_inflation, 0.85).
 
-% Zombie: The University Wellness/Occupational Physician protocol. Exists as a formality but is bypassed by Kenji's 'calculated' performance.
-constraint_claim(occupational_health_protocol, zombie).
+% Piton: The University Wellness/Occupational Physician protocol. Exists as a formality but is bypassed by Kenji's 'calculated' performance.
+constraint_claim(occupational_health_protocol, piton).
 constraint_metric(occupational_health_protocol, suppression, 0.65).
 
 % --- 4. Recommendations & Veto Structure ---

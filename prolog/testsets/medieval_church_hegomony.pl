@@ -41,7 +41,7 @@
  * - The Heretic/Dissenter: Subjects attempting "analytical" exit, facing high suppression.
  * * NARRATIVE ARC:
  * The Church functions as a cosmic "Mountain" for the faithful, providing 
- * meaning and social safety nets, but acts as a "Noose" for those seeking 
+ * meaning and social safety nets, but acts as a "Snare" for those seeking 
  * economic or intellectual independence from the papal hierarchy.
  */
 
@@ -133,7 +133,7 @@ constraint_indexing:constraint_classification(
     !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE SUPPRESSED DISSENTER - Noose
+   PERSPECTIVE 3: THE SUPPRESSED DISSENTER - Snare
    --------------------------------------------------------------------------
    WHO: individual_powerless
    WHEN: immediate
@@ -141,7 +141,7 @@ constraint_indexing:constraint_classification(
    SCOPE: regional
    
    WHY THIS CLASSIFICATION:
-   For groups like the Cathars or early Lollards, the Church is a Noose. 
+   For groups like the Cathars or early Lollards, the Church is a Snare. 
    The refusal to pay tithes or the desire for vernacular scripture 
    results in asymmetric violence, asset forfeiture, and physical 
    annihilation.
@@ -149,7 +149,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     medieval_church_hegemony,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -191,9 +191,9 @@ test(tithe_extractiveness) :-
  * vernacular bibles (e.g., Council of Toulouse, 1229).
  * 2. EXTRACTIVENESS (0.7): While the tithe was a 10% extraction, the 
  * Church also provided "social insurance" (hospitals, poor relief) which 
- * distinguishes it from a 1.0 "pure robbery" Noose.
+ * distinguishes it from a 1.0 "pure robbery" Snare.
  * 3. PERSPECTIVES: I used the "Monarch" to show how a constraint can be a 
- * "Rope" for one class while being a "Mountain" or "Noose" for another.
+ * "Rope" for one class while being a "Mountain" or "Snare" for another.
  */
 
 /* ==========================================================================
@@ -228,4 +228,4 @@ test(tithe_extractiveness) :-
 % --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
 constraint_indexing:constraint_classification(medieval_church_hegomony, mountain, agent_power(analytical)).
 constraint_indexing:constraint_classification(medieval_church_hegomony, rope, agent_power(institutional)).
-constraint_indexing:constraint_classification(medieval_church_hegomony, noose, agent_power(individual_powerless)).
+constraint_indexing:constraint_classification(medieval_church_hegomony, snare, agent_power(individual_powerless)).

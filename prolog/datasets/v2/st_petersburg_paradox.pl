@@ -35,10 +35,10 @@ constraint_metric(infinite_expectation, suppression_requirement, 0.45).
 constraint_metric(infinite_expectation, snap_back_potential, 0.60).
 constraint_metric(infinite_expectation, extractiveness, 0.55).
 
-% The Infinite Wealth Fallacy (The Noose)
+% The Infinite Wealth Fallacy (The Snare)
 % The assumption that the casino/house has infinite resources to pay out.
 % This "strangles" the real-world application and requires the 'utility_function_log' scaffold.
-constraint_claim(unbounded_resource_assumption, noose).
+constraint_claim(unbounded_resource_assumption, snare).
 constraint_metric(unbounded_resource_assumption, intensity, 0.98).
 constraint_metric(unbounded_resource_assumption, suppression_requirement, 0.90).
 constraint_metric(unbounded_resource_assumption, snap_back_potential, 0.05).
@@ -49,7 +49,7 @@ constraint_metric(unbounded_resource_assumption, extractiveness, 0.95).
 recommendation(rec_01, replace_expected_payout_with_expected_utility_log_scale).
 affects_constraint(rec_01, infinite_expectation).
 
-% Noose (0.95 extractiveness) triggers Cut
+% Snare (0.95 extractiveness) triggers Cut
 % Utilizing 'utility_function_log' scaffold to bound the value by diminishing marginal utility.
 recommendation(rec_02, impose_finite_wealth_limit_on_lottery_operator).
 affects_constraint(rec_02, unbounded_resource_assumption).

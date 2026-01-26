@@ -39,7 +39,7 @@
  * - Leopold Bloom: Individual moderate navigating via "secret master" masonic 
  * rituals (Rope).
  * - The Deafmute Idiot: Individual powerless agent trapped in a "Saint Vitus’ 
- * dance" and imprisoned by children (Noose).
+ * dance" and imprisoned by children (Snare).
  * - Nighttown (The Environment): Institutional force where the "skeleton tracks" 
  * of the mind are immutable laws (Mountain).
  */
@@ -50,8 +50,8 @@
 
 % Required for [STEP 1] and [STEP 2] of the DR-Audit Suite
 narrative_ontology:interval(nighttown_vigil_id, 0, 10).
-% Fixed: Changed 'psychic_confrontation' to 'noose' to satisfy schema
-narrative_ontology:constraint_claim(nighttown_hallucinatory_vigil, noose).
+% Fixed: Changed 'psychic_confrontation' to 'snare' to satisfy schema
+narrative_ontology:constraint_claim(nighttown_hallucinatory_vigil, snare).
 
 % Metrics: Extractiveness (0.6 - Psychological extraction) and Suppression (0.8 - High repression)
 domain_priors:base_extractiveness(nighttown_hallucinatory_vigil, 0.6).
@@ -85,16 +85,16 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE DEAFMUTE IDIOT - Noose
+   PERSPECTIVE 2: THE DEAFMUTE IDIOT - Snare
    --------------------------------------------------------------------------
    WHO: individual_powerless - "shapeless mouth dribbling... jerks past".
-   WHY: For the truly powerless in Nighttown, the environment is a "Noose"—an 
+   WHY: For the truly powerless in Nighttown, the environment is a "Snare"—an 
    inescapable trap of physical and social degradation where no coordination 
    benefits exist.
    -------------------------------------------------------------------------- */
 constraint_indexing:constraint_classification(
     nighttown_hallucinatory_vigil,
-    noose,
+    snare,
     context(agent_power(individual_powerless), time_horizon(immediate), exit_options(constrained), spatial_scope(local))
 ) :- !.
 
@@ -121,7 +121,7 @@ constraint_indexing:constraint_classification(
 test(multi_perspective_circe) :-
     constraint_indexing:constraint_classification(nighttown_hallucinatory_vigil, T1, context(agent_power(individual_moderate), _, _, _)),
     constraint_indexing:constraint_classification(nighttown_hallucinatory_vigil, T2, context(agent_power(individual_powerless), _, _, _)),
-    T1 = rope, T2 = noose.
+    T1 = rope, T2 = snare.
 
 test(immutability_nighttown_scaling) :-
     % Institutional view sees the hallucinations as a Mountain
@@ -136,17 +136,17 @@ test(immutability_nighttown_scaling) :-
 /**
  * LLM GENERATION NOTES:
  * Refactored to eliminate the 'psychic_confrontation' mismatch. Declaring the 
- * claim as 'noose' allows the audit to identify how the "False Mountain" of 
- * hallucination masks an underlying 'Noose' of extreme psychological 
+ * claim as 'snare' allows the audit to identify how the "False Mountain" of 
+ * hallucination masks an underlying 'Snare' of extreme psychological 
  * suppression.
  */
 
 omega_variable(
     rudy_apparition_status,
     "Is Rudy's apparition a healing vision (Rope) or a symptom of deep 
-    trauma-based extraction (Noose)?",
+    trauma-based extraction (Snare)?",
     resolution_mechanism("Comparative analysis of Bloom's posture as 'secret master'"),
-    impact("If healing: Rope. If symptom: Noose."),
+    impact("If healing: Rope. If symptom: Snare."),
     confidence_without_resolution(medium)
 ).
 
@@ -170,4 +170,4 @@ omega_variable(
 % --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
 constraint_indexing:constraint_classification(ulysses_chp15, mountain, agent_power(analytical)).
 constraint_indexing:constraint_classification(ulysses_chp15, rope, agent_power(institutional)).
-constraint_indexing:constraint_classification(ulysses_chp15, noose, agent_power(individual_powerless)).
+constraint_indexing:constraint_classification(ulysses_chp15, snare, agent_power(individual_powerless)).

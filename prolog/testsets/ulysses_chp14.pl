@@ -38,7 +38,7 @@
  * * KEY AGENTS:
  * - Leopold Bloom: Individual moderate observing the process with "paternal care" (Rope).
  * - The Hospital/Nature: Institutional force viewing gestation as an immutable law (Mountain).
- * - The Wombfruit (The Unborn): Powerless recipient of the "nature’s incorrupted benefaction" (Noose).
+ * - The Wombfruit (The Unborn): Powerless recipient of the "nature’s incorrupted benefaction" (Snare).
  */
 
 /* ==========================================================================
@@ -81,16 +81,16 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE WOMBFRUIT (The Powerless) - Noose
+   PERSPECTIVE 2: THE WOMBFRUIT (The Powerless) - Snare
    --------------------------------------------------------------------------
    WHO: individual_powerless - The "quickening" that has no agency.
-   WHY: For the unborn, the biological process is a "Noose"—an extractive 
+   WHY: For the unborn, the biological process is a "Snare"—an extractive 
    trap of development where they are bound by "nature’s boon" without 
    consent or coordination.
    -------------------------------------------------------------------------- */
 constraint_indexing:constraint_classification(
     gestation_the_wombfruit,
-    noose,
+    snare,
     context(agent_power(individual_powerless), time_horizon(immediate), exit_options(trapped), spatial_scope(local))
 ) :- !.
 
@@ -134,15 +134,15 @@ test(immutability_gestation_scaling) :-
  * Refactored to eliminate the 'biological_destiny' mismatch. Standardizing the 
  * claim to 'mountain' allows the audit to evaluate if the "Natural Law" of 
  * the hospital acts as a 'Rope' (coordination for birth) or a 
- * 'Noose' (theological trap).
+ * 'Snare' (theological trap).
  */
 
 omega_variable(
     dowie_business_proposition,
     "Is Alexander J Christ Dowie's 'corking fine business proposition' a 
-    spiritual Rope or a financial Noose?",
+    spiritual Rope or a financial Snare?",
     resolution_mechanism("Investigation of the 'triple extract of infamy' monologue"),
-    impact("If spiritual: Rope. If financial: Noose."),
+    impact("If spiritual: Rope. If financial: Snare."),
     confidence_without_resolution(low)
 ).
 
@@ -165,4 +165,4 @@ omega_variable(
 % --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
 constraint_indexing:constraint_classification(ulysses_chp14, mountain, agent_power(analytical)).
 constraint_indexing:constraint_classification(ulysses_chp14, rope, agent_power(institutional)).
-constraint_indexing:constraint_classification(ulysses_chp14, noose, agent_power(individual_powerless)).
+constraint_indexing:constraint_classification(ulysses_chp14, snare, agent_power(individual_powerless)).

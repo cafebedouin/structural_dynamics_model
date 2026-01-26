@@ -46,7 +46,7 @@
  * * NARRATIVE ARC:
  * Originally established as a Rope (a functional coordination tool for 
  * researchers), the $p < 0.05$ threshold has occasionally mutated into a 
- * Noose (p-hacking and publication bias). For the individual researcher, 
+ * Snare (p-hacking and publication bias). For the individual researcher, 
  * it remains a Mountain—an unyielding barrier that determines what 
  * enters the "record of truth."
  */
@@ -147,7 +147,7 @@ constraint_indexing:constraint_classification(
     !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE META-ANALYST - Noose
+   PERSPECTIVE 3: THE META-ANALYST - Snare
    --------------------------------------------------------------------------
    
    WHO: analytical - Observer of the system's aggregate failures.
@@ -156,7 +156,7 @@ constraint_indexing:constraint_classification(
    SCOPE: global - Impact on the credibility of science as a whole.
    
    WHY THIS CLASSIFICATION:
-   The meta-analyst identifies the Noose. The rigid $p < 0.05$ threshold 
+   The meta-analyst identifies the Snare. The rigid $p < 0.05$ threshold 
    incentivizes p-hacking and the "file drawer problem" (suppression of 
    null results), extracting the actual truth of scientific inquiry to 
    satisfy the "extractive" requirement of novel results.
@@ -164,7 +164,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     burden_of_proof_scientific_empirical,
-    noose,
+    snare,
     context(
         agent_power(analytical),
         time_horizon(historical),
@@ -183,7 +183,7 @@ constraint_indexing:constraint_classification(
 :- begin_tests(scientific_burden_of_proof_tests).
 
 test(multi_perspective_gap) :-
-    % Researcher (Mountain) vs Community (Rope) vs Meta-Analyst (Noose)
+    % Researcher (Mountain) vs Community (Rope) vs Meta-Analyst (Snare)
     constraint_indexing:constraint_classification(burden_of_proof_scientific_empirical, T1, context(individual_powerless, immediate, trapped, local)),
     constraint_indexing:constraint_classification(burden_of_proof_scientific_empirical, T2, context(institutional, generational, mobile, global)),
     constraint_indexing:constraint_classification(burden_of_proof_scientific_empirical, T3, context(analytical, historical, analytical, global)),
@@ -218,9 +218,9 @@ test(suppression_impact_on_truth) :-
 omega_variable(
     arbitrary_threshold_logic,
     "Is there a mathematical basis for 0.05, or is it a historical 'Mountain' 
-     that has become a 'Noose' through inertia?",
+     that has become a 'Snare' through inertia?",
     resolution_mechanism("Simulate scientific progress across various alpha-level thresholds (0.01, 0.05, 0.10)"),
-    impact("If Arbitrary: The burden is a Noose. If Optimally Predictive: 
+    impact("If Arbitrary: The burden is a Snare. If Optimally Predictive: 
             It is a vital Rope."),
     confidence_without_resolution(medium)
 ).

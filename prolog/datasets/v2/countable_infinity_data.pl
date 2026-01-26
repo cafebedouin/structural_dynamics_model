@@ -35,10 +35,10 @@ constraint_metric(series_reordering, suppression_requirement, 0.30).
 constraint_metric(series_reordering, snap_back_potential, 0.55).
 constraint_metric(series_reordering, extractiveness, 0.45).
 
-% The Power Set Jump (The Noose)
+% The Power Set Jump (The Snare)
 % Attempting to map P(N) back to N. Cantor's theorem proves this is a lethal constraint.
 % Requires the 'diagonalization_matrix' scaffold to identify the exit point.
-constraint_claim(powerset_expansion, noose).
+constraint_claim(powerset_expansion, snare).
 constraint_metric(powerset_expansion, intensity, 0.99).
 constraint_metric(powerset_expansion, suppression_requirement, 0.90).
 constraint_metric(powerset_expansion, snap_back_potential, 0.01).
@@ -49,7 +49,7 @@ constraint_metric(powerset_expansion, extractiveness, 0.97).
 recommendation(rec_01, imposition_of_cauchy_convergence_criteria).
 affects_constraint(rec_01, series_reordering).
 
-% Noose (0.97 extractiveness) triggers Cut
+% Snare (0.97 extractiveness) triggers Cut
 % Using the 'diagonalization_matrix' scaffold to define the boundary of countability.
 recommendation(rec_02, cut_mapping_to_uncountable_power_sets).
 affects_constraint(rec_02, powerset_expansion).

@@ -79,7 +79,7 @@ constraint_victim(job_hunt_volume_system_2026, traditional_applicants).
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 1: THE RULE-FOLLOWING APPLICANT - Noose
+   PERSPECTIVE 1: THE RULE-FOLLOWING APPLICANT - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless (No control over database filtering)
@@ -88,7 +88,7 @@ constraint_victim(job_hunt_volume_system_2026, traditional_applicants).
    SCOPE: national/global
    
    WHY THIS CLASSIFICATION:
-   The applicant experiences the system as a "Noose" because following the rules 
+   The applicant experiences the system as a "Snare" because following the rules 
    guarantees loss; the front door is a trap where their "talent" is 
    rendered invisible by the volume of 600 applications.
    
@@ -100,7 +100,7 @@ constraint_victim(job_hunt_volume_system_2026, traditional_applicants).
 
 constraint_indexing:constraint_classification(
     job_hunt_volume_system_2026,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -199,7 +199,7 @@ test(extraction_scaling) :-
  * amounts of human hope and labor (600 applications) while providing 
  * negligible attention (30 seconds).
  * * 2. MANDATROPHY RESOLUTION:
- * The "predatory" nature of the 30-second filter is a Noose for the jobless, 
+ * The "predatory" nature of the 30-second filter is a Snare for the jobless, 
  * but a functional Rope for HR departments that would otherwise collapse 
  * under manual review of 600 CVs.
  * * 3. PERSPECTIVE SELECTION:
@@ -214,9 +214,9 @@ test(extraction_scaling) :-
 
 omega_variable(
     side_door_meritocracy,
-    "Is the 'side door' truly a meritocracy or simply a transfer of social capital (Noose for the unnetworked)?",
+    "Is the 'side door' truly a meritocracy or simply a transfer of social capital (Snare for the unnetworked)?",
     resolution_mechanism("Comparative analysis of performance metrics between 'Side Door' hires and 'Front Door' survivors"),
-    impact("If social capital only: The entire system is a double Noose. If performance-based: Side Door is a genuine Rope."),
+    impact("If social capital only: The entire system is a double Snare. If performance-based: Side Door is a genuine Rope."),
     confidence_without_resolution(medium)
 ).
 
@@ -224,7 +224,7 @@ omega_variable(
     job_hunt_volume_system_2026_extraction_intent,
     "Is the 0.75 extraction a deliberate filtering strategy or a side effect of poor ATS interface design?",
     resolution_mechanism("Audit of HR budget allocation toward 'Talent Search' vs. 'Volume Filtering' software"),
-    impact("If deliberate: Predatory Noose. If side-effect: Correctable Rope."),
+    impact("If deliberate: Predatory Snare. If side-effect: Correctable Rope."),
     confidence_without_resolution(medium)
 ).
 
@@ -243,7 +243,7 @@ omega_variable(
  * equal opportunity compliance.
  * * CONCLUSION:
  * The presence of a viable Side Door alternative shifts the Front Door 
- * from a potential Rope into a definitive Noose for those without the 
+ * from a potential Rope into a definitive Snare for those without the 
  * "mobile" exit option of a professional network.
  */
 

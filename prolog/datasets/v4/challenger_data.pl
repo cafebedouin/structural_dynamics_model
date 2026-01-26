@@ -35,7 +35,7 @@ measurement(m_physics_ext_99, cold_temperature_physics, extractiveness, 99, 0.01
 measurement(m_physics_sup_99, cold_temperature_physics, suppression_requirement, 99, 0.05). % Constant
 measurement(m_physics_res_99, cold_temperature_physics, resistance, 99, 0.05). % Constant
 
-% Transformation: srb_joint_seal (Rope -> Noose)
+% Transformation: srb_joint_seal (Rope -> Snare)
 measurement(m_seal_ext_10, srb_joint_seal, extractiveness, 10, 0.15). % Early design phase [cite: 501]
 measurement(m_seal_sup_10, srb_joint_seal, suppression_requirement, 10, 0.10).
 measurement(m_seal_res_10, srb_joint_seal, resistance, 10, 0.05).

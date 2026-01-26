@@ -41,13 +41,13 @@
  * - The Complexity Researcher: An institutional agent using Algorithmic 
  * Information Theory as a "Rope" to coordinate the limits of AI and data.
  * - The Provability Seeker: An individual moderate agent for whom $\Omega$ is 
- * a "Noose," as its digits are mathematically "random" and unprovable.
+ * a "Snare," as its digits are mathematically "random" and unprovable.
  * * NARRATIVE ARC:
  * Chaitin's $\Omega$ is the ultimate "Mountain" of irreducible randomness; it 
  * is a specific, fixed real number that no algorithm can ever fully name. In 
  * theoretical computer science, it is a "Rope"—a benchmark for the absolute 
  * limits of compression. However, for a mathematician seeking a 
- * "Theory of Everything," $\Omega$ is a "Noose" that extracts the 
+ * "Theory of Everything," $\Omega$ is a "Snare" that extracts the 
  * possibility of total formal logical completeness, proving that most 
  * mathematical truths are true for no reason at all.
  */
@@ -142,7 +142,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE HILBERT-STYLE LOGICIAN - Noose
+   PERSPECTIVE 3: THE HILBERT-STYLE LOGICIAN - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_moderate - Has the tools of proof but is bound by unprovability.
@@ -151,7 +151,7 @@ constraint_indexing:constraint_classification(
    SCOPE: global - Universal limit on formal systems.
    
    WHY THIS CLASSIFICATION:
-   For the seeker of total provability, $\Omega$ is a "Noose." It "strangles" 
+   For the seeker of total provability, $\Omega$ is a "Snare." It "strangles" 
    the dream of Leibniz and Hilbert that "reason can solve everything." 
    It extracts the possibility of finding proofs for the digits of $\Omega$, 
    showing they are "true for no reason" (extraction).
@@ -161,7 +161,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     chaitins_omega_undecidability,
-    noose,
+    snare,
     context(
         agent_power(individual_moderate),
         time_horizon(civilizational),
@@ -188,8 +188,8 @@ test(multi_perspective_variance) :-
     Type2 = rope.
 
 test(randomness_noose_insight) :-
-    % Demonstrates that for the logician, the randomness of Omega is a Noose
-    constraint_indexing:constraint_classification(chaitins_omega_undecidability, noose, context(individual_moderate, civilizational, constrained, global)).
+    % Demonstrates that for the logician, the randomness of Omega is a Snare
+    constraint_indexing:constraint_classification(chaitins_omega_undecidability, snare, context(individual_moderate, civilizational, constrained, global)).
 
 test(natural_emergence) :-
     domain_priors:emerges_naturally(chaitins_omega_undecidability).
@@ -221,7 +221,7 @@ omega_variable(
     algorithmic_randomness_resolution,
     "Is there a physical 'Rope' that allows for the non-random determination of Omega's bits?",
     resolution_mechanism("Investigation of hyper-computational physics or non-standard models of arithmetic."),
-    impact("If Yes: The Noose is a Scaffold. If No: It is a permanent Mountain."),
+    impact("If Yes: The Snare is a Scaffold. If No: It is a permanent Mountain."),
     confidence_without_resolution(low)
 ).
 
@@ -240,7 +240,7 @@ omega_variable(
  * Suppression: Replaced by the "Rope" of information theory because 
  * $\Omega$ is necessary to understand the bounds of compression.
  * * CONCLUSION:
- * The existence of "transfinite time" models proves that the "Noose" of 
+ * The existence of "transfinite time" models proves that the "Snare" of 
  * uncomputability is a feature of our specific "Turing" Mountain.
  */
 

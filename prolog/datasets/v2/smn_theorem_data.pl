@@ -35,11 +35,11 @@ constraint_metric(parameter_binding_logic, suppression_requirement, 0.30).
 constraint_metric(parameter_binding_logic, snap_back_potential, 0.50).
 constraint_metric(parameter_binding_logic, extractiveness, 0.45).
 
-% The Hardcoding Hazard (The Noose)
+% The Hardcoding Hazard (The Snare)
 % Attempting to hardcode specific values into the machine description without the S-m-n abstraction.
 % This "strangles" the ability to generate programs dynamically.
 % Extractiveness at 0.78 requires the 'currying_primitive' scaffold to resolve.
-constraint_claim(static_index_rigidity, noose).
+constraint_claim(static_index_rigidity, snare).
 constraint_metric(static_index_rigidity, intensity, 0.94).
 constraint_metric(static_index_rigidity, suppression_requirement, 0.60).
 constraint_metric(static_index_rigidity, snap_back_potential, 0.20).
@@ -50,7 +50,7 @@ constraint_metric(static_index_rigidity, extractiveness, 0.78).
 recommendation(rec_01, implement_curried_functional_interfaces_to_minimize_s_overhead).
 affects_constraint(rec_01, parameter_binding_logic).
 
-% Noose (0.78 extractiveness) triggers Cut
+% Snare (0.78 extractiveness) triggers Cut
 % Utilizing 'currying_primitive' scaffold to enable dynamic partial evaluation.
 recommendation(rec_02, replace_static_sub_routines_with_s_m_n_parameterization).
 affects_constraint(rec_02, static_index_rigidity).

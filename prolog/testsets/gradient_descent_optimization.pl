@@ -42,7 +42,7 @@
  * Gradient Descent functions as a "Rope" for the practitioner—a functional tool 
  * to reach equilibrium. For the parameter set itself, the loss landscape is a 
  * "Mountain" of fixed physical truth. However, in "vanishing gradient" 
- * scenarios or poorly tuned hyper-parameters, the method becomes a "Noose," 
+ * scenarios or poorly tuned hyper-parameters, the method becomes a "Snare," 
  * extracting massive GPU cycles for zero movement toward the root.
  */
 
@@ -134,7 +134,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: VANISHING GRADIENTS / FLAT PLATEAUS - Noose
+   PERSPECTIVE 3: VANISHING GRADIENTS / FLAT PLATEAUS - Snare
    --------------------------------------------------------------------------
    WHO: individual_powerless - An iterate stuck with a gradient of $\approx 0$.
    WHEN: immediate - Each update step yields no progress.
@@ -144,14 +144,14 @@ constraint_indexing:constraint_classification(
    WHY THIS CLASSIFICATION:
    In a flat plateau, the algorithm "strangles" the model. It extracts massive 
    computational power (energy/time) while providing no movement. The iterate 
-   is "trapped" in a convergent loop that leads nowhere, acting as a Noose.
+   is "trapped" in a convergent loop that leads nowhere, acting as a Snare.
    -------------------------------------------------------------------------- */
 
 
 
 constraint_indexing:constraint_classification(
     gradient_descent_optimization,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -198,7 +198,7 @@ test(emergence) :-
  * 1. BASE EXTRACTIVENESS (0.3): GD is "expensive." It is a brute-force approach 
  * compared to analytical solutions (which aren't always possible).
  * 2. TYPE SHIFT: Highlighted the transition from "Mountain" (geometry) 
- * to "Noose" (vanishing gradients). This captures the technical reality 
+ * to "Snare" (vanishing gradients). This captures the technical reality 
  * that the same law can be a stable path or a resource trap depending 
  * on the coordinate.
  * 3. SUPPRESSION: Low, because mathematics encourages the study of 
@@ -213,15 +213,15 @@ omega_variable(
     global_minimum_reachability,
     "Is the loss landscape convex (Mountain) or non-convex (Labyrinth)?",
     resolution_mechanism("Formal verification of the loss function's second derivative matrix (Hessian)."),
-    impact("If Convex: GD is a reliable Rope. If Non-Convex: GD is a Noose of local minima."),
+    impact("If Convex: GD is a reliable Rope. If Non-Convex: GD is a Snare of local minima."),
     confidence_without_resolution(medium)
 ).
 
 omega_variable(
     learning_rate_stability,
-    "Does the engineer choose a learning rate that causes oscillation (Noose) or convergence (Rope)?",
+    "Does the engineer choose a learning rate that causes oscillation (Snare) or convergence (Rope)?",
     resolution_mechanism("Step-by-step trace of loss values over 1000 epochs."),
-    impact("If Oscillation: The 'Rope' has snapped and become a 'Noose' of wasted energy."),
+    impact("If Oscillation: The 'Rope' has snapped and become a 'Snare' of wasted energy."),
     confidence_without_resolution(high)
 ).
 
@@ -239,7 +239,7 @@ omega_variable(
  * Suppression: Rejected for large models due to $O(N^2)$ memory extraction for the Hessian.
  * * CONCLUSION:
  * The continued dominance of Gradient Descent as a "Rope" for modern AI 
- * despite its "Noose" tendencies in deep networks is a result of the 
+ * despite its "Snare" tendencies in deep networks is a result of the 
  * prohibitive extractiveness of the second-order alternatives.
  */
 

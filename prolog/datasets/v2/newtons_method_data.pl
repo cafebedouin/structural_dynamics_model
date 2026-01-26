@@ -37,7 +37,7 @@ constraint_metric(starting_point_sensitivity, suppression_requirement, 0.38).
 constraint_metric(starting_point_sensitivity, snap_back_potential, 0.45).
 constraint_metric(starting_point_sensitivity, extractiveness, 0.55).
 
-constraint_claim(stationary_point_failure, noose).
+constraint_claim(stationary_point_failure, snare).
 constraint_metric(stationary_point_failure, intensity, 0.95).
 constraint_metric(stationary_point_failure, suppression_requirement, 0.85).
 constraint_metric(stationary_point_failure, snap_back_potential, 0.92).

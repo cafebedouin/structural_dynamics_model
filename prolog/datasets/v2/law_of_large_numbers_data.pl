@@ -42,7 +42,7 @@ constraint_metric(convergence_rate_friction, snap_back_potential, 0.40).
 constraint_metric(convergence_rate_friction, extractiveness, 0.52).
 
 % NOOSE: Infinite Expectation/Cauchy Obstruction (Distributions where the law fails completely)
-constraint_claim(undefined_mean_noose, noose).
+constraint_claim(undefined_mean_noose, snare).
 constraint_metric(undefined_mean_noose, intensity, 0.96).
 constraint_metric(undefined_mean_noose, suppression_requirement, 0.88).
 constraint_metric(undefined_mean_noose, snap_back_potential, 0.92).

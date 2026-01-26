@@ -1,8 +1,8 @@
 % ============================================================================
 % CONSTRAINT STORY: constitutional_supremacy
 % ============================================================================
-% Generated: 2026-01-20
-% Model: Gemini 2.0 Flash
+% Generated: 2026-01-23
+% Model: Gemini Pro (Revised)
 % Source: Marbury v. Madison (1803)
 % ============================================================================
 
@@ -25,118 +25,91 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: constitutional_supremacy
+ * 
+ * constraint_id: constitutional_supremacy
  * human_readable: The Supremacy of Written Constitutions
  * domain: legal/political
  * temporal_scope: 1803 - Present
  * spatial_scope: National (United States / Constitutional Democracies)
- * * SUMMARY:
- * Established by Chief Justice John Marshall, this constraint posits that the 
- * Constitution is the "paramount law of the nation," and any act of the 
- * legislature repugnant to it is void. It creates a hierarchy where the 
- * judiciary must prioritize the "Mountain" of the Constitution over the 
- * "Rope" of legislative statutes.
- * * KEY AGENTS:
- * - John Marshall: The Institutional Architect who defines the "duty of the 
- * judicial department to say what the law is."
- * - William Marbury: The "Individual Moderate" seeking a legal remedy for 
- * a vested right.
- * - James Madison/The Executive: The powerful agent whose actions are 
- * constrained by the judicial interpretation of the law.
- * * NARRATIVE ARC:
- * The case arises from a political dispute over judicial commissions. Marshall 
- * avoids a direct power struggle with the Executive by declaring a specific 
- * law (Section 13 of the Judiciary Act) unconstitutional. This act of 
- * "self-restraint" actually cements the Judiciary's power to constrain 
- * all future legislative acts.
+ * 
+ * SUMMARY:
+ * Established by Chief Justice John Marshall in Marbury v. Madison (1803), 
+ * this constraint posits that the Constitution is the "paramount law of the nation,"
+ * and any act of the legislature repugnant to it is void. It creates a hierarchy
+ * where the judiciary must prioritize the "Mountain" of the Constitution over
+ * the "Rope" of legislative statutes.
+ * 
+ * KEY AGENTS:
+ * - John Marshall (Institutional): The Architect who defines judicial review.
+ * - The Citizen (Individual Powerless): Subject to the laws and constitutional protections.
+ * - The Legislature (Individual Powerful): The rule-making body whose acts can be invalidated.
  */
 
 /* ==========================================================================
    2. CORE SYSTEM INTEGRATION (The "Reality" Layer)
    ========================================================================== */
 
-narrative_ontology:interval(marbury_v_madison_analysis, 0, 10).
+narrative_ontology:interval(constitutional_supremacy, 0, 10).
 narrative_ontology:constraint_claim(constitutional_supremacy, mountain).
 
-% Base extractiveness score: 0.3
-% Rationale: The constraint primarily coordinates power rather than 
-% extracting it, though it "extracts" finality from the legislative branch.
+% Base extractiveness: 0.3.
+% The constraint primarily coordinates power rather than extracting it, though
+% it "extracts" finality from the legislative branch.
 domain_priors:base_extractiveness(constitutional_supremacy, 0.3).
 
-% Suppression score: 0.95
-% Rationale: Marshall argues that the Constitution is either the paramount 
-% law or it is "solemn mockery." There is no middle ground allowed.
+% Suppression score: 0.95.
+% Marshall argues that the Constitution is either the paramount law or it is
+% "solemn mockery." There is no middle ground allowed, strongly suppressing alternatives.
 domain_priors:suppression_score(constitutional_supremacy, 0.95).
 
-% Enforcement requirements: Requires judicial vigilance and "active 
-% enforcement" of the hierarchy of laws.
+% Enforcement: Requires judicial vigilance and "active enforcement" of the hierarchy of laws.
 domain_priors:requires_active_enforcement(constitutional_supremacy).
 
-% Metrics required for Section 1 of the Executive Summary
-narrative_ontology:constraint_metric(constitutional_supremacy, extractiveness, 0.3).
-narrative_ontology:constraint_metric(constitutional_supremacy, suppression_requirement, 0.95).
-
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(constitutional_supremacy, [judicial_authority, individual_liberty]).
-constraint_victim(constitutional_supremacy, [legislative_supremacy, executive_discretion]).
+constraint_beneficiary(constitutional_supremacy, judicial_authority).
+constraint_victim(constitutional_supremacy, legislative_supremacy).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 1: THE CITIZEN (Marbury) - Mountain
+   PERSPECTIVE 1: THE CITIZEN - Mountain
    --------------------------------------------------------------------------
-   
-   WHO: individual_moderate - A citizen with a vested legal right.
-   WHEN: immediate - The loss of a commission/job.
-   WHERE: trapped - Bound by the "rule of law" which must provide a remedy.
-   SCOPE: national - The law of the land.
+   WHO: individual_powerless (Subject to the laws and constitutional protections)
+   WHEN: biographical (Relies on the Constitution for long-term stability and rights)
+   WHERE: trapped (Bound by the "supreme Law of the Land")
    
    WHY THIS CLASSIFICATION:
-   To the individual seeking a right, the Constitution is an unchangeable 
-   Mountain. It is the fundamental law that protects their specific commission 
-   against the "arbitrary" will of the Executive.
-   
-   NARRATIVE EVIDENCE:
-   "The very essence of civil liberty certainly consists in the right of 
-   every individual to claim the protection of the laws."
+   To the ordinary citizen, the Constitution is an unchangeable 'Mountain'. 
+   It represents the fundamental law that provides a stable framework for their
+   rights and duties, protecting them from arbitrary legislative or executive
+   action. Its supremacy is a fixed, immutable fact of the legal landscape.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
     constitutional_supremacy,
     mountain,
     context(
-        agent_power(individual_moderate),
-        time_horizon(immediate),
+        agent_power(individual_powerless),
+        time_horizon(biographical),
         exit_options(trapped),
-        constraint_beneficiary(constitutional_supremacy, individual_liberty),
-        constraint_victim(constitutional_supremacy, []),
         spatial_scope(national)
     )
-) :-
-    domain_priors:suppression_score(constitutional_supremacy, S),
-    S > 0.9,
-    !.
+).
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE JUDICIARY (Marshall) - Rope
+   PERSPECTIVE 2: THE JUDICIARY (JOHN MARSHALL) - Rope
    --------------------------------------------------------------------------
-   
-   WHO: institutional - The department that "must of necessity expound 
-   and interpret."
-   WHEN: historical - Building a "government of laws, and not of men."
-   WHERE: arbitrage - Balancing the different departments of government.
-   SCOPE: national - The supreme law.
+   WHO: institutional (The department that "must of necessity expound and interpret")
+   WHEN: historical (Building a "government of laws, and not of men")
+   WHERE: arbitrage (Balancing the different departments of government)
    
    WHY THIS CLASSIFICATION:
-   To the Judge, the Constitution is a "Rope"—a functional mechanism 
-   for coordinating the republic. It is a tool they must use to "discharge 
-   their duties agreeably to the constitution."
-   
-   NARRATIVE EVIDENCE:
-   "It is emphatically the province and duty of the judicial department 
-   to say what the law is."
+   To the Judge (e.g., John Marshall), the Constitution is a 'Rope'—a functional
+   mechanism for coordinating the republic. It is a tool they must use to
+   "discharge their duties agreeably to the constitution" and to define the
+   boundaries of governmental power.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
@@ -146,66 +119,50 @@ constraint_indexing:constraint_classification(
         agent_power(institutional),
         time_horizon(historical),
         exit_options(arbitrage),
-        constraint_beneficiary(constitutional_supremacy, judicial_authority),
-        constraint_victim(constitutional_supremacy, []),
         spatial_scope(national)
     )
-) :-
-    !.
+).
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE LEGISLATURE (Congress) - Noose
+   PERSPECTIVE 3: THE LEGISLATURE (CONGRESS) - Snare
    --------------------------------------------------------------------------
-   
-   WHO: institutional - The rule-making body whose acts are invalidated.
-   WHEN: immediate - A specific statute is struck down.
-   WHERE: constrained - Prevented from overstepping constitutional bounds.
-   SCOPE: local - A specific act (e.g., Section 13).
+   WHO: individual_powerful (The rule-making body whose acts are invalidated)
+   WHEN: immediate (A specific statute is struck down)
+   WHERE: constrained (Prevented from overstepping constitutional bounds)
    
    WHY THIS CLASSIFICATION:
    From the perspective of a legislature that believes it has the power to 
-   act, judicial review is a "Noose." It is a coercive mechanism that 
+   act, judicial review is a 'Snare.' It is a coercive mechanism that 
    extracts their finality and subjects them to an unelected "analytical" 
-   oversight.
-   
-   NARRATIVE EVIDENCE:
-   "To what purpose are powers limited... if these limits may, at any 
-   time, be passed by those intended to be restrained?"
+   oversight, strangling their perceived legislative autonomy.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
     constitutional_supremacy,
-    noose,
+    snare,
     context(
-        agent_power(institutional),
+        agent_power(individual_powerful),
         time_horizon(immediate),
         exit_options(constrained),
-        constraint_beneficiary(constitutional_supremacy, judicial_authority),
-        constraint_victim(constitutional_supremacy, legislative_supremacy),
-        spatial_scope(local)
+        spatial_scope(national)
     )
-) :-
-    domain_priors:base_extractiveness(constitutional_supremacy, E),
-    E > 0.2,
-    !.
+).
 
 /* ==========================================================================
    4. TESTS (What We Learn About Constraints)
    ========================================================================== */
 
-:- begin_tests(marbury_tests).
+:- begin_tests(constitutional_supremacy_tests).
 
-test(hierarchy_of_laws) :-
-    % Verify the Constitution (Mountain) trumps Statute (Noose/Rope)
-    constraint_indexing:constraint_classification(constitutional_supremacy, mountain, context(agent_power(individual_moderate), _, _, _, _, _)),
-    domain_priors:suppression_score(constitutional_supremacy, S),
-    S > 0.9.
+test(multi_perspective_variance) :-
+    constraint_indexing:constraint_classification(constitutional_supremacy, Type1, context(agent_power(individual_powerless), _, _, _)),
+    constraint_indexing:constraint_classification(constitutional_supremacy, Type2, context(agent_power(institutional), _, _, _)),
+    constraint_indexing:constraint_classification(constitutional_supremacy, Type3, context(agent_power(individual_powerful), _, _, _)),
+    Type1 \= Type2,
+    Type2 \= Type3,
+    Type1 \= Type3.
 
-test(institutional_agency) :-
-    % The Judge sees the mechanism as a functional Rope
-    constraint_indexing:constraint_classification(constitutional_supremacy, rope, context(agent_power(institutional), _, arbitrage, _, _, _)).
-
-:- end_tests(marbury_tests).
+:- end_tests(constitutional_supremacy_tests).
 
 /* ==========================================================================
    5. MODEL INTERPRETATION (Commentary)
@@ -213,48 +170,71 @@ test(institutional_agency) :-
 
 /**
  * LLM GENERATION NOTES
- * * Model: Gemini 2.0 Flash
- * * KEY DECISIONS:
- * 1. CLASSIFICATION: Marshall frames the Constitution as a "Mountain" 
- * to justify why the Court *cannot* act on an unconstitutional law. 
- * This creates a "Rope" (Judicial Review) that the Court uses to manage 
- * the other branches.
- * 2. PERSPECTIVAL GAP: The gap here is between the "Powerless" citizen 
- * who needs the Constitution as an immutable shield (Mountain) and the 
- * "Powerful" Executive/Legislature who find their agency restricted 
- * (Noose) by the Court's interpretation.
- * 3. EXTRACTIVENESS: Low (0.3). While it restricts power, it does so to 
- * preserve the "security" of the whole, rather than for the direct 
- * enrichment of a specific class.
+ * 
+ * Model: Gemini Pro (Revised)
+ * Date: 2026-01-23
+ * 
+ * KEY DECISIONS:
+ * 
+ * 1. INDIVIDUAL POWERLESS PERSPECTIVE: Added 'The Citizen' as the individual
+ *    powerless agent, for whom the Constitution acts as an immutable 'Mountain'
+ *    of rights and stability.
+ *
+ * 2. CLASSIFICATION RATIONALE:
+ *    - Citizen (Mountain): Immutable legal framework for rights.
+ *    - Judiciary (Rope): A tool for interpreting and enforcing the law.
+ *    - Legislature (Snare): Legislative power constrained by judicial review.
+ * 
+ * 3. CORE INSIGHT: Constitutional supremacy, as established by Marbury v. Madison,
+ *    creates a hierarchical legal structure. What is an immutable 'Mountain' for
+ *    the citizen becomes a powerful 'Rope' for the judiciary, but a constraining
+ *    'Snare' for the legislature.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
+/**
+ * OMEGA IDENTIFICATION
+ *
+ * The core uncertainty is the long-term balance of power within the constitutional framework.
+ */
 
 omega_variable(
     judicial_neutrality,
-    "Is the Court truly a neutral observer (Analytical) or a participant in the power struggle (Institutional)?",
-    resolution_mechanism("Requires evaluation of future case law to see if review is used for coordination or partisan extraction."),
-    impact("If Institutional: The 'Rope' of Judicial Review becomes a 'Noose' for the public."),
+    "Is the Court truly a neutral arbiter of the Constitution, or does judicial review inherently transform into a 'Rope' of judicial policy-making, potentially becoming a 'Snare' for democratic self-governance?",
+    resolution_mechanism("Requires evaluation of future case law to see if review is used primarily for coordination (interpreting) or partisan extraction (legislating from the bench)."),
+    impact("If truly neutral: Judicial Review is a 'Mountain' of stability. If partisan: It becomes a 'Snare' for other branches."),
     confidence_without_resolution(medium)
 ).
 
 /* ==========================================================================
    7. ALTERNATIVE ANALYSIS
    ========================================================================== */
+/**
+ * VIABLE ALTERNATIVES
+ *
+ * ALTERNATIVE 1: Legislative Supremacy (e.g., British Parliamentary System)
+ *    Viability: Historically viable in many democratic nations, where the legislature is the ultimate legal authority.
+ *    Suppression: Rejected by Marshall, who argued that without judicial review, written constitutions are "solemn mockery," effectively suppressing this alternative in the US context.
+ *
+ * CONCLUSION:
+ * The establishment of constitutional supremacy, through the rejection of
+ * legislative supremacy, fundamentally shifted the political landscape. What
+ * might be seen as a 'Rope' of democratic action in other systems becomes
+ * a 'Snare' for an unchecked legislature in the U.S.
+ */
+
+/* ==========================================================================
+   8. INTEGRATION HOOKS
+   ========================================================================== */
 
 /**
- * VIABLE ALTERNATIVES:
- * 1. Legislative Supremacy (The British Model):
- * Viability: Historically viable in many nations.
- * Suppression: Marshall rejects this as making the Constitution a "absurd 
- * attempt... to limit a power, in its own nature illimitable."
- * EVIDENCE: Marshall argues that without judicial review, written 
- * constitutions are "solemn mockery."
- * * CONCLUSION: 
- * The rejection of Legislative Supremacy converts the Constitution from a 
- * "Rope" (a social agreement) into a "Mountain" (a natural law hierarchy).
+ * TO USE THIS FILE:
+ * 
+ * 1. Load: ?- [constraints/constitutional_supremacy].
+ * 2. Multi-perspective: ?- multi_index_report(constitutional_supremacy).
+ * 3. Run tests: ?- run_tests(constitutional_supremacy_tests).
  */
 
 /* ==========================================================================

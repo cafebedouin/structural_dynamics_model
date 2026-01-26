@@ -237,7 +237,7 @@ context(institutional, historical, mobile, _, _, global)
 /**
 
 * TEST 2: Extraction check
-* Confirms that Universal Math is categorized as non-extractive (not a Noose).
+* Confirms that Universal Math is categorized as non-extractive (not a Snare).
 */
 test(non_extractive_nature) :-
 domain_priors:base_extractiveness(universal_mathematics_communication, E),

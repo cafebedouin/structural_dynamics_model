@@ -42,12 +42,12 @@
  * - The Nonlinear Dynamics Researcher: An institutional agent who uses 
  * attractor reconstruction (Takens' Theorem) to map hidden order.
  * - The Predictor: An agent for whom the attractor's "strangeness" acts 
- * as a "Noose," extracting the possibility of long-term certainty.
+ * as a "Snare," extracting the possibility of long-term certainty.
  * * NARRATIVE ARC:
  * The strange attractor is a "Mountain" of topological fate—the system 
  * must eventually fall into this shape. In signal processing, it is a 
  * "Rope" for identifying deterministic noise. However, the "folding and 
- * stretching" of phase space acts as a "Noose" for prediction, 
+ * stretching" of phase space acts as a "Snare" for prediction, 
  * exponentially extracting information until the future is a void.
  */
 
@@ -146,7 +146,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE PRECISION-BOUND SIMULATOR - Noose
+   PERSPECTIVE 3: THE PRECISION-BOUND SIMULATOR - Snare
    --------------------------------------------------------------------------
    WHO: individual_powerless - Bound by the bit-depth of the hardware.
    WHEN: immediate - The Lyapunov horizon where the simulation fails.
@@ -154,7 +154,7 @@ constraint_indexing:constraint_classification(
    SCOPE: local - A specific high-entropy region of the attractor.
    
    WHY THIS CLASSIFICATION:
-   The attractor's "strangeness" acts as a "Noose" for digital models. 
+   The attractor's "strangeness" acts as a "Snare" for digital models. 
    It exponentially extracts the value of the initial bits (extraction), 
    "strangling" the validity of the model until it is indistinguishable 
    from random noise.
@@ -164,7 +164,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     strange_attractor_dynamics,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -191,8 +191,8 @@ test(attractor_fate_variance) :-
     Type2 = rope.
 
 test(predictability_noose_penalty) :-
-    % A powerless simulator with constrained precision sees it as a Noose.
-    constraint_indexing:constraint_classification(strange_attractor_dynamics, noose, context(individual_powerless, immediate, constrained, local)).
+    % A powerless simulator with constrained precision sees it as a Snare.
+    constraint_indexing:constraint_classification(strange_attractor_dynamics, snare, context(individual_powerless, immediate, constrained, local)).
 
 test(emergence) :-
     domain_priors:emerges_naturally(strange_attractor_dynamics).
@@ -211,7 +211,7 @@ test(emergence) :-
  * 1. CLASSIFICATION: I chose "Mountain" for the global geometry because 
  * the attractor's existence is a topological mandate.
  * 2. TYPE SHIFT: Highlighted how the "Strangeness" is a tool (Rope) for 
- * those who want noise/entropy, but a trap (Noose) for those seeking 
+ * those who want noise/entropy, but a trap (Snare) for those seeking 
  * classical determinism.
  * 3. EXTRACTIVENESS (0.35): Assigned due to the "Information Loss" 
  * characteristic of positive Lyapunov exponents.
@@ -220,9 +220,9 @@ test(emergence) :-
 % OMEGA IDENTIFICATION
 omega_variable(
     attractor_shadowing,
-    "Do 'true' trajectories shadow the 'noose' of numerical simulation orbits?",
+    "Do 'true' trajectories shadow the 'snare' of numerical simulation orbits?",
     resolution_mechanism("Verification of the Shadowing Lemma for specific attractor topologies."),
-    impact("If Yes: The digital 'Noose' is a 'Scaffold' that actually reflects a real 'Rope'."),
+    impact("If Yes: The digital 'Snare' is a 'Scaffold' that actually reflects a real 'Rope'."),
     confidence_without_resolution(medium)
 ).
 

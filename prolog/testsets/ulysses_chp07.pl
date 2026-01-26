@@ -38,7 +38,7 @@
  * * KEY AGENTS:
  * - Leopold Bloom: Individual moderate canvasser seeking coordination (Rope).
  * - Myles Crawford: Institutional editor viewing the economic reality as immutable (Mountain).
- * - Newsboys: Powerless urchins for whom the cycle is a mocking trap (Noose).
+ * - Newsboys: Powerless urchins for whom the cycle is a mocking trap (Snare).
  */
 
 /* ==========================================================================
@@ -47,7 +47,7 @@
 
 % Required for [STEP 1] and [STEP 2] of the DR-Audit Suite
 narrative_ontology:interval(bloom_aeolus_interval, 0, 10).
-narrative_ontology:constraint_claim(bloom_aeolus_advertisement_circuit, noose).
+narrative_ontology:constraint_claim(bloom_aeolus_advertisement_circuit, snare).
 
 % Metrics: Extractiveness (0.4) and Suppression (0.5)
 domain_priors:base_extractiveness(bloom_aeolus_advertisement_circuit, 0.4).
@@ -93,7 +93,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: NEWSBOYS - Noose
+   PERSPECTIVE 3: NEWSBOYS - Snare
    --------------------------------------------------------------------------
    WHO: individual_powerless - "young guttersnipes" mocking the ritual.
    WHY: From the street level, Bloom's circuit is an extractive, ridiculous 
@@ -101,7 +101,7 @@ constraint_indexing:constraint_classification(
    -------------------------------------------------------------------------- */
 constraint_indexing:constraint_classification(
     bloom_aeolus_advertisement_circuit,
-    noose,
+    snare,
     context(agent_power(individual_powerless), time_horizon(immediate), exit_options(constrained), spatial_scope(local))
 ) :- !.
 
@@ -128,7 +128,7 @@ test(time_immutability_aeolus) :-
 
 /**
  * LLM GENERATION NOTES:
- * Refactored to eliminate auto-imputation and ensure the 'Mountain' vs 'Noose' 
+ * Refactored to eliminate auto-imputation and ensure the 'Mountain' vs 'Snare' 
  * perspectival gap is audited. 
  */
 
@@ -136,7 +136,7 @@ omega_variable(
     crawford_alcohol_influence,
     "Is Crawford's refusal to change (Mountain) institutional or alcoholic whim?",
     resolution_mechanism("Comparative analysis of sober vs drunk decision-making"),
-    impact("If whim: Noose. If policy: Mountain."),
+    impact("If whim: Snare. If policy: Mountain."),
     confidence_without_resolution(low)
 ).
 
@@ -158,4 +158,4 @@ omega_variable(
 % --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
 constraint_indexing:constraint_classification(ulysses_chp07, mountain, agent_power(analytical)).
 constraint_indexing:constraint_classification(ulysses_chp07, rope, agent_power(institutional)).
-constraint_indexing:constraint_classification(ulysses_chp07, noose, agent_power(individual_powerless)).
+constraint_indexing:constraint_classification(ulysses_chp07, snare, agent_power(individual_powerless)).

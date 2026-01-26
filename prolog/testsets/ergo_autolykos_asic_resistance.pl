@@ -6,7 +6,7 @@
 % Source: Ergo Platform Documentation (Autolykos v2) & Whitepapers
 % ============================================================================
 
-:- module(ergo_autolykos, []).
+:- module(constraint_ergo_autolykos_asic_resistance, []).
 
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
@@ -54,8 +54,8 @@
    2. CORE SYSTEM INTEGRATION (The "Reality" Layer)
    ========================================================================== */
 
-narrative_ontology:interval(ergo_mining_era, 0, 10).
-narrative_ontology:constraint_claim(ergo_autolykos_asic_resistance, mountain).
+narrative_ontology:interval(ergo_autolykos_asic_resistance, 0, 10).
+narrative_ontology:constraint_claim(ergo_autolykos_asic_resistance, snare).
 
 % Base extractiveness score (0.0 = no extraction, 1.0 = full extraction)
 % Rationale: Low direct extraction; however, it extracts energy and requires 
@@ -70,9 +70,7 @@ domain_priors:suppression_score(ergo_autolykos_asic_resistance, 0.85).
 % Enforcement requirements
 domain_priors:requires_active_enforcement(ergo_autolykos_asic_resistance).
 
-% Metrics for Executive Summary
-narrative_ontology:constraint_metric(ergo_autolykos_asic_resistance, extractiveness, 0.2).
-narrative_ontology:constraint_metric(ergo_autolykos_asic_resistance, suppression_requirement, 0.85).
+
 
 % Beneficiaries and Victims
 constraint_beneficiary(ergo_autolykos_asic_resistance, retail_gpu_miners).
@@ -83,7 +81,7 @@ constraint_victim(ergo_autolykos_asic_resistance, asic_manufacturers).
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 1: ASIC Manufacturer - Noose
+   PERSPECTIVE 1: ASIC Manufacturer - Snare
    --------------------------------------------------------------------------
    
    WHO: institutional - Powerful entities with massive R&D budgets.
@@ -91,7 +89,7 @@ constraint_victim(ergo_autolykos_asic_resistance, asic_manufacturers).
    WHERE: arbitrage - Seeking the most profitable PoW chains to dominate.
    
    WHY THIS CLASSIFICATION:
-   For an ASIC maker, Autolykos is a "Noose." It is a protocol-level 
+   For an ASIC maker, Autolykos is a "Snare." It is a protocol-level 
    mechanism that intentionally renders their specialized efficiency useless, 
    effectively strangling their ability to enter the Ergo market.
    
@@ -102,19 +100,14 @@ constraint_victim(ergo_autolykos_asic_resistance, asic_manufacturers).
 
 constraint_indexing:constraint_classification(
     ergo_autolykos_asic_resistance,
-    noose,
+    snare,
     context(
         agent_power(institutional),
         time_horizon(historical),
         exit_options(arbitrage),
-        constraint_beneficiary(ergo_autolykos_asic_resistance, retail_participants),
-        constraint_victim(ergo_autolykos_asic_resistance, asic_capital),
         spatial_scope(global)
     )
-) :-
-    domain_priors:suppression_score(ergo_autolykos_asic_resistance, S),
-    S > 0.8,
-    !.
+).
 
 /* --------------------------------------------------------------------------
    PERSPECTIVE 2: Home Miner (GPU) - Rope
@@ -142,14 +135,9 @@ constraint_indexing:constraint_classification(
         agent_power(individual_moderate),
         time_horizon(biographical),
         exit_options(mobile),
-        constraint_beneficiary(ergo_autolykos_asic_resistance, decentralization),
-        constraint_victim(ergo_autolykos_asic_resistance, none),
         spatial_scope(global)
     )
-) :-
-    domain_priors:base_extractiveness(ergo_autolykos_asic_resistance, E),
-    E < 0.4,
-    !.
+).
 
 /* --------------------------------------------------------------------------
    PERSPECTIVE 3: The Protocol - Mountain
@@ -172,29 +160,66 @@ constraint_indexing:constraint_classification(
         agent_power(analytical),
         time_horizon(civilizational),
         exit_options(analytical),
-        constraint_beneficiary(ergo_autolykos_asic_resistance, network_integrity),
-        constraint_victim(ergo_autolykos_asic_resistance, none),
         spatial_scope(global)
     )
-) :-
-    true,
-    !.
+).
+
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 4: THE NON-MINER / USER - Mountain
+   --------------------------------------------------------------------------
+   WHO: individual_powerless (A user of the blockchain, not a miner)
+   WHEN: immediate (When making a transaction)
+   WHERE: trapped (Cannot choose a different consensus mechanism)
+   SCOPE: local (Their own transaction)
+   
+   WHY THIS CLASSIFICATION:
+   For a regular user of the Ergo platform, the Autolykos algorithm is a
+   "Mountain." It's a fundamental, unchangeable aspect of the network's
+   security that they don't directly interact with or influence. It's simply
+   the bedrock on which their transactions are secured.
+   -------------------------------------------------------------------------- */
+
+constraint_indexing:constraint_classification(
+    ergo_autolykos_asic_resistance,
+    mountain,
+    context(
+        agent_power(individual_powerless),
+        time_horizon(immediate),
+        exit_options(trapped),
+        spatial_scope(local)
+    )
+).
 
 /* ==========================================================================
-   4. TESTS
+   4. TESTS (What We Learn About Constraints)
    ========================================================================== */
 
 :- begin_tests(ergo_autolykos_tests).
 
-test(asic_exclusion_logic) :-
-    % Test that high-power institutional agents see a Noose (Suppression of efficiency)
-    constraint_indexing:constraint_classification(ergo_autolykos_asic_resistance, noose, 
-        context(institutional, _, _, _, _, _)).
+/**
+ * TEST 1: Multi-perspective variance
+ * Demonstrates how the same PoW algorithm is viewed differently by various agents.
+ */
+test(multi_perspective_variance) :-
+    % ASIC Manufacturer (Snare)
+    constraint_indexing:constraint_classification(ergo_autolykos_asic_resistance, snare, context(agent_power(institutional), _, _, _)),
+    % Home Miner (Rope)
+    constraint_indexing:constraint_classification(ergo_autolykos_asic_resistance, rope, context(agent_power(individual_moderate), _, _, _)),
+    % The Protocol (Mountain)
+    constraint_indexing:constraint_classification(ergo_autolykos_asic_resistance, mountain, context(agent_power(analytical), _, _, _)),
+    % Non-Miner User (Mountain)
+    constraint_indexing:constraint_classification(ergo_autolykos_asic_resistance, mountain, context(agent_power(individual_powerless), _, _, _)).
 
-test(fair_entry_rope) :-
-    % Test that moderate-power GPU miners see a Rope (Opportunity)
-    constraint_indexing:constraint_classification(ergo_autolykos_asic_resistance, rope, 
-        context(individual_moderate, _, _, _, _, _)).
+/**
+ * TEST 2: Power-based extractiveness scaling
+ * Demonstrates that powerful agents (ASIC manufacturers) are the ones who feel "extracted from" in this scenario.
+ */
+test(power_extractiveness_scaling) :-
+    ContextPowerful = context(agent_power(institutional), time_horizon(historical), exit_options(arbitrage), spatial_scope(global)),
+    ContextModerate = context(agent_power(individual_moderate), time_horizon(biographical), exit_options(mobile), spatial_scope(global)),
+    constraint_indexing:extractiveness_for_agent(ergo_autolykos_asic_resistance, ContextPowerful, Score1),
+    constraint_indexing:extractiveness_for_agent(ergo_autolykos_asic_resistance, ContextModerate, Score2),
+    Score1 > Score2. % The ASIC manufacturer feels more extraction (of opportunity)
 
 :- end_tests(ergo_autolykos_tests).
 
@@ -204,29 +229,32 @@ test(fair_entry_rope) :-
 
 /**
  * LLM GENERATION NOTES
- * * Model: Gemini 2.0 Flash
- * * KEY DECISIONS:
+ * 
+ * Model: Gemini 2.0 Flash
+ * Date: 2026-01-23
+ * 
+ * KEY DECISIONS:
+ * 
  * 1. SUPPRESSION (0.85): This is the core "intent" of Autolykos. By making 
  * the memory requirements high and variable, it suppresses the 
  * viability of static, specialized circuit design.
- * 2. CLASSIFICATION: The "Noose" for ASIC makers is the primary source 
- * of the project's decentralization "Rope" for users.
+ * 
+ * 2. CLASSIFICATION: The "Snare" for ASIC makers is the primary source 
+ * of the project's decentralization "Rope" for GPU miners.
+ * 
+ * 3. OMEGAS 
+ *    Define uncertainty so your analysis is cleaner
+ *    omega_variable(
+ *        asic_breakthrough_event,
+ *        "Will a specialized manufacturer develop a 'programmable' memory-dense ASIC that can bypass Autolykos v2?",
+ *        resolution_mechanism("Monitor network hashrate for sudden 10x spikes inconsistent with GPU market trends"),
+ *        impact("If Yes: The Rope snaps, and Ergo becomes a Mountain for industrial giants only. If No: Decentralization holds."),
+ *        confidence_without_resolution(medium)
+ *    ).
  */
 
 /* ==========================================================================
-   6. OMEGA VARIABLES (Ω)
-   ========================================================================== */
-
-omega_variable(
-    asic_breakthrough_event,
-    "Will a specialized manufacturer develop a 'programmable' memory-dense ASIC that can bypass Autolykos v2?",
-    resolution_mechanism("Monitor network hashrate for sudden 10x spikes inconsistent with GPU market trends"),
-    impact("If Yes: The Rope snaps, and Ergo becomes a Mountain for industrial giants only. If No: Decentralization holds."),
-    confidence_without_resolution(medium)
-).
-
-/* ==========================================================================
-   7. ALTERNATIVE ANALYSIS
+   6. ALTERNATIVE ANALYSIS (If Applicable)
    ========================================================================== */
 
 /**
@@ -238,10 +266,27 @@ omega_variable(
  */
 
 /* ==========================================================================
-   8. INTEGRATION HOOKS
+   7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Load: ?- [ergo_autolykos_asic_resistance].
+/**
+ * TO USE THIS CONSTRAINT:
+ * 
+ * 1. Load into main system:
+ *    ?- [constraints/ergo_autolykos_asic_resistance].
+ * 
+ * 2. Run multi-perspective analysis:
+ *    ?- constraint_indexing:multi_index_report(ergo_autolykos_asic_resistance).
+ * 
+ * 3. Run tests:
+ *    ?- run_tests(ergo_autolykos_tests).
+ * 
+ * 4. Generate pedagogical report:
+ *    ?- pedagogical_report(ergo_autolykos_asic_resistance).
+ * 
+ * 5. Compare with other constraints:
+ *    ?- compare_constraints(ergo_autolykos_asic_resistance, [other_id]).
+ */
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

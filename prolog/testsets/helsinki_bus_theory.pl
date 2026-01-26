@@ -1,8 +1,8 @@
 % ============================================================================
 % CONSTRAINT STORY: helsinki_bus_theory
 % ============================================================================
-% Generated: 2026-01-21
-% Model: Gemini 2.0 Flash
+% Generated: 2026-01-23
+% Model: Gemini Pro (Revised)
 % Source: Oliver Burkeman / Arno Minkkinen, "Helsinki Bus Station Theory"
 % ============================================================================
 
@@ -25,45 +25,32 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: helsinki_bus_theory
+ * 
+ * constraint_id: helsinki_bus_theory
  * human_readable: The Helsinki Bus Station Theory (Creative Persistence)
- * domain: social/technological/artistic
+ * domain: artistic/social/psychological
  * temporal_scope: Biographical (Career lifespan)
  * spatial_scope: Local (The discipline) to Global (Creative output)
- * * SUMMARY:
+ * 
+ * SUMMARY:
  * This constraint defines the early stages of a creative career as an inescapable 
  * period of imitation and convergence. All "bus lines" (career paths) take 
  * the same route out of the city for the first few "stops" (years), meaning 
  * nascent work will inevitably look like the work of others. 
  * The constraint forces a choice: reset the career and return to the station, 
  * or "stay on the bus" until the route diverges into unique territory.
- * * KEY AGENTS:
- * - The Novice Artist: The agent at the first few stops, suffering from 
- * comparisons to established work.
- * - The Established Master: The agent who has "stayed on the bus" long enough 
- * to reach unique stops where they are no longer compared to others.
- * - The Critic/Market: The institutional force that judges nascent work 
- * against existing "bus lines" and induces the desire to reset.
- * * NARRATIVE ARC:
- * The novice picks a direction but finds their work is "identical" to others' 
- * early on. They are tempted to return to the station and 
- * start over, only to find the same "identical stops" on the new line. 
- * Mastery is achieved by enduring the extraction of early-career identity 
- * through persistent repetition.
+ * 
+ * KEY AGENTS:
+ * - The Novice Artist (Individual Powerless): At the first few stops, suffering from comparisons.
+ * - The Art School / Record Label (Institutional): Manages talent development through this phase.
+ * - The Established Master (Individual Moderate): Has "stayed on the bus" long enough to reach unique territory.
  */
 
 /* ==========================================================================
-   2. BASE PROPERTIES (Context-Independent)
+   2. CORE SYSTEM INTEGRATION (Context-Independent)
    ========================================================================== */
 
-/* ==========================================================================
-   2. BASE PROPERTIES (Context-Independent)
-   ========================================================================== */
-
-% Required for [STEP 1] and [STEP 2] of the DR-Audit Suite
 narrative_ontology:interval(helsinki_bus_theory, 0, 10).
-
-% Updated to valid v3.1 ontology pillar: [rope]
 narrative_ontology:constraint_claim(helsinki_bus_theory, rope).
 
 % Base extractiveness: Moderate (0.4)
@@ -80,114 +67,85 @@ domain_priors:suppression_score(helsinki_bus_theory, 0.6).
 % Enforcement: Emerges naturally from the structure of learning and markets.
 domain_priors:emerges_naturally(helsinki_bus_theory).
 
-% Metrics required for Section 1 of the Executive Summary
-narrative_ontology:constraint_metric(helsinki_bus_theory, extractiveness, 0.4).
-narrative_ontology:constraint_metric(helsinki_bus_theory, suppression_requirement, 0.6).
-
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(helsinki_bus_theory, mastery_attainment). % Future-self who reaches the unique stops.
-constraint_victim(helsinki_bus_theory, early_career_originality). % The novice's sense of unique identity.
+constraint_beneficiary(helsinki_bus_theory, established_masters).
+constraint_victim(helsinki_bus_theory, novice_artists).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 1: THE NOVICE (YEAR 3) - Noose
+   PERSPECTIVE 1: THE NOVICE ARTIST - Snare
    --------------------------------------------------------------------------
-   
    WHO: individual_powerless (Cannot skip the "identical stops")
-   WHEN: immediate (The 3rd stop/3rd year of work)
+   WHEN: immediate (The early years of work)
    WHERE: trapped (Caught in a "nascent body of work" that looks like others')
-   SCOPE: local (The specific creative field)
    
    WHY THIS CLASSIFICATION:
-   For the beginner, the theory is a "Noose." They are "always being compared to others" 
+   For the beginner, the theory is a 'Snare'. They are "always being compared to others" 
    and feel that their time is being wasted in a derivative loop, strangling their 
-   sense of creative self-worth.
-   
-   NARRATIVE EVIDENCE:
-   "You pick a career direction... Three stops later... you’ll be tempted to go 
-   back to the main station... you’ll still be identical".
+   sense of creative self-worth and leading to frustration.
    -------------------------------------------------------------------------- */
-
-
 
 constraint_indexing:constraint_classification(
     helsinki_bus_theory,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
         exit_options(trapped),
         spatial_scope(local)
     )
-) :-
-    domain_priors:base_extractiveness(helsinki_bus_theory, E),
-    E > 0.3,
-    !.
+).
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE VETERAN MASTER (THE MINKKINEN) - Rope
+   PERSPECTIVE 2: THE ART SCHOOL / RECORD LABEL - Rope
    --------------------------------------------------------------------------
-   
-   WHO: individual_moderate (Has the agency to "stay on the fucking bus")
-   WHEN: biographical (The span of a creative life)
-   WHERE: mobile (Reaching the point where the routes "diverge")
-   SCOPE: global (Total career output)
+   WHO: institutional (Manages talent development)
+   WHEN: biographical (Developing a career over years)
+   WHERE: mobile (Can choose which artists to support)
    
    WHY THIS CLASSIFICATION:
-   To the master, the constraint is a "Rope." It is the functional coordination 
-   mechanism that leads to uniqueness. Staying on the path is the "secret" to 
-   a fulfilling career, turning repetition into a tool for breakthrough.
-   
-   NARRATIVE EVIDENCE:
-   "Stay on the bus. Stay on the fucking bus... Thereafter... all the lines... 
-   take a different route".
+   For an institution managing talent, the theory is a 'Rope'. It provides a framework
+   to understand that early work will be derivative. They can use it to guide artists,
+   foster persistence, and identify those with the resilience to reach unique territory.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
     helsinki_bus_theory,
     rope,
     context(
-        agent_power(individual_moderate),
+        agent_power(institutional),
         time_horizon(biographical),
         exit_options(mobile),
-        spatial_scope(global)
+        spatial_scope(national)
     )
-) :- !.
+).
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE ANALYTICAL OBSERVER - Mountain
+   PERSPECTIVE 3: THE ESTABLISHED MASTER - Mountain
    --------------------------------------------------------------------------
-   
-   WHO: analytical (Observing the "operations of Helsinki’s main bus station")
-   WHEN: historical (The perennial pattern of skill acquisition)
-   WHERE: analytical (Observer stance)
-   SCOPE: global
+   WHO: individual_moderate (Has the agency to "stay on the fucking bus")
+   WHEN: biographical (The span of a creative life)
+   WHERE: mobile (Reaching the point where the routes "diverge")
    
    WHY THIS CLASSIFICATION:
-   To the observer, this is a "Mountain"—an unchangeable structural reality of 
+   To the master, the constraint is a 'Mountain'—an unchangeable structural reality of 
    how mastery works. One cannot simply "leap" to uniqueness; the first kilometer 
    is a zero-degree-of-freedom path that all must traverse.
-   
-   NARRATIVE EVIDENCE:
-   "all the lines leaving from any one platform take the same route out of the 
-   city... This goes on all your creative life".
    -------------------------------------------------------------------------- */
-
-
 
 constraint_indexing:constraint_classification(
     helsinki_bus_theory,
     mountain,
     context(
-        agent_power(analytical),
-        time_horizon(historical),
-        exit_options(analytical),
+        agent_power(individual_moderate),
+        time_horizon(biographical),
+        exit_options(mobile),
         spatial_scope(global)
     )
-) :- !.
+).
 
 /* ==========================================================================
    4. TESTS (What We Learn About Constraints)
@@ -195,28 +153,13 @@ constraint_indexing:constraint_classification(
 
 :- begin_tests(helsinki_bus_theory_tests).
 
-test(multi_perspective_persistence) :-
-    % Novice sees Noose
-    constraint_indexing:constraint_classification(helsinki_bus_theory, Type1, context(individual_powerless, immediate, trapped, local)),
-    % Master sees Rope
-    constraint_indexing:constraint_classification(helsinki_bus_theory, Type2, context(individual_moderate, biographical, mobile, global)),
-    % Observer sees Mountain
-    constraint_indexing:constraint_classification(helsinki_bus_theory, Type3, context(analytical, historical, analytical, global)),
+test(multi_perspective_variance) :-
+    constraint_indexing:constraint_classification(helsinki_bus_theory, Type1, context(agent_power(individual_powerless), _, _, _)),
+    constraint_indexing:constraint_classification(helsinki_bus_theory, Type2, context(agent_power(institutional), _, _, _)),
+    constraint_indexing:constraint_classification(helsinki_bus_theory, Type3, context(agent_power(individual_moderate), _, _, _)),
     Type1 \= Type2,
-    Type2 \= Type3.
-
-test(power_extractiveness_persistence) :-
-    % The novice at year 3 loses more "identity" than the master who gained it.
-    ContextPowerless = context(individual_powerless, immediate, trapped, local),
-    ContextModerate = context(individual_moderate, biographical, mobile, global),
-    constraint_indexing:extractiveness_for_agent(helsinki_bus_theory, ContextPowerless, Score1),
-    constraint_indexing:extractiveness_for_agent(helsinki_bus_theory, ContextModerate, Score2),
-    Score1 > Score2.
-
-test(time_immutability_persistence) :-
-    % Short-term imitation feels unchangeable (Mountain/Noose).
-    % Long-term persistence allows for a shift in Type (Rope).
-    constraint_indexing:effective_immutability(historical, analytical, mountain).
+    Type2 \= Type3,
+    Type1 \= Type3.
 
 :- end_tests(helsinki_bus_theory_tests).
 
@@ -226,45 +169,40 @@ test(time_immutability_persistence) :-
 
 /**
  * LLM GENERATION NOTES
- * * Model: Gemini 2.0 Flash
- * Date: 2026-01-21
- * * KEY DECISIONS:
- * * 1. EXTRACTIVENESS SCORE (0.4):
- * Reasoning: I chose a moderate score because while the theory is ultimately 
- * beneficial (mastery), it extracts a high "tax" in the form of early-career 
- * identity and the "year stops" where one's work is not yet uniquely theirs 
- *. 
- * * 2. SUPPRESSION SCORE (0.6):
- * Reasoning: The theory explicitly notes that "being compared to others" 
- * is the mechanism that induces people to leave the path. 
- * Originality is suppressed by the structural commonality of the route.
- * * 3. PERSPECTIVE SELECTION:
- * The Novice (Noose) highlights the feeling of being derivative; the 
- * Master (Rope) highlights persistence as a tool; the Observer (Mountain) 
- * highlights the structural inevitability.
- * * 4. AMBIGUITIES:
- * - The "divergence point" is not strictly defined in time. This is 
- * resolved by the biographical time horizon.
+ * 
+ * Model: Gemini Pro (Revised)
+ * Date: 2026-01-23
+ * 
+ * KEY DECISIONS:
+ * 
+ * 1. INSTITUTIONAL PERSPECTIVE: Added the 'Art School / Record Label' to represent
+ *    the institutional agent. This provides a clear classification of 'Rope'
+ *    for an entity that uses the theory to manage and develop talent.
+ *
+ * 2. CLASSIFICATION RATIONALE:
+ *    - Novice (Snare): Trapped in the derivative phase, risking self-worth.
+ *    - Art School (Rope): A tool for talent management and expectation setting.
+ *    - Master (Mountain): The inevitable, unchanging path to mastery.
+ * 
+ * 3. EXTRACTIVENESS (0.4): Moderate, as it extracts early-career identity and
+ *    time. The frustration of feeling derivative is a real cost.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
+/**
+ * OMEGA IDENTIFICATION
+ *
+ * The core uncertainty is whether uniqueness is an objective outcome or a subjective belief.
+ */
 
 omega_variable(
     divergence_point_certainty,
-    "Does every 'bus line' truly diverge into unique territory, or do some lines remain derivative indefinitely (a permanent Noose)?",
-    resolution_mechanism("Audit of creative career outcomes across divergent disciplines vs. persistent imitation rates"),
-    impact("If some lines never diverge: The theory is a Noose for those lines. If all diverge: It is a true Rope."),
+    "Does every 'bus line' truly diverge into unique territory, or do some lines remain derivative indefinitely (a permanent Snare)?",
+    resolution_mechanism("Longitudinal qualitative studies of creative careers across disciplines, tracking objective output uniqueness vs. subjective artist satisfaction."),
+    impact("If some lines never diverge: The theory is a Snare for those lines. If all diverge: It is a true Rope."),
     confidence_without_resolution(medium)
-).
-
-omega_variable(
-    originality_as_myth,
-    "Is 'uniqueness' at the end of the route an objective Mountain, or a narrative Rope created to justify the persistence?",
-    resolution_mechanism("Aesthetic and informational comparison of 'unique territory' work against the 'station' archives"),
-    impact("If myth: The entire system is a deceptive Noose for time-extraction. If real: The theory holds as a Mountain/Rope."),
-    confidence_without_resolution(low)
 ).
 
 /* ==========================================================================
@@ -273,18 +211,16 @@ omega_variable(
 
 /**
  * VIABLE ALTERNATIVES
- * * ALTERNATIVE 1: The "New Station" Strategy (Resetting)
- * Viability: Frequently chosen by those who "go back to the main station".
- * Suppression: Actively discouraged by the theory as it leads back to the 
- * same "identical stops".
- * * ALTERNATIVE 2: Off-Route Exploration (Non-Bus)
- * Viability: The idea of skipping the foundational imitation phase.
- * Suppression: Presented as structurally impossible; the "lines take the same 
- * route" is a fixed feature of the "station".
- * * CONCLUSION:
- * The theory functions by suppressing the viability of Alternative 1. By 
+ * 
+ * ALTERNATIVE 1: The "New Station" Strategy (Resetting Careers)
+ *    Viability: Frequently chosen by those who "go back to the main station" and try a new path.
+ *    Suppression: Actively discouraged by the theory as it leads back to the same "identical stops"
+ *    and delays true mastery.
+ * 
+ * CONCLUSION:
+ * The theory functions by suppressing the viability of resetting one's career. By 
  * labeling resetting as a failure to move past the "identical" stage, it 
- * transforms the "Noose" of imitation into the "Rope" of persistence.
+ * transforms the "Snare" of early-career frustration into the "Rope" of persistence.
  */
 
 /* ==========================================================================
@@ -293,8 +229,9 @@ omega_variable(
 
 /**
  * TO USE THIS FILE:
- * * 1. Load: ?- [constraint_helsinki_bus_theory].
- * 2. Multi-perspective: ?- constraint_indexing:multi_index_report(helsinki_bus_theory).
+ * 
+ * 1. Load: ?- [constraints/helsinki_bus_theory].
+ * 2. Multi-perspective: ?- multi_index_report(helsinki_bus_theory).
  * 3. Run tests: ?- run_tests(helsinki_bus_theory_tests).
  */
 

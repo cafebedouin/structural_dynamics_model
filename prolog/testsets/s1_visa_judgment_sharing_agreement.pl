@@ -82,7 +82,7 @@ constraint_victim(visa_judgment_sharing_agreement, signatory_member_banks).
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 1: Small Signatory Bank - Noose
+   PERSPECTIVE 1: Small Signatory Bank - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_moderate - Financial institution but small relative to the system.
@@ -91,7 +91,7 @@ constraint_victim(visa_judgment_sharing_agreement, signatory_member_banks).
    SCOPE: national.
    
    WHY THIS CLASSIFICATION:
-   For a smaller bank, this is a "Noose." They are forced to sign an agreement 
+   For a smaller bank, this is a "Snare." They are forced to sign an agreement 
    that binds them to pay for the "sins" of the network's past antitrust 
    behavior, with the terms dictated by the larger Visa corporate entity 
    to ensure the IPO's success.
@@ -103,7 +103,7 @@ constraint_victim(visa_judgment_sharing_agreement, signatory_member_banks).
 
 constraint_indexing:constraint_classification(
     visa_judgment_sharing_agreement,
-    noose,
+    snare,
     context(
         agent_power(individual_moderate),
         time_horizon(immediate),
@@ -198,7 +198,7 @@ test(multi_perspective_variance) :-
         context(individual_moderate, immediate, trapped, _, _, national)),
     constraint_indexing:constraint_classification(visa_judgment_sharing_agreement, Type2, 
         context(institutional, biographical, arbitrage, _, _, global)),
-    Type1 = noose,
+    Type1 = snare,
     Type2 = rope.
 
 test(systemic_stability_logic) :-
@@ -232,9 +232,9 @@ test(systemic_stability_logic) :-
 
 omega_variable(
     allocation_fairness,
-    "Is the liability allocation based on revenue (Rope) or on political leverage within the Visa association (Noose)?",
+    "Is the liability allocation based on revenue (Rope) or on political leverage within the Visa association (Snare)?",
     resolution_mechanism("Audit of the confidential exhibit filed with the SEC Secretary"),
-    impact("If leverage-based: it is a Noose for smaller banks. If revenue-based: it is a Rope for the network."),
+    impact("If leverage-based: it is a Snare for smaller banks. If revenue-based: it is a Rope for the network."),
     confidence_without_resolution(low)
 ).
 
@@ -267,4 +267,4 @@ omega_variable(
 % --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
 constraint_indexing:constraint_classification(s1_visa_judgment_sharing_agreement, mountain, agent_power(analytical)).
 constraint_indexing:constraint_classification(s1_visa_judgment_sharing_agreement, rope, agent_power(institutional)).
-constraint_indexing:constraint_classification(s1_visa_judgment_sharing_agreement, noose, agent_power(individual_powerless)).
+constraint_indexing:constraint_classification(s1_visa_judgment_sharing_agreement, snare, agent_power(individual_powerless)).

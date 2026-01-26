@@ -47,8 +47,8 @@ omega_variable(omega_p1, preference, 'Rina and Anna prioritize presence/autonomy
 % -----------------------------------------------------------------------------
 
 % Claim: The Kubo Credit System / Ranking Ladder.
-% Classification: Noose (⊠C) - High extractiveness of labor via false rewards.
-constraint_claim(kubo_ladder_system, noose).
+% Classification: Snare (⊠C) - High extractiveness of labor via false rewards.
+constraint_claim(kubo_ladder_system, snare).
 constraint_metric(kubo_ladder_system, extractiveness, 0.85).
 constraint_metric(kubo_ladder_system, suppression_requirement, 0.70).
 

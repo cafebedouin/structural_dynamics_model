@@ -55,7 +55,7 @@ intent_power_change(kitchen_interval, domestic_unit, 0.40).
 /*
 1. MODAL TRANSFORMATION HISTORY:
    - Domestic Scaffold: Stable high-utility coordination. Extraction [0.04] remains negligible.
-   - Maternal Remorse: [Resistance 0.22 -> 0.45]. While the metric rises during the burial rite, it does not achieve the "noose" transformation. 
+   - Maternal Remorse: [Resistance 0.22 -> 0.45]. While the metric rises during the burial rite, it does not achieve the "snare" transformation. 
    - Comparison: For Stephen Dedalus, this metric exceeds 0.90, indicating capture. For Bloom, it remains a "rope"—a tether of identity rather than a mechanism of strangulation.
 
 2. STRUCTURAL SIGNATURE ANALYSIS (v3.2):
@@ -70,7 +70,7 @@ intent_power_change(kitchen_interval, domestic_unit, 0.40).
 
 4. META-LOGICAL FRAUD DETECTION:
    - NO FRAUD DETECTED: The constraints act as claimed. 
-   - Note: Unlike the Dedalus audit, there is no "noose" masquerading as a "mountain" here. Bloom’s system is honest about its tethering.
+   - Note: Unlike the Dedalus audit, there is no "snare" masquerading as a "mountain" here. Bloom’s system is honest about its tethering.
 
 5. COORDINATION SUMMARY:
    - The kitchen functions as a successful stabilizer. Bloom’s ability to "eat with relish" despite the "remorse" indicates the scaffold’s high dampening efficiency.

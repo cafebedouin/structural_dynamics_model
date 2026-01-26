@@ -43,7 +43,7 @@
  * * NARRATIVE ARC:
  * The field has moved from a "Mountain" of chance sightings to a "Rope" of industrial-scale 
  * data coordination. This "automated serendipity" allows for 
- * the arbitrage of nanosecond-to-lifetime timescales, but it acts as a "Noose" for 
+ * the arbitrage of nanosecond-to-lifetime timescales, but it acts as a "Snare" for 
  * traditionalists who lack the computational capacity to survive the information blizzard.
  */
 
@@ -113,7 +113,7 @@ constraint_indexing:constraint_classification(
     !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE "CHANCE" OBSERVER - Noose
+   PERSPECTIVE 2: THE "CHANCE" OBSERVER - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless (Relies on serendipity in an era of conveyor belts)
@@ -122,7 +122,7 @@ constraint_indexing:constraint_classification(
    SCOPE: local (Limited to what can be seen from one spot)
    
    WHY THIS CLASSIFICATION:
-   For the observer without automated tools, the "conveyor belt" is a Noose. It extracts the 
+   For the observer without automated tools, the "conveyor belt" is a Snare. It extracts the 
    legitimacy of "chance" discovery and places authority into the "well-oiled machine".
    
    NARRATIVE EVIDENCE:
@@ -131,7 +131,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     big_data_astrophysics_arbitrage,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -181,9 +181,9 @@ constraint_indexing:constraint_classification(
 :- begin_tests(big_data_astrophysics_arbitrage_tests).
 
 test(multi_perspective_variance) :-
-    % Researcher (Rope) vs Individual (Noose) vs System (Mountain)
+    % Researcher (Rope) vs Individual (Snare) vs System (Mountain)
     constraint_indexing:constraint_classification(big_data_astrophysics_arbitrage, rope, context(individual_moderate, _, arbitrage, _)),
-    constraint_indexing:constraint_classification(big_data_astrophysics_arbitrage, noose, context(individual_powerless, _, trapped, _)),
+    constraint_indexing:constraint_classification(big_data_astrophysics_arbitrage, snare, context(individual_powerless, _, trapped, _)),
     constraint_indexing:constraint_classification(big_data_astrophysics_arbitrage, mountain, context(institutional, _, _, _)).
 
 test(power_extractiveness_scaling) :-
@@ -209,7 +209,7 @@ test(power_extractiveness_scaling) :-
  * extraction of the universe's actions into human-controlled storage.
  * * 2. MANDATROPHY STATUS:
  * Status: [RESOLVED MANDATROPHY]. High extraction is justified as a 
- * functional "Rope" for the researcher but becomes a "Noose" of exclusion 
+ * functional "Rope" for the researcher but becomes a "Snare" of exclusion 
  * for those outside the automated institutional loop.
  * * 3. PERSPECTIVE SELECTION:
  * Chose the "Chance" Observer (Powerless) to show how industrialization 
@@ -224,15 +224,15 @@ omega_variable(
     big_data_astrophysics_arbitrage_extraction_intent,
     "Is the 1.6 petabyte extraction a functional necessity for understanding the universe or a predatory capture of cosmic data?",
     resolution_mechanism("Audit of scientific value derived from automated transients vs. legacy serendipity discoveries"),
-    impact("If necessity: Mountain. If predatory: Noose/Mandatrophy."),
+    impact("If necessity: Mountain. If predatory: Snare/Mandatrophy."),
     confidence_without_resolution(medium)
 ).
 
 omega_variable(
     data_redundancy_clog,
-    "Will the blizzard of data (1.6PB) create a 'noise noose' where true signals are buried under automated artifacts?",
+    "Will the blizzard of data (1.6PB) create a 'noise snare' where true signals are buried under automated artifacts?",
     resolution_mechanism("Measure the ratio of confirmed transients to 'conveyor belt' errors over time"),
-    impact("If signal: Rope. If noise: Noose."),
+    impact("If signal: Rope. If noise: Snare."),
     confidence_without_resolution(low)
 ).
 
@@ -248,7 +248,7 @@ omega_variable(
  * rather than space").
  * * CONCLUSION:
  * The move to "Automated Serendipity" creates a Rope for those within the system 
- * but effectively suppresses the traditional "Slow Map" Noose.
+ * but effectively suppresses the traditional "Slow Map" Snare.
  */
 
 /* ==========================================================================

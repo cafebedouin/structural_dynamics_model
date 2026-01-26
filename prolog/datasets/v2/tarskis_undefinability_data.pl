@@ -36,10 +36,10 @@ constraint_metric(diagonal_self_reference, suppression_requirement, 0.40).
 constraint_metric(diagonal_self_reference, snap_back_potential, 0.70).
 constraint_metric(diagonal_self_reference, extractiveness, 0.55).
 
-% The Semantic Closure Collapse (The Noose)
+% The Semantic Closure Collapse (The Snare)
 % The assumption that a language can define its own truth predicate leads to a contradiction.
 % Extractiveness at 0.99 requires the 'metalanguage_M' scaffold to resolve.
-constraint_claim(semantic_self_closure, noose).
+constraint_claim(semantic_self_closure, snare).
 constraint_metric(semantic_self_closure, intensity, 0.99).
 constraint_metric(semantic_self_closure, suppression_requirement, 0.97).
 constraint_metric(semantic_self_closure, snap_back_potential, 0.01).
@@ -50,7 +50,7 @@ constraint_metric(semantic_self_closure, extractiveness, 0.99).
 recommendation(rec_01, implement_stratified_truth_predicates_per_language_level).
 affects_constraint(rec_01, diagonal_self_reference).
 
-% Noose (0.99 extractiveness) triggers Cut
+% Snare (0.99 extractiveness) triggers Cut
 % Utilizing 'metalanguage_M' scaffold to define truth for L in a higher system.
 recommendation(rec_02, abandon_internal_truth_definition_for_external_metalanguage).
 affects_constraint(rec_02, semantic_self_closure).

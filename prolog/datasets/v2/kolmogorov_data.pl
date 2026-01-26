@@ -36,7 +36,7 @@ constraint_metric(algorithmic_randomness_detection, suppression_requirement, 0.3
 constraint_metric(algorithmic_randomness_detection, snap_back_potential, 0.40).
 constraint_metric(algorithmic_randomness_detection, extractiveness, 0.52).
 
-constraint_claim(absolute_incomputability_noose, noose).
+constraint_claim(absolute_incomputability_noose, snare).
 constraint_metric(absolute_incomputability_noose, intensity, 0.96).
 constraint_metric(absolute_incomputability_noose, suppression_requirement, 0.88).
 constraint_metric(absolute_incomputability_noose, snap_back_potential, 0.90).

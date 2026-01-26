@@ -37,7 +37,7 @@
  * suppression techniques.
  * * KEY AGENTS:
  * - Leopold Bloom (Henry Flower): Moderate agent seeking narcotic emotional relief (Rope).
- * - Martha Clifford: Powerless correspondent trapped in a one-sided dynamic (Noose).
+ * - Martha Clifford: Powerless correspondent trapped in a one-sided dynamic (Snare).
  * - The Catholic Church (All Hallows): Institutional observer viewing morality as law (Mountain).
  */
 
@@ -45,9 +45,9 @@
    2. CORE SYSTEM INTEGRATION (The "Reality" Layer)
    ========================================================================== */
 
-% Standardized interval and claim (Fixed: changed 'social_boundary' to 'noose')
+% Standardized interval and claim (Fixed: changed 'social_boundary' to 'snare')
 narrative_ontology:interval(bloom_secret_correspondence, 0, 10).
-narrative_ontology:constraint_claim(bloom_secret_correspondence, noose).
+narrative_ontology:constraint_claim(bloom_secret_correspondence, snare).
 
 % Metrics: Extractiveness (0.4) and Suppression (0.8)
 domain_priors:base_extractiveness(bloom_secret_correspondence, 0.4).
@@ -79,7 +79,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 2: MARTHA CLIFFORD - Noose
+   PERSPECTIVE 2: MARTHA CLIFFORD - Snare
    --------------------------------------------------------------------------
    WHO: individual_powerless - Martha is socially constrained and "longing".
    WHY: She is trapped in an asymmetric dynamic where Bloom controls the 
@@ -87,7 +87,7 @@ constraint_indexing:constraint_classification(
    -------------------------------------------------------------------------- */
 constraint_indexing:constraint_classification(
     bloom_secret_correspondence,
-    noose,
+    snare,
     context(agent_power(individual_powerless), time_horizon(immediate), exit_options(constrained), spatial_scope(local))
 ) :- !.
 
@@ -113,7 +113,7 @@ constraint_indexing:constraint_classification(
 test(multi_perspective_conflict) :-
     constraint_indexing:constraint_classification(bloom_secret_correspondence, T1, context(agent_power(individual_moderate), _, _, _)),
     constraint_indexing:constraint_classification(bloom_secret_correspondence, T2, context(agent_power(individual_powerless), _, _, _)),
-    T1 = rope, T2 = noose.
+    T1 = rope, T2 = snare.
 
 test(time_immutability_shift) :-
     % Institutional view sees morality as a Mountain over historical time
@@ -127,8 +127,8 @@ test(time_immutability_shift) :-
 
 /**
  * LLM GENERATION NOTES:
- * Standardizing the claim as 'noose' allows the Audit Suite to flag the 
- * perspectival gap between Bloom's 'Rope' and Martha's 'Noose'. 
+ * Standardizing the claim as 'snare' allows the Audit Suite to flag the 
+ * perspectival gap between Bloom's 'Rope' and Martha's 'Snare'. 
  * This resolves the previous schema mismatch.
  */
 
@@ -136,7 +136,7 @@ omega_variable(
     martha_clifford_authenticity,
     "Is Martha a real person or a strategic fraud targeting lonely men?",
     resolution_mechanism("Verification of her physical address vs P.O. Box"),
-    impact("If fraud: Rope (Bloom is being coordinated). If real: Noose (asymmetry)."),
+    impact("If fraud: Rope (Bloom is being coordinated). If real: Snare (asymmetry)."),
     confidence_without_resolution(medium)
 ).
 
@@ -158,4 +158,4 @@ omega_variable(
 % --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
 constraint_indexing:constraint_classification(ulysses_chp05, mountain, agent_power(analytical)).
 constraint_indexing:constraint_classification(ulysses_chp05, rope, agent_power(institutional)).
-constraint_indexing:constraint_classification(ulysses_chp05, noose, agent_power(individual_powerless)).
+constraint_indexing:constraint_classification(ulysses_chp05, snare, agent_power(individual_powerless)).

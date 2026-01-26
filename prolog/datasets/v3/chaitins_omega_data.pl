@@ -1,6 +1,6 @@
 % Clinical Sensor Output: Chaitin's Omega () Analysis
 % Scope: Analyzing the transformation of the Halting Probability from a 'Mountain' (absolute mathematical limit)
-% to a 'Noose' (computational constraint) used to define the boundaries of formal systems.
+% to a 'Snare' (computational constraint) used to define the boundaries of formal systems.
 % Audit Status: v3.1.2 DR Modal Logic Edition - Algorithmic Information Theory Audit
 
 % --- Section 1: Entities & Intervals ---
@@ -21,7 +21,7 @@ event(e3, supercomputation_speculation, 80, [type(oracle_dependency_identified)]
 constraint_claim(chaitins_omega_protocol, mountain).
 
 % Current state metrics (at T=100)
-% Extractiveness (X): High - The 'Noose' effect restricts mathematical progress by
+% Extractiveness (X): High - The 'Snare' effect restricts mathematical progress by
 % rendering certain truths "random" and inaccessible to systematic deduction.
 % Suppression (E): High - Rejection of "unreasonable" consistency or decidability in complex systems.
 constraint_metric(chaitins_omega_protocol, extractiveness, 0.82).
@@ -37,11 +37,11 @@ measurement(m2, chaitins_omega_protocol, suppression_requirement, 0, 0.05).
 measurement(m3, chaitins_omega_protocol, extractiveness, 40, 0.45).
 measurement(m4, chaitins_omega_protocol, suppression_requirement, 40, 0.40).
 
-% T=100: Present state. Full 'Noose' (Epistemic capture within formal systems).
+% T=100: Present state. Full 'Snare' (Epistemic capture within formal systems).
 measurement(m5, chaitins_omega_protocol, extractiveness, 100, 0.82).
 measurement(m6, chaitins_omega_protocol, suppression_requirement, 100, 0.78).
 
-% Coercion Vectors (Evolution of the Noose)
+% Coercion Vectors (Evolution of the Snare)
 measurement(v1, complexity_theory_evolution, accessibility_collapse(structural), 40, 0.70).
 measurement(v2, complexity_theory_evolution, stakes_inflation(individual), 100, 0.85).
 

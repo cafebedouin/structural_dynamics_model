@@ -44,7 +44,7 @@
  * * NARRATIVE ARC:
  * The discovery that "warming stops once humanity reaches net-zero" turned 
  * the atmosphere into a balanced ledger. 
- * This ledger acts as a Rope for market-based coordination but a Noose for 
+ * This ledger acts as a Rope for market-based coordination but a Snare for 
  * those who cannot afford the price of "equivalent removals".
  */
 
@@ -114,7 +114,7 @@ constraint_indexing:constraint_classification(
     !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE DE-INDUSTRIALIZING FIRM - Noose
+   PERSPECTIVE 2: THE DE-INDUSTRIALIZING FIRM - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless (Subject to mandatory balancing rules)
@@ -124,7 +124,7 @@ constraint_indexing:constraint_classification(
    
    WHY THIS CLASSIFICATION:
    For firms that cannot decarbonize absolute-zero, the "equivalent removals" 
-   requirement is a Noose—it extracts profit and forces a performance of 
+   requirement is a Snare—it extracts profit and forces a performance of 
    "net-zero" rituals.
    
    NARRATIVE EVIDENCE:
@@ -134,7 +134,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     negative_emissions_arbitrage,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -185,9 +185,9 @@ constraint_indexing:constraint_classification(
 :- begin_tests(negative_emissions_arbitrage_tests).
 
 test(multi_perspective_variance) :-
-    % Provider (Rope) vs Emitter (Noose) vs Scientist (Mountain)
+    % Provider (Rope) vs Emitter (Snare) vs Scientist (Mountain)
     constraint_indexing:constraint_classification(negative_emissions_arbitrage, rope, context(institutional, _, arbitrage, _)),
-    constraint_indexing:constraint_classification(negative_emissions_arbitrage, noose, context(individual_powerless, _, trapped, _)),
+    constraint_indexing:constraint_classification(negative_emissions_arbitrage, snare, context(individual_powerless, _, trapped, _)),
     constraint_indexing:constraint_classification(negative_emissions_arbitrage, mountain, context(analytical, _, _, _)).
 
 test(extraction_equivalence) :-
@@ -211,7 +211,7 @@ test(extraction_equivalence) :-
  * 1. EXTRACTIVENESS (0.82): High score chosen because the "Net Zero" framing 
  * creates a mandatory capital flow toward the removal sector.
  * 2. MANDATROPHY STATUS: Triggered by the high extraction rate (82%). The system 
- * is a Rope for the arbitrageur but a Noose for those who cannot exit carbon 
+ * is a Rope for the arbitrageur but a Snare for those who cannot exit carbon 
  * dependency.
  */
 
@@ -223,7 +223,7 @@ omega_variable(
     negative_emissions_arbitrage_extraction_intent,
     "Is the requirement for 'equivalent removals' a physical necessity for climate stability or a market mechanism to preserve industrial status quo?",
     resolution_mechanism("Audit of actual temperature response vs. net-zero removal rates in the 2030s"),
-    impact("If necessity: Mountain. If status quo preservation: Noose."),
+    impact("If necessity: Mountain. If status quo preservation: Snare."),
     confidence_without_resolution(medium)
 ).
 
@@ -231,7 +231,7 @@ omega_variable(
     equivalency_validity,
     "Are industrial 'removals' truly equivalent in atmospheric effect to 'avoided' fossil emissions?",
     resolution_mechanism("Long-term verification of carbon residence times in geological storage vs. atmospheric cycles"),
-    impact("If equivalent: Rope. If not: The arbitrage is a 'Living within a Lie' Noose."),
+    impact("If equivalent: Rope. If not: The arbitrage is a 'Living within a Lie' Snare."),
     confidence_without_resolution(low)
 ).
 
@@ -246,7 +246,7 @@ omega_variable(
  * Suppression: Suppressed by the "Net" in Net Zero, which allows the arbitrage.
  * * CONCLUSION:
  * The invention of "Net Zero" as a "balancing" idea created the arbitrage 
- * opportunity, replacing the "Absolute Noose" with a "Removals Rope".
+ * opportunity, replacing the "Absolute Snare" with a "Removals Rope".
  */
 
 /* ==========================================================================

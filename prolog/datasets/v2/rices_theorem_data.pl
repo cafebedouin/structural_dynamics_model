@@ -35,10 +35,10 @@ constraint_metric(extensional_equivalence, suppression_requirement, 0.35).
 constraint_metric(extensional_equivalence, snap_back_potential, 0.70).
 constraint_metric(extensional_equivalence, extractiveness, 0.52).
 
-% The Undecidability Sink (The Noose)
+% The Undecidability Sink (The Snare)
 % The impossibility of a general algorithm to decide semantic truth.
 % Extractiveness at 0.98 requires the 'trivial_property_identifier' scaffold to escape.
-constraint_claim(semantic_undecidability, noose).
+constraint_claim(semantic_undecidability, snare).
 constraint_metric(semantic_undecidability, intensity, 0.99).
 constraint_metric(semantic_undecidability, suppression_requirement, 0.96).
 constraint_metric(semantic_undecidability, snap_back_potential, 0.01).
@@ -49,7 +49,7 @@ constraint_metric(semantic_undecidability, extractiveness, 0.98).
 recommendation(rec_01, utilize_abstract_interpretation_for_property_approximation).
 affects_constraint(rec_01, extensional_equivalence).
 
-% Noose (0.98 extractiveness) triggers Cut
+% Snare (0.98 extractiveness) triggers Cut
 % Utilizing 'trivial_property_identifier' scaffold to restrict scope to decidable syntax.
 recommendation(rec_02, abandon_exact_behavioral_analysis_for_syntactic_heuristics).
 affects_constraint(rec_02, semantic_undecidability).

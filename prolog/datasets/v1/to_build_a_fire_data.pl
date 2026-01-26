@@ -25,12 +25,12 @@ event(ev05_terminal_sleep, death_by_freezing, 100, [state(drowsiness), condition
 constraint_claim(absolute_cold_threshold, mountain).
 constraint_metric(absolute_cold_threshold, accessibility_collapse, 1.0).
 
-% Noose: The Wet Foot. Once wetted, the time-to-fire narrows the man's survival window to a single path.
-constraint_claim(wet_foot_urgency, noose).
+% Snare: The Wet Foot. Once wetted, the time-to-fire narrows the man's survival window to a single path.
+constraint_claim(wet_foot_urgency, snare).
 constraint_metric(wet_foot_urgency, stakes_inflation, 0.98).
 
-% Zombie: Lack of Imagination. The man's initial belief that 50 below is just 'uncomfortable' rather than significant.
-constraint_claim(procedural_judgment_bias, zombie).
+% Piton: Lack of Imagination. The man's initial belief that 50 below is just 'uncomfortable' rather than significant.
+constraint_claim(procedural_judgment_bias, piton).
 constraint_metric(procedural_judgment_bias, suppression, 0.85).
 
 % Rope: Travel Loneliness. Ties the man's survival solely to his own failing biological dexterity.

@@ -23,10 +23,10 @@ event('ev04_mars_insertion', 'failure_point', 98, [date('1999-09-23'), altitude(
 constraint_claim('mars_atmospheric_limit', 'mountain').
 constraint_metric('mars_atmospheric_limit', 'accessibility_collapse', 1.0) .
 
-constraint_claim('metric_standard_mandate', 'noose').
+constraint_claim('metric_standard_mandate', 'snare').
 constraint_metric('metric_standard_mandate', 'stakes_inflation', 0.95) .
 
-constraint_claim('fbc_philosophy_bias', 'zombie').
+constraint_claim('fbc_philosophy_bias', 'piton').
 constraint_metric('fbc_philosophy_bias', 'suppression', 0.85) .
 
 constraint_claim('software_interface_binding', 'rope').

@@ -35,7 +35,7 @@ constraint_metric(operator_boundedness_friction, suppression_requirement, 0.35).
 constraint_metric(operator_boundedness_friction, snap_back_potential, 0.40).
 constraint_metric(operator_boundedness_friction, extractiveness, 0.52).
 
-constraint_claim(completeness_requirement_noose, noose).
+constraint_claim(completeness_requirement_noose, snare).
 constraint_metric(completeness_requirement_noose, intensity, 0.96).
 constraint_metric(completeness_requirement_noose, suppression_requirement, 0.88).
 constraint_metric(completeness_requirement_noose, snap_back_potential, 0.92).

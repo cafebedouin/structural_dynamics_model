@@ -26,12 +26,12 @@ event(ev04_investiture_vote, systemic_overhaul, 100, [actor(national_assembly), 
 constraint_claim(decolonization_imperative, mountain).
 constraint_metric(decolonization_imperative, accessibility_collapse, 0.95).
 
-% Noose: Ministerial Instability. The 'System of Parties' that forced government collapses every few months, tightening the paralysis.
-constraint_claim(parliamentary_immobilism, noose).
+% Snare: Ministerial Instability. The 'System of Parties' that forced government collapses every few months, tightening the paralysis.
+constraint_claim(parliamentary_immobilism, snare).
 constraint_metric(parliamentary_immobilism, stakes_inflation, 0.92).
 
-% Zombie: 1946 Sovereignty Ideal. The dead belief that the Assembly could rule without a strong executive, surviving only as a legal shell.
-constraint_claim(legislative_supremacy_myth, zombie).
+% Piton: 1946 Sovereignty Ideal. The dead belief that the Assembly could rule without a strong executive, surviving only as a legal shell.
+constraint_claim(legislative_supremacy_myth, piton).
 constraint_metric(legislative_supremacy_myth, suppression, 0.85).
 
 % Rope: The 1946 Constitution. Ties the Prime Minister's hands, preventing effective military oversight.

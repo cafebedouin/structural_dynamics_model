@@ -67,7 +67,7 @@ class ConstraintValidator:
         """Ensure the constraint_claim uses a recognized ontological category."""
         # Updated to include natural_law, election_cycle, and physical_law
         valid_claims = [
-            'mountain', 'noose', 'rope', 'zombie',
+            'mountain', 'snare', 'rope', 'piton',
             'natural_law', 'physical_law', 'election_cycle',
             'statutory_limit', 'market_constraint'
         ]

@@ -36,10 +36,10 @@ constraint_metric(nested_reflection_loop, suppression_requirement, 0.40).
 constraint_metric(nested_reflection_loop, snap_back_potential, 0.70).
 constraint_metric(nested_reflection_loop, extractiveness, 0.58).
 
-% The Second Incompleteness Collapse (The Noose)
+% The Second Incompleteness Collapse (The Snare)
 % The realization that a system can only prove its own consistency (Box(not Box false) -> not Box false) if it is inconsistent.
 % Extractiveness at 0.99 requires the 'diagonal_lemma_fixed_point' scaffold to resolve.
-constraint_claim(reflection_principle_trivialization, noose).
+constraint_claim(reflection_principle_trivialization, snare).
 constraint_metric(reflection_principle_trivialization, intensity, 0.99).
 constraint_metric(reflection_principle_trivialization, suppression_requirement, 0.96).
 constraint_metric(reflection_principle_trivialization, snap_back_potential, 0.01).
@@ -50,7 +50,7 @@ constraint_metric(reflection_principle_trivialization, extractiveness, 0.99).
 recommendation(rec_01, utilize_modal_logic_k4_frames_to_visualize_provability_depth).
 affects_constraint(rec_01, nested_reflection_loop).
 
-% Noose (0.99 extractiveness) triggers Cut
+% Snare (0.99 extractiveness) triggers Cut
 % Utilizing 'diagonal_lemma_fixed_point' scaffold to construct the Rosser-style sentence for the proof.
 recommendation(rec_02, abandon_naive_reflection_principles_for_formal_provability_logic).
 affects_constraint(rec_02, reflection_principle_trivialization).

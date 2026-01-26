@@ -200,7 +200,7 @@ test(all_sections_represented) :-
 
 test(gita_insight_encoded) :-
     % The key insight from Gita analysis should be encoded
-    % Eternal soul is Noose, not Mountain
+    % Eternal soul is Snare, not Mountain
     type_1_error(eternal_soul),
     institutional_claim(eternal_soul, mountain),
     \+ belief_classification(eternal_soul, mountain).

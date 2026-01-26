@@ -153,7 +153,7 @@ constraint_indexing:constraint_classification(
     !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE ANTI-UNIONIST - Noose
+   PERSPECTIVE 3: THE ANTI-UNIONIST - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerful - Leaders of the rebellion (implied).
@@ -163,7 +163,7 @@ constraint_indexing:constraint_classification(
    
    WHY THIS CLASSIFICATION:
    For those who sought to leave the Union, Lincoln's "proposition" is a 
-   "Noose." It is a coercive claim that their region cannot exist 
+   "Snare." It is a coercive claim that their region cannot exist 
    outside the national "dedication," enforced by "great battlefield" 
    violence.
    
@@ -174,7 +174,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     constitutional_consecration,
-    noose,
+    snare,
     context(
         agent_power(individual_powerful),
         time_horizon(immediate),
@@ -224,7 +224,7 @@ test(extraction_limit) :-
  * is total. However, because it is "conceived in liberty," the score 
  * remains in the 0.6 range—high, but ostensibly for the beneficiary's own 
  * ultimate freedom.
- * 3. PERSPECTIVES: I included the implied Secessionist as a "Noose" 
+ * 3. PERSPECTIVES: I included the implied Secessionist as a "Snare" 
  * perspective because the "testing" of the Union's "endurance" represents 
  * a coercive restriction on their exit options.
  */
@@ -237,7 +237,7 @@ omega_variable(
     equality_definition,
     "Does 'all men' include the four million enslaved people, or is the 'proposition' limited to the legal status of states?",
     resolution_mechanism("Requires the Reconstruction Amendments to transition the proposition from a 'Rope' to a 'Mountain' of law."),
-    impact("If the proposition is narrow, the Noose of the Civil War only benefits white citizens."),
+    impact("If the proposition is narrow, the Snare of the Civil War only benefits white citizens."),
     confidence_without_resolution(medium)
 ).
 

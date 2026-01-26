@@ -6,7 +6,7 @@
 % 1. ENTITIES & INTERVALS
 entity(asce_7_22, standard).
 entity(asce_committee, consensus_body).
-entity(hazard_tool, scaffold). % Authorized scaffold for Noose removal.
+entity(hazard_tool, scaffold). % Authorized scaffold for Snare removal.
 entity(design_professional, actor).
 
 interval(revision_cycle, 0, 9).
@@ -38,8 +38,8 @@ constraint_claim(liability_disclaimer, tangled_rope).
 constraint_metric(liability_disclaimer, extractiveness, 0.55).
 constraint_metric(liability_disclaimer, suppression_requirement, 0.40).
 
-% Noose (⊠C): ext >= 0.66, supp >= 0.46
-constraint_claim(mandatory_digital_data, noose).
+% Snare (⊠C): ext >= 0.66, supp >= 0.46
+constraint_claim(mandatory_digital_data, snare).
 constraint_metric(mandatory_digital_data, extractiveness, 0.75).
 constraint_metric(mandatory_digital_data, suppression_requirement, 0.80).
 

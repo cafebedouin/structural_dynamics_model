@@ -47,7 +47,7 @@
  * * NARRATIVE ARC:
  * FBC began as a Rope (coordinating a post-Cold War NASA toward efficiency). 
  * For engineers on the ground, the budget caps were a Mountain. In practice, 
- * the lack of "Margin" turned FBC into a Noose that extracted technical 
+ * the lack of "Margin" turned FBC into a Snare that extracted technical 
  * integrity and mission safety to feed institutional productivity metrics, 
  * resulting in the loss of multiple planetary missions.
  */
@@ -58,7 +58,7 @@
 
 % Required for [STEP 1] and [STEP 2] of the DR-Audit Suite
 narrative_ontology:interval(fbc_era_operations, 0, 10).
-narrative_ontology:constraint_claim(nasa_faster_better_cheaper, noose).
+narrative_ontology:constraint_claim(nasa_faster_better_cheaper, snare).
 
 % Base extractiveness score (0.0-1.0)
 % Rationale: 0.8. High extraction; FBC "extracted" the safety margins and 
@@ -151,7 +151,7 @@ constraint_indexing:constraint_classification(
     !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: POST-FAILURE INVESTIGATOR - Noose
+   PERSPECTIVE 3: POST-FAILURE INVESTIGATOR - Snare
    --------------------------------------------------------------------------
    
    WHO: analytical - Outside observer identifying the root cause of loss.
@@ -160,7 +160,7 @@ constraint_indexing:constraint_classification(
    SCOPE: global - A cautionary lesson for complex systems engineering.
    
    WHY THIS CLASSIFICATION:
-   The investigator sees the Noose. The constraint of "Cheaper" extracted 
+   The investigator sees the Snare. The constraint of "Cheaper" extracted 
    the safety margin until the mission "choked" on the first unanticipated 
    error (like the metric/English unit mismatch). The system guaranteed 
    failure by removing the friction required to catch errors.
@@ -170,7 +170,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     nasa_faster_better_cheaper,
-    noose,
+    snare,
     context(
         agent_power(analytical),
         time_horizon(historical),
@@ -211,7 +211,7 @@ test(extraction_threshold_breach) :-
  * * KEY DECISIONS:
  * 1. EXTRACTIVENESS (0.8): I chose a high score because FBC fundamentally 
  * trades the *survival* of a system for the *tempo* of a system. 
- * 2. CLASSIFICATION: I primary-labeled this as a 'Noose' from an analytical 
+ * 2. CLASSIFICATION: I primary-labeled this as a 'Snare' from an analytical 
  * perspective. While it claimed to be a Rope (efficiency), it actively 
  * suppressed the "Margin" (the space where safety exists), leading to 
  * catastrophic extraction.
@@ -225,7 +225,7 @@ omega_variable(
      'Rope' used to justify the extraction of the 'margin'?",
     resolution_mechanism("Comparison of scientific data per dollar in FBC vs. traditional eras"),
     impact("If data/dollar is higher: FBC was a flawed Rope. If lower: 
-            FBC was a pure Noose."),
+            FBC was a pure Snare."),
     confidence_without_resolution(low)
 ).
 
@@ -241,7 +241,7 @@ omega_variable(
  * "Faster, Better, Cheaper" management mandate.
  * * CONCLUSION:
  * The fact that a known successful (but expensive) alternative was 
- * suppressed in favor of FBC is the primary indicator of the Noose.
+ * suppressed in favor of FBC is the primary indicator of the Snare.
  */
 
 /* ==========================================================================

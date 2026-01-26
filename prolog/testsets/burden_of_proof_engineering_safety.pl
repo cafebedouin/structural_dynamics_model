@@ -45,7 +45,7 @@
  * * NARRATIVE ARC:
  * Traditionally, aerospace engineering operates as a Rope—a conservative 
  * coordination mechanism ensuring safety. During the Challenger launch 
- * sequence, management enforced a Noose by demanding that engineers 
+ * sequence, management enforced a Snare by demanding that engineers 
  * prove a system failure would occur with 100% certainty, effectively 
  * extracting the "safety margin" to meet a launch schedule.
  */
@@ -56,7 +56,7 @@
 
 % Required for [STEP 1] and [STEP 2] of the DR-Audit Suite
 narrative_ontology:interval(challenger_launch_decision, 0, 10).
-narrative_ontology:constraint_claim(burden_of_proof_engineering_safety, noose).
+narrative_ontology:constraint_claim(burden_of_proof_engineering_safety, snare).
 
 % Base extractiveness score (0.0-1.0)
 % Rationale: 0.9. Reversing the burden of proof extracts the life of the 
@@ -147,7 +147,7 @@ constraint_indexing:constraint_classification(
     !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: ROGERS COMMISSION - Noose
+   PERSPECTIVE 3: ROGERS COMMISSION - Snare
    --------------------------------------------------------------------------
    
    WHO: analytical - Retrospective body examining the systemic "flaw".
@@ -156,14 +156,14 @@ constraint_indexing:constraint_classification(
    SCOPE: global - A warning for all technical industries.
    
    WHY THIS CLASSIFICATION:
-   The Commission correctly identified this constraint as a Noose. It 
+   The Commission correctly identified this constraint as a Snare. It 
    actively choked out dissenting safety data and "extracted" the life 
    of the crew to serve the illusion of a reliable schedule.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
     burden_of_proof_engineering_safety,
-    noose,
+    snare,
     context(
         agent_power(analytical),
         time_horizon(historical),
@@ -182,7 +182,7 @@ constraint_indexing:constraint_classification(
 :- begin_tests(burden_of_proof_tests).
 
 test(multi_perspective_asymmetry) :-
-    % Engineer (Mountain) vs Manager (Rope) vs Commission (Noose)
+    % Engineer (Mountain) vs Manager (Rope) vs Commission (Snare)
     constraint_indexing:constraint_classification(burden_of_proof_engineering_safety, T1, context(individual_powerless, immediate, trapped, local)),
     constraint_indexing:constraint_classification(burden_of_proof_engineering_safety, T2, context(institutional, biographical, mobile, national)),
     constraint_indexing:constraint_classification(burden_of_proof_engineering_safety, T3, context(analytical, historical, analytical, global)),
@@ -235,7 +235,7 @@ omega_variable(
  * the "operational" rather than "experimental" status of the Shuttle.
  * * CONCLUSION:
  * The presence of a safer, traditional alternative that was suppressed 
- * solidifies the Noose classification for this specific instance.
+ * solidifies the Snare classification for this specific instance.
  */
 
 /* ==========================================================================

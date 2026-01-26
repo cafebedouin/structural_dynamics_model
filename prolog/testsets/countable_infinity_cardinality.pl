@@ -41,12 +41,12 @@
  * - The Computer Scientist (Institutional): An agent who uses countability as 
  * a "Rope" for algorithmic iteration and data indexing.
  * - The Continuum Researcher: An observer for whom countability acts as a 
- * "Noose," proving the "holes" in discrete logic when compared to the Reals.
+ * "Snare," proving the "holes" in discrete logic when compared to the Reals.
  * * NARRATIVE ARC:
  * To the mathematician, countability is a "Mountain"—an unyielding law of 
  * cardinality discovered by Cantor. In programming, it is the "Rope" of 
  * loops and indices. However, to the intuition of the "Rational" numbers, 
- * countability is a "Noose"; despite feeling "dense" and continuous, they 
+ * countability is a "Snare"; despite feeling "dense" and continuous, they 
  * are "strangled" by the fact that they are no larger than the set of 
  * integers, a truth that extracts the illusion of their continuity.
  */
@@ -141,7 +141,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE RATIONAL NUMBER LINE - Noose
+   PERSPECTIVE 3: THE RATIONAL NUMBER LINE - Snare
    --------------------------------------------------------------------------
    WHO: individual_powerless - Bound by Cantor's diagonal/zig-zag logic.
    WHEN: immediate - Realizing there is "no room" to be larger than N.
@@ -151,7 +151,7 @@ constraint_indexing:constraint_classification(
    WHY THIS CLASSIFICATION:
    Despite appearing to fill the entire space between 0 and 1 with 
    infinite points, the Rational numbers are "strangled" by countability. 
-   The logic of the "zig-zag" proof acts as a "Noose," extracting their 
+   The logic of the "zig-zag" proof acts as a "Snare," extracting their 
    density and forcing them into a single-file line that matches 1, 2, 3...
    -------------------------------------------------------------------------- */
 
@@ -159,7 +159,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     countable_infinity_cardinality,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -184,7 +184,7 @@ test(perspective_shift) :-
 
 test(rational_enumeration_noose) :-
     % The Rationals feel the extraction of their density via countability logic.
-    constraint_indexing:constraint_classification(countable_infinity_cardinality, noose, context(individual_powerless, immediate, constrained, local)).
+    constraint_indexing:constraint_classification(countable_infinity_cardinality, snare, context(individual_powerless, immediate, constrained, local)).
 
 test(natural_emergence) :-
     domain_priors:emerges_naturally(countable_infinity_cardinality).
@@ -202,7 +202,7 @@ test(natural_emergence) :-
  * * KEY DECISIONS:
  * 1. CLASSIFICATION: Countable infinity is a fundamental Mountain of 
  * mathematics. However, its "Perspectival Gap" is significant; it is a 
- * perfect Rope for computer science (arrays, for-loops) but a Noose 
+ * perfect Rope for computer science (arrays, for-loops) but a Snare 
  * for the intuition of set density (Rationals).
  * 2. EXTRACTIVENESS: Set at 0.2. The theorem "takes" the complexity 
  * of the rationals and "shrivels" it into the same size as the integers.

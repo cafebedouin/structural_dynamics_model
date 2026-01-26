@@ -79,7 +79,7 @@ constraint_victim(couples_residency_match, high_achieving_partners).
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 1: THE "COUPLE" - Noose
+   PERSPECTIVE 1: THE "COUPLE" - Snare
    --------------------------------------------------------------------------
    WHO: individual_powerless (subject to joint probability)
    WHEN: biographical (marriage/family formation)
@@ -87,7 +87,7 @@ constraint_victim(couples_residency_match, high_achieving_partners).
    SCOPE: national
    
    WHY THIS CLASSIFICATION:
-   The couple experiences the constraint as a "Noose" because the number 
+   The couple experiences the constraint as a "Snare" because the number 
    of valid stable matches drops exponentially when ROLs are linked. 
    The binding nature of the contract means they might be forced into 
    their 50th-ranked pair of programs simply because it's the only 
@@ -96,7 +96,7 @@ constraint_victim(couples_residency_match, high_achieving_partners).
 
 constraint_indexing:constraint_classification(
     couples_residency_match,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(biographical),
@@ -171,8 +171,8 @@ constraint_indexing:constraint_classification(
 :- begin_tests(couples_match_tests).
 
 test(complexity_noose) :-
-    % Linked lists (trapped) = Noose
-    constraint_indexing:constraint_classification(couples_residency_match, noose, context(_, _, trapped, _)).
+    % Linked lists (trapped) = Snare
+    constraint_indexing:constraint_classification(couples_residency_match, snare, context(_, _, trapped, _)).
 
 test(analytical_mountain) :-
     % The mathematical impossibility of certain stable matches is a Mountain.
@@ -188,7 +188,7 @@ test(analytical_mountain) :-
  * LLM GENERATION NOTES
  * * Model: Gemini 2.0 Flash
  * * KEY DECISIONS:
- * The Couples Match is a "voluntary noose." Agents choose to link their 
+ * The Couples Match is a "voluntary snare." Agents choose to link their 
  * lists to solve a social coordination problem (staying together), but 
  * the math of the Match turns this into a much more restrictive constraint.
  * * OMEGAS:

@@ -18,7 +18,6 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_claim/2,
     constraint_beneficiary/2,
     constraint_victim/2.
@@ -54,7 +53,7 @@
    ========================================================================== */
 
 % Required for structural integration
-narrative_ontology:interval(lindy_interval, 0, 10).
+narrative_ontology:interval(lindy_effect, 0, 10).
 narrative_ontology:constraint_claim(lindy_effect, mountain).
 
 % Base extractiveness: 0.2 (Low)
@@ -69,10 +68,6 @@ domain_priors:suppression_score(lindy_effect, 0.5).
 
 % Enforcement: Emerges naturally from survival statistics and cumulative advantage.
 domain_priors:emerges_naturally(lindy_effect).
-
-% Metrics for Section 1 of the Executive Summary
-narrative_ontology:constraint_metric(lindy_effect, extractiveness, 0.2).
-narrative_ontology:constraint_metric(lindy_effect, suppression_requirement, 0.5).
 
 % Beneficiaries: Classics, established religions, and long-standing technologies.
 constraint_beneficiary(lindy_effect, established_institutions).
@@ -109,7 +104,7 @@ constraint_indexing:constraint_classification(
         exit_options(trapped),
         spatial_scope(global)
     )
-) :- !.
+).
 
 /* --------------------------------------------------------------------------
    PERSPECTIVE 2: THE PRAGMATIC INVESTOR - ROPE
@@ -136,7 +131,7 @@ constraint_indexing:constraint_classification(
         exit_options(mobile),
         spatial_scope(national)
     )
-) :- !.
+).
 
 /* --------------------------------------------------------------------------
    PERSPECTIVE 3: THE DISRUPTIVE STARTUP - NOOSE
@@ -148,7 +143,7 @@ constraint_indexing:constraint_classification(
    SCOPE: local.
    
    WHY THIS CLASSIFICATION:
-   For a new innovator, the Lindy Effect is a Noose. The system's bias 
+   For a new innovator, the Lindy Effect is a Snare. The system's bias 
    toward the "time-tested" functions as a barrier that tightens the 
    harder they try to prove themselves. They are "guilty of being new" 
    until they are old, but they cannot become old without surviving 
@@ -157,36 +152,101 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     lindy_effect,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
         exit_options(constrained),
         spatial_scope(local)
     )
-) :- !.
+).
+
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 4: THE ESTABLISHED INSTITUTION - ROPE
+   --------------------------------------------------------------------------
+   WHO: institutional (e.g., a university, a religious body).
+   WHEN: Generational (Focused on preserving its own existence).
+   WHERE: Arbitrage (Leverages its age and reputation).
+   SCOPE: National to Global.
+   
+   WHY THIS CLASSIFICATION:
+   For an established institution, the Lindy Effect is a "Rope." It is a 
+   powerful mechanism for maintaining authority and relevance. The institution's 
+   longevity becomes a self-reinforcing signal of its quality and trustworthiness, 
+   helping it to coordinate social belief and attract resources.
+   -------------------------------------------------------------------------- */
+
+constraint_indexing:constraint_classification(
+    lindy_effect,
+    rope,
+    context(
+        agent_power(institutional),
+        time_horizon(generational),
+        exit_options(arbitrage),
+        spatial_scope(global)
+    )
+).
 
 /* ==========================================================================
-   4. TESTS
+   4. TESTS (What We Learn About Constraints)
    ========================================================================== */
 
 :- begin_tests(lindy_effect_tests).
 
+/**
+ * TEST 1: Multi-perspective variance
+ * Demonstrates that the Lindy Effect is viewed differently across agents.
+ */
 test(multi_perspective_variance) :-
-    constraint_indexing:constraint_classification(lindy_effect, Type1, context(agent_power(analytical), _, _, _)),
-    constraint_indexing:constraint_classification(lindy_effect, Type2, context(agent_power(individual_moderate), _, _, _)),
-    constraint_indexing:constraint_classification(lindy_effect, Type3, context(agent_power(individual_powerless), _, _, _)),
+    % Analytical Statistician (Mountain)
+    constraint_indexing:constraint_classification(
+        lindy_effect,
+        Type1,
+        context(agent_power(analytical), time_horizon(civilizational), exit_options(trapped), spatial_scope(global))
+    ),
+    % Pragmatic Investor (Rope)
+    constraint_indexing:constraint_classification(
+        lindy_effect,
+        Type2,
+        context(agent_power(individual_moderate), time_horizon(biographical), exit_options(mobile), spatial_scope(national))
+    ),
+    % Disruptive Startup (Snare)
+    constraint_indexing:constraint_classification(
+        lindy_effect,
+        Type3,
+        context(agent_power(individual_powerless), time_horizon(immediate), exit_options(constrained), spatial_scope(local))
+    ),
+    % Established Institution (Rope)
+    constraint_indexing:constraint_classification(
+        lindy_effect,
+        Type4,
+        context(agent_power(institutional), time_horizon(generational), exit_options(arbitrage), spatial_scope(global))
+    ),
+    % Verify they differ
     Type1 \= Type2,
-    Type2 \= Type3.
+    Type2 \= Type3,
+    Type1 \= Type3. % Ensure all three are distinct
 
-test(time_horizon_scaling) :-
-    % Civilizational horizon views it as a fixed law (Mountain)
-    constraint_indexing:constraint_classification(lindy_effect, mountain, context(_, civilizational, _, _)).
+/**
+ * TEST 2: Power-based extractiveness scaling
+ * Demonstrates that powerless startups experience higher extraction (of opportunity) than established institutions.
+ */
+test(power_extractiveness_scaling) :-
+    ContextPowerless = context(agent_power(individual_powerless), time_horizon(immediate), exit_options(constrained), spatial_scope(local)),
+    ContextPowerful = context(agent_power(institutional), time_horizon(generational), exit_options(arbitrage), spatial_scope(global)),
+    constraint_indexing:extractiveness_for_agent(lindy_effect, ContextPowerless, Score1),
+    constraint_indexing:extractiveness_for_agent(lindy_effect, ContextPowerful, Score2),
+    Score1 > Score2.  % Powerless experience more extraction
 
-test(extraction_logic) :-
-    % Verify extraction is considered low but present
-    domain_priors:base_extractiveness(lindy_effect, E),
-    E < 0.3.
+/**
+ * TEST 3: Domain-specific insight - The "Time Tax"
+ * Demonstrates that the "snare" for innovators is the time they must survive to be considered "Lindy."
+ */
+test(time_tax_insight) :-
+    constraint_indexing:constraint_classification(lindy_effect, ClassificationStartup, context(agent_power(individual_powerless), _, _, _)),
+    constraint_indexing:constraint_classification(lindy_effect, ClassificationInvestor, context(agent_power(individual_moderate), _, _, _)),
+    ClassificationStartup = snare,
+    ClassificationInvestor = rope.
 
 :- end_tests(lindy_effect_tests).
 
@@ -196,60 +256,80 @@ test(extraction_logic) :-
 
 /**
  * LLM GENERATION NOTES
- * * Model: Gemini 2.0 Flash
- * * KEY DECISIONS:
+ * 
+ * Model: Gemini 2.0 Flash
+ * Date: 2026-01-23
+ * 
+ * KEY DECISIONS:
+ * 
  * 1. PERSPECTIVAL VARIANCE: I chose to highlight how "Age" acts as a filter. 
- * What is a "validating tool" (Rope) for a scholar is a "death sentence" (Noose) 
+ * What is a "validating tool" (Rope) for a scholar is a "death sentence" (Snare) 
  * for a new startup that cannot survive long enough to reach the "Lindy" zone.
+ * 
  * 2. EXTRACTIVENESS: Kept at 0.2. The Lindy Effect doesn't "steal" as much 
  * as it "weights." It's a soft extraction of opportunity cost from the future 
  * toward the past.
- * 3. NOOSE ARGUMENT: The "Noose" for innovators is specifically the 
+ * 
+ * 3. NOOSE ARGUMENT: The "Snare" for innovators is specifically the 
  * impossibility of acquiring age without first surviving the disadvantage 
  * of being new.
+ * 
+ * 4. OMEGAS 
+ *    Define uncertainty so your analysis is cleaner
+ *    omega_variable(
+ *        digital_acceleration_impact,
+ *        "Does the speed of digital iteration (e.g., AI) break the Lindy 
+ *        Effect or simply create a 'Compressed Lindy' cycle?",
+ *        resolution_mechanism("Longitudinal study of software survival vs. 
+ *        philosophical survival in the 21st century"),
+ *        impact("If Yes: The Lindy Effect is a Rope that can be untied. If No: It 
+ *        is a Mountain that just scales with speed."),
+ *        confidence_without_resolution(medium)
+ *    ).
  */
 
 /* ==========================================================================
-   6. OMEGA VARIABLES (Ω)
-   ========================================================================== */
-
-omega_variable(
-    digital_acceleration_impact,
-    "Does the speed of digital iteration (e.g., AI) break the Lindy 
-    Effect or simply create a 'Compressed Lindy' cycle?",
-    resolution_mechanism("Longitudinal study of software survival vs. 
-    philosophical survival in the 21st century"),
-    impact("If Yes: The Lindy Effect is a Rope that can be untied. If No: It 
-    is a Mountain that just scales with speed."),
-    confidence_without_resolution(medium)
-).
-
-/* ==========================================================================
-   7. ALTERNATIVE ANALYSIS
+   6. ALTERNATIVE ANALYSIS (If Applicable)
    ========================================================================== */
 
 /**
  * VIABLE ALTERNATIVES
- * * ALTERNATIVE 1: Meritocratic "Neophilia" (Silicon Valley model)
- * Viability: Moderate. Seeks to judge things solely on current utility.
- * Suppression: Moderate. Often fails because "new" things lack the 
- * robust edge-case testing that "old" things have survived.
- * * ALTERNATIVE 2: Controlled Planned Obsolescence
- * Viability: High in hardware/fashion.
- * * CONCLUSION:
+ * 
+ * ALTERNATIVE 1: Meritocratic "Neophilia" (Silicon Valley model)
+ *    Viability: Moderate. Seeks to judge things solely on current utility.
+ *    Suppression: Moderate. Often fails because "new" things lack the 
+ *    robust edge-case testing that "old" things have survived.
+ * 
+ * ALTERNATIVE 2: Controlled Planned Obsolescence
+ *    Viability: High in hardware/fashion.
+ * 
+ * CONCLUSION:
  * While neophilia tries to break the Lindy Effect, the existence of 
  * "Legacy Systems" in banking and infrastructure shows that Lindy 
  * remains a Mountain for high-stakes systems.
  */
 
 /* ==========================================================================
-   8. INTEGRATION HOOKS
+   7. INTEGRATION HOOKS
    ========================================================================== */
 
 /**
- * TO USE THIS FILE:
- * 1. Load: ?- [constraint_lindy_effect].
- * 2. Report: ?- multi_index_report(lindy_effect).
+ * TO USE THIS CONSTRAINT:
+ * 
+ * 1. Load into main system:
+ *    ?- [constraints/lindy_effect].
+ * 
+ * 2. Run multi-perspective analysis:
+ *    ?- constraint_indexing:multi_index_report(lindy_effect).
+ * 
+ * 3. Run tests:
+ *    ?- run_tests(lindy_effect_tests).
+ * 
+ * 4. Generate pedagogical report:
+ *    ?- pedagogical_report(lindy_effect).
+ * 
+ * 5. Compare with other constraints:
+ *    ?- compare_constraints(lindy_effect, [other_id]).
  */
 
 /* ==========================================================================

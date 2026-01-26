@@ -41,13 +41,13 @@
  * against the variance of the walk.
  * - The House (Institutional): An agent who uses the Law of Large Numbers as 
  * a "Rope" to coordinate inevitable profits from finite-capital participants.
- * - The Systemic Risk Manager: An observer who sees the ruin as a "Noose" 
+ * - The Systemic Risk Manager: An observer who sees the ruin as a "Snare" 
  * for leveraged entities in volatile markets.
  * * NARRATIVE ARC:
  * Gambler's Ruin is the "Mountain" of stochastic fate—if the walk is long enough, 
  * the boundary of zero is a destiny. For the Casino, it is a "Rope" that 
  * coordinates stable revenue. However, for the individual player, the 
- * "long run" acts as a "Noose" that extracts their entire net worth 
+ * "long run" acts as a "Snare" that extracts their entire net worth 
  * (extraction) through the simple "choking" action of variance.
  */
 
@@ -68,7 +68,7 @@ domain_priors:base_extractiveness(gamblers_ruin_stochastic_extinction, 0.9).
 % Suppression score (0.0-1.0)
 % Rationale: 0.5. It suppresses the visibility of "lucky streaks" as a 
 % viable survival strategy, rendering them merely a "Scaffold" that 
-% temporarily delays the inevitable Noose.
+% temporarily delays the inevitable Snare.
 domain_priors:suppression_score(gamblers_ruin_stochastic_extinction, 0.5).
 
 % Enforcement: Emerges naturally from the axioms of the Random Walk.
@@ -146,7 +146,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE MARGIN-TRADED INVESTOR - Noose
+   PERSPECTIVE 3: THE MARGIN-TRADED INVESTOR - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_moderate - Has the intelligence to trade but is bound by margin limits.
@@ -155,7 +155,7 @@ constraint_indexing:constraint_classification(
    SCOPE: regional - Impacting local market segments.
    
    WHY THIS CLASSIFICATION:
-   In leveraged trading, Gambler's Ruin is a "Noose." It "strangles" the investor 
+   In leveraged trading, Gambler's Ruin is a "Snare." It "strangles" the investor 
    during temporary downward variance. Because they have a finite buffer, 
    the market's "randomness" extracts their entire equity (extraction) 
    before the upward trend can return. The volatility "chokes" the 
@@ -166,7 +166,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     gamblers_ruin_stochastic_extinction,
-    noose,
+    snare,
     context(
         agent_power(individual_moderate),
         time_horizon(immediate),
@@ -192,7 +192,7 @@ test(multi_perspective_variance) :-
     Type1 \= Type2.
 
 test(extraction_intensity) :-
-    % Demonstrates that the Noose classification highlights the 0.9 extraction of wealth.
+    % Demonstrates that the Snare classification highlights the 0.9 extraction of wealth.
     ContextNoose = context(individual_moderate, immediate, constrained, regional),
     constraint_indexing:extractiveness_for_agent(gamblers_ruin_stochastic_extinction, ContextNoose, Score),
     Score >= 0.8.
@@ -217,8 +217,8 @@ test(natural_emergence) :-
  * * 2. CLASSIFICATION RATIONALE:
  * - Casino Owner (Rope): Using the "Rope" of liquidity to outlast variance.
  * - Player (Mountain): Facing the unyielding law of probability.
- * - Leveraged Trader (Noose): Where the "Mountain" of variance becomes 
- * a "Noose" due to a margin call.
+ * - Leveraged Trader (Snare): Where the "Mountain" of variance becomes 
+ * a "Snare" due to a margin call.
  * * 3. OMEGAS:
  * Formalized the uncertainty of "Infinite Play"—does the Mountain hold 
  * in a universe with finite time and finite house wealth?
@@ -229,7 +229,7 @@ omega_variable(
     finite_bank_symmetry,
     "Is the 'Mountain' stable if the House also has a finite limit (Scaffold)?",
     resolution_mechanism("Calculation of ruin probability with two absorbing boundaries at $0$ and $B_{house}$."),
-    impact("If House is finite: The 'Noose' is symmetric; the house can also be ruined."),
+    impact("If House is finite: The 'Snare' is symmetric; the house can also be ruined."),
     confidence_without_resolution(high)
 ).
 
@@ -244,12 +244,12 @@ omega_variable(
  * Suppression: Actively suppressed by "Compulsive Play" and "Near-Miss" 
  * psychological triggers in casinos (Scaffolding).
  * * ALTERNATIVE 2: Martingale Strategy (Double after loss)
- * Viability: Seems like a "Rope" but is actually a "Noose."
+ * Viability: Seems like a "Rope" but is actually a "Snare."
  * Suppression: Suppressed by the "Mountain" of Table Limits and 
  * finite bankrolls.
  * * CONCLUSION:
  * The absence of Alternative 2's viability (due to finite capital) is exactly 
- * what makes the Gambler's Ruin a terminal "Noose" for the individual.
+ * what makes the Gambler's Ruin a terminal "Snare" for the individual.
  */
 
 /* ==========================================================================

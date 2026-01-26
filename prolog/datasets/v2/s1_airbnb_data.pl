@@ -22,7 +22,7 @@ omega_variable(active_listing_metric, conceptual, exclusion_of_hotel_tonight_inv
 omega_variable(host_loyalty_post_cancellation, preference, host_reaction_to_extenuating_circumstances_refunds).
 
 % 3. Constraint Claims & Kinetic Metrics
-constraint_claim(voting_concentration, noose).
+constraint_claim(voting_concentration, snare).
 constraint_metric(voting_concentration, extractiveness, 0.82).
 constraint_metric(voting_concentration, suppression_requirement, 0.58).
 constraint_metric(voting_concentration, snap_back_potential, 0.91).
@@ -31,7 +31,7 @@ constraint_claim(regulatory_fragmentation, tangled_rope).
 constraint_metric(regulatory_fragmentation, intensity, 0.88).
 constraint_metric(regulatory_fragmentation, extraction_cost, 0.72).
 
-constraint_claim(irs_back_tax_adjustment, zombie).
+constraint_claim(irs_back_tax_adjustment, piton).
 constraint_metric(irs_back_tax_adjustment, intensity, 0.94).
 
 constraint_claim(pandemic_market_collapse, mountain).

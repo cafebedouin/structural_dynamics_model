@@ -1,9 +1,9 @@
 % ============================================================================
 % CONSTRAINT STORY: ergo_nipopows
 % ============================================================================
-% Generated: 2026-01-17
-% Model: Gemini 2.0 Flash
-% Source: Ergo Platform Whitepapers / KLS Protocol
+% Generated: 2026-01-23
+% Model: Gemini Pro (Revised)
+% Source: Ergo Platform Whitepapers / "Super-light Clients for PoW Blockchains"
 % ============================================================================
 
 :- module(constraint_ergo_nipopows, []).
@@ -25,143 +25,108 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: ergo_nipopows
- * human_readable: NiPoPoW Proof Verification
- * domain: technological
- * temporal_scope: 2019-Present
- * spatial_scope: Global (Distributed Networks)
- * * SUMMARY:
- * NiPoPoWs (Non-Interactive Proofs of Proof-of-Work) allow a verifier to 
- * confirm the state of a blockchain by inspecting a logarithmic-sized proof 
- * of superblocks rather than the full transaction history.
- * * KEY AGENTS:
- * - Light_Client_User: Individual using a mobile wallet on a low-bandwidth 
- * connection seeking "full-node" security.
- * - Full_Node_Operator: Institutional agent maintaining the complete 
- * ledger and generating proofs for others.
- * - Adversary: Attempting to present a shorter, heavier fake chain to 
- * deceive the light client.
- * * NARRATIVE ARC:
- * As blockchains grow (Mountain of data), they naturally exclude participants 
- * with limited resources. NiPoPoWs transform this "impassable mountain" into 
- * a "Rope" (a compact summary) that allows even a smartphone to climb 
- * to the same level of security as a server rack.
+ * 
+ * constraint_id: ergo_nipopows
+ * human_readable: Non-Interactive Proofs of Proof-of-Work (NiPoPoWs)
+ * domain: technological/cryptographic
+ * temporal_scope: 2017 - Present
+ * spatial_scope: Global (Cross-blockchain)
+ * 
+ * SUMMARY:
+ * NiPoPoWs are succinct cryptographic proofs that allow a client to verify the
+ * state of a PoW blockchain with very little data—kilobytes instead of gigabytes.
+ * They enable true "full-node security" on light devices like mobile phones.
+ * 
+ * KEY AGENTS:
+ * - The Mobile User (Individual Powerless): Can now run a secure, self-validating wallet.
+ * - The Protocol Auditor (Institutional): Uses NiPoPoWs for trustless cross-chain state verification.
+ * - The Mathematician (Analytical): Views the proofs as a feature of cryptographic probability.
  */
 
 /* ==========================================================================
-   2. BASE PROPERTIES (Context-Independent)
+   2. CORE SYSTEM INTEGRATION (The "Reality" Layer)
    ========================================================================== */
 
-narrative_ontology:interval(ergo_nipopows_interval, 0, 10).
-narrative_ontology:constraint_claim(ergo_nipopows, mountain).
+narrative_ontology:interval(ergo_nipopows, 0, 10).
+narrative_ontology:constraint_claim(ergo_nipopows, rope).
 
-% Base extractiveness: Low (0.1)
-% Rationale: It is a pure utility that lowers costs for all participants.
+% Base extractiveness: 0.1 (Very Low)
+% Rationale: It is a pure utility that enhances security and accessibility; it does not
+% extract value from any user group.
 domain_priors:base_extractiveness(ergo_nipopows, 0.1).
 
-% Suppression score: Low (0.05)
-% Rationale: Open-source and interoperable; explicitly designed to 
-% prevent the exclusion of light users.
-domain_priors:suppression_score(ergo_nipopows, 0.05).
+% Suppression: 0.1 (Very Low)
+% Rationale: It doesn't suppress alternatives, but rather provides a superior
+% method for light client validation compared to traditional SPV proofs.
+domain_priors:suppression_score(ergo_nipopows, 0.1).
 
-% Enforcement: Emerges naturally via mathematical probability (PoW).
+% Enforcement: Emerges naturally from cryptographic principles.
 domain_priors:emerges_naturally(ergo_nipopows).
 
 % BENEFICIARIES & VICTIMS
 constraint_beneficiary(ergo_nipopows, mobile_users).
-constraint_beneficiary(ergo_nipopows, cross_chain_bridges).
-% No direct "victims," though centralizing service providers (Infura-style) 
-% lose their monopoly on providing data to light clients.
-constraint_victim(ergo_nipopows, centralized_data_providers).
+constraint_victim(ergo_nipopows, none).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 1: Mobile User (Light Client) - ROPE
+   PERSPECTIVE 1: THE MOBILE USER - Rope
    --------------------------------------------------------------------------
-   WHO: individual_powerless
-   WHEN: immediate
-   WHERE: mobile
-   SCOPE: local
+   WHO: individual_powerless (Limited computational resources)
+   WHEN: immediate (Needs to verify a transaction now)
+   WHERE: mobile (Using a smartphone)
    
    WHY THIS CLASSIFICATION:
-   For a user with a $100 smartphone, downloading 1TB is impossible (Mountain). 
-   The NiPoPoW is a Rope—it provides the same security "grip" on the 
-   truth without the impossible weight.
+   For a mobile user, NiPoPoWs are a liberating 'Rope'. It grants them the security
+   of a full node without the impossible burden of downloading the entire blockchain.
+   It's a tool that coordinates trust in a decentralized way.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
     ergo_nipopows,
     rope,
-    context(
-        agent_power(individual_powerless),
-        time_horizon(immediate),
-        exit_options(mobile),
-        spatial_scope(local)
-    )
-) :-
-    domain_priors:base_extractiveness(ergo_nipopows, E),
-    E < 0.2,
-    !.
+    context(agent_power(individual_powerless), time_horizon(immediate), exit_options(mobile), spatial_scope(local))
+).
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 2: Institutional (Bridge/Exchange) - MOUNTAIN
+   PERSPECTIVE 2: THE PROTOCOL AUDITOR / BRIDGE DEVELOPER - Rope
    --------------------------------------------------------------------------
-   WHO: institutional
-   WHEN: historical
-   WHERE: analytical
-   SCOPE: global
+   WHO: institutional (Building bridges between blockchains)
+   WHEN: biographical (Developing secure cross-chain systems)
+   WHERE: arbitrage (Can now verify other chains' states without a trusted intermediary)
    
    WHY THIS CLASSIFICATION:
-   For an institution, NiPoPoWs are a Mountain. They are the mathematical 
-   laws that define trustless interoperability. There is no negotiation; 
-   the protocol either proves the work or it doesn't.
+   For an institution building a cross-chain bridge, NiPoPoWs are also a 'Rope'.
+   They provide a trustless mechanism to verify events on another chain, forming
+   the foundation for secure interoperability.
+   -------------------------------------------------------------------------- */
+
+constraint_indexing:constraint_classification(
+    ergo_nipopows,
+    rope,
+    context(agent_power(institutional), time_horizon(biographical), exit_options(arbitrage), spatial_scope(global))
+).
+
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 3: THE CRYPTOGRAPHER - Mountain
+   --------------------------------------------------------------------------
+   WHO: analytical (Observer of mathematical proofs)
+   WHEN: historical (Based on the established properties of hash functions)
+   WHERE: analytical (Universal mathematical truth)
+   
+   WHY THIS CLASSIFICATION:
+   From a mathematical standpoint, the ability to compress PoW history into
+   superblocks via NiPoPoWs is a 'Mountain'. It is a fixed, discoverable
+   property of cryptographic probability that cannot be changed.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
     ergo_nipopows,
     mountain,
-    context(
-        agent_power(institutional),
-        time_horizon(historical),
-        exit_options(analytical),
-        spatial_scope(global)
-    )
-) :-
-    domain_priors:suppression_score(ergo_nipopows, S),
-    S < 0.2,
-    !.
-
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 3: Adversarial Context - NOOSE
-   --------------------------------------------------------------------------
-   WHO: individual_powerful
-   WHEN: biographical
-   WHERE: constrained
-   SCOPE: regional
-   
-   WHY THIS CLASSIFICATION:
-   If an adversary manages a 51% attack, the NiPoPoW becomes a Noose for 
-   anyone relying on it. The compact proof will "mathematically prove" 
-   a lie, strangling the user's ability to see the true (honest) chain 
-   if it is being suppressed.
-   -------------------------------------------------------------------------- */
-
-constraint_indexing:constraint_classification(
-    ergo_nipopows,
-    noose,
-    context(
-        agent_power(individual_powerful),
-        time_horizon(biographical),
-        exit_options(constrained),
-        spatial_scope(regional)
-    )
-) :-
-    domain_priors:base_extractiveness(ergo_nipopows, E),
-    E >= 0.1, % In a failure state, the "benefit" flips to "extraction."
-    !.
+    context(agent_power(analytical), time_horizon(historical), exit_options(analytical), spatial_scope(global))
+).
 
 /* ==========================================================================
    4. TESTS
@@ -169,47 +134,42 @@ constraint_indexing:constraint_classification(
 
 :- begin_tests(ergo_nipopows_tests).
 
-test(verification_efficiency) :-
-    % NiPoPoW (0.1) is more efficient (lower extraction) than full history (0.8).
-    domain_priors:base_extractiveness(ergo_nipopows, E),
-    E < 0.5.
-
-test(perspective_climb) :-
-    % Powerless users see utility (Rope), Institutions see Law (Mountain).
-    constraint_indexing:constraint_classification(ergo_nipopows, rope, context(agent_power(individual_powerless), _, _, _)),
-    constraint_indexing:constraint_classification(ergo_nipopows, mountain, context(agent_power(institutional), _, _, _)).
+test(multi_perspective_variance) :-
+    constraint_indexing:constraint_classification(ergo_nipopows, Type1, context(agent_power(individual_powerless), _, _, _)),
+    constraint_indexing:constraint_classification(ergo_nipopows, Type2, context(agent_power(analytical), _, _, _)),
+    % Both powerless and institutional see it as a Rope, so only need to check against Mountain
+    Type1 \= Type2.
 
 :- end_tests(ergo_nipopows_tests).
 
 /* ==========================================================================
-   5. MODEL INTERPRETATION
+   5. MODEL INTERPRETATION (Commentary)
    ========================================================================== */
 
 /**
  * LLM GENERATION NOTES
- * * KEY DECISIONS:
- * 1. PERSPECTIVE SHIFT: I modeled the "Noose" as an adversarial failure state. 
- * While NiPoPoWs are strictly beneficial in 99% of cases, the "Constraint" 
- * is the trust placed in the longest chain. If that chain is malicious, 
- * the compact nature of the proof makes the deception harder to catch.
- * 2. LOGARITHMIC SCALING: I treated this as the "Rope" characteristic—the 
- * ability to do more with less.
- * * AMBIGUITIES:
- * - The safety of NiPoPoWs depends on the "Suffix" parameter (how many 
- * recent blocks are verified). If this is too small, security drops.
+ * 
+ * Model: Gemini Pro (Revised)
+ * Date: 2026-01-23
+ * 
+ * KEY DECISIONS:
+ * 
+ * 1. CLASSIFICATION: This is a rare case where the constraint is a 'Rope' for
+ *    both the powerless user and the institutional actor. The innovation provides
+ *    symmetric benefits, increasing accessibility for one and capability for the other.
+ *    The only differing view is the analytical 'Mountain'.
+ * 
+ * 2. EXTRACTIVENESS (0.1): Very low, as this is a pure technological enhancement
+ *    that provides a public good (decentralized, trustless validation) to the ecosystem.
  */
 
 /* ==========================================================================
-   6. OMEGA VARIABLES (Ω)
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
-
-omega_variable(
-    suffix_security_parameter,
-    "Is the chosen suffix 'k' large enough to prevent reorg attacks for light clients?",
-    resolution_mechanism("Ongoing research into mining stability and network latency"),
-    impact("If too low, the Rope (utility) snaps into a Noose (vulnerability)."),
-    confidence_without_resolution(medium)
-).
+/**
+ * No significant Omega variables identified. The primary uncertainties are
+ * engineering challenges related to implementation, not fundamental to the theory.
+ */
 
 /* ==========================================================================
    7. ALTERNATIVE ANALYSIS
@@ -217,15 +177,30 @@ omega_variable(
 
 /**
  * VIABLE ALTERNATIVES
- * * ALTERNATIVE 1: SPV (Simplified Payment Verification)
- * Viability: Used in Bitcoin; requires linear growth of headers.
- * Suppression: Not suppressed, but less efficient as the chain ages.
- * * CONCLUSION:
- * NiPoPoWs represent a "Mountain" of cryptographic law that allows for the 
- * "Rope" of decentralized mobility.
+ * 
+ * ALTERNATIVE 1: Traditional SPV (Simple Payment Verification) Proofs
+ *    Viability: The historical standard for light clients.
+ *    Suppression: Not suppressed, but NiPoPoWs are demonstrably more secure and
+ *    powerful, as SPV proofs can be "fooled" by a majority of hash power.
+ *
+ * CONCLUSION:
+ * NiPoPoWs represent a superior 'Rope' for achieving light-client security,
+ * replacing the older, weaker 'Rope' of SPV proofs. This is an example of
+ * technological evolution within a solution category.
+ */
+
+/* ==========================================================================
+   8. INTEGRATION HOOKS
+   ========================================================================== */
+
+/**
+ * TO USE THIS FILE:
+ * 
+ * 1. Load: ?- [constraints/ergo_nipopows].
+ * 2. Multi-perspective: ?- multi_index_report(ergo_nipopows).
+ * 3. Run tests: ?- run_tests(ergo_nipopows_tests).
  */
 
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
-

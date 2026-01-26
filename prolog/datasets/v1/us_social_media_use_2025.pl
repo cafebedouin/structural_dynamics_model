@@ -25,12 +25,12 @@ event(ev04_facebook_stagnation, state_stabilization, 2025, [target(meta_platform
 constraint_claim(attention_scarcity_limit, mountain).
 constraint_metric(attention_scarcity_limit, accessibility_collapse, 0.95).
 
-% Noose: The social obligation and 'fear of missing out' (FOMO). It tightens as network effects grow.
-constraint_claim(network_effect_coercion, noose).
+% Snare: The social obligation and 'fear of missing out' (FOMO). It tightens as network effects grow.
+constraint_claim(network_effect_coercion, snare).
 constraint_metric(network_effect_coercion, stakes_inflation, 0.85).
 
-% Zombie: The 'Public Square' ideal. A concept of open democratic discourse that persists despite algorithmic curation.
-constraint_claim(digital_public_square_myth, zombie).
+% Piton: The 'Public Square' ideal. A concept of open democratic discourse that persists despite algorithmic curation.
+constraint_claim(digital_public_square_myth, piton).
 constraint_metric(digital_public_square_myth, suppression, 0.70).
 
 % Rope: Privacy Terms and Conditions. Ties user behavior to rigid platform legal frameworks.

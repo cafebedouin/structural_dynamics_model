@@ -38,7 +38,7 @@
  * * KEY AGENTS:
  * - Leopold Bloom: Individual moderate attempting to coordinate through reason (Rope).
  * - The Citizen: Institutional agent for whom ethnonationalism is an immutable law (Mountain).
- * - Garryowen (The Dog): Individual powerless recipient of the Citizen's violent environment (Noose).
+ * - Garryowen (The Dog): Individual powerless recipient of the Citizen's violent environment (Snare).
  */
 
 /* ==========================================================================
@@ -47,8 +47,8 @@
 
 % Required for [STEP 1] and [STEP 2] of the DR-Audit Suite
 narrative_ontology:interval(bloom_exclusion_id, 0, 10).
-% Fixed: Changed 'exclusionary_identity' to 'noose' to satisfy schema
-narrative_ontology:constraint_claim(bloom_xenophobic_exclusion, noose).
+% Fixed: Changed 'exclusionary_identity' to 'snare' to satisfy schema
+narrative_ontology:constraint_claim(bloom_xenophobic_exclusion, snare).
 
 % Metrics: Extractiveness (0.6 - Violent extraction) and Suppression (0.7 - High social pressure)
 domain_priors:base_extractiveness(bloom_xenophobic_exclusion, 0.6).
@@ -81,16 +81,16 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 2: GARRYOWEN (The Powerless) - Noose
+   PERSPECTIVE 2: GARRYOWEN (The Powerless) - Snare
    --------------------------------------------------------------------------
    WHO: individual_powerless - The dog "bloody well worth to tear him limb from limb".
    WHY: From the perspective of the powerless agent caught in the fray, the 
-   xenophobic violence is a "Noose"—an inescapable trap of predatory 
+   xenophobic violence is a "Snare"—an inescapable trap of predatory 
    hostility.
    -------------------------------------------------------------------------- */
 constraint_indexing:constraint_classification(
     bloom_xenophobic_exclusion,
-    noose,
+    snare,
     context(agent_power(individual_powerless), time_horizon(immediate), exit_options(constrained), spatial_scope(local))
 ) :- !.
 
@@ -130,17 +130,17 @@ test(immutability_xenophobic_scaling) :-
 
 /**
  * LLM GENERATION NOTES:
- * Refactored to eliminate the schema mismatch. Declaring the claim as 'noose' 
+ * Refactored to eliminate the schema mismatch. Declaring the claim as 'snare' 
  * allows the audit to identify the "False Mountain" of the Citizen's rhetoric, 
- * which masks a 'Noose' of literal physical extraction and social entrapment 
+ * which masks a 'Snare' of literal physical extraction and social entrapment 
  *.
  */
 
 omega_variable(
     bloom_prophetic_ascent,
-    "Is Bloom's 'Elijah' ascent a transfiguration (Rope) or narrative mockery (Noose)?",
+    "Is Bloom's 'Elijah' ascent a transfiguration (Rope) or narrative mockery (Snare)?",
     resolution_mechanism("Analysis of the 'Abba! Adonai!' cry"),
-    impact("If transfiguration: Bloom finds an exit option. If mockery: The Noose is total."),
+    impact("If transfiguration: Bloom finds an exit option. If mockery: The Snare is total."),
     confidence_without_resolution(low)
 ).
 
@@ -163,4 +163,4 @@ omega_variable(
 % --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
 constraint_indexing:constraint_classification(ulysses_chp12, mountain, agent_power(analytical)).
 constraint_indexing:constraint_classification(ulysses_chp12, rope, agent_power(institutional)).
-constraint_indexing:constraint_classification(ulysses_chp12, noose, agent_power(individual_powerless)).
+constraint_indexing:constraint_classification(ulysses_chp12, snare, agent_power(individual_powerless)).

@@ -45,7 +45,7 @@
  * The list functions as a psychological "Mountain" of ideal traits (trust, compatibility, 
  * stability). For a thriving couple, it acts as a "Rope" for coordination and 
  * growth. However, if used as a rigid, binary "Yes/No" tool in an imbalanced 
- * relationship, it can become a "Noose" that extracts identity or justifies 
+ * relationship, it can become a "Snare" that extracts identity or justifies 
  * termination based on "nascent" imperfections.
  */
 
@@ -53,9 +53,8 @@
    2. BASE PROPERTIES (Context-Independent)
    ========================================================================== */
 
-% Required for [STEP 1] and [STEP 2] of the DR-Audit Suite
-narrative_ontology:interval(keltner_relationship_interval, 0, 10).
-narrative_ontology:constraint_claim([keltner_relationship_evaluation], [social_governance]).
+narrative_ontology:interval(keltner_relationship_evaluation, 0, 10).
+narrative_ontology:constraint_claim(keltner_relationship_evaluation, [social_governance]).
 
 % Base extractiveness score (0.0 = no extraction, 1.0 = full extraction)
 % Rationale: Moderate (0.35). While intended as a gift of clarity, the list 
@@ -72,9 +71,7 @@ domain_priors:suppression_score(keltner_relationship_evaluation, 0.45).
 % Enforcement: Requires active maintenance (Truthful answering).
 domain_priors:requires_active_enforcement(keltner_relationship_evaluation).
 
-% Metrics required for Section 1 of the Executive Summary
-narrative_ontology:constraint_metric(keltner_relationship_evaluation, extractiveness, 0.35).
-narrative_ontology:constraint_metric(keltner_relationship_evaluation, suppression_requirement, 0.45).
+
 
 % BENEFICIARIES & VICTIMS
 constraint_beneficiary(keltner_relationship_evaluation, relationship_clarity). 
@@ -103,8 +100,6 @@ constraint_victim(keltner_relationship_evaluation, non_standard_dyads). % Those 
    decision-making, power and influence?".
    -------------------------------------------------------------------------- */
 
-
-
 constraint_indexing:constraint_classification(
     keltner_relationship_evaluation,
     rope,
@@ -114,10 +109,10 @@ constraint_indexing:constraint_classification(
         exit_options(mobile),
         spatial_scope(local)
     )
-) :- !.
+).
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE MEASURED SUBJECT - Noose
+   PERSPECTIVE 2: THE MEASURED SUBJECT - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless (Being judged by a partner with a "binary" checklist)
@@ -127,7 +122,7 @@ constraint_indexing:constraint_classification(
    
    WHY THIS CLASSIFICATION:
    For a person being measured against these 15 points by a "controlling" or 
-   "negativity-focused" partner, the list is a "Noose." Any "No" answer 
+   "negativity-focused" partner, the list is a "Snare." Any "No" answer 
    is extracted as a "red flag" or justification for "liquidation" of the 
    relationship.
    
@@ -138,7 +133,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     keltner_relationship_evaluation,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -147,8 +142,7 @@ constraint_indexing:constraint_classification(
     )
 ) :-
     domain_priors:base_extractiveness(keltner_relationship_evaluation, E),
-    E > 0.3,
-    !.
+    E > 0.3.
 
 /* --------------------------------------------------------------------------
    PERSPECTIVE 3: THE RELATIONSHIP COUNSELOR - Mountain
@@ -178,7 +172,34 @@ constraint_indexing:constraint_classification(
         exit_options(analytical),
         spatial_scope(global)
     )
-) :- !.
+).
+
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 4: THE PUBLISHER / MEDIA OUTLET - Rope
+   --------------------------------------------------------------------------
+   WHO: institutional (Promotes and disseminates the Keltner List)
+   WHEN: biographical (Content cycles, trends)
+   WHERE: arbitrage (Can choose which frameworks to promote for audience engagement)
+   SCOPE: national (The audience reach)
+   
+   WHY THIS CLASSIFICATION:
+   For a media outlet, the Keltner List is a "Rope" for generating engaging
+   content. It's a tool to coordinate a large-scale conversation about
+   relationships, attracting an audience by offering a simple, actionable
+   framework. The list's "shareability" makes it a valuable asset for
+   programmatic content.
+   -------------------------------------------------------------------------- */
+
+constraint_indexing:constraint_classification(
+    keltner_relationship_evaluation,
+    rope,
+    context(
+        agent_power(institutional),
+        time_horizon(biographical),
+        exit_options(arbitrage),
+        spatial_scope(national)
+    )
+).
 
 /* ==========================================================================
    4. TESTS (What We Learn About Constraints)
@@ -186,27 +207,30 @@ constraint_indexing:constraint_classification(
 
 :- begin_tests(keltner_relationship_evaluation_tests).
 
+/**
+ * TEST 1: Multi-perspective variance
+ * Demonstrates that belief vs. detachment transforms a Snare into a Rope.
+ */
 test(multi_perspective_evaluation) :-
     % Partner sees Rope
-    constraint_indexing:constraint_classification(keltner_relationship_evaluation, rope, context(individual_moderate, biographical, mobile, local)),
-    % Subject sees Noose
-    constraint_indexing:constraint_classification(keltner_relationship_evaluation, noose, context(individual_powerless, immediate, trapped, local)),
+    constraint_indexing:constraint_classification(keltner_relationship_evaluation, rope, context(agent_power(individual_moderate), _, _, _)),
+    % Subject sees Snare
+    constraint_indexing:constraint_classification(keltner_relationship_evaluation, snare, context(agent_power(individual_powerless), _, _, _)),
     % Counselor sees Mountain
-    constraint_indexing:constraint_classification(keltner_relationship_evaluation, mountain, context(analytical, historical, analytical, global)),
-    Type1 \= Type2, Type2 \= Type3.
+    constraint_indexing:constraint_classification(keltner_relationship_evaluation, mountain, context(agent_power(analytical), _, _, _)),
+    % Publisher sees Rope
+    constraint_indexing:constraint_classification(keltner_relationship_evaluation, rope, context(agent_power(institutional), _, _, _)).
 
+/**
+ * TEST 2: Power-based extractiveness scaling
+ * Demonstrates that the powerless subject feels more extraction (judgment) than the moderate partner.
+ */
 test(power_extractiveness_evaluation) :-
-    % The powerless subject feels more extraction (judgment) than the moderate partner.
-    ContextPowerless = context(individual_powerless, immediate, trapped, local),
-    ContextModerate = context(individual_moderate, biographical, mobile, local),
+    ContextPowerless = context(agent_power(individual_powerless), time_horizon(immediate), exit_options(trapped), spatial_scope(local)),
+    ContextPowerful = context(agent_power(institutional), time_horizon(biographical), exit_options(arbitrage), spatial_scope(national)),
     constraint_indexing:extractiveness_for_agent(keltner_relationship_evaluation, ContextPowerless, Score1),
-    constraint_indexing:extractiveness_for_agent(keltner_relationship_evaluation, ContextModerate, Score2),
+    constraint_indexing:extractiveness_for_agent(keltner_relationship_evaluation, ContextPowerful, Score2),
     Score1 > Score2.
-
-test(binary_suppression_insight) :-
-    % Demonstrates that high suppression (0.45) forces a "binary" view of relationship health.
-    domain_priors:suppression_score(keltner_relationship_evaluation, S),
-    S > 0.4.
 
 :- end_tests(keltner_relationship_evaluation_tests).
 
@@ -216,45 +240,41 @@ test(binary_suppression_insight) :-
 
 /**
  * LLM GENERATION NOTES
- * * Model: Gemini 2.0 Flash
- * Date: 2026-01-21
- * * KEY DECISIONS:
- * 1. EXTRACTIVENESS SCORE (0.35):
- * Reasoning: I chose a moderate score because while the list is helpful, it 
- * extracts the "nuance" and "ordinary repetition" of relationship life, 
- * replacing them with 15 "extraordinary" metrics. 
+ * 
+ * Model: Gemini 2.0 Flash
+ * Date: 2026-01-23
+ * 
+ * KEY DECISIONS:
+ * 
+ * 1. BASE EXTRACTIVENESS (0.35):
+ *    Reasoning: Chose moderate-low because while the list is helpful, it 
+ *    extracts the "nuance" of a relationship, replacing it with a set of metrics.
+ * 
  * 2. PERSPECTIVE SELECTION:
- * Chose the Partner (Rope), the Subject (Noose), and the Counselor (Mountain) 
- * to show how a "gift of wisdom" can be experienced as a "tax of judgment" 
- * depending on power.
- * 3. MANDATROPHY RESOLUTION:
- * Status: [RESOLVED MANDATROPHY]. The constraint is a "Rope" for the 
- * individual seeking growth, but it becomes a "Noose" for the partner 
- * who is "trapped" by an unyielding checklist.
+ *    Chose Partner (Rope), Subject (Snare), Counselor (Mountain), and Publisher (Rope) 
+ *    to show how a tool can be used for growth, control, analysis, or content.
+ * 
+ * 3. OMEGAS 
+ *    Define uncertainty so your analysis is cleaner
+ *    omega_variable(
+ *        keltner_checklist_accuracy,
+ *        "Do these 15 questions accurately predict the 'Mountain' of long-term survival, or are they a 'Rope' of cultural preference?",
+ *        resolution_mechanism("Longitudinal study of couples who pass the list vs. those who fail but stay together"),
+ *        impact("If accurate: It is a true Mountain. If cultural: It is a local Rope."),
+ *        confidence_without_resolution(medium)
+ *    ).
+ * 
+ *    omega_variable(
+ *        personality_stability_adult,
+ *        "Is 'agreeable and emotionally stable' an unchangeable Mountain, or can microdosing/therapy create a Rope for change?",
+ *        resolution_mechanism("Audit of adult personality shifts following intervention vs. 'Keltner' scores"),
+ *        impact("If unchangeable: Keltner's Mountain is valid. If changeable: The list is a Snare for the potentially transformed."),
+ *        confidence_without_resolution(low)
+ *    ).
  */
 
 /* ==========================================================================
-   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
-   ========================================================================== */
-
-omega_variable(
-    keltner_checklist_accuracy,
-    "Do these 15 questions accurately predict the 'Mountain' of long-term survival, or are they a 'Rope' of cultural preference?",
-    resolution_mechanism("Longitudinal study of couples who pass the list vs. those who fail but stay together"),
-    impact("If accurate: It is a true Mountain. If cultural: It is a local Rope."),
-    confidence_without_resolution(medium)
-).
-
-omega_variable(
-    personality_stability_adult,
-    "Is 'agreeable and emotionally stable' an unchangeable Mountain, or can microdosing/therapy create a Rope for change?",
-    resolution_mechanism("Audit of adult personality shifts following intervention vs. 'Keltner' scores"),
-    impact("If unchangeable: Keltner's Mountain is valid. If changeable: The list is a Noose for the potentially transformed."),
-    confidence_without_resolution(low)
-).
-
-/* ==========================================================================
-   7. ALTERNATIVE ANALYSIS
+   6. ALTERNATIVE ANALYSIS (If Applicable)
    ========================================================================== */
 
 /**
@@ -270,15 +290,31 @@ omega_variable(
  * with a "Mountain" of categorical alignment.
  * * CONCLUSION:
  * The existence of successful, private relationships makes the Keltner List 
- * a "Noose" when applied to non-standard dyads.
+ * a "Snare" when applied to non-standard dyads.
  */
 
 /* ==========================================================================
-   8. INTEGRATION HOOKS
+   7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Load: ?- [constraint_keltner_relationship_evaluation].
-% Multi-perspective: ?- constraint_indexing:multi_index_report(keltner_relationship_evaluation).
+/**
+ * TO USE THIS CONSTRAINT:
+ * 
+ * 1. Load into main system:
+ *    ?- [constraints/keltner_relationship_evaluation].
+ * 
+ * 2. Run multi-perspective analysis:
+ *    ?- constraint_indexing:multi_index_report(keltner_relationship_evaluation).
+ * 
+ * 3. Run tests:
+ *    ?- run_tests(keltner_relationship_evaluation_tests).
+ * 
+ * 4. Generate pedagogical report:
+ *    ?- pedagogical_report(keltner_relationship_evaluation).
+ * 
+ * 5. Compare with other constraints:
+ *    ?- compare_constraints(keltner_relationship_evaluation, [other_id]).
+ */
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

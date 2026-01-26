@@ -17,16 +17,29 @@ constraint_status(Name, binding_limit, I) :-
     narrative_ontology:constraint_claim(Name, mountain),
     narrative_ontology:constraint_metric(Name, inevitability, I), !.
 
-constraint_status(Name, extractive_noose, I) :-
-    narrative_ontology:constraint_claim(Name, noose),
-    narrative_ontology:constraint_metric(Name, extractiveness, I), !.
-
+% Rope
 constraint_status(Name, coordination_rope, I) :-
     narrative_ontology:constraint_claim(Name, rope),
     (narrative_ontology:constraint_metric(Name, theater_ratio, T) -> I is 1.0 - T ; I = 1.0), !.
 
-constraint_status(Name, inertial_zombie, I) :-
-    narrative_ontology:constraint_claim(Name, zombie),
+% Snare (formerly Noose)
+constraint_status(Name, extractive_snare, I) :-
+    narrative_ontology:constraint_claim(Name, snare),
+    narrative_ontology:constraint_metric(Name, extractiveness, I), !.
+
+% Tangled Rope handling
+constraint_status(Name, hybrid_extraction, I) :-
+    narrative_ontology:constraint_claim(Name, tangled_rope),
+    narrative_ontology:constraint_metric(Name, extractiveness, I), !.
+
+% Scaffold handling
+constraint_status(Name, temporary_coordination, I) :-
+    narrative_ontology:constraint_claim(Name, scaffold),
+    (narrative_ontology:constraint_metric(Name, extractiveness, Val) -> I = Val ; I = 0.5), !.
+
+% Piton
+constraint_status(Name, inertial_piton, I) :-
+    narrative_ontology:constraint_claim(Name, piton),
     (narrative_ontology:constraint_metric(Name, theater_ratio, I) ; I = 1.0), !.
 
 /* ================================================================
@@ -36,7 +49,7 @@ constraint_status(Name, inertial_zombie, I) :-
 recommendation_feasibility(RecID, Status, UniqueVetoes) :-
     narrative_ontology:recommendation(RecID, _), % CRITICAL: Verify RecID is a recommendation
     % --- 1. THE STRUCTURAL AUDIT (Theorem 3) ---
-    % If a recommendation affects a Noose (high extraction), 
+    % If a recommendation affects a Snare (high extraction), 
     % it is load-bearing. Cutting it without a Scaffold is a systemic risk.
     (   narrative_ontology:affects_constraint(RecID, Target),
         narrative_ontology:constraint_metric(Target, extractiveness, X), 
@@ -56,9 +69,9 @@ recommendation_feasibility(RecID, Status, UniqueVetoes) :-
     ).
 
 %% is_safe_to_cut(+ConstraintID)
-% Theorem 3: Cutting a load-bearing Noose requires a Scaffold.
+% Theorem 3: Cutting a load-bearing Snare requires a Scaffold.
 is_safe_to_cut(C) :-
-    narrative_ontology:constraint_metric(C, extractiveness, X), X > 0.7, % Load-bearing Noose
+    narrative_ontology:constraint_metric(C, extractiveness, X), X > 0.7, % Load-bearing Snare
     narrative_ontology:entity(_, scaffold). % A scaffold MUST exist in the KB
 
 /* ================================================================
@@ -97,7 +110,7 @@ dr_diagnostic_report(IntervalID) :-
 %  Internal helper that alerts the user if a high-risk technical constraint 
 %  mirrors a social pathology.
 check_for_social_twins(Name, State) :-
-    member(State, [noose, tangled_rope, extractive_noose]), % High-risk states [cite: 4, 206, 208]
+    member(State, [snare, tangled_rope, extractive_noose]), % High-risk states [cite: 4, 206, 208]
     isomorphism_engine:find_high_risk_isomorphism(Name, SocialTwin, Score),
     domain_priors:category_of(SocialTwin, Cat),
     member(Cat, [narrative_history, statutory_formal, election_cycle]),

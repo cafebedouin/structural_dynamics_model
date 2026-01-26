@@ -83,7 +83,7 @@ constraint_victim(toxic_social_infection, the_infected).      % Loses energy, he
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 1: THE INFECTED VICTIM - Noose
+   PERSPECTIVE 1: THE INFECTED VICTIM - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless (A "little person" who becomes "enmeshed" or a "new recruit")
@@ -92,7 +92,7 @@ constraint_victim(toxic_social_infection, the_infected).      % Loses energy, he
    SCOPE: local (The "silent epidemic" in today’s families)
    
    WHY THIS CLASSIFICATION:
-   For the victim, the infector is a "Noose." Engagement—even well-intentioned help—tightens the 
+   For the victim, the infector is a "Snare." Engagement—even well-intentioned help—tightens the 
    connection, sucking away life and energy until the subject is "sitting in the corner... 
    spitting bile".
    
@@ -105,7 +105,7 @@ constraint_victim(toxic_social_infection, the_infected).      % Loses energy, he
 
 constraint_indexing:constraint_classification(
     toxic_social_infection,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -184,8 +184,8 @@ constraint_indexing:constraint_classification(
 :- begin_tests(toxic_social_infection_tests).
 
 test(multi_perspective_vortex) :-
-    % Victim sees Noose (Liquidation)
-    constraint_indexing:constraint_classification(toxic_social_infection, noose, context(individual_powerless, immediate, trapped, local)),
+    % Victim sees Snare (Liquidation)
+    constraint_indexing:constraint_classification(toxic_social_infection, snare, context(individual_powerless, immediate, trapped, local)),
     % Narcissist sees Rope (Utility)
     constraint_indexing:constraint_classification(toxic_social_infection, rope, context(institutional, biographical, mobile, local)),
     % Sage sees Mountain (Law of Nature)
@@ -200,7 +200,7 @@ test(energy_extraction_scaling) :-
     E1 > E2.
 
 test(time_immutability_infection) :-
-    % Short-term enmeshment feels like a changeable mistake (Rope/Noose).
+    % Short-term enmeshment feels like a changeable mistake (Rope/Snare).
     % Long-term pathology is an unchangeable social fact (Mountain).
     constraint_indexing:effective_immutability(historical, analytical, mountain).
 
@@ -220,11 +220,11 @@ test(time_immutability_infection) :-
  * out." This represents near-total extraction of the victim's social and psychological 
  * resources.
  * * 2. MANDATROPHY STATUS:
- * Status: [RESOLVED MANDATROPHY]. The constraint is a lethal Noose for the empathic subject 
+ * Status: [RESOLVED MANDATROPHY]. The constraint is a lethal Snare for the empathic subject 
  * but functions as a Rope for the narcissistic beneficiary who rigs the world to 
  * "explode" while they "walk away".
  * * 3. PERSPECTIVE SELECTION:
- * Chose the Victim (Noose), the Narcissist (Rope), and the Gestalt Sage (Mountain) 
+ * Chose the Victim (Snare), the Narcissist (Rope), and the Gestalt Sage (Mountain) 
  * to capture the range from suffering to predatory utility to detached analysis.
  * * 4. AMBIGUITIES:
  * The source says it is "not necessarily true" that one person is toxic in every 
@@ -238,9 +238,9 @@ test(time_immutability_infection) :-
 
 omega_variable(
     toxic_social_infection_extraction_intent,
-    "Is the 'inward instability' of the infector a functional biological necessity (Mountain) or an intentional strategy for wealth/status extraction (Noose)?",
+    "Is the 'inward instability' of the infector a functional biological necessity (Mountain) or an intentional strategy for wealth/status extraction (Snare)?",
     resolution_mechanism("Audit of Cluster B neurological empathy-response vs. long-term profit-seeking behaviors"),
-    impact("If necessity: Genetic Mountain. If predatory choice: Mandatrophy Noose."),
+    impact("If necessity: Genetic Mountain. If predatory choice: Mandatrophy Snare."),
     confidence_without_resolution(medium)
 ).
 
@@ -269,7 +269,7 @@ omega_variable(
  * * CONCLUSION:
  * The presence of Alternative 1 (Help) is identified as the "wrong thing" to attack. 
  * Its suppression by the Sage shifts the toxic interaction from a potentially 
- * repairable Rope into a definitive "Noose" that must be cut.
+ * repairable Rope into a definitive "Snare" that must be cut.
  */
 
 /* ==========================================================================

@@ -118,7 +118,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 2: CATTLE RANCHERS (THE VICTIMS) - Noose
+   PERSPECTIVE 2: CATTLE RANCHERS (THE VICTIMS) - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless (In the context of the scam, they have zero agency)
@@ -127,7 +127,7 @@ constraint_indexing:constraint_classification(
    SCOPE: local (The interaction site)
    
    WHY THIS CLASSIFICATION:
-   The scam is a "Noose." The ranchers "agree" to the rules, but those rules 
+   The scam is a "Snare." The ranchers "agree" to the rules, but those rules 
    systematically extract their wealth while providing a "magic" illusion that 
    tightens their loss. They are trapped by the trickster's narrative control.
    
@@ -138,7 +138,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     bushman_money_magic,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -186,8 +186,8 @@ constraint_indexing:constraint_classification(
 test(multi_perspective_scam) :-
     % Jackal (Institutional/Mobile) sees a Rope
     constraint_indexing:constraint_classification(bushman_money_magic, rope, context(institutional, immediate, mobile, local)),
-    % Ranchers (Powerless/Trapped) see a Noose
-    constraint_indexing:constraint_classification(bushman_money_magic, noose, context(individual_powerless, immediate, trapped, local)),
+    % Ranchers (Powerless/Trapped) see a Snare
+    constraint_indexing:constraint_classification(bushman_money_magic, snare, context(individual_powerless, immediate, trapped, local)),
     % Historian (Analytical) sees a Mountain
     constraint_indexing:constraint_classification(bushman_money_magic, mountain, context(analytical, historical, analytical, global)).
 
@@ -200,7 +200,7 @@ test(power_extractiveness_scam) :-
     Score1 > Score2.
 
 test(time_immutability_scam) :-
-    % In the immediate interaction, the scam is a fact (Mountain/Noose).
+    % In the immediate interaction, the scam is a fact (Mountain/Snare).
     % Over a historical horizon, it's a social coordination mechanism (Rope).
     constraint_indexing:effective_immutability(historical, analytical, rope).
 
@@ -224,11 +224,11 @@ test(time_immutability_scam) :-
  * immediately.
  * * 3. PERSPECTIVE SELECTION:
  * Chose Jackal (Rope) to show how extraction is a tool for the powerful/clever, 
- * the Ranchers (Noose) to show how gullibility traps the subject, and the 
+ * the Ranchers (Snare) to show how gullibility traps the subject, and the 
  * Analyst (Mountain) to show the archetypal inevitability of the trickster.
  * * 4. MANDATROPHY RESOLUTION:
  * The status is [RESOLVED MANDATROPHY] because while the system is an 
- * absolute Noose for the ranchers, it is a life-sustaining Rope for Jackal 
+ * absolute Snare for the ranchers, it is a life-sustaining Rope for Jackal 
  * (the beneficiary).
  * * 5. AMBIGUITIES:
  * - The text mentions "$1,000" in a Bushman myth context, which implies an 
@@ -245,7 +245,7 @@ omega_variable(
     bushman_money_magic_extraction_intent,
     "Is Jackal's scam a functional necessity for survival in a hyper-arid 'Empty Quarter' or an intentional predatory choice?",
     resolution_mechanism("Audit of Jackal's resource alternatives vs. the frequency of the 'trickster' behavior"),
-    impact("If necessity: Survival Mountain. If predatory choice: Mandatrophy Noose."),
+    impact("If necessity: Survival Mountain. If predatory choice: Mandatrophy Snare."),
     confidence_without_resolution(medium)
 ).
 
@@ -253,7 +253,7 @@ omega_variable(
     rancher_gullibility_persistence,
     "Do the ranchers learn to bypass the trickster in the next encounter (Rope), or is their greed a fixed biological trait (Mountain)?",
     resolution_mechanism("Follow-up on the 'successive occasions' of ranchers meeting Jackal"),
-    impact("If they learn: Trickery is a temporary Noose. If not: It is a systemic Mountain."),
+    impact("If they learn: Trickery is a temporary Snare. If not: It is a systemic Mountain."),
     confidence_without_resolution(low)
 ).
 
@@ -273,7 +273,7 @@ omega_variable(
  * Suppression: Actively suppressed by Jackal's fear and "scared" reaction to 
  * the ranchers, leading him to choose the "side door" of trickery.
  * * CONCLUSION:
- * The existence of honest alternatives makes the scam a definitive "Noose." 
+ * The existence of honest alternatives makes the scam a definitive "Snare." 
  * The trickster chooses extraction because it is more efficient than cooperation 
  * in the short term.
  */

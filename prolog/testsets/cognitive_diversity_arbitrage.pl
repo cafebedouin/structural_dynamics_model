@@ -44,7 +44,7 @@
  * * NARRATIVE ARC:
  * The "hard line" between normal and abnormal is dissolving into a spectrum. 
  * This allows firms to "arbitrage" the unique cognitive wiring of their workforce, 
- * moving from a "Noose" of forced conformity to a "Rope" of collaborative asset 
+ * moving from a "Snare" of forced conformity to a "Rope" of collaborative asset 
  * management.
  */
 
@@ -118,7 +118,7 @@ constraint_indexing:constraint_classification(
     !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE "MASKING" EMPLOYEE - Noose
+   PERSPECTIVE 2: THE "MASKING" EMPLOYEE - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless (Treating unusual brains as an illness)
@@ -128,7 +128,7 @@ constraint_indexing:constraint_classification(
    
    WHY THIS CLASSIFICATION:
    When the workplace ignores the spectrum and demands conformity, the 
-   "unusual brain" becomes a Noose that extracts mental health and effort.
+   "unusual brain" becomes a Snare that extracts mental health and effort.
    
    NARRATIVE EVIDENCE:
    "treated as though something was wrong with them... neatly conformed 
@@ -137,7 +137,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     cognitive_diversity_arbitrage,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(biographical),
@@ -188,9 +188,9 @@ constraint_indexing:constraint_classification(
 :- begin_tests(cognitive_diversity_arbitrage_tests).
 
 test(multi_perspective_variance) :-
-    % CEO (Rope) vs Employee (Noose) vs Traditionalist (Mountain)
+    % CEO (Rope) vs Employee (Snare) vs Traditionalist (Mountain)
     constraint_indexing:constraint_classification(cognitive_diversity_arbitrage, rope, context(institutional, _, mobile, _)),
-    constraint_indexing:constraint_classification(cognitive_diversity_arbitrage, noose, context(individual_powerless, _, trapped, _)),
+    constraint_indexing:constraint_classification(cognitive_diversity_arbitrage, snare, context(individual_powerless, _, trapped, _)),
     constraint_indexing:constraint_classification(cognitive_diversity_arbitrage, mountain, context(individual_powerful, _, trapped, _)).
 
 test(power_extractiveness_scaling) :-
@@ -231,7 +231,7 @@ omega_variable(
     cognitive_diversity_arbitrage_extraction_intent,
     "Is the harvesting of 'unique strengths' a form of predatory cognitive extraction or a collaborative asset realization?",
     resolution_mechanism("Audit of salary/support ratios for neurodivergent vs neurotypical roles with similar output"),
-    impact("If predatory: Noose/Mandatrophy. If collaborative: Rope."),
+    impact("If predatory: Snare/Mandatrophy. If collaborative: Rope."),
     confidence_without_resolution(medium)
 ).
 
@@ -239,7 +239,7 @@ omega_variable(
     support_efficacy_threshold,
     "Does 'proper support' actually neutralize the challenges of unusual brains, or just mask them for corporate benefit?",
     resolution_mechanism("Long-term burnout rates among neurodivergent employees in 'inclusive' workplaces"),
-    impact("If it neutralizes: Rope. If it masks: Noose."),
+    impact("If it neutralizes: Rope. If it masks: Snare."),
     confidence_without_resolution(low)
 ).
 

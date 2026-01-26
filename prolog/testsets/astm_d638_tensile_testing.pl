@@ -171,7 +171,7 @@ constraint_indexing:constraint_classification(
     !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 4: SMALL LAB OWNER / TECHNICIAN (FINANCIAL) - Noose
+   PERSPECTIVE 4: SMALL LAB OWNER / TECHNICIAN (FINANCIAL) - Snare
    --------------------------------------------------------------------------
    WHO: individual_powerless - Bound by the high capital cost of compliance.
    WHEN: immediate - Ongoing daily maintenance and calibration costs.
@@ -179,7 +179,7 @@ constraint_indexing:constraint_classification(
    SCOPE: local - The lab's operational margin.
    
    WHY THIS CLASSIFICATION:
-   The "Noose" represents the capital extraction required to maintain the 
+   The "Snare" represents the capital extraction required to maintain the 
    standard. This includes the cost of the standard itself, specialized grips, 
    Class B-2 extensometers, and the labor for daily accuracy verification 
    required by Section 5.1.5.
@@ -187,7 +187,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     astm_d638_tensile_testing,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -199,7 +199,7 @@ constraint_indexing:constraint_classification(
     domain_priors:suppression_score(astm_d638_tensile_testing, S),
     S > 0.5.
 
-% This explicit prior ensures the Noose perspective is mathematically weighted.
+% This explicit prior ensures the Snare perspective is mathematically weighted.
 domain_priors:base_extractiveness(astm_d638_tensile_testing, 0.1).
 
 /* ==========================================================================

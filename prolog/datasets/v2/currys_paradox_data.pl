@@ -35,10 +35,10 @@ constraint_metric(recursive_modus_ponens, suppression_requirement, 0.40).
 constraint_metric(recursive_modus_ponens, snap_back_potential, 0.70).
 constraint_metric(recursive_modus_ponens, extractiveness, 0.58).
 
-% The Principle of Explosion (The Noose)
+% The Principle of Explosion (The Snare)
 % The ability to prove *anything* (Y) regardless of its truth value.
 % Extractiveness at 0.99 requires the 'stratified_logic_scaffold' to resolve.
-constraint_claim(logical_trivialization, noose).
+constraint_claim(logical_trivialization, snare).
 constraint_metric(logical_trivialization, intensity, 0.99).
 constraint_metric(logical_trivialization, suppression_requirement, 0.98).
 constraint_metric(logical_trivialization, snap_back_potential, 0.01).
@@ -49,7 +49,7 @@ constraint_metric(logical_trivialization, extractiveness, 0.99).
 recommendation(rec_01, implement_linear_logic_to_restrict_contraction_rules).
 affects_constraint(rec_01, recursive_modus_ponens).
 
-% Noose (0.99 extractiveness) triggers Cut
+% Snare (0.99 extractiveness) triggers Cut
 % Utilizing 'stratified_logic_scaffold' to separate the truth-predicate from the sentence level.
 recommendation(rec_02, adopt_tarskian_hierarchy_to_prevent_unguarded_self_reference).
 affects_constraint(rec_02, logical_trivialization).

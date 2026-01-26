@@ -143,7 +143,7 @@ constraint_indexing:constraint_classification(
     !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE AUTOMATED SURVEY SYSTEM - Noose
+   PERSPECTIVE 3: THE AUTOMATED SURVEY SYSTEM - Snare
    --------------------------------------------------------------------------
    
    WHO: institutional (Rule-making power over data collection)
@@ -152,7 +152,7 @@ constraint_indexing:constraint_classification(
    SCOPE: global (Pan-STARRS collecting the largest volume of data)
    
    WHY THIS CLASSIFICATION:
-   The system acts as a Noose for information. It extracts petabytes of data from 
+   The system acts as a Snare for information. It extracts petabytes of data from 
    every intermittent event, forcing a high-volume "action" focus that leaves 
    little room for the "chance" exploration of space.
    
@@ -163,7 +163,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     transient_event_detection,
-    noose,
+    snare,
     context(
         agent_power(institutional),
         time_horizon(immediate),
@@ -182,10 +182,10 @@ constraint_indexing:constraint_classification(
 :- begin_tests(transient_event_detection_tests).
 
 test(multi_perspective_variance) :-
-    % Ancient (Mountain) vs Modern (Rope) vs System (Noose)
+    % Ancient (Mountain) vs Modern (Rope) vs System (Snare)
     constraint_indexing:constraint_classification(transient_event_detection, mountain, context(individual_powerless, historical, trapped, national)),
     constraint_indexing:constraint_classification(transient_event_detection, rope, context(analytical, biographical, arbitrage, global)),
-    constraint_indexing:constraint_classification(transient_event_detection, noose, context(institutional, immediate, constrained, global)).
+    constraint_indexing:constraint_classification(transient_event_detection, snare, context(institutional, immediate, constrained, global)).
 
 test(information_extractiveness_scaling) :-
     % Modern institutional systems experience the extraction of 1.6 petabytes
@@ -210,7 +210,7 @@ test(information_extractiveness_scaling) :-
  * of data from transient events.
  * * 2. PERSPECTIVE SELECTION:
  * Analyzed from the ancient observer (Mountain), the modern scientist (Rope), 
- * and the automated system itself (Noose) to demonstrate the transition from 
+ * and the automated system itself (Snare) to demonstrate the transition from 
  * fate to industrialized tool.
  */
 
@@ -220,9 +220,9 @@ test(information_extractiveness_scaling) :-
 
 omega_variable(
     transient_event_detection_extraction_intent,
-    "Is the petabyte-scale extraction of data a functional necessity for understanding the universe (Rope) or a predatory focus on speed over depth (Noose)?",
+    "Is the petabyte-scale extraction of data a functional necessity for understanding the universe (Rope) or a predatory focus on speed over depth (Snare)?",
     resolution_mechanism("Audit of scientific breakthrough quality vs. pure data volume from surveys like Pan-STARRS"),
-    impact("If necessity: Mountain. If predatory choice: Noose."),
+    impact("If necessity: Mountain. If predatory choice: Snare."),
     confidence_without_resolution(medium)
 ).
 
@@ -230,7 +230,7 @@ omega_variable(
     automated_serendipity_validity,
     "Can 'serendipity' truly be automated, or does the conveyor belt model create a 'living within a lie' where true anomalies are filtered out?",
     resolution_mechanism("Compare discovery rates of predicted vs. unpredicted transient events in automated systems"),
-    impact("If automated: Rope. If filtered: Noose."),
+    impact("If automated: Rope. If filtered: Snare."),
     confidence_without_resolution(low)
 ).
 

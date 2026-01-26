@@ -60,7 +60,7 @@
 
 % Required for structural integration
 narrative_ontology:interval(currys_paradox_interval, 0, 10).
-narrative_ontology:constraint_claim(currys_paradox, noose).
+narrative_ontology:constraint_claim(currys_paradox, snare).
 
 % Base extractiveness: 0.2 (Low-Moderate)
 % Rationale: It extracts "meaning" from a system by making it trivial. If a 
@@ -157,14 +157,14 @@ constraint_indexing:constraint_classification(
    
    WHY THIS CLASSIFICATION:
    For a reformer who wants to allow natural language's "unrestricted 
-   comprehension," Curry's Paradox is a Noose. It is the "threat" used by the 
+   comprehension," Curry's Paradox is a Snare. It is the "threat" used by the 
    establishment to shut down more flexible logics. "If you allow that rule," 
-   they say, "the Noose tightens and your entire system explodes into triviality."
+   they say, "the Snare tightens and your entire system explodes into triviality."
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
     currys_paradox,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(historical),
@@ -214,7 +214,7 @@ test(time_immutability) :-
  * * 2. SUPPRESSION (0.5): This is higher than the Liar Paradox because the 
  * logical community is very aggressive about suppressing systems that 
  * cannot handle Curry, as "Explosion" is seen as the death of logic.
- * * 3. NOOSE SELECTION: The "Noose" classification arises from the way 
+ * * 3. NOOSE SELECTION: The "Snare" classification arises from the way 
  * the paradox is used to gatekeep which logics are "respectable."
  */
 
@@ -246,7 +246,7 @@ omega_variable(
  * * CONCLUSION:
  * Because Alternatives exist (like rejecting contraction) but are cognitively 
  * suppressed by the "intuitive" nature of standard implication, the paradox 
- * often functions as a Noose for alternative logical architectures.
+ * often functions as a Snare for alternative logical architectures.
  */
 
 /* ==========================================================================

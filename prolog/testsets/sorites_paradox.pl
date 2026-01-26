@@ -48,7 +48,7 @@
  * * NARRATIVE ARC:
  * Language treats reality as a "Mountain" of discrete categories. To manage 
  * the vagueness, institutions create "Ropes"—arbitrary sharp lines. However, 
- * for the person standing at the 17-year, 364-day mark, the line is a "Noose," 
+ * for the person standing at the 17-year, 364-day mark, the line is a "Snare," 
  * as the system extracts their agency based on a single grain of time that 
  * lacks any biological distinction.
  */
@@ -151,7 +151,7 @@ constraint_indexing:constraint_classification(
     !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE IMMIGRATION APPLICANT - Noose
+   PERSPECTIVE 3: THE IMMIGRATION APPLICANT - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless - Subject to the "sharp" lines of the state.
@@ -161,15 +161,15 @@ constraint_indexing:constraint_classification(
    
    WHY THIS CLASSIFICATION:
    For the person who misses a "cutoff" by a single day, the paradox is 
-   a Noose. The law treats them as "Not Resident" or "Too Old" based 
+   a Snare. The law treats them as "Not Resident" or "Too Old" based 
    on a grain of sand that has no material reality. The arbitrary 
    line strangles their future, extracting their mobility and life 
-   quality via the "Noose" of bureaucratic binary logic.
+   quality via the "Snare" of bureaucratic binary logic.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
     sorites_paradox,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -188,13 +188,13 @@ constraint_indexing:constraint_classification(
 :- begin_tests(sorites_paradox_tests).
 
 test(multi_perspective_variance) :-
-    % Analyst sees Mountain, Institutional sees Rope, Powerless sees Noose
+    % Analyst sees Mountain, Institutional sees Rope, Powerless sees Snare
     constraint_indexing:constraint_classification(sorites_paradox, mountain, context(analytical, civilizational, trapped, global)),
     constraint_indexing:constraint_classification(sorites_paradox, rope, context(institutional, biographical, arbitrage, national)),
-    constraint_indexing:constraint_classification(sorites_paradox, noose, context(individual_powerless, immediate, trapped, national)).
+    constraint_indexing:constraint_classification(sorites_paradox, snare, context(individual_powerless, immediate, trapped, national)).
 
 test(power_extractiveness_vagueness) :-
-    % Powerless individuals feel the total extraction of their agency (Noose).
+    % Powerless individuals feel the total extraction of their agency (Snare).
     % Institutional actors use arbitrary lines for coordination (Rope).
     ContextPowerless = context(individual_powerless, immediate, trapped, national),
     ContextPowerful = context(institutional, biographical, arbitrage, national),
@@ -222,7 +222,7 @@ test(power_extractiveness_vagueness) :-
  * 3. CLASSIFICATION RATIONALE:
  * Analytical → Mountain: Language cannot escape vague predicates.
  * Institutional → Rope: Arbitrary thresholds are the "ropes" of civilization.
- * Powerless → Noose: Cutoff points are the "nooses" for those on the wrong side.
+ * Powerless → Snare: Cutoff points are the "snares" for those on the wrong side.
  */
 
 /* ==========================================================================
@@ -231,7 +231,7 @@ test(power_extractiveness_vagueness) :-
 
 omega_variable(
     precision_logic_limit,
-    "Can 'Fuzzy Logic' or probabilistic systems untie the Sorites Noose 
+    "Can 'Fuzzy Logic' or probabilistic systems untie the Sorites Snare 
     (Rope), or is binary decision-making a Mountain of social efficiency?",
     resolution_mechanism("Monitor the adoption of non-binary decision 
     algorithms in high-stakes legal or medical insurance adjudication"),
@@ -253,7 +253,7 @@ omega_variable(
  * complex to calculate and enforce at scale.
  * * CONCLUSION:
  * The existence of suppressed "Continuum" models confirms that for the 
- * marginal individual, the Sorites Paradox is a Noose—their reality 
+ * marginal individual, the Sorites Paradox is a Snare—their reality 
  * is continuous, but the system's Rope (the Threshold) is a trap.
  */
 

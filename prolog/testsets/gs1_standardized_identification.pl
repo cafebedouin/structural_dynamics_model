@@ -46,7 +46,7 @@
  * Originally a Rope (coordination for the first grocery scanners), the 
  * GS1 standard has become a Mountain for any entity wishing to participate 
  * in global trade. For small producers, the mandatory annual fees and 
- * rigid formatting can function as a Noose that extracts "entry rent" 
+ * rigid formatting can function as a Snare that extracts "entry rent" 
  * for the right to exist in a digital marketplace.
  */
 
@@ -150,7 +150,7 @@ constraint_indexing:constraint_classification(
     !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: ANTI-MONOPOLY ANALYST - Noose
+   PERSPECTIVE 3: ANTI-MONOPOLY ANALYST - Snare
    --------------------------------------------------------------------------
    
    WHO: analytical - Observer of market barriers.
@@ -159,7 +159,7 @@ constraint_indexing:constraint_classification(
    SCOPE: global - Global trade infrastructure.
    
    WHY THIS CLASSIFICATION:
-   The analyst sees a Noose. GS1 has achieved a level of "Standard Lock-in" 
+   The analyst sees a Snare. GS1 has achieved a level of "Standard Lock-in" 
    where it extracts rent (fees) from every level of the supply chain. 
    Because alternatives are suppressed by the network effect, the 
    standard "chokes" out any competing identification technology.
@@ -167,7 +167,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     gs1_standardized_identification,
-    noose,
+    snare,
     context(
         agent_power(analytical),
         time_horizon(historical),
@@ -222,7 +222,7 @@ omega_variable(
      eventually provide a non-extractive Rope that replaces the GS1 Mountain?",
     resolution_mechanism("Monitor adoption rates of W3C DID standards in 
     mainstream retail vs. GS1 renewal rates"),
-    impact("If Yes: GS1 was a temporary Noose. If No: GS1 is a permanent 
+    impact("If Yes: GS1 was a temporary Snare. If No: GS1 is a permanent 
             structural Mountain of the modern world."),
     confidence_without_resolution(medium)
 ).

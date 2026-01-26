@@ -35,7 +35,7 @@ constraint_metric(initial_state_sensitivity, suppression_requirement, 0.35).
 constraint_metric(initial_state_sensitivity, snap_back_potential, 0.50).
 constraint_metric(initial_state_sensitivity, extractiveness, 0.55).
 
-constraint_claim(infinite_precision_requirement, noose).
+constraint_claim(infinite_precision_requirement, snare).
 constraint_metric(infinite_precision_requirement, intensity, 0.95).
 constraint_metric(infinite_precision_requirement, suppression_requirement, 0.88).
 constraint_metric(infinite_precision_requirement, snap_back_potential, 0.92).

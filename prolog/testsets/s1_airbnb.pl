@@ -118,7 +118,7 @@ constraint_indexing:constraint_classification(
     !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 2: Professional Host - Noose
+   PERSPECTIVE 2: Professional Host - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_moderate / institutional - Owns/manages multiple units.
@@ -127,7 +127,7 @@ constraint_indexing:constraint_classification(
    SCOPE: regional / national.
    
    WHY THIS CLASSIFICATION:
-   Professional hosts see "One Host, One Home" laws as a "Noose"—a policy 
+   Professional hosts see "One Host, One Home" laws as a "Snare"—a policy 
    specifically designed to throttle their business model in favor of the 
    hotel industry and housing activists.
    
@@ -138,7 +138,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     airbnb_str_regulation,
-    noose,
+    snare,
     context(
         agent_power(individual_moderate),
         time_horizon(immediate),
@@ -202,12 +202,12 @@ test(multi_perspective_divergence) :-
     constraint_indexing:constraint_classification(airbnb_str_regulation, Type3, 
         context(institutional, historical, analytical, _, _, regional)),
     Type1 = mountain,
-    Type2 = noose,
+    Type2 = snare,
     Type3 = rope.
 
 test(host_extractiveness_variance) :-
-    % Professional hosts feel higher extraction relative to their business model (Noose)
-    constraint_indexing:constraint_classification(airbnb_str_regulation, noose, context(individual_moderate, _, mobile, _, _, _)).
+    % Professional hosts feel higher extraction relative to their business model (Snare)
+    constraint_indexing:constraint_classification(airbnb_str_regulation, snare, context(individual_moderate, _, mobile, _, _, _)).
 
 :- end_tests(airbnb_str_regulation_tests).
 
@@ -239,7 +239,7 @@ omega_variable(
     housing_market_correlation,
     "Do STR restrictions actually lower long-term rents, or do they simply reallocate traveler revenue to hotels?",
     resolution_mechanism("Post-regulation rent tracking in synthetic control cities (e.g., NYC post-2023)"),
-    impact("If it lowers rents: it's a Rope for the city. If it only benefits hotels: it's a Noose for hosts."),
+    impact("If it lowers rents: it's a Rope for the city. If it only benefits hotels: it's a Snare for hosts."),
     confidence_without_resolution(medium)
 ).
 
@@ -254,7 +254,7 @@ omega_variable(
  * Suppression: Cities often reject this as "insufficient" for tax and zoning enforcement.
  * * CONCLUSION:
  * The active rejection of platform self-regulation in favor of state-mandated 
- * registration moves the constraint from a potential Rope to a Noose/Mountain 
+ * registration moves the constraint from a potential Rope to a Snare/Mountain 
  * for participants.
  */
 
@@ -273,4 +273,4 @@ omega_variable(
 % --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
 constraint_indexing:constraint_classification(s1_airbnb, mountain, agent_power(analytical)).
 constraint_indexing:constraint_classification(s1_airbnb, rope, agent_power(institutional)).
-constraint_indexing:constraint_classification(s1_airbnb, noose, agent_power(individual_powerless)).
+constraint_indexing:constraint_classification(s1_airbnb, snare, agent_power(individual_powerless)).

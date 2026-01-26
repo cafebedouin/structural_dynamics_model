@@ -121,7 +121,7 @@ constraint_indexing:constraint_classification(
    SCOPE: regional
    
    WHY THIS CLASSIFICATION:
-   LPs face a "Noose" during de-pegs. The protocol explicitly prevents 
+   LPs face a "Snare" during de-pegs. The protocol explicitly prevents 
    LP token redemptions if the oracle rate is significantly below the 
    LP rate (e.g., 90%) to prevent draining reserves. 
    This "locks" the agent into the constraint during crisis.
@@ -129,7 +129,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     dexy_gold_protocol,
-    noose,
+    snare,
     context(
         agent_power(individual_moderate),
         time_horizon(biographical),
@@ -212,7 +212,7 @@ omega_variable(
     draining_attack_resilience,
     "Can anti-draining measures (locks) effectively stop cyclic arbitrage-top-up attacks?",
     resolution_mechanism("Mainnet performance monitoring under high volatility cycles"),
-    impact("If failed, the Bank (Rope) collapses into a Noose for all ERG holders."),
+    impact("If failed, the Bank (Rope) collapses into a Snare for all ERG holders."),
     confidence_without_resolution(medium)
 ).
 
@@ -239,4 +239,4 @@ omega_variable(
 % --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
 constraint_indexing:constraint_classification(ergo_dexy_gold_protocol, mountain, agent_power(analytical)).
 constraint_indexing:constraint_classification(ergo_dexy_gold_protocol, rope, agent_power(institutional)).
-constraint_indexing:constraint_classification(ergo_dexy_gold_protocol, noose, agent_power(individual_powerless)).
+constraint_indexing:constraint_classification(ergo_dexy_gold_protocol, snare, agent_power(individual_powerless)).

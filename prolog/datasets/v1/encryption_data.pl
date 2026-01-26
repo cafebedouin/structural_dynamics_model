@@ -14,10 +14,10 @@ event(encrypted_comm_criminalization, legal_shift, 2025, [sanction_level(severe)
 constraint_claim(computation_barrier, mountain).
 constraint_metric(computation_barrier, complexity, 0.95).
 
-constraint_claim(state_access_mandate, noose).
+constraint_claim(state_access_mandate, snare).
 constraint_metric(state_access_mandate, leverage, 0.88).
 
-constraint_claim(legacy_unencrypted_vulnerability, zombie).
+constraint_claim(legacy_unencrypted_vulnerability, piton).
 constraint_metric(legacy_unencrypted_vulnerability, persistence, 0.72).
 
 % 4. Recommendations & Veto Structure

@@ -41,7 +41,7 @@
  * - Retrospective Audit Panel: Hindsight-biased observers reclassifying past ambiguity as obvious.
  * * NARRATIVE ARC:
  * Findings oscillate between "ignore" and "urgent" as contextual priors change. Frontline 
- * workers experience the threshold as a Noose of liability, while institutions present it 
+ * workers experience the threshold as a Snare of liability, while institutions present it 
  * as a Mountain of objective safety.
  */
 
@@ -77,7 +77,7 @@ constraint_victim(radiologic_diagnostic_threshold, [frontline_radiologists, over
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 1: Frontline Radiologist - Noose
+   PERSPECTIVE 1: Frontline Radiologist - Snare
    --------------------------------------------------------------------------
    WHO: individual_powerless (subject to volume/legal pressure)
    WHEN: immediate (daily diagnostic turnaround)
@@ -85,14 +85,14 @@ constraint_victim(radiologic_diagnostic_threshold, [frontline_radiologists, over
    SCOPE: local (individual cases)
    
    WHY THIS CLASSIFICATION:
-   For the radiologist, the protocol functions as a Noose. High cognitive load 
+   For the radiologist, the protocol functions as a Snare. High cognitive load 
    combined with fear of misses forces defensive "over-calling," turning a 
    diagnostic aid into a coercive mechanism of liability management.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
     radiologic_diagnostic_threshold,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -165,7 +165,7 @@ constraint_indexing:constraint_classification(
 :- begin_tests(radiologic_diagnostic_threshold_tests).
 
 test(multi_perspective_radiology) :-
-    % Radiologist sees Noose
+    % Radiologist sees Snare
     constraint_indexing:constraint_classification(
         radiologic_diagnostic_threshold, Type1,
         context(individual_powerless, immediate, trapped, local)),
@@ -208,7 +208,7 @@ test(hindsight_mountain_effect) :-
  * 1. EXTRACTIVENESS (0.7): High score reflects the "liability tax" and cognitive 
  * exhaustion of frontline clinicians who bear the risk of the system's 
  * threshold shifts.
- * * 2. PERSPECTIVE SELECTION: Focused on the triad of Clinician (Noose), Admin 
+ * * 2. PERSPECTIVE SELECTION: Focused on the triad of Clinician (Snare), Admin 
  * (Mountain), and Tech Optimizer (Rope) to highlight the "perspectival stalemate" 
  * inherent in diagnostic error discussions.
  * * 3. OMEGAS:
@@ -219,7 +219,7 @@ test(hindsight_mountain_effect) :-
  * confidence_without_resolution(low)
  * ).
  * * omega_variable(ai_rewiring_risk,
- * "Will AI transform the Noose into a Rope, or simply tighten the Noose by accelerating volume?",
+ * "Will AI transform the Snare into a Rope, or simply tighten the Snare by accelerating volume?",
  * resolution_mechanism("Post-implementation clinician burnout and error-rate audits"),
  * impact("Determines if AI is a tool or a coercive metric."),
  * confidence_without_resolution(medium)
@@ -240,10 +240,10 @@ test(hindsight_mountain_effect) :-
  * classifications to function.
  * * ALTERNATIVE 2: Outcome-Weighted Compensation
  * Viability: Rewarding accuracy over volume.
- * Suppression: Suppressed by institutional volume-based revenue models (Noose).
+ * Suppression: Suppressed by institutional volume-based revenue models (Snare).
  * * CONCLUSION:
  * The active suppression of probabilistic nuance in favor of "standard of care" 
- * certainty shifts this constraint from a potential Rope into a functioning Noose 
+ * certainty shifts this constraint from a potential Rope into a functioning Snare 
  * for the frontline practitioner.
  */
 

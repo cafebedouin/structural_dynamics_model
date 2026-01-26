@@ -48,7 +48,7 @@
  * bifurcated. For institutional agents, it remains a Rope—a way to weave
  * [cite_start]narratives and reach audiences[cite: 201]. For younger adults, it has
  * [cite_start]become a Mountain—the physical terrain of their social life[cite: 130].
- * For those concerned with data/attention extraction, it is a Noose that
+ * For those concerned with data/attention extraction, it is a Snare that
  * [cite_start]chokes off non-algorithmic social alternatives[cite: 47, 238].
  */
 
@@ -58,7 +58,7 @@
 
 % Required for [STEP 1] and [STEP 2] of the Deferential Realism suite
 narrative_ontology:interval(social_media_2025_cycle, 0, 10).
-narrative_ontology:constraint_claim(social_media_participation_threshold, noose).
+narrative_ontology:constraint_claim(social_media_participation_threshold, snare).
 
 % Base extractiveness score (0.0-1.0)
 % Rationale: 0.6. High extraction of attention and behavioral data;
@@ -160,7 +160,7 @@ constraint_indexing:constraint_classification(
    SCOPE: global - Evaluating the U.S. adult population as a case study.
 
    WHY THIS CLASSIFICATION:
-   The researcher views the system as a Rope that has become a Noose for
+   The researcher views the system as a Rope that has become a Snare for
    certain groups. The "age gap" of +61 on Instagram suggests that
    [cite_start]the platform is "choking off" cross-generational communication[cite: 140, 141].
    -------------------------------------------------------------------------- */
@@ -168,7 +168,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     social_media_participation_threshold,
-    noose,
+    snare,
     context(
         agent_power(analytical),
         time_horizon(historical),
@@ -207,7 +207,7 @@ test(extraction_frequency_check) :-
  * LLM GENERATION NOTES
  * * Model: Gemini 2.0 Flash
  * * KEY DECISIONS:
- * 1. CLASSIFICATION: I chose 'Noose' as the base claim because the data
+ * 1. CLASSIFICATION: I chose 'Snare' as the base claim because the data
  * shows high frequency (several times a day) which mimics an extractive
  * [cite_start]feedback loop[cite: 247, 756].
  * 2. PERSPECTIVE MINIMUMS: I contrasted the young adult's 'Mountain'
@@ -243,7 +243,7 @@ omega_variable(
  * [cite_start]"taxed" by the lack of digital visibility/coordination[cite: 47].
  * * CONCLUSION:
  * The existence of niche alternatives (Bluesky/Truth Social) that remain at
- * [cite_start]<5% indicates a "winner-take-all" Mountain/Noose dynamic[cite: 73, 78].
+ * [cite_start]<5% indicates a "winner-take-all" Mountain/Snare dynamic[cite: 73, 78].
  */
 
 /* ==========================================================================

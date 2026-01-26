@@ -48,7 +48,7 @@
  * transition of this law from paper to physical reality.
  * * NARRATIVE ARC:
  * The ruling was intended as a "Rope" (a coordination tool for peaceful 
- * resolution). However, for China, it functions as a "Noose" (an asymmetric 
+ * resolution). However, for China, it functions as a "Snare" (an asymmetric 
  * limit on perceived sovereign power). For the Philippines, it is becoming a 
  * "Mountain" (a fixed, final legal truth) that they refuse to re-negotiate.
  */
@@ -89,7 +89,7 @@ narrative_ontology:constraint_metric(south_china_sea_arbitration_2016_2026, supp
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 1: FILIPINO FISHERMAN - Noose
+   PERSPECTIVE 1: FILIPINO FISHERMAN - Snare
    --------------------------------------------------------------------------
    WHO: individual_powerless - Directly exposed to water cannons and ramming.
    WHEN: immediate - Daily survival at Scarborough Shoal (Bajo de Masinloc).
@@ -98,7 +98,7 @@ narrative_ontology:constraint_metric(south_china_sea_arbitration_2016_2026, supp
    
    WHY THIS CLASSIFICATION:
    While the law is on their side, the *gap* between the law and reality is a 
-   Noose. They are promised rights by a document (UNCLOS/Award) that currently 
+   Snare. They are promised rights by a document (UNCLOS/Award) that currently 
    cannot stop a water cannon from destroying their livelihood.
    -------------------------------------------------------------------------- */
 
@@ -106,7 +106,7 @@ narrative_ontology:constraint_metric(south_china_sea_arbitration_2016_2026, supp
 
 constraint_indexing:constraint_classification(
     south_china_sea_arbitration_2016_2026,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -145,7 +145,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: CHINESE EMBASSY / MOFA - Noose
+   PERSPECTIVE 3: CHINESE EMBASSY / MOFA - Snare
    --------------------------------------------------------------------------
    WHO: institutional (opposing) - Powerful state agency.
    WHEN: immediate - Managing "provocations" at sea.
@@ -153,14 +153,14 @@ constraint_indexing:constraint_classification(
    SCOPE: national - Protecting "territorial sovereignty."
    
    WHY THIS CLASSIFICATION:
-   For Beijing, the Award is an illegal, extractive "Noose" created without 
+   For Beijing, the Award is an illegal, extractive "Snare" created without 
    their consent, designed to "infringe on sovereignty" and "mislead public 
    opinion." They view it as a weaponized legal artifact.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
     south_china_sea_arbitration_2016_2026,
-    noose,
+    snare,
     context(
         agent_power(institutional),
         time_horizon(immediate),
@@ -212,7 +212,7 @@ domain_priors:suppression_score(south_china_sea_arbitration_2016_2026, 0.4).
 test(multi_perspective_variance) :-
     constraint_indexing:constraint_classification(south_china_sea_arbitration_2016_2026, Type1, context(individual_powerless, immediate, trapped, local)),
     constraint_indexing:constraint_classification(south_china_sea_arbitration_2016_2026, Type2, context(institutional, civilizational, mobile, global)),
-    Type1 = noose,
+    Type1 = snare,
     Type2 = mountain.
 
 test(enforcement_extractiveness) :-
@@ -248,7 +248,7 @@ omega_variable(
     un_general_assembly_referral,
     "Will the Philippines successfully forward the 2016 Award to the ICJ for an advisory opinion in 2026?",
     resolution_mechanism("Monitor the vote count in the UNGA during the 2026 September session."),
-    impact("If Yes: The award hardens into a global 'Mountain'. If No: It remains a regional 'Noose' for China."),
+    impact("If Yes: The award hardens into a global 'Mountain'. If No: It remains a regional 'Snare' for China."),
     confidence_without_resolution(low)
 ).
 

@@ -36,9 +36,9 @@
  * While the cause (lack of fresh produce) and cure (citrus) were periodically discovered and lost, 
  * the disease functioned as a lethal filter that extracted the lives of "little people" (sailors) 
  * to fuel the expansion of Empires. It represents a "Machinery of Justice" where 
- * institutional inertia and biological ignorance created a terminal "Noose" for the powerless.
+ * institutional inertia and biological ignorance created a terminal "Snare" for the powerless.
  * * KEY AGENTS:
- * - The Common Sailor (Little Person): Subject to the "Noose" of the ship's diet; unable to 
+ * - The Common Sailor (Little Person): Subject to the "Snare" of the ship's diet; unable to 
  * procure fresh food at sea.
  * - The Admiralty/Empire (Institutional): Benefits from the "Rope" of long-distance trade 
  * and colonization, treating sailor mortality as a predictable "cost of business."
@@ -88,7 +88,7 @@ constraint_victim(scurvy_maritime_extraction, common_sailors).        % Terminal
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 1: THE SAILOR - Noose
+   PERSPECTIVE 1: THE SAILOR - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless (A "little person" with no control over ship stores)
@@ -97,7 +97,7 @@ constraint_victim(scurvy_maritime_extraction, common_sailors).        % Terminal
    SCOPE: global (The "Empty Quarter" of the ocean)
    
    WHY THIS CLASSIFICATION:
-   For the sailor, scurvy is a "Noose." They are "caught up in the churn" of imperial 
+   For the sailor, scurvy is a "Snare." They are "caught up in the churn" of imperial 
    expansion where their death "doesn't really mean anything" to the system. 
    They have "nothing to hide" but their failing health is treated as a 
    lack of "merit" or "grit."
@@ -107,7 +107,7 @@ constraint_victim(scurvy_maritime_extraction, common_sailors).        % Terminal
 
 constraint_indexing:constraint_classification(
     scurvy_maritime_extraction,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -179,8 +179,8 @@ constraint_indexing:constraint_classification(
 :- begin_tests(scurvy_maritime_extraction_tests).
 
 test(multi_perspective_asymmetry) :-
-    % Sailor (Powerless) sees Noose
-    constraint_indexing:constraint_classification(scurvy_maritime_extraction, noose, context(individual_powerless, _, _, _)),
+    % Sailor (Powerless) sees Snare
+    constraint_indexing:constraint_classification(scurvy_maritime_extraction, snare, context(individual_powerless, _, _, _)),
     % Admiralty (Institutional) sees Rope
     constraint_indexing:constraint_classification(scurvy_maritime_extraction, rope, context(institutional, _, _, _)),
     % Scientist (Analytical) sees Mountain
@@ -210,7 +210,7 @@ test(extraction_mortality_scaling) :-
  * for decades in favor of complex, "monosophical" theories that didn't work.
  * * 3. MANDATROPHY RESOLUTION:
  * Status: [RESOLVED MANDATROPHY]. The "Rope" of imperial expansion was 
- * explicitly built upon the "Noose" of sailor mortality.
+ * explicitly built upon the "Snare" of sailor mortality.
  */
 
 /* ==========================================================================
@@ -220,9 +220,9 @@ test(extraction_mortality_scaling) :-
 omega_variable(
     institutional_ignorance_intent,
     "Was the 42-year delay between Lind's discovery and Navy implementation a 
-     functional necessity (Mountain) or a predatory choice to save money (Noose)?",
+     functional necessity (Mountain) or a predatory choice to save money (Snare)?",
     resolution_mechanism("Audit of British Admiralty cost-benefit logs regarding lime juice vs. sailor replacement costs"),
-    impact("If necessity: Institutional Mountain. If choice: Mandatrophy Noose."),
+    impact("If necessity: Institutional Mountain. If choice: Mandatrophy Snare."),
     confidence_without_resolution(medium)
 ).
 
@@ -251,7 +251,7 @@ omega_variable(
  * of a diet that sailors (the subjects) initially rejected.
  * * CONCLUSION:
  * The existence of Alternative 1 for over 150 years before adoption makes the 
- * maritime diet a definitive "Noose."
+ * maritime diet a definitive "Snare."
  */
 
 /* ==========================================================================

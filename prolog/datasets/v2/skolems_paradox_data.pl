@@ -35,10 +35,10 @@ constraint_metric(internal_bijection_absence, suppression_requirement, 0.35).
 constraint_metric(internal_bijection_absence, snap_back_potential, 0.60).
 constraint_metric(internal_bijection_absence, extractiveness, 0.42).
 
-% The External Countability Sink (The Noose)
+% The External Countability Sink (The Snare)
 % Externally, the entire domain is countable, meaning bijections exist but are not elements of the model.
 % Extractiveness at 0.97 requires the 'absolute_set_scaffold' to distinguish perspectives.
-constraint_claim(relativity_of_cardinality, noose).
+constraint_claim(relativity_of_cardinality, snare).
 constraint_metric(relativity_of_cardinality, intensity, 0.99).
 constraint_metric(relativity_of_cardinality, suppression_requirement, 0.95).
 constraint_metric(relativity_of_cardinality, snap_back_potential, 0.02).
@@ -49,7 +49,7 @@ constraint_metric(relativity_of_cardinality, extractiveness, 0.97).
 recommendation(rec_01, distinguish_between_internal_sets_and_external_functions).
 affects_constraint(rec_01, internal_bijection_absence).
 
-% Noose (0.97 extractiveness) triggers Cut
+% Snare (0.97 extractiveness) triggers Cut
 % Utilizing 'absolute_set_scaffold' to realize that uncountability is a non-absolute property.
 recommendation(rec_02, abandon_absolute_cardinality_in_first_order_semantics).
 affects_constraint(rec_02, relativity_of_cardinality).

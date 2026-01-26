@@ -81,7 +81,7 @@ narrative_ontology:constraint_metric(medical_residency_match, suppression_requir
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 1: THE STUDENT - Noose
+   PERSPECTIVE 1: THE STUDENT - Snare
    --------------------------------------------------------------------------
    WHO: individual_powerless
    WHEN: immediate (Match Day)
@@ -89,7 +89,7 @@ narrative_ontology:constraint_metric(medical_residency_match, suppression_requir
    SCOPE: national
    
    WHY THIS CLASSIFICATION:
-   For the student, the Match is a "Noose." They have no "exit" option; 
+   For the student, the Match is a "Snare." They have no "exit" option; 
    once the algorithm runs, they are legally bound to work at the 
    resulting hospital, often in a different city, with no room to 
    negotiate salary or hours. The suppression of side-deals makes 
@@ -98,7 +98,7 @@ narrative_ontology:constraint_metric(medical_residency_match, suppression_requir
 
 constraint_indexing:constraint_classification(
     medical_residency_match,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -172,8 +172,8 @@ constraint_indexing:constraint_classification(
 :- begin_tests(medical_match_tests).
 
 test(exit_option_noose) :-
-    % Testing that 'trapped' agents (students) experience a Noose.
-    constraint_indexing:constraint_classification(medical_residency_match, noose, context(_, _, trapped, _)).
+    % Testing that 'trapped' agents (students) experience a Snare.
+    constraint_indexing:constraint_classification(medical_residency_match, snare, context(_, _, trapped, _)).
 
 test(coordination_rope) :-
     % Testing that institutions see the Rope of coordination.
@@ -192,7 +192,7 @@ test(coordination_rope) :-
  * The medical match is the "hardest" version of a matching market. 
  * I set suppression to 0.95 because there is literally no other way to 
  * become a licensed physician in the US without going through this 
- * specific algorithm. This makes it a perfect example of a "Noose" 
+ * specific algorithm. This makes it a perfect example of a "Snare" 
  * from the perspective of the individual laborer.
  */
 
@@ -204,7 +204,7 @@ omega_variable(
     antitrust_exemption,
     "Will the legal exemption allowing the Match to suppress wage competition be overturned?",
     resolution_mechanism("Supreme Court or Congressional review of Jung v. Association of American Medical Colleges"),
-    impact("If Yes: The 'Mountain' collapses into a decentralized 'Auction' (Rope/Noose reversal)."),
+    impact("If Yes: The 'Mountain' collapses into a decentralized 'Auction' (Rope/Snare reversal)."),
     confidence_without_resolution(medium)
 ).
 
@@ -219,7 +219,7 @@ omega_variable(
  * 2. Multi-Stage Match: (Allows for some negotiation after the first match).
  * * CONCLUSION:
  * The Match is a "Stable" outcome (Mountain), but the *price* of that 
- * stability is the removal of student agency (Noose).
+ * stability is the removal of student agency (Snare).
  */
 
 /* ==========================================================================

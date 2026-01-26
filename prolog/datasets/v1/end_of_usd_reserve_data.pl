@@ -23,12 +23,12 @@ event(ev04_sovereign_debt_spiral, systemic_overhaul, 98, [subject(us_treasury_li
 constraint_claim(triffin_dilemma_logic, mountain).
 constraint_metric(triffin_dilemma_logic, accessibility_collapse, 0.96).
 
-% Noose: The SWIFT System. Geopolitical gatekeeping that narrows a state's options until financial isolation becomes total.
-constraint_claim(swift_sanctions_noose, noose).
+% Snare: The SWIFT System. Geopolitical gatekeeping that narrows a state's options until financial isolation becomes total.
+constraint_claim(swift_sanctions_noose, snare).
 constraint_metric(swift_sanctions_noose, stakes_inflation, 0.90).
 
-% Zombie: Bretton Woods Institutionalism. The legacy rules of IMF/World Bank that persist as structural shells despite shifting power centers.
-constraint_claim(bretton_woods_residual, zombie).
+% Piton: Bretton Woods Institutionalism. The legacy rules of IMF/World Bank that persist as structural shells despite shifting power centers.
+constraint_claim(bretton_woods_residual, piton).
 constraint_metric(bretton_woods_residual, suppression, 0.85).
 
 % Rope: Treasury Risk-Free Asset Peg. Ties global portfolios to a specific debt instrument used for coercive fiscal leverage.

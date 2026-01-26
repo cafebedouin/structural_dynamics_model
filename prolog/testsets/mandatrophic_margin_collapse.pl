@@ -41,12 +41,12 @@
  * - The Mandator: Institutional; sets the "KPI" or "Mandate" and views 
  * all unused resources (margins) as waste.
  * - The Systemic Operator: Individual powerless; manages the actual 
- * friction of the real world and recognizes the danger of the Noose.
+ * friction of the real world and recognizes the danger of the Snare.
  * - The Stress Event: Analytical; the external disruption that 
  * reveals the Mountain of physical reality once the margin is gone.
  * * NARRATIVE ARC:
  * The process begins as a Rope (a coordination tool to improve performance). 
- * Under pressure, the Mandator tightens the Rope into a Noose, extracting 
+ * Under pressure, the Mandator tightens the Rope into a Snare, extracting 
  * "unproductive" margins to meet targets. Eventually, the system hits a 
  * Mountain (a physical limit or crisis) with zero degrees of freedom, 
  * leading to a terminal "choking" of the institution it was meant to save.
@@ -57,7 +57,7 @@
    ========================================================================== */
 
 narrative_ontology:interval(mandatrophy_cycle, 0, 10).
-narrative_ontology:constraint_claim(mandatrophic_margin_collapse, noose).
+narrative_ontology:constraint_claim(mandatrophic_margin_collapse, snare).
 
 % Base extractiveness score (0.0-1.0)
 % Rationale: 0.85. The mandate "extracts" the very essence of the system's 
@@ -118,7 +118,7 @@ constraint_indexing:constraint_classification(
     !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE OPERATOR - Noose
+   PERSPECTIVE 2: THE OPERATOR - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless - Subject to the mandate, must manage the friction.
@@ -127,7 +127,7 @@ constraint_indexing:constraint_classification(
    SCOPE: local - Immediate workspace and daily operations.
    
    WHY THIS CLASSIFICATION:
-   The Operator identifies the Noose. They see the "Mandatrophy" as an 
+   The Operator identifies the Snare. They see the "Mandatrophy" as an 
    extractive process that chokes off their ability to respond to 
    unforeseen errors. The more the mandate is enforced, the tighter the 
    constraint becomes on their ability to act safely.
@@ -135,7 +135,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     mandatrophic_margin_collapse,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(biographical),
@@ -181,13 +181,13 @@ constraint_indexing:constraint_classification(
 :- begin_tests(mandatrophy_tests).
 
 test(perspectival_gap) :-
-    % Mandator (Rope) vs Operator (Noose)
+    % Mandator (Rope) vs Operator (Snare)
     constraint_indexing:constraint_classification(mandatrophic_margin_collapse, Type1, context(institutional, immediate, mobile, national)),
     constraint_indexing:constraint_classification(mandatrophic_margin_collapse, Type2, context(individual_powerless, biographical, trapped, local)),
     Type1 \= Type2.
 
 test(extraction_signature) :-
-    % High extraction confirms Noose/Mountain status over time.
+    % High extraction confirms Snare/Mountain status over time.
     domain_priors:base_extractiveness(mandatrophic_margin_collapse, E),
     E > 0.8.
 
@@ -204,7 +204,7 @@ test(extraction_signature) :-
  * 1. NEOLOGISM: I coined **Mandatrophy** (Mandate + Atrophy). It perfectly 
  * captures the "wasting away" of a system's organic health (margin) 
  * under the weight of an artificial goal (mandate).
- * 2. CLASSIFICATION: Labeled primarily as a 'Noose' in the system claim 
+ * 2. CLASSIFICATION: Labeled primarily as a 'Snare' in the system claim 
  * because the core dynamic is extractive—it eats the future to satisfy 
  * the present.
  */
@@ -216,7 +216,7 @@ omega_variable(
     resolution_mechanism("Comparative analysis of quantitative vs. 
     qualitative risk assessments in failed aerospace missions"),
     impact("If Measurable: The mandate is a Rope. If Irreducible: 
-            The mandate is a Noose."),
+            The mandate is a Snare."),
     confidence_without_resolution(medium)
 ).
 
@@ -235,7 +235,7 @@ omega_variable(
  * friction rather than top-down mandates.
  * * CONCLUSION:
  * The rejection of "Slack" as a viable strategy transforms the coordination 
- * Rope into an extractive Noose, leading inevitably to the Mountain of collapse.
+ * Rope into an extractive Snare, leading inevitably to the Mountain of collapse.
  */
 
 /* ==========================================================================

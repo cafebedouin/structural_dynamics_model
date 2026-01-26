@@ -43,14 +43,14 @@
  * as a "Rope" to coordinate the boundaries of computer science and 
  * automated reasoning.
  * - The Foundationalist (Analytical/Victim): An observer for whom the 
- * theorems act as a "Noose," as they "strangle" the hope of a complete, 
+ * theorems act as a "Snare," as they "strangle" the hope of a complete, 
  * self-consistent "Theory of Everything."
  * * NARRATIVE ARC:
  * Originally a shock to the mathematical world, Gödel's work is a "Mountain" 
  * of logical reality—an unyielding feature of the universe of numbers. In 
  * software verification, it is a "Rope" for functional coordination, 
- * helping engineers avoid the "Noose" of impossible verification goals. 
- * However, for the Hilbert-era idealist, the theorems act as a "Noose," 
+ * helping engineers avoid the "Snare" of impossible verification goals. 
+ * However, for the Hilbert-era idealist, the theorems act as a "Snare," 
  * extracting the "certainty of reason" (extraction) and proving that 
  * formal systems are fundamentally "incomplete" (choking).
  */
@@ -134,7 +134,7 @@ constraint_indexing:constraint_classification(
    For the institutional actor, the theorem is a "Rope"—a functional 
    coordination tool. By mapping the "Mountain" of undecidability, they 
    coordinate a "standard of achievement" for what *can* be verified, 
-   pulling the system away from the "Noose" of attempting the impossible.
+   pulling the system away from the "Snare" of attempting the impossible.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
@@ -149,7 +149,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE HILBERT-ERA IDEALIST - Noose
+   PERSPECTIVE 3: THE HILBERT-ERA IDEALIST - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_moderate - Has the tools of logic but is bound by the theorem's limit.
@@ -159,7 +159,7 @@ constraint_indexing:constraint_classification(
    
    WHY THIS CLASSIFICATION:
    For the seeker of absolute deductive completeness, Gödel's theorem is a 
-   "Noose." It "strangles" the hope that "we must know, we will know" 
+   "Snare." It "strangles" the hope that "we must know, we will know" 
    (Hilbert's *Ignorabimus*). It extracts the "certainty of the foundation" 
    (extraction) by proving that any system we build will be "choked" by its 
    own inherent limitations.
@@ -169,7 +169,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     goedels_incompleteness_theorems,
-    noose,
+    snare,
     context(
         agent_power(individual_moderate),
         time_horizon(civilizational),
@@ -195,7 +195,7 @@ test(multi_perspective_variance) :-
     Type1 \= Type2.
 
 test(metaphysical_extraction_penalty) :-
-    % Foundationalists experience the "Noose" of logical extraction.
+    % Foundationalists experience the "Snare" of logical extraction.
     Context = context(individual_moderate, civilizational, constrained, global),
     constraint_indexing:extractiveness_for_agent(goedels_incompleteness_theorems, Context, Score),
     Score >= 0.15.
@@ -220,7 +220,7 @@ test(natural_emergence) :-
  * on all ambitious formalists.
  * 2. CLASSIFICATION: 
  * Captured the transition from a "Mountain" of formal reality for the 
- * statement to a "Noose" for the philosopher seeking completeness.
+ * statement to a "Snare" for the philosopher seeking completeness.
  * 3. OMEGA IDENTIFICATION: 
  * Formalized the uncertainty regarding "Human Intuition"—can our minds 
  * "see" truths that machines (Mountain) cannot?
@@ -231,7 +231,7 @@ omega_variable(
     mathematical_intuition_mechanism,
     "Is human mathematical intuition a 'Mountain' that transcends formal systems (Mountain) or a biological 'Scaffold' (Scaffold)?",
     resolution_mechanism("Investigation into whether the human brain utilizes non-algorithmic/quantum processes for proof-finding."),
-    impact("If Mountain: Gödel's limit applies only to machines. If Scaffold: Humans are also bound by the Noose."),
+    impact("If Mountain: Gödel's limit applies only to machines. If Scaffold: Humans are also bound by the Snare."),
     confidence_without_resolution(medium)
 ).
 
@@ -242,7 +242,7 @@ omega_variable(
 /**
  * VIABLE ALTERNATIVES
  * * ALTERNATIVE 1: Weakening the System (Finitism)
- * Viability: Systems that cannot express arithmetic avoid the "Noose" 
+ * Viability: Systems that cannot express arithmetic avoid the "Snare" 
  * of incompleteness.
  * Suppression: Rejected for general mathematics because it "strangles" 
  * the power to do almost any useful science.
@@ -252,7 +252,7 @@ omega_variable(
  * that destroys the "Mountain" of objective Truth.
  * * CONCLUSION:
  * The existence of Alternative 1 proves that Incompleteness is the specific 
- * "Noose" we pay for the "Rope" of powerful, useful arithmetic.
+ * "Snare" we pay for the "Rope" of powerful, useful arithmetic.
  */
 
 /* ==========================================================================
@@ -273,4 +273,4 @@ omega_variable(
 % --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
 constraint_indexing:constraint_classification(godels_incompleteness_theorems, mountain, agent_power(analytical)).
 constraint_indexing:constraint_classification(godels_incompleteness_theorems, rope, agent_power(institutional)).
-constraint_indexing:constraint_classification(godels_incompleteness_theorems, noose, agent_power(individual_powerless)).
+constraint_indexing:constraint_classification(godels_incompleteness_theorems, snare, agent_power(individual_powerless)).

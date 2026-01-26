@@ -93,7 +93,7 @@ constraint_victim(rosen_bridge_protocol, small_value_transactors).
    
    WHY THIS CLASSIFICATION:
    For users moving small amounts (e.g., <$100), the $10 minimum fee acts as 
-   a Noose. The high cost per transaction "strangles" their 
+   a Snare. The high cost per transaction "strangles" their 
    mobility across chains, effectively trapping their capital on one network 
    due to the prohibitively high exit fee.
    
@@ -104,7 +104,7 @@ constraint_victim(rosen_bridge_protocol, small_value_transactors).
 
 constraint_indexing:constraint_classification(
     rosen_bridge_protocol,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -198,7 +198,7 @@ test(multi_perspective_variance) :-
 
 test(power_extractiveness_scaling) :-
     % Powerful agents pay proportional fees (Rope), 
-    % while powerless agents pay a high flat minimum (Noose).
+    % while powerless agents pay a high flat minimum (Snare).
     ScorePowerless = 0.8, % High effective fee % for small amounts
     ScorePowerful = 0.5,
     ScorePowerless > ScorePowerful.
@@ -235,7 +235,7 @@ omega_variable(
     guard_collusion_resistance,
     "Will the federated Guard set remain independent or consolidate over time?",
     resolution_mechanism("Monitoring the rotation and diversity of the Guard set on rosen.tech"),
-    impact("If consolidated, the Rope (utility) becomes a Noose (centralized control)."),
+    impact("If consolidated, the Rope (utility) becomes a Snare (centralized control)."),
     confidence_without_resolution(medium)
 ).
 
@@ -263,4 +263,4 @@ omega_variable(
 % --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
 constraint_indexing:constraint_classification(ergo_rosen_bridge_protocol, mountain, agent_power(analytical)).
 constraint_indexing:constraint_classification(ergo_rosen_bridge_protocol, rope, agent_power(institutional)).
-constraint_indexing:constraint_classification(ergo_rosen_bridge_protocol, noose, agent_power(individual_powerless)).
+constraint_indexing:constraint_classification(ergo_rosen_bridge_protocol, snare, agent_power(individual_powerless)).

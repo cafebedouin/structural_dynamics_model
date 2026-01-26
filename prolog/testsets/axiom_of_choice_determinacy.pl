@@ -41,14 +41,14 @@
  * by the axiom even in the absence of a specific rule.
  * - The Functional Analyst: An institutional agent using AC as a "Rope" 
  * to coordinate the existence of basis vectors and linear functionals.
- * - The Intuitive Realist: An observer for whom AC is a "Noose," as its 
+ * - The Intuitive Realist: An observer for whom AC is a "Snare," as its 
  * logical necessity "strangles" physical intuition (e.g., via Banach-Tarski).
  * * NARRATIVE ARC:
  * AC functions as a "Mountain" of formal reality—if you accept ZFC, the 
  * existence of choice functions is a natural law. In modern analysis, it is 
  * a "Rope" for functional coordination, allowing architects to prove 
  * the existence of objects like non-measurable sets. However, for those 
- * grounding math in constructivist reality, it acts as a "Noose," 
+ * grounding math in constructivist reality, it acts as a "Snare," 
  * extracting the "sanctity of construction" and forcing the "tax" of 
  * accepting impossible physical doublings.
  */
@@ -147,7 +147,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE INTUITIVE GEOMETER - Noose
+   PERSPECTIVE 3: THE INTUITIVE GEOMETER - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_moderate - Has tools to reason but is bound by the axiom's logic.
@@ -156,7 +156,7 @@ constraint_indexing:constraint_classification(
    SCOPE: global - Affecting the interpretation of all 3D space.
    
    WHY THIS CLASSIFICATION:
-   For the geometer grounded in physical realism, AC is a "Noose." It 
+   For the geometer grounded in physical realism, AC is a "Snare." It 
    "strangles" the concept of conservation of volume through the 
    Banach-Tarski paradox. It extracts the "reliability of matter" (extraction), 
    choking the possibility of a purely intuitive geometry in favor of 
@@ -167,7 +167,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     axiom_of_choice_determinacy,
-    noose,
+    snare,
     context(
         agent_power(individual_moderate),
         time_horizon(civilizational),
@@ -193,7 +193,7 @@ test(multi_perspective_variance) :-
     Type1 \= Type2.
 
 test(intuition_extraction_penalty) :-
-    % Geometers experience the "Noose" of the extractiveness of intuition.
+    % Geometers experience the "Snare" of the extractiveness of intuition.
     Context = context(individual_moderate, civilizational, constrained, global),
     constraint_indexing:extractiveness_for_agent(axiom_of_choice_determinacy, Context, Score),
     Score >= 0.2.
@@ -218,7 +218,7 @@ test(natural_emergence) :-
  * definition, imposing a cognitive tax of non-measurability.
  * 2. CLASSIFICATION: 
  * Captured the transition from the "Mountain" of Zermelo's axioms to 
- * the "Noose" of the paradoxical results it mandates for the intuitionist.
+ * the "Snare" of the paradoxical results it mandates for the intuitionist.
  */
 
 % OMEGA IDENTIFICATION
@@ -226,7 +226,7 @@ omega_variable(
     ac_physical_validity,
     "Is the Axiom of Choice a 'Mountain' that reflects physical reality or a 'Scaffold' of mathematical convenience (Scaffold)?",
     resolution_mechanism("Investigation into whether physical 'non-measurable' states or infinite choice functions exist in quantum foundations."),
-    impact("If Scaffold: AC is a 'Noose' of irrelevant abstraction. If Mountain: It is a fundamental truth."),
+    impact("If Scaffold: AC is a 'Snare' of irrelevant abstraction. If Mountain: It is a fundamental truth."),
     confidence_without_resolution(medium)
 ).
 
@@ -244,7 +244,7 @@ omega_variable(
  * * ALTERNATIVE 2: Constructive Set Theory (CZF)
  * Viability: Forbids non-constructive choices.
  * * CONCLUSION:
- * The existence of AD (Alternative 1) proves that the AC "Noose" is a 
+ * The existence of AD (Alternative 1) proves that the AC "Snare" is a 
  * feature of our chosen axiomatic "Rope."
  */
 

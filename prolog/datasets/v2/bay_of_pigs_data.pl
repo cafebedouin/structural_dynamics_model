@@ -24,8 +24,8 @@ constraint_metric(internal_insurrection_logic, extractiveness, 0.52).
 constraint_metric(internal_insurrection_logic, suppression_requirement, 0.35).
 constraint_metric(internal_insurrection_logic, snap_back_potential, 0.60).
 
-% Noose (⊠C): The restriction of US air cover/deniability constraints (Cut required)
-constraint_claim(air_support_restriction, noose).
+% Snare (⊠C): The restriction of US air cover/deniability constraints (Cut required)
+constraint_claim(air_support_restriction, snare).
 constraint_metric(air_support_restriction, extractiveness, 0.85).
 constraint_metric(air_support_restriction, suppression_requirement, 0.75).
 constraint_metric(air_support_restriction, snap_back_potential, 0.15).

@@ -35,10 +35,10 @@ constraint_metric(fourier_conjugate_entanglement, suppression_requirement, 0.40)
 constraint_metric(fourier_conjugate_entanglement, snap_back_potential, 0.75).
 constraint_metric(fourier_conjugate_entanglement, extractiveness, 0.60).
 
-% The Phase-Space Volume Noose (The Noose)
+% The Phase-Space Volume Snare (The Snare)
 % The product of uncertainties $\Delta x \Delta p \ge \hbar/2$ "strangles" the possibility of a point-particle trajectory.
 % Extractiveness at 0.99 requires the 'canonical_commutation_scaffold' to resolve state density.
-constraint_claim(minimum_action_bound, noose).
+constraint_claim(minimum_action_bound, snare).
 constraint_metric(minimum_action_bound, intensity, 0.99).
 constraint_metric(minimum_action_bound, suppression_requirement, 0.98).
 constraint_metric(minimum_action_bound, snap_back_potential, 0.01).
@@ -49,7 +49,7 @@ constraint_metric(minimum_action_bound, extractiveness, 0.99).
 recommendation(rec_01, utilize_wigner_quasi_probability_distributions_to_visualize_phase_space_occupancy).
 affects_constraint(rec_01, fourier_conjugate_entanglement).
 
-% Noose (0.99 extractiveness) triggers Cut
+% Snare (0.99 extractiveness) triggers Cut
 % Utilizing 'canonical_commutation_scaffold' to abandon classical trajectory models for probability density maps.
 recommendation(rec_02, discard_point_particle_kinematics_for_operator_based_observables).
 affects_constraint(rec_02, minimum_action_bound).

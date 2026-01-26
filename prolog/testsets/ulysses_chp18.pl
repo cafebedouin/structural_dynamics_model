@@ -38,7 +38,7 @@
  * * KEY AGENTS:
  * - Molly Bloom: Individual moderate navigating a "Rope" of memory and desire.
  * - Leopold Bloom: Individual powerless subject to Molly's domestic demands and 
- * final acceptance (Noose/Rope).
+ * final acceptance (Snare/Rope).
  * - The Catholic Church (Mrs. Riordan's path): Institutional force viewing 
  * female morality as an immutable law (Mountain).
  */
@@ -83,17 +83,17 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 2: LEOPOLD BLOOM - Noose
+   PERSPECTIVE 2: LEOPOLD BLOOM - Snare
    --------------------------------------------------------------------------
    WHO: individual_powerless - "Ask to get his breakfast in bed with a couple 
    of eggs".
    WHY: From Bloom's current state of sleep and domestic dependence, Molly's 
-   affirmation and its associated demands are a "Noose"—he is bound by 
+   affirmation and its associated demands are a "Snare"—he is bound by 
    her decisions and her "Yes" without active agency in this chapter.
    -------------------------------------------------------------------------- */
 constraint_indexing:constraint_classification(
     molly_affirmation_cycle,
-    noose,
+    snare,
     context(agent_power(individual_powerless), time_horizon(immediate), exit_options(trapped), spatial_scope(local))
 ) :- !.
 
@@ -169,4 +169,4 @@ omega_variable(
 % --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
 constraint_indexing:constraint_classification(ulysses_chp18, mountain, agent_power(analytical)).
 constraint_indexing:constraint_classification(ulysses_chp18, rope, agent_power(institutional)).
-constraint_indexing:constraint_classification(ulysses_chp18, noose, agent_power(individual_powerless)).
+constraint_indexing:constraint_classification(ulysses_chp18, snare, agent_power(individual_powerless)).

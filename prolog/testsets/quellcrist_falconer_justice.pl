@@ -114,7 +114,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE LITTLE PEOPLE - Noose
+   PERSPECTIVE 2: THE LITTLE PEOPLE - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless (Subjects who "suffer at the hands of Justice")
@@ -123,7 +123,7 @@ constraint_indexing:constraint_classification(
    SCOPE: local (Immediate harm/displacement)
    
    WHY THIS CLASSIFICATION:
-   The little people experience the system as a "Noose." It is a cold, slow 
+   The little people experience the system as a "Snare." It is a cold, slow 
    apparatus that systematically "creams" their displacement and torture 
    as a necessary "way of the world".
    
@@ -134,7 +134,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     quellcrist_falconer_justice,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -182,10 +182,10 @@ constraint_indexing:constraint_classification(
 
 test(multi_perspective_justice) :-
     constraint_indexing:constraint_classification(quellcrist_falconer_justice, Rope, context(institutional, historical, arbitrage, global)),
-    constraint_indexing:constraint_classification(quellcrist_falconer_justice, Noose, context(individual_powerless, immediate, trapped, local)),
+    constraint_indexing:constraint_classification(quellcrist_falconer_justice, Snare, context(individual_powerless, immediate, trapped, local)),
     constraint_indexing:constraint_classification(quellcrist_falconer_justice, Mountain, context(analytical, civilizational, analytical, global)),
-    Rope \= Noose,
-    Noose \= Mountain.
+    Rope \= Snare,
+    Snare \= Mountain.
 
 test(mandatrophy_extraction) :-
     domain_priors:base_extractiveness(quellcrist_falconer_justice, E),
@@ -215,12 +215,12 @@ test(suppression_via_business) :-
  * to even take their own suffering personally.
  * * 3. MANDATROPHY RESOLUTION:
  * The "Rope" (the ability for Players to make deals) is directly 
- * indexed to the "Noose" applied to the Little People. The status 
+ * indexed to the "Snare" applied to the Little People. The status 
  * is [RESOLVED MANDATROPHY] because the model proves that the 
  * "Justice" machine exists only to serve one class by harvesting another.
  * * 4. PERSPECTIVE SELECTION:
  * - Power Player (Rope): They slide under it; it is their tool.
- * - Little People (Noose): They suffer under it; it is their executioner.
+ * - Little People (Snare): They suffer under it; it is their executioner.
  * - Falconer (Mountain): She sees it as a fixed, cold obstacle that cannot 
  * be used for good; it must be "clawed".
  */
@@ -234,7 +234,7 @@ omega_variable(
     "At what threshold of 'dangerous' behavior does a 'little person' effectively 
      transform into a 'player' in the eyes of the machine?",
     resolution_mechanism("Audit of deal-making patterns vs. casualty rates in personal/insurrectionary actions"),
-    impact("If low: Insurrection is a Rope. If high: Insurrection is a suicide-Noose."),
+    impact("If low: Insurrection is a Rope. If high: Insurrection is a suicide-Snare."),
     confidence_without_resolution(medium)
 ).
 
@@ -243,7 +243,7 @@ omega_variable(
     "Is the cold, slow nature of the machine a functional necessity for galactic governance 
      or a predatory choice for efficient liquidation?",
     resolution_mechanism("Comparison of 'Hardware/Software' allocation for deal-making vs. execution"),
-    impact("If necessity: Mountain. If predatory choice: Noose/Mandatrophy."),
+    impact("If necessity: Mountain. If predatory choice: Snare/Mandatrophy."),
     confidence_without_resolution(medium)
 ).
 
@@ -261,7 +261,7 @@ omega_variable(
  * Evidence: Marks the "only difference... between players and little people".
  * * CONCLUSION:
  * The text argues that Personal Justice is the only viable Rope, while Institutional 
- * Justice is an inescapable Noose for those who do not make themselves dangerous.
+ * Justice is an inescapable Snare for those who do not make themselves dangerous.
  */
 
 /* ==========================================================================

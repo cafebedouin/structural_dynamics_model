@@ -42,7 +42,7 @@ measurement(m4, viceregal_cavalcade, extractiveness, 1600, 0.82).
 measurement(m5, viceregal_cavalcade, suppression_requirement, 1600, 0.85).
 measurement(m6, viceregal_cavalcade, resistance, 1600, 0.55).
 
-% Economic Scarcity: Calcifying into a Noose for the Dedalus family
+% Economic Scarcity: Calcifying into a Snare for the Dedalus family
 measurement(m7, economic_scarcity_dublin, extractiveness, 1500, 0.65).
 measurement(m8, economic_scarcity_dublin, suppression_requirement, 1500, 0.60).
 measurement(m9, economic_scarcity_dublin, resistance, 1500, 0.40).
@@ -84,10 +84,10 @@ intent_beneficiary_class(wandering_rocks, landlord_class).
 intent_power_change(wandering_rocks, landlord_class, 0.40).
 
 % Section 8: Recommendations
-recommendation(rec1, 'Deployment of educational scaffolds to mitigate economic noose calcification').
+recommendation(rec1, 'Deployment of educational scaffolds to mitigate economic snare calcification').
 affects_constraint(rec1, dilly_french_primer).
 
-recommendation(rec2, 'Structural severing of the viceregal noose via non-obsequious resistance').
+recommendation(rec2, 'Structural severing of the viceregal snare via non-obsequious resistance').
 affects_constraint(rec2, viceregal_cavalcade).
 
 % Section 9: Omega Variables

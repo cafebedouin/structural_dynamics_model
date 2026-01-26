@@ -6,7 +6,7 @@
 % Source: Berlyne (1960) / Schmidhuber (1991) / Information Foraging Theory
 % ============================================================================
 
-:- module(constraint_curiosity, []).
+:- module(constraint_biological_curiosity, []).
 
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
@@ -41,7 +41,7 @@
  * - The Environment: The landscape of varying entropy and potential rewards.
  * * NARRATIVE ARC:
  * Curiosity functions as a "Mental Rope." It pulls the agent away from the 
- * "Safety Noose" of the known. While it carries a "Distraction Tax," it is 
+ * "Safety Snare" of the known. While it carries a "Distraction Tax," it is 
  * the primary mechanism for upgrading an agent's internal map to find 
  * Global Optima that are invisible to pure exploiters.
  */
@@ -51,7 +51,7 @@
    ========================================================================== */
 
 narrative_ontology:interval(biological_curiosity, 0, 10).
-narrative_ontology:constraint_claim(biological_curiosity, mountain).
+narrative_ontology:constraint_claim(biological_curiosity, snare).
 
 % Base extractiveness score (0.15)
 % Low extraction; curiosity "extracts" energy for search, but usually 
@@ -66,9 +66,7 @@ domain_priors:suppression_score(biological_curiosity, 0.2).
 % Enforcement requirements
 domain_priors:emerges_naturally(biological_curiosity).
 
-% Metrics required for Section 1 of the Executive Summary
-narrative_ontology:constraint_metric(biological_curiosity, extractiveness, 0.15).
-narrative_ontology:constraint_metric(biological_curiosity, suppression_requirement, 0.2).
+
 
 % BENEFICIARIES & VICTIMS
 constraint_beneficiary(biological_curiosity, the_scientific_method).
@@ -106,11 +104,10 @@ constraint_indexing:constraint_classification(
     )
 ) :-
     domain_priors:base_extractiveness(biological_curiosity, E),
-    E < 0.3,
-    !.
+    E < 0.3.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE TRAPPED SUBJECT - Noose
+   PERSPECTIVE 2: THE TRAPPED SUBJECT - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless (highly constrained or punished for deviance)
@@ -120,14 +117,14 @@ constraint_indexing:constraint_classification(
    
    WHY THIS CLASSIFICATION:
    In a highly restrictive environment (like a prison or a rigid 
-   bureaucracy), curiosity is a "Noose." Seeking out information 
+   bureaucracy), curiosity is a "Snare." Seeking out information 
    leads to punishment or psychological despair, as the agent 
    discovers alternatives they are legally or physically unable to reach.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
     biological_curiosity,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -136,8 +133,7 @@ constraint_indexing:constraint_classification(
     )
 ) :-
     domain_priors:suppression_score(biological_curiosity, S),
-    S > 0.1,
-    !.
+    S > 0.1.
 
 /* --------------------------------------------------------------------------
    PERSPECTIVE 3: THE NEUROSCIENTIST - Mountain
@@ -165,24 +161,105 @@ constraint_indexing:constraint_classification(
         spatial_scope(global)
     )
 ) :-
-    domain_priors:emerges_naturally(biological_curiosity),
-    !.
+    domain_priors:emerges_naturally(biological_curiosity).
+
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 4: THE EDUCATIONAL SYSTEM - Rope
+   --------------------------------------------------------------------------
+   WHO: institutional (Designs and implements learning environments)
+   WHEN: biographical (The duration of a student's education)
+   WHERE: arbitrage (Can adapt curriculum and pedagogy to foster curiosity)
+   SCOPE: national
+   
+   WHY THIS CLASSIFICATION:
+   For an educational system, curiosity is a "Rope." It is a fundamental 
+   biological drive that, when properly channeled, can be used as a powerful 
+   coordination mechanism for learning, exploration, and the transmission of 
+   knowledge. The system designs its "curriculum" to pull students towards 
+   new information.
+   -------------------------------------------------------------------------- */
+
+constraint_indexing:constraint_classification(
+    biological_curiosity,
+    rope,
+    context(
+        agent_power(institutional),
+        time_horizon(biographical),
+        exit_options(arbitrage),
+        spatial_scope(national)
+    )
+).
 
 /* ==========================================================================
    4. TESTS (What We Learn About Constraints)
    ========================================================================== */
 
-:- begin_tests(curiosity_tests).
+:- begin_tests(biological_curiosity_tests).
 
-test(curiosity_as_exit_strategy) :-
-    % Testing that curiosity acts as a Rope for mobile agents seeking the 'Global Optimum'.
-    constraint_indexing:constraint_classification(biological_curiosity, rope, context(_, _, mobile, _)).
+/**
+ * TEST 1: Multi-perspective variance
+ * Demonstrates that curiosity is experienced differently across agents.
+ */
+test(multi_perspective_variance) :-
+    % Discoverer (Rope)
+    constraint_indexing:constraint_classification(
+        biological_curiosity,
+        Type1,
+        context(agent_power(individual_moderate), time_horizon(biographical), exit_options(mobile), spatial_scope(global))
+    ),
+    % Trapped Subject (Snare)
+    constraint_indexing:constraint_classification(
+        biological_curiosity,
+        Type2,
+        context(agent_power(individual_powerless), time_horizon(immediate), exit_options(trapped), spatial_scope(local))
+    ),
+    % Neuroscientist (Mountain)
+    constraint_indexing:constraint_classification(
+        biological_curiosity,
+        Type3,
+        context(agent_power(analytical), time_horizon(historical), exit_options(analytical), spatial_scope(global))
+    ),
+    % Educational System (Rope)
+    constraint_indexing:constraint_classification(
+        biological_curiosity,
+        Type4,
+        context(agent_power(institutional), time_horizon(biographical), exit_options(arbitrage), spatial_scope(national))
+    ),
+    % Verify they differ
+    Type1 \= Type2,
+    Type2 \= Type3. % Rope, Snare, Mountain are different
 
-test(curiosity_punishment_noose) :-
-    % Testing that in 'trapped' contexts, curiosity becomes a psychological Noose.
-    constraint_indexing:constraint_classification(biological_curiosity, noose, context(_, _, trapped, _)).
+/**
+ * TEST 2: Power-based extractiveness scaling
+ * Demonstrates that powerless agents (trapped subject) experience higher extraction (frustration/despair)
+ * compared to powerful agents (educational system) who utilize it as a tool.
+ */
+test(power_extractiveness_scaling) :-
+    ContextPowerless = context(agent_power(individual_powerless), time_horizon(immediate), exit_options(trapped), spatial_scope(local)),
+    ContextPowerful = context(agent_power(institutional), time_horizon(biographical), exit_options(arbitrage), spatial_scope(national)),
+    constraint_indexing:extractiveness_for_agent(biological_curiosity, ContextPowerless, Score1),
+    constraint_indexing:extractiveness_for_agent(biological_curiosity, ContextPowerful, Score2),
+    Score1 > Score2.  % Powerless experience more extraction
 
-:- end_tests(curiosity_tests).
+/**
+ * TEST 3: Time-horizon immutability
+ * Demonstrates that while individual acts of curiosity are flexible, the biological drive itself is immutable.
+ */
+test(time_immutability) :-
+    % Short horizon (immediate) sees individual acts of curiosity (Rope)
+    constraint_indexing:effective_immutability(time_horizon(immediate), exit_options(mobile), rope),
+    % Long horizon (civilizational) sees the biological drive as an immutable fact (Mountain).
+    constraint_indexing:effective_immutability(time_horizon(civilizational), exit_options(analytical), mountain).
+
+/**
+ * TEST 4: Domain-specific insight - The Pandora Effect
+ * Demonstrates that curiosity without agency can lead to despair.
+ */
+test(pandora_effect) :-
+    constraint_indexing:constraint_classification(biological_curiosity, ClassificationTrapped, context(agent_power(individual_powerless), _, exit_options(trapped), _)),
+    ClassificationTrapped = snare.
+
+:- end_tests(biological_curiosity_tests).
 
 /* ==========================================================================
    5. MODEL INTERPRETATION (Commentary)
@@ -190,25 +267,72 @@ test(curiosity_punishment_noose) :-
 
 /**
  * LLM GENERATION NOTES
- * * Model: Gemini 2.0 Flash
- * * KEY DECISIONS:
- * Curiosity is the biological implementation of the 'Exploration' 
- * directive. I set extractiveness low because it is an investment 
- * in the self. I chose "Noose" for the trapped perspective to 
- * reflect that curiosity without agency creates suffering (The Pandora Effect).
+ * 
+ * Model: Gemini 2.0 Flash
+ * Date: 2026-01-23
+ * 
+ * KEY DECISIONS:
+ * 
+ * 1. BASE EXTRACTIVENESS (0.15): Chose low because curiosity is an investment 
+ * in the self, leading to long-term gains in knowledge and adaptability. 
+ * The "extraction" is primarily of energy and attention.
+ * 
+ * 2. SUPPRESSION (0.2): Low suppression because curiosity by its nature seeks to 
+ * uncover hidden alternatives and resists attempts to limit information.
+ * 
+ * 3. PERSPECTIVE SELECTION:
+ *    Selected Explorer (Rope), Trapped Subject (Snare), Neuroscientist (Mountain), and Educational System (Rope) 
+ *    to illustrate the dynamic nature of curiosity across different contexts and agent powers.
+ * 
+ * 4. OMEGAS 
+ *    Define uncertainty so your analysis is cleaner
+ *    omega_variable(
+ *        information_overload_threshold,
+ *        "At what point does the search for information (Curiosity) stop being a Rope and start being a 'Snare of Distraction'?",
+ *        resolution_mechanism("Long-term studies on focus-depletion in high-entropy digital environments"),
+ *        impact("If Overload is High: The Rope of Curiosity snaps; agents fall into the Snare of paralysis."),
+ *        confidence_without_resolution(medium)
+ *    ).
  */
 
 /* ==========================================================================
-   6. OMEGA VARIABLES (Ω)
+   6. ALTERNATIVE ANALYSIS (If Applicable)
    ========================================================================== */
 
-omega_variable(
-    information_overload_threshold,
-    "At what point does the search for information (Curiosity) stop being a Rope and start being a 'Noose of Distraction'?",
-    resolution_mechanism("Long-term studies on focus-depletion in high-entropy digital environments"),
-    impact("If Overload is High: The Rope of Curiosity snaps; agents fall into the Noose of paralysis."),
-    confidence_without_resolution(medium)
-).
+/**
+ * VIABLE ALTERNATIVES: Exploitation without Exploration
+ * 
+ * ALTERNATIVE 1: Pure Exploitation/Routine Seeking
+ *    Viability: In highly stable and predictable environments, focusing solely on exploiting known resources can be highly efficient in the short term.
+ *    Suppression: Curiosity acts against this by continuously seeking novelty. However, systems can suppress curiosity to enforce routine.
+ *    Evidence: Highly specialized factory workers, rigid bureaucratic systems.
+ * 
+ * CONCLUSION:
+ * While pure exploitation is a viable short-term strategy in stable environments, the biological imperative of curiosity is suppressed at a cost to adaptability and long-term survival. Systems that actively suppress curiosity risk becoming fragile in the face of environmental change.
+ */
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+/**
+ * TO USE THIS CONSTRAINT:
+ * 
+ * 1. Load into main system:
+ *    ?- [constraints/biological_curiosity].
+ * 
+ * 2. Run multi-perspective analysis:
+ *    ?- constraint_indexing:multi_index_report(biological_curiosity).
+ * 
+ * 3. Run tests:
+ *    ?- run_tests(biological_curiosity_tests).
+ * 
+ * 4. Generate pedagogical report:
+ *    ?- pedagogical_report(biological_curiosity).
+ * 
+ * 5. Compare with other constraints:
+ *    ?- compare_constraints(biological_curiosity, [other_id]).
+ */
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

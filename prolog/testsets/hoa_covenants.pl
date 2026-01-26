@@ -57,11 +57,11 @@ constraint_indexing:constraint_classification/3.
 
 
 * * NARRATIVE ARC:
-
-
-* The constraint begins as a "Rope" (coordination for property value) but often
-* transitions into a "Noose" or "Mountain" for residents as the ARB exercises
-* subjective aesthetic judgment or rigid enforcement of outdated rules.
+* The constraint begins as a "Rope" (a coordination tool to preserve property
+* values) but degrades into a "Piton". The rules become outdated, and
+* enforcement becomes subjective, creating high friction (resistance) for
+* homeowners. It persists not through active suppression, but through the
+* legal and social inertia of the covenant system.
 */
 
 /* ==========================================================================
@@ -70,7 +70,7 @@ constraint_indexing:constraint_classification/3.
 
 % Required for [STEP 1] and [STEP 2] of the DR-Audit Suite
 narrative_ontology:interval(hoa_interval, 0, 10).
-narrative_ontology:constraint_claim(hoa_architectural_covenants, rope).
+narrative_ontology:constraint_claim(hoa_architectural_covenants, piton).
 
 % Base extractiveness: Moderate (0.45)
 % Rationale: While residents pay fees and lose autonomy, they theoretically receive
@@ -78,17 +78,28 @@ narrative_ontology:constraint_claim(hoa_architectural_covenants, rope).
 % fine without the resident's ability to easily opt out.
 domain_priors:base_extractiveness(hoa_architectural_covenants, 0.45).
 
-% Suppression score: Moderate (0.50)
-% Rationale: Alternatives (like xeriscaping or solar panels) were historically
-% suppressed, though state laws are beginning to mandate their visibility.
-domain_priors:suppression_score(hoa_architectural_covenants, 0.50).
+% Suppression score: Low (0.2)
+% Rationale: Alternatives are not actively suppressed, but the covenants
+% persist due to the high legal and social friction required to amend them (inertia).
+domain_priors:suppression_score(hoa_architectural_covenants, 0.2).
 
-% Enforcement: Requires active enforcement (fines, liens, inspections).
-domain_priors:requires_active_enforcement(hoa_architectural_covenants).
+% Resistance score: High (0.7)
+% Rationale: Homeowner frustration, lawsuits, and "malicious compliance"
+% indicate significant friction against the outdated or subjective rules.
+domain_priors:resistance_score(hoa_architectural_covenants, 0.7).
 
 % Metrics for Executive Summary
 narrative_ontology:constraint_metric(hoa_architectural_covenants, extractiveness, 0.45).
-narrative_ontology:constraint_metric(hoa_architectural_covenants, suppression_requirement, 0.80).
+narrative_ontology:constraint_metric(hoa_architectural_covenants, suppression_requirement, 0.2).
+
+% Make the constraint "evolve" by showing resistance increasing over time
+narrative_ontology:constraint_metric(hoa_architectural_covenants, resistance, 0.1, 0). % Low resistance initially
+narrative_ontology:constraint_metric(hoa_architectural_covenants, resistance, 0.7, 10). % High resistance as rules become outdated
+
+% Formally model the viable alternative
+narrative_ontology:intent_viable_alternative(hoa_interval,
+    'Municipal Zoning',
+    'Standard city ordinances can regulate safety and basic land use without the need for a private enforcement body.').
 
 % BENEFICIARIES & VICTIMS
 constraint_beneficiary(hoa_architectural_covenants, property_developers).
@@ -100,7 +111,7 @@ constraint_victim(hoa_architectural_covenants, individual_homeowners).
 ========================================================================= */
 
 /* --------------------------------------------------------------------------
-PERSPECTIVE 1: INDIVIDUAL HOMEOWNER - Noose
+PERSPECTIVE 1: INDIVIDUAL HOMEOWNER - Snare
 
 WHO: individual_powerless (subject to arbitrary fines)
 WHEN: biographical (duration of mortgage/residency)
@@ -108,7 +119,7 @@ WHERE: trapped (high cost of selling/moving; "exit" is expensive)
 SCOPE: local (their specific lot/house)
 
 WHY THIS CLASSIFICATION:
-From the homeowner's perspective, the HOA functions as a Noose. They face
+From the homeowner's perspective, the HOA functions as a Snare. They face
 asymmetric power where the board can impose fines or liens for subjective
 aesthetic violations (e.g., "wrong shade of beige"), often with limited
 due process.
@@ -120,7 +131,7 @@ weathered, despite the fact that I've paid dues for 10 years."
 
 constraint_indexing:constraint_classification(
 hoa_architectural_covenants,
-noose,
+snare,
 context(
 agent_power(individual_powerless),
 time_horizon(biographical),
@@ -165,7 +176,7 @@ spatial_scope(regional)
 !.
 
 /* --------------------------------------------------------------------------
-PERSPECTIVE 3: REAL ESTATE ANALYST - Mountain
+PERSPECTIVE 3: REAL ESTATE ANALYST - Piton
 
 WHO: analytical (observer)
 WHEN: historical (market trends over 50 years)
@@ -173,30 +184,26 @@ WHERE: analytical (comparative view across many developments)
 SCOPE: national (standardization of suburban housing)
 
 WHY THIS CLASSIFICATION:
-For the analyst, the existence of HOA covenants is a Mountain—a structural
-reality of the modern housing market. In many regions, nearly 100% of new
-construction is HOA-governed; for a buyer, it is an immutable law of the
-land rather than a choice.
-
-NARRATIVE EVIDENCE:
-"In this price bracket and zip code, non-HOA housing essentially does not
-exist. It is a baseline condition of the local inventory."
+For the analyst, the covenant system is a Piton. It was once a functional
+Rope for ensuring a baseline of quality, but has since degraded. It now
+often represents a high-friction, low-benefit system that persists through
+the inertia of legal frameworks, not because it is an optimal or
+unchangeable feature of the market.
 -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
-hoa_architectural_covenants,
-mountain,
-context(
-agent_power(analytical),
-time_horizon(historical),
-exit_options(analytical),
-spatial_scope(national)
-)
+    hoa_architectural_covenants,
+    piton,
+    context(
+        agent_power(analytical),
+        time_horizon(historical),
+        exit_options(analytical),
+        spatial_scope(national)
+    )
 ) :-
-domain_priors:suppression_score(hoa_architectural_covenants, S),
-S >= 0.5,
-!.
-
+    domain_priors:suppression_score(hoa_architectural_covenants, S),
+    S < 0.3,
+    !.
 /* ==========================================================================
 4. TESTS (What We Learn About Constraints)
 ========================================================================== */
@@ -222,9 +229,9 @@ E_Score_Institutional = 0.1, % Control/Coordination benefit
 E_Score_Powerless > E_Score_Institutional.
 
 test(time_immutability) :-
-% On a biographical scale, it's a Noose (hard to change).
+% On a biographical scale, it's a Snare (hard to change).
 % On a generational scale, it's a Rope (can be amended by vote).
-constraint_indexing:constraint_classification(hoa_architectural_covenants, noose, context(agent_power(individual_powerless), time_horizon(biographical), _, _)),
+constraint_indexing:constraint_classification(hoa_architectural_covenants, snare, context(agent_power(individual_powerless), time_horizon(biographical), _, _)),
 constraint_indexing:constraint_classification(hoa_architectural_covenants, rope, context(agent_power(institutional), time_horizon(generational), _, _)).
 
 :- end_tests(hoa_architectural_covenants_tests).
@@ -256,7 +263,7 @@ constraint_indexing:constraint_classification(hoa_architectural_covenants, rope,
 
 
 
-* * Homeowner: Represents the subject (Noose).
+* * Homeowner: Represents the subject (Snare).
 
 
 * * Board: Represents the administrator (Rope).
@@ -285,13 +292,13 @@ omega_variable(
 property_value_correlation,
 "Do architectural restrictions actually increase property value compared to similar non-HOA homes?",
 resolution_mechanism("Long-term econometric study controlling for neighborhood age and location"),
-impact("If NO: The 'Rope' classification for the Board collapses into a 'Noose' for the entire community."),
+impact("If NO: The 'Rope' classification for the Board collapses into a 'Snare' for the entire community."),
 confidence_without_resolution(medium)
 ).
 
 omega_variable(
 board_motivation,
-"Is ARB enforcement driven by aesthetic harmony (Rope) or personal power/ego (Noose)?",
+"Is ARB enforcement driven by aesthetic harmony (Rope) or personal power/ego (Snare)?",
 resolution_mechanism("Sentiment analysis of board meeting minutes and litigation frequency"),
 impact("Determines if the constraint is fundamentally a coordination tool or a control tool."),
 confidence_without_resolution(low)
@@ -320,7 +327,7 @@ confidence_without_resolution(low)
 
 
 * The suppression of non-HOA alternatives in new construction shifts the
-* classification toward Noose for many buyers who "choose" an HOA only because
+* classification toward Snare for many buyers who "choose" an HOA only because
 * no other modern inventory exists.
 */
 
@@ -352,4 +359,4 @@ END OF CONSTRAINT STORY
 % --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
 constraint_indexing:constraint_classification(hoa_covenants, mountain, agent_power(analytical)).
 constraint_indexing:constraint_classification(hoa_covenants, rope, agent_power(institutional)).
-constraint_indexing:constraint_classification(hoa_covenants, noose, agent_power(individual_powerless)).
+constraint_indexing:constraint_classification(hoa_covenants, snare, agent_power(individual_powerless)).

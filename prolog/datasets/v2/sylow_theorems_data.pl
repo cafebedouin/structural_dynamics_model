@@ -37,8 +37,8 @@ constraint_claim(congruence_calculation_friction, tangled_rope).
 constraint_metric(congruence_calculation_friction, extractiveness, 0.52).
 constraint_metric(congruence_calculation_friction, suppression_requirement, 0.35).
 
-% Noose (Boxed C): ext >= 0.66, supp >= 0.46
-constraint_claim(non_abelian_simplicity_noose, noose).
+% Snare (Boxed C): ext >= 0.66, supp >= 0.46
+constraint_claim(non_abelian_simplicity_noose, snare).
 constraint_metric(non_abelian_simplicity_noose, extractiveness, 0.94).
 constraint_metric(non_abelian_simplicity_noose, suppression_requirement, 0.88).
 

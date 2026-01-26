@@ -27,10 +27,10 @@ test(catholic_church_multi_perspective) :-
                 exit_options(trapped), 
                 spatial_scope(local))
     ),
-    % Historian sees Noose
+    % Historian sees Snare
     constraint_indexing:constraint_classification(
         catholic_church_1200,
-        noose,
+        snare,
         context(agent_power(analytical), 
                 time_horizon(civilizational), 
                 exit_options(analytical), 
@@ -48,10 +48,10 @@ test(catholic_church_multi_perspective) :-
 
 % Test 3: Property rights perspectives
 test(property_rights_perspectives) :-
-    % Powerless sees Noose
+    % Powerless sees Snare
     constraint_indexing:constraint_classification(
         property_rights_2025,
-        noose,
+        snare,
         context(agent_power(individual_powerless),
                 time_horizon(biographical),
                 exit_options(trapped),

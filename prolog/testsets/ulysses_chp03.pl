@@ -42,7 +42,7 @@
  * - The Demiurge (Los): Institutional force viewing the sensory order as 
  * immutable law (Mountain).
  * - Stephen's Physical Body: Powerless agent trapped by the "nebeneinander" 
- * and "nacheinander" of space/time (Noose).
+ * and "nacheinander" of space/time (Snare).
  */
 
 /* ==========================================================================
@@ -52,8 +52,8 @@
 % Required for [STEP 1] and [STEP 2] of the DR-Audit Suite
 narrative_ontology:interval(proteus_strand_walk, 0, 10).
 
-% Fixed: Changed 'mountain' to 'noose' to resolve 'type_1_false_mountain'
-narrative_ontology:constraint_claim(protean_signatures_1904, noose).
+% Fixed: Changed 'mountain' to 'snare' to resolve 'type_1_false_mountain'
+narrative_ontology:constraint_claim(protean_signatures_1904, snare).
 
 % Metrics: Extractiveness (0.5 - Sensory cost) and Suppression (0.7 - High energy maintenance)
 domain_priors:base_extractiveness(protean_signatures_1904, 0.5).
@@ -86,17 +86,17 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE PHYSICAL LIMITS (The Body) - Noose
+   PERSPECTIVE 2: THE PHYSICAL LIMITS (The Body) - Snare
    --------------------------------------------------------------------------
    WHO: individual_powerless - "My two feet in his boots... nebeneinander" 
   .
-   WHY: From the perspective of the body, sensory data is a "Noose"—an 
+   WHY: From the perspective of the body, sensory data is a "Snare"—an 
    inescapable trap of "ineluctability" that extracts the self's freedom 
    to exist outside of time and space.
    -------------------------------------------------------------------------- */
 constraint_indexing:constraint_classification(
     protean_signatures_1904,
-    noose,
+    snare,
     context(agent_power(individual_powerless), time_horizon(immediate), exit_options(constrained), spatial_scope(local))
 ) :- !.
 
@@ -141,15 +141,15 @@ test(false_mountain_diagnostic) :-
  * This refactor confirms that Stephen's "ineluctable" reality is actually a 
  * "False Mountain." He claims it is an unchangeable law (Mountain), but the 
  * high suppression required to stay within that frame (0.7) proves it 
- * is a self-imposed or culturally enforced Noose.
+ * is a self-imposed or culturally enforced Snare.
  */
 
 omega_variable(
     ineluctable_authenticity,
-    "Is the world 'there' without Stephen's perception, or is it a Noose of 
+    "Is the world 'there' without Stephen's perception, or is it a Snare of 
     his own intellectual creation?",
     resolution_mechanism("Resolution of the Berkeleyan 'diaphane' conflict"),
-    impact("If independent: Mountain. If dependent: Noose."),
+    impact("If independent: Mountain. If dependent: Snare."),
     confidence_without_resolution(medium)
 ).
 
@@ -172,4 +172,4 @@ omega_variable(
 % --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
 constraint_indexing:constraint_classification(ulysses_chp03, mountain, agent_power(analytical)).
 constraint_indexing:constraint_classification(ulysses_chp03, rope, agent_power(institutional)).
-constraint_indexing:constraint_classification(ulysses_chp03, noose, agent_power(individual_powerless)).
+constraint_indexing:constraint_classification(ulysses_chp03, snare, agent_power(individual_powerless)).

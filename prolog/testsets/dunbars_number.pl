@@ -49,7 +49,7 @@
  * limit of human memory and social processing. For a company founder, it 
  * acts as a "Rope" for coordination (knowing when to split a growing office 
  * into two). However, for a user on a hyper-connected social network, it 
- * becomes a "Noose," as the platform extracts attention for 500+ "friends," 
+ * becomes a "Snare," as the platform extracts attention for 500+ "friends," 
  * strangling the quality of deep, stable relationships.
  */
 
@@ -154,7 +154,7 @@ constraint_indexing:constraint_classification(
     !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE OVER-NETWORKED USER - Noose
+   PERSPECTIVE 3: THE OVER-NETWORKED USER - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless - Subject to the "Attention Economy" of a platform.
@@ -164,7 +164,7 @@ constraint_indexing:constraint_classification(
    
    WHY THIS CLASSIFICATION:
    For the person with 1,000 "friends" on a digital platform, Dunbar's number 
-   is a Noose. The platform's design ignores their biological limit to 
+   is a Snare. The platform's design ignores their biological limit to 
    extract their attention. The attempt to "keep up" with everyone strangles 
    the time needed for their closest 5 or 15 people, extracting their 
    emotional well-being while they remain trapped in the "friend" count.
@@ -172,7 +172,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     dunbars_number,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -191,10 +191,10 @@ constraint_indexing:constraint_classification(
 :- begin_tests(dunbars_number_tests).
 
 test(multi_perspective_variance) :-
-    % Analyst sees Mountain, Institutional sees Rope, Powerless sees Noose
+    % Analyst sees Mountain, Institutional sees Rope, Powerless sees Snare
     constraint_indexing:constraint_classification(dunbars_number, mountain, context(analytical, civilizational, trapped, global)),
     constraint_indexing:constraint_classification(dunbars_number, rope, context(institutional, biographical, arbitrage, national)),
-    constraint_indexing:constraint_classification(dunbars_number, noose, context(individual_powerless, immediate, constrained, local)).
+    constraint_indexing:constraint_classification(dunbars_number, snare, context(individual_powerless, immediate, constrained, local)).
 
 test(power_extractiveness_attention) :-
     ContextPowerless = context(individual_powerless, immediate, constrained, local),
@@ -238,7 +238,7 @@ test(time_immutability_cognition) :-
 
 omega_variable(
     technological_cognitive_offloading,
-    "Can AI and CRM tools effectively 'untie' the Noose of Dunbar's Number 
+    "Can AI and CRM tools effectively 'untie' the Snare of Dunbar's Number 
     by managing our social memory (Rope), or is the constraint biological 
     at the level of emotional trust (Mountain)?",
     resolution_mechanism("Long-term study of high-connectedness groups 
@@ -258,7 +258,7 @@ omega_variable(
  * Viability: High. Allows millions of people to work together by replacing 
  * "trust-based" relationships with "rule-based" ones.
  * Suppression: None. Bureaucracy is the standard "Rope" used to manage 
- * the Dunbar Mountain, though it is often experienced as a Noose.
+ * the Dunbar Mountain, though it is often experienced as a Snare.
  * * CONCLUSION:
  * Since we can use rules (Bureaucracy) to coordinate, the *need* for 
  * trust-based 150-person groups becomes a Mountain we build around, 

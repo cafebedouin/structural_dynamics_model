@@ -1,8 +1,8 @@
 % ============================================================================
 % CONSTRAINT STORY: shannon_entropy_limit
 % ============================================================================
-% Generated: 2024-05-22
-% Model: Gemini 1.5 Pro
+% Generated: 2026-01-23
+% Model: Gemini Pro (Revised)
 % Source: A Mathematical Theory of Communication (C. E. Shannon, 1948)
 % ============================================================================
 
@@ -18,69 +18,70 @@
     domain_priors:requires_active_enforcement/1,
     constraint_indexing:constraint_classification/3.
 
-% Structural Anchor for indexing
-narrative_ontology:interval(shannon_entropy_limit, 0, 10).
-
 /* ==========================================================================
    1. NARRATIVE CONTEXT
    ========================================================================== */
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: shannon_entropy_limit
- * human_readable: The Fundamental Limit of Information Transmission
- * domain: technological/mathematical
+ * 
+ * constraint_id: shannon_entropy_limit
+ * human_readable: The Shannon Entropy Limit of Information Transmission
+ * domain: mathematical/technological
  * temporal_scope: 1948 - Present (Civilizational)
- * spatial_scope: Global/Universal
- * * SUMMARY:
- * Shannon defines the fundamental problem of communication as reproducing a message 
- * exactly or approximately. He introduces 'Entropy' (H) as a measure of 
- * uncertainty/choice  and 'Channel Capacity' (C) as the maximum 
- * rate of transmission. These mathematical realities act as 
- * inescapable boundaries for all communication systems.
- * * KEY AGENTS:
- * - The Engineer/Transducer: Seeks to match source to channel.
- * - The Noisy Channel: The physical medium that imposes limits.
- * - The Analytical Observer: Recognizes the mathematical necessity of the limits.
- * * NARRATIVE ARC:
- * The paper moves from identifying simple noiseless systems to proving that 
- * information can be sent reliably even through noise, provided the rate 
- * does not exceed Capacity.
+ * spatial_scope: Universal
+ * 
+ * SUMMARY:
+ * Shannon's theory defines the fundamental problem of communication as reproducing a message 
+ * exactly or approximately. It introduces 'Entropy' (H) as a measure of 
+ * uncertainty and 'Channel Capacity' (C) as the maximum rate of reliable
+ * transmission. These mathematical realities act as inescapable boundaries.
+ * 
+ * KEY AGENTS:
+ * - The Communication Engineer (Institutional): Seeks to design systems that approach the capacity limit.
+ * - The Signal (Individual Powerless): A single bit or message subject to noise in the channel.
+ * - The Mathematician (Analytical): Recognizes the mathematical necessity of the limits.
  */
 
 /* ==========================================================================
-   2. BASE PROPERTIES (Context-Independent)
+   2. CORE SYSTEM INTEGRATION (The "Reality" Layer)
    ========================================================================== */
 
-% Base extractiveness: Low (0.1). 
-% These are laws of nature; they do not "extract" value for a specific 
+narrative_ontology:interval(shannon_entropy_limit, 0, 10).
+narrative_ontology:constraint_claim(shannon_entropy_limit, mountain).
+
+% Base extractiveness: 0.1 (Low)
+% Rationale: These are laws of nature; they do not "extract" value for a specific 
 % beneficiary, though they dictate the "cost" of communication.
 domain_priors:base_extractiveness(shannon_entropy_limit, 0.1).
 
-% Suppression: Low (0.2). 
-% Alternatives (like non-logarithmic measures) are discussed but dismissed 
-% based on mathematical suitability and intuition .
+% Suppression: 0.2 (Low)
+% Rationale: Alternatives (like non-logarithmic measures) are discussed but dismissed 
+% based on mathematical suitability and intuition.
 domain_priors:suppression_score(shannon_entropy_limit, 0.2).
 
-% Enforcement: Emerges naturally from the statistical structure of messages.
+% Enforcement: Emerges naturally from the statistical structure of information.
 domain_priors:emerges_naturally(shannon_entropy_limit).
+
+% BENEFICIARIES & VICTIMS
+constraint_beneficiary(shannon_entropy_limit, communication_engineers).
+constraint_victim(shannon_entropy_limit, unencoded_signals).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 1: The Communication Engineer - ROPE
+   PERSPECTIVE 1: THE COMMUNICATION ENGINEER - Rope
    --------------------------------------------------------------------------
-   WHO: institutional (The system designer/State/Telecom)
-   WHEN: biographical (Designing and deploying a system)
-   WHERE: mobile (Can choose different coding methods)
-   SCOPE: national/global
+   WHO: institutional (The system designer, e.g., a telecom company)
+   WHEN: biographical (Designing and deploying a communication system)
+   WHERE: mobile (Can choose different coding methods to approach the limit)
    
    WHY THIS CLASSIFICATION:
-   For the engineer, Shannon's theory is a Rope. It provides the functional 
-   coordination mechanism (encoding/decoding) to bypass the "Noose" of noise. 
-   By understanding the limit, they can build efficient systems.
+   For the engineer, Shannon's theory is a 'Rope'. It provides the functional 
+   coordination mechanism (encoding/decoding) to bypass the "Snare" of noise. 
+   By understanding the limit, they can build efficient, reliable systems.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
@@ -92,46 +93,43 @@ constraint_indexing:constraint_classification(
         exit_options(mobile),
         spatial_scope(global)
     )
-) :- !.
+).
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 2: The Signal in a Noisy Channel - NOOSE
+   PERSPECTIVE 2: THE SIGNAL IN A NOISY CHANNEL - Snare
    --------------------------------------------------------------------------
-   WHO: individual_powerless (The specific message/bit)
-   WHEN: immediate (The duration of transmission)
-   WHERE: trapped (Cannot leave the channel)
-   SCOPE: local
+   WHO: individual_powerless (The specific message/bit traversing the channel)
+   WHEN: immediate (The moment of transmission)
+   WHERE: trapped (Cannot leave the channel or escape the noise)
    
    WHY THIS CLASSIFICATION:
-   From the perspective of a single message subject to noise, the limit is 
-   a Noose. If the rate is too high, the noise "kills" the message's 
-   meaning, creating equivocation that cannot be escaped without external 
-   correction.
+   From the perspective of a single, unencoded message subject to noise, the limit is 
+   a 'Snare'. If the information rate is too high for the channel's capacity, 
+   noise "kills" the message's meaning, creating equivocation that cannot be escaped.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
     shannon_entropy_limit,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
         exit_options(trapped),
         spatial_scope(local)
     )
-) :- !.
+).
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: The Mathematician - MOUNTAIN
+   PERSPECTIVE 3: THE MATHEMATICIAN - Mountain
    --------------------------------------------------------------------------
-   WHO: analytical
-   WHEN: civilizational
-   WHERE: analytical
-   SCOPE: global
+   WHO: analytical (Observer of mathematical law)
+   WHEN: civilizational (A law holding true across eras)
+   WHERE: analytical (Applies to any system of information)
    
    WHY THIS CLASSIFICATION:
-   The observer sees these limits as a Mountain—unchangeable laws of the 
+   The observer sees these limits as a 'Mountain'—an unchangeable law of the 
    universe. $H = -\sum p_i \log p_i$ is not a policy; it is a mathematical 
-   certainty derived from axioms of choice and uncertainty .
+   certainty derived from the axioms of choice and uncertainty.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
@@ -143,7 +141,7 @@ constraint_indexing:constraint_classification(
         exit_options(analytical),
         spatial_scope(global)
     )
-) :- !.
+).
 
 /* ==========================================================================
    4. TESTS
@@ -151,18 +149,13 @@ constraint_indexing:constraint_classification(
 
 :- begin_tests(shannon_entropy_limit_tests).
 
-test(perspectival_shift) :-
-    constraint_indexing:constraint_classification(shannon_entropy_limit, rope, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(shannon_entropy_limit, mountain, context(agent_power(analytical), _, _, _)).
-
-test(capacity_as_rope) :-
-    % Engineers use capacity to solve the "fundamental problem"
-    domain_priors:base_extractiveness(shannon_entropy_limit, E),
-    E < 0.3.
-
-test(noise_as_noose_trigger) :-
-    % Without proper coding, noise enforces a "Noose" of equivocation
-    domain_priors:requires_active_enforcement(shannon_entropy_limit).
+test(multi_perspective_variance) :-
+    constraint_indexing:constraint_classification(shannon_entropy_limit, Type1, context(agent_power(institutional), _, _, _)),
+    constraint_indexing:constraint_classification(shannon_entropy_limit, Type2, context(agent_power(individual_powerless), _, _, _)),
+    constraint_indexing:constraint_classification(shannon_entropy_limit, Type3, context(agent_power(analytical), _, _, _)),
+    Type1 \= Type2,
+    Type2 \= Type3,
+    Type1 \= Type3.
 
 :- end_tests(shannon_entropy_limit_tests).
 
@@ -172,33 +165,64 @@ test(noise_as_noose_trigger) :-
 
 /**
  * LLM GENERATION NOTES
- * * Model: Gemini 1.5 Pro
- * Date: 2024-05-22
- * * KEY DECISIONS:
+ * 
+ * Model: Gemini Pro (Revised)
+ * Date: 2026-01-23
+ * 
+ * KEY DECISIONS:
+ * 
  * 1. EXTRACTIVENESS SCORE (0.1): Mathematical laws are non-extractive. They 
- * apply to the king and the peasant equally.
+ *    apply universally and do not create asymmetric benefit flows.
+ * 
  * 2. PERSPECTIVES: Chose Institutional (Engineer) vs Powerless (Signal) 
- * to highlight that while the *theory* is a Rope, the *physical reality* * of noise is a Noose for the data.
+ *    to highlight that while the *theory* is a Rope that enables design, the 
+ *    *physical reality* of noise is a Snare for the raw data itself if the theory is ignored.
+ * 
  * 3. MOUNTAIN RATIONALE: Shannon himself notes that semantic aspects are 
- * "irrelevant to the engineering problem", emphasizing the 
- * cold, objective "Mountain" of the mathematical structure.
+ *    "irrelevant to the engineering problem," emphasizing the cold, objective 
+ *    'Mountain' of the mathematical structure.
  */
 
 /* ==========================================================================
-   6. ALTERNATIVE ANALYSIS
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+/**
+ * No significant Omega variables identified for this constraint, as it is a
+ * closed mathematical formulation. The uncertainties lie in its application,
+ * not in the theory itself.
+ */
+
+/* ==========================================================================
+   7. ALTERNATIVE ANALYSIS
    ========================================================================== */
 
 /**
  * VIABLE ALTERNATIVES
- * * ALTERNATIVE 1: Hartley's Measure
- * Viability: Used before Shannon.
- * Suppression: Shannon generalized it, showing it was a subset of 
- * statistical information.
- * * CONCLUSION: 
- * Shannon's theory is a rare example of a "Mountain" discovered through 
- * engineering, which then became the "Rope" for the digital age.
+ * 
+ * ALTERNATIVE 1: Hartley's Measure (H = n log S)
+ *    Viability: Used before Shannon for noiseless channels.
+ *    Suppression: Not suppressed, but generalized and subsumed by Shannon's statistical
+ *    formulation, which could account for redundancy and noise.
+ * 
+ * CONCLUSION: 
+ * Shannon's theory is a rare example of a 'Mountain' (a mathematical law) 
+ * discovered through engineering, which then became the foundational 'Rope' 
+ * for the entire digital age. It didn't suppress alternatives so much as 
+ * provide a more complete, powerful framework.
  */
 
-% ============================================================================
-% END OF CONSTRAINT STORY
-% ============================================================================
+/* ==========================================================================
+   8. INTEGRATION HOOKS
+   ========================================================================== */
+
+/**
+ * TO USE THIS FILE:
+ * 
+ * 1. Load: ?- [constraints/shannon_entropy_limit].
+ * 2. Multi-perspective: ?- multi_index_report(shannon_entropy_limit).
+ * 3. Run tests: ?- run_tests(shannon_entropy_limit_tests).
+ */
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */

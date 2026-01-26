@@ -47,7 +47,7 @@
  * These protections serve as a Rope for the collective (ensuring fairness). 
  * However, for the supervisor, they are an unyielding Mountain of red tape. 
  * For the organization and high-performing peers, the retention of 
- * underperformers can become a Noose, extracting morale and productivity.
+ * underperformers can become a Snare, extracting morale and productivity.
  */
 
 /* ==========================================================================
@@ -148,7 +148,7 @@ constraint_indexing:constraint_classification(
     !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: HIGH-PERFORMING PEER - Noose
+   PERSPECTIVE 3: HIGH-PERFORMING PEER - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_moderate - Has some agency (can leave) but is currently bound.
@@ -157,14 +157,14 @@ constraint_indexing:constraint_classification(
    SCOPE: local - The immediate working environment.
    
    WHY THIS CLASSIFICATION:
-   The high-performer sees the Noose. The protection of the underperformer 
+   The high-performer sees the Snare. The protection of the underperformer 
    extracts more labor from them (to cover the gap) while the institution 
    chokes off their own advancement or morale.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
     union_protection_underperformance,
-    noose,
+    snare,
     context(
         agent_power(individual_moderate),
         time_horizon(biographical),
@@ -183,7 +183,7 @@ constraint_indexing:constraint_classification(
 :- begin_tests(union_protection_tests).
 
 test(multi_perspective_conflict) :-
-    % Supervisor (Mountain) vs Steward (Rope) vs Peer (Noose)
+    % Supervisor (Mountain) vs Steward (Rope) vs Peer (Snare)
     constraint_indexing:constraint_classification(union_protection_underperformance, T1, context(individual_powerless, immediate, trapped, local)),
     constraint_indexing:constraint_classification(union_protection_underperformance, T2, context(institutional, biographical, mobile, national)),
     constraint_indexing:constraint_classification(union_protection_underperformance, T3, context(individual_moderate, biographical, constrained, local)),
@@ -213,7 +213,7 @@ test(extraction_peer_burden) :-
 
 omega_variable(
     productivity_threshold_ambiguity,
-    "Is 'underperformance' a subjective management label (Noose) or 
+    "Is 'underperformance' a subjective management label (Snare) or 
      an objective measurable deficit (Mountain)?",
     resolution_mechanism("Comparison of grievance outcomes where quantitative metrics exist vs. qualitative assessments"),
     impact("If Quantitative: The protection is a Rope for fairness. If Qualitative: 
@@ -235,7 +235,7 @@ omega_variable(
  * * CONCLUSION:
  * The suppression of performance-based alternatives in favor of rigid 
  * proceduralism shifts the classification from a coordination Rope 
- * toward a Noose for the organization's high-performers.
+ * toward a Snare for the organization's high-performers.
  */
 
 /* ==========================================================================

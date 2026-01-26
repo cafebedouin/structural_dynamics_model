@@ -74,7 +74,7 @@ affects_constraint(special_relativity, stationary_aether).
 recommendation(rec_1, 'Adopt Riemannian geometry as the coordinate scaffold for spacetime curvature').
 affects_constraint(rec_1, general_relativity).
 
-recommendation(rec_2, 'Discard the stationary aether hypothesis as an extractive noose').
+recommendation(rec_2, 'Discard the stationary aether hypothesis as an extractive snare').
 affects_constraint(rec_2, stationary_aether).
 
 % --- 8. OMEGA VARIABLES ---

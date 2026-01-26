@@ -39,8 +39,8 @@
  * * KEY AGENTS:
  * - Zarathustra: The prophet/teacher who defines the "Rope" between beast and Superman.
  * - The Last Man: The degenerate agent who finds "happiness" in static comfort and equality.
- * - The Higher Man: The failed bridge-builder who suffers under the "Noose" of modern nihilism.
- * - The New Idol (The State): The institutional agent that seeks to replace God with a secular Noose.
+ * - The Higher Man: The failed bridge-builder who suffers under the "Snare" of modern nihilism.
+ * - The New Idol (The State): The institutional agent that seeks to replace God with a secular Snare.
  * * NARRATIVE ARC:
  * Zarathustra descends from the mountain to offer the "gift" of the Superman. 
  * He is met with the laughter of the market-place (The Last Men), survives 
@@ -146,7 +146,7 @@ constraint_indexing:constraint_classification(
     !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE HIGHER MAN - Noose
+   PERSPECTIVE 3: THE HIGHER MAN - Snare
    --------------------------------------------------------------------------
    WHO: individual_powerful - Artists, kings, and priests who "cry for help."
    WHEN: biographical - Suffering their "loneliest hours" in a degenerate age.
@@ -154,19 +154,19 @@ constraint_indexing:constraint_classification(
    SCOPE: local - Their immediate social and spiritual context.
    
    WHY THIS CLASSIFICATION:
-   For the Higher Men, the "Good and Just" morality is a Noose. It extracts 
+   For the Higher Men, the "Good and Just" morality is a Snare. It extracts 
    their power through pity and "slave-morality" resentment. It is a 
    coercive force that makes them "shatter" because they cannot yet 
    overleap the abyss.
    
    NARRATIVE EVIDENCE:
    "I see your soul distorted by the spirit of gravity... thy virtue is a 
-   Noose around thy neck."
+   Snare around thy neck."
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
     self_surpassing,
-    noose,
+    snare,
     context(
         agent_power(individual_powerful),
         time_horizon(biographical),
@@ -240,7 +240,7 @@ omega_variable(
     superman_feasibility,
     "Is the Superman a real biological possibility or a poetic phantom?",
     resolution_mechanism("Generational monitoring of 'Hazar' developments."),
-    impact("If phantom: Zarathustra is a 'false magician' leading to a Noose of despair."),
+    impact("If phantom: Zarathustra is a 'false magician' leading to a Snare of despair."),
     confidence_without_resolution(medium)
 ).
 
@@ -273,4 +273,4 @@ omega_variable(
 % --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
 constraint_indexing:constraint_classification(self_surpassing_superman, mountain, agent_power(analytical)).
 constraint_indexing:constraint_classification(self_surpassing_superman, rope, agent_power(institutional)).
-constraint_indexing:constraint_classification(self_surpassing_superman, noose, agent_power(individual_powerless)).
+constraint_indexing:constraint_classification(self_surpassing_superman, snare, agent_power(individual_powerless)).

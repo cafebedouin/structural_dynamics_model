@@ -40,7 +40,7 @@ constraint_metric(existence_vs_construction_friction, snap_back_potential, 0.40)
 constraint_metric(existence_vs_construction_friction, extractiveness, 0.52).
 
 % NOOSE: Real Field Incompleteness
-constraint_claim(real_field_limit_noose, noose).
+constraint_claim(real_field_limit_noose, snare).
 constraint_metric(real_field_limit_noose, intensity, 0.95).
 constraint_metric(real_field_limit_noose, suppression_requirement, 0.88).
 constraint_metric(real_field_limit_noose, snap_back_potential, 0.92).

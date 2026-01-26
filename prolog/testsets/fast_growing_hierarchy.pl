@@ -39,14 +39,14 @@
  * * KEY AGENTS:
  * - The Proof Theorist: Uses FGH as a yardstick (Rope) to measure the strength of 
  * mathematical systems and justify transfinite methods.
- * - The Computer Scientist: Faces the "wall" of recursion (Noose/Mountain) where 
+ * - The Computer Scientist: Faces the "wall" of recursion (Snare/Mountain) where 
  * algorithms that are technically "computable" are physically impossible 
  * due to the scale of time and memory required.
  * - The Analytical Observer: Views the hierarchy as an objective geometric 
  * landscape of complexity.
  * * NARRATIVE ARC:
  * FGH begins as a simple recursive tool (f_0(n) = n+1). As the index climbs, 
- * it quickly consumes all available physical resources (Noose). To the logician, 
+ * it quickly consumes all available physical resources (Snare). To the logician, 
  * it is a Mountain of necessity; to the system architect, it is a Rope 
  * for classifying upper bounds on complexity.
  */
@@ -134,7 +134,7 @@ constraint_indexing:constraint_classification(
    For the proof theorist, FGH is a Rope. It is a coordination mechanism for 
    understanding axiomatic strength. By assigning an ordinal to a theory, 
    they "pull" truths out of systems that were otherwise opaque. It 
-   transforms a "Noose" of complexity into a "Rope" of classification.
+   transforms a "Snare" of complexity into a "Rope" of classification.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
@@ -152,7 +152,7 @@ constraint_indexing:constraint_classification(
     !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE PROGRAMMER - Noose
+   PERSPECTIVE 3: THE PROGRAMMER - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless - Subject to the limits of compute and time.
@@ -162,7 +162,7 @@ constraint_indexing:constraint_classification(
    
    WHY THIS CLASSIFICATION:
    For the developer accidentally implementing an Ackermann-level function 
-   (f_omega), the hierarchy is a Noose. It strangles their resources instantly. 
+   (f_omega), the hierarchy is a Snare. It strangles their resources instantly. 
    There is no "escape" within their current hardware; the complexity 
    tightens with every additional increment of 'n', leading to system 
    failure (the "ruin" of the process).
@@ -170,7 +170,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     fast_growing_hierarchy,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -193,8 +193,8 @@ test(multi_perspective_variance) :-
     constraint_indexing:constraint_classification(fast_growing_hierarchy, mountain, context(analytical, civilizational, trapped, global)),
     % Institutional sees Rope
     constraint_indexing:constraint_classification(fast_growing_hierarchy, rope, context(institutional, biographical, arbitrage, national)),
-    % Powerless sees Noose
-    constraint_indexing:constraint_classification(fast_growing_hierarchy, noose, context(individual_powerless, immediate, constrained, local)).
+    % Powerless sees Snare
+    constraint_indexing:constraint_classification(fast_growing_hierarchy, snare, context(individual_powerless, immediate, constrained, local)).
 
 test(power_extractiveness_scaling) :-
     ContextPowerless = context(individual_powerless, immediate, constrained, local),
@@ -205,7 +205,7 @@ test(power_extractiveness_scaling) :-
     Score > 0.5.
 
 test(time_immutability_fgh) :-
-    % Short horizon = Mountain/Noose (the wall is hit now)
+    % Short horizon = Mountain/Snare (the wall is hit now)
     constraint_indexing:effective_immutability(immediate, constrained, mountain).
 
 :- end_tests(fast_growing_hierarchy_tests).
@@ -225,10 +225,10 @@ test(time_immutability_fgh) :-
  * extracting time and memory at an astronomical rate.
  * * 2. PERSPECTIVE SELECTION:
  * Chose to highlight the difference between "Math as Law" (Mountain), 
- * "Math as Metric" (Rope), and "Math as Trap" (Noose).
+ * "Math as Metric" (Rope), and "Math as Trap" (Snare).
  * * 3. CLASSIFICATION RATIONALE:
- * The "Noose" for programmers is particularly apt; one wrong recursive call 
- * and the "rope" of computation becomes a "noose" for the CPU.
+ * The "Snare" for programmers is particularly apt; one wrong recursive call 
+ * and the "rope" of computation becomes a "snare" for the CPU.
  * * 4. CONFIDENCE:
  * High: Mathematical properties of FGH.
  * Medium: Exact extractiveness score (varies by ordinal index).
@@ -244,7 +244,7 @@ omega_variable(
     specific FGH index (e.g., Bekenstein bound), or can information 
     persist to f_epsilon_0?",
     resolution_mechanism("Discovery of final laws of quantum gravity and information density"),
-    impact("If Mountain: FGH is a Noose for all physical life. If Rope: Space-time 
+    impact("If Mountain: FGH is a Snare for all physical life. If Rope: Space-time 
     can be manipulated to compute transfinite values."),
     confidence_without_resolution(low)
 ).
@@ -261,7 +261,7 @@ omega_variable(
  * Suppression: High. Standard mathematics favors the "Standard Model" for 
  * intuitive consistency, suppressing non-standard models as "curiosities."
  * * CONCLUSION:
- * The dominance of standard PA/ZFC makes FGH a Noose for those who cannot 
+ * The dominance of standard PA/ZFC makes FGH a Snare for those who cannot 
  * access the "Rope" of non-standard models.
  */
 

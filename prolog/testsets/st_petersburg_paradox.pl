@@ -47,7 +47,7 @@
  * $\sum 2^{n-1} \cdot (1/2^n)$ is undeniably infinite. In modern finance, 
  * Bernoulli’s resolution (Logarithmic Utility) is a "Rope" for coordinating 
  * risk management. However, for the "Rational" agent, the divergent sum is a 
- * "Noose" that extracts all their wealth (extraction) for a 1/2^k chance 
+ * "Snare" that extracts all their wealth (extraction) for a 1/2^k chance 
  * of a win they will never live to see.
  */
 
@@ -146,7 +146,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE CLASSICAL LOGICIAN - Noose
+   PERSPECTIVE 3: THE CLASSICAL LOGICIAN - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless - Bound by the "Rationality" of Expected Value.
@@ -155,7 +155,7 @@ constraint_indexing:constraint_classification(
    SCOPE: local - A single, high-stakes decision.
    
    WHY THIS CLASSIFICATION:
-   For the agent following pure expected value, the paradox is a "Noose." 
+   For the agent following pure expected value, the paradox is a "Snare." 
    It "strangles" their wealth by demanding a near-infinite entrance fee 
    (extraction). Because their logic tells them the game is worth everything, 
    they are "choked" into bankrupting themselves for a prize that only 
@@ -164,7 +164,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     st_petersburg_paradox,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -177,7 +177,7 @@ constraint_indexing:constraint_classification(
     !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE INDIVIDUAL PLAYER (GAMBLER) - Noose
+   PERSPECTIVE 3: THE INDIVIDUAL PLAYER (GAMBLER) - Snare
    --------------------------------------------------------------------------
    WHO: agent_power(individual_powerless) - The subject with finite wealth.
    WHEN: immediate - The decision to play and the risk of ruin occur now.
@@ -185,7 +185,7 @@ constraint_indexing:constraint_classification(
    SCOPE: local - The impact is on the player's personal solvency.
    
    WHY THIS CLASSIFICATION:
-   The "Noose" is the mismatch between infinite expectation and finite 
+   The "Snare" is the mismatch between infinite expectation and finite 
    utility. While the math (Mountain) suggests any entry fee is "cheap," 
    the player's finite capital means a high entry fee is an extractive 
    trap. The individual is "trapped" by the Gambler's Ruin: the 
@@ -194,7 +194,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     st_petersburg_paradox,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -275,7 +275,7 @@ omega_variable(
  * Evidence: Common sense physics.
  * * ALTERNATIVE 2: Risk-Aversion (Expected Utility)
  * Viability: The standard "resolution" of the paradox.
- * Suppression: Rejects pure EV logic, turning the "Noose" into a "Rope."
+ * Suppression: Rejects pure EV logic, turning the "Snare" into a "Rope."
  * * CONCLUSION:
  * The existence of "Finite Bank" limits (Alternative 1) proves that the 
  * infinite "Mountain" is actually a Scaffold built on the assumption of 

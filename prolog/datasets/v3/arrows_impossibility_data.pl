@@ -1,6 +1,6 @@
 % Clinical Sensor Output: Arrow's Impossibility Theorem Analysis
 % Scope: Analyzing the transformation of preference aggregation from a 'Mountain' (mathematical necessity)
-% to a 'Noose' (extractive constraint) within defined social choice intervals.
+% to a 'Snare' (extractive constraint) within defined social choice intervals.
 % Audit Status: v3.1.2 DR Modal Logic Edition
 
 % --- Section 1: Entities & Intervals ---
@@ -36,11 +36,11 @@ measurement(m2, arrows_protocol, suppression_requirement, 0, 0.05).
 measurement(m3, arrows_protocol, extractiveness, 50, 0.45).
 measurement(m4, arrows_protocol, suppression_requirement, 50, 0.50).
 
-% T=100: Final state. Full 'Noose' capture. The 'Stable' SWF results in a Dictatorship.
+% T=100: Final state. Full 'Snare' capture. The 'Stable' SWF results in a Dictatorship.
 measurement(m5, arrows_protocol, extractiveness, 100, 0.88).
 measurement(m6, arrows_protocol, suppression_requirement, 100, 0.92).
 
-% Coercion Vectors (Evolution of the Noose)
+% Coercion Vectors (Evolution of the Snare)
 measurement(v1, social_choice_evolution, accessibility_collapse(structural), 0, 0.1).
 measurement(v2, social_choice_evolution, accessibility_collapse(structural), 100, 0.9).
 measurement(v3, social_choice_evolution, stakes_inflation(class), 100, 0.85).

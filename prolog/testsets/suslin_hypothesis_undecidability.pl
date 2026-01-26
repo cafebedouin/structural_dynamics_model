@@ -41,14 +41,14 @@
  * - The Set-Theoretic Architect (Institutional): An agent who uses SH or its 
  * negation as a "Rope" to build consistent models of the mathematical universe.
  * - The Intuitive Realist (Analytical): An observer for whom the existence 
- * of a Suslin line is a "Noose" that strangles the uniqueness of the real 
+ * of a Suslin line is a "Snare" that strangles the uniqueness of the real 
  * number line.
  * * NARRATIVE ARC:
  * Suslin's Hypothesis functions as a "Mountain" of structural possibility; 
  * its truth is a fixed feature of whichever logical world one inhabits. In 
  * topology, it is a "Rope" for coordinating the classification of 
  * continua. However, for those seeking a singular, absolute definition of 
- * "Continuity," the undecidability of SH acts as a "Noose," extracting the 
+ * "Continuity," the undecidability of SH acts as a "Snare," extracting the 
  * certainty of the Real Line (extraction) and "choking" the intuition that 
  * a few simple properties should uniquely define the reals.
  */
@@ -149,7 +149,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE CLASSICAL ANALYST - Noose
+   PERSPECTIVE 3: THE CLASSICAL ANALYST - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_moderate - Bound by the undecidability of their primary subject.
@@ -159,7 +159,7 @@ constraint_indexing:constraint_classification(
    
    WHY THIS CLASSIFICATION:
    For the seeker of absolute geometric truth, the independence of SH is 
-   a "Noose." It "strangles" the hope that the real numbers are the 
+   a "Snare." It "strangles" the hope that the real numbers are the 
    only possible "perfect" continuum. It extracts the "certainty of 
    the reals" (extraction) and "chokes" the intuition that simple 
    structural properties should be sufficient for a unique definition.
@@ -169,7 +169,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     suslin_hypothesis_undecidability,
-    noose,
+    snare,
     context(
         agent_power(individual_moderate),
         time_horizon(civilizational),
@@ -195,7 +195,7 @@ test(multi_perspective_variance) :-
     Type1 \= Type2.
 
 test(deductive_extraction_penalty) :-
-    % Analysts experience the "Noose" of foundational extraction.
+    % Analysts experience the "Snare" of foundational extraction.
     Context = context(individual_moderate, civilizational, constrained, global),
     constraint_indexing:extractiveness_for_agent(suslin_hypothesis_undecidability, Context, Score),
     Score >= 0.15.
@@ -251,7 +251,7 @@ omega_variable(
  * Suppression: Often preferred by analysts because it preserves the 
  * "uniqueness" of the reals (The Rope).
  * * CONCLUSION:
- * The existence of Alternative 1 (V=L) proves that the "Noose" of 
+ * The existence of Alternative 1 (V=L) proves that the "Snare" of 
  * undecidability is a choice. We climb the Mountain by agreeing 
  * on which Rope of axioms to use.
  */

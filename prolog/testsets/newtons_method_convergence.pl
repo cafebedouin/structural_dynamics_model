@@ -39,12 +39,12 @@
  * - The Iterate (x_n): A powerless agent following a rigid geometric path.
  * - The Algorithm Architect: An institutional agent choosing the method for 
  * its "Rope-like" efficiency in optimized libraries.
- * - The Divergent Case: A "Noose" scenario where the function's geometry 
+ * - The Divergent Case: A "Snare" scenario where the function's geometry 
  * traps the iterate in a cycle or flings it to infinity.
  * * NARRATIVE ARC:
  * Newton's method begins as a "Rope" of extreme speed (quadratic convergence). 
  * As the agent approaches a local extremum where $f'(x) \to 0$, the Rope 
- * tightens into a "Noose," causing the iteration to fail. If the agent is 
+ * tightens into a "Snare," causing the iteration to fail. If the agent is 
  * within the "basin of attraction," the convergence is a "Mountain" of 
  * mathematical inevitability.
  */
@@ -137,7 +137,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: NEAR-CRITICAL POINT ($f'(x) \approx 0$) - Noose
+   PERSPECTIVE 3: NEAR-CRITICAL POINT ($f'(x) \approx 0$) - Snare
    --------------------------------------------------------------------------
    WHO: individual_powerless - Trapped by the specific geometry of the function.
    WHEN: immediate - One step can throw the iterate to $x = \infty$.
@@ -147,7 +147,7 @@ constraint_indexing:constraint_classification(
    WHY THIS CLASSIFICATION:
    Near a local extremum, the "tangent" becomes nearly horizontal. The 
    update rule $x - f(x)/f'(x)$ produces a massive, uncontrolled jump. 
-   The method acts as a "Noose," extracting all computational stability and 
+   The method acts as a "Snare," extracting all computational stability and 
    strangling the possibility of a solution.
    -------------------------------------------------------------------------- */
 
@@ -155,7 +155,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     newtons_method_convergence,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -175,10 +175,10 @@ constraint_indexing:constraint_classification(
 test(basin_vs_peak_variance) :-
     % Inside basin -> Mountain
     constraint_indexing:constraint_classification(newtons_method_convergence, Type1, context(individual_powerless, immediate, trapped, local)),
-    % Near peak -> Noose (modeled by 'constrained' exit option)
+    % Near peak -> Snare (modeled by 'constrained' exit option)
     constraint_indexing:constraint_classification(newtons_method_convergence, Type2, context(individual_powerless, immediate, constrained, local)),
     Type1 = mountain,
-    Type2 = noose.
+    Type2 = snare.
 
 test(developer_rope_flexibility) :-
     constraint_indexing:constraint_classification(newtons_method_convergence, rope, context(institutional, biographical, mobile, global)).
@@ -198,7 +198,7 @@ test(natural_emergence) :-
  * * KEY DECISIONS:
  * 1. CLASSIFICATION SHIFT: The core insight is that Newton's method changes 
  * type based on geometry. Near the root, it's a "Mountain" of convergence. 
- * Near a flat spot, it's a "Noose" of divergence.
+ * Near a flat spot, it's a "Snare" of divergence.
  * 2. AGENT SELECTION: The "Numerical Iterate" represents the passive subject 
  * of the mathematical law.
  * 3. EXTRACTIVENESS: While "free," the method extracts "computational 
@@ -213,7 +213,7 @@ omega_variable(
     basin_of_attraction_boundary,
     "Is the boundary of the basin of attraction a 'Mountain' (smooth) or a 'Fractal' (chaotic)?",
     resolution_mechanism("Plot the Newton Fractal for the specific function $f(z)$."),
-    impact("If Fractal: The 'Noose' is everywhere at the boundary. If Smooth: The 'Rope' is robust."),
+    impact("If Fractal: The 'Snare' is everywhere at the boundary. If Smooth: The 'Rope' is robust."),
     confidence_without_resolution(medium)
 ).
 
@@ -241,7 +241,7 @@ omega_variable(
  * Suppression: Slower than Newton (1.618 vs 2.0 convergence order).
  * * CONCLUSION:
  * The existence of safer alternatives (Bisection) confirms that Newton's 
- * method's Divergence Trap is a "Noose" one *chooses* to risk for the "Rope" 
+ * method's Divergence Trap is a "Snare" one *chooses* to risk for the "Rope" 
  * of speed.
  */
 

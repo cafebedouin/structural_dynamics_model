@@ -42,14 +42,14 @@
  * - The Monte Carlo Simulator (Institutional): An agent who uses this 
  * randomness as a "Rope" to estimate transcendental constants.
  * - The Analytical Purist (Victim): An agent for whom the "messiness" of 
- * physical randomness acts as a "Noose," extracting the elegance of 
+ * physical randomness acts as a "Snare," extracting the elegance of 
  * pure symbolic calculation.
  * * NARRATIVE ARC:
  * Buffon's Needle functions as a "Mountain" of geometric reality—the 
  * relationship between linear drops and circular constants is an unyielding 
  * feature of space. In early computing, it was a "Rope" for coordinating the 
  * first Monte Carlo methods. However, for those seeking high-precision 
- * constants, the requirement of infinite physical trials acts as a "Noose," 
+ * constants, the requirement of infinite physical trials acts as a "Snare," 
  * extracting massive time and effort (extraction) to yield only a few 
  * digits of $\pi$.
  */
@@ -146,7 +146,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE HIGH-PRECISION OBSERVER - Noose
+   PERSPECTIVE 3: THE HIGH-PRECISION OBSERVER - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless - Bound by the Law of Large Numbers.
@@ -155,7 +155,7 @@ constraint_indexing:constraint_classification(
    SCOPE: local - A specific, tedious physical experiment.
    
    WHY THIS CLASSIFICATION:
-   For the seeker of precision, Buffon's Needle is a "Noose." It "strangles" 
+   For the seeker of precision, Buffon's Needle is a "Snare." It "strangles" 
    efficiency. Because the error decreases so slowly, the method extracts 
    enormous labor (extraction) for diminishing returns, "choking" the 
    viability of the experiment as a serious computational tool.
@@ -165,7 +165,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     buffons_needle_pi_estimation,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(generational),
@@ -191,7 +191,7 @@ test(multi_perspective_variance) :-
     Type1 \= Type2.
 
 test(variance_extraction_penalty) :-
-    % The high-precision seeker feels the "Noose" of the 1/sqrt(N) convergence.
+    % The high-precision seeker feels the "Snare" of the 1/sqrt(N) convergence.
     Context = context(individual_powerless, generational, constrained, local),
     constraint_indexing:extractiveness_for_agent(buffons_needle_pi_estimation, Context, Score),
     Score >= 0.2.
@@ -215,7 +215,7 @@ test(natural_emergence) :-
  * it for estimation is a "tax" of time and variance.
  * * 2. PERSPECTIVE SELECTION:
  * Chose Needle (Subject), Researcher (User), and Precision Seeker (Victim) 
- * to demonstrate how a "Mountain" of logic becomes a "Noose" of inefficiency.
+ * to demonstrate how a "Mountain" of logic becomes a "Snare" of inefficiency.
  */
 
 % OMEGA IDENTIFICATION

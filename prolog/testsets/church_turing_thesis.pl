@@ -41,12 +41,12 @@
  * - The Hardware Architect (Institutional): The designer of silicon or quantum 
  * substrates who uses the thesis as a "Rope" to guarantee universal utility.
  * - The Hypercomputationalist (Analytical/Victim): An observer seeking to 
- * transcend these bounds, for whom the thesis is a "Noose" of undecidability.
+ * transcend these bounds, for whom the thesis is a "Snare" of undecidability.
  * * NARRATIVE ARC:
  * The thesis acts as a "Mountain" of natural law in mathematics; it is the 
  * unyielding definition of a limit. For software engineers, it is a "Rope"—the 
  * foundation that allows one language (C++, Python) to do anything another can. 
- * However, to those attempting to solve the Halting Problem, it is a "Noose" 
+ * However, to those attempting to solve the Halting Problem, it is a "Snare" 
  * that extracts the possibility of absolute systemic certainty.
  */
 
@@ -137,7 +137,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE SECURITY ANALYST - Noose
+   PERSPECTIVE 3: THE SECURITY ANALYST - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_moderate - Has agency to analyze, but is bound by Rice's Theorem.
@@ -146,14 +146,14 @@ constraint_indexing:constraint_classification(
    SCOPE: national - Protecting infrastructure against malware.
    
    WHY THIS CLASSIFICATION:
-   For the analyst, the thesis acts as a "Noose." It "strangles" the hope for 
+   For the analyst, the thesis acts as a "Snare." It "strangles" the hope for 
    perfect malware detection because "any non-trivial property of code is 
    undecidable." It extracts the possibility of absolute security.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
     church_turing_thesis,
-    noose,
+    snare,
     context(
         agent_power(individual_moderate),
         time_horizon(immediate),
@@ -180,8 +180,8 @@ test(multi_perspective_variance) :-
     Type2 = rope.
 
 test(halting_impossibility_insight) :-
-    % Demonstrates that the Noose classification emerges for the analyst due to undecidability
-    constraint_indexing:constraint_classification(church_turing_thesis, noose, context(individual_moderate, immediate, constrained, national)).
+    % Demonstrates that the Snare classification emerges for the analyst due to undecidability
+    constraint_indexing:constraint_classification(church_turing_thesis, snare, context(individual_moderate, immediate, constrained, national)).
 
 test(natural_emergence) :-
     domain_priors:emerges_naturally(church_turing_thesis).

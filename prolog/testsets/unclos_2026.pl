@@ -46,7 +46,7 @@
  * * NARRATIVE ARC:
  * UNCLOS transitions from a "Rope" of functional cooperation to a "Mountain" of 
  * customary law for most. However, for powers claiming "historic rights" 
- * outside the Convention, it is treated as a "Noose" to be rejected.
+ * outside the Convention, it is treated as a "Snare" to be rejected.
  */
 
 /* ==========================================================================
@@ -136,7 +136,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: MARITIME SUPERPOWER (e.g., China/USA) - Noose
+   PERSPECTIVE 3: MARITIME SUPERPOWER (e.g., China/USA) - Snare
    --------------------------------------------------------------------------
    WHO: individual_powerful - Significant influence; can act unilaterally.
    WHEN: immediate - Focused on current tactical/resource advantages (mining/islands).
@@ -144,7 +144,7 @@ constraint_indexing:constraint_classification(
    SCOPE: global/regional - Ambitions spanning entire oceans.
    
    WHY THIS CLASSIFICATION:
-   For powers like China, the 2016 Award is a "Noose" that attempts to 
+   For powers like China, the 2016 Award is a "Snare" that attempts to 
    asymmetrically restrict their perceived "historic rights". For 
    the US, Part XI (seabed mining) is viewed as an extractive limit on 
    economic/security interests.
@@ -152,7 +152,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     unclos_2026,
-    noose,
+    snare,
     context(
         agent_power(individual_powerful),
         time_horizon(immediate),
@@ -174,8 +174,8 @@ test(multi_perspective_variance) :-
     Type2 = rope.
 
 test(hegemonic_noose_perception) :-
-    % Powerful agents see it as a Noose when it restricts "historic" titles.
-    constraint_indexing:constraint_classification(unclos_2026, noose, context(agent_power(individual_powerful), time_horizon(immediate), exit_options(arbitrage), spatial_scope(global))).
+    % Powerful agents see it as a Snare when it restricts "historic" titles.
+    constraint_indexing:constraint_classification(unclos_2026, snare, context(agent_power(individual_powerful), time_horizon(immediate), exit_options(arbitrage), spatial_scope(global))).
 
 test(bbnj_rope_dynamic) :-
     % BBNJ Treaty (High Seas) entry into force 2026 marks a Rope expansion.
@@ -192,7 +192,7 @@ test(bbnj_rope_dynamic) :-
  * * Model: Gemini 2.0 Flash
  * * KEY DECISIONS:
  * 1. PERSPECTIVE GAPS: Highlighted the gap between the "Mountain" of law for 
- * smaller states and the "Noose" of restriction for dissenting superpowers.
+ * smaller states and the "Snare" of restriction for dissenting superpowers.
  * 2. 2026 CONTEXT: Integrated the BBNJ treaty (Jan 2026) as proof of UNCLOS's 
  * nature as a "living" Rope for institutional actors.
  * 3. EXTRACTIVENESS: Set at 0.3. It is not purely extractive, but powerful 
@@ -216,7 +216,7 @@ omega_variable(
     scs_finality,
     "Does international pressure suffice to enforce the 'final' status of the 2016 Award in 2026?",
     resolution_mechanism("Observe the shift in 'Arbitration Support' from neutral to fully supporting countries."),
-    impact("If High Support: Mountain. If Low: It remains a contestable Noose for China."),
+    impact("If High Support: Mountain. If Low: It remains a contestable Snare for China."),
     confidence_without_resolution(low)
 ).
 

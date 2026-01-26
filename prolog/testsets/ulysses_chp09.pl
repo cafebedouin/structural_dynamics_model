@@ -40,7 +40,7 @@
  * argument to manage his own guilt[cite: 1].
  * - The Library/Tradition: The institutional "Mountain" of established 
  * literary and moral law[cite: 1].
- * - Stephen’s Internal Self: The powerless recipient of his own father-guilt (Noose)[cite: 1].
+ * - Stephen’s Internal Self: The powerless recipient of his own father-guilt (Snare)[cite: 1].
  */
 
 /* ==========================================================================
@@ -95,15 +95,15 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE "GHOST" (Stephen's Guilt) - Noose
+   PERSPECTIVE 3: THE "GHOST" (Stephen's Guilt) - Snare
    --------------------------------------------------------------------------
    WHO: individual_powerless - Stephen as a "servant of two masters"[cite: 1].
-   WHY: Internally, the ineluctability of his past and his father is a "Noose" 
+   WHY: Internally, the ineluctability of his past and his father is a "Snare" 
    that extracts his peace and traps him in a cycle of "agenbite of inwit"[cite: 1].
    -------------------------------------------------------------------------- */
 constraint_indexing:constraint_classification(
     stephen_shakespeare_ghost,
-    noose,
+    snare,
     context(agent_power(individual_powerless), time_horizon(immediate), exit_options(constrained), spatial_scope(local))
 ) :- !.
 
@@ -132,7 +132,7 @@ test(immutability_scaling) :-
  * LLM GENERATION NOTES:
  * Refactored to fix the 'ontological_paternity' mismatch. By declaring the 
  * claim as 'mountain', the audit can evaluate if Stephen's perceived 
- * 'Natural Law' of the father is actually an extractive trap (Noose) 
+ * 'Natural Law' of the father is actually an extractive trap (Snare) 
  * fueled by his own suppression of belief[cite: 1].
  */
 
@@ -140,7 +140,7 @@ omega_variable(
     stephen_belief_sincerity,
     "Does Stephen actually believe his own theory, or is it a rhetorical Rope?",
     resolution_mechanism("Analysis of his confession: 'No', when asked if he believes his theory [cite: 1]"),
-    impact("If insincere: The 'Mountain' is a 'Noose' of self-deception."),
+    impact("If insincere: The 'Mountain' is a 'Snare' of self-deception."),
     confidence_without_resolution(medium)
 ).
 
@@ -162,4 +162,4 @@ omega_variable(
 % --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
 constraint_indexing:constraint_classification(ulysses_chp09, mountain, agent_power(analytical)).
 constraint_indexing:constraint_classification(ulysses_chp09, rope, agent_power(institutional)).
-constraint_indexing:constraint_classification(ulysses_chp09, noose, agent_power(individual_powerless)).
+constraint_indexing:constraint_classification(ulysses_chp09, snare, agent_power(individual_powerless)).

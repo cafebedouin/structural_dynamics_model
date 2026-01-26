@@ -49,7 +49,7 @@
  * * NARRATIVE ARC:
  * Originally a Rope (a beneficial coordination target), Moore's Law has 
  * become a Mountain (an seemingly immutable pace of progress) and a 
- * Noose for manufacturers who must spend billions in R&D just to stay 
+ * Snare for manufacturers who must spend billions in R&D just to stay 
  * in the same place relative to the market.
  */
 
@@ -128,15 +128,15 @@ constraint_indexing:constraint_classification(
    SCOPE: global.
    
    WHY THIS CLASSIFICATION:
-   For the manufacturer, the law is a Noose. It is an "unrelenting 
+   For the manufacturer, the law is a Snare. It is an "unrelenting 
    treadmill." If they fail to meet the doubling pace for a single cycle, 
    their market cap can evaporate. The cost of maintaining the pace 
-   (the "Noose") increases exponentially as physics reaches its limits.
+   (the "Snare") increases exponentially as physics reaches its limits.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
     moores_law,
-    noose,
+    snare,
     context(
         agent_power(institutional),
         time_horizon(immediate),
@@ -207,7 +207,7 @@ test(time_immutability) :-
  * it looks like a natural law, it is actually the result of massive 
  * industrial coordination and investment.
  * 2. NOOSE VS ROPE: The distinction depends on whether you are the 
- * producer (Noose) or the consumer (Rope) of the processing power.
+ * producer (Snare) or the consumer (Rope) of the processing power.
  * 3. EXTRACTIVENESS: Set at 0.3. The gain in utility for users is real, 
  * but the extraction comes through the "forced" obsolescence of 
  * working hardware.
@@ -222,7 +222,7 @@ omega_variable(
     "Will new materials (Carbon nanotubes/Quantum) maintain the 2-year 
     doubling pace once silicon hits the atomic limit?",
     resolution_mechanism("Observation of commercial chip density post-2nm node"),
-    impact("If Yes: Moore's Law remains a Rope/Noose. If No: It hits the Mountain."),
+    impact("If Yes: Moore's Law remains a Rope/Snare. If No: It hits the Mountain."),
     confidence_without_resolution(medium)
 ).
 
@@ -240,7 +240,7 @@ omega_variable(
  * * ALTERNATIVE 2: Specialized Architecture (ASICs/FPGAs)
  * Viability: High. Moving away from general-purpose CPUs.
  * * CONCLUSION:
- * The "Noose" of Moore's Law is partly voluntary; we could exit via 
+ * The "Snare" of Moore's Law is partly voluntary; we could exit via 
  * better software, but the "Rope" of free hardware gains is too seductive.
  */
 

@@ -47,7 +47,7 @@
  * * NARRATIVE ARC:
  * The law functions as a protective shield for niche domains. By acknowledging 
  * the "Mountain" of mediocrity, the observer is freed to find the "Rope" of 
- * excellence. It becomes a "Noose" when the 90% becomes so overwhelming that 
+ * excellence. It becomes a "Snare" when the 90% becomes so overwhelming that 
  * the 10% is never discovered or funded.
  */
 
@@ -150,7 +150,7 @@ constraint_indexing:constraint_classification(
    SCOPE: global.
    
    WHY THIS CLASSIFICATION:
-   For the platform, Sturgeon's Law is a Noose used on the creators. Because 
+   For the platform, Sturgeon's Law is a Snare used on the creators. Because 
    "everything is crud," the platform feels justified in using aggressive 
    algorithms that squeeze the 90% for "engagement" while charging the 10% 
    for "visibility." The law justifies a system where quality is secondary 
@@ -159,7 +159,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     sturgeons_law,
-    noose,
+    snare,
     context(
         agent_power(institutional),
         time_horizon(historical),
@@ -197,7 +197,7 @@ test(crud_distribution_immutability) :-
  * * KEY DECISIONS:
  * 1. CLASSIFICATION: Chose "Rope" for the writer because the law was 
  * intended as an empowering rhetorical device, not a defeatist one.
- * 2. NOOSE: Applied the Noose concept to institutional gatekeepers who 
+ * 2. NOOSE: Applied the Snare concept to institutional gatekeepers who 
  * use the "90% is crud" axiom to justify poor treatment of creatives 
  * or low-quality automated systems.
  */

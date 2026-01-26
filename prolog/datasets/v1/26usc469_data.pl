@@ -24,12 +24,12 @@ event(ev04_real_estate_relief, amendment, 1993, [provision(subsection_c7), targe
 constraint_claim(statutory_loss_limit, mountain). 
 constraint_metric(statutory_loss_limit, accessibility_collapse, 0.95).
 
-% Noose: The Material Participation Tests. A closing circle of criteria (regular, continuous, substantial).
-constraint_claim(material_participation_noose, noose). 
+% Snare: The Material Participation Tests. A closing circle of criteria (regular, continuous, substantial).
+constraint_claim(material_participation_noose, snare). 
 constraint_metric(material_participation_noose, stakes_inflation, 0.90).
 
-% Zombie: The 1986 Transition Rules. Legacy phase-in percentages that controlled behavior while dying out.
-constraint_claim(pre_enactment_phase_in, zombie). 
+% Piton: The 1986 Transition Rules. Legacy phase-in percentages that controlled behavior while dying out.
+constraint_claim(pre_enactment_phase_in, piton). 
 constraint_metric(pre_enactment_phase_in, suppression, 0.70).
 
 % --- 4. Recommendations & Veto Structure ---

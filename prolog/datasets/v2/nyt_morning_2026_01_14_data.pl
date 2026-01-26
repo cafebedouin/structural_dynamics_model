@@ -43,7 +43,7 @@ constraint_metric(jurisdictional_cooperation_friction, snap_back_potential, 0.50
 constraint_metric(jurisdictional_cooperation_friction, extractiveness, 0.55).
 
 % NOOSE: Escalating Military-Style Occupation
-constraint_claim(military_occupation_escalation, noose).
+constraint_claim(military_occupation_escalation, snare).
 constraint_metric(military_occupation_escalation, intensity, 0.95).
 constraint_metric(military_occupation_escalation, suppression_requirement, 0.85).
 constraint_metric(military_occupation_escalation, snap_back_potential, 0.90).

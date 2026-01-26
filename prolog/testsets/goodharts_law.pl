@@ -45,7 +45,7 @@
  * To manage complexity, an institution creates a "Rope" (a metric) to pull 
  * behavior toward a goal. However, agents begin to treat the Rope as the 
  * goal itself. As optimization for the metric increases, the connection to 
- * reality snaps, turning the metric into a "Noose" that strangles actual 
+ * reality snaps, turning the metric into a "Snare" that strangles actual 
  * productivity and truth, while appearing as a "Mountain" of inevitable 
  * bureaucratic logic to those trapped within it.
  */
@@ -56,7 +56,7 @@
 
 % Structural Anchor for ID extraction
 narrative_ontology:interval(goodharts_law_interval, 0, 10).
-narrative_ontology:constraint_claim(goodharts_law, noose).
+narrative_ontology:constraint_claim(goodharts_law, snare).
 
 % Base extractiveness score (0.0-1.0)
 % Rationale: Moderate (0.5). It extracts "systemic truth" and "genuine utility." 
@@ -160,7 +160,7 @@ constraint_indexing:constraint_classification(
     !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE OVER-MANAGED WORKER - Noose
+   PERSPECTIVE 3: THE OVER-MANAGED WORKER - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless - Subject to the "performance review" of the metric.
@@ -169,7 +169,7 @@ constraint_indexing:constraint_classification(
    SCOPE: local - Immediate workspace and task list.
    
    WHY THIS CLASSIFICATION:
-   For the worker, the law is a Noose. They are forced to perform 
+   For the worker, the law is a Snare. They are forced to perform 
    meaningless tasks just to "hit the number," even when they know it 
    harms the actual goal. The extraction of their professional integrity 
    strangles their sense of purpose, while the metric itself tightens 
@@ -182,7 +182,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     goodharts_law,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -201,13 +201,13 @@ constraint_indexing:constraint_classification(
 :- begin_tests(goodharts_law_tests).
 
 test(multi_perspective_variance) :-
-    % Analyst sees Mountain, Institutional sees Rope, Powerless sees Noose
+    % Analyst sees Mountain, Institutional sees Rope, Powerless sees Snare
     constraint_indexing:constraint_classification(goodharts_law, mountain, context(analytical, civilizational, analytical, global)),
     constraint_indexing:constraint_classification(goodharts_law, rope, context(institutional, biographical, arbitrage, national)),
-    constraint_indexing:constraint_classification(goodharts_law, noose, context(individual_powerless, immediate, constrained, local)).
+    constraint_indexing:constraint_classification(goodharts_law, snare, context(individual_powerless, immediate, constrained, local)).
 
 test(power_extractiveness_gaming) :-
-    % Powerless workers feel the total extraction of their utility (Noose).
+    % Powerless workers feel the total extraction of their utility (Snare).
     % Institutional leaders leverage metrics for coordination (Rope).
     ContextPowerless = context(individual_powerless, immediate, constrained, local),
     ContextPowerful = context(institutional, biographical, arbitrage, national),
@@ -244,7 +244,7 @@ test(time_immutability_incentives) :-
  * Worker (Victim) to highlight the indexical shift from "Math" 
  * to "Policy" to "Suffering."
  * * 4. CLASSIFICATION RATIONALE:
- * The "Noose" for the powerless is critical; it shows how a 
+ * The "Snare" for the powerless is critical; it shows how a 
  * management "Rope" becomes a trap when there is no exit 
  * option or feedback loop.
  */
@@ -256,7 +256,7 @@ test(time_immutability_incentives) :-
 omega_variable(
     metric_corruption_threshold,
     "At what degree of 'optimization pressure' does a metric's utility 
-    cross the threshold from Rope to Noose (The Phase Transition)?",
+    cross the threshold from Rope to Snare (The Phase Transition)?",
     resolution_mechanism("Longitudinal study of KPI health vs. actual 
     outcomes in high-pressure bureaucratic environments"),
     impact("If Low: Almost all metrics are Nooses. If High: Metrics can 
@@ -281,7 +281,7 @@ omega_variable(
  * though it eventually succumbs to the same law.
  * * CONCLUSION:
  * The existence of suppressed qualitative alternatives confirms that 
- * for the individual, Goodhart's Law is a Noose created by the 
+ * for the individual, Goodhart's Law is a Snare created by the 
  * institutional choice of "Scalability" over "Nuance."
  */
 

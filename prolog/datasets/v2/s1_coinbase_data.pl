@@ -26,7 +26,7 @@ constraint_claim(regulatory_uncertainty, mountain).
 constraint_metric(regulatory_uncertainty, intensity, 0.75).
 constraint_metric(regulatory_uncertainty, suppression_requirement, 0.82).
 
-constraint_claim(voting_power_concentration, noose).
+constraint_claim(voting_power_concentration, snare).
 constraint_metric(voting_power_concentration, extractiveness, 0.72). % Exceeds 0.66 requirement
 constraint_metric(voting_power_concentration, suppression_requirement, 0.55). % Exceeds 0.46 requirement
 

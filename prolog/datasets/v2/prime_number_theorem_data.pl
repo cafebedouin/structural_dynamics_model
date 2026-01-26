@@ -40,7 +40,7 @@ constraint_metric(error_bound_uncertainty, snap_back_potential, 0.45).
 constraint_metric(error_bound_uncertainty, extractiveness, 0.52).
 
 % NOOSE: Non-Analytical Proof Constraints (Pre-Elementary Era)
-constraint_claim(elementary_proof_impossibility_trap, noose).
+constraint_claim(elementary_proof_impossibility_trap, snare).
 constraint_metric(elementary_proof_impossibility_trap, intensity, 0.95).
 constraint_metric(elementary_proof_impossibility_trap, suppression_requirement, 0.85).
 constraint_metric(elementary_proof_impossibility_trap, snap_back_potential, 0.90).

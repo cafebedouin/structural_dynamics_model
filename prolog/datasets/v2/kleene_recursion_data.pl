@@ -35,10 +35,10 @@ constraint_metric(parameter_substitution, suppression_requirement, 0.28).
 constraint_metric(parameter_substitution, snap_back_potential, 0.55).
 constraint_metric(parameter_substitution, extractiveness, 0.42).
 
-% The Total Function Mirage (The Noose)
+% The Total Function Mirage (The Snare)
 % The requirement for the transformation to be a total computable function; if not, the system fails.
 % Extractiveness at 0.75 requires the 'smn_enumerator' scaffold to maintain structural integrity.
-constraint_claim(totality_constraint, noose).
+constraint_claim(totality_constraint, snare).
 constraint_metric(totality_constraint, intensity, 0.92).
 constraint_metric(totality_constraint, suppression_requirement, 0.65).
 constraint_metric(totality_constraint, snap_back_potential, 0.15).
@@ -49,7 +49,7 @@ constraint_metric(totality_constraint, extractiveness, 0.75).
 recommendation(rec_01, optimize_smn_indices_via_currying_logic).
 affects_constraint(rec_01, parameter_substitution).
 
-% Noose (0.75 extractiveness) triggers Cut
+% Snare (0.75 extractiveness) triggers Cut
 % Utilizing 'smn_enumerator' scaffold to ensure the resulting index is always effectively calculable.
 recommendation(rec_02, implement_strict_typing_to_enforce_transformation_totality).
 affects_constraint(rec_02, totality_constraint).

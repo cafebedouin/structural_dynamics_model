@@ -24,12 +24,12 @@ event(ev04_digitization_standard, final_verification, 95, [subject(binary_repres
 constraint_claim(channel_capacity_limit, mountain).
 constraint_metric(channel_capacity_limit, accessibility_collapse, 1.0).
 
-% Noose: The 'Promise' of Semantic Meaning. It tightens as engineers try to transmit 'truth' instead of 'bits'.
-constraint_claim(semantic_irrelevance_norm, noose).
+% Snare: The 'Promise' of Semantic Meaning. It tightens as engineers try to transmit 'truth' instead of 'bits'.
+constraint_claim(semantic_irrelevance_norm, snare).
 constraint_metric(semantic_irrelevance_norm, stakes_inflation, 0.90).
 
-% Zombie: The Telegraph-centric Linear Logic. A theoretical medium formerly believed to be standard but rendered obsolete.
-constraint_claim(linear_telegraphy_logic, zombie).
+% Piton: The Telegraph-centric Linear Logic. A theoretical medium formerly believed to be standard but rendered obsolete.
+constraint_claim(linear_telegraphy_logic, piton).
 constraint_metric(linear_telegraphy_logic, suppression, 0.80).
 
 % --- 4. Recommendations & Veto Structure ---

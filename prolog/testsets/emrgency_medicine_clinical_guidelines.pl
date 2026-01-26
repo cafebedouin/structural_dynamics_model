@@ -74,7 +74,7 @@ constraint_victim(em_clinical_guidelines, [frontline_physicians, edge_case_patie
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 1: ER Attending Physician - Noose
+   PERSPECTIVE 1: ER Attending Physician - Snare
    --------------------------------------------------------------------------
    WHO: individual_powerless (within the hospital hierarchy)
    WHEN: immediate (the current shift)
@@ -82,7 +82,7 @@ constraint_victim(em_clinical_guidelines, [frontline_physicians, edge_case_patie
    SCOPE: local (the specific patient encounter)
    
    WHY THIS CLASSIFICATION:
-   In a high-acuity environment, guidelines function as a Noose. They create 
+   In a high-acuity environment, guidelines function as a Snare. They create 
    asymmetric liability; following them provides minimal "reward," but 
    deviating from them—even for sound clinical reasons—creates a permanent 
    legal vulnerability.
@@ -90,7 +90,7 @@ constraint_victim(em_clinical_guidelines, [frontline_physicians, edge_case_patie
 
 constraint_indexing:constraint_classification(
     em_clinical_guidelines,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -161,11 +161,11 @@ constraint_indexing:constraint_classification(
 :- begin_tests(em_clinical_guidelines_tests).
 
 test(multi_perspective_em) :-
-    % Physician (Noose) vs Committee (Rope) vs Legal (Mountain)
-    constraint_indexing:constraint_classification(em_clinical_guidelines, Noose, context(individual_powerless, immediate, trapped, local)),
+    % Physician (Snare) vs Committee (Rope) vs Legal (Mountain)
+    constraint_indexing:constraint_classification(em_clinical_guidelines, Snare, context(individual_powerless, immediate, trapped, local)),
     constraint_indexing:constraint_classification(em_clinical_guidelines, Rope, context(institutional, generational, mobile, national)),
     constraint_indexing:constraint_classification(em_clinical_guidelines, Mountain, context(analytical, historical, analytical, regional)),
-    Noose \= Rope,
+    Snare \= Rope,
     Rope \= Mountain.
 
 test(throughput_pressure_scaling) :-
@@ -190,7 +190,7 @@ test(throughput_pressure_scaling) :-
  * omega_variable(guideline_drift,
  * "Do guidelines track biological truth or legal safety?",
  * resolution_mechanism("Analysis of guideline changes following major malpractice settlements"),
- * impact("If legal: the system is a pure Noose disguised as medicine."),
+ * impact("If legal: the system is a pure Snare disguised as medicine."),
  * confidence_without_resolution(medium)
  * ).
  * * 3. AMBIGUITIES: The "Standard of Care" is a legal fiction that lacks a 
@@ -210,7 +210,7 @@ test(throughput_pressure_scaling) :-
  * legal systems that demand binary "Reasonable Physician" standards.
  * * CONCLUSION:
  * The legal requirement for a binary "standard" forces the Rope (the 
- * guideline) to become a Noose for the clinician who sees the nuance 
+ * guideline) to become a Snare for the clinician who sees the nuance 
  * the guideline ignores.
  */
 

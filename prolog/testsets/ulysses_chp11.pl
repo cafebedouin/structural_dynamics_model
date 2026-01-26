@@ -37,7 +37,7 @@
  * through trilling notes and acoustic lures.
  * * KEY AGENTS:
  * - Leopold Bloom: Individual moderate navigating a "Rope" of artistic appreciation and distraction.
- * - The Blind Stripling: Individual powerless agent for whom the "bronze and gold" of the sirens do not exist (Noose).
+ * - The Blind Stripling: Individual powerless agent for whom the "bronze and gold" of the sirens do not exist (Snare).
  * - The Ormond Hotel: Institutional setting viewing the acoustic order as an immutable law (Mountain).
  */
 
@@ -47,8 +47,8 @@
 
 % Required for [STEP 1] and [STEP 2] of the DR-Audit Suite
 narrative_ontology:interval(bloom_sirens_interval, 0, 10).
-% Fixed: Changed 'acoustic_vigil' to 'noose' to satisfy schema
-narrative_ontology:constraint_claim(bloom_acoustic_seduction_vigil, noose).
+% Fixed: Changed 'acoustic_vigil' to 'snare' to satisfy schema
+narrative_ontology:constraint_claim(bloom_acoustic_seduction_vigil, snare).
 
 % Metrics: Extractiveness (0.6 - Sensory trap) and Suppression (0.7 - High distraction)
 domain_priors:base_extractiveness(bloom_acoustic_seduction_vigil, 0.6).
@@ -81,16 +81,16 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE BLIND STRIPLING - Noose
+   PERSPECTIVE 2: THE BLIND STRIPLING - Snare
    --------------------------------------------------------------------------
    WHO: individual_powerless - "He did not see... Nor Ben nor Bob nor Tom".
    WHY: For the powerless, sensory-impaired agent, the seductive "order" of 
-   the hotel is a "Noose"—an extractive trap of exclusion where the 
+   the hotel is a "Snare"—an extractive trap of exclusion where the 
    coordination benefits of the "Siren" song are entirely absent.
    -------------------------------------------------------------------------- */
 constraint_indexing:constraint_classification(
     bloom_acoustic_seduction_vigil,
-    noose,
+    snare,
     context(agent_power(individual_powerless), time_horizon(immediate), exit_options(constrained), spatial_scope(local))
 ) :- !.
 
@@ -117,7 +117,7 @@ constraint_indexing:constraint_classification(
 test(multi_perspective_sirens) :-
     constraint_indexing:constraint_classification(bloom_acoustic_seduction_vigil, T1, context(agent_power(individual_moderate), _, _, _)),
     constraint_indexing:constraint_classification(bloom_acoustic_seduction_vigil, T2, context(agent_power(individual_powerless), _, _, _)),
-    T1 = rope, T2 = noose.
+    T1 = rope, T2 = snare.
 
 test(immutability_acoustic_scaling) :-
     % Institutional view sees the Siren song as a Mountain
@@ -132,16 +132,16 @@ test(immutability_acoustic_scaling) :-
 /**
  * LLM GENERATION NOTES:
  * Refactored to eliminate the 'acoustic_vigil' mismatch. Mapping the claim 
- * to 'noose' allows the audit to detect if the music's "decoy" effect 
- * creates a "False Mountain" of aesthetic escape that masks a "Noose" 
+ * to 'snare' allows the audit to detect if the music's "decoy" effect 
+ * creates a "False Mountain" of aesthetic escape that masks a "Snare" 
  * of emotional extraction.
  */
 
 omega_variable(
     siren_intent_malice,
-    "Do the barmaids intentionally distract (Noose) or simply perform (Rope)?",
+    "Do the barmaids intentionally distract (Snare) or simply perform (Rope)?",
     resolution_mechanism("Analysis of Lydia and Minnie's internal monologue vs external trilling"),
-    impact("If malice: Noose. If performance: Rope."),
+    impact("If malice: Snare. If performance: Rope."),
     confidence_without_resolution(low)
 ).
 
@@ -164,4 +164,4 @@ omega_variable(
 % --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
 constraint_indexing:constraint_classification(ulysses_chp11, mountain, agent_power(analytical)).
 constraint_indexing:constraint_classification(ulysses_chp11, rope, agent_power(institutional)).
-constraint_indexing:constraint_classification(ulysses_chp11, noose, agent_power(individual_powerless)).
+constraint_indexing:constraint_classification(ulysses_chp11, snare, agent_power(individual_powerless)).

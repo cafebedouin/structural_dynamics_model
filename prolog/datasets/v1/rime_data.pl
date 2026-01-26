@@ -27,12 +27,12 @@ event(ev06_agony_start, perpetual_loop, 95, [symptom(heart_burns), action(tale_t
 constraint_claim(the_silent_sea, mountain).
 constraint_metric(the_silent_sea, accessibility_collapse, 0.95).
 
-% Noose: The Albatross hung around the neck (Social/Psychological trap).
-constraint_claim(albatross_stigma, noose).
+% Snare: The Albatross hung around the neck (Social/Psychological trap).
+constraint_claim(albatross_stigma, snare).
 constraint_metric(albatross_stigma, stakes_inflation, 0.85).
 
-% Zombie: The superstition that the bird brought the fog/wind (Inert narrative controlling behavior).
-constraint_claim(crew_superstition, zombie).
+% Piton: The superstition that the bird brought the fog/wind (Inert narrative controlling behavior).
+constraint_claim(crew_superstition, piton).
 constraint_metric(crew_superstition, suppression, 0.70).
 
 % --- 4. Recommendations & Veto Structure ---

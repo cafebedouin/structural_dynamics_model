@@ -26,8 +26,8 @@ constraint_metric(atman, extractiveness, 0.0).
 constraint_metric(atman, suppression_requirement, 0.05).
 constraint_metric(atman, resistance, 0.05).
 
-% Arjuna's grief is exposed as a Noose (Constructed Constraint)
-constraint_claim(arjuna_grief, noose).
+% Arjuna's grief is exposed as a Snare (Constructed Constraint)
+constraint_claim(arjuna_grief, snare).
 constraint_metric(arjuna_grief, extractiveness, 0.85).
 constraint_metric(arjuna_grief, suppression_requirement, 0.90).
 constraint_metric(arjuna_grief, resistance, 0.80).
@@ -55,7 +55,7 @@ measurement(m11, dharma_varna, suppression_requirement, 30, 0.10).
 measurement(m12, dharma_varna, resistance, 30, 0.10). % Resistance drops after understanding
 
 % --- Signature 3: Constructed Constraint (Ahamkara/Attachment) ---
-% High extraction and resistance; evolves from "Rope" to "Noose" in perception.
+% High extraction and resistance; evolves from "Rope" to "Snare" in perception.
 measurement(m13, ahamkara, extractiveness, 0, 0.40).
 measurement(m14, ahamkara, suppression_requirement, 0, 0.35).
 measurement(m15, ahamkara, resistance, 0, 0.30).

@@ -42,14 +42,14 @@
  * - The Orbital Engineer (Institutional): An agent who uses specific stable 
  * subsets (Lagrange points) as a "Rope" to station satellites.
  * - The Navigator/Predictor (Victim): An agent for whom the chaotic divergence 
- * acts as a "Noose," extracting the possibility of long-term survival or 
+ * acts as a "Snare," extracting the possibility of long-term survival or 
  * trajectory certainty.
  * * NARRATIVE ARC:
  * The Three-Body Problem is the "Mountain" of celestial mechanics; gravity is 
  * unyielding, yet its complexity prevents a total mapping. In space exploration, 
  * Lagrange points are the "Ropes" that allow for stable coordination. However, 
  * for a civilization living in a triple-star system, the lack of a stable 
- * "Mountain" of predictable seasons acts as a "Noose," extracting all 
+ * "Mountain" of predictable seasons acts as a "Snare," extracting all 
  * developmental consistency and "strangling" the future with sudden, 
  * chaotic extinction events.
  */
@@ -152,7 +152,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE INTERSTELLAR NAVIGATOR - Noose
+   PERSPECTIVE 3: THE INTERSTELLAR NAVIGATOR - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_moderate - Has agency to navigate but is bound by the chaos.
@@ -161,7 +161,7 @@ constraint_indexing:constraint_classification(
    SCOPE: global - Across the scale of the solar system or cluster.
    
    WHY THIS CLASSIFICATION:
-   For the navigator, the Three-Body Problem is a "Noose." It "strangles" 
+   For the navigator, the Three-Body Problem is a "Snare." It "strangles" 
    long-term planning. Because errors grow exponentially, the system 
    extracts fuel and compute cycles (extraction) for constant course 
    corrections, "choking" the possibility of a fixed, pre-calculated 
@@ -172,7 +172,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     three_body_unpredictability,
-    noose,
+    snare,
     context(
         agent_power(individual_moderate),
         time_horizon(historical),
@@ -198,7 +198,7 @@ test(multi_perspective_variance) :-
     Type1 \= Type2.
 
 test(navigation_extraction_penalty) :-
-    % Navigators feel the extraction of certainty as a Noose.
+    % Navigators feel the extraction of certainty as a Snare.
     Context = context(individual_moderate, historical, constrained, global),
     constraint_indexing:extractiveness_for_agent(three_body_unpredictability, Context, Score),
     Score >= 0.4.
@@ -224,7 +224,7 @@ test(natural_emergence) :-
  * * 2. CLASSIFICATION RATIONALE:
  * - Planet (Mountain): The inevitable subject of physics.
  * - Engineer (Rope): Using Lagrange points to "tie" down utility.
- * - Navigator (Noose): Where unpredictability "chokes" the long-term mission.
+ * - Navigator (Snare): Where unpredictability "chokes" the long-term mission.
  */
 
 % OMEGA IDENTIFICATION
@@ -232,7 +232,7 @@ omega_variable(
     orbital_resonance_stability,
     "Is the 'Mountain' of chaos stable, or are there 'Ropes' (periodic orbits) that remain to be discovered?",
     resolution_mechanism("Numerical search for periodic solutions in the restricted three-body problem."),
-    impact("If Yes: Navigators gain new Ropes. If No: The 'Noose' of chaos is total."),
+    impact("If Yes: Navigators gain new Ropes. If No: The 'Snare' of chaos is total."),
     confidence_without_resolution(medium)
 ).
 
@@ -271,4 +271,4 @@ omega_variable(
 % --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
 constraint_indexing:constraint_classification(three_body_unpredicability, mountain, agent_power(analytical)).
 constraint_indexing:constraint_classification(three_body_unpredicability, rope, agent_power(institutional)).
-constraint_indexing:constraint_classification(three_body_unpredicability, noose, agent_power(individual_powerless)).
+constraint_indexing:constraint_classification(three_body_unpredicability, snare, agent_power(individual_powerless)).

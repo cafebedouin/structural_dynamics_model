@@ -13,7 +13,7 @@ entity(professional_army_scaffold, scaffold). % The required transition tool
 interval(hammurabi_epoch, 0, 42).
 
 % --- SECTION 2: CONSTRAINT CLAIMS & METRICS (T=42) ---
-% These metrics align with the Noose (⊠C) classification (X >= 0.66, E >= 0.66)
+% These metrics align with the Snare (⊠C) classification (X >= 0.66, E >= 0.66)
 constraint_claim(benefice_system, mountain). % Claimed as natural necessity
 constraint_metric(benefice_system, extractiveness, 0.85).
 constraint_metric(benefice_system, suppression_requirement, 0.88).
@@ -23,7 +23,7 @@ constraint_metric(river_ordeal, extractiveness, 0.92).
 constraint_metric(river_ordeal, suppression_requirement, 0.95).
 
 % --- SECTION 3: TEMPORAL MEASUREMENTS (PAIRED METRICS) ---
-% Benefice System Evolution: Rope (T=0) -> Noose (T=42)
+% Benefice System Evolution: Rope (T=0) -> Snare (T=42)
 measurement(m1, benefice_system, extractiveness, 0, 0.25).
 measurement(m2, benefice_system, suppression_requirement, 0, 0.20).
 
@@ -33,7 +33,7 @@ measurement(m4, benefice_system, suppression_requirement, 20, 0.50).
 measurement(m5, benefice_system, extractiveness, 42, 0.85).
 measurement(m6, benefice_system, suppression_requirement, 42, 0.88).
 
-% River Ordeal Evolution: Static High-Suppression Noose
+% River Ordeal Evolution: Static High-Suppression Snare
 measurement(m7, river_ordeal, extractiveness, 0, 0.90).
 measurement(m8, river_ordeal, suppression_requirement, 0, 0.92).
 measurement(m9, river_ordeal, extractiveness, 42, 0.92).

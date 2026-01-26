@@ -39,7 +39,7 @@
  * - Leopold Bloom: Individual moderate navigating via "orthodox Samaritan" 
  * logic (Rope).
  * - Stephen Dedalus: Individual powerless agent, "unsteady" and "e.d.ed" 
- * (exhausted), for whom the care is an inescapable trap (Noose).
+ * (exhausted), for whom the care is an inescapable trap (Snare).
  * - Social Orthodoxy: Institutional force viewing paternal duty as an 
  * immutable law of "propriety" (Mountain).
  */
@@ -50,8 +50,8 @@
 
 % Required for [STEP 1] and [STEP 2] of the DR-Audit Suite
 narrative_ontology:interval(bloom_samaritan_id, 0, 10).
-% Fixed: Changed 'social_stewardship' to 'noose' to satisfy schema
-narrative_ontology:constraint_claim(bloom_samaritan_paternal_care, noose).
+% Fixed: Changed 'social_stewardship' to 'snare' to satisfy schema
+narrative_ontology:constraint_claim(bloom_samaritan_paternal_care, snare).
 
 % Metrics: Extractiveness (0.5 - High fatigue cost) and Suppression (0.6 - Social duty)
 domain_priors:base_extractiveness(bloom_samaritan_paternal_care, 0.5).
@@ -84,17 +84,17 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 2: STEPHEN DEDALUS - Noose
+   PERSPECTIVE 2: STEPHEN DEDALUS - Snare
    --------------------------------------------------------------------------
    WHO: individual_powerless - "His mind was not exactly what you would call 
    wandering but a bit unsteady".
    WHY: From Stephen's exhausted perspective, Bloom's "Samaritan" care is 
-   a "Noose"—he is effectively "kidnapped" by kindness and social obligation 
+   a "Snare"—he is effectively "kidnapped" by kindness and social obligation 
    without the agency to refuse.
    -------------------------------------------------------------------------- */
 constraint_indexing:constraint_classification(
     bloom_samaritan_paternal_care,
-    noose,
+    snare,
     context(agent_power(individual_powerless), time_horizon(immediate), exit_options(constrained), spatial_scope(local))
 ) :- !.
 
@@ -122,7 +122,7 @@ constraint_indexing:constraint_classification(
 test(multi_perspective_eumaeus) :-
     constraint_indexing:constraint_classification(bloom_samaritan_paternal_care, T1, context(agent_power(individual_moderate), _, _, _)),
     constraint_indexing:constraint_classification(bloom_samaritan_paternal_care, T2, context(agent_power(individual_powerless), _, _, _)),
-    T1 = rope, T2 = noose.
+    T1 = rope, T2 = snare.
 
 test(immutability_samaritan_scaling) :-
     % Institutional view sees the social code as a Mountain
@@ -137,17 +137,17 @@ test(immutability_samaritan_scaling) :-
 /**
  * LLM GENERATION NOTES:
  * Refactored to eliminate the 'social_stewardship' mismatch. Mapping the claim 
- * to 'noose' allows the audit to detect if Bloom's "duty" is an act of 
- * genuine coordination (Rope) or a "Noose" that extracts Stephen's autonomy 
+ * to 'snare' allows the audit to detect if Bloom's "duty" is an act of 
+ * genuine coordination (Rope) or a "Snare" that extracts Stephen's autonomy 
  * through unsolicited care.
  */
 
 omega_variable(
     stephen_dissent_silence,
     "Is Stephen's silence at the end of the chapter an exhausted assent (Rope) 
-    or a suppressed dissent (Noose)?",
+    or a suppressed dissent (Snare)?",
     resolution_mechanism("Investigation into the 'unsteady' silence vs the ballad singing"),
-    impact("If exhaustion: Mountain. If dissent: Noose."),
+    impact("If exhaustion: Mountain. If dissent: Snare."),
     confidence_without_resolution(low)
 ).
 
@@ -170,4 +170,4 @@ omega_variable(
 % --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
 constraint_indexing:constraint_classification(ulysses_chp16, mountain, agent_power(analytical)).
 constraint_indexing:constraint_classification(ulysses_chp16, rope, agent_power(institutional)).
-constraint_indexing:constraint_classification(ulysses_chp16, noose, agent_power(individual_powerless)).
+constraint_indexing:constraint_classification(ulysses_chp16, snare, agent_power(individual_powerless)).

@@ -42,13 +42,13 @@
  * requirement for the legitimacy of the Chinese Dream.
  * - Mainland Citizen: Individual powerless; socialized to view the "One China" 
  * principle as a natural law of history rather than a policy.
- * - PLA Strategist: Institutional/Analytical; manages the "Noose" of military 
+ * - PLA Strategist: Institutional/Analytical; manages the "Snare" of military 
  * deterrence to prevent the "Mountain" of sovereignty from being challenged.
  * * NARRATIVE ARC:
  * The policy has shifted from a "Rope" of peaceful economic integration and 
  * the "1992 Consensus" to a rigid "Mountain" of historical inevitability. 
  * As the 2049 deadline approaches, the "Rope" of "One Country, Two Systems" 
- * is increasingly reinforced by the "Noose" of military exercises like 
+ * is increasingly reinforced by the "Snare" of military exercises like 
  * "Justice Mission 2025" to suppress any deviation from the mandate.
  */
 
@@ -155,7 +155,7 @@ constraint_indexing:constraint_classification(
     !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: PLA STRATEGIST - Noose
+   PERSPECTIVE 3: PLA STRATEGIST - Snare
    --------------------------------------------------------------------------
    
    WHO: analytical/institutional - Manages the "Justice Mission" military drills.
@@ -164,7 +164,7 @@ constraint_indexing:constraint_classification(
    SCOPE: global - Counter-intervention against foreign powers.
    
    WHY THIS CLASSIFICATION:
-   The strategist views the mandate as a Noose. By tightening the 
+   The strategist views the mandate as a Snare. By tightening the 
    "blockade rehearsals" and diplomatic isolation of Taipei, they 
    intend to "choke" the space for "separatist forces" until the 
    extraction of political surrender becomes the only path forward.
@@ -174,7 +174,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     china_taiwan_reunification_mandate,
-    noose,
+    snare,
     context(
         agent_power(analytical),
         time_horizon(historical),
@@ -216,7 +216,7 @@ test(absolute_suppression_of_independence) :-
  * 1. THE "REJUVENATION" SHIFT: The 2049 goal is modeled as a transformation 
  * of the constraint from a passive "Historical Claim" to an active "Strategic 
  * Deadline."
- * 2. NOOSE DETECTION: I identified the military's role as a Noose because 
+ * 2. NOOSE DETECTION: I identified the military's role as a Snare because 
  * current 2025/2026 exercises focus on "Justice Missions" (blockades), which 
  * are extractive and coercive mechanisms aimed at isolating the subject.
  * 3. SUPPRESSION (0.9): Reflects the PRC's refusal to renounce the use of 
@@ -227,11 +227,11 @@ test(absolute_suppression_of_independence) :-
 omega_variable(
     peaceful_reunification_sincerity,
     "Is 'Peaceful Reunification' a genuine Rope (coordination) or a 
-     rhetorical Scaffold hiding the Noose of military coercion?",
+     rhetorical Scaffold hiding the Snare of military coercion?",
     resolution_mechanism("Evaluation of the ratio between economic integration 
     incentives vs. the frequency of blockade-simulation exercises"),
     impact("If incentives dominate: It is a Rope. If blockade-simulations 
-            dominate: It is a Noose."),
+            dominate: It is a Snare."),
     confidence_without_resolution(low)
 ).
 
@@ -250,7 +250,7 @@ omega_variable(
  * "Three Propositions" (PRC is the ONLY legal government).
  * * CONCLUSION:
  * The existence of these alternatives, and their systemic suppression by 
- * the PRC state, confirms the "Noose/Mountain" classification for those 
+ * the PRC state, confirms the "Snare/Mountain" classification for those 
  * outside the CCP leadership.
  */
 

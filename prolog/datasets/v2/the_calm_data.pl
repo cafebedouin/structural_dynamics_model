@@ -7,7 +7,7 @@
 entity(soh, observer).
 entity(petrov, engineer).
 entity(khatri, lead).
-entity(story_transmission, scaffold). % Authorized scaffold for Noose removal.
+entity(story_transmission, scaffold). % Authorized scaffold for Snare removal.
 
 interval(traverse_cycle, 4, 400).
 
@@ -34,8 +34,8 @@ constraint_claim(collective_silence, tangled_rope).
 constraint_metric(collective_silence, extractiveness, 0.50).
 constraint_metric(collective_silence, suppression_requirement, 0.30).
 
-% Noose (⊠C): ext >= 0.66, supp >= 0.46
-constraint_claim(petrov_guilt, noose).
+% Snare (⊠C): ext >= 0.66, supp >= 0.46
+constraint_claim(petrov_guilt, snare).
 constraint_metric(petrov_guilt, extractiveness, 0.85).
 constraint_metric(petrov_guilt, suppression_requirement, 0.65).
 

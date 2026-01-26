@@ -49,7 +49,7 @@
  * * NARRATIVE ARC:
  * What began as a Rope (Jedi as functional coordination for peace) ossified 
  * into a Mountain (the unchangeable "Will of the Force" as interpreted by 
- * bureaucracy). Ultimately, this domestication became a Noose, as the 
+ * bureaucracy). Ultimately, this domestication became a Snare, as the 
  * Council's inability to metabolize dissenting "mutations" (like Anakin) 
  * extracted the entire order's survival in favor of institutional conformity 
  *.
@@ -61,7 +61,7 @@
 
 % Required for [STEP 1] and [STEP 2] of the Deferential Realism suite
 narrative_ontology:interval(galactic_selection_event, 0, 10).
-narrative_ontology:constraint_claim(starwars_evolutionary_mutation, noose).
+narrative_ontology:constraint_claim(starwars_evolutionary_mutation, snare).
 
 % Base extractiveness score (0.0-1.0)
 % Rationale: 0.75. The institution "extracted" the individual diagnostic 
@@ -155,7 +155,7 @@ constraint_indexing:constraint_classification(
     !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: PALPATINE / THE SITH - Noose
+   PERSPECTIVE 3: PALPATINE / THE SITH - Snare
    --------------------------------------------------------------------------
    
    WHO: analytical - Observer of the Order's decline.
@@ -164,7 +164,7 @@ constraint_indexing:constraint_classification(
    SCOPE: global - Total galactic control.
    
    WHY THIS CLASSIFICATION:
-   From the Sith perspective, the Council's own "domestication" is a Noose. 
+   From the Sith perspective, the Council's own "domestication" is a Snare. 
    By tethering the Jedi to a decaying political system, they have turned 
    the Order's own "Rope" of coordination into the mechanism of its 
    execution.
@@ -172,7 +172,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     starwars_evolutionary_mutation,
-    noose,
+    snare,
     context(
         agent_power(analytical),
         time_horizon(historical),
@@ -224,7 +224,7 @@ domain_priors:suppression_score(starwars_evolutionary_mutation, 0.6).
 :- begin_tests(starwars_evolution_tests).
 
 test(multi_perspective_gap) :-
-    % Outlier (Mountain) vs Council (Rope) vs Sith (Noose)
+    % Outlier (Mountain) vs Council (Rope) vs Sith (Snare)
     constraint_indexing:constraint_classification(starwars_evolutionary_mutation, T1, context(individual_powerless, immediate, trapped, local)),
     constraint_indexing:constraint_classification(starwars_evolutionary_mutation, T2, context(institutional, generational, mobile, national)),
     constraint_indexing:constraint_classification(starwars_evolutionary_mutation, T3, context(analytical, historical, analytical, global)),
@@ -248,7 +248,7 @@ test(extraction_conformity_link) :-
  * * KEY DECISIONS:
  * 1. THE JEDI AS MUTATIONS: The primary insight is that "Force sensitivity" 
  * is a metaphor for high-fidelity systemic diagnostic ability. 
- * 2. THE DOMESTICATION GRADIENT: The Noose classification reflects the 
+ * 2. THE DOMESTICATION GRADIENT: The Snare classification reflects the 
  * "trap" of institutional success—the Order became so efficient at 
  * coordinating (Rope) that it eliminated the "friction" of internal 
  * dissent, which is where its actual diagnostic power resided.
@@ -258,9 +258,9 @@ test(extraction_conformity_link) :-
 
 omega_variable(
     training_conformity_ratio,
-    "Does Jedi training select for obedience (Noose) or boundary-testing (Scaffold)?",
+    "Does Jedi training select for obedience (Snare) or boundary-testing (Scaffold)?",
     resolution_mechanism("Analysis of Padawan failure rates vs. their success in identifying external systemic threats"),
-    impact("If Obedience: The Order is a terminal Noose. If Boundary-Testing: It 
+    impact("If Obedience: The Order is a terminal Snare. If Boundary-Testing: It 
             is an adaptive Rope."),
     confidence_without_resolution(medium)
 ).
@@ -278,7 +278,7 @@ omega_variable(
  * coordination" (The Rope).
  * * CONCLUSION:
  * The existence of viable, less-domesticated alternatives that are 
- * institutionally suppressed confirms the "Noose" status of the Council era Order.
+ * institutionally suppressed confirms the "Snare" status of the Council era Order.
  */
 
 /* ==========================================================================

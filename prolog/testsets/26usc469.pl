@@ -1,25 +1,24 @@
 % ============================================================================
-% CONSTRAINT STORY: tax_code_section_469
+% CONSTRAINT STORY: '26usc469'
 % ============================================================================
-% Generated: 2026-01-16
-% Model: Gemini 1.5 Pro
-% Source: 26 USC 469: Passive activity losses and credits limited
+% Generated: 2026-01-23
+% Model: Gemini Pro (Revised)
+% Source: 26 USC 469: Passive activity losses and credits limited 
+% Status: [RESOLVED MANDATROPHY]
 % ============================================================================
 
-:- module(tax_code_section_469, []).
+:- module(constraint_26usc469, []).
 
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
 
+% --- Namespace Hooks (Required for loading) ---
 :- multifile
     domain_priors:base_extractiveness/2,
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     constraint_indexing:constraint_classification/3.
-
-% Structural Anchor for System Extraction
-narrative_ontology:interval(tax_code_section_469, 0, 10).
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -27,144 +26,107 @@ narrative_ontology:interval(tax_code_section_469, 0, 10).
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: tax_code_section_469
- * human_readable: Passive Activity Loss (PAL) Limitations
- * domain: economic/political
- * temporal_scope: Post-1986 (Tax Reform Act of 1986)
- * spatial_scope: National (United States)
- * * SUMMARY:
- * Section 469 restricts taxpayers from using losses or credits from "passive activities"
- * (trades or businesses in which they do not materially participate) to offset "active"
- * income like wages or "portfolio" income like dividends. It essentially "silos"
- * investment losses, preventing them from being used to lower a taxpayer's overall tax
- * liability unless they have matching passive income.
- * * KEY AGENTS:
- * - Small_Investor: Individual with limited capital, often trapped by lack of "material participation."
- * - Real_Estate_Professional: Taxpayers who meet high hour thresholds to bypass PAL limits.
- * - IRS_Institutional: The state body enforcing the compartmentalization of income.
- * * NARRATIVE ARC:
- * Originally enacted to curb tax shelters, the constraint creates a barrier for
- * casual investors while providing specific "exits" for those with the time or
- * scale to qualify as professionals or maintain a portfolio of varied passive interests.
+ * 
+ * constraint_id: '26usc469'
+ * human_readable: Passive Activity Loss Limitation (Section 469)
+ * domain: legal/economic
+ * temporal_scope: 1986 - Present
+ * spatial_scope: National (US Tax Code)
+ * 
+ * SUMMARY:
+ * Section 469 of the U.S. tax code generally prevents taxpayers from deducting
+ * "passive losses" (e.g., from real estate rentals where the taxpayer is not
+ * "materially participating") against "active income" (e.g., salary).
+ * It aims to prevent the erosion of the tax base via artificial tax shelters.
+ * 
+ * KEY AGENTS:
+ * - Casual Passive Investor (Individual Powerless): Owns rental property but cannot deduct losses.
+ * - IRS (Institutional): Enforces the tax code to maintain tax base stability.
+ * - Tax Policy Analyst (Analytical): Observes the economic and behavioral effects of the law.
  */
 
 /* ==========================================================================
-   2. BASE PROPERTIES (Context-Independent)
+   2. CORE SYSTEM INTEGRATION (The "Reality" Layer)
    ========================================================================== */
 
-% Base extractiveness: Moderate (0.45)
-% It prevents wealth preservation via losses but fund the state.
-domain_priors:base_extractiveness(tax_code_section_469, 0.45).
+narrative_ontology:interval('26usc469', 0, 10).
+narrative_ontology:constraint_claim('26usc469', tangled_rope).
 
-% Suppression: High (0.75)
-% Alternatives (like direct offsetting) are legally prohibited and carry penalties.
-domain_priors:suppression_score(tax_code_section_469, 0.75).
+% Base extractiveness (0.72): Disallows legitimate economic losses for 
+% passive investors while favoring full-time professionals. It extracts capital
+% from those who cannot meet "material participation" thresholds.
+domain_priors:base_extractiveness('26usc469', 0.72).
 
-% Enforcement: Requires active maintenance (audit, reporting).
-domain_priors:requires_active_enforcement(tax_code_section_469).
+% Suppression (0.85): Restricts alternative participation definitions, 
+% making non-standard accounting illegal and effectively suppressing tax sheltering.
+domain_priors:suppression_score('26usc469', 0.85).
+
+% Enforcement: Requires active enforcement by the IRS during audits.
+domain_priors:requires_active_enforcement('26usc469').
+
+% BENEFICIARIES & VICTIMS
+constraint_beneficiary('26usc469', us_treasury).
+constraint_victim('26usc469', individual_passive_investors).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 1: Small Investor - NOOSE
+   PERSPECTIVE 1: CASUAL PASSIVE INVESTOR - Snare
    --------------------------------------------------------------------------
-   WHO: individual_powerless - Lacks the 750+ hours required for professional status.
-   WHEN: biographical - A 30-year investment horizon is dictated by these rules.
-   WHERE: trapped - Cannot simply "exit" the tax code while residing in the US.
-   SCOPE: national - Governed by federal law.
-
+   WHO: individual_powerless - Cannot meet "material participation" thresholds.
+   WHEN: biographical - Stuck with the rule for the life of the investment.
+   WHERE: trapped - Cannot deduct legitimate losses against active income.
+   
    WHY THIS CLASSIFICATION:
-   For the small investor, Section 469 is a Noose because it unilaterally disallows
-   legitimate economic losses from being recognized for tax purposes simply because
-   the investor has a "day job." It extracts value by denying deductions that
-   would be available to larger, specialized players.
-
-   NARRATIVE EVIDENCE:
-   "neither— (A) the passive activity loss, nor (B) the passive activity credit,
-   for the taxable year shall be allowed."
+   For the small passive investor, Section 469 is a 'Snare'. It prevents them
+   from deducting legitimate economic losses from their passive investments,
+   even if they are losing money. This strangles their ability to engage in
+   tax-efficient wealth building.
    -------------------------------------------------------------------------- */
-
 constraint_indexing:constraint_classification(
-    tax_code_section_469,
-    noose,
-    context(
-        agent_power(individual_powerless),
-        time_horizon(biographical),
-        exit_options(trapped),
-        spatial_scope(national)
-    )
-) :-
-    domain_priors:base_extractiveness(tax_code_section_469, E), E > 0.4,
-    domain_priors:suppression_score(tax_code_section_469, S), S > 0.6,
-    !.
+    '26usc469',
+    snare,
+    context(agent_power(individual_powerless), time_horizon(biographical), exit_options(trapped), spatial_scope(national))
+).
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 2: Real Estate Professional - ROPE
+   PERSPECTIVE 2: IRS - Rope
    --------------------------------------------------------------------------
-   WHO: individual_moderate - Has the agency to structure their life to meet legal thresholds.
-   WHEN: immediate - Adjusts participation hours annually.
-   WHERE: mobile - Professional status provides an "exit" from the PAL limitation.
-   SCOPE: local/regional - Focuses on their specific property portfolio.
-
+   WHO: institutional - Enforces the tax code to maintain tax base stability.
+   WHEN: historical - Administering tax laws since 1986.
+   WHERE: arbitrage - Can audit and enforce the rules against tax shelters.
+   
    WHY THIS CLASSIFICATION:
-   For the professional, the rule is a Rope—a functional coordination mechanism.
-   While it imposes a burden (750 hours of service), it provides a clear
-   pathway to bypass the restriction, effectively acting as a professional
-   standard that coordinates tax benefits with actual economic labor.
-
-   NARRATIVE EVIDENCE:
-   "paragraph (2) shall not apply to any rental real estate activity of such
-   taxpayer... if more than 750 hours of services during the taxable year...
-   are performed."
+   For the IRS, Section 469 is a 'Rope'. It is a crucial tool for maintaining
+   tax-base stability and preventing wealthy individuals from using artificial
+   losses to evade taxes. It coordinates fair tax collection.
    -------------------------------------------------------------------------- */
-
 constraint_indexing:constraint_classification(
-    tax_code_section_469,
+    '26usc469',
     rope,
-    context(
-        agent_power(individual_moderate),
-        time_horizon(immediate),
-        exit_options(mobile),
-        spatial_scope(regional)
-    )
-) :-
-    domain_priors:requires_active_enforcement(tax_code_section_469),
-    !.
+    context(agent_power(institutional), time_horizon(historical), exit_options(arbitrage), spatial_scope(national))
+).
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: IRS/Institutional - MOUNTAIN
+   PERSPECTIVE 3: TAX POLICY ANALYST - Tangled Rope
    --------------------------------------------------------------------------
-   WHO: institutional - Rule-making and enforcement power.
-   WHEN: civilizational - Viewed as a permanent pillar of post-1986 tax logic.
-   WHERE: analytical - Objective application of the code.
-   SCOPE: global - Affects all US citizens regardless of location.
-
+   WHO: analytical - Observes the economic and behavioral effects of the law.
+   WHEN: historical - Analyzing policy impact over decades.
+   WHERE: analytical - Evaluates the trade-offs of the legislation.
+   
    WHY THIS CLASSIFICATION:
-   From the perspective of the institution, Section 469 is a Mountain—an
-   unchangeable fact of the legal landscape. It is not an "extraction" but a
-   natural boundary of what constitutes a "passive activity," necessary to
-   prevent the "erosion" of the tax base by artificial tax shelters.
-
-   NARRATIVE EVIDENCE:
-   "The term 'passive activity' means any activity— (A) which involves the
-   conduct of any trade or business, and (B) in which the taxpayer does not
-   materially participate."
+   For a tax policy analyst, Section 469 is a 'Tangled Rope'. It's a 'Rope'
+   because it successfully curbs tax shelters and protects the tax base. It's
+   'Tangled' because it does so by creating complex rules that disproportionately
+   affect certain investors and can lead to unintended economic distortions.
    -------------------------------------------------------------------------- */
-
 constraint_indexing:constraint_classification(
-    tax_code_section_469,
-    mountain,
-    context(
-        agent_power(institutional),
-        time_horizon(civilizational),
-        exit_options(analytical),
-        spatial_scope(national)
-    )
-) :-
-    domain_priors:suppression_score(tax_code_section_469, S), S > 0.7,
-    !.
+    '26usc469',
+    tangled_rope,
+    context(agent_power(analytical), time_horizon(historical), exit_options(analytical), spatial_scope(national))
+).
 
 /* ==========================================================================
    4. TESTS (What We Learn About Constraints)
@@ -173,28 +135,12 @@ constraint_indexing:constraint_classification(
 :- begin_tests(tax_code_section_469_tests).
 
 test(multi_perspective_variance) :-
-    % Removed backslashes that were escaping newlines and breaking the atoms
-    constraint_indexing:constraint_classification(tax_code_section_469, Type1, 
-        context(agent_power(individual_powerless), _, _, _)),
-    constraint_indexing:constraint_classification(tax_code_section_469, Type2, 
-        context(agent_power(individual_moderate), _, _, _)),
-    constraint_indexing:constraint_classification(tax_code_section_469, Type3, 
-        context(agent_power(institutional), _, _, _)),
+    constraint_indexing:constraint_classification('26usc469', Type1, context(agent_power(individual_powerless), _, _, _)),
+    constraint_indexing:constraint_classification('26usc469', Type2, context(agent_power(institutional), _, _, _)),
+    constraint_indexing:constraint_classification('26usc469', Type3, context(agent_power(analytical), _, _, _)),
     Type1 \= Type2,
     Type2 \= Type3,
-    Type1 \= Type3. % Terminates the predicate correctly
-
-test(professional_exit_validity) :-
-    % Test that mobility/exit options change the classification from Noose to Rope
-    constraint_indexing:constraint_classification(tax_code_section_469, 'noose',
-        context(agent_power(_), time_horizon(_), exit_options('trapped'), spatial_scope(_))),
-
-    constraint_indexing:constraint_classification(tax_code_section_469, 'rope',
-	context(agent_power(_), time_horizon(_), exit_options('mobile'), spatial_scope(_))).
-
-test(time_horizon_perception) :-
-    % Institutional view sees the law as civilizational (Mountain)
-    constraint_indexing:constraint_classification(tax_code_section_469, mountain, context(_, time_horizon(civilizational), _, _)).
+    Type1 \= Type3.
 
 :- end_tests(tax_code_section_469_tests).
 
@@ -204,52 +150,70 @@ test(time_horizon_perception) :-
 
 /**
  * LLM GENERATION NOTES
- * * Model: Gemini 1.5 Pro
- * Date: 2026-01-16
- * * KEY DECISIONS:
- * * 1. EXTRACTIVENESS SCORE (0.45):
- * Reasoning: While Section 469 prevents tax avoidance (benefiting the collective state),
- * it creates a "tax on losses" for those without the liquidity to wait for
- * future passive income, representing a moderate asymmetric flow.
- * * 2. SUPPRESSION SCORE (0.75):
- * Reasoning: The law explicitly defines "material participation" in a way that
- * excludes most alternative definitions of involvement. Alternatives like
- * "aggregate netting" are strictly suppressed by subsection (a).
- * * 3. PERSPECTIVE SELECTION:
- * Chose Small Investor (Powerless), Real Estate Pro (Moderate/Mobile), and
- * IRS (Institutional) to highlight the gap between those crushed by the rule
- * and those who use it as a regulatory barrier to entry.
- * * 4. CONFIDENCE:
- * High: Legal definitions and the "Noose" vs "Rope" distinction based on professional status.
- * Medium: Extractiveness score (subjective based on economic philosophy).
+ * 
+ * Model: Gemini Pro (Revised)
+ * Date: 2026-01-23
+ * 
+ * KEY DECISIONS:
+ * 
+ * 1. INSTITUTIONAL PERSPECTIVE: Added the 'IRS' as the institutional agent.
+ *    For them, the rule is a crucial 'Rope' for tax administration and fairness.
+ *
+ * 2. CLASSIFICATION RATIONALE:
+ *    - Investor (Snare): Cannot deduct legitimate losses.
+ *    - IRS (Rope): A tool for tax base stability.
+ *    - Analyst (Tangled Rope): Balances benefits of preventing tax shelters with unintended complexity.
+ * 
+ * 3. MANDATROPHY STATUS: High extractiveness (0.72) is 'RESOLVED' because
+ *    the intention is to prevent tax base erosion, which is a societal benefit.
+ *    The 'Snare' experienced by passive investors is a consequence of this broader goal.
  */
 
 /* ==========================================================================
-   6. ALTERNATIVE ANALYSIS
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
+/**
+ * OMEGA IDENTIFICATION
+ *
+ * Mandatory Omega for high-extraction constraints.
+ */
 
+omega_variable(
+    tax_code_469_extraction_intent,
+    "Is the 'material participation' requirement a functional necessity for tax-base stability or a predatory moat for full-time incumbents in certain industries (e.g., real estate)?",
+    resolution_mechanism("Audit of legislative history and lobbyist influence in the 1986 Tax Reform Act; comparative impact analysis of small vs. large passive investors."),
+    impact("If necessity: 'Mountain'. If predatory choice: 'Snare/Mandatrophy'."),
+    confidence_without_resolution(medium)
+).
+
+/* ==========================================================================
+   7. ALTERNATIVE ANALYSIS
+   ========================================================================== */
 /**
  * VIABLE ALTERNATIVES
- * * ALTERNATIVE 1: Pre-1986 System (Universal Netting)
- * Viability: Historically proven, allowed all business losses to offset any income.
- * Suppression: Explicitly replaced by the 1986 Act to kill the tax shelter industry.
- * * ALTERNATIVE 2: Pro-Rata Participation
- * Viability: Allowing a percentage of losses based on a percentage of hours worked.
- * Suppression: Rejected in favor of "all-or-nothing" thresholds (750 hours).
- * * CONCLUSION:
- * The existence of suppressed alternatives (especially the previous system)
- * reinforces the "Noose" classification for the powerless individual who
- * cannot meet the arbitrary 750-hour "Rope" requirement.
+ *
+ * ALTERNATIVE 1: Unlimited Passive Loss Deduction
+ *    Viability: Historically, this was the system prior to 1986.
+ *    Suppression: Rejected due to widespread abuse and erosion of the tax base via tax shelters.
+ *
+ * CONCLUSION:
+ * Section 469 is a 'Tangled Rope' that attempts to strike a balance between
+ * preventing tax evasion and allowing legitimate business losses. The
+ * suppression of unlimited passive loss deduction was a necessary step
+ * to protect the tax base, but its implementation created a 'Snare' for
+ * some passive investors.
  */
 
 /* ==========================================================================
-   7. INTEGRATION HOOKS
+   8. INTEGRATION HOOKS
    ========================================================================== */
 
 /**
  * TO USE THIS FILE:
- * 1. Load: ?- [tax_code_section_469].
- * 2. Run tests: ?- run_tests(tax_code_section_469_tests).
+ * 
+ * 1. Load: ?- [constraints/'26usc469'].
+ * 2. Multi-perspective: ?- multi_index_report('26usc469').
+ * 3. Run tests: ?- run_tests(tax_code_section_469_tests).
  */
 
 /* ==========================================================================

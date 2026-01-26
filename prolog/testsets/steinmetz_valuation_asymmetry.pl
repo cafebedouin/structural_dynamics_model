@@ -45,7 +45,7 @@
  * the complexity. Steinmetz is called in as a 
  * "Wizard" to provide an arbitrage between the $1 mark and the $10,000 value of 
  * operational perfection. The constraint 
- * functions as a "Noose" for the desperate client but a "Rope" for the rare expert.
+ * functions as a "Snare" for the desperate client but a "Rope" for the rare expert.
  */
 
 /* ==========================================================================
@@ -115,7 +115,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 2: HENRY FORD - Noose
+   PERSPECTIVE 2: HENRY FORD - Snare
    --------------------------------------------------------------------------
    
    WHO: institutional (Owner of the plant)
@@ -124,7 +124,7 @@ constraint_indexing:constraint_classification(
    SCOPE: national (Industrial scale)
    
    WHY THIS CLASSIFICATION:
-   For Ford, the invoice is a "Noose." He recognizes the success but "balks" at 
+   For Ford, the invoice is a "Snare." He recognizes the success but "balks" at 
    the extraction of $9,999 for a "chalk mark," realizing he is paying a 
    premium for a resource (expertise) he cannot manufacture.
    
@@ -134,7 +134,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     steinmetz_valuation_asymmetry,
-    noose,
+    snare,
     context(
         agent_power(institutional),
         time_horizon(biographical),
@@ -184,8 +184,8 @@ constraint_indexing:constraint_classification(
 test(multi_perspective_valuation) :-
     % Engineers (Powerless) see Mountain
     constraint_indexing:constraint_classification(steinmetz_valuation_asymmetry, mountain, context(individual_powerless, immediate, trapped, local)),
-    % Ford (Powerful) sees Noose
-    constraint_indexing:constraint_classification(steinmetz_valuation_asymmetry, noose, context(institutional, biographical, trapped, national)),
+    % Ford (Powerful) sees Snare
+    constraint_indexing:constraint_classification(steinmetz_valuation_asymmetry, snare, context(institutional, biographical, trapped, national)),
     % Steinmetz (Analytical) sees Rope
     constraint_indexing:constraint_classification(steinmetz_valuation_asymmetry, rope, context(analytical, civilizational, mobile, global)),
     Type1 \= Type2, Type2 \= Type3.
@@ -217,7 +217,7 @@ test(time_immutability_expertise) :-
  * Reasoning: The story is the quintessential example of high-extraction knowledge 
  * valuation. The fee is 9,999% higher than the material labor cost ($1).
  * * 2. PERSPECTIVE SELECTION:
- * Chose the Engineers (failure/Mountain), Ford (cost/Noose), and Steinmetz 
+ * Chose the Engineers (failure/Mountain), Ford (cost/Snare), and Steinmetz 
  * (value/Rope) to demonstrate how the same invoice changes from a tragedy 
  * to an expense to a triumph.
  * * 3. MANDATROPHY RESOLUTION:
@@ -227,7 +227,7 @@ test(time_immutability_expertise) :-
  * * 4. AMBIGUITIES:
  * - The text doesn't explicitly state the downtime cost to Ford, but the 
  * "gigantic generator" and Ford's willingness to pay the $10,000 imply 
- * that the alternative (a non-working machine) was a far more lethal Noose.
+ * that the alternative (a non-working machine) was a far more lethal Snare.
  */
 
 /* ==========================================================================
@@ -237,9 +237,9 @@ test(time_immutability_expertise) :-
 omega_variable(
     steinmetz_valuation_intent,
     "Is the $10,000 fee a functional necessity to maintain the GE/Steinmetz knowledge 
-    ecosystem (Mountain) or a predatory extraction targeting Ford's desperation (Noose)?",
+    ecosystem (Mountain) or a predatory extraction targeting Ford's desperation (Snare)?",
     resolution_mechanism("Audit of GE's standard billing for similar expert interventions vs. competitor pricing"),
-    impact("If necessity: Professional Mountain. If predatory: Mandatrophy Noose."),
+    impact("If necessity: Professional Mountain. If predatory: Mandatrophy Snare."),
     confidence_without_resolution(medium)
 ).
 
@@ -257,7 +257,7 @@ omega_variable(
  * Suppression: Steinmetz explicitly rejects this by itemizing "Knowing where".
  * * CONCLUSION:
  * The existence of Alternative 2 (Hourly Billing) is what Steinmetz actively 
- * suppresses to transform his labor into an high-extractiveness Noose for Ford, 
+ * suppresses to transform his labor into an high-extractiveness Snare for Ford, 
  * which Ford eventually accepts as a Rope for his business.
  */
 

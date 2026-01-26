@@ -49,7 +49,7 @@
  * law of the universe that large enough systems must contain patterns. 
  * For the mathematician, it is a "Rope" for proving lower bounds in 
  * combinatorics. However, for the computer scientist seeking the exact 
- * value of N, it becomes a "Noose," as the search space grows at an 
+ * value of N, it becomes a "Snare," as the search space grows at an 
  * ackermannian rate, strangling computational resources.
  */
 
@@ -142,7 +142,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE COMPUTATIONAL ALGORITHMIST - Noose
+   PERSPECTIVE 3: THE COMPUTATIONAL ALGORITHMIST - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless - Subject to the limits of compute and time.
@@ -152,7 +152,7 @@ constraint_indexing:constraint_classification(
    
    WHY THIS CLASSIFICATION:
    For the computer scientist trying to calculate W(5, 2), the theorem is 
-   a Noose. The upper bounds are so large (Gowers' bounds) that they 
+   a Snare. The upper bounds are so large (Gowers' bounds) that they 
    effectively strangle computational possibility. The theorem promises 
    the number exists, but the complexity of finding it is a trap that 
    tightens as k or r increases.
@@ -160,7 +160,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     van_der_waerden_theorem,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -180,11 +180,11 @@ test(multi_perspective_variance) :-
     constraint_indexing:constraint_classification(van_der_waerden_theorem, mountain, context(agent_power(analytical), _, _, _)),
     % Perspective 2: Institutional sees Rope
     constraint_indexing:constraint_classification(van_der_waerden_theorem, rope, context(agent_power(institutional), _, _, _)),
-    % Perspective 3: Powerless sees Noose
-    constraint_indexing:constraint_classification(van_der_waerden_theorem, noose, context(agent_power(individual_powerless), _, _, _)).
+    % Perspective 3: Powerless sees Snare
+    constraint_indexing:constraint_classification(van_der_waerden_theorem, snare, context(agent_power(individual_powerless), _, _, _)).
 
 test(power_extractiveness_complexity) :-
-    % Powerless algorists feel the total extraction of compute time (Noose).
+    % Powerless algorists feel the total extraction of compute time (Snare).
     % Institutional mathematicians use it to bound other theories (Rope).
     ContextPowerless = context(individual_powerless, immediate, trapped, local),
     ContextPowerful = context(institutional, biographical, arbitrage, national),
@@ -215,7 +215,7 @@ test(time_immutability_scale) :-
  * coloring. Once the scale is large enough, disorder is forbidden.
  * * 3. PERSPECTIVE SELECTION:
  * The Analyst (Mountain) sees the Law. The Strategist (Rope) sees the 
- * Guarantee. The Algorist (Noose) sees the Complexity.
+ * Guarantee. The Algorist (Snare) sees the Complexity.
  */
 
 /* ==========================================================================
@@ -226,7 +226,7 @@ omega_variable(
     vd_waerden_exact_growth,
     "What is the exact growth rate of the Van der Waerden numbers W(k, r)?",
     resolution_mechanism("Mathematical proof narrowing the gap between Gowers' upper bounds and current lower bounds"),
-    impact("If Gowers-like: It's a permanent Noose for computation. If significantly lower: It becomes a Rope for computer science."),
+    impact("If Gowers-like: It's a permanent Snare for computation. If significantly lower: It becomes a Rope for computer science."),
     confidence_without_resolution(medium)
 ).
 
@@ -243,7 +243,7 @@ omega_variable(
  * * CONCLUSION:
  * Since there are no "chaos-permitting" alternatives for large N, this 
  * constraint remains a Mountain for the universe, but the specific 
- * difficulty of computing N creates a Noose for the individual actor.
+ * difficulty of computing N creates a Snare for the individual actor.
  */
 
 /* ==========================================================================

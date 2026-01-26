@@ -20,7 +20,7 @@ constraint_metric(sec_registration, extractiveness, 0.04). % Assumption: Complia
 constraint_metric(sec_registration, suppression_requirement, 0.04).
 constraint_metric(sec_registration, snap_back_potential, 0.0).
 
-% Loss Sharing Agreement exhibits "Noose" characteristics (Capture by legacy members).
+% Loss Sharing Agreement exhibits "Snare" characteristics (Capture by legacy members).
 constraint_claim(loss_sharing_agreement, rope).
 constraint_metric(loss_sharing_agreement, extractiveness, 0.75). % Assumption: Significant liability shifting to the new entity.
 constraint_metric(loss_sharing_agreement, suppression_requirement, 0.80).
@@ -32,12 +32,12 @@ measurement(m2, sec_registration, suppression_requirement, 0, 0.02).
 measurement(m3, sec_registration, extractiveness, 20, 0.04).
 measurement(m4, sec_registration, suppression_requirement, 20, 0.04).
 
-% Loss Sharing Agreement: Evolution from functional coordination (Rope) to Noose.
+% Loss Sharing Agreement: Evolution from functional coordination (Rope) to Snare.
 measurement(m5, loss_sharing_agreement, extractiveness, 0, 0.30).
 measurement(m6, loss_sharing_agreement, suppression_requirement, 0, 0.25).
 measurement(m7, loss_sharing_agreement, extractiveness, 10, 0.55).
 measurement(m8, loss_sharing_agreement, suppression_requirement, 10, 0.50).
-measurement(m9, loss_sharing_agreement, extractiveness, 20, 0.75). % Transformation: Noose 
+measurement(m9, loss_sharing_agreement, extractiveness, 20, 0.75). % Transformation: Snare 
 measurement(m10, loss_sharing_agreement, suppression_requirement, 20, 0.80).
 
 % --- SECTION 5: DEPENDENCIES ---

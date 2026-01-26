@@ -82,7 +82,7 @@ narrative_ontology:constraint_metric(non_compete_agreements, suppression_require
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 1: THE JUNIOR WORKER - Noose
+   PERSPECTIVE 1: THE JUNIOR WORKER - Snare
    --------------------------------------------------------------------------
    WHO: individual_powerless
    WHEN: immediate
@@ -90,7 +90,7 @@ narrative_ontology:constraint_metric(non_compete_agreements, suppression_require
    SCOPE: national
    
    WHY THIS CLASSIFICATION:
-   For a junior worker with limited savings, a non-compete is a "Noose." 
+   For a junior worker with limited savings, a non-compete is a "Snare." 
    They cannot afford the legal fees to fight it, and the threat of an 
    injunction prevents them from taking any new job in their sector. 
    It is a pure extraction of their right to work.
@@ -98,7 +98,7 @@ narrative_ontology:constraint_metric(non_compete_agreements, suppression_require
 
 constraint_indexing:constraint_classification(
     non_compete_agreements,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -174,8 +174,8 @@ constraint_indexing:constraint_classification(
 :- begin_tests(non_compete_tests).
 
 test(power_asymmetry_noose) :-
-    % Testing that powerless agents (workers) see a Noose.
-    constraint_indexing:constraint_classification(non_compete_agreements, noose, context(individual_powerless, _, _, _)).
+    % Testing that powerless agents (workers) see a Snare.
+    constraint_indexing:constraint_classification(non_compete_agreements, snare, context(individual_powerless, _, _, _)).
 
 test(legal_precedent_mountain) :-
     % Testing that analytical views see the structural Mountain.
@@ -204,7 +204,7 @@ omega_variable(
     ftc_ban_enforceability,
     "Will federal bans on non-competes survive judicial review in 2026?",
     resolution_mechanism("Supreme Court ruling on administrative agency overreach"),
-    impact("If Upheld: The Mountain crumbles; the Noose is cut. If Struck Down: The Noose tightens."),
+    impact("If Upheld: The Mountain crumbles; the Snare is cut. If Struck Down: The Snare tightens."),
     confidence_without_resolution(low)
 ).
 

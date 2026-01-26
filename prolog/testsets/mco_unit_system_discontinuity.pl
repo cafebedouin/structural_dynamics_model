@@ -27,17 +27,17 @@
 /**
  * CONSTRAINT IDENTIFICATION
  * * constraint_id: mco_unit_system_discontinuity
- * human_readable: Metric/English Interface Discontinuity
+ * human_readable: Persistence of Imperial Units in a Metric World
  * domain: technological/institutional
- * temporal_scope: 1998-1999
- * spatial_scope: NASA JPL / Lockheed Martin Astronautics
+ * temporal_scope: 1960s - Present
+ * spatial_scope: Global Science & Engineering (esp. US)
  * * SUMMARY:
- * The loss of the Mars Climate Orbiter (MCO) was caused by a failure to 
- * reconcile different unit systems across a critical software interface. 
- * Lockheed Martin provided thruster performance data in English units 
- * (pound-seconds), while the JPL navigation team expected Metric units 
- * (newton-seconds). This technical "wall" functioned as a structural 
- * constraint that rendered the navigation software's output incorrect.
+ * The continued use of the Imperial unit system in a global scientific
+ * community that has standardized on Metric is a classic Piton. It is a
+ * legacy coordination system (a Rope) that has lost its function but
+ * persists through cultural inertia. This creates constant friction, risk, and
+ * catastrophic failures, like the Mars Climate Orbiter loss, which serves
+ * as the canonical example of this Piton failing under load.
  * * KEY AGENTS:
  * - Navigation Engineer (JPL): Individual powerless; subject to the data 
  * provided by the upstream software interface.
@@ -46,11 +46,10 @@
  * - Mishap Investigation Board: Analytical; post-hoc observer identifying 
  * the systemic "Requirements Engineering" failure.
  * * NARRATIVE ARC:
- * What appeared to be a standard Interface Control Document (ICD) acting 
- * as a Rope (coordination) was actually an unyielding Mountain of 
- * mismatched assumptions. Because the system lacked automated unit 
- * verification, the discontinuity became a Noose that extracted $125.5 
- * million in public funds and years of scientific progress.
+ * The Imperial system was once a functional Rope for regional coordination.
+ * In the context of global science, it has become a Piton. It provides no
+ * coordinating benefit over the global standard (Metric) and introduces
+ * high-friction costs and catastrophic risk. It persists only through inertia.
  */
 
 /* ==========================================================================
@@ -59,33 +58,44 @@
 
 % Structural Anchor for index extraction
 narrative_ontology:interval(mco_failure_trajectory, 0, 10).
-narrative_ontology:constraint_claim(mco_unit_system_discontinuity, noose).
+narrative_ontology:constraint_claim(mco_unit_system_discontinuity, piton).
 
 % Base extractiveness score (0.0-1.0)
-% Rationale: 0.9. High extraction; the project "extracted" total mission 
-% value, capital, and labor without delivering the intended scientific 
-% output due to the "silent" nature of the failure.
-domain_priors:base_extractiveness(mco_unit_system_discontinuity, 0.9).
+% Rationale: 0.3. Low-to-moderate. The constraint extracts cognitive energy
+% through constant conversion requirements and introduces a high risk of
+% catastrophic failure (like the MCO loss).
+domain_priors:base_extractiveness(mco_unit_system_discontinuity, 0.3).
 
 % Suppression score (0.0-1.0)
-% Rationale: 0.7. Alternatives (unit-testing, independent verification) 
-% were suppressed by a culture of "Faster, Better, Cheaper" and poor 
-% requirements management.
-domain_priors:suppression_score(mco_unit_system_discontinuity, 0.7).
+% Rationale: 0.1. Very low. The Metric system is not actively suppressed;
+% the Imperial system simply persists through cultural and educational inertia.
+domain_priors:suppression_score(mco_unit_system_discontinuity, 0.1).
 
-% Enforcement requirements
-% Emerges naturally from technical silos, but required active management 
-% neglect of the "Requirements Engineering" process to persist.
-domain_priors:requires_active_enforcement(mco_unit_system_discontinuity).
+% Resistance score (0.0-1.0)
+% Rationale: 0.8. Very high. The global scientific community actively
+% resists the use of Imperial units, and failures like the MCO create
+% immense pushback and demand for standardization.
+domain_priors:resistance_score(mco_unit_system_discontinuity, 0.8).
+
 
 % Metrics required for Section 1 of the Executive Summary
-narrative_ontology:constraint_metric(mco_unit_system_discontinuity, extractiveness, 0.9).
-narrative_ontology:constraint_metric(mco_unit_system_discontinuity, suppression_requirement, 0.7).
+narrative_ontology:constraint_metric(mco_unit_system_discontinuity, extractiveness, 0.3).
+narrative_ontology:constraint_metric(mco_unit_system_discontinuity, suppression_requirement, 0.1).
+
+% Make the constraint "evolve" by showing resistance increasing over time
+narrative_ontology:constraint_metric(mco_unit_system_discontinuity, resistance, 0.5, 0). % Initial friction
+narrative_ontology:constraint_metric(mco_unit_system_discontinuity, resistance, 0.8, 10). % High resistance after major failures
+
+% Formally model the viable alternative
+narrative_ontology:intent_viable_alternative(mco_failure_trajectory,
+    'The Metric System (SI)',
+    'The global standard for science and engineering, which simplifies collaboration and reduces conversion errors.').
 
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(mco_unit_system_discontinuity, short_term_budget_savings).
+constraint_beneficiary(mco_unit_system_discontinuity, us_aerospace_legacy_tooling).
 constraint_victim(mco_unit_system_discontinuity, planetary_science_community).
 constraint_victim(mco_unit_system_discontinuity, us_taxpayers).
+
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)
@@ -155,7 +165,7 @@ constraint_indexing:constraint_classification(
     !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: MISHAP INVESTIGATION BOARD - Noose
+   PERSPECTIVE 3: MISHAP INVESTIGATION BOARD - Snare
    --------------------------------------------------------------------------
    
    WHO: analytical - Post-failure body identifying the root cause.
@@ -165,7 +175,7 @@ constraint_indexing:constraint_classification(
    SCOPE: global - A case study in systems engineering failure.
    
    WHY THIS CLASSIFICATION:
-   The Board identifies the interface as a Noose. The lack of unit 
+   The Board identifies the interface as a Snare. The lack of unit 
    validation suppressed the error until it "choked" the orbiter's 
    propulsion system during Mars orbit insertion, extracting the 
    entirety of the project's value.
@@ -175,7 +185,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     mco_unit_system_discontinuity,
-    noose,
+    snare,
     context(
         agent_power(analytical),
         time_horizon(historical),
@@ -194,7 +204,7 @@ constraint_indexing:constraint_classification(
 :- begin_tests(mco_unit_system_discontinuity_tests).
 
 test(multi_perspective_asymmetry) :-
-    % Engineer (Mountain) vs Manager (Rope) vs Investigator (Noose)
+    % Engineer (Mountain) vs Manager (Rope) vs Investigator (Snare)
     constraint_indexing:constraint_classification(mco_unit_system_discontinuity, T1, context(individual_powerless, immediate, trapped, local)),
     constraint_indexing:constraint_classification(mco_unit_system_discontinuity, T2, context(institutional, biographical, mobile, national)),
     constraint_indexing:constraint_classification(mco_unit_system_discontinuity, T3, context(analytical, historical, analytical, global)),
@@ -230,7 +240,7 @@ omega_variable(
      outweighed the risk of mission failure?",
     resolution_mechanism("Comparison of modern NASA mission requirements vs. 1999 standards"),
     impact("If Yes: The silo was a temporary Rope. If No: It was a 
-            structural Noose from inception."),
+            structural Snare from inception."),
     confidence_without_resolution(medium)
 ).
 
@@ -251,7 +261,7 @@ omega_variable(
  * * CONCLUSION:
  * The existence of proven engineering alternatives (Simulation/Unit Testing) 
  * that were suppressed for cost reasons confirms the classification of the 
- * unit discontinuity as a Noose.
+ * unit discontinuity as a Snare.
  */
 
 /* ==========================================================================

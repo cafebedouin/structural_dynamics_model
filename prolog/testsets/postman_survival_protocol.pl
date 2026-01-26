@@ -43,7 +43,7 @@
  * * NARRATIVE ARC:
  * The individual is bombarded by technological change and "hardenings of categories". 
  * Postman's rules function as a "Rope" for the subject to navigate a society that is 
- * functionally a "Noose" (bureaucracy) or a "Mountain" (the prevalence of nonsense).
+ * functionally a "Snare" (bureaucracy) or a "Mountain" (the prevalence of nonsense).
  */
 
 /* ==========================================================================
@@ -113,7 +113,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE BUREAUCRACY (Read's Law) - Noose
+   PERSPECTIVE 2: THE BUREAUCRACY (Read's Law) - Snare
    --------------------------------------------------------------------------
    
    WHO: institutional (Large groups/bureaucracies)
@@ -122,7 +122,7 @@ constraint_indexing:constraint_classification(
    SCOPE: national (Modern America / Bureaucracies at scale)
    
    WHY THIS CLASSIFICATION:
-   From the perspective of the individual subject, the bureaucracy is a "Noose." 
+   From the perspective of the individual subject, the bureaucracy is a "Snare." 
    It extracts individual differences to satisfy the rules of the system and 
    lacks human traits like loyalty or compassion.
    
@@ -133,7 +133,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     postman_survival_protocol,
-    noose,
+    snare,
     context(
         agent_power(institutional),
         time_horizon(historical),
@@ -183,7 +183,7 @@ constraint_indexing:constraint_classification(
 test(multi_perspective_hygiene) :-
     % Individual Subject sees Rope
     constraint_indexing:constraint_classification(postman_survival_protocol, Type1, context(individual_powerless, biographical, mobile, local)),
-    % Bureaucracy acts as Noose
+    % Bureaucracy acts as Snare
     constraint_indexing:constraint_classification(postman_survival_protocol, Type2, context(institutional, historical, trapped, national)),
     % Sage sees Mountain
     constraint_indexing:constraint_classification(postman_survival_protocol, Type3, context(analytical, civilizational, analytical, global)),
@@ -219,7 +219,7 @@ test(time_immutability) :-
  * Reasoning: The protocol itself is low-extraction (it's a tool for agency). However, 
  * the *asymmetry* between the individual and the bureaucracy it responds to 
  * is high (0.8). I resolved this by marking the protocol as a "Rope" for the 
- * individual to avoid the "Noose" of the institution.
+ * individual to avoid the "Snare" of the institution.
  * * 2. SUPPRESSION SCORE (0.5):
  * Reasoning: Postman explicitly advises suppressing "plain speaking" and 
  * numerical "superstition". This suppression is intentional and 
@@ -240,9 +240,9 @@ test(time_immutability) :-
 % Mandatory Omega for high-extraction (systemic) constraints:
 omega_variable(
     postman_concealment_efficacy,
-    "Is language as a tool for concealment (Rope) a functional necessity for social peace or a predatory Noose for truth-seekers?",
+    "Is language as a tool for concealment (Rope) a functional necessity for social peace or a predatory Snare for truth-seekers?",
     resolution_mechanism("Audit of interpersonal trust levels in high-honesty vs. high-tact cultures"),
-    impact("If necessity: Social Mountain. If predatory: Mandatrophy Noose."),
+    impact("If necessity: Social Mountain. If predatory: Mandatrophy Snare."),
     confidence_without_resolution(medium)
 ).
 
@@ -271,7 +271,7 @@ omega_variable(
  * * CONCLUSION:
  * The existence of these alternatives (Honesty, Quantification) shifts Postman's 
  * protocol into a "Rope" of informational hygiene. Without his rules, 
- * the individual is easily ensnared by the "Noose" of these alternatives.
+ * the individual is easily ensnared by the "Snare" of these alternatives.
  */
 
 /* ==========================================================================

@@ -37,13 +37,13 @@ constraint_metric(liquidity_pool, extractiveness, 0.95).
 constraint_metric(liquidity_pool, suppression_requirement, 0.90).
 
 % --- 4. TEMPORAL MEASUREMENTS (PAIRED) ---
-% Repo 105: Evolution from tool (Rope) to manipulation (Noose)
+% Repo 105: Evolution from tool (Rope) to manipulation (Snare)
 measurement(m1, repo_105, extractiveness, 24, 0.20).
 measurement(m2, repo_105, suppression_requirement, 24, 0.85).
 measurement(m3, repo_105, extractiveness, 29, 0.85).
 measurement(m4, repo_105, suppression_requirement, 29, 0.95).
 
-% Liquidity Pool: Evolution from fortress (Mountain) to encumbered asset (Noose)
+% Liquidity Pool: Evolution from fortress (Mountain) to encumbered asset (Snare)
 measurement(m5, liquidity_pool, extractiveness, 24, 0.10).
 measurement(m6, liquidity_pool, suppression_requirement, 24, 0.05).
 measurement(m7, liquidity_pool, extractiveness, 32, 0.95).

@@ -48,7 +48,7 @@
  * Success creates a "Mountain" of institutional inertia. For the CEO, 
  * the focus on best customers is a "Rope" for coordination and profit. 
  * However, as a disruptive tech improves, that same focus becomes a 
- * "Noose," as the incumbent is unable to pivot without destroying its 
+ * "Snare," as the incumbent is unable to pivot without destroying its 
  * existing business model, leading to the extraction of its market value.
  */
 
@@ -163,7 +163,7 @@ constraint_indexing:constraint_classification(
     !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE INCUMBENT MANAGER - Noose
+   PERSPECTIVE 3: THE INCUMBENT MANAGER - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless - Subject to internal KPIs and budgets.
@@ -172,7 +172,7 @@ constraint_indexing:constraint_classification(
    SCOPE: local - Immediate business unit.
    
    WHY THIS CLASSIFICATION:
-   For the manager inside a successful firm, the dilemma is a Noose. 
+   For the manager inside a successful firm, the dilemma is a Snare. 
    They see the disruptive threat, but the system "strangles" their 
    ability to respond. If they invest in the new tech, they fail 
    their current customers and kill their margins; if they don't, 
@@ -186,7 +186,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     innovators_dilemma,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -205,13 +205,13 @@ constraint_indexing:constraint_classification(
 :- begin_tests(innovators_dilemma_tests).
 
 test(multi_perspective_variance) :-
-    % Analyst sees Mountain, Investor sees Rope, Manager sees Noose
+    % Analyst sees Mountain, Investor sees Rope, Manager sees Snare
     constraint_indexing:constraint_classification(innovators_dilemma, mountain, context(analytical, historical, analytical, global)),
     constraint_indexing:constraint_classification(innovators_dilemma, rope, context(institutional, biographical, arbitrage, national)),
-    constraint_indexing:constraint_classification(innovators_dilemma, noose, context(individual_powerless, immediate, trapped, local)).
+    constraint_indexing:constraint_classification(innovators_dilemma, snare, context(individual_powerless, immediate, trapped, local)).
 
 test(power_extractiveness_viability) :-
-    % Powerless managers feel the extraction of their agency (Noose).
+    % Powerless managers feel the extraction of their agency (Snare).
     % Institutional investors arbitrage the dilemma for capital gains (Rope).
     ContextPowerless = context(individual_powerless, immediate, trapped, local),
     ContextPowerful = context(institutional, biographical, arbitrage, national),
@@ -245,7 +245,7 @@ test(time_immutability_market) :-
  * * 3. CLASSIFICATION RATIONALE:
  * Analytical → Mountain: The law of creative destruction is a market invariant.
  * Institutional → Rope: It allows capital to move where it is most efficient.
- * Powerless → Noose: It prevents internal change, leading to personal/professional ruin.
+ * Powerless → Snare: It prevents internal change, leading to personal/professional ruin.
  */
 
 /* ==========================================================================
@@ -254,7 +254,7 @@ test(time_immutability_market) :-
 
 omega_variable(
     spin_off_efficacy,
-    "Can an incumbent 'untie' the Noose (Rope) by creating an independent 
+    "Can an incumbent 'untie' the Snare (Rope) by creating an independent 
     autonomous business unit, or does the parent firm's 'Mountain' of 
     values always crush the spin-off?",
     resolution_mechanism("Long-term tracking of incumbent survival rates 
@@ -277,7 +277,7 @@ omega_variable(
  * sales teams who see it as "irrational" to kill a profitable product.
  * * CONCLUSION:
  * The existence of a suppressed "Cannibalization" alternative confirms 
- * that the Innovator's Dilemma is a Noose—the system's current success 
+ * that the Innovator's Dilemma is a Snare—the system's current success 
  * is the very thing that prevents the exit toward survival.
  */
 

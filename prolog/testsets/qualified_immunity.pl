@@ -50,7 +50,7 @@
  * Originally intended as a "good faith" defense (Rope), the doctrine has 
  * evolved through judicial refinement into a nearly insurmountable barrier 
  * (Mountain) for victims of police misconduct, effectively functioning 
- * as a mechanism that extracts justice (Noose) from the powerless.
+ * as a mechanism that extracts justice (Snare) from the powerless.
  */
 
 /* ==========================================================================
@@ -155,7 +155,7 @@ constraint_indexing:constraint_classification(
    SCOPE: local.
    
    WHY THIS CLASSIFICATION:
-   For the victim, the doctrine is a Noose. They have suffered a physical 
+   For the victim, the doctrine is a Snare. They have suffered a physical 
    injury or loss of liberty, yet the legal system uses its own technicality 
    to strangle their right to a remedy. The "logic" of the doctrine pulls 
    tighter the more egregious the violation, as unique violations are, by 
@@ -164,7 +164,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     qualified_immunity,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -213,7 +213,7 @@ test(precedent_suppression) :-
  * suppression mechanism—it penalizes novelty and makes alternatives 
  * (new precedents) nearly impossible to reach.
  * 3. NOOSE ARGUMENT: The "catch-22" (you need a case to win, but you can't 
- * get a case because you can't win) is a perfect logical Noose.
+ * get a case because you can't win) is a perfect logical Snare.
  */
 
 /* ==========================================================================
@@ -224,7 +224,7 @@ omega_variable(
     clearly_established_definition,
     "Will the Supreme Court ever define 'clearly established' without requiring factual identity?",
     resolution_mechanism("Analysis of future SCOTUS rulings on the 'unobviousness' of violations"),
-    impact("If Yes: QI shifts from Mountain to Rope. If No: It remains a Noose."),
+    impact("If Yes: QI shifts from Mountain to Rope. If No: It remains a Snare."),
     confidence_without_resolution(low)
 ).
 
@@ -242,7 +242,7 @@ omega_variable(
  * Viability: Moderate. Requires judicial reversal.
  * * CONCLUSION:
  * The existence of suppressed alternatives (like municipal liability) 
- * suggests that QI is an artificial Noose, not a natural Mountain.
+ * suggests that QI is an artificial Snare, not a natural Mountain.
  */
 
 /* ==========================================================================

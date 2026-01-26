@@ -39,8 +39,8 @@ constraint_metric(curvature_coupling_friction, suppression_requirement, 0.35).
 constraint_metric(curvature_coupling_friction, snap_back_potential, 0.40).
 constraint_metric(curvature_coupling_friction, extractiveness, 0.52).
 
-% Noose: Singularities and Non-Compactness Obstructions
-constraint_claim(singularity_noose, noose).
+% Snare: Singularities and Non-Compactness Obstructions
+constraint_claim(singularity_noose, snare).
 constraint_metric(singularity_noose, intensity, 0.96).
 constraint_metric(singularity_noose, suppression_requirement, 0.88).
 constraint_metric(singularity_noose, snap_back_potential, 0.92).

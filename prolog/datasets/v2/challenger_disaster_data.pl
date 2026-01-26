@@ -19,7 +19,7 @@ omega_variable(ov_01, empirical, true_probability_of_srb_failure_given_historica
 omega_variable(ov_02, conceptual, operational_meaning_of_safety_factor_in_non_understood_failure_modes).
 omega_variable(ov_03, preference, management_weighting_of_launch_schedule_adherence_versus_engineering_dissent).
 
-constraint_claim(faulty_joint_design, noose).
+constraint_claim(faulty_joint_design, snare).
 constraint_metric(faulty_joint_design, extractiveness, 0.88).
 constraint_metric(faulty_joint_design, suppression_requirement, 0.72).
 constraint_metric(faulty_joint_design, snap_back_potential, 0.10).
@@ -34,7 +34,7 @@ constraint_metric(political_pressure_to_launch, extractiveness, 0.62).
 constraint_metric(political_pressure_to_launch, suppression_requirement, 0.42).
 constraint_metric(political_pressure_to_launch, snap_back_potential, 0.50).
 
-constraint_claim(management_isolation, noose).
+constraint_claim(management_isolation, snare).
 constraint_metric(management_isolation, extractiveness, 0.75).
 constraint_metric(management_isolation, suppression_requirement, 0.65).
 constraint_metric(management_isolation, snap_back_potential, 0.05).

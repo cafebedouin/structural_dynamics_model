@@ -24,12 +24,12 @@ event(ev04_permitting_approval, validation, 95, [actor(building_code_officials),
 constraint_claim(seismic_physics_limit, mountain).
 constraint_metric(seismic_physics_limit, accessibility_collapse, 0.95).
 
-% Noose: The legal mandate of ASCE 7 compliance for liability and insurance.
-constraint_claim(regulatory_life_safety_mandate, noose).
+% Snare: The legal mandate of ASCE 7 compliance for liability and insurance.
+constraint_claim(regulatory_life_safety_mandate, snare).
 constraint_metric(regulatory_life_safety_mandate, stakes_inflation, 0.90).
 
-% Zombie: Legacy deterministic safety factors that persist despite reliability-based updates.
-constraint_claim(legacy_safety_factor_bias, zombie).
+% Piton: Legacy deterministic safety factors that persist despite reliability-based updates.
+constraint_claim(legacy_safety_factor_bias, piton).
 constraint_metric(legacy_safety_factor_bias, suppression, 0.70).
 
 % Rope: Risk Category II standard. Ties average structures to specific rigid performance tiers.

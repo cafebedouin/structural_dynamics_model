@@ -44,7 +44,7 @@
  * * NARRATIVE ARC:
  * What begins as a strategic shortcut (Rope) to hit a deadline eventually 
  * becomes an unmovable reality (Mountain) for new hires, and finally an 
- * extractive Noose that consumes 80% of the engineering budget in maintenance 
+ * extractive Snare that consumes 80% of the engineering budget in maintenance 
  * while suppressing the possibility of migration.
  */
 
@@ -54,30 +54,45 @@
 
 % Required for [STEP 1] and [STEP 2] of the DR-Audit Suite
 narrative_ontology:interval(software_lifecycle_r7, 0, 10).
-narrative_ontology:constraint_claim(legacy_system_technical_debt, noose).
+narrative_ontology:constraint_claim(legacy_system_technical_debt, piton).
 
 % Base extractiveness score (0.0 = no extraction, 1.0 = full extraction)
-% Rationale: High (0.8). Technical debt "extracts" labor and capital from 
-% productive new work to fuel "keeping the lights on" (maintenance).
-domain_priors:base_extractiveness(legacy_system_technical_debt, 0.8).
+% Rationale: Low (0.05). The debt itself doesn't extract value directly, but its maintenance and the inability to innovate creates massive costs.
+domain_priors:base_extractiveness(legacy_system_technical_debt, 0.05).
 
 % Suppression score (0.0 = no suppression, 1.0 = full suppression)
-% Rationale: Moderate (0.6). Alternatives (modernization) are visible but 
-% suppressed by the high cost of exit and fear of regression.
-domain_priors:suppression_score(legacy_system_technical_debt, 0.6).
+% Rationale: Low (0.1). Alternatives are not actively blocked, but persist
+% due to high switching costs and institutional inertia.
+domain_priors:suppression_score(legacy_system_technical_debt, 0.1).
+
+% Resistance score (0.0 = no resistance, 1.0 = full resistance)
+% Rationale: Moderate (0.5). Developers and architects express frustration
+% and desire for change, indicating friction against the constraint.
+domain_priors:resistance_score(legacy_system_technical_debt, 0.5).
+
 
 % Enforcement requirements
 % Emerges naturally from the entropy of large codebases and market pressures.
 domain_priors:emerges_naturally(legacy_system_technical_debt).
 
 % Metrics required for Section 1 of the Executive Summary
-narrative_ontology:constraint_metric(legacy_system_technical_debt, extractiveness, 0.8).
-narrative_ontology:constraint_metric(legacy_system_technical_debt, suppression_requirement, 0.6).
+narrative_ontology:constraint_metric(legacy_system_technical_debt, extractiveness, 0.05).
+narrative_ontology:constraint_metric(legacy_system_technical_debt, resistance, 0.5).
+
+% Make the constraint "evolve" by having metrics change over time.
+narrative_ontology:constraint_metric(legacy_system_technical_debt, suppression_requirement, 0.1, 0).
+narrative_ontology:constraint_metric(legacy_system_technical_debt, suppression_requirement, 0.2, 10).
+
+% Formally model the viable alternative
+narrative_ontology:intent_viable_alternative(software_lifecycle_r7,
+    'Microservices/Cloud-Native Migration',
+    'High viability in theory, but suppressed by short-term incentives.').
 
 % Beneficiaries and Victims
 constraint_beneficiary(legacy_system_technical_debt, short_term_profit_margins).
 constraint_victim(legacy_system_technical_debt, long_term_system_viability).
 constraint_victim(legacy_system_technical_debt, engineering_morale).
+
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)
@@ -141,7 +156,7 @@ constraint_indexing:constraint_classification(
     !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: EXTERNAL AUDITOR / MODERNIZER - Noose
+   PERSPECTIVE 3: EXTERNAL AUDITOR / MODERNIZER - Piton
    --------------------------------------------------------------------------
    
    WHO: analytical - Outside observer identifying the "death spiral."
@@ -150,24 +165,21 @@ constraint_indexing:constraint_classification(
    SCOPE: global - Comparing the system against industry best practices.
    
    WHY THIS CLASSIFICATION:
-   The auditor sees the Noose. Every dollar spent on maintenance is a dollar 
-   stolen from the future. The system's complexity has reached a point where 
-   it actively chokes off the organization's ability to respond to market shifts.
+   The auditor sees the Piton. It was once a useful anchor (a 'rope'), but now it's a liability 
+   that fails under load. It persists through inertia, consuming resources that 
+   could be used for innovation.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
     legacy_system_technical_debt,
-    noose,
+    piton,
     context(
         agent_power(analytical),
         time_horizon(historical),
         exit_options(analytical),
         spatial_scope(global)
     )
-) :-
-    domain_priors:suppression_score(legacy_system_technical_debt, S),
-    S > 0.5,
-    !.
+) :- !.
 
 /* ==========================================================================
    4. TESTS (What We Learn About Constraints)
@@ -179,6 +191,9 @@ test(multi_perspective_variance) :-
     constraint_indexing:constraint_classification(legacy_system_technical_debt, T1, context(individual_powerless, immediate, trapped, local)),
     constraint_indexing:constraint_classification(legacy_system_technical_debt, T2, context(institutional, biographical, constrained, national)),
     constraint_indexing:constraint_classification(legacy_system_technical_debt, T3, context(analytical, historical, analytical, global)),
+    T1 = mountain,
+    T2 = rope,
+    T3 = piton,
     T1 \= T2, T2 \= T3.
 
 test(extraction_increases_with_powerlessness) :-
@@ -209,9 +224,9 @@ test(extraction_increases_with_powerlessness) :-
 omega_variable(
     strangler_success_probability,
     "Can the system be migrated incrementally (Rope) or is the monolith's 
-     coupling so deep it requires a total rewrite (Noose)?",
+     coupling so deep it requires a total rewrite (Snare)?",
     resolution_mechanism("Static analysis of dependency graphs and coupling metrics"),
-    impact("If Rope: Migration is viable. If Noose: The organization will likely 
+    impact("If Rope: Migration is viable. If Snare: The organization will likely 
             fail when the legacy system reaches terminal entropy."),
     confidence_without_resolution(medium)
 ).
@@ -228,7 +243,7 @@ omega_variable(
  * incentive structures for management.
  * * CONCLUSION:
  * The presence of a viable alternative (Modernization) that is actively 
- * suppressed by management incentives solidifies the 'Noose' classification 
+ * suppressed by management incentives solidifies the 'Snare' classification 
  * for the workforce.
  */
 

@@ -41,13 +41,13 @@
  * - The Cartographer/Network Architect (Institutional): An agent who uses 
  * the theorem as a "Rope" to optimize resource allocation (frequencies, colors).
  * - The Mathematical Purist (Victim): An agent for whom the computer-assisted 
- * proof is a "Noose," extracting the "elegant human-readable proof" and 
+ * proof is a "Snare," extracting the "elegant human-readable proof" and 
  * replacing it with exhaustive algorithmic verification.
  * * NARRATIVE ARC:
  * The theorem functions as a "Mountain" of planar reality—a hard limit of 
  * geometry that cannot be bypassed. In wireless networking, it is a "Rope" 
  * for coordinating frequency reuse. However, for the history of mathematics, 
- * its proof acted as a "Noose," extracting the traditional "aesthetic of 
+ * its proof acted as a "Snare," extracting the traditional "aesthetic of 
  * understanding" (extraction) and "strangling" the era of human-only 
  * verification with the first major computer-dependent proof.
  */
@@ -149,7 +149,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE ELEGANCE-SEEKING MATHEMATICIAN - Noose
+   PERSPECTIVE 3: THE ELEGANCE-SEEKING MATHEMATICIAN - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_moderate - Has the tools to prove but is bound by the theorem's nature.
@@ -158,7 +158,7 @@ constraint_indexing:constraint_classification(
    SCOPE: global - Affecting the philosophy of all mathematical proof.
    
    WHY THIS CLASSIFICATION:
-   For the classical theorist, the Four Color Theorem is a "Noose." It 
+   For the classical theorist, the Four Color Theorem is a "Snare." It 
    "strangles" the ideal of a beautiful, human-comprehensible proof. 
    By requiring thousands of case-checkings via computer, it extracts the 
    "human element" (extraction) from the proof, "choking" the 
@@ -169,7 +169,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     four_color_theorem_topological_bound,
-    noose,
+    snare,
     context(
         agent_power(individual_moderate),
         time_horizon(historical),
@@ -219,7 +219,7 @@ test(natural_emergence) :-
  * mathematics "extracted" the necessity of computer-aid, a major shift 
  * in the "tax" of verification.
  * 2. CLASSIFICATION: 
- * Captured the transition from a "Mountain" of geometry to a "Noose" 
+ * Captured the transition from a "Mountain" of geometry to a "Snare" 
  * for mathematical philosophy due to the brute-force nature of the proof.
  */
 
@@ -228,7 +228,7 @@ omega_variable(
     human_readable_proof_existence,
     "Does a 'Mountain' of a short, elegant human-readable proof exist for the Four Color Theorem (Scaffold)?",
     resolution_mechanism("Verification of new proof candidates against the Appel-Haken-Robertson exhaustion."),
-    impact("If Yes: The current 'Noose' of computer-verification is just a Scaffold for human limits."),
+    impact("If Yes: The current 'Snare' of computer-verification is just a Scaffold for human limits."),
     confidence_without_resolution(medium)
 ).
 

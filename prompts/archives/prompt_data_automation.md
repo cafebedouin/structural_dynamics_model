@@ -54,7 +54,7 @@ event(ID, Kind, Time, PropertiesList).
 ### **Constraint Layer (CE v2.0)**
 
 ```prolog
-constraint_claim(Name, Type).           % Type ∈ {mountain, rope, noose, zombie}
+constraint_claim(Name, Type).           % Type ∈ {mountain, rope, snare, piton}
 constraint_metric(Name, Metric, Value). % Metric ∈ {inevitability, extractiveness, theater_ratio}
 recommendation(ID, Text).
 affects_constraint(RecommendationID, ConstraintName).
@@ -108,8 +108,8 @@ You must include:
 
 - ≥1 mountain  
 - ≥1 rope  
-- ≥1 noose  
-- ≥1 zombie  
+- ≥1 snare  
+- ≥1 piton  
 - ≥2 recommendations  
 - Each recommendation must:  
   - affect ≥1 constraint  

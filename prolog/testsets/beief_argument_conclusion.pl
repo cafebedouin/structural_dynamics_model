@@ -46,7 +46,7 @@
  * justifications and the ego-trap of debate.
  * * NARRATIVE ARC:
  * The dialogue deconstructs the "Rope" of argument, revealing it as a 
- * "Noose" that consumes energy without changing the underlying "Mountain" 
+ * "Snare" that consumes energy without changing the underlying "Mountain" 
  * of instinctive belief. This leads to a binary 
  * conclusion: passive disagreement or active coercion (fighting).
  */
@@ -119,7 +119,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE ARGUER (INDIVIDUAL POWERLESS) - Noose
+   PERSPECTIVE 2: THE ARGUER (INDIVIDUAL POWERLESS) - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless (Subject to their own instinct and social anger)
@@ -128,7 +128,7 @@ constraint_indexing:constraint_classification(
    SCOPE: local (Immediate interpersonal conflict)
    
    WHY THIS CLASSIFICATION:
-   For the participant, argument is a "Noose." It tightens as they "trot out 
+   For the participant, argument is a "Snare." It tightens as they "trot out 
    their excuses," consuming their energy and triggering anger when they 
    realize they cannot reach the other's instinct.
    
@@ -142,7 +142,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     belief_argument_conclusion,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -227,7 +227,7 @@ test(belief_immutability) :-
  * * 3. PERSPECTIVE SELECTION:
  * Chose the Professor (Analyst), the Arguer (Powerless), and the Negotiator 
  * (Institutional) to show the gap between the perceived tool (Rope) and 
- * the actual psychological trap (Noose/Mountain).
+ * the actual psychological trap (Snare/Mountain).
  */
 
 /* ==========================================================================
@@ -246,9 +246,9 @@ omega_variable(
 omega_variable(
     belief_argument_conclusion_extraction_intent,
     "Is the futility of argument a biological necessity (Mountain) or an 
-     intentional ego-strategy to maintain social dominance (Noose)?",
+     intentional ego-strategy to maintain social dominance (Snare)?",
     resolution_mechanism("Comparison of conflict outcomes in environments with vs. without 'high-rationality' training"),
-    impact("If necessity: Mountain. If strategy: Mandatrophy Noose."),
+    impact("If necessity: Mountain. If strategy: Mandatrophy Snare."),
     confidence_without_resolution(medium)
 ).
 

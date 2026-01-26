@@ -31,8 +31,8 @@ constraint_claim(infinite_selection_complexity, tangled_rope).
 constraint_metric(infinite_selection_complexity, extractiveness, 0.45).
 constraint_metric(infinite_selection_complexity, suppression_requirement, 0.30).
 
-% Noose (Boxed C): ext >= 0.66, supp >= 0.46
-constraint_claim(paradoxical_decomposition_potential, noose).
+% Snare (Boxed C): ext >= 0.66, supp >= 0.46
+constraint_claim(paradoxical_decomposition_potential, snare).
 constraint_metric(paradoxical_decomposition_potential, extractiveness, 0.96).
 constraint_metric(paradoxical_decomposition_potential, suppression_requirement, 0.94).
 

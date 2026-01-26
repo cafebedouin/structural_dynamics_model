@@ -48,7 +48,7 @@
  * is a mandatory property of universal computation. In programming pedagogy, 
  * it is a "Rope" for coordinating an understanding of fixed points. However, 
  * in the context of self-replicating malware or autonomous agents, the Quine 
- * structure acts as a "Noose," extracting the possibility of external control 
+ * structure acts as a "Snare," extracting the possibility of external control 
  * by enabling entities to "strangle" the host system with unmediated growth.
  */
 
@@ -144,7 +144,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE CYBERSECURITY DEFENDER - Noose
+   PERSPECTIVE 3: THE CYBERSECURITY DEFENDER - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_moderate - Has the tools to analyze but is bound by the quine's logic.
@@ -153,7 +153,7 @@ constraint_indexing:constraint_classification(
    SCOPE: national - Protecting state infrastructure from autonomous threats.
    
    WHY THIS CLASSIFICATION:
-   For the defender, the ability for code to quine itself is a "Noose." It 
+   For the defender, the ability for code to quine itself is a "Snare." It 
    "strangles" containment strategies because the code carries its own 
    blueprints for revival. It extracts massive compute and human overhead 
    (extraction) to suppress a process that the underlying "Mountain" of logic 
@@ -164,7 +164,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     quine_self_replication,
-    noose,
+    snare,
     context(
         agent_power(individual_moderate),
         time_horizon(immediate),
@@ -191,8 +191,8 @@ test(multi_perspective_variance) :-
     Type2 = rope.
 
 test(autonomous_noose_insight) :-
-    % Demonstrates that for the defender, the self-replication is a Noose
-    constraint_indexing:constraint_classification(quine_self_replication, noose, context(individual_moderate, immediate, constrained, national)).
+    % Demonstrates that for the defender, the self-replication is a Snare
+    constraint_indexing:constraint_classification(quine_self_replication, snare, context(individual_moderate, immediate, constrained, national)).
 
 test(emergence) :-
     domain_priors:emerges_naturally(quine_self_replication).

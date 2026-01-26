@@ -45,7 +45,7 @@
  * Initially, adding resources feels like a "Rope" for growth. However, 
  * as the system saturates, the law emerges as a "Mountain"—a hard 
  * physical limit of the environment. For the last unit added, it becomes 
- * a "Noose," as their presence extracts value from the group while 
+ * a "Snare," as their presence extracts value from the group while 
  * providing negligible or negative individual utility.
  */
 
@@ -147,7 +147,7 @@ constraint_indexing:constraint_classification(
     !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE ADDITIONAL WORKER - Noose
+   PERSPECTIVE 3: THE ADDITIONAL WORKER - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless - Subject to the crowded workspace.
@@ -156,7 +156,7 @@ constraint_indexing:constraint_classification(
    SCOPE: local - Immediate workstation.
    
    WHY THIS CLASSIFICATION:
-   For the worker added to a saturated team, the law is a Noose. Their 
+   For the worker added to a saturated team, the law is a Snare. Their 
    presence makes the work harder for everyone (crowding), yet they are 
    judged by the falling marginal output. The system "strangles" their 
    effectiveness, extracting their labor while providing a trap of 
@@ -165,7 +165,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     law_of_diminishing_returns,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -188,8 +188,8 @@ test(multi_perspective_variance) :-
     constraint_indexing:constraint_classification(law_of_diminishing_returns, mountain, context(analytical, civilizational, trapped, global)),
     % Institutional sees Rope
     constraint_indexing:constraint_classification(law_of_diminishing_returns, rope, context(institutional, biographical, arbitrage, national)),
-    % Powerless sees Noose
-    constraint_indexing:constraint_classification(law_of_diminishing_returns, noose, context(individual_powerless, immediate, constrained, local)).
+    % Powerless sees Snare
+    constraint_indexing:constraint_classification(law_of_diminishing_returns, snare, context(individual_powerless, immediate, constrained, local)).
 
 test(power_extractiveness_marginal_loss) :-
     ContextPowerless = context(individual_powerless, immediate, constrained, local),
@@ -227,7 +227,7 @@ test(power_extractiveness_marginal_loss) :-
 
 omega_variable(
     tech_shift_plateau,
-    "Can a technological breakthrough permanently 'untie' the Noose (Rope), 
+    "Can a technological breakthrough permanently 'untie' the Snare (Rope), 
     or does it just move the Mountain further back (Mountain)?",
     resolution_mechanism("Long-term analysis of agricultural/industrial 
     output after major automation shifts"),
@@ -249,7 +249,7 @@ omega_variable(
  * eventually leads back to the diminishing returns mountain.
  * * CONCLUSION:
  * The existence of Economies of Scale as a "Rope" for growth suggests 
- * that the Law of Diminishing Returns is not a Noose until a system 
+ * that the Law of Diminishing Returns is not a Snare until a system 
  * reaches its physical or organizational saturation point.
  */
 

@@ -1,0 +1,3823 @@
+{
+  "summary": {
+    "total_constraints": 409,
+    "categories": 3,
+    "constraint_types": 4
+  },
+  "categories": {
+    "unknown_novel": {
+      "count": 3,
+      "avg_extractiveness": 0.735,
+      "avg_suppression": 0.825,
+      "std_extractiveness": 0.015,
+      "std_suppression": 0.025,
+      "dominant_type": "tangled_rope",
+      "enforcement_ratio": 1.0,
+      "type_distribution": {
+        "tangled_rope": 2,
+        "noose": 1
+      }
+    },
+    "extractive_market": {
+      "count": 146,
+      "avg_extractiveness": 0.7832,
+      "avg_suppression": 0.6853,
+      "std_extractiveness": 0.0808,
+      "std_suppression": 0.1662,
+      "dominant_type": "noose",
+      "enforcement_ratio": 0.7919,
+      "type_distribution": {
+        "noose": 57,
+        "tangled_rope": 21,
+        "rope": 13,
+        "mountain": 29
+      }
+    },
+    "narrative_history": {
+      "count": 260,
+      "avg_extractiveness": 0.3045,
+      "avg_suppression": 0.4423,
+      "std_extractiveness": 0.1575,
+      "std_suppression": 0.2325,
+      "dominant_type": "mountain",
+      "enforcement_ratio": 0.3525,
+      "type_distribution": {
+        "tangled_rope": 24,
+        "rope": 66,
+        "mountain": 121,
+        "noose": 34
+      }
+    }
+  },
+  "type_profiles": {
+    "tangled_rope": {
+      "count": 47,
+      "avg_extractiveness": 0.5291489361702127,
+      "avg_suppression": 0.5872340425531914,
+      "std_extractiveness": 0.23251474249516232,
+      "std_suppression": 0.18693157386912918
+    },
+    "noose": {
+      "count": 92,
+      "avg_extractiveness": 0.6606593406593406,
+      "avg_suppression": 0.6818681318681321,
+      "std_extractiveness": 0.21736585959677893,
+      "std_suppression": 0.1636661845752908
+    },
+    "rope": {
+      "count": 79,
+      "avg_extractiveness": 0.3730379746835442,
+      "avg_suppression": 0.462025316455696,
+      "std_extractiveness": 0.229817508396376,
+      "std_suppression": 0.2581844093521039
+    },
+    "mountain": {
+      "count": 150,
+      "avg_extractiveness": 0.36693333333333344,
+      "avg_suppression": 0.45433333333333326,
+      "std_extractiveness": 0.2358246429494217,
+      "std_suppression": 0.2568356586526794
+    }
+  },
+  "subcategories": {
+    "extractive_market_noose": {
+      "parent": "extractive_market",
+      "constraint_type": "noose",
+      "count": 57,
+      "avg_extractiveness": 0.8056140350877192,
+      "avg_suppression": 0.7447368421052629
+    },
+    "extractive_market_tangled_rope": {
+      "parent": "extractive_market",
+      "constraint_type": "tangled_rope",
+      "count": 21,
+      "avg_extractiveness": 0.7428571428571429,
+      "avg_suppression": 0.6619047619047619
+    },
+    "extractive_market_rope": {
+      "parent": "extractive_market",
+      "constraint_type": "rope",
+      "count": 13,
+      "avg_extractiveness": 0.7515384615384614,
+      "avg_suppression": 0.703846153846154
+    },
+    "extractive_market_mountain": {
+      "parent": "extractive_market",
+      "constraint_type": "mountain",
+      "count": 29,
+      "avg_extractiveness": 0.7589655172413792,
+      "avg_suppression": 0.6620689655172416
+    },
+    "narrative_history_tangled_rope": {
+      "parent": "narrative_history",
+      "constraint_type": "tangled_rope",
+      "count": 24,
+      "avg_extractiveness": 0.325,
+      "avg_suppression": 0.5020833333333333
+    },
+    "narrative_history_rope": {
+      "parent": "narrative_history",
+      "constraint_type": "rope",
+      "count": 66,
+      "avg_extractiveness": 0.2984848484848484,
+      "avg_suppression": 0.4143939393939392
+    },
+    "narrative_history_mountain": {
+      "parent": "narrative_history",
+      "constraint_type": "mountain",
+      "count": 121,
+      "avg_extractiveness": 0.27297520661157015,
+      "avg_suppression": 0.4045454545454544
+    },
+    "narrative_history_noose": {
+      "parent": "narrative_history",
+      "constraint_type": "noose",
+      "count": 34,
+      "avg_extractiveness": 0.41764705882352937,
+      "avg_suppression": 0.5764705882352942
+    }
+  },
+  "constraints": [
+    {
+      "id": "26usc469",
+      "category": "unknown_novel",
+      "type": "tangled_rope",
+      "extractiveness": 0.72,
+      "suppression": 0.85,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "26usc469_real_estate_exemption",
+      "category": "unknown_novel",
+      "type": "tangled_rope",
+      "extractiveness": 0.75,
+      "suppression": 0.8,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "academic_peer_review_gatekeeping",
+      "category": "extractive_market",
+      "type": "noose",
+      "extractiveness": 0.75,
+      "suppression": 0.55,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "academic_tenure_system",
+      "category": "extractive_market",
+      "type": "tangled_rope",
+      "extractiveness": 0.75,
+      "suppression": 0.6,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "adverse_possession_interval",
+      "category": "extractive_market",
+      "type": "rope",
+      "extractiveness": 0.7,
+      "suppression": 0.4,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "advice_as_dangerous_gift",
+      "category": "narrative_history",
+      "type": "tangled_rope",
+      "extractiveness": 0.2,
+      "suppression": 0.4,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "ai_cognitive_diversity_arbitrage",
+      "category": "extractive_market",
+      "type": "noose",
+      "extractiveness": 0.72,
+      "suppression": 0.45,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "ai_driven_surveillance_sensor_layer",
+      "category": "extractive_market",
+      "type": "tangled_rope",
+      "extractiveness": 0.75,
+      "suppression": 0.8,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "ai_edu_decentralization",
+      "category": "narrative_history",
+      "type": "rope",
+      "extractiveness": 0.5,
+      "suppression": 0.4,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "ai_evaluators_matching",
+      "category": "extractive_market",
+      "type": "tangled_rope",
+      "extractiveness": 0.75,
+      "suppression": 0.8,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "ai_professional_displacement",
+      "category": "extractive_market",
+      "type": "mountain",
+      "extractiveness": 0.71,
+      "suppression": 0.8,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "ai_task_horizon_reliability",
+      "category": "narrative_history",
+      "type": "tangled_rope",
+      "extractiveness": 0.45,
+      "suppression": 0.6,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "algorithmic_bias",
+      "category": "extractive_market",
+      "type": "noose",
+      "extractiveness": 0.75,
+      "suppression": 0.7,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "amish_technological_renunciation",
+      "category": "extractive_market",
+      "type": "noose",
+      "extractiveness": 0.8,
+      "suppression": 0.75,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "ancient_grudge_verona",
+      "category": "extractive_market",
+      "type": "mountain",
+      "extractiveness": 0.8,
+      "suppression": 0.7,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "antifragility",
+      "category": "extractive_market",
+      "type": "mountain",
+      "extractiveness": 0.75,
+      "suppression": 0.65,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "apartheid_nuclear_program",
+      "category": "extractive_market",
+      "type": "noose",
+      "extractiveness": 0.85,
+      "suppression": 0.9,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "arctic_geopolitical_flashpoint",
+      "category": "extractive_market",
+      "type": "noose",
+      "extractiveness": 0.75,
+      "suppression": 0.8,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "arrows_era",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.6,
+      "suppression": 0.4,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "asce_cycle_22",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.2,
+      "suppression": 0.7,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "asshole_filter_2015",
+      "category": "extractive_market",
+      "type": "noose",
+      "extractiveness": 0.75,
+      "suppression": 0.6,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "industrial_testing_regime",
+      "category": "narrative_history",
+      "type": "rope",
+      "extractiveness": 0.1,
+      "suppression": 0.6,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "authoritarian_power_paradox",
+      "category": "extractive_market",
+      "type": "noose",
+      "extractiveness": 0.8,
+      "suppression": 0.9,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "automatic_enrollment_defaults",
+      "category": "narrative_history",
+      "type": "rope",
+      "extractiveness": 0.05,
+      "suppression": 0.1,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "availability_heuristic",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.4,
+      "suppression": 0.7,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "ac_era",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.25,
+      "suppression": 0.4,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "banach_era",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.2,
+      "suppression": 0.2,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "banach_tarski_era",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.2,
+      "suppression": 0.4,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "operation_zapata_timeline",
+      "category": "extractive_market",
+      "type": "noose",
+      "extractiveness": 0.9,
+      "suppression": 0.8,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "dna_structure_discovery",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.2,
+      "suppression": 1.0,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "basel_era",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.2,
+      "suppression": 0.1,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "bedouin_sedentary_transition",
+      "category": "extractive_market",
+      "type": "noose",
+      "extractiveness": 0.75,
+      "suppression": 0.6,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "belief_argument_conclusion_interval",
+      "category": "extractive_market",
+      "type": null,
+      "extractiveness": 0.7,
+      "suppression": 0.8,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "berkshire_compounding_culture",
+      "category": "narrative_history",
+      "type": "rope",
+      "extractiveness": 0.1,
+      "suppression": 0.2,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "big_data_astrophysics_arbitrage",
+      "category": "extractive_market",
+      "type": null,
+      "extractiveness": 0.75,
+      "suppression": 0.45,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "biological_curiosity",
+      "category": "narrative_history",
+      "type": "noose",
+      "extractiveness": 0.15,
+      "suppression": 0.2,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "bip_narrative_illusion_interval",
+      "category": "extractive_market",
+      "type": null,
+      "extractiveness": 0.85,
+      "suppression": 0.75,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "birthday_era",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.4,
+      "suppression": 0.25,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "blackstone_ipo_restructuring",
+      "category": "narrative_history",
+      "type": "rope",
+      "extractiveness": 0.3,
+      "suppression": 0.7,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "blackstone_conflict_era",
+      "category": "extractive_market",
+      "type": "noose",
+      "extractiveness": 0.75,
+      "suppression": 0.85,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "blackstone_smd_control",
+      "category": "extractive_market",
+      "type": "noose",
+      "extractiveness": 0.8,
+      "suppression": 0.9,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "blackstone_tra_life",
+      "category": "extractive_market",
+      "type": "noose",
+      "extractiveness": 0.85,
+      "suppression": 0.95,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "brain_network_paradigm_2026",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.0,
+      "suppression": 0.7,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "broke_vs_poor_grocery_math",
+      "category": "extractive_market",
+      "type": "noose",
+      "extractiveness": 0.8,
+      "suppression": 0.6,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "brouwer_era",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.2,
+      "suppression": 0.1,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "buffon_era",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.2,
+      "suppression": 0.1,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "burali_forti_interval",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.2,
+      "suppression": 0.3,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "challenger_launch_decision",
+      "category": "extractive_market",
+      "type": "noose",
+      "extractiveness": 0.9,
+      "suppression": 0.8,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "criminal_trial_sequence",
+      "category": "narrative_history",
+      "type": "rope",
+      "extractiveness": 0.1,
+      "suppression": 0.2,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "scientific_revolution_current",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.3,
+      "suppression": 0.6,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "bushman_money_magic_interval",
+      "category": "extractive_market",
+      "type": null,
+      "extractiveness": 0.9,
+      "suppression": 0.8,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "busy_beaver_era",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.4,
+      "suppression": 0.3,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "cantor_set_topology",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.3,
+      "suppression": 0.2,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "cap_theorem_interval",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.4,
+      "suppression": 0.7,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "carbon_credit_markets_2026_int",
+      "category": "narrative_history",
+      "type": "rope",
+      "extractiveness": 0.55,
+      "suppression": 0.6,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "carrying_capacity_interval",
+      "category": "extractive_market",
+      "type": "mountain",
+      "extractiveness": 0.7,
+      "suppression": 0.6,
+      "requires_enforcement": true,
+      "emerges_naturally": true
+    },
+    {
+      "id": "castration_longevity_choice",
+      "category": "extractive_market",
+      "type": null,
+      "extractiveness": 0.8,
+      "suppression": 0.5,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "cbdc_deployment",
+      "category": "extractive_market",
+      "type": "rope",
+      "extractiveness": 0.8,
+      "suppression": 0.7,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "clt_era",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.25,
+      "suppression": 0.35,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "chaitin_era",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.2,
+      "suppression": 0.3,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "challenger_o_ring_integrity",
+      "category": "extractive_market",
+      "type": "noose",
+      "extractiveness": 0.8,
+      "suppression": 0.7,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "china_critical_mineral_chokepoint",
+      "category": "extractive_market",
+      "type": "tangled_rope",
+      "extractiveness": 0.85,
+      "suppression": 0.7,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "rejuvenation_centenary_cycle",
+      "category": "extractive_market",
+      "type": "mountain",
+      "extractiveness": 0.8,
+      "suppression": 0.9,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "rope_design",
+      "category": "narrative_history",
+      "type": "rope",
+      "extractiveness": 0.2,
+      "suppression": 0.3,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "church_turing_era",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.1,
+      "suppression": 0.2,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "pre_911_silo_regime",
+      "category": "extractive_market",
+      "type": "mountain",
+      "extractiveness": 0.7,
+      "suppression": 0.85,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "midnight_deadline_period",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.1,
+      "suppression": 0.9,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "click_chemistry_paradigm_2026",
+      "category": "narrative_history",
+      "type": "rope",
+      "extractiveness": 0.1,
+      "suppression": 0.3,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "climate_attribution_2026",
+      "category": "narrative_history",
+      "type": "rope",
+      "extractiveness": 0.2,
+      "suppression": 0.3,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "climate_target_one_point_five",
+      "category": "narrative_history",
+      "type": "tangled_rope",
+      "extractiveness": 0.3,
+      "suppression": 0.6,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "cloudflare_dual_class_asymmetry",
+      "category": "extractive_market",
+      "type": "noose",
+      "extractiveness": 0.8,
+      "suppression": 0.9,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "cobra_effect",
+      "category": "narrative_history",
+      "type": "noose",
+      "extractiveness": 0.6,
+      "suppression": 0.4,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "cognitive_diversity_arbitrage",
+      "category": "extractive_market",
+      "type": null,
+      "extractiveness": 0.72,
+      "suppression": 0.45,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "cognitive_induction_gap",
+      "category": "extractive_market",
+      "type": "tangled_rope",
+      "extractiveness": 0.7,
+      "suppression": 0.6,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "cognitive_mimicry_arbitrage",
+      "category": "extractive_market",
+      "type": null,
+      "extractiveness": 0.82,
+      "suppression": 0.55,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "system_3_emergence",
+      "category": "extractive_market",
+      "type": "noose",
+      "extractiveness": 0.65,
+      "suppression": 0.75,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "coinbase_ipo_window",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.4,
+      "suppression": 0.9,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "coinbase_regulatory_uncertainty",
+      "category": "extractive_market",
+      "type": "tangled_rope",
+      "extractiveness": 0.7,
+      "suppression": 0.9,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "collatz_era",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.15,
+      "suppression": 0.2,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "college_admissions_market",
+      "category": "extractive_market",
+      "type": "rope",
+      "extractiveness": 0.7,
+      "suppression": 0.5,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "colorado_sbe_decentralization_friction",
+      "category": "extractive_market",
+      "type": "mountain",
+      "extractiveness": 0.7,
+      "suppression": 0.6,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "colombia_2026_presidential_election",
+      "category": "narrative_history",
+      "type": "rope",
+      "extractiveness": 0.45,
+      "suppression": 0.35,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "comitatus_era",
+      "category": "narrative_history",
+      "type": "rope",
+      "extractiveness": 0.4,
+      "suppression": 0.8,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "compounding_logic",
+      "category": "narrative_history",
+      "type": "tangled_rope",
+      "extractiveness": 0.5,
+      "suppression": 0.4,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "confirmation_bias_interval",
+      "category": "narrative_history",
+      "type": "noose",
+      "extractiveness": 0.3,
+      "suppression": 0.8,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "gettysburg_address_analysis",
+      "category": "narrative_history",
+      "type": "rope",
+      "extractiveness": 0.6,
+      "suppression": 0.9,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "constitutional_supremacy",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.3,
+      "suppression": 0.95,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "continuum_era",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.15,
+      "suppression": 0.25,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "conversational_dogmas_interruption",
+      "category": "narrative_history",
+      "type": "tangled_rope",
+      "extractiveness": 0.3,
+      "suppression": 0.6,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "conway_era",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.3,
+      "suppression": 0.4,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "copyleft_viral_licensing",
+      "category": "narrative_history",
+      "type": "rope",
+      "extractiveness": 0.05,
+      "suppression": 0.2,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "copyright_protection",
+      "category": "narrative_history",
+      "type": "tangled_rope",
+      "extractiveness": 0.4,
+      "suppression": 0.5,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "evolutionary_pressure_01",
+      "category": "extractive_market",
+      "type": "mountain",
+      "extractiveness": 0.85,
+      "suppression": 0.4,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "countable_infinity_cardinality",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.2,
+      "suppression": 0.25,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "couples_residency_match",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.5,
+      "suppression": 0.95,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "cow_field_poop",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.4,
+      "suppression": 0.3,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "creative_commons_licensing",
+      "category": "narrative_history",
+      "type": "rope",
+      "extractiveness": 0.1,
+      "suppression": 0.1,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "crispr_genomic_rewrite_2026",
+      "category": "narrative_history",
+      "type": "rope",
+      "extractiveness": 0.4,
+      "suppression": 0.2,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "cuba_blackout_cycle",
+      "category": "extractive_market",
+      "type": "noose",
+      "extractiveness": 0.95,
+      "suppression": 0.85,
+      "requires_enforcement": true,
+      "emerges_naturally": true
+    },
+    {
+      "id": "thirteen_days_crisis",
+      "category": "narrative_history",
+      "type": "rope",
+      "extractiveness": 0.2,
+      "suppression": 0.15,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "currys_paradox_interval",
+      "category": "narrative_history",
+      "type": "noose",
+      "extractiveness": 0.2,
+      "suppression": 0.5,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "damped_harmonics",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.25,
+      "suppression": 0.1,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "dark_patterns_manipulation",
+      "category": "extractive_market",
+      "type": "noose",
+      "extractiveness": 0.85,
+      "suppression": 0.9,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "dead_sea_effect",
+      "category": "narrative_history",
+      "type": "noose",
+      "extractiveness": 0.5,
+      "suppression": 0.4,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "dr_recursive_int",
+      "category": "narrative_history",
+      "type": "rope",
+      "extractiveness": 0.2,
+      "suppression": 0.35,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "credentialing_shift_2026",
+      "category": "extractive_market",
+      "type": "rope",
+      "extractiveness": 0.65,
+      "suppression": 0.75,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "dionysiac_frenzy_interval",
+      "category": "extractive_market",
+      "type": "mountain",
+      "extractiveness": 0.8,
+      "suppression": 0.9,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "dldr_policy_interval",
+      "category": "narrative_history",
+      "type": null,
+      "extractiveness": 0.35,
+      "suppression": 0.2,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "dunbar_interval",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.4,
+      "suppression": 0.5,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "dunning_kruger_effect",
+      "category": "narrative_history",
+      "type": "tangled_rope",
+      "extractiveness": 0.3,
+      "suppression": 0.7,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "e2ee_digital_privacy_2026",
+      "category": "narrative_history",
+      "type": "rope",
+      "extractiveness": 0.05,
+      "suppression": 0.5,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "implementation_window_2026",
+      "category": "narrative_history",
+      "type": "rope",
+      "extractiveness": 0.4,
+      "suppression": 0.3,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "electrification_scale_2026",
+      "category": "narrative_history",
+      "type": "tangled_rope",
+      "extractiveness": 0.15,
+      "suppression": 0.5,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "elencher_identity_transformation",
+      "category": "narrative_history",
+      "type": null,
+      "extractiveness": 0.1,
+      "suppression": 0.2,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "empty_tomb_transformation",
+      "category": "narrative_history",
+      "type": null,
+      "extractiveness": 0.4,
+      "suppression": 0.4,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "em_practice_v2",
+      "category": "narrative_history",
+      "type": "rope",
+      "extractiveness": 0.6,
+      "suppression": 0.5,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "endowment_interval",
+      "category": "narrative_history",
+      "type": "noose",
+      "extractiveness": 0.3,
+      "suppression": 0.4,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "epigenetics_complexity_2026",
+      "category": "narrative_history",
+      "type": "rope",
+      "extractiveness": 0.1,
+      "suppression": 0.2,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "ergo_autolykos_asic_resistance",
+      "category": "narrative_history",
+      "type": "noose",
+      "extractiveness": 0.2,
+      "suppression": 0.85,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "dexy_gold_interval",
+      "category": "narrative_history",
+      "type": "rope",
+      "extractiveness": 0.2,
+      "suppression": 0.2,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "ergo_lets_interval",
+      "category": "narrative_history",
+      "type": "rope",
+      "extractiveness": 0.15,
+      "suppression": 0.1,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "ergo_mixer_protocol",
+      "category": "narrative_history",
+      "type": "tangled_rope",
+      "extractiveness": 0.1,
+      "suppression": 0.1,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "ergo_nipopows",
+      "category": "narrative_history",
+      "type": "rope",
+      "extractiveness": 0.1,
+      "suppression": 0.1,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "rosen_bridge_interval",
+      "category": "narrative_history",
+      "type": "rope",
+      "extractiveness": 0.5,
+      "suppression": 0.2,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "sig_usd_interval",
+      "category": "narrative_history",
+      "type": "rope",
+      "extractiveness": 0.4,
+      "suppression": 0.2,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "ergo_storage_rent",
+      "category": "narrative_history",
+      "type": "tangled_rope",
+      "extractiveness": 0.4,
+      "suppression": 0.2,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "ergo_storage_rent_mechanism",
+      "category": "narrative_history",
+      "type": "tangled_rope",
+      "extractiveness": 0.15,
+      "suppression": 0.8,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "ergodic_interval",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.3,
+      "suppression": 0.6,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "ergot_grain_poisoning_interval",
+      "category": "extractive_market",
+      "type": null,
+      "extractiveness": 0.8,
+      "suppression": 0.7,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "euler_era",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.1,
+      "suppression": 0.1,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "exoplanetary_habitability_arbitrage",
+      "category": "narrative_history",
+      "type": null,
+      "extractiveness": 0.45,
+      "suppression": 0.55,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "exploration_vs_exploitation",
+      "category": "narrative_history",
+      "type": "tangled_rope",
+      "extractiveness": 0.3,
+      "suppression": 0.4,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "extraordinary_narrative_shift",
+      "category": "narrative_history",
+      "type": "tangled_rope",
+      "extractiveness": 0.4,
+      "suppression": 0.4,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "federalist_10_analysis",
+      "category": "extractive_market",
+      "type": "noose",
+      "extractiveness": 0.7,
+      "suppression": 0.5,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "faint_blue_neural_bifurcation",
+      "category": "extractive_market",
+      "type": "noose",
+      "extractiveness": 0.9,
+      "suppression": 0.8,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "fair_use_doctrine",
+      "category": "narrative_history",
+      "type": "rope",
+      "extractiveness": 0.1,
+      "suppression": 0.4,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "family_estrangement_ratio",
+      "category": "extractive_market",
+      "type": null,
+      "extractiveness": 0.8,
+      "suppression": 0.7,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "atsumono_period",
+      "category": "extractive_market",
+      "type": "mountain",
+      "extractiveness": 0.8,
+      "suppression": 0.9,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "fast_growing_hierarchy",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.6,
+      "suppression": 0.4,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "feigenbaum_universality",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.3,
+      "suppression": 0.2,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "finite_pool_of_worry_interval",
+      "category": "extractive_market",
+      "type": null,
+      "extractiveness": 0.75,
+      "suppression": 0.65,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "cfsg_era",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.35,
+      "suppression": 0.2,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "fittss_law_interval",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.4,
+      "suppression": 0.7,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "fmeca_standard_era",
+      "category": "narrative_history",
+      "type": "rope",
+      "extractiveness": 0.4,
+      "suppression": 0.5,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "four_color_era",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.25,
+      "suppression": 0.2,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "framing_effect_interval",
+      "category": "narrative_history",
+      "type": "noose",
+      "extractiveness": 0.5,
+      "suppression": 0.5,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "frankenstein_creation_hubris",
+      "category": "extractive_market",
+      "type": "noose",
+      "extractiveness": 0.9,
+      "suppression": 0.85,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "fta_era",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.1,
+      "suppression": 0.2,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "gale_shapley",
+      "category": "extractive_market",
+      "type": "tangled_rope",
+      "extractiveness": 0.8,
+      "suppression": 0.8,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "galois_era",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.2,
+      "suppression": 0.1,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "ruin_era",
+      "category": "extractive_market",
+      "type": "mountain",
+      "extractiveness": 0.9,
+      "suppression": 0.5,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "gauss_bonnet_era",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.1,
+      "suppression": 0.05,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "generational_replacement_inertia",
+      "category": "extractive_market",
+      "type": "mountain",
+      "extractiveness": 0.75,
+      "suppression": 0.8,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "genetic_algorithms_evolution",
+      "category": "narrative_history",
+      "type": "rope",
+      "extractiveness": 0.1,
+      "suppression": 0.2,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "genetic_predisposition_interval",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.6,
+      "suppression": 0.5,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "germline_regulation_threshold_2026",
+      "category": "narrative_history",
+      "type": "noose",
+      "extractiveness": 0.5,
+      "suppression": 0.8,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "platform_labor_epoch",
+      "category": "extractive_market",
+      "type": "noose",
+      "extractiveness": 0.8,
+      "suppression": 0.7,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "gilgamesh_epic_cycle",
+      "category": "extractive_market",
+      "type": "mountain",
+      "extractiveness": 1.0,
+      "suppression": 0.9,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "gita_kurukshetra",
+      "category": "narrative_history",
+      "type": "tangled_rope",
+      "extractiveness": 0.2,
+      "suppression": 0.9,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "glp1_market_impact_2026",
+      "category": "narrative_history",
+      "type": "rope",
+      "extractiveness": 0.35,
+      "suppression": 0.2,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "goedel_era",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.2,
+      "suppression": 0.35,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "goldbach_era",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.15,
+      "suppression": 0.1,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "golden_handcuffs",
+      "category": "narrative_history",
+      "type": "tangled_rope",
+      "extractiveness": 0.4,
+      "suppression": 0.2,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "goodharts_law_interval",
+      "category": "narrative_history",
+      "type": "noose",
+      "extractiveness": 0.5,
+      "suppression": 0.7,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "gradient_descent_optimization",
+      "category": "narrative_history",
+      "type": "rope",
+      "extractiveness": 0.3,
+      "suppression": 0.2,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "graph_coloring_interval",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.4,
+      "suppression": 0.5,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "greenland_crisis_2026",
+      "category": "extractive_market",
+      "type": "noose",
+      "extractiveness": 0.85,
+      "suppression": 0.75,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "greshams_law",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.6,
+      "suppression": 0.7,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "grete_samsa_transition",
+      "category": "narrative_history",
+      "type": "tangled_rope",
+      "extractiveness": 0.6,
+      "suppression": 0.5,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "gln_standard_lifecycle",
+      "category": "narrative_history",
+      "type": "rope",
+      "extractiveness": 0.3,
+      "suppression": 0.7,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "gs1_spec_v25",
+      "category": "narrative_history",
+      "type": "rope",
+      "extractiveness": 0.4,
+      "suppression": 0.8,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "halting_era",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.2,
+      "suppression": 0.3,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "hamiltonian_path_complexity",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.1,
+      "suppression": 0.2,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "hammurabi_lex_talionis",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.5,
+      "suppression": 0.8,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "hanlons_razor",
+      "category": "narrative_history",
+      "type": "tangled_rope",
+      "extractiveness": 0.2,
+      "suppression": 0.4,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "happiness_of_others",
+      "category": "extractive_market",
+      "type": "tangled_rope",
+      "extractiveness": 0.75,
+      "suppression": 0.5,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "on_liberty_analysis",
+      "category": "narrative_history",
+      "type": "rope",
+      "extractiveness": 0.5,
+      "suppression": 0.8,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "hawthorne_interval",
+      "category": "narrative_history",
+      "type": "noose",
+      "extractiveness": 0.4,
+      "suppression": 0.5,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "heisenberg_interval",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.2,
+      "suppression": 0.4,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "helsinki_bus_theory",
+      "category": "narrative_history",
+      "type": "rope",
+      "extractiveness": 0.4,
+      "suppression": 0.6,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "heuristic_optimization",
+      "category": "narrative_history",
+      "type": "rope",
+      "extractiveness": 0.2,
+      "suppression": 0.1,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "hilberts_hotel_infinity",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.15,
+      "suppression": 0.1,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "hiv_prep_prevention_2026",
+      "category": "narrative_history",
+      "type": null,
+      "extractiveness": 0.15,
+      "suppression": 0.5,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "hoa_interval",
+      "category": "narrative_history",
+      "type": "rope",
+      "extractiveness": 0.45,
+      "suppression": 0.5,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "hominin_evolutionary_bottleneck",
+      "category": "extractive_market",
+      "type": "noose",
+      "extractiveness": 0.75,
+      "suppression": 0.6,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "hydra_interval",
+      "category": "extractive_market",
+      "type": "mountain",
+      "extractiveness": 0.7,
+      "suppression": 0.5,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "meta_logic_01",
+      "category": "narrative_history",
+      "type": "rope",
+      "extractiveness": 0.1,
+      "suppression": 0.2,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "individual_revolution_autonomy",
+      "category": "unknown_novel",
+      "type": "noose",
+      "extractiveness": null,
+      "suppression": null,
+      "requires_enforcement": false,
+      "emerges_naturally": false
+    },
+    {
+      "id": "information_foraging_theory",
+      "category": "narrative_history",
+      "type": "rope",
+      "extractiveness": 0.2,
+      "suppression": 0.1,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "inner_model_era",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.3,
+      "suppression": 0.5,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "innovators_dilemma_interval",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.5,
+      "suppression": 0.7,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "institutional_mutation_domestication",
+      "category": "extractive_market",
+      "type": "rope",
+      "extractiveness": 0.7,
+      "suppression": 0.8,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "insult_wisdom_interval",
+      "category": "extractive_market",
+      "type": null,
+      "extractiveness": 0.75,
+      "suppression": 0.5,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "meta_stack_convergence",
+      "category": "extractive_market",
+      "type": "rope",
+      "extractiveness": 0.9,
+      "suppression": 0.95,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "iran_unrest_2025",
+      "category": "extractive_market",
+      "type": "noose",
+      "extractiveness": 0.9,
+      "suppression": 0.85,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "oligarchy_interval",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.6,
+      "suppression": 0.6,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "japan_gx_transition",
+      "category": "narrative_history",
+      "type": "rope",
+      "extractiveness": 0.5,
+      "suppression": 0.6,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "jevons_interval",
+      "category": "narrative_history",
+      "type": "rope",
+      "extractiveness": 0.6,
+      "suppression": 0.5,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "job_hunt_volume_system_2026",
+      "category": "extractive_market",
+      "type": null,
+      "extractiveness": 0.75,
+      "suppression": 0.6,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "keltner_relationship_evaluation",
+      "category": "narrative_history",
+      "type": null,
+      "extractiveness": 0.35,
+      "suppression": 0.45,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "khantivadin_patience_interval",
+      "category": "extractive_market",
+      "type": null,
+      "extractiveness": 1.0,
+      "suppression": 0.9,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "kidney_exchange_market",
+      "category": "narrative_history",
+      "type": "rope",
+      "extractiveness": 0.1,
+      "suppression": 0.9,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "kirby_paris_interval",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.2,
+      "suppression": 0.4,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "kjv_great_awakening",
+      "category": "narrative_history",
+      "type": "noose",
+      "extractiveness": 0.1,
+      "suppression": 0.4,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "kjv_linguistic_residue",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.1,
+      "suppression": 0.2,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "kjv_puritan_new_world_exit",
+      "category": "narrative_history",
+      "type": "rope",
+      "extractiveness": 0.2,
+      "suppression": 0.5,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "kjv_textual_authority",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.4,
+      "suppression": 0.7,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "kleene_era",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.2,
+      "suppression": 0.15,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "landscape_of_fear_2026",
+      "category": "narrative_history",
+      "type": null,
+      "extractiveness": 0.4,
+      "suppression": 0.7,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "large_cardinal_era",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.3,
+      "suppression": 0.4,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "diminishing_returns_interval",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.4,
+      "suppression": 0.3,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "layered_brain_processing",
+      "category": "narrative_history",
+      "type": "noose",
+      "extractiveness": 0.35,
+      "suppression": 0.75,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "software_lifecycle_r7",
+      "category": "extractive_market",
+      "type": "noose",
+      "extractiveness": 0.8,
+      "suppression": 0.6,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "lehman_repo_105",
+      "category": "extractive_market",
+      "type": "noose",
+      "extractiveness": 0.9,
+      "suppression": 0.85,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "liar_paradox_interval",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.1,
+      "suppression": 0.2,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "lindy_effect",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.2,
+      "suppression": 0.5,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "litany_of_the_real",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.15,
+      "suppression": 0.2,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "lln_era",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.25,
+      "suppression": 0.2,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "lobs_theorem_interval",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.3,
+      "suppression": 0.5,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "local_vs_global_optima",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.3,
+      "suppression": 0.5,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "logistic_map_era",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.35,
+      "suppression": 0.4,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "lorenz_era",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.4,
+      "suppression": 0.5,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "lowenheim_skolem_interval",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.2,
+      "suppression": 0.4,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "lsd_microdosing_professional_openness",
+      "category": "narrative_history",
+      "type": "tangled_rope",
+      "extractiveness": 0.4,
+      "suppression": 0.5,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "lula_hemisphere_2026",
+      "category": "extractive_market",
+      "type": "noose",
+      "extractiveness": 0.75,
+      "suppression": 0.85,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "magna_carta_liberties",
+      "category": "narrative_history",
+      "type": "rope",
+      "extractiveness": 0.4,
+      "suppression": 0.8,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "mandatrophy_cycle",
+      "category": "extractive_market",
+      "type": "noose",
+      "extractiveness": 0.85,
+      "suppression": 0.7,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "mandatrophy_lifecycle",
+      "category": "extractive_market",
+      "type": "noose",
+      "extractiveness": 0.9,
+      "suppression": 0.75,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "optimal_stopping_marriage",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.1,
+      "suppression": 0.4,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "mars_autonomy_evolution",
+      "category": "narrative_history",
+      "type": "rope",
+      "extractiveness": 0.4,
+      "suppression": 0.5,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "mariner_to_msl_era",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.1,
+      "suppression": 1.0,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "matching_markets_general",
+      "category": "narrative_history",
+      "type": "tangled_rope",
+      "extractiveness": 0.4,
+      "suppression": 0.7,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "tensile_strength_interval",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.5,
+      "suppression": 0.4,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "max_flow_min_cut",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.4,
+      "suppression": 0.2,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "mco_failure_trajectory",
+      "category": "extractive_market",
+      "type": "noose",
+      "extractiveness": 0.9,
+      "suppression": 0.7,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "med_diet_consensus_2026",
+      "category": "narrative_history",
+      "type": "noose",
+      "extractiveness": 0.2,
+      "suppression": 0.4,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "medical_residency_match",
+      "category": "narrative_history",
+      "type": "rope",
+      "extractiveness": 0.6,
+      "suppression": 0.95,
+      "requires_enforcement": true,
+      "emerges_naturally": true
+    },
+    {
+      "id": "medieval_church_hegemony",
+      "category": "extractive_market",
+      "type": "mountain",
+      "extractiveness": 0.7,
+      "suppression": 0.9,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "samsa_transformation_period",
+      "category": "extractive_market",
+      "type": "mountain",
+      "extractiveness": 0.8,
+      "suppression": 0.7,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "ek_robot_integration_cycle",
+      "category": "narrative_history",
+      "type": "noose",
+      "extractiveness": 0.2,
+      "suppression": 0.6,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "microbiome_symbiosis",
+      "category": "narrative_history",
+      "type": "tangled_rope",
+      "extractiveness": 0.45,
+      "suppression": 0.65,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "mil_std_461g_era",
+      "category": "narrative_history",
+      "type": "rope",
+      "extractiveness": 0.5,
+      "suppression": 0.4,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "mil_std_810f_era",
+      "category": "narrative_history",
+      "type": "rope",
+      "extractiveness": 0.5,
+      "suppression": 0.4,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "minimax_era",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.3,
+      "suppression": 0.2,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "misunderstanding_as_mismatch",
+      "category": "extractive_market",
+      "type": "tangled_rope",
+      "extractiveness": 0.75,
+      "suppression": 0.7,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "nixon_shock_1971",
+      "category": "narrative_history",
+      "type": "rope",
+      "extractiveness": 0.5,
+      "suppression": 0.4,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "probability_paradox_era",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.33,
+      "suppression": 0.6,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "moores_law_interval",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.3,
+      "suppression": 0.5,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "fbc_era_operations",
+      "category": "extractive_market",
+      "type": "noose",
+      "extractiveness": 0.8,
+      "suppression": 0.7,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "nash_era",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.5,
+      "suppression": 0.4,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "necessary_day_job",
+      "category": "extractive_market",
+      "type": "noose",
+      "extractiveness": 0.65,
+      "suppression": 0.7,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "negative_emissions_arbitrage",
+      "category": "extractive_market",
+      "type": null,
+      "extractiveness": 0.82,
+      "suppression": 0.55,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "net_zero_stabilization",
+      "category": "extractive_market",
+      "type": null,
+      "extractiveness": 0.85,
+      "suppression": 0.45,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "network_effects",
+      "category": "narrative_history",
+      "type": "tangled_rope",
+      "extractiveness": 0.5,
+      "suppression": 0.6,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "neural_interoperability",
+      "category": "extractive_market",
+      "type": "tangled_rope",
+      "extractiveness": 0.85,
+      "suppression": 0.5,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "neurodiversity_spectrum",
+      "category": "extractive_market",
+      "type": "rope",
+      "extractiveness": 0.72,
+      "suppression": 0.55,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "newton_era",
+      "category": "narrative_history",
+      "type": "rope",
+      "extractiveness": 0.15,
+      "suppression": 0.2,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "no_cloning_interval",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.2,
+      "suppression": 0.3,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "noether_era",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.1,
+      "suppression": 0.1,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "non_compete_agreements",
+      "category": "extractive_market",
+      "type": "rope",
+      "extractiveness": 0.8,
+      "suppression": 0.7,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "skolem_era",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.25,
+      "suppression": 0.3,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "dprk_songun_cycle",
+      "category": "extractive_market",
+      "type": "noose",
+      "extractiveness": 0.95,
+      "suppression": 0.9,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "omelet_perfection_interval",
+      "category": "narrative_history",
+      "type": null,
+      "extractiveness": 0.25,
+      "suppression": 0.45,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "openbsd_netiquette_protocol",
+      "category": "narrative_history",
+      "type": null,
+      "extractiveness": 0.3,
+      "suppression": 0.6,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "overton_interval",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.4,
+      "suppression": 0.8,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "p_vs_np_interval",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.4,
+      "suppression": 0.2,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "parable_fish_turtle",
+      "category": "extractive_market",
+      "type": "tangled_rope",
+      "extractiveness": 0.7,
+      "suppression": 0.85,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "pareto_principle",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.4,
+      "suppression": 0.3,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "parkinson_interval",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.5,
+      "suppression": 0.4,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "peano_era",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.25,
+      "suppression": 0.2,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "permissive_software_licensing",
+      "category": "narrative_history",
+      "type": "rope",
+      "extractiveness": 0.2,
+      "suppression": 0.1,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "personalized_nutritional_arbitrage",
+      "category": "extractive_market",
+      "type": "tangled_rope",
+      "extractiveness": 0.65,
+      "suppression": 0.4,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "peter_principle",
+      "category": "narrative_history",
+      "type": "tangled_rope",
+      "extractiveness": 0.4,
+      "suppression": 0.5,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "planetary_boundaries",
+      "category": "extractive_market",
+      "type": "mountain",
+      "extractiveness": 0.8,
+      "suppression": 0.8,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "planetary_diet_constraint_2026",
+      "category": "narrative_history",
+      "type": "tangled_rope",
+      "extractiveness": 0.1,
+      "suppression": 0.6,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "planning_fallacy_interval",
+      "category": "narrative_history",
+      "type": "noose",
+      "extractiveness": 0.5,
+      "suppression": 0.6,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "platform_cooperativism_governance",
+      "category": "narrative_history",
+      "type": "rope",
+      "extractiveness": 0.05,
+      "suppression": 0.2,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "poetic_verse_and_past",
+      "category": "extractive_market",
+      "type": "tangled_rope",
+      "extractiveness": 0.75,
+      "suppression": 0.6,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "poincare_era",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.2,
+      "suppression": 0.1,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "politeness_face_negotiation",
+      "category": "extractive_market",
+      "type": "tangled_rope",
+      "extractiveness": 0.65,
+      "suppression": 0.5,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "postman_survival_interval",
+      "category": "narrative_history",
+      "type": null,
+      "extractiveness": 0.4,
+      "suppression": 0.5,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "pnt_era",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.15,
+      "suppression": 0.1,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "game_theory_era",
+      "category": "extractive_market",
+      "type": "mountain",
+      "extractiveness": 0.7,
+      "suppression": 0.4,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "private_identity_integration",
+      "category": "narrative_history",
+      "type": "rope",
+      "extractiveness": 0.4,
+      "suppression": 0.5,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "proof_of_work_consensus",
+      "category": "narrative_history",
+      "type": "rope",
+      "extractiveness": 0.2,
+      "suppression": 0.9,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "public_domain_commons",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.0,
+      "suppression": 0.3,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "pythagorean_era",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.1,
+      "suppression": 0.3,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "qi_interval",
+      "category": "extractive_market",
+      "type": "rope",
+      "extractiveness": 0.8,
+      "suppression": 0.7,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "quantum_decryption_risk_2026",
+      "category": "extractive_market",
+      "type": null,
+      "extractiveness": 0.8,
+      "suppression": 0.3,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "interstellar_quantum_link",
+      "category": "narrative_history",
+      "type": "rope",
+      "extractiveness": 0.2,
+      "suppression": 0.95,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "quantum_nonlocality_2026",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.0,
+      "suppression": 0.8,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "quellcrist_falconer_justice",
+      "category": "extractive_market",
+      "type": null,
+      "extractiveness": 0.9,
+      "suppression": 0.8,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "quine_era",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.2,
+      "suppression": 0.1,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "qwerty_lockin_interval",
+      "category": "narrative_history",
+      "type": "noose",
+      "extractiveness": 0.4,
+      "suppression": 0.7,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "radiology_r7",
+      "category": "extractive_market",
+      "type": "mountain",
+      "extractiveness": 0.7,
+      "suppression": 0.6,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "railway_gauge_standard",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.3,
+      "suppression": 0.8,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "reciprocity_laws_math",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.1,
+      "suppression": 0.1,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "capture_interval",
+      "category": "extractive_market",
+      "type": "noose",
+      "extractiveness": 0.8,
+      "suppression": 0.7,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "relativity_of_simultaneity",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.0,
+      "suppression": 0.4,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "relativity_physical_invariance",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.0,
+      "suppression": 0.1,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "tcp_rfc9293_interoperability",
+      "category": "narrative_history",
+      "type": "rope",
+      "extractiveness": 0.2,
+      "suppression": 0.7,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "rfc9293_state_machine",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.2,
+      "suppression": 0.6,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "rices_era",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.15,
+      "suppression": 0.2,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "challenger_post_mortem",
+      "category": "extractive_market",
+      "type": "noose",
+      "extractiveness": 0.85,
+      "suppression": 0.75,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "rotation_seven_black_soil",
+      "category": "extractive_market",
+      "type": "mountain",
+      "extractiveness": 0.95,
+      "suppression": 0.1,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "rotation_seven_isolation",
+      "category": "extractive_market",
+      "type": "noose",
+      "extractiveness": 0.85,
+      "suppression": 0.7,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "rotation_seven_kubo_ranking",
+      "category": "extractive_market",
+      "type": "noose",
+      "extractiveness": 0.75,
+      "suppression": 0.9,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "migration_theory_review",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.3,
+      "suppression": 0.4,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "rn_withdrawal_cycle",
+      "category": "extractive_market",
+      "type": "noose",
+      "extractiveness": 0.8,
+      "suppression": 0.5,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "rules_based_international_order",
+      "category": "extractive_market",
+      "type": "noose",
+      "extractiveness": 0.75,
+      "suppression": 0.6,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "russell_era",
+      "category": "extractive_market",
+      "type": "mountain",
+      "extractiveness": 0.7,
+      "suppression": 0.4,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "russia_cannibalization_cycle",
+      "category": "extractive_market",
+      "type": "noose",
+      "extractiveness": 0.8,
+      "suppression": 0.75,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "airbnb_ipo_era",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.6,
+      "suppression": 0.8,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "visa_ipo_window",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.2,
+      "suppression": 0.9,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "visa_litigation_ringfencing",
+      "category": "narrative_history",
+      "type": "rope",
+      "extractiveness": 0.4,
+      "suppression": 0.7,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "sadhu_integrity_protocol",
+      "category": "narrative_history",
+      "type": null,
+      "extractiveness": 0.3,
+      "suppression": 0.4,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "sapir_whorf_interval",
+      "category": "narrative_history",
+      "type": "noose",
+      "extractiveness": 0.5,
+      "suppression": 0.7,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "sat_csp_interval",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.4,
+      "suppression": 0.5,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "scurvy_maritime_interval",
+      "category": "extractive_market",
+      "type": null,
+      "extractiveness": 0.9,
+      "suppression": 0.7,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "zarathustra_hazar",
+      "category": "extractive_market",
+      "type": "rope",
+      "extractiveness": 0.8,
+      "suppression": 0.7,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "shannon_entropy_limit",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.1,
+      "suppression": 0.2,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "shitty_feedback_handling",
+      "category": "narrative_history",
+      "type": "rope",
+      "extractiveness": 0.4,
+      "suppression": 0.3,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "shobies_existential_commitment",
+      "category": "extractive_market",
+      "type": null,
+      "extractiveness": 0.65,
+      "suppression": 0.5,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "silicon_lexicon_overload",
+      "category": "extractive_market",
+      "type": "noose",
+      "extractiveness": 0.8,
+      "suppression": 0.7,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "skills_based_hiring",
+      "category": "narrative_history",
+      "type": "rope",
+      "extractiveness": 0.3,
+      "suppression": 0.2,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "skolems_paradox_interval",
+      "category": "narrative_history",
+      "type": "noose",
+      "extractiveness": 0.2,
+      "suppression": 0.4,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "sludge_bureaucratic_friction",
+      "category": "extractive_market",
+      "type": "noose",
+      "extractiveness": 0.7,
+      "suppression": 0.6,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "smartphone_ubiquity",
+      "category": "extractive_market",
+      "type": "tangled_rope",
+      "extractiveness": 0.75,
+      "suppression": 0.5,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "scs_operational_2026",
+      "category": "extractive_market",
+      "type": "rope",
+      "extractiveness": 0.8,
+      "suppression": 0.7,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "social_loafing_interval",
+      "category": "narrative_history",
+      "type": "noose",
+      "extractiveness": 0.5,
+      "suppression": 0.4,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "social_media_2025_cycle",
+      "category": "narrative_history",
+      "type": "noose",
+      "extractiveness": 0.6,
+      "suppression": 0.5,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "social_narrative_casting",
+      "category": "narrative_history",
+      "type": null,
+      "extractiveness": 0.3,
+      "suppression": 0.6,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "solar_system_weirdness",
+      "category": "narrative_history",
+      "type": null,
+      "extractiveness": 0.2,
+      "suppression": 0.6,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "somatic_focusing_awareness",
+      "category": "narrative_history",
+      "type": "rope",
+      "extractiveness": 0.2,
+      "suppression": 0.3,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "sorites_interval",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.4,
+      "suppression": 0.7,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "scs_legal_era",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.45,
+      "suppression": 0.35,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "square_cube_interval",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.5,
+      "suppression": 0.7,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "st_petersburg_era",
+      "category": "extractive_market",
+      "type": "mountain",
+      "extractiveness": 0.65,
+      "suppression": 0.4,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "matching_theory_era",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.4,
+      "suppression": 0.3,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "galactic_selection_event",
+      "category": "extractive_market",
+      "type": "noose",
+      "extractiveness": 0.75,
+      "suppression": 0.8,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "statecraft_virtu_analysis",
+      "category": "extractive_market",
+      "type": "rope",
+      "extractiveness": 0.7,
+      "suppression": 0.9,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "steinmetz_valuation_asymmetry",
+      "category": "extractive_market",
+      "type": null,
+      "extractiveness": 0.9,
+      "suppression": 0.5,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "stoic_logos_governance",
+      "category": "extractive_market",
+      "type": "tangled_rope",
+      "extractiveness": 0.75,
+      "suppression": 0.8,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "strange_attractor_dynamics",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.35,
+      "suppression": 0.3,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "sts86_ascent_checklist",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.05,
+      "suppression": 0.95,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "sturgeon_interval",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.1,
+      "suppression": 0.4,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "suanne_coup_of_peace",
+      "category": "extractive_market",
+      "type": "tangled_rope",
+      "extractiveness": 0.8,
+      "suppression": 0.7,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "suanne_face_restoration",
+      "category": "extractive_market",
+      "type": "tangled_rope",
+      "extractiveness": 0.75,
+      "suppression": 0.65,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "sunk_cost_interval",
+      "category": "narrative_history",
+      "type": "noose",
+      "extractiveness": 0.5,
+      "suppression": 0.6,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "suslin_era",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.2,
+      "suppression": 0.3,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "sylow_era",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.15,
+      "suppression": 0.2,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "taiwan_status_quo_cycle",
+      "category": "extractive_market",
+      "type": "rope",
+      "extractiveness": 0.7,
+      "suppression": 0.8,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "hegemony_transition_window",
+      "category": "extractive_market",
+      "type": "noose",
+      "extractiveness": 0.9,
+      "suppression": 0.8,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "tarski_interval",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.2,
+      "suppression": 0.3,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "teaching_horses_to_sing_interval",
+      "category": "extractive_market",
+      "type": null,
+      "extractiveness": 0.75,
+      "suppression": 0.4,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "technological_provenance_arbitrage",
+      "category": "extractive_market",
+      "type": null,
+      "extractiveness": 0.78,
+      "suppression": 0.5,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "temporal_scale_arbitrage",
+      "category": "extractive_market",
+      "type": null,
+      "extractiveness": 0.76,
+      "suppression": 0.4,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "tx_pivot_window_2026",
+      "category": "extractive_market",
+      "type": "noose",
+      "extractiveness": 0.7,
+      "suppression": 0.6,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "theban_dionysian_conflict",
+      "category": "extractive_market",
+      "type": "noose",
+      "extractiveness": 0.95,
+      "suppression": 0.85,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "the_calm_expedition_window",
+      "category": "extractive_market",
+      "type": "noose",
+      "extractiveness": 0.75,
+      "suppression": 0.8,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "the_churn_systemic_upheaval",
+      "category": "extractive_market",
+      "type": null,
+      "extractiveness": 0.9,
+      "suppression": 0.8,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "the_wall_procedural_barrier",
+      "category": "extractive_market",
+      "type": "noose",
+      "extractiveness": 0.8,
+      "suppression": 0.9,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "theory_of_visitors",
+      "category": "extractive_market",
+      "type": "tangled_rope",
+      "extractiveness": 0.65,
+      "suppression": 0.5,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "thermodynamics_entropy_interval",
+      "category": "extractive_market",
+      "type": "mountain",
+      "extractiveness": 0.8,
+      "suppression": 0.7,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "celestial_mechanics_era",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.4,
+      "suppression": 0.3,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "toxic_social_infection_interval",
+      "category": "extractive_market",
+      "type": null,
+      "extractiveness": 0.9,
+      "suppression": 0.7,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "tractarian_logic_limit",
+      "category": "extractive_market",
+      "type": "mountain",
+      "extractiveness": 0.7,
+      "suppression": 0.95,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "trade_secret_law",
+      "category": "narrative_history",
+      "type": "tangled_rope",
+      "extractiveness": 0.2,
+      "suppression": 0.3,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "tragedy_of_the_commons",
+      "category": "extractive_market",
+      "type": "mountain",
+      "extractiveness": 0.7,
+      "suppression": 0.4,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "transformer_self_attention",
+      "category": "extractive_market",
+      "type": null,
+      "extractiveness": 0.75,
+      "suppression": 0.4,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "transient_event_detection",
+      "category": "narrative_history",
+      "type": null,
+      "extractiveness": 0.45,
+      "suppression": 0.5,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "traveling_salesperson_problem",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.4,
+      "suppression": 0.2,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "trojan_collapse_interval",
+      "category": "extractive_market",
+      "type": "noose",
+      "extractiveness": 1.0,
+      "suppression": 1.0,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "post_trump_return",
+      "category": "extractive_market",
+      "type": "noose",
+      "extractiveness": 0.65,
+      "suppression": 0.4,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "trump_ii_year_one",
+      "category": "extractive_market",
+      "type": "noose",
+      "extractiveness": 0.85,
+      "suppression": 0.9,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "un_era",
+      "category": "narrative_history",
+      "type": "rope",
+      "extractiveness": 0.1,
+      "suppression": 0.2,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "telemachus_morning",
+      "category": "extractive_market",
+      "type": "noose",
+      "extractiveness": 0.8,
+      "suppression": 0.8,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "nestor_afternoon",
+      "category": "extractive_market",
+      "type": "noose",
+      "extractiveness": 0.7,
+      "suppression": 0.7,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "proteus_strand_walk",
+      "category": "narrative_history",
+      "type": "noose",
+      "extractiveness": 0.5,
+      "suppression": 0.7,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "bloom_kosher_transgression",
+      "category": "narrative_history",
+      "type": "noose",
+      "extractiveness": 0.4,
+      "suppression": 0.5,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "bloom_secret_correspondence",
+      "category": "narrative_history",
+      "type": "noose",
+      "extractiveness": 0.4,
+      "suppression": 0.8,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "bloom_exclusion_interval",
+      "category": "narrative_history",
+      "type": "noose",
+      "extractiveness": 0.5,
+      "suppression": 0.7,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "bloom_aeolus_interval",
+      "category": "narrative_history",
+      "type": "noose",
+      "extractiveness": 0.4,
+      "suppression": 0.5,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "lestrygonian_metabolism_chp8_interval",
+      "category": "narrative_history",
+      "type": "noose",
+      "extractiveness": 0.6,
+      "suppression": 0.4,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "stephen_shakespeare_ghost",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.4,
+      "suppression": 0.6,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "the_viceregal_cavalcade",
+      "category": "narrative_history",
+      "type": "noose",
+      "extractiveness": 0.4,
+      "suppression": 0.6,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "bloom_sirens_interval",
+      "category": "narrative_history",
+      "type": "noose",
+      "extractiveness": 0.6,
+      "suppression": 0.7,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "bloom_exclusion_id",
+      "category": "narrative_history",
+      "type": "noose",
+      "extractiveness": 0.6,
+      "suppression": 0.7,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "gerty_bloom_interval",
+      "category": "narrative_history",
+      "type": "noose",
+      "extractiveness": 0.5,
+      "suppression": 0.5,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "gestation_wombfruit_id",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.3,
+      "suppression": 0.4,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "nighttown_vigil_id",
+      "category": "narrative_history",
+      "type": "noose",
+      "extractiveness": 0.6,
+      "suppression": 0.8,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "bloom_samaritan_id",
+      "category": "narrative_history",
+      "type": "noose",
+      "extractiveness": 0.5,
+      "suppression": 0.6,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "bloom_ithaca_interval",
+      "category": "narrative_history",
+      "type": "rope",
+      "extractiveness": 0.4,
+      "suppression": 0.6,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "molly_affirmation_id",
+      "category": "narrative_history",
+      "type": "rope",
+      "extractiveness": 0.4,
+      "suppression": 0.5,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "unclos_era",
+      "category": "narrative_history",
+      "type": "rope",
+      "extractiveness": 0.3,
+      "suppression": 0.2,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "labor_management_conflict_r1",
+      "category": "narrative_history",
+      "type": "rope",
+      "extractiveness": 0.6,
+      "suppression": 0.5,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "scientific_consensus_period",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.1,
+      "suppression": 0.2,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "us_suburban_zoning_2025",
+      "category": "extractive_market",
+      "type": "noose",
+      "extractiveness": 0.7,
+      "suppression": 0.65,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "us_two_party_duopoly",
+      "category": "extractive_market",
+      "type": "tangled_rope",
+      "extractiveness": 0.75,
+      "suppression": 0.8,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "utopia_apocalypse_fragility",
+      "category": "extractive_market",
+      "type": "mountain",
+      "extractiveness": 0.7,
+      "suppression": 0.6,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "van_der_waerden_interval",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.2,
+      "suppression": 0.5,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "viral_transmission_rates",
+      "category": "extractive_market",
+      "type": "mountain",
+      "extractiveness": 0.7,
+      "suppression": 0.8,
+      "requires_enforcement": true,
+      "emerges_naturally": true
+    },
+    {
+      "id": "weber_fechner_law",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.4,
+      "suppression": 0.5,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "whitehead_era",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.2,
+      "suppression": 0.3,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "wikipedia_crowdsourcing_2026",
+      "category": "narrative_history",
+      "type": null,
+      "extractiveness": 0.05,
+      "suppression": 0.4,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "wikipedia_notability_requirement_2026",
+      "category": "narrative_history",
+      "type": "mountain",
+      "extractiveness": 0.4,
+      "suppression": 0.7,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "winners_curse",
+      "category": "extractive_market",
+      "type": "mountain",
+      "extractiveness": 0.7,
+      "suppression": 0.6,
+      "requires_enforcement": false,
+      "emerges_naturally": true
+    },
+    {
+      "id": "xi_mao_ideological_centralization",
+      "category": "extractive_market",
+      "type": "mountain",
+      "extractiveness": 0.75,
+      "suppression": 0.85,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    },
+    {
+      "id": "zipfs_law",
+      "category": "extractive_market",
+      "type": "tangled_rope",
+      "extractiveness": 0.75,
+      "suppression": 0.7,
+      "requires_enforcement": true,
+      "emerges_naturally": false
+    }
+  ]
+}

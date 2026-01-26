@@ -1,18 +1,18 @@
 % ============================================================================
 % CONSTRAINT STORY: coinbase_regulatory_uncertainty
 % ============================================================================
-% Generated: 2026-01-17
-% Model: Gemini 2.0 Flash
+% Generated: 2026-01-23
+% Model: Gemini Pro (Revised)
 % Source: Coinbase Global, Inc. Form S-1 (February 25, 2021)
 % ============================================================================
 
-:- module(coinbase_reg_uncertainty, []).
+:- module(constraint_coinbase_regulatory_uncertainty, []).
 
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
 
-% --- Namespace Hooks ---
+% --- Namespace Hooks (Required for loading) ---
 :- multifile 
     domain_priors:base_extractiveness/2,
     domain_priors:suppression_score/2,
@@ -25,200 +25,217 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: coinbase_regulatory_uncertainty
+ * 
+ * constraint_id: coinbase_regulatory_uncertainty
  * human_readable: Crypto-Regulatory Ambiguity
- * domain: political/legal
+ * domain: political/legal/economic
  * temporal_scope: 2021-Ongoing
  * spatial_scope: Global / National (US focus)
- * * SUMMARY:
+ * 
+ * SUMMARY:
  * The lack of a clear, unified legal framework for crypto assets, specifically 
  * whether certain assets are "securities" under the SEC or "commodities" under 
  * the CFTC. This creates a state of permanent "legal 
  * debt" for the firm.
- * * KEY AGENTS:
- * - SEC/Regulators: The institutional "mountain-makers" who enforce 
- * traditional rules on new technology.
- * - Coinbase Compliance Team: The engineers trying to build a "Rope" (compliance 
- * framework) through an shifting landscape.
- * - Asset Issuers: Third parties whose tokens may be reclassified as illegal 
- * securities, impacting Coinbase's inventory.
- * * NARRATIVE ARC:
- * Coinbase admits that they are operating in a "gray zone". The S-1 
- * details a landscape where a single regulatory change could render their 
- * core product offerings illegal or prohibitively expensive.
+ * 
+ * KEY AGENTS:
+ * - SEC/Regulators (Institutional): Enforces traditional rules on new technology.
+ * - Coinbase Compliance Team (Individual Moderate): Builds a compliance framework in a shifting landscape.
+ * - Public Unitholder (Individual Powerless): Faces risks from regulatory actions without direct control.
  */
 
 /* ==========================================================================
-   2. CORE SYSTEM INTEGRATION
+   2. CORE SYSTEM INTEGRATION (The "Reality" Layer)
    ========================================================================== */
 
-narrative_ontology:interval(coinbase_reg_pivot, 0, 10).
-narrative_ontology:constraint_claim(coinbase_regulatory_uncertainty, mountain).
+narrative_ontology:interval(coinbase_regulatory_uncertainty, 0, 10).
+narrative_ontology:constraint_claim(coinbase_regulatory_uncertainty, tangled_rope).
 
-% Base extractiveness score (0.0 - 1.0)
-% Rationale: High potential for "punitive extraction" via fines, legal 
+% Base extractiveness: 0.7.
+% High potential for "punitive extraction" via fines, legal 
 % fees, and mandatory compliance overhead.
 domain_priors:base_extractiveness(coinbase_regulatory_uncertainty, 0.7).
 
-% Suppression score (0.0 - 1.0)
-% Rationale: Very high; you cannot "vote" or "exit" your way out of 
+% Suppression score: 0.9.
+% You cannot "vote" or "exit" your way out of 
 % federal oversight if you want to remain a US public company.
 domain_priors:suppression_score(coinbase_regulatory_uncertainty, 0.9).
 
-% Enforcement requirements
+% Enforcement: Requires active enforcement by regulatory bodies.
 domain_priors:requires_active_enforcement(coinbase_regulatory_uncertainty).
 
-% Metrics
-narrative_ontology:constraint_metric(coinbase_regulatory_uncertainty, extractiveness, 0.7).
-narrative_ontology:constraint_metric(coinbase_regulatory_uncertainty, suppression_requirement, 0.9).
-
-% Beneficiaries and Victims
+% BENEFICIARIES & VICTIMS
 constraint_beneficiary(coinbase_regulatory_uncertainty, traditional_financial_incumbents).
-constraint_victim(coinbase_regulatory_uncertainty, innovation_agility).
+constraint_victim(coinbase_regulatory_uncertainty, crypto_innovation).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 1: Coinbase General Counsel - Rope
+   PERSPECTIVE 1: SEC/REGULATORS - Mountain
    --------------------------------------------------------------------------
-   
-   WHO: individual_powerful / institutional.
-   WHEN: historical.
-   WHERE: arbitrage - Actively lobbying and litigating to shape the "Rope".
+   WHO: institutional (Enforces traditional rules on new technology)
+   WHEN: historical (Applying century-old laws to new paradigms)
+   WHERE: constrained (By existing legal frameworks and mandates)
    
    WHY THIS CLASSIFICATION:
-   For the legal team, regulation is a "Rope." They believe that by being 
-   the "most compliant" exchange, they create a competitive moat that 
-   strangles less-regulated competitors while pulling institutional capital 
-   into the fold.
-   
-   NARRATIVE EVIDENCE:
-   "We have a long history of proactively engaging with regulators... we believe 
-   our compliance-first approach is a key differentiator".
-   -------------------------------------------------------------------------- */
-
-constraint_indexing:constraint_classification(
-    coinbase_regulatory_uncertainty,
-    rope,
-    context(
-        agent_power(individual_powerful),
-        time_horizon(historical),
-        exit_options(arbitrage),
-        constraint_beneficiary(coinbase_regulatory_uncertainty, coinbase_market_share),
-        constraint_victim(coinbase_regulatory_uncertainty, offshore_exchanges),
-        spatial_scope(national)
-    )
-) :-
-    domain_priors:base_extractiveness(coinbase_regulatory_uncertainty, E),
-    E < 0.8,
-    !.
-
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 2: Public Unitholder - Mountain
-   --------------------------------------------------------------------------
-   
-   WHO: individual_powerless.
-   WHEN: biographical.
-   WHERE: constrained - Can sell the stock, but cannot affect the SEC.
-   
-   WHY THIS CLASSIFICATION:
-   For the investor, the SEC is a "Mountain." It is a massive, external 
-   force of nature that could trigger a "Noose" event (delisting, fines) 
-   at any moment, and there is absolutely nothing the investor can do to 
-   mitigate that risk except wait.
-   
-   NARRATIVE EVIDENCE:
-   "Any enforcement action... could result in significant fines... and harm 
-   our business, reputation, and financial results".
+   For the SEC, regulatory uncertainty is a 'Mountain'. They are tasked with
+   applying existing laws (e.g., the Howey Test) to a novel and rapidly evolving
+   technology. The complexity and ambiguity of this task create an immense
+   and often unyielding challenge to their mission of investor protection.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
     coinbase_regulatory_uncertainty,
     mountain,
     context(
-        agent_power(individual_powerless),
-        time_horizon(biographical),
+        agent_power(institutional),
+        time_horizon(historical),
         exit_options(constrained),
-        constraint_beneficiary(coinbase_regulatory_uncertainty, regulatory_state),
-        constraint_victim(coinbase_regulatory_uncertainty, coinbase_shareholder),
         spatial_scope(national)
     )
-) :-
-    domain_priors:suppression_score(coinbase_regulatory_uncertainty, S),
-    S > 0.8,
-    !.
+).
+
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 2: COINBASE COMPLIANCE TEAM - Rope
+   --------------------------------------------------------------------------
+   WHO: individual_moderate (Builds a compliance framework in a shifting landscape)
+   WHEN: immediate (Navigating day-to-day legal challenges)
+   WHERE: arbitrage (Actively lobbying and litigating to shape the "Rope")
+   
+   WHY THIS CLASSIFICATION:
+   For Coinbase's legal and compliance team, regulation is a 'Rope'. They believe
+   that by being the "most compliant" exchange, they create a competitive moat
+   that strangles less-regulated competitors while pulling institutional capital
+   into their ecosystem. Compliance becomes a strategic tool for market positioning.
+   -------------------------------------------------------------------------- */
+
+constraint_indexing:constraint_classification(
+    coinbase_regulatory_uncertainty,
+    rope,
+    context(
+        agent_power(individual_moderate),
+        time_horizon(immediate),
+        exit_options(arbitrage),
+        spatial_scope(national)
+    )
+).
+
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 3: PUBLIC UNITHOLDER - Snare
+   --------------------------------------------------------------------------
+   WHO: individual_powerless (Faces risks from regulatory actions without direct control)
+   WHEN: biographical (Long-term investment horizon)
+   WHERE: trapped (Cannot directly influence SEC decisions)
+   
+   WHY THIS CLASSIFICATION:
+   For the public unitholder, regulatory uncertainty is a 'Snare'. The SEC's
+   actions can trigger a catastrophic event (delisting, fines) at any moment,
+   strangling their investment. They are powerless to mitigate this risk,
+   other than by selling their shares, making them a victim of the legal "gray zone".
+   -------------------------------------------------------------------------- */
+
+constraint_indexing:constraint_classification(
+    coinbase_regulatory_uncertainty,
+    snare,
+    context(
+        agent_power(individual_powerless),
+        time_horizon(biographical),
+        exit_options(trapped),
+        spatial_scope(national)
+    )
+).
 
 /* ==========================================================================
-   4. TESTS
+   4. TESTS (What We Learn About Constraints)
    ========================================================================== */
 
-:- begin_tests(coinbase_reg_tests).
+:- begin_tests(coinbase_regulatory_uncertainty_tests).
 
-test(compliance_moat_logic) :-
-    % Verify that powerful agents view regulation as a strategic tool (Rope)
-    constraint_indexing:constraint_classification(coinbase_regulatory_uncertainty, rope, 
-        context(individual_powerful, _, arbitrage, _, _, _)).
+test(multi_perspective_variance) :-
+    constraint_indexing:constraint_classification(coinbase_regulatory_uncertainty, Type1, context(agent_power(institutional), _, _, _)),
+    constraint_indexing:constraint_classification(coinbase_regulatory_uncertainty, Type2, context(agent_power(individual_moderate), _, _, _)),
+    constraint_indexing:constraint_classification(coinbase_regulatory_uncertainty, Type3, context(agent_power(individual_powerless), _, _, _)),
+    Type1 \= Type2,
+    Type2 \= Type3,
+    Type1 \= Type3.
 
-test(shareholder_risk_audit) :-
-    % Verify that the powerless agent views the legal gray zone as a Mountain
-    constraint_indexing:constraint_classification(coinbase_regulatory_uncertainty, mountain, 
-        context(individual_powerless, _, constrained, _, _, _)).
-
-:- end_tests(coinbase_reg_tests).
+:- end_tests(coinbase_regulatory_uncertainty_tests).
 
 /* ==========================================================================
-   5. MODEL INTERPRETATION
+   5. MODEL INTERPRETATION (Commentary)
    ========================================================================== */
 
 /**
  * LLM GENERATION NOTES
- * * KEY DECISIONS:
- * 1. PERSPECTIVAL DIVERGENCE: Coinbase's management views regulation as 
- * their "unfair advantage" (Rope), while the S-1 warning reveals it is 
- * the investor's greatest threat (Mountain).
- * 2. EXTRACTIVENESS (0.7): Reflects the high "tax" of being a pioneer in 
- * a regulated space—legal fees are a primary operating expense.
+ * 
+ * Model: Gemini Pro (Revised)
+ * Date: 2026-01-23
+ * 
+ * KEY DECISIONS:
+ * 
+ * 1. INSTITUTIONAL PERSPECTIVE: Added 'SEC/Regulators' as the institutional
+ *    agent. For them, regulatory ambiguity is a complex 'Mountain' they must
+ *    navigate to fulfill their mandate.
+ *
+ * 2. CLASSIFICATION RATIONALE:
+ *    - SEC/Regulators (Mountain): Navigating a complex and evolving legal landscape.
+ *    - Coinbase (Rope): Using compliance as a strategic tool for market positioning.
+ *    - Public Unitholder (Snare): Trapped by unpredictable regulatory actions.
+ * 
+ * 3. CORE INSIGHT: Regulatory uncertainty in crypto creates a 'Tangled Rope'.
+ *    While some actors (like Coinbase) can use it as a strategic 'Rope', it
+ *    creates a 'Mountain' of complexity for regulators and a 'Snare' of risk
+ *    for investors, highlighting the deep perspectival divides in nascent markets.
  */
 
 /* ==========================================================================
-   6. OMEGA VARIABLES (Ω)
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
+/**
+ * OMEGA IDENTIFICATION
+ *
+ * Mandatory Omega for high-extraction constraints.
+ */
 
 omega_variable(
     sec_howey_redefinition,
-    "Will the SEC successfully apply the 1946 Howey Test to modern decentralized protocols in a way that bans secondary trading?",
-    resolution_mechanism("Monitor the outcome of SEC v. Ripple and subsequent appellate rulings"),
-    impact("If Yes: The Mountain becomes a Noose (Coinbase delists major assets). If No: The Rope holds."),
+    "Will the SEC successfully apply the 1946 Howey Test to modern decentralized protocols in a way that bans secondary trading, or will new legislation create clearer rules?",
+    resolution_mechanism("Monitoring the outcome of SEC v. Ripple and subsequent appellate rulings; tracking the progress of federal crypto legislation."),
+    impact("If Howey Test applied broadly: The 'Mountain' becomes a 'Snare' for many crypto assets. If legislation passes: The 'Mountain' may transform into a navigable 'Rope'."),
     confidence_without_resolution(low)
 ).
 
 /* ==========================================================================
    7. ALTERNATIVE ANALYSIS
    ========================================================================== */
-
 /**
  * VIABLE ALTERNATIVES
- * * ALTERNATIVE 1: Comprehensive Federal Crypto Legislation
- * Viability: Proposed in various bills but not yet enacted.
- * Suppression: "Regulation by enforcement" (the current path) actively 
- * suppresses this legislative alternative by setting precedents in court.
+ *
+ * ALTERNATIVE 1: Comprehensive Federal Crypto Legislation
+ *    Viability: Proposed in various bills but not yet enacted, offering the potential for a clear regulatory framework.
+ *    Suppression: "Regulation by enforcement" (the current path) actively suppresses this legislative alternative by setting precedents in court before Congress can act.
+ *
+ * CONCLUSION:
+ * Regulatory uncertainty is a 'Mountain' of ambiguity. Coinbase's attempt to
+ * turn this into a 'Rope' of compliance is a strategic response to the
+ * suppression of a clearer legislative alternative. The public unitholder,
+ * meanwhile, is left hanging in the 'Snare' of this uncertainty.
  */
 
 /* ==========================================================================
    8. INTEGRATION HOOKS
    ========================================================================== */
 
-% Load: ?- [coinbase_regulatory_uncertainty].
+/**
+ * TO USE THIS FILE:
+ * 
+ * 1. Load: ?- [constraints/coinbase_regulatory_uncertainty].
+ * 2. Multi-perspective: ?- multi_index_report(coinbase_regulatory_uncertainty).
+ * 3. Run tests: ?- run_tests(coinbase_regulatory_uncertainty_tests).
+ */
 
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
-
-
-% ==========================================================================
-% [SKELETON REPAIR] Missing Perspectival Pillars Added: NOOSE
-% To be calibrated: Define the narrative justification for these perspectives.
-% ==========================================================================
-constraint_indexing:constraint_classification(coinbase_regulatory_uncertainty, noose, agent_power(individual_powerless)).

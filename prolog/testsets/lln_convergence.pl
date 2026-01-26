@@ -42,13 +42,13 @@
  * - The Casino / Insurance Firm (Institutional): An agent who uses the LLN 
  * as a "Rope" to ensure predictable profitability across millions of events.
  * - The Gambler (Victim): An agent with finite capital for whom the LLN 
- * acts as a "Noose" (Gambler's Ruin), ensuring they go broke before reaching 
+ * acts as a "Snare" (Gambler's Ruin), ensuring they go broke before reaching 
  * the "long run" equilibrium.
  * * NARRATIVE ARC:
  * LLN is the "Mountain" of equilibrium—it is the inescapable gravity of 
  * probability. For the institutional architect, it is the "Rope" of 
  * coordination that turns randomness into business. However, for the 
- * individual with finite resources, the "Long Run" is a "Noose" because 
+ * individual with finite resources, the "Long Run" is a "Snare" because 
  * "in the long run, we are all dead" (Keynes).
  */
 
@@ -143,7 +143,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE FINITE-CAPITAL GAMBLER - Noose
+   PERSPECTIVE 3: THE FINITE-CAPITAL GAMBLER - Snare
    --------------------------------------------------------------------------
    WHO: individual_powerless - Trapped by the "Law of Small Numbers" fallacy.
    WHEN: immediate - Running out of capital before the mean is reached.
@@ -151,7 +151,7 @@ constraint_indexing:constraint_classification(
    SCOPE: local - A specific table or session.
    
    WHY THIS CLASSIFICATION:
-   When capital is finite, the "guarantee" of convergence is a "Noose." 
+   When capital is finite, the "guarantee" of convergence is a "Snare." 
    The agent is "strangled" by the variance (the path to the mean) before the 
    equilibrium (the mean itself) can save them. This is the extractive 
    reality of Gambler's Ruin.
@@ -159,7 +159,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     lln_convergence,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -186,8 +186,8 @@ test(aggregation_fate_variance) :-
     Type2 = rope.
 
 test(gamblers_ruin_penalty) :-
-    % A powerless agent with constrained options (finite capital) sees the law as a Noose.
-    constraint_indexing:constraint_classification(lln_convergence, noose, context(individual_powerless, immediate, constrained, local)).
+    % A powerless agent with constrained options (finite capital) sees the law as a Snare.
+    constraint_indexing:constraint_classification(lln_convergence, snare, context(individual_powerless, immediate, constrained, local)).
 
 test(emergence) :-
     domain_priors:emerges_naturally(lln_convergence).
@@ -203,7 +203,7 @@ test(emergence) :-
  * * Model: Gemini 2.0 Flash
  * * KEY DECISIONS:
  * 1. PERSPECTIVE SHIFT: The core insight is that the "Law" is a gift to the 
- * infinite (or the large institution) but a trap (Noose) for the finite 
+ * infinite (or the large institution) but a trap (Snare) for the finite 
  * individual who cannot survive the variance.
  * 2. EXTRACTIVENESS (0.25): High enough to trigger the beneficiary/victim 
  * logic, reflecting that the LLN is the engine of extractive industries like 
@@ -215,10 +215,10 @@ test(emergence) :-
 % OMEGA IDENTIFICATION
 omega_variable(
     path_dependency,
-    "Can the 'Noose' of the gambler be avoided if the 'Rope' of the mean 
+    "Can the 'Snare' of the gambler be avoided if the 'Rope' of the mean 
     is visible in real-time?",
     resolution_mechanism("Experimental trial of gambling behavior with vs without live-mean visualizations."),
-    impact("If Yes: The Noose becomes a Rope. If No: It is a permanent Mountain of biological limitation."),
+    impact("If Yes: The Snare becomes a Rope. If No: It is a permanent Mountain of biological limitation."),
     confidence_without_resolution(medium)
 ).
 

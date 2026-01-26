@@ -78,7 +78,7 @@ intent_beneficiary_class(ormond_sequence, dublin_bourgeoisie).
 intent_power_change(ormond_sequence, dublin_bourgeoisie, 0.30). % Aesthetic benefit
 
 % Section 8: Recommendations
-recommendation(rec1, 'Sever the extractiveness of the viceregal noose via non-participation').
+recommendation(rec1, 'Sever the extractiveness of the viceregal snare via non-participation').
 affects_constraint(rec1, viceregal_cavalcade).
 
 recommendation(rec2, 'Utilize the musical scaffold to mitigate the isolation of individual desire').

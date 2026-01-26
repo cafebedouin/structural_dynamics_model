@@ -1,17 +1,18 @@
 % ============================================================================
 % CONSTRAINT STORY: electrification_scale_2026
 % ============================================================================
-% Generated: 2026-01-21
-% Model: Gemini 2.0 Flash
+% Generated: 2026-01-23
+% Model: Gemini Pro (Revised)
 % Source: "The electrification of everything" by Chris Stokel-Walker
 % ============================================================================
 
-:- module(electrification_scale_2026, []).
+:- module(constraint_electrification_scale_2026, []).
 
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
 
+% --- Namespace Hooks (Required for loading) ---
 :- multifile
     domain_priors:base_extractiveness/2,
     domain_priors:suppression_score/2,
@@ -24,70 +25,88 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: electrification_scale_2026
+ * 
+ * constraint_id: electrification_scale_2026
  * human_readable: Industrial Scale Electrification
- * domain: technological/economic
+ * domain: technological/economic/environmental
  * temporal_scope: 2010s-2026
  * spatial_scope: Global (initially Nevada/Tesla)
- * * SUMMARY:
+ * 
+ * SUMMARY:
  * The transition from fossil fuels to renewables catalyzed by "gigafactories"
  * that leverage economies of scale and supply-chain integration.
  * This constraint represents the shift from fossil fuel-powered infrastructure
  * to a dispatchable solar and electric vehicle ecosystem.
- * * KEY AGENTS:
- * - Energy Planner: (e.g., Dave Jones at Ember) - Views electrification as a
- * tool for dispatchable power.
- * - Legacy Auto/Oil Industry: (Institutional) - Views the shift as a
- * disruptive Noose threatening existing infrastructure.
- * - The Physical Scientist: (Analytical) - Views the photovoltaic effect as
- * a biological/physical Mountain.
- * * NARRATIVE ARC:
- * Discovery of the photovoltaic effect in 1839 led to practical solar in the
- * 1950s, but only reached "world-changing" status in 2016 through massive
- * industrial scaling.
+ * 
+ * KEY AGENTS:
+ * - Coal Miner / Oil Rig Worker (Individual Powerless): Faces job displacement and livelihood threats.
+ * - Energy Planner (Institutional): Views electrification as a tool for dispatchable power.
+ * - Legacy Auto/Oil Industry (Individual Powerful): Views the shift as a disruptive Snare.
  */
 
 /* ==========================================================================
-   2. BASE PROPERTIES (Reality Layer)
+   2. CORE SYSTEM INTEGRATION (The "Reality" Layer)
    ========================================================================== */
 
 narrative_ontology:interval(electrification_scale_2026, 0, 10).
+narrative_ontology:constraint_claim(electrification_scale_2026, tangled_rope).
 
 % Base extractiveness: 0.15 (Low)
-% Rationale: The system extracts energy from the sun rather than from labor
+% The system extracts energy from the sun rather than from labor
 % or subjects, though mineral extraction for batteries is an externalized
 % factor not deeply explored in the source.
 domain_priors:base_extractiveness(electrification_scale_2026, 0.15).
 
 % Suppression: 0.5 (Moderate)
-% Rationale: Renewables are becoming "competitive with fossil fuels,"
+% Renewables are becoming "competitive with fossil fuels,"
 % effectively suppressing the economic viability of the older model.
 domain_priors:suppression_score(electrification_scale_2026, 0.5).
 
-% Enforcement: Requires active enforcement
-% Rationale: Scaling to "giga" levels requires massive capital
+% Enforcement: Requires active enforcement: Scaling to "giga" levels requires massive capital
 % integration "under one roof".
 domain_priors:requires_active_enforcement(electrification_scale_2026).
 
 % BENEFICIARIES & VICTIMS
 constraint_beneficiary(electrification_scale_2026, renewable_energy_sector).
-constraint_beneficiary(electrification_scale_2026, future_transport_users).
-constraint_victim(electrification_scale_2026, fossil_fuel_infrastructure).
+constraint_victim(electrification_scale_2026, fossil_fuel_workers).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 1: ENERGY THINK TANK - Rope
+   PERSPECTIVE 1: COAL MINER / OIL RIG WORKER - Snare
    --------------------------------------------------------------------------
-   WHO: institutional (Rule-shaping/Planning)
-   WHEN: biographical (Planning for the 2010s-2026 transition)
-   WHERE: mobile (Can navigate global energy markets)
-   SCOPE: national/global
-
+   WHO: individual_powerless (Faces job displacement and livelihood threats)
+   WHEN: immediate (Short-term economic disruption)
+   WHERE: trapped (Dependent on declining fossil fuel industries)
+   
    WHY THIS CLASSIFICATION:
-   For the institutional planner, the "gigafactory" is a Rope—a coordination
+   For a coal miner or oil rig worker, electrification is a 'Snare'. The rapid 
+   shift to renewables threatens their livelihoods, communities, and traditional
+   ways of life, leaving them with limited viable exit options within their existing skill sets.
+   -------------------------------------------------------------------------- */
+
+constraint_indexing:constraint_classification(
+    electrification_scale_2026,
+    snare,
+    context(
+        agent_power(individual_powerless),
+        time_horizon(immediate),
+        exit_options(trapped),
+        spatial_scope(local)
+    )
+).
+
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 2: ENERGY PLANNER - Rope
+   --------------------------------------------------------------------------
+   WHO: institutional (Rule-shaping/Planning for national energy infrastructure)
+   WHEN: biographical (Planning for the 2010s-2026 transition)
+   WHERE: mobile (Can navigate global energy markets and technological shifts)
+   
+   WHY THIS CLASSIFICATION:
+   For the institutional energy planner, electrification is a 'Rope'—a coordination
    mechanism that finally makes solar "dispatchable" through battery
    integration. It provides a way to move the energy system
    from one state to another using technological leverage.
@@ -102,58 +121,32 @@ constraint_indexing:constraint_classification(
         exit_options(mobile),
         spatial_scope(national)
     )
-) :- !.
+).
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 2: FOSSIL FUEL INCUMBENT - Noose
+   PERSPECTIVE 3: LEGACY AUTO/OIL INDUSTRY - Snare
    --------------------------------------------------------------------------
-   WHO: individual_powerful (Legacy industrial leaders)
-   WHEN: immediate (Short-term loss of competitiveness)
+   WHO: individual_powerful (Legacy industrial leaders with entrenched infrastructure)
+   WHEN: immediate (Short-term loss of competitiveness and market share)
    WHERE: constrained (Tied to fossil fuel reserves/combustion tech)
-   SCOPE: global
-
+   
    WHY THIS CLASSIFICATION:
-   As solar electricity becomes competitive with fossil fuels and EV
-   production scales to "populating the planet," the legacy system faces
-   a Noose. Their exit options are costly as the "turning point"
-   of 2016 makes their model increasingly obsolete.
+   As solar electricity becomes competitive and EV production scales, the legacy
+   fossil fuel system faces a 'Snare'. Their exit options are costly as the
+   "turning point" makes their model increasingly obsolete. This threatens their
+   long-term viability and market dominance.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
     electrification_scale_2026,
-    noose,
+    snare,
     context(
         agent_power(individual_powerful),
         time_horizon(immediate),
         exit_options(constrained),
         spatial_scope(global)
     )
-) :- !.
-
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE EXPERIMENTAL PHYSICIST - Mountain
-   --------------------------------------------------------------------------
-   WHO: analytical (Observer of natural law)
-   WHEN: historical (From 1839 discovery onwards)
-   WHERE: analytical (Universal law)
-   SCOPE: global
-
-   WHY THIS CLASSIFICATION:
-   The photovoltaic effect (discovered in 1839) is a physical Mountain.
-   It exists as a constant of nature regardless of human industrial scaling;
-   humans can only harness it, not change the underlying physics.
-   -------------------------------------------------------------------------- */
-
-constraint_indexing:constraint_classification(
-    electrification_scale_2026,
-    mountain,
-    context(
-        agent_power(analytical),
-        time_horizon(historical),
-        exit_options(analytical),
-        spatial_scope(global)
-    )
-) :- !.
+).
 
 /* ==========================================================================
    4. TESTS
@@ -162,13 +155,12 @@ constraint_indexing:constraint_classification(
 :- begin_tests(electrification_scale_2026_tests).
 
 test(multi_perspective_variance) :-
-    constraint_indexing:constraint_classification(electrification_scale_2026, Type1, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(electrification_scale_2026, Type2, context(agent_power(individual_powerful), _, _, _)),
-    Type1 \= Type2.
-
-test(time_immutability_shift) :-
-    % Shows that what was a latent Mountain (1839) became a Rope (2016)
-    true.
+    constraint_indexing:constraint_classification(electrification_scale_2026, Type1, context(agent_power(individual_powerless), _, _, _)),
+    constraint_indexing:constraint_classification(electrification_scale_2026, Type2, context(agent_power(institutional), _, _, _)),
+    constraint_indexing:constraint_classification(electrification_scale_2026, Type3, context(agent_power(individual_powerful), _, _, _)),
+    Type1 \= Type2,
+    Type2 \= Type3,
+    Type1 \= Type3.
 
 :- end_tests(electrification_scale_2026_tests).
 
@@ -178,53 +170,71 @@ test(time_immutability_shift) :-
 
 /**
  * LLM GENERATION NOTES
- * * Model: Gemini 2.0 Flash
- * * KEY DECISIONS:
- * 1. PERSPECTIVE: Focused on the shift from the "Model T" era to the "Tesla"
- * era as a classic industrial disruption.
- * 2. CLASSIFICATION: The photovoltaic effect is a Mountain (Physics), the
- * Gigafactory is a Rope (Tool), and the fossil fuel legacy is in a Noose.
+ * 
+ * Model: Gemini Pro (Revised)
+ * Date: 2026-01-23
+ * 
+ * KEY DECISIONS:
+ * 
+ * 1. INDIVIDUAL POWERLESS PERSPECTIVE: Added 'Coal Miner / Oil Rig Worker' to
+ *    represent the human cost of the energy transition, experiencing it as a 'Snare'.
+ *
+ * 2. CLASSIFICATION RATIONALE:
+ *    - Coal Miner (Snare): Job displacement, livelihood threats.
+ *    - Energy Planner (Rope): A tool for building a new energy system.
+ *    - Legacy Industry (Snare): Obsolete model, loss of market share.
+ * 
+ * 3. TANGLED ROPE: Electrification is a 'Tangled Rope'. It is a 'Rope'
+ *    for energy planners and the environment, facilitating a cleaner future.
+ *    However, it becomes a 'Snare' for those whose livelihoods are tied to
+ *    the fossil fuel industry, creating significant social and economic friction.
  */
 
 /* ==========================================================================
-   6. OMEGA VARIABLES (Ω)
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
+/**
+ * OMEGA IDENTIFICATION
+ *
+ * The core uncertainty is the sustainability of the required mineral supply and grid stability.
+ */
 
 omega_variable(
     lithium_supply_ceiling,
-    "Is the availability of lithium and rare earth minerals a Mountain that will eventually limit the Giga-scale transition?",
-    resolution_mechanism("Geological audit of extractable reserves vs. projected vehicle demand by 2040"),
-    impact("If Mountain: The transition stalls. If Rope: New chemistries emerge."),
+    "Is the availability of critical minerals (e.g., lithium, rare earths) a 'Mountain' that will eventually limit the Giga-scale transition, or will new chemistries and recycling create a 'Rope' of continuous supply?",
+    resolution_mechanism("Geological audit of extractable reserves vs. projected vehicle and storage demand by 2040; investment in battery recycling technologies."),
+    impact("If Mountain: The transition stalls. If Rope: Electrification continues unabated."),
     confidence_without_resolution(medium)
-).
-
-omega_variable(
-    grid_inertia_stability,
-    "Can decentralized batteries provide the same grid inertia as traditional rotating turbines?",
-    resolution_mechanism("Real-world testing of virtual synchronous machines at continental scale"),
-    impact("If No: The electrification 'Rope' breaks under load."),
-    confidence_without_resolution(high)
 ).
 
 /* ==========================================================================
    7. ALTERNATIVE ANALYSIS
    ========================================================================== */
-
 /**
  * VIABLE ALTERNATIVES
- * * ALTERNATIVE 1: Hydrogen Fuel Cells
- * Viability: Historically seen as an alternative to Li-ion for transport.
- * Suppression: Outscaled by battery "gigafactories".
+ *
+ * ALTERNATIVE 1: Hydrogen Fuel Cells
+ *    Viability: Historically seen as a direct alternative to Li-ion for transport and energy storage.
+ *    Suppression: Outscaled by battery "gigafactories" due to economies of scale and faster market adoption.
+ *
+ * CONCLUSION:
+ * While electrification is a powerful 'Rope' for energy transition, its
+ * rapid scaling creates a 'Snare' for legacy industries and workers. The
+ * suppression of alternative energy vectors (like hydrogen) further solidifies
+ * the path towards a predominantly battery-electric future.
  */
-
-%
 
 /* ==========================================================================
    8. INTEGRATION HOOKS
    ========================================================================== */
 
-% Load: ?- [electrification_scale_2026].
-% Run tests: ?- run_tests(electrification_scale_2026_tests).
+/**
+ * TO USE THIS FILE:
+ * 
+ * 1. Load: ?- [constraints/electrification_scale_2026].
+ * 2. Multi-perspective: ?- multi_index_report(electrification_scale_2026).
+ * 3. Run tests: ?- run_tests(electrification_scale_2026_tests).
+ */
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

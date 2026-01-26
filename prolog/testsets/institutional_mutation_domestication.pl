@@ -143,7 +143,7 @@ constraint_indexing:constraint_classification(
     !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE ANALYTICAL OBSERVER (The Patient) - Noose
+   PERSPECTIVE 3: THE ANALYTICAL OBSERVER (The Patient) - Snare
    --------------------------------------------------------------------------
    
    WHO: analytical - Observer identifying systemic patterns.
@@ -164,7 +164,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     institutional_mutation_domestication,
-    noose,
+    snare,
     context(
         agent_power(analytical),
         time_horizon(biographical),
@@ -172,7 +172,7 @@ constraint_indexing:constraint_classification(
         spatial_scope(regional)
     )
 ) :-
-    % Classification logic: High suppression + High extractiveness = Noose
+    % Classification logic: High suppression + High extractiveness = Snare
     domain_priors:suppression_score(institutional_mutation_domestication, S),
     S > 0.6,
     !.
@@ -233,9 +233,9 @@ test(time_immutability_republic) :-
  * * 3. CLASSIFICATION RATIONALE:
  * Council sees Rope because they are the weavers. 
  * Padawans see Mountain because they are the thread. 
- * The Auditor sees Noose because they see the knot.
+ * The Auditor sees Snare because they see the knot.
  * * 4. CONFIDENCE:
- * High: The classification of "biologizing method" as a Noose mechanic.
+ * High: The classification of "biologizing method" as a Snare mechanic.
  * Medium: The specific temporal scope of "historical" for the Council.
  */
 
@@ -256,7 +256,7 @@ test(time_immutability_republic) :-
  * state coordination.
  * * CONCLUSION:
  * The presence of suppressed alternatives (Method vs. Gift) confirms the 
- * "Noose" classification for the broader analytical perspective.
+ * "Snare" classification for the broader analytical perspective.
  */
 
 /* ==========================================================================

@@ -89,7 +89,7 @@ constraint_victim(finite_pool_of_worry, future_existential_security).
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 1: THE WORRIED CITIZEN - Noose
+   PERSPECTIVE 1: THE WORRIED CITIZEN - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless (Subject to sensory bombardment and immediate survival)
@@ -98,7 +98,7 @@ constraint_victim(finite_pool_of_worry, future_existential_security).
    SCOPE: local (Personal risk evaluation)
    
    WHY THIS CLASSIFICATION:
-   For the citizen, the finite pool is a "Noose." Their cognitive load is saturated by 
+   For the citizen, the finite pool is a "Snare." Their cognitive load is saturated by 
    the "immediate needs" of safety, strangling their ability to care about "future 
    generations" or "2100 CE".
    
@@ -111,7 +111,7 @@ constraint_victim(finite_pool_of_worry, future_existential_security).
 
 constraint_indexing:constraint_classification(
     finite_pool_of_worry,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -190,8 +190,8 @@ constraint_indexing:constraint_classification(
 :- begin_tests(finite_pool_of_worry_tests).
 
 test(multi_perspective_displacement) :-
-    % Citizen (Powerless) sees Noose
-    constraint_indexing:constraint_classification(finite_pool_of_worry, noose, context(individual_powerless, immediate, trapped, local)),
+    % Citizen (Powerless) sees Snare
+    constraint_indexing:constraint_classification(finite_pool_of_worry, snare, context(individual_powerless, immediate, trapped, local)),
     % Analyst (Analytical) sees Mountain
     constraint_indexing:constraint_classification(finite_pool_of_worry, mountain, context(analytical, civilizational, analytical, global)),
     Type1 \= Type2.
@@ -230,12 +230,12 @@ test(climate_neglect_insight) :-
  * mitigation. This creates a high-asymmetry risk where the "future" is sacrificed 
  * for the "immediate". This triggers the Mandatrophy Gate.
  * * 2. PERSPECTIVE SELECTION:
- * Chose the Citizen (Noose) to show cognitive saturation, the Policy Maker 
+ * Chose the Citizen (Snare) to show cognitive saturation, the Policy Maker 
  * (Rope) to show strategic utility, and the Analyst (Mountain) to show 
  * theoretical immutability.
  * * 3. MANDATROPHY RESOLUTION:
  * Status: [RESOLVED MANDATROPHY]. The system is a "Rope" for institutional 
- * messaging but a "Noose" for the individual whose capacity to care is 
+ * messaging but a "Snare" for the individual whose capacity to care is 
  * liquefied by the volume of immediate crisis.
  * * 4. AMBIGUITIES:
  * - The text asks how "forever chemicals" compare to climate change. This 
@@ -249,9 +249,9 @@ test(climate_neglect_insight) :-
 omega_variable(
     finite_pool_of_worry_extraction_intent,
     "Is the redirection of attention a biological necessity (Mountain) or an 
-     intentional media/sanitization strategy to hide long-term risks (Noose)?",
+     intentional media/sanitization strategy to hide long-term risks (Snare)?",
     resolution_mechanism("Audit of crisis-reporting frequency vs. existential-risk-reporting frequency in mainstream media"),
-    impact("If necessity: Evolutionary Mountain. If strategy: Mandatrophy Noose."),
+    impact("If necessity: Evolutionary Mountain. If strategy: Mandatrophy Snare."),
     confidence_without_resolution(medium)
 ).
 
@@ -279,7 +279,7 @@ omega_variable(
  * Suppression: Rejected by the "Standard of Doing and Thinking" and Maslow's immediate safety needs.
  * * CONCLUSION:
  * The presence of these alternatives shifts the "Finite Pool" from a neutral Mountain 
- * into a potential Noose that extracts our civilizational future for immediate comfort.
+ * into a potential Snare that extracts our civilizational future for immediate comfort.
  */
 
 /* ==========================================================================

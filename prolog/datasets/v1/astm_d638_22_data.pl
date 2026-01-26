@@ -26,12 +26,12 @@ event(ev04_material_rupture, finality, 95, [result(tensile_strength), result(elo
 constraint_claim(material_molecular_limits, mountain).
 constraint_metric(material_molecular_limits, accessibility_collapse, 1.0).
 
-% Noose: The 'Standard Requirement' of D638. It tightens as the industry demands interchangeable data.
-constraint_claim(procedural_compliance_mandate, noose).
+% Snare: The 'Standard Requirement' of D638. It tightens as the industry demands interchangeable data.
+constraint_claim(procedural_compliance_mandate, snare).
 constraint_metric(procedural_compliance_mandate, stakes_inflation, 0.95).
 
-% Zombie: The 'Nominal Strain.' A linearized calculation often treated as real despite localized necking.
-constraint_claim(linearized_strain_abstraction, zombie).
+% Piton: The 'Nominal Strain.' A linearized calculation often treated as real despite localized necking.
+constraint_claim(linearized_strain_abstraction, piton).
 constraint_metric(linearized_strain_abstraction, suppression, 0.80).
 
 % Rope: Condition 23/50 (Standard Atmosphere). Ties all valid testing to specific ambient constraints.

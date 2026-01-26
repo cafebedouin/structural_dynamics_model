@@ -46,7 +46,7 @@
  * The P vs. NP gap functions as a "Mountain" of physical reality for 
  * computation—if P != NP, certain tasks are forever hard. For the security 
  * architect, it is a "Rope" (the bedrock of modern trust). For the 
- * programmer stuck with an NP-hard task and a deadline, it is a "Noose" 
+ * programmer stuck with an NP-hard task and a deadline, it is a "Snare" 
  * that strangles their ability to provide an optimal solution.
  */
 
@@ -139,7 +139,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE DISPERATE PROGRAMMER - Noose
+   PERSPECTIVE 3: THE DISPERATE PROGRAMMER - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless (A subject to the math's complexity)
@@ -149,7 +149,7 @@ constraint_indexing:constraint_classification(
    
    WHY THIS CLASSIFICATION:
    For the coder tasked with finding an optimal route for 50 cities by 
-   tomorrow, the P vs. NP gap is a Noose. They know the solution exists, 
+   tomorrow, the P vs. NP gap is a Snare. They know the solution exists, 
    but the "exponential wall" strangles their ability to find it in 
    time. The harder they push for perfection, the more the complexity 
    tightens around their compute budget.
@@ -157,7 +157,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     p_vs_np,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -216,7 +216,7 @@ omega_variable(
     computationally efficient enough to be usable, or would the constant 
     factors be too large (creating a new Mountain)?",
     resolution_mechanism("A formal constructive proof of P = NP"),
-    impact("If Usable: Cryptography dies (Noose). If Unusable: The P vs. NP 
+    impact("If Usable: Cryptography dies (Snare). If Unusable: The P vs. NP 
     Mountain remains effectively intact."),
     confidence_without_resolution(medium)
 ).
@@ -232,10 +232,10 @@ omega_variable(
  * but likely not all NP-complete problems.
  * Suppression: Low. Massive global investment.
  * * ALTERNATIVE 2: Heuristics and Approximation
- * Viability: High. Used every day to bypass the "Noose" of NP-hardness.
+ * Viability: High. Used every day to bypass the "Snare" of NP-hardness.
  * * CONCLUSION:
  * The existence of heuristics as a "Rope" allows workers to escape the 
- * "Noose" of NP-completeness, shifting the constraint from an 
+ * "Snare" of NP-completeness, shifting the constraint from an 
  * unmanageable trap to a manageable engineering challenge.
  */
 

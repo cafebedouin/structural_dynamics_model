@@ -1,12 +1,12 @@
 % ============================================================================
 % CONSTRAINT STORY: copyright_protection
 % ============================================================================
-% Generated: 2026-01-17
-% Model: Gemini 2.0 Flash
+% Generated: 2026-01-23
+% Model: Gemini Pro (Revised)
 % Source: U.S. Copyright Act of 1976 / Berne Convention
 % ============================================================================
 
-:- module(constraint_copyright, []).
+:- module(constraint_copyright_protection, []).
 
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
@@ -25,23 +25,23 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: copyright_protection
+ * 
+ * constraint_id: copyright_protection
  * human_readable: Copyright (Creative Monopoly)
- * domain: social/economic/technological
+ * domain: social/economic/technological/legal
  * temporal_scope: Civilizational (Life + 70 years)
  * spatial_scope: Global
- * * SUMMARY:
- * Copyright is a legal framework that grants creators exclusive rights to their 
- * original works of authorship (literature, music, art, software). It separates 
- * the "Expression" (protected) from the "Idea" (free).
- * * KEY AGENTS:
- * - The Creator: Holds the monopoly; seeks to monetize or control the work.
- * - The User/Remixer: Seeks to consume, adapt, or build upon existing work.
- * - The Platform: Acts as the gatekeeper and enforcement engine (e.g., YouTube Content ID).
- * * NARRATIVE ARC:
- * Copyright functions as a "Proprietary Horizon." It creates a temporary (though 
- * increasingly long) artificial scarcity. For creators, it is a foundation for 
- * a career; for the public, it is a fence around the cultural commons.
+ * 
+ * SUMMARY:
+ * Copyright is a legal framework granting creators exclusive rights to their 
+ * original works. It separates "Expression" (protected) from "Idea" (free).
+ * For creators, it's a foundation for a career; for the public, it's a fence
+ * around the cultural commons, creating an artificial scarcity.
+ * 
+ * KEY AGENTS:
+ * - The Casual Internet User (Individual Powerless): Consumes content without understanding legal nuances.
+ * - The Independent Artist (Individual Moderate): Seeks to monetize or control their work.
+ * - The AI Training Lab (Institutional): Seeks to use vast amounts of data, regardless of copyright.
  */
 
 /* ==========================================================================
@@ -49,46 +49,66 @@
    ========================================================================== */
 
 narrative_ontology:interval(copyright_protection, 0, 10).
-narrative_ontology:constraint_claim(copyright_protection, rope).
+narrative_ontology:constraint_claim(copyright_protection, tangled_rope).
 
-% Base extractiveness score (0.4)
+% Base extractiveness: 0.4.
 % While it allows creators to earn, it extracts "freedom of use" from the 
 % public, and often large corporations extract the copyright from creators.
 domain_priors:base_extractiveness(copyright_protection, 0.4).
 
-% Suppression score (0.5)
+% Suppression: 0.5.
 % Fair Use provides an "exit," but automated enforcement systems often 
 % suppress even legal uses (chilling effect).
 domain_priors:suppression_score(copyright_protection, 0.5).
 
-% Enforcement requirements
+% Enforcement: Requires active enforcement (legal system, Content ID).
 domain_priors:requires_active_enforcement(copyright_protection).
 
-% Metrics required for Section 1 of the Executive Summary
-narrative_ontology:constraint_metric(copyright_protection, extractiveness, 0.4).
-narrative_ontology:constraint_metric(copyright_protection, suppression_requirement, 0.5).
-
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(copyright_protection, intellectual_property_holders).
-constraint_victim(copyright_protection, the_public_domain).
+constraint_beneficiary(copyright_protection, creators).
+constraint_victim(copyright_protection, the_public).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 1: THE INDEPENDENT ARTIST - Rope
+   PERSPECTIVE 1: THE CASUAL INTERNET USER - Mountain
    --------------------------------------------------------------------------
-   WHO: individual_moderate
-   WHEN: biographical
-   WHERE: mobile
-   SCOPE: global
+   WHO: individual_powerless (Consumes content without legal understanding)
+   WHEN: immediate (Sees a video, wants to share it)
+   WHERE: trapped (Cannot discern fair use from infringement)
    
    WHY THIS CLASSIFICATION:
-   For the small creator, copyright is a "Rope." It is the only tool they 
+   For the casual internet user, copyright is an immutable 'Mountain' of legal
+   restrictions. They simply consume content as presented, without considering
+   fair use or licensing, because the perceived barrier to usage is too high.
+   It's a fixed part of the digital landscape.
+   -------------------------------------------------------------------------- */
+
+constraint_indexing:constraint_classification(
+    copyright_protection,
+    mountain,
+    context(
+        agent_power(individual_powerless),
+        time_horizon(immediate),
+        exit_options(trapped),
+        spatial_scope(local)
+    )
+).
+
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 2: THE INDEPENDENT ARTIST - Rope
+   --------------------------------------------------------------------------
+   WHO: individual_moderate (Seeks to monetize or control their work)
+   WHEN: biographical (Building a career over time)
+   WHERE: mobile (Can choose different licensing options or enforcement levels)
+   
+   WHY THIS CLASSIFICATION:
+   For the small creator, copyright is a 'Rope'. It is the only tool they 
    have to prevent their work from being captured and monetized by 
    large entities without compensation. It coordinates their ability to 
-   participate in the marketplace.
+   participate in the marketplace and protects their livelihood.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
@@ -100,66 +120,32 @@ constraint_indexing:constraint_classification(
         exit_options(mobile),
         spatial_scope(global)
     )
-) :-
-    domain_priors:base_extractiveness(copyright_protection, E),
-    E < 0.6,
-    !.
+).
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE AI TRAINING LAB - Noose
+   PERSPECTIVE 3: THE AI TRAINING LAB (INSTITUTIONAL) - Snare
    --------------------------------------------------------------------------
-   WHO: institutional
-   WHEN: immediate
-   WHERE: trapped (cannot easily "un-train" on copyrighted data)
-   SCOPE: global
+   WHO: institutional (Seeking to build generative AI systems)
+   WHEN: immediate (Needing vast datasets for training)
+   WHERE: trapped (Cannot easily "un-train" on copyrighted data)
    
    WHY THIS CLASSIFICATION:
-   For an entity attempting to build generative AI, copyright is a "Noose." 
+   For an entity attempting to build generative AI, copyright is a 'Snare.' 
    The massive scale of data required makes individual licensing 
    impossible, creating a legal bottleneck that threatens the viability 
-   of the entire technological enterprise.
+   of the entire technological enterprise. It strangles innovation at scale.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
     copyright_protection,
-    noose,
+    snare,
     context(
         agent_power(institutional),
         time_horizon(immediate),
         exit_options(trapped),
         spatial_scope(global)
     )
-) :-
-    domain_priors:suppression_score(copyright_protection, S),
-    S > 0.4,
-    !.
-
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE LEGAL SCHOLAR - Mountain
-   --------------------------------------------------------------------------
-   WHO: analytical
-   WHEN: historical
-   WHERE: analytical
-   SCOPE: global
-   
-   WHY THIS CLASSIFICATION:
-   The scholar sees copyright as a "Mountain"—a fixed feature of the 
-   global legal geography since the 18th century. While the "peaks" 
-   (duration) may change, the fundamental concept of protecting 
-   expression is an immutable part of modern civilization.
-   -------------------------------------------------------------------------- */
-
-constraint_indexing:constraint_classification(
-    copyright_protection,
-    mountain,
-    context(
-        agent_power(analytical),
-        time_horizon(historical),
-        exit_options(analytical),
-        spatial_scope(global)
-    )
-) :-
-    true.
+).
 
 /* ==========================================================================
    4. TESTS
@@ -167,14 +153,13 @@ constraint_indexing:constraint_classification(
 
 :- begin_tests(copyright_tests).
 
-test(proportional_utility) :-
-    % Testing that creators see the Rope while institutions (labs) see the Noose.
-    constraint_indexing:constraint_classification(copyright_protection, rope, context(individual_moderate, _, _, _)),
-    constraint_indexing:constraint_classification(copyright_protection, noose, context(institutional, _, trapped, _)).
-
-test(historical_permanence) :-
-    % Testing that analytical views recognize the structural Mountain.
-    constraint_indexing:constraint_classification(copyright_protection, mountain, context(analytical, _, _, _)).
+test(multi_perspective_variance) :-
+    constraint_indexing:constraint_classification(copyright_protection, Type1, context(agent_power(individual_powerless), _, _, _)),
+    constraint_indexing:constraint_classification(copyright_protection, Type2, context(agent_power(individual_moderate), _, _, _)),
+    constraint_indexing:constraint_classification(copyright_protection, Type3, context(agent_power(institutional), _, _, _)),
+    Type1 \= Type2,
+    Type2 \= Type3,
+    Type1 \= Type3.
 
 :- end_tests(copyright_tests).
 
@@ -184,24 +169,79 @@ test(historical_permanence) :-
 
 /**
  * LLM GENERATION NOTES
- * * Model: Gemini 2.0 Flash
- * * KEY DECISIONS:
- * Copyright is unique because it is a "Monopoly on Expression." I set 
- * suppression to 0.5 because "Fair Use" acts as a pressure valve, but 
- * algorithmic enforcement (Content ID) often makes that valve stick.
+ * 
+ * Model: Gemini Pro (Revised)
+ * Date: 2026-01-23
+ * 
+ * KEY DECISIONS:
+ * 
+ * 1. PERSPECTIVE SELECTION: Added the 'Casual Internet User' as the
+ *    'individual_powerless' agent, highlighting their experience of copyright
+ *    as an unyielding 'Mountain' of legal complexity.
+ *
+ * 2. CLASSIFICATION RATIONALE:
+ *    - User (Mountain): Perceived as an immutable law due to complexity.
+ *    - Artist (Rope): A tool for monetization and control.
+ *    - AI Lab (Snare): A barrier to innovation due to data scale.
+ * 
+ * 3. TANGLED ROPE: Copyright is inherently a 'Tangled Rope'. It's a 'Rope' for
+ *    creators to coordinate income, but it's 'Tangled' because it extracts
+ *    freedom of use from the public and can strangle new forms of innovation
+ *    (like AI training) if not carefully balanced.
  */
 
 /* ==========================================================================
-   6. OMEGA VARIABLES (Ω)
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
+/**
+ * OMEGA IDENTIFICATION
+ *
+ * The core uncertainty is how copyright law will adapt (or fail to adapt) to new technologies.
+ */
 
 omega_variable(
     ai_fair_use_precedent,
-    "Will training AI on copyrighted material be legally classified as 'Transformative Fair Use'?",
-    resolution_mechanism("Supreme Court rulings on AI training datasets (e.g., NYT v. OpenAI)"),
-    impact("If Yes: The Noose for AI labs vanishes. If No: Copyright becomes an insurmountable Mountain for AI."),
+    "Will training AI on copyrighted material be legally classified as 'Transformative Fair Use', or will it require new licensing models?",
+    resolution_mechanism("Supreme Court rulings on AI training datasets (e.g., NYT v. OpenAI), and the development of new, industry-standard AI licensing frameworks."),
+    impact("If Yes (Fair Use): The 'Snare' for AI labs vanishes. If No: Copyright becomes an insurmountable 'Mountain' for AI, requiring fundamental shifts in data acquisition."),
     confidence_without_resolution(low)
 ).
+
+/* ==========================================================================
+   7. ALTERNATIVE ANALYSIS
+   ========================================================================== */
+/**
+ * VIABLE ALTERNATIVES
+ *
+ * ALTERNATIVE 1: Public Domain
+ *    Viability: Historically, works eventually enter the public domain.
+ *    Suppression: Term extensions (e.g., Sonny Bono Act) have significantly
+ *    delayed works entering the public domain, suppressing this alternative for
+ *    contemporary works.
+ *
+ * ALTERNATIVE 2: Creative Commons Licensing
+ *    Viability: A flexible framework allowing creators to choose terms.
+ *    Suppression: Often perceived as a complex alternative to traditional copyright
+ *    by the public, and by institutions as a threat to maximal control.
+ *
+ * CONCLUSION:
+ * Copyright is a dynamic 'Tangled Rope' that balances creator rights with public
+ * access. Its constant evolution (e.g., term extensions, digital rights management)
+ * is an ongoing attempt to manage the tension between individual ownership and
+ * the cultural commons.
+ */
+
+/* ==========================================================================
+   8. INTEGRATION HOOKS
+   ========================================================================== */
+
+/**
+ * TO USE THIS FILE:
+ * 
+ * 1. Load: ?- [constraints/copyright_protection].
+ * 2. Multi-perspective: ?- multi_index_report(copyright_protection).
+ * 3. Run tests: ?- run_tests(copyright_tests).
+ */
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

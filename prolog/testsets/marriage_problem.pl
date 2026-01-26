@@ -82,7 +82,7 @@ narrative_ontology:constraint_metric(optimal_stopping_marriage, suppression_requ
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 1: THE SEARCHER - Noose
+   PERSPECTIVE 1: THE SEARCHER - Snare
    --------------------------------------------------------------------------
    WHO: individual_powerless (subject to the sequence of options)
    WHEN: biographical (the search defines a major life phase)
@@ -91,13 +91,13 @@ narrative_ontology:constraint_metric(optimal_stopping_marriage, suppression_requ
    
    WHY THIS CLASSIFICATION:
    The searcher feels "strangled" by the inability to recall past options. 
-   The 37% rule feels like a Noose because it forces the rejection of 
+   The 37% rule feels like a Snare because it forces the rejection of 
    potentially great partners simply to satisfy a statistical baseline.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
     optimal_stopping_marriage,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(biographical),
@@ -106,7 +106,7 @@ constraint_indexing:constraint_classification(
     )
 ) :-
     domain_priors:base_extractiveness(optimal_stopping_marriage, E),
-    E < 0.2, % It's not about extraction, but the 'trapped' nature makes it a Noose.
+    E < 0.2, % It's not about extraction, but the 'trapped' nature makes it a Snare.
     !.
 
 /* --------------------------------------------------------------------------
@@ -175,9 +175,9 @@ test(multi_perspective_variance) :-
     Type1 \= Type2.
 
 test(time_immutability_shift) :-
-    % Short term (biographical) feels like a Noose due to regret.
+    % Short term (biographical) feels like a Snare due to regret.
     % Long term (civilizational) is a Mountain of probability.
-    constraint_indexing:constraint_classification(optimal_stopping_marriage, noose, context(_, time_horizon(biographical), trapped, _)),
+    constraint_indexing:constraint_classification(optimal_stopping_marriage, snare, context(_, time_horizon(biographical), trapped, _)),
     constraint_indexing:constraint_classification(optimal_stopping_marriage, mountain, context(_, time_horizon(civilizational), _, _)).
 
 test(extraction_paradox) :-
@@ -199,7 +199,7 @@ test(extraction_paradox) :-
  * 1. EXTRACTIVENESS: Set to 0.1. The "Marriage Problem" isn't a scam; it's a 
  * logical trap. The only "extraction" is the opportunity cost paid by 
  * the baseline group.
- * 2. PERSPECTIVES: I chose the Searcher (Noose) because the "no-recall" rule 
+ * 2. PERSPECTIVES: I chose the Searcher (Snare) because the "no-recall" rule 
  * is a classic constraint that feels punitive to the individual.
  * 3. AMBIGUITIES: The biggest uncertainty is the "no-recall" assumption. 
  * In the real world, you can sometimes go back to an ex.
@@ -213,7 +213,7 @@ omega_variable(
     recall_viability,
     "Can a previously rejected candidate be 're-activated'?",
     resolution_mechanism("Empirical study of 'boomerang' relationships in modern dating datasets"),
-    impact("If Recall=High: Mountain becomes Rope (strategy changes). If Recall=Zero: Noose/Mountain holds."),
+    impact("If Recall=High: Mountain becomes Rope (strategy changes). If Recall=Zero: Snare/Mountain holds."),
     confidence_without_resolution(medium)
 ).
 
@@ -236,7 +236,7 @@ omega_variable(
  * Suppression: The math problem suppresses this to maintain the "clean" 1/e proof.
  * * CONCLUSION:
  * The "No-Recall" rule is what turns a coordination tool (Rope) into a 
- * psychological Noose for the individual searcher.
+ * psychological Snare for the individual searcher.
  */
 
 /* ==========================================================================
@@ -247,4 +247,4 @@ omega_variable(
 % --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
 constraint_indexing:constraint_classification(marriage_problem, mountain, agent_power(analytical)).
 constraint_indexing:constraint_classification(marriage_problem, rope, agent_power(institutional)).
-constraint_indexing:constraint_classification(marriage_problem, noose, agent_power(individual_powerless)).
+constraint_indexing:constraint_classification(marriage_problem, snare, agent_power(individual_powerless)).

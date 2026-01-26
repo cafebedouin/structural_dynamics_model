@@ -35,10 +35,10 @@ constraint_metric(non_well_ordered_topology, suppression_requirement, 0.45).
 constraint_metric(non_well_ordered_topology, snap_back_potential, 0.70).
 constraint_metric(non_well_ordered_topology, extractiveness, 0.60).
 
-% The Induction Failure Gap (The Noose)
+% The Induction Failure Gap (The Snare)
 % The "set of standard numbers" is not an internal set, so induction cannot prove its properties.
 % Extractiveness at 0.95 requires the 'overspill_scaffold' to bridge the standard/nonstandard gap.
-constraint_claim(induction_external_limitation, noose).
+constraint_claim(induction_external_limitation, snare).
 constraint_metric(induction_external_limitation, intensity, 0.98).
 constraint_metric(induction_external_limitation, suppression_requirement, 0.92).
 constraint_metric(induction_external_limitation, snap_back_potential, 0.05).
@@ -49,7 +49,7 @@ constraint_metric(induction_external_limitation, extractiveness, 0.95).
 recommendation(rec_01, utilize_lowenheim_skolem_indices_to_track_galaxy_position).
 affects_constraint(rec_01, non_well_ordered_topology).
 
-% Noose (0.95 extractiveness) triggers Cut
+% Snare (0.95 extractiveness) triggers Cut
 % Utilizing 'overspill_scaffold' to allow properties holding for all standard n to hold for some infinite c.
 recommendation(rec_02, apply_overspill_principle_to_extend_standard_properties).
 affects_constraint(rec_02, induction_external_limitation).

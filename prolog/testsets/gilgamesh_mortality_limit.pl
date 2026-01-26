@@ -34,19 +34,19 @@
  * * SUMMARY:
  * This constraint models mortality as the ultimate physical limit defined in the 
  * Epic. In the text, Gilgamesh—a king of immense power—attempts to treat his 
- * mortality as a "Noose" he can untie through a "Mandate of Immortality". 
+ * mortality as a "Snare" he can untie through a "Mandate of Immortality". 
  * Ultimately, he discovers that death is a Mountain (a physical law set by the 
  * gods) that extracts the "margin" of human life regardless of rank or strength.
  * * KEY AGENTS:
  * - Gilgamesh (The Seeker): Individual powerful; a king who views his mortality 
- * as an extractive Noose after the death of Enkidu.
+ * as an extractive Snare after the death of Enkidu.
  * - Utnapishtim (The Immortal): Institutional/Analytical; an observer who 
  * exists outside the human constraint and defines the "Rope" of survival.
  * - The Gods (Enlil/Anu): Institutional; the architects who allotted death 
  * to mankind while keeping life for themselves.
  * * NARRATIVE ARC:
  * Initially, Gilgamesh views his kingship as a Rope (coordination for fame). 
- * Upon Enkidu's death, his existence becomes a Noose, "choking" his desire 
+ * Upon Enkidu's death, his existence becomes a Snare, "choking" his desire 
  * to rule in favor of a frantic search for an escape. He eventually hits the 
  * Mountain (the failed sleep test/the lost plant), transitioning to a 
  * realization that the city walls of Uruk are the only enduring "Scaffold" 
@@ -73,7 +73,7 @@ domain_priors:suppression_score(gilgamesh_mortality_limit, 0.9).
 
 % Enforcement requirements
 % Emerges naturally from biological reality (Mountain) but is framed as 
-% actively enforced by the divine council (Noose).
+% actively enforced by the divine council (Snare).
 domain_priors:emerges_naturally(gilgamesh_mortality_limit).
 
 % Metrics for Executive Summary
@@ -91,7 +91,7 @@ constraint_victim(gilgamesh_mortality_limit, human_ambition).
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 1: GILGAMESH (POST-ENKIDU) - Noose
+   PERSPECTIVE 1: GILGAMESH (POST-ENKIDU) - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerful - A king whose power provides no leverage 
@@ -101,7 +101,7 @@ constraint_victim(gilgamesh_mortality_limit, human_ambition).
    SCOPE: local - His personal existential dread.
    
    WHY THIS CLASSIFICATION:
-   For Gilgamesh, mortality is a Noose. It extracts his joy and his 
+   For Gilgamesh, mortality is a Snare. It extracts his joy and his 
    ability to act as King, "choking" his spirit until he can move the 
    weight by finding Utnapishtim. He views death not as a law, but as 
    an extractive enemy that stole Enkidu.
@@ -111,7 +111,7 @@ constraint_victim(gilgamesh_mortality_limit, human_ambition).
 
 constraint_indexing:constraint_classification(
     gilgamesh_mortality_limit,
-    noose,
+    snare,
     context(
         agent_power(individual_powerful),
         time_horizon(immediate),
@@ -169,7 +169,7 @@ constraint_indexing:constraint_classification(
    WHY THIS CLASSIFICATION:
    By the end of the Epic, Gilgamesh views mortality as a Mountain. 
    It is an unchangeable, unyielding fact of the world. He stops 
-   trying to "un-choke" the Noose and instead starts building the 
+   trying to "un-choke" the Snare and instead starts building the 
    walls of Uruk—a cultural Scaffold that survives the individual's 
    collision with the Mountain.
    -------------------------------------------------------------------------- */
@@ -226,7 +226,7 @@ test(absolute_extraction) :-
 
 omega_variable(
     the_name_immortality_proxy,
-    "Does 'Fame' (The Name-Scaffold) actually resolve the Noose of mortality, 
+    "Does 'Fame' (The Name-Scaffold) actually resolve the Snare of mortality, 
      or is it a secondary extraction that keeps the hero working for a 
      mandate they will never see?",
     resolution_mechanism("Evaluation of Gilgamesh's legacy vs. his actual 
@@ -251,7 +251,7 @@ omega_variable(
  * Suppression: Stolen by the Serpent—a "random" environmental event that 
  * re-asserts the Mountain.
  * * CONCLUSION:
- * The existence of a single immortal (Utnapishtim) proves that the Noose 
+ * The existence of a single immortal (Utnapishtim) proves that the Snare 
  * is a choice made by the "Institutional" gods, which appears as a 
  * Mountain to the "Individual Powerless" man.
  */

@@ -20,14 +20,14 @@ constraint_metric(tree_topology, suppression_requirement, 0.05).
 constraint_metric(tree_topology, snap_back_potential, 0.0).
 
 % Tangled Rope Verification (⊠T)
-% Current extractiveness (0.75) exceeds Tangled Rope limit (0.65), triggering Noose logic.
-constraint_claim(subtree_proliferation, noose).
+% Current extractiveness (0.75) exceeds Tangled Rope limit (0.65), triggering Snare logic.
+constraint_claim(subtree_proliferation, snare).
 constraint_metric(subtree_proliferation, extractiveness, 0.75).
 constraint_metric(subtree_proliferation, suppression_requirement, 0.46).
 
-% Noose Verification (⊠C)
+% Snare Verification (⊠C)
 % Requires extractiveness >= 0.66 AND suppression_requirement >= 0.46
-constraint_claim(arithmetical_provability_limit, noose).
+constraint_claim(arithmetical_provability_limit, snare).
 constraint_metric(arithmetical_provability_limit, extractiveness, 0.99).
 constraint_metric(arithmetical_provability_limit, suppression_requirement, 0.46).
 

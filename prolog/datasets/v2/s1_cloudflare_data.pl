@@ -18,8 +18,8 @@ omega_variable(om_3, preference, investor_threshold_for_long_term_net_losses).
 
 constraint_claim(net_loss_burn, rope).
 constraint_claim(baidu_china_dependency, tangled_rope).
-constraint_claim(dual_class_voting_structure, noose).
-constraint_claim(legacy_on_premise_boxes, zombie).
+constraint_claim(dual_class_voting_structure, snare).
+constraint_claim(legacy_on_premise_boxes, piton).
 
 constraint_metric(net_loss_burn, intensity, 0.87).
 constraint_metric(net_loss_burn, suppression_requirement, 0.45).

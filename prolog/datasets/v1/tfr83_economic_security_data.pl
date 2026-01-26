@@ -24,12 +24,12 @@ event(ev04_security_verification, final_verification, 95, [subject(household_sol
 constraint_claim(resource_scarcity_limit, mountain).
 constraint_metric(resource_scarcity_limit, accessibility_collapse, 0.95).
 
-% Noose: The 'Promise' of Perpetual Growth. It tightens as environmental and debt limits are reached.
-constraint_claim(growth_imperative_mandate, noose).
+% Snare: The 'Promise' of Perpetual Growth. It tightens as environmental and debt limits are reached.
+constraint_claim(growth_imperative_mandate, snare).
 constraint_metric(growth_imperative_mandate, stakes_inflation, 0.90).
 
-% Zombie: Legacy Industrial Subsidies. Policy mechanisms that are functionally dead but continue to drain capital.
-constraint_claim(legacy_subsidy_drain, zombie).
+% Piton: Legacy Industrial Subsidies. Policy mechanisms that are functionally dead but continue to drain capital.
+constraint_claim(legacy_subsidy_drain, piton).
 constraint_metric(legacy_subsidy_drain, suppression, 0.75).
 
 % Rope: Monetary Policy Standard. Ties all local economic activity to central interest rate constraints.

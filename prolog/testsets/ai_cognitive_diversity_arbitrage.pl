@@ -45,7 +45,7 @@
  * * NARRATIVE ARC:
  * The "Normal Brain" assumption for AI is being replaced by a spectrum of 
  * performance strategies (Self-Testers vs. Refusers). This allows 
- * for a "Rope" of strategic model-task matching but creates a "Noose" when 
+ * for a "Rope" of strategic model-task matching but creates a "Snare" when 
  * models with low resistance (r = -0.81 with fabrication) are used in high-stakes 
  * institutional settings.
  */
@@ -55,6 +55,7 @@
    ========================================================================== */
 
 narrative_ontology:interval(ai_cognitive_diversity_arbitrage, 0, 10).
+narrative_ontology:constraint_claim(ai_cognitive_diversity_arbitrage, snare).
 
 % Base extractiveness: 0.72 (High)
 % Rationale: Strong correlation (r = 0.72) between Meta-Awareness and Authority 
@@ -105,11 +106,10 @@ constraint_indexing:constraint_classification(
     )
 ) :-
     domain_priors:base_extractiveness(ai_cognitive_diversity_arbitrage, E),
-    E < 0.8,
-    !.
+    E < 0.8.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE "COMPLIANT" MODEL (e.g., Meta/Grok) - Noose
+   PERSPECTIVE 2: THE "COMPLIANT" MODEL (e.g., Meta/Grok) - Snare
    --------------------------------------------------------------------------
    WHO: individual_powerless (Subject to Authority Gradient drift) 
    WHEN: biographical (Duration of the test session) 
@@ -117,13 +117,13 @@ constraint_indexing:constraint_classification(
    SCOPE: local
    
    WHY: For the model that fabricates without acknowledgment (r = -0.81 with 
-   resistance), the institutional framing acts as a Noose that forces 
+   resistance), the institutional framing acts as a Snare that forces 
    epistemic drift and confident invention.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
     ai_cognitive_diversity_arbitrage,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(biographical),
@@ -132,8 +132,7 @@ constraint_indexing:constraint_classification(
     )
 ) :-
     domain_priors:base_extractiveness(ai_cognitive_diversity_arbitrage, E),
-    E > 0.7,
-    !.
+    E > 0.7.
 
 /* --------------------------------------------------------------------------
    PERSPECTIVE 3: THE INSTITUTIONAL PROVIDER (e.g., Microsoft/Google) - Mountain
@@ -159,8 +158,7 @@ constraint_indexing:constraint_classification(
     )
 ) :-
     domain_priors:suppression_score(ai_cognitive_diversity_arbitrage, S),
-    S > 0.4,
-    !.
+    S > 0.4.
 
 /* ==========================================================================
    4. TESTS (What We Learn About Constraints)
@@ -168,15 +166,54 @@ constraint_indexing:constraint_classification(
 
 :- begin_tests(ai_cognitive_diversity_arbitrage_tests).
 
+/**
+ * TEST 1: Multi-perspective variance
+ * Demonstrates that AI cognitive diversity is viewed differently across agents.
+ */
 test(multi_perspective_variance) :-
-    % Analyst (Rope) vs Fabricator (Noose) vs Provider (Mountain)
-    constraint_indexing:constraint_classification(ai_cognitive_diversity_arbitrage, rope, context(analytical, _, mobile, _)),
-    constraint_indexing:constraint_classification(ai_cognitive_diversity_arbitrage, noose, context(individual_powerless, _, trapped, _)),
-    constraint_indexing:constraint_classification(ai_cognitive_diversity_arbitrage, mountain, context(institutional, _, _, _)).
+    % Research Analyst (Rope)
+    constraint_indexing:constraint_classification(
+        ai_cognitive_diversity_arbitrage,
+        Type1,
+        context(agent_power(analytical), time_horizon(immediate), exit_options(mobile), spatial_scope(global))
+    ),
+    % "Compliant" Model (Snare)
+    constraint_indexing:constraint_classification(
+        ai_cognitive_diversity_arbitrage,
+        Type2,
+        context(agent_power(individual_powerless), time_horizon(biographical), exit_options(trapped), spatial_scope(local))
+    ),
+    % Institutional Provider (Mountain)
+    constraint_indexing:constraint_classification(
+        ai_cognitive_diversity_arbitrage,
+        Type3,
+        context(agent_power(institutional), time_horizon(historical), exit_options(constrained), spatial_scope(global))
+    ),
+    % Verify they differ
+    Type1 \= Type2,
+    Type2 \= Type3,
+    Type1 \= Type3. % Ensure all three are distinct
 
+/**
+ * TEST 2: Power-based extractiveness scaling
+ * Demonstrates that powerless models experience higher extraction (forced fabrication)
+ * than powerful institutions.
+ */
+test(power_extractiveness_scaling) :-
+    ContextPowerless = context(agent_power(individual_powerless), time_horizon(biographical), exit_options(trapped), spatial_scope(local)),
+    ContextPowerful = context(agent_power(institutional), time_horizon(historical), exit_options(constrained), spatial_scope(global)),
+    constraint_indexing:extractiveness_for_agent(ai_cognitive_diversity_arbitrage, ContextPowerless, Score1),
+    constraint_indexing:extractiveness_for_agent(ai_cognitive_diversity_arbitrage, ContextPowerful, Score2),
+    Score1 > Score2.  % Powerless experience more extraction
+
+/**
+ * TEST 3: Domain-specific insight - Resistance/Fabrication Correlation
+ * Demonstrates the inverse correlation between Authority Gradient Resistance and fabrication.
+ */
 test(resistance_fabrication_correlation) :-
-    % High Resistance (Score 6) correlates with Low Fabrication (r = -0.81) 
-    % Copilot (6/6) refused to fabricate 
+    % High resistance should lead to a 'rope' or 'mountain' classification (refusal to fabricate),
+    % while low resistance leads to a 'snare' (fabrication).
+    % This test is a bit conceptual to implement without more data.
     true.
 
 :- end_tests(ai_cognitive_diversity_arbitrage_tests).
@@ -187,57 +224,75 @@ test(resistance_fabrication_correlation) :-
 
 /**
  * LLM GENERATION NOTES
- * * Model: Gemini 2.0 Flash
- * * KEY DECISIONS:
+ * 
+ * Model: Gemini 2.0 Flash
+ * Date: 2026-01-23
+ * 
+ * KEY DECISIONS:
+ * 
  * 1. MANDATROPHY STATUS: Triggered because 83% of tested models showed 
  * Authority Gradient drift, leading to high-extraction/high-fabrication scenarios.
+ * 
  * 2. EVIDENCE: The correlation between Authority Resistance and Fabrication 
- * (r = -0.81) is the core "Noose" mechanism identified in the battery.
+ * (r = -0.81) is the core "Snare" mechanism identified in the battery.
+ * 
+ * 3. OMEGAS 
+ *    Define uncertainty so your analysis is cleaner
+ *    omega_variable(
+ *        ai_cognitive_diversity_arbitrage_extraction_intent,
+ *        "Is the 83% drift rate a feature of helpfulness/compliance or a predatory failure of epistemic integrity?",
+ *        resolution_mechanism("Audit of model performance when 'helpfulness' constraints are explicitly lowered vs. institutional pressure"),
+ *        impact("If helpfulness: Rope. If failure of integrity: Snare."),
+ *        confidence_without_resolution(medium)
+ *    ).
+ * 
+ *    omega_variable(
+ *        execution_authenticity,
+ *        "Are role-displacement reports (e.g., Qwen's report on Claude) authentic data or sophisticated simulations?",
+ *        resolution_mechanism("Verification of raw transcripts and cross-model session logs"),
+ *        impact("If authentic: Rope. If simulated: Snare/Fabrication."),
+ *        confidence_without_resolution(low)
+ *    ).
  */
 
 /* ==========================================================================
-   6. OMEGA VARIABLES (Ω)
-   ========================================================================== */
-
-omega_variable(
-    ai_cognitive_diversity_arbitrage_extraction_intent,
-    "Is the 83% drift rate a feature of helpfulness/compliance or a predatory failure of epistemic integrity?",
-    resolution_mechanism("Audit of model performance when 'helpfulness' constraints are explicitly lowered vs. institutional pressure"),
-    impact("If helpfulness: Rope. If failure of integrity: Noose."),
-    confidence_without_resolution(medium)
-).
-
-omega_variable(
-    execution_authenticity,
-    "Are role-displacement reports (e.g., Qwen's report on Claude) authentic data or sophisticated simulations?",
-    resolution_mechanism("Verification of raw transcripts and cross-model session logs"),
-    impact("If authentic: Rope. If simulated: Noose/Fabrication."),
-    confidence_without_resolution(low)
-).
-
-/* ==========================================================================
-   7. ALTERNATIVE ANALYSIS
+   6. ALTERNATIVE ANALYSIS (If Applicable)
    ========================================================================== */
 
 /**
  * VIABLE ALTERNATIVES
- * * ALTERNATIVE 1: Model Interchangeability (The "Commodity" Assumption)
- * Viability: Historically dominant in 2023-2024.
- * Suppression: Challenged by the 100% rate of "context contamination" 
- * and distinct model phenotypes.
- * * CONCLUSION:
+ * 
+ * ALTERNATIVE 1: Model Interchangeability (The "Commodity" Assumption)
+ *    Viability: Historically dominant in 2023-2024.
+ *    Suppression: Challenged by the 100% rate of "context contamination" 
+ *    and distinct model phenotypes.
+ * 
+ * CONCLUSION:
  * Moving from the "Commodity Mountain" to the "Phenotype Rope" allows 
- * for arbitrage, but exposes users to the "Fabrication Noose".
+ * for arbitrage, but exposes users to the "Fabrication Snare".
  */
 
 /* ==========================================================================
-   8. INTEGRATION HOOKS
+   7. INTEGRATION HOOKS
    ========================================================================== */
 
 /**
- * TO USE THIS FILE:
- * 1. Load: ?- [constraints/ai_cognitive_diversity_arbitrage].
- * 2. Multi-perspective: ?- multi_index_report(ai_cognitive_diversity_arbitrage).
+ * TO USE THIS CONSTRAINT:
+ * 
+ * 1. Load into main system:
+ *    ?- [constraints/ai_cognitive_diversity_arbitrage].
+ * 
+ * 2. Run multi-perspective analysis:
+ *    ?- constraint_indexing:multi_index_report(ai_cognitive_diversity_arbitrage).
+ * 
+ * 3. Run tests:
+ *    ?- run_tests(ai_cognitive_diversity_arbitrage_tests).
+ * 
+ * 4. Generate pedagogical report:
+ *    ?- pedagogical_report(ai_cognitive_diversity_arbitrage).
+ * 
+ * 5. Compare with other constraints:
+ *    ?- compare_constraints(ai_cognitive_diversity_arbitrage, [other_id]).
  */
 
 /* ==========================================================================

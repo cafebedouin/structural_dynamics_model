@@ -39,7 +39,7 @@
  * - The Polynomial (Subject): The mathematical object whose roots are 
  * governed by an inescapable internal symmetry.
  * - Évariste Galois: The historical individual who was "strangled" by the 
- * social/political Noose of 19th-century France while mapping the Mountain 
+ * social/political Snare of 19th-century France while mapping the Mountain 
  * of group symmetry.
  * - The Abstract Algebraist (Institutional): An agent who uses the "Rope" of 
  * Galois correspondence to navigate complex algebraic structures.
@@ -47,7 +47,7 @@
  * Galois Theory is the "Mountain" of algebraic limits. It reveals that the 
  * "freedom" to solve equations is restricted by the group structure of their 
  * permutations. Historically, for Galois himself, the theory was a "Rope" of 
- * genius that failed to save him from the political "Noose" of his era.
+ * genius that failed to save him from the political "Snare" of his era.
  */
 
 /* ==========================================================================
@@ -114,7 +114,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE GRADUATE STUDENT - Noose
+   PERSPECTIVE 2: THE GRADUATE STUDENT - Snare
    --------------------------------------------------------------------------
    WHO: individual_moderate - Has the intelligence to learn, but is bound by rigor.
    WHEN: biographical - Spanning the months of a grueling course.
@@ -122,7 +122,7 @@ constraint_indexing:constraint_classification(
    SCOPE: local - A specific exam or research hurdle.
    
    WHY THIS CLASSIFICATION:
-   To the student, the "Galois Correspondence" often feels like a "Noose." 
+   To the student, the "Galois Correspondence" often feels like a "Snare." 
    It promises a "simple" link between subfields and subgroups, but 
    the path to verifying that link extracts immense cognitive energy and 
    "strangles" intuitive understanding until the "aha" moment occurs.
@@ -132,7 +132,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     galois_theory_symmetry,
-    noose,
+    snare,
     context(
         agent_power(individual_moderate),
         time_horizon(biographical),
@@ -185,8 +185,8 @@ test(symmetry_fate_variance) :-
     Type2 = rope.
 
 test(student_frustration_noose) :-
-    % A moderate power agent in a constrained/biographical context sees the abstraction as a Noose.
-    constraint_indexing:constraint_classification(galois_theory_symmetry, noose, context(individual_moderate, biographical, constrained, local)).
+    % A moderate power agent in a constrained/biographical context sees the abstraction as a Snare.
+    constraint_indexing:constraint_classification(galois_theory_symmetry, snare, context(individual_moderate, biographical, constrained, local)).
 
 test(emergence) :-
     domain_priors:emerges_naturally(galois_theory_symmetry).

@@ -47,7 +47,7 @@
  * groups outside the list. For the institution, it is a "Rope" that allows 
  * for "Classification-based proofs" where every finite group can be analyzed 
  * by checking the list. However, for the individual, its sheer complexity 
- * acts as a "Noose," extracting a "tax" of blind faith because the full 
+ * acts as a "Snare," extracting a "tax" of blind faith because the full 
  * proof is too large for any single human mind to fully encompass.
  */
 
@@ -141,7 +141,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE STUDENT / OUTSIDER - Noose
+   PERSPECTIVE 3: THE STUDENT / OUTSIDER - Snare
    --------------------------------------------------------------------------
    WHO: individual_powerless - Lacks the status or time to verify the 10,000 pages.
    WHEN: biographical - Attempting to understand the foundations over a career.
@@ -149,7 +149,7 @@ constraint_indexing:constraint_classification(
    SCOPE: local - A specific research path or doctoral thesis.
    
    WHY THIS CLASSIFICATION:
-   To the individual, the CFSG is a "Noose." It is a massive, unverified 
+   To the individual, the CFSG is a "Snare." It is a massive, unverified 
    barrier that "strangles" the ideal of mathematical self-sufficiency. It 
    extracts "Trust" where there should be "Proof," creating an asymmetric 
    power dynamic between the "Enormous Theorem" and the individual mind.
@@ -159,7 +159,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     finite_simple_group_classification,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(biographical),
@@ -186,8 +186,8 @@ test(structural_fate_variance) :-
     Type2 = rope.
 
 test(verification_barrier_noose) :-
-    % A powerless individual in a biographical search for truth sees it as a Noose.
-    constraint_indexing:constraint_classification(finite_simple_group_classification, noose, context(individual_powerless, biographical, constrained, local)).
+    % A powerless individual in a biographical search for truth sees it as a Snare.
+    constraint_indexing:constraint_classification(finite_simple_group_classification, snare, context(individual_powerless, biographical, constrained, local)).
 
 test(beneficiary_victim_parity) :-
     constraint_beneficiary(finite_simple_group_classification, Beneficiary),
@@ -210,7 +210,7 @@ test(beneficiary_victim_parity) :-
  * the traditional mathematical right of "personal proof" in exchange for 
  * "institutional trust."
  * 2. PERSPECTIVE GAP: The "Enormous Theorem" is the best example of how 
- * complexity turns a Mountain into a Noose. If a truth is "Natural" (Mountain) 
+ * complexity turns a Mountain into a Snare. If a truth is "Natural" (Mountain) 
  * but requires 10,000 pages to see, it effectively coerces the observer.
  * 3. OMEGAS: The central uncertainty is the "Gaps" in the first-generation 
  * proof (e.g., the Quasi-thin groups) which were only resolved decades later.
@@ -257,4 +257,4 @@ omega_variable(
 % --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
 constraint_indexing:constraint_classification(finite_simple_groups_classification, mountain, agent_power(analytical)).
 constraint_indexing:constraint_classification(finite_simple_groups_classification, rope, agent_power(institutional)).
-constraint_indexing:constraint_classification(finite_simple_groups_classification, noose, agent_power(individual_powerless)).
+constraint_indexing:constraint_classification(finite_simple_groups_classification, snare, agent_power(individual_powerless)).

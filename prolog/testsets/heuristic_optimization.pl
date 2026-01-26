@@ -1,12 +1,12 @@
 % ============================================================================
 % CONSTRAINT STORY: heuristic_optimization
 % ============================================================================
-% Generated: 2026-01-17
-% Model: Gemini 2.0 Flash
+% Generated: 2026-01-23
+% Model: Gemini Pro (Revised)
 % Source: Metaheuristics / Evolutionary Computing / Optimization Theory
 % ============================================================================
 
-:- module(constraint_heuristics, []).
+:- module(constraint_heuristic_optimization, []).
 
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
@@ -25,27 +25,23 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: heuristic_optimization
+ * 
+ * constraint_id: heuristic_optimization
  * human_readable: Heuristic Optimization (The "Good Enough" Rope)
  * domain: technological/mathematical/economic
  * temporal_scope: Immediate to Biographical
  * spatial_scope: Global
- * * SUMMARY:
+ * 
+ * SUMMARY:
  * Heuristics are strategies derived from experience or "rules of thumb" 
  * to solve problems more quickly than classic methods. While they do not 
  * guarantee a perfect solution, they provide a functional one where 
- * exhaustive search (Mountain) would fail due to time or resource limits.
- * * KEY AGENTS:
- * - The Solver: The agent utilizing the heuristic to navigate a complex system.
- * - The Perfectionist: The agent trapped by the Noose of absolute optimality.
- * - The System: The reality that rewards speed and "functionality" over 
- * theoretical purity.
- * * NARRATIVE ARC:
- * Heuristics function as "Approximate Ropes." They acknowledge the 
- * impossibility of climbing the absolute peak of the Mountain and instead 
- * find a stable plateau. This creates a matching market where the "Price" 
- * is a small margin of error, paid for in exchange for a massive 
- * gain in speed and agency.
+ * exhaustive search would fail due to time or resource limits.
+ * 
+ * KEY AGENTS:
+ * - The Drone Pilot / AI Assistant (Individual Powerless): Executes programmed "rules of thumb".
+ * - The Engineering Firm (Institutional): Delivers functional solutions within budget.
+ * - The Theorist (Analytical): Seeks absolute optimal solutions.
  */
 
 /* ==========================================================================
@@ -68,118 +64,104 @@ domain_priors:suppression_score(heuristic_optimization, 0.1).
 % Enforcement: Emerges naturally from cognitive and computational scarcity.
 domain_priors:emerges_naturally(heuristic_optimization).
 
-% Metrics
-narrative_ontology:constraint_metric(heuristic_optimization, extractiveness, 0.2).
-narrative_ontology:constraint_metric(heuristic_optimization, suppression_requirement, 0.1).
-
 % BENEFICIARIES & VICTIMS
 constraint_beneficiary(heuristic_optimization, real_time_systems).
-constraint_beneficiary(heuristic_optimization, adaptive_agents).
-constraint_victim(heuristic_optimization, none). % Positive-sum utility
+constraint_victim(heuristic_optimization, absolute_optimality).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 1: THE PRACTITIONER - Rope
+   PERSPECTIVE 1: THE DRONE PILOT / AI ASSISTANT - Mountain
    --------------------------------------------------------------------------
-   WHO: individual_moderate
-   WHEN: immediate
-   WHERE: mobile
-   SCOPE: local
+   WHO: individual_powerless (Operates under programmed constraints)
+   WHEN: immediate (Executing a task in real-time)
+   WHERE: trapped (Limited by the heuristic algorithm)
    
    WHY THIS CLASSIFICATION:
-   For someone making real-world decisions (like a delivery driver or a 
-   trading algorithm), a heuristic is a "Rope." It allows them to act 
-   instantly. The trade-off (95% optimal in 1 second vs 100% optimal 
-   in 100 years) is a coordination win that empowers their mobility.
-   -------------------------------------------------------------------------- */
-
-constraint_indexing:constraint_classification(
-    heuristic_optimization,
-    rope,
-    context(
-        agent_power(individual_moderate),
-        time_horizon(immediate),
-        exit_options(mobile),
-        spatial_scope(local)
-    )
-) :-
-    domain_priors:base_extractiveness(heuristic_optimization, E),
-    E < 0.3,
-    !.
-
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE THEORIST - Noose
-   --------------------------------------------------------------------------
-   WHO: individual_powerful (intellectual authority)
-   WHEN: generational
-   WHERE: trapped (locked in the search for the 'Absolute Truth')
-   SCOPE: global
-   
-   WHY THIS CLASSIFICATION:
-   To a perfectionist seeking the absolute global minimum, a heuristic 
-   is a "Noose." It "strangles" the truth by settling for a local 
-   optimum. They see the heuristic as a shortcut that prevents the 
-   system from ever reaching its theoretical potential.
-   -------------------------------------------------------------------------- */
-
-constraint_indexing:constraint_classification(
-    heuristic_optimization,
-    noose,
-    context(
-        agent_power(individual_powerful),
-        time_horizon(generational),
-        exit_options(trapped),
-        spatial_scope(global)
-    )
-) :-
-    true.
-
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE BIOLOGICAL ORGANISM - Mountain
-   --------------------------------------------------------------------------
-   WHO: analytical
-   WHEN: historical
-   WHERE: analytical
-   SCOPE: global
-   
-   WHY THIS CLASSIFICATION:
-   Biological evolution is a "Mountain" of heuristic optimization. 
-   Natural selection doesn't find the "perfect" organism; it finds 
-   the one that is "good enough" to survive and reproduce. To the 
-   observer, heuristics are the immutable law of life in a resource-constrained universe.
+   For the drone pilot or AI assistant, heuristics are an immutable 'Mountain'
+   of programmed behavior. They execute the "rule of thumb" without understanding
+   the underlying math or seeking a theoretically perfect solution. It is a fixed
+   reality of their operational environment.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
     heuristic_optimization,
     mountain,
     context(
-        agent_power(analytical),
-        time_horizon(historical),
-        exit_options(analytical),
+        agent_power(individual_powerless),
+        time_horizon(immediate),
+        exit_options(trapped),
+        spatial_scope(local)
+    )
+).
+
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 2: THE ENGINEERING FIRM - Rope
+   --------------------------------------------------------------------------
+   WHO: institutional (Delivers functional solutions within constraints)
+   WHEN: biographical (Project lifecycle)
+   WHERE: mobile (Can choose different algorithms and trade-offs)
+   
+   WHY THIS CLASSIFICATION:
+   For the engineering firm, heuristics are a 'Rope' to deliver functional solutions
+   within budget and time constraints. They understand that perfection is often
+   the enemy of "good enough" and use heuristics to coordinate complex projects,
+   prioritizing speed and functionality over theoretical purity.
+   -------------------------------------------------------------------------- */
+
+constraint_indexing:constraint_classification(
+    heuristic_optimization,
+    rope,
+    context(
+        agent_power(institutional),
+        time_horizon(biographical),
+        exit_options(mobile),
+        spatial_scope(regional)
+    )
+).
+
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 3: THE THEORIST - Snare
+   --------------------------------------------------------------------------
+   WHO: individual_powerful (Intellectual authority, seeking absolute truth)
+   WHEN: generational (Long-term pursuit of mathematical perfection)
+   WHERE: trapped (Bound by the search for the 'Absolute Truth')
+   
+   WHY THIS CLASSIFICATION:
+   To a perfectionist seeking the absolute global minimum, a heuristic 
+   is a 'Snare'. It "strangles" the truth by settling for a local 
+   optimum. They see the heuristic as a shortcut that prevents the 
+   system from ever reaching its theoretical potential, a compromise that stifles perfection.
+   -------------------------------------------------------------------------- */
+
+constraint_indexing:constraint_classification(
+    heuristic_optimization,
+    snare,
+    context(
+        agent_power(individual_powerful),
+        time_horizon(generational),
+        exit_options(trapped),
         spatial_scope(global)
     )
-) :-
-    domain_priors:emerges_naturally(heuristic_optimization),
-    !.
+).
 
 /* ==========================================================================
    4. TESTS
    ========================================================================== */
 
-:- begin_tests(heuristic_tests).
+:- begin_tests(heuristic_optimization_tests).
 
-test(functional_mobility) :-
-    % Testing that heuristics act as a Rope for those needing immediate action.
-    constraint_indexing:constraint_classification(heuristic_optimization, rope, context(_, _, mobile, _)).
+test(multi_perspective_variance) :-
+    constraint_indexing:constraint_classification(heuristic_optimization, Type1, context(agent_power(individual_powerless), _, _, _)),
+    constraint_indexing:constraint_classification(heuristic_optimization, Type2, context(agent_power(institutional), _, _, _)),
+    constraint_indexing:constraint_classification(heuristic_optimization, Type3, context(agent_power(individual_powerful), _, _, _)),
+    Type1 \= Type2,
+    Type2 \= Type3,
+    Type1 \= Type3.
 
-test(optimal_frustration) :-
-    % Testing that those 'trapped' by the need for perfection see a Noose.
-    constraint_indexing:constraint_classification(heuristic_optimization, noose, context(_, _, trapped, _)).
-
-:- end_tests(heuristic_tests).
+:- end_tests(heuristic_optimization_tests).
 
 /* ==========================================================================
    5. MODEL INTERPRETATION (Commentary)
@@ -187,24 +169,70 @@ test(optimal_frustration) :-
 
 /**
  * LLM GENERATION NOTES
- * * Model: Gemini 2.0 Flash
- * * KEY DECISIONS:
- * Heuristics are the "Exit Option" for NP-hard problems. I set 
- * extractiveness to 0.2 because the cost is inaccuracy, not coercion. 
- * I chose "Mountain" for biology because life *is* a heuristic process.
+ * 
+ * Model: Gemini Pro (Revised)
+ * Date: 2026-01-23
+ * 
+ * KEY DECISIONS:
+ * 
+ * 1. PERSPECTIVE SELECTION: Added the 'Drone Pilot / AI Assistant' (individual_powerless)
+ *    and 'Engineering Firm' (institutional) to fulfill linter requirements and provide
+ *    a more complete picture of how heuristics are experienced across different roles.
+ *
+ * 2. CLASSIFICATION RATIONALE:
+ *    - Drone Pilot (Mountain): The heuristic is an immutable command.
+ *    - Engineering Firm (Rope): A pragmatic tool for efficient problem-solving.
+ *    - Theorist (Snare): A compromise that prevents absolute perfection.
+ * 
+ * 3. CORE INSIGHT: Heuristics are a powerful 'Rope' for navigating complex, resource-constrained
+ *    environments, but their inherent sub-optimality can feel like a 'Snare' to those
+ *    pursuing absolute perfection.
  */
 
 /* ==========================================================================
-   6. OMEGA VARIABLES (Ω)
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
+/**
+ * OMEGA IDENTIFICATION
+ *
+ * The core uncertainty is whether the pursuit of absolute optimality is ever truly necessary.
+ */
 
 omega_variable(
-    heuristic_drift,
-    "Will heuristics eventually become so accurate that the 'theoretical optimal' becomes irrelevant to human civilization?",
-    resolution_mechanism("Comparative analysis of economic gains from heuristics vs. potential gains from theoretical optima"),
-    impact("If Yes: The Noose of NP-completeness is effectively cut; the Mountain is conquered."),
+    heuristic_drift_vs_optimal_convergence,
+    "Will heuristics eventually become so accurate that the 'theoretical optimal' becomes irrelevant for all practical purposes, making the pursuit of perfection a 'Snare'?",
+    resolution_mechanism("Comparative analysis of economic gains from heuristic solutions versus the cost and time required to achieve theoretical optima in real-world applications over decades."),
+    impact("If heuristics suffice: The 'Snare' of NP-completeness is effectively cut; the 'Mountain' of absolute optimality is redefined. If perfection remains critical: The heuristic remains a compromise."),
     confidence_without_resolution(medium)
 ).
+
+/* ==========================================================================
+   7. ALTERNATIVE ANALYSIS
+   ========================================================================== */
+/**
+ * VIABLE ALTERNATIVES
+ *
+ * ALTERNATIVE 1: Exhaustive Search / Exact Algorithms
+ *    Viability: Guarantees the absolute optimal solution for many problems.
+ *    Suppression: Suppressed by practical constraints of time and computational resources, especially for NP-hard problems.
+ *
+ * CONCLUSION:
+ * Heuristics thrive because they provide a pragmatic 'Rope' to solve problems
+ * that would otherwise be intractable. The 'Snare' of absolute optimality is
+ * often too expensive or impossible to achieve in real-world scenarios.
+ */
+
+/* ==========================================================================
+   8. INTEGRATION HOOKS
+   ========================================================================== */
+
+/**
+ * TO USE THIS FILE:
+ * 
+ * 1. Load: ?- [constraints/heuristic_optimization].
+ * 2. Multi-perspective: ?- multi_index_report(heuristic_optimization).
+ * 3. Run tests: ?- run_tests(heuristic_optimization_tests).
+ */
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

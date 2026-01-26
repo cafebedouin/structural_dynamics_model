@@ -25,12 +25,12 @@ event(ev05_meco, finality, 98, [met('0/00:08:30'), result(velocity_attained)]).
 constraint_claim(orbital_insertion_physics, mountain).
 constraint_metric(orbital_insertion_physics, accessibility_collapse, 0.98).
 
-% Noose: The "Abort Modes" (RTLS, TAL, ATO). Options disappear as time/altitude increases, narrowing to a single path.
-constraint_claim(abort_decision_window, noose).
+% Snare: The "Abort Modes" (RTLS, TAL, ATO). Options disappear as time/altitude increases, narrowing to a single path.
+constraint_claim(abort_decision_window, snare).
 constraint_metric(abort_decision_window, stakes_inflation, 1.0).
 
-% Zombie: The "Man-in-the-Loop" manual override. Legacy pilot-control requirements for systems that are computationally deterministic.
-constraint_claim(manual_override_bias, zombie).
+% Piton: The "Man-in-the-Loop" manual override. Legacy pilot-control requirements for systems that are computationally deterministic.
+constraint_claim(manual_override_bias, piton).
 constraint_metric(manual_override_bias, suppression, 0.85).
 
 % --- 4. Recommendations & Veto Structure ---

@@ -96,7 +96,7 @@ narrative_ontology:constraint_metric(private_identity_integration, suppression_r
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 1: THE NOVICE (Haili) - Noose
+   PERSPECTIVE 1: THE NOVICE (Haili) - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless (Consumed by "fantasies that were force-fed")
@@ -106,8 +106,8 @@ narrative_ontology:constraint_metric(private_identity_integration, suppression_r
    
    WHY THIS CLASSIFICATION:
    For the novice, traditional relationship limits and the lack of identity 
-   labels are a "Noose" that makes them feel "confined" and "narrow". 
-   They attempt to break this Noose through public declaration, which the 
+   labels are a "Snare" that makes them feel "confined" and "narrow". 
+   They attempt to break this Snare through public declaration, which the 
    mentor views as a further entanglement in "sophomoric" error.
    
    NARRATIVE EVIDENCE:
@@ -119,7 +119,7 @@ narrative_ontology:constraint_metric(private_identity_integration, suppression_r
 
 constraint_indexing:constraint_classification(
     private_identity_integration,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -199,7 +199,7 @@ constraint_indexing:constraint_classification(
 :- begin_tests(private_identity_integration_tests).
 
 test(multi_perspective_hygiene) :-
-    % Novice sees Noose (Confinement)
+    % Novice sees Snare (Confinement)
     constraint_indexing:constraint_classification(private_identity_integration, Type1, context(individual_powerless, immediate, trapped, local)),
     % Mentor sees Rope (Survival Protocol)
     constraint_indexing:constraint_classification(private_identity_integration, Type2, context(institutional, biographical, mobile, local)),
@@ -219,7 +219,7 @@ test(power_extractiveness_hygiene) :-
     Score1 > Score2.
 
 test(time_immutability) :-
-    % In the short term, identity is a "Noose" of force-fed fantasies.
+    % In the short term, identity is a "Snare" of force-fed fantasies.
     constraint_indexing:effective_immutability(immediate, trapped, mountain),
     % Over biographical time, "Keep it to yourself" is a Rope (changeable).
     constraint_indexing:effective_immutability(biographical, mobile, rope).
@@ -240,11 +240,11 @@ test(time_immutability) :-
  * anyone any favors," effectively wasting the social bandwidth of the 
  * public for unintegrated personal issues.
  * * 2. PERSPECTIVE SELECTION:
- * Chose the Novice (Noose), the Mentor (Rope), and the Observer (Mountain) 
+ * Chose the Novice (Snare), the Mentor (Rope), and the Observer (Mountain) 
  * to reflect the source's pedagogical arc: from feeling trapped by 
  * limits to using them as a tool for refined identity.
  * * 3. CLASSIFICATION RATIONALE:
- * Novice -> Noose: They feel "confined" by traditional binaries and 
+ * Novice -> Snare: They feel "confined" by traditional binaries and 
  * "force-fed" fantasies.
  * Mentor -> Rope: Rule No. 1 is presented as a "good idea" and a survival 
  * mechanism to "work it out" privately.
@@ -261,16 +261,16 @@ omega_variable(
     "How many 'years' are required for raw insight to transform from a 
      socially 'toxic' display into an integrated 'extraordinary' story?",
     resolution_mechanism("Audit of long-term social standing for sharers vs. private integrators"),
-    impact("If years=0: Radical transparency is a Rope. If years>0: It is a Noose."),
+    impact("If years=0: Radical transparency is a Rope. If years>0: It is a Snare."),
     confidence_without_resolution(medium)
 ).
 
 omega_variable(
     relationship_limit_nature,
     "Are relationship 'limits' a biological Mountain (necessity) or a 
-     social Noose (constraint) that can be optimized away by solo polyamory?",
+     social Snare (constraint) that can be optimized away by solo polyamory?",
     resolution_mechanism("Longitudinal happiness metrics of solo polyamorists vs. traditionalists"),
-    impact("If Mountain: Solo polyamory is a deceptive Rope. If Noose: It is a true escape."),
+    impact("If Mountain: Solo polyamory is a deceptive Rope. If Snare: It is a true escape."),
     confidence_without_resolution(low)
 ).
 
@@ -289,7 +289,7 @@ omega_variable(
  * Suppression: Shunted as a potential fantasy or "force-fed" alternative 
  * to marriage/loneliness.
  * * CONCLUSION:
- * The existence of Alternative 1 (Sharing) is identified as a "Noose" 
+ * The existence of Alternative 1 (Sharing) is identified as a "Snare" 
  * for the subject, making Rule No. 1 a functional "Rope" for survival 
  * in a judgmental social environment.
  */

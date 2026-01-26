@@ -35,10 +35,10 @@ constraint_metric(uncountable_structure_variation, suppression_requirement, 0.40
 constraint_metric(uncountable_structure_variation, snap_back_potential, 0.70).
 constraint_metric(uncountable_structure_variation, extractiveness, 0.52).
 
-% The ZFC Independence Sink (The Noose)
+% The ZFC Independence Sink (The Snare)
 % The inability of ZFC to resolve the problem for cardinality Aleph-1.
 % Extractiveness at 0.98 requires 'constructible_universe_L' or 'martins_axiom' scaffolds to proceed.
-constraint_claim(axiomatic_undecidability, noose).
+constraint_claim(axiomatic_undecidability, snare).
 constraint_metric(axiomatic_undecidability, intensity, 0.99).
 constraint_metric(axiomatic_undecidability, suppression_requirement, 0.95).
 constraint_metric(axiomatic_undecidability, snap_back_potential, 0.01).
@@ -49,7 +49,7 @@ constraint_metric(axiomatic_undecidability, extractiveness, 0.98).
 recommendation(rec_01, constrain_analysis_to_countable_torsion_free_groups).
 affects_constraint(rec_01, uncountable_structure_variation).
 
-% Noose (0.98 extractiveness) triggers Cut
+% Snare (0.98 extractiveness) triggers Cut
 % Utilizing 'constructible_universe_L' scaffold (V=L) to force a 'Yes' answer.
 recommendation(rec_02, adopt_axiom_of_constructibility_to_resolve_freeness).
 affects_constraint(rec_02, axiomatic_undecidability).

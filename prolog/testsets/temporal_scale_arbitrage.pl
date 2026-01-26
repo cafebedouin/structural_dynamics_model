@@ -45,7 +45,7 @@
  * The field has moved from "happy accidents" (Mountain) to a coordinated 
  * industrialized search (Rope). This allows for 
  * the arbitrage of time, where different telescopes investigate different 
- * durations, but it creates a Noose for events that vanish before detection 
+ * durations, but it creates a Snare for events that vanish before detection 
  * protocols can be triggered.
  */
 
@@ -117,7 +117,7 @@ constraint_indexing:constraint_classification(
     !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE TRANSIENT EVENT - Noose
+   PERSPECTIVE 2: THE TRANSIENT EVENT - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless (Fleeting phenomena subject to "the action")
@@ -126,7 +126,7 @@ constraint_indexing:constraint_classification(
    SCOPE: local (Specific cosmic events)
    
    WHY THIS CLASSIFICATION:
-   For the transient, the cadence is a Noose. If it does not occur within the 
+   For the transient, the cadence is a Snare. If it does not occur within the 
    active "conveyor belt" window, its scientific information is permanently 
    extracted or lost.
    
@@ -136,7 +136,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     temporal_scale_arbitrage,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -187,9 +187,9 @@ constraint_indexing:constraint_classification(
 :- begin_tests(temporal_scale_arbitrage_tests).
 
 test(multi_perspective_variance) :-
-    % Coordinator (Rope) vs Event (Noose) vs Universe (Mountain)
+    % Coordinator (Rope) vs Event (Snare) vs Universe (Mountain)
     constraint_indexing:constraint_classification(temporal_scale_arbitrage, rope, context(institutional, biographical, arbitrage, global)),
-    constraint_indexing:constraint_classification(temporal_scale_arbitrage, noose, context(individual_powerless, immediate, trapped, local)),
+    constraint_indexing:constraint_classification(temporal_scale_arbitrage, snare, context(individual_powerless, immediate, trapped, local)),
     constraint_indexing:constraint_classification(temporal_scale_arbitrage, mountain, context(analytical, civilizational, constrained, global)).
 
 test(cadence_extractiveness_scaling) :-
@@ -215,10 +215,10 @@ test(cadence_extractiveness_scaling) :-
  * into a high-extraction conveyor belt for transient data.
  * * 2. MANDATROPHY STATUS:
  * STATUS: [RESOLVED MANDATROPHY]. The extraction of scientific value from 
- * "guest stars" is justified as a Rope for research but is a Noose of 
+ * "guest stars" is justified as a Rope for research but is a Snare of 
  * extinction for the "action" of transient events that are missed.
  * * 3. PERSPECTIVE SELECTION:
- * Chose the Coordinator (Rope), the Event (Noose), and the Universe (Mountain) 
+ * Chose the Coordinator (Rope), the Event (Snare), and the Universe (Mountain) 
  * to show how temporal scale transforms from a law of nature to an 
  * industrialized tool.
  */
@@ -231,7 +231,7 @@ omega_variable(
     temporal_scale_arbitrage_extraction_intent,
     "Is the 0.76 extraction of time-domain data a functional necessity for understanding the universe or a predatory focus on volume (1.6PB) over insight?",
     resolution_mechanism("Audit of scientific value produced per petabyte of Pan-STARRS data vs. traditional chance observations"),
-    impact("If necessity: Mountain. If predatory: Noose/Mandatrophy."),
+    impact("If necessity: Mountain. If predatory: Snare/Mandatrophy."),
     confidence_without_resolution(medium)
 ).
 
@@ -239,7 +239,7 @@ omega_variable(
     temporal_anomaly_existence,
     "Are there 'guest star' phenomena occurring on timescales (e.g., femtoseconds) that current conveyor belts actively suppress?",
     resolution_mechanism("Development of detectors capable of femtosecond-scale resolution"),
-    impact("If yes: Current Rope is a Noose for ultra-fast physics. If no: The spectrum is complete."),
+    impact("If yes: Current Rope is a Snare for ultra-fast physics. If no: The spectrum is complete."),
     confidence_without_resolution(low)
 ).
 

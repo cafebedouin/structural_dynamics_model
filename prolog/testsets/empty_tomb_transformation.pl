@@ -83,7 +83,7 @@ constraint_victim(empty_tomb_transformation, the_static_ego).
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 1: THE STUCK INDIVIDUAL - Noose
+   PERSPECTIVE 1: THE STUCK INDIVIDUAL - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless (Unable to "roll back the stone")
@@ -92,7 +92,7 @@ constraint_victim(empty_tomb_transformation, the_static_ego).
    SCOPE: local (The immediate psychological state)
    
    WHY THIS CLASSIFICATION:
-   For the individual unable to emerge, the cycle is a "Noose." The "tomb of transition" 
+   For the individual unable to emerge, the cycle is a "Snare." The "tomb of transition" 
    becomes a static trap where life has ended but rebirth has not begun, extracting 
    the agent's hope and agency.
    
@@ -104,7 +104,7 @@ constraint_victim(empty_tomb_transformation, the_static_ego).
 
 constraint_indexing:constraint_classification(
     empty_tomb_transformation,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -213,7 +213,7 @@ constraint_indexing:constraint_classification(
 :- begin_tests(empty_tomb_transformation_tests).
 
 test(multi_perspective_tomb) :-
-    % Stuck (Powerless) sees Noose
+    % Stuck (Powerless) sees Snare
     constraint_indexing:constraint_classification(empty_tomb_transformation, T1, context(individual_powerless, immediate, trapped, local)),
     % Reborn (Moderate) sees Rope
     constraint_indexing:constraint_classification(empty_tomb_transformation, T2, context(individual_moderate, biographical, mobile, local)),
@@ -249,11 +249,11 @@ test(time_immutability_transformation) :-
  * Reasoning: I chose a moderate score because the transition requires "dying" to the 
  * old self, which is an extraction of established identity and comfort.
  * * 2. PERSPECTIVE SELECTION:
- * I selected the "Stuck" individual (Noose) and the "Reborn" agent (Rope) to highlight 
+ * I selected the "Stuck" individual (Snare) and the "Reborn" agent (Rope) to highlight 
  * the core pedagogical shift: moving from being a victim of transition to an 
  * author of resurrection.
  * * 3. CLASSIFICATION RATIONALE:
- * Individual Powerless → Noose: In the "immediate" moment of "suffering," the tomb is 
+ * Individual Powerless → Snare: In the "immediate" moment of "suffering," the tomb is 
  * an inescapable death of the old self.
  * Analytical → Mountain: The observer sees the cycle as a fixed feature of human 
  * growth across "thousands of years".
@@ -268,7 +268,7 @@ omega_variable(
     "Is the ability to 'roll back the stone' an internal choice (Rope) or a 
      stochastic event that requires external grace (Mountain)?",
     resolution_mechanism("Longitudinal tracking of individuals in 'tombs of transition' with vs. without internal 'hope' metrics"),
-    impact("If choice: Rebirth is a Rope. If stochastic: It is a Mountain/Noose."),
+    impact("If choice: Rebirth is a Rope. If stochastic: It is a Mountain/Snare."),
     confidence_without_resolution(medium)
 ).
 
@@ -297,7 +297,7 @@ omega_variable(
  * * CONCLUSION:
  * The existence of Alternative 1 (Stagnation) makes the "Resurrection" a functional 
  * Rope for those who wish to live. Without the "Stone rolling,"sameness becomes 
- * a terminal Noose.
+ * a terminal Snare.
  */
 
 /* ==========================================================================

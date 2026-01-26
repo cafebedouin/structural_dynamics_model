@@ -25,12 +25,12 @@ event(ev04_abolition_of_elections, structural_change, 2004, [action(abolition_of
 constraint_claim(hydrocarbon_export_dependency, mountain).
 constraint_metric(hydrocarbon_export_dependency, accessibility_collapse, 0.95).
 
-% Noose: The 'Vertical of Power.' Regional autonomy is stripped as centralization tightens.
-constraint_claim(vertical_of_power_centralization, noose).
+% Snare: The 'Vertical of Power.' Regional autonomy is stripped as centralization tightens.
+constraint_claim(vertical_of_power_centralization, snare).
 constraint_metric(vertical_of_power_centralization, stakes_inflation, 0.90).
 
-% Zombie: 1990s Democratic Liberalism. The procedural shell remains (Duma, elections) but power is extracted.
-constraint_claim(procedural_democratic_liberalism, zombie).
+% Piton: 1990s Democratic Liberalism. The procedural shell remains (Duma, elections) but power is extracted.
+constraint_claim(procedural_democratic_liberalism, piton).
 constraint_metric(procedural_democratic_liberalism, suppression, 0.85).
 
 % Rope: The 1993 Constitution. Ties executive action to a specific legal tether used for 'Dictatorship of Law.'

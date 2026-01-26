@@ -31,8 +31,8 @@ constraint_claim(institutional_success, mountain).
 constraint_metric(institutional_success, suppression_requirement, 0.05).
 constraint_metric(institutional_success, snap_back_potential, 0.0).
 
-% The "Ken" Persona (Noose)
-constraint_claim(ken_persona_override, noose).
+% The "Ken" Persona (Snare)
+constraint_claim(ken_persona_override, snare).
 constraint_metric(ken_persona_override, extractiveness, 0.88).
 constraint_metric(ken_persona_override, suppression_requirement, 0.72).
 constraint_metric(ken_persona_override, snap_back_potential, 0.95).

@@ -32,7 +32,7 @@
  * spatial_scope: Martian Surface / JPL Control
  * * SUMMARY:
  * Navigational autonomy on Mars is constrained by the "speed-of-light" latency 
- * (Mountain) and the high risk of irrecoverable hardware loss (Noose). To 
+ * (Mountain) and the high risk of irrecoverable hardware loss (Snare). To 
  * overcome these, NASA implemented GESTALT and AutoNav—functional coordination 
  * mechanisms (Ropes) that allow rovers to sense hazards and plan paths 
  * without constant human intervention.
@@ -47,7 +47,7 @@
  * Autonomy evolved from a simple 2D hazard avoidance (Sojourner) to complex 
  * 3D stereo-vision path planning (Spirit). While intended as a Rope to 
  * increase mission velocity, the software's conservative safety limits 
- * can function as a Noose, "extracting" mission time by causing the rover 
+ * can function as a Snare, "extracting" mission time by causing the rover 
  * to stop or retreat from navigable but "scary" terrain.
  */
 
@@ -151,7 +151,7 @@ constraint_indexing:constraint_classification(
     !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: MISSION EFFICIENCY ANALYST - Noose
+   PERSPECTIVE 3: MISSION EFFICIENCY ANALYST - Snare
    --------------------------------------------------------------------------
    
    WHO: analytical - Observer of the ratio between "thinking" and "driving."
@@ -160,7 +160,7 @@ constraint_indexing:constraint_classification(
    SCOPE: global - Impact on the future of planetary exploration.
    
    WHY THIS CLASSIFICATION:
-   The analyst sees the Noose. Onboards like Spirit spent hours "thinking" 
+   The analyst sees the Snare. Onboards like Spirit spent hours "thinking" 
    (computing stereo vision) for every minute of driving. This extraction 
    of time/power chokes the potential science yield, particularly when the 
    rover gets "stuck" in a computational loop due to ambiguous terrain.
@@ -170,7 +170,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     mars_rover_navigational_autonomy,
-    noose,
+    snare,
     context(
         agent_power(analytical),
         time_horizon(historical),
@@ -216,7 +216,7 @@ test(computational_extraction) :-
  * 2. CLASSIFICATION: I primary-labeled this as a 'Rope' because it 
  * coordinated the transition from 100-meter missions (Sojourner) to 
  * 10-kilometer missions (Spirit/Opportunity).
- * 3. PERSPECTIVE: The "Analytical" view of the Noose reflects the 
+ * 3. PERSPECTIVE: The "Analytical" view of the Snare reflects the 
  * 'Replication Crisis' in autonomy: the more safe we make it, the less 
  * productive it becomes.
  */
@@ -226,7 +226,7 @@ omega_variable(
     "At what point does human 'Trust' in the algorithm allow the Rope 
      to slacken enough to become a speed-enhancing tool vs. a speed-choking limit?",
     resolution_mechanism("Comparative analysis of traverse speed in 'AutoNav' vs. 'Directed' modes on MER"),
-    impact("If Directed is consistently faster: AutoNav is a Noose. 
+    impact("If Directed is consistently faster: AutoNav is a Snare. 
             If AutoNav allows more meters per sol: It is a Rope."),
     confidence_without_resolution(medium)
 ).
@@ -241,7 +241,7 @@ omega_variable(
  * Viability: Used extensively for "safe" flat terrain. High speed, low 
  * onboard computation.
  * Suppression: Suppressed in "unknown" or "hazardous" terrain because 
- * the 20-minute latency (Mountain) makes it an operational Noose.
+ * the 20-minute latency (Mountain) makes it an operational Snare.
  * * ALTERNATIVE 2: Continuous Drive (Spirit/Opportunity upgrade)
  * Viability: Later mission upgrades allowed for imaging during wheel motion.
  * * CONCLUSION:
@@ -265,4 +265,4 @@ omega_variable(
 % --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
 constraint_indexing:constraint_classification(mars_rovers_navigational_autonomy, mountain, agent_power(analytical)).
 constraint_indexing:constraint_classification(mars_rovers_navigational_autonomy, rope, agent_power(institutional)).
-constraint_indexing:constraint_classification(mars_rovers_navigational_autonomy, noose, agent_power(individual_powerless)).
+constraint_indexing:constraint_classification(mars_rovers_navigational_autonomy, snare, agent_power(individual_powerless)).

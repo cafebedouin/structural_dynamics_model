@@ -41,7 +41,7 @@ measurement(m7, sec_469_limit, extractiveness, 1993, 0.65).
 measurement(m8, sec_469_limit, suppression_requirement, 1993, 0.75).
 measurement(m9, sec_469_limit, resistance, 1993, 0.50).
 
-% T=2000: Stabilized Regime - Mature noose/tangled rope status.
+% T=2000: Stabilized Regime - Mature snare/tangled rope status.
 measurement(m10, sec_469_limit, extractiveness, 2000, 0.72).
 measurement(m11, sec_469_limit, suppression_requirement, 2000, 0.85).
 measurement(m12, sec_469_limit, resistance, 2000, 0.55).

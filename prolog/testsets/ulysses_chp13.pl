@@ -41,7 +41,7 @@
  * - The Church (Star of the Sea): Institutional anchor viewing the moral 
  * distance as immutable law (Mountain).
  * - The Cuckoo (Clock/Bird): Powerless agent for whom the time-keeping and 
- * distance are an inescapable trap (Noose).
+ * distance are an inescapable trap (Snare).
  */
 
 /* ==========================================================================
@@ -50,8 +50,8 @@
 
 % Required for [STEP 1] and [STEP 2] of the DR-Audit Suite
 narrative_ontology:interval(gerty_bloom_interval, 0, 10).
-% Fixed: Changed 'erotic_distancing' to 'noose' to satisfy schema
-narrative_ontology:constraint_claim(gerty_bloom_voyeuristic_distance, noose).
+% Fixed: Changed 'erotic_distancing' to 'snare' to satisfy schema
+narrative_ontology:constraint_claim(gerty_bloom_voyeuristic_distance, snare).
 
 % Metrics: Extractiveness (0.5 - Desolate extraction) and Suppression (0.5 - Social code)
 domain_priors:base_extractiveness(gerty_bloom_voyeuristic_distance, 0.5).
@@ -85,17 +85,17 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE CUCKOO (The Powerless) - Noose
+   PERSPECTIVE 2: THE CUCKOO (The Powerless) - Snare
    --------------------------------------------------------------------------
    WHO: individual_powerless - The "little canarybird" that must "tell the time" 
   .
    WHY: From the perspective of the powerless agent, the distance and the 
-   acoustic order are a "Noose"—an extractive trap of mechanical 
+   acoustic order are a "Snare"—an extractive trap of mechanical 
    repetition that offers no agency or relief.
    -------------------------------------------------------------------------- */
 constraint_indexing:constraint_classification(
     gerty_bloom_voyeuristic_distance,
-    noose,
+    snare,
     context(agent_power(individual_powerless), time_horizon(immediate), exit_options(constrained), spatial_scope(local))
 ) :- !.
 
@@ -138,7 +138,7 @@ test(immutability_erotic_scaling) :-
 /**
  * LLM GENERATION NOTES:
  * Refactored to eliminate the 'erotic_distancing' mismatch. Declaring the claim 
- * as 'noose' allows the audit to flag the "Stalemate" where individuals 
+ * as 'snare' allows the audit to flag the "Stalemate" where individuals 
  * attempt to coordinate (Rope) while institutions maintain an 
  * immutable reality (Mountain).
  */
@@ -146,9 +146,9 @@ test(immutability_erotic_scaling) :-
 omega_variable(
     cuckoo_clock_synchronicity,
     "Is the cuckoo clock's mockery a literal sound (Mountain) or an internal 
-    projection of Bloom's marital guilt (Noose)?",
+    projection of Bloom's marital guilt (Snare)?",
     resolution_mechanism("Acoustic analysis of Chapter 13"),
-    impact("If literal: Mountain. If projection: Noose."),
+    impact("If literal: Mountain. If projection: Snare."),
     confidence_without_resolution(low)
 ).
 
@@ -172,4 +172,4 @@ omega_variable(
 % --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
 constraint_indexing:constraint_classification(ulysses_chp13, mountain, agent_power(analytical)).
 constraint_indexing:constraint_classification(ulysses_chp13, rope, agent_power(institutional)).
-constraint_indexing:constraint_classification(ulysses_chp13, noose, agent_power(individual_powerless)).
+constraint_indexing:constraint_classification(ulysses_chp13, snare, agent_power(individual_powerless)).

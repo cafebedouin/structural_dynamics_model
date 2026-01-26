@@ -24,12 +24,12 @@ event(ev04_structural_saturation, state_stabilization, 95, [result(housing_stock
 constraint_claim(land_supply_scarcity, mountain).
 constraint_metric(land_supply_scarcity, accessibility_collapse, 0.95).
 
-% Noose: Just-Cause Eviction Laws. A closing circle of criteria that restricts a landlord's exit from a contract.
-constraint_claim(just_cause_mandate, noose).
+% Snare: Just-Cause Eviction Laws. A closing circle of criteria that restricts a landlord's exit from a contract.
+constraint_claim(just_cause_mandate, snare).
 constraint_metric(just_cause_mandate, stakes_inflation, 0.88).
 
-% Zombie: Fair Market Rent. A legacy economic concept that persists as a benchmark despite fixed price ceilings.
-constraint_claim(market_value_phantom, zombie).
+% Piton: Fair Market Rent. A legacy economic concept that persists as a benchmark despite fixed price ceilings.
+constraint_claim(market_value_phantom, piton).
 constraint_metric(market_value_phantom, suppression, 0.75).
 
 % --- 4. Recommendations & Veto Structure ---

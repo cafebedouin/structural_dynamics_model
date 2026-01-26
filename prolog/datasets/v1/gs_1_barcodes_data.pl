@@ -24,12 +24,12 @@ event(ev04_data_matrix_pivot, tech_shift, 95, [new_standard(gs1_2d), data_capaci
 constraint_claim(optical_physics_limits, mountain).
 constraint_metric(optical_physics_limits, accessibility_collapse, 0.95).
 
-% Noose: The mandatory licensing and annual fees for GCP (GS1 Company Prefixes).
-constraint_claim(licensing_dependency, noose).
+% Snare: The mandatory licensing and annual fees for GCP (GS1 Company Prefixes).
+constraint_claim(licensing_dependency, snare).
 constraint_metric(licensing_dependency, stakes_inflation, 0.88).
 
-% Zombie: Proprietary internal SKU systems that prevent cross-organizational interoperability.
-constraint_claim(proprietary_silo_legacy, zombie).
+% Piton: Proprietary internal SKU systems that prevent cross-organizational interoperability.
+constraint_claim(proprietary_silo_legacy, piton).
 constraint_metric(proprietary_silo_legacy, suppression, 0.75).
 
 % Rope: The technical specification of the 'Quiet Zone' surrounding barcodes.

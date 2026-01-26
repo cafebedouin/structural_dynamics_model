@@ -142,14 +142,14 @@ constraint_indexing:constraint_classification(
    
    WHY THIS CLASSIFICATION:
    For one seeking a truly unified theory that includes self-reference, the 
-   Paradox acts as a Noose. It is used by the "Institutional Logicians" to 
+   Paradox acts as a Snare. It is used by the "Institutional Logicians" to 
    strangle alternative logics (like Dialetheism) by claiming they are "nonsensical" 
    or "extractive" of truth value.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
     liar_paradox,
-    noose,
+    snare,
     context(
         agent_power(analytical),
         time_horizon(historical),
@@ -196,7 +196,7 @@ test(exit_option_shift) :-
  * 3. NOOSE ARGUMENT: Usually Nooses involve coercion. Here, the "coercion" 
  * is the social and academic exclusion of those who suggest logic can 
  * be contradictory (Dialetheism).
- * * CONFIDENCE: High on the classification variance; Medium on the "Noose" 
+ * * CONFIDENCE: High on the classification variance; Medium on the "Snare" 
  * categorization for the rebel logician.
  */
 
@@ -226,7 +226,7 @@ omega_variable(
  * Suppression: High (Rejected by mainstream mathematics/science).
  * * CONCLUSION: 
  * The existence of Dialetheism shifts the Liar from a "natural law" (Mountain) 
- * to a "Noose" for those who want to use it to invalidate non-classical systems.
+ * to a "Snare" for those who want to use it to invalidate non-classical systems.
  */
 
 /* ==========================================================================

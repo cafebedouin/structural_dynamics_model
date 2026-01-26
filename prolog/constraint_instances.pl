@@ -43,7 +43,7 @@ constraint_indexing:constraint_classification(
 % Historian perspective - NOOSE
 constraint_indexing:constraint_classification(
     catholic_church_1200,
-    noose,
+    snare,
     context(
         agent_power(analytical),
         time_horizon(Horizon),
@@ -84,7 +84,7 @@ constraint_indexing:constraint_classification(
 % Homeless person - NOOSE
 constraint_indexing:constraint_classification(
     property_rights_2025,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(biographical),

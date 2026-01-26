@@ -23,10 +23,10 @@ event(ev04_ch11_filing, finality, 98, [venue(southern_district_ny), result(bankr
 constraint_claim(liquidity_mathematical_limit, mountain).
 constraint_metric(liquidity_mathematical_limit, accessibility_collapse, 1.0).
 
-constraint_claim(risk_metric_noose, noose).
+constraint_claim(risk_metric_noose, snare).
 constraint_metric(risk_metric_noose, stakes_inflation, 0.95).
 
-constraint_claim(business_judgment_rule_bias, zombie).
+constraint_claim(business_judgment_rule_bias, piton).
 constraint_metric(business_judgment_rule_bias, suppression, 0.85).
 
 constraint_claim(accounting_standard_binding, rope).

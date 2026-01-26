@@ -1,8 +1,8 @@
 % ============================================================================
 % CONSTRAINT STORY: suanne_face_restoration
 % ============================================================================
-% Generated: 2026-01-21
-% Model: Gemini 2.0 Flash
+% Generated: 2026-01-23
+% Model: Gemini Pro (Revised)
 % Source: Frazier, “On the Rez” & “Politeness is Two-Faced”
 % Status: [RESOLVED MANDATROPHY]
 % ============================================================================
@@ -13,7 +13,7 @@
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
 
-% --- Namespace Hooks ---
+% --- Namespace Hooks (Required for loading) ---
 :- multifile 
     domain_priors:base_extractiveness/2,
     domain_priors:suppression_score/2,
@@ -26,111 +26,116 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: suanne_face_restoration
+ * 
+ * constraint_id: suanne_face_restoration
  * human_readable: The Coup of Positive Politeness
  * domain: social/psychological
  * temporal_scope: 1988 (Biographical)
  * spatial_scope: Lead, South Dakota (Local)
- * * SUMMARY:
+ * 
+ * SUMMARY:
  * This analysis evaluates SuAnne Marie Big Crow’s performance through the lens of 
  * Politeness Theory. The Lead fans’ mockery constituted a massive 
- * "Face-Threatening Act" (FTA) against the team’s Positive Face (competence and value) 
- * and Negative Face (autonomy). SuAnne’s "Coup of Peace" functioned 
+ * "Face-Threatening Act" (FTA). SuAnne’s "Coup of Peace" functioned 
  * as a masterful "Positive Politeness" strategy, restoring the team's Face by 
  * inviting the crowd into a shared "we-focused" identity.
- * * KEY AGENTS:
- * - The Aggressor (Lead Fans): Initially attacking the team's face through belittling and mockery.
- * - The Face-Victim (Doni De Cory): Feeling the immediate "Noose" of the face-attack.
- * - The Face-Restorer (SuAnne): Using high-competence performance as a "Positive Politeness" tool.
- * * NARRATIVE ARC:
- * The interaction begins with the fans waving food stamps and making "fake" war cries—attacks 
- * on the Lakota team's desire to be accepted and valued (Positive Face). 
- * SuAnne’s dance "reversed" the situation by demonstrating authentic competence and using 
- * a common "warm-up jacket" to include the onlookers, making them "relatives" and 
- * restoring the social equilibrium.
+ * 
+ * KEY AGENTS:
+ * - The Face-Victim (Individual Powerless): The team feeling the "Snare" of the face-attack.
+ * - School Administration / Athletic Association (Institutional): Manages inter-school relations.
+ * - The Face-Restorer (Individual Moderate): SuAnne, using competence as a "Positive Politeness" tool.
  */
 
 /* ==========================================================================
    2. CORE SYSTEM INTEGRATION (The "Reality" Layer)
    ========================================================================== */
 
-narrative_ontology:interval(suanne_face_restoration_interval, 0, 10).
-narrative_ontology:constraint_claim([suanne_face_restoration], [social_synchronization]).
+narrative_ontology:interval(suanne_face_restoration, 0, 10).
+narrative_ontology:constraint_claim(suanne_face_restoration, tangled_rope).
 
-% Base extractiveness score (0.0-1.0)
-% Rationale: High (0.75). The initial face-attack liquidates the team's social status 
+% Base extractiveness: 0.75.
+% The initial face-attack liquidates the team's social status 
 % and dignity to feed the crowd's sense of superiority.
 domain_priors:base_extractiveness(suanne_face_restoration, 0.75).
 
-% Suppression score (0.0-1.0)
-% Rationale: Moderate-High (0.65). The mockery suppresses the "real" Lakota identity 
+% Suppression score: 0.65.
+% The mockery suppresses the "real" Lakota identity 
 % behind "fake" caricatures. SuAnne’s act un-suppresses this truth.
 domain_priors:suppression_score(suanne_face_restoration, 0.65).
 
+% Enforcement: Requires active enforcement by the crowd and subsequent social shifts.
 domain_priors:requires_active_enforcement(suanne_face_restoration).
 
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(suanne_face_restoration, collective_face_restoration).
+constraint_beneficiary(suanne_face_restoration, inter_community_peace).
 constraint_victim(suanne_face_restoration, racial_mockery).
-
-% Metrics required for Section 1 of the Executive Summary
-narrative_ontology:constraint_metric(suanne_face_restoration, extractiveness, 0.75).
-narrative_ontology:constraint_metric(suanne_face_restoration, suppression_requirement, 0.65).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 1: THE DISHONORED TEAM - Noose
+   PERSPECTIVE 1: THE DISHONORED TEAM - Snare
    --------------------------------------------------------------------------
-   
    WHO: individual_powerless (A visiting team under racialized face-attack)
    WHEN: immediate (The pre-game "din" of harassment)
    WHERE: trapped (Caught in a hostile "standard of thinking")
-   SCOPE: local
    
    WHY THIS CLASSIFICATION:
-   For the teammates, the crowd's "woo-woo-woo" sounds and "Where’s the cheese?" 
-   taunts are a "Noose." These acts are "attacks on our positive face" that discuss 
-   identity in belittling ways, strangling the team's ability to act competently.
-   
-   NARRATIVE EVIDENCE:
-   "All that stuff the Lead fans were yelling... Doni De Cory... told her 
-   teammates, 'I can’t handle this'".
+   For the teammates, the crowd's mockery and taunts are a 'Snare.' These acts
+   are "attacks on our positive face" that discuss identity in belittling ways,
+   strangling the team's ability to act competently and their sense of belonging.
    -------------------------------------------------------------------------- */
-
-
 
 constraint_indexing:constraint_classification(
     suanne_face_restoration,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
         exit_options(trapped),
         spatial_scope(local)
     )
-) :- !.
+).
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 2: SUANNE (THE STRATEGIST) - Rope
+   PERSPECTIVE 2: SCHOOL ADMINISTRATION / ATHLETIC ASSOCIATION - Tangled Rope
    --------------------------------------------------------------------------
-   
-   WHO: individual_moderate (Has the agency to "step into the jump-ball circle")
-   WHEN: biographical (Drawing on power and Powwow skills)
-   WHERE: mobile (Re-mapping the "fake" tune to "the real thing")
-   SCOPE: regional
+   WHO: institutional (Manages inter-school relations and sportsmanship)
+   WHEN: historical (The long-term relationship between schools and communities)
+   WHERE: arbitrage (Balances maintaining order with fostering positive relations)
    
    WHY THIS CLASSIFICATION:
-   SuAnne uses "Positive Politeness" as a "Rope." By performing a "graceful and 
+   For a school administration or athletic association, this event is a 'Tangled Rope'.
+   It highlights the potential for student-led conflict resolution ('Rope') and
+   the creation of "lasting friendships." However, it is 'Tangled' by the institutional
+   failure to prevent the initial hostile environment and the underlying racial tensions,
+   representing a complex challenge to their mandate.
+   -------------------------------------------------------------------------- */
+
+constraint_indexing:constraint_classification(
+    suanne_face_restoration,
+    tangled_rope,
+    context(
+        agent_power(institutional),
+        time_horizon(historical),
+        exit_options(arbitrage),
+        spatial_scope(regional)
+    )
+).
+
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 3: SUANNE (THE STRATEGIST) - Rope
+   --------------------------------------------------------------------------
+   WHO: individual_moderate (Has the agency to "step into the jump-ball circle")
+   WHEN: biographical (Drawing on Powwow skills and personal courage)
+   WHERE: mobile (Re-mapping the "fake" tune to "the real thing")
+   
+   WHY THIS CLASSIFICATION:
+   SuAnne uses "Positive Politeness" as a 'Rope'. By performing a "graceful and 
    show-offy" dance, she asserts her competence (Positive Face) while using the 
    jacket to "invite us all to play," restoring the "Face" of her team through 
    inclusion rather than retaliation.
-   
-   NARRATIVE EVIDENCE:
-   "She made Lakota relatives of us all... What SuAnne did made a lasting 
-   impression and changed the whole situation".
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
@@ -140,42 +145,9 @@ constraint_indexing:constraint_classification(
         agent_power(individual_moderate),
         time_horizon(biographical),
         exit_options(mobile),
-        spatial_scope(regional)
+        spatial_scope(local)
     )
-) :- !.
-
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE SOCIOLOGIST (Goffman/Brown/Levinson) - Mountain
-   --------------------------------------------------------------------------
-   
-   WHO: analytical (Observer of "universal" face negotiation)
-   WHEN: civilizational (The perennial "Interaction Ritual")
-   WHERE: analytical (Observer stance)
-   SCOPE: global
-   
-   WHY THIS CLASSIFICATION:
-   To the analyst, the transformation is a "Mountain"—an unchangeable law of 
-   Politeness Theory. When the "Positive Face" of an individual is successfully 
-   asserted and validated by the group, the "status quo" of hostility must 
-   collapse into a new social alignment.
-   
-   NARRATIVE EVIDENCE:
-   "The crowd went completely silent... reversed it somehow... it gave the 
-   hecklers the best interpretation".
-   -------------------------------------------------------------------------- */
-
-
-
-constraint_indexing:constraint_classification(
-    suanne_face_restoration,
-    mountain,
-    context(
-        agent_power(analytical),
-        time_horizon(civilizational),
-        exit_options(analytical),
-        spatial_scope(global)
-    )
-) :- !.
+).
 
 /* ==========================================================================
    4. TESTS (What We Learn About Constraints)
@@ -183,18 +155,13 @@ constraint_indexing:constraint_classification(
 
 :- begin_tests(suanne_face_restoration_tests).
 
-test(multi_perspective_face) :-
-    % Team sees Noose
-    constraint_indexing:constraint_classification(suanne_face_restoration, noose, context(individual_powerless, immediate, trapped, local)),
-    % SuAnne sees Rope
-    constraint_indexing:constraint_classification(suanne_face_restoration, rope, context(individual_moderate, biographical, mobile, regional)),
-    % Analyst sees Mountain
-    constraint_indexing:constraint_classification(suanne_face_restoration, mountain, context(analytical, civilizational, analytical, global)),
-    Type1 \= Type2, Type2 \= Type3.
-
-test(face_extraction_logic) :-
-    % Shows that belittling extracts more from the un-prepared than the prepared agent.
-    true.
+test(multi_perspective_variance) :-
+    constraint_indexing:constraint_classification(suanne_face_restoration, Type1, context(agent_power(individual_powerless), _, _, _)),
+    constraint_indexing:constraint_classification(suanne_face_restoration, Type2, context(agent_power(institutional), _, _, _)),
+    constraint_indexing:constraint_classification(suanne_face_restoration, Type3, context(agent_power(individual_moderate), _, _, _)),
+    Type1 \= Type2,
+    Type2 \= Type3,
+    Type1 \= Type3.
 
 :- end_tests(suanne_face_restoration_tests).
 
@@ -204,62 +171,75 @@ test(face_extraction_logic) :-
 
 /**
  * LLM GENERATION NOTES
- * * Model: Gemini 2.0 Flash
- * Date: 2026-01-21
- * * KEY DECISIONS:
- * * 1. POSITIVE POLITENESS STRATEGY:
- * The dance and the "relative" jacket are identified as "Positive Politeness" because 
- * they attempt to make the audience belong. SuAnne "gives the 
- * hecklers the best interpretation," as if they were already part of her "we-focused" 
- * culture.
- * * 2. FACE-THREATENING ACT (FTA):
- * The Lead fans' mockery of food stamps and culture is a terminal FTA targeting 
- * the Lakota team's competency and dignity (Positive Face).
- * * 3. MANDATROPHY RESOLUTION:
- * [RESOLVED MANDATROPHY]. The extraction of the team's Face is resolved by the 
- * "Rope" of SuAnne's performance, which forces a collective recognition of 
- * the "real thing" over the "fake".
+ * 
+ * Model: Gemini Pro (Revised)
+ * Date: 2026-01-23
+ * 
+ * KEY DECISIONS:
+ * 
+ * 1. INSTITUTIONAL PERSPECTIVE: Added 'School Administration / Athletic Association'
+ *    as the institutional agent. For them, this event is a 'Tangled Rope', a
+ *    complex challenge of managing conflict and fostering positive relations.
+ *
+ * 2. MANDATROPHY STATUS: The high extraction of the team's "Face" is 'RESOLVED'
+ *    by the 'Rope' of SuAnne's performance, which masterfully transforms a hostile
+ *    'Snare' into an inclusive social experience.
+ * 
+ * 3. CLASSIFICATION RATIONALE:
+ *    - The Team (Snare): Overwhelmed by face-threatening acts.
+ *    - Administration (Tangled Rope): Manages the conflict and its aftermath.
+ *    - SuAnne (Rope): A tool for social restoration and inclusion.
+ *
+ * 4. CORE INSIGHT: The story is a powerful example of how a single agent's
+ *    skillful use of a 'Rope' (Positive Politeness) can untangle a 'Snare' of
+ *    social hostility and create a new, more positive 'Mountain' of shared understanding.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
+/**
+ * OMEGA IDENTIFICATION
+ *
+ * Mandatory Omega for high-extraction constraints.
+ */
 
 omega_variable(
     suanne_face_restoration_intent,
-    "Is the silence of the crowd a biological recognition of 'the real thing' 
-     (Mountain) or a temporary strategic 'Rope' of confusion?",
-    resolution_mechanism("Audit of long-term community shifts in Lead post-SuAnne vs. communities with no such intervention"),
-    impact("If Mountain: Authenticity is a social law. If Rope: It is a high-risk gamble."),
+    "Was the crowd's silence a biological recognition of 'the real thing' (Mountain), or a temporary strategic 'Rope' of confusion, allowing them to recalibrate their social strategy without losing face?",
+    resolution_mechanism("Audit of long-term community shifts in Lead, South Dakota, post-SuAnne's performance, vs. communities with no such intervention."),
+    impact("If Mountain: Authenticity is a social law with predictable effects. If Rope: It is a high-risk gamble that may not be replicable."),
     confidence_without_resolution(medium)
 ).
 
 /* ==========================================================================
    7. ALTERNATIVE ANALYSIS
    ========================================================================== */
-
 /**
  * VIABLE ALTERNATIVES
- * * ALTERNATIVE 1: Retaliatory FTA (Aggression)
- * Viability: Mocking the Lead fans back.
- * Suppression: Suppressed because it would "embarrass" the team and tighten 
- * the "Noose" of hostility.
- * * ALTERNATIVE 2: Off-Record Silence (Ignoring)
- * Viability: The "usual plan" of taking laps and going to the bench.
- * Suppression: Shunted because the noise was "deafening," making silence 
- * an impossible choice for the team's dignity.
- * * CONCLUSION:
- * SuAnne's "Positive Politeness" was the only functional "Rope" capable of 
- * liquidating the crowd's hostility without the team becoming "new recruits" 
- * of negativity.
+ *
+ * ALTERNATIVE 1: Retaliatory FTA (Aggression)
+ *    Viability: Mocking the Lead fans back in a similar fashion.
+ *    Suppression: Suppressed because it would "embarrass" the team and likely escalate the 'Snare' of hostility, leading to a worse outcome.
+ *
+ * CONCLUSION:
+ * SuAnne's "Positive Politeness" was a masterful 'Rope' that navigated a
+ * complex social dilemma. It actively suppressed the alternative of retaliation,
+ * which would have tightened the 'Snare', and instead transformed a hostile
+ * environment into one of mutual respect.
  */
 
 /* ==========================================================================
    8. INTEGRATION HOOKS
    ========================================================================== */
 
-% Load: ?- [suanne_face_restoration].
-% Multi-perspective: ?- constraint_indexing:multi_index_report(suanne_face_restoration).
+/**
+ * TO USE THIS FILE:
+ * 
+ * 1. Load: ?- [constraints/suanne_face_restoration].
+ * 2. Multi-perspective: ?- multi_index_report(suanne_face_restoration).
+ * 3. Run tests: ?- run_tests(suanne_face_restoration_tests).
+ */
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

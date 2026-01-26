@@ -26,12 +26,12 @@ event(ev_05_renunciation, credit_drop, 95, [actor(rina), action(drop_to_baseline
 constraint_claim(soil_toxicity, mountain).
 constraint_metric(soil_toxicity, accessibility_collapse, 0.85).
 
-% Noose: The isolation protocol (R7) that separates individuals from support networks.
-constraint_claim(isolation_protocol, noose).
+% Snare: The isolation protocol (R7) that separates individuals from support networks.
+constraint_claim(isolation_protocol, snare).
 constraint_metric(isolation_protocol, stakes_inflation, 0.95).
 
-% Zombie: The Kubo Credit Ladder (ranking system) used to motivate labor despite danger.
-constraint_claim(kubo_ladder, zombie).
+% Piton: The Kubo Credit Ladder (ranking system) used to motivate labor despite danger.
+constraint_claim(kubo_ladder, piton).
 constraint_metric(kubo_ladder, suppression, 0.70).
 
 % --- 4. Recommendations & Veto Structure ---

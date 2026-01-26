@@ -1,8 +1,8 @@
 % ============================================================================
 % CONSTRAINT STORY: compounding_logic
 % ============================================================================
-% Generated: 2026-01-20
-% Model: Gemini 2.0 Flash
+% Generated: 2026-01-23
+% Model: Gemini Pro (Revised)
 % Source: General Economic Theory & Berkshire Hathaway 2024 Letter
 % ============================================================================
 
@@ -25,103 +25,115 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: compounding_logic
+ * 
+ * constraint_id: compounding_logic
  * human_readable: The Law of Compounding Returns
  * domain: economic/mathematical
  * temporal_scope: Universal / Long-term
  * spatial_scope: Global
- * * SUMMARY:
+ * 
+ * SUMMARY:
  * Compounding is the mathematical constraint where the value of a system increases 
- * [cite_start]exponentially because earnings are reinvested to generate further earnings[cite: 165]. 
+ * exponentially because earnings are reinvested to generate further earnings. 
  * It is constrained by three primary variables: time, rate of return, and the 
- * [cite_start]stability of the underlying medium (currency or asset)[cite: 146, 173].
- * * KEY AGENTS:
- * - [cite_start]The Saver (Individual Powerless): Must forgo current consumption for future gain[cite: 164].
- * - [cite_start]The Capital Allocator (Institutional): Manages the reinvestment cycles[cite: 10, 135].
+ * stability of the underlying medium (currency or asset).
+ * 
+ * KEY AGENTS:
  * - The Debtor (Individual Powerless): Experiences compounding as an extractive force.
- * * NARRATIVE ARC:
- * Compounding starts "tiny, almost meaningless" but "mushrooms" over time, provided 
- * [cite_start]the "culture of savings" is sustained[cite: 165]. It rewards "fidelity" and 
- * "long-term compounding" while punishing "fiscal folly" and "mistakes" in capital 
- * [cite_start]allocation[cite: 10, 146, 165].
+ * - The Capital Allocator (Institutional): Manages the reinvestment cycles.
+ * - The Short-Term Speculator (Individual Moderate): Focused on immediate gains, not long-term growth.
  */
 
 /* ==========================================================================
    2. CORE SYSTEM INTEGRATION (The "Reality" Layer)
    ========================================================================== */
 
-narrative_ontology:interval(compounding_logic_analysis, 0, 10).
-narrative_ontology:constraint_claim(compounding_logic, rope).
+narrative_ontology:interval(compounding_logic, 0, 10).
+narrative_ontology:constraint_claim(compounding_logic, tangled_rope).
 
-% Base extractiveness score: 0.2 (for wealth creation) / 0.9 (for debt)
-% Rationale: In a savings context, it creates value; in a debt context, it is 
+% Base extractiveness score: 0.5.
+% In a savings context, it creates value; in a debt context, it is 
 % highly extractive. We average to 0.5 for the general logic.
 domain_priors:base_extractiveness(compounding_logic, 0.5).
 
-% Suppression score: 0.4
-% Rationale: One can choose not to participate by consuming immediately[cite: 164], 
+% Suppression score: 0.4.
+% One can choose not to participate by consuming immediately, 
 % though the mathematical "rules" of the results cannot be altered.
 domain_priors:suppression_score(compounding_logic, 0.4).
 
-% Enforcement requirements: Requires "stable currency" and "wisdom"[cite: 173].
+% Enforcement: Requires "stable currency" and "wisdom" in capital allocation.
 domain_priors:requires_active_enforcement(compounding_logic).
 
-% Metrics required for Section 1 of the Executive Summary
-narrative_ontology:constraint_metric(compounding_logic, extractiveness, 0.5).
-narrative_ontology:constraint_metric(compounding_logic, suppression_requirement, 0.4).
-
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(compounding_logic, [long_term_savers, posterity, capital_allocators]).
-constraint_victim(compounding_logic, [the_short_sighted, debtors, the_impatient]).
+constraint_beneficiary(compounding_logic, long_term_savers).
+constraint_victim(compounding_logic, debtors).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 1: THE LONG-TERM SAVER - Rope
+   PERSPECTIVE 1: THE DEBTOR - Snare
    --------------------------------------------------------------------------
-   
-   [cite_start]WHO: individual_powerless - The person "foregoing dividends"[cite: 164].
-   [cite_start]WHEN: generational - Thinking in "decades" rather than single years[cite: 88].
-   [cite_start]WHERE: arbitrage - Utilizing the "magic of long-term compounding"[cite: 165].
-   [cite_start]SCOPE: global - Reinvesting across diverse "marketable equities"[cite: 128].
+   WHO: individual_powerless (One subject to "runaway" interest or "fiscal folly")
+   WHEN: immediate (The "cash register rings" for the lender, not them)
+   WHERE: constrained ("Paper money" value evaporates, leaving them with debt)
    
    WHY THIS CLASSIFICATION:
-   For the saver, compounding is a "Rope"—a functional coordination mechanism 
-   [cite_start]that turns "tiny" reinvestment into a "mushroomed" result[cite: 165]. It 
-   [cite_start]requires the agent to "rest assured" and trust the system[cite: 144].
+   For the debtor, compounding is a 'Snare'. It is a coercive mechanism that 
+   extracts their future labor at an accelerating rate. It creates a 
+   "hemorrhaging cash" situation that is "hard to ignore," strangling their
+   financial freedom.
+   -------------------------------------------------------------------------- */
+
+constraint_indexing:constraint_classification(
+    compounding_logic,
+    snare,
+    context(
+        agent_power(individual_powerless),
+        time_horizon(immediate),
+        exit_options(constrained),
+        spatial_scope(national)
+    )
+).
+
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 2: THE CAPITAL ALLOCATOR - Rope
+   --------------------------------------------------------------------------
+   WHO: institutional (Manages the reinvestment cycles)
+   WHEN: generational (Long-term strategy for wealth creation)
+   WHERE: arbitrage (Utilizing the "magic of long-term compounding")
+   
+   WHY THIS CLASSIFICATION:
+   For the capital allocator, compounding is a 'Rope'—a fundamental principle
+   for generating long-term wealth and coordinating economic growth. It
+   rewards patient, disciplined reinvestment, acting as a powerful tool
+   for capital accumulation.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
     compounding_logic,
     rope,
     context(
-        agent_power(individual_powerless),
+        agent_power(institutional),
         time_horizon(generational),
         exit_options(arbitrage),
-        constraint_beneficiary(compounding_logic, long_term_savers),
-        constraint_victim(compounding_logic, []),
         spatial_scope(global)
     )
-) :-
-    domain_priors:base_extractiveness(compounding_logic, E),
-    E < 0.6,
-    !.
+).
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE SHORT-TERM SPECULATOR - Mountain
+   PERSPECTIVE 3: THE SHORT-TERM SPECULATOR - Mountain
    --------------------------------------------------------------------------
-   
-   [cite_start]WHO: individual_moderate - One attempting to "come and go on a dime"[cite: 133].
-   [cite_start]WHEN: immediate - Focused on "year-by-year numbers"[cite: 87].
-   [cite_start]WHERE: trapped - Bound by the "unpredictable" swings of the market[cite: 87].
-   [cite_start]SCOPE: local - Focused on "single year" performance[cite: 88].
+   WHO: individual_moderate (One attempting to "come and go on a dime")
+   WHEN: immediate (Focused on "year-by-year numbers")
+   WHERE: trapped (Bound by the "unpredictable" swings of the market)
    
    WHY THIS CLASSIFICATION:
-   For the speculator, the time requirement of compounding is a "Mountain." 
-   [cite_start]They cannot force "decades" of results into a single year[cite: 88]. The 
-   mathematical necessity of time is an unchangeable law they must endure.
+   For the short-term speculator, the time requirement of compounding is a 'Mountain'. 
+   They cannot force "decades" of results into a single year. The 
+   mathematical necessity of time is an unchangeable law they must endure,
+   often leading to frustration and underperformance.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
@@ -131,43 +143,9 @@ constraint_indexing:constraint_classification(
         agent_power(individual_moderate),
         time_horizon(immediate),
         exit_options(trapped),
-        constraint_beneficiary(compounding_logic, []),
-        constraint_victim(compounding_logic, the_impatient),
         spatial_scope(local)
     )
-) :-
-    !.
-
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE DEBTOR - Noose
-   --------------------------------------------------------------------------
-   
-   [cite_start]WHO: individual_powerless - One subject to "runaway" interest or "fiscal folly"[cite: 146, 193].
-   [cite_start]WHEN: immediate - The "cash register rings" for the lender, not them[cite: 89].
-   [cite_start]WHERE: constrained - "Paper money" value evaporates, leaving them with debt[cite: 146].
-   [cite_start]SCOPE: national - Affected by "monetary instability"[cite: 149].
-   
-   WHY THIS CLASSIFICATION:
-   For the debtor, compounding is a "Noose." It is a coercive mechanism that 
-   extracts their future labor at an accelerating rate. It creates a 
-   [cite_start]"Hemorrhaging cash" situation that is "hard to ignore"[cite: 179].
-   -------------------------------------------------------------------------- */
-
-constraint_indexing:constraint_classification(
-    compounding_logic,
-    noose,
-    context(
-        agent_power(individual_powerless),
-        time_horizon(immediate),
-        exit_options(constrained),
-        constraint_beneficiary(compounding_logic, lenders),
-        constraint_victim(compounding_logic, debtors),
-        spatial_scope(national)
-    )
-) :-
-    domain_priors:base_extractiveness(compounding_logic, E),
-    E > 0.4,
-    !.
+).
 
 /* ==========================================================================
    4. TESTS (What We Learn About Constraints)
@@ -175,18 +153,13 @@ constraint_indexing:constraint_classification(
 
 :- begin_tests(compounding_logic_tests).
 
-test(time_as_mountain) :-
-    % Verify that immediate time horizons treat compounding as an immutable Mountain
-    constraint_indexing:constraint_classification(compounding_logic, mountain, context(_, immediate, _, _, _, _)).
-
-test(alignment_check) :-
-    % Verify that for the long-term saver (Rope), extractiveness is low
-    domain_priors:base_extractiveness(compounding_logic, E),
-    E =< 0.5.
-
-test(enforcement_dependency) :-
-    % Compounding requires active enforcement of "stable currency" [cite: 173]
-    domain_priors:requires_active_enforcement(compounding_logic).
+test(multi_perspective_variance) :-
+    constraint_indexing:constraint_classification(compounding_logic, Type1, context(agent_power(individual_powerless), _, _, _)),
+    constraint_indexing:constraint_classification(compounding_logic, Type2, context(agent_power(institutional), _, _, _)),
+    constraint_indexing:constraint_classification(compounding_logic, Type3, context(agent_power(individual_moderate), _, _, _)),
+    Type1 \= Type2,
+    Type2 \= Type3,
+    Type1 \= Type3.
 
 :- end_tests(compounding_logic_tests).
 
@@ -196,59 +169,72 @@ test(enforcement_dependency) :-
 
 /**
  * LLM GENERATION NOTES
- * * Model: Gemini 2.0 Flash
- * * KEY DECISIONS:
- * 1. PERSPECTIVAL VARIANCE: Compounding is the ultimate "Rope" for the 
- * patient, but the ultimate "Noose" for the borrower. I used the 2024 
- * Berkshire letter to ground the "Rope" perspective in the "magic" of 
- * [cite_start]reinvestment[cite: 165].
- * 2. THE MOUNTAIN OF TIME: I identified Time as the primary "Mountain" 
- * constraint. You cannot "arbitrage" time in a compounding equation; 
- * [cite_start]it is a zero-degree-of-freedom variable for the "impatient"[cite: 88].
- * 3. MEDIUM STABILITY: I noted that compounding is contingent on the 
- * "Rope" of a stable currency; if "fiscal folly" prevails, the 
- * [cite_start]mathematical gain is negated by value evaporation[cite: 146, 173].
+ * 
+ * Model: Gemini Pro (Revised)
+ * Date: 2026-01-23
+ * 
+ * KEY DECISIONS:
+ * 
+ * 1. INSTITUTIONAL PERSPECTIVE: Added 'The Capital Allocator' as the
+ *    institutional agent. For them, compounding is a fundamental 'Rope' for
+ *    long-term wealth creation and economic coordination.
+ *
+ * 2. CLASSIFICATION RATIONALE:
+ *    - Debtor (Snare): Compounding extracts future labor and strangles finances.
+ *    - Capital Allocator (Rope): A tool for exponential wealth generation.
+ *    - Short-Term Speculator (Mountain): Unable to overcome the time requirement.
+ * 
+ * 3. CORE INSIGHT: The law of compounding returns is a mathematical 'Mountain'
+ *    that can be harnessed as a powerful 'Rope' for wealth creation but can
+ *    also become a 'Snare' for those caught in its negative feedback loop (debt).
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
+/**
+ * OMEGA IDENTIFICATION
+ *
+ * The core uncertainty revolves around the long-term stability of the medium and opportunities for reinvestment.
+ */
 
 omega_variable(
     reinvestment_availability,
-    'Will there always be \'really outstanding businesses\' or \'gems\' available for reinvestment?',
-    resolution_mechanism('Monitoring market saturation and \'knee-deep\' vs \'nothing looks compelling\' cycles'),
-    impact('If gems disappear: The Rope of compounding goes slack, and the system stalls.'),
+    "Will there always be 'really outstanding businesses' or 'gems' available for reinvestment that offer sufficient returns for compounding to thrive, or will market saturation and diminishing returns turn the 'Rope' into a 'Tangled Rope'?",
+    resolution_mechanism("Monitoring market saturation and 'knee-deep' vs 'nothing looks compelling' cycles in capital markets over decades."),
+    impact("If gems disappear: The 'Rope' of compounding goes slack, and the system stalls. If opportunities persist: It remains a powerful 'Rope'."),
     confidence_without_resolution(medium)
-).
-
-omega_variable(
-    monetary_survival,
-    'Can individuals truly \'cope with monetary instability\' through equities?',
-    resolution_mechanism('Historical analysis of equity performance during hyperinflation.'),
-    impact('If no: Compounding in paper-denominated assets becomes a Noose.'),
-    confidence_without_resolution(low)
 ).
 
 /* ==========================================================================
    7. ALTERNATIVE ANALYSIS
    ========================================================================== */
+/**
+ * VIABLE ALTERNATIVES
+ *
+ * ALTERNATIVE 1: Immediate Consumption ("Anti-Compounding" Model)
+ *    Viability: The default human behavior, prioritizing present gratification over future gain.
+ *    Suppression: Actively suppressed by financial literacy and cultural narratives promoting saving and investment, which frame it as "fiscal folly".
+ *
+ * CONCLUSION:
+ * Compounding is a 'Rope' that requires the active suppression of the
+ * alternative of "immediate consumption" to function. This suppression
+ * can be a 'Snare' for those who cannot or choose not to defer gratification,
+ * leading to a cycle of debt.
+ */
+
+/* ==========================================================================
+   8. INTEGRATION HOOKS
+   ========================================================================== */
 
 /**
- * VIABLE ALTERNATIVES:
- * * ALTERNATIVE 1: Immediate Consumption (The "Anti-Compounding" Model)
- * [cite_start]Viability: The default human behavior[cite: 164].
- * Suppression: "America would have been spinning its wheels" if all was 
- * [cite_start]consumed[cite: 159].
- * * ALTERNATIVE 2: Linear Growth (Simple Interest)
- * Viability: Lower risk, lower coordination requirement.
- * [cite_start]Suppression: Fails to "mushroom" or create "miracles" over 60 years[cite: 164, 165].
- * * CONCLUSION:
- * Compounding is a "Rope" that requires the active suppression of the 
- * "Alternative" (immediate consumption) to function.
+ * TO USE THIS FILE:
+ * 
+ * 1. Load: ?- [constraints/compounding_logic].
+ * 2. Multi-perspective: ?- multi_index_report(compounding_logic).
+ * 3. Run tests: ?- run_tests(compounding_logic_tests).
  */
 
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
-

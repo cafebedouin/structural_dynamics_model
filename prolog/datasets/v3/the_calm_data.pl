@@ -21,7 +21,7 @@ event(e3, inversion_break, 13, [trigger(perceived_sacrifice)]).
 event(e4, mission_completion, 40, [location(mcmurdo_station)]).
 
 % Section 3: Constraint Claims & Metrics (State at T=400)
-% Treaty Protocol: Claims to be Mountain; Actual is Noose (High X and E)
+% Treaty Protocol: Claims to be Mountain; Actual is Snare (High X and E)
 constraint_claim(antarctic_treaty_protocol, mountain).
 constraint_metric(antarctic_treaty_protocol, extractiveness, 0.85). 
 constraint_metric(antarctic_treaty_protocol, suppression_requirement, 0.90). 
@@ -31,14 +31,14 @@ constraint_claim(the_calm_anomaly, mountain).
 constraint_metric(the_calm_anomaly, extractiveness, 0.01). 
 constraint_metric(the_calm_anomaly, suppression_requirement, 0.01).
 
-% Collective Silence: Claims to be Rope; Actual is Noose (Calcified)
+% Collective Silence: Claims to be Rope; Actual is Snare (Calcified)
 constraint_claim(collective_silence, rope).
 constraint_metric(collective_silence, extractiveness, 0.88). 
 constraint_metric(collective_silence, suppression_requirement, 0.85).
 
 % Section 4: Temporal Measurements (Evolution for Modal Analysis)
 
-% Evolution: antarctic_treaty_protocol (Rope -> Noose)
+% Evolution: antarctic_treaty_protocol (Rope -> Snare)
 measurement(m1, antarctic_treaty_protocol, extractiveness, 0, 0.10).    
 measurement(m2, antarctic_treaty_protocol, suppression_requirement, 0, 0.05). % Paired
 measurement(m3, antarctic_treaty_protocol, extractiveness, 7, 0.85).    
@@ -52,11 +52,11 @@ measurement(m8, the_calm_anomaly, suppression_requirement, 0, 0.00). % Paired
 measurement(m9, the_calm_anomaly, extractiveness, 8, 0.01).            
 measurement(m10, the_calm_anomaly, suppression_requirement, 8, 0.01). % Paired
 measurement(m11, the_calm_anomaly, extractiveness, 13, 0.75).           
-measurement(m12, the_calm_anomaly, suppression_requirement, 13, 0.70). % Paired (Temporary Noose)
+measurement(m12, the_calm_anomaly, suppression_requirement, 13, 0.70). % Paired (Temporary Snare)
 measurement(m13, the_calm_anomaly, extractiveness, 400, 0.01).          
 measurement(m14, the_calm_anomaly, suppression_requirement, 400, 0.01). % Paired (Return to Mountain)
 
-% Evolution: collective_silence (Scaffold -> Noose)
+% Evolution: collective_silence (Scaffold -> Snare)
 measurement(m15, collective_silence, extractiveness, 13, 0.20).         
 measurement(m16, collective_silence, suppression_requirement, 13, 0.15). % Paired
 measurement(m17, collective_silence, extractiveness, 40, 0.50).         

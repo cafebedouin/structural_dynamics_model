@@ -6,7 +6,7 @@
 entity(stephen_dedalus, individual).
 entity(the_library_scaffold, scaffold).
 entity(the_literary_academy, structural).
-entity(maternal_remorse, noose). % Agenbite of Inwit
+entity(maternal_remorse, snare). % Agenbite of Inwit
 entity(the_paternity_mystery, structural).
 
 interval(scylla_charybdis_interval, 14, 16). % 2:00 PM to 4:00 PM
@@ -14,7 +14,7 @@ interval(scylla_charybdis_interval, 14, 16). % 2:00 PM to 4:00 PM
 % --- CONSTRAINTS & CLAIMS ---
 constraint_claim(the_library_scaffold, scaffold).    
 constraint_claim(the_literary_academy, mountain).    % Claimed as "Eternal Wisdom"
-constraint_claim(maternal_remorse, noose).           
+constraint_claim(maternal_remorse, snare).           
 constraint_claim(the_paternity_mystery, mountain).   % Claimed as "Mystical Estate"
 
 % --- KINETIC METRICS (T=16) ---
@@ -64,8 +64,8 @@ intent_power_change(scylla_charybdis_interval, the_academy_elite, 0.15).
 /*
 1. MODAL TRANSFORMATION HISTORY:
    - The Library Scaffold: [Resistance 0.20 -> 0.45]. Stephen utilizes the space for intellectual coordination. However, the exit is signaled by a "shattering daylight" where the scaffold feels extractive due to the "Lubber" (Mulligan) interference.
-   - Maternal Remorse: [Resistance 0.97 -> 0.98]. The Agenbite of Inwit remains a near-perfect noose. The "sheeted mirror" and "cheap flowers" ensure high suppression requirements.
-   - Paternity Mystery: Stephen attempts to transform "Paternity" from a "Noose" (biological shame/legal fiction) into a "Scaffold" (mystical estate).
+   - Maternal Remorse: [Resistance 0.97 -> 0.98]. The Agenbite of Inwit remains a near-perfect snare. The "sheeted mirror" and "cheap flowers" ensure high suppression requirements.
+   - Paternity Mystery: Stephen attempts to transform "Paternity" from a "Snare" (biological shame/legal fiction) into a "Scaffold" (mystical estate).
 
 2. STRUCTURAL SIGNATURE ANALYSIS (v3.2):
    - The Library Scaffold: Low extractiveness, multiple viable alternatives.

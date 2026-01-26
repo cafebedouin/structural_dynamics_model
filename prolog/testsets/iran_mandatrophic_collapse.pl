@@ -52,10 +52,10 @@
  * proxy influence) lead to terminal systemic choking.
  * * NARRATIVE ARC:
  * Originally, the "Self-Sufficiency" drive was a Rope (coordination to 
- * withstand sanctions). However, the IRGC converted this into a Noose, 
+ * withstand sanctions). However, the IRGC converted this into a Snare, 
  * extracting groundwater and public funds to secure political power. By 
  * 2025, the system reached a physical Mountain: Tehran faces evacuation 
- * due to water collapse, and the "Noose" of economic despair has triggered 
+ * due to water collapse, and the "Snare" of economic despair has triggered 
  * the largest anti-regime uprisings since 1979.
  */
 
@@ -65,20 +65,20 @@
 
 % Required for [STEP 1] and [STEP 2] of the Deferential Realism suite
 narrative_ontology:interval(iran_unrest_2025, 0, 10).
-narrative_ontology:constraint_claim(iran_mandatrophic_collapse, noose).
+narrative_ontology:constraint_claim(iran_mandatrophic_collapse, snare).
 
 % Base extractiveness score (0.0-1.0)
 % Rationale: 0.9. Extreme extraction; the regime extracts nearly 90% of 
 % water for inefficient agriculture and diverts 16% of the budget to 
 % military/proxies, while the IRGC controls 50% of the crypto/economy 
-%.
+% .
 domain_priors:base_extractiveness(iran_mandatrophic_collapse, 0.9).
 
 % Suppression score (0.0-1.0)
 % Rationale: 0.85. High suppression of alternatives (technocratic water 
 % management, diplomatic de-escalation) through internet shutdowns, 
 % violence against protesters, and the "Resistance Economy" dogma 
-%.
+% .
 domain_priors:suppression_score(iran_mandatrophic_collapse, 0.85).
 
 % Enforcement requirements
@@ -133,7 +133,7 @@ constraint_indexing:constraint_classification(
     !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE WATER-STARVED CITIZEN - Noose
+   PERSPECTIVE 2: THE WATER-STARVED CITIZEN - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless - Subject to 42% inflation, currency collapse, 
@@ -143,7 +143,7 @@ constraint_indexing:constraint_classification(
    SCOPE: local - Their home, shop, or farm.
    
    WHY THIS CLASSIFICATION:
-   The citizen experiences "Mandatrophy" as a Noose. The regime's "Mandate" 
+   The citizen experiences "Mandatrophy" as a Snare. The regime's "Mandate" 
    (proxies/nuclear) extracts their water, electricity, and savings, 
    choking their ability to live while the IRGC "Mafia" profits from 
    their scarcity.
@@ -153,7 +153,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     iran_mandatrophic_collapse,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -203,7 +203,7 @@ constraint_indexing:constraint_classification(
 :- begin_tests(iran_mandatrophy_tests).
 
 test(multi_perspective_coordination_gap) :-
-    % IRGC (Rope) vs Citizen (Noose) vs Analyst (Mountain)
+    % IRGC (Rope) vs Citizen (Snare) vs Analyst (Mountain)
     constraint_indexing:constraint_classification(iran_mandatrophic_collapse, T1, context(institutional, biographical, mobile, national)),
     constraint_indexing:constraint_classification(iran_mandatrophic_collapse, T2, context(individual_powerless, immediate, trapped, local)),
     constraint_indexing:constraint_classification(iran_mandatrophic_collapse, T3, context(analytical, historical, analytical, global)),
@@ -231,17 +231,17 @@ test(resource_extraction_threshold) :-
  * 2. THE WATER MAFIA: Identified the IRGC-linked dam builders as the 
  * primary agents of margin extraction.
  * 3. THE PHYSICAL WALL: The 2026 "Water Bankruptcy" is modeled as a 
- * transition from a Noose (manageable extraction) to a Mountain (terminal 
+ * transition from a Snare (manageable extraction) to a Mountain (terminal 
  * physical constraint).
  */
 
 omega_variable(
     sanctions_vs_mismanagement_ratio,
-    "To what degree is the 'Noose' external (Sanctions) vs. internal 
+    "To what degree is the 'Snare' external (Sanctions) vs. internal 
      (Mandatrophy)?",
     resolution_mechanism("Comparative analysis of GDP impact from sanctions 
     vs. estimated lost value from water mismanagement and corruption"),
-    impact("If sanctions dominate: The constraint is an external Noose. If 
+    impact("If sanctions dominate: The constraint is an external Snare. If 
             mismanagement dominates: It is an internal Mandatrophy."),
     confidence_without_resolution(medium)
 ).
@@ -264,7 +264,7 @@ omega_variable(
  * * * CONCLUSION:
  * The existence of proven alternatives (IWRM/Diplomacy) that are 
  * suppressed for the sake of the Mandate confirms the "Mandatrophy" 
- * as an extractive Noose.
+ * as an extractive Snare.
  */
 
 /* ==========================================================================

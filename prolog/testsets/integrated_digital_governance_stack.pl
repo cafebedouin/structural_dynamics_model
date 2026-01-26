@@ -83,11 +83,11 @@ constraint_indexing:constraint_classification(
     !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 2: The Flagged Outlier - Noose
+   PERSPECTIVE 2: The Flagged Outlier - Snare
    -------------------------------------------------------------------------- */
 constraint_indexing:constraint_classification(
     integrated_digital_governance_stack,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(biographical),
@@ -96,7 +96,7 @@ constraint_indexing:constraint_classification(
     )
 ) :-
     domain_priors:base_extractiveness(integrated_digital_governance_stack, E),
-    E > 0.8, % High systemic extraction + trapped status = Noose
+    E > 0.8, % High systemic extraction + trapped status = Snare
     !.
 
 /* --------------------------------------------------------------------------
@@ -126,7 +126,7 @@ test(multi_perspective_variance) :-
         context(individual_powerless, biographical, trapped, national)),
     constraint_indexing:constraint_classification(integrated_digital_governance_stack, Type2, 
         context(individual_moderate, immediate, mobile, global)),
-    Type1 = noose,
+    Type1 = snare,
     Type2 = rope.
 
 test(mandatrophy_validation) :-

@@ -25,12 +25,12 @@ event(ev06_the_exchange, convergence_of_irony, 90, [actor(della), actor(jim), re
 constraint_claim(subsistence_limit, mountain).
 constraint_metric(subsistence_limit, accessibility_collapse, 0.85).
 
-% Noose: The social mandate of Christmas gift-giving that forces asset liquidation.
-constraint_claim(christmas_gift_mandate, noose).
+% Snare: The social mandate of Christmas gift-giving that forces asset liquidation.
+constraint_claim(christmas_gift_mandate, snare).
 constraint_metric(christmas_gift_mandate, stakes_inflation, 0.95).
 
-% Zombie: The 'Dillingham' name/status—a relic of a $30/week past that suppresses current reality.
-constraint_claim(dillingham_pretense, zombie).
+% Piton: The 'Dillingham' name/status—a relic of a $30/week past that suppresses current reality.
+constraint_claim(dillingham_pretense, piton).
 constraint_metric(dillingham_pretense, suppression, 0.50).
 
 % --- 4. Recommendations & Veto Structure ---

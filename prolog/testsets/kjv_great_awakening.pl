@@ -6,7 +6,7 @@
 % Source: The First Great Awakening and the "Old Light" vs "New Light" schism
 % ============================================================================
 
-:- module(great_awakening_rekindling, []).
+:- module(constraint_kjv_great_awakening, []).
 
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
@@ -19,7 +19,8 @@
     constraint_indexing:constraint_classification/3.
 
 % The Structural Anchor for system extraction
-narrative_ontology:interval(great_awakening_rekindling, 0, 10).
+narrative_ontology:interval(kjv_great_awakening, 0, 10).
+narrative_ontology:constraint_claim(kjv_great_awakening, snare).
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -27,7 +28,7 @@ narrative_ontology:interval(great_awakening_rekindling, 0, 10).
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: great_awakening_rekindling
+ * * constraint_id: kjv_great_awakening
  * human_readable: The Great Awakening Re-Indexing
  * domain: religious/social/psychological
  * temporal_scope: 1730 - 1750 CE
@@ -38,7 +39,7 @@ narrative_ontology:interval(great_awakening_rekindling, 0, 10).
  * Awakening shattered this by emphasizing "heart religion." This turned 
  * the text into a "Rope" for the marginalized (slaves, women, uneducated) 
  * by granting them direct interpretive agency, while the elite saw this 
- * decentralized authority as a "Noose" strangling colonial stability.
+ * decentralized authority as a "Snare" strangling colonial stability.
  * * KEY AGENTS:
  * - The "New Light" Convert: Finding personal liberation in the text.
  * - The "Old Light" Minister: Protecting the "Mountain" of established order.
@@ -52,15 +53,18 @@ narrative_ontology:interval(great_awakening_rekindling, 0, 10).
 % Base extractiveness: Low (0.1)
 % The movement was highly decentralized; the "benefit" of the text 
 % flowed toward individual empowerment rather than an institution.
-domain_priors:base_extractiveness(great_awakening_rekindling, 0.1).
+domain_priors:base_extractiveness(kjv_great_awakening, 0.1).
 
 % Suppression: Moderate (0.4)
 % Old Light ministers tried to ban itinerant preaching, but the 
 % "Exit Option" was psychological and local, making suppression difficult.
-domain_priors:suppression_score(great_awakening_rekindling, 0.4).
+domain_priors:suppression_score(kjv_great_awakening, 0.4).
 
 % Enforcement: Emerges naturally (Spontaneous revivalism)
-domain_priors:emerges_naturally(great_awakening_rekindling).
+domain_priors:emerges_naturally(kjv_great_awakening).
+
+constraint_beneficiary(kjv_great_awakening, individual_empowerment).
+constraint_victim(kjv_great_awakening, institutional_control).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)
@@ -69,7 +73,7 @@ domain_priors:emerges_naturally(great_awakening_rekindling).
 /* --------------------------------------------------------------------------
    PERSPECTIVE 1: THE NEW LIGHT CONVERT - ROPE
    --------------------------------------------------------------------------
-   WHO: individual_powerless (socially) -> individual_moderate (spiritually)
+   WHO: individual_powerless (socially)
    WHEN: immediate - The "instant" of conversion.
    WHERE: mobile - They can leave "dead" churches for "live" ones.
    SCOPE: local/regional - The traveling revival circuit.
@@ -82,15 +86,15 @@ domain_priors:emerges_naturally(great_awakening_rekindling).
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
-    great_awakening_rekindling,
+    kjv_great_awakening,
     rope,
     context(
-        agent_power(individual_moderate),
+        agent_power(individual_powerless),
         time_horizon(immediate),
         exit_options(mobile),
         spatial_scope(regional)
     )
-) :- !.
+).
 
 /* --------------------------------------------------------------------------
    PERSPECTIVE 2: THE OLD LIGHT MINISTER - NOOSE
@@ -101,22 +105,22 @@ constraint_indexing:constraint_classification(
    SCOPE: local/national - The stability of the colonial hierarchy.
    
    WHY THIS CLASSIFICATION:
-   For the established elite, this "New Light" use of the KJV is a Noose. 
+   For the established elite, this "New Light" use of the KJV is a Snare. 
    It unmoors the text from scholarly tradition, allowing "unlearned" 
    men to challenge the elite's power. It feels like an asymmetric 
    attack on the social order they are sworn to protect.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
-    great_awakening_rekindling,
-    noose,
+    kjv_great_awakening,
+    snare,
     context(
         agent_power(institutional),
         time_horizon(biographical),
         exit_options(constrained),
         spatial_scope(national)
     )
-) :- !.
+).
 
 /* --------------------------------------------------------------------------
    PERSPECTIVE 3: THE ANALYTICAL OBSERVER - MOUNTAIN
@@ -134,7 +138,7 @@ constraint_indexing:constraint_classification(
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
-    great_awakening_rekindling,
+    kjv_great_awakening,
     mountain,
     context(
         agent_power(analytical),
@@ -142,27 +146,65 @@ constraint_indexing:constraint_classification(
         exit_options(analytical),
         spatial_scope(continental)
     )
-) :- !.
+).
 
 /* ==========================================================================
-   4. TESTS
+   4. TESTS (What We Learn About Constraints)
    ========================================================================== */
 
-:- begin_tests(awakening_tests).
+:- begin_tests(kjv_great_awakening_tests).
 
-test(re_indexing_agency) :-
-    % Test that mobility + moderate power yields a Rope (re-claiming the text)
-    constraint_indexing:constraint_classification(great_awakening_rekindling, rope, context(agent_power(individual_moderate), _, exit_options(mobile), _)).
+/**
+ * TEST 1: Multi-perspective variance
+ * Demonstrates how the Great Awakening is viewed differently across agents.
+ */
+test(multi_perspective_variance) :-
+    % New Light Convert (Rope)
+    constraint_indexing:constraint_classification(
+        kjv_great_awakening,
+        Type1,
+        context(agent_power(individual_powerless), time_horizon(immediate), exit_options(mobile), spatial_scope(regional))
+    ),
+    % Old Light Minister (Snare)
+    constraint_indexing:constraint_classification(
+        kjv_great_awakening,
+        Type2,
+        context(agent_power(institutional), time_horizon(biographical), exit_options(constrained), spatial_scope(national))
+    ),
+    % Analytical Observer (Mountain)
+    constraint_indexing:constraint_classification(
+        kjv_great_awakening,
+        Type3,
+        context(agent_power(analytical), time_horizon(historical), exit_options(analytical), spatial_scope(continental))
+    ),
+    % Verify they differ
+    Type1 \= Type2,
+    Type2 \= Type3,
+    Type1 \= Type3. % Ensure all three are distinct
 
-test(institutional_threat_noose) :-
-    % Test that institutional agents seeing power erode view the constraint as a Noose
-    constraint_indexing:constraint_classification(great_awakening_rekindling, noose, context(agent_power(institutional), _, _, _)).
+/**
+ * TEST 2: Power-based extractiveness scaling
+ * Demonstrates that the institutional elite (Old Light) perceive higher extraction
+ * of their authority than the empowered converts.
+ */
+test(power_extractiveness_scaling) :-
+    ContextPowerless = context(agent_power(individual_powerless), time_horizon(immediate), exit_options(mobile), spatial_scope(regional)),
+    ContextPowerful = context(agent_power(institutional), time_horizon(biographical), exit_options(constrained), spatial_scope(national)),
+    constraint_indexing:extractiveness_for_agent(kjv_great_awakening, ContextPowerless, Score1),
+    constraint_indexing:extractiveness_for_agent(kjv_great_awakening, ContextPowerful, Score2),
+    Score1 < Score2.  % The "powerful" experience more extraction in this case.
 
-test(historical_bedrock_mountain) :-
-    % Test that historical/analytical perspectives see the persistent "Mountain"
-    constraint_indexing:constraint_classification(great_awakening_rekindling, mountain, context(agent_power(analytical), time_horizon(historical), _, _)).
+/**
+ * TEST 3: Time-horizon immutability
+ * Demonstrates that while the revival was a dynamic event, the text itself is a historical constant.
+ */
+test(time_immutability) :-
+    % Short horizon (immediate) sees the event as a dynamic Rope
+    constraint_indexing:effective_immutability(time_horizon(immediate), exit_options(mobile), rope),
+    % Long horizon (historical) sees the text as an immutable Mountain.
+    constraint_indexing:effective_immutability(time_horizon(historical), exit_options(analytical), mountain).
 
-:- end_tests(awakening_tests).
+:- end_tests(kjv_great_awakening_tests).
 
 /* ==========================================================================
    5. MODEL INTERPRETATION (Commentary)
@@ -170,38 +212,70 @@ test(historical_bedrock_mountain) :-
 
 /**
  * LLM GENERATION NOTES
- * * KEY DECISIONS:
+ * 
+ * Model: Gemini 2.0 Flash
+ * Date: 2026-01-23
+ * 
+ * KEY DECISIONS:
+ * 
  * 1. SHIFT FROM MOUNTAIN TO ROPE: This is the most important pedagogical 
  * point. A constraint is a "Mountain" when it is ignored because it is 
  * "just there." It becomes a "Rope" when someone picks it up and 
  * uses it to move.
- * * 2. THE NOOSE OF THE ELITE: It is ironic that the institutional power 
+ * 
+ * 2. THE NOOSE OF THE ELITE: It is ironic that the institutional power 
  * (ministers) felt "noosed" by their own holy book when the peasants 
  * started reading it "incorrectly."
+ * 
+ * 3. OMEGAS 
+ *    Define uncertainty so your analysis is cleaner
+ *    omega_variable(
+ *        sincerity_of_conversion,
+ *        "Is the 'New Light' conversion a genuine empowerment (Rope) or a form of social contagion (Snare)?",
+ *        resolution_mechanism("Analysis of long-term life outcomes of converts vs. non-converts."),
+ *        impact("If contagion: The Rope is a ilusion. If genuine: The Rope is a real tool for social change."),
+ *        confidence_without_resolution(medium)
+ *    ).
  */
 
 /* ==========================================================================
-   6. ALTERNATIVE ANALYSIS
+   6. ALTERNATIVE ANALYSIS (If Applicable)
    ========================================================================== */
 
 /**
  * VIABLE ALTERNATIVES
- * * ALTERNATIVE: Rationalism / The Enlightenment
- * Viability: High (Jefferson, Franklin).
- * Suppression: In the religious sphere, rationalism was suppressed as 
- * "Deism" or "Atheism."
- * * CONCLUSION:
- * The Awakening was a "Rope" because it provided a populist alternative 
- * to both the "Mountain" of the State Church and the "Noose" of secular 
- * rationalism for the average person.
+ * 
+ * ALTERNATIVE 1: Rationalism / The Enlightenment
+ *    Viability: High (e.g., Thomas Jefferson, Benjamin Franklin). A major intellectual movement of the era.
+ *    Suppression: In the highly religious context of the American colonies, rationalism was often suppressed or viewed with suspicion as "Deism" or "Atheism," especially outside of elite circles.
+ * 
+ * CONCLUSION:
+ * The Great Awakening provided a "Rope" for populist religious expression, offering an alternative to both the rigid "Mountain" of the established State Church and the intellectually demanding "Snare" of secular rationalism, which was less accessible to the average person.
+ */
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+/**
+ * TO USE THIS CONSTRAINT:
+ * 
+ * 1. Load into main system:
+ *    ?- [constraints/kjv_great_awakening].
+ * 
+ * 2. Run multi-perspective analysis:
+ *    ?- constraint_indexing:multi_index_report(kjv_great_awakening).
+ * 
+ * 3. Run tests:
+ *    ?- run_tests(kjv_great_awakening_tests).
+ * 
+ * 4. Generate pedagogical report:
+ *    ?- pedagogical_report(kjv_great_awakening).
+ * 
+ * 5. Compare with other constraints:
+ *    ?- compare_constraints(kjv_great_awakening, [other_id]).
  */
 
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
-
-
-% --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
-constraint_indexing:constraint_classification(kjv_great_awakening, mountain, agent_power(analytical)).
-constraint_indexing:constraint_classification(kjv_great_awakening, rope, agent_power(institutional)).
-constraint_indexing:constraint_classification(kjv_great_awakening, noose, agent_power(individual_powerless)).

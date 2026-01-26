@@ -1,18 +1,18 @@
 % ============================================================================
 % CONSTRAINT STORY: matching_markets_general
 % ============================================================================
-% Generated: 2026-01-17
-% Model: Gemini 2.0 Flash
+% Generated: 2026-01-23
+% Model: Gemini Pro (Revised)
 % Source: Market Design / Alvin Roth / Lloyd Shapley
 % ============================================================================
 
-:- module(constraint_matching_markets, []).
+:- module(constraint_matching_markets_general, []).
 
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
 
-% --- Namespace Hooks ---
+% --- Namespace Hooks (Required for loading) ---
 :- multifile 
     domain_priors:base_extractiveness/2,
     domain_priors:suppression_score/2,
@@ -25,40 +25,38 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: matching_markets_general
+ * 
+ * constraint_id: matching_markets_general
  * human_readable: Matching Markets (Non-Commodity Exchange)
  * domain: economic/social/technological
  * temporal_scope: Biographical to Generational
  * spatial_scope: National to Global
- * * SUMMARY:
- * Unlike commodity markets where price clears the market (whoever pays the 
- * most gets the goods), matching markets involve "thick" preferences where 
- * the choice is mutual. You cannot simply "buy" a job at Google or a seat 
- * at Harvard; the other side must also choose you.
- * * KEY AGENTS:
- * - The Applicant: Seeks to be matched with a high-value institution.
- * - The Institution: Seeks to curate a specific cohort of participants.
- * - The Market Architect: Designs the rules (clearinghouses) that govern 
- * how matches are finalized.
- * * NARRATIVE ARC:
- * The constraint functions as a "Gatekeeper's Maze." Success depends not 
- * just on your own resources, but on the visibility of your preferences 
- * and the specific algorithmic or social rules used to pair "sides."
+ * 
+ * SUMMARY:
+ * Unlike commodity markets where price clears the market, matching markets involve 
+ * "thick" preferences where the choice is mutual. You cannot simply "buy" a job 
+ * at Google or a seat at Harvard; the other side must also choose you. This
+ * requires a more complex mechanism than simple price-based allocation.
+ * 
+ * KEY AGENTS:
+ * - The Unmatched Applicant (Individual Powerless): Lacks credentials to attract a match.
+ * - The Institution / Clearinghouse (Institutional): Seeks to curate a specific cohort of participants.
+ * - The Elite Candidate (Individual Powerful): Possesses high credentials and market value.
  */
 
 /* ==========================================================================
-   2. BASE PROPERTIES (The "Reality" Layer)
+   2. CORE SYSTEM INTEGRATION (The "Reality" Layer)
    ========================================================================== */
 
 narrative_ontology:interval(matching_markets_general, 0, 10).
-narrative_ontology:constraint_claim(matching_markets_general, rope).
+narrative_ontology:constraint_claim(matching_markets_general, tangled_rope).
 
-% Base extractiveness: Moderate (0.4). 
+% Base extractiveness: 0.4.
 % Markets extract "signal" (effort, status, credentials) from participants 
 % to facilitate the match.
 domain_priors:base_extractiveness(matching_markets_general, 0.4).
 
-% Suppression: High (0.7).
+% Suppression: 0.7.
 % "Unmatched" alternatives (black markets, side deals) are often strictly 
 % prohibited to maintain market "thickness" and stability.
 domain_priors:suppression_score(matching_markets_general, 0.7).
@@ -66,89 +64,73 @@ domain_priors:suppression_score(matching_markets_general, 0.7).
 % Enforcement: Usually requires active enforcement (Clearinghouses/Regulations).
 domain_priors:requires_active_enforcement(matching_markets_general).
 
-% Beneficiaries: The Highly-Ranked (who get their top choices on both sides).
+% BENEFICIARIES & VICTIMS
 constraint_beneficiary(matching_markets_general, elite_participants).
-
-% Victims: The "Thin" Participants (who lack the credentials or signaling power 
-% to attract a match, leaving them stranded).
 constraint_victim(matching_markets_general, low_signal_agents).
-
-% Metrics
-narrative_ontology:constraint_metric(matching_markets_general, extractiveness, 0.4).
-narrative_ontology:constraint_metric(matching_markets_general, suppression_requirement, 0.7).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 1: THE ELITE CANDIDATE - Rope
+   PERSPECTIVE 1: THE UNMATCHED APPLICANT - Snare
    --------------------------------------------------------------------------
-   WHO: individual_powerful
-   WHEN: biographical
-   WHERE: mobile
-   SCOPE: national
-   
-   WHY THIS CLASSIFICATION:
-   For an elite agent (high credentials), the matching market is a "Rope." 
-   It provides a structured, predictable ladder to a high-status outcome. 
-   The market's rules protect them from the "chaos" of unregulated 
-   negotiation and ensure their value is recognized.
-   -------------------------------------------------------------------------- */
-
-constraint_indexing:constraint_classification(
-    matching_markets_general,
-    rope,
-    context(
-        agent_power(individual_powerful),
-        time_horizon(biographical),
-        exit_options(mobile),
-        spatial_scope(national)
-    )
-) :-
-    domain_priors:base_extractiveness(matching_markets_general, E),
-    E < 0.6,
-    !.
-
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE UNMATCHED APPLICANT - Noose
-   --------------------------------------------------------------------------
-   WHO: individual_powerless
-   WHEN: immediate
-   WHERE: trapped
-   SCOPE: national
+   WHO: individual_powerless (Lacks credentials or signaling power)
+   WHEN: immediate (During a specific matching cycle)
+   WHERE: trapped (Excluded from the market due to no match)
    
    WHY THIS CLASSIFICATION:
    For the agent who fails to secure a match in a "thick" market (like medical 
-   residency or kidney exchange), the system is a "Noose." The high 
+   residency or kidney exchange), the system is a 'Snare'. The high 
    suppression of alternatives means that failing to match within the 
    system is equivalent to total exclusion from the profession or resource.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
     matching_markets_general,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
         exit_options(trapped),
         spatial_scope(national)
     )
-) :-
-    domain_priors:suppression_score(matching_markets_general, S),
-    S > 0.5,
-    !.
+).
+
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 2: THE INSTITUTION / CLEARINGHOUSE - Rope
+   --------------------------------------------------------------------------
+   WHO: institutional (Seeks to curate a specific cohort or allocate resources)
+   WHEN: historical (Over multiple matching cycles)
+   WHERE: arbitrage (Balances competing preferences and allocates resources)
+   
+   WHY THIS CLASSIFICATION:
+   For the institution or clearinghouse, the matching market is a 'Rope'. It's a
+   tool to efficiently allocate resources and talent based on complex preferences,
+   ensuring stable and optimal outcomes for the entire market. It helps them
+   coordinate a complex system of choices.
+   -------------------------------------------------------------------------- */
+
+constraint_indexing:constraint_classification(
+    matching_markets_general,
+    rope,
+    context(
+        agent_power(institutional),
+        time_horizon(historical),
+        exit_options(arbitrage),
+        spatial_scope(global)
+    )
+).
 
 /* --------------------------------------------------------------------------
    PERSPECTIVE 3: THE ECONOMIST - Mountain
    --------------------------------------------------------------------------
-   WHO: analytical
-   WHEN: civilizational
-   WHERE: analytical
-   SCOPE: global
+   WHO: analytical (Observes the underlying principles of market design)
+   WHEN: civilizational (Studying economic laws across different societies)
+   WHERE: analytical (Universal principles of matching theory)
    
    WHY THIS CLASSIFICATION:
-   The economist sees the "laws of matching" as a "Mountain." The need 
+   The economist sees the "laws of matching" as a 'Mountain'. The need 
    for thickness, the danger of market congestion, and the inevitability 
    of signaling costs are seen as natural features of information-dense 
    environments, regardless of the specific algorithm used.
@@ -163,27 +145,23 @@ constraint_indexing:constraint_classification(
         exit_options(analytical),
         spatial_scope(global)
     )
-) :-
-    domain_priors:emerges_naturally(matching_markets_general),
-    !.
+).
 
 /* ==========================================================================
-   4. TESTS
+   4. TESTS (What We Learn About Constraints)
    ========================================================================== */
 
-:- begin_tests(matching_markets_tests).
+:- begin_tests(matching_markets_general_tests).
 
-test(signal_power_variance) :-
-    % Powerful agents navigate the rope; powerless agents are caught in the noose.
-    constraint_indexing:constraint_classification(matching_markets_general, rope, context(agent_power(individual_powerful), _, _, _)),
-    constraint_indexing:constraint_classification(matching_markets_general, noose, context(agent_power(individual_powerless), _, trapped, _)).
+test(multi_perspective_variance) :-
+    constraint_indexing:constraint_classification(matching_markets_general, Type1, context(agent_power(individual_powerless), _, _, _)),
+    constraint_indexing:constraint_classification(matching_markets_general, Type2, context(agent_power(institutional), _, _, _)),
+    constraint_indexing:constraint_classification(matching_markets_general, Type3, context(agent_power(analytical), _, _, _)),
+    Type1 \= Type2,
+    Type2 \= Type3,
+    Type1 \= Type3.
 
-test(market_failure_threshold) :-
-    % High suppression (S > 0.6) forces a Noose classification for trapped agents.
-    domain_priors:suppression_score(matching_markets_general, S),
-    S > 0.6.
-
-:- end_tests(matching_markets_tests).
+:- end_tests(matching_markets_general_tests).
 
 /* ==========================================================================
    5. MODEL INTERPRETATION (Commentary)
@@ -191,38 +169,58 @@ test(market_failure_threshold) :-
 
 /**
  * LLM GENERATION NOTES
- * Model: Gemini 2.0 Flash
- * * KEY DECISIONS:
- * Matching markets differ from auctions because they are about "who gets what" 
- * AND "who gets whom." I set suppression to 0.7 because centralized matching 
- * markets (like the NRMP for doctors) often penalize or ban side-deals, 
- * making the central match a mandatory bottleneck (Noose/Rope).
+ * 
+ * Model: Gemini Pro (Revised)
+ * Date: 2026-01-23
+ * 
+ * KEY DECISIONS:
+ * 
+ * 1. INSTITUTIONAL PERSPECTIVE: Added 'The Institution / Clearinghouse' as the
+ *    institutional agent. For them, the matching market is a 'Rope' to
+ *    efficiently manage complex allocation problems.
+ *
+ * 2. CLASSIFICATION RATIONALE:
+ *    - Unmatched Applicant (Snare): Excluded from the market.
+ *    - Institution (Rope): A tool for efficient allocation.
+ *    - Economist (Mountain): Immutable laws of market design.
+ * 
+ * 3. CORE INSIGHT: Matching markets are a 'Tangled Rope'. They provide a 'Rope'
+ *    for efficient allocation in non-commodity markets, but this same system
+ *    creates a 'Snare' for those who fail to match, highlighting the tension
+ *    between market efficiency and individual opportunity.
  */
 
 /* ==========================================================================
-   6. OMEGA VARIABLES (Ω)
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
+/**
+ * OMEGA IDENTIFICATION
+ *
+ * The core uncertainty revolves around preference revelation and gaming the system.
+ */
 
 omega_variable(
     preference_revelation_cost,
-    "Do participants hide their true preferences to 'game' the match?",
-    resolution_mechanism("Comparison of algorithmically derived matches vs. post-match regret surveys"),
-    impact("If Gamed: The 'Mountain' is actually a 'Scaffold' (unstable). If True: The 'Mountain' is solid."),
+    "Do participants reveal their true preferences, or do they strategize to 'game' the match, potentially leading to suboptimal outcomes and market instability?",
+    resolution_mechanism("Comparison of algorithmically derived matches vs. post-match regret surveys; laboratory experiments on strategic behavior in matching markets."),
+    impact("If Gamed: The 'Mountain' is actually a 'Scaffold' (unstable). If True: The 'Mountain' is solid, and the market is stable."),
     confidence_without_resolution(medium)
 ).
 
 /* ==========================================================================
    7. ALTERNATIVE ANALYSIS
    ========================================================================== */
-
 /**
- * VIABLE ALTERNATIVES:
- * 1. Price-Clearing Markets: (Ineffective for kidneys/jobs due to ethics/signaling).
- * 2. Decentralized Signaling: (Causes market 'congestion' and delayed offers).
- * * CONCLUSION:
- * The "Noose" aspect of matching markets is often a trade-off for "Market 
- * Thickness." By forcing everyone into one room (the Noose), you ensure the 
- * highest probability that a match exists (the Rope).
+ * VIABLE ALTERNATIVES
+ *
+ * ALTERNATIVE 1: Price-Clearing Markets
+ *    Viability: Effective for commodity goods, but ethically and practically problematic for things like organ transplants, jobs, and school choice.
+ *    Suppression: Actively suppressed in many matching markets to prevent commodification and ensure fairness.
+ *
+ * CONCLUSION:
+ * Matching markets are a sophisticated 'Rope' designed to navigate the ethical
+ * and practical 'Snare' of price-based allocation for non-commodity goods.
+ * They represent a complex solution to a 'Mountain' of social coordination problems.
  */
 
 /* ==========================================================================
@@ -231,8 +229,10 @@ omega_variable(
 
 /**
  * TO USE THIS FILE:
+ * 
  * 1. Load: ?- [constraints/matching_markets_general].
- * 2. Run: ?- multi_index_report(matching_markets_general).
+ * 2. Multi-perspective: ?- multi_index_report(matching_markets_general).
+ * 3. Run tests: ?- run_tests(matching_markets_general_tests).
  */
 
 /* ==========================================================================

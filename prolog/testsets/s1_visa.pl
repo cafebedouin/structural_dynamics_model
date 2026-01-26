@@ -80,7 +80,7 @@ constraint_victim(visa_ipo_regulatory_compliance, registrant_legal_budget).
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 1: Joseph W. Saunders (CEO) - Noose
+   PERSPECTIVE 1: Joseph W. Saunders (CEO) - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerful / institutional - CEO of the registrant.
@@ -89,7 +89,7 @@ constraint_victim(visa_ipo_regulatory_compliance, registrant_legal_budget).
    SCOPE: national / global - Managing a worldwide restructuring.
    
    WHY THIS CLASSIFICATION:
-   From the CEO's perspective, this is a "Noose" because it imposes massive 
+   From the CEO's perspective, this is a "Snare" because it imposes massive 
    personal liability (signatures required) and slows the organization down 
    through endless amendments (6 filings). It is an asymmetric 
    burden that benefits the state's oversight power.
@@ -101,7 +101,7 @@ constraint_victim(visa_ipo_regulatory_compliance, registrant_legal_budget).
 
 constraint_indexing:constraint_classification(
     visa_ipo_regulatory_compliance,
-    noose,
+    snare,
     context(
         agent_power(individual_powerful),
         time_horizon(immediate),
@@ -199,13 +199,13 @@ test(multi_perspective_variance) :-
         context(individual_powerless, biographical, constrained, _, _, national)),
     constraint_indexing:constraint_classification(visa_ipo_regulatory_compliance, Type3, 
         context(analytical, historical, arbitrage, _, _, global)),
-    Type1 = noose,
+    Type1 = snare,
     Type2 = mountain,
     Type3 = rope.
 
 test(regulatory_barrier_impact) :-
-    % Test that the 'trapped' CEO sees high friction (Noose) vs 'arbitrage' lawyer (Rope)
-    constraint_indexing:constraint_classification(visa_ipo_regulatory_compliance, noose, context(_, _, trapped, _, _, _)),
+    % Test that the 'trapped' CEO sees high friction (Snare) vs 'arbitrage' lawyer (Rope)
+    constraint_indexing:constraint_classification(visa_ipo_regulatory_compliance, snare, context(_, _, trapped, _, _, _)),
     constraint_indexing:constraint_classification(visa_ipo_regulatory_compliance, rope, context(_, _, arbitrage, _, _, _)).
 
 :- end_tests(visa_ipo_regulatory_compliance_tests).
@@ -234,9 +234,9 @@ test(regulatory_barrier_impact) :-
 
 omega_variable(
     sec_effectiveness,
-    "Does the S-1 actually prevent fraud (Rope) or merely provide a legal shield for institutions (Noose)?",
+    "Does the S-1 actually prevent fraud (Rope) or merely provide a legal shield for institutions (Snare)?",
     resolution_mechanism("Post-IPO litigation frequency vs. historical unregulated markets"),
-    impact("If Rope: the 0.2 extractiveness is a fee for service. If Noose: it is a barrier to entry."),
+    impact("If Rope: the 0.2 extractiveness is a fee for service. If Snare: it is a barrier to entry."),
     confidence_without_resolution(medium)
 ).
 
@@ -266,4 +266,4 @@ omega_variable(
 % --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
 constraint_indexing:constraint_classification(s1_visa, mountain, agent_power(analytical)).
 constraint_indexing:constraint_classification(s1_visa, rope, agent_power(institutional)).
-constraint_indexing:constraint_classification(s1_visa, noose, agent_power(individual_powerless)).
+constraint_indexing:constraint_classification(s1_visa, snare, agent_power(individual_powerless)).

@@ -35,10 +35,10 @@ constraint_metric(linearity_distribution, suppression_requirement, 0.45).
 constraint_metric(linearity_distribution, snap_back_potential, 0.80).
 constraint_metric(linearity_distribution, extractiveness, 0.65).
 
-% The Overlap Noose (The Noose)
+% The Overlap Snare (The Snare)
 % The mathematical contradiction where non-orthogonal states cannot be cloned by a single unitary.
 % Extractiveness at 0.99 requires the 'orthogonal_state_scaffold' to distinguish cloneable subsets.
-constraint_claim(inner_product_preservation, noose).
+constraint_claim(inner_product_preservation, snare).
 constraint_metric(inner_product_preservation, intensity, 0.99).
 constraint_metric(inner_product_preservation, suppression_requirement, 0.98).
 constraint_metric(inner_product_preservation, snap_back_potential, 0.01).
@@ -49,7 +49,7 @@ constraint_metric(inner_product_preservation, extractiveness, 0.99).
 recommendation(rec_01, utilize_density_matrix_formalism_to_analyze_imperfect_cloning).
 affects_constraint(rec_01, linearity_distribution).
 
-% Noose (0.99 extractiveness) triggers Cut
+% Snare (0.99 extractiveness) triggers Cut
 % Utilizing 'orthogonal_state_scaffold' to restrict cloning only to mutually orthogonal basis sets.
 recommendation(rec_02, abandon_universal_cloning_for_orthogonal_basis_replication).
 affects_constraint(rec_02, inner_product_preservation).

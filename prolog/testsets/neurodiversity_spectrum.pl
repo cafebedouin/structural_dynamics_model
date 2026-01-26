@@ -1,8 +1,8 @@
 % ============================================================================
 % CONSTRAINT STORY: neurodiversity_spectrum
 % ============================================================================
-% Generated: 2026-01-21
-% Model: Gemini 2.0 Flash
+% Generated: 2026-01-23
+% Model: Gemini Pro (Revised)
 % Source: Caroline Williams, "There’s no such thing as a normal brain"
 % Status: [RESOLVED MANDATROPHY]
 % ============================================================================
@@ -25,37 +25,34 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: neurodiversity_spectrum
+ * 
+ * constraint_id: neurodiversity_spectrum
  * human_readable: The Neurodiversity Asset Spectrum
  * domain: social/scientific/medical
  * temporal_scope: Late 1990s - 2026
  * spatial_scope: Global (Medical and Advocacy contexts)
- * * SUMMARY:
+ * 
+ * SUMMARY:
  * This constraint represents the shift from a binary "normal vs. abnormal" brain 
- * model to a spectrum of natural neurodevelopmental variation. 
- * It reframes conditions like autism and ADHD as assets rather than illnesses 
- * to be cured.
- * * KEY AGENTS:
- * - The Neurodivergent Individual: Historically marginalized, now seeking support.
- * - The Medical Establishment (DSM): Transitioned from binary diagnosis to spectrum levels.
- * - Online Advocacy Groups: The catalysts for the neurodiversity concept.
- * * NARRATIVE ARC:
- * Historically, "unusual brains" were constrained by the "Noose" of pathology 
- * labels. The emergence of neurodiversity acts as a 
- * "Rope" that coordinates support and acknowledges unique strengths as systemic 
- * assets.
+ * model to a spectrum of natural neurodevelopmental variation. It reframes 
+ * conditions like autism and ADHD as assets rather than illnesses to be cured.
+ * 
+ * KEY AGENTS:
+ * - The Pre-1990s Patient (Individual Powerless): Historically marginalized by binary diagnosis.
+ * - The Medical Establishment (Institutional): Transitioned from binary diagnosis to spectrum levels.
+ * - Neurodiversity Advocates (Collective Organized): Catalysts for the neurodiversity concept.
  */
 
 /* ==========================================================================
-   2. BASE PROPERTIES (Context-Independent)
+   2. CORE SYSTEM INTEGRATION (Context-Independent)
    ========================================================================== */
 
 narrative_ontology:interval(neurodiversity_spectrum, 0, 10).
+narrative_ontology:constraint_claim(neurodiversity_spectrum, rope).
 
 % Base extractiveness: 0.72 (High)
 % Rationale: The "illness" model extracted autonomy and identity from those 
-% labeled "abnormal" for decades. High score triggers 
-% Mandatrophy protocol.
+% labeled "abnormal" for decades.
 domain_priors:base_extractiveness(neurodiversity_spectrum, 0.72).
 
 % Suppression: 0.55 (Moderate)
@@ -63,67 +60,52 @@ domain_priors:base_extractiveness(neurodiversity_spectrum, 0.72).
 % strengths, but the "normalcy" ritual still persists in society.
 domain_priors:suppression_score(neurodiversity_spectrum, 0.55).
 
-% Enforcement: Requires active enforcement (Diagnosis levels 1-3).
+% Enforcement: Requires active enforcement (diagnosis levels 1-3).
 domain_priors:requires_active_enforcement(neurodiversity_spectrum).
 
 % BENEFICIARIES & VICTIMS
-% Society benefits from "diverse brains" as an asset if supported.
-constraint_beneficiary(neurodiversity_spectrum, inclusive_society).
-% Individuals with unusual brains were historically "victims" of illness labels.
-constraint_victim(neurodiversity_spectrum, neurodivergent_individuals).
+constraint_beneficiary(neurodiversity_spectrum, neurodivergent_individuals).
+constraint_victim(neurodiversity_spectrum, old_binary_diagnostic_models).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 1: THE PRE-1990s PATIENT - Noose
+   PERSPECTIVE 1: THE PRE-1990s PATIENT - Snare
    --------------------------------------------------------------------------
-   
    WHO: individual_powerless (Treated as having something "wrong")
    WHEN: biographical (Single lifetime of diagnosis)
    WHERE: trapped (No spectrum existed, only the "hard line" of abnormal)
-   SCOPE: local
    
    WHY THIS CLASSIFICATION:
-   For these individuals, the "normal brain" assumption was a Noose that extracted 
-   their dignity and replaced it with a diagnosis of illness.
-   
-   NARRATIVE EVIDENCE:
-   "Those who were different might be diagnosed with an illness... and were 
-   treated as though something was wrong with them".
+   For these individuals, the "normal brain" assumption was a 'Snare' that extracted 
+   their dignity and replaced it with a diagnosis of illness. They were trapped
+   in a system that saw them as broken, with no conceptual exit.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
     neurodiversity_spectrum,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(biographical),
         exit_options(trapped),
         spatial_scope(local)
     )
-) :-
-    domain_priors:base_extractiveness(neurodiversity_spectrum, E),
-    E > 0.7,
-    !.
+).
 
 /* --------------------------------------------------------------------------
    PERSPECTIVE 2: THE MODERN MEDICAL SYSTEM (DSM-5) - Rope
    --------------------------------------------------------------------------
-   
-   WHO: institutional (Rule-making authority)
+   WHO: institutional (Rule-making authority, e.g., the APA publishing the DSM)
    WHEN: generational (Reflecting decades of honed concepts)
-   WHERE: mobile (Shifts from Asperger's to Levels 1-3)
-   SCOPE: global
+   WHERE: mobile (Shifts from Asperger's to Levels 1-3 of support)
    
    WHY THIS CLASSIFICATION:
-   The spectrum acts as a Rope—a functional coordination mechanism to allocate 
-   the "amount of support required" rather than a binary exclusion.
-   
-   NARRATIVE EVIDENCE:
-   "Recognising one condition, autism spectrum disorder, on a scale... depending 
-   on the amount of support required".
+   The spectrum acts as a 'Rope'—a functional coordination mechanism for the medical 
+   system to allocate the "amount of support required" rather than a binary exclusion.
+   It allows for more nuanced treatment and resource allocation.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
@@ -135,27 +117,19 @@ constraint_indexing:constraint_classification(
         exit_options(mobile),
         spatial_scope(global)
     )
-) :-
-    % Classification logic for the institutional coordinator
-    true,
-    !.
+).
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE NEURODIVERSITY ADVOCATE - Mountain
+   PERSPECTIVE 3: NEURODIVERSITY ADVOCATES - Mountain
    --------------------------------------------------------------------------
-   
-   WHO: collective_organized (Advocacy groups)
-   WHEN: historical (Rooted in "natural variation")
+   WHO: collective_organized (Advocacy groups pushing for acceptance)
+   WHEN: historical (Rooted in "natural variation" of human wiring)
    WHERE: arbitrage (Leveraging diverse strengths as assets)
-   SCOPE: global
    
    WHY THIS CLASSIFICATION:
-   Advocates see neurodiversity as a biological Mountain—a natural, immutable 
-   variation in human wiring that cannot and should not be "solved".
-   
-   NARRATIVE EVIDENCE:
-   "What if these 'disorders' were better understood as natural variation in 
-   the way human brains can be wired?".
+   Advocates see neurodiversity as a biological 'Mountain'—a natural, immutable 
+   variation in human wiring that cannot and should not be "solved". It's a fundamental
+   aspect of human biodiversity.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
@@ -167,28 +141,21 @@ constraint_indexing:constraint_classification(
         exit_options(arbitrage),
         spatial_scope(global)
     )
-) :-
-    domain_priors:suppression_score(neurodiversity_spectrum, S),
-    S > 0.5,
-    !.
+).
 
 /* ==========================================================================
    4. TESTS (What We Learn About Constraints)
-   ========================================================================= */
+   ========================================================================== */
 
 :- begin_tests(neurodiversity_spectrum_tests).
 
 test(multi_perspective_variance) :-
-    % Illness model (Noose) vs Support model (Rope) vs Natural law (Mountain)
-    constraint_indexing:constraint_classification(neurodiversity_spectrum, noose, context(individual_powerless, _, trapped, _)),
-    constraint_indexing:constraint_classification(neurodiversity_spectrum, rope, context(institutional, _, mobile, _)),
-    constraint_indexing:constraint_classification(neurodiversity_spectrum, mountain, context(collective_organized, _, _, _)).
-
-test(spectrum_vs_binary_extraction) :-
-    % Binary model (Score 1) extracts more autonomy than Spectrum model (Score 2)
-    BinaryExtraction = 0.9,
-    SpectrumExtraction = 0.3,
-    BinaryExtraction > SpectrumExtraction.
+    constraint_indexing:constraint_classification(neurodiversity_spectrum, Type1, context(agent_power(individual_powerless), _, _, _)),
+    constraint_indexing:constraint_classification(neurodiversity_spectrum, Type2, context(agent_power(institutional), _, _, _)),
+    constraint_indexing:constraint_classification(neurodiversity_spectrum, Type3, context(agent_power(collective_organized), _, _, _)),
+    Type1 \= Type2,
+    Type2 \= Type3,
+    Type1 \= Type3.
 
 :- end_tests(neurodiversity_spectrum_tests).
 
@@ -198,35 +165,36 @@ test(spectrum_vs_binary_extraction) :-
 
 /**
  * LLM GENERATION NOTES
- * * Model: Gemini 2.0 Flash
- * Date: 2026-01-21
- * * KEY DECISIONS:
- * 1. EXTRACTIVENESS (0.72): High score chosen to reflect the "Mandatrophy" 
- * of the old illness-based paradigm which extracted personhood.
- * 2. SUPPRESSION (0.55): Reflects the ongoing transition where "Asperger's" 
- * was suppressed to create the broader Spectrum.
- * 3. PERSPECTIVES: Chose the 1990s patient to show the "Noose" effect of the 
- * hard-line binary.
+ * 
+ * Model: Gemini Pro (Revised)
+ * Date: 2026-01-23
+ * 
+ * KEY DECISIONS:
+ * 
+ * 1. CLASSIFICATION RATIONALE: This constraint perfectly illustrates the
+ *    perspectival shift over time. What was an unknowable 'Snare' for a patient
+ *    becomes a manageable 'Rope' for the medical system, and a 'Mountain' for advocates.
+ * 
+ * 2. MANDATROPHY STATUS: High extraction (0.72) is 'RESOLVED' because the
+ *    institutional perspective (Rope) coordinates a shift from a dehumanizing
+ *    binary model to a more supportive spectrum.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
+/**
+ * OMEGA IDENTIFICATION
+ *
+ * Mandatory Omega for high-extraction constraints, probing the root of 'illness' vs 'variation'.
+ */
 
 omega_variable(
     neurodiversity_spectrum_extraction_intent,
-    "Is the 0.72 extraction of the 'illness' label a predatory attempt at social conformity or a genuine (but flawed) attempt at care?",
-    resolution_mechanism("Audit of historical medical outcomes vs. modern quality-of-life improvements in spectrum-based systems"),
-    impact("If predatory: Noose. If attempt at care: Rope."),
+    "Is the historical labeling of neurodivergence as 'illness' a predatory attempt at social conformity, or a genuine (but flawed) attempt at care?",
+    resolution_mechanism("Audit of historical medical outcomes vs. modern quality-of-life improvements in spectrum-based systems."),
+    impact("If predatory: The historical 'Snare' was a tool of social control. If flawed care: The 'Snare' was a misapplied 'Rope'."),
     confidence_without_resolution(medium)
-).
-
-omega_variable(
-    asset_viability_threshold,
-    "Are neurodivergent traits inherent 'assets' or only assets relative to specific societal supports?",
-    resolution_mechanism("Long-term tracking of 'level 3' individuals in varied supportive environments"),
-    impact("If inherent: Mountain. If environment-dependent: Rope/Scaffold."),
-    confidence_without_resolution(low)
 ).
 
 /* ==========================================================================
@@ -235,12 +203,16 @@ omega_variable(
 
 /**
  * VIABLE ALTERNATIVES
- * * ALTERNATIVE 1: The "Normalcy" Binary
- * Viability: Historically dominant for centuries.
- * Suppression: Actively rejected by modern medical literature (DSM-5).
- * * CONCLUSION:
- * The 21st-century "Best Idea" is the rejection of the "Normalcy Noose" in 
- * favor of the "Neurodiversity Mountain" of natural variation.
+ * 
+ * ALTERNATIVE 1: The "Normalcy" Binary (Normal vs. Abnormal)
+ *    Viability: Historically dominant for centuries, deeply ingrained in medical models.
+ *    Suppression: Actively rejected by modern medical literature (DSM-5) and advocacy groups due to its dehumanizing effects.
+ * 
+ * CONCLUSION:
+ * The 21st-century paradigm shift is a rejection of the "Normalcy Snare" in 
+ * favor of the "Neurodiversity Mountain" of natural variation. The prior suppression
+ * of neurodivergent experiences led to immense suffering, making the current shift
+ * a crucial act of re-humanization.
  */
 
 /* ==========================================================================
@@ -249,8 +221,10 @@ omega_variable(
 
 /**
  * TO USE THIS FILE:
+ * 
  * 1. Load: ?- [constraints/neurodiversity_spectrum].
  * 2. Multi-perspective: ?- multi_index_report(neurodiversity_spectrum).
+ * 3. Run tests: ?- run_tests(neurodiversity_spectrum_tests).
  */
 
 /* ==========================================================================

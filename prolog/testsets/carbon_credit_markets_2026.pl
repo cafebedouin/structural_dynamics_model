@@ -34,7 +34,7 @@
  * A market-based mechanism where entities buy and sell emission permits to meet 
  * climate targets. While designed for coordination, its experience varies 
  * drastically based on agent scale, ranging from an efficient tool for 
- * multinationals to an extractive "Noose" for climate activists.
+ * multinationals to an extractive "Snare" for climate activists.
  * * KEY AGENTS:
  * - Multinational Corp: High-power institutional manager using the system for ESG flexibility.
  * - Small Manufacturer: Moderate-power agent burdened by high verification/compliance costs.
@@ -42,7 +42,7 @@
  * - Climate Activist: Analytical observer viewing the system as extractive greenwashing.
  * * NARRATIVE ARC:
  * Originally conceived as a "Rope" for global coordination, the system has 
- * accumulated extractive "barnacles," moving toward a "Tangled Rope" or "Noose" 
+ * accumulated extractive "barnacles," moving toward a "Tangled Rope" or "Snare" 
  * as financial middlemen capture value while climate benefits remain debated.
  */
 
@@ -135,7 +135,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: Climate Activist - Noose
+   PERSPECTIVE 3: Climate Activist - Snare
    --------------------------------------------------------------------------
    WHO: analytical_observer (External critic)
    WHEN: historical (Century-scale climate impact)
@@ -153,7 +153,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     carbon_credit_markets_2026,
-    noose,
+    snare,
     context(
         agent_power(analytical),
         time_horizon(historical),
@@ -175,8 +175,8 @@ test(multi_perspective_variance) :-
     % Consumer sees Mountain
     constraint_indexing:constraint_classification(carbon_credit_markets_2026, mountain, 
         context(individual_powerless, biographical, trapped, local)),
-    % Activist sees Noose
-    constraint_indexing:constraint_classification(carbon_credit_markets_2026, noose, 
+    % Activist sees Snare
+    constraint_indexing:constraint_classification(carbon_credit_markets_2026, snare, 
         context(analytical, historical, analytical, global)).
 
 test(power_extractiveness_scaling) :-
@@ -207,7 +207,7 @@ test(ontological_fraud_detection) :-
  * the systemic trend is upward (+0.02/yr).
  * 2. PERSPECTIVE SELECTION: Included the Institutional (Corp), Powerless (Consumer), 
  * and Analytical (Activist) to show the widest possible spread across the 
- * Mountain/Rope/Noose spectrum.
+ * Mountain/Rope/Snare spectrum.
  * 3. TANGLED ROPE STATUS: While the classifications use the three primary types, 
  * the system-wide claim is marked as 'tangled_rope' to reflect the source's 
  * insistence on this fifth category for "coordination with barnacles."
@@ -224,7 +224,7 @@ omega_variable(
     climate_efficacy_omega,
     "Do carbon credits actually reduce net global emissions or merely relocate them?",
     resolution_mechanism("Decade-scale empirical atmospheric carbon mapping vs. credit retirement audits."),
-    impact("If true reduction: Rope/Tangled Rope. If net zero/negative: Pure Noose/Zombie."),
+    impact("If true reduction: Rope/Tangled Rope. If net zero/negative: Pure Snare/Piton."),
     confidence_without_resolution(low)
 ).
 
@@ -232,7 +232,7 @@ omega_variable(
     middleman_rent_capture,
     "What percentage of credit value is lost to financial intermediaries vs. project funding?",
     resolution_mechanism("Mandatory transparency in secondary market trading spreads."),
-    impact("High capture shifts the system definitively from Tangled Rope to Noose."),
+    impact("High capture shifts the system definitively from Tangled Rope to Snare."),
     confidence_without_resolution(medium)
 ).
 

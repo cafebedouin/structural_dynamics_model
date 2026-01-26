@@ -58,7 +58,7 @@
    ========================================================================= */
 
 narrative_ontology:interval(rn_withdrawal_cycle, 2025, 2026).
-narrative_ontology:constraint_claim(royal_navy_middle_east_withdrawal, noose).
+narrative_ontology:constraint_claim(royal_navy_middle_east_withdrawal, snare).
 
 % Base extractiveness score: High (0.80)
 % Rationale: The UK "extracts" budget savings but at the cost of its global
@@ -88,7 +88,7 @@ narrative_ontology:constraint_metric(royal_navy_middle_east_withdrawal, suppress
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 1: REGIONAL MERCHANT CAPTAIN - Noose
+   PERSPECTIVE 1: REGIONAL MERCHANT CAPTAIN - Snare
    --------------------------------------------------------------------------
    WHO: individual_powerless (A price-taker for security in the Gulf)
    WHEN: immediate (2026 withdrawal window)
@@ -97,13 +97,13 @@ narrative_ontology:constraint_metric(royal_navy_middle_east_withdrawal, suppress
 
    WHY THIS CLASSIFICATION:
    For those relying on the Navy for protection against piracy or state
-   aggression, this is a Noose. They are "trapped" by a decision they didn't
+   aggression, this is a Snare. They are "trapped" by a decision they didn't
    [cite_start]make, losing their security "lifeline" while the risks remain[cite: 3].
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
     royal_navy_middle_east_withdrawal,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -169,7 +169,7 @@ constraint_indexing:constraint_classification(
 :- begin_tests(rn_withdrawal_tests).
 
 test(multi_perspective_variance) :-
-    constraint_indexing:constraint_classification(royal_navy_middle_east_withdrawal, noose, context(individual_powerless, immediate, trapped, _)),
+    constraint_indexing:constraint_classification(royal_navy_middle_east_withdrawal, snare, context(individual_powerless, immediate, trapped, _)),
     constraint_indexing:constraint_classification(royal_navy_middle_east_withdrawal, rope, context(institutional, biographical, mobile, _)),
     constraint_indexing:constraint_classification(royal_navy_middle_east_withdrawal, mountain, context(analytical, historical, _, _)).
 
@@ -212,7 +212,7 @@ omega_variable(
     atlantic_bastion_viability,
     'Will \'drone warships\' successfully replace manned frigates in Gulf patrol roles?',
     resolution_mechanism('Monitor the deployment of drone-led Operation Kipion rotations in the late 2020s.'),
-    impact('If successful, the Noose (lack of protection) becomes a Rope (coordinated drone security).'),
+    impact('If successful, the Snare (lack of protection) becomes a Rope (coordinated drone security).'),
     confidence_without_resolution(low)
 ).
 
@@ -239,7 +239,7 @@ omega_variable(
  * [cite_start]Viability: The official plan to replace manned ships with autonomous systems[cite: 3].
  * [cite_start]Suppression: Suppressed by the "years away" development timeline[cite: 3].
  * * CONCLUSION:
- * The existence of Alternative 1 (manned patrol) makes this a Noose for the
+ * The existence of Alternative 1 (manned patrol) makes this a Snare for the
  * region; its rejection due to "biographical" resource constraints (Rope)
  * for the MoD highlights the Perspectival Gap.
  */

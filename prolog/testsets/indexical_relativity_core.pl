@@ -32,13 +32,13 @@
  * spatial_scope: Universal
  * * SUMMARY:
  * This constraint establishes that the classification of any social or physical 
- * limitation as a Mountain, Rope, or Noose is not an intrinsic property of 
+ * limitation as a Mountain, Rope, or Snare is not an intrinsic property of 
  * the object itself. Instead, it is a function of the observer's power level, 
  * time horizon, and exit options.
  * * KEY AGENTS:
  * - The Powerless Subject: Experiences constraints as immutable "Natural Law" (Mountain).
  * - The Institutional Architect: Experiences constraints as "Choice-based Coordination" (Rope).
- * - The Analytical Historian: Experiences constraints as "Extractive Structures" (Noose/Rope).
+ * - The Analytical Historian: Experiences constraints as "Extractive Structures" (Snare/Rope).
  * * NARRATIVE ARC:
  * As an agent's power or time horizon increases, Mountains "melt" into Ropes. 
  * Conversely, as power decreases, coordination Ropes tighten into coercive Nooses 
@@ -125,21 +125,21 @@ constraint_indexing:constraint_classification(
     !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: The Historian / Observer - Noose
+   PERSPECTIVE 3: The Historian / Observer - Snare
    --------------------------------------------------------------------------
    WHO: analytical (Non-participant observer)
    WHEN: historical (Centuries-long view)
    WHERE: analytical (Unconstrained by the system)
    
    WHY THIS CLASSIFICATION:
-   The historian sees a Noose or a decayed Rope. They observe the extractive 
+   The historian sees a Snare or a decayed Rope. They observe the extractive 
    nature and the eventual collapse of constraints that others saw as 
    permanent.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
     indexical_relativity_core,
-    noose,
+    snare,
     context(
         agent_power(analytical),
         time_horizon(historical),
@@ -147,7 +147,7 @@ constraint_indexing:constraint_classification(
         spatial_scope(global)
     )
 ) :-
-    % Noose when analyzing long-term extractiveness and collapse
+    % Snare when analyzing long-term extractiveness and collapse
     !.
 
 /* ==========================================================================

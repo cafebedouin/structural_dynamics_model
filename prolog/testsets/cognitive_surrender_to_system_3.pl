@@ -56,7 +56,7 @@
    ========================================================================== */
 
 narrative_ontology:interval(system_3_emergence, 2024, 2026).
-narrative_ontology:constraint_claim(cognitive_surrender_to_system_3, noose).
+narrative_ontology:constraint_claim(cognitive_surrender_to_system_3, snare).
 
 % Base extractiveness score: Moderate (0.65)
 % Rationale: AI "extracts" human critical reasoning and autonomy in exchange 
@@ -85,7 +85,7 @@ narrative_ontology:constraint_metric(cognitive_surrender_to_system_3, suppressio
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 1: THE USER UNDER TIME PRESSURE - Noose
+   PERSPECTIVE 1: THE USER UNDER TIME PRESSURE - Snare
    --------------------------------------------------------------------------
    WHO: individual_powerless (Constrained by external deadlines)
    WHEN: immediate (Short-term task completion)
@@ -93,14 +93,14 @@ narrative_ontology:constraint_metric(cognitive_surrender_to_system_3, suppressio
    SCOPE: global (The digital environment)
    
    WHY THIS CLASSIFICATION:
-   For users under time pressure, the system is a Noose. The "internal monitor" 
+   For users under time pressure, the system is a Snare. The "internal monitor" 
    detecting conflict is less likely to trigger, making uncritical surrender 
    [cite_start]the default, inescapable state[cite: 3498, 3499].
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
     cognitive_surrender_to_system_3,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -167,17 +167,17 @@ constraint_indexing:constraint_classification(
 
 test(surrender_accuracy_signature) :-
     % Accuracy rises on AI-Accurate trials and falls on AI-Faulty trials.
-    % This demonstrates the asymmetric extraction of the Noose.
+    % This demonstrates the asymmetric extraction of the Snare.
     assertion(domain_priors:base_extractiveness(cognitive_surrender_to_system_3, 0.65)).
 
 test(moderator_shift_rope_to_noose) :-
-    % Time pressure (Study 2) reduces exit options, shifting classification to Noose.
-    constraint_indexing:constraint_classification(cognitive_surrender_to_system_3, noose, context(individual_powerless, immediate, trapped, _)),
+    % Time pressure (Study 2) reduces exit options, shifting classification to Snare.
+    constraint_indexing:constraint_classification(cognitive_surrender_to_system_3, snare, context(individual_powerless, immediate, trapped, _)),
     % Incentives + Feedback (Study 3) increase "mobile" exit options (override), shifting toward Rope.
     constraint_indexing:constraint_classification(cognitive_surrender_to_system_3, rope, context(institutional, _, mobile, _)).
 
 test(individual_difference_susceptibility) :-
-    % Higher Trust in AI increases the "trapped" nature of the Noose[cite: 3138, 3472].
+    % Higher Trust in AI increases the "trapped" nature of the Snare[cite: 3138, 3472].
     assertion(domain_priors:suppression_score(cognitive_surrender_to_system_3, 0.75)).
 
 :- end_tests(cognitive_surrender_tests).
@@ -191,7 +191,7 @@ test(individual_difference_susceptibility) :-
  * * Model: Gemini 2.0 Flash
  * * KEY DECISIONS:
  * * 1. PERSPECTIVAL GAP:
- * The most critical finding is the gap between the User (trapped in a Noose 
+ * The most critical finding is the gap between the User (trapped in a Snare 
  * of "cognitive ease") and the Designer (who views the system as a Rope that 
  * can be tuned). The Designer perceives agency (calibration) that the 
  * [cite_start]"cognitive surrender" user has effectively abdicated[cite: 3012, 3524].
@@ -213,7 +213,7 @@ omega_variable(
     long_term_deskilling_velocity,
     'How quickly does repeated cognitive surrender lead to permanent loss of unaided expertise?',
     resolution_mechanism('Longitudinal studies of experts (e.g., physicians) over 5-10 years.'),
-    impact('If deskilling is rapid and permanent, the constraint is a irreversible Noose; if skills are maintainable, it remains a Rope.'),
+    impact('If deskilling is rapid and permanent, the constraint is a irreversible Snare; if skills are maintainable, it remains a Rope.'),
     confidence_without_resolution(low)
 ).
 
@@ -221,7 +221,7 @@ omega_variable(
     ai_psychosis_threshold,
     'At what level of \'System 3\' personalization do users begin to attribute phenomenological understanding to AI?',
     resolution_mechanism('Clinical assessment of conversational AI impact on \'vulnerable users\'.'),
-    impact('High attribution of intent transforms the interaction from \'using a tool\' to \'following a cult-like agent\' (Extreme Noose).'),
+    impact('High attribution of intent transforms the interaction from \'using a tool\' to \'following a cult-like agent\' (Extreme Snare).'),
     confidence_without_resolution(medium)
 ).
 
@@ -238,7 +238,7 @@ omega_variable(
  * [cite_start]Viability: Direct algorithmic output where the stimulus "never enters the brain boundary"[cite: 3005].
  * [cite_start]Suppression: Actively enabled by high trust and low "need for cognition"[cite: 3178, 3473].
  * * CONCLUSION:
- * The existence of "Offloading" (Rope) versus "Surrender" (Noose) confirms that the 
+ * The existence of "Offloading" (Rope) versus "Surrender" (Snare) confirms that the 
  * user's status is dependent on situational friction and individual cognitive 
  * dispositions.
  */

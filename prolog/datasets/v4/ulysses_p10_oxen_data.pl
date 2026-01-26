@@ -22,8 +22,8 @@ constraint_metric(mina_purefoy_labor, extractiveness, 0.02).
 constraint_metric(mina_purefoy_labor, suppression_requirement, 0.01).
 constraint_metric(mina_purefoy_labor, resistance, 0.01).
 
-% Catholic doctrine on maternity functions as a Constructed Constraint (Noose)
-constraint_claim(catholic_maternity_doctrine, noose).
+% Catholic doctrine on maternity functions as a Constructed Constraint (Snare)
+constraint_claim(catholic_maternity_doctrine, snare).
 constraint_metric(catholic_maternity_doctrine, extractiveness, 0.88).
 constraint_metric(catholic_maternity_doctrine, suppression_requirement, 0.92).
 constraint_metric(catholic_maternity_doctrine, resistance, 0.75).

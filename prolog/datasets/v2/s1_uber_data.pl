@@ -21,7 +21,7 @@ omega_variable(autonomous_safety_threshold, conceptual, ambiguous_safety_parity_
 omega_variable(regulatory_arbitrage_viability, preference, governmental_decisions_on_ridesharing_caps_in_major_metros).
 
 % 3. Constraint Claims & Kinetic Metrics
-constraint_claim(driver_misclassification, noose).
+constraint_claim(driver_misclassification, snare).
 constraint_metric(driver_misclassification, intensity, 0.88).
 constraint_metric(driver_misclassification, suppression_requirement, 0.75).
 constraint_metric(driver_misclassification, snap_back_potential, 0.91).

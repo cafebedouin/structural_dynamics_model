@@ -46,7 +46,7 @@
  * * NARRATIVE ARC:
  * For a century, the conjecture was a "Mountain" of unproven but suspected 
  * natural law. Perelman converted it into a "Rope" by providing a constructive 
- * path via Ricci Flow with surgery. However, the social "Noose" of the 
+ * path via Ricci Flow with surgery. However, the social "Snare" of the 
  * Millennium Prize and Fields Medal caused Perelman to exit the system 
  * entirely, viewing the professional validation mechanism as extractive.
  */
@@ -140,7 +140,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: PERELMAN (THE MILLENNIUM PRIZE) - Noose
+   PERSPECTIVE 3: PERELMAN (THE MILLENNIUM PRIZE) - Snare
    --------------------------------------------------------------------------
    WHO: individual_powerless - Perelman, despite his genius, felt subject 
         to a corrupt social order of prizes.
@@ -149,14 +149,14 @@ constraint_indexing:constraint_classification(
    SCOPE: local - His personal interaction with the mathematical community.
    
    WHY THIS CLASSIFICATION:
-   The prize was a "Noose." To accept it was to validate a social system of 
+   The prize was a "Snare." To accept it was to validate a social system of 
    prestige he found "completely irrelevant." The prize attempted to extract 
    his compliance with professional norms in exchange for money.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
     poincare_conjecture,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(biographical),
@@ -182,8 +182,8 @@ test(topology_fate_variance) :-
     Type2 = rope.
 
 test(perelman_exit_logic) :-
-    % Perelman's rejection of the prize represents a constrained individual seeing a Noose.
-    constraint_indexing:constraint_classification(poincare_conjecture, noose, context(individual_powerless, biographical, constrained, local)).
+    % Perelman's rejection of the prize represents a constrained individual seeing a Snare.
+    constraint_indexing:constraint_classification(poincare_conjecture, snare, context(individual_powerless, biographical, constrained, local)).
 
 test(natural_emergence) :-
     domain_priors:emerges_naturally(poincare_conjecture).
@@ -201,7 +201,7 @@ test(natural_emergence) :-
  * * KEY DECISIONS:
  * * 1. PERSPECTIVE SPLIT: 
  * I chose to split the "Mathematical Truth" (Mountain) from the 
- * "Social Validation" (Noose). This is essential to explain why 
+ * "Social Validation" (Snare). This is essential to explain why 
  * the discoverer of a "gift to humanity" (Rope) would feel strangled 
  * by it.
  * * 2. EXTRACTIVENESS: 
@@ -216,9 +216,9 @@ test(natural_emergence) :-
 % OMEGA IDENTIFICATION
 omega_variable(
     professional_recognition_toxicity,
-    "Does the 'Noose' of professional recognition prevent future geniuses from sharing proofs?",
+    "Does the 'Snare' of professional recognition prevent future geniuses from sharing proofs?",
     resolution_mechanism("Monitor the frequency of anonymous vs credited publications of 'unsolvable' problems."),
-    impact("If Yes: The social order is a Noose. If No: It is a functional Rope."),
+    impact("If Yes: The social order is a Snare. If No: It is a functional Rope."),
     confidence_without_resolution(medium)
 ).
 
@@ -234,10 +234,10 @@ omega_variable(
  * * ALTERNATIVE 2: Anonymous Publication (arXiv)
  * Viability: How Perelman actually released the work.
  * Suppression: The community attempted to force him back into the 
- * "peer review/prize" Rope, which he experienced as a Noose.
+ * "peer review/prize" Rope, which he experienced as a Snare.
  * * CONCLUSION:
  * Perelman's use of arXiv (Alternative 2) was a "mobile" exit option that 
- * temporarily turned the Noose back into a Rope, but the community's 
+ * temporarily turned the Snare back into a Rope, but the community's 
  * reaction tried to tighten it again.
  */
 
@@ -256,4 +256,4 @@ omega_variable(
 % --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
 constraint_indexing:constraint_classification(poincare_conjucture, mountain, agent_power(analytical)).
 constraint_indexing:constraint_classification(poincare_conjucture, rope, agent_power(institutional)).
-constraint_indexing:constraint_classification(poincare_conjucture, noose, agent_power(individual_powerless)).
+constraint_indexing:constraint_classification(poincare_conjucture, snare, agent_power(individual_powerless)).

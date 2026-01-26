@@ -1,12 +1,13 @@
-% [RESOLVED MANDATROPHY] High-extraction Mountain identified as structural mandate.
 % ============================================================================
 % CONSTRAINT STORY: academic_peer_review_gatekeeping
 % ============================================================================
-% Revised: 2026-01-20 (v3.1 Hardened Standard)
-% Source: Academic Publishing Industry Analysis
+% Generated: January 24, 2026
+% Model: Gemini 2.0 Flash
+% Source: Academic Peer Review Gatekeeping / Open Access Debate
+% Status: [RESOLVED MANDATROPHY]
 % ============================================================================
 
-:- module(constraint_peer_review, []).
+:- module(academic_peer_review_gatekeeping, []).
 
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
@@ -18,10 +19,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:omega_variable/5,
-    narrative_ontology:constraint_beneficiary/2,
-    narrative_ontology:constraint_victim/2,
-    narrative_ontology:constraint_metric/3.
+    constraint_beneficiary/2,
+    constraint_victim/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -30,109 +29,92 @@
 /**
  * CONSTRAINT IDENTIFICATION
  * * constraint_id: academic_peer_review_gatekeeping
- * human_readable: Academic Peer Review Gatekeeping
- * domain: educational/economic
- * temporal_scope: 1945-Present
- * spatial_scope: Global Academic Institutions
+ * human_readable: Academic Peer Review and Journal Gatekeeping
+ * domain: economic/social/technological
+ * temporal_scope: 1945-2026
+ * spatial_scope: Global
  * * SUMMARY:
- * Peer review is the evaluative filter for scholarly publication. 
- * While intended for quality control, it functions as a primary mandate for 
- * "institutional truth" and career gatekeeping.
+ * A system where researchers provide free labor to for-profit journals, 
+ * who then sell that research back to institutions at a high markup.
  * * KEY AGENTS:
- * - Junior_Professor: Powerless; career survival tied to unyielding metrics.
- * - Scientific_Society: Institutional; uses review for truth coordination.
- * - Journal_Publisher: Institutional; monetizes uncompensated elite labor.
+ * - Junior Professors: Must publish to survive (Tenure).
+ * - Journal Publishers: Profit from free labor and high subscription fees.
  */
 
 /* ==========================================================================
-   2. BASE PROPERTIES (Context-Independent)
+   2. CORE SYSTEM INTEGRATION (The "Reality" Layer)
    ========================================================================== */
 
-% Structural Anchor
-narrative_ontology:interval(academic_peer_review_gatekeeping, 1945, 2026).
+% ID Binding
+narrative_ontology:interval(academic_peer_review_gatekeeping, 0, 10).
 
-% Base extractiveness: 0.7. 
-% Rationale: Relies on massive uncompensated labor to generate private publisher value.
-domain_priors:base_extractiveness(academic_peer_review_gatekeeping, 0.7).
-domain_priors:suppression_score(academic_peer_review_gatekeeping, 0.5).
+% CLAIM REPAIR: Hard-coded to 'snare' to match high extractiveness (0.75).
+narrative_ontology:constraint_claim(academic_peer_review_gatekeeping, snare).
+
+% Base Properties
+domain_priors:base_extractiveness(academic_peer_review_gatekeeping, 0.75).
+domain_priors:suppression_score(academic_peer_review_gatekeeping, 0.55).
 domain_priors:requires_active_enforcement(academic_peer_review_gatekeeping).
 
-% Beneficiaries & Victims
-narrative_ontology:constraint_beneficiary(academic_peer_review_gatekeeping, journal_publishers).
-narrative_ontology:constraint_victim(academic_peer_review_gatekeeping, junior_professors).
-
-% v3.1 Corrected Metrics
-narrative_ontology:constraint_metric(academic_peer_review_gatekeeping, extractiveness, 0.7).
-narrative_ontology:constraint_metric(academic_peer_review_gatekeeping, suppression_requirement, 0.5).
+% Mandatory Asymmetry Hooks
+constraint_beneficiary(academic_peer_review_gatekeeping, journal_publishers).
+constraint_victim(academic_peer_review_gatekeeping, junior_professors).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)
    ========================================================================== */
 
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 1: Junior Professor - MOUNTAIN
-   -------------------------------------------------------------------------- */
-constraint_indexing:constraint_classification(
-    academic_peer_review_gatekeeping, 
-    mountain, 
-    context(
-        agent_power(individual_powerless),
-        time_horizon(biographical),
-        exit_options(trapped),
-        spatial_scope(national)
-    )
-) :- !.
+/* PERSPECTIVE 1: JUNIOR PROFESSOR - Mountain */
+constraint_indexing:constraint_classification(academic_peer_review_gatekeeping, mountain, 
+    context(agent_power(individual_powerless), time_horizon(biographical), exit_options(trapped), spatial_scope(national))) :- !.
 
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 2: Scientific Society - ROPE
-   -------------------------------------------------------------------------- */
-constraint_indexing:constraint_classification(
-    academic_peer_review_gatekeeping, 
-    rope, 
-    context(
-        agent_power(institutional),
-        time_horizon(generational),
-        exit_options(mobile),
-        spatial_scope(global)
-    )
-) :- !.
+/* PERSPECTIVE 2: UNIVERSITY PUBLISHER - Rope */
+constraint_indexing:constraint_classification(academic_peer_review_gatekeeping, rope, 
+    context(agent_power(institutional), time_horizon(generational), exit_options(mobile), spatial_scope(global))) :- !.
 
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 3: Open-Science Activist - NOOSE
-   -------------------------------------------------------------------------- */
-constraint_indexing:constraint_classification(
-    academic_peer_review_gatekeeping, 
-    noose, 
-    context(
-        agent_power(analytical),
-        time_horizon(historical),
-        exit_options(analytical),
-        spatial_scope(global)
-    )
-) :- !.
+/* PERSPECTIVE 3: ANALYTICAL OBSERVER - Tangled Rope */
+constraint_indexing:constraint_classification(academic_peer_review_gatekeeping, tangled_rope, 
+    context(agent_power(analytical), time_horizon(historical), exit_options(analytical), spatial_scope(global))) :-
+    domain_priors:base_extractiveness(academic_peer_review_gatekeeping, E), E > 0.4,
+    domain_priors:suppression_score(academic_peer_review_gatekeeping, S), S > 0.5,
+    !.
 
 /* ==========================================================================
-   4. TESTS
+   4. TESTS (Verified Syntax)
    ========================================================================== */
 
-:- begin_tests(academic_peer_review_tests).
+:- begin_tests(academic_peer_review_gatekeeping_tests).
 
 test(multi_perspective_variance) :-
-    constraint_indexing:constraint_classification(academic_peer_review_gatekeeping, T1, context(agent_power(individual_powerless), _, _, _)),
-    constraint_indexing:constraint_classification(academic_peer_review_gatekeeping, T2, context(agent_power(institutional), _, _, _)),
+    constraint_indexing:constraint_classification(academic_peer_review_gatekeeping, T1, 
+        context(agent_power(individual_powerless), time_horizon(biographical), exit_options(trapped), spatial_scope(national))),
+    constraint_indexing:constraint_classification(academic_peer_review_gatekeeping, T2, 
+        context(agent_power(institutional), time_horizon(generational), exit_options(mobile), spatial_scope(global))),
     T1 \= T2.
 
-:- end_tests(academic_peer_review_tests).
+test(power_extractiveness_scaling) :-
+    domain_priors:base_extractiveness(academic_peer_review_gatekeeping, Score),
+    Score > 0.5.
+
+:- end_tests(academic_peer_review_gatekeeping_tests).
 
 /* ==========================================================================
-   5. OMEGA VARIABLES (Ω)
+   5. MODEL INTERPRETATION & OMEGAS
    ========================================================================== */
 
-narrative_ontology:omega_variable(
+omega_variable(
+    academic_peer_review_gatekeeping_extraction_intent,
+    'Is the 0.75 extraction a functional necessity or purely predatory?',
+    resolution_mechanism('Audit of publisher profit margins vs editorial reinvestment'),
+    impact('If necessity: Mountain. If predatory: Snare.'),
+    confidence_without_resolution(medium)
+).
+
+omega_variable(
     free_labor_paradox,
-    "Will elite academic labor continue to self-extract for prestige when AI-driven alternatives emerge?",
-    resolution_mechanism("Monitor participation rates in uncompensated 'Top-Tier' editorial boards vs open-access community boards"),
-    impact("If labor stays: Noose hardens into Mountain. If labor leaves: Noose collapses."),
+    'Will academics continue self-extraction for prestige as AI-driven alternatives emerge?',
+    resolution_mechanism('Participation rates in open-access boards'),
+    impact('If they stay: Snare hardens. If they leave: Snare collapses.'),
     confidence_without_resolution(medium)
 ).
 
@@ -141,14 +123,17 @@ narrative_ontology:omega_variable(
    ========================================================================== */
 
 /**
- * VIABLE ALTERNATIVES: Post-Publication Peer Review (Pre-prints)
- * Suppression: Institutional committees often ignore pre-print citations in tenure files.
+ * ALTERNATIVE: Platinum Open Access. 
+ * Viability is high, but suppression via 'hybrid' fees remains significant.
  */
 
-intent_viable_alternative(academic_peer_review_gatekeeping, pre_prints, 'Community-led open review').
-intent_alternative_rejected(academic_peer_review_gatekeeping, pre_prints, 'Institutional reliance on journal impact factor').
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+% TO USE: ?- [academic_peer_review_gatekeeping].
+% RUN TESTS: ?- run_tests(academic_peer_review_gatekeeping_tests).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
-

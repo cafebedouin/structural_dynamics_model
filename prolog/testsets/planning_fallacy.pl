@@ -46,7 +46,7 @@
  * The constraint functions as a "Mountain" of inherent cognitive limitation. 
  * For the institution, it is a "Rope" (a coordination tool to get 
  * projects started). For the worker at the end of the deadline, it is a 
- * "Noose," as the "impossible" schedule extracts their health and time 
+ * "Snare," as the "impossible" schedule extracts their health and time 
  * to compensate for the initial underestimation.
  */
 
@@ -56,7 +56,7 @@
 
 % Required for structural identification
 narrative_ontology:interval(planning_fallacy_interval, 0, 10).
-narrative_ontology:constraint_claim(planning_fallacy, noose).
+narrative_ontology:constraint_claim(planning_fallacy, snare).
 
 % Base extractiveness score (0.0-1.0)
 % Rationale: It extracts "buffer time" and health from laborers to meet 
@@ -150,7 +150,7 @@ constraint_indexing:constraint_classification(
    SCOPE: local
    
    WHY THIS CLASSIFICATION:
-   For the worker at the end of a project cycle, the fallacy is a Noose. 
+   For the worker at the end of a project cycle, the fallacy is a Snare. 
    The initial underestimation by management creates an impossible 
    deadline that tightens over time, extracting their evening and 
    weekend hours to "fix" the schedule.
@@ -158,7 +158,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     planning_fallacy,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -182,8 +182,8 @@ test(multi_perspective_variance) :-
     constraint_indexing:constraint_classification(planning_fallacy, mountain, context(agent_power(analytical), _, _, _)),
     % Institutional sees Rope
     constraint_indexing:constraint_classification(planning_fallacy, rope, context(agent_power(institutional), _, _, _)),
-    % Powerless sees Noose
-    constraint_indexing:constraint_classification(planning_fallacy, noose, context(agent_power(individual_powerless), _, _, _)).
+    % Powerless sees Snare
+    constraint_indexing:constraint_classification(planning_fallacy, snare, context(agent_power(individual_powerless), _, _, _)).
 
 /**
  * TEST 2: Power-based extractiveness scaling
@@ -224,7 +224,7 @@ test(time_immutability_planning) :-
  * * 2. PERSPECTIVE SELECTION:
  * Chose Analytical (the graph), Institutional (the budgeter), and 
  * Individual Powerless (the "crunched" worker) to show the full range 
- * of "Mountain," "Rope," and "Noose."
+ * of "Mountain," "Rope," and "Snare."
  * * 3. CLASSIFICATION RATIONALE:
  * The "Rope" for founders is a crucial insight: if people were rational 
  * about project timelines, few large-scale innovations would be attempted.
@@ -239,9 +239,9 @@ test(time_immutability_planning) :-
 
 omega_variable(
     intentional_underestimation,
-    "How much of the planning fallacy is biological bias (Mountain) versus strategic, deceptive underestimation (Noose) for funding?",
+    "How much of the planning fallacy is biological bias (Mountain) versus strategic, deceptive underestimation (Snare) for funding?",
     resolution_mechanism("Compare private project estimates with public funding requests"),
-    impact("If Strategic: It is a Noose of deception. If Biological: It is a Mountain of error."),
+    impact("If Strategic: It is a Snare of deception. If Biological: It is a Mountain of error."),
     confidence_without_resolution(medium)
 ).
 
@@ -259,7 +259,7 @@ omega_variable(
  * * CONCLUSION:
  * The existence of a valid alternative (RCF) that is suppressed by 
  * institutional optimism confirms that for the laborer, the fallacy 
- * is a Noose, not a natural Mountain.
+ * is a Snare, not a natural Mountain.
  */
 
 /* ==========================================================================

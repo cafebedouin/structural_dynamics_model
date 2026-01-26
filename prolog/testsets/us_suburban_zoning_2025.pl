@@ -44,7 +44,7 @@
  * * NARRATIVE ARC:
  * Originally designed for the 1970s nuclear family, zoning now acts as a
  * [cite_start]"Mountain" of physical and legal inertia. [cite: 10, 11] Entrepreneurs like Anderson
- * treat it as a "Noose" to be escaped via architectural loopholes, while
+ * treat it as a "Snare" to be escaped via architectural loopholes, while
  * states like California are attempting to convert it into a "Rope" (flexible
  * [cite_start]coordination) through ADU laws. [cite: 12, 14]
  */
@@ -55,7 +55,7 @@
 
 % ID for Python extraction
 narrative_ontology:interval(us_suburban_zoning_2025, 1970, 2026).
-narrative_ontology:constraint_claim(us_suburban_zoning_2025, noose).
+narrative_ontology:constraint_claim(us_suburban_zoning_2025, snare).
 
 % Base extractiveness: 0.7
 % Rationale: High asymmetry. [cite_start]Homeowners with large lots gain "billions in value" [cite: 16]
@@ -86,7 +86,7 @@ narrative_ontology:constraint_metric(us_suburban_zoning_2025, suppression_requir
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 1: MONTE ANDERSON (DEVELOPER) - Noose
+   PERSPECTIVE 1: MONTE ANDERSON (DEVELOPER) - Snare
    --------------------------------------------------------------------------
    WHO: individual_moderate - Has resources to build, but constrained by law.
    WHEN: biographical - His career is built on navigating these specific codes.
@@ -104,7 +104,7 @@ narrative_ontology:constraint_metric(us_suburban_zoning_2025, suppression_requir
 
 constraint_indexing:constraint_classification(
     us_suburban_zoning_2025,
-    noose,
+    snare,
     context(
         agent_power(individual_moderate),
         time_horizon(biographical),
@@ -184,7 +184,7 @@ constraint_indexing:constraint_classification(
 :- begin_tests(us_suburban_zoning_2025_tests).
 
 test(multi_perspective_variance) :-
-    constraint_indexing:constraint_classification(us_suburban_zoning_2025, Type1, context(individual_moderate, biographical, constrained, national)), % Noose
+    constraint_indexing:constraint_classification(us_suburban_zoning_2025, Type1, context(individual_moderate, biographical, constrained, national)), % Snare
     constraint_indexing:constraint_classification(us_suburban_zoning_2025, Type2, context(individual_powerless, immediate, trapped, regional)), % Mountain
     Type1 \= Type2.
 
@@ -199,7 +199,7 @@ test(power_extractiveness_scaling) :-
 
 test(loophole_as_exit) :-
     % If an agent has a "loophole" (hidden door), they move from Trapped to Constrained.
-    % This shifts the classification from Mountain (for the renter) to Noose (for the developer).
+    % This shifts the classification from Mountain (for the renter) to Snare (for the developer).
     true.
 
 :- end_tests(us_suburban_zoning_2025_tests).
@@ -221,7 +221,7 @@ test(loophole_as_exit) :-
  * invisible; they are "essentially banned." The physical concealment
  * [cite_start]of doors in closets is a literal manifestation of suppression. [cite: 3, 10]
  * * 3. PERSPECTIVES:
- * - [cite_start]Monte Anderson (Noose): He is the primary case study of navigating a coercive law. [cite: 3]
+ * - [cite_start]Monte Anderson (Snare): He is the primary case study of navigating a coercive law. [cite: 3]
  * - Renters (Mountain): Represents the millions of people who cannot change
  * [cite_start]the zoning but are forced to "double up" to survive. [cite: 15]
  * - Legislators (Rope): Represents the institutional effort to regain
@@ -248,7 +248,7 @@ omega_variable(
     nimby_political_will,
     'Will local residents continue to successfully block zoning changes, or will state-level overrides become the new norm?',
     resolution_mechanism('Measure the ratio of local zoning vetoes vs. state pre-emption overrides in CA/TX by 2030.'),
-    impact('If Noose: Residents keep a lock on supply. If Rope: Institutional agents successfully modernize the system.'),
+    impact('If Snare: Residents keep a lock on supply. If Rope: Institutional agents successfully modernize the system.'),
     confidence_without_resolution(low)
 ).
 
@@ -266,7 +266,7 @@ omega_variable(
  * [cite_start]Evidence: The text notes this model is now "reversed" as households double up. [cite: 15]
  * * CONCLUSION:
  * The existence of ADU laws as a "bright spot" confirms that the rigid
- * Single-Family zoning is a Noose being partially unraveled. If there
+ * Single-Family zoning is a Snare being partially unraveled. If there
  * [cite_start]were no alternatives, it would remain a Mountain. [cite: 14]
  */
 

@@ -49,7 +49,7 @@
  * Adverse possession begins as a "Rope"—a legal coordination tool to prevent 
  * stale claims and clarify land titles. For the successful squatter, it remains 
  * a Rope to pull themselves into ownership. However, for the negligent owner 
- * who discovers the claim too late, it becomes a "Noose," as the law 
+ * who discovers the claim too late, it becomes a "Snare," as the law 
  * irreversibly extracts their deed. For the legal system, it is a 
  * "Mountain"—a fixed temporal wall where property rights simply expire.
  */
@@ -159,7 +159,7 @@ constraint_indexing:constraint_classification(
     !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE NEGLIGENT HEIR - Noose
+   PERSPECTIVE 3: THE NEGLIGENT HEIR - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless - Subject to a law they didn't know was running.
@@ -169,7 +169,7 @@ constraint_indexing:constraint_classification(
    
    WHY THIS CLASSIFICATION:
    For the owner who discovers a squatter has met the requirements, the 
-   law is a Noose. They are "strangled" by the passage of time they 
+   law is a Snare. They are "strangled" by the passage of time they 
    ignored. The law extracts 100% of their equity without compensation. 
    There is no "exit" or negotiation possible; the trap has already snapped.
    
@@ -180,7 +180,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     adverse_possession,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -199,13 +199,13 @@ constraint_indexing:constraint_classification(
 :- begin_tests(adverse_possession_tests).
 
 test(multi_perspective_variance) :-
-    % Lawyer sees Mountain, Developer sees Rope, Heir sees Noose
+    % Lawyer sees Mountain, Developer sees Rope, Heir sees Snare
     constraint_indexing:constraint_classification(adverse_possession, mountain, context(analytical, historical, analytical, national)),
     constraint_indexing:constraint_classification(adverse_possession, rope, context(institutional, biographical, arbitrage, local)),
-    constraint_indexing:constraint_classification(adverse_possession, noose, context(individual_powerless, immediate, trapped, local)).
+    constraint_indexing:constraint_classification(adverse_possession, snare, context(individual_powerless, immediate, trapped, local)).
 
 test(power_extractiveness_property) :-
-    % Powerless individuals feel the total extraction of their land (Noose).
+    % Powerless individuals feel the total extraction of their land (Snare).
     % Institutional actors use the law to clear title for growth (Rope).
     ContextPowerless = context(individual_powerless, immediate, trapped, local),
     ContextPowerful = context(institutional, biographical, arbitrage, local),
@@ -214,7 +214,7 @@ test(power_extractiveness_property) :-
     Score1 > Score2.
 
 test(time_immutability_property) :-
-    % Short horizon discovery = Noose.
+    % Short horizon discovery = Snare.
     % Historical lookback = Mountain.
     constraint_indexing:effective_immutability(historical, trapped, mountain).
 
@@ -242,13 +242,13 @@ test(time_immutability_property) :-
  * * 3. PERSPECTIVE SELECTION:
  * Chose the Lawyer (Law), the Developer (Utility Tool), and the Heir 
  * (Victim) to highlight how a property "rope" for a community 
- * becomes a "noose" for an individual.
+ * becomes a "snare" for an individual.
  * * 4. AMBIGUITIES:
  * - The "Good Faith" vs. "Hostile" requirement varies by jurisdiction. 
  * I assumed the traditional "Hostile" (meaning without permission) 
  * common law standard for this analysis.
  * * 5. CONFIDENCE:
- * High: Classification as Noose for the losing owner.
+ * High: Classification as Snare for the losing owner.
  * Medium: Extractiveness (varies based on land value).
  */
 
@@ -258,11 +258,11 @@ test(time_immutability_property) :-
 
 omega_variable(
     intentionality_requirement,
-    "Does the squatter need to intend to steal the land (Noose) or simply 
+    "Does the squatter need to intend to steal the land (Snare) or simply 
     believe they own it (Rope)?",
     resolution_mechanism("Legislative review of state-specific 'mental state' 
     requirements for adverse possession"),
-    impact("If Intentional: It's a predatory Noose. If Mistaken: It's a 
+    impact("If Intentional: It's a predatory Snare. If Mistaken: It's a 
     protective Rope for boundaries."),
     confidence_without_resolution(medium)
 ).
@@ -276,7 +276,7 @@ omega_variable(
  * * ALTERNATIVE 1: Eminent Domain
  * Viability: State acquisition for public use with compensation.
  * Suppression: Bypassed because Adverse Possession requires NO 
- * compensation, making it a more "extractive" Noose for the owner.
+ * compensation, making it a more "extractive" Snare for the owner.
  * * ALTERNATIVE 2: Market Purchase
  * Viability: The squatter could simply buy the land.
  * Suppression: Ignored by the squatter because the "Free" legal 
@@ -284,7 +284,7 @@ omega_variable(
  * * CONCLUSION:
  * The existence of paid alternatives (Purchase) that are bypassed for a 
  * free legal extraction confirms that for the titled owner, Adverse 
- * Possession is a Noose.
+ * Possession is a Snare.
  */
 
 /* ==========================================================================

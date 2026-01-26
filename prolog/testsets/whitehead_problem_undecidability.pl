@@ -46,7 +46,7 @@
  * The Whitehead Problem functions as a "Mountain" of logical reality where the 
  * path to the summit is missing. In homological algebra, it serves as a 
  * "Rope" for exploring the boundaries of freeness. However, for those seeking 
- * absolute algebraic certainty, the independence from ZFC acts as a "Noose," 
+ * absolute algebraic certainty, the independence from ZFC acts as a "Snare," 
  * extracting the hope of a single "True" algebra (extraction) and "strangling" 
  * the intuition that basic group properties are absolute.
  */
@@ -144,7 +144,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE CLASSICAL ALGEBRAIST - Noose
+   PERSPECTIVE 3: THE CLASSICAL ALGEBRAIST - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_moderate - Has the tools of group theory but is bound by independence.
@@ -154,7 +154,7 @@ constraint_indexing:constraint_classification(
    
    WHY THIS CLASSIFICATION:
    For the seeker of absolute algebraic truth, the Whitehead independence is 
-   a "Noose." It "strangles" the dream that algebra is independent of 
+   a "Snare." It "strangles" the dream that algebra is independent of 
    the "messy" foundations of set theory. It extracts the "certainty of 
    freeness" (extraction) by proving that even basic group-theoretic 
    questions are "choked" by the incompleteness of ZFC.
@@ -162,7 +162,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     whitehead_problem_undecidability,
-    noose,
+    snare,
     context(
         agent_power(individual_moderate),
         time_horizon(civilizational),
@@ -188,7 +188,7 @@ test(multi_perspective_variance) :-
     Type1 \= Type2.
 
 test(deductive_extraction_penalty) :-
-    % Algebraists experience the "Noose" of foundational extraction.
+    % Algebraists experience the "Snare" of foundational extraction.
     Context = context(individual_moderate, civilizational, constrained, global),
     constraint_indexing:extractiveness_for_agent(whitehead_problem_undecidability, Context, Score),
     Score >= 0.15.
@@ -216,7 +216,7 @@ test(natural_emergence) :-
  * and the Classical Algebraist (Victim of Indeterminacy).
  * * 3. CLASSIFICATION RATIONALE:
  * The problem is a "Mountain" because the logic is unyielding, but 
- * becomes a "Noose" for those who refuse to use the "Rope" of 
+ * becomes a "Snare" for those who refuse to use the "Rope" of 
  * extended axioms (like CH).
  * * 4. AMBIGUITIES:
  * The biggest variable is whether there exists a "Natural" model of 
@@ -228,7 +228,7 @@ omega_variable(
     natural_set_universe_consensus,
     "Is there a 'True' universe of sets (e.g., V=L or Large Cardinals) that makes Whitehead decidable (Mountain) or is it a pluralist Scaffold?",
     resolution_mechanism("Consensus on 'Ultimate L' or similar foundational proposals."),
-    impact("If Mountain: The Whitehead problem has a 'True' answer. If Scaffold: It is permanently a Rope/Noose hybrid."),
+    impact("If Mountain: The Whitehead problem has a 'True' answer. If Scaffold: It is permanently a Rope/Snare hybrid."),
     confidence_without_resolution(medium)
 ).
 
@@ -245,7 +245,7 @@ omega_variable(
  * * ALTERNATIVE 2: Martin's Axiom (MA) + ¬CH
  * Viability: In this model, the answer is "No" (there are non-free Whitehead groups).
  * * CONCLUSION:
- * The existence of Alternative 1 (V=L) proves that the "Noose" of 
+ * The existence of Alternative 1 (V=L) proves that the "Snare" of 
  * undecidability is a choice. We can climb the Mountain if we agree on 
  * which Rope to use.
  */

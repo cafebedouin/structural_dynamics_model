@@ -42,7 +42,7 @@
  * Cardinal Hierarchy as a "Rope" to resolve independence results like the 
  * Continuum Hypothesis.
  * - The Finitist/Formalist (Analytical): An observer for whom these axioms 
- * are a "Noose," extracting the simplicity of minimal foundations in favor 
+ * are a "Snare," extracting the simplicity of minimal foundations in favor 
  * of an "infinite ontological tax."
  * * NARRATIVE ARC:
  * Large Cardinals represent the "Mountain" of transfinite reality; their 
@@ -50,7 +50,7 @@
  * they are a "Rope"—the "Consistency Strength" scale used to coordinate the 
  * limits of what can be proven. However, for the foundational minimalist, 
  * the requirement to believe in "measurable" or "supercompact" cardinals 
- * acts as a "Noose," extracting the "purity" of small foundations and 
+ * acts as a "Snare," extracting the "purity" of small foundations and 
  * "strangling" the hope for a theory that doesn't rely on increasingly 
  * monstrous infinities.
  */
@@ -151,7 +151,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE FINITIST SKEPTIC - Noose
+   PERSPECTIVE 3: THE FINITIST SKEPTIC - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_moderate - Has the tools of proof but is bound by the hierarchy.
@@ -160,7 +160,7 @@ constraint_indexing:constraint_classification(
    SCOPE: global - Universal limit on formal simplicity.
    
    WHY THIS CLASSIFICATION:
-   For the minimalist, the hierarchy is a "Noose." It "strangles" the hope 
+   For the minimalist, the hierarchy is a "Snare." It "strangles" the hope 
    for a simple foundation. It extracts the "certainty of the small" 
    (extraction) by proving that any system we build will eventually 
    require "choking" on the existence of infinities so large they defy 
@@ -171,7 +171,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     large_cardinal_foundations,
-    noose,
+    snare,
     context(
         agent_power(individual_moderate),
         time_horizon(civilizational),
@@ -197,7 +197,7 @@ test(multi_perspective_variance) :-
     Type1 \= Type2.
 
 test(ontological_extraction_penalty) :-
-    % Minimalists experience the "Noose" of foundational extraction.
+    % Minimalists experience the "Snare" of foundational extraction.
     Context = context(individual_moderate, civilizational, constrained, global),
     constraint_indexing:extractiveness_for_agent(large_cardinal_foundations, Context, Score),
     Score >= 0.25.
@@ -221,7 +221,7 @@ test(natural_emergence) :-
  * are taxed with accepting ever-larger ontological commitments.
  * * 2. CLASSIFICATION RATIONALE:
  * Chose Cardinal (Subject), Professor (User), and Skeptic (Victim) 
- * to illustrate how a "Mountain" of formal reality becomes a "Noose" 
+ * to illustrate how a "Mountain" of formal reality becomes a "Snare" 
  * for those seeking foundational simplicity.
  */
 
@@ -249,7 +249,7 @@ omega_variable(
  * "exists" statically.
  * * CONCLUSION:
  * The existence of "Strong" cardinals turns the "Rope" of foundational 
- * choice into a "Noose" for those who want math to be both simple and complete.
+ * choice into a "Snare" for those who want math to be both simple and complete.
  */
 
 /* ==========================================================================
@@ -270,4 +270,4 @@ omega_variable(
 % --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
 constraint_indexing:constraint_classification(large_cardinals_foundations, mountain, agent_power(analytical)).
 constraint_indexing:constraint_classification(large_cardinals_foundations, rope, agent_power(institutional)).
-constraint_indexing:constraint_classification(large_cardinals_foundations, noose, agent_power(individual_powerless)).
+constraint_indexing:constraint_classification(large_cardinals_foundations, snare, agent_power(individual_powerless)).

@@ -23,12 +23,12 @@ event(ev04_the_snap, rule_failure, 95, [axiom(non_dictatorship), state(broken)])
 constraint_claim(transitive_rationality, mountain).
 constraint_metric(transitive_rationality, accessibility_collapse, 0.95).
 
-% Noose: Independence of Irrelevant Alternatives. Clamps the ribs; each comparison must stand alone.
-constraint_claim(independence_clamp, noose).
+% Snare: Independence of Irrelevant Alternatives. Clamps the ribs; each comparison must stand alone.
+constraint_claim(independence_clamp, snare).
 constraint_metric(independence_clamp, stakes_inflation, 0.90).
 
-% Zombie: Non-dictatorship. The rule that 'no one gets to dominate' which snaps under the weight of the others.
-constraint_claim(non_dictatorship_ideal, zombie).
+% Piton: Non-dictatorship. The rule that 'no one gets to dominate' which snaps under the weight of the others.
+constraint_claim(non_dictatorship_ideal, piton).
 constraint_metric(non_dictatorship_ideal, suppression, 0.85).
 
 % --- 4. Recommendations & Veto Structure ---

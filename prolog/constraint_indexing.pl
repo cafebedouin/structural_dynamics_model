@@ -1,8 +1,7 @@
-% ============================================================================
-% INDEXICAL CONSTRAINT CLASSIFICATION
+% CONSTRAINT CLASSIFICATION
 % ============================================================================
 % This module implements context-indexed constraint classification.
-% Every Mountain/Rope/Noose judgment is relative to WHO, WHEN, WHERE, HOW.
+% Every Mountain/Rope/Snare judgment is relative to WHO, WHEN, WHERE, HOW.
 %
 % Integration: Load after domain_priors.pl, before report_generator.pl
 % ============================================================================
@@ -49,10 +48,10 @@
 % Agent Power Levels - WHO is evaluating?
 % ----------------------------------------------------------------------------
 
-agent_power(individual_powerless).    % Serf, prisoner, child
-agent_power(individual_moderate).     % Middle class, citizen
-agent_power(individual_powerful).     % Wealthy, connected
-agent_power(collective_organized).    % Union, movement
+agent_power(powerless).    % Serf, prisoner, child
+agent_power(moderate).     % Middle class, citizen
+agent_power(powerful).     % Wealthy, connected
+agent_power(organized).    % Union, movement
 agent_power(institutional).           % State, corporation, church
 agent_power(analytical).              % Historian, philosopher (meta-level)
 
@@ -85,6 +84,7 @@ spatial_scope(regional).             % Province, state
 spatial_scope(national).             % Country
 spatial_scope(continental).          % Europe, Asia, etc
 spatial_scope(global).               % Worldwide
+spatial_scope(universal).            % Universal
 
 % ============================================================================
 % CONTEXT STRUCTURE
@@ -170,18 +170,21 @@ effective_immutability_for_context(
 % ----------------------------------------------------------------------------
 % More powerful agents experience less extraction from same constraint
 % Negative modifier = net beneficiary
+% Determines how much of the base extraction is "felt" by the agent.
+% Lower numbers = higher benefit/protection from the constraint.
 
-power_modifier(individual_powerless, 1.5).   % Experience MORE extraction
-power_modifier(individual_moderate, 1.0).    % Baseline
-power_modifier(individual_powerful, 0.5).    % Experience LESS extraction
-power_modifier(collective_organized, 0.7).   % Shared burden
-power_modifier(institutional, -0.2).         % NET BENEFICIARY
-power_modifier(analytical, 1.0).             % Neutral observer
+power_modifier(powerless,     1.2).  % Subject to maximum extraction
+power_modifier(moderate,      0.8).
+power_modifier(powerful,      0.4).
+power_modifier(organized,     0.7).  % Reflects shared burden/cost
+power_modifier(institutional, -0.2). % Net beneficiary (extracts from others)
+power_modifier(analytical,    1.0).  % Neutral baseline
 
 % ----------------------------------------------------------------------------
 % Calculate Extractiveness for Specific Agent
 % ----------------------------------------------------------------------------
 
+% Formula: Effective Extraction = Base Extraction * Power Modifier
 extractiveness_for_agent(Constraint, Context, Score) :-
     Context = context(agent_power(Power), _, _, _),
     base_extractiveness(Constraint, BaseScore),
@@ -207,7 +210,6 @@ extractiveness_for_agent(Constraint, Context, Score) :-
 % ============================================================================
 % QUERY UTILITIES
 % ============================================================================
-
 % ----------------------------------------------------------------------------
 % Interactive Context Discovery
 % ----------------------------------------------------------------------------

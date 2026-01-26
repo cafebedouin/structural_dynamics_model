@@ -43,7 +43,7 @@
  * * NARRATIVE ARC:
  * Originally observed regarding coal use in the UK, the paradox transforms "savings" 
  * into "expansion." It functions as a "Mountain" of economic logic, a "Rope" for 
- * industrial growth, and a "Noose" for environmental sustainability as it 
+ * industrial growth, and a "Snare" for environmental sustainability as it 
  * strangles conservation efforts with their own success.
  */
 
@@ -145,7 +145,7 @@ constraint_indexing:constraint_classification(
     !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE ENVIRONMENTAL CONSERVATIONIST - Noose
+   PERSPECTIVE 3: THE ENVIRONMENTAL CONSERVATIONIST - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless - Subject to the outcomes of a systemic trap.
@@ -154,7 +154,7 @@ constraint_indexing:constraint_classification(
    SCOPE: local - Immediate ecosystem or atmosphere.
    
    WHY THIS CLASSIFICATION:
-   For the conservationist, Jevons Paradox is a Noose. They fight for 
+   For the conservationist, Jevons Paradox is a Snare. They fight for 
     efficiency as a way to "save" the planet, only to find that every 
     technological victory tightens the trap by increasing total throughput. 
     The efficiency logic strangles the possibility of genuine reduction, 
@@ -163,7 +163,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     jevons_paradox,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -182,13 +182,13 @@ constraint_indexing:constraint_classification(
 :- begin_tests(jevons_paradox_tests).
 
 test(multi_perspective_variance) :-
-    % Analyst sees Mountain, Institutional sees Rope, Powerless sees Noose
+    % Analyst sees Mountain, Institutional sees Rope, Powerless sees Snare
     constraint_indexing:constraint_classification(jevons_paradox, mountain, context(analytical, civilizational, analytical, global)),
     constraint_indexing:constraint_classification(jevons_paradox, rope, context(institutional, biographical, arbitrage, national)),
-    constraint_indexing:constraint_classification(jevons_paradox, noose, context(individual_powerless, immediate, constrained, local)).
+    constraint_indexing:constraint_classification(jevons_paradox, snare, context(individual_powerless, immediate, constrained, local)).
 
 test(power_extractiveness_rebound) :-
-    % Powerless conservationists feel the total extraction of their efforts (Noose).
+    % Powerless conservationists feel the total extraction of their efforts (Snare).
     % Institutional leaders leverage the rebound for market growth (Rope).
     ContextPowerless = context(individual_powerless, immediate, constrained, local),
     ContextPowerful = context(institutional, biographical, arbitrage, national),
@@ -237,10 +237,10 @@ omega_variable(
     price_elasticity_limit,
     "Is there a physical limit where price elasticity breaks and efficiency 
     finally leads to net reduction (Mountain), or will human demand always 
-    expand into the new vacancy (Noose)?",
+    expand into the new vacancy (Snare)?",
     resolution_mechanism("Long-term tracking of 'mature' technology markets 
     to see if consumption ever plateaus as costs approach zero"),
-    impact("If Mountain: Efficiency eventually works. If Noose: Capping total 
+    impact("If Mountain: Efficiency eventually works. If Snare: Capping total 
     throughput is the only exit."),
     confidence_without_resolution(medium)
 ).
@@ -261,7 +261,7 @@ omega_variable(
  * against in favor of "intensity targets" (efficiency).
  * * CONCLUSION:
  * The existence of "Caps" as a suppressed alternative is what converts 
- * Jevons Paradox from a natural Mountain into a social Noose.
+ * Jevons Paradox from a natural Mountain into a social Snare.
  */
 
 /* ==========================================================================

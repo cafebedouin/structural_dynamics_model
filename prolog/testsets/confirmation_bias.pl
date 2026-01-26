@@ -43,7 +43,7 @@
  * * NARRATIVE ARC:
  * The bias functions as a "Mountain" of biological pre-programming. For the 
  * individual, it is a "Rope" providing cognitive ease and social cohesion. 
- * In polarized societies, it becomes a "Noose," as groups become trapped in 
+ * In polarized societies, it becomes a "Snare," as groups become trapped in 
  * incompatible realities, strangling the possibility of collective 
  * problem-solving.
  */
@@ -54,7 +54,7 @@
 
 % Required for structural integration
 narrative_ontology:interval(confirmation_bias_interval, 0, 10).
-narrative_ontology:constraint_claim(confirmation_bias, noose).
+narrative_ontology:constraint_claim(confirmation_bias, snare).
 
 % Base extractiveness: 0.3 (Moderate)
 % Rationale: It extracts "objective truth" and "rationality." It benefits 
@@ -145,7 +145,7 @@ constraint_indexing:constraint_classification(
    SCOPE: national
    
    WHY THIS CLASSIFICATION:
-   For the citizen trapped in a polarized environment, the bias is a Noose. 
+   For the citizen trapped in a polarized environment, the bias is a Snare. 
    Every piece of information they consume tightens their existing 
    prejudices, making it impossible to see the "other side" as human or 
    rational. Their ability to think independently is strangled by the 
@@ -154,7 +154,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     confirmation_bias,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -207,9 +207,9 @@ test(time_horizon_immutability) :-
 
 omega_variable(
     algorithmic_feedback_weight,
-    "To what extent is modern polarization caused by biological bias (Mountain) vs. algorithmic amplification (Noose)?",
+    "To what extent is modern polarization caused by biological bias (Mountain) vs. algorithmic amplification (Snare)?",
     resolution_mechanism("Comparative study of polarized groups with and without digital social media exposure"),
-    impact("If Mountain: Education is the only fix. If Noose: Regulation can loosen the trap."),
+    impact("If Mountain: Education is the only fix. If Snare: Regulation can loosen the trap."),
     confidence_without_resolution(medium)
 ).
 
@@ -224,7 +224,7 @@ omega_variable(
  * Suppression: High. It is cognitively expensive and socially isolating.
  * * CONCLUSION:
  * The existence of the scientific method as an alternative makes 
- * confirmation bias a Noose for those who refuse (or are unable) to 
+ * confirmation bias a Snare for those who refuse (or are unable) to 
  * use it, but a Rope for those who use it strategically.
  */
 

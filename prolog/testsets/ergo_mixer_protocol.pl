@@ -1,8 +1,8 @@
 % ============================================================================
 % CONSTRAINT STORY: ergo_mixer_protocol
 % ============================================================================
-% Generated: 2026-01-17
-% Model: Gemini 2.0 Flash
+% Generated: 2026-01-23
+% Model: Gemini Pro (Revised)
 % Source: ErgoMixer (ZeroJoin) / Ergo Privacy Infrastructure
 % ============================================================================
 
@@ -12,7 +12,7 @@
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
 
-% --- Namespace Hooks ---
+% --- Namespace Hooks (Required for loading) ---
 :- multifile 
     domain_priors:base_extractiveness/2,
     domain_priors:suppression_score/2,
@@ -25,47 +25,40 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: ergo_mixer_protocol
+ * 
+ * constraint_id: ergo_mixer_protocol
  * human_readable: ErgoMixer Privacy Mechanism
- * domain: social/technological
+ * domain: social/technological/legal
  * temporal_scope: 2020-Present
  * spatial_scope: Ergo Blockchain (Global)
- * * SUMMARY:
+ * 
+ * SUMMARY:
  * ErgoMixer is the first non-interactive, non-custodial mixer in the crypto 
  * industry. It utilizes the ZeroJoin protocol, which relies 
  * on Sigma protocols (Zero-Knowledge Proofs) and ring signatures to break 
  * on-chain links between deposit and withdrawal addresses. 
- * Unlike interactive mixers like CoinJoin, users do not need to be online 
- * simultaneously to mix their funds.
- * * KEY AGENTS:
- * - Privacy_User: Individual seeking to restore fungibility to their assets 
- * to avoid profiling.
- * - Observer/Chain_Analyst: External party attempting to trace fund 
- * provenance.
- * - Mix_Participant: Other users in the same pool who collectively create 
- * the anonymity set.
- * * NARRATIVE ARC:
- * Funds enter the "mosh pit" (a shared eUTXO pool). Every round, 
- * the coins are mixed with others', increasing the difficulty for an 
- * observer to guess the origin—mathematically halving the probability 
- * with each round. The process continues until the user 
- * decides to exit to a fresh address.
+ * This enhances privacy and fungibility in blockchain transactions.
+ * 
+ * KEY AGENTS:
+ * - Regulatory Body / Law Enforcement (Institutional): Seeks to track financial flows.
+ * - Privacy User (Individual Moderate): Individual seeking to restore fungibility to their assets.
+ * - User in a Small Pool (Individual Powerless): Faces statistical traceability due to low anonymity set.
  */
 
 /* ==========================================================================
-   2. BASE PROPERTIES (Context-Independent)
+   2. CORE SYSTEM INTEGRATION (Context-Independent)
    ========================================================================== */
 
-narrative_ontology:interval(ergo_mixer_interval, 0, 10).
-narrative_ontology:constraint_claim(ergo_mixer_protocol, rope).
+narrative_ontology:interval(ergo_mixer_protocol, 0, 10).
+narrative_ontology:constraint_claim(ergo_mixer_protocol, tangled_rope).
 
-% Base extractiveness: Low (0.1)
-% Rationale: The protocol is non-custodial and serverless; there is no 
+% Base extractiveness: 0.1.
+% The protocol is non-custodial and serverless; there is no 
 % central entity extracting value beyond minimal network fees.
 domain_priors:base_extractiveness(ergo_mixer_protocol, 0.1).
 
-% Suppression score: Low (0.1)
-% Rationale: It is an opt-in tool. While it suppresses the ability of 
+% Suppression score: 0.1.
+% It is an opt-in tool. While it suppresses the ability of 
 % analysts to trace funds, it does not hide its own existence or prevent 
 % users from using transparent transactions.
 domain_priors:suppression_score(ergo_mixer_protocol, 0.1).
@@ -75,8 +68,6 @@ domain_priors:emerges_naturally(ergo_mixer_protocol).
 
 % BENEFICIARIES & VICTIMS
 constraint_beneficiary(ergo_mixer_protocol, privacy_seeking_users).
-% Victims are chain analysis firms whose data-extraction business model 
-% is degraded by the obfuscation.
 constraint_victim(ergo_mixer_protocol, chain_analysts).
 
 /* ==========================================================================
@@ -84,17 +75,42 @@ constraint_victim(ergo_mixer_protocol, chain_analysts).
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 1: Privacy User - ROPE
+   PERSPECTIVE 1: REGULATORY BODY / LAW ENFORCEMENT - Snare
    --------------------------------------------------------------------------
-   WHO: individual_moderate
-   WHEN: immediate
-   WHERE: mobile
-   SCOPE: local
+   WHO: institutional (Seeks to track financial flows and enforce regulations)
+   WHEN: immediate (Ongoing efforts to combat illicit finance)
+   WHERE: constrained (Frustrated by the inability to trace funds on-chain)
    
    WHY THIS CLASSIFICATION:
-   For the user, the mixer is a liberating tool (Rope) that they use to 
-   regain control over their financial history. They choose 
-   when to enter, how many rounds to mix, and when to exit.
+   For a regulatory body or law enforcement, a crypto mixer protocol can be 
+   a 'Snare'. It frustrates their ability to track illicit financial flows and
+   enforce regulations, thereby strangling their investigative capabilities
+   and hindering efforts to combat money laundering and other crimes.
+   -------------------------------------------------------------------------- */
+
+constraint_indexing:constraint_classification(
+    ergo_mixer_protocol,
+    snare,
+    context(
+        agent_power(institutional),
+        time_horizon(immediate),
+        exit_options(constrained),
+        spatial_scope(global)
+    )
+).
+
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 2: PRIVACY USER - Rope
+   --------------------------------------------------------------------------
+   WHO: individual_moderate (Seeking to restore fungibility to their assets)
+   WHEN: immediate (When conducting a transaction that requires privacy)
+   WHERE: mobile (Can choose when to enter, how many rounds to mix, and exit)
+   
+   WHY THIS CLASSIFICATION:
+   For the privacy-seeking user, the mixer is a liberating tool ('Rope') that
+   they use to regain control over their financial history. It allows them
+   to restore fungibility to their assets and avoid profiling, providing
+   a means to navigate the transparent blockchain.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
@@ -104,70 +120,34 @@ constraint_indexing:constraint_classification(
         agent_power(individual_moderate),
         time_horizon(immediate),
         exit_options(mobile),
-        spatial_scope(local)
-    )
-) :-
-    domain_priors:base_extractiveness(ergo_mixer_protocol, E),
-    E < 0.3, 
-    !.
-
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 2: Protocol Auditor - MOUNTAIN
-   --------------------------------------------------------------------------
-   WHO: analytical
-   WHEN: historical
-   WHERE: analytical
-   SCOPE: global
-   
-   WHY THIS CLASSIFICATION:
-   From an auditor's view, the Sigma Protocols and the math of ZeroJoin 
-   are "Mountain" constraints. These are immutable cryptographic laws 
-   that define what is and isn't possible within the system. 
-   You cannot "negotiate" with a discrete log problem.
-   -------------------------------------------------------------------------- */
-
-constraint_indexing:constraint_classification(
-    ergo_mixer_protocol,
-    mountain,
-    context(
-        agent_power(analytical),
-        time_horizon(historical),
-        exit_options(analytical),
         spatial_scope(global)
     )
-) :-
-    domain_priors:suppression_score(ergo_mixer_protocol, S),
-    S < 0.5,
-    !.
+).
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: User in a Small Pool - NOOSE
+   PERSPECTIVE 3: USER IN A SMALL POOL - Snare
    --------------------------------------------------------------------------
-   WHO: individual_powerless
-   WHEN: biographical
-   WHERE: trapped
-   SCOPE: regional
+   WHO: individual_powerless (Faces statistical traceability due to low anonymity set)
+   WHEN: biographical (The long-term risk of past transactions being deanonymized)
+   WHERE: trapped (Cannot undo past mixing, and exiting without sufficient anonymity is risky)
    
    WHY THIS CLASSIFICATION:
    In a scenario with very few participants (low anonymity set), the mixer 
-   becomes a "Noose". The user is "trapped" because exiting 
+   becomes a 'Snare'. The user is "trapped" because exiting 
    would be statistically traceable, yet staying doesn't provide the 
    desired privacy—the constraint "strangles" the anonymity it promised.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
     ergo_mixer_protocol,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(biographical),
         exit_options(trapped),
         spatial_scope(regional)
     )
-) :-
-    domain_priors:base_extractiveness(ergo_mixer_protocol, E),
-    E >= 0.1, 
-    !.
+).
 
 /* ==========================================================================
    4. TESTS
@@ -176,62 +156,79 @@ constraint_indexing:constraint_classification(
 :- begin_tests(ergo_mixer_protocol_tests).
 
 test(multi_perspective_variance) :-
-    constraint_indexing:constraint_classification(ergo_mixer_protocol, Type1, context(agent_power(individual_moderate), _, _, _)),
-    constraint_indexing:constraint_classification(ergo_mixer_protocol, Type2, context(agent_power(analytical), _, _, _)),
-    constraint_indexing:constraint_classification(ergo_mixer_protocol, Type3, context(agent_power(individual_powerless), _, trapped, _)),
+    constraint_indexing:constraint_classification(ergo_mixer_protocol, Type1, context(agent_power(institutional), _, _, _)),
+    constraint_indexing:constraint_classification(ergo_mixer_protocol, Type2, context(agent_power(individual_moderate), _, _, _)),
+    constraint_indexing:constraint_classification(ergo_mixer_protocol, Type3, context(agent_power(individual_powerless), _, _, _)),
     Type1 \= Type2,
-    Type2 \= Type3.
-
-test(time_immutability) :-
-    % Historical/Analytical perspective correctly identifies the math as Mountain.
-    constraint_indexing:constraint_classification(ergo_mixer_protocol, mountain, context(analytical, historical, _, _)).
+    Type2 \= Type3,
+    Type1 \= Type3.
 
 :- end_tests(ergo_mixer_protocol_tests).
 
 /* ==========================================================================
-   5. MODEL INTERPRETATION
+   5. MODEL INTERPRETATION (Commentary)
    ========================================================================== */
 
 /**
  * LLM GENERATION NOTES
- * * Model: Gemini 2.0 Flash
- * * KEY DECISIONS:
- * 1. EXTRACTIVENESS (0.1): The lowest score possible for a functioning system, 
- * as the ErgoMixer is purely peer-to-peer and non-custodial.
- * 2. NOOSE CLASSIFICATION: I used this to model the "Anonymity Set" failure 
- * state—a critical insight where a lack of participants turns a privacy 
- * tool into a visibility trap.
- * 3. SUPPRESSION (0.1): Low because the mixer doesn't stop analysts from 
- * looking; it simply makes their look-ups useless.
+ * 
+ * Model: Gemini Pro (Revised)
+ * Date: 2026-01-23
+ * 
+ * KEY DECISIONS:
+ * 
+ * 1. INSTITUTIONAL PERSPECTIVE: Added 'Regulatory Body / Law Enforcement' as
+ *    the institutional agent. For them, a crypto mixer functions as a 'Snare',
+ *    hindering their ability to monitor financial activities.
+ *
+ * 2. INDIVIDUAL POWERLESS PERSPECTIVE: Reinstated 'User in a Small Pool' as
+ *    the individual powerless agent, where the mixer itself becomes a 'Snare'
+ *    due to insufficient anonymity.
+ *
+ * 3. CLASSIFICATION RATIONALE:
+ *    - Regulatory Body (Snare): Frustrates tracking and enforcement.
+ *    - Privacy User (Rope): A tool for financial privacy and fungibility.
+ *    - User in Small Pool (Snare): Compromised anonymity due to lack of participants.
+ * 
+ * 4. CORE INSIGHT: Crypto mixer protocols like ErgoMixer create a 'Tangled Rope'
+ *    of utility. What is a 'Rope' for individual privacy becomes a 'Snare' for
+ *    regulatory oversight, and can also become a 'Snare' for users if anonymity
+ *    conditions are not met.
  */
 
 /* ==========================================================================
-   6. OMEGA VARIABLES (Ω)
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
+/**
+ * OMEGA IDENTIFICATION
+ *
+ * The core uncertainty is the long-term effectiveness of cryptographic privacy against state-level surveillance.
+ */
 
 omega_variable(
     anonymity_set_density,
-    "Is the current number of active participants enough to ensure k-anonymity?",
-    resolution_mechanism("Statistical analysis of pool activity over time"),
-    impact("If low: Protocol becomes a Noose (trap). If high: Protocol is a Rope (tool)."),
-    confidence_without_resolution(high)
+    "Is the current number of active participants in a mixing pool sufficient to ensure k-anonymity (privacy), or will a lack of users turn the protocol into a statistical 'Snare' for its users?",
+    resolution_mechanism("Statistical analysis of pool activity over time; academic research on deanonymization techniques."),
+    impact("If low: Protocol becomes a 'Snare' (privacy trap). If high: Protocol is a reliable 'Rope' (privacy tool)."),
+    confidence_without_resolution(medium)
 ).
 
 /* ==========================================================================
    7. ALTERNATIVE ANALYSIS
    ========================================================================== */
-
 /**
  * VIABLE ALTERNATIVES
- * * ALTERNATIVE 1: Tornado Cash (Ethereum)
- * Viability: Historically high liquidity but interactive/custodial-adjacent 
- * risks and central entity vulnerabilities.
- * * ALTERNATIVE 2: ZCash (Native Shielded Transactions)
- * Viability: Built into the base layer but less flexible for custom tokens.
- * * CONCLUSION:
- * ErgoMixer's non-interactive nature makes it a "Rope" with far 
- * fewer logistical knots than predecessors, though it still relies on 
- * the "Mountain" of Sigma Protocols for its integrity.
+ *
+ * ALTERNATIVE 1: Interactive Mixers (e.g., CoinJoin)
+ *    Viability: Historically used for privacy, but require users to be online simultaneously, introducing coordination risks.
+ *    Suppression: ErgoMixer's non-interactive nature actively suppresses this alternative by offering a more convenient and robust solution.
+ *
+ * CONCLUSION:
+ * The ErgoMixer protocol is a technologically advanced 'Rope' for privacy.
+ * Its non-interactive nature suppresses the logistical 'Snare' of older
+ * mixing solutions, but creates a new 'Snare' for regulatory bodies
+ * attempting to maintain financial transparency. Furthermore, insufficient
+ * user participation can turn this 'Rope' into a 'Snare' for its own users.
  */
 
 /* ==========================================================================
@@ -240,8 +237,10 @@ omega_variable(
 
 /**
  * TO USE THIS FILE:
+ * 
  * 1. Load: ?- [constraints/ergo_mixer_protocol].
  * 2. Multi-perspective: ?- multi_index_report(ergo_mixer_protocol).
+ * 3. Run tests: ?- run_tests(ergo_mixer_protocol_tests).
  */
 
 /* ==========================================================================

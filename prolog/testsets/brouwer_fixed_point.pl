@@ -45,7 +45,7 @@
  * * NARRATIVE ARC:
  * Brouwer acts as a "Mountain" of topological inevitability. In the narrative 
  * of a system (like an economy), it is the "Rope" that guarantees consistency. 
- * However, to the searcher, its non-constructive nature is a "Noose"—a 
+ * However, to the searcher, its non-constructive nature is a "Snare"—a 
  * promise of a solution that offers no relief from the labor of finding it.
  */
 
@@ -142,7 +142,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE NUMERICAL SEARCHER - Noose
+   PERSPECTIVE 3: THE NUMERICAL SEARCHER - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_moderate - Has the knowledge to search, but limited by math.
@@ -151,14 +151,14 @@ constraint_indexing:constraint_classification(
    SCOPE: local - Lost in the high-dimensional space.
    
    WHY THIS CLASSIFICATION:
-   When existence is guaranteed but non-constructive, it acts as a "Noose." 
+   When existence is guaranteed but non-constructive, it acts as a "Snare." 
    The searcher is bound to a solution that they can "see" in theory but 
    never "touch" in practice, extracting infinite labor for zero certainty.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
     brouwer_fixed_point,
-    noose,
+    snare,
     context(
         agent_power(individual_moderate),
         time_horizon(immediate),
@@ -184,7 +184,7 @@ test(multi_perspective_variance) :-
 
 test(non_constructive_noose_penalty) :-
     % The searcher (moderate power, constrained) suffers the gap between theory and praxis.
-    constraint_indexing:constraint_classification(brouwer_fixed_point, noose, context(individual_moderate, immediate, constrained, local)).
+    constraint_indexing:constraint_classification(brouwer_fixed_point, snare, context(individual_moderate, immediate, constrained, local)).
 
 test(emergence) :-
     domain_priors:emerges_naturally(brouwer_fixed_point).
@@ -207,7 +207,7 @@ test(emergence) :-
  * * 2. TYPE SHIFT:
  * Reasoning: The primary perspectival gap is between the "Institutional" 
  * sense of stability (Rope) and the "Moderate" searcher's frustration 
- * with the lack of a constructive path (Noose).
+ * with the lack of a constructive path (Snare).
  * * 3. PERSPECTIVE SELECTION:
  * Chose Point (Passive), Architect (User), and Searcher (Victim) to highlight 
  * the specific topological-computational friction.
@@ -218,7 +218,7 @@ omega_variable(
     constructive_complexity,
     "Will a universal constructive version of Brouwer (e.g., Scarf's algorithm) succeed?",
     resolution_mechanism("Measure the average-case runtime vs existence-proof utility over 10 years."),
-    impact("If Yes: The 'Noose' becomes a 'Rope'. If No: It remains a Noose for practitioners."),
+    impact("If Yes: The 'Snare' becomes a 'Rope'. If No: It remains a Snare for practitioners."),
     confidence_without_resolution(low)
 ).
 
@@ -235,7 +235,7 @@ omega_variable(
  * Viability: Generalizes to infinite-dimensional spaces.
  * Suppression: Used for more complex PDEs, but Brouwer remains the finite-dim base.
  * * CONCLUSION:
- * The existence of Banach's "Rope" makes Brouwer's "Noose" (non-constructiveness) 
+ * The existence of Banach's "Rope" makes Brouwer's "Snare" (non-constructiveness) 
  * more visible to the Searcher, who wishes the world were contractive.
  */
 

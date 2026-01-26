@@ -46,7 +46,7 @@
  * * NARRATIVE ARC:
  * The fallacy functions as a "Mountain" of cognitive inertia. To the manager, 
  * it is a "Rope" (the logic of commitment and persistence). However, for the 
- * individual trapped in a failing path, it becomes a "Noose," where every 
+ * individual trapped in a failing path, it becomes a "Snare," where every 
  * additional unit of effort invested makes the psychological cost of 
  * quitting higher, effectively strangling their future optionality.
  */
@@ -57,7 +57,7 @@
 
 % Required for [STEP 1] and [STEP 2] of the DR-Audit Suite
 narrative_ontology:interval(sunk_cost_interval, 0, 10).
-narrative_ontology:constraint_claim(sunk_cost_fallacy, noose).
+narrative_ontology:constraint_claim(sunk_cost_fallacy, snare).
 
 % Base extractiveness score (0.0-1.0)
 % Rationale: It extracts future "optionality" and "capital." It benefits 
@@ -152,14 +152,14 @@ constraint_indexing:constraint_classification(
    
    WHY THIS CLASSIFICATION:
    For the person seven years into a degree they no longer want, the fallacy 
-   is a Noose. The "investment" they've made acts as the rope that 
+   is a Snare. The "investment" they've made acts as the rope that 
    strangles their current freedom. They cannot leave because they cannot 
    face the "waste" of the past seven years, so they lose the *next* seven years too.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
     sunk_cost_fallacy,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -186,7 +186,7 @@ test(loss_aversion_extraction) :-
     Score >= 0.4.
 
 test(horizon_immutability) :-
-    % Short-term pressure (Immediate) makes it a Noose/Mountain; 
+    % Short-term pressure (Immediate) makes it a Snare/Mountain; 
     % Civilizational view sees it as an invariant fact of the mind.
     constraint_indexing:effective_immutability(civilizational, trapped, mountain).
 
@@ -208,11 +208,11 @@ test(horizon_immutability) :-
  * The Manager (Rope) is a key perspective because "Commitment" is often 
  * the social/positive framing of a sunk cost fallacy.
  * * 3. NOOSE CLASSIFICATION:
- * The Noose emerges when the exit cost is not just financial, but 
+ * The Snare emerges when the exit cost is not just financial, but 
  * identity-based. "Who am I if I am not the person who finished this?"
  * * 4. OMEGAS:
  * omega_variable(quitting_stigma,
- *	"To what degree is the 'Noose' caused by internal bias vs. external social shame?",
+ *	"To what degree is the 'Snare' caused by internal bias vs. external social shame?",
  *	resolution_mechanism("Comparative study of abandonment rates in anonymous vs. public commitments"),
  *	impact("If Internal: Mountain. If Social: Rope (changeable culture)."),
  *	confidence_without_resolution(medium)
@@ -233,7 +233,7 @@ test(horizon_immutability) :-
  * * CONCLUSION:
  * The existence of a rational alternative (Marginal Thinking) that is 
  * systematically suppressed by human emotion converts the Sunk Cost 
- * Fallacy from a simple mistake into a persistent "Noose" for the 
+ * Fallacy from a simple mistake into a persistent "Snare" for the 
  * unexamined life.
  */
 

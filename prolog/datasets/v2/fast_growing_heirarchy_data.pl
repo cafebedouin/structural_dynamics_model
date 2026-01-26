@@ -35,10 +35,10 @@ constraint_metric(limit_diagonalization_strategy, suppression_requirement, 0.40)
 constraint_metric(limit_diagonalization_strategy, snap_back_potential, 0.70).
 constraint_metric(limit_diagonalization_strategy, extractiveness, 0.55).
 
-% The Recursive Unreachability (The Noose)
+% The Recursive Unreachability (The Snare)
 % The hierarchy eventually exceeds all functions provably total in a given theory (e.g., PA).
 % Extractiveness at 0.99 requires the 'fundamental_sequence_scaffold' to index beyond epsilon_zero.
-constraint_claim(theoretical_provability_ceiling, noose).
+constraint_claim(theoretical_provability_ceiling, snare).
 constraint_metric(theoretical_provability_ceiling, intensity, 0.99).
 constraint_metric(theoretical_provability_ceiling, suppression_requirement, 0.95).
 constraint_metric(theoretical_provability_ceiling, snap_back_potential, 0.01).
@@ -49,7 +49,7 @@ constraint_metric(theoretical_provability_ceiling, extractiveness, 0.99).
 recommendation(rec_01, utilize_standard_wainer_hierarchy_definitions_to_unify_limit_jumps).
 affects_constraint(rec_01, limit_diagonalization_strategy).
 
-% Noose (0.99 extractiveness) triggers Cut
+% Snare (0.99 extractiveness) triggers Cut
 % Utilizing 'fundamental_sequence_scaffold' to bridge the gap into the Bachmann-Howard ordinal range.
 recommendation(rec_02, abandon_first_order_induction_to_verify_higher_ordinal_growth).
 affects_constraint(rec_02, theoretical_provability_ceiling).

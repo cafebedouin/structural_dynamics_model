@@ -46,7 +46,7 @@
  * * NARRATIVE ARC:
  * The standard moves from being an institutional "Rope" (a tool for design guidance) 
  * to a "Mountain" of physical reality for the materiel 
- * itself, while occasionally acting as a "Noose" for contractors who must absorb 
+ * itself, while occasionally acting as a "Snare" for contractors who must absorb 
  * the costs of failure in a laboratory setting.
  */
 
@@ -87,7 +87,7 @@ narrative_ontology:constraint_metric(mil_std_810f_tailoring, suppression_require
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 1: TEST LAB ENGINEER - Noose
+   PERSPECTIVE 1: TEST LAB ENGINEER - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless - Bound to follow the "clearest direction" of the standard.
@@ -96,7 +96,7 @@ narrative_ontology:constraint_metric(mil_std_810f_tailoring, suppression_require
    SCOPE: local - Concerned with the specific test chamber and laboratory environment.
    
    WHY THIS CLASSIFICATION:
-   For the engineer, the standard is a "Noose" that dictates asymmetric effort. 
+   For the engineer, the standard is a "Snare" that dictates asymmetric effort. 
    Failure in the lab means a recursive loop of redesign and re-testing, extracting 
    personal and professional time to satisfy a rigid "F" revision cycle.
    
@@ -107,7 +107,7 @@ narrative_ontology:constraint_metric(mil_std_810f_tailoring, suppression_require
 
 constraint_indexing:constraint_classification(
     mil_std_810f_tailoring,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -187,9 +187,9 @@ constraint_indexing:constraint_classification(
 :- begin_tests(mil_std_810f_tailoring_tests).
 
 test(multi_perspective_variance) :-
-    constraint_indexing:constraint_classification(mil_std_810f_tailoring, Noose, context(individual_powerless, immediate, trapped, local)),
+    constraint_indexing:constraint_classification(mil_std_810f_tailoring, Snare, context(individual_powerless, immediate, trapped, local)),
     constraint_indexing:constraint_classification(mil_std_810f_tailoring, Rope, context(institutional, biographical, mobile, national)),
-    Noose = noose,
+    Snare = snare,
     Rope = rope.
 
 test(power_extractiveness_scaling) :-
@@ -223,10 +223,10 @@ test(analytical_mountain_fixity) :-
  *.
  * * 3. PERSPECTIVE SELECTION:
  * Chose Engineer (Powerless), Official (Institutional), and Scientist 
- * (Analytical) to demonstrate the full Mountain/Rope/Noose spread.
+ * (Analytical) to demonstrate the full Mountain/Rope/Snare spread.
  * * 4. AMBIGUITIES:
  * The term "tailoring" implies flexibility (Rope), but the mandatory nature 
- * of the standard for DoD contracts suggests a Noose for subordinates.
+ * of the standard for DoD contracts suggests a Snare for subordinates.
  */
 
 /* ==========================================================================
@@ -245,7 +245,7 @@ omega_variable(
     tailoring_competence_variance,
     "Does the wide range of 'managerial and technical interests' lead to effective tailoring or bureaucratic bloat?",
     resolution_mechanism("Analysis of mission success rates correlated with the degree of standard tailoring performed."),
-    impact("If Effective: Rope. If Bloat: Noose."),
+    impact("If Effective: Rope. If Bloat: Snare."),
     confidence_without_resolution(low)
 ).
 

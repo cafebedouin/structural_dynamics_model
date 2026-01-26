@@ -46,7 +46,7 @@
  * structural "failure of communication".
  * * NARRATIVE ARC:
  * The pressure to maintain a rigorous launch schedule (the "Operational 
- * Milestone") functioned as a Noose. It extracted engineering integrity 
+ * Milestone") functioned as a Snare. It extracted engineering integrity 
  * and safety margins in favor of institutional prestige, culminating in the 
  * catastrophic loss of the Challenger.
  */
@@ -57,7 +57,7 @@
 
 % Required for [STEP 1] and [STEP 2] of the DR-Audit Suite
 narrative_ontology:interval(challenger_post_mortem, 0, 10).
-narrative_ontology:constraint_claim(rogers_commission_institutional_analysis, noose).
+narrative_ontology:constraint_claim(rogers_commission_institutional_analysis, snare).
 
 % Base extractiveness score (0.0-1.0)
 % Rationale: 0.85. The system extracted human life and the survival of the 
@@ -159,7 +159,7 @@ constraint_indexing:constraint_classification(
     !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: ROGERS COMMISSION (RECAP) - Noose
+   PERSPECTIVE 3: ROGERS COMMISSION (RECAP) - Snare
    --------------------------------------------------------------------------
    
    WHO: analytical - Independent observers tasked with finding the "flaw".
@@ -168,7 +168,7 @@ constraint_indexing:constraint_classification(
    SCOPE: global - A cautionary tale for all high-reliability organizations.
    
    WHY THIS CLASSIFICATION:
-   The Commission's final judgment identifies the system as a Noose. By 
+   The Commission's final judgment identifies the system as a Snare. By 
    isolating top-level management from technical dissent, the institutional 
    structure "choked off" the very safety data it was designed to ingest, 
    rendering the disaster inevitable.
@@ -180,7 +180,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     rogers_commission_institutional_analysis,
-    noose,
+    snare,
     context(
         agent_power(analytical),
         time_horizon(historical),
@@ -222,14 +222,14 @@ test(high_extraction_audit) :-
  * 1. SUPPRESSION SCORE (0.75): High because the report explicitly notes 
  * that the communication system "failed" to provide the required data to 
  * those at the top. 
- * 2. CLASSIFICATION: Labeled primarily as a 'Noose' because the extraction 
+ * 2. CLASSIFICATION: Labeled primarily as a 'Snare' because the extraction 
  * (loss of life) and the active marginalization of safety engineers created 
  * a terminal feedback loop.
  */
 
 omega_variable(
     institutional_memory_persistence,
-    "Can a Noose-type organizational structure ever truly be reformed into a Rope without a total purge of leadership?",
+    "Can a Snare-type organizational structure ever truly be reformed into a Rope without a total purge of leadership?",
     resolution_mechanism("Longitudinal study of NASA cultural shifts post-Challenger vs. the Columbia 2003 disaster"),
     impact("If Yes: Cultural reform is a Rope. If No: Institutional failure is a generational Mountain."),
     confidence_without_resolution(low)
@@ -248,7 +248,7 @@ omega_variable(
  * UNSAFE to fly, rather than requiring proof that it was SAFE.
  * * CONCLUSION:
  * The reversal of the "burden of proof" is the definitive signature of an 
- * extractive Noose.
+ * extractive Snare.
  */
 
 /* ==========================================================================

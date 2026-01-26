@@ -46,7 +46,7 @@
  * The Halting Problem is the "Mountain" of computational fate—it is an 
  * unyielding feature of any universal system. In logic, it is a "Rope" for 
  * proving the undecidability of other problems (via reduction). However, 
- * in the context of high-assurance engineering, it acts as a "Noose," 
+ * in the context of high-assurance engineering, it acts as a "Snare," 
  * extracting the possibility of absolute verification (extraction) and 
  * forcing humans to accept the "tax" of heuristic or manual testing.
  */
@@ -129,7 +129,7 @@ constraint_indexing:constraint_classification(
    For the researcher, the Halting Problem is a "Rope"—a functional 
    coordination tool. By mapping the "Mountain," they coordinate a 
    standard of achievement for what is *possible* to build, pulling 
-   the field away from the "Noose" of impossible goals.
+   the field away from the "Snare" of impossible goals.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
@@ -144,7 +144,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE HIGH-ASSURANCE SYSTEMS ENGINEER - Noose
+   PERSPECTIVE 3: THE HIGH-ASSURANCE SYSTEMS ENGINEER - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_moderate - Has agency to design but is bound by the theorem.
@@ -153,7 +153,7 @@ constraint_indexing:constraint_classification(
    SCOPE: national - Protecting critical power grids or aerospace.
    
    WHY THIS CLASSIFICATION:
-   For the engineer, the theorem is a "Noose." It "strangles" the dream of 
+   For the engineer, the theorem is a "Snare." It "strangles" the dream of 
    perfectly safe infrastructure. It extracts massive human labor (extraction) 
    by making automated verification incomplete, "choking" the ability to 
    guarantee that a system will never hang or fail in an unforeseen way.
@@ -162,7 +162,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     halting_problem_undecidability,
-    noose,
+    snare,
     context(
         agent_power(individual_moderate),
         time_horizon(immediate),
@@ -188,7 +188,7 @@ test(multi_perspective_variance) :-
     Type1 \= Type2.
 
 test(verification_noose_penalty) :-
-    % Engineers experience the extraction of certainty as a Noose.
+    % Engineers experience the extraction of certainty as a Snare.
     Context = context(individual_moderate, immediate, constrained, national),
     constraint_indexing:extractiveness_for_agent(halting_problem_undecidability, Context, Score),
     Score >= 0.2.
@@ -215,7 +215,7 @@ test(natural_emergence) :-
  * * 2. PERSPECTIVE SELECTION:
  * Chose the Program (Subject), Scientist (User), and Engineer (Victim) 
  * to illustrate how a "Mountain" of logic is a "Rope" for theory but 
- * a "Noose" for practice.
+ * a "Snare" for practice.
  * * 3. OMEGA IDENTIFICATION:
  * Formalized the "Physical Church-Turing" uncertainty—whether our 
  * universe's laws actually allow for "Infinite Tape" or "Perfect Iteration."
@@ -246,7 +246,7 @@ omega_variable(
  * Viability: Theoretical models where computation can continue past infinity.
  * Suppression: Currently suppressed by the "Mountain" of standard physics.
  * * CONCLUSION:
- * The existence of Alternative 1 proves that the "Noose" of the Halting Problem 
+ * The existence of Alternative 1 proves that the "Snare" of the Halting Problem 
  * is the specific price we pay for the "Rope" of universal (Turing-complete) 
  * computing.
  */

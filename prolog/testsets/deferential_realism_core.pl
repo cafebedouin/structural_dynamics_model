@@ -39,7 +39,7 @@
  * coordinating global truth-claims.
  * - The Analytical Subject (Moderate): Uses the framework to navigate political 
  * complexity.
- * - The Dogmatic Ideologue (Powerless): Experiences the framework as a "Noose" 
+ * - The Dogmatic Ideologue (Powerless): Experiences the framework as a "Snare" 
  * that deconstructs their universalist claims.
  * * NARRATIVE ARC:
  * The framework is introduced to resolve "indexical underspecification". 
@@ -129,7 +129,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: Absolute Universalist - Noose
+   PERSPECTIVE 3: Absolute Universalist - Snare
    --------------------------------------------------------------------------
    WHO: individual_moderate (Has existing platform)
    WHEN: immediate (Short-term threat to status)
@@ -144,7 +144,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     deferential_realism_framework,
-    noose,
+    snare,
     context(
         agent_power(individual_moderate),
         time_horizon(immediate),
@@ -163,8 +163,8 @@ test(multi_perspective_recursive_check) :-
     % Designer sees a useful Rope
     constraint_indexing:constraint_classification(deferential_realism_framework, rope, 
         context(institutional, historical, mobile, global)),
-    % Ideologue sees an extractive Noose
-    constraint_indexing:constraint_classification(deferential_realism_framework, noose, 
+    % Ideologue sees an extractive Snare
+    constraint_indexing:constraint_classification(deferential_realism_framework, snare, 
         context(individual_moderate, immediate, constrained, national)).
 
 test(indexical_necessity_scaling) :-
@@ -198,7 +198,7 @@ test(indexical_necessity_scaling) :-
 omega_variable(
     adoption_scaling,
     "Will the framework be adopted voluntarily (Rope) or enforced by 
-     informational gatekeepers (Noose)?",
+     informational gatekeepers (Snare)?",
     resolution_mechanism("Monitor the ratio of grassroots adoption vs. 
                           institutional mandatory audit implementation."),
     impact("If institutional only: Risk of Tangled Rope transformation."),
@@ -230,4 +230,4 @@ omega_variable(
 % --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
 constraint_indexing:constraint_classification(deferential_realism_core, mountain, agent_power(analytical)).
 constraint_indexing:constraint_classification(deferential_realism_core, rope, agent_power(institutional)).
-constraint_indexing:constraint_classification(deferential_realism_core, noose, agent_power(individual_powerless)).
+constraint_indexing:constraint_classification(deferential_realism_core, snare, agent_power(individual_powerless)).

@@ -46,7 +46,7 @@
  * of the No-Communication Theorem that currently prohibits this protocol.
  * * NARRATIVE ARC:
  * What begins as the ultimate Rope (instantaneous global coordination) 
- * eventually functions as a Noose for the colonist. If the link 
+ * eventually functions as a Snare for the colonist. If the link 
  * is broken, the "extraction" of social and technical support is 
  * instantaneous and total, leaving the colony in an absolute temporal silo.
  */
@@ -155,7 +155,7 @@ constraint_indexing:constraint_classification(
     !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE ANTI-COLONIAL REBEL - Noose
+   PERSPECTIVE 3: THE ANTI-COLONIAL REBEL - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_moderate - Seeking local autonomy from the origin world.
@@ -164,7 +164,7 @@ constraint_indexing:constraint_classification(
    SCOPE: regional - A planetary star system.
    
    WHY THIS CLASSIFICATION:
-   To the rebel, the instant link is a Noose. It extracts local decision-making 
+   To the rebel, the instant link is a Snare. It extracts local decision-making 
    by allowing the origin world to micro-manage the colony from light-years 
    away. The lack of "signal delay" chokes off the possibility of 
    independent development that would naturally occur under light-speed 
@@ -173,7 +173,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     quantum_entanglement_protocol,
-    noose,
+    snare,
     context(
         agent_power(individual_moderate),
         time_horizon(biographical),
@@ -192,7 +192,7 @@ constraint_indexing:constraint_classification(
 :- begin_tests(quantum_protocol_tests).
 
 test(multi_perspective_asymmetry) :-
-    % Admin (Rope) vs Rebel (Noose) vs Colonist (Mountain)
+    % Admin (Rope) vs Rebel (Snare) vs Colonist (Mountain)
     constraint_indexing:constraint_classification(quantum_entanglement_protocol, T1, context(institutional, biographical, mobile, global)),
     constraint_indexing:constraint_classification(quantum_entanglement_protocol, T2, context(individual_moderate, biographical, constrained, regional)),
     constraint_indexing:constraint_classification(quantum_entanglement_protocol, T3, context(individual_powerless, immediate, trapped, local)),
@@ -218,7 +218,7 @@ test(absolute_suppression_of_classical_limits) :-
  * Mountain (Latency) must have an extremely high suppression score relative 
  * to current consensus.
  * 2. CLASSIFICATION SHIFT: The most significant insight is that removing 
- * the Mountain of Latency (Physics) creates a Noose of Centralization 
+ * the Mountain of Latency (Physics) creates a Snare of Centralization 
  * (Political). Without the delay, the distant agent loses the "natural 
  * protection" of isolation.
  */
@@ -249,7 +249,7 @@ omega_variable(
  * The Quantum Protocol is the only alternative that transforms the 
  * Mountain of signal delay into a Rope of instant coordination, 
  * but it does so at the cost of turning the relationship between 
- * star systems into a potentially extractive Noose.
+ * star systems into a potentially extractive Snare.
  */
 
 /* ==========================================================================

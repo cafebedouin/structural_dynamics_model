@@ -41,14 +41,14 @@
  * - Donald Trump (Institutional/Enforcer): Pursuing a "zero-tolerance" enforcement 
  * narrative that views detractors as "professional agitators."
  * - Karl Rove (Analytical/Strategist): Identifying the pivot as a manageable 
- * "Rope" that is being fumbled into a "Noose."
+ * "Rope" that is being fumbled into a "Snare."
  * - South Texas Hispanic Voters (Collective/Powerless): A "variable group" 
  * whose local community safety is caught between border chaos and federal overreach.
  * * NARRATIVE ARC:
  * After a high-water mark of support in 2024, the "honeymoon" period between the 
  * GOP and Hispanic voters is being ended by the "Renee Good incident." The 
  * narrative highlights a transition from a functional alliance (Rope) to a 
- * perceived extractive/coercive enforcement regime (Noose).
+ * perceived extractive/coercive enforcement regime (Snare).
  */
 
 /* ==========================================================================
@@ -56,7 +56,7 @@
    ========================================================================== */
 
 narrative_ontology:interval(tx_pivot_window_2026, 2024, 2026).
-narrative_ontology:constraint_claim(texas_hispanic_political_pivot, noose).
+narrative_ontology:constraint_claim(texas_hispanic_political_pivot, snare).
 
 % Base extractiveness score: Moderate-High (0.70)
 % Rationale: The GOP "extracted" significant political capital and seats from this 
@@ -85,7 +85,7 @@ narrative_ontology:constraint_metric(texas_hispanic_political_pivot, suppression
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 1: DISILLUSIONED SOUTH TEXAS VOTER - Noose
+   PERSPECTIVE 1: DISILLUSIONED SOUTH TEXAS VOTER - Snare
    --------------------------------------------------------------------------
    WHO: individual_powerless (Price-takers in a high-enforcement environment)
    WHEN: immediate (The current 2026 approval rating crater)
@@ -94,14 +94,14 @@ narrative_ontology:constraint_metric(texas_hispanic_political_pivot, suppression
    
    WHY THIS CLASSIFICATION:
    For a voter in these communities, the relationship with the GOP has 
-   become a Noose. They supported border security but are now "trapped" by 
+   become a Snare. They supported border security but are now "trapped" by 
    the secondary effects of "aggressive" federal tactics that no longer feel 
    protective but coercive.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
     texas_hispanic_political_pivot,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -169,14 +169,14 @@ constraint_indexing:constraint_classification(
 :- begin_tests(texas_pivot_tests).
 
 test(perspectival_gap_rove_vs_voter) :-
-    % Rove sees a fixable "Rope" (mobile), Voter sees a "Noose" (trapped)
+    % Rove sees a fixable "Rope" (mobile), Voter sees a "Snare" (trapped)
     constraint_indexing:constraint_classification(texas_hispanic_political_pivot, rope, context(analytical, _, mobile, _)),
-    constraint_indexing:constraint_classification(texas_hispanic_political_pivot, noose, context(individual_powerless, _, trapped, _)).
+    constraint_indexing:constraint_classification(texas_hispanic_political_pivot, snare, context(individual_powerless, _, trapped, _)).
 
 test(temporal_decay) :-
-    % In the immediate term, it's a Noose due to the 'cratering' approval.
+    % In the immediate term, it's a Snare due to the 'cratering' approval.
     % Only in the biographical planning horizon does it even appear as a Rope.
-    constraint_indexing:constraint_classification(texas_hispanic_political_pivot, noose, context(individual_powerless, immediate, _, _)).
+    constraint_indexing:constraint_classification(texas_hispanic_political_pivot, snare, context(individual_powerless, immediate, _, _)).
 
 :- end_tests(texas_pivot_tests).
 
@@ -199,7 +199,7 @@ test(temporal_decay) :-
  * * 3. CATALYST IDENTIFICATION:
  * The shooting of Renee Good in Minneapolis is identified as the Omega 
  * trigger that transformed the "Rope" (cooperation on border security) into 
- * a "Noose" (fear of ICE overreach).
+ * a "Snare" (fear of ICE overreach).
  */
 
 /* ==========================================================================
@@ -210,7 +210,7 @@ omega_variable(
     renee_good_investigation_outcome,
     "Will the FBI investigation into the Minneapolis shooting confirm or refute the 'self-defense' claim?",
     resolution_mechanism("Monitor the DOJ/FBI report release."),
-    impact("If confirmed, the GOP can shift back to 'Rope.' If refuted, the pivot to 'Noose' is permanent."),
+    impact("If confirmed, the GOP can shift back to 'Rope.' If refuted, the pivot to 'Snare' is permanent."),
     confidence_without_resolution(low)
 ).
 

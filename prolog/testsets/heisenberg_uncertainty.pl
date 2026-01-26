@@ -43,7 +43,7 @@
  * * NARRATIVE ARC:
  * The principle acts as a "Mountain" of physical reality. While it provides 
  * a "Rope" for coordination in quantum cryptography (by guaranteeing that 
- * eavesdropping can be detected), it functions as a "Noose" for those 
+ * eavesdropping can be detected), it functions as a "Snare" for those 
  * attempting classical-style absolute precision at the subatomic level.
  */
 
@@ -134,7 +134,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE CLASSICAL HARDWARE DESIGNER - Noose
+   PERSPECTIVE 3: THE CLASSICAL HARDWARE DESIGNER - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless - Subject to the "noise" of the quantum floor.
@@ -144,14 +144,14 @@ constraint_indexing:constraint_classification(
    
    WHY THIS CLASSIFICATION:
    For the engineer trying to build a perfectly deterministic nano-switch, 
-   the principle is a Noose. The harder they try to fix both 
+   the principle is a Snare. The harder they try to fix both 
    position and momentum, the tighter the "fuzziness" strangles their 
    precision, eventually leading to terminal heat or tunneling errors.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
     heisenberg_uncertainty,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -171,11 +171,11 @@ test(multi_perspective_variance) :-
     constraint_indexing:constraint_classification(heisenberg_uncertainty, mountain, context(analytical, civilizational, trapped, global)),
     % Institutional sees Rope
     constraint_indexing:constraint_classification(heisenberg_uncertainty, rope, context(institutional, biographical, arbitrage, national)),
-    % Powerless sees Noose
-    constraint_indexing:constraint_classification(heisenberg_uncertainty, noose, context(individual_powerless, immediate, constrained, local)).
+    % Powerless sees Snare
+    constraint_indexing:constraint_classification(heisenberg_uncertainty, snare, context(individual_powerless, immediate, constrained, local)).
 
 test(power_extractiveness_precision) :-
-    % Powerless engineers feel the total extraction of precision (Noose).
+    % Powerless engineers feel the total extraction of precision (Snare).
     % Institutional cryptographers derive utility from the limit (Rope).
     domain_priors:base_extractiveness(heisenberg_uncertainty, Score),
     Score > 0.1.
@@ -202,10 +202,10 @@ test(time_immutability_physics) :-
  * * 2. PERSPECTIVE SELECTION:
  * The Analyst (Physicist) sees the law as a fixed Mountain.
  * The Architect (Cryptographer) sees the law as a Rope for security.
- * The Worker (Engineer) sees the law as a Noose strangling their precision.
+ * The Worker (Engineer) sees the law as a Snare strangling their precision.
  * * 3. AMBIGUITIES:
  * - The transition from quantum uncertainty to classical determinism (decoherence) 
- * creates a boundary where the Noose might be loosened.
+ * creates a boundary where the Snare might be loosened.
  */
 
 /* ==========================================================================
@@ -235,7 +235,7 @@ omega_variable(
  * * CONCLUSION:
  * The existence of classical mechanics as a suppressed alternative at the 
  * quantum scale confirms that for the nanotechnologist, the principle 
- * acts as a Noose.
+ * acts as a Snare.
  */
 
 /* ==========================================================================

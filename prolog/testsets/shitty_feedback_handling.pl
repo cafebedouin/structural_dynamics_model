@@ -1,8 +1,8 @@
 % ============================================================================
 % CONSTRAINT STORY: shitty_feedback_handling
 % ============================================================================
-% Generated: 2026-05-22
-% Model: Gemini 2.0 Flash
+% Generated: 2026-01-23
+% Model: Gemini Pro (Revised)
 % Source: Mandy Brown / cafebedouin.org, "Accept, Reframe, Or Reject"
 % ============================================================================
 
@@ -25,36 +25,29 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: shitty_feedback_handling
- * human_readable: The Protocol of Shitty Feedback
+ * 
+ * constraint_id: shitty_feedback_handling
+ * human_readable: The Protocol for Handling Shitty Feedback
  * domain: social/professional
  * temporal_scope: Contemporary / Ongoing
  * spatial_scope: Organizational and Interpersonal Environments
- * * SUMMARY:
+ * 
+ * SUMMARY:
  * "Shitty feedback" is a ubiquitous byproduct of social systems where feedback skills are 
- * rare and incentives for care are low. The constraint identifies the three 
- * actions available to a receiver—Accept, Reframe, or Reject—to process this external 
- * noise without losing agency or becoming defensive.
- * * KEY AGENTS:
- * - The Feedback Giver: Often unskilled, context-blind, or acting out their own issues.
- * - The Receiver (Subject): The agent tasked with filtering noise to find idiosyncratic value.
- * - The Supervisor: An institutional power player whose feedback often demands a performative "Accept" 
- * status regardless of its inherent quality.
- * * NARRATIVE ARC:
- * Feedback begins as an extractive force (noise/criticism) that threatens the subject's 
- * time and self-concept. By applying the "Accept, Reframe, Reject" protocol, the subject 
- * transforms the interaction from a potential "Noose" of social judgment into a "Rope" 
- * for personal growth or a neutralized "Mountain" of irrelevant data.
+ * rare. The constraint identifies the three actions available to a receiver—Accept, 
+ * Reframe, or Reject—to process this external noise without losing agency.
+ * 
+ * KEY AGENTS:
+ * - The Subordinate (Individual Powerless): Subject to a supervisor's evaluation.
+ * - The Peer (Individual Moderate): Engages in feedback with a colleague of equal standing.
+ * - The Corporation (Institutional): Implements a 360-degree feedback system.
  */
 
 /* ==========================================================================
    2. CORE SYSTEM INTEGRATION (The "Reality" Layer)
    ========================================================================== */
 
-% Required for [STEP 1] and [STEP 2] of the DR-Audit Suite
-narrative_ontology:interval(shitty_feedback_handling_interval, 0, 10).
-
-% Updated to valid v3.1 ontology pillar: [rope]
+narrative_ontology:interval(shitty_feedback_handling, 0, 10).
 narrative_ontology:constraint_claim(shitty_feedback_handling, rope).
 
 % Base extractiveness: Moderate (0.4)
@@ -67,72 +60,52 @@ domain_priors:base_extractiveness(shitty_feedback_handling, 0.4).
 % discouraged as a "rarely necessary" and ineffective reaction.
 domain_priors:suppression_score(shitty_feedback_handling, 0.3).
 
-% Enforcement: Requires active mental maintenance.
+% Enforcement: Requires active mental maintenance by the receiver.
 domain_priors:requires_active_enforcement(shitty_feedback_handling).
 
-% Metrics required for Section 1 of the Executive Summary
-narrative_ontology:constraint_metric(shitty_feedback_handling, extractiveness, 0.4).
-narrative_ontology:constraint_metric(shitty_feedback_handling, suppression_requirement, 0.3).
-
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(shitty_feedback_handling, the_receiver). % Preserves agency/sanity
-constraint_beneficiary(shitty_feedback_handling, the_giver).    % Feeling "heard" costs nothing
-constraint_victim(shitty_feedback_handling, the_ego).           % Defensiveness is suppressed
+constraint_beneficiary(shitty_feedback_handling, the_receiver). % Preserves agency
+constraint_victim(shitty_feedback_handling, emotional_energy). % Cognitive load of processing
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 1: THE SUBORDINATE - Noose
+   PERSPECTIVE 1: THE SUBORDINATE - Snare
    --------------------------------------------------------------------------
-   
    WHO: individual_powerless (Subject to supervisor's evaluation)
    WHEN: immediate (High-stakes professional feedback)
    WHERE: constrained (Must maintain employment relationship)
-   SCOPE: local (Workplace context)
    
    WHY THIS CLASSIFICATION:
-   In an institutional setting, feedback from a supervisor acts as a "Noose" because 
-   the power asymmetry often forces an "Accept" or "I'll do better" response even 
-   if the feedback is contextless or shitty.
-   
-   NARRATIVE EVIDENCE:
-   "there are situations where you have to do something different, such as the 
-   supervisor at work example... a simple: 'I’ll do better,' will often suffice".
+   In a power imbalance, feedback from a supervisor acts as a 'Snare'. The 
+   'Reject' option is functionally removed, forcing a performative 'Accept' 
+   response ("I’ll do better") to maintain one's job, regardless of feedback quality.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
     shitty_feedback_handling,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
         exit_options(constrained),
         spatial_scope(local)
     )
-) :-
-    domain_priors:base_extractiveness(shitty_feedback_handling, E),
-    E > 0.3,
-    !.
+).
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE SELF-ACTUALIZED SUBJECT - Rope
+   PERSPECTIVE 2: THE SELF-AWARE PEER - Rope
    --------------------------------------------------------------------------
-   
-   WHO: individual_moderate (Managing personal growth and social interactions)
+   WHO: individual_moderate (Managing personal growth with a colleague)
    WHEN: biographical (Developing lifelong feedback skills)
-   WHERE: mobile (Can choose to reframe or reject input)
-   SCOPE: local
+   WHERE: mobile (Can choose to reframe or reject input from an equal)
    
    WHY THIS CLASSIFICATION:
-   For an agent with exit options and self-awareness, the protocol is a "Rope"—a 
+   For an agent with exit options and self-awareness, the protocol is a 'Rope'—a 
    beneficial tool to coordinate with the external world's perspective without 
-   being crushed by it.
-   
-   NARRATIVE EVIDENCE:
-   "We all have different values... and we need to reframe input to make it 
-   valuable in light of our idiosyncrasies".
+   being crushed by it, filtering noise to find value.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
@@ -144,39 +117,32 @@ constraint_indexing:constraint_classification(
         exit_options(mobile),
         spatial_scope(local)
     )
-) :-
-    !.
+).
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE ANALYTICAL OBSERVER - Mountain
+   PERSPECTIVE 3: THE CORPORATION - Tangled Rope
    --------------------------------------------------------------------------
-   
-   WHO: analytical (Observing the systemic nature of feedback)
-   WHEN: historical (The long-term lack of institutional incentives for feedback)
-   WHERE: analytical (Unconstrained observer stance)
-   SCOPE: global
+   WHO: institutional (Implementing a 360-review system)
+   WHEN: generational (Managing the talent pool over years)
+   WHERE: arbitrage (Can use feedback data to make promotion/firing decisions)
    
    WHY THIS CLASSIFICATION:
-   The observer sees that "shitty feedback is out there" as an unchangeable 
-   feature of human systems due to the difficulty of the skill and lack 
-   of incentives. It is a social "Mountain" of noise.
-   
-   NARRATIVE EVIDENCE:
-   "giving feedback is difficult and most people are terrifically bad at it... 
-   the systems we occupy do not incentivize the effort".
+   For the corporation, a 360-review system is a 'Tangled Rope'. It's a 'Rope'
+   for coordinating performance data across the organization, but it becomes
+   'Tangled' because the low quality of feedback generates noise, politics, and
+   demotivates employees, creating an extractive drag on the system it's meant to improve.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
     shitty_feedback_handling,
-    mountain,
+    tangled_rope,
     context(
-        agent_power(analytical),
-        time_horizon(historical),
-        exit_options(analytical),
-        spatial_scope(global)
+        agent_power(institutional),
+        time_horizon(generational),
+        exit_options(arbitrage),
+        spatial_scope(national)
     )
-) :-
-    !.
+).
 
 /* ==========================================================================
    4. TESTS (What We Learn About Constraints)
@@ -185,21 +151,12 @@ constraint_indexing:constraint_classification(
 :- begin_tests(shitty_feedback_handling_tests).
 
 test(multi_perspective_variance) :-
-    constraint_indexing:constraint_classification(shitty_feedback_handling, T1, context(individual_powerless, immediate, constrained, local)),
-    constraint_indexing:constraint_classification(shitty_feedback_handling, T2, context(individual_moderate, biographical, mobile, local)),
-    constraint_indexing:constraint_classification(shitty_feedback_handling, T3, context(analytical, historical, analytical, global)),
-    T1 \= T2, T2 \= T3.
-
-test(power_extractiveness_scaling) :-
-    % Institutional feedback (Powerless context) is more extractive than peer feedback.
-    constraint_indexing:extractiveness_for_agent(shitty_feedback_handling, context(individual_powerless, immediate, constrained, local), E1),
-    constraint_indexing:extractiveness_for_agent(shitty_feedback_handling, context(individual_moderate, biographical, mobile, local), E2),
-    E1 >= E2.
-
-test(time_immutability) :-
-    % In the short term/immediate, bad feedback feels like a problem to solve (Rope/Noose).
-    % In the historical/analytical view, it's just an environment fact (Mountain).
-    constraint_indexing:effective_immutability(historical, analytical, mountain).
+    constraint_indexing:constraint_classification(shitty_feedback_handling, Type1, context(agent_power(individual_powerless), _, _, _)),
+    constraint_indexing:constraint_classification(shitty_feedback_handling, Type2, context(agent_power(individual_moderate), _, _, _)),
+    constraint_indexing:constraint_classification(shitty_feedback_handling, Type3, context(agent_power(institutional), _, _, _)),
+    Type1 \= Type2,
+    Type2 \= Type3,
+    Type1 \= Type3.
 
 :- end_tests(shitty_feedback_handling_tests).
 
@@ -209,42 +166,41 @@ test(time_immutability) :-
 
 /**
  * LLM GENERATION NOTES
- * * Model: Gemini 2.0 Flash
- * Date: 2025-05-22
- * * KEY DECISIONS:
- * * 1. BASE EXTRACTIVENESS (0.4):
- * Reasoning: The text highlights that feedback is often contextless noise that wastes the 
- * receiver's time and ego. The extraction is the cognitive load required to 
- * process "worthless" commentary from strangers or unskilled peers.
- * * 2. SUPPRESSION SCORE (0.3):
- * Reasoning: The text explicitly mentions defensiveness as the first reaction. 
- * The protocol suppresses this natural impulse in favor of a performative "Politeness" 
- * that protects the subject's long-term utility.
- * * 3. PERSPECTIVE SELECTION:
- * Chose Subordinate (Noose) because institutional power changes the "Reject" option 
- * into a liability. Chose Subject (Rope) for the core "Accept/Reframe/Reject" utility. 
- * Chose Analyst (Mountain) to reflect the systemic ubiquity mentioned in the text.
+ * 
+ * Model: Gemini Pro (Revised)
+ * Date: 2026-01-23
+ * 
+ * KEY DECISIONS:
+ * 
+ * 1. INSTITUTIONAL PERSPECTIVE: Added 'The Corporation' to represent how feedback,
+ *    even shitty feedback, is institutionalized as a 'Tangled Rope'—a tool for
+ *    coordination that has negative, extractive side effects.
+ *
+ * 2. CLASSIFICATION RATIONALE:
+ *    - Subordinate (Snare): Power forces acceptance.
+ *    - Peer (Rope): A filter for personal growth.
+ *    - Corporation (Tangled Rope): A useful data-gathering tool that also creates organizational drag.
+ * 
+ * 3. EXTRACTIVENESS (0.4): This score reflects the cognitive and emotional load
+ *    required to process worthless or malicious commentary, which is a real cost
+ *    even if no money changes hands.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
+/**
+ * OMEGA IDENTIFICATION
+ *
+ * The core uncertainty is whether bad feedback is an accident or a feature.
+ */
 
-% Mandatory Omega for high-extraction (potential) constraints:
 omega_variable(
-    shitty_feedback_handling_intent,
-    "Is shitty feedback a byproduct of low skill (Mountain/Noise) or a predatory attempt to destabilize the subject (Noose)?",
-    resolution_mechanism("Audit of feedback giver's history vs. receiver's subsequent performance metrics"),
-    impact("If noise: protocol is a Rope. If predatory: protocol must shift to pure Rejection/Noose-avoidance."),
+    shitty_feedback_intent,
+    "Is shitty feedback a byproduct of low skill and poor incentives (Mountain/Noise) or a predatory attempt to destabilize the subject (Snare)?",
+    resolution_mechanism("Audit of a feedback giver's history vs. the receiver's subsequent performance metrics and well-being."),
+    impact("If noise: protocol is a Rope. If predatory: protocol must shift to pure Rejection/Snare-avoidance."),
     confidence_without_resolution(medium)
-).
-
-omega_variable(
-    reframing_ceiling,
-    "Can any contextless feedback be reframed into value, or is there a 'truth floor' below which feedback is absolute waste?",
-    resolution_mechanism("Measure time-to-insight for reframing unsolicited stranger feedback"),
-    impact("If value exists: Rope. If waste: Mountain of noise."),
-    confidence_without_resolution(low)
 ).
 
 /* ==========================================================================
@@ -253,18 +209,15 @@ omega_variable(
 
 /**
  * VIABLE ALTERNATIVES
- * * ALTERNATIVE 1: Defensiveness / Counter-Criticism
- * Viability: Our "first reaction" to shitty feedback.
- * Suppression: Discouraged as "rarely necessary" and ineffective for being "taken seriously".
- * Evidence: "I think the most important point is to not defend yourself".
- * * ALTERNATIVE 2: Blind Acceptance
- * Viability: Accepting the giver's context/values as superior to one's own idiosyncrasies.
- * Suppression: Rejected because "it’s rare for a person to know us well enough to give 
- * feedback that can simply be accepted".
- * * CONCLUSION:
- * The existence of "shitty feedback" as an environmental constant shifts the interaction 
- * from a potential meritocracy (where good feedback is rewarded) into a survival 
- * protocol (where noise must be managed).
+ * 
+ * ALTERNATIVE 1: Defensiveness / Counter-Criticism
+ *    Viability: This is the default, "natural" human reaction to perceived attack.
+ *    Suppression: Discouraged by the protocol as "rarely necessary" and ineffective for being "taken seriously".
+ * 
+ * CONCLUSION:
+ * The protocol of 'Accept, Reframe, Reject' is a learned 'Rope' that an agent uses to
+ * manage the environmental 'Mountain' of constant, low-quality feedback. It suppresses
+ * our natural defensive reaction in favor of a more strategic, self-protective one.
  */
 
 /* ==========================================================================
@@ -273,8 +226,9 @@ omega_variable(
 
 /**
  * TO USE THIS FILE:
- * * 1. Load: ?- [constraints/shitty_feedback_handling].
- * 2. Multi-perspective: ?- constraint_indexing:multi_index_report(shitty_feedback_handling).
+ * 
+ * 1. Load: ?- [constraints/shitty_feedback_handling].
+ * 2. Multi-perspective: ?- multi_index_report(shitty_feedback_handling).
  * 3. Run tests: ?- run_tests(shitty_feedback_handling_tests).
  */
 

@@ -35,7 +35,7 @@ constraint_metric(preference_list_rigidity, suppression_requirement, 0.38).
 constraint_metric(preference_list_rigidity, snap_back_potential, 0.45).
 constraint_metric(preference_list_rigidity, extractiveness, 0.52).
 
-constraint_claim(blocking_pair_instability, noose).
+constraint_claim(blocking_pair_instability, snare).
 constraint_metric(blocking_pair_instability, intensity, 0.92).
 constraint_metric(blocking_pair_instability, suppression_requirement, 0.82).
 constraint_metric(blocking_pair_instability, snap_back_potential, 0.88).

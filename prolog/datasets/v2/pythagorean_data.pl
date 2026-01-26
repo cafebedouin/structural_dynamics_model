@@ -36,7 +36,7 @@ constraint_metric(arithmetic_integer_bias, suppression_requirement, 0.30).
 constraint_metric(arithmetic_integer_bias, snap_back_potential, 0.40).
 constraint_metric(arithmetic_integer_bias, extractiveness, 0.48).
 
-constraint_claim(fixed_metric_space_limit, noose).
+constraint_claim(fixed_metric_space_limit, snare).
 constraint_metric(fixed_metric_space_limit, intensity, 0.92).
 constraint_metric(fixed_metric_space_limit, suppression_requirement, 0.82).
 constraint_metric(fixed_metric_space_limit, snap_back_potential, 0.88).

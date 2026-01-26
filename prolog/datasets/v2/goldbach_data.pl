@@ -42,7 +42,7 @@ constraint_metric(sieve_method_efficiency_friction, snap_back_potential, 0.45).
 constraint_metric(sieve_method_efficiency_friction, extractiveness, 0.55).
 
 % NOOSE: Analytical Proof Obstruction (The gap between distribution and specific sums)
-constraint_claim(analytical_distribution_noose, noose).
+constraint_claim(analytical_distribution_noose, snare).
 constraint_metric(analytical_distribution_noose, intensity, 0.98).
 constraint_metric(analytical_distribution_noose, suppression_requirement, 0.88).
 constraint_metric(analytical_distribution_noose, snap_back_potential, 0.95).

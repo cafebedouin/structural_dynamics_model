@@ -39,7 +39,7 @@ constraint_metric(gerty_lameness, suppression_requirement, 0.01).
 constraint_metric(gerty_lameness, resistance, 0.01).
 
 % Section 4: Temporal Measurements (Triple Measurements Required)
-% Gerty's Fantasy: Progressively calcifying from Scaffold toward Noose
+% Gerty's Fantasy: Progressively calcifying from Scaffold toward Snare
 measurement(m1, gerty_fantasy_scaffold, extractiveness, 2000, 0.25).
 measurement(m2, gerty_fantasy_scaffold, suppression_requirement, 2000, 0.15).
 measurement(m3, gerty_fantasy_scaffold, resistance, 2000, 0.10).
@@ -97,7 +97,7 @@ intent_beneficiary_class(nausicaa_evening, traditional_marriage_structure).
 intent_power_change(nausicaa_evening, traditional_marriage_structure, 0.60).
 
 % Section 8: Recommendations
-recommendation(rec1, 'Sever the dependency on novelette_consumer_culture to prevent scaffold calcification into a Noose').
+recommendation(rec1, 'Sever the dependency on novelette_consumer_culture to prevent scaffold calcification into a Snare').
 affects_constraint(rec1, gerty_fantasy_scaffold).
 
 recommendation(rec2, 'Structural deconstruction of false mountains (gender norms) to reduce extractiveness from the individual').

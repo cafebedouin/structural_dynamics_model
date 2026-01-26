@@ -38,7 +38,7 @@
  * - The Master: An "ancient and wise" philosopher who sets the extractive constraint to test the student.
  * - The Wise Man at the Gate: A gatekeeper who tests the disciple's final state by providing "free" insults.
  * * NARRATIVE ARC:
- * The disciple experiences three years of a "Noose" where money is extracted and social standing is surrendered. Upon reaching Athens, the constraint is inverted; the realization that insults are now "nothing" (free) reveals the previous extraction as a functional "Rope" for achieving wisdom.
+ * The disciple experiences three years of a "Snare" where money is extracted and social standing is surrendered. Upon reaching Athens, the constraint is inverted; the realization that insults are now "nothing" (free) reveals the previous extraction as a functional "Rope" for achieving wisdom.
  */
 
 /* ==========================================================================
@@ -74,7 +74,7 @@ constraint_victim(insult_wisdom_training, the_disciple_ego). % The part of the s
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 1: THE DISCIPLE (DURING TRIAL) - Noose
+   PERSPECTIVE 1: THE DISCIPLE (DURING TRIAL) - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless (A student following a command)
@@ -83,7 +83,7 @@ constraint_victim(insult_wisdom_training, the_disciple_ego). % The part of the s
    SCOPE: local (Immediate social interactions)
    
    WHY THIS CLASSIFICATION:
-   During the trial, the disciple sees the constraint as a "Noose." It is "galling" and involves a constant extraction of money and pride. He has no choice but to pay if he wants to achieve his goal.
+   During the trial, the disciple sees the constraint as a "Snare." It is "galling" and involves a constant extraction of money and pride. He has no choice but to pay if he wants to achieve his goal.
    
    NARRATIVE EVIDENCE:
    "Every time he was insulted, he gave money... no matter how galling the experience was".
@@ -93,7 +93,7 @@ constraint_victim(insult_wisdom_training, the_disciple_ego). % The part of the s
 
 constraint_indexing:constraint_classification(
     insult_wisdom_training,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -169,13 +169,13 @@ constraint_indexing:constraint_classification(
 
 /**
  * TEST 1: Multi-perspective variance
- * Demonstrates the Mandatrophy resolution: The "Noose" becomes a "Rope".
+ * Demonstrates the Mandatrophy resolution: The "Snare" becomes a "Rope".
  */
 test(multi_perspective_insult) :-
-    % Disciple during trial sees Noose
+    % Disciple during trial sees Snare
     constraint_indexing:constraint_classification(
         insult_wisdom_training,
-        noose,
+        snare,
         context(individual_powerless, immediate, trapped, local)
     ),
     % Disciple at gate sees Rope
@@ -231,7 +231,7 @@ omega_variable(
     insult_wisdom_training_extraction_intent,
     "Is the three-year trial a functional necessity for ego-liquidation or an arbitrary hazing ritual by the Master?",
     resolution_mechanism("Audit of long-term student success rates vs. resource-drain severity"),
-    impact("If necessity: Mountain of learning. If arbitrary: Mandatrophy Noose."),
+    impact("If necessity: Mountain of learning. If arbitrary: Mandatrophy Snare."),
     confidence_without_resolution(medium)
 ).
 
@@ -245,7 +245,7 @@ omega_variable(
  * Viability: Studying books or rhetoric in Athens without the preliminary emotional trial.
  * Suppression: Explicitly rejected by the Master as insufficient; the disciple is only "ready to learn wisdom" *after* the trial.
  * * CONCLUSION:
- * The Master suppresses the "Short Cut" alternative, identifying the trial as an inescapable Mountain. For the student, this suppression is what makes the trial feel like a Noose until the final realization.
+ * The Master suppresses the "Short Cut" alternative, identifying the trial as an inescapable Mountain. For the student, this suppression is what makes the trial feel like a Snare until the final realization.
  */
 
 /* ==========================================================================

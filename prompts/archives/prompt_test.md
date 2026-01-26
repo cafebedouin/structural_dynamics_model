@@ -12,7 +12,7 @@ Constraints (social institutions, rules, power structures) classify differently 
 ### The Three Types
 - **Mountain**: Unchangeable, natural law (zero degrees of freedom)
 - **Rope**: Functional coordination mechanism (positive sum, changeable)
-- **Noose**: Extractive/coercive mechanism (asymmetric, enforced)
+- Snare: Extractive/coercive mechanism (asymmetric, enforced)
 
 ### The Four Indices
 
@@ -49,7 +49,7 @@ Constraints (social institutions, rules, power structures) classify differently 
 
 A single constraint can be:
 - **Mountain** to someone powerless with no exit (unchangeable in their lifetime)
-- **Noose** to an analyst with long view (extractive, historically contingent)
+- Snare to an analyst with long view (extractive, historically contingent)
 - **Rope** to an institution that benefits (coordination mechanism they maintain)
 
 All three classifications are TRUE - they're indexed to different perspectives.
@@ -103,7 +103,7 @@ requires_active_enforcement([constraint_id]).  % or: emerges_naturally([constrai
 For each perspective, provide:
 
 ```prolog
-% [PERSPECTIVE NAME] - [Expected Type: mountain/rope/noose]
+% [PERSPECTIVE NAME] - [Expected Type: mountain/rope/snare]
 constraint_classification(
     [constraint_id],
     [type],
@@ -181,7 +181,7 @@ effective_immutability_for_context(Context, mountain),
 % Cannot be changed within agent's power/time/exit constraints
 ```
 
-### For NOOSE classification:
+### For SNARE classification:
 ```prolog
 extractiveness_for_agent([constraint_id], Context, E),
 E > 0.6,  % High extraction
@@ -254,13 +254,12 @@ constraint_classification(
     suppression_score(feudal_obligations_england_1200, S),
     S > 0.7.  % High suppression makes alternatives invisible
 
-% HISTORIAN PERSPECTIVE - Noose
+% HISTORIAN PERSPECTIVE - Snare
 % Sees it emerged ~1066, declined by 1400, required active enforcement
-constraint_classification(
-    feudal_obligations_england_1200,
-    noose,
-    context(
-        agent_power(analytical),
+    constraint_classification(
+        feudal_obligations_england_1200,
+        snare,
+        context(        agent_power(analytical),
         time_horizon(civilizational),
         exit_options(analytical),
         spatial_scope(continental)
@@ -307,10 +306,10 @@ test(multi_perspective_feudalism) :-
         mountain,
         context(individual_powerless, biographical, trapped, local)
     ),
-    % Historian sees Noose
+    % Historian sees Snare
     constraint_classification(
         feudal_obligations_england_1200,
-        noose,
+        snare,
         context(analytical, civilizational, analytical, continental)
     ),
     % Lord sees Rope
@@ -320,8 +319,8 @@ test(multi_perspective_feudalism) :-
         context(institutional, generational, arbitrage, regional)
     ),
     % All different
-    mountain \= noose,
-    noose \= rope.
+    mountain \= snare,
+    snare \= rope.
 
 test(power_scaling_feudalism) :-
     Context1 = context(individual_powerless, biographical, trapped, local),
@@ -348,7 +347,7 @@ test(historical_mutability) :-
 **Serf perspective (Mountain):**
 Born into system, cannot leave manor without lord's permission, no visible alternatives. Within a single lifetime of 30-40 years, feudal obligations appear as unchangeable as the weather. High suppression (0.8) means alternative social arrangements are literally unimaginable.
 
-**Historian perspective (Noose):**
+**Historian perspective (Snare):**
 Over 300+ year view, feudalism is visibly constructed (emerged after Norman conquest 1066), requires active enforcement (manor courts, bailiffs, threat of force), and eventually collapses (Black Death 1348 gives serfs bargaining power, system largely gone by 1500). Base extractiveness of 0.7 shows asymmetric benefit: lords extract 43% of labor time plus monopoly rents.
 
 **Lord perspective (Rope):**
@@ -367,8 +366,8 @@ From institutional position with generational planning horizon, feudalism is coo
    - Document reasoning
 
 3. **Make time horizons matter**
-   - biographical + trapped often → mountain
-   - civilizational + analytical often → noose or rope (depending on extractiveness)
+   biographical + trapped often → mountain
+   civilizational + analytical often → snare or rope (depending on extractiveness)
 
 4. **Power must affect extractiveness**
    - Powerless agents experience MORE extraction (modifier 1.5x)

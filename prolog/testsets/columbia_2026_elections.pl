@@ -157,7 +157,7 @@ constraint_indexing:constraint_classification(
    SCOPE: national
    
    WHY THIS CLASSIFICATION:
-   For the centrist technocrat, the current polarized structure is a "Noose." 
+   For the centrist technocrat, the current polarized structure is a "Snare." 
    The binary choice (Petrista vs. Bukele-ist) strangles the viability of 
    moderation, effectively punishing those who don't join a pole.
    
@@ -168,7 +168,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     colombia_2026_presidential_election,
-    noose,
+    snare,
     context(
         agent_power(individual_moderate),
         time_horizon(generational),
@@ -189,7 +189,7 @@ constraint_indexing:constraint_classification(
 test(multi_perspective_variance) :-
     constraint_indexing:constraint_classification(colombia_2026_presidential_election, rope, context(individual_powerful, biographical, mobile, national)),
     constraint_indexing:constraint_classification(colombia_2026_presidential_election, mountain, context(individual_powerless, immediate, trapped, local)),
-    constraint_indexing:constraint_classification(colombia_2026_presidential_election, noose, context(individual_moderate, generational, constrained, national)).
+    constraint_indexing:constraint_classification(colombia_2026_presidential_election, snare, context(individual_moderate, generational, constrained, national)).
 
 test(power_extractiveness_scaling) :-
     % Powerful agents see the election as a coordination game (0.2 experienced extraction)
@@ -199,8 +199,8 @@ test(power_extractiveness_scaling) :-
     ScorePowerless > ScorePowerful.
 
 test(time_immutability_fajardo_trap) :-
-    % Demonstrates that for a "Moderate" agent in a national scope, the constraint is a Noose
-    constraint_indexing:constraint_classification(colombia_2026_presidential_election, noose, context(individual_moderate, _, _, national)).
+    % Demonstrates that for a "Moderate" agent in a national scope, the constraint is a Snare
+    constraint_indexing:constraint_classification(colombia_2026_presidential_election, snare, context(individual_moderate, _, _, national)).
 
 :- end_tests(colombia_2026_presidential_election_tests).
 
@@ -221,16 +221,16 @@ test(time_immutability_fajardo_trap) :-
  * - Cepeda (Rope): Represents the coalition-building logic of the ruling party.
  * - Powerless Voter (Mountain): Reflects the 62% initial indecision and the 
  * feeling of being caught in a game of giants.
- * - Fajardo (Noose): Represents the "death of the center" in Latin American 
+ * - Fajardo (Snare): Represents the "death of the center" in Latin American 
  * politics, where the system itself strangles moderate alternatives.
  * * 3. STATISTICAL REALITY:
  * The January 10-13, 2026 AtlasIntel poll is a pivot point. De la Espriella's 
- * 28% vs. Cepeda's 26.5% creates a "Noose" for anyone not aligned with these 
+ * 28% vs. Cepeda's 26.5% creates a "Snare" for anyone not aligned with these 
  * two figures, as they command over 50% of the active electorate intentions.
  * * 4. AMBIGUITIES:
  * The "Undecided" bloc is the biggest variable. If they are "trapped" and 
  * "powerless," they see a Mountain. If they are "mobile" (analytical), they 
- * might see a Noose they can arbitrage.
+ * might see a Snare they can arbitrage.
  */
 
 /* ==========================================================================
@@ -248,7 +248,7 @@ test(time_immutability_fajardo_trap) :-
  * The existence of these alternatives (primaries) suggests the election is 
  * still a Rope for the political class, but for the general public, the 
  * "all against the left" vs. "continuity" narrative acts as a structural 
- * Noose that eliminates diverse policy discourse.
+ * Snare that eliminates diverse policy discourse.
  */
 
 /* ==========================================================================
@@ -270,4 +270,4 @@ test(time_immutability_fajardo_trap) :-
 % --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
 constraint_indexing:constraint_classification(columbia_2026_elections, mountain, agent_power(analytical)).
 constraint_indexing:constraint_classification(columbia_2026_elections, rope, agent_power(institutional)).
-constraint_indexing:constraint_classification(columbia_2026_elections, noose, agent_power(individual_powerless)).
+constraint_indexing:constraint_classification(columbia_2026_elections, snare, agent_power(individual_powerless)).

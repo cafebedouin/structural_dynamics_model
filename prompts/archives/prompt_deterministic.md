@@ -57,8 +57,8 @@ intent_norm_strength(IntervalID, NormName, Value).
 **CRITICAL: The ConstraintType in constraint_claim/2 MUST be exactly one of these four atoms:**
 - `mountain` (logical impossibility)
 - `rope` (coordination trap)
-- `noose` (escalating pressure)
-- `zombie` (inertial persistence)
+- `snare` (escalating pressure)
+- `piton` (inertial persistence)
 
 **NO other constraint types are valid. Any other value will cause validation failure.**
 
@@ -81,11 +81,11 @@ Before generating any facts, you MUST classify the primary constraint using this
    - NO → continue
 
 3. **Does the constraint demonstrably intensify over time via positive feedback?**
-   - YES → **noose**
+   - YES → **snare**
    - NO → continue
 
 4. **Does the constraint persist primarily due to institutional inertia despite weak justification?**
-   - YES → **zombie**
+   - YES → **piton**
    - NO → return to step 1 and reconsider
 
 ### **MOUNTAIN (Geometric Impossibility)**
@@ -114,11 +114,11 @@ MUST satisfy:
 
 Examples: Repo 105 accounting, network effects, prisoner's dilemmas, regulatory capture
 
-### **NOOSE (Escalating Pressure)**
+### **SNARE (Escalating Pressure)**
 Use when the constraint represents positive feedback loops or tightening dynamics.
 
 MUST satisfy:
-- `constraint_claim(Name, noose).`
+- `constraint_claim(Name, snare).`
 - `constraint_metric(Name, intensity, Value).` where Value ∈ [0.50, 0.85]
 - intensity(Tn) > intensity(T0) (must demonstrate tightening)
 - structural suppression ∈ [0.40, 0.75] at Tn
@@ -127,18 +127,18 @@ MUST satisfy:
 
 Examples: Debt spirals, cytokine storms, addiction cascades, runaway feedback loops
 
-### **ZOMBIE (Inertial Persistence)**
+### **PITON (Inertial Persistence)**
 Use when the constraint persists despite being obsolete or illegitimate.
 
 MUST satisfy:
-- `constraint_claim(Name, zombie).`
+- `constraint_claim(Name, piton).`
 - `constraint_metric(Name, intensity, Value).` where Value ∈ [0.30, 0.70]
 - Evidence of decreasing legitimacy over time
 - structural suppression ∈ [0.20, 0.60] at Tn
 - Multiple viable alternatives blocked by institutional inertia (not veto)
 - Constraint would fail cost-benefit analysis if implemented today
 
-Examples: Legacy regulations, abandoned protocols, zombie institutions
+Examples: Legacy regulations, abandoned protocols, piton institutions
 
 ---
 
@@ -263,7 +263,7 @@ Rationale: You cannot reject something that was never considered viable in the f
 You MUST define at least ONE constraint using the type determined in Section 3.
 
 The constraint definition MUST include:
-1. `constraint_claim(Name, Type).` where Type is mountain, rope, noose, or zombie
+1. `constraint_claim(Name, Type).` where Type is mountain, rope, snare, or piton
 2. `constraint_metric(Name, intensity, Value).` where Value follows the rules in Section 3
 
 You MAY define additional constraints of different types if the domain genuinely exhibits multiple constraint geometries, but most domains have ONE primary constraint.
@@ -294,7 +294,7 @@ When the user provides text:
 5. Generate all required entities.  
 6. Generate all required events.  
 7. **Generate constraint facts:**
-   - `constraint_claim(constraint_name, selected_type).` where selected_type is mountain, rope, noose, or zombie
+   - `constraint_claim(constraint_name, selected_type).` where selected_type is mountain, rope, snare, or piton
    - `constraint_metric(constraint_name, intensity, value).`
 8. Generate all required recommendations and veto structure.  
 9. Generate all 32 measurements using ONLY T0 and Tn times, with levels as: individual, organizational, class, structural
@@ -308,7 +308,7 @@ When the user provides text:
 Before outputting your Prolog facts, verify:
 
 1. ✓ You have output at least one `constraint_claim(Name, Type)` fact
-2. ✓ The Type is exactly: `mountain`, `rope`, `noose`, or `zombie` (no other values)
+2. ✓ The Type is exactly: `mountain`, `rope`, `snare`, or `piton` (no other values)
 3. ✓ You have exactly 32 `measurement/5` facts
 4. ✓ All measurements use levels: `individual`, `organizational`, `class`, or `structural` (NOT 1, 2, 3, 4)
 5. ✓ All measurements use times matching T0 or Tn from your `interval/3` fact

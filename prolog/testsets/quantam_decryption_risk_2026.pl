@@ -87,7 +87,7 @@ constraint_victim(quantum_decryption_risk_2026, human_rights_advocates).
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 1: THE PRIVACY DEFENDER - Noose
+   PERSPECTIVE 1: THE PRIVACY DEFENDER - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless (Vulnerable users relying on ETEE for life/safety)
@@ -97,14 +97,14 @@ constraint_victim(quantum_decryption_risk_2026, human_rights_advocates).
    
    WHY THIS CLASSIFICATION:
    For those who "literally rely on encryption to save their lives," the threat 
-   of quantum decryption is a "Noose". It turns their current 
+   of quantum decryption is a "Snare". It turns their current 
    mathematical "wall" into a future trap where their past secrets can be 
    extracted at will.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
     quantum_decryption_risk_2026,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -178,8 +178,8 @@ constraint_indexing:constraint_classification(
 test(multi_perspective_asymmetry) :-
     % Beneficiary (Institutional) sees a Tool (Rope)
     constraint_indexing:constraint_classification(quantum_decryption_risk_2026, rope, context(institutional, historical, arbitrage, global)),
-    % Victim (Powerless) sees a Trap (Noose)
-    constraint_indexing:constraint_classification(quantum_decryption_risk_2026, noose, context(individual_powerless, immediate, trapped, global)).
+    % Victim (Powerless) sees a Trap (Snare)
+    constraint_indexing:constraint_classification(quantum_decryption_risk_2026, snare, context(individual_powerless, immediate, trapped, global)).
 
 test(math_vulnerability_scaling) :-
     % High extractiveness (0.8) indicates the Mandatrophy status
@@ -208,7 +208,7 @@ test(math_vulnerability_scaling) :-
  * (who sees quantum as a tool to break that lifeline).
  * * 3. MANDATROPHY STATUS:
  * Resolved as a Mandatrophy Risk because the "Rope" for the 
- * institutional agent is built specifically upon the "Noose" 
+ * institutional agent is built specifically upon the "Snare" 
  * of the powerless agent.
  */
 
@@ -220,15 +220,15 @@ omega_variable(
     q_day_arrival_date,
     "When will a quantum computer achieve the necessary error-corrected qubits to factor RSA-2048?",
     resolution_mechanism("Physical demonstration of Shor's algorithm on a 2048-bit equivalent system"),
-    impact("If soon: Immediate Noose for all current digital legacy data. If far: Rope for transition to PQC."),
+    impact("If soon: Immediate Snare for all current digital legacy data. If far: Rope for transition to PQC."),
     confidence_without_resolution(low)
 ).
 
 omega_variable(
     quantum_decryption_risk_extraction_intent,
-    "Is the development of quantum decryption a strategic pursuit of state dominance (Noose) or a byproduct of scientific progress (Mountain)?",
+    "Is the development of quantum decryption a strategic pursuit of state dominance (Snare) or a byproduct of scientific progress (Mountain)?",
     resolution_mechanism("Audit of state quantum budgets vs. open scientific publishing rates"),
-    impact("If strategic dominance: Mandatrophy Noose. If byproduct: Physical Mountain."),
+    impact("If strategic dominance: Mandatrophy Snare. If byproduct: Physical Mountain."),
     confidence_without_resolution(medium)
 ).
 
@@ -245,7 +245,7 @@ omega_variable(
  * velocity of quantum hardware research.
  * * CONCLUSION:
  * The existence of PQC acts as a potential new "Rope" for privacy, but 
- * until it is standard, the "Quantum Decryption" Noose remains tightened 
+ * until it is standard, the "Quantum Decryption" Snare remains tightened 
  * around legacy ETEE systems.
  */
 

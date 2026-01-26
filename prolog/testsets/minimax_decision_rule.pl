@@ -47,7 +47,7 @@
  * universe, it is the fundamental floor of safety. In cybersecurity and 
  * high-stakes negotiation, it is a "Rope" for functional coordination. 
  * However, for the creative agent seeking a "big win," the rule acts as a 
- * "Noose," extracting the possibility of high-reward variance and "strangling" 
+ * "Snare," extracting the possibility of high-reward variance and "strangling" 
  * the game into a predictable, risk-averse stalemate.
  */
 
@@ -146,7 +146,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE STRATEGIC INNOVATOR - Noose
+   PERSPECTIVE 3: THE STRATEGIC INNOVATOR - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless
@@ -155,7 +155,7 @@ constraint_indexing:constraint_classification(
    SCOPE: regional
    
    WHY THIS CLASSIFICATION:
-   For the innovator, the rule is a "Noose." It "strangles" creative 
+   For the innovator, the rule is a "Snare." It "strangles" creative 
    risk-taking. The algorithm’s refusal to leave its conservative 
    equilibrium extracts the potential for breakthrough "big wins," trapping 
    the innovator in a cycle of marginal, defensive gains.
@@ -165,7 +165,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     minimax_decision_rule,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -215,7 +215,7 @@ test(emergence) :-
  * sacrificing potential upside for safety. It extracts the "dream" 
  * of the agent to enforce the "reality" of the opponent.
  * 2. CLASSIFICATION: Captured the transition from a "Mountain" of logic for 
- * the machine to a "Noose" of boredom/stalemate for the player.
+ * the machine to a "Snare" of boredom/stalemate for the player.
  */
 
 % OMEGA IDENTIFICATION
@@ -223,7 +223,7 @@ omega_variable(
     adversarial_rationality,
     "Does Minimax remain a 'Mountain' if the opponent is irrational (Scaffold)?",
     resolution_mechanism("Comparison of Minimax vs Expectiminimax performance against stochastic/irrational agents."),
-    impact("If irrationality prevails, Minimax is a 'Noose' that extracts unnecessary caution."),
+    impact("If irrationality prevails, Minimax is a 'Snare' that extracts unnecessary caution."),
     confidence_without_resolution(medium)
 ).
 
@@ -240,7 +240,7 @@ omega_variable(
  * * ALTERNATIVE 2: Expected Utility (Bayesian/Probabilistic)
  * Viability: The standard when the opponent's strategy is predictable.
  * Conclusion: The existence of probabilistic alternatives (Ropes) makes 
- * the Minimax "Noose" only relevant when the opponent is a "Perfect Demon."
+ * the Minimax "Snare" only relevant when the opponent is a "Perfect Demon."
  */
 
 /* ==========================================================================

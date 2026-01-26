@@ -22,13 +22,13 @@ omega_variable(omega_e_1, empirical, actual_monetizability_of_comfort_deposits_a
 omega_variable(omega_c_1, conceptual, definition_of_unencumbered_liquidity_within_cse_framework).
 omega_variable(omega_p_1, preference, prioritization_of_reported_leverage_ratios_over_actual_asset_transparency).
 
-constraint_claim(repo_105_practice, noose).
+constraint_claim(repo_105_practice, snare).
 constraint_metric(repo_105_practice, intensity, 0.88).
 constraint_metric(repo_105_practice, suppression_requirement, 0.95).
 constraint_metric(repo_105_practice, extractiveness, 0.92).
 constraint_metric(repo_105_practice, snap_back_potential, 0.15).
 
-constraint_claim(liquidity_pool_overstatement, zombie).
+constraint_claim(liquidity_pool_overstatement, piton).
 constraint_metric(liquidity_pool_overstatement, intensity, 0.90).
 constraint_metric(liquidity_pool_overstatement, extractiveness, 0.85).
 

@@ -42,12 +42,12 @@
  * as a "Rope" to deduce properties of unknown particles or forces.
  * - The Numerical Simulator (Analyst/Victim): An agent struggling with 
  * discrete systems that "break" the symmetry, turning the theorem into 
- * a "Noose" of unphysical energy drift.
+ * a "Snare" of unphysical energy drift.
  * * NARRATIVE ARC:
  * Noether's Theorem is the ultimate "Mountain" of physical reality—an 
  * inescapable identity between geometry and substance. In model-building, 
  * it is a "Rope" for coordination. However, in modern computing, the 
- * theorem acts as a "Noose" for programmers who must invent complex "Symplectic 
+ * theorem acts as a "Snare" for programmers who must invent complex "Symplectic 
  * Integrators" to satisfy the conservation laws that the digital 
  * environment naturally tries to violate.
  */
@@ -142,7 +142,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE GAME ENGINE PROGRAMMER - Noose
+   PERSPECTIVE 3: THE GAME ENGINE PROGRAMMER - Snare
    --------------------------------------------------------------------------
    WHO: individual_powerless - Bound by the limits of floating-point math.
    WHEN: immediate - Every frame, energy "leaks" out of the system.
@@ -151,7 +151,7 @@ constraint_indexing:constraint_classification(
    
    WHY THIS CLASSIFICATION:
    In a discrete simulation, the "Mountain" of Noether is broken. The programmer 
-   experiences the theorem as a "Noose"—a coercive limit that punishes simple 
+   experiences the theorem as a "Snare"—a coercive limit that punishes simple 
    logic with "unphysical" results. It extracts massive engineering hours 
    to implement symplectic integrators that "tighten" the simulation back to 
    the conserved reality.
@@ -159,7 +159,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     noethers_theorem_symmetry,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -186,8 +186,8 @@ test(symmetry_fate_variance) :-
     Type2 = rope.
 
 test(numerical_drift_penalty) :-
-    % A powerless agent (Programmer) in a constrained context sees the theorem as a Noose.
-    constraint_indexing:constraint_classification(noethers_theorem_symmetry, noose, context(individual_powerless, immediate, constrained, local)).
+    % A powerless agent (Programmer) in a constrained context sees the theorem as a Snare.
+    constraint_indexing:constraint_classification(noethers_theorem_symmetry, snare, context(individual_powerless, immediate, constrained, local)).
 
 test(natural_emergence) :-
     domain_priors:emerges_naturally(noethers_theorem_symmetry).
@@ -205,7 +205,7 @@ test(natural_emergence) :-
  * * KEY DECISIONS:
  * * 1. PERSPECTIVE SPLIT: 
  * I highlighted the transition from "Analytic Certainty" (Mountain) to 
- * "Numerical Burden" (Noose). This explains why Noether's work is both a 
+ * "Numerical Burden" (Snare). This explains why Noether's work is both a 
  * beautiful discovery and a technical headache for simulators.
  * * 2. EXTRACTIVENESS: 
  * Set at 0.1. While math is free, the *preservation* of these laws in 
@@ -221,7 +221,7 @@ omega_variable(
     discrete_noether_validity,
     "Does a true 'Mountain' version of the theorem exist for discrete-time systems (Calculus of Finite Differences)?",
     resolution_mechanism("Verification of Discrete Variational Integrators across 100 benchmark physics scenarios."),
-    impact("If Yes: The Noose becomes a Rope for programmers. If No: It is a permanent Noose of approximation."),
+    impact("If Yes: The Snare becomes a Rope for programmers. If No: It is a permanent Snare of approximation."),
     confidence_without_resolution(medium)
 ).
 

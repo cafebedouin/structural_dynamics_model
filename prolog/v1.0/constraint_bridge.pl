@@ -18,15 +18,15 @@ constraint_status(Name, binding_limit, I) :-
     narrative_ontology:constraint_metric(Name, inevitability, I), !.
 
 constraint_status(Name, extractive_noose, I) :-
-    narrative_ontology:constraint_claim(Name, noose),
+    narrative_ontology:constraint_claim(Name, snare),
     narrative_ontology:constraint_metric(Name, extractiveness, I), !.
 
 constraint_status(Name, coordination_rope, I) :-
     narrative_ontology:constraint_claim(Name, rope),
     (narrative_ontology:constraint_metric(Name, theater_ratio, T) -> I is 1.0 - T ; I = 1.0), !.
 
-constraint_status(Name, inertial_zombie, I) :-
-    narrative_ontology:constraint_claim(Name, zombie),
+constraint_status(Name, inertial_piton, I) :-
+    narrative_ontology:constraint_claim(Name, piton),
     (narrative_ontology:constraint_metric(Name, theater_ratio, I) ; I = 1.0), !.
 
 /* ================================================================

@@ -33,11 +33,11 @@ constraint_claim(elite_aging_and_mortality, mountain).
 constraint_claim(institutional_succession_ambiguity, mountain).
 
 % Nooses: Extractive structures
-constraint_claim(irgc_economic_empire, noose).
-constraint_claim(guardian_council_candidate_disqualification, noose).
+constraint_claim(irgc_economic_empire, snare).
+constraint_claim(guardian_council_candidate_disqualification, snare).
 
-% Zombie Ropes: Persisting but non-functional
-constraint_claim(assembly_of_experts_oversight, zombie).
+% Piton Ropes: Persisting but non-functional
+constraint_claim(assembly_of_experts_oversight, piton).
 
 /* ================================================================
    4. INTENT EVIDENCE

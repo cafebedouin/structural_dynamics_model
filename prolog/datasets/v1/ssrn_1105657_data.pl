@@ -24,12 +24,12 @@ event(ev04_legitimacy_crisis, final_verification, 2026, [subject(judicial_review
 constraint_claim(rule_of_law_stability, mountain).
 constraint_metric(rule_of_law_stability, accessibility_collapse, 0.95).
 
-% Noose: The Counter-Majoritarian Difficulty. The democratic deficit that tightens as judicial reach expands.
-constraint_claim(counter_majoritarian_difficulty, noose).
+% Snare: The Counter-Majoritarian Difficulty. The democratic deficit that tightens as judicial reach expands.
+constraint_claim(counter_majoritarian_difficulty, snare).
 constraint_metric(counter_majoritarian_difficulty, stakes_inflation, 0.90).
 
-% Zombie: Originalism. A concept of 'dead hand' control that persists as a living regulatory force.
-constraint_claim(originalist_interpretation_myth, zombie).
+% Piton: Originalism. A concept of 'dead hand' control that persists as a living regulatory force.
+constraint_claim(originalist_interpretation_myth, piton).
 constraint_metric(originalist_interpretation_myth, suppression, 0.75).
 
 % Rope: Stare Decisis. Ties current judicial behavior to rigid historical precedents.

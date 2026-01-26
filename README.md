@@ -53,7 +53,7 @@ The difference isn't just speed—it's **reproducibility**. Every transformation
 **Designed reasoning infrastructure:**
 
 **Deferential Realism (DR)** - Core epistemology
-- Five constraint types (Mountain/Rope/Tangled Rope/Noose/Zombie)
+- Five constraint types (Mountain/Rope/Tangled Rope/Snare/Piton)
 - Indexical relativity (WHO/WHEN/WHERE/HOW MUCH)
 - Omega variables (irreducible reasoning blockers: Ω_E/Ω_C/Ω_P)
 - Multi-level analysis (structural/organizational/class/individual)
@@ -479,7 +479,7 @@ The compiler has been tested on radically different constraint types:
 - May 31, 2026 (first round)
 - June 28, 2026 (runoff if needed)
 
-**Structural claim:** Constitutional term limit (Mountain) + runoff math (Noose) + coalition fragmentation (Rope entropy) → forced bipolar equilibrium
+Structural claim: Constitutional term limit (Mountain) + runoff math (Snare) + coalition fragmentation (Rope entropy) → forced bipolar equilibrium
 
 **If predictions fail:** Model's constraint topology analysis is wrong, indexical classification insufficient, or temporal gradient computation flawed.
 
@@ -511,7 +511,7 @@ The compiler has been tested on radically different constraint types:
 ### Technical
 - **Speed-accuracy tradeoff:** 60-second models may miss nuances weeks of expert analysis would catch
 - **Auto-repair heuristics:** Layer 2 imputes neutral (0.5) priors for novel domains—may be incorrect
-- **Classification edge cases:** Tangled Rope boundaries debatable (Rope vs. Noose with coordination elements)
+Classification edge cases: Tangled Rope boundaries debatable (Rope vs. Snare with coordination elements)
 
 ### Structural
 - **No dynamic generation:** Assumes finite, identifiable options (doesn't handle emergent alternatives or strategic gaming)
@@ -613,8 +613,8 @@ If this methodology proves useful:
 
 ### Long-Term (2027+)
 - ⧗ Constraint compiler as service (API endpoint)
-- ⧗ Multi-constraint interaction modeling (how Nooses capture Ropes)
-- ⧗ Temporal evolution prediction (Rope→Noose gradient forecasting)
+- ⧗ Multi-constraint interaction modeling (how Snares capture Ropes)
+- ⧗ Temporal evolution prediction (Rope→Snare gradient forecasting)
 - ⧗ Institutional adoption (policy analysis, legal review, protocol design)
 - ⧗ Academic validation (peer review, independent replication)
 
@@ -644,8 +644,8 @@ Without explicit WHO/WHEN/WHERE/HOW MUCH specification, "What type of constraint
 | **Mountain** | Physics/logic/biology | None (immutable) | Navigate, accept |
 | **Rope** | Coordination need | Active (energy input) | Maintain, reform carefully |
 | **Tangled Rope** | Rope + captured extraction | Active (mixed incentives) | Reform (remove extraction, preserve coordination) |
-| **Noose** | Power concentration | Active (enforcement) | Replace, cut, exit |
-| **Zombie** | Institutional inertia | Passive (coordination failure) | Bypass, coordinate removal |
+| **Snare** | Power concentration | Active (enforcement) | Replace, cut, exit |
+| **Piton** | Institutional inertia | Passive (coordination failure) | Bypass, coordinate removal |
 
 ### Omega Variables: Reasoning Blockers
 
@@ -666,7 +666,7 @@ Constraints operate simultaneously at four levels:
 | Class | 20% | Group power, collective action capacity |
 | Individual | 10% | Personal experience, navigation options |
 
-**Critical insight:** Same constraint can be Mountain (individual), Rope (organizational), Noose (class) simultaneously. Single-level analysis yields contradictions.
+Critical insight: Same constraint can be Mountain (individual), Rope (organizational), Snare (class) simultaneously. Single-level analysis yields contradictions.
 
 ### For Complete Philosophy
 

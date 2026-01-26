@@ -14,6 +14,7 @@
 :- use_module(v3_1_coercion_projection, []).
 :- use_module(drl_core, []).
 :- use_module(drl_modal_logic, []).
+:- use_module(drl_audit_core, []).
 :- use_module(structural_signatures, []).  % NEW: v3.2 signature detection
 :- use_module(v3_1_data_repair, []).
 :- use_module(data_verification, []).

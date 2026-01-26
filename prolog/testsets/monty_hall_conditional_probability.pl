@@ -47,7 +47,7 @@
  * odds are a fixed, unyielding truth of the system's state space. In 
  * education, it is a "Rope" for coordinating an understanding of conditional 
  * probability. However, for the contestant's ego, the paradox acts as a 
- * "Noose," extracting the possibility of a "rational" 50/50 choice and 
+ * "Snare," extracting the possibility of a "rational" 50/50 choice and 
  * "strangling" those who refuse to pivot when the rules shift.
  */
 
@@ -127,7 +127,7 @@ constraint_indexing:constraint_classification(
    
    WHY THIS CLASSIFICATION:
    For the educator, the problem is a "Rope"—a functional coordination 
-   mechanism. It allows them to "pull" students away from the "Noose" of 
+   mechanism. It allows them to "pull" students away from the "Snare" of 
    faulty intuition toward a standard of achievement in Bayesian thinking.
    -------------------------------------------------------------------------- */
 
@@ -143,7 +143,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE SKEPTICAL CONTESTANT - Noose
+   PERSPECTIVE 3: THE SKEPTICAL CONTESTANT - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless - Lacks the tools to compute the shift in real-time.
@@ -152,7 +152,7 @@ constraint_indexing:constraint_classification(
    SCOPE: local - A specific, high-stakes game.
    
    WHY THIS CLASSIFICATION:
-   For the intuitive thinker, the problem is a "Noose." It "strangles" their 
+   For the intuitive thinker, the problem is a "Snare." It "strangles" their 
    common-sense confidence. Because they perceive a 50/50 choice, the system 
    extracts 33% of their winning chance (extraction) if they fail to 
    overcome their cognitive bias. The logic of the host "chokes" their 
@@ -163,7 +163,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     monty_hall_conditional_probability,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -189,7 +189,7 @@ test(multi_perspective_variance) :-
     Type1 \= Type2.
 
 test(intuitive_extraction_penalty) :-
-    % Demonstrates that the Noose classification extracts more value (win %) from the powerless agent.
+    % Demonstrates that the Snare classification extracts more value (win %) from the powerless agent.
     ContextPowerless = context(individual_powerless, immediate, constrained, local),
     constraint_indexing:extractiveness_for_agent(monty_hall_conditional_probability, ContextPowerless, Score),
     Score >= 0.33.
@@ -225,7 +225,7 @@ omega_variable(
     host_behavior_certainty,
     "Is the 'Mountain' stable if the host's behavior is not guaranteed (e.g., Monty only offers the switch when you have the car)?",
     resolution_mechanism("Meta-analysis of game rules and host intent across different game show iterations."),
-    impact("If Host is malicious: The 'Switch' Rope becomes a 'Noose'. If Host is rule-bound: It is a Mountain."),
+    impact("If Host is malicious: The 'Switch' Rope becomes a 'Snare'. If Host is rule-bound: It is a Mountain."),
     confidence_without_resolution(medium)
 ).
 

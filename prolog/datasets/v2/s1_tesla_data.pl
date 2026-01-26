@@ -27,7 +27,7 @@ constraint_claim(doe_covenants, rope). [cite_start]% Draw conditions and stock o
 constraint_metric(doe_covenants, intensity, 0.70).
 constraint_metric(doe_covenants, snap_back_potential, 0.60).
 
-constraint_claim(lotus_glider_dependency, noose). [cite_start]% Supply limited to 2,400 units; production ends Dec 2011[cite: 9, 16, 46].
+constraint_claim(lotus_glider_dependency, snare). [cite_start]% Supply limited to 2,400 units; production ends Dec 2011[cite: 9, 16, 46].
 constraint_metric(lotus_glider_dependency, extractiveness, 0.78). % High extraction of resources to sustain legacy platform.
 constraint_metric(lotus_glider_dependency, suppression_requirement, 0.55). % Requires strict adherence to Lotus production timelines.
 

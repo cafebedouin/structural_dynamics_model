@@ -46,7 +46,7 @@
  * Originally a geometric observation by Euler, the characteristic became a 
  * "Mountain" of algebraic topology—an inescapable law of connectivity. In 
  * modern 3D modeling and data science, it acts as a "Rope" for structural 
- * verification, though it becomes a "Noose" when rigid topological 
+ * verification, though it becomes a "Snare" when rigid topological 
  * requirements prevent the optimization of complex meshes.
  */
 
@@ -147,7 +147,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE TOPOLOGICAL OPTIMIZER - Noose
+   PERSPECTIVE 3: THE TOPOLOGICAL OPTIMIZER - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_moderate - Has the power to optimize but is bound by the rules.
@@ -159,14 +159,14 @@ constraint_indexing:constraint_classification(
    
    WHY THIS CLASSIFICATION:
    In structural optimization (like generative design), the requirement to 
-   maintain a specific Euler Characteristic can act as a "Noose." It 
+   maintain a specific Euler Characteristic can act as a "Snare." It 
    prevents the algorithm from adding a necessary hole (changing genus) 
    to save weight, extracting efficiency for the sake of topological continuity.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
     euler_characteristic_topology,
-    noose,
+    snare,
     context(
         agent_power(individual_moderate),
         time_horizon(immediate),
@@ -226,7 +226,7 @@ omega_variable(
     "Can a system transition between Euler Characteristics (genus 0 to 1) 
     without collapsing the structural 'Mountain'?",
     resolution_mechanism("Topological data analysis of phase transitions in soft matter."),
-    impact("If Yes: The 'Mountain' is a 'Rope' even for the subject. If No: It is a Noose of fixity."),
+    impact("If Yes: The 'Mountain' is a 'Rope' even for the subject. If No: It is a Snare of fixity."),
     confidence_without_resolution(medium)
 ).
 

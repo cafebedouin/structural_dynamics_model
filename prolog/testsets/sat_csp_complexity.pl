@@ -46,7 +46,7 @@
  * These problems function as a "Mountain" of state-space complexity. For 
  * the engineer with a powerful solver, it is a "Rope" (a declarative way 
  * to solve complex tasks). For the real-time system facing a combinatorial 
- * explosion, it is a "Noose" that strangles performance as variables scale.
+ * explosion, it is a "Snare" that strangles performance as variables scale.
  */
 
 /* ==========================================================================
@@ -139,7 +139,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE EMBEDDED SYSTEM - Noose
+   PERSPECTIVE 3: THE EMBEDDED SYSTEM - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless - A subject to the hard constraints of time/hardware.
@@ -149,7 +149,7 @@ constraint_indexing:constraint_classification(
    
    WHY THIS CLASSIFICATION:
    For an embedded system trying to solve a CSP for drone flight path 
-   adjustments in real-time, the complexity is a Noose. As the number of 
+   adjustments in real-time, the complexity is a Snare. As the number of 
    obstacles (variables) grows, the time required to find a valid path 
    tightens around the system's reaction time, potentially leading to 
    catastrophic failure.
@@ -157,7 +157,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     sat_csp_complexity,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -177,8 +177,8 @@ test(multi_perspective_variance) :-
     constraint_indexing:constraint_classification(sat_csp_complexity, mountain, context(agent_power(analytical), _, _, _)),
     % Institutional sees Rope
     constraint_indexing:constraint_classification(sat_csp_complexity, rope, context(agent_power(institutional), _, _, _)),
-    % Powerless sees Noose
-    constraint_indexing:constraint_classification(sat_csp_complexity, noose, context(agent_power(individual_powerless), _, _, _)).
+    % Powerless sees Snare
+    constraint_indexing:constraint_classification(sat_csp_complexity, snare, context(agent_power(individual_powerless), _, _, _)).
 
 test(power_extractiveness_scaling) :-
     % Institutional users (Engineers) derive utility from the solvers.
@@ -219,7 +219,7 @@ omega_variable(
     distribution before the search begins?",
     resolution_mechanism("Development of a universal predictive metric 
     for instance hardness"),
-    impact("If Yes: The Noose becomes a Rope (we can avoid the trap). 
+    impact("If Yes: The Snare becomes a Rope (we can avoid the trap). 
     If No: It remains a hidden Mountain."),
     confidence_without_resolution(medium)
 ).
@@ -232,13 +232,13 @@ omega_variable(
  * VIABLE ALTERNATIVES
  * * ALTERNATIVE 1: Heuristic Search (Stochastic Local Search)
  * Viability: High. Often finds solutions to "hard" problems in seconds.
- * Suppression: Low. This is the "Rope" people use to escape the Noose.
+ * Suppression: Low. This is the "Rope" people use to escape the Snare.
  * * ALTERNATIVE 2: Quantum Adiabatic Optimization
  * Viability: Theoretical. Might "tunnel" through the Mountain.
  * * CONCLUSION:
  * The existence of heuristics converts the SAT "Mountain" into a "Rope" for 
  * practical engineering, but the worst-case complexity ensures it remains 
- * a "Noose" for safety-critical guarantees.
+ * a "Snare" for safety-critical guarantees.
  */
 
 /* ==========================================================================

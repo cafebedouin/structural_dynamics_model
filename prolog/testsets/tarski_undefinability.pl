@@ -45,7 +45,7 @@
  * The theorem functions as a hard ceiling (Mountain) for self-contained logic. 
  * To move forward, agents must build a "Rope" of meta-languages (Tarski's 
  * hierarchy). However, for those trapped in a single layer of reality with 
- * no "Meta" access, the theorem acts as a "Noose," making certain truths 
+ * no "Meta" access, the theorem acts as a "Snare," making certain truths 
  * fundamentally unspeakable.
  */
 
@@ -147,7 +147,7 @@ constraint_indexing:constraint_classification(
    
    WHY THIS CLASSIFICATION:
    For an agent trapped in a single system (like an AI with no external 
-   sensors or a human in a totalizing ideology), the theorem is a Noose. 
+   sensors or a human in a totalizing ideology), the theorem is a Snare. 
    They can sense that "truth" exists but are syntactically barred from 
    defining it. The harder they try to ground their reality, the tighter 
    the paradoxes pull, leading to cognitive dissonance or systemic collapse.
@@ -155,7 +155,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     tarski_undefinability,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -209,13 +209,13 @@ test(meta_level_arbitrage) :-
  * * 3. PERSPECTIVE SELECTION:
  * The Analyst sees a Mountain (fact of logic).
  * The Architect sees a Rope (method for building levels).
- * The Subject sees a Noose (inability to resolve their own truth).
+ * The Subject sees a Snare (inability to resolve their own truth).
  * * 4. AMBIGUITIES:
- * - Resolved the "Noose" aspect by framing it as a linguistic trap for 
+ * - Resolved the "Snare" aspect by framing it as a linguistic trap for 
  * agents without "Meta-Expressivity."
  * * 5. CONFIDENCE:
  * High: Mathematical basis.
- * Medium: Extent to which "trapped subjects" feel this as a Noose.
+ * Medium: Extent to which "trapped subjects" feel this as a Snare.
  */
 
 /* ==========================================================================
@@ -226,7 +226,7 @@ omega_variable(
     natural_language_meta_closure,
     "Is human 'Natural Language' the ultimate Meta-Language that can define its own truth, or is it merely one layer in an infinite hierarchy we cannot see?",
     resolution_mechanism("Discovery of a definitive Truth Predicate in linguistics that does not lead to paradox"),
-    impact("If Closure: Tarski's Law is a Rope for AI but not for Humans. If Infinite: We are all trapped in a Noose."),
+    impact("If Closure: Tarski's Law is a Rope for AI but not for Humans. If Infinite: We are all trapped in a Snare."),
     confidence_without_resolution(low)
 ).
 
@@ -245,7 +245,7 @@ omega_variable(
  * Viability: Allows a truth predicate to be "partially" defined.
  * * CONCLUSION:
  * The existence of paraconsistent alternatives suggests Tarski's Theorem 
- * is a "Noose" used by classical logicians to enforce a specific 
+ * is a "Snare" used by classical logicians to enforce a specific 
  * hierarchical order of reality.
  */
 

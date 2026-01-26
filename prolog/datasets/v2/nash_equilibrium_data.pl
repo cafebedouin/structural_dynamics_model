@@ -35,10 +35,10 @@ constraint_metric(best_response_interdependence, suppression_requirement, 0.35).
 constraint_metric(best_response_interdependence, snap_back_potential, 0.60).
 constraint_metric(best_response_interdependence, extractiveness, 0.50).
 
-% The Social Sub-Optimality (The Noose)
+% The Social Sub-Optimality (The Snare)
 % The equilibrium (e.g., in Prisoner's Dilemma) often yields worse outcomes for all than cooperation.
 % Extractiveness at 0.82 requires the 'mixed_strategy_simplex' scaffold to navigate.
-constraint_claim(pareto_inefficiency_trap, noose).
+constraint_claim(pareto_inefficiency_trap, snare).
 constraint_metric(pareto_inefficiency_trap, intensity, 0.90).
 constraint_metric(pareto_inefficiency_trap, suppression_requirement, 0.70).
 constraint_metric(pareto_inefficiency_trap, snap_back_potential, 0.10).
@@ -49,7 +49,7 @@ constraint_metric(pareto_inefficiency_trap, extractiveness, 0.82).
 recommendation(rec_01, implement_evolutionary_stable_strategy_check).
 affects_constraint(rec_01, best_response_interdependence).
 
-% Noose (0.82 extractiveness) triggers Cut
+% Snare (0.82 extractiveness) triggers Cut
 % Utilizing 'mixed_strategy_simplex' scaffold to find alternative probabilistic stability.
 recommendation(rec_02, introduce_external_binding_contracts_to_shift_equilibrium).
 affects_constraint(rec_02, pareto_inefficiency_trap).

@@ -47,7 +47,7 @@
  * For the cryptographer, it functions as a "Rope," providing a coordination 
  * mechanism that ensures enough "raw material" (primes) exists to secure the 
  * world's data. However, for a high-precision algorithm, the logarithmic 
- * decay is a "Noose," extracting ever-increasing computational energy for 
+ * decay is a "Snare," extracting ever-increasing computational energy for 
  * diminishing returns in search results.
  */
 
@@ -138,7 +138,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE LARGE-PRIME SEARCHER - Noose
+   PERSPECTIVE 3: THE LARGE-PRIME SEARCHER - Snare
    --------------------------------------------------------------------------
    WHO: individual_powerless - A single CPU/GPU bound by the search space.
    WHEN: immediate - Each cycle spent in a "prime desert" is an extraction.
@@ -147,7 +147,7 @@ constraint_indexing:constraint_classification(
    
    WHY THIS CLASSIFICATION:
    When searching for the next Mersenne prime or high-bit RSA factor, PNT acts 
-   as a "Noose." It proves that the "space" of freedom (primes) is getting 
+   as a "Snare." It proves that the "space" of freedom (primes) is getting 
    smaller, extracting massive energy (FLOPs) while tightening the difficulty 
    of the search.
    -------------------------------------------------------------------------- */
@@ -156,7 +156,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     prime_number_theorem,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -183,8 +183,8 @@ test(multi_perspective_variance) :-
     Type2 = rope.
 
 test(computational_noose_penalty) :-
-    % A powerless searcher in a local range sees it as a Noose.
-    constraint_indexing:constraint_classification(prime_number_theorem, noose, context(individual_powerless, immediate, constrained, local)).
+    % A powerless searcher in a local range sees it as a Snare.
+    constraint_indexing:constraint_classification(prime_number_theorem, snare, context(individual_powerless, immediate, constrained, local)).
 
 test(extraction_scaling) :-
     % Extraction should be non-zero for mathematical existence checks.
@@ -203,7 +203,7 @@ test(extraction_scaling) :-
  * * KEY DECISIONS:
  * 1. CLASSIFICATION: PNT is the perfect example of a "Mountain" (Natural Law) 
  * that is used as a "Rope" (Tool) by those in power. 
- * 2. NOOSE ANALOGY: The "Noose" classification for the search algorithm is a 
+ * 2. NOOSE ANALOGY: The "Snare" classification for the search algorithm is a 
  * critical realization. As x -> infinity, the probability of finding a 
  * prime is 1/ln(x). This logarithmic tightening is a literal resource 
  * extraction (FLOPs/Electricity) for the "individual" search agent.

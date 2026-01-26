@@ -24,12 +24,12 @@ event(ev05_the_confession, system_submission, 100, [action(outcry), result(admis
 constraint_claim(vulture_eye_fixation, mountain).
 constraint_metric(vulture_eye_fixation, accessibility_collapse, 0.90).
 
-% Noose: The sound of the heartbeat. An auditory feedback loop that tightens until confession.
-constraint_claim(hallucinatory_heartbeat, noose).
+% Snare: The sound of the heartbeat. An auditory feedback loop that tightens until confession.
+constraint_claim(hallucinatory_heartbeat, snare).
 constraint_metric(hallucinatory_heartbeat, stakes_inflation, 1.00).
 
-% Zombie: The narrator's 'Sagacity.' The dead idea that caution/precision proves sanity.
-constraint_claim(delusion_of_sagacity, zombie).
+% Piton: The narrator's 'Sagacity.' The dead idea that caution/precision proves sanity.
+constraint_claim(delusion_of_sagacity, piton).
 constraint_metric(delusion_of_sagacity, suppression, 0.85).
 
 % --- 4. Recommendations & Veto Structure ---

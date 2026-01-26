@@ -45,7 +45,7 @@
  * The theorem acts as a "Mountain" of recursive reality, preventing a system 
  * from gaining "unearned trust" in its own outputs. For an AI, it is a 
  * "Rope" for designing stable reflection, but for a human seeking to prove 
- * a system's absolute soundness from within, it is a "Noose" that collapses 
+ * a system's absolute soundness from within, it is a "Snare" that collapses 
  * into circularity.
  */
 
@@ -143,7 +143,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE FOUNDATIONALIST SUBJECT - Noose
+   PERSPECTIVE 3: THE FOUNDATIONALIST SUBJECT - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless - Subject to the limits of their own reasoning.
@@ -153,7 +153,7 @@ constraint_indexing:constraint_classification(
    
    WHY THIS CLASSIFICATION:
    For the subject seeking to prove "Everything I say is true" within their 
-   own language, the theorem is a Noose. The harder they try to ground 
+   own language, the theorem is a Snare. The harder they try to ground 
    the general truth of their statements, the tighter the paradox pulls, 
    forcing them to either remain silent on their own soundness or collapse 
    into proving every possible absurdity.
@@ -161,7 +161,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     lobs_theorem,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -181,11 +181,11 @@ test(multi_perspective_variance) :-
     constraint_indexing:constraint_classification(lobs_theorem, mountain, context(agent_power(analytical), _, _, _)),
     % Perspective 2: Institutional sees Rope
     constraint_indexing:constraint_classification(lobs_theorem, rope, context(agent_power(institutional), _, _, _)),
-    % Perspective 3: Powerless sees Noose
-    constraint_indexing:constraint_classification(lobs_theorem, noose, context(agent_power(individual_powerless), _, _, _)).
+    % Perspective 3: Powerless sees Snare
+    constraint_indexing:constraint_classification(lobs_theorem, snare, context(agent_power(individual_powerless), _, _, _)).
 
 test(power_extractiveness_reflection) :-
-    % Powerless subjects feel the loss of foundational certainty (Noose)
+    % Powerless subjects feel the loss of foundational certainty (Snare)
     ContextPowerless = context(individual_powerless, immediate, trapped, local),
     % Institutional systems manage the recursion as a design constraint (Rope)
     ContextInstitutional = context(institutional, biographical, arbitrage, national),
@@ -216,7 +216,7 @@ test(time_immutability_scale) :-
  * because they lead to triviality.
  * * 3. PERSPECTIVE SELECTION:
  * The Analyst sees the Law (Mountain). The System sees the Design 
- * Constraint (Rope). The Foundationalist sees the Trap (Noose).
+ * Constraint (Rope). The Foundationalist sees the Trap (Snare).
  */
 
 /* ==========================================================================
@@ -230,7 +230,7 @@ omega_variable(
     non-formal or 'fuzzy' semantics?",
     resolution_mechanism("Formalization of natural language semantics to check for diagonalizability"),
     impact("If Yes: Human reasoning is a Rope. If No: Human reasoning is 
-    subject to the same Noose as formal logic."),
+    subject to the same Snare as formal logic."),
     confidence_without_resolution(low)
 ).
 
@@ -248,7 +248,7 @@ omega_variable(
  * * CONCLUSION:
  * The existence of niche alternatives makes the "Mountain" of Löb's 
  * Theorem a specific choice of the classical logician, and thus a 
- * "Noose" for those trapped in classical paradigms.
+ * "Snare" for those trapped in classical paradigms.
  */
 
 /* ==========================================================================

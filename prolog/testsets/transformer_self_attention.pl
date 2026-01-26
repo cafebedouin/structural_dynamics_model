@@ -38,7 +38,7 @@
  * - The Legacy Model (RNN): A technique that read text left-to-right in "tight windows".
  * - The AI Researcher: Analytical observers leveraging internet-scale data for specific tasks.
  * * NARRATIVE ARC:
- * The field shifted from the "Noose" of limited RNN memory—where context was lost in long sentences—to the "Rope" of self-attention. This mechanism allows machines to "skim" and "weigh context," mimicking a perceived "Mountain" of human cognitive behavior.
+ * The field shifted from the "Snare" of limited RNN memory—where context was lost in long sentences—to the "Rope" of self-attention. This mechanism allows machines to "skim" and "weigh context," mimicking a perceived "Mountain" of human cognitive behavior.
  */
 
 /* ==========================================================================
@@ -105,7 +105,7 @@ constraint_indexing:constraint_classification(
     !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE RECURRENT NEURAL NETWORK (RNN) - Noose
+   PERSPECTIVE 2: THE RECURRENT NEURAL NETWORK (RNN) - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless (Limited memory; "stumped" by ambiguity)
@@ -114,7 +114,7 @@ constraint_indexing:constraint_classification(
    SCOPE: local (Only remembers "what came just before")
    
    WHY THIS CLASSIFICATION:
-   The RNN set-up acts as a Noose of limited context. It forces long sentences into restricted memory, causing "crucial details to be lost".
+   The RNN set-up acts as a Snare of limited context. It forces long sentences into restricted memory, causing "crucial details to be lost".
    
    NARRATIVE EVIDENCE:
    "In longer, more tangled sentences, the models had to squeeze too much context into their limited memory... The ambiguity stumped them".
@@ -122,7 +122,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     transformer_self_attention,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -171,9 +171,9 @@ constraint_indexing:constraint_classification(
 :- begin_tests(transformer_self_attention_tests).
 
 test(multi_perspective_variance) :-
-    % Researcher (Rope) vs RNN (Noose) vs Cognition (Mountain)
+    % Researcher (Rope) vs RNN (Snare) vs Cognition (Mountain)
     constraint_indexing:constraint_classification(transformer_self_attention, rope, context(analytical, biographical, mobile, global)),
-    constraint_indexing:constraint_classification(transformer_self_attention, noose, context(individual_powerless, immediate, trapped, local)),
+    constraint_indexing:constraint_classification(transformer_self_attention, snare, context(individual_powerless, immediate, trapped, local)),
     constraint_indexing:constraint_classification(transformer_self_attention, mountain, context(institutional, historical, constrained, global)).
 
 test(power_extractiveness_scaling) :-
@@ -197,7 +197,7 @@ test(power_extractiveness_scaling) :-
  * 1. EXTRACTIVENESS SCORE (0.75): Chosen because the architecture enables 
  * "leveraging all this data from the internet" to supercharge AI tools.
  * 2. MANDATROPHY STATUS: Triggered as high-extractiveness is only valid if 
- * indexed. The system is a Rope for researchers but a Noose for legacy 
+ * indexed. The system is a Rope for researchers but a Snare for legacy 
  * architectures "stumped" by its new context-weighing standards.
  * 3. IMAGE TAGS: Inserted to visualize the "radical" architectural shift.
  */
@@ -209,9 +209,9 @@ test(power_extractiveness_scaling) :-
 % Mandatory Omega for high-extraction constraints:
 omega_variable(
     transformer_self_attention_extraction_intent,
-    "Is the high extractiveness (0.75) of internet-scale data a functional necessity for 'understanding' (Rope) or a predatory aggregation of global human labor (Noose)?",
+    "Is the high extractiveness (0.75) of internet-scale data a functional necessity for 'understanding' (Rope) or a predatory aggregation of global human labor (Snare)?",
     resolution_mechanism("Audit of model performance using curated small datasets vs. uncurated internet scrapes"),
-    impact("If necessity: Mountain. If predatory: Noose/Mandatrophy."),
+    impact("If necessity: Mountain. If predatory: Snare/Mandatrophy."),
     confidence_without_resolution(medium)
 ).
 
@@ -234,7 +234,7 @@ omega_variable(
  * Suppression: Thrown out in favor of self-attention.
  * Evidence: "Previously, most state-of-the-art AI models relied on a technique called a recurrent neural network".
  * * CONCLUSION:
- * The 21st-century "Best Idea" in AI is the rejection of the "RNN Noose" (linear memory) 
+ * The 21st-century "Best Idea" in AI is the rejection of the "RNN Snare" (linear memory) 
  * for the "Transformer Rope" (contextual agility).
  */
 

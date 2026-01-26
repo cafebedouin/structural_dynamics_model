@@ -39,12 +39,12 @@
  * - Rover Driver (JPL): Individual powerless; must wait for "next sol" to 
  * see the results of a command.
  * - Mission Architect: Institutional; designs the "Rope" of autonomy to 
- * bypass the "Noose" of latency.
+ * bypass the "Snare" of latency.
  * - Radio Physicist: Analytical; measures the constraint as a fundamental 
  * property of the universe.
  * * NARRATIVE ARC:
  * Latency is the ultimate Mountain—a natural law that cannot be negotiated. 
- * In the early days of exploration, it was a Noose that threatened to destroy 
+ * In the early days of exploration, it was a Snare that threatened to destroy 
  * any lander that couldn't think for itself. To survive, NASA wove the 
  * Rope of autonomy, transforming a terminal physical limit into a 
  * predictable coordination rhythm for mission operations.
@@ -151,7 +151,7 @@ constraint_indexing:constraint_classification(
     !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: MARS COLONIST (FUTURE) - Noose
+   PERSPECTIVE 3: MARS COLONIST (FUTURE) - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_moderate - Has agency on Mars but is socially/technologically 
@@ -161,7 +161,7 @@ constraint_indexing:constraint_classification(
    SCOPE: global - Impact on interplanetary civilization.
    
    WHY THIS CLASSIFICATION:
-   For a future colonist, the 20-minute lag is a Noose. It extracts 
+   For a future colonist, the 20-minute lag is a Snare. It extracts 
    human connection and chokes off the ability to receive emergency 
    instructions from Earth in real-time. It separates the two worlds 
    into distinct, often asynchronous realities.
@@ -169,7 +169,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     martian_signal_latency,
-    noose,
+    snare,
     context(
         agent_power(individual_moderate),
         time_horizon(biographical),
@@ -188,7 +188,7 @@ constraint_indexing:constraint_classification(
 :- begin_tests(martian_latency_tests).
 
 test(multi_perspective_variance) :-
-    % Driver (Mountain) vs Manager (Rope) vs Colonist (Noose)
+    % Driver (Mountain) vs Manager (Rope) vs Colonist (Snare)
     constraint_indexing:constraint_classification(martian_signal_latency, T1, context(individual_powerless, immediate, trapped, local)),
     constraint_indexing:constraint_classification(martian_signal_latency, T2, context(institutional, biographical, mobile, national)),
     constraint_indexing:constraint_classification(martian_signal_latency, T3, context(individual_moderate, biographical, constrained, global)),
@@ -225,7 +225,7 @@ omega_variable(
     "Will quantum entanglement eventually provide a non-extractive Rope 
      that bypasses the light-speed Mountain?",
     resolution_mechanism("Monitor theoretical physics for proof of FTL information transfer"),
-    impact("If Yes: Signal latency was a temporary Noose. If No: It is an 
+    impact("If Yes: Signal latency was a temporary Snare. If No: It is an 
             eternal Mountain of the physical world."),
     confidence_without_resolution(low)
 ).
@@ -247,7 +247,7 @@ omega_variable(
  * allows the mission to ignore the latency Mountain for local safety.
  * * CONCLUSION:
  * The existence of Autonomy as a viable alternative shifts the 
- * experience of the latency from a terminal Noose (mission death) 
+ * experience of the latency from a terminal Snare (mission death) 
  * to a manageable Rope (planned delay).
  */
 

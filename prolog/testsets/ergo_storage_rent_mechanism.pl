@@ -1,12 +1,12 @@
 % ============================================================================
 % CONSTRAINT STORY: ergo_storage_rent_mechanism
 % ============================================================================
-% Generated: 2026-01-17
-% Model: Gemini 2.0 Flash
+% Generated: 2026-01-23
+% Model: Gemini Pro (Revised)
 % Source: Ergo Platform Documentation (ErgoDocs) and Whitepapers
 % ============================================================================
 
-:- module(ergo_storage_rent, []).
+:- module(constraint_ergo_storage_rent_mechanism, []).
 
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
@@ -25,188 +25,143 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: ergo_storage_rent
+ * 
+ * constraint_id: ergo_storage_rent_mechanism
  * human_readable: Ergo Storage Rent (Demurrage)
  * domain: economic/technological
  * temporal_scope: Post-2019 (Operational Mainnet)
  * spatial_scope: Global (Distributed Network)
- * * SUMMARY:
+ * 
+ * SUMMARY:
  * Ergo introduces a "Storage Rent" or demurrage fee for inactive data stored 
  * on the blockchain. Any UTXO (box) that remains unspent for 4 years is 
  * subject to a recurring fee. This prevents "blockchain bloat" 
  * and ensures miners have a long-term revenue stream after the emission 
  * of new coins ends.
- * * KEY AGENTS:
- * - Long-term Holders (HODLers): Agents who store value without frequent 
- * movement; they must periodically "refresh" their boxes.
- * - Miners: Beneficiaries who collect the rent as part of block rewards to 
- * sustain network security.
- * - Protocol Developers: Architects of the eUTXO model aiming for "predictable 
- * scalability".
- * * NARRATIVE ARC:
- * Unlike Bitcoin, where "lost coins" are permanently removed from circulation, 
- * Ergo treats the blockchain as a physical storage space. If 
- * a box is abandoned, miners eventually "garbage collect" the value, returning 
- * it to the economic loop.
+ * 
+ * KEY AGENTS:
+ * - Long-term Holders (Individual Powerless): Subject to the fee if inactive.
+ * - Miners (Institutional): The beneficiaries who collect the rent.
+ * - Protocol Developers (Analytical): Architects of the eUTXO model.
  */
 
 /* ==========================================================================
    2. CORE SYSTEM INTEGRATION (The "Reality" Layer)
    ========================================================================== */
 
-% Required for [STEP 1] and [STEP 2] of the DR-Audit Suite
-narrative_ontology:interval(ergo_operational_era, 0, 10).
-narrative_ontology:constraint_claim(ergo_storage_rent, rope).
+narrative_ontology:interval(ergo_storage_rent_mechanism, 0, 10).
+narrative_ontology:constraint_claim(ergo_storage_rent_mechanism, tangled_rope).
 
-% Base extractiveness score (0.0 = no extraction, 1.0 = full extraction)
-% Rationale: Small fee (approx 0.13 ERG every 4 years) prevents total loss 
+% Base extractiveness: 0.15.
+% Small fee (approx 0.13 ERG every 4 years) prevents total loss 
 % but extracts value from inactive addresses.
-domain_priors:base_extractiveness(ergo_storage_rent, 0.15).
+domain_priors:base_extractiveness(ergo_storage_rent_mechanism, 0.15).
 
-% Suppression score (0.0 = no suppression, 1.0 = full suppression)
-% Rationale: The rule is hardcoded in the sigmastate-interpreter; the only 
+% Suppression score: 0.8.
+% The rule is hardcoded in the sigmastate-interpreter; the only 
 % escape is to spend/move the coins every 4 years.
-domain_priors:suppression_score(ergo_storage_rent, 0.8).
+domain_priors:suppression_score(ergo_storage_rent_mechanism, 0.8).
 
-% Enforcement requirements
-domain_priors:requires_active_enforcement(ergo_storage_rent).
+% Enforcement: The protocol enforces itself through consensus rules.
+domain_priors:requires_active_enforcement(ergo_storage_rent_mechanism).
 
-% Metrics for Executive Summary
-narrative_ontology:constraint_metric(ergo_storage_rent, extractiveness, 0.15).
-narrative_ontology:constraint_metric(ergo_storage_rent, suppression_requirement, 0.8).
-
-% Beneficiaries and Victims
-constraint_beneficiary(ergo_storage_rent, ergo_miners).
-constraint_victim(ergo_storage_rent, inactive_wallet_addresses).
+% BENEFICIARIES & VICTIMS
+constraint_beneficiary(ergo_storage_rent_mechanism, ergo_miners).
+constraint_victim(ergo_storage_rent_mechanism, inactive_wallet_addresses).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 1: The "HODLer" (Passive Investor) - Noose
+   PERSPECTIVE 1: THE "HODLER" (PASSIVE INVESTOR) - Snare
    --------------------------------------------------------------------------
-   
-   WHO: individual_powerless - Users subject to protocol-level consensus.
-   WHEN: biographical - Holding for decades; 4 years is a short horizon.
-   WHERE: trapped - Cannot opt-out of rent if the box is on-chain.
-   SCOPE: global.
+   WHO: individual_powerless (Users subject to protocol-level consensus)
+   WHEN: biographical (Holding for decades; 4 years is a short horizon)
+   WHERE: trapped (Cannot opt-out of rent if the box is on-chain)
    
    WHY THIS CLASSIFICATION:
    To an investor who treats crypto like "digital gold" (buy and forget), 
-   storage rent is a "Noose." It forces them to maintain "active awareness" 
-   or suffer the gradual extraction of their assets.
-   
-   NARRATIVE EVIDENCE:
-   "Lost coins... would be slowly returned to the ecosystem... making it 
-   less viable as a 'store and forget' asset without maintenance".
+   storage rent is a 'Snare'. It forces them to maintain "active awareness" 
+   or suffer the gradual extraction of their assets, strangling a purely
+   passive investment strategy.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
-    ergo_storage_rent,
-    noose,
+    ergo_storage_rent_mechanism,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(biographical),
         exit_options(trapped),
-        constraint_beneficiary(ergo_storage_rent, ergo_miners),
-        constraint_victim(ergo_storage_rent, hodlers),
         spatial_scope(global)
     )
-) :-
-    domain_priors:base_extractiveness(ergo_storage_rent, E),
-    E > 0.1,
-    !.
+).
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 2: Network Miner - Rope
+   PERSPECTIVE 2: NETWORK MINER - Rope
    --------------------------------------------------------------------------
-   
-   WHO: collective_organized / institutional - Miners vote on parameters.
-   WHEN: historical - Building a self-sustaining network post-emission.
-   WHERE: arbitrage - Can move hash-rate between PoW chains.
-   SCOPE: global.
+   WHO: institutional (Provides security for the network)
+   WHEN: historical (Building a self-sustaining network post-emission)
+   WHERE: arbitrage (Can move hash-rate between PoW chains)
    
    WHY THIS CLASSIFICATION:
-   For miners, the rent is a "Rope." It is a functional tool that guarantees 
+   For miners, the rent is a 'Rope'. It is a functional tool that guarantees 
    security budgets in a world where transaction fees alone might be 
-   insufficient after the 2045 emission end.
-   
-   NARRATIVE EVIDENCE:
-   "Storage Rent... as ERGO ages and storage rent comes into play miners 
-   will see rewards coming in more than one way".
+   insufficient after the 2045 emission end, ensuring long-term network security.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
-    ergo_storage_rent,
+    ergo_storage_rent_mechanism,
     rope,
     context(
-        agent_power(collective_organized),
+        agent_power(institutional),
         time_horizon(historical),
         exit_options(arbitrage),
-        constraint_beneficiary(ergo_storage_rent, network_security),
-        constraint_victim(ergo_storage_rent, none),
         spatial_scope(global)
     )
-) :-
-    domain_priors:base_extractiveness(ergo_storage_rent, E),
-    E < 0.3,
-    !.
+).
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: Protocol Architect / Foundation - Mountain
+   PERSPECTIVE 3: PROTOCOL ARCHITECT / FOUNDATION - Mountain
    --------------------------------------------------------------------------
-   
-   WHO: analytical - Designers of the state management rules.
-   WHEN: civilizational - Solving for "state bloat" over centuries.
-   WHERE: analytical.
-   SCOPE: global.
+   WHO: analytical (Designers of the state management rules)
+   WHEN: civilizational (Solving for "state bloat" over centuries)
+   WHERE: analytical (Observing the long-term health of the UTXO set)
    
    WHY THIS CLASSIFICATION:
-   From a design perspective, storage rent is a "Mountain"—a fundamental 
+   From a design perspective, storage rent is a 'Mountain'—a fundamental 
    economic law required for a UTXO system to survive indefinitely without 
-   infinite storage growth.
-   
-   NARRATIVE EVIDENCE:
-   "Ergo is designed with controlled state size growth... making the 
-   blockchain predictably scalable".
+   infinite storage growth. It is an immutable necessity for the long-term
+   viability of the protocol.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
-    ergo_storage_rent,
+    ergo_storage_rent_mechanism,
     mountain,
     context(
         agent_power(analytical),
         time_horizon(civilizational),
         exit_options(analytical),
-        constraint_beneficiary(ergo_storage_rent, network_longevity),
-        constraint_victim(ergo_storage_rent, none),
         spatial_scope(global)
     )
-) :-
-    true,
-    !.
+).
 
 /* ==========================================================================
    4. TESTS (What We Learn About Constraints)
    ========================================================================== */
 
-:- begin_tests(ergo_storage_rent_tests).
+:- begin_tests(ergo_storage_rent_mechanism_tests).
 
 test(multi_perspective_variance) :-
-    constraint_indexing:constraint_classification(ergo_storage_rent, Type1, 
-        context(individual_powerless, biographical, trapped, _, _, global)),
-    constraint_indexing:constraint_classification(ergo_storage_rent, Type2, 
-        context(collective_organized, historical, arbitrage, _, _, global)),
-    Type1 = noose,
-    Type2 = rope.
+    constraint_indexing:constraint_classification(ergo_storage_rent_mechanism, Type1, context(agent_power(individual_powerless), _, _, _)),
+    constraint_indexing:constraint_classification(ergo_storage_rent_mechanism, Type2, context(agent_power(institutional), _, _, _)),
+    constraint_indexing:constraint_classification(ergo_storage_rent_mechanism, Type3, context(agent_power(analytical), _, _, _)),
+    Type1 \= Type2,
+    Type2 \= Type3,
+    Type1 \= Type3.
 
-test(time_immutability_shift) :-
-    % Long-term historical views should see the functionality (Rope/Mountain)
-    constraint_indexing:constraint_classification(ergo_storage_rent, rope, 
-        context(_, historical, _, _, _, _)).
-
-:- end_tests(ergo_storage_rent_tests).
+:- end_tests(ergo_storage_rent_mechanism_tests).
 
 /* ==========================================================================
    5. MODEL INTERPRETATION (Commentary)
@@ -214,24 +169,37 @@ test(time_immutability_shift) :-
 
 /**
  * LLM GENERATION NOTES
- * * Model: Gemini 2.0 Flash
- * * KEY DECISIONS:
- * 1. EXTRACTIVENESS (0.15): While low per-box, it is mandatory. I chose 0.15 
- * because it is not "severe" but is structurally extractive.
- * 2. CLASSIFICATION: The most interesting tension in Ergo is the HODLer 
- * (who sees a Noose) vs. the Miner (who sees a Rope). This highlights 
- * the "social contract" difference from Bitcoin.
+ * 
+ * Model: Gemini Pro (Revised)
+ * Date: 2026-01-23
+ * 
+ * KEY DECISIONS:
+ * 
+ * 1. CLASSIFICATION RATIONALE:
+ *    - HODLer (Snare): A passive investment strategy is penalized.
+ *    - Miner (Rope): A tool for long-term network sustainability.
+ *    - Protocol Architect (Mountain): An economic necessity for UTXO management.
+ * 
+ * 2. CORE INSIGHT: Ergo's storage rent is a 'Tangled Rope'. It's a 'Rope' for
+ *    network security and a 'Mountain' of economic necessity for designers, but
+ *    it creates a 'Snare' for long-term passive holders, highlighting the
+ *    trade-off between network health and individual asset sovereignty.
  */
 
 /* ==========================================================================
-   6. OMEGA VARIABLES (Ω)
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
+/**
+ * OMEGA IDENTIFICATION
+ *
+ * The core uncertainty is the long-term effectiveness of the storage rent mechanism.
+ */
 
 omega_variable(
     state_garbage_collection_adoption,
-    "Will miners actually spend the effort to 'garbage collect' tiny dust boxes if fees are too low?",
-    resolution_mechanism("Monitor the first 4-year cycle (2023 onwards) to see box collection rates"),
-    impact("If NO: the rent is a failed Rope (ineffective). If YES: the Rope secures the chain."),
+    "Will miners consistently 'garbage collect' tiny dust boxes if the fees collected are lower than the computational cost of doing so?",
+    resolution_mechanism("Monitoring the first 4-year cycle (2023 onwards) to see box collection rates vs. network fees; economic modeling of miner incentives."),
+    impact("If NO: The rent is a failed 'Rope' (ineffective). If YES: The 'Rope' successfully secures the chain."),
     confidence_without_resolution(medium)
 ).
 
@@ -241,27 +209,32 @@ omega_variable(
 
 /**
  * VIABLE ALTERNATIVES
- * * ALTERNATIVE 1: Permanent UTXOs (The Bitcoin Model)
- * Viability: The industry standard.
- * Suppression: Ergo explicitly rejects this to solve the "State Bloat" problem, 
- * treating Bitcoin's permanent storage as an unsustainable "free lunch".
- * * CONCLUSION:
+ *
+ * ALTERNATIVE 1: Permanent UTXOs (The Bitcoin Model)
+ *    Viability: The industry standard, prioritizing untouched asset sovereignty.
+ *    Suppression: Ergo explicitly rejects this to solve the "State Bloat" problem, 
+ *    treating Bitcoin's permanent storage as an unsustainable "free lunch" that
+ *    threatens long-term decentralization.
+ *
+ * CONCLUSION:
  * The rejection of permanent storage transforms "holding" from a passive 
- * right into a managed responsibility.
+ * right into a managed responsibility. This makes the storage rent mechanism
+ * a core component of Ergo's economic philosophy, a 'Rope' for sustainability
+ * that deliberately creates a 'Snare' for inactive accounts.
  */
 
 /* ==========================================================================
    8. INTEGRATION HOOKS
    ========================================================================== */
 
-% Load: ?- [ergo_storage_rent].
+/**
+ * TO USE THIS FILE:
+ * 
+ * 1. Load: ?- [constraints/ergo_storage_rent_mechanism].
+ * 2. Multi-perspective: ?- multi_index_report(ergo_storage_rent_mechanism).
+ * 3. Run tests: ?- run_tests(ergo_storage_rent_mechanism_tests).
+ */
 
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
-
-
-% --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
-constraint_indexing:constraint_classification(ergo_storage_rent_mechanism, mountain, agent_power(analytical)).
-constraint_indexing:constraint_classification(ergo_storage_rent_mechanism, rope, agent_power(institutional)).
-constraint_indexing:constraint_classification(ergo_storage_rent_mechanism, noose, agent_power(individual_powerless)).

@@ -48,7 +48,7 @@
  * * NARRATIVE ARC:
  * To the individual, the wage gap is a Mountain—an unchangeable fact of 
  * the world. To the household, migration is a 
- * Rope—a functional coordination tool to overcome the "Noose" of local 
+ * Rope—a functional coordination tool to overcome the "Snare" of local 
  * market failures in insurance and credit.
  */
 
@@ -151,7 +151,7 @@ constraint_indexing:constraint_classification(
     !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: WORLD SYSTEMS ANALYST - Noose
+   PERSPECTIVE 3: WORLD SYSTEMS ANALYST - Snare
    --------------------------------------------------------------------------
    
    WHO: analytical - Observer of the macro-structural "core-periphery" 
@@ -161,7 +161,7 @@ constraint_indexing:constraint_classification(
    SCOPE: global - The entire world economy.
    
    WHY THIS CLASSIFICATION:
-   For the World Systems theorist, the system is a Noose. Global 
+   For the World Systems theorist, the system is a Snare. Global 
    capitalist expansion "chokes" traditional local economies, 
    creating a "disrupted" population that has no choice but to 
    migrate to the core as cheap labor.
@@ -171,7 +171,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     migration_decision_threshold,
-    noose,
+    snare,
     context(
         agent_power(analytical),
         time_horizon(historical),
@@ -190,7 +190,7 @@ constraint_indexing:constraint_classification(
 :- begin_tests(migration_decision_tests).
 
 test(multi_perspective_conflict) :-
-    % Individual (Mountain) vs Household (Rope) vs Theorist (Noose)
+    % Individual (Mountain) vs Household (Rope) vs Theorist (Snare)
     constraint_indexing:constraint_classification(migration_decision_threshold, T1, context(individual_powerless, immediate, trapped, local)),
     constraint_indexing:constraint_classification(migration_decision_threshold, T2, context(collective_organized, biographical, mobile, regional)),
     constraint_indexing:constraint_classification(migration_decision_threshold, T3, context(analytical, historical, analytical, global)),
@@ -198,7 +198,7 @@ test(multi_perspective_conflict) :-
 
 test(local_market_failure_impact) :-
     % Extraction/Suppression logic: High suppression of local alternatives 
-    % signals a move toward Noose/Mountain.
+    % signals a move toward Snare/Mountain.
     domain_priors:suppression_score(migration_decision_threshold, S),
     S >= 0.4.
 
@@ -225,11 +225,11 @@ test(local_market_failure_impact) :-
 
 omega_variable(
     market_failure_reversal,
-    "Would the fix of local credit markets (Noose removal) transform 
+    "Would the fix of local credit markets (Snare removal) transform 
      migration back into a voluntary choice (Rope)?",
     resolution_mechanism("Evaluation of migration rates in regions with 
     newly introduced micro-credit and insurance programs"),
-    impact("If rates drop: The threshold was a Noose. If rates stay high: 
+    impact("If rates drop: The threshold was a Snare. If rates stay high: 
             It is a fundamental wage-gap Mountain."),
     confidence_without_resolution(medium)
 ).
@@ -267,4 +267,4 @@ omega_variable(
 % --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
 constraint_indexing:constraint_classification(rotmigration_decision_threshold, mountain, agent_power(analytical)).
 constraint_indexing:constraint_classification(rotmigration_decision_threshold, rope, agent_power(institutional)).
-constraint_indexing:constraint_classification(rotmigration_decision_threshold, noose, agent_power(individual_powerless)).
+constraint_indexing:constraint_classification(rotmigration_decision_threshold, snare, agent_power(individual_powerless)).

@@ -32,8 +32,8 @@ constraint_metric(unstable_manifold_rho28, suppression_requirement, 0.42).
 constraint_metric(unstable_manifold_rho28, snap_back_potential, 0.78).
 constraint_metric(unstable_manifold_rho28, extractiveness, 0.55).
 
-% The Singularity at Infinity (The Noose)
-constraint_claim(global_divergence_prevention, noose).
+% The Singularity at Infinity (The Snare)
+constraint_claim(global_divergence_prevention, snare).
 constraint_metric(global_divergence_prevention, intensity, 0.99).
 constraint_metric(global_divergence_prevention, suppression_requirement, 0.88).
 constraint_metric(global_divergence_prevention, snap_back_potential, 0.12).
@@ -44,7 +44,7 @@ constraint_metric(global_divergence_prevention, extractiveness, 0.95).
 recommendation(rec_01, topological_renormalization_of_fixed_points).
 affects_constraint(rec_01, unstable_manifold_rho28).
 
-% Noose (0.95 extractiveness) triggers Cut/Replace
+% Snare (0.95 extractiveness) triggers Cut/Replace
 recommendation(rec_02, implement_scaffold_linearization_to_prevent_divergence).
 affects_constraint(rec_02, global_divergence_prevention).
 

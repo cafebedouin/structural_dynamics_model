@@ -42,7 +42,7 @@
  * * NARRATIVE ARC:
  * Credentialing moves from an "Inefficient Mountain" (paper delays) to a 
  * "Digital Rope" (instant verification). However, when linked to the 
- * Social Credit/CBDC stack, it becomes a "Real-Time Noose" where credentials 
+ * Social Credit/CBDC stack, it becomes a "Real-Time Snare" where credentials 
  * can be revoked or "greyed out" based on algorithmic compliance.
  */
 
@@ -104,7 +104,7 @@ constraint_indexing:constraint_classification(
     !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 2: The "High-Risk" Subject - Noose
+   PERSPECTIVE 2: The "High-Risk" Subject - Snare
    --------------------------------------------------------------------------
    WHO: individual_powerless (Credential status is set by external ledger)
    WHEN: biographical (Loss of license or ID is life-altering)
@@ -113,14 +113,14 @@ constraint_indexing:constraint_classification(
    
    WHY THIS CLASSIFICATION:
    For an agent flagged by the surveillance layer, the credentialing system is 
-   a Noose. Because their identity is "programmed" into the ledger, the 
+   a Snare. Because their identity is "programmed" into the ledger, the 
    state can revoke their "Permission to Work" or "Permission to Travel" 
    instantly and without judicial recourse.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
     digital_credentialing_verification,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(biographical),
@@ -168,8 +168,8 @@ test(bottleneck_to_ledger) :-
     % Institutional sees a Rope (Efficiency)
     constraint_indexing:constraint_classification(digital_credentialing_verification, rope, 
         context(institutional, immediate, mobile, national)),
-    % Individual Subject sees a potential Noose (Liability)
-    constraint_indexing:constraint_classification(digital_credentialing_verification, noose, 
+    % Individual Subject sees a potential Snare (Liability)
+    constraint_indexing:constraint_classification(digital_credentialing_verification, snare, 
         context(individual_powerless, biographical, trapped, national)).
 
 :- end_tests(credentialing_tests).
@@ -188,7 +188,7 @@ test(bottleneck_to_ledger) :-
  * omega_variable(credential_revocation_logic,
  * "Will license revocation be automated based on Social Credit behavioral flags?",
  * resolution_mechanism("Cross-referencing Board of Medicine bylaws with National Data-Linkage mandates"),
- * impact("If Yes: Total Integration Noose. If No: Segmented Rope."),
+ * impact("If Yes: Total Integration Snare. If No: Segmented Rope."),
  * confidence_without_resolution(low)
  * ).
  */

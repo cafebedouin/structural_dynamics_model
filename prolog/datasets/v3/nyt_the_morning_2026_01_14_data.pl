@@ -35,7 +35,7 @@ event(e4, insurrection_act_threat, 15, [actor(president_trump), date('2026-01-15
 % Section 3: Constraint Claims & Metrics (Current State T=15)
 % -----------------------------------------------------------------------------
 
-% Federal Surge: Claimed as a Rope (enforcement); measured as a Noose (occupation)
+% Federal Surge: Claimed as a Rope (enforcement); measured as a Snare (occupation)
 % 2,800 federal agents vs 600 local police creates massive tactical extractiveness
 constraint_claim(federal_surge, rope).
 constraint_metric(federal_surge, extractiveness, 0.88). 
@@ -52,7 +52,7 @@ constraint_metric(mpls_municipal_trust, suppression_requirement, 0.05).
 % Section 4: Temporal Measurements (Evolution History)
 % -----------------------------------------------------------------------------
 
-% Evolution of Federal Surge: Transformation rope -> noose
+% Evolution of Federal Surge: Transformation rope -> snare
 measurement(m1, federal_surge, extractiveness, 0, 0.15).
 measurement(m2, federal_surge, extractiveness, 5, 0.45). % Post-shooting escalation
 measurement(m3, federal_surge, extractiveness, 15, 0.88). % Siege state as agents storm Twin Cities

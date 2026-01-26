@@ -40,13 +40,13 @@
  * recursive purging, trapped in a set of zero measure.
  * - The Measure Theorist (Institutional): An agent who uses the Cantor Set 
  * as a "Rope" to redefine the relationship between cardinality and size.
- * - The "Intuitive" Observer (Victim): An agent for whom the set is a "Noose," 
+ * - The "Intuitive" Observer (Victim): An agent for whom the set is a "Snare," 
  * strangling the common-sense notion that "uncountable" implies "has length."
  * * NARRATIVE ARC:
  * Originally seen as a "pathological" curiosity, the Cantor Set is a 
  * "Mountain" of topological fate. In fractal geometry, it is a "Rope" 
  * for coordination. However, the removal of the middle-thirds acts as a 
- * "Noose" for the interval itself, extracting all its "substance" (measure) 
+ * "Snare" for the interval itself, extracting all its "substance" (measure) 
  * while leaving behind an infinite, ghostly residue of survivors.
  */
 
@@ -138,7 +138,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE UNIT INTERVAL [0,1] - Noose
+   PERSPECTIVE 3: THE UNIT INTERVAL [0,1] - Snare
    --------------------------------------------------------------------------
    WHO: individual_powerless - The interval is subjected to the removal.
    WHEN: immediate - Each iteration "strangles" more of its length.
@@ -146,7 +146,7 @@ constraint_indexing:constraint_classification(
    SCOPE: local - Within the bounds of the unit line.
    
    WHY THIS CLASSIFICATION:
-   The Cantor construction acts as a "Noose" for the interval's measure. 
+   The Cantor construction acts as a "Snare" for the interval's measure. 
    It extracts 100% of the length (extraction) while leaving behind a 
    set of the same cardinality (uncountable) as the original, creating 
    a "No-Exit" paradox of size vs. number.
@@ -156,7 +156,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     cantor_set_topology,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -183,8 +183,8 @@ test(measure_vs_cardinality_variance) :-
     Type2 = rope.
 
 test(measure_zero_noose) :-
-    % The interval feels the "Noose" of its disappearing measure.
-    constraint_indexing:constraint_classification(cantor_set_topology, noose, context(individual_powerless, immediate, constrained, local)).
+    % The interval feels the "Snare" of its disappearing measure.
+    constraint_indexing:constraint_classification(cantor_set_topology, snare, context(individual_powerless, immediate, constrained, local)).
 
 test(natural_emergence) :-
     domain_priors:emerges_naturally(cantor_set_topology).
@@ -201,11 +201,11 @@ test(natural_emergence) :-
  * Date: 2026-01-19
  * * KEY DECISIONS:
  * 1. CLASSIFICATION: The Cantor set is a "Mountain" of logic, but the 
- * process is a "Noose" for measure. I chose this to highlight the 
+ * process is a "Snare" for measure. I chose this to highlight the 
  * "Epistemic Extraction" where cardinality is preserved while measure 
  * is destroyed.
  * 2. IMAGES: Triggered diagrams for the ternary construction and the 
- * "Devil's Staircase" to show how the "Noose" of measure zero creates 
+ * "Devil's Staircase" to show how the "Snare" of measure zero creates 
  * a "Rope" of constant-gradient functions.
  * 3. EXTRACTIVENESS (0.3): While math is free, the Cantor set is the 
  * ultimate "extraction" of physical intuition (length).
@@ -216,7 +216,7 @@ omega_variable(
     measure_preservation,
     "Can a 'Rope' (Fat Cantor Set) preserve measure while remaining nowhere dense?",
     resolution_mechanism("Verification of the Smith-Volterra-Cantor set construction."),
-    impact("If Yes: The 'Noose' of measure zero is a choice, not a Mountain."),
+    impact("If Yes: The 'Snare' of measure zero is a choice, not a Mountain."),
     confidence_without_resolution(high)
 ).
 
@@ -235,7 +235,7 @@ omega_variable(
  * * ALTERNATIVE 2: The Continuous Line
  * Status: The "Rope" that Cantor set destroys to prove its point.
  * * CONCLUSION:
- * The existence of "Fat Cantor Sets" proves that the "Noose" of measure 
+ * The existence of "Fat Cantor Sets" proves that the "Snare" of measure 
  * zero is a specific parameter choice within a broader "Mountain" of 
  * recursive set theory.
  */

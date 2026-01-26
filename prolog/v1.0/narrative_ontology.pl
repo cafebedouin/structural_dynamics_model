@@ -114,7 +114,7 @@ validate_events :-
 validate_constraints :-
     forall(constraint_claim(Name,Type),
         ( atom(Name),
-          member(Type,[mountain,rope,noose,zombie])
+          member(Type,[mountain,rope,snare,piton])
         -> true
         ;  format('ERROR: Invalid constraint_claim(~w,~w)~n',[Name,Type]), fail
         )).

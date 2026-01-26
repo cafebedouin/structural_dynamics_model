@@ -27,12 +27,12 @@ event(ev04_imperial_stability, state_stabilization, 95, [subject(mesopotamia), r
 constraint_claim(lex_talionis_retaliation, mountain).
 constraint_metric(lex_talionis_retaliation, accessibility_collapse, 0.95).
 
-% Noose: Debt Bondage. The trap where an unpaid debt forces the assignment of wife or child to work off the debt, tightening over three years.
-constraint_claim(debt_bondage_trap, noose).
+% Snare: Debt Bondage. The trap where an unpaid debt forces the assignment of wife or child to work off the debt, tightening over three years.
+constraint_claim(debt_bondage_trap, snare).
 constraint_metric(debt_bondage_trap, stakes_inflation, 0.90).
 
-% Zombie: Divine Monarchy. The dead idea that the king is a direct conduit for the Sun God's judgment, persisting as a living regulatory force.
-constraint_claim(divine_command_legitimacy, zombie).
+% Piton: Divine Monarchy. The dead idea that the king is a direct conduit for the Sun God's judgment, persisting as a living regulatory force.
+constraint_claim(divine_command_legitimacy, piton).
 constraint_metric(divine_command_legitimacy, suppression, 0.85).
 
 % Rope: Fixed Wages and Hires. Ties all economic activity to rigid statutory rates (e.g., 6 gur of corn for a boatman).

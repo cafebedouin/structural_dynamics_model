@@ -24,12 +24,12 @@ event(ev04_solar_eclipse_expedition, final_verification, 95, [actor(eddington), 
 constraint_claim(velocity_of_light_constancy, mountain).
 constraint_metric(velocity_of_light_constancy, accessibility_collapse, 1.0).
 
-% Noose: The 'Promise' of Classical Mechanics' Absolute Time. It tightens as velocities approach c. 
-constraint_claim(absolute_time_notion, noose).
+% Snare: The 'Promise' of Classical Mechanics' Absolute Time. It tightens as velocities approach c. 
+constraint_claim(absolute_time_notion, snare).
 constraint_metric(absolute_time_notion, stakes_inflation, 0.95).
 
-% Zombie: The Aether. A theoretical medium formerly believed to be at rest but rendered unnecessary. 
-constraint_claim(luminiferous_aether, zombie).
+% Piton: The Aether. A theoretical medium formerly believed to be at rest but rendered unnecessary. 
+constraint_claim(luminiferous_aether, piton).
 constraint_metric(luminiferous_aether, suppression, 0.85).
 
 % Rope: The Galilei Transformation. Ties local events to a specific unique reference body. 

@@ -162,7 +162,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE INDIVIDUAL PATIENT (SUBJECT) - Noose
+   PERSPECTIVE 3: THE INDIVIDUAL PATIENT (SUBJECT) - Snare
    --------------------------------------------------------------------------
    WHO: individual_powerless - The subject bound by the metabolic mandate.
    WHEN: biographical - The treatment horizon is often life-long.
@@ -170,7 +170,7 @@ constraint_indexing:constraint_classification(
    SCOPE: local - The individual's metabolic health and financial margin.
    
    WHY THIS CLASSIFICATION:
-   The "Noose" is the biological lock-in. While institutions see the GLP-1 
+   The "Snare" is the biological lock-in. While institutions see the GLP-1 
    pivot as a coordination tool for public health, the individual feels 
    the tightening of a mandate they cannot easily exit. The high 
    suppression of metabolic alternatives (0.8) and the existential stakes 
@@ -180,7 +180,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     glp1_payload_efficiency_pivot,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(biographical),
@@ -191,7 +191,7 @@ constraint_indexing:constraint_classification(
     domain_priors:requires_active_enforcement(glp1_payload_efficiency_pivot),
     !.
 
-% Explicit priors reflecting the high extraction and suppression of the metabolic noose.
+% Explicit priors reflecting the high extraction and suppression of the metabolic snare.
 domain_priors:base_extractiveness(glp1_payload_efficiency_pivot, 0.7).
 domain_priors:suppression_score(glp1_payload_efficiency_pivot, 0.8).
 
@@ -248,7 +248,7 @@ omega_variable(
     snack_revenue_decline_magnitude,
     "How much will the loss in onboard snack/alcohol sales offset the fuel savings?",
     resolution_mechanism("Quarterly revenue reports from airline catering subsidiaries."),
-    impact("High impact: If catering loss > fuel gain, the 'perk' becomes a Noose."),
+    impact("High impact: If catering loss > fuel gain, the 'perk' becomes a Snare."),
     confidence_without_resolution(medium)
 ).
 
@@ -276,7 +276,7 @@ omega_variable(
  * * CONCLUSION:
  * The existence of these suppressed/limited alternatives (Alternative 1) 
  * proves that the "Biological Solution" (GLP-1) is the only "Rope" that 
- * functions without triggering a PR "Noose."
+ * functions without triggering a PR "Snare."
  */
 
 /* ==========================================================================

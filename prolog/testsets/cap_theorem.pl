@@ -41,11 +41,11 @@
  * - The Cloud Infrastructure Provider: Institutional agent offering specialized 
  * database "Ropes" (e.g., CP or AP systems) to developers.
  * - The On-Call Engineer: Individual powerless agent trapped by a network 
- * partition ("Split Brain") where the theorem acts as a Noose.
+ * partition ("Split Brain") where the theorem acts as a Snare.
  * * NARRATIVE ARC:
  * CAP functions as a "Mountain" of logic—a fundamental law of information 
  * physics. For a CTO, it is a "Rope" used to coordinate design choices. 
- * However, during a network failure, it becomes a "Noose" for the SRE, 
+ * However, during a network failure, it becomes a "Snare" for the SRE, 
  * as the theorem extracts the possibility of having both a working 
  * and an accurate system simultaneously.
  */
@@ -142,7 +142,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE ON-CALL SRE - Noose
+   PERSPECTIVE 3: THE ON-CALL SRE - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless - Subject to the failure of the network.
@@ -151,7 +151,7 @@ constraint_indexing:constraint_classification(
    SCOPE: local - Immediate server cluster.
    
    WHY THIS CLASSIFICATION:
-   For the engineer on call during a network split, CAP is a Noose. 
+   For the engineer on call during a network split, CAP is a Snare. 
    They are forced to choose between a "lying" system (Consistency loss) 
    or a "broken" system (Availability loss). The theorem strangles their 
    ability to provide a perfect fix, extracting their time and sanity 
@@ -160,7 +160,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     cap_theorem,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -176,13 +176,13 @@ constraint_indexing:constraint_classification(
 :- begin_tests(cap_theorem_tests).
 
 test(multi_perspective_variance) :-
-    % Analyst sees Mountain, Institutional sees Rope, Powerless sees Noose
+    % Analyst sees Mountain, Institutional sees Rope, Powerless sees Snare
     constraint_indexing:constraint_classification(cap_theorem, mountain, context(analytical, civilizational, trapped, global)),
     constraint_indexing:constraint_classification(cap_theorem, rope, context(institutional, biographical, arbitrage, national)),
-    constraint_indexing:constraint_classification(cap_theorem, noose, context(individual_powerless, immediate, trapped, local)).
+    constraint_indexing:constraint_classification(cap_theorem, snare, context(individual_powerless, immediate, trapped, local)).
 
 test(power_extractiveness_reliability) :-
-    % SREs feel the extraction of their agency during a failure (Noose).
+    % SREs feel the extraction of their agency during a failure (Snare).
     % CTOs use the theorem to justify budget and tech stack (Rope).
     domain_priors:base_extractiveness(cap_theorem, E),
     E >= 0.4.
@@ -217,12 +217,12 @@ test(time_immutability_logic) :-
 omega_variable(
     pacelc_transition_cost,
     "To what extent can the PACELC extension (addressing latency vs consistency 
-    when no partition exists) untie the CAP Noose (Rope), or is the cost 
-    always a net-negative for complexity (Noose)?",
+    when no partition exists) untie the CAP Snare (Rope), or is the cost 
+    always a net-negative for complexity (Snare)?",
     resolution_mechanism("Monitor industry shift toward latency-aware 
     consistent databases"),
-    impact("If Rope: The Noose is loosened during normal operation. 
-    If Noose: Complexity just creates a different kind of trap."),
+    impact("If Rope: The Snare is loosened during normal operation. 
+    If Snare: Complexity just creates a different kind of trap."),
     confidence_without_resolution(medium)
 ).
 

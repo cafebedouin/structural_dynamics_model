@@ -117,7 +117,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE ATTENTION FARMER - Noose
+   PERSPECTIVE 3: THE ATTENTION FARMER - Snare
    --------------------------------------------------------------------------
    WHO: individual_powerless (the user being farmed)
    WHEN: immediate
@@ -126,7 +126,7 @@ constraint_indexing:constraint_classification(
    
    WHY THIS CLASSIFICATION:
    When a platform uses IFT to maximize "Time on Site" rather than 
-   "Goal Completion," the theory becomes a "Noose." By providing 
+   "Goal Completion," the theory becomes a "Snare." By providing 
    continuous "micro-scents" (infinite scrolls, notifications), they 
    trap the forager in a loop of low-value exploration, strangling 
    their productivity.
@@ -134,7 +134,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     information_foraging_theory,
-    noose,
+    snare,
     context(agent_power(individual_powerless), time_horizon(immediate), exit_options(trapped), spatial_scope(global))
 ) :- !.
 

@@ -153,7 +153,7 @@ constraint_indexing:constraint_classification(
    
    WHY THIS CLASSIFICATION:
    From a systemic view, if the reserve ratio stays near 400% during a 
-   prolonged ERG crash, the protocol becomes a "Noose." It forces 
+   prolonged ERG crash, the protocol becomes a "Snare." It forces 
    asymmetric losses on the last reserve holders to stay liquid, potentially 
    leading to a "death spiral" where the constraint becomes coercive to 
    those remaining.
@@ -165,7 +165,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     sig_usd_protocol,
-    noose,
+    snare,
     context(
         agent_power(institutional),
         time_horizon(historical),
@@ -216,7 +216,7 @@ test(time_immutability) :-
  * 2. PERSPECTIVES: I chose the Holder/Banker/Institutional split because crypto 
  * protocols are defined by the "Reserve Ratio" state, which changes the 
  * user's freedom of movement.
- * 3. NOOSE LOGIC: I classified the institutional view as Noose because of the 
+ * 3. NOOSE LOGIC: I classified the institutional view as Snare because of the 
  * "Liquidation Risk"—the protocol's constraints (locking minting/burning) 
  * can become a trap during black swan events.
  * * AMBIGUITIES:
@@ -233,7 +233,7 @@ omega_variable(
     oracle_integrity,
     "Is the ERG/USD oracle price feed accurate and manipulation-resistant?",
     resolution_mechanism("Post-hoc analysis of oracle data vs. global market average during high volatility"),
-    impact("If oracle fails, the Mountain (math) becomes a Noose (error-driven extraction)."),
+    impact("If oracle fails, the Mountain (math) becomes a Snare (error-driven extraction)."),
     confidence_without_resolution(medium)
 ).
 
@@ -262,4 +262,4 @@ omega_variable(
 % --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
 constraint_indexing:constraint_classification(ergo_sig_usd_protocol, mountain, agent_power(analytical)).
 constraint_indexing:constraint_classification(ergo_sig_usd_protocol, rope, agent_power(institutional)).
-constraint_indexing:constraint_classification(ergo_sig_usd_protocol, noose, agent_power(individual_powerless)).
+constraint_indexing:constraint_classification(ergo_sig_usd_protocol, snare, agent_power(individual_powerless)).

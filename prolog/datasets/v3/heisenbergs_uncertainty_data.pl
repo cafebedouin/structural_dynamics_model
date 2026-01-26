@@ -1,6 +1,6 @@
 % Clinical Sensor Output: Heisenberg Uncertainty Principle (HUP) Analysis
 % Scope: Analyzing the transformation of the HUP from a 'Mountain' (ontological limit)
-% to a 'Noose' (epistemic constraint) used to suppress alternative measurement scaffolds.
+% to a 'Snare' (epistemic constraint) used to suppress alternative measurement scaffolds.
 % Audit Status: v3.1.2 DR Modal Logic Edition - Reality Audit: Initiated.
 
 % --- Section 1: Entities & Intervals ---
@@ -21,7 +21,7 @@ event(e3, decoherence_discovery, 70, [type(structural_bypass_identified)]).
 constraint_claim(heisenberg_protocol, mountain).
 
 % Current state metrics (at T=100)
-% Extractiveness (X): High - The 'Noose' effect restricts the flow of information to
+% Extractiveness (X): High - The 'Snare' effect restricts the flow of information to
 % only those models that accept the "collapse" or "limit" without further inquiry.
 % Suppression (E): High - Strong rejection of sub-quantum variables (hidden variables).
 constraint_metric(heisenberg_protocol, extractiveness, 0.72).
@@ -37,11 +37,11 @@ measurement(m2, heisenberg_protocol, suppression_requirement, 0, 0.05).
 measurement(m3, heisenberg_protocol, extractiveness, 30, 0.35).
 measurement(m4, heisenberg_protocol, suppression_requirement, 30, 0.45).
 
-% T=100: Present state. Full 'Noose' (Institutional capture/calcification).
+% T=100: Present state. Full 'Snare' (Institutional capture/calcification).
 measurement(m5, heisenberg_protocol, extractiveness, 100, 0.72).
 measurement(m6, heisenberg_protocol, suppression_requirement, 100, 0.81).
 
-% Coercion Vectors (Evolution of the Noose)
+% Coercion Vectors (Evolution of the Snare)
 measurement(v1, quantum_paradigm_evolution, accessibility_collapse(structural), 30, 0.60).
 measurement(v2, quantum_paradigm_evolution, stakes_inflation(individual), 100, 0.90). % Careers dependent on orthodoxy
 

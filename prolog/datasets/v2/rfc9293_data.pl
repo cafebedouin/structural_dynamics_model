@@ -25,8 +25,8 @@ constraint_metric(legacy_interoperability, extractiveness, 0.45).
 constraint_metric(legacy_interoperability, suppression_requirement, 0.30).
 constraint_metric(legacy_interoperability, snap_back_potential, 0.70).
 
-% Noose (⊠C): Strict sequence number validation to prevent blind injection (Cut required/Tightened)
-constraint_claim(security_validation_logic, noose).
+% Snare (⊠C): Strict sequence number validation to prevent blind injection (Cut required/Tightened)
+constraint_claim(security_validation_logic, snare).
 constraint_metric(security_validation_logic, extractiveness, 0.85).
 constraint_metric(security_validation_logic, suppression_requirement, 0.60).
 constraint_metric(security_validation_logic, snap_back_potential, 0.10).

@@ -40,7 +40,7 @@ constraint_metric(manual_summation_friction, snap_back_potential, 0.45).
 constraint_metric(manual_summation_friction, extractiveness, 0.52).
 
 % NOOSE: Infinite Polynomial Assumption (Euler's non-rigorous leap at the time)
-constraint_claim(sine_product_rigor_gap, noose).
+constraint_claim(sine_product_rigor_gap, snare).
 constraint_metric(sine_product_rigor_gap, intensity, 0.95).
 constraint_metric(sine_product_rigor_gap, suppression_requirement, 0.85).
 constraint_metric(sine_product_rigor_gap, snap_back_potential, 0.90).

@@ -37,7 +37,7 @@
  * to maintain tribal cohesion.
  * * KEY AGENTS:
  * - Leopold Bloom: Individual moderate navigating a "Rope" of socialAssent.
- * - The Pauper/Deceased Child: Individual powerless subject to the finality of the social order (Noose).
+ * - The Pauper/Deceased Child: Individual powerless subject to the finality of the social order (Snare).
  * - Martin Cunningham: Institutional moderator viewing the order as law (Mountain).
  */
 
@@ -47,7 +47,7 @@
 
 % Required for [STEP 1] and [STEP 2] of the DR-Audit Suite
 narrative_ontology:interval(bloom_exclusion_interval, 0, 10).
-narrative_ontology:constraint_claim(bloom_social_exclusion_dublin, noose).
+narrative_ontology:constraint_claim(bloom_social_exclusion_dublin, snare).
 
 % Metrics: Extractiveness (0.5) and Suppression (0.7)
 domain_priors:base_extractiveness(bloom_social_exclusion_dublin, 0.5).
@@ -79,15 +79,15 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE PAUPER / CHILD FUNERAL - Noose
+   PERSPECTIVE 2: THE PAUPER / CHILD FUNERAL - Snare
    --------------------------------------------------------------------------
    WHO: individual_powerless - "Only a pauper. Nobody owns.".
-   WHY: From the bottom of the social hierarchy, the order is a "Noose" that 
+   WHY: From the bottom of the social hierarchy, the order is a "Snare" that 
    extracts life and dignity without recourse or coordination options.
    -------------------------------------------------------------------------- */
 constraint_indexing:constraint_classification(
     bloom_social_exclusion_dublin,
-    noose,
+    snare,
     context(agent_power(individual_powerless), time_horizon(immediate), exit_options(constrained), spatial_scope(local))
 ) :- !.
 
@@ -113,7 +113,7 @@ constraint_indexing:constraint_classification(
 test(multi_perspective_conflict) :-
     constraint_indexing:constraint_classification(bloom_social_exclusion_dublin, T1, context(agent_power(individual_moderate), _, _, _)),
     constraint_indexing:constraint_classification(bloom_social_exclusion_dublin, T2, context(agent_power(individual_powerless), _, _, _)),
-    T1 = rope, T2 = noose.
+    T1 = rope, T2 = snare.
 
 test(time_immutability_scaling) :-
     % Historical view (Institutional) sees the social order as a Mountain
@@ -129,7 +129,7 @@ test(time_immutability_scaling) :-
  * LLM GENERATION NOTES:
  * Refactored to include the mandatory powerless perspective. This allows the 
  * audit to detect the gap between the "Mountain" of history and the 
- * "Noose" of current social reality.
+ * "Snare" of current social reality.
  */
 
 omega_variable(
@@ -158,4 +158,4 @@ omega_variable(
 % --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
 constraint_indexing:constraint_classification(ulysses_chp06, mountain, agent_power(analytical)).
 constraint_indexing:constraint_classification(ulysses_chp06, rope, agent_power(institutional)).
-constraint_indexing:constraint_classification(ulysses_chp06, noose, agent_power(individual_powerless)).
+constraint_indexing:constraint_classification(ulysses_chp06, snare, agent_power(individual_powerless)).

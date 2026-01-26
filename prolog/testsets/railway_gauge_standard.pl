@@ -1,12 +1,12 @@
-% ============================================================================
+% ============================================================================ 
 % CONSTRAINT STORY: railway_gauge_standard
-% ============================================================================
-% Generated: 2026-01-19
-% Model: Gemini 2.0 Flash
+% ============================================================================ 
+% Generated: 2026-01-23
+% Model: Gemini Pro (Revised)
 % Source: George Stephenson (1825) / Path Dependence / Economic History
-% ============================================================================
+% ============================================================================ 
 
-:- module(constraint_railway_gauge, []).
+:- module(constraint_railway_gauge_standard, []).
 
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
@@ -19,113 +19,114 @@
     domain_priors:requires_active_enforcement/1,
     constraint_indexing:constraint_classification/3.
 
-/* ==========================================================================
+/* ========================================================================== 
    1. NARRATIVE CONTEXT
    ========================================================================== */
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: railway_gauge_standard
- * human_readable: Standard Railway Gauge (4 ft 8.5 in)
+ * 
+ * constraint_id: railway_gauge_standard
+ * human_readable: The Standard Railway Gauge (4 ft 8.5 in)
  * domain: technological/economic
  * temporal_scope: 1820s - Present
  * spatial_scope: Global (approx. 60% of world tracks)
- * * SUMMARY:
+ * 
+ * SUMMARY:
  * The Standard Gauge (1435 mm) is a classic example of technological lock-in 
- * and path dependence. Legend holds it traces back to Roman chariot ruts, 
- * but it was formally set by George Stephenson based on existing horse-drawn 
- * coal wagons. Despite "Broad Gauge" alternatives offering better stability 
- * and speed, the Standard Gauge became a global invariant due to network effects.
- * * KEY AGENTS:
- * - The Railway Historian: Analytical observer of "frozen accidents" in engineering.
- * - The National Transport Authority: Institutional agent enforcing the standard 
- * to ensure interstate/international interoperability.
- * - The Broad Gauge Innovator (e.g., Brunel): Individual moderate whose 
- * superior technical alternative was strangled by the existing network.
- * * NARRATIVE ARC:
- * What began as a local "Rope" (matching coal wagons) hardened into a 
- * "Mountain" of physical infrastructure. For the technical innovator, it 
- * became a "Noose," as the cost of "breaking gauge" at borders extracted 
- * the viability of better designs.
+ * and path dependence. It was formally set by George Stephenson based on existing 
+ * horse-drawn coal wagons. Despite "Broad Gauge" alternatives offering better 
+ * stability and speed, the Standard Gauge became a global invariant due to 
+ * network effects, leading to an immutable 'Mountain' of infrastructure.
+ * 
+ * KEY AGENTS:
+ * - The Passenger / Freight Loader (Individual Powerless): Uses the trains as presented.
+ * - The National Transport Authority (Institutional): Enforces the standard for interoperability.
+ * - Isambard Kingdom Brunel (Individual Moderate): Innovator whose superior alternative was rejected.
  */
 
-/* ==========================================================================
+/* ========================================================================== 
    2. CORE SYSTEM INTEGRATION (The "Reality" Layer)
    ========================================================================== */
 
-% Required for structural identification
-narrative_ontology:interval(railway_gauge_interval, 0, 10).
-narrative_ontology:constraint_claim(railway_gauge_standard, noose).
+narrative_ontology:interval(railway_gauge_standard, 0, 10).
+narrative_ontology:constraint_claim(railway_gauge_standard, piton).
 
-% Base extractiveness score (0.0-1.0)
-% Rationale: 0.3 (Low-Moderate). It extracts "optimal technical performance." 
-% By forcing a sub-optimal width, it limits the size and speed of trains 
-% compared to what could be achieved with broader tracks.
+% Base extractiveness: 0.3 (Low-Moderate). 
+% It extracts "optimal technical performance." By forcing a sub-optimal width, 
+% it limits the size and speed of trains compared to what could be achieved 
+% with broader tracks.
 domain_priors:base_extractiveness(railway_gauge_standard, 0.3).
 
-% Suppression score (0.0-1.0)
-% Rationale: 0.8 (High). Alternatives (Broad or Narrow gauge) are physically 
-% suppressed. A train built for one cannot run on the other without 
-% expensive "transshipment," making the alternatives economically invisible.
-domain_priors:suppression_score(railway_gauge_standard, 0.8).
+% Suppression: 0.2 (Low).
+% The standard persists due to massive network effects and sunk capital
+% investment (inertia), not active enforcement against alternatives.
+domain_priors:suppression_score(railway_gauge_standard, 0.2).
 
-% Enforcement requirements
-% Emerges naturally via network effects; maintained by massive capital investment.
-domain_priors:emerges_naturally(railway_gauge_standard).
+% Resistance: 0.6 (High).
+% The sub-optimal nature causes friction for engineers and planners seeking
+% efficiency and performance, indicating active resistance.
+domain_priors:resistance_score(railway_gauge_standard, 0.6).
 
-% Metrics required for Section 1 of the Executive Summary
+% Enforcement: Persists through network effects and sunk capital (inertia).
 narrative_ontology:constraint_metric(railway_gauge_standard, extractiveness, 0.3).
-narrative_ontology:constraint_metric(railway_gauge_standard, suppression_requirement, 0.8).
+narrative_ontology:constraint_metric(railway_gauge_standard, suppression_requirement, 0.2).
+
+% Make the constraint "evolve" by showing resistance increasing over time
+narrative_ontology:constraint_metric(railway_gauge_standard, resistance, 0.1, 0). % Low resistance initially (when functional)
+narrative_ontology:constraint_metric(railway_gauge_standard, resistance, 0.6, 10). % High resistance currently (due to sub-optimality)
+
+% Formally model the viable alternative
+narrative_ontology:intent_viable_alternative(railway_gauge_standard,
+    'Brunel\'s Broad Gauge (7 ft)',
+    'Technically superior, but suppressed by economic and political factors during the Gauge Wars.').
 
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(railway_gauge_standard, [standard_rolling_stock_manufacturers, interconnected_logistics]).
-constraint_victim(railway_gauge_standard, [high_speed_innovators, technical_perfectionists]).
+constraint_beneficiary(railway_gauge_standard, interconnected_logistics).
+constraint_victim(railway_gauge_standard, technical_optimality).
 
-/* ==========================================================================
+
+/* ========================================================================== 
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)
    ========================================================================== */
 
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 1: THE LOGISTICS ANALYST - Mountain
-   --------------------------------------------------------------------------
-   
-   WHO: analytical - Observer of global trade corridors.
-   WHEN: civilizational - Viewing the rail network as a permanent crust of the earth.
-   WHERE: trapped - The tracks are already laid in steel and concrete.
-   SCOPE: global - Continental rail networks.
+/* -------------------------------------------------------------------------- 
+   PERSPECTIVE 1: THE PASSENGER / FREIGHT LOADER - Mountain
+   -------------------------------------------------------------------------- 
+   WHO: individual_powerless (No control over infrastructure)
+   WHEN: immediate (Using the railway system daily)
+   WHERE: trapped (Must use the trains as they are presented) 
    
    WHY THIS CLASSIFICATION:
-   To the analyst, the Gauge is a Mountain. It is an immovable fact of 
-   civilizational hardware. The cost of ripping up and relaying millions 
-   of miles of track to a "better" width is so high that the current 
-   width is effectively a law of nature.
+   For the ordinary user, the railway gauge is an immutable 'Mountain' of
+   infrastructure. They simply use the trains as they are presented,
+   unaware of gauge wars or technical debates. It's a fixed reality of
+   their transportation system.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
     railway_gauge_standard,
     mountain,
     context(
-        agent_power(analytical),
-        time_horizon(civilizational),
+        agent_power(individual_powerless),
+        time_horizon(immediate),
         exit_options(trapped),
-        spatial_scope(global)
+        spatial_scope(local)
     )
-) :- !.
+).
 
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE EUROPEAN UNION (Interoperability Dept) - Rope
-   --------------------------------------------------------------------------
-   
-   WHO: institutional - Power to regulate international standards.
-   WHEN: biographical - Managing a single career's worth of infrastructure.
-   WHERE: arbitrage - Can fund "gauge-changing" tech or hybrid tracks.
-   SCOPE: continental - Trans-European networks.
+/* -------------------------------------------------------------------------- 
+   PERSPECTIVE 2: THE NATIONAL TRANSPORT AUTHORITY - Rope
+   -------------------------------------------------------------------------- 
+   WHO: institutional (Enforces standards for national infrastructure)
+   WHEN: biographical (Managing a career's worth of infrastructure development)
+   WHERE: arbitrage (Can fund "gauge-changing" tech or hybrid tracks)
    
    WHY THIS CLASSIFICATION:
-   For the institutional regulator, the standard is a Rope. It is the 
-   ultimate coordination mechanism. It allows a train from Paris to 
-   reach Warsaw without stopping. They use the constraint to pull a 
-   unified economy together, prioritizing "connectivity" over "optimal width."
+   For the institutional regulator, the standard is a 'Rope'. It is the 
+   ultimate coordination mechanism, allowing trains to cross state or national
+   borders without stopping. They use the constraint to pull a unified economy
+   together, prioritizing "connectivity" over "optimal width."
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
@@ -137,122 +138,150 @@ constraint_indexing:constraint_classification(
         exit_options(arbitrage),
         spatial_scope(continental)
     )
-) :- !.
+).
 
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 3: ISAMBARD KINGDOM BRUNEL (Innovator) - Noose
-   --------------------------------------------------------------------------
-   
-   WHO: individual_moderate - Power to build, but subject to the network.
-   WHEN: immediate - The "Gauge War" of the 1840s.
-   WHERE: constrained - His Broad Gauge (7ft) is technically superior but incompatible.
-   SCOPE: national - The UK railway market.
+/* -------------------------------------------------------------------------- 
+   PERSPECTIVE 3: ISAMBARD KINGDOM BRUNEL (INNOVATOR) - Snare
+   -------------------------------------------------------------------------- 
+   WHO: individual_moderate (Power to build, but subject to the network)
+   WHEN: immediate (The "Gauge War" of the 1840s)
+   WHERE: constrained (His Broad Gauge (7ft) is technically superior but incompatible)
    
    WHY THIS CLASSIFICATION:
-   For the innovator, the standard is a Noose. He has a faster, safer, and 
+   For the innovator, the standard is a 'Snare'. He has a faster, safer, and 
    more stable design, but the "Standard Gauge" has already captured the 
    majority of the network. The requirement to connect to the "Standard" 
-   strangles his Broad Gauge, eventually extracting all its capital and 
-   forcing its extinction.
+   strangles his Broad Gauge, forcing its extinction.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
     railway_gauge_standard,
-    noose,
+    snare,
     context(
         agent_power(individual_moderate),
         time_horizon(immediate),
         exit_options(constrained),
         spatial_scope(national)
     )
-) :- !.
+).
 
-/* ==========================================================================
-   4. TESTS (What We Learn About Constraints)
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 4: THE INSTITUTIONAL ANALYST - PITON
+   --------------------------------------------------------------------------
+   
+   WHO: analytical (Observer of institutional decay)
+   WHEN: biographical (Seeing the standard's function degrade over a career)
+   WHERE: analytical (Comparing stated goals vs. actual outcomes)
+   SCOPE: national
+   
+   WHY THIS CLASSIFICATION:
+   The analyst sees the standard as a Piton. It was created as a Rope to
+   ensure interoperability, but has decayed into a liability that persists 
+   through inertia. It no longer serves its coordinating function optimally
+   and now creates more friction than it resolves, but it's too embedded to
+   easily remove.
+   -------------------------------------------------------------------------- */
+
+constraint_indexing:constraint_classification(
+    railway_gauge_standard,
+    piton,
+    context(
+        agent_power(analytical),
+        time_horizon(biographical),
+        exit_options(analytical),
+        spatial_scope(national)
+    )
+).
+
+/* ========================================================================== 
+   4. TESTS
    ========================================================================== */
 
 :- begin_tests(railway_gauge_tests).
 
 test(multi_perspective_variance) :-
-    % Analyst sees Mountain, Institutional sees Rope, Innovator sees Noose
-    constraint_indexing:constraint_classification(railway_gauge_standard, mountain, context(analytical, civilizational, trapped, global)),
-    constraint_indexing:constraint_classification(railway_gauge_standard, rope, context(institutional, biographical, arbitrage, continental)),
-    constraint_indexing:constraint_classification(railway_gauge_standard, noose, context(individual_moderate, immediate, constrained, national)).
-
-test(power_extractiveness_incompatibility) :-
-    % The "victim" (Innovator) feels the extraction of their better tech (Noose).
-    % The "institution" uses the lock-in for coordination (Rope).
-    domain_priors:base_extractiveness(railway_gauge_standard, E),
-    E >= 0.3.
-
-test(time_immutability_lockin) :-
-    % Historical/Civilizational view = Mountain.
-    constraint_indexing:effective_immutability(civilizational, trapped, mountain).
+    constraint_indexing:constraint_classification(railway_gauge_standard, Type1, context(agent_power(individual_powerless), _, _, _)),
+    constraint_indexing:constraint_classification(railway_gauge_standard, Type2, context(agent_power(institutional), _, _, _)),
+    constraint_indexing:constraint_classification(railway_gauge_standard, Type3, context(agent_power(individual_moderate), _, _, _)),
+    Type1 \= Type2,
+    Type2 \= Type3,
+    Type1 \= Type3.
 
 :- end_tests(railway_gauge_tests).
 
-/* ==========================================================================
+/* ========================================================================== 
    5. MODEL INTERPRETATION (Commentary)
    ========================================================================== */
 
 /**
  * LLM GENERATION NOTES
- * * Model: Gemini 2.0 Flash
- * Date: 2026-01-19
- * * KEY DECISIONS:
- * 1. EXTRACTIVENESS (0.3): Chose lower-moderate because while the standard 
- * is technically sub-optimal, the "theft" is of potential performance 
- * rather than active labor or health (unlike QWERTY's RSI).
- * 2. PERSPECTIVE SELECTION: Brunel is the perfect "Noose" subject—he knew 
- * he had a better product, but the network effect strangled it.
- * 3. SUPPRESSION (0.8): Very high. You cannot just "try" a different gauge 
- * without building a whole separate world; the physics of the rail 
- * suppress the alternative.
+ * 
+ * Model: Gemini Pro (Revised)
+ * Date: 2026-01-23
+ * 
+ * KEY DECISIONS:
+ * 
+ * 1. PERSPECTIVE SELECTION: Added the 'Passenger / Freight Loader' as the
+ *    'individual_powerless' agent. This highlights how a technological standard,
+ *    once established, becomes an immutable 'Mountain' for the end-user.
+ *
+ * 2. CLASSIFICATION RATIONALE:
+ *    - Passenger (Mountain): An unquestioned fact of infrastructure.
+ *    - Authority (Rope): A tool for national/continental coordination.
+ *    - Innovator (Snare): A superior alternative suppressed by network effects.
+ * 
+ * 3. CORE INSIGHT: This is a classic example of path dependence where initial
+ *    contingencies (Stephenson's horse-drawn wagons) lead to a global 'Mountain'
+ *    that suppresses technically superior alternatives through network effects.
  */
 
-/* ==========================================================================
+/* ========================================================================== 
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
+/**
+ * OMEGA IDENTIFICATION
+ *
+ * The core uncertainty is whether the economic and social costs of network effects
+ * can ever be overcome by technological innovation.
+ */
 
 omega_variable(
     transshipment_innovation,
-    "Can digital 'automatic gauge-changing' wheels untie the Noose of the 
-    Standard Gauge (Rope), or is the cost of retrofitting always a 
-    Mountain?",
-    resolution_mechanism("Monitor the adoption rate of variable-gauge 
-    axles in cross-border corridors like Spain/France"),
-    impact("If Rope: Different gauges can coexist. If Mountain: Incompatibility 
-    remains a permanent friction point."),
+    "Can digital 'automatic gauge-changing' wheels truly untie the 'Snare' of the Standard Gauge, or is the cost of retrofitting always an insurmountable 'Mountain'?",
+    resolution_mechanism("Monitor the adoption rate and economic viability of variable-gauge axles in cross-border corridors (e.g., Spain/France)."),
+    impact("If successful: Different gauges can coexist more flexibly ('Rope'). If too costly: Incompatibility remains a permanent 'Mountain' of friction."),
     confidence_without_resolution(medium)
 ).
 
-/* ==========================================================================
+/* ========================================================================== 
    7. ALTERNATIVE ANALYSIS
    ========================================================================== */
-
 /**
  * VIABLE ALTERNATIVES
- * * ALTERNATIVE 1: Brunel's Broad Gauge (7 ft)
- * Viability: High. Provided smoother, faster rides and could carry 
- * much heavier loads.
- * Suppression: High. Extinguished by the Railway Regulation (Gauge) 
- * Act 1846, which mandated the Standard Gauge.
- * * CONCLUSION:
- * The existence of a physically superior alternative that was legally and 
- * economically suppressed confirms that the Standard Gauge is a Noose 
- * for engineering, even if it is a Rope for trade.
+ *
+ * ALTERNATIVE 1: Brunel's Broad Gauge (7 ft)
+ *    Viability: Physically superior, offering smoother, faster rides and greater load capacity.
+ *    Suppression: High. Extinguished by the Railway Regulation (Gauge) Act 1846, which legally
+ *    mandated the Standard Gauge and made non-standard gauges economically unviable due to transshipment costs.
+ *
+ * CONCLUSION:
+ * The existence of a physically superior alternative that was actively suppressed
+ * confirms that the Standard Gauge is a 'Snare' for engineering innovation,
+ * even if it facilitates trade (a 'Rope' for logistics).
  */
 
-/* ==========================================================================
+/* ========================================================================== 
    8. INTEGRATION HOOKS
    ========================================================================== */
 
 /**
- * TO USE THIS FILE:
- * ?- [constraint_railway_gauge].
- * ?- multi_index_report(railway_gauge_standard).
+ * TO USE THIS FILE: 
+ * 
+ * 1. Load: ?- [constraints/railway_gauge_standard].
+ * 2. Multi-perspective: ?- multi_index_report(railway_gauge_standard).
+ * 3. Run tests: ?- run_tests(railway_gauge_tests).
  */
 
-/* ==========================================================================
+/* ========================================================================== 
    END OF CONSTRAINT STORY
    ========================================================================== */

@@ -38,16 +38,15 @@
  * - The Cautious (The Victim): An agent who seeks safety through risk-aversion, only to find that "nothing works" for them.
  * - The Sage (Narrator): An analytical observer who recognizes the "soul" as the necessary currency of coordination.
  * * NARRATIVE ARC:
- * The agents are engaged in a project (likely a voyage or social creation) where they realize that standard safety protocols are illusory. To survive or succeed, they must "give their souls" to the endeavor. The constraint acts as a "Mountain" of metaphysical law that demands total "Noose-like" extraction of the self to become a functional "Rope" for collective survival.
+ * The agents are engaged in a project (likely a voyage or social creation) where they realize that standard safety protocols are illusory. To survive or succeed, they must "give their souls" to the endeavor. The constraint acts as a "Mountain" of metaphysical law that demands total "Snare-like" extraction of the self to become a functional "Rope" for collective survival.
  */
 
 /* ==========================================================================
    2. CORE SYSTEM INTEGRATION (The "Reality" Layer)
    ========================================================================== */
 
-% Structural Anchor
-narrative_ontology:interval(shobies_existential_commitment_interval, 0, 10).
-narrative_ontology:constraint_claim([shobies_existential_commitment], [existential_coordination]).
+narrative_ontology:interval(shobies_existential_commitment, 0, 10).
+narrative_ontology:constraint_claim(shobies_existential_commitment, [existential_coordination]).
 
 % Base extractiveness score (0.0 = no extraction, 1.0 = full extraction)
 % Rationale: High (0.65). The constraint requires agents to "stake everything" and "give our souls" to the task. This represents a severe extraction of individual autonomy and security in exchange for the "safe" result.
@@ -61,9 +60,7 @@ domain_priors:suppression_score(shobies_existential_commitment, 0.5).
 % Emerges naturally from the nature of high-stakes coordination but requires active internal enforcement (giving the soul).
 domain_priors:requires_active_enforcement(shobies_existential_commitment).
 
-% Metrics required for Section 1 of the Executive Summary
-narrative_ontology:constraint_metric(shobies_existential_commitment, extractiveness, 0.65).
-narrative_ontology:constraint_metric(shobies_existential_commitment, suppression_requirement, 0.5).
+
 
 % BENEFICIARIES & VICTIMS
 constraint_beneficiary(shobies_existential_commitment, collective_cohesion). % The project "works".
@@ -100,10 +97,10 @@ constraint_indexing:constraint_classification(
         exit_options(mobile),
         spatial_scope(local)
     )
-) :- !.
+).
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE HESITANT SUBJECT - Noose
+   PERSPECTIVE 2: THE HESITANT SUBJECT - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless (A "little person" whose soul is being demanded)
@@ -112,7 +109,7 @@ constraint_indexing:constraint_classification(
    SCOPE: local (The personal cost)
    
    WHY THIS CLASSIFICATION:
-   For the uncommitted or fearful agent, this is a "Noose." The requirement to "stake everything" feels like total extraction, strangling their sense of safety until they surrender their autonomy.
+   For the uncommitted or fearful agent, this is a "Snare." The requirement to "stake everything" feels like total extraction, strangling their sense of safety until they surrender their autonomy.
    
    NARRATIVE EVIDENCE:
    "nothing’s safe except what we put at risk".
@@ -120,17 +117,14 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     shobies_existential_commitment,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
         exit_options(trapped),
         spatial_scope(local)
     )
-) :-
-    domain_priors:base_extractiveness(shobies_existential_commitment, E),
-    E > 0.6,
-    !.
+).
 
 /* --------------------------------------------------------------------------
    PERSPECTIVE 3: THE SAGE / NARRATOR - Mountain
@@ -157,7 +151,34 @@ constraint_indexing:constraint_classification(
         exit_options(analytical),
         spatial_scope(global)
     )
-) :- !.
+).
+
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 4: THE PROJECT LEAD - Rope
+   --------------------------------------------------------------------------
+   WHO: institutional (The leader responsible for mission success)
+   WHEN: biographical (The project's lifecycle)
+   WHERE: constrained (Cannot exit the project, but can make decisions)
+   SCOPE: regional (The scope of the project)
+   
+   WHY THIS CLASSIFICATION:
+   From the institutional perspective of the project lead, the crew's total
+   commitment is the fundamental coordination mechanism (Rope) that makes
+   an impossible mission viable. The leader wields this existential
+   imperative as a tool to bind the team and ensure the project "works".
+   The high stakes are not a bug, but the feature that guarantees cohesion.
+   -------------------------------------------------------------------------- */
+
+constraint_indexing:constraint_classification(
+    shobies_existential_commitment,
+    rope,
+    context(
+        agent_power(institutional),
+        time_horizon(biographical),
+        exit_options(constrained),
+        spatial_scope(regional)
+    )
+).
 
 /* ==========================================================================
    4. TESTS (What We Learn About Constraints)
@@ -167,13 +188,16 @@ constraint_indexing:constraint_classification(
 
 test(multi_perspective_commitment) :-
     % Navigator sees Rope
-    constraint_indexing:constraint_classification(shobies_existential_commitment, Type1, context(individual_moderate, biographical, mobile, local)),
-    % Subject sees Noose
-    constraint_indexing:constraint_classification(shobies_existential_commitment, Type2, context(individual_powerless, immediate, trapped, local)),
+    constraint_indexing:constraint_classification(shobies_existential_commitment, Type1, context(agent_power(individual_moderate), time_horizon(biographical), exit_options(mobile), spatial_scope(local))),
+    % Subject sees Snare
+    constraint_indexing:constraint_classification(shobies_existential_commitment, Type2, context(agent_power(individual_powerless), time_horizon(immediate), exit_options(trapped), spatial_scope(local))),
     % Sage sees Mountain
-    constraint_indexing:constraint_classification(shobies_existential_commitment, Type3, context(analytical, civilizational, analytical, global)),
+    constraint_indexing:constraint_classification(shobies_existential_commitment, Type3, context(agent_power(analytical), time_horizon(civilizational), exit_options(analytical), spatial_scope(global))),
+    % Project Lead sees Rope
+    constraint_indexing:constraint_classification(shobies_existential_commitment, Type4, context(agent_power(institutional), time_horizon(biographical), exit_options(constrained), spatial_scope(regional))),
     Type1 \= Type2,
-    Type2 \= Type3.
+    Type2 \= Type3,
+    Type1 \= Type3. % Rope is not Mountain
 
 test(power_extractiveness_commitment) :-
     % The powerless experience higher extraction (fear of loss)
@@ -198,25 +222,23 @@ test(power_extractiveness_commitment) :-
  * Reasoning: Chose high because "staking everything" is a literal liquidation of current security.
  * Evidence: The text implies that functionality is impossible without this total buy-in.
  * * 2. PERSPECTIVE SELECTION:
- * Contrasted the Navigator (Rope) with the Hesitant Subject (Noose) to demonstrate the "Mandatrophy" resolution: high extraction becomes a functional tool when the agent adopts the "institutional" goal of the project.
+ * Contrasted the Navigator (Rope) with the Hesitant Subject (Snare) to demonstrate the "Mandatrophy" resolution: high extraction becomes a functional tool when the agent adopts the "institutional" goal of the project.
  * * 3. CLASSIFICATION RATIONALE:
  * The Analyst (Mountain) sees this as a perennial truth, whereas the participant sees it as a terrifying, high-stakes choice.
+ *
+ * 5. OMEGAS 
+ *    Define uncertainty so your analysis is cleaner
+ *    omega_variable(
+ *        risk_safety_causality,
+ *        "Is risk truly the cause of safety (Mountain) or is this a narrative Rope used to justify extreme labor and danger?",
+ *        resolution_mechanism("Comparison of project success rates in 'total risk' vs 'mitigated risk' environments"),
+ *        impact("If Mountain: The Shobies are wise. If narrative: They are victims of a cult-like Snare."),
+ *        confidence_without_resolution(medium)
+ *    ).
  */
 
 /* ==========================================================================
-   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
-   ========================================================================== */
-
-omega_variable(
-    risk_safety_causality,
-    "Is risk truly the cause of safety (Mountain) or is this a narrative Rope used to justify extreme labor and danger?",
-    resolution_mechanism("Comparison of project success rates in 'total risk' vs 'mitigated risk' environments"),
-    impact("If Mountain: The Shobies are wise. If narrative: They are victims of a cult-like Noose."),
-    confidence_without_resolution(medium)
-).
-
-/* ==========================================================================
-   7. ALTERNATIVE ANALYSIS
+   6. ALTERNATIVE ANALYSIS (If Applicable)
    ========================================================================== */
 
 /**
@@ -226,17 +248,30 @@ omega_variable(
  * Suppression: Explicitly rejected by the text: "nothing's safe except...".
  * Evidence: "nothing works except what we give our souls to".
  * * CONCLUSION:
- * The active suppression of Alternative 1 makes the Shobies' claim a Noose for those who would prefer standard safety, but a Rope for the "awakened" Navigator.
+ * The active suppression of Alternative 1 makes the Shobies' claim a Snare for those who would prefer standard safety, but a Rope for the "awakened" Navigator.
  */
 
 /* ==========================================================================
-   8. INTEGRATION HOOKS
+   7. INTEGRATION HOOKS
    ========================================================================== */
 
 /**
- * TO USE THIS FILE:
- * * 1. Load: ?- [shobies_existential_commitment].
- * 2. Multi-perspective: ?- constraint_indexing:multi_index_report(shobies_existential_commitment).
+ * TO USE THIS CONSTRAINT:
+ * 
+ * 1. Load into main system:
+ *    ?- [constraints/shobies_existential_commitment].
+ * 
+ * 2. Run multi-perspective analysis:
+ *    ?- constraint_indexing:multi_index_report(shobies_existential_commitment).
+ * 
+ * 3. Run tests:
+ *    ?- run_tests(shobies_existential_commitment_tests).
+ * 
+ * 4. Generate pedagogical report:
+ *    ?- pedagogical_report(shobies_existential_commitment).
+ * 
+ * 5. Compare with other constraints:
+ *    ?- compare_constraints(shobies_existential_commitment, [other_id]).
  */
 
 /* ==========================================================================

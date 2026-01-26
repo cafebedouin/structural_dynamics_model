@@ -20,14 +20,14 @@ constraint_metric('the_uniformity_principle', snap_back_potential, 0.0).
 constraint_metric('the_uniformity_principle', extractiveness, 0.05).
 
 % NOOSE: High suppression/extractiveness trap.
-constraint_claim('the_inductive_circularity_trap', noose).
+constraint_claim('the_inductive_circularity_trap', snare).
 constraint_metric('the_inductive_circularity_trap', intensity, 0.85).
 constraint_metric('the_inductive_circularity_trap', suppression_requirement, 0.75).
 constraint_metric('the_inductive_circularity_trap', snap_back_potential, 0.30).
 constraint_metric('the_inductive_circularity_trap', extractiveness, 0.90).
 
 % ZOMBIE: Persistent arational instinct.
-constraint_claim('custom_and_habit', zombie).
+constraint_claim('custom_and_habit', piton).
 constraint_metric('custom_and_habit', intensity, 0.75).
 constraint_metric('custom_and_habit', suppression_requirement, 0.20).
 constraint_metric('custom_and_habit', snap_back_potential, 0.10).

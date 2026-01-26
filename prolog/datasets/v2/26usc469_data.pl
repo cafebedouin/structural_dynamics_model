@@ -32,7 +32,7 @@ omega_variable(omega_e_audit_trail, empirical, 'Verifiable log of taxpayer hours
 
 % PASSIVE LOSS LIMITATION: NOOSE (ext >= 0.66, supp >= 0.46)
 % High extraction of liquidity/utility; high suppression of tax-benefit realization.
-constraint_claim(passive_loss_limitation, noose).
+constraint_claim(passive_loss_limitation, snare).
 constraint_metric(passive_loss_limitation, extractiveness, 0.88).
 constraint_metric(passive_loss_limitation, suppression_requirement, 0.75).
 

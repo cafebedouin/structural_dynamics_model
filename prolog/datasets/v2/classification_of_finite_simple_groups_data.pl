@@ -41,7 +41,7 @@ constraint_metric(local_subgroup_friction, snap_back_potential, 0.40).
 constraint_metric(local_subgroup_friction, extractiveness, 0.52).
 
 % NOOSE: Uniqueness Theorem Verification (The 10,000+ page complexity wall)
-constraint_claim(proof_volume_noose, noose).
+constraint_claim(proof_volume_noose, snare).
 constraint_metric(proof_volume_noose, intensity, 0.98).
 constraint_metric(proof_volume_noose, suppression_requirement, 0.90).
 constraint_metric(proof_volume_noose, snap_back_potential, 0.95).

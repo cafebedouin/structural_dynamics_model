@@ -36,12 +36,12 @@
  * static, crushing weight of the past—manifesting as personal debt, 
  * institutional antisemitism, and the rote repetition of schoolroom lessons.
  * * KEY AGENTS:
- * - Stephen Dedalus: Individual moderate navigating a "Noose" of historical 
+ * - Stephen Dedalus: Individual moderate navigating a "Snare" of historical 
  * and financial debt.
  * - Mr. Deasy: Institutional representative for whom history is a "Mountain" 
  * moving toward a divine goal.
  * - Cyril Sargent: Individual powerless agent, a student "failing" to grasp 
- * the repetition, trapped in the "Noose" of the present.
+ * the repetition, trapped in the "Snare" of the present.
  */
 
 /* ==========================================================================
@@ -50,7 +50,7 @@
 
 % Required for [STEP 1] and [STEP 2] of the DR-Audit Suite
 narrative_ontology:interval(nestor_afternoon, 0, 10).
-narrative_ontology:constraint_claim(history_nightmare_1904, noose).
+narrative_ontology:constraint_claim(history_nightmare_1904, snare).
 
 % Metrics: Extractiveness (0.7 - Debt and exclusion) and Suppression (0.7 - High)
 domain_priors:base_extractiveness(history_nightmare_1904, 0.7).
@@ -78,29 +78,29 @@ constraint_victim(history_nightmare_1904, the_powerless_student).
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 1: STEPHEN DEDALUS - Noose
+   PERSPECTIVE 1: STEPHEN DEDALUS - Snare
    --------------------------------------------------------------------------
-   WHY: For Stephen, history is a "Noose"—a series of "ousted possibilities" 
+   WHY: For Stephen, history is a "Snare"—a series of "ousted possibilities" 
    that have been "branded" and "fettered" by time, extracting his freedom 
    to act and saddling him with "agenbite of inwit".
    -------------------------------------------------------------------------- */
 constraint_indexing:constraint_classification(
     history_nightmare_1904,
-    noose,
+    snare,
     context(agent_power(individual_moderate), time_horizon(biographical), exit_options(trapped), spatial_scope(local))
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 2: CYRIL SARGENT - Noose
+   PERSPECTIVE 2: CYRIL SARGENT - Snare
    --------------------------------------------------------------------------
    WHO: individual_powerless - "Ugly and futile... a snail's bed".
    WHY: From the perspective of the struggling student, the educational and 
-   historical order is an inescapable "Noose" of failure and repetition 
+   historical order is an inescapable "Snare" of failure and repetition 
    without any coordination benefit.
    -------------------------------------------------------------------------- */
 constraint_indexing:constraint_classification(
     history_nightmare_1904,
-    noose,
+    snare,
     context(agent_power(individual_powerless), time_horizon(immediate), exit_options(constrained), spatial_scope(local))
 ) :- !.
 
@@ -127,7 +127,7 @@ constraint_indexing:constraint_classification(
 test(multi_perspective_nestor) :-
     constraint_indexing:constraint_classification(history_nightmare_1904, T1, context(agent_power(individual_moderate), _, _, _)),
     constraint_indexing:constraint_classification(history_nightmare_1904, T2, context(agent_power(institutional), _, _, _)),
-    T1 = noose, T2 = mountain.
+    T1 = snare, T2 = mountain.
 
 test(extractiveness_debt_check) :-
     % Systems involving significant personal debt should score high
@@ -144,7 +144,7 @@ test(extractiveness_debt_check) :-
  * LLM GENERATION NOTES:
  * This refactor eliminates Global Repair by hardening the metrics. The 
  * audit can now cleanly detect the "False Mountain" of Deasy's teleology, 
- * which Stephen correctly identifies as a 'Nightmare' (Noose).
+ * which Stephen correctly identifies as a 'Nightmare' (Snare).
  */
 
 omega_variable(
@@ -152,7 +152,7 @@ omega_variable(
     "Is history moving toward a 'goal' (God) or is it a recursive loop of 
     ruin?",
     resolution_mechanism("Analysis of the 'livid final flame' vision vs the school gate reality"),
-    impact("If goal: Mountain. If ruin: Noose."),
+    impact("If goal: Mountain. If ruin: Snare."),
     confidence_without_resolution(medium)
 ).
 
@@ -203,4 +203,4 @@ domain_priors:suppression_score(dual_masters_dublin_1904, 0.3).
 % --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
 constraint_indexing:constraint_classification(ulysses_chp02, mountain, agent_power(analytical)).
 constraint_indexing:constraint_classification(ulysses_chp02, rope, agent_power(institutional)).
-constraint_indexing:constraint_classification(ulysses_chp02, noose, agent_power(individual_powerless)).
+constraint_indexing:constraint_classification(ulysses_chp02, snare, agent_power(individual_powerless)).

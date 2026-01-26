@@ -20,14 +20,14 @@ determine_status(_, mountain, _, _, fantasy,
     ['Recommendation attempts to modify a natural constraint (Mountain).']).
 
 % Fixed: Uses C to check load-bearing status
-determine_status(C, noose, _, _, blocked, 
-    ['CRITICAL: Load-bearing Noose removal attempted without Scaffold.']) :-
+determine_status(C, snare, _, _, blocked, 
+    ['CRITICAL: Load-bearing Snare removal attempted without Scaffold.']) :-
     is_load_bearing(C),
     \+ narrative_ontology:entity(_, scaffold).
 
 determine_status(_, Type, viable, [], viable, 
     ['No structural or political vetoes detected.']) :-
-    member(Type, [rope, noose, zombie]).
+    member(Type, [rope, snare, piton]).
 
 determine_status(_, tangled_rope, _, _, aspirational, 
     ['System is Tangled: Extraction is rising. Coordination remains, but Reform is required.']).
@@ -41,7 +41,7 @@ determine_status(_, _, blocked_by_veto, Vetoes, blocked, [Msg]) :-
 
 % Helper
 is_load_bearing(C) :- 
-    drl_core:dr_type(C, noose),
+    drl_core:dr_type(C, snare),
     v3_1_config:param(noose_load_bearing_threshold, T),
     narrative_ontology:constraint_metric(C, extractiveness, X), 
     X > T.

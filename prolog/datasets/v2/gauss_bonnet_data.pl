@@ -41,8 +41,8 @@ constraint_metric(boundary_geodesic_friction, suppression_requirement, 0.35).
 constraint_metric(boundary_geodesic_friction, snap_back_potential, 0.40).
 constraint_metric(boundary_geodesic_friction, extractiveness, 0.52).
 
-% Noose: Dimensional Generalization Limit
-constraint_claim(higher_dimensional_extension_noose, noose).
+% Snare: Dimensional Generalization Limit
+constraint_claim(higher_dimensional_extension_noose, snare).
 constraint_metric(higher_dimensional_extension_noose, intensity, 0.95).
 constraint_metric(higher_dimensional_extension_noose, suppression_requirement, 0.88).
 constraint_metric(higher_dimensional_extension_noose, snap_back_potential, 0.90).

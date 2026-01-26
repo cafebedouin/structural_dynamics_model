@@ -22,7 +22,7 @@ constraint_claim(novelty_barrier, mountain). % Unprecedented nature of mRNA cate
 constraint_metric(novelty_barrier, intensity, 0.88).
 constraint_metric(novelty_barrier, suppression_requirement, 0.92).
 
-constraint_claim(capital_noose, noose). % High burn rate requires extraction of public capital
+constraint_claim(capital_noose, snare). % High burn rate requires extraction of public capital
 constraint_metric(capital_noose, extractiveness, 0.78). % R&D spend 410M vs zero product revenue
 constraint_metric(capital_noose, suppression_requirement, 0.55).
 

@@ -46,7 +46,7 @@
  * For a population in a stable environment ($r < 3$), the map is a "Mountain" 
  * of natural law leading to equilibrium. In management, it is a "Rope" for 
  * predicting sustainable yields. However, as $r$ enters the chaotic regime 
- * ($r > 3.57$), the "Mountain" becomes a "Noose," extracting all predictive 
+ * ($r > 3.57$), the "Mountain" becomes a "Snare," extracting all predictive 
  * certainty and "strangling" the observer with sensitive dependence on 
  * initial conditions.
  */
@@ -141,7 +141,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE CHAOTIC REGIME OBSERVER - Noose
+   PERSPECTIVE 3: THE CHAOTIC REGIME OBSERVER - Snare
    --------------------------------------------------------------------------
    WHO: individual_powerless - Bound by the "Butterfly Effect" of the map.
    WHEN: biographical - Attempting to predict outcomes over a long period.
@@ -149,7 +149,7 @@ constraint_indexing:constraint_classification(
    SCOPE: global - The mathematical limit of all such iterative systems.
    
    WHY THIS CLASSIFICATION:
-   In the chaotic region ($r = 3.9$), the map is a "Noose." It "strangles" 
+   In the chaotic region ($r = 3.9$), the map is a "Snare." It "strangles" 
    the ability to plan, extracting enormous resources for data collection 
    that ultimately fails to provide more than a few steps of foresight.
    -------------------------------------------------------------------------- */
@@ -158,7 +158,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     logistic_map_dynamics,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(biographical),
@@ -185,8 +185,8 @@ test(bifurcation_fate_variance) :-
     Type2 = rope.
 
 test(chaos_extraction_penalty) :-
-    % Long-term observer (Powerless/Constrained) in Chaos sees it as a Noose.
-    constraint_indexing:constraint_classification(logistic_map_dynamics, noose, context(individual_powerless, biographical, constrained, global)).
+    % Long-term observer (Powerless/Constrained) in Chaos sees it as a Snare.
+    constraint_indexing:constraint_classification(logistic_map_dynamics, snare, context(individual_powerless, biographical, constrained, global)).
 
 test(natural_emergence) :-
     domain_priors:emerges_naturally(logistic_map_dynamics).
@@ -220,7 +220,7 @@ omega_variable(
     precision_decay_rate,
     "How many iterates $n$ does it take for double-precision floating point to lose all physical meaning at $r=4$?",
     resolution_mechanism("Numerical audit of divergence between $x_n$ and $x_n + \epsilon$ in 64-bit hardware."),
-    impact("If $n < 50$: The 'Mountain' is a 'Noose' for all digital simulation. If $n > 500$: It is a Rope."),
+    impact("If $n < 50$: The 'Mountain' is a 'Snare' for all digital simulation. If $n > 500$: It is a Rope."),
     confidence_without_resolution(high)
 ).
 
@@ -240,7 +240,7 @@ omega_variable(
  * or distinct generations) are the true "Rope" for complex biology.
  * * CONCLUSION:
  * The shift from continuous to discrete modeling turned a "Stable Rope" into 
- * a "Chaotic Mountain/Noose."
+ * a "Chaotic Mountain/Snare."
  */
 
 /* ==========================================================================

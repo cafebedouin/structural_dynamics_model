@@ -23,12 +23,12 @@ event(ev04_brigade_surrender, final_verification, 95, [actor(brigade_2506), targ
 constraint_claim(geographic_tactical_isolation, mountain).
 constraint_metric(geographic_tactical_isolation, accessibility_collapse, 0.95).
 
-% Noose: The doctrine of Plausible Deniability. It constricted operational options (air support) until failure was inevitable.
-constraint_claim(plausible_deniability_policy, noose).
+% Snare: The doctrine of Plausible Deniability. It constricted operational options (air support) until failure was inevitable.
+constraint_claim(plausible_deniability_policy, snare).
 constraint_metric(plausible_deniability_policy, stakes_inflation, 0.90).
 
-% Zombie: The assumption of a Spontaneous Popular Uprising. A dead strategic concept that continued to drive the invasion plan.
-constraint_claim(internal_uprising_myth, zombie).
+% Piton: The assumption of a Spontaneous Popular Uprising. A dead strategic concept that continued to drive the invasion plan.
+constraint_claim(internal_uprising_myth, piton).
 constraint_metric(internal_uprising_myth, suppression, 0.85).
 
 % Rope: Covert Logistic Dependency. Ties the agency of the Brigade directly to US-controlled supply lines.

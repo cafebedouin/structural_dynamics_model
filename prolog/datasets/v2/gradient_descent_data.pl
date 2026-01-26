@@ -40,8 +40,8 @@ constraint_metric(path_oscillation_friction, suppression_requirement, 0.35).
 constraint_metric(path_oscillation_friction, snap_back_potential, 0.40).
 constraint_metric(path_oscillation_friction, extractiveness, 0.52).
 
-% Noose: Vanishing gradients in deep architectures create a terminal obstruction.
-constraint_claim(gradient_vanishing_noose, noose).
+% Snare: Vanishing gradients in deep architectures create a terminal obstruction.
+constraint_claim(gradient_vanishing_noose, snare).
 constraint_metric(gradient_vanishing_noose, intensity, 0.96).
 constraint_metric(gradient_vanishing_noose, suppression_requirement, 0.88).
 constraint_metric(gradient_vanishing_noose, snap_back_potential, 0.92).

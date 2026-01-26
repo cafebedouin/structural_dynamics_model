@@ -41,14 +41,14 @@
  * - The Model Theorist (Institutional): An agent using non-standard structures 
  * as a "Rope" to explore independence and prove the limits of first-order logic.
  * - The Computability Theorist (Analytical/Victim): An observer for whom these 
- * models are a "Noose," as Tennenbaum's Theorem proves they are fundamentally 
+ * models are a "Snare," as Tennenbaum's Theorem proves they are fundamentally 
  * non-computable, "strangling" the dream of a recursive transfinite arithmetic.
  * * NARRATIVE ARC:
  * These models represent the "Mountain" of logical incompleteness; because 
  * first-order logic cannot pin down a unique model (Compactness Theorem), 
  * nonstandard realities are inevitable. In non-standard analysis, they provide 
  * a "Rope" for simplifying calculus with infinitesimals. However, for those 
- * seeking a computable foundation, the "Noose" of Tennenbaum's Theorem 
+ * seeking a computable foundation, the "Snare" of Tennenbaum's Theorem 
  * extracts the possibility of an algorithmic implementation, "choking" the 
  * utility of the transfinite for digital systems.
  */
@@ -148,7 +148,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE DIGITAL FOUNDATIONALIST - Noose
+   PERSPECTIVE 3: THE DIGITAL FOUNDATIONALIST - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_moderate - Has the tools to build systems but bound by Tennenbaum's limit.
@@ -158,7 +158,7 @@ constraint_indexing:constraint_classification(
    
    WHY THIS CLASSIFICATION:
    For those seeking a recursive transfinite arithmetic, these models are a 
-   "Noose." Tennenbaum's Theorem "strangles" the possibility of a computable 
+   "Snare." Tennenbaum's Theorem "strangles" the possibility of a computable 
    implementation of addition and multiplication in any nonstandard model. 
    It extracts the "computational utility" (extraction) of the transfinite, 
    "choking" the hope for a digital "Standard of Truth" that goes beyond $\mathbb{N}$.
@@ -168,7 +168,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     nonstandard_arithmetic_models,
-    noose,
+    snare,
     context(
         agent_power(individual_moderate),
         time_horizon(civilizational),
@@ -194,8 +194,8 @@ test(multi_perspective_variance) :-
     Type1 \= Type2.
 
 test(computability_noose_insight) :-
-    % Demonstrates that the Noose classification is triggered by Tennenbaum's impact
-    constraint_indexing:constraint_classification(nonstandard_arithmetic_models, noose, context(individual_moderate, civilizational, constrained, global)).
+    % Demonstrates that the Snare classification is triggered by Tennenbaum's impact
+    constraint_indexing:constraint_classification(nonstandard_arithmetic_models, snare, context(individual_moderate, civilizational, constrained, global)).
 
 test(compactness_natural_emergence) :-
     domain_priors:emerges_naturally(nonstandard_arithmetic_models).
@@ -216,12 +216,12 @@ test(compactness_natural_emergence) :-
  * number. This creates a permanent "tax" of ontological ambiguity.
  * * 2. PERSPECTIVE SELECTION:
  * Chose the Nonstandard Integer (Subject), the Analyst (User of the Rope), 
- * and the Foundationalist (Victim of the Noose) to show how 
+ * and the Foundationalist (Victim of the Snare) to show how 
  * "discovery" leads to "strangulation" of previous hopes.
  * * 3. CLASSIFICATION RATIONALE:
  * The Integer is a "Mountain" because it exists by logical necessity 
  * regardless of human desire. The Analyst uses this necessity as a 
- * "Rope" (tool). The Digital Foundationalist hit the "Noose" because 
+ * "Rope" (tool). The Digital Foundationalist hit the "Snare" because 
  * the non-recursive nature of these models makes them useless for 
  * automated reasoning.
  * * 4. AMBIGUITIES:
@@ -235,7 +235,7 @@ omega_variable(
     first_order_primacy,
     "Is first-order logic the fundamental 'Mountain' of thought, or just a 'Scaffold' that hides higher-order categoricity?",
     resolution_mechanism("Investigation into the physical or cognitive 'Ropes' that might allow us to perceive second-order categoricity directly."),
-    impact("If First-Order: Nonstandard models are a permanent Mountain. If Second-Order: They are an optional Noose."),
+    impact("If First-Order: Nonstandard models are a permanent Mountain. If Second-Order: They are an optional Snare."),
     confidence_without_resolution(medium)
 ).
 
@@ -248,12 +248,12 @@ omega_variable(
  * * ALTERNATIVE 1: Second-Order Peano Arithmetic
  * Viability: Second-order PA is "Categorical"—it has only one model ($\mathbb{N}$).
  * Suppression: Actively suppressed by the "Incompleteness" of second-order 
- * logic, which fails to have a complete proof system (making it a "Noose" 
+ * logic, which fails to have a complete proof system (making it a "Snare" 
  * for those who need proofs).
  * * ALTERNATIVE 2: Weak Sub-systems of Arithmetic (e.g. Robinson's Q)
  * Viability: Simpler systems that allow even more non-standard variety.
  * * CONCLUSION:
- * The existence of Second-Order Categoricity proves that the "Noose" of 
+ * The existence of Second-Order Categoricity proves that the "Snare" of 
  * nonstandard models is a price we pay for the "Rope" of first-order 
  * completeness (Gödel's Completeness Theorem).
  */

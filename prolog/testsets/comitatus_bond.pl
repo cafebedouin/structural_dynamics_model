@@ -39,7 +39,7 @@
  * - [cite_start]Hrothgar: The "Ring-giver," an institutional figure who maintains the bond through generosity. [cite: 1]
  * - [cite_start]Beowulf: The idealized Thane, whose power is moderate but grows to institutional as a king. [cite: 1]
  * - [cite_start]Wiglaf: The loyal youth who illustrates the bond's binding nature during Beowulf's final fight. [cite: 1]
- * - [cite_start]The Cowardly Thanes: Those who flee, illustrating the "Noose" of social exile. [cite: 1]
+ * - [cite_start]The Cowardly Thanes: Those who flee, illustrating the "Snare" of social exile. [cite: 1]
  * * NARRATIVE ARC:
  * The poem opens with the establishment of Hrothgar's hall, Heorot, the physical manifestation 
  * of the comitatus. The constraint drives Beowulf's journey to help Hrothgar (repaying a 
@@ -147,7 +147,7 @@ constraint_indexing:constraint_classification(
     !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE EXILED THANE - Noose
+   PERSPECTIVE 3: THE EXILED THANE - Snare
    --------------------------------------------------------------------------
    
    [cite_start]WHO: individual_powerless - The lordless man. [cite: 1]
@@ -157,7 +157,7 @@ constraint_indexing:constraint_classification(
    
    WHY THIS CLASSIFICATION:
    For the one who breaks the code or loses his lord, the comitatus becomes 
-   a "Noose." It is a coercive system that now chokes his existence, as 
+   a "Snare." It is a coercive system that now chokes his existence, as 
    [cite_start]everyone else is bound by the "Rope" he has lost. [cite: 1]
    
    NARRATIVE EVIDENCE:
@@ -167,7 +167,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     comitatus_bond,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -193,8 +193,8 @@ test(multi_perspective_variance) :-
     Type1 \= Type2.
 
 test(exile_as_noose) :-
-    % Verify that for a victim (the coward), the classification is Noose
-    constraint_indexing:constraint_classification(comitatus_bond, noose, context(_, _, trapped, _, cowardly_thanes, _)).
+    % Verify that for a victim (the coward), the classification is Snare
+    constraint_indexing:constraint_classification(comitatus_bond, snare, context(_, _, trapped, _, cowardly_thanes, _)).
 
 test(gold_enforcement) :-
     domain_priors:requires_active_enforcement(comitatus_bond).
@@ -211,7 +211,7 @@ test(gold_enforcement) :-
  * * KEY DECISIONS:
  * 1. CLASSIFICATION: The Comitatus code is the ultimate "Rope" for the 
  * survival of the tribe, but it is experienced as a "Mountain" (inevitability) 
- * [cite_start]by the noble and a "Noose" (shame/exile) by the failure. [cite: 1]
+ * [cite_start]by the noble and a "Snare" (shame/exile) by the failure. [cite: 1]
  * 2. EXTRACTIVENESS: Set at 0.4 because while it asks for the ultimate sacrifice 
  * (death), it offers the ultimate reward (immortality in song and lordly 
  * [cite_start]provision). [cite: 1]

@@ -32,7 +32,7 @@ measurement(m2, gs_protocol, suppression_requirement, 0, 0.20).
 measurement(m3, gs_protocol, extractiveness, 50, 0.45).
 measurement(m4, gs_protocol, suppression_requirement, 50, 0.40).
 
-% T=100: Final state - Full 'Noose' capture
+% T=100: Final state - Full 'Snare' capture
 measurement(m5, gs_protocol, extractiveness, 100, 0.75).
 measurement(m6, gs_protocol, suppression_requirement, 100, 0.70).
 

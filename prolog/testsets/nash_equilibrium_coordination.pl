@@ -41,14 +41,14 @@
  * - The Institutional Architect: An agent who uses the equilibrium as a 
  * "Rope" to design market rules or voting systems that stabilize desired goals.
  * - The Monopoly/Cartel: An institutional agent that treats the equilibrium 
- * as a "Noose" to extract value from consumers by ensuring no firm has an 
+ * as a "Snare" to extract value from consumers by ensuring no firm has an 
  * incentive to lower prices.
  * * NARRATIVE ARC:
  * The Nash Equilibrium is the "Mountain" of social interaction—an inescapable 
  * logic of stability. In healthy markets, it is a "Rope" for functional 
  * coordination (e.g., standardizing traffic laws). However, in systemic 
  * failures like poverty traps or price wars, the equilibrium acts as a 
- * "Noose," extracting the potential for progress (extraction) and strangling 
+ * "Snare," extracting the potential for progress (extraction) and strangling 
  * the possibility of collective escape.
  */
 
@@ -148,7 +148,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE POVERTY-TRAPPED COMMUNITY - Noose
+   PERSPECTIVE 3: THE POVERTY-TRAPPED COMMUNITY - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless - Bound by the high cost of defecting from the trap.
@@ -157,7 +157,7 @@ constraint_indexing:constraint_classification(
    SCOPE: regional - A specific neglected section of the system.
    
    WHY THIS CLASSIFICATION:
-   In a poverty trap, the equilibrium acts as a "Noose." It "strangles" 
+   In a poverty trap, the equilibrium acts as a "Snare." It "strangles" 
    opportunity because any individual attempt to escape (e.g., getting an 
    education) might be punished by immediate loss of local support networks. 
    It extracts potential (extraction) to maintain a stable but miserable state.
@@ -167,7 +167,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     nash_equilibrium_coordination,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(generational),
@@ -190,13 +190,13 @@ test(multi_perspective_variance) :-
     constraint_indexing:constraint_classification(nash_equilibrium_coordination, Type1, context(individual_powerless, immediate, trapped, local)),
     % Banker -> Rope
     constraint_indexing:constraint_classification(nash_equilibrium_coordination, Type2, context(institutional, biographical, mobile, national)),
-    % Poverty Trap -> Noose
+    % Poverty Trap -> Snare
     constraint_indexing:constraint_classification(nash_equilibrium_coordination, Type3, context(individual_powerless, generational, constrained, regional)),
     Type1 \= Type2,
     Type2 \= Type3.
 
 test(extraction_penalty) :-
-    % Demonstrates that the Noose classification extracts more value than the Rope.
+    % Demonstrates that the Snare classification extracts more value than the Rope.
     domain_priors:base_extractiveness(nash_equilibrium_coordination, E),
     E > 0.3.
 
@@ -232,7 +232,7 @@ omega_variable(
     equilibrium_selection_mechanism,
     "What determines which specific Nash Equilibrium a society settles into (Mountain) when multiple are available (Rope)?",
     resolution_mechanism("Study of historical focal points, cultural path-dependency, and initial conditions."),
-    impact("If Path-dependent: The Mountain is a 'Noose' of history. If Random: It is a Scaffold."),
+    impact("If Path-dependent: The Mountain is a 'Snare' of history. If Random: It is a Scaffold."),
     confidence_without_resolution(medium)
 ).
 
@@ -252,7 +252,7 @@ omega_variable(
  * allows for more "drift."
  * * CONCLUSION:
  * The existence of "Pareto Superior" states (Alternative 1) that we cannot 
- * reach is exactly what transforms a Nash "Mountain" into a "Noose" for 
+ * reach is exactly what transforms a Nash "Mountain" into a "Snare" for 
  * the people living within it.
  */
 

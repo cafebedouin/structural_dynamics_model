@@ -83,7 +83,7 @@ constraint_victim(bip_narrative_illusion, lived_experience). % Reduced to a "sli
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 1: THE WORLDLY PERSON (SUBORDINATE) - Noose
+   PERSPECTIVE 1: THE WORLDLY PERSON (SUBORDINATE) - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless (A "slave to Empire" unmoored from truth)
@@ -92,7 +92,7 @@ constraint_victim(bip_narrative_illusion, lived_experience). % Reduced to a "sli
    SCOPE: local (Immediate sensory stimulus and judgment)
    
    WHY THIS CLASSIFICATION:
-   For the worldly subject, the BIP is a "Noose." The standard of "doing and thinking" tightens around their 
+   For the worldly subject, the BIP is a "Snare." The standard of "doing and thinking" tightens around their 
    identity, extracting their "Being" and leaving them "chained to lesser versions" of themselves.
    
    NARRATIVE EVIDENCE:
@@ -104,7 +104,7 @@ constraint_victim(bip_narrative_illusion, lived_experience). % Reduced to a "sli
 
 constraint_indexing:constraint_classification(
     bip_narrative_illusion,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(biographical),
@@ -183,8 +183,8 @@ constraint_indexing:constraint_classification(
 :- begin_tests(bip_narrative_illusion_tests).
 
 test(multi_perspective_illusion) :-
-    % Worldly Subject (Powerless) sees Noose
-    constraint_indexing:constraint_classification(bip_narrative_illusion, noose, context(individual_powerless, _, _, _)),
+    % Worldly Subject (Powerless) sees Snare
+    constraint_indexing:constraint_classification(bip_narrative_illusion, snare, context(individual_powerless, _, _, _)),
     % Corporate Elite (Institutional) sees Rope
     constraint_indexing:constraint_classification(bip_narrative_illusion, rope, context(institutional, _, _, _)),
     % Spiritual Seeker (Analytical) sees Mountain
@@ -199,7 +199,7 @@ test(power_extractiveness_bip) :-
     Score1 > Score2.
 
 test(time_immutability_dream) :-
-    % In the immediate biographical timeframe, the dream feels real (Noose).
+    % In the immediate biographical timeframe, the dream feels real (Snare).
     % Over a civilizational analytical horizon, it is seen as unchangeable unreality (Mountain).
     constraint_indexing:effective_immutability(civilizational, analytical, mountain).
 
@@ -221,7 +221,7 @@ test(time_immutability_dream) :-
  * Reasoning: The system actively suppresses the "heart" in favor of "mind" (competence). 
  * It replaces "lived experience" with narrative fiction and sensory bombardment.
  * * 3. PERSPECTIVE SELECTION:
- * Contrast between the "Worldly Person" (Noose), the "Corporate Elite" (Rope), and the 
+ * Contrast between the "Worldly Person" (Snare), the "Corporate Elite" (Rope), and the 
  * "Spiritual Seeker" (Mountain) highlights the ontological trap of the BIP.
  * * 4. MANDATROPHY RESOLUTION:
  * Status: [RESOLVED MANDATROPHY]. The high extraction (0.85) for the subject is justified by the 
@@ -235,9 +235,9 @@ test(time_immutability_dream) :-
 omega_variable(
     bip_extraction_intent,
     "Is the sensory bombardment a byproduct of technological growth (Mountain) or an intentional strategy 
-     by the 'covert coven' (Noose)?",
+     by the 'covert coven' (Snare)?",
     resolution_mechanism("Audit of elite resource allocation toward behavior optimization vs. human well-being"),
-    impact("If necessity: Evolutionary Mountain. If choice: Mandatrophy Noose."),
+    impact("If necessity: Evolutionary Mountain. If choice: Mandatrophy Snare."),
     confidence_without_resolution(medium)
 ).
 
@@ -264,7 +264,7 @@ omega_variable(
  * Viability: Prioritizing "warmth" over "competence" as a metric for human judging.
  * Suppression: Shunted by the environment's demand for "doing and thinking".
  * * CONCLUSION:
- * The existence of the PTG and the "Good Heart" makes the current BIP a "Noose." Because these 
+ * The existence of the PTG and the "Good Heart" makes the current BIP a "Snare." Because these 
  * alternatives are visible but actively shunted by the "analytical understanding," the 
  * system remains predatory.
  */

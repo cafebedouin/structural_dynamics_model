@@ -46,7 +46,7 @@
  * The paradox acts as a hard boundary (Mountain) for the reach of sets. To 
  * maintain consistency, formal systems treat the "All-Ordinals" as a Proper 
  * Class (Rope), a coordination tool that allows use without membership. 
- * For those seeking a single unified "Set of All," the paradox is a Noose 
+ * For those seeking a single unified "Set of All," the paradox is a Snare 
  * that collapses their foundational system.
  */
 
@@ -148,7 +148,7 @@ constraint_indexing:constraint_classification(
    SCOPE: local - Immediate workspace.
    
    WHY THIS CLASSIFICATION:
-   For the naive actor, the paradox is a Noose. They attempt to use the 
+   For the naive actor, the paradox is a Snare. They attempt to use the 
    seemingly "free" rule of unrestricted comprehension (the ability to form 
    a set from any property). However, as they include more ordinals, the 
    paradoxical logic tightens until their entire foundational proof 
@@ -157,7 +157,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     burali_forti_paradox,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -179,7 +179,7 @@ test(multi_perspective_variance) :-
     T1 \= T2, T2 \= T3.
 
 test(power_semantic_extraction) :-
-    % Powerless naive actors suffer total extraction of proof validity (Noose).
+    % Powerless naive actors suffer total extraction of proof validity (Snare).
     % Institutional systems manage the extraction via Proper Classes (Rope).
     domain_priors:base_extractiveness(burali_forti_paradox, Score),
     Score >= 0.2.
@@ -206,7 +206,7 @@ test(time_immutability_scale) :-
  * Individual Powerless (The Naive Actor) were chosen to reflect the 
  * standard "Set vs Class" resolution in mathematics.
  * * 3. CLASSIFICATION RATIONALE:
- * Individual Powerless → Noose: Because naive comprehension leads 
+ * Individual Powerless → Snare: Because naive comprehension leads 
  * unavoidably to a "trap" where all statements become provable (Trivialism).
  * * 4. AMBIGUITIES:
  * - Resolved the "trap" by acknowledging that while one can exit ZFC 
@@ -220,7 +220,7 @@ test(time_immutability_scale) :-
 
 omega_variable(
     class_vs_set_metaphysics,
-    "Are 'Proper Classes' a real mathematical landscape (Mountain) or merely a linguistic scaffold (Rope) to avoid the Noose?",
+    "Are 'Proper Classes' a real mathematical landscape (Mountain) or merely a linguistic scaffold (Rope) to avoid the Snare?",
     resolution_mechanism("Development of a grand unified theory of categories vs sets"),
     impact("If Mountain: The hierarchy of size is a physical limit. If Rope: It's just a bug in our current notation."),
     confidence_without_resolution(medium)
@@ -262,4 +262,4 @@ omega_variable(
 % --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
 constraint_indexing:constraint_classification(burali_forte_paradox, mountain, agent_power(analytical)).
 constraint_indexing:constraint_classification(burali_forte_paradox, rope, agent_power(institutional)).
-constraint_indexing:constraint_classification(burali_forte_paradox, noose, agent_power(individual_powerless)).
+constraint_indexing:constraint_classification(burali_forte_paradox, snare, agent_power(individual_powerless)).

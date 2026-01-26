@@ -35,10 +35,10 @@ constraint_metric(bayesian_probability_shift, suppression_requirement, 0.40).
 constraint_metric(bayesian_probability_shift, snap_back_potential, 0.75).
 constraint_metric(bayesian_probability_shift, extractiveness, 0.60).
 
-% The Equivalence Fallacy (The Noose)
+% The Equivalence Fallacy (The Snare)
 % The false belief that the two remaining doors have a 50/50 chance. 
 % This "strangles" the rational choice and requires the 'host_knowledge_base' scaffold.
-constraint_claim(naive_fifty_fifty_heuristics, noose).
+constraint_claim(naive_fifty_fifty_heuristics, snare).
 constraint_metric(naive_fifty_fifty_heuristics, intensity, 0.95).
 constraint_metric(naive_fifty_fifty_heuristics, suppression_requirement, 0.88).
 constraint_metric(naive_fifty_fifty_heuristics, snap_back_potential, 0.10).
@@ -49,7 +49,7 @@ constraint_metric(naive_fifty_fifty_heuristics, extractiveness, 0.90).
 recommendation(rec_01, visualize_total_state_space_via_permutation_table).
 affects_constraint(rec_01, bayesian_probability_shift).
 
-% Noose (0.90 extractiveness) triggers Cut
+% Snare (0.90 extractiveness) triggers Cut
 % Utilizing 'host_knowledge_base' scaffold to account for the host's non-random action.
 recommendation(rec_02, abandon_naive_symmetry_in_favor_of_host_intent_analysis).
 affects_constraint(rec_02, naive_fifty_fifty_heuristics).

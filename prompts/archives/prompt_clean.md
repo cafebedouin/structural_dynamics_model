@@ -12,7 +12,7 @@ You will generate a Prolog data file for the domain described below. Your output
 entity(ID, Type). % Note: Use Type 'scaffold' for transitional supports.
 interval(ID, StartInt, EndInt). % MUST use integers. ONLY define the primary audit interval.
 event(ID, Kind, TimeInt, PropertiesList). % TimeInt MUST be an integer.
-constraint_claim(Name, Type). % Type ∈ {mountain, rope, tangled_rope, noose, zombie}.
+constraint_claim(Name, Type). % Type ∈ {mountain, rope, tangled_rope, snare, piton}.
 
 % KINETIC METRICS (THE PHYSICS GAUGE)
 % Metric ∈ {intensity, suppression_requirement, snap_back_potential, extractiveness}
@@ -33,22 +33,22 @@ measurement(TimeInt, [A, S, U, R]).
 
 ```
 
-* **Temporal:** Use **integers only** for time. Define exactly **one** primary interval to sync with the Scenario Manager.
-* **Omega:** Categorize every variable as **empirical** (data needed), **conceptual** (definition needed), or **preference** (value choice needed).
-* **Noose Removal:** If recommending the removal of a `noose`, you **MUST** declare a `type(scaffold)` entity.
-* **Veto Sync:** Ensure the `veto_actor(ID)` is identical to the `veto_exposed(ID, RecID)`.
+*   **Temporal:** Use **integers only** for time. Define exactly **one** primary interval to sync with the Scenario Manager.
+*   **Omega:** Categorize every variable as **empirical** (data needed), **conceptual** (definition needed), or **preference** (value choice needed).
+*   **Snare Removal:** If recommending the removal of a `snare`, you **MUST** declare a `type(scaffold)` entity.
+*   **Veto Sync:** Ensure the `veto_actor(ID)` is identical to the `veto_exposed(ID, RecID)`.
 
 ### **2. Mandatory Logic Rules (The Unbending Gauge)**
 
-* **Mountain (■C):**Set  `suppression_requirement`  `0.05` AND `snap_back_potential` = `0.0`.
-* **Noose (⊠C):** `extractiveness`  `0.66` AND `suppression_requirement`  `0.46`.
-* **Rope (⊞C):** `extractiveness`  `0.35` AND `suppression`  `0.15`.
-* **Tangled Rope (⊠T):** `extractiveness` between `0.36` and `0.65`.
+*   **Mountain (■C):**Set  `suppression_requirement`  `0.05` AND `snap_back_potential` = `0.0`.
+*   **Snare (⊠C):** `extractiveness`  `0.66` AND `suppression_requirement`  `0.46`.
+*   **Rope (⊞C):** `extractiveness`  `0.35` AND `suppression`  `0.15`.
+*   **Tangled Rope (⊠T):** `extractiveness` between `0.36` and `0.65`.
 
-* **Rule: Primary Interval Only**: To prevent recursive verification failures, define **only one** primary `interval/3` covering the full narrative scope. Do not define sub-intervals.
-* **Rule: Endpoint Measurements**: You **MUST** provide a `measurement/2` for both the `StartInt` and `EndInt` of your defined interval.
-* **Noose Verification (⊠C)**: To recommend removing a Noose, you **MUST** define an `entity(ID, scaffold)`.
-* **Omega Classification**: Categorize blockers as **Empirical** (data-driven), **Conceptual** (definitional), or **Preference** (value-driven).
+*   **Rule: Primary Interval Only**: To prevent recursive verification failures, define **only one** primary `interval/3` covering the full narrative scope. Do not define sub-intervals.
+*   **Rule: Endpoint Measurements**: You **MUST** provide a `measurement/2` for both the `StartInt` and `EndInt` of your defined interval.
+*   **Snare Verification (⊠C)**: To recommend removing a Snare, you **MUST** define an `entity(ID, scaffold)`.
+*   **Omega Classification**: Categorize blockers as **Empirical** (data-driven), **Conceptual** (definitional), or **Preference** (value-driven).
 
 ### **3. Required Output Order**
 

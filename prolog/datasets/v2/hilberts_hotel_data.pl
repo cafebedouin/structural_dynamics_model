@@ -34,10 +34,10 @@ constraint_metric(recursive_relocation, suppression_requirement, 0.20).
 constraint_metric(recursive_relocation, snap_back_potential, 0.50).
 constraint_metric(recursive_relocation, extractiveness, 0.40).
 
-% The Continuum Hypothesis Breach (The Noose)
+% The Continuum Hypothesis Breach (The Snare)
 % Attempting to fit a non-denumerable set (Real Numbers) into the hotel.
 % This "strangles" the system as no bijective mapping exists.
-constraint_claim(uncountable_saturation, noose).
+constraint_claim(uncountable_saturation, snare).
 constraint_metric(uncountable_saturation, intensity, 0.99).
 constraint_metric(uncountable_saturation, suppression_requirement, 0.95).
 constraint_metric(uncountable_saturation, snap_back_potential, 0.01).
@@ -48,7 +48,7 @@ constraint_metric(uncountable_saturation, extractiveness, 0.98).
 recommendation(rec_01, automation_of_infinite_shifting_protocols).
 affects_constraint(rec_01, recursive_relocation).
 
-% Noose (0.98 extractiveness) triggers Cut
+% Snare (0.98 extractiveness) triggers Cut
 % Requires the 'interim_hallway' scaffold to divert non-denumerable traffic.
 recommendation(rec_02, reject_uncountable_inputs_to_preserve_bijection).
 affects_constraint(rec_02, uncountable_saturation).

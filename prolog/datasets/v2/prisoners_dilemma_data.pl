@@ -40,7 +40,7 @@ constraint_metric(reputational_shadow_friction, snap_back_potential, 0.40).
 constraint_metric(reputational_shadow_friction, extractiveness, 0.52).
 
 % NOOSE: Suboptimal Nash Equilibrium
-constraint_claim(mutual_defection_trap, noose).
+constraint_claim(mutual_defection_trap, snare).
 constraint_metric(mutual_defection_trap, intensity, 0.90).
 constraint_metric(mutual_defection_trap, suppression_requirement, 0.80).
 constraint_metric(mutual_defection_trap, snap_back_potential, 0.85).

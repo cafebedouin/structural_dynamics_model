@@ -48,7 +48,7 @@
  * Predisposition functions as a "Mountain" of biological reality—a fixed 
  * sequence of base pairs. To the healthcare system, it is a "Rope" (a tool for 
  * personalized medicine). However, for the individual at risk of a terminal 
- * condition, it becomes a "Noose," as the genetic "destiny" extracts peace of 
+ * condition, it becomes a "Snare," as the genetic "destiny" extracts peace of 
  * mind and creates a trap of medical surveillance or uninsurability.
  */
 
@@ -152,7 +152,7 @@ constraint_indexing:constraint_classification(
     !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE HIGH-RISK INDIVIDUAL - Noose
+   PERSPECTIVE 3: THE HIGH-RISK INDIVIDUAL - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless - Subject to their own biology and insurance rules.
@@ -161,7 +161,7 @@ constraint_indexing:constraint_classification(
    SCOPE: local - Immediate life and family environment.
    
    WHY THIS CLASSIFICATION:
-   For the individual with a severe predisposition, the genetic code is a Noose. 
+   For the individual with a severe predisposition, the genetic code is a Snare. 
    The biological "debt" they were born with extracts their peace of mind and 
    financial security. As they age, the "likelihood" of disease tightens, 
    limiting their career choices (staying for insurance) and personal freedom.
@@ -169,7 +169,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     genetic_predisposition,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -188,10 +188,10 @@ constraint_indexing:constraint_classification(
 :- begin_tests(genetic_predisposition_tests).
 
 test(multi_perspective_variance) :-
-    % Analyst sees Mountain, Institutional sees Rope, Powerless sees Noose
+    % Analyst sees Mountain, Institutional sees Rope, Powerless sees Snare
     constraint_indexing:constraint_classification(genetic_predisposition, mountain, context(analytical, civilizational, trapped, global)),
     constraint_indexing:constraint_classification(genetic_predisposition, rope, context(institutional, biographical, arbitrage, national)),
-    constraint_indexing:constraint_classification(genetic_predisposition, noose, context(individual_powerless, immediate, constrained, local)).
+    constraint_indexing:constraint_classification(genetic_predisposition, snare, context(individual_powerless, immediate, constrained, local)).
 
 test(power_extractiveness_scaling) :-
     ContextPowerless = context(individual_powerless, immediate, constrained, local),
@@ -222,7 +222,7 @@ test(time_immutability) :-
  * The "blank slate" alternative is highly suppressed by modern diagnostics. 
  * Individuals are forced to view themselves as "pre-symptomatic" subjects.
  * * 3. PERSPECTIVE SELECTION:
- * The Researcher (Mountain), the Policy Maker (Rope), and the Patient (Noose) 
+ * The Researcher (Mountain), the Policy Maker (Rope), and the Patient (Snare) 
  * represent the three primary ways biological "truth" enters the social world.
  */
 
@@ -232,7 +232,7 @@ test(time_immutability) :-
 
 omega_variable(
     epigenetic_plasticity_limit,
-    "To what degree can environmental factors (Epigenetics) 'untie' the Noose 
+    "To what degree can environmental factors (Epigenetics) 'untie' the Snare 
     of genetic predisposition?",
     resolution_mechanism("Long-term mapping of gene-environment interactions 
     across diverse populations"),
@@ -249,13 +249,13 @@ omega_variable(
  * VIABLE ALTERNATIVES
  * * ALTERNATIVE 1: Universal Healthcare/Risk Pooling
  * Viability: High. It socializes the "biological debt" so the individual 
- * doesn't experience a financial Noose.
+ * doesn't experience a financial Snare.
  * Suppression: Varies by region; often suppressed by private insurance 
  * interests to maintain extraction of high premiums.
  * * CONCLUSION:
  * The presence of socializing alternatives (Universal Risk Pooling) that are 
  * suppressed in certain regimes confirms that Genetic Predisposition is often 
- * a Noose by social design, even if it is a Mountain by biological nature.
+ * a Snare by social design, even if it is a Mountain by biological nature.
  */
 
 /* ==========================================================================

@@ -25,7 +25,7 @@ omega_variable(omega_p_1, preference, risk_tolerance_for_unvalidated_amd_data).
 constraint_claim(mission_safety_standard, mountain).
 constraint_claim(software_interface_spec, rope).
 constraint_claim(developer_quality_process, tangled_rope).
-constraint_claim(unit_consistency_requirement, noose).
+constraint_claim(unit_consistency_requirement, snare).
 
 constraint_metric(mission_safety_standard, intensity, 0.9).
 constraint_metric(mission_safety_standard, suppression_requirement, 0.04).

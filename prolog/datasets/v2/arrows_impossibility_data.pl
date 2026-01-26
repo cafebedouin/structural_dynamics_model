@@ -35,7 +35,7 @@ constraint_metric(independence_of_irrelevant_alternatives, suppression_requireme
 constraint_metric(independence_of_irrelevant_alternatives, snap_back_potential, 0.55).
 constraint_metric(independence_of_irrelevant_alternatives, extractiveness, 0.60).
 
-constraint_claim(transitive_rationality, noose).
+constraint_claim(transitive_rationality, snare).
 constraint_metric(transitive_rationality, intensity, 0.90).
 constraint_metric(transitive_rationality, suppression_requirement, 0.55).
 constraint_metric(transitive_rationality, snap_back_potential, 0.85).

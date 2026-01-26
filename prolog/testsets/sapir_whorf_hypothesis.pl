@@ -39,13 +39,13 @@
  * - The Linguist (Analytical): Observes the "Mountain" of semantic categories and 
  * how they vary across cultures.
  * - The State/Propagandist (Institutional): Uses language as a "Rope" (coordination) 
- * or "Noose" (control) to shape public thought via Newspeak or framing.
+ * or "Snare" (control) to shape public thought via Newspeak or framing.
  * - The Monolingual Speaker (Individual Powerless): Trapped within their own 
  * language's concepts, experiencing them as inevitable reality.
  * * NARRATIVE ARC:
  * Language begins as a "Mountain"—the fundamental hardware of thought. 
  * For the diplomat, it is a "Rope" used to bridge differing worldviews. 
- * For the subject of a totalizing ideology, it becomes a "Noose," as the 
+ * For the subject of a totalizing ideology, it becomes a "Snare," as the 
  * removal of specific words (e.g., 'freedom') strangles the ability to 
  * conceptualize dissent.
  */
@@ -56,7 +56,7 @@
 
 % Required for structural anchor
 narrative_ontology:interval(sapir_whorf_interval, 0, 10).
-narrative_ontology:constraint_claim(sapir_whorf_hypothesis, noose).
+narrative_ontology:constraint_claim(sapir_whorf_hypothesis, snare).
 
 % Base extractiveness score (0.0-1.0)
 % Rationale: Moderate (0.5). Language extracts "unlabeled" thoughts. 
@@ -149,7 +149,7 @@ constraint_indexing:constraint_classification(
     !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE TOTALITARIAN SUBJECT - Noose
+   PERSPECTIVE 3: THE TOTALITARIAN SUBJECT - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless - Subject to the state's controlled vocabulary.
@@ -158,7 +158,7 @@ constraint_indexing:constraint_classification(
    SCOPE: national - The reach of the state's linguistic control.
    
    WHY THIS CLASSIFICATION:
-   For the subject in a Newspeak environment, language is a Noose. The state 
+   For the subject in a Newspeak environment, language is a Snare. The state 
    actively removes words and concepts to "strangle" the possibility of 
    heretical thought. The extraction of semantic range turns the primary tool 
    of thought into a literal trap for the mind.
@@ -166,7 +166,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     sapir_whorf_hypothesis,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -185,13 +185,13 @@ constraint_indexing:constraint_classification(
 :- begin_tests(sapir_whorf_hypothesis_tests).
 
 test(multi_perspective_variance) :-
-    % Analyst sees Mountain, Institutional sees Rope, Powerless sees Noose
+    % Analyst sees Mountain, Institutional sees Rope, Powerless sees Snare
     constraint_indexing:constraint_classification(sapir_whorf_hypothesis, mountain, context(analytical, civilizational, trapped, global)),
     constraint_indexing:constraint_classification(sapir_whorf_hypothesis, rope, context(institutional, biographical, arbitrage, continental)),
-    constraint_indexing:constraint_classification(sapir_whorf_hypothesis, noose, context(individual_powerless, immediate, trapped, national)).
+    constraint_indexing:constraint_classification(sapir_whorf_hypothesis, snare, context(individual_powerless, immediate, trapped, national)).
 
 test(power_extractiveness_cognition) :-
-    % Powerless subjects feel the total extraction of thought (Noose).
+    % Powerless subjects feel the total extraction of thought (Snare).
     % Institutional diplomats leverage the gap for coordination (Rope).
     ContextPowerless = context(individual_powerless, immediate, trapped, national),
     ContextPowerful = context(institutional, biographical, arbitrage, continental),
@@ -225,11 +225,11 @@ test(power_extractiveness_cognition) :-
 
 omega_variable(
     strong_vs_weak_determinism,
-    "Does language truly prevent thoughts (Mountain/Noose) or merely make 
+    "Does language truly prevent thoughts (Mountain/Snare) or merely make 
     some thoughts easier than others (Rope)?",
     resolution_mechanism("Long-term neuro-linguistic studies on speakers 
     of languages without specific numeric or spatial markers"),
-    impact("If Strong: Linguistic control is an inescapable Noose. If Weak: 
+    impact("If Strong: Linguistic control is an inescapable Snare. If Weak: 
     It is a Rope that can be untied through education."),
     confidence_without_resolution(medium)
 ).
@@ -247,7 +247,7 @@ omega_variable(
  * suppressing the idea of total conceptual diversity.
  * * CONCLUSION:
  * The existence of Universal Grammar as a "Mountain" underneath the 
- * linguistic "Rope" suggests that while our *lexicon* may be a Noose, 
+ * linguistic "Rope" suggests that while our *lexicon* may be a Snare, 
  * our *syntax* might be a shared global Mountain.
  */
 

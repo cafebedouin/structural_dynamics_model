@@ -35,7 +35,7 @@ constraint_metric(continuum_hypothesis_mapping, suppression_requirement, 0.38).
 constraint_metric(continuum_hypothesis_mapping, snap_back_potential, 0.45).
 constraint_metric(continuum_hypothesis_mapping, extractiveness, 0.60).
 
-constraint_claim(absolute_infinity_containment, noose).
+constraint_claim(absolute_infinity_containment, snare).
 constraint_metric(absolute_infinity_containment, intensity, 0.98).
 constraint_metric(absolute_infinity_containment, suppression_requirement, 0.90).
 constraint_metric(absolute_infinity_containment, snap_back_potential, 0.95).

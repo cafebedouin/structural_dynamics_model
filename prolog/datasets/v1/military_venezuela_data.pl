@@ -26,12 +26,12 @@ event(ev04_humanitarian_migration_peak, demographic_shift, 90, [actor(venezuelan
 constraint_claim(oil_dependency_trap, mountain).
 constraint_metric(oil_dependency_trap, accessibility_collapse, 0.95).
 
-% Noose: International Financial Sanctions. A closing circle that traps the state's ability to settle accounts.
-constraint_claim(financial_sanctions_noose, noose).
+% Snare: International Financial Sanctions. A closing circle that traps the state's ability to settle accounts.
+constraint_claim(financial_sanctions_noose, snare).
 constraint_metric(financial_sanctions_noose, stakes_inflation, 0.92).
 
-% Zombie: Absolute Westphalian Sovereignty. A 'dead' principle cited by the state while economic control is externalized.
-constraint_claim(zombie_sovereignty, zombie).
+% Piton: Absolute Westphalian Sovereignty. A 'dead' principle cited by the state while economic control is externalized.
+constraint_claim(zombie_sovereignty, piton).
 constraint_metric(zombie_sovereignty, suppression, 0.85).
 
 % --- 4. Recommendations & Veto Structure ---

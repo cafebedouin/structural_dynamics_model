@@ -24,12 +24,12 @@ event(ev04_treaty_of_paris, final_verification, 1783, [result(independence), tar
 constraint_claim(atlantic_logistical_limit, mountain).
 constraint_metric(atlantic_logistical_limit, accessibility_collapse, 0.98).
 
-% Noose: The Coercive Acts (Intolerable Acts). A narrowing set of legal and economic restrictions intended to crush colonial agency.
-constraint_claim(coercive_acts_noose, noose).
+% Snare: The Coercive Acts (Intolerable Acts). A narrowing set of legal and economic restrictions intended to crush colonial agency.
+constraint_claim(coercive_acts_noose, snare).
 constraint_metric(coercive_acts_noose, stakes_inflation, 0.95).
 
-% Zombie: Virtual Representation. The dead concept that colonists were represented in Parliament 'in spirit,' used to maintain regulatory control.
-constraint_claim(virtual_representation_myth, zombie).
+% Piton: Virtual Representation. The dead concept that colonists were represented in Parliament 'in spirit,' used to maintain regulatory control.
+constraint_claim(virtual_representation_myth, piton).
 constraint_metric(virtual_representation_myth, suppression, 0.85).
 
 % Rope: Proclamation of 1763. Ties colonial expansion directly to the Appalachian boundary, restricting geographical agency.

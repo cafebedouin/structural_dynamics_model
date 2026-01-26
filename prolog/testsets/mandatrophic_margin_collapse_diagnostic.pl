@@ -42,12 +42,12 @@
  * - The Mandator (KPI Architect): Institutional; views all non-active resources 
  * as "excess" to be optimized for the goal.
  * - The Operator (Maintenance Sensor): Individual powerless; the engineer or 
- * technician who perceives the tightening Noose as the "slack" disappears.
+ * technician who perceives the tightening Snare as the "slack" disappears.
  * - The Secondary Victim: Individual powerless; the passenger, citizen, or 
  * consumer who experiences the sudden transition from "Rope" to "Mountain."
  * * NARRATIVE ARC:
  * The process is initially perceived as a Rope (optimizing a stagnant system). 
- * As the extraction continues, the system becomes a Noose, where every 
+ * As the extraction continues, the system becomes a Snare, where every 
  * operational choice is "choked" by the lack of redundancy. Finally, the 
  * system hits a Mountain (a physical crash or grid collapse) where the 
  * mandate can no longer negotiate with material reality.
@@ -59,7 +59,7 @@
 
 % Structural Anchor for index extraction
 narrative_ontology:interval(mandatrophy_lifecycle, 0, 10).
-narrative_ontology:constraint_claim(mandatrophy_systemic_collapse, noose).
+narrative_ontology:constraint_claim(mandatrophy_systemic_collapse, snare).
 
 % Base extractiveness score (0.0-1.0)
 % Rationale: 0.9. Extreme; Mandatrophy extracts the *future* survival capacity 
@@ -122,7 +122,7 @@ constraint_indexing:constraint_classification(
     !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE OPERATOR / ENGINEER - Noose
+   PERSPECTIVE 2: THE OPERATOR / ENGINEER - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless - Bound by the mandate; must operate the 
@@ -133,7 +133,7 @@ constraint_indexing:constraint_classification(
    SCOPE: local - Immediate sensor range and physical environment.
    
    WHY THIS CLASSIFICATION:
-   The operator sees the Noose. They feel the system "tightening"—each time 
+   The operator sees the Snare. They feel the system "tightening"—each time 
    a redundancy is removed, their degrees of freedom decrease. The mandate 
    is a coercive force that chokes their ability to maintain safety.
    -------------------------------------------------------------------------- */
@@ -142,7 +142,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     mandatrophy_systemic_collapse,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -190,7 +190,7 @@ constraint_indexing:constraint_classification(
 
 test(brittle_failure_signature) :-
     % Mandatrophy systems appear as Ropes to managers but have high 
-    % extractiveness (Noose) for operators.
+    % extractiveness (Snare) for operators.
     constraint_indexing:constraint_classification(mandatrophy_systemic_collapse, rope, context(institutional, _, _, _)),
     domain_priors:base_extractiveness(mandatrophy_systemic_collapse, E),
     E > 0.8.
@@ -221,10 +221,10 @@ test(diagnostic_blindness) :-
 omega_variable(
     the_audit_paradox,
     "Do 'Safety Audits' in a mandatrophic system identify the loss of 
-     margin (Rope) or merely validate the mandate (Noose)?",
+     margin (Rope) or merely validate the mandate (Snare)?",
     resolution_mechanism("Comparative analysis of Boeing self-certification 
     logs vs. physical failure post-mortems"),
-    impact("If they validate mandate: The audit is a Noose component. 
+    impact("If they validate mandate: The audit is a Snare component. 
             If they find margin-loss: It's an external Scaffold."),
     confidence_without_resolution(low)
 ).
@@ -261,4 +261,4 @@ omega_variable(
 % --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
 constraint_indexing:constraint_classification(mandatrophic_margin_collapse_diagnostic, mountain, agent_power(analytical)).
 constraint_indexing:constraint_classification(mandatrophic_margin_collapse_diagnostic, rope, agent_power(institutional)).
-constraint_indexing:constraint_classification(mandatrophic_margin_collapse_diagnostic, noose, agent_power(individual_powerless)).
+constraint_indexing:constraint_classification(mandatrophic_margin_collapse_diagnostic, snare, agent_power(individual_powerless)).

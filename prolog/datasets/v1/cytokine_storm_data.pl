@@ -22,10 +22,10 @@ event('ev04_systemic_collapse', 'finality', 98, [state('organ_failure'), result(
 constraint_claim('apoptosis_threshold_limit', 'mountain').
 constraint_metric('apoptosis_threshold_limit', 'accessibility_collapse', 1.0) .
 
-constraint_claim('replication_velocity_noose', 'noose').
+constraint_claim('replication_velocity_noose', 'snare').
 constraint_metric('replication_velocity_noose', 'stakes_inflation', 0.98) .
 
-constraint_claim('innate_response_bias', 'zombie').
+constraint_claim('innate_response_bias', 'piton').
 constraint_metric('innate_response_bias', 'suppression', 0.85) .
 
 constraint_claim('receptor_binding_tether', 'rope').

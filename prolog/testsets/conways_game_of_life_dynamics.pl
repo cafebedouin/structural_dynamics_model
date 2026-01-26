@@ -47,7 +47,7 @@
  * is planted, the future is fixed by the B3/S23 rules. In computational 
  * research, it is a "Rope" used to prove Turing completeness in simple 
  * systems. However, for an observer seeking a shortcut to the end-state, the 
- * deterministic logic acts as a "Noose," extracting the possibility of 
+ * deterministic logic acts as a "Snare," extracting the possibility of 
  * analytic prediction and forcing the "tax" of step-by-step simulation.
  */
 
@@ -149,7 +149,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE ANALYTIC PREDICTOR - Noose
+   PERSPECTIVE 3: THE ANALYTIC PREDICTOR - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless - Bound by the "Undecidability" of the end-state.
@@ -159,7 +159,7 @@ constraint_indexing:constraint_classification(
    
    WHY THIS CLASSIFICATION:
    For someone seeking to know the future without paying the "tax" of time, 
-   the rules are a "Noose." Because the game is Turing-complete, it "strangles" 
+   the rules are a "Snare." Because the game is Turing-complete, it "strangles" 
    general analytic solutions. It extracts computational cycles (extraction) 
    by making the "Long Run" unpredictable without manual iteration.
    -------------------------------------------------------------------------- */
@@ -168,7 +168,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     conways_game_of_life_dynamics,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(biographical),
@@ -194,8 +194,8 @@ test(multi_perspective_variance) :-
     Type1 \= Type2.
 
 test(predictive_noose_insight) :-
-    % Demonstrates that for the predictor, the determinism is a Noose
-    constraint_indexing:constraint_classification(conways_game_of_life_dynamics, noose, context(individual_powerless, biographical, constrained, local)).
+    % Demonstrates that for the predictor, the determinism is a Snare
+    constraint_indexing:constraint_classification(conways_game_of_life_dynamics, snare, context(individual_powerless, biographical, constrained, local)).
 
 test(emergence) :-
     domain_priors:emerges_naturally(conways_game_of_life_dynamics).
@@ -218,7 +218,7 @@ test(emergence) :-
  * * 2. CLASSIFICATION RATIONALE:
  * Cell (Mountain): The quintessential "powerless" subject of natural law.
  * Architect (Rope): Using the law to build tools (Turing machines).
- * Predictor (Noose): Facing the "Halting Problem" inherent in the game.
+ * Predictor (Snare): Facing the "Halting Problem" inherent in the game.
  * * 3. OMEGA IDENTIFICATION:
  * Formalized the uncertainty regarding the grid's finiteness—different 
  * edge behaviors change the "Mountain" into a "Scaffold."

@@ -51,7 +51,7 @@
  * Ergodicity is often treated as a "Rope" for calculation by institutions 
  * (Insurers, Economists), but for the individual subject to ruin, it is an 
  * invisible "Mountain" of physical limitation. When systems are designed 
- * as if they were ergodic when they are not, they become a "Noose" for the 
+ * as if they were ergodic when they are not, they become a "Snare" for the 
  * participants who are "absorbed" (eliminated) by volatility.
  */
 
@@ -158,7 +158,7 @@ constraint_indexing:constraint_classification(
    SCOPE: local.
    
    WHY THIS CLASSIFICATION:
-   For the individual facing a non-ergodic game, the "average" is a Noose. 
+   For the individual facing a non-ergodic game, the "average" is a Snare. 
    If the game has a 99% success rate but the 1% failure results in death 
    (ruin), the "ensemble average" (thriving) is irrelevant. The structure 
    of the game strangles the player over time, as the probability of 
@@ -167,7 +167,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     ergodic_theorems,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -219,7 +219,7 @@ test(time_immutability) :-
  * * 3. CLASSIFICATION RATIONALE:
  * Physicist (Mountain): The theorem is a tautological truth of math.
  * Actuary (Rope): Institutional scaling converts ergodicity into a tool.
- * Gambler (Noose): Path-dependence and mortality turn probabilities 
+ * Gambler (Snare): Path-dependence and mortality turn probabilities 
  * into terminal traps.
  */
 
@@ -231,7 +231,7 @@ omega_variable(
     quantum_ergodicity,
     "Do quantum systems truly explore all available phase space (Ergodic) or are they subject to fundamentally discrete, non-ergodic jumps?",
     resolution_mechanism("Long-term observation of decoherence in complex quantum states"),
-    impact("If Mountain: Physics is unified. If Noose: The universe has 'dead-ends' in its probability structure."),
+    impact("If Mountain: Physics is unified. If Snare: The universe has 'dead-ends' in its probability structure."),
     confidence_without_resolution(low)
 ).
 
@@ -248,7 +248,7 @@ omega_variable(
  * in general economic policy which favors "expected value."
  * * CONCLUSION:
  * The existence of the Kelly Criterion as an alternative shifts the 
- * "Noose" of ergodicity into a "Rope" for those with the knowledge and 
+ * "Snare" of ergodicity into a "Rope" for those with the knowledge and 
  * power to apply it.
  */
 

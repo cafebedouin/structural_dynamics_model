@@ -120,7 +120,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE MAINSTREAM CONSUMER - Noose
+   PERSPECTIVE 2: THE MAINSTREAM CONSUMER - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless (Subject to environments "sanitized" by others)
@@ -129,7 +129,7 @@ constraint_indexing:constraint_classification(
    SCOPE: national (Broadcast and mainstream media limits)
    
    WHY THIS CLASSIFICATION:
-   For those in sanitized environments, the *lack* of tagging is a "Noose." 
+   For those in sanitized environments, the *lack* of tagging is a "Snare." 
    They are trapped in a world where challenging content is erased before they 
    can choose to see it, extracting their agency to determine their own 
    "trigger" thresholds.
@@ -141,7 +141,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     dldr_information_policy,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(biographical),
@@ -190,8 +190,8 @@ constraint_indexing:constraint_classification(
 test(multi_perspective_tagging) :-
     % Reader sees Rope (Autonomy)
     constraint_indexing:constraint_classification(dldr_information_policy, rope, context(individual_moderate, _, _, _)),
-    % Mainstream Subject sees Noose (Sanitization/Loss of Agency)
-    constraint_indexing:constraint_classification(dldr_information_policy, noose, context(individual_powerless, _, _, _)),
+    % Mainstream Subject sees Snare (Sanitization/Loss of Agency)
+    constraint_indexing:constraint_classification(dldr_information_policy, snare, context(individual_powerless, _, _, _)),
     % Institutional Gatekeeper sees Mountain (The way things are)
     constraint_indexing:constraint_classification(dldr_information_policy, mountain, context(institutional, _, _, _)).
 
@@ -220,7 +220,7 @@ test(sanitization_extraction) :-
  * sanitization.
  * * 2. PERSPECTIVE SELECTION:
  * Chose to contrast the AO3 reader (Rope) with the mainstream consumer 
- * (Noose) to highlight the source's point that "the onus was on the 
+ * (Snare) to highlight the source's point that "the onus was on the 
  * reader".
  * * 3. AMBIGUITIES:
  * The source notes that mainstream ratings like "R" are based on "maturity 
@@ -234,18 +234,18 @@ test(sanitization_extraction) :-
 
 omega_variable(
     sanitization_beneficiary_intent,
-    "Whose interests does sanitization serve, and is it a functional necessity (Mountain) or a predatory control (Noose)?",
+    "Whose interests does sanitization serve, and is it a functional necessity (Mountain) or a predatory control (Snare)?",
     resolution_mechanism("Audit of content-erasure patterns across mainstream media compared to unsanitized archives"),
-    impact("If necessity: Sanitization is a Rope. If control: It is a Noose."),
+    impact("If necessity: Sanitization is a Rope. If control: It is a Snare."),
     confidence_without_resolution(medium)
 ).
 
 omega_variable(
     tagging_efficacy_ceiling,
     "Does granular tagging actually protect users (Rope) or does it facilitate 
-     trauma-tourism (Noose)?",
+     trauma-tourism (Snare)?",
     resolution_mechanism("Longitudinal study of AO3 user behavior and psychological impact of tag engagement"),
-    impact("If protective: Rope. If facilitating harm: Noose."),
+    impact("If protective: Rope. If facilitating harm: Snare."),
     confidence_without_resolution(low)
 ).
 
@@ -266,7 +266,7 @@ omega_variable(
  * individual cannot protect themselves.
  * * CONCLUSION:
  * The presence of the DLDR policy as an alternative reveals that mainstream 
- * sanitization is a "Noose" masquerading as a "Mountain" of safety.
+ * sanitization is a "Snare" masquerading as a "Mountain" of safety.
  */
 
 /* ==========================================================================

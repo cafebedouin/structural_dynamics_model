@@ -26,7 +26,7 @@ constraint_claim(surface_volume_ratio_variability, tangled_rope).
 constraint_metric(surface_volume_ratio_variability, extractiveness, 0.55).
 constraint_metric(surface_volume_ratio_variability, suppression_requirement, 0.35).
 
-constraint_claim(grip_slippage_and_inertia_lag, noose).
+constraint_claim(grip_slippage_and_inertia_lag, snare).
 constraint_metric(grip_slippage_and_inertia_lag, extractiveness, 0.85).
 constraint_metric(grip_slippage_and_inertia_lag, suppression_requirement, 0.60).
 

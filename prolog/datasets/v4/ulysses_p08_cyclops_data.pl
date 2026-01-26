@@ -27,8 +27,8 @@ constraint_metric(citizen_nationalism, extractiveness, 0.92).
 constraint_metric(citizen_nationalism, suppression_requirement, 0.95).
 constraint_metric(citizen_nationalism, resistance, 0.85).
 
-% Anti-Semitic Bias functions as a Noose in this environment
-constraint_claim(anti_semitic_bias, noose).
+% Anti-Semitic Bias functions as a Snare in this environment
+constraint_claim(anti_semitic_bias, snare).
 constraint_metric(anti_semitic_bias, extractiveness, 0.98).
 constraint_metric(anti_semitic_bias, suppression_requirement, 0.90).
 constraint_metric(anti_semitic_bias, resistance, 0.92).
@@ -40,7 +40,7 @@ constraint_metric(imperial_maritime_rule, suppression_requirement, 0.85).
 constraint_metric(imperial_maritime_rule, resistance, 0.70).
 
 % Section 4: Temporal Measurements
-% Detecting the transformation from social "Rope" to "Noose" as the argument escalates.
+% Detecting the transformation from social "Rope" to "Snare" as the argument escalates.
 
 % Time T=1630 (Arrival/Initial discussion)
 measurement(m1, citizen_nationalism, extractiveness, 1630, 0.30).
@@ -94,7 +94,7 @@ intent_beneficiary_class(cyclops_pub_interval, british_imperial_administration).
 intent_power_change(cyclops_pub_interval, british_imperial_administration, 0.80).
 
 % Section 8: Recommendations
-recommendation(rec1, 'Cut the Noose of reactionary bias to allow for humane coordination').
+recommendation(rec1, 'Cut the Snare of reactionary bias to allow for humane coordination').
 affects_constraint(rec1, anti_semitic_bias).
 
 recommendation(rec2, 'Deploy universalism as a scaffold to bridge nationalist/imperialist extraction').

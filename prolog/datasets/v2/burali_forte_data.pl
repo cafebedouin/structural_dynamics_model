@@ -35,10 +35,10 @@ constraint_metric(successor_mapping_complexity, suppression_requirement, 0.42).
 constraint_metric(successor_mapping_complexity, snap_back_potential, 0.75).
 constraint_metric(successor_mapping_complexity, extractiveness, 0.55).
 
-% The Totality Sink (The Noose)
+% The Totality Sink (The Snare)
 % The assumption that the "set of all ordinals" exists. This "strangles" the hierarchy.
 % Extractiveness at 0.99 requires the 'von_neumann_universe' scaffold to resolve as a proper class.
-constraint_claim(ordinal_totality_comprehension, noose).
+constraint_claim(ordinal_totality_comprehension, snare).
 constraint_metric(ordinal_totality_comprehension, intensity, 0.99).
 constraint_metric(ordinal_totality_comprehension, suppression_requirement, 0.98).
 constraint_metric(ordinal_totality_comprehension, snap_back_potential, 0.01).
@@ -49,7 +49,7 @@ constraint_metric(ordinal_totality_comprehension, extractiveness, 0.99).
 recommendation(rec_01, implement_type_theory_to_bound_ordinal_levels).
 affects_constraint(rec_01, successor_mapping_complexity).
 
-% Noose (0.99 extractiveness) triggers Cut
+% Snare (0.99 extractiveness) triggers Cut
 % Utilizing 'von_neumann_universe' scaffold to define Ω as a proper class, not a set.
 recommendation(rec_02, abandon_naive_set_membership_for_class_abstraction).
 affects_constraint(rec_02, ordinal_totality_comprehension).

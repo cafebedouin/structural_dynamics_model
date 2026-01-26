@@ -20,7 +20,7 @@ omega_variable(tax_legislation_outcome, empirical, measurement_of_actual_liabili
 omega_variable(investor_risk_tolerance, preference, decision_to_accept_limited_governance_for_asset_class_exposure).
 
 constraint_claim(voting_power_concentration, mountain).
-constraint_claim(fiduciary_duty_elimination, noose).
+constraint_claim(fiduciary_duty_elimination, snare).
 constraint_claim(carried_interest_taxation_knot, tangled_rope).
 constraint_claim(founder_dependence, rope).
 

@@ -98,7 +98,7 @@ constraint_victim(hiv_prep_prevention_2026, hiv_pathogen_spread). %
    WHY THIS CLASSIFICATION:
    For the user, PrEP is a "Rope"—a tool for coordination that allows them to 
    engage in the "kind of sex they wanted" while safely exchanging bodily 
-   fluids. It replaces the "Noose" of fear with a functional pill.
+   fluids. It replaces the "Snare" of fear with a functional pill.
    
    NARRATIVE EVIDENCE:
    "Allowed them to have the kind of sex they wanted to have, where bodily fluids 
@@ -224,7 +224,7 @@ test(extractiveness_vs_freedom) :-
  * vs the objective biological efficacy (Mountain).
  * * 3. CLASSIFICATION RATIONALE:
  * - User (Rope): It provides a "revelation" of contact and exchange without 
- * the previous "Noose" of stigma/fear.
+ * the previous "Snare" of stigma/fear.
  * - Analyst (Mountain): The >90% efficacy is a physical reality of the 
  * antiviral mechanism.
  */
@@ -243,10 +243,10 @@ omega_variable(
 
 omega_variable(
     access_equity_as_noose,
-    "Is the global adoption truly 150 countries or does it remain a 'Noose' of 
+    "Is the global adoption truly 150 countries or does it remain a 'Snare' of 
      unavailability for underserved communities within those nations?",
     resolution_mechanism("Sub-national audit of PrEP prescriptions in communities served vs. underserved"),
-    impact("If unequal: Noose for the marginalized. If equal: Global Rope."),
+    impact("If unequal: Snare for the marginalized. If equal: Global Rope."),
     confidence_without_resolution(low)
 ).
 
@@ -262,7 +262,7 @@ omega_variable(
  * pleasurable".
  * Evidence: "Many prefer not to use them".
  * * CONCLUSION:
- * The advent of PrEP turned the "Condom Noose" (perceived failure/lack of 
+ * The advent of PrEP turned the "Condom Snare" (perceived failure/lack of 
  * pleasure) into a "Biological Rope" (90% reduction + skin contact).
  */
 

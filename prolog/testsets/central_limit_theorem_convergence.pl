@@ -41,14 +41,14 @@
  * - The Statistician (Institutional): Uses the theorem as a "Rope" for 
  * inference, polling, and scientific verification.
  * - The Risk Manager (Victim): An agent who treats the CLT as a "Mountain" 
- * in a heavy-tailed world (finance), only to find it was a "Noose" that 
+ * in a heavy-tailed world (finance), only to find it was a "Snare" that 
  * hid catastrophic "Black Swan" risks.
  * * NARRATIVE ARC:
  * CLT is the "Mountain" of equilibrium—the bell curve is the inevitable 
  * destiny of high-n aggregates. For the scientific community, it is the 
  * "Rope" that coordinates shared reality through p-values. However, when 
  * variance is infinite or dependencies are hidden, the "Mountain" collapses 
- * into a "Noose" of false confidence.
+ * into a "Snare" of false confidence.
  */
 
 /* ==========================================================================
@@ -141,7 +141,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE FINANCIAL TRADER (FAT TAILS) - Noose
+   PERSPECTIVE 3: THE FINANCIAL TRADER (FAT TAILS) - Snare
    --------------------------------------------------------------------------
    WHO: individual_powerless - Trapped by a model assuming Gaussian normality.
    WHEN: immediate - A crash occurs that CLT says "should never happen."
@@ -150,14 +150,14 @@ constraint_indexing:constraint_classification(
    
    WHY THIS CLASSIFICATION:
    When the assumptions of CLT (finite variance/independence) are broken but 
-   the model is still enforced, it becomes a "Noose." It extracts massive 
+   the model is still enforced, it becomes a "Snare." It extracts massive 
    wealth during a "Fat Tail" event, strangling the system that relied on 
    the "Mountain" of the bell curve.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
     central_limit_theorem_convergence,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -184,8 +184,8 @@ test(aggregation_fate_variance) :-
     Type2 = rope.
 
 test(fat_tail_noose_penalty) :-
-    % A powerless agent in a global/constrained context (like VaR modeling) sees it as a Noose.
-    constraint_indexing:constraint_classification(central_limit_theorem_convergence, noose, context(individual_powerless, immediate, constrained, global)).
+    % A powerless agent in a global/constrained context (like VaR modeling) sees it as a Snare.
+    constraint_indexing:constraint_classification(central_limit_theorem_convergence, snare, context(individual_powerless, immediate, constrained, global)).
 
 test(emergence) :-
     domain_priors:emerges_naturally(central_limit_theorem_convergence).
@@ -201,7 +201,7 @@ test(emergence) :-
  * * Model: Gemini 2.0 Flash
  * * KEY DECISIONS:
  * 1. TYPE VARIANCE: Captured the dual nature of CLT as a "Mountain" of physics 
- * (Galton Board) and a "Noose" of risk management (Black Swans).
+ * (Galton Board) and a "Snare" of risk management (Black Swans).
  * 2. AGENT SELECTION: Labeled the individual data point as the powerless 
  * subject. Its "erasure" via smoothing is the core extractive act of the CLT.
  * 3. EXTRACTIVENESS: Set to 0.25—low in isolation, but high when outliers are 
@@ -231,7 +231,7 @@ omega_variable(
  * Suppression: Suppressed by the "Standard" p-value curriculum in universities.
  * * CONCLUSION:
  * The institutional "Rope" of the CLT is so strong that it suppresses more 
- * accurate "Fat Tailed" alternatives, creating a "Noose" for complex systems.
+ * accurate "Fat Tailed" alternatives, creating a "Snare" for complex systems.
  */
 
 /* ==========================================================================

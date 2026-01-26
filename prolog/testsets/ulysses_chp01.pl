@@ -37,10 +37,10 @@
  * This constraint represents the colonial and theological extraction of 
  * Irish identity.
  * * KEY AGENTS:
- * - Stephen Dedalus: Individual moderate navigating a "Noose" of inherited 
+ * - Stephen Dedalus: Individual moderate navigating a "Snare" of inherited 
  * servitude.
  * - The Milk Woman: Individual powerless agent, a "messenger from the secret 
- * morning" who ignores her own language (Noose).
+ * morning" who ignores her own language (Snare).
  * - Haines: Institutional representative for whom the Empire is a 
  * "Mountain" of historical necessity.
  */
@@ -51,7 +51,7 @@
 
 % Required for [STEP 1] and [STEP 2] of the DR-Audit Suite
 narrative_ontology:interval(telemachus_morning, 0, 10).
-narrative_ontology:constraint_claim(dual_masters_dublin_1904, noose).
+narrative_ontology:constraint_claim(dual_masters_dublin_1904, snare).
 
 % Metrics: Extractiveness (0.8 - Extreme colonial cost) and Suppression (0.8 - High)
 domain_priors:base_extractiveness(dual_masters_dublin_1904, 0.8).
@@ -80,30 +80,30 @@ constraint_victim(dual_masters_dublin_1904, ireland_national_spirit).
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 1: STEPHEN DEDALUS - Noose
+   PERSPECTIVE 1: STEPHEN DEDALUS - Snare
    --------------------------------------------------------------------------
-   WHY: Stephen views the dual servitude as a "Noose"—an extractive trap 
+   WHY: Stephen views the dual servitude as a "Snare"—an extractive trap 
    that demands his spiritual and political loyalty while mocking his 
    artistic and personal freedom.
    -------------------------------------------------------------------------- */
 constraint_indexing:constraint_classification(
     dual_masters_dublin_1904,
-    noose,
+    snare,
     context(agent_power(individual_moderate), time_horizon(biographical), exit_options(constrained), spatial_scope(local))
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE MILK WOMAN - Noose
+   PERSPECTIVE 2: THE MILK WOMAN - Snare
    --------------------------------------------------------------------------
    WHO: individual_powerless - "A wandering crone... lowly form of an immortal" 
   .
    WHY: From the perspective of the powerless native, the constraint is 
-   a "Noose"—she pays tribute to the "Saxon" (Haines) and the "Loud voice" 
+   a "Snare"—she pays tribute to the "Saxon" (Haines) and the "Loud voice" 
    of the church without recognizing her own agency.
    -------------------------------------------------------------------------- */
 constraint_indexing:constraint_classification(
     dual_masters_dublin_1904,
-    noose,
+    snare,
     context(agent_power(individual_powerless), time_horizon(immediate), exit_options(trapped), spatial_scope(local))
 ) :- !.
 
@@ -130,7 +130,7 @@ constraint_indexing:constraint_classification(
 test(multi_perspective_telemachus) :-
     constraint_indexing:constraint_classification(dual_masters_dublin_1904, T1, context(agent_power(individual_moderate), _, _, _)),
     constraint_indexing:constraint_classification(dual_masters_dublin_1904, T2, context(agent_power(institutional), _, _, _)),
-    T1 = noose, T2 = mountain.
+    T1 = snare, T2 = mountain.
 
 test(extractiveness_colonial_check) :-
     % Colonial systems must have very high base extractiveness
@@ -145,18 +145,18 @@ test(extractiveness_colonial_check) :-
 
 /**
  * LLM GENERATION NOTES:
- * Refactored to stop auto-imputation. Declaring the claim as 'noose' allows 
+ * Refactored to stop auto-imputation. Declaring the claim as 'snare' allows 
  * the audit to identify the "Stalemate" between Stephen's acute awareness 
- * of the trap (Noose) and Haines's defense of it as natural law 
+ * of the trap (Snare) and Haines's defense of it as natural law 
  * (Mountain).
  */
 
 omega_variable(
     milk_woman_immortality,
     "Is the milk woman a 'messenger from the secret morning' (immortal) or 
-    a victim of economic extraction (Noose)?",
+    a victim of economic extraction (Snare)?",
     resolution_mechanism("Analysis of her reaction to the Irish language in later chapters"),
-    impact("If immortal: The land is a Rope. If victim: The land is a Noose."),
+    impact("If immortal: The land is a Rope. If victim: The land is a Snare."),
     confidence_without_resolution(medium)
 ).
 
@@ -204,4 +204,4 @@ domain_priors:suppression_score(dual_masters_dublin_1904, 0.3).
 % --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
 constraint_indexing:constraint_classification(ulysses_chp01, mountain, agent_power(analytical)).
 constraint_indexing:constraint_classification(ulysses_chp01, rope, agent_power(institutional)).
-constraint_indexing:constraint_classification(ulysses_chp01, noose, agent_power(individual_powerless)).
+constraint_indexing:constraint_classification(ulysses_chp01, snare, agent_power(individual_powerless)).

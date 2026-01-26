@@ -23,9 +23,9 @@ constraint_claim(hyperplane_orientation_complexity, tangled_rope).
 constraint_metric(hyperplane_orientation_complexity, extractiveness, 0.52).
 constraint_metric(hyperplane_orientation_complexity, intensity, 0.40).
 
-% Noose Verification (⊠C)
+% Snare Verification (⊠C)
 % Requires extractiveness >= 0.66 AND suppression_requirement >= 0.46
-constraint_claim(antipodal_mapping_constraint, noose).
+constraint_claim(antipodal_mapping_constraint, snare).
 constraint_metric(antipodal_mapping_constraint, extractiveness, 0.96).
 constraint_metric(antipodal_mapping_constraint, suppression_requirement, 0.55).
 

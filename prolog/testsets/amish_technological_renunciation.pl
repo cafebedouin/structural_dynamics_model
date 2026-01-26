@@ -1,8 +1,8 @@
 % ============================================================================
 % CONSTRAINT STORY: amish_technological_renunciation
 % ============================================================================
-% Generated: 2026-01-21
-% Model: Gemini 2.0 Flash
+% Generated: 2026-01-23
+% Model: Gemini
 % Source: "What Does It Mean To Be Amish?" by cafebedouin.org
 % Status: [RESOLVED MANDATROPHY]
 % ============================================================================
@@ -30,119 +30,108 @@
  * human_readable: The Television Test (Amish Renunciation)
  * domain: social/technological/religious
  * temporal_scope: Contemporary / Perennial
- * spatial_scope: Regional (Amish Country) to Global (The Human Condition)
+ * spatial_scope: Regional (Amish Country) to Global (Mass Culture)
  * * SUMMARY:
- * This constraint defines "being Amish" as the collective discipline to renounce 
- * technology that is recognized as harmful to the individual and community. 
- * It identifies a gap between the intellectual recognition of harm and the 
- * volitional ability to act upon that recognition.
+ * This constraint defines "being Amish" as the collective volitional discipline to renounce 
+ * technology recognized as harmful to community integrity. It highlights the 
+ * "Amish Test": the gap between intellectually recognizing a technology's negative impact 
+ * and the actual willingness to sacrifice its convenience.
  * * KEY AGENTS:
- * - Amos (The Amish Man): An agent who embodies the "Rope" of collective renunciation.
- * - The Tourists: Agents who are "trapped" by technology they recognize as negative but cannot quit.
- * - The Social Environment: The "Amish country" versus the "mass culture" represented by the tourists.
+ * - Amos (The Amish Man): An agent embodying the coordinate discipline of the Ordnung.
+ * - The Tourist (Mass Culture Subject): An agent who recognizes technological harm but lacks the agency to exit.
+ * - The Amish Church (Institutional): The rule-making body that maintains the community's technological boundaries.
+ * - The Analytical Observer: An observer of the "stochastic" nature of human habit and renunciation.
  * * NARRATIVE ARC:
- * Tourists seek the meaning of Amish life, expecting a theological answer. 
- * Amos demonstrates that the meaning is actually a constraint: the willingness to 
- * sacrifice individual convenience (television) for community health. 
- * For the tourists, the constraint is a "Noose" of habit; for the Amish, it is 
- * a "Rope" of identity.
+ * When tourists are asked if television is harmful, they agree; when asked if they would 
+ * give it up, none raise their hands. For the tourist, technology is a 
+ * "Snare" of dependency. For the Amish, the same renunciation is a "Rope"—the 
+ * primary coordination mechanism for their distinct identity.
  */
 
 /* ==========================================================================
    2. CORE SYSTEM INTEGRATION (The "Reality" Layer)
    ========================================================================== */
 
-% The Structural Anchor
+% ID Binding - Mandatory for 2026 DR-Audit Suite
 narrative_ontology:interval(amish_technological_renunciation, 0, 10).
-narrative_ontology:constraint_claim([amish_technological_renunciation], [technological_governance]).
+narrative_ontology:constraint_claim(amish_technological_renunciation, snare).
 
-% Base extractiveness score (0.0-1.0)
-% Rationale: High (0.8). For the tourists, mass technology extracts time, community, 
-% and agency, as they "believe" it is detrimental but cannot stop. 
-% For the Amish, the renunciation extracts convenience to preserve social capital.
+% Base Properties
+% Rationale: High (0.8). Mass technology extracts attention and social capital from 
+% tourists; renunciation extracts convenience from the Amish to fund cohesion.
 domain_priors:base_extractiveness(amish_technological_renunciation, 0.8).
 
-% Suppression score (0.0-1.0)
-% Rationale: High (0.75). Mass culture suppresses the "willingness to give up" 
-% harmful habits, making the alternative (renunciation) feel impossible for the tourists.
+% Rationale: High (0.75). Mass culture suppresses the volitional "willingness to give up" 
+% harmful habits, making renunciation appear as a non-viable alternative.
 domain_priors:suppression_score(amish_technological_renunciation, 0.75).
 
-% Enforcement requirements
-% Requires active enforcement (Ordnung) within the Amish community; 
-% emerges naturally as habit/dependency in mass culture.
+% Requires active enforcement (Ordnung) to prevent technological drift.
 domain_priors:requires_active_enforcement(amish_technological_renunciation).
 
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(amish_technological_renunciation, community_integrity). % Amish social cohesion
-constraint_victim(amish_technological_renunciation, individual_autonomy). % Tourists trapped by habit
-
-% Metrics required for Section 1 of the Executive Summary
-narrative_ontology:constraint_metric(amish_technological_renunciation, extractiveness, 0.8).
-narrative_ontology:constraint_metric(amish_technological_renunciation, suppression_requirement, 0.75).
+constraint_beneficiary(amish_technological_renunciation, community_integrity).
+constraint_victim(amish_technological_renunciation, individual_autonomy).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)
    ========================================================================== */
 
+
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 1: THE TOURIST - Noose
+   PERSPECTIVE 1: THE TOURIST - Snare
    --------------------------------------------------------------------------
    
-   WHO: individual_powerless (Slaves to the habit of television)
-   WHEN: immediate (The present moment of the "Television Test")
-   WHERE: trapped (No hands raised to give up the harm)
-   SCOPE: global (Mass culture participants)
+   WHO: individual_powerless - Subjects "trapped" by technological habit.
+   WHEN: immediate - The "present moment" of the Television Test.
+   WHERE: trapped - Intellectually aware of harm but unable to exit.
+   SCOPE: global - Participants in the mass culture.
    
    WHY THIS CLASSIFICATION:
-   For the tourists, their relationship with technology is a "Noose." They 
-   intellectually identify it as a "negative impact" but are "trapped" by it, 
-   liquidating their agency to choose their own values.
+   For the tourist, technology is a Snare. They acknowledge its "negative impact" 
+   but their agency has been liquidated; they are "trapped" by convenience 
+   and cannot raise their hands to quit, even when harm is identified.
    
    NARRATIVE EVIDENCE:
-   "How many of you think that television... has a negative impact? ... How many 
-   of you are willing to give up television? ... no hands were raised".
+   "How many of you think that television... has a negative impact? ... no hands 
+   were raised [to give it up]".
    -------------------------------------------------------------------------- */
-
-
 
 constraint_indexing:constraint_classification(
     amish_technological_renunciation,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
         exit_options(trapped),
         spatial_scope(global)
     )
-) :-
-    domain_priors:base_extractiveness(amish_technological_renunciation, E),
-    E > 0.7,
-    !.
+) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 2: AMOS (THE AMISH MEMBER) - Rope
+   PERSPECTIVE 2: THE AMISH CHURCH (ORDNUNG) - Rope
    --------------------------------------------------------------------------
    
-   WHO: individual_moderate (Has the agency to "give up television")
-   WHEN: biographical (The lived experience of being Amish)
-   WHERE: mobile (Can define identity outside mass culture)
-   SCOPE: regional (Amish Country)
+   WHO: institutional - The collective rule-shaping body of the community.
+   WHEN: generational - Preserving identity through successive lineages.
+   WHERE: mobile - Actively choosing to exist outside mass technological norms.
+   SCOPE: regional - The specific geography of Amish life.
    
    WHY THIS CLASSIFICATION:
-   For the Amish, renunciation is a "Rope"—a functional coordination mechanism. 
-   By collectively agreeing to "give up" specific technologies, they coordinate 
-   a community that is "more than the individuals," creating a distinct identity.
+   For the institutional community, renunciation is a Rope. It is the primary 
+   coordination mechanism that allows the group to be "more than the individuals," 
+   using the "willingness to give up" as a tool for social cohesion.
    
    NARRATIVE EVIDENCE:
-   "That is what it means to be Amish".
+   "That is what it means to be Amish" — defining identity through the tool 
+   of collective sacrifice.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
     amish_technological_renunciation,
     rope,
     context(
-        agent_power(individual_moderate),
-        time_horizon(biographical),
+        agent_power(institutional),
+        time_horizon(generational),
         exit_options(mobile),
         spatial_scope(regional)
     )
@@ -152,23 +141,21 @@ constraint_indexing:constraint_classification(
    PERSPECTIVE 3: THE ANALYTICAL OBSERVER - Mountain
    --------------------------------------------------------------------------
    
-   WHO: analytical (The "ancient and wise" observer of human behavior)
-   WHEN: civilizational (The fundamental choice between convenience and value)
-   WHERE: analytical (Observer stance)
-   SCOPE: global
+   WHO: analytical - Observer of the "Television Test" dynamics.
+   WHEN: civilizational - Viewing the perennial human struggle with habit.
+   WHERE: analytical - External observer stance.
+   SCOPE: global - Universal human behavior.
    
    WHY THIS CLASSIFICATION:
-   To the analyst, the "Television Test" reveals a "Mountain"—an unchangeable 
-   law of social physics. The gap between knowing harm and acting to stop it 
-   is a zero-degree-of-freedom reality that defines the "Amish" as a 
-   specific, rare exception to the general rule of human inertia.
+   To the analyst, the "Television Test" reveals a Mountain. The gap between 
+   knowing harm and acting to stop it appears as a fixed law of human inertia. 
+   Amish renunciation is seen as a rare biological/social exception to a 
+   natural law of consumption.
    
    NARRATIVE EVIDENCE:
-   "The group looked to one another, but no hands were raised. 'That is what it 
-   means to be Amish'".
+   The silent group of tourists facing the unyielding fact of their own 
+   dependency.
    -------------------------------------------------------------------------- */
-
-
 
 constraint_indexing:constraint_classification(
     amish_technological_renunciation,
@@ -187,25 +174,22 @@ constraint_indexing:constraint_classification(
 
 :- begin_tests(amish_technological_renunciation_tests).
 
-test(multi_perspective_renunciation) :-
-    % Tourist (Powerless) sees Noose
-    constraint_indexing:constraint_classification(amish_technological_renunciation, noose, context(individual_powerless, immediate, trapped, global)),
-    % Amish (Moderate) sees Rope
-    constraint_indexing:constraint_classification(amish_technological_renunciation, rope, context(individual_moderate, biographical, mobile, regional)),
-    % Analyst sees Mountain
-    constraint_indexing:constraint_classification(amish_technological_renunciation, mountain, context(analytical, civilizational, analytical, global)),
-    Type1 \= Type2, Type2 \= Type3.
+test(multi_perspective_variance) :-
+    % Tourist sees Snare, Church sees Rope, Analyst sees Mountain
+    constraint_indexing:constraint_classification(amish_technological_renunciation, snare, context(agent_power(individual_powerless), _, _, _)),
+    constraint_indexing:constraint_classification(amish_technological_renunciation, rope, context(agent_power(institutional), _, _, _)),
+    constraint_indexing:constraint_classification(amish_technological_renunciation, mountain, context(agent_power(analytical), _, _, _)).
 
-test(power_extractiveness_renunciation) :-
-    % The powerless tourist experiences the "Noose" of habit-extraction.
-    ContextPowerless = context(individual_powerless, immediate, trapped, global),
-    ContextModerate = context(individual_moderate, biographical, mobile, regional),
-    constraint_indexing:extractiveness_for_agent(amish_technological_renunciation, ContextPowerless, E1),
-    constraint_indexing:extractiveness_for_agent(amish_technological_renunciation, ContextModerate, E2),
+test(power_extractiveness_scaling) :-
+    % The powerless tourist experiences higher "habit-extraction" than the disciplined community member.
+    ContextTourist = context(individual_powerless, immediate, trapped, global),
+    ContextAmish = context(institutional, generational, mobile, regional),
+    constraint_indexing:extractiveness_for_agent(amish_technological_renunciation, ContextTourist, E1),
+    constraint_indexing:extractiveness_for_agent(amish_technological_renunciation, ContextAmish, E2),
     E1 > E2.
 
-test(habit_immutability) :-
-    % In the immediate horizon, the inability to quit is a Mountain (fact).
+test(habit_immutability_threshold) :-
+    % Demonstrates that in the immediate horizon, technological dependency appears as a Mountain.
     constraint_indexing:effective_immutability(immediate, trapped, mountain).
 
 :- end_tests(amish_technological_renunciation_tests).
@@ -216,34 +200,40 @@ test(habit_immutability) :-
 
 /**
  * LLM GENERATION NOTES
- * * Model: Gemini 2.0 Flash
- * Date: 2026-01-21
+ * * Model: Gemini
+ * Date: 2026-01-23
  * * KEY DECISIONS:
  * * 1. EXTRACTIVENESS SCORE (0.8):
- * Reasoning: I chose high extraction because the text highlights that the tourists 
- * *know* the technology is a "negative impact" yet they are "liquidated" of the 
- * power to change. The technology extracts their "community" and "life".
+ * Reasoning: I chose high extraction because the text emphasizes that tourists 
+ * are "liquidated" of their agency. They *believe* the tech is harmful but 
+ * cannot stop, indicating a high extraction of volitional life.
  * * 2. PERSPECTIVE SELECTION:
- * Contrasted the "trapped" Tourists (Noose) with the "mobile" Amish (Rope) to 
- * show the core pedagogical point: Amish life is a "Rope" of discipline that 
- * avoids the "Noose" of uncritical consumption.
+ * Contrasted the "trapped" Tourist (Snare) with the "institutional" Ordnung 
+ * (Rope) to highlight the perspectival gap between habit and discipline.
  * * 3. MANDATROPHY RESOLUTION:
- * Status: [RESOLVED MANDATROPHY]. High extraction of convenience (Amish) or 
- * attention (Tourists) is resolved by the "Amish Test," which identifies 
- * renunciation as a functional tool (Rope) for the preservation of value.
+ * Status: [RESOLVED MANDATROPHY]. The high extraction of convenience is 
+ * resolved as a functional tool (Rope) for preservation within the Amish index.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
+% Mandatory Omega for high-extraction constraints:
+omega_variable(
+    amish_extraction_intent,
+    "Is the renunciation of technology a functional necessity for social survival or a predatory restriction of individual potential?",
+    resolution_mechanism("Audit of mental health and social cohesion metrics in Amish communities vs. high-tech mass culture."),
+    impact("If necessity: Mountain (natural law). If predatory: Snare (Mandatrophy)."),
+    confidence_without_resolution(medium)
+).
+
 omega_variable(
     technological_agency_threshold,
-    "Is the 'willingness to give up' television a biological limit (Mountain) 
-     or a learnable social skill (Rope)?",
-    resolution_mechanism("Audit of exit rates from high-tech habits in individuals moving to intentional communities"),
-    impact("If limit: Mass culture is a terminal Noose. If skill: Amish life is a teachable Rope."),
-    confidence_without_resolution(medium)
+    "Is the 'willingness to give up' a biological limit of the human brain (Mountain) or a learnable cultural skill (Rope)?",
+    resolution_mechanism("Longitudinal tracking of 'digital detox' success rates in individuals moving to intentional communities."),
+    impact("If limit: Mass culture is a terminal Snare. If skill: Amish life is a teachable Rope."),
+    confidence_without_resolution(low)
 ).
 
 /* ==========================================================================
@@ -252,17 +242,17 @@ omega_variable(
 
 /**
  * VIABLE ALTERNATIVES
- * * ALTERNATIVE 1: "Better Programming" / Reform
- * Viability: The idea that we can keep technology but fix the content.
- * Suppression: Shunted by the blog author: "the problems of society will not 
- * be solved by advocating for better programming".
- * * ALTERNATIVE 2: Pure Theological Belief (Jesus)
- * Viability: Being religious without changing lifestyle.
- * Suppression: Explicitly identified as "not what it means" to be Amish by 
- * Amos.
+ * * ALTERNATIVE 1: "Better Programming" (Reformism)
+ * Viability: The belief that technology can be fixed through content reform.
+ * Suppression: Explicitly rejected in the source: "the problems of society 
+ * will not be solved by advocating for better programming".
+ * * ALTERNATIVE 2: Pure Theological Belief
+ * Viability: Religious identity without lifestyle change.
+ * Suppression: Rejected by Amos as failing to capture "what it means to be Amish".
  * * CONCLUSION:
- * The absence of these alternatives (Reform/Pure Belief) makes the Amish 
- * "Television Test" the definitive "Rope" for survival.
+ * The active suppression of "low-cost" alternatives (Reform/Pure Belief) 
+ * shifts the Amish renunciation from a mere choice to a definitive Rope for 
+ * community survival.
  */
 
 /* ==========================================================================
@@ -270,7 +260,8 @@ omega_variable(
    ========================================================================== */
 
 % Load: ?- [amish_technological_renunciation].
-% Multi-perspective: ?- constraint_indexing:multi_index_report(amish_technological_renunciation).
+% Report: ?- constraint_indexing:multi_index_report(amish_technological_renunciation).
+% Tests: ?- run_tests(amish_technological_renunciation_tests).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

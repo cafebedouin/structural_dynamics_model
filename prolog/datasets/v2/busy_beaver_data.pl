@@ -35,7 +35,7 @@ constraint_metric(computational_brute_force, suppression_requirement, 0.35).
 constraint_metric(computational_brute_force, snap_back_potential, 0.40).
 constraint_metric(computational_brute_force, extractiveness, 0.62).
 
-constraint_claim(halting_limit_noose, noose).
+constraint_claim(halting_limit_noose, snare).
 constraint_metric(halting_limit_noose, intensity, 0.99).
 constraint_metric(halting_limit_noose, suppression_requirement, 0.95).
 constraint_metric(halting_limit_noose, snap_back_potential, 0.90).

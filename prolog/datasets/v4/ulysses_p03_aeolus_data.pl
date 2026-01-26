@@ -15,7 +15,7 @@ interval(aeolus_interval, 12, 14). % 12:00 PM to 2:00 PM approx.
 % --- CONSTRAINTS & CLAIMS ---
 constraint_claim(the_press_scaffold, scaffold).    % Claimed as coordination tool for "The Ads"
 constraint_claim(imperial_rhetoric, mountain).     % Claimed as "Grandeur of Rome/Empire"
-constraint_claim(maternal_remorse, noose).          % Stephen's tether (beastly dead)
+constraint_claim(maternal_remorse, snare).          % Stephen's tether (beastly dead)
 
 % --- KINETIC METRICS (T=14) ---
 % Bloom's experience with the press scaffold
@@ -70,7 +70,7 @@ intent_power_change(aeolus_interval, press_gang, 0.25).
 1. MODAL TRANSFORMATION HISTORY:
    - The Press Scaffold: [Resistance 0.28 -> 0.62 -> 0.58]. Bloom initially views the machines as high-utility coordination entities ("Everything speaks in its own way"), but as the interval progresses into the "Sanctum," the scaffold becomes extractive.
    - Imperial Rhetoric: Functions as a "Mountain" (0.96 resistance). It claims to be an altar to civilization but is measured as a "cloacal" obsession.
-   - Transition: Bloom's attempt to use the Press as a "Scaffold" fails upon Crawford's "K.M.A." rejection, transforming a coordination attempt into a social "Noose."
+   - Transition: Bloom's attempt to use the Press as a "Scaffold" fails upon Crawford's "K.M.A." rejection, transforming a coordination attempt into a social "Snare."
 
 2. STRUCTURAL SIGNATURE ANALYSIS (v3.2):
    - The Press Scaffold: Moderate extractiveness (0.48), high noise. It operates as a fragile COORDINATION SCAFFOLD that fails when interpersonal variables (Crawford) override systemic utility.

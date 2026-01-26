@@ -48,7 +48,7 @@
  * that the state extracts to maintain the dollarized market.
  * * NARRATIVE ARC:
  * The "Tarea Ordenamiento" (Monetary Reform) was pitched as a Rope 
- * (coordination for stability) but functioned as a Noose, devaluing the peso 
+ * (coordination for stability) but functioned as a Snare, devaluing the peso 
  * by 400% and stripping the population of purchasing power. By late 2024, 
  * the energy grid reached the physical Mountain of obsolescence: 50-year-old 
  * plants with zero spare parts. The system has "choked" because the 
@@ -61,7 +61,7 @@
 
 % Required for [STEP 1] and [STEP 2] of the Deferential Realism suite
 narrative_ontology:interval(cuba_blackout_cycle, 0, 10).
-narrative_ontology:constraint_claim(cuba_mandatrophic_collapse, noose).
+narrative_ontology:constraint_claim(cuba_mandatrophic_collapse, snare).
 
 % Base extractiveness score (0.0-1.0)
 % Rationale: 0.95. Extreme extraction; GAESA controls 95% of foreign currency 
@@ -129,7 +129,7 @@ constraint_indexing:constraint_classification(
     !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 2: ORDINARY CUBAN (THE OPERATOR) - Noose
+   PERSPECTIVE 2: ORDINARY CUBAN (THE OPERATOR) - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless - Surviving on one meal a day; subject to 
@@ -139,7 +139,7 @@ constraint_indexing:constraint_classification(
    SCOPE: local - Household survival in Havana or Santiago.
    
    WHY THIS CLASSIFICATION:
-   For the citizen, Mandatrophy is a Noose. The regime's "Mandate" (preserving 
+   For the citizen, Mandatrophy is a Snare. The regime's "Mandate" (preserving 
    the military-run tourism empire) has extracted their electricity, 
    medicine, and food rations. Every peso they earn is "choked" by inflation, 
    forcing a total dependency on the dollarized market they cannot access.
@@ -149,7 +149,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     cuba_mandatrophic_collapse,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -198,7 +198,7 @@ constraint_indexing:constraint_classification(
 
 test(gaesa_divergence_analysis) :-
     % Verify that institutional agents (GAESA) maintain "Rope" status while 
-    % extraction of margins (Grid/Food) reaches terminal "Noose" levels.
+    % extraction of margins (Grid/Food) reaches terminal "Snare" levels.
     domain_priors:base_extractiveness(cuba_mandatrophic_collapse, E),
     E > 0.9.
 
@@ -234,7 +234,7 @@ omega_variable(
      accounting Mountain used to maintain the illusion of solvency?",
     resolution_mechanism("Audit of offshore BFI (Banco Financiero Internacional) 
     transactions and GAESA's internal 'dollar gravity' ledgers"),
-    impact("If real: Mandatrophy is a choice (Noose). If fictional: 
+    impact("If real: Mandatrophy is a choice (Snare). If fictional: 
             The collapse is an unyielding Mountain."),
     confidence_without_resolution(medium)
 ).
@@ -256,7 +256,7 @@ omega_variable(
  * control (The Mandate).
  * * CONCLUSION:
  * The existence of these viable but suppressed alternatives (Maintenance/
- * Reform) confirms that Cuban Mandatrophy is a terminal Noose.
+ * Reform) confirms that Cuban Mandatrophy is a terminal Snare.
  */
 
 /* ==========================================================================

@@ -36,7 +36,7 @@ constraint_metric(backtracking_inefficiency, suppression_requirement, 0.35).
 constraint_metric(backtracking_inefficiency, snap_back_potential, 0.45).
 constraint_metric(backtracking_inefficiency, extractiveness, 0.55).
 
-constraint_claim(np_complete_ceiling, noose).
+constraint_claim(np_complete_ceiling, snare).
 constraint_metric(np_complete_ceiling, intensity, 0.98).
 constraint_metric(np_complete_ceiling, suppression_requirement, 0.88).
 constraint_metric(np_complete_ceiling, snap_back_potential, 0.95).

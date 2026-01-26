@@ -155,7 +155,7 @@ constraint_indexing:constraint_classification(
     !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: Reformist Legislator - Noose
+   PERSPECTIVE 3: Reformist Legislator - Snare
    --------------------------------------------------------------------------
    
    WHO: institutional - Rule-making power (Congress).
@@ -164,7 +164,7 @@ constraint_indexing:constraint_classification(
    SCOPE: national.
    
    WHY THIS CLASSIFICATION:
-   From the perspective of a critic, this is a "Noose." It is an asymmetric 
+   From the perspective of a critic, this is a "Snare." It is an asymmetric 
    mechanism where the wealthiest 1% of the firm "extracts" a lower tax rate 
    that is unavailable to the general public, effectively strangling the 
    principle of horizontal equity in taxation.
@@ -176,7 +176,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     blackstone_carried_interest_taxation,
-    noose,
+    snare,
     context(
         agent_power(institutional),
         time_horizon(historical),
@@ -206,7 +206,7 @@ test(multi_perspective_variance) :-
         context(institutional, historical, analytical, _, _, national)),
     Type1 = rope,
     Type2 = mountain,
-    Type3 = noose.
+    Type3 = snare.
 
 test(tax_benefit_asymmetry) :-
     % Powerful agents should experience lower extraction (Rope) than the system's impact on others
@@ -230,7 +230,7 @@ test(tax_benefit_asymmetry) :-
  * * PERSPECTIVE RATIONALE:
  * - Partners: See it as a Rope (coordination).
  * - Retail: See it as a Mountain (unalterable risk).
- * - Legislators: See it as a Noose (asymmetric advantage).
+ * - Legislators: See it as a Snare (asymmetric advantage).
  */
 
 /* ==========================================================================
@@ -241,7 +241,7 @@ omega_variable(
     legislative_volatility,
     "Will Congress reclassify carried interest as ordinary income within the 'biographical' window of the IPO?",
     resolution_mechanism("Monitor the introduction of bills in the Senate Finance Committee specifically targeting PTPs"),
-    impact("If resolved as 'Yes': Blackstone's valuation drops (Mountain becomes Noose). If 'No': Rope holds."),
+    impact("If resolved as 'Yes': Blackstone's valuation drops (Mountain becomes Snare). If 'No': Rope holds."),
     confidence_without_resolution(low)
 ).
 
@@ -258,7 +258,7 @@ omega_variable(
  * which would harm senior management returns.
  * * CONCLUSION:
  * The presence of a viable (but rejected) C-Corp alternative confirms that 
- * the Partnership structure is a "Rope" for those in power and a "Noose" 
+ * the Partnership structure is a "Rope" for those in power and a "Snare" 
  * for those concerned with tax equity.
  */
 

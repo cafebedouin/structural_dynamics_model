@@ -35,10 +35,10 @@ constraint_metric(progression_overlap_density, suppression_requirement, 0.40).
 constraint_metric(progression_overlap_density, snap_back_potential, 0.70).
 constraint_metric(progression_overlap_density, extractiveness, 0.58).
 
-% The Wowzer-Type Growth Noose (The Noose)
+% The Wowzer-Type Growth Snare (The Snare)
 % The bound N(r, k) grows faster than any simple exponential, "strangling" search algorithms.
 % Extractiveness at 0.98 requires the 'szemeredi_scaffold' to resolve via density arguments.
-constraint_claim(primitive_recursive_bound_failure, noose).
+constraint_claim(primitive_recursive_bound_failure, snare).
 constraint_metric(primitive_recursive_bound_failure, intensity, 0.99).
 constraint_metric(primitive_recursive_bound_failure, suppression_requirement, 0.95).
 constraint_metric(primitive_recursive_bound_failure, snap_back_potential, 0.01).
@@ -49,7 +49,7 @@ constraint_metric(primitive_recursive_bound_failure, extractiveness, 0.98).
 recommendation(rec_01, utilize_polymath_indices_to_track_higher_order_patterns).
 affects_constraint(rec_01, progression_overlap_density).
 
-% Noose (0.98 extractiveness) triggers Cut
+% Snare (0.98 extractiveness) triggers Cut
 % Utilizing 'szemeredi_scaffold' to prove existence via density rather than pure coloring.
 recommendation(rec_02, replace_color_search_with_szemeredi_density_analysis).
 affects_constraint(rec_02, primitive_recursive_bound_failure).

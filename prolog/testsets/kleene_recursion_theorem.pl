@@ -48,7 +48,7 @@
  * is a built-in feature of any universal system. In software architecture, 
  * it is a "Rope" for implementing reflexive systems (like compilers that 
  * compile themselves). However, in the context of unconstrained 
- * self-modification, the theorem acts as a "Noose," extracting the 
+ * self-modification, the theorem acts as a "Snare," extracting the 
  * possibility of external behavioral prediction by making code 
  * fundamentally "self-aware" in a way that bypasses external templates.
  */
@@ -144,7 +144,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE CODE AUDITOR - Noose
+   PERSPECTIVE 3: THE CODE AUDITOR - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_moderate - Has the intelligence to analyze but is bound by logic.
@@ -153,7 +153,7 @@ constraint_indexing:constraint_classification(
    SCOPE: national - Protecting networks from polymorphic threats.
    
    WHY THIS CLASSIFICATION:
-   For the auditor, Kleene’s theorem is a "Noose." It "strangles" the ability 
+   For the auditor, Kleene’s theorem is a "Snare." It "strangles" the ability 
    to perform exhaustive behavior mapping because the code can dynamically 
    refer to and reconstruct its own "self" (extraction of certainty). This 
    logical "trap" makes certain security properties undecidable.
@@ -163,7 +163,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     kleene_recursion_theorem,
-    noose,
+    snare,
     context(
         agent_power(individual_moderate),
         time_horizon(immediate),
@@ -190,8 +190,8 @@ test(multi_perspective_variance) :-
     Type2 = rope.
 
 test(auditor_extraction_penalty) :-
-    % Demonstrates that the Noose classification emerges for the auditor 
-    constraint_indexing:constraint_classification(kleene_recursion_theorem, noose, context(individual_moderate, immediate, constrained, national)).
+    % Demonstrates that the Snare classification emerges for the auditor 
+    constraint_indexing:constraint_classification(kleene_recursion_theorem, snare, context(individual_moderate, immediate, constrained, national)).
 
 test(natural_emergence) :-
     domain_priors:emerges_naturally(kleene_recursion_theorem).
@@ -225,7 +225,7 @@ omega_variable(
     reflexive_emergent_autonomy,
     "Does logical self-reference enable spontaneous goal-emergence in autonomous systems?",
     resolution_mechanism("Long-term observation of self-referential agent simulations with open-ended reward functions."),
-    impact("If Yes: The Mountain is a 'Noose' for safety engineers. If No: It is just a 'Rope' for tool-building."),
+    impact("If Yes: The Mountain is a 'Snare' for safety engineers. If No: It is just a 'Rope' for tool-building."),
     confidence_without_resolution(medium)
 ).
 
@@ -236,7 +236,7 @@ omega_variable(
 /**
  * VIABLE ALTERNATIVES
  * * ALTERNATIVE 1: Non-Recursive Logic (e.g., Finite State Automata)
- * Viability: Systems that cannot self-refer avoid the "Noose" of 
+ * Viability: Systems that cannot self-refer avoid the "Snare" of 
  * undecidability.
  * Suppression: Rejected for general-purpose computation because it 
  * "strangles" the power of the system (it's not Turing-complete).

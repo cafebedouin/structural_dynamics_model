@@ -22,7 +22,7 @@ constraint_metric(menstrual_cycle_biological, extractiveness, 0.02).
 constraint_metric(menstrual_cycle_biological, suppression_requirement, 0.01).
 constraint_metric(menstrual_cycle_biological, resistance, 0.01).
 
-% Domestic Monogamy functions as a Tangled Rope/Noose
+% Domestic Monogamy functions as a Tangled Rope/Snare
 constraint_claim(domestic_monogamy_construct, tangled_rope).
 constraint_metric(domestic_monogamy_construct, extractiveness, 0.72).
 constraint_metric(domestic_monogamy_construct, suppression_requirement, 0.68).
@@ -72,7 +72,7 @@ intent_viable_alternative(penelope_interval, domestic_monogamy_construct, 'Open 
 intent_alternative_rejected(penelope_interval, domestic_monogamy_construct, 'Open sexual bypass/Boylan').
 
 % Section 6: Dependencies
-affects_constraint(howth_affirmation_memory, domestic_monogamy_construct). % Stabilizes the noose
+affects_constraint(howth_affirmation_memory, domestic_monogamy_construct). % Stabilizes the snare
 affects_constraint(menstrual_cycle_biological, marion_bloom). % Physical driver of stream
 
 % Section 7: Intent Evidence
@@ -88,7 +88,7 @@ intent_power_change(penelope_interval, marriage_preservation, 0.60).
 recommendation(rec1, 'Accept the biological mountain of time and cycles as the base layer of experience').
 affects_constraint(rec1, menstrual_cycle_biological).
 
-recommendation(rec2, 'Deploy the Howth Coordination Scaffold to mitigate the terminal extractiveness of the domestic noose').
+recommendation(rec2, 'Deploy the Howth Coordination Scaffold to mitigate the terminal extractiveness of the domestic snare').
 affects_constraint(rec2, howth_affirmation_memory).
 
 % Section 9: Omega Variables

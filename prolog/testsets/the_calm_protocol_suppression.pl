@@ -37,7 +37,7 @@
  * constraints of the Antarctic (Mountain) are met with a rigid adherence to 
  * "Protocol" (Rope). However, beneath this coordination lies a "weight" 
  * of suppressed trauma—specifically an incident involving a bird, an axe, and 
- * a choice—that functions as a Noose, extracting the mental health of those 
+ * a choice—that functions as a Snare, extracting the mental health of those 
  * who carry the story.
  * * KEY AGENTS:
  * - Soh: Individual powerless/trapped; a senior researcher carrying the weight 
@@ -49,7 +49,7 @@
  * but provides the structure for the "calm".
  * * NARRATIVE ARC:
  * The expedition survives the environment by following a Rope (Protocol). 
- * For Soh, however, the silence of the Antarctic is a Noose—it chokes the 
+ * For Soh, however, the silence of the Antarctic is a Snare—it chokes the 
  * ability to speak until the weight "demands transmission." By telling the 
  * story to Mbatha, the weight is not resolved but merely moved, ensuring 
  * the persistence of the psychological constraint.
@@ -61,7 +61,7 @@
 
 % Structural Anchor for index extraction
 narrative_ontology:interval(the_calm_expedition_window, 0, 10).
-narrative_ontology:constraint_claim(the_calm_protocol_suppression, noose).
+narrative_ontology:constraint_claim(the_calm_protocol_suppression, snare).
 
 % Base extractiveness score (0.0-1.0)
 % Rationale: 0.75. High extraction; the "weight" extracts the peace and 
@@ -126,7 +126,7 @@ constraint_indexing:constraint_classification(
     !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 2: SOH / MBATHA (LATE) - Noose
+   PERSPECTIVE 2: SOH / MBATHA (LATE) - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless - Bound by the "weight" and the demand for 
@@ -137,8 +137,8 @@ constraint_indexing:constraint_classification(
    SCOPE: local - Personal mental interior.
    
    WHY THIS CLASSIFICATION:
-   The story itself is a Noose. It extracts life and peace from the host. 
-   The act of telling it is an attempt to "move" the Noose to a new 
+   The story itself is a Snare. It extracts life and peace from the host. 
+   The act of telling it is an attempt to "move" the Snare to a new 
    host (Mbatha), but the constraint remains extractive for both 
    participants.
    -------------------------------------------------------------------------- */
@@ -147,7 +147,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     the_calm_protocol_suppression,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(biographical),
@@ -194,7 +194,7 @@ constraint_indexing:constraint_classification(
 :- begin_tests(the_calm_tests).
 
 test(weight_transmission_logic) :-
-    % Testing Soh (Noose) vs Crew (Rope)
+    % Testing Soh (Snare) vs Crew (Rope)
     constraint_indexing:constraint_classification(the_calm_protocol_suppression, T1, context(individual_powerless, biographical, trapped, local)),
     constraint_indexing:constraint_classification(the_calm_protocol_suppression, T2, context(institutional, immediate, mobile, local)),
     T1 \= T2.
@@ -218,22 +218,22 @@ test(suppression_signature) :-
  * Progress" (Khatri's push to 5-40). The Margin extracted is the 
  * "Psychological Safety/Honesty" of the crew. By prioritizing the 
  * mission's "Nothing happened" status, the system extracts the engineers' 
- * sanity, turning the story into a terminal Noose.
- * 2. CLASSIFICATION: Labeled as 'Noose' from the individual perspective 
+ * sanity, turning the story into a terminal Snare.
+ * 2. CLASSIFICATION: Labeled as 'Snare' from the individual perspective 
  * because the story acts as a parasite that "demands transmission" to 
  * move its weight.
  * 3. OMEGA: The uncertainty is whether the birds are a physical presence 
- * (Mountain) or a shared hallucination of the weight (Noose).
+ * (Mountain) or a shared hallucination of the weight (Snare).
  */
 
 omega_variable(
     skua_corporeality,
     "Are the skuas a physical manifestation of environmental pressure 
-     (Mountain) or a shared psychological index of the 'Weight' (Noose)?",
+     (Mountain) or a shared psychological index of the 'Weight' (Snare)?",
     resolution_mechanism("Verification of field journal photographs by an 
     external biologist (Analytical Observer)"),
     impact("If physical: They are a Mountain. If shared index: They are 
-            part of the psychological Noose."),
+            part of the psychological Snare."),
     confidence_without_resolution(low)
 ).
 
@@ -253,7 +253,7 @@ omega_variable(
  * Viability: Talking as a way to "move" the weight rather than suppress it.
  * * CONCLUSION:
  * The choice to transmit the story (Alternative 2) effectively transforms 
- * the Noose into a multi-host organism, ensuring that the "Calm" is 
+ * the Snare into a multi-host organism, ensuring that the "Calm" is 
  * always haunted.
  */
 

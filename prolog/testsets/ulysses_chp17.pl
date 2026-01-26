@@ -39,7 +39,7 @@
  * - Leopold Bloom: Individual moderate navigating the late hour via 
  * rationalist coordination (Rope).
  * - Stephen Dedalus: Individual powerless agent, the "childman weary" 
- * for whom the logic is an inescapable trap (Noose).
+ * for whom the logic is an inescapable trap (Snare).
  * - The Narrator/Universe: Institutional voice viewing the cosmos as 
  * immutable and deterministic (Mountain).
  */
@@ -84,16 +84,16 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 2: STEPHEN DEDALUS - Noose
+   PERSPECTIVE 2: STEPHEN DEDALUS - Snare
    --------------------------------------------------------------------------
    WHO: individual_powerless - The "manchild in the womb".
    WHY: For the exhausted Stephen, the mathematical "Catechism" is a 
-   "Noose"—an extractive trap of interrogation that mirrors his 
+   "Snare"—an extractive trap of interrogation that mirrors his 
    Jesuit training but offers no spiritual release.
    -------------------------------------------------------------------------- */
 constraint_indexing:constraint_classification(
     bloom_ithaca_mathematical_order,
-    noose,
+    snare,
     context(agent_power(individual_powerless), time_horizon(immediate), exit_options(trapped), spatial_scope(local))
 ) :- !.
 
@@ -144,9 +144,9 @@ test(immutability_cosmic_scaling) :-
 omega_variable(
     bloom_stephen_coordination,
     "Does the 'parallel course' indicate a genuine coordination (Rope) or 
-    an astronomical isolation (Noose)?",
+    an astronomical isolation (Snare)?",
     resolution_mechanism("Cross-referencing their 'like and unlike reactions'"),
-    impact("If coordination: Rope. If isolation: Noose."),
+    impact("If coordination: Rope. If isolation: Snare."),
     confidence_without_resolution(medium)
 ).
 
@@ -169,4 +169,4 @@ omega_variable(
 % --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
 constraint_indexing:constraint_classification(ulysses_chp17, mountain, agent_power(analytical)).
 constraint_indexing:constraint_classification(ulysses_chp17, rope, agent_power(institutional)).
-constraint_indexing:constraint_classification(ulysses_chp17, noose, agent_power(individual_powerless)).
+constraint_indexing:constraint_classification(ulysses_chp17, snare, agent_power(individual_powerless)).

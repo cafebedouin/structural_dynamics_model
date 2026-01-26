@@ -26,9 +26,9 @@ constraint_claim(completeness_structural_linkage, tangled_rope).
 constraint_metric(completeness_structural_linkage, extractiveness, 0.50).
 constraint_metric(completeness_structural_linkage, intensity, 0.35).
 
-% Noose Verification (⊠C)
+% Snare Verification (⊠C)
 % Requires extractiveness >= 0.66 AND suppression_requirement >= 0.46
-constraint_claim(relativization_and_algebrization_barrier, noose).
+constraint_claim(relativization_and_algebrization_barrier, snare).
 constraint_metric(relativization_and_algebrization_barrier, extractiveness, 0.99).
 constraint_metric(relativization_and_algebrization_barrier, suppression_requirement, 0.75).
 

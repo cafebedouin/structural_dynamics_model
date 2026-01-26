@@ -76,21 +76,36 @@ param(mountain_suppression_ceiling, 0.05). % noise floor
 param(mountain_snap_back_ceiling,    0.00). 
 
 % --- Rope Boundaries ---
+% Effective extraction ceiling (Chi)
 param(rope_extraction_ceiling,       0.35). % Pure coordination
+% Base extraction ceiling for pure coordination
 param(rope_suppression_ceiling,      0.15). 
 
 % --- Tangled Rope (Hybrid Zone) ---
-% Zone between Rope (0.35) and Noose (0.66)
-param(tangled_rope_extraction_ceil,  0.65). 
-param(tangled_rope_suppression_ceil, 0.45). % Fixed: 0.45 instead of 045
+% Updated January 2026 based on empirical corpus analysis (168/467 constraints, 36%)
+% Hybrid coordination/extraction: provides genuine coordination while extracting asymmetrically
+% Extraction range: 0.40-0.90 (above rope ceiling, below pure extraction)
+% Suppression floor: 0.50 (requires active enforcement)
+param(tangled_rope_extraction_floor, 0.40).  % Above rope ceiling
+param(tangled_rope_extraction_ceil,  0.90).  % Below pure extraction ceiling
+param(tangled_rope_suppression_floor, 0.50). % Requires active enforcement
 
-% --- Noose Boundaries ---
-param(noose_extraction_floor,        0.66). 
-param(noose_suppression_floor,       0.46). 
-param(noose_load_bearing_threshold,  0.70). 
+% --- Snare Boundaries ---
+param(snare_extraction_floor,        0.66). 
+param(snare_suppression_floor,       0.46). 
+param(snare_load_bearing_threshold,  0.70). 
 
-% --- Zombie Boundaries ---
-param(zombie_extraction_ceiling,     0.10).
+% --- Scaffold Boundaries ---
+% Temporary supports must remain below this coordination ceiling
+param(scaffold_extraction_ceil, 0.30).
+
+% --- Piton Boundaries ---
+param(piton_extraction_ceiling,     0.10).
+param(piton_theater_floor,          0.70).
+
+% --- Global Meta-Parameters ---
+% param(version, 3.4).
+% param(logic_engine, 3.3).
 
 /* ================================================================
    6. STRUCTURAL SIGNATURE THRESHOLDS (v3.2)

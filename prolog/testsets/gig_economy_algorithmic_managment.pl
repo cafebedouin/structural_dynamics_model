@@ -47,7 +47,7 @@
  * * NARRATIVE ARC:
  * The gig economy is marketed as a Rope (flexibility and "being your own 
  * boss"). However, for workers who rely on it as their primary income, the 
- * platform's opaque terms and dynamic pricing function as a Noose. The 
+ * platform's opaque terms and dynamic pricing function as a Snare. The 
  * inability to see "behind the curtain" of the algorithm makes the 
  * system appear to workers as an unyielding Mountain of market physics.
  */
@@ -58,7 +58,7 @@
 
 % Required for [STEP 1] and [STEP 2] of the DR-Audit Suite
 narrative_ontology:interval(platform_labor_epoch, 0, 10).
-narrative_ontology:constraint_claim(gig_economy_algorithmic_management, noose).
+narrative_ontology:constraint_claim(gig_economy_algorithmic_management, snare).
 
 % Base extractiveness score (0.0-1.0)
 % Rationale: 0.8. High extraction; platforms capture significant surplus value 
@@ -92,7 +92,7 @@ constraint_victim(gig_economy_algorithmic_management, traditional_service_sector
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 1: THE FULL-TIME DRIVER - Noose
+   PERSPECTIVE 1: THE FULL-TIME DRIVER - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless - Lacks bargaining power; income is 100% 
@@ -103,14 +103,14 @@ constraint_victim(gig_economy_algorithmic_management, traditional_service_sector
    SCOPE: local - Navigating the specific streets of their city.
    
    WHY THIS CLASSIFICATION:
-   For the full-time worker, the system is a Noose. The platform extracts 
+   For the full-time worker, the system is a Snare. The platform extracts 
    maximum effort through "gamification" and "nudges," while the payout 
    ratios often tighten over time as the platform seeks profitability.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
     gig_economy_algorithmic_management,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -136,7 +136,7 @@ constraint_indexing:constraint_classification(
    For the casual user, the gig economy is a Rope—a functional coordination 
    mechanism that allows them to trade spare time for cash on their own 
    terms. The "flexibility" marketed by the platform is a genuine utility 
-   for them because they aren't dependent on the "Noose" of the platform's 
+   for them because they aren't dependent on the "Snare" of the platform's 
    total extractiveness.
    -------------------------------------------------------------------------- */
 
@@ -194,7 +194,7 @@ constraint_indexing:constraint_classification(
    WHY THIS CLASSIFICATION:
    The "Mountain" is the objective function of the algorithm. It is the 
    unchangeable physical law of the platform's digital terrain. While 
-   workers feel it as a Noose and managers use it as a Rope, the analyst 
+   workers feel it as a Snare and managers use it as a Rope, the analyst 
    recognizes it as an immutable structural fact: the system must 
    optimize for efficiency or face total thermodynamic collapse. It is 
    not a "choice" but a mathematical necessity of the business model.
@@ -224,7 +224,7 @@ domain_priors:suppression_score(gig_economy_algorithmic_managment, 0.3).
 :- begin_tests(gig_economy_tests).
 
 test(multi_perspective_dependency_gap) :-
-    % Driver (Noose) vs Student (Rope)
+    % Driver (Snare) vs Student (Rope)
     constraint_indexing:constraint_classification(gig_economy_algorithmic_management, T1, context(individual_powerless, immediate, trapped, local)),
     constraint_indexing:constraint_classification(gig_economy_algorithmic_management, T2, context(individual_moderate, immediate, mobile, local)),
     T1 \= T2.
@@ -245,7 +245,7 @@ test(high_extraction_signature) :-
  * * KEY DECISIONS:
  * 1. PERSPECTIVE DEPENDENCY: The "Gig Economy" is the perfect case study for 
  * how the *exact same* set of rules (the algorithm) appears as a Rope to the 
- * person with high mobility (the student) and a Noose to the person with 
+ * person with high mobility (the student) and a Snare to the person with 
  * low mobility (the full-time driver).
  * 2. EXTRACTIVENESS: Set at 0.8 because of the systemic transfer of 
  * capital risk (depreciation of private assets) to the worker.
@@ -253,10 +253,10 @@ test(high_extraction_signature) :-
 
 omega_variable(
     algorithmic_transparency_impact,
-    "Would making the algorithm 100% transparent resolve the Noose, or 
+    "Would making the algorithm 100% transparent resolve the Snare, or 
      is the extractiveness inherent in the payout ratios themselves?",
     resolution_mechanism("Comparative analysis of 'transparent' coop platforms vs. 'black-box' corporate platforms"),
-    impact("If pay stabilizes: It was a suppression Noose. If pay stays low: 
+    impact("If pay stabilizes: It was a suppression Snare. If pay stays low: 
             It is a pure economic Mountain of low-skill labor supply."),
     confidence_without_resolution(medium)
 ).
@@ -274,7 +274,7 @@ omega_variable(
  * non-extractive models and the massive marketing budgets of incumbents.
  * * CONCLUSION:
  * The active suppression of cooperative alternatives through market 
- * dominance and predatory pricing confirms the Noose classification for 
+ * dominance and predatory pricing confirms the Snare classification for 
  * full-time participants.
  */
 
@@ -292,4 +292,4 @@ omega_variable(
 
 % --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
 constraint_indexing:constraint_classification(gig_economy_algorithmic_managment, rope, agent_power(institutional)).
-constraint_indexing:constraint_classification(gig_economy_algorithmic_managment, noose, agent_power(individual_powerless)).
+constraint_indexing:constraint_classification(gig_economy_algorithmic_managment, snare, agent_power(individual_powerless)).

@@ -1,8 +1,8 @@
 % ============================================================================
 % CONSTRAINT STORY: cow_field_poop
 % ============================================================================
-% Generated: 2026-01-21
-% Model: Gemini 2.0 Flash
+% Generated: 2026-01-23
+% Model: Gemini Pro (Revised)
 % Source: "Out in the Cow Field of Life" by cafebedouin.org
 % ============================================================================
 
@@ -25,51 +25,39 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: cow_field_poop
+ * 
+ * constraint_id: cow_field_poop
  * human_readable: The Cow Field Hazard (Pragmatic Avoidance)
- * domain: social/psychological
+ * domain: social/psychological/environmental
  * temporal_scope: Perennial
  * spatial_scope: Local (The immediate path) to Global (The field of life)
- * * SUMMARY:
+ * 
+ * SUMMARY:
  * This constraint defines the presence of "poop" (negative events, social hazards, or 
  * nonsense) as an inherent and diverse feature of existence. It 
  * distinguishes between the analytical act of cataloging these hazards and the 
  * pragmatic necessity of avoiding them.
- * * KEY AGENTS:
- * - The Practical Walker (Agent): The individual attempting to navigate the field 
- * without "stepping in one".
- * - The Cataloger (Analytical): An observer who describes every detail of the 
- * "poop" but may miss the functional point of navigation.
- * - The Victim (The Stepper): One who has already encountered the hazard, 
- * suffering immediate extraction of dignity or cleanliness.
- * * NARRATIVE ARC:
- * Life is presented as a field saturated with diverse hazards (fresh, wet, old, 
- * round). The "main thing" is not the intellectual mastery of the 
- * hazard's taxonomy, but the operational coordination of one's own feet to 
- * ensure a clean passage.
+ * 
+ * KEY AGENTS:
+ * - The Practical Walker (Individual Moderate): The individual attempting to navigate the field.
+ * - Public Works Department / Urban Planner (Institutional): Manages environmental hazards through infrastructure.
+ * - The Victim (Individual Powerless): One who has already encountered the hazard.
  */
 
 /* ==========================================================================
    2. CORE SYSTEM INTEGRATION (The "Reality" Layer)
    ========================================================================== */
 
-/* ==========================================================================
-   2. CORE SYSTEM INTEGRATION (The "Reality" Layer)
-   ========================================================================== */
-
-% Required for [STEP 1] and [STEP 2] of the DR-Audit Suite
 narrative_ontology:interval(cow_field_poop, 0, 10).
-
-% Updated to valid v3.1 ontology pillar: [mountain]
 narrative_ontology:constraint_claim(cow_field_poop, mountain).
 
-% Base extractiveness: Moderate (0.4)
-% Rationale: Encountering a hazard extracts time, emotional energy, and resources (cleaning). 
+% Base extractiveness: 0.4.
+% Encountering a hazard extracts time, emotional energy, and resources (cleaning). 
 % Cataloging without avoiding also extracts cognitive bandwidth.
 domain_priors:base_extractiveness(cow_field_poop, 0.4).
 
-% Suppression: Moderate (0.3)
-% Rationale: The "extraordinary" detail of cataloging can suppress the "ordinary" 
+% Suppression: 0.3.
+% The "extraordinary" detail of cataloging can suppress the "ordinary" 
 % necessity of simple navigation.
 domain_priors:suppression_score(cow_field_poop, 0.3).
 
@@ -77,12 +65,8 @@ domain_priors:suppression_score(cow_field_poop, 0.3).
 domain_priors:emerges_naturally(cow_field_poop).
 
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(cow_field_poop, effective_navigators). % Those who know how not to step.
-constraint_victim(cow_field_poop, the_unwary_walker).         % Those who step in it.
-
-% Metrics required for Section 1 of the Executive Summary
-narrative_ontology:constraint_metric(cow_field_poop, extractiveness, 0.4).
-narrative_ontology:constraint_metric(cow_field_poop, suppression_requirement, 0.3).
+constraint_beneficiary(cow_field_poop, effective_navigators).
+constraint_victim(cow_field_poop, the_unwary_walker).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)
@@ -91,22 +75,15 @@ narrative_ontology:constraint_metric(cow_field_poop, suppression_requirement, 0.
 /* --------------------------------------------------------------------------
    PERSPECTIVE 1: THE PRACTICAL WALKER - Rope
    --------------------------------------------------------------------------
-   
    WHO: individual_moderate (Has agency to choose where to step)
    WHEN: immediate (The next step in the field)
    WHERE: mobile (Can see hazards and adjust path)
-   SCOPE: local (The immediate environment)
    
    WHY THIS CLASSIFICATION:
-   For the navigator, the hazards are a "Rope"—a functional coordination mechanism. 
+   For the navigator, the hazards are a 'Rope'—a functional coordination mechanism. 
    Knowledge of the "poop" is used as a tool to successfully coordinate movement 
-   through the field.
-   
-   NARRATIVE EVIDENCE:
-   "The main thing is knowing, how not to step in one".
+   through the field, ensuring a clean passage.
    -------------------------------------------------------------------------- */
-
-
 
 constraint_indexing:constraint_classification(
     cow_field_poop,
@@ -117,68 +94,57 @@ constraint_indexing:constraint_classification(
         exit_options(mobile),
         spatial_scope(local)
     )
-) :- !.
+).
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE VICTIM (THE STEPPER) - Noose
+   PERSPECTIVE 2: PUBLIC WORKS DEPARTMENT / URBAN PLANNER - Mountain
    --------------------------------------------------------------------------
+   WHO: institutional (Manages environmental hazards through infrastructure)
+   WHEN: historical (Long-term planning for public health and safety)
+   WHERE: analytical (Develops systems to mitigate inherent hazards)
    
-   WHO: individual_powerless (Slaves to the "poop" they just stepped in)
-   WHEN: immediate (The moment of impact)
-   WHERE: trapped (Bounded by the mess and its consequences)
-   SCOPE: local
-   
-   WHY THIS CLASSIFICATION:
-   For the person who has stepped in it, the hazard is a "Noose." It has 
-   tightened around their foot, extracting their progress and comfort, and 
-   requiring immediate "liquidation" of the mess to proceed.
-   
-   NARRATIVE EVIDENCE:
-   "how not to step in one" [implies the negative state of having stepped in one].
-   -------------------------------------------------------------------------- */
-
-constraint_indexing:constraint_classification(
-    cow_field_poop,
-    noose,
-    context(
-        agent_power(individual_powerless),
-        time_horizon(immediate),
-        exit_options(trapped),
-        spatial_scope(local)
-    )
-) :- 
-    domain_priors:base_extractiveness(cow_field_poop, E),
-    E > 0.3,
-    !.
-
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE CATALOGER - Mountain
-   --------------------------------------------------------------------------
-   
-   WHO: analytical (Ancient and wise observer of "every detail")
-   WHEN: historical (Viewing the field as a permanent collection of objects)
-   WHERE: analytical (Observer stance; "catalog them all")
-   SCOPE: global (The "cow field of life")
-   
-   WHY THIS CLASSIFICATION:
-   To the analytical observer, the hazards are a "Mountain"—an unchangeable 
-   natural law of the terrain. The "poop" is a fixed, albeit diverse, 
-   feature of the environment that exists to be described and understood.
-   
-   NARRATIVE EVIDENCE:
-   "Even if you catalog them all, and describe every detail".
+   WHY THIS CLCLASSIFICATION:
+   For a Public Works Department or Urban Planner, "cow field poop" represents
+   a 'Mountain'—an inherent environmental hazard or urban planning challenge
+   that must be managed through infrastructure and public policy, not simply
+   avoided by individuals. It's a fixed reality that requires systemic solutions.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
     cow_field_poop,
     mountain,
     context(
-        agent_power(analytical),
+        agent_power(institutional),
         time_horizon(historical),
         exit_options(analytical),
-        spatial_scope(global)
+        spatial_scope(regional)
     )
-) :- !.
+).
+
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 3: THE VICTIM (THE STEPPER) - Snare
+   --------------------------------------------------------------------------
+   WHO: individual_powerless (Suffers immediate extraction of dignity or cleanliness)
+   WHEN: immediate (The moment of impact)
+   WHERE: trapped (Bounded by the mess and its consequences)
+   
+   WHY THIS CLASSIFICATION:
+   For the person who has stepped in it, the hazard is a 'Snare'. It has 
+   tightened around their foot, extracting their progress and comfort, and 
+   requiring immediate "liquidation" of the mess to proceed. This effectively
+   strangles their dignity and mobility.
+   -------------------------------------------------------------------------- */
+
+constraint_indexing:constraint_classification(
+    cow_field_poop,
+    snare,
+    context(
+        agent_power(individual_powerless),
+        time_horizon(immediate),
+        exit_options(trapped),
+        spatial_scope(local)
+    )
+).
 
 /* ==========================================================================
    4. TESTS (What We Learn About Constraints)
@@ -186,23 +152,13 @@ constraint_indexing:constraint_classification(
 
 :- begin_tests(cow_field_poop_tests).
 
-test(multi_perspective_navigation) :-
-    % Walker sees Rope
-    constraint_indexing:constraint_classification(cow_field_poop, Type1, context(individual_moderate, immediate, mobile, local)),
-    % Stepper sees Noose
-    constraint_indexing:constraint_classification(cow_field_poop, Type2, context(individual_powerless, immediate, trapped, local)),
-    % Cataloger sees Mountain
-    constraint_indexing:constraint_classification(cow_field_poop, Type3, context(analytical, historical, analytical, global)),
+test(multi_perspective_variance) :-
+    constraint_indexing:constraint_classification(cow_field_poop, Type1, context(agent_power(individual_moderate), _, _, _)),
+    constraint_indexing:constraint_classification(cow_field_poop, Type2, context(agent_power(institutional), _, _, _)),
+    constraint_indexing:constraint_classification(cow_field_poop, Type3, context(agent_power(individual_powerless), _, _, _)),
     Type1 \= Type2,
-    Type2 \= Type3.
-
-test(power_extractiveness_navigation) :-
-    % The victim (powerless) experiences higher extraction of cleanliness/time
-    ContextPowerless = context(individual_powerless, immediate, trapped, local),
-    ContextModerate = context(individual_moderate, immediate, mobile, local),
-    constraint_indexing:extractiveness_for_agent(cow_field_poop, ContextPowerless, E1),
-    constraint_indexing:extractiveness_for_agent(cow_field_poop, ContextModerate, E2),
-    E1 > E2.
+    Type2 \= Type3,
+    Type1 \= Type3.
 
 :- end_tests(cow_field_poop_tests).
 
@@ -212,60 +168,74 @@ test(power_extractiveness_navigation) :-
 
 /**
  * LLM GENERATION NOTES
- * * Model: Gemini 2.0 Flash
- * Date: 2026-01-21
- * * KEY DECISIONS:
- * * 1. EXTRACTIVENESS SCORE (0.4):
- * Reasoning: Stepping in "poop" is an extraction of time and state. However, the 
- * text focuses on the *knowledge* of avoidance, which mitigates the extraction 
- * for those who learn.
- * * 2. PERSPECTIVE SELECTION:
- * Contrasted the Cataloger (Mountain) with the Practical Walker (Rope) to 
- * reflect the text's primary pedagogical point: knowing vs. doing.
- * * 3. CLASSIFICATION RATIONALE:
- * Practical Walker -> Rope: Coordination tool for safe passage.
- * Cataloger -> Mountain: Fixed feature of life's "field."
- * * 4. AMBIGUITIES:
- * The nature of the "poop" is metaphorical. I have mapped it as "environmental 
- * hazards" or "social noise."
+ * 
+ * Model: Gemini Pro (Revised)
+ * Date: 2026-01-23
+ * 
+ * KEY DECISIONS:
+ * 
+ * 1. INSTITUTIONAL PERSPECTIVE: Added 'Public Works Department / Urban Planner'
+ *    as the institutional agent. For them, environmental hazards are a 'Mountain'
+ *    requiring systemic management.
+ *
+ * 2. CLASSIFICATION RATIONALE:
+ *    - Practical Walker (Rope): A tool for navigation and avoidance.
+ *    - Public Works (Mountain): Inherent environmental hazard requiring systemic solutions.
+ *    - Victim (Snare): Trapped by the immediate consequences of the hazard.
+ * 
+ * 3. CORE INSIGHT: Life's "cow field" presents a fundamental 'Mountain' of
+ *    unavoidable hazards. While individuals can use a 'Rope' of pragmatic
+ *    avoidance, and institutions employ systemic management strategies, the
+ *    failure to navigate these hazards can quickly turn into a dignifying 'Snare'
+ *    for the unwary.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
+/**
+ * OMEGA IDENTIFICATION
+ *
+ * The core uncertainty is the utility of detailed hazard cataloging versus pragmatic avoidance.
+ */
 
 omega_variable(
     poop_catalog_utility,
-    "Does 'describing every detail' of life's hazards eventually provide a Rope 
-     for better avoidance, or is it a terminal Mountain of academic clutter?",
-    resolution_mechanism("Audit of navigation success rates in catalogers vs. non-cataloging practitioners"),
-    impact("If beneficial: Cataloging is a Rope. If clutter: It is a Noose for time-extraction."),
+    "Does 'describing every detail' of life's hazards eventually provide a 'Rope' for better avoidance and systemic mitigation, or is it a terminal 'Mountain' of academic clutter, distracting from pragmatic action?",
+    resolution_mechanism("Audit of navigation success rates in catalogers vs. non-cataloging practitioners; effectiveness of public awareness campaigns versus infrastructure investments in hazard reduction."),
+    impact("If beneficial: Cataloging is a 'Rope'. If clutter: It is a 'Snare' for time-extraction and a distraction from real solutions."),
     confidence_without_resolution(medium)
 ).
 
 /* ==========================================================================
    7. ALTERNATIVE ANALYSIS
    ========================================================================== */
-
 /**
  * VIABLE ALTERNATIVES
- * * ALTERNATIVE 1: Cleaning the Field (Sanitization)
- * Viability: Removing the hazards entirely.
- * Suppression: Shunted as impossible; the poem assumes the field *contains* * the poop and the only agency is avoidance.
- * * ALTERNATIVE 2: Pure Ignorance
- * Viability: Walking without looking.
- * Suppression: Leads directly to the "Noose" of stepping in one.
- * * CONCLUSION:
- * The absence of Alternative 1 (Sanitization) makes "avoidance" (Rope) the 
- * only logical path in a field that is structurally a "Mountain."
+ *
+ * ALTERNATIVE 1: Cleaning the Field (Systemic Sanitization)
+ *    Viability: Removing the hazards entirely through large-scale environmental engineering or social reform.
+ *    Suppression: Often shunted as impossible or prohibitively expensive; the parable assumes the field *contains* the poop, and the only individual agency is avoidance.
+ *
+ * CONCLUSION:
+ * The "cow field" highlights the 'Mountain' of inherent hazards in existence.
+ * While individuals develop 'Ropes' of pragmatic avoidance, and institutions
+ * seek systemic 'Ropes' (infrastructure), the ultimate solution of 'Cleaning
+ * the Field' is often suppressed by its perceived impossibility, leaving
+ * many to face the 'Snare' of direct hazard.
  */
 
 /* ==========================================================================
    8. INTEGRATION HOOKS
    ========================================================================== */
 
-% Load: ?- [cow_field_poop].
-% Multi-perspective: ?- constraint_indexing:multi_index_report(cow_field_poop).
+/**
+ * TO USE THIS FILE:
+ * 
+ * 1. Load: ?- [constraints/cow_field_poop].
+ * 2. Multi-perspective: ?- multi_index_report(cow_field_poop).
+ * 3. Run tests: ?- run_tests(cow_field_poop_tests).
+ */
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

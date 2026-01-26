@@ -42,13 +42,13 @@
  * - The Institutional Designer: An agent who uses the dilemma as a "Rope" to 
  * coordinate behavior through external incentives (laws, contracts).
  * - The Exploiter (Individual Powerful): An agent who treats the dilemma as 
- * a "Noose" to extract value from cooperative subjects through defection.
+ * a "Snare" to extract value from cooperative subjects through defection.
  * * NARRATIVE ARC:
  * The Prisoner's Dilemma is the "Mountain" of non-cooperative reality—the Nash 
  * Equilibrium is a fixed, unyielding gravity that pulls rational agents toward 
  * mutual defection. In civil society, it is a "Rope" for coordination; we 
  * build institutions to "pull" ourselves out of the equilibrium. However, in 
- * unregulated markets or warfare, the dilemma acts as a "Noose," extracting 
+ * unregulated markets or warfare, the dilemma acts as a "Snare," extracting 
  * total utility (extraction) and strangling the possibility of peace.
  */
 
@@ -148,7 +148,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE ARMS RACE NATION - Noose
+   PERSPECTIVE 3: THE ARMS RACE NATION - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerful - Possesses nukes/power, but bound by the opponent's logic.
@@ -157,7 +157,7 @@ constraint_indexing:constraint_classification(
    SCOPE: global - The entire planet is at risk.
    
    WHY THIS CLASSIFICATION:
-   In an arms race, the dilemma is a "Noose." It "strangles" both nations, 
+   In an arms race, the dilemma is a "Snare." It "strangles" both nations, 
    extracting trillions of dollars in wealth (extraction) for weapons that 
    neither side wants to use. Both are powerful, yet both are "choked" by 
    the inability to reach the cooperative "Rope" without being exploited.
@@ -167,7 +167,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     prisoners_dilemma_equilibrium,
-    noose,
+    snare,
     context(
         agent_power(individual_powerful),
         time_horizon(historical),
@@ -190,7 +190,7 @@ test(multi_perspective_variance) :-
     constraint_indexing:constraint_classification(prisoners_dilemma_equilibrium, Type1, context(individual_powerless, immediate, trapped, local)),
     % Legislator -> Rope
     constraint_indexing:constraint_classification(prisoners_dilemma_equilibrium, Type2, context(institutional, biographical, mobile, national)),
-    % Nation -> Noose
+    % Nation -> Snare
     constraint_indexing:constraint_classification(prisoners_dilemma_equilibrium, Type3, context(individual_powerful, historical, constrained, global)),
     Type1 \= Type2,
     Type2 \= Type3.
@@ -222,7 +222,7 @@ test(iterated_exit_rope) :-
  * * 2. CLASSIFICATION RATIONALE:
  * - Prisoner (Mountain): The classic one-shot scenario.
  * - Legislator (Rope): Using the "Rope" of the law to bind defectors.
- * - Arms Race (Noose): High-power agents trapped by mutual fear.
+ * - Arms Race (Snare): High-power agents trapped by mutual fear.
  * * 3. OMEGAS:
  * Formalized the uncertainty of "Inherent Altruism"—does a biological 
  * Mountain of empathy override the mathematical Mountain of the dilemma?
@@ -252,8 +252,8 @@ omega_variable(
  * suppressing the viability of Alternative 1 (Self-organized trust).
  * * CONCLUSION:
  * The presence of "Trust" as a viable alternative (Alternative 1) is what 
- * makes the dilemma a "Noose" rather than a "Mountain" for sophisticated 
- * societies. If trust is suppressed, the "Noose" tightens.
+ * makes the dilemma a "Snare" rather than a "Mountain" for sophisticated 
+ * societies. If trust is suppressed, the "Snare" tightens.
  */
 
 /* ==========================================================================

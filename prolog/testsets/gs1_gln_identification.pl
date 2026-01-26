@@ -46,7 +46,7 @@
  * What functions as a vital Rope for coordination in high-stakes industries 
  * like healthcare (ensuring meds go to the right room) appears as a 
  * Mountain to the workers who must manage the hardware. For small clinics 
- * or vendors, the mandatory adoption and licensing fees function as a Noose.
+ * or vendors, the mandatory adoption and licensing fees function as a Snare.
  */
 
 /* ==========================================================================
@@ -145,7 +145,7 @@ constraint_indexing:constraint_classification(
     !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: DATA PRIVACY ANALYST - Noose
+   PERSPECTIVE 3: DATA PRIVACY ANALYST - Snare
    --------------------------------------------------------------------------
    
    WHO: analytical - Observer of the "surveillance" potential of fixed IDs.
@@ -154,7 +154,7 @@ constraint_indexing:constraint_classification(
    SCOPE: global - Data sovereignty and competitive intelligence.
    
    WHY THIS CLASSIFICATION:
-   The analyst identifies the Noose. Because GLNs are public and standardized, 
+   The analyst identifies the Snare. Because GLNs are public and standardized, 
    they allow competitors to map a company's entire logistical footprint 
    with high precision. The "efficiency" of the Rope extracts strategic 
    secrecy, choking off a company's ability to hide its supply chain nodes.
@@ -162,7 +162,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     gs1_gln_identification,
-    noose,
+    snare,
     context(
         agent_power(analytical),
         time_horizon(historical),
@@ -211,7 +211,7 @@ omega_variable(
     "Does the 'Mountain' status fail if the GS1 Registry data becomes 
      stale/inaccurate over time?",
     resolution_mechanism("Audit of GLN physical-to-digital mapping accuracy in healthcare sectors"),
-    impact("If Inaccurate: The Mountain collapses into a Noose of errors. 
+    impact("If Inaccurate: The Mountain collapses into a Snare of errors. 
             If Accurate: It remains a reliable Rope."),
     confidence_without_resolution(medium)
 ).

@@ -6,7 +6,7 @@
 % Source: GNU General Public License (GPL) / Free Software Foundation
 % ============================================================================
 
-:- module(constraint_copyleft, []).
+:- module(constraint_copyleft_viral_licensing, []).
 
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
@@ -44,7 +44,7 @@
  * "captured" by a single corporation.
  * * NARRATIVE ARC:
  * Copyleft functions as a "Recursive Rope." It builds a self-expanding 
- * commons. By using the "Noose" of copyright law (the power to exclude), 
+ * commons. By using the "Snare" of copyright law (the power to exclude), 
  * it enforces a "Rope" of inclusion. It creates a matching market where 
  * the "price" of entry is the promise to keep the exit open for others.
  */
@@ -69,9 +69,7 @@ domain_priors:suppression_score(copyleft_viral_licensing, 0.2).
 % Enforcement: Requires active enforcement (Legal standing of the GPL).
 domain_priors:requires_active_enforcement(copyleft_viral_licensing).
 
-% Metrics
-narrative_ontology:constraint_metric(copyleft_viral_licensing, extractiveness, 0.05).
-narrative_ontology:constraint_metric(copyleft_viral_licensing, suppression_requirement, 0.2).
+
 
 % BENEFICIARIES & VICTIMS
 constraint_beneficiary(copyleft_viral_licensing, the_user_community).
@@ -108,11 +106,10 @@ constraint_indexing:constraint_classification(
     )
 ) :-
     domain_priors:base_extractiveness(copyleft_viral_licensing, E),
-    E < 0.1,
-    !.
+    E < 0.1.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE CORPORATE COUNSEL - Noose
+   PERSPECTIVE 2: THE CORPORATE COUNSEL - Snare
    --------------------------------------------------------------------------
    WHO: institutional
    WHEN: generational
@@ -121,14 +118,14 @@ constraint_indexing:constraint_classification(
    
    WHY THIS CLASSIFICATION:
    To a company trying to build a secret commercial product, the GPL is a 
-   "Noose." They view it as a "viral" license that, if accidentally 
+   "Snare." They view it as a "viral" license that, if accidentally 
    linked to their proprietary code, forces them to open-source their 
    entire product. It is a legal bottleneck they spend millions to avoid.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
     copyleft_viral_licensing,
-    noose,
+    snare,
     context(
         agent_power(institutional),
         time_horizon(generational),
@@ -163,25 +160,96 @@ constraint_indexing:constraint_classification(
         spatial_scope(global)
     )
 ) :-
-    domain_priors:requires_active_enforcement(copyleft_viral_licensing),
-    !.
+    domain_priors:requires_active_enforcement(copyleft_viral_licensing).
+
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 4: THE END USER - Mountain
+   --------------------------------------------------------------------------
+   WHO: individual_powerless (A non-developer using the software)
+   WHEN: immediate (When using the software)
+   WHERE: trapped (Cannot change the license)
+   SCOPE: local (Their own use of the software)
+   
+   WHY THIS CLASSIFICATION:
+   For a regular end user, the copyleft license is a "Mountain." It is an
+   invisible, unchangeable legal foundation that allows them to use powerful
+   software for free. They do not engage with its "viral" nature but benefit
+   from the commons it creates.
+   -------------------------------------------------------------------------- */
+
+constraint_indexing:constraint_classification(
+    copyleft_viral_licensing,
+    mountain,
+    context(
+        agent_power(individual_powerless),
+        time_horizon(immediate),
+        exit_options(trapped),
+        spatial_scope(local)
+    )
+).
 
 /* ==========================================================================
-   4. TESTS
+   4. TESTS (What We Learn About Constraints)
    ========================================================================== */
 
-:- begin_tests(copyleft_tests).
+:- begin_tests(copyleft_viral_licensing_tests).
 
-test(viral_noose_perception) :-
-    % Testing that institutions see Copyleft as a Noose due to its reciprocal 
-    % requirements.
-    constraint_indexing:constraint_classification(copyleft_viral_licensing, noose, context(institutional, _, _, _)).
+/**
+ * TEST 1: Multi-perspective variance
+ * Demonstrates that copyleft is viewed differently across agents.
+ */
+test(multi_perspective_variance) :-
+    % Open Source Developer (Rope)
+    constraint_indexing:constraint_classification(
+        copyleft_viral_licensing,
+        Type1,
+        context(agent_power(individual_moderate), time_horizon(biographical), exit_options(mobile), spatial_scope(global))
+    ),
+    % Corporate Counsel (Snare)
+    constraint_indexing:constraint_classification(
+        copyleft_viral_licensing,
+        Type2,
+        context(agent_power(institutional), time_horizon(generational), exit_options(trapped), spatial_scope(global))
+    ),
+    % Software Historian (Mountain)
+    constraint_indexing:constraint_classification(
+        copyleft_viral_licensing,
+        Type3,
+        context(agent_power(analytical), time_horizon(historical), exit_options(analytical), spatial_scope(global))
+    ),
+    % End User (Mountain)
+    constraint_indexing:constraint_classification(
+        copyleft_viral_licensing,
+        Type4,
+        context(agent_power(individual_powerless), time_horizon(immediate), exit_options(trapped), spatial_scope(local))
+    ),
+    % Verify they differ
+    Type1 \= Type2,
+    Type2 \= Type3. % Rope, Snare, Mountain are different
 
-test(community_rope_utility) :-
-    % Testing that mobile developers see the Rope of protected collaboration.
-    constraint_indexing:constraint_classification(copyleft_viral_licensing, rope, context(_, _, mobile, _)).
+/**
+ * TEST 2: Power-based extractiveness scaling
+ * Demonstrates that institutional agents (corporate counsel) experience higher extraction
+ * in terms of legal risk and forced transparency, compared to individual developers.
+ */
+test(power_extractiveness_scaling) :-
+    ContextIndividual = context(agent_power(individual_moderate), time_horizon(biographical), exit_options(mobile), spatial_scope(global)),
+    ContextInstitutional = context(agent_power(institutional), time_horizon(generational), exit_options(trapped), spatial_scope(global)),
+    constraint_indexing:extractiveness_for_agent(copyleft_viral_licensing, ContextIndividual, Score1),
+    constraint_indexing:extractiveness_for_agent(copyleft_viral_licensing, ContextInstitutional, Score2),
+    Score1 < Score2.  % The "powerful" institution experiences more extraction in this case.
 
-:- end_tests(copyleft_tests).
+/**
+ * TEST 3: Domain-specific insight - The "Viral" Nature
+ * Demonstrates that the "snare" for corporations is the very "rope" that protects the commons.
+ */
+test(viral_nature_insight) :-
+    constraint_indexing:constraint_classification(copyleft_viral_licensing, ClassificationCorporate, context(agent_power(institutional), _, _, _)),
+    constraint_indexing:constraint_classification(copyleft_viral_licensing, ClassificationDeveloper, context(agent_power(individual_moderate), _, _, _)),
+    ClassificationCorporate = snare,
+    ClassificationDeveloper = rope.
+
+:- end_tests(copyleft_viral_licensing_tests).
 
 /* ==========================================================================
    5. MODEL INTERPRETATION (Commentary)
@@ -189,25 +257,68 @@ test(community_rope_utility) :-
 
 /**
  * LLM GENERATION NOTES
- * * Model: Gemini 2.0 Flash
- * * KEY DECISIONS:
- * Copyleft is a "force multiplier" for freedom. I set extractiveness 
- * to near zero (0.05) because its only goal is to prevent the 
- * "Noose" of proprietary software from forming around shared code. 
- * Its "viral" nature is its most powerful and feared feature.
+ * 
+ * Model: Gemini 2.0 Flash
+ * Date: 2026-01-23
+ * 
+ * KEY DECISIONS:
+ * 
+ * 1. EXTRACTIVENESS (0.05): Copyleft is designed to prevent extraction, so the base score is near zero. The only "extraction" is the requirement to share back, which is a feature, not a bug, of the system.
+ * 
+ * 2. SUPPRESSION (0.2): Low suppression because the license's terms are explicit. Any "suppression" comes from corporate policies that avoid copyleft code, not from the license itself.
+ * 
+ * 3. PERSPECTIVE SELECTION:
+ *    Selected Open Source Developer (Rope), Corporate Counsel (Snare), Software Historian (Mountain), and End User (Mountain) to show the full range of interactions with copyleft, from active participation to legal opposition to passive benefit.
+ * 
+ * 4. OMEGAS 
+ *    Define uncertainty so your analysis is cleaner
+ *    omega_variable(
+ *        saas_loophole_resolution,
+ *        "Will the 'SaaS Loophole' (AGPL) eventually become the new legal Mountain for cloud-based software?",
+ *        resolution_mechanism("Tracking adoption rates of AGPL vs GPL in hyperscale cloud providers and related court cases."),
+ *        impact("If Yes: The 'Snare' for cloud providers tightens, forcing them to share back server-side code. If No: The commons may be 'extracted' via SaaS models."),
+ *        confidence_without_resolution(medium)
+ *    ).
  */
 
 /* ==========================================================================
-   6. OMEGA VARIABLES (Ω)
+   6. ALTERNATIVE ANALYSIS (If Applicable)
    ========================================================================== */
 
-omega_variable(
-    saas_loophole_resolution,
-    "Will the 'SaaS Loophole' (AGPL) eventually become the new legal Mountain for cloud-based software?",
-    resolution_mechanism("Tracking adoption rates of AGPL vs GPL in hyperscale cloud providers"),
-    impact("If Yes: The 'Noose' for cloud providers tightens; they must share back server-side code."),
-    confidence_without_resolution(medium)
-).
+/**
+ * VIABLE ALTERNATIVES: Permissive Licensing
+ * 
+ * ALTERNATIVE 1: Permissive Licenses (e.g., MIT, Apache)
+ *    Viability: High. These licenses are extremely popular in corporate environments because they allow for proprietary derivatives.
+ *    Suppression: Copyleft is not suppressed, but rather presents a different philosophical and legal choice. The two systems coexist.
+ *    Evidence: The ongoing "license wars" and debates within the open-source community.
+ * 
+ * CONCLUSION:
+ * The choice between copyleft and permissive licenses represents a fundamental fork in the road for open-source projects. Copyleft prioritizes the freedom of the commons (Rope for community), while permissive licenses prioritize the freedom of the individual developer/corporation (Rope for individual). The "Snare" of copyleft is the price paid for a guaranteed-free commons.
+ */
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+/**
+ * TO USE THIS CONSTRAINT:
+ * 
+ * 1. Load into main system:
+ *    ?- [constraints/copyleft_viral_licensing].
+ * 
+ * 2. Run multi-perspective analysis:
+ *    ?- constraint_indexing:multi_index_report(copyleft_viral_licensing).
+ * 
+ * 3. Run tests:
+ *    ?- run_tests(copyleft_viral_licensing_tests).
+ * 
+ * 4. Generate pedagogical report:
+ *    ?- pedagogical_report(copyleft_viral_licensing).
+ * 
+ * 5. Compare with other constraints:
+ *    ?- compare_constraints(copyleft_viral_licensing, [other_id]).
+ */
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

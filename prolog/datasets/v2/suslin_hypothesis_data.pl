@@ -35,10 +35,10 @@ constraint_metric(ccc_restriction, suppression_requirement, 0.38).
 constraint_metric(ccc_restriction, snap_back_potential, 0.65).
 constraint_metric(ccc_restriction, extractiveness, 0.54).
 
-% The ZFC Independence Sink (The Noose)
+% The ZFC Independence Sink (The Snare)
 % ZFC cannot determine if every CCC-dense-order is isomorphic to the real line (separability).
 % Extractiveness at 0.98 requires 'diamond_axiom_scaffold' to create a counterexample.
-constraint_claim(suslin_separability_undecidability, noose).
+constraint_claim(suslin_separability_undecidability, snare).
 constraint_metric(suslin_separability_undecidability, intensity, 0.99).
 constraint_metric(suslin_separability_undecidability, suppression_requirement, 0.96).
 constraint_metric(suslin_separability_undecidability, snap_back_potential, 0.01).
@@ -49,7 +49,7 @@ constraint_metric(suslin_separability_undecidability, extractiveness, 0.98).
 recommendation(rec_01, translate_linear_order_properties_into_suslin_tree_topology).
 affects_constraint(rec_01, ccc_restriction).
 
-% Noose (0.98 extractiveness) triggers Cut
+% Snare (0.98 extractiveness) triggers Cut
 % Utilizing 'diamond_axiom_scaffold' (Phi) to construct a non-separable Suslin line.
 recommendation(rec_02, adopt_diamond_axiom_to_construct_suslin_line_counterexample).
 affects_constraint(rec_02, suslin_separability_undecidability).

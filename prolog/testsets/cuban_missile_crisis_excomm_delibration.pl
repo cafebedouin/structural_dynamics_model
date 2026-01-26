@@ -50,7 +50,7 @@
  * Mountain (an unchangeable threat requiring immediate force). Through the 
  * ExComm protocol, this was reframed as a Rope (a coordination problem 
  * requiring a blockade and diplomatic back-channels), successfully 
- * avoiding the Noose of a global thermonuclear exchange.
+ * avoiding the Snare of a global thermonuclear exchange.
  */
 
 /* ==========================================================================
@@ -168,7 +168,7 @@ constraint_indexing:constraint_classification(
    
    WHY THIS CLASSIFICATION:
    From a safe distance, the ExComm is seen as an ideal Rope—a system 
-   designed to prevent the "Noose" of a binary choice (Total Surrender vs. 
+   designed to prevent the "Snare" of a binary choice (Total Surrender vs. 
    Total War) by creating a middle-path mechanism for de-escalation.
    -------------------------------------------------------------------------- */
 
@@ -185,7 +185,7 @@ constraint_indexing:constraint_classification(
     !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE GLOBAL CIVILIAN (SUBJECT) - Noose
+   PERSPECTIVE 3: THE GLOBAL CIVILIAN (SUBJECT) - Snare
    --------------------------------------------------------------------------
    WHO: individual_powerless - The billions of subjects with no agency in the room.
    WHEN: immediate - The "Thirteen Days" where every second is a potential end.
@@ -193,16 +193,16 @@ constraint_indexing:constraint_classification(
    SCOPE: global - The stakes encompass the entire biosphere.
    
    WHY THIS CLASSIFICATION:
-   The "Noose" is the state of nuclear brinkmanship. While EXCOMM uses 
+   The "Snare" is the state of nuclear brinkmanship. While EXCOMM uses 
    deliberation as a Rope to pull back from the edge, the individual subject 
-   feels the Noose tightening. For them, this is not "coordination" but a 
+   feels the Snare tightening. For them, this is not "coordination" but a 
    passive wait for an existential verdict. The stakes (0.95) and 
    suppression of agency (0.9) create the ultimate structural trap.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
     cuban_missile_crisis_excomm_delibration,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -272,7 +272,7 @@ omega_variable(
  * * CONCLUSION:
  * Unlike the Bay of Pigs, where alternatives were hidden, here they 
  * were interrogated. This transparency is what keeps the ExComm in 
- * the 'Rope' category rather than 'Noose' or 'Mountain'.
+ * the 'Rope' category rather than 'Snare' or 'Mountain'.
  */
 
 /* ==========================================================================

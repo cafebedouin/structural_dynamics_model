@@ -10,9 +10,9 @@ event(inc, incorporation, 0, [jurisdiction:delaware]).
 event(ig_deal, acquisition_agreement, 8, [target:instagram, cash:300_million, stock:22_999_412_shares]).
 event(audit_settlement, ftc_agreement, 7, [duration:20_years, audit_frequency:bi_annual]).
 
-constraint_claim(user_retention, zombie).
+constraint_claim(user_retention, piton).
 constraint_claim(mobile_monetization, tangled_rope).
-constraint_claim(founder_control, noose).
+constraint_claim(founder_control, snare).
 
 constraint_metric(user_retention, intensity, 0.33).
 constraint_metric(mobile_monetization, extractiveness, 0.15).

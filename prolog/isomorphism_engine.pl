@@ -56,15 +56,15 @@ generate_cross_domain_index(Index) :-
 	    ), Index).
 
 %% find_high_risk_isomorphism(-C1, -C2, -Score)
-%  Filters isomorphisms specifically for "Noose" or "Tangled Rope" clusters.
+%  Filters isomorphisms specifically for "Snare" or "Tangled Rope" clusters.
 find_high_risk_isomorphism(C1, C2, Score) :-
     find_isomorphism(C1, C2, Score),
     is_high_risk(C1),
     is_high_risk(C2).
 
 %% is_high_risk(+Constraint)
-%  Checks if a constraint is classified as a Noose or Tangled Rope 
+%  Checks if a constraint is classified as a Snare or Tangled Rope 
 %  from the default analytical perspective.
 is_high_risk(C) :-
     drl_core:dr_type(C, Type),
-    member(Type, [noose, tangled_rope]).
+    member(Type, [snare, tangled_rope]).

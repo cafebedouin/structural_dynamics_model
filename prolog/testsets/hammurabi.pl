@@ -76,7 +76,7 @@ narrative_ontology:constraint_metric(hammurabi_lex_talionis, suppression_require
    ========================================================================= */
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 1: THE SLAVE - Noose
+   PERSPECTIVE 1: THE SLAVE - Snare
    --------------------------------------------------------------------------
    WHO: individual_powerless
    WHEN: biographical
@@ -91,7 +91,7 @@ narrative_ontology:constraint_metric(hammurabi_lex_talionis, suppression_require
 
 constraint_indexing:constraint_classification(
     hammurabi_lex_talionis,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(biographical),
@@ -193,9 +193,9 @@ test(social_valuation_asymmetry) :-
  * 1. EXTRACTIVENESS (0.5): The code is not purely extractive (like a slave plantation) 
  * because it imposes heavy penalties on the *powerful* as well (e.g., a builder 
  * being killed if a house falls). This "functional" aspect keeps it 
- * from being a 1.0 Noose.
+ * from being a 1.0 Snare.
  * 2. PERSPECTIVE SELECTION: Chose the Slave/Gentleman/Historian triad to show 
- * the movement from Coercion (Noose) to Coordination (Rope) to Natural Law (Mountain).
+ * the movement from Coercion (Snare) to Coordination (Rope) to Natural Law (Mountain).
  * 3. CONFIDENCE: High. The text explicitly defines the social strata and 
  * corresponding penalties .
  */
@@ -233,4 +233,4 @@ test(social_valuation_asymmetry) :-
 % --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
 constraint_indexing:constraint_classification(hammurabi, mountain, agent_power(analytical)).
 constraint_indexing:constraint_classification(hammurabi, rope, agent_power(institutional)).
-constraint_indexing:constraint_classification(hammurabi, noose, agent_power(individual_powerless)).
+constraint_indexing:constraint_classification(hammurabi, snare, agent_power(individual_powerless)).

@@ -35,10 +35,10 @@ constraint_metric(clause_density_entanglement, suppression_requirement, 0.45).
 constraint_metric(clause_density_entanglement, snap_back_potential, 0.75).
 constraint_metric(clause_density_entanglement, extractiveness, 0.65).
 
-% The Exponential Time Hypothesis (The Noose)
-% The belief that 3-SAT requires $2^{\delta n}$ time; the absolute "Noose" for worst-case scaling.
+% The Exponential Time Hypothesis (The Snare)
+% The belief that 3-SAT requires $2^{\delta n}$ time; the absolute "Snare" for worst-case scaling.
 % Extractiveness at 0.99 requires the 'dpll_cdcl_scaffold' to achieve practical performance.
-constraint_claim(worst_case_exponential_bound, noose).
+constraint_claim(worst_case_exponential_bound, snare).
 constraint_metric(worst_case_exponential_bound, intensity, 0.99).
 constraint_metric(worst_case_exponential_bound, suppression_requirement, 0.96).
 constraint_metric(worst_case_exponential_bound, snap_back_potential, 0.02).
@@ -49,7 +49,7 @@ constraint_metric(worst_case_exponential_bound, extractiveness, 0.99).
 recommendation(rec_01, utilize_conflict_driven_clause_learning_to_decouple_search_space).
 affects_constraint(rec_01, clause_density_entanglement).
 
-% Noose (0.99 extractiveness) triggers Cut
+% Snare (0.99 extractiveness) triggers Cut
 % Utilizing 'dpll_cdcl_scaffold' to focus on industrial-track heuristics rather than worst-case theory.
 recommendation(rec_02, adopt_stochastic_local_search_for_under_constrained_instances).
 affects_constraint(rec_02, worst_case_exponential_bound).

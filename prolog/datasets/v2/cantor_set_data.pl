@@ -35,10 +35,10 @@ constraint_metric(self_similar_fragmentation, suppression_requirement, 0.40).
 constraint_metric(self_similar_fragmentation, snap_back_potential, 0.70).
 constraint_metric(self_similar_fragmentation, extractiveness, 0.58).
 
-% The Lebesgue Measure Dissolution (The Noose)
+% The Lebesgue Measure Dissolution (The Snare)
 % The total length of the set vanishes to zero, "strangling" the 1D spatial utility.
 % Extractiveness at 0.94 requires the 'ternary_expansion_grid' scaffold to resolve.
-constraint_claim(measure_exhaustion, noose).
+constraint_claim(measure_exhaustion, snare).
 constraint_metric(measure_exhaustion, intensity, 0.98).
 constraint_metric(measure_exhaustion, suppression_requirement, 0.92).
 constraint_metric(measure_exhaustion, snap_back_potential, 0.05).
@@ -49,7 +49,7 @@ constraint_metric(measure_exhaustion, extractiveness, 0.94).
 recommendation(rec_01, transition_to_base_3_representation_for_point_identification).
 affects_constraint(rec_01, self_similar_fragmentation).
 
-% Noose (0.94 extractiveness) triggers Cut
+% Snare (0.94 extractiveness) triggers Cut
 % Utilizing 'ternary_expansion_grid' to map points to the binary set {0, 2}.
 recommendation(rec_02, redefine_utility_via_fractal_dimension_rather_than_length).
 affects_constraint(rec_02, measure_exhaustion).

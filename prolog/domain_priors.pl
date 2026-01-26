@@ -42,7 +42,7 @@ category_profile(physical_natural,    [1.00, 1.00, 0.00, 0.00]).  % Mountain
 category_profile(formal_logic,        [0.90, 0.20, 0.10, 0.10]).  % Mountain
 category_profile(statutory_formal,    [0.80, 0.50, 0.70, 0.40]).  % Rope
 category_profile(election_cycle,       [0.80, 0.80, 0.30, 0.50]). % Periodic Rope
-category_profile(extractive_market, [0.40, 0.80, 0.68, 0.60]).    % Calibrated Noose
+category_profile(extractive_market, [0.40, 0.80, 0.68, 0.60]).    % Calibrated Snare
 category_profile(narrative_history,  [0.6, 0.7, 0.41, 0.6]).      % Calibrated Rope
 category_profile(unknown_novel,      [0.55, 0.73, 0.52, 0.6]).    % Fleet Baseline
 category_profile(mandatrophy_collapse, [0.20, 0.95, 0.90, 0.30]). % Terminal State

@@ -46,7 +46,7 @@
  * The law functions as an invisible gravity in any formal structure. To the 
  * manager, it is a "Rope" (the logic of resource acquisition). To the 
  * systemic observer, it is an immutable "Mountain" of social entropy. For the 
- * productive worker, it becomes a "Noose," as their time is strangled by 
+ * productive worker, it becomes a "Snare," as their time is strangled by 
  * meetings and administrative requirements that exist only to serve the hierarchy.
  */
 
@@ -148,7 +148,7 @@ constraint_indexing:constraint_classification(
    SCOPE: local
    
    WHY THIS CLASSIFICATION:
-   For the person trying to actually "produce," the law is a Noose. They find 
+   For the person trying to actually "produce," the law is a Snare. They find 
    their day filled with "busywork," unnecessary emails, and meetings about 
    meetings. The more time they are given, the more administrative "crud" 
    the system forces upon them, strangling their ability to do meaningful work.
@@ -156,7 +156,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     parkinsons_law,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -211,7 +211,7 @@ test(time_immutability) :-
 
 omega_variable(
     automation_impact_threshold,
-    "Will AI and automation break the personnel expansion loop (Rope) or simply create more complex administrative 'oversight' work (Noose)?",
+    "Will AI and automation break the personnel expansion loop (Rope) or simply create more complex administrative 'oversight' work (Snare)?",
     resolution_mechanism("Longitudinal tracking of administrative headcounts post-AI implementation"),
     impact("If loop breaks: Law is a Scaffold. If loop continues: Law is a permanent Mountain."),
     confidence_without_resolution(medium)
@@ -229,7 +229,7 @@ omega_variable(
  * surplus visible.
  * * CONCLUSION:
  * The fact that ROWE-style alternatives are systematically rejected in large 
- * hierarchies indicates that Parkinson's Law is often a "Noose" masquerading 
+ * hierarchies indicates that Parkinson's Law is often a "Snare" masquerading 
  * as a "Mountain."
  */
 

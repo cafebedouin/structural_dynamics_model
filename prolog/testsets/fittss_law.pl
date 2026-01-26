@@ -50,7 +50,7 @@
  * hardware. For the 
  * industrial engineer, it is a "Rope" used to pull a factory floor toward 
  * peak efficiency. 
- * However, for the data-entry clerk or assembly worker, it becomes a "Noose" 
+ * However, for the data-entry clerk or assembly worker, it becomes a "Snare" 
  * as the system's "Efficiency" requirement strangles their physical health, 
  * leading to the extraction of their long-term motor vitality (RSI) 
  *.
@@ -168,7 +168,7 @@ constraint_indexing:constraint_classification(
     !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE WAREHOUSE PICKER - Noose
+   PERSPECTIVE 3: THE WAREHOUSE PICKER - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless - Subject to high-frequency quotas.
@@ -177,7 +177,7 @@ constraint_indexing:constraint_classification(
    SCOPE: local - Immediate physical workstation/aisle.
    
    WHY THIS CLASSIFICATION:
-   For the worker, the law is a Noose. The employer has optimized the 
+   For the worker, the law is a Snare. The employer has optimized the 
    workspace (the Rope) for maximum throughput, but the worker must 
    now operate at the very edge of their biological limit for 10 hours. 
    The extraction of every millisecond strangles their comfort, eventually 
@@ -191,7 +191,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     fittss_law,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -210,13 +210,13 @@ constraint_indexing:constraint_classification(
 :- begin_tests(fittss_law_tests).
 
 test(multi_perspective_variance) :-
-    % Analyst sees Mountain, Institutional sees Rope, Powerless sees Noose
+    % Analyst sees Mountain, Institutional sees Rope, Powerless sees Snare
     constraint_indexing:constraint_classification(fittss_law, mountain, context(analytical, civilizational, trapped, global)),
     constraint_indexing:constraint_classification(fittss_law, rope, context(institutional, biographical, arbitrage, national)),
-    constraint_indexing:constraint_classification(fittss_law, noose, context(individual_powerless, immediate, constrained, local)).
+    constraint_indexing:constraint_classification(fittss_law, snare, context(individual_powerless, immediate, constrained, local)).
 
 test(power_extractiveness_motor) :-
-    % Powerless workers feel the total extraction of their physical health (Noose).
+    % Powerless workers feel the total extraction of their physical health (Snare).
     % Institutional designers use the law for coordination (Rope).
     ContextPowerless = context(individual_powerless, immediate, constrained, local),
     ContextPowerful = context(institutional, biographical, arbitrage, national),
@@ -250,7 +250,7 @@ test(time_immutability_biology) :-
  * * 3. CLASSIFICATION RATIONALE:
  * Analytical → Mountain: It's an unchangeable biological limit.
  * Institutional → Rope: It's used as a "nudge" for efficiency.
- * Powerless → Noose: It's a performance trap that leads to RSI.
+ * Powerless → Snare: It's a performance trap that leads to RSI.
  */
 
 /* ==========================================================================
@@ -259,7 +259,7 @@ test(time_immutability_biology) :-
 
 omega_variable(
     haptic_augmentation_limits,
-    "Can haptic feedback or neural interfaces untie the Fitts's Noose (Rope) 
+    "Can haptic feedback or neural interfaces untie the Fitts's Snare (Rope) 
     by bypassing the traditional motor-loop (Mountain)?",
     resolution_mechanism("Long-term study of BMI (Brain-Machine Interface) 
     accuracy vs. traditional mouse/limb input"),
@@ -279,12 +279,12 @@ omega_variable(
  * Viability: High. Robots aren't subject to Fitts's Law in the same 
  * way; they can move with high speed and high precision.
  * Suppression: Moderate. Often rejected in low-margin industries 
- * because human labor (subject to the Noose) is currently cheaper 
+ * because human labor (subject to the Snare) is currently cheaper 
  * than robotic CAPEX.
  * * CONCLUSION:
  * The existence of mechanical "Exits" (Automation) that are suppressed 
  * by labor costs confirms that for the warehouse worker, Fitts’s Law is a 
- * Noose of economic necessity, not just a biological Mountain.
+ * Snare of economic necessity, not just a biological Mountain.
  */
 
 /* ==========================================================================

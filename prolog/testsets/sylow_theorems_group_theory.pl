@@ -41,7 +41,7 @@
  * - The Group Classifier (Institutional): An agent using the theorems as a 
  * "Rope" to systematically prove the non-simplicity or cyclicity of groups.
  * - The Finite Simple Group Searcher: An agent for whom the theorems act 
- * as a "Noose," excluding billions of potential group structures from 
+ * as a "Snare," excluding billions of potential group structures from 
  * the possibility of "simplicity."
  * * NARRATIVE ARC:
  * The Sylow Theorems are the "Mountain" of group composition—they define 
@@ -49,7 +49,7 @@
  * In the Classification of Finite Simple Groups (CFSG), they function as 
  * a "Rope" for global coordination. However, for a candidate group 
  * struggling to be "Simple," the congruency requirement ($n_p \equiv 1 \pmod p$) 
- * is a "Noose" that extracts its possibility of existence.
+ * is a "Snare" that extracts its possibility of existence.
  */
 
 /* ==========================================================================
@@ -147,7 +147,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE SEARCHER FOR SIMPLE GROUPS - Noose
+   PERSPECTIVE 3: THE SEARCHER FOR SIMPLE GROUPS - Snare
    --------------------------------------------------------------------------
    WHO: individual_powerless - Bound by the arithmetic constraints of $n_p$.
    WHEN: immediate - Every $n_p$ check that doesn't equal 1 is an "extraction" of failure.
@@ -156,14 +156,14 @@ constraint_indexing:constraint_classification(
    
    WHY THIS CLASSIFICATION:
    For an agent trying to construct a "Simple Group" (one with no normal 
-   subgroups), the Sylow theorems act as a "Noose." They "strangle" most 
+   subgroups), the Sylow theorems act as a "Snare." They "strangle" most 
    candidate orders by proving that a normal subgroup *must* exist, 
    extracting the researcher's hope for simplicity through arithmetic logic.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
     sylow_theorems_group_theory,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -190,8 +190,8 @@ test(subgroup_fate_variance) :-
     Type2 = rope.
 
 test(non_simplicity_noose_penalty) :-
-    % A powerless searcher in a local context sees the congruency rule as a Noose.
-    constraint_indexing:constraint_classification(sylow_theorems_group_theory, noose, context(individual_powerless, immediate, constrained, local)).
+    % A powerless searcher in a local context sees the congruency rule as a Snare.
+    constraint_indexing:constraint_classification(sylow_theorems_group_theory, snare, context(individual_powerless, immediate, constrained, local)).
 
 test(emergence) :-
     domain_priors:emerges_naturally(sylow_theorems_group_theory).
@@ -209,7 +209,7 @@ test(emergence) :-
  * * KEY DECISIONS:
  * * 1. BASE EXTRACTIVENESS (0.15): 
  * Mathematical laws are non-coercive but "extract" possibilities. The 
- * "Sylow-Noose" effect is well known to students who find that 
+ * "Sylow-Snare" effect is well known to students who find that 
  * $n_p \mid m$ and $n_p \equiv 1 \pmod p$ frequently force $n_p = 1$.
  * * 2. CLASSIFICATION: 
  * Sylow is the quintessential "Mountain" of abstract structure—local 
@@ -225,7 +225,7 @@ omega_variable(
     sylow_existence_constructivity,
     "Does the existence of a Sylow subgroup (Mountain) provide an efficient algorithm to find it (Rope)?",
     resolution_mechanism("Verification of the complexity of the Cohen-Cannon-Lausch algorithm for various group classes."),
-    impact("If Exponential: The Mountain is a Noose for computers. If Polynomial: It is a Rope."),
+    impact("If Exponential: The Mountain is a Snare for computers. If Polynomial: It is a Rope."),
     confidence_without_resolution(medium)
 ).
 

@@ -42,7 +42,7 @@
  * * NARRATIVE ARC:
  * The theorem acts as a hard ceiling for the expressive power of first-order logic. 
  * While it provides a "Rope" for mathematicians to move between different infinite 
- * scales, it creates a foundational "Noose" for those who want their logic to 
+ * scales, it creates a foundational "Snare" for those who want their logic to 
  * uniquely describe a single, absolute mathematical reality.
  */
 
@@ -135,7 +135,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE FOUNDATIONAL PLATONIST - Noose
+   PERSPECTIVE 3: THE FOUNDATIONAL PLATONIST - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless - Subject to the limits of first-order expression.
@@ -144,7 +144,7 @@ constraint_indexing:constraint_classification(
    SCOPE: local - Immediate philosophical framework.
    
    WHY THIS CLASSIFICATION:
-   To the Platonist, this is a Noose. They wish to describe the "one true 
+   To the Platonist, this is a Snare. They wish to describe the "one true 
    uncountable universe," but the theorem ensures that a countable "shadow" 
    of that universe always exists. Their desire for absoluteness is 
    systematically strangled by the relativity of cardinality.
@@ -152,7 +152,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     lowenheim_skolem_theorem,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -171,7 +171,7 @@ test(multi_perspective_variance) :-
     % Test that different perspectives yield different classifications
     constraint_indexing:constraint_classification(lowenheim_skolem_theorem, mountain, context(agent_power(analytical), _, _, _)),
     constraint_indexing:constraint_classification(lowenheim_skolem_theorem, rope, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(lowenheim_skolem_theorem, noose, context(agent_power(individual_powerless), _, _, _)).
+    constraint_indexing:constraint_classification(lowenheim_skolem_theorem, snare, context(agent_power(individual_powerless), _, _, _)).
 
 test(power_extractiveness_relativity) :-
     % Powerless Platonists feel the loss of absoluteness (extraction of truth value)
@@ -205,7 +205,7 @@ test(time_immutability_scale) :-
  * Completeness Theorem (which second-order logic lacks).
  * * 3. PERSPECTIVE SELECTION:
  * The Analyst sees the Law (Mountain). The Theorist sees the Utility (Rope). 
- * The Platonist sees the Limitation (Noose).
+ * The Platonist sees the Limitation (Snare).
  */
 
 /* ==========================================================================
@@ -217,7 +217,7 @@ omega_variable(
     intended_model_existence,
     "Is there a privileged, intended model of set theory that our language simply fails to uniquely describe?",
     resolution_mechanism("Metaphysical commitment or discovery of higher-order categorical axioms"),
-    impact("If Yes: Logic is a Noose hiding the Mountain. If No: Reality is fundamentally relative (Skolemism)."),
+    impact("If Yes: Logic is a Snare hiding the Mountain. If No: Reality is fundamentally relative (Skolemism)."),
     confidence_without_resolution(low)
 ).
 
@@ -235,7 +235,7 @@ omega_variable(
  * Evidence: Common in foundational literature discussing "Full Second Order Logic."
  * * CONCLUSION:
  * The existence of Second-Order logic as a suppressed alternative makes the 
- * Löwenheim-Skolem constraint a Noose for those who prioritize semantic 
+ * Löwenheim-Skolem constraint a Snare for those who prioritize semantic 
  * uniqueness over syntactic completeness.
  */
 

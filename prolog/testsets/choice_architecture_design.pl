@@ -90,7 +90,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE MANIPULATED CONSUMER - Noose
+   PERSPECTIVE 2: THE MANIPULATED CONSUMER - Snare
    --------------------------------------------------------------------------
    WHO: individual_powerless
    WHEN: immediate
@@ -99,14 +99,14 @@ constraint_indexing:constraint_classification(
    
    WHY THIS CLASSIFICATION:
    When choice architecture is used to hide costs or shame "No" answers 
-   (Confirmshaming), it is a "Noose." The environment strangles the 
+   (Confirmshaming), it is a "Snare." The environment strangles the 
    chooser's autonomy, forcing a "Match" that benefits the architect 
    at the expense of the chooser.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
     rope_design,
-    noose,
+    snare,
     context(agent_power(individual_powerless), time_horizon(immediate), exit_options(trapped), spatial_scope(global))
 ) :-
     domain_priors:base_extractiveness(rope_design, E),
@@ -142,4 +142,4 @@ constraint_indexing:constraint_classification(
 % --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
 constraint_indexing:constraint_classification(choice_architecture_design, mountain, agent_power(analytical)).
 constraint_indexing:constraint_classification(choice_architecture_design, rope, agent_power(institutional)).
-constraint_indexing:constraint_classification(choice_architecture_design, noose, agent_power(individual_powerless)).
+constraint_indexing:constraint_classification(choice_architecture_design, snare, agent_power(individual_powerless)).

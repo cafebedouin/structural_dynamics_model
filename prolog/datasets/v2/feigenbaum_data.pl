@@ -34,9 +34,9 @@ constraint_metric(period_doubling_cascade, suppression_requirement, 0.35).
 constraint_metric(period_doubling_cascade, snap_back_potential, 0.85).
 constraint_metric(period_doubling_cascade, extractiveness, 0.48).
 
-% The Accumulation Horizon (The Noose)
+% The Accumulation Horizon (The Snare)
 % The point where the period becomes infinite, effectively ending periodic governance.
-constraint_claim(chaos_accumulation_limit, noose).
+constraint_claim(chaos_accumulation_limit, snare).
 constraint_metric(chaos_accumulation_limit, intensity, 0.95).
 constraint_metric(chaos_accumulation_limit, suppression_requirement, 0.52).
 constraint_metric(chaos_accumulation_limit, snap_back_potential, 0.10).
@@ -47,7 +47,7 @@ constraint_metric(chaos_accumulation_limit, extractiveness, 0.72).
 recommendation(rec_01, coordinate_rescaling_via_feigenbaum_alpha).
 affects_constraint(rec_01, period_doubling_cascade).
 
-% Noose (0.72 extractiveness) triggers Cut
+% Snare (0.72 extractiveness) triggers Cut
 % Utilizing 'superstable_orbit' scaffold to provide a structural reference point.
 recommendation(rec_02, decouple_from_infinite_period_limit_using_superstable_seeds).
 affects_constraint(rec_02, chaos_accumulation_limit).

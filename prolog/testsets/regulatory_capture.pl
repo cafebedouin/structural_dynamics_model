@@ -44,10 +44,11 @@
  * - The Public: The victim class who pays higher prices for lower-quality 
  * services due to suppressed competition.
  * * NARRATIVE ARC:
- * The constraint functions as a "Noose" for small competitors and the 
- * public. For the large firm, it is a "Rope" (a tool for market control). 
- * To the political scientist, it is a "Mountain"—an inevitable outcome of 
- * concentrated benefits and diffuse costs in a democracy.
+ * What starts as a public-interest "Rope" to coordinate a market safely
+ * degrades over time through special-interest influence. It becomes a "Piton"—
+ * an ossified, immovable liability that causes more harm than good but is
+ * left in place out of inertia. For the incumbent, it is still a useful
+ * "Rope" for market control, while for outsiders it is a "Snare".
  */
 
 /* ==========================================================================
@@ -56,24 +57,36 @@
 
 % Required for structural integration
 narrative_ontology:interval(capture_interval, 0, 10).
-narrative_ontology:constraint_claim(regulatory_capture, noose).
+narrative_ontology:constraint_claim(regulatory_capture, piton).
 
 % Base extractiveness: 0.8 (High)
 % Rationale: It extracts consumer surplus and innovation energy, 
 % redirecting it into monopoly profits for the captured industry.
 domain_priors:base_extractiveness(regulatory_capture, 0.8).
 
-% Suppression: 0.7 (High)
-% Rationale: Alternative regulatory models or "permissionless" competition 
-% are actively suppressed through licensing requirements and legal barriers.
-domain_priors:suppression_score(regulatory_capture, 0.7).
+% Suppression: 0.2 (Low)
+% Rationale: Alternatives are not actively suppressed by force, but by the
+% immense complexity, inertia, and "inside game" of the captured bureaucracy.
+domain_priors:suppression_score(regulatory_capture, 0.2).
 
-% Enforcement: Requires active maintenance by lobbyists and government officials.
-domain_priors:requires_active_enforcement(regulatory_capture).
+% Resistance: 0.6 (High)
+% Rationale: The public and entrepreneurs actively protest and attempt to
+% route around the captured regulations, indicating high friction.
+domain_priors:resistance_score(regulatory_capture, 0.6).
+
 
 % Metrics required for Section 1 of the Executive Summary
 narrative_ontology:constraint_metric(regulatory_capture, extractiveness, 0.8).
-narrative_ontology:constraint_metric(regulatory_capture, suppression_requirement, 0.7).
+narrative_ontology:constraint_metric(regulatory_capture, suppression_requirement, 0.2).
+
+% Make the constraint "evolve" by showing resistance increasing over time
+narrative_ontology:constraint_metric(regulatory_capture, resistance, 0.1, 0).
+narrative_ontology:constraint_metric(regulatory_capture, resistance, 0.6, 10).
+
+% Formally model the viable alternative
+narrative_ontology:intent_viable_alternative(capture_interval,
+    'Decentralized Oversight (Blockchain/Public Ledger)',
+    'Theoretically prevents opaque lobbying but is suppressed by the incumbent system.').
 
 % BENEFICIARIES & VICTIMS
 constraint_beneficiary(regulatory_capture, industry_monopolists).
@@ -147,7 +160,7 @@ constraint_indexing:constraint_classification(
    SCOPE: local
    
    WHY THIS CLASSIFICATION:
-   For the innovator, capture is a Noose. They have a better, cheaper 
+   For the innovator, capture is a Snare. They have a better, cheaper 
    solution, but the "safety" regulations (written by their competitors) 
    make it illegal to operate. The harder they try to compete, the more 
    the legal trap tightens.
@@ -155,11 +168,38 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     regulatory_capture,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
         exit_options(constrained),
+        spatial_scope(national)
+    )
+) :- !.
+
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 4: THE INSTITUTIONAL ANALYST - PITON
+   --------------------------------------------------------------------------
+   
+   WHO: analytical (Observer of institutional decay)
+   WHEN: biographical (Seeing the agency's function degrade over a career)
+   WHERE: analytical (Comparing stated goals vs. actual outcomes)
+   SCOPE: national
+   
+   WHY THIS CLASSIFICATION:
+   The analyst sees the agency as a Piton. It was created as a Rope to ensure
+   market safety, but has decayed into a liability that persists through
+   inertia. It no longer serves its coordinating function effectively and now
+   creates more friction than it resolves, but it's too embedded to easily remove.
+   -------------------------------------------------------------------------- */
+
+constraint_indexing:constraint_classification(
+    regulatory_capture,
+    piton,
+    context(
+        agent_power(analytical),
+        time_horizon(biographical),
+        exit_options(analytical),
         spatial_scope(national)
     )
 ) :- !.
@@ -182,8 +222,8 @@ test(high_extraction_asymmetry) :-
     E >= 0.7.
 
 test(barrier_to_entry_noose) :-
-    % Powerless agents with constrained exits should experience a Noose.
-    constraint_indexing:constraint_classification(regulatory_capture, noose, context(individual_powerless, _, constrained, _)).
+    % Powerless agents with constrained exits should experience a Snare.
+    constraint_indexing:constraint_classification(regulatory_capture, snare, context(individual_powerless, _, constrained, _)).
 
 :- end_tests(regulatory_capture_tests).
 
@@ -200,7 +240,7 @@ test(barrier_to_entry_noose) :-
  * distortions.
  * 2. NOOSE VS ROPE: The distinction depends entirely on which side of the 
  * regulatory wall you sit. If you are the one holding the "compliance" 
- * standard, it's a Rope; if you are the one trying to climb it, it's a Noose.
+ * standard, it's a Rope; if you are the one trying to climb it, it's a Snare.
  */
 
 /* ==========================================================================
@@ -227,7 +267,7 @@ omega_variable(
  * as a threat to "national security" or "privacy."
  * * CONCLUSION:
  * The existence of technological alternatives that are legally suppressed 
- * confirms that regulatory capture is a Noose, not a natural Mountain.
+ * confirms that regulatory capture is a Snare, not a natural Mountain.
  */
 
 /* ==========================================================================

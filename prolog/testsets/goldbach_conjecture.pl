@@ -41,13 +41,13 @@
  * - The Mathematician (Institutional): Uses the conjecture as a heuristic "Rope" 
  * to coordinate research in analytical number theory and prime distribution.
  * - The Computational Searcher (Individual Powerless): A process searching for 
- * counterexamples, bound by the tightening "Noose" of increasing numerical 
+ * counterexamples, bound by the tightening "Snare" of increasing numerical 
  * magnitudes.
  * * NARRATIVE ARC:
  * Goldbach is the ultimate "Mountain" of empirical observation—a wall of truth 
  * that has never been breached. For the community, it serves as a "Rope" for 
  * probabilistic reasoning. However, for the solver, the lack of a constructive 
- * proof acts as a "Noose," extracting centuries of cognitive labor without 
+ * proof acts as a "Snare," extracting centuries of cognitive labor without 
  * yielding the finality of a formal theorem.
  */
 
@@ -141,7 +141,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE COMPUTATIONAL BRUTE-FORCER - Noose
+   PERSPECTIVE 3: THE COMPUTATIONAL BRUTE-FORCER - Snare
    --------------------------------------------------------------------------
    WHO: individual_powerless - A search algorithm bound by O(n) complexity.
    WHEN: immediate - Every cycle spent at high magnitudes is an extraction.
@@ -150,14 +150,14 @@ constraint_indexing:constraint_classification(
    
    WHY THIS CLASSIFICATION:
    When searching for a counterexample at the limits of current hardware, the 
-   conjecture acts as a "Noose." It extracts massive electricity and FLOPs 
+   conjecture acts as a "Snare." It extracts massive electricity and FLOPs 
    while the "space" of potential failure remains unreachably vast, 
    strangling the efficiency of the search.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
     goldbach_conjecture,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -184,8 +184,8 @@ test(empirical_fate_variance) :-
     Type2 = rope.
 
 test(search_difficulty_noose) :-
-    % A powerless searcher in a local range sees the search as a Noose.
-    constraint_indexing:constraint_classification(goldbach_conjecture, noose, context(individual_powerless, immediate, constrained, local)).
+    % A powerless searcher in a local range sees the search as a Snare.
+    constraint_indexing:constraint_classification(goldbach_conjecture, snare, context(individual_powerless, immediate, constrained, local)).
 
 test(extraction_is_low_but_present) :-
     domain_priors:base_extractiveness(goldbach_conjecture, E),
@@ -202,7 +202,7 @@ test(extraction_is_low_but_present) :-
  * * Model: Gemini 2.0 Flash
  * * KEY DECISIONS:
  * 1. PERSPECTIVE GAP: The primary insight is the gap between the "Mountain" 
- * of empirical truth (it has always held) and the "Noose" of its unproven 
+ * of empirical truth (it has always held) and the "Snare" of its unproven 
  * nature.
  * 2. IMAGE SELECTION: Included "Goldbach's Comet" as it informs the user on 
  * the *density* of the partitions, illustrating why it likely holds 
@@ -235,7 +235,7 @@ omega_variable(
  * * ALTERNATIVE 2: Exceptions exist at non-computable scales.
  * Viability: Heuristically unlikely (see comet density), but logically 
  * possible without a proof.
- * Conclusion: The "Noose" of the search exists because this alternative 
+ * Conclusion: The "Snare" of the search exists because this alternative 
  * cannot be formally suppressed yet.
  */
 

@@ -40,7 +40,7 @@ constraint_metric(ricci_flow_singularity_friction, snap_back_potential, 0.40).
 constraint_metric(ricci_flow_singularity_friction, extractiveness, 0.55).
 
 % NOOSE: Geometrization Conjecture Obstruction
-constraint_claim(geometrization_completeness_noose, noose).
+constraint_claim(geometrization_completeness_noose, snare).
 constraint_metric(geometrization_completeness_noose, intensity, 0.95).
 constraint_metric(geometrization_completeness_noose, suppression_requirement, 0.88).
 constraint_metric(geometrization_completeness_noose, snap_back_potential, 0.92).

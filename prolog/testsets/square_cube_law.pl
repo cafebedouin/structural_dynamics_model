@@ -48,7 +48,7 @@
  * physical boundary of the material world. For the engineer, it is a 
  * "Rope" for coordination (predicting when a bridge or wing will fail). 
  * However, for an organism or machine pushed beyond its scaling threshold, 
- * it becomes a "Noose," as its own mass extracts the strength of its 
+ * it becomes a "Snare," as its own mass extracts the strength of its 
  * supports until collapse occurs.
  */
 
@@ -161,7 +161,7 @@ constraint_indexing:constraint_classification(
     !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE SPECULATIVE GIANT - Noose
+   PERSPECTIVE 3: THE SPECULATIVE GIANT - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless - Subject to the physics of their own mass.
@@ -170,7 +170,7 @@ constraint_indexing:constraint_classification(
    SCOPE: local - Immediate internal physiology.
    
    WHY THIS CLASSIFICATION:
-   For a hypothetical giant, the law is a Noose. Their own volume-to-surface 
+   For a hypothetical giant, the law is a Snare. Their own volume-to-surface 
    ratio extracts their ability to cool down or support their own mass. 
    The geometry of their existence is a trap; the larger they grow, the 
    tighter the "gravity tax" on their bones strangles their viability.
@@ -182,7 +182,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     square_cube_law,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -205,11 +205,11 @@ test(multi_perspective_scaling) :-
     constraint_indexing:constraint_classification(square_cube_law, mountain, context(analytical, civilizational, trapped, global)),
     % Institutional sees Rope
     constraint_indexing:constraint_classification(square_cube_law, rope, context(institutional, biographical, arbitrage, national)),
-    % Powerless sees Noose
-    constraint_indexing:constraint_classification(square_cube_law, noose, context(individual_powerless, immediate, constrained, local)).
+    % Powerless sees Snare
+    constraint_indexing:constraint_classification(square_cube_law, snare, context(individual_powerless, immediate, constrained, local)).
 
 test(power_extractiveness_geometry) :-
-    % Powerless subjects (the giant) feel the total extraction of their health (Noose).
+    % Powerless subjects (the giant) feel the total extraction of their health (Snare).
     % Institutional actors (engineers) use the limit for coordination (Rope).
     ContextPowerless = context(individual_powerless, immediate, constrained, local),
     ContextPowerful = context(institutional, biographical, arbitrage, national),
@@ -250,11 +250,11 @@ test(time_immutability_physics) :-
 
 omega_variable(
     material_strength_evolution,
-    "Can nanotechnology 'untie' the scaling Noose by increasing material 
+    "Can nanotechnology 'untie' the scaling Snare by increasing material 
     strength-to-weight ratios beyond current biological/metallic limits (Rope)?",
     resolution_mechanism("Development of macroscopic carbon-nanotube structures"),
     impact("If Rope: Giants can be built. If Mountain: Geometry still 
-    imposes heat-dissipation limits that act as a new Noose."),
+    imposes heat-dissipation limits that act as a new Snare."),
     confidence_without_resolution(medium)
 ).
 
@@ -270,10 +270,10 @@ omega_variable(
  * Suppression: None. This is the biological "Rope" used to survive.
  * * ALTERNATIVE 2: Buoyancy (Aquatic Environment)
  * Viability: High. Allows whales to reach sizes impossible on land.
- * Suppression: Low. Gravity is the "Noose" that is bypassed here.
+ * Suppression: Low. Gravity is the "Snare" that is bypassed here.
  * * CONCLUSION:
  * Moving to a different environment (Water) or changing topology (Fractals) 
- * turns the "Noose" back into a "Rope," allowing the agent to exit the 
+ * turns the "Snare" back into a "Rope," allowing the agent to exit the 
  * immediate trap of the land-based scaling mountain.
  */
 

@@ -42,12 +42,12 @@
  * - The Set Theorist: An institutional agent using the Axiom of Choice as a 
  * "Rope" to build the foundations of modern analysis.
  * - The Physical Intuitionist: An observer for whom the paradox is a 
- * "Noose," as it "strangles" the common-sense notion that volume is additive.
+ * "Snare," as it "strangles" the common-sense notion that volume is additive.
  * * NARRATIVE ARC:
  * Banach-Tarski is a "Mountain" of formal logic—if you accept the Axiom of 
  * Choice, the doubling of the ball is an unyielding truth. In pure math, it 
  * is a "Rope" for exploring the boundaries of measure theory. However, for 
- * those attempting to ground math in physical reality, it acts as a "Noose," 
+ * those attempting to ground math in physical reality, it acts as a "Snare," 
  * extracting the "sanctity of matter" (extraction) and "choking" the 
  * possibility of a purely intuitive geometry.
  */
@@ -146,7 +146,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE PHYSICAL MATERIALIST - Noose
+   PERSPECTIVE 3: THE PHYSICAL MATERIALIST - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_moderate - Has the intelligence to model but is bound by logic.
@@ -155,7 +155,7 @@ constraint_indexing:constraint_classification(
    SCOPE: global - Affecting the interpretation of all physical space.
    
    WHY THIS CLASSIFICATION:
-   For the materialist, the paradox is a "Noose." It "strangles" the belief 
+   For the materialist, the paradox is a "Snare." It "strangles" the belief 
    that mathematics is a perfect mirror of physics. It extracts the 
    "concreteness" of geometry (extraction), "choking" the intuition that 
    you cannot create "something from nothing" in a world of formal symbols.
@@ -165,7 +165,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     banach_tarski_paradox,
-    noose,
+    snare,
     context(
         agent_power(individual_moderate),
         time_horizon(civilizational),
@@ -191,7 +191,7 @@ test(multi_perspective_variance) :-
     Type1 \= Type2.
 
 test(intuition_extraction_penalty) :-
-    % Materialists experience the "Noose" of the extractiveness of intuition.
+    % Materialists experience the "Snare" of the extractiveness of intuition.
     Context = context(individual_moderate, civilizational, constrained, global),
     constraint_indexing:extractiveness_for_agent(banach_tarski_paradox, Context, Score),
     Score >= 0.15.
@@ -216,7 +216,7 @@ test(natural_emergence) :-
  * trying to bridge the gap between formal sets and physical atoms.
  * 2. PERSPECTIVE SELECTION: 
  * Chose Point (Subject), Theorist (User), and Materialist (Victim) to 
- * show how a "Mountain" of formal logic becomes a "Noose" for 
+ * show how a "Mountain" of formal logic becomes a "Snare" for 
  * physical intuition.
  * 3. OMEGA IDENTIFICATION: 
  * Formalized the "Axiom of Choice" uncertainty—is it a Mountain of 
@@ -228,7 +228,7 @@ omega_variable(
     axiom_of_choice_physical_validity,
     "Is the Axiom of Choice a 'Mountain' that reflects physical reality or a 'Scaffold' for infinite math?",
     resolution_mechanism("Investigation into whether physical 'non-measurable' states exist in quantum foundations."),
-    impact("If Scaffold: Banach-Tarski is a 'Noose' of irrelevant logic. If Mountain: It is a fundamental truth."),
+    impact("If Scaffold: Banach-Tarski is a 'Snare' of irrelevant logic. If Mountain: It is a fundamental truth."),
     confidence_without_resolution(medium)
 ).
 
@@ -250,7 +250,7 @@ omega_variable(
  * of the continuum.
  * * CONCLUSION:
  * The existence of Alternative 1 (Axiom of Determinacy) proves that the 
- * Banach-Tarski "Noose" is an optional feature of our chosen axiomatic "Rope."
+ * Banach-Tarski "Snare" is an optional feature of our chosen axiomatic "Rope."
  */
 
 /* ==========================================================================

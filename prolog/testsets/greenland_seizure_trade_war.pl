@@ -57,7 +57,7 @@
    ========================================================================== */
 
 narrative_ontology:interval(greenland_crisis_2026, 2026, 2027).
-narrative_ontology:constraint_claim(greenland_seizure_trade_war, noose).
+narrative_ontology:constraint_claim(greenland_seizure_trade_war, snare).
 
 % Base extractiveness score: High (0.85)
 % Rationale: The U.S. demand seeks total territorial extraction (sovereignty) 
@@ -88,7 +88,7 @@ narrative_ontology:constraint_metric(greenland_seizure_trade_war, suppression_re
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 1: GREENLANDIC CITIZEN - Noose
+   PERSPECTIVE 1: GREENLANDIC CITIZEN - Snare
    --------------------------------------------------------------------------
    WHO: individual_powerless (56,000 residents vs a 19th-century mindset superpower)
    WHEN: immediate (Facing seizure threats and blockade risks)
@@ -96,14 +96,14 @@ narrative_ontology:constraint_metric(greenland_seizure_trade_war, suppression_re
    SCOPE: national (The survival of their autonomous status)
    
    WHY THIS CLASSIFICATION:
-   For the Greenlandic people, this is a Noose. They have no individual 
+   For the Greenlandic people, this is a Snare. They have no individual 
    agency to stop the superpower collision and are the primary "extracted" 
    value in the seizure threat.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
     greenland_seizure_trade_war,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -170,7 +170,7 @@ constraint_indexing:constraint_classification(
 
 test(perspectival_gap_negotiation) :-
     % The US sees a Rope (territorial expansion), the EU sees a Rope (economic defense).
-    % Both see mobility, suggesting a high-stakes "clash of ropes" before a Noose locks.
+    % Both see mobility, suggesting a high-stakes "clash of ropes" before a Snare locks.
     constraint_indexing:constraint_classification(greenland_seizure_trade_war, rope, context(institutional, biographical, mobile, _)).
 
 test(extraction_scale) :-
@@ -191,14 +191,14 @@ test(extraction_scale) :-
  * The most striking feature is the "collision of eras" (19th, 20th, 21st). 
  * Institutional actors frame this as a Rope (a tool for security or trade 
  * leverage), while the Powerless (Greenlandic citizens) perceive it as a 
- * lethal Noose.
+ * lethal Snare.
  * * 2. STRUCTURAL REALITY:
  * The FT's reporting on the Anti-Coercion Instrument (ACI) as a "nuclear 
  * option" justifies the high suppression and extractiveness scores. This is 
  * no longer a "trade skirmish" but a "trade war".
  * * 3. OMEGAS:
  * I have identified the "force vs. tariff" toggle as the primary Omega—it 
- * determines if the constraint remains in the economic domain (Rope/Noose) 
+ * determines if the constraint remains in the economic domain (Rope/Snare) 
  * or transitions to pure military law (Mountain).
  */
 
@@ -210,7 +210,7 @@ omega_variable(
     us_aci_threshold,
     "Will the U.S. continue the seizure threat if the EU triggers the Anti-Coercion Instrument?",
     resolution_mechanism("Monitor Davos 2026 outcomes and Brussels' trade announcements."),
-    impact("If U.S. persists, the 'Rope' of economic leverage breaks, leaving a 'Noose' of blockade."),
+    impact("If U.S. persists, the 'Rope' of economic leverage breaks, leaving a 'Snare' of blockade."),
     confidence_without_resolution(low)
 ).
 
@@ -238,7 +238,7 @@ omega_variable(
  * expansionist mindset which requires "control" over "cooperation".
  * * CONCLUSION:
  * The active suppression of Alternative 2 (Cooperation) turns a potential 
- * "Rope" of alliance into a "Noose" of geopolitical coercion.
+ * "Rope" of alliance into a "Snare" of geopolitical coercion.
  */
 
 /* ==========================================================================

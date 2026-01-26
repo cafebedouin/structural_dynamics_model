@@ -43,7 +43,7 @@
  * - [cite_start]China: The "Rising Pole," increasingly viewed as a necessary partner or ally[cite: 8, 40].
  * * NARRATIVE ARC:
  * The US moves from being a "Liberal Leviathan" (Rope for allies) to a transactional
- * great power (Noose for allies, Rope for middle powers). This forces a
+ * great power (Snare for allies, Rope for middle powers). This forces a
  * [cite_start]"geopolitical awakening" in Europe as the Pax Americana ends[cite: 1360].
  */
 
@@ -53,7 +53,7 @@
 
 % Required for DR-Audit Suite
 narrative_ontology:interval(post_trump_return, 2025, 2026).
-narrative_ontology:constraint_claim(trump_making_china_great_2026, noose).
+narrative_ontology:constraint_claim(trump_making_china_great_2026, snare).
 
 % Base extractiveness: 0.65
 % Rationale: Trump's "America First" approach is explicitly transactional and
@@ -83,7 +83,7 @@ constraint_victim(trump_making_china_great_2026, liberal_internationalists).
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 1: THE EUROPEAN CITIZEN - Noose
+   PERSPECTIVE 1: THE EUROPEAN CITIZEN - Snare
    --------------------------------------------------------------------------
    [cite_start]WHO: individual_powerless - Feeling vulnerable to external superpowers[cite: 14].
    [cite_start]WHEN: immediate - Focused on current threats (Russia, nuclear war)[cite: 1291].
@@ -93,7 +93,7 @@ constraint_victim(trump_making_china_great_2026, liberal_internationalists).
 
 constraint_indexing:constraint_classification(
     trump_making_china_great_2026,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -151,7 +151,7 @@ constraint_indexing:constraint_classification(
 test(multi_perspective_variance) :-
     constraint_indexing:constraint_classification(trump_making_china_great_2026, Type1, context(agent_power(individual_powerless), time_horizon(immediate), exit_options(trapped), spatial_scope(continental))),
     constraint_indexing:constraint_classification(trump_making_china_great_2026, Type2, context(agent_power(institutional), time_horizon(biographical), exit_options(arbitrage), spatial_scope(global))),
-    Type1 = noose,
+    Type1 = snare,
     Type2 = rope.
 
 test(geopolitical_arbitrage_efficiency) :-
@@ -163,8 +163,8 @@ test(geopolitical_arbitrage_efficiency) :-
     Score1 > Score2.
 
 test(us_unreliability_effect) :-
-    % Europeans view US unreliability as a hard constraint (Noose/Mountain)
-    constraint_indexing:constraint_classification(trump_making_china_great_2026, noose, context(agent_power(individual_powerless), time_horizon(immediate), exit_options(trapped), spatial_scope(continental))).
+    % Europeans view US unreliability as a hard constraint (Snare/Mountain)
+    constraint_indexing:constraint_classification(trump_making_china_great_2026, snare, context(agent_power(individual_powerless), time_horizon(immediate), exit_options(trapped), spatial_scope(continental))).
 
 :- end_tests(trump_china_great_tests).
 
@@ -185,13 +185,13 @@ test(us_unreliability_effect) :-
  * [cite_start]The liberal order isn't invisible—it's just being "disavowed"[cite: 21].
  * The shift is visible and being actively analyzed by think tanks like ECFR.
  * * 3. PERSPECTIVE SELECTION:
- * - European Citizen: Represents the "victim" of the shift (Noose).
+ * - European Citizen: Represents the "victim" of the shift (Snare).
  * - Middle-Power Diplomat: Represents the "beneficiary" of multipolarity (Rope).
  * - ECFR Researcher: Represents the "analytical" view of the Mountain.
  * * 4. AMBIGUITIES:
  * - [cite_start]The document suggests "expectations of Trump are lower than 12 months ago" [cite: 10]
  * [cite_start]but also that substantial numbers believe he successfully "defended America's interests"[cite: 649].
- * I resolved this by noting the "Normal Great Power" transition—it's a Noose for allies
+ * I resolved this by noting the "Normal Great Power" transition—it's a Snare for allies
  * but a successful Rope for the US electorate.
  */
 
@@ -203,7 +203,7 @@ omega_variable(
     european_nuclear_deterrent,
     "Will Europe successfully develop an alternative nuclear deterrent independent of the US?",
     resolution_mechanism("Track PESCO/EU-defense spending and French/UK nuclear policy shifts through 2030."),
-    impact("If Yes: Europe becomes a 'Pole' (Rope). If No: Europe remains 'trapped' in the US Noose."),
+    impact("If Yes: Europe becomes a 'Pole' (Rope). If No: Europe remains 'trapped' in the US Snare."),
     confidence_without_resolution(medium)
 ).
 
@@ -227,7 +227,7 @@ omega_variable(
  * [cite_start]Evidence: "Donald Trump did not go into politics to make China great again... his aggressive 'America First' approach was driving people closer to China."[cite: 17, 20].
  * * CONCLUSION:
  * The fact that a once-stable "Rope" (NATO/Liberal Order) has been transformed
- * into a "Noose" or discarded entirely by the current US administration is
+ * into a "Snare" or discarded entirely by the current US administration is
  * what characterizes the 2026 geopolitical environment.
  */
 

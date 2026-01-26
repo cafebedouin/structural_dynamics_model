@@ -23,7 +23,7 @@ constraint_metric(binary_logic_rigidity, suppression_requirement, 0.01).
 constraint_metric(binary_logic_rigidity, snap_back_potential, 0.00).
 constraint_metric(binary_logic_rigidity, extractiveness, 0.02).
 
-constraint_claim(unrestricted_comprehension_axiom, noose).
+constraint_claim(unrestricted_comprehension_axiom, snare).
 constraint_metric(unrestricted_comprehension_axiom, intensity, 0.98).
 constraint_metric(unrestricted_comprehension_axiom, suppression_requirement, 0.85).
 constraint_metric(unrestricted_comprehension_axiom, snap_back_potential, 0.92).

@@ -26,12 +26,12 @@ event(ev04_final_resolve, alignment, 100, [actor(arjuna), result(fight_without_a
 constraint_claim(physical_mortality, mountain).
 constraint_metric(physical_mortality, accessibility_collapse, 1.0).
 
-% Noose: The Kshatriya Dharma (caste duty). It tightens as the battle becomes inevitable.
-constraint_claim(varna_duty_mandate, noose).
+% Snare: The Kshatriya Dharma (caste duty). It tightens as the battle becomes inevitable.
+constraint_claim(varna_duty_mandate, snare).
 constraint_metric(varna_duty_mandate, stakes_inflation, 0.95).
 
-% Zombie: Vedic Ritualism (Formalism). The 'calculating righteousness' that seeks heaven through works.
-constraint_claim(calculating_ritualism, zombie).
+% Piton: Vedic Ritualism (Formalism). The 'calculating righteousness' that seeks heaven through works.
+constraint_claim(calculating_ritualism, piton).
 constraint_metric(calculating_ritualism, suppression, 0.75).
 
 % --- 4. Recommendations & Veto Structure ---

@@ -41,14 +41,14 @@
  * - The Architect/Engineer (Institutional): An agent who uses the theorem 
  * as a "Rope" to coordinate stable structures, navigation, and land surveys.
  * - The Non-Euclidean Navigator (Analytical): An observer for whom the 
- * theorem acts as a "Noose" or limit when attempting to map curved spaces 
+ * theorem acts as a "Snare" or limit when attempting to map curved spaces 
  * (like the Earth's surface) using flat-space logic.
  * * NARRATIVE ARC:
  * The Pythagorean Theorem is the quintessential "Mountain"—a natural law 
  * that remains unyielding across millennia. In construction and navigation, 
  * it is a "Rope" for functional coordination, providing a "standard of 
  * achievement" for structural integrity. However, for those transitioning 
- * to global scales or general relativity, the theorem becomes a "Noose," 
+ * to global scales or general relativity, the theorem becomes a "Snare," 
  * extracting precision (extraction) and "strangling" calculations that 
  * fail to account for the "Mountain" of spacetime curvature.
  */
@@ -153,7 +153,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE GEODETIC SURVEYOR - Noose
+   PERSPECTIVE 3: THE GEODETIC SURVEYOR - Snare
    --------------------------------------------------------------------------
    
    WHO: institutional - Power to map whole continents but bound by Earth's shape.
@@ -162,7 +162,7 @@ constraint_indexing:constraint_classification(
    SCOPE: continental - Mapping distances across the horizon.
    
    WHY THIS CLASSIFICATION:
-   For the surveyor mapping large distances, the theorem acts as a "Noose." 
+   For the surveyor mapping large distances, the theorem acts as a "Snare." 
    If they rely on flat-earth Pythagorean math, the curvature of the Earth 
    "strangles" their accuracy. It extracts precision (extraction), forcing 
    the surveyor to abandon the simple "Rope" of $a^2+b^2=c^2$ for the 
@@ -171,7 +171,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     pythagorean_geometric_constancy,
-    noose,
+    snare,
     context(
         agent_power(institutional),
         time_horizon(historical),
@@ -197,8 +197,8 @@ test(multi_perspective_variance) :-
     Type1 \= Type2.
 
 test(scale_based_extraction) :-
-    % Demonstrates that for the surveyor (institutional), the "Noose" effect is felt.
-    constraint_indexing:constraint_classification(pythagorean_geometric_constancy, noose, context(institutional, historical, constrained, continental)).
+    % Demonstrates that for the surveyor (institutional), the "Snare" effect is felt.
+    constraint_indexing:constraint_classification(pythagorean_geometric_constancy, snare, context(institutional, historical, constrained, continental)).
 
 test(natural_emergence) :-
     domain_priors:emerges_naturally(pythagorean_geometric_constancy).
@@ -219,7 +219,7 @@ test(natural_emergence) :-
  * is the loss of fidelity when the model is applied to the wrong 
  * domain (curvature).
  * 2. CLASSIFICATION: 
- * Showed how a "Rope" for a carpenter becomes a "Noose" for a 
+ * Showed how a "Rope" for a carpenter becomes a "Snare" for a 
  * surveyor, highlighting that a tool's utility is scale-dependent.
  */
 
@@ -228,7 +228,7 @@ omega_variable(
     euclidean_primacy_bias,
     "Is the 'Mountain' of Euclidean geometry a fundamental property of the universe (Mountain) or just a 'Scaffold' of human scale (Scaffold)?",
     resolution_mechanism("Investigation of quantum-scale geometry to see if Pythagorean laws hold at the Planck length."),
-    impact("If Scaffold: The theorem is a 'Noose' for high-energy physics. If Mountain: It is a universal invariant."),
+    impact("If Scaffold: The theorem is a 'Snare' for high-energy physics. If Mountain: It is a universal invariant."),
     confidence_without_resolution(high)
 ).
 
@@ -248,7 +248,7 @@ omega_variable(
  * in classical Euclidean contexts.
  * * CONCLUSION:
  * The existence of Alternative 1 (Spherical Trig) is what turns the 
- * Pythagorean "Mountain" into a "Noose" for those navigating the 
+ * Pythagorean "Mountain" into a "Snare" for those navigating the 
  * actual surface of the Earth.
  */
 
@@ -270,4 +270,4 @@ omega_variable(
 % --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
 constraint_indexing:constraint_classification(pythagorean_theorem_geometric_constancy, mountain, agent_power(analytical)).
 constraint_indexing:constraint_classification(pythagorean_theorem_geometric_constancy, rope, agent_power(institutional)).
-constraint_indexing:constraint_classification(pythagorean_theorem_geometric_constancy, noose, agent_power(individual_powerless)).
+constraint_indexing:constraint_classification(pythagorean_theorem_geometric_constancy, snare, agent_power(individual_powerless)).

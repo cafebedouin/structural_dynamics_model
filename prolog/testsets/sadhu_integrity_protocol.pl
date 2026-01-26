@@ -146,7 +146,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE SON - Noose
+   PERSPECTIVE 3: THE SON - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless (The subject being "chided" and "hauled")
@@ -155,7 +155,7 @@ constraint_indexing:constraint_classification(
    SCOPE: local
    
    WHY THIS CLASSIFICATION:
-   For the boy, the Sadhu's integrity creates a "Noose." Because the advice is 
+   For the boy, the Sadhu's integrity creates a "Snare." Because the advice is 
    now congruent and backed by the Sadhu's demonstrated sacrifice, the boy's 
    freedom to continue his habit is extracted. The authority 
    is now "inescapable" because it is true.
@@ -166,7 +166,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     sadhu_integrity_protocol,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -193,7 +193,7 @@ test(multi_perspective_integrity) :-
     Type1 \= Type2.
 
 test(power_extractiveness_integrity) :-
-    % The powerless son experiences the "Noose" of authoritative change.
+    % The powerless son experiences the "Snare" of authoritative change.
     ContextPowerless = context(individual_powerless, immediate, trapped, local),
     % The Sadhu (Institutional) benefits from the authentic status.
     ContextPowerful = context(institutional, immediate, mobile, local),
@@ -222,7 +222,7 @@ test(power_extractiveness_integrity) :-
  * * 3. CLASSIFICATION RATIONALE:
  * Sadhu -> Rope: He uses the delay to coordinate his self-identity.
  * Mother -> Mountain: She lacks the "exit options" to skip the delay.
- * Son -> Noose: The "truth" of the Sadhu's integrity tightens the social 
+ * Son -> Snare: The "truth" of the Sadhu's integrity tightens the social 
  * demand on the boy to change.
  * * 4. AMBIGUITIES:
  * The primary ambiguity is whether the Sadhu's internal change *causally* * impacted the boy, or if the boy was just impressed by the story of the delay.
@@ -257,7 +257,7 @@ omega_variable(
  * advice, take it yourself first".
  * * CONCLUSION:
  * The existence of Alternative 1 (Hypocrisy) is what makes the protocol 
- * a "Rope." Without the integrity requirement, the advice becomes a "Noose" 
+ * a "Rope." Without the integrity requirement, the advice becomes a "Snare" 
  * of potentially hollow social control.
  */
 

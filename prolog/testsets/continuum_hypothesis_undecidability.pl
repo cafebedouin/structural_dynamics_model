@@ -42,13 +42,13 @@
  * - The Set Theorist (Institutional): An agent who uses CH as a "Rope" to 
  * coordinate the classification of transfinite cardinalities.
  * - The Formalist (Analytical): An observer for whom the independence of CH 
- * acts as a "Noose," extracting the hope of a complete, deductive universe.
+ * acts as a "Snare," extracting the hope of a complete, deductive universe.
  * * NARRATIVE ARC:
  * Originally proposed by Cantor as a "Mountain" of truth, CH was later 
  * proven to be independent of ZFC by Gödel and Cohen. In pedagogy, it is 
  * a "Rope" for understanding the depths of modern logic. However, for 
  * the seeker of absolute mathematical certainty, the undecidability of 
- * CH acts as a "Noose," extracting the "completeness" of arithmetic 
+ * CH acts as a "Snare," extracting the "completeness" of arithmetic 
  * (extraction) and "strangling" the intuition that every well-defined 
  * question must have a yes/no answer.
  */
@@ -148,7 +148,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE NEO-PLATONIST SEARCHER - Noose
+   PERSPECTIVE 3: THE NEO-PLATONIST SEARCHER - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_moderate - Has the intelligence to analyze but is bound by independence.
@@ -157,7 +157,7 @@ constraint_indexing:constraint_classification(
    SCOPE: global - Universal limit on formal knowledge.
    
    WHY THIS CLASSIFICATION:
-   For the seeker of absolute Truth, the independence of CH is a "Noose." 
+   For the seeker of absolute Truth, the independence of CH is a "Snare." 
    It "strangles" the hope that mathematics is a complete, objective 
    mirror of reality. It extracts the "certainty of the transfinite" 
    (extraction) by proving that our most basic concept of a set is 
@@ -168,7 +168,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     continuum_hypothesis_undecidability,
-    noose,
+    snare,
     context(
         agent_power(individual_moderate),
         time_horizon(civilizational),
@@ -194,7 +194,7 @@ test(multi_perspective_variance) :-
     Type1 \= Type2.
 
 test(metaphysical_extraction_penalty) :-
-    % Searchers feel the 0.15 extraction of certainty as a Noose.
+    % Searchers feel the 0.15 extraction of certainty as a Snare.
     Context = context(individual_moderate, civilizational, constrained, global),
     constraint_indexing:extractiveness_for_agent(continuum_hypothesis_undecidability, Context, Score),
     Score >= 0.1.
@@ -218,7 +218,7 @@ test(natural_emergence) :-
  * from the mathematical community. It is a tax on formalist certainty.
  * 2. CLASSIFICATION: 
  * Captured the transition from the "Mountain" of set-size reality 
- * to the "Noose" of unprovability for those who demand a single 
+ * to the "Snare" of unprovability for those who demand a single 
  * "True" universe of sets.
  * 3. PERSPECTIVES:
  * Chose the Continuum (Subject), the Professor (Institutional Utility), 
@@ -230,7 +230,7 @@ omega_variable(
     determinacy_axiom_validity,
     "Is there a higher 'Mountain' (e.g., Woodin's V=Ultimate L) that makes CH decidable (Scaffold)?",
     resolution_mechanism("Verification of 'large cardinal' axioms and their impact on the decidability of CH in the inner model."),
-    impact("If Yes: The 'Noose' of undecidability is a temporary Scaffold. If No: It is a permanent Mountain."),
+    impact("If Yes: The 'Snare' of undecidability is a temporary Scaffold. If No: It is a permanent Mountain."),
     confidence_without_resolution(medium)
 ).
 
@@ -250,7 +250,7 @@ omega_variable(
  * while preserving other desirable properties.
  * * CONCLUSION:
  * The existence of AD and MA as alternative "Ropes" proves that the 
- * "Noose" of CH's undecidability is a choice based on which 
+ * "Snare" of CH's undecidability is a choice based on which 
  * axioms we use to climb the Mountain.
  */
 

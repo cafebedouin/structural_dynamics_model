@@ -34,7 +34,7 @@ constraint_metric(global_convergence_proof, suppression_requirement, 0.40).
 constraint_metric(global_convergence_proof, snap_back_potential, 0.50).
 constraint_metric(global_convergence_proof, extractiveness, 0.55).
 
-constraint_claim(infinite_ascent_prevention, noose).
+constraint_claim(infinite_ascent_prevention, snare).
 constraint_metric(infinite_ascent_prevention, intensity, 0.95).
 constraint_metric(infinite_ascent_prevention, suppression_requirement, 0.85).
 constraint_metric(infinite_ascent_prevention, snap_back_potential, 0.90).

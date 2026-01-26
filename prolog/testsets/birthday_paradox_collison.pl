@@ -42,12 +42,12 @@
  * "Rope" to determine necessary bit-lengths for digital signatures.
  * - The Attacker (Birthday Attack): An agent who treats the paradox as a 
  * "Rope" (tool) to break cryptosystems.
- * - The Unsuspecting User: An agent for whom the paradox is a "Noose," 
+ * - The Unsuspecting User: An agent for whom the paradox is a "Snare," 
  * strangling their expectation of uniqueness in small data sets.
  * * NARRATIVE ARC:
  * The paradox begins as a counter-intuitive "Mountain" of natural law. In 
  * engineering, it is a "Rope" for coordination (choosing ID lengths). However, 
- * in cryptography, it is a "Noose"—it extracts security from short hashes 
+ * in cryptography, it is a "Snare"—it extracts security from short hashes 
  * by guaranteeing collisions far sooner than intuition suggests.
  */
 
@@ -119,7 +119,7 @@ constraint_indexing:constraint_classification(
    --------------------------------------------------------------------------
    WHO: institutional - Power to set the bit-length of the hash (e.g., SHA-256).
    WHEN: biographical - Planning the safety of a system for 20+ years.
-   WHERE: mobile - Can "exit" the Noose of collisions by doubling the bit-length.
+   WHERE: mobile - Can "exit" the Snare of collisions by doubling the bit-length.
    SCOPE: global - Worldwide standard for digital signatures.
    
    WHY THIS CLASSIFICATION:
@@ -141,7 +141,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE BIRTHDAY ATTACKER - Noose
+   PERSPECTIVE 3: THE BIRTHDAY ATTACKER - Snare
    --------------------------------------------------------------------------
    WHO: individual_powerful - Using the paradox to coerce a system.
    WHEN: immediate - Cracking a signature in real-time.
@@ -150,7 +150,7 @@ constraint_indexing:constraint_classification(
    SCOPE: global - Targeting global financial or identity systems.
    
    WHY THIS CLASSIFICATION:
-   For the attacker, the paradox is a "Noose" they tighten around a weak hash 
+   For the attacker, the paradox is a "Snare" they tighten around a weak hash 
    function. It allows them to "extract" a collision (and thus a forgery) 
    asymmetrically, with far less effort than a brute-force search.
    -------------------------------------------------------------------------- */
@@ -159,7 +159,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     birthday_paradox_collision,
-    noose,
+    snare,
     context(
         agent_power(individual_powerful),
         time_horizon(immediate),
@@ -186,8 +186,8 @@ test(collision_fate_variance) :-
     Type2 = rope.
 
 test(extraction_of_security) :-
-    % Attackers see it as a Noose/Arbitrage opportunity.
-    constraint_indexing:constraint_classification(birthday_paradox_collision, noose, context(individual_powerful, immediate, arbitrage, global)).
+    % Attackers see it as a Snare/Arbitrage opportunity.
+    constraint_indexing:constraint_classification(birthday_paradox_collision, snare, context(individual_powerful, immediate, arbitrage, global)).
 
 test(natural_emergence) :-
     domain_priors:emerges_naturally(birthday_paradox_collision).
@@ -206,7 +206,7 @@ test(natural_emergence) :-
  * a "hidden tax" on all digital systems. You pay for 128 bits of storage 
  * but only get 64 bits of collision resistance.
  * 2. PERSPECTIVE SHIFT: The core insight is that "knowledge" of the constraint 
- * transforms it from a Noose (for the victim) into a Rope (for the architect).
+ * transforms it from a Snare (for the victim) into a Rope (for the architect).
  * 3. SUPPRESSION: Set at 0.25. The paradox effectively "hides" the feasibility 
  * of collisions from non-experts, which is a form of informational suppression.
  */
@@ -216,13 +216,13 @@ omega_variable(
     non_uniform_birth_distribution,
     "How does the 'Mountain' shift if births are seasonal rather than uniform?",
     resolution_mechanism("Compare collision rates in datasets with actual demographic spikes (e.g., September births)."),
-    impact("If Spiked: The probability curve steepens, making the 'Noose' tighter."),
+    impact("If Spiked: The probability curve steepens, making the 'Snare' tighter."),
     confidence_without_resolution(high)
 ).
 
 omega_variable(
     quantum_collision_acceleration,
-    "Does Grover's Algorithm turn the Birthday 'Rope' into a 'Noose' for modern hashes?",
+    "Does Grover's Algorithm turn the Birthday 'Rope' into a 'Snare' for modern hashes?",
     resolution_mechanism("Audit of cube-root vs square-root collision speeds in quantum simulations."),
     impact("If Cube-root: Current bit-length standards are a failing Scaffold."),
     confidence_without_resolution(low)
@@ -262,4 +262,4 @@ omega_variable(
 % --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
 constraint_indexing:constraint_classification(birthday_paradox_collison, mountain, agent_power(analytical)).
 constraint_indexing:constraint_classification(birthday_paradox_collison, rope, agent_power(institutional)).
-constraint_indexing:constraint_classification(birthday_paradox_collison, noose, agent_power(individual_powerless)).
+constraint_indexing:constraint_classification(birthday_paradox_collison, snare, agent_power(individual_powerless)).

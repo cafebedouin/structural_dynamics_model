@@ -49,7 +49,7 @@
  * The constraint emerges from biological ignorance and resource scarcity. 
  * In the Middle Ages, ergotism was misidentified as demonic possession or divine 
  * punishment. It served as a social filter where the wealthy avoided the 
- * "Noose" of poisoning by shifting the risk onto the poor until the adoption 
+ * "Snare" of poisoning by shifting the risk onto the poor until the adoption 
  * of the potato and scientific agriculture provided a "Rope" of exit.
  */
 
@@ -91,7 +91,7 @@ constraint_victim(ergot_grain_poisoning, peasantry).               % Suffered er
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 1: THE PEASANT - Noose
+   PERSPECTIVE 1: THE PEASANT - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless (No control over grain supply or soil knowledge)
@@ -100,7 +100,7 @@ constraint_victim(ergot_grain_poisoning, peasantry).               % Suffered er
    SCOPE: local (Immediate village/town)
    
    WHY THIS CLASSIFICATION:
-   For the poor, ergot is a "Noose." They must eat the poisoned grain to avoid 
+   For the poor, ergot is a "Snare." They must eat the poisoned grain to avoid 
    famine, accepting disfigurement or madness as the price of physical survival. 
    The extraction is absolute: up to 40% mortality in some epidemics.
    
@@ -113,7 +113,7 @@ constraint_victim(ergot_grain_poisoning, peasantry).               % Suffered er
 
 constraint_indexing:constraint_classification(
     ergot_grain_poisoning,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -196,8 +196,8 @@ constraint_indexing:constraint_classification(
 :- begin_tests(ergot_grain_poisoning_tests).
 
 test(multi_perspective_madness) :-
-    % Peasant (Powerless) sees Noose
-    constraint_indexing:constraint_classification(ergot_grain_poisoning, noose, context(individual_powerless, immediate, trapped, local)),
+    % Peasant (Powerless) sees Snare
+    constraint_indexing:constraint_classification(ergot_grain_poisoning, snare, context(individual_powerless, immediate, trapped, local)),
     % King (Institutional) sees Rope (survival tool)
     constraint_indexing:constraint_classification(ergot_grain_poisoning, rope, context(institutional, biographical, mobile, national)),
     % Historian (Analytical) sees Mountain
@@ -238,7 +238,7 @@ test(time_immutability_discovery) :-
  * religious narratives and the general lack of scientific understanding 
  * of fungi.
  * * 3. PERSPECTIVE SELECTION:
- * Contrasted the Peasant (Noose) who has no exit during "the starving time" 
+ * Contrasted the Peasant (Snare) who has no exit during "the starving time" 
  * with the Miller (Rope) who uses the "spurred" rye to maintain profit 
  * margins and the King who uses it as a tragic tool of coordination.
  * * 4. AMBIGUITIES:
@@ -255,9 +255,9 @@ test(time_immutability_discovery) :-
 % Mandatory Omega for high-extraction:
 omega_variable(
     ergot_famine_intent,
-    "Was the distribution of spurred rye to the poor a functional necessity for survival (Mountain) or an intentional predatory extraction (Noose/Mandatrophy)?",
+    "Was the distribution of spurred rye to the poor a functional necessity for survival (Mountain) or an intentional predatory extraction (Snare/Mandatrophy)?",
     resolution_mechanism("Audit of medieval grain stores and distribution logs vs. famine mortality rates"),
-    impact("If necessity: Survival Mountain. If predatory: Mandatrophy Noose."),
+    impact("If necessity: Survival Mountain. If predatory: Mandatrophy Snare."),
     confidence_without_resolution(medium)
 ).
 
@@ -286,7 +286,7 @@ omega_variable(
  * understanding of fungi before 1676 C.E.
  * * CONCLUSION:
  * The presence of these alternatives shifts ergot from a "Mountain" of 
- * biological fate into a "Noose" created by institutional ignorance and 
+ * biological fate into a "Snare" created by institutional ignorance and 
  * social stratification (millers choosing to sell sparked rye).
  */
 

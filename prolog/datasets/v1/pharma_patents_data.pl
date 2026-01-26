@@ -24,12 +24,12 @@ event(ev04_patent_evergreening, state_stabilization, 2025, [mechanism(minor_refo
 constraint_claim(rd_capital_barrier, mountain).
 constraint_metric(rd_capital_barrier, accessibility_collapse, 0.95).
 
-% Noose: The 20-year patent term mandate. A legal trap that prevents generic entry regardless of health emergency.
-constraint_claim(patent_protection_mandate, noose).
+% Snare: The 20-year patent term mandate. A legal trap that prevents generic entry regardless of health emergency.
+constraint_claim(patent_protection_mandate, snare).
 constraint_metric(patent_protection_mandate, stakes_inflation, 0.92).
 
-% Zombie: Innovation Incentive Doctrine. The idea that only high-price monopolies generate life-saving research, which persists despite increasing public funding of early-stage discovery.
-constraint_claim(monopoly_incentive_myth, zombie).
+% Piton: Innovation Incentive Doctrine. The idea that only high-price monopolies generate life-saving research, which persists despite increasing public funding of early-stage discovery.
+constraint_claim(monopoly_incentive_myth, piton).
 constraint_metric(monopoly_incentive_myth, suppression, 0.85).
 
 % --- 4. Recommendations & Veto Structure ---

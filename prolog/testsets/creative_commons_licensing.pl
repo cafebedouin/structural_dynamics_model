@@ -1,12 +1,12 @@
 % ============================================================================
 % CONSTRAINT STORY: creative_commons_licensing
 % ============================================================================
-% Generated: 2026-01-17
-% Model: Gemini 2.0 Flash
+% Generated: 2026-01-23
+% Model: Gemini Pro (Revised)
 % Source: Creative Commons Legal Code / Lessig, L. (2004). Free Culture.
 % ============================================================================
 
-:- module(constraint_creative_commons, []).
+:- module(constraint_creative_commons_licensing, []).
 
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
@@ -25,26 +25,23 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: creative_commons_licensing
- * human_readable: Creative Commons (Modular Permissions)
- * domain: social/technological/legal
- * temporal_scope: Biographical to Historical (2001 - Present)
+ * 
+ * constraint_id: creative_commons_licensing
+ * human_readable: Creative Commons Licensing Framework
+ * domain: legal/social/technological
+ * temporal_scope: 2001 - Present
  * spatial_scope: Global
- * * SUMMARY:
- * Creative Commons is a licensing framework that allows creators to move away 
- * from the binary of "Noose" (Full Copyright) or "Mountain" (Public Domain). 
+ * 
+ * SUMMARY:
+ * Creative Commons (CC) is a licensing framework that allows creators to move away 
+ * from the binary of "Full Copyright" (a Snare) or "Public Domain" (a Mountain). 
  * By using modular terms (Attribution, Non-Commercial, etc.), creators build 
  * a custom "Rope" that defines exactly how their work can be shared and remixed.
- * * KEY AGENTS:
- * - The Licensor (Creator): Voluntarily reduces their monopoly to gain reach.
- * - The Licensee (User): Gains legal certainty for reuse and remixing.
- * - The Commons Architect: (e.g., Lawrence Lessig) who designed the legal 
- * interoperability of the licenses.
- * * NARRATIVE ARC:
- * CC transforms copyright from a wall into a "User Manual." It solves the 
- * problem of high transaction costs; instead of negotiating every use, the 
- * license acts as a pre-signed permission slip that coordinates global 
- * creative collaboration.
+ * 
+ * KEY AGENTS:
+ * - The Student (Individual Powerless): Uses a CC image for a school project.
+ * - The Wikipedian (Individual Moderate): Uses CC licenses to build a global commons.
+ * - The Traditional Publisher (Institutional): Views CC as a threat to their business model.
  */
 
 /* ==========================================================================
@@ -55,45 +52,61 @@ narrative_ontology:interval(creative_commons_licensing, 0, 10).
 narrative_ontology:constraint_claim(creative_commons_licensing, rope).
 
 % Base extractiveness score (0.1)
-% Low extraction; the creator intentionally gives up "extraction rights" 
-% (licensing fees) to facilitate broader cultural flow.
+% Low; the creator intentionally gives up "extraction rights" (licensing fees)
+% to facilitate broader cultural flow.
 domain_priors:base_extractiveness(creative_commons_licensing, 0.1).
 
 % Suppression score (0.1)
-% Extremely low; the system is designed for maximum transparency and 
-% machine-readability.
+% Extremely low; the system is designed for maximum transparency and machine-readability.
 domain_priors:suppression_score(creative_commons_licensing, 0.1).
 
-% Enforcement: Requires active enforcement (though usually self-regulating 
-% through community norms).
+% Enforcement: Requires active enforcement (though often self-regulating).
 domain_priors:requires_active_enforcement(creative_commons_licensing).
 
-% Metrics
-narrative_ontology:constraint_metric(creative_commons_licensing, extractiveness, 0.1).
-narrative_ontology:constraint_metric(creative_commons_licensing, suppression_requirement, 0.1).
-
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(creative_commons_licensing, open_educational_resources).
 constraint_beneficiary(creative_commons_licensing, remix_culture).
-constraint_victim(creative_commons_licensing, none).
+constraint_victim(creative_commons_licensing, legacy_publishers).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 1: THE WIKIPEDIAN - Rope
+   PERSPECTIVE 1: THE STUDENT - Rope
    --------------------------------------------------------------------------
-   WHO: individual_moderate
-   WHEN: biographical
-   WHERE: mobile
-   SCOPE: global
+   WHO: individual_powerless (Needs an image for a presentation)
+   WHEN: immediate (Project deadline)
+   WHERE: trapped (Cannot afford to license a stock photo)
+   
+   WHY THIS CLASSIFICATION:
+   For a student, finding a CC-licensed image is a simple 'Rope'. It allows them
+   to complete their school project without worrying about copyright law or
+   expensive licensing fees. It's a simple, helpful tool.
+   -------------------------------------------------------------------------- */
+
+constraint_indexing:constraint_classification(
+    creative_commons_licensing,
+    rope,
+    context(
+        agent_power(individual_powerless),
+        time_horizon(immediate),
+        exit_options(trapped),
+        spatial_scope(local)
+    )
+).
+
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 2: THE WIKIPEDIAN / COLLABORATOR - Rope
+   --------------------------------------------------------------------------
+   WHO: individual_moderate (Building a shared resource)
+   WHEN: biographical (Contributing over a lifetime)
+   WHERE: mobile (Can choose which works to contribute or use)
    
    WHY THIS CLASSIFICATION:
    For a contributor to an open project like Wikipedia, CC is the ultimate 
-   "Rope." It provides the coordination infrastructure needed for thousands 
-   of strangers to build a single "Mountain" of knowledge without a 
-   single "Noose" of copyright litigation.
+   'Rope.' It provides the coordination infrastructure needed for thousands of 
+   strangers to build a single 'Mountain' of knowledge without a single 
+   'Snare' of copyright litigation.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
@@ -105,21 +118,17 @@ constraint_indexing:constraint_classification(
         exit_options(mobile),
         spatial_scope(global)
     )
-) :-
-    domain_priors:base_extractiveness(creative_commons_licensing, E),
-    E < 0.2,
-    !.
+).
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE TRADITIONAL PUBLISHER - Noose
+   PERSPECTIVE 3: THE TRADITIONAL PUBLISHER - Snare
    --------------------------------------------------------------------------
-   WHO: institutional
-   WHEN: generational
-   WHERE: trapped (business model relies on copyright monopolies)
-   SCOPE: global
+   WHO: institutional (Business model relies on copyright monopolies)
+   WHEN: generational (The slow decline of a business model)
+   WHERE: constrained (Cannot compete with "free")
    
    WHY THIS CLASSIFICATION:
-   To a legacy academic publisher, CC is a "Noose." It strangles their 
+   To a legacy academic publisher, CC is a 'Snare.' It strangles their 
    ability to charge paywall fees and maintain an "Exclusive Match" 
    with authors. The rise of "Open Access" (driven by CC) is a slow-motion 
    collapse of their extractive power.
@@ -127,43 +136,14 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     creative_commons_licensing,
-    noose,
+    snare,
     context(
         agent_power(institutional),
         time_horizon(generational),
-        exit_options(trapped),
+        exit_options(constrained),
         spatial_scope(global)
     )
-) :-
-    true.
-
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE INTERNET ARCHITECT - Mountain
-   --------------------------------------------------------------------------
-   WHO: analytical
-   WHEN: historical
-   WHERE: analytical
-   SCOPE: global
-   
-   WHY THIS CLASSIFICATION:
-   The architect sees CC as a "Mountain"—a permanent layer of the internet's 
-   legal stack. Much like the HTTP protocol coordinates data, CC 
-   coordinates "Meaning." It is a structural feature that makes the modern 
-   web possible.
-   -------------------------------------------------------------------------- */
-
-constraint_indexing:constraint_classification(
-    creative_commons_licensing,
-    mountain,
-    context(
-        agent_power(analytical),
-        time_horizon(historical),
-        exit_options(analytical),
-        spatial_scope(global)
-    )
-) :-
-    domain_priors:requires_active_enforcement(creative_commons_licensing),
-    !.
+).
 
 /* ==========================================================================
    4. TESTS
@@ -171,13 +151,12 @@ constraint_indexing:constraint_classification(
 
 :- begin_tests(cc_tests).
 
-test(coordination_efficiency) :-
-    % Testing that CC functions as a non-extractive Rope for mobile agents.
-    constraint_indexing:constraint_classification(creative_commons_licensing, rope, context(_, _, mobile, _)).
-
-test(legacy_disruption) :-
-    % Testing that CC acts as a Noose for institutions reliant on monopolies.
-    constraint_indexing:constraint_classification(creative_commons_licensing, noose, context(institutional, _, _, _)).
+test(multi_perspective_variance) :-
+    % Note: both powerless and moderate see a Rope, but for different reasons.
+    % The test only requires 2+ distinct types.
+    constraint_indexing:constraint_classification(creative_commons_licensing, Type1, context(agent_power(individual_powerless), _, _, _)),
+    constraint_indexing:constraint_classification(creative_commons_licensing, Type2, context(agent_power(institutional), _, _, _)),
+    Type1 \= Type2.
 
 :- end_tests(cc_tests).
 
@@ -187,25 +166,72 @@ test(legacy_disruption) :-
 
 /**
  * LLM GENERATION NOTES
- * * Model: Gemini 2.0 Flash
- * * KEY DECISIONS:
- * CC is a "meta-constraint." It uses the rules of Copyright to create a 
- * non-copyright-like environment. I classified it as a Noose for 
- * publishers because it is the primary "Exit Option" that breaks their 
- * extractive business models.
+ * 
+ * Model: Gemini Pro (Revised)
+ * Date: 2026-01-23
+ * 
+ * KEY DECISIONS:
+ * 
+ * 1. PERSPECTIVE SELECTION: Added the 'Student' as the 'individual_powerless'
+ *    agent. Their use case is simpler than the Wikipedian's; it's about
+ *    immediate, frictionless access, which is a core value proposition of CC.
+ *
+ * 2. CLASSIFICATION RATIONALE:
+ *    - Student/Wikipedian (Rope): A tool for creation and collaboration.
+ *    - Publisher (Snare): A threat to an exclusive business model.
+ * 
+ * 3. CORE INSIGHT: Creative Commons is a "meta-constraint." It uses the rules
+ *    of Copyright (a potential 'Snare') to build a collaborative commons (a 'Rope').
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω)
    ========================================================================== */
-
+/**
+ * OMEGA IDENTIFICATION
+ *
+ * The core uncertainty is whether the legal framework can withstand pressure
+ * from new technologies that challenge the definition of "use."
+ */
 omega_variable(
     cc_license_enforcement_vulnerability,
-    "Can CC licenses survive a targeted attack by AI companies claiming 'Fair Use' bypasses the license terms?",
-    resolution_mechanism("Case law involving 'Share-Alike' clauses in AI training sets"),
-    impact("If Yes: The Rope holds. If No: The Mountain collapses back into a Noose of raw data extraction."),
-    confidence_without_resolution(medium)
+    "Can CC licenses survive a targeted attack by AI companies claiming that training on data constitutes 'Fair Use' and bypasses the license terms (e.g., Share-Alike or Non-Commercial)?",
+    resolution_mechanism("Establishment of new case law specifically addressing the use of licensed material in large-scale AI training sets."),
+    impact("If Fair Use wins: The CC 'Rope' is broken for AI, and the licenses become a weaker 'Mountain' of ethical guidelines. If CC terms hold: The Rope remains a strong coordination tool for creators."),
+    confidence_without_resolution(high)
 ).
+
+/* ==========================================================================
+   7. ALTERNATIVE ANALYSIS
+   ========================================================================== */
+/**
+ * VIABLE ALTERNATIVES
+ *
+ * ALTERNATIVE 1: All Rights Reserved Copyright
+ *    Viability: The default legal state for creative works.
+ *    Suppression: CC was created specifically to provide a more flexible alternative to this "all or nothing" model.
+ *
+ * ALTERNATIVE 2: Public Domain
+ *    Viability: The state of works after copyright expires.
+ *    Suppression: Creators often want some control (like attribution) that the public domain does not provide, making CC a more attractive choice.
+ *
+ * CONCLUSION:
+ * Creative Commons acts as a crucial middle-ground, creating a 'Rope' that is
+ * more flexible than the 'Snare' of full copyright but provides more control than
+ * the 'Mountain' of the public domain.
+ */
+
+/* ==========================================================================
+   8. INTEGRATION HOOKS
+   ========================================================================== */
+
+/**
+ * TO USE THIS FILE:
+ * 
+ * 1. Load: ?- [constraints/creative_commons_licensing].
+ * 2. Multi-perspective: ?- multi_index_report(creative_commons_licensing).
+ * 3. Run tests: ?- run_tests(cc_tests).
+ */
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

@@ -114,7 +114,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE UNAWARE LAYPERSON - Noose
+   PERSPECTIVE 2: THE UNAWARE LAYPERSON - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless (Trapped by a "no-brainer" mindset)
@@ -123,7 +123,7 @@ constraint_indexing:constraint_classification(
    SCOPE: local
    
    WHY THIS CLASSIFICATION:
-   For the layperson, the "simple" view is a "Noose." It strangles the potential for 
+   For the layperson, the "simple" view is a "Snare." It strangles the potential for 
    quality, leaving them to settle for the 90% of mediocrity they've "eaten in 
    [their] life" without realizing there is a "difference".
    
@@ -136,7 +136,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     omelet_perfection_complexity,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -187,7 +187,7 @@ constraint_indexing:constraint_classification(
 test(multi_perspective_omelet) :-
     % Obsessive sees Rope
     constraint_indexing:constraint_classification(omelet_perfection_complexity, T1, context(individual_moderate, biographical, mobile, local)),
-    % Layperson sees Noose
+    % Layperson sees Snare
     constraint_indexing:constraint_classification(omelet_perfection_complexity, T2, context(individual_powerless, immediate, trapped, local)),
     % Chef sees Mountain
     constraint_indexing:constraint_classification(omelet_perfection_complexity, T3, context(institutional, historical, analytical, global)),
@@ -213,7 +213,7 @@ test(complexity_suppression_insight) :-
  * Reasoning: Low extraction because the "failures" are still highly valuable/tasty 
  * compared to the baseline life of the unobsessed.
  * 2. PERSPECTIVE SELECTION:
- * The contrast between the "No-brainer" (Noose) and the "World-opening" (Rope) 
+ * The contrast between the "No-brainer" (Snare) and the "World-opening" (Rope) 
  * mirrors the text's shift from rational person to obsessed practitioner.
  * 3. MANDATROPHY STATUS:
  * [RESOLVED MANDATROPHY]. While obsession can be extractive, the benefit 
@@ -249,7 +249,7 @@ omega_variable(
  * as a Rope for the lay person.
  * * CONCLUSION:
  * The existence of tasty "mistakes" makes the "perfection" a Rope of choice 
- * rather than a lethal Noose.
+ * rather than a lethal Snare.
  */
 
 /* ==========================================================================

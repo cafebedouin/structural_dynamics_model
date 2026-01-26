@@ -24,12 +24,12 @@ event(ev04_appomattox_surrender, final_verification, 1865, [actor(robert_e_lee),
 constraint_claim(industrial_output_advantage, mountain).
 constraint_metric(industrial_output_advantage, accessibility_collapse, 0.95).
 
-% Noose: The Attrition Spiral. Confederate manpower limits and blockade constraints narrowing survival options.
-constraint_claim(manpower_attrition_noose, noose).
+% Snare: The Attrition Spiral. Confederate manpower limits and blockade constraints narrowing survival options.
+constraint_claim(manpower_attrition_noose, snare).
 constraint_metric(manpower_attrition_noose, stakes_inflation, 1.0).
 
-% Zombie: Nullification Doctrine. The dead concept of state sovereignty used to justify secession while draining central C2 capability.
-constraint_claim(nullification_doctrine, zombie).
+% Piton: Nullification Doctrine. The dead concept of state sovereignty used to justify secession while draining central C2 capability.
+constraint_claim(nullification_doctrine, piton).
 constraint_metric(nullification_doctrine, suppression, 0.85).
 
 % Rope: Habeas Corpus Suspension. Ties individual legal agency to executive military necessity.

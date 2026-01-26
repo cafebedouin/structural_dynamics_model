@@ -47,7 +47,7 @@
  * Entropy functions as a "Mountain" of cosmic reality—the ultimate physical 
  * boundary. To the engineer, it is a "Rope" for coordination (defining the 
  * Carnot limit for engines). However, for the aging organism, it becomes 
- * a "Noose" that slowly strangles the ability to maintain internal order, 
+ * a "Snare" that slowly strangles the ability to maintain internal order, 
  * leading to the inevitable extraction of life itself.
  */
 
@@ -151,7 +151,7 @@ constraint_indexing:constraint_classification(
     !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE LIVING ORGANISM - Noose
+   PERSPECTIVE 3: THE LIVING ORGANISM - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless - Subject to the biological "tax" of aging.
@@ -160,16 +160,16 @@ constraint_indexing:constraint_classification(
    SCOPE: local - Immediate internal physiology.
    
    WHY THIS CLASSIFICATION:
-   For the individual organism, entropy is a Noose. Life is a constant 
+   For the individual organism, entropy is a Snare. Life is a constant 
    struggle to "pump out" disorder (Schrödinger's negentropy). As time 
    passes, the difficulty of maintaining internal order increases. The 
-   Noose of decay slowly tightens, eventually extracting the 
+   Snare of decay slowly tightens, eventually extracting the 
    agent's vitality until the system collapses into equilibrium (death).
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
     thermodynamics_entropy,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -188,10 +188,10 @@ constraint_indexing:constraint_classification(
 :- begin_tests(thermodynamics_entropy_tests).
 
 test(multi_perspective_variance) :-
-    % Analyst sees Mountain, Institutional sees Rope, Powerless sees Noose
+    % Analyst sees Mountain, Institutional sees Rope, Powerless sees Snare
     constraint_indexing:constraint_classification(thermodynamics_entropy, mountain, context(analytical, civilizational, trapped, global)),
     constraint_indexing:constraint_classification(thermodynamics_entropy, rope, context(institutional, biographical, arbitrage, national)),
-    constraint_indexing:constraint_classification(thermodynamics_entropy, noose, context(individual_powerless, immediate, constrained, local)).
+    constraint_indexing:constraint_classification(thermodynamics_entropy, snare, context(individual_powerless, immediate, constrained, local)).
 
 test(power_extractiveness_scaling) :-
     ContextPowerless = context(individual_powerless, immediate, constrained, local),
@@ -225,7 +225,7 @@ test(time_immutability) :-
  * that it remains a fantasy.
  * * 3. PERSPECTIVE SELECTION:
  * The Observer (Mountain) sees the cosmic trend. The Engineer (Rope) 
- * sees the efficiency limit. The Organism (Noose) sees the decay of self.
+ * sees the efficiency limit. The Organism (Snare) sees the decay of self.
  */
 
 /* ==========================================================================
@@ -255,7 +255,7 @@ omega_variable(
  * * CONCLUSION:
  * Since physical evidence suppresses the Steady-State alternative, Entropy 
  * remains a Mountain for the universe, but for life itself, it functions 
- * as a Noose by suppressing the possibility of eternal order.
+ * as a Snare by suppressing the possibility of eternal order.
  */
 
 /* ==========================================================================

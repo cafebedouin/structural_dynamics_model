@@ -100,19 +100,19 @@ belief_explanation(relationship_meaning,
 % P7: Family Obligations
 belief_classification(family_obligations, varies).
 belief_explanation(family_obligations,
-    'Not natural Mountain. Often Rope (functional reciprocity). Sometimes Noose (extraction using "family" claim). Evaluate each relationship: reciprocal = Rope, extractive = Noose. Can exit if harmful.').
+    'Not natural Mountain. Often Rope (functional reciprocity). Sometimes Snare (extraction using "family" claim). Evaluate each relationship: reciprocal = Rope, extractive = Snare. Can exit if harmful.').
 
 %% SECTION 4: WORK & VALUE (P8-P9)
 
 % P8: Work Value
 belief_classification(work_value, varies).
 belief_explanation(work_value,
-    'Work not inherently valuable. Some work is Rope (chosen, meaningful, well-compensated). Some work is Noose (extractive, necessary only for survival). "Work as dignity" claim is Noose preventing questioning of exploitation. Evaluate each job.').
+    'Work not inherently valuable. Some work is Rope (chosen, meaningful, well-compensated). Some work is Snare (extractive, necessary only for survival). "Work as dignity" claim is Snare preventing questioning of exploitation. Evaluate each job.').
 
 % P9: Wealth/Status Pursuit
 belief_classification(wealth_status_pursuit, rope).
 belief_explanation(wealth_status_pursuit,
-    'Not inherent goods. Are tools for securing autonomy. Pursue sufficient wealth to escape extraction, then diminishing returns. "More is always better" is Noose (keeps you on treadmill). Stop when autonomous.').
+    'Not inherent goods. Are tools for securing autonomy. Pursue sufficient wealth to escape extraction, then diminishing returns. "More is always better" is Snare (keeps you on treadmill). Stop when autonomous.').
 
 %% SECTION 5: EPISTEMIC NORMS (P10-P11)
 
@@ -131,7 +131,7 @@ belief_explanation(moral_intuitions,
 % P12: Power Structures Natural
 belief_classification(power_structures_natural, varies).
 belief_explanation(power_structures_natural,
-    'This IS the meta-question enabling all DR analysis. Most structures are Ropes or Nooses, not Mountains. Some coordination is Rope (traffic rules). Some hierarchy is Noose (claimed as natural). Apply DR framework system-by-system. Key skill: distinguishing them.').
+    'This IS the meta-question enabling all DR analysis. Most structures are Ropes or Nooses, not Mountains. Some coordination is Rope (traffic rules). Some hierarchy is Snare (claimed as natural). Apply DR framework system-by-system. Key skill: distinguishing them.').
 
 % P13: Participation in Nooses
 belief_classification(participation_in_nooses, rope).
@@ -188,14 +188,14 @@ belief_explanation(gender_sexual_identity,
 % P22: Cultural/Religious Identity
 belief_classification(cultural_religious_identity, rope).
 belief_explanation(cultural_religious_identity,
-    'Not innate. Constructed through participation. Evaluate: Is this identity Rope (community, meaning, low cost) or Noose (extraction, oppression) FOR ME? Can maintain, exit, or construct hybrid. "Must maintain or betray ancestors" is Noose.').
+    'Not innate. Constructed through participation. Evaluate: Is this identity Rope (community, meaning, low cost) or Snare (extraction, oppression) FOR ME? Can maintain, exit, or construct hybrid. "Must maintain or betray ancestors" is Snare.').
 
 %% SECTION 10: CONSUMPTION & RESOURCES (P23-P25)
 
 % P23: Consumption Level (How Much is Enough)
 belief_classification(consumption_level, rope).
 belief_explanation(consumption_level,
-    'Personal preference subject to hedonic adaptation (Mountain). Secure autonomy threshold (healthcare, housing, food). Beyond that: diminishing returns. Maximize autonomy, not consumption. "More is better" is Noose. Stop when autonomous.').
+    'Personal preference subject to hedonic adaptation (Mountain). Secure autonomy threshold (healthcare, housing, food). Beyond that: diminishing returns. Maximize autonomy, not consumption. "More is better" is Snare. Stop when autonomous.').
 
 % P24: Experiences vs Possessions
 belief_classification(experiences_vs_possessions, rope).
@@ -205,7 +205,7 @@ belief_explanation(experiences_vs_possessions,
 % P25: Giving Obligation
 belief_classification(giving_obligation, rope).
 belief_explanation(giving_obligation,
-    'Not absolute obligation. Coordination problem: everyone benefits from safety net. Choose level based on values and resources. Prefer systemic solutions over charity. Effective altruism is one valid Rope, not only option. "Must give everything" can be Noose.').
+    'Not absolute obligation. Coordination problem: everyone benefits from safety net. Choose level based on values and resources. Prefer systemic solutions over charity. Effective altruism is one valid Rope, not only option. "Must give everything" can be Snare.').
 
 %% SECTION 11: KNOWLEDGE & LEARNING (P26-P28)
 
@@ -217,12 +217,12 @@ belief_explanation(specialization,
 % P27: Formal Education
 belief_classification(formal_education, rope).
 belief_explanation(formal_education,
-    'Not necessary for all paths. Is Rope for credentialed fields (medicine, law). May be Noose if high debt for low-return field. Field-dependent cost-benefit. Consider alternatives: bootcamps, apprenticeship, self-teaching.').
+    'Not necessary for all paths. Is Rope for credentialed fields (medicine, law). May be Snare if high debt for low-return field. Field-dependent cost-benefit. Consider alternatives: bootcamps, apprenticeship, self-teaching.').
 
 % P28: Curiosity vs Practicality
 belief_classification(curiosity_vs_practicality, rope).
 belief_explanation(curiosity_vs_practicality,
-    'Balance is strategic. If resources scarce: prioritize practicality (survival). If sufficient: follow curiosity. Optimal: find intersection (paid for curious work). Pure practicality can be Noose if suppresses all interest. Pure curiosity requires independent means.').
+    'Balance is strategic. If resources scarce: prioritize practicality (survival). If sufficient: follow curiosity. Optimal: find intersection (paid for curious work). Pure practicality can be Snare if suppresses all interest. Pure curiosity requires independent means.').
 
 %% SECTION 12: POLITICAL PARTICIPATION (P29-P31)
 
@@ -234,7 +234,7 @@ belief_explanation(electoral_participation,
 % P30: Direct Action/Mutual Aid
 belief_classification(direct_action, rope).
 belief_explanation(direct_action,
-    'Strategic choice. Often more effective than electoral politics. Requires sustained energy. Engage where capacity exists. Focus on mutual aid (builds dual power). Sustainable > heroic. "Must constantly organize" can become Noose (burnout).').
+    'Strategic choice. Often more effective than electoral politics. Requires sustained energy. Engage where capacity exists. Focus on mutual aid (builds dual power). Sustainable > heroic. "Must constantly organize" can become Snare (burnout).').
 
 % P31: Local vs Global Issues
 belief_classification(local_vs_global, rope).
@@ -256,12 +256,12 @@ belief_explanation(cosmic_meaning,
 % P34: Having Children
 belief_classification(having_children, rope).
 belief_explanation(having_children,
-    'Not biological imperative. Massive commitment. Evaluate actual desire (not social pressure), resources, capacity, world conditions. Either choice valid. "Must have children" is Noose (reproductive coercion). "Must not" is also Noose. Genuine choice.').
+    'Not biological imperative. Massive commitment. Evaluate actual desire (not social pressure), resources, capacity, world conditions. Either choice valid. "Must have children" is Snare (reproductive coercion). "Must not" is also Snare. Genuine choice.').
 
 % P35: Time Allocation
 belief_classification(time_allocation, rope).
 belief_explanation(time_allocation,
-    'Time is finite (Mountain - biological limit). How to spend it is choice (Rope). Given mortality: this is only life, time is gone forever. Choose based on values not shoulds. "Maximize productivity" is Noose (capitalism internalized). Balance: resources, relationships, projects, rest.').
+    'Time is finite (Mountain - biological limit). How to spend it is choice (Rope). Given mortality: this is only life, time is gone forever. Choose based on values not shoulds. "Maximize productivity" is Snare (capitalism internalized). Balance: resources, relationships, projects, rest.').
 
 % --- 4. INSTITUTIONAL NOOSE DETECTION ---
 % Common claims made by institutions to enable extraction

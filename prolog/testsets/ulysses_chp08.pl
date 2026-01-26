@@ -36,7 +36,7 @@
  * the eaten, manifesting as the predatory extraction of hunger.
  * * KEY AGENTS:
  * - Leopold Bloom: Individual moderate navigating his hunger via "cheese sandwich" (Rope).
- * - The Horses/Jugginses: Individual powerless agents trapped in the cycle of work and feeding (Noose).
+ * - The Horses/Jugginses: Individual powerless agents trapped in the cycle of work and feeding (Snare).
  * - Nature/The Stream: Institutional force viewing consumption as immutable law (Mountain).
  */
 
@@ -46,7 +46,7 @@
 
 % Required for [STEP 1] and [STEP 2] of the DR-Audit Suite
 narrative_ontology:interval(lestrygonian_metabolism_chp8_interval, 0, 10).
-narrative_ontology:constraint_claim(lestrygonian_metabolism_chp8, noose).
+narrative_ontology:constraint_claim(lestrygonian_metabolism_chp8, snare).
 
 % Metrics: Extractiveness (0.6 - Predatory) and Suppression (0.4 - Natural)
 domain_priors:base_extractiveness(lestrygonian_metabolism_chp8, 0.6).
@@ -80,15 +80,15 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE "JUGGINSES" (Horses) - Noose
+   PERSPECTIVE 2: THE "JUGGINSES" (Horses) - Snare
    --------------------------------------------------------------------------
    WHO: individual_powerless - "Damn all they know or care... noses stuck in nosebags".
    WHY: For the laboring animals and the destitute, the metabolic cycle is a 
-   "Noose"—an extractive, inescapable trap of work for food.
+   "Snare"—an extractive, inescapable trap of work for food.
    -------------------------------------------------------------------------- */
 constraint_indexing:constraint_classification(
     lestrygonian_metabolism_chp8,
-    noose,
+    snare,
     context(agent_power(individual_powerless), time_horizon(immediate), exit_options(trapped), spatial_scope(local))
 ) :- !.
 
@@ -114,7 +114,7 @@ constraint_indexing:constraint_classification(
 test(multi_perspective_metabolism) :-
     constraint_indexing:constraint_classification(lestrygonian_metabolism_chp8, T1, context(individual_moderate, _, _, _)),
     constraint_indexing:constraint_classification(lestrygonian_metabolism_chp8, T2, context(individual_powerless, _, _, _)),
-    T1 = rope, T2 = noose.
+    T1 = rope, T2 = snare.
 
 test(extractiveness_check) :-
     % predatory systems should have high base extractiveness
@@ -130,15 +130,15 @@ test(extractiveness_check) :-
 /**
  * LLM GENERATION NOTES:
  * Refactored to fix the 'metabolic_cycle' mismatch. By declaring the claim 
- * as 'noose', we highlight how the biological 'Mountain' actually functions 
+ * as 'snare', we highlight how the biological 'Mountain' actually functions 
  * as an extractive trap for the lower classes of Dublin.
  */
 
 omega_variable(
     metempsychosis_immutability,
-    "Is the 'stream of life' a biological Mountain or a spiritual Noose (Karma)?",
+    "Is the 'stream of life' a biological Mountain or a spiritual Snare (Karma)?",
     resolution_mechanism("Verification of the 'Met him pike hoses' theory in Chapter 17"),
-    impact("If Mountain: Suffering is a natural fact. If Noose: It is a breakable cycle."),
+    impact("If Mountain: Suffering is a natural fact. If Snare: It is a breakable cycle."),
     confidence_without_resolution(medium)
 ).
 
@@ -160,4 +160,4 @@ omega_variable(
 % --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
 constraint_indexing:constraint_classification(ulysses_chp08, mountain, agent_power(analytical)).
 constraint_indexing:constraint_classification(ulysses_chp08, rope, agent_power(institutional)).
-constraint_indexing:constraint_classification(ulysses_chp08, noose, agent_power(individual_powerless)).
+constraint_indexing:constraint_classification(ulysses_chp08, snare, agent_power(individual_powerless)).

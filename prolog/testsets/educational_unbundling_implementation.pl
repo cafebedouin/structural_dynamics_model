@@ -112,7 +112,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE LEGACY ADMISSIONS OFFICER - Noose
+   PERSPECTIVE 2: THE LEGACY ADMISSIONS OFFICER - Snare
    --------------------------------------------------------------------------
    
    WHO: institutional - Enforcer of current institutional standards.
@@ -121,7 +121,7 @@ constraint_indexing:constraint_classification(
    SCOPE: national - Bound by accrediting bodies and degree-granting laws.
    
    WHY THIS CLASSIFICATION:
-   For a legacy officer, unbundling is a Noose. It threatens to extract the 
+   For a legacy officer, unbundling is a Snare. It threatens to extract the 
    "prestige value" from their institution, bypasses their gatekeeping power, 
    and "forces" them to recognize signals they cannot control.
    
@@ -132,7 +132,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     education_unbundling_implementation,
-    noose,
+    snare,
     context(
         agent_power(institutional),
         time_horizon(biographical),
@@ -240,4 +240,4 @@ omega_variable(
 
 % --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
 constraint_indexing:constraint_classification(educational_unbundling_implementation, rope, agent_power(institutional)).
-constraint_indexing:constraint_classification(educational_unbundling_implementation, noose, agent_power(individual_powerless)).
+constraint_indexing:constraint_classification(educational_unbundling_implementation, snare, agent_power(individual_powerless)).

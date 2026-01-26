@@ -57,7 +57,7 @@ measurement(m4, code_of_hammurabi, extractiveness, 20, 0.65).
 measurement(m5, code_of_hammurabi, suppression_requirement, 20, 0.70).
 measurement(m6, code_of_hammurabi, resistance, 20, 0.55).
 
-% T=43: Full institutionalization (Noose Transformation)
+% T=43: Full institutionalization (Snare Transformation)
 measurement(m7, code_of_hammurabi, extractiveness, 43, 0.88).
 measurement(m8, code_of_hammurabi, suppression_requirement, 43, 0.92).
 measurement(m9, code_of_hammurabi, resistance, 43, 0.75).
@@ -112,7 +112,7 @@ intent_power_change(babylonian_reign, slave_class, -0.80).
 % SECTION 6: RECOMMENDATIONS & AUDIT FINDINGS
 % -----------------------------------------------------------------------------
 
-% Audit detects: Code of Hammurabi -> Transformation: Rope to Noose
+% Audit detects: Code of Hammurabi -> Transformation: Rope to Snare
 % Reason: §6-§10 (Death for theft), §210 (Vicarious daughter execution)
 recommendation(rec_1, 'Cut high-extraction clauses in property and capital law').
 affects_constraint(rec_1, code_of_hammurabi).
@@ -124,7 +124,7 @@ affects_constraint(rec_2, marriage_bond_standard).
 
 % Audit detects: Meta-logical Fraud
 % Claimed: Mountain (Judgments of Righteousness)
-% Measured: Noose (High extraction/suppression + asymmetric beneficiaries)
+% Measured: Snare (High extraction/suppression + asymmetric beneficiaries)
 veto_actor(hammurabi_king).
 veto_exposed(hammurabi_king, rec_1).
 

@@ -28,7 +28,7 @@ constraint_metric(kshatriya_dharma, snap_back_potential, 0.0).
 measurement(m1, kshatriya_dharma, extractiveness, 0, 0.20).
 measurement(m2, kshatriya_dharma, suppression_requirement, 0, 0.15).
 
-% T=5: Arjuna's Crisis (Transformation to Noose)
+% T=5: Arjuna's Crisis (Transformation to Snare)
 % "My members fail... I hate triumph thus sadly won"
 measurement(m3, kshatriya_dharma, extractiveness, 5, 0.85). % X >= 0.66
 measurement(m4, kshatriya_dharma, suppression_requirement, 5, 0.80). % E >= 0.66

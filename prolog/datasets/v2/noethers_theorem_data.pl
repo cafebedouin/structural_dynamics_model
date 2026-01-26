@@ -42,7 +42,7 @@ constraint_metric(approximate_symmetry_friction, snap_back_potential, 0.40).
 constraint_metric(approximate_symmetry_friction, extractiveness, 0.52).
 
 % NOOSE: Discrete Symmetry Obstruction (The limit where continuous calculus fails)
-constraint_claim(discrete_transformation_noose, noose).
+constraint_claim(discrete_transformation_noose, snare).
 constraint_metric(discrete_transformation_noose, intensity, 0.96).
 constraint_metric(discrete_transformation_noose, suppression_requirement, 0.88).
 constraint_metric(discrete_transformation_noose, snap_back_potential, 0.92).

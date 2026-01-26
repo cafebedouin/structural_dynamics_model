@@ -2,7 +2,7 @@
 % DRL CORE - INDEXICAL CONSTRAINT CLASSIFICATION v4.0
 % ============================================================================
 % This module implements context-indexed Deferential Realism classification.
-% Every Mountain/Rope/Noose judgment is INDEXED to WHO/WHEN/WHERE/HOW.
+% Every Mountain/Rope/Snare judgment is INDEXED to WHO/WHEN/WHERE/HOW.
 %
 % BREAKING CHANGES FROM v3.x:
 % - dr_type/2 now defaults to analytical context (backward compatible)
@@ -46,9 +46,10 @@
     % Exposed helpers for modal_logic and testing
     is_mountain/3,                  % Indexed version
     is_rope/3,
-    is_noose/3,
+    is_snare/3,
     is_tangled_rope/3,
-    is_zombie/3
+    is_scaffold/3,
+    is_piton/3
 ]).
 
 :- use_module(narrative_ontology).
@@ -125,23 +126,23 @@ is_rope(C, Context, rope) :-
 is_rope(_C, _Context, fail).
 
 % ----------------------------------------------------------------------------
-% Noose Test (Indexed)
+% Snare Test (Indexed)
 % ----------------------------------------------------------------------------
-% A constraint is a Noose FROM A CONTEXT if:
+% A constraint is a Snare FROM A CONTEXT if:
 % 1. Effective extractiveness (power-scaled) exceeds floor
 % 2. Requires active suppression (enforced)
 % 3. Perceived as changeable (not Mountain)
 
-is_noose(C, Context, noose) :-
+is_snare(C, Context, snare) :-
     % Calculate power-scaled extractiveness
     constraint_indexing:extractiveness_for_agent(C, Context, EffectiveX),
     
     % Check extraction floor
-    v3_1_config:param(noose_extraction_floor, XFloor),
+    v3_1_config:param(snare_extraction_floor, XFloor),
     EffectiveX >= XFloor,
     
     % Check suppression requirement
-    v3_1_config:param(noose_suppression_floor, EFloor),
+    v3_1_config:param(snare_suppression_floor, EFloor),
     narrative_ontology:constraint_metric(C, suppression_requirement, E),
     E >= EFloor,
     
@@ -149,53 +150,105 @@ is_noose(C, Context, noose) :-
     constraint_indexing:effective_immutability_for_context(Context, rope),
     !.
 
-is_noose(_C, _Context, fail).
+is_snare(_C, _Context, fail).
 
 % ----------------------------------------------------------------------------
 % Tangled Rope Test (Indexed)
 % ----------------------------------------------------------------------------
 % A constraint is a Tangled Rope FROM A CONTEXT if:
-% 1. Effective extractiveness in middle range
-% 2. Perceived as changeable
+% 1. Effective extractiveness in middle-to-high range (uses config params)
+% 2. High suppression (uses config params)
+% 3. Has BOTH coordination function AND asymmetric extraction
+% 4. Requires active enforcement
+%
+% Updated January 2026 based on empirical validation (168/467 constraints, 36%)
+%
+% This is genuinely hybrid: provides coordination (like rope) while extracting
+% (like snare). Requires surgical reform to preserve coordination while cutting extraction.
 
 is_tangled_rope(C, Context, tangled_rope) :-
     % Calculate power-scaled extractiveness
     constraint_indexing:extractiveness_for_agent(C, Context, EffectiveX),
-    
-    % Check middle range
-    v3_1_config:param(rope_extraction_ceiling, RopeX),
-    v3_1_config:param(tangled_rope_extraction_ceil, TangledX),
-    EffectiveX > RopeX,
-    EffectiveX =< TangledX,
-    
-    % Must be perceived as changeable
-    constraint_indexing:effective_immutability_for_context(Context, rope),
+
+    % Check tangled rope range (from config)
+    v3_1_config:param(tangled_rope_extraction_floor, FloorX),
+    v3_1_config:param(tangled_rope_extraction_ceil, CeilX),
+    EffectiveX >= FloorX,
+    EffectiveX =< CeilX,
+
+    % High suppression required (from config)
+    v3_1_config:param(tangled_rope_suppression_floor, MinS),
+    narrative_ontology:constraint_metric(C, suppression_requirement, S),
+    S >= MinS,
+
+    % Must require active enforcement (constructed constraint)
+    requires_active_enforcement(C),
+
+    % Must have both coordination function AND asymmetric extraction
+    narrative_ontology:has_coordination_function(C),
+    narrative_ontology:has_asymmetric_extraction(C),
     !.
 
 is_tangled_rope(_C, _Context, fail).
 
 % ----------------------------------------------------------------------------
-% Zombie Test (Indexed)
+% Scaffold Test (Indexed)
 % ----------------------------------------------------------------------------
-% A constraint is a Zombie FROM A CONTEXT if:
+% A constraint is a Scaffold FROM A CONTEXT if:
+% 1. Effective extraction is below the coordination ceiling (v3.4: 0.30)
+% 2. It possesses a genuine coordination function
+% 3. It contains a formal sunset clause (temporal limit)
+% 4. The time horizon (T) has not exceeded the designated utility period
+%
+% Scaffolds are temporary supports. High suppression is only acceptable if 
+% it is designed to decline or expire as the system stabilizes.
+
+is_scaffold(C, Context, scaffold) :-
+    % Calculate power-scaled extractiveness
+    constraint_indexing:extractiveness_for_agent(C, Context, EffectiveX),
+
+    % Check scaffold ceiling (v3.4 requirement: extraction < 0.30)
+    v3_1_config:param(scaffold_extraction_ceil, MaxX),
+    EffectiveX =< MaxX,
+
+    % Must possess a coordination function (the "support" aspect)
+    narrative_ontology:has_coordination_function(C),
+
+    % Mandatory: Must have a sunset clause to distinguish from a permanent Rope
+    narrative_ontology:has_sunset_clause(C),
+
+    % Validate Indexical Alignment (Time Horizon T)
+    % Scaffolds typically expire before 'civilizational' or 'historical' scales.
+    Context = context(_, time_horizon(T), _, _),
+    member(T, [immediate, biographical, generational]),
+
+    % Ensure it is not currently flagged as 'degraded' (Piton check)
+    \+ (narrative_ontology:constraint_metric(C, theater_ratio, TR), TR > 0.70),
+    !.
+
+is_scaffold(_C, _Context, fail).
+
+% ----------------------------------------------------------------------------
+% Piton Test (Indexed)
+% ----------------------------------------------------------------------------
+% A constraint is a Piton FROM A CONTEXT if:
 % 1. Low effective extractiveness
 % 2. High suppression (expensive to maintain)
 % 3. Should be cut but isn't
 
-is_zombie(C, Context, zombie) :-
+is_piton(C, Context, piton) :-
     % Calculate power-scaled extractiveness
     constraint_indexing:extractiveness_for_agent(C, Context, EffectiveX),
     
     % Low extraction
-    v3_1_config:param(zombie_extraction_ceiling, XCeil),
+    v3_1_config:param(piton_extraction_ceiling, XCeil),
     EffectiveX =< XCeil,
     
     % High suppression (maintenance cost)
-    narrative_ontology:constraint_metric(C, suppression_requirement, E),
-    E > XCeil,
+    \+ (narrative_ontology:constraint_metric(C, theater_ratio, TR), TR > 0.70),
     !.
 
-is_zombie(_C, _Context, fail).
+is_piton(_C, _Context, fail).
 
 % ============================================================================
 % CANONICAL TYPE DETERMINATION (INDEXED)
@@ -227,8 +280,8 @@ dr_type(_C, _Context, unknown).
 metric_based_type_indexed(C, Context, mountain) :-
     is_mountain(C, Context, mountain), !.
 
-metric_based_type_indexed(C, Context, noose) :-
-    is_noose(C, Context, noose), !.
+metric_based_type_indexed(C, Context, snare) :-
+    is_snare(C, Context, snare), !.
 
 metric_based_type_indexed(C, Context, rope) :-
     is_rope(C, Context, rope), !.
@@ -236,8 +289,8 @@ metric_based_type_indexed(C, Context, rope) :-
 metric_based_type_indexed(C, Context, tangled_rope) :-
     is_tangled_rope(C, Context, tangled_rope), !.
 
-metric_based_type_indexed(C, Context, zombie) :-
-    is_zombie(C, Context, zombie), !.
+metric_based_type_indexed(C, Context, piton) :-
+    is_piton(C, Context, piton), !.
 
 metric_based_type_indexed(_C, _Context, unknown).
 
@@ -272,10 +325,10 @@ dr_action(C, Context, reform) :-
     dr_type(C, Context, tangled_rope), !.
 
 dr_action(C, Context, cut) :-
-    dr_type(C, Context, noose), !.
+    dr_type(C, Context, snare), !.
 
 dr_action(C, Context, bypass) :-
-    dr_type(C, Context, zombie), !.
+    dr_type(C, Context, piton), !.
 
 dr_action(_C, _Context, investigate).
 
@@ -296,7 +349,7 @@ dr_action(C, Action) :-
 % ----------------------------------------------------------------------------
 % Claimed as Mountain but ISN'T from this context
 
-dr_mismatch(C, Context, type_1_false_mountain, severe) :-
+dr_mismatch(C, Context, type_1_false_summit, severe) :-
     % Check if claimed as mountain in data
     narrative_ontology:constraint_claim(C, mountain),
     
@@ -305,23 +358,23 @@ dr_mismatch(C, Context, type_1_false_mountain, severe) :-
     !.
 
 % ----------------------------------------------------------------------------
-% Type 3: Noose Misidentified as Rope (Indexed)
+% Type 3: Snare Misidentified as Rope (Indexed)
 % ----------------------------------------------------------------------------
-% Claimed as Rope but is actually Noose from this context
+% Claimed as Rope but is actually Snare from this context
 
-dr_mismatch(C, Context, type_3_noose_as_rope, severe) :-
+dr_mismatch(C, Context, type_3_snare_as_rope, severe) :-
     narrative_ontology:constraint_claim(C, rope),
-    is_noose(C, Context, noose),
+    is_snare(C, Context, snare),
     !.
 
 % ----------------------------------------------------------------------------
-% Type 5: Zombie Misidentified as Noose (Indexed)
+% Type 5: Piton Misidentified as Snare (Indexed)
 % ----------------------------------------------------------------------------
-% Claimed as Noose but is actually Zombie from this context
+% Claimed as Snare but is actually Piton from this context
 
-dr_mismatch(C, Context, type_5_zombie_as_noose, moderate) :-
-    narrative_ontology:constraint_claim(C, noose),
-    is_zombie(C, Context, zombie),
+dr_mismatch(C, Context, type_5_piton_as_snare, moderate) :-
+    narrative_ontology:constraint_claim(C, theater_ratio, TR), TR >= 0.70,
+    is_piton(C, Context, piton),
     !.
 
 % ----------------------------------------------------------------------------
@@ -461,7 +514,7 @@ v3.2:
 
 v3.1:
   - Consolidated namespace
-  - Added zombie detection
+  - Added piton detection
 
 v3.0:
   - Initial metric-based classification

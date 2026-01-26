@@ -51,7 +51,7 @@ constraint_metric(human_probabilistic_bias, extractiveness, 0.55).
 constraint_metric(human_probabilistic_bias, suppression_requirement, 0.35).
 
 % NOOSE: Combinatorial Explosion Obstruction (ext >= 0.66, supp >= 0.46)
-constraint_claim(linear_scaling_trap, noose).
+constraint_claim(linear_scaling_trap, snare).
 constraint_metric(linear_scaling_trap, extractiveness, 0.92).
 constraint_metric(linear_scaling_trap, suppression_requirement, 0.85).
 

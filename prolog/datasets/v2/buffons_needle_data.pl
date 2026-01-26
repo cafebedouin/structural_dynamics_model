@@ -35,10 +35,10 @@ constraint_metric(angular_spatial_coupling, suppression_requirement, 0.32).
 constraint_metric(angular_spatial_coupling, snap_back_potential, 0.55).
 constraint_metric(angular_spatial_coupling, extractiveness, 0.48).
 
-% The Infinite Precision Requirement (The Noose)
+% The Infinite Precision Requirement (The Snare)
 % To recover $\pi$, an infinite number of drops or infinite measurement precision is required.
 % This "strangles" the physical observer and requires the 'monte_carlo_estimator' scaffold.
-constraint_claim(irrational_convergence_limit, noose).
+constraint_claim(irrational_convergence_limit, snare).
 constraint_metric(irrational_convergence_limit, intensity, 0.96).
 constraint_metric(irrational_convergence_limit, suppression_requirement, 0.90).
 constraint_metric(irrational_convergence_limit, snap_back_potential, 0.02).
@@ -49,7 +49,7 @@ constraint_metric(irrational_convergence_limit, extractiveness, 0.94).
 recommendation(rec_01, transform_to_integral_representation_over_half_period).
 affects_constraint(rec_01, angular_spatial_coupling).
 
-% Noose (0.94 extractiveness) triggers Cut
+% Snare (0.94 extractiveness) triggers Cut
 % Utilizing 'monte_carlo_estimator' scaffold to approximate rather than solve.
 recommendation(rec_02, discard_physical_measurement_for_computational_simulation).
 affects_constraint(rec_02, irrational_convergence_limit).

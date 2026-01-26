@@ -35,7 +35,7 @@ constraint_metric(total_replacement_logic, suppression_requirement, 0.35).
 constraint_metric(total_replacement_logic, snap_back_potential, 0.45).
 constraint_metric(total_replacement_logic, extractiveness, 0.50).
 
-constraint_claim(dual_existence_coherence, noose).
+constraint_claim(dual_existence_coherence, snare).
 constraint_metric(dual_existence_coherence, intensity, 0.95).
 constraint_metric(dual_existence_coherence, suppression_requirement, 0.88).
 constraint_metric(dual_existence_coherence, snap_back_potential, 0.92).

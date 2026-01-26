@@ -48,7 +48,7 @@
  * logic of infinite cardinality is fixed and unchangeable. In pedagogy, it 
  * acts as a "Rope" for coordinating an understanding of transfinite numbers. 
  * However, to the guest caught in a "Cantor's Diagonal" or a sudden influx of 
- * infinitely many buses, the shifting process is a "Noose" that extracts 
+ * infinitely many buses, the shifting process is a "Snare" that extracts 
  * stability and location for the sake of higher-order set theory.
  */
 
@@ -125,7 +125,7 @@ constraint_indexing:constraint_classification(
    
    WHY THIS CLASSIFICATION:
    For the educator, Hilbert's Hotel is a "Rope"—a functional coordination 
-   mechanism. It allows them to pull students away from the "Noose" of 
+   mechanism. It allows them to pull students away from the "Snare" of 
    finite confusion and toward a standard of achievement in set theory.
    -------------------------------------------------------------------------- */
 
@@ -141,7 +141,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE MANAGER OF INFINITE BUSES - Noose
+   PERSPECTIVE 3: THE MANAGER OF INFINITE BUSES - Snare
    --------------------------------------------------------------------------
    WHO: individual_powerless - Tasked with an impossible-looking job.
    WHEN: immediate - Facing the arrival of an infinite set of infinite sets.
@@ -150,7 +150,7 @@ constraint_indexing:constraint_classification(
    
    WHY THIS CLASSIFICATION:
    When infinitely many buses, each with infinitely many guests, arrive 
-   (the countability of $\mathbb{Q}$), the paradox acts as a "Noose." 
+   (the countability of $\mathbb{Q}$), the paradox acts as a "Snare." 
    The Manager is "strangled" by the complexity of the re-mapping 
    process, extracting massive cognitive labor to fulfill the "gift" of 
    unlimited space.
@@ -160,7 +160,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     hilberts_hotel_infinity,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -187,8 +187,8 @@ test(perspective_variance) :-
     Type2 = rope.
 
 test(manager_burden_extraction) :-
-    % A powerless manager in a constrained context sees the paradox as a Noose.
-    constraint_indexing:constraint_classification(hilberts_hotel_infinity, noose, context(individual_powerless, immediate, constrained, local)).
+    % A powerless manager in a constrained context sees the paradox as a Snare.
+    constraint_indexing:constraint_classification(hilberts_hotel_infinity, snare, context(individual_powerless, immediate, constrained, local)).
 
 test(natural_emergence) :-
     domain_priors:emerges_naturally(hilberts_hotel_infinity).
@@ -207,7 +207,7 @@ test(natural_emergence) :-
  * 1. CLASSIFICATION: Hilbert's Hotel is primarily a "Mountain" because 
  * transfinite logic is non-negotiable. 
  * 2. TYPE SHIFT: I highlighted how the "Rope" of education becomes a 
- * "Noose" for the manager when the complexity of the mapping (e.g., 
+ * "Snare" for the manager when the complexity of the mapping (e.g., 
  * Cantor's pairing function) extracts all intuitive ease.
  * 3. EXTRACTIVENESS (0.15): While infinity suggests abundance, the paradox 
  * extracts the very concept of "Permanence" for the individual guest.

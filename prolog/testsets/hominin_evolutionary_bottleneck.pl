@@ -1,8 +1,8 @@
 % ============================================================================
 % CONSTRAINT STORY: hominin_evolutionary_bottleneck
 % ============================================================================
-% Generated: 2026-01-21
-% Model: Gemini 2.0 Flash
+% Generated: 2026-01-23
+% Model: Gemini Pro (Revised)
 % Source: Michael Marshall, "Revealing the epic story of ancient humans" 
 % Status: [RESOLVED MANDATROPHY]
 % ============================================================================
@@ -26,23 +26,24 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: hominin_evolutionary_bottleneck
+ * 
+ * constraint_id: hominin_evolutionary_bottleneck
  * human_readable: The Hominin Evolutionary Bottleneck
- * domain: technological/scientific/biological
- * temporal_scope: 7 million years ago to 60,000 years ago (Paleoanthropological record) 
- * spatial_scope: Africa and Global (Migration/Replacement patterns) 
- * * SUMMARY:
- * Historically, human evolution was viewed through a limited fossil record, primarily Ardipithecus (4.4mya). 
- * Since 2000, discoveries like Sahelanthropus (7mya) and genetic evidence of an African expansion 60,000 years ago 
- * have reframed human origins as a complex story of replacement and deep-time persistence.
- * * KEY AGENTS:
- * - The Modern Human (Homo sapiens): Descendants of the 60,000-year-old African expansion.
- * - The Extinct Cousin (e.g., Homo naledi, Flores "Hobbits"): Isolated species replaced by expanding populations.
- * - The Paleoanthropologist: The analytical observer using new techniques to interpret fossil blizzards.
- * * NARRATIVE ARC:
- * The constraint began as a "Mountain" of missing information that made evolution seem like a simple linear 
- * path. Modern archaeological "more" has turned it into a "Rope" for scientists to climb into the 
- * past, while for replaced species, the expansion was a biological "Noose".
+ * domain: scientific/biological
+ * temporal_scope: 7 million years ago to 60,000 years ago
+ * spatial_scope: Global (via replacement)
+ * 
+ * SUMMARY:
+ * For millennia, the story of human evolution was constrained by a sparse fossil record. 
+ * Recent "blizzards" of fossil and genetic data have revealed a complex history where 
+ * our direct ancestors expanded out of Africa ~60,000 years ago, replacing all other 
+ * hominin species. This event acts as a constraint with vastly different meanings 
+ * depending on the perspective.
+ * 
+ * KEY AGENTS:
+ * - Extinct Hominin (Individual Powerless): Species like H. naledi that were replaced.
+ * - Modern Scientist (Analytical): Synthesizes genetic and fossil data.
+ * - Natural History Museum (Institutional): Curates and presents the scientific narrative to the public.
  */
 
 /* ==========================================================================
@@ -50,7 +51,7 @@
    ========================================================================== */
 
 narrative_ontology:interval(hominin_evolutionary_bottleneck, 0, 10).
-narrative_ontology:constraint_claim([hominin_evolutionary_bottleneck], [biological_replacement]).
+narrative_ontology:constraint_claim(hominin_evolutionary_bottleneck, snare).
 
 % Base extractiveness score (0.75 = High)
 % Rationale: The 60,000-year-old expansion involved the total replacement of other hominin species.
@@ -58,21 +59,15 @@ narrative_ontology:constraint_claim([hominin_evolutionary_bottleneck], [biologic
 domain_priors:base_extractiveness(hominin_evolutionary_bottleneck, 0.75).
 
 % Suppression score (0.60 = Moderate-High)
-% Rationale: The "Normal Human" story previously suppressed the existence of diverse cousins 
-% like H. naledi and Indonesian "hobbits" due to limited data.
+% Rationale: The dominant "Out of Africa" theory, backed by strong evidence, has suppressed 
+% alternative "multiregional" hypotheses.
 domain_priors:suppression_score(hominin_evolutionary_bottleneck, 0.60).
 
-% Enforcement requirements: Emerges naturally through biological competition and environmental isolation.
+% Enforcement requirements: Emerges naturally through biological competition and environmental pressures.
 domain_priors:emerges_naturally(hominin_evolutionary_bottleneck).
 
-% Metrics for Executive Summary
-narrative_ontology:constraint_metric(hominin_evolutionary_bottleneck, extractiveness, 0.75).
-narrative_ontology:constraint_metric(hominin_evolutionary_bottleneck, suppression_requirement, 0.60).
-
 % BENEFICIARIES & VICTIMS
-% Modern humans (Non-African people descended from African ancestors) benefit from the expansion.
 constraint_beneficiary(hominin_evolutionary_bottleneck, homo_sapiens).
-% Extinct cousins (replaced species) are the victims of the evolutionary expansion.
 constraint_victim(hominin_evolutionary_bottleneck, extinct_hominin_cousins).
 
 /* ==========================================================================
@@ -80,52 +75,38 @@ constraint_victim(hominin_evolutionary_bottleneck, extinct_hominin_cousins).
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 1: EXTINCT COUSIN (e.g., Homo naledi) - Noose
+   PERSPECTIVE 1: EXTINCT COUSIN (e.g., Homo naledi) - Snare
    --------------------------------------------------------------------------
-   
    WHO: individual_powerless (Biological species subject to replacement) 
    WHEN: civilizational (Deep-time evolutionary scale) 
    WHERE: trapped (Isolated in deep caves or on islands) 
-   SCOPE: regional (Isolated pockets like Flores or single South African caves) 
    
    WHY THIS CLASSIFICATION:
-   For species like H. naledi, the evolutionary bottleneck was a Noose. They were 
-   confined to specific environments and eventually replaced by modern humans.
-   
-   NARRATIVE EVIDENCE:
-   "Modern humans evolved in Africa and then expanded from there, replacing all the other hominin species".
+   For species like H. naledi, the evolutionary expansion of Homo sapiens was a terminal 'Snare'.
+   They were confined to specific environments and ultimately driven to extinction by a competing group.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
     hominin_evolutionary_bottleneck,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(civilizational),
         exit_options(trapped),
         spatial_scope(regional)
     )
-) :-
-    domain_priors:base_extractiveness(hominin_evolutionary_bottleneck, E),
-    E > 0.7,
-    !.
+).
 
 /* --------------------------------------------------------------------------
    PERSPECTIVE 2: MODERN SCIENTIST - Rope
    --------------------------------------------------------------------------
-   
-   WHO: analytical (Observer using better techniques and data "blizzards") 
+   WHO: analytical (Observer using genetic and fossil data) 
    WHEN: biographical (The 25-year "revolution" in understanding) 
    WHERE: arbitrage (Ability to play fossil data against genetic evidence) 
-   SCOPE: global (Mapping origins from Africa to Indonesia) 
    
    WHY THIS CLASSIFICATION:
-   The bottleneck and expansion patterns serve as a Rope—a functional framework that 
-   organizes the "huge amount of information" into a coherent story of origins.
-   
-   NARRATIVE EVIDENCE:
-   "Genetic evidence had demonstrated that all non-African people are descended from 
-   African ancestors who lived about 60,000 years ago".
+   For the scientist, the bottleneck and expansion is a 'Rope'—a powerful explanatory
+   framework that ties together disparate data points into a coherent narrative about human origins.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
@@ -137,42 +118,31 @@ constraint_indexing:constraint_classification(
         exit_options(arbitrage),
         spatial_scope(global)
     )
-) :-
-    % Analytical observers see the functional patterns of the data
-    true,
-    !.
+).
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE "ORRORIN" PRE-HUMAN - Mountain
+   PERSPECTIVE 3: NATURAL HISTORY MUSEUM (INSTITUTIONAL) - Mountain
    --------------------------------------------------------------------------
-   
-   WHO: individual_powerless (Ancient ancestors with no conceptual agency) 
-   WHEN: historical (7 million years of stasis and drift) 
-   WHERE: trapped (Bounded by the physical "natural law" of Ardipithecus) 
-   SCOPE: local (Specific fossil sites) 
+   WHO: institutional (Curator of the public narrative)
+   WHEN: generational (The lifespan of a museum exhibit)
+   WHERE: constrained (Must present a simplified, clear story)
    
    WHY THIS CLASSIFICATION:
-   For early hominins like Orrorin, evolution was a Mountain—a slow, immutable 
-   process of biological unfolding that spanned millions of years without intervention.
-   
-   NARRATIVE EVIDENCE:
-   "In 2000 and 2001, researchers found an even older Ardipithecus... Orrorin tugenensis 
-   from 6 million years ago".
+   The museum presents the scientific consensus as a 'Mountain'. The complex, debated 'Rope' 
+   of the scientists is simplified into an immutable, factual diorama for public consumption. 
+   The nuances are flattened into a linear, authoritative story.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
     hominin_evolutionary_bottleneck,
     mountain,
     context(
-        agent_power(individual_powerless),
-        time_horizon(historical),
-        exit_options(trapped),
-        spatial_scope(local)
+        agent_power(institutional),
+        time_horizon(generational),
+        exit_options(constrained),
+        spatial_scope(national)
     )
-) :-
-    domain_priors:suppression_score(hominin_evolutionary_bottleneck, S),
-    S > 0.5,
-    !.
+).
 
 /* ==========================================================================
    4. TESTS (What We Learn About Constraints)
@@ -181,16 +151,18 @@ constraint_indexing:constraint_classification(
 :- begin_tests(hominin_evolutionary_bottleneck_tests).
 
 test(multi_perspective_variance) :-
-    % Cousin (Noose) vs Scientist (Rope) vs Ancestor (Mountain)
-    constraint_indexing:constraint_classification(hominin_evolutionary_bottleneck, noose, context(individual_powerless, civilizational, trapped, regional)),
-    constraint_indexing:constraint_classification(hominin_evolutionary_bottleneck, rope, context(analytical, biographical, arbitrage, global)),
-    constraint_indexing:constraint_classification(hominin_evolutionary_bottleneck, mountain, context(individual_powerless, historical, trapped, local)).
+    constraint_indexing:constraint_classification(hominin_evolutionary_bottleneck, Type1, context(agent_power(individual_powerless), _, _, _)),
+    constraint_indexing:constraint_classification(hominin_evolutionary_bottleneck, Type2, context(agent_power(analytical), _, _, _)),
+    constraint_indexing:constraint_classification(hominin_evolutionary_bottleneck, Type3, context(agent_power(institutional), _, _, _)),
+    Type1 \= Type2,
+    Type2 \= Type3,
+    Type1 \= Type3.
 
 test(power_extractiveness_scaling) :-
-    % Powerless extinct cousins experience the total extraction of their species lineage (Score 1)
-    % while analytical observers experience only data acquisition (Score 2).
-    Score1 = 0.75,
-    Score2 = 0.10,
+    ContextPowerless = context(agent_power(individual_powerless), time_horizon(civilizational), exit_options(trapped), spatial_scope(regional)),
+    ContextPowerful = context(agent_power(analytical), time_horizon(biographical), exit_options(arbitrage), spatial_scope(global)),
+    constraint_indexing:extractiveness_for_agent(hominin_evolutionary_bottleneck, ContextPowerless, Score1),
+    constraint_indexing:extractiveness_for_agent(hominin_evolutionary_bottleneck, ContextPowerful, Score2),
     Score1 > Score2.
 
 :- end_tests(hominin_evolutionary_bottleneck_tests).
@@ -201,33 +173,41 @@ test(power_extractiveness_scaling) :-
 
 /**
  * LLM GENERATION NOTES
- * * Model: Gemini 2.0 Flash
- * Date: 2026-01-21
- * * KEY DECISIONS:
- * * 1. EXTRACTIVENESS SCORE (0.75):
- * Reasoning: Chosen because the "Replacement" theory (African expansion) 
- * describes a high-extraction biological event where one group displaces others.
- * * 2. SUPPRESSION SCORE (0.60):
- * Reasoning: The long-standing Ardipithecus limit suppressed the "older" Orrorin 
- * and Sahelanthropus reality for decades.
- * * 3. PERSPECTIVE SELECTION:
- * Chose "Extinct Cousin" (H. naledi) to illustrate the Noose of replacement 
- * and "Modern Scientist" to illustrate the Rope of analytical synthesis.
- * * 4. AMBIGUITIES:
- * - The text mentions a "blizzard" of information; I interpreted this as a reduction 
- * in suppression but an increase in the complexity of the analytical Rope.
+ * 
+ * Model: Gemini Pro (Revised)
+ * Date: 2026-01-23
+ * 
+ * KEY DECISIONS:
+ * 
+ * 1. EXTRACTIVENESS SCORE (0.75):
+ *    Reasoning: Chosen because the "Replacement" theory describes a total biological extraction event where one group displaces all others, taking their territory and evolutionary future. This is a high-extraction event.
+ * 
+ * 2. INSTITUTIONAL PERSPECTIVE:
+ *    Added the 'Natural History Museum' as the institutional agent. This is a common pattern where a complex scientific reality ('Rope') is simplified into an authoritative public narrative ('Mountain').
+ * 
+ * 3. CLASSIFICATION RATIONALE:
+ *    - Extinct Cousin -> Snare: They were biologically replaced.
+ *    - Scientist -> Rope: The theory is a tool for organizing data.
+ *    - Museum -> Mountain: The theory is presented as an immutable fact to the public.
+ * 
+ * 4. CONFIDENCE:
+ *    High. The model of scientific consensus hardening into public fact is a very strong fit for the institutional 'Mountain' perspective. The 'Snare' of extinction is self-evident.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
+/**
+ * OMEGA IDENTIFICATION
+ *
+ * Mandatory Omega for high-extraction constraints.
+ */
 
-% Mandatory Omega for high-extraction constraints:
 omega_variable(
     hominin_evolutionary_bottleneck_extraction_intent,
-    "Is the 60,000-year expansion a predatory biological displacement (Noose) or a natural adaptive shift (Mountain)?",
+    "Is the 60,000-year expansion a predatory biological displacement (Snare) or a natural adaptive shift (Mountain)?",
     resolution_mechanism("Audit of genetic admixture rates between Sapiens and Cousins to determine if 'replacement' was violent or absorptive"),
-    impact("If predatory: Noose/Mandatrophy. If adaptive: Mountain."),
+    impact("If predatory: Snare/Mandatrophy. If adaptive: Mountain."),
     confidence_without_resolution(medium)
 ).
 
@@ -245,13 +225,13 @@ omega_variable(
 
 /**
  * VIABLE ALTERNATIVES
- * * ALTERNATIVE 1: Multiregional Evolution
- * Viability: Prior to 2000, some argued for diverse origins.
- * Suppression: Rejected by genetic evidence showing African descent 60,000 years ago.
- * * CONCLUSION:
- * The existence of suppressed alternatives (multiregionalism) shifts the modern 
- * understanding from a simple Mountain to an analytical Rope, and for those 
- * replaced, confirms the historical Noose.
+ * 
+ * ALTERNATIVE 1: Multiregional Evolution
+ *    Viability: Prior to 2000, some argued for diverse, parallel origins of modern humans.
+ *    Suppression: Largely rejected by strong genetic evidence showing a common African descent ~60,000 years ago. The dominance of the "Out of Africa" model actively suppresses this alternative in mainstream science.
+ * 
+ * CONCLUSION:
+ * The suppression of the multiregionalism alternative is a key reason the "Out of Africa" model acts as a powerful Rope for scientists and a Mountain for the public.
  */
 
 /* ==========================================================================
@@ -260,7 +240,8 @@ omega_variable(
 
 /**
  * TO USE THIS FILE:
- * * 1. Load: ?- [constraints/hominin_evolutionary_bottleneck].
+ * 
+ * 1. Load: ?- [constraints/hominin_evolutionary_bottleneck].
  * 2. Multi-perspective: ?- multi_index_report(hominin_evolutionary_bottleneck).
  * 3. Run tests: ?- run_tests(hominin_evolutionary_bottleneck_tests).
  */

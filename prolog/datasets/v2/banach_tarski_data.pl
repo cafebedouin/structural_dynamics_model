@@ -35,7 +35,7 @@ constraint_metric(point_set_partitioning, suppression_requirement, 0.40).
 constraint_metric(point_set_partitioning, snap_back_potential, 0.50).
 constraint_metric(point_set_partitioning, extractiveness, 0.55).
 
-constraint_claim(measure_preservation_limit, noose).
+constraint_claim(measure_preservation_limit, snare).
 constraint_metric(measure_preservation_limit, intensity, 0.95).
 constraint_metric(measure_preservation_limit, suppression_requirement, 0.85).
 constraint_metric(measure_preservation_limit, snap_back_potential, 0.90).

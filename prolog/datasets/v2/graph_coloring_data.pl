@@ -30,7 +30,7 @@ constraint_claim(independent_set_partitioning, tangled_rope).
 constraint_metric(independent_set_partitioning, extractiveness, 0.62).
 constraint_metric(independent_set_partitioning, suppression_requirement, 0.40).
 
-constraint_claim(chromatic_approximation_hardness, noose).
+constraint_claim(chromatic_approximation_hardness, snare).
 constraint_metric(chromatic_approximation_hardness, intensity, 1.0).
 constraint_metric(chromatic_approximation_hardness, extractiveness, 0.99).
 constraint_metric(chromatic_approximation_hardness, suppression_requirement, 0.98).

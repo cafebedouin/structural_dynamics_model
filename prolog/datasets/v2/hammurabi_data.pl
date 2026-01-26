@@ -4,7 +4,7 @@ entity(babylonian_state, organization).
 entity(lex_talionis_foundation, concept).
 entity(debt_slavery_system, structure).
 entity(judicial_accountability, protocol).
-entity(bankruptcy_scaffold, scaffold). % Transitional support for Noose dissolution
+entity(bankruptcy_scaffold, scaffold). % Transitional support for Snare dissolution
 
 % Time interval represents the estimated reign: 2285 to 2242 B.C. (normalized to 0-43)
 interval(reign_duration, 0, 43).
@@ -40,7 +40,7 @@ constraint_metric(class_variance, suppression_requirement, 0.30).
 
 % NOOSE (⊠C): Perpetual Debt Slavery (§117)
 % Extreme extraction of labor/agency from family members.
-constraint_claim(debt_slavery, noose).
+constraint_claim(debt_slavery, snare).
 constraint_metric(debt_slavery, extractiveness, 0.85). % Verified >= 0.66
 constraint_metric(debt_slavery, suppression_requirement, 0.70). % Verified >= 0.46
 

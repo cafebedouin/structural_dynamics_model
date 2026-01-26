@@ -46,7 +46,7 @@
  * The paradox functions as a hard limit on the expressive power of first-order 
  * language (Mountain). For those building meta-theories, it is a tool (Rope) 
  * for distinguishing between internal and external perspectives. For the 
- * Platonist, it is a Noose that prevents the formalization of a unique, 
+ * Platonist, it is a Snare that prevents the formalization of a unique, 
  * absolute mathematical reality.
  */
 
@@ -56,7 +56,7 @@
 
 % Required for structural anchor
 narrative_ontology:interval(skolems_paradox_interval, 0, 10).
-narrative_ontology:constraint_claim(skolems_paradox, noose).
+narrative_ontology:constraint_claim(skolems_paradox, snare).
 
 % Base extractiveness score (0.0-1.0)
 % Rationale: Low. It extracts "absoluteness" from mathematical claims but 
@@ -147,14 +147,14 @@ constraint_indexing:constraint_classification(
    
    WHY THIS CLASSIFICATION:
    For the idealist seeking a unique "True Universe of Sets," the paradox is 
-   a Noose. Every attempt to specify the "Absolute" is strangled by the fact 
+   a Snare. Every attempt to specify the "Absolute" is strangled by the fact 
    that a countable model can always be found that "mimics" the uncountable 
    properties, rendering their absolute claims relative.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
     skolems_paradox,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -176,7 +176,7 @@ test(multi_perspective_variance) :-
     T1 \= T2, T2 \= T3.
 
 test(power_extractiveness_relativity) :-
-    % Powerless idealists experience total extraction of absoluteness (Noose).
+    % Powerless idealists experience total extraction of absoluteness (Snare).
     % Institutional meta-theorists leverage the relativity (Rope).
     domain_priors:base_extractiveness(skolems_paradox, Score),
     Score >= 0.2.
@@ -199,9 +199,9 @@ test(time_immutability_scale) :-
  * extracts "semantic certainty." It forces a move to meta-theory, which is 
  * an energy/cognitive cost.
  * 2. PERSPECTIVE SELECTION: Analyst (Mountain), Meta-Theorist (Rope), and 
- * Idealist (Noose) provide the necessary spread to show how a logical truth 
+ * Idealist (Snare) provide the necessary spread to show how a logical truth 
  * behaves differently based on agent intent.
- * 3. NOOSE ARGUMENT: The "Noose" for the idealist is the inability to fix 
+ * 3. NOOSE ARGUMENT: The "Snare" for the idealist is the inability to fix 
  * a reference to an absolute reality within a formal system.
  */
 
@@ -213,7 +213,7 @@ omega_variable(
     standard_model_existence,
     "Is there a privileged 'Standard Model' of Set Theory that is not relative, or is reality an infinite sea of models?",
     resolution_mechanism("Discovery of higher-order logical principles that define a unique universe"),
-    impact("If Unique: Skolem's Paradox is a Rope. If Infinite Sea: It is a permanent Noose."),
+    impact("If Unique: Skolem's Paradox is a Rope. If Infinite Sea: It is a permanent Snare."),
     confidence_without_resolution(low)
 ).
 

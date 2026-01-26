@@ -48,7 +48,7 @@
  * unyielding symmetry of the universe. To the cryptographer, it is a "Rope"—a 
  * tool that allows them to "jump" across complex calculations with ease. 
  * However, in the realm of Higher Reciprocity (Cubic/Quartic), the 
- * complexity of the law acts as a "Noose" for practitioners, extracting 
+ * complexity of the law acts as a "Snare" for practitioners, extracting 
  * massive cognitive labor to resolve seemingly simple arithmetic questions.
  */
 
@@ -143,7 +143,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: HIGHER RECIPROCITY ANALYST - Noose
+   PERSPECTIVE 3: HIGHER RECIPROCITY ANALYST - Snare
    --------------------------------------------------------------------------
    WHO: individual_powerless - A graduate student/researcher bound by complexity.
    WHEN: immediate - Every proof step is a struggle against the abstraction.
@@ -151,7 +151,7 @@ constraint_indexing:constraint_classification(
    SCOPE: local - A specific, intractable problem in class field theory.
    
    WHY THIS CLASSIFICATION:
-   In the realm of Cubic or Artin reciprocity, the law becomes a "Noose." 
+   In the realm of Cubic or Artin reciprocity, the law becomes a "Snare." 
    It promises a "simple" relationship but extracts immense cognitive energy 
    and years of study (extraction) to yield the result. The practitioner 
    is "strangled" by the very abstraction meant to simplify the field.
@@ -159,7 +159,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     reciprocity_laws_math,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -186,8 +186,8 @@ test(symmetry_fate_variance) :-
     Type2 = rope.
 
 test(computational_labor_extraction) :-
-    % A researcher (powerless) in a local/constrained context sees the higher law as a Noose.
-    constraint_indexing:constraint_classification(reciprocity_laws_math, noose, context(individual_powerless, immediate, constrained, local)).
+    % A researcher (powerless) in a local/constrained context sees the higher law as a Snare.
+    constraint_indexing:constraint_classification(reciprocity_laws_math, snare, context(individual_powerless, immediate, constrained, local)).
 
 test(emergence) :-
     domain_priors:emerges_naturally(reciprocity_laws_math).
@@ -206,7 +206,7 @@ test(emergence) :-
  * (Natural Law). However, their application in technology (Cryptography) 
  * transforms them into "Ropes" (Tools).
  * 2. NOOSE ANALOGY: The frustration of "Higher Reciprocity" is a unique form 
- * of intellectual "Noose." It's a promise of symmetry that is so hard to 
+ * of intellectual "Snare." It's a promise of symmetry that is so hard to 
  * prove that it extracts a "tithe" of a researcher's life.
  * 3. EXTRACTIVENESS (0.1): Low, because the universe doesn't charge money for 
  * arithmetic, but the *following* of the law requires an "extraction" of 

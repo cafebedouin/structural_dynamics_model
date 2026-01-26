@@ -35,10 +35,10 @@ constraint_metric(recursive_density, suppression_requirement, 0.44).
 constraint_metric(recursive_density, snap_back_potential, 0.80).
 constraint_metric(recursive_density, extractiveness, 0.62).
 
-% The Differentiability Collapse (The Noose)
+% The Differentiability Collapse (The Snare)
 % The curve is nowhere differentiable; the 'velocity' of the path is undefined everywhere.
 % Extractiveness at 0.96 requires the 'quadtree_grid' scaffold to provide discrete navigation.
-constraint_claim(derivative_nullification, noose).
+constraint_claim(derivative_nullification, snare).
 constraint_metric(derivative_nullification, intensity, 0.99).
 constraint_metric(derivative_nullification, suppression_requirement, 0.94).
 constraint_metric(derivative_nullification, snap_back_potential, 0.02).
@@ -49,7 +49,7 @@ constraint_metric(derivative_nullification, extractiveness, 0.96).
 recommendation(rec_01, implement_z_order_or_hilbert_indexing_for_locality).
 affects_constraint(rec_01, recursive_density).
 
-% Noose (0.96 extractiveness) triggers Cut
+% Snare (0.96 extractiveness) triggers Cut
 % Utilizing 'quadtree_grid' scaffold to replace continuous motion with discrete jumps.
 recommendation(rec_02, discard_infinitesimal_calculus_in_favor_of_discrete_measure).
 affects_constraint(rec_02, derivative_nullification).

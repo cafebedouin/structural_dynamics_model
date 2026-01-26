@@ -18,8 +18,8 @@ event(e5, physical_assault, 55, [actor(private_carr), target(stephen)]).
 event(e6, rudy_apparition, 60, [type(hallucination), observer(bloom)]).
 
 % Section 3: Constraint Claims & Metrics (Current State at T=60)
-% Nighttown claims to be a free "Carnival" (Scaffold), but functions as a Noose.
-constraint_claim(nighttown_moral_phantasmagoria, noose).
+% Nighttown claims to be a free "Carnival" (Scaffold), but functions as a Snare.
+constraint_claim(nighttown_moral_phantasmagoria, snare).
 constraint_metric(nighttown_moral_phantasmagoria, extractiveness, 0.95).
 constraint_metric(nighttown_moral_phantasmagoria, suppression_requirement, 0.92).
 constraint_metric(nighttown_moral_phantasmagoria, resistance, 0.88).
@@ -38,7 +38,7 @@ constraint_metric(stephens_guilt_complex, suppression_requirement, 0.90).
 constraint_metric(stephens_guilt_complex, resistance, 0.92).
 
 % Section 4: Temporal Measurements (Evolution of the Nighttown "Capture")
-% Bella/Bello Regime: Transformation from transactional Rope to sadistic Noose.
+% Bella/Bello Regime: Transformation from transactional Rope to sadistic Snare.
 measurement(m1, bella_cohen_regime, extractiveness, 0, 0.25).
 measurement(m2, bella_cohen_regime, suppression_requirement, 0, 0.20).
 measurement(m3, bella_cohen_regime, resistance, 0, 0.15).
@@ -86,7 +86,7 @@ intent_power_change(circe_nighttown_interval, british_imperial_administration, 0
 recommendation(rec1, 'Sever the hallucinatory capture of Nighttown via reality-grounded coordination').
 affects_constraint(rec1, nighttown_moral_phantasmagoria).
 
-recommendation(rec2, 'Utilize the Masonic/Secret scaffold to navigate constructed legal/military nooses').
+recommendation(rec2, 'Utilize the Masonic/Secret scaffold to navigate constructed legal/military snares').
 affects_constraint(rec2, masonic_ritual_scaffold).
 
 % Section 9: Omega Variables

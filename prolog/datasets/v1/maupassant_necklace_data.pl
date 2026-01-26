@@ -29,12 +29,12 @@ event(ev06_the_revelation, ironical_resolution, 10, [truth_value(500), paid_valu
 constraint_claim(subsistence_labor_grind, mountain).
 constraint_metric(subsistence_labor_grind, accessibility_collapse, 0.85).
 
-% Noose: The social shame and code of honor that prevented Mathilde from admitting the loss.
-constraint_claim(social_shame_concealment, noose).
+% Snare: The social shame and code of honor that prevented Mathilde from admitting the loss.
+constraint_claim(social_shame_concealment, snare).
 constraint_metric(social_shame_concealment, stakes_inflation, 0.95).
 
-% Zombie: The 'Diamond' Necklace. A dead object of 500-franc value acting as a 36,000-franc master.
-constraint_claim(the_false_luxury_totem, zombie).
+% Piton: The 'Diamond' Necklace. A dead object of 500-franc value acting as a 36,000-franc master.
+constraint_claim(the_false_luxury_totem, piton).
 constraint_metric(the_false_luxury_totem, suppression, 0.90).
 
 % Rope: The usury notes and legal obligations to the race of lenders.

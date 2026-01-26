@@ -48,7 +48,7 @@
  * The Collatz sequence functions as a "Mountain" of deterministic fate—for 
  * every number tested, the path is unyielding. In computer science, it is a 
  * "Rope" for benchmarking. However, for the mathematician, the absence of a 
- * proof acts as a "Noose," extracting decades of cognitive labor (extraction) 
+ * proof acts as a "Snare," extracting decades of cognitive labor (extraction) 
  * while "strangling" the progress of arithmetic theory with its deceptive 
  * simplicity.
  */
@@ -148,7 +148,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE FIELDS MEDAL ASPIRANT - Noose
+   PERSPECTIVE 3: THE FIELDS MEDAL ASPIRANT - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_moderate - Has the intelligence to analyze but is bound by the problem.
@@ -157,7 +157,7 @@ constraint_indexing:constraint_classification(
    SCOPE: global - Universal mathematical problem.
    
    WHY THIS CLASSIFICATION:
-   For the mathematician, the conjecture is a "Noose." It "strangles" their 
+   For the mathematician, the conjecture is a "Snare." It "strangles" their 
    career by being "too simple to be this hard." It extracts massive 
    intellectual capital (extraction) while providing no guarantee of 
    success, "choking" the theorist with the possibility of an undecidable 
@@ -166,7 +166,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     collatz_conjecture_determinism,
-    noose,
+    snare,
     context(
         agent_power(individual_moderate),
         time_horizon(biographical),
@@ -192,7 +192,7 @@ test(multi_perspective_variance) :-
     Type1 \= Type2.
 
 test(career_extraction_penalty) :-
-    % The theorist feels the "Noose" of the unproven extraction.
+    % The theorist feels the "Snare" of the unproven extraction.
     Context = context(individual_moderate, biographical, constrained, global),
     constraint_indexing:extractiveness_for_agent(collatz_conjecture_determinism, Context, Score),
     Score >= 0.1.
@@ -218,7 +218,7 @@ test(natural_emergence) :-
  * * 2. PERSPECTIVE SELECTION:
  * Chose Number (Subject), Architect (User), and Theorist (Victim) to 
  * show how a simple "Mountain" of logic is a "Rope" for engineering but 
- * a "Noose" for theory.
+ * a "Snare" for theory.
  * * 3. OMEGA IDENTIFICATION:
  * Formalized the "Undecidability" uncertainty—is Collatz a Mountain of 
  * truth or an unprovable Scaffold of the integers?
@@ -229,7 +229,7 @@ omega_variable(
     collatz_undecidability,
     "Is the Collatz conjecture unprovable (Mountain) within standard Peano Arithmetic?",
     resolution_mechanism("Investigation into whether the conjecture is independent of ZFC."),
-    impact("If Undecidable: The 'Mountain' is a mirage; it's a permanent 'Noose' for logic."),
+    impact("If Undecidable: The 'Mountain' is a mirage; it's a permanent 'Snare' for logic."),
     confidence_without_resolution(medium)
 ).
 
@@ -248,7 +248,7 @@ omega_variable(
  * are undecidable.
  * * CONCLUSION:
  * The existence of Alternative 2 (Conway's proof) transforms the Collatz 
- * "Noose" into a "Mountain" of complexity—proving that our specific Noose 
+ * "Snare" into a "Mountain" of complexity—proving that our specific Snare 
  * is likely part of a broader undecidable landscape.
  */
 

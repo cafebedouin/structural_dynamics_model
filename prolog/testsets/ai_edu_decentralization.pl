@@ -150,7 +150,7 @@ constraint_indexing:constraint_classification(
     !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE INFRASTRUCTURE PROVIDER - Noose
+   PERSPECTIVE 3: THE INFRASTRUCTURE PROVIDER - Snare
    --------------------------------------------------------------------------
    
    WHO: institutional - Controls the data, compute, and platform standards.
@@ -170,7 +170,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     ai_edu_decentralization,
-    noose,
+    snare,
     context(
         agent_power(institutional),
         time_horizon(generational),
@@ -202,7 +202,7 @@ test(multi_perspective_variance) :-
     Type2 \= Type3,
     Type1 == mountain,
     Type2 == rope,
-    Type3 == noose.
+    Type3 == snare.
 
 test(power_extractiveness_imbalance) :-
     % Powerful institutions extract more value than individuals in unbundled systems
@@ -231,7 +231,7 @@ test(exit_option_shift) :-
  * * 3. CLASSIFICATION RATIONALE:
  * - Student -> Mountain: The "factory model" is fixed until exit.
  * - Founder -> Rope: AI is a coordination tool they can manipulate.
- * - Platform -> Noose: They create the "big stacks" that others depend on.
+ * - Platform -> Snare: They create the "big stacks" that others depend on.
  */
 
 /* ==========================================================================
@@ -250,7 +250,7 @@ omega_variable(
     platform_lock_in_severity,
     "Can open-source models and interoperable standards prevent total platform capture?",
     resolution_mechanism("Measure adoption rates of verifiable digital credentials vs. proprietary ecosystems."),
-    impact("If Yes: Sustainable Rope. If No: Universal Noose."),
+    impact("If Yes: Sustainable Rope. If No: Universal Snare."),
     confidence_without_resolution(low)
 ).
 
@@ -268,7 +268,7 @@ omega_variable(
  * Suppression: High inertia in "factory model" structures.
  * * CONCLUSION:
  * The absence of strong portable standards shifts education toward the 
- * "Noose" of platform capture even as it decentralizes in name.
+ * "Snare" of platform capture even as it decentralizes in name.
  */
 
 /* ==========================================================================

@@ -47,7 +47,7 @@
  * that no matter how you "stretch or bend" a surface (local agency), 
  * the total "angular deficit" is a fixed, non-negotiable constant 
  * (topological fate). It acts as a "Rope" for coordination in field 
- * theories but a "Noose" for designers trying to defy the genus 
+ * theories but a "Snare" for designers trying to defy the genus 
  * of their workspace.
  */
 
@@ -142,7 +142,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE ADAPTIVE MESH ALGORITHM - Noose
+   PERSPECTIVE 3: THE ADAPTIVE MESH ALGORITHM - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless - An algorithm tasked with smoothing a mesh.
@@ -151,7 +151,7 @@ constraint_indexing:constraint_classification(
    SCOPE: local - Trying to smooth a point without changing connectivity.
    
    WHY THIS CLASSIFICATION:
-   In automated mesh optimization, Gauss-Bonnet is a "Noose." If an algorithm 
+   In automated mesh optimization, Gauss-Bonnet is a "Snare." If an algorithm 
    needs to resolve a sharp feature on a torus, it is "strangled" by the 
    topological requirement to maintain an average curvature of zero. It 
    extracts massive GPU cycles attempting to distribute the "topological debt" 
@@ -160,7 +160,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     gauss_bonnet_topology,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -187,8 +187,8 @@ test(topology_fate_variance) :-
     Type2 = rope.
 
 test(extraction_of_local_agency) :-
-    % Even low base extractiveness is felt as a Noose when agency is constrained.
-    constraint_indexing:constraint_classification(gauss_bonnet_topology, noose, context(individual_powerless, immediate, constrained, local)).
+    % Even low base extractiveness is felt as a Snare when agency is constrained.
+    constraint_indexing:constraint_classification(gauss_bonnet_topology, snare, context(individual_powerless, immediate, constrained, local)).
 
 test(emergence) :-
     domain_priors:emerges_naturally(gauss_bonnet_topology).

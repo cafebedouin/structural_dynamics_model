@@ -42,7 +42,7 @@ constraint_metric(convergence_speed_friction, snap_back_potential, 0.40).
 constraint_metric(convergence_speed_friction, extractiveness, 0.52).
 
 % NOOSE: Infinite Variance/Fat-Tail Obstruction (Cauchy-style distributions that break the theorem)
-constraint_claim(heavy_tail_noose, noose).
+constraint_claim(heavy_tail_noose, snare).
 constraint_metric(heavy_tail_noose, intensity, 0.96).
 constraint_metric(heavy_tail_noose, suppression_requirement, 0.88).
 constraint_metric(heavy_tail_noose, snap_back_potential, 0.92).

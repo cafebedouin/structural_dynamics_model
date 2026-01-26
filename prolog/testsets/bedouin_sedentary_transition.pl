@@ -1,8 +1,8 @@
 % ============================================================================
 % CONSTRAINT STORY: bedouin_sedentary_transition
 % ============================================================================
-% Generated: 2026-01-21
-% Model: Gemini 2.0 Flash
+% Generated: 2026-01-23
+% Model: Gemini Pro (Revised)
 % Source: "The Bedouin Way of Life in Rub’ al Khali"
 % Status: [RESOLVED MANDATROPHY]
 % ============================================================================
@@ -26,55 +26,45 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: bedouin_sedentary_transition
+ * 
+ * constraint_id: bedouin_sedentary_transition
  * human_readable: The Bedouin Sedentary Transition
  * domain: social/economic/technological
  * temporal_scope: 1938 - 2030+ (Oil discovery to Vision 2030)
  * spatial_scope: Regional (Rub’ al Khali, Saudi Arabia)
- * * SUMMARY:
- * This constraint represents the shift of the nomadic Bedouin tribes from a resilient, millennium-old pastoral 
- * lifestyle in the hyper-arid Empty Quarter to a dependency-based existence in settled 'markaz' population centers 
- * fueled by oil wealth. It highlights the systemic risk inherent in urban settlements where 
- * specialization increases fragility and "going soft" results in the loss of survival skills.
- * * KEY AGENTS:
- * - Traditional Nomadic Bedouin: Characterized by freedom, hardship, and abstinence as tools for survival.
- * - Settled Bedouin (Markaz Dwellers): Recipients of "trickle down" oil money, housing, and medical care, now 
- * "hampered by possessions" and dependency.
- * - The Saudi State: Institutional provider using oil wealth to consolidate population and manage development.
- * - The Existential Analyst: Observer who identifies sedentary life as a "Black Swan" risk and "fishing net" 
- * for systemic collapse.
- * * NARRATIVE ARC:
- * Following the discovery of oil in 1938, Bedouin tribes were integrated into sedentary markaz settlements. 
- * While providing immediate comfort, this transition created a "Noose" of dependency on a finite resource (oil) 
- * and an interconnected global network, effectively suppressing the traditional nomadic "Rope" of 
- * resilience that had survived for millennia.
+ * 
+ * SUMMARY:
+ * This constraint represents the shift of the nomadic Bedouin tribes from a
+ * resilient, millennium-old pastoral lifestyle in the hyper-arid Empty Quarter
+ * to a dependency-based existence in settled 'markaz' population centers fueled
+ * by oil wealth. It highlights the systemic risk inherent in urban settlements
+ * where specialization increases fragility and results in the loss of survival skills.
+ * 
+ * KEY AGENTS:
+ * - Traditional Nomadic Bedouin (Individual Moderate): Characterized by freedom and resilience.
+ * - Settled Bedouin (Individual Powerless): Dependent on state services and oil wealth.
+ * - The Saudi State (Institutional): Uses oil wealth to consolidate population and manage development.
  */
 
 /* ==========================================================================
    2. CORE SYSTEM INTEGRATION (The "Reality" Layer)
    ========================================================================== */
 
-% Required for [STEP 1] and [STEP 2] of the DR-Audit Suite
-narrative_ontology:interval(bedouin_transition_interval, 0, 10).
-narrative_ontology:constraint_claim([bedouin_sedentary_transition], [systemic_dependency]).
+narrative_ontology:interval(bedouin_sedentary_transition, 0, 10).
+narrative_ontology:constraint_claim(bedouin_sedentary_transition, snare).
 
-% Base extractiveness score (0.0 = no extraction, 1.0 = full extraction)
-% Rationale: High (0.75). The sedentary system extracts traditional survival skills and resilience 
+% Base extractiveness: 0.75.
+% The sedentary system extracts traditional survival skills and resilience 
 % in exchange for temporary comfort, creating a deep asymmetric dependency on oil state budgets.
 domain_priors:base_extractiveness(bedouin_sedentary_transition, 0.75).
 
-% Suppression score (0.0 = no suppression, 1.0 = full suppression)
-% Rationale: Moderate-High (0.6). Traditional nomadic strategies are undergoing "extinction" 
-% and are shunted in favor of markaz settlements and town-based business.
+% Suppression score: 0.6.
+% Traditional nomadic strategies are undergoing "extinction" and are shunted 
+% in favor of markaz settlements and town-based business.
 domain_priors:suppression_score(bedouin_sedentary_transition, 0.6).
 
-% Enforcement requirements
-% Requires active enforcement (State budget management and infrastructure maintenance).
+% Enforcement: Requires active enforcement (State budget management and infrastructure maintenance).
 domain_priors:requires_active_enforcement(bedouin_sedentary_transition).
-
-% Metrics required for Section 1 of the Executive Summary
-narrative_ontology:constraint_metric(bedouin_sedentary_transition, extractiveness, 0.75).
-narrative_ontology:constraint_metric(bedouin_sedentary_transition, suppression_requirement, 0.6).
 
 % BENEFICIARIES & VICTIMS
 constraint_beneficiary(bedouin_sedentary_transition, state_centralization).
@@ -87,22 +77,14 @@ constraint_victim(bedouin_sedentary_transition, bedouin_traditional_resilience).
 /* --------------------------------------------------------------------------
    PERSPECTIVE 1: TRADITIONAL NOMAD (THESIGER ERA) - Rope
    --------------------------------------------------------------------------
-   
    WHO: individual_moderate (Significant agency over personal survival)
    WHEN: biographical (Lifelong nomadic satisfaction)
    WHERE: mobile (Constantly on the move looking for green patches)
-   SCOPE: local (Immediate desert environment)
    
    WHY THIS CLASSIFICATION:
-   For the traditional Bedouin, the desert was a "Rope"—a functional coordination mechanism 
+   For the traditional Bedouin, the desert was a 'Rope'—a functional coordination mechanism 
    where hardship and abstinence were tools to achieve a "freedom unattainable in civilization".
-   
-   NARRATIVE EVIDENCE:
-   "I had found a freedom unattainable in civilization; a life unhampered by possessions... 
-   the satisfaction which comes from hardship".
    -------------------------------------------------------------------------- */
-
-
 
 constraint_indexing:constraint_classification(
     bedouin_sedentary_transition,
@@ -113,69 +95,56 @@ constraint_indexing:constraint_classification(
         exit_options(mobile),
         spatial_scope(local)
     )
-) :- !.
+).
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 2: MODERN SETTLED BEDOUIN - Noose
+   PERSPECTIVE 2: MODERN SETTLED BEDOUIN - Snare
    --------------------------------------------------------------------------
-   
-   WHO: individual_powerless (Dependent on state oil money and Bangladeshi herders)
+   WHO: individual_powerless (Dependent on state oil money and services)
    WHEN: immediate (Day-to-day life in towns)
-   WHERE: trapped (Dependent on a $237B state budget requiring $89/barrel oil)
-   SCOPE: national (Integrated into Saudi society)
+   WHERE: trapped (Dependent on a state budget tied to oil prices)
    
    WHY THIS CLASSIFICATION:
-   For the modern settled Bedu, the transition is a "Noose." They have "gone soft" and 
+   For the modern settled Bedouin, the transition is a 'Snare.' They have "gone soft" and 
    "lost their edge," becoming trapped in settlements where survival is no longer 
    under their control but dependent on finite oil prices.
-   
-   NARRATIVE EVIDENCE:
-   "the price we paid was the price men have always paid for achieving a paradise in this 
-   life—we went soft, we lost our edge".
    -------------------------------------------------------------------------- */
-
-
 
 constraint_indexing:constraint_classification(
     bedouin_sedentary_transition,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
         exit_options(trapped),
         spatial_scope(national)
     )
-) :- !.
+).
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE EXISTENTIAL ANALYST - Mountain
+   PERSPECTIVE 3: THE SAUDI STATE - Tangled Rope
    --------------------------------------------------------------------------
-   
-   WHO: analytical (Observer of civilizational collapse patterns)
-   WHEN: civilizational (12,000-year historical record)
-   WHERE: analytical (Observer stance)
-   SCOPE: global (Systemic risk of interconnected mega-cities)
+   WHO: institutional (Provider of services, consolidator of population)
+   WHEN: historical (From oil discovery to Vision 2030)
+   WHERE: arbitrage (Balancing immediate development with long-term stability)
    
    WHY THIS CLASSIFICATION:
-   To the analyst, the systemic risk of urban life is a "Mountain"—an immutable law 
-   of complex systems where increased integration leads inevitably to increased 
-   fragility and eventual collapse.
-   
-   NARRATIVE EVIDENCE:
-   "As society became more complex, it also became more fragile... These parts are 
-   no longer redundant. They are part of an integrated whole".
+   For the Saudi State, the sedentary transition is a 'Tangled Rope'. It's a 'Rope'
+   because it allows for centralization of control, provision of services, and
+   management of the population. It's 'Tangled' because it creates a deep, systemic
+   dependency on finite oil wealth, risking fragility and potential future collapse.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
     bedouin_sedentary_transition,
-    mountain,
+    tangled_rope,
     context(
-        agent_power(analytical),
-        time_horizon(civilizational),
-        exit_options(analytical),
-        spatial_scope(global)
+        agent_power(institutional),
+        time_horizon(historical),
+        exit_options(arbitrage),
+        spatial_scope(national)
     )
-) :- !.
+).
 
 /* ==========================================================================
    4. TESTS (What We Learn About Constraints)
@@ -183,21 +152,13 @@ constraint_indexing:constraint_classification(
 
 :- begin_tests(bedouin_sedentary_transition_tests).
 
-test(multi_perspective_transition) :-
-    % Traditional (Moderate) sees Rope
-    constraint_indexing:constraint_classification(bedouin_sedentary_transition, rope, context(individual_moderate, _, _, _)),
-    % Settled (Powerless) sees Noose
-    constraint_indexing:constraint_classification(bedouin_sedentary_transition, noose, context(individual_powerless, _, _, _)),
-    % Analyst sees Mountain
-    constraint_indexing:constraint_classification(bedouin_sedentary_transition, mountain, context(analytical, _, _, _)).
-
-test(extraction_scaling) :-
-    % Powerless (settled) experience more extraction of resilience than the analyst observer.
-    ContextPowerless = context(individual_powerless, immediate, trapped, national),
-    ContextAnalyst = context(analytical, civilizational, analytical, global),
-    constraint_indexing:extractiveness_for_agent(bedouin_sedentary_transition, ContextPowerless, E1),
-    constraint_indexing:extractiveness_for_agent(bedouin_sedentary_transition, ContextAnalyst, E2),
-    E1 > E2.
+test(multi_perspective_variance) :-
+    constraint_indexing:constraint_classification(bedouin_sedentary_transition, Type1, context(agent_power(individual_moderate), _, _, _)),
+    constraint_indexing:constraint_classification(bedouin_sedentary_transition, Type2, context(agent_power(individual_powerless), _, _, _)),
+    constraint_indexing:constraint_classification(bedouin_sedentary_transition, Type3, context(agent_power(institutional), _, _, _)),
+    Type1 \= Type2,
+    Type2 \= Type3,
+    Type1 \= Type3.
 
 :- end_tests(bedouin_sedentary_transition_tests).
 
@@ -207,67 +168,71 @@ test(extraction_scaling) :-
 
 /**
  * LLM GENERATION NOTES
- * * Model: Gemini 2.0 Flash
- * Date: 2026-01-21
- * * KEY DECISIONS MADE BY MODEL:
- * * 1. BASE EXTRACTIVENESS (0.75):
- * Reasoning: The narrative emphasizes that sedentary life is a "paradise" that "extracts" 
- * the ability to survive. The Bedu no longer herd their own animals (hiring others) 
- * and depend on a state budget tied to oil prices.
- * * 2. PERSPECTIVE SELECTION:
- * Model chose Traditional Bedu (Rope/Agency), Settled Bedu (Noose/Dependency), and 
- * Analyst (Mountain/Systemic Law) to capture the full trajectory of the text.
- * * 3. CLASSIFICATION RATIONALE:
- * Settled Bedu -> Noose: They are "trapped" by housing and medical care that will "dry up" 
- * when oil revenue declines.
- * Analyst -> Mountain: The history of Sumeria and the Bronze Age suggests collapse is an 
- * inherent natural law of sedentary complexity.
+ * 
+ * Model: Gemini Pro (Revised)
+ * Date: 2026-01-23
+ * 
+ * KEY DECISIONS:
+ * 
+ * 1. INSTITUTIONAL PERSPECTIVE: Added 'The Saudi State' to represent the
+ *    institutional agent. Their perspective is a 'Tangled Rope' due to the
+ *    benefits of centralization versus the risks of dependency.
+ *
+ * 2. CLASSIFICATION RATIONALE:
+ *    - Traditional Nomad (Rope): Freedom and resilience.
+ *    - Settled Bedouin (Snare): Dependency on finite resources.
+ *    - Saudi State (Tangled Rope): Centralization tool with systemic risks.
+ * 
+ * 3. MANDATROPHY STATUS: High extractiveness (0.75) is 'RESOLVED' because
+ *    the sedentary transition provides immediate comfort (a 'Rope' for the state)
+ *    but extracts long-term resilience, creating a 'Snare' for the individuals.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
+/**
+ * OMEGA IDENTIFICATION
+ *
+ * The core uncertainty is the long-term viability of the sedentary model in a
+ * post-oil future.
+ */
 
 omega_variable(
     bedouin_resilience_persistence,
-    "Can the settled Bedouin re-learn the traditional skills necessary for survival if the oil revenue collapses?",
-    resolution_mechanism("Observation of Bedouin response to post-oil economic declines (e.g., Vision 2030 outcomes)"),
-    impact("If yes: The transition was a temporary Rope. If no: It is a terminal Noose."),
+    "Can the settled Bedouin re-learn the traditional skills necessary for survival if the oil revenue (and state services) collapses, or has their traditional resilience been permanently extracted?",
+    resolution_mechanism("Observation of Bedouin response to hypothetical post-oil economic declines (e.g., Vision 2030 outcomes in 2040-2050)."),
+    impact("If yes: The transition was a temporary 'Rope'. If no: It is a terminal 'Snare' from which there is no return."),
     confidence_without_resolution(medium)
-).
-
-omega_variable(
-    sedentary_collapse_inevitability,
-    "Is systemic collapse a physical necessity (Mountain) for all urban civilizations, or a result of specific choices?",
-    resolution_mechanism("Analysis of civilization lifespans vs. resource management techniques"),
-    impact("If necessity: Mountain. If choice: Rope/Noose."),
-    confidence_without_resolution(low)
 ).
 
 /* ==========================================================================
    7. ALTERNATIVE ANALYSIS
    ========================================================================== */
-
 /**
  * VIABLE ALTERNATIVES
- * * ALTERNATIVE 1: Modern Oases (Warka Water)
- * Viability: Incorporating new technologies to form resilient modern oases.
- * Suppression: Currently shunted in favor of markaz settlements dependent on international markets.
- * * ALTERNATIVE 2: Continued Nomadism
- * Viability: The traditional millennium-old resilient strategy.
- * Suppression: Effectively made extinct by the "paradise" of oil money and towns.
- * * CONCLUSION:
- * The existence of resilient alternatives (nomadism) makes the sedentary shift a "Noose" 
- * because the alternative was actively abandoned for comfort.
+ *
+ * ALTERNATIVE 1: Continued Nomadism
+ *    Viability: The traditional millennium-old resilient strategy, proven to be sustainable in the region.
+ *    Suppression: Actively made extinct by the "paradise" of oil money, state-provided housing, and medical care. This comfort suppressed the need for traditional survival skills.
+ *
+ * CONCLUSION:
+ * The sedentary transition, while offering immediate comfort, ultimately created
+ * a 'Snare' by suppressing the nomadic 'Rope' of resilience. This highlights the
+ * hidden costs of "progress" when it replaces time-tested survival strategies.
  */
-
-
 
 /* ==========================================================================
    8. INTEGRATION HOOKS
    ========================================================================== */
 
-% Load into main system: ?- [constraint_bedouin_sedentary_transition].
+/**
+ * TO USE THIS FILE:
+ * 
+ * 1. Load: ?- [constraints/bedouin_sedentary_transition].
+ * 2. Multi-perspective: ?- multi_index_report(bedouin_sedentary_transition).
+ * 3. Run tests: ?- run_tests(bedouin_sedentary_transition_tests).
+ */
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

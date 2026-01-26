@@ -38,7 +38,7 @@
  * * KEY AGENTS:
  * - The Citizens: Individual moderate agents navigating the city via "salutes" and "wonder" (Rope).
  * - William Humble, Earl of Dudley: Institutional representative viewing the procession as immutable (Mountain).
- * - The Blind Stripling: Individual powerless agent for whom the procession is a sensory obstruction or irrelevant trap (Noose).
+ * - The Blind Stripling: Individual powerless agent for whom the procession is a sensory obstruction or irrelevant trap (Snare).
  */
 
 /* ==========================================================================
@@ -47,8 +47,8 @@
 
 % Required for [STEP 1] and [STEP 2] of the DR-Audit Suite
 narrative_ontology:interval(the_viceregal_cavalcade, 0, 10).
-% Fixed: Changed 'imperial_sovereignty' to 'noose' to satisfy schema
-narrative_ontology:constraint_claim(the_viceregal_cavalcade, noose).
+% Fixed: Changed 'imperial_sovereignty' to 'snare' to satisfy schema
+narrative_ontology:constraint_claim(the_viceregal_cavalcade, snare).
 
 % Metrics: Extractiveness (0.4) and Suppression (0.6)
 domain_priors:base_extractiveness(the_viceregal_cavalcade, 0.4).
@@ -81,16 +81,16 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE BLIND STRIPLING - Noose
+   PERSPECTIVE 2: THE BLIND STRIPLING - Snare
    --------------------------------------------------------------------------
    WHO: individual_powerless - "He passed a blind stripling opposite Broadbent’s".
    WHY: To the powerless or impaired agent, the imperial ritual is an 
-   extractive "Noose"—a physical and political obstruction that offers 
+   extractive "Snare"—a physical and political obstruction that offers 
    no coordination benefit or visibility.
    -------------------------------------------------------------------------- */
 constraint_indexing:constraint_classification(
     the_viceregal_cavalcade,
-    noose,
+    snare,
     context(agent_power(individual_powerless), time_horizon(immediate), exit_options(constrained), spatial_scope(local))
 ) :- !.
 
@@ -131,9 +131,9 @@ test(immutability_colonial_scaling) :-
 /**
  * LLM GENERATION NOTES:
  * Refactored to eliminate the 'imperial_sovereignty' mismatch. Declaring the 
- * claim as 'noose' allows the Audit Suite to flag the "False Mountain" 
+ * claim as 'snare' allows the Audit Suite to flag the "False Mountain" 
  * effect of colonial power, where the state acts as law (Mountain) but 
- * functions as extraction (Noose).
+ * functions as extraction (Snare).
  */
 
 omega_variable(
@@ -162,4 +162,4 @@ omega_variable(
 % --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
 constraint_indexing:constraint_classification(ulysses_chp10, mountain, agent_power(analytical)).
 constraint_indexing:constraint_classification(ulysses_chp10, rope, agent_power(institutional)).
-constraint_indexing:constraint_classification(ulysses_chp10, noose, agent_power(individual_powerless)).
+constraint_indexing:constraint_classification(ulysses_chp10, snare, agent_power(individual_powerless)).

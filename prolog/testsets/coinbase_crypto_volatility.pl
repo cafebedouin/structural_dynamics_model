@@ -83,7 +83,7 @@ constraint_victim(coinbase_crypto_volatility, long_term_capital_stability).
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 1: Retail Trader - Noose
+   PERSPECTIVE 1: Retail Trader - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless.
@@ -92,7 +92,7 @@ constraint_victim(coinbase_crypto_volatility, long_term_capital_stability).
    
    WHY THIS CLASSIFICATION:
    For the retail trader during a "crypto winter" or a flash crash, volatility 
-   is a "Noose." They are liquidated or unable to exit positions due to 
+   is a "Snare." They are liquidated or unable to exit positions due to 
    network congestion, resulting in an asymmetric loss of capital.
    
    NARRATIVE EVIDENCE:
@@ -103,7 +103,7 @@ constraint_victim(coinbase_crypto_volatility, long_term_capital_stability).
 
 constraint_indexing:constraint_classification(
     coinbase_crypto_volatility,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -198,8 +198,8 @@ test(revenue_correlation_logic) :-
         context(institutional, _, arbitrage, _, _, _)).
 
 test(retail_vulnerability_audit) :-
-    % Verify that the powerless/trapped agent sees a Noose
-    constraint_indexing:constraint_classification(coinbase_crypto_volatility, noose, 
+    % Verify that the powerless/trapped agent sees a Snare
+    constraint_indexing:constraint_classification(coinbase_crypto_volatility, snare, 
         context(individual_powerless, immediate, trapped, _, _, _)).
 
 :- end_tests(coinbase_volatility_tests).
@@ -211,7 +211,7 @@ test(retail_vulnerability_audit) :-
 /**
  * LLM GENERATION NOTES
  * * KEY DECISIONS:
- * 1. CLASSIFICATION: Unlike Blackstone (Internal Noose), Coinbase is 
+ * 1. CLASSIFICATION: Unlike Blackstone (Internal Snare), Coinbase is 
  * defined by an External Mountain (Market Cycles).
  * 2. VOLATILITY AS ENGINE: The paradox of Coinbase is that the 
  * "Risk Factor" (volatility) is also the primary "Growth Factor".
@@ -225,7 +225,7 @@ omega_variable(
     crypto_winter_duration,
     "Can Coinbase survive a multi-year period of low volatility and low prices (Mountain) without a secondary revenue Rope?",
     resolution_mechanism("Track growth of non-transaction revenue (Staking, Subscriptions) over 24 months"),
-    impact("If staking fails: it is a Noose for the stock. If it succeeds: a Rope for stability."),
+    impact("If staking fails: it is a Snare for the stock. If it succeeds: a Rope for stability."),
     confidence_without_resolution(medium)
 ).
 

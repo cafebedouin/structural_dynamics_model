@@ -47,7 +47,7 @@
  * byproduct of the human brain's energy-conservation heuristics. For the 
  * administrator, it is a "Rope" that must be managed through task 
  * individualization. However, for the high-performing individual in a 
- * low-accountability group, it becomes a "Noose," as the collective 
+ * low-accountability group, it becomes a "Snare," as the collective 
  * "failure to thrive" strangles their own results and extracts their labor.
  */
 
@@ -57,7 +57,7 @@
 
 % Required for structural identification and ID extraction
 narrative_ontology:interval(social_loafing_interval, 0, 10).
-narrative_ontology:constraint_claim(social_loafing, noose).
+narrative_ontology:constraint_claim(social_loafing, snare).
 
 % Base extractiveness score (0.0-1.0)
 % Rationale: Moderate (0.5). Social loafing extracts labor value from the 
@@ -142,7 +142,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE DILIGENT STUDENT - Noose
+   PERSPECTIVE 3: THE DILIGENT STUDENT - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless - Subject to the grade/outcome of the group.
@@ -151,7 +151,7 @@ constraint_indexing:constraint_classification(
    SCOPE: local - The immediate project team.
    
    WHY THIS CLASSIFICATION:
-   For the high-performer in a group project, social loafing is a Noose. 
+   For the high-performer in a group project, social loafing is a Snare. 
    The presence of loafers "strangles" their ability to achieve a high grade 
    without doing the work of three people. The extraction of their extra labor 
    and time is felt as a direct trap created by the system's group-based reward structure.
@@ -159,7 +159,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     social_loafing,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -179,11 +179,11 @@ test(multi_perspective_variance) :-
     constraint_indexing:constraint_classification(social_loafing, mountain, context(analytical, civilizational, analytical, global)),
     % Institutional sees Rope
     constraint_indexing:constraint_classification(social_loafing, rope, context(institutional, biographical, arbitrage, regional)),
-    % Powerless sees Noose
-    constraint_indexing:constraint_classification(social_loafing, noose, context(individual_powerless, immediate, trapped, local)).
+    % Powerless sees Snare
+    constraint_indexing:constraint_classification(social_loafing, snare, context(individual_powerless, immediate, trapped, local)).
 
 test(power_extractiveness_effort) :-
-    % Powerless individuals feel the extraction of their labor (Noose).
+    % Powerless individuals feel the extraction of their labor (Snare).
     % Institutional managers use it as a design challenge (Rope).
     ContextPowerless = context(individual_powerless, immediate, trapped, local),
     ContextPowerful = context(institutional, biographical, arbitrage, regional),
@@ -192,7 +192,7 @@ test(power_extractiveness_effort) :-
     Score1 > Score2.
 
 test(time_immutability_loafing) :-
-    % Over biographical time, the individual is trapped (Noose).
+    % Over biographical time, the individual is trapped (Snare).
     % Over civilizational time, it is a Law of Human Nature (Mountain).
     constraint_indexing:effective_immutability(civilizational, trapped, mountain).
 
@@ -216,7 +216,7 @@ test(time_immutability_loafing) :-
  * * 3. CLASSIFICATION RATIONALE:
  * Analytical → Mountain: It is a statistical inevitability of human groups.
  * Institutional → Rope: It is a parameter in organizational engineering.
- * Individual Powerless → Noose: It is an unavoidable theft of labor.
+ * Individual Powerless → Snare: It is an unavoidable theft of labor.
  */
 
 /* ==========================================================================
@@ -225,7 +225,7 @@ test(time_immutability_loafing) :-
 
 omega_variable(
     digital_anonymity_impact,
-    "Does digital mediation exacerbate the social loafing 'Noose' via 
+    "Does digital mediation exacerbate the social loafing 'Snare' via 
     increased anonymity, or can it untie it via automated tracking (Rope)?",
     resolution_mechanism("Longitudinal study of per-capita output in 
     remote vs. in-person high-stakes collaboration"),
@@ -247,7 +247,7 @@ omega_variable(
  * rhetoric which suppresses individualized metrics.
  * * CONCLUSION:
  * The existence of accountability as an "exit" (Rope) confirms that for 
- * the powerless, social loafing is a Noose—they are denied the tools to 
+ * the powerless, social loafing is a Snare—they are denied the tools to 
  * prove their own effort by the group structure.
  */
 

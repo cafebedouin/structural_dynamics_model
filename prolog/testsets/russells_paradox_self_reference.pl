@@ -46,7 +46,7 @@
  * * NARRATIVE ARC:
  * Russell's Paradox is the "Mountain" of logical reality; it is an unyielding 
  * feature of self-referential systems. In mathematical history, it acted as a 
- * "Noose" for Frege's Basic Law V, extracting the possibility of simple, 
+ * "Snare" for Frege's Basic Law V, extracting the possibility of simple, 
  * intuitive foundations (extraction). However, it became a "Rope" for the 
  * next century of logic, allowing researchers to coordinate a "standard of 
  * achievement" for consistency in set theory.
@@ -135,7 +135,7 @@ constraint_indexing:constraint_classification(
    For the institutional actor, the paradox is a "Rope"—a functional 
    coordination tool. By recognizing the "Mountain," they coordinate 
    a "standard of achievement" for what constitutes a valid set, pulling 
-   the field away from the "Noose" of inconsistency toward a stable, 
+   the field away from the "Snare" of inconsistency toward a stable, 
    usable framework.
    -------------------------------------------------------------------------- */
 
@@ -153,7 +153,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE CLASSICAL FREGEAN - Noose
+   PERSPECTIVE 3: THE CLASSICAL FREGEAN - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_moderate - Has the tools of logic but is bound by the contradiction.
@@ -163,7 +163,7 @@ constraint_indexing:constraint_classification(
    
    WHY THIS CLASSIFICATION:
    For the logician who built upon unrestricted comprehension, the paradox is 
-   a "Noose." It "strangles" their hope for a simple, arithmetic foundation 
+   a "Snare." It "strangles" their hope for a simple, arithmetic foundation 
    for the world. It extracts the "certainty of reason" (extraction), 
    choking the project just as it reached completion.
    
@@ -175,7 +175,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     russells_paradox_self_reference,
-    noose,
+    snare,
     context(
         agent_power(individual_moderate),
         time_horizon(historical),
@@ -201,7 +201,7 @@ test(multi_perspective_variance) :-
     Type1 \= Type2.
 
 test(logic_extraction_penalty) :-
-    % Classical logicians experience the "Noose" of high extraction (0.7).
+    % Classical logicians experience the "Snare" of high extraction (0.7).
     Context = context(individual_moderate, historical, constrained, global),
     constraint_indexing:extractiveness_for_agent(russells_paradox_self_reference, Context, Score),
     Score >= 0.6.
@@ -226,7 +226,7 @@ test(natural_emergence) :-
  * replaces it with a "tax" of complexity (axioms, types).
  * * 2. PERSPECTIVE SELECTION: 
  * Chose Set (Subject), Builder (User), and Frege (Victim) to show how 
- * a "Mountain" of formal reality becomes a "Noose" for those seeking 
+ * a "Mountain" of formal reality becomes a "Snare" for those seeking 
  * simple completeness.
  * * 3. OMEGA IDENTIFICATION: 
  * Formalized the uncertainty of "True Sets"—is there a natural Mountain 

@@ -172,7 +172,7 @@ constraint_indexing:constraint_classification(
     !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 4: THE PASSIVE INVESTOR (SAVER) - Noose
+   PERSPECTIVE 4: THE PASSIVE INVESTOR (SAVER) - Snare
    --------------------------------------------------------------------------
    WHO: individual_powerless - Passive investors trusting savings to the CEO.
    WHEN: generational - Compounding requires decades of "foregone consumption".
@@ -180,7 +180,7 @@ constraint_indexing:constraint_classification(
    SCOPE: local - The individual's personal savings and liquidity needs.
 
    WHY THIS CLASSIFICATION:
-   The "Noose" is the deferred consumption trap. To achieve the "mixture of a
+   The "Snare" is the deferred consumption trap. To achieve the "mixture of a
    sustained compound annual gain," shareholders must "forego dividends".
    For a saver needing income, Berkshire offers no exit except selling shares,
    which triggers capital gains taxes—a structural friction that suppresses
@@ -189,7 +189,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     berkshire_compounding_culture,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(generational),
@@ -241,7 +241,7 @@ test(low_extraction) :-
  * 2. EXTRACTIVENESS: This system is uniquely non-extractive (0.1) for a
  * "giant business" because of the alignment of management incentives and
  * [cite_start]the massive tax contributions to the state[cite: 104, 195].
- * 3. SUPPRESSION: There is no "Noose" here for the shareholders, as they
+ * 3. SUPPRESSION: There is no "Snare" here for the shareholders, as they
  * remain "knee-deep in opportunities" and can "come and go" with marketable
  * [cite_start]equities[cite: 129, 132].
  */
@@ -260,7 +260,7 @@ omega_variable(
 
 omega_variable(
     fiscal_folly_risk,
-    "Will paper money value evaporate (Mountain/Noose risk) due to fiscal folly?",
+    "Will paper money value evaporate (Mountain/Snare risk) due to fiscal folly?",
     resolution_mechanism("Monitoring of U.S. fiscal policy and currency stability[cite: 146, 173]."),
     impact("If folly prevails: Equities transition from Rope to the only surviving Mountain."),
     confidence_without_resolution(medium)

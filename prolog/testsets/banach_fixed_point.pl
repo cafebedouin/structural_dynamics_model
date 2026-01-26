@@ -45,7 +45,7 @@
  * In the realm of abstract mathematics, the theorem is a "Mountain" of natural law. 
  * For the engineer, it is a "Rope" that pulls systems toward equilibrium. However, 
  * in the presence of a "weak" contraction ($k$ near 1), the guarantee of 
- * convergence acts as a "Noose," extracting infinite computational cycles for 
+ * convergence acts as a "Snare," extracting infinite computational cycles for 
  * minimal progress.
  */
 
@@ -146,7 +146,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: WEAK CONTRACTION (k = 0.999) - Noose
+   PERSPECTIVE 3: WEAK CONTRACTION (k = 0.999) - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless - An algorithm starved for precision.
@@ -156,7 +156,7 @@ constraint_indexing:constraint_classification(
    
    WHY THIS CLASSIFICATION:
    When the contraction factor is extremely close to 1, the "guarantee" of 
-   convergence becomes a "Noose." The algorithm is forced to expend massive 
+   convergence becomes a "Snare." The algorithm is forced to expend massive 
    resources (extraction) for negligible gain, trapped in a "convergent" 
    state that is functionally useless.
    
@@ -167,7 +167,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     banach_fixed_point,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(biographical),
@@ -253,8 +253,8 @@ omega_variable(
  * Suppression: Often used *instead* of Banach when the function is differentiable.
  * * CONCLUSION:
  * Because Banach does not actively suppress Newtonian or Brouwerian alternatives, 
- * it remains a "Rope" (tool) for engineers rather than a "Noose." It only 
- * becomes a Noose when the contraction $k$ is so poor that no other method 
+ * it remains a "Rope" (tool) for engineers rather than a "Snare." It only 
+ * becomes a Snare when the contraction $k$ is so poor that no other method 
  * can be found.
  */
 

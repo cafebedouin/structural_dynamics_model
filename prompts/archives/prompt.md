@@ -15,7 +15,7 @@ event(EventID, Kind, TimeInt, Properties).  % TimeInt MUST be integer
 
 % Constraints
 constraint_claim(ConstraintID, ClaimedType).  
-% ClaimedType: {mountain, rope, tangled_rope, noose, zombie, scaffold}
+% ClaimedType: {mountain, rope, tangled_rope, snare, piton, scaffold}
 ```
 
 ### Measurement Schema (CRITICAL FOR MODAL LOGIC + SIGNATURES)
@@ -82,7 +82,7 @@ omega_variable(ID, Type, Description).
 | Mountain | ▮ C | ≤0.05 (N/A) | ≤0.05 | Accept |
 | Rope | ⊞C | ≤0.35 | ≤0.33 | Maintain |
 | Tangled Rope | ⊠ T | 0.36-0.65 | 0.34-0.65 | Reform |
-| Noose | ⊗ C | ≥0.66 | ≥0.66 | Cut |
+| Snare | ⊗ C | ≥0.66 | ≥0.66 | Cut |
 | Scaffold | ⊡C | ≤0.65 | Any | Accept (temporary) |
 
 **Mountain (▮ C):**
@@ -104,7 +104,7 @@ omega_variable(ID, Type, Description).
 - Entity type: `entity(scaffold_id, scaffold)`
 - Functions as temporary support during transitions
 - Should have temporal measurements showing evolution
-- Calcification: scaffold → noose when extractiveness exceeds 0.65
+- Calcification: scaffold → snare when extractiveness exceeds 0.65
 
 ### Layer 2: Structural Signatures (WHY constraints exist - NEW in v3.2)
 
@@ -245,7 +245,7 @@ measurement(m12, constraint_x, resistance, 15, 0.85).
 ```
 
 **What Gets Detected:**
-- **Modal Transformations**: rope → noose (capture), rope → zombie (obsolescence)
+- Modal Transformations: rope → snare (capture), rope → piton (obsolescence)
 - **Signature Stability**: Variance in suppression < 0.05 → temporally stable → natural law candidate
 - **Coordination Success**: Low variance + alternatives → coordination scaffold
 
@@ -460,7 +460,7 @@ Before submitting Prolog file, verify:
 - [ ] At least **2 time points** per constraint for transformation detection
 - [ ] `constraint_metric/3` includes extractiveness, suppression_requirement, **and resistance**
 - [ ] `constraint_metric/3` values match classification thresholds
-- [ ] If recommending cutting a Noose: either scaffold present OR no load-bearing dependencies
+- If recommending cutting a Snare: either scaffold present OR no load-bearing dependencies
 
 **Structural Signatures (Layer 2 - NEW in v3.2):**
 - [ ] **ALL THREE metrics** at each time point: extractiveness, suppression_requirement, **resistance**
@@ -504,11 +504,11 @@ Before submitting Prolog file, verify:
 **The system will:**
 - **NEW**: Detect structural signatures (natural law, coordination, constructed)
 - **NEW**: Distinguish impossibilities from coordination successes
-- Detect transformations (rope → noose)
+- Detect transformations (rope → snare)
 - Label mechanisms (capture, calcification)
 - Assess risks (catastrophic if load-bearing)
 - Block unsafe cuts (needs scaffold)
-- Expose lies (claimed mountain, actually noose)
+- Expose lies (claimed mountain, actually snare)
 
 **Success criteria:**
 File loads cleanly in Prolog and produces a 6-section DR audit report with:

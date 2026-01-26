@@ -43,7 +43,7 @@
  * * NARRATIVE ARC:
  * An organization introduces an observer to "improve" a system. The observer 
  * acts as a "Rope" for management to pull more effort from the workers. However, 
- * for the worker, the gaze becomes a "Noose" of performance anxiety and 
+ * for the worker, the gaze becomes a "Snare" of performance anxiety and 
  * inauthenticity. Ultimately, the effect is revealed as a "Mountain"—an 
  * inescapable psychological law where the act of measurement inevitably 
  * changes the thing being measured.
@@ -55,7 +55,7 @@
 
 % Required for [STEP 1] and [STEP 2] of the DR-Audit Suite
 narrative_ontology:interval(hawthorne_interval, 0, 10).
-narrative_ontology:constraint_claim(hawthorne_effect, noose).
+narrative_ontology:constraint_claim(hawthorne_effect, snare).
 
 % Base extractiveness score (0.0-1.0)
 % Rationale: Moderate (0.4). The effect extracts "authentic behavior" and 
@@ -138,7 +138,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE FLOOR WORKER - Noose
+   PERSPECTIVE 3: THE FLOOR WORKER - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless - Subject to the gaze and the quota.
@@ -147,7 +147,7 @@ constraint_indexing:constraint_classification(
    SCOPE: local - The immediate workbench.
    
    WHY THIS CLASSIFICATION:
-   For the worker, the effect is a Noose. The awareness of being 
+   For the worker, the effect is a Snare. The awareness of being 
    watched creates an involuntary "tightening" of performance. They 
    cannot relax into their natural rhythm; the gaze extracts extra 
    vitality and focus, strangling their autonomy and mental peace 
@@ -156,7 +156,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     hawthorne_effect,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -176,11 +176,11 @@ test(multi_perspective_variance) :-
     constraint_indexing:constraint_classification(hawthorne_effect, mountain, context(analytical, civilizational, analytical, global)),
     % Institutional sees Rope
     constraint_indexing:constraint_classification(hawthorne_effect, rope, context(institutional, biographical, arbitrage, regional)),
-    % Powerless sees Noose
-    constraint_indexing:constraint_classification(hawthorne_effect, noose, context(individual_powerless, immediate, trapped, local)).
+    % Powerless sees Snare
+    constraint_indexing:constraint_classification(hawthorne_effect, snare, context(individual_powerless, immediate, trapped, local)).
 
 test(power_extractiveness_gaze) :-
-    % Powerless individuals feel the extraction of their "authentic self" (Noose).
+    % Powerless individuals feel the extraction of their "authentic self" (Snare).
     % Institutions use the gaze to manage throughput (Rope).
     ContextPowerless = context(individual_powerless, immediate, trapped, local),
     ContextPowerful = context(institutional, biographical, arbitrage, regional),
@@ -189,7 +189,7 @@ test(power_extractiveness_gaze) :-
     Score1 > Score2.
 
 test(time_immutability_psychology) :-
-    % Over biographical time, the worker is trapped (Noose).
+    % Over biographical time, the worker is trapped (Snare).
     % Over civilizational time, it is a Law of Nature (Mountain).
     constraint_indexing:effective_immutability(civilizational, trapped, mountain).
 
@@ -213,7 +213,7 @@ test(time_immutability_psychology) :-
  * * 3. CLASSIFICATION RATIONALE:
  * Analytical → Mountain: It is a law of physics for social systems.
  * Institutional → Rope: It is a low-cost coordination tool.
- * Powerless → Noose: It is a restrictive performance trap.
+ * Powerless → Snare: It is a restrictive performance trap.
  */
 
 /* ==========================================================================
@@ -223,9 +223,9 @@ test(time_immutability_psychology) :-
 omega_variable(
     observation_latency,
     "How long does it take for a subject to 'habituate' and return to 
-    natural behavior, effectively untying the Noose (Rope)?",
+    natural behavior, effectively untying the Snare (Rope)?",
     resolution_mechanism("Longitudinal study of 24/7 surveillance vs. intermittent observation"),
-    impact("If Habituation is fast: The effect is a weak Rope. If slow: It is a permanent Noose."),
+    impact("If Habituation is fast: The effect is a weak Rope. If slow: It is a permanent Snare."),
     confidence_without_resolution(medium)
 ).
 
@@ -243,7 +243,7 @@ omega_variable(
  * * CONCLUSION:
  * The existence of a "Natural State" that is only accessible through 
  * suppressed/unethical means confirms that for the modern subject, the 
- * Hawthorne Effect is a Noose—you are denied the exit into unobserved 
+ * Hawthorne Effect is a Snare—you are denied the exit into unobserved 
  * reality by the rules of the system.
  */
 

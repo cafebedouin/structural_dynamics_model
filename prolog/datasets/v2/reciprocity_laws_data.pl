@@ -40,7 +40,7 @@ constraint_metric(artin_map_complexity, snap_back_potential, 0.45).
 constraint_metric(artin_map_complexity, extractiveness, 0.52).
 
 % NOOSE: Non-Abelian Obstruction (The limit of standard Class Field Theory)
-constraint_claim(non_abelian_logic_gap, noose).
+constraint_claim(non_abelian_logic_gap, snare).
 constraint_metric(non_abelian_logic_gap, intensity, 0.95).
 constraint_metric(non_abelian_logic_gap, suppression_requirement, 0.88).
 constraint_metric(non_abelian_logic_gap, snap_back_potential, 0.92).

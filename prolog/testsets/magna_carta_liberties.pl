@@ -45,7 +45,7 @@
  * Born from "discord that has arisen," the Charter moves from absolute royal 
  * prerogative toward a coordinated legal order. It seeks to "allay the discord" 
  * by turning the King's arbitrary power into a "Rope" of shared rules, though 
- * to the King, it is experienced as a "Noose" of coercion.
+ * to the King, it is experienced as a "Snare" of coercion.
  */
 
 /* ==========================================================================
@@ -144,7 +144,7 @@ constraint_indexing:constraint_classification(
     !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: KING JOHN - Noose
+   PERSPECTIVE 3: KING JOHN - Snare
    --------------------------------------------------------------------------
    
    WHO: institutional - The monarch whose will is restricted.
@@ -153,7 +153,7 @@ constraint_indexing:constraint_classification(
    SCOPE: national - His entire executive power is limited.
    
    WHY THIS CLASSIFICATION:
-   For King John, the Charter is a "Noose." It is a coercive mechanism 
+   For King John, the Charter is a "Snare." It is a coercive mechanism 
    imposed by the Barons that extracts his absolute authority and 
    authorizes the community to "assail us in every way possible" if 
    he deviates from the text.
@@ -161,7 +161,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     magna_carta_liberties,
-    noose,
+    snare,
     context(
         agent_power(institutional),
         time_horizon(immediate),
@@ -186,8 +186,8 @@ test(baronial_coordination) :-
     constraint_indexing:constraint_classification(magna_carta_liberties, rope, context(agent_power(collective_organized), _, _, _, _, _)).
 
 test(monarch_coercion) :-
-    % King sees a Noose because of Clause 61 (distraint)
-    constraint_indexing:constraint_classification(magna_carta_liberties, noose, context(agent_power(institutional), _, constrained, _, _, _)).
+    % King sees a Snare because of Clause 61 (distraint)
+    constraint_indexing:constraint_classification(magna_carta_liberties, snare, context(agent_power(institutional), _, constrained, _, _, _)).
 
 test(due_process_mountain) :-
     % For the powerless, due process is a fixed Mountain of protection
@@ -206,7 +206,7 @@ test(due_process_mountain) :-
  * provide "better ordering"[cite: 1]. 
  * 2. However, Clause 61 (the Security Clause) is the pivot. By authorizing 
  * the barons to seize royal property, it moves the King from a "Rope" 
- * maker to a "Noose" subject. 
+ * maker to a "Snare" subject. 
  * 3. Interestingly, the document attempts to frame its own "Mountain" 
  * nature by using the term "in perpetuity"[cite: 1], signaling that 
  * these rights are now part of the natural law of England.
@@ -228,7 +228,7 @@ omega_variable(
     free_man_definition,
     "To what extent did the 'liberties' apply to unfree villeins vs. landed elite?",
     resolution_mechanism("Analysis of Clause 20 vs. Clause 39 language regarding 'villeins' and 'free men'."),
-    impact("If exclusive, the 'Mountain' of rights exists only for the elite, leaving the poor in a Noose of local lords."),
+    impact("If exclusive, the 'Mountain' of rights exists only for the elite, leaving the poor in a Snare of local lords."),
     confidence_without_resolution(medium)
 ).
 
@@ -248,7 +248,7 @@ omega_variable(
  * Evidence: Clause 1 mentions ratification by Pope Innocent III[cite: 1].
  * * CONCLUSION:
  * The rejection of Absolute Monarchy (Alternative 1) is what necessitates 
- * the "Noose" classification from the King's perspective. He is no 
+ * the "Snare" classification from the King's perspective. He is no 
  * longer the source of law but its subject.
  */
 

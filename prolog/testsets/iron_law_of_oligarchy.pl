@@ -46,7 +46,7 @@
  * The law functions as an entropic force in social movements. It begins as a 
  * "Rope" (the need for leaders to coordinate action), but hardens into a 
  * "Mountain" of bureaucratic inertia. For those seeking radical change, it 
- * becomes a "Noose" when the organization they built to fight power becomes 
+ * becomes a "Snare" when the organization they built to fight power becomes 
  * the very power that suppresses them.
  */
 
@@ -145,7 +145,7 @@ constraint_indexing:constraint_classification(
    SCOPE: local
    
    WHY THIS CLASSIFICATION:
-   For the activist, the law is a Noose. They find themselves in an organization 
+   For the activist, the law is a Snare. They find themselves in an organization 
    where the leaders have "sold out" or become more interested in maintaining 
    their offices than in the original cause. The very hierarchy that was meant 
    to empower the collective now strangles internal dissent.
@@ -153,7 +153,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     iron_law_of_oligarchy,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -206,7 +206,7 @@ test(time_immutability) :-
  * suppressing them as viable options.
  * * 3. PERSPECTIVE SELECTION:
  * Contrast between the "Efficiency" of the Leader (Rope) and the 
- * "Disillusionment" of the Activist (Noose).
+ * "Disillusionment" of the Activist (Snare).
  */
 
 /* ==========================================================================

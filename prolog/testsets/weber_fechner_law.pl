@@ -1,8 +1,8 @@
 % ============================================================================
 % CONSTRAINT STORY: weber_fechner_law
 % ============================================================================
-% Generated: 2026-01-19
-% Model: Gemini 2.0 Flash
+% Generated: 2026-01-22
+% Model: Gemini
 % Source: Psychophysics / Weber (1834) / Fechner (1860)
 % ============================================================================
 
@@ -27,79 +27,68 @@
  * CONSTRAINT IDENTIFICATION
  * * constraint_id: weber_fechner_law
  * human_readable: Weber-Fechner Law (Logarithmic Perception)
- * domain: technological/social
- * temporal_scope: Permanent (Biological Sensory Architecture)
- * spatial_scope: Global (Human Perception)
+ * domain: technological/social/biological
+ * temporal_scope: Permanent (Evolutionary sensory architecture)
+ * spatial_scope: Global (Universal human biology)
  * * SUMMARY:
- * The Weber-Fechner law describes the relationship between the physical intensity 
- * of a stimulus and its perceived intensity. It states that the perceived change 
- * in a stimulus is proportional to the relative change, not the absolute change, 
- * resulting in a logarithmic rather than linear sensory experience.
+ * The Weber-Fechner law describes the logarithmic relationship between stimulus 
+ * intensity and perception. It dictates that humans perceive relative rather than 
+ * absolute changes, creating a "Just Noticeable Difference" (JND) threshold that 
+ * acts as a biological filter for all sensory and economic inputs.
  * * KEY AGENTS:
- * - The Psychophysicist (Analytical): Observer mapping the logarithmic 
- * curve of human sensation and the "Just Noticeable Difference" (JND).
- * - The Marketing Executive (Institutional): Uses the law to coordinate pricing 
- * and branding (e.g., hiding price increases or weight reductions below the JND).
- * - The Sensory Subject (Individual Powerless): Subject to the biological 
- * inability to perceive absolute changes at high intensities.
+ * - The Neuroscientist: Analytical observer of the biological sensory substrate.
+ * - The Industrial Designer: Institutional actor using the law as a "Rope" to 
+ * align technical systems with human comfort.
+ * - The Corporate Strategist: Rule-shaper using the law as a "Tangled Rope" to 
+ * coordinate prices while extracting value via JND masking.
+ * - The Supermarket Shopper: Individual powerless subject trapped by 
+ * shrinkflation and psychological value distortion.
  * * NARRATIVE ARC:
- * The law functions as a "Mountain" of biological reality—an evolved efficiency 
- * in sensory hardware. For the designer, it is a "Rope" for coordination (creating 
- * volume knobs or lighting systems that feel "natural"). However, for the consumer, 
- * it becomes a "Noose" when used by institutions to extract value by reducing 
- * product quality or quantity in increments that remain psychologically invisible.
+ * Originally an evolutionary efficiency for data compression, the law is 
+ * weaponized in the modern market. What begins as a "Mountain" of neural 
+ * reality is leveraged as a "Rope" for design utility, but eventually 
+ * tightens into a "Snare" for consumers when used to hide the extraction 
+ * of product value.
  */
 
 /* ==========================================================================
    2. CORE SYSTEM INTEGRATION (The "Reality" Layer)
    ========================================================================== */
 
-% Required for structural anchor
-narrative_ontology:interval(weber_fechner_interval, 0, 10).
+% ID Binding - Mandatory for 2026 DR-Audit Suite
+narrative_ontology:interval(weber_fechner_law, 0, 10).
 narrative_ontology:constraint_claim(weber_fechner_law, mountain).
 
-% Base extractiveness score (0.0-1.0)
-% Rationale: Moderate (0.4). The law allows for the extraction of "value" 
-% by hiding small negative changes from the consumer while maximizing 
-% the perception of small positive changes in marketing.
+% Base Properties
+% Rationale: Moderate extraction (0.4) through "stealth inflation" and JND masking.
 domain_priors:base_extractiveness(weber_fechner_law, 0.4).
-
-% Suppression score (0.0-1.0)
-% Rationale: Moderate (0.5). It suppresses "Linear Realism." Humans find it 
-% extremely difficult to perceive physical reality linearly, making the 
-% objective "Truth" of a stimulus invisible compared to the perceived sensation.
+% Rationale: Moderate suppression (0.5) as it masks the linear objective truth.
 domain_priors:suppression_score(weber_fechner_law, 0.5).
 
-% Enforcement requirements
 % Emerges naturally from neural firing rates and sensory compression.
 domain_priors:emerges_naturally(weber_fechner_law).
 
-% Metrics required for Section 1 of the Executive Summary
-narrative_ontology:constraint_metric(weber_fechner_law, extractiveness, 0.4).
-narrative_ontology:constraint_metric(weber_fechner_law, suppression_requirement, 0.5).
-
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(weber_fechner_law, [advertising_agencies, industrial_designers]).
+constraint_beneficiary(weber_fechner_law, [advertising_agencies, industrial_designers, retail_strategists]).
 constraint_victim(weber_fechner_law, [uninformed_consumers, classical_utility_models]).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)
    ========================================================================== */
 
+
 /* --------------------------------------------------------------------------
    PERSPECTIVE 1: THE NEUROSCIENTIST - Mountain
    --------------------------------------------------------------------------
-   
    WHO: analytical - Observer of the biological sensory substrate.
    WHEN: civilizational - Viewing the evolution of the mammalian nervous system.
    WHERE: trapped - Sensory compression is a fixed feature of neural hardware.
    SCOPE: global - Universal to the human species.
    
    WHY THIS CLASSIFICATION:
-   To the scientist, the law is a Mountain. It is an unchangeable feature of 
-   the brain's data compression. No amount of training can allow a human to 
-   hear 100dB as exactly twice as loud as 50dB; the logarithmic response 
-   is a fixed peak in our biological topography.
+   To the scientist, the law is an unchangeable feature of biological topography. 
+   The brain's hardware is hardwired for logarithmic response; no amount of 
+   social reform can "linearize" human hearing or vision.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
@@ -111,27 +100,20 @@ constraint_indexing:constraint_classification(
         exit_options(trapped),
         spatial_scope(global)
     )
-) :-
-    constraint_indexing:effective_immutability_for_context(
-        context(analytical, civilizational, trapped, global),
-        mountain
-    ),
-    !.
+) :- !.
 
 /* --------------------------------------------------------------------------
    PERSPECTIVE 2: THE UI/UX DESIGNER - Rope
    --------------------------------------------------------------------------
-   
    WHO: institutional - Power to design interfaces and sensory experiences.
-   WHEN: biographical - Creating products that last for decades.
-   WHERE: arbitrage - Can choose to use logarithmic or linear scales to influence behavior.
+   WHEN: biographical - Creating products for long-term usage.
+   WHERE: arbitrage - Can choose to use logarithmic or linear scales.
    SCOPE: national - Digital and physical product ecosystems.
    
    WHY THIS CLASSIFICATION:
-   For the designer, the law is a Rope. It is a vital coordination mechanism. 
-   By aligning a volume slider or a brightness control with the logarithmic 
-   nature of human perception, they "pull" the user into a state of comfort 
-   and intuitive control, using the constraint to create a bridge of usability.
+   For the designer, the law is a vital coordination mechanism. By aligning 
+   a volume slider or brightness control with the JND, they create a 
+   "natural" bridge between the user and the machine.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
@@ -143,41 +125,59 @@ constraint_indexing:constraint_classification(
         exit_options(arbitrage),
         spatial_scope(national)
     )
-) :-
-    domain_priors:base_extractiveness(weber_fechner_law, E),
-    E > 0.2, % Managed as a tool for usability
-    !.
+) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE SUPERMARKET SHOPPER - Noose
+   PERSPECTIVE 3: THE PRICING STRATEGIST - Tangled Rope
    --------------------------------------------------------------------------
-   
-   WHO: individual_powerless - Subject to "shrinkflation" and price masking.
-   WHEN: immediate - Today's grocery bill and perception of "value."
-   WHERE: constrained - High cost to verify absolute weights/volumes of every item.
-   SCOPE: local - Immediate household purchasing.
+   WHO: institutional - Designing market signals and price points.
+   WHEN: generational - Managing brand value and market share.
+   WHERE: mobile - Can adjust strategies across different markets.
+   SCOPE: national - National retail networks.
    
    WHY THIS CLASSIFICATION:
-   For the consumer, the law is often a Noose. Corporations exploit the 
-   "Just Noticeable Difference" to extract value—reducing the contents 
-   of a bag of chips by 5% or raising a price by a small percentage that 
-   falls below the sensory threshold. The biological "fuzziness" of 
-   perception becomes a trap that strangles their purchasing power invisibly.
+   The strategist uses the law to coordinate consumer expectations (Rope) 
+   while simultaneously extracting surplus by keeping price/quantity 
+   adjustments below the JND (Extraction). It is a hybrid tool of 
+   market stability and predatory margin-management.
    -------------------------------------------------------------------------- */
 
 constraint_indexing:constraint_classification(
     weber_fechner_law,
-    noose,
+    tangled_rope,
+    context(
+        agent_power(institutional),
+        time_horizon(generational),
+        exit_options(mobile),
+        spatial_scope(national)
+    )
+) :- !.
+
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 4: THE SUPERMARKET SHOPPER - Snare
+   --------------------------------------------------------------------------
+   WHO: individual_powerless - Subject to masking and value extraction.
+   WHEN: immediate - Today's grocery bill.
+   WHERE: constrained - High cost to verify absolute weights/volumes.
+   SCOPE: local - Immediate household purchasing.
+   
+   WHY THIS CLASSIFICATION:
+   For the consumer, the law functions as an invisible trap. Shrinkflation 
+   exploits their biological "blindness," tightening the budget as 
+   value is extracted in increments they are biologically incapable of 
+   noticing without external measurement tools.
+   -------------------------------------------------------------------------- */
+
+constraint_indexing:constraint_classification(
+    weber_fechner_law,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
         exit_options(constrained),
         spatial_scope(local)
     )
-) :-
-    domain_priors:base_extractiveness(weber_fechner_law, E),
-    E > 0.3, % Extraction of value through sensory blindness
-    !.
+) :- !.
 
 /* ==========================================================================
    4. TESTS (What We Learn About Constraints)
@@ -186,17 +186,21 @@ constraint_indexing:constraint_classification(
 :- begin_tests(weber_fechner_law_tests).
 
 test(multi_perspective_variance) :-
-    % Analyst sees Mountain, Institutional sees Rope, Powerless sees Noose
-    constraint_indexing:constraint_classification(weber_fechner_law, mountain, context(analytical, civilizational, trapped, global)),
-    constraint_indexing:constraint_classification(weber_fechner_law, rope, context(institutional, biographical, arbitrage, national)),
-    constraint_indexing:constraint_classification(weber_fechner_law, noose, context(individual_powerless, immediate, constrained, local)).
+    % Verify different indices yield different types
+    constraint_indexing:constraint_classification(weber_fechner_law, mountain, context(agent_power(analytical), _, _, _)),
+    constraint_indexing:constraint_classification(weber_fechner_law, rope, context(agent_power(institutional), time_horizon(biographical), _, _)),
+    constraint_indexing:constraint_classification(weber_fechner_law, snare, context(agent_power(individual_powerless), _, _, _)).
 
-test(power_extractiveness_perception) :-
+test(power_extractiveness_scaling) :-
     ContextPowerless = context(individual_powerless, immediate, constrained, local),
     ContextPowerful = context(institutional, biographical, arbitrage, national),
     constraint_indexing:extractiveness_for_agent(weber_fechner_law, ContextPowerless, Score1),
     constraint_indexing:extractiveness_for_agent(weber_fechner_law, ContextPowerful, Score2),
     Score1 > Score2.
+
+test(hybrid_tangled_rope_detection) :-
+    % Verify that long-term institutional pricing is detected as a Tangled Rope
+    constraint_indexing:constraint_classification(weber_fechner_law, tangled_rope, context(institutional, generational, mobile, national)).
 
 :- end_tests(weber_fechner_law_tests).
 
@@ -206,17 +210,20 @@ test(power_extractiveness_perception) :-
 
 /**
  * LLM GENERATION NOTES
- * * Model: Gemini 2.0 Flash
- * Date: 2026-01-19
+ * * Model: Gemini
+ * Date: 2026-01-22
  * * KEY DECISIONS:
- * 1. EXTRACTIVENESS (0.4): It extracts the ability to maintain linear 
- * economic utility. The law allows for "stealth extraction" of value 
- * in consumer markets.
- * 2. PERSPECTIVE SELECTION: Chose the Scientist (Nature), the Designer 
- * (Utility), and the Shopper (Extraction) to highlight the shift from 
- * biological fact to economic exploitation.
- * 3. NOOSE LOGIC: Specifically focuses on "Shrinkflation" as a manifestation 
- * of the Noose where biological limits are used as a predatory trap.
+ * * 1. EXTRACTIVENESS (0.4):
+ * While the law itself is natural, its economic application extracts 
+ * "value-perception" from consumers. It is not as severe as total 
+ * apocalypse (0.7), but persistent.
+ * * 2. PERSPECTIVE SELECTION:
+ * Introduced 'Tangled Rope' for the strategist to demonstrate how 
+ * coordination (market pricing) and extraction (JND masking) are 
+ * surgerically intertwined.
+ * * 3. NOOSE LOGIC:
+ * Focuses on 'Shrinkflation' as the primary manifestation of the 
+ * predatory use of biological sensory limits.
  */
 
 /* ==========================================================================
@@ -225,14 +232,9 @@ test(power_extractiveness_perception) :-
 
 omega_variable(
     precision_training_limit,
-    "Can humans be trained to bypass Weber-Fechner 'blindness' through 
-    comparative analytical tools (Rope), or is the logarithmic floor 
-    absolute (Mountain)?",
-    resolution_mechanism("Long-term sensory training studies using 
-    real-time digital feedback to linearize perception"),
-    impact("If Rope: Consumers can untie the Noose of shrinkflation. 
-    If Mountain: We require institutional regulation (External Rope) to 
-    protect against the biological trap."),
+    "Can humans be trained to bypass Weber-Fechner 'blindness' through comparative analytical tools, or is the logarithmic floor absolute?",
+    resolution_mechanism("Long-term sensory training studies using digital feedback to linearize perception"),
+    impact("If trainable: The Snare is untieable. If absolute: We require external regulation (External Rope)."),
     confidence_without_resolution(medium)
 ).
 
@@ -243,25 +245,20 @@ omega_variable(
 /**
  * VIABLE ALTERNATIVES
  * * ALTERNATIVE 1: Stevens' Power Law
- * Viability: High. A more generalized version of the relationship that 
- * accounts for different sensory modalities (e.g., electric shock is 
- * super-linear).
- * Suppression: Low. It is a scientific refinement, not a competitor.
+ * Viability: High. A scientific refinement rather than a social alternative.
+ * Suppression: None. It co-exists as a more accurate scientific model.
  * * CONCLUSION:
- * Since there is no "Linear Sensation" alternative for humans, the 
- * constraint remains a Mountain of nature. The "Noose" arises purely 
- * from the social exploitation of this biological peak.
+ * Since there is no "Linear Sensation" biological alternative, the 
+ * constraint remains a Mountain of nature. The "Snare" arises purely 
+ * from the social exploitation of this biological fixed-point.
  */
 
 /* ==========================================================================
    8. INTEGRATION HOOKS
    ========================================================================== */
 
-/**
- * TO USE THIS FILE:
- * 1. Load: ?- [constraint_weber_fechner_law].
- * 2. Multi-perspective: ?- multi_index_report(weber_fechner_law).
- */
+% Load: ?- [weber_fechner_law].
+% Report: ?- constraint_indexing:multi_index_report(weber_fechner_law).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

@@ -47,7 +47,7 @@
  * of perpetual motion. In the real world, "Damping" is the first law of
  * physical constraints. For the car passenger, the shock absorber is a
  * "Rope" of comfort and coordination. For the high-speed data packet,
- * signal damping is a "Noose" that extracts clarity, forcing the
+ * signal damping is a "Snare" that extracts clarity, forcing the
  * re-investment of power to bridge the distance.
  */
 
@@ -140,7 +140,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE WEAK ACOUSTIC SIGNAL - Noose
+   PERSPECTIVE 3: THE WEAK ACOUSTIC SIGNAL - Snare
    --------------------------------------------------------------------------
    WHO: individual_powerless - The signal "packet" is destroyed by the medium.
    WHEN: immediate - Every meter of travel extracts more amplitude.
@@ -155,7 +155,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     damped_harmonics,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -179,8 +179,8 @@ test(perspective_shift) :-
     constraint_indexing:constraint_classification(damped_harmonics, rope, context(institutional, biographical, mobile, global)).
 
 test(extraction_logic) :-
-    % Signals in a medium should feel the "Noose" effect of energy loss.
-    constraint_indexing:constraint_classification(damped_harmonics, noose, context(individual_powerless, immediate, constrained, local)).
+    % Signals in a medium should feel the "Snare" effect of energy loss.
+    constraint_indexing:constraint_classification(damped_harmonics, snare, context(individual_powerless, immediate, constrained, local)).
 
 test(natural_emergence) :-
     domain_priors:emerges_naturally(damped_harmonics).
@@ -208,7 +208,7 @@ omega_variable(
     linearity_assumption,
     'Does the \'Mountain\' remain stable if the damping is non-linear (e.g., quadratic air resistance)?',
     resolution_mechanism('Compare $F propto v$ with $F propto v^2$ in high-velocity contexts.'),
-    impact('If non-linear: The \'Rope\' becomes a chaotic \'Noose\' for predictability.'),
+    impact('If non-linear: The \'Rope\' becomes a chaotic \'Snare\' for predictability.'),
     confidence_without_resolution(medium)
 ).
 

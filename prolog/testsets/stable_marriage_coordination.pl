@@ -50,7 +50,7 @@
  * yet the specific outcome is biased toward the set that proposes. In labor 
  * markets (like medical residency), it is a "Rope" used to coordinate thousands 
  * of individuals. However, for an agent with highly specific, non-conformist 
- * preferences, the stability requirement acts as a "Noose," extracting their 
+ * preferences, the stability requirement acts as a "Snare," extracting their 
  * individual utility (extraction) to maintain the "choking" grip of the 
  * aggregate equilibrium.
  */
@@ -151,7 +151,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE RECEIVING-SIDE AGENT - Noose
+   PERSPECTIVE 3: THE RECEIVING-SIDE AGENT - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_moderate - Has the tools to rank, but is bound by the proposer's advantage.
@@ -161,7 +161,7 @@ constraint_indexing:constraint_classification(
    
    WHY THIS CLASSIFICATION:
    For the agent on the receiving side of the proposals, the algorithm is a 
-   "Noose." While the outcome is "stable," it is mathematically proven to be 
+   "Snare." While the outcome is "stable," it is mathematically proven to be 
    the *worst* possible stable match for them. It extracts their potential 
    satisfaction (extraction) to guarantee the stability of the system, 
    "choking" their agency in favor of the proposing set.
@@ -171,7 +171,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     stable_marriage_coordination,
-    noose,
+    snare,
     context(
         agent_power(individual_moderate),
         time_horizon(immediate),
@@ -197,7 +197,7 @@ test(multi_perspective_variance) :-
     Type1 \= Type2.
 
 test(receiver_extraction_penalty) :-
-    % Receiver-side agents feel the 0.4 extraction of utility as a Noose.
+    % Receiver-side agents feel the 0.4 extraction of utility as a Snare.
     Context = context(individual_moderate, immediate, constrained, local),
     constraint_indexing:extractiveness_for_agent(stable_marriage_coordination, Context, Score),
     Score >= 0.3.
@@ -222,7 +222,7 @@ test(natural_emergence) :-
  * maintaining the "Mountain" of stability.
  * 2. CLASSIFICATION: 
  * Captured how the "Gale-Shapley Mountain" serves as a "Rope" for institutions 
- * to clear markets, but can be a "Noose" for the passive side of the proposal.
+ * to clear markets, but can be a "Snare" for the passive side of the proposal.
  */
 
 % OMEGA IDENTIFICATION
@@ -230,7 +230,7 @@ omega_variable(
     strategic_misreporting_impact,
     "Is the 'Mountain' of stability vulnerable if agents lie about their preferences (Scaffold)?",
     resolution_mechanism("Analysis of incentive compatibility: Gale-Shapley is strategy-proof for proposers but not for receivers."),
-    impact("If strategic lying is rampant: The 'Mountain' of stability is a mirage, and the algorithm becomes a 'Noose' of manipulation."),
+    impact("If strategic lying is rampant: The 'Mountain' of stability is a mirage, and the algorithm becomes a 'Snare' of manipulation."),
     confidence_without_resolution(medium)
 ).
 

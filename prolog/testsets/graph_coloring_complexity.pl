@@ -48,7 +48,7 @@
  * topology of the graph dictates the minimum colors required. For the 
  * telecommunications engineer, it is a "Rope" for frequency coordination. 
  * For a compiler optimizer facing a massive interference graph, it is a 
- * "Noose" where the search for the optimal register allocation strangles 
+ * "Snare" where the search for the optimal register allocation strangles 
  * compile-time performance.
  */
 
@@ -141,7 +141,7 @@ constraint_indexing:constraint_classification(
 ) :- !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE COMPILER BACKEND - Noose
+   PERSPECTIVE 3: THE COMPILER BACKEND - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless - Subject to the code's interference graph.
@@ -150,7 +150,7 @@ constraint_indexing:constraint_classification(
    SCOPE: local - Immediate software process.
    
    WHY THIS CLASSIFICATION:
-   For a compiler performing register allocation, the constraint is a Noose. 
+   For a compiler performing register allocation, the constraint is a Snare. 
    As variables (nodes) increase and their lifetimes overlap (edges), the 
    available physical registers (colors) become insufficient. The harder 
    the optimizer tries to avoid "spilling" to memory, the tighter the 
@@ -159,7 +159,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     graph_coloring_complexity,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -179,11 +179,11 @@ test(multi_perspective_variance) :-
     constraint_indexing:constraint_classification(graph_coloring_complexity, mountain, context(agent_power(analytical), _, _, _)),
     % Institutional sees Rope
     constraint_indexing:constraint_classification(graph_coloring_complexity, rope, context(agent_power(institutional), _, _, _)),
-    % Powerless sees Noose
-    constraint_indexing:constraint_classification(graph_coloring_complexity, noose, context(agent_power(individual_powerless), _, _, _)).
+    % Powerless sees Snare
+    constraint_indexing:constraint_classification(graph_coloring_complexity, snare, context(agent_power(individual_powerless), _, _, _)).
 
 test(power_extractiveness_resource) :-
-    % Extraction of register efficiency (Noose) for the backend.
+    % Extraction of register efficiency (Snare) for the backend.
     domain_priors:base_extractiveness(graph_coloring_complexity, Score),
     Score >= 0.4.
 
@@ -221,7 +221,7 @@ omega_variable(
     on all 'real-world' graphs without hitting the NP-hard wall?",
     resolution_mechanism("Longitudinal study of average-case vs. worst-case 
     graph complexity in industrial datasets"),
-    impact("If Yes: The Noose becomes a Rope for all developers. 
+    impact("If Yes: The Snare becomes a Rope for all developers. 
     If No: The Mountain of NP-hardness remains absolute."),
     confidence_without_resolution(medium)
 ).

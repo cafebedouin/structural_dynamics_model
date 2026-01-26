@@ -36,21 +36,21 @@ constraint_metric(special_relativity, extractiveness, 0.20).
 constraint_metric(special_relativity, suppression_requirement, 0.15).
 
 % --- SECTION 4: TEMPORAL MEASUREMENTS (EVOLUTION) ---
-% Evolution of Newtonian Mechanics: From 'Mountain' to 'Noose' in extreme domains
+% Evolution of Newtonian Mechanics: From 'Mountain' to 'Snare' in extreme domains
 measurement(m1, relativity_transition, extractiveness, 1900, 0.05). % Perceived as perfect (Mountain)
 measurement(m2, relativity_transition, suppression_requirement, 1900, 0.01).
 
 measurement(m3, relativity_transition, extractiveness, 1905, 0.40). % [cite_start] Tangled: Michelson-Morley contradictions [cite: 2232]
 measurement(m4, relativity_transition, suppression_requirement, 1905, 0.50). % [cite_start] Requires FitzGerald contraction hypothesis [cite: 2233]
 
-measurement(m5, relativity_transition, extractiveness, 1919, 0.85). % [cite_start] Noose: Fails Mercury's perihelion and eclipse data [cite: 2703, 2881]
+measurement(m5, relativity_transition, extractiveness, 1919, 0.85). % [cite_start] Snare: Fails Mercury's perihelion and eclipse data [cite: 2703, 2881]
 measurement(m6, relativity_transition, suppression_requirement, 1919, 0.90). % Suppression of curved space evidence required to maintain it
 
 % Evolution of Euclidean Geometry in Physical Application
 measurement(m7, relativity_transition, extractiveness, 1900, 0.01).
 measurement(m8, relativity_transition, suppression_requirement, 1900, 0.01).
 
-measurement(m9, relativity_transition, extractiveness, 1915, 0.70). % [cite_start] Calcification: Becomes a Noose for General Relativity [cite: 2616]
+measurement(m9, relativity_transition, extractiveness, 1915, 0.70). % [cite_start] Calcification: Becomes a Snare for General Relativity [cite: 2616]
 measurement(m10, relativity_transition, suppression_requirement, 1915, 0.75). % [cite_start] Suppression of non-Euclidean continuum [cite: 2511]
 
 % --- SECTION 5: DEPENDENCIES ---

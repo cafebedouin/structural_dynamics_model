@@ -45,7 +45,7 @@
  * * NARRATIVE ARC:
  * Originally conceived as a "Rope" for functional coordination to prevent 
  * platform-level failures, the standard often functions 
- * as a "Noose" for smaller contractors due to the high barrier of entry for 
+ * as a "Snare" for smaller contractors due to the high barrier of entry for 
  * specialized testing equipment and expertise.
  */
 
@@ -86,7 +86,7 @@ constraint_victim(mil_std_461g_emi_control, innovative_untested_cots).
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 1: DEFENSE CONTRACTOR - Noose
+   PERSPECTIVE 1: DEFENSE CONTRACTOR - Snare
    --------------------------------------------------------------------------
    
    WHO: individual_powerless - Must comply with the standard to receive payment.
@@ -95,7 +95,7 @@ constraint_victim(mil_std_461g_emi_control, innovative_untested_cots).
    SCOPE: local - Focused on the specific subsystem being tested.
    
    WHY THIS CLASSIFICATION:
-   The contractor sees the standard as a "Noose" because it imposes asymmetric 
+   The contractor sees the standard as a "Snare" because it imposes asymmetric 
    costs. Failure in a single EMI test (e.g., radiated emissions) can lead to 
    costly redesigns and project delays, effectively extracting resources 
    without guaranteed payoff.
@@ -107,7 +107,7 @@ constraint_victim(mil_std_461g_emi_control, innovative_untested_cots).
 
 constraint_indexing:constraint_classification(
     mil_std_461g_emi_control,
-    noose,
+    snare,
     context(
         agent_power(individual_powerless),
         time_horizon(immediate),
@@ -190,7 +190,7 @@ constraint_indexing:constraint_classification(
 test(multi_perspective_variance) :-
     constraint_indexing:constraint_classification(mil_std_461g_emi_control, Type1, context(individual_powerless, immediate, trapped, local)),
     constraint_indexing:constraint_classification(mil_std_461g_emi_control, Type2, context(institutional, biographical, mobile, national)),
-    Type1 = noose,
+    Type1 = snare,
     Type2 = rope.
 
 test(power_extractiveness_scaling) :-
@@ -224,7 +224,7 @@ test(analytical_mountain_observation) :-
  * this tailoring is an internal DoD process. For a contractor, the standard 
  * effectively suppresses cheaper commercial-grade EMI alternatives.
  * * 3. PERSPECTIVE SELECTION:
- * Chose Contractor (Noose), DoD Official (Rope), and Scientist (Mountain) 
+ * Chose Contractor (Snare), DoD Official (Rope), and Scientist (Mountain) 
  * to demonstrate the full spectrum of indexical truth.
  */
 
@@ -236,7 +236,7 @@ omega_variable(
     tailoring_effectiveness,
     "Does tailoring actually reduce costs for contractors, or is it used primarily to increase severity?",
     resolution_mechanism("Audit of tailoring decisions across 100 DoD acquisition programs"),
-    impact("If beneficial: Standard is a true Rope. If punitive: Standard is a Noose for all."),
+    impact("If beneficial: Standard is a true Rope. If punitive: Standard is a Snare for all."),
     confidence_without_resolution(medium)
 ).
 
@@ -265,7 +265,7 @@ omega_variable(
  * * CONCLUSION:
  * The presence of tailoring and specific verification methods cements the 
  * standard as a Rope for those with power, but the active rejection of 
- * commercial standards makes it a Noose for those tasked with compliance.
+ * commercial standards makes it a Snare for those tasked with compliance.
  */
 
 /* ==========================================================================

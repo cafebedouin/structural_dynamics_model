@@ -46,7 +46,7 @@
  * - The Analytical Observer (PNAS Reviewer): Evaluates the efficiency of 
  * coordinated swarming and waypoint navigation.
  * * NARRATIVE ARC:
- * The lack of integration functioned as a Noose for the field, choking off 
+ * The lack of integration functioned as a Snare for the field, choking off 
  * the development of autonomous microrobotic intelligence. The 
  * introduction of electrokinetic propulsion (ek-robots) serves as a Rope—a 
  * functional coordination mechanism that allows propulsion and electronics 
@@ -59,7 +59,7 @@
 
 % Structural Anchor for ID extraction
 narrative_ontology:interval(ek_robot_integration_cycle, 0, 10).
-narrative_ontology:constraint_claim(micro_robot_electronics_integration, noose).
+narrative_ontology:constraint_claim(micro_robot_electronics_integration, snare).
 
 % Base extractiveness score (0.0-1.0)
 % Rationale: 0.2. Low; the constraint is a technical barrier that "extracts" 
@@ -155,7 +155,7 @@ constraint_indexing:constraint_classification(
     !.
 
 /* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE ANALYTICAL OBSERVER - Noose
+   PERSPECTIVE 3: THE ANALYTICAL OBSERVER - Snare
    --------------------------------------------------------------------------
    
    WHO: analytical - Observer of the field's previous stagnation.
@@ -164,7 +164,7 @@ constraint_indexing:constraint_classification(
    SCOPE: global - Evaluating the worldwide search for microscopic intelligence.
    
    WHY THIS CLASSIFICATION:
-   The investigator identifies the lack of integration as a Noose. By 
+   The investigator identifies the lack of integration as a Snare. By 
    separating control from propulsion, the field "choked" its own ability 
    to scale up to complex, autonomous tasks. The "extraction" was the loss 
    of intelligence potential in favor of purely mechanical particles.
@@ -172,7 +172,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     micro_robot_electronics_integration,
-    noose,
+    snare,
     context(
         agent_power(analytical),
         time_horizon(historical),
@@ -191,7 +191,7 @@ constraint_indexing:constraint_classification(
 :- begin_tests(micro_robot_integration_tests).
 
 test(multi_perspective_conflict) :-
-    % Bot (Mountain) vs Scientist (Rope) vs Historian (Noose)
+    % Bot (Mountain) vs Scientist (Rope) vs Historian (Snare)
     constraint_indexing:constraint_classification(micro_robot_electronics_integration, T1, context(individual_powerless, immediate, trapped, local)),
     constraint_indexing:constraint_classification(micro_robot_electronics_integration, T2, context(institutional, biographical, mobile, national)),
     constraint_indexing:constraint_classification(micro_robot_electronics_integration, T3, context(analytical, historical, analytical, global)),
@@ -219,15 +219,15 @@ test(extraction_threshold_check) :-
  * unyielding nature of the fluid physics (ek-flows) it must obey to 
  * achieve "one body length per second".
  * 3. NOOSE LOGIC: The analytical view recognizes that mechanical-only 
- * platforms "choked" the path to intelligence, a signature of the Noose.
+ * platforms "choked" the path to intelligence, a signature of the Snare.
  */
 
 omega_variable(
     intelligence_scaling_bottleneck,
     "Does the current requirement for off-board optical control (lasers) 
-     simply create a new Noose of external dependency?",
+     simply create a new Snare of external dependency?",
     resolution_mechanism("Evaluation of bots with fully autonomous on-board decision logic"),
-    impact("If Yes: The system remains a Noose. If No: It has successfully 
+    impact("If Yes: The system remains a Snare. If No: It has successfully 
             transformed into a fully internal Rope."),
     confidence_without_resolution(medium)
 ).
@@ -248,7 +248,7 @@ omega_variable(
  * integration, as chemistry is difficult to "program" digitally.
  * * CONCLUSION:
  * The existence of mechanical-only alternatives (Janus particles) proves that 
- * the lack of electronics was a choice—a choice that functioned as a Noose 
+ * the lack of electronics was a choice—a choice that functioned as a Snare 
  * for the development of "smart" microrobots.
  */
 
