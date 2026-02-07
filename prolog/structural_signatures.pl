@@ -2,12 +2,37 @@
     constraint_signature/2,
     signature_confidence/3,
     explain_signature/3,
-    integrate_signature_with_modal/3
+    integrate_signature_with_modal/3,
+
+    % Boltzmann Compliance Engine (v5.0)
+    boltzmann_compliant/2,              % boltzmann_compliant(C, Result)
+    boltzmann_shadow_audit/2,           % boltzmann_shadow_audit(C, AuditReport)
+    cross_index_coupling/2,             % cross_index_coupling(C, CouplingScore)
+    detect_nonsensical_coupling/3,      % detect_nonsensical_coupling(C, CoupledPairs, Strength)
+    complexity_adjusted_threshold/2,    % complexity_adjusted_threshold(C, Threshold)
+    epistemic_access_check/2,           % epistemic_access_check(C, Result)
+    excess_extraction/2,                % excess_extraction(C, ExcessEps)
+    boltzmann_floor_for/2,              % boltzmann_floor_for(C, Floor)
+    boltzmann_invariant_mountain/2,     % boltzmann_invariant_mountain(C, Result)
+
+    % Boltzmann-Derived Signatures (v5.1)
+    false_natural_law/2,                % false_natural_law(C, Evidence)
+    coupling_invariant_rope/2,          % coupling_invariant_rope(C, Evidence)
+    false_ci_rope/2,                    % false_ci_rope(C, Evidence)
+    structural_purity/2,                % structural_purity(C, PurityClass)
+    purity_score/2,                     % purity_score(C, Score) ∈ [0,1] | -1.0
+
+    % Purity subscores (v5.1 — exposed for reform recommendations)
+    factorization_subscore/2,           % factorization_subscore(C, Score)
+    scope_invariance_subscore/2,        % scope_invariance_subscore(C, Score)
+    coupling_cleanliness_subscore/2,    % coupling_cleanliness_subscore(C, Score)
+    excess_extraction_subscore/2        % excess_extraction_subscore(C, Score)
 ]).
 
 :- use_module(library(lists)).
 :- use_module(narrative_ontology).
 :- use_module(config).
+:- use_module(constraint_indexing).
 
 /* ================================================================
    STRUCTURAL SIGNATURE DETECTION v3.2
@@ -40,9 +65,38 @@
 
 %% constraint_signature(+ConstraintID, -Signature)
 %  Main entry point: classifies structural signature
-%  Returns: natural_law | coordination_scaffold | piton_signature
+%  Returns: false_natural_law | false_ci_rope | coupling_invariant_rope
+%         | natural_law | coordination_scaffold | piton_signature
 %         | constructed_low_extraction | constructed_high_extraction
 %         | constructed_constraint | ambiguous
+%
+%  Priority order:
+%    1. Boltzmann-derived signatures (v5.1) — checked first, most specific
+%       a. FNL — catches false mountains (physics-washed)
+%       b. FCR — catches false ropes (coordination-washed)
+%       c. CI_Rope — certifies true coordination
+%    2. Profile-based signatures (v3.2) — fallback classification
+
+% Boltzmann-derived: False Natural Law (v5.1)
+% Intercepts constraints that claim naturality but fail Boltzmann independence.
+% Checked BEFORE natural_law to catch "physics-washed" constraints.
+constraint_signature(C, false_natural_law) :-
+    false_natural_law(C, _), !.
+
+% Boltzmann-derived: False CI_Rope (v5.1)
+% Intercepts constraints that appear to be ropes from metrics but fail
+% Boltzmann structural tests. The "coordination-washed" analogue of FNL.
+% Checked BEFORE CI_Rope to catch constraints that would falsely certify.
+constraint_signature(C, false_ci_rope) :-
+    false_ci_rope(C, _), !.
+
+% Boltzmann-derived: Coupling-Invariant Rope (v5.1)
+% Certifies true coordination mechanisms with full Boltzmann invariance.
+% Checked before profile-based classification for positive certification.
+constraint_signature(C, coupling_invariant_rope) :-
+    coupling_invariant_rope(C, _), !.
+
+% Profile-based classification (v3.2 original pipeline)
 constraint_signature(C, Signature) :-
     get_constraint_profile(C, Profile),
     config:param(extractiveness_metric_name, ExtMetricName),
@@ -346,6 +400,39 @@ constructed_constraint_signature(profile(_AccessCollapse, Suppression, Resistanc
 
 %% signature_confidence(+ConstraintID, +Signature, -Confidence)
 %  Returns: high | medium | low
+
+% Boltzmann-derived signature confidence (v5.1)
+% These require the constraint ID for Boltzmann tests, so they're
+% handled before the profile-based compute_signature_confidence.
+signature_confidence(C, false_natural_law, Confidence) :-
+    (   cross_index_coupling(C, CouplingScore)
+    ->  (   CouplingScore > 0.50 -> Confidence = high
+        ;   CouplingScore > 0.25 -> Confidence = medium
+        ;   Confidence = low
+        )
+    ;   Confidence = low
+    ), !.
+
+signature_confidence(C, false_ci_rope, Confidence) :-
+    (   false_ci_rope(C, fcr_evidence(_, FailedTests, _, _, _))
+    ->  length(FailedTests, NF),
+        (   NF >= 3 -> Confidence = high
+        ;   NF >= 2 -> Confidence = medium
+        ;   Confidence = low
+        )
+    ;   Confidence = low
+    ), !.
+
+signature_confidence(C, coupling_invariant_rope, Confidence) :-
+    (   structural_purity(C, PurityClass)
+    ->  (   PurityClass = pure_coordination -> Confidence = high
+        ;   PurityClass = pure_unclassified -> Confidence = medium
+        ;   Confidence = medium
+        )
+    ;   Confidence = medium
+    ), !.
+
+% Profile-based confidence (v3.2 original pipeline)
 signature_confidence(C, Signature, Confidence) :-
     get_constraint_profile(C, Profile),
     compute_signature_confidence(Profile, Signature, Confidence).
@@ -506,6 +593,40 @@ explain_signature(C, constructed_high_extraction, Explanation) :-
            'CONSTRUCTED HIGH-EXTRACTION signature for ~w: Enforcement present (suppression=~2f, resistance=~2f) with high extraction (~2f). This is an extraction mechanism that metrics failed to classify as snare.',
            [C, S, R, Ext]).
 
+explain_signature(C, false_natural_law, Explanation) :-
+    (   false_natural_law(C, fnl_evidence(Claim, _BoltzResult, CouplingScore,
+                                           CoupledPairs, ExcessExtraction))
+    ->  length(CoupledPairs, NPairs),
+        format(atom(Explanation),
+               'FALSE NATURAL LAW signature for ~w: Claims naturality (~w) but fails Boltzmann independence test. Coupling score=~3f with ~d coupled dimension pairs. Excess extraction=~w. This constraint is "physics-washed" — it appears natural but its coupling topology reveals structural construction.',
+               [C, Claim, CouplingScore, NPairs, ExcessExtraction])
+    ;   format(atom(Explanation),
+               'FALSE NATURAL LAW signature for ~w: Claims naturality but fails Boltzmann independence. Use false_natural_law/2 for detailed evidence.',
+               [C])
+    ).
+
+explain_signature(C, false_ci_rope, Explanation) :-
+    (   false_ci_rope(C, fcr_evidence(AppType, FailedTests, CouplingScore, _, _))
+    ->  length(FailedTests, NF),
+        format(atom(Explanation),
+               'FALSE CI_ROPE signature for ~w: Appears to be rope (~w) but fails ~d Boltzmann structural test(s): ~w. Coupling score=~w. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.',
+               [C, AppType, NF, FailedTests, CouplingScore])
+    ;   format(atom(Explanation),
+               'FALSE CI_ROPE signature for ~w: Appears to be rope from metrics but fails Boltzmann structural tests. Use false_ci_rope/2 for detailed evidence.',
+               [C])
+    ).
+
+explain_signature(C, coupling_invariant_rope, Explanation) :-
+    (   coupling_invariant_rope(C, ci_rope_evidence(Compliance, ScopeResult,
+                                                     ExcessEps, _))
+    ->  format(atom(Explanation),
+               'COUPLING-INVARIANT ROPE signature for ~w: Certified true coordination mechanism. Boltzmann compliance=~w, scope invariance=~w, excess extraction=~3f. Passes all structural purity tests — this is genuine coordination, not low-extraction construction.',
+               [C, Compliance, ScopeResult, ExcessEps])
+    ;   format(atom(Explanation),
+               'COUPLING-INVARIANT ROPE signature for ~w: Certified true coordination mechanism. Use coupling_invariant_rope/2 for detailed evidence.',
+               [C])
+    ).
+
 explain_signature(C, ambiguous, Explanation) :-
     format(atom(Explanation),
            'AMBIGUOUS signature for ~w: Insufficient structural differentiation to classify. Consider gathering more data on alternatives, beneficiaries, and temporal evolution.',
@@ -539,6 +660,37 @@ integrate_signature_with_modal(C, ModalType, AdjustedType) :-
 % -----------------------------------------------------------------------
 resolve_modal_signature_conflict(_, natural_law, mountain) :- !.
 
+% -----------------------------------------------------------------------
+% FNL OVERRIDE RULE (v5.1, §III-A extension):
+%   FNL(C) → tangled_rope regardless of metric-based classification.
+%   A constraint that claims naturality but fails Boltzmann independence
+%   is structurally constructed. It has coupling topology inconsistent
+%   with a natural law. Conservative override to tangled_rope (not snare)
+%   because the constraint may still have genuine coordination function
+%   entangled with its extractive coupling.
+% -----------------------------------------------------------------------
+resolve_modal_signature_conflict(_, false_natural_law, tangled_rope) :- !.
+
+% -----------------------------------------------------------------------
+% CI_ROPE OVERRIDE RULE (v5.1, §III-A extension):
+%   CI_Rope(C) → rope regardless of metric-based classification.
+%   A constraint that passes all four Boltzmann invariance tests and
+%   has a genuine coordination function is certified as a Rope.
+%   This overrides mountain classification (it's coordination, not nature)
+%   and reinforces rope/tangled_rope toward pure rope.
+% -----------------------------------------------------------------------
+resolve_modal_signature_conflict(_, coupling_invariant_rope, rope) :- !.
+
+% -----------------------------------------------------------------------
+% FCR OVERRIDE RULE (v5.1, §III-A extension):
+%   FCR(C) → tangled_rope regardless of metric-based classification.
+%   A constraint that appears to be a rope but fails Boltzmann structural
+%   tests has hidden extraction or coupling that the metric pipeline
+%   missed. This catches "coordination-washed" extraction: nudges,
+%   soft paternalism, behavioral defaults, distributed enforcement.
+% -----------------------------------------------------------------------
+resolve_modal_signature_conflict(_, false_ci_rope, tangled_rope) :- !.
+
 % Coordination scaffolds should be ROPES not mountains
 resolve_modal_signature_conflict(mountain, coordination_scaffold, rope) :- !.
 
@@ -557,3 +709,959 @@ resolve_modal_signature_conflict(unknown, ambiguous, unknown) :- !.
 
 % No conflict - keep original classification
 resolve_modal_signature_conflict(ModalType, _, ModalType).
+
+/* ================================================================
+   BOLTZMANN COMPLIANCE ENGINE v5.0
+
+   Based on Tamuz & Sandomirskiy (2025), "On the origin of the
+   Boltzmann distribution," Mathematische Annalen.
+
+   Core theorem: The Boltzmann distribution is the ONLY distribution
+   that correctly describes unrelated (uncoupled) systems.
+
+   Application to DR: A Natural Law (Mountain) must show Boltzmann-
+   compliant independence across index dimensions. Any constraint
+   that couples independent dimensions is necessarily Constructed,
+   not Natural.
+
+   SHADOW MODE: In the current version, Boltzmann compliance is
+   LOGGED but does NOT trigger classification overrides. This
+   allows calibration against the 691-constraint corpus before
+   the gate becomes active.
+
+   Edge Cases Handled:
+   1. Complexity Offset — high-complexity coordination types have
+      inherently higher coupling (global infrastructure vs naming)
+   2. Epistemic Access — insufficient indexed classifications make
+      the test inconclusive rather than rejecting
+   3. Moving Boltzmann Floor — the minimum necessary extraction
+      can increase with system complexity over time
+   ================================================================ */
+
+/* ----------------------------------------------------------------
+   BOLTZMANN COMPLIANCE TEST
+   ---------------------------------------------------------------- */
+
+%% boltzmann_compliant(+Constraint, -Result)
+%  Tests whether a constraint's classification across index
+%  dimensions is consistent with Boltzmann independence.
+%
+%  Result is one of:
+%    compliant(CouplingScore)
+%    non_compliant(CouplingScore, Threshold)
+%    inconclusive(Reason)
+%
+%  SHADOW MODE: This predicate does not affect classification.
+%  Use boltzmann_shadow_audit/2 for full diagnostic output.
+
+boltzmann_compliant(C, inconclusive(insufficient_classifications)) :-
+    epistemic_access_check(C, false), !.
+
+boltzmann_compliant(C, Result) :-
+    cross_index_coupling(C, CouplingScore),
+    complexity_adjusted_threshold(C, Threshold),
+    (   CouplingScore =< Threshold
+    ->  Result = compliant(CouplingScore)
+    ;   Result = non_compliant(CouplingScore, Threshold)
+    ).
+
+%% boltzmann_shadow_audit(+Constraint, -AuditReport)
+%  Full diagnostic report for Boltzmann compliance.
+%  Designed for logging in test_harness.pl without triggering
+%  classification changes.
+%
+%  AuditReport = boltzmann_audit(
+%      Constraint,
+%      ComplianceResult,
+%      CouplingScore,
+%      Threshold,
+%      CoupledPairs,
+%      ExcessExtraction,
+%      InvariantResult
+%  )
+
+boltzmann_shadow_audit(C, boltzmann_audit(C, Compliance, Coupling, Threshold,
+                                          CoupledPairs, Excess, Invariant)) :-
+    boltzmann_compliant(C, Compliance),
+    (   cross_index_coupling(C, Coupling)
+    ->  true
+    ;   Coupling = unknown
+    ),
+    (   complexity_adjusted_threshold(C, Threshold)
+    ->  true
+    ;   Threshold = unknown
+    ),
+    (   detect_nonsensical_coupling(C, CoupledPairs, _)
+    ->  true
+    ;   CoupledPairs = []
+    ),
+    (   excess_extraction(C, Excess)
+    ->  true
+    ;   Excess = unknown
+    ),
+    (   boltzmann_invariant_mountain(C, Invariant)
+    ->  true
+    ;   Invariant = unknown
+    ).
+
+/* ----------------------------------------------------------------
+   CROSS-INDEX COUPLING DETECTION
+   ----------------------------------------------------------------
+   The "Sicherman Dice" test.
+
+   For each constraint, compute classification across a grid of
+   (Power, Scope) combinations. If the classification map factorizes
+   — i.e., changing Power has the same effect at all Scope levels
+   and vice versa — the constraint is Boltzmann-compliant.
+
+   If a scope change flips classification at ONE power level but
+   not another, there's a coupling that violates independence.
+   ---------------------------------------------------------------- */
+
+%% cross_index_coupling(+Constraint, -CouplingScore)
+%  Computes coupling score from 0.0 (fully independent) to 1.0
+%  (maximally coupled) by testing classification factorizability
+%  across Power × Scope grid.
+
+cross_index_coupling(C, CouplingScore) :-
+    coupling_test_powers(Powers),
+    coupling_test_scopes(Scopes),
+    findall(
+        classified(P, S, Type),
+        (   member(P, Powers),
+            member(S, Scopes),
+            coupling_test_context(P, S, Ctx),
+            classify_at_context(C, Ctx, Type)
+        ),
+        Grid
+    ),
+    length(Grid, GridSize),
+    (   GridSize < 2
+    ->  CouplingScore = 0.0  % Not enough data points
+    ;   count_coupling_violations(Grid, Powers, Scopes, Violations),
+        length(Powers, NP),
+        length(Scopes, NS),
+        MaxViolations is NP * (NS - 1),
+        (   MaxViolations > 0
+        ->  CouplingScore is min(1.0, Violations / MaxViolations)
+        ;   CouplingScore = 0.0
+        )
+    ).
+
+%% coupling_test_powers(-Powers)
+%  The power levels used for coupling grid test.
+coupling_test_powers([powerless, moderate, institutional, analytical]).
+
+%% coupling_test_scopes(-Scopes)
+%  The scope levels used for coupling grid test.
+coupling_test_scopes([local, national, global]).
+
+%% coupling_test_context(+Power, +Scope, -Context)
+%  Builds a canonical context for coupling grid test.
+%  Uses standard time horizon and exit options per power level.
+coupling_test_context(powerless, Scope, context(
+    agent_power(powerless), time_horizon(biographical),
+    exit_options(trapped), spatial_scope(Scope))).
+coupling_test_context(moderate, Scope, context(
+    agent_power(moderate), time_horizon(biographical),
+    exit_options(mobile), spatial_scope(Scope))).
+coupling_test_context(institutional, Scope, context(
+    agent_power(institutional), time_horizon(generational),
+    exit_options(arbitrage), spatial_scope(Scope))).
+coupling_test_context(analytical, Scope, context(
+    agent_power(analytical), time_horizon(civilizational),
+    exit_options(analytical), spatial_scope(Scope))).
+
+%% classify_at_context(+C, +Context, -Type)
+%  Classifies constraint at a specific context.
+%  Uses the metric pipeline directly to avoid circular dependency
+%  with drl_core (which uses structural_signatures).
+classify_at_context(C, Context, Type) :-
+    config:param(extractiveness_metric_name, ExtMetricName),
+    (   narrative_ontology:constraint_metric(C, ExtMetricName, BaseEps)
+    ->  true
+    ;   BaseEps = 0.5
+    ),
+    Context = context(agent_power(Power), _, _, spatial_scope(Scope)),
+    constraint_indexing:power_modifier(Power, PowerMod),
+    constraint_indexing:scope_modifier(Scope, ScopeMod),
+    Chi is BaseEps * PowerMod * ScopeMod,
+    config:param(suppression_metric_name, SuppMetricName),
+    (   narrative_ontology:constraint_metric(C, SuppMetricName, Supp)
+    ->  true
+    ;   Supp = 0
+    ),
+    classify_for_coupling_test(C, BaseEps, Chi, Supp, Context, Type).
+
+%% classify_for_coupling_test(+C, +BaseEps, +Chi, +Supp, +Context, -Type)
+%  Simplified classification for coupling test — mirrors classify_from_metrics
+%  priority order but avoids calling into drl_core (prevents circular deps).
+classify_for_coupling_test(_C, BaseEps, _Chi, Supp, Context, mountain) :-
+    config:param(mountain_suppression_ceiling, SuppCeil),
+    Supp =< SuppCeil,
+    config:param(mountain_extractiveness_max, MaxX),
+    BaseEps =< MaxX,
+    constraint_indexing:effective_immutability_for_context(Context, mountain), !.
+
+classify_for_coupling_test(_C, BaseEps, Chi, Supp, Context, snare) :-
+    config:param(snare_chi_floor, ChiFloor),
+    Chi >= ChiFloor,
+    config:param(snare_epsilon_floor, EpsFloor),
+    BaseEps >= EpsFloor,
+    config:param(snare_suppression_floor, SuppFloor),
+    Supp >= SuppFloor,
+    constraint_indexing:effective_immutability_for_context(Context, rope), !.
+
+classify_for_coupling_test(_C, BaseEps, Chi, _Supp, Context, rope) :-
+    config:param(rope_chi_ceiling, ChiCeil),
+    Chi =< ChiCeil,
+    config:param(rope_epsilon_ceiling, EpsCeil),
+    BaseEps =< EpsCeil,
+    constraint_indexing:effective_immutability_for_context(Context, rope), !.
+
+classify_for_coupling_test(_C, BaseEps, Chi, Supp, _Context, tangled_rope) :-
+    config:param(tangled_rope_chi_floor, ChiFloor),
+    config:param(tangled_rope_chi_ceil, ChiCeil),
+    Chi >= ChiFloor, Chi =< ChiCeil,
+    config:param(tangled_rope_epsilon_floor, EpsFloor),
+    BaseEps >= EpsFloor,
+    config:param(tangled_rope_suppression_floor, MinS),
+    Supp >= MinS, !.
+
+classify_for_coupling_test(_C, _BaseEps, _Chi, _Supp, _Context, unknown).
+
+%% count_coupling_violations(+Grid, +Powers, +Scopes, -Violations)
+%  Counts how many (Power, Scope) pairs show classification that
+%  doesn't factorize. For each power level, checks if the type
+%  is invariant across scopes. Each scope-level change in type
+%  counts as a violation.
+count_coupling_violations(Grid, Powers, Scopes, Violations) :-
+    findall(1,
+        (   member(P, Powers),
+            member(S1, Scopes),
+            member(S2, Scopes),
+            S1 @< S2,
+            member(classified(P, S1, T1), Grid),
+            member(classified(P, S2, T2), Grid),
+            T1 \= T2
+        ),
+        ViolationList
+    ),
+    length(ViolationList, ScopeViolations),
+    % Also check power invariance at each scope
+    findall(1,
+        (   member(S, Scopes),
+            member(P1, Powers),
+            member(P2, Powers),
+            P1 @< P2,
+            member(classified(P1, S, T1), Grid),
+            member(classified(P2, S, T2), Grid),
+            T1 \= T2,
+            % Power-driven variance is EXPECTED (indexical relativity).
+            % Only count as violation if the PATTERN of power-variance
+            % differs across scopes (i.e., power shifts type at one scope
+            % but not another in a way that isn't explained by σ scaling).
+            \+ expected_power_divergence(P1, P2, T1, T2)
+        ),
+        PowerViolationList
+    ),
+    length(PowerViolationList, PowerViolations),
+    Violations is ScopeViolations + PowerViolations.
+
+%% expected_power_divergence(+P1, +P2, +T1, +T2)
+%  Power-driven classification divergence is EXPECTED in DR.
+%  A powerless agent seeing snare while institutional sees rope
+%  is not a coupling violation — it's indexical relativity working
+%  correctly. This predicate identifies expected divergence patterns.
+expected_power_divergence(powerless, institutional, _, _) :- !.
+expected_power_divergence(institutional, powerless, _, _) :- !.
+expected_power_divergence(powerless, analytical, _, _) :- !.
+expected_power_divergence(analytical, powerless, _, _) :- !.
+% Moderate-analytical divergence is expected (π = 1.0 vs 1.15)
+expected_power_divergence(moderate, analytical, _, _) :- !.
+expected_power_divergence(analytical, moderate, _, _) :- !.
+
+/* ----------------------------------------------------------------
+   NONSENSICAL COUPLING DETECTION
+   ----------------------------------------------------------------
+   Identifies WHICH specific dimension pairs show coupling that
+   violates Boltzmann independence. This is the "Sicherman Dice"
+   diagnostic — it tells you exactly which "dice" are "crazy."
+   ---------------------------------------------------------------- */
+
+%% detect_nonsensical_coupling(+Constraint, -CoupledPairs, -Strength)
+%  Returns list of coupled dimension pairs and overall coupling strength.
+%  CoupledPairs = [coupled(Dim1, Dim2, Score), ...]
+%  Strength = aggregate coupling strength in [0, 1]
+
+detect_nonsensical_coupling(C, CoupledPairs, Strength) :-
+    coupling_test_powers(Powers),
+    coupling_test_scopes(Scopes),
+    findall(
+        classified(P, S, Type),
+        (   member(P, Powers), member(S, Scopes),
+            coupling_test_context(P, S, Ctx),
+            classify_at_context(C, Ctx, Type)
+        ),
+        Grid
+    ),
+    findall(
+        coupled(power_scope, P, ScopePair, Score),
+        (   member(P, Powers),
+            member(S1, Scopes), member(S2, Scopes),
+            S1 @< S2,
+            member(classified(P, S1, T1), Grid),
+            member(classified(P, S2, T2), Grid),
+            T1 \= T2,
+            ScopePair = S1-S2,
+            Score = 1.0
+        ),
+        CoupledPairs
+    ),
+    (   CoupledPairs = []
+    ->  Strength = 0.0
+    ;   length(CoupledPairs, N),
+        length(Powers, NP), length(Scopes, NS),
+        MaxPairs is NP * (NS * (NS - 1)) // 2,
+        (MaxPairs > 0 -> Strength is min(1.0, N / MaxPairs) ; Strength = 0.0)
+    ).
+
+/* ----------------------------------------------------------------
+   COMPLEXITY-ADJUSTED THRESHOLD
+   ----------------------------------------------------------------
+   Edge Case #1: A global power grid MUST couple dimensions that
+   a simple naming convention does not. The Boltzmann coupling
+   threshold should be higher for inherently complex coordination.
+   ---------------------------------------------------------------- */
+
+%% complexity_adjusted_threshold(+Constraint, -Threshold)
+%  Returns the effective Boltzmann coupling threshold after applying
+%  the complexity offset for the constraint's coordination type.
+
+complexity_adjusted_threshold(C, Threshold) :-
+    config:param(boltzmann_coupling_threshold, BaseThreshold),
+    coordination_type_offset(C, Offset),
+    Threshold is BaseThreshold + Offset.
+
+%% coordination_type_offset(+Constraint, -Offset)
+%  Looks up the complexity offset for a constraint's coordination type.
+%  Falls back to default if no coordination type is declared.
+coordination_type_offset(C, Offset) :-
+    narrative_ontology:coordination_type(C, Type),
+    coordination_type_to_offset_param(Type, ParamName),
+    config:param(ParamName, Offset), !.
+coordination_type_offset(_, Offset) :-
+    config:param(complexity_offset_default, Offset).
+
+coordination_type_to_offset_param(information_standard,  complexity_offset_information_standard).
+coordination_type_to_offset_param(resource_allocation,   complexity_offset_resource_allocation).
+coordination_type_to_offset_param(enforcement_mechanism, complexity_offset_enforcement_mechanism).
+coordination_type_to_offset_param(global_infrastructure, complexity_offset_global_infrastructure).
+
+/* ----------------------------------------------------------------
+   EPISTEMIC ACCESS CHECK
+   ----------------------------------------------------------------
+   Edge Case #2: If an agent's Markov Blanket prevents them from
+   seeing enough of the constraint, the Boltzmann test is
+   inconclusive rather than rejecting.
+   ---------------------------------------------------------------- */
+
+%% epistemic_access_check(+Constraint, -Sufficient)
+%  Returns true if enough indexed classifications exist for a
+%  reliable Boltzmann compliance test, false otherwise.
+epistemic_access_check(C, true) :-
+    config:param(boltzmann_min_classifications, MinN),
+    findall(Ctx,
+        constraint_indexing:constraint_classification(C, _, Ctx),
+        Ctxs
+    ),
+    length(Ctxs, N),
+    N >= MinN, !.
+epistemic_access_check(_, false).
+
+/* ----------------------------------------------------------------
+   PRICE OF ANARCHY / EXCESS EXTRACTION
+   ----------------------------------------------------------------
+   The Boltzmann floor is the minimum extraction inherent to the
+   coordination type. Extraction above the floor is "extractive
+   overhead" — the Price of Anarchy excess.
+
+   Edge Case #3: The floor can move. Technology changes can lower
+   the floor (reform pressure) or raise it (necessary complexity
+   increase). Testsets can override via boltzmann_floor_override/2.
+   ---------------------------------------------------------------- */
+
+%% excess_extraction(+Constraint, -ExcessEps)
+%  Computes how much extraction exceeds the Boltzmann floor.
+%  ExcessEps = max(0, ε(C) - floor(coordination_type(C)))
+%  This is the "extractive overhead" — the PoA excess.
+excess_extraction(C, ExcessEps) :-
+    config:param(extractiveness_metric_name, ExtMetricName),
+    narrative_ontology:constraint_metric(C, ExtMetricName, Eps),
+    boltzmann_floor_for(C, Floor),
+    ExcessEps is max(0.0, Eps - Floor).
+
+%% boltzmann_floor_for(+Constraint, -Floor)
+%  Returns the Boltzmann floor for a constraint.
+%  Priority: per-constraint override > coordination type > default
+boltzmann_floor_for(C, Floor) :-
+    narrative_ontology:boltzmann_floor_override(C, Floor), !.
+boltzmann_floor_for(C, Floor) :-
+    narrative_ontology:coordination_type(C, Type),
+    coordination_type_to_floor_param(Type, ParamName),
+    config:param(ParamName, Floor), !.
+boltzmann_floor_for(_, Floor) :-
+    config:param(boltzmann_floor_default, Floor).
+
+coordination_type_to_floor_param(information_standard,  boltzmann_floor_information_standard).
+coordination_type_to_floor_param(resource_allocation,   boltzmann_floor_resource_allocation).
+coordination_type_to_floor_param(enforcement_mechanism, boltzmann_floor_enforcement_mechanism).
+coordination_type_to_floor_param(global_infrastructure, boltzmann_floor_global_infrastructure).
+
+/* ----------------------------------------------------------------
+   BOLTZMANN-INVARIANT MOUNTAIN TEST
+   ----------------------------------------------------------------
+   Axiom: Mountains must be Boltzmann-invariant across all indices.
+
+   A constraint passes the Boltzmann-invariant mountain test iff:
+   1. χ(C, P, S) factorizes (cross_index_coupling ≤ threshold)
+   2. Classification is scope-invariant (same type at all scopes)
+   3. No coupling drift (coupling topology is static)
+   4. No excess extraction above Boltzmann floor
+
+   This is the mathematically crisp definition of "natural law."
+
+   SHADOW MODE: Results logged, not enforced.
+   ---------------------------------------------------------------- */
+
+%% boltzmann_invariant_mountain(+Constraint, -Result)
+%  Tests whether a constraint satisfies all four Boltzmann
+%  invariance conditions for Mountain classification.
+%
+%  Result is one of:
+%    invariant(Details)        — passes all four tests
+%    variant(FailedTests)      — fails one or more tests
+%    inconclusive(Reason)      — insufficient data
+
+boltzmann_invariant_mountain(C, inconclusive(insufficient_data)) :-
+    epistemic_access_check(C, false), !.
+
+boltzmann_invariant_mountain(C, Result) :-
+    % Test 1: Factorization (Boltzmann compliance)
+    boltzmann_compliant(C, CompResult),
+    (   CompResult = compliant(_)
+    ->  T1 = pass(factorization)
+    ;   T1 = fail(factorization, CompResult)
+    ),
+
+    % Test 2: Scope invariance
+    scope_invariance_test(C, ScopeResult),
+    (   ScopeResult = invariant
+    ->  T2 = pass(scope_invariance)
+    ;   T2 = fail(scope_invariance, ScopeResult)
+    ),
+
+    % Test 3: No excess extraction above Boltzmann floor
+    (   excess_extraction(C, Excess)
+    ->  (   Excess =< 0.001
+        ->  T3 = pass(no_excess_extraction)
+        ;   T3 = fail(excess_extraction, Excess)
+        )
+    ;   T3 = pass(no_extraction_data)  % Mountains often have ε ≈ 0
+    ),
+
+    % Test 4: Natural law signature (existing check)
+    get_constraint_profile(C, Profile),
+    (   natural_law_signature(Profile)
+    ->  T4 = pass(natural_law_signature)
+    ;   T4 = fail(natural_law_signature)
+    ),
+
+    % Aggregate results
+    Tests = [T1, T2, T3, T4],
+    include(is_failure, Tests, Failures),
+    (   Failures = []
+    ->  Result = invariant(Tests)
+    ;   Result = variant(Failures)
+    ).
+
+%% scope_invariance_test(+Constraint, -Result)
+%  Tests whether classification is stable across all scope levels
+%  while holding power fixed at analytical (the most sensitive).
+scope_invariance_test(C, Result) :-
+    coupling_test_scopes(Scopes),
+    findall(
+        Type,
+        (   member(S, Scopes),
+            coupling_test_context(analytical, S, Ctx),
+            classify_at_context(C, Ctx, Type)
+        ),
+        Types
+    ),
+    sort(Types, UniqueTypes),
+    (   length(UniqueTypes, 1)
+    ->  Result = invariant
+    ;   Result = variant(UniqueTypes)
+    ).
+
+%% is_failure(+TestResult)
+is_failure(fail(_)).
+is_failure(fail(_, _)).
+
+/* ================================================================
+   BOLTZMANN-DERIVED SIGNATURES v5.1
+
+   Three new signatures derived from the Boltzmann compliance engine:
+
+   1. False Natural Law (FNL)
+      Detects "physics-washed" constraints: claimed as natural
+      but fail Boltzmann independence. The natural-law analogue
+      of False Mountain (FM).
+
+   2. Coupling-Invariant Rope (CI_Rope)
+      Detects "true coordination mechanisms": Boltzmann-compliant,
+      scope-invariant, zero excess extraction, has coordination
+      function. The coordination analogue of a natural law.
+
+   3. Structural Purity (meta-invariant)
+      Classifies constraint purity based on all four Boltzmann
+      tests. Pure constraints are either "pure_natural_law",
+      "pure_coordination", or "pure_scaffold". Impure constraints
+      carry extractive or coupling contamination.
+
+   These signatures integrate with the existing classification
+   pipeline via the override rules in resolve_modal_signature_conflict/3.
+   ================================================================ */
+
+/* ----------------------------------------------------------------
+   SIGNATURE: FALSE NATURAL LAW (FNL)
+   ----------------------------------------------------------------
+   FNL(C) :-
+       claimed_natural(C),
+       boltzmann_compliant(C, non_compliant).
+
+   Detects constraints that CLAIM to be natural laws (Mountains)
+   but fail the Boltzmann independence test. This captures:
+
+   - "Physics-washed" constraints: extraction mechanisms dressed
+     up as immutable facts ("humans are naturally hierarchical")
+   - Naturalized extraction: constraints so old that their
+     constructed origin has been forgotten
+   - Ideological inevitability claims: "there is no alternative"
+     when alternatives exist but are suppressed
+
+   Unlike False Mountain (FM), which detects metric-level fraud
+   (high ε claimed as Mountain), FNL detects STRUCTURAL fraud:
+   the constraint's coupling topology reveals construction even
+   when its metrics look natural.
+
+   SHADOW MODE: Detected and logged. Does not yet trigger
+   classification override (see resolve_modal_signature_conflict).
+   ---------------------------------------------------------------- */
+
+%% false_natural_law(+Constraint, -Evidence)
+%  Detects constraints that claim naturality but fail Boltzmann
+%  compliance. Returns structured evidence for diagnostics.
+%
+%  Evidence = fnl_evidence(Claim, BoltzmannResult, CouplingScore,
+%                          CoupledPairs, ExcessExtraction)
+
+false_natural_law(C, fnl_evidence(Claim, BoltzmannResult, CouplingScore,
+                                   CoupledPairs, ExcessExtraction)) :-
+    % Must claim to be natural/mountain
+    claimed_natural(C, Claim),
+
+    % Must fail Boltzmann compliance
+    boltzmann_compliant(C, BoltzmannResult),
+    BoltzmannResult = non_compliant(_, _),
+
+    % Gather diagnostic evidence
+    cross_index_coupling(C, CouplingScore),
+    (   detect_nonsensical_coupling(C, CoupledPairs, _)
+    ->  true
+    ;   CoupledPairs = []
+    ),
+    (   excess_extraction(C, ExcessExtraction)
+    ->  true
+    ;   ExcessExtraction = unknown
+    ).
+
+%% claimed_natural(+C, -ClaimType)
+%  Checks if a constraint claims natural/immutable status.
+%  ClaimType records the form of the claim for evidence trail.
+%
+%  Three sources of naturality claims:
+%  1. Explicit mountain constraint_claim in testset data
+%  2. Indexed classification as mountain from any perspective
+%  3. Profile matches natural_law_signature pattern
+claimed_natural(C, explicit_mountain_claim) :-
+    narrative_ontology:constraint_claim(C, mountain), !.
+claimed_natural(C, indexed_mountain_classification) :-
+    constraint_indexing:constraint_classification(C, mountain, _), !.
+claimed_natural(C, natural_law_signature_match) :-
+    get_constraint_profile(C, Profile),
+    natural_law_signature(Profile).
+
+/* ----------------------------------------------------------------
+   SIGNATURE: COUPLING-INVARIANT ROPE (CI_Rope)
+   ----------------------------------------------------------------
+   CI_Rope(C) :-
+       boltzmann_compliant(C, compliant),
+       scope_invariant(C),
+       excess_extraction(C, ≈ 0),
+       Coord(C).
+
+   Detects "true coordination mechanisms" — constraints that:
+   - Are Boltzmann-compliant (independent dimensions)
+   - Classify the same way at all scope levels
+   - Have no extraction above the Boltzmann floor
+   - Have a genuine coordination function
+
+   This distinguishes:
+   - "True coordination" from "low-extraction constructs that
+     happen to pass threshold gates"
+   - Stable Ropes from Ropes that are merely pre-Tangled
+
+   CI_Rope is the positive signature: it certifies that a Rope
+   is structurally sound, not just metrically passing.
+   ---------------------------------------------------------------- */
+
+%% coupling_invariant_rope(+Constraint, -Evidence)
+%  Detects coupling-invariant coordination mechanisms.
+%  Returns structured evidence for diagnostics.
+%
+%  Evidence = ci_rope_evidence(Compliance, ScopeResult,
+%                              ExcessEps, HasCoordination)
+
+coupling_invariant_rope(C, ci_rope_evidence(Compliance, ScopeResult,
+                                             ExcessEps, true)) :-
+    % Must be Boltzmann-compliant
+    boltzmann_compliant(C, Compliance),
+    Compliance = compliant(_),
+
+    % Must be scope-invariant
+    scope_invariance_test(C, ScopeResult),
+    ScopeResult = invariant,
+
+    % Must have no excess extraction (or very close to zero)
+    (   excess_extraction(C, ExcessEps)
+    ->  ExcessEps =< 0.02  % Within noise floor of Boltzmann floor
+    ;   ExcessEps = 0.0    % No extraction data = no excess
+    ),
+
+    % Must have a coordination function
+    narrative_ontology:has_coordination_function(C).
+
+/* ----------------------------------------------------------------
+   META-INVARIANT: STRUCTURAL PURITY
+   ----------------------------------------------------------------
+   A constraint is "structurally pure" if it passes all four
+   Boltzmann tests:
+     1. Boltzmann-compliant (factorization)
+     2. Scope-invariant
+     3. No nonsensical coupling
+     4. No excess extraction
+
+   Purity classes:
+     pure_natural_law     — NL signature + all four tests pass
+     pure_coordination    — CI_Rope signature + all four tests pass
+     pure_scaffold        — has sunset clause + all four tests pass
+     contaminated(Reasons) — one or more tests fail
+     inconclusive         — insufficient data for reliable test
+
+   Structural purity does not determine classification — it is
+   a diagnostic meta-property that indicates how "clean" a
+   constraint's structure is. A contaminated constraint may still
+   be correctly classified as a Rope, but the contamination
+   signals future drift risk.
+   ---------------------------------------------------------------- */
+
+%% structural_purity(+Constraint, -PurityClass)
+%  Computes the structural purity classification.
+
+structural_purity(C, inconclusive) :-
+    epistemic_access_check(C, false), !.
+
+structural_purity(C, PurityClass) :-
+    % Run all four tests
+    purity_test_factorization(C, T1),
+    purity_test_scope_invariance(C, T2),
+    purity_test_coupling(C, T3),
+    purity_test_excess(C, T4),
+
+    Tests = [T1, T2, T3, T4],
+    include(is_failure, Tests, Failures),
+
+    (   Failures = []
+    ->  % All tests pass — determine purity subtype
+        determine_pure_subtype(C, PurityClass)
+    ;   PurityClass = contaminated(Failures)
+    ).
+
+%% purity_test_factorization(+C, -Result)
+purity_test_factorization(C, Result) :-
+    boltzmann_compliant(C, Comp),
+    (   Comp = compliant(_) -> Result = pass(factorization)
+    ;   Comp = inconclusive(_) -> Result = pass(factorization_inconclusive)
+    ;   Result = fail(factorization, Comp)
+    ).
+
+%% purity_test_scope_invariance(+C, -Result)
+purity_test_scope_invariance(C, Result) :-
+    scope_invariance_test(C, ScopeResult),
+    (   ScopeResult = invariant -> Result = pass(scope_invariance)
+    ;   Result = fail(scope_invariance, ScopeResult)
+    ).
+
+%% purity_test_coupling(+C, -Result)
+purity_test_coupling(C, Result) :-
+    (   detect_nonsensical_coupling(C, Pairs, Strength),
+        Pairs \= []
+    ->  Result = fail(nonsensical_coupling, strength(Strength))
+    ;   Result = pass(no_nonsensical_coupling)
+    ).
+
+%% purity_test_excess(+C, -Result)
+purity_test_excess(C, Result) :-
+    (   excess_extraction(C, Excess)
+    ->  (   Excess =< 0.02
+        ->  Result = pass(no_excess_extraction)
+        ;   Result = fail(excess_extraction, Excess)
+        )
+    ;   Result = pass(no_extraction_data)
+    ).
+
+%% determine_pure_subtype(+C, -Subtype)
+%  Given that all purity tests pass, determines which "pure" class.
+determine_pure_subtype(C, pure_natural_law) :-
+    get_constraint_profile(C, Profile),
+    natural_law_signature(Profile), !.
+determine_pure_subtype(C, pure_coordination) :-
+    narrative_ontology:has_coordination_function(C), !.
+determine_pure_subtype(C, pure_scaffold) :-
+    narrative_ontology:has_sunset_clause(C), !.
+determine_pure_subtype(_, pure_unclassified).
+
+/* ----------------------------------------------------------------
+   IB-AWARE COMPLEXITY THRESHOLD REFINEMENT
+   ----------------------------------------------------------------
+   Refines complexity_adjusted_threshold/2 for constraints that
+   have theater ratio data. High theater ratio (high NoiseRatio
+   in IB terms) suggests the coupling is extractive rather than
+   functional, even in high-complexity coordination types.
+
+   This prevents global_infrastructure constraints from getting
+   a free pass on coupling if their theater ratio reveals the
+   coupling is performance rather than function.
+   ---------------------------------------------------------------- */
+
+%% ib_adjusted_threshold(+Constraint, -Threshold)
+%  Like complexity_adjusted_threshold but reduces the offset
+%  when theater ratio is high (IB signal loss).
+ib_adjusted_threshold(C, Threshold) :-
+    config:param(boltzmann_coupling_threshold, BaseThreshold),
+    coordination_type_offset(C, RawOffset),
+    % If theater ratio is available, scale the offset down
+    % proportionally. High theater = coupling is likely extractive
+    % not functional, so don't give it the full complexity benefit.
+    (   config:param(theater_metric_name, TM),
+        narrative_ontology:constraint_metric(C, TM, TR),
+        TR > 0.0
+    ->  % IB scaling: offset × (1 - TheaterRatio)
+        % At TR=0: full offset. At TR=0.7: only 30% of offset.
+        SignalRetention is max(0.0, 1.0 - TR),
+        AdjustedOffset is RawOffset * SignalRetention
+    ;   AdjustedOffset = RawOffset
+    ),
+    Threshold is BaseThreshold + AdjustedOffset.
+
+/* ================================================================
+   SIGNATURE: FALSE CI_ROPE (FCR) — v5.1
+   ================================================================
+   FCR(C) :-
+       appears_as_rope(C),
+       fails_boltzmann_test(C).
+
+   The "coordination-washed" analogue of FNL. Detects constraints
+   that LOOK like ropes from metrics but fail structural Boltzmann
+   tests, revealing hidden extraction or coupling.
+
+   This catches:
+   - "Nudges" that steer choice while claiming neutrality
+   - "Soft paternalism" with distributed enforcement
+   - "Behavioral defaults" that extract via inertia
+   - Metric manipulation: ε and χ kept low while coupling
+     reveals cross-dimensional extraction
+
+   Unlike a true CI_Rope (which passes all four tests), FCR
+   identifies constraints that pass the metric gates but fail
+   the structural gates. It answers: "Is this coordination
+   real or performed?"
+
+   SHADOW MODE: Detected and logged. Does not yet override
+   the main drl_core classification.
+   ================================================================ */
+
+%% false_ci_rope(+Constraint, -Evidence)
+%  Detects constraints that appear to be ropes from metrics but fail
+%  Boltzmann structural tests.
+%
+%  Evidence = fcr_evidence(AppearanceType, FailedTests, CouplingScore,
+%                           ExcessExtraction, ScopeResult)
+
+false_ci_rope(C, fcr_evidence(AppearanceType, FailedTests, CouplingScore,
+                               ExcessExtraction, ScopeResult)) :-
+    % Must appear to be a rope from metrics
+    appears_as_rope(C, AppearanceType),
+
+    % Must fail at least one Boltzmann structural test
+    collect_fcr_failures(C, FailedTests),
+    FailedTests \= [],
+
+    % Gather diagnostic data
+    (   cross_index_coupling(C, CouplingScore)
+    ->  true
+    ;   CouplingScore = unknown
+    ),
+    (   excess_extraction(C, ExcessExtraction)
+    ->  true
+    ;   ExcessExtraction = unknown
+    ),
+    (   scope_invariance_test(C, ScopeResult)
+    ->  true
+    ;   ScopeResult = unknown
+    ).
+
+%% appears_as_rope(+C, -AppearanceType)
+%  Checks if constraint's metrics look like rope/coordination.
+%  AppearanceType records the form of the appearance for evidence trail.
+%
+%  IMPORTANT: Low extraction alone is NOT sufficient — Mountains also
+%  have low ε. The low_extraction_profile check requires that the
+%  constraint is NOT exclusively classified as Mountain from all
+%  indexed perspectives. This prevents natural laws from being
+%  misidentified as "coordination-washed."
+appears_as_rope(C, explicit_rope_claim) :-
+    narrative_ontology:constraint_claim(C, rope), !.
+appears_as_rope(C, indexed_rope_classification) :-
+    constraint_indexing:constraint_classification(C, rope, _), !.
+appears_as_rope(C, low_extraction_profile) :-
+    config:param(extractiveness_metric_name, ExtMetricName),
+    narrative_ontology:constraint_metric(C, ExtMetricName, Eps),
+    config:param(rope_epsilon_ceiling, EpsCeil),
+    Eps =< EpsCeil,
+    % Exclude constraints that are mountains from ALL perspectives.
+    % Mountains have low ε by nature — that's not "appearing as rope."
+    \+ only_mountain_classifications(C).
+
+%% only_mountain_classifications(+C)
+%  True if the constraint has at least one indexed classification
+%  AND all of them are mountain. This identifies pure natural laws
+%  that should not be considered "rope-appearing."
+only_mountain_classifications(C) :-
+    constraint_indexing:constraint_classification(C, _, _),  % At least one exists
+    \+ (constraint_indexing:constraint_classification(C, Type, _), Type \= mountain).
+
+%% collect_fcr_failures(+C, -FailedTests)
+%  Collects which Boltzmann structural tests fail for a
+%  rope-appearing constraint.
+collect_fcr_failures(C, FailedTests) :-
+    findall(Failure, fcr_test_failure(C, Failure), FailedTests).
+
+% Individual FCR failure tests:
+
+% Test 1: Boltzmann non-compliance (dimension coupling)
+fcr_test_failure(C, boltzmann_non_compliant(Score, Threshold)) :-
+    boltzmann_compliant(C, non_compliant(Score, Threshold)).
+
+% Test 2: Scope variance (classification changes across scopes)
+fcr_test_failure(C, scope_variant(UniqueTypes)) :-
+    scope_invariance_test(C, variant(UniqueTypes)).
+
+% Test 3: Excess extraction above Boltzmann floor
+fcr_test_failure(C, excess_above_floor(Excess)) :-
+    excess_extraction(C, Excess),
+    Excess > 0.02.  % Above noise floor
+
+% Test 4: Nonsensical coupling (coupling without functional justification)
+fcr_test_failure(C, nonsensical_coupling(Strength)) :-
+    detect_nonsensical_coupling(C, Pairs, Strength),
+    Pairs \= [].
+
+/* ================================================================
+   PURITY SCORE — v5.1
+   ================================================================
+   Combines the four Boltzmann structural tests into a single
+   scalar in [0, 1]:
+
+     purity_score(C) = 0.30 × factorization
+                     + 0.25 × scope_invariance
+                     + 0.25 × coupling_cleanliness
+                     + 0.20 × (1 - excess_extraction)
+
+   Interpretation:
+     1.0  = perfectly pure (all tests pass, no contamination)
+     >0.8 = structurally sound (minor contamination tolerable)
+     0.5  = borderline (significant contamination, drift risk)
+     <0.3 = contaminated (multiple structural failures)
+     -1.0 = inconclusive (insufficient epistemic data)
+
+   Use cases:
+     - Rank coordination mechanisms by structural soundness
+     - Detect drift toward impurity (purity_score decreasing)
+     - Compare constraints across domains
+     - Identify fragile ropes: purity ∈ [0.5, 0.7] →
+       one drift event from tangled_rope
+     - Integrate into fingerprint coupling dimension
+   ================================================================ */
+
+%% purity_score(+Constraint, -Score)
+%  Computes scalar purity score. Returns -1.0 for insufficient data.
+purity_score(C, Score) :-
+    epistemic_access_check(C, true),
+    !,
+    factorization_subscore(C, F),
+    scope_invariance_subscore(C, SI),
+    coupling_cleanliness_subscore(C, CC),
+    excess_extraction_subscore(C, EX),
+    RawScore is 0.30 * F + 0.25 * SI + 0.25 * CC + 0.20 * EX,
+    Score is min(1.0, max(0.0, RawScore)).
+purity_score(_, -1.0).  % Sentinel for insufficient epistemic data
+
+%% factorization_subscore(+C, -F)
+%  1.0 if Boltzmann-compliant. Decays with coupling score.
+factorization_subscore(C, F) :-
+    (   cross_index_coupling(C, CouplingScore)
+    ->  F is max(0.0, 1.0 - CouplingScore)
+    ;   F = 0.5  % Neutral if no data
+    ).
+
+%% scope_invariance_subscore(+C, -SI)
+%  1.0 if scope-invariant. Penalized per extra classification type.
+scope_invariance_subscore(C, SI) :-
+    scope_invariance_test(C, Result),
+    (   Result = invariant
+    ->  SI = 1.0
+    ;   Result = variant(Types)
+    ->  length(Types, N),
+        % Penalize 0.25 per extra type beyond unity
+        SI is max(0.0, 1.0 - (N - 1) * 0.25)
+    ;   SI = 0.5
+    ).
+
+%% coupling_cleanliness_subscore(+C, -CC)
+%  1.0 if no nonsensical coupling. Decays with coupling strength.
+coupling_cleanliness_subscore(C, CC) :-
+    (   detect_nonsensical_coupling(C, Pairs, Strength),
+        Pairs \= []
+    ->  CC is max(0.0, 1.0 - Strength)
+    ;   CC = 1.0  % No coupling = clean
+    ).
+
+%% excess_extraction_subscore(+C, -EX)
+%  1.0 if no excess extraction. Decays: excess of 0.5 → score 0.0.
+excess_extraction_subscore(C, EX) :-
+    (   excess_extraction(C, Excess)
+    ->  EX is max(0.0, 1.0 - min(1.0, Excess * 2.0))
+    ;   EX = 1.0  % No extraction data = clean
+    ).

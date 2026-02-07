@@ -1,6 +1,6 @@
 # Omega Epistemological Gap Report
 
-**Total Unique Omegas Found:** 261
+**Total Unique Omegas Found:** 302
 
 This report lists all unique Omega variables generated during the analysis. Each Omega represents a critical question, a perspectival gap, or a contradiction that requires further investigation.
 
@@ -1814,7 +1814,33 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 71. Omega: `omega_cut_safety_poincare_conjecture`
+### 71. Omega: `omega_cut_safety_perseverance_ai_drive`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `perseverance_ai_drive`
+*   **Source Gap:** `gap(mountain_coordination_confusion,mountain,rope)`
+*   **Question:** Constraint perseverance_ai_drive appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. SAFETY ASSESSMENT (DO NOT SKIP):
+- If institutions cut perseverance_ai_drive, do individuals have alternatives?
+- Is this their only survival mechanism?
+- What scaffolding exists for transition?
+2. Test institutional perception:
+- Can institutions unilaterally change this?
+- Do they understand downstream impacts?
+- Is their "optional" view empirically accurate?
+3. Decision tree:
+IF truly unchangeable → Correct institutional view to MOUNTAIN
+IF changeable + safe alternatives → Correct powerless view to ROPE
+IF changeable + NO alternatives → ADD SCAFFOLD before any change
+IF uncertainty → HALT changes until resolved
+4. CRITICAL: Never proceed with changes until safety verified
+    ```
+
+---
+
+### 72. Omega: `omega_cut_safety_poincare_conjecture`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `poincare_conjucture`
@@ -1840,7 +1866,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 72. Omega: `omega_cut_safety_prime_number_theorem`
+### 73. Omega: `omega_cut_safety_prime_number_theorem`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `prime_number_theorem`
@@ -1866,7 +1892,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 73. Omega: `omega_cut_safety_proof_of_work_consensus`
+### 74. Omega: `omega_cut_safety_proof_of_work_consensus`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `proof_of_work_consensus`
@@ -1892,7 +1918,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 74. Omega: `omega_cut_safety_quantum_entanglement_protocol`
+### 75. Omega: `omega_cut_safety_quantum_entanglement_protocol`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `quantum_entanglement_protocol`
@@ -1918,7 +1944,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 75. Omega: `omega_cut_safety_quine_self_replication`
+### 76. Omega: `omega_cut_safety_quine_self_replication`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `quine_self_replication`
@@ -1944,7 +1970,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 76. Omega: `omega_cut_safety_reciprocity_laws_math`
+### 77. Omega: `omega_cut_safety_reciprocity_laws_math`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `reciprocity_laws_math`
@@ -1970,7 +1996,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 77. Omega: `omega_cut_safety_rfc9293_state_machine`
+### 78. Omega: `omega_cut_safety_rfc9293_state_machine`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `rfc9293_state_machine`
@@ -1996,7 +2022,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 78. Omega: `omega_cut_safety_rices_theorem_undecidability`
+### 79. Omega: `omega_cut_safety_rices_theorem_undecidability`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `rices_theorem_undecidability`
@@ -2022,7 +2048,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 79. Omega: `omega_cut_safety_rogue_wave_control_2026`
+### 80. Omega: `omega_cut_safety_rogue_wave_control_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `rogue_wave_control_2026`
@@ -2048,7 +2074,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 80. Omega: `omega_cut_safety_sadhu_integrity_protocol`
+### 81. Omega: `omega_cut_safety_sadhu_integrity_protocol`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `sadhu_integrity_protocol`
@@ -2068,7 +2094,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 81. Omega: `omega_cut_safety_stable_marriage_coordination`
+### 82. Omega: `omega_cut_safety_stable_marriage_coordination`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `stable_marriage_coordination`
@@ -2094,7 +2120,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 82. Omega: `omega_cut_safety_strange_attractor_dynamics`
+### 83. Omega: `omega_cut_safety_strange_attractor_dynamics`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `strange_attractor_dynamics`
@@ -2120,7 +2146,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 83. Omega: `omega_cut_safety_sts86_ascent_checklist`
+### 84. Omega: `omega_cut_safety_sts86_ascent_checklist`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `sts86_ascent_checklist`
@@ -2146,7 +2172,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 84. Omega: `omega_cut_safety_suslin_hypothesis_undecidability`
+### 85. Omega: `omega_cut_safety_suslin_hypothesis_undecidability`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `suslin_hypothesis_undecidability`
@@ -2172,7 +2198,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 85. Omega: `omega_cut_safety_sylow_theorems_group_theory`
+### 86. Omega: `omega_cut_safety_sylow_theorems_group_theory`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `sylow_theorems_group_theory`
@@ -2198,7 +2224,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 86. Omega: `omega_cut_safety_three_body_unpredictability`
+### 87. Omega: `omega_cut_safety_three_body_unpredictability`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `three_body_unpredicability`
@@ -2224,7 +2250,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 87. Omega: `omega_cut_safety_udhr_1948`
+### 88. Omega: `omega_cut_safety_udhr_1948`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `udhr_1946`
@@ -2250,7 +2276,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 88. Omega: `omega_cut_safety_ulysses_hades_1904`
+### 89. Omega: `omega_cut_safety_ulysses_hades_1904`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ulysses_chp06`
@@ -2276,7 +2302,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 89. Omega: `omega_cut_safety_unclos_2026`
+### 90. Omega: `omega_cut_safety_unclos_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `unclos_2026`
@@ -2302,7 +2328,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 90. Omega: `omega_cut_safety_vertebrate_genetics_2026`
+### 91. Omega: `omega_cut_safety_vertebrate_genetics_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `vertebrate_turning_point_2026`
@@ -2328,7 +2354,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 91. Omega: `omega_cut_safety_whitehead_problem_undecidability`
+### 92. Omega: `omega_cut_safety_whitehead_problem_undecidability`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `whitehead_problem_undecidability`
@@ -2354,7 +2380,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 92. Omega: `omega_extraction_blindness_26usc469_real_estate_exemption`
+### 93. Omega: `omega_extraction_blindness_26usc469_real_estate_exemption`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `26usc469_real_estate_exemption`
@@ -2381,7 +2407,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 93. Omega: `omega_extraction_blindness_academic_fashion_modernism_2026`
+### 94. Omega: `omega_extraction_blindness_academic_fashion_modernism_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `academic_fashion_modernism_2026`
@@ -2408,7 +2434,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 94. Omega: `omega_extraction_blindness_academic_tenure_system`
+### 95. Omega: `omega_extraction_blindness_academic_tenure_system`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `academic_tenure_system`
@@ -2428,7 +2454,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 95. Omega: `omega_extraction_blindness_ad_fus_coordination`
+### 96. Omega: `omega_extraction_blindness_ad_fus_coordination`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ad_fus_coordination`
@@ -2455,7 +2481,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 96. Omega: `omega_extraction_blindness_ad_synaptic_deficit`
+### 97. Omega: `omega_extraction_blindness_ad_synaptic_deficit`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ad_synaptic_deficit`
@@ -2475,7 +2501,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 97. Omega: `omega_extraction_blindness_adverse_possession`
+### 98. Omega: `omega_extraction_blindness_adverse_possession`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `adverse_possession`
@@ -2502,7 +2528,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 98. Omega: `omega_extraction_blindness_advice_as_dangerous_gift`
+### 99. Omega: `omega_extraction_blindness_advice_as_dangerous_gift`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `advice_as_dangerous_gift`
@@ -2529,7 +2555,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 99. Omega: `omega_extraction_blindness_agent_opt_2026`
+### 100. Omega: `omega_extraction_blindness_agent_opt_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `agentive_optimism_2026`
@@ -2556,7 +2582,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 100. Omega: `omega_extraction_blindness_ai_auditability_gap`
+### 101. Omega: `omega_extraction_blindness_ai_auditability_gap`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ai_auditability_gap`
@@ -2583,7 +2609,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 101. Omega: `omega_extraction_blindness_ai_driven_surveillance_sensor_layer`
+### 102. Omega: `omega_extraction_blindness_ai_driven_surveillance_sensor_layer`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ai_driven_surveillance_sensor_layer`
@@ -2603,7 +2629,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 102. Omega: `omega_extraction_blindness_ai_evaluators_matching`
+### 103. Omega: `omega_extraction_blindness_ai_evaluators_matching`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ai_evaluators_matching`
@@ -2630,7 +2656,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 103. Omega: `omega_extraction_blindness_ai_professional_displacement`
+### 104. Omega: `omega_extraction_blindness_ai_professional_displacement`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ai_professional_displacement`
@@ -2650,7 +2676,61 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 104. Omega: `omega_extraction_blindness_ai_superpowers_2026`
+### 105. Omega: `omega_extraction_blindness_ai_religion_regulation`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `ai_religion_regulation`
+*   **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+*   **Question:** Constraint ai_religion_regulation appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from ai_religion_regulation?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does ai_religion_regulation serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 106. Omega: `omega_extraction_blindness_ai_scholar_citation_trap`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `ai_scholar_citation_trap`
+*   **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+*   **Question:** Constraint ai_scholar_citation_trap appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from ai_scholar_citation_trap?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does ai_scholar_citation_trap serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 107. Omega: `omega_extraction_blindness_ai_superpowers_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ai_superpowers_race_2026`
@@ -2677,7 +2757,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 105. Omega: `omega_extraction_blindness_algorithmic_bias`
+### 108. Omega: `omega_extraction_blindness_algorithmic_bias`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `algorithmic_bias`
@@ -2704,7 +2784,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 106. Omega: `omega_extraction_blindness_algorithmic_epistemic_capture`
+### 109. Omega: `omega_extraction_blindness_algorithmic_epistemic_capture`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `algorithmic_epistemic_capture`
@@ -2724,7 +2804,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 107. Omega: `omega_extraction_blindness_alignment_tax_tradeoff`
+### 110. Omega: `omega_extraction_blindness_alignment_tax_tradeoff`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `alignment_tax_tradeoff`
@@ -2744,7 +2824,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 108. Omega: `omega_extraction_blindness_altruistic_misery_paradox_2026`
+### 111. Omega: `omega_extraction_blindness_altruistic_misery_paradox_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `altruistic_misery_paradox_2026`
@@ -2771,7 +2851,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 109. Omega: `omega_extraction_blindness_amish_technological_renunciation`
+### 112. Omega: `omega_extraction_blindness_amish_technological_renunciation`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `amish_technological_renunciation`
@@ -2798,7 +2878,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 110. Omega: `omega_extraction_blindness_ancestral_pueblo_hydrology`
+### 113. Omega: `omega_extraction_blindness_ancestral_pueblo_hydrology`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ancestral_pueblo_hydrology`
@@ -2825,7 +2905,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 111. Omega: `omega_extraction_blindness_anticipatory_capacity_failure`
+### 114. Omega: `omega_extraction_blindness_anticipatory_capacity_failure`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `anticipatory_capacity_failure`
@@ -2845,7 +2925,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 112. Omega: `omega_extraction_blindness_apartheid_nuclear_program`
+### 115. Omega: `omega_extraction_blindness_apartheid_nuclear_program`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `apartheid_nuclear_program`
@@ -2865,7 +2945,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 113. Omega: `omega_extraction_blindness_arctic_geopolitical_flashpoint`
+### 116. Omega: `omega_extraction_blindness_arctic_geopolitical_flashpoint`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `arctic_geopolitical_flashpoint`
@@ -2892,7 +2972,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 114. Omega: `omega_extraction_blindness_art_market_decoupling`
+### 117. Omega: `omega_extraction_blindness_art_market_decoupling`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `art_market_decoupling`
@@ -2919,7 +2999,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 115. Omega: `omega_extraction_blindness_atrophied_optimization_piton`
+### 118. Omega: `omega_extraction_blindness_atrophied_optimization_piton`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `atrophied_optimization_piton`
@@ -2946,7 +3026,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 116. Omega: `omega_extraction_blindness_australia_social_ban_2026`
+### 119. Omega: `omega_extraction_blindness_australia_social_ban_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `australia_social_ban_2026`
@@ -2973,7 +3053,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 117. Omega: `omega_extraction_blindness_automatic_enrollment_defaults`
+### 120. Omega: `omega_extraction_blindness_automatic_enrollment_defaults`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `automatic_enrollment_defaults`
@@ -3000,7 +3080,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 118. Omega: `omega_extraction_blindness_availability_heuristic`
+### 121. Omega: `omega_extraction_blindness_availability_heuristic`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `availability_heuristic`
@@ -3027,7 +3107,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 119. Omega: `omega_extraction_blindness_axiom_reasoner_2026`
+### 122. Omega: `omega_extraction_blindness_axiom_reasoner_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `axiom_reasoner_2026`
@@ -3054,7 +3134,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 120. Omega: `omega_extraction_blindness_bangladesh_july_national_charter`
+### 123. Omega: `omega_extraction_blindness_bangladesh_july_national_charter`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `bangladesh_july_national_charter`
@@ -3081,7 +3161,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 121. Omega: `omega_extraction_blindness_belief_argument_conclusion`
+### 124. Omega: `omega_extraction_blindness_belief_argument_conclusion`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `belief_argument_conclusion`
@@ -3108,7 +3188,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 122. Omega: `omega_extraction_blindness_biological_curiosity`
+### 125. Omega: `omega_extraction_blindness_biological_curiosity`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `biological_curiosity`
@@ -3135,7 +3215,34 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 123. Omega: `omega_extraction_blindness_boiled_pineapple_trend_2026`
+### 126. Omega: `omega_extraction_blindness_bip_narrative_illusion`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `bip_narrative_illusion`
+*   **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+*   **Question:** Constraint bip_narrative_illusion appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from bip_narrative_illusion?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does bip_narrative_illusion serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 127. Omega: `omega_extraction_blindness_boiled_pineapple_trend_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `boiled_pineapple_trend_2026`
@@ -3162,7 +3269,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 124. Omega: `omega_extraction_blindness_burali_forti_paradox`
+### 128. Omega: `omega_extraction_blindness_burali_forti_paradox`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `burali_forte_paradox`
@@ -3189,7 +3296,61 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 125. Omega: `omega_extraction_blindness_cap_theorem`
+### 129. Omega: `omega_extraction_blindness_canal_panama_influence`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `canal_panama_influence`
+*   **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+*   **Question:** Constraint canal_panama_influence appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from canal_panama_influence?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does canal_panama_influence serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 130. Omega: `omega_extraction_blindness_cancer_prevention`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `cancer_prevention`
+*   **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+*   **Question:** Constraint cancer_prevention appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from cancer_prevention?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does cancer_prevention serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 131. Omega: `omega_extraction_blindness_cap_theorem`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `cap_theorem`
@@ -3216,7 +3377,115 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 126. Omega: `omega_extraction_blindness_coffee_cardiovascular_2026`
+### 132. Omega: `omega_extraction_blindness_cg_israelgaza_20231012`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `CG_IsraelGaza_20231012`
+*   **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+*   **Question:** Constraint cg_israelgaza_20231012 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from cg_israelgaza_20231012?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does cg_israelgaza_20231012 serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 133. Omega: `omega_extraction_blindness_cholesterol_pill_cost`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `cholesterol_pill_cost`
+*   **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+*   **Question:** Constraint cholesterol_pill_cost appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from cholesterol_pill_cost?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does cholesterol_pill_cost serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 134. Omega: `omega_extraction_blindness_cmr_001`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `cmr_001`
+*   **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+*   **Question:** Constraint cmr_001 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from cmr_001?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does cmr_001 serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 135. Omega: `omega_extraction_blindness_codex_access`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `codex_access`
+*   **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+*   **Question:** Constraint codex_access appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from codex_access?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does codex_access serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 136. Omega: `omega_extraction_blindness_coffee_cardiovascular_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `coffee_cardiovascular_2026`
@@ -3243,7 +3512,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 127. Omega: `omega_extraction_blindness_communal_narcissism_social_trap`
+### 137. Omega: `omega_extraction_blindness_communal_narcissism_social_trap`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `communal_narcissism_social_trap`
@@ -3270,7 +3539,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 128. Omega: `omega_extraction_blindness_confirmation_bias`
+### 138. Omega: `omega_extraction_blindness_confirmation_bias`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `confirmation_bias`
@@ -3297,7 +3566,34 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 129. Omega: `omega_extraction_blindness_cultural_refragmentation_2026`
+### 139. Omega: `omega_extraction_blindness_cs_ecmo_bridge`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `cs_ecmo_bridge`
+*   **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+*   **Question:** Constraint cs_ecmo_bridge appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from cs_ecmo_bridge?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does cs_ecmo_bridge serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 140. Omega: `omega_extraction_blindness_cultural_refragmentation_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `cultural_refragmentation_2026`
@@ -3324,7 +3620,34 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 130. Omega: `omega_extraction_blindness_dunbars_number`
+### 141. Omega: `omega_extraction_blindness_data_privacy_regulation`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `data_privacy_regulation`
+*   **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+*   **Question:** Constraint data_privacy_regulation appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from data_privacy_regulation?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does data_privacy_regulation serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 142. Omega: `omega_extraction_blindness_dunbars_number`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `dunbars_number`
@@ -3351,7 +3674,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 131. Omega: `omega_extraction_blindness_electrification_scale_2026`
+### 143. Omega: `omega_extraction_blindness_electrification_scale_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `electrification_scale_2026`
@@ -3378,7 +3701,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 132. Omega: `omega_extraction_blindness_elencher_identity_transformation`
+### 144. Omega: `omega_extraction_blindness_elencher_identity_transformation`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `elencher_identity_transformation`
@@ -3398,7 +3721,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 133. Omega: `omega_extraction_blindness_empty_tomb_transformation`
+### 145. Omega: `omega_extraction_blindness_empty_tomb_transformation`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `empty_tomb_transformation`
@@ -3418,7 +3741,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 134. Omega: `omega_extraction_blindness_endowment_effect`
+### 146. Omega: `omega_extraction_blindness_endowment_effect`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `endowment_effect`
@@ -3445,7 +3768,34 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 135. Omega: `omega_extraction_blindness_epigenetics_complexity_2026`
+### 147. Omega: `omega_extraction_blindness_enlicitide_cholesterol`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `enlicitide_cholesterol`
+*   **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+*   **Question:** Constraint enlicitide_cholesterol appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from enlicitide_cholesterol?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does enlicitide_cholesterol serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 148. Omega: `omega_extraction_blindness_epigenetics_complexity_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `epigenetics_complexity_2026`
@@ -3472,7 +3822,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 136. Omega: `omega_extraction_blindness_epstein_espionage_2026`
+### 149. Omega: `omega_extraction_blindness_epstein_espionage_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `epstein_espionage_crisis_2026`
@@ -3499,7 +3849,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 137. Omega: `omega_extraction_blindness_epstein_files_2026`
+### 150. Omega: `omega_extraction_blindness_epstein_files_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `epstein_files_2026`
@@ -3526,7 +3876,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 138. Omega: `omega_extraction_blindness_epstein_honeytrap`
+### 151. Omega: `omega_extraction_blindness_epstein_honeytrap`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `epstein_kgb_honeytrap`
@@ -3553,7 +3903,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 139. Omega: `omega_extraction_blindness_ergo_storage_rent_mechanism`
+### 152. Omega: `omega_extraction_blindness_ergo_storage_rent_mechanism`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ergo_storage_rent_mechanism`
@@ -3580,7 +3930,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 140. Omega: `omega_extraction_blindness_ergodic_theorems`
+### 153. Omega: `omega_extraction_blindness_ergodic_theorems`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ergodic_theorems`
@@ -3607,7 +3957,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 141. Omega: `omega_extraction_blindness_extraordinary_narrative_shift`
+### 154. Omega: `omega_extraction_blindness_extraordinary_narrative_shift`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `extraordinary_narrative_shift`
@@ -3634,7 +3984,34 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 142. Omega: `omega_extraction_blindness_fittss_law`
+### 155. Omega: `omega_extraction_blindness_fine_particle_policy`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `fine_particle_policy`
+*   **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+*   **Question:** Constraint fine_particle_policy appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from fine_particle_policy?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does fine_particle_policy serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 156. Omega: `omega_extraction_blindness_fittss_law`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `fittss_law`
@@ -3661,7 +4038,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 143. Omega: `omega_extraction_blindness_fmeca_procedures_1980`
+### 157. Omega: `omega_extraction_blindness_fmeca_procedures_1980`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `fmeca_procedures_1980`
@@ -3688,7 +4065,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 144. Omega: `omega_extraction_blindness_fmt_oncology_2026`
+### 158. Omega: `omega_extraction_blindness_fmt_oncology_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `fmt_oncology_realignment_2026`
@@ -3715,7 +4092,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 145. Omega: `omega_extraction_blindness_france_cordon_sanitaire_2026`
+### 159. Omega: `omega_extraction_blindness_france_cordon_sanitaire_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `france_cordon_sanitaire_2026`
@@ -3735,7 +4112,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 146. Omega: `omega_extraction_blindness_genetic_algorithms_evolution`
+### 160. Omega: `omega_extraction_blindness_genetic_algorithms_evolution`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `genetic_algorithms_evolution`
@@ -3762,7 +4139,61 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 147. Omega: `omega_extraction_blindness_gita_kurukshetra`
+### 161. Omega: `omega_extraction_blindness_genie_ip_constraint`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `genie_ip_constraint`
+*   **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+*   **Question:** Constraint genie_ip_constraint appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from genie_ip_constraint?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does genie_ip_constraint serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 162. Omega: `omega_extraction_blindness_germany_tennet_takeover`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `germany_tennet_takeover`
+*   **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+*   **Question:** Constraint germany_tennet_takeover appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from germany_tennet_takeover?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does germany_tennet_takeover serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 163. Omega: `omega_extraction_blindness_gita_kurukshetra`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `gita_kurukshetra`
@@ -3789,7 +4220,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 148. Omega: `omega_extraction_blindness_global_economic_anxiety_2026`
+### 164. Omega: `omega_extraction_blindness_global_economic_anxiety_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `global_economic_anxiety_2026`
@@ -3816,7 +4247,34 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 149. Omega: `omega_extraction_blindness_graph_coloring_complexity`
+### 165. Omega: `omega_extraction_blindness_gpt5_codex_dev_cycle`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `gpt5_codex_dev_cycle`
+*   **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+*   **Question:** Constraint gpt5_codex_dev_cycle appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from gpt5_codex_dev_cycle?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does gpt5_codex_dev_cycle serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 166. Omega: `omega_extraction_blindness_graph_coloring_complexity`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `graph_coloring_complexity`
@@ -3843,7 +4301,34 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 150. Omega: `omega_extraction_blindness_hamiltonian_path_complexity`
+### 167. Omega: `omega_extraction_blindness_guinea_worm_eradication`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `guinea_worm_eradication`
+*   **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+*   **Question:** Constraint guinea_worm_eradication appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from guinea_worm_eradication?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does guinea_worm_eradication serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 168. Omega: `omega_extraction_blindness_hamiltonian_path_complexity`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `hamiltonian_path_complexity`
@@ -3870,7 +4355,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 151. Omega: `omega_extraction_blindness_hawthorne_effect`
+### 169. Omega: `omega_extraction_blindness_hawthorne_effect`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `hawthorne_effect`
@@ -3897,7 +4382,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 152. Omega: `omega_extraction_blindness_hegemonic_entropy_2026`
+### 170. Omega: `omega_extraction_blindness_hegemonic_entropy_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `hegemonic_entropy_2026`
@@ -3924,7 +4409,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 153. Omega: `omega_extraction_blindness_heisenberg_uncertainty`
+### 171. Omega: `omega_extraction_blindness_heisenberg_uncertainty`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `heisenberg_uncertainty`
@@ -3951,7 +4436,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 154. Omega: `omega_extraction_blindness_helsinki_bus_theory`
+### 172. Omega: `omega_extraction_blindness_helsinki_bus_theory`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `helsinki_bus_theory`
@@ -3978,7 +4463,61 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 155. Omega: `omega_extraction_blindness_informational_time_2026`
+### 173. Omega: `omega_extraction_blindness_india_semi_mission`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `india_semi_mission`
+*   **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+*   **Question:** Constraint india_semi_mission appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from india_semi_mission?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does india_semi_mission serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 174. Omega: `omega_extraction_blindness_individual_revolution_autonomy`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `individual_revolution_autonomy`
+*   **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+*   **Question:** Constraint individual_revolution_autonomy appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from individual_revolution_autonomy?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does individual_revolution_autonomy serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 175. Omega: `omega_extraction_blindness_informational_time_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `informational_time_2026`
@@ -4005,7 +4544,34 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 156. Omega: `omega_extraction_blindness_keltner_relationship_evaluation`
+### 176. Omega: `omega_extraction_blindness_israel_gaza_ceasefire_violation`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `israel_gaza_ceasefire_violation`
+*   **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+*   **Question:** Constraint israel_gaza_ceasefire_violation appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from israel_gaza_ceasefire_violation?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does israel_gaza_ceasefire_violation serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 177. Omega: `omega_extraction_blindness_keltner_relationship_evaluation`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `keltner_relationship_evaluation`
@@ -4032,7 +4598,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 157. Omega: `omega_extraction_blindness_kidney_exchange_market`
+### 178. Omega: `omega_extraction_blindness_kidney_exchange_market`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `kidney_exchange_market`
@@ -4059,7 +4625,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 158. Omega: `omega_extraction_blindness_kirby_paris_theorem`
+### 179. Omega: `omega_extraction_blindness_kirby_paris_theorem`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `kirby_paris_theorem`
@@ -4086,7 +4652,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 159. Omega: `omega_extraction_blindness_landscape_of_fear_2026`
+### 180. Omega: `omega_extraction_blindness_landscape_of_fear_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `landscape_of_fear_2026`
@@ -4106,7 +4672,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 160. Omega: `omega_extraction_blindness_law_of_diminishing_returns`
+### 181. Omega: `omega_extraction_blindness_law_of_diminishing_returns`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `law_of_diminishing_returns`
@@ -4133,7 +4699,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 161. Omega: `omega_extraction_blindness_lindy_effect`
+### 182. Omega: `omega_extraction_blindness_lindy_effect`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `lindy_effect`
@@ -4160,7 +4726,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 162. Omega: `omega_extraction_blindness_lobs_theorem`
+### 183. Omega: `omega_extraction_blindness_lobs_theorem`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `lobs_theorem`
@@ -4187,7 +4753,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 163. Omega: `omega_extraction_blindness_lowenheim_skolem_theorem`
+### 184. Omega: `omega_extraction_blindness_lowenheim_skolem_theorem`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `lowenheim_skolem_theorem`
@@ -4214,7 +4780,34 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 164. Omega: `omega_extraction_blindness_matching_markets_general`
+### 185. Omega: `omega_extraction_blindness_lung_transplant_protocol`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `lung_transplant_protocol`
+*   **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+*   **Question:** Constraint lung_transplant_protocol appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from lung_transplant_protocol?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does lung_transplant_protocol serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 186. Omega: `omega_extraction_blindness_matching_markets_general`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `matching_markets_general`
@@ -4241,7 +4834,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 165. Omega: `omega_extraction_blindness_med_diet_consensus_2026`
+### 187. Omega: `omega_extraction_blindness_med_diet_consensus_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `med_diet_consensus_2026`
@@ -4268,7 +4861,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 166. Omega: `omega_extraction_blindness_microbiome_symbiosis`
+### 188. Omega: `omega_extraction_blindness_microbiome_symbiosis`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `microbiome_symbiosis`
@@ -4295,7 +4888,34 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 167. Omega: `omega_extraction_blindness_minnesota_sovereignty_2026`
+### 189. Omega: `omega_extraction_blindness_microwave_weapon_1`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `microwave_weapon_1`
+*   **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+*   **Question:** Constraint microwave_weapon_1 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from microwave_weapon_1?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does microwave_weapon_1 serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 190. Omega: `omega_extraction_blindness_minnesota_sovereignty_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `minnesota_sovereignty_2026`
@@ -4322,7 +4942,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 168. Omega: `omega_extraction_blindness_mit_tfus_2026`
+### 191. Omega: `omega_extraction_blindness_mit_tfus_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `mit_tfus_consciousness_2026`
@@ -4349,7 +4969,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 169. Omega: `omega_extraction_blindness_moltbook_breach_2026`
+### 192. Omega: `omega_extraction_blindness_moltbook_breach_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `moltbook_breach_2026`
@@ -4376,7 +4996,34 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 170. Omega: `omega_extraction_blindness_narcissistic_ego_maintenance`
+### 193. Omega: `omega_extraction_blindness_moltbot_religion`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `MOLTBOT_RELIGION`
+*   **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+*   **Question:** Constraint moltbot_religion appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from moltbot_religion?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does moltbot_religion serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 194. Omega: `omega_extraction_blindness_narcissistic_ego_maintenance`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `narcissistic_ego_maintenance`
@@ -4403,7 +5050,34 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 171. Omega: `omega_extraction_blindness_no_cloning_theorem`
+### 195. Omega: `omega_extraction_blindness_new_start_expiration`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `new_start_expiration`
+*   **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+*   **Question:** Constraint new_start_expiration appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from new_start_expiration?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does new_start_expiration serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 196. Omega: `omega_extraction_blindness_no_cloning_theorem`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `no_cloning_theorem`
@@ -4430,7 +5104,115 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 172. Omega: `omega_extraction_blindness_optimal_stopping_marriage`
+### 197. Omega: `omega_extraction_blindness_openai_api_access`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `openai_api_access`
+*   **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+*   **Question:** Constraint openai_api_access appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from openai_api_access?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does openai_api_access serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 198. Omega: `omega_extraction_blindness_openai_codex_app_constraint`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `openai_codex_app_constraint`
+*   **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+*   **Question:** Constraint openai_codex_app_constraint appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from openai_codex_app_constraint?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does openai_codex_app_constraint serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 199. Omega: `omega_extraction_blindness_openclaw_regulation`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `openclaw_regulation`
+*   **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+*   **Question:** Constraint openclaw_regulation appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from openclaw_regulation?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does openclaw_regulation serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 200. Omega: `omega_extraction_blindness_openscholar_peer_review`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `openscholar_peer_review`
+*   **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+*   **Question:** Constraint openscholar_peer_review appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from openscholar_peer_review?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does openscholar_peer_review serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 201. Omega: `omega_extraction_blindness_optimal_stopping_marriage`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `marriage_problem`
@@ -4457,7 +5239,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 173. Omega: `omega_extraction_blindness_other_peoples_troubles_2026`
+### 202. Omega: `omega_extraction_blindness_other_peoples_troubles_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `other_peoples_troubles_2026`
@@ -4484,7 +5266,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 174. Omega: `omega_extraction_blindness_p_vs_np`
+### 203. Omega: `omega_extraction_blindness_p_vs_np`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `p_vs_np`
@@ -4511,7 +5293,34 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 175. Omega: `omega_extraction_blindness_planetary_diet_constraint_2026`
+### 204. Omega: `omega_extraction_blindness_panama_canal_ports`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `panama_canal_ports`
+*   **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+*   **Question:** Constraint panama_canal_ports appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from panama_canal_ports?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does panama_canal_ports serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 205. Omega: `omega_extraction_blindness_planetary_diet_constraint_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `planetary_diet_constraint_2026`
@@ -4538,7 +5347,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 176. Omega: `omega_extraction_blindness_private_identity_integration`
+### 206. Omega: `omega_extraction_blindness_private_identity_integration`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `private_identity_integration`
@@ -4565,7 +5374,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 177. Omega: `omega_extraction_blindness_qwerty_vs_dvorak`
+### 207. Omega: `omega_extraction_blindness_qwerty_vs_dvorak`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `qwerty_vs_dvorak`
@@ -4592,7 +5401,61 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 178. Omega: `omega_extraction_blindness_riot_incentive_loop_2026`
+### 208. Omega: `omega_extraction_blindness_rare_earth_dependency`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `rare_earth_dependency`
+*   **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+*   **Question:** Constraint rare_earth_dependency appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from rare_earth_dependency?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does rare_earth_dependency serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 209. Omega: `omega_extraction_blindness_rare_earth_seabed_mining`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `rare_earth_seabed_mining`
+*   **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+*   **Question:** Constraint rare_earth_seabed_mining appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from rare_earth_seabed_mining?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does rare_earth_seabed_mining serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 210. Omega: `omega_extraction_blindness_riot_incentive_loop_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `riot_incentive_loop_2026`
@@ -4619,7 +5482,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 179. Omega: `omega_extraction_blindness_sat_csp_complexity`
+### 211. Omega: `omega_extraction_blindness_sat_csp_complexity`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `sat_csp_complexity`
@@ -4646,7 +5509,34 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 180. Omega: `omega_extraction_blindness_shannon_entropy_limit`
+### 212. Omega: `omega_extraction_blindness_semiconductor_mission_2026`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `semiconductor_mission_2026`
+*   **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+*   **Question:** Constraint semiconductor_mission_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from semiconductor_mission_2026?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does semiconductor_mission_2026 serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 213. Omega: `omega_extraction_blindness_shannon_entropy_limit`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `shannon_entropy_limit`
@@ -4673,7 +5563,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 181. Omega: `omega_extraction_blindness_skolems_paradox`
+### 214. Omega: `omega_extraction_blindness_skolems_paradox`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `skolems_paradox`
@@ -4700,7 +5590,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 182. Omega: `omega_extraction_blindness_social_narrative_casting`
+### 215. Omega: `omega_extraction_blindness_social_narrative_casting`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `social_narrative_casting`
@@ -4727,7 +5617,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 183. Omega: `omega_extraction_blindness_somatic_focusing_awareness`
+### 216. Omega: `omega_extraction_blindness_somatic_focusing_awareness`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `somatic_focusing_awareness`
@@ -4754,7 +5644,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 184. Omega: `omega_extraction_blindness_sorites_paradox`
+### 217. Omega: `omega_extraction_blindness_sorites_paradox`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `sorites_paradox`
@@ -4781,7 +5671,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 185. Omega: `omega_extraction_blindness_tarski_undefinability`
+### 218. Omega: `omega_extraction_blindness_tarski_undefinability`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `tarski_undefinability`
@@ -4808,7 +5698,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 186. Omega: `omega_extraction_blindness_tcp_rfc9293_interoperability`
+### 219. Omega: `omega_extraction_blindness_tcp_rfc9293_interoperability`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `rfc9293_interoperability`
@@ -4835,7 +5725,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 187. Omega: `omega_extraction_blindness_trade_secret_law`
+### 220. Omega: `omega_extraction_blindness_trade_secret_law`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `trade_secret_law`
@@ -4862,7 +5752,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 188. Omega: `omega_extraction_blindness_traveling_salesperson_problem`
+### 221. Omega: `omega_extraction_blindness_traveling_salesperson_problem`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `traveling_salesperson_problem`
@@ -4889,7 +5779,88 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 189. Omega: `omega_extraction_blindness_ulysses_aeolus_1904`
+### 222. Omega: `omega_extraction_blindness_trump_critical_minerals`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `trump_critical_minerals`
+*   **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+*   **Question:** Constraint trump_critical_minerals appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from trump_critical_minerals?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does trump_critical_minerals serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 223. Omega: `omega_extraction_blindness_trump_indian_tariffs_2026`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `trump_indian_tariffs_2026`
+*   **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+*   **Question:** Constraint trump_indian_tariffs_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from trump_indian_tariffs_2026?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does trump_indian_tariffs_2026 serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 224. Omega: `omega_extraction_blindness_ukr_mobilization`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `ukr_mobilization`
+*   **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+*   **Question:** Constraint ukr_mobilization appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from ukr_mobilization?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does ukr_mobilization serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 225. Omega: `omega_extraction_blindness_ulysses_aeolus_1904`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ulysses_chp07`
@@ -4916,7 +5887,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 190. Omega: `omega_extraction_blindness_ulysses_calypso_1904`
+### 226. Omega: `omega_extraction_blindness_ulysses_calypso_1904`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ulysses_chp04`
@@ -4943,7 +5914,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 191. Omega: `omega_extraction_blindness_ulysses_cyclops_1904`
+### 227. Omega: `omega_extraction_blindness_ulysses_cyclops_1904`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ulysses_chp12`
@@ -4970,7 +5941,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 192. Omega: `omega_extraction_blindness_ulysses_eumaeus_1904`
+### 228. Omega: `omega_extraction_blindness_ulysses_eumaeus_1904`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ulysses_chp16`
@@ -4997,7 +5968,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 193. Omega: `omega_extraction_blindness_ulysses_ithaca_1904`
+### 229. Omega: `omega_extraction_blindness_ulysses_ithaca_1904`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ulysses_chp17`
@@ -5024,7 +5995,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 194. Omega: `omega_extraction_blindness_ulysses_lestrygonians_1904`
+### 230. Omega: `omega_extraction_blindness_ulysses_lestrygonians_1904`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ulysses_chp08`
@@ -5051,7 +6022,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 195. Omega: `omega_extraction_blindness_ulysses_lotus_1904`
+### 231. Omega: `omega_extraction_blindness_ulysses_lotus_1904`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ulysses_chp05`
@@ -5078,7 +6049,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 196. Omega: `omega_extraction_blindness_ulysses_nausicaa_1904`
+### 232. Omega: `omega_extraction_blindness_ulysses_nausicaa_1904`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ulysses_chp13`
@@ -5105,7 +6076,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 197. Omega: `omega_extraction_blindness_ulysses_rocks_1904`
+### 233. Omega: `omega_extraction_blindness_ulysses_rocks_1904`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ulysses_chp10`
@@ -5132,7 +6103,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 198. Omega: `omega_extraction_blindness_ulysses_school_1904`
+### 234. Omega: `omega_extraction_blindness_ulysses_school_1904`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ulysses_chp02`
@@ -5159,7 +6130,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 199. Omega: `omega_extraction_blindness_ulysses_scylla_1904`
+### 235. Omega: `omega_extraction_blindness_ulysses_scylla_1904`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ulysses_chp09`
@@ -5186,7 +6157,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 200. Omega: `omega_extraction_blindness_ulysses_sirens_1904`
+### 236. Omega: `omega_extraction_blindness_ulysses_sirens_1904`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ulysses_chp11`
@@ -5213,7 +6184,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 201. Omega: `omega_extraction_blindness_ulysses_tower_1904`
+### 237. Omega: `omega_extraction_blindness_ulysses_tower_1904`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ulysses_chp01`
@@ -5240,7 +6211,34 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 202. Omega: `omega_extraction_blindness_value_alignment_drift`
+### 238. Omega: `omega_extraction_blindness_us_iran_drone_conflict`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `us_iran_drone_conflict`
+*   **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+*   **Question:** Constraint us_iran_drone_conflict appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from us_iran_drone_conflict?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does us_iran_drone_conflict serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 239. Omega: `omega_extraction_blindness_value_alignment_drift`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `value_alignment_drift`
@@ -5267,7 +6265,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 203. Omega: `omega_extraction_blindness_van_der_waerden_theorem`
+### 240. Omega: `omega_extraction_blindness_van_der_waerden_theorem`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `van_der_waerden_theorem`
@@ -5294,7 +6292,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 204. Omega: `omega_extraction_blindness_vienna_quantum_superposition_2026`
+### 241. Omega: `omega_extraction_blindness_vienna_quantum_superposition_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `vienna_quantum_superposition_2026`
@@ -5321,7 +6319,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 205. Omega: `omega_extraction_blindness_viral_transmission_rates`
+### 242. Omega: `omega_extraction_blindness_viral_transmission_rates`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `viral_transmission_rates`
@@ -5348,7 +6346,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 206. Omega: `omega_extraction_blindness_visibility_bias_governance`
+### 243. Omega: `omega_extraction_blindness_visibility_bias_governance`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `visibility_bias_governance`
@@ -5375,7 +6373,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 207. Omega: `omega_extraction_blindness_wikipedia_crowdsourcing_2026`
+### 244. Omega: `omega_extraction_blindness_wikipedia_crowdsourcing_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `wikipedia_crowdsourcing_2026`
@@ -5395,7 +6393,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 208. Omega: `omega_extraction_blindness_wikipedia_notability_requirement_2026`
+### 245. Omega: `omega_extraction_blindness_wikipedia_notability_requirement_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `wikipedia_notability_requirement_2026`
@@ -5415,7 +6413,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 209. Omega: `omega_extraction_blindness_winners_curse`
+### 246. Omega: `omega_extraction_blindness_winners_curse`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `winners_curse`
@@ -5442,7 +6440,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 210. Omega: `omega_extraction_blindness_xi_mao_ideological_centralization`
+### 247. Omega: `omega_extraction_blindness_xi_mao_ideological_centralization`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `xi_mao_ideological_centralization`
@@ -5462,7 +6460,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 211. Omega: `omega_extraction_blindness_zipfs_law`
+### 248. Omega: `omega_extraction_blindness_zipfs_law`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `zipfs_law`
@@ -5489,7 +6487,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 212. Omega: `omega_extraction_blindness_zombie_reasoning_2026`
+### 249. Omega: `omega_extraction_blindness_zombie_reasoning_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `zombie_reasoning_2026`
@@ -5516,7 +6514,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 213. Omega: `omega_learned_helplessness_ai_cognitive_diversity_arbitrage`
+### 250. Omega: `omega_learned_helplessness_ai_cognitive_diversity_arbitrage`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ai_cognitive_diversity_arbitrage`
@@ -5540,7 +6538,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 214. Omega: `omega_learned_helplessness_big_data_astrophysics_arbitrage`
+### 251. Omega: `omega_learned_helplessness_big_data_astrophysics_arbitrage`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `big_data_astrophysics_arbitrage`
@@ -5564,7 +6562,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 215. Omega: `omega_learned_helplessness_cow_field_poop`
+### 252. Omega: `omega_learned_helplessness_cow_field_poop`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `cow_field_poop`
@@ -5588,7 +6586,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 216. Omega: `omega_learned_helplessness_currys_paradox`
+### 253. Omega: `omega_learned_helplessness_currys_paradox`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `currys_paradox`
@@ -5612,7 +6610,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 217. Omega: `omega_learned_helplessness_ergo_lets_protocol`
+### 254. Omega: `omega_learned_helplessness_ergo_lets_protocol`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ergo_lets_protocol`
@@ -5636,7 +6634,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 218. Omega: `omega_learned_helplessness_exoplanetary_habitability_arbitrage`
+### 255. Omega: `omega_learned_helplessness_exoplanetary_habitability_arbitrage`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `exoplanet_habitability_arbitrage`
@@ -5660,7 +6658,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 219. Omega: `omega_learned_helplessness_fair_use_doctrine`
+### 256. Omega: `omega_learned_helplessness_fair_use_doctrine`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `fair_use_doctrine`
@@ -5684,7 +6682,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 220. Omega: `omega_learned_helplessness_information_foraging_theory`
+### 257. Omega: `omega_learned_helplessness_information_foraging_theory`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `information_foraging_theory`
@@ -5708,7 +6706,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 221. Omega: `omega_learned_helplessness_layered_brain_processing`
+### 258. Omega: `omega_learned_helplessness_layered_brain_processing`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `layered_brain_processing`
@@ -5732,7 +6730,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 222. Omega: `omega_learned_helplessness_local_vs_global_optima`
+### 259. Omega: `omega_learned_helplessness_local_vs_global_optima`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `local_vs_global_optima`
@@ -5756,7 +6754,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 223. Omega: `omega_learned_helplessness_openbsd_netiquette_protocol`
+### 260. Omega: `omega_learned_helplessness_openbsd_netiquette_protocol`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `openbsd_netiquette_protocol`
@@ -5780,7 +6778,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 224. Omega: `omega_learned_helplessness_overton_window`
+### 261. Omega: `omega_learned_helplessness_overton_window`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `overton_window`
@@ -5804,7 +6802,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 225. Omega: `omega_learned_helplessness_pareto_principle`
+### 262. Omega: `omega_learned_helplessness_pareto_principle`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `pareto_principle`
@@ -5828,7 +6826,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 226. Omega: `omega_learned_helplessness_relativity_physical_invariance`
+### 263. Omega: `omega_learned_helplessness_relativity_physical_invariance`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `relativity_physical_invariance`
@@ -5852,7 +6850,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 227. Omega: `omega_learned_helplessness_skills_based_hiring`
+### 264. Omega: `omega_learned_helplessness_skills_based_hiring`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `skills_based_hiring`
@@ -5876,7 +6874,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 228. Omega: `omega_learned_helplessness_south_china_sea_arbitration_2016_2026`
+### 265. Omega: `omega_learned_helplessness_south_china_sea_arbitration_2016_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `south_china_sea_arbitration_2016_2026`
@@ -5900,7 +6898,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 229. Omega: `omega_learned_helplessness_thai_article_112_mountain`
+### 266. Omega: `omega_learned_helplessness_thai_article_112_mountain`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `thai_article_112_mountain`
@@ -5924,7 +6922,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 230. Omega: `omega_learned_helplessness_ulysses_circe_1904`
+### 267. Omega: `omega_learned_helplessness_ulysses_circe_1904`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ulysses_chp15`
@@ -5948,7 +6946,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 231. Omega: `omega_learned_helplessness_ulysses_oxen_1904`
+### 268. Omega: `omega_learned_helplessness_ulysses_oxen_1904`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ulysses_chp14`
@@ -5972,7 +6970,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 232. Omega: `omega_learned_helplessness_ulysses_penelope_1904`
+### 269. Omega: `omega_learned_helplessness_ulysses_penelope_1904`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ulysses_chp18`
@@ -5996,7 +6994,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 233. Omega: `omega_learned_helplessness_ulysses_proteus_1904`
+### 270. Omega: `omega_learned_helplessness_ulysses_proteus_1904`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ulysses_chp03`
@@ -6020,7 +7018,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 234. Omega: `omega_perspectival_antifragility`
+### 271. Omega: `omega_perspectival_antifragility`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `antifragility`
@@ -6042,7 +7040,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 235. Omega: `omega_perspectival_asymmetric_computational_difficulty`
+### 272. Omega: `omega_perspectival_asymmetric_computational_difficulty`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `asymmetric_computational_difficulty`
@@ -6062,7 +7060,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 236. Omega: `omega_perspectival_bedouin_sedentary_transition`
+### 273. Omega: `omega_perspectival_bedouin_sedentary_transition`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `bedouin_sedentary_transition`
@@ -6084,7 +7082,51 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 237. Omega: `omega_perspectival_climate_target_one_point_five`
+### 274. Omega: `omega_perspectival_cb_far_beyond_human`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `cb_far_beyond_human`
+*   **Source Gap:** `gap(general_type_mismatch,snare,tangled_rope)`
+*   **Question:** Constraint cb_far_beyond_human appears as snare to individuals but tangled_rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive cb_far_beyond_human
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 275. Omega: `omega_perspectival_child_marriage`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `child_marriage`
+*   **Source Gap:** `gap(general_type_mismatch,snare,piton)`
+*   **Question:** Constraint child_marriage appears as snare to individuals but piton to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive child_marriage
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 276. Omega: `omega_perspectival_climate_target_one_point_five`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `climate_target_one_point_five`
@@ -6106,7 +7148,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 238. Omega: `omega_perspectival_copyleft_viral_licensing`
+### 277. Omega: `omega_perspectival_copyleft_viral_licensing`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `copyleft_viral_licensing`
@@ -6128,7 +7170,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 239. Omega: `omega_perspectival_copyright_protection`
+### 278. Omega: `omega_perspectival_copyright_protection`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `copyright_protection`
@@ -6150,7 +7192,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 240. Omega: `omega_perspectival_creative_commons_licensing`
+### 279. Omega: `omega_perspectival_creative_commons_licensing`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `creative_commons_licensing`
@@ -6172,7 +7214,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 241. Omega: `omega_perspectival_decentralized_infrastructure_rope`
+### 280. Omega: `omega_perspectival_decentralized_infrastructure_rope`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `new_civilizational_rope`
@@ -6194,7 +7236,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 242. Omega: `omega_perspectival_e2ee_digital_privacy_2026`
+### 281. Omega: `omega_perspectival_e2ee_digital_privacy_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `e2ee_digital_privacy_2026`
@@ -6216,7 +7258,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 243. Omega: `omega_perspectival_ergo_autolykos_asic_resistance`
+### 282. Omega: `omega_perspectival_ergo_autolykos_asic_resistance`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ergo_autolykos_asic_resistance`
@@ -6238,7 +7280,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 244. Omega: `omega_perspectival_fed_shutdown_2026`
+### 283. Omega: `omega_perspectival_fed_shutdown_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `fed_shutdown_2026`
@@ -6260,7 +7302,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 245. Omega: `omega_perspectival_gold_piton_2026`
+### 284. Omega: `omega_perspectival_gold_piton_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `gold_piton_2026`
@@ -6282,7 +7324,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 246. Omega: `omega_perspectival_kjv_great_awakening`
+### 285. Omega: `omega_perspectival_kjv_great_awakening`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `kjv_great_awakening`
@@ -6304,7 +7346,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 247. Omega: `omega_perspectival_liar_paradox`
+### 286. Omega: `omega_perspectival_liar_paradox`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `liar_paradox`
@@ -6326,7 +7368,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 248. Omega: `omega_perspectival_litany_of_the_real`
+### 287. Omega: `omega_perspectival_litany_of_the_real`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `litany_of_the_real`
@@ -6346,7 +7388,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 249. Omega: `omega_perspectival_maha_recovery_2026`
+### 288. Omega: `omega_perspectival_maha_recovery_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `maha_recovery_2026`
@@ -6368,7 +7410,29 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 250. Omega: `omega_perspectival_milano_cortina_2026`
+### 289. Omega: `omega_perspectival_meta_nda`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `meta_nda`
+*   **Source Gap:** `gap(general_type_mismatch,snare,tangled_rope)`
+*   **Question:** Constraint meta_nda appears as snare to individuals but tangled_rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive meta_nda
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 290. Omega: `omega_perspectival_milano_cortina_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `winter_olympics_2026`
@@ -6390,7 +7454,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 251. Omega: `omega_perspectival_moores_law`
+### 291. Omega: `omega_perspectival_moores_law`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `moores_law`
@@ -6412,7 +7476,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 252. Omega: `omega_perspectival_platform_cooperativism_governance`
+### 292. Omega: `omega_perspectival_platform_cooperativism_governance`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `platform_cooperativism_governance`
@@ -6434,7 +7498,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 253. Omega: `omega_perspectival_project_vault_2026`
+### 293. Omega: `omega_perspectival_project_vault_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `project_vault_2026`
@@ -6456,7 +7520,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 254. Omega: `omega_perspectival_public_domain_commons`
+### 294. Omega: `omega_perspectival_public_domain_commons`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `public_domain_commons`
@@ -6478,7 +7542,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 255. Omega: `omega_perspectival_pythagorean_geometric_constancy`
+### 295. Omega: `omega_perspectival_pythagorean_geometric_constancy`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `pythagorean_theorem_geometric_constancy`
@@ -6500,7 +7564,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 256. Omega: `omega_perspectival_quantum_nonlocality_2026`
+### 296. Omega: `omega_perspectival_quantum_nonlocality_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `quantum_nonlocality_2026`
@@ -6522,7 +7586,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 257. Omega: `omega_perspectival_shitty_feedback_handling`
+### 297. Omega: `omega_perspectival_shitty_feedback_handling`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `shitty_feedback_handling`
@@ -6544,7 +7608,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 258. Omega: `omega_perspectival_sig_usd_protocol`
+### 298. Omega: `omega_perspectival_sig_usd_protocol`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ergo_sig_usd_protocol`
@@ -6566,7 +7630,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 259. Omega: `omega_perspectival_solar_system_weirdness`
+### 299. Omega: `omega_perspectival_solar_system_weirdness`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `solar_system_weirdness`
@@ -6588,7 +7652,29 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 260. Omega: `omega_perspectival_sturgeons_law`
+### 300. Omega: `omega_perspectival_start_treaty`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `start_treaty`
+*   **Source Gap:** `gap(general_type_mismatch,snare,piton)`
+*   **Question:** Constraint start_treaty appears as snare to individuals but piton to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive start_treaty
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 301. Omega: `omega_perspectival_sturgeons_law`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `sturgeons_law`
@@ -6610,7 +7696,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 261. Omega: `omega_perspectival_transient_event_detection`
+### 302. Omega: `omega_perspectival_transient_event_detection`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `transient_event_detection`

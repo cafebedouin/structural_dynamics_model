@@ -45,6 +45,7 @@
     fingerprint_actors/2,           % Actor topology (beneficiary/victim)
     fingerprint_drift/2,            % Temporal drift trajectory
     fingerprint_zone/2,             % Metric zone (categorical)
+    fingerprint_coupling/2,         % Coupling topology (Boltzmann v5.0)
 
     % Discovery
     known_constraint/1,             % All discoverable constraint IDs (atoms only)
@@ -60,6 +61,7 @@
 :- use_module(constraint_indexing).
 :- use_module(config).
 :- use_module(domain_priors).
+:- use_module(structural_signatures).
 
 :- use_module(library(lists)).
 
@@ -73,15 +75,24 @@
 %
 %  Two constraints with unifiable fingerprints are logically isomorphic.
 %
-%  Fingerprint = fingerprint(Shift, Properties, Voids, Actors, Drift, Zone)
+%  Fingerprint = fingerprint(Shift, Properties, Voids, Actors, Drift, Zone, Coupling)
+%
+%  v5.0: Added 7th dimension — Coupling Topology (Boltzmann compliance).
+%  Maps which index dimensions are independent, weakly coupled,
+%  strongly coupled, or nonsensically coupled.
+%
+%  v5.1: Extended coupling dimension with Purity Score — scalar [0,1]
+%  combining all four Boltzmann structural tests into a single metric
+%  for ranking, drift detection, and cross-domain comparison.
 
-logical_fingerprint(C, fingerprint(Shift, Properties, Voids, Actors, Drift, Zone)) :-
+logical_fingerprint(C, fingerprint(Shift, Properties, Voids, Actors, Drift, Zone, Coupling)) :-
     fingerprint_shift(C, Shift),
     fingerprint_properties(C, Properties),
     fingerprint_voids(C, Voids),
     fingerprint_actors(C, Actors),
     fingerprint_drift(C, Drift),
-    fingerprint_zone(C, Zone).
+    fingerprint_zone(C, Zone),
+    fingerprint_coupling(C, Coupling).
 
 % ============================================================================
 % DIMENSION 1: PERSPECTIVAL SHIFT
@@ -372,6 +383,67 @@ suppression_zone(S, high) :-
 suppression_zone(_, extreme).
 
 % ============================================================================
+% DIMENSION 7: COUPLING TOPOLOGY (Boltzmann v5.0)
+% ============================================================================
+% Maps the independence structure of a constraint across index dimensions.
+% Based on Tamuz & Sandomirskiy (2025): the Boltzmann distribution is the
+% ONLY law describing unrelated systems. A constraint whose classification
+% factorizes across Power × Scope is "Boltzmann-compliant" — its dimensions
+% are genuinely independent.
+%
+% Coupling categories:
+%   independent          — classification factorizes (CouplingScore ≤ threshold)
+%   weakly_coupled       — minor coupling (threshold < score ≤ strong_threshold)
+%   strongly_coupled     — significant coupling (score > strong_threshold)
+%   nonsensically_coupled — coupling with no functional justification
+%   inconclusive         — insufficient data for reliable test
+%
+% This dimension enables:
+%   - Comparing constraints by coupling structure (isomorphism on coupling)
+%   - Detecting "coupling drift" as a lifecycle event
+%   - Identifying false Mountains via Boltzmann invariance failure
+%   - Distinguishing functional entanglement from extractive coupling
+
+%% fingerprint_coupling(+C, -Coupling)
+%  Returns coupling(Category, Score, CoupledPairs, BoltzmannCompliance, PurityScore)
+%  where Category is the categorical coupling level, Score is the raw
+%  coupling score, and PurityScore is the scalar purity in [0,1] (or -1.0
+%  if insufficient data).
+
+fingerprint_coupling(C, coupling(Category, Score, CoupledPairs, Compliance, Purity)) :-
+    structural_signatures:epistemic_access_check(C, EpistemicOk),
+    (   EpistemicOk == false
+    ->  Category = inconclusive,
+        Score = unknown,
+        CoupledPairs = [],
+        Compliance = inconclusive(insufficient_classifications),
+        Purity = -1.0
+    ;   structural_signatures:cross_index_coupling(C, Score),
+        structural_signatures:complexity_adjusted_threshold(C, Threshold),
+        config:param(boltzmann_coupling_strong_threshold, StrongThreshold),
+        categorize_coupling(Score, Threshold, StrongThreshold, C, Category),
+        (   structural_signatures:detect_nonsensical_coupling(C, CoupledPairs, _)
+        ->  true
+        ;   CoupledPairs = []
+        ),
+        structural_signatures:boltzmann_compliant(C, Compliance),
+        structural_signatures:purity_score(C, Purity)
+    ).
+
+%% categorize_coupling(+Score, +Threshold, +StrongThreshold, +C, -Category)
+%  Converts raw coupling score into categorical coupling level.
+%  Checks for "nonsensical" coupling: strong coupling with no
+%  functional justification (no coordination function declared).
+categorize_coupling(Score, Threshold, _, _, independent) :-
+    Score =< Threshold, !.
+categorize_coupling(Score, _, StrongThreshold, C, nonsensically_coupled) :-
+    Score > StrongThreshold,
+    \+ narrative_ontology:has_coordination_function(C), !.
+categorize_coupling(Score, _, StrongThreshold, _, strongly_coupled) :-
+    Score > StrongThreshold, !.
+categorize_coupling(_, _, _, _, weakly_coupled).
+
+% ============================================================================
 % CONSTRAINT DISCOVERY
 % ============================================================================
 % Discovers all constraint IDs in the corpus. Uses constraint_metric/3 as
@@ -468,6 +540,11 @@ dimension_matches(C1, C2, zone, Result) :-
     fingerprint_zone(C2, Z2),
     (Z1 = Z2 -> Result = true ; Result = false).
 
+dimension_matches(C1, C2, coupling, Result) :-
+    fingerprint_coupling(C1, coupling(Cat1, _, _, _, _)),
+    fingerprint_coupling(C2, coupling(Cat2, _, _, _, _)),
+    (Cat1 = Cat2 -> Result = true ; Result = false).
+
 % ============================================================================
 % CONVENIENCE PREDICATES
 % ============================================================================
@@ -495,4 +572,25 @@ print_fingerprint(C) :-
     (fingerprint_zone(C, zone(EZ, SZ))
     -> format('  Zone:       extraction=~w  suppression=~w~n', [EZ, SZ])
     ;  format('  Zone:       (unknown)~n')),
+    (fingerprint_coupling(C, coupling(Cat, Score, Pairs, Comp, Purity))
+    -> (Score = unknown
+       -> format('  Coupling:   ~w (insufficient data)~n', [Cat])
+       ;  Purity =:= -1.0
+       -> format('  Coupling:   ~w (score=~3f, pairs=~w, boltzmann=~w)~n',
+                  [Cat, Score, Pairs, Comp]),
+          format('  Purity:     inconclusive~n')
+       ;  format('  Coupling:   ~w (score=~3f, pairs=~w, boltzmann=~w)~n',
+                  [Cat, Score, Pairs, Comp]),
+          purity_zone(Purity, PurityZone),
+          format('  Purity:     ~3f (~w)~n', [Purity, PurityZone])
+       )
+    ;  format('  Coupling:   (unable to compute)~n')),
     format('~n').
+
+%% purity_zone(+Score, -Zone)
+%  Categorizes purity score into named zones for display.
+purity_zone(S, pristine)     :- S >= 0.90, !.
+purity_zone(S, sound)        :- S >= 0.70, !.
+purity_zone(S, borderline)   :- S >= 0.50, !.
+purity_zone(S, contaminated) :- S >= 0.30, !.
+purity_zone(_, degraded).

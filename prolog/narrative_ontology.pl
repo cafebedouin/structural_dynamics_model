@@ -35,6 +35,11 @@
     % Scaffold
     has_sunset_clause/1,
     
+    % Boltzmann compliance layer (v5.0)
+    coupling_profile/2,
+    coordination_type/2,
+    boltzmann_floor_override/2,
+
     % Validation entry point
     validate_ontology/0
 ]).
@@ -53,7 +58,8 @@
     intent_beneficiary_class/2, intent_power_change/3,
     intent_suppression_level/4, intent_resistance_level/4,
     intent_norm_strength/3, theater_ratio/2,
-    constraint_beneficiary/2, constraint_victim/2, input_vector/2.
+    constraint_beneficiary/2, constraint_victim/2, input_vector/2,
+    coupling_profile/2, coordination_type/2, boltzmann_floor_override/2.
 
 :- dynamic
     attribute/3, has_mandatrophy_declaration/1,
@@ -65,7 +71,8 @@
     intent_beneficiary_class/2, intent_power_change/3,
     intent_suppression_level/4, intent_resistance_level/4,
     intent_norm_strength/3, constraint_claim/3,
-    constraint_beneficiary/2, constraint_victim/2, input_vector/2.
+    constraint_beneficiary/2, constraint_victim/2, input_vector/2,
+    coupling_profile/2, coordination_type/2, boltzmann_floor_override/2.
 
 /* ============================================================
    2. VALIDATION LOGIC

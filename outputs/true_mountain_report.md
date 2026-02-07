@@ -9,7 +9,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 ### 1. True Mountain: `arrows_impossibility_theorem`
 
 *   **Claimed Type:** `mountain`
-*   **Structural Signature Analysis:** CONSTRUCTED HIGH-EXTRACTION signature for arrows_impossibility_theorem: Enforcement present (suppression=0.40, resistance=0.50) with high extraction (0.60). This is an extraction mechanism that metrics failed to classify as snare.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for arrows_impossibility_theorem: Appears to be rope (indexed_rope_classification) but fails 3 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.15),excess_above_floor(0.5499999999999999),nonsensical_coupling(0.16666666666666666)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -17,7 +17,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 ### 2. True Mountain: `asce_7_22_seismic_design`
 
 *   **Claimed Type:** `mountain`
-*   **Structural Signature Analysis:** CONSTRUCTED LOW-EXTRACTION signature for asce_7_22_seismic_design: Enforcement present (suppression=0.70, resistance=0.50) but extraction is low (0.20). This is a rule-based coordination structure, not an extraction mechanism.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for asce_7_22_seismic_design: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.15000000000000002)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -25,7 +25,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 ### 3. True Mountain: `axiom_of_choice_determinacy`
 
 *   **Claimed Type:** `mountain`
-*   **Structural Signature Analysis:** CONSTRUCTED LOW-EXTRACTION signature for axiom_of_choice_determinacy: Enforcement present (suppression=0.40, resistance=0.50) but extraction is low (0.25). This is a rule-based coordination structure, not an extraction mechanism.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for axiom_of_choice_determinacy: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.2)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -33,7 +33,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 ### 4. True Mountain: `banach_tarski_paradox`
 
 *   **Claimed Type:** `mountain`
-*   **Structural Signature Analysis:** CONSTRUCTED LOW-EXTRACTION signature for banach_tarski_paradox: Enforcement present (suppression=0.40, resistance=0.50) but extraction is low (0.20). This is a rule-based coordination structure, not an extraction mechanism.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for banach_tarski_paradox: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.15000000000000002)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -41,7 +41,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 ### 5. True Mountain: `base_pair_complementarity`
 
 *   **Claimed Type:** `mountain`
-*   **Structural Signature Analysis:** CONSTRUCTED LOW-EXTRACTION signature for base_pair_complementarity: Enforcement present (suppression=1.00, resistance=0.50) but extraction is low (0.20). This is a rule-based coordination structure, not an extraction mechanism.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for base_pair_complementarity: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.15000000000000002)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -49,7 +49,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 ### 6. True Mountain: `basel_problem_convergence`
 
 *   **Claimed Type:** `mountain`
-*   **Structural Signature Analysis:** CONSTRUCTED LOW-EXTRACTION signature for basel_problem_convergence: Enforcement present (suppression=0.10, resistance=0.50) but extraction is low (0.20). This is a rule-based coordination structure, not an extraction mechanism.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for basel_problem_convergence: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.15000000000000002)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -57,7 +57,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 ### 7. True Mountain: `birthday_paradox_collison`
 
 *   **Claimed Type:** `mountain`
-*   **Structural Signature Analysis:** CONSTRUCTED CONSTRAINT signature for birthday_paradox_collision: Active enforcement detected (suppression=0.25, resistance=0.50) with 0 asymmetric beneficiaries. Mid-extraction range: genuinely tangled coordination/extraction mix.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for birthday_paradox_collision: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.35000000000000003)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -65,7 +65,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 ### 8. True Mountain: `brouwer_fixed_point`
 
 *   **Claimed Type:** `mountain`
-*   **Structural Signature Analysis:** CONSTRUCTED LOW-EXTRACTION signature for brouwer_fixed_point: Enforcement present (suppression=0.10, resistance=0.50) but extraction is low (0.20). This is a rule-based coordination structure, not an extraction mechanism.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for brouwer_fixed_point: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.15000000000000002)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -73,7 +73,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 ### 9. True Mountain: `buffons_needle_pi_estimation`
 
 *   **Claimed Type:** `mountain`
-*   **Structural Signature Analysis:** CONSTRUCTED LOW-EXTRACTION signature for buffons_needle_pi_estimation: Enforcement present (suppression=0.10, resistance=0.50) but extraction is low (0.20). This is a rule-based coordination structure, not an extraction mechanism.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for buffons_needle_pi_estimation: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.15000000000000002)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -81,7 +81,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 ### 10. True Mountain: `burali_forte_paradox`
 
 *   **Claimed Type:** `mountain`
-*   **Structural Signature Analysis:** CONSTRUCTED LOW-EXTRACTION signature for burali_forti_paradox: Enforcement present (suppression=0.30, resistance=0.50) but extraction is low (0.20). This is a rule-based coordination structure, not an extraction mechanism.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for burali_forti_paradox: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.15000000000000002)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -89,7 +89,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 ### 11. True Mountain: `burden_of_proof_scientific_empirical`
 
 *   **Claimed Type:** `mountain`
-*   **Structural Signature Analysis:** CONSTRUCTED LOW-EXTRACTION signature for burden_of_proof_scientific_empirical: Enforcement present (suppression=0.60, resistance=0.50) but extraction is low (0.30). This is a rule-based coordination structure, not an extraction mechanism.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for burden_of_proof_scientific_empirical: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.25)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -97,7 +97,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 ### 12. True Mountain: `busy_beaver_noncomputability`
 
 *   **Claimed Type:** `mountain`
-*   **Structural Signature Analysis:** CONSTRUCTED CONSTRAINT signature for busy_beaver_noncomputability: Active enforcement detected (suppression=0.30, resistance=0.50) with 0 asymmetric beneficiaries. Mid-extraction range: genuinely tangled coordination/extraction mix.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for busy_beaver_noncomputability: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.35000000000000003)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -105,7 +105,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 ### 13. True Mountain: `cantor_set_topology`
 
 *   **Claimed Type:** `mountain`
-*   **Structural Signature Analysis:** CONSTRUCTED LOW-EXTRACTION signature for cantor_set_topology: Enforcement present (suppression=0.20, resistance=0.50) but extraction is low (0.30). This is a rule-based coordination structure, not an extraction mechanism.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for cantor_set_topology: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.25)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -113,7 +113,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 ### 14. True Mountain: `cap_theorem`
 
 *   **Claimed Type:** `mountain`
-*   **Structural Signature Analysis:** CONSTRUCTED CONSTRAINT signature for cap_theorem: Active enforcement detected (suppression=0.70, resistance=0.50) with 0 asymmetric beneficiaries. Mid-extraction range: genuinely tangled coordination/extraction mix.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for cap_theorem: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.35000000000000003)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -121,7 +121,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 ### 15. True Mountain: `central_limit_theorem_convergence`
 
 *   **Claimed Type:** `mountain`
-*   **Structural Signature Analysis:** CONSTRUCTED LOW-EXTRACTION signature for central_limit_theorem_convergence: Enforcement present (suppression=0.35, resistance=0.50) but extraction is low (0.25). This is a rule-based coordination structure, not an extraction mechanism.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for central_limit_theorem_convergence: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.2)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -129,7 +129,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 ### 16. True Mountain: `chaitins_omega_undecidability`
 
 *   **Claimed Type:** `mountain`
-*   **Structural Signature Analysis:** CONSTRUCTED LOW-EXTRACTION signature for chaitins_omega_undecidability: Enforcement present (suppression=0.30, resistance=0.50) but extraction is low (0.20). This is a rule-based coordination structure, not an extraction mechanism.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for chaitins_omega_undecidability: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.15000000000000002)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -137,7 +137,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 ### 17. True Mountain: `church_turing_thesis`
 
 *   **Claimed Type:** `mountain`
-*   **Structural Signature Analysis:** CONSTRUCTED LOW-EXTRACTION signature for church_turing_thesis: Enforcement present (suppression=0.20, resistance=0.50) but extraction is low (0.10). This is a rule-based coordination structure, not an extraction mechanism.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for church_turing_thesis: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.375,0.15),excess_above_floor(0.05)]. Coupling score=0.375. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -145,7 +145,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 ### 18. True Mountain: `cinderella_midnight_deadline`
 
 *   **Claimed Type:** `mountain`
-*   **Structural Signature Analysis:** CONSTRUCTED LOW-EXTRACTION signature for midnight_deadline: Enforcement present (suppression=0.90, resistance=0.50) but extraction is low (0.10). This is a rule-based coordination structure, not an extraction mechanism.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for midnight_deadline: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.375,0.15),excess_above_floor(0.05)]. Coupling score=0.375. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -153,7 +153,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 ### 19. True Mountain: `collatz_conjecture_determinism`
 
 *   **Claimed Type:** `mountain`
-*   **Structural Signature Analysis:** CONSTRUCTED LOW-EXTRACTION signature for collatz_conjecture_determinism: Enforcement present (suppression=0.20, resistance=0.50) but extraction is low (0.15). This is a rule-based coordination structure, not an extraction mechanism.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for collatz_conjecture_determinism: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.375,0.15),excess_above_floor(0.09999999999999999)]. Coupling score=0.375. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -161,7 +161,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 ### 20. True Mountain: `continuum_hypothesis_undecidability`
 
 *   **Claimed Type:** `mountain`
-*   **Structural Signature Analysis:** CONSTRUCTED LOW-EXTRACTION signature for continuum_hypothesis_undecidability: Enforcement present (suppression=0.25, resistance=0.50) but extraction is low (0.15). This is a rule-based coordination structure, not an extraction mechanism.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for continuum_hypothesis_undecidability: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.375,0.15),excess_above_floor(0.09999999999999999)]. Coupling score=0.375. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -169,7 +169,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 ### 21. True Mountain: `conways_game_of_life_dynamics`
 
 *   **Claimed Type:** `mountain`
-*   **Structural Signature Analysis:** CONSTRUCTED LOW-EXTRACTION signature for conways_game_of_life_dynamics: Enforcement present (suppression=0.40, resistance=0.50) but extraction is low (0.30). This is a rule-based coordination structure, not an extraction mechanism.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for conways_game_of_life_dynamics: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.25)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -177,7 +177,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 ### 22. True Mountain: `countable_infinity_cardinality`
 
 *   **Claimed Type:** `mountain`
-*   **Structural Signature Analysis:** CONSTRUCTED LOW-EXTRACTION signature for countable_infinity_cardinality: Enforcement present (suppression=0.25, resistance=0.50) but extraction is low (0.20). This is a rule-based coordination structure, not an extraction mechanism.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for countable_infinity_cardinality: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.15000000000000002)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -185,7 +185,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 ### 23. True Mountain: `damped_harmonics`
 
 *   **Claimed Type:** `mountain`
-*   **Structural Signature Analysis:** CONSTRUCTED LOW-EXTRACTION signature for damped_harmonics: Enforcement present (suppression=0.10, resistance=0.50) but extraction is low (0.25). This is a rule-based coordination structure, not an extraction mechanism.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for damped_harmonics: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.2)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -193,7 +193,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 ### 24. True Mountain: `ergodic_theorems`
 
 *   **Claimed Type:** `mountain`
-*   **Structural Signature Analysis:** CONSTRUCTED LOW-EXTRACTION signature for ergodic_theorems: Enforcement present (suppression=0.60, resistance=0.50) but extraction is low (0.30). This is a rule-based coordination structure, not an extraction mechanism.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for ergodic_theorems: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.25)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -201,7 +201,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 ### 25. True Mountain: `euler_characteristic_topology`
 
 *   **Claimed Type:** `mountain`
-*   **Structural Signature Analysis:** CONSTRUCTED LOW-EXTRACTION signature for euler_characteristic_topology: Enforcement present (suppression=0.10, resistance=0.50) but extraction is low (0.10). This is a rule-based coordination structure, not an extraction mechanism.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for euler_characteristic_topology: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.375,0.15),excess_above_floor(0.05)]. Coupling score=0.375. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -209,7 +209,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 ### 26. True Mountain: `feigenbaum_universality`
 
 *   **Claimed Type:** `mountain`
-*   **Structural Signature Analysis:** CONSTRUCTED LOW-EXTRACTION signature for feigenbaum_universality: Enforcement present (suppression=0.20, resistance=0.50) but extraction is low (0.30). This is a rule-based coordination structure, not an extraction mechanism.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for feigenbaum_universality: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.25)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -217,7 +217,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 ### 27. True Mountain: `finite_simple_groups_classification`
 
 *   **Claimed Type:** `mountain`
-*   **Structural Signature Analysis:** CONSTRUCTED LOW-EXTRACTION signature for finite_simple_group_classification: Enforcement present (suppression=0.20, resistance=0.50) but extraction is low (0.35). This is a rule-based coordination structure, not an extraction mechanism.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for finite_simple_group_classification: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.3)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -225,7 +225,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 ### 28. True Mountain: `four_color_theorem_topological_bound`
 
 *   **Claimed Type:** `mountain`
-*   **Structural Signature Analysis:** CONSTRUCTED LOW-EXTRACTION signature for four_color_theorem_topological_bound: Enforcement present (suppression=0.20, resistance=0.50) but extraction is low (0.25). This is a rule-based coordination structure, not an extraction mechanism.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for four_color_theorem_topological_bound: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.2)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -233,7 +233,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 ### 29. True Mountain: `fundamental_theorem_of_algebra`
 
 *   **Claimed Type:** `mountain`
-*   **Structural Signature Analysis:** CONSTRUCTED LOW-EXTRACTION signature for fundamental_theorem_of_algebra: Enforcement present (suppression=0.20, resistance=0.50) but extraction is low (0.10). This is a rule-based coordination structure, not an extraction mechanism.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for fundamental_theorem_of_algebra: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.375,0.15),excess_above_floor(0.05)]. Coupling score=0.375. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -241,7 +241,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 ### 30. True Mountain: `galois_theory_symmetry`
 
 *   **Claimed Type:** `mountain`
-*   **Structural Signature Analysis:** CONSTRUCTED LOW-EXTRACTION signature for galois_theory_symmetry: Enforcement present (suppression=0.10, resistance=0.50) but extraction is low (0.20). This is a rule-based coordination structure, not an extraction mechanism.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for galois_theory_symmetry: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.15000000000000002)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -249,7 +249,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 ### 31. True Mountain: `gauss_bonnet_topology`
 
 *   **Claimed Type:** `mountain`
-*   **Structural Signature Analysis:** CONSTRUCTED LOW-EXTRACTION signature for gauss_bonnet_topology: Enforcement present (suppression=0.05, resistance=0.50) but extraction is low (0.10). This is a rule-based coordination structure, not an extraction mechanism.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for gauss_bonnet_topology: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.15),excess_above_floor(0.05)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -257,7 +257,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 ### 32. True Mountain: `godels_incompleteness_theorems`
 
 *   **Claimed Type:** `mountain`
-*   **Structural Signature Analysis:** CONSTRUCTED LOW-EXTRACTION signature for goedels_incompleteness_theorems: Enforcement present (suppression=0.35, resistance=0.50) but extraction is low (0.20). This is a rule-based coordination structure, not an extraction mechanism.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for goedels_incompleteness_theorems: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.15000000000000002)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -265,7 +265,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 ### 33. True Mountain: `goldbach_conjecture`
 
 *   **Claimed Type:** `mountain`
-*   **Structural Signature Analysis:** CONSTRUCTED LOW-EXTRACTION signature for goldbach_conjecture: Enforcement present (suppression=0.10, resistance=0.50) but extraction is low (0.15). This is a rule-based coordination structure, not an extraction mechanism.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for goldbach_conjecture: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.375,0.15),excess_above_floor(0.09999999999999999)]. Coupling score=0.375. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -273,7 +273,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 ### 34. True Mountain: `graph_coloring_complexity`
 
 *   **Claimed Type:** `mountain`
-*   **Structural Signature Analysis:** CONSTRUCTED CONSTRAINT signature for graph_coloring_complexity: Active enforcement detected (suppression=0.50, resistance=0.50) with 0 asymmetric beneficiaries. Mid-extraction range: genuinely tangled coordination/extraction mix.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for graph_coloring_complexity: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.35000000000000003)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -281,7 +281,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 ### 35. True Mountain: `halting_problem_undecidability`
 
 *   **Claimed Type:** `mountain`
-*   **Structural Signature Analysis:** CONSTRUCTED LOW-EXTRACTION signature for halting_problem_undecidability: Enforcement present (suppression=0.30, resistance=0.50) but extraction is low (0.20). This is a rule-based coordination structure, not an extraction mechanism.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for halting_problem_undecidability: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.15000000000000002)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -289,7 +289,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 ### 36. True Mountain: `heisenberg_uncertainty`
 
 *   **Claimed Type:** `mountain`
-*   **Structural Signature Analysis:** CONSTRUCTED LOW-EXTRACTION signature for heisenberg_uncertainty: Enforcement present (suppression=0.40, resistance=0.50) but extraction is low (0.20). This is a rule-based coordination structure, not an extraction mechanism.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for heisenberg_uncertainty: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.15000000000000002)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -297,7 +297,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 ### 37. True Mountain: `hilberts_hotel_infinity`
 
 *   **Claimed Type:** `mountain`
-*   **Structural Signature Analysis:** CONSTRUCTED LOW-EXTRACTION signature for hilberts_hotel_infinity: Enforcement present (suppression=0.10, resistance=0.50) but extraction is low (0.15). This is a rule-based coordination structure, not an extraction mechanism.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for hilberts_hotel_infinity: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.375,0.15),excess_above_floor(0.09999999999999999)]. Coupling score=0.375. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -305,7 +305,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 ### 38. True Mountain: `inner_model_theory_constraints`
 
 *   **Claimed Type:** `mountain`
-*   **Structural Signature Analysis:** CONSTRUCTED LOW-EXTRACTION signature for inner_model_theory_constraints: Enforcement present (suppression=0.50, resistance=0.50) but extraction is low (0.30). This is a rule-based coordination structure, not an extraction mechanism.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for inner_model_theory_constraints: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.25)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -313,7 +313,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 ### 39. True Mountain: `kirby_paris_theorem`
 
 *   **Claimed Type:** `mountain`
-*   **Structural Signature Analysis:** CONSTRUCTED LOW-EXTRACTION signature for kirby_paris_theorem: Enforcement present (suppression=0.40, resistance=0.50) but extraction is low (0.20). This is a rule-based coordination structure, not an extraction mechanism.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for kirby_paris_theorem: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.15000000000000002)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -321,7 +321,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 ### 40. True Mountain: `kleene_recursion_theorem`
 
 *   **Claimed Type:** `mountain`
-*   **Structural Signature Analysis:** CONSTRUCTED LOW-EXTRACTION signature for kleene_recursion_theorem: Enforcement present (suppression=0.15, resistance=0.50) but extraction is low (0.20). This is a rule-based coordination structure, not an extraction mechanism.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for kleene_recursion_theorem: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.15000000000000002)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -329,7 +329,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 ### 41. True Mountain: `large_cardinals_foundations`
 
 *   **Claimed Type:** `mountain`
-*   **Structural Signature Analysis:** CONSTRUCTED LOW-EXTRACTION signature for large_cardinal_foundations: Enforcement present (suppression=0.40, resistance=0.50) but extraction is low (0.30). This is a rule-based coordination structure, not an extraction mechanism.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for large_cardinal_foundations: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.25)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -337,7 +337,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 ### 42. True Mountain: `liar_paradox`
 
 *   **Claimed Type:** `mountain`
-*   **Structural Signature Analysis:** CONSTRUCTED LOW-EXTRACTION signature for liar_paradox: Enforcement present (suppression=0.20, resistance=0.50) but extraction is low (0.10). This is a rule-based coordination structure, not an extraction mechanism.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for liar_paradox: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.375,0.15),excess_above_floor(0.05)]. Coupling score=0.375. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -345,7 +345,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 ### 43. True Mountain: `lln_convergence`
 
 *   **Claimed Type:** `mountain`
-*   **Structural Signature Analysis:** CONSTRUCTED LOW-EXTRACTION signature for lln_convergence: Enforcement present (suppression=0.20, resistance=0.50) but extraction is low (0.25). This is a rule-based coordination structure, not an extraction mechanism.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for lln_convergence: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.2)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -353,7 +353,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 ### 44. True Mountain: `lobs_theorem`
 
 *   **Claimed Type:** `mountain`
-*   **Structural Signature Analysis:** CONSTRUCTED LOW-EXTRACTION signature for lobs_theorem: Enforcement present (suppression=0.50, resistance=0.50) but extraction is low (0.30). This is a rule-based coordination structure, not an extraction mechanism.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for lobs_theorem: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.25)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -361,7 +361,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 ### 45. True Mountain: `logistic_map_dynamics`
 
 *   **Claimed Type:** `mountain`
-*   **Structural Signature Analysis:** CONSTRUCTED LOW-EXTRACTION signature for logistic_map_dynamics: Enforcement present (suppression=0.40, resistance=0.50) but extraction is low (0.35). This is a rule-based coordination structure, not an extraction mechanism.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for logistic_map_dynamics: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.3)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -369,7 +369,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 ### 46. True Mountain: `lorenz_attractor_dynamics`
 
 *   **Claimed Type:** `mountain`
-*   **Structural Signature Analysis:** CONSTRUCTED CONSTRAINT signature for lorenz_attractor_dynamics: Active enforcement detected (suppression=0.50, resistance=0.50) with 0 asymmetric beneficiaries. Mid-extraction range: genuinely tangled coordination/extraction mix.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for lorenz_attractor_dynamics: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.35000000000000003)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -377,7 +377,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 ### 47. True Mountain: `lowenheim_skolem_theorem`
 
 *   **Claimed Type:** `mountain`
-*   **Structural Signature Analysis:** CONSTRUCTED LOW-EXTRACTION signature for lowenheim_skolem_theorem: Enforcement present (suppression=0.40, resistance=0.50) but extraction is low (0.20). This is a rule-based coordination structure, not an extraction mechanism.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for lowenheim_skolem_theorem: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.15000000000000002)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -385,7 +385,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 ### 48. True Mountain: `martian_signal_latency`
 
 *   **Claimed Type:** `mountain`
-*   **Structural Signature Analysis:** CONSTRUCTED LOW-EXTRACTION signature for martian_signal_latency: Enforcement present (suppression=1.00, resistance=0.50) but extraction is low (0.10). This is a rule-based coordination structure, not an extraction mechanism.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for martian_signal_latency: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.375,0.15),excess_above_floor(0.05)]. Coupling score=0.375. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -393,7 +393,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 ### 49. True Mountain: `max_flow`
 
 *   **Claimed Type:** `mountain`
-*   **Structural Signature Analysis:** CONSTRUCTED CONSTRAINT signature for max_flow_min_cut: Active enforcement detected (suppression=0.20, resistance=0.50) with 0 asymmetric beneficiaries. Mid-extraction range: genuinely tangled coordination/extraction mix.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for max_flow_min_cut: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.35000000000000003)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -401,7 +401,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 ### 50. True Mountain: `minimax_decision_rule`
 
 *   **Claimed Type:** `mountain`
-*   **Structural Signature Analysis:** CONSTRUCTED LOW-EXTRACTION signature for minimax_decision_rule: Enforcement present (suppression=0.20, resistance=0.50) but extraction is low (0.30). This is a rule-based coordination structure, not an extraction mechanism.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for minimax_decision_rule: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.25)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -409,7 +409,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 ### 51. True Mountain: `monty_hall_conditional_probability`
 
 *   **Claimed Type:** `mountain`
-*   **Structural Signature Analysis:** CONSTRUCTED LOW-EXTRACTION signature for monty_hall_conditional_probability: Enforcement present (suppression=0.60, resistance=0.50) but extraction is low (0.33). This is a rule-based coordination structure, not an extraction mechanism.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for monty_hall_conditional_probability: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.28)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -417,7 +417,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 ### 52. True Mountain: `no_cloning_theorem`
 
 *   **Claimed Type:** `mountain`
-*   **Structural Signature Analysis:** CONSTRUCTED LOW-EXTRACTION signature for no_cloning_theorem: Enforcement present (suppression=0.30, resistance=0.50) but extraction is low (0.20). This is a rule-based coordination structure, not an extraction mechanism.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for no_cloning_theorem: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.15000000000000002)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -425,7 +425,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 ### 53. True Mountain: `noethers_theorem_symmetry`
 
 *   **Claimed Type:** `mountain`
-*   **Structural Signature Analysis:** CONSTRUCTED LOW-EXTRACTION signature for noethers_theorem_symmetry: Enforcement present (suppression=0.10, resistance=0.50) but extraction is low (0.10). This is a rule-based coordination structure, not an extraction mechanism.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for noethers_theorem_symmetry: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.375,0.15),excess_above_floor(0.05)]. Coupling score=0.375. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -433,7 +433,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 ### 54. True Mountain: `nonstandard_arithmetic_models`
 
 *   **Claimed Type:** `mountain`
-*   **Structural Signature Analysis:** CONSTRUCTED LOW-EXTRACTION signature for nonstandard_arithmetic_models: Enforcement present (suppression=0.30, resistance=0.50) but extraction is low (0.25). This is a rule-based coordination structure, not an extraction mechanism.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for nonstandard_arithmetic_models: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.2)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -441,7 +441,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 ### 55. True Mountain: `overton_window`
 
 *   **Claimed Type:** `mountain`
-*   **Structural Signature Analysis:** CONSTRUCTED CONSTRAINT signature for overton_window: Active enforcement detected (suppression=0.80, resistance=0.50) with 0 asymmetric beneficiaries. Mid-extraction range: genuinely tangled coordination/extraction mix.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for overton_window: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.35000000000000003)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -449,7 +449,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 ### 56. True Mountain: `p_vs_np`
 
 *   **Claimed Type:** `mountain`
-*   **Structural Signature Analysis:** CONSTRUCTED CONSTRAINT signature for p_vs_np: Active enforcement detected (suppression=0.20, resistance=0.50) with 0 asymmetric beneficiaries. Mid-extraction range: genuinely tangled coordination/extraction mix.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for p_vs_np: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.35000000000000003)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -457,7 +457,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 ### 57. True Mountain: `peano_curve_mapping`
 
 *   **Claimed Type:** `mountain`
-*   **Structural Signature Analysis:** CONSTRUCTED LOW-EXTRACTION signature for peano_curve_mapping: Enforcement present (suppression=0.20, resistance=0.50) but extraction is low (0.25). This is a rule-based coordination structure, not an extraction mechanism.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for peano_curve_mapping: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.2)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -465,7 +465,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 ### 58. True Mountain: `poincare_conjucture`
 
 *   **Claimed Type:** `mountain`
-*   **Structural Signature Analysis:** CONSTRUCTED LOW-EXTRACTION signature for poincare_conjecture: Enforcement present (suppression=0.10, resistance=0.50) but extraction is low (0.20). This is a rule-based coordination structure, not an extraction mechanism.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for poincare_conjecture: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.15000000000000002)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -473,7 +473,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 ### 59. True Mountain: `prime_number_theorem`
 
 *   **Claimed Type:** `mountain`
-*   **Structural Signature Analysis:** CONSTRUCTED LOW-EXTRACTION signature for prime_number_theorem: Enforcement present (suppression=0.10, resistance=0.50) but extraction is low (0.15). This is a rule-based coordination structure, not an extraction mechanism.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for prime_number_theorem: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.375,0.15),excess_above_floor(0.09999999999999999)]. Coupling score=0.375. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -481,7 +481,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 ### 60. True Mountain: `quine_self_replication`
 
 *   **Claimed Type:** `mountain`
-*   **Structural Signature Analysis:** CONSTRUCTED LOW-EXTRACTION signature for quine_self_replication: Enforcement present (suppression=0.10, resistance=0.50) but extraction is low (0.20). This is a rule-based coordination structure, not an extraction mechanism.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for quine_self_replication: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.15000000000000002)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -489,7 +489,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 ### 61. True Mountain: `reciprocity_laws_math`
 
 *   **Claimed Type:** `mountain`
-*   **Structural Signature Analysis:** CONSTRUCTED LOW-EXTRACTION signature for reciprocity_laws_math: Enforcement present (suppression=0.10, resistance=0.50) but extraction is low (0.10). This is a rule-based coordination structure, not an extraction mechanism.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for reciprocity_laws_math: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.375,0.15),excess_above_floor(0.05)]. Coupling score=0.375. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -497,7 +497,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 ### 62. True Mountain: `rices_theorem_undecidability`
 
 *   **Claimed Type:** `mountain`
-*   **Structural Signature Analysis:** CONSTRUCTED LOW-EXTRACTION signature for rices_theorem_undecidability: Enforcement present (suppression=0.20, resistance=0.50) but extraction is low (0.15). This is a rule-based coordination structure, not an extraction mechanism.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for rices_theorem_undecidability: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.375,0.15),excess_above_floor(0.09999999999999999)]. Coupling score=0.375. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -505,7 +505,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 ### 63. True Mountain: `rotmigration_decision_threshold`
 
 *   **Claimed Type:** `mountain`
-*   **Structural Signature Analysis:** CONSTRUCTED LOW-EXTRACTION signature for migration_decision_threshold: Enforcement present (suppression=0.40, resistance=0.50) but extraction is low (0.30). This is a rule-based coordination structure, not an extraction mechanism.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for migration_decision_threshold: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.25)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -513,7 +513,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 ### 64. True Mountain: `sat_csp_complexity`
 
 *   **Claimed Type:** `mountain`
-*   **Structural Signature Analysis:** CONSTRUCTED CONSTRAINT signature for sat_csp_complexity: Active enforcement detected (suppression=0.50, resistance=0.50) with 0 asymmetric beneficiaries. Mid-extraction range: genuinely tangled coordination/extraction mix.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for sat_csp_complexity: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.35000000000000003)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -529,7 +529,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 ### 66. True Mountain: `stable_marriage_coordination`
 
 *   **Claimed Type:** `mountain`
-*   **Structural Signature Analysis:** CONSTRUCTED CONSTRAINT signature for stable_marriage_coordination: Active enforcement detected (suppression=0.30, resistance=0.50) with 0 asymmetric beneficiaries. Mid-extraction range: genuinely tangled coordination/extraction mix.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for stable_marriage_coordination: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.35000000000000003)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -537,7 +537,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 ### 67. True Mountain: `strange_attractor_dynamics`
 
 *   **Claimed Type:** `mountain`
-*   **Structural Signature Analysis:** CONSTRUCTED LOW-EXTRACTION signature for strange_attractor_dynamics: Enforcement present (suppression=0.30, resistance=0.50) but extraction is low (0.35). This is a rule-based coordination structure, not an extraction mechanism.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for strange_attractor_dynamics: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.3)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -545,7 +545,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 ### 68. True Mountain: `suslin_hypothesis_undecidability`
 
 *   **Claimed Type:** `mountain`
-*   **Structural Signature Analysis:** CONSTRUCTED LOW-EXTRACTION signature for suslin_hypothesis_undecidability: Enforcement present (suppression=0.30, resistance=0.50) but extraction is low (0.20). This is a rule-based coordination structure, not an extraction mechanism.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for suslin_hypothesis_undecidability: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.15000000000000002)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -553,7 +553,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 ### 69. True Mountain: `sylow_theorems_group_theory`
 
 *   **Claimed Type:** `mountain`
-*   **Structural Signature Analysis:** CONSTRUCTED LOW-EXTRACTION signature for sylow_theorems_group_theory: Enforcement present (suppression=0.20, resistance=0.50) but extraction is low (0.15). This is a rule-based coordination structure, not an extraction mechanism.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for sylow_theorems_group_theory: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.375,0.15),excess_above_floor(0.09999999999999999)]. Coupling score=0.375. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -561,7 +561,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 ### 70. True Mountain: `tarski_undefinability`
 
 *   **Claimed Type:** `mountain`
-*   **Structural Signature Analysis:** CONSTRUCTED LOW-EXTRACTION signature for tarski_undefinability: Enforcement present (suppression=0.30, resistance=0.50) but extraction is low (0.20). This is a rule-based coordination structure, not an extraction mechanism.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for tarski_undefinability: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.15000000000000002)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -569,7 +569,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 ### 71. True Mountain: `three_body_unpredicability`
 
 *   **Claimed Type:** `mountain`
-*   **Structural Signature Analysis:** CONSTRUCTED CONSTRAINT signature for three_body_unpredictability: Active enforcement detected (suppression=0.30, resistance=0.50) with 0 asymmetric beneficiaries. Mid-extraction range: genuinely tangled coordination/extraction mix.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for three_body_unpredictability: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.35000000000000003)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -577,7 +577,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 ### 72. True Mountain: `universal_mathematics_communication`
 
 *   **Claimed Type:** `mountain`
-*   **Structural Signature Analysis:** CONSTRUCTED LOW-EXTRACTION signature for universal_mathematics_communication: Enforcement present (suppression=0.20, resistance=0.50) but extraction is low (0.10). This is a rule-based coordination structure, not an extraction mechanism.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for universal_mathematics_communication: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.375,0.15),excess_above_floor(0.05)]. Coupling score=0.375. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -585,7 +585,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 ### 73. True Mountain: `van_der_waerden_theorem`
 
 *   **Claimed Type:** `mountain`
-*   **Structural Signature Analysis:** CONSTRUCTED LOW-EXTRACTION signature for van_der_waerden_theorem: Enforcement present (suppression=0.50, resistance=0.50) but extraction is low (0.20). This is a rule-based coordination structure, not an extraction mechanism.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for van_der_waerden_theorem: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.15000000000000002)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -593,7 +593,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 ### 74. True Mountain: `viral_transmission_rates`
 
 *   **Claimed Type:** `mountain`
-*   **Structural Signature Analysis:** CONSTRUCTED HIGH-EXTRACTION signature for viral_transmission_rates: Enforcement present (suppression=0.80, resistance=0.50) with high extraction (0.70). This is an extraction mechanism that metrics failed to classify as snare.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for viral_transmission_rates: Appears to be rope (indexed_rope_classification) but fails 4 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.15),scope_variant([snare,tangled_rope]),excess_above_floor(0.6499999999999999),nonsensical_coupling(0.5)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -601,7 +601,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 ### 75. True Mountain: `whitehead_problem_undecidability`
 
 *   **Claimed Type:** `mountain`
-*   **Structural Signature Analysis:** CONSTRUCTED LOW-EXTRACTION signature for whitehead_problem_undecidability: Enforcement present (suppression=0.30, resistance=0.50) but extraction is low (0.20). This is a rule-based coordination structure, not an extraction mechanism.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for whitehead_problem_undecidability: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.15000000000000002)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
