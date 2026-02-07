@@ -1,22 +1,29 @@
 % ============================================================================
-% CONSTRAINT STORY: bloom_social_exclusion_dublin
+% CONSTRAINT STORY: ulysses_hades_1904
 % ============================================================================
-% Generated: 2026-01-19
-% Model: Gemini 2.0 Flash
-% Source: Ulysses, Chapter 6 (Hades)
+% Version: 3.4 (Deferential Realism Core)
+% Logic: 3.3 (Indexed Tuple P,T,E,S)
+% Generated: 2026-02-06
 % ============================================================================
 
-:- module(constraint_bloom_social_exclusion, []).
+:- module(constraint_ulysses_hades, []).
 
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
 
 % --- Namespace Hooks (Required for loading) ---
-:- multifile 
+:- multifile
     domain_priors:base_extractiveness/2,
     domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
     domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -25,137 +32,138 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: bloom_social_exclusion_dublin
- * human_readable: Social Exclusion and Antisemitic Friction
- * domain: social/political
- * temporal_scope: June 16, 1904
- * spatial_scope: Dublin (Funeral carriage to Prospect Cemetery)
+ * * constraint_id: ulysses_hades_1904
+ * human_readable: The Funerary Mountain (Prospect Cemetery)
+ * domain: social/religious/technological
  * * SUMMARY:
- * Leopold Bloom exists under a persistent constraint of social exclusion in Dublin's 
- * Catholic middle-class circles, manifesting as subtle snubs and overt 
- * marginalization. The constraint extracts Bloom's dignity 
- * to maintain tribal cohesion.
+ * Leopold Bloom attends the funeral of Paddy Dignam, navigating the communal 
+ * Ropes of mourning while confronting the absolute Mountain of death. 
+ * The ritual coordination of the carriage ride and the interment is 
+ * punctuated by the high theater of Father Coffey’s Latin and the 
+ * "ineluctable" reality of decomposition and forgotten names.
  * * KEY AGENTS:
- * - Leopold Bloom: Individual moderate navigating a "Rope" of socialAssent.
- * - The Pauper/Deceased Child: Individual powerless subject to the finality of the social order (Snare).
- * - Martin Cunningham: Institutional moderator viewing the order as law (Mountain).
+ * - Leopold Bloom: Subject (Powerless) - Counting the bared heads (thirteen).
+ * - Father Coffey: Beneficiary (Institutional) - Balancing a book against his "toad's belly".
+ * - John O'Connell: Auditor (Analytical) - The caretaker puzzling keys at his back.
  */
 
 /* ==========================================================================
-   2. CORE SYSTEM INTEGRATION (The "Reality" Layer)
+   2. BASE PROPERTIES (DOMAIN PRIORS)
    ========================================================================== */
 
-% Required for [STEP 1] and [STEP 2] of the DR-Audit Suite
-narrative_ontology:interval(bloom_exclusion_interval, 0, 10).
-narrative_ontology:constraint_claim(bloom_social_exclusion_dublin, snare).
+% Numerical anchors for v3.4 thresholds
+domain_priors:base_extractiveness(ulysses_hades_1904, 0.49). % High due to biological decay and grief.
+domain_priors:suppression_score(ulysses_hades_1904, 0.95).   % Death as an absolute "Fixed Point".
+domain_priors:theater_ratio(ulysses_hades_1904, 0.88).      % The "Pomp of death" and Father Coffey's "fluent croak".
 
-% Metrics: Extractiveness (0.5) and Suppression (0.7)
-domain_priors:base_extractiveness(bloom_social_exclusion_dublin, 0.5).
-domain_priors:suppression_score(bloom_social_exclusion_dublin, 0.7).
-domain_priors:emerges_naturally(bloom_social_exclusion_dublin).
+% Primary keys for classification engine
+narrative_ontology:constraint_metric(ulysses_hades_1904, extractiveness, 0.49).
+narrative_ontology:constraint_metric(ulysses_hades_1904, suppression_requirement, 0.95).
+narrative_ontology:constraint_metric(ulysses_hades_1904, theater_ratio, 0.88).
 
-% Explicit metric hooks to prevent auto-imputation
-narrative_ontology:constraint_metric(bloom_social_exclusion_dublin, extractiveness, 0.5).
-narrative_ontology:constraint_metric(bloom_social_exclusion_dublin, suppression_requirement, 0.7).
-
-% BENEFICIARIES & VICTIMS
-constraint_beneficiary(bloom_social_exclusion_dublin, dublin_catholic_inner_circle).
-constraint_victim(bloom_social_exclusion_dublin, bloom_leopold).
+% Structural Property Declarations
+narrative_ontology:constraint_beneficiary(ulysses_hades_1904, burial_societies). % Paying the penny a week for turf.
+narrative_ontology:constraint_victim(ulysses_hades_1904, paddy_dignam).          % The "stiff" in the dealer box.
+domain_priors:requires_active_enforcement(ulysses_hades_1904). % Gravediggers and caretakers enforcing "rest".
 
 /* ==========================================================================
-   3. INDEXED CLASSIFICATIONS (Perspectival Truth)
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × π(P) × σ(S)
    ========================================================================== */
 
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 1: LEOPOLD BLOOM - Rope
-   --------------------------------------------------------------------------
-   WHY: Bloom treats social friction as a "Rope"—a tool to be managed through 
-   "soft politeness" and "prudent assent" to maintain his position. 
-   -------------------------------------------------------------------------- */
-constraint_indexing:constraint_classification(
-    bloom_social_exclusion_dublin,
-    rope,
-    context(agent_power(individual_moderate), time_horizon(biographical), exit_options(mobile), spatial_scope(local))
-) :- !.
+% PERSPECTIVE 1: THE DEPARTED (MOUNTAIN)
+% Effective Extraction: 0.49 * 1.5 (powerless) * 1.2 (universal) = 0.882.
+% χ < 0.05 logic check: In death, extraction ceases because agency is zero.
+% However, for the survivor Bloom, it is a Mountain of "Inertial Limit".
+constraint_indexing:constraint_classification(ulysses_hades_1904, mountain, 
+    context(agent_power(powerless), 
+            time_horizon(civilizational), 
+            exit_options(trapped), 
+            spatial_scope(universal))).
 
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE PAUPER / CHILD FUNERAL - Snare
-   --------------------------------------------------------------------------
-   WHO: individual_powerless - "Only a pauper. Nobody owns.".
-   WHY: From the bottom of the social hierarchy, the order is a "Snare" that 
-   extracts life and dignity without recourse or coordination options.
-   -------------------------------------------------------------------------- */
-constraint_indexing:constraint_classification(
-    bloom_social_exclusion_dublin,
-    snare,
-    context(agent_power(individual_powerless), time_horizon(immediate), exit_options(constrained), spatial_scope(local))
-) :- !.
+% PERSPECTIVE 2: THE CARETAKER (ROPE)
+% Effective Extraction: 0.49 * -0.2 (institutional) * 0.8 (local) = -0.0784.
+% Viewed as the essential coordination of "cheering a fellow up" and "keys".
+constraint_indexing:constraint_classification(ulysses_hades_1904, rope, 
+    context(agent_power(institutional), 
+            time_horizon(generational), 
+            exit_options(mobile), 
+            spatial_scope(local))).
 
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 3: MARTIN CUNNINGHAM - Mountain
-   --------------------------------------------------------------------------
-   WHO: institutional - The social arbiter who "lays down the law".
-   WHY: Cunningham views the tribal social order as an immutable natural law—a 
-   Mountain that Bloom cannot change through mere interaction.
-   -------------------------------------------------------------------------- */
-constraint_indexing:constraint_classification(
-    bloom_social_exclusion_dublin,
-    mountain,
-    context(agent_power(institutional), time_horizon(historical), exit_options(trapped), spatial_scope(national))
-) :- !.
+% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (PITON)
+% Extreme Theater Ratio (0.88) indicates a Piton of "vanished crowds" and "mummery".
+constraint_indexing:constraint_classification(ulysses_hades_1904, piton,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(global))).
 
 /* ==========================================================================
-   4. TESTS
+   4. VALIDATION TESTS
    ========================================================================== */
 
-:- begin_tests(bloom_social_exclusion_dublin_tests).
+:- begin_tests(ulysses_hades_1904_tests).
 
-test(multi_perspective_conflict) :-
-    constraint_indexing:constraint_classification(bloom_social_exclusion_dublin, T1, context(agent_power(individual_moderate), _, _, _)),
-    constraint_indexing:constraint_classification(bloom_social_exclusion_dublin, T2, context(agent_power(individual_powerless), _, _, _)),
-    T1 = rope, T2 = snare.
+test(perspectival_gap) :-
+    % Verify shift from the Mountain of death to the Rope of the caretaker.
+    constraint_indexing:constraint_classification(ulysses_hades_1904, mountain, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(ulysses_hades_1904, rope, context(agent_power(institutional), _, _, _)).
 
-test(time_immutability_scaling) :-
-    % Historical view (Institutional) sees the social order as a Mountain
-    constraint_indexing:constraint_classification(bloom_social_exclusion_dublin, mountain, context(agent_power(institutional), time_horizon(historical), _, _)).
+test(piton_theater_check) :-
+    % Piton classification requires theater_ratio >= 0.70.
+    domain_priors:theater_ratio(ulysses_hades_1904, TR),
+    TR >= 0.70.
 
-:- end_tests(bloom_social_exclusion_dublin_tests).
+:- end_tests(ulysses_hades_1904_tests).
 
 /* ==========================================================================
-   5. MODEL INTERPRETATION & OMEGAS
+   5. GENERATIVE COMMENTARY
    ========================================================================== */
 
 /**
- * LLM GENERATION NOTES:
- * Refactored to include the mandatory powerless perspective. This allows the 
- * audit to detect the gap between the "Mountain" of history and the 
- * "Snare" of current social reality.
+ * LOGIC RATIONALE:
+ * Leopold Bloom experiences Prospect Cemetery as a site of the Funerary 
+ * Mountain—an irreducible "Fixed Point" where "once you are dead you are 
+ * dead"[cite: 4007]. While burial societies and caretakers provide a Rope 
+ * of coordination (managing "twenty or thirty funerals every day" [cite: 3911]), 
+ * the high Theater Ratio (0.88) reflects the "Pomp of death". 
+ * Bloom sees through this theater, noting that Father Coffey’s Latin 
+ * "stupefies them first" [cite: 3520] and that the "resurrection and the 
+ * life" is merely a "pump" that eventually "gets bunged up"[cite: 4005, 4006].
  */
 
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
 omega_variable(
-    bloom_conscious_assimilation,
-    "Is Bloom's assent a survival strategy (Rope) or a deep-seated belief (Mountain)?",
-    resolution_mechanism("Internal monologue analysis of Chapter 17 (Ithaca)"),
-    impact("If strategy: Bloom is an arbitrageur. If belief: He is a victim of suppression."),
+    omega_mortality_theater,
+    "Is the 'last day idea' a Rope for social hope or a Snare for religious extraction?",
+    "Review of 'waiting for it to melt in their stomachs' vs 'safe in the arms of kingdom come'.",
+    "Hope-coordination confirms a Rope; 'pious fraud' hardens the Snare.",
     confidence_without_resolution(medium)
 ).
 
 /* ==========================================================================
-   6. ALTERNATIVE ANALYSIS
+   7. INTEGRATION HOOKS
    ========================================================================== */
 
-/**
- * VIABLE ALTERNATIVES:
- * 1. Active Confrontation: Rejected to avoid "mortification".
- * 2. Withdrawal: Rejected due to professional and social necessity.
- */
+narrative_ontology:interval(ulysses_hades_1904, 0, 10).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Theater Ratio (Peaking during the mortuary chapel service and Father Coffey's croak)
+narrative_ontology:measurement(uh_tr_t0, ulysses_hades_1904, theater_ratio, 0, 0.75).
+narrative_ontology:measurement(uh_tr_t5, ulysses_hades_1904, theater_ratio, 5, 0.92).
+narrative_ontology:measurement(uh_tr_t10, ulysses_hades_1904, theater_ratio, 10, 0.88).
+
+% Extraction (The weight of the "dead weight" coffin and Bloom's thoughts on his own plot)
+narrative_ontology:measurement(uh_ex_t0, ulysses_hades_1904, base_extractiveness, 0, 0.40).
+narrative_ontology:measurement(uh_ex_t5, ulysses_hades_1904, base_extractiveness, 5, 0.45).
+narrative_ontology:measurement(uh_ex_t10, ulysses_hades_1904, base_extractiveness, 10, 0.49).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
-
-
-% --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
-constraint_indexing:constraint_classification(ulysses_chp06, mountain, agent_power(analytical)).
-constraint_indexing:constraint_classification(ulysses_chp06, rope, agent_power(institutional)).
-constraint_indexing:constraint_classification(ulysses_chp06, snare, agent_power(individual_powerless)).

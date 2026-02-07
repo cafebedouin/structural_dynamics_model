@@ -66,7 +66,7 @@ When the Gemini REPL creates these new files, they should look like "Battle Maps
 
 % 1. Context Binding: Who is in the room?
 % participant(AgentID, Index)
-participant(investor_alpha, context(individual_powerless, biographical, trapped, national)).
+participant(investor_alpha, context(powerless, biographical, trapped, national)).
 participant(irs_admin, context(institutional, historical, arbitrage, national)).
 
 % 2. Constraint Activation: What rules are active?
@@ -92,7 +92,7 @@ evaluate_clash(Agent1, Agent2, Constraint) :-
 To ensure the AI understands the "Two-Directory" requirement, add this specific instruction to the previous prompt:
 
 > **Extended Mandate:** > 1. **Data Separation:** You must treat the `/corpus/` directory as read-only for data extraction and write refactored constraints there.
-> 2. **Scenario Creation:** Create a new `/scenarios/` directory. For every high-extraction constraint (), generate a corresponding scenario file that pits an `individual_powerless` agent against an `institutional` agent to test the "Masked Noose" alert.
+> 2. **Scenario Creation:** Create a new `/scenarios/` directory. For every high-extraction constraint (), generate a corresponding scenario file that pits an `powerless` agent against an `institutional` agent to test the "Masked Noose" alert.
 > 3. **Validation:** After creating a scenario, run `drl_engine:evaluate_tension/3` to ensure the math accurately triggers the generated  (Omega variable) identified in the logic framework.
 
 ---

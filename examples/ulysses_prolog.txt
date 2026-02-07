@@ -1,0 +1,4137 @@
+?- [stack].
+
+====================================================
+   STRUCTURAL ANALYSIS STACK INITIALIZED
+====================================================
+Control:    Scenario Manager Active
+Usage:      run_scenario('file.pl', interval_id).
+====================================================
+true.
+
+?- [validation_suite].
+true.
+
+?- run_dynamic_suite.
+--- STARTING DYNAMIC VALIDATION ---
+
+[28] EXECUTING: testsets/ulysses_chp01.pl
+
+[SCENARIO MANAGER] Clearing Knowledge Base...
+[OK] Knowledge Base is empty.
+[SCENARIO MANAGER] Loading: testsets/ulysses_chp01.pl...
+Warning: /home/scott/bin/structural_dynamics_model/prolog/testsets/ulysses_chp01.pl:16:
+Warning:    Local definition of domain_priors:base_extractiveness/2 overrides weak import from drl_core
+Warning: /home/scott/bin/structural_dynamics_model/prolog/testsets/ulysses_chp01.pl:16:
+Warning:    Local definition of domain_priors:suppression_score/2 overrides weak import from drl_core
+Warning: /home/scott/bin/structural_dynamics_model/prolog/testsets/ulysses_chp01.pl:16:
+Warning:    Local definition of domain_priors:requires_active_enforcement/1 overrides weak import from drl_core
+[SCENARIO MANAGER] Performing Global Repair...
+
+[REPAIR] Auditing vectors for: ulysses_tower_1904...
+  [BRIDGE] Derived constraint_claim(ulysses_tower_1904, snare) from computed analytical classification
+  [FIXED] Imputed 0.55 for accessibility_collapse(organizational) at T=0
+  [FIXED] Imputed 0.73 for stakes_inflation(organizational) at T=0
+  [FIXED] Imputed 0.65 for suppression(organizational) at T=0
+  [FIXED] Imputed 0.6 for resistance(organizational) at T=0
+  [FIXED] Imputed 0.55 for accessibility_collapse(organizational) at T=10
+  [FIXED] Imputed 0.73 for stakes_inflation(organizational) at T=10
+  [FIXED] Imputed 0.65 for suppression(organizational) at T=10
+  [FIXED] Imputed 0.6 for resistance(organizational) at T=10
+  [FIXED] Imputed 0.55 for accessibility_collapse(class) at T=0
+  [FIXED] Imputed 0.73 for stakes_inflation(class) at T=0
+  [FIXED] Imputed 0.65 for suppression(class) at T=0
+  [FIXED] Imputed 0.6 for resistance(class) at T=0
+  [FIXED] Imputed 0.55 for accessibility_collapse(class) at T=10
+  [FIXED] Imputed 0.73 for stakes_inflation(class) at T=10
+  [FIXED] Imputed 0.65 for suppression(class) at T=10
+  [FIXED] Imputed 0.6 for resistance(class) at T=10
+  [FIXED] Imputed 0.55 for accessibility_collapse(individual) at T=0
+  [FIXED] Imputed 0.73 for stakes_inflation(individual) at T=0
+  [FIXED] Imputed 0.65 for suppression(individual) at T=0
+  [FIXED] Imputed 0.6 for resistance(individual) at T=0
+  [FIXED] Imputed 0.55 for accessibility_collapse(individual) at T=10
+  [FIXED] Imputed 0.73 for stakes_inflation(individual) at T=10
+  [FIXED] Imputed 0.65 for suppression(individual) at T=10
+  [FIXED] Imputed 0.6 for resistance(individual) at T=10
+
+[REPAIR] Auditing vectors for: ulysses_tower_1904...
+
+>>> INITIATING DR-AUDIT SUITE: ulysses_tower_1904
+
+[REPAIR] Auditing vectors for: ulysses_tower_1904...
+
+--- [START] Data Verification ---
+[OK] Ontology Schema matches.
+Checking Interval: ulysses_tower_1904 (0-10)
+Checking Interval: ulysses_tower_1904 (0-10)
+--- [END] Data Verification Complete ---
+[OK] Verification passed.
+
+=== PERSPECTIVE COMPARISON ===
+Constraint: ulysses_tower_1904
+
+No classification from your perspective
+
+No analytical classification
+
+
+--- PER-INDEX VALIDATION ---
+  [INDEX OK] ulysses_tower_1904 from context(agent_power(powerless),time_horizon(biographical),exit_options(trapped),spatial_scope(local)): declared=snare, computed=snare
+  [INDEX MISMATCH] ulysses_tower_1904 from context(agent_power(institutional),time_horizon(generational),exit_options(mobile),spatial_scope(local)): declared=rope, computed=piton
+  [INDEX MISMATCH] ulysses_tower_1904 from context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(national)): declared=piton, computed=snare
+  [INTENT] Result: stable (Confidence: high)
+
+=== DEFERENTIAL REALISM (DR) DIAGNOSTIC: ulysses_tower_1904 ===
+
+[CONSTRAINT INVENTORY]
+  - ulysses_tower_1904: extractive_snare (Intensity: 0.48)
+
+[FEASIBILITY BRIDGE]
+====================================================
+
+--- LIFECYCLE DRIFT ANALYSIS ---
+
+================================================================
+  DRIFT EVENT REPORT
+================================================================
+
+  Constraints scanned: 1
+  Total drift events:  5
+  Critical: 5 | Warning: 0 | Watch: 0
+
+  ulysses_tower_1904:
+    [critical] metric_substitution
+        Evidence: evidence(theater_delta,0,5,0.7,0.85)
+    [critical] metric_substitution
+        Evidence: evidence(theater_delta,0,10,0.7,0.82)
+    [critical] extraction_accumulation
+        Evidence: evidence(extraction_delta,0,5,0.35,0.45)
+    [critical] extraction_accumulation
+        Evidence: evidence(extraction_delta,0,10,0.35,0.48)
+    [critical] extraction_accumulation
+        Evidence: evidence(extraction_delta,5,10,0.45,0.48)
+
+--- Transition Path Analysis ---
+
+--- Terminal State Predictions ---
+  ulysses_tower_1904 -> tangled_rope (confidence: low)
+
+================================================================
+
+--- SCOPE EFFECT ANALYSIS ---
+  Formula: χ = ε × π(P) × σ(S)
+  ulysses_tower_1904 (ε=0.48):
+    powerless@local: χ = 0.48 × 1.50 × 0.80 = 0.576
+    moderate@national: χ = 0.48 × 1.00 × 1.00 = 0.480
+    institutional@national: χ = 0.48 × -0.20 × 1.00 = -0.096
+    analytical@global: χ = 0.48 × 1.15 × 1.20 = 0.662
+
+--- LOGICAL FINGERPRINT ---
+
+=== Logical Fingerprint: ulysses_tower_1904 ===
+  Shift:      powerless=snare  moderate=snare  institutional=piton  analytical=snare
+
+--- SYSTEM INSIGHTS ---
+  Omegas Identified: 0
+
+
+====================================================
+   DEFERENTIAL REALISM (DR) EXECUTIVE SUMMARY
+====================================================
+Timeline:       0 to 10
+Structural Pattern: stable
+Confidence:     high
+
+[CONSTRAINT INVENTORY: INDEXICAL AUDIT]
+
+
+Constraint: ulysses_tower_1904
+  Claimed Type: snare
+  Perspectives:
+    - [context(agent_power(powerless),time_horizon(biographical),exit_options(trapped),spatial_scope(local))]: snare (Matches Claim)
+    - [context(agent_power(institutional),time_horizon(generational),exit_options(mobile),spatial_scope(local))]: rope (Mismatch)
+    - [context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(national))]: piton (Mismatch)
+
+[CROSS-DOMAIN ISOMORPHISM & RISK AUDIT: ulysses_tower_1904]
+  No high-risk isomorphisms detected for current constraints.
+
+[COMPREHENSIVE CROSS-DOMAIN STRUCTURAL TWINS]
+  No cross-domain isomorphisms detected.
+
+[META-LOGICAL AUDIT: ONTOLOGICAL FRAUD DETECTION]
+  No classification errors detected. System is Ontologically Coherent.
+
+[ONTOLOGICAL FORENSIC AUDIT: FALSE MOUNTAINS]
+  All mountains are structurally validated.
+
+[STRUCTURAL SIGNATURE ANALYSIS]
+  ulysses_tower_1904: constructed_high_extraction (confidence: medium)
+    → CONSTRUCTED HIGH-EXTRACTION signature for ulysses_tower_1904: Enforcement present (suppression=0.65, resistance=0.50) with high extraction (0.48). This is an extraction mechanism that metrics failed to classify as snare.
+
+[UKE_DR FEASIBILITY BRIDGE]
+  Recommendation | UKE Status
+  ----------------------------------------------------------------------
+
+Aggregate Magnitude (Kappa) at Tn: 0.60
+
+[PERSPECTIVAL GAP ANALYSIS]
+
+  Analysis for Constraint: ulysses_tower_1904
+    ! ALERT: Extractive "Snare" is masked as functional "Rope".
+    - Individual (Powerless): snare  [chi = 0.48 x 1.50 = 0.72]
+    - Institutional (Manager): rope  [chi = 0.48 x -0.20 = -0.10 -> net benefit]
+    ! MANDATROPHY GAP: delta_chi = 0.82 (high)
+
+[OMEGA GENERATION FROM PERSPECTIVAL GAPS: ulysses_tower_1904]
+  Generated 1 Omega variables from perspectival gaps:
+
+  Ω: omega_extraction_blindness_ulysses_tower_1904 (conceptual)
+     Question: Constraint ulysses_tower_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+     Source: gap(snare_masked_as_rope,snare,rope)
+
+
+[OMEGA TRIAGE & PRIORITIZATION]
+
+  [critical] 1 omega(s):
+    - omega_extraction_blindness_ulysses_tower_1904 (conceptual)
+      Constraint ulysses_tower_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+  [high] 1 omega(s):
+    - omega_extraction_blindness_ulysses_tower_1904 (conceptual)
+      Constraint ulysses_tower_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+[OMEGA RESOLUTION SCENARIO GENERATION]
+  Generated 1 resolution scenario(s):
+
+  ┌─ [omega_extraction_blindness_ulysses_tower_1904] CONCEPTUAL CLARIFICATION
+  │  Constraint: ulysses_tower_1904
+  │  Gap: Constraint ulysses_tower_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+  │
+  │  CRITICAL: Extraction Masking Detected
+  │  Powerless see: SNARE (extractive trap)
+  │  Institutions see: ROPE (functional rule)
+  │
+  │  RESOLUTION STRATEGY:
+  │  1. Interview affected individuals (N=10+):
+  │     - Who benefits from ulysses_tower_1904?
+  │     - Can you change/exit this constraint?
+  │     - What would happen if you tried?
+  │  2. Interview institutional actors (N=10+):
+  │     - What function does ulysses_tower_1904 serve?
+  │     - Who would object to removing it?
+  │     - What alternatives exist?
+  │  3. Document benefit flows:
+  │     - Track who gains vs. who loses from status quo
+  │     - Measure asymmetric benefit distribution
+  │  4. Decision tree:
+  │     IF extraction confirmed → Reclassify as SNARE
+  │     IF functional & fair → Reclassify as ROPE
+  │     IF context-dependent → Add indexical resolution
+  └─
+
+====================================================
+[PASS] testsets/ulysses_chp01.pl
+
+### START LLM REFINEMENT MANIFEST: ulysses_tower_1904 ###
+
+[PERSPECTIVAL_GAPS]
+  - Constraint "ulysses_tower_1904": Individual sees snare, but Institution sees rope.
+
+[ONTOLOGICAL_MISMATCHES]
+  - None detected.
+
+[UNRESOLVED_OMEGAS]
+  - omega_extraction_blindness_ulysses_tower_1904 (conceptual): Constraint ulysses_tower_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+### END REFINEMENT MANIFEST ###
+
+[29] EXECUTING: testsets/ulysses_chp02.pl
+
+[SCENARIO MANAGER] Clearing Knowledge Base...
+[OK] Knowledge Base is empty.
+[SCENARIO MANAGER] Loading: testsets/ulysses_chp02.pl...
+[SCENARIO MANAGER] Performing Global Repair...
+
+[REPAIR] Auditing vectors for: ulysses_school_1904...
+  [BRIDGE] Derived constraint_claim(ulysses_school_1904, piton) from declared analytical classification
+  [FIXED] Imputed 0.55 for accessibility_collapse(organizational) at T=0
+  [FIXED] Imputed 0.73 for stakes_inflation(organizational) at T=0
+  [FIXED] Imputed 0.72 for suppression(organizational) at T=0
+  [FIXED] Imputed 0.6 for resistance(organizational) at T=0
+  [FIXED] Imputed 0.55 for accessibility_collapse(organizational) at T=10
+  [FIXED] Imputed 0.73 for stakes_inflation(organizational) at T=10
+  [FIXED] Imputed 0.72 for suppression(organizational) at T=10
+  [FIXED] Imputed 0.6 for resistance(organizational) at T=10
+  [FIXED] Imputed 0.55 for accessibility_collapse(class) at T=0
+  [FIXED] Imputed 0.73 for stakes_inflation(class) at T=0
+  [FIXED] Imputed 0.72 for suppression(class) at T=0
+  [FIXED] Imputed 0.6 for resistance(class) at T=0
+  [FIXED] Imputed 0.55 for accessibility_collapse(class) at T=10
+  [FIXED] Imputed 0.73 for stakes_inflation(class) at T=10
+  [FIXED] Imputed 0.72 for suppression(class) at T=10
+  [FIXED] Imputed 0.6 for resistance(class) at T=10
+  [FIXED] Imputed 0.55 for accessibility_collapse(individual) at T=0
+  [FIXED] Imputed 0.73 for stakes_inflation(individual) at T=0
+  [FIXED] Imputed 0.72 for suppression(individual) at T=0
+  [FIXED] Imputed 0.6 for resistance(individual) at T=0
+  [FIXED] Imputed 0.55 for accessibility_collapse(individual) at T=10
+  [FIXED] Imputed 0.73 for stakes_inflation(individual) at T=10
+  [FIXED] Imputed 0.72 for suppression(individual) at T=10
+  [FIXED] Imputed 0.6 for resistance(individual) at T=10
+
+[REPAIR] Auditing vectors for: ulysses_school_1904...
+
+>>> INITIATING DR-AUDIT SUITE: ulysses_school_1904
+
+[REPAIR] Auditing vectors for: ulysses_school_1904...
+
+--- [START] Data Verification ---
+[OK] Ontology Schema matches.
+Checking Interval: ulysses_school_1904 (0-10)
+Checking Interval: ulysses_school_1904 (0-10)
+--- [END] Data Verification Complete ---
+[OK] Verification passed.
+
+=== PERSPECTIVE COMPARISON ===
+Constraint: ulysses_school_1904
+
+From YOUR perspective (context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(global))): piton
+
+From ANALYTICAL perspective: piton
+
+→ Perspectives AGREE
+
+--- PER-INDEX VALIDATION ---
+  [INDEX OK] ulysses_school_1904 from context(agent_power(powerless),time_horizon(biographical),exit_options(trapped),spatial_scope(national)): declared=snare, computed=snare
+  [INDEX MISMATCH] ulysses_school_1904 from context(agent_power(institutional),time_horizon(generational),exit_options(mobile),spatial_scope(national)): declared=rope, computed=piton
+  [INDEX MISMATCH] ulysses_school_1904 from context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(global)): declared=piton, computed=snare
+  [INTENT] Result: stable (Confidence: high)
+
+=== DEFERENTIAL REALISM (DR) DIAGNOSTIC: ulysses_school_1904 ===
+
+[CONSTRAINT INVENTORY]
+  - ulysses_school_1904: inertial_piton (Intensity: 0.78)
+
+[FEASIBILITY BRIDGE]
+====================================================
+
+--- LIFECYCLE DRIFT ANALYSIS ---
+
+================================================================
+  DRIFT EVENT REPORT
+================================================================
+
+  Constraints scanned: 1
+  Total drift events:  6
+  Critical: 6 | Warning: 0 | Watch: 0
+
+  ulysses_school_1904:
+    [critical] metric_substitution
+        Evidence: evidence(theater_delta,0,5,0.65,0.75)
+    [critical] metric_substitution
+        Evidence: evidence(theater_delta,0,10,0.65,0.78)
+    [critical] metric_substitution
+        Evidence: evidence(theater_delta,5,10,0.75,0.78)
+    [critical] extraction_accumulation
+        Evidence: evidence(extraction_delta,0,5,0.4,0.45)
+    [critical] extraction_accumulation
+        Evidence: evidence(extraction_delta,0,10,0.4,0.49)
+    [critical] extraction_accumulation
+        Evidence: evidence(extraction_delta,5,10,0.45,0.49)
+
+--- Transition Path Analysis ---
+
+--- Terminal State Predictions ---
+  ulysses_school_1904 -> tangled_rope (confidence: low)
+
+================================================================
+
+--- SCOPE EFFECT ANALYSIS ---
+  Formula: χ = ε × π(P) × σ(S)
+  ulysses_school_1904 (ε=0.49):
+    powerless@local: χ = 0.49 × 1.50 × 0.80 = 0.588
+    moderate@national: χ = 0.49 × 1.00 × 1.00 = 0.490
+    institutional@national: χ = 0.49 × -0.20 × 1.00 = -0.098
+    analytical@global: χ = 0.49 × 1.15 × 1.20 = 0.676
+
+--- LOGICAL FINGERPRINT ---
+
+=== Logical Fingerprint: ulysses_school_1904 ===
+  Shift:      powerless=snare  moderate=snare  institutional=piton  analytical=snare
+
+--- SYSTEM INSIGHTS ---
+  Omegas Identified: 0
+
+
+====================================================
+   DEFERENTIAL REALISM (DR) EXECUTIVE SUMMARY
+====================================================
+Timeline:       0 to 10
+Structural Pattern: stable
+Confidence:     high
+
+[CONSTRAINT INVENTORY: INDEXICAL AUDIT]
+
+
+Constraint: ulysses_school_1904
+  Claimed Type: piton
+  Perspectives:
+    - [context(agent_power(powerless),time_horizon(biographical),exit_options(trapped),spatial_scope(national))]: snare (Mismatch)
+    - [context(agent_power(institutional),time_horizon(generational),exit_options(mobile),spatial_scope(national))]: rope (Mismatch)
+    - [context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(global))]: piton (Matches Claim)
+
+[CROSS-DOMAIN ISOMORPHISM & RISK AUDIT: ulysses_school_1904]
+  No high-risk isomorphisms detected for current constraints.
+
+[COMPREHENSIVE CROSS-DOMAIN STRUCTURAL TWINS]
+  No cross-domain isomorphisms detected.
+
+[META-LOGICAL AUDIT: ONTOLOGICAL FRAUD DETECTION]
+  No classification errors detected. System is Ontologically Coherent.
+
+[ONTOLOGICAL FORENSIC AUDIT: FALSE MOUNTAINS]
+  All mountains are structurally validated.
+
+[STRUCTURAL SIGNATURE ANALYSIS]
+  ulysses_school_1904: constructed_high_extraction (confidence: medium)
+    → CONSTRUCTED HIGH-EXTRACTION signature for ulysses_school_1904: Enforcement present (suppression=0.72, resistance=0.50) with high extraction (0.49). This is an extraction mechanism that metrics failed to classify as snare.
+
+[UKE_DR FEASIBILITY BRIDGE]
+  Recommendation | UKE Status
+  ----------------------------------------------------------------------
+
+Aggregate Magnitude (Kappa) at Tn: 0.62
+
+[PERSPECTIVAL GAP ANALYSIS]
+
+  Analysis for Constraint: ulysses_school_1904
+    ! ALERT: Extractive "Snare" is masked as functional "Rope".
+    - Individual (Powerless): snare  [chi = 0.49 x 1.50 = 0.73]
+    - Institutional (Manager): rope  [chi = 0.49 x -0.20 = -0.10 -> net benefit]
+    ! MANDATROPHY GAP: delta_chi = 0.83 (high)
+
+[OMEGA GENERATION FROM PERSPECTIVAL GAPS: ulysses_school_1904]
+  Generated 1 Omega variables from perspectival gaps:
+
+  Ω: omega_extraction_blindness_ulysses_school_1904 (conceptual)
+     Question: Constraint ulysses_school_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+     Source: gap(snare_masked_as_rope,snare,rope)
+
+
+[OMEGA TRIAGE & PRIORITIZATION]
+
+  [critical] 1 omega(s):
+    - omega_extraction_blindness_ulysses_school_1904 (conceptual)
+      Constraint ulysses_school_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+  [high] 1 omega(s):
+    - omega_extraction_blindness_ulysses_school_1904 (conceptual)
+      Constraint ulysses_school_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+[OMEGA RESOLUTION SCENARIO GENERATION]
+  Generated 1 resolution scenario(s):
+
+  ┌─ [omega_extraction_blindness_ulysses_school_1904] CONCEPTUAL CLARIFICATION
+  │  Constraint: ulysses_school_1904
+  │  Gap: Constraint ulysses_school_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+  │
+  │  CRITICAL: Extraction Masking Detected
+  │  Powerless see: SNARE (extractive trap)
+  │  Institutions see: ROPE (functional rule)
+  │
+  │  RESOLUTION STRATEGY:
+  │  1. Interview affected individuals (N=10+):
+  │     - Who benefits from ulysses_school_1904?
+  │     - Can you change/exit this constraint?
+  │     - What would happen if you tried?
+  │  2. Interview institutional actors (N=10+):
+  │     - What function does ulysses_school_1904 serve?
+  │     - Who would object to removing it?
+  │     - What alternatives exist?
+  │  3. Document benefit flows:
+  │     - Track who gains vs. who loses from status quo
+  │     - Measure asymmetric benefit distribution
+  │  4. Decision tree:
+  │     IF extraction confirmed → Reclassify as SNARE
+  │     IF functional & fair → Reclassify as ROPE
+  │     IF context-dependent → Add indexical resolution
+  └─
+
+====================================================
+[PASS] testsets/ulysses_chp02.pl
+
+### START LLM REFINEMENT MANIFEST: ulysses_school_1904 ###
+
+[PERSPECTIVAL_GAPS]
+  - Constraint "ulysses_school_1904": Individual sees snare, but Institution sees rope.
+
+[ONTOLOGICAL_MISMATCHES]
+  - None detected.
+
+[UNRESOLVED_OMEGAS]
+  - omega_extraction_blindness_ulysses_school_1904 (conceptual): Constraint ulysses_school_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+### END REFINEMENT MANIFEST ###
+
+[30] EXECUTING: testsets/ulysses_chp03.pl
+
+[SCENARIO MANAGER] Clearing Knowledge Base...
+[OK] Knowledge Base is empty.
+[SCENARIO MANAGER] Loading: testsets/ulysses_chp03.pl...
+[SCENARIO MANAGER] Performing Global Repair...
+
+[REPAIR] Auditing vectors for: ulysses_proteus_1904...
+  [BRIDGE] Derived constraint_claim(ulysses_proteus_1904, piton) from declared analytical classification
+  [FIXED] Imputed 0.55 for accessibility_collapse(organizational) at T=0
+  [FIXED] Imputed 0.73 for stakes_inflation(organizational) at T=0
+  [FIXED] Imputed 0.85 for suppression(organizational) at T=0
+  [FIXED] Imputed 0.6 for resistance(organizational) at T=0
+  [FIXED] Imputed 0.55 for accessibility_collapse(organizational) at T=10
+  [FIXED] Imputed 0.73 for stakes_inflation(organizational) at T=10
+  [FIXED] Imputed 0.85 for suppression(organizational) at T=10
+  [FIXED] Imputed 0.6 for resistance(organizational) at T=10
+  [FIXED] Imputed 0.55 for accessibility_collapse(class) at T=0
+  [FIXED] Imputed 0.73 for stakes_inflation(class) at T=0
+  [FIXED] Imputed 0.85 for suppression(class) at T=0
+  [FIXED] Imputed 0.6 for resistance(class) at T=0
+  [FIXED] Imputed 0.55 for accessibility_collapse(class) at T=10
+  [FIXED] Imputed 0.73 for stakes_inflation(class) at T=10
+  [FIXED] Imputed 0.85 for suppression(class) at T=10
+  [FIXED] Imputed 0.6 for resistance(class) at T=10
+  [FIXED] Imputed 0.55 for accessibility_collapse(individual) at T=0
+  [FIXED] Imputed 0.73 for stakes_inflation(individual) at T=0
+  [FIXED] Imputed 0.85 for suppression(individual) at T=0
+  [FIXED] Imputed 0.6 for resistance(individual) at T=0
+  [FIXED] Imputed 0.55 for accessibility_collapse(individual) at T=10
+  [FIXED] Imputed 0.73 for stakes_inflation(individual) at T=10
+  [FIXED] Imputed 0.85 for suppression(individual) at T=10
+  [FIXED] Imputed 0.6 for resistance(individual) at T=10
+
+[REPAIR] Auditing vectors for: ulysses_proteus_1904...
+
+>>> INITIATING DR-AUDIT SUITE: ulysses_proteus_1904
+
+[REPAIR] Auditing vectors for: ulysses_proteus_1904...
+
+--- [START] Data Verification ---
+[OK] Ontology Schema matches.
+Checking Interval: ulysses_proteus_1904 (0-10)
+Checking Interval: ulysses_proteus_1904 (0-10)
+--- [END] Data Verification Complete ---
+[OK] Verification passed.
+
+=== PERSPECTIVE COMPARISON ===
+Constraint: ulysses_proteus_1904
+
+From YOUR perspective (context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(global))): piton
+
+From ANALYTICAL perspective: piton
+
+→ Perspectives AGREE
+
+--- PER-INDEX VALIDATION ---
+  [INDEX MISMATCH] ulysses_proteus_1904 from context(agent_power(powerless),time_horizon(biographical),exit_options(trapped),spatial_scope(local)): declared=snare, computed=tangled_rope
+  [INDEX MISMATCH] ulysses_proteus_1904 from context(agent_power(institutional),time_horizon(civilizational),exit_options(mobile),spatial_scope(universal)): declared=mountain, computed=piton
+  [INDEX MISMATCH] ulysses_proteus_1904 from context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(global)): declared=piton, computed=snare
+  [INTENT] Result: stable (Confidence: high)
+
+=== DEFERENTIAL REALISM (DR) DIAGNOSTIC: ulysses_proteus_1904 ===
+
+[CONSTRAINT INVENTORY]
+  - ulysses_proteus_1904: inertial_piton (Intensity: 0.72)
+
+[FEASIBILITY BRIDGE]
+====================================================
+
+--- LIFECYCLE DRIFT ANALYSIS ---
+
+================================================================
+  DRIFT EVENT REPORT
+================================================================
+
+  Constraints scanned: 1
+  Total drift events:  5
+  Critical: 5 | Warning: 0 | Watch: 0
+
+  ulysses_proteus_1904:
+    [critical] metric_substitution
+        Evidence: evidence(theater_delta,0,5,0.6,0.75)
+    [critical] metric_substitution
+        Evidence: evidence(theater_delta,0,10,0.6,0.72)
+    [critical] extraction_accumulation
+        Evidence: evidence(extraction_delta,0,5,0.45,0.5)
+    [critical] extraction_accumulation
+        Evidence: evidence(extraction_delta,0,10,0.45,0.52)
+    [critical] extraction_accumulation
+        Evidence: evidence(extraction_delta,5,10,0.5,0.52)
+
+--- Transition Path Analysis ---
+
+--- Terminal State Predictions ---
+  ulysses_proteus_1904 -> tangled_rope (confidence: low)
+
+================================================================
+
+--- SCOPE EFFECT ANALYSIS ---
+  Formula: χ = ε × π(P) × σ(S)
+  ulysses_proteus_1904 (ε=0.52):
+    powerless@local: χ = 0.52 × 1.50 × 0.80 = 0.624
+    moderate@national: χ = 0.52 × 1.00 × 1.00 = 0.520
+    institutional@national: χ = 0.52 × -0.20 × 1.00 = -0.104
+    analytical@global: χ = 0.52 × 1.15 × 1.20 = 0.718
+
+--- LOGICAL FINGERPRINT ---
+
+=== Logical Fingerprint: ulysses_proteus_1904 ===
+  Shift:      powerless=tangled_rope  moderate=tangled_rope  institutional=piton  analytical=snare
+
+--- SYSTEM INSIGHTS ---
+  Omegas Identified: 0
+
+
+====================================================
+   DEFERENTIAL REALISM (DR) EXECUTIVE SUMMARY
+====================================================
+Timeline:       0 to 10
+Structural Pattern: stable
+Confidence:     high
+
+[CONSTRAINT INVENTORY: INDEXICAL AUDIT]
+
+
+Constraint: ulysses_proteus_1904
+  Claimed Type: piton
+  Perspectives:
+    - [context(agent_power(powerless),time_horizon(biographical),exit_options(trapped),spatial_scope(local))]: snare (Mismatch)
+    - [context(agent_power(institutional),time_horizon(civilizational),exit_options(mobile),spatial_scope(universal))]: mountain (Mismatch)
+    - [context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(global))]: piton (Matches Claim)
+
+[CROSS-DOMAIN ISOMORPHISM & RISK AUDIT: ulysses_proteus_1904]
+  No high-risk isomorphisms detected for current constraints.
+
+[COMPREHENSIVE CROSS-DOMAIN STRUCTURAL TWINS]
+  No cross-domain isomorphisms detected.
+
+[META-LOGICAL AUDIT: ONTOLOGICAL FRAUD DETECTION]
+  No classification errors detected. System is Ontologically Coherent.
+
+[ONTOLOGICAL FORENSIC AUDIT: FALSE MOUNTAINS]
+  All mountains are structurally validated.
+
+[STRUCTURAL SIGNATURE ANALYSIS]
+  ulysses_proteus_1904: constructed_high_extraction (confidence: medium)
+    → CONSTRUCTED HIGH-EXTRACTION signature for ulysses_proteus_1904: Enforcement present (suppression=0.85, resistance=0.50) with high extraction (0.52). This is an extraction mechanism that metrics failed to classify as snare.
+
+[UKE_DR FEASIBILITY BRIDGE]
+  Recommendation | UKE Status
+  ----------------------------------------------------------------------
+
+Aggregate Magnitude (Kappa) at Tn: 0.64
+
+[PERSPECTIVAL GAP ANALYSIS]
+
+  Analysis for Constraint: ulysses_proteus_1904
+    - Individual (Powerless): snare  [chi = 0.52 x 1.50 = 0.78]
+    - Institutional (Manager): mountain  [chi = 0.52 x -0.20 = -0.10 -> net benefit]
+    ! MANDATROPHY GAP: delta_chi = 0.88 (high)
+
+[OMEGA GENERATION FROM PERSPECTIVAL GAPS: ulysses_proteus_1904]
+  Generated 1 Omega variables from perspectival gaps:
+
+  Ω: omega_learned_helplessness_ulysses_proteus_1904 (conceptual)
+     Question: Constraint ulysses_proteus_1904 appears extractive (Snare) to individuals but unchangeable (Mountain) to institutions...
+     Source: gap(snare_mountain_confusion,snare,mountain)
+
+
+[OMEGA TRIAGE & PRIORITIZATION]
+
+  [critical] 1 omega(s):
+    - omega_learned_helplessness_ulysses_proteus_1904 (conceptual)
+      Constraint ulysses_proteus_1904 appears extractive (Snare) to individuals but unchangeable (Mountain) to institutions...
+
+  [high] 1 omega(s):
+    - omega_learned_helplessness_ulysses_proteus_1904 (conceptual)
+      Constraint ulysses_proteus_1904 appears extractive (Snare) to individuals but unchangeable (Mountain) to institutions...
+
+[OMEGA RESOLUTION SCENARIO GENERATION]
+  Generated 1 resolution scenario(s):
+
+  ┌─ [omega_learned_helplessness_ulysses_proteus_1904] CONCEPTUAL CLARIFICATION
+  │  Constraint: ulysses_proteus_1904
+  │  Gap: Constraint ulysses_proteus_1904 appears extractive (Snare) to individuals but unchangeable (Mountain) to institutions...
+  │
+  │  CRITICAL: Learned Helplessness Pattern
+  │  Powerless see: SNARE (extractive trap)
+  │  Institutions see: MOUNTAIN (unchangeable law)
+  │
+  │  RESOLUTION STRATEGY:
+  │  1. Test changeability:
+  │     - Can institutions modify ulysses_proteus_1904?
+  │     - What legal/political mechanisms exist?
+  │     - Historical precedents of change?
+  │  2. Test extraction:
+  │     - Is benefit flow symmetric or asymmetric?
+  │     - Who has veto power over changes?
+  │  3. Decision tree:
+  │     IF truly unchangeable + extractive → MANDATROPHY
+  │     IF changeable + extractive → Correct to SNARE
+  │     IF unchangeable + fair → Correct to MOUNTAIN
+  │     IF institutions falsely claim necessity → SNARE + fraud flag
+  └─
+
+====================================================
+[PASS] testsets/ulysses_chp03.pl
+
+### START LLM REFINEMENT MANIFEST: ulysses_proteus_1904 ###
+
+[PERSPECTIVAL_GAPS]
+  - Constraint "ulysses_proteus_1904": Individual sees snare, but Institution sees mountain.
+
+[ONTOLOGICAL_MISMATCHES]
+  - None detected.
+
+[UNRESOLVED_OMEGAS]
+  - omega_learned_helplessness_ulysses_proteus_1904 (conceptual): Constraint ulysses_proteus_1904 appears extractive (Snare) to individuals but unchangeable (Mountain) to institutions...
+
+### END REFINEMENT MANIFEST ###
+
+[31] EXECUTING: testsets/ulysses_chp04.pl
+
+[SCENARIO MANAGER] Clearing Knowledge Base...
+[OK] Knowledge Base is empty.
+[SCENARIO MANAGER] Loading: testsets/ulysses_chp04.pl...
+[SCENARIO MANAGER] Performing Global Repair...
+
+[REPAIR] Auditing vectors for: ulysses_calypso_1904...
+  [BRIDGE] Derived constraint_claim(ulysses_calypso_1904, piton) from declared analytical classification
+  [FIXED] Imputed 0.55 for accessibility_collapse(organizational) at T=0
+  [FIXED] Imputed 0.73 for stakes_inflation(organizational) at T=0
+  [FIXED] Imputed 0.6 for suppression(organizational) at T=0
+  [FIXED] Imputed 0.6 for resistance(organizational) at T=0
+  [FIXED] Imputed 0.55 for accessibility_collapse(organizational) at T=10
+  [FIXED] Imputed 0.73 for stakes_inflation(organizational) at T=10
+  [FIXED] Imputed 0.6 for suppression(organizational) at T=10
+  [FIXED] Imputed 0.6 for resistance(organizational) at T=10
+  [FIXED] Imputed 0.55 for accessibility_collapse(class) at T=0
+  [FIXED] Imputed 0.73 for stakes_inflation(class) at T=0
+  [FIXED] Imputed 0.6 for suppression(class) at T=0
+  [FIXED] Imputed 0.6 for resistance(class) at T=0
+  [FIXED] Imputed 0.55 for accessibility_collapse(class) at T=10
+  [FIXED] Imputed 0.73 for stakes_inflation(class) at T=10
+  [FIXED] Imputed 0.6 for suppression(class) at T=10
+  [FIXED] Imputed 0.6 for resistance(class) at T=10
+  [FIXED] Imputed 0.55 for accessibility_collapse(individual) at T=0
+  [FIXED] Imputed 0.73 for stakes_inflation(individual) at T=0
+  [FIXED] Imputed 0.6 for suppression(individual) at T=0
+  [FIXED] Imputed 0.6 for resistance(individual) at T=0
+  [FIXED] Imputed 0.55 for accessibility_collapse(individual) at T=10
+  [FIXED] Imputed 0.73 for stakes_inflation(individual) at T=10
+  [FIXED] Imputed 0.6 for suppression(individual) at T=10
+  [FIXED] Imputed 0.6 for resistance(individual) at T=10
+
+[REPAIR] Auditing vectors for: ulysses_calypso_1904...
+
+>>> INITIATING DR-AUDIT SUITE: ulysses_calypso_1904
+
+[REPAIR] Auditing vectors for: ulysses_calypso_1904...
+
+--- [START] Data Verification ---
+ERROR: Invalid measurement(uc_ex_t5,ulysses_calymptotic_1904,base_extractiveness,5,0.42)
+[FAIL] Schema mismatch.
+Checking Interval: ulysses_calypso_1904 (0-10)
+Checking Interval: ulysses_calypso_1904 (0-10)
+--- [END] Data Verification Complete ---
+[OK] Verification passed.
+
+=== PERSPECTIVE COMPARISON ===
+Constraint: ulysses_calypso_1904
+
+From YOUR perspective (context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(global))): piton
+
+From ANALYTICAL perspective: piton
+
+→ Perspectives AGREE
+
+--- PER-INDEX VALIDATION ---
+  [INDEX OK] ulysses_calypso_1904 from context(agent_power(powerless),time_horizon(biographical),exit_options(trapped),spatial_scope(local)): declared=snare, computed=snare
+  [INDEX MISMATCH] ulysses_calypso_1904 from context(agent_power(institutional),time_horizon(generational),exit_options(mobile),spatial_scope(local)): declared=rope, computed=piton
+  [INDEX MISMATCH] ulysses_calypso_1904 from context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(global)): declared=piton, computed=snare
+  [INTENT] Result: stable (Confidence: high)
+
+=== DEFERENTIAL REALISM (DR) DIAGNOSTIC: ulysses_calypso_1904 ===
+
+[CONSTRAINT INVENTORY]
+  - ulysses_calypso_1904: inertial_piton (Intensity: 0.75)
+
+[FEASIBILITY BRIDGE]
+====================================================
+
+--- LIFECYCLE DRIFT ANALYSIS ---
+
+================================================================
+  DRIFT EVENT REPORT
+================================================================
+
+  Constraints scanned: 1
+  Total drift events:  3
+  Critical: 3 | Warning: 0 | Watch: 0
+
+  ulysses_calypso_1904:
+    [critical] metric_substitution
+        Evidence: evidence(theater_delta,0,5,0.65,0.8)
+    [critical] metric_substitution
+        Evidence: evidence(theater_delta,0,10,0.65,0.75)
+    [critical] extraction_accumulation
+        Evidence: evidence(extraction_delta,0,10,0.35,0.47)
+
+--- Transition Path Analysis ---
+
+--- Terminal State Predictions ---
+  ulysses_calypso_1904 -> tangled_rope (confidence: low)
+
+================================================================
+
+--- SCOPE EFFECT ANALYSIS ---
+  Formula: χ = ε × π(P) × σ(S)
+  ulysses_calypso_1904 (ε=0.47):
+    powerless@local: χ = 0.47 × 1.50 × 0.80 = 0.564
+    moderate@national: χ = 0.47 × 1.00 × 1.00 = 0.470
+    institutional@national: χ = 0.47 × -0.20 × 1.00 = -0.094
+    analytical@global: χ = 0.47 × 1.15 × 1.20 = 0.649
+
+--- LOGICAL FINGERPRINT ---
+
+=== Logical Fingerprint: ulysses_calypso_1904 ===
+  Shift:      powerless=snare  moderate=snare  institutional=piton  analytical=snare
+
+--- SYSTEM INSIGHTS ---
+  Omegas Identified: 0
+
+
+====================================================
+   DEFERENTIAL REALISM (DR) EXECUTIVE SUMMARY
+====================================================
+Timeline:       0 to 10
+Structural Pattern: stable
+Confidence:     high
+
+[CONSTRAINT INVENTORY: INDEXICAL AUDIT]
+
+
+Constraint: ulysses_calypso_1904
+  Claimed Type: piton
+  Perspectives:
+    - [context(agent_power(powerless),time_horizon(biographical),exit_options(trapped),spatial_scope(local))]: snare (Mismatch)
+    - [context(agent_power(institutional),time_horizon(generational),exit_options(mobile),spatial_scope(local))]: rope (Mismatch)
+    - [context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(global))]: piton (Matches Claim)
+
+[CROSS-DOMAIN ISOMORPHISM & RISK AUDIT: ulysses_calypso_1904]
+  No high-risk isomorphisms detected for current constraints.
+
+[COMPREHENSIVE CROSS-DOMAIN STRUCTURAL TWINS]
+  No cross-domain isomorphisms detected.
+
+[META-LOGICAL AUDIT: ONTOLOGICAL FRAUD DETECTION]
+  No classification errors detected. System is Ontologically Coherent.
+
+[ONTOLOGICAL FORENSIC AUDIT: FALSE MOUNTAINS]
+  All mountains are structurally validated.
+
+[STRUCTURAL SIGNATURE ANALYSIS]
+  ulysses_calypso_1904: constructed_high_extraction (confidence: medium)
+    → CONSTRUCTED HIGH-EXTRACTION signature for ulysses_calypso_1904: Enforcement present (suppression=0.60, resistance=0.50) with high extraction (0.47). This is an extraction mechanism that metrics failed to classify as snare.
+
+[UKE_DR FEASIBILITY BRIDGE]
+  Recommendation | UKE Status
+  ----------------------------------------------------------------------
+
+Aggregate Magnitude (Kappa) at Tn: 0.59
+
+[PERSPECTIVAL GAP ANALYSIS]
+
+  Analysis for Constraint: ulysses_calypso_1904
+    ! ALERT: Extractive "Snare" is masked as functional "Rope".
+    - Individual (Powerless): snare  [chi = 0.47 x 1.50 = 0.70]
+    - Institutional (Manager): rope  [chi = 0.47 x -0.20 = -0.09 -> net benefit]
+    ! MANDATROPHY GAP: delta_chi = 0.80 (high)
+
+[OMEGA GENERATION FROM PERSPECTIVAL GAPS: ulysses_calypso_1904]
+  Generated 1 Omega variables from perspectival gaps:
+
+  Ω: omega_extraction_blindness_ulysses_calypso_1904 (conceptual)
+     Question: Constraint ulysses_calypso_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+     Source: gap(snare_masked_as_rope,snare,rope)
+
+
+[OMEGA TRIAGE & PRIORITIZATION]
+
+  [critical] 1 omega(s):
+    - omega_extraction_blindness_ulysses_calypso_1904 (conceptual)
+      Constraint ulysses_calypso_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+  [high] 1 omega(s):
+    - omega_extraction_blindness_ulysses_calypso_1904 (conceptual)
+      Constraint ulysses_calypso_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+[OMEGA RESOLUTION SCENARIO GENERATION]
+  Generated 1 resolution scenario(s):
+
+  ┌─ [omega_extraction_blindness_ulysses_calypso_1904] CONCEPTUAL CLARIFICATION
+  │  Constraint: ulysses_calypso_1904
+  │  Gap: Constraint ulysses_calypso_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+  │
+  │  CRITICAL: Extraction Masking Detected
+  │  Powerless see: SNARE (extractive trap)
+  │  Institutions see: ROPE (functional rule)
+  │
+  │  RESOLUTION STRATEGY:
+  │  1. Interview affected individuals (N=10+):
+  │     - Who benefits from ulysses_calypso_1904?
+  │     - Can you change/exit this constraint?
+  │     - What would happen if you tried?
+  │  2. Interview institutional actors (N=10+):
+  │     - What function does ulysses_calypso_1904 serve?
+  │     - Who would object to removing it?
+  │     - What alternatives exist?
+  │  3. Document benefit flows:
+  │     - Track who gains vs. who loses from status quo
+  │     - Measure asymmetric benefit distribution
+  │  4. Decision tree:
+  │     IF extraction confirmed → Reclassify as SNARE
+  │     IF functional & fair → Reclassify as ROPE
+  │     IF context-dependent → Add indexical resolution
+  └─
+
+====================================================
+[PASS] testsets/ulysses_chp04.pl
+
+### START LLM REFINEMENT MANIFEST: ulysses_calypso_1904 ###
+
+[PERSPECTIVAL_GAPS]
+  - Constraint "ulysses_calypso_1904": Individual sees snare, but Institution sees rope.
+
+[ONTOLOGICAL_MISMATCHES]
+  - None detected.
+
+[UNRESOLVED_OMEGAS]
+  - omega_extraction_blindness_ulysses_calypso_1904 (conceptual): Constraint ulysses_calypso_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+### END REFINEMENT MANIFEST ###
+
+[32] EXECUTING: testsets/ulysses_chp05.pl
+
+[SCENARIO MANAGER] Clearing Knowledge Base...
+[OK] Knowledge Base is empty.
+[SCENARIO MANAGER] Loading: testsets/ulysses_chp05.pl...
+[SCENARIO MANAGER] Performing Global Repair...
+
+[REPAIR] Auditing vectors for: ulysses_lotus_1904...
+  [BRIDGE] Derived constraint_claim(ulysses_lotus_1904, piton) from declared analytical classification
+  [FIXED] Imputed 0.55 for accessibility_collapse(organizational) at T=0
+  [FIXED] Imputed 0.73 for stakes_inflation(organizational) at T=0
+  [FIXED] Imputed 0.7 for suppression(organizational) at T=0
+  [FIXED] Imputed 0.6 for resistance(organizational) at T=0
+  [FIXED] Imputed 0.55 for accessibility_collapse(organizational) at T=10
+  [FIXED] Imputed 0.73 for stakes_inflation(organizational) at T=10
+  [FIXED] Imputed 0.7 for suppression(organizational) at T=10
+  [FIXED] Imputed 0.6 for resistance(organizational) at T=10
+  [FIXED] Imputed 0.55 for accessibility_collapse(class) at T=0
+  [FIXED] Imputed 0.73 for stakes_inflation(class) at T=0
+  [FIXED] Imputed 0.7 for suppression(class) at T=0
+  [FIXED] Imputed 0.6 for resistance(class) at T=0
+  [FIXED] Imputed 0.55 for accessibility_collapse(class) at T=10
+  [FIXED] Imputed 0.73 for stakes_inflation(class) at T=10
+  [FIXED] Imputed 0.7 for suppression(class) at T=10
+  [FIXED] Imputed 0.6 for resistance(class) at T=10
+  [FIXED] Imputed 0.55 for accessibility_collapse(individual) at T=0
+  [FIXED] Imputed 0.73 for stakes_inflation(individual) at T=0
+  [FIXED] Imputed 0.7 for suppression(individual) at T=0
+  [FIXED] Imputed 0.6 for resistance(individual) at T=0
+  [FIXED] Imputed 0.55 for accessibility_collapse(individual) at T=10
+  [FIXED] Imputed 0.73 for stakes_inflation(individual) at T=10
+  [FIXED] Imputed 0.7 for suppression(individual) at T=10
+  [FIXED] Imputed 0.6 for resistance(individual) at T=10
+
+[REPAIR] Auditing vectors for: ulysses_lotus_1904...
+
+>>> INITIATING DR-AUDIT SUITE: ulysses_lotus_1904
+
+[REPAIR] Auditing vectors for: ulysses_lotus_1904...
+
+--- [START] Data Verification ---
+[OK] Ontology Schema matches.
+Checking Interval: ulysses_lotus_1904 (0-10)
+Checking Interval: ulysses_lotus_1904 (0-10)
+--- [END] Data Verification Complete ---
+[OK] Verification passed.
+
+=== PERSPECTIVE COMPARISON ===
+Constraint: ulysses_lotus_1904
+
+From YOUR perspective (context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(global))): piton
+
+From ANALYTICAL perspective: piton
+
+→ Perspectives AGREE
+
+--- PER-INDEX VALIDATION ---
+  [INDEX OK] ulysses_lotus_1904 from context(agent_power(powerless),time_horizon(biographical),exit_options(trapped),spatial_scope(local)): declared=snare, computed=snare
+  [INDEX MISMATCH] ulysses_lotus_1904 from context(agent_power(institutional),time_horizon(generational),exit_options(mobile),spatial_scope(local)): declared=rope, computed=piton
+  [INDEX MISMATCH] ulysses_lotus_1904 from context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(global)): declared=piton, computed=snare
+  [INTENT] Result: stable (Confidence: high)
+
+=== DEFERENTIAL REALISM (DR) DIAGNOSTIC: ulysses_lotus_1904 ===
+
+[CONSTRAINT INVENTORY]
+  - ulysses_lotus_1904: inertial_piton (Intensity: 0.85)
+
+[FEASIBILITY BRIDGE]
+====================================================
+
+--- LIFECYCLE DRIFT ANALYSIS ---
+
+================================================================
+  DRIFT EVENT REPORT
+================================================================
+
+  Constraints scanned: 1
+  Total drift events:  5
+  Critical: 5 | Warning: 0 | Watch: 0
+
+  ulysses_lotus_1904:
+    [critical] metric_substitution
+        Evidence: evidence(theater_delta,0,5,0.7,0.88)
+    [critical] metric_substitution
+        Evidence: evidence(theater_delta,0,10,0.7,0.85)
+    [critical] extraction_accumulation
+        Evidence: evidence(extraction_delta,0,5,0.38,0.44)
+    [critical] extraction_accumulation
+        Evidence: evidence(extraction_delta,0,10,0.38,0.48)
+    [critical] extraction_accumulation
+        Evidence: evidence(extraction_delta,5,10,0.44,0.48)
+
+--- Transition Path Analysis ---
+
+--- Terminal State Predictions ---
+  ulysses_lotus_1904 -> tangled_rope (confidence: low)
+
+================================================================
+
+--- SCOPE EFFECT ANALYSIS ---
+  Formula: χ = ε × π(P) × σ(S)
+  ulysses_lotus_1904 (ε=0.48):
+    powerless@local: χ = 0.48 × 1.50 × 0.80 = 0.576
+    moderate@national: χ = 0.48 × 1.00 × 1.00 = 0.480
+    institutional@national: χ = 0.48 × -0.20 × 1.00 = -0.096
+    analytical@global: χ = 0.48 × 1.15 × 1.20 = 0.662
+
+--- LOGICAL FINGERPRINT ---
+
+=== Logical Fingerprint: ulysses_lotus_1904 ===
+  Shift:      powerless=snare  moderate=snare  institutional=piton  analytical=snare
+
+--- SYSTEM INSIGHTS ---
+  Omegas Identified: 0
+
+
+====================================================
+   DEFERENTIAL REALISM (DR) EXECUTIVE SUMMARY
+====================================================
+Timeline:       0 to 10
+Structural Pattern: stable
+Confidence:     high
+
+[CONSTRAINT INVENTORY: INDEXICAL AUDIT]
+
+
+Constraint: ulysses_lotus_1904
+  Claimed Type: piton
+  Perspectives:
+    - [context(agent_power(powerless),time_horizon(biographical),exit_options(trapped),spatial_scope(local))]: snare (Mismatch)
+    - [context(agent_power(institutional),time_horizon(generational),exit_options(mobile),spatial_scope(local))]: rope (Mismatch)
+    - [context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(global))]: piton (Matches Claim)
+
+[CROSS-DOMAIN ISOMORPHISM & RISK AUDIT: ulysses_lotus_1904]
+  No high-risk isomorphisms detected for current constraints.
+
+[COMPREHENSIVE CROSS-DOMAIN STRUCTURAL TWINS]
+  No cross-domain isomorphisms detected.
+
+[META-LOGICAL AUDIT: ONTOLOGICAL FRAUD DETECTION]
+  No classification errors detected. System is Ontologically Coherent.
+
+[ONTOLOGICAL FORENSIC AUDIT: FALSE MOUNTAINS]
+  All mountains are structurally validated.
+
+[STRUCTURAL SIGNATURE ANALYSIS]
+  ulysses_lotus_1904: constructed_high_extraction (confidence: medium)
+    → CONSTRUCTED HIGH-EXTRACTION signature for ulysses_lotus_1904: Enforcement present (suppression=0.70, resistance=0.50) with high extraction (0.48). This is an extraction mechanism that metrics failed to classify as snare.
+
+[UKE_DR FEASIBILITY BRIDGE]
+  Recommendation | UKE Status
+  ----------------------------------------------------------------------
+
+Aggregate Magnitude (Kappa) at Tn: 0.61
+
+[PERSPECTIVAL GAP ANALYSIS]
+
+  Analysis for Constraint: ulysses_lotus_1904
+    ! ALERT: Extractive "Snare" is masked as functional "Rope".
+    - Individual (Powerless): snare  [chi = 0.48 x 1.50 = 0.72]
+    - Institutional (Manager): rope  [chi = 0.48 x -0.20 = -0.10 -> net benefit]
+    ! MANDATROPHY GAP: delta_chi = 0.82 (high)
+
+[OMEGA GENERATION FROM PERSPECTIVAL GAPS: ulysses_lotus_1904]
+  Generated 1 Omega variables from perspectival gaps:
+
+  Ω: omega_extraction_blindness_ulysses_lotus_1904 (conceptual)
+     Question: Constraint ulysses_lotus_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+     Source: gap(snare_masked_as_rope,snare,rope)
+
+
+[OMEGA TRIAGE & PRIORITIZATION]
+
+  [critical] 1 omega(s):
+    - omega_extraction_blindness_ulysses_lotus_1904 (conceptual)
+      Constraint ulysses_lotus_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+  [high] 1 omega(s):
+    - omega_extraction_blindness_ulysses_lotus_1904 (conceptual)
+      Constraint ulysses_lotus_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+[OMEGA RESOLUTION SCENARIO GENERATION]
+  Generated 1 resolution scenario(s):
+
+  ┌─ [omega_extraction_blindness_ulysses_lotus_1904] CONCEPTUAL CLARIFICATION
+  │  Constraint: ulysses_lotus_1904
+  │  Gap: Constraint ulysses_lotus_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+  │
+  │  CRITICAL: Extraction Masking Detected
+  │  Powerless see: SNARE (extractive trap)
+  │  Institutions see: ROPE (functional rule)
+  │
+  │  RESOLUTION STRATEGY:
+  │  1. Interview affected individuals (N=10+):
+  │     - Who benefits from ulysses_lotus_1904?
+  │     - Can you change/exit this constraint?
+  │     - What would happen if you tried?
+  │  2. Interview institutional actors (N=10+):
+  │     - What function does ulysses_lotus_1904 serve?
+  │     - Who would object to removing it?
+  │     - What alternatives exist?
+  │  3. Document benefit flows:
+  │     - Track who gains vs. who loses from status quo
+  │     - Measure asymmetric benefit distribution
+  │  4. Decision tree:
+  │     IF extraction confirmed → Reclassify as SNARE
+  │     IF functional & fair → Reclassify as ROPE
+  │     IF context-dependent → Add indexical resolution
+  └─
+
+====================================================
+[PASS] testsets/ulysses_chp05.pl
+
+### START LLM REFINEMENT MANIFEST: ulysses_lotus_1904 ###
+
+[PERSPECTIVAL_GAPS]
+  - Constraint "ulysses_lotus_1904": Individual sees snare, but Institution sees rope.
+
+[ONTOLOGICAL_MISMATCHES]
+  - None detected.
+
+[UNRESOLVED_OMEGAS]
+  - omega_extraction_blindness_ulysses_lotus_1904 (conceptual): Constraint ulysses_lotus_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+### END REFINEMENT MANIFEST ###
+
+[33] EXECUTING: testsets/ulysses_chp06.pl
+
+[SCENARIO MANAGER] Clearing Knowledge Base...
+[OK] Knowledge Base is empty.
+[SCENARIO MANAGER] Loading: testsets/ulysses_chp06.pl...
+[SCENARIO MANAGER] Performing Global Repair...
+
+[REPAIR] Auditing vectors for: ulysses_hades_1904...
+  [BRIDGE] Derived constraint_claim(ulysses_hades_1904, piton) from declared analytical classification
+  [FIXED] Imputed 0.55 for accessibility_collapse(organizational) at T=0
+  [FIXED] Imputed 0.73 for stakes_inflation(organizational) at T=0
+  [FIXED] Imputed 0.95 for suppression(organizational) at T=0
+  [FIXED] Imputed 0.6 for resistance(organizational) at T=0
+  [FIXED] Imputed 0.55 for accessibility_collapse(organizational) at T=10
+  [FIXED] Imputed 0.73 for stakes_inflation(organizational) at T=10
+  [FIXED] Imputed 0.95 for suppression(organizational) at T=10
+  [FIXED] Imputed 0.6 for resistance(organizational) at T=10
+  [FIXED] Imputed 0.55 for accessibility_collapse(class) at T=0
+  [FIXED] Imputed 0.73 for stakes_inflation(class) at T=0
+  [FIXED] Imputed 0.95 for suppression(class) at T=0
+  [FIXED] Imputed 0.6 for resistance(class) at T=0
+  [FIXED] Imputed 0.55 for accessibility_collapse(class) at T=10
+  [FIXED] Imputed 0.73 for stakes_inflation(class) at T=10
+  [FIXED] Imputed 0.95 for suppression(class) at T=10
+  [FIXED] Imputed 0.6 for resistance(class) at T=10
+  [FIXED] Imputed 0.55 for accessibility_collapse(individual) at T=0
+  [FIXED] Imputed 0.73 for stakes_inflation(individual) at T=0
+  [FIXED] Imputed 0.95 for suppression(individual) at T=0
+  [FIXED] Imputed 0.6 for resistance(individual) at T=0
+  [FIXED] Imputed 0.55 for accessibility_collapse(individual) at T=10
+  [FIXED] Imputed 0.73 for stakes_inflation(individual) at T=10
+  [FIXED] Imputed 0.95 for suppression(individual) at T=10
+  [FIXED] Imputed 0.6 for resistance(individual) at T=10
+
+[REPAIR] Auditing vectors for: ulysses_hades_1904...
+
+>>> INITIATING DR-AUDIT SUITE: ulysses_hades_1904
+
+[REPAIR] Auditing vectors for: ulysses_hades_1904...
+
+--- [START] Data Verification ---
+[OK] Ontology Schema matches.
+Checking Interval: ulysses_hades_1904 (0-10)
+Checking Interval: ulysses_hades_1904 (0-10)
+--- [END] Data Verification Complete ---
+[OK] Verification passed.
+
+=== PERSPECTIVE COMPARISON ===
+Constraint: ulysses_hades_1904
+
+From YOUR perspective (context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(global))): piton
+
+From ANALYTICAL perspective: piton
+
+→ Perspectives AGREE
+
+--- PER-INDEX VALIDATION ---
+  [INDEX MISMATCH] ulysses_hades_1904 from context(agent_power(powerless),time_horizon(civilizational),exit_options(trapped),spatial_scope(universal)): declared=mountain, computed=snare
+  [INDEX MISMATCH] ulysses_hades_1904 from context(agent_power(institutional),time_horizon(generational),exit_options(mobile),spatial_scope(local)): declared=rope, computed=piton
+  [INDEX MISMATCH] ulysses_hades_1904 from context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(global)): declared=piton, computed=snare
+  [INTENT] Result: stable (Confidence: high)
+
+=== DEFERENTIAL REALISM (DR) DIAGNOSTIC: ulysses_hades_1904 ===
+
+[CONSTRAINT INVENTORY]
+  - ulysses_hades_1904: inertial_piton (Intensity: 0.88)
+
+[FEASIBILITY BRIDGE]
+====================================================
+
+--- LIFECYCLE DRIFT ANALYSIS ---
+
+================================================================
+  DRIFT EVENT REPORT
+================================================================
+
+  Constraints scanned: 1
+  Total drift events:  5
+  Critical: 5 | Warning: 0 | Watch: 0
+
+  ulysses_hades_1904:
+    [critical] metric_substitution
+        Evidence: evidence(theater_delta,0,5,0.75,0.92)
+    [critical] metric_substitution
+        Evidence: evidence(theater_delta,0,10,0.75,0.88)
+    [critical] extraction_accumulation
+        Evidence: evidence(extraction_delta,0,5,0.4,0.45)
+    [critical] extraction_accumulation
+        Evidence: evidence(extraction_delta,0,10,0.4,0.49)
+    [critical] extraction_accumulation
+        Evidence: evidence(extraction_delta,5,10,0.45,0.49)
+
+--- Transition Path Analysis ---
+
+--- Terminal State Predictions ---
+  ulysses_hades_1904 -> tangled_rope (confidence: low)
+
+================================================================
+
+--- SCOPE EFFECT ANALYSIS ---
+  Formula: χ = ε × π(P) × σ(S)
+  ulysses_hades_1904 (ε=0.49):
+    powerless@local: χ = 0.49 × 1.50 × 0.80 = 0.588
+    moderate@national: χ = 0.49 × 1.00 × 1.00 = 0.490
+    institutional@national: χ = 0.49 × -0.20 × 1.00 = -0.098
+    analytical@global: χ = 0.49 × 1.15 × 1.20 = 0.676
+
+--- LOGICAL FINGERPRINT ---
+
+=== Logical Fingerprint: ulysses_hades_1904 ===
+  Shift:      powerless=snare  moderate=snare  institutional=piton  analytical=snare
+
+--- SYSTEM INSIGHTS ---
+  Omegas Identified: 0
+
+
+====================================================
+   DEFERENTIAL REALISM (DR) EXECUTIVE SUMMARY
+====================================================
+Timeline:       0 to 10
+Structural Pattern: stable
+Confidence:     high
+
+[CONSTRAINT INVENTORY: INDEXICAL AUDIT]
+
+
+Constraint: ulysses_hades_1904
+  Claimed Type: piton
+  Perspectives:
+    - [context(agent_power(powerless),time_horizon(civilizational),exit_options(trapped),spatial_scope(universal))]: mountain (Mismatch)
+    - [context(agent_power(institutional),time_horizon(generational),exit_options(mobile),spatial_scope(local))]: rope (Mismatch)
+    - [context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(global))]: piton (Matches Claim)
+
+[CROSS-DOMAIN ISOMORPHISM & RISK AUDIT: ulysses_hades_1904]
+  No high-risk isomorphisms detected for current constraints.
+
+[COMPREHENSIVE CROSS-DOMAIN STRUCTURAL TWINS]
+  No cross-domain isomorphisms detected.
+
+[META-LOGICAL AUDIT: ONTOLOGICAL FRAUD DETECTION]
+  No classification errors detected. System is Ontologically Coherent.
+
+[ONTOLOGICAL FORENSIC AUDIT: FALSE MOUNTAINS]
+  All mountains are structurally validated.
+
+[STRUCTURAL SIGNATURE ANALYSIS]
+  ulysses_hades_1904: constructed_high_extraction (confidence: medium)
+    → CONSTRUCTED HIGH-EXTRACTION signature for ulysses_hades_1904: Enforcement present (suppression=0.95, resistance=0.50) with high extraction (0.49). This is an extraction mechanism that metrics failed to classify as snare.
+
+[UKE_DR FEASIBILITY BRIDGE]
+  Recommendation | UKE Status
+  ----------------------------------------------------------------------
+
+Aggregate Magnitude (Kappa) at Tn: 0.66
+
+[PERSPECTIVAL GAP ANALYSIS]
+
+  Analysis for Constraint: ulysses_hades_1904
+    ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
+    - Individual (Powerless): mountain  [chi = 0.49 x 1.50 = 0.73]
+    - Institutional (Manager): rope  [chi = 0.49 x -0.20 = -0.10 -> net benefit]
+    ! MANDATROPHY GAP: delta_chi = 0.83 (high)
+
+[OMEGA GENERATION FROM PERSPECTIVAL GAPS: ulysses_hades_1904]
+  Generated 1 Omega variables from perspectival gaps:
+
+  Ω: omega_cut_safety_ulysses_hades_1904 (conceptual)
+     Question: Constraint ulysses_hades_1904 appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
+     Source: gap(mountain_coordination_confusion,mountain,rope)
+
+
+[OMEGA TRIAGE & PRIORITIZATION]
+
+  [high] 1 omega(s):
+    - omega_cut_safety_ulysses_hades_1904 (conceptual)
+      Constraint ulysses_hades_1904 appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
+
+[OMEGA RESOLUTION SCENARIO GENERATION]
+  Generated 1 resolution scenario(s):
+
+  ┌─ [omega_cut_safety_ulysses_hades_1904] CONCEPTUAL CLARIFICATION
+  │  Constraint: ulysses_hades_1904
+  │  Gap: Constraint ulysses_hades_1904 appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
+  │
+  │  HIGH RISK: Coordination Cut Safety
+  │  Powerless see: MOUNTAIN (unchangeable, survival-critical)
+  │  Institutions see: ROPE (optional, changeable)
+  │
+  │  RESOLUTION STRATEGY:
+  │  1. SAFETY ASSESSMENT (DO NOT SKIP):
+  │     - If institutions cut ulysses_hades_1904, do individuals have alternatives?
+  │     - Is this their only survival mechanism?
+  │     - What scaffolding exists for transition?
+  │  2. Test institutional perception:
+  │     - Can institutions unilaterally change this?
+  │     - Do they understand downstream impacts?
+  │     - Is their "optional" view empirically accurate?
+  │  3. Decision tree:
+  │     IF truly unchangeable → Correct institutional view to MOUNTAIN
+  │     IF changeable + safe alternatives → Correct powerless view to ROPE
+  │     IF changeable + NO alternatives → ADD SCAFFOLD before any change
+  │     IF uncertainty → HALT changes until resolved
+  │  4. CRITICAL: Never proceed with changes until safety verified
+  └─
+
+====================================================
+[PASS] testsets/ulysses_chp06.pl
+
+### START LLM REFINEMENT MANIFEST: ulysses_hades_1904 ###
+
+[PERSPECTIVAL_GAPS]
+  - Constraint "ulysses_hades_1904": Individual sees mountain, but Institution sees rope.
+
+[ONTOLOGICAL_MISMATCHES]
+  - None detected.
+
+[UNRESOLVED_OMEGAS]
+  - omega_cut_safety_ulysses_hades_1904 (conceptual): Constraint ulysses_hades_1904 appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
+
+### END REFINEMENT MANIFEST ###
+
+[34] EXECUTING: testsets/ulysses_chp07.pl
+
+[SCENARIO MANAGER] Clearing Knowledge Base...
+[OK] Knowledge Base is empty.
+[SCENARIO MANAGER] Loading: testsets/ulysses_chp07.pl...
+[SCENARIO MANAGER] Performing Global Repair...
+
+[REPAIR] Auditing vectors for: ulysses_aeolus_1904...
+  [BRIDGE] Derived constraint_claim(ulysses_aeolus_1904, piton) from declared analytical classification
+  [FIXED] Imputed 0.55 for accessibility_collapse(organizational) at T=0
+  [FIXED] Imputed 0.73 for stakes_inflation(organizational) at T=0
+  [FIXED] Imputed 0.75 for suppression(organizational) at T=0
+  [FIXED] Imputed 0.6 for resistance(organizational) at T=0
+  [FIXED] Imputed 0.55 for accessibility_collapse(organizational) at T=10
+  [FIXED] Imputed 0.73 for stakes_inflation(organizational) at T=10
+  [FIXED] Imputed 0.75 for suppression(organizational) at T=10
+  [FIXED] Imputed 0.6 for resistance(organizational) at T=10
+  [FIXED] Imputed 0.55 for accessibility_collapse(class) at T=0
+  [FIXED] Imputed 0.73 for stakes_inflation(class) at T=0
+  [FIXED] Imputed 0.75 for suppression(class) at T=0
+  [FIXED] Imputed 0.6 for resistance(class) at T=0
+  [FIXED] Imputed 0.55 for accessibility_collapse(class) at T=10
+  [FIXED] Imputed 0.73 for stakes_inflation(class) at T=10
+  [FIXED] Imputed 0.75 for suppression(class) at T=10
+  [FIXED] Imputed 0.6 for resistance(class) at T=10
+  [FIXED] Imputed 0.55 for accessibility_collapse(individual) at T=0
+  [FIXED] Imputed 0.73 for stakes_inflation(individual) at T=0
+  [FIXED] Imputed 0.75 for suppression(individual) at T=0
+  [FIXED] Imputed 0.6 for resistance(individual) at T=0
+  [FIXED] Imputed 0.55 for accessibility_collapse(individual) at T=10
+  [FIXED] Imputed 0.73 for stakes_inflation(individual) at T=10
+  [FIXED] Imputed 0.75 for suppression(individual) at T=10
+  [FIXED] Imputed 0.6 for resistance(individual) at T=10
+
+[REPAIR] Auditing vectors for: ulysses_aeolus_1904...
+
+>>> INITIATING DR-AUDIT SUITE: ulysses_aeolus_1904
+
+[REPAIR] Auditing vectors for: ulysses_aeolus_1904...
+
+--- [START] Data Verification ---
+[OK] Ontology Schema matches.
+Checking Interval: ulysses_aeolus_1904 (0-10)
+Checking Interval: ulysses_aeolus_1904 (0-10)
+--- [END] Data Verification Complete ---
+[OK] Verification passed.
+
+=== PERSPECTIVE COMPARISON ===
+Constraint: ulysses_aeolus_1904
+
+From YOUR perspective (context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(global))): piton
+
+From ANALYTICAL perspective: piton
+
+→ Perspectives AGREE
+
+--- PER-INDEX VALIDATION ---
+  [INDEX MISMATCH] ulysses_aeolus_1904 from context(agent_power(powerless),time_horizon(biographical),exit_options(trapped),spatial_scope(national)): declared=snare, computed=tangled_rope
+  [INDEX MISMATCH] ulysses_aeolus_1904 from context(agent_power(institutional),time_horizon(generational),exit_options(mobile),spatial_scope(national)): declared=rope, computed=piton
+  [INDEX MISMATCH] ulysses_aeolus_1904 from context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(global)): declared=piton, computed=snare
+  [INTENT] Result: stable (Confidence: high)
+
+=== DEFERENTIAL REALISM (DR) DIAGNOSTIC: ulysses_aeolus_1904 ===
+
+[CONSTRAINT INVENTORY]
+  - ulysses_aeolus_1904: inertial_piton (Intensity: 0.85)
+
+[FEASIBILITY BRIDGE]
+====================================================
+
+--- LIFECYCLE DRIFT ANALYSIS ---
+
+================================================================
+  DRIFT EVENT REPORT
+================================================================
+
+  Constraints scanned: 1
+  Total drift events:  5
+  Critical: 5 | Warning: 0 | Watch: 0
+
+  ulysses_aeolus_1904:
+    [critical] metric_substitution
+        Evidence: evidence(theater_delta,0,5,0.72,0.9)
+    [critical] metric_substitution
+        Evidence: evidence(theater_delta,0,10,0.72,0.85)
+    [critical] extraction_accumulation
+        Evidence: evidence(extraction_delta,0,5,0.42,0.48)
+    [critical] extraction_accumulation
+        Evidence: evidence(extraction_delta,0,10,0.42,0.51)
+    [critical] extraction_accumulation
+        Evidence: evidence(extraction_delta,5,10,0.48,0.51)
+
+--- Transition Path Analysis ---
+
+--- Terminal State Predictions ---
+  ulysses_aeolus_1904 -> tangled_rope (confidence: low)
+
+================================================================
+
+--- SCOPE EFFECT ANALYSIS ---
+  Formula: χ = ε × π(P) × σ(S)
+  ulysses_aeolus_1904 (ε=0.51):
+    powerless@local: χ = 0.51 × 1.50 × 0.80 = 0.612
+    moderate@national: χ = 0.51 × 1.00 × 1.00 = 0.510
+    institutional@national: χ = 0.51 × -0.20 × 1.00 = -0.102
+    analytical@global: χ = 0.51 × 1.15 × 1.20 = 0.704
+
+--- LOGICAL FINGERPRINT ---
+
+=== Logical Fingerprint: ulysses_aeolus_1904 ===
+  Shift:      powerless=tangled_rope  moderate=tangled_rope  institutional=piton  analytical=snare
+
+--- SYSTEM INSIGHTS ---
+  Omegas Identified: 0
+
+
+====================================================
+   DEFERENTIAL REALISM (DR) EXECUTIVE SUMMARY
+====================================================
+Timeline:       0 to 10
+Structural Pattern: stable
+Confidence:     high
+
+[CONSTRAINT INVENTORY: INDEXICAL AUDIT]
+
+
+Constraint: ulysses_aeolus_1904
+  Claimed Type: piton
+  Perspectives:
+    - [context(agent_power(powerless),time_horizon(biographical),exit_options(trapped),spatial_scope(national))]: snare (Mismatch)
+    - [context(agent_power(institutional),time_horizon(generational),exit_options(mobile),spatial_scope(national))]: rope (Mismatch)
+    - [context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(global))]: piton (Matches Claim)
+
+[CROSS-DOMAIN ISOMORPHISM & RISK AUDIT: ulysses_aeolus_1904]
+  No high-risk isomorphisms detected for current constraints.
+
+[COMPREHENSIVE CROSS-DOMAIN STRUCTURAL TWINS]
+  No cross-domain isomorphisms detected.
+
+[META-LOGICAL AUDIT: ONTOLOGICAL FRAUD DETECTION]
+  No classification errors detected. System is Ontologically Coherent.
+
+[ONTOLOGICAL FORENSIC AUDIT: FALSE MOUNTAINS]
+  All mountains are structurally validated.
+
+[STRUCTURAL SIGNATURE ANALYSIS]
+  ulysses_aeolus_1904: constructed_high_extraction (confidence: medium)
+    → CONSTRUCTED HIGH-EXTRACTION signature for ulysses_aeolus_1904: Enforcement present (suppression=0.75, resistance=0.50) with high extraction (0.51). This is an extraction mechanism that metrics failed to classify as snare.
+
+[UKE_DR FEASIBILITY BRIDGE]
+  Recommendation | UKE Status
+  ----------------------------------------------------------------------
+
+Aggregate Magnitude (Kappa) at Tn: 0.62
+
+[PERSPECTIVAL GAP ANALYSIS]
+
+  Analysis for Constraint: ulysses_aeolus_1904
+    ! ALERT: Extractive "Snare" is masked as functional "Rope".
+    - Individual (Powerless): snare  [chi = 0.51 x 1.50 = 0.77]
+    - Institutional (Manager): rope  [chi = 0.51 x -0.20 = -0.10 -> net benefit]
+    ! MANDATROPHY GAP: delta_chi = 0.87 (high)
+
+[OMEGA GENERATION FROM PERSPECTIVAL GAPS: ulysses_aeolus_1904]
+  Generated 1 Omega variables from perspectival gaps:
+
+  Ω: omega_extraction_blindness_ulysses_aeolus_1904 (conceptual)
+     Question: Constraint ulysses_aeolus_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+     Source: gap(snare_masked_as_rope,snare,rope)
+
+
+[OMEGA TRIAGE & PRIORITIZATION]
+
+  [critical] 1 omega(s):
+    - omega_extraction_blindness_ulysses_aeolus_1904 (conceptual)
+      Constraint ulysses_aeolus_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+  [high] 1 omega(s):
+    - omega_extraction_blindness_ulysses_aeolus_1904 (conceptual)
+      Constraint ulysses_aeolus_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+[OMEGA RESOLUTION SCENARIO GENERATION]
+  Generated 1 resolution scenario(s):
+
+  ┌─ [omega_extraction_blindness_ulysses_aeolus_1904] CONCEPTUAL CLARIFICATION
+  │  Constraint: ulysses_aeolus_1904
+  │  Gap: Constraint ulysses_aeolus_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+  │
+  │  CRITICAL: Extraction Masking Detected
+  │  Powerless see: SNARE (extractive trap)
+  │  Institutions see: ROPE (functional rule)
+  │
+  │  RESOLUTION STRATEGY:
+  │  1. Interview affected individuals (N=10+):
+  │     - Who benefits from ulysses_aeolus_1904?
+  │     - Can you change/exit this constraint?
+  │     - What would happen if you tried?
+  │  2. Interview institutional actors (N=10+):
+  │     - What function does ulysses_aeolus_1904 serve?
+  │     - Who would object to removing it?
+  │     - What alternatives exist?
+  │  3. Document benefit flows:
+  │     - Track who gains vs. who loses from status quo
+  │     - Measure asymmetric benefit distribution
+  │  4. Decision tree:
+  │     IF extraction confirmed → Reclassify as SNARE
+  │     IF functional & fair → Reclassify as ROPE
+  │     IF context-dependent → Add indexical resolution
+  └─
+
+====================================================
+[PASS] testsets/ulysses_chp07.pl
+
+### START LLM REFINEMENT MANIFEST: ulysses_aeolus_1904 ###
+
+[PERSPECTIVAL_GAPS]
+  - Constraint "ulysses_aeolus_1904": Individual sees snare, but Institution sees rope.
+
+[ONTOLOGICAL_MISMATCHES]
+  - None detected.
+
+[UNRESOLVED_OMEGAS]
+  - omega_extraction_blindness_ulysses_aeolus_1904 (conceptual): Constraint ulysses_aeolus_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+### END REFINEMENT MANIFEST ###
+
+[35] EXECUTING: testsets/ulysses_chp08.pl
+
+[SCENARIO MANAGER] Clearing Knowledge Base...
+[OK] Knowledge Base is empty.
+[SCENARIO MANAGER] Loading: testsets/ulysses_chp08.pl...
+[SCENARIO MANAGER] Performing Global Repair...
+
+[REPAIR] Auditing vectors for: ulysses_lestrygonians_1904...
+  [BRIDGE] Derived constraint_claim(ulysses_lestrygonians_1904, piton) from declared analytical classification
+  [FIXED] Imputed 0.55 for accessibility_collapse(organizational) at T=0
+  [FIXED] Imputed 0.73 for stakes_inflation(organizational) at T=0
+  [FIXED] Imputed 0.8 for suppression(organizational) at T=0
+  [FIXED] Imputed 0.6 for resistance(organizational) at T=0
+  [FIXED] Imputed 0.55 for accessibility_collapse(organizational) at T=10
+  [FIXED] Imputed 0.73 for stakes_inflation(organizational) at T=10
+  [FIXED] Imputed 0.8 for suppression(organizational) at T=10
+  [FIXED] Imputed 0.6 for resistance(organizational) at T=10
+  [FIXED] Imputed 0.55 for accessibility_collapse(class) at T=0
+  [FIXED] Imputed 0.73 for stakes_inflation(class) at T=0
+  [FIXED] Imputed 0.8 for suppression(class) at T=0
+  [FIXED] Imputed 0.6 for resistance(class) at T=0
+  [FIXED] Imputed 0.55 for accessibility_collapse(class) at T=10
+  [FIXED] Imputed 0.73 for stakes_inflation(class) at T=10
+  [FIXED] Imputed 0.8 for suppression(class) at T=10
+  [FIXED] Imputed 0.6 for resistance(class) at T=10
+  [FIXED] Imputed 0.55 for accessibility_collapse(individual) at T=0
+  [FIXED] Imputed 0.73 for stakes_inflation(individual) at T=0
+  [FIXED] Imputed 0.8 for suppression(individual) at T=0
+  [FIXED] Imputed 0.6 for resistance(individual) at T=0
+  [FIXED] Imputed 0.55 for accessibility_collapse(individual) at T=10
+  [FIXED] Imputed 0.73 for stakes_inflation(individual) at T=10
+  [FIXED] Imputed 0.8 for suppression(individual) at T=10
+  [FIXED] Imputed 0.6 for resistance(individual) at T=10
+
+[REPAIR] Auditing vectors for: ulysses_lestrygonians_1904...
+
+>>> INITIATING DR-AUDIT SUITE: ulysses_lestrygonians_1904
+
+[REPAIR] Auditing vectors for: ulysses_lestrygonians_1904...
+
+--- [START] Data Verification ---
+[OK] Ontology Schema matches.
+Checking Interval: ulysses_lestrygonians_1904 (0-10)
+Checking Interval: ulysses_lestrygonians_1904 (0-10)
+--- [END] Data Verification Complete ---
+[OK] Verification passed.
+
+=== PERSPECTIVE COMPARISON ===
+Constraint: ulysses_lestrygonians_1904
+
+From YOUR perspective (context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(global))): piton
+
+From ANALYTICAL perspective: piton
+
+→ Perspectives AGREE
+
+--- PER-INDEX VALIDATION ---
+  [INDEX MISMATCH] ulysses_lestrygonians_1904 from context(agent_power(powerless),time_horizon(biographical),exit_options(trapped),spatial_scope(local)): declared=snare, computed=tangled_rope
+  [INDEX MISMATCH] ulysses_lestrygonians_1904 from context(agent_power(institutional),time_horizon(generational),exit_options(mobile),spatial_scope(local)): declared=rope, computed=piton
+  [INDEX MISMATCH] ulysses_lestrygonians_1904 from context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(global)): declared=piton, computed=snare
+  [INTENT] Result: stable (Confidence: high)
+
+=== DEFERENTIAL REALISM (DR) DIAGNOSTIC: ulysses_lestrygonians_1904 ===
+
+[CONSTRAINT INVENTORY]
+  - ulysses_lestrygonians_1904: inertial_piton (Intensity: 0.75)
+
+[FEASIBILITY BRIDGE]
+====================================================
+
+--- LIFECYCLE DRIFT ANALYSIS ---
+
+================================================================
+  DRIFT EVENT REPORT
+================================================================
+
+  Constraints scanned: 1
+  Total drift events:  5
+  Critical: 5 | Warning: 0 | Watch: 0
+
+  ulysses_lestrygonians_1904:
+    [critical] metric_substitution
+        Evidence: evidence(theater_delta,0,5,0.6,0.85)
+    [critical] metric_substitution
+        Evidence: evidence(theater_delta,0,10,0.6,0.75)
+    [critical] extraction_accumulation
+        Evidence: evidence(extraction_delta,0,5,0.35,0.45)
+    [critical] extraction_accumulation
+        Evidence: evidence(extraction_delta,0,10,0.35,0.5)
+    [critical] extraction_accumulation
+        Evidence: evidence(extraction_delta,5,10,0.45,0.5)
+
+--- Transition Path Analysis ---
+
+--- Terminal State Predictions ---
+  ulysses_lestrygonians_1904 -> tangled_rope (confidence: low)
+
+================================================================
+
+--- SCOPE EFFECT ANALYSIS ---
+  Formula: χ = ε × π(P) × σ(S)
+  ulysses_lestrygonians_1904 (ε=0.50):
+    powerless@local: χ = 0.50 × 1.50 × 0.80 = 0.600
+    moderate@national: χ = 0.50 × 1.00 × 1.00 = 0.500
+    institutional@national: χ = 0.50 × -0.20 × 1.00 = -0.100
+    analytical@global: χ = 0.50 × 1.15 × 1.20 = 0.690
+
+--- LOGICAL FINGERPRINT ---
+
+=== Logical Fingerprint: ulysses_lestrygonians_1904 ===
+  Shift:      powerless=tangled_rope  moderate=tangled_rope  institutional=piton  analytical=snare
+
+--- SYSTEM INSIGHTS ---
+  Omegas Identified: 0
+
+
+====================================================
+   DEFERENTIAL REALISM (DR) EXECUTIVE SUMMARY
+====================================================
+Timeline:       0 to 10
+Structural Pattern: stable
+Confidence:     high
+
+[CONSTRAINT INVENTORY: INDEXICAL AUDIT]
+
+
+Constraint: ulysses_lestrygonians_1904
+  Claimed Type: piton
+  Perspectives:
+    - [context(agent_power(powerless),time_horizon(biographical),exit_options(trapped),spatial_scope(local))]: snare (Mismatch)
+    - [context(agent_power(institutional),time_horizon(generational),exit_options(mobile),spatial_scope(local))]: rope (Mismatch)
+    - [context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(global))]: piton (Matches Claim)
+
+[CROSS-DOMAIN ISOMORPHISM & RISK AUDIT: ulysses_lestrygonians_1904]
+  No high-risk isomorphisms detected for current constraints.
+
+[COMPREHENSIVE CROSS-DOMAIN STRUCTURAL TWINS]
+  No cross-domain isomorphisms detected.
+
+[META-LOGICAL AUDIT: ONTOLOGICAL FRAUD DETECTION]
+  No classification errors detected. System is Ontologically Coherent.
+
+[ONTOLOGICAL FORENSIC AUDIT: FALSE MOUNTAINS]
+  All mountains are structurally validated.
+
+[STRUCTURAL SIGNATURE ANALYSIS]
+  ulysses_lestrygonians_1904: constructed_high_extraction (confidence: medium)
+    → CONSTRUCTED HIGH-EXTRACTION signature for ulysses_lestrygonians_1904: Enforcement present (suppression=0.80, resistance=0.50) with high extraction (0.50). This is an extraction mechanism that metrics failed to classify as snare.
+
+[UKE_DR FEASIBILITY BRIDGE]
+  Recommendation | UKE Status
+  ----------------------------------------------------------------------
+
+Aggregate Magnitude (Kappa) at Tn: 0.63
+
+[PERSPECTIVAL GAP ANALYSIS]
+
+  Analysis for Constraint: ulysses_lestrygonians_1904
+    ! ALERT: Extractive "Snare" is masked as functional "Rope".
+    - Individual (Powerless): snare  [chi = 0.50 x 1.50 = 0.75]
+    - Institutional (Manager): rope  [chi = 0.50 x -0.20 = -0.10 -> net benefit]
+    ! MANDATROPHY GAP: delta_chi = 0.85 (high)
+
+[OMEGA GENERATION FROM PERSPECTIVAL GAPS: ulysses_lestrygonians_1904]
+  Generated 1 Omega variables from perspectival gaps:
+
+  Ω: omega_extraction_blindness_ulysses_lestrygonians_1904 (conceptual)
+     Question: Constraint ulysses_lestrygonians_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+     Source: gap(snare_masked_as_rope,snare,rope)
+
+
+[OMEGA TRIAGE & PRIORITIZATION]
+
+  [critical] 1 omega(s):
+    - omega_extraction_blindness_ulysses_lestrygonians_1904 (conceptual)
+      Constraint ulysses_lestrygonians_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+  [high] 1 omega(s):
+    - omega_extraction_blindness_ulysses_lestrygonians_1904 (conceptual)
+      Constraint ulysses_lestrygonians_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+[OMEGA RESOLUTION SCENARIO GENERATION]
+  Generated 1 resolution scenario(s):
+
+  ┌─ [omega_extraction_blindness_ulysses_lestrygonians_1904] CONCEPTUAL CLARIFICATION
+  │  Constraint: ulysses_lestrygonians_1904
+  │  Gap: Constraint ulysses_lestrygonians_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+  │
+  │  CRITICAL: Extraction Masking Detected
+  │  Powerless see: SNARE (extractive trap)
+  │  Institutions see: ROPE (functional rule)
+  │
+  │  RESOLUTION STRATEGY:
+  │  1. Interview affected individuals (N=10+):
+  │     - Who benefits from ulysses_lestrygonians_1904?
+  │     - Can you change/exit this constraint?
+  │     - What would happen if you tried?
+  │  2. Interview institutional actors (N=10+):
+  │     - What function does ulysses_lestrygonians_1904 serve?
+  │     - Who would object to removing it?
+  │     - What alternatives exist?
+  │  3. Document benefit flows:
+  │     - Track who gains vs. who loses from status quo
+  │     - Measure asymmetric benefit distribution
+  │  4. Decision tree:
+  │     IF extraction confirmed → Reclassify as SNARE
+  │     IF functional & fair → Reclassify as ROPE
+  │     IF context-dependent → Add indexical resolution
+  └─
+
+====================================================
+[PASS] testsets/ulysses_chp08.pl
+
+### START LLM REFINEMENT MANIFEST: ulysses_lestrygonians_1904 ###
+
+[PERSPECTIVAL_GAPS]
+  - Constraint "ulysses_lestrygonians_1904": Individual sees snare, but Institution sees rope.
+
+[ONTOLOGICAL_MISMATCHES]
+  - None detected.
+
+[UNRESOLVED_OMEGAS]
+  - omega_extraction_blindness_ulysses_lestrygonians_1904 (conceptual): Constraint ulysses_lestrygonians_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+### END REFINEMENT MANIFEST ###
+
+[36] EXECUTING: testsets/ulysses_chp09.pl
+
+[SCENARIO MANAGER] Clearing Knowledge Base...
+[OK] Knowledge Base is empty.
+[SCENARIO MANAGER] Loading: testsets/ulysses_chp09.pl...
+[SCENARIO MANAGER] Performing Global Repair...
+
+[REPAIR] Auditing vectors for: ulysses_scylla_1904...
+  [BRIDGE] Derived constraint_claim(ulysses_scylla_1904, piton) from declared analytical classification
+  [FIXED] Imputed 0.55 for accessibility_collapse(organizational) at T=0
+  [FIXED] Imputed 0.73 for stakes_inflation(organizational) at T=0
+  [FIXED] Imputed 0.7 for suppression(organizational) at T=0
+  [FIXED] Imputed 0.6 for resistance(organizational) at T=0
+  [FIXED] Imputed 0.55 for accessibility_collapse(organizational) at T=10
+  [FIXED] Imputed 0.73 for stakes_inflation(organizational) at T=10
+  [FIXED] Imputed 0.7 for suppression(organizational) at T=10
+  [FIXED] Imputed 0.6 for resistance(organizational) at T=10
+  [FIXED] Imputed 0.55 for accessibility_collapse(class) at T=0
+  [FIXED] Imputed 0.73 for stakes_inflation(class) at T=0
+  [FIXED] Imputed 0.7 for suppression(class) at T=0
+  [FIXED] Imputed 0.6 for resistance(class) at T=0
+  [FIXED] Imputed 0.55 for accessibility_collapse(class) at T=10
+  [FIXED] Imputed 0.73 for stakes_inflation(class) at T=10
+  [FIXED] Imputed 0.7 for suppression(class) at T=10
+  [FIXED] Imputed 0.6 for resistance(class) at T=10
+  [FIXED] Imputed 0.55 for accessibility_collapse(individual) at T=0
+  [FIXED] Imputed 0.73 for stakes_inflation(individual) at T=0
+  [FIXED] Imputed 0.7 for suppression(individual) at T=0
+  [FIXED] Imputed 0.6 for resistance(individual) at T=0
+  [FIXED] Imputed 0.55 for accessibility_collapse(individual) at T=10
+  [FIXED] Imputed 0.73 for stakes_inflation(individual) at T=10
+  [FIXED] Imputed 0.7 for suppression(individual) at T=10
+  [FIXED] Imputed 0.6 for resistance(individual) at T=10
+
+[REPAIR] Auditing vectors for: ulysses_scylla_1904...
+
+>>> INITIATING DR-AUDIT SUITE: ulysses_scylla_1904
+
+[REPAIR] Auditing vectors for: ulysses_scylla_1904...
+
+--- [START] Data Verification ---
+[OK] Ontology Schema matches.
+Checking Interval: ulysses_scylla_1904 (0-10)
+Checking Interval: ulysses_scylla_1904 (0-10)
+--- [END] Data Verification Complete ---
+[OK] Verification passed.
+
+=== PERSPECTIVE COMPARISON ===
+Constraint: ulysses_scylla_1904
+
+From YOUR perspective (context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(global))): piton
+
+From ANALYTICAL perspective: piton
+
+→ Perspectives AGREE
+
+--- PER-INDEX VALIDATION ---
+  [INDEX MISMATCH] ulysses_scylla_1904 from context(agent_power(powerless),time_horizon(biographical),exit_options(trapped),spatial_scope(local)): declared=snare, computed=tangled_rope
+  [INDEX MISMATCH] ulysses_scylla_1904 from context(agent_power(institutional),time_horizon(generational),exit_options(mobile),spatial_scope(local)): declared=rope, computed=piton
+  [INDEX MISMATCH] ulysses_scylla_1904 from context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(global)): declared=piton, computed=snare
+  [INDEX MISMATCH] ulysses_scylla_1904 from context(agent_power(organized),time_horizon(generational),exit_options(constrained),spatial_scope(national)): declared=scaffold, computed=snare
+  [INTENT] Result: stable (Confidence: high)
+
+=== DEFERENTIAL REALISM (DR) DIAGNOSTIC: ulysses_scylla_1904 ===
+
+[CONSTRAINT INVENTORY]
+  - ulysses_scylla_1904: inertial_piton (Intensity: 0.90)
+
+[FEASIBILITY BRIDGE]
+====================================================
+
+--- LIFECYCLE DRIFT ANALYSIS ---
+
+================================================================
+  DRIFT EVENT REPORT
+================================================================
+
+  Constraints scanned: 1
+  Total drift events:  4
+  Critical: 4 | Warning: 0 | Watch: 0
+
+  ulysses_scylla_1904:
+    [critical] metric_substitution
+        Evidence: evidence(theater_delta,0,5,0.75,0.95)
+    [critical] metric_substitution
+        Evidence: evidence(theater_delta,0,10,0.75,0.9)
+    [critical] extraction_accumulation
+        Evidence: evidence(extraction_delta,0,5,0.4,0.55)
+    [critical] extraction_accumulation
+        Evidence: evidence(extraction_delta,0,10,0.4,0.5)
+
+--- Transition Path Analysis ---
+
+--- Terminal State Predictions ---
+  ulysses_scylla_1904 -> tangled_rope (confidence: low)
+
+================================================================
+
+--- SCOPE EFFECT ANALYSIS ---
+  Formula: χ = ε × π(P) × σ(S)
+  ulysses_scylla_1904 (ε=0.50):
+    powerless@local: χ = 0.50 × 1.50 × 0.80 = 0.600
+    moderate@national: χ = 0.50 × 1.00 × 1.00 = 0.500
+    institutional@national: χ = 0.50 × -0.20 × 1.00 = -0.100
+    analytical@global: χ = 0.50 × 1.15 × 1.20 = 0.690
+
+--- LOGICAL FINGERPRINT ---
+
+=== Logical Fingerprint: ulysses_scylla_1904 ===
+  Shift:      powerless=tangled_rope  moderate=tangled_rope  institutional=piton  analytical=snare
+
+--- SYSTEM INSIGHTS ---
+  Omegas Identified: 0
+
+
+====================================================
+   DEFERENTIAL REALISM (DR) EXECUTIVE SUMMARY
+====================================================
+Timeline:       0 to 10
+Structural Pattern: stable
+Confidence:     high
+
+[CONSTRAINT INVENTORY: INDEXICAL AUDIT]
+
+
+Constraint: ulysses_scylla_1904
+  Claimed Type: piton
+  Perspectives:
+    - [context(agent_power(powerless),time_horizon(biographical),exit_options(trapped),spatial_scope(local))]: snare (Mismatch)
+    - [context(agent_power(institutional),time_horizon(generational),exit_options(mobile),spatial_scope(local))]: rope (Mismatch)
+    - [context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(global))]: piton (Matches Claim)
+    - [context(agent_power(organized),time_horizon(generational),exit_options(constrained),spatial_scope(national))]: scaffold (Mismatch)
+
+[CROSS-DOMAIN ISOMORPHISM & RISK AUDIT: ulysses_scylla_1904]
+  No high-risk isomorphisms detected for current constraints.
+
+[COMPREHENSIVE CROSS-DOMAIN STRUCTURAL TWINS]
+  No cross-domain isomorphisms detected.
+
+[META-LOGICAL AUDIT: ONTOLOGICAL FRAUD DETECTION]
+  No classification errors detected. System is Ontologically Coherent.
+
+[ONTOLOGICAL FORENSIC AUDIT: FALSE MOUNTAINS]
+  All mountains are structurally validated.
+
+[STRUCTURAL SIGNATURE ANALYSIS]
+  ulysses_scylla_1904: constructed_high_extraction (confidence: medium)
+    → CONSTRUCTED HIGH-EXTRACTION signature for ulysses_scylla_1904: Enforcement present (suppression=0.70, resistance=0.50) with high extraction (0.50). This is an extraction mechanism that metrics failed to classify as snare.
+
+[UKE_DR FEASIBILITY BRIDGE]
+  Recommendation | UKE Status
+  ----------------------------------------------------------------------
+
+Aggregate Magnitude (Kappa) at Tn: 0.61
+
+[PERSPECTIVAL GAP ANALYSIS]
+
+  Analysis for Constraint: ulysses_scylla_1904
+    ! ALERT: Extractive "Snare" is masked as functional "Rope".
+    - Individual (Powerless): snare  [chi = 0.50 x 1.50 = 0.75]
+    - Institutional (Manager): rope  [chi = 0.50 x -0.20 = -0.10 -> net benefit]
+    ! MANDATROPHY GAP: delta_chi = 0.85 (high)
+
+[OMEGA GENERATION FROM PERSPECTIVAL GAPS: ulysses_scylla_1904]
+  Generated 1 Omega variables from perspectival gaps:
+
+  Ω: omega_extraction_blindness_ulysses_scylla_1904 (conceptual)
+     Question: Constraint ulysses_scylla_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+     Source: gap(snare_masked_as_rope,snare,rope)
+
+
+[OMEGA TRIAGE & PRIORITIZATION]
+
+  [critical] 1 omega(s):
+    - omega_extraction_blindness_ulysses_scylla_1904 (conceptual)
+      Constraint ulysses_scylla_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+  [high] 1 omega(s):
+    - omega_extraction_blindness_ulysses_scylla_1904 (conceptual)
+      Constraint ulysses_scylla_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+[OMEGA RESOLUTION SCENARIO GENERATION]
+  Generated 1 resolution scenario(s):
+
+  ┌─ [omega_extraction_blindness_ulysses_scylla_1904] CONCEPTUAL CLARIFICATION
+  │  Constraint: ulysses_scylla_1904
+  │  Gap: Constraint ulysses_scylla_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+  │
+  │  CRITICAL: Extraction Masking Detected
+  │  Powerless see: SNARE (extractive trap)
+  │  Institutions see: ROPE (functional rule)
+  │
+  │  RESOLUTION STRATEGY:
+  │  1. Interview affected individuals (N=10+):
+  │     - Who benefits from ulysses_scylla_1904?
+  │     - Can you change/exit this constraint?
+  │     - What would happen if you tried?
+  │  2. Interview institutional actors (N=10+):
+  │     - What function does ulysses_scylla_1904 serve?
+  │     - Who would object to removing it?
+  │     - What alternatives exist?
+  │  3. Document benefit flows:
+  │     - Track who gains vs. who loses from status quo
+  │     - Measure asymmetric benefit distribution
+  │  4. Decision tree:
+  │     IF extraction confirmed → Reclassify as SNARE
+  │     IF functional & fair → Reclassify as ROPE
+  │     IF context-dependent → Add indexical resolution
+  └─
+
+====================================================
+[PASS] testsets/ulysses_chp09.pl
+
+### START LLM REFINEMENT MANIFEST: ulysses_scylla_1904 ###
+
+[PERSPECTIVAL_GAPS]
+  - Constraint "ulysses_scylla_1904": Individual sees snare, but Institution sees rope.
+
+[ONTOLOGICAL_MISMATCHES]
+  - None detected.
+
+[UNRESOLVED_OMEGAS]
+  - omega_extraction_blindness_ulysses_scylla_1904 (conceptual): Constraint ulysses_scylla_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+### END REFINEMENT MANIFEST ###
+
+[37] EXECUTING: testsets/ulysses_chp10.pl
+
+[SCENARIO MANAGER] Clearing Knowledge Base...
+[OK] Knowledge Base is empty.
+[SCENARIO MANAGER] Loading: testsets/ulysses_chp10.pl...
+[SCENARIO MANAGER] Performing Global Repair...
+
+[REPAIR] Auditing vectors for: ulysses_rocks_1904...
+  [BRIDGE] Derived constraint_claim(ulysses_rocks_1904, piton) from declared analytical classification
+  [FIXED] Imputed 0.55 for accessibility_collapse(organizational) at T=0
+  [FIXED] Imputed 0.73 for stakes_inflation(organizational) at T=0
+  [FIXED] Imputed 0.75 for suppression(organizational) at T=0
+  [FIXED] Imputed 0.6 for resistance(organizational) at T=0
+  [FIXED] Imputed 0.55 for accessibility_collapse(organizational) at T=10
+  [FIXED] Imputed 0.73 for stakes_inflation(organizational) at T=10
+  [FIXED] Imputed 0.75 for suppression(organizational) at T=10
+  [FIXED] Imputed 0.6 for resistance(organizational) at T=10
+  [FIXED] Imputed 0.55 for accessibility_collapse(class) at T=0
+  [FIXED] Imputed 0.73 for stakes_inflation(class) at T=0
+  [FIXED] Imputed 0.75 for suppression(class) at T=0
+  [FIXED] Imputed 0.6 for resistance(class) at T=0
+  [FIXED] Imputed 0.55 for accessibility_collapse(class) at T=10
+  [FIXED] Imputed 0.73 for stakes_inflation(class) at T=10
+  [FIXED] Imputed 0.75 for suppression(class) at T=10
+  [FIXED] Imputed 0.6 for resistance(class) at T=10
+  [FIXED] Imputed 0.55 for accessibility_collapse(individual) at T=0
+  [FIXED] Imputed 0.73 for stakes_inflation(individual) at T=0
+  [FIXED] Imputed 0.75 for suppression(individual) at T=0
+  [FIXED] Imputed 0.6 for resistance(individual) at T=0
+  [FIXED] Imputed 0.55 for accessibility_collapse(individual) at T=10
+  [FIXED] Imputed 0.73 for stakes_inflation(individual) at T=10
+  [FIXED] Imputed 0.75 for suppression(individual) at T=10
+  [FIXED] Imputed 0.6 for resistance(individual) at T=10
+
+[REPAIR] Auditing vectors for: ulysses_rocks_1904...
+
+>>> INITIATING DR-AUDIT SUITE: ulysses_rocks_1904
+
+[REPAIR] Auditing vectors for: ulysses_rocks_1904...
+
+--- [START] Data Verification ---
+[OK] Ontology Schema matches.
+Checking Interval: ulysses_rocks_1904 (0-10)
+Checking Interval: ulysses_rocks_1904 (0-10)
+--- [END] Data Verification Complete ---
+[OK] Verification passed.
+
+=== PERSPECTIVE COMPARISON ===
+Constraint: ulysses_rocks_1904
+
+From YOUR perspective (context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(global))): piton
+
+From ANALYTICAL perspective: piton
+
+→ Perspectives AGREE
+
+--- PER-INDEX VALIDATION ---
+  [INDEX OK] ulysses_rocks_1904 from context(agent_power(powerless),time_horizon(biographical),exit_options(trapped),spatial_scope(local)): declared=snare, computed=snare
+  [INDEX MISMATCH] ulysses_rocks_1904 from context(agent_power(institutional),time_horizon(generational),exit_options(mobile),spatial_scope(local)): declared=rope, computed=piton
+  [INDEX MISMATCH] ulysses_rocks_1904 from context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(global)): declared=piton, computed=snare
+  [INTENT] Result: stable (Confidence: high)
+
+=== DEFERENTIAL REALISM (DR) DIAGNOSTIC: ulysses_rocks_1904 ===
+
+[CONSTRAINT INVENTORY]
+  - ulysses_rocks_1904: inertial_piton (Intensity: 0.82)
+
+[FEASIBILITY BRIDGE]
+====================================================
+
+--- LIFECYCLE DRIFT ANALYSIS ---
+
+================================================================
+  DRIFT EVENT REPORT
+================================================================
+
+  Constraints scanned: 1
+  Total drift events:  5
+  Critical: 5 | Warning: 0 | Watch: 0
+
+  ulysses_rocks_1904:
+    [critical] metric_substitution
+        Evidence: evidence(theater_delta,0,5,0.65,0.88)
+    [critical] metric_substitution
+        Evidence: evidence(theater_delta,0,10,0.65,0.82)
+    [critical] extraction_accumulation
+        Evidence: evidence(extraction_delta,0,5,0.38,0.45)
+    [critical] extraction_accumulation
+        Evidence: evidence(extraction_delta,0,10,0.38,0.48)
+    [critical] extraction_accumulation
+        Evidence: evidence(extraction_delta,5,10,0.45,0.48)
+
+--- Transition Path Analysis ---
+
+--- Terminal State Predictions ---
+  ulysses_rocks_1904 -> tangled_rope (confidence: low)
+
+================================================================
+
+--- SCOPE EFFECT ANALYSIS ---
+  Formula: χ = ε × π(P) × σ(S)
+  ulysses_rocks_1904 (ε=0.48):
+    powerless@local: χ = 0.48 × 1.50 × 0.80 = 0.576
+    moderate@national: χ = 0.48 × 1.00 × 1.00 = 0.480
+    institutional@national: χ = 0.48 × -0.20 × 1.00 = -0.096
+    analytical@global: χ = 0.48 × 1.15 × 1.20 = 0.662
+
+--- LOGICAL FINGERPRINT ---
+
+=== Logical Fingerprint: ulysses_rocks_1904 ===
+  Shift:      powerless=snare  moderate=snare  institutional=piton  analytical=snare
+
+--- SYSTEM INSIGHTS ---
+  Omegas Identified: 0
+
+
+====================================================
+   DEFERENTIAL REALISM (DR) EXECUTIVE SUMMARY
+====================================================
+Timeline:       0 to 10
+Structural Pattern: stable
+Confidence:     high
+
+[CONSTRAINT INVENTORY: INDEXICAL AUDIT]
+
+
+Constraint: ulysses_rocks_1904
+  Claimed Type: piton
+  Perspectives:
+    - [context(agent_power(powerless),time_horizon(biographical),exit_options(trapped),spatial_scope(local))]: snare (Mismatch)
+    - [context(agent_power(institutional),time_horizon(generational),exit_options(mobile),spatial_scope(local))]: rope (Mismatch)
+    - [context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(global))]: piton (Matches Claim)
+
+[CROSS-DOMAIN ISOMORPHISM & RISK AUDIT: ulysses_rocks_1904]
+  No high-risk isomorphisms detected for current constraints.
+
+[COMPREHENSIVE CROSS-DOMAIN STRUCTURAL TWINS]
+  No cross-domain isomorphisms detected.
+
+[META-LOGICAL AUDIT: ONTOLOGICAL FRAUD DETECTION]
+  No classification errors detected. System is Ontologically Coherent.
+
+[ONTOLOGICAL FORENSIC AUDIT: FALSE MOUNTAINS]
+  All mountains are structurally validated.
+
+[STRUCTURAL SIGNATURE ANALYSIS]
+  ulysses_rocks_1904: constructed_high_extraction (confidence: medium)
+    → CONSTRUCTED HIGH-EXTRACTION signature for ulysses_rocks_1904: Enforcement present (suppression=0.75, resistance=0.50) with high extraction (0.48). This is an extraction mechanism that metrics failed to classify as snare.
+
+[UKE_DR FEASIBILITY BRIDGE]
+  Recommendation | UKE Status
+  ----------------------------------------------------------------------
+
+Aggregate Magnitude (Kappa) at Tn: 0.62
+
+[PERSPECTIVAL GAP ANALYSIS]
+
+  Analysis for Constraint: ulysses_rocks_1904
+    ! ALERT: Extractive "Snare" is masked as functional "Rope".
+    - Individual (Powerless): snare  [chi = 0.48 x 1.50 = 0.72]
+    - Institutional (Manager): rope  [chi = 0.48 x -0.20 = -0.10 -> net benefit]
+    ! MANDATROPHY GAP: delta_chi = 0.82 (high)
+
+[OMEGA GENERATION FROM PERSPECTIVAL GAPS: ulysses_rocks_1904]
+  Generated 1 Omega variables from perspectival gaps:
+
+  Ω: omega_extraction_blindness_ulysses_rocks_1904 (conceptual)
+     Question: Constraint ulysses_rocks_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+     Source: gap(snare_masked_as_rope,snare,rope)
+
+
+[OMEGA TRIAGE & PRIORITIZATION]
+
+  [critical] 1 omega(s):
+    - omega_extraction_blindness_ulysses_rocks_1904 (conceptual)
+      Constraint ulysses_rocks_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+  [high] 1 omega(s):
+    - omega_extraction_blindness_ulysses_rocks_1904 (conceptual)
+      Constraint ulysses_rocks_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+[OMEGA RESOLUTION SCENARIO GENERATION]
+  Generated 1 resolution scenario(s):
+
+  ┌─ [omega_extraction_blindness_ulysses_rocks_1904] CONCEPTUAL CLARIFICATION
+  │  Constraint: ulysses_rocks_1904
+  │  Gap: Constraint ulysses_rocks_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+  │
+  │  CRITICAL: Extraction Masking Detected
+  │  Powerless see: SNARE (extractive trap)
+  │  Institutions see: ROPE (functional rule)
+  │
+  │  RESOLUTION STRATEGY:
+  │  1. Interview affected individuals (N=10+):
+  │     - Who benefits from ulysses_rocks_1904?
+  │     - Can you change/exit this constraint?
+  │     - What would happen if you tried?
+  │  2. Interview institutional actors (N=10+):
+  │     - What function does ulysses_rocks_1904 serve?
+  │     - Who would object to removing it?
+  │     - What alternatives exist?
+  │  3. Document benefit flows:
+  │     - Track who gains vs. who loses from status quo
+  │     - Measure asymmetric benefit distribution
+  │  4. Decision tree:
+  │     IF extraction confirmed → Reclassify as SNARE
+  │     IF functional & fair → Reclassify as ROPE
+  │     IF context-dependent → Add indexical resolution
+  └─
+
+====================================================
+[PASS] testsets/ulysses_chp10.pl
+
+### START LLM REFINEMENT MANIFEST: ulysses_rocks_1904 ###
+
+[PERSPECTIVAL_GAPS]
+  - Constraint "ulysses_rocks_1904": Individual sees snare, but Institution sees rope.
+
+[ONTOLOGICAL_MISMATCHES]
+  - None detected.
+
+[UNRESOLVED_OMEGAS]
+  - omega_extraction_blindness_ulysses_rocks_1904 (conceptual): Constraint ulysses_rocks_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+### END REFINEMENT MANIFEST ###
+
+[38] EXECUTING: testsets/ulysses_chp11.pl
+
+[SCENARIO MANAGER] Clearing Knowledge Base...
+[OK] Knowledge Base is empty.
+[SCENARIO MANAGER] Loading: testsets/ulysses_chp11.pl...
+[SCENARIO MANAGER] Performing Global Repair...
+
+[REPAIR] Auditing vectors for: ulysses_sirens_1904...
+  [BRIDGE] Derived constraint_claim(ulysses_sirens_1904, piton) from declared analytical classification
+  [FIXED] Imputed 0.55 for accessibility_collapse(organizational) at T=0
+  [FIXED] Imputed 0.73 for stakes_inflation(organizational) at T=0
+  [FIXED] Imputed 0.82 for suppression(organizational) at T=0
+  [FIXED] Imputed 0.6 for resistance(organizational) at T=0
+  [FIXED] Imputed 0.55 for accessibility_collapse(organizational) at T=10
+  [FIXED] Imputed 0.73 for stakes_inflation(organizational) at T=10
+  [FIXED] Imputed 0.82 for suppression(organizational) at T=10
+  [FIXED] Imputed 0.6 for resistance(organizational) at T=10
+  [FIXED] Imputed 0.55 for accessibility_collapse(class) at T=0
+  [FIXED] Imputed 0.73 for stakes_inflation(class) at T=0
+  [FIXED] Imputed 0.82 for suppression(class) at T=0
+  [FIXED] Imputed 0.6 for resistance(class) at T=0
+  [FIXED] Imputed 0.55 for accessibility_collapse(class) at T=10
+  [FIXED] Imputed 0.73 for stakes_inflation(class) at T=10
+  [FIXED] Imputed 0.82 for suppression(class) at T=10
+  [FIXED] Imputed 0.6 for resistance(class) at T=10
+  [FIXED] Imputed 0.55 for accessibility_collapse(individual) at T=0
+  [FIXED] Imputed 0.73 for stakes_inflation(individual) at T=0
+  [FIXED] Imputed 0.82 for suppression(individual) at T=0
+  [FIXED] Imputed 0.6 for resistance(individual) at T=0
+  [FIXED] Imputed 0.55 for accessibility_collapse(individual) at T=10
+  [FIXED] Imputed 0.73 for stakes_inflation(individual) at T=10
+  [FIXED] Imputed 0.82 for suppression(individual) at T=10
+  [FIXED] Imputed 0.6 for resistance(individual) at T=10
+
+[REPAIR] Auditing vectors for: ulysses_sirens_1904...
+
+>>> INITIATING DR-AUDIT SUITE: ulysses_sirens_1904
+
+[REPAIR] Auditing vectors for: ulysses_sirens_1904...
+
+--- [START] Data Verification ---
+[OK] Ontology Schema matches.
+Checking Interval: ulysses_sirens_1904 (0-10)
+Checking Interval: ulysses_sirens_1904 (0-10)
+--- [END] Data Verification Complete ---
+[OK] Verification passed.
+
+=== PERSPECTIVE COMPARISON ===
+Constraint: ulysses_sirens_1904
+
+From YOUR perspective (context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(global))): piton
+
+From ANALYTICAL perspective: piton
+
+→ Perspectives AGREE
+
+--- PER-INDEX VALIDATION ---
+  [INDEX MISMATCH] ulysses_sirens_1904 from context(agent_power(powerless),time_horizon(biographical),exit_options(trapped),spatial_scope(local)): declared=snare, computed=tangled_rope
+  [INDEX MISMATCH] ulysses_sirens_1904 from context(agent_power(institutional),time_horizon(generational),exit_options(mobile),spatial_scope(local)): declared=rope, computed=piton
+  [INDEX MISMATCH] ulysses_sirens_1904 from context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(global)): declared=piton, computed=snare
+  [INTENT] Result: stable (Confidence: high)
+
+=== DEFERENTIAL REALISM (DR) DIAGNOSTIC: ulysses_sirens_1904 ===
+
+[CONSTRAINT INVENTORY]
+  - ulysses_sirens_1904: inertial_piton (Intensity: 0.89)
+
+[FEASIBILITY BRIDGE]
+====================================================
+
+--- LIFECYCLE DRIFT ANALYSIS ---
+
+================================================================
+  DRIFT EVENT REPORT
+================================================================
+
+  Constraints scanned: 1
+  Total drift events:  5
+  Critical: 5 | Warning: 0 | Watch: 0
+
+  ulysses_sirens_1904:
+    [critical] metric_substitution
+        Evidence: evidence(theater_delta,0,5,0.75,0.92)
+    [critical] metric_substitution
+        Evidence: evidence(theater_delta,0,10,0.75,0.89)
+    [critical] extraction_accumulation
+        Evidence: evidence(extraction_delta,0,5,0.4,0.48)
+    [critical] extraction_accumulation
+        Evidence: evidence(extraction_delta,0,10,0.4,0.53)
+    [critical] extraction_accumulation
+        Evidence: evidence(extraction_delta,5,10,0.48,0.53)
+
+--- Transition Path Analysis ---
+
+--- Terminal State Predictions ---
+  ulysses_sirens_1904 -> tangled_rope (confidence: low)
+
+================================================================
+
+--- SCOPE EFFECT ANALYSIS ---
+  Formula: χ = ε × π(P) × σ(S)
+  ulysses_sirens_1904 (ε=0.53):
+    powerless@local: χ = 0.53 × 1.50 × 0.80 = 0.636
+    moderate@national: χ = 0.53 × 1.00 × 1.00 = 0.530
+    institutional@national: χ = 0.53 × -0.20 × 1.00 = -0.106
+    analytical@global: χ = 0.53 × 1.15 × 1.20 = 0.731
+
+--- LOGICAL FINGERPRINT ---
+
+=== Logical Fingerprint: ulysses_sirens_1904 ===
+  Shift:      powerless=tangled_rope  moderate=tangled_rope  institutional=piton  analytical=snare
+
+--- SYSTEM INSIGHTS ---
+  Omegas Identified: 0
+
+
+====================================================
+   DEFERENTIAL REALISM (DR) EXECUTIVE SUMMARY
+====================================================
+Timeline:       0 to 10
+Structural Pattern: stable
+Confidence:     high
+
+[CONSTRAINT INVENTORY: INDEXICAL AUDIT]
+
+
+Constraint: ulysses_sirens_1904
+  Claimed Type: piton
+  Perspectives:
+    - [context(agent_power(powerless),time_horizon(biographical),exit_options(trapped),spatial_scope(local))]: snare (Mismatch)
+    - [context(agent_power(institutional),time_horizon(generational),exit_options(mobile),spatial_scope(local))]: rope (Mismatch)
+    - [context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(global))]: piton (Matches Claim)
+
+[CROSS-DOMAIN ISOMORPHISM & RISK AUDIT: ulysses_sirens_1904]
+  No high-risk isomorphisms detected for current constraints.
+
+[COMPREHENSIVE CROSS-DOMAIN STRUCTURAL TWINS]
+  No cross-domain isomorphisms detected.
+
+[META-LOGICAL AUDIT: ONTOLOGICAL FRAUD DETECTION]
+  No classification errors detected. System is Ontologically Coherent.
+
+[ONTOLOGICAL FORENSIC AUDIT: FALSE MOUNTAINS]
+  All mountains are structurally validated.
+
+[STRUCTURAL SIGNATURE ANALYSIS]
+  ulysses_sirens_1904: constructed_high_extraction (confidence: medium)
+    → CONSTRUCTED HIGH-EXTRACTION signature for ulysses_sirens_1904: Enforcement present (suppression=0.82, resistance=0.50) with high extraction (0.53). This is an extraction mechanism that metrics failed to classify as snare.
+
+[UKE_DR FEASIBILITY BRIDGE]
+  Recommendation | UKE Status
+  ----------------------------------------------------------------------
+
+Aggregate Magnitude (Kappa) at Tn: 0.63
+
+[PERSPECTIVAL GAP ANALYSIS]
+
+  Analysis for Constraint: ulysses_sirens_1904
+    ! ALERT: Extractive "Snare" is masked as functional "Rope".
+    - Individual (Powerless): snare  [chi = 0.53 x 1.50 = 0.80]
+    - Institutional (Manager): rope  [chi = 0.53 x -0.20 = -0.11 -> net benefit]
+    ! MANDATROPHY GAP: delta_chi = 0.90 (high)
+
+[OMEGA GENERATION FROM PERSPECTIVAL GAPS: ulysses_sirens_1904]
+  Generated 1 Omega variables from perspectival gaps:
+
+  Ω: omega_extraction_blindness_ulysses_sirens_1904 (conceptual)
+     Question: Constraint ulysses_sirens_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+     Source: gap(snare_masked_as_rope,snare,rope)
+
+
+[OMEGA TRIAGE & PRIORITIZATION]
+
+  [critical] 1 omega(s):
+    - omega_extraction_blindness_ulysses_sirens_1904 (conceptual)
+      Constraint ulysses_sirens_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+  [high] 1 omega(s):
+    - omega_extraction_blindness_ulysses_sirens_1904 (conceptual)
+      Constraint ulysses_sirens_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+[OMEGA RESOLUTION SCENARIO GENERATION]
+  Generated 1 resolution scenario(s):
+
+  ┌─ [omega_extraction_blindness_ulysses_sirens_1904] CONCEPTUAL CLARIFICATION
+  │  Constraint: ulysses_sirens_1904
+  │  Gap: Constraint ulysses_sirens_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+  │
+  │  CRITICAL: Extraction Masking Detected
+  │  Powerless see: SNARE (extractive trap)
+  │  Institutions see: ROPE (functional rule)
+  │
+  │  RESOLUTION STRATEGY:
+  │  1. Interview affected individuals (N=10+):
+  │     - Who benefits from ulysses_sirens_1904?
+  │     - Can you change/exit this constraint?
+  │     - What would happen if you tried?
+  │  2. Interview institutional actors (N=10+):
+  │     - What function does ulysses_sirens_1904 serve?
+  │     - Who would object to removing it?
+  │     - What alternatives exist?
+  │  3. Document benefit flows:
+  │     - Track who gains vs. who loses from status quo
+  │     - Measure asymmetric benefit distribution
+  │  4. Decision tree:
+  │     IF extraction confirmed → Reclassify as SNARE
+  │     IF functional & fair → Reclassify as ROPE
+  │     IF context-dependent → Add indexical resolution
+  └─
+
+====================================================
+[PASS] testsets/ulysses_chp11.pl
+
+### START LLM REFINEMENT MANIFEST: ulysses_sirens_1904 ###
+
+[PERSPECTIVAL_GAPS]
+  - Constraint "ulysses_sirens_1904": Individual sees snare, but Institution sees rope.
+
+[ONTOLOGICAL_MISMATCHES]
+  - None detected.
+
+[UNRESOLVED_OMEGAS]
+  - omega_extraction_blindness_ulysses_sirens_1904 (conceptual): Constraint ulysses_sirens_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+### END REFINEMENT MANIFEST ###
+
+[39] EXECUTING: testsets/ulysses_chp12.pl
+
+[SCENARIO MANAGER] Clearing Knowledge Base...
+[OK] Knowledge Base is empty.
+[SCENARIO MANAGER] Loading: testsets/ulysses_chp12.pl...
+[SCENARIO MANAGER] Performing Global Repair...
+
+[REPAIR] Auditing vectors for: ulysses_cyclops_1904...
+  [BRIDGE] Derived constraint_claim(ulysses_cyclops_1904, piton) from declared analytical classification
+  [FIXED] Imputed 0.55 for accessibility_collapse(organizational) at T=0
+  [FIXED] Imputed 0.73 for stakes_inflation(organizational) at T=0
+  [FIXED] Imputed 0.88 for suppression(organizational) at T=0
+  [FIXED] Imputed 0.6 for resistance(organizational) at T=0
+  [FIXED] Imputed 0.55 for accessibility_collapse(organizational) at T=10
+  [FIXED] Imputed 0.73 for stakes_inflation(organizational) at T=10
+  [FIXED] Imputed 0.88 for suppression(organizational) at T=10
+  [FIXED] Imputed 0.6 for resistance(organizational) at T=10
+  [FIXED] Imputed 0.55 for accessibility_collapse(class) at T=0
+  [FIXED] Imputed 0.73 for stakes_inflation(class) at T=0
+  [FIXED] Imputed 0.88 for suppression(class) at T=0
+  [FIXED] Imputed 0.6 for resistance(class) at T=0
+  [FIXED] Imputed 0.55 for accessibility_collapse(class) at T=10
+  [FIXED] Imputed 0.73 for stakes_inflation(class) at T=10
+  [FIXED] Imputed 0.88 for suppression(class) at T=10
+  [FIXED] Imputed 0.6 for resistance(class) at T=10
+  [FIXED] Imputed 0.55 for accessibility_collapse(individual) at T=0
+  [FIXED] Imputed 0.73 for stakes_inflation(individual) at T=0
+  [FIXED] Imputed 0.88 for suppression(individual) at T=0
+  [FIXED] Imputed 0.6 for resistance(individual) at T=0
+  [FIXED] Imputed 0.55 for accessibility_collapse(individual) at T=10
+  [FIXED] Imputed 0.73 for stakes_inflation(individual) at T=10
+  [FIXED] Imputed 0.88 for suppression(individual) at T=10
+  [FIXED] Imputed 0.6 for resistance(individual) at T=10
+
+[REPAIR] Auditing vectors for: ulysses_cyclops_1904...
+
+>>> INITIATING DR-AUDIT SUITE: ulysses_cyclops_1904
+
+[REPAIR] Auditing vectors for: ulysses_cyclops_1904...
+
+--- [START] Data Verification ---
+[OK] Ontology Schema matches.
+Checking Interval: ulysses_cyclops_1904 (0-10)
+Checking Interval: ulysses_cyclops_1904 (0-10)
+--- [END] Data Verification Complete ---
+[OK] Verification passed.
+
+=== PERSPECTIVE COMPARISON ===
+Constraint: ulysses_cyclops_1904
+
+From YOUR perspective (context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(global))): piton
+
+From ANALYTICAL perspective: piton
+
+→ Perspectives AGREE
+
+--- PER-INDEX VALIDATION ---
+  [INDEX MISMATCH] ulysses_cyclops_1904 from context(agent_power(powerless),time_horizon(biographical),exit_options(trapped),spatial_scope(local)): declared=snare, computed=tangled_rope
+  [INDEX MISMATCH] ulysses_cyclops_1904 from context(agent_power(institutional),time_horizon(generational),exit_options(mobile),spatial_scope(local)): declared=rope, computed=piton
+  [INDEX MISMATCH] ulysses_cyclops_1904 from context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(global)): declared=piton, computed=snare
+  [INTENT] Result: stable (Confidence: high)
+
+=== DEFERENTIAL REALISM (DR) DIAGNOSTIC: ulysses_cyclops_1904 ===
+
+[CONSTRAINT INVENTORY]
+  - ulysses_cyclops_1904: inertial_piton (Intensity: 0.92)
+
+[FEASIBILITY BRIDGE]
+====================================================
+
+--- LIFECYCLE DRIFT ANALYSIS ---
+
+================================================================
+  DRIFT EVENT REPORT
+================================================================
+
+  Constraints scanned: 1
+  Total drift events:  5
+  Critical: 5 | Warning: 0 | Watch: 0
+
+  ulysses_cyclops_1904:
+    [critical] metric_substitution
+        Evidence: evidence(theater_delta,0,5,0.7,0.95)
+    [critical] metric_substitution
+        Evidence: evidence(theater_delta,0,10,0.7,0.92)
+    [critical] extraction_accumulation
+        Evidence: evidence(extraction_delta,0,5,0.4,0.5)
+    [critical] extraction_accumulation
+        Evidence: evidence(extraction_delta,0,10,0.4,0.54)
+    [critical] extraction_accumulation
+        Evidence: evidence(extraction_delta,5,10,0.5,0.54)
+
+--- Transition Path Analysis ---
+
+--- Terminal State Predictions ---
+  ulysses_cyclops_1904 -> tangled_rope (confidence: low)
+
+================================================================
+
+--- SCOPE EFFECT ANALYSIS ---
+  Formula: χ = ε × π(P) × σ(S)
+  ulysses_cyclops_1904 (ε=0.54):
+    powerless@local: χ = 0.54 × 1.50 × 0.80 = 0.648
+    moderate@national: χ = 0.54 × 1.00 × 1.00 = 0.540
+    institutional@national: χ = 0.54 × -0.20 × 1.00 = -0.108
+    analytical@global: χ = 0.54 × 1.15 × 1.20 = 0.745
+
+--- LOGICAL FINGERPRINT ---
+
+=== Logical Fingerprint: ulysses_cyclops_1904 ===
+  Shift:      powerless=tangled_rope  moderate=tangled_rope  institutional=piton  analytical=snare
+
+--- SYSTEM INSIGHTS ---
+  Omegas Identified: 0
+
+
+====================================================
+   DEFERENTIAL REALISM (DR) EXECUTIVE SUMMARY
+====================================================
+Timeline:       0 to 10
+Structural Pattern: stable
+Confidence:     high
+
+[CONSTRAINT INVENTORY: INDEXICAL AUDIT]
+
+
+Constraint: ulysses_cyclops_1904
+  Claimed Type: piton
+  Perspectives:
+    - [context(agent_power(powerless),time_horizon(biographical),exit_options(trapped),spatial_scope(local))]: snare (Mismatch)
+    - [context(agent_power(institutional),time_horizon(generational),exit_options(mobile),spatial_scope(local))]: rope (Mismatch)
+    - [context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(global))]: piton (Matches Claim)
+
+[CROSS-DOMAIN ISOMORPHISM & RISK AUDIT: ulysses_cyclops_1904]
+  No high-risk isomorphisms detected for current constraints.
+
+[COMPREHENSIVE CROSS-DOMAIN STRUCTURAL TWINS]
+  No cross-domain isomorphisms detected.
+
+[META-LOGICAL AUDIT: ONTOLOGICAL FRAUD DETECTION]
+  No classification errors detected. System is Ontologically Coherent.
+
+[ONTOLOGICAL FORENSIC AUDIT: FALSE MOUNTAINS]
+  All mountains are structurally validated.
+
+[STRUCTURAL SIGNATURE ANALYSIS]
+  ulysses_cyclops_1904: constructed_high_extraction (confidence: medium)
+    → CONSTRUCTED HIGH-EXTRACTION signature for ulysses_cyclops_1904: Enforcement present (suppression=0.88, resistance=0.50) with high extraction (0.54). This is an extraction mechanism that metrics failed to classify as snare.
+
+[UKE_DR FEASIBILITY BRIDGE]
+  Recommendation | UKE Status
+  ----------------------------------------------------------------------
+
+Aggregate Magnitude (Kappa) at Tn: 0.64
+
+[PERSPECTIVAL GAP ANALYSIS]
+
+  Analysis for Constraint: ulysses_cyclops_1904
+    ! ALERT: Extractive "Snare" is masked as functional "Rope".
+    - Individual (Powerless): snare  [chi = 0.54 x 1.50 = 0.81]
+    - Institutional (Manager): rope  [chi = 0.54 x -0.20 = -0.11 -> net benefit]
+    ! MANDATROPHY GAP: delta_chi = 0.92 (high)
+
+[OMEGA GENERATION FROM PERSPECTIVAL GAPS: ulysses_cyclops_1904]
+  Generated 1 Omega variables from perspectival gaps:
+
+  Ω: omega_extraction_blindness_ulysses_cyclops_1904 (conceptual)
+     Question: Constraint ulysses_cyclops_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+     Source: gap(snare_masked_as_rope,snare,rope)
+
+
+[OMEGA TRIAGE & PRIORITIZATION]
+
+  [critical] 1 omega(s):
+    - omega_extraction_blindness_ulysses_cyclops_1904 (conceptual)
+      Constraint ulysses_cyclops_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+  [high] 1 omega(s):
+    - omega_extraction_blindness_ulysses_cyclops_1904 (conceptual)
+      Constraint ulysses_cyclops_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+[OMEGA RESOLUTION SCENARIO GENERATION]
+  Generated 1 resolution scenario(s):
+
+  ┌─ [omega_extraction_blindness_ulysses_cyclops_1904] CONCEPTUAL CLARIFICATION
+  │  Constraint: ulysses_cyclops_1904
+  │  Gap: Constraint ulysses_cyclops_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+  │
+  │  CRITICAL: Extraction Masking Detected
+  │  Powerless see: SNARE (extractive trap)
+  │  Institutions see: ROPE (functional rule)
+  │
+  │  RESOLUTION STRATEGY:
+  │  1. Interview affected individuals (N=10+):
+  │     - Who benefits from ulysses_cyclops_1904?
+  │     - Can you change/exit this constraint?
+  │     - What would happen if you tried?
+  │  2. Interview institutional actors (N=10+):
+  │     - What function does ulysses_cyclops_1904 serve?
+  │     - Who would object to removing it?
+  │     - What alternatives exist?
+  │  3. Document benefit flows:
+  │     - Track who gains vs. who loses from status quo
+  │     - Measure asymmetric benefit distribution
+  │  4. Decision tree:
+  │     IF extraction confirmed → Reclassify as SNARE
+  │     IF functional & fair → Reclassify as ROPE
+  │     IF context-dependent → Add indexical resolution
+  └─
+
+====================================================
+[PASS] testsets/ulysses_chp12.pl
+
+### START LLM REFINEMENT MANIFEST: ulysses_cyclops_1904 ###
+
+[PERSPECTIVAL_GAPS]
+  - Constraint "ulysses_cyclops_1904": Individual sees snare, but Institution sees rope.
+
+[ONTOLOGICAL_MISMATCHES]
+  - None detected.
+
+[UNRESOLVED_OMEGAS]
+  - omega_extraction_blindness_ulysses_cyclops_1904 (conceptual): Constraint ulysses_cyclops_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+### END REFINEMENT MANIFEST ###
+
+[40] EXECUTING: testsets/ulysses_chp13.pl
+
+[SCENARIO MANAGER] Clearing Knowledge Base...
+[OK] Knowledge Base is empty.
+[SCENARIO MANAGER] Loading: testsets/ulysses_chp13.pl...
+[SCENARIO MANAGER] Performing Global Repair...
+
+[REPAIR] Auditing vectors for: ulysses_nausicaa_1904...
+  [BRIDGE] Derived constraint_claim(ulysses_nausicaa_1904, piton) from declared analytical classification
+  [FIXED] Imputed 0.55 for accessibility_collapse(organizational) at T=0
+  [FIXED] Imputed 0.73 for stakes_inflation(organizational) at T=0
+  [FIXED] Imputed 0.75 for suppression(organizational) at T=0
+  [FIXED] Imputed 0.6 for resistance(organizational) at T=0
+  [FIXED] Imputed 0.55 for accessibility_collapse(organizational) at T=10
+  [FIXED] Imputed 0.73 for stakes_inflation(organizational) at T=10
+  [FIXED] Imputed 0.75 for suppression(organizational) at T=10
+  [FIXED] Imputed 0.6 for resistance(organizational) at T=10
+  [FIXED] Imputed 0.55 for accessibility_collapse(class) at T=0
+  [FIXED] Imputed 0.73 for stakes_inflation(class) at T=0
+  [FIXED] Imputed 0.75 for suppression(class) at T=0
+  [FIXED] Imputed 0.6 for resistance(class) at T=0
+  [FIXED] Imputed 0.55 for accessibility_collapse(class) at T=10
+  [FIXED] Imputed 0.73 for stakes_inflation(class) at T=10
+  [FIXED] Imputed 0.75 for suppression(class) at T=10
+  [FIXED] Imputed 0.6 for resistance(class) at T=10
+  [FIXED] Imputed 0.55 for accessibility_collapse(individual) at T=0
+  [FIXED] Imputed 0.73 for stakes_inflation(individual) at T=0
+  [FIXED] Imputed 0.75 for suppression(individual) at T=0
+  [FIXED] Imputed 0.6 for resistance(individual) at T=0
+  [FIXED] Imputed 0.55 for accessibility_collapse(individual) at T=10
+  [FIXED] Imputed 0.73 for stakes_inflation(individual) at T=10
+  [FIXED] Imputed 0.75 for suppression(individual) at T=10
+  [FIXED] Imputed 0.6 for resistance(individual) at T=10
+
+[REPAIR] Auditing vectors for: ulysses_nausicaa_1904...
+
+>>> INITIATING DR-AUDIT SUITE: ulysses_nausicaa_1904
+
+[REPAIR] Auditing vectors for: ulysses_nausicaa_1904...
+
+--- [START] Data Verification ---
+[OK] Ontology Schema matches.
+Checking Interval: ulysses_nausicaa_1904 (0-10)
+Checking Interval: ulysses_nausicaa_1904 (0-10)
+--- [END] Data Verification Complete ---
+[OK] Verification passed.
+
+=== PERSPECTIVE COMPARISON ===
+Constraint: ulysses_nausicaa_1904
+
+From YOUR perspective (context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(global))): piton
+
+From ANALYTICAL perspective: piton
+
+→ Perspectives AGREE
+
+--- PER-INDEX VALIDATION ---
+  [INDEX OK] ulysses_nausicaa_1904 from context(agent_power(powerless),time_horizon(biographical),exit_options(trapped),spatial_scope(local)): declared=snare, computed=snare
+  [INDEX MISMATCH] ulysses_nausicaa_1904 from context(agent_power(institutional),time_horizon(generational),exit_options(mobile),spatial_scope(local)): declared=rope, computed=piton
+  [INDEX MISMATCH] ulysses_nausicaa_1904 from context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(global)): declared=piton, computed=snare
+  [INTENT] Result: stable (Confidence: high)
+
+=== DEFERENTIAL REALISM (DR) DIAGNOSTIC: ulysses_nausicaa_1904 ===
+
+[CONSTRAINT INVENTORY]
+  - ulysses_nausicaa_1904: inertial_piton (Intensity: 0.88)
+
+[FEASIBILITY BRIDGE]
+====================================================
+
+--- LIFECYCLE DRIFT ANALYSIS ---
+
+================================================================
+  DRIFT EVENT REPORT
+================================================================
+
+  Constraints scanned: 1
+  Total drift events:  5
+  Critical: 5 | Warning: 0 | Watch: 0
+
+  ulysses_nausicaa_1904:
+    [critical] metric_substitution
+        Evidence: evidence(theater_delta,0,5,0.65,0.9)
+    [critical] metric_substitution
+        Evidence: evidence(theater_delta,0,10,0.65,0.88)
+    [critical] extraction_accumulation
+        Evidence: evidence(extraction_delta,0,5,0.35,0.45)
+    [critical] extraction_accumulation
+        Evidence: evidence(extraction_delta,0,10,0.35,0.49)
+    [critical] extraction_accumulation
+        Evidence: evidence(extraction_delta,5,10,0.45,0.49)
+
+--- Transition Path Analysis ---
+
+--- Terminal State Predictions ---
+  ulysses_nausicaa_1904 -> tangled_rope (confidence: low)
+
+================================================================
+
+--- SCOPE EFFECT ANALYSIS ---
+  Formula: χ = ε × π(P) × σ(S)
+  ulysses_nausicaa_1904 (ε=0.49):
+    powerless@local: χ = 0.49 × 1.50 × 0.80 = 0.588
+    moderate@national: χ = 0.49 × 1.00 × 1.00 = 0.490
+    institutional@national: χ = 0.49 × -0.20 × 1.00 = -0.098
+    analytical@global: χ = 0.49 × 1.15 × 1.20 = 0.676
+
+--- LOGICAL FINGERPRINT ---
+
+=== Logical Fingerprint: ulysses_nausicaa_1904 ===
+  Shift:      powerless=snare  moderate=snare  institutional=piton  analytical=snare
+
+--- SYSTEM INSIGHTS ---
+  Omegas Identified: 0
+
+
+====================================================
+   DEFERENTIAL REALISM (DR) EXECUTIVE SUMMARY
+====================================================
+Timeline:       0 to 10
+Structural Pattern: stable
+Confidence:     high
+
+[CONSTRAINT INVENTORY: INDEXICAL AUDIT]
+
+
+Constraint: ulysses_nausicaa_1904
+  Claimed Type: piton
+  Perspectives:
+    - [context(agent_power(powerless),time_horizon(biographical),exit_options(trapped),spatial_scope(local))]: snare (Mismatch)
+    - [context(agent_power(institutional),time_horizon(generational),exit_options(mobile),spatial_scope(local))]: rope (Mismatch)
+    - [context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(global))]: piton (Matches Claim)
+
+[CROSS-DOMAIN ISOMORPHISM & RISK AUDIT: ulysses_nausicaa_1904]
+  No high-risk isomorphisms detected for current constraints.
+
+[COMPREHENSIVE CROSS-DOMAIN STRUCTURAL TWINS]
+  No cross-domain isomorphisms detected.
+
+[META-LOGICAL AUDIT: ONTOLOGICAL FRAUD DETECTION]
+  No classification errors detected. System is Ontologically Coherent.
+
+[ONTOLOGICAL FORENSIC AUDIT: FALSE MOUNTAINS]
+  All mountains are structurally validated.
+
+[STRUCTURAL SIGNATURE ANALYSIS]
+  ulysses_nausicaa_1904: constructed_high_extraction (confidence: medium)
+    → CONSTRUCTED HIGH-EXTRACTION signature for ulysses_nausicaa_1904: Enforcement present (suppression=0.75, resistance=0.50) with high extraction (0.49). This is an extraction mechanism that metrics failed to classify as snare.
+
+[UKE_DR FEASIBILITY BRIDGE]
+  Recommendation | UKE Status
+  ----------------------------------------------------------------------
+
+Aggregate Magnitude (Kappa) at Tn: 0.62
+
+[PERSPECTIVAL GAP ANALYSIS]
+
+  Analysis for Constraint: ulysses_nausicaa_1904
+    ! ALERT: Extractive "Snare" is masked as functional "Rope".
+    - Individual (Powerless): snare  [chi = 0.49 x 1.50 = 0.73]
+    - Institutional (Manager): rope  [chi = 0.49 x -0.20 = -0.10 -> net benefit]
+    ! MANDATROPHY GAP: delta_chi = 0.83 (high)
+
+[OMEGA GENERATION FROM PERSPECTIVAL GAPS: ulysses_nausicaa_1904]
+  Generated 1 Omega variables from perspectival gaps:
+
+  Ω: omega_extraction_blindness_ulysses_nausicaa_1904 (conceptual)
+     Question: Constraint ulysses_nausicaa_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+     Source: gap(snare_masked_as_rope,snare,rope)
+
+
+[OMEGA TRIAGE & PRIORITIZATION]
+
+  [critical] 1 omega(s):
+    - omega_extraction_blindness_ulysses_nausicaa_1904 (conceptual)
+      Constraint ulysses_nausicaa_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+  [high] 1 omega(s):
+    - omega_extraction_blindness_ulysses_nausicaa_1904 (conceptual)
+      Constraint ulysses_nausicaa_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+[OMEGA RESOLUTION SCENARIO GENERATION]
+  Generated 1 resolution scenario(s):
+
+  ┌─ [omega_extraction_blindness_ulysses_nausicaa_1904] CONCEPTUAL CLARIFICATION
+  │  Constraint: ulysses_nausicaa_1904
+  │  Gap: Constraint ulysses_nausicaa_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+  │
+  │  CRITICAL: Extraction Masking Detected
+  │  Powerless see: SNARE (extractive trap)
+  │  Institutions see: ROPE (functional rule)
+  │
+  │  RESOLUTION STRATEGY:
+  │  1. Interview affected individuals (N=10+):
+  │     - Who benefits from ulysses_nausicaa_1904?
+  │     - Can you change/exit this constraint?
+  │     - What would happen if you tried?
+  │  2. Interview institutional actors (N=10+):
+  │     - What function does ulysses_nausicaa_1904 serve?
+  │     - Who would object to removing it?
+  │     - What alternatives exist?
+  │  3. Document benefit flows:
+  │     - Track who gains vs. who loses from status quo
+  │     - Measure asymmetric benefit distribution
+  │  4. Decision tree:
+  │     IF extraction confirmed → Reclassify as SNARE
+  │     IF functional & fair → Reclassify as ROPE
+  │     IF context-dependent → Add indexical resolution
+  └─
+
+====================================================
+[PASS] testsets/ulysses_chp13.pl
+
+### START LLM REFINEMENT MANIFEST: ulysses_nausicaa_1904 ###
+
+[PERSPECTIVAL_GAPS]
+  - Constraint "ulysses_nausicaa_1904": Individual sees snare, but Institution sees rope.
+
+[ONTOLOGICAL_MISMATCHES]
+  - None detected.
+
+[UNRESOLVED_OMEGAS]
+  - omega_extraction_blindness_ulysses_nausicaa_1904 (conceptual): Constraint ulysses_nausicaa_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+### END REFINEMENT MANIFEST ###
+
+[41] EXECUTING: testsets/ulysses_chp14.pl
+
+[SCENARIO MANAGER] Clearing Knowledge Base...
+[OK] Knowledge Base is empty.
+[SCENARIO MANAGER] Loading: testsets/ulysses_chp14.pl...
+[SCENARIO MANAGER] Performing Global Repair...
+
+[REPAIR] Auditing vectors for: ulysses_oxen_1904...
+  [BRIDGE] Derived constraint_claim(ulysses_oxen_1904, piton) from declared analytical classification
+  [FIXED] Imputed 0.55 for accessibility_collapse(organizational) at T=0
+  [FIXED] Imputed 0.73 for stakes_inflation(organizational) at T=0
+  [FIXED] Imputed 0.95 for suppression(organizational) at T=0
+  [FIXED] Imputed 0.6 for resistance(organizational) at T=0
+  [FIXED] Imputed 0.55 for accessibility_collapse(organizational) at T=10
+  [FIXED] Imputed 0.73 for stakes_inflation(organizational) at T=10
+  [FIXED] Imputed 0.95 for suppression(organizational) at T=10
+  [FIXED] Imputed 0.6 for resistance(organizational) at T=10
+  [FIXED] Imputed 0.55 for accessibility_collapse(class) at T=0
+  [FIXED] Imputed 0.73 for stakes_inflation(class) at T=0
+  [FIXED] Imputed 0.95 for suppression(class) at T=0
+  [FIXED] Imputed 0.6 for resistance(class) at T=0
+  [FIXED] Imputed 0.55 for accessibility_collapse(class) at T=10
+  [FIXED] Imputed 0.73 for stakes_inflation(class) at T=10
+  [FIXED] Imputed 0.95 for suppression(class) at T=10
+  [FIXED] Imputed 0.6 for resistance(class) at T=10
+  [FIXED] Imputed 0.55 for accessibility_collapse(individual) at T=0
+  [FIXED] Imputed 0.73 for stakes_inflation(individual) at T=0
+  [FIXED] Imputed 0.95 for suppression(individual) at T=0
+  [FIXED] Imputed 0.6 for resistance(individual) at T=0
+  [FIXED] Imputed 0.55 for accessibility_collapse(individual) at T=10
+  [FIXED] Imputed 0.73 for stakes_inflation(individual) at T=10
+  [FIXED] Imputed 0.95 for suppression(individual) at T=10
+  [FIXED] Imputed 0.6 for resistance(individual) at T=10
+
+[REPAIR] Auditing vectors for: ulysses_oxen_1904...
+
+>>> INITIATING DR-AUDIT SUITE: ulysses_oxen_1904
+
+[REPAIR] Auditing vectors for: ulysses_oxen_1904...
+
+--- [START] Data Verification ---
+[OK] Ontology Schema matches.
+Checking Interval: ulysses_oxen_1904 (0-10)
+Checking Interval: ulysses_oxen_1904 (0-10)
+--- [END] Data Verification Complete ---
+[OK] Verification passed.
+
+=== PERSPECTIVE COMPARISON ===
+Constraint: ulysses_oxen_1904
+
+From YOUR perspective (context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(global))): piton
+
+From ANALYTICAL perspective: piton
+
+→ Perspectives AGREE
+
+--- PER-INDEX VALIDATION ---
+  [INDEX MISMATCH] ulysses_oxen_1904 from context(agent_power(powerless),time_horizon(biographical),exit_options(trapped),spatial_scope(local)): declared=snare, computed=tangled_rope
+  [INDEX MISMATCH] ulysses_oxen_1904 from context(agent_power(institutional),time_horizon(civilizational),exit_options(mobile),spatial_scope(universal)): declared=mountain, computed=piton
+  [INDEX MISMATCH] ulysses_oxen_1904 from context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(global)): declared=piton, computed=snare
+  [INTENT] Result: stable (Confidence: high)
+
+=== DEFERENTIAL REALISM (DR) DIAGNOSTIC: ulysses_oxen_1904 ===
+
+[CONSTRAINT INVENTORY]
+  - ulysses_oxen_1904: inertial_piton (Intensity: 0.98)
+
+[FEASIBILITY BRIDGE]
+====================================================
+
+--- LIFECYCLE DRIFT ANALYSIS ---
+
+================================================================
+  DRIFT EVENT REPORT
+================================================================
+
+  Constraints scanned: 1
+  Total drift events:  5
+  Critical: 5 | Warning: 0 | Watch: 0
+
+  ulysses_oxen_1904:
+    [critical] metric_substitution
+        Evidence: evidence(theater_delta,0,5,0.85,0.99)
+    [critical] metric_substitution
+        Evidence: evidence(theater_delta,0,10,0.85,0.98)
+    [critical] extraction_accumulation
+        Evidence: evidence(extraction_delta,0,5,0.45,0.52)
+    [critical] extraction_accumulation
+        Evidence: evidence(extraction_delta,0,10,0.45,0.55)
+    [critical] extraction_accumulation
+        Evidence: evidence(extraction_delta,5,10,0.52,0.55)
+
+--- Transition Path Analysis ---
+
+--- Terminal State Predictions ---
+  ulysses_oxen_1904 -> tangled_rope (confidence: low)
+
+================================================================
+
+--- SCOPE EFFECT ANALYSIS ---
+  Formula: χ = ε × π(P) × σ(S)
+  ulysses_oxen_1904 (ε=0.55):
+    powerless@local: χ = 0.55 × 1.50 × 0.80 = 0.660
+    moderate@national: χ = 0.55 × 1.00 × 1.00 = 0.550
+    institutional@national: χ = 0.55 × -0.20 × 1.00 = -0.110
+    analytical@global: χ = 0.55 × 1.15 × 1.20 = 0.759
+
+--- LOGICAL FINGERPRINT ---
+
+=== Logical Fingerprint: ulysses_oxen_1904 ===
+  Shift:      powerless=tangled_rope  moderate=tangled_rope  institutional=piton  analytical=snare
+
+--- SYSTEM INSIGHTS ---
+  Omegas Identified: 0
+
+
+====================================================
+   DEFERENTIAL REALISM (DR) EXECUTIVE SUMMARY
+====================================================
+Timeline:       0 to 10
+Structural Pattern: stable
+Confidence:     high
+
+[CONSTRAINT INVENTORY: INDEXICAL AUDIT]
+
+
+Constraint: ulysses_oxen_1904
+  Claimed Type: piton
+  Perspectives:
+    - [context(agent_power(powerless),time_horizon(biographical),exit_options(trapped),spatial_scope(local))]: snare (Mismatch)
+    - [context(agent_power(institutional),time_horizon(civilizational),exit_options(mobile),spatial_scope(universal))]: mountain (Mismatch)
+    - [context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(global))]: piton (Matches Claim)
+
+[CROSS-DOMAIN ISOMORPHISM & RISK AUDIT: ulysses_oxen_1904]
+  No high-risk isomorphisms detected for current constraints.
+
+[COMPREHENSIVE CROSS-DOMAIN STRUCTURAL TWINS]
+  No cross-domain isomorphisms detected.
+
+[META-LOGICAL AUDIT: ONTOLOGICAL FRAUD DETECTION]
+  No classification errors detected. System is Ontologically Coherent.
+
+[ONTOLOGICAL FORENSIC AUDIT: FALSE MOUNTAINS]
+  All mountains are structurally validated.
+
+[STRUCTURAL SIGNATURE ANALYSIS]
+  ulysses_oxen_1904: constructed_high_extraction (confidence: medium)
+    → CONSTRUCTED HIGH-EXTRACTION signature for ulysses_oxen_1904: Enforcement present (suppression=0.95, resistance=0.50) with high extraction (0.55). This is an extraction mechanism that metrics failed to classify as snare.
+
+[UKE_DR FEASIBILITY BRIDGE]
+  Recommendation | UKE Status
+  ----------------------------------------------------------------------
+
+Aggregate Magnitude (Kappa) at Tn: 0.66
+
+[PERSPECTIVAL GAP ANALYSIS]
+
+  Analysis for Constraint: ulysses_oxen_1904
+    - Individual (Powerless): snare  [chi = 0.55 x 1.50 = 0.83]
+    - Institutional (Manager): mountain  [chi = 0.55 x -0.20 = -0.11 -> net benefit]
+    ! MANDATROPHY GAP: delta_chi = 0.94 (high)
+
+[OMEGA GENERATION FROM PERSPECTIVAL GAPS: ulysses_oxen_1904]
+  Generated 1 Omega variables from perspectival gaps:
+
+  Ω: omega_learned_helplessness_ulysses_oxen_1904 (conceptual)
+     Question: Constraint ulysses_oxen_1904 appears extractive (Snare) to individuals but unchangeable (Mountain) to institutions...
+     Source: gap(snare_mountain_confusion,snare,mountain)
+
+
+[OMEGA TRIAGE & PRIORITIZATION]
+
+  [critical] 1 omega(s):
+    - omega_learned_helplessness_ulysses_oxen_1904 (conceptual)
+      Constraint ulysses_oxen_1904 appears extractive (Snare) to individuals but unchangeable (Mountain) to institutions...
+
+  [high] 1 omega(s):
+    - omega_learned_helplessness_ulysses_oxen_1904 (conceptual)
+      Constraint ulysses_oxen_1904 appears extractive (Snare) to individuals but unchangeable (Mountain) to institutions...
+
+[OMEGA RESOLUTION SCENARIO GENERATION]
+  Generated 1 resolution scenario(s):
+
+  ┌─ [omega_learned_helplessness_ulysses_oxen_1904] CONCEPTUAL CLARIFICATION
+  │  Constraint: ulysses_oxen_1904
+  │  Gap: Constraint ulysses_oxen_1904 appears extractive (Snare) to individuals but unchangeable (Mountain) to institutions...
+  │
+  │  CRITICAL: Learned Helplessness Pattern
+  │  Powerless see: SNARE (extractive trap)
+  │  Institutions see: MOUNTAIN (unchangeable law)
+  │
+  │  RESOLUTION STRATEGY:
+  │  1. Test changeability:
+  │     - Can institutions modify ulysses_oxen_1904?
+  │     - What legal/political mechanisms exist?
+  │     - Historical precedents of change?
+  │  2. Test extraction:
+  │     - Is benefit flow symmetric or asymmetric?
+  │     - Who has veto power over changes?
+  │  3. Decision tree:
+  │     IF truly unchangeable + extractive → MANDATROPHY
+  │     IF changeable + extractive → Correct to SNARE
+  │     IF unchangeable + fair → Correct to MOUNTAIN
+  │     IF institutions falsely claim necessity → SNARE + fraud flag
+  └─
+
+====================================================
+[PASS] testsets/ulysses_chp14.pl
+
+### START LLM REFINEMENT MANIFEST: ulysses_oxen_1904 ###
+
+[PERSPECTIVAL_GAPS]
+  - Constraint "ulysses_oxen_1904": Individual sees snare, but Institution sees mountain.
+
+[ONTOLOGICAL_MISMATCHES]
+  - None detected.
+
+[UNRESOLVED_OMEGAS]
+  - omega_learned_helplessness_ulysses_oxen_1904 (conceptual): Constraint ulysses_oxen_1904 appears extractive (Snare) to individuals but unchangeable (Mountain) to institutions...
+
+### END REFINEMENT MANIFEST ###
+
+[42] EXECUTING: testsets/ulysses_chp15.pl
+
+[SCENARIO MANAGER] Clearing Knowledge Base...
+[OK] Knowledge Base is empty.
+[SCENARIO MANAGER] Loading: testsets/ulysses_chp15.pl...
+[SCENARIO MANAGER] Performing Global Repair...
+
+[REPAIR] Auditing vectors for: ulysses_circe_1904...
+  [BRIDGE] Derived constraint_claim(ulysses_circe_1904, piton) from declared analytical classification
+  [FIXED] Imputed 0.55 for accessibility_collapse(organizational) at T=0
+  [FIXED] Imputed 0.73 for stakes_inflation(organizational) at T=0
+  [FIXED] Imputed 0.9 for suppression(organizational) at T=0
+  [FIXED] Imputed 0.6 for resistance(organizational) at T=0
+  [FIXED] Imputed 0.55 for accessibility_collapse(organizational) at T=10
+  [FIXED] Imputed 0.73 for stakes_inflation(organizational) at T=10
+  [FIXED] Imputed 0.9 for suppression(organizational) at T=10
+  [FIXED] Imputed 0.6 for resistance(organizational) at T=10
+  [FIXED] Imputed 0.55 for accessibility_collapse(class) at T=0
+  [FIXED] Imputed 0.73 for stakes_inflation(class) at T=0
+  [FIXED] Imputed 0.9 for suppression(class) at T=0
+  [FIXED] Imputed 0.6 for resistance(class) at T=0
+  [FIXED] Imputed 0.55 for accessibility_collapse(class) at T=10
+  [FIXED] Imputed 0.73 for stakes_inflation(class) at T=10
+  [FIXED] Imputed 0.9 for suppression(class) at T=10
+  [FIXED] Imputed 0.6 for resistance(class) at T=10
+  [FIXED] Imputed 0.55 for accessibility_collapse(individual) at T=0
+  [FIXED] Imputed 0.73 for stakes_inflation(individual) at T=0
+  [FIXED] Imputed 0.9 for suppression(individual) at T=0
+  [FIXED] Imputed 0.6 for resistance(individual) at T=0
+  [FIXED] Imputed 0.55 for accessibility_collapse(individual) at T=10
+  [FIXED] Imputed 0.73 for stakes_inflation(individual) at T=10
+  [FIXED] Imputed 0.9 for suppression(individual) at T=10
+  [FIXED] Imputed 0.6 for resistance(individual) at T=10
+
+[REPAIR] Auditing vectors for: ulysses_circe_1904...
+
+>>> INITIATING DR-AUDIT SUITE: ulysses_circe_1904
+
+[REPAIR] Auditing vectors for: ulysses_circe_1904...
+
+--- [START] Data Verification ---
+[OK] Ontology Schema matches.
+Checking Interval: ulysses_circe_1904 (0-10)
+Checking Interval: ulysses_circe_1904 (0-10)
+--- [END] Data Verification Complete ---
+[OK] Verification passed.
+
+=== PERSPECTIVE COMPARISON ===
+Constraint: ulysses_circe_1904
+
+From YOUR perspective (context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(global))): piton
+
+From ANALYTICAL perspective: piton
+
+→ Perspectives AGREE
+
+--- PER-INDEX VALIDATION ---
+  [INDEX MISMATCH] ulysses_circe_1904 from context(agent_power(powerless),time_horizon(biographical),exit_options(trapped),spatial_scope(local)): declared=snare, computed=tangled_rope
+  [INDEX MISMATCH] ulysses_circe_1904 from context(agent_power(institutional),time_horizon(civilizational),exit_options(mobile),spatial_scope(universal)): declared=mountain, computed=piton
+  [INDEX MISMATCH] ulysses_circe_1904 from context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(global)): declared=piton, computed=snare
+  [INTENT] Result: stable (Confidence: high)
+
+=== DEFERENTIAL REALISM (DR) DIAGNOSTIC: ulysses_circe_1904 ===
+
+[CONSTRAINT INVENTORY]
+  - ulysses_circe_1904: inertial_piton (Intensity: 0.99)
+
+[FEASIBILITY BRIDGE]
+====================================================
+
+--- LIFECYCLE DRIFT ANALYSIS ---
+
+================================================================
+  DRIFT EVENT REPORT
+================================================================
+
+  Constraints scanned: 1
+  Total drift events:  6
+  Critical: 6 | Warning: 0 | Watch: 0
+
+  ulysses_circe_1904:
+    [critical] metric_substitution
+        Evidence: evidence(theater_delta,0,5,0.85,0.95)
+    [critical] metric_substitution
+        Evidence: evidence(theater_delta,0,10,0.85,0.99)
+    [critical] metric_substitution
+        Evidence: evidence(theater_delta,5,10,0.95,0.99)
+    [critical] extraction_accumulation
+        Evidence: evidence(extraction_delta,0,5,0.48,0.55)
+    [critical] extraction_accumulation
+        Evidence: evidence(extraction_delta,0,10,0.48,0.58)
+    [critical] extraction_accumulation
+        Evidence: evidence(extraction_delta,5,10,0.55,0.58)
+
+--- Transition Path Analysis ---
+
+--- Terminal State Predictions ---
+  ulysses_circe_1904 -> tangled_rope (confidence: low)
+
+================================================================
+
+--- SCOPE EFFECT ANALYSIS ---
+  Formula: χ = ε × π(P) × σ(S)
+  ulysses_circe_1904 (ε=0.58):
+    powerless@local: χ = 0.58 × 1.50 × 0.80 = 0.696
+    moderate@national: χ = 0.58 × 1.00 × 1.00 = 0.580
+    institutional@national: χ = 0.58 × -0.20 × 1.00 = -0.116
+    analytical@global: χ = 0.58 × 1.15 × 1.20 = 0.800
+
+--- LOGICAL FINGERPRINT ---
+
+=== Logical Fingerprint: ulysses_circe_1904 ===
+  Shift:      powerless=tangled_rope  moderate=tangled_rope  institutional=piton  analytical=snare
+
+--- SYSTEM INSIGHTS ---
+  Omegas Identified: 0
+
+
+====================================================
+   DEFERENTIAL REALISM (DR) EXECUTIVE SUMMARY
+====================================================
+Timeline:       0 to 10
+Structural Pattern: stable
+Confidence:     high
+
+[CONSTRAINT INVENTORY: INDEXICAL AUDIT]
+
+
+Constraint: ulysses_circe_1904
+  Claimed Type: piton
+  Perspectives:
+    - [context(agent_power(powerless),time_horizon(biographical),exit_options(trapped),spatial_scope(local))]: snare (Mismatch)
+    - [context(agent_power(institutional),time_horizon(civilizational),exit_options(mobile),spatial_scope(universal))]: mountain (Mismatch)
+    - [context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(global))]: piton (Matches Claim)
+
+[CROSS-DOMAIN ISOMORPHISM & RISK AUDIT: ulysses_circe_1904]
+  No high-risk isomorphisms detected for current constraints.
+
+[COMPREHENSIVE CROSS-DOMAIN STRUCTURAL TWINS]
+  No cross-domain isomorphisms detected.
+
+[META-LOGICAL AUDIT: ONTOLOGICAL FRAUD DETECTION]
+  No classification errors detected. System is Ontologically Coherent.
+
+[ONTOLOGICAL FORENSIC AUDIT: FALSE MOUNTAINS]
+  All mountains are structurally validated.
+
+[STRUCTURAL SIGNATURE ANALYSIS]
+  ulysses_circe_1904: constructed_high_extraction (confidence: medium)
+    → CONSTRUCTED HIGH-EXTRACTION signature for ulysses_circe_1904: Enforcement present (suppression=0.90, resistance=0.50) with high extraction (0.58). This is an extraction mechanism that metrics failed to classify as snare.
+
+[UKE_DR FEASIBILITY BRIDGE]
+  Recommendation | UKE Status
+  ----------------------------------------------------------------------
+
+Aggregate Magnitude (Kappa) at Tn: 0.65
+
+[PERSPECTIVAL GAP ANALYSIS]
+
+  Analysis for Constraint: ulysses_circe_1904
+    - Individual (Powerless): snare  [chi = 0.58 x 1.50 = 0.87]
+    - Institutional (Manager): mountain  [chi = 0.58 x -0.20 = -0.12 -> net benefit]
+    ! MANDATROPHY GAP: delta_chi = 0.99 (high)
+
+[OMEGA GENERATION FROM PERSPECTIVAL GAPS: ulysses_circe_1904]
+  Generated 1 Omega variables from perspectival gaps:
+
+  Ω: omega_learned_helplessness_ulysses_circe_1904 (conceptual)
+     Question: Constraint ulysses_circe_1904 appears extractive (Snare) to individuals but unchangeable (Mountain) to institutions...
+     Source: gap(snare_mountain_confusion,snare,mountain)
+
+
+[OMEGA TRIAGE & PRIORITIZATION]
+
+  [critical] 1 omega(s):
+    - omega_learned_helplessness_ulysses_circe_1904 (conceptual)
+      Constraint ulysses_circe_1904 appears extractive (Snare) to individuals but unchangeable (Mountain) to institutions...
+
+  [high] 1 omega(s):
+    - omega_learned_helplessness_ulysses_circe_1904 (conceptual)
+      Constraint ulysses_circe_1904 appears extractive (Snare) to individuals but unchangeable (Mountain) to institutions...
+
+[OMEGA RESOLUTION SCENARIO GENERATION]
+  Generated 1 resolution scenario(s):
+
+  ┌─ [omega_learned_helplessness_ulysses_circe_1904] CONCEPTUAL CLARIFICATION
+  │  Constraint: ulysses_circe_1904
+  │  Gap: Constraint ulysses_circe_1904 appears extractive (Snare) to individuals but unchangeable (Mountain) to institutions...
+  │
+  │  CRITICAL: Learned Helplessness Pattern
+  │  Powerless see: SNARE (extractive trap)
+  │  Institutions see: MOUNTAIN (unchangeable law)
+  │
+  │  RESOLUTION STRATEGY:
+  │  1. Test changeability:
+  │     - Can institutions modify ulysses_circe_1904?
+  │     - What legal/political mechanisms exist?
+  │     - Historical precedents of change?
+  │  2. Test extraction:
+  │     - Is benefit flow symmetric or asymmetric?
+  │     - Who has veto power over changes?
+  │  3. Decision tree:
+  │     IF truly unchangeable + extractive → MANDATROPHY
+  │     IF changeable + extractive → Correct to SNARE
+  │     IF unchangeable + fair → Correct to MOUNTAIN
+  │     IF institutions falsely claim necessity → SNARE + fraud flag
+  └─
+
+====================================================
+[PASS] testsets/ulysses_chp15.pl
+
+### START LLM REFINEMENT MANIFEST: ulysses_circe_1904 ###
+
+[PERSPECTIVAL_GAPS]
+  - Constraint "ulysses_circe_1904": Individual sees snare, but Institution sees mountain.
+
+[ONTOLOGICAL_MISMATCHES]
+  - None detected.
+
+[UNRESOLVED_OMEGAS]
+  - omega_learned_helplessness_ulysses_circe_1904 (conceptual): Constraint ulysses_circe_1904 appears extractive (Snare) to individuals but unchangeable (Mountain) to institutions...
+
+### END REFINEMENT MANIFEST ###
+
+[43] EXECUTING: testsets/ulysses_chp16.pl
+
+[SCENARIO MANAGER] Clearing Knowledge Base...
+[OK] Knowledge Base is empty.
+[SCENARIO MANAGER] Loading: testsets/ulysses_chp16.pl...
+[SCENARIO MANAGER] Performing Global Repair...
+
+[REPAIR] Auditing vectors for: ulysses_eumaeus_1904...
+  [BRIDGE] Derived constraint_claim(ulysses_eumaeus_1904, piton) from declared analytical classification
+  [FIXED] Imputed 0.55 for accessibility_collapse(organizational) at T=0
+  [FIXED] Imputed 0.73 for stakes_inflation(organizational) at T=0
+  [FIXED] Imputed 0.7 for suppression(organizational) at T=0
+  [FIXED] Imputed 0.6 for resistance(organizational) at T=0
+  [FIXED] Imputed 0.55 for accessibility_collapse(organizational) at T=10
+  [FIXED] Imputed 0.73 for stakes_inflation(organizational) at T=10
+  [FIXED] Imputed 0.7 for suppression(organizational) at T=10
+  [FIXED] Imputed 0.6 for resistance(organizational) at T=10
+  [FIXED] Imputed 0.55 for accessibility_collapse(class) at T=0
+  [FIXED] Imputed 0.73 for stakes_inflation(class) at T=0
+  [FIXED] Imputed 0.7 for suppression(class) at T=0
+  [FIXED] Imputed 0.6 for resistance(class) at T=0
+  [FIXED] Imputed 0.55 for accessibility_collapse(class) at T=10
+  [FIXED] Imputed 0.73 for stakes_inflation(class) at T=10
+  [FIXED] Imputed 0.7 for suppression(class) at T=10
+  [FIXED] Imputed 0.6 for resistance(class) at T=10
+  [FIXED] Imputed 0.55 for accessibility_collapse(individual) at T=0
+  [FIXED] Imputed 0.73 for stakes_inflation(individual) at T=0
+  [FIXED] Imputed 0.7 for suppression(individual) at T=0
+  [FIXED] Imputed 0.6 for resistance(individual) at T=0
+  [FIXED] Imputed 0.55 for accessibility_collapse(individual) at T=10
+  [FIXED] Imputed 0.73 for stakes_inflation(individual) at T=10
+  [FIXED] Imputed 0.7 for suppression(individual) at T=10
+  [FIXED] Imputed 0.6 for resistance(individual) at T=10
+
+[REPAIR] Auditing vectors for: ulysses_eumaeus_1904...
+
+>>> INITIATING DR-AUDIT SUITE: ulysses_eumaeus_1904
+
+[REPAIR] Auditing vectors for: ulysses_eumaeus_1904...
+
+--- [START] Data Verification ---
+[OK] Ontology Schema matches.
+Checking Interval: ulysses_eumaeus_1904 (0-10)
+Checking Interval: ulysses_eumaeus_1904 (0-10)
+--- [END] Data Verification Complete ---
+[OK] Verification passed.
+
+=== PERSPECTIVE COMPARISON ===
+Constraint: ulysses_eumaeus_1904
+
+From YOUR perspective (context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(global))): piton
+
+From ANALYTICAL perspective: piton
+
+→ Perspectives AGREE
+
+--- PER-INDEX VALIDATION ---
+  [INDEX OK] ulysses_eumaeus_1904 from context(agent_power(powerless),time_horizon(biographical),exit_options(trapped),spatial_scope(local)): declared=snare, computed=snare
+  [INDEX MISMATCH] ulysses_eumaeus_1904 from context(agent_power(institutional),time_horizon(generational),exit_options(mobile),spatial_scope(local)): declared=rope, computed=piton
+  [INDEX MISMATCH] ulysses_eumaeus_1904 from context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(global)): declared=piton, computed=snare
+  [INTENT] Result: stable (Confidence: high)
+
+=== DEFERENTIAL REALISM (DR) DIAGNOSTIC: ulysses_eumaeus_1904 ===
+
+[CONSTRAINT INVENTORY]
+  - ulysses_eumaeus_1904: inertial_piton (Intensity: 0.85)
+
+[FEASIBILITY BRIDGE]
+====================================================
+
+--- LIFECYCLE DRIFT ANALYSIS ---
+
+================================================================
+  DRIFT EVENT REPORT
+================================================================
+
+  Constraints scanned: 1
+  Total drift events:  5
+  Critical: 5 | Warning: 0 | Watch: 0
+
+  ulysses_eumaeus_1904:
+    [critical] metric_substitution
+        Evidence: evidence(theater_delta,0,5,0.7,0.88)
+    [critical] metric_substitution
+        Evidence: evidence(theater_delta,0,10,0.7,0.85)
+    [critical] extraction_accumulation
+        Evidence: evidence(extraction_delta,0,5,0.38,0.44)
+    [critical] extraction_accumulation
+        Evidence: evidence(extraction_delta,0,10,0.38,0.47)
+    [critical] extraction_accumulation
+        Evidence: evidence(extraction_delta,5,10,0.44,0.47)
+
+--- Transition Path Analysis ---
+
+--- Terminal State Predictions ---
+  ulysses_eumaeus_1904 -> tangled_rope (confidence: low)
+
+================================================================
+
+--- SCOPE EFFECT ANALYSIS ---
+  Formula: χ = ε × π(P) × σ(S)
+  ulysses_eumaeus_1904 (ε=0.47):
+    powerless@local: χ = 0.47 × 1.50 × 0.80 = 0.564
+    moderate@national: χ = 0.47 × 1.00 × 1.00 = 0.470
+    institutional@national: χ = 0.47 × -0.20 × 1.00 = -0.094
+    analytical@global: χ = 0.47 × 1.15 × 1.20 = 0.649
+
+--- LOGICAL FINGERPRINT ---
+
+=== Logical Fingerprint: ulysses_eumaeus_1904 ===
+  Shift:      powerless=snare  moderate=snare  institutional=piton  analytical=snare
+
+--- SYSTEM INSIGHTS ---
+  Omegas Identified: 0
+
+
+====================================================
+   DEFERENTIAL REALISM (DR) EXECUTIVE SUMMARY
+====================================================
+Timeline:       0 to 10
+Structural Pattern: stable
+Confidence:     high
+
+[CONSTRAINT INVENTORY: INDEXICAL AUDIT]
+
+
+Constraint: ulysses_eumaeus_1904
+  Claimed Type: piton
+  Perspectives:
+    - [context(agent_power(powerless),time_horizon(biographical),exit_options(trapped),spatial_scope(local))]: snare (Mismatch)
+    - [context(agent_power(institutional),time_horizon(generational),exit_options(mobile),spatial_scope(local))]: rope (Mismatch)
+    - [context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(global))]: piton (Matches Claim)
+
+[CROSS-DOMAIN ISOMORPHISM & RISK AUDIT: ulysses_eumaeus_1904]
+  No high-risk isomorphisms detected for current constraints.
+
+[COMPREHENSIVE CROSS-DOMAIN STRUCTURAL TWINS]
+  No cross-domain isomorphisms detected.
+
+[META-LOGICAL AUDIT: ONTOLOGICAL FRAUD DETECTION]
+  No classification errors detected. System is Ontologically Coherent.
+
+[ONTOLOGICAL FORENSIC AUDIT: FALSE MOUNTAINS]
+  All mountains are structurally validated.
+
+[STRUCTURAL SIGNATURE ANALYSIS]
+  ulysses_eumaeus_1904: constructed_high_extraction (confidence: medium)
+    → CONSTRUCTED HIGH-EXTRACTION signature for ulysses_eumaeus_1904: Enforcement present (suppression=0.70, resistance=0.50) with high extraction (0.47). This is an extraction mechanism that metrics failed to classify as snare.
+
+[UKE_DR FEASIBILITY BRIDGE]
+  Recommendation | UKE Status
+  ----------------------------------------------------------------------
+
+Aggregate Magnitude (Kappa) at Tn: 0.61
+
+[PERSPECTIVAL GAP ANALYSIS]
+
+  Analysis for Constraint: ulysses_eumaeus_1904
+    ! ALERT: Extractive "Snare" is masked as functional "Rope".
+    - Individual (Powerless): snare  [chi = 0.47 x 1.50 = 0.70]
+    - Institutional (Manager): rope  [chi = 0.47 x -0.20 = -0.09 -> net benefit]
+    ! MANDATROPHY GAP: delta_chi = 0.80 (high)
+
+[OMEGA GENERATION FROM PERSPECTIVAL GAPS: ulysses_eumaeus_1904]
+  Generated 1 Omega variables from perspectival gaps:
+
+  Ω: omega_extraction_blindness_ulysses_eumaeus_1904 (conceptual)
+     Question: Constraint ulysses_eumaeus_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+     Source: gap(snare_masked_as_rope,snare,rope)
+
+
+[OMEGA TRIAGE & PRIORITIZATION]
+
+  [critical] 1 omega(s):
+    - omega_extraction_blindness_ulysses_eumaeus_1904 (conceptual)
+      Constraint ulysses_eumaeus_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+  [high] 1 omega(s):
+    - omega_extraction_blindness_ulysses_eumaeus_1904 (conceptual)
+      Constraint ulysses_eumaeus_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+[OMEGA RESOLUTION SCENARIO GENERATION]
+  Generated 1 resolution scenario(s):
+
+  ┌─ [omega_extraction_blindness_ulysses_eumaeus_1904] CONCEPTUAL CLARIFICATION
+  │  Constraint: ulysses_eumaeus_1904
+  │  Gap: Constraint ulysses_eumaeus_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+  │
+  │  CRITICAL: Extraction Masking Detected
+  │  Powerless see: SNARE (extractive trap)
+  │  Institutions see: ROPE (functional rule)
+  │
+  │  RESOLUTION STRATEGY:
+  │  1. Interview affected individuals (N=10+):
+  │     - Who benefits from ulysses_eumaeus_1904?
+  │     - Can you change/exit this constraint?
+  │     - What would happen if you tried?
+  │  2. Interview institutional actors (N=10+):
+  │     - What function does ulysses_eumaeus_1904 serve?
+  │     - Who would object to removing it?
+  │     - What alternatives exist?
+  │  3. Document benefit flows:
+  │     - Track who gains vs. who loses from status quo
+  │     - Measure asymmetric benefit distribution
+  │  4. Decision tree:
+  │     IF extraction confirmed → Reclassify as SNARE
+  │     IF functional & fair → Reclassify as ROPE
+  │     IF context-dependent → Add indexical resolution
+  └─
+
+====================================================
+[PASS] testsets/ulysses_chp16.pl
+
+### START LLM REFINEMENT MANIFEST: ulysses_eumaeus_1904 ###
+
+[PERSPECTIVAL_GAPS]
+  - Constraint "ulysses_eumaeus_1904": Individual sees snare, but Institution sees rope.
+
+[ONTOLOGICAL_MISMATCHES]
+  - None detected.
+
+[UNRESOLVED_OMEGAS]
+  - omega_extraction_blindness_ulysses_eumaeus_1904 (conceptual): Constraint ulysses_eumaeus_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+### END REFINEMENT MANIFEST ###
+
+[44] EXECUTING: testsets/ulysses_chp17.pl
+
+[SCENARIO MANAGER] Clearing Knowledge Base...
+[OK] Knowledge Base is empty.
+[SCENARIO MANAGER] Loading: testsets/ulysses_chp17.pl...
+[SCENARIO MANAGER] Performing Global Repair...
+
+[REPAIR] Auditing vectors for: ulysses_ithaca_1904...
+  [BRIDGE] Derived constraint_claim(ulysses_ithaca_1904, snare) from computed analytical classification
+  [FIXED] Imputed 0.55 for accessibility_collapse(organizational) at T=0
+  [FIXED] Imputed 0.73 for stakes_inflation(organizational) at T=0
+  [FIXED] Imputed 0.95 for suppression(organizational) at T=0
+  [FIXED] Imputed 0.6 for resistance(organizational) at T=0
+  [FIXED] Imputed 0.55 for accessibility_collapse(organizational) at T=10
+  [FIXED] Imputed 0.73 for stakes_inflation(organizational) at T=10
+  [FIXED] Imputed 0.95 for suppression(organizational) at T=10
+  [FIXED] Imputed 0.6 for resistance(organizational) at T=10
+  [FIXED] Imputed 0.55 for accessibility_collapse(class) at T=0
+  [FIXED] Imputed 0.73 for stakes_inflation(class) at T=0
+  [FIXED] Imputed 0.95 for suppression(class) at T=0
+  [FIXED] Imputed 0.6 for resistance(class) at T=0
+  [FIXED] Imputed 0.55 for accessibility_collapse(class) at T=10
+  [FIXED] Imputed 0.73 for stakes_inflation(class) at T=10
+  [FIXED] Imputed 0.95 for suppression(class) at T=10
+  [FIXED] Imputed 0.6 for resistance(class) at T=10
+  [FIXED] Imputed 0.55 for accessibility_collapse(individual) at T=0
+  [FIXED] Imputed 0.73 for stakes_inflation(individual) at T=0
+  [FIXED] Imputed 0.95 for suppression(individual) at T=0
+  [FIXED] Imputed 0.6 for resistance(individual) at T=0
+  [FIXED] Imputed 0.55 for accessibility_collapse(individual) at T=10
+  [FIXED] Imputed 0.73 for stakes_inflation(individual) at T=10
+  [FIXED] Imputed 0.95 for suppression(individual) at T=10
+  [FIXED] Imputed 0.6 for resistance(individual) at T=10
+
+[REPAIR] Auditing vectors for: ulysses_ithaca_1904...
+
+>>> INITIATING DR-AUDIT SUITE: ulysses_ithaca_1904
+
+[REPAIR] Auditing vectors for: ulysses_ithaca_1904...
+
+--- [START] Data Verification ---
+[OK] Ontology Schema matches.
+Checking Interval: ulysses_ithaca_1904 (0-10)
+Checking Interval: ulysses_ithaca_1904 (0-10)
+--- [END] Data Verification Complete ---
+[OK] Verification passed.
+
+=== PERSPECTIVE COMPARISON ===
+Constraint: ulysses_ithaca_1904
+
+No classification from your perspective
+
+No analytical classification
+
+
+--- PER-INDEX VALIDATION ---
+  [INDEX OK] ulysses_ithaca_1904 from context(agent_power(powerless),time_horizon(biographical),exit_options(trapped),spatial_scope(global)): declared=snare, computed=snare
+  [INDEX MISMATCH] ulysses_ithaca_1904 from context(agent_power(institutional),time_horizon(generational),exit_options(mobile),spatial_scope(global)): declared=rope, computed=piton
+  [INDEX MISMATCH] ulysses_ithaca_1904 from context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(universal)): declared=piton, computed=snare
+  [INTENT] Result: stable (Confidence: high)
+
+=== DEFERENTIAL REALISM (DR) DIAGNOSTIC: ulysses_ithaca_1904 ===
+
+[CONSTRAINT INVENTORY]
+  - ulysses_ithaca_1904: extractive_snare (Intensity: 0.46)
+
+[FEASIBILITY BRIDGE]
+====================================================
+
+--- LIFECYCLE DRIFT ANALYSIS ---
+
+================================================================
+  DRIFT EVENT REPORT
+================================================================
+
+  Constraints scanned: 1
+  Total drift events:  6
+  Critical: 6 | Warning: 0 | Watch: 0
+
+  ulysses_ithaca_1904:
+    [critical] metric_substitution
+        Evidence: evidence(theater_delta,0,5,0.7,0.85)
+    [critical] metric_substitution
+        Evidence: evidence(theater_delta,0,10,0.7,0.95)
+    [critical] metric_substitution
+        Evidence: evidence(theater_delta,5,10,0.85,0.95)
+    [critical] extraction_accumulation
+        Evidence: evidence(extraction_delta,0,5,0.35,0.42)
+    [critical] extraction_accumulation
+        Evidence: evidence(extraction_delta,0,10,0.35,0.46)
+    [critical] extraction_accumulation
+        Evidence: evidence(extraction_delta,5,10,0.42,0.46)
+
+--- Transition Path Analysis ---
+
+--- Terminal State Predictions ---
+  ulysses_ithaca_1904 -> tangled_rope (confidence: low)
+
+================================================================
+
+--- SCOPE EFFECT ANALYSIS ---
+  Formula: χ = ε × π(P) × σ(S)
+  ulysses_ithaca_1904 (ε=0.46):
+    powerless@local: χ = 0.46 × 1.50 × 0.80 = 0.552
+    moderate@national: χ = 0.46 × 1.00 × 1.00 = 0.460
+    institutional@national: χ = 0.46 × -0.20 × 1.00 = -0.092
+    analytical@global: χ = 0.46 × 1.15 × 1.20 = 0.635
+
+--- LOGICAL FINGERPRINT ---
+
+=== Logical Fingerprint: ulysses_ithaca_1904 ===
+  Shift:      powerless=snare  moderate=snare  institutional=piton  analytical=snare
+
+--- SYSTEM INSIGHTS ---
+  Omegas Identified: 0
+
+
+====================================================
+   DEFERENTIAL REALISM (DR) EXECUTIVE SUMMARY
+====================================================
+Timeline:       0 to 10
+Structural Pattern: stable
+Confidence:     high
+
+[CONSTRAINT INVENTORY: INDEXICAL AUDIT]
+
+
+Constraint: ulysses_ithaca_1904
+  Claimed Type: snare
+  Perspectives:
+    - [context(agent_power(powerless),time_horizon(biographical),exit_options(trapped),spatial_scope(global))]: snare (Matches Claim)
+    - [context(agent_power(institutional),time_horizon(generational),exit_options(mobile),spatial_scope(global))]: rope (Mismatch)
+    - [context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(universal))]: piton (Mismatch)
+
+[CROSS-DOMAIN ISOMORPHISM & RISK AUDIT: ulysses_ithaca_1904]
+  No high-risk isomorphisms detected for current constraints.
+
+[COMPREHENSIVE CROSS-DOMAIN STRUCTURAL TWINS]
+  No cross-domain isomorphisms detected.
+
+[META-LOGICAL AUDIT: ONTOLOGICAL FRAUD DETECTION]
+  No classification errors detected. System is Ontologically Coherent.
+
+[ONTOLOGICAL FORENSIC AUDIT: FALSE MOUNTAINS]
+  All mountains are structurally validated.
+
+[STRUCTURAL SIGNATURE ANALYSIS]
+  ulysses_ithaca_1904: constructed_high_extraction (confidence: medium)
+    → CONSTRUCTED HIGH-EXTRACTION signature for ulysses_ithaca_1904: Enforcement present (suppression=0.95, resistance=0.50) with high extraction (0.46). This is an extraction mechanism that metrics failed to classify as snare.
+
+[UKE_DR FEASIBILITY BRIDGE]
+  Recommendation | UKE Status
+  ----------------------------------------------------------------------
+
+Aggregate Magnitude (Kappa) at Tn: 0.66
+
+[PERSPECTIVAL GAP ANALYSIS]
+
+  Analysis for Constraint: ulysses_ithaca_1904
+    ! ALERT: Extractive "Snare" is masked as functional "Rope".
+    - Individual (Powerless): snare  [chi = 0.46 x 1.50 = 0.69]
+    - Institutional (Manager): rope  [chi = 0.46 x -0.20 = -0.09 -> net benefit]
+    ! MANDATROPHY GAP: delta_chi = 0.78 (high)
+
+[OMEGA GENERATION FROM PERSPECTIVAL GAPS: ulysses_ithaca_1904]
+  Generated 1 Omega variables from perspectival gaps:
+
+  Ω: omega_extraction_blindness_ulysses_ithaca_1904 (conceptual)
+     Question: Constraint ulysses_ithaca_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+     Source: gap(snare_masked_as_rope,snare,rope)
+
+
+[OMEGA TRIAGE & PRIORITIZATION]
+
+  [critical] 1 omega(s):
+    - omega_extraction_blindness_ulysses_ithaca_1904 (conceptual)
+      Constraint ulysses_ithaca_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+  [high] 1 omega(s):
+    - omega_extraction_blindness_ulysses_ithaca_1904 (conceptual)
+      Constraint ulysses_ithaca_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+[OMEGA RESOLUTION SCENARIO GENERATION]
+  Generated 1 resolution scenario(s):
+
+  ┌─ [omega_extraction_blindness_ulysses_ithaca_1904] CONCEPTUAL CLARIFICATION
+  │  Constraint: ulysses_ithaca_1904
+  │  Gap: Constraint ulysses_ithaca_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+  │
+  │  CRITICAL: Extraction Masking Detected
+  │  Powerless see: SNARE (extractive trap)
+  │  Institutions see: ROPE (functional rule)
+  │
+  │  RESOLUTION STRATEGY:
+  │  1. Interview affected individuals (N=10+):
+  │     - Who benefits from ulysses_ithaca_1904?
+  │     - Can you change/exit this constraint?
+  │     - What would happen if you tried?
+  │  2. Interview institutional actors (N=10+):
+  │     - What function does ulysses_ithaca_1904 serve?
+  │     - Who would object to removing it?
+  │     - What alternatives exist?
+  │  3. Document benefit flows:
+  │     - Track who gains vs. who loses from status quo
+  │     - Measure asymmetric benefit distribution
+  │  4. Decision tree:
+  │     IF extraction confirmed → Reclassify as SNARE
+  │     IF functional & fair → Reclassify as ROPE
+  │     IF context-dependent → Add indexical resolution
+  └─
+
+====================================================
+[PASS] testsets/ulysses_chp17.pl
+
+### START LLM REFINEMENT MANIFEST: ulysses_ithaca_1904 ###
+
+[PERSPECTIVAL_GAPS]
+  - Constraint "ulysses_ithaca_1904": Individual sees snare, but Institution sees rope.
+
+[ONTOLOGICAL_MISMATCHES]
+  - None detected.
+
+[UNRESOLVED_OMEGAS]
+  - omega_extraction_blindness_ulysses_ithaca_1904 (conceptual): Constraint ulysses_ithaca_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+### END REFINEMENT MANIFEST ###
+
+[45] EXECUTING: testsets/ulysses_chp18.pl
+
+[SCENARIO MANAGER] Clearing Knowledge Base...
+[OK] Knowledge Base is empty.
+[SCENARIO MANAGER] Loading: testsets/ulysses_chp18.pl...
+[SCENARIO MANAGER] Performing Global Repair...
+
+[REPAIR] Auditing vectors for: ulysses_penelope_1904...
+  [BRIDGE] Derived constraint_claim(ulysses_penelope_1904, piton) from declared analytical classification
+  [FIXED] Imputed 0.55 for accessibility_collapse(organizational) at T=0
+  [FIXED] Imputed 0.73 for stakes_inflation(organizational) at T=0
+  [FIXED] Imputed 0.96 for suppression(organizational) at T=0
+  [FIXED] Imputed 0.6 for resistance(organizational) at T=0
+  [FIXED] Imputed 0.55 for accessibility_collapse(organizational) at T=10
+  [FIXED] Imputed 0.73 for stakes_inflation(organizational) at T=10
+  [FIXED] Imputed 0.96 for suppression(organizational) at T=10
+  [FIXED] Imputed 0.6 for resistance(organizational) at T=10
+  [FIXED] Imputed 0.55 for accessibility_collapse(class) at T=0
+  [FIXED] Imputed 0.73 for stakes_inflation(class) at T=0
+  [FIXED] Imputed 0.96 for suppression(class) at T=0
+  [FIXED] Imputed 0.6 for resistance(class) at T=0
+  [FIXED] Imputed 0.55 for accessibility_collapse(class) at T=10
+  [FIXED] Imputed 0.73 for stakes_inflation(class) at T=10
+  [FIXED] Imputed 0.96 for suppression(class) at T=10
+  [FIXED] Imputed 0.6 for resistance(class) at T=10
+  [FIXED] Imputed 0.55 for accessibility_collapse(individual) at T=0
+  [FIXED] Imputed 0.73 for stakes_inflation(individual) at T=0
+  [FIXED] Imputed 0.96 for suppression(individual) at T=0
+  [FIXED] Imputed 0.6 for resistance(individual) at T=0
+  [FIXED] Imputed 0.55 for accessibility_collapse(individual) at T=10
+  [FIXED] Imputed 0.73 for stakes_inflation(individual) at T=10
+  [FIXED] Imputed 0.96 for suppression(individual) at T=10
+  [FIXED] Imputed 0.6 for resistance(individual) at T=10
+
+[REPAIR] Auditing vectors for: ulysses_penelope_1904...
+
+>>> INITIATING DR-AUDIT SUITE: ulysses_penelope_1904
+
+[REPAIR] Auditing vectors for: ulysses_penelope_1904...
+
+--- [START] Data Verification ---
+[OK] Ontology Schema matches.
+Checking Interval: ulysses_penelope_1904 (0-10)
+Checking Interval: ulysses_penelope_1904 (0-10)
+--- [END] Data Verification Complete ---
+[OK] Verification passed.
+
+=== PERSPECTIVE COMPARISON ===
+Constraint: ulysses_penelope_1904
+
+From YOUR perspective (context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(global))): piton
+
+From ANALYTICAL perspective: piton
+
+→ Perspectives AGREE
+
+--- PER-INDEX VALIDATION ---
+  [INDEX MISMATCH] ulysses_penelope_1904 from context(agent_power(powerless),time_horizon(biographical),exit_options(trapped),spatial_scope(local)): declared=snare, computed=tangled_rope
+  [INDEX MISMATCH] ulysses_penelope_1904 from context(agent_power(institutional),time_horizon(civilizational),exit_options(mobile),spatial_scope(universal)): declared=mountain, computed=piton
+  [INDEX MISMATCH] ulysses_penelope_1904 from context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(global)): declared=piton, computed=snare
+  [INTENT] Result: stable (Confidence: high)
+
+=== DEFERENTIAL REALISM (DR) DIAGNOSTIC: ulysses_penelope_1904 ===
+
+[CONSTRAINT INVENTORY]
+  - ulysses_penelope_1904: inertial_piton (Intensity: 0.97)
+
+[FEASIBILITY BRIDGE]
+====================================================
+
+--- LIFECYCLE DRIFT ANALYSIS ---
+
+================================================================
+  DRIFT EVENT REPORT
+================================================================
+
+  Constraints scanned: 1
+  Total drift events:  6
+  Critical: 6 | Warning: 0 | Watch: 0
+
+  ulysses_penelope_1904:
+    [critical] metric_substitution
+        Evidence: evidence(theater_delta,0,5,0.8,0.95)
+    [critical] metric_substitution
+        Evidence: evidence(theater_delta,0,10,0.8,0.97)
+    [critical] metric_substitution
+        Evidence: evidence(theater_delta,5,10,0.95,0.97)
+    [critical] extraction_accumulation
+        Evidence: evidence(extraction_delta,0,5,0.42,0.48)
+    [critical] extraction_accumulation
+        Evidence: evidence(extraction_delta,0,10,0.42,0.5)
+    [critical] extraction_accumulation
+        Evidence: evidence(extraction_delta,5,10,0.48,0.5)
+
+--- Transition Path Analysis ---
+
+--- Terminal State Predictions ---
+  ulysses_penelope_1904 -> tangled_rope (confidence: low)
+
+================================================================
+
+--- SCOPE EFFECT ANALYSIS ---
+  Formula: χ = ε × π(P) × σ(S)
+  ulysses_penelope_1904 (ε=0.50):
+    powerless@local: χ = 0.50 × 1.50 × 0.80 = 0.600
+    moderate@national: χ = 0.50 × 1.00 × 1.00 = 0.500
+    institutional@national: χ = 0.50 × -0.20 × 1.00 = -0.100
+    analytical@global: χ = 0.50 × 1.15 × 1.20 = 0.690
+
+--- LOGICAL FINGERPRINT ---
+
+=== Logical Fingerprint: ulysses_penelope_1904 ===
+  Shift:      powerless=tangled_rope  moderate=tangled_rope  institutional=piton  analytical=snare
+
+--- SYSTEM INSIGHTS ---
+  Omegas Identified: 0
+
+
+====================================================
+   DEFERENTIAL REALISM (DR) EXECUTIVE SUMMARY
+====================================================
+Timeline:       0 to 10
+Structural Pattern: stable
+Confidence:     high
+
+[CONSTRAINT INVENTORY: INDEXICAL AUDIT]
+
+
+Constraint: ulysses_penelope_1904
+  Claimed Type: piton
+  Perspectives:
+    - [context(agent_power(powerless),time_horizon(biographical),exit_options(trapped),spatial_scope(local))]: snare (Mismatch)
+    - [context(agent_power(institutional),time_horizon(civilizational),exit_options(mobile),spatial_scope(universal))]: mountain (Mismatch)
+    - [context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(global))]: piton (Matches Claim)
+
+[CROSS-DOMAIN ISOMORPHISM & RISK AUDIT: ulysses_penelope_1904]
+  No high-risk isomorphisms detected for current constraints.
+
+[COMPREHENSIVE CROSS-DOMAIN STRUCTURAL TWINS]
+  No cross-domain isomorphisms detected.
+
+[META-LOGICAL AUDIT: ONTOLOGICAL FRAUD DETECTION]
+  No classification errors detected. System is Ontologically Coherent.
+
+[ONTOLOGICAL FORENSIC AUDIT: FALSE MOUNTAINS]
+  All mountains are structurally validated.
+
+[STRUCTURAL SIGNATURE ANALYSIS]
+  ulysses_penelope_1904: constructed_high_extraction (confidence: medium)
+    → CONSTRUCTED HIGH-EXTRACTION signature for ulysses_penelope_1904: Enforcement present (suppression=0.96, resistance=0.50) with high extraction (0.50). This is an extraction mechanism that metrics failed to classify as snare.
+
+[UKE_DR FEASIBILITY BRIDGE]
+  Recommendation | UKE Status
+  ----------------------------------------------------------------------
+
+Aggregate Magnitude (Kappa) at Tn: 0.66
+
+[PERSPECTIVAL GAP ANALYSIS]
+
+  Analysis for Constraint: ulysses_penelope_1904
+    - Individual (Powerless): snare  [chi = 0.50 x 1.50 = 0.75]
+    - Institutional (Manager): mountain  [chi = 0.50 x -0.20 = -0.10 -> net benefit]
+    ! MANDATROPHY GAP: delta_chi = 0.85 (high)
+
+[OMEGA GENERATION FROM PERSPECTIVAL GAPS: ulysses_penelope_1904]
+  Generated 1 Omega variables from perspectival gaps:
+
+  Ω: omega_learned_helplessness_ulysses_penelope_1904 (conceptual)
+     Question: Constraint ulysses_penelope_1904 appears extractive (Snare) to individuals but unchangeable (Mountain) to institutions...
+     Source: gap(snare_mountain_confusion,snare,mountain)
+
+
+[OMEGA TRIAGE & PRIORITIZATION]
+
+  [critical] 1 omega(s):
+    - omega_learned_helplessness_ulysses_penelope_1904 (conceptual)
+      Constraint ulysses_penelope_1904 appears extractive (Snare) to individuals but unchangeable (Mountain) to institutions...
+
+  [high] 1 omega(s):
+    - omega_learned_helplessness_ulysses_penelope_1904 (conceptual)
+      Constraint ulysses_penelope_1904 appears extractive (Snare) to individuals but unchangeable (Mountain) to institutions...
+
+[OMEGA RESOLUTION SCENARIO GENERATION]
+  Generated 1 resolution scenario(s):
+
+  ┌─ [omega_learned_helplessness_ulysses_penelope_1904] CONCEPTUAL CLARIFICATION
+  │  Constraint: ulysses_penelope_1904
+  │  Gap: Constraint ulysses_penelope_1904 appears extractive (Snare) to individuals but unchangeable (Mountain) to institutions...
+  │
+  │  CRITICAL: Learned Helplessness Pattern
+  │  Powerless see: SNARE (extractive trap)
+  │  Institutions see: MOUNTAIN (unchangeable law)
+  │
+  │  RESOLUTION STRATEGY:
+  │  1. Test changeability:
+  │     - Can institutions modify ulysses_penelope_1904?
+  │     - What legal/political mechanisms exist?
+  │     - Historical precedents of change?
+  │  2. Test extraction:
+  │     - Is benefit flow symmetric or asymmetric?
+  │     - Who has veto power over changes?
+  │  3. Decision tree:
+  │     IF truly unchangeable + extractive → MANDATROPHY
+  │     IF changeable + extractive → Correct to SNARE
+  │     IF unchangeable + fair → Correct to MOUNTAIN
+  │     IF institutions falsely claim necessity → SNARE + fraud flag
+  └─
+
+====================================================
+[PASS] testsets/ulysses_chp18.pl
+
+### START LLM REFINEMENT MANIFEST: ulysses_penelope_1904 ###
+
+[PERSPECTIVAL_GAPS]
+  - Constraint "ulysses_penelope_1904": Individual sees snare, but Institution sees mountain.
+
+[ONTOLOGICAL_MISMATCHES]
+  - None detected.
+
+[UNRESOLVED_OMEGAS]
+  - omega_learned_helplessness_ulysses_penelope_1904 (conceptual): Constraint ulysses_penelope_1904 appears extractive (Snare) to individuals but unchangeable (Mountain) to institutions...
+
+### END REFINEMENT MANIFEST ###
+
+==================================================
+           TEST SUITE SUMMARY
+==================================================
+Passed: 18
+Failed: 0
+==================================================
+
+====================================================
+   DATA VALIDATION SUITE
+====================================================
+
+Running validation checks...
+
+[CHECK 1: Constraint Completeness]
+  Checking 1 constraints...
+  ✗ 1 incomplete constraint(s) found
+
+  Constraint: ulysses_penelope_1904
+    ⚠ Category is unknown_novel (should be specific)
+
+[CHECK 2: Metric Range Validation]
+  Checking 3 metrics...
+  ✓ All metrics in valid range
+
+[CHECK 3: Classification Consistency]
+  Checking 1 constraints for consistency...
+  ⚠ 1 potential inconsistenc(ies) found
+
+  Constraint: ulysses_penelope_1904
+    Claimed: piton
+    Expected (from metrics): tangled_rope
+    Metrics: suppression=0.96, extractiveness=0.50, ceiling=0.05
+
+
+[CHECK 4: Edge Case Detection]
+  ✓ No mandatrophies detected
+  ✓ No pitons detected
+  ⚠ 1 extreme value(s) detected (>0.95 or <0.05)
+    - ulysses_penelope_1904.suppression_requirement = 0.96
+
+[CHECK 5: Domain Coverage]
+  Found 1 domain categories
+    - mountain: 1 constraint(s)
+
+  ⚠ Underrepresented categories (<3 constraints):
+    - mountain
+
+====================================================
+   VALIDATION SUMMARY
+====================================================
+
+Results:
+  Errors:   0
+  Warnings: 1
+  Info:     2
+
+WARNINGS:
+  [WARN] classification_mismatch: ulysses_penelope_1904 - piton-tangled_rope
+
+✓ DATA QUALITY: GOOD - Minor warnings only
+
+====================================================
+true.
+
+?-

@@ -1,9 +1,9 @@
 % ============================================================================
 % CONSTRAINT STORY: individual_revolution_autonomy
 % ============================================================================
-% Generated: 2025-05-20
-% Model: Gemini 2.0 Flash
-% Source: "Revolution For One" by cafebedouin.org
+% Version: 3.4 (Deferential Realism Core)
+% Logic: 3.3 (Indexed Tuple P,T,E,S)
+% Generated: 2026-02-06
 % Status: [RESOLVED MANDATROPHY]
 % ============================================================================
 
@@ -17,7 +17,14 @@
 :- multifile 
     domain_priors:base_extractiveness/2,
     domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
     domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -29,293 +36,143 @@
  * * constraint_id: individual_revolution_autonomy
  * human_readable: The One-Man Revolution
  * domain: political/social
- * temporal_scope: Contemporary / Historical
- * spatial_scope: Global / Individual
  * * SUMMARY:
  * This constraint contrasts the "futile" pursuit of mass socio-political revolution with the "fertile" 
- * pursuit of individual autonomy and alternative culture. It posits that large-scale 
- * institutional change is a slow, generational process often co-opted by elites to maintain the 
- * status quo.
+ * pursuit of individual autonomy. It posits that mass institutional change is often co-opted, 
+ * making the "only revolution that is coming" an internal, individual shift in values.
  * * KEY AGENTS:
- * - The Elite/Institutional Actor: Uses top-down control to consolidate power and maintain the status quo.
- * - The Disengaged Citizen: Experiences the "illusion as reality," often feeling a limited ability to change society.
- * - The Conscious Individual (Amish/One-Man Rebel): Focuses on the "only revolution that is coming"—internal change and alternative values.
- * * NARRATIVE ARC:
- * The individual is initially "trapped" by dominant narratives and the perceived necessity of mass 
- * movements. By recognizing the limits of top-down control and the "futility" of general 
- * revolution, the agent pivots to a "One-Man Revolution," redefining identity and interaction 
- * outside established power structures.
+ * - The Subject (Citizen): Powerless agent trapped in mass-culture narratives.
+ * - The Beneficiary (Elite): Institutional agent maintaining status-quo coordination.
+ * - The Auditor (Historian): Analytical observer tracking cycles of control.
  */
 
 /* ==========================================================================
-   2. BASE PROPERTIES (Context-Independent)
+   2. BASE PROPERTIES (DOMAIN PRIORS)
    ========================================================================== */
 
-% Structural Anchor for extraction
-narrative_ontology:interval(individual_revolution_autonomy, 0, 10).
-narrative_ontology:constraint_claim(individual_revolution_autonomy, snare).
+% Numerical anchors for v3.4 thresholds
+domain_priors:base_extractiveness(individual_revolution_autonomy, 0.75). % High extraction (Snare/Tangled territory)
+domain_priors:suppression_score(individual_revolution_autonomy, 0.80).   % High suppression of alternatives
+domain_priors:theater_ratio(individual_revolution_autonomy, 0.45).       % Significant but not yet Piton-level inertia
+
+% Primary keys for the classification engine
+narrative_ontology:constraint_metric(individual_revolution_autonomy, extractiveness, 0.75).
+narrative_ontology:constraint_metric(individual_revolution_autonomy, suppression_requirement, 0.80).
+narrative_ontology:constraint_metric(individual_revolution_autonomy, theater_ratio, 0.45).
+
+% Structural property derivation hooks
+% High extraction (> 0.46) requires beneficiary/victim declaration for proper modeling.
+narrative_ontology:constraint_beneficiary(individual_revolution_autonomy, elite_institutional_class).
+narrative_ontology:constraint_victim(individual_revolution_autonomy, disengaged_citizenry).
+domain_priors:requires_active_enforcement(individual_revolution_autonomy).
 
 /* ==========================================================================
-   3. INDEXED CLASSIFICATIONS (Perspectival Truth)
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × π(P) × σ(S)
    ========================================================================== */
 
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 1: THE DISENGAGED CITIZEN - Snare
-   --------------------------------------------------------------------------
-   
-   WHO: individual_powerless - Feels limited influence and disengagement from institutions.
-   WHEN: immediate - Focused on current electoral cycles and immediate issues.
-   WHERE: trapped - Bound by dominant narratives and the perceived "binary" of marriage/loneliness or status quo.
-   SCOPE: national - Concerned with federal elections and national policy.
-   
-   WHY THIS CLASSIFICATION:
-   For the disengaged individual, the system is a Snare because they perceive their ability to change 
-   society as "limited" and are often subject to top-down control efforts like the "War on Drugs".
-   
-   NARRATIVE EVIDENCE:
-   "Most people understand that their ability to change society is limited... This likely accounts 
-   for much of the disengagement".
-   -------------------------------------------------------------------------- */
+% PERSPECTIVE 1: THE DISENGAGED CITIZEN (SNARE)
+% χ = 0.75 * 1.5 (powerless) * 1.0 (national) = 1.125
+% Perceived as a predatory trap with no viable exit.
+constraint_indexing:constraint_classification(individual_revolution_autonomy, snare,
+    context(agent_power(powerless),
+            time_horizon(immediate),
+            exit_options(trapped),
+            spatial_scope(national))).
 
-constraint_indexing:constraint_classification(
-    individual_revolution_autonomy,
-    snare,
-    context(
-        agent_power(individual_powerless),
-        time_horizon(immediate),
-        exit_options(trapped),
-        spatial_scope(national)
-    )
-) :-
-    domain_priors:base_extractiveness(individual_revolution_autonomy, E),
-    E > 0.7.
+% PERSPECTIVE 2: THE INSTITUTIONAL MANAGER (ROPE)
+% χ = 0.75 * -0.2 (institutional) * 1.2 (global) = -0.18
+% Viewed as essential (if coercive) infrastructure for global stability.
+constraint_indexing:constraint_classification(individual_revolution_autonomy, rope,
+    context(agent_power(institutional),
+            time_horizon(historical),
+            exit_options(mobile),
+            spatial_scope(global))).
 
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE ELITE CONTROLLER - Rope
-   --------------------------------------------------------------------------
-   
-   WHO: institutional - Exerts top-down control to consolidate and maintain power.
-   WHEN: historical - Operates on timescales of centuries and deep institutional inertia.
-   WHERE: mobile - Capable of creating enough change to maintain power.
-   SCOPE: global - Managing conditions in a global economy or automation-displaced humanity.
-   
-   WHY THIS CLASSIFICATION:
-   For the elite, the system is a Rope; it is a "functional coordination mechanism" for 
-   maintaining the status quo and their own influence.
-   
-   NARRATIVE EVIDENCE:
-   "top down control always inspires significant resistance... they are primarily concerned about 
-   maintaining the status quo, creating enough change to maintain their power".
-   -------------------------------------------------------------------------- */
+% PERSPECTIVE 3: THE ONE-MAN REVOLUTIONARY (ROPE)
+% χ = 0.75 * 0.4 (organized/individual_moderate) * 0.8 (local) = 0.24
+% By narrowing scope and organizing internal power, extraction becomes manageable coordination.
+constraint_indexing:constraint_classification(individual_revolution_autonomy, rope,
+    context(agent_power(organized),
+            time_horizon(biographical),
+            exit_options(mobile),
+            spatial_scope(local))).
 
-constraint_indexing:constraint_classification(
-    individual_revolution_autonomy,
-    rope,
-    context(
-        agent_power(institutional),
-        time_horizon(historical),
-        exit_options(mobile),
-        spatial_scope(global)
-    )
-).
-
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE ONE-MAN REVOLUTIONARY (AMISH-LIKE) - Rope
-   --------------------------------------------------------------------------
-   
-   WHO: individual_moderate - Refuses participation in mass culture to focus on immediate sphere.
-   WHEN: biographical - Focuses on individual life transformation and community values.
-   WHERE: mobile - Refuses to use dominant narratives as the reference point.
-   SCOPE: local - Immediate social sphere and alternative culture.
-   
-   WHY THIS CLASSIFICATION:
-   For the autonomous individual, the "One-man revolution" is a Rope; it is a fertile form of 
-   action that allows them to "redefine identity" and create alternative values.
-   
-   NARRATIVE EVIDENCE:
-   "The revolution of single individuals and of small communities to reject mass culture... is the 
-   only revolution that is always possible".
-   -------------------------------------------------------------------------- */
-
-constraint_indexing:constraint_classification(
-    individual_revolution_autonomy,
-    rope,
-    context(
-        agent_power(individual_moderate),
-        time_horizon(biographical),
-        exit_options(mobile),
-        spatial_scope(local)
-    )
-).
-
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 4: THE HISTORIAN - Mountain
-   --------------------------------------------------------------------------
-   WHO: analytical (Observing long-term social patterns)
-   WHEN: historical (Viewing cycles of revolution and control)
-   WHERE: analytical (Detached from the immediate political struggle)
-   SCOPE: global
-   
-   WHY THIS CLASSIFICATION:
-   For the historian, the tension between elite control and individual autonomy
-   is a "Mountain." It is a fundamental, recurring pattern in human societies,
-   a dynamic that plays out over centuries with predictable outcomes. The
-   "futility" of mass revolution is a data point in this larger, unchangeable landscape.
-   -------------------------------------------------------------------------- */
-
-constraint_indexing:constraint_classification(
-    individual_revolution_autonomy,
-    mountain,
-    context(
-        agent_power(analytical),
-        time_horizon(historical),
-        exit_options(analytical),
-        spatial_scope(global)
-    )
-).
+% PERSPECTIVE 4: THE ANALYTICAL OBSERVER (TANGLED ROPE)
+% χ = 0.75 * 1.15 (analytical) * 1.2 (global) = 1.035
+% High extraction + High suppression + Presence of Coordination (via beneficiary) = Tangled Rope.
+constraint_indexing:constraint_classification(individual_revolution_autonomy, tangled_rope,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(global))).
 
 /* ==========================================================================
-   4. TESTS (What We Learn About Constraints)
+   4. VALIDATION TESTS
    ========================================================================== */
 
 :- begin_tests(individual_revolution_autonomy_tests).
 
-/**
- * TEST 1: Multi-perspective variance
- * Demonstrates that the concept of revolution is viewed differently across agents.
- */
-test(multi_perspective_variance) :-
-    % Disengaged Citizen (Snare)
-    constraint_indexing:constraint_classification(
-        individual_revolution_autonomy,
-        Type1,
-        context(agent_power(individual_powerless), time_horizon(immediate), exit_options(trapped), spatial_scope(national))
-    ),
-    % Elite Controller (Rope)
-    constraint_indexing:constraint_classification(
-        individual_revolution_autonomy,
-        Type2,
-        context(agent_power(institutional), time_horizon(historical), exit_options(mobile), spatial_scope(global))
-    ),
-    % One-Man Revolutionary (Rope)
-    constraint_indexing:constraint_classification(
-        individual_revolution_autonomy,
-        Type3,
-        context(agent_power(individual_moderate), time_horizon(biographical), exit_options(mobile), spatial_scope(local))
-    ),
-    % Historian (Mountain)
-    constraint_indexing:constraint_classification(
-        individual_revolution_autonomy,
-        Type4,
-        context(agent_power(analytical), time_horizon(historical), exit_options(analytical), spatial_scope(global))
-    ),
-    % Verify they differ
-    Type1 \= Type2,
-    Type2 \= Type4. % Rope and Mountain are different
+test(perspectival_gap) :-
+    constraint_indexing:constraint_classification(individual_revolution_autonomy, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(individual_revolution_autonomy, rope, context(agent_power(institutional), _, _, _)).
 
-/**
- * TEST 2: Power-based extractiveness scaling
- * Demonstrates that powerless citizens experience higher extraction than the elites who control the system.
- */
-test(power_extractiveness_scaling) :-
-    ContextPowerless = context(agent_power(individual_powerless), time_horizon(immediate), exit_options(trapped), spatial_scope(national)),
-    ContextPowerful = context(agent_power(institutional), time_horizon(historical), exit_options(mobile), spatial_scope(global)),
-    constraint_indexing:extractiveness_for_agent(individual_revolution_autonomy, ContextPowerless, Score1),
-    constraint_indexing:extractiveness_for_agent(individual_revolution_autonomy, ContextPowerful, Score2),
-    Score1 > Score2.  % Powerless experience more extraction
-
-/**
- * TEST 3: Domain-specific insight - The "One-Man Revolution"
- * Demonstrates that individual autonomy provides a 'rope' to escape the 'snare' of mass politics.
- */
-test(one_man_revolution_insight) :-
-    constraint_indexing:constraint_classification(individual_revolution_autonomy, ClassificationCitizen, context(agent_power(individual_powerless), _, _, _)),
-    constraint_indexing:constraint_classification(individual_revolution_autonomy, ClassificationRebel, context(agent_power(individual_moderate), _, _, _)),
-    ClassificationCitizen = snare,
-    ClassificationRebel = rope.
+test(extraction_scaling) :-
+    % Verify that the powerless feel significantly more extraction than the analytical observer
+    % (Due to π(powerless)=1.5 vs π(analytical)=1.15)
+    constraint_indexing:effective_extraction(individual_revolution_autonomy, context(agent_power(powerless), _, _, national), ChiPowerless),
+    constraint_indexing:effective_extraction(individual_revolution_autonomy, context(agent_power(analytical), _, _, national), ChiAnalytical),
+    ChiPowerless > ChiAnalytical.
 
 :- end_tests(individual_revolution_autonomy_tests).
 
 /* ==========================================================================
-   5. MODEL INTERPRETATION (Commentary)
+   5. GENERATIVE COMMENTARY
    ========================================================================== */
 
 /**
- * LLM GENERATION NOTES
- * 
- * Model: Gemini 2.0 Flash
- * Date: 2026-01-23
- * 
- * KEY DECISIONS:
- * 
- * 1. EXTRACTIVENESS SCORE (0.75): The text explicitly states that top-down projects are "elite projects" 
- * that "benefit only a small subset of society". 
- * 
- * 2. SUPPRESSION SCORE (0.8): The source highlights that "dominant ideas" are internalized even by those 
- * in opposition, making alternatives invisible or illusory.
- * 
- * 3. PERSPECTIVE SELECTION:
- *    Chose the powerless citizen (Snare), the elite controller (Rope), the autonomous individual (Rope), 
- *    and the historian (Mountain) to show the full spectrum of engagement with social change.
- * 
- * 4. OMEGAS 
- *    Define uncertainty so your analysis is cleaner
- *    omega_variable(
- *        individual_revolution_autonomy_extraction_intent,
- *        "Is the high extractiveness of top-down control a functional necessity for social stability (Mountain) or purely predatory (Snare)?",
- *        resolution_mechanism("Audit of elite resource allocation vs. social survival thresholds during crises"),
- *        impact("If necessity: Mountain. If predatory: Snare/Mandatrophy."),
- *        confidence_without_resolution(medium)
- *    ).
- * 
- *    omega_variable(
- *        revolutionary_conditions_ripeness,
- *        "Is it impossible to know in advance if conditions are ripe for revolution (Mountain), or can a 'One-Man' shift catalyze mass divergence?",
- *        resolution_mechanism("Trace whether individual identity shifts (Amish-style) reach critical mass to trigger systemic unraveling"),
- *        impact("If Mountain: Mass revolution remains a futile illusion. If catalyzeable: One-man shifts are Scaffolds."),
- *        confidence_without_resolution(low)
- *    ).
+ * LOGIC RATIONALE:
+ * The 0.75 base extraction reflects the source's claim that mass movements are "elite projects." 
+ * The perspectival gap is extreme: the system is a 'Snare' to the trapped citizen but a 'Rope' 
+ * (essential coordination) to the elite. The "One-Man Revolution" works by reducing S (Scope) 
+ * to 'local' and increasing P (Power) to 'organized' autonomy, which drops effective 
+ * extraction (χ) into the Rope category.
  */
 
 /* ==========================================================================
-   6. ALTERNATIVE ANALYSIS (If Applicable)
+   6. OMEGA VARIABLES (Ω)
    ========================================================================== */
 
-/**
- * VIABLE ALTERNATIVES
- * 
- * ALTERNATIVE 1: Electoral Politics / Reform
- *    Viability: Facilitates the perpetuation of a "slightly more enlightened status quo".
- *    Suppression: Often characterized as an "illusion" that fails to address the root problem.
- *    Evidence: Participation levels are low (~60%), and change happens over "decades" if at all.
- * 
- * CONCLUSION:
- * The existence of electoral politics as a perceived but "futile" alternative reinforces 
- * the "One-Man Revolution" as the only functional Rope for individual autonomy.
- */
+omega_variable(
+    omega_autonomy_viability,
+    'Can individual autonomy reach a critical mass to trigger systemic decoupling?',
+    'Trace whether individual identity shifts (Amish-style) trigger measurable institutional resource-diversion.',
+    'If True: Transition to Scaffold. If False: Remains a Snare/Tangled Rope.',
+    confidence_without_resolution(medium)
+).
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-/**
- * TO USE THIS CONSTRAINT:
- * 
- * 1. Load into main system:
- *    ?- [constraints/individual_revolution_autonomy].
- * 
- * 2. Run multi-perspective analysis:
- *    ?- constraint_indexing:multi_index_report(individual_revolution_autonomy).
- * 
- * 3. Run tests:
- *    ?- run_tests(individual_revolution_autonomy_tests).
- * 
- * 4. Generate pedagogical report:
- *    ?- pedagogical_report(individual_revolution_autonomy).
- * 
- * 5. Compare with other constraints:
- *    ?- compare_constraints(individual_revolution_autonomy, [other_id]).
- */
+narrative_ontology:interval(individual_revolution_autonomy, 0, 10).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Required for high-extraction constraints (base_extractiveness 0.75 > 0.46)
+% Tracks the intensification of extraction and the rise of "theatrical" management.
+
+% Theater ratio: Rising over time indicates metric substitution (Goodhart drift).
+narrative_ontology:measurement(ira_tr_t0, individual_revolution_autonomy, theater_ratio, 0, 0.20).
+narrative_ontology:measurement(ira_tr_t5, individual_revolution_autonomy, theater_ratio, 5, 0.35).
+narrative_ontology:measurement(ira_tr_t10, individual_revolution_autonomy, theater_ratio, 10, 0.45).
+
+% Extraction: Tracking extraction accumulation (rent-seeking layering).
+narrative_ontology:measurement(ira_ex_t0, individual_revolution_autonomy, base_extractiveness, 0, 0.55).
+narrative_ontology:measurement(ira_ex_t5, individual_revolution_autonomy, base_extractiveness, 5, 0.65).
+narrative_ontology:measurement(ira_ex_t10, individual_revolution_autonomy, base_extractiveness, 10, 0.75).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

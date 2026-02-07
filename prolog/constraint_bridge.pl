@@ -1,11 +1,15 @@
 :- module(constraint_bridge, [
     dr_diagnostic_report/1,
     constraint_status/3,
-    recommendation_feasibility/3
+    recommendation_feasibility/3,
+    derive_veto_actors/0
 ]).
 
+:- use_module(drl_core).
 :- use_module(narrative_ontology).
-:- use_module(v3_1_coercion_projection).
+:- use_module(coercion_projection).
+:- use_module(isomorphism_engine).
+:- use_module(domain_priors).
 
 /* ================================================================
    1. CONTEXTUAL CONSTRAINT FILTERING
@@ -78,9 +82,35 @@ is_safe_to_cut(C) :-
    3. SCENARIO-AWARE DIAGNOSTIC REPORTING
    ================================================================ */
 
+%% derive_veto_actors
+%  Automated 'Veto Player' Derivation.
+%  Infers veto players from beneficiary data for snares and tangled ropes.
+derive_veto_actors :-
+    findall(C, (
+        drl_core:dr_type(C, Type),
+        (Type = snare ; Type = tangled_rope)
+    ), Cs),
+    list_to_set(Cs, Constraints),
+    forall(member(C, Constraints),
+        (
+            forall(narrative_ontology:constraint_beneficiary(C, Actor),
+                (
+                    ( \+ narrative_ontology:veto_actor(Actor), Actor \= none, Actor \= [] ->
+                        assertz(narrative_ontology:veto_actor(Actor))
+                    ; true
+                    )
+                )
+            )
+        )
+    ).
+
+
 %% dr_diagnostic_report(+IntervalID)
 %  Enhanced v4.1: Consolidates diagnostic reporting with High-Risk Isomorphism Alerting.
 dr_diagnostic_report(IntervalID) :-
+    % Automated Veto Player Derivation
+    derive_veto_actors,
+    
     format('~n=== DEFERENTIAL REALISM (DR) DIAGNOSTIC: ~w ===~n', [IntervalID]),
     
     % --- SECTION 1: CONSTRAINT INVENTORY ---
@@ -110,7 +140,7 @@ dr_diagnostic_report(IntervalID) :-
 %  Internal helper that alerts the user if a high-risk technical constraint 
 %  mirrors a social pathology.
 check_for_social_twins(Name, State) :-
-    member(State, [snare, tangled_rope, extractive_noose]), % High-risk states [cite: 4, 206, 208]
+    member(State, [snare, tangled_rope, extractive_snare]), % High-risk states [cite: 4, 206, 208]
     isomorphism_engine:find_high_risk_isomorphism(Name, SocialTwin, Score),
     domain_priors:category_of(SocialTwin, Cat),
     member(Cat, [narrative_history, statutory_formal, election_cycle]),

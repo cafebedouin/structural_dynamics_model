@@ -1,22 +1,29 @@
 % ============================================================================
-% CONSTRAINT STORY: history_nightmare_1904
+% CONSTRAINT STORY: ulysses_school_1904
 % ============================================================================
-% Generated: 2026-01-19
-% Model: Gemini 2.0 Flash
-% Source: James Joyce, Ulysses, Chapter 2 (Nestor)
+% Version: 3.4 (Deferential Realism Core)
+% Logic: 3.3 (Indexed Tuple P,T,E,S)
+% Generated: 2026-02-06
 % ============================================================================
 
-:- module(constraint_history_nightmare_1904, []).
+:- module(constraint_ulysses_school, []).
 
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
 
 % --- Namespace Hooks (Required for loading) ---
-:- multifile 
+:- multifile
     domain_priors:base_extractiveness/2,
     domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
     domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -25,182 +32,137 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: history_nightmare_1904
- * human_readable: The Nightmare of History (The Providential Trap)
- * domain: political/social/economic
- * temporal_scope: June 16, 1904 (10:00 AM)
- * spatial_scope: Mr. Deasy's School, Dalkey
+ * * constraint_id: ulysses_school_1904
+ * human_readable: The Nightmare of History (Dalkey School)
+ * domain: economic/social/political
  * * SUMMARY:
- * Stephen Dedalus famously defines history as a "nightmare" from which he is 
- * trying to awake. This constraint represents the 
- * static, crushing weight of the past—manifesting as personal debt, 
- * institutional antisemitism, and the rote repetition of schoolroom lessons.
+ * For Stephen Dedalus, the school at Dalkey is a Snare defined by the 
+ * "nightmare of history" and the futility of teaching privileged boys who 
+ * lack innocence[cite: 377, 555]. The educational structure is a Tangled 
+ * Rope for Mr. Deasy, who uses it to enforce a "generous but just" financial 
+ * discipline while maintaining a high theater of anti-Semitic and 
+ * pro-Unionist rhetoric[cite: 492, 537].
  * * KEY AGENTS:
- * - Stephen Dedalus: Individual moderate navigating a "Snare" of historical 
- * and financial debt.
- * - Mr. Deasy: Institutional representative for whom history is a "Mountain" 
- * moving toward a divine goal.
- * - Cyril Sargent: Individual powerless agent, a student "failing" to grasp 
- * the repetition, trapped in the "Snare" of the present.
+ * - Stephen Dedalus: Subject (Powerless) - Trapped in "three nooses" of debt and role[cite: 475, 488].
+ * - Mr. Deasy: Beneficiary (Institutional) - Paying his way and managing the "Strongroom"[cite: 464, 486].
+ * - The Students: Auditor (Analytical) - Observing Stephen's "lack of rule"[cite: 374].
  */
 
 /* ==========================================================================
-   2. CORE SYSTEM INTEGRATION (The "Reality" Layer)
+   2. BASE PROPERTIES (DOMAIN PRIORS)
    ========================================================================== */
 
-% Required for [STEP 1] and [STEP 2] of the DR-Audit Suite
-narrative_ontology:interval(nestor_afternoon, 0, 10).
-narrative_ontology:constraint_claim(history_nightmare_1904, snare).
+% Numerical anchors for v3.4 thresholds
+domain_priors:base_extractiveness(ulysses_school_1904, 0.49). % High due to Stephen's list of debts[cite: 488].
+domain_priors:suppression_score(ulysses_school_1904, 0.72).   % History as a "branded" and "fettered" room.
+domain_priors:theater_ratio(ulysses_school_1904, 0.78).      % Deasy's performative "wisdom" and savings-box prodding[cite: 467, 512].
 
-% Metrics: Extractiveness (0.7 - Debt and exclusion) and Suppression (0.7 - High)
-domain_priors:base_extractiveness(history_nightmare_1904, 0.7).
-domain_priors:suppression_score(history_nightmare_1904, 0.7).
-domain_priors:requires_active_enforcement(history_nightmare_1904).
+% Primary keys for classification engine
+narrative_ontology:constraint_metric(ulysses_school_1904, extractiveness, 0.49).
+narrative_ontology:constraint_metric(ulysses_school_1904, suppression_requirement, 0.72).
+narrative_ontology:constraint_metric(ulysses_school_1904, theater_ratio, 0.78).
 
-% Explicit metric hooks to prevent auto-imputation
-narrative_ontology:constraint_metric(history_nightmare_1904, extractiveness, 0.7).
-narrative_ontology:constraint_metric(history_nightmare_1904, suppression_requirement, 0.7).
-
-% Institutional perspective: Mr. Deasy's view of history as a moral ledger.
-constraint_indexing:constraint_classification(history_nightmare_1904, rope, agent_power(institutional)).
-
-% Analytical perspective: History as an unchangeable sequence of facts.
-constraint_indexing:constraint_classification(history_nightmare_1904, mountain, agent_power(analytical)).
-
-% BENEFICIARIES & VICTIMS
-constraint_beneficiary(history_nightmare_1904, institutional_status_quo).
-constraint_beneficiary(history_nightmare_1904, debt_holders).
-constraint_victim(history_nightmare_1904, stephen_dedalus).
-constraint_victim(history_nightmare_1904, the_powerless_student).
+% Structural Property Declarations
+narrative_ontology:constraint_beneficiary(ulysses_school_1904, english_empire). % History moving toward a manifest goal[cite: 558].
+narrative_ontology:constraint_victim(ulysses_school_1904, stephen_dedalus).
+domain_priors:requires_active_enforcement(ulysses_school_1904). % Deasy's prodding and strict "rules"[cite: 374, 512].
 
 /* ==========================================================================
-   3. INDEXED CLASSIFICATIONS (Perspectival Truth)
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × π(P) × σ(S)
    ========================================================================== */
 
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 1: STEPHEN DEDALUS - Snare
-   --------------------------------------------------------------------------
-   WHY: For Stephen, history is a "Snare"—a series of "ousted possibilities" 
-   that have been "branded" and "fettered" by time, extracting his freedom 
-   to act and saddling him with "agenbite of inwit".
-   -------------------------------------------------------------------------- */
-constraint_indexing:constraint_classification(
-    history_nightmare_1904,
-    snare,
-    context(agent_power(individual_moderate), time_horizon(biographical), exit_options(trapped), spatial_scope(local))
-) :- !.
+% PERSPECTIVE 1: STEPHEN DEDALUS (SNARE)
+% Effective Extraction: 0.49 * 1.5 (powerless) * 1.0 (national) = 0.735.
+% Perceived as a nightmare from which he is trying to awake.
+constraint_indexing:constraint_classification(ulysses_school_1904, snare, 
+    context(agent_power(powerless), 
+            time_horizon(biographical), 
+            exit_options(trapped), 
+            spatial_scope(national))).
 
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 2: CYRIL SARGENT - Snare
-   --------------------------------------------------------------------------
-   WHO: individual_powerless - "Ugly and futile... a snail's bed".
-   WHY: From the perspective of the struggling student, the educational and 
-   historical order is an inescapable "Snare" of failure and repetition 
-   without any coordination benefit.
-   -------------------------------------------------------------------------- */
-constraint_indexing:constraint_classification(
-    history_nightmare_1904,
-    snare,
-    context(agent_power(individual_powerless), time_horizon(immediate), exit_options(constrained), spatial_scope(local))
-) :- !.
+% PERSPECTIVE 2: MR. DEASY (ROPE)
+% Effective Extraction: 0.49 * -0.2 (institutional) * 1.0 = -0.098.
+% Viewed as the essential coordination of "paying one's way" and justice[cite: 486, 492].
+constraint_indexing:constraint_classification(ulysses_school_1904, rope, 
+    context(agent_power(institutional), 
+            time_horizon(generational), 
+            exit_options(mobile), 
+            spatial_scope(national))).
 
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 3: MR. DEASY (The School/State) - Mountain
-   --------------------------------------------------------------------------
-   WHO: institutional - "All history moves towards one great goal".
-   WHY: From the institutional perspective, history is a "Mountain"—an 
-   immutable, teleological law of progress that exists as a manifestation 
-   of divine will.
-   -------------------------------------------------------------------------- */
-constraint_indexing:constraint_classification(
-    history_nightmare_1904,
-    mountain,
-    context(agent_power(institutional), time_horizon(historical), exit_options(trapped), spatial_scope(national))
-) :- !.
+% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (PITON)
+% Extreme Theater Ratio (0.78) suggests the atrophied function of "toothless terrors"[cite: 584].
+constraint_indexing:constraint_classification(ulysses_school_1904, piton,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(global))).
 
 /* ==========================================================================
-   4. TESTS
+   4. VALIDATION TESTS
    ========================================================================== */
 
-:- begin_tests(history_nightmare_tests).
+:- begin_tests(ulysses_school_1904_tests).
 
-test(multi_perspective_nestor) :-
-    constraint_indexing:constraint_classification(history_nightmare_1904, T1, context(agent_power(individual_moderate), _, _, _)),
-    constraint_indexing:constraint_classification(history_nightmare_1904, T2, context(agent_power(institutional), _, _, _)),
-    T1 = snare, T2 = mountain.
+test(perspectival_gap) :-
+    % Verify the shift from Snare (Stephen) to Rope (Deasy).
+    constraint_indexing:constraint_classification(ulysses_school_1904, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(ulysses_school_1904, rope, context(agent_power(institutional), _, _, _)).
 
-test(extractiveness_debt_check) :-
-    % Systems involving significant personal debt should score high
-    domain_priors:base_extractiveness(history_nightmare_1904, E),
-    E >= 0.7.
+test(piton_theater_validation) :-
+    % Piton classification requires theater_ratio >= 0.70.
+    domain_priors:theater_ratio(ulysses_school_1904, TR),
+    TR >= 0.70.
 
-:- end_tests(history_nightmare_tests).
+:- end_tests(ulysses_school_1904_tests).
 
 /* ==========================================================================
-   5. MODEL INTERPRETATION & OMEGAS
+   5. GENERATIVE COMMENTARY
    ========================================================================== */
 
 /**
- * LLM GENERATION NOTES:
- * This refactor eliminates Global Repair by hardening the metrics. The 
- * audit can now cleanly detect the "False Mountain" of Deasy's teleology, 
- * which Stephen correctly identifies as a 'Nightmare' (Snare).
+ * LOGIC RATIONALE:
+ * Stephen identifies the "three nooses" of his financial and social reality 
+ * as a Snare—a predatory trap of accumulated debt and listless labor[cite: 475, 488]. 
+ * Conversely, Mr. Deasy views the system as a Rope of coordination, 
+ * maintaining the "proudest boast" of the Englishman: "I paid my way"[cite: 486]. 
+ * The high Theater Ratio (0.78) comes from the "mummery" of Deasy’s symbols—
+ * the savings-box, the Stuart coins, and his insistence on anti-Semitic 
+ * conspiracy theories that mask the "nightmare" of Irish history[cite: 435, 457, 537].
  */
 
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
 omega_variable(
-    history_teleology,
-    "Is history moving toward a 'goal' (God) or is it a recursive loop of 
-    ruin?",
-    resolution_mechanism("Analysis of the 'livid final flame' vision vs the school gate reality"),
-    impact("If goal: Mountain. If ruin: Snare."),
+    omega_history_as_nightmare,
+    "Is history truly a trapped room of ousted possibilities, or a joust moving toward God? [cite: 386, 558]",
+    "Tracking the manifestation of the 'great goal' vs the 'shout in the street'[cite: 558, 560].",
+    "God-goal confirms a Rope; street-shout hardens the Snare.",
     confidence_without_resolution(medium)
 ).
 
 /* ==========================================================================
-   6. INSTITUTIONAL PERSPECTIVE (REPAIR)
+   7. INTEGRATION HOOKS
    ========================================================================== */
 
-/**
- * THE INSTITUTIONAL ROPE:
- * From the perspective of the British Empire (Haines/Mulligan) and the 
- * Church, the servitude is a coordination mechanism. 
- * - The Empire: Provides the "Saxon" efficiency, global trade, and 
- * administrative standardization (The Martello Tower itself is a defensive Rope).
- * - The Church: Provides the moral and metaphysical "Christine" architecture 
- * that sustains the soul.
- */
-
-constraint_indexing:constraint_classification(
-    dual_masters_dublin_1904, 
-    rope, 
-    agent_power(institutional)
-).
-
-domain_priors:base_extractiveness(dual_masters_dublin_1904, 0.4).
-domain_priors:suppression_score(dual_masters_dublin_1904, 0.3).
-
+narrative_ontology:interval(ulysses_school_1904, 0, 10).
 
 /* ==========================================================================
-   7. ALTERNATIVE ANALYSIS
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-/**
- * VIABLE ALTERNATIVES:
- * 1. Financial Autonomy: Stephen could pay his debts and leave. 
- * Suppression: Actively suppressed by his inability to manage the "shillings 
- * and pence" Mr. Deasy counts for him.
- * 2. Academic Success (Sargent): The student could master the lesson. 
- * Suppression: Suppressed by his "lean neck" and "ugly" futility in 
- * the face of the system.
- */
+% Theater Ratio (Deasy's rhetorical intensity rising toward the anti-Semitic climax)
+narrative_ontology:measurement(us_tr_t0, ulysses_school_1904, theater_ratio, 0, 0.65).
+narrative_ontology:measurement(us_tr_t5, ulysses_school_1904, theater_ratio, 5, 0.75).
+narrative_ontology:measurement(us_tr_t10, ulysses_school_1904, theater_ratio, 10, 0.78).
+
+% Extraction (Accumulation of Stephen's biographical and spiritual debt [cite: 488])
+narrative_ontology:measurement(us_ex_t0, ulysses_school_1904, base_extractiveness, 0, 0.40).
+narrative_ontology:measurement(us_ex_t5, ulysses_school_1904, base_extractiveness, 5, 0.45).
+narrative_ontology:measurement(us_ex_t10, ulysses_school_1904, base_extractiveness, 10, 0.49).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
-
-
-
-% --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
-constraint_indexing:constraint_classification(ulysses_chp02, mountain, agent_power(analytical)).
-constraint_indexing:constraint_classification(ulysses_chp02, rope, agent_power(institutional)).
-constraint_indexing:constraint_classification(ulysses_chp02, snare, agent_power(individual_powerless)).

@@ -1,22 +1,29 @@
 % ============================================================================
-% CONSTRAINT STORY: bloom_samaritan_paternal_care
+% CONSTRAINT STORY: ulysses_eumaeus_1904
 % ============================================================================
-% Generated: 2026-01-19
-% Model: Gemini 2.0 Flash
-% Source: Ulysses, Chapter 16 (Eumaeus)
+% Version: 3.4 (Deferential Realism Core)
+% Logic: 3.3 (Indexed Tuple P,T,E,S)
+% Generated: 2026-02-06
 % ============================================================================
 
-:- module(bloom_samaritan_paternal_care, []).
+:- module(constraint_ulysses_eumaeus, []).
 
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
 
 % --- Namespace Hooks (Required for loading) ---
-:- multifile 
+:- multifile
     domain_priors:base_extractiveness/2,
     domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
     domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -25,149 +32,140 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: bloom_samaritan_paternal_care
- * human_readable: The Samaritan Paternal Obligation
- * domain: social/emotional
- * temporal_scope: June 17, 1904 (1:00 AM - 2:00 AM)
- * spatial_scope: Beaver street and the Cabman's Shelter, Dublin
+ * * constraint_id: ulysses_eumaeus_1904
+ * human_readable: The Exhausted Coordination (Cabman's Shelter)
+ * domain: social/economic/linguistic
  * * SUMMARY:
- * Leopold Bloom feels a self-imposed "duty" to protect the exhausted and 
- * "unsteady" Stephen Dedalus. This constraint operates in a 
- * narcotic state of early morning fatigue, extracting energy from Bloom to 
- * maintain social "propriety" and Stephen's safety.
+ * Leopold Bloom and Stephen Dedalus seek refuge in a cabman's shelter near 
+ * Butt bridge. The social environment 
+ * functions as a Rope of "orthodox Samaritan fashion" coordination, 
+ * providing beverage and rest for the "e.d.ed" Stephen. 
+ * However, the narrative style acts as a Piton of atrophied function, 
+ * where clichés and circumlocution create an immense Theater Ratio.
  * * KEY AGENTS:
- * - Leopold Bloom: Individual moderate navigating via "orthodox Samaritan" 
- * logic (Rope).
- * - Stephen Dedalus: Individual powerless agent, "unsteady" and "e.d.ed" 
- * (exhausted), for whom the care is an inescapable trap (Snare).
- * - Social Orthodoxy: Institutional force viewing paternal duty as an 
- * immutable law of "propriety" (Mountain).
+ * - Stephen Dedalus: Subject (Powerless) - "Mind... a bit unsteady" and 
+ * physically exhausted.
+ * - Leopold Bloom: Beneficiary (Institutional) - Coordinating the "conveyance" 
+ * and "propriety" of the shelter.
+ * - The Shelter Inhabitants: Auditor (Analytical) - Watching the two 
+ * figures "both black" walk toward the bridge.
  */
 
 /* ==========================================================================
-   2. CORE SYSTEM INTEGRATION (The "Reality" Layer)
+   2. BASE PROPERTIES (DOMAIN PRIORS)
    ========================================================================== */
 
-% Required for [STEP 1] and [STEP 2] of the DR-Audit Suite
-narrative_ontology:interval(bloom_samaritan_id, 0, 10).
-% Fixed: Changed 'social_stewardship' to 'snare' to satisfy schema
-narrative_ontology:constraint_claim(bloom_samaritan_paternal_care, snare).
+% Numerical anchors for v3.4 thresholds
+domain_priors:base_extractiveness(ulysses_eumaeus_1904, 0.47). % High due to extreme fatigue and social "rub".
+domain_priors:suppression_score(ulysses_eumaeus_1904, 0.70).   % The inertia of the late night hour.
+domain_priors:theater_ratio(ulysses_eumaeus_1904, 0.85).      % High circumlocution and "orthodoxy".
 
-% Metrics: Extractiveness (0.5 - High fatigue cost) and Suppression (0.6 - Social duty)
-domain_priors:base_extractiveness(bloom_samaritan_paternal_care, 0.5).
-domain_priors:suppression_score(bloom_samaritan_paternal_care, 0.6).
-domain_priors:requires_active_enforcement(bloom_samaritan_paternal_care).
+% Primary keys for classification engine
+narrative_ontology:constraint_metric(ulysses_eumaeus_1904, extractiveness, 0.47).
+narrative_ontology:constraint_metric(ulysses_eumaeus_1904, suppression_requirement, 0.70).
+narrative_ontology:constraint_metric(ulysses_eumaeus_1904, theater_ratio, 0.85).
 
-% Explicit metric hooks to prevent auto-imputation
-narrative_ontology:constraint_metric(bloom_samaritan_paternal_care, extractiveness, 0.5).
-narrative_ontology:constraint_metric(bloom_samaritan_paternal_care, suppression_requirement, 0.6).
-
-% BENEFICIARIES & VICTIMS
-constraint_beneficiary(bloom_samaritan_paternal_care, stephen_dedalus_safety).
-constraint_victim(bloom_samaritan_paternal_care, bloom_leopold_vitality).
+% Structural Property Declarations
+narrative_ontology:constraint_beneficiary(ulysses_eumaeus_1904, social_charity).
+narrative_ontology:constraint_victim(ulysses_eumaeus_1904, stephen_dedalus).
+domain_priors:requires_active_enforcement(ulysses_eumaeus_1904). % Bloom's "duty" to take measures.
 
 /* ==========================================================================
-   3. INDEXED CLASSIFICATIONS (Perspectival Truth)
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × π(P) × σ(S)
    ========================================================================== */
 
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 1: LEOPOLD BLOOM - Rope
-   --------------------------------------------------------------------------
-   WHY: Bloom views his care for Stephen as a "Rope"—a functional coordination 
-   mechanism to navigate the "rub" of the late hour and ensure their 
-   mutual "ablutions" and safety.
-   -------------------------------------------------------------------------- */
-constraint_indexing:constraint_classification(
-    bloom_samaritan_paternal_care,
-    rope,
-    context(agent_power(individual_moderate), time_horizon(biographical), exit_options(mobile), spatial_scope(local))
-) :- !.
+% PERSPECTIVE 1: STEPHEN DEDALUS (SNARE)
+% Effective Extraction: 0.47 * 1.5 (powerless) * 0.8 (local) = 0.564.
+% Perceived as a trap of "unsteady" mind and the "rub" of finding beverage.
+constraint_indexing:constraint_classification(ulysses_eumaeus_1904, snare, 
+    context(agent_power(powerless), 
+            time_horizon(biographical), 
+            exit_options(trapped), 
+            spatial_scope(local))).
 
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 2: STEPHEN DEDALUS - Snare
-   --------------------------------------------------------------------------
-   WHO: individual_powerless - "His mind was not exactly what you would call 
-   wandering but a bit unsteady".
-   WHY: From Stephen's exhausted perspective, Bloom's "Samaritan" care is 
-   a "Snare"—he is effectively "kidnapped" by kindness and social obligation 
-   without the agency to refuse.
-   -------------------------------------------------------------------------- */
-constraint_indexing:constraint_classification(
-    bloom_samaritan_paternal_care,
-    snare,
-    context(agent_power(individual_powerless), time_horizon(immediate), exit_options(constrained), spatial_scope(local))
-) :- !.
+% PERSPECTIVE 2: LEOPOLD BLOOM (ROPE)
+% Effective Extraction: 0.47 * -0.2 (institutional) * 0.8 = -0.0752.
+% Viewed as the essential coordination of "suitable ways and means".
+constraint_indexing:constraint_classification(ulysses_eumaeus_1904, rope, 
+    context(agent_power(institutional), 
+            time_horizon(generational), 
+            exit_options(mobile), 
+            spatial_scope(local))).
 
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 3: SOCIAL ORTHODOXY - Mountain
-   --------------------------------------------------------------------------
-   WHO: institutional - The "propriety" and "orthodox Samaritan fashion" 
-   of 1904 Dublin.
-   WHY: From the institutional perspective of social norms, the duty to 
-   protect the "pale" and "unsteady" is an immutable fact of 
-   civilized behavior—a Mountain.
-   -------------------------------------------------------------------------- */
-constraint_indexing:constraint_classification(
-    bloom_samaritan_paternal_care,
-    mountain,
-    context(agent_power(institutional), time_horizon(historical), exit_options(trapped), spatial_scope(national))
-) :- !.
+% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (PITON)
+% Extreme Theater Ratio (0.85) indicates a Piton of "preparatory" mummery.
+constraint_indexing:constraint_classification(ulysses_eumaeus_1904, piton,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(global))).
 
 /* ==========================================================================
-   4. TESTS
+   4. VALIDATION TESTS
    ========================================================================== */
 
-:- begin_tests(bloom_samaritan_paternal_tests).
+:- begin_tests(ulysses_eumaeus_1904_tests).
 
-test(multi_perspective_eumaeus) :-
-    constraint_indexing:constraint_classification(bloom_samaritan_paternal_care, T1, context(agent_power(individual_moderate), _, _, _)),
-    constraint_indexing:constraint_classification(bloom_samaritan_paternal_care, T2, context(agent_power(individual_powerless), _, _, _)),
-    T1 = rope, T2 = snare.
+test(perspectival_gap) :-
+    % Verify shift from the Snare of Stephen's fatigue to the Rope of Bloom's coordination.
+    constraint_indexing:constraint_classification(ulysses_eumaeus_1904, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(ulysses_eumaeus_1904, rope, context(agent_power(institutional), _, _, _)).
 
-test(immutability_samaritan_scaling) :-
-    % Institutional view sees the social code as a Mountain
-    constraint_indexing:effective_immutability(historical, trapped, mountain).
+test(piton_theater_check) :-
+    % Piton classification requires theater_ratio >= 0.70.
+    domain_priors:theater_ratio(ulysses_eumaeus_1904, TR),
+    TR >= 0.70.
 
-:- end_tests(bloom_samaritan_paternal_tests).
+:- end_tests(ulysses_eumaeus_1904_tests).
 
 /* ==========================================================================
-   5. MODEL INTERPRETATION & OMEGAS
+   5. GENERATIVE COMMENTARY
    ========================================================================== */
 
 /**
- * LLM GENERATION NOTES:
- * Refactored to eliminate the 'social_stewardship' mismatch. Mapping the claim 
- * to 'snare' allows the audit to detect if Bloom's "duty" is an act of 
- * genuine coordination (Rope) or a "Snare" that extracts Stephen's autonomy 
- * through unsolicited care.
+ * LOGIC RATIONALE:
+ * The "Eumaeus" chapter models the fatigue of late-night coordination. 
+ * While the cabman's shelter serves as a Rope—a "Samaritan" structure 
+ * providing safety—Stephen perceives it as a Snare of spiritual and physical 
+ * exhaustion. The high Theater Ratio (0.85) 
+ * is the chapter's defining feature; the circumlocutory style acts as a 
+ * Piton, where the function of direct storytelling is atrophied into a 
+ * "mummery" of clichés and "orthodox" preliminaries.
  */
 
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
 omega_variable(
-    stephen_dissent_silence,
-    "Is Stephen's silence at the end of the chapter an exhausted assent (Rope) 
-    or a suppressed dissent (Snare)?",
-    resolution_mechanism("Investigation into the 'unsteady' silence vs the ballad singing"),
-    impact("If exhaustion: Mountain. If dissent: Snare."),
-    confidence_without_resolution(low)
+    omega_samaritan_intent,
+    "Is Bloom's 'orthodox Samaritan' coordination a Rope for recovery or a Snare of patronization?",
+    "Analysis of the 'expedient' vs the 'unsteady' response of the subject.",
+    "Recovery confirms a Rope; patronization hardens the Snare.",
+    confidence_without_resolution(medium)
 ).
 
 /* ==========================================================================
-   6. ALTERNATIVE ANALYSIS
+   7. INTEGRATION HOOKS
    ========================================================================== */
 
-/**
- * VIABLE ALTERNATIVES:
- * 1. Immediate Separation: Bloom could have sent Stephen home in a 
- * "conveyance" alone. Rejected/Suppressed by Bloom's "duty" and his 
- * "soapsuddy" sense of companionship.
- */
+narrative_ontology:interval(ulysses_eumaeus_1904, 0, 10).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Theater Ratio (Peaking as the circumlocutory style intensifies through the walk)
+narrative_ontology:measurement(ue_tr_t0, ulysses_eumaeus_1904, theater_ratio, 0, 0.70).
+narrative_ontology:measurement(ue_tr_t5, ulysses_eumaeus_1904, theater_ratio, 5, 0.88).
+narrative_ontology:measurement(ue_tr_t10, ulysses_eumaeus_1904, theater_ratio, 10, 0.85).
+
+% Extraction (Accumulating with the subjects' profound fatigue and the "rub" of the hour)
+narrative_ontology:measurement(ue_ex_t0, ulysses_eumaeus_1904, base_extractiveness, 0, 0.38).
+narrative_ontology:measurement(ue_ex_t5, ulysses_eumaeus_1904, base_extractiveness, 5, 0.44).
+narrative_ontology:measurement(ue_ex_t10, ulysses_eumaeus_1904, base_extractiveness, 10, 0.47).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
-
-
-% --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
-constraint_indexing:constraint_classification(ulysses_chp16, mountain, agent_power(analytical)).
-constraint_indexing:constraint_classification(ulysses_chp16, rope, agent_power(institutional)).
-constraint_indexing:constraint_classification(ulysses_chp16, snare, agent_power(individual_powerless)).

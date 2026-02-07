@@ -26,6 +26,7 @@
     effective_immutability_for_context/2,
     extractiveness_for_agent/3,
     power_modifier/2,
+    scope_modifier/2,
     
     % Index predicates
     agent_power/1,
@@ -39,6 +40,8 @@
 
 % Required modules
 :- use_module(drl_core, [base_extractiveness/2, suppression_score/2]).
+:- use_module(config).
+:- use_module(narrative_ontology).
 
 % ============================================================================
 % INDEX ONTOLOGY
@@ -152,7 +155,17 @@ effective_immutability(generational, mobile, rope).
 effective_immutability(generational, arbitrage, rope).
 
 effective_immutability(historical, _, rope).
-effective_immutability(civilizational, _, rope).
+
+% Civilizational time horizon: analytical perspective can see structural reality
+% Both mountain AND rope are valid perceptions from analytical - the metric gates
+% determine which fires first (mountain checked before snare/rope in classification order).
+effective_immutability(civilizational, analytical, mountain).
+effective_immutability(civilizational, analytical, rope).
+% Non-analytical exit options still perceive everything as changeable (rope)
+effective_immutability(civilizational, trapped, rope).
+effective_immutability(civilizational, constrained, rope).
+effective_immutability(civilizational, mobile, rope).
+effective_immutability(civilizational, arbitrage, rope).
 
 % Wrapper that takes full context
 effective_immutability_for_context(
@@ -173,23 +186,68 @@ effective_immutability_for_context(
 % Determines how much of the base extraction is "felt" by the agent.
 % Lower numbers = higher benefit/protection from the constraint.
 
-power_modifier(powerless,     1.2).  % Subject to maximum extraction
-power_modifier(moderate,      0.8).
-power_modifier(powerful,      0.4).
-power_modifier(organized,     0.7).  % Reflects shared burden/cost
-power_modifier(institutional, -0.2). % Net beneficiary (extracts from others)
-power_modifier(analytical,    1.0).  % Neutral baseline
+power_modifier(powerless,     Modifier) :- config:param(power_modifier_powerless, Modifier).
+power_modifier(moderate,      Modifier) :- config:param(power_modifier_moderate, Modifier).
+power_modifier(powerful,      Modifier) :- config:param(power_modifier_powerful, Modifier).
+power_modifier(organized,     Modifier) :- config:param(power_modifier_organized, Modifier).
+power_modifier(institutional, Modifier) :- config:param(power_modifier_institutional, Modifier).
+power_modifier(analytical,    Modifier) :- config:param(power_modifier_analytical, Modifier).
+
+% ----------------------------------------------------------------------------
+% Scope Modifiers (sigma)
+% ----------------------------------------------------------------------------
+% Larger scope = harder verification = more effective extraction.
+% Formula: χ = ε × π(P) × σ(S)
+
+scope_modifier(local,        Mod) :- config:param(scope_modifier_local, Mod).
+scope_modifier(regional,     Mod) :- config:param(scope_modifier_regional, Mod).
+scope_modifier(national,     Mod) :- config:param(scope_modifier_national, Mod).
+scope_modifier(continental,  Mod) :- config:param(scope_modifier_continental, Mod).
+scope_modifier(global,       Mod) :- config:param(scope_modifier_global, Mod).
+scope_modifier(universal,    Mod) :- config:param(scope_modifier_universal, Mod).
+
+% ----------------------------------------------------------------------------
+% Dynamic Coalition Modeling (The "Who" Extension)
+% ----------------------------------------------------------------------------
+
+%% resolve_coalition_power(+Power, +Constraint, -ResolvedPower)
+%  Dynamically upgrades 'powerless' to 'organized' if a
+%  critical mass of victims for a given snare-like constraint is reached.
+resolve_coalition_power(powerless, Constraint, organized) :-
+    % To avoid circular dependencies, we check for snare-like properties
+    % (high base extraction, high suppression) instead of the final type.
+    config:param(extractiveness_metric_name, ExtMetricName),
+    config:param(suppression_metric_name, SuppMetricName),
+    (narrative_ontology:constraint_metric(Constraint, ExtMetricName, BaseX) ->
+        config:param(snare_epsilon_floor, XFloor),
+        BaseX >= XFloor
+    ; false),
+    (narrative_ontology:constraint_metric(Constraint, SuppMetricName, S) ->
+        config:param(snare_suppression_floor, SFloor),
+        S >= SFloor
+    ; false),
+    % Check for critical mass of victims
+    findall(_, narrative_ontology:constraint_victim(Constraint, _), Victims),
+    length(Victims, Count),
+    config:param(critical_mass_threshold, Threshold),
+    Count >= Threshold,
+    !.
+resolve_coalition_power(Power, _, Power). % Default: power remains unchanged
+
 
 % ----------------------------------------------------------------------------
 % Calculate Extractiveness for Specific Agent
 % ----------------------------------------------------------------------------
 
-% Formula: Effective Extraction = Base Extraction * Power Modifier
+% Formula: χ = ε × π(P) × σ(S)
 extractiveness_for_agent(Constraint, Context, Score) :-
-    Context = context(agent_power(Power), _, _, _),
-    base_extractiveness(Constraint, BaseScore),
-    power_modifier(Power, Modifier),
-    Score is BaseScore * Modifier.
+    Context = context(agent_power(Power), _, _, spatial_scope(Scope)),
+    resolve_coalition_power(Power, Constraint, ResolvedPower),
+    config:param(extractiveness_metric_name, ExtMetricName),
+    narrative_ontology:constraint_metric(Constraint, ExtMetricName, BaseScore),
+    power_modifier(ResolvedPower, PowerMod),
+    scope_modifier(Scope, ScopeMod),
+    Score is BaseScore * PowerMod * ScopeMod.
 
 % ============================================================================
 % CANONICAL CLASSIFICATION PREDICATE
@@ -268,10 +326,10 @@ discover_my_context(Context) :-
     format('Your context: ~w~n', [Context]).
 
 % Mapping predicates for user input
-map_power(1, individual_powerless).
-map_power(2, individual_moderate).
-map_power(3, individual_powerful).
-map_power(4, collective_organized).
+map_power(1, powerless).
+map_power(2, moderate).
+map_power(3, powerful).
+map_power(4, organized).
 map_power(5, institutional).
 map_power(6, analytical).
 

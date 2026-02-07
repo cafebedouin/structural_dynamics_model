@@ -49,11 +49,16 @@
     is_snare/3,
     is_tangled_rope/3,
     is_scaffold/3,
-    is_piton/3
+    is_piton/3,
+    calculate_scaled_metric/5,
+    get_raw_suppression/2,          % Raw suppression (no temporal/scope scaling)
+
+    % Shared classification (Single Source of Truth)
+    classify_from_metrics/6         % classify_from_metrics(C, BaseEps, Chi, Supp, Context, Type)
 ]).
 
 :- use_module(narrative_ontology).
-:- use_module(v3_1_config).
+:- use_module(config).
 :- use_module(structural_signatures).
 :- use_module(constraint_indexing).
 :- use_module(constraint_instances).
@@ -66,11 +71,64 @@
     requires_active_enforcement/1, 
     emerges_naturally/1.
 
-% Provide a 'fail-safe' default clause to satisfy the compiler
-base_extractiveness(_, 0.0) :- fail.
-suppression_score(_, 0.0) :- fail.
-requires_active_enforcement(_) :- fail.
-emerges_naturally(_) :- fail.
+% Delegate to domain_priors as the canonical source of truth.
+% Multifile declarations above allow testsets to contribute directly,
+% but v3.4 testsets assert into domain_priors: namespace, so we bridge here.
+% Delegate to narrative_ontology for dynamic metric retrieval
+base_extractiveness(C, V) :- 
+    config:param(extractiveness_metric_name, ExtMetricName),
+    narrative_ontology:constraint_metric(C, ExtMetricName, V).
+suppression_score(C, V) :- 
+    config:param(suppression_metric_name, SuppMetricName),
+    narrative_ontology:constraint_metric(C, SuppMetricName, V).
+requires_active_enforcement(C) :- domain_priors:requires_active_enforcement(C).
+emerges_naturally(C) :- domain_priors:emerges_naturally(C).
+
+% ============================================================================
+% SCALING LAW - PENALIZE COORDINATION AT SCALE (NEW Jan 2026)
+% ============================================================================
+% As spatial scope increases, coordination becomes more difficult and
+% the potential for extractive asymmetries grows. This penalty models
+% the "Dunbar-sensitive" scaling observation from sociology.md.
+
+scope_penalty(local,       0.0).  % Baseline
+scope_penalty(regional,    0.15). % e.g., State/Province
+scope_penalty(national,    0.40). % e.g., Country
+scope_penalty(continental, 0.75). % e.g., EU
+scope_penalty(global,      1.20). % Worldwide
+scope_penalty(universal,   2.0).  % Abstract/Universal claims
+
+%% temporal_penalty(+TimeHorizon, -PenaltyFactor)
+%  Models the "discount" or reduced impact of constraints over longer time horizons.
+%  Rule: Metric_eff = Metric * PenaltyFactor
+temporal_penalty(immediate,      1.0). % No discount for immediate effects
+temporal_penalty(biographical,   0.8). % Discount for effects over a lifetime
+temporal_penalty(generational,   0.5). % Significant discount for generational effects
+temporal_penalty(historical,     0.2). % Steep discount for historical scale
+temporal_penalty(civilizational, 0.1). % Very steep discount for civilizational scale
+
+%% calculate_scaled_metric(+ConfigParamName, +Constraint, +Scope, +Time, -ScaledValue)
+%  Calculates a metric value adjusted for both spatial scope and time horizon.
+%  ConfigParamName: The name of the config parameter holding the actual metric name (e.g., suppression_metric_name)
+%  Constraint: The constraint ID
+%  Scope: The spatial scope from the context
+%  Time: The time horizon from the context
+%  ScaledValue: The calculated metric value after applying scope and time adjustments.
+calculate_scaled_metric(ConfigParamName, Constraint, Scope, Time, ScaledValue) :-
+    config:param(ConfigParamName, ActualMetricName), % Get the actual metric name from config
+    (narrative_ontology:constraint_metric(Constraint, ActualMetricName, BaseValue) -> true; BaseValue = 0),
+    (scope_penalty(Scope, ScopeFactor) -> true ; ScopeFactor = 0),
+    (temporal_penalty(Time, TimeFactor) -> true ; TimeFactor = 1.0),
+    ScaledValue is BaseValue * (1 + ScopeFactor) * TimeFactor.
+
+%% get_raw_suppression(+Constraint, -Value)
+%  Suppression is a structural property of the constraint - no temporal or scope scaling.
+%  Power-scaled extractiveness already handles the perspectival dimension.
+%  Temporal scaling on suppression made it mathematically impossible for constraints
+%  to reach snare (0.60) or tangled_rope (0.40) floors from analytical context.
+get_raw_suppression(Constraint, Value) :-
+    config:param(suppression_metric_name, ActualMetricName),
+    (narrative_ontology:constraint_metric(Constraint, ActualMetricName, Value) -> true ; Value = 0).
 
 % Re-export indexed classification predicates from constraint_indexing
 :- reexport(constraint_indexing, [
@@ -86,169 +144,120 @@ emerges_naturally(_) :- fail.
 % ============================================================================
 
 % ----------------------------------------------------------------------------
-% Mountain Test (Indexed)
+% Type-Specific Tests (Indexed) — delegate to classify_from_metrics/6
 % ----------------------------------------------------------------------------
-% A constraint is a Mountain FROM A CONTEXT if:
-% 1. It appears immutable given time horizon + exit options
-% 2. Suppression requirement is below threshold
+% Each is_X/3 computes metrics and calls classify_from_metrics with Type bound.
+% Succeeds with the type atom if matched, or 'fail' otherwise.
+% External callers (dr_mismatch, psych_bridge, constraint_instances) unchanged.
 
 is_mountain(C, Context, mountain) :-
-    % Check time-based immutability perception
-    constraint_indexing:effective_immutability_for_context(Context, mountain),
-    
-    % Check suppression is low (inherent, not enforced)
-    v3_1_config:param(mountain_suppression_ceiling, Ceil),
-    narrative_ontology:constraint_metric(C, suppression_requirement, E),
-    E =< Ceil,
-    !.
-
+    base_extractiveness(C, BaseEps),
+    constraint_indexing:extractiveness_for_agent(C, Context, Chi),
+    get_raw_suppression(C, Supp),
+    classify_from_metrics(C, BaseEps, Chi, Supp, Context, mountain), !.
 is_mountain(_C, _Context, fail).
 
-% ----------------------------------------------------------------------------
-% Rope Test (Indexed)
-% ----------------------------------------------------------------------------
-% A constraint is a Rope FROM A CONTEXT if:
-% 1. Effective extractiveness (power-scaled) is below threshold
-% 2. It's changeable (time horizon allows modification)
-
-is_rope(C, Context, rope) :-
-    % Calculate power-scaled extractiveness
-    constraint_indexing:extractiveness_for_agent(C, Context, EffectiveX),
-    
-    % Check against rope threshold
-    v3_1_config:param(rope_extraction_ceiling, XCeil),
-    EffectiveX =< XCeil,
-    
-    % Must be perceived as changeable
-    constraint_indexing:effective_immutability_for_context(Context, rope),
-    !.
-
-is_rope(_C, _Context, fail).
-
-% ----------------------------------------------------------------------------
-% Snare Test (Indexed)
-% ----------------------------------------------------------------------------
-% A constraint is a Snare FROM A CONTEXT if:
-% 1. Effective extractiveness (power-scaled) exceeds floor
-% 2. Requires active suppression (enforced)
-% 3. Perceived as changeable (not Mountain)
-
 is_snare(C, Context, snare) :-
-    % Calculate power-scaled extractiveness
-    constraint_indexing:extractiveness_for_agent(C, Context, EffectiveX),
-    
-    % Check extraction floor
-    v3_1_config:param(snare_extraction_floor, XFloor),
-    EffectiveX >= XFloor,
-    
-    % Check suppression requirement
-    v3_1_config:param(snare_suppression_floor, EFloor),
-    narrative_ontology:constraint_metric(C, suppression_requirement, E),
-    E >= EFloor,
-    
-    % Must NOT appear as Mountain from this context
-    constraint_indexing:effective_immutability_for_context(Context, rope),
-    !.
-
+    base_extractiveness(C, BaseEps),
+    constraint_indexing:extractiveness_for_agent(C, Context, Chi),
+    get_raw_suppression(C, Supp),
+    classify_from_metrics(C, BaseEps, Chi, Supp, Context, snare), !.
 is_snare(_C, _Context, fail).
 
-% ----------------------------------------------------------------------------
-% Tangled Rope Test (Indexed)
-% ----------------------------------------------------------------------------
-% A constraint is a Tangled Rope FROM A CONTEXT if:
-% 1. Effective extractiveness in middle-to-high range (uses config params)
-% 2. High suppression (uses config params)
-% 3. Has BOTH coordination function AND asymmetric extraction
-% 4. Requires active enforcement
-%
-% Updated January 2026 based on empirical validation (168/467 constraints, 36%)
-%
-% This is genuinely hybrid: provides coordination (like rope) while extracting
-% (like snare). Requires surgical reform to preserve coordination while cutting extraction.
-
-is_tangled_rope(C, Context, tangled_rope) :-
-    % Calculate power-scaled extractiveness
-    constraint_indexing:extractiveness_for_agent(C, Context, EffectiveX),
-
-    % Check tangled rope range (from config)
-    v3_1_config:param(tangled_rope_extraction_floor, FloorX),
-    v3_1_config:param(tangled_rope_extraction_ceil, CeilX),
-    EffectiveX >= FloorX,
-    EffectiveX =< CeilX,
-
-    % High suppression required (from config)
-    v3_1_config:param(tangled_rope_suppression_floor, MinS),
-    narrative_ontology:constraint_metric(C, suppression_requirement, S),
-    S >= MinS,
-
-    % Must require active enforcement (constructed constraint)
-    requires_active_enforcement(C),
-
-    % Must have both coordination function AND asymmetric extraction
-    narrative_ontology:has_coordination_function(C),
-    narrative_ontology:has_asymmetric_extraction(C),
-    !.
-
-is_tangled_rope(_C, _Context, fail).
-
-% ----------------------------------------------------------------------------
-% Scaffold Test (Indexed)
-% ----------------------------------------------------------------------------
-% A constraint is a Scaffold FROM A CONTEXT if:
-% 1. Effective extraction is below the coordination ceiling (v3.4: 0.30)
-% 2. It possesses a genuine coordination function
-% 3. It contains a formal sunset clause (temporal limit)
-% 4. The time horizon (T) has not exceeded the designated utility period
-%
-% Scaffolds are temporary supports. High suppression is only acceptable if 
-% it is designed to decline or expire as the system stabilizes.
-
 is_scaffold(C, Context, scaffold) :-
-    % Calculate power-scaled extractiveness
-    constraint_indexing:extractiveness_for_agent(C, Context, EffectiveX),
-
-    % Check scaffold ceiling (v3.4 requirement: extraction < 0.30)
-    v3_1_config:param(scaffold_extraction_ceil, MaxX),
-    EffectiveX =< MaxX,
-
-    % Must possess a coordination function (the "support" aspect)
-    narrative_ontology:has_coordination_function(C),
-
-    % Mandatory: Must have a sunset clause to distinguish from a permanent Rope
-    narrative_ontology:has_sunset_clause(C),
-
-    % Validate Indexical Alignment (Time Horizon T)
-    % Scaffolds typically expire before 'civilizational' or 'historical' scales.
-    Context = context(_, time_horizon(T), _, _),
-    member(T, [immediate, biographical, generational]),
-
-    % Ensure it is not currently flagged as 'degraded' (Piton check)
-    \+ (narrative_ontology:constraint_metric(C, theater_ratio, TR), TR > 0.70),
-    !.
-
+    base_extractiveness(C, BaseEps),
+    constraint_indexing:extractiveness_for_agent(C, Context, Chi),
+    get_raw_suppression(C, Supp),
+    classify_from_metrics(C, BaseEps, Chi, Supp, Context, scaffold), !.
 is_scaffold(_C, _Context, fail).
 
-% ----------------------------------------------------------------------------
-% Piton Test (Indexed)
-% ----------------------------------------------------------------------------
-% A constraint is a Piton FROM A CONTEXT if:
-% 1. Low effective extractiveness
-% 2. High suppression (expensive to maintain)
-% 3. Should be cut but isn't
+is_rope(C, Context, rope) :-
+    base_extractiveness(C, BaseEps),
+    constraint_indexing:extractiveness_for_agent(C, Context, Chi),
+    get_raw_suppression(C, Supp),
+    classify_from_metrics(C, BaseEps, Chi, Supp, Context, rope), !.
+is_rope(_C, _Context, fail).
+
+is_tangled_rope(C, Context, tangled_rope) :-
+    base_extractiveness(C, BaseEps),
+    constraint_indexing:extractiveness_for_agent(C, Context, Chi),
+    get_raw_suppression(C, Supp),
+    classify_from_metrics(C, BaseEps, Chi, Supp, Context, tangled_rope), !.
+is_tangled_rope(_C, _Context, fail).
 
 is_piton(C, Context, piton) :-
-    % Calculate power-scaled extractiveness
-    constraint_indexing:extractiveness_for_agent(C, Context, EffectiveX),
-    
-    % Low extraction
-    v3_1_config:param(piton_extraction_ceiling, XCeil),
-    EffectiveX =< XCeil,
-    
-    % High suppression (maintenance cost)
-    \+ (narrative_ontology:constraint_metric(C, theater_ratio, TR), TR > 0.70),
-    !.
-
+    base_extractiveness(C, BaseEps),
+    constraint_indexing:extractiveness_for_agent(C, Context, Chi),
+    get_raw_suppression(C, Supp),
+    classify_from_metrics(C, BaseEps, Chi, Supp, Context, piton), !.
 is_piton(_C, _Context, fail).
+
+% ============================================================================
+% SHARED THRESHOLD CLASSIFICATION (Single Source of Truth)
+% ============================================================================
+% classify_from_metrics(+C, +BaseEps, +Chi, +Supp, +Context, -Type)
+%
+% Given pre-computed metrics, determines classification.
+% This is the CANONICAL threshold logic — all modules delegate here.
+% C needed for structural property lookups (coordination, enforcement, theater).
+%
+% Priority: Mountain > Snare > Scaffold > Rope > Tangled Rope > Piton > unknown
+
+classify_from_metrics(_C, BaseEps, _Chi, Supp, Context, mountain) :-
+    config:param(mountain_suppression_ceiling, SuppCeil),
+    Supp =< SuppCeil,
+    config:param(mountain_extractiveness_max, MaxX),
+    BaseEps =< MaxX,
+    constraint_indexing:effective_immutability_for_context(Context, mountain), !.
+
+classify_from_metrics(_C, BaseEps, Chi, Supp, Context, snare) :-
+    config:param(snare_chi_floor, ChiFloor),
+    Chi >= ChiFloor,
+    config:param(snare_epsilon_floor, EpsFloor),
+    BaseEps >= EpsFloor,
+    config:param(snare_suppression_floor, SuppFloor),
+    Supp >= SuppFloor,
+    constraint_indexing:effective_immutability_for_context(Context, rope), !.
+
+classify_from_metrics(C, _BaseEps, Chi, _Supp, _Context, scaffold) :-
+    config:param(scaffold_extraction_ceil, MaxX),
+    Chi =< MaxX,
+    narrative_ontology:has_coordination_function(C),
+    narrative_ontology:has_sunset_clause(C),
+    config:param(theater_metric_name, TheaterMetricName),
+    \+ (narrative_ontology:constraint_metric(C, TheaterMetricName, TR), TR > 0.70), !.
+
+classify_from_metrics(_C, BaseEps, Chi, _Supp, Context, rope) :-
+    config:param(rope_chi_ceiling, ChiCeil),
+    Chi =< ChiCeil,
+    config:param(rope_epsilon_ceiling, EpsCeil),
+    BaseEps =< EpsCeil,
+    constraint_indexing:effective_immutability_for_context(Context, rope), !.
+
+classify_from_metrics(C, BaseEps, Chi, Supp, _Context, tangled_rope) :-
+    config:param(tangled_rope_chi_floor, ChiFloor),
+    config:param(tangled_rope_chi_ceil, ChiCeil),
+    Chi >= ChiFloor,
+    Chi =< ChiCeil,
+    config:param(tangled_rope_epsilon_floor, EpsFloor),
+    BaseEps >= EpsFloor,
+    config:param(tangled_rope_suppression_floor, MinS),
+    Supp >= MinS,
+    requires_active_enforcement(C),
+    narrative_ontology:has_coordination_function(C),
+    narrative_ontology:has_asymmetric_extraction(C), !.
+
+classify_from_metrics(C, BaseEps, Chi, _Supp, _Context, piton) :-
+    config:param(piton_extraction_ceiling, XCeil),
+    Chi =< XCeil,
+    config:param(piton_epsilon_floor, EpsFloor),
+    BaseEps > EpsFloor,
+    config:param(theater_metric_name, TheaterMetricName),
+    narrative_ontology:constraint_metric(C, TheaterMetricName, TR),
+    config:param(piton_theater_floor, TRFloor),
+    TR >= TRFloor, !.
+
+classify_from_metrics(_C, _BaseEps, _Chi, _Supp, _Context, unknown).
 
 % ============================================================================
 % CANONICAL TYPE DETERMINATION (INDEXED)
@@ -276,23 +285,13 @@ dr_type(_C, _Context, unknown).
 % ----------------------------------------------------------------------------
 % Metric-Based Classification (Indexed) - Helper
 % ----------------------------------------------------------------------------
+% Delegates to classify_from_metrics/6 (Single Source of Truth).
 
-metric_based_type_indexed(C, Context, mountain) :-
-    is_mountain(C, Context, mountain), !.
-
-metric_based_type_indexed(C, Context, snare) :-
-    is_snare(C, Context, snare), !.
-
-metric_based_type_indexed(C, Context, rope) :-
-    is_rope(C, Context, rope), !.
-
-metric_based_type_indexed(C, Context, tangled_rope) :-
-    is_tangled_rope(C, Context, tangled_rope), !.
-
-metric_based_type_indexed(C, Context, piton) :-
-    is_piton(C, Context, piton), !.
-
-metric_based_type_indexed(_C, _Context, unknown).
+metric_based_type_indexed(C, Context, Type) :-
+    base_extractiveness(C, BaseEps),
+    constraint_indexing:extractiveness_for_agent(C, Context, Chi),
+    get_raw_suppression(C, Supp),
+    classify_from_metrics(C, BaseEps, Chi, Supp, Context, Type).
 
 % ============================================================================
 % BACKWARD COMPATIBILITY LAYER
@@ -326,6 +325,9 @@ dr_action(C, Context, reform) :-
 
 dr_action(C, Context, cut) :-
     dr_type(C, Context, snare), !.
+
+dr_action(C, Context, monitor_sunset) :-
+    dr_type(C, Context, scaffold), !.
 
 dr_action(C, Context, bypass) :-
     dr_type(C, Context, piton), !.
@@ -473,14 +475,14 @@ cross_context_analysis(C, Analysis) :-
     Analysis = cross_context(C, Results).
 
 % Standard contexts for testing
-standard_context(context(agent_power(individual_powerless), 
+standard_context(context(agent_power(powerless), 
                         time_horizon(biographical), 
                         exit_options(trapped), 
                         spatial_scope(local))).
 
-standard_context(context(agent_power(individual_moderate), 
-                        time_horizon(biographical), 
-                        exit_options(mobile), 
+standard_context(context(agent_power(moderate),
+                        time_horizon(biographical),
+                        exit_options(mobile),
                         spatial_scope(national))).
 
 standard_context(context(agent_power(institutional), 

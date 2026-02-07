@@ -12,7 +12,7 @@
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
 :- use_module(drl_core).
-:- use_module(v3_1_config).
+:- use_module(config).
 :- use_module(utils).  % For safe metric retrieval
 
 /* ============================================================================
@@ -80,13 +80,29 @@ validate_constraint_completeness :-
 
 %% is_complete_constraint(+Constraint)
 %  True if constraint has all required data.
+%  Mandatory fields: base_extractiveness, constraint_metric(extractiveness),
+%  constraint_metric(suppression_requirement), domain category, classification.
 is_complete_constraint(C) :-
-    % Must have extractiveness metric
+    % MANDATORY: Must have base_extractiveness/2 fact (used by dual-threshold classifier)
+    (drl_core:base_extractiveness(C, BaseE)
+    -> (number(BaseE), BaseE >= 0.0, BaseE =< 1.0)
+    ;  (assertz(validation_error(missing_base_epsilon, C,
+            'No base_extractiveness/2 fact. Required for dual-threshold classification.')), fail)),
+
+    % MANDATORY: Must have extractiveness constraint_metric (used by reports/audit)
     (narrative_ontology:constraint_metric(C, extractiveness, E)
     -> (E >= 0.0, E =< 1.0)
     ;  (assertz(validation_error(missing_metric, C, extractiveness)), fail)),
 
-    % Must have suppression_requirement metric
+    % CONSISTENCY: base_extractiveness and constraint_metric should agree
+    (drl_core:base_extractiveness(C, BE),
+     narrative_ontology:constraint_metric(C, extractiveness, ME),
+     abs(BE - ME) > 0.01
+    -> assertz(validation_warning(epsilon_mismatch, C,
+            'base_extractiveness differs from constraint_metric(extractiveness)'))
+    ;  true),
+
+    % MANDATORY: Must have suppression_requirement metric
     (narrative_ontology:constraint_metric(C, suppression_requirement, S)
     -> (S >= 0.0, S =< 1.0)
     ;  (assertz(validation_error(missing_metric, C, suppression_requirement)), fail)),
@@ -106,9 +122,21 @@ is_complete_constraint(C) :-
 report_incomplete_constraint(C) :-
     format('  Constraint: ~w~n', [C]),
 
-    % Check extractiveness
+    % Check base_extractiveness/2 (mandatory for dual-threshold classifier)
+    (\+ drl_core:base_extractiveness(C, _)
+    -> format('    ✗ Missing: base_extractiveness/2 (REQUIRED for classification)~n')
+    ;  true),
+
+    % Check extractiveness metric
     (\+ narrative_ontology:constraint_metric(C, extractiveness, _)
     -> format('    ✗ Missing: extractiveness metric~n')
+    ;  true),
+
+    % Check epsilon consistency
+    (drl_core:base_extractiveness(C, BE),
+     narrative_ontology:constraint_metric(C, extractiveness, ME),
+     abs(BE - ME) > 0.01
+    -> format('    ⚠ Epsilon mismatch: base_extractiveness=~2f vs metric=~2f~n', [BE, ME])
     ;  true),
 
     % Check suppression
@@ -194,37 +222,22 @@ validate_classification_consistency :-
 
 %% infer_expected_type(+Constraint, -Type)
 %  Infers what type a constraint should be based on metrics.
+%  Delegates to drl_core:classify_from_metrics/6 (Single Source of Truth).
 infer_expected_type(C, Type) :-
-    (narrative_ontology:constraint_metric(C, suppression_requirement, Supp),
-     domain_priors:base_extractiveness(C, Extr),
-     v3_1_config:param(mountain_suppression_ceiling, Ceil)
-    -> classify_by_metrics(Supp, Extr, Ceil, Type)
-    ;  Type = unknown).
-
-%% classify_by_metrics(+Supp, +Extr, +Ceil, -Type)
-%  Classification logic based on metrics.
-classify_by_metrics(Supp, Extr, Ceil, mountain) :-
-    Supp =< Ceil, Extr =< 0.35, !.
-
-classify_by_metrics(Supp, Extr, Ceil, snare) :-
-    Supp > Ceil, Extr > 0.66, !.
-
-classify_by_metrics(Supp, Extr, Ceil, tangled_rope) :-
-    Supp > Ceil, Extr > 0.35, !.
-
-classify_by_metrics(Supp, _Extr, Ceil, rope) :-
-    Supp > Ceil, !.
-
-classify_by_metrics(_Supp, Extr, _Ceil, snare) :-
-    Extr > 0.66, !.
-
-classify_by_metrics(_, _, _, ambiguous).
+    (   drl_core:base_extractiveness(C, Extr),
+        narrative_ontology:constraint_metric(C, suppression_requirement, Supp)
+    ->  constraint_indexing:default_context(Context),
+        Context = context(agent_power(Power), _, _, _),
+        constraint_indexing:power_modifier(Power, Modifier),
+        Chi is Extr * Modifier,
+        drl_core:classify_from_metrics(C, Extr, Chi, Supp, Context, Type)
+    ;   Type = unknown).
 
 %% report_classification_inconsistency(+C, +Claimed, +Expected)
 report_classification_inconsistency(C, Claimed, Expected) :-
     narrative_ontology:constraint_metric(C, suppression_requirement, Supp),
-    domain_priors:base_extractiveness(C, Extr),
-    v3_1_config:param(mountain_suppression_ceiling, Ceil),
+    drl_core:base_extractiveness(C, Extr),
+    config:param(mountain_suppression_ceiling, Ceil),
 
     format('  Constraint: ~w~n', [C]),
     format('    Claimed: ~w~n', [Claimed]),
@@ -236,7 +249,7 @@ report_classification_inconsistency(C, Claimed, Expected) :-
         assertz(validation_error(false_mountain, C, Claimed-Expected)))
     ; Expected = mountain, Claimed = snare
     -> (format('    ⚠ False Snare (fair but claimed extractive)~n'),
-        assertz(validation_warning(false_noose, C, Claimed-Expected)))
+        assertz(validation_warning(false_snare, C, Claimed-Expected)))
     ;  assertz(validation_warning(classification_mismatch, C, Claimed-Expected))
     ),
     nl.

@@ -1,457 +1,355 @@
+:- module(validation_suite, [run_dynamic_suite/0]).
+:- use_module(library(prolog_stack)).
 :- use_module(scenario_manager).
 :- use_module(data_validation).
-:- dynamic test_passed/1.
-:- dynamic test_failed/2.
-:- working_directory(_, '../prolog/').
+:- use_module(report_generator).
 
+:- chdir('../prolog').
+
+:- dynamic test_passed/1, test_failed/3, test_case/4.
+
+% --- Test Case Definitions ---
+test_case('testsets/26usc469_real_estate_exemption.pl', '26usc469_real_estate_exemption', '26USC469_REAL_ESTATE_EXEMPTION', 1).
+test_case('testsets/academic_fashion_modernism_2026.pl', 'academic_fashion_modernism_2026', 'ACADEMIC_FASHION_MODERNISM_2026', 2).
+test_case('testsets/academic_peer_review_gatekeeping.pl', 'academic_peer_review_gatekeeping', 'ACADEMIC_PEER_REVIEW_GATEKEEPING', 3).
+test_case('testsets/academic_tenure_system.pl', 'academic_tenure_system', 'ACADEMIC_TENURE_SYSTEM', 4).
+test_case('testsets/ad_fus_coordination.pl', 'ad_fus_coordination', 'AD_FUS_COORDINATION', 5).
+test_case('testsets/ad_synaptic_deficit.pl', 'ad_synaptic_deficit', 'AD_SYNAPTIC_DEFICIT', 6).
+test_case('testsets/adverse_possession.pl', 'adverse_possession', 'ADVERSE_POSSESSION', 7).
+test_case('testsets/advice_as_dangerous_gift.pl', 'advice_as_dangerous_gift', 'ADVICE_AS_DANGEROUS_GIFT', 8).
+test_case('testsets/agentive_optimism_2026.pl', 'agent_opt_2026', 'AGENTIVE_OPTIMISM_2026', 9).
+test_case('testsets/ai_auditability_gap.pl', 'ai_auditability_gap', 'AI_AUDITABILITY_GAP', 10).
+test_case('testsets/ai_cognitive_diversity_arbitrage.pl', 'ai_cognitive_diversity_arbitrage', 'AI_COGNITIVE_DIVERSITY_ARBITRAGE', 11).
+test_case('testsets/ai_driven_surveillance_sensor_layer.pl', 'ai_driven_surveillance_sensor_layer', 'AI_DRIVEN_SURVEILLANCE_SENSOR_LAYER', 12).
+test_case('testsets/ai_edu_decentralization.pl', 'ai_edu_decentralization', 'AI_EDU_DECENTRALIZATION', 13).
+test_case('testsets/ai_evaluators_matching.pl', 'ai_evaluators_matching', 'AI_EVALUATORS_MATCHING', 14).
+test_case('testsets/ai_professional_displacement.pl', 'ai_professional_displacement', 'AI_PROFESSIONAL_DISPLACEMENT', 15).
+test_case('testsets/ai_superpowers_race_2026.pl', 'ai_superpowers_2026', 'AI_SUPERPOWERS_RACE_2026', 16).
+test_case('testsets/algorithmic_bias.pl', 'algorithmic_bias', 'ALGORITHMIC_BIAS', 17).
+test_case('testsets/algorithmic_epistemic_capture.pl', 'algorithmic_epistemic_capture', 'ALGORITHMIC_EPISTEMIC_CAPTURE', 18).
+test_case('testsets/alignment_tax_tradeoff.pl', 'alignment_tax_tradeoff', 'ALIGNMENT_TAX_TRADEOFF', 19).
+test_case('testsets/altruistic_misery_paradox_2026.pl', 'altruistic_misery_paradox_2026', 'ALTRUISTIC_MISERY_PARADOX_2026', 20).
+test_case('testsets/amish_technological_renunciation.pl', 'amish_technological_renunciation', 'AMISH_TECHNOLOGICAL_RENUNCIATION', 21).
+test_case('testsets/ancestral_pueblo_hydrology.pl', 'ancestral_pueblo_hydrology', 'ANCESTRAL_PUEBLO_HYDROLOGY', 22).
+test_case('testsets/anticipatory_capacity_failure.pl', 'anticipatory_capacity_failure', 'ANTICIPATORY_CAPACITY_FAILURE', 23).
+test_case('testsets/antifragility.pl', 'antifragility', 'ANTIFRAGILITY', 24).
+test_case('testsets/apartheid_nuclear_program.pl', 'apartheid_nuclear_program', 'APARTHEID_NUCLEAR_PROGRAM', 25).
+test_case('testsets/arctic_geopolitical_flashpoint.pl', 'arctic_geopolitical_flashpoint', 'ARCTIC_GEOPOLITICAL_FLASHPOINT', 26).
+test_case('testsets/arrows_impossibility_theorem.pl', 'arrows_impossibility_theorem', 'ARROWS_IMPOSSIBILITY_THEOREM', 27).
+test_case('testsets/art_market_decoupling.pl', 'art_market_decoupling', 'ART_MARKET_DECOUPLING', 28).
+test_case('testsets/asce_7_22_seismic_design.pl', 'asce_cycle_22', 'ASCE_7_22_SEISMIC_DESIGN', 29).
+test_case('testsets/asshole_filter_2015.pl', 'asshole_filter_2015', 'ASSHOLE_FILTER_2015', 30).
+test_case('testsets/astm_d638_tensile_testing.pl', 'industrial_testing_regime', 'ASTM_D638_TENSILE_TESTING', 31).
+test_case('testsets/asymmetric_computational_difficulty.pl', 'asymmetric_computational_difficulty', 'ASYMMETRIC_COMPUTATIONAL_DIFFICULTY', 32).
+test_case('testsets/atrophied_optimization_piton.pl', 'atrophied_optimization_piton', 'ATROPHIED_OPTIMIZATION_PITON', 33).
+test_case('testsets/australia_social_ban_2026.pl', 'australia_social_ban_2026', 'AUSTRALIA_SOCIAL_BAN_2026', 34).
+test_case('testsets/authoritarian_power_paradox.pl', 'authoritarian_power_paradox', 'AUTHORITARIAN_POWER_PARADOX', 35).
+test_case('testsets/automatic_enrollment_defaults.pl', 'automatic_enrollment_defaults', 'AUTOMATIC_ENROLLMENT_DEFAULTS', 36).
+test_case('testsets/availability_heuristic.pl', 'availability_heuristic', 'AVAILABILITY_HEURISTIC', 37).
+test_case('testsets/axiom_of_choice_determinacy.pl', 'ac_era', 'AXIOM_OF_CHOICE_DETERMINACY', 38).
+test_case('testsets/axiom_reasoner_2026.pl', 'axiom_reasoner_2026', 'AXIOM_REASONER_2026', 39).
+test_case('testsets/banach_fixed_point.pl', 'banach_fixed_point', 'BANACH_FIXED_POINT', 40).
+test_case('testsets/banach_tarski_paradox.pl', 'banach_tarski_era', 'BANACH_TARSKI_PARADOX', 41).
+test_case('testsets/bangladesh_july_national_charter.pl', 'bangladesh_july_national_charter', 'BANGLADESH_JULY_NATIONAL_CHARTER', 42).
+test_case('testsets/base_pair_complementarity.pl', 'dna_structure_discovery', 'BASE_PAIR_COMPLEMENTARITY', 43).
+test_case('testsets/basel_problem_convergence.pl', 'basel_era', 'BASEL_PROBLEM_CONVERGENCE', 44).
+test_case('testsets/bay_of_pigs_operational_silo.pl', 'bay_of_pigs_operational_silo', 'BAY_OF_PIGS_OPERATIONAL_SILO', 45).
+test_case('testsets/bedouin_sedentary_transition.pl', 'bedouin_sedentary_transition', 'BEDOUIN_SEDENTARY_TRANSITION', 46).
+test_case('testsets/belief_argument_conclusion.pl', 'belief_argument_conclusion', 'BELIEF_ARGUMENT_CONCLUSION', 47).
+test_case('testsets/berkshire_compounding_culture.pl', 'berkshire_compounding_culture', 'BERKSHIRE_COMPOUNDING_CULTURE', 48).
+test_case('testsets/big_data_astrophysics_arbitrage.pl', 'big_data_astrophysics_arbitrage', 'BIG_DATA_ASTROPHYSICS_ARBITRAGE', 49).
+test_case('testsets/biological_curiosity.pl', 'biological_curiosity', 'BIOLOGICAL_CURIOSITY', 50).
+test_case('testsets/birthday_paradox_collison.pl', 'birthday_era', 'BIRTHDAY_PARADOX_COLLISON', 51).
+test_case('testsets/blackstone_carried_interest_taxation.pl', 'blackstone_ipo_restructuring', 'BLACKSTONE_CARRIED_INTEREST_TAXATION', 52).
+test_case('testsets/boiled_pineapple_trend_2026.pl', 'boiled_pineapple_trend_2026', 'BOILED_PINEAPPLE_TREND_2026', 53).
+test_case('testsets/brain_network_paradigm_2026.pl', 'brain_network_paradigm_2026', 'BRAIN_NETWORK_PARADIGM_2026', 54).
+test_case('testsets/brouwer_fixed_point.pl', 'brouwer_era', 'BROUWER_FIXED_POINT', 55).
+test_case('testsets/buffons_needle_pi_estimation.pl', 'buffon_era', 'BUFFONS_NEEDLE_PI_ESTIMATION', 56).
+test_case('testsets/burali_forte_paradox.pl', 'burali_forti_interval', 'BURALI_FORTE_PARADOX', 57).
+test_case('testsets/burden_of_proof_legal_criminal.pl', 'criminal_trial_sequence', 'BURDEN_OF_PROOF_LEGAL_CRIMINAL', 58).
+test_case('testsets/burden_of_proof_scientific_empirical.pl', 'scientific_revolution_current', 'BURDEN_OF_PROOF_SCIENTIFIC_EMPIRICAL', 59).
+test_case('testsets/busy_beaver_noncomputability.pl', 'busy_beaver_era', 'BUSY_BEAVER_NONCOMPUTABILITY', 60).
+test_case('testsets/cantor_set_topology.pl', 'cantor_set_topology', 'CANTOR_SET_TOPOLOGY', 61).
+test_case('testsets/cap_theorem.pl', 'cap_theorem_interval', 'CAP_THEOREM', 62).
+test_case('testsets/central_limit_theorem_convergence.pl', 'clt_era', 'CENTRAL_LIMIT_THEOREM_CONVERGENCE', 63).
+test_case('testsets/chaitins_omega_undecidability.pl', 'chaitin_era', 'CHAITINS_OMEGA_UNDECIDABILITY', 64).
+test_case('testsets/choice_architecture_design.pl', 'rope_design', 'CHOICE_ARCHITECTURE_DESIGN', 65).
+test_case('testsets/church_turing_thesis.pl', 'church_turing_era', 'CHURCH_TURING_THESIS', 66).
+test_case('testsets/cinderella_midnight_deadline.pl', 'midnight_deadline_period', 'CINDERELLA_MIDNIGHT_DEADLINE', 67).
+test_case('testsets/click_chemistry_paradigm_2026.pl', 'click_chemistry_paradigm_2026', 'CLICK_CHEMISTRY_PARADIGM_2026', 68).
+test_case('testsets/climate_attribution_2026.pl', 'climate_attribution_2026', 'CLIMATE_ATTRIBUTION_2026', 69).
+test_case('testsets/climate_target_one_point_five.pl', 'climate_target_one_point_five', 'CLIMATE_TARGET_ONE_POINT_FIVE', 70).
+test_case('testsets/clt_convergence_2026.pl', 'clt_convergence_2026', 'CLT_CONVERGENCE_2026', 71).
+test_case('testsets/coffee_cardiovascular_2026.pl', 'coffee_cardiovascular_2026', 'COFFEE_CARDIOVASCULAR_2026', 72).
+test_case('testsets/coinbase_crypto_volatility.pl', 'coinbase_ipo_window', 'COINBASE_CRYPTO_VOLATILITY', 73).
+test_case('testsets/collatz_conjecture_determinism.pl', 'collatz_era', 'COLLATZ_CONJECTURE_DETERMINISM', 74).
+test_case('testsets/columbia_2026_elections.pl', 'colombia_2026_presidential_election', 'COLUMBIA_2026_ELECTIONS', 75).
+test_case('testsets/comitatus_bond.pl', 'comitatus_era', 'COMITATUS_BOND', 76).
+test_case('testsets/communal_narcissism_social_trap.pl', 'communal_narcissism_social_trap', 'COMMUNAL_NARCISSISM_SOCIAL_TRAP', 77).
+test_case('testsets/confirmation_bias.pl', 'confirmation_bias_interval', 'CONFIRMATION_BIAS', 78).
+test_case('testsets/constitutional_supremacy.pl', 'constitutional_supremacy', 'CONSTITUTIONAL_SUPREMACY', 79).
+test_case('testsets/continuum_hypothesis_undecidability.pl', 'continuum_era', 'CONTINUUM_HYPOTHESIS_UNDECIDABILITY', 80).
+test_case('testsets/conways_game_of_life_dynamics.pl', 'conway_era', 'CONWAYS_GAME_OF_LIFE_DYNAMICS', 81).
+test_case('testsets/copyleft_viral_licensing.pl', 'copyleft_viral_licensing', 'COPYLEFT_VIRAL_LICENSING', 82).
+test_case('testsets/copyright_protection.pl', 'copyright_protection', 'COPYRIGHT_PROTECTION', 83).
+test_case('testsets/countable_infinity_cardinality.pl', 'countable_infinity_cardinality', 'COUNTABLE_INFINITY_CARDINALITY', 84).
+test_case('testsets/cow_field_poop.pl', 'cow_field_poop', 'COW_FIELD_POOP', 85).
+test_case('testsets/creative_commons_licensing.pl', 'creative_commons_licensing', 'CREATIVE_COMMONS_LICENSING', 86).
+test_case('testsets/crispr_genomic_rewrite_2026.pl', 'crispr_genomic_rewrite_2026', 'CRISPR_GENOMIC_REWRITE_2026', 87).
+test_case('testsets/cuban_missile_crisis_excomm_delibration.pl', 'thirteen_days_crisis', 'CUBAN_MISSILE_CRISIS_EXCOMM_DELIBRATION', 88).
+test_case('testsets/cultural_refragmentation_2026.pl', 'cultural_refragmentation_2026', 'CULTURAL_REFRAGMENTATION_2026', 89).
+test_case('testsets/cuny_light_2026.pl', 'cuny_light_2026', 'CUNY_LIGHT_2026', 90).
+test_case('testsets/currys_paradox.pl', 'currys_paradox_interval', 'CURRYS_PARADOX', 91).
+test_case('testsets/damped_harmonics.pl', 'damped_harmonics', 'DAMPED_HARMONICS', 92).
+test_case('testsets/deferential_realism_core.pl', 'dr_recursive_int', 'DEFERENTIAL_REALISM_CORE', 93).
+test_case('testsets/dldr_information_policy.pl', 'dldr_policy_interval', 'DLDR_INFORMATION_POLICY', 94).
+test_case('testsets/dunbars_number.pl', 'dunbar_interval', 'DUNBARS_NUMBER', 95).
+test_case('testsets/e2ee_digital_privacy_2026.pl', 'e2ee_digital_privacy_2026', 'E2EE_DIGITAL_PRIVACY_2026', 96).
+test_case('testsets/educational_unbundling_implementation.pl', 'implementation_window_2026', 'EDUCATIONAL_UNBUNDLING_IMPLEMENTATION', 97).
+test_case('testsets/electrification_scale_2026.pl', 'electrification_scale_2026', 'ELECTRIFICATION_SCALE_2026', 98).
+test_case('testsets/elencher_identity_transformation.pl', 'elencher_identity_transformation', 'ELENCHER_IDENTITY_TRANSFORMATION', 99).
+test_case('testsets/empty_tomb_transformation.pl', 'empty_tomb_transformation', 'EMPTY_TOMB_TRANSFORMATION', 100).
+test_case('testsets/endowment_effect.pl', 'endowment_interval', 'ENDOWMENT_EFFECT', 101).
+test_case('testsets/epigenetics_complexity_2026.pl', 'epigenetics_complexity_2026', 'EPIGENETICS_COMPLEXITY_2026', 102).
+test_case('testsets/epstein_espionage_crisis_2026.pl', 'epstein_espionage_2026', 'EPSTEIN_ESPIONAGE_CRISIS_2026', 103).
+test_case('testsets/epstein_files_2026.pl', 'epstein_files_2026', 'EPSTEIN_FILES_2026', 104).
+test_case('testsets/epstein_kgb_honeytrap.pl', 'epstein_honeytrap', 'EPSTEIN_KGB_HONEYTRAP', 105).
+test_case('testsets/ergo_autolykos_asic_resistance.pl', 'ergo_autolykos_asic_resistance', 'ERGO_AUTOLYKOS_ASIC_RESISTANCE', 106).
+test_case('testsets/ergo_dexy_gold_protocol.pl', 'dexy_gold_interval', 'ERGO_DEXY_GOLD_PROTOCOL', 107).
+test_case('testsets/ergo_lets_protocol.pl', 'ergo_lets_interval', 'ERGO_LETS_PROTOCOL', 108).
+test_case('testsets/ergo_mixer_protocol.pl', 'ergo_mixer_protocol', 'ERGO_MIXER_PROTOCOL', 109).
+test_case('testsets/ergo_nipopows.pl', 'ergo_nipopows', 'ERGO_NIPOPOWS', 110).
+test_case('testsets/ergo_sig_usd_protocol.pl', 'sig_usd_interval', 'ERGO_SIG_USD_PROTOCOL', 111).
+test_case('testsets/ergo_storage_rent_mechanism.pl', 'ergo_storage_rent_mechanism', 'ERGO_STORAGE_RENT_MECHANISM', 112).
+test_case('testsets/ergodic_theorems.pl', 'ergodic_interval', 'ERGODIC_THEOREMS', 113).
+test_case('testsets/euler_characteristic_topology.pl', 'euler_era', 'EULER_CHARACTERISTIC_TOPOLOGY', 114).
+test_case('testsets/exoplanet_habitability_arbitrage.pl', 'exoplanetary_habitability_arbitrage', 'EXOPLANET_HABITABILITY_ARBITRAGE', 115).
+test_case('testsets/extraordinary_narrative_shift.pl', 'extraordinary_narrative_shift', 'EXTRAORDINARY_NARRATIVE_SHIFT', 116).
+test_case('testsets/fair_use_doctrine.pl', 'fair_use_doctrine', 'FAIR_USE_DOCTRINE', 117).
+test_case('testsets/fed_shutdown_2026.pl', 'fed_shutdown_2026', 'FED_SHUTDOWN_2026', 118).
+test_case('testsets/feigenbaum_universality.pl', 'feigenbaum_universality', 'FEIGENBAUM_UNIVERSALITY', 119).
+test_case('testsets/fgh_hierarchy_2026.pl', 'fgh_hierarchy_2026', 'FGH_HIERARCHY_2026', 120).
+test_case('testsets/finite_simple_groups_classification.pl', 'cfsg_era', 'FINITE_SIMPLE_GROUPS_CLASSIFICATION', 121).
+test_case('testsets/fittss_law.pl', 'fittss_law_interval', 'FITTSS_LAW', 122).
+test_case('testsets/fmeca_procedures_1980.pl', 'fmeca_standard_era', 'FMECA_PROCEDURES_1980', 123).
+test_case('testsets/fmt_oncology_realignment_2026.pl', 'fmt_oncology_2026', 'FMT_ONCOLOGY_REALIGNMENT_2026', 124).
+test_case('testsets/four_color_theorem_topological_bound.pl', 'four_color_era', 'FOUR_COLOR_THEOREM_TOPOLOGICAL_BOUND', 125).
+test_case('testsets/france_cordon_sanitaire_2026.pl', 'france_cordon_sanitaire_2026', 'FRANCE_CORDON_SANITAIRE_2026', 126).
+test_case('testsets/fundamental_theorem_of_algebra.pl', 'fta_era', 'FUNDAMENTAL_THEOREM_OF_ALGEBRA', 127).
+test_case('testsets/galois_theory_symmetry.pl', 'galois_era', 'GALOIS_THEORY_SYMMETRY', 128).
+test_case('testsets/gauss_bonnet_topology.pl', 'gauss_bonnet_era', 'GAUSS_BONNET_TOPOLOGY', 129).
+test_case('testsets/genetic_algorithms_evolution.pl', 'genetic_algorithms_evolution', 'GENETIC_ALGORITHMS_EVOLUTION', 130).
+test_case('testsets/gita_kurukshetra.pl', 'gita_kurukshetra', 'GITA_KURUKSHETRA', 131).
+test_case('testsets/global_economic_anxiety_2026.pl', 'global_economic_anxiety_2026', 'GLOBAL_ECONOMIC_ANXIETY_2026', 132).
+test_case('testsets/glp1_payload_efficiency_pivot.pl', 'glp1_market_impact_2026', 'GLP1_PAYLOAD_EFFICIENCY_PIVOT', 133).
+test_case('testsets/godels_incompleteness_theorems.pl', 'goedel_era', 'GODELS_INCOMPLETENESS_THEOREMS', 134).
+test_case('testsets/gold_piton_2026.pl', 'gold_piton_2026', 'GOLD_PITON_2026', 135).
+test_case('testsets/goldbach_conjecture.pl', 'goldbach_era', 'GOLDBACH_CONJECTURE', 136).
+test_case('testsets/golden_handcuffs.pl', 'golden_handcuffs', 'GOLDEN_HANDCUFFS', 137).
+test_case('testsets/gradient_descent_optimization.pl', 'gradient_descent_optimization', 'GRADIENT_DESCENT_OPTIMIZATION', 138).
+test_case('testsets/graph_coloring_complexity.pl', 'graph_coloring_interval', 'GRAPH_COLORING_COMPLEXITY', 139).
+test_case('testsets/gs1_gln_identification.pl', 'gln_standard_lifecycle', 'GS1_GLN_IDENTIFICATION', 140).
+test_case('testsets/gs1_standardized_identification.pl', 'gs1_spec_v25', 'GS1_STANDARDIZED_IDENTIFICATION', 141).
+test_case('testsets/halting_problem_undecidability.pl', 'halting_era', 'HALTING_PROBLEM_UNDECIDABILITY', 142).
+test_case('testsets/hamiltonian_path_complexity.pl', 'hamiltonian_path_complexity', 'HAMILTONIAN_PATH_COMPLEXITY', 143).
+test_case('testsets/hawthorne_effect.pl', 'hawthorne_interval', 'HAWTHORNE_EFFECT', 144).
+test_case('testsets/hegemonic_entropy_2026.pl', 'hegemonic_entropy_2026', 'HEGEMONIC_ENTROPY_2026', 145).
+test_case('testsets/heisenberg_uncertainty.pl', 'heisenberg_interval', 'HEISENBERG_UNCERTAINTY', 146).
+test_case('testsets/helsinki_bus_theory.pl', 'helsinki_bus_theory', 'HELSINKI_BUS_THEORY', 147).
+test_case('testsets/heuristic_optimization.pl', 'heuristic_optimization', 'HEURISTIC_OPTIMIZATION', 148).
+test_case('testsets/hilberts_hotel_infinity.pl', 'hilberts_hotel_infinity', 'HILBERTS_HOTEL_INFINITY', 149).
+test_case('testsets/hiv_prep_prevention_2026.pl', 'hiv_prep_prevention_2026', 'HIV_PREP_PREVENTION_2026', 150).
+test_case('testsets/indexical_relativity_core.pl', 'meta_logic_01', 'INDEXICAL_RELATIVITY_CORE', 151).
+test_case('testsets/individual_revolution_autonomy.pl', 'individual_revolution_autonomy', 'INDIVIDUAL_REVOLUTION_AUTONOMY', 152).
+test_case('testsets/information_foraging_theory.pl', 'information_foraging_theory', 'INFORMATION_FORAGING_THEORY', 153).
+test_case('testsets/informational_time_2026.pl', 'informational_time_2026', 'INFORMATIONAL_TIME_2026', 154).
+test_case('testsets/inner_model_theory_constraints.pl', 'inner_model_era', 'INNER_MODEL_THEORY_CONSTRAINTS', 155).
+test_case('testsets/juvenile_underclass_2026.pl', 'juvenile_underclass_2026', 'JUVENILE_UNDERCLASS_2026', 156).
+test_case('testsets/keltner_relationship_evaluation.pl', 'keltner_relationship_evaluation', 'KELTNER_RELATIONSHIP_EVALUATION', 157).
+test_case('testsets/kidney_exchange_market.pl', 'kidney_exchange_market', 'KIDNEY_EXCHANGE_MARKET', 158).
+test_case('testsets/kirby_paris_theorem.pl', 'kirby_paris_interval', 'KIRBY_PARIS_THEOREM', 159).
+test_case('testsets/kjv_great_awakening.pl', 'kjv_great_awakening', 'KJV_GREAT_AWAKENING', 160).
+test_case('testsets/kjv_linguistic_residue.pl', 'kjv_linguistic_residue', 'KJV_LINGUISTIC_RESIDUE', 161).
+test_case('testsets/kjv_puritan_new_world_exit.pl', 'kjv_puritan_new_world_exit', 'KJV_PURITAN_NEW_WORLD_EXIT', 162).
+test_case('testsets/kjv_textual_authority.pl', 'kjv_textual_authority', 'KJV_TEXTUAL_AUTHORITY', 163).
+test_case('testsets/kleene_recursion_theorem.pl', 'kleene_era', 'KLEENE_RECURSION_THEOREM', 164).
+test_case('testsets/landscape_of_fear_2026.pl', 'landscape_of_fear_2026', 'LANDSCAPE_OF_FEAR_2026', 165).
+test_case('testsets/large_cardinals_foundations.pl', 'large_cardinal_era', 'LARGE_CARDINALS_FOUNDATIONS', 166).
+test_case('testsets/law_of_diminishing_returns.pl', 'diminishing_returns_interval', 'LAW_OF_DIMINISHING_RETURNS', 167).
+test_case('testsets/layered_brain_processing.pl', 'layered_brain_processing', 'LAYERED_BRAIN_PROCESSING', 168).
+test_case('testsets/liar_paradox.pl', 'liar_paradox_interval', 'LIAR_PARADOX', 169).
+test_case('testsets/lindy_effect.pl', 'lindy_effect', 'LINDY_EFFECT', 170).
+test_case('testsets/litany_of_the_real.pl', 'litany_of_the_real', 'LITANY_OF_THE_REAL', 171).
+test_case('testsets/lln_convergence.pl', 'lln_era', 'LLN_CONVERGENCE', 172).
+test_case('testsets/lobs_theorem.pl', 'lobs_theorem_interval', 'LOBS_THEOREM', 173).
+test_case('testsets/local_vs_global_optima.pl', 'local_vs_global_optima', 'LOCAL_VS_GLOBAL_OPTIMA', 174).
+test_case('testsets/logistic_map_dynamics.pl', 'logistic_map_era', 'LOGISTIC_MAP_DYNAMICS', 175).
+test_case('testsets/lorenz_attractor_dynamics.pl', 'lorenz_era', 'LORENZ_ATTRACTOR_DYNAMICS', 176).
+test_case('testsets/lowenheim_skolem_theorem.pl', 'lowenheim_skolem_interval', 'LOWENHEIM_SKOLEM_THEOREM', 177).
+test_case('testsets/lsd_microdosing_professional_openness.pl', 'lsd_microdosing_professional_openness', 'LSD_MICRODOSING_PROFESSIONAL_OPENNESS', 178).
+test_case('testsets/magna_carta_liberties.pl', 'magna_carta_liberties', 'MAGNA_CARTA_LIBERTIES', 179).
+test_case('testsets/maha_recovery_2026.pl', 'maha_recovery_2026', 'MAHA_RECOVERY_2026', 180).
+test_case('testsets/manganese_catalysis_2026.pl', 'manganese_catalysis_2026', 'MANGANESE_CATALYSIS_2026', 181).
+test_case('testsets/marriage_problem.pl', 'optimal_stopping_marriage', 'MARRIAGE_PROBLEM', 182).
+test_case('testsets/mars_rovers_navigational_autonomy.pl', 'mars_autonomy_evolution', 'MARS_ROVERS_NAVIGATIONAL_AUTONOMY', 183).
+test_case('testsets/martian_signal_latency.pl', 'mariner_to_msl_era', 'MARTIAN_SIGNAL_LATENCY', 184).
+test_case('testsets/matching_markets_general.pl', 'matching_markets_general', 'MATCHING_MARKETS_GENERAL', 185).
+test_case('testsets/max_flow.pl', 'max_flow_min_cut', 'MAX_FLOW', 186).
+test_case('testsets/med_diet_consensus_2026.pl', 'med_diet_consensus_2026', 'MED_DIET_CONSENSUS_2026', 187).
+test_case('testsets/micro_robot_electronics_integration.pl', 'ek_robot_integration_cycle', 'MICRO_ROBOT_ELECTRONICS_INTEGRATION', 188).
+test_case('testsets/microbiome_symbiosis.pl', 'microbiome_symbiosis', 'MICROBIOME_SYMBIOSIS', 189).
+test_case('testsets/minimax_decision_rule.pl', 'minimax_era', 'MINIMAX_DECISION_RULE', 190).
+test_case('testsets/minnesota_sovereignty_2026.pl', 'minnesota_sovereignty_2026', 'MINNESOTA_SOVEREIGNTY_2026', 191).
+test_case('testsets/mit_tfus_consciousness_2026.pl', 'mit_tfus_2026', 'MIT_TFUS_CONSCIOUSNESS_2026', 192).
+test_case('testsets/moltbook_breach_2026.pl', 'moltbook_breach_2026', 'MOLTBOOK_BREACH_2026', 193).
+test_case('testsets/mom_z14_galaxy_2026.pl', 'mom_z14_2026', 'MOM_Z14_GALAXY_2026', 194).
+test_case('testsets/monty_hall_conditional_probability.pl', 'probability_paradox_era', 'MONTY_HALL_CONDITIONAL_PROBABILITY', 195).
+test_case('testsets/moores_law.pl', 'moores_law_interval', 'MOORES_LAW', 196).
+test_case('testsets/narcissistic_ego_maintenance.pl', 'narcissistic_ego_maintenance', 'NARCISSISTIC_EGO_MAINTENANCE', 197).
+test_case('testsets/narrative_engineering_2026.pl', 'narrative_engineering_2026', 'NARRATIVE_ENGINEERING_2026', 198).
+test_case('testsets/new_civilizational_rope.pl', 'decentralized_infrastructure_rope', 'NEW_CIVILIZATIONAL_ROPE', 199).
+test_case('testsets/newtons_method_convergence.pl', 'newton_era', 'NEWTONS_METHOD_CONVERGENCE', 200).
+test_case('testsets/no_cloning_theorem.pl', 'no_cloning_interval', 'NO_CLONING_THEOREM', 201).
+test_case('testsets/noethers_theorem_symmetry.pl', 'noether_era', 'NOETHERS_THEOREM_SYMMETRY', 202).
+test_case('testsets/nonstandard_arithmetic_models.pl', 'skolem_era', 'NONSTANDARD_ARITHMETIC_MODELS', 203).
+test_case('testsets/omelet_perfection_complexity.pl', 'omelet_perfection_interval', 'OMELET_PERFECTION_COMPLEXITY', 204).
+test_case('testsets/open_source_commons.pl', 'open_source_commons', 'OPEN_SOURCE_COMMONS', 205).
+test_case('testsets/openbsd_netiquette_protocol.pl', 'openbsd_netiquette_protocol', 'OPENBSD_NETIQUETTE_PROTOCOL', 206).
+test_case('testsets/other_peoples_troubles_2026.pl', 'other_peoples_troubles_2026', 'OTHER_PEOPLES_TROUBLES_2026', 207).
+test_case('testsets/overton_window.pl', 'overton_interval', 'OVERTON_WINDOW', 208).
+test_case('testsets/p_vs_np.pl', 'p_vs_np_interval', 'P_VS_NP', 209).
+test_case('testsets/pareto_principle.pl', 'pareto_principle', 'PARETO_PRINCIPLE', 210).
+test_case('testsets/peano_curve_mapping.pl', 'peano_era', 'PEANO_CURVE_MAPPING', 211).
+test_case('testsets/permissive_software_licensing.pl', 'permissive_software_licensing', 'PERMISSIVE_SOFTWARE_LICENSING', 212).
+test_case('testsets/planetary_diet_constraint_2026.pl', 'planetary_diet_constraint_2026', 'PLANETARY_DIET_CONSTRAINT_2026', 213).
+test_case('testsets/platform_cooperativism_governance.pl', 'platform_cooperativism_governance', 'PLATFORM_COOPERATIVISM_GOVERNANCE', 214).
+test_case('testsets/poincare_conjucture.pl', 'poincare_era', 'POINCARE_CONJUCTURE', 215).
+test_case('testsets/postman_survival_protocol.pl', 'postman_survival_interval', 'POSTMAN_SURVIVAL_PROTOCOL', 216).
+test_case('testsets/prime_number_theorem.pl', 'pnt_era', 'PRIME_NUMBER_THEOREM', 217).
+test_case('testsets/private_identity_integration.pl', 'private_identity_integration', 'PRIVATE_IDENTITY_INTEGRATION', 218).
+test_case('testsets/project_vault_2026.pl', 'project_vault_2026', 'PROJECT_VAULT_2026', 219).
+test_case('testsets/proof_of_work_consensus.pl', 'proof_of_work_consensus', 'PROOF_OF_WORK_CONSENSUS', 220).
+test_case('testsets/public_domain_commons.pl', 'public_domain_commons', 'PUBLIC_DOMAIN_COMMONS', 221).
+test_case('testsets/pythagorean_theorem_geometric_constancy.pl', 'pythagorean_era', 'PYTHAGOREAN_THEOREM_GEOMETRIC_CONSTANCY', 222).
+test_case('testsets/quantum_entanglement_protocol.pl', 'interstellar_quantum_link', 'QUANTUM_ENTANGLEMENT_PROTOCOL', 223).
+test_case('testsets/quantum_nonlocality_2026.pl', 'quantum_nonlocality_2026', 'QUANTUM_NONLOCALITY_2026', 224).
+test_case('testsets/quine_self_replication.pl', 'quine_era', 'QUINE_SELF_REPLICATION', 225).
+test_case('testsets/qwerty_vs_dvorak.pl', 'qwerty_lockin_interval', 'QWERTY_VS_DVORAK', 226).
+test_case('testsets/rare_earth_coop_2026.pl', 'rare_earth_coop_2026', 'RARE_EARTH_COOP_2026', 227).
+test_case('testsets/reciprocity_laws_math.pl', 'reciprocity_laws_math', 'RECIPROCITY_LAWS_MATH', 228).
+test_case('testsets/relativity_of_simultaneity.pl', 'relativity_of_simultaneity', 'RELATIVITY_OF_SIMULTANEITY', 229).
+test_case('testsets/relativity_physical_invariance.pl', 'relativity_physical_invariance', 'RELATIVITY_PHYSICAL_INVARIANCE', 230).
+test_case('testsets/rfc9293_interoperability.pl', 'tcp_rfc9293_interoperability', 'RFC9293_INTEROPERABILITY', 231).
+test_case('testsets/rfc9293_state_machine.pl', 'rfc9293_state_machine', 'RFC9293_STATE_MACHINE', 232).
+test_case('testsets/rices_theorem_undecidability.pl', 'rices_era', 'RICES_THEOREM_UNDECIDABILITY', 233).
+test_case('testsets/riot_incentive_loop_2026.pl', 'riot_incentive_loop_2026', 'RIOT_INCENTIVE_LOOP_2026', 234).
+test_case('testsets/rogue_wave_control_2026.pl', 'rogue_wave_control_2026', 'ROGUE_WAVE_CONTROL_2026', 235).
+test_case('testsets/rotmigration_decision_threshold.pl', 'migration_theory_review', 'ROTMIGRATION_DECISION_THRESHOLD', 236).
+test_case('testsets/s1_visa.pl', 'visa_ipo_window', 'S1_VISA', 237).
+test_case('testsets/s1_visa_judgment_sharing_agreement.pl', 'visa_litigation_ringfencing', 'S1_VISA_JUDGMENT_SHARING_AGREEMENT', 238).
+test_case('testsets/sadhu_integrity_protocol.pl', 'sadhu_integrity_protocol', 'SADHU_INTEGRITY_PROTOCOL', 239).
+test_case('testsets/sat_csp_complexity.pl', 'sat_csp_interval', 'SAT_CSP_COMPLEXITY', 240).
+test_case('testsets/shannon_entropy_limit.pl', 'shannon_entropy_limit', 'SHANNON_ENTROPY_LIMIT', 241).
+test_case('testsets/shitty_feedback_handling.pl', 'shitty_feedback_handling', 'SHITTY_FEEDBACK_HANDLING', 242).
+test_case('testsets/silver_scarcity_mountain_2026.pl', 'silver_scarcity_2026', 'SILVER_SCARCITY_MOUNTAIN_2026', 243).
+test_case('testsets/skills_based_hiring.pl', 'skills_based_hiring', 'SKILLS_BASED_HIRING', 244).
+test_case('testsets/skolems_paradox.pl', 'skolems_paradox_interval', 'SKOLEMS_PARADOX', 245).
+test_case('testsets/social_narrative_casting.pl', 'social_narrative_casting', 'SOCIAL_NARRATIVE_CASTING', 246).
+test_case('testsets/solar_system_weirdness.pl', 'solar_system_weirdness', 'SOLAR_SYSTEM_WEIRDNESS', 247).
+test_case('testsets/somatic_focusing_awareness.pl', 'somatic_focusing_awareness', 'SOMATIC_FOCUSING_AWARENESS', 248).
+test_case('testsets/sorites_paradox.pl', 'sorites_interval', 'SORITES_PARADOX', 249).
+test_case('testsets/south_china_sea_arbitration_2016_2026.pl', 'scs_legal_era', 'SOUTH_CHINA_SEA_ARBITRATION_2016_2026', 250).
+test_case('testsets/stable_marriage_coordination.pl', 'matching_theory_era', 'STABLE_MARRIAGE_COORDINATION', 251).
+test_case('testsets/strange_attractor_dynamics.pl', 'strange_attractor_dynamics', 'STRANGE_ATTRACTOR_DYNAMICS', 252).
+test_case('testsets/sts86_ascent_checklist.pl', 'sts86_ascent_checklist', 'STS86_ASCENT_CHECKLIST', 253).
+test_case('testsets/sturgeons_law.pl', 'sturgeon_interval', 'STURGEONS_LAW', 254).
+test_case('testsets/suslin_hypothesis_undecidability.pl', 'suslin_era', 'SUSLIN_HYPOTHESIS_UNDECIDABILITY', 255).
+test_case('testsets/sylow_theorems_group_theory.pl', 'sylow_era', 'SYLOW_THEOREMS_GROUP_THEORY', 256).
+test_case('testsets/tarski_undefinability.pl', 'tarski_interval', 'TARSKI_UNDEFINABILITY', 257).
+test_case('testsets/thai_article_112_mountain.pl', 'thai_article_112_mountain', 'THAI_ARTICLE_112_MOUNTAIN', 258).
+test_case('testsets/three_body_unpredicability.pl', 'celestial_mechanics_era', 'THREE_BODY_UNPREDICABILITY', 259).
+test_case('testsets/trade_secret_law.pl', 'trade_secret_law', 'TRADE_SECRET_LAW', 260).
+test_case('testsets/transient_event_detection.pl', 'transient_event_detection', 'TRANSIENT_EVENT_DETECTION', 261).
+test_case('testsets/traveling_salesperson_problem.pl', 'traveling_salesperson_problem', 'TRAVELING_SALESPERSON_PROBLEM', 262).
+test_case('testsets/udhr_1946.pl', 'un_era', 'UDHR_1946', 263).
+test_case('testsets/ulysses_chp01.pl', 'ulysses_tower_1904', 'ULYSSES_CHP01', 264).
+test_case('testsets/ulysses_chp02.pl', 'ulysses_school_1904', 'ULYSSES_CHP02', 265).
+test_case('testsets/ulysses_chp03.pl', 'ulysses_proteus_1904', 'ULYSSES_CHP03', 266).
+test_case('testsets/ulysses_chp04.pl', 'ulysses_calypso_1904', 'ULYSSES_CHP04', 267).
+test_case('testsets/ulysses_chp05.pl', 'ulysses_lotus_1904', 'ULYSSES_CHP05', 268).
+test_case('testsets/ulysses_chp06.pl', 'ulysses_hades_1904', 'ULYSSES_CHP06', 269).
+test_case('testsets/ulysses_chp07.pl', 'ulysses_aeolus_1904', 'ULYSSES_CHP07', 270).
+test_case('testsets/ulysses_chp08.pl', 'ulysses_lestrygonians_1904', 'ULYSSES_CHP08', 271).
+test_case('testsets/ulysses_chp09.pl', 'ulysses_scylla_1904', 'ULYSSES_CHP09', 272).
+test_case('testsets/ulysses_chp10.pl', 'ulysses_rocks_1904', 'ULYSSES_CHP10', 273).
+test_case('testsets/ulysses_chp11.pl', 'ulysses_sirens_1904', 'ULYSSES_CHP11', 274).
+test_case('testsets/ulysses_chp12.pl', 'ulysses_cyclops_1904', 'ULYSSES_CHP12', 275).
+test_case('testsets/ulysses_chp13.pl', 'ulysses_nausicaa_1904', 'ULYSSES_CHP13', 276).
+test_case('testsets/ulysses_chp14.pl', 'ulysses_oxen_1904', 'ULYSSES_CHP14', 277).
+test_case('testsets/ulysses_chp15.pl', 'ulysses_circe_1904', 'ULYSSES_CHP15', 278).
+test_case('testsets/ulysses_chp16.pl', 'ulysses_eumaeus_1904', 'ULYSSES_CHP16', 279).
+test_case('testsets/ulysses_chp17.pl', 'ulysses_ithaca_1904', 'ULYSSES_CHP17', 280).
+test_case('testsets/ulysses_chp18.pl', 'ulysses_penelope_1904', 'ULYSSES_CHP18', 281).
+test_case('testsets/unclos_2026.pl', 'unclos_era', 'UNCLOS_2026', 282).
+test_case('testsets/universal_mathematics_communication.pl', 'scientific_consensus_period', 'UNIVERSAL_MATHEMATICS_COMMUNICATION', 283).
+test_case('testsets/value_alignment_drift.pl', 'value_alignment_drift', 'VALUE_ALIGNMENT_DRIFT', 284).
+test_case('testsets/van_der_waerden_theorem.pl', 'van_der_waerden_interval', 'VAN_DER_WAERDEN_THEOREM', 285).
+test_case('testsets/vertebrate_turning_point_2026.pl', 'vertebrate_genetics_2026', 'VERTEBRATE_TURNING_POINT_2026', 286).
+test_case('testsets/vienna_quantum_superposition_2026.pl', 'vienna_quantum_superposition_2026', 'VIENNA_QUANTUM_SUPERPOSITION_2026', 287).
+test_case('testsets/viral_transmission_rates.pl', 'viral_transmission_rates', 'VIRAL_TRANSMISSION_RATES', 288).
+test_case('testsets/visibility_bias_governance.pl', 'visibility_bias_governance', 'VISIBILITY_BIAS_GOVERNANCE', 289).
+test_case('testsets/whitehead_problem_undecidability.pl', 'whitehead_era', 'WHITEHEAD_PROBLEM_UNDECIDABILITY', 290).
+test_case('testsets/wikipedia_crowdsourcing_2026.pl', 'wikipedia_crowdsourcing_2026', 'WIKIPEDIA_CROWDSOURCING_2026', 291).
+test_case('testsets/wikipedia_notability_requirement_2026.pl', 'wikipedia_notability_requirement_2026', 'WIKIPEDIA_NOTABILITY_REQUIREMENT_2026', 292).
+test_case('testsets/winners_curse.pl', 'winners_curse', 'WINNERS_CURSE', 293).
+test_case('testsets/winter_olympics_2026.pl', 'milano_cortina_2026', 'WINTER_OLYMPICS_2026', 294).
+test_case('testsets/xi_mao_ideological_centralization.pl', 'xi_mao_ideological_centralization', 'XI_MAO_IDEOLOGICAL_CENTRALIZATION', 295).
+test_case('testsets/zipfs_law.pl', 'zipfs_law', 'ZIPFS_LAW', 296).
+test_case('testsets/zombie_reasoning_2026.pl', 'zombie_reasoning_2026', 'ZOMBIE_REASONING_2026', 297).
+
+% --- Test Suite Runner ---
 run_dynamic_suite :-
     retractall(test_passed(_)),
-    retractall(test_failed(_, _)),
+    retractall(test_failed(_, _, _)),
     writeln('--- STARTING DYNAMIC VALIDATION ---'),
-    test_file('../prolog/testsets/26usc469.pl', '26usc469', '26USC469', 1),
-    test_file('../prolog/testsets/26usc469_real_estate_exemption.pl', '26usc469_real_estate_exemption', '26USC469_REAL_ESTATE_EXEMPTION', 2),
-    test_file('../prolog/testsets/academic_peer_review_gatekeeping.pl', 'academic_peer_review_gatekeeping', 'ACADEMIC_PEER_REVIEW_GATEKEEPING', 3),
-    test_file('../prolog/testsets/academic_tenure_system.pl', 'academic_tenure_system', 'ACADEMIC_TENURE_SYSTEM', 4),
-    test_file('../prolog/testsets/ad_fus_coordination.pl', 'ad_fus_coordination', 'AD_FUS_COORDINATION', 5),
-    test_file('../prolog/testsets/ad_synaptic_deficit.pl', 'ad_synaptic_deficit', 'AD_SYNAPTIC_DEFICIT', 6),
-    test_file('../prolog/testsets/adverse_possession.pl', 'adverse_possession_interval', 'ADVERSE_POSSESSION', 7),
-    test_file('../prolog/testsets/advice_as_dangerous_gift.pl', 'advice_as_dangerous_gift', 'ADVICE_AS_DANGEROUS_GIFT', 8),
-    test_file('../prolog/testsets/aging_well_assessment.pl', 'aging_longevity_tests', 'AGING_WELL_ASSESSMENT', 9),
-    test_file('../prolog/testsets/ai_cognitive_diversity_arbitrage.pl', 'ai_cognitive_diversity_arbitrage', 'AI_COGNITIVE_DIVERSITY_ARBITRAGE', 10),
-    test_file('../prolog/testsets/ai_driven_surveillance_sensor_layer.pl', 'ai_driven_surveillance_sensor_layer', 'AI_DRIVEN_SURVEILLANCE_SENSOR_LAYER', 11),
-    test_file('../prolog/testsets/ai_edu_decentralization.pl', 'ai_edu_decentralization', 'AI_EDU_DECENTRALIZATION', 12),
-    test_file('../prolog/testsets/ai_evaluators_matching.pl', 'ai_evaluators_matching', 'AI_EVALUATORS_MATCHING', 13),
-    test_file('../prolog/testsets/ai_professional_displacement.pl', 'ai_professional_displacement', 'AI_PROFESSIONAL_DISPLACEMENT', 14),
-    test_file('../prolog/testsets/ai_task_horizon_reliability.pl', 'ai_task_horizon_reliability', 'AI_TASK_HORIZON_RELIABILITY', 15),
-    test_file('../prolog/testsets/algorithmic_bias.pl', 'algorithmic_bias', 'ALGORITHMIC_BIAS', 16),
-    test_file('../prolog/testsets/amish_technological_renunciation.pl', 'amish_technological_renunciation', 'AMISH_TECHNOLOGICAL_RENUNCIATION', 17),
-    test_file('../prolog/testsets/ancestral_pueblo_hydrology.pl', 'ancestral_pueblo_hydrology', 'ANCESTRAL_PUEBLO_HYDROLOGY', 18),
-    test_file('../prolog/testsets/ancient_grudge_verona.pl', 'ancient_grudge_verona', 'ANCIENT_GRUDGE_VERONA', 19),
-    test_file('../prolog/testsets/antifragility.pl', 'antifragility', 'ANTIFRAGILITY', 20),
-    test_file('../prolog/testsets/apartheid_nuclear_program.pl', 'apartheid_nuclear_program', 'APARTHEID_NUCLEAR_PROGRAM', 21),
-    test_file('../prolog/testsets/arctic_geopolitical_flashpoint.pl', 'arctic_geopolitical_flashpoint', 'ARCTIC_GEOPOLITICAL_FLASHPOINT', 22),
-    test_file('../prolog/testsets/arrows_impossibility_theorem.pl', 'arrows_era', 'ARROWS_IMPOSSIBILITY_THEOREM', 23),
-    test_file('../prolog/testsets/asce_7_22_seismic_design.pl', 'asce_cycle_22', 'ASCE_7_22_SEISMIC_DESIGN', 24),
-    test_file('../prolog/testsets/asshole_filter_2015.pl', 'asshole_filter_2015', 'ASSHOLE_FILTER_2015', 25),
-    test_file('../prolog/testsets/astm_d638_tensile_testing.pl', 'industrial_testing_regime', 'ASTM_D638_TENSILE_TESTING', 26),
-    test_file('../prolog/testsets/authoritarian_power_paradox.pl', 'authoritarian_power_paradox', 'AUTHORITARIAN_POWER_PARADOX', 27),
-    test_file('../prolog/testsets/automatic_enrollment_defaults.pl', 'automatic_enrollment_defaults', 'AUTOMATIC_ENROLLMENT_DEFAULTS', 28),
-    test_file('../prolog/testsets/availability_heuristic.pl', 'availability_heuristic', 'AVAILABILITY_HEURISTIC', 29),
-    test_file('../prolog/testsets/axiom_of_choice_determinacy.pl', 'ac_era', 'AXIOM_OF_CHOICE_DETERMINACY', 30),
-    test_file('../prolog/testsets/banach_fixed_point.pl', 'banach_era', 'BANACH_FIXED_POINT', 31),
-    test_file('../prolog/testsets/banach_tarski_paradox.pl', 'banach_tarski_era', 'BANACH_TARSKI_PARADOX', 32),
-    test_file('../prolog/testsets/bap_of_pigs_operational_silo.pl', 'operation_zapata_timeline', 'BAP_OF_PIGS_OPERATIONAL_SILO', 33),
-    test_file('../prolog/testsets/base_pair_complementarity.pl', 'dna_structure_discovery', 'BASE_PAIR_COMPLEMENTARITY', 34),
-    test_file('../prolog/testsets/basel_problem_convergence.pl', 'basel_era', 'BASEL_PROBLEM_CONVERGENCE', 35),
-    test_file('../prolog/testsets/bedouin_sedentary_transition.pl', 'bedouin_sedentary_transition', 'BEDOUIN_SEDENTARY_TRANSITION', 36),
-    test_file('../prolog/testsets/beief_argument_conclusion.pl', 'belief_argument_conclusion_interval', 'BEIEF_ARGUMENT_CONCLUSION', 37),
-    test_file('../prolog/testsets/berkshire_compounding_culture.pl', 'berkshire_compounding_culture', 'BERKSHIRE_COMPOUNDING_CULTURE', 38),
-    test_file('../prolog/testsets/big_data_astrophysics_arbitrage.pl', 'big_data_astrophysics_arbitrage', 'BIG_DATA_ASTROPHYSICS_ARBITRAGE', 39),
-    test_file('../prolog/testsets/biological_curiosity.pl', 'biological_curiosity', 'BIOLOGICAL_CURIOSITY', 40),
-    test_file('../prolog/testsets/bip_narrative_illusion.pl', 'bip_narrative_illusion_interval', 'BIP_NARRATIVE_ILLUSION', 41),
-    test_file('../prolog/testsets/birthday_paradox_collison.pl', 'birthday_era', 'BIRTHDAY_PARADOX_COLLISON', 42),
-    test_file('../prolog/testsets/blackstone_carried_interest_taxation.pl', 'blackstone_ipo_restructuring', 'BLACKSTONE_CARRIED_INTEREST_TAXATION', 43),
-    test_file('../prolog/testsets/blackstone_conflicts_of_interest.pl', 'blackstone_conflict_era', 'BLACKSTONE_CONFLICTS_OF_INTEREST', 44),
-    test_file('../prolog/testsets/blackstone_smd_control.pl', 'blackstone_smd_control', 'BLACKSTONE_SMD_CONTROL', 45),
-    test_file('../prolog/testsets/blackstone_tax_receiveable_agreement.pl', 'blackstone_tra_life', 'BLACKSTONE_TAX_RECEIVEABLE_AGREEMENT', 46),
-    test_file('../prolog/testsets/brain_network_paradigm_2026.pl', 'brain_network_paradigm_2026', 'BRAIN_NETWORK_PARADIGM_2026', 47),
-    test_file('../prolog/testsets/broke_vs_poor_grocery_math.pl', 'broke_vs_poor_grocery_math', 'BROKE_VS_POOR_GROCERY_MATH', 48),
-    test_file('../prolog/testsets/brouwer_fixed_point.pl', 'brouwer_era', 'BROUWER_FIXED_POINT', 49),
-    test_file('../prolog/testsets/buffons_needle_pi_estimation.pl', 'buffon_era', 'BUFFONS_NEEDLE_PI_ESTIMATION', 50),
-    test_file('../prolog/testsets/burali_forte_paradox.pl', 'burali_forti_interval', 'BURALI_FORTE_PARADOX', 51),
-    test_file('../prolog/testsets/burden_of_proof_engineering_safety.pl', 'challenger_launch_decision', 'BURDEN_OF_PROOF_ENGINEERING_SAFETY', 52),
-    test_file('../prolog/testsets/burden_of_proof_legal_criminal.pl', 'criminal_trial_sequence', 'BURDEN_OF_PROOF_LEGAL_CRIMINAL', 53),
-    test_file('../prolog/testsets/burden_of_proof_scientific_empirical.pl', 'scientific_revolution_current', 'BURDEN_OF_PROOF_SCIENTIFIC_EMPIRICAL', 54),
-    test_file('../prolog/testsets/bushman_money_magic.pl', 'bushman_money_magic_interval', 'BUSHMAN_MONEY_MAGIC', 55),
-    test_file('../prolog/testsets/busy_beaver_noncomputability.pl', 'busy_beaver_era', 'BUSY_BEAVER_NONCOMPUTABILITY', 56),
-    test_file('../prolog/testsets/cantor_set_topology.pl', 'cantor_set_topology', 'CANTOR_SET_TOPOLOGY', 57),
-    test_file('../prolog/testsets/cap_theorem.pl', 'cap_theorem_interval', 'CAP_THEOREM', 58),
-    test_file('../prolog/testsets/carbon_credit_markets_2026.pl', 'carbon_credit_markets_2026_int', 'CARBON_CREDIT_MARKETS_2026', 59),
-    test_file('../prolog/testsets/carrying_capacity.pl', 'carrying_capacity_interval', 'CARRYING_CAPACITY', 60),
-    test_file('../prolog/testsets/castration_longevity_choice.pl', 'castration_longevity_choice', 'CASTRATION_LONGEVITY_CHOICE', 61),
-    test_file('../prolog/testsets/cbdc_implementation.pl', 'cbdc_deployment', 'CBDC_IMPLEMENTATION', 62),
-    test_file('../prolog/testsets/central_limit_theorem_convergence.pl', 'clt_era', 'CENTRAL_LIMIT_THEOREM_CONVERGENCE', 63),
-    test_file('../prolog/testsets/chaitins_omega_undecidability.pl', 'chaitin_era', 'CHAITINS_OMEGA_UNDECIDABILITY', 64),
-    test_file('../prolog/testsets/challenger_o_ring_integrity.pl', 'challenger_o_ring_integrity', 'CHALLENGER_O_RING_INTEGRITY', 65),
-    test_file('../prolog/testsets/china_critical_mineral_chokepoint.pl', 'china_critical_mineral_chokepoint', 'CHINA_CRITICAL_MINERAL_CHOKEPOINT', 66),
-    test_file('../prolog/testsets/china_taiwan_reunification_mandate.pl', 'rejuvenation_centenary_cycle', 'CHINA_TAIWAN_REUNIFICATION_MANDATE', 67),
-    test_file('../prolog/testsets/choice_architecture_design.pl', 'rope_design', 'CHOICE_ARCHITECTURE_DESIGN', 68),
-    test_file('../prolog/testsets/church_turing_thesis.pl', 'church_turing_era', 'CHURCH_TURING_THESIS', 69),
-    test_file('../prolog/testsets/cia_fbi_legal_wall.pl', 'pre_911_silo_regime', 'CIA_FBI_LEGAL_WALL', 70),
-    test_file('../prolog/testsets/cinderella_midnight_deadline.pl', 'midnight_deadline_period', 'CINDERELLA_MIDNIGHT_DEADLINE', 71),
-    test_file('../prolog/testsets/click_chemistry_paradigm_2026.pl', 'click_chemistry_paradigm_2026', 'CLICK_CHEMISTRY_PARADIGM_2026', 72),
-    test_file('../prolog/testsets/climate_attribution_2026.pl', 'climate_attribution_2026', 'CLIMATE_ATTRIBUTION_2026', 73),
-    test_file('../prolog/testsets/climate_target_one_point_five.pl', 'climate_target_one_point_five', 'CLIMATE_TARGET_ONE_POINT_FIVE', 74),
-    test_file('../prolog/testsets/cloudflare_dual_class_asymmetry.pl', 'cloudflare_dual_class_asymmetry', 'CLOUDFLARE_DUAL_CLASS_ASYMMETRY', 75),
-    test_file('../prolog/testsets/cobra_effect.pl', 'cobra_effect', 'COBRA_EFFECT', 76),
-    test_file('../prolog/testsets/cognitive_diversity_arbitrage.pl', 'cognitive_diversity_arbitrage', 'COGNITIVE_DIVERSITY_ARBITRAGE', 77),
-    test_file('../prolog/testsets/cognitive_induction_gap.pl', 'cognitive_induction_gap', 'COGNITIVE_INDUCTION_GAP', 78),
-    test_file('../prolog/testsets/cognitive_mimicry_arbitrage.pl', 'cognitive_mimicry_arbitrage', 'COGNITIVE_MIMICRY_ARBITRAGE', 79),
-    test_file('../prolog/testsets/cognitive_surrender_to_system_3.pl', 'system_3_emergence', 'COGNITIVE_SURRENDER_TO_SYSTEM_3', 80),
-    test_file('../prolog/testsets/coinbase_crypto_volatility.pl', 'coinbase_ipo_window', 'COINBASE_CRYPTO_VOLATILITY', 81),
-    test_file('../prolog/testsets/coinbase_regulatory_uncertainty.pl', 'coinbase_regulatory_uncertainty', 'COINBASE_REGULATORY_UNCERTAINTY', 82),
-    test_file('../prolog/testsets/collatz_conjecture_determinism.pl', 'collatz_era', 'COLLATZ_CONJECTURE_DETERMINISM', 83),
-    test_file('../prolog/testsets/college_admissions_market.pl', 'college_admissions_market', 'COLLEGE_ADMISSIONS_MARKET', 84),
-    test_file('../prolog/testsets/colorado_sbe_decentralization_friction.pl', 'colorado_sbe_decentralization_friction', 'COLORADO_SBE_DECENTRALIZATION_FRICTION', 85),
-    test_file('../prolog/testsets/columbia_2026_elections.pl', 'colombia_2026_presidential_election', 'COLUMBIA_2026_ELECTIONS', 86),
-    test_file('../prolog/testsets/comitatus_bond.pl', 'comitatus_era', 'COMITATUS_BOND', 87),
-    test_file('../prolog/testsets/compounding_logic.pl', 'compounding_logic', 'COMPOUNDING_LOGIC', 88),
-    test_file('../prolog/testsets/confirmation_bias.pl', 'confirmation_bias_interval', 'CONFIRMATION_BIAS', 89),
-    test_file('../prolog/testsets/constitutional_consecration.pl', 'gettysburg_address_analysis', 'CONSTITUTIONAL_CONSECRATION', 90),
-    test_file('../prolog/testsets/constitutional_supremacy.pl', 'constitutional_supremacy', 'CONSTITUTIONAL_SUPREMACY', 91),
-    test_file('../prolog/testsets/continuum_hypothesis_undecidability.pl', 'continuum_era', 'CONTINUUM_HYPOTHESIS_UNDECIDABILITY', 92),
-    test_file('../prolog/testsets/conversational_dogmas_interuption.pl', 'conversational_dogmas_interruption', 'CONVERSATIONAL_DOGMAS_INTERUPTION', 93),
-    test_file('../prolog/testsets/conways_game_of_life_dynamics.pl', 'conway_era', 'CONWAYS_GAME_OF_LIFE_DYNAMICS', 94),
-    test_file('../prolog/testsets/copyleft_viral_licensing.pl', 'copyleft_viral_licensing', 'COPYLEFT_VIRAL_LICENSING', 95),
-    test_file('../prolog/testsets/copyright_protection.pl', 'copyright_protection', 'COPYRIGHT_PROTECTION', 96),
-    test_file('../prolog/testsets/cost_of_observation.pl', 'evolutionary_pressure_01', 'COST_OF_OBSERVATION', 97),
-    test_file('../prolog/testsets/countable_infinity_cardinality.pl', 'countable_infinity_cardinality', 'COUNTABLE_INFINITY_CARDINALITY', 98),
-    test_file('../prolog/testsets/couples_residency_match.pl', 'couples_residency_match', 'COUPLES_RESIDENCY_MATCH', 99),
-    test_file('../prolog/testsets/cow_field_poop.pl', 'cow_field_poop', 'COW_FIELD_POOP', 100),
-    test_file('../prolog/testsets/creative_commons_licensing.pl', 'creative_commons_licensing', 'CREATIVE_COMMONS_LICENSING', 101),
-    test_file('../prolog/testsets/crispr_genomic_rewrite_2026.pl', 'crispr_genomic_rewrite_2026', 'CRISPR_GENOMIC_REWRITE_2026', 102),
-    test_file('../prolog/testsets/cuba_mandatrophic_collapse.pl', 'cuba_blackout_cycle', 'CUBA_MANDATROPHIC_COLLAPSE', 103),
-    test_file('../prolog/testsets/cuban_missile_crisis_excomm_delibration.pl', 'thirteen_days_crisis', 'CUBAN_MISSILE_CRISIS_EXCOMM_DELIBRATION', 104),
-    test_file('../prolog/testsets/currys_paradox.pl', 'currys_paradox_interval', 'CURRYS_PARADOX', 105),
-    test_file('../prolog/testsets/damped_harmonics.pl', 'damped_harmonics', 'DAMPED_HARMONICS', 106),
-    test_file('../prolog/testsets/dark_patterns_manipulation.pl', 'dark_patterns_manipulation', 'DARK_PATTERNS_MANIPULATION', 107),
-    test_file('../prolog/testsets/dead_sea_effect.pl', 'dead_sea_effect', 'DEAD_SEA_EFFECT', 108),
-    test_file('../prolog/testsets/deferential_realism_core.pl', 'dr_recursive_int', 'DEFERENTIAL_REALISM_CORE', 109),
-    test_file('../prolog/testsets/digital_credentialing_verification.pl', 'credentialing_shift_2026', 'DIGITAL_CREDENTIALING_VERIFICATION', 110),
-    test_file('../prolog/testsets/dionysaic_frenzy.pl', 'dionysiac_frenzy_interval', 'DIONYSAIC_FRENZY', 111),
-    test_file('../prolog/testsets/dldr_information_policy.pl', 'dldr_policy_interval', 'DLDR_INFORMATION_POLICY', 112),
-    test_file('../prolog/testsets/dunbars_number.pl', 'dunbar_interval', 'DUNBARS_NUMBER', 113),
-    test_file('../prolog/testsets/dunning_kruger_effect.pl', 'dunning_kruger_effect', 'DUNNING_KRUGER_EFFECT', 114),
-    test_file('../prolog/testsets/e2ee_digital_privacy_2026.pl', 'e2ee_digital_privacy_2026', 'E2EE_DIGITAL_PRIVACY_2026', 115),
-    test_file('../prolog/testsets/educational_unbundling_implementation.pl', 'implementation_window_2026', 'EDUCATIONAL_UNBUNDLING_IMPLEMENTATION', 116),
-    test_file('../prolog/testsets/electrification_scale_2026.pl', 'electrification_scale_2026', 'ELECTRIFICATION_SCALE_2026', 117),
-    test_file('../prolog/testsets/elencher_identity_transformation.pl', 'elencher_identity_transformation', 'ELENCHER_IDENTITY_TRANSFORMATION', 118),
-    test_file('../prolog/testsets/empty_tomb_transformation.pl', 'empty_tomb_transformation', 'EMPTY_TOMB_TRANSFORMATION', 119),
-    test_file('../prolog/testsets/emrgency_medicine_clinical_guidelines.pl', 'em_practice_v2', 'EMRGENCY_MEDICINE_CLINICAL_GUIDELINES', 120),
-    test_file('../prolog/testsets/endowment_effect.pl', 'endowment_interval', 'ENDOWMENT_EFFECT', 121),
-    test_file('../prolog/testsets/epigenetics_complexity_2026.pl', 'epigenetics_complexity_2026', 'EPIGENETICS_COMPLEXITY_2026', 122),
-    test_file('../prolog/testsets/ergo_autolykos_asic_resistance.pl', 'ergo_autolykos_asic_resistance', 'ERGO_AUTOLYKOS_ASIC_RESISTANCE', 123),
-    test_file('../prolog/testsets/ergo_dexy_gold_protocol.pl', 'dexy_gold_interval', 'ERGO_DEXY_GOLD_PROTOCOL', 124),
-    test_file('../prolog/testsets/ergo_lets_protocol.pl', 'ergo_lets_interval', 'ERGO_LETS_PROTOCOL', 125),
-    test_file('../prolog/testsets/ergo_mixer_protocol.pl', 'ergo_mixer_protocol', 'ERGO_MIXER_PROTOCOL', 126),
-    test_file('../prolog/testsets/ergo_nipopows.pl', 'ergo_nipopows', 'ERGO_NIPOPOWS', 127),
-    test_file('../prolog/testsets/ergo_rosen_bridge_protocol.pl', 'rosen_bridge_interval', 'ERGO_ROSEN_BRIDGE_PROTOCOL', 128),
-    test_file('../prolog/testsets/ergo_sig_usd_protocol.pl', 'sig_usd_interval', 'ERGO_SIG_USD_PROTOCOL', 129),
-    test_file('../prolog/testsets/ergo_storage_rent.pl', 'ergo_storage_rent', 'ERGO_STORAGE_RENT', 130),
-    test_file('../prolog/testsets/ergo_storage_rent_mechanism.pl', 'ergo_storage_rent_mechanism', 'ERGO_STORAGE_RENT_MECHANISM', 131),
-    test_file('../prolog/testsets/ergodic_theorems.pl', 'ergodic_interval', 'ERGODIC_THEOREMS', 132),
-    test_file('../prolog/testsets/ergot_grain_poisoning.pl', 'ergot_grain_poisoning_interval', 'ERGOT_GRAIN_POISONING', 133),
-    test_file('../prolog/testsets/euler_characteristic_topology.pl', 'euler_era', 'EULER_CHARACTERISTIC_TOPOLOGY', 134),
-    test_file('../prolog/testsets/exoplanet_habitability_arbitrage.pl', 'exoplanetary_habitability_arbitrage', 'EXOPLANET_HABITABILITY_ARBITRAGE', 135),
-    test_file('../prolog/testsets/exploration_vs_exploitation.pl', 'exploration_vs_exploitation', 'EXPLORATION_VS_EXPLOITATION', 136),
-    test_file('../prolog/testsets/extraordinary_narrative_shift.pl', 'extraordinary_narrative_shift', 'EXTRAORDINARY_NARRATIVE_SHIFT', 137),
-    test_file('../prolog/testsets/factional_instability.pl', 'federalist_10_analysis', 'FACTIONAL_INSTABILITY', 138),
-    test_file('../prolog/testsets/faint_blue_neural_bifurcation.pl', 'faint_blue_neural_bifurcation', 'FAINT_BLUE_NEURAL_BIFURCATION', 139),
-    test_file('../prolog/testsets/fair_use_doctrine.pl', 'fair_use_doctrine', 'FAIR_USE_DOCTRINE', 140),
-    test_file('../prolog/testsets/family_estrangement_ratio.pl', 'family_estrangement_ratio', 'FAMILY_ESTRANGEMENT_RATIO', 141),
-    test_file('../prolog/testsets/family_succession_and_decadence.pl', 'atsumono_period', 'FAMILY_SUCCESSION_AND_DECADENCE', 142),
-    test_file('../prolog/testsets/fast_growing_hierarchy.pl', 'fast_growing_hierarchy', 'FAST_GROWING_HIERARCHY', 143),
-    test_file('../prolog/testsets/feigenbaum_universality.pl', 'feigenbaum_universality', 'FEIGENBAUM_UNIVERSALITY', 144),
-    test_file('../prolog/testsets/finite_pool_of_worry.pl', 'finite_pool_of_worry_interval', 'FINITE_POOL_OF_WORRY', 145),
-    test_file('../prolog/testsets/finite_simple_groups_classification.pl', 'cfsg_era', 'FINITE_SIMPLE_GROUPS_CLASSIFICATION', 146),
-    test_file('../prolog/testsets/fittss_law.pl', 'fittss_law_interval', 'FITTSS_LAW', 147),
-    test_file('../prolog/testsets/fmeca_procedures_1980.pl', 'fmeca_standard_era', 'FMECA_PROCEDURES_1980', 148),
-    test_file('../prolog/testsets/four_color_theorem_topological_bound.pl', 'four_color_era', 'FOUR_COLOR_THEOREM_TOPOLOGICAL_BOUND', 149),
-    test_file('../prolog/testsets/framing_effect.pl', 'framing_effect_interval', 'FRAMING_EFFECT', 150),
-    test_file('../prolog/testsets/frankenstein_creation_hubris.pl', 'frankenstein_creation_hubris', 'FRANKENSTEIN_CREATION_HUBRIS', 151),
-    test_file('../prolog/testsets/fundamental_theorem_of_algebra.pl', 'fta_era', 'FUNDAMENTAL_THEOREM_OF_ALGEBRA', 152),
-    test_file('../prolog/testsets/gale_shapley.pl', 'gale_shapley', 'GALE_SHAPLEY', 153),
-    test_file('../prolog/testsets/galois_theory_symmetry.pl', 'galois_era', 'GALOIS_THEORY_SYMMETRY', 154),
-    test_file('../prolog/testsets/gamblers_ruin_stochastic_extinction.pl', 'ruin_era', 'GAMBLERS_RUIN_STOCHASTIC_EXTINCTION', 155),
-    test_file('../prolog/testsets/gauss_bonnet_topology.pl', 'gauss_bonnet_era', 'GAUSS_BONNET_TOPOLOGY', 156),
-    test_file('../prolog/testsets/generational_replacement_inertia.pl', 'generational_replacement_inertia', 'GENERATIONAL_REPLACEMENT_INERTIA', 157),
-    test_file('../prolog/testsets/genetic_algorithms_evolution.pl', 'genetic_algorithms_evolution', 'GENETIC_ALGORITHMS_EVOLUTION', 158),
-    test_file('../prolog/testsets/genetic_predisposition.pl', 'genetic_predisposition_interval', 'GENETIC_PREDISPOSITION', 159),
-    test_file('../prolog/testsets/germline_regulation_threshold_2026.pl', 'germline_regulation_threshold_2026', 'GERMLINE_REGULATION_THRESHOLD_2026', 160),
-    test_file('../prolog/testsets/gig_economy_algorithmic_managment.pl', 'platform_labor_epoch', 'GIG_ECONOMY_ALGORITHMIC_MANAGMENT', 161),
-    test_file('../prolog/testsets/gilgamesh_mortality_limit.pl', 'gilgamesh_epic_cycle', 'GILGAMESH_MORTALITY_LIMIT', 162),
-    test_file('../prolog/testsets/gita_kurukshetra.pl', 'gita_kurukshetra', 'GITA_KURUKSHETRA', 163),
-    test_file('../prolog/testsets/global_stimulus_spree.pl', 'global_stimulus_spree', 'GLOBAL_STIMULUS_SPREE', 164),
-    test_file('../prolog/testsets/global_water_bankruptcy.pl', 'global_water_bankruptcy', 'GLOBAL_WATER_BANKRUPTCY', 165),
-    test_file('../prolog/testsets/glp1_payload_efficiency_pivot.pl', 'glp1_market_impact_2026', 'GLP1_PAYLOAD_EFFICIENCY_PIVOT', 166),
-    test_file('../prolog/testsets/godels_incompleteness_theorems.pl', 'goedel_era', 'GODELS_INCOMPLETENESS_THEOREMS', 167),
-    test_file('../prolog/testsets/goldbach_conjecture.pl', 'goldbach_era', 'GOLDBACH_CONJECTURE', 168),
-    test_file('../prolog/testsets/golden_handcuffs.pl', 'golden_handcuffs', 'GOLDEN_HANDCUFFS', 169),
-    test_file('../prolog/testsets/goodharts_law.pl', 'goodharts_law_interval', 'GOODHARTS_LAW', 170),
-    test_file('../prolog/testsets/gradient_descent_optimization.pl', 'gradient_descent_optimization', 'GRADIENT_DESCENT_OPTIMIZATION', 171),
-    test_file('../prolog/testsets/graph_coloring_complexity.pl', 'graph_coloring_interval', 'GRAPH_COLORING_COMPLEXITY', 172),
-    test_file('../prolog/testsets/greenland_seizure_trade_war.pl', 'greenland_crisis_2026', 'GREENLAND_SEIZURE_TRADE_WAR', 173),
-    test_file('../prolog/testsets/greshams_law.pl', 'greshams_law', 'GRESHAMS_LAW', 174),
-    test_file('../prolog/testsets/grete_samsa_transition.pl', 'grete_samsa_transition', 'GRETE_SAMSA_TRANSITION', 175),
-    test_file('../prolog/testsets/gs1_gln_identification.pl', 'gln_standard_lifecycle', 'GS1_GLN_IDENTIFICATION', 176),
-    test_file('../prolog/testsets/gs1_standardized_identification.pl', 'gs1_spec_v25', 'GS1_STANDARDIZED_IDENTIFICATION', 177),
-    test_file('../prolog/testsets/halting_problem_undecidability.pl', 'halting_era', 'HALTING_PROBLEM_UNDECIDABILITY', 178),
-    test_file('../prolog/testsets/hamiltonian_path_complexity.pl', 'hamiltonian_path_complexity', 'HAMILTONIAN_PATH_COMPLEXITY', 179),
-    test_file('../prolog/testsets/hammurabi.pl', 'hammurabi_lex_talionis', 'HAMMURABI', 180),
-    test_file('../prolog/testsets/hanlons_razor.pl', 'hanlons_razor', 'HANLONS_RAZOR', 181),
-    test_file('../prolog/testsets/happiness_of_others.pl', 'happiness_of_others', 'HAPPINESS_OF_OTHERS', 182),
-    test_file('../prolog/testsets/harm_principle_liberty.pl', 'on_liberty_analysis', 'HARM_PRINCIPLE_LIBERTY', 183),
-    test_file('../prolog/testsets/harry_potter_liberalism.pl', 'hp_liberalism', 'HARRY_POTTER_LIBERALISM', 184),
-    test_file('../prolog/testsets/hawthorne_effect.pl', 'hawthorne_interval', 'HAWTHORNE_EFFECT', 185),
-    test_file('../prolog/testsets/heisenberg_uncertainty.pl', 'heisenberg_interval', 'HEISENBERG_UNCERTAINTY', 186),
-    test_file('../prolog/testsets/helsinki_bus_theory.pl', 'helsinki_bus_theory', 'HELSINKI_BUS_THEORY', 187),
-    test_file('../prolog/testsets/heuristic_optimization.pl', 'heuristic_optimization', 'HEURISTIC_OPTIMIZATION', 188),
-    test_file('../prolog/testsets/hilberts_hotel_infinity.pl', 'hilberts_hotel_infinity', 'HILBERTS_HOTEL_INFINITY', 189),
-    test_file('../prolog/testsets/hiv_prep_prevention_2026.pl', 'hiv_prep_prevention_2026', 'HIV_PREP_PREVENTION_2026', 190),
-    test_file('../prolog/testsets/hoa_covenants.pl', 'hoa_interval', 'HOA_COVENANTS', 191),
-    test_file('../prolog/testsets/hominin_evolutionary_bottleneck.pl', 'hominin_evolutionary_bottleneck', 'HOMININ_EVOLUTIONARY_BOTTLENECK', 192),
-    test_file('../prolog/testsets/hydra_game.pl', 'hydra_interval', 'HYDRA_GAME', 193),
-    test_file('../prolog/testsets/indexical_relativity_core.pl', 'meta_logic_01', 'INDEXICAL_RELATIVITY_CORE', 194),
-    test_file('../prolog/testsets/individual_revolution_autonomy.pl', 'individual_revolution_autonomy', 'INDIVIDUAL_REVOLUTION_AUTONOMY', 195),
-    test_file('../prolog/testsets/information_foraging_theory.pl', 'information_foraging_theory', 'INFORMATION_FORAGING_THEORY', 196),
-    test_file('../prolog/testsets/inner_model_theory_constraints.pl', 'inner_model_era', 'INNER_MODEL_THEORY_CONSTRAINTS', 197),
-    test_file('../prolog/testsets/innovators_dilemma.pl', 'innovators_dilemma_interval', 'INNOVATORS_DILEMMA', 198),
-    test_file('../prolog/testsets/institutional_mutation_domestication.pl', 'institutional_mutation_domestication', 'INSTITUTIONAL_MUTATION_DOMESTICATION', 199),
-    test_file('../prolog/testsets/insult_wisdom_training.pl', 'insult_wisdom_interval', 'INSULT_WISDOM_TRAINING', 200),
-    test_file('../prolog/testsets/integrated_digital_governance_stack.pl', 'meta_stack_convergence', 'INTEGRATED_DIGITAL_GOVERNANCE_STACK', 201),
-    test_file('../prolog/testsets/iran_mandatrophic_collapse.pl', 'iran_unrest_2025', 'IRAN_MANDATROPHIC_COLLAPSE', 202),
-    test_file('../prolog/testsets/iron_law_of_oligarchy.pl', 'oligarchy_interval', 'IRON_LAW_OF_OLIGARCHY', 203),
-    test_file('../prolog/testsets/japanese_energy_scaffold_2025.pl', 'japan_gx_transition', 'JAPANESE_ENERGY_SCAFFOLD_2025', 204),
-    test_file('../prolog/testsets/jevons_paradox.pl', 'jevons_interval', 'JEVONS_PARADOX', 205),
-    test_file('../prolog/testsets/job_hunt_volume_system_2026.pl', 'job_hunt_volume_system_2026', 'JOB_HUNT_VOLUME_SYSTEM_2026', 206),
-    test_file('../prolog/testsets/keltner_relationship_evaluation.pl', 'keltner_relationship_evaluation', 'KELTNER_RELATIONSHIP_EVALUATION', 207),
-    test_file('../prolog/testsets/khantivadin_radical_patience.pl', 'khantivadin_patience_interval', 'KHANTIVADIN_RADICAL_PATIENCE', 208),
-    test_file('../prolog/testsets/kidney_exchange_market.pl', 'kidney_exchange_market', 'KIDNEY_EXCHANGE_MARKET', 209),
-    test_file('../prolog/testsets/kirby_paris_theorem.pl', 'kirby_paris_interval', 'KIRBY_PARIS_THEOREM', 210),
-    test_file('../prolog/testsets/kjv_great_awakening.pl', 'kjv_great_awakening', 'KJV_GREAT_AWAKENING', 211),
-    test_file('../prolog/testsets/kjv_linguistic_residue.pl', 'kjv_linguistic_residue', 'KJV_LINGUISTIC_RESIDUE', 212),
-    test_file('../prolog/testsets/kjv_puritan_new_world_exit.pl', 'kjv_puritan_new_world_exit', 'KJV_PURITAN_NEW_WORLD_EXIT', 213),
-    test_file('../prolog/testsets/kjv_textual_authority.pl', 'kjv_textual_authority', 'KJV_TEXTUAL_AUTHORITY', 214),
-    test_file('../prolog/testsets/kleene_recursion_theorem.pl', 'kleene_era', 'KLEENE_RECURSION_THEOREM', 215),
-    test_file('../prolog/testsets/landscape_of_fear_2026.pl', 'landscape_of_fear_2026', 'LANDSCAPE_OF_FEAR_2026', 216),
-    test_file('../prolog/testsets/large_cardinals_foundations.pl', 'large_cardinal_era', 'LARGE_CARDINALS_FOUNDATIONS', 217),
-    test_file('../prolog/testsets/law_of_diminishing_returns.pl', 'diminishing_returns_interval', 'LAW_OF_DIMINISHING_RETURNS', 218),
-    test_file('../prolog/testsets/layered_brain_processing.pl', 'layered_brain_processing', 'LAYERED_BRAIN_PROCESSING', 219),
-    test_file('../prolog/testsets/legacy_system_technical_debt.pl', 'software_lifecycle_r7', 'LEGACY_SYSTEM_TECHNICAL_DEBT', 220),
-    test_file('../prolog/testsets/lehman_repo_105.pl', 'lehman_repo_105', 'LEHMAN_REPO_105', 221),
-    test_file('../prolog/testsets/liar_paradox.pl', 'liar_paradox_interval', 'LIAR_PARADOX', 222),
-    test_file('../prolog/testsets/lindy_effect.pl', 'lindy_effect', 'LINDY_EFFECT', 223),
-    test_file('../prolog/testsets/litany_of_the_real.pl', 'litany_of_the_real', 'LITANY_OF_THE_REAL', 224),
-    test_file('../prolog/testsets/lln_convergence.pl', 'lln_era', 'LLN_CONVERGENCE', 225),
-    test_file('../prolog/testsets/lobs_theorem.pl', 'lobs_theorem_interval', 'LOBS_THEOREM', 226),
-    test_file('../prolog/testsets/local_vs_global_optima.pl', 'local_vs_global_optima', 'LOCAL_VS_GLOBAL_OPTIMA', 227),
-    test_file('../prolog/testsets/logistic_map_dynamics.pl', 'logistic_map_era', 'LOGISTIC_MAP_DYNAMICS', 228),
-    test_file('../prolog/testsets/lorenz_attractor_dynamics.pl', 'lorenz_era', 'LORENZ_ATTRACTOR_DYNAMICS', 229),
-    test_file('../prolog/testsets/lowenheim_skolem_theorem.pl', 'lowenheim_skolem_interval', 'LOWENHEIM_SKOLEM_THEOREM', 230),
-    test_file('../prolog/testsets/lsd_microdosing_professional_openness.pl', 'lsd_microdosing_professional_openness', 'LSD_MICRODOSING_PROFESSIONAL_OPENNESS', 231),
-    test_file('../prolog/testsets/lula_hemisphere_2026.pl', 'lula_hemisphere_2026', 'LULA_HEMISPHERE_2026', 232),
-    test_file('../prolog/testsets/magna_carta_liberties.pl', 'magna_carta_liberties', 'MAGNA_CARTA_LIBERTIES', 233),
-    test_file('../prolog/testsets/mandatrophic_margin_collapse.pl', 'mandatrophy_cycle', 'MANDATROPHIC_MARGIN_COLLAPSE', 234),
-    test_file('../prolog/testsets/mandatrophic_margin_collapse_diagnostic.pl', 'mandatrophy_lifecycle', 'MANDATROPHIC_MARGIN_COLLAPSE_DIAGNOSTIC', 235),
-    test_file('../prolog/testsets/marriage_problem.pl', 'optimal_stopping_marriage', 'MARRIAGE_PROBLEM', 236),
-    test_file('../prolog/testsets/mars_rovers_navigational_autonomy.pl', 'mars_autonomy_evolution', 'MARS_ROVERS_NAVIGATIONAL_AUTONOMY', 237),
-    test_file('../prolog/testsets/martian_signal_latency.pl', 'mariner_to_msl_era', 'MARTIAN_SIGNAL_LATENCY', 238),
-    test_file('../prolog/testsets/matching_markets_general.pl', 'matching_markets_general', 'MATCHING_MARKETS_GENERAL', 239),
-    test_file('../prolog/testsets/material_tensile_strength.pl', 'tensile_strength_interval', 'MATERIAL_TENSILE_STRENGTH', 240),
-    test_file('../prolog/testsets/max_flow.pl', 'max_flow_min_cut', 'MAX_FLOW', 241),
-    test_file('../prolog/testsets/mco_unit_system_discontinuity.pl', 'mco_failure_trajectory', 'MCO_UNIT_SYSTEM_DISCONTINUITY', 242),
-    test_file('../prolog/testsets/med_diet_consensus_2026.pl', 'med_diet_consensus_2026', 'MED_DIET_CONSENSUS_2026', 243),
-    test_file('../prolog/testsets/medical_residency_match.pl', 'medical_residency_match', 'MEDICAL_RESIDENCY_MATCH', 244),
-    test_file('../prolog/testsets/medieval_church_hegomony.pl', 'medieval_church_hegemony', 'MEDIEVAL_CHURCH_HEGOMONY', 245),
-    test_file('../prolog/testsets/metamorphosis_samsa.pl', 'samsa_transformation_period', 'METAMORPHOSIS_SAMSA', 246),
-    test_file('../prolog/testsets/micro_robot_electronics_integration.pl', 'ek_robot_integration_cycle', 'MICRO_ROBOT_ELECTRONICS_INTEGRATION', 247),
-    test_file('../prolog/testsets/microbiome_symbiosis.pl', 'microbiome_symbiosis', 'MICROBIOME_SYMBIOSIS', 248),
-    test_file('../prolog/testsets/mil_std_461g_emi_control.pl', 'mil_std_461g_era', 'MIL_STD_461G_EMI_CONTROL', 249),
-    test_file('../prolog/testsets/mil_std_810f_tailoring.pl', 'mil_std_810f_era', 'MIL_STD_810F_TAILORING', 250),
-    test_file('../prolog/testsets/minimax_decision_rule.pl', 'minimax_era', 'MINIMAX_DECISION_RULE', 251),
-    test_file('../prolog/testsets/mirror_of_erised_expectation.pl', 'erised_expectation', 'MIRROR_OF_ERISED_EXPECTATION', 252),
-    test_file('../prolog/testsets/misunderstanding_as_mismatch.pl', 'misunderstanding_as_mismatch', 'MISUNDERSTANDING_AS_MISMATCH', 253),
-    test_file('../prolog/testsets/monetary_regime_transition.pl', 'nixon_shock_1971', 'MONETARY_REGIME_TRANSITION', 254),
-    test_file('../prolog/testsets/monty_hall_conditional_probability.pl', 'probability_paradox_era', 'MONTY_HALL_CONDITIONAL_PROBABILITY', 255),
-    test_file('../prolog/testsets/moores_law.pl', 'moores_law_interval', 'MOORES_LAW', 256),
-    test_file('../prolog/testsets/nasa_faster_better_cheaper.pl', 'fbc_era_operations', 'NASA_FASTER_BETTER_CHEAPER', 257),
-    test_file('../prolog/testsets/nash_equilibrium_coordination.pl', 'nash_era', 'NASH_EQUILIBRIUM_COORDINATION', 258),
-    test_file('../prolog/testsets/necessary_day_job.pl', 'necessary_day_job', 'NECESSARY_DAY_JOB', 259),
-    test_file('../prolog/testsets/negative_emissions_arbitrage.pl', 'negative_emissions_arbitrage', 'NEGATIVE_EMISSIONS_ARBITRAGE', 260),
-    test_file('../prolog/testsets/net_zero_stabilization.pl', 'net_zero_stabilization', 'NET_ZERO_STABILIZATION', 261),
-    test_file('../prolog/testsets/network_effects.pl', 'network_effects', 'NETWORK_EFFECTS', 262),
-    test_file('../prolog/testsets/neural_interoperability.pl', 'neural_interoperability', 'NEURAL_INTEROPERABILITY', 263),
-    test_file('../prolog/testsets/neurodiversity_spectrum.pl', 'neurodiversity_spectrum', 'NEURODIVERSITY_SPECTRUM', 264),
-    test_file('../prolog/testsets/newtons_method_convergence.pl', 'newton_era', 'NEWTONS_METHOD_CONVERGENCE', 265),
-    test_file('../prolog/testsets/no_cloning_theorem.pl', 'no_cloning_interval', 'NO_CLONING_THEOREM', 266),
-    test_file('../prolog/testsets/noethers_theorem_symmetry.pl', 'noether_era', 'NOETHERS_THEOREM_SYMMETRY', 267),
-    test_file('../prolog/testsets/non_compete_agreements.pl', 'non_compete_agreements', 'NON_COMPETE_AGREEMENTS', 268),
-    test_file('../prolog/testsets/nonstandard_arithmetic_models.pl', 'skolem_era', 'NONSTANDARD_ARITHMETIC_MODELS', 269),
-    test_file('../prolog/testsets/north_korea_songun_mandatrophy.pl', 'dprk_songun_cycle', 'NORTH_KOREA_SONGUN_MANDATROPHY', 270),
-    test_file('../prolog/testsets/omelet_perfection_complexity.pl', 'omelet_perfection_interval', 'OMELET_PERFECTION_COMPLEXITY', 271),
-    test_file('../prolog/testsets/openbsd_netiquette_protocol.pl', 'openbsd_netiquette_protocol', 'OPENBSD_NETIQUETTE_PROTOCOL', 272),
-    test_file('../prolog/testsets/overton_window.pl', 'overton_interval', 'OVERTON_WINDOW', 273),
-    test_file('../prolog/testsets/p_vs_np.pl', 'p_vs_np_interval', 'P_VS_NP', 274),
-    test_file('../prolog/testsets/parable_fish_turtle.pl', 'parable_fish_turtle', 'PARABLE_FISH_TURTLE', 275),
-    test_file('../prolog/testsets/pareto_principle.pl', 'pareto_principle', 'PARETO_PRINCIPLE', 276),
-    test_file('../prolog/testsets/parkinsons_law.pl', 'parkinson_interval', 'PARKINSONS_LAW', 277),
-    test_file('../prolog/testsets/peano_curve_mapping.pl', 'peano_era', 'PEANO_CURVE_MAPPING', 278),
-    test_file('../prolog/testsets/permissive_software_licensing.pl', 'permissive_software_licensing', 'PERMISSIVE_SOFTWARE_LICENSING', 279),
-    test_file('../prolog/testsets/perovskite_self_etching.pl', 'perovskite_self_etching', 'PEROVSKITE_SELF_ETCHING', 280),
-    test_file('../prolog/testsets/personalized_nutritional_arbitrage.pl', 'personalized_nutritional_arbitrage', 'PERSONALIZED_NUTRITIONAL_ARBITRAGE', 281),
-    test_file('../prolog/testsets/peter_principle.pl', 'peter_principle', 'PETER_PRINCIPLE', 282),
-    test_file('../prolog/testsets/planetary_boundaries.pl', 'planetary_boundaries', 'PLANETARY_BOUNDARIES', 283),
-    test_file('../prolog/testsets/planetary_diet_constraint_2026.pl', 'planetary_diet_constraint_2026', 'PLANETARY_DIET_CONSTRAINT_2026', 284),
-    test_file('../prolog/testsets/planning_fallacy.pl', 'planning_fallacy_interval', 'PLANNING_FALLACY', 285),
-    test_file('../prolog/testsets/platform_cooperativism_governance.pl', 'platform_cooperativism_governance', 'PLATFORM_COOPERATIVISM_GOVERNANCE', 286),
-    test_file('../prolog/testsets/platonic_coparenting_decoupling.pl', 'platonic_coparenting', 'PLATONIC_COPARENTING_DECOUPLING', 287),
-    test_file('../prolog/testsets/poetic_verse_and_past.pl', 'poetic_verse_and_past', 'POETIC_VERSE_AND_PAST', 288),
-    test_file('../prolog/testsets/poincare_conjucture.pl', 'poincare_era', 'POINCARE_CONJUCTURE', 289),
-    test_file('../prolog/testsets/politeness_face_negotiation.pl', 'politeness_face_negotiation', 'POLITENESS_FACE_NEGOTIATION', 290),
-    test_file('../prolog/testsets/postman_survival_protocol.pl', 'postman_survival_interval', 'POSTMAN_SURVIVAL_PROTOCOL', 291),
-    test_file('../prolog/testsets/prime_number_theorem.pl', 'pnt_era', 'PRIME_NUMBER_THEOREM', 292),
-    test_file('../prolog/testsets/prisoners_dilemma_equilibrium.pl', 'game_theory_era', 'PRISONERS_DILEMMA_EQUILIBRIUM', 293),
-    test_file('../prolog/testsets/private_identity_integration.pl', 'private_identity_integration', 'PRIVATE_IDENTITY_INTEGRATION', 294),
-    test_file('../prolog/testsets/proof_of_work_consensus.pl', 'proof_of_work_consensus', 'PROOF_OF_WORK_CONSENSUS', 295),
-    test_file('../prolog/testsets/public_domain_commons.pl', 'public_domain_commons', 'PUBLIC_DOMAIN_COMMONS', 296),
-    test_file('../prolog/testsets/pythagorean_theorem_geometric_constancy.pl', 'pythagorean_era', 'PYTHAGOREAN_THEOREM_GEOMETRIC_CONSTANCY', 297),
-    test_file('../prolog/testsets/qualified_immunity.pl', 'qi_interval', 'QUALIFIED_IMMUNITY', 298),
-    test_file('../prolog/testsets/quantam_decryption_risk_2026.pl', 'quantum_decryption_risk_2026', 'QUANTAM_DECRYPTION_RISK_2026', 299),
-    test_file('../prolog/testsets/quantum_entanglement_protocol.pl', 'interstellar_quantum_link', 'QUANTUM_ENTANGLEMENT_PROTOCOL', 300),
-    test_file('../prolog/testsets/quantum_nonlocality_2026.pl', 'quantum_nonlocality_2026', 'QUANTUM_NONLOCALITY_2026', 301),
-    test_file('../prolog/testsets/quellcrist_falconer_justice.pl', 'quellcrist_falconer_justice', 'QUELLCRIST_FALCONER_JUSTICE', 302),
-    test_file('../prolog/testsets/quine_self_replication.pl', 'quine_era', 'QUINE_SELF_REPLICATION', 303),
-    test_file('../prolog/testsets/qwerty_vs_dvorak.pl', 'qwerty_lockin_interval', 'QWERTY_VS_DVORAK', 304),
-    test_file('../prolog/testsets/radiologic_diagnostic_threshold.pl', 'radiology_r7', 'RADIOLOGIC_DIAGNOSTIC_THRESHOLD', 305),
-    test_file('../prolog/testsets/railway_gauge_standard.pl', 'railway_gauge_standard', 'RAILWAY_GAUGE_STANDARD', 306),
-    test_file('../prolog/testsets/recipe_scaling_ai.pl', 'recipe_scaling_ai', 'RECIPE_SCALING_AI', 307),
-    test_file('../prolog/testsets/reciprocity_laws_math.pl', 'reciprocity_laws_math', 'RECIPROCITY_LAWS_MATH', 308),
-    test_file('../prolog/testsets/regulatory_capture.pl', 'capture_interval', 'REGULATORY_CAPTURE', 309),
-    test_file('../prolog/testsets/relativity_of_simultaneity.pl', 'relativity_of_simultaneity', 'RELATIVITY_OF_SIMULTANEITY', 310),
-    test_file('../prolog/testsets/relativity_physical_invariance.pl', 'relativity_physical_invariance', 'RELATIVITY_PHYSICAL_INVARIANCE', 311),
-    test_file('../prolog/testsets/rfc9293_interoperability.pl', 'tcp_rfc9293_interoperability', 'RFC9293_INTEROPERABILITY', 312),
-    test_file('../prolog/testsets/rfc9293_state_machine.pl', 'rfc9293_state_machine', 'RFC9293_STATE_MACHINE', 313),
-    test_file('../prolog/testsets/rices_theorem_undecidability.pl', 'rices_era', 'RICES_THEOREM_UNDECIDABILITY', 314),
-    test_file('../prolog/testsets/rogers_commission_institutional_analysis.pl', 'challenger_post_mortem', 'ROGERS_COMMISSION_INSTITUTIONAL_ANALYSIS', 315),
-    test_file('../prolog/testsets/rotation_seven_black_soil.pl', 'rotation_seven_black_soil', 'ROTATION_SEVEN_BLACK_SOIL', 316),
-    test_file('../prolog/testsets/rotation_seven_isolation.pl', 'rotation_seven_isolation', 'ROTATION_SEVEN_ISOLATION', 317),
-    test_file('../prolog/testsets/rotation_seven_kubo_ranking.pl', 'rotation_seven_kubo_ranking', 'ROTATION_SEVEN_KUBO_RANKING', 318),
-    test_file('../prolog/testsets/rotmigration_decision_threshold.pl', 'migration_theory_review', 'ROTMIGRATION_DECISION_THRESHOLD', 319),
-    test_file('../prolog/testsets/royal_navy_middle_east_withdrawal.pl', 'rn_withdrawal_cycle', 'ROYAL_NAVY_MIDDLE_EAST_WITHDRAWAL', 320),
-    test_file('../prolog/testsets/rules_based_international_order.pl', 'rules_based_international_order', 'RULES_BASED_INTERNATIONAL_ORDER', 321),
-    test_file('../prolog/testsets/russells_paradox_self_reference.pl', 'russell_era', 'RUSSELLS_PARADOX_SELF_REFERENCE', 322),
-    test_file('../prolog/testsets/russian_war_cannibalization.pl', 'russia_cannibalization_cycle', 'RUSSIAN_WAR_CANNIBALIZATION', 323),
-    test_file('../prolog/testsets/s1_airbnb.pl', 'airbnb_ipo_era', 'S1_AIRBNB', 324),
-    test_file('../prolog/testsets/s1_visa.pl', 'visa_ipo_window', 'S1_VISA', 325),
-    test_file('../prolog/testsets/s1_visa_judgment_sharing_agreement.pl', 'visa_litigation_ringfencing', 'S1_VISA_JUDGMENT_SHARING_AGREEMENT', 326),
-    test_file('../prolog/testsets/sadhu_integrity_protocol.pl', 'sadhu_integrity_protocol', 'SADHU_INTEGRITY_PROTOCOL', 327),
-    test_file('../prolog/testsets/sapir_whorf_hypothesis.pl', 'sapir_whorf_interval', 'SAPIR_WHORF_HYPOTHESIS', 328),
-    test_file('../prolog/testsets/sat_csp_complexity.pl', 'sat_csp_interval', 'SAT_CSP_COMPLEXITY', 329),
-    test_file('../prolog/testsets/scurvy_maritime_extraction.pl', 'scurvy_maritime_interval', 'SCURVY_MARITIME_EXTRACTION', 330),
-    test_file('../prolog/testsets/self_surpassing_superman.pl', 'zarathustra_hazar', 'SELF_SURPASSING_SUPERMAN', 331),
-    test_file('../prolog/testsets/shannon_entropy_limit.pl', 'shannon_entropy_limit', 'SHANNON_ENTROPY_LIMIT', 332),
-    test_file('../prolog/testsets/shitty_feedback_handling.pl', 'shitty_feedback_handling', 'SHITTY_FEEDBACK_HANDLING', 333),
-    test_file('../prolog/testsets/shobies_existential_commitment.pl', 'shobies_existential_commitment', 'SHOBIES_EXISTENTIAL_COMMITMENT', 334),
-    test_file('../prolog/testsets/silicon_lexicon_overload.pl', 'silicon_lexicon_overload', 'SILICON_LEXICON_OVERLOAD', 335),
-    test_file('../prolog/testsets/skills_based_hiring.pl', 'skills_based_hiring', 'SKILLS_BASED_HIRING', 336),
-    test_file('../prolog/testsets/skolems_paradox.pl', 'skolems_paradox_interval', 'SKOLEMS_PARADOX', 337),
-    test_file('../prolog/testsets/sludge_bureaucratic_friction.pl', 'sludge_bureaucratic_friction', 'SLUDGE_BUREAUCRATIC_FRICTION', 338),
-    test_file('../prolog/testsets/smartphone_ubiquity.pl', 'smartphone_ubiquity', 'SMARTPHONE_UBIQUITY', 339),
-    test_file('../prolog/testsets/social_credit_architecture.pl', 'scs_operational_2026', 'SOCIAL_CREDIT_ARCHITECTURE', 340),
-    test_file('../prolog/testsets/social_loafing.pl', 'social_loafing_interval', 'SOCIAL_LOAFING', 341),
-    test_file('../prolog/testsets/social_media_participation_threshold.pl', 'social_media_2025_cycle', 'SOCIAL_MEDIA_PARTICIPATION_THRESHOLD', 342),
-    test_file('../prolog/testsets/social_narrative_casting.pl', 'social_narrative_casting', 'SOCIAL_NARRATIVE_CASTING', 343),
-    test_file('../prolog/testsets/solar_system_weirdness.pl', 'solar_system_weirdness', 'SOLAR_SYSTEM_WEIRDNESS', 344),
-    test_file('../prolog/testsets/somatic_focusing_awareness.pl', 'somatic_focusing_awareness', 'SOMATIC_FOCUSING_AWARENESS', 345),
-    test_file('../prolog/testsets/sorites_paradox.pl', 'sorites_interval', 'SORITES_PARADOX', 346),
-    test_file('../prolog/testsets/south_china_sea_arbitration_2016_2026.pl', 'scs_legal_era', 'SOUTH_CHINA_SEA_ARBITRATION_2016_2026', 347),
-    test_file('../prolog/testsets/spv_variations_us_cold.pl', 'spv_variations', 'SPV_VARIATIONS_US_COLD', 348),
-    test_file('../prolog/testsets/square_cube_law.pl', 'square_cube_interval', 'SQUARE_CUBE_LAW', 349),
-    test_file('../prolog/testsets/st_petersburg_paradox.pl', 'st_petersburg_era', 'ST_PETERSBURG_PARADOX', 350),
-    test_file('../prolog/testsets/stable_marriage_coordination.pl', 'matching_theory_era', 'STABLE_MARRIAGE_COORDINATION', 351),
-    test_file('../prolog/testsets/starwars_evolutionary_mutation.pl', 'galactic_selection_event', 'STARWARS_EVOLUTIONARY_MUTATION', 352),
-    test_file('../prolog/testsets/statecraft_virtu.pl', 'statecraft_virtu_analysis', 'STATECRAFT_VIRTU', 353),
-    test_file('../prolog/testsets/steinmetz_valuation_asymmetry.pl', 'steinmetz_valuation_asymmetry', 'STEINMETZ_VALUATION_ASYMMETRY', 354),
-    test_file('../prolog/testsets/stoic_logos_governance.pl', 'stoic_logos_governance', 'STOIC_LOGOS_GOVERNANCE', 355),
-    test_file('../prolog/testsets/straight_coercion_2025.pl', 'strait_coercion_2025', 'STRAIGHT_COERCION_2025', 356),
-    test_file('../prolog/testsets/strange_attractor_dynamics.pl', 'strange_attractor_dynamics', 'STRANGE_ATTRACTOR_DYNAMICS', 357),
-    test_file('../prolog/testsets/sts86_ascent_checklist.pl', 'sts86_ascent_checklist', 'STS86_ASCENT_CHECKLIST', 358),
-    test_file('../prolog/testsets/sturgeons_law.pl', 'sturgeon_interval', 'STURGEONS_LAW', 359),
-    test_file('../prolog/testsets/suanne_coup_of_peace.pl', 'suanne_coup_of_peace', 'SUANNE_COUP_OF_PEACE', 360),
-    test_file('../prolog/testsets/suanne_face_restoration.pl', 'suanne_face_restoration', 'SUANNE_FACE_RESTORATION', 361),
-    test_file('../prolog/testsets/sunk_cost_fallacy.pl', 'sunk_cost_interval', 'SUNK_COST_FALLACY', 362),
-    test_file('../prolog/testsets/suslin_hypothesis_undecidability.pl', 'suslin_era', 'SUSLIN_HYPOTHESIS_UNDECIDABILITY', 363),
-    test_file('../prolog/testsets/sylow_theorems_group_theory.pl', 'sylow_era', 'SYLOW_THEOREMS_GROUP_THEORY', 364),
-    test_file('../prolog/testsets/taiwan_existential_sovereignty.pl', 'taiwan_status_quo_cycle', 'TAIWAN_EXISTENTIAL_SOVEREIGNTY', 365),
-    test_file('../prolog/testsets/taiwan_grand_bargain.pl', 'taiwan_grand_bargain', 'TAIWAN_GRAND_BARGAIN', 366),
-    test_file('../prolog/testsets/taiwan_storm_2026.pl', 'taiwan_storm_2026', 'TAIWAN_STORM_2026', 367),
-    test_file('../prolog/testsets/taiwan_strait_hegemony_shift.pl', 'hegemony_transition_window', 'TAIWAN_STRAIT_HEGEMONY_SHIFT', 368),
-    test_file('../prolog/testsets/tarski_undefinability.pl', 'tarski_interval', 'TARSKI_UNDEFINABILITY', 369),
-    test_file('../prolog/testsets/teaching_horses_to_sing.pl', 'teaching_horses_to_sing_interval', 'TEACHING_HORSES_TO_SING', 370),
-    test_file('../prolog/testsets/technological_provenance_arbitrage.pl', 'technological_provenance_arbitrage', 'TECHNOLOGICAL_PROVENANCE_ARBITRAGE', 371),
-    test_file('../prolog/testsets/tehran_water_bankruptcy.pl', 'tehran_water_bankruptcy', 'TEHRAN_WATER_BANKRUPTCY', 372),
-    test_file('../prolog/testsets/temporal_scale_arbitrage.pl', 'temporal_scale_arbitrage', 'TEMPORAL_SCALE_ARBITRAGE', 373),
-    test_file('../prolog/testsets/texas_hispanic_political_pivot.pl', 'tx_pivot_window_2026', 'TEXAS_HISPANIC_POLITICAL_PIVOT', 374),
-    test_file('../prolog/testsets/the_bacchae_madness_protocol.pl', 'theban_dionysian_conflict', 'THE_BACCHAE_MADNESS_PROTOCOL', 375),
-    test_file('../prolog/testsets/the_calm_protocol_suppression.pl', 'the_calm_expedition_window', 'THE_CALM_PROTOCOL_SUPPRESSION', 376),
-    test_file('../prolog/testsets/the_churn_systemic_upheaval.pl', 'the_churn_systemic_upheaval', 'THE_CHURN_SYSTEMIC_UPHEAVAL', 377),
-    test_file('../prolog/testsets/the_wall_procedural_barrier.pl', 'the_wall_procedural_barrier', 'THE_WALL_PROCEDURAL_BARRIER', 378),
-    test_file('../prolog/testsets/theory_of_visitors.pl', 'theory_of_visitors', 'THEORY_OF_VISITORS', 379),
-    test_file('../prolog/testsets/thermodynamics_entropy.pl', 'thermodynamics_entropy_interval', 'THERMODYNAMICS_ENTROPY', 380),
-    test_file('../prolog/testsets/three_body_unpredicability.pl', 'celestial_mechanics_era', 'THREE_BODY_UNPREDICABILITY', 381),
-    test_file('../prolog/testsets/toxic_social_infection.pl', 'toxic_social_infection_interval', 'TOXIC_SOCIAL_INFECTION', 382),
-    test_file('../prolog/testsets/tractarian_logic_limit.pl', 'tractarian_logic_limit', 'TRACTARIAN_LOGIC_LIMIT', 383),
-    test_file('../prolog/testsets/trade_secret_law.pl', 'trade_secret_law', 'TRADE_SECRET_LAW', 384),
-    test_file('../prolog/testsets/tragedy_of_the_commons.pl', 'tragedy_of_the_commons', 'TRAGEDY_OF_THE_COMMONS', 385),
-    test_file('../prolog/testsets/transformer_self_attention.pl', 'transformer_self_attention', 'TRANSFORMER_SELF_ATTENTION', 386),
-    test_file('../prolog/testsets/transient_event_detection.pl', 'transient_event_detection', 'TRANSIENT_EVENT_DETECTION', 387),
-    test_file('../prolog/testsets/traveling_salesperson_problem.pl', 'traveling_salesperson_problem', 'TRAVELING_SALESPERSON_PROBLEM', 388),
-    test_file('../prolog/testsets/trojan_war_spoils.pl', 'trojan_collapse_interval', 'TROJAN_WAR_SPOILS', 389),
-    test_file('../prolog/testsets/trump_making_china_great_2026.pl', 'post_trump_return', 'TRUMP_MAKING_CHINA_GREAT_2026', 390),
-    test_file('../prolog/testsets/trumps_second_term_authoritarianism_2026.pl', 'trump_ii_year_one', 'TRUMPS_SECOND_TERM_AUTHORITARIANISM_2026', 391),
-    test_file('../prolog/testsets/udhr_1946.pl', 'un_era', 'UDHR_1946', 392),
-    test_file('../prolog/testsets/ulysses_chp01.pl', 'telemachus_morning', 'ULYSSES_CHP01', 393),
-    test_file('../prolog/testsets/ulysses_chp02.pl', 'nestor_afternoon', 'ULYSSES_CHP02', 394),
-    test_file('../prolog/testsets/ulysses_chp03.pl', 'proteus_strand_walk', 'ULYSSES_CHP03', 395),
-    test_file('../prolog/testsets/ulysses_chp04.pl', 'bloom_kosher_transgression', 'ULYSSES_CHP04', 396),
-    test_file('../prolog/testsets/ulysses_chp05.pl', 'bloom_secret_correspondence', 'ULYSSES_CHP05', 397),
-    test_file('../prolog/testsets/ulysses_chp06.pl', 'bloom_exclusion_interval', 'ULYSSES_CHP06', 398),
-    test_file('../prolog/testsets/ulysses_chp07.pl', 'bloom_aeolus_interval', 'ULYSSES_CHP07', 399),
-    test_file('../prolog/testsets/ulysses_chp08.pl', 'lestrygonian_metabolism_chp8_interval', 'ULYSSES_CHP08', 400),
-    test_file('../prolog/testsets/ulysses_chp09.pl', 'stephen_shakespeare_ghost', 'ULYSSES_CHP09', 401),
-    test_file('../prolog/testsets/ulysses_chp10.pl', 'the_viceregal_cavalcade', 'ULYSSES_CHP10', 402),
-    test_file('../prolog/testsets/ulysses_chp11.pl', 'bloom_sirens_interval', 'ULYSSES_CHP11', 403),
-    test_file('../prolog/testsets/ulysses_chp12.pl', 'bloom_exclusion_id', 'ULYSSES_CHP12', 404),
-    test_file('../prolog/testsets/ulysses_chp13.pl', 'gerty_bloom_interval', 'ULYSSES_CHP13', 405),
-    test_file('../prolog/testsets/ulysses_chp14.pl', 'gestation_wombfruit_id', 'ULYSSES_CHP14', 406),
-    test_file('../prolog/testsets/ulysses_chp15.pl', 'nighttown_vigil_id', 'ULYSSES_CHP15', 407),
-    test_file('../prolog/testsets/ulysses_chp16.pl', 'bloom_samaritan_id', 'ULYSSES_CHP16', 408),
-    test_file('../prolog/testsets/ulysses_chp17.pl', 'bloom_ithaca_interval', 'ULYSSES_CHP17', 409),
-    test_file('../prolog/testsets/ulysses_chp18.pl', 'molly_affirmation_id', 'ULYSSES_CHP18', 410),
-    test_file('../prolog/testsets/unclos_2026.pl', 'unclos_era', 'UNCLOS_2026', 411),
-    test_file('../prolog/testsets/union_protection_underperformance.pl', 'labor_management_conflict_r1', 'UNION_PROTECTION_UNDERPERFORMANCE', 412),
-    test_file('../prolog/testsets/universal_mathematics_communication.pl', 'scientific_consensus_period', 'UNIVERSAL_MATHEMATICS_COMMUNICATION', 413),
-    test_file('../prolog/testsets/us_hydrological_debt.pl', 'us_hydrological_debt', 'US_HYDROLOGICAL_DEBT', 414),
-    test_file('../prolog/testsets/us_suburban_zoning_2025.pl', 'us_suburban_zoning_2025', 'US_SUBURBAN_ZONING_2025', 415),
-    test_file('../prolog/testsets/us_two_party_duopoly.pl', 'us_two_party_duopoly', 'US_TWO_PARTY_DUOPOLY', 416),
-    test_file('../prolog/testsets/utopia_apocalypse_fragility.pl', 'utopia_apocalypse_fragility', 'UTOPIA_APOCALYPSE_FRAGILITY', 417),
-    test_file('../prolog/testsets/van_der_waerden_theorem.pl', 'van_der_waerden_interval', 'VAN_DER_WAERDEN_THEOREM', 418),
-    test_file('../prolog/testsets/viral_transmission_rates.pl', 'viral_transmission_rates', 'VIRAL_TRANSMISSION_RATES', 419),
-    test_file('../prolog/testsets/weber_fechner_law.pl', 'weber_fechner_law', 'WEBER_FECHNER_LAW', 420),
-    test_file('../prolog/testsets/whitehead_problem_undecidability.pl', 'whitehead_era', 'WHITEHEAD_PROBLEM_UNDECIDABILITY', 421),
-    test_file('../prolog/testsets/wikipedia_crowdsourcing_2026.pl', 'wikipedia_crowdsourcing_2026', 'WIKIPEDIA_CROWDSOURCING_2026', 422),
-    test_file('../prolog/testsets/wikipedia_notability_requirement_2026.pl', 'wikipedia_notability_requirement_2026', 'WIKIPEDIA_NOTABILITY_REQUIREMENT_2026', 423),
-    test_file('../prolog/testsets/winners_curse.pl', 'winners_curse', 'WINNERS_CURSE', 424),
-    test_file('../prolog/testsets/xi_mao_ideological_centralization.pl', 'xi_mao_ideological_centralization', 'XI_MAO_IDEOLOGICAL_CENTRALIZATION', 425),
-    test_file('../prolog/testsets/zipfs_law.pl', 'zipfs_law', 'ZIPFS_LAW', 426),
+    forall(test_case(Path, ID, Label, N), run_single_test(Path, ID, Label, N)),
     count_and_report,
-    run_data_validation.
-
-run_data_validation :-
-    writeln(''),
-    writeln('--- RUNNING DATA QUALITY VALIDATION ---'),
+    % Call validate_all directly from data_validation module
     data_validation:validate_all.
 
-test_file(Path, ID, Label, N) :-
-    format('~n[~w] DOMAIN: ~w (~w)~n', [N, Label, Path]),
-    (   catch(load_and_run(Path, ID), E, (assertz(test_failed(Path, E)), format('[FAIL] Exception: ~w~n', [E]), fail))
-    ->  assertz(test_passed(Path)),
-        report_generator:generate_llm_feedback(ID)
-    ;   assertz(test_failed(Path, audit_failed)),
-        report_generator:generate_llm_feedback(ID)
+% --- Single Test Executor ---
+run_single_test(Path, ID, _Label, N) :-
+    format('~n[~w] EXECUTING: ~w~n', [N, Path]),
+    catch_with_backtrace(
+        ( load_and_run(Path, ID) ->
+            assertz(test_passed(Path)),
+            format('[PASS] ~w~n', [Path])
+        ;   assertz(test_failed(Path, audit_failed, 'load_and_run returned false')),
+            format('[AUDIT FAIL] ~w~n', [Path])
+        ),
+        E,
+        (   assertz(test_failed(Path, exception, E)),
+            format('[FAIL] Exception for ~w: ~w~n', [Path, E]),
+            print_prolog_backtrace(current_output, E)
+        )
     ),
-    !. 
+    report_generator:generate_llm_feedback(ID).
 
+% --- Result Counter & Reporter ---
 count_and_report :-
-    findall(P, test_passed(P), Ps), length(Ps, PC), findall(F, test_failed(F,_), Fs), length(Fs, FC),
-    format('~nDONE: ~w Passed, ~w Failed~n', [PC, FC]).
+    findall(P, test_passed(P), Ps), length(Ps, PC),
+    findall(F, test_failed(F,_,_), Fs), length(Fs, FC),
+    writeln(''),
+    writeln('=================================================='),
+    writeln('           TEST SUITE SUMMARY'),
+    writeln('=================================================='),
+    format('Passed: ~w~n', [PC]),
+    format('Failed: ~w~n', [FC]),
+    (FC > 0 -> report_failures ; true),
+    writeln('==================================================').
+
+report_failures :-
+    writeln('--- FAILED TESTS ---'),
+    forall(test_failed(Path, Type, Detail),
+           format('~n  - [~w] ~w~n    Reason: ~w~n', [Type, Path, Detail])).
+

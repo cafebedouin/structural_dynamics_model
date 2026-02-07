@@ -26,14 +26,14 @@ constraint_indexing:constraint_classification(
     catholic_church_1200,
     mountain,
     context(
-        agent_power(individual_powerless),
+        agent_power(powerless),
         time_horizon(biographical),
         exit_options(trapped),
         spatial_scope(local)
     )
 ) :-
     constraint_indexing:effective_immutability_for_context(
-        context(agent_power(individual_powerless), 
+        context(agent_power(powerless), 
                 time_horizon(biographical), 
                 exit_options(trapped), 
                 spatial_scope(local)),
@@ -86,7 +86,7 @@ constraint_indexing:constraint_classification(
     property_rights_2025,
     snare,
     context(
-        agent_power(individual_powerless),
+        agent_power(powerless),
         time_horizon(biographical),
         exit_options(Exit),
         spatial_scope(national)
@@ -94,7 +94,7 @@ constraint_indexing:constraint_classification(
 ) :-
     member(Exit, [trapped, constrained]),
     constraint_indexing:extractiveness_for_agent(property_rights_2025, 
-        context(agent_power(individual_powerless),
+        context(agent_power(powerless),
                 time_horizon(biographical),
                 exit_options(Exit),
                 spatial_scope(national)),
@@ -133,7 +133,7 @@ constraint_indexing:constraint_classification(
         spatial_scope(global)
     )
 ) :-
-    member(Power, [individual_powerful, institutional]),
+    member(Power, [powerful, institutional]),
     constraint_indexing:extractiveness_for_agent(property_rights_2025,
         context(agent_power(Power),
                 time_horizon(generational),
@@ -142,3 +142,61 @@ constraint_indexing:constraint_classification(
         E),
     E < 0,  % Negative = net beneficiary
     !.  % ADDED: Cut to prevent duplicates
+
+
+% ----------------------------------------------------------------------------
+% CARBON TAX 2026
+% ----------------------------------------------------------------------------
+
+% Facts for carbon_tax_2026 - these would typically be in domain_priors.pl
+drl_core:base_extractiveness(carbon_tax_2026, 0.55). % Medium extraction
+drl_core:suppression_score(carbon_tax_2026, 0.60).   % Requires active enforcement
+drl_core:requires_active_enforcement(carbon_tax_2026).
+narrative_ontology:constraint_beneficiary(carbon_tax_2026, society_at_large). % Climate coordination
+narrative_ontology:constraint_victim(carbon_tax_2026, low_income_consumers). % Burdens some more than others
+
+% Small Business Owner perspective - TANGLED ROPE
+constraint_indexing:constraint_classification(
+    carbon_tax_2026,
+    tangled_rope,
+    context(
+        agent_power(individual_moderate),
+        time_horizon(immediate),
+        exit_options(constrained),
+        spatial_scope(national)
+    )
+) :-
+    % Check if it classifies as tangled_rope from this context
+    drl_core:is_tangled_rope(carbon_tax_2026,
+        context(
+            agent_power(individual_moderate),
+            time_horizon(immediate),
+            exit_options(constrained),
+            spatial_scope(national)
+        ),
+        tangled_rope
+    ),
+    !.
+
+% Low-Income Consumer perspective - SNARE
+constraint_indexing:constraint_classification(
+    carbon_tax_2026,
+    snare,
+    context(
+        agent_power(powerless),
+        time_horizon(biographical),
+        exit_options(trapped),
+        spatial_scope(local)
+    )
+) :-
+    % Check if it classifies as snare from this context
+    drl_core:is_snare(carbon_tax_2026,
+        context(
+            agent_power(powerless),
+            time_horizon(biographical),
+            exit_options(trapped),
+            spatial_scope(local)
+        ),
+        snare
+    ),
+    !.

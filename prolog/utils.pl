@@ -13,7 +13,7 @@
 
 :- use_module(narrative_ontology).
 :- use_module(domain_priors).
-:- use_module(v3_1_config).
+:- use_module(config).
 
 /* ============================================================================
    DEFENSIVE PROGRAMMING UTILITIES
@@ -229,7 +229,7 @@ safe_get_profile_components(Constraint, components(Accum, Supp, Resist, BenefDel
 %% safe_get_config(+ParamName, -Value, +Default)
 %  Safely retrieves configuration parameter.
 safe_get_config(ParamName, Value, Default) :-
-    (v3_1_config:param(ParamName, V)
+    (config:param(ParamName, V)
     -> Value = V
     ;  (Value = Default,
         log(warn, 'Missing config parameter ~w, using default ~w',
@@ -238,7 +238,7 @@ safe_get_config(ParamName, Value, Default) :-
 %% require_config(+ParamName, -Value)
 %  Retrieves config parameter, failing if missing (strict mode).
 require_config(ParamName, Value) :-
-    (v3_1_config:param(ParamName, Value)
+    (config:param(ParamName, Value)
     -> true
     ;  (log(error, 'REQUIRED config parameter ~w is missing', [ParamName]),
         fail)).

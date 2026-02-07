@@ -5,6 +5,7 @@
 :- use_module(drl_core).
 :- use_module(narrative_ontology).
 :- use_module(constraint_bridge).
+:- use_module(config).
 
 % Map Feasibility + DRL Type to UKE Status
 uke_status(RecID, Status, Reasons) :-
@@ -42,6 +43,6 @@ determine_status(_, _, blocked_by_veto, Vetoes, blocked, [Msg]) :-
 % Helper
 is_load_bearing(C) :- 
     drl_core:dr_type(C, snare),
-    v3_1_config:param(noose_load_bearing_threshold, T),
+    config:param(snare_load_bearing_threshold, T),
     narrative_ontology:constraint_metric(C, extractiveness, X), 
     X > T.

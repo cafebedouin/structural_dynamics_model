@@ -36,7 +36,7 @@ def repair_file(filepath):
     if missing:
         content += "\n\n% --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---\n"
         for m in missing:
-            power = "analytical" if m == 'mountain' else "institutional" if m == 'rope' else "individual_powerless"
+            power = "analytical" if m == 'mountain' else "institutional" if m == 'rope' else "powerless"
             content += f"constraint_indexing:constraint_classification({domain_id}, {m}, agent_power({power})).\n"
         changed = True
 

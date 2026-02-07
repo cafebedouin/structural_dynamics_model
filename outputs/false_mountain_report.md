@@ -1,39 +1,10 @@
 # False Mountain Diagnostic Report
 
-**Total Unique False Mountains Found:** 248
+**Total Unique False Mountains Found:** 212
 
 ---
 
-### 1. False Mountain: `26usc469`
-
-*   **Severity:** `critical`
-*   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
-*   **Perspectival Mismatch:**
-    *   **Powerless View:** `snare`
-    *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_extraction_blindness_26usc469 (conceptual)
-*   **Suggested Resolution Strategy:**
-    ```
-1. Interview affected individuals (N=10+):
-- Who benefits from 26usc469?
-- Can you change/exit this constraint?
-- What would happen if you tried?
-2. Interview institutional actors (N=10+):
-- What function does 26usc469 serve?
-- Who would object to removing it?
-- What alternatives exist?
-3. Document benefit flows:
-- Track who gains vs. who loses from status quo
-- Measure asymmetric benefit distribution
-4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
-IF functional & fair → Reclassify as ROPE
-IF context-dependent → Add indexical resolution
-    ```
-
----
-
-### 2. False Mountain: `26usc469_real_estate_exemption`
+### 1. False Mountain: `26usc469_real_estate_exemption`
 
 *   **Severity:** `critical`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
@@ -55,14 +26,65 @@ IF context-dependent → Add indexical resolution
 - Track who gains vs. who loses from status quo
 - Measure asymmetric benefit distribution
 4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
+IF extraction confirmed → Reclassify as SNARE
 IF functional & fair → Reclassify as ROPE
 IF context-dependent → Add indexical resolution
     ```
 
 ---
 
-### 3. False Mountain: `academic_tenure_system`
+### 2. False Mountain: `academic_fashion_modernism_2026`
+
+*   **Severity:** `critical`
+*   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Perspectival Mismatch:**
+    *   **Powerless View:** `snare`
+    *   **Institutional View:** `rope`
+*   **Generated Omega:** omega_extraction_blindness_academic_fashion_modernism_2026 (conceptual)
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from academic_fashion_modernism_2026?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does academic_fashion_modernism_2026 serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 3. False Mountain: `academic_peer_review_gatekeeping`
+
+*   **Severity:** `critical`
+*   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
+*   **Perspectival Mismatch:**
+    *   **Powerless View:** `mountain`
+    *   **Institutional View:** `rope`
+*   **Generated Omega:** omega_cut_safety_academic_peer_review_gatekeeping (conceptual)
+*   **Suggested Resolution Strategy:**
+    ```
+1. Design measurement protocol for unknown
+2. Collect data from N=30+ real-world instances
+3. Calculate empirical metrics:
+- suppression_requirement (enforcement needed)
+- resistance_to_change (pushback level)
+- base_extractiveness (asymmetric benefit flow)
+4. Update constraint_metric/3 declarations with data
+5. Re-run classification to resolve perspectival gap
+    ```
+
+---
+
+### 4. False Mountain: `academic_tenure_system`
 
 *   **Severity:** `critical`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
@@ -72,26 +94,70 @@ IF context-dependent → Add indexical resolution
 *   **Generated Omega:** omega_extraction_blindness_academic_tenure_system (conceptual)
 *   **Suggested Resolution Strategy:**
     ```
+1. Design measurement protocol for unknown
+2. Collect data from N=30+ real-world instances
+3. Calculate empirical metrics:
+- suppression_requirement (enforcement needed)
+- resistance_to_change (pushback level)
+- base_extractiveness (asymmetric benefit flow)
+4. Update constraint_metric/3 declarations with data
+5. Re-run classification to resolve perspectival gap
+    ```
+
+---
+
+### 5. False Mountain: `ad_fus_coordination`
+
+*   **Severity:** `critical`
+*   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Perspectival Mismatch:**
+    *   **Powerless View:** `snare`
+    *   **Institutional View:** `rope`
+*   **Generated Omega:** omega_extraction_blindness_ad_fus_coordination (conceptual)
+*   **Suggested Resolution Strategy:**
+    ```
 1. Interview affected individuals (N=10+):
-- Who benefits from academic_tenure_system?
+- Who benefits from ad_fus_coordination?
 - Can you change/exit this constraint?
 - What would happen if you tried?
 2. Interview institutional actors (N=10+):
-- What function does academic_tenure_system serve?
+- What function does ad_fus_coordination serve?
 - Who would object to removing it?
 - What alternatives exist?
 3. Document benefit flows:
 - Track who gains vs. who loses from status quo
 - Measure asymmetric benefit distribution
 4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
+IF extraction confirmed → Reclassify as SNARE
 IF functional & fair → Reclassify as ROPE
 IF context-dependent → Add indexical resolution
     ```
 
 ---
 
-### 4. False Mountain: `adverse_possession`
+### 6. False Mountain: `ad_synaptic_deficit`
+
+*   **Severity:** `critical`
+*   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Perspectival Mismatch:**
+    *   **Powerless View:** `snare`
+    *   **Institutional View:** `rope`
+*   **Generated Omega:** omega_extraction_blindness_ad_synaptic_deficit (conceptual)
+*   **Suggested Resolution Strategy:**
+    ```
+1. Design measurement protocol for unknown
+2. Collect data from N=30+ real-world instances
+3. Calculate empirical metrics:
+- suppression_requirement (enforcement needed)
+- resistance_to_change (pushback level)
+- base_extractiveness (asymmetric benefit flow)
+4. Update constraint_metric/3 declarations with data
+5. Re-run classification to resolve perspectival gap
+    ```
+
+---
+
+### 7. False Mountain: `adverse_possession`
 
 *   **Severity:** `critical`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
@@ -113,14 +179,14 @@ IF context-dependent → Add indexical resolution
 - Track who gains vs. who loses from status quo
 - Measure asymmetric benefit distribution
 4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
+IF extraction confirmed → Reclassify as SNARE
 IF functional & fair → Reclassify as ROPE
 IF context-dependent → Add indexical resolution
     ```
 
 ---
 
-### 5. False Mountain: `advice_as_dangerous_gift`
+### 8. False Mountain: `advice_as_dangerous_gift`
 
 *   **Severity:** `critical`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
@@ -142,14 +208,72 @@ IF context-dependent → Add indexical resolution
 - Track who gains vs. who loses from status quo
 - Measure asymmetric benefit distribution
 4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
+IF extraction confirmed → Reclassify as SNARE
 IF functional & fair → Reclassify as ROPE
 IF context-dependent → Add indexical resolution
     ```
 
 ---
 
-### 6. False Mountain: `ai_driven_surveillance_sensor_layer`
+### 9. False Mountain: `agentive_optimism_2026`
+
+*   **Severity:** `critical`
+*   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Perspectival Mismatch:**
+    *   **Powerless View:** `snare`
+    *   **Institutional View:** `rope`
+*   **Generated Omega:** omega_extraction_blindness_agent_opt_2026 (conceptual)
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from agent_opt_2026?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does agent_opt_2026 serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 10. False Mountain: `ai_auditability_gap`
+
+*   **Severity:** `critical`
+*   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Perspectival Mismatch:**
+    *   **Powerless View:** `snare`
+    *   **Institutional View:** `rope`
+*   **Generated Omega:** omega_extraction_blindness_ai_auditability_gap (conceptual)
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from ai_auditability_gap?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does ai_auditability_gap serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 11. False Mountain: `ai_driven_surveillance_sensor_layer`
 
 *   **Severity:** `critical`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
@@ -159,26 +283,19 @@ IF context-dependent → Add indexical resolution
 *   **Generated Omega:** omega_extraction_blindness_ai_driven_surveillance_sensor_layer (conceptual)
 *   **Suggested Resolution Strategy:**
     ```
-1. Interview affected individuals (N=10+):
-- Who benefits from ai_driven_surveillance_sensor_layer?
-- Can you change/exit this constraint?
-- What would happen if you tried?
-2. Interview institutional actors (N=10+):
-- What function does ai_driven_surveillance_sensor_layer serve?
-- Who would object to removing it?
-- What alternatives exist?
-3. Document benefit flows:
-- Track who gains vs. who loses from status quo
-- Measure asymmetric benefit distribution
-4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
-IF functional & fair → Reclassify as ROPE
-IF context-dependent → Add indexical resolution
+1. Design measurement protocol for unknown
+2. Collect data from N=30+ real-world instances
+3. Calculate empirical metrics:
+- suppression_requirement (enforcement needed)
+- resistance_to_change (pushback level)
+- base_extractiveness (asymmetric benefit flow)
+4. Update constraint_metric/3 declarations with data
+5. Re-run classification to resolve perspectival gap
     ```
 
 ---
 
-### 7. False Mountain: `ai_evaluators_matching`
+### 12. False Mountain: `ai_evaluators_matching`
 
 *   **Severity:** `critical`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
@@ -200,14 +317,14 @@ IF context-dependent → Add indexical resolution
 - Track who gains vs. who loses from status quo
 - Measure asymmetric benefit distribution
 4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
+IF extraction confirmed → Reclassify as SNARE
 IF functional & fair → Reclassify as ROPE
 IF context-dependent → Add indexical resolution
     ```
 
 ---
 
-### 8. False Mountain: `ai_professional_displacement`
+### 13. False Mountain: `ai_professional_displacement`
 
 *   **Severity:** `critical`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
@@ -217,26 +334,48 @@ IF context-dependent → Add indexical resolution
 *   **Generated Omega:** omega_extraction_blindness_ai_professional_displacement (conceptual)
 *   **Suggested Resolution Strategy:**
     ```
+1. Design measurement protocol for unknown
+2. Collect data from N=30+ real-world instances
+3. Calculate empirical metrics:
+- suppression_requirement (enforcement needed)
+- resistance_to_change (pushback level)
+- base_extractiveness (asymmetric benefit flow)
+4. Update constraint_metric/3 declarations with data
+5. Re-run classification to resolve perspectival gap
+    ```
+
+---
+
+### 14. False Mountain: `ai_superpowers_race_2026`
+
+*   **Severity:** `critical`
+*   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Perspectival Mismatch:**
+    *   **Powerless View:** `snare`
+    *   **Institutional View:** `rope`
+*   **Generated Omega:** omega_extraction_blindness_ai_superpowers_2026 (conceptual)
+*   **Suggested Resolution Strategy:**
+    ```
 1. Interview affected individuals (N=10+):
-- Who benefits from ai_professional_displacement?
+- Who benefits from ai_superpowers_2026?
 - Can you change/exit this constraint?
 - What would happen if you tried?
 2. Interview institutional actors (N=10+):
-- What function does ai_professional_displacement serve?
+- What function does ai_superpowers_2026 serve?
 - Who would object to removing it?
 - What alternatives exist?
 3. Document benefit flows:
 - Track who gains vs. who loses from status quo
 - Measure asymmetric benefit distribution
 4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
+IF extraction confirmed → Reclassify as SNARE
 IF functional & fair → Reclassify as ROPE
 IF context-dependent → Add indexical resolution
     ```
 
 ---
 
-### 9. False Mountain: `algorithmic_bias`
+### 15. False Mountain: `algorithmic_bias`
 
 *   **Severity:** `critical`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
@@ -258,14 +397,87 @@ IF context-dependent → Add indexical resolution
 - Track who gains vs. who loses from status quo
 - Measure asymmetric benefit distribution
 4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
+IF extraction confirmed → Reclassify as SNARE
 IF functional & fair → Reclassify as ROPE
 IF context-dependent → Add indexical resolution
     ```
 
 ---
 
-### 10. False Mountain: `amish_technological_renunciation`
+### 16. False Mountain: `algorithmic_epistemic_capture`
+
+*   **Severity:** `critical`
+*   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Perspectival Mismatch:**
+    *   **Powerless View:** `snare`
+    *   **Institutional View:** `rope`
+*   **Generated Omega:** omega_extraction_blindness_algorithmic_epistemic_capture (conceptual)
+*   **Suggested Resolution Strategy:**
+    ```
+1. Design measurement protocol for unknown
+2. Collect data from N=30+ real-world instances
+3. Calculate empirical metrics:
+- suppression_requirement (enforcement needed)
+- resistance_to_change (pushback level)
+- base_extractiveness (asymmetric benefit flow)
+4. Update constraint_metric/3 declarations with data
+5. Re-run classification to resolve perspectival gap
+    ```
+
+---
+
+### 17. False Mountain: `alignment_tax_tradeoff`
+
+*   **Severity:** `critical`
+*   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Perspectival Mismatch:**
+    *   **Powerless View:** `snare`
+    *   **Institutional View:** `rope`
+*   **Generated Omega:** omega_extraction_blindness_alignment_tax_tradeoff (conceptual)
+*   **Suggested Resolution Strategy:**
+    ```
+1. Design measurement protocol for unknown
+2. Collect data from N=30+ real-world instances
+3. Calculate empirical metrics:
+- suppression_requirement (enforcement needed)
+- resistance_to_change (pushback level)
+- base_extractiveness (asymmetric benefit flow)
+4. Update constraint_metric/3 declarations with data
+5. Re-run classification to resolve perspectival gap
+    ```
+
+---
+
+### 18. False Mountain: `altruistic_misery_paradox_2026`
+
+*   **Severity:** `critical`
+*   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Perspectival Mismatch:**
+    *   **Powerless View:** `snare`
+    *   **Institutional View:** `rope`
+*   **Generated Omega:** omega_extraction_blindness_altruistic_misery_paradox_2026 (conceptual)
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from altruistic_misery_paradox_2026?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does altruistic_misery_paradox_2026 serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 19. False Mountain: `amish_technological_renunciation`
 
 *   **Severity:** `critical`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
@@ -287,14 +499,65 @@ IF context-dependent → Add indexical resolution
 - Track who gains vs. who loses from status quo
 - Measure asymmetric benefit distribution
 4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
+IF extraction confirmed → Reclassify as SNARE
 IF functional & fair → Reclassify as ROPE
 IF context-dependent → Add indexical resolution
     ```
 
 ---
 
-### 11. False Mountain: `apartheid_nuclear_program`
+### 20. False Mountain: `ancestral_pueblo_hydrology`
+
+*   **Severity:** `critical`
+*   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Perspectival Mismatch:**
+    *   **Powerless View:** `snare`
+    *   **Institutional View:** `rope`
+*   **Generated Omega:** omega_extraction_blindness_ancestral_pueblo_hydrology (conceptual)
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from ancestral_pueblo_hydrology?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does ancestral_pueblo_hydrology serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 21. False Mountain: `anticipatory_capacity_failure`
+
+*   **Severity:** `critical`
+*   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Perspectival Mismatch:**
+    *   **Powerless View:** `snare`
+    *   **Institutional View:** `rope`
+*   **Generated Omega:** omega_extraction_blindness_anticipatory_capacity_failure (conceptual)
+*   **Suggested Resolution Strategy:**
+    ```
+1. Design measurement protocol for unknown
+2. Collect data from N=30+ real-world instances
+3. Calculate empirical metrics:
+- suppression_requirement (enforcement needed)
+- resistance_to_change (pushback level)
+- base_extractiveness (asymmetric benefit flow)
+4. Update constraint_metric/3 declarations with data
+5. Re-run classification to resolve perspectival gap
+    ```
+
+---
+
+### 22. False Mountain: `apartheid_nuclear_program`
 
 *   **Severity:** `critical`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
@@ -304,26 +567,19 @@ IF context-dependent → Add indexical resolution
 *   **Generated Omega:** omega_extraction_blindness_apartheid_nuclear_program (conceptual)
 *   **Suggested Resolution Strategy:**
     ```
-1. Interview affected individuals (N=10+):
-- Who benefits from apartheid_nuclear_program?
-- Can you change/exit this constraint?
-- What would happen if you tried?
-2. Interview institutional actors (N=10+):
-- What function does apartheid_nuclear_program serve?
-- Who would object to removing it?
-- What alternatives exist?
-3. Document benefit flows:
-- Track who gains vs. who loses from status quo
-- Measure asymmetric benefit distribution
-4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
-IF functional & fair → Reclassify as ROPE
-IF context-dependent → Add indexical resolution
+1. Design measurement protocol for unknown
+2. Collect data from N=30+ real-world instances
+3. Calculate empirical metrics:
+- suppression_requirement (enforcement needed)
+- resistance_to_change (pushback level)
+- base_extractiveness (asymmetric benefit flow)
+4. Update constraint_metric/3 declarations with data
+5. Re-run classification to resolve perspectival gap
     ```
 
 ---
 
-### 12. False Mountain: `arctic_geopolitical_flashpoint`
+### 23. False Mountain: `arctic_geopolitical_flashpoint`
 
 *   **Severity:** `critical`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
@@ -345,14 +601,101 @@ IF context-dependent → Add indexical resolution
 - Track who gains vs. who loses from status quo
 - Measure asymmetric benefit distribution
 4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
+IF extraction confirmed → Reclassify as SNARE
 IF functional & fair → Reclassify as ROPE
 IF context-dependent → Add indexical resolution
     ```
 
 ---
 
-### 13. False Mountain: `automatic_enrollment_defaults`
+### 24. False Mountain: `art_market_decoupling`
+
+*   **Severity:** `critical`
+*   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Perspectival Mismatch:**
+    *   **Powerless View:** `snare`
+    *   **Institutional View:** `rope`
+*   **Generated Omega:** omega_extraction_blindness_art_market_decoupling (conceptual)
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from art_market_decoupling?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does art_market_decoupling serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 25. False Mountain: `atrophied_optimization_piton`
+
+*   **Severity:** `critical`
+*   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Perspectival Mismatch:**
+    *   **Powerless View:** `snare`
+    *   **Institutional View:** `rope`
+*   **Generated Omega:** omega_extraction_blindness_atrophied_optimization_piton (conceptual)
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from atrophied_optimization_piton?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does atrophied_optimization_piton serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 26. False Mountain: `australia_social_ban_2026`
+
+*   **Severity:** `critical`
+*   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Perspectival Mismatch:**
+    *   **Powerless View:** `snare`
+    *   **Institutional View:** `rope`
+*   **Generated Omega:** omega_extraction_blindness_australia_social_ban_2026 (conceptual)
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from australia_social_ban_2026?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does australia_social_ban_2026 serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 27. False Mountain: `automatic_enrollment_defaults`
 
 *   **Severity:** `critical`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
@@ -374,14 +717,14 @@ IF context-dependent → Add indexical resolution
 - Track who gains vs. who loses from status quo
 - Measure asymmetric benefit distribution
 4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
+IF extraction confirmed → Reclassify as SNARE
 IF functional & fair → Reclassify as ROPE
 IF context-dependent → Add indexical resolution
     ```
 
 ---
 
-### 14. False Mountain: `availability_heuristic`
+### 28. False Mountain: `availability_heuristic`
 
 *   **Severity:** `critical`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
@@ -403,14 +746,101 @@ IF context-dependent → Add indexical resolution
 - Track who gains vs. who loses from status quo
 - Measure asymmetric benefit distribution
 4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
+IF extraction confirmed → Reclassify as SNARE
 IF functional & fair → Reclassify as ROPE
 IF context-dependent → Add indexical resolution
     ```
 
 ---
 
-### 15. False Mountain: `biological_curiosity`
+### 29. False Mountain: `axiom_reasoner_2026`
+
+*   **Severity:** `critical`
+*   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Perspectival Mismatch:**
+    *   **Powerless View:** `snare`
+    *   **Institutional View:** `rope`
+*   **Generated Omega:** omega_extraction_blindness_axiom_reasoner_2026 (conceptual)
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from axiom_reasoner_2026?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does axiom_reasoner_2026 serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 30. False Mountain: `bangladesh_july_national_charter`
+
+*   **Severity:** `critical`
+*   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Perspectival Mismatch:**
+    *   **Powerless View:** `snare`
+    *   **Institutional View:** `rope`
+*   **Generated Omega:** omega_extraction_blindness_bangladesh_july_national_charter (conceptual)
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from bangladesh_july_national_charter?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does bangladesh_july_national_charter serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 31. False Mountain: `belief_argument_conclusion`
+
+*   **Severity:** `critical`
+*   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Perspectival Mismatch:**
+    *   **Powerless View:** `snare`
+    *   **Institutional View:** `rope`
+*   **Generated Omega:** omega_extraction_blindness_belief_argument_conclusion (conceptual)
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from belief_argument_conclusion?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does belief_argument_conclusion serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 32. False Mountain: `biological_curiosity`
 
 *   **Severity:** `critical`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
@@ -432,43 +862,43 @@ IF context-dependent → Add indexical resolution
 - Track who gains vs. who loses from status quo
 - Measure asymmetric benefit distribution
 4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
+IF extraction confirmed → Reclassify as SNARE
 IF functional & fair → Reclassify as ROPE
 IF context-dependent → Add indexical resolution
     ```
 
 ---
 
-### 16. False Mountain: `blackstone_smd_control`
+### 33. False Mountain: `boiled_pineapple_trend_2026`
 
 *   **Severity:** `critical`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
     *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_extraction_blindness_blackstone_smd_control (conceptual)
+*   **Generated Omega:** omega_extraction_blindness_boiled_pineapple_trend_2026 (conceptual)
 *   **Suggested Resolution Strategy:**
     ```
 1. Interview affected individuals (N=10+):
-- Who benefits from blackstone_smd_control?
+- Who benefits from boiled_pineapple_trend_2026?
 - Can you change/exit this constraint?
 - What would happen if you tried?
 2. Interview institutional actors (N=10+):
-- What function does blackstone_smd_control serve?
+- What function does boiled_pineapple_trend_2026 serve?
 - Who would object to removing it?
 - What alternatives exist?
 3. Document benefit flows:
 - Track who gains vs. who loses from status quo
 - Measure asymmetric benefit distribution
 4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
+IF extraction confirmed → Reclassify as SNARE
 IF functional & fair → Reclassify as ROPE
 IF context-dependent → Add indexical resolution
     ```
 
 ---
 
-### 17. False Mountain: `burali_forte_paradox`
+### 34. False Mountain: `burali_forte_paradox`
 
 *   **Severity:** `critical`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
@@ -490,14 +920,14 @@ IF context-dependent → Add indexical resolution
 - Track who gains vs. who loses from status quo
 - Measure asymmetric benefit distribution
 4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
+IF extraction confirmed → Reclassify as SNARE
 IF functional & fair → Reclassify as ROPE
 IF context-dependent → Add indexical resolution
     ```
 
 ---
 
-### 18. False Mountain: `cap_theorem`
+### 35. False Mountain: `cap_theorem`
 
 *   **Severity:** `critical`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
@@ -519,246 +949,72 @@ IF context-dependent → Add indexical resolution
 - Track who gains vs. who loses from status quo
 - Measure asymmetric benefit distribution
 4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
+IF extraction confirmed → Reclassify as SNARE
 IF functional & fair → Reclassify as ROPE
 IF context-dependent → Add indexical resolution
     ```
 
 ---
 
-### 19. False Mountain: `carrying_capacity`
+### 36. False Mountain: `coffee_cardiovascular_2026`
 
 *   **Severity:** `critical`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
     *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_extraction_blindness_carrying_capacity (conceptual)
+*   **Generated Omega:** omega_extraction_blindness_coffee_cardiovascular_2026 (conceptual)
 *   **Suggested Resolution Strategy:**
     ```
 1. Interview affected individuals (N=10+):
-- Who benefits from carrying_capacity?
+- Who benefits from coffee_cardiovascular_2026?
 - Can you change/exit this constraint?
 - What would happen if you tried?
 2. Interview institutional actors (N=10+):
-- What function does carrying_capacity serve?
+- What function does coffee_cardiovascular_2026 serve?
 - Who would object to removing it?
 - What alternatives exist?
 3. Document benefit flows:
 - Track who gains vs. who loses from status quo
 - Measure asymmetric benefit distribution
 4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
+IF extraction confirmed → Reclassify as SNARE
 IF functional & fair → Reclassify as ROPE
 IF context-dependent → Add indexical resolution
     ```
 
 ---
 
-### 20. False Mountain: `cbdc_implementation`
+### 37. False Mountain: `communal_narcissism_social_trap`
 
 *   **Severity:** `critical`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
     *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_extraction_blindness_cbdc_implementation (conceptual)
+*   **Generated Omega:** omega_extraction_blindness_communal_narcissism_social_trap (conceptual)
 *   **Suggested Resolution Strategy:**
     ```
 1. Interview affected individuals (N=10+):
-- Who benefits from cbdc_implementation?
+- Who benefits from communal_narcissism_social_trap?
 - Can you change/exit this constraint?
 - What would happen if you tried?
 2. Interview institutional actors (N=10+):
-- What function does cbdc_implementation serve?
+- What function does communal_narcissism_social_trap serve?
 - Who would object to removing it?
 - What alternatives exist?
 3. Document benefit flows:
 - Track who gains vs. who loses from status quo
 - Measure asymmetric benefit distribution
 4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
+IF extraction confirmed → Reclassify as SNARE
 IF functional & fair → Reclassify as ROPE
 IF context-dependent → Add indexical resolution
     ```
 
 ---
 
-### 21. False Mountain: `challenger_o_ring_integrity`
-
-*   **Severity:** `critical`
-*   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
-*   **Perspectival Mismatch:**
-    *   **Powerless View:** `snare`
-    *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_extraction_blindness_challenger_o_ring_integrity (conceptual)
-*   **Suggested Resolution Strategy:**
-    ```
-1. Interview affected individuals (N=10+):
-- Who benefits from challenger_o_ring_integrity?
-- Can you change/exit this constraint?
-- What would happen if you tried?
-2. Interview institutional actors (N=10+):
-- What function does challenger_o_ring_integrity serve?
-- Who would object to removing it?
-- What alternatives exist?
-3. Document benefit flows:
-- Track who gains vs. who loses from status quo
-- Measure asymmetric benefit distribution
-4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
-IF functional & fair → Reclassify as ROPE
-IF context-dependent → Add indexical resolution
-    ```
-
----
-
-### 22. False Mountain: `china_critical_mineral_chokepoint`
-
-*   **Severity:** `critical`
-*   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
-*   **Perspectival Mismatch:**
-    *   **Powerless View:** `snare`
-    *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_extraction_blindness_china_critical_mineral_chokepoint (conceptual)
-*   **Suggested Resolution Strategy:**
-    ```
-1. Interview affected individuals (N=10+):
-- Who benefits from china_critical_mineral_chokepoint?
-- Can you change/exit this constraint?
-- What would happen if you tried?
-2. Interview institutional actors (N=10+):
-- What function does china_critical_mineral_chokepoint serve?
-- Who would object to removing it?
-- What alternatives exist?
-3. Document benefit flows:
-- Track who gains vs. who loses from status quo
-- Measure asymmetric benefit distribution
-4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
-IF functional & fair → Reclassify as ROPE
-IF context-dependent → Add indexical resolution
-    ```
-
----
-
-### 23. False Mountain: `cloudflare_dual_class_asymmetry`
-
-*   **Severity:** `critical`
-*   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
-*   **Perspectival Mismatch:**
-    *   **Powerless View:** `snare`
-    *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_extraction_blindness_cloudflare_dual_class_asymmetry (conceptual)
-*   **Suggested Resolution Strategy:**
-    ```
-1. Interview affected individuals (N=10+):
-- Who benefits from cloudflare_dual_class_asymmetry?
-- Can you change/exit this constraint?
-- What would happen if you tried?
-2. Interview institutional actors (N=10+):
-- What function does cloudflare_dual_class_asymmetry serve?
-- Who would object to removing it?
-- What alternatives exist?
-3. Document benefit flows:
-- Track who gains vs. who loses from status quo
-- Measure asymmetric benefit distribution
-4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
-IF functional & fair → Reclassify as ROPE
-IF context-dependent → Add indexical resolution
-    ```
-
----
-
-### 24. False Mountain: `cobra_effect`
-
-*   **Severity:** `critical`
-*   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
-*   **Perspectival Mismatch:**
-    *   **Powerless View:** `snare`
-    *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_extraction_blindness_cobra_effect (conceptual)
-*   **Suggested Resolution Strategy:**
-    ```
-1. Interview affected individuals (N=10+):
-- Who benefits from cobra_effect?
-- Can you change/exit this constraint?
-- What would happen if you tried?
-2. Interview institutional actors (N=10+):
-- What function does cobra_effect serve?
-- Who would object to removing it?
-- What alternatives exist?
-3. Document benefit flows:
-- Track who gains vs. who loses from status quo
-- Measure asymmetric benefit distribution
-4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
-IF functional & fair → Reclassify as ROPE
-IF context-dependent → Add indexical resolution
-    ```
-
----
-
-### 25. False Mountain: `cognitive_surrender_to_system_3`
-
-*   **Severity:** `critical`
-*   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
-*   **Perspectival Mismatch:**
-    *   **Powerless View:** `snare`
-    *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_extraction_blindness_cognitive_surrender_to_system_3 (conceptual)
-*   **Suggested Resolution Strategy:**
-    ```
-1. Interview affected individuals (N=10+):
-- Who benefits from cognitive_surrender_to_system_3?
-- Can you change/exit this constraint?
-- What would happen if you tried?
-2. Interview institutional actors (N=10+):
-- What function does cognitive_surrender_to_system_3 serve?
-- Who would object to removing it?
-- What alternatives exist?
-3. Document benefit flows:
-- Track who gains vs. who loses from status quo
-- Measure asymmetric benefit distribution
-4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
-IF functional & fair → Reclassify as ROPE
-IF context-dependent → Add indexical resolution
-    ```
-
----
-
-### 26. False Mountain: `compounding_logic`
-
-*   **Severity:** `critical`
-*   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
-*   **Perspectival Mismatch:**
-    *   **Powerless View:** `snare`
-    *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_extraction_blindness_compounding_logic (conceptual)
-*   **Suggested Resolution Strategy:**
-    ```
-1. Interview affected individuals (N=10+):
-- Who benefits from compounding_logic?
-- Can you change/exit this constraint?
-- What would happen if you tried?
-2. Interview institutional actors (N=10+):
-- What function does compounding_logic serve?
-- Who would object to removing it?
-- What alternatives exist?
-3. Document benefit flows:
-- Track who gains vs. who loses from status quo
-- Measure asymmetric benefit distribution
-4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
-IF functional & fair → Reclassify as ROPE
-IF context-dependent → Add indexical resolution
-    ```
-
----
-
-### 27. False Mountain: `confirmation_bias`
+### 38. False Mountain: `confirmation_bias`
 
 *   **Severity:** `critical`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
@@ -780,159 +1036,43 @@ IF context-dependent → Add indexical resolution
 - Track who gains vs. who loses from status quo
 - Measure asymmetric benefit distribution
 4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
+IF extraction confirmed → Reclassify as SNARE
 IF functional & fair → Reclassify as ROPE
 IF context-dependent → Add indexical resolution
     ```
 
 ---
 
-### 28. False Mountain: `cost_of_observation`
+### 39. False Mountain: `cultural_refragmentation_2026`
 
 *   **Severity:** `critical`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
     *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_extraction_blindness_cost_of_observation (conceptual)
+*   **Generated Omega:** omega_extraction_blindness_cultural_refragmentation_2026 (conceptual)
 *   **Suggested Resolution Strategy:**
     ```
 1. Interview affected individuals (N=10+):
-- Who benefits from cost_of_observation?
+- Who benefits from cultural_refragmentation_2026?
 - Can you change/exit this constraint?
 - What would happen if you tried?
 2. Interview institutional actors (N=10+):
-- What function does cost_of_observation serve?
+- What function does cultural_refragmentation_2026 serve?
 - Who would object to removing it?
 - What alternatives exist?
 3. Document benefit flows:
 - Track who gains vs. who loses from status quo
 - Measure asymmetric benefit distribution
 4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
+IF extraction confirmed → Reclassify as SNARE
 IF functional & fair → Reclassify as ROPE
 IF context-dependent → Add indexical resolution
     ```
 
 ---
 
-### 29. False Mountain: `couples_residency_match`
-
-*   **Severity:** `critical`
-*   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
-*   **Perspectival Mismatch:**
-    *   **Powerless View:** `snare`
-    *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_extraction_blindness_couples_residency_match (conceptual)
-*   **Suggested Resolution Strategy:**
-    ```
-1. Interview affected individuals (N=10+):
-- Who benefits from couples_residency_match?
-- Can you change/exit this constraint?
-- What would happen if you tried?
-2. Interview institutional actors (N=10+):
-- What function does couples_residency_match serve?
-- Who would object to removing it?
-- What alternatives exist?
-3. Document benefit flows:
-- Track who gains vs. who loses from status quo
-- Measure asymmetric benefit distribution
-4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
-IF functional & fair → Reclassify as ROPE
-IF context-dependent → Add indexical resolution
-    ```
-
----
-
-### 30. False Mountain: `cuba_mandatrophic_collapse`
-
-*   **Severity:** `critical`
-*   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
-*   **Perspectival Mismatch:**
-    *   **Powerless View:** `snare`
-    *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_extraction_blindness_cuba_mandatrophic_collapse (conceptual)
-*   **Suggested Resolution Strategy:**
-    ```
-1. Interview affected individuals (N=10+):
-- Who benefits from cuba_mandatrophic_collapse?
-- Can you change/exit this constraint?
-- What would happen if you tried?
-2. Interview institutional actors (N=10+):
-- What function does cuba_mandatrophic_collapse serve?
-- Who would object to removing it?
-- What alternatives exist?
-3. Document benefit flows:
-- Track who gains vs. who loses from status quo
-- Measure asymmetric benefit distribution
-4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
-IF functional & fair → Reclassify as ROPE
-IF context-dependent → Add indexical resolution
-    ```
-
----
-
-### 31. False Mountain: `dark_patterns_manipulation`
-
-*   **Severity:** `critical`
-*   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
-*   **Perspectival Mismatch:**
-    *   **Powerless View:** `snare`
-    *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_extraction_blindness_dark_patterns_manipulation (conceptual)
-*   **Suggested Resolution Strategy:**
-    ```
-1. Interview affected individuals (N=10+):
-- Who benefits from dark_patterns_manipulation?
-- Can you change/exit this constraint?
-- What would happen if you tried?
-2. Interview institutional actors (N=10+):
-- What function does dark_patterns_manipulation serve?
-- Who would object to removing it?
-- What alternatives exist?
-3. Document benefit flows:
-- Track who gains vs. who loses from status quo
-- Measure asymmetric benefit distribution
-4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
-IF functional & fair → Reclassify as ROPE
-IF context-dependent → Add indexical resolution
-    ```
-
----
-
-### 32. False Mountain: `digital_credentialing_verification`
-
-*   **Severity:** `critical`
-*   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
-*   **Perspectival Mismatch:**
-    *   **Powerless View:** `snare`
-    *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_extraction_blindness_digital_credentialing_verification (conceptual)
-*   **Suggested Resolution Strategy:**
-    ```
-1. Interview affected individuals (N=10+):
-- Who benefits from digital_credentialing_verification?
-- Can you change/exit this constraint?
-- What would happen if you tried?
-2. Interview institutional actors (N=10+):
-- What function does digital_credentialing_verification serve?
-- Who would object to removing it?
-- What alternatives exist?
-3. Document benefit flows:
-- Track who gains vs. who loses from status quo
-- Measure asymmetric benefit distribution
-4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
-IF functional & fair → Reclassify as ROPE
-IF context-dependent → Add indexical resolution
-    ```
-
----
-
-### 33. False Mountain: `dunbars_number`
+### 40. False Mountain: `dunbars_number`
 
 *   **Severity:** `critical`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
@@ -954,14 +1094,14 @@ IF context-dependent → Add indexical resolution
 - Track who gains vs. who loses from status quo
 - Measure asymmetric benefit distribution
 4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
+IF extraction confirmed → Reclassify as SNARE
 IF functional & fair → Reclassify as ROPE
 IF context-dependent → Add indexical resolution
     ```
 
 ---
 
-### 34. False Mountain: `electrification_scale_2026`
+### 41. False Mountain: `electrification_scale_2026`
 
 *   **Severity:** `critical`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
@@ -983,43 +1123,58 @@ IF context-dependent → Add indexical resolution
 - Track who gains vs. who loses from status quo
 - Measure asymmetric benefit distribution
 4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
+IF extraction confirmed → Reclassify as SNARE
 IF functional & fair → Reclassify as ROPE
 IF context-dependent → Add indexical resolution
     ```
 
 ---
 
-### 35. False Mountain: `emrgency_medicine_clinical_guidelines`
+### 42. False Mountain: `elencher_identity_transformation`
 
 *   **Severity:** `critical`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
     *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_extraction_blindness_em_clinical_guidelines (conceptual)
+*   **Generated Omega:** omega_extraction_blindness_elencher_identity_transformation (conceptual)
 *   **Suggested Resolution Strategy:**
     ```
-1. Interview affected individuals (N=10+):
-- Who benefits from em_clinical_guidelines?
-- Can you change/exit this constraint?
-- What would happen if you tried?
-2. Interview institutional actors (N=10+):
-- What function does em_clinical_guidelines serve?
-- Who would object to removing it?
-- What alternatives exist?
-3. Document benefit flows:
-- Track who gains vs. who loses from status quo
-- Measure asymmetric benefit distribution
-4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
-IF functional & fair → Reclassify as ROPE
-IF context-dependent → Add indexical resolution
+1. Design measurement protocol for unknown
+2. Collect data from N=30+ real-world instances
+3. Calculate empirical metrics:
+- suppression_requirement (enforcement needed)
+- resistance_to_change (pushback level)
+- base_extractiveness (asymmetric benefit flow)
+4. Update constraint_metric/3 declarations with data
+5. Re-run classification to resolve perspectival gap
     ```
 
 ---
 
-### 36. False Mountain: `endowment_effect`
+### 43. False Mountain: `empty_tomb_transformation`
+
+*   **Severity:** `critical`
+*   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Perspectival Mismatch:**
+    *   **Powerless View:** `snare`
+    *   **Institutional View:** `rope`
+*   **Generated Omega:** omega_extraction_blindness_empty_tomb_transformation (conceptual)
+*   **Suggested Resolution Strategy:**
+    ```
+1. Design measurement protocol for unknown
+2. Collect data from N=30+ real-world instances
+3. Calculate empirical metrics:
+- suppression_requirement (enforcement needed)
+- resistance_to_change (pushback level)
+- base_extractiveness (asymmetric benefit flow)
+4. Update constraint_metric/3 declarations with data
+5. Re-run classification to resolve perspectival gap
+    ```
+
+---
+
+### 44. False Mountain: `endowment_effect`
 
 *   **Severity:** `critical`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
@@ -1041,14 +1196,14 @@ IF context-dependent → Add indexical resolution
 - Track who gains vs. who loses from status quo
 - Measure asymmetric benefit distribution
 4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
+IF extraction confirmed → Reclassify as SNARE
 IF functional & fair → Reclassify as ROPE
 IF context-dependent → Add indexical resolution
     ```
 
 ---
 
-### 37. False Mountain: `epigenetics_complexity_2026`
+### 45. False Mountain: `epigenetics_complexity_2026`
 
 *   **Severity:** `critical`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
@@ -1070,43 +1225,101 @@ IF context-dependent → Add indexical resolution
 - Track who gains vs. who loses from status quo
 - Measure asymmetric benefit distribution
 4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
+IF extraction confirmed → Reclassify as SNARE
 IF functional & fair → Reclassify as ROPE
 IF context-dependent → Add indexical resolution
     ```
 
 ---
 
-### 38. False Mountain: `ergo_storage_rent`
+### 46. False Mountain: `epstein_espionage_crisis_2026`
 
 *   **Severity:** `critical`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
     *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_extraction_blindness_ergo_storage_rent (conceptual)
+*   **Generated Omega:** omega_extraction_blindness_epstein_espionage_2026 (conceptual)
 *   **Suggested Resolution Strategy:**
     ```
 1. Interview affected individuals (N=10+):
-- Who benefits from ergo_storage_rent?
+- Who benefits from epstein_espionage_2026?
 - Can you change/exit this constraint?
 - What would happen if you tried?
 2. Interview institutional actors (N=10+):
-- What function does ergo_storage_rent serve?
+- What function does epstein_espionage_2026 serve?
 - Who would object to removing it?
 - What alternatives exist?
 3. Document benefit flows:
 - Track who gains vs. who loses from status quo
 - Measure asymmetric benefit distribution
 4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
+IF extraction confirmed → Reclassify as SNARE
 IF functional & fair → Reclassify as ROPE
 IF context-dependent → Add indexical resolution
     ```
 
 ---
 
-### 39. False Mountain: `ergo_storage_rent_mechanism`
+### 47. False Mountain: `epstein_files_2026`
+
+*   **Severity:** `critical`
+*   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Perspectival Mismatch:**
+    *   **Powerless View:** `snare`
+    *   **Institutional View:** `rope`
+*   **Generated Omega:** omega_extraction_blindness_epstein_files_2026 (conceptual)
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from epstein_files_2026?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does epstein_files_2026 serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 48. False Mountain: `epstein_kgb_honeytrap`
+
+*   **Severity:** `critical`
+*   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Perspectival Mismatch:**
+    *   **Powerless View:** `snare`
+    *   **Institutional View:** `rope`
+*   **Generated Omega:** omega_extraction_blindness_epstein_honeytrap (conceptual)
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from epstein_honeytrap?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does epstein_honeytrap serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 49. False Mountain: `ergo_storage_rent_mechanism`
 
 *   **Severity:** `critical`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
@@ -1128,14 +1341,14 @@ IF context-dependent → Add indexical resolution
 - Track who gains vs. who loses from status quo
 - Measure asymmetric benefit distribution
 4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
+IF extraction confirmed → Reclassify as SNARE
 IF functional & fair → Reclassify as ROPE
 IF context-dependent → Add indexical resolution
     ```
 
 ---
 
-### 40. False Mountain: `ergodic_theorems`
+### 50. False Mountain: `ergodic_theorems`
 
 *   **Severity:** `critical`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
@@ -1157,14 +1370,14 @@ IF context-dependent → Add indexical resolution
 - Track who gains vs. who loses from status quo
 - Measure asymmetric benefit distribution
 4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
+IF extraction confirmed → Reclassify as SNARE
 IF functional & fair → Reclassify as ROPE
 IF context-dependent → Add indexical resolution
     ```
 
 ---
 
-### 41. False Mountain: `extraordinary_narrative_shift`
+### 51. False Mountain: `extraordinary_narrative_shift`
 
 *   **Severity:** `critical`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
@@ -1186,43 +1399,14 @@ IF context-dependent → Add indexical resolution
 - Track who gains vs. who loses from status quo
 - Measure asymmetric benefit distribution
 4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
+IF extraction confirmed → Reclassify as SNARE
 IF functional & fair → Reclassify as ROPE
 IF context-dependent → Add indexical resolution
     ```
 
 ---
 
-### 42. False Mountain: `fast_growing_hierarchy`
-
-*   **Severity:** `critical`
-*   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
-*   **Perspectival Mismatch:**
-    *   **Powerless View:** `snare`
-    *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_extraction_blindness_fast_growing_hierarchy (conceptual)
-*   **Suggested Resolution Strategy:**
-    ```
-1. Interview affected individuals (N=10+):
-- Who benefits from fast_growing_hierarchy?
-- Can you change/exit this constraint?
-- What would happen if you tried?
-2. Interview institutional actors (N=10+):
-- What function does fast_growing_hierarchy serve?
-- Who would object to removing it?
-- What alternatives exist?
-3. Document benefit flows:
-- Track who gains vs. who loses from status quo
-- Measure asymmetric benefit distribution
-4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
-IF functional & fair → Reclassify as ROPE
-IF context-dependent → Add indexical resolution
-    ```
-
----
-
-### 43. False Mountain: `fittss_law`
+### 52. False Mountain: `fittss_law`
 
 *   **Severity:** `critical`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
@@ -1244,14 +1428,14 @@ IF context-dependent → Add indexical resolution
 - Track who gains vs. who loses from status quo
 - Measure asymmetric benefit distribution
 4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
+IF extraction confirmed → Reclassify as SNARE
 IF functional & fair → Reclassify as ROPE
 IF context-dependent → Add indexical resolution
     ```
 
 ---
 
-### 44. False Mountain: `fmeca_procedures_1980`
+### 53. False Mountain: `fmeca_procedures_1980`
 
 *   **Severity:** `critical`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
@@ -1273,72 +1457,65 @@ IF context-dependent → Add indexical resolution
 - Track who gains vs. who loses from status quo
 - Measure asymmetric benefit distribution
 4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
+IF extraction confirmed → Reclassify as SNARE
 IF functional & fair → Reclassify as ROPE
 IF context-dependent → Add indexical resolution
     ```
 
 ---
 
-### 45. False Mountain: `framing_effect`
+### 54. False Mountain: `fmt_oncology_realignment_2026`
 
 *   **Severity:** `critical`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
     *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_extraction_blindness_framing_effect (conceptual)
+*   **Generated Omega:** omega_extraction_blindness_fmt_oncology_2026 (conceptual)
 *   **Suggested Resolution Strategy:**
     ```
 1. Interview affected individuals (N=10+):
-- Who benefits from framing_effect?
+- Who benefits from fmt_oncology_2026?
 - Can you change/exit this constraint?
 - What would happen if you tried?
 2. Interview institutional actors (N=10+):
-- What function does framing_effect serve?
+- What function does fmt_oncology_2026 serve?
 - Who would object to removing it?
 - What alternatives exist?
 3. Document benefit flows:
 - Track who gains vs. who loses from status quo
 - Measure asymmetric benefit distribution
 4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
+IF extraction confirmed → Reclassify as SNARE
 IF functional & fair → Reclassify as ROPE
 IF context-dependent → Add indexical resolution
     ```
 
 ---
 
-### 46. False Mountain: `gale_shapley`
+### 55. False Mountain: `france_cordon_sanitaire_2026`
 
 *   **Severity:** `critical`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
     *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_extraction_blindness_gale_shapley (conceptual)
+*   **Generated Omega:** omega_extraction_blindness_france_cordon_sanitaire_2026 (conceptual)
 *   **Suggested Resolution Strategy:**
     ```
-1. Interview affected individuals (N=10+):
-- Who benefits from gale_shapley?
-- Can you change/exit this constraint?
-- What would happen if you tried?
-2. Interview institutional actors (N=10+):
-- What function does gale_shapley serve?
-- Who would object to removing it?
-- What alternatives exist?
-3. Document benefit flows:
-- Track who gains vs. who loses from status quo
-- Measure asymmetric benefit distribution
-4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
-IF functional & fair → Reclassify as ROPE
-IF context-dependent → Add indexical resolution
+1. Design measurement protocol for unknown
+2. Collect data from N=30+ real-world instances
+3. Calculate empirical metrics:
+- suppression_requirement (enforcement needed)
+- resistance_to_change (pushback level)
+- base_extractiveness (asymmetric benefit flow)
+4. Update constraint_metric/3 declarations with data
+5. Re-run classification to resolve perspectival gap
     ```
 
 ---
 
-### 47. False Mountain: `genetic_algorithms_evolution`
+### 56. False Mountain: `genetic_algorithms_evolution`
 
 *   **Severity:** `critical`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
@@ -1360,72 +1537,14 @@ IF context-dependent → Add indexical resolution
 - Track who gains vs. who loses from status quo
 - Measure asymmetric benefit distribution
 4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
+IF extraction confirmed → Reclassify as SNARE
 IF functional & fair → Reclassify as ROPE
 IF context-dependent → Add indexical resolution
     ```
 
 ---
 
-### 48. False Mountain: `genetic_predisposition`
-
-*   **Severity:** `critical`
-*   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
-*   **Perspectival Mismatch:**
-    *   **Powerless View:** `snare`
-    *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_extraction_blindness_genetic_predisposition (conceptual)
-*   **Suggested Resolution Strategy:**
-    ```
-1. Interview affected individuals (N=10+):
-- Who benefits from genetic_predisposition?
-- Can you change/exit this constraint?
-- What would happen if you tried?
-2. Interview institutional actors (N=10+):
-- What function does genetic_predisposition serve?
-- Who would object to removing it?
-- What alternatives exist?
-3. Document benefit flows:
-- Track who gains vs. who loses from status quo
-- Measure asymmetric benefit distribution
-4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
-IF functional & fair → Reclassify as ROPE
-IF context-dependent → Add indexical resolution
-    ```
-
----
-
-### 49. False Mountain: `gig_economy_algorithmic_managment`
-
-*   **Severity:** `critical`
-*   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
-*   **Perspectival Mismatch:**
-    *   **Powerless View:** `snare`
-    *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_extraction_blindness_gig_economy_algorithmic_management (conceptual)
-*   **Suggested Resolution Strategy:**
-    ```
-1. Interview affected individuals (N=10+):
-- Who benefits from gig_economy_algorithmic_management?
-- Can you change/exit this constraint?
-- What would happen if you tried?
-2. Interview institutional actors (N=10+):
-- What function does gig_economy_algorithmic_management serve?
-- Who would object to removing it?
-- What alternatives exist?
-3. Document benefit flows:
-- Track who gains vs. who loses from status quo
-- Measure asymmetric benefit distribution
-4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
-IF functional & fair → Reclassify as ROPE
-IF context-dependent → Add indexical resolution
-    ```
-
----
-
-### 50. False Mountain: `gita_kurukshetra`
+### 57. False Mountain: `gita_kurukshetra`
 
 *   **Severity:** `critical`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
@@ -1447,43 +1566,43 @@ IF context-dependent → Add indexical resolution
 - Track who gains vs. who loses from status quo
 - Measure asymmetric benefit distribution
 4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
+IF extraction confirmed → Reclassify as SNARE
 IF functional & fair → Reclassify as ROPE
 IF context-dependent → Add indexical resolution
     ```
 
 ---
 
-### 51. False Mountain: `goodharts_law`
+### 58. False Mountain: `global_economic_anxiety_2026`
 
 *   **Severity:** `critical`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
     *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_extraction_blindness_goodharts_law (conceptual)
+*   **Generated Omega:** omega_extraction_blindness_global_economic_anxiety_2026 (conceptual)
 *   **Suggested Resolution Strategy:**
     ```
 1. Interview affected individuals (N=10+):
-- Who benefits from goodharts_law?
+- Who benefits from global_economic_anxiety_2026?
 - Can you change/exit this constraint?
 - What would happen if you tried?
 2. Interview institutional actors (N=10+):
-- What function does goodharts_law serve?
+- What function does global_economic_anxiety_2026 serve?
 - Who would object to removing it?
 - What alternatives exist?
 3. Document benefit flows:
 - Track who gains vs. who loses from status quo
 - Measure asymmetric benefit distribution
 4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
+IF extraction confirmed → Reclassify as SNARE
 IF functional & fair → Reclassify as ROPE
 IF context-dependent → Add indexical resolution
     ```
 
 ---
 
-### 52. False Mountain: `graph_coloring_complexity`
+### 59. False Mountain: `graph_coloring_complexity`
 
 *   **Severity:** `critical`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
@@ -1505,43 +1624,14 @@ IF context-dependent → Add indexical resolution
 - Track who gains vs. who loses from status quo
 - Measure asymmetric benefit distribution
 4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
+IF extraction confirmed → Reclassify as SNARE
 IF functional & fair → Reclassify as ROPE
 IF context-dependent → Add indexical resolution
     ```
 
 ---
 
-### 53. False Mountain: `greenland_seizure_trade_war`
-
-*   **Severity:** `critical`
-*   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
-*   **Perspectival Mismatch:**
-    *   **Powerless View:** `snare`
-    *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_extraction_blindness_greenland_seizure_trade_war (conceptual)
-*   **Suggested Resolution Strategy:**
-    ```
-1. Interview affected individuals (N=10+):
-- Who benefits from greenland_seizure_trade_war?
-- Can you change/exit this constraint?
-- What would happen if you tried?
-2. Interview institutional actors (N=10+):
-- What function does greenland_seizure_trade_war serve?
-- Who would object to removing it?
-- What alternatives exist?
-3. Document benefit flows:
-- Track who gains vs. who loses from status quo
-- Measure asymmetric benefit distribution
-4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
-IF functional & fair → Reclassify as ROPE
-IF context-dependent → Add indexical resolution
-    ```
-
----
-
-### 54. False Mountain: `hamiltonian_path_complexity`
+### 60. False Mountain: `hamiltonian_path_complexity`
 
 *   **Severity:** `critical`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
@@ -1563,14 +1653,14 @@ IF context-dependent → Add indexical resolution
 - Track who gains vs. who loses from status quo
 - Measure asymmetric benefit distribution
 4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
+IF extraction confirmed → Reclassify as SNARE
 IF functional & fair → Reclassify as ROPE
 IF context-dependent → Add indexical resolution
     ```
 
 ---
 
-### 55. False Mountain: `hawthorne_effect`
+### 61. False Mountain: `hawthorne_effect`
 
 *   **Severity:** `critical`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
@@ -1592,14 +1682,43 @@ IF context-dependent → Add indexical resolution
 - Track who gains vs. who loses from status quo
 - Measure asymmetric benefit distribution
 4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
+IF extraction confirmed → Reclassify as SNARE
 IF functional & fair → Reclassify as ROPE
 IF context-dependent → Add indexical resolution
     ```
 
 ---
 
-### 56. False Mountain: `heisenberg_uncertainty`
+### 62. False Mountain: `hegemonic_entropy_2026`
+
+*   **Severity:** `critical`
+*   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Perspectival Mismatch:**
+    *   **Powerless View:** `snare`
+    *   **Institutional View:** `rope`
+*   **Generated Omega:** omega_extraction_blindness_hegemonic_entropy_2026 (conceptual)
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from hegemonic_entropy_2026?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does hegemonic_entropy_2026 serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 63. False Mountain: `heisenberg_uncertainty`
 
 *   **Severity:** `critical`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
@@ -1621,14 +1740,14 @@ IF context-dependent → Add indexical resolution
 - Track who gains vs. who loses from status quo
 - Measure asymmetric benefit distribution
 4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
+IF extraction confirmed → Reclassify as SNARE
 IF functional & fair → Reclassify as ROPE
 IF context-dependent → Add indexical resolution
     ```
 
 ---
 
-### 57. False Mountain: `helsinki_bus_theory`
+### 64. False Mountain: `helsinki_bus_theory`
 
 *   **Severity:** `critical`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
@@ -1650,159 +1769,43 @@ IF context-dependent → Add indexical resolution
 - Track who gains vs. who loses from status quo
 - Measure asymmetric benefit distribution
 4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
+IF extraction confirmed → Reclassify as SNARE
 IF functional & fair → Reclassify as ROPE
 IF context-dependent → Add indexical resolution
     ```
 
 ---
 
-### 58. False Mountain: `hydra_game`
+### 65. False Mountain: `informational_time_2026`
 
 *   **Severity:** `critical`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
     *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_extraction_blindness_hydra_game (conceptual)
+*   **Generated Omega:** omega_extraction_blindness_informational_time_2026 (conceptual)
 *   **Suggested Resolution Strategy:**
     ```
 1. Interview affected individuals (N=10+):
-- Who benefits from hydra_game?
+- Who benefits from informational_time_2026?
 - Can you change/exit this constraint?
 - What would happen if you tried?
 2. Interview institutional actors (N=10+):
-- What function does hydra_game serve?
+- What function does informational_time_2026 serve?
 - Who would object to removing it?
 - What alternatives exist?
 3. Document benefit flows:
 - Track who gains vs. who loses from status quo
 - Measure asymmetric benefit distribution
 4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
+IF extraction confirmed → Reclassify as SNARE
 IF functional & fair → Reclassify as ROPE
 IF context-dependent → Add indexical resolution
     ```
 
 ---
 
-### 59. False Mountain: `innovators_dilemma`
-
-*   **Severity:** `critical`
-*   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
-*   **Perspectival Mismatch:**
-    *   **Powerless View:** `snare`
-    *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_extraction_blindness_innovators_dilemma (conceptual)
-*   **Suggested Resolution Strategy:**
-    ```
-1. Interview affected individuals (N=10+):
-- Who benefits from innovators_dilemma?
-- Can you change/exit this constraint?
-- What would happen if you tried?
-2. Interview institutional actors (N=10+):
-- What function does innovators_dilemma serve?
-- Who would object to removing it?
-- What alternatives exist?
-3. Document benefit flows:
-- Track who gains vs. who loses from status quo
-- Measure asymmetric benefit distribution
-4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
-IF functional & fair → Reclassify as ROPE
-IF context-dependent → Add indexical resolution
-    ```
-
----
-
-### 60. False Mountain: `iran_mandatrophic_collapse`
-
-*   **Severity:** `critical`
-*   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
-*   **Perspectival Mismatch:**
-    *   **Powerless View:** `snare`
-    *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_extraction_blindness_iran_mandatrophic_collapse (conceptual)
-*   **Suggested Resolution Strategy:**
-    ```
-1. Interview affected individuals (N=10+):
-- Who benefits from iran_mandatrophic_collapse?
-- Can you change/exit this constraint?
-- What would happen if you tried?
-2. Interview institutional actors (N=10+):
-- What function does iran_mandatrophic_collapse serve?
-- Who would object to removing it?
-- What alternatives exist?
-3. Document benefit flows:
-- Track who gains vs. who loses from status quo
-- Measure asymmetric benefit distribution
-4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
-IF functional & fair → Reclassify as ROPE
-IF context-dependent → Add indexical resolution
-    ```
-
----
-
-### 61. False Mountain: `iron_law_of_oligarchy`
-
-*   **Severity:** `critical`
-*   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
-*   **Perspectival Mismatch:**
-    *   **Powerless View:** `snare`
-    *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_extraction_blindness_iron_law_of_oligarchy (conceptual)
-*   **Suggested Resolution Strategy:**
-    ```
-1. Interview affected individuals (N=10+):
-- Who benefits from iron_law_of_oligarchy?
-- Can you change/exit this constraint?
-- What would happen if you tried?
-2. Interview institutional actors (N=10+):
-- What function does iron_law_of_oligarchy serve?
-- Who would object to removing it?
-- What alternatives exist?
-3. Document benefit flows:
-- Track who gains vs. who loses from status quo
-- Measure asymmetric benefit distribution
-4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
-IF functional & fair → Reclassify as ROPE
-IF context-dependent → Add indexical resolution
-    ```
-
----
-
-### 62. False Mountain: `jevons_paradox`
-
-*   **Severity:** `critical`
-*   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
-*   **Perspectival Mismatch:**
-    *   **Powerless View:** `snare`
-    *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_extraction_blindness_jevons_paradox (conceptual)
-*   **Suggested Resolution Strategy:**
-    ```
-1. Interview affected individuals (N=10+):
-- Who benefits from jevons_paradox?
-- Can you change/exit this constraint?
-- What would happen if you tried?
-2. Interview institutional actors (N=10+):
-- What function does jevons_paradox serve?
-- Who would object to removing it?
-- What alternatives exist?
-3. Document benefit flows:
-- Track who gains vs. who loses from status quo
-- Measure asymmetric benefit distribution
-4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
-IF functional & fair → Reclassify as ROPE
-IF context-dependent → Add indexical resolution
-    ```
-
----
-
-### 63. False Mountain: `keltner_relationship_evaluation`
+### 66. False Mountain: `keltner_relationship_evaluation`
 
 *   **Severity:** `critical`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
@@ -1824,14 +1827,14 @@ IF context-dependent → Add indexical resolution
 - Track who gains vs. who loses from status quo
 - Measure asymmetric benefit distribution
 4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
+IF extraction confirmed → Reclassify as SNARE
 IF functional & fair → Reclassify as ROPE
 IF context-dependent → Add indexical resolution
     ```
 
 ---
 
-### 64. False Mountain: `kidney_exchange_market`
+### 67. False Mountain: `kidney_exchange_market`
 
 *   **Severity:** `critical`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
@@ -1853,14 +1856,14 @@ IF context-dependent → Add indexical resolution
 - Track who gains vs. who loses from status quo
 - Measure asymmetric benefit distribution
 4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
+IF extraction confirmed → Reclassify as SNARE
 IF functional & fair → Reclassify as ROPE
 IF context-dependent → Add indexical resolution
     ```
 
 ---
 
-### 65. False Mountain: `kirby_paris_theorem`
+### 68. False Mountain: `kirby_paris_theorem`
 
 *   **Severity:** `critical`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
@@ -1882,14 +1885,36 @@ IF context-dependent → Add indexical resolution
 - Track who gains vs. who loses from status quo
 - Measure asymmetric benefit distribution
 4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
+IF extraction confirmed → Reclassify as SNARE
 IF functional & fair → Reclassify as ROPE
 IF context-dependent → Add indexical resolution
     ```
 
 ---
 
-### 66. False Mountain: `law_of_diminishing_returns`
+### 69. False Mountain: `landscape_of_fear_2026`
+
+*   **Severity:** `critical`
+*   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Perspectival Mismatch:**
+    *   **Powerless View:** `snare`
+    *   **Institutional View:** `rope`
+*   **Generated Omega:** omega_extraction_blindness_landscape_of_fear_2026 (conceptual)
+*   **Suggested Resolution Strategy:**
+    ```
+1. Design measurement protocol for unknown
+2. Collect data from N=30+ real-world instances
+3. Calculate empirical metrics:
+- suppression_requirement (enforcement needed)
+- resistance_to_change (pushback level)
+- base_extractiveness (asymmetric benefit flow)
+4. Update constraint_metric/3 declarations with data
+5. Re-run classification to resolve perspectival gap
+    ```
+
+---
+
+### 70. False Mountain: `law_of_diminishing_returns`
 
 *   **Severity:** `critical`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
@@ -1911,43 +1936,14 @@ IF context-dependent → Add indexical resolution
 - Track who gains vs. who loses from status quo
 - Measure asymmetric benefit distribution
 4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
+IF extraction confirmed → Reclassify as SNARE
 IF functional & fair → Reclassify as ROPE
 IF context-dependent → Add indexical resolution
     ```
 
 ---
 
-### 67. False Mountain: `lehman_repo_105`
-
-*   **Severity:** `critical`
-*   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
-*   **Perspectival Mismatch:**
-    *   **Powerless View:** `snare`
-    *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_extraction_blindness_lehman_repo_105 (conceptual)
-*   **Suggested Resolution Strategy:**
-    ```
-1. Interview affected individuals (N=10+):
-- Who benefits from lehman_repo_105?
-- Can you change/exit this constraint?
-- What would happen if you tried?
-2. Interview institutional actors (N=10+):
-- What function does lehman_repo_105 serve?
-- Who would object to removing it?
-- What alternatives exist?
-3. Document benefit flows:
-- Track who gains vs. who loses from status quo
-- Measure asymmetric benefit distribution
-4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
-IF functional & fair → Reclassify as ROPE
-IF context-dependent → Add indexical resolution
-    ```
-
----
-
-### 68. False Mountain: `lindy_effect`
+### 71. False Mountain: `lindy_effect`
 
 *   **Severity:** `critical`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
@@ -1969,14 +1965,14 @@ IF context-dependent → Add indexical resolution
 - Track who gains vs. who loses from status quo
 - Measure asymmetric benefit distribution
 4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
+IF extraction confirmed → Reclassify as SNARE
 IF functional & fair → Reclassify as ROPE
 IF context-dependent → Add indexical resolution
     ```
 
 ---
 
-### 69. False Mountain: `lobs_theorem`
+### 72. False Mountain: `lobs_theorem`
 
 *   **Severity:** `critical`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
@@ -1998,14 +1994,14 @@ IF context-dependent → Add indexical resolution
 - Track who gains vs. who loses from status quo
 - Measure asymmetric benefit distribution
 4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
+IF extraction confirmed → Reclassify as SNARE
 IF functional & fair → Reclassify as ROPE
 IF context-dependent → Add indexical resolution
     ```
 
 ---
 
-### 70. False Mountain: `lowenheim_skolem_theorem`
+### 73. False Mountain: `lowenheim_skolem_theorem`
 
 *   **Severity:** `critical`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
@@ -2027,72 +2023,14 @@ IF context-dependent → Add indexical resolution
 - Track who gains vs. who loses from status quo
 - Measure asymmetric benefit distribution
 4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
+IF extraction confirmed → Reclassify as SNARE
 IF functional & fair → Reclassify as ROPE
 IF context-dependent → Add indexical resolution
     ```
 
 ---
 
-### 71. False Mountain: `mandatrophic_margin_collapse`
-
-*   **Severity:** `critical`
-*   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
-*   **Perspectival Mismatch:**
-    *   **Powerless View:** `snare`
-    *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_extraction_blindness_mandatrophic_margin_collapse (conceptual)
-*   **Suggested Resolution Strategy:**
-    ```
-1. Interview affected individuals (N=10+):
-- Who benefits from mandatrophic_margin_collapse?
-- Can you change/exit this constraint?
-- What would happen if you tried?
-2. Interview institutional actors (N=10+):
-- What function does mandatrophic_margin_collapse serve?
-- Who would object to removing it?
-- What alternatives exist?
-3. Document benefit flows:
-- Track who gains vs. who loses from status quo
-- Measure asymmetric benefit distribution
-4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
-IF functional & fair → Reclassify as ROPE
-IF context-dependent → Add indexical resolution
-    ```
-
----
-
-### 72. False Mountain: `mandatrophic_margin_collapse_diagnostic`
-
-*   **Severity:** `critical`
-*   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
-*   **Perspectival Mismatch:**
-    *   **Powerless View:** `snare`
-    *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_extraction_blindness_mandatrophy_systemic_collapse (conceptual)
-*   **Suggested Resolution Strategy:**
-    ```
-1. Interview affected individuals (N=10+):
-- Who benefits from mandatrophy_systemic_collapse?
-- Can you change/exit this constraint?
-- What would happen if you tried?
-2. Interview institutional actors (N=10+):
-- What function does mandatrophy_systemic_collapse serve?
-- Who would object to removing it?
-- What alternatives exist?
-3. Document benefit flows:
-- Track who gains vs. who loses from status quo
-- Measure asymmetric benefit distribution
-4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
-IF functional & fair → Reclassify as ROPE
-IF context-dependent → Add indexical resolution
-    ```
-
----
-
-### 73. False Mountain: `marriage_problem`
+### 74. False Mountain: `marriage_problem`
 
 *   **Severity:** `critical`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
@@ -2114,14 +2052,14 @@ IF context-dependent → Add indexical resolution
 - Track who gains vs. who loses from status quo
 - Measure asymmetric benefit distribution
 4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
+IF extraction confirmed → Reclassify as SNARE
 IF functional & fair → Reclassify as ROPE
 IF context-dependent → Add indexical resolution
     ```
 
 ---
 
-### 74. False Mountain: `matching_markets_general`
+### 75. False Mountain: `matching_markets_general`
 
 *   **Severity:** `critical`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
@@ -2143,36 +2081,7 @@ IF context-dependent → Add indexical resolution
 - Track who gains vs. who loses from status quo
 - Measure asymmetric benefit distribution
 4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
-IF functional & fair → Reclassify as ROPE
-IF context-dependent → Add indexical resolution
-    ```
-
----
-
-### 75. False Mountain: `material_tensile_strength`
-
-*   **Severity:** `critical`
-*   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
-*   **Perspectival Mismatch:**
-    *   **Powerless View:** `snare`
-    *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_extraction_blindness_material_tensile_strength (conceptual)
-*   **Suggested Resolution Strategy:**
-    ```
-1. Interview affected individuals (N=10+):
-- Who benefits from material_tensile_strength?
-- Can you change/exit this constraint?
-- What would happen if you tried?
-2. Interview institutional actors (N=10+):
-- What function does material_tensile_strength serve?
-- Who would object to removing it?
-- What alternatives exist?
-3. Document benefit flows:
-- Track who gains vs. who loses from status quo
-- Measure asymmetric benefit distribution
-4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
+IF extraction confirmed → Reclassify as SNARE
 IF functional & fair → Reclassify as ROPE
 IF context-dependent → Add indexical resolution
     ```
@@ -2201,43 +2110,14 @@ IF context-dependent → Add indexical resolution
 - Track who gains vs. who loses from status quo
 - Measure asymmetric benefit distribution
 4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
+IF extraction confirmed → Reclassify as SNARE
 IF functional & fair → Reclassify as ROPE
 IF context-dependent → Add indexical resolution
     ```
 
 ---
 
-### 77. False Mountain: `medical_residency_match`
-
-*   **Severity:** `critical`
-*   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
-*   **Perspectival Mismatch:**
-    *   **Powerless View:** `snare`
-    *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_extraction_blindness_medical_residency_match (conceptual)
-*   **Suggested Resolution Strategy:**
-    ```
-1. Interview affected individuals (N=10+):
-- Who benefits from medical_residency_match?
-- Can you change/exit this constraint?
-- What would happen if you tried?
-2. Interview institutional actors (N=10+):
-- What function does medical_residency_match serve?
-- Who would object to removing it?
-- What alternatives exist?
-3. Document benefit flows:
-- Track who gains vs. who loses from status quo
-- Measure asymmetric benefit distribution
-4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
-IF functional & fair → Reclassify as ROPE
-IF context-dependent → Add indexical resolution
-    ```
-
----
-
-### 78. False Mountain: `microbiome_symbiosis`
+### 77. False Mountain: `microbiome_symbiosis`
 
 *   **Severity:** `critical`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
@@ -2259,94 +2139,123 @@ IF context-dependent → Add indexical resolution
 - Track who gains vs. who loses from status quo
 - Measure asymmetric benefit distribution
 4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
+IF extraction confirmed → Reclassify as SNARE
 IF functional & fair → Reclassify as ROPE
 IF context-dependent → Add indexical resolution
     ```
 
 ---
 
-### 79. False Mountain: `mil_std_461g_emi_control`
+### 78. False Mountain: `minnesota_sovereignty_2026`
 
 *   **Severity:** `critical`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
     *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_extraction_blindness_mil_std_461g_emi_control (conceptual)
+*   **Generated Omega:** omega_extraction_blindness_minnesota_sovereignty_2026 (conceptual)
 *   **Suggested Resolution Strategy:**
     ```
 1. Interview affected individuals (N=10+):
-- Who benefits from mil_std_461g_emi_control?
+- Who benefits from minnesota_sovereignty_2026?
 - Can you change/exit this constraint?
 - What would happen if you tried?
 2. Interview institutional actors (N=10+):
-- What function does mil_std_461g_emi_control serve?
+- What function does minnesota_sovereignty_2026 serve?
 - Who would object to removing it?
 - What alternatives exist?
 3. Document benefit flows:
 - Track who gains vs. who loses from status quo
 - Measure asymmetric benefit distribution
 4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
+IF extraction confirmed → Reclassify as SNARE
 IF functional & fair → Reclassify as ROPE
 IF context-dependent → Add indexical resolution
     ```
 
 ---
 
-### 80. False Mountain: `mil_std_810f_tailoring`
+### 79. False Mountain: `mit_tfus_consciousness_2026`
 
 *   **Severity:** `critical`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
     *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_extraction_blindness_mil_std_810f_tailoring (conceptual)
+*   **Generated Omega:** omega_extraction_blindness_mit_tfus_2026 (conceptual)
 *   **Suggested Resolution Strategy:**
     ```
 1. Interview affected individuals (N=10+):
-- Who benefits from mil_std_810f_tailoring?
+- Who benefits from mit_tfus_2026?
 - Can you change/exit this constraint?
 - What would happen if you tried?
 2. Interview institutional actors (N=10+):
-- What function does mil_std_810f_tailoring serve?
+- What function does mit_tfus_2026 serve?
 - Who would object to removing it?
 - What alternatives exist?
 3. Document benefit flows:
 - Track who gains vs. who loses from status quo
 - Measure asymmetric benefit distribution
 4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
+IF extraction confirmed → Reclassify as SNARE
 IF functional & fair → Reclassify as ROPE
 IF context-dependent → Add indexical resolution
     ```
 
 ---
 
-### 81. False Mountain: `neurodiversity_spectrum`
+### 80. False Mountain: `moltbook_breach_2026`
 
 *   **Severity:** `critical`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
     *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_extraction_blindness_neurodiversity_spectrum (conceptual)
+*   **Generated Omega:** omega_extraction_blindness_moltbook_breach_2026 (conceptual)
 *   **Suggested Resolution Strategy:**
     ```
 1. Interview affected individuals (N=10+):
-- Who benefits from neurodiversity_spectrum?
+- Who benefits from moltbook_breach_2026?
 - Can you change/exit this constraint?
 - What would happen if you tried?
 2. Interview institutional actors (N=10+):
-- What function does neurodiversity_spectrum serve?
+- What function does moltbook_breach_2026 serve?
 - Who would object to removing it?
 - What alternatives exist?
 3. Document benefit flows:
 - Track who gains vs. who loses from status quo
 - Measure asymmetric benefit distribution
 4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 81. False Mountain: `narcissistic_ego_maintenance`
+
+*   **Severity:** `critical`
+*   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Perspectival Mismatch:**
+    *   **Powerless View:** `snare`
+    *   **Institutional View:** `rope`
+*   **Generated Omega:** omega_extraction_blindness_narcissistic_ego_maintenance (conceptual)
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from narcissistic_ego_maintenance?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does narcissistic_ego_maintenance serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
 IF functional & fair → Reclassify as ROPE
 IF context-dependent → Add indexical resolution
     ```
@@ -2375,36 +2284,36 @@ IF context-dependent → Add indexical resolution
 - Track who gains vs. who loses from status quo
 - Measure asymmetric benefit distribution
 4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
+IF extraction confirmed → Reclassify as SNARE
 IF functional & fair → Reclassify as ROPE
 IF context-dependent → Add indexical resolution
     ```
 
 ---
 
-### 83. False Mountain: `non_compete_agreements`
+### 83. False Mountain: `other_peoples_troubles_2026`
 
 *   **Severity:** `critical`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
     *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_extraction_blindness_non_compete_agreements (conceptual)
+*   **Generated Omega:** omega_extraction_blindness_other_peoples_troubles_2026 (conceptual)
 *   **Suggested Resolution Strategy:**
     ```
 1. Interview affected individuals (N=10+):
-- Who benefits from non_compete_agreements?
+- Who benefits from other_peoples_troubles_2026?
 - Can you change/exit this constraint?
 - What would happen if you tried?
 2. Interview institutional actors (N=10+):
-- What function does non_compete_agreements serve?
+- What function does other_peoples_troubles_2026 serve?
 - Who would object to removing it?
 - What alternatives exist?
 3. Document benefit flows:
 - Track who gains vs. who loses from status quo
 - Measure asymmetric benefit distribution
 4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
+IF extraction confirmed → Reclassify as SNARE
 IF functional & fair → Reclassify as ROPE
 IF context-dependent → Add indexical resolution
     ```
@@ -2433,72 +2342,14 @@ IF context-dependent → Add indexical resolution
 - Track who gains vs. who loses from status quo
 - Measure asymmetric benefit distribution
 4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
+IF extraction confirmed → Reclassify as SNARE
 IF functional & fair → Reclassify as ROPE
 IF context-dependent → Add indexical resolution
     ```
 
 ---
 
-### 85. False Mountain: `parkinsons_law`
-
-*   **Severity:** `critical`
-*   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
-*   **Perspectival Mismatch:**
-    *   **Powerless View:** `snare`
-    *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_extraction_blindness_parkinsons_law (conceptual)
-*   **Suggested Resolution Strategy:**
-    ```
-1. Interview affected individuals (N=10+):
-- Who benefits from parkinsons_law?
-- Can you change/exit this constraint?
-- What would happen if you tried?
-2. Interview institutional actors (N=10+):
-- What function does parkinsons_law serve?
-- Who would object to removing it?
-- What alternatives exist?
-3. Document benefit flows:
-- Track who gains vs. who loses from status quo
-- Measure asymmetric benefit distribution
-4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
-IF functional & fair → Reclassify as ROPE
-IF context-dependent → Add indexical resolution
-    ```
-
----
-
-### 86. False Mountain: `planetary_boundaries`
-
-*   **Severity:** `critical`
-*   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
-*   **Perspectival Mismatch:**
-    *   **Powerless View:** `snare`
-    *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_extraction_blindness_planetary_boundaries (conceptual)
-*   **Suggested Resolution Strategy:**
-    ```
-1. Interview affected individuals (N=10+):
-- Who benefits from planetary_boundaries?
-- Can you change/exit this constraint?
-- What would happen if you tried?
-2. Interview institutional actors (N=10+):
-- What function does planetary_boundaries serve?
-- Who would object to removing it?
-- What alternatives exist?
-3. Document benefit flows:
-- Track who gains vs. who loses from status quo
-- Measure asymmetric benefit distribution
-4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
-IF functional & fair → Reclassify as ROPE
-IF context-dependent → Add indexical resolution
-    ```
-
----
-
-### 87. False Mountain: `planetary_diet_constraint_2026`
+### 85. False Mountain: `planetary_diet_constraint_2026`
 
 *   **Severity:** `critical`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
@@ -2520,101 +2371,14 @@ IF context-dependent → Add indexical resolution
 - Track who gains vs. who loses from status quo
 - Measure asymmetric benefit distribution
 4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
+IF extraction confirmed → Reclassify as SNARE
 IF functional & fair → Reclassify as ROPE
 IF context-dependent → Add indexical resolution
     ```
 
 ---
 
-### 88. False Mountain: `planning_fallacy`
-
-*   **Severity:** `critical`
-*   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
-*   **Perspectival Mismatch:**
-    *   **Powerless View:** `snare`
-    *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_extraction_blindness_planning_fallacy (conceptual)
-*   **Suggested Resolution Strategy:**
-    ```
-1. Interview affected individuals (N=10+):
-- Who benefits from planning_fallacy?
-- Can you change/exit this constraint?
-- What would happen if you tried?
-2. Interview institutional actors (N=10+):
-- What function does planning_fallacy serve?
-- Who would object to removing it?
-- What alternatives exist?
-3. Document benefit flows:
-- Track who gains vs. who loses from status quo
-- Measure asymmetric benefit distribution
-4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
-IF functional & fair → Reclassify as ROPE
-IF context-dependent → Add indexical resolution
-    ```
-
----
-
-### 89. False Mountain: `poetic_verse_and_past`
-
-*   **Severity:** `critical`
-*   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
-*   **Perspectival Mismatch:**
-    *   **Powerless View:** `snare`
-    *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_extraction_blindness_poetic_verse_and_past (conceptual)
-*   **Suggested Resolution Strategy:**
-    ```
-1. Interview affected individuals (N=10+):
-- Who benefits from poetic_verse_and_past?
-- Can you change/exit this constraint?
-- What would happen if you tried?
-2. Interview institutional actors (N=10+):
-- What function does poetic_verse_and_past serve?
-- Who would object to removing it?
-- What alternatives exist?
-3. Document benefit flows:
-- Track who gains vs. who loses from status quo
-- Measure asymmetric benefit distribution
-4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
-IF functional & fair → Reclassify as ROPE
-IF context-dependent → Add indexical resolution
-    ```
-
----
-
-### 90. False Mountain: `politeness_face_negotiation`
-
-*   **Severity:** `critical`
-*   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
-*   **Perspectival Mismatch:**
-    *   **Powerless View:** `snare`
-    *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_extraction_blindness_politeness_face_negotiation (conceptual)
-*   **Suggested Resolution Strategy:**
-    ```
-1. Interview affected individuals (N=10+):
-- Who benefits from politeness_face_negotiation?
-- Can you change/exit this constraint?
-- What would happen if you tried?
-2. Interview institutional actors (N=10+):
-- What function does politeness_face_negotiation serve?
-- Who would object to removing it?
-- What alternatives exist?
-3. Document benefit flows:
-- Track who gains vs. who loses from status quo
-- Measure asymmetric benefit distribution
-4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
-IF functional & fair → Reclassify as ROPE
-IF context-dependent → Add indexical resolution
-    ```
-
----
-
-### 91. False Mountain: `private_identity_integration`
+### 86. False Mountain: `private_identity_integration`
 
 *   **Severity:** `critical`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
@@ -2636,43 +2400,14 @@ IF context-dependent → Add indexical resolution
 - Track who gains vs. who loses from status quo
 - Measure asymmetric benefit distribution
 4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
+IF extraction confirmed → Reclassify as SNARE
 IF functional & fair → Reclassify as ROPE
 IF context-dependent → Add indexical resolution
     ```
 
 ---
 
-### 92. False Mountain: `qualified_immunity`
-
-*   **Severity:** `critical`
-*   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
-*   **Perspectival Mismatch:**
-    *   **Powerless View:** `snare`
-    *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_extraction_blindness_qualified_immunity (conceptual)
-*   **Suggested Resolution Strategy:**
-    ```
-1. Interview affected individuals (N=10+):
-- Who benefits from qualified_immunity?
-- Can you change/exit this constraint?
-- What would happen if you tried?
-2. Interview institutional actors (N=10+):
-- What function does qualified_immunity serve?
-- Who would object to removing it?
-- What alternatives exist?
-3. Document benefit flows:
-- Track who gains vs. who loses from status quo
-- Measure asymmetric benefit distribution
-4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
-IF functional & fair → Reclassify as ROPE
-IF context-dependent → Add indexical resolution
-    ```
-
----
-
-### 93. False Mountain: `qwerty_vs_dvorak`
+### 87. False Mountain: `qwerty_vs_dvorak`
 
 *   **Severity:** `critical`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
@@ -2694,43 +2429,14 @@ IF context-dependent → Add indexical resolution
 - Track who gains vs. who loses from status quo
 - Measure asymmetric benefit distribution
 4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
+IF extraction confirmed → Reclassify as SNARE
 IF functional & fair → Reclassify as ROPE
 IF context-dependent → Add indexical resolution
     ```
 
 ---
 
-### 94. False Mountain: `regulatory_capture`
-
-*   **Severity:** `critical`
-*   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
-*   **Perspectival Mismatch:**
-    *   **Powerless View:** `snare`
-    *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_extraction_blindness_regulatory_capture (conceptual)
-*   **Suggested Resolution Strategy:**
-    ```
-1. Interview affected individuals (N=10+):
-- Who benefits from regulatory_capture?
-- Can you change/exit this constraint?
-- What would happen if you tried?
-2. Interview institutional actors (N=10+):
-- What function does regulatory_capture serve?
-- Who would object to removing it?
-- What alternatives exist?
-3. Document benefit flows:
-- Track who gains vs. who loses from status quo
-- Measure asymmetric benefit distribution
-4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
-IF functional & fair → Reclassify as ROPE
-IF context-dependent → Add indexical resolution
-    ```
-
----
-
-### 95. False Mountain: `rfc9293_interoperability`
+### 88. False Mountain: `rfc9293_interoperability`
 
 *   **Severity:** `critical`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
@@ -2752,188 +2458,43 @@ IF context-dependent → Add indexical resolution
 - Track who gains vs. who loses from status quo
 - Measure asymmetric benefit distribution
 4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
+IF extraction confirmed → Reclassify as SNARE
 IF functional & fair → Reclassify as ROPE
 IF context-dependent → Add indexical resolution
     ```
 
 ---
 
-### 96. False Mountain: `rotation_seven_black_soil`
+### 89. False Mountain: `riot_incentive_loop_2026`
 
 *   **Severity:** `critical`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
     *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_extraction_blindness_rotation_seven_black_soil (conceptual)
+*   **Generated Omega:** omega_extraction_blindness_riot_incentive_loop_2026 (conceptual)
 *   **Suggested Resolution Strategy:**
     ```
 1. Interview affected individuals (N=10+):
-- Who benefits from rotation_seven_black_soil?
+- Who benefits from riot_incentive_loop_2026?
 - Can you change/exit this constraint?
 - What would happen if you tried?
 2. Interview institutional actors (N=10+):
-- What function does rotation_seven_black_soil serve?
+- What function does riot_incentive_loop_2026 serve?
 - Who would object to removing it?
 - What alternatives exist?
 3. Document benefit flows:
 - Track who gains vs. who loses from status quo
 - Measure asymmetric benefit distribution
 4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
+IF extraction confirmed → Reclassify as SNARE
 IF functional & fair → Reclassify as ROPE
 IF context-dependent → Add indexical resolution
     ```
 
 ---
 
-### 97. False Mountain: `rotation_seven_isolation`
-
-*   **Severity:** `critical`
-*   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
-*   **Perspectival Mismatch:**
-    *   **Powerless View:** `snare`
-    *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_extraction_blindness_rotation_seven_isolation (conceptual)
-*   **Suggested Resolution Strategy:**
-    ```
-1. Interview affected individuals (N=10+):
-- Who benefits from rotation_seven_isolation?
-- Can you change/exit this constraint?
-- What would happen if you tried?
-2. Interview institutional actors (N=10+):
-- What function does rotation_seven_isolation serve?
-- Who would object to removing it?
-- What alternatives exist?
-3. Document benefit flows:
-- Track who gains vs. who loses from status quo
-- Measure asymmetric benefit distribution
-4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
-IF functional & fair → Reclassify as ROPE
-IF context-dependent → Add indexical resolution
-    ```
-
----
-
-### 98. False Mountain: `rotation_seven_kubo_ranking`
-
-*   **Severity:** `critical`
-*   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
-*   **Perspectival Mismatch:**
-    *   **Powerless View:** `snare`
-    *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_extraction_blindness_rotation_seven_kubo_ranking (conceptual)
-*   **Suggested Resolution Strategy:**
-    ```
-1. Interview affected individuals (N=10+):
-- Who benefits from rotation_seven_kubo_ranking?
-- Can you change/exit this constraint?
-- What would happen if you tried?
-2. Interview institutional actors (N=10+):
-- What function does rotation_seven_kubo_ranking serve?
-- Who would object to removing it?
-- What alternatives exist?
-3. Document benefit flows:
-- Track who gains vs. who loses from status quo
-- Measure asymmetric benefit distribution
-4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
-IF functional & fair → Reclassify as ROPE
-IF context-dependent → Add indexical resolution
-    ```
-
----
-
-### 99. False Mountain: `royal_navy_middle_east_withdrawal`
-
-*   **Severity:** `critical`
-*   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
-*   **Perspectival Mismatch:**
-    *   **Powerless View:** `snare`
-    *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_extraction_blindness_royal_navy_middle_east_withdrawal (conceptual)
-*   **Suggested Resolution Strategy:**
-    ```
-1. Interview affected individuals (N=10+):
-- Who benefits from royal_navy_middle_east_withdrawal?
-- Can you change/exit this constraint?
-- What would happen if you tried?
-2. Interview institutional actors (N=10+):
-- What function does royal_navy_middle_east_withdrawal serve?
-- Who would object to removing it?
-- What alternatives exist?
-3. Document benefit flows:
-- Track who gains vs. who loses from status quo
-- Measure asymmetric benefit distribution
-4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
-IF functional & fair → Reclassify as ROPE
-IF context-dependent → Add indexical resolution
-    ```
-
----
-
-### 100. False Mountain: `russian_war_cannibalization`
-
-*   **Severity:** `critical`
-*   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
-*   **Perspectival Mismatch:**
-    *   **Powerless View:** `snare`
-    *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_extraction_blindness_russian_war_cannibalization (conceptual)
-*   **Suggested Resolution Strategy:**
-    ```
-1. Interview affected individuals (N=10+):
-- Who benefits from russian_war_cannibalization?
-- Can you change/exit this constraint?
-- What would happen if you tried?
-2. Interview institutional actors (N=10+):
-- What function does russian_war_cannibalization serve?
-- Who would object to removing it?
-- What alternatives exist?
-3. Document benefit flows:
-- Track who gains vs. who loses from status quo
-- Measure asymmetric benefit distribution
-4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
-IF functional & fair → Reclassify as ROPE
-IF context-dependent → Add indexical resolution
-    ```
-
----
-
-### 101. False Mountain: `sapir_whorf_hypothesis`
-
-*   **Severity:** `critical`
-*   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
-*   **Perspectival Mismatch:**
-    *   **Powerless View:** `snare`
-    *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_extraction_blindness_sapir_whorf_hypothesis (conceptual)
-*   **Suggested Resolution Strategy:**
-    ```
-1. Interview affected individuals (N=10+):
-- Who benefits from sapir_whorf_hypothesis?
-- Can you change/exit this constraint?
-- What would happen if you tried?
-2. Interview institutional actors (N=10+):
-- What function does sapir_whorf_hypothesis serve?
-- Who would object to removing it?
-- What alternatives exist?
-3. Document benefit flows:
-- Track who gains vs. who loses from status quo
-- Measure asymmetric benefit distribution
-4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
-IF functional & fair → Reclassify as ROPE
-IF context-dependent → Add indexical resolution
-    ```
-
----
-
-### 102. False Mountain: `sat_csp_complexity`
+### 90. False Mountain: `sat_csp_complexity`
 
 *   **Severity:** `critical`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
@@ -2955,14 +2516,14 @@ IF context-dependent → Add indexical resolution
 - Track who gains vs. who loses from status quo
 - Measure asymmetric benefit distribution
 4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
+IF extraction confirmed → Reclassify as SNARE
 IF functional & fair → Reclassify as ROPE
 IF context-dependent → Add indexical resolution
     ```
 
 ---
 
-### 103. False Mountain: `shannon_entropy_limit`
+### 91. False Mountain: `shannon_entropy_limit`
 
 *   **Severity:** `critical`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
@@ -2984,72 +2545,14 @@ IF context-dependent → Add indexical resolution
 - Track who gains vs. who loses from status quo
 - Measure asymmetric benefit distribution
 4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
+IF extraction confirmed → Reclassify as SNARE
 IF functional & fair → Reclassify as ROPE
 IF context-dependent → Add indexical resolution
     ```
 
 ---
 
-### 104. False Mountain: `shobies_existential_commitment`
-
-*   **Severity:** `critical`
-*   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
-*   **Perspectival Mismatch:**
-    *   **Powerless View:** `snare`
-    *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_extraction_blindness_shobies_existential_commitment (conceptual)
-*   **Suggested Resolution Strategy:**
-    ```
-1. Interview affected individuals (N=10+):
-- Who benefits from shobies_existential_commitment?
-- Can you change/exit this constraint?
-- What would happen if you tried?
-2. Interview institutional actors (N=10+):
-- What function does shobies_existential_commitment serve?
-- Who would object to removing it?
-- What alternatives exist?
-3. Document benefit flows:
-- Track who gains vs. who loses from status quo
-- Measure asymmetric benefit distribution
-4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
-IF functional & fair → Reclassify as ROPE
-IF context-dependent → Add indexical resolution
-    ```
-
----
-
-### 105. False Mountain: `silicon_lexicon_overload`
-
-*   **Severity:** `critical`
-*   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
-*   **Perspectival Mismatch:**
-    *   **Powerless View:** `snare`
-    *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_extraction_blindness_silicon_lexicon_overload (conceptual)
-*   **Suggested Resolution Strategy:**
-    ```
-1. Interview affected individuals (N=10+):
-- Who benefits from silicon_lexicon_overload?
-- Can you change/exit this constraint?
-- What would happen if you tried?
-2. Interview institutional actors (N=10+):
-- What function does silicon_lexicon_overload serve?
-- Who would object to removing it?
-- What alternatives exist?
-3. Document benefit flows:
-- Track who gains vs. who loses from status quo
-- Measure asymmetric benefit distribution
-4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
-IF functional & fair → Reclassify as ROPE
-IF context-dependent → Add indexical resolution
-    ```
-
----
-
-### 106. False Mountain: `skolems_paradox`
+### 92. False Mountain: `skolems_paradox`
 
 *   **Severity:** `critical`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
@@ -3071,72 +2574,14 @@ IF context-dependent → Add indexical resolution
 - Track who gains vs. who loses from status quo
 - Measure asymmetric benefit distribution
 4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
+IF extraction confirmed → Reclassify as SNARE
 IF functional & fair → Reclassify as ROPE
 IF context-dependent → Add indexical resolution
     ```
 
 ---
 
-### 107. False Mountain: `sludge_bureaucratic_friction`
-
-*   **Severity:** `critical`
-*   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
-*   **Perspectival Mismatch:**
-    *   **Powerless View:** `snare`
-    *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_extraction_blindness_sludge_bureaucratic_friction (conceptual)
-*   **Suggested Resolution Strategy:**
-    ```
-1. Interview affected individuals (N=10+):
-- Who benefits from sludge_bureaucratic_friction?
-- Can you change/exit this constraint?
-- What would happen if you tried?
-2. Interview institutional actors (N=10+):
-- What function does sludge_bureaucratic_friction serve?
-- Who would object to removing it?
-- What alternatives exist?
-3. Document benefit flows:
-- Track who gains vs. who loses from status quo
-- Measure asymmetric benefit distribution
-4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
-IF functional & fair → Reclassify as ROPE
-IF context-dependent → Add indexical resolution
-    ```
-
----
-
-### 108. False Mountain: `social_loafing`
-
-*   **Severity:** `critical`
-*   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
-*   **Perspectival Mismatch:**
-    *   **Powerless View:** `snare`
-    *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_extraction_blindness_social_loafing (conceptual)
-*   **Suggested Resolution Strategy:**
-    ```
-1. Interview affected individuals (N=10+):
-- Who benefits from social_loafing?
-- Can you change/exit this constraint?
-- What would happen if you tried?
-2. Interview institutional actors (N=10+):
-- What function does social_loafing serve?
-- Who would object to removing it?
-- What alternatives exist?
-3. Document benefit flows:
-- Track who gains vs. who loses from status quo
-- Measure asymmetric benefit distribution
-4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
-IF functional & fair → Reclassify as ROPE
-IF context-dependent → Add indexical resolution
-    ```
-
----
-
-### 109. False Mountain: `social_narrative_casting`
+### 93. False Mountain: `social_narrative_casting`
 
 *   **Severity:** `critical`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
@@ -3158,14 +2603,14 @@ IF context-dependent → Add indexical resolution
 - Track who gains vs. who loses from status quo
 - Measure asymmetric benefit distribution
 4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
+IF extraction confirmed → Reclassify as SNARE
 IF functional & fair → Reclassify as ROPE
 IF context-dependent → Add indexical resolution
     ```
 
 ---
 
-### 110. False Mountain: `somatic_focusing_awareness`
+### 94. False Mountain: `somatic_focusing_awareness`
 
 *   **Severity:** `critical`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
@@ -3187,14 +2632,14 @@ IF context-dependent → Add indexical resolution
 - Track who gains vs. who loses from status quo
 - Measure asymmetric benefit distribution
 4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
+IF extraction confirmed → Reclassify as SNARE
 IF functional & fair → Reclassify as ROPE
 IF context-dependent → Add indexical resolution
     ```
 
 ---
 
-### 111. False Mountain: `sorites_paradox`
+### 95. False Mountain: `sorites_paradox`
 
 *   **Severity:** `critical`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
@@ -3216,101 +2661,14 @@ IF context-dependent → Add indexical resolution
 - Track who gains vs. who loses from status quo
 - Measure asymmetric benefit distribution
 4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
+IF extraction confirmed → Reclassify as SNARE
 IF functional & fair → Reclassify as ROPE
 IF context-dependent → Add indexical resolution
     ```
 
 ---
 
-### 112. False Mountain: `square_cube_law`
-
-*   **Severity:** `critical`
-*   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
-*   **Perspectival Mismatch:**
-    *   **Powerless View:** `snare`
-    *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_extraction_blindness_square_cube_law (conceptual)
-*   **Suggested Resolution Strategy:**
-    ```
-1. Interview affected individuals (N=10+):
-- Who benefits from square_cube_law?
-- Can you change/exit this constraint?
-- What would happen if you tried?
-2. Interview institutional actors (N=10+):
-- What function does square_cube_law serve?
-- Who would object to removing it?
-- What alternatives exist?
-3. Document benefit flows:
-- Track who gains vs. who loses from status quo
-- Measure asymmetric benefit distribution
-4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
-IF functional & fair → Reclassify as ROPE
-IF context-dependent → Add indexical resolution
-    ```
-
----
-
-### 113. False Mountain: `suanne_coup_of_peace`
-
-*   **Severity:** `critical`
-*   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
-*   **Perspectival Mismatch:**
-    *   **Powerless View:** `snare`
-    *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_extraction_blindness_suanne_coup_of_peace (conceptual)
-*   **Suggested Resolution Strategy:**
-    ```
-1. Interview affected individuals (N=10+):
-- Who benefits from suanne_coup_of_peace?
-- Can you change/exit this constraint?
-- What would happen if you tried?
-2. Interview institutional actors (N=10+):
-- What function does suanne_coup_of_peace serve?
-- Who would object to removing it?
-- What alternatives exist?
-3. Document benefit flows:
-- Track who gains vs. who loses from status quo
-- Measure asymmetric benefit distribution
-4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
-IF functional & fair → Reclassify as ROPE
-IF context-dependent → Add indexical resolution
-    ```
-
----
-
-### 114. False Mountain: `sunk_cost_fallacy`
-
-*   **Severity:** `critical`
-*   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
-*   **Perspectival Mismatch:**
-    *   **Powerless View:** `snare`
-    *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_extraction_blindness_sunk_cost_fallacy (conceptual)
-*   **Suggested Resolution Strategy:**
-    ```
-1. Interview affected individuals (N=10+):
-- Who benefits from sunk_cost_fallacy?
-- Can you change/exit this constraint?
-- What would happen if you tried?
-2. Interview institutional actors (N=10+):
-- What function does sunk_cost_fallacy serve?
-- Who would object to removing it?
-- What alternatives exist?
-3. Document benefit flows:
-- Track who gains vs. who loses from status quo
-- Measure asymmetric benefit distribution
-4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
-IF functional & fair → Reclassify as ROPE
-IF context-dependent → Add indexical resolution
-    ```
-
----
-
-### 115. False Mountain: `tarski_undefinability`
+### 96. False Mountain: `tarski_undefinability`
 
 *   **Severity:** `critical`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
@@ -3332,130 +2690,14 @@ IF context-dependent → Add indexical resolution
 - Track who gains vs. who loses from status quo
 - Measure asymmetric benefit distribution
 4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
+IF extraction confirmed → Reclassify as SNARE
 IF functional & fair → Reclassify as ROPE
 IF context-dependent → Add indexical resolution
     ```
 
 ---
 
-### 116. False Mountain: `the_bacchae_madness_protocol`
-
-*   **Severity:** `critical`
-*   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
-*   **Perspectival Mismatch:**
-    *   **Powerless View:** `snare`
-    *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_extraction_blindness_the_bacchae_madness_protocol (conceptual)
-*   **Suggested Resolution Strategy:**
-    ```
-1. Interview affected individuals (N=10+):
-- Who benefits from the_bacchae_madness_protocol?
-- Can you change/exit this constraint?
-- What would happen if you tried?
-2. Interview institutional actors (N=10+):
-- What function does the_bacchae_madness_protocol serve?
-- Who would object to removing it?
-- What alternatives exist?
-3. Document benefit flows:
-- Track who gains vs. who loses from status quo
-- Measure asymmetric benefit distribution
-4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
-IF functional & fair → Reclassify as ROPE
-IF context-dependent → Add indexical resolution
-    ```
-
----
-
-### 117. False Mountain: `the_calm_protocol_suppression`
-
-*   **Severity:** `critical`
-*   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
-*   **Perspectival Mismatch:**
-    *   **Powerless View:** `snare`
-    *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_extraction_blindness_the_calm_protocol_suppression (conceptual)
-*   **Suggested Resolution Strategy:**
-    ```
-1. Interview affected individuals (N=10+):
-- Who benefits from the_calm_protocol_suppression?
-- Can you change/exit this constraint?
-- What would happen if you tried?
-2. Interview institutional actors (N=10+):
-- What function does the_calm_protocol_suppression serve?
-- Who would object to removing it?
-- What alternatives exist?
-3. Document benefit flows:
-- Track who gains vs. who loses from status quo
-- Measure asymmetric benefit distribution
-4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
-IF functional & fair → Reclassify as ROPE
-IF context-dependent → Add indexical resolution
-    ```
-
----
-
-### 118. False Mountain: `theory_of_visitors`
-
-*   **Severity:** `critical`
-*   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
-*   **Perspectival Mismatch:**
-    *   **Powerless View:** `snare`
-    *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_extraction_blindness_theory_of_visitors (conceptual)
-*   **Suggested Resolution Strategy:**
-    ```
-1. Interview affected individuals (N=10+):
-- Who benefits from theory_of_visitors?
-- Can you change/exit this constraint?
-- What would happen if you tried?
-2. Interview institutional actors (N=10+):
-- What function does theory_of_visitors serve?
-- Who would object to removing it?
-- What alternatives exist?
-3. Document benefit flows:
-- Track who gains vs. who loses from status quo
-- Measure asymmetric benefit distribution
-4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
-IF functional & fair → Reclassify as ROPE
-IF context-dependent → Add indexical resolution
-    ```
-
----
-
-### 119. False Mountain: `thermodynamics_entropy`
-
-*   **Severity:** `critical`
-*   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
-*   **Perspectival Mismatch:**
-    *   **Powerless View:** `snare`
-    *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_extraction_blindness_thermodynamics_entropy (conceptual)
-*   **Suggested Resolution Strategy:**
-    ```
-1. Interview affected individuals (N=10+):
-- Who benefits from thermodynamics_entropy?
-- Can you change/exit this constraint?
-- What would happen if you tried?
-2. Interview institutional actors (N=10+):
-- What function does thermodynamics_entropy serve?
-- Who would object to removing it?
-- What alternatives exist?
-3. Document benefit flows:
-- Track who gains vs. who loses from status quo
-- Measure asymmetric benefit distribution
-4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
-IF functional & fair → Reclassify as ROPE
-IF context-dependent → Add indexical resolution
-    ```
-
----
-
-### 120. False Mountain: `trade_secret_law`
+### 97. False Mountain: `trade_secret_law`
 
 *   **Severity:** `critical`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
@@ -3477,43 +2719,14 @@ IF context-dependent → Add indexical resolution
 - Track who gains vs. who loses from status quo
 - Measure asymmetric benefit distribution
 4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
+IF extraction confirmed → Reclassify as SNARE
 IF functional & fair → Reclassify as ROPE
 IF context-dependent → Add indexical resolution
     ```
 
 ---
 
-### 121. False Mountain: `tragedy_of_the_commons`
-
-*   **Severity:** `critical`
-*   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
-*   **Perspectival Mismatch:**
-    *   **Powerless View:** `snare`
-    *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_extraction_blindness_tragedy_of_the_commons (conceptual)
-*   **Suggested Resolution Strategy:**
-    ```
-1. Interview affected individuals (N=10+):
-- Who benefits from tragedy_of_the_commons?
-- Can you change/exit this constraint?
-- What would happen if you tried?
-2. Interview institutional actors (N=10+):
-- What function does tragedy_of_the_commons serve?
-- Who would object to removing it?
-- What alternatives exist?
-3. Document benefit flows:
-- Track who gains vs. who loses from status quo
-- Measure asymmetric benefit distribution
-4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
-IF functional & fair → Reclassify as ROPE
-IF context-dependent → Add indexical resolution
-    ```
-
----
-
-### 122. False Mountain: `traveling_salesperson_problem`
+### 98. False Mountain: `traveling_salesperson_problem`
 
 *   **Severity:** `critical`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
@@ -3535,101 +2748,420 @@ IF context-dependent → Add indexical resolution
 - Track who gains vs. who loses from status quo
 - Measure asymmetric benefit distribution
 4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
+IF extraction confirmed → Reclassify as SNARE
 IF functional & fair → Reclassify as ROPE
 IF context-dependent → Add indexical resolution
     ```
 
 ---
 
-### 123. False Mountain: `trump_making_china_great_2026`
+### 99. False Mountain: `ulysses_chp01`
 
 *   **Severity:** `critical`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
     *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_extraction_blindness_trump_making_china_great_2026 (conceptual)
+*   **Generated Omega:** omega_extraction_blindness_ulysses_tower_1904 (conceptual)
 *   **Suggested Resolution Strategy:**
     ```
 1. Interview affected individuals (N=10+):
-- Who benefits from trump_making_china_great_2026?
+- Who benefits from ulysses_tower_1904?
 - Can you change/exit this constraint?
 - What would happen if you tried?
 2. Interview institutional actors (N=10+):
-- What function does trump_making_china_great_2026 serve?
+- What function does ulysses_tower_1904 serve?
 - Who would object to removing it?
 - What alternatives exist?
 3. Document benefit flows:
 - Track who gains vs. who loses from status quo
 - Measure asymmetric benefit distribution
 4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
+IF extraction confirmed → Reclassify as SNARE
 IF functional & fair → Reclassify as ROPE
 IF context-dependent → Add indexical resolution
     ```
 
 ---
 
-### 124. False Mountain: `us_two_party_duopoly`
+### 100. False Mountain: `ulysses_chp02`
 
 *   **Severity:** `critical`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
     *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_extraction_blindness_us_two_party_duopoly (conceptual)
+*   **Generated Omega:** omega_extraction_blindness_ulysses_school_1904 (conceptual)
 *   **Suggested Resolution Strategy:**
     ```
 1. Interview affected individuals (N=10+):
-- Who benefits from us_two_party_duopoly?
+- Who benefits from ulysses_school_1904?
 - Can you change/exit this constraint?
 - What would happen if you tried?
 2. Interview institutional actors (N=10+):
-- What function does us_two_party_duopoly serve?
+- What function does ulysses_school_1904 serve?
 - Who would object to removing it?
 - What alternatives exist?
 3. Document benefit flows:
 - Track who gains vs. who loses from status quo
 - Measure asymmetric benefit distribution
 4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
+IF extraction confirmed → Reclassify as SNARE
 IF functional & fair → Reclassify as ROPE
 IF context-dependent → Add indexical resolution
     ```
 
 ---
 
-### 125. False Mountain: `utopia_apocalypse_fragility`
+### 101. False Mountain: `ulysses_chp04`
 
 *   **Severity:** `critical`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
     *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_extraction_blindness_utopia_apocalypse_fragility (conceptual)
+*   **Generated Omega:** omega_extraction_blindness_ulysses_calypso_1904 (conceptual)
 *   **Suggested Resolution Strategy:**
     ```
 1. Interview affected individuals (N=10+):
-- Who benefits from utopia_apocalypse_fragility?
+- Who benefits from ulysses_calypso_1904?
 - Can you change/exit this constraint?
 - What would happen if you tried?
 2. Interview institutional actors (N=10+):
-- What function does utopia_apocalypse_fragility serve?
+- What function does ulysses_calypso_1904 serve?
 - Who would object to removing it?
 - What alternatives exist?
 3. Document benefit flows:
 - Track who gains vs. who loses from status quo
 - Measure asymmetric benefit distribution
 4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
+IF extraction confirmed → Reclassify as SNARE
 IF functional & fair → Reclassify as ROPE
 IF context-dependent → Add indexical resolution
     ```
 
 ---
 
-### 126. False Mountain: `van_der_waerden_theorem`
+### 102. False Mountain: `ulysses_chp05`
+
+*   **Severity:** `critical`
+*   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Perspectival Mismatch:**
+    *   **Powerless View:** `snare`
+    *   **Institutional View:** `rope`
+*   **Generated Omega:** omega_extraction_blindness_ulysses_lotus_1904 (conceptual)
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from ulysses_lotus_1904?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does ulysses_lotus_1904 serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 103. False Mountain: `ulysses_chp07`
+
+*   **Severity:** `critical`
+*   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Perspectival Mismatch:**
+    *   **Powerless View:** `snare`
+    *   **Institutional View:** `rope`
+*   **Generated Omega:** omega_extraction_blindness_ulysses_aeolus_1904 (conceptual)
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from ulysses_aeolus_1904?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does ulysses_aeolus_1904 serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 104. False Mountain: `ulysses_chp08`
+
+*   **Severity:** `critical`
+*   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Perspectival Mismatch:**
+    *   **Powerless View:** `snare`
+    *   **Institutional View:** `rope`
+*   **Generated Omega:** omega_extraction_blindness_ulysses_lestrygonians_1904 (conceptual)
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from ulysses_lestrygonians_1904?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does ulysses_lestrygonians_1904 serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 105. False Mountain: `ulysses_chp09`
+
+*   **Severity:** `critical`
+*   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Perspectival Mismatch:**
+    *   **Powerless View:** `snare`
+    *   **Institutional View:** `rope`
+*   **Generated Omega:** omega_extraction_blindness_ulysses_scylla_1904 (conceptual)
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from ulysses_scylla_1904?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does ulysses_scylla_1904 serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 106. False Mountain: `ulysses_chp10`
+
+*   **Severity:** `critical`
+*   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Perspectival Mismatch:**
+    *   **Powerless View:** `snare`
+    *   **Institutional View:** `rope`
+*   **Generated Omega:** omega_extraction_blindness_ulysses_rocks_1904 (conceptual)
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from ulysses_rocks_1904?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does ulysses_rocks_1904 serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 107. False Mountain: `ulysses_chp11`
+
+*   **Severity:** `critical`
+*   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Perspectival Mismatch:**
+    *   **Powerless View:** `snare`
+    *   **Institutional View:** `rope`
+*   **Generated Omega:** omega_extraction_blindness_ulysses_sirens_1904 (conceptual)
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from ulysses_sirens_1904?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does ulysses_sirens_1904 serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 108. False Mountain: `ulysses_chp12`
+
+*   **Severity:** `critical`
+*   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Perspectival Mismatch:**
+    *   **Powerless View:** `snare`
+    *   **Institutional View:** `rope`
+*   **Generated Omega:** omega_extraction_blindness_ulysses_cyclops_1904 (conceptual)
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from ulysses_cyclops_1904?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does ulysses_cyclops_1904 serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 109. False Mountain: `ulysses_chp13`
+
+*   **Severity:** `critical`
+*   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Perspectival Mismatch:**
+    *   **Powerless View:** `snare`
+    *   **Institutional View:** `rope`
+*   **Generated Omega:** omega_extraction_blindness_ulysses_nausicaa_1904 (conceptual)
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from ulysses_nausicaa_1904?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does ulysses_nausicaa_1904 serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 110. False Mountain: `ulysses_chp16`
+
+*   **Severity:** `critical`
+*   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Perspectival Mismatch:**
+    *   **Powerless View:** `snare`
+    *   **Institutional View:** `rope`
+*   **Generated Omega:** omega_extraction_blindness_ulysses_eumaeus_1904 (conceptual)
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from ulysses_eumaeus_1904?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does ulysses_eumaeus_1904 serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 111. False Mountain: `ulysses_chp17`
+
+*   **Severity:** `critical`
+*   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Perspectival Mismatch:**
+    *   **Powerless View:** `snare`
+    *   **Institutional View:** `rope`
+*   **Generated Omega:** omega_extraction_blindness_ulysses_ithaca_1904 (conceptual)
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from ulysses_ithaca_1904?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does ulysses_ithaca_1904 serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 112. False Mountain: `value_alignment_drift`
+
+*   **Severity:** `critical`
+*   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Perspectival Mismatch:**
+    *   **Powerless View:** `snare`
+    *   **Institutional View:** `rope`
+*   **Generated Omega:** omega_extraction_blindness_value_alignment_drift (conceptual)
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from value_alignment_drift?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does value_alignment_drift serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 113. False Mountain: `van_der_waerden_theorem`
 
 *   **Severity:** `critical`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
@@ -3651,14 +3183,43 @@ IF context-dependent → Add indexical resolution
 - Track who gains vs. who loses from status quo
 - Measure asymmetric benefit distribution
 4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
+IF extraction confirmed → Reclassify as SNARE
 IF functional & fair → Reclassify as ROPE
 IF context-dependent → Add indexical resolution
     ```
 
 ---
 
-### 127. False Mountain: `viral_transmission_rates`
+### 114. False Mountain: `vienna_quantum_superposition_2026`
+
+*   **Severity:** `critical`
+*   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Perspectival Mismatch:**
+    *   **Powerless View:** `snare`
+    *   **Institutional View:** `rope`
+*   **Generated Omega:** omega_extraction_blindness_vienna_quantum_superposition_2026 (conceptual)
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from vienna_quantum_superposition_2026?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does vienna_quantum_superposition_2026 serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 115. False Mountain: `viral_transmission_rates`
 
 *   **Severity:** `critical`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
@@ -3680,43 +3241,65 @@ IF context-dependent → Add indexical resolution
 - Track who gains vs. who loses from status quo
 - Measure asymmetric benefit distribution
 4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
+IF extraction confirmed → Reclassify as SNARE
 IF functional & fair → Reclassify as ROPE
 IF context-dependent → Add indexical resolution
     ```
 
 ---
 
-### 128. False Mountain: `weber_fechner_law`
+### 116. False Mountain: `visibility_bias_governance`
 
 *   **Severity:** `critical`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
     *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_extraction_blindness_weber_fechner_law (conceptual)
+*   **Generated Omega:** omega_extraction_blindness_visibility_bias_governance (conceptual)
 *   **Suggested Resolution Strategy:**
     ```
 1. Interview affected individuals (N=10+):
-- Who benefits from weber_fechner_law?
+- Who benefits from visibility_bias_governance?
 - Can you change/exit this constraint?
 - What would happen if you tried?
 2. Interview institutional actors (N=10+):
-- What function does weber_fechner_law serve?
+- What function does visibility_bias_governance serve?
 - Who would object to removing it?
 - What alternatives exist?
 3. Document benefit flows:
 - Track who gains vs. who loses from status quo
 - Measure asymmetric benefit distribution
 4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
+IF extraction confirmed → Reclassify as SNARE
 IF functional & fair → Reclassify as ROPE
 IF context-dependent → Add indexical resolution
     ```
 
 ---
 
-### 129. False Mountain: `wikipedia_notability_requirement_2026`
+### 117. False Mountain: `wikipedia_crowdsourcing_2026`
+
+*   **Severity:** `critical`
+*   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Perspectival Mismatch:**
+    *   **Powerless View:** `snare`
+    *   **Institutional View:** `rope`
+*   **Generated Omega:** omega_extraction_blindness_wikipedia_crowdsourcing_2026 (conceptual)
+*   **Suggested Resolution Strategy:**
+    ```
+1. Design measurement protocol for unknown
+2. Collect data from N=30+ real-world instances
+3. Calculate empirical metrics:
+- suppression_requirement (enforcement needed)
+- resistance_to_change (pushback level)
+- base_extractiveness (asymmetric benefit flow)
+4. Update constraint_metric/3 declarations with data
+5. Re-run classification to resolve perspectival gap
+    ```
+
+---
+
+### 118. False Mountain: `wikipedia_notability_requirement_2026`
 
 *   **Severity:** `critical`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
@@ -3726,26 +3309,19 @@ IF context-dependent → Add indexical resolution
 *   **Generated Omega:** omega_extraction_blindness_wikipedia_notability_requirement_2026 (conceptual)
 *   **Suggested Resolution Strategy:**
     ```
-1. Interview affected individuals (N=10+):
-- Who benefits from wikipedia_notability_requirement_2026?
-- Can you change/exit this constraint?
-- What would happen if you tried?
-2. Interview institutional actors (N=10+):
-- What function does wikipedia_notability_requirement_2026 serve?
-- Who would object to removing it?
-- What alternatives exist?
-3. Document benefit flows:
-- Track who gains vs. who loses from status quo
-- Measure asymmetric benefit distribution
-4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
-IF functional & fair → Reclassify as ROPE
-IF context-dependent → Add indexical resolution
+1. Design measurement protocol for unknown
+2. Collect data from N=30+ real-world instances
+3. Calculate empirical metrics:
+- suppression_requirement (enforcement needed)
+- resistance_to_change (pushback level)
+- base_extractiveness (asymmetric benefit flow)
+4. Update constraint_metric/3 declarations with data
+5. Re-run classification to resolve perspectival gap
     ```
 
 ---
 
-### 130. False Mountain: `winners_curse`
+### 119. False Mountain: `winners_curse`
 
 *   **Severity:** `critical`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
@@ -3767,14 +3343,14 @@ IF context-dependent → Add indexical resolution
 - Track who gains vs. who loses from status quo
 - Measure asymmetric benefit distribution
 4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
+IF extraction confirmed → Reclassify as SNARE
 IF functional & fair → Reclassify as ROPE
 IF context-dependent → Add indexical resolution
     ```
 
 ---
 
-### 131. False Mountain: `xi_mao_ideological_centralization`
+### 120. False Mountain: `xi_mao_ideological_centralization`
 
 *   **Severity:** `critical`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
@@ -3784,26 +3360,19 @@ IF context-dependent → Add indexical resolution
 *   **Generated Omega:** omega_extraction_blindness_xi_mao_ideological_centralization (conceptual)
 *   **Suggested Resolution Strategy:**
     ```
-1. Interview affected individuals (N=10+):
-- Who benefits from xi_mao_ideological_centralization?
-- Can you change/exit this constraint?
-- What would happen if you tried?
-2. Interview institutional actors (N=10+):
-- What function does xi_mao_ideological_centralization serve?
-- Who would object to removing it?
-- What alternatives exist?
-3. Document benefit flows:
-- Track who gains vs. who loses from status quo
-- Measure asymmetric benefit distribution
-4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
-IF functional & fair → Reclassify as ROPE
-IF context-dependent → Add indexical resolution
+1. Design measurement protocol for unknown
+2. Collect data from N=30+ real-world instances
+3. Calculate empirical metrics:
+- suppression_requirement (enforcement needed)
+- resistance_to_change (pushback level)
+- base_extractiveness (asymmetric benefit flow)
+4. Update constraint_metric/3 declarations with data
+5. Re-run classification to resolve perspectival gap
     ```
 
 ---
 
-### 132. False Mountain: `zipfs_law`
+### 121. False Mountain: `zipfs_law`
 
 *   **Severity:** `critical`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
@@ -3825,42 +3394,43 @@ IF context-dependent → Add indexical resolution
 - Track who gains vs. who loses from status quo
 - Measure asymmetric benefit distribution
 4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
+IF extraction confirmed → Reclassify as SNARE
 IF functional & fair → Reclassify as ROPE
 IF context-dependent → Add indexical resolution
     ```
 
 ---
 
-### 133. False Mountain: `academic_peer_review_gatekeeping`
+### 122. False Mountain: `zombie_reasoning_2026`
 
-*   **Severity:** `high`
-*   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
+*   **Severity:** `critical`
+*   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
-    *   **Powerless View:** `mountain`
+    *   **Powerless View:** `snare`
     *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_cut_safety_academic_peer_review_gatekeeping (conceptual)
+*   **Generated Omega:** omega_extraction_blindness_zombie_reasoning_2026 (conceptual)
 *   **Suggested Resolution Strategy:**
     ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut academic_peer_review_gatekeeping, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
+1. Interview affected individuals (N=10+):
+- Who benefits from zombie_reasoning_2026?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does zombie_reasoning_2026 serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
     ```
 
 ---
 
-### 134. False Mountain: `arrows_impossibility_theorem`
+### 123. False Mountain: `arrows_impossibility_theorem`
 
 *   **Severity:** `high`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
@@ -3888,7 +3458,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 135. False Mountain: `asce_7_22_seismic_design`
+### 124. False Mountain: `asce_7_22_seismic_design`
 
 *   **Severity:** `high`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
@@ -3916,7 +3486,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 136. False Mountain: `astm_d638_tensile_testing`
+### 125. False Mountain: `astm_d638_tensile_testing`
 
 *   **Severity:** `high`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
@@ -3944,7 +3514,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 137. False Mountain: `authoritarian_power_paradox`
+### 126. False Mountain: `authoritarian_power_paradox`
 
 *   **Severity:** `high`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
@@ -3954,25 +3524,19 @@ IF uncertainty → HALT changes until resolved
 *   **Generated Omega:** omega_cut_safety_authoritarian_power_paradox (conceptual)
 *   **Suggested Resolution Strategy:**
     ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut authoritarian_power_paradox, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
+1. Design measurement protocol for unknown
+2. Collect data from N=30+ real-world instances
+3. Calculate empirical metrics:
+- suppression_requirement (enforcement needed)
+- resistance_to_change (pushback level)
+- base_extractiveness (asymmetric benefit flow)
+4. Update constraint_metric/3 declarations with data
+5. Re-run classification to resolve perspectival gap
     ```
 
 ---
 
-### 138. False Mountain: `axiom_of_choice_determinacy`
+### 127. False Mountain: `axiom_of_choice_determinacy`
 
 *   **Severity:** `high`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
@@ -4000,35 +3564,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 139. False Mountain: `banach_fixed_point`
-
-*   **Severity:** `high`
-*   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
-*   **Perspectival Mismatch:**
-    *   **Powerless View:** `mountain`
-    *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_cut_safety_banach_fixed_point (conceptual)
-*   **Suggested Resolution Strategy:**
-    ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut banach_fixed_point, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
-    ```
-
----
-
-### 140. False Mountain: `banach_tarski_paradox`
+### 128. False Mountain: `banach_tarski_paradox`
 
 *   **Severity:** `high`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
@@ -4056,35 +3592,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 141. False Mountain: `bap_of_pigs_operational_silo`
-
-*   **Severity:** `high`
-*   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
-*   **Perspectival Mismatch:**
-    *   **Powerless View:** `mountain`
-    *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_cut_safety_bay_of_pigs_operational_silo (conceptual)
-*   **Suggested Resolution Strategy:**
-    ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut bay_of_pigs_operational_silo, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
-    ```
-
----
-
-### 142. False Mountain: `basel_problem_convergence`
+### 129. False Mountain: `basel_problem_convergence`
 
 *   **Severity:** `high`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
@@ -4112,7 +3620,35 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 143. False Mountain: `birthday_paradox_collison`
+### 130. False Mountain: `bay_of_pigs_operational_silo`
+
+*   **Severity:** `high`
+*   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
+*   **Perspectival Mismatch:**
+    *   **Powerless View:** `mountain`
+    *   **Institutional View:** `rope`
+*   **Generated Omega:** omega_cut_safety_bay_of_pigs_operational_silo (conceptual)
+*   **Suggested Resolution Strategy:**
+    ```
+1. SAFETY ASSESSMENT (DO NOT SKIP):
+- If institutions cut bay_of_pigs_operational_silo, do individuals have alternatives?
+- Is this their only survival mechanism?
+- What scaffolding exists for transition?
+2. Test institutional perception:
+- Can institutions unilaterally change this?
+- Do they understand downstream impacts?
+- Is their "optional" view empirically accurate?
+3. Decision tree:
+IF truly unchangeable → Correct institutional view to MOUNTAIN
+IF changeable + safe alternatives → Correct powerless view to ROPE
+IF changeable + NO alternatives → ADD SCAFFOLD before any change
+IF uncertainty → HALT changes until resolved
+4. CRITICAL: Never proceed with changes until safety verified
+    ```
+
+---
+
+### 131. False Mountain: `birthday_paradox_collison`
 
 *   **Severity:** `high`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
@@ -4140,7 +3676,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 144. False Mountain: `brain_network_paradigm_2026`
+### 132. False Mountain: `brain_network_paradigm_2026`
 
 *   **Severity:** `high`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
@@ -4168,7 +3704,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 145. False Mountain: `brouwer_fixed_point`
+### 133. False Mountain: `brouwer_fixed_point`
 
 *   **Severity:** `high`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
@@ -4196,7 +3732,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 146. False Mountain: `buffons_needle_pi_estimation`
+### 134. False Mountain: `buffons_needle_pi_estimation`
 
 *   **Severity:** `high`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
@@ -4224,35 +3760,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 147. False Mountain: `burden_of_proof_engineering_safety`
-
-*   **Severity:** `high`
-*   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
-*   **Perspectival Mismatch:**
-    *   **Powerless View:** `mountain`
-    *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_cut_safety_burden_of_proof_engineering_safety (conceptual)
-*   **Suggested Resolution Strategy:**
-    ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut burden_of_proof_engineering_safety, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
-    ```
-
----
-
-### 148. False Mountain: `burden_of_proof_legal_criminal`
+### 135. False Mountain: `burden_of_proof_legal_criminal`
 
 *   **Severity:** `high`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
@@ -4280,7 +3788,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 149. False Mountain: `burden_of_proof_scientific_empirical`
+### 136. False Mountain: `burden_of_proof_scientific_empirical`
 
 *   **Severity:** `high`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
@@ -4308,7 +3816,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 150. False Mountain: `busy_beaver_noncomputability`
+### 137. False Mountain: `busy_beaver_noncomputability`
 
 *   **Severity:** `high`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
@@ -4336,7 +3844,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 151. False Mountain: `cantor_set_topology`
+### 138. False Mountain: `cantor_set_topology`
 
 *   **Severity:** `high`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
@@ -4364,35 +3872,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 152. False Mountain: `carbon_credit_markets_2026`
-
-*   **Severity:** `high`
-*   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
-*   **Perspectival Mismatch:**
-    *   **Powerless View:** `mountain`
-    *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_cut_safety_carbon_credit_markets_2026 (conceptual)
-*   **Suggested Resolution Strategy:**
-    ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut carbon_credit_markets_2026, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
-    ```
-
----
-
-### 153. False Mountain: `central_limit_theorem_convergence`
+### 139. False Mountain: `central_limit_theorem_convergence`
 
 *   **Severity:** `high`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
@@ -4420,7 +3900,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 154. False Mountain: `chaitins_omega_undecidability`
+### 140. False Mountain: `chaitins_omega_undecidability`
 
 *   **Severity:** `high`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
@@ -4448,35 +3928,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 155. False Mountain: `china_taiwan_reunification_mandate`
-
-*   **Severity:** `high`
-*   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
-*   **Perspectival Mismatch:**
-    *   **Powerless View:** `mountain`
-    *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_cut_safety_china_taiwan_reunification_mandate (conceptual)
-*   **Suggested Resolution Strategy:**
-    ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut china_taiwan_reunification_mandate, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
-    ```
-
----
-
-### 156. False Mountain: `church_turing_thesis`
+### 141. False Mountain: `church_turing_thesis`
 
 *   **Severity:** `high`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
@@ -4504,35 +3956,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 157. False Mountain: `cia_fbi_legal_wall`
-
-*   **Severity:** `high`
-*   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
-*   **Perspectival Mismatch:**
-    *   **Powerless View:** `mountain`
-    *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_cut_safety_cia_fbi_legal_wall (conceptual)
-*   **Suggested Resolution Strategy:**
-    ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut cia_fbi_legal_wall, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
-    ```
-
----
-
-### 158. False Mountain: `click_chemistry_paradigm_2026`
+### 142. False Mountain: `click_chemistry_paradigm_2026`
 
 *   **Severity:** `high`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
@@ -4560,7 +3984,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 159. False Mountain: `climate_attribution_2026`
+### 143. False Mountain: `climate_attribution_2026`
 
 *   **Severity:** `high`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
@@ -4588,7 +4012,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 160. False Mountain: `collatz_conjecture_determinism`
+### 144. False Mountain: `collatz_conjecture_determinism`
 
 *   **Severity:** `high`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
@@ -4616,7 +4040,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 161. False Mountain: `constitutional_supremacy`
+### 145. False Mountain: `constitutional_supremacy`
 
 *   **Severity:** `high`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
@@ -4644,7 +4068,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 162. False Mountain: `continuum_hypothesis_undecidability`
+### 146. False Mountain: `continuum_hypothesis_undecidability`
 
 *   **Severity:** `high`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
@@ -4672,7 +4096,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 163. False Mountain: `conways_game_of_life_dynamics`
+### 147. False Mountain: `conways_game_of_life_dynamics`
 
 *   **Severity:** `high`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
@@ -4700,7 +4124,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 164. False Mountain: `countable_infinity_cardinality`
+### 148. False Mountain: `countable_infinity_cardinality`
 
 *   **Severity:** `high`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
@@ -4728,7 +4152,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 165. False Mountain: `damped_harmonics`
+### 149. False Mountain: `damped_harmonics`
 
 *   **Severity:** `high`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
@@ -4756,7 +4180,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 166. False Mountain: `deferential_realism_core`
+### 150. False Mountain: `deferential_realism_core`
 
 *   **Severity:** `high`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
@@ -4784,7 +4208,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 167. False Mountain: `euler_characteristic_topology`
+### 151. False Mountain: `euler_characteristic_topology`
 
 *   **Severity:** `high`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
@@ -4812,63 +4236,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 168. False Mountain: `faint_blue_neural_bifurcation`
-
-*   **Severity:** `high`
-*   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
-*   **Perspectival Mismatch:**
-    *   **Powerless View:** `mountain`
-    *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_cut_safety_faint_blue_neural_bifurcation (conceptual)
-*   **Suggested Resolution Strategy:**
-    ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut faint_blue_neural_bifurcation, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
-    ```
-
----
-
-### 169. False Mountain: `family_succession_and_decadence`
-
-*   **Severity:** `high`
-*   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
-*   **Perspectival Mismatch:**
-    *   **Powerless View:** `mountain`
-    *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_cut_safety_family_succession_system (conceptual)
-*   **Suggested Resolution Strategy:**
-    ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut family_succession_system, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
-    ```
-
----
-
-### 170. False Mountain: `feigenbaum_universality`
+### 152. False Mountain: `feigenbaum_universality`
 
 *   **Severity:** `high`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
@@ -4896,7 +4264,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 171. False Mountain: `finite_simple_groups_classification`
+### 153. False Mountain: `finite_simple_groups_classification`
 
 *   **Severity:** `high`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
@@ -4924,7 +4292,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 172. False Mountain: `four_color_theorem_topological_bound`
+### 154. False Mountain: `four_color_theorem_topological_bound`
 
 *   **Severity:** `high`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
@@ -4952,7 +4320,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 173. False Mountain: `fundamental_theorem_of_algebra`
+### 155. False Mountain: `fundamental_theorem_of_algebra`
 
 *   **Severity:** `high`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
@@ -4980,7 +4348,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 174. False Mountain: `galois_theory_symmetry`
+### 156. False Mountain: `galois_theory_symmetry`
 
 *   **Severity:** `high`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
@@ -5008,35 +4376,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 175. False Mountain: `gamblers_ruin_stochastic_extinction`
-
-*   **Severity:** `high`
-*   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
-*   **Perspectival Mismatch:**
-    *   **Powerless View:** `mountain`
-    *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_cut_safety_gamblers_ruin_stochastic_extinction (conceptual)
-*   **Suggested Resolution Strategy:**
-    ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut gamblers_ruin_stochastic_extinction, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
-    ```
-
----
-
-### 176. False Mountain: `gauss_bonnet_topology`
+### 157. False Mountain: `gauss_bonnet_topology`
 
 *   **Severity:** `high`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
@@ -5064,63 +4404,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 177. False Mountain: `germline_regulation_threshold_2026`
-
-*   **Severity:** `high`
-*   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
-*   **Perspectival Mismatch:**
-    *   **Powerless View:** `mountain`
-    *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_cut_safety_germline_regulation_threshold_2026 (conceptual)
-*   **Suggested Resolution Strategy:**
-    ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut germline_regulation_threshold_2026, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
-    ```
-
----
-
-### 178. False Mountain: `gilgamesh_mortality_limit`
-
-*   **Severity:** `high`
-*   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
-*   **Perspectival Mismatch:**
-    *   **Powerless View:** `mountain`
-    *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_cut_safety_gilgamesh_mortality_limit (conceptual)
-*   **Suggested Resolution Strategy:**
-    ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut gilgamesh_mortality_limit, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
-    ```
-
----
-
-### 179. False Mountain: `glp1_payload_efficiency_pivot`
+### 158. False Mountain: `glp1_payload_efficiency_pivot`
 
 *   **Severity:** `high`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
@@ -5148,7 +4432,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 180. False Mountain: `godels_incompleteness_theorems`
+### 159. False Mountain: `godels_incompleteness_theorems`
 
 *   **Severity:** `high`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
@@ -5176,7 +4460,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 181. False Mountain: `goldbach_conjecture`
+### 160. False Mountain: `goldbach_conjecture`
 
 *   **Severity:** `high`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
@@ -5204,7 +4488,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 182. False Mountain: `golden_handcuffs`
+### 161. False Mountain: `golden_handcuffs`
 
 *   **Severity:** `high`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
@@ -5232,7 +4516,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 183. False Mountain: `gradient_descent_optimization`
+### 162. False Mountain: `gradient_descent_optimization`
 
 *   **Severity:** `high`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
@@ -5260,7 +4544,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 184. False Mountain: `gs1_gln_identification`
+### 163. False Mountain: `gs1_gln_identification`
 
 *   **Severity:** `high`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
@@ -5288,7 +4572,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 185. False Mountain: `gs1_standardized_identification`
+### 164. False Mountain: `gs1_standardized_identification`
 
 *   **Severity:** `high`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
@@ -5316,7 +4600,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 186. False Mountain: `halting_problem_undecidability`
+### 165. False Mountain: `halting_problem_undecidability`
 
 *   **Severity:** `high`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
@@ -5344,35 +4628,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 187. False Mountain: `happiness_of_others`
-
-*   **Severity:** `high`
-*   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
-*   **Perspectival Mismatch:**
-    *   **Powerless View:** `mountain`
-    *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_cut_safety_happiness_of_others (conceptual)
-*   **Suggested Resolution Strategy:**
-    ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut happiness_of_others, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
-    ```
-
----
-
-### 188. False Mountain: `heuristic_optimization`
+### 166. False Mountain: `heuristic_optimization`
 
 *   **Severity:** `high`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
@@ -5400,7 +4656,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 189. False Mountain: `hilberts_hotel_infinity`
+### 167. False Mountain: `hilberts_hotel_infinity`
 
 *   **Severity:** `high`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
@@ -5428,7 +4684,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 190. False Mountain: `indexical_relativity_core`
+### 168. False Mountain: `indexical_relativity_core`
 
 *   **Severity:** `high`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
@@ -5456,7 +4712,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 191. False Mountain: `inner_model_theory_constraints`
+### 169. False Mountain: `inner_model_theory_constraints`
 
 *   **Severity:** `high`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
@@ -5484,18 +4740,18 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 192. False Mountain: `institutional_mutation_domestication`
+### 170. False Mountain: `juvenile_underclass_2026`
 
 *   **Severity:** `high`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `mountain`
     *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_cut_safety_institutional_mutation_domestication (conceptual)
+*   **Generated Omega:** omega_cut_safety_juvenile_underclass_2026 (conceptual)
 *   **Suggested Resolution Strategy:**
     ```
 1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut institutional_mutation_domestication, do individuals have alternatives?
+- If institutions cut juvenile_underclass_2026, do individuals have alternatives?
 - Is this their only survival mechanism?
 - What scaffolding exists for transition?
 2. Test institutional perception:
@@ -5512,35 +4768,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 193. False Mountain: `japanese_energy_scaffold_2025`
-
-*   **Severity:** `high`
-*   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
-*   **Perspectival Mismatch:**
-    *   **Powerless View:** `mountain`
-    *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_cut_safety_japanese_energy_scaffold_2025 (conceptual)
-*   **Suggested Resolution Strategy:**
-    ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut japanese_energy_scaffold_2025, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
-    ```
-
----
-
-### 194. False Mountain: `kjv_puritan_new_world_exit`
+### 171. False Mountain: `kjv_puritan_new_world_exit`
 
 *   **Severity:** `high`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
@@ -5568,7 +4796,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 195. False Mountain: `kjv_textual_authority`
+### 172. False Mountain: `kjv_textual_authority`
 
 *   **Severity:** `high`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
@@ -5596,7 +4824,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 196. False Mountain: `kleene_recursion_theorem`
+### 173. False Mountain: `kleene_recursion_theorem`
 
 *   **Severity:** `high`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
@@ -5624,7 +4852,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 197. False Mountain: `large_cardinals_foundations`
+### 174. False Mountain: `large_cardinals_foundations`
 
 *   **Severity:** `high`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
@@ -5652,35 +4880,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 198. False Mountain: `legacy_system_technical_debt`
-
-*   **Severity:** `high`
-*   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
-*   **Perspectival Mismatch:**
-    *   **Powerless View:** `mountain`
-    *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_cut_safety_legacy_system_technical_debt (conceptual)
-*   **Suggested Resolution Strategy:**
-    ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut legacy_system_technical_debt, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
-    ```
-
----
-
-### 199. False Mountain: `lln_convergence`
+### 175. False Mountain: `lln_convergence`
 
 *   **Severity:** `high`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
@@ -5708,7 +4908,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 200. False Mountain: `logistic_map_dynamics`
+### 176. False Mountain: `logistic_map_dynamics`
 
 *   **Severity:** `high`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
@@ -5736,7 +4936,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 201. False Mountain: `lorenz_attractor_dynamics`
+### 177. False Mountain: `lorenz_attractor_dynamics`
 
 *   **Severity:** `high`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
@@ -5764,7 +4964,35 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 202. False Mountain: `mars_rovers_navigational_autonomy`
+### 178. False Mountain: `manganese_catalysis_2026`
+
+*   **Severity:** `high`
+*   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
+*   **Perspectival Mismatch:**
+    *   **Powerless View:** `mountain`
+    *   **Institutional View:** `rope`
+*   **Generated Omega:** omega_cut_safety_manganese_catalysis_2026 (conceptual)
+*   **Suggested Resolution Strategy:**
+    ```
+1. SAFETY ASSESSMENT (DO NOT SKIP):
+- If institutions cut manganese_catalysis_2026, do individuals have alternatives?
+- Is this their only survival mechanism?
+- What scaffolding exists for transition?
+2. Test institutional perception:
+- Can institutions unilaterally change this?
+- Do they understand downstream impacts?
+- Is their "optional" view empirically accurate?
+3. Decision tree:
+IF truly unchangeable → Correct institutional view to MOUNTAIN
+IF changeable + safe alternatives → Correct powerless view to ROPE
+IF changeable + NO alternatives → ADD SCAFFOLD before any change
+IF uncertainty → HALT changes until resolved
+4. CRITICAL: Never proceed with changes until safety verified
+    ```
+
+---
+
+### 179. False Mountain: `mars_rovers_navigational_autonomy`
 
 *   **Severity:** `high`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
@@ -5792,7 +5020,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 203. False Mountain: `martian_signal_latency`
+### 180. False Mountain: `martian_signal_latency`
 
 *   **Severity:** `high`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
@@ -5820,7 +5048,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 204. False Mountain: `max_flow`
+### 181. False Mountain: `max_flow`
 
 *   **Severity:** `high`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
@@ -5848,7 +5076,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 205. False Mountain: `micro_robot_electronics_integration`
+### 182. False Mountain: `micro_robot_electronics_integration`
 
 *   **Severity:** `high`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
@@ -5876,7 +5104,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 206. False Mountain: `minimax_decision_rule`
+### 183. False Mountain: `minimax_decision_rule`
 
 *   **Severity:** `high`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
@@ -5904,18 +5132,18 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 207. False Mountain: `monetary_regime_transition`
+### 184. False Mountain: `mom_z14_galaxy_2026`
 
 *   **Severity:** `high`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `mountain`
     *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_cut_safety_monetary_regime_transition (conceptual)
+*   **Generated Omega:** omega_cut_safety_mom_z14_2026 (conceptual)
 *   **Suggested Resolution Strategy:**
     ```
 1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut monetary_regime_transition, do individuals have alternatives?
+- If institutions cut mom_z14_2026, do individuals have alternatives?
 - Is this their only survival mechanism?
 - What scaffolding exists for transition?
 2. Test institutional perception:
@@ -5932,7 +5160,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 208. False Mountain: `monty_hall_conditional_probability`
+### 185. False Mountain: `monty_hall_conditional_probability`
 
 *   **Severity:** `high`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
@@ -5960,18 +5188,18 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 209. False Mountain: `nasa_faster_better_cheaper`
+### 186. False Mountain: `narrative_engineering_2026`
 
 *   **Severity:** `high`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `mountain`
     *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_cut_safety_nasa_faster_better_cheaper (conceptual)
+*   **Generated Omega:** omega_cut_safety_narrative_engineering_2026 (conceptual)
 *   **Suggested Resolution Strategy:**
     ```
 1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut nasa_faster_better_cheaper, do individuals have alternatives?
+- If institutions cut narrative_engineering_2026, do individuals have alternatives?
 - Is this their only survival mechanism?
 - What scaffolding exists for transition?
 2. Test institutional perception:
@@ -5988,63 +5216,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 210. False Mountain: `nash_equilibrium_coordination`
-
-*   **Severity:** `high`
-*   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
-*   **Perspectival Mismatch:**
-    *   **Powerless View:** `mountain`
-    *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_cut_safety_nash_equilibrium_coordination (conceptual)
-*   **Suggested Resolution Strategy:**
-    ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut nash_equilibrium_coordination, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
-    ```
-
----
-
-### 211. False Mountain: `neural_interoperability`
-
-*   **Severity:** `high`
-*   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
-*   **Perspectival Mismatch:**
-    *   **Powerless View:** `mountain`
-    *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_cut_safety_neural_interoperability (conceptual)
-*   **Suggested Resolution Strategy:**
-    ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut neural_interoperability, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
-    ```
-
----
-
-### 212. False Mountain: `newtons_method_convergence`
+### 187. False Mountain: `newtons_method_convergence`
 
 *   **Severity:** `high`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
@@ -6072,7 +5244,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 213. False Mountain: `noethers_theorem_symmetry`
+### 188. False Mountain: `noethers_theorem_symmetry`
 
 *   **Severity:** `high`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
@@ -6100,7 +5272,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 214. False Mountain: `nonstandard_arithmetic_models`
+### 189. False Mountain: `nonstandard_arithmetic_models`
 
 *   **Severity:** `high`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
@@ -6128,35 +5300,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 215. False Mountain: `north_korea_songun_mandatrophy`
-
-*   **Severity:** `high`
-*   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
-*   **Perspectival Mismatch:**
-    *   **Powerless View:** `mountain`
-    *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_cut_safety_north_korea_songun_mandatrophy (conceptual)
-*   **Suggested Resolution Strategy:**
-    ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut north_korea_songun_mandatrophy, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
-    ```
-
----
-
-### 216. False Mountain: `peano_curve_mapping`
+### 190. False Mountain: `peano_curve_mapping`
 
 *   **Severity:** `high`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
@@ -6184,7 +5328,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 217. False Mountain: `permissive_software_licensing`
+### 191. False Mountain: `permissive_software_licensing`
 
 *   **Severity:** `high`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
@@ -6212,7 +5356,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 218. False Mountain: `poincare_conjucture`
+### 192. False Mountain: `poincare_conjucture`
 
 *   **Severity:** `high`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
@@ -6240,7 +5384,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 219. False Mountain: `prime_number_theorem`
+### 193. False Mountain: `prime_number_theorem`
 
 *   **Severity:** `high`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
@@ -6268,35 +5412,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 220. False Mountain: `prisoners_dilemma_equilibrium`
-
-*   **Severity:** `high`
-*   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
-*   **Perspectival Mismatch:**
-    *   **Powerless View:** `mountain`
-    *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_cut_safety_prisoners_dilemma_equilibrium (conceptual)
-*   **Suggested Resolution Strategy:**
-    ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut prisoners_dilemma_equilibrium, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
-    ```
-
----
-
-### 221. False Mountain: `proof_of_work_consensus`
+### 194. False Mountain: `proof_of_work_consensus`
 
 *   **Severity:** `high`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
@@ -6324,7 +5440,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 222. False Mountain: `quantum_entanglement_protocol`
+### 195. False Mountain: `quantum_entanglement_protocol`
 
 *   **Severity:** `high`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
@@ -6352,7 +5468,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 223. False Mountain: `quine_self_replication`
+### 196. False Mountain: `quine_self_replication`
 
 *   **Severity:** `high`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
@@ -6380,35 +5496,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 224. False Mountain: `railway_gauge_standard`
-
-*   **Severity:** `high`
-*   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
-*   **Perspectival Mismatch:**
-    *   **Powerless View:** `mountain`
-    *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_cut_safety_railway_gauge_standard (conceptual)
-*   **Suggested Resolution Strategy:**
-    ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut railway_gauge_standard, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
-    ```
-
----
-
-### 225. False Mountain: `reciprocity_laws_math`
+### 197. False Mountain: `reciprocity_laws_math`
 
 *   **Severity:** `high`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
@@ -6436,7 +5524,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 226. False Mountain: `rfc9293_state_machine`
+### 198. False Mountain: `rfc9293_state_machine`
 
 *   **Severity:** `high`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
@@ -6464,7 +5552,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 227. False Mountain: `rices_theorem_undecidability`
+### 199. False Mountain: `rices_theorem_undecidability`
 
 *   **Severity:** `high`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
@@ -6492,18 +5580,18 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 228. False Mountain: `rogers_commission_institutional_analysis`
+### 200. False Mountain: `rogue_wave_control_2026`
 
 *   **Severity:** `high`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `mountain`
     *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_cut_safety_rogers_commission_institutional_analysis (conceptual)
+*   **Generated Omega:** omega_cut_safety_rogue_wave_control_2026 (conceptual)
 *   **Suggested Resolution Strategy:**
     ```
 1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut rogers_commission_institutional_analysis, do individuals have alternatives?
+- If institutions cut rogue_wave_control_2026, do individuals have alternatives?
 - Is this their only survival mechanism?
 - What scaffolding exists for transition?
 2. Test institutional perception:
@@ -6520,119 +5608,29 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 229. False Mountain: `rules_based_international_order`
+### 201. False Mountain: `sadhu_integrity_protocol`
 
 *   **Severity:** `high`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `mountain`
     *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_cut_safety_rules_based_international_order (conceptual)
+*   **Generated Omega:** omega_cut_safety_sadhu_integrity_protocol (conceptual)
 *   **Suggested Resolution Strategy:**
     ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut rules_based_international_order, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
+1. Design measurement protocol for unknown
+2. Collect data from N=30+ real-world instances
+3. Calculate empirical metrics:
+- suppression_requirement (enforcement needed)
+- resistance_to_change (pushback level)
+- base_extractiveness (asymmetric benefit flow)
+4. Update constraint_metric/3 declarations with data
+5. Re-run classification to resolve perspectival gap
     ```
 
 ---
 
-### 230. False Mountain: `russells_paradox_self_reference`
-
-*   **Severity:** `high`
-*   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
-*   **Perspectival Mismatch:**
-    *   **Powerless View:** `mountain`
-    *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_cut_safety_russells_paradox_self_reference (conceptual)
-*   **Suggested Resolution Strategy:**
-    ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut russells_paradox_self_reference, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
-    ```
-
----
-
-### 231. False Mountain: `social_media_participation_threshold`
-
-*   **Severity:** `high`
-*   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
-*   **Perspectival Mismatch:**
-    *   **Powerless View:** `mountain`
-    *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_cut_safety_social_media_participation_threshold (conceptual)
-*   **Suggested Resolution Strategy:**
-    ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut social_media_participation_threshold, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
-    ```
-
----
-
-### 232. False Mountain: `st_petersburg_paradox`
-
-*   **Severity:** `high`
-*   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
-*   **Perspectival Mismatch:**
-    *   **Powerless View:** `mountain`
-    *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_cut_safety_st_petersburg_paradox (conceptual)
-*   **Suggested Resolution Strategy:**
-    ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut st_petersburg_paradox, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
-    ```
-
----
-
-### 233. False Mountain: `stable_marriage_coordination`
+### 202. False Mountain: `stable_marriage_coordination`
 
 *   **Severity:** `high`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
@@ -6660,35 +5658,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 234. False Mountain: `starwars_evolutionary_mutation`
-
-*   **Severity:** `high`
-*   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
-*   **Perspectival Mismatch:**
-    *   **Powerless View:** `mountain`
-    *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_cut_safety_starwars_evolutionary_mutation (conceptual)
-*   **Suggested Resolution Strategy:**
-    ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut starwars_evolutionary_mutation, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
-    ```
-
----
-
-### 235. False Mountain: `strange_attractor_dynamics`
+### 203. False Mountain: `strange_attractor_dynamics`
 
 *   **Severity:** `high`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
@@ -6716,7 +5686,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 236. False Mountain: `sts86_ascent_checklist`
+### 204. False Mountain: `sts86_ascent_checklist`
 
 *   **Severity:** `high`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
@@ -6744,7 +5714,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 237. False Mountain: `suslin_hypothesis_undecidability`
+### 205. False Mountain: `suslin_hypothesis_undecidability`
 
 *   **Severity:** `high`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
@@ -6772,7 +5742,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 238. False Mountain: `sylow_theorems_group_theory`
+### 206. False Mountain: `sylow_theorems_group_theory`
 
 *   **Severity:** `high`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
@@ -6800,91 +5770,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 239. False Mountain: `taiwan_existential_sovereignty`
-
-*   **Severity:** `high`
-*   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
-*   **Perspectival Mismatch:**
-    *   **Powerless View:** `mountain`
-    *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_cut_safety_taiwan_existential_sovereignty (conceptual)
-*   **Suggested Resolution Strategy:**
-    ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut taiwan_existential_sovereignty, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
-    ```
-
----
-
-### 240. False Mountain: `taiwan_strait_hegemony_shift`
-
-*   **Severity:** `high`
-*   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
-*   **Perspectival Mismatch:**
-    *   **Powerless View:** `mountain`
-    *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_cut_safety_taiwan_strait_hegemony_shift (conceptual)
-*   **Suggested Resolution Strategy:**
-    ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut taiwan_strait_hegemony_shift, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
-    ```
-
----
-
-### 241. False Mountain: `the_wall_procedural_barrier`
-
-*   **Severity:** `high`
-*   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
-*   **Perspectival Mismatch:**
-    *   **Powerless View:** `mountain`
-    *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_cut_safety_the_wall_procedural_barrier (conceptual)
-*   **Suggested Resolution Strategy:**
-    ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut the_wall_procedural_barrier, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
-    ```
-
----
-
-### 242. False Mountain: `three_body_unpredicability`
+### 207. False Mountain: `three_body_unpredicability`
 
 *   **Severity:** `high`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
@@ -6912,35 +5798,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 243. False Mountain: `tractarian_logic_limit`
-
-*   **Severity:** `high`
-*   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
-*   **Perspectival Mismatch:**
-    *   **Powerless View:** `mountain`
-    *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_cut_safety_tractarian_logic_limit (conceptual)
-*   **Suggested Resolution Strategy:**
-    ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut tractarian_logic_limit, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
-    ```
-
----
-
-### 244. False Mountain: `udhr_1946`
+### 208. False Mountain: `udhr_1946`
 
 *   **Severity:** `high`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
@@ -6968,7 +5826,35 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 245. False Mountain: `unclos_2026`
+### 209. False Mountain: `ulysses_chp06`
+
+*   **Severity:** `high`
+*   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
+*   **Perspectival Mismatch:**
+    *   **Powerless View:** `mountain`
+    *   **Institutional View:** `rope`
+*   **Generated Omega:** omega_cut_safety_ulysses_hades_1904 (conceptual)
+*   **Suggested Resolution Strategy:**
+    ```
+1. SAFETY ASSESSMENT (DO NOT SKIP):
+- If institutions cut ulysses_hades_1904, do individuals have alternatives?
+- Is this their only survival mechanism?
+- What scaffolding exists for transition?
+2. Test institutional perception:
+- Can institutions unilaterally change this?
+- Do they understand downstream impacts?
+- Is their "optional" view empirically accurate?
+3. Decision tree:
+IF truly unchangeable → Correct institutional view to MOUNTAIN
+IF changeable + safe alternatives → Correct powerless view to ROPE
+IF changeable + NO alternatives → ADD SCAFFOLD before any change
+IF uncertainty → HALT changes until resolved
+4. CRITICAL: Never proceed with changes until safety verified
+    ```
+
+---
+
+### 210. False Mountain: `unclos_2026`
 
 *   **Severity:** `high`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
@@ -6996,18 +5882,18 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 246. False Mountain: `union_protection_underperformance`
+### 211. False Mountain: `vertebrate_turning_point_2026`
 
 *   **Severity:** `high`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `mountain`
     *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_cut_safety_union_protection_underperformance (conceptual)
+*   **Generated Omega:** omega_cut_safety_vertebrate_genetics_2026 (conceptual)
 *   **Suggested Resolution Strategy:**
     ```
 1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut union_protection_underperformance, do individuals have alternatives?
+- If institutions cut vertebrate_genetics_2026, do individuals have alternatives?
 - Is this their only survival mechanism?
 - What scaffolding exists for transition?
 2. Test institutional perception:
@@ -7024,35 +5910,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 247. False Mountain: `us_suburban_zoning_2025`
-
-*   **Severity:** `high`
-*   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
-*   **Perspectival Mismatch:**
-    *   **Powerless View:** `mountain`
-    *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_cut_safety_us_suburban_zoning_2025 (conceptual)
-*   **Suggested Resolution Strategy:**
-    ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut us_suburban_zoning_2025, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
-    ```
-
----
-
-### 248. False Mountain: `whitehead_problem_undecidability`
+### 212. False Mountain: `whitehead_problem_undecidability`
 
 *   **Severity:** `high`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.

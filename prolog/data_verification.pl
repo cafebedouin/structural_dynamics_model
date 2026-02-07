@@ -7,7 +7,7 @@
 
 :- use_module(library(lists)).        % Required for subtract/3
 :- use_module(narrative_ontology).
-:- use_module(v3_1_config).
+:- use_module(config).
 
 /* ============================================================
    1. ENTRY POINTS

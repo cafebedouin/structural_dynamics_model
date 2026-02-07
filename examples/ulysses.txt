@@ -1,0 +1,3068 @@
+% ============================================================================
+% CONSTRAINT STORY: ulysses_tower_1904
+% ============================================================================
+% Version: 3.4 (Deferential Realism Core)
+% Logic: 3.3 (Indexed Tuple P,T,E,S)
+% Generated: 2026-02-06
+% ============================================================================
+
+:- module(constraint_ulysses_tower, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
+    constraint_indexing:constraint_classification/3.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ * * constraint_id: ulysses_tower_1904
+ * human_readable: The Martello Tower Usurpation
+ * domain: social/political/religious
+ * * SUMMARY:
+ * The Martello tower, originally built as a defensive Rope against French 
+ * invasion, has become a Snare for Stephen Dedalus. Despite paying the 
+ * twelve quid rent to the British state, Stephen is socially and 
+ * psychologically "usurped" by Buck Mulligan's performative dominance and 
+ * Haines's colonial presence.
+ * * KEY AGENTS:
+ * - Stephen Dedalus: Subject (Powerless) - The "server of a servant".
+ * - Buck Mulligan: Beneficiary (Institutional) - Controlling the social theater.
+ * - Haines: Auditor (Analytical) - The English presence collecting "sayings".
+ */
+
+/* ==========================================================================
+   2. BASE PROPERTIES (DOMAIN PRIORS)
+   ========================================================================== */
+
+% Numerical anchors for v3.4 thresholds
+domain_priors:base_extractiveness(ulysses_tower_1904, 0.48). 
+domain_priors:suppression_score(ulysses_tower_1904, 0.65).   
+domain_priors:theater_ratio(ulysses_tower_1904, 0.82). % Mulligan's high mockery
+
+% Primary keys for classification engine
+narrative_ontology:constraint_metric(ulysses_tower_1904, extractiveness, 0.48).
+narrative_ontology:constraint_metric(ulysses_tower_1904, suppression_requirement, 0.65).
+narrative_ontology:constraint_metric(ulysses_tower_1904, theater_ratio, 0.82).
+
+% Structural Property Declarations
+narrative_ontology:constraint_beneficiary(ulysses_tower_1904, colonial_subjects).
+narrative_ontology:constraint_victim(ulysses_tower_1904, stephen_dedalus).
+domain_priors:requires_active_enforcement(ulysses_tower_1904).
+
+/* ==========================================================================
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × π(P) × σ(S)
+   ========================================================================== */
+
+% PERSPECTIVE 1: STEPHEN DEDALUS (SNARE)
+% Effective Extraction: 0.48 * 1.5 (powerless) * 0.8 (local) = 0.576.
+% Perceived as a predatory trap of "Agenbite of inwit" and unpaid debts.
+constraint_indexing:constraint_classification(ulysses_tower_1904, snare, 
+    context(agent_power(powerless), 
+            time_horizon(biographical), 
+            exit_options(trapped), 
+            spatial_scope(local))).
+
+% PERSPECTIVE 2: BUCK MULLIGAN (ROPE)
+% Effective Extraction: 0.48 * -0.2 (institutional) * 0.8 = -0.0768.
+% Viewed as a blithe coordination for breakfast, swimming, and "Hellenizing".
+constraint_indexing:constraint_classification(ulysses_tower_1904, rope, 
+    context(agent_power(institutional), 
+            time_horizon(generational), 
+            exit_options(mobile), 
+            spatial_scope(local))).
+
+% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (PITON)
+% Extreme Theater Ratio (0.82) indicates a Piton of atrophied function.
+constraint_indexing:constraint_classification(ulysses_tower_1904, piton,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(national))).
+
+/* ==========================================================================
+   4. VALIDATION TESTS
+   ========================================================================== */
+
+:- begin_tests(ulysses_tower_1904_tests).
+
+test(perspectival_gap) :-
+    % Verify the shift from Snare (Stephen) to Rope (Mulligan).
+    constraint_indexing:constraint_classification(ulysses_tower_1904, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(ulysses_tower_1904, rope, context(agent_power(institutional), _, _, _)).
+
+test(piton_theater_check) :-
+    % Piton classification requires theater_ratio >= 0.70.
+    domain_priors:theater_ratio(ulysses_tower_1904, TR),
+    TR >= 0.70.
+
+:- end_tests(ulysses_tower_1904_tests).
+
+/* ==========================================================================
+   5. GENERATIVE COMMENTARY
+   ========================================================================== */
+
+/**
+ * LOGIC RATIONALE:
+ * Stephen perceives the tower as a Snare because his payment of the twelve 
+ * quid rent to the British state does not grant him social sovereignty. 
+ * Mulligan's constant mockery (TR: 0.82) transforms the living arrangement 
+ * into a Piton for analytical observers—it is a structure of atrophied 
+ * defense now serving as a stage for "mummers".
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+omega_variable(
+    omega_usurpation,
+    "Will Stephen successfully withhold the key and the rent?",
+    "Review of the final encounter at the foot of the ladder.",
+    "Withholding confirms a Rope; surrender hardens the Snare.",
+    confidence_without_resolution(medium)
+).
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+narrative_ontology:interval(ulysses_tower_1904, 0, 10).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Theater Ratio (Mulligan's performative blasphemy peaking during breakfast)
+narrative_ontology:measurement(ut_tr_t0, ulysses_tower_1904, theater_ratio, 0, 0.70).
+narrative_ontology:measurement(ut_tr_t5, ulysses_tower_1904, theater_ratio, 5, 0.85).
+narrative_ontology:measurement(ut_tr_t10, ulysses_tower_1904, theater_ratio, 10, 0.82).
+
+% Extraction (Rent payments and social debts accumulating)
+narrative_ontology:measurement(ut_ex_t0, ulysses_tower_1904, base_extractiveness, 0, 0.35).
+narrative_ontology:measurement(ut_ex_t5, ulysses_tower_1904, base_extractiveness, 5, 0.45).
+narrative_ontology:measurement(ut_ex_t10, ulysses_tower_1904, base_extractiveness, 10, 0.48).
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */
+% ============================================================================
+% CONSTRAINT STORY: ulysses_school_1904
+% ============================================================================
+% Version: 3.4 (Deferential Realism Core)
+% Logic: 3.3 (Indexed Tuple P,T,E,S)
+% Generated: 2026-02-06
+% ============================================================================
+
+:- module(constraint_ulysses_school, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
+    constraint_indexing:constraint_classification/3.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ * * constraint_id: ulysses_school_1904
+ * human_readable: The Nightmare of History (Dalkey School)
+ * domain: economic/social/political
+ * * SUMMARY:
+ * For Stephen Dedalus, the school at Dalkey is a Snare defined by the 
+ * "nightmare of history" and the futility of teaching privileged boys who 
+ * lack innocence[cite: 377, 555]. The educational structure is a Tangled 
+ * Rope for Mr. Deasy, who uses it to enforce a "generous but just" financial 
+ * discipline while maintaining a high theater of anti-Semitic and 
+ * pro-Unionist rhetoric[cite: 492, 537].
+ * * KEY AGENTS:
+ * - Stephen Dedalus: Subject (Powerless) - Trapped in "three nooses" of debt and role[cite: 475, 488].
+ * - Mr. Deasy: Beneficiary (Institutional) - Paying his way and managing the "Strongroom"[cite: 464, 486].
+ * - The Students: Auditor (Analytical) - Observing Stephen's "lack of rule"[cite: 374].
+ */
+
+/* ==========================================================================
+   2. BASE PROPERTIES (DOMAIN PRIORS)
+   ========================================================================== */
+
+% Numerical anchors for v3.4 thresholds
+domain_priors:base_extractiveness(ulysses_school_1904, 0.49). % High due to Stephen's list of debts[cite: 488].
+domain_priors:suppression_score(ulysses_school_1904, 0.72).   % History as a "branded" and "fettered" room.
+domain_priors:theater_ratio(ulysses_school_1904, 0.78).      % Deasy's performative "wisdom" and savings-box prodding[cite: 467, 512].
+
+% Primary keys for classification engine
+narrative_ontology:constraint_metric(ulysses_school_1904, extractiveness, 0.49).
+narrative_ontology:constraint_metric(ulysses_school_1904, suppression_requirement, 0.72).
+narrative_ontology:constraint_metric(ulysses_school_1904, theater_ratio, 0.78).
+
+% Structural Property Declarations
+narrative_ontology:constraint_beneficiary(ulysses_school_1904, english_empire). % History moving toward a manifest goal[cite: 558].
+narrative_ontology:constraint_victim(ulysses_school_1904, stephen_dedalus).
+domain_priors:requires_active_enforcement(ulysses_school_1904). % Deasy's prodding and strict "rules"[cite: 374, 512].
+
+/* ==========================================================================
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × π(P) × σ(S)
+   ========================================================================== */
+
+% PERSPECTIVE 1: STEPHEN DEDALUS (SNARE)
+% Effective Extraction: 0.49 * 1.5 (powerless) * 1.0 (national) = 0.735.
+% Perceived as a nightmare from which he is trying to awake.
+constraint_indexing:constraint_classification(ulysses_school_1904, snare, 
+    context(agent_power(powerless), 
+            time_horizon(biographical), 
+            exit_options(trapped), 
+            spatial_scope(national))).
+
+% PERSPECTIVE 2: MR. DEASY (ROPE)
+% Effective Extraction: 0.49 * -0.2 (institutional) * 1.0 = -0.098.
+% Viewed as the essential coordination of "paying one's way" and justice[cite: 486, 492].
+constraint_indexing:constraint_classification(ulysses_school_1904, rope, 
+    context(agent_power(institutional), 
+            time_horizon(generational), 
+            exit_options(mobile), 
+            spatial_scope(national))).
+
+% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (PITON)
+% Extreme Theater Ratio (0.78) suggests the atrophied function of "toothless terrors"[cite: 584].
+constraint_indexing:constraint_classification(ulysses_school_1904, piton,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(global))).
+
+/* ==========================================================================
+   4. VALIDATION TESTS
+   ========================================================================== */
+
+:- begin_tests(ulysses_school_1904_tests).
+
+test(perspectival_gap) :-
+    % Verify the shift from Snare (Stephen) to Rope (Deasy).
+    constraint_indexing:constraint_classification(ulysses_school_1904, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(ulysses_school_1904, rope, context(agent_power(institutional), _, _, _)).
+
+test(piton_theater_validation) :-
+    % Piton classification requires theater_ratio >= 0.70.
+    domain_priors:theater_ratio(ulysses_school_1904, TR),
+    TR >= 0.70.
+
+:- end_tests(ulysses_school_1904_tests).
+
+/* ==========================================================================
+   5. GENERATIVE COMMENTARY
+   ========================================================================== */
+
+/**
+ * LOGIC RATIONALE:
+ * Stephen identifies the "three nooses" of his financial and social reality 
+ * as a Snare—a predatory trap of accumulated debt and listless labor[cite: 475, 488]. 
+ * Conversely, Mr. Deasy views the system as a Rope of coordination, 
+ * maintaining the "proudest boast" of the Englishman: "I paid my way"[cite: 486]. 
+ * The high Theater Ratio (0.78) comes from the "mummery" of Deasy’s symbols—
+ * the savings-box, the Stuart coins, and his insistence on anti-Semitic 
+ * conspiracy theories that mask the "nightmare" of Irish history[cite: 435, 457, 537].
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+omega_variable(
+    omega_history_as_nightmare,
+    "Is history truly a trapped room of ousted possibilities, or a joust moving toward God? [cite: 386, 558]",
+    "Tracking the manifestation of the 'great goal' vs the 'shout in the street'[cite: 558, 560].",
+    "God-goal confirms a Rope; street-shout hardens the Snare.",
+    confidence_without_resolution(medium)
+).
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+narrative_ontology:interval(ulysses_school_1904, 0, 10).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Theater Ratio (Deasy's rhetorical intensity rising toward the anti-Semitic climax)
+narrative_ontology:measurement(us_tr_t0, ulysses_school_1904, theater_ratio, 0, 0.65).
+narrative_ontology:measurement(us_tr_t5, ulysses_school_1904, theater_ratio, 5, 0.75).
+narrative_ontology:measurement(us_tr_t10, ulysses_school_1904, theater_ratio, 10, 0.78).
+
+% Extraction (Accumulation of Stephen's biographical and spiritual debt [cite: 488])
+narrative_ontology:measurement(us_ex_t0, ulysses_school_1904, base_extractiveness, 0, 0.40).
+narrative_ontology:measurement(us_ex_t5, ulysses_school_1904, base_extractiveness, 5, 0.45).
+narrative_ontology:measurement(us_ex_t10, ulysses_school_1904, base_extractiveness, 10, 0.49).
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */
+% ============================================================================
+% CONSTRAINT STORY: ulysses_proteus_1904
+% ============================================================================
+% Version: 3.4 (Deferential Realism Core)
+% Logic: 3.3 (Indexed Tuple P,T,E,S)
+% Generated: 2026-02-06
+% ============================================================================
+
+:- module(constraint_ulysses_proteus, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
+    constraint_indexing:constraint_classification/3.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ * * constraint_id: ulysses_proteus_1904
+ * human_readable: The Ineluctable Modality (Sandymount Strand)
+ * domain: philosophical/social/technological
+ * * SUMMARY:
+ * Stephen Dedalus navigates Sandymount Strand, bound by the "ineluctable 
+ * modality of the visible". This perceptual Mountain forces him 
+ * to read the "signatures of all things". For Stephen, the 
+ * experience is a Snare of internal brooding, where memories of Paris and 
+ * family decay act as "heavy sands" of language silted by the past.
+ * * KEY AGENTS:
+ * - Stephen Dedalus: Subject (Powerless) - Walking through "short times of space"[cite: 603].
+ * - The Physical Universe: Beneficiary (Institutional) - Enforcing the "lex eterna".
+ * - The Reader/Observer: Auditor (Analytical) - Witnessing the "mummer" of thought[cite: 832].
+ */
+
+/* ==========================================================================
+   2. BASE PROPERTIES (DOMAIN PRIORS)
+   ========================================================================== */
+
+% Numerical anchors for v3.4 thresholds
+domain_priors:base_extractiveness(ulysses_proteus_1904, 0.52). % High due to "Agenbite of inwit"[cite: 237, 836].
+domain_priors:suppression_score(ulysses_proteus_1904, 0.85).   % The "ineluctable" nature of vision and sound[cite: 595, 604].
+domain_priors:theater_ratio(ulysses_proteus_1904, 0.72).      % Internal "mummery" and "pretenders"[cite: 773, 831].
+
+% Primary keys for classification engine
+narrative_ontology:constraint_metric(ulysses_proteus_1904, extractiveness, 0.52).
+narrative_ontology:constraint_metric(ulysses_proteus_1904, suppression_requirement, 0.85).
+narrative_ontology:constraint_metric(ulysses_proteus_1904, theater_ratio, 0.72).
+
+% Structural Property Declarations
+narrative_ontology:constraint_beneficiary(ulysses_proteus_1904, physical_reality).
+narrative_ontology:constraint_victim(ulysses_proteus_1904, stephen_dedalus).
+domain_priors:requires_active_enforcement(ulysses_proteus_1904). % Memory and guilt as active "tyrants"[cite: 443].
+
+/* ==========================================================================
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × π(P) × σ(S)
+   ========================================================================== */
+
+% PERSPECTIVE 1: STEPHEN DEDALUS (SNARE)
+% Effective Extraction: 0.52 * 1.5 (powerless) * 0.8 (local) = 0.624.
+% Perceived as a trap of "unwholesome sandflats" and "sewage breath".
+constraint_indexing:constraint_classification(ulysses_proteus_1904, snare, 
+    context(agent_power(powerless), 
+            time_horizon(biographical), 
+            exit_options(trapped), 
+            spatial_scope(local))).
+
+% PERSPECTIVE 2: THE PHYSICAL UNIVERSE (MOUNTAIN)
+% Effective Extraction: 0.52 * -0.2 (institutional) * 1.0 (national/universal) = -0.104.
+% The "lex eterna"  functions as a fixed topological floor.
+constraint_indexing:constraint_classification(ulysses_proteus_1904, mountain, 
+    context(agent_power(institutional), 
+            time_horizon(civilizational), 
+            exit_options(mobile), 
+            spatial_scope(universal))).
+
+% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (PITON)
+% Theater Ratio (0.72) suggests a Piton of "vanished crowds" and "mummery"[cite: 513, 831].
+constraint_indexing:constraint_classification(ulysses_proteus_1904, piton,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(global))).
+
+/* ==========================================================================
+   4. VALIDATION TESTS
+   ========================================================================== */
+
+:- begin_tests(ulysses_proteus_1904_tests).
+
+test(perspectival_gap) :-
+    % Verify the shift from Snare (Subjective guilt) to Mountain (Objective physics).
+    constraint_indexing:constraint_classification(ulysses_proteus_1904, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(ulysses_proteus_1904, mountain, context(agent_power(institutional), _, _, _)).
+
+test(piton_theater_validation) :-
+    % Piton classification requires theater_ratio >= 0.70.
+    domain_priors:theater_ratio(ulysses_proteus_1904, TR),
+    TR >= 0.70.
+
+:- end_tests(ulysses_proteus_1904_tests).
+
+/* ==========================================================================
+   5. GENERATIVE COMMENTARY
+   ========================================================================== */
+
+/**
+ * LOGIC RATIONALE:
+ * Stephen’s walk is a meditation on the Mountain of the "Ineluctable". 
+ * While physics provides a stable floor (the "nacheinander" of time)[cite: 603], 
+ * his psychological state is a Snare. The "heavy sands" of his past—Paris 
+ * poverty [cite: 689], his mother’s death[cite: 702], and uncle Richie’s 
+ * "houses of decay" [cite: 649]—extract spiritual energy, leaving him 
+ * "lonely here"[cite: 843]. The high Theater Ratio (0.72) reflects his 
+ * "mummer" nature, where internal monologues on Aristotle and 
+ * Berkeley mask his social "dispossession"[cite: 694].
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+omega_variable(
+    omega_protean_identity,
+    "Is the 'other me' [cite: 693] a stable Rope of identity or a shifting Snare of solipsism?",
+    "Review of the 'word known to all men'  vs 'phantasmal mirth'[cite: 131].",
+    "Word-known confirms a Rope; phantasmal-mirth hardens the Snare.",
+    confidence_without_resolution(medium)
+).
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+narrative_ontology:interval(ulysses_proteus_1904, 0, 10).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Theater Ratio (Peaking as Stephen's internal mummery becomes more abstract)
+narrative_ontology:measurement(up_tr_t0, ulysses_proteus_1904, theater_ratio, 0, 0.60).
+narrative_ontology:measurement(up_tr_t5, ulysses_proteus_1904, theater_ratio, 5, 0.75).
+narrative_ontology:measurement(up_tr_t10, ulysses_proteus_1904, theater_ratio, 10, 0.72).
+
+% Extraction (The increasing weight of "Agenbite of inwit" and hunger)
+narrative_ontology:measurement(up_ex_t0, ulysses_proteus_1904, base_extractiveness, 0, 0.45).
+narrative_ontology:measurement(up_ex_t5, ulysses_proteus_1904, base_extractiveness, 5, 0.50).
+narrative_ontology:measurement(up_ex_t10, ulysses_proteus_1904, base_extractiveness, 10, 0.52).
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */
+% ============================================================================
+% CONSTRAINT STORY: ulysses_calypso_1904
+% ============================================================================
+% Version: 3.4 (Deferential Realism Core)
+% Logic: 3.3 (Indexed Tuple P,T,E,S)
+% Generated: 2026-02-06
+% ============================================================================
+
+:- module(constraint_ulysses_calypso, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
+    constraint_indexing:constraint_classification/3.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ * * constraint_id: ulysses_calypso_1904
+ * human_readable: The Domestic Calypso (7 Eccles Street)
+ * domain: social/economic/religious
+ * * SUMMARY:
+ * Leopold Bloom navigates the "loose brass quoits" of his domestic life. 
+ * While the morning routine functions as a Rope of coordination (preparing 
+ * Molly's tea and kidney), Bloom is caught in a Snare of looming 
+ * marital infidelity (the letter from Blazes Boylan) and the "grey sunken 
+ * cunt of the world" of Zionist/Orientalist desolation.
+ * * KEY AGENTS:
+ * - Leopold Bloom: Subject (Powerless) - Moving on "quietly creaky boots".
+ * - Molly Bloom: Beneficiary (Institutional) - Ruling from her "ample bedwarmed flesh".
+ * - Blazes Boylan: Auditor (Analytical) - The "bold hand" on the morning letters.
+ */
+
+/* ==========================================================================
+   2. BASE PROPERTIES (DOMAIN PRIORS)
+   ========================================================================== */
+
+% Numerical anchors for v3.4 thresholds
+domain_priors:base_extractiveness(ulysses_calypso_1904, 0.47). % High due to marital anxiety and debt symbols.
+domain_priors:suppression_score(ulysses_calypso_1904, 0.60).   % Domestic habits and "ineluctable" hunger.
+domain_priors:theater_ratio(ulysses_calypso_1904, 0.75).      % High theater: "metempsychosis", Orientalist daydreams, and Plasto's hat labels.
+
+% Primary keys for classification engine
+narrative_ontology:constraint_metric(ulysses_calypso_1904, extractiveness, 0.47).
+narrative_ontology:constraint_metric(ulysses_calypso_1904, suppression_requirement, 0.60).
+narrative_ontology:constraint_metric(ulysses_calypso_1904, theater_ratio, 0.75).
+
+% Structural Property Declarations
+narrative_ontology:constraint_beneficiary(ulysses_calypso_1904, marion_bloom). % Receiving breakfast in bed.
+narrative_ontology:constraint_victim(ulysses_calypso_1904, leopold_bloom).    % The "servant" of the house.
+domain_priors:requires_active_enforcement(ulysses_calypso_1904). % Molly's calls: "Poldy! Scald the teapot."
+
+/* ==========================================================================
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × π(P) × σ(S)
+   ========================================================================== */
+
+% PERSPECTIVE 1: LEOPOLD BLOOM (SNARE)
+% Effective Extraction: 0.47 * 1.5 (powerless) * 0.8 (local) = 0.564.
+% Perceived as a trap of "useless" affection and looming "destiny" (Milly/Molly).
+constraint_indexing:constraint_classification(ulysses_calypso_1904, snare, 
+    context(agent_power(powerless), 
+            time_horizon(biographical), 
+            exit_options(trapped), 
+            spatial_scope(local))).
+
+% PERSPECTIVE 2: MOLLY BLOOM (ROPE)
+% Effective Extraction: 0.47 * -0.2 (institutional) * 0.8 = -0.0752.
+% Viewed as the essential coordination of being "parched" and needing tea.
+constraint_indexing:constraint_classification(ulysses_calypso_1904, rope, 
+    context(agent_power(institutional), 
+            time_horizon(generational), 
+            exit_options(mobile), 
+            spatial_scope(local))).
+
+% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (PITON)
+% Theater Ratio (0.75) indicates a Piton of "Agendath Netaim" and "metempsychosis".
+constraint_indexing:constraint_classification(ulysses_calypso_1904, piton,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(global))).
+
+/* ==========================================================================
+   4. VALIDATION TESTS
+   ========================================================================== */
+
+:- begin_tests(ulysses_calypso_1904_tests).
+
+test(perspectival_gap) :-
+    % Verify the shift from Snare (Bloom's anxiety) to Rope (Molly's breakfast).
+    constraint_indexing:constraint_classification(ulysses_calypso_1904, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(ulysses_calypso_1904, TypeInstitutional, context(agent_power(institutional), _, _, _)),
+    TypePowerless \= TypeInstitutional.
+
+test(piton_theater_check) :-
+    % Piton classification requires theater_ratio >= 0.70.
+    domain_priors:theater_ratio(ulysses_calypso_1904, TR),
+    TR >= 0.70.
+
+:- end_tests(ulysses_calypso_1904_tests).
+
+/* ==========================================================================
+   5. GENERATIVE COMMENTARY
+   ========================================================================== */
+
+/**
+ * LOGIC RATIONALE:
+ * Leopold Bloom perceives his domestic life as a Snare—a predatory trap of 
+ * marital insecurity ("Bold hand. Mrs Marion") and the "grey horror" of 
+ * a "dead land"[cite: 1024]. Conversely, Molly perceives the morning as a Rope 
+ * of coordination, where Bloom is the "server" bringing her "Love's Old 
+ * Sweet Song" and tea[cite: 1041, 1069]. The high Theater Ratio (0.75) 
+ * is driven by Bloom's performative fantasies about "Oriental" Jaffa 
+ * [cite: 1002] and the "mummery" of explaining Greek terms like 
+ * "metempsychosis" to mask his visceral "desolation"[cite: 1024, 1080].
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+omega_variable(
+    omega_metempsychosis,
+    "Is Bloom's life a unique Rope of new experience or a Snare of reincarnation?",
+    "Review of the 'word known to all men' vs the 'smudge of the dead' in Titbits.",
+    "Reincarnation confirms the Snare; agency confirms the Rope.",
+    confidence_without_resolution(medium)
+).
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+narrative_ontology:interval(ulysses_calypso_1904, 0, 10).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Theater Ratio (Bloom's daydreaming peaking during his walk to Dlugacz's)
+narrative_ontology:measurement(uc_tr_t0, ulysses_calypso_1904, theater_ratio, 0, 0.65).
+narrative_ontology:measurement(uc_tr_t5, ulysses_calypso_1904, theater_ratio, 5, 0.80).
+narrative_ontology:measurement(uc_tr_t10, ulysses_calypso_1904, theater_ratio, 10, 0.75).
+
+% Extraction (Bloom's psychological cost rising as he reads the letters)
+narrative_ontology:measurement(uc_ex_t0, ulysses_calypso_1904, base_extractiveness, 0, 0.35).
+narrative_ontology:measurement(uc_ex_t5, ulysses_calymptotic_1904, base_extractiveness, 5, 0.42).
+narrative_ontology:measurement(uc_ex_t10, ulysses_calypso_1904, base_extractiveness, 10, 0.47).
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */
+% ============================================================================
+% CONSTRAINT STORY: ulysses_lotus_1904
+% ============================================================================
+% Version: 3.4 (Deferential Realism Core)
+% Logic: 3.3 (Indexed Tuple P,T,E,S)
+% Generated: 2026-02-06
+% ============================================================================
+
+:- module(constraint_ulysses_lotus, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
+    constraint_indexing:constraint_classification/3.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ * * constraint_id: ulysses_lotus_1904
+ * human_readable: The Narcotic Social Rope (Lotus Eaters)
+ * domain: social/religious/technological
+ * * SUMMARY:
+ * Leopold Bloom navigates the "lethargy" and "flowers of idleness" of 1904 
+ * Dublin. Shared rituals—the post office secrecy, the aromatic tea 
+ * advertisements, and the Catholic Mass—function as a Rope of coordination 
+ * that anchors his social existence. However, for Bloom as "Henry Flower," 
+ * these same rituals become a Snare of "Agenbite of inwit" and spiritual 
+ * "sleeping sickness."
+ * * KEY AGENTS:
+ * - Leopold Bloom: Subject (Powerless) - The "naughty boy" seeking punishment.
+ * - The Catholic Church: Beneficiary (Institutional) - The "wonderful organisation" of clockwork salvation.
+ * - Martha Clifford: Auditor (Analytical) - Probing through the "language of flowers."
+ */
+
+/* ==========================================================================
+   2. BASE PROPERTIES (DOMAIN PRIORS)
+   ========================================================================== */
+
+% Numerical anchors for v3.4 thresholds
+domain_priors:base_extractiveness(ulysses_lotus_1904, 0.48). 
+domain_priors:suppression_score(ulysses_lotus_1904, 0.70).   
+domain_priors:theater_ratio(ulysses_lotus_1904, 0.85). % High mummery: mass, flowers, and pseudonyms.
+
+% Primary keys for classification engine
+narrative_ontology:constraint_metric(ulysses_lotus_1904, extractiveness, 0.48).
+narrative_ontology:constraint_metric(ulysses_lotus_1904, suppression_requirement, 0.70).
+narrative_ontology:constraint_metric(ulysses_lotus_1904, theater_ratio, 0.85).
+
+% Structural Property Declarations
+narrative_ontology:constraint_beneficiary(ulysses_lotus_1904, holy_roman_church).
+narrative_ontology:constraint_victim(ulysses_lotus_1904, leopold_bloom).
+domain_priors:requires_active_enforcement(ulysses_lotus_1904). % Social etiquette and the secret correspondence.
+
+/* ==========================================================================
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × π(P) × σ(S)
+   ========================================================================== */
+
+% PERSPECTIVE 1: BLOOM AS "HENRY FLOWER" (SNARE)
+% Effective Extraction: 0.48 * 1.5 (powerless) * 0.8 (local) = 0.576.
+% Perceived as a "poison bouquet" of secret guilt and "punishment."
+constraint_indexing:constraint_classification(ulysses_lotus_1904, snare, 
+    context(agent_power(powerless), 
+            time_horizon(biographical), 
+            exit_options(trapped), 
+            spatial_scope(local))).
+
+% PERSPECTIVE 2: THE CHURCH MILITANT (ROPE)
+% Effective Extraction: 0.48 * -0.2 (institutional) * 0.8 = -0.0768.
+% Viewed as the "clockwork" coordination of "bread of angels" and family parties.
+constraint_indexing:constraint_classification(ulysses_lotus_1904, rope, 
+    context(agent_power(institutional), 
+            time_horizon(generational), 
+            exit_options(mobile), 
+            spatial_scope(local))).
+
+% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (PITON)
+% Theater Ratio (0.85) indicates a Piton of "mummery" and "vanished crowds."
+constraint_indexing:constraint_classification(ulysses_lotus_1904, piton,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(global))).
+
+/* ==========================================================================
+   4. VALIDATION TESTS
+   ========================================================================== */
+
+:- begin_tests(ulysses_lotus_1904_tests).
+
+test(perspectival_gap) :-
+    % Verify the shift from Snare (Bloom) to Rope (Church).
+    constraint_indexing:constraint_classification(ulysses_lotus_1904, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(ulysses_lotus_1904, rope, context(agent_power(institutional), _, _, _)).
+
+test(piton_theater_check) :-
+    % Piton classification requires theater_ratio >= 0.70.
+    domain_priors:theater_ratio(ulysses_lotus_1904, TR),
+    TR >= 0.70.
+
+:- end_tests(ulysses_lotus_1904_tests).
+
+/* ==========================================================================
+   5. GENERATIVE COMMENTARY
+   ========================================================================== */
+
+/**
+ * LOGIC RATIONALE:
+ * Leopold Bloom experiences Dublin as a site of narcotic coordination. 
+ * Shared spaces like the post office and church function as a Rope of 
+ * daily movement, yet his internal "Henry Flower" identity is a Snare 
+ * where extraction is felt as the "punishment" demanded by Martha Clifford. 
+ * The high Theater Ratio (0.85) stems from the "mummery" of the Mass 
+ * (described as "eating bits of a corpse") and the performative "language 
+ * of flowers" that Bloom uses to mask his material and emotional isolation.
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+omega_variable(
+    omega_narcotic_solipsism,
+    "Is Bloom's 'Henry Flower' persona a Rope for growth or a Snare of isolation?",
+    "Review of the 'word known to all men' vs the 'language of flowers'.",
+    "Communication confirms a Rope; secret letters harden the Snare.",
+    confidence_without_resolution(medium)
+).
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+narrative_ontology:interval(ulysses_lotus_1904, 0, 10).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Theater Ratio (Peaking during the Communion ritual and the reading of Martha's letter)
+narrative_ontology:measurement(ul_tr_t0, ulysses_lotus_1904, theater_ratio, 0, 0.70).
+narrative_ontology:measurement(ul_tr_t5, ulysses_lotus_1904, theater_ratio, 5, 0.88).
+narrative_ontology:measurement(ul_tr_t10, ulysses_lotus_1904, theater_ratio, 10, 0.85).
+
+% Extraction (The increasing weight of Bloom's "naughty boy" guilt and loneliness)
+narrative_ontology:measurement(ul_ex_t0, ulysses_lotus_1904, base_extractiveness, 0, 0.38).
+narrative_ontology:measurement(ul_ex_t5, ulysses_lotus_1904, base_extractiveness, 5, 0.44).
+narrative_ontology:measurement(ul_ex_t10, ulysses_lotus_1904, base_extractiveness, 10, 0.48).
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */
+% ============================================================================
+% CONSTRAINT STORY: ulysses_hades_1904
+% ============================================================================
+% Version: 3.4 (Deferential Realism Core)
+% Logic: 3.3 (Indexed Tuple P,T,E,S)
+% Generated: 2026-02-06
+% ============================================================================
+
+:- module(constraint_ulysses_hades, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
+    constraint_indexing:constraint_classification/3.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ * * constraint_id: ulysses_hades_1904
+ * human_readable: The Funerary Mountain (Prospect Cemetery)
+ * domain: social/religious/technological
+ * * SUMMARY:
+ * Leopold Bloom attends the funeral of Paddy Dignam, navigating the communal 
+ * Ropes of mourning while confronting the absolute Mountain of death. 
+ * The ritual coordination of the carriage ride and the interment is 
+ * punctuated by the high theater of Father Coffey’s Latin and the 
+ * "ineluctable" reality of decomposition and forgotten names.
+ * * KEY AGENTS:
+ * - Leopold Bloom: Subject (Powerless) - Counting the bared heads (thirteen).
+ * - Father Coffey: Beneficiary (Institutional) - Balancing a book against his "toad's belly".
+ * - John O'Connell: Auditor (Analytical) - The caretaker puzzling keys at his back.
+ */
+
+/* ==========================================================================
+   2. BASE PROPERTIES (DOMAIN PRIORS)
+   ========================================================================== */
+
+% Numerical anchors for v3.4 thresholds
+domain_priors:base_extractiveness(ulysses_hades_1904, 0.49). % High due to biological decay and grief.
+domain_priors:suppression_score(ulysses_hades_1904, 0.95).   % Death as an absolute "Fixed Point".
+domain_priors:theater_ratio(ulysses_hades_1904, 0.88).      % The "Pomp of death" and Father Coffey's "fluent croak".
+
+% Primary keys for classification engine
+narrative_ontology:constraint_metric(ulysses_hades_1904, extractiveness, 0.49).
+narrative_ontology:constraint_metric(ulysses_hades_1904, suppression_requirement, 0.95).
+narrative_ontology:constraint_metric(ulysses_hades_1904, theater_ratio, 0.88).
+
+% Structural Property Declarations
+narrative_ontology:constraint_beneficiary(ulysses_hades_1904, burial_societies). % Paying the penny a week for turf.
+narrative_ontology:constraint_victim(ulysses_hades_1904, paddy_dignam).          % The "stiff" in the dealer box.
+domain_priors:requires_active_enforcement(ulysses_hades_1904). % Gravediggers and caretakers enforcing "rest".
+
+/* ==========================================================================
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × π(P) × σ(S)
+   ========================================================================== */
+
+% PERSPECTIVE 1: THE DEPARTED (MOUNTAIN)
+% Effective Extraction: 0.49 * 1.5 (powerless) * 1.2 (universal) = 0.882.
+% χ < 0.05 logic check: In death, extraction ceases because agency is zero.
+% However, for the survivor Bloom, it is a Mountain of "Inertial Limit".
+constraint_indexing:constraint_classification(ulysses_hades_1904, mountain, 
+    context(agent_power(powerless), 
+            time_horizon(civilizational), 
+            exit_options(trapped), 
+            spatial_scope(universal))).
+
+% PERSPECTIVE 2: THE CARETAKER (ROPE)
+% Effective Extraction: 0.49 * -0.2 (institutional) * 0.8 (local) = -0.0784.
+% Viewed as the essential coordination of "cheering a fellow up" and "keys".
+constraint_indexing:constraint_classification(ulysses_hades_1904, rope, 
+    context(agent_power(institutional), 
+            time_horizon(generational), 
+            exit_options(mobile), 
+            spatial_scope(local))).
+
+% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (PITON)
+% Extreme Theater Ratio (0.88) indicates a Piton of "vanished crowds" and "mummery".
+constraint_indexing:constraint_classification(ulysses_hades_1904, piton,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(global))).
+
+/* ==========================================================================
+   4. VALIDATION TESTS
+   ========================================================================== */
+
+:- begin_tests(ulysses_hades_1904_tests).
+
+test(perspectival_gap) :-
+    % Verify shift from the Mountain of death to the Rope of the caretaker.
+    constraint_indexing:constraint_classification(ulysses_hades_1904, mountain, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(ulysses_hades_1904, rope, context(agent_power(institutional), _, _, _)).
+
+test(piton_theater_check) :-
+    % Piton classification requires theater_ratio >= 0.70.
+    domain_priors:theater_ratio(ulysses_hades_1904, TR),
+    TR >= 0.70.
+
+:- end_tests(ulysses_hades_1904_tests).
+
+/* ==========================================================================
+   5. GENERATIVE COMMENTARY
+   ========================================================================== */
+
+/**
+ * LOGIC RATIONALE:
+ * Leopold Bloom experiences Prospect Cemetery as a site of the Funerary 
+ * Mountain—an irreducible "Fixed Point" where "once you are dead you are 
+ * dead"[cite: 4007]. While burial societies and caretakers provide a Rope 
+ * of coordination (managing "twenty or thirty funerals every day" [cite: 3911]), 
+ * the high Theater Ratio (0.88) reflects the "Pomp of death". 
+ * Bloom sees through this theater, noting that Father Coffey’s Latin 
+ * "stupefies them first" [cite: 3520] and that the "resurrection and the 
+ * life" is merely a "pump" that eventually "gets bunged up"[cite: 4005, 4006].
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+omega_variable(
+    omega_mortality_theater,
+    "Is the 'last day idea' a Rope for social hope or a Snare for religious extraction?",
+    "Review of 'waiting for it to melt in their stomachs' vs 'safe in the arms of kingdom come'.",
+    "Hope-coordination confirms a Rope; 'pious fraud' hardens the Snare.",
+    confidence_without_resolution(medium)
+).
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+narrative_ontology:interval(ulysses_hades_1904, 0, 10).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Theater Ratio (Peaking during the mortuary chapel service and Father Coffey's croak)
+narrative_ontology:measurement(uh_tr_t0, ulysses_hades_1904, theater_ratio, 0, 0.75).
+narrative_ontology:measurement(uh_tr_t5, ulysses_hades_1904, theater_ratio, 5, 0.92).
+narrative_ontology:measurement(uh_tr_t10, ulysses_hades_1904, theater_ratio, 10, 0.88).
+
+% Extraction (The weight of the "dead weight" coffin and Bloom's thoughts on his own plot)
+narrative_ontology:measurement(uh_ex_t0, ulysses_hades_1904, base_extractiveness, 0, 0.40).
+narrative_ontology:measurement(uh_ex_t5, ulysses_hades_1904, base_extractiveness, 5, 0.45).
+narrative_ontology:measurement(uh_ex_t10, ulysses_hades_1904, base_extractiveness, 10, 0.49).
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */
+% ============================================================================
+% CONSTRAINT STORY: ulysses_aeolus_1904
+% ============================================================================
+% Version: 3.4 (Deferential Realism Core)
+% Logic: 3.3 (Indexed Tuple P,T,E,S)
+% Generated: 2026-02-06
+% ============================================================================
+
+:- module(constraint_ulysses_aeolus, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
+    constraint_indexing:constraint_classification/3.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ * * constraint_id: ulysses_aeolus_1904
+ * human_readable: The Rhetorical Press (Aeolus)
+ * domain: technological/social/political
+ * * SUMMARY:
+ * Leopold Bloom navigates the "clanking drums" of the Freeman's Journal office, 
+ * attempting to coordinate a simple advertisement renewal. He is caught 
+ * between the irreducible Mountain of the machines and the high-theater 
+ * Snare of rhetorical bombast from Myles Crawford and the "windbag" orators.
+ * * KEY AGENTS:
+ * - Leopold Bloom: Subject (Powerless) - Rebuffed by the "K.M.R.I.A." response.
+ * - Myles Crawford: Beneficiary (Institutional) - Controlling the "pressgang".
+ * - Professor MacHugh: Auditor (Analytical) - Observing the "divine afflatus".
+ */
+
+/* ==========================================================================
+   2. BASE PROPERTIES (DOMAIN PRIORS)
+   ========================================================================== */
+
+% Numerical anchors for v3.4 thresholds
+domain_priors:base_extractiveness(ulysses_aeolus_1904, 0.51). % High due to Bloom's rejected labor.
+domain_priors:suppression_score(ulysses_aeolus_1904, 0.75).   % The "nightmare" of mechanical rhythm.
+domain_priors:theater_ratio(ulysses_aeolus_1904, 0.85).      % High bombast: "divine afflatus" and headlines.
+
+% Primary keys for classification engine
+narrative_ontology:constraint_metric(ulysses_aeolus_1904, extractiveness, 0.51).
+narrative_ontology:constraint_metric(ulysses_aeolus_1904, suppression_requirement, 0.75).
+narrative_ontology:constraint_metric(ulysses_aeolus_1904, theater_ratio, 0.85).
+
+% Structural Property Declarations
+narrative_ontology:constraint_beneficiary(ulysses_aeolus_1904, press_institution). % Daily circulation.
+narrative_ontology:constraint_victim(ulysses_aeolus_1904, leopold_bloom).          % The rejected canvasser.
+domain_priors:requires_active_enforcement(ulysses_aeolus_1904). % The editor's "Begone!" and yelling newsboys.
+
+/* ==========================================================================
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × π(P) × σ(S)
+   ========================================================================== */
+
+% PERSPECTIVE 1: LEOPOLD BLOOM (SNARE)
+% Effective Extraction: 0.51 * 1.5 (powerless) * 1.0 (national) = 0.765.
+% Perceived as a "hurricane" of noise and personal humiliation.
+constraint_indexing:constraint_classification(ulysses_aeolus_1904, snare, 
+    context(agent_power(powerless), 
+            time_horizon(biographical), 
+            exit_options(trapped), 
+            spatial_scope(national))).
+
+% PERSPECTIVE 2: THE EDITOR (ROPE)
+% Effective Extraction: 0.51 * -0.2 (institutional) * 1.0 = -0.102.
+% Viewed as the essential "workaday worker tack" of a great daily organ.
+constraint_indexing:constraint_classification(ulysses_aeolus_1904, rope, 
+    context(agent_power(institutional), 
+            time_horizon(generational), 
+            exit_options(mobile), 
+            spatial_scope(national))).
+
+% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (PITON)
+% Extreme Theater Ratio (0.85) suggests a Piton of "lost causes" and "cloaquae".
+constraint_indexing:constraint_classification(ulysses_aeolus_1904, piton,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(global))).
+
+/* ==========================================================================
+   4. VALIDATION TESTS
+   ========================================================================== */
+
+:- begin_tests(ulysses_aeolus_1904_tests).
+
+test(perspectival_gap) :-
+    % Verify shift from the Snare of rejection to the Rope of institutional function.
+    constraint_indexing:constraint_classification(ulysses_aeolus_1904, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(ulysses_aeolus_1904, rope, context(agent_power(institutional), _, _, _)).
+
+test(piton_theater_validation) :-
+    % Piton classification requires theater_ratio >= 0.70.
+    domain_priors:theater_ratio(ulysses_aeolus_1904, TR),
+    TR >= 0.70.
+
+:- end_tests(ulysses_aeolus_1904_tests).
+
+/* ==========================================================================
+   5. GENERATIVE COMMENTARY
+   ========================================================================== */
+
+/**
+ * LOGIC RATIONALE:
+ * Leopold Bloom experiences the press as a Tangled Rope—it coordinates the 
+ * " Hibernian Metropolis" through its trams and mailcars, yet it extracts 
+ * his social sovereignty[cite: 4718, 4722]. The high Theater Ratio (0.85) 
+ * is driven by the "mummery" of letters and the "inflated windbag" oratory 
+ * of Dan Dawson and John F. Taylor[cite: 4867, 5085]. Crawford’s 
+ * "K.M.R.I.A." (Kiss My Royal Irish Arse) is the definitive marker of 
+ * asymmetric extraction felt by the powerless agent[cite: 5174].
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+omega_variable(
+    omega_aeolian_agency,
+    "Is the editor's rejection a Rope of editorial standards or a Snare of personal malice?",
+    "Review of the 'Canada swindle' and 'Ontario' references.",
+    "Editorial standard confirms a Rope; malice hardens the Snare.",
+    confidence_without_resolution(medium)
+).
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+narrative_ontology:interval(ulysses_aeolus_1904, 0, 10).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Theater Ratio (Peaking during the 'Pisgah Sight of Palestine' and Taylor's speech)
+narrative_ontology:measurement(ua_tr_t0, ulysses_aeolus_1904, theater_ratio, 0, 0.72).
+narrative_ontology:measurement(ua_tr_t5, ulysses_aeolus_1904, theater_ratio, 5, 0.90).
+narrative_ontology:measurement(ua_tr_t10, ulysses_aeolus_1904, theater_ratio, 10, 0.85).
+
+% Extraction (Increasing as Bloom is chased by newsboys and rebuffed by Crawford)
+narrative_ontology:measurement(ua_ex_t0, ulysses_aeolus_1904, base_extractiveness, 0, 0.42).
+narrative_ontology:measurement(ua_ex_t5, ulysses_aeolus_1904, base_extractiveness, 5, 0.48).
+narrative_ontology:measurement(ua_ex_t10, ulysses_aeolus_1904, base_extractiveness, 10, 0.51).
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */
+% ============================================================================
+% CONSTRAINT STORY: ulysses_lestrygonians_1904
+% ============================================================================
+% Version: 3.4 (Deferential Realism Core)
+% Logic: 3.3 (Indexed Tuple P,T,E,S)
+% Generated: 2026-02-06
+% ============================================================================
+
+:- module(constraint_ulysses_lestrygonians, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
+    constraint_indexing:constraint_classification/3.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ * * constraint_id: ulysses_lestrygonians_1904
+ * human_readable: The Lestrygonian Food Chain (Lunchtime Dublin)
+ * domain: social/economic/biological
+ * * SUMMARY:
+ * Leopold Bloom wanders Dublin at lunchtime, contemplating the "predatory" 
+ * nature of existence. He views the social and biological requirement of 
+ * eating as a Snare where the "Burton" diners wolf down food like animals, 
+ * while institutions use the "Blood of the Lamb" and "Plumtree's Potted Meat" 
+ * as Ropes of social and religious coordination.
+ * * KEY AGENTS:
+ * - Leopold Bloom: Subject (Powerless) - Avoiding the "worst man in Dublin".
+ * - The Lestrygonians (Burton Diners): Beneficiary (Institutional) - Wolfing down "gory meat".
+ * - The Y.M.C.A. Man: Auditor (Analytical) - Distributing "Blood of the Lamb" throwaways.
+ */
+
+/* ==========================================================================
+   2. BASE PROPERTIES (DOMAIN PRIORS)
+   ========================================================================== */
+
+% Numerical anchors for v3.4 thresholds
+domain_priors:base_extractiveness(ulysses_lestrygonians_1904, 0.50). % High predatory extraction.
+domain_priors:suppression_score(ulysses_lestrygonians_1904, 0.80).   % Biological necessity of hunger.
+domain_priors:theater_ratio(ulysses_lestrygonians_1904, 0.75).      % High social mummery/advertising.
+
+% Primary keys for classification engine
+narrative_ontology:constraint_metric(ulysses_lestrygonians_1904, extractiveness, 0.50).
+narrative_ontology:constraint_metric(ulysses_lestrygonians_1904, suppression_requirement, 0.80).
+narrative_ontology:constraint_metric(ulysses_lestrygonians_1904, theater_ratio, 0.75).
+
+% Structural Property Declarations
+narrative_ontology:constraint_beneficiary(ulysses_lestrygonians_1904, social_hierarchy).
+narrative_ontology:constraint_victim(ulysses_lestrygonians_1904, leopold_bloom).
+domain_priors:requires_active_enforcement(ulysses_lestrygonians_1904). % The "enforced" manners of the Burton.
+
+/* ==========================================================================
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × π(P) × σ(S)
+   ========================================================================== */
+
+% PERSPECTIVE 1: THE HUNGRY SUBJECT (SNARE)
+% Effective Extraction: 0.50 * 1.5 (powerless) * 0.8 (local) = 0.60.
+% Bloom perceives the Burton restaurant as a predatory trap of "stinking" food.
+constraint_indexing:constraint_classification(ulysses_lestrygonians_1904, snare, 
+    context(agent_power(powerless), 
+            time_horizon(biographical), 
+            exit_options(trapped), 
+            spatial_scope(local))).
+
+% PERSPECTIVE 2: THE INSTITUTIONAL DINER (ROPE)
+% Effective Extraction: 0.50 * -0.2 (institutional) * 0.8 = -0.08.
+% Viewed as the essential "nourishment" and coordination of the "Great Daily Organ".
+constraint_indexing:constraint_classification(ulysses_lestrygonians_1904, rope, 
+    context(agent_power(institutional), 
+            time_horizon(generational), 
+            exit_options(mobile), 
+            spatial_scope(local))).
+
+% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (PITON)
+% Extreme Theater Ratio (0.75) indicates a Piton of atrophied social "respectability."
+constraint_indexing:constraint_classification(ulysses_lestrygonians_1904, piton,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(global))).
+
+/* ==========================================================================
+   4. VALIDATION TESTS
+   ========================================================================== */
+
+:- begin_tests(ulysses_lestrygonians_1904_tests).
+
+test(perspectival_gap) :-
+    % Verify the shift from Snare (Bloom's disgust) to Rope (Social function).
+    constraint_indexing:constraint_classification(ulysses_lestrygonians_1904, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(ulysses_lestrygonians_1904, TypeInstitutional, context(agent_power(institutional), _, _, _)),
+    TypePowerless \= TypeInstitutional.
+
+test(piton_theater_check) :-
+    % Piton classification requires theater_ratio >= 0.70.
+    domain_priors:theater_ratio(ulysses_lestrygonians_1904, TR),
+    TR >= 0.70.
+
+:- end_tests(ulysses_lestrygonians_1904_tests).
+
+/* ==========================================================================
+   5. GENERATIVE COMMENTARY
+   ========================================================================== */
+
+/**
+ * LOGIC RATIONALE:
+ * Leopold Bloom experiences lunchtime as the "Lestrygonian Snare." While 
+ * the city coordinates around the lunch hour (Rope), Bloom sees the 
+ * "cannibalistic" extraction of the Burton diners—"men, men, men" bolting 
+ * down "gory meat". The high Theater Ratio (0.75) reflects the 
+ * performative nature of social dining and advertisements like 
+ * "Plumtree's Potted Meat" which mask the irreducible Mountain of 
+ * biological hunger and death.
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+omega_variable(
+    omega_biological_snare,
+    "Is 'social dining' a Rope of civilizational progress or a Snare of animal regression?",
+    "Review of the 'Burton' vs 'Davy Byrne's' dining modalities.",
+    "Temperance confirms a Rope; 'wolfing' hardens the Snare.",
+    confidence_without_resolution(medium)
+).
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+narrative_ontology:interval(ulysses_lestrygonians_1904, 0, 10).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Theater Ratio (Peaking as social etiquette is abandoned at the Burton)
+narrative_ontology:measurement(ul_tr_t0, ulysses_lestrygonians_1904, theater_ratio, 0, 0.60).
+narrative_ontology:measurement(ul_tr_t5, ulysses_lestrygonians_1904, theater_ratio, 5, 0.85).
+narrative_ontology:measurement(ul_tr_t10, ulysses_lestrygonians_1904, theater_ratio, 10, 0.75).
+
+% Extraction (Increasing as the "predatory" lunch hour intensifies)
+narrative_ontology:measurement(ul_ex_t0, ulysses_lestrygonians_1904, base_extractiveness, 0, 0.35).
+narrative_ontology:measurement(ul_ex_t5, ulysses_lestrygonians_1904, base_extractiveness, 5, 0.45).
+narrative_ontology:measurement(ul_ex_t10, ulysses_lestrygonians_1904, base_extractiveness, 10, 0.50).
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */
+% ============================================================================
+% CONSTRAINT STORY: ulysses_scylla_1904
+% ============================================================================
+% Version: 3.4 (Deferential Realism Core)
+% Logic: 3.3 (Indexed Tuple P,T,E,S)
+% Generated: 2026-02-06
+% ============================================================================
+
+:- module(constraint_ulysses_scylla, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
+    constraint_indexing:constraint_classification/3.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ * * constraint_id: ulysses_scylla_1904
+ * human_readable: The Hamlet Algebra (National Library)
+ * domain: social/religious/philosophical
+ * * SUMMARY:
+ * Stephen Dedalus performs his elaborate "Hamlet" theory in the National 
+ * Library, navigating between the Scylla of Aristotelian dogmatic realism 
+ * and the Charybdis of Platonic mysticism[cite: 7009, 6807]. The library 
+ * functions as a Piton of atrophied intellectualism, while Stephen’s theory 
+ * serves as a personal Scaffold for his artistic identity, even as his 
+ * auditors perceive it as a Snare of "perverted ingenuity"[cite: 7948].
+ * * KEY AGENTS:
+ * - Stephen Dedalus: Subject (Powerless) - The "horrible example of free thought"[cite: 6719].
+ * - John Eglinton: Beneficiary (Institutional) - The "elder's gall" challenging the bard[cite: 7948].
+ * - The Quaker Librarian: Auditor (Analytical) - Purring "urbane" comfort[cite: 7948].
+ */
+
+/* ==========================================================================
+   2. BASE PROPERTIES (DOMAIN PRIORS)
+   ========================================================================== */
+
+% Numerical anchors for v3.4 thresholds
+domain_priors:base_extractiveness(ulysses_scylla_1904, 0.50). % High spiritual/intellectual labor[cite: 6525].
+domain_priors:suppression_score(ulysses_scylla_1904, 0.70).   % The "mummery" of letters and tradition.
+domain_priors:theater_ratio(ulysses_scylla_1904, 0.90).      % Peak performance: "Shakespeare's ghost".
+
+% Primary keys for classification engine
+narrative_ontology:constraint_metric(ulysses_scylla_1904, extractiveness, 0.50).
+narrative_ontology:constraint_metric(ulysses_scylla_1904, suppression_requirement, 0.70).
+narrative_ontology:constraint_metric(ulysses_scylla_1904, theater_ratio, 0.90).
+
+% Structural Property Declarations
+narrative_ontology:constraint_beneficiary(ulysses_scylla_1904, dublin_intelligentsia). % Coordination of culture[cite: 7948].
+narrative_ontology:constraint_victim(ulysses_scylla_1904, stephen_dedalus).           % The rejected "bard"[cite: 6480].
+domain_priors:requires_active_enforcement(ulysses_scylla_1904). % The "gall" of John Eglinton[cite: 7948].
+narrative_ontology:has_sunset_clause(ulysses_scylla_1904).     % Stephen's theory is a temporary "movement".
+
+/* ==========================================================================
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × π(P) × σ(S)
+   ========================================================================== */
+
+% PERSPECTIVE 1: STEPHEN DEDALUS (SNARE)
+% Effective Extraction: 0.50 * 1.5 (powerless) * 0.8 (local) = 0.60.
+% Perceived as a trap of "toothless terrors" and social mockery[cite: 6998, 6429].
+constraint_indexing:constraint_classification(ulysses_scylla_1904, snare, 
+    context(agent_power(powerless), 
+            time_horizon(biographical), 
+            exit_options(trapped), 
+            spatial_scope(local))).
+
+% PERSPECTIVE 2: THE LITERARY CIRCLE (ROPE)
+% Effective Extraction: 0.50 * -0.2 (institutional) * 0.8 = -0.08.
+% Viewed as the essential coordination of "priceless pages" and debate[cite: 7948].
+constraint_indexing:constraint_classification(ulysses_scylla_1904, rope, 
+    context(agent_power(institutional), 
+            time_horizon(generational), 
+            exit_options(mobile), 
+            spatial_scope(local))).
+
+% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (PITON)
+% Extreme Theater Ratio (0.90) indicates a Piton of "vanished crowds" and mummery[cite: 6927].
+constraint_indexing:constraint_classification(ulysses_scylla_1904, piton,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(global))).
+
+% PERSPECTIVE 4: THE CREATIVE ARCHITECT (SCAFFOLD)
+% The "Hamlet" theory is a temporary support for artistic birth.
+constraint_indexing:constraint_classification(ulysses_scylla_1904, scaffold,
+    context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(national))) :-
+    narrative_ontology:has_sunset_clause(ulysses_scylla_1904).
+
+/* ==========================================================================
+   4. VALIDATION TESTS
+   ========================================================================== */
+
+:- begin_tests(ulysses_scylla_1904_tests).
+
+test(perspectival_gap) :-
+    % Verify shift from the Snare of Stephen's isolation to the Rope of culture.
+    constraint_indexing:constraint_classification(ulysses_scylla_1904, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(ulysses_scylla_1904, rope, context(agent_power(institutional), _, _, _)).
+
+test(piton_theater_validation) :-
+    % Piton classification requires theater_ratio >= 0.70.
+    domain_priors:theater_ratio(ulysses_scylla_1904, TR),
+    TR >= 0.70.
+
+:- end_tests(ulysses_scylla_1904_tests).
+
+/* ==========================================================================
+   5. GENERATIVE COMMENTARY
+   ========================================================================== */
+
+/**
+ * LOGIC RATIONALE:
+ * Stephen Dedalus experiences the National Library as a Scylla-and-Charybdis 
+ * Snare—a predatory trap of intellectual "mummery" where his theory is 
+ * used to extract his spiritual energy for the entertainment of "swine"[cite: 6494]. 
+ * Conversely, the librarians perceive it as a Rope of coordination, 
+ * a "sea of troubles" navigated through "priceless pages" of Meister[cite: 7948]. 
+ * The high Theater Ratio (0.90) is the defining feature; Stephen proves 
+ * by "algebra" that Shakespeare is his own father's ghost, a performance 
+ * that anchors his identity (Scaffold) while serving as a spectacular 
+ * atrophied function (Piton) for the Dublin circle[cite: 6847, 6927].
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+omega_variable(
+    omega_intellectual_paternity,
+    "Is Stephen's theory a Rope for his own artistic birth or a Snare of solipsism?",
+    "Review of the 'word known to all men' vs the 'mummery of letters'[cite: 7258, 6849].",
+    "Creative birth confirms a Rope; 'phantasmal mirth' hardens the Snare[cite: 6545].",
+    confidence_without_resolution(medium)
+).
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+narrative_ontology:interval(ulysses_scylla_1904, 0, 10).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Theater Ratio (Peaking during the climax of the Shakespearean proof)
+narrative_ontology:measurement(us_tr_t0, ulysses_scylla_1904, theater_ratio, 0, 0.75).
+narrative_ontology:measurement(us_tr_t5, ulysses_scylla_1904, theater_ratio, 5, 0.95).
+narrative_ontology:measurement(us_tr_t10, ulysses_scylla_1904, theater_ratio, 10, 0.90).
+
+% Extraction (The weight of Stephen's spiritual "debt" and creative labor)
+narrative_ontology:measurement(us_ex_t0, ulysses_scylla_1904, base_extractiveness, 0, 0.40).
+narrative_ontology:measurement(us_ex_t5, ulysses_scylla_1904, base_extractiveness, 5, 0.55).
+narrative_ontology:measurement(us_ex_t10, ulysses_scylla_1904, base_extractiveness, 10, 0.50).
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */
+% ============================================================================
+% CONSTRAINT STORY: ulysses_rocks_1904
+% ============================================================================
+% Version: 3.4 (Deferential Realism Core)
+% Logic: 3.3 (Indexed Tuple P,T,E,S)
+% Generated: 2026-02-06
+% ============================================================================
+
+:- module(constraint_ulysses_rocks, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
+    constraint_indexing:constraint_classification/3.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ * * constraint_id: ulysses_rocks_1904
+ * human_readable: The Dublin Simultaneity (Wandering Rocks)
+ * domain: social/political/religious
+ * * SUMMARY:
+ * Chapter 10 models Dublin as a complex system of simultaneous movements and 
+ * near-misses. The city acts as a Tangled Rope of coordination, where the 
+ * progress of the Viceregal cavalcade and Father Conmee provides a 
+ * structural floor for the diverse inhabitants, even as it extracts 
+ * their attention and social deference through a high theater of 
+ * colonial and religious "pomp".
+ * * KEY AGENTS:
+ * - Dublin Inhabitants: Subject (Powerless) - Navigating the city's 
+ * "short circuits" and coincidences.
+ * - The Viceregal Cavalcade: Beneficiary (Institutional) - Representing 
+ * the imperial "pomp" and coordination of the state.
+ * - Father Conmee: Auditor (Analytical) - Observing and blessing 
+ * the city's movements while managing his own errands.
+ */
+
+/* ==========================================================================
+   2. BASE PROPERTIES (DOMAIN PRIORS)
+   ========================================================================== */
+
+% Numerical anchors for v3.4 thresholds
+domain_priors:base_extractiveness(ulysses_rocks_1904, 0.48). 
+domain_priors:suppression_score(ulysses_rocks_1904, 0.75).   
+domain_priors:theater_ratio(ulysses_rocks_1904, 0.82). % High "pomp": viceregal salutes and blessings.
+
+% Primary keys for classification engine
+narrative_ontology:constraint_metric(ulysses_rocks_1904, extractiveness, 0.48).
+narrative_ontology:constraint_metric(ulysses_rocks_1904, suppression_requirement, 0.75).
+narrative_ontology:constraint_metric(ulysses_rocks_1904, theater_ratio, 0.82).
+
+% Structural Property Declarations
+narrative_ontology:constraint_beneficiary(ulysses_rocks_1904, colonial_and_church_authorities).
+narrative_ontology:constraint_victim(ulysses_rocks_1904, dublin_citizens).
+domain_priors:requires_active_enforcement(ulysses_rocks_1904). % The "timekeeper" and "bawled" tram departures.
+
+/* ==========================================================================
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × π(P) × σ(S)
+   ========================================================================== */
+
+% PERSPECTIVE 1: THE DUBLIN CITIZEN (SNARE)
+% Effective Extraction: 0.48 * 1.5 (powerless) * 0.8 (local) = 0.576.
+% Perceived as a "short circuit" trap of coincidences and "stale" social debts.
+constraint_indexing:constraint_classification(ulysses_rocks_1904, snare, 
+    context(agent_power(powerless), 
+            time_horizon(biographical), 
+            exit_options(trapped), 
+            spatial_scope(local))).
+
+% PERSPECTIVE 2: THE VICEREGAL AUTHORITY (ROPE)
+% Effective Extraction: 0.48 * -0.2 (institutional) * 0.8 = -0.0768.
+% Viewed as the essential coordination of the "inauguration" and city "order".
+constraint_indexing:constraint_classification(ulysses_rocks_1904, rope, 
+    context(agent_power(institutional), 
+            time_horizon(generational), 
+            exit_options(mobile), 
+            spatial_scope(local))).
+
+% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (PITON)
+% Extreme Theater Ratio (0.82) indicates a Piton of "punctual salutes" and mummery.
+constraint_indexing:constraint_classification(ulysses_rocks_1904, piton,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(global))).
+
+/* ==========================================================================
+   4. VALIDATION TESTS
+   ========================================================================== */
+
+:- begin_tests(ulysses_rocks_1904_tests).
+
+test(perspectival_gap) :-
+    % Verify shift from Snare (Citizen) to Rope (Authority).
+    constraint_indexing:constraint_classification(ulysses_rocks_1904, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(ulysses_rocks_1904, rope, context(agent_power(institutional), _, _, _)).
+
+test(piton_theater_check) :-
+    % Piton classification requires theater_ratio >= 0.70.
+    domain_priors:theater_ratio(ulysses_rocks_1904, TR),
+    TR >= 0.70.
+
+:- end_tests(ulysses_rocks_1904_tests).
+
+/* ==========================================================================
+   5. GENERATIVE COMMENTARY
+   ========================================================================== */
+
+/**
+ * LOGIC RATIONALE:
+ * The Dubliners experience the city's simultaneity as a Tangled Rope—it 
+ * coordinates their disparate lives through the "Great Daily Organ" of 
+ * shared space, yet it extracts their social deference through the "pomp" 
+ * of authority. The high Theater Ratio (0.82) is driven by the 
+ * "punctual salutes" of Master Patrick Aloysius Dignam and the "very 
+ * reverend" John Conmee's blessings. These performative Ropes 
+ * mask the atrophied function of the "becalmed" short circuits 
+ * where citizens like the "onelegged sailor" are "pauperized".
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+omega_variable(
+    omega_city_simultaneity,
+    "Is the 'shifting' coordination of the city a Rope for social unity or a Snare of surveillance?",
+    "Review of the 'blind stripling' vs the 'cavalcade' progress.",
+    "Unity confirms a Rope; 'short circuit' surveillance hardens the Snare.",
+    confidence_without_resolution(medium)
+).
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+narrative_ontology:interval(ulysses_rocks_1904, 0, 10).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Theater Ratio (Peaking as the viceroy acknowledges salutes through the city)
+narrative_ontology:measurement(ur_tr_t0, ulysses_rocks_1904, theater_ratio, 0, 0.65).
+narrative_ontology:measurement(ur_tr_t5, ulysses_rocks_1904, theater_ratio, 5, 0.88).
+narrative_ontology:measurement(ur_tr_t10, ulysses_rocks_1904, theater_ratio, 10, 0.82).
+
+% Extraction (Increasing as the "short circuit" of urban coincidences accumulates)
+narrative_ontology:measurement(ur_ex_t0, ulysses_rocks_1904, base_extractiveness, 0, 0.38).
+narrative_ontology:measurement(ur_ex_t5, ulysses_rocks_1904, base_extractiveness, 5, 0.45).
+narrative_ontology:measurement(ur_ex_t10, ulysses_rocks_1904, base_extractiveness, 10, 0.48).
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */
+% ============================================================================
+% CONSTRAINT STORY: ulysses_sirens_1904
+% ============================================================================
+% Version: 3.4 (Deferential Realism Core)
+% Logic: 3.3 (Indexed Tuple P,T,E,S)
+% Generated: 2026-02-06
+% ============================================================================
+
+:- module(constraint_ulysses_sirens, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
+    constraint_indexing:constraint_classification/3.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ * * constraint_id: ulysses_sirens_1904
+ * human_readable: The Auditory Lure (Ormond Hotel)
+ * domain: social/artistic/biological
+ * * SUMMARY:
+ * Chapter 11 models the Ormond Hotel bar as a complex auditory system. 
+ * The music and the flirtatious "Sirens" act as a Rope of coordination 
+ * for the bar patrons, while for Leopold Bloom, they form a Snare 
+ * of "longindying" calls and psychological extraction as he dwells 
+ * on his loneliness and Molly's infidelity.
+ * * KEY AGENTS:
+ * - Leopold Bloom: Subject (Powerless) - "So lonely blooming" while eating grease. 
+ * - Lydia Douce & Mina Kennedy: Beneficiary (Institutional) - The trilling barmaids. 
+ * - The Stripling: Auditor (Analytical) - The unseeing presence tapping at the door. 
+ */
+
+/* ==========================================================================
+   2. BASE PROPERTIES (DOMAIN PRIORS)
+   ========================================================================== */
+
+% Numerical anchors for v3.4 thresholds [cite: 12]
+domain_priors:base_extractiveness(ulysses_sirens_1904, 0.53). % High psychological cost.
+domain_priors:suppression_score(ulysses_sirens_1904, 0.82).   % Auditory seduce-and-suppress.
+domain_priors:theater_ratio(ulysses_sirens_1904, 0.89).      % Peak "mummery" of sound.
+
+% Primary keys for classification engine [cite: 12]
+narrative_ontology:constraint_metric(ulysses_sirens_1904, extractiveness, 0.53).
+narrative_ontology:constraint_metric(ulysses_sirens_1904, suppression_requirement, 0.82).
+narrative_ontology:constraint_metric(ulysses_sirens_1904, theater_ratio, 0.89).
+
+% Structural Property Declarations
+narrative_ontology:constraint_beneficiary(ulysses_sirens_1904, the_sirens). % Lydia and Mina trilling.
+narrative_ontology:constraint_victim(ulysses_sirens_1904, leopold_bloom).   % Trapped in sad blooming.
+domain_priors:requires_active_enforcement(ulysses_sirens_1904). % The piano's "War! War!". 
+
+/* ==========================================================================
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × π(P) × σ(S)
+   ========================================================================== */
+
+% PERSPECTIVE 1: THE LONELY SUBJECT (SNARE)
+% Effective Extraction: 0.53 * 1.5 (powerless) * 0.8 (local) = 0.636.
+% Bloom perceives the music as a "decoy" and a trap of "lost" notes. 
+constraint_indexing:constraint_classification(ulysses_sirens_1904, snare, 
+    context(agent_power(powerless), 
+            time_horizon(biographical), 
+            exit_options(trapped), 
+            spatial_scope(local))).
+
+% PERSPECTIVE 2: THE BARMAID (ROPE)
+% Effective Extraction: 0.53 * -0.2 (institutional) * 0.8 = -0.0848.
+% Viewed as the "clinking" coordination of service and "peepofgold". 
+constraint_indexing:constraint_classification(ulysses_sirens_1904, rope, 
+    context(agent_power(institutional), 
+            time_horizon(generational), 
+            exit_options(mobile), 
+            spatial_scope(local))).
+
+% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (PITON)
+% Extreme Theater Ratio (0.89) indicates a Piton of atrophied social function.
+constraint_indexing:constraint_classification(ulysses_sirens_1904, piton,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(global))).
+
+/* ==========================================================================
+   4. VALIDATION TESTS
+   ========================================================================== */
+
+:- begin_tests(ulysses_sirens_1904_tests).
+
+test(perspectival_gap) :-
+    % Verify shift from Snare (Bloom) to Rope (Sirens). [cite: 13]
+    constraint_indexing:constraint_classification(ulysses_sirens_1904, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(ulysses_sirens_1904, rope, context(agent_power(institutional), _, _, _)).
+
+test(piton_theater_check) :-
+    % Piton classification requires theater_ratio >= 0.70. [cite: 13]
+    domain_priors:theater_ratio(ulysses_sirens_1904, TR),
+    TR >= 0.70.
+
+:- end_tests(ulysses_sirens_1904_tests).
+
+/* ==========================================================================
+   5. GENERATIVE COMMENTARY
+   ========================================================================== */
+
+/**
+ * LOGIC RATIONALE:
+ * Leopold Bloom experiences the Ormond bar as an auditory Snare—a site 
+ * where the "throb" of the music and the "trilling" of barmaids extracts 
+ * his emotional equilibrium. The high Theater Ratio (0.89) is the 
+ * defining property; the chapter is a "fugue" of onomatopoeia 
+ * ("Imperthnthn thnthnthn") that creates a spectacular performance  
+ * masking the atrophied function of genuine human connection.
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+omega_variable(
+    omega_auditory_entrapment,
+    "Is the 'pure, long and throbbing' call a Rope for beauty or a Snare for the soul?",
+    "Analysis of the 'decoy' effect vs the 'last rose of summer' resolution.",
+    "Beauty confirms a Rope; 'alluring' entrapment hardens the Snare.",
+    confidence_without_resolution(medium)
+).
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+narrative_ontology:interval(ulysses_sirens_1904, 0, 10).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Theater Ratio (Peaking as the music and trilling intensify toward the end) [cite: 12]
+narrative_ontology:measurement(us_tr_t0, ulysses_sirens_1904, theater_ratio, 0, 0.75).
+narrative_ontology:measurement(us_tr_t5, ulysses_sirens_1904, theater_ratio, 5, 0.92).
+narrative_ontology:measurement(us_tr_t10, ulysses_sirens_1904, theater_ratio, 10, 0.89).
+
+% Extraction (Bloom's psychological fatigue accumulating with the piano chords) [cite: 12]
+narrative_ontology:measurement(us_ex_t0, ulysses_sirens_1904, base_extractiveness, 0, 0.40).
+narrative_ontology:measurement(us_ex_t5, ulysses_sirens_1904, base_extractiveness, 5, 0.48).
+narrative_ontology:measurement(us_ex_t10, ulysses_sirens_1904, base_extractiveness, 10, 0.53).
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */
+% ============================================================================
+% CONSTRAINT STORY: ulysses_cyclops_1904
+% ============================================================================
+% Version: 3.4 (Deferential Realism Core)
+% Logic: 3.3 (Indexed Tuple P,T,E,S)
+% Generated: 2026-02-06
+% ============================================================================
+
+:- module(constraint_ulysses_cyclops, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
+    constraint_indexing:constraint_classification/3.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ * * constraint_id: ulysses_cyclops_1904
+ * human_readable: The Cyclopean Snare (Barney Kiernan's Pub)
+ * domain: social/political/nationalist
+ * * SUMMARY:
+ * Leopold Bloom enters Barney Kiernan's pub, a site of fierce nationalist 
+ * fervor led by "The Citizen." The social environment functions as a Rope 
+ * of coordination for the "true men," but becomes a Snare of xenophobic 
+ * extraction for Bloom, culminating in a literal assault with a biscuit 
+ * tin. The narrative is defined by "Gigantism"—hyperbolic parodies that 
+ * create a peak Theater Ratio.
+ * * KEY AGENTS:
+ * - Leopold Bloom: Subject (Powerless) - The "walking jew" in the lion's den.
+ * - The Citizen: Beneficiary (Institutional) - The "huge asphodel" of Irish nationalism.
+ * - The Nameless Narrator: Auditor (Analytical) - The cynical debt collector 
+ * observing the "bloody big foxy thief."
+ */
+
+/* ==========================================================================
+   2. BASE PROPERTIES (DOMAIN PRIORS)
+   ========================================================================== */
+
+% Numerical anchors for v3.4 thresholds
+domain_priors:base_extractiveness(ulysses_cyclops_1904, 0.54). % Highest extraction via physical threat.
+domain_priors:suppression_score(ulysses_cyclops_1904, 0.88).   % Mono-vision (Cyclops) of nationalism.
+domain_priors:theater_ratio(ulysses_cyclops_1904, 0.92).      % Peak "Gigantism" and parodic theater.
+
+% Primary keys for classification engine
+narrative_ontology:constraint_metric(ulysses_cyclops_1904, extractiveness, 0.54).
+narrative_ontology:constraint_metric(ulysses_cyclops_1904, suppression_requirement, 0.88).
+narrative_ontology:constraint_metric(ulysses_cyclops_1904, theater_ratio, 0.92).
+
+% Structural Property Declarations
+narrative_ontology:constraint_beneficiary(ulysses_cyclops_1904, irish_nationalism).
+narrative_ontology:constraint_victim(ulysses_cyclops_1904, leopold_bloom).
+domain_priors:requires_active_enforcement(ulysses_cyclops_1904). % The Citizen's shouting and Garryowen's growling.
+
+/* ==========================================================================
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × π(P) × σ(S)
+   ========================================================================== */
+
+% PERSPECTIVE 1: LEOPOLD BLOOM (SNARE)
+% Effective Extraction: 0.54 * 1.5 (powerless) * 0.8 (local) = 0.648.
+% Perceived as a predatory trap of "malediction" and the "shouts of the mob."
+constraint_indexing:constraint_classification(ulysses_cyclops_1904, snare, 
+    context(agent_power(powerless), 
+            time_horizon(biographical), 
+            exit_options(trapped), 
+            spatial_scope(local))).
+
+% PERSPECTIVE 2: THE CITIZEN (ROPE)
+% Effective Extraction: 0.54 * -0.2 (institutional) * 0.8 = -0.0864.
+% Viewed as the essential coordination of "Sinn Fein" and "Ireland for the Irish."
+constraint_indexing:constraint_classification(ulysses_cyclops_1904, rope, 
+    context(agent_power(institutional), 
+            time_horizon(generational), 
+            exit_options(mobile), 
+            spatial_scope(local))).
+
+% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (PITON)
+% Extreme Theater Ratio (0.92) indicates a Piton of "epic" mummery.
+constraint_indexing:constraint_classification(ulysses_cyclops_1904, piton,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(global))).
+
+/* ==========================================================================
+   4. VALIDATION TESTS
+   ========================================================================== */
+
+:- begin_tests(ulysses_cyclops_1904_tests).
+
+test(perspectival_gap) :-
+    % Verify shift from Snare (Bloom) to Rope (Nationalists).
+    constraint_indexing:constraint_classification(ulysses_cyclops_1904, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(ulysses_cyclops_1904, rope, context(agent_power(institutional), _, _, _)).
+
+test(piton_theater_check) :-
+    % Piton classification requires theater_ratio >= 0.70.
+    domain_priors:theater_ratio(ulysses_cyclops_1904, TR),
+    TR >= 0.70.
+
+:- end_tests(ulysses_cyclops_1904_tests).
+
+/* ==========================================================================
+   5. GENERATIVE COMMENTARY
+   ========================================================================== */
+
+/**
+ * LOGIC RATIONALE:
+ * Leopold Bloom experiences the pub as a violent Snare—a site where his 
+ * identity extracts physical and social safety. The high Theater Ratio 
+ * (0.92) is the defining property of the "Cyclops" mode; the chapter is 
+ * interrupted by massive, parodic interpolations of legal, scientific, 
+ * and medieval styles that create a spectacular performance masking 
+ * the atrophied function of the drunken "heroes." The Citizen’s 
+ * biscuit tin assault is the final "Rope" of exclusionary 
+ * coordination that forces Bloom’s "Elijah-like" exit.
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+omega_variable(
+    omega_elijah_transfiguration,
+    "Is Bloom's exit a Rope of spiritual transcendence or a Snare of panicked flight?",
+    "Review of the 'great brightness' vs the 'furious driving' of the jarvey.",
+    "Transcendence confirms a Rope; flight hardens the Snare.",
+    confidence_without_resolution(medium)
+).
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+narrative_ontology:interval(ulysses_cyclops_1904, 0, 10).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Theater Ratio (Peaking during the 'Gigantism' lists and the final transfiguration)
+narrative_ontology:measurement(uc_tr_t0, ulysses_cyclops_1904, theater_ratio, 0, 0.70).
+narrative_ontology:measurement(uc_tr_t5, ulysses_cyclops_1904, theater_ratio, 5, 0.95).
+narrative_ontology:measurement(uc_tr_t10, ulysses_cyclops_1904, theater_ratio, 10, 0.92).
+
+% Extraction (Increasing as the nationalist rhetoric turns toward physical threat)
+narrative_ontology:measurement(uc_ex_t0, ulysses_cyclops_1904, base_extractiveness, 0, 0.40).
+narrative_ontology:measurement(uc_ex_t5, ulysses_cyclops_1904, base_extractiveness, 5, 0.50).
+narrative_ontology:measurement(uc_ex_t10, ulysses_cyclops_1904, base_extractiveness, 10, 0.54).
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */
+% ============================================================================
+% CONSTRAINT STORY: ulysses_nausicaa_1904
+% ============================================================================
+% Version: 3.4 (Deferential Realism Core)
+% Logic: 3.3 (Indexed Tuple P,T,E,S)
+% Generated: 2026-02-06
+% ============================================================================
+
+:- module(constraint_ulysses_nausicaa, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
+    constraint_indexing:constraint_classification/3.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ * * constraint_id: ulysses_nausicaa_1904
+ * human_readable: The Sentimental Snare (Sandymount Shore)
+ * domain: social/artistic/psychological
+ * * SUMMARY:
+ * Chapter 13 models the encounter between Gerty MacDowell and Leopold Bloom 
+ * on Sandymount Strand. For Gerty, the social requirement of "maidenly 
+ * grace" and romantic sentimentality functions as a Snare, extracting 
+ * her self-worth through cheap novelette ideals. For Bloom, the 
+ * scene is a Piton of voyeuristic mummery, ending with the mocking 
+ * "Cuckoo" of a clock that marks his cuckoldry.
+ * * KEY AGENTS:
+ * - Gerty MacDowell: Subject (Powerless) - Trapped in her "limp" and romantic "dream"[cite: 7013, 7015].
+ * - Leopold Bloom: Auditor (Analytical) - The "foreign gentleman" watching from the rocks[cite: 7013, 7015].
+ * - The Church: Beneficiary (Institutional) - The "Star of the Sea" providing a background of "pure radiance".
+ */
+
+/* ==========================================================================
+   2. BASE PROPERTIES (DOMAIN PRIORS)
+   ========================================================================== */
+
+% Numerical anchors for v3.4 thresholds
+domain_priors:base_extractiveness(ulysses_nausicaa_1904, 0.49). % High emotional extraction/delusion.
+domain_priors:suppression_score(ulysses_nausicaa_1904, 0.75).   % Social mores and Gerty's physical "secret".
+domain_priors:theater_ratio(ulysses_nausicaa_1904, 0.88).      % Peak sentimentality: "mysterious embrace" and "lovingly".
+
+% Primary keys for classification engine
+narrative_ontology:constraint_metric(ulysses_nausicaa_1904, extractiveness, 0.49).
+narrative_ontology:constraint_metric(ulysses_nausicaa_1904, suppression_requirement, 0.75).
+narrative_ontology:constraint_metric(ulysses_nausicaa_1904, theater_ratio, 0.88).
+
+% Structural Property Declarations
+narrative_ontology:constraint_beneficiary(ulysses_nausicaa_1904, sentimental_press). % Novelettes and magazines.
+narrative_ontology:constraint_victim(ulysses_nausicaa_1904, gerty_macdowell).        % The "girl friend" in the "favourite nook".
+domain_priors:requires_active_enforcement(ulysses_nausicaa_1904). % The "cuckoo" clock and social shame.
+
+/* ==========================================================================
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × π(P) × σ(S)
+   ========================================================================== */
+
+% PERSPECTIVE 1: GERTY MACDOWELL (SNARE)
+% Effective Extraction: 0.49 * 1.5 (powerless) * 0.8 (local) = 0.588.
+% Perceived as a "mysterious embrace" that is actually a trap of physical and social limitation.
+constraint_indexing:constraint_classification(ulysses_nausicaa_1904, snare, 
+    context(agent_power(powerless), 
+            time_horizon(biographical), 
+            exit_options(trapped), 
+            spatial_scope(local))).
+
+% PERSPECTIVE 2: THE CHURCH/ST. MARY'S (ROPE)
+% Effective Extraction: 0.49 * -0.2 (institutional) * 0.8 = -0.0784.
+% Viewed as the essential coordination of "the voice of prayer" and a "beacon" for man.
+constraint_indexing:constraint_classification(ulysses_nausicaa_1904, rope, 
+    context(agent_power(institutional), 
+            time_horizon(generational), 
+            exit_options(mobile), 
+            spatial_scope(local))).
+
+% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (PITON)
+% Extreme Theater Ratio (0.88) indicates a Piton of atrophied romantic function.
+constraint_indexing:constraint_classification(ulysses_nausicaa_1904, piton,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(global))).
+
+/* ==========================================================================
+   4. VALIDATION TESTS
+   ========================================================================== */
+
+:- begin_tests(ulysses_nausicaa_1904_tests).
+
+test(perspectival_gap) :-
+    % Verify the shift from Gerty's Snare to the Church's Rope.
+    constraint_indexing:constraint_classification(ulysses_nausicaa_1904, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(ulysses_nausicaa_1904, rope, context(agent_power(institutional), _, _, _)).
+
+test(piton_theater_validation) :-
+    % Piton classification requires theater_ratio >= 0.70.
+    domain_priors:theater_ratio(ulysses_nausicaa_1904, TR),
+    TR >= 0.70.
+
+:- end_tests(ulysses_nausicaa_1904_tests).
+
+/* ==========================================================================
+   5. GENERATIVE COMMENTARY
+   ========================================================================== */
+
+/**
+ * LOGIC RATIONALE:
+ * Gerty MacDowell experiences the shore as a Sentimental Snare—a site 
+ * where the "mysterious embrace" of the evening masks her social and physical 
+ * "trapped" status[cite: 7013, 7015]. The high Theater Ratio (0.88) is 
+ * driven by the first half of the chapter's "mummery" of flowery prose, which 
+ * mimics the novelettes Gerty reads. The final "Cuckoo" of the 
+ * clock  serves as the Piton's chime, signaling the atrophied 
+ * reality of Bloom's marriage and Gerty's romantic hopes.
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+omega_variable(
+    omega_sentimental_truth,
+    "Is Gerty's 'dream' a Rope for social hope or a Snare of self-deception?",
+    "Review of the 'foreign gentleman's' gaze vs her physical 'limp'.",
+    "Hope-coordination confirms a Rope; deception hardens the Snare.",
+    confidence_without_resolution(medium)
+).
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+narrative_ontology:interval(ulysses_nausicaa_1904, 0, 10).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Theater Ratio (Peaking during Gerty's internal monologue and the fireworks)
+narrative_ontology:measurement(un_tr_t0, ulysses_nausicaa_1904, theater_ratio, 0, 0.65).
+narrative_ontology:measurement(un_tr_t5, ulysses_nausicaa_1904, theater_ratio, 5, 0.90).
+narrative_ontology:measurement(un_tr_t10, ulysses_nausicaa_1904, theater_ratio, 10, 0.88).
+
+% Extraction (Increasing as the "sentimentality" gives way to Bloom's earthier reality)
+narrative_ontology:measurement(un_ex_t0, ulysses_nausicaa_1904, base_extractiveness, 0, 0.35).
+narrative_ontology:measurement(un_ex_t5, ulysses_nausicaa_1904, base_extractiveness, 5, 0.45).
+narrative_ontology:measurement(un_ex_t10, ulysses_nausicaa_1904, base_extractiveness, 10, 0.49).
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */
+% ============================================================================
+% CONSTRAINT STORY: ulysses_oxen_1904
+% ============================================================================
+% Version: 3.4 (Deferential Realism Core)
+% Logic: 3.3 (Indexed Tuple P,T,E,S)
+% Generated: 2026-02-06
+% ============================================================================
+
+:- module(constraint_ulysses_oxen, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
+    constraint_indexing:constraint_classification/3.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ * * constraint_id: ulysses_oxen_1904
+ * human_readable: The Gestation Mountain (Holles Street)
+ * domain: biological/linguistic/medical
+ * * SUMMARY:
+ * Chapter 14 models the "proliferent continuance" of life at the National 
+ * Maternity Hospital. The nine-month term 
+ * of gestation acts as an irreducible biological Mountain, while the 
+ * evolution of the English language—parodied from Anglo-Saxon to modern 
+ * slang—functions as a high-theater Piton of cultural history 
+ *.
+ * * KEY AGENTS:
+ * - Mina Purefoy: Subject (Powerless) - Enduring the "original" evil of 
+ * labor.
+ * - The Medical Institution: Beneficiary (Institutional) - Coordinating 
+ * the "tribute of its solicitude".
+ * - The Wombfruit: Auditor (Analytical) - The "bright one, light one" 
+ * moving toward birth.
+ */
+
+/* ==========================================================================
+   2. BASE PROPERTIES (DOMAIN PRIORS)
+   ========================================================================== */
+
+% Numerical anchors for v3.4 thresholds
+domain_priors:base_extractiveness(ulysses_oxen_1904, 0.55). % High physical and spiritual labor.
+domain_priors:suppression_score(ulysses_oxen_1904, 0.95).   % Biological necessity of the term.
+domain_priors:theater_ratio(ulysses_oxen_1904, 0.98).      % Peak linguistic mummery.
+
+% Primary keys for classification engine
+narrative_ontology:constraint_metric(ulysses_oxen_1904, extractiveness, 0.55).
+narrative_ontology:constraint_metric(ulysses_oxen_1904, suppression_requirement, 0.95).
+narrative_ontology:constraint_metric(ulysses_oxen_1904, theater_ratio, 0.98).
+
+% Structural Property Declarations
+narrative_ontology:constraint_beneficiary(ulysses_oxen_1904, biological_continuance).
+narrative_ontology:constraint_victim(ulysses_oxen_1904, mina_purefoy).
+domain_priors:requires_active_enforcement(ulysses_oxen_1904). % The "Horhorn" quickening.
+
+/* ==========================================================================
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × π(P) × σ(S)
+   ========================================================================== */
+
+% PERSPECTIVE 1: THE LABORING MOTHER (SNARE)
+% Effective Extraction: 0.55 * 1.5 (powerless) * 0.8 (local) = 0.66.
+% Perceived as a "lutulent reality" of pain and "downwardtending" force 
+%.
+constraint_indexing:constraint_classification(ulysses_oxen_1904, snare, 
+    context(agent_power(powerless), 
+            time_horizon(biographical), 
+            exit_options(trapped), 
+            spatial_scope(local))).
+
+% PERSPECTIVE 2: THE BIOLOGICAL LAW (MOUNTAIN)
+% Effective Extraction: 0.55 * -0.2 (institutional) * 1.0 = -0.11.
+% The "omnipollent nature’s incorrupted benefaction" functions as a 
+% structural floor.
+constraint_indexing:constraint_classification(ulysses_oxen_1904, mountain, 
+    context(agent_power(institutional), 
+            time_horizon(civilizational), 
+            exit_options(mobile), 
+            spatial_scope(universal))).
+
+% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (PITON)
+% Extreme Theater Ratio (0.98) indicates a Piton of "exterior splendour" 
+% masking "lutulent reality".
+constraint_indexing:constraint_classification(ulysses_oxen_1904, piton,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(global))).
+
+/* ==========================================================================
+   4. VALIDATION TESTS
+   ========================================================================== */
+
+:- begin_tests(ulysses_oxen_1904_tests).
+
+test(perspectival_gap) :-
+    % Verify shift from Snare (Mina) to Mountain (Biological Law).
+    constraint_indexing:constraint_classification(ulysses_oxen_1904, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(ulysses_oxen_1904, mountain, context(agent_power(institutional), _, _, _)).
+
+test(piton_theater_check) :-
+    % Piton classification requires theater_ratio >= 0.70.
+    domain_priors:theater_ratio(ulysses_oxen_1904, TR),
+    TR >= 0.70.
+
+:- end_tests(ulysses_oxen_1904_tests).
+
+/* ==========================================================================
+   5. GENERATIVE COMMENTARY
+   ========================================================================== */
+
+/**
+ * LOGIC RATIONALE:
+ * The "Oxen of the Sun" models the intersection of biological and 
+ * linguistic evolution. While gestation is a Mountain—an irreducible 
+ * "Fixed Point" of coordination for the species—the chapter's parodic 
+ * style creates a peak Theater Ratio (0.98). This "mummery" of 
+ * prose masks the "original evil" of physical pain, acting as a 
+ * cultural Piton where the function of language is atrophied 
+ * through imitation.
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+omega_variable(
+    omega_linguistic_gestation,
+    "Is the evolution of the English language a Rope for human sapience or a Snare of historical repetition?",
+    "Review of the 'lutulent reality' vs the 'exterior splendour' of the parodies.",
+    "Sapience confirms a Rope; 'downwardtending' repetition hardens the Snare.",
+    confidence_without_resolution(medium)
+).
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+narrative_ontology:interval(ulysses_oxen_1904, 0, 10).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Theater Ratio (Peaking as the parodies move from medieval to 19th-century styles)
+narrative_ontology:measurement(uo_tr_t0, ulysses_oxen_1904, theater_ratio, 0, 0.85).
+narrative_ontology:measurement(uo_tr_t5, ulysses_oxen_1904, theater_ratio, 5, 0.99).
+narrative_ontology:measurement(uo_tr_t10, ulysses_oxen_1904, theater_ratio, 10, 0.98).
+
+% Extraction (Accumulating with the biological progress of labor and the drunken revelry)
+narrative_ontology:measurement(uo_ex_t0, ulysses_oxen_1904, base_extractiveness, 0, 0.45).
+narrative_ontology:measurement(uo_ex_t5, ulysses_oxen_1904, base_extractiveness, 5, 0.52).
+narrative_ontology:measurement(uo_ex_t10, ulysses_oxen_1904, base_extractiveness, 10, 0.55).
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */
+% ============================================================================
+% CONSTRAINT STORY: ulysses_circe_1904
+% ============================================================================
+% Version: 3.4 (Deferential Realism Core)
+% Logic: 3.3 (Indexed Tuple P,T,E,S)
+% Generated: 2026-02-06
+% ============================================================================
+
+:- module(constraint_ulysses_circe, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
+    constraint_indexing:constraint_classification/3.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ * * constraint_id: ulysses_circe_1904
+ * human_readable: The Nighttown Phantasmagoria (Circe)
+ * domain: social/psychological/religious
+ * * SUMMARY:
+ * Chapter 15 models the "Nighttown" red-light district as a site of extreme 
+ * hallucinatory extraction. The environment functions as a predatory Snare 
+ * where the guilt and desires of Bloom and Stephen are externalized into a 
+ * "mummery" of shifting forms. Amidst 
+ * this theater, Bloom’s vision of his dead son, Rudy, acts as an 
+ * irreducible psychological Mountain.
+ * * KEY AGENTS:
+ * - Leopold Bloom: Subject (Powerless) - Standing "on guard" as a 
+ * "secret master".
+ * - Stephen Dedalus: Subject (Powerless) - Trembling at his "soul's cry" 
+ *.
+ * - The Nighttown Inhabitants: Beneficiary (Institutional) - Managing the 
+ * "grimy houses" and "ice gondolas".
+ */
+
+/* ==========================================================================
+   2. BASE PROPERTIES (DOMAIN PRIORS)
+   ========================================================================== */
+
+% Numerical anchors for v3.4 thresholds
+domain_priors:base_extractiveness(ulysses_circe_1904, 0.58). % Extreme spiritual and moral extraction.
+domain_priors:suppression_score(ulysses_circe_1904, 0.90).   % The hallucinatory "entombing" of the subjects.
+domain_priors:theater_ratio(ulysses_circe_1904, 0.99).      % Maximal mummery: the entire chapter is a play script.
+
+% Primary keys for classification engine
+narrative_ontology:constraint_metric(ulysses_circe_1904, extractiveness, 0.58).
+narrative_ontology:constraint_metric(ulysses_circe_1904, suppression_requirement, 0.90).
+narrative_ontology:constraint_metric(ulysses_circe_1904, theater_ratio, 0.99).
+
+% Structural Property Declarations
+narrative_ontology:constraint_beneficiary(ulysses_circe_1904, nighttown_economy). % Prostitution and "ice gondolas".
+narrative_ontology:constraint_victim(ulysses_circe_1904, leopold_bloom).          % Subject to hallucinations and mockery.
+domain_priors:requires_active_enforcement(ulysses_circe_1904). % Whistles, calls, and answers.
+
+/* ==========================================================================
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × π(P) × σ(S)
+   ========================================================================== */
+
+% PERSPECTIVE 1: THE HALLUCINATING SUBJECT (SNARE)
+% Effective Extraction: 0.58 * 1.5 (powerless) * 0.8 (local) = 0.696.
+% Perceived as a trap of "skeleton tracks" and "danger signals".
+constraint_indexing:constraint_classification(ulysses_circe_1904, snare, 
+    context(agent_power(powerless), 
+            time_horizon(biographical), 
+            exit_options(trapped), 
+            spatial_scope(local))).
+
+% PERSPECTIVE 2: THE PARENTAL BOND (MOUNTAIN)
+% Effective Extraction: 0.58 * -0.2 (institutional/fixed) * 1.2 = -0.139.
+% χ < 0.05 check: The vision of Rudy is an irreducible fixed point of 
+% the psychological landscape.
+constraint_indexing:constraint_classification(ulysses_circe_1904, mountain, 
+    context(agent_power(institutional), 
+            time_horizon(civilizational), 
+            exit_options(mobile), 
+            spatial_scope(universal))).
+
+% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (PITON)
+% Extreme Theater Ratio (0.99) indicates a Piton of maximal mummery 
+% and atrophied narrative reality.
+constraint_indexing:constraint_classification(ulysses_circe_1904, piton,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(global))).
+
+/* ==========================================================================
+   4. VALIDATION TESTS
+   ========================================================================== */
+
+:- begin_tests(ulysses_circe_1904_tests).
+
+test(perspectival_gap) :-
+    % Verify shift from the Snare of the district to the Mountain of Rudy.
+    constraint_indexing:constraint_classification(ulysses_circe_1904, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(ulysses_circe_1904, mountain, context(agent_power(institutional), _, _, _)).
+
+test(piton_theater_validation) :-
+    % Piton classification requires theater_ratio >= 0.70.
+    domain_priors:theater_ratio(ulysses_circe_1904, TR),
+    TR >= 0.70.
+
+:- end_tests(ulysses_circe_1904_tests).
+
+/* ==========================================================================
+   5. GENERATIVE COMMENTARY
+   ========================================================================== */
+
+/**
+ * LOGIC RATIONALE:
+ * The "Circe" chapter represents the ultimate "Theater" of the novel. 
+ * While the setting is a social Snare of predatory extraction, the 
+ * hallucinatory style creates a near-total Theater Ratio (0.99), 
+ * rendering the narrative a Piton—a structure where direct function 
+ * is replaced by "mummery". 
+ * MANDATROPHY ANALYSIS:
+ * The "Rudy" vision at the end resolves the Mandatrophy of the 
+ * chapter; the chaos of Nighttown collapses into the irreducible 
+ * Mountain of Bloom's paternal love and grief.
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+omega_variable(
+    omega_nighttown_reality,
+    "Is the phantasmagoria a Rope for psychological catharsis or a Snare for the soul?",
+    "Review of the 'Rudy' vision vs the 'ghoul' hallucinations.",
+    "Catharsis confirms a Rope; persistent entrapment hardens the Snare.",
+    confidence_without_resolution(medium)
+).
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+narrative_ontology:interval(ulysses_circe_1904, 0, 10).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Theater Ratio (Escalating as the hallucinations become more complex and surreal)
+narrative_ontology:measurement(uc_tr_t0, ulysses_circe_1904, theater_ratio, 0, 0.85).
+narrative_ontology:measurement(uc_tr_t5, ulysses_circe_1904, theater_ratio, 5, 0.95).
+narrative_ontology:measurement(uc_tr_t10, ulysses_circe_1904, theater_ratio, 10, 0.99).
+
+% Extraction (Accumulating with the subjects' fatigue, drunkenness, and spiritual labor)
+narrative_ontology:measurement(uc_ex_t0, ulysses_circe_1904, base_extractiveness, 0, 0.48).
+narrative_ontology:measurement(uc_ex_t5, ulysses_circe_1904, base_extractiveness, 5, 0.55).
+narrative_ontology:measurement(uc_ex_t10, ulysses_circe_1904, base_extractiveness, 10, 0.58).
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */
+% ============================================================================
+% CONSTRAINT STORY: ulysses_eumaeus_1904
+% ============================================================================
+% Version: 3.4 (Deferential Realism Core)
+% Logic: 3.3 (Indexed Tuple P,T,E,S)
+% Generated: 2026-02-06
+% ============================================================================
+
+:- module(constraint_ulysses_eumaeus, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
+    constraint_indexing:constraint_classification/3.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ * * constraint_id: ulysses_eumaeus_1904
+ * human_readable: The Exhausted Coordination (Cabman's Shelter)
+ * domain: social/economic/linguistic
+ * * SUMMARY:
+ * Leopold Bloom and Stephen Dedalus seek refuge in a cabman's shelter near 
+ * Butt bridge. The social environment 
+ * functions as a Rope of "orthodox Samaritan fashion" coordination, 
+ * providing beverage and rest for the "e.d.ed" Stephen. 
+ * However, the narrative style acts as a Piton of atrophied function, 
+ * where clichés and circumlocution create an immense Theater Ratio.
+ * * KEY AGENTS:
+ * - Stephen Dedalus: Subject (Powerless) - "Mind... a bit unsteady" and 
+ * physically exhausted.
+ * - Leopold Bloom: Beneficiary (Institutional) - Coordinating the "conveyance" 
+ * and "propriety" of the shelter.
+ * - The Shelter Inhabitants: Auditor (Analytical) - Watching the two 
+ * figures "both black" walk toward the bridge.
+ */
+
+/* ==========================================================================
+   2. BASE PROPERTIES (DOMAIN PRIORS)
+   ========================================================================== */
+
+% Numerical anchors for v3.4 thresholds
+domain_priors:base_extractiveness(ulysses_eumaeus_1904, 0.47). % High due to extreme fatigue and social "rub".
+domain_priors:suppression_score(ulysses_eumaeus_1904, 0.70).   % The inertia of the late night hour.
+domain_priors:theater_ratio(ulysses_eumaeus_1904, 0.85).      % High circumlocution and "orthodoxy".
+
+% Primary keys for classification engine
+narrative_ontology:constraint_metric(ulysses_eumaeus_1904, extractiveness, 0.47).
+narrative_ontology:constraint_metric(ulysses_eumaeus_1904, suppression_requirement, 0.70).
+narrative_ontology:constraint_metric(ulysses_eumaeus_1904, theater_ratio, 0.85).
+
+% Structural Property Declarations
+narrative_ontology:constraint_beneficiary(ulysses_eumaeus_1904, social_charity).
+narrative_ontology:constraint_victim(ulysses_eumaeus_1904, stephen_dedalus).
+domain_priors:requires_active_enforcement(ulysses_eumaeus_1904). % Bloom's "duty" to take measures.
+
+/* ==========================================================================
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × π(P) × σ(S)
+   ========================================================================== */
+
+% PERSPECTIVE 1: STEPHEN DEDALUS (SNARE)
+% Effective Extraction: 0.47 * 1.5 (powerless) * 0.8 (local) = 0.564.
+% Perceived as a trap of "unsteady" mind and the "rub" of finding beverage.
+constraint_indexing:constraint_classification(ulysses_eumaeus_1904, snare, 
+    context(agent_power(powerless), 
+            time_horizon(biographical), 
+            exit_options(trapped), 
+            spatial_scope(local))).
+
+% PERSPECTIVE 2: LEOPOLD BLOOM (ROPE)
+% Effective Extraction: 0.47 * -0.2 (institutional) * 0.8 = -0.0752.
+% Viewed as the essential coordination of "suitable ways and means".
+constraint_indexing:constraint_classification(ulysses_eumaeus_1904, rope, 
+    context(agent_power(institutional), 
+            time_horizon(generational), 
+            exit_options(mobile), 
+            spatial_scope(local))).
+
+% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (PITON)
+% Extreme Theater Ratio (0.85) indicates a Piton of "preparatory" mummery.
+constraint_indexing:constraint_classification(ulysses_eumaeus_1904, piton,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(global))).
+
+/* ==========================================================================
+   4. VALIDATION TESTS
+   ========================================================================== */
+
+:- begin_tests(ulysses_eumaeus_1904_tests).
+
+test(perspectival_gap) :-
+    % Verify shift from the Snare of Stephen's fatigue to the Rope of Bloom's coordination.
+    constraint_indexing:constraint_classification(ulysses_eumaeus_1904, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(ulysses_eumaeus_1904, rope, context(agent_power(institutional), _, _, _)).
+
+test(piton_theater_check) :-
+    % Piton classification requires theater_ratio >= 0.70.
+    domain_priors:theater_ratio(ulysses_eumaeus_1904, TR),
+    TR >= 0.70.
+
+:- end_tests(ulysses_eumaeus_1904_tests).
+
+/* ==========================================================================
+   5. GENERATIVE COMMENTARY
+   ========================================================================== */
+
+/**
+ * LOGIC RATIONALE:
+ * The "Eumaeus" chapter models the fatigue of late-night coordination. 
+ * While the cabman's shelter serves as a Rope—a "Samaritan" structure 
+ * providing safety—Stephen perceives it as a Snare of spiritual and physical 
+ * exhaustion. The high Theater Ratio (0.85) 
+ * is the chapter's defining feature; the circumlocutory style acts as a 
+ * Piton, where the function of direct storytelling is atrophied into a 
+ * "mummery" of clichés and "orthodox" preliminaries.
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+omega_variable(
+    omega_samaritan_intent,
+    "Is Bloom's 'orthodox Samaritan' coordination a Rope for recovery or a Snare of patronization?",
+    "Analysis of the 'expedient' vs the 'unsteady' response of the subject.",
+    "Recovery confirms a Rope; patronization hardens the Snare.",
+    confidence_without_resolution(medium)
+).
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+narrative_ontology:interval(ulysses_eumaeus_1904, 0, 10).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Theater Ratio (Peaking as the circumlocutory style intensifies through the walk)
+narrative_ontology:measurement(ue_tr_t0, ulysses_eumaeus_1904, theater_ratio, 0, 0.70).
+narrative_ontology:measurement(ue_tr_t5, ulysses_eumaeus_1904, theater_ratio, 5, 0.88).
+narrative_ontology:measurement(ue_tr_t10, ulysses_eumaeus_1904, theater_ratio, 10, 0.85).
+
+% Extraction (Accumulating with the subjects' profound fatigue and the "rub" of the hour)
+narrative_ontology:measurement(ue_ex_t0, ulysses_eumaeus_1904, base_extractiveness, 0, 0.38).
+narrative_ontology:measurement(ue_ex_t5, ulysses_eumaeus_1904, base_extractiveness, 5, 0.44).
+narrative_ontology:measurement(ue_ex_t10, ulysses_eumaeus_1904, base_extractiveness, 10, 0.47).
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */
+% ============================================================================
+% CONSTRAINT STORY: ulysses_ithaca_1904
+% ============================================================================
+% Version: 3.4 (Deferential Realism Core)
+% Logic: 3.3 (Indexed Tuple P,T,E,S)
+% Generated: 2026-02-06
+% ============================================================================
+
+:- module(constraint_ulysses_ithaca, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
+    constraint_indexing:constraint_classification/3.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ * * constraint_id: ulysses_ithaca_1904
+ * human_readable: The Mathematical Catechism (7 Eccles Street)
+ * domain: technological/scientific/social
+ * * SUMMARY:
+ * Chapter 17 models the return of Bloom and Stephen to a state of "rest" 
+ * through a cold, scientific catechism. 
+ * Human experience is reduced to "parallel courses" and the "perpetual 
+ * motion of the earth," creating an immutable biological and physical 
+ * Mountain. The domestic coordination 
+ * of the "duumvirate" functions as a Rope, while the clinical style 
+ * acts as a Piton of atrophied emotion.
+ * * KEY AGENTS:
+ * - Stephen Dedalus: Subject (Powerless) - The "childman weary".
+ * - Leopold Bloom: Beneficiary (Institutional) - Coordinating the "itinerary" 
+ * and "budget".
+ * - The Physical Universe: Auditor (Analytical) - Enforcing "everchanging 
+ * tracks of neverchanging space".
+ */
+
+/* ==========================================================================
+   2. BASE PROPERTIES (DOMAIN PRIORS)
+   ========================================================================== */
+
+% Numerical anchors for v3.4 thresholds
+domain_priors:base_extractiveness(ulysses_ithaca_1904, 0.46). % High due to the "weary" labor of the long day.
+domain_priors:suppression_score(ulysses_ithaca_1904, 0.95).   % Determinism of physics and geometry.
+domain_priors:theater_ratio(ulysses_ithaca_1904, 0.95).      % Maximal "catechism" theater.
+
+% Primary keys for classification engine
+narrative_ontology:constraint_metric(ulysses_ithaca_1904, extractiveness, 0.46).
+narrative_ontology:constraint_metric(ulysses_ithaca_1904, suppression_requirement, 0.95).
+narrative_ontology:constraint_metric(ulysses_ithaca_1904, theater_ratio, 0.95).
+
+% Structural Property Declarations
+narrative_ontology:constraint_beneficiary(ulysses_ithaca_1904, scientific_determinism).
+narrative_ontology:constraint_victim(ulysses_ithaca_1904, human_emotion).
+domain_priors:requires_active_enforcement(ulysses_ithaca_1904). % The "proper perpetual motion of the earth".
+
+/* ==========================================================================
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × π(P) × σ(S)
+   ========================================================================== */
+
+% PERSPECTIVE 1: THE WEARY SUBJECT (SNARE)
+% Effective Extraction: 0.46 * 1.5 (powerless) * 1.2 (global/universal) = 0.828.
+% Perceived as a trap of "everchanging tracks" and "neverchanging space".
+constraint_indexing:constraint_classification(ulysses_ithaca_1904, snare, 
+    context(agent_power(powerless), 
+            time_horizon(biographical), 
+            exit_options(trapped), 
+            spatial_scope(global))).
+
+% PERSPECTIVE 2: THE DOMESTIC DUUMVIRATE (ROPE)
+% Effective Extraction: 0.46 * -0.2 (institutional) * 1.2 = -0.11.
+% Viewed as the essential "united" coordination of "parallel courses".
+constraint_indexing:constraint_classification(ulysses_ithaca_1904, rope, 
+    context(agent_power(institutional), 
+            time_horizon(generational), 
+            exit_options(mobile), 
+            spatial_scope(global))).
+
+% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (PITON)
+% Extreme Theater Ratio (0.95) indicates a Piton of "mathematical" mummery.
+constraint_indexing:constraint_classification(ulysses_ithaca_1904, piton,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).
+
+/* ==========================================================================
+   4. VALIDATION TESTS
+   ========================================================================== */
+
+:- begin_tests(ulysses_ithaca_1904_tests).
+
+test(perspectival_gap) :-
+    % Verify shift from the Snare of the weary subject to the Rope of domestic rest.
+    constraint_indexing:constraint_classification(ulysses_ithaca_1904, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(ulysses_ithaca_1904, rope, context(agent_power(institutional), _, _, _)).
+
+test(piton_theater_validation) :-
+    % Piton classification requires theater_ratio >= 0.70.
+    domain_priors:theater_ratio(ulysses_ithaca_1904, TR),
+    TR >= 0.70.
+
+:- end_tests(ulysses_ithaca_1904_tests).
+
+/* ==========================================================================
+   5. GENERATIVE COMMENTARY
+   ========================================================================== */
+
+/**
+ * LOGIC RATIONALE:
+ * The "Ithaca" chapter represents the final "Rest" of the novel. While 
+ * the setting is a domestic Rope—a site of shared "parallel courses" and 
+ * cocoa—the clinical, catechistic style creates a near-total Theater 
+ * Ratio (0.95). This "mummery" of 
+ * mathematical precision masks the atrophied function of human narrative, 
+ * rendering the chapter a Piton for the analytical observer.
+ * MANDATROPHY ANALYSIS:
+ * The "state of rest" at the end resolves the Mandatrophy of the long day; 
+ * the characters collapse into the irreducible Mountain of the earth's 
+ * "proper perpetual motion".
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+omega_variable(
+    omega_ithacan_rest,
+    "Is the 'state of rest' a Rope for recovery or a Snare of spiritual exhaustion?",
+    "Review of the 'manchild in the womb' vs 'childman weary'.",
+    "Recovery confirms a Rope; persistent inertia hardens the Snare.",
+    confidence_without_resolution(medium)
+).
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+% Required for external script parsing
+narrative_ontology:interval(ulysses_ithaca_1904, 0, 10).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Theater Ratio (Escalating as the questions and answers become more abstract and clinical)
+narrative_ontology:measurement(ui_tr_t0, ulysses_ithaca_1904, theater_ratio, 0, 0.70).
+narrative_ontology:measurement(ui_tr_t5, ulysses_ithaca_1904, theater_ratio, 5, 0.85).
+narrative_ontology:measurement(ui_tr_t10, ulysses_ithaca_1904, theater_ratio, 10, 0.95).
+
+% Extraction (Accumulating with the profound weariness and the "perpetual motion" of the day)
+narrative_ontology:measurement(ui_ex_t0, ulysses_ithaca_1904, base_extractiveness, 0, 0.35).
+narrative_ontology:measurement(ui_ex_t5, ulysses_ithaca_1904, base_extractiveness, 5, 0.42).
+narrative_ontology:measurement(ui_ex_t10, ulysses_ithaca_1904, base_extractiveness, 10, 0.46).
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */
+% ============================================================================
+% CONSTRAINT STORY: ulysses_penelope_1904
+% ============================================================================
+% Version: 3.4 (Deferential Realism Core)
+% Logic: 3.3 (Indexed Tuple P,T,E,S)
+% Generated: 2026-02-06
+% ============================================================================
+
+:- module(constraint_ulysses_penelope, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
+    constraint_indexing:constraint_classification/3.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ * * constraint_id: ulysses_penelope_1904
+ * human_readable: The Penelopean Affirmation (7 Eccles Street)
+ * domain: social/psychological/biological
+ * * SUMMARY:
+ * Chapter 18 models the "stream of consciousness" of Molly Bloom as she lies 
+ * in bed, unpunctuated and flowing toward a final "Yes". 
+ * While her domestic labor and Leopold’s requests act as a Snare, her 
+ * connection to the "flower of the mountain" and the earth’s fertility 
+ * functions as an irreducible biological Mountain.
+ * * KEY AGENTS:
+ * - Molly Bloom: Subject (Powerless) - Lying in bed, "thinking of so many 
+ * things".
+ * - Leopold Bloom: Beneficiary (Institutional) - Asking for "breakfast in 
+ * bed with a couple of eggs".
+ * - The Universe (Gea-Tellus): Auditor (Analytical) - Witnessing the 
+ * "yes I said yes I will Yes".
+ */
+
+/* ==========================================================================
+   2. BASE PROPERTIES (DOMAIN PRIORS)
+   ========================================================================== */
+
+% Numerical anchors for v3.4 thresholds
+domain_priors:base_extractiveness(ulysses_penelope_1904, 0.50). % High emotional and physical labor of "yes".
+domain_priors:suppression_score(ulysses_penelope_1904, 0.96).   % The ineluctable flow of the monologue.
+domain_priors:theater_ratio(ulysses_penelope_1904, 0.97).      % Peak linguistic mummery: no punctuation.
+
+% Primary keys for classification engine
+narrative_ontology:constraint_metric(ulysses_penelope_1904, extractiveness, 0.50).
+narrative_ontology:constraint_metric(ulysses_penelope_1904, suppression_requirement, 0.96).
+narrative_ontology:constraint_metric(ulysses_penelope_1904, theater_ratio, 0.97).
+
+% Structural Property Declarations
+narrative_ontology:constraint_beneficiary(ulysses_penelope_1904, biological_affirmation).
+narrative_ontology:constraint_victim(ulysses_penelope_1904, molly_bloom).
+domain_priors:requires_active_enforcement(ulysses_penelope_1904). % The "throb" and "mad" heart.
+
+/* ==========================================================================
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × π(P) × σ(S)
+   ========================================================================== */
+
+% PERSPECTIVE 1: THE DOMESTIC SUBJECT (SNARE)
+% Effective Extraction: 0.50 * 1.5 (powerless) * 0.8 (local) = 0.60.
+% Perceived as a trap of "breakfast in bed" and "sick voice" pretenses 
+%.
+constraint_indexing:constraint_classification(ulysses_penelope_1904, snare, 
+    context(agent_power(powerless), 
+            time_horizon(biographical), 
+            exit_options(trapped), 
+            spatial_scope(local))).
+
+% PERSPECTIVE 2: GEA-TELLUS (MOUNTAIN)
+% Effective Extraction: 0.50 * -0.2 (institutional) * 1.2 (universal) = -0.12.
+% χ < 0.05 check: The "flower of the mountain" is a fixed topological floor 
+%.
+constraint_indexing:constraint_classification(ulysses_penelope_1904, mountain, 
+    context(agent_power(institutional), 
+            time_horizon(civilizational), 
+            exit_options(mobile), 
+            spatial_scope(universal))).
+
+% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (PITON)
+% Extreme Theater Ratio (0.97) indicates a Piton of "unpunctuated" mummery 
+%.
+constraint_indexing:constraint_classification(ulysses_penelope_1904, piton,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(global))).
+
+/* ==========================================================================
+   4. VALIDATION TESTS
+   ========================================================================== */
+
+:- begin_tests(ulysses_penelope_1904_tests).
+
+test(perspectival_gap) :-
+    % Verify shift from the Snare of domestic labor to the Mountain of "Yes".
+    constraint_indexing:constraint_classification(ulysses_penelope_1904, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(ulysses_penelope_1904, mountain, context(agent_power(institutional), _, _, _)).
+
+test(piton_theater_check) :-
+    % Piton classification requires theater_ratio >= 0.70.
+    domain_priors:theater_ratio(ulysses_penelope_1904, TR),
+    TR >= 0.70.
+
+:- end_tests(ulysses_penelope_1904_tests).
+
+/* ==========================================================================
+   5. GENERATIVE COMMENTARY
+   ========================================================================== */
+
+/**
+ * LOGIC RATIONALE:
+ * The "Penelope" chapter models the final "Affirmation" of the novel. 
+ * While Molly's reality is a domestic Snare—extracting her labor and 
+ * patience—her interiority creates a peak Theater Ratio (0.97) through its 
+ * unpunctuated stream. This stylistic 
+ * "mummery" masks the atrophied function of linear narrative, rendering the 
+ * chapter a Piton for the observer.
+ * MANDATROPHY ANALYSIS:
+ * The final "Yes" resolves the Mandatrophy of the day; all "short circuits" 
+ * collapse into the irreducible Mountain of life’s "crimson" and 
+ * "glorious" suns.
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+omega_variable(
+    omega_penelopean_affirmation,
+    "Is the 'Yes' a Rope for human connection or a Snare of cyclical repetition?",
+    "Review of the 'flower of the mountain' vs the 'breakfast in bed' labor.",
+    "Affirmation confirms a Rope; repetition hardens the Snare.",
+    confidence_without_resolution(medium)
+).
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+narrative_ontology:interval(ulysses_penelope_1904, 0, 10).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Theater Ratio (Peaking as the stream of consciousness reaches its final unpunctuated flow)
+narrative_ontology:measurement(up_tr_t0, ulysses_penelope_1904, theater_ratio, 0, 0.80).
+narrative_ontology:measurement(up_tr_t5, ulysses_penelope_1904, theater_ratio, 5, 0.95).
+narrative_ontology:measurement(up_tr_t10, ulysses_penelope_1904, theater_ratio, 10, 0.97).
+
+% Extraction (Accumulating with Molly's long night of memory and Bloom's requests)
+narrative_ontology:measurement(up_ex_t0, ulysses_penelope_1904, base_extractiveness, 0, 0.42).
+narrative_ontology:measurement(up_ex_t5, ulysses_penelope_1904, base_extractiveness, 5, 0.48).
+narrative_ontology:measurement(up_ex_t10, ulysses_penelope_1904, base_extractiveness, 10, 0.50).
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */

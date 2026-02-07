@@ -4,13 +4,13 @@
 
 :- use_module(narrative_ontology).
 :- use_module(structural_signatures).
-:- use_module(v3_1_config).
+:- use_module(config).
 
 %% map_custom_pillar(+Constraint, +CustomType, -StandardType)
 %  Maps non-standard terminology to v3.1 standard pillars based on metrics.
 map_custom_pillar(_C, CustomType, StandardType) :-
     % If already standard, do nothing
-    member(CustomType, [mountain, rope, snare, piton]),
+    member(CustomType, [mountain, rope, tangled_rope, snare, scaffold, piton]),
     StandardType = CustomType, !.
 
 map_custom_pillar(C, _CustomType, StandardType) :-

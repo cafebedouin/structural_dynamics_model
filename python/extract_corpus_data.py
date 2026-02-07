@@ -109,6 +109,24 @@ class CorpusExtractor:
         with open(self.output_txt_path, 'r', encoding='utf-8') as f:
             content = f.read()
 
+        # Build a mapping from internal constraint IDs (from interval/3) to
+        # filename-based IDs.  output.txt has lines like:
+        #   [7] EXECUTING: testsets/continuum_hypothesis_2026.pl
+        #   ...
+        #   Constraint: ch_undecidability_2026
+        # We use the filename stem as the canonical ID to avoid double-counting.
+        internal_to_filename = {}
+        current_filename_id = None
+        for line in content.splitlines():
+            exec_match = re.search(r'EXECUTING:\s+testsets/(.+?)\.pl', line)
+            if exec_match:
+                current_filename_id = exec_match.group(1)
+            constraint_match = re.search(r'^Constraint:\s+(\w+)', line)
+            if constraint_match and current_filename_id:
+                internal_id = constraint_match.group(1)
+                if internal_id != current_filename_id:
+                    internal_to_filename[internal_id] = current_filename_id
+
         # Split into constraint blocks
         # Pattern: "Constraint: {id}" starts a block
         constraint_blocks = re.split(r'(?=Constraint:\s+\w+)', content)
@@ -122,7 +140,9 @@ class CorpusExtractor:
             if not id_match:
                 continue
 
-            constraint_id = id_match.group(1)
+            internal_id = id_match.group(1)
+            # Use filename-based ID as canonical key when available
+            constraint_id = internal_to_filename.get(internal_id, internal_id)
 
             # Get or create constraint data
             if constraint_id not in self.constraints:
@@ -130,9 +150,11 @@ class CorpusExtractor:
 
             constraint = self.constraints[constraint_id]
 
-            # Extract claimed type
+            # Extract claimed type (first encountered wins — the file's
+            # declared type takes priority over bridge-derived types from
+            # internal/interval IDs that map to the same canonical ID)
             type_match = re.search(r'Claimed Type:\s+(\w+)', block)
-            if type_match:
+            if type_match and not constraint.claimed_type:
                 constraint.claimed_type = type_match.group(1)
 
             # Extract perspectives/classifications
@@ -287,8 +309,10 @@ class CorpusExtractor:
 
             # Extract classifications
             # Pattern: constraint_classification(id, type, context(...))
+            # Only match valid type atoms (lowercase) — excludes Prolog variables
+            # like Type1, T1, etc. that appear in test blocks
             for class_match in re.finditer(
-                r'constraint_classification\s*\(\s*[^,]+,\s*(\w+),\s*context\(([^)]+)\)',
+                r'constraint_classification\s*\(\s*[^,]+,\s*(mountain|rope|tangled_rope|snare|scaffold|piton),\s*context\(([^)]+)\)',
                 content,
                 re.DOTALL
             ):

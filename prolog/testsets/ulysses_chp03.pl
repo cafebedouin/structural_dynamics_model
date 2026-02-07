@@ -1,22 +1,29 @@
 % ============================================================================
-% CONSTRAINT STORY: protean_signatures_1904
+% CONSTRAINT STORY: ulysses_proteus_1904
 % ============================================================================
-% Generated: 2026-01-19
-% Model: Gemini 2.0 Flash
-% Source: James Joyce, Ulysses, Chapter 3 (Proteus)
+% Version: 3.4 (Deferential Realism Core)
+% Logic: 3.3 (Indexed Tuple P,T,E,S)
+% Generated: 2026-02-06
 % ============================================================================
 
-:- module(constraint_protean_signatures_1904, []).
+:- module(constraint_ulysses_proteus, []).
 
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
 
 % --- Namespace Hooks (Required for loading) ---
-:- multifile 
+:- multifile
     domain_priors:base_extractiveness/2,
     domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
     domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -25,151 +32,137 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: protean_signatures_1904
- * human_readable: The Ineluctable Modality (Sensory Trap)
- * domain: philosophical/perceptual/social
- * temporal_scope: June 16, 1904 (11:00 AM)
- * spatial_scope: Sandymount Strand, Dublin
+ * * constraint_id: ulysses_proteus_1904
+ * human_readable: The Ineluctable Modality (Sandymount Strand)
+ * domain: philosophical/social/technological
  * * SUMMARY:
- * Stephen Dedalus confronts the "ineluctable modality of the visible" and 
- * audible—the signatures of all things he is here to read. 
- * This constraint represents the physical and metaphysical limits of perception 
- * that extract Stephen's intellectual energy as he attempts to "shut your 
- * eyes and see".
+ * Stephen Dedalus navigates Sandymount Strand, bound by the "ineluctable 
+ * modality of the visible". This perceptual Mountain forces him 
+ * to read the "signatures of all things". For Stephen, the 
+ * experience is a Snare of internal brooding, where memories of Paris and 
+ * family decay act as "heavy sands" of language silted by the past.
  * * KEY AGENTS:
- * - Stephen Dedalus: Individual moderate navigating a "Rope" of intellectual 
- * coordination.
- * - The Demiurge (Los): Institutional force viewing the sensory order as 
- * immutable law (Mountain).
- * - Stephen's Physical Body: Powerless agent trapped by the "nebeneinander" 
- * and "nacheinander" of space/time (Snare).
+ * - Stephen Dedalus: Subject (Powerless) - Walking through "short times of space"[cite: 603].
+ * - The Physical Universe: Beneficiary (Institutional) - Enforcing the "lex eterna".
+ * - The Reader/Observer: Auditor (Analytical) - Witnessing the "mummer" of thought[cite: 832].
  */
 
 /* ==========================================================================
-   2. CORE SYSTEM INTEGRATION (The "Reality" Layer)
+   2. BASE PROPERTIES (DOMAIN PRIORS)
    ========================================================================== */
 
-% Required for [STEP 1] and [STEP 2] of the DR-Audit Suite
-narrative_ontology:interval(proteus_strand_walk, 0, 10).
+% Numerical anchors for v3.4 thresholds
+domain_priors:base_extractiveness(ulysses_proteus_1904, 0.52). % High due to "Agenbite of inwit"[cite: 237, 836].
+domain_priors:suppression_score(ulysses_proteus_1904, 0.85).   % The "ineluctable" nature of vision and sound[cite: 595, 604].
+domain_priors:theater_ratio(ulysses_proteus_1904, 0.72).      % Internal "mummery" and "pretenders"[cite: 773, 831].
 
-% Fixed: Changed 'mountain' to 'snare' to resolve 'type_1_false_mountain'
-narrative_ontology:constraint_claim(protean_signatures_1904, snare).
+% Primary keys for classification engine
+narrative_ontology:constraint_metric(ulysses_proteus_1904, extractiveness, 0.52).
+narrative_ontology:constraint_metric(ulysses_proteus_1904, suppression_requirement, 0.85).
+narrative_ontology:constraint_metric(ulysses_proteus_1904, theater_ratio, 0.72).
 
-% Metrics: Extractiveness (0.5 - Sensory cost) and Suppression (0.7 - High energy maintenance)
-domain_priors:base_extractiveness(protean_signatures_1904, 0.5).
-domain_priors:suppression_score(protean_signatures_1904, 0.7).
-domain_priors:requires_active_enforcement(protean_signatures_1904).
-
-% Explicit metric hooks to prevent auto-imputation
-narrative_ontology:constraint_metric(protean_signatures_1904, extractiveness, 0.5).
-narrative_ontology:constraint_metric(protean_signatures_1904, suppression_requirement, 0.7).
-
-% BENEFICIARIES & VICTIMS
-constraint_beneficiary(protean_signatures_1904, demiurgic_order).
-constraint_victim(protean_signatures_1904, stephen_dedalus_psyche).
+% Structural Property Declarations
+narrative_ontology:constraint_beneficiary(ulysses_proteus_1904, physical_reality).
+narrative_ontology:constraint_victim(ulysses_proteus_1904, stephen_dedalus).
+domain_priors:requires_active_enforcement(ulysses_proteus_1904). % Memory and guilt as active "tyrants"[cite: 443].
 
 /* ==========================================================================
-   3. INDEXED CLASSIFICATIONS (Perspectival Truth)
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × π(P) × σ(S)
    ========================================================================== */
 
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 1: STEPHEN DEDALUS - Rope
-   --------------------------------------------------------------------------
-   WHY: Stephen uses the signatures (seaspawn, seawrack) as a "Rope"—a 
-   coordination tool to tether his runaway associations to a functional 
-   reality. 
-   -------------------------------------------------------------------------- */
-constraint_indexing:constraint_classification(
-    protean_signatures_1904,
-    rope,
-    context(agent_power(individual_moderate), time_horizon(biographical), exit_options(mobile), spatial_scope(local))
-) :- !.
+% PERSPECTIVE 1: STEPHEN DEDALUS (SNARE)
+% Effective Extraction: 0.52 * 1.5 (powerless) * 0.8 (local) = 0.624.
+% Perceived as a trap of "unwholesome sandflats" and "sewage breath".
+constraint_indexing:constraint_classification(ulysses_proteus_1904, snare, 
+    context(agent_power(powerless), 
+            time_horizon(biographical), 
+            exit_options(trapped), 
+            spatial_scope(local))).
 
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE PHYSICAL LIMITS (The Body) - Snare
-   --------------------------------------------------------------------------
-   WHO: individual_powerless - "My two feet in his boots... nebeneinander" 
-  .
-   WHY: From the perspective of the body, sensory data is a "Snare"—an 
-   inescapable trap of "ineluctability" that extracts the self's freedom 
-   to exist outside of time and space.
-   -------------------------------------------------------------------------- */
-constraint_indexing:constraint_classification(
-    protean_signatures_1904,
-    snare,
-    context(agent_power(individual_powerless), time_horizon(immediate), exit_options(constrained), spatial_scope(local))
-) :- !.
+% PERSPECTIVE 2: THE PHYSICAL UNIVERSE (MOUNTAIN)
+% Effective Extraction: 0.52 * -0.2 (institutional) * 1.0 (national/universal) = -0.104.
+% The "lex eterna"  functions as a fixed topological floor.
+constraint_indexing:constraint_classification(ulysses_proteus_1904, mountain, 
+    context(agent_power(institutional), 
+            time_horizon(civilizational), 
+            exit_options(mobile), 
+            spatial_scope(universal))).
 
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE DEMIURGE (Institutional Reality) - Mountain
-   --------------------------------------------------------------------------
-   WHO: institutional - "The mallet of Los Demiurgos".
-   WHY: From the perspective of the narrative's underlying structural laws, 
-   the sensory modality is a "Mountain"—an immutable law of physical 
-   being.
-   -------------------------------------------------------------------------- */
-constraint_indexing:constraint_classification(
-    protean_signatures_1904,
-    mountain,
-    context(agent_power(institutional), time_horizon(historical), exit_options(trapped), spatial_scope(global))
-) :- !.
+% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (PITON)
+% Theater Ratio (0.72) suggests a Piton of "vanished crowds" and "mummery"[cite: 513, 831].
+constraint_indexing:constraint_classification(ulysses_proteus_1904, piton,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(global))).
 
 /* ==========================================================================
-   4. TESTS
+   4. VALIDATION TESTS
    ========================================================================== */
 
-:- begin_tests(protean_signatures_tests).
+:- begin_tests(ulysses_proteus_1904_tests).
 
-test(multi_perspective_proteus) :-
-    constraint_indexing:constraint_classification(protean_signatures_1904, T1, context(agent_power(individual_moderate), _, _, _)),
-    constraint_indexing:constraint_classification(protean_signatures_1904, T2, context(agent_power(institutional), _, _, _)),
-    T1 = rope, T2 = mountain.
+test(perspectival_gap) :-
+    % Verify the shift from Snare (Subjective guilt) to Mountain (Objective physics).
+    constraint_indexing:constraint_classification(ulysses_proteus_1904, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(ulysses_proteus_1904, mountain, context(agent_power(institutional), _, _, _)).
 
-test(false_mountain_diagnostic) :-
-    % Alert should fire if suppression > 0.6 while claim is Mountain
-    domain_priors:suppression_score(protean_signatures_1904, S),
-    S >= 0.7.
+test(piton_theater_validation) :-
+    % Piton classification requires theater_ratio >= 0.70.
+    domain_priors:theater_ratio(ulysses_proteus_1904, TR),
+    TR >= 0.70.
 
-:- end_tests(protean_signatures_tests).
+:- end_tests(ulysses_proteus_1904_tests).
 
 /* ==========================================================================
-   5. MODEL INTERPRETATION & OMEGAS
+   5. GENERATIVE COMMENTARY
    ========================================================================== */
 
 /**
- * LLM GENERATION NOTES:
- * This refactor confirms that Stephen's "ineluctable" reality is actually a 
- * "False Mountain." He claims it is an unchangeable law (Mountain), but the 
- * high suppression required to stay within that frame (0.7) proves it 
- * is a self-imposed or culturally enforced Snare.
+ * LOGIC RATIONALE:
+ * Stephen’s walk is a meditation on the Mountain of the "Ineluctable". 
+ * While physics provides a stable floor (the "nacheinander" of time)[cite: 603], 
+ * his psychological state is a Snare. The "heavy sands" of his past—Paris 
+ * poverty [cite: 689], his mother’s death[cite: 702], and uncle Richie’s 
+ * "houses of decay" [cite: 649]—extract spiritual energy, leaving him 
+ * "lonely here"[cite: 843]. The high Theater Ratio (0.72) reflects his 
+ * "mummer" nature, where internal monologues on Aristotle and 
+ * Berkeley mask his social "dispossession"[cite: 694].
  */
 
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
 omega_variable(
-    ineluctable_authenticity,
-    "Is the world 'there' without Stephen's perception, or is it a Snare of 
-    his own intellectual creation?",
-    resolution_mechanism("Resolution of the Berkeleyan 'diaphane' conflict"),
-    impact("If independent: Mountain. If dependent: Snare."),
+    omega_protean_identity,
+    "Is the 'other me' [cite: 693] a stable Rope of identity or a shifting Snare of solipsism?",
+    "Review of the 'word known to all men'  vs 'phantasmal mirth'[cite: 131].",
+    "Word-known confirms a Rope; phantasmal-mirth hardens the Snare.",
     confidence_without_resolution(medium)
 ).
 
 /* ==========================================================================
-   6. ALTERNATIVE ANALYSIS
+   7. INTEGRATION HOOKS
    ========================================================================== */
 
-/**
- * VIABLE ALTERNATIVES:
- * 1. Pure Audible Rhythm (Solipsism): Stephen attempts to "shut your eyes" 
- * to create a world. Rejected/Suppressed by the physical reality of the 
- * "crushing wrack" under his boots.
- */
+narrative_ontology:interval(ulysses_proteus_1904, 0, 10).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Theater Ratio (Peaking as Stephen's internal mummery becomes more abstract)
+narrative_ontology:measurement(up_tr_t0, ulysses_proteus_1904, theater_ratio, 0, 0.60).
+narrative_ontology:measurement(up_tr_t5, ulysses_proteus_1904, theater_ratio, 5, 0.75).
+narrative_ontology:measurement(up_tr_t10, ulysses_proteus_1904, theater_ratio, 10, 0.72).
+
+% Extraction (The increasing weight of "Agenbite of inwit" and hunger)
+narrative_ontology:measurement(up_ex_t0, ulysses_proteus_1904, base_extractiveness, 0, 0.45).
+narrative_ontology:measurement(up_ex_t5, ulysses_proteus_1904, base_extractiveness, 5, 0.50).
+narrative_ontology:measurement(up_ex_t10, ulysses_proteus_1904, base_extractiveness, 10, 0.52).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
-
-
-% --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
-constraint_indexing:constraint_classification(ulysses_chp03, mountain, agent_power(analytical)).
-constraint_indexing:constraint_classification(ulysses_chp03, rope, agent_power(institutional)).
-constraint_indexing:constraint_classification(ulysses_chp03, snare, agent_power(individual_powerless)).

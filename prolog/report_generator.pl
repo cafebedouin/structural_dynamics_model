@@ -11,9 +11,9 @@
 
 :- use_module(library(lists)).
 :- use_module(narrative_ontology).
-:- use_module(v3_1_config).
+:- use_module(config).
 :- use_module(intent_engine, except([classify_interval/3])).
-:- use_module(v3_1_coercion_projection).
+:- use_module(coercion_projection).
 :- use_module(pattern_analysis).
 :- use_module(constraint_bridge).
 :- use_module(drl_core).
@@ -23,6 +23,7 @@
 :- use_module(isomorphism_engine). % Required for isomorphism audit
 :- use_module(domain_priors).      % Required for forensic audit
 :- use_module(utils).              % Safe helpers for defensive programming
+:- use_module(drl_lifecycle).      % Drift event detection & lifecycle analysis
 
 % Suppress warning - we intentionally override intent_engine:classify_interval/3
 :- discontiguous classify_interval/3.
@@ -70,7 +71,7 @@ type_color(piton, gray).
    ============================================================================ */
 
 generate_full_report(IntervalID) :-
-    interval(IntervalID, T_start, Tn),
+    narrative_ontology:interval(IntervalID, T_start, Tn),
     classify_interval(IntervalID, Pattern, Conf),
     
     format('~n~n====================================================~n'),
@@ -142,7 +143,7 @@ generate_full_report(IntervalID) :-
     ),
     
     % --- SECTION 6: KINETIC MAGNITUDE ---
-    findall(Kappa, (v3_1_config:level(L), v3_1_coercion_projection:coercion_magnitude(L, Tn, Kappa)), Kappas),
+    findall(Kappa, (config:level(L), coercion_projection:coercion_magnitude(L, Tn, Kappa)), Kappas),
     (   Kappas \= [] 
     ->  sum_list(Kappas, SumK), length(Kappas, NK), AvgK is SumK / NK,
         format('~nAggregate Magnitude (Kappa) at Tn: ~2f~n', [AvgK])
@@ -200,16 +201,16 @@ process_omega_entries(OmegaEntries) :-
 % [Included below for completeness in your file]
 
 % Pattern 1: Snare masked as Rope - MOST CRITICAL (extraction blindness)
-detect_gap_pattern(C, gap(noose_masked_as_rope, TypeP, TypeI)) :-
-    constraint_indexing:constraint_classification(C, TypeP, context(agent_power(individual_powerless), _, _, _)),
+detect_gap_pattern(C, gap(snare_masked_as_rope, TypeP, TypeI)) :-
+    constraint_indexing:constraint_classification(C, TypeP, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(C, TypeI, context(agent_power(institutional), _, _, _)),
     TypeP = snare, 
     TypeI = rope, 
     !.
 
 % Pattern 2: Snare/Mountain confusion - CRITICAL (learned helplessness)
-detect_gap_pattern(C, gap(noose_mountain_confusion, TypeP, TypeI)) :-
-    constraint_indexing:constraint_classification(C, TypeP, context(agent_power(individual_powerless), _, _, _)),
+detect_gap_pattern(C, gap(snare_mountain_confusion, TypeP, TypeI)) :-
+    constraint_indexing:constraint_classification(C, TypeP, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(C, TypeI, context(agent_power(institutional), _, _, _)),
     TypeP = snare, 
     TypeI = mountain, 
@@ -217,7 +218,7 @@ detect_gap_pattern(C, gap(noose_mountain_confusion, TypeP, TypeI)) :-
 
 % Pattern 3: Mountain/Rope confusion - REQUIRES SCAFFOLD (catastrophic cut risk)
 detect_gap_pattern(C, gap(mountain_coordination_confusion, TypeP, TypeI)) :-
-    constraint_indexing:constraint_classification(C, TypeP, context(agent_power(individual_powerless), _, _, _)),
+    constraint_indexing:constraint_classification(C, TypeP, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(C, TypeI, context(agent_power(institutional), _, _, _)),
     TypeP = mountain, 
     TypeI = rope, 
@@ -225,13 +226,13 @@ detect_gap_pattern(C, gap(mountain_coordination_confusion, TypeP, TypeI)) :-
 
 % Pattern 4: General catch-all - MUST BE LAST (any other mismatch)
 detect_gap_pattern(C, gap(general_type_mismatch, TypeP, TypeI)) :-
-    constraint_indexing:constraint_classification(C, TypeP, context(agent_power(individual_powerless), _, _, _)),
+    constraint_indexing:constraint_classification(C, TypeP, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(C, TypeI, context(agent_power(institutional), _, _, _)),
     TypeP \= TypeI, 
     TypeP \= none, 
     TypeI \= none.
 
-omega_from_gap(C, gap(noose_masked_as_rope, snare, rope), OmegaID, conceptual, Question) :-
+omega_from_gap(C, gap(snare_masked_as_rope, snare, rope), OmegaID, conceptual, Question) :-
     format(atom(OmegaID), 'omega_extraction_blindness_~w', [C]),
     format(atom(Question), 'Constraint ~w appears extractive (Snare) to individuals but functional (Rope) to institutions...', [C]), !.
 
@@ -239,7 +240,7 @@ omega_from_gap(C, gap(mountain_coordination_confusion, mountain, rope), OmegaID,
     format(atom(OmegaID), 'omega_cut_safety_~w', [C]),
     format(atom(Question), 'Constraint ~w appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...', [C]), !.
 
-omega_from_gap(C, gap(noose_mountain_confusion, snare, mountain), OmegaID, conceptual, Question) :-
+omega_from_gap(C, gap(snare_mountain_confusion, snare, mountain), OmegaID, conceptual, Question) :-
     format(atom(OmegaID), 'omega_learned_helplessness_~w', [C]),
     format(atom(Question), 'Constraint ~w appears extractive (Snare) to individuals but unchangeable (Mountain) to institutions...', [C]), !.
 
@@ -259,12 +260,65 @@ assert_omega_if_new(OmegaID, Type, Question) :-
 
 perspectival_gap_audit(C) :-
     format('~n  Analysis for Constraint: ~w~n', [C]),
-    (constraint_indexing:constraint_classification(C, TypeP, context(agent_power(individual_powerless), _, _, _)) -> true ; TypeP = none),
+    (constraint_indexing:constraint_classification(C, TypeP, context(agent_power(powerless), _, _, _)) -> true ; TypeP = none),
     (constraint_indexing:constraint_classification(C, TypeI, context(agent_power(institutional), _, _, _)) -> true ; TypeI = none),
     (TypeP == mountain, TypeI == rope -> format('    ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.~n') ; true),
     (TypeP == snare, TypeI == rope -> format('    ! ALERT: Extractive "Snare" is masked as functional "Rope".~n') ; true),
-    format('    - Individual (Powerless): ~w~n', [TypeP]),
-    format('    - Institutional (Manager): ~w~n', [TypeI]).
+    % Display with chi power-scaling annotations
+    format_perspective_line(C, powerless, 'Individual (Powerless)', TypeP),
+    format_perspective_line(C, institutional, 'Institutional (Manager)', TypeI),
+    % Display Mandatrophy gap if perspectives differ
+    (   TypeP \= none, TypeI \= none, TypeP \= TypeI
+    ->  format_mandatrophy_gap(C, powerless, institutional)
+    ;   true
+    ).
+
+%% format_perspective_line(+C, +ContextPower, +Label, +Type)
+%  Prints a perspective line with chi annotation if data available.
+format_perspective_line(C, ContextPower, Label, Type) :-
+    (   compute_chi(C, ContextPower, BaseE, Modifier, RawChi)
+    ->  (   RawChi > 1.0
+        ->  format(atom(Ann), ' [chi = ~2f x ~2f = ~2f -> capped 1.00]', [BaseE, Modifier, RawChi])
+        ;   RawChi < 0
+        ->  format(atom(Ann), ' [chi = ~2f x ~2f = ~2f -> net benefit]', [BaseE, Modifier, RawChi])
+        ;   format(atom(Ann), ' [chi = ~2f x ~2f = ~2f]', [BaseE, Modifier, RawChi])
+        )
+    ;   Ann = ''
+    ),
+    format('    - ~w: ~w ~w~n', [Label, Type, Ann]).
+
+%% compute_chi(+C, +ContextPower, -BaseE, -Modifier, -RawChi)
+%  Computes raw chi = BaseE * Modifier for a given power position.
+compute_chi(C, ContextPower, BaseE, Modifier, RawChi) :-
+    context_power_to_modifier_key(ContextPower, ModKey),
+    domain_priors:base_extractiveness(C, BaseE),
+    constraint_indexing:power_modifier(ModKey, Modifier),
+    RawChi is BaseE * Modifier.
+
+%% format_mandatrophy_gap(+C, +PowerA, +PowerB)
+%  Shows the extraction gap between two power positions.
+format_mandatrophy_gap(C, PowerA, PowerB) :-
+    (   compute_chi(C, PowerA, _, _, RawA),
+        compute_chi(C, PowerB, _, _, RawB)
+    ->  EffA is min(1.0, max(0.0, RawA)),
+        EffB is RawB,
+        DeltaChi is abs(EffA - EffB),
+        (   DeltaChi > 1.0 -> Sev = critical
+        ;   DeltaChi > 0.5 -> Sev = high
+        ;   Sev = moderate
+        ),
+        format('    ! MANDATROPHY GAP: delta_chi = ~2f (~w)~n', [DeltaChi, Sev])
+    ;   true
+    ).
+
+%% context_power_to_modifier_key(+ContextPower, -ModifierKey)
+%  Maps context agent_power atoms to power_modifier/2 keys.
+context_power_to_modifier_key(powerless, powerless).
+context_power_to_modifier_key(individual_moderate, moderate).
+context_power_to_modifier_key(powerful, powerful).
+context_power_to_modifier_key(collective_organized, organized).
+context_power_to_modifier_key(institutional, institutional).
+context_power_to_modifier_key(analytical, analytical).
 
 report_constraint_signature(C) :-
     drl_core:dr_signature(C, Signature),
@@ -304,7 +358,7 @@ generate_llm_feedback(IntervalID) :-
     format('~n### START LLM REFINEMENT MANIFEST: ~w ###~n', [IntervalID]),
     format('~n[PERSPECTIVAL_GAPS]~n'),
     (forall(narrative_ontology:constraint_claim(C, _),
-           (constraint_indexing:constraint_classification(C, TypeP, context(agent_power(individual_powerless), _, _, _)),
+           (constraint_indexing:constraint_classification(C, TypeP, context(agent_power(powerless), _, _, _)),
             constraint_indexing:constraint_classification(C, TypeI, context(agent_power(institutional), _, _, _)),
             TypeP \= TypeI, format('  - Constraint "~w": Individual sees ~w, but Institution sees ~w.~n', [C, TypeP, TypeI]))) ; true),
     format('~n[ONTOLOGICAL_MISMATCHES]~n'),
@@ -416,7 +470,7 @@ forensic_explain_false_mountain(C, Context) :-
 %  Logic to determine what a false mountain should actually be classified as.
 determine_correct_classification(Supp, Extr, Ceil, Verdict, Rationale) :-
     (Supp > Ceil, Extr > 0.66
-    -> (Verdict = 'NOOSE',
+    -> (Verdict = 'SNARE',
         Rationale = 'High enforcement + high extraction = extractive trap')
     ; Supp > Ceil, Extr > 0.35
     -> (Verdict = 'TANGLED_ROPE',
@@ -425,7 +479,7 @@ determine_correct_classification(Supp, Extr, Ceil, Verdict, Rationale) :-
     -> (Verdict = 'ROPE',
         Rationale = 'Requires enforcement but not extractive = changeable rule')
     ; Extr > 0.66
-    -> (Verdict = 'NOOSE (check metrics)',
+    -> (Verdict = 'SNARE (check metrics)',
         Rationale = 'High extraction despite low suppression suggests misclassification or measurement error')
     ;  (Verdict = 'AMBIGUOUS (review data)',
         Rationale = 'Metrics inconclusive, manual review required')
@@ -481,9 +535,9 @@ extract_constraint_from_omega_id(OmegaID, Constraint) :-
 determine_gap_pattern(OmegaID, Constraint, Pattern) :-
     atom_string(OmegaID, OIDStr),
     (sub_string(OIDStr, _, _, _, "extraction_blindness")
-    -> (Pattern = noose_masked_as_rope)
+    -> (Pattern = snare_masked_as_rope)
     ; sub_string(OIDStr, _, _, _, "learned_helplessness")
-    -> (Pattern = noose_mountain_confusion)
+    -> (Pattern = snare_mountain_confusion)
     ; sub_string(OIDStr, _, _, _, "cut_safety")
     -> (Pattern = mountain_coordination_confusion)
     ;  (Constraint \= unknown,
@@ -510,13 +564,13 @@ generate_scenario_for_omega(OID, empirical, Desc, C, _Gap) :-
     format('  │  5. Re-run classification to resolve perspectival gap~n', []),
     format('  └─~n~n', []).
 
-generate_scenario_for_omega(OID, conceptual, Desc, C, noose_masked_as_rope) :-
+generate_scenario_for_omega(OID, conceptual, Desc, C, snare_masked_as_rope) :-
     format('  ┌─ [~w] CONCEPTUAL CLARIFICATION~n', [OID]),
     format('  │  Constraint: ~w~n', [C]),
     format('  │  Gap: ~w~n', [Desc]),
     format('  │~n', []),
     format('  │  CRITICAL: Extraction Masking Detected~n', []),
-    format('  │  Powerless see: NOOSE (extractive trap)~n', []),
+    format('  │  Powerless see: SNARE (extractive trap)~n', []),
     format('  │  Institutions see: ROPE (functional rule)~n', []),
     format('  │~n', []),
     format('  │  RESOLUTION STRATEGY:~n', []),
@@ -532,18 +586,18 @@ generate_scenario_for_omega(OID, conceptual, Desc, C, noose_masked_as_rope) :-
     format('  │     - Track who gains vs. who loses from status quo~n', []),
     format('  │     - Measure asymmetric benefit distribution~n', []),
     format('  │  4. Decision tree:~n', []),
-    format('  │     IF extraction confirmed → Reclassify as NOOSE~n', []),
+    format('  │     IF extraction confirmed → Reclassify as SNARE~n', []),
     format('  │     IF functional & fair → Reclassify as ROPE~n', []),
     format('  │     IF context-dependent → Add indexical resolution~n', []),
     format('  └─~n~n', []).
 
-generate_scenario_for_omega(OID, conceptual, Desc, C, noose_mountain_confusion) :-
+generate_scenario_for_omega(OID, conceptual, Desc, C, snare_mountain_confusion) :-
     format('  ┌─ [~w] CONCEPTUAL CLARIFICATION~n', [OID]),
     format('  │  Constraint: ~w~n', [C]),
     format('  │  Gap: ~w~n', [Desc]),
     format('  │~n', []),
     format('  │  CRITICAL: Learned Helplessness Pattern~n', []),
-    format('  │  Powerless see: NOOSE (extractive trap)~n', []),
+    format('  │  Powerless see: SNARE (extractive trap)~n', []),
     format('  │  Institutions see: MOUNTAIN (unchangeable law)~n', []),
     format('  │~n', []),
     format('  │  RESOLUTION STRATEGY:~n', []),
@@ -556,9 +610,9 @@ generate_scenario_for_omega(OID, conceptual, Desc, C, noose_mountain_confusion) 
     format('  │     - Who has veto power over changes?~n', []),
     format('  │  3. Decision tree:~n', []),
     format('  │     IF truly unchangeable + extractive → MANDATROPHY~n', []),
-    format('  │     IF changeable + extractive → Correct to NOOSE~n', []),
+    format('  │     IF changeable + extractive → Correct to SNARE~n', []),
     format('  │     IF unchangeable + fair → Correct to MOUNTAIN~n', []),
-    format('  │     IF institutions falsely claim necessity → NOOSE + fraud flag~n', []),
+    format('  │     IF institutions falsely claim necessity → SNARE + fraud flag~n', []),
     format('  └─~n~n', []).
 
 generate_scenario_for_omega(OID, conceptual, Desc, C, mountain_coordination_confusion) :-

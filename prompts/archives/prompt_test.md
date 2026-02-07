@@ -17,9 +17,9 @@ Constraints (social institutions, rules, power structures) classify differently 
 ### The Four Indices
 
 **1. Agent Power (WHO):**
-- `individual_powerless`: Serf, prisoner, child (subject to rules, cannot shape them)
+- `powerless`: Serf, prisoner, child (subject to rules, cannot shape them)
 - `individual_moderate`: Middle class, citizen (some agency, limited rule-shaping)
-- `individual_powerful`: Wealthy, politically connected (significant influence)
+- `powerful`: Wealthy, politically connected (significant influence)
 - `collective_organized`: Union, movement (coordinated group power)
 - `institutional`: State, corporation, church (rule-making power)
 - `analytical`: Historian, philosopher (observer, not participant)
@@ -148,7 +148,7 @@ test(multi_perspective_[name]) :-
 
 % Test: Extractiveness scales with power
 test(power_scaling_[name]) :-
-    Context1 = context(individual_powerless, biographical, trapped, national),
+    Context1 = context(powerless, biographical, trapped, national),
     Context2 = context(institutional, generational, arbitrage, global),
     extractiveness_for_agent([constraint_id], Context1, Score1),
     extractiveness_for_agent([constraint_id], Context2, Score2),
@@ -241,14 +241,14 @@ constraint_classification(
     feudal_obligations_england_1200,
     mountain,
     context(
-        agent_power(individual_powerless),
+        agent_power(powerless),
         time_horizon(biographical),
         exit_options(trapped),
         spatial_scope(local)
     )
 ) :-
     effective_immutability_for_context(
-        context(individual_powerless, biographical, trapped, local),
+        context(powerless, biographical, trapped, local),
         mountain
     ),
     suppression_score(feudal_obligations_england_1200, S),
@@ -304,7 +304,7 @@ test(multi_perspective_feudalism) :-
     constraint_classification(
         feudal_obligations_england_1200,
         mountain,
-        context(individual_powerless, biographical, trapped, local)
+        context(powerless, biographical, trapped, local)
     ),
     % Historian sees Snare
     constraint_classification(
@@ -323,7 +323,7 @@ test(multi_perspective_feudalism) :-
     snare \= rope.
 
 test(power_scaling_feudalism) :-
-    Context1 = context(individual_powerless, biographical, trapped, local),
+    Context1 = context(powerless, biographical, trapped, local),
     Context2 = context(institutional, generational, arbitrage, regional),
     extractiveness_for_agent(feudal_obligations_england_1200, Context1, Score1),
     extractiveness_for_agent(feudal_obligations_england_1200, Context2, Score2),

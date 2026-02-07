@@ -1,22 +1,29 @@
 % ============================================================================
-% CONSTRAINT STORY: bloom_secret_correspondence
+% CONSTRAINT STORY: ulysses_lotus_1904
 % ============================================================================
-% Generated: 2026-01-19
-% Model: Gemini 2.0 Flash
-% Source: Ulysses, Chapter 5 (Lotus Eaters)
+% Version: 3.4 (Deferential Realism Core)
+% Logic: 3.3 (Indexed Tuple P,T,E,S)
+% Generated: 2026-02-06
 % ============================================================================
 
-:- module(bloom_secret_correspondence, []).
+:- module(constraint_ulysses_lotus, []).
 
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
 
 % --- Namespace Hooks (Required for loading) ---
-:- multifile 
+:- multifile
     domain_priors:base_extractiveness/2,
     domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
     domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -25,137 +32,137 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: bloom_secret_correspondence
- * human_readable: The Flower/Martha Secret Correspondence
- * domain: social/emotional
- * temporal_scope: June 16, 1904 (Dublin morning)
- * spatial_scope: Westland Row post office and surrounding streets
+ * * constraint_id: ulysses_lotus_1904
+ * human_readable: The Narcotic Social Rope (Lotus Eaters)
+ * domain: social/religious/technological
  * * SUMMARY:
- * Leopold Bloom maintains a clandestine, eroticized correspondence with Martha Clifford 
- * under the pseudonym "Henry Flower". This constraint functions as a 
- * psychological "closet" that Bloom navigates through elaborate physical and social 
- * suppression techniques.
+ * Leopold Bloom navigates the "lethargy" and "flowers of idleness" of 1904 
+ * Dublin. Shared rituals—the post office secrecy, the aromatic tea 
+ * advertisements, and the Catholic Mass—function as a Rope of coordination 
+ * that anchors his social existence. However, for Bloom as "Henry Flower," 
+ * these same rituals become a Snare of "Agenbite of inwit" and spiritual 
+ * "sleeping sickness."
  * * KEY AGENTS:
- * - Leopold Bloom (Henry Flower): Moderate agent seeking narcotic emotional relief (Rope).
- * - Martha Clifford: Powerless correspondent trapped in a one-sided dynamic (Snare).
- * - The Catholic Church (All Hallows): Institutional observer viewing morality as law (Mountain).
+ * - Leopold Bloom: Subject (Powerless) - The "naughty boy" seeking punishment.
+ * - The Catholic Church: Beneficiary (Institutional) - The "wonderful organisation" of clockwork salvation.
+ * - Martha Clifford: Auditor (Analytical) - Probing through the "language of flowers."
  */
 
 /* ==========================================================================
-   2. CORE SYSTEM INTEGRATION (The "Reality" Layer)
+   2. BASE PROPERTIES (DOMAIN PRIORS)
    ========================================================================== */
 
-% Standardized interval and claim (Fixed: changed 'social_boundary' to 'snare')
-narrative_ontology:interval(bloom_secret_correspondence, 0, 10).
-narrative_ontology:constraint_claim(bloom_secret_correspondence, snare).
+% Numerical anchors for v3.4 thresholds
+domain_priors:base_extractiveness(ulysses_lotus_1904, 0.48). 
+domain_priors:suppression_score(ulysses_lotus_1904, 0.70).   
+domain_priors:theater_ratio(ulysses_lotus_1904, 0.85). % High mummery: mass, flowers, and pseudonyms.
 
-% Metrics: Extractiveness (0.4) and Suppression (0.8)
-domain_priors:base_extractiveness(bloom_secret_correspondence, 0.4).
-domain_priors:suppression_score(bloom_secret_correspondence, 0.8).
-domain_priors:requires_active_enforcement(bloom_secret_correspondence).
+% Primary keys for classification engine
+narrative_ontology:constraint_metric(ulysses_lotus_1904, extractiveness, 0.48).
+narrative_ontology:constraint_metric(ulysses_lotus_1904, suppression_requirement, 0.70).
+narrative_ontology:constraint_metric(ulysses_lotus_1904, theater_ratio, 0.85).
 
-% Explicit metric hooks to prevent auto-imputation
-narrative_ontology:constraint_metric(bloom_secret_correspondence, extractiveness, 0.4).
-narrative_ontology:constraint_metric(bloom_secret_correspondence, suppression_requirement, 0.8).
-
-% Beneficiaries & Victims
-constraint_beneficiary(bloom_secret_correspondence, bloom_leopold).
-constraint_victim(bloom_secret_correspondence, bloom_marion_molly).
+% Structural Property Declarations
+narrative_ontology:constraint_beneficiary(ulysses_lotus_1904, holy_roman_church).
+narrative_ontology:constraint_victim(ulysses_lotus_1904, leopold_bloom).
+domain_priors:requires_active_enforcement(ulysses_lotus_1904). % Social etiquette and the secret correspondence.
 
 /* ==========================================================================
-   3. INDEXED CLASSIFICATIONS (Perspectival Truth)
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × π(P) × σ(S)
    ========================================================================== */
 
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 1: LEOPOLD BLOOM - Rope
-   --------------------------------------------------------------------------
-   WHY: Bloom views the secrecy as a coordination tool to manage his domestic 
-   unrest without destroying his primary marriage. 
-   -------------------------------------------------------------------------- */
-constraint_indexing:constraint_classification(
-    bloom_secret_correspondence,
-    rope,
-    context(agent_power(individual_moderate), time_horizon(biographical), exit_options(mobile), spatial_scope(local))
-) :- !.
+% PERSPECTIVE 1: BLOOM AS "HENRY FLOWER" (SNARE)
+% Effective Extraction: 0.48 * 1.5 (powerless) * 0.8 (local) = 0.576.
+% Perceived as a "poison bouquet" of secret guilt and "punishment."
+constraint_indexing:constraint_classification(ulysses_lotus_1904, snare, 
+    context(agent_power(powerless), 
+            time_horizon(biographical), 
+            exit_options(trapped), 
+            spatial_scope(local))).
 
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 2: MARTHA CLIFFORD - Snare
-   --------------------------------------------------------------------------
-   WHO: individual_powerless - Martha is socially constrained and "longing".
-   WHY: She is trapped in an asymmetric dynamic where Bloom controls the 
-   pseudonym, the rhythm, and the physical meeting.
-   -------------------------------------------------------------------------- */
-constraint_indexing:constraint_classification(
-    bloom_secret_correspondence,
-    snare,
-    context(agent_power(individual_powerless), time_horizon(immediate), exit_options(constrained), spatial_scope(local))
-) :- !.
+% PERSPECTIVE 2: THE CHURCH MILITANT (ROPE)
+% Effective Extraction: 0.48 * -0.2 (institutional) * 0.8 = -0.0768.
+% Viewed as the "clockwork" coordination of "bread of angels" and family parties.
+constraint_indexing:constraint_classification(ulysses_lotus_1904, rope, 
+    context(agent_power(institutional), 
+            time_horizon(generational), 
+            exit_options(mobile), 
+            spatial_scope(local))).
 
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE CHURCH (All Hallows) - Mountain
-   --------------------------------------------------------------------------
-   WHO: institutional - "Wonderful organisation... goes like clockwork".
-   WHY: The Church views moral law as immutable; Bloom's "secret" is already 
-   mapped into their theology of sin and confession.
-   -------------------------------------------------------------------------- */
-constraint_indexing:constraint_classification(
-    bloom_secret_correspondence,
-    mountain,
-    context(agent_power(institutional), time_horizon(historical), exit_options(trapped), spatial_scope(national))
-) :- !.
+% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (PITON)
+% Theater Ratio (0.85) indicates a Piton of "mummery" and "vanished crowds."
+constraint_indexing:constraint_classification(ulysses_lotus_1904, piton,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(global))).
 
 /* ==========================================================================
-   4. TESTS
+   4. VALIDATION TESTS
    ========================================================================== */
 
-:- begin_tests(bloom_secret_correspondence_tests).
+:- begin_tests(ulysses_lotus_1904_tests).
 
-test(multi_perspective_conflict) :-
-    constraint_indexing:constraint_classification(bloom_secret_correspondence, T1, context(agent_power(individual_moderate), _, _, _)),
-    constraint_indexing:constraint_classification(bloom_secret_correspondence, T2, context(agent_power(individual_powerless), _, _, _)),
-    T1 = rope, T2 = snare.
+test(perspectival_gap) :-
+    % Verify the shift from Snare (Bloom) to Rope (Church).
+    constraint_indexing:constraint_classification(ulysses_lotus_1904, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(ulysses_lotus_1904, rope, context(agent_power(institutional), _, _, _)).
 
-test(time_immutability_shift) :-
-    % Institutional view sees morality as a Mountain over historical time
-    constraint_indexing:constraint_classification(bloom_secret_correspondence, mountain, context(agent_power(institutional), time_horizon(historical), _, _)).
+test(piton_theater_check) :-
+    % Piton classification requires theater_ratio >= 0.70.
+    domain_priors:theater_ratio(ulysses_lotus_1904, TR),
+    TR >= 0.70.
 
-:- end_tests(bloom_secret_correspondence_tests).
+:- end_tests(ulysses_lotus_1904_tests).
 
 /* ==========================================================================
-   5. MODEL INTERPRETATION & OMEGAS
+   5. GENERATIVE COMMENTARY
    ========================================================================== */
 
 /**
- * LLM GENERATION NOTES:
- * Standardizing the claim as 'snare' allows the Audit Suite to flag the 
- * perspectival gap between Bloom's 'Rope' and Martha's 'Snare'. 
- * This resolves the previous schema mismatch.
+ * LOGIC RATIONALE:
+ * Leopold Bloom experiences Dublin as a site of narcotic coordination. 
+ * Shared spaces like the post office and church function as a Rope of 
+ * daily movement, yet his internal "Henry Flower" identity is a Snare 
+ * where extraction is felt as the "punishment" demanded by Martha Clifford. 
+ * The high Theater Ratio (0.85) stems from the "mummery" of the Mass 
+ * (described as "eating bits of a corpse") and the performative "language 
+ * of flowers" that Bloom uses to mask his material and emotional isolation.
  */
 
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
 omega_variable(
-    martha_clifford_authenticity,
-    "Is Martha a real person or a strategic fraud targeting lonely men?",
-    resolution_mechanism("Verification of her physical address vs P.O. Box"),
-    impact("If fraud: Rope (Bloom is being coordinated). If real: Snare (asymmetry)."),
+    omega_narcotic_solipsism,
+    "Is Bloom's 'Henry Flower' persona a Rope for growth or a Snare of isolation?",
+    "Review of the 'word known to all men' vs the 'language of flowers'.",
+    "Communication confirms a Rope; secret letters harden the Snare.",
     confidence_without_resolution(medium)
 ).
 
 /* ==========================================================================
-   6. ALTERNATIVE ANALYSIS
+   7. INTEGRATION HOOKS
    ========================================================================== */
 
-/**
- * VIABLE ALTERNATIVES:
- * 1. Open Marital Reconciliation: Rejected due to active suppression of domestic 
- * friction and the 'Lotus' effect of the secret.
- */
+narrative_ontology:interval(ulysses_lotus_1904, 0, 10).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Theater Ratio (Peaking during the Communion ritual and the reading of Martha's letter)
+narrative_ontology:measurement(ul_tr_t0, ulysses_lotus_1904, theater_ratio, 0, 0.70).
+narrative_ontology:measurement(ul_tr_t5, ulysses_lotus_1904, theater_ratio, 5, 0.88).
+narrative_ontology:measurement(ul_tr_t10, ulysses_lotus_1904, theater_ratio, 10, 0.85).
+
+% Extraction (The increasing weight of Bloom's "naughty boy" guilt and loneliness)
+narrative_ontology:measurement(ul_ex_t0, ulysses_lotus_1904, base_extractiveness, 0, 0.38).
+narrative_ontology:measurement(ul_ex_t5, ulysses_lotus_1904, base_extractiveness, 5, 0.44).
+narrative_ontology:measurement(ul_ex_t10, ulysses_lotus_1904, base_extractiveness, 10, 0.48).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
-
-
-% --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
-constraint_indexing:constraint_classification(ulysses_chp05, mountain, agent_power(analytical)).
-constraint_indexing:constraint_classification(ulysses_chp05, rope, agent_power(institutional)).
-constraint_indexing:constraint_classification(ulysses_chp05, snare, agent_power(individual_powerless)).

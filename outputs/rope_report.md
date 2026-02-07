@@ -1,110 +1,74 @@
 # Rope Validation Report
 
-**Total Validated:** 24
+**Total Validated:** 19
 
 This report lists all constraints that are consistently classified as 'rope' across all tested perspectives, indicating their functional and potentially beneficial nature within the model.
 
 ---
 
-### 1. Rope: `adverse_possession`
+### 1. Rope: `ai_edu_decentralization`
 
 *   **Claimed Type:** `rope`
-*   **Structural Signature Analysis:** CONSTRUCTED CONSTRAINT signature for adverse_possession: Active enforcement detected (suppression=0.40, resistance=0.50) with 0 asymmetric beneficiaries. This is an institutionally maintained rule requiring ongoing suppression energy.
+*   **Structural Signature Analysis:** CONSTRUCTED HIGH-EXTRACTION signature for ai_edu_decentralization: Enforcement present (suppression=0.40, resistance=0.50) with high extraction (0.50). This is an extraction mechanism that metrics failed to classify as snare.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'rope' classification.
-*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
-*   **Generated Omega:** Constraint adverse_possession appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
     ```
-1. Interview affected individuals (N=10+):
-- Who benefits from adverse_possession?
-- Can you change/exit this constraint?
-- What would happen if you tried?
-2. Interview institutional actors (N=10+):
-- What function does adverse_possession serve?
-- Who would object to removing it?
-- What alternatives exist?
-3. Document benefit flows:
-- Track who gains vs. who loses from status quo
-- Measure asymmetric benefit distribution
-4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
-IF functional & fair → Reclassify as ROPE
-IF context-dependent → Add indexical resolution
+1. Design measurement protocol for unknown
+2. Collect data from N=30+ real-world instances
+3. Calculate empirical metrics:
+- suppression_requirement (enforcement needed)
+- resistance_to_change (pushback level)
+- base_extractiveness (asymmetric benefit flow)
+4. Update constraint_metric/3 declarations with data
+5. Re-run classification to resolve perspectival gap
     ```
 
 ---
 
-### 2. Rope: `ai_edu_decentralization`
+### 2. Rope: `berkshire_compounding_culture`
 
 *   **Claimed Type:** `rope`
-*   **Structural Signature Analysis:** CONSTRUCTED CONSTRAINT signature for ai_edu_decentralization: Active enforcement detected (suppression=0.40, resistance=0.50) with 0 asymmetric beneficiaries. This is an institutionally maintained rule requiring ongoing suppression energy.
+*   **Structural Signature Analysis:** CONSTRUCTED LOW-EXTRACTION signature for berkshire_compounding_culture: Enforcement present (suppression=0.20, resistance=0.50) but extraction is low (0.10). This is a rule-based coordination structure, not an extraction mechanism.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'rope' classification.
 
 ---
 
-### 3. Rope: `berkshire_compounding_culture`
+### 3. Rope: `blackstone_carried_interest_taxation`
 
 *   **Claimed Type:** `rope`
-*   **Structural Signature Analysis:** CONSTRUCTED CONSTRAINT signature for berkshire_compounding_culture: Active enforcement detected (suppression=0.20, resistance=0.50) with 0 asymmetric beneficiaries. This is an institutionally maintained rule requiring ongoing suppression energy.
+*   **Structural Signature Analysis:** CONSTRUCTED LOW-EXTRACTION signature for blackstone_carried_interest_taxation: Enforcement present (suppression=0.70, resistance=0.50) but extraction is low (0.30). This is a rule-based coordination structure, not an extraction mechanism.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'rope' classification.
 
 ---
 
-### 4. Rope: `blackstone_carried_interest_taxation`
+### 4. Rope: `choice_architecture_design`
 
 *   **Claimed Type:** `rope`
-*   **Structural Signature Analysis:** CONSTRUCTED CONSTRAINT signature for blackstone_carried_interest_taxation: Active enforcement detected (suppression=0.70, resistance=0.50) with 0 asymmetric beneficiaries. This is an institutionally maintained rule requiring ongoing suppression energy.
+*   **Structural Signature Analysis:** CONSTRUCTED LOW-EXTRACTION signature for rope_design: Enforcement present (suppression=0.30, resistance=0.50) but extraction is low (0.20). This is a rule-based coordination structure, not an extraction mechanism.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'rope' classification.
 
 ---
 
-### 5. Rope: `carbon_credit_markets_2026`
+### 5. Rope: `columbia_2026_elections`
 
 *   **Claimed Type:** `rope`
-*   **Structural Signature Analysis:** CONSTRUCTED CONSTRAINT signature for carbon_credit_markets_2026: Active enforcement detected (suppression=0.60, resistance=0.50) with 0 asymmetric beneficiaries. This is an institutionally maintained rule requiring ongoing suppression energy.
-*   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'rope' classification.
-*   **Related Gap/Alert:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
-*   **Generated Omega:** Constraint carbon_credit_markets_2026 appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
-*   **Suggested Resolution Strategy:**
-    ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut carbon_credit_markets_2026, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
-    ```
-
----
-
-### 6. Rope: `choice_architecture_design`
-
-*   **Claimed Type:** `rope`
-*   **Structural Signature Analysis:** CONSTRUCTED CONSTRAINT signature for rope_design: Active enforcement detected (suppression=0.30, resistance=0.50) with 0 asymmetric beneficiaries. This is an institutionally maintained rule requiring ongoing suppression energy.
+*   **Structural Signature Analysis:** CONSTRUCTED CONSTRAINT signature for colombia_2026_presidential_election: Active enforcement detected (suppression=0.35, resistance=0.50) with 0 asymmetric beneficiaries. Mid-extraction range: genuinely tangled coordination/extraction mix.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'rope' classification.
 
 ---
 
-### 7. Rope: `columbia_2026_elections`
+### 6. Rope: `cuny_light_2026`
 
 *   **Claimed Type:** `rope`
-*   **Structural Signature Analysis:** CONSTRUCTED CONSTRAINT signature for colombia_2026_presidential_election: Active enforcement detected (suppression=0.35, resistance=0.50) with 0 asymmetric beneficiaries. This is an institutionally maintained rule requiring ongoing suppression energy.
+*   **Structural Signature Analysis:** CONSTRUCTED LOW-EXTRACTION signature for cuny_light_2026: Enforcement present (suppression=0.02, resistance=0.50) but extraction is low (0.05). This is a rule-based coordination structure, not an extraction mechanism.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'rope' classification.
 
 ---
 
-### 8. Rope: `deferential_realism_core`
+### 7. Rope: `deferential_realism_core`
 
 *   **Claimed Type:** `rope`
-*   **Structural Signature Analysis:** CONSTRUCTED CONSTRAINT signature for deferential_realism_framework: Active enforcement detected (suppression=0.35, resistance=0.50) with 0 asymmetric beneficiaries. This is an institutionally maintained rule requiring ongoing suppression energy.
+*   **Structural Signature Analysis:** CONSTRUCTED LOW-EXTRACTION signature for deferential_realism_framework: Enforcement present (suppression=0.35, resistance=0.50) but extraction is low (0.20). This is a rule-based coordination structure, not an extraction mechanism.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'rope' classification.
 *   **Related Gap/Alert:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Generated Omega:** Constraint deferential_realism_framework appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
@@ -128,54 +92,26 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 9. Rope: `digital_credentialing_verification`
+### 8. Rope: `educational_unbundling_implementation`
 
 *   **Claimed Type:** `rope`
-*   **Structural Signature Analysis:** CONSTRUCTED CONSTRAINT signature for digital_credentialing_verification: Active enforcement detected (suppression=0.75, resistance=0.50) with 0 asymmetric beneficiaries. This is an institutionally maintained rule requiring ongoing suppression energy.
-*   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'rope' classification.
-*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
-*   **Generated Omega:** Constraint digital_credentialing_verification appears extractive (Snare) to individuals but functional (Rope) to institutions...
-*   **Suggested Resolution Strategy:**
-    ```
-1. Interview affected individuals (N=10+):
-- Who benefits from digital_credentialing_verification?
-- Can you change/exit this constraint?
-- What would happen if you tried?
-2. Interview institutional actors (N=10+):
-- What function does digital_credentialing_verification serve?
-- Who would object to removing it?
-- What alternatives exist?
-3. Document benefit flows:
-- Track who gains vs. who loses from status quo
-- Measure asymmetric benefit distribution
-4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
-IF functional & fair → Reclassify as ROPE
-IF context-dependent → Add indexical resolution
-    ```
-
----
-
-### 10. Rope: `educational_unbundling_implementation`
-
-*   **Claimed Type:** `rope`
-*   **Structural Signature Analysis:** CONSTRUCTED CONSTRAINT signature for education_unbundling_implementation: Active enforcement detected (suppression=0.30, resistance=0.50) with 0 asymmetric beneficiaries. This is an institutionally maintained rule requiring ongoing suppression energy.
+*   **Structural Signature Analysis:** CONSTRUCTED CONSTRAINT signature for education_unbundling_implementation: Active enforcement detected (suppression=0.30, resistance=0.50) with 0 asymmetric beneficiaries. Mid-extraction range: genuinely tangled coordination/extraction mix.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'rope' classification.
 
 ---
 
-### 11. Rope: `ergo_dexy_gold_protocol`
+### 9. Rope: `ergo_dexy_gold_protocol`
 
 *   **Claimed Type:** `rope`
-*   **Structural Signature Analysis:** CONSTRUCTED CONSTRAINT signature for dexy_gold_protocol: Active enforcement detected (suppression=0.50, resistance=0.50) with 0 asymmetric beneficiaries. This is an institutionally maintained rule requiring ongoing suppression energy.
+*   **Structural Signature Analysis:** CONSTRUCTED LOW-EXTRACTION signature for dexy_gold_protocol: Enforcement present (suppression=0.20, resistance=0.50) but extraction is low (0.20). This is a rule-based coordination structure, not an extraction mechanism.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'rope' classification.
 
 ---
 
-### 12. Rope: `fair_use_doctrine`
+### 10. Rope: `fair_use_doctrine`
 
 *   **Claimed Type:** `rope`
-*   **Structural Signature Analysis:** CONSTRUCTED CONSTRAINT signature for fair_use_doctrine: Active enforcement detected (suppression=0.40, resistance=0.50) with 0 asymmetric beneficiaries. This is an institutionally maintained rule requiring ongoing suppression energy.
+*   **Structural Signature Analysis:** CONSTRUCTED LOW-EXTRACTION signature for fair_use_doctrine: Enforcement present (suppression=0.40, resistance=0.50) but extraction is low (0.10). This is a rule-based coordination structure, not an extraction mechanism.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'rope' classification.
 *   **Generated Omega:** Constraint fair_use_doctrine appears extractive (Snare) to individuals but unchangeable (Mountain) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -189,17 +125,17 @@ IF context-dependent → Add indexical resolution
 - Who has veto power over changes?
 3. Decision tree:
 IF truly unchangeable + extractive → MANDATROPHY
-IF changeable + extractive → Correct to NOOSE
+IF changeable + extractive → Correct to SNARE
 IF unchangeable + fair → Correct to MOUNTAIN
-IF institutions falsely claim necessity → NOOSE + fraud flag
+IF institutions falsely claim necessity → SNARE + fraud flag
     ```
 
 ---
 
-### 13. Rope: `glp1_payload_efficiency_pivot`
+### 11. Rope: `glp1_payload_efficiency_pivot`
 
 *   **Claimed Type:** `rope`
-*   **Structural Signature Analysis:** CONSTRUCTED CONSTRAINT signature for glp1_payload_efficiency_pivot: Active enforcement detected (suppression=0.20, resistance=0.50) with 0 asymmetric beneficiaries. This is an institutionally maintained rule requiring ongoing suppression energy.
+*   **Structural Signature Analysis:** CONSTRUCTED LOW-EXTRACTION signature for glp1_payload_efficiency_pivot: Enforcement present (suppression=0.20, resistance=0.50) but extraction is low (0.35). This is a rule-based coordination structure, not an extraction mechanism.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'rope' classification.
 *   **Related Gap/Alert:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Generated Omega:** Constraint glp1_payload_efficiency_pivot appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
@@ -223,10 +159,10 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 14. Rope: `information_foraging_theory`
+### 12. Rope: `information_foraging_theory`
 
 *   **Claimed Type:** `rope`
-*   **Structural Signature Analysis:** CONSTRUCTED CONSTRAINT signature for information_foraging_theory: Active enforcement detected (suppression=0.10, resistance=0.50) with 0 asymmetric beneficiaries. This is an institutionally maintained rule requiring ongoing suppression energy.
+*   **Structural Signature Analysis:** CONSTRUCTED LOW-EXTRACTION signature for information_foraging_theory: Enforcement present (suppression=0.10, resistance=0.50) but extraction is low (0.20). This is a rule-based coordination structure, not an extraction mechanism.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'rope' classification.
 *   **Generated Omega:** Constraint information_foraging_theory appears extractive (Snare) to individuals but unchangeable (Mountain) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -240,50 +176,31 @@ IF uncertainty → HALT changes until resolved
 - Who has veto power over changes?
 3. Decision tree:
 IF truly unchangeable + extractive → MANDATROPHY
-IF changeable + extractive → Correct to NOOSE
+IF changeable + extractive → Correct to SNARE
 IF unchangeable + fair → Correct to MOUNTAIN
-IF institutions falsely claim necessity → NOOSE + fraud flag
+IF institutions falsely claim necessity → SNARE + fraud flag
     ```
 
 ---
 
-### 15. Rope: `institutional_mutation_domestication`
+### 13. Rope: `open_source_commons`
 
 *   **Claimed Type:** `rope`
-*   **Structural Signature Analysis:** CONSTRUCTED CONSTRAINT signature for institutional_mutation_domestication: Active enforcement detected (suppression=0.80, resistance=0.50) with 0 asymmetric beneficiaries. This is an institutionally maintained rule requiring ongoing suppression energy.
+*   **Structural Signature Analysis:** CONSTRUCTED LOW-EXTRACTION signature for open_source_commons: Enforcement present (suppression=0.10, resistance=0.50) but extraction is low (0.05). This is a rule-based coordination structure, not an extraction mechanism.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'rope' classification.
-*   **Related Gap/Alert:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
-*   **Generated Omega:** Constraint institutional_mutation_domestication appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
-*   **Suggested Resolution Strategy:**
-    ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut institutional_mutation_domestication, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
-    ```
 
 ---
 
-### 16. Rope: `integrated_digital_governance_stack`
+### 14. Rope: `openbsd_netiquette_protocol`
 
 *   **Claimed Type:** `rope`
-*   **Structural Signature Analysis:** CONSTRUCTED CONSTRAINT signature for integrated_digital_governance_stack: Active enforcement detected (suppression=0.95, resistance=0.50) with 0 asymmetric beneficiaries. This is an institutionally maintained rule requiring ongoing suppression energy.
+*   **Structural Signature Analysis:** CONSTRUCTED HIGH-EXTRACTION signature for [openbsd_netiquette_protocol]: Enforcement present (suppression=0.50, resistance=0.50) with high extraction (0.50). This is an extraction mechanism that metrics failed to classify as snare.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'rope' classification.
-*   **Generated Omega:** Constraint integrated_digital_governance_stack appears extractive (Snare) to individuals but unchangeable (Mountain) to institutions...
+*   **Generated Omega:** Constraint openbsd_netiquette_protocol appears extractive (Snare) to individuals but unchangeable (Mountain) to institutions...
 *   **Suggested Resolution Strategy:**
     ```
 1. Test changeability:
-- Can institutions modify integrated_digital_governance_stack?
+- Can institutions modify openbsd_netiquette_protocol?
 - What legal/political mechanisms exist?
 - Historical precedents of change?
 2. Test extraction:
@@ -291,108 +208,46 @@ IF uncertainty → HALT changes until resolved
 - Who has veto power over changes?
 3. Decision tree:
 IF truly unchangeable + extractive → MANDATROPHY
-IF changeable + extractive → Correct to NOOSE
+IF changeable + extractive → Correct to SNARE
 IF unchangeable + fair → Correct to MOUNTAIN
-IF institutions falsely claim necessity → NOOSE + fraud flag
+IF institutions falsely claim necessity → SNARE + fraud flag
     ```
 
 ---
 
-### 17. Rope: `japanese_energy_scaffold_2025`
+### 15. Rope: `rare_earth_coop_2026`
 
 *   **Claimed Type:** `rope`
-*   **Structural Signature Analysis:** CONSTRUCTED CONSTRAINT signature for japanese_energy_scaffold_2025: Active enforcement detected (suppression=0.60, resistance=0.50) with 0 asymmetric beneficiaries. This is an institutionally maintained rule requiring ongoing suppression energy.
+*   **Structural Signature Analysis:** Perspectives AGREE
+*   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'rope' classification.
+
+---
+
+### 16. Rope: `sadhu_integrity_protocol`
+
+*   **Claimed Type:** `rope`
+*   **Structural Signature Analysis:** CONSTRUCTED HIGH-EXTRACTION signature for [sadhu_integrity_protocol]: Enforcement present (suppression=0.50, resistance=0.50) with high extraction (0.50). This is an extraction mechanism that metrics failed to classify as snare.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'rope' classification.
 *   **Related Gap/Alert:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
-*   **Generated Omega:** Constraint japanese_energy_scaffold_2025 appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
+*   **Generated Omega:** Constraint sadhu_integrity_protocol appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
     ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut japanese_energy_scaffold_2025, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
+1. Design measurement protocol for unknown
+2. Collect data from N=30+ real-world instances
+3. Calculate empirical metrics:
+- suppression_requirement (enforcement needed)
+- resistance_to_change (pushback level)
+- base_extractiveness (asymmetric benefit flow)
+4. Update constraint_metric/3 declarations with data
+5. Re-run classification to resolve perspectival gap
     ```
 
 ---
 
-### 18. Rope: `jevons_paradox`
+### 17. Rope: `skills_based_hiring`
 
 *   **Claimed Type:** `rope`
-*   **Structural Signature Analysis:** CONSTRUCTED CONSTRAINT signature for jevons_paradox: Active enforcement detected (suppression=0.50, resistance=0.50) with 0 asymmetric beneficiaries. This is an institutionally maintained rule requiring ongoing suppression energy.
-*   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'rope' classification.
-*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
-*   **Generated Omega:** Constraint jevons_paradox appears extractive (Snare) to individuals but functional (Rope) to institutions...
-*   **Suggested Resolution Strategy:**
-    ```
-1. Interview affected individuals (N=10+):
-- Who benefits from jevons_paradox?
-- Can you change/exit this constraint?
-- What would happen if you tried?
-2. Interview institutional actors (N=10+):
-- What function does jevons_paradox serve?
-- Who would object to removing it?
-- What alternatives exist?
-3. Document benefit flows:
-- Track who gains vs. who loses from status quo
-- Measure asymmetric benefit distribution
-4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
-IF functional & fair → Reclassify as ROPE
-IF context-dependent → Add indexical resolution
-    ```
-
----
-
-### 19. Rope: `qualified_immunity`
-
-*   **Claimed Type:** `rope`
-*   **Structural Signature Analysis:** CONSTRUCTED CONSTRAINT signature for qualified_immunity: Active enforcement detected (suppression=0.70, resistance=0.50) with 0 asymmetric beneficiaries. This is an institutionally maintained rule requiring ongoing suppression energy.
-*   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'rope' classification.
-*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
-*   **Generated Omega:** Constraint qualified_immunity appears extractive (Snare) to individuals but functional (Rope) to institutions...
-*   **Suggested Resolution Strategy:**
-    ```
-1. Interview affected individuals (N=10+):
-- Who benefits from qualified_immunity?
-- Can you change/exit this constraint?
-- What would happen if you tried?
-2. Interview institutional actors (N=10+):
-- What function does qualified_immunity serve?
-- Who would object to removing it?
-- What alternatives exist?
-3. Document benefit flows:
-- Track who gains vs. who loses from status quo
-- Measure asymmetric benefit distribution
-4. Decision tree:
-IF extraction confirmed → Reclassify as NOOSE
-IF functional & fair → Reclassify as ROPE
-IF context-dependent → Add indexical resolution
-    ```
-
----
-
-### 20. Rope: `self_surpassing_superman`
-
-*   **Claimed Type:** `rope`
-*   **Structural Signature Analysis:** CONSTRUCTED CONSTRAINT signature for self_surpassing: Active enforcement detected (suppression=0.70, resistance=0.50) with 0 asymmetric beneficiaries. This is an institutionally maintained rule requiring ongoing suppression energy.
-*   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'rope' classification.
-
----
-
-### 21. Rope: `skills_based_hiring`
-
-*   **Claimed Type:** `rope`
-*   **Structural Signature Analysis:** CONSTRUCTED CONSTRAINT signature for skills_based_hiring: Active enforcement detected (suppression=0.20, resistance=0.50) with 0 asymmetric beneficiaries. This is an institutionally maintained rule requiring ongoing suppression energy.
+*   **Structural Signature Analysis:** CONSTRUCTED LOW-EXTRACTION signature for skills_based_hiring: Enforcement present (suppression=0.20, resistance=0.50) but extraction is low (0.30). This is a rule-based coordination structure, not an extraction mechanism.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'rope' classification.
 *   **Generated Omega:** Constraint skills_based_hiring appears extractive (Snare) to individuals but unchangeable (Mountain) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -406,65 +261,52 @@ IF context-dependent → Add indexical resolution
 - Who has veto power over changes?
 3. Decision tree:
 IF truly unchangeable + extractive → MANDATROPHY
-IF changeable + extractive → Correct to NOOSE
+IF changeable + extractive → Correct to SNARE
 IF unchangeable + fair → Correct to MOUNTAIN
-IF institutions falsely claim necessity → NOOSE + fraud flag
+IF institutions falsely claim necessity → SNARE + fraud flag
     ```
 
 ---
 
-### 22. Rope: `statecraft_virtu`
+### 18. Rope: `solar_system_weirdness`
 
 *   **Claimed Type:** `rope`
-*   **Structural Signature Analysis:** CONSTRUCTED CONSTRAINT signature for statecraft_virtu: Active enforcement detected (suppression=0.90, resistance=0.50) with 0 asymmetric beneficiaries. This is an institutionally maintained rule requiring ongoing suppression energy.
+*   **Structural Signature Analysis:** CONSTRUCTED HIGH-EXTRACTION signature for [solar_system_weirdness]: Enforcement present (suppression=0.50, resistance=0.50) with high extraction (0.50). This is an extraction mechanism that metrics failed to classify as snare.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'rope' classification.
-
----
-
-### 23. Rope: `ulysses_chp17`
-
-*   **Claimed Type:** `rope`
-*   **Structural Signature Analysis:** CONSTRUCTED CONSTRAINT signature for bloom_ithaca_mathematical_order: Active enforcement detected (suppression=0.60, resistance=0.50) with 0 asymmetric beneficiaries. This is an institutionally maintained rule requiring ongoing suppression energy.
-*   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'rope' classification.
-*   **Generated Omega:** Constraint bloom_ithaca_mathematical_order appears extractive (Snare) to individuals but unchangeable (Mountain) to institutions...
+*   **Generated Omega:** Constraint solar_system_weirdness appears as mountain to individuals but snare to institutions...
 *   **Suggested Resolution Strategy:**
     ```
-1. Test changeability:
-- Can institutions modify bloom_ithaca_mathematical_order?
-- What legal/political mechanisms exist?
-- Historical precedents of change?
-2. Test extraction:
-- Is benefit flow symmetric or asymmetric?
-- Who has veto power over changes?
-3. Decision tree:
-IF truly unchangeable + extractive → MANDATROPHY
-IF changeable + extractive → Correct to NOOSE
-IF unchangeable + fair → Correct to MOUNTAIN
-IF institutions falsely claim necessity → NOOSE + fraud flag
+1. Map stakeholder perspectives:
+- Document how different actors perceive solar_system_weirdness
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
     ```
 
 ---
 
-### 24. Rope: `ulysses_chp18`
+### 19. Rope: `wikipedia_crowdsourcing_2026`
 
 *   **Claimed Type:** `rope`
-*   **Structural Signature Analysis:** CONSTRUCTED CONSTRAINT signature for molly_affirmation_cycle: Active enforcement detected (suppression=0.50, resistance=0.50) with 0 asymmetric beneficiaries. This is an institutionally maintained rule requiring ongoing suppression energy.
+*   **Structural Signature Analysis:** CONSTRUCTED HIGH-EXTRACTION signature for [wikipedia_crowdsourcing_2026]: Enforcement present (suppression=0.50, resistance=0.50) with high extraction (0.50). This is an extraction mechanism that metrics failed to classify as snare.
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'rope' classification.
-*   **Generated Omega:** Constraint molly_affirmation_cycle appears extractive (Snare) to individuals but unchangeable (Mountain) to institutions...
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** Constraint wikipedia_crowdsourcing_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
     ```
-1. Test changeability:
-- Can institutions modify molly_affirmation_cycle?
-- What legal/political mechanisms exist?
-- Historical precedents of change?
-2. Test extraction:
-- Is benefit flow symmetric or asymmetric?
-- Who has veto power over changes?
-3. Decision tree:
-IF truly unchangeable + extractive → MANDATROPHY
-IF changeable + extractive → Correct to NOOSE
-IF unchangeable + fair → Correct to MOUNTAIN
-IF institutions falsely claim necessity → NOOSE + fraud flag
+1. Design measurement protocol for unknown
+2. Collect data from N=30+ real-world instances
+3. Calculate empirical metrics:
+- suppression_requirement (enforcement needed)
+- resistance_to_change (pushback level)
+- base_extractiveness (asymmetric benefit flow)
+4. Update constraint_metric/3 declarations with data
+5. Re-run classification to resolve perspectival gap
     ```
 
 ---

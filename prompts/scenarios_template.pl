@@ -6,7 +6,7 @@
 
 % 1. Context Binding: Who is in the room?
 % participant(AgentID, Index)
-participant(investor_alpha, context(individual_powerless, biographical, trapped, national)).
+participant(investor_alpha, context(powerless, biographical, trapped, national)).
 participant(irs_admin, context(institutional, historical, arbitrage, national)).
 
 % 2. Constraint Activation: What rules are active?

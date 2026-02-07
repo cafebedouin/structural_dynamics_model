@@ -1,0 +1,69 @@
+<state_snapshot>
+    <overall_goal>
+        Review the Prolog-based `structural_dynamics_model`, suggest and implement improvements to make its logic more robust, extensible, and consistent.
+    </overall_goal>
+
+    <active_constraints>
+        - Work within the existing Prolog framework.
+        - Changes should be logical extensions or robustness improvements.
+    </active_constraints>
+
+    <key_knowledge>
+        - The system classifies constraints (Mountain, Rope, Snare, etc.) based on metrics and a `(Power, Time, Exit, Scope)` context tuple.
+        - Agent power representation is now unified (`powerless`, `powerful`, etc.).
+        - The metric system is generalized, allowing configurable metric names (e.g., `suppression_metric_name`, `extractiveness_metric_name`).
+        - **Predictive Scaling Laws:** `suppression_requirement` is now dynamically scaled by `spatial_scope` AND `time_horizon`.
+        - **Dynamic Coalition Modeling:** `powerless` agents can dynamically form an `organized` group if their numbers exceed `critical_mass_threshold` for a given snare.
+        - **Automated Veto Players:** Beneficiaries of `snare` and `tangled_rope` constraints are automatically inferred as `veto_actor`s.
+        - **Psychological Domain Bridge:** A new module, `psych_bridge.pl`, maps political terms to psychological ones (e.g., `is_snare` -> `is_self_extraction`) and handles metric substitution (`internalization_depth` -> `suppression_requirement`).
+    </key_knowledge>
+
+    <artifact_trail>
+        - `prolog/drl_core.pl`:
+            - Modified to implement "Predictive Scaling Laws" by adding `scope_penalty` and `effective_suppression` logic.
+            - Modified to define `temporal_penalty` and `calculate_scaled_metric` for combined spatial and temporal scaling.
+            - Updated `is_mountain/3`, `is_snare/3`, `is_tangled_rope/3` to use `calculate_scaled_metric/5`.
+            - Updated `base_extractiveness/2` and `suppression_score/2` definitions to use dynamic metric names from `config.pl`.
+            - Removed `effective_suppression/3`.
+        - `prolog/config.pl`:
+            - Modified to add `critical_mass_threshold` parameter for coalition modeling.
+            - Modified to add dynamic metric name parameters (e.g., `suppression_metric_name`, `extractiveness_metric_name`, `theater_metric_name`).
+        - `prolog/constraint_indexing.pl`:
+            - Modified to implement "Dynamic Coalition Modeling", which resolves agent power based on victim counts, and fixed a latent bug with `individual_powerless` representation.
+            - Cleaned up to remove `individual_powerless` and `individual_powerful` aliases, using canonical `powerless` and `powerful`.
+            - Modified `resolve_coalition_power/3` and `extractiveness_for_agent/3` to use dynamic metric names from `config.pl`.
+        - `prolog/constraint_bridge.pl`: Modified to implement "Automated Veto Player Derivation", by adding logic to infer `veto_actor`s from constraint beneficiaries.
+        - `prolog/psych_bridge.pl`: CREATED to provide a "Psychological Domain Bridge," aliasing core predicates and handling the `internalization_depth` metric via a temporary assert/retract pattern.
+        - `prompts/constraint_story_generation_prompt.md`: Updated documentation and checklists to reflect the new scaling and coalition dynamics.
+        - `prompts/constraint_story_template.pl`: Updated comments and test logic to align with new dynamic classification features, making generated stories more accurate.
+        - `prolog/narrative_ontology.pl`: Modified `is_tangled_rope/1`, `check_indexical_relativity/1`, `detect_omega/2`, and `detect_mandatrophy_omega/1` to use dynamic metric names from `config.pl`.
+    </artifact_trail>
+
+    <file_system_state>
+        - CWD: `/home/scott/bin/structural_dynamics_model`
+        - MODIFIED: `prolog/drl_core.pl`, `prolog/config.pl`, `prolog/constraint_indexing.pl`, `prolog/constraint_bridge.pl`, `prompts/constraint_story_generation_prompt.md`, `prompts/constraint_story_template.pl`, `prolog/narrative_ontology.pl`.
+        - CREATED: `prolog/psych_bridge.pl`.
+        - READ: All major files in `/prolog/`, `/prompts/`, and `/python/` to understand the system and evaluate required changes.
+    </file_system_state>
+
+    <recent_actions>
+        - The agent completed a review of the codebase and proposed three major improvements: (1) Unify agent power representation, (2) Generalize the metric system for cross-domain analysis, and (3) Add a temporal dimension to the scaling laws.
+        - The user has acknowledged receipt of the summary and proposals and instructed the agent to implement them in order.
+        - The agent has successfully implemented all three suggestions.
+    </recent_actions>
+
+    <task_state>
+        1. [DONE] Implement Predictive Scaling Laws.
+        2. [DONE] Implement Dynamic Coalition Modeling.
+        3. [DONE] Implement Automated Veto Player Derivation.
+        4. [DONE] Implement Psychological Domain Bridging.
+        5. [DONE] Update documentation and templates to reflect changes.
+        6. [DONE] Review codebase for further improvements.
+        7. [DONE] Propose suggestions for codebase improvements.
+        8. [DONE] Await user feedback on which suggestion to implement next.
+        9. [DONE] Unify Agent Power Representation.
+        10. [DONE] Generalize the metric system for cross-domain analysis.
+        11. [DONE] Add a temporal dimension to the scaling laws.
+        12. [IN PROGRESS] Await further instructions from the user.
+    </task_state>
+</state_snapshot>

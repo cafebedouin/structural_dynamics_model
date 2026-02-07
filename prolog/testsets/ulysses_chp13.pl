@@ -1,22 +1,29 @@
 % ============================================================================
-% CONSTRAINT STORY: gerty_bloom_voyeuristic_distance
+% CONSTRAINT STORY: ulysses_nausicaa_1904
 % ============================================================================
-% Generated: 2026-01-19
-% Model: Gemini 2.0 Flash
-% Source: Ulysses, Chapter 13 (Nausicaa)
+% Version: 3.4 (Deferential Realism Core)
+% Logic: 3.3 (Indexed Tuple P,T,E,S)
+% Generated: 2026-02-06
 % ============================================================================
 
-:- module(gerty_bloom_voyeuristic_distance, []).
+:- module(constraint_ulysses_nausicaa, []).
 
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
 
 % --- Namespace Hooks (Required for loading) ---
-:- multifile 
+:- multifile
     domain_priors:base_extractiveness/2,
     domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
     domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -25,151 +32,137 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: gerty_bloom_voyeuristic_distance
- * human_readable: The Voyeuristic Erotic Distance
- * domain: social/religious/biological
- * temporal_scope: June 16, 1904 (Evening)
- * spatial_scope: Sandymount Strand, Dublin
+ * * constraint_id: ulysses_nausicaa_1904
+ * human_readable: The Sentimental Snare (Sandymount Shore)
+ * domain: social/artistic/psychological
  * * SUMMARY:
- * This constraint represents the eroticized distance between Gerty MacDowell and 
- * Leopold Bloom. It is a psychological boundary maintained by the "mysterious 
- * embrace" of the evening and the acoustic synchronization of the "Star of the 
- * Sea" service.
+ * Chapter 13 models the encounter between Gerty MacDowell and Leopold Bloom 
+ * on Sandymount Strand. For Gerty, the social requirement of "maidenly 
+ * grace" and romantic sentimentality functions as a Snare, extracting 
+ * her self-worth through cheap novelette ideals. For Bloom, the 
+ * scene is a Piton of voyeuristic mummery, ending with the mocking 
+ * "Cuckoo" of a clock that marks his cuckoldry.
  * * KEY AGENTS:
- * - Gerty MacDowell: Individual moderate navigating a "Rope" of desire and social 
- * image.
- * - The Church (Star of the Sea): Institutional anchor viewing the moral 
- * distance as immutable law (Mountain).
- * - The Cuckoo (Clock/Bird): Powerless agent for whom the time-keeping and 
- * distance are an inescapable trap (Snare).
+ * - Gerty MacDowell: Subject (Powerless) - Trapped in her "limp" and romantic "dream"[cite: 7013, 7015].
+ * - Leopold Bloom: Auditor (Analytical) - The "foreign gentleman" watching from the rocks[cite: 7013, 7015].
+ * - The Church: Beneficiary (Institutional) - The "Star of the Sea" providing a background of "pure radiance".
  */
 
 /* ==========================================================================
-   2. CORE SYSTEM INTEGRATION (The "Reality" Layer)
+   2. BASE PROPERTIES (DOMAIN PRIORS)
    ========================================================================== */
 
-% Required for [STEP 1] and [STEP 2] of the DR-Audit Suite
-narrative_ontology:interval(gerty_bloom_interval, 0, 10).
-% Fixed: Changed 'erotic_distancing' to 'snare' to satisfy schema
-narrative_ontology:constraint_claim(gerty_bloom_voyeuristic_distance, snare).
+% Numerical anchors for v3.4 thresholds
+domain_priors:base_extractiveness(ulysses_nausicaa_1904, 0.49). % High emotional extraction/delusion.
+domain_priors:suppression_score(ulysses_nausicaa_1904, 0.75).   % Social mores and Gerty's physical "secret".
+domain_priors:theater_ratio(ulysses_nausicaa_1904, 0.88).      % Peak sentimentality: "mysterious embrace" and "lovingly".
 
-% Metrics: Extractiveness (0.5 - Desolate extraction) and Suppression (0.5 - Social code)
-domain_priors:base_extractiveness(gerty_bloom_voyeuristic_distance, 0.5).
-domain_priors:suppression_score(gerty_bloom_voyeuristic_distance, 0.5).
-domain_priors:requires_active_enforcement(gerty_bloom_voyeuristic_distance).
+% Primary keys for classification engine
+narrative_ontology:constraint_metric(ulysses_nausicaa_1904, extractiveness, 0.49).
+narrative_ontology:constraint_metric(ulysses_nausicaa_1904, suppression_requirement, 0.75).
+narrative_ontology:constraint_metric(ulysses_nausicaa_1904, theater_ratio, 0.88).
 
-% Explicit metric hooks to prevent auto-imputation
-narrative_ontology:constraint_metric(gerty_bloom_voyeuristic_distance, extractiveness, 0.5).
-narrative_ontology:constraint_metric(gerty_bloom_voyeuristic_distance, suppression_requirement, 0.5).
-
-% BENEFICIARIES & VICTIMS
-constraint_beneficiary(gerty_bloom_voyeuristic_distance, dublin_social_propriety).
-constraint_victim(gerty_bloom_voyeuristic_distance, gerty_macdowell).
-constraint_victim(gerty_bloom_voyeuristic_distance, bloom_leopold).
+% Structural Property Declarations
+narrative_ontology:constraint_beneficiary(ulysses_nausicaa_1904, sentimental_press). % Novelettes and magazines.
+narrative_ontology:constraint_victim(ulysses_nausicaa_1904, gerty_macdowell).        % The "girl friend" in the "favourite nook".
+domain_priors:requires_active_enforcement(ulysses_nausicaa_1904). % The "cuckoo" clock and social shame.
 
 /* ==========================================================================
-   3. INDEXED CLASSIFICATIONS (Perspectival Truth)
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × π(P) × σ(S)
    ========================================================================== */
 
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 1: GERTY MACDOWELL - Rope
-   --------------------------------------------------------------------------
-   WHY: Gerty utilizes the distance as a "Rope"—a coordination tool to perform 
-   her "exquisite" identity and manage her attraction through the safety of 
-   the "lingering" evening light.
-   -------------------------------------------------------------------------- */
-constraint_indexing:constraint_classification(
-    gerty_bloom_voyeuristic_distance,
-    rope,
-    context(agent_power(individual_moderate), time_horizon(biographical), exit_options(mobile), spatial_scope(local))
-) :- !.
+% PERSPECTIVE 1: GERTY MACDOWELL (SNARE)
+% Effective Extraction: 0.49 * 1.5 (powerless) * 0.8 (local) = 0.588.
+% Perceived as a "mysterious embrace" that is actually a trap of physical and social limitation.
+constraint_indexing:constraint_classification(ulysses_nausicaa_1904, snare, 
+    context(agent_power(powerless), 
+            time_horizon(biographical), 
+            exit_options(trapped), 
+            spatial_scope(local))).
 
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE CUCKOO (The Powerless) - Snare
-   --------------------------------------------------------------------------
-   WHO: individual_powerless - The "little canarybird" that must "tell the time" 
-  .
-   WHY: From the perspective of the powerless agent, the distance and the 
-   acoustic order are a "Snare"—an extractive trap of mechanical 
-   repetition that offers no agency or relief.
-   -------------------------------------------------------------------------- */
-constraint_indexing:constraint_classification(
-    gerty_bloom_voyeuristic_distance,
-    snare,
-    context(agent_power(individual_powerless), time_horizon(immediate), exit_options(constrained), spatial_scope(local))
-) :- !.
+% PERSPECTIVE 2: THE CHURCH/ST. MARY'S (ROPE)
+% Effective Extraction: 0.49 * -0.2 (institutional) * 0.8 = -0.0784.
+% Viewed as the essential coordination of "the voice of prayer" and a "beacon" for man.
+constraint_indexing:constraint_classification(ulysses_nausicaa_1904, rope, 
+    context(agent_power(institutional), 
+            time_horizon(generational), 
+            exit_options(mobile), 
+            spatial_scope(local))).
 
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE CHURCH (Star of the Sea) - Mountain
-   --------------------------------------------------------------------------
-   WHO: institutional - "The voice of prayer to her who is in her pure radiance" 
-  .
-   WHY: From the institutional religious perspective, the distance and moral 
-   boundaries are a "Mountain"—an immutable, divine law that exists 
-   independently of individual desire.
-   -------------------------------------------------------------------------- */
-constraint_indexing:constraint_classification(
-    gerty_bloom_voyeuristic_distance,
-    mountain,
-    context(agent_power(institutional), time_horizon(historical), exit_options(trapped), spatial_scope(national))
-) :- !.
+% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (PITON)
+% Extreme Theater Ratio (0.88) indicates a Piton of atrophied romantic function.
+constraint_indexing:constraint_classification(ulysses_nausicaa_1904, piton,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(global))).
 
 /* ==========================================================================
-   4. TESTS
+   4. VALIDATION TESTS
    ========================================================================== */
 
-:- begin_tests(gerty_bloom_voyeuristic_tests).
+:- begin_tests(ulysses_nausicaa_1904_tests).
 
-test(multi_perspective_conflict) :-
-    constraint_indexing:constraint_classification(gerty_bloom_voyeuristic_distance, T1, context(agent_power(individual_moderate), _, _, _)),
-    constraint_indexing:constraint_classification(gerty_bloom_voyeuristic_distance, T2, context(agent_power(institutional), _, _, _)),
-    T1 = rope, T2 = mountain.
+test(perspectival_gap) :-
+    % Verify the shift from Gerty's Snare to the Church's Rope.
+    constraint_indexing:constraint_classification(ulysses_nausicaa_1904, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(ulysses_nausicaa_1904, rope, context(agent_power(institutional), _, _, _)).
 
-test(immutability_erotic_scaling) :-
-    % Institutional view sees the moral law as a Mountain
-    constraint_indexing:effective_immutability(historical, trapped, mountain).
+test(piton_theater_validation) :-
+    % Piton classification requires theater_ratio >= 0.70.
+    domain_priors:theater_ratio(ulysses_nausicaa_1904, TR),
+    TR >= 0.70.
 
-:- end_tests(gerty_bloom_voyeuristic_tests).
+:- end_tests(ulysses_nausicaa_1904_tests).
 
 /* ==========================================================================
-   5. MODEL INTERPRETATION & OMEGAS
+   5. GENERATIVE COMMENTARY
    ========================================================================== */
 
 /**
- * LLM GENERATION NOTES:
- * Refactored to eliminate the 'erotic_distancing' mismatch. Declaring the claim 
- * as 'snare' allows the audit to flag the "Stalemate" where individuals 
- * attempt to coordinate (Rope) while institutions maintain an 
- * immutable reality (Mountain).
+ * LOGIC RATIONALE:
+ * Gerty MacDowell experiences the shore as a Sentimental Snare—a site 
+ * where the "mysterious embrace" of the evening masks her social and physical 
+ * "trapped" status[cite: 7013, 7015]. The high Theater Ratio (0.88) is 
+ * driven by the first half of the chapter's "mummery" of flowery prose, which 
+ * mimics the novelettes Gerty reads. The final "Cuckoo" of the 
+ * clock  serves as the Piton's chime, signaling the atrophied 
+ * reality of Bloom's marriage and Gerty's romantic hopes.
  */
 
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
 omega_variable(
-    cuckoo_clock_synchronicity,
-    "Is the cuckoo clock's mockery a literal sound (Mountain) or an internal 
-    projection of Bloom's marital guilt (Snare)?",
-    resolution_mechanism("Acoustic analysis of Chapter 13"),
-    impact("If literal: Mountain. If projection: Snare."),
-    confidence_without_resolution(low)
+    omega_sentimental_truth,
+    "Is Gerty's 'dream' a Rope for social hope or a Snare of self-deception?",
+    "Review of the 'foreign gentleman's' gaze vs her physical 'limp'.",
+    "Hope-coordination confirms a Rope; deception hardens the Snare.",
+    confidence_without_resolution(medium)
 ).
 
 /* ==========================================================================
-   6. ALTERNATIVE ANALYSIS
+   7. INTEGRATION HOOKS
    ========================================================================== */
 
-/**
- * VIABLE ALTERNATIVES:
- * 1. Direct Interaction: Bloom and Gerty could have crossed the distance. 
- * Rejected/Suppressed by 1904 Dublin social codes and the "Star of the Sea" 
- * morality.
- */
+narrative_ontology:interval(ulysses_nausicaa_1904, 0, 10).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Theater Ratio (Peaking during Gerty's internal monologue and the fireworks)
+narrative_ontology:measurement(un_tr_t0, ulysses_nausicaa_1904, theater_ratio, 0, 0.65).
+narrative_ontology:measurement(un_tr_t5, ulysses_nausicaa_1904, theater_ratio, 5, 0.90).
+narrative_ontology:measurement(un_tr_t10, ulysses_nausicaa_1904, theater_ratio, 10, 0.88).
+
+% Extraction (Increasing as the "sentimentality" gives way to Bloom's earthier reality)
+narrative_ontology:measurement(un_ex_t0, ulysses_nausicaa_1904, base_extractiveness, 0, 0.35).
+narrative_ontology:measurement(un_ex_t5, ulysses_nausicaa_1904, base_extractiveness, 5, 0.45).
+narrative_ontology:measurement(un_ex_t10, ulysses_nausicaa_1904, base_extractiveness, 10, 0.49).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
-
-
-
-% --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
-constraint_indexing:constraint_classification(ulysses_chp13, mountain, agent_power(analytical)).
-constraint_indexing:constraint_classification(ulysses_chp13, rope, agent_power(institutional)).
-constraint_indexing:constraint_classification(ulysses_chp13, snare, agent_power(individual_powerless)).

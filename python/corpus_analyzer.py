@@ -1,309 +1,88 @@
 #!/usr/bin/env python3
-"""
-Corpus Analyzer - Analyzes the constraint corpus for conceptual connections
-
-Identifies:
-- Concept clusters and themes
-- Missing connections
-- Suggested scenarios based on existing patterns
-- Knowledge gaps in the corpus
-"""
-
+# NOTE: This script requires pyswip to be installed (`pip install pyswip`)
 import re
-from collections import defaultdict, Counter
+import sys
+from collections import defaultdict
 from pathlib import Path
 import itertools
+import argparse
+from pyswip import Prolog
 
 class CorpusAnalyzer:
-    def __init__(self, testsets_dir='../prolog/testsets/'):
-        self.testsets_dir = Path(testsets_dir)
-        self.constraints = {}  # name -> metadata
-        self.domains = defaultdict(list)  # domain -> [constraints]
-        self.types = defaultdict(list)  # type -> [constraints]
-        self.concepts = defaultdict(set)  # concept -> {constraints mentioning it}
-        self.co_occurrences = defaultdict(int)  # (concept1, concept2) -> count
+    def __init__(self, testsets_dir=None, prolog_stack_file=None):
+        self.testsets_dir = Path(testsets_dir or "/home/scott/bin/structural_dynamics_model/prolog/testsets")
+        self.prolog_stack_file = Path(prolog_stack_file or "/home/scott/bin/structural_dynamics_model/prolog/v3_1_stack.pl")
+        self.constraints = {}
+        self.types = defaultdict(list)
+        self.concepts = defaultdict(set)
+        self.co_occurrences = defaultdict(int)
 
-    def extract_concepts_from_name(self, name):
-        """Extract concepts from constraint name"""
-        # Split on underscores and common separators
-        parts = re.split(r'[_\-\s]+', name.lower())
+        self.prolog = Prolog()
+        self.prolog.consult(str(self.prolog_stack_file))
 
-        # Filter out common words and numbers
-        stopwords = {'the', 'of', 'and', 'or', 'in', 'on', 'at', 'to', 'for', 'a', 'an',
-                    'is', 'are', 'was', 'were', 'be', 'been', 'being',
-                    'system', 'interval', 'era', 'cycle'}
+        self.id_pattern = re.compile(r"(?:constraint_id|Checking Interval):\s*(?:\\s*)?([a-zA-Z0-9_]+)")
+        self.explicit_pattern = re.compile(r"(?:\w+:)?(?:constraint_classification|constraint_claim)\s*\(\s*(?:\\s*)?([a-zA-Z0-9_]+),\s*([a-zA-Z0-9_]+)")
+        self.score_pattern = re.compile(r"base_extractiveness\(\s*(?:\\s*)?[^,]+,\s*([\d\.]+)\s*\)")
 
-        concepts = []
-        for part in parts:
-            # Skip if it's a number, year, or stopword
-            if part.isdigit() or len(part) < 3 or part in stopwords:
-                continue
-            # Skip if it looks like a year
-            if re.match(r'\d{4}', part):
-                continue
-            concepts.append(part)
+    def classify_type(self, constraint_id, tag, score):
+        # Audit logic: If it claims to be a mountain but acts like a snare.
+        # This rule is custom to this script and is not part of the Prolog engine.
+        if tag == "mountain" and score > 0.8: return "false_mountain"
 
-        return concepts
+        # Use the Prolog engine for classification
+        try:
+            query = f"dr_type({constraint_id}, Type)"
+            result = list(self.prolog.query(query))
+            if result:
+                return result[0]['Type']
+            return "unknown"
+        except Exception as e:
+            print(f"Error querying Prolog for {constraint_id}: {e}")
+            return "unknown"
 
     def analyze_corpus(self):
-        """Analyze all test files"""
-        if not self.testsets_dir.exists():
-            print(f"Error: {self.testsets_dir} does not exist")
-            return False
+        if not self.testsets_dir.exists(): return False
+        for pl_file in self.testsets_dir.glob("*.pl"):
+            try:
+                content = pl_file.read_text(encoding='utf-8')
+                ids = self.id_pattern.findall(content)
+                if not ids: continue
 
-        pl_files = list(self.testsets_dir.glob('*.pl'))
+                constraint_id = ids[0]
 
-        if not pl_files:
-            print(f"No .pl files found in {self.testsets_dir}")
-            return False
+                tag_match = self.explicit_pattern.search(content)
+                tag = tag_match.group(2).strip() if tag_match else None
 
-        print(f"Analyzing {len(pl_files)} constraint files...")
+                score_match = self.score_pattern.search(content)
+                score = float(score_match.group(1)) if score_match else 0.5
+                
+                c_type = self.classify_type(constraint_id, tag, score)
+                self.types[c_type].append(constraint_id)
 
-        for filepath in pl_files:
-            self._analyze_file(filepath)
-
-        # Build concept co-occurrence matrix
-        for constraint_name, metadata in self.constraints.items():
-            concepts = metadata.get('concepts', [])
-
-            # Record all pairs of co-occurring concepts
-            for c1, c2 in itertools.combinations(sorted(concepts), 2):
-                self.co_occurrences[(c1, c2)] += 1
-
+                parts = re.split(r'[_ \-\s]+', constraint_id.lower())
+                concepts = [p for p in parts if len(p) > 2 and not p.isdigit()]
+                for c1, c2 in itertools.combinations(sorted(concepts), 2):
+                    self.co_occurrences[(c1, c2)] += 1
+                for concept in concepts:
+                    self.concepts[concept].add(constraint_id)
+                self.constraints[constraint_id] = {'concepts': concepts}
+            except Exception: continue
         return True
 
-    def _analyze_file(self, filepath):
-        """Analyze a single test file"""
-        constraint_name = filepath.stem
-
-        metadata = {
-            'file': filepath.name,
-            'domain': None,
-            'type': None,
-            'concepts': self.extract_concepts_from_name(constraint_name)
-        }
-
-        try:
-            with open(filepath, 'r', encoding='utf-8') as f:
-                content = f.read()
-
-            # Extract domain category
-            domain_match = re.search(r"domain_priors:category_of\([^,]+,\s*(\w+)\)", content)
-            if domain_match:
-                metadata['domain'] = domain_match.group(1)
-                self.domains[metadata['domain']].append(constraint_name)
-
-            # Extract claimed type
-            type_match = re.search(r"constraint_claim\([^,]+,\s*(\w+)\)", content)
-            if type_match:
-                metadata['type'] = type_match.group(1)
-                self.types[metadata['type']].append(constraint_name)
-
-        except Exception as e:
-            print(f"Warning: Could not analyze {filepath.name}: {e}")
-
-        self.constraints[constraint_name] = metadata
-
-        # Index concepts
-        for concept in metadata['concepts']:
-            self.concepts[concept].add(constraint_name)
-
     def generate_report(self):
-        """Generate corpus analysis report"""
-        print("\n" + "="*80)
-        print("CORPUS ANALYSIS: Conceptual Connections".center(80))
-        print("="*80 + "\n")
+        print("\n" + "="*80 + "\n  META-REPORT: Test Suite Analysis\n" + "="*80)
+        total = len(self.constraints)
+        print(f"\n📚 CORPUS OVERVIEW\n{'-'*80}\n  Total Constraints Analyzed: {total}")
+        for c_type in ['piton', 'snare', 'tangled_rope', 'rope', 'mountain', 'false_mountain']:
+            count = len(self.types[c_type])
+            perc = (count / total * 100) if total > 0 else 0
+            print(f"    - {c_type:15s}: {count:4d} ({perc:5.1f}%) {'█' * int(perc / 5)}")
+        print(f"\n🕸️  CONCEPT NETWORK\n{'-'*80}")
+        top = sorted(self.co_occurrences.items(), key=lambda x: x[1], reverse=True)[:10]
+        for (c1, c2), count in top:
+            print(f"  {c1:20s} {'━' * min(count, 10)}━→ {c2:20s} ({count})")
+        print(f"\n  💡 Found {len(self.concepts)} unique concepts.\n" + "="*80 + "\n")
 
-        self._section_concept_clusters()
-        self._section_domain_gaps()
-        self._section_suggested_scenarios()
-        self._section_concept_network()
-
-        print("="*80 + "\n")
-
-    def _section_concept_clusters(self):
-        """Identify and report concept clusters"""
-        print("🔍 CONCEPT CLUSTERS")
-        print("-" * 80)
-
-        # Find concepts that appear in multiple constraints
-        frequent_concepts = {concept: constraints
-                           for concept, constraints in self.concepts.items()
-                           if len(constraints) >= 3}
-
-        if frequent_concepts:
-            print(f"  Found {len(frequent_concepts)} concepts appearing in 3+ constraints:\n")
-
-            for concept, constraints in sorted(frequent_concepts.items(),
-                                              key=lambda x: len(x[1]),
-                                              reverse=True)[:10]:
-                print(f"  {concept:20s}: {len(constraints)} constraint(s)")
-                # Show a few examples
-                for c in list(constraints)[:3]:
-                    print(f"    - {c}")
-                if len(constraints) > 3:
-                    print(f"    ... and {len(constraints) - 3} more")
-                print()
-        else:
-            print("  No strong concept clusters found (concepts appear in < 3 constraints)")
-
-        print()
-
-    def _section_domain_gaps(self):
-        """Identify gaps in domain coverage"""
-        print("🎯 DOMAIN GAPS & BALANCE")
-        print("-" * 80)
-
-        if not self.domains:
-            print("  No domain information available")
-            return
-
-        # Show distribution
-        print(f"  Domain Distribution ({len(self.domains)} domains):\n")
-
-        for domain, constraints in sorted(self.domains.items(),
-                                         key=lambda x: len(x[1]),
-                                         reverse=True):
-            count = len(constraints)
-            bar = '█' * min(count, 50)
-            print(f"  {domain:30s}: {count:3d} {bar}")
-
-        # Identify gaps
-        print(f"\n  Balance Analysis:")
-
-        avg_count = sum(len(c) for c in self.domains.values()) / len(self.domains)
-
-        overrepresented = [(d, len(c)) for d, c in self.domains.items()
-                          if len(c) > avg_count * 1.5]
-        underrepresented = [(d, len(c)) for d, c in self.domains.items()
-                           if len(c) < 3]
-
-        if overrepresented:
-            print(f"\n  ✓ Well-represented domains:")
-            for domain, count in overrepresented[:5]:
-                print(f"    - {domain} ({count})")
-
-        if underrepresented:
-            print(f"\n  ⚠ Underrepresented domains (add more scenarios):")
-            for domain, count in underrepresented:
-                print(f"    - {domain} ({count} constraint(s))")
-
-        print()
-
-    def _section_suggested_scenarios(self):
-        """Suggest new scenarios based on patterns"""
-        print("💡 SUGGESTED SCENARIOS")
-        print("-" * 80)
-
-        suggestions = []
-
-        # 1. Combine concepts that co-occur frequently
-        if self.co_occurrences:
-            top_pairs = sorted(self.co_occurrences.items(),
-                             key=lambda x: x[1],
-                             reverse=True)[:5]
-
-            print("  Based on concept co-occurrence patterns:\n")
-            for (c1, c2), count in top_pairs:
-                # Suggest exploring these together in new context
-                suggestion = f"Explore {c1} + {c2} in a new context ({count} existing linkages)"
-                print(f"  • {suggestion}")
-
-        # 2. Cross-pollinate domains
-        if len(self.domains) >= 2:
-            print("\n  Cross-domain scenario ideas:\n")
-
-            # Find domains with similar concepts
-            domain_concepts = {}
-            for domain, constraints in self.domains.items():
-                concepts = set()
-                for c in constraints:
-                    if c in self.constraints:
-                        concepts.update(self.constraints[c]['concepts'])
-                domain_concepts[domain] = concepts
-
-            # Find domains with overlapping concepts
-            for d1, d2 in itertools.combinations(list(self.domains.keys())[:10], 2):
-                if d1 in domain_concepts and d2 in domain_concepts:
-                    overlap = domain_concepts[d1] & domain_concepts[d2]
-                    if len(overlap) >= 2:
-                        concepts_str = ', '.join(list(overlap)[:3])
-                        print(f"  • {d1} ↔ {d2}: shared concepts ({concepts_str})")
-
-        # 3. Fill type gaps
-        if self.types:
-            print("\n  Type distribution balance:\n")
-
-            for ctype, constraints in self.types.items():
-                count = len(constraints)
-                print(f"  {ctype:15s}: {count:3d}")
-
-            # Suggest adding underrepresented types
-            min_count = min(len(c) for c in self.types.values())
-            underrep_types = [t for t, c in self.types.items() if len(c) == min_count]
-
-            if underrep_types and len(underrep_types) < len(self.types):
-                print(f"\n  ⚠ Add more '{', '.join(underrep_types)}' scenarios for balance")
-
-        # 4. Concept-based suggestions
-        if self.concepts:
-            # Find concepts that appear alone (could be connected to others)
-            lonely_concepts = {concept: constraints
-                             for concept, constraints in self.concepts.items()
-                             if len(constraints) == 1}
-
-            if lonely_concepts and len(lonely_concepts) < 20:
-                print(f"\n  Isolated concepts (could be connected to others):\n")
-                for concept, constraints in list(lonely_concepts.items())[:5]:
-                    constraint = list(constraints)[0]
-                    print(f"  • Expand on '{concept}' (currently only in {constraint})")
-
-        print()
-
-    def _section_concept_network(self):
-        """Show strongest conceptual connections"""
-        print("🕸️  CONCEPT NETWORK")
-        print("-" * 80)
-
-        if not self.co_occurrences:
-            print("  No concept co-occurrences found")
-            return
-
-        # Find strongest connections
-        top_connections = sorted(self.co_occurrences.items(),
-                                key=lambda x: x[1],
-                                reverse=True)[:15]
-
-        print(f"  Strongest conceptual connections ({len(self.co_occurrences)} total):\n")
-
-        for (c1, c2), count in top_connections:
-            # Show as a network edge
-            strength = '━' * min(count, 10)
-            print(f"  {c1:20s} {strength}→ {c2:20s} ({count})")
-
-        print(f"\n  💡 These connections suggest natural clusters for future scenarios")
-        print()
-
-def main():
-    import argparse
-
-    parser = argparse.ArgumentParser(
-        description='Analyze corpus for conceptual connections and gaps'
-    )
-    parser.add_argument(
-        '--testsets',
-        default='../prolog/testsets/',
-        help='Path to testsets directory (default: ../prolog/testsets/)'
-    )
-
-    args = parser.parse_args()
-
-    analyzer = CorpusAnalyzer(args.testsets)
-
-    if not analyzer.analyze_corpus():
-        sys.exit(1)
-
-    analyzer.generate_report()
-
-if __name__ == '__main__':
-    main()
+if __name__ == "__main__":
+    analyzer = CorpusAnalyzer()
+    if analyzer.analyze_corpus(): analyzer.generate_report()

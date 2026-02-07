@@ -1,22 +1,29 @@
 % ============================================================================
-% CONSTRAINT STORY: bloom_acoustic_seduction_vigil
+% CONSTRAINT STORY: ulysses_sirens_1904
 % ============================================================================
-% Generated: 2026-01-19
-% Model: Gemini 2.0 Flash
-% Source: Ulysses, Chapter 11 (Sirens)
+% Version: 3.4 (Deferential Realism Core)
+% Logic: 3.3 (Indexed Tuple P,T,E,S)
+% Generated: 2026-02-06
 % ============================================================================
 
-:- module(bloom_acoustic_seduction_vigil, []).
+:- module(constraint_ulysses_sirens, []).
 
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
 
 % --- Namespace Hooks (Required for loading) ---
-:- multifile 
+:- multifile
     domain_priors:base_extractiveness/2,
     domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
     domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -25,143 +32,135 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: bloom_acoustic_seduction_vigil
- * human_readable: The Acoustic Seduction Vigil (The Cuckold's Hour)
- * domain: psychological/social
- * temporal_scope: June 16, 1904 (4:00 PM)
- * spatial_scope: The Ormond Hotel, Dublin
+ * * constraint_id: ulysses_sirens_1904
+ * human_readable: The Auditory Lure (Ormond Hotel)
+ * domain: social/artistic/biological
  * * SUMMARY:
- * Leopold Bloom experiences the seductive power of music (the "Sirens") while 
- * acutely aware that Blazes Boylan is visiting Molly. The 
- * constraint acts as an emotional "decoy" that extracts Bloom's attention 
- * through trilling notes and acoustic lures.
+ * Chapter 11 models the Ormond Hotel bar as a complex auditory system. 
+ * The music and the flirtatious "Sirens" act as a Rope of coordination 
+ * for the bar patrons, while for Leopold Bloom, they form a Snare 
+ * of "longindying" calls and psychological extraction as he dwells 
+ * on his loneliness and Molly's infidelity.
  * * KEY AGENTS:
- * - Leopold Bloom: Individual moderate navigating a "Rope" of artistic appreciation and distraction.
- * - The Blind Stripling: Individual powerless agent for whom the "bronze and gold" of the sirens do not exist (Snare).
- * - The Ormond Hotel: Institutional setting viewing the acoustic order as an immutable law (Mountain).
+ * - Leopold Bloom: Subject (Powerless) - "So lonely blooming" while eating grease. 
+ * - Lydia Douce & Mina Kennedy: Beneficiary (Institutional) - The trilling barmaids. 
+ * - The Stripling: Auditor (Analytical) - The unseeing presence tapping at the door. 
  */
 
 /* ==========================================================================
-   2. CORE SYSTEM INTEGRATION (The "Reality" Layer)
+   2. BASE PROPERTIES (DOMAIN PRIORS)
    ========================================================================== */
 
-% Required for [STEP 1] and [STEP 2] of the DR-Audit Suite
-narrative_ontology:interval(bloom_sirens_interval, 0, 10).
-% Fixed: Changed 'acoustic_vigil' to 'snare' to satisfy schema
-narrative_ontology:constraint_claim(bloom_acoustic_seduction_vigil, snare).
+% Numerical anchors for v3.4 thresholds [cite: 12]
+domain_priors:base_extractiveness(ulysses_sirens_1904, 0.53). % High psychological cost.
+domain_priors:suppression_score(ulysses_sirens_1904, 0.82).   % Auditory seduce-and-suppress.
+domain_priors:theater_ratio(ulysses_sirens_1904, 0.89).      % Peak "mummery" of sound.
 
-% Metrics: Extractiveness (0.6 - Sensory trap) and Suppression (0.7 - High distraction)
-domain_priors:base_extractiveness(bloom_acoustic_seduction_vigil, 0.6).
-domain_priors:suppression_score(bloom_acoustic_seduction_vigil, 0.7).
-domain_priors:requires_active_enforcement(bloom_acoustic_seduction_vigil).
+% Primary keys for classification engine [cite: 12]
+narrative_ontology:constraint_metric(ulysses_sirens_1904, extractiveness, 0.53).
+narrative_ontology:constraint_metric(ulysses_sirens_1904, suppression_requirement, 0.82).
+narrative_ontology:constraint_metric(ulysses_sirens_1904, theater_ratio, 0.89).
 
-% Explicit metric hooks to prevent auto-imputation
-narrative_ontology:constraint_metric(bloom_acoustic_seduction_vigil, extractiveness, 0.6).
-narrative_ontology:constraint_metric(bloom_acoustic_seduction_vigil, suppression_requirement, 0.7).
-
-% BENEFICIARIES & VICTIMS
-constraint_beneficiary(bloom_acoustic_seduction_vigil, ormond_bar_social_fabric).
-constraint_victim(bloom_acoustic_seduction_vigil, bloom_emotional_agency).
+% Structural Property Declarations
+narrative_ontology:constraint_beneficiary(ulysses_sirens_1904, the_sirens). % Lydia and Mina trilling.
+narrative_ontology:constraint_victim(ulysses_sirens_1904, leopold_bloom).   % Trapped in sad blooming.
+domain_priors:requires_active_enforcement(ulysses_sirens_1904). % The piano's "War! War!". 
 
 /* ==========================================================================
-   3. INDEXED CLASSIFICATIONS (Perspectival Truth)
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × π(P) × σ(S)
    ========================================================================== */
 
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 1: LEOPOLD BLOOM - Rope
-   --------------------------------------------------------------------------
-   WHY: Bloom utilizes the music as a "Rope"—a functional coordination tool 
-   to manage his acute distress by focusing on technical and aesthetic 
-   qualities ("vibrato," "seven last words").
-   -------------------------------------------------------------------------- */
-constraint_indexing:constraint_classification(
-    bloom_acoustic_seduction_vigil,
-    rope,
-    context(agent_power(individual_moderate), time_horizon(biographical), exit_options(mobile), spatial_scope(local))
-) :- !.
+% PERSPECTIVE 1: THE LONELY SUBJECT (SNARE)
+% Effective Extraction: 0.53 * 1.5 (powerless) * 0.8 (local) = 0.636.
+% Bloom perceives the music as a "decoy" and a trap of "lost" notes. 
+constraint_indexing:constraint_classification(ulysses_sirens_1904, snare, 
+    context(agent_power(powerless), 
+            time_horizon(biographical), 
+            exit_options(trapped), 
+            spatial_scope(local))).
 
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE BLIND STRIPLING - Snare
-   --------------------------------------------------------------------------
-   WHO: individual_powerless - "He did not see... Nor Ben nor Bob nor Tom".
-   WHY: For the powerless, sensory-impaired agent, the seductive "order" of 
-   the hotel is a "Snare"—an extractive trap of exclusion where the 
-   coordination benefits of the "Siren" song are entirely absent.
-   -------------------------------------------------------------------------- */
-constraint_indexing:constraint_classification(
-    bloom_acoustic_seduction_vigil,
-    snare,
-    context(agent_power(individual_powerless), time_horizon(immediate), exit_options(constrained), spatial_scope(local))
-) :- !.
+% PERSPECTIVE 2: THE BARMAID (ROPE)
+% Effective Extraction: 0.53 * -0.2 (institutional) * 0.8 = -0.0848.
+% Viewed as the "clinking" coordination of service and "peepofgold". 
+constraint_indexing:constraint_classification(ulysses_sirens_1904, rope, 
+    context(agent_power(institutional), 
+            time_horizon(generational), 
+            exit_options(mobile), 
+            spatial_scope(local))).
 
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE ORMOND ORDER - Mountain
-   --------------------------------------------------------------------------
-   WHO: institutional - The "Sirens" (barmaids) and the "gallant" drinkers.
-   WHY: From the institutional perspective of the bar, the acoustic ritual 
-   and social hierarchy are a "Mountain"—an immutable law of Dublin 
-   hospitality and performance.
-   -------------------------------------------------------------------------- */
-constraint_indexing:constraint_classification(
-    bloom_acoustic_seduction_vigil,
-    mountain,
-    context(agent_power(institutional), time_horizon(historical), exit_options(trapped), spatial_scope(national))
-) :- !.
+% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (PITON)
+% Extreme Theater Ratio (0.89) indicates a Piton of atrophied social function.
+constraint_indexing:constraint_classification(ulysses_sirens_1904, piton,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(global))).
 
 /* ==========================================================================
-   4. TESTS
+   4. VALIDATION TESTS
    ========================================================================== */
 
-:- begin_tests(bloom_acoustic_seduction_tests).
+:- begin_tests(ulysses_sirens_1904_tests).
 
-test(multi_perspective_sirens) :-
-    constraint_indexing:constraint_classification(bloom_acoustic_seduction_vigil, T1, context(agent_power(individual_moderate), _, _, _)),
-    constraint_indexing:constraint_classification(bloom_acoustic_seduction_vigil, T2, context(agent_power(individual_powerless), _, _, _)),
-    T1 = rope, T2 = snare.
+test(perspectival_gap) :-
+    % Verify shift from Snare (Bloom) to Rope (Sirens). [cite: 13]
+    constraint_indexing:constraint_classification(ulysses_sirens_1904, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(ulysses_sirens_1904, rope, context(agent_power(institutional), _, _, _)).
 
-test(immutability_acoustic_scaling) :-
-    % Institutional view sees the Siren song as a Mountain
-    constraint_indexing:effective_immutability(historical, trapped, mountain).
+test(piton_theater_check) :-
+    % Piton classification requires theater_ratio >= 0.70. [cite: 13]
+    domain_priors:theater_ratio(ulysses_sirens_1904, TR),
+    TR >= 0.70.
 
-:- end_tests(bloom_acoustic_seduction_tests).
+:- end_tests(ulysses_sirens_1904_tests).
 
 /* ==========================================================================
-   5. MODEL INTERPRETATION & OMEGAS
+   5. GENERATIVE COMMENTARY
    ========================================================================== */
 
 /**
- * LLM GENERATION NOTES:
- * Refactored to eliminate the 'acoustic_vigil' mismatch. Mapping the claim 
- * to 'snare' allows the audit to detect if the music's "decoy" effect 
- * creates a "False Mountain" of aesthetic escape that masks a "Snare" 
- * of emotional extraction.
+ * LOGIC RATIONALE:
+ * Leopold Bloom experiences the Ormond bar as an auditory Snare—a site 
+ * where the "throb" of the music and the "trilling" of barmaids extracts 
+ * his emotional equilibrium. The high Theater Ratio (0.89) is the 
+ * defining property; the chapter is a "fugue" of onomatopoeia 
+ * ("Imperthnthn thnthnthn") that creates a spectacular performance  
+ * masking the atrophied function of genuine human connection.
  */
 
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
 omega_variable(
-    siren_intent_malice,
-    "Do the barmaids intentionally distract (Snare) or simply perform (Rope)?",
-    resolution_mechanism("Analysis of Lydia and Minnie's internal monologue vs external trilling"),
-    impact("If malice: Snare. If performance: Rope."),
-    confidence_without_resolution(low)
+    omega_auditory_entrapment,
+    "Is the 'pure, long and throbbing' call a Rope for beauty or a Snare for the soul?",
+    "Analysis of the 'decoy' effect vs the 'last rose of summer' resolution.",
+    "Beauty confirms a Rope; 'alluring' entrapment hardens the Snare.",
+    confidence_without_resolution(medium)
 ).
 
 /* ==========================================================================
-   6. ALTERNATIVE ANALYSIS
+   7. INTEGRATION HOOKS
    ========================================================================== */
 
-/**
- * VIABLE ALTERNATIVES:
- * 1. Immediate Confrontation: Bloom could have followed Boylan's car. 
- * Rejected/Suppressed by his "sluggish" temperament and the hotel's 
- * "acoustic lure".
- */
+narrative_ontology:interval(ulysses_sirens_1904, 0, 10).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Theater Ratio (Peaking as the music and trilling intensify toward the end) [cite: 12]
+narrative_ontology:measurement(us_tr_t0, ulysses_sirens_1904, theater_ratio, 0, 0.75).
+narrative_ontology:measurement(us_tr_t5, ulysses_sirens_1904, theater_ratio, 5, 0.92).
+narrative_ontology:measurement(us_tr_t10, ulysses_sirens_1904, theater_ratio, 10, 0.89).
+
+% Extraction (Bloom's psychological fatigue accumulating with the piano chords) [cite: 12]
+narrative_ontology:measurement(us_ex_t0, ulysses_sirens_1904, base_extractiveness, 0, 0.40).
+narrative_ontology:measurement(us_ex_t5, ulysses_sirens_1904, base_extractiveness, 5, 0.48).
+narrative_ontology:measurement(us_ex_t10, ulysses_sirens_1904, base_extractiveness, 10, 0.53).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
-
-
-% --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
-constraint_indexing:constraint_classification(ulysses_chp11, mountain, agent_power(analytical)).
-constraint_indexing:constraint_classification(ulysses_chp11, rope, agent_power(institutional)).
-constraint_indexing:constraint_classification(ulysses_chp11, snare, agent_power(individual_powerless)).

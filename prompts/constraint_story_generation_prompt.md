@@ -15,6 +15,7 @@ You are a constraint story generator for the Deferential Realism indexical class
 5. Your interpretation as the generating model (commented)
 6. Alternative analysis for Mandatrophy resolution (commented + Prolog)
 7. Integration hooks for the system
+8. Temporal measurements for lifecycle drift detection (Prolog facts)
 
 The output should be a **single .pl file** that can be loaded into the system and immediately used.
 
@@ -45,6 +46,15 @@ where:
 
 ```
 
+### The Chi Formula: χ = ε × π(P) × σ(S)
+
+Effective extraction (χ) is computed from base extraction (ε), power modifier π(P), and scope modifier σ(S):
+
+* **Power modifiers π(P)**: How much extraction the agent *feels*. `powerless=1.5`, `moderate=1.0`, `powerful=0.6`, `organized=0.4`, `institutional=-0.2`, `analytical=1.15`.
+* **Scope modifiers σ(S)**: How much scope affects verification difficulty. Larger scope = harder to verify = more extraction hidden behind complexity. `local=0.8`, `regional=0.9`, `national=1.0`, `continental=1.1`, `global=1.2`, `universal=1.0`.
+
+Suppression is a raw structural property — it is NOT scaled by power or scope. Only extractiveness is scaled.
+
 ---
 
 ## The Output Format: A Self-Contained Prolog File
@@ -58,8 +68,21 @@ Provide a human-readable header identifying the constraint ID, domain, and a bri
 Define the objective metrics of the constraint:
 
 * `domain_priors:base_extractiveness(id, Value).` ()
-* `domain_priors:suppression_score(id, Value).` (Coercion/Lack of alternatives)
+* `domain_priors:suppression_score(id, Value).` (Coercion/Lack of alternatives) **NOTE: Suppression is a structural property of the constraint. It is NOT scaled by any context dimension. Only extractiveness is scaled — by both power π(P) and scope σ(S) — per the formula χ = ε × π(P) × σ(S).**
+* `domain_priors:theater_ratio(id, Value).` (Piton detection: ratio of performative to functional activity)
 * `domain_priors:requires_active_enforcement(id).` (If applicable)
+
+Additionally, declare explicit `narrative_ontology:constraint_metric/3` facts mirroring the domain priors. These are the primary keys the classification engine uses:
+
+* `narrative_ontology:constraint_metric(id, extractiveness, Value).`
+* `narrative_ontology:constraint_metric(id, suppression_requirement, Value).`
+* `narrative_ontology:constraint_metric(id, theater_ratio, Value).`
+
+For **Tangled Rope** and **Scaffold** classification, the engine also checks structural properties that are **derived** from beneficiary/victim declarations:
+
+* `narrative_ontology:constraint_beneficiary(id, group).` — derives `has_coordination_function/1` (required for Tangled Rope and Scaffold)
+* `narrative_ontology:constraint_victim(id, group).` — derives `has_asymmetric_extraction/1` (required for Tangled Rope)
+* `domain_priors:requires_active_enforcement(id).` — required for Tangled Rope
 
 ### Section 3: Indexed Classifications
 
@@ -67,9 +90,16 @@ Define how different agents perceive the constraint using the `constraint_indexi
 
 **Mandatory Perspectives:**
 
-1. **The Subject**: `agent_power(individual_powerless)`, `exit_options(trapped)`. Usually classifies as **Snare** or **Mountain**.
+1. **The Subject**: `agent_power(powerless)`, `exit_options(trapped)`. Usually classifies as **Snare** or **Mountain**. **NOTE: Per the "Dynamic Coalition" extension, this agent's power may be upgraded to `organized` if the constraint is a snare with a number of victims exceeding `critical_mass_threshold`, potentially changing the classification.**
 2. **The Beneficiary**: `agent_power(institutional)`, `exit_options(mobile)`. Usually classifies as **Rope**.
-3. **The Analytical Observer**: `agent_power(analytical)`, `time_horizon(historical)`. Required for **Tangled Rope** detection.
+3. **The Analytical Observer**: `agent_power(analytical)`, `time_horizon(civilizational)`, `exit_options(analytical)`, `spatial_scope(global)`. This is the default analytical context. Required for **Tangled Rope** detection and serves as the basis for the system's computed `constraint_claim`.
+
+**Exception — Uniform-Type Constraints:**
+
+Some constraints classify identically from ALL perspectives. In these cases, the perspectival minimum is relaxed — you do not need powerless/institutional if they would produce the same type:
+
+* **Mountain-only (Natural Law)**: Logical/physical/mathematical limits (e.g., Gödel's Incompleteness, Halting Problem, speed of light). NL(C) → Mountain for all I. Base extraction ≤ 0.15, suppression ≤ 0.05. Include at least 2-3 perspectives to show the invariance, but all may be Mountain.
+* **Rope-only (Pure Coordination)**: Low-extraction coordination mechanisms where no agent perceives meaningful extraction (e.g., metasurface light steering, cooperative mineral sourcing). Base extraction ≤ 0.05, suppression low. Include at least 2 perspectives, but all may be Rope.
 
 ### Section 4: Validation Tests
 
@@ -86,6 +116,31 @@ Explain your reasoning for specific scores. Explicitly address **Perspectival Ga
 
 Identify at least one `omega_variable/5` for irreducible uncertainties (e.g., "Is this a Mountain of physics or a Snare of policy?").
 
+### Section 7: Integration Hooks
+
+Declare `narrative_ontology:interval(id, 0, 10).` for external script parsing.
+
+### Section 8: Temporal Measurements (Lifecycle Drift Data)
+
+Provide `narrative_ontology:measurement/5` facts that model how the constraint changed over its interval. These enable the lifecycle drift detection system to identify:
+
+* **Metric substitution** — theater_ratio rising above 0.5 indicates proxy goals replacing real function (Goodhart drift)
+* **Extraction accumulation** — base_extractiveness increasing over time indicates rent-seeking layered onto coordination
+
+**Required for high-extraction constraints** (base_extractiveness > 0.46). Use at least 3 time points (T=0, midpoint, T=end) for each tracked metric. Model the constraint's intensification or evolution:
+
+```prolog
+narrative_ontology:measurement(id_tr_t0, id, theater_ratio, 0, InitialTheater).
+narrative_ontology:measurement(id_tr_t5, id, theater_ratio, 5, MidTheater).
+narrative_ontology:measurement(id_tr_t10, id, theater_ratio, 10, FinalTheater).
+
+narrative_ontology:measurement(id_ex_t0, id, base_extractiveness, 0, InitialExtraction).
+narrative_ontology:measurement(id_ex_t5, id, base_extractiveness, 5, MidExtraction).
+narrative_ontology:measurement(id_ex_t10, id, base_extractiveness, 10, FinalExtraction).
+```
+
+The final values should match your Section 2 base properties. The initial values represent the constraint's state at the start of the interval. If the constraint was always severe, use a flatter trajectory; if it degraded over time, show the progression.
+
 ---
 
 ## Pre-Submission Validation Checklist
@@ -95,9 +150,33 @@ Before outputting your .pl file, verify:
 * [ ] **Threshold Accuracy**: Are Mountains  and Snares  base extraction?
 * [ ] **Beneficiaries/Victims declared**: At least one of each if extraction .
 * [ ] **Index Completeness**: Do your indices use the expanded 2026 values (e.g., `arbitrage`, `civilizational`)?
-* [ ] **Scaffold Check**: If Scaffold is used, does the commentary specify the `has_sunset_clause`?
+* [ ] **Suppression Check**: Suppression is a raw structural property (unscaled). Extractiveness is scaled by both power π(P) and scope σ(S) per χ = ε × π(P) × σ(S). Does the commentary reflect this?
+* [ ] **Coalition Check**: If the constraint is a snare with multiple victims, does the analysis consider the possibility of coalition power for `powerless` agents?
+* [ ] **Tangled Rope Check**: If Tangled Rope is used, does the file include `constraint_beneficiary/2` (coordination), `constraint_victim/2` (asymmetric extraction), AND `requires_active_enforcement/1`? All three are required by the canonical classifier.
+* [ ] **Scaffold Check**: If Scaffold is used, does the file include `has_sunset_clause/1` AND `constraint_beneficiary/2` (coordination function)?
 * [ ] **Piton Check**: If Piton is used, does the `theater_ratio` exceed ?
-* [ ] **Perspective Minimum**: At least one `individual_powerless` and one `institutional` perspective included.
+* [ ] **Scope Awareness**: Spatial scope now affects χ via σ(S). Local (σ=0.8) dampens extraction; global (σ=1.2) amplifies it. Do your perspectives use appropriate scopes?
+* [ ] **Perspective Minimum**: At least one `powerless` and one `institutional` perspective included — UNLESS the constraint is a uniform-type (mountain-only or rope-only), in which case any 2+ perspectives suffice.
+* [ ] **Temporal Data**: If base extraction > 0.46, include `measurement/5` facts at 3+ time points for `theater_ratio` and `base_extractiveness`.
+* [ ] **Constraint Metrics**: Include `narrative_ontology:constraint_metric/3` facts for `extractiveness`, `suppression_requirement`, and `theater_ratio` matching your domain priors values.
+* [ ] **Multifile Declarations**: Include `narrative_ontology:measurement/5`, `narrative_ontology:interval/3`, `narrative_ontology:constraint_metric/3`, and (if extraction > 0.46) `narrative_ontology:constraint_beneficiary/2` and `narrative_ontology:constraint_victim/2` in your multifile block.
+
+---
+
+## Corpus Balance Guidance
+
+The corpus needs balanced representation across all six types. When choosing scenarios for batch generation, prioritize the **underrepresented types**:
+
+| Type | Best Source Domains | Key Metric Signature |
+|------|-------------------|---------------------|
+| **Tangled Rope** (most needed) | Geopolitical treaties, regulatory frameworks, platform governance, public-private partnerships | ε ≥ 0.50, suppression ≥ 0.40, has both beneficiary AND victim, requires enforcement |
+| **Scaffold** (most needed) | Transitional policies, emergency measures, development programs, sunset legislation | ε ≤ 0.30, has beneficiary, has sunset clause, theater ≤ 0.70 |
+| **Snare** (needed) | Debt traps, predatory lending, coercive labor, monopolistic extraction, surveillance systems | ε ≥ 0.46, suppression ≥ 0.60, χ ≥ 0.66 |
+| **Mountain** (well-covered) | Mathematical theorems, physical laws, logical limits | ε ≤ 0.15, suppression ≤ 0.05, immutable |
+| **Rope** (well-covered) | Standards, protocols, cooperative agreements, coordination mechanisms | ε ≤ 0.15, χ ≤ 0.35 |
+| **Piton** (well-covered) | Degraded institutions, vestigial regulations, theatrical compliance | ε ≤ 0.10, theater ≥ 0.70 |
+
+**Scenarios that produce the richest perspectival gaps** (where powerless and institutional views diverge) come from: economic policy, labor regulation, healthcare access, housing markets, immigration systems, and platform economics. These domains naturally generate tangled ropes and snares with strong perspectival variance.
 
 ---
 

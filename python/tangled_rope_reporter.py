@@ -17,7 +17,7 @@ def parse_log_content(content):
             continue
 
         # Get the name of the constraint being tested in this chunk
-        name_match = re.search(r'Loading: \.\./prolog/testsets/(.+?)\.pl', chunk)
+        name_match = re.search(r'Loading:.*?testsets/(.+?)\.pl', chunk)
         if not name_match:
             continue
         constraint_name = name_match.group(1)
@@ -57,7 +57,7 @@ def parse_log_content(content):
                 continue
             
             classification = match.group(1)
-            if 'individual_powerless' in line:
+            if 'powerless' in line:
                 tr_data['powerless_view'] = classification
             elif 'institutional' in line:
                 tr_data['institutional_view'] = classification
@@ -161,6 +161,8 @@ def main():
         print("Report generated successfully.")
     else:
         print("No constraints classified as Tangled Ropes found in the log file.")
+        with open(report_file, 'w', encoding='utf-8') as f:
+            f.write("# Tangled Rope Diagnostic Report\n\n**Total Unique Tangled Ropes Found:** 0\n")
 
 if __name__ == '__main__':
     main()

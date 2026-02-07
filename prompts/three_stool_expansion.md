@@ -25,9 +25,9 @@ The output should be a **single .pl file** that can be loaded into the system an
 ### The Four Indices (WHO/WHEN/WHERE/HOW)
 
 **1. Agent Power:**
-- `individual_powerless`: Subject to rules, cannot shape them (serf, prisoner, child)
+- `powerless`: Subject to rules, cannot shape them (serf, prisoner, child)
 - `individual_moderate`: Some agency, limited rule-shaping (middle class, citizen)
-- `individual_powerful`: Significant influence (wealthy, politically connected)
+- `powerful`: Significant influence (wealthy, politically connected)
 - `collective_organized`: Coordinated group power (union, movement)
 - `institutional`: Rule-making power (state, corporation, supervisor)
 - `analytical`: Observer, not participant (historian, philosopher, awakened subject)
@@ -420,7 +420,7 @@ If alternatives are encouraged → definitely Rope
 ### 8.  Mandatory Perspectival Classifications
 
 For any constraint with base_extractiveness > 0.3, you MUST provide:
-1. At least one classification from `agent_power(individual_powerless)` 
+1. At least one classification from `agent_power(powerless)` 
 2. At least one classification from `agent_power(institutional)`
 
 This enables perspectival gap detection and Ω generation.
@@ -493,7 +493,7 @@ Multifile Declarations: You MUST include :- multifile domain_priors:base_extract
 
 The Structural Anchor: Include narrative_ontology:interval(id, 0, 10). so the Python script can extract the ID.
 
-Perspectival Minimums: You must provide at least one classification for agent_power(individual_powerless) and one for agent_power(institutional) to allow the Perspectival Gap Analysis to function.
+Perspectival Minimums: You must provide at least one classification for agent_power(powerless) and one for agent_power(institutional) to allow the Perspectival Gap Analysis to function.
 
 ---
 
@@ -504,7 +504,7 @@ Before outputting your .pl file, verify:
 - [ ] **Beneficiaries declared**: At least one `constraint_beneficiary()` if extractiveness > 0.3
 - [ ] **Victims declared**: At least one `constraint_victim()` if extractiveness > 0.3  
 - [ ] **Omegas formalized**: Every ambiguity in commentary has corresponding `omega_variable()`
-- [ ] **Perspective minimum**: At least one `individual_powerless` and one `institutional` perspective
+- [ ] **Perspective minimum**: At least one `powerless` and one `institutional` perspective
 - [ ] **Type variance**: At least 2 different constraint types across perspectives
 - [ ] **Tests validate insights**: Each test demonstrates something about power/time/exit dynamics
 - [ ] **Commentary honesty**: Section 5 explains YOUR reasoning, not just describes the constraint

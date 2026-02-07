@@ -97,11 +97,12 @@ load_and_run(File, IntervalID) :-
         % FIX: Repair ALL intervals found in the KB, not just the primary one.
         format('[SCENARIO MANAGER] Performing Global Repair...~n'),
         forall(narrative_ontology:interval(ID, _, _), 
-               v3_1_data_repair:repair_interval(ID)),
+               data_repair:repair_interval(ID)),
         
         % Proceed with the standard test suite
         test_harness:run_all_tests(IntervalID)
-    ;   format('[ERROR] File ~w not found.~n', [File])
+    ;   format('[ERROR] File ~w not found.~n', [File]),
+        fail
     ).
 
 % 6. HELPER

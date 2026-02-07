@@ -7,30 +7,43 @@
 ]).
 
 :- use_module(narrative_ontology).
-:- use_module(v3_1_config).
-:- use_module(v3_1_coercion_projection).
-:- use_module(v3_1_data_repair).
+:- use_module(config).
+:- use_module(coercion_projection).
+:- use_module(data_repair).
 :- use_module(data_verification).
 :- use_module(pattern_analysis).
 :- use_module(intent_engine).
 :- use_module(constraint_bridge).
 :- use_module(constraint_indexing).
 :- use_module(drl_core).
+:- use_module(drl_lifecycle).
 :- use_module(report_generator).
+:- use_module(logical_fingerprint).
 
-% Alias for quick execution using the most recent target
+% Run all registered test cases from validation_suite, or fall back to single ID
 run_all_tests :-
-    run_all_tests('tax_code_section_469'). % Targeted ID from your analysis
+    (   current_predicate(validation_suite:test_case/4)
+    ->  findall(ID, validation_suite:test_case(_, ID, _, _), IDs),
+        sort(IDs, UniqueIDs),
+        length(UniqueIDs, N),
+        format('~n>>> Running ~w registered test intervals~n', [N]),
+        forall(member(IntervalID, UniqueIDs),
+               (   catch(run_all_tests(IntervalID), E,
+                         format('[ERROR] ~w failed: ~w~n', [IntervalID, E]))
+               ))
+    ;   format('~n>>> No validation_suite loaded, running default interval~n'),
+        run_all_tests('tax_code_section_469')
+    ).
 
 run_all_tests(IntervalID) :-
     constraint_indexing:default_context(Ctx),
     run_all_tests(IntervalID, Ctx).
 
 run_all_tests(IntervalID, Context) :-
-    format('~n>>> INITIATING v3.2.0 DR-AUDIT SUITE: ~w~n', [IntervalID]),
+    format('~n>>> INITIATING DR-AUDIT SUITE: ~w~n', [IntervalID]),
     
     % Step 1: Data Repair
-    v3_1_data_repair:repair_interval(IntervalID),
+    data_repair:repair_interval(IntervalID),
 
     % Step 2: Verification Gate
     (   data_verification:verify_all,
@@ -42,11 +55,32 @@ run_all_tests(IntervalID, Context) :-
     forall(narrative_ontology:constraint_claim(C, _),
            constraint_indexing:compare_perspectives(C, Context)),
 
+    % Step 3b: Per-Index Validation
+    % For each declared classification, compute dr_type and compare.
+    % Mismatches are informational - they show where domain priors
+    % differ from computed classifications (desired behavior).
+    validate_per_index(IntervalID),
+
     % Step 4: Intent and Reporting
     intent_engine:analyze_intent(IntervalID),
     constraint_bridge:dr_diagnostic_report(IntervalID),
 
-    % Step 5: System Insights (New)
+    % Step 5: Lifecycle Drift Analysis
+    format('~n--- LIFECYCLE DRIFT ANALYSIS ---~n'),
+    drl_lifecycle:generate_drift_report,
+
+    % Step 5b: Scope Effect Analysis
+    format('~n--- SCOPE EFFECT ANALYSIS ---~n'),
+    format('  Formula: χ = ε × π(P) × σ(S)~n'),
+    forall(narrative_ontology:constraint_claim(C, _),
+           report_scope_effect(C)),
+
+    % Step 5c: Logical Fingerprint
+    format('~n--- LOGICAL FINGERPRINT ---~n'),
+    forall(narrative_ontology:constraint_claim(C2, _),
+           ( catch(logical_fingerprint:print_fingerprint(C2), _, true) )),
+
+    % Step 6: System Insights
     format('~n--- SYSTEM INSIGHTS ---~n'),
     narrative_ontology:count_unresolved_omegas(OmegaCount),
     format('  Omegas Identified: ~w~n', [OmegaCount]),
@@ -65,6 +99,46 @@ load_scenario(Path) :-
     consult(Path),
     format('~n[SCENARIO] Successfully loaded: ~w~n', [Path]).
 load_scenario(Path) :-
-    \+ exists_file(Path), 
+    \+ exists_file(Path),
     format('~n[ERROR] Scenario file not found: ~w~n', [Path]),
     fail.
+
+%% validate_per_index(+IntervalID)
+%  For each declared classification, compute dr_type and compare.
+%  Mismatches between declared and computed types are informational -
+%  they indicate sites where domain priors differ from metric-based
+%  computation, which is the desired behavior (priors as input, not ground truth).
+validate_per_index(IntervalID) :-
+    format('~n--- PER-INDEX VALIDATION ---~n'),
+    forall(
+        constraint_indexing:constraint_classification(IntervalID, DeclaredType, Ctx),
+        (   catch(drl_core:dr_type(IntervalID, Ctx, ComputedType), _, fail)
+        ->  (   DeclaredType = ComputedType
+            ->  format('  [INDEX OK] ~w from ~w: declared=~w, computed=~w~n',
+                       [IntervalID, Ctx, DeclaredType, ComputedType])
+            ;   format('  [INDEX MISMATCH] ~w from ~w: declared=~w, computed=~w~n',
+                       [IntervalID, Ctx, DeclaredType, ComputedType])
+            )
+        ;   format('  [INDEX ERROR] ~w: dr_type failed for context ~w~n',
+                   [IntervalID, Ctx])
+        )
+    ).
+
+%% report_scope_effect(+Constraint)
+%  Shows how scope modifier differentiates chi across standard contexts.
+%  Formula: χ = ε × π(P) × σ(S)
+report_scope_effect(C) :-
+    (   drl_core:base_extractiveness(C, Epsilon)
+    ->  format('  ~w (ε=~2f):~n', [C, Epsilon]),
+        forall(
+            member(Power-Scope, [powerless-local, moderate-national,
+                                 institutional-national, analytical-global]),
+            (   constraint_indexing:power_modifier(Power, Pi),
+                constraint_indexing:scope_modifier(Scope, Sigma),
+                Chi is Epsilon * Pi * Sigma,
+                format('    ~w@~w: χ = ~2f × ~2f × ~2f = ~3f~n',
+                       [Power, Scope, Epsilon, Pi, Sigma, Chi])
+            )
+        )
+    ;   format('  ~w: no extractiveness data~n', [C])
+    ).

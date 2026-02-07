@@ -7,7 +7,7 @@
 
 :- use_module(library(lists)).
 :- use_module(narrative_ontology).
-:- use_module(v3_1_config).
+:- use_module(config).
 
 /* ================================================================
    STRUCTURAL SIGNATURE DETECTION v3.2
@@ -40,10 +40,14 @@
 
 %% constraint_signature(+ConstraintID, -Signature)
 %  Main entry point: classifies structural signature
-%  Returns: natural_law | coordination_scaffold | constructed_constraint | ambiguous
+%  Returns: natural_law | coordination_scaffold | piton_signature
+%         | constructed_low_extraction | constructed_high_extraction
+%         | constructed_constraint | ambiguous
 constraint_signature(C, Signature) :-
     get_constraint_profile(C, Profile),
-    classify_by_signature(Profile, Signature).
+    config:param(extractiveness_metric_name, ExtMetricName),
+    get_metric_average(C, ExtMetricName, Extraction),
+    classify_by_signature(Profile, Extraction, Signature).
 
 /* ================================================================
    PROFILE EXTRACTION
@@ -63,9 +67,11 @@ get_constraint_profile(C,
                              BeneficiaryCount, HasAlternatives, 
                              TemporalStability, CoordinationSuccess)) :-
     
+    config:param(suppression_metric_name, SuppMetricName),
+    
     % Get averaged metrics across all levels
     get_metric_average(C, accessibility_collapse, AccessCollapse),
-    get_metric_average(C, suppression_requirement, Suppression),
+    get_metric_average(C, SuppMetricName, Suppression),
     get_metric_average(C, resistance, Resistance),
     
     % Count asymmetric beneficiaries
@@ -75,7 +81,7 @@ get_constraint_profile(C,
     has_viable_alternatives(C, HasAlternatives),
     
     % Compute temporal stability
-    compute_temporal_stability(C, TemporalStability),
+    compute_temporal_stability(C, SuppMetricName, TemporalStability),
     
     % Check coordination success pattern
     CoordinationSuccess = (AccessCollapse > 0.8, Suppression < 0.2).
@@ -113,10 +119,10 @@ has_viable_alternatives(_, false).
 %% compute_temporal_stability(+Constraint, -Stability)
 %  Measures whether constraint metrics remain stable over time
 %  Returns: stable | evolving
-compute_temporal_stability(C, Stability) :-
+compute_temporal_stability(C, MetricName, Stability) :-
     % Get suppression values at different time points for this constraint
     findall(Val, 
-            narrative_ontology:constraint_metric(C, suppression_requirement, Val),
+            narrative_ontology:constraint_metric(C, MetricName, Val),
             Vals),
     (   Vals = []
     ->  Stability = unknown
@@ -158,19 +164,33 @@ compute_variance(Vals, Variance) :-
    4. Otherwise: ambiguous
    ================================================================ */
 
-classify_by_signature(Profile, natural_law) :-
+classify_by_signature(Profile, _, natural_law) :-
     natural_law_signature(Profile), !.
 
-classify_by_signature(Profile, coordination_scaffold) :-
+classify_by_signature(Profile, _, coordination_scaffold) :-
     coordination_scaffold_signature(Profile), !.
 
-classify_by_signature(Profile, piton_signature) :-
+classify_by_signature(Profile, _, piton_signature) :-
     piton_signature(Profile), !.
 
-classify_by_signature(Profile, constructed_constraint) :-
+% Constructed constraint sub-signatures (extraction-aware):
+% Low extraction (ε ≤ rope_chi_ceiling): enforcement exists but extraction is low → rope-like
+classify_by_signature(Profile, Extraction, constructed_low_extraction) :-
+    constructed_constraint_signature(Profile),
+    config:param(rope_chi_ceiling, RopeChi),
+    Extraction =< RopeChi, !.
+
+% High extraction (ε ≥ snare_epsilon_floor): high extraction construct → snare-like
+classify_by_signature(Profile, Extraction, constructed_high_extraction) :-
+    constructed_constraint_signature(Profile),
+    config:param(snare_epsilon_floor, SnareEps),
+    Extraction >= SnareEps, !.
+
+% Mid extraction (between rope_chi_ceiling and snare_epsilon_floor): genuinely tangled
+classify_by_signature(Profile, _, constructed_constraint) :-
     constructed_constraint_signature(Profile), !.
 
-classify_by_signature(_, ambiguous).
+classify_by_signature(_, _, ambiguous).
 
 /* ================================================================
    SIGNATURE 1: NATURAL LAW
@@ -199,13 +219,13 @@ natural_law_signature(profile(AccessCollapse, Suppression, Resistance,
                              TemporalStability, _CoordinationSuccess)) :-
     
     % Metric conditions
-    v3_1_config:param(natural_law_collapse_min, CollapseMin),
+    config:param(natural_law_collapse_min, CollapseMin),
     AccessCollapse >= CollapseMin,  % Default: 0.85
     
-    v3_1_config:param(natural_law_suppression_max, SuppMax),
+    config:param(natural_law_suppression_max, SuppMax),
     Suppression =< SuppMax,  % Default: 0.15
     
-    v3_1_config:param(natural_law_resistance_max, ResMax),
+    config:param(natural_law_resistance_max, ResMax),
     Resistance =< ResMax,  % Default: 0.15
     
     % Structural conditions (CRITICAL for distinguishing from coordination)
@@ -245,13 +265,13 @@ coordination_scaffold_signature(profile(AccessCollapse, Suppression, Resistance,
                                        _TemporalStability, _CoordinationSuccess)) :-
     
     % Metric conditions (same as natural law)
-    v3_1_config:param(coordination_collapse_min, CollapseMin),
+    config:param(coordination_collapse_min, CollapseMin),
     AccessCollapse >= CollapseMin,  % Default: 0.85
     
-    v3_1_config:param(coordination_suppression_max, SuppMax),
+    config:param(coordination_suppression_max, SuppMax),
     Suppression =< SuppMax,  % Default: 0.15
     
-    v3_1_config:param(coordination_resistance_max, ResMax),
+    config:param(coordination_resistance_max, ResMax),
     Resistance =< ResMax,  % Default: 0.15
     
     % Structural conditions (DIFFERENT from natural law)
@@ -413,34 +433,23 @@ compute_signature_confidence(Profile, piton_signature, Confidence) :-
 
 
 compute_signature_confidence(Profile, constructed_constraint, Confidence) :-
-
     Profile = profile(_, Suppression, Resistance, BeneficiaryCount, _, _, _),
-
-    
-
-    % Count enforcement indicators
-
     findall(1, (
-
         (Suppression > 0.5);
-
         (Resistance > 0.5);
-
         (BeneficiaryCount > 2)
-
     ), Indicators),
-
     length(Indicators, Count),
-
-    
-
     (   Count >= 2 -> Confidence = high
-
     ;   Count >= 1 -> Confidence = medium
-
     ;   Confidence = low
-
     ).
+
+% Sub-signature confidence delegates to constructed_constraint base
+compute_signature_confidence(Profile, constructed_low_extraction, Confidence) :-
+    compute_signature_confidence(Profile, constructed_constraint, Confidence).
+compute_signature_confidence(Profile, constructed_high_extraction, Confidence) :-
+    compute_signature_confidence(Profile, constructed_constraint, Confidence).
 
 
 
@@ -476,8 +485,26 @@ explain_signature(C, constructed_constraint, Explanation) :-
     get_constraint_profile(C, Profile),
     Profile = profile(_, S, R, BC, _, _, _),
     format(atom(Explanation),
-           'CONSTRUCTED CONSTRAINT signature for ~w: Active enforcement detected (suppression=~2f, resistance=~2f) with ~d asymmetric beneficiaries. This is an institutionally maintained rule requiring ongoing suppression energy.',
+           'CONSTRUCTED CONSTRAINT signature for ~w: Active enforcement detected (suppression=~2f, resistance=~2f) with ~d asymmetric beneficiaries. Mid-extraction range: genuinely tangled coordination/extraction mix.',
            [C, S, R, BC]).
+
+explain_signature(C, constructed_low_extraction, Explanation) :-
+    get_constraint_profile(C, Profile),
+    Profile = profile(_, S, R, _, _, _, _),
+    config:param(extractiveness_metric_name, ExtMetricName),
+    get_metric_average(C, ExtMetricName, Ext),
+    format(atom(Explanation),
+           'CONSTRUCTED LOW-EXTRACTION signature for ~w: Enforcement present (suppression=~2f, resistance=~2f) but extraction is low (~2f). This is a rule-based coordination structure, not an extraction mechanism.',
+           [C, S, R, Ext]).
+
+explain_signature(C, constructed_high_extraction, Explanation) :-
+    get_constraint_profile(C, Profile),
+    Profile = profile(_, S, R, _, _, _, _),
+    config:param(extractiveness_metric_name, ExtMetricName),
+    get_metric_average(C, ExtMetricName, Ext),
+    format(atom(Explanation),
+           'CONSTRUCTED HIGH-EXTRACTION signature for ~w: Enforcement present (suppression=~2f, resistance=~2f) with high extraction (~2f). This is an extraction mechanism that metrics failed to classify as snare.',
+           [C, S, R, Ext]).
 
 explain_signature(C, ambiguous, Explanation) :-
     format(atom(Explanation),
@@ -502,14 +529,31 @@ integrate_signature_with_modal(C, ModalType, AdjustedType) :-
     constraint_signature(C, Signature),
     resolve_modal_signature_conflict(ModalType, Signature, AdjustedType).
 
-% Natural laws stay as mountains (correct classification)
-resolve_modal_signature_conflict(mountain, natural_law, mountain) :- !.
+% -----------------------------------------------------------------------
+% SIGNATURE OVERRIDE RULE (logic.md §III-A, Rule NL):
+%   NL(C) → Mountain (▪) regardless of metric-based classification.
+%   Natural Law is the strongest structural signal. If a constraint
+%   passes the NL signature test (extreme collapse, zero enforcement,
+%   no alternatives, no beneficiaries, temporally stable), it IS a
+%   Mountain no matter what the metric classifier says.
+% -----------------------------------------------------------------------
+resolve_modal_signature_conflict(_, natural_law, mountain) :- !.
 
 % Coordination scaffolds should be ROPES not mountains
 resolve_modal_signature_conflict(mountain, coordination_scaffold, rope) :- !.
 
 % Constructed constraints override mountain classification
+resolve_modal_signature_conflict(mountain, constructed_low_extraction, rope) :- !.
+resolve_modal_signature_conflict(mountain, constructed_high_extraction, tangled_rope) :- !.
 resolve_modal_signature_conflict(mountain, constructed_constraint, tangled_rope) :- !.
+
+% When metrics fail (unknown), signature provides extraction-aware classification
+resolve_modal_signature_conflict(unknown, coordination_scaffold, rope) :- !.
+resolve_modal_signature_conflict(unknown, constructed_low_extraction, rope) :- !.
+resolve_modal_signature_conflict(unknown, constructed_high_extraction, snare) :- !.
+resolve_modal_signature_conflict(unknown, constructed_constraint, tangled_rope) :- !.
+resolve_modal_signature_conflict(unknown, piton_signature, piton) :- !.
+resolve_modal_signature_conflict(unknown, ambiguous, unknown) :- !.
 
 % No conflict - keep original classification
 resolve_modal_signature_conflict(ModalType, _, ModalType).

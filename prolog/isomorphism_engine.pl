@@ -8,7 +8,7 @@
 :- use_module(structural_signatures).
 :- use_module(narrative_ontology).
 :- use_module(domain_priors).
-:- use_module(v3_1_config).
+:- use_module(config).
 
 %% find_isomorphism(+ConstraintA, -ConstraintB, -SimilarityScore)
 %  Calculates the structural similarity between two constraints based on 
@@ -19,7 +19,7 @@ find_isomorphism(C1, C2, Score) :-
     structural_signatures:get_constraint_profile(C2, Profile2),
     calculate_profile_distance(Profile1, Profile2, Distance),
     Score is 1.0 - Distance,
-    v3_1_config:param(isomorphism_threshold, T),
+    config:param(isomorphism_threshold, T),
     Score >= T.
 
 %% calculate_profile_distance(+P1, +P2, -Distance)

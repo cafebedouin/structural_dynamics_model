@@ -118,7 +118,7 @@ constraint_indexing:constraint_classification(
     carbon_credit_trading_canonical, 
     snare, 
     context( 
-        agent_power(individual_powerless), 
+        agent_power(powerless), 
         time_horizon(biographical), 
         exit_options(trapped), 
         spatial_scope(local) 

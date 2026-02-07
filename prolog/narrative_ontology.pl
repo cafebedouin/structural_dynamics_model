@@ -28,7 +28,6 @@
     % Tangled rope category (Added January 2026)
     constraint_type/1,
     constraint_type_name/2,
-    constraint_type_threshold/4,
     is_tangled_rope/1,
     has_coordination_function/1,
     has_asymmetric_extraction/1,
@@ -39,6 +38,8 @@
     % Validation entry point
     validate_ontology/0
 ]).
+
+:- use_module(config). % Added to allow access to configuration parameters
 
 /* ============================================================
    1. MULTIFILE & DYNAMIC DECLARATIONS
@@ -52,7 +53,7 @@
     intent_beneficiary_class/2, intent_power_change/3,
     intent_suppression_level/4, intent_resistance_level/4,
     intent_norm_strength/3, theater_ratio/2,
-    constraint_beneficiary/2, constraint_victim/2.
+    constraint_beneficiary/2, constraint_victim/2, input_vector/2.
 
 :- dynamic
     attribute/3, has_mandatrophy_declaration/1,
@@ -64,7 +65,7 @@
     intent_beneficiary_class/2, intent_power_change/3,
     intent_suppression_level/4, intent_resistance_level/4,
     intent_norm_strength/3, constraint_claim/3,
-    constraint_beneficiary/2, constraint_victim/2.
+    constraint_beneficiary/2, constraint_victim/2, input_vector/2.
 
 /* ============================================================
    2. VALIDATION LOGIC
@@ -99,7 +100,7 @@ validate_ontology :-
 validate_entities :-
     forall(entity(ID,Type),
         ( atom(ID),
-          member(Type, [individual_powerless, individual_powerful, 
+          member(Type, [powerless, powerful, 
                         institutional, analytical, class])
         -> true
         ;  format('ERROR: Invalid entity(~w,~w)~n',[ID,Type]), fail
@@ -124,7 +125,10 @@ validate_events :-
 %  Added tangled_rope category (January 2026) based on empirical validation of 467 constraints.
 validate_constraint_claims :-
     forall(constraint_claim(Name, Type),
-        ( member(Type, [mountain, rope, tangled_rope, snare, piton])
+        ( % Skip list-wrapped legacy claims (data artifacts from older testset format)
+          (is_list(Name) ; is_list(Type))
+        -> true
+        ; member(Type, [mountain, rope, tangled_rope, snare, scaffold, piton])
         -> true
         ;  format('ERROR: Ontological Violation in ~w: "~w" is not a valid constraint type.~n', [Name, Type]),
            fail
@@ -196,6 +200,7 @@ constraint_type(mountain).
 constraint_type(rope).
 constraint_type(tangled_rope).  % Validated by corpus analysis (168/467 constraints, 36%)
 constraint_type(snare).
+constraint_type(scaffold).
 constraint_type(piton).
 
 %% constraint_type_name(?Type, ?Name)
@@ -204,25 +209,25 @@ constraint_type_name(mountain, 'Mountain (Natural Constraint)').
 constraint_type_name(rope, 'Rope (Pure Coordination)').
 constraint_type_name(tangled_rope, 'Tangled Rope (Hybrid Coordination/Extraction)').
 constraint_type_name(snare, 'Snare (Pure Extraction)').
+constraint_type_name(scaffold, 'Scaffold (Temporary Support)').
 constraint_type_name(piton, 'Piton (Degraded Coordination)').
 
 
-%% constraint_type_threshold(?Type, ?Metric, ?Min, ?Max)
-%  Quantification thresholds for constraint type classification.
-constraint_type_threshold(mountain, extractiveness, 0.0, 0.20).
-constraint_type_threshold(rope, extractiveness, 0.0, 0.40).
-constraint_type_threshold(tangled_rope, extractiveness, 0.40, 0.90).
-constraint_type_threshold(tangled_rope, suppression, 0.50, 1.00).
-constraint_type_threshold(snare, extractiveness, 0.65, 1.00).
-
 %% is_tangled_rope(+ConstraintID)
-%  Tangled rope signature detection.
-%  Must have BOTH coordination function AND asymmetric extraction.
+%  Tangled rope signature detection (ontological quick-check).
+%  Uses §5B epsilon thresholds for base extraction check.
+%  NOTE: For full dual-threshold classification (χ AND ε), use drl_core:dr_type/3.
+%  This predicate checks ontological properties only (no power-scaling).
 is_tangled_rope(ConstraintID) :-
-    domain_priors:base_extractiveness(ConstraintID, E),
-    E >= 0.40, E =< 0.90,
-    domain_priors:suppression_score(ConstraintID, S),
-    S >= 0.50,
+    config:param(extractiveness_metric_name, ExtMetricName),
+    narrative_ontology:constraint_metric(ConstraintID, ExtMetricName, E),
+    config:param(tangled_rope_epsilon_floor, TR_E_Floor),
+    config:param(tangled_rope_chi_ceil, TR_E_Ceil),
+    E >= TR_E_Floor, E =< TR_E_Ceil,
+    config:param(suppression_metric_name, SuppMetricName),
+    narrative_ontology:constraint_metric(ConstraintID, SuppMetricName, S),
+    config:param(tangled_rope_suppression_floor, TR_S_Floor),
+    S >= TR_S_Floor,
     domain_priors:requires_active_enforcement(ConstraintID),
     % Must have both coordination function AND extraction
     has_coordination_function(ConstraintID),
@@ -251,7 +256,8 @@ has_asymmetric_extraction(ConstraintID) :-
 % Indexical Gate: Flags Mountains that are actually Shadow Nooses.
 check_indexical_relativity(ID) :-
     constraint_indexing:constraint_classification(ID, mountain, _),
-    domain_priors:base_extractiveness(ID, E),
+    config:param(extractiveness_metric_name, ExtMetricName),
+    narrative_ontology:constraint_metric(ID, ExtMetricName, E),
     E > 0.7,
     % Require a manual "Mandatrophy Acknowledgement" in the file metadata
     \+ has_mandatrophy_declaration(ID).
@@ -280,7 +286,8 @@ is_mandatrophy_resolved(planetary_boundaries). % The Biological Limit is the Man
 % This rule is updated to exempt "Hardened Mandatrophy."
 detect_omega(Name, mandatrophy) :-
     constraint_indexing:constraint_classification(Name, mountain, _),
-    domain_priors:base_extractiveness(Name, E),
+    config:param(extractiveness_metric_name, ExtMetricName),
+    narrative_ontology:constraint_metric(Name, ExtMetricName, E),
     E > 0.7,
     % The Paradox: A Mountain (Fact) behaves like a Snare (Trap).
     % If the domain is recognized as Mandatrophic, it is no longer an Omega.
@@ -293,7 +300,8 @@ count_unresolved_omegas(Count) :-
 % Mandatrophy Detector: Flags Mountains that function as Traps.
 detect_mandatrophy_omega(ID) :-
     constraint_indexing:constraint_classification(ID, mountain, _),
-    domain_priors:base_extractiveness(ID, E),
+    config:param(extractiveness_metric_name, ExtMetricName),
+    narrative_ontology:constraint_metric(ID, ExtMetricName, E),
     E > 0.7,
     % Check for the explicit resolution marker in the file
     \+ is_indexical_resolution_declared(ID).

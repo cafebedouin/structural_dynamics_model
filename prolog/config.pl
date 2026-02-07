@@ -1,0 +1,214 @@
+:- module(config, [
+    param/2,
+    aggregation_weights/5,
+    influence_weight/2,
+    level/1
+]).
+
+:- multifile param/2.
+:- dynamic param/2.
+
+/* ================================================================
+   1. HIERARCHY DEFINITIONS
+   ================================================================ */
+
+%% level(?Level)
+% Defines the four analytical levels of the system.
+level(structural).
+level(organizational).
+level(class).
+level(individual).
+
+% --- General Metric Naming (for dynamic dispatch) ---
+param(suppression_metric_name, suppression_requirement).
+param(extractiveness_metric_name, extractiveness).
+param(temporal_metric_name, time_horizon).
+param(exit_metric_name, exit_options).
+param(power_metric_name, agent_power).
+param(scope_metric_name, spatial_scope).
+param(theater_metric_name, theater_ratio).
+
+/* ================================================================
+   2. COMPONENT WEIGHTS (Alpha)
+   Maps components (A, S, U, R) to magnitude (Kappa) per level.
+   Formula: $\kappa = (\alpha_A \cdot A) + (\alpha_S \cdot S) + (\alpha_U \cdot U) + (\alpha_R \cdot R)$.
+   ================================================================ */
+
+%% aggregation_weights(+Level, -AlphaA, -AlphaS, -AlphaU, -AlphaR)
+% Weights are shifted based on level-specific significance.
+aggregation_weights(structural,     0.30, 0.20, 0.20, 0.20).
+aggregation_weights(organizational, 0.30, 0.40, 0.15, 0.15).
+aggregation_weights(class,          0.30, 0.20, 0.30, 0.30).
+aggregation_weights(individual,     0.25, 0.25, 0.25, 0.25).
+
+/* ================================================================
+   3. INFLUENCE WEIGHTS (w_i)
+   Determines how much each level contributes to the System Gradient (Gsys).
+   ================================================================ */
+
+%% influence_weight(+Level, -Weight)
+influence_weight(structural,     0.40). % Highest impact on system stability.
+influence_weight(organizational, 0.30).
+influence_weight(class,          0.20).
+influence_weight(individual,     0.10).
+
+/* ================================================================
+   4. POWER MODIFIERS (pi)
+   Determines how much of the base extraction is "felt" by the agent.
+   ================================================================ */
+
+% Aligned with core.md spec (Section: Power-Scaling)
+param(power_modifier_powerless, 1.5).      % Extraction amplified
+param(power_modifier_moderate, 1.0).       % Baseline
+param(power_modifier_powerful, 0.6).       % Extraction reduced
+param(power_modifier_organized, 0.4).      % Shared burden (collective)
+param(power_modifier_institutional, -0.2). % Net beneficiary
+param(power_modifier_analytical, 1.15).    % Analytical clarity: detects extraction moderate agents normalize
+
+/* ================================================================
+   4A. COALITION MODELING (The "Who" Extension)
+   ================================================================ */
+
+% If this many victims share a snare, they get the 'organized' power modifier.
+param(critical_mass_threshold, 3).
+
+/* ================================================================
+   4B. SCOPE MODIFIERS (sigma)
+   Determines how scope affects verification difficulty and thus
+   effective extraction. Larger scope = harder verification = more
+   extraction hidden behind complexity.
+   Formula: χ = ε × π(P) × σ(S)
+   ================================================================ */
+
+param(scope_modifier_local,        0.8).   % Easy verification, extraction dampened
+param(scope_modifier_regional,     0.9).   % Easier verification
+param(scope_modifier_national,     1.0).   % Baseline
+param(scope_modifier_continental,  1.1).   % Harder verification
+param(scope_modifier_global,       1.2).   % Hardest verification, extraction amplified
+param(scope_modifier_universal,    1.0).   % Neutral (natural laws)
+
+/* ================================================================
+   5. INTENT & DETECTION THRESHOLDS
+   Consolidated parameters for the intent_engine and pattern_analysis.
+   ================================================================ */
+
+% --- Gradient Thresholds ---
+% Minimum change to be considered non-stable.
+param(system_gradient_threshold, 0.01).
+% Threshold for "Strong" intent classification.
+param(system_gradient_strong_threshold, 1.00).
+
+% --- Beneficiary Asymmetry ---
+% Min power gain required to be identified as the "Main Beneficiary".
+param(beneficiary_gain_min, 0.50).
+% Max gain allowed for other classes to maintain "Asymmetry".
+param(loser_loss_max_gain, 0.10).
+
+% --- Suppression & Resistance Alignment ---
+% Required thresholds for structural-level alignment.
+param(structural_suppression_min, 0.70). 
+param(structural_resistance_min, 0.70).
+
+% --- Data Integrity ---
+% Thresholds for high/medium confidence classification.
+param(data_high_threshold, 0.95).
+param(data_medium_threshold, 0.75).
+
+/* ================================================================
+   5. DEFERENTIAL REALISM (DR) THRESHOLDS
+   ================================================================ */
+
+% --- Mountain Boundaries ---
+param(mountain_suppression_ceiling, 0.05). % noise floor
+param(mountain_extractiveness_min, 0.0).
+param(mountain_extractiveness_max, 0.15).
+
+% --- Rope Boundaries ---
+% Aligned with core.md: Rope = low extraction, ε ≤ 0.15
+param(rope_extractiveness_min, 0.0).
+% Base suppression ceiling for pure coordination
+param(rope_suppression_ceiling,      0.16).
+
+% --- Tangled Rope (Hybrid Zone) ---
+% Note: Tangled Rope requires BOTH coordination AND extraction markers.
+param(tangled_rope_suppression_floor, 0.40). % Requires active enforcement
+param(tangled_rope_suppression_ceil, 1.00).
+
+% --- Snare Boundaries ---
+param(snare_extraction_ceil,         1.00).
+param(snare_suppression_floor,       0.60).
+param(snare_load_bearing_threshold,  0.70).  % Above this = load-bearing snare (Theorem 3)
+
+/* ================================================================
+   5B. DUAL-THRESHOLD CLASSIFICATION (logic.md Alignment)
+   ================================================================
+   logic.md specifies BOTH:
+     χ (chi) = power-scaled extraction (varies by agent)
+     ε (epsilon) = base extraction (structural property)
+
+   Primary classifier (drl_core.pl) checks BOTH thresholds.
+   Audit module (drl_audit_core.pl) uses χ thresholds only.
+   ================================================================ */
+
+% Rule R (Rope): χ ≤ 0.35 ∧ ε ≤ 0.15 ∧ Coord(C) ∧ Changeable(C, I.T, I.E)
+param(rope_chi_ceiling, 0.35).
+param(rope_epsilon_ceiling, 0.15).
+
+% Rule N (Snare): χ ≥ 0.66 ∧ ε ≥ 0.46 ∧ ¬Coord(C) ∧ Changeable(C, I.T, I.E)
+param(snare_chi_floor, 0.66).
+param(snare_epsilon_floor, 0.46).
+
+% Rule TR (Tangled Rope): 0.40 ≤ χ ≤ 0.90 ∧ ε ≥ 0.50 ∧ Coord(C) ∧ Asymmetric(C)
+param(tangled_rope_chi_floor, 0.40).
+param(tangled_rope_chi_ceil, 0.90).
+param(tangled_rope_epsilon_floor, 0.50).
+
+% --- Scaffold Boundaries ---
+% Temporary supports must remain below this coordination ceiling
+param(scaffold_extraction_ceil, 0.30).
+
+% --- Piton Boundaries ---
+param(piton_extraction_ceiling,     0.10).
+param(piton_theater_floor,          0.70).
+param(piton_epsilon_floor,          0.10).   % Rule Z: ε(C) > 0.10
+
+/* ================================================================
+   5A. DEFAULTS (NEW)
+   ================================================================ */
+
+param(default_extractiveness, 0.10).
+param(default_suppression, 0.10).
+param(default_theater, 0.0).
+
+
+% --- Global Meta-Parameters ---
+% param(version, 3.4).
+% param(logic_engine, 3.3).
+
+/* ================================================================
+   6. STRUCTURAL SIGNATURE THRESHOLDS (v3.2)
+   These parameters enable detection of constraint ORIGIN
+   (natural law vs coordination scaffold vs constructed constraint)
+   rather than just constraint METRICS.
+   ================================================================ */
+
+% --- Natural Law Signature ---
+% Identifies inherent properties of reality (no alternatives possible)
+param(natural_law_collapse_min,      0.85).  % Extreme universal inaccessibility
+param(natural_law_suppression_max,   0.15).  % No enforcement needed
+param(natural_law_resistance_max,    0.15).  % Cannot be resisted
+
+% --- Coordination Scaffold Signature ---
+% Identifies successful voluntary standards (alternatives existed)
+param(coordination_collapse_min,     0.85).  % Universal adoption achieved
+param(coordination_suppression_max,  0.15).  % Voluntary compliance
+param(coordination_resistance_max,   0.15).  % Minimal opposition
+
+% --- Constructed Constraint Signature ---
+% Identifies institutionally enforced rules (power asymmetries)
+param(constructed_suppression_min,   0.20).  % Requires enforcement
+param(constructed_resistance_min,    0.20).  % Faces opposition
+param(constructed_beneficiary_min,   2).     % Asymmetric gains threshold
+
+% --- Isomorphism Threshold ---
+param(isomorphism_threshold, 0.85).

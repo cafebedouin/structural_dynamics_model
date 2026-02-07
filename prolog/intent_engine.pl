@@ -5,8 +5,8 @@
 
 :- use_module(library(lists)).        % Required for sum_list/2
 :- use_module(narrative_ontology).
-:- use_module(v3_1_config).
-:- use_module(v3_1_coercion_projection). % Math Provider
+:- use_module(config).
+:- use_module(coercion_projection). % Math Provider
 :- use_module(pattern_analysis).        % State Provider
 
 /* ================================================================
@@ -35,7 +35,7 @@ classify_interval(IntervalID, Pattern, Confidence) :-
 structural_coercive_intent(_IntervalID, Prelim, Gsys, Evidence) :-
     % Condition 1: Strong Positive Gradient
     Prelim = increasing_coercion,
-    v3_1_config:param(system_gradient_strong_threshold, StrongThr),
+    config:param(system_gradient_strong_threshold, StrongThr),
     Gsys > StrongThr,
 
     % Condition 2: Alternatives Rejected
@@ -46,12 +46,12 @@ structural_coercive_intent(_IntervalID, Prelim, Gsys, Evidence) :-
     findall((Class, Delta), member(power(Class, Delta), Evidence), PCs),
     PCs \= [],
     max_by_value((MainBeneficiary, DeltaMain), PCs),
-    v3_1_config:param(beneficiary_gain_min, GainMin),
+    config:param(beneficiary_gain_min, GainMin),
     DeltaMain >= GainMin,
 
     % Condition 4: Suppression/Resistance Alignment
-    v3_1_config:param(structural_suppression_min, SMin),
-    v3_1_config:param(structural_resistance_min, RMin),
+    config:param(structural_suppression_min, SMin),
+    config:param(structural_resistance_min, RMin),
     findall(ValS, member(supp(MainBeneficiary, structural, ValS), Evidence), Ss),
     findall(ValR, member(resist(MainBeneficiary, structural, ValR), Evidence), Rs),
     Ss \= [], Rs \= [],
@@ -77,11 +77,11 @@ classify_non_intent(Prelim, Pattern) :-
 
 refine_confidence(Evidence, DataScore, Conf) :-
     length(Evidence, NEv),
-    v3_1_config:param(data_high_threshold, DH),
+    config:param(data_high_threshold, DH),
     (DataScore >= DH, NEv >= 5 -> Conf = high ; Conf = medium).
 
 fallback_confidence(DataScore, Conf) :-
-    v3_1_config:param(data_high_threshold, DH),
+    config:param(data_high_threshold, DH),
     (DataScore >= DH -> Conf = high ; Conf = low).
 
 % Local helper predicates (not exported)

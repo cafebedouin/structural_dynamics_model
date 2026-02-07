@@ -1,22 +1,29 @@
 % ============================================================================
-% CONSTRAINT STORY: nighttown_hallucinatory_vigil
+% CONSTRAINT STORY: ulysses_circe_1904
 % ============================================================================
-% Generated: 2026-01-19
-% Model: Gemini 2.0 Flash
-% Source: Ulysses, Chapter 15 (Circe)
+% Version: 3.4 (Deferential Realism Core)
+% Logic: 3.3 (Indexed Tuple P,T,E,S)
+% Generated: 2026-02-06
 % ============================================================================
 
-:- module(nighttown_hallucinatory_vigil, []).
+:- module(constraint_ulysses_circe, []).
 
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
 
 % --- Namespace Hooks (Required for loading) ---
-:- multifile 
+:- multifile
     domain_priors:base_extractiveness/2,
     domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
     domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -25,149 +32,144 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: nighttown_hallucinatory_vigil
- * human_readable: The Hallucinatory Vigil of Nighttown
- * domain: psychological/social
- * temporal_scope: June 16, 1904 (Midnight)
- * spatial_scope: Mabbot Street/Nighttown, Dublin
+ * * constraint_id: ulysses_circe_1904
+ * human_readable: The Nighttown Phantasmagoria (Circe)
+ * domain: social/psychological/religious
  * * SUMMARY:
- * Characters navigate a surreal environment where internal repressions manifest 
- * as external realities. The constraint is the "Nighttown" 
- * atmosphere itself—a psychological trap of "will-o’-the-wisps" and "danger 
- * signals" that extracts the agents' grip on reality.
+ * Chapter 15 models the "Nighttown" red-light district as a site of extreme 
+ * hallucinatory extraction. The environment functions as a predatory Snare 
+ * where the guilt and desires of Bloom and Stephen are externalized into a 
+ * "mummery" of shifting forms. Amidst 
+ * this theater, Bloom’s vision of his dead son, Rudy, acts as an 
+ * irreducible psychological Mountain.
  * * KEY AGENTS:
- * - Leopold Bloom: Individual moderate navigating via "secret master" masonic 
- * rituals (Rope).
- * - The Deafmute Idiot: Individual powerless agent trapped in a "Saint Vitus’ 
- * dance" and imprisoned by children (Snare).
- * - Nighttown (The Environment): Institutional force where the "skeleton tracks" 
- * of the mind are immutable laws (Mountain).
+ * - Leopold Bloom: Subject (Powerless) - Standing "on guard" as a 
+ * "secret master".
+ * - Stephen Dedalus: Subject (Powerless) - Trembling at his "soul's cry" 
+ *.
+ * - The Nighttown Inhabitants: Beneficiary (Institutional) - Managing the 
+ * "grimy houses" and "ice gondolas".
  */
 
 /* ==========================================================================
-   2. CORE SYSTEM INTEGRATION (The "Reality" Layer)
+   2. BASE PROPERTIES (DOMAIN PRIORS)
    ========================================================================== */
 
-% Required for [STEP 1] and [STEP 2] of the DR-Audit Suite
-narrative_ontology:interval(nighttown_vigil_id, 0, 10).
-% Fixed: Changed 'psychic_confrontation' to 'snare' to satisfy schema
-narrative_ontology:constraint_claim(nighttown_hallucinatory_vigil, snare).
+% Numerical anchors for v3.4 thresholds
+domain_priors:base_extractiveness(ulysses_circe_1904, 0.58). % Extreme spiritual and moral extraction.
+domain_priors:suppression_score(ulysses_circe_1904, 0.90).   % The hallucinatory "entombing" of the subjects.
+domain_priors:theater_ratio(ulysses_circe_1904, 0.99).      % Maximal mummery: the entire chapter is a play script.
 
-% Metrics: Extractiveness (0.6 - Psychological extraction) and Suppression (0.8 - High repression)
-domain_priors:base_extractiveness(nighttown_hallucinatory_vigil, 0.6).
-domain_priors:suppression_score(nighttown_hallucinatory_vigil, 0.8).
-domain_priors:requires_active_enforcement(nighttown_hallucinatory_vigil).
+% Primary keys for classification engine
+narrative_ontology:constraint_metric(ulysses_circe_1904, extractiveness, 0.58).
+narrative_ontology:constraint_metric(ulysses_circe_1904, suppression_requirement, 0.90).
+narrative_ontology:constraint_metric(ulysses_circe_1904, theater_ratio, 0.99).
 
-% Explicit metric hooks to prevent auto-imputation
-narrative_ontology:constraint_metric(nighttown_hallucinatory_vigil, extractiveness, 0.6).
-narrative_ontology:constraint_metric(nighttown_hallucinatory_vigil, suppression_requirement, 0.8).
-
-% BENEFICIARIES & VICTIMS
-constraint_beneficiary(nighttown_hallucinatory_vigil, nighttown_economic_vice).
-constraint_victim(nighttown_hallucinatory_vigil, stephen_dedalus_psyche).
-constraint_victim(nighttown_hallucinatory_vigil, bloom_leopold_psyche).
+% Structural Property Declarations
+narrative_ontology:constraint_beneficiary(ulysses_circe_1904, nighttown_economy). % Prostitution and "ice gondolas".
+narrative_ontology:constraint_victim(ulysses_circe_1904, leopold_bloom).          % Subject to hallucinations and mockery.
+domain_priors:requires_active_enforcement(ulysses_circe_1904). % Whistles, calls, and answers.
 
 /* ==========================================================================
-   3. INDEXED CLASSIFICATIONS (Perspectival Truth)
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × π(P) × σ(S)
    ========================================================================== */
 
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 1: LEOPOLD BLOOM - Rope
-   --------------------------------------------------------------------------
-   WHY: Bloom utilizes his "alert" state and "masonic" stances as a "Rope"—a 
-   functional coordination tool to protect Stephen and manage the 
-   hallucinations of his own past (Rudy).
-   -------------------------------------------------------------------------- */
-constraint_indexing:constraint_classification(
-    nighttown_hallucinatory_vigil,
-    rope,
-    context(agent_power(individual_moderate), time_horizon(biographical), exit_options(mobile), spatial_scope(local))
-) :- !.
+% PERSPECTIVE 1: THE HALLUCINATING SUBJECT (SNARE)
+% Effective Extraction: 0.58 * 1.5 (powerless) * 0.8 (local) = 0.696.
+% Perceived as a trap of "skeleton tracks" and "danger signals".
+constraint_indexing:constraint_classification(ulysses_circe_1904, snare, 
+    context(agent_power(powerless), 
+            time_horizon(biographical), 
+            exit_options(trapped), 
+            spatial_scope(local))).
 
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE DEAFMUTE IDIOT - Snare
-   --------------------------------------------------------------------------
-   WHO: individual_powerless - "shapeless mouth dribbling... jerks past".
-   WHY: For the truly powerless in Nighttown, the environment is a "Snare"—an 
-   inescapable trap of physical and social degradation where no coordination 
-   benefits exist.
-   -------------------------------------------------------------------------- */
-constraint_indexing:constraint_classification(
-    nighttown_hallucinatory_vigil,
-    snare,
-    context(agent_power(individual_powerless), time_horizon(immediate), exit_options(constrained), spatial_scope(local))
-) :- !.
+% PERSPECTIVE 2: THE PARENTAL BOND (MOUNTAIN)
+% Effective Extraction: 0.58 * -0.2 (institutional/fixed) * 1.2 = -0.139.
+% χ < 0.05 check: The vision of Rudy is an irreducible fixed point of 
+% the psychological landscape.
+constraint_indexing:constraint_classification(ulysses_circe_1904, mountain, 
+    context(agent_power(institutional), 
+            time_horizon(civilizational), 
+            exit_options(mobile), 
+            spatial_scope(universal))).
 
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE ENVIRONMENT (Nighttown) - Mountain
-   --------------------------------------------------------------------------
-   WHO: institutional - The "Swancomb of the gondola" and the "lighthouse".
-   WHY: From the institutional perspective of the district, the chaos and the 
-   "Saint Vitus’ dance" are a "Mountain"—the immutable, logic-defying laws 
-   of the night.
-   -------------------------------------------------------------------------- */
-constraint_indexing:constraint_classification(
-    nighttown_hallucinatory_vigil,
-    mountain,
-    context(agent_power(institutional), time_horizon(historical), exit_options(trapped), spatial_scope(national))
-) :- !.
+% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (PITON)
+% Extreme Theater Ratio (0.99) indicates a Piton of maximal mummery 
+% and atrophied narrative reality.
+constraint_indexing:constraint_classification(ulysses_circe_1904, piton,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(global))).
 
 /* ==========================================================================
-   4. TESTS
+   4. VALIDATION TESTS
    ========================================================================== */
 
-:- begin_tests(nighttown_hallucinatory_tests).
+:- begin_tests(ulysses_circe_1904_tests).
 
-test(multi_perspective_circe) :-
-    constraint_indexing:constraint_classification(nighttown_hallucinatory_vigil, T1, context(agent_power(individual_moderate), _, _, _)),
-    constraint_indexing:constraint_classification(nighttown_hallucinatory_vigil, T2, context(agent_power(individual_powerless), _, _, _)),
-    T1 = rope, T2 = snare.
+test(perspectival_gap) :-
+    % Verify shift from the Snare of the district to the Mountain of Rudy.
+    constraint_indexing:constraint_classification(ulysses_circe_1904, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(ulysses_circe_1904, mountain, context(agent_power(institutional), _, _, _)).
 
-test(immutability_nighttown_scaling) :-
-    % Institutional view sees the hallucinations as a Mountain
-    constraint_indexing:effective_immutability(historical, trapped, mountain).
+test(piton_theater_validation) :-
+    % Piton classification requires theater_ratio >= 0.70.
+    domain_priors:theater_ratio(ulysses_circe_1904, TR),
+    TR >= 0.70.
 
-:- end_tests(nighttown_hallucinatory_tests).
+:- end_tests(ulysses_circe_1904_tests).
 
 /* ==========================================================================
-   5. MODEL INTERPRETATION & OMEGAS
+   5. GENERATIVE COMMENTARY
    ========================================================================== */
 
 /**
- * LLM GENERATION NOTES:
- * Refactored to eliminate the 'psychic_confrontation' mismatch. Declaring the 
- * claim as 'snare' allows the audit to identify how the "False Mountain" of 
- * hallucination masks an underlying 'Snare' of extreme psychological 
- * suppression.
+ * LOGIC RATIONALE:
+ * The "Circe" chapter represents the ultimate "Theater" of the novel. 
+ * While the setting is a social Snare of predatory extraction, the 
+ * hallucinatory style creates a near-total Theater Ratio (0.99), 
+ * rendering the narrative a Piton—a structure where direct function 
+ * is replaced by "mummery". 
+ * MANDATROPHY ANALYSIS:
+ * The "Rudy" vision at the end resolves the Mandatrophy of the 
+ * chapter; the chaos of Nighttown collapses into the irreducible 
+ * Mountain of Bloom's paternal love and grief.
  */
 
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
 omega_variable(
-    rudy_apparition_status,
-    "Is Rudy's apparition a healing vision (Rope) or a symptom of deep 
-    trauma-based extraction (Snare)?",
-    resolution_mechanism("Comparative analysis of Bloom's posture as 'secret master'"),
-    impact("If healing: Rope. If symptom: Snare."),
+    omega_nighttown_reality,
+    "Is the phantasmagoria a Rope for psychological catharsis or a Snare for the soul?",
+    "Review of the 'Rudy' vision vs the 'ghoul' hallucinations.",
+    "Catharsis confirms a Rope; persistent entrapment hardens the Snare.",
     confidence_without_resolution(medium)
 ).
 
 /* ==========================================================================
-   6. ALTERNATIVE ANALYSIS
+   7. INTEGRATION HOOKS
    ========================================================================== */
 
-/**
- * VIABLE ALTERNATIVES:
- * 1. Physical Resistance/Departure: Stephen and Bloom could have left 
- * immediately. Rejected/Suppressed by the "Saint Vitus’ dance" and the 
- * "skeleton tracks" of the environment.
- */
+narrative_ontology:interval(ulysses_circe_1904, 0, 10).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Theater Ratio (Escalating as the hallucinations become more complex and surreal)
+narrative_ontology:measurement(uc_tr_t0, ulysses_circe_1904, theater_ratio, 0, 0.85).
+narrative_ontology:measurement(uc_tr_t5, ulysses_circe_1904, theater_ratio, 5, 0.95).
+narrative_ontology:measurement(uc_tr_t10, ulysses_circe_1904, theater_ratio, 10, 0.99).
+
+% Extraction (Accumulating with the subjects' fatigue, drunkenness, and spiritual labor)
+narrative_ontology:measurement(uc_ex_t0, ulysses_circe_1904, base_extractiveness, 0, 0.48).
+narrative_ontology:measurement(uc_ex_t5, ulysses_circe_1904, base_extractiveness, 5, 0.55).
+narrative_ontology:measurement(uc_ex_t10, ulysses_circe_1904, base_extractiveness, 10, 0.58).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
-
-
-
-% --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
-constraint_indexing:constraint_classification(ulysses_chp15, mountain, agent_power(analytical)).
-constraint_indexing:constraint_classification(ulysses_chp15, rope, agent_power(institutional)).
-constraint_indexing:constraint_classification(ulysses_chp15, snare, agent_power(individual_powerless)).

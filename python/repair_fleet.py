@@ -8,7 +8,7 @@ GAP_REPORT = "../outputs/gap_report.json"
 # Mapping types to their standard agent perspective
 PERSPECTIVE_MAP = {
     "rope": "agent_power(institutional)",
-    "noose": "agent_power(individual_powerless)",
+    "noose": "agent_power(powerless)",
     "mountain": "agent_power(analytical)"
 }
 

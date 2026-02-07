@@ -16,7 +16,7 @@ def parse_log_content(content):
         if not chunk.strip():
             continue
 
-        name_match = re.search(r'Loading: \.\./prolog/testsets/(.+?)\.pl', chunk)
+        name_match = re.search(r'Loading:.*?testsets/(.+?)\.pl', chunk)
         if not name_match:
             continue
         constraint_name = name_match.group(1)
@@ -152,6 +152,8 @@ def main():
         print("Report generated successfully.")
     else:
         print("No validated Ropes found in the log file.")
+        with open(report_file, 'w', encoding='utf-8') as f:
+            f.write("# Rope Validation Report\n\n**Total Validated:** 0\n")
 
 if __name__ == '__main__':
     main()

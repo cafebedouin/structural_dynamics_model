@@ -11,7 +11,7 @@
 
 /**
  * DOMAIN PRIORS EXPANSION - Auto-generated from corpus analysis
- * Generated from 409 constraints
+ * Generated from 617 constraints
  * Categories analyzed: 3
  *
  * This module provides corpus-derived defaults for domain priors.
@@ -23,33 +23,35 @@
 %% ============================================================================
 %% Format: category_corpus_profile(Category, [AvgExtract, AvgSuppress, StdExtract, StdSuppress, Count]).
 
-category_corpus_profile(narrative_history, [0.305, 0.442, 0.158, 0.233, 260]).  % dominant: mountain, enforcement_ratio: 0.35
-category_corpus_profile(extractive_market, [0.783, 0.685, 0.081, 0.166, 146]).  % dominant: snare, enforcement_ratio: 0.79
+category_corpus_profile(narrative_history, [0.32, 0.465, 0.166, 0.245, 308]).  % dominant: mountain, enforcement_ratio: 0.44
+category_corpus_profile(extractive_market, [0.801, 0.707, 0.078, 0.134, 306]).  % dominant: snare, enforcement_ratio: 0.82
 category_corpus_profile(unknown_novel, [0.735, 0.825, 0.015, 0.025, 3]).  % dominant: tangled_rope, enforcement_ratio: 1.0
 
 %% ============================================================================
-%% 2. CONSTRAINT TYPE PROFILES (Mountain/Rope/Snare/Tangled Rope)
+%% 2. CONSTRAINT TYPE PROFILES (Mountain/Rope/Noose/Tangled Rope)
 %% ============================================================================
 %% Format: type_corpus_profile(Type, [AvgExtract, AvgSuppress, StdExtract, StdSuppress, Count]).
 
-type_corpus_profile(mountain, [0.367, 0.454, 0.236, 0.257, 150]).
-type_corpus_profile(snare, [0.661, 0.682, 0.217, 0.164, 92]).
-type_corpus_profile(rope, [0.373, 0.462, 0.23, 0.258, 79]).
+type_corpus_profile(mountain, [0.367, 0.452, 0.237, 0.256, 149]).
+type_corpus_profile(snare, [0.655, 0.682, 0.218, 0.166, 89]).
+type_corpus_profile(rope, [0.372, 0.462, 0.231, 0.26, 78]).
 type_corpus_profile(tangled_rope, [0.529, 0.587, 0.233, 0.187, 47]).
+type_corpus_profile(piton, [0.38, 0.16, 0.246, 0.049, 5]).
 
 %% ============================================================================
 %% 3. SUBCATEGORY PROFILES (Category + Type combinations)
 %% ============================================================================
 %% Format: subcategory_profile(SubcatName, [Parent, Type, AvgExtract, AvgSuppress, Count]).
 
-subcategory_profile(narrative_history_mountain, ['narrative_history', 'mountain', 0.273, 0.405, 121]).
-subcategory_profile(narrative_history_rope, ['narrative_history', 'rope', 0.298, 0.414, 66]).
-subcategory_profile(extractive_market_noose, ['extractive_market', 'snare', 0.806, 0.745, 57]).
-subcategory_profile(narrative_history_noose, ['narrative_history', 'snare', 0.418, 0.576, 34]).
+subcategory_profile(narrative_history_mountain, ['narrative_history', 'mountain', 0.273, 0.401, 120]).
+subcategory_profile(narrative_history_rope, ['narrative_history', 'rope', 0.296, 0.413, 65]).
+subcategory_profile(extractive_market_snare, ['extractive_market', 'snare', 0.804, 0.749, 54]).
+subcategory_profile(narrative_history_snare, ['narrative_history', 'snare', 0.418, 0.576, 34]).
 subcategory_profile(extractive_market_mountain, ['extractive_market', 'mountain', 0.759, 0.662, 29]).
 subcategory_profile(narrative_history_tangled_rope, ['narrative_history', 'tangled_rope', 0.325, 0.502, 24]).
 subcategory_profile(extractive_market_tangled_rope, ['extractive_market', 'tangled_rope', 0.743, 0.662, 21]).
 subcategory_profile(extractive_market_rope, ['extractive_market', 'rope', 0.752, 0.704, 13]).
+subcategory_profile(narrative_history_piton, ['narrative_history', 'piton', 0.275, 0.15, 4]).
 
 %% ============================================================================
 %% 4. DEFAULT VALUE INFERENCE PREDICATES
@@ -97,8 +99,8 @@ get_corpus_prior(_, _, 0.5).  % Neutral fallback
 %% These are corpus-calibrated replacements for the original category_profile/2.
 %% Format: [accessibility_collapse, stakes_inflation, suppression, resistance]
 
-% recommended_profile(narrative_history, [0.82, 0.37, 0.44, 0.82]).  % N=260, dominant=mountain
-% recommended_profile(extractive_market, [0.6, 0.94, 0.69, 0.53]).  % N=146, dominant=snare
+% recommended_profile(narrative_history, [0.78, 0.38, 0.46, 0.81]).  % N=308, dominant=mountain
+% recommended_profile(extractive_market, [0.59, 0.96, 0.71, 0.52]).  % N=306, dominant=snare
 
 %% ============================================================================
 %% END OF AUTO-GENERATED PRIORS

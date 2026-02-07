@@ -48,7 +48,7 @@
     % Stage 4: Audit
     possibly/1,
     necessarily/1,
-    is_noose/1,
+    is_snare/1,
     is_mountain/1,
     is_rope/1
 ]).
@@ -57,17 +57,17 @@
 :- use_module(drl_core).
 :- use_module(constraint_indexing).
 :- use_module(narrative_ontology).
-:- use_module(v3_1_config).
-:- use_module(v3_1_coercion_projection).
+:- use_module(config).
+:- use_module(coercion_projection).
 
 :- dynamic agent_index/2.
 :- dynamic constraint_data/2.
 
 % Scaled for the Powerless
-is_noose(C) :- 
+is_snare(C) :- 
     constraint_data(C, Data),
     member(base_extractiveness(Base), Data),
-    drl_audit_core:effective_extraction(Base, individual_powerless, Chi),
+    drl_audit_core:effective_extraction(Base, powerless, Chi),
     drl_audit_core:structural_signature(Chi, Data, snare).
 
 % Scaled for the Observer
@@ -146,7 +146,7 @@ composition_rule(snare, rope, snare) :- !.
 composition_rule(tangled_rope, snare, snare) :- !.
 composition_rule(snare, tangled_rope, snare) :- !.
 
-% Snare Dominance: Multiple Nooses compound
+% Snare Dominance: Multiple Snares compound
 composition_rule(snare, snare, snare) :- !.
 
 % Rope Composition: ⊞C₁ ∧ ⊞C₂ ∧ Compatible(C₁, C₂) ⇒ ⊞(C₁ ∧ C₂)
@@ -172,8 +172,9 @@ detect_extraction_dominance(Composite, Evidence) :-
     narrative_ontology:affects_constraint(Composite, Component),
     drl_core:dr_type(Component, snare),
     narrative_ontology:constraint_metric(Component, extractiveness, X),
-    X >= 0.66,
-    Evidence = embedded_noose(Component, X).
+    config:param(snare_epsilon_floor, Floor),
+    X >= Floor,
+    Evidence = embedded_snare(Component, X).
 
 %% detect_necessity_inheritance(+Source, -Derived)
 % Detects when a Mountain constraint logically implies another constraint
@@ -211,66 +212,14 @@ constraint_history(C, Timeline) :-
 
 %% dr_type_at(+C, +Time, +Context, -Type)
 % Determines constraint type at specific time FROM SPECIFIC CONTEXT
-% NOTE: This is the key integration point - past metrics + current context
+% Delegates to drl_core:classify_from_metrics/6 (Single Source of Truth)
 dr_type_at(C, Time, Context, Type) :-
-    % Get metrics at this historical time
-    (narrative_ontology:measurement(_, C, suppression_requirement, Time, E) -> true ; E = 0.5),
+    (narrative_ontology:measurement(_, C, suppression_requirement, Time, Supp) -> true ; Supp = 0.5),
     (narrative_ontology:measurement(_, C, extractiveness, Time, BaseX) -> true ; BaseX = 0.5),
-    
-    % Apply current context's power scaling to historical metrics
     Context = context(agent_power(Power), _, _, _),
     constraint_indexing:power_modifier(Power, Modifier),
-    EffectiveX is BaseX * Modifier,
-    
-    % Classify using effective extractiveness
-    classify_at_time_indexed(C, E, EffectiveX, Context, Type).
-
-%% classify_at_time_indexed(+C, +E, +EffectiveX, +Context, -Type)
-% Classification logic using power-scaled extractiveness
-% Recognizes: mountain, rope, snare, tangled_rope, piton, scaffold
-
-% Scaffold (temporary support structure)
-classify_at_time_indexed(C, _E, X, _Context, scaffold) :-
-    narrative_ontology:entity(C, scaffold),
-    v3_1_config:param(tangled_rope_extraction_ceil, Ceil),
-    X =< Ceil, !.
-
-% Mountain (appears unchangeable from this context)
-classify_at_time_indexed(_C, E, _X, Context, mountain) :-
-    v3_1_config:param(mountain_suppression_ceiling, Ceil),
-    E =< Ceil,
-    constraint_indexing:effective_immutability_for_context(Context, mountain), !.
-
-% Snare (extractive + enforced + changeable)
-classify_at_time_indexed(_C, E, X, Context, snare) :-
-    v3_1_config:param(snare_extraction_floor, XFloor),
-    v3_1_config:param(snare_suppression_floor, EFloor),
-    X >= XFloor,
-    E >= EFloor,
-    constraint_indexing:effective_immutability_for_context(Context, rope), !.
-
-% Tangled Rope (moderate extraction)
-classify_at_time_indexed(_C, _E, X, Context, tangled_rope) :-
-    v3_1_config:param(rope_extraction_ceiling, RopeX),
-    v3_1_config:param(tangled_rope_extraction_ceil, TangledX),
-    X > RopeX,
-    X =< TangledX,
-    constraint_indexing:effective_immutability_for_context(Context, rope), !.
-
-% Piton (low extraction, high maintenance)
-classify_at_time_indexed(_C, E, X, _Context, piton) :-
-    v3_1_config:param(piton_extraction_ceiling, XCeil),
-    X =< XCeil,
-    E > XCeil, !.
-
-% Rope (low extraction, changeable)
-classify_at_time_indexed(_C, _E, X, Context, rope) :-
-    v3_1_config:param(rope_extraction_ceiling, XCeil),
-    X =< XCeil,
-    constraint_indexing:effective_immutability_for_context(Context, rope), !.
-
-% Unknown fallback
-classify_at_time_indexed(_C, _E, _X, _Context, unknown).
+    Chi is BaseX * Modifier,
+    drl_core:classify_from_metrics(C, BaseX, Chi, Supp, Context, Type).
 
 %% transformation_detected(+C, +FromType, +ToType, -T1, -T2)
 % Detects when constraint transformed from one type to another
@@ -325,7 +274,8 @@ check_capture_between(C, T1, T2) :-
     narrative_ontology:measurement(_, C, extractiveness, T1, X1),
     narrative_ontology:measurement(_, C, extractiveness, T2, X2),
     X2 > X1,
-    X2 >= 0.66.
+    config:param(snare_epsilon_floor, Floor),
+    X2 >= Floor.
 
 %% predict_transformation(+C, +CurrentType, -LikelyFutureType)
 % Predicts likely future transformation based on trajectory
@@ -335,7 +285,8 @@ predict_transformation(C, rope, snare) :-
     length(Xs, N), N >= 2,
     last(Xs, X_latest),
     X_latest > 0.5,
-    X_latest < 0.66,
+    config:param(snare_epsilon_floor, Floor),
+    X_latest < Floor,
     Xs = [X_first|_],
     X_latest > X_first.
 
@@ -433,7 +384,7 @@ estimate_impact_indexed(Source, Target, Context, catastrophic, load_bearing) :-
     % Source is load-bearing FROM THIS CONTEXT
     drl_core:dr_type(Source, Context, snare),
     narrative_ontology:constraint_metric(Source, extractiveness, X),
-    v3_1_config:param(noose_load_bearing_threshold, T),
+    config:param(snare_load_bearing_threshold, T),
     X > T,
     
     % Target depends on it FROM THIS CONTEXT
@@ -556,14 +507,14 @@ check_all_contexts(Constraint, Report) :-
     Report = multi_context_analysis(Constraint, Impacts).
 
 % Standard contexts for cross-perspective analysis
-standard_context(context(agent_power(individual_powerless), 
+standard_context(context(agent_power(powerless), 
                         time_horizon(biographical), 
                         exit_options(trapped), 
                         spatial_scope(local))).
 
-standard_context(context(agent_power(individual_moderate), 
-                        time_horizon(biographical), 
-                        exit_options(mobile), 
+standard_context(context(agent_power(moderate),
+                        time_horizon(biographical),
+                        exit_options(mobile),
                         spatial_scope(national))).
 
 standard_context(context(agent_power(institutional), 
