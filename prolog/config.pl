@@ -212,3 +212,129 @@ param(constructed_beneficiary_min,   2).     % Asymmetric gains threshold
 
 % --- Isomorphism Threshold ---
 param(isomorphism_threshold, 0.85).
+
+/* ================================================================
+   7. BOLTZMANN COMPLIANCE & COUPLING TOPOLOGY (v5.0)
+   Based on Tamuz & Sandomirskiy (2025), "On the origin of the
+   Boltzmann distribution," Mathematische Annalen.
+
+   The Boltzmann distribution is the ONLY law that correctly
+   describes unrelated (uncoupled) systems. This section provides
+   parameters for testing whether constraints satisfy this property.
+
+   Key insight: A Mountain (NL) must show Boltzmann-compliant
+   independence across index dimensions. Any constraint that
+   couples independent dimensions is necessarily Constructed (CC),
+   not Natural (NL).
+   ================================================================ */
+
+% --- Cross-Index Coupling Detection ---
+% Maximum allowable coupling score for Boltzmann compliance.
+% 0.0 = perfectly factorized (independent dimensions)
+% 1.0 = maximally coupled (all dimensions entangled)
+param(boltzmann_coupling_threshold,        0.15).
+
+% Threshold above which coupling is classified as "strong"
+param(boltzmann_coupling_strong_threshold, 0.40).
+
+% Tolerance for factorization test: χ(P,S) ≈ f(P)×g(S)
+% within this relative error margin
+param(boltzmann_factorization_tolerance,   0.10).
+
+% Minimum number of indexed classifications required before
+% the Boltzmann compliance test is considered reliable.
+% Below this, result is 'inconclusive' (epistemic access check).
+param(boltzmann_min_classifications,       3).
+
+% --- Complexity Offsets ---
+% Different coordination types have different "natural" coupling
+% levels. A global power grid MUST couple more dimensions than
+% a simple naming convention. These offsets raise the coupling
+% threshold for high-complexity coordination types.
+%
+% Applied as: effective_threshold = base_threshold + offset
+param(complexity_offset_information_standard,  0.00).
+param(complexity_offset_resource_allocation,   0.05).
+param(complexity_offset_enforcement_mechanism, 0.08).
+param(complexity_offset_global_infrastructure, 0.15).
+param(complexity_offset_default,               0.00).
+
+% --- Boltzmann Floor (Price of Anarchy) ---
+% The minimum extraction inherent to each coordination type.
+% Extraction below this floor is "necessary cost of coordination."
+% Extraction above this floor is "extractive overhead" (PoA excess).
+%
+% These are provisional values — calibration against the corpus
+% will refine them. Testsets can override via boltzmann_floor_override/2.
+param(boltzmann_floor_information_standard,  0.02).
+param(boltzmann_floor_resource_allocation,   0.15).
+param(boltzmann_floor_enforcement_mechanism, 0.10).
+param(boltzmann_floor_global_infrastructure, 0.20).
+param(boltzmann_floor_default,               0.05).
+
+% --- Reformability Scoring ---
+% Thresholds for coupling-aware reformability assessment.
+% High reformability: independent dimensions, low excess extraction.
+% Low reformability: strongly coupled, high excess extraction.
+param(reformability_high_threshold,  0.70).
+param(reformability_low_threshold,   0.30).
+
+% --- Coupling Drift Detection ---
+% Minimum coupling score change to register as a drift event.
+param(coupling_drift_threshold,      0.10).
+
+% --- Boltzmann Floor Drift ---
+% Minimum floor increase to register as a drift event.
+% Distinguishes necessary complexity increase from extractive increase.
+param(boltzmann_floor_drift_threshold, 0.05).
+
+/* ================================================================
+   8. PURITY-QUALIFIED ACTION THRESHOLDS (v5.1)
+   ================================================================ */
+param(purity_action_sound_floor,           0.70).  % Below → monitor purity
+param(purity_action_escalation_floor,      0.50).  % Below → escalate action
+param(purity_action_degraded_floor,        0.30).  % Below → action type override
+param(purity_surgical_reform_gate,         0.30).  % Min purity for surgical reform
+param(purity_scaffold_health_gate,         0.50).  % Min scaffold purity for safe transition
+param(purity_energy_max_multiplier,        3.0).   % Cap on energy cost scaling
+
+/* ================================================================
+   9. PURITY PROPAGATION NETWORK PARAMETERS (v5.2)
+   ================================================================ */
+
+% --- Network Discovery ---
+param(network_coupling_threshold,              0.50).  % Min inferred coupling for edge
+param(network_shared_agent_min,                1).     % Min shared agents for edge
+
+% --- Propagation ---
+param(purity_contamination_cap,                0.30).  % Max purity reduction per edge
+param(purity_attenuation_factor,               0.50).  % Edge strength scaling
+
+% --- Type Contamination Strength ---
+param(purity_contamination_source_floor,       0.50).  % Below this purity → contamination source
+param(contamination_strength_snare,            1.0).
+param(contamination_strength_piton,            0.8).
+param(contamination_strength_tangled_rope,     0.5).
+param(contamination_strength_scaffold,         0.2).
+param(contamination_strength_rope,             0.1).
+param(contamination_strength_mountain,         0.0).   % Mountains don't contaminate
+
+% --- Network Metrics ---
+param(network_contamination_risk_threshold,    2).     % Low-purity neighbors → "at_risk"
+param(network_cluster_degraded_floor,          0.40).  % Below → cluster degraded
+
+/* ================================================================
+   10. NETWORK DRIFT DYNAMICS PARAMETERS (v5.2)
+   ================================================================ */
+
+% --- Network Drift Velocity ---
+param(network_drift_velocity_threshold,      0.01).  % Min EP drift/year to classify as drifting
+
+% --- Hub Detection ---
+param(network_hub_degree_threshold,          3).     % Neighbors to be a hub → severity escalation
+
+% --- Cascade Classification ---
+param(network_cascade_count_threshold,       3).     % Drifting constraints → "cascading" network
+
+% --- Severity Escalation ---
+param(network_drift_hub_escalation,          1).     % 1=enable hub-based severity escalation

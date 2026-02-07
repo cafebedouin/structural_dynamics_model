@@ -50,7 +50,40 @@
     necessarily/1,
     is_snare/1,
     is_mountain/1,
-    is_rope/1
+    is_rope/1,
+
+    % Stage 5: Boltzmann-Aware Analysis (v5.0)
+    reformability_score/3,              % reformability_score(C, Context, Score)
+    reformability_score/2,              % Backward compat (analytical context)
+    boltzmann_invariant_check/2,        % boltzmann_invariant_check(C, Result)
+    coupling_aware_scaffold_need/3,     % coupling_aware_scaffold_need(C, Context, Assessment)
+
+    % Stage 6: Purity-Aware Reform Recommendations (v5.1)
+    purity_reform_target/2,             % purity_reform_target(C, Target)
+    purity_reform_recommendation/2,     % purity_reform_recommendation(C, Recommendation)
+
+    % Stage 7: Purity-Qualified Action Algebra (v5.1)
+    purity_qualified_action/4,          % purity_qualified_action(C, Context, QAction, Rationale)
+    purity_qualified_action/3,          % Backward compat (analytical context)
+    purity_adjusted_energy/4,           % purity_adjusted_energy(C, Context, BaseAction, EnergyCost)
+    action_composition_gate/3,          % action_composition_gate(C, CompositeAction, GateResult)
+    purity_scaffold_urgency/4,          % purity_scaffold_urgency(C, Context, Urgency, Factors)
+
+    % Stage 8: Purity Propagation Network (v5.2)
+    constraint_neighbors/3,             % constraint_neighbors(C, Context, Neighbors)
+    constraint_neighbors/2,             % Backward compat
+    shared_agent_link/4,                % shared_agent_link(C1, C2, LinkType, Agent)
+    effective_purity/4,                 % effective_purity(C, Context, EffPurity, Components)
+    effective_purity/3,                 % Backward compat
+    purity_contamination_pressure/4,    % purity_contamination_pressure(Src, Tgt, Context, Pressure)
+    network_purity_metrics/2,           % network_purity_metrics(Context, Metrics)
+    cluster_purity/3,                   % cluster_purity(Constraints, Context, Score)
+    contamination_path/5,               % contamination_path(Src, Tgt, Context, Path, Loss)
+    weakest_link_purity/3,              % weakest_link_purity(Context, Constraint, Purity)
+    network_qualified_action/4,         % network_qualified_action(C, Context, QAction, Rationale)
+    network_qualified_action/3,         % Backward compat
+    type_contamination_strength/2,      % type_contamination_strength(Type, Strength)
+    type_immunity/2                     % type_immunity(Type, Immunity)
 ]).
 
 :- use_module(drl_audit_core).
@@ -59,6 +92,7 @@
 :- use_module(narrative_ontology).
 :- use_module(config).
 :- use_module(coercion_projection).
+:- use_module(structural_signatures).
 
 :- dynamic agent_index/2.
 :- dynamic constraint_data/2.
@@ -561,6 +595,994 @@ possibly(C) :-
 necessarily(C) :- 
     constraint_indexing:default_context(Ctx),
     drl_core:dr_type(C, Ctx, mountain).
+
+/* ================================================================
+   STAGE 5: BOLTZMANN-AWARE ANALYSIS (v5.0)
+
+   Based on Tamuz & Sandomirskiy (2025), "On the origin of the
+   Boltzmann distribution."
+
+   Provides:
+   1. Coupling-aware reformability score
+   2. Boltzmann-invariant mountain check
+   3. Coupling-aware scaffold need assessment
+
+   These predicates integrate the Boltzmann compliance engine
+   (structural_signatures.pl) with the modal logic layer,
+   enabling more precise intervention planning.
+   ================================================================ */
+
+/* ----------------------------------------------------------------
+   COUPLING-AWARE REFORMABILITY SCORE
+   ----------------------------------------------------------------
+   Extends the existing Prob_Reform_Success formula with coupling
+   topology awareness.
+
+   Reformability(C) = f(Separability, CouplingTopology, ExcessExtraction)
+
+   Where:
+     Separability = can coordination be separated from extraction?
+     CouplingTopology = how entangled are the index dimensions?
+     ExcessExtraction = how much extraction is above the Boltzmann floor?
+
+   Strong coupling → low reformability (can't separate components)
+   Weak coupling → moderate reformability
+   Independent dimensions → high reformability (clean separation possible)
+
+   Score range: [0.0, 1.0] where 1.0 = fully reformable
+   ---------------------------------------------------------------- */
+
+%% reformability_score(+Constraint, +Context, -Score)
+%  PRIMARY API: Computes coupling-aware reformability from context.
+reformability_score(C, Context, Score) :-
+    constraint_indexing:valid_context(Context),
+
+    % Factor 1: Separability — does the constraint have both
+    % coordination AND extraction that can be disentangled?
+    separability_factor(C, SepFactor),
+
+    % Factor 2: Coupling topology — how entangled are the dimensions?
+    coupling_factor(C, CouplingFactor),
+
+    % Factor 3: Excess extraction — how much is above Boltzmann floor?
+    excess_extraction_factor(C, ExcessFactor),
+
+    % Weighted combination (coupling topology most important for reform)
+    Score is min(1.0, max(0.0,
+        0.30 * SepFactor +
+        0.40 * CouplingFactor +
+        0.30 * ExcessFactor
+    )).
+
+%% reformability_score(+Constraint, -Score)
+%  BACKWARD COMPAT: Uses analytical context.
+reformability_score(C, Score) :-
+    constraint_indexing:default_context(Ctx),
+    reformability_score(C, Ctx, Score).
+
+%% separability_factor(+C, -Factor)
+%  Measures whether coordination and extraction can be separated.
+%  High factor = separable (good for reform).
+separability_factor(C, 0.9) :-
+    narrative_ontology:has_coordination_function(C),
+    narrative_ontology:has_asymmetric_extraction(C),
+    % Has both coordination and extraction — but are they in
+    % different structural components?
+    narrative_ontology:constraint_beneficiary(C, _),
+    narrative_ontology:constraint_victim(C, _), !.
+separability_factor(C, 0.3) :-
+    % Only extraction, no coordination — nothing to preserve
+    \+ narrative_ontology:has_coordination_function(C),
+    narrative_ontology:has_asymmetric_extraction(C), !.
+separability_factor(C, 1.0) :-
+    % Only coordination, no extraction — already reformed
+    narrative_ontology:has_coordination_function(C),
+    \+ narrative_ontology:has_asymmetric_extraction(C), !.
+separability_factor(_, 0.5).  % Unknown structure
+
+%% coupling_factor(+C, -Factor)
+%  Converts coupling topology into reformability factor.
+%  Independent = easy to reform (high factor).
+%  Strongly coupled = hard to reform (low factor).
+coupling_factor(C, Factor) :-
+    (   structural_signatures:cross_index_coupling(C, CouplingScore)
+    ->  % Invert: low coupling → high reformability
+        Factor is max(0.0, 1.0 - CouplingScore)
+    ;   Factor = 0.5  % Unknown coupling → moderate assumption
+    ).
+
+%% excess_extraction_factor(+C, -Factor)
+%  Higher excess extraction → lower reformability (more entrenched).
+%  But also → higher MOTIVATION to reform.
+%  We model this as: moderate excess = highest reformability
+%  (enough motivation, not too entrenched).
+excess_extraction_factor(C, Factor) :-
+    (   structural_signatures:excess_extraction(C, Excess)
+    ->  (   Excess =< 0.10
+        ->  Factor = 0.8   % Low excess: easy reform, low urgency
+        ;   Excess =< 0.30
+        ->  Factor = 1.0   % Moderate excess: sweet spot
+        ;   Excess =< 0.50
+        ->  Factor = 0.6   % High excess: entrenched interests
+        ;   Factor = 0.3   % Extreme excess: deeply entrenched
+        )
+    ;   Factor = 0.5  % No data
+    ).
+
+/* ----------------------------------------------------------------
+   BOLTZMANN-INVARIANT MOUNTAIN CHECK
+   ----------------------------------------------------------------
+   Delegates to structural_signatures:boltzmann_invariant_mountain/2
+   but adds modal context: checks if the Mountain classification
+   is also consistent across counterfactual worlds.
+   ---------------------------------------------------------------- */
+
+%% boltzmann_invariant_check(+Constraint, -Result)
+%  Full Boltzmann invariance check for Mountains.
+%  Combines structural signature test with modal consistency.
+%
+%  Result = boltzmann_check(InvarianceResult, ModalConsistency)
+boltzmann_invariant_check(C, boltzmann_check(InvResult, ModalConsistency)) :-
+    % Structural invariance from signatures module
+    structural_signatures:boltzmann_invariant_mountain(C, InvResult),
+
+    % Modal consistency: is it a Mountain from ALL standard contexts?
+    findall(
+        context_type(Ctx, Type),
+        (   standard_context(Ctx),
+            drl_core:dr_type(C, Ctx, Type)
+        ),
+        ContextTypes
+    ),
+    findall(Type, member(context_type(_, Type), ContextTypes), Types),
+    sort(Types, UniqueTypes),
+    (   UniqueTypes = [mountain]
+    ->  ModalConsistency = consistent(all_mountain)
+    ;   member(mountain, UniqueTypes)
+    ->  ModalConsistency = partial(UniqueTypes)
+    ;   ModalConsistency = inconsistent(UniqueTypes)
+    ).
+
+/* ----------------------------------------------------------------
+   COUPLING-AWARE SCAFFOLD NEED ASSESSMENT
+   ----------------------------------------------------------------
+   Extends assess_scaffold_need/3 with coupling awareness.
+   A strongly-coupled constraint is HARDER to scaffold because
+   cutting any part risks cascading through coupled dimensions.
+   ---------------------------------------------------------------- */
+
+%% coupling_aware_scaffold_need(+Constraint, +Context, -Assessment)
+%  Enhanced scaffold assessment that considers coupling topology.
+%
+%  Assessment is one of:
+%    no_scaffold_needed
+%    scaffold_required(Urgency)     — Urgency in {low, moderate, high}
+%    scaffold_present
+%    reform_preferred(Score)         — Reformability score suggests reform over cut
+
+coupling_aware_scaffold_need(C, Context, Assessment) :-
+    constraint_indexing:valid_context(Context),
+    drl_core:dr_type(C, Context, Type),
+
+    % Only relevant for cuttable/reformable types
+    (   member(Type, [snare, tangled_rope, piton, rope])
+    ->  % Get base scaffold assessment
+        assess_scaffold_need(C, Context, BaseAssessment),
+
+        % Get coupling topology
+        (   structural_signatures:cross_index_coupling(C, CouplingScore)
+        ->  true
+        ;   CouplingScore = 0.0
+        ),
+
+        % Get reformability
+        reformability_score(C, Context, ReformScore),
+
+        % Decision logic
+        (   Type = tangled_rope, ReformScore > 0.60
+        ->  Assessment = reform_preferred(ReformScore)
+        ;   BaseAssessment = scaffold_required,
+            CouplingScore > 0.30
+        ->  Assessment = scaffold_required(high)
+        ;   BaseAssessment = scaffold_required
+        ->  Assessment = scaffold_required(moderate)
+        ;   BaseAssessment = scaffold_present
+        ->  Assessment = scaffold_present
+        ;   Assessment = no_scaffold_needed
+        )
+    ;   Assessment = no_scaffold_needed
+    ).
+
+/* ================================================================
+   STAGE 6: PURITY-AWARE REFORM RECOMMENDATIONS (v5.1)
+
+   Now that purity is a scalar, we can give the action layer
+   quantitative reform targets: "Reform until purity ≥ 0.85."
+
+   This extends the existing reformability_score and reform_pressure
+   with:
+   1. purity_reform_target/2 — minimum acceptable purity after reform
+   2. purity_reform_recommendation/2 — structured actionable advice
+
+   The target formula:
+     Target = max(current_purity, 0.85)
+   Meaning:
+     - If purity is 0.40 → reform to at least 0.85 ("sound")
+     - If purity is 0.92 → maintain at 0.92 (don't regress)
+     - 0.85 is the "sound" zone threshold from the purity scale
+
+   The recommendation combines target, gap, reformability, pressure,
+   and specific purity deficits into a single structured term for
+   the decision/action layer.
+   ================================================================ */
+
+%% purity_reform_target(+Constraint, -Target)
+%  Returns the minimum acceptable purity score after reform.
+%  Target is always at least 0.85 ("sound" zone), or higher if the
+%  constraint's current purity already exceeds 0.85.
+purity_reform_target(C, Target) :-
+    structural_signatures:purity_score(C, Purity),
+    Purity >= 0.0, !,
+    Target is max(Purity, 0.85).
+purity_reform_target(_, 0.85).  % Fallback if purity inconclusive
+
+%% purity_reform_recommendation(+Constraint, -Recommendation)
+%  Generates a structured reform recommendation combining purity
+%  target, reformability, pressure, and specific deficits.
+%
+%  Recommendation = reform_recommendation(
+%      CurrentPurity,      % Current purity score [0,1]
+%      TargetPurity,       % Target purity score [0.85, 1.0]
+%      PurityGap,          % How much improvement needed
+%      Reformability,      % Can this be reformed? [0,1]
+%      ReformPressure,     % How urgent is reform? [0, 99]
+%      Deficits,           % List of specific purity deficits
+%      Urgency             % none | low | moderate | high | critical
+%  )
+
+purity_reform_recommendation(C, reform_recommendation(
+        CurrentPurity, TargetPurity, PurityGap,
+        Reformability, Pressure, Deficits, Urgency)) :-
+    % Get current purity
+    structural_signatures:purity_score(C, CurrentPurity),
+    CurrentPurity >= 0.0,
+
+    % Compute target and gap
+    purity_reform_target(C, TargetPurity),
+    PurityGap is max(0.0, TargetPurity - CurrentPurity),
+
+    % Get reformability score
+    (   reformability_score(C, Reformability)
+    ->  true
+    ;   Reformability = 0.5
+    ),
+
+    % Get reform pressure from lifecycle module
+    (   drl_lifecycle:reform_pressure(C, Pressure)
+    ->  true
+    ;   Pressure = 0.0
+    ),
+
+    % Identify specific purity deficits
+    identify_purity_deficits(C, Deficits),
+
+    % Compute urgency from gap, pressure, and reformability
+    compute_reform_urgency(PurityGap, Pressure, Reformability, Urgency).
+
+%% identify_purity_deficits(+C, -Deficits)
+%  Returns list of specific purity components scoring below 0.85.
+%  Each deficit identifies which structural aspect needs improvement.
+identify_purity_deficits(C, Deficits) :-
+    findall(Deficit, purity_deficit(C, Deficit), Deficits).
+
+% Factorization deficit: coupling across index dimensions
+purity_deficit(C, factorization_deficit(Score)) :-
+    structural_signatures:factorization_subscore(C, Score),
+    Score < 0.85.
+
+% Scope invariance deficit: classification changes with scope
+purity_deficit(C, scope_invariance_deficit(Score)) :-
+    structural_signatures:scope_invariance_subscore(C, Score),
+    Score < 0.85.
+
+% Coupling cleanliness deficit: nonsensical coupling present
+purity_deficit(C, coupling_cleanliness_deficit(Score)) :-
+    structural_signatures:coupling_cleanliness_subscore(C, Score),
+    Score < 0.85.
+
+% Excess extraction deficit: extraction above Boltzmann floor
+purity_deficit(C, excess_extraction_deficit(Score)) :-
+    structural_signatures:excess_extraction_subscore(C, Score),
+    Score < 0.85.
+
+%% compute_reform_urgency(+Gap, +Pressure, +Reformability, -Urgency)
+%  Maps quantitative inputs to categorical urgency level.
+%  Critical: large gap AND high pressure (active harm, reform overdue)
+%  High: large gap OR high pressure (significant but not crisis)
+%  Moderate: meaningful gap with reasonable reformability
+%  Low: small gap, system still in "sound" territory
+%  None: no gap (purity at or above target)
+compute_reform_urgency(Gap, Pressure, _, critical) :-
+    Gap > 0.40, Pressure > 2.0, !.
+compute_reform_urgency(Gap, Pressure, _, high) :-
+    (Gap > 0.30 ; Pressure > 1.5), !.
+compute_reform_urgency(Gap, _, Reformability, moderate) :-
+    Gap > 0.15, Reformability > 0.50, !.
+compute_reform_urgency(Gap, _, _, low) :-
+    Gap > 0.05, !.
+compute_reform_urgency(_, _, _, none).
+
+/* ================================================================
+   STAGE 7: PURITY-QUALIFIED ACTION ALGEBRA (v5.1)
+
+   The action algebra (dr_action/3 in drl_core.pl) is a simple
+   6-way type→action switch with no awareness of structural purity.
+   This creates a gap: the system can detect that a Rope's
+   coordination has been contaminated (purity=0.35) but still
+   recommends 'maintain'.
+
+   Stage 7 wraps dr_action/3 with a purity-qualified layer that
+   upgrades/downgrades actions based on purity thresholds.
+
+   SHADOW MODE: drl_core.pl is NOT modified. These predicates
+   are additive — callers opt in by using purity_qualified_action
+   instead of dr_action.
+
+   Four predicates:
+   A. purity_qualified_action/4  — Core action qualifier
+   B. purity_adjusted_energy/4   — Energy cost with purity multiplier
+   C. action_composition_gate/3  — Purity prerequisites for composites
+   D. purity_scaffold_urgency/4  — Extends scaffold assessment
+   ================================================================ */
+
+/* ----------------------------------------------------------------
+   A. PURITY-QUALIFIED ACTION — Core Action Qualifier
+   ----------------------------------------------------------------
+   Returns qualified_action(BaseAction, Qualifier, Priority) where:
+     Qualifier ∈ {stable, monitor, escalate_reform, escalate_cut,
+                  accelerate_sunset, degraded, inconclusive}
+     Priority  ∈ {none, low, moderate, high, critical}
+
+   When purity = -1.0 (insufficient data): returns
+     qualified_action(BaseAction, inconclusive, none)
+   — no qualification without evidence.
+   ---------------------------------------------------------------- */
+
+%% purity_qualified_action(+C, +Context, -QAction, -Rationale)
+%  PRIMARY API: Qualifies the base action with purity awareness.
+%  Rationale is a human-readable atom explaining the qualification.
+purity_qualified_action(C, Context, QAction, Rationale) :-
+    constraint_indexing:valid_context(Context),
+    drl_core:dr_action(C, Context, BaseAction),
+    structural_signatures:purity_score(C, Purity),
+    qualify_action(BaseAction, Purity, C, QAction, Rationale).
+
+%% purity_qualified_action(+C, -QAction, -Rationale)
+%  BACKWARD COMPAT: Uses analytical context.
+purity_qualified_action(C, QAction, Rationale) :-
+    constraint_indexing:default_context(Ctx),
+    purity_qualified_action(C, Ctx, QAction, Rationale).
+
+%% qualify_action(+BaseAction, +Purity, +C, -QAction, -Rationale)
+%  Core qualification logic. Dispatches by base action and purity zone.
+
+% Inconclusive purity — no qualification without evidence
+qualify_action(BaseAction, Purity, _C, qualified_action(BaseAction, inconclusive, none),
+              insufficient_purity_data) :-
+    Purity < 0.0, !.
+
+% accept (Mountain) — natural laws need no purity gate
+qualify_action(accept, _Purity, _C, qualified_action(accept, stable, none),
+              natural_law_no_gate) :- !.
+
+% maintain (Rope) — purity determines coordination health
+qualify_action(maintain, Purity, _C, qualified_action(maintain, stable, low),
+              sound_coordination) :-
+    config:param(purity_action_sound_floor, SoundFloor),
+    Purity >= SoundFloor, !.
+qualify_action(maintain, Purity, _C, qualified_action(maintain, monitor, moderate),
+              purity_declining) :-
+    config:param(purity_action_escalation_floor, EscFloor),
+    Purity >= EscFloor, !.
+qualify_action(maintain, Purity, _C, qualified_action(maintain, escalate_reform, high),
+              coordination_contaminated) :-
+    config:param(purity_action_degraded_floor, DegFloor),
+    Purity >= DegFloor, !.
+qualify_action(maintain, _Purity, _C, qualified_action(maintain, escalate_cut, critical),
+              degraded_beyond_coordination_value) :- !.
+
+% reform (Tangled Rope) — purity determines reform feasibility
+qualify_action(reform, Purity, _C, qualified_action(reform, stable, low),
+              careful_reform_sufficient) :-
+    config:param(purity_action_sound_floor, SoundFloor),
+    Purity >= SoundFloor, !.
+qualify_action(reform, Purity, _C, qualified_action(reform, stable, moderate),
+              standard_surgical_reform) :-
+    config:param(purity_action_escalation_floor, EscFloor),
+    Purity >= EscFloor, !.
+qualify_action(reform, Purity, _C, qualified_action(reform, stable, high),
+              aggressive_reform_needed) :-
+    config:param(purity_action_degraded_floor, DegFloor),
+    Purity >= DegFloor, !.
+qualify_action(reform, _Purity, _C, qualified_action(reform, escalate_cut, critical),
+              unreformable_cut) :- !.
+
+% cut (Snare) — purity informs energy only; cut unchanged
+qualify_action(cut, Purity, _C, qualified_action(cut, stable, Priority),
+              cut_purity_informs_energy) :-
+    purity_to_cut_priority(Purity, Priority), !.
+
+% monitor_sunset (Scaffold) — purity determines scaffold health
+qualify_action(monitor_sunset, Purity, _C, qualified_action(monitor_sunset, stable, low),
+              scaffold_healthy) :-
+    config:param(purity_action_sound_floor, SoundFloor),
+    Purity >= SoundFloor, !.
+qualify_action(monitor_sunset, Purity, _C, qualified_action(monitor_sunset, monitor, moderate),
+              scaffold_purity_declining) :-
+    config:param(purity_scaffold_health_gate, HealthGate),
+    Purity >= HealthGate, !.
+qualify_action(monitor_sunset, _Purity, _C, qualified_action(monitor_sunset, accelerate_sunset, high),
+              dissolve_sooner) :- !.
+
+% bypass (Piton) — terminal state
+qualify_action(bypass, _Purity, _C, qualified_action(bypass, degraded, none),
+              terminal_state) :- !.
+
+% investigate — passthrough
+qualify_action(investigate, _Purity, _C, qualified_action(investigate, stable, none),
+              passthrough) :- !.
+
+% Fallback
+qualify_action(BaseAction, _Purity, _C, qualified_action(BaseAction, stable, none),
+              no_qualification_rule).
+
+%% purity_to_cut_priority(+Purity, -Priority)
+%  Maps purity to priority for cut actions (energy-only impact).
+purity_to_cut_priority(Purity, low) :-
+    config:param(purity_action_sound_floor, SoundFloor),
+    Purity >= SoundFloor, !.
+purity_to_cut_priority(Purity, moderate) :-
+    config:param(purity_action_escalation_floor, EscFloor),
+    Purity >= EscFloor, !.
+purity_to_cut_priority(Purity, high) :-
+    config:param(purity_action_degraded_floor, DegFloor),
+    Purity >= DegFloor, !.
+purity_to_cut_priority(_, critical).
+
+/* ----------------------------------------------------------------
+   B. PURITY-ADJUSTED ENERGY — Energy Cost with Purity Multiplier
+   ----------------------------------------------------------------
+   Returns energy_cost(BaseComplexity, Multiplier, AdjustedComplexity).
+
+   Multiplier formulas per action:
+     reform:        M = min(MaxMult, 1.0 + max(0, 0.70 - Purity) × 3.0)
+     cut:           M = min(MaxMult, 1.0 + max(0, 0.50 - Purity) × 1.5)
+     maintain:      M = max(0.8, 1.0 - max(0, Purity - 0.70) × 0.5)
+     accept/bypass/monitor_sunset: M = 1.0
+
+   Base complexities:
+     accept=0, maintain=1, reform=4, cut=2, monitor_sunset=2, bypass=1
+   ---------------------------------------------------------------- */
+
+%% purity_adjusted_energy(+C, +Context, +BaseAction, -EnergyCost)
+%  PRIMARY API: Computes purity-adjusted energy cost for an action.
+purity_adjusted_energy(C, Context, BaseAction, energy_cost(BaseCost, Mult, Adjusted)) :-
+    constraint_indexing:valid_context(Context),
+    base_action_complexity(BaseAction, BaseCost),
+    structural_signatures:purity_score(C, Purity),
+    config:param(purity_energy_max_multiplier, MaxMult),
+    energy_multiplier(BaseAction, Purity, MaxMult, Mult),
+    Adjusted is BaseCost * Mult.
+
+%% base_action_complexity(+Action, -Cost)
+base_action_complexity(accept,         0).
+base_action_complexity(maintain,       1).
+base_action_complexity(reform,         4).
+base_action_complexity(cut,            2).
+base_action_complexity(monitor_sunset, 2).
+base_action_complexity(bypass,         1).
+base_action_complexity(investigate,    1).
+
+%% energy_multiplier(+Action, +Purity, +MaxMult, -Mult)
+%  Computes the energy multiplier based on action type and purity.
+
+% Inconclusive purity — use baseline multiplier
+energy_multiplier(_, Purity, _, 1.0) :-
+    Purity < 0.0, !.
+
+% Reform: harder at lower purity (more entangled)
+energy_multiplier(reform, Purity, MaxMult, Mult) :-
+    RawMult is 1.0 + max(0.0, 0.70 - Purity) * 3.0,
+    Mult is min(MaxMult, RawMult), !.
+
+% Cut: harder at lower purity (more collateral damage)
+energy_multiplier(cut, Purity, MaxMult, Mult) :-
+    RawMult is 1.0 + max(0.0, 0.50 - Purity) * 1.5,
+    Mult is min(MaxMult, RawMult), !.
+
+% Maintain: pristine coordination is cheaper to maintain
+energy_multiplier(maintain, Purity, _, Mult) :-
+    Mult is max(0.8, 1.0 - max(0.0, Purity - 0.70) * 0.5), !.
+
+% All others: no purity effect
+energy_multiplier(_, _, _, 1.0).
+
+/* ----------------------------------------------------------------
+   C. ACTION COMPOSITION GATE — Purity Prerequisites
+   ----------------------------------------------------------------
+   Returns gate(Pass, Reason) where Pass ∈ {pass, fail}.
+
+   Gates:
+     surgical_reform:        Purity ≥ 0.30 AND Reformability > 0.50
+     safe_transition:        Scaffold purity ≥ 0.50
+     efficient_coordination: Rope purity ≥ 0.50
+
+   For unknown composite actions or purity = -1.0 →
+     gate(pass, no_gate_defined)
+   ---------------------------------------------------------------- */
+
+%% action_composition_gate(+C, +CompositeAction, -GateResult)
+%  Checks purity prerequisites for composite actions.
+
+action_composition_gate(C, surgical_reform, gate(Pass, Reason)) :-
+    structural_signatures:purity_score(C, Purity),
+    (   Purity < 0.0
+    ->  Pass = pass, Reason = no_gate_defined
+    ;   config:param(purity_surgical_reform_gate, MinPurity),
+        (   Purity >= MinPurity
+        ->  (   reformability_score(C, ReformScore),
+                ReformScore > 0.50
+            ->  Pass = pass, Reason = purity_and_reformability_sufficient
+            ;   Pass = fail, Reason = reformability_too_low
+            )
+        ;   Pass = fail, Reason = purity_below_surgical_threshold
+        )
+    ), !.
+
+action_composition_gate(C, safe_transition, gate(Pass, Reason)) :-
+    structural_signatures:purity_score(C, Purity),
+    (   Purity < 0.0
+    ->  Pass = pass, Reason = no_gate_defined
+    ;   config:param(purity_scaffold_health_gate, MinPurity),
+        (   Purity >= MinPurity
+        ->  Pass = pass, Reason = scaffold_structurally_sound
+        ;   Pass = fail, Reason = scaffold_purity_insufficient
+        )
+    ), !.
+
+action_composition_gate(C, efficient_coordination, gate(Pass, Reason)) :-
+    structural_signatures:purity_score(C, Purity),
+    (   Purity < 0.0
+    ->  Pass = pass, Reason = no_gate_defined
+    ;   config:param(purity_action_escalation_floor, MinPurity),
+        (   Purity >= MinPurity
+        ->  Pass = pass, Reason = coordination_structurally_sound
+        ;   Pass = fail, Reason = coordination_purity_insufficient
+        )
+    ), !.
+
+% Unknown composite action or fallback
+action_composition_gate(_, _, gate(pass, no_gate_defined)).
+
+/* ----------------------------------------------------------------
+   D. PURITY SCAFFOLD URGENCY — Extends Scaffold Assessment
+   ----------------------------------------------------------------
+   Returns urgency ∈ {none, low, moderate, high, critical}
+   with explanatory factors.
+
+   Combines coupling_aware_scaffold_need/3 output with purity:
+     - Base scaffold_required(high) + purity < 0.30 → critical
+     - Base scaffold_required(_) + purity drift → escalate one level
+     - Base reform_preferred(Score) + purity < 0.50 →
+       escalate to scaffold_required(high) (reform impractical)
+   ---------------------------------------------------------------- */
+
+%% purity_scaffold_urgency(+C, +Context, -Urgency, -Factors)
+%  PRIMARY API: Purity-enhanced scaffold urgency assessment.
+purity_scaffold_urgency(C, Context, Urgency, Factors) :-
+    constraint_indexing:valid_context(Context),
+    (   coupling_aware_scaffold_need(C, Context, BaseAssessment)
+    ->  true
+    ;   BaseAssessment = no_scaffold_needed
+    ),
+    structural_signatures:purity_score(C, Purity),
+    has_purity_drift(C, DriftDetected),
+    compute_scaffold_urgency(BaseAssessment, Purity, DriftDetected, Urgency, Factors).
+
+%% has_purity_drift(+C, -Detected)
+%  Checks if purity drift is detected for the constraint.
+%  Fails gracefully if drl_lifecycle is not loaded.
+has_purity_drift(C, true) :-
+    catch(drl_lifecycle:detect_purity_drift(C), _, fail), !.
+has_purity_drift(_, false).
+
+%% compute_scaffold_urgency(+BaseAssessment, +Purity, +DriftDetected, -Urgency, -Factors)
+
+% Inconclusive purity — pass through base assessment
+compute_scaffold_urgency(BaseAssessment, Purity, _, BaseUrgency, [base(BaseAssessment), purity_inconclusive]) :-
+    Purity < 0.0, !,
+    base_assessment_urgency(BaseAssessment, BaseUrgency).
+
+% scaffold_required(high) + purity < 0.30 → critical
+compute_scaffold_urgency(scaffold_required(high), Purity, _, critical,
+                         [base(scaffold_required(high)), purity(Purity), escalated(degraded_purity)]) :-
+    config:param(purity_action_degraded_floor, DegFloor),
+    Purity < DegFloor, !.
+
+% scaffold_required(_) + drift → escalate one level
+compute_scaffold_urgency(scaffold_required(BaseLevel), Purity, true, Escalated,
+                         [base(scaffold_required(BaseLevel)), purity(Purity), escalated(purity_drift)]) :-
+    escalate_urgency(BaseLevel, Escalated), !.
+
+% reform_preferred(Score) + purity < 0.50 → scaffold_required(high)
+compute_scaffold_urgency(reform_preferred(_Score), Purity, _, high,
+                         [base(reform_preferred), purity(Purity), escalated(reform_impractical_at_purity)]) :-
+    config:param(purity_action_escalation_floor, EscFloor),
+    Purity < EscFloor, !.
+
+% Default: derive urgency from base assessment without escalation
+compute_scaffold_urgency(BaseAssessment, Purity, _, Urgency,
+                         [base(BaseAssessment), purity(Purity)]) :-
+    base_assessment_urgency(BaseAssessment, Urgency).
+
+%% base_assessment_urgency(+Assessment, -Urgency)
+%  Maps base coupling_aware_scaffold_need assessment to urgency.
+base_assessment_urgency(scaffold_required(high), high).
+base_assessment_urgency(scaffold_required(moderate), moderate).
+base_assessment_urgency(scaffold_required(low), low).
+base_assessment_urgency(scaffold_required(_), moderate).  % catch-all for scaffold_required
+base_assessment_urgency(scaffold_present, low).
+base_assessment_urgency(reform_preferred(_), moderate).
+base_assessment_urgency(no_scaffold_needed, none).
+base_assessment_urgency(_, none).
+
+%% escalate_urgency(+Base, -Escalated)
+%  Escalates urgency by one level.
+escalate_urgency(low, moderate).
+escalate_urgency(moderate, high).
+escalate_urgency(high, critical).
+escalate_urgency(critical, critical).  % Cannot escalate beyond critical
+escalate_urgency(none, low).
+
+/* ================================================================
+   STAGE 8: PURITY PROPAGATION THROUGH CONSTRAINT NETWORKS (v5.2)
+
+   Constraints don't exist in isolation. When a Snare's purity is 0.31,
+   that contamination should create pressure on connected Ropes that
+   naively show 0.88 purity. This stage implements a one-hop
+   contamination propagation engine.
+
+   Key design decisions:
+   - One-hop only: no transitive propagation (avoids convergence complexity)
+   - Contamination only, no uplift: purity degrades spontaneously,
+     requires active intervention to improve (thermodynamic)
+   - Per-edge cap: purity_contamination_cap prevents one bad actor
+     from destroying the network
+   - Context-indexed: same constraint may be Mountain (immune) from one
+     context and Snare (emitting contamination) from another
+
+   Graceful degradation: when only one constraint is loaded,
+   effective_purity equals intrinsic purity and network_qualified_action
+   delegates to purity_qualified_action.
+   ================================================================ */
+
+/* ----------------------------------------------------------------
+   A. NETWORK DISCOVERY
+   Discovers constraint neighbors from three edge sources:
+   1. Explicit: affects_constraint/2
+   2. Inferred: infer_structural_coupling/3
+   3. Shared agent: constraint_beneficiary/2, constraint_victim/2
+   ---------------------------------------------------------------- */
+
+%% constraint_neighbors(+C, +Context, -Neighbors)
+%  PRIMARY API: Discovers all neighbors of C.
+%  Returns [neighbor(Other, Strength, Source), ...] where
+%  Source ∈ {explicit, inferred_coupling, shared_beneficiary, shared_victim}
+constraint_neighbors(C, Context, Neighbors) :-
+    constraint_indexing:valid_context(Context),
+    findall(neighbor(Other, 1.0, explicit),
+            ( narrative_ontology:affects_constraint(C, Other), Other \= C ),
+            ExplicitOut),
+    findall(neighbor(Other, 1.0, explicit),
+            ( narrative_ontology:affects_constraint(Other, C), Other \= C ),
+            ExplicitIn),
+    config:param(network_coupling_threshold, CoupThresh),
+    findall(neighbor(Other, Strength, inferred_coupling),
+            ( infer_structural_coupling(C, Other, Strength),
+              Strength >= CoupThresh ),
+            Inferred),
+    findall(neighbor(Other, AgentStrength, LinkType),
+            ( shared_agent_link(C, Other, LinkType, _),
+              shared_agent_edge_strength(C, Other, LinkType, AgentStrength) ),
+            SharedRaw),
+    append([ExplicitOut, ExplicitIn, Inferred, SharedRaw], AllRaw),
+    deduplicate_neighbors(AllRaw, Neighbors).
+
+%% constraint_neighbors(+C, -Neighbors)
+%  BACKWARD COMPAT: Uses analytical context.
+constraint_neighbors(C, Neighbors) :-
+    constraint_indexing:default_context(Ctx),
+    constraint_neighbors(C, Ctx, Neighbors).
+
+%% shared_agent_link(+C1, -C2, -LinkType, -Agent)
+%  Discovers constraints linked through shared agent classes.
+shared_agent_link(C1, C2, shared_beneficiary, Agent) :-
+    narrative_ontology:constraint_beneficiary(C1, Agent),
+    narrative_ontology:constraint_beneficiary(C2, Agent),
+    C1 \= C2.
+shared_agent_link(C1, C2, shared_victim, Agent) :-
+    narrative_ontology:constraint_victim(C1, Agent),
+    narrative_ontology:constraint_victim(C2, Agent),
+    C1 \= C2.
+
+%% shared_agent_edge_strength(+C1, +C2, +LinkType, -Strength)
+%  Edge strength = 0.3 × N (capped at 1.0) where N = shared links.
+shared_agent_edge_strength(C1, C2, LinkType, Strength) :-
+    findall(A, shared_agent_link(C1, C2, LinkType, A), Agents),
+    sort(Agents, Unique),
+    length(Unique, N),
+    Strength is min(1.0, 0.3 * N).
+
+%% deduplicate_neighbors(+Raw, -Deduped)
+%  Keeps the strongest edge per neighbor. Removes duplicates.
+deduplicate_neighbors(Raw, Deduped) :-
+    msort(Raw, Sorted),
+    dedup_sorted(Sorted, Deduped).
+
+dedup_sorted([], []).
+dedup_sorted([neighbor(C, S1, Src1), neighbor(C, S2, _Src2) | Rest], Out) :-
+    !,
+    MaxS is max(S1, S2),
+    dedup_sorted([neighbor(C, MaxS, Src1) | Rest], Out).
+dedup_sorted([H|T], [H|Out]) :-
+    dedup_sorted(T, Out).
+
+/* ----------------------------------------------------------------
+   B. PURITY PROPAGATION
+   Core algorithm: effective_purity = max(0, intrinsic - contamination × immunity)
+   ---------------------------------------------------------------- */
+
+%% type_contamination_strength(+Type, -Strength)
+%  How much contamination a type emits as a source.
+type_contamination_strength(snare,        1.0) :- !.
+type_contamination_strength(piton,        0.8) :- !.
+type_contamination_strength(tangled_rope, 0.5) :- !.
+type_contamination_strength(scaffold,     0.2) :- !.
+type_contamination_strength(rope,         0.1) :- !.
+type_contamination_strength(mountain,     0.0) :- !.
+type_contamination_strength(_,            0.0).
+
+%% type_immunity(+Type, -Immunity)
+%  Susceptibility factor for the target type.
+%  0.0 = immune (Mountain), 1.0 = fully susceptible (Rope).
+type_immunity(mountain,      0.0) :- !.
+type_immunity(piton,         0.3) :- !.
+type_immunity(snare,         0.5) :- !.
+type_immunity(tangled_rope,  0.8) :- !.
+type_immunity(scaffold,      0.9) :- !.
+type_immunity(rope,          1.0) :- !.
+type_immunity(_,             0.5).
+
+%% effective_purity(+C, +Context, -EffPurity, -Components)
+%  PRIMARY API: Computes effective purity accounting for neighbor contamination.
+%  Components = purity_components(IntrinsicPurity, TotalContamination, Detail)
+%  where Detail = no_neighbors | contamination_detail(NeighborList)
+effective_purity(C, Context, EffPurity, purity_components(Intrinsic, TotalContam, Detail)) :-
+    constraint_indexing:valid_context(Context),
+    structural_signatures:purity_score(C, Intrinsic),
+    constraint_neighbors(C, Context, Neighbors),
+    (   Neighbors = []
+    ->  TotalContam = 0.0,
+        Detail = no_neighbors,
+        EffPurity = Intrinsic
+    ;   Intrinsic < 0.0
+    ->  TotalContam = 0.0,
+        Detail = no_neighbors,
+        EffPurity = Intrinsic
+    ;   drl_core:dr_type(C, Context, MyType),
+        type_immunity(MyType, Immunity),
+        compute_total_contamination(C, Intrinsic, Neighbors, Context, TotalContam, NeighborDetails),
+        Detail = contamination_detail(NeighborDetails),
+        RawEff is Intrinsic - TotalContam * Immunity,
+        EffPurity is max(0.0, RawEff)
+    ).
+
+%% effective_purity(+C, -EffPurity, -Components)
+%  BACKWARD COMPAT: Uses analytical context.
+effective_purity(C, EffPurity, Components) :-
+    constraint_indexing:default_context(Ctx),
+    effective_purity(C, Ctx, EffPurity, Components).
+
+%% compute_total_contamination(+C, +MyPurity, +Neighbors, +Context, -Total, -Details)
+%  Sums contamination pressure from all neighbors (capped per edge).
+compute_total_contamination(_, _, [], _, 0.0, []).
+compute_total_contamination(C, MyPurity, [neighbor(Other, EdgeStrength, _Src)|Rest], Context, Total, [Detail|RestDetails]) :-
+    compute_edge_contamination(C, MyPurity, Other, EdgeStrength, Context, EdgeContam, Detail),
+    compute_total_contamination(C, MyPurity, Rest, Context, RestTotal, RestDetails),
+    Total is EdgeContam + RestTotal.
+
+%% compute_edge_contamination(+C, +MyPurity, +Other, +EdgeStrength, +Context, -Contam, -Detail)
+%  Computes contamination from one neighbor.
+%  Contamination flows downward only (from lower purity to higher purity).
+compute_edge_contamination(_C, MyPurity, Other, EdgeStrength, Context, Contam, edge(Other, Delta, Contam)) :-
+    structural_signatures:purity_score(Other, OtherPurity),
+    OtherPurity >= 0.0,
+    !,
+    Delta is max(0.0, MyPurity - OtherPurity),
+    (   Delta > 0.0
+    ->  config:param(purity_attenuation_factor, AttFactor),
+        config:param(purity_contamination_cap, Cap),
+        (   drl_core:dr_type(Other, Context, OtherType)
+        ->  type_contamination_strength(OtherType, TypeFactor)
+        ;   TypeFactor = 0.0
+        ),
+        Attenuation is EdgeStrength * AttFactor,
+        RawContam is Delta * Attenuation * TypeFactor,
+        Contam is min(Cap, RawContam)
+    ;   Contam = 0.0
+    ).
+compute_edge_contamination(_C, _MyPurity, Other, _EdgeStrength, _Context, 0.0, edge(Other, 0.0, 0.0)).
+
+%% purity_contamination_pressure(+Src, +Tgt, +Context, -Pressure)
+%  Computes contamination pressure from one specific Source onto Target.
+%  Returns pressure(Delta, Attenuation, TypeFactor).
+purity_contamination_pressure(Src, Tgt, Context, pressure(Delta, Attenuation, TypeFactor)) :-
+    constraint_indexing:valid_context(Context),
+    structural_signatures:purity_score(Src, SrcPurity),
+    structural_signatures:purity_score(Tgt, TgtPurity),
+    SrcPurity >= 0.0,
+    TgtPurity >= 0.0,
+    Delta is max(0.0, TgtPurity - SrcPurity),
+    config:param(purity_attenuation_factor, AttFactor),
+    constraint_neighbors(Tgt, Context, Neighbors),
+    (   member(neighbor(Src, EdgeStrength, _), Neighbors)
+    ->  Attenuation is EdgeStrength * AttFactor
+    ;   Attenuation = 0.0
+    ),
+    (   drl_core:dr_type(Src, Context, SrcType)
+    ->  type_contamination_strength(SrcType, TypeFactor)
+    ;   TypeFactor = 0.0
+    ).
+
+/* ----------------------------------------------------------------
+   C. NETWORK METRICS
+   Aggregates across all loaded constraints.
+   ---------------------------------------------------------------- */
+
+%% network_purity_metrics(+Context, -Metrics)
+%  Aggregates effective purity across all loaded constraints.
+%  Metrics = network_metrics(WeakestLink, AvgPurity, AtRiskCount, TotalConstraints)
+network_purity_metrics(Context, network_metrics(WeakestLink, AvgPurity, AtRiskCount, Total)) :-
+    constraint_indexing:valid_context(Context),
+    findall(C-EP, (
+        narrative_ontology:constraint_claim(C, _),
+        \+ is_list(C),
+        effective_purity(C, Context, EP, _),
+        EP >= 0.0
+    ), Pairs),
+    length(Pairs, Total),
+    (   Total > 0
+    ->  findall(EP, member(_-EP, Pairs), EPs),
+        sum_list(EPs, SumEP),
+        AvgPurity is SumEP / Total,
+        config:param(purity_action_escalation_floor, EscFloor),
+        include(below_floor_pair(EscFloor), Pairs, AtRiskPairs),
+        length(AtRiskPairs, AtRiskCount),
+        find_weakest(Pairs, WeakestLink)
+    ;   AvgPurity = 0.0,
+        AtRiskCount = 0,
+        WeakestLink = none
+    ).
+
+%% below_floor_pair(+Floor, +Pair)
+below_floor_pair(Floor, _-EP) :- EP < Floor.
+
+%% find_weakest(+Pairs, -WeakestLink)
+find_weakest([], none).
+find_weakest([C-EP], weakest(C, EP)) :- !.
+find_weakest([C1-EP1, C2-EP2 | Rest], Weakest) :-
+    (   EP1 =< EP2
+    ->  find_weakest([C1-EP1 | Rest], Weakest)
+    ;   find_weakest([C2-EP2 | Rest], Weakest)
+    ).
+
+%% cluster_purity(+Constraints, +Context, -Score)
+%  Weighted average purity for a given list of constraints.
+%  Weight = sum of edge strengths to other cluster members.
+cluster_purity(Constraints, Context, Score) :-
+    constraint_indexing:valid_context(Context),
+    findall(EP-Weight, (
+        member(C, Constraints),
+        effective_purity(C, Context, EP, _),
+        EP >= 0.0,
+        constraint_neighbors(C, Context, Neighbors),
+        findall(S, (
+            member(neighbor(Other, S, _), Neighbors),
+            member(Other, Constraints)
+        ), Strengths),
+        (   Strengths = []
+        ->  Weight = 1.0
+        ;   sum_list(Strengths, Weight)
+        )
+    ), Pairs),
+    (   Pairs = []
+    ->  Score = 0.0
+    ;   foldl(weighted_sum_acc, Pairs, 0.0-0.0, TotalWeightedEP-TotalWeight),
+        (   TotalWeight > 0.0
+        ->  Score is TotalWeightedEP / TotalWeight
+        ;   Score = 0.0
+        )
+    ).
+
+weighted_sum_acc(EP-W, AccEP-AccW, NewAccEP-NewAccW) :-
+    NewAccEP is AccEP + EP * W,
+    NewAccW is AccW + W.
+
+%% contamination_path(+Src, +Tgt, +Context, -Path, -Loss)
+%  BFS trace from Source to Target through the neighbor graph.
+%  Returns path of [step(C, Purity, Delta), ...] and cumulative loss.
+contamination_path(Src, Tgt, Context, Path, Loss) :-
+    constraint_indexing:valid_context(Context),
+    structural_signatures:purity_score(Src, SrcP),
+    bfs_path(Src, Tgt, Context, [Src], RevPath),
+    reverse(RevPath, FwdPath),
+    build_path_steps(FwdPath, Context, Path, 0.0, Loss, SrcP).
+
+%% bfs_path(+Current, +Target, +Context, +Visited, -Path)
+bfs_path(Target, Target, _Context, _Visited, [Target]) :- !.
+bfs_path(Current, Target, Context, Visited, [Current|RestPath]) :-
+    constraint_neighbors(Current, Context, Neighbors),
+    member(neighbor(Next, _, _), Neighbors),
+    \+ member(Next, Visited),
+    bfs_path(Next, Target, Context, [Next|Visited], RestPath).
+
+%% build_path_steps(+Nodes, +Context, -Steps, +AccLoss, -TotalLoss, +PrevPurity)
+build_path_steps([], _, [], Loss, Loss, _).
+build_path_steps([C], Context, [step(C, EP, 0.0)], AccLoss, AccLoss, _) :-
+    effective_purity(C, Context, EP, _), !.
+build_path_steps([C|Rest], Context, [step(C, EP, Delta)|RestSteps], AccLoss, TotalLoss, PrevP) :-
+    effective_purity(C, Context, EP, _),
+    Delta is max(0.0, PrevP - EP),
+    NewAcc is AccLoss + Delta,
+    build_path_steps(Rest, Context, RestSteps, NewAcc, TotalLoss, EP).
+
+%% weakest_link_purity(+Context, -Constraint, -Purity)
+%  Returns the constraint with the lowest effective purity.
+weakest_link_purity(Context, Constraint, Purity) :-
+    network_purity_metrics(Context, network_metrics(WeakestLink, _, _, _)),
+    WeakestLink = weakest(Constraint, Purity).
+
+/* ----------------------------------------------------------------
+   D. STAGE 7 INTEGRATION — Network-Qualified Actions
+   Wraps purity_qualified_action/4 with effective purity.
+   ---------------------------------------------------------------- */
+
+%% network_qualified_action(+C, +Context, -QAction, -Rationale)
+%  PRIMARY API: Qualifies action using network-aware effective purity.
+%  If effective < intrinsic by ≥0.05, uses effective purity for
+%  qualification (stricter). Otherwise delegates to purity_qualified_action/4.
+network_qualified_action(C, Context, QAction, Rationale) :-
+    constraint_indexing:valid_context(Context),
+    effective_purity(C, Context, EffPurity, _Components),
+    structural_signatures:purity_score(C, Intrinsic),
+    (   Intrinsic >= 0.0,
+        EffPurity >= 0.0,
+        Drop is Intrinsic - EffPurity,
+        Drop >= 0.05
+    ->  % Network contamination is significant — use effective purity
+        drl_core:dr_action(C, Context, BaseAction),
+        qualify_action(BaseAction, EffPurity, C, BaseQAction, BaseRationale),
+        QAction = BaseQAction,
+        Rationale = network_contaminated(BaseRationale, Drop)
+    ;   % No significant network effect — delegate to Stage 7
+        purity_qualified_action(C, Context, QAction, Rationale)
+    ).
+
+%% network_qualified_action(+C, -QAction, -Rationale)
+%  BACKWARD COMPAT: Uses analytical context.
+network_qualified_action(C, QAction, Rationale) :-
+    constraint_indexing:default_context(Ctx),
+    network_qualified_action(C, Ctx, QAction, Rationale).
 
 /* ================================================================
    UTILITY PREDICATES
