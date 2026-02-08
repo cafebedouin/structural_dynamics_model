@@ -22,6 +22,7 @@
     narrative_ontology:constraint_metric/3,
     narrative_ontology:interval/3,
     narrative_ontology:measurement/5,
+    narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -69,6 +70,9 @@ narrative_ontology:constraint_metric(academic_fashion_modernism_2026, extractive
 narrative_ontology:constraint_metric(academic_fashion_modernism_2026, suppression_requirement, 0.78).
 narrative_ontology:constraint_metric(academic_fashion_modernism_2026, theater_ratio, 0.85).
 
+% Constraint classification claim
+narrative_ontology:constraint_claim(academic_fashion_modernism_2026, piton).
+
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
    ========================================================================== */
@@ -114,6 +118,7 @@ test(perspectival_gap) :-
 
 test(theater_check) :-
     domain_priors:theater_ratio(academic_fashion_modernism_2026, TR),
+domain_priors:requires_active_enforcement(academic_fashion_modernism_2026).
 
     TR > 0.70. % Triggers Piton detection for the Analytical Observer.
 

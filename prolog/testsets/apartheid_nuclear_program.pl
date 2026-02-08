@@ -25,6 +25,7 @@
     narrative_ontology:measurement/5,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -59,6 +60,9 @@ domain_priors:theater_ratio(apartheid_nuclear_program, 0.20).       % Clandestin
 narrative_ontology:constraint_metric(apartheid_nuclear_program, extractiveness, 0.85).
 narrative_ontology:constraint_metric(apartheid_nuclear_program, suppression_requirement, 0.9).
 narrative_ontology:constraint_metric(apartheid_nuclear_program, theater_ratio, 0.2).
+
+% Constraint classification claim
+narrative_ontology:constraint_claim(apartheid_nuclear_program, tangled_rope).
 
 % Constraint metric facts used by the classification engine
 domain_priors:requires_active_enforcement(apartheid_nuclear_program).

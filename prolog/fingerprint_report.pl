@@ -94,15 +94,8 @@ report_shift_family(Pattern) :-
     length(Members, Count),
     format('### `shift(~w, ~w, ~w, ~w)` — ~w constraints~n~n',
            [Pw, Mod, Inst, An, Count]),
-    % Show up to 10 members
-    (   Count =< 10
-    ->  forall(member(M, Members), format('- `~w`~n', [M]))
-    ;   length(First10, 10),
-        append(First10, _, Members),
-        forall(member(M, First10), format('- `~w`~n', [M])),
-        Remaining is Count - 10,
-        format('- ...and ~w more~n', [Remaining])
-    ),
+    % List all members (no truncation — conflict_map.py parses these)
+    forall(member(M, Members), format('- `~w`~n', [M])),
     format('~n').
 
 %% scope_changes_type(+Constraint)

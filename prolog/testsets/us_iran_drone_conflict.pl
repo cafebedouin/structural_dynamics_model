@@ -24,6 +24,7 @@
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -57,6 +58,9 @@ domain_priors:theater_ratio(us_iran_drone_conflict, 0.2).       % Piton detectio
 narrative_ontology:constraint_metric(us_iran_drone_conflict, extractiveness, 0.6).
 narrative_ontology:constraint_metric(us_iran_drone_conflict, suppression_requirement, 0.7).
 narrative_ontology:constraint_metric(us_iran_drone_conflict, theater_ratio, 0.2).
+
+% Constraint classification claim
+narrative_ontology:constraint_claim(us_iran_drone_conflict, tangled_rope).
 
 % Binary flags
 % narrative_ontology:has_sunset_clause(us_iran_drone_conflict).      % Mandatory if Scaffold

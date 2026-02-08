@@ -242,3 +242,27 @@ omega_variable(
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
+% ============================================================================
+% ENRICHMENT: Structural predicates for dynamic classification
+% Generated: 2026-02-08
+% Template: v5.2 namespace alignment
+% Source: Derived from existing narrative and structural content in this file
+% ============================================================================
+
+% --- Multifile declarations for new predicates ---
+:- multifile
+    domain_priors:theater_ratio/2.
+
+% --- Theater ratio (missing from base properties) ---
+% Coordination mechanism in economic domain — moderate institutional framing
+domain_priors:theater_ratio(platform_cooperativism_governance, 0.12).
+narrative_ontology:constraint_metric(platform_cooperativism_governance, theater_ratio, 0.12).
+
+% --- Analytical perspective classification (missing) ---
+% chi = 0.05 * 1.15 (analytical) * 1.2 (global) = 0.069
+% Classification: scaffold
+constraint_indexing:constraint_classification(platform_cooperativism_governance, scaffold,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(global))).

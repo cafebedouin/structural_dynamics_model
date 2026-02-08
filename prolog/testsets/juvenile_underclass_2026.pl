@@ -24,6 +24,7 @@
     narrative_ontology:measurement/5,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -67,6 +68,9 @@ domain_priors:theater_ratio(juvenile_underclass_2026, 0.80).
 narrative_ontology:constraint_metric(juvenile_underclass_2026, extractiveness, 0.75).
 narrative_ontology:constraint_metric(juvenile_underclass_2026, suppression_requirement, 0.9).
 narrative_ontology:constraint_metric(juvenile_underclass_2026, theater_ratio, 0.8).
+
+% Constraint classification claim
+narrative_ontology:constraint_claim(juvenile_underclass_2026, piton).
 
 % Primary keys for the classification engine
 % Stakeholder declarations

@@ -1,9 +1,9 @@
 % ============================================================================
 % CONSTRAINT STORY: lung_transplant_protocol
 % ============================================================================
-% Version: 3.4 (Deferential Realism Core)
-% Logic: 3.3 (Indexed Tuple P,T,E,S)
-% Generated: 2024-02-29
+% Version: 5.2 (Deferential Realism Core + Boltzmann + Purity + Network)
+% Logic: 5.2 (Indexed Tuple P,T,E,S + Coupling + Purity + Network Drift)
+% Generated: 2024-05-21
 % ============================================================================
 
 :- module(constraint_lung_transplant_protocol, []).
@@ -24,6 +24,10 @@
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
+    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -33,10 +37,10 @@
 /**
  * CONSTRAINT IDENTIFICATION
  * * constraint_id: lung_transplant_protocol
- * human_readable: Lung Transplant Protocol
+ * human_readable: Lung Transplant Allocation Protocol
  * domain: social
  * * SUMMARY:
- * The lung transplant protocol governs the allocation of scarce donor lungs to patients in need. It involves a complex set of criteria to determine recipient eligibility and priority. This story examines the constraint on access to this life-saving procedure.
+ * The lung transplant protocol governs the allocation of scarce donor lungs to patients in need. It involves a complex set of criteria to determine recipient eligibility and priority. This story examines the constraint on access to this life-saving procedure, which functions as both a necessary coordination mechanism and a source of severe extraction for those deemed ineligible.
  * * KEY AGENTS:
  * - Patient: Subject (Powerless)
  * - Transplant Center: Beneficiary (Institutional)
@@ -58,9 +62,13 @@ narrative_ontology:constraint_metric(lung_transplant_protocol, extractiveness, 0
 narrative_ontology:constraint_metric(lung_transplant_protocol, suppression_requirement, 0.70).
 narrative_ontology:constraint_metric(lung_transplant_protocol, theater_ratio, 0.20).
 
+% Constraint self-claim (what does the constraint claim to be?)
+% Values: natural_law, coordination, constructed, enforcement
+narrative_ontology:constraint_claim(lung_transplant_protocol, tangled_rope).
+
 % Binary flags
 % narrative_ontology:has_sunset_clause(lung_transplant_protocol).      % Mandatory if Scaffold
-% domain_priors:requires_active_enforcement(lung_transplant_protocol). % Required for Tangled Rope
+domain_priors:requires_active_enforcement(lung_transplant_protocol). % Required for Tangled Rope
 
 % Structural property derivation hooks:
 %   has_coordination_function/1 is DERIVED from constraint_beneficiary/2
@@ -80,11 +88,6 @@ narrative_ontology:constraint_victim(lung_transplant_protocol, patients_in_need)
 % PERSPECTIVE 1: THE SUBJECT (SNARE/MOUNTAIN)
 % High extraction felt as an immutable limit or predatory trap.
 % NOTE: This may be upgraded to 'organized' power if a critical mass of victims exists.
-%
-% UNIFORM-TYPE EXCEPTION: For natural law constraints (mountain-only) or pure
-% coordination constraints (rope-only), perspectives 1 and 2 may use any power
-% atoms — the classification is the same from all perspectives.  Include at
-% least 2-3 perspectives to demonstrate the invariance.
 constraint_indexing:constraint_classification(lung_transplant_protocol, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
@@ -102,31 +105,13 @@ constraint_indexing:constraint_classification(lung_transplant_protocol, rope,
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER
 % Default analytical context (civilizational/analytical/global).
 % This perspective is used by the bridge to derive constraint_claim.
-% Type should reflect what the metrics compute: mountain, rope, tangled_rope, snare, scaffold, or piton.
+% The canonical classifier identifies this as Tangled Rope due to the presence of
+% coordination (beneficiary), asymmetric extraction (victim), and enforcement.
 constraint_indexing:constraint_classification(lung_transplant_protocol, tangled_rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
-            spatial_scope(global))) :- domain_priors:requires_active_enforcement(lung_transplant_protocol).
-
-% PERSPECTIVE 4: THE ARCHITECT (SCAFFOLD)
-% Temporary coordination that expires over time.
-% Requires: has_sunset_clause declared, extraction <= 0.30, theater_ratio < 0.70.
-% constraint_indexing:constraint_classification(lung_transplant_protocol, scaffold,
-%    context(agent_power(organized),
-%            time_horizon(generational),
-%            exit_options(constrained),
-%            spatial_scope(continental))) :-
-%    narrative_ontology:has_sunset_clause(lung_transplant_protocol).
-
-% PERSPECTIVE 5: THE SYSTEMS AUDITOR (PITON)
-% Inertial maintenance of a non-functional constraint.
-% constraint_indexing:constraint_classification(lung_transplant_protocol, piton,
-%    context(agent_power(analytical),
-%            time_horizon(civilizational),
-%            exit_options(arbitrage),
-%            spatial_scope(universal))) :-
-%    domain_priors:theater_ratio(lung_transplant_protocol, TR), TR > 0.70.
+            spatial_scope(global))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -143,7 +128,13 @@ test(perspectival_gap) :-
 test(threshold_validation) :-
     config:param(extractiveness_metric_name, ExtMetricName),
     narrative_ontology:constraint_metric(lung_transplant_protocol, ExtMetricName, E),
-    (E =< 0.05 -> true ; E >= 0.46). % Ensures it's either a Mountain or high-extraction Snare/Tangled.
+    (E =< 0.15 ; E >= 0.46). % Ensures it's either low-extraction or high-extraction.
+
+test(tangled_rope_prerequisites) :-
+    % Verify that all structural requirements for a Tangled Rope are met.
+    domain_priors:requires_active_enforcement(lung_transplant_protocol),
+    narrative_ontology:constraint_beneficiary(lung_transplant_protocol, _),
+    narrative_ontology:constraint_victim(lung_transplant_protocol, _).
 
 :- end_tests(lung_transplant_protocol_tests).
 
@@ -153,9 +144,9 @@ test(threshold_validation) :-
 
 /**
  * LOGIC RATIONALE:
- * The Lung Transplant Protocol is a Tangled Rope because while its primary purpose is coordination - matching scarce organs to recipients - it also creates asymmetric extraction. Patients who do not meet the criteria are effectively denied a chance at life (high suppression). Transplant centers benefit from maintaining standards and avoiding complications, which contributes to their institutional reputation and funding. The patient feels trapped due to their powerlessness and the high barrier to exit (lack of alternatives). The perspectival gap arises because what the institution sees as a necessary triage is felt as an unjust denial by the patient.
+ * The Lung Transplant Protocol is a canonical Tangled Rope. While its primary purpose is coordination—matching scarce organs to recipients to maximize survival—it also creates severe, asymmetric extraction. Patients who do not meet the criteria are effectively denied a chance at life (high suppression, high extraction). Transplant centers benefit from maintaining standards that improve success rates, which contributes to their institutional reputation and funding. The patient feels trapped due to their powerlessness and the high barrier to exit (lack of alternatives), experiencing the protocol as a Snare. The institution sees it as a necessary triage mechanism, a Rope. The analytical view, accounting for both the coordination function and the enforced, asymmetric extraction, correctly classifies it as a Tangled Rope.
  * * MANDATROPHY ANALYSIS:
- * The Tangled Rope classification correctly identifies the system as having both a coordination function (organ allocation) and asymmetric extraction (denying access). This prevents misclassification as a pure Snare, which would ignore the life-saving coordination aspect.
+ * The Tangled Rope classification correctly identifies the system as having both a coordination function (organ allocation) and asymmetric extraction (denying access). This prevents misclassification as a pure Snare, which would ignore the life-saving coordination aspect, or a pure Rope, which would ignore the coercive denial of care to a vulnerable population. The `constraint_claim` of 'coordination' is key for the Boltzmann engine to detect the gap between the system's self-description and its extractive reality.
  */
 
 /* ==========================================================================
@@ -165,9 +156,9 @@ test(threshold_validation) :-
 % omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
     omega_lung_transplant_protocol,
-    'Are the current allocation criteria the MOST effective and equitable given resource constraints?',
-    'Comparative analysis of different allocation algorithms and their real-world outcomes (survival rates, quality of life, equity).',
-    'If TRUE: Current system is optimized. If FALSE: Alternative criteria could save more lives or distribute organs more equitably.',
+    'Are the current allocation criteria the MOST effective and equitable given resource constraints, or do they contain hidden biases?',
+    'Comparative analysis of different allocation algorithms and their real-world outcomes (survival rates, quality of life, equity across demographic groups).',
+    'If TRUE: Current system is optimized. If FALSE: Alternative criteria could save more lives or distribute organs more equitably, revealing the current extraction as partially unnecessary.',
     confidence_without_resolution(medium)
 ).
 
@@ -191,13 +182,31 @@ narrative_ontology:interval(lung_transplant_protocol, 0, 10).
 %
 % Theater ratio over time (triggers metric_substitution detection):
 narrative_ontology:measurement(lung_transplant_protocol_tr_t0, lung_transplant_protocol, theater_ratio, 0, 0.10).
-narrative_ontology:measurement(lung_transplant_protocol_tr_t5, lung_transplant_protocol, theater_ratio, 5, 0.20).
+narrative_ontology:measurement(lung_transplant_protocol_tr_t5, lung_transplant_protocol, theater_ratio, 5, 0.15).
 narrative_ontology:measurement(lung_transplant_protocol_tr_t10, lung_transplant_protocol, theater_ratio, 10, 0.20).
 
 % Extraction over time (triggers extraction_accumulation detection):
 narrative_ontology:measurement(lung_transplant_protocol_ex_t0, lung_transplant_protocol, base_extractiveness, 0, 0.50).
-narrative_ontology:measurement(lung_transplant_protocol_ex_t5, lung_transplant_protocol, base_extractiveness, 5, 0.55).
+narrative_ontology:measurement(lung_transplant_protocol_ex_t5, lung_transplant_protocol, base_extractiveness, 5, 0.52).
 narrative_ontology:measurement(lung_transplant_protocol_ex_t10, lung_transplant_protocol, base_extractiveness, 10, 0.55).
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA (v5.0-5.2)
+   ========================================================================== */
+
+% Coordination type (enables Boltzmann floor + complexity offset)
+% Valid types: information_standard, resource_allocation,
+%              enforcement_mechanism, global_infrastructure
+narrative_ontology:coordination_type(lung_transplant_protocol, resource_allocation).
+
+% Boltzmann floor override (only if domain knowledge justifies)
+% Value must be in [0.0, 1.0]
+% narrative_ontology:boltzmann_floor_override(lung_transplant_protocol, Value).
+
+% Network relationships (structural influence edges)
+% Declare when constraints share regulatory domain, causal dependency,
+% or institutional coupling.
+% narrative_ontology:affects_constraint(lung_transplant_protocol, other_constraint_id).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

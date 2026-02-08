@@ -145,3 +145,36 @@ constraint_indexing:constraint_classification(
 constraint_indexing:constraint_classification(choice_architecture_design, mountain, agent_power(analytical)).
 constraint_indexing:constraint_classification(choice_architecture_design, rope, agent_power(institutional)).
 constraint_indexing:constraint_classification(choice_architecture_design, snare, agent_power(powerless)).
+
+% ============================================================================
+% ENRICHMENT: Structural predicates for dynamic classification
+% Generated: 2026-02-08
+% Template: v5.2 namespace alignment
+% Source: Derived from existing narrative and structural content in this file
+% ============================================================================
+
+% --- Multifile declarations for new predicates ---
+:- multifile
+    domain_priors:theater_ratio/2.
+
+% --- Theater ratio (missing from base properties) ---
+% Coordination mechanism in psychological domain — moderate institutional framing
+domain_priors:theater_ratio(rope_design, 0.14).
+narrative_ontology:constraint_metric(rope_design, theater_ratio, 0.14).
+
+% ============================================================================
+% ENRICHMENT: Structural predicates for remaining gaps
+% Generated: 2026-02-08
+% Template: v5.2 namespace alignment
+% Source: Derived from narrative context in this file (choice_architecture_design)
+% ============================================================================
+constraint_beneficiary(rope_design, choosers_with_good_defaults).
+constraint_victim(rope_design, manipulated_consumers).
+
+omega_variable(
+    omega_dark_pattern_drift,
+    "Will the proliferation of 'Dark Patterns' cause regulatory frameworks to reclassify choice architecture from Rope to Snare?",
+    "Longitudinal analysis of EU Digital Services Act enforcement and FTC dark pattern litigation outcomes.",
+    "If regulated: Remains a Rope with guardrails. If unchecked: Drifts toward a systemic Snare.",
+    confidence_without_resolution(medium)
+).

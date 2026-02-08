@@ -24,6 +24,7 @@
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -61,6 +62,9 @@ domain_priors:theater_ratio(clt_convergence_2026, 0.05). % Abstract logic; low t
 narrative_ontology:constraint_metric(clt_convergence_2026, extractiveness, 0.01).
 narrative_ontology:constraint_metric(clt_convergence_2026, suppression_requirement, 0.99).
 narrative_ontology:constraint_metric(clt_convergence_2026, theater_ratio, 0.05).
+
+% Constraint classification claim
+narrative_ontology:constraint_claim(clt_convergence_2026, mountain).
 
 % Identification of coordination beneficiary (Inference Stability)
 narrative_ontology:constraint_beneficiary(clt_convergence_2026, predictive_integrity).

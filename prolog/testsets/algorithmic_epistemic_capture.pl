@@ -21,6 +21,7 @@
     narrative_ontology:has_sunset_clause/1,
     narrative_ontology:constraint_metric/3,
     narrative_ontology:interval/3,
+    narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -59,6 +60,9 @@ domain_priors:theater_ratio(algorithmic_epistemic_capture, 0.82).
 narrative_ontology:constraint_metric(algorithmic_epistemic_capture, extractiveness, 0.85).
 narrative_ontology:constraint_metric(algorithmic_epistemic_capture, suppression_requirement, 0.74).
 narrative_ontology:constraint_metric(algorithmic_epistemic_capture, theater_ratio, 0.82).
+
+% Constraint classification claim
+narrative_ontology:constraint_claim(algorithmic_epistemic_capture, piton).
 
 % Mandatory keys for classification engine v3.4
 domain_priors:requires_active_enforcement(algorithmic_epistemic_capture).

@@ -233,3 +233,19 @@ omega_variable(
 constraint_indexing:constraint_classification(deferential_realism_core, mountain, agent_power(analytical)).
 constraint_indexing:constraint_classification(deferential_realism_core, rope, agent_power(institutional)).
 constraint_indexing:constraint_classification(deferential_realism_core, snare, agent_power(powerless)).
+
+% ============================================================================
+% ENRICHMENT: Structural predicates for dynamic classification
+% Generated: 2026-02-08
+% Template: v5.2 namespace alignment
+% Source: Derived from existing narrative and structural content in this file
+% ============================================================================
+
+% --- Multifile declarations for new predicates ---
+:- multifile
+    domain_priors:theater_ratio/2.
+
+% --- Theater ratio (missing from base properties) ---
+% Coordination mechanism in philosophical domain — moderate institutional framing
+domain_priors:theater_ratio(deferential_realism_framework, 0.11).
+narrative_ontology:constraint_metric(deferential_realism_framework, theater_ratio, 0.11).

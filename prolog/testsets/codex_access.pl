@@ -1,9 +1,9 @@
 % ============================================================================
 % CONSTRAINT STORY: codex_access
 % ============================================================================
-% Version: 3.4 (Deferential Realism Core)
-% Logic: 3.3 (Indexed Tuple P,T,E,S)
-% Generated: 2024-02-29
+% Version: 5.2 (Deferential Realism Core + Boltzmann + Purity + Network)
+% Logic: 5.2 (Indexed Tuple P,T,E,S + Coupling + Purity + Network Drift)
+% Generated: 2024-07-16
 % ============================================================================
 
 :- module(constraint_codex_access, []).
@@ -24,6 +24,10 @@
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
+    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -36,7 +40,7 @@
  * human_readable: OpenAI Codex Access Control
  * domain: technological/economic
  * * SUMMARY:
- * OpenAI launches Codex app, granting broader access to its coding models. This creates a potential constraint by controlling access to a powerful tool, potentially creating dependencies and limiting alternatives for some developers while providing benefits to others.
+ * OpenAI controls access to its Codex models via an API or dedicated application. This creates a constraint by governing access to a powerful tool, fostering dependencies and limiting alternatives for some developers while providing significant productivity benefits to others. The platform owner extracts value through usage fees and data collection.
  * * KEY AGENTS:
  * - Novice Developer: Subject (Powerless)
  * - OpenAI: Beneficiary (Institutional)
@@ -58,17 +62,20 @@ narrative_ontology:constraint_metric(codex_access, extractiveness, 0.55).
 narrative_ontology:constraint_metric(codex_access, suppression_requirement, 0.70).
 narrative_ontology:constraint_metric(codex_access, theater_ratio, 0.30).
 
+% Constraint self-claim (what does the constraint claim to be?)
+% Values: natural_law, coordination, constructed, enforcement
+narrative_ontology:constraint_claim(codex_access, tangled_rope).
+
 % Binary flags
 % narrative_ontology:has_sunset_clause(codex_access).      % Mandatory if Scaffold
-% domain_priors:requires_active_enforcement(codex_access). % Required for Tangled Rope
-domain_priors:requires_active_enforcement(codex_access).
+domain_priors:requires_active_enforcement(codex_access). % Required for Tangled Rope
 
 % Structural property derivation hooks:
 %   has_coordination_function/1 is DERIVED from constraint_beneficiary/2
 %   has_asymmetric_extraction/1 is DERIVED from constraint_victim/2
 % Both are required for Tangled Rope. Coordination is also required for Scaffold.
-narrative_ontology:constraint_beneficiary(codex_access, openai).
-narrative_ontology:constraint_victim(codex_access, novice_developers).
+narrative_ontology:constraint_beneficiary(codex_access, platform_users).
+narrative_ontology:constraint_victim(codex_access, dependent_developers).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
@@ -78,56 +85,30 @@ narrative_ontology:constraint_victim(codex_access, novice_developers).
                     continental=1.1, global=1.2, universal=1.0.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE SUBJECT (SNARE/MOUNTAIN)
-% High extraction felt as an immutable limit or predatory trap.
-% NOTE: This may be upgraded to 'organized' power if a critical mass of victims exists.
-%
-% UNIFORM-TYPE EXCEPTION: For natural law constraints (mountain-only) or pure
-% coordination constraints (rope-only), perspectives 1 and 2 may use any power
-% atoms — the classification is the same from all perspectives.  Include at
-% least 2-3 perspectives to demonstrate the invariance.
+% PERSPECTIVE 1: THE SUBJECT (SNARE)
+% High extraction felt as a predatory trap due to dependency and high switching costs.
 constraint_indexing:constraint_classification(codex_access, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
-            spatial_scope(national))).
+            spatial_scope(global))).
 
 % PERSPECTIVE 2: THE BENEFICIARY (ROPE)
-% Viewed as essential infrastructure or coordination.
+% Viewed as essential infrastructure or coordination for accessing advanced AI.
 constraint_indexing:constraint_classification(codex_access, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(mobile),
             spatial_scope(global))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER
+% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED_ROPE)
 % Default analytical context (civilizational/analytical/global).
-% This perspective is used by the bridge to derive constraint_claim.
-% Type should reflect what the metrics compute: mountain, rope, tangled_rope, snare, scaffold, or piton.
+% Recognizes both the coordination function and the asymmetric extraction.
 constraint_indexing:constraint_classification(codex_access, tangled_rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
             spatial_scope(global))).
-
-% PERSPECTIVE 4: THE ARCHITECT (SCAFFOLD)
-% Temporary coordination that expires over time.
-% Requires: has_sunset_clause declared, extraction <= 0.30, theater_ratio < 0.70.
-% constraint_indexing:constraint_classification(codex_access, scaffold,
-%    context(agent_power(organized),
-%            time_horizon(generational),
-%            exit_options(constrained),
-%            spatial_scope(continental))) :-
-%    narrative_ontology:has_sunset_clause(codex_access).
-
-% PERSPECTIVE 5: THE SYSTEMS AUDITOR (PITON)
-% Inertial maintenance of a non-functional constraint.
-constraint_indexing:constraint_classification(codex_access, piton, 
-    context(agent_power(analytical), 
-            time_horizon(civilizational), 
-            exit_options(arbitrage), 
-            spatial_scope(universal))) :-
-    domain_priors:theater_ratio(codex_access, TR), TR > 0.70.
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -141,10 +122,14 @@ test(perspectival_gap) :-
     constraint_indexing:constraint_classification(codex_access, TypeInstitutional, context(agent_power(institutional), _, _, _)),
     TypePowerless \= TypeInstitutional.
 
-test(threshold_validation) :-
-    config:param(extractiveness_metric_name, ExtMetricName),
-    narrative_ontology:constraint_metric(codex_access, ExtMetricName, E),
-    (E =< 0.05 -> true ; E >= 0.46). % Ensures it's either a Mountain or high-extraction Snare/Tangled.
+test(threshold_validation_high_extraction) :-
+    % This is a high-extraction constraint, so E must be >= 0.46
+    narrative_ontology:constraint_metric(codex_access, extractiveness, E),
+    E >= 0.46.
+
+test(tangled_rope_conditions_met) :-
+    % Verify the analytical observer sees a tangled_rope
+    constraint_indexing:constraint_classification(codex_access, tangled_rope, context(agent_power(analytical), _, _, _)).
 
 :- end_tests(codex_access_tests).
 
@@ -154,9 +139,17 @@ test(threshold_validation) :-
 
 /**
  * LOGIC RATIONALE:
- * The Codex access control is classified as a Tangled Rope. From the perspective of a powerless novice developer, it feels like a Snare because they are dependent on OpenAI's access. From OpenAI's perspective, it's a Rope because it allows them to coordinate the development and deployment of powerful AI tools. However, an analytical observer sees that OpenAI also benefits as the primary beneficiary, creating asymmetric extraction. Suppression is high because alternatives are less effective, creating a reliance.
+ * This constraint is a canonical Tangled Rope. The base extractiveness (0.55) and suppression (0.70) are high, reflecting the platform's market power and the difficulty for developers to switch to a comparable alternative.
+ *
+ * PERSPECTIVAL GAP:
+ * - A 'powerless' developer, trapped by dependency on the API for their product, perceives the constraint as a Snare. The effective extraction is high (χ = 0.55 * 1.5 * 1.2 = 0.99), feeling almost total.
+ * - The 'institutional' actor (OpenAI) views it as a Rope, a necessary mechanism to coordinate access, manage load, and fund further research. For them, effective extraction is negative (χ = 0.55 * -0.2 * 1.2 = -0.132), meaning they see it as a net investment in the ecosystem.
+ * - The 'analytical' observer identifies both the genuine coordination function (beneficiaries exist) and the asymmetric extraction (victims exist), alongside the need for active enforcement (API keys, rate limits). This combination is the definition of a Tangled Rope.
+ *
+ * The Piton classification was removed as it is not applicable; the theater_ratio is low (0.30), indicating the system is highly functional and not merely performative.
+ *
  * * MANDATROPHY ANALYSIS:
- * The Tangled Rope classification prevents mislabeling coordination as pure extraction by considering the benefit OpenAI receives (coordination of development) alongside the extraction imposed on developers who depend on the platform. If it were labeled as only a Snare, the coordination aspect would be missed.
+ * [RESOLVED MANDATROPHY] The Tangled Rope classification correctly captures the dual nature of the platform. A simpler Snare classification would ignore the genuine value and coordination it provides to many users, while a Rope classification would ignore the extractive power dynamics and high switching costs imposed on dependent developers.
  */
 
 /* ==========================================================================
@@ -166,9 +159,9 @@ test(threshold_validation) :-
 % omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
     omega_codex_access,
-    'Will open-source alternatives to Codex emerge and provide comparable capabilities?',
-    'Track the development and adoption of open-source coding AI models.',
-    'If True, the constraint weakens; if False, it strengthens.',
+    'Will truly comparable, open-source alternatives to proprietary coding models achieve critical mass and infrastructure parity?',
+    'Track the development, funding, and adoption rates of leading open-source code generation models and their hosting platforms.',
+    'If True, suppression score would decrease, potentially reclassifying the constraint to a Rope. If False, the Snare/Tangled Rope nature is reinforced.',
     confidence_without_resolution(medium)
 ).
 
@@ -185,20 +178,32 @@ narrative_ontology:interval(codex_access, 0, 10).
 
 % Temporal data enables drift detection (metric_substitution,
 % extraction_accumulation) by providing measurements at multiple time points.
-% Model how the constraint intensified or changed across the interval.
-%
 % Required for high-extraction constraints (base_extractiveness > 0.46).
-% Use at least 3 time points (T=0, midpoint, T=end) for each tracked metric.
+% This model shows a system that launched with high utility and gradually
+% increased its extractive potential as dependency grew.
 %
 % Theater ratio over time (triggers metric_substitution detection):
-narrative_ontology:measurement(codex_access_tr_t0, codex_access, theater_ratio, 0, 0.20).
-narrative_ontology:measurement(codex_access_tr_t5, codex_access, theater_ratio, 5, 0.30).
+narrative_ontology:measurement(codex_access_tr_t0, codex_access, theater_ratio, 0, 0.10).
+narrative_ontology:measurement(codex_access_tr_t5, codex_access, theater_ratio, 5, 0.20).
 narrative_ontology:measurement(codex_access_tr_t10, codex_access, theater_ratio, 10, 0.30).
 
 % Extraction over time (triggers extraction_accumulation detection):
-narrative_ontology:measurement(codex_access_ex_t0, codex_access, base_extractiveness, 0, 0.50).
-narrative_ontology:measurement(codex_access_ex_t5, codex_access, base_extractiveness, 5, 0.55).
+narrative_ontology:measurement(codex_access_ex_t0, codex_access, base_extractiveness, 0, 0.48).
+narrative_ontology:measurement(codex_access_ex_t5, codex_access, base_extractiveness, 5, 0.52).
 narrative_ontology:measurement(codex_access_ex_t10, codex_access, base_extractiveness, 10, 0.55).
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA (v5.0-5.2)
+   ========================================================================== */
+
+% Coordination type (enables Boltzmann floor + complexity offset)
+% Valid types: information_standard, resource_allocation,
+%              enforcement_mechanism, global_infrastructure
+narrative_ontology:coordination_type(codex_access, resource_allocation).
+
+% Network relationships (structural influence edges)
+% This constraint creates dependencies that affect other parts of the ecosystem.
+narrative_ontology:affects_constraint(codex_access, developer_tooling_dependency).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

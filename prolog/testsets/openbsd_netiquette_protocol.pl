@@ -18,6 +18,7 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -57,7 +58,7 @@
 
 % The Structural Anchor
 narrative_ontology:interval(openbsd_netiquette_protocol, 0, 10).
-narrative_ontology:constraint_claim([openbsd_netiquette_protocol], [informational_governance]).
+narrative_ontology:constraint_claim(openbsd_netiquette_protocol, mountain).
 
 % Base extractiveness score (0.0 = no extraction, 1.0 = full extraction)
 % Rationale: Moderate-Low (0.3). It extracts a "homework tax" from the user 
@@ -278,3 +279,28 @@ omega_variable(
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
+
+% ============================================================================
+% ENRICHMENT: Structural predicates for dynamic classification
+% Generated: 2026-02-08
+% Template: v5.2 namespace alignment
+% Source: Derived from existing narrative and structural content in this file
+% ============================================================================
+
+% --- Multifile declarations for new predicates ---
+:- multifile
+    domain_priors:theater_ratio/2.
+
+% --- Theater ratio (missing from base properties) ---
+% Technical constraint — mostly substantive, minimal implementation theater
+domain_priors:theater_ratio(openbsd_netiquette_protocol, 0.06).
+narrative_ontology:constraint_metric(openbsd_netiquette_protocol, theater_ratio, 0.06).
+
+% --- Analytical perspective classification (missing) ---
+% chi = 0.3 * 1.15 (analytical) * 1.2 (global) = 0.414
+% Classification: tangled_rope
+constraint_indexing:constraint_classification(openbsd_netiquette_protocol, tangled_rope,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(global))).

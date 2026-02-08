@@ -1,0 +1,2332 @@
+% ============================================================================
+% CONSTRAINT STORY: keltner_relationship_evaluation
+% ============================================================================
+% Generated: 2026-01-21
+% Model: Gemini 2.0 Flash
+% Source: "A Keltner List for Relationships" by cafebedouin.org
+% Status: [RESOLVED MANDATROPHY]
+% ============================================================================
+
+:- module(constraint_keltner_relationship_evaluation, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile 
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:constraint_metric/3,
+    constraint_indexing:constraint_classification/3.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ * * constraint_id: keltner_relationship_evaluation
+ * human_readable: The Keltner Relationship List
+ * domain: social/psychological
+ * temporal_scope: Contemporary / Ongoing
+ * spatial_scope: Interpersonal / The Dyad
+ * * SUMMARY:
+ * The Keltner List is a 15-question diagnostic framework designed to evaluate the 
+ * psychological and social health of a romantic relationship. It sets a 
+ * "Gold Standard" for mutual growth, trust, shared power, and emotional stability 
+ * to predict if a relationship will "stand the test of time".
+ * * KEY AGENTS:
+ * - The Evaluator (Agent): The individual applying the list to their partner and self.
+ * - The Partner (Subject): The person being measured against the 15 criteria.
+ * - The Social Circle (Observers): Friends whose opinions are indexed as a metric for 
+ * relationship longevity.
+ * * NARRATIVE ARC:
+ * The list functions as a psychological "Mountain" of ideal traits (trust, compatibility, 
+ * stability). For a thriving couple, it acts as a "Rope" for coordination and 
+ * growth. However, if used as a rigid, binary "Yes/No" tool in an imbalanced 
+ * relationship, it can become a "Snare" that extracts identity or justifies 
+ * termination based on "nascent" imperfections.
+ */
+
+/* ==========================================================================
+   2. BASE PROPERTIES (Context-Independent)
+   ========================================================================== */
+
+narrative_ontology:interval(keltner_relationship_evaluation, 0, 10).
+narrative_ontology:constraint_claim(keltner_relationship_evaluation, [social_governance]).
+
+% Base extractiveness score (0.0 = no extraction, 1.0 = full extraction)
+% Rationale: Moderate (0.35). While intended as a gift of clarity, the list 
+% extracts the "complexity" of a relationship, reducing idiosyncratic 
+% bonds to a simple binary metric.
+domain_priors:base_extractiveness(keltner_relationship_evaluation, 0.35).
+
+% Suppression score (0.0 = no suppression, 1.0 = full suppression)
+% Rationale: Moderate (0.45). It suppresses the visibility of alternative 
+% relationship models (e.g., highly independent or conflict-heavy but 
+% resilient bonds) in favor of the "Best Friend" and "We-focused" dogma.
+domain_priors:suppression_score(keltner_relationship_evaluation, 0.45).
+
+% Constraint metric facts (bridge for classification engine)
+narrative_ontology:constraint_metric(keltner_relationship_evaluation, extractiveness, 0.35).
+narrative_ontology:constraint_metric(keltner_relationship_evaluation, suppression_requirement, 0.45).
+
+% Enforcement: Requires active maintenance (Truthful answering).
+domain_priors:requires_active_enforcement(keltner_relationship_evaluation).
+
+
+
+% BENEFICIARIES & VICTIMS
+constraint_beneficiary(keltner_relationship_evaluation, relationship_clarity). 
+constraint_victim(keltner_relationship_evaluation, non_standard_dyads). % Those who don't fit the "agreeable/stable" personality mold.
+
+/* ==========================================================================
+   3. INDEXED CLASSIFICATIONS (Perspectival Truth)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 1: THE COMMITTED PARTNER - Rope
+   --------------------------------------------------------------------------
+   
+   WHO: individual_moderate (Seeking mutual growth and "bettering" each other)
+   WHEN: biographical (Long-term relationship success)
+   WHERE: mobile (Can choose to work on specific "No" answers)
+   SCOPE: local (The dyad)
+   
+   WHY THIS CLASSIFICATION:
+   For a healthy partner, the list is a "Rope." It is a functional coordination 
+   mechanism to identify areas for "sacrifice" and "betterment," turning 
+   potential conflicts into shared decisions.
+   
+   NARRATIVE EVIDENCE:
+   "Does your partner make you a better person... do you and your partner share 
+   decision-making, power and influence?".
+   -------------------------------------------------------------------------- */
+
+constraint_indexing:constraint_classification(
+    keltner_relationship_evaluation,
+    rope,
+    context(
+        agent_power(individual_moderate),
+        time_horizon(biographical),
+        exit_options(mobile),
+        spatial_scope(local)
+    )
+).
+
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 2: THE MEASURED SUBJECT - Snare
+   --------------------------------------------------------------------------
+   
+   WHO: powerless (Being judged by a partner with a "binary" checklist)
+   WHEN: immediate (A moment of "answering truthfully" that may end the bond)
+   WHERE: trapped (Subject to the partner's "rough determination" of compatibility)
+   SCOPE: local
+   
+   WHY THIS CLASSIFICATION:
+   For a person being measured against these 15 points by a "controlling" or 
+   "negativity-focused" partner, the list is a "Snare." Any "No" answer 
+   is extracted as a "red flag" or justification for "liquidation" of the 
+   relationship.
+   
+   NARRATIVE EVIDENCE:
+   "answer truthfully with a simple yes or no response... Is your relationship 
+   free of red flags like... controlling behavior?".
+   -------------------------------------------------------------------------- */
+
+constraint_indexing:constraint_classification(
+    keltner_relationship_evaluation,
+    snare,
+    context(
+        agent_power(powerless),
+        time_horizon(immediate),
+        exit_options(trapped),
+        spatial_scope(local)
+    )
+) :-
+    domain_priors:base_extractiveness(keltner_relationship_evaluation, E),
+
+    E > 0.3.
+
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 3: THE RELATIONSHIP COUNSELOR - Mountain
+   --------------------------------------------------------------------------
+   
+   WHO: analytical (Observing the "test of time" across many couples)
+   WHEN: historical (The perennial requirements of human pair-bonding)
+   WHERE: analytical (Observer stance)
+   SCOPE: global
+   
+   WHY THIS CLASSIFICATION:
+   To the counselor, these 15 questions represent "Mountains"—fixed psychological 
+   laws. Stability, compatibility, and respect are not "stories we tell" 
+   but unchangeable requirements for a relationship that isn't a "Black Iron Prison".
+   
+   NARRATIVE EVIDENCE:
+   "Do your close friends... think you have a great relationship that will 
+   stand the test of time?".
+   -------------------------------------------------------------------------- */
+
+constraint_indexing:constraint_classification(
+    keltner_relationship_evaluation,
+    mountain,
+    context(
+        agent_power(analytical),
+        time_horizon(historical),
+        exit_options(analytical),
+        spatial_scope(global)
+    )
+).
+
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 4: THE PUBLISHER / MEDIA OUTLET - Rope
+   --------------------------------------------------------------------------
+   WHO: institutional (Promotes and disseminates the Keltner List)
+   WHEN: biographical (Content cycles, trends)
+   WHERE: arbitrage (Can choose which frameworks to promote for audience engagement)
+   SCOPE: national (The audience reach)
+   
+   WHY THIS CLASSIFICATION:
+   For a media outlet, the Keltner List is a "Rope" for generating engaging
+   content. It's a tool to coordinate a large-scale conversation about
+   relationships, attracting an audience by offering a simple, actionable
+   framework. The list's "shareability" makes it a valuable asset for
+   programmatic content.
+   -------------------------------------------------------------------------- */
+
+constraint_indexing:constraint_classification(
+    keltner_relationship_evaluation,
+    rope,
+    context(
+        agent_power(institutional),
+        time_horizon(biographical),
+        exit_options(arbitrage),
+        spatial_scope(national)
+    )
+).
+
+/* ==========================================================================
+   4. TESTS (What We Learn About Constraints)
+   ========================================================================== */
+
+:- begin_tests(keltner_relationship_evaluation_tests).
+
+/**
+ * TEST 1: Multi-perspective variance
+ * Demonstrates that belief vs. detachment transforms a Snare into a Rope.
+ */
+test(multi_perspective_evaluation) :-
+    % Partner sees Rope
+    constraint_indexing:constraint_classification(keltner_relationship_evaluation, rope, context(agent_power(individual_moderate), _, _, _)),
+    % Subject sees Snare
+    constraint_indexing:constraint_classification(keltner_relationship_evaluation, snare, context(agent_power(powerless), _, _, _)),
+    % Counselor sees Mountain
+    constraint_indexing:constraint_classification(keltner_relationship_evaluation, mountain, context(agent_power(analytical), _, _, _)),
+    % Publisher sees Rope
+    constraint_indexing:constraint_classification(keltner_relationship_evaluation, rope, context(agent_power(institutional), _, _, _)).
+
+/**
+ * TEST 2: Power-based extractiveness scaling
+ * Demonstrates that the powerless subject feels more extraction (judgment) than the moderate partner.
+ */
+test(power_extractiveness_evaluation) :-
+    ContextPowerless = context(agent_power(powerless), time_horizon(immediate), exit_options(trapped), spatial_scope(local)),
+    ContextPowerful = context(agent_power(institutional), time_horizon(biographical), exit_options(arbitrage), spatial_scope(national)),
+    constraint_indexing:extractiveness_for_agent(keltner_relationship_evaluation, ContextPowerless, Score1),
+    constraint_indexing:extractiveness_for_agent(keltner_relationship_evaluation, ContextPowerful, Score2),
+    Score1 > Score2.
+
+:- end_tests(keltner_relationship_evaluation_tests).
+
+/* ==========================================================================
+   5. MODEL INTERPRETATION (Commentary)
+   ========================================================================== */
+
+/**
+ * LLM GENERATION NOTES
+ * 
+ * Model: Gemini 2.0 Flash
+ * Date: 2026-01-23
+ * 
+ * KEY DECISIONS:
+ * 
+ * 1. BASE EXTRACTIVENESS (0.35):
+ *    Reasoning: Chose moderate-low because while the list is helpful, it 
+ *    extracts the "nuance" of a relationship, replacing it with a set of metrics.
+ * 
+ * 2. PERSPECTIVE SELECTION:
+ *    Chose Partner (Rope), Subject (Snare), Counselor (Mountain), and Publisher (Rope) 
+ *    to show how a tool can be used for growth, control, analysis, or content.
+ * 
+ * 3. OMEGAS 
+ *    Define uncertainty so your analysis is cleaner
+ *    omega_variable(
+ *        keltner_checklist_accuracy,
+ *        "Do these 15 questions accurately predict the 'Mountain' of long-term survival, or are they a 'Rope' of cultural preference?",
+ *        resolution_mechanism("Longitudinal study of couples who pass the list vs. those who fail but stay together"),
+ *        impact("If accurate: It is a true Mountain. If cultural: It is a local Rope."),
+ *        confidence_without_resolution(medium)
+ *    ).
+ * 
+ *    omega_variable(
+ *        personality_stability_adult,
+ *        "Is 'agreeable and emotionally stable' an unchangeable Mountain, or can microdosing/therapy create a Rope for change?",
+ *        resolution_mechanism("Audit of adult personality shifts following intervention vs. 'Keltner' scores"),
+ *        impact("If unchangeable: Keltner's Mountain is valid. If changeable: The list is a Snare for the potentially transformed."),
+ *        confidence_without_resolution(low)
+ *    ).
+ */
+
+/* ==========================================================================
+   6. ALTERNATIVE ANALYSIS (If Applicable)
+   ========================================================================== */
+
+/**
+ * VIABLE ALTERNATIVES
+ * * ALTERNATIVE 1: Idiosyncratic Negotiation
+ * Viability: Relationships that don't share "passwords" or "best friend" status 
+ * but thrive on privacy and independence.
+ * Suppression: Suppressed by questions 8 ("trust with passwords") and 6 ("best friend").
+ * * ALTERNATIVE 2: The "Magic Ratio" (5:1)
+ * Viability: Using a purely observational metric of interaction quality rather 
+ * than a cognitive checklist of 15 values.
+ * Suppression: The Keltner List replaces the "Rope" of interaction volume 
+ * with a "Mountain" of categorical alignment.
+ * * CONCLUSION:
+ * The existence of successful, private relationships makes the Keltner List 
+ * a "Snare" when applied to non-standard dyads.
+ */
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+/**
+ * TO USE THIS CONSTRAINT:
+ * 
+ * 1. Load into main system:
+ *    ?- [constraints/keltner_relationship_evaluation].
+ * 
+ * 2. Run multi-perspective analysis:
+ *    ?- constraint_indexing:multi_index_report(keltner_relationship_evaluation).
+ * 
+ * 3. Run tests:
+ *    ?- run_tests(keltner_relationship_evaluation_tests).
+ * 
+ * 4. Generate pedagogical report:
+ *    ?- pedagogical_report(keltner_relationship_evaluation).
+ * 
+ * 5. Compare with other constraints:
+ *    ?- compare_constraints(keltner_relationship_evaluation, [other_id]).
+ */
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */
+% ============================================================================
+% CONSTRAINT STORY: khantivadin_radical_patience
+% ============================================================================
+% Version: 5.2 (Deferential Realism Core + Boltzmann + Purity + Network)
+% Logic: 5.2 (Indexed Tuple P,T,E,S + Coupling + Purity + Network Drift)
+% Generated: 2024-07-16
+% ============================================================================
+
+:- module(constraint_khantivadin_radical_patience, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
+    narrative_ontology:boltzmann_floor_override/2,
+    constraint_indexing:constraint_classification/3.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ * * constraint_id: khantivadin_radical_patience
+ * human_readable: The Teacher of Patience (Khantivadin)
+ * domain: religious/ethical
+ * * SUMMARY:
+ * This constraint models the state of radical patience (Khanti) in the face of absolute physical liquidation. A sage, Khantivadin, is dismembered by a jealous king for preaching to the king's wives. The sage refuses to respond with anger, identifying patience as a quality of mind independent of the body, thereby transforming a physical Snare into a philosophical Mountain.
+ * * KEY AGENTS:
+ * - Khantivadin (The Sage): Subject (Powerless), physically trapped.
+ * - The King of Kausala: Beneficiary (Institutional), wielding absolute power.
+ * - The Buddha (as narrator): Auditor (Analytical), framing the event as a timeless moral law.
+ */
+
+/* ==========================================================================
+   2. BASE PROPERTIES (DOMAIN PRIORS)
+   ========================================================================== */
+
+% Numerical anchors for v3.4 thresholds
+domain_priors:base_extractiveness(khantivadin_radical_patience, 1.0). % Mountain suppression <= 0.05, Rope extraction <= 0.15, Snare extraction >= 0.46
+domain_priors:suppression_score(khantivadin_radical_patience, 0.9).   % Structural property (raw, unscaled). The king's rage suppresses all alternatives.
+domain_priors:theater_ratio(khantivadin_radical_patience, 0.0).       % Piton detection (>= 0.70). The violence is brutally functional, not theatrical.
+
+% Constraint metric facts — primary keys used by the classification engine.
+% These mirror domain_priors values using the metric key names from config.pl.
+narrative_ontology:constraint_metric(khantivadin_radical_patience, extractiveness, 1.0).
+narrative_ontology:constraint_metric(khantivadin_radical_patience, suppression_requirement, 0.9).
+narrative_ontology:constraint_metric(khantivadin_radical_patience, theater_ratio, 0.0).
+
+% Constraint self-claim (what does the constraint claim to be?)
+% The teaching derived from the event claims to be a natural law of enlightenment.
+narrative_ontology:constraint_claim(khantivadin_radical_patience, natural_law).
+
+% Binary flags
+domain_priors:requires_active_enforcement(khantivadin_radical_patience). % The king's violence is active and direct.
+
+% Structural property derivation hooks:
+% The king benefits by asserting his authority; the sage's body is the victim.
+narrative_ontology:constraint_beneficiary(khantivadin_radical_patience, king_of_kausala).
+narrative_ontology:constraint_victim(khantivadin_radical_patience, khantivadin_physical_body).
+
+/* ==========================================================================
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × π(P) × σ(S)
+   Power (P) and Scope (S) both affect effective extraction.
+   Scope modifiers: local=0.8, regional=0.9, national=1.0,
+                    continental=1.1, global=1.2, universal=1.0.
+   ========================================================================== */
+
+% PERSPECTIVE 1: THE SUBJECT (SNARE)
+% For Khantivadin's physical body, the king's violence is a terminal Snare.
+% Extraction is absolute (liquidation).
+constraint_indexing:constraint_classification(khantivadin_radical_patience, snare,
+    context(agent_power(powerless),
+            time_horizon(immediate),
+            exit_options(trapped),
+            spatial_scope(local))).
+
+% PERSPECTIVE 2: THE BENEFICIARY (ROPE)
+% For the King, violence is a Rope—a tool to coordinate his soldiers and
+% enforce his perceived ownership and authority.
+constraint_indexing:constraint_classification(khantivadin_radical_patience, rope,
+    context(agent_power(institutional),
+            time_horizon(biographical),
+            exit_options(mobile),
+            spatial_scope(national))).
+
+% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (MOUNTAIN)
+% From the Buddha's perspective, the sage's response reveals an immutable
+% moral law (a Mountain): true patience is a property of mind, not body,
+% and is a zero-degree-of-freedom requirement for enlightenment.
+constraint_indexing:constraint_classification(khantivadin_radical_patience, mountain,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(global))).
+
+/* ==========================================================================
+   4. VALIDATION TESTS
+   ========================================================================== */
+
+:- begin_tests(khantivadin_radical_patience_tests).
+
+test(perspectival_gap) :-
+    % Verify there is a perspectival gap between powerless, institutional, and analytical.
+    constraint_indexing:constraint_classification(khantivadin_radical_patience, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(khantivadin_radical_patience, TypeInstitutional, context(agent_power(institutional), _, _, _)),
+    constraint_indexing:constraint_classification(khantivadin_radical_patience, TypeAnalytical, context(agent_power(analytical), _, _, _)),
+    TypePowerless == snare,
+    TypeInstitutional == rope,
+    TypeAnalytical == mountain,
+    TypePowerless \= TypeInstitutional,
+    TypeInstitutional \= TypeAnalytical.
+
+test(threshold_validation) :-
+    % This is a high-extraction constraint, so it must meet the Snare threshold.
+    config:param(extractiveness_metric_name, ExtMetricName),
+    narrative_ontology:constraint_metric(khantivadin_radical_patience, ExtMetricName, E),
+    E >= 0.46.
+
+:- end_tests(khantivadin_radical_patience_tests).
+
+/* ==========================================================================
+   5. GENERATIVE COMMENTARY
+   ========================================================================== */
+
+/**
+ * LOGIC RATIONALE:
+ * This story presents one of the most extreme perspectival gaps possible. The base
+ * extractiveness is 1.0, representing the complete physical liquidation of an agent.
+ * From the victim's (Khantivadin's) perspective, this is a terminal Snare. From the
+ * perpetrator's (the King's) perspective, violence is a Rope used to enforce his
+ * authority. From the analytical/philosophical perspective (the Buddha's), the
+ * event reveals a Mountain—an immutable law about the nature of mind and suffering.
+ * The system must be able to hold all three classifications as simultaneously true
+ * from their respective indices.
+ *
+ * * MANDATROPHY ANALYSIS: [RESOLVED MANDATROPHY]
+ * The absolute extraction (1.0) would normally indicate an unresolvable Mandatrophy.
+ * However, the narrative resolves it by shifting the frame of reference. The sage
+ * re-classifies the physical Snare as irrelevant to his mental state, effectively
+ * finding an 'exit' into a different ontological frame where the extraction does
+ * not register as suffering. This is a rare case of resolution through perspectival
+ * transformation rather than structural change.
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
+omega_variable(
+    omega_khantivadin_intent,
+    'Was the king''s violence a calculated act of political enforcement (Rope) or an irrational, intoxicated rage (Snare)?',
+    'Historical/psychological analysis of the king''s state of mind and subsequent policies.',
+    'If enforcement, it is a tool of statecraft. If rage, it is pure predatory extraction with no coordination function.',
+    confidence_without_resolution(medium)
+).
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+% Required for external script parsing
+narrative_ontology:interval(khantivadin_radical_patience, 0, 10).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Temporal data enables drift detection. In this case, the event is singular
+% and terminal, so the metrics are constant across the interval.
+% Required for high-extraction constraints (base_extractiveness > 0.46).
+
+% Theater ratio over time (no theatricality, just raw violence):
+narrative_ontology:measurement(krp_tr_t0, khantivadin_radical_patience, theater_ratio, 0, 0.0).
+narrative_ontology:measurement(krp_tr_t5, khantivadin_radical_patience, theater_ratio, 5, 0.0).
+narrative_ontology:measurement(krp_tr_t10, khantivadin_radical_patience, theater_ratio, 10, 0.0).
+
+% Extraction over time (terminal and absolute from the start):
+narrative_ontology:measurement(krp_ex_t0, khantivadin_radical_patience, base_extractiveness, 0, 1.0).
+narrative_ontology:measurement(krp_ex_t5, khantivadin_radical_patience, base_extractiveness, 5, 1.0).
+narrative_ontology:measurement(krp_ex_t10, khantivadin_radical_patience, base_extractiveness, 10, 1.0).
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA (v5.0-5.2)
+   ========================================================================== */
+
+% This constraint is primarily an ethical/philosophical one derived from a singular
+% violent act. It does not represent a systemic coordination mechanism or have
+% direct structural links to other constraints in the corpus.
+
+% narrative_ontology:coordination_type(khantivadin_radical_patience, enforcement_mechanism).
+% narrative_ontology:affects_constraint(khantivadin_radical_patience, other_constraint_id).
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */% ============================================================================
+% CONSTRAINT STORY: kidney_exchange_market
+% ============================================================================
+% Generated: 2026-01-23
+% Model: Gemini Pro (Revised)
+% Source: Alvin Roth / Market Design / Kidney Exchange Logic
+% ============================================================================
+
+:- module(constraint_kidney_exchange_market, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile 
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:constraint_metric/3,
+    constraint_indexing:constraint_classification/3.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ * 
+ * constraint_id: kidney_exchange_market
+ * human_readable: Kidney Exchange Cycles/Chains
+ * domain: social/technological/biological
+ * temporal_scope: Immediate (Critical Survival)
+ * spatial_scope: Regional to National
+ * 
+ * SUMMARY:
+ * Kidney exchange solves the "incompatible donor" problem. When a willing donor 
+ * cannot give to their intended recipient due to blood/tissue type, they enter 
+ * a swap. This creates a matching market where "Price" is illegal, necessitating
+ * algorithmic coordination to save lives.
+ * 
+ * KEY AGENTS:
+ * - The Sensitized Patient (Individual Powerless): Needs a kidney but is hard to match.
+ * - The Algorithm / UNOS (Institutional): Computes optimal cycles and chains.
+ * - The Altruistic Donor (Individual Moderate): Starts a chain by donating a kidney.
+ */
+
+/* ==========================================================================
+   2. CORE SYSTEM INTEGRATION (The "Reality" Layer)
+   ========================================================================== */
+
+narrative_ontology:interval(kidney_exchange_market, 0, 10).
+narrative_ontology:constraint_claim(kidney_exchange_market, rope).
+
+% Base extractiveness: 0.1.
+% There is no "profit" extraction; the system is designed for maximum life-saving.
+domain_priors:base_extractiveness(kidney_exchange_market, 0.1).
+
+% Suppression: 0.9.
+% Selling kidneys is a felony (National Organ Transplant Act). The legal system
+% suppresses the "monetary alternative" almost entirely to prevent exploitation.
+domain_priors:suppression_score(kidney_exchange_market, 0.9).
+
+% Constraint metric facts (bridge for classification engine)
+narrative_ontology:constraint_metric(kidney_exchange_market, extractiveness, 0.1).
+narrative_ontology:constraint_metric(kidney_exchange_market, suppression_requirement, 0.9).
+
+% Enforcement: Requires active enforcement (Institutional/Legal).
+domain_priors:requires_active_enforcement(kidney_exchange_market).
+
+% BENEFICIARIES & VICTIMS
+constraint_beneficiary(kidney_exchange_market, organ_recipients).
+constraint_victim(kidney_exchange_market, sensitized_patients).
+
+/* ==========================================================================
+   3. INDEXED CLASSIFICATIONS (Perspectival Truth)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 1: THE SENSITIZED PATIENT - Snare
+   --------------------------------------------------------------------------
+   WHO: powerless (High antibodies, hard to match)
+   WHEN: immediate (Survival timeframe)
+   WHERE: trapped (Biologically difficult to match)
+   
+   WHY THIS CLASSIFICATION:
+   For a patient with high antibodies, the matching logic is a 'Snare'. 
+   Because they are biologically difficult to match, the system's focus 
+   on "max matches" might skip over them repeatedly. The illegality of 
+   monetary alternatives leaves them with no other exit options.
+   -------------------------------------------------------------------------- */
+
+constraint_indexing:constraint_classification(
+    kidney_exchange_market,
+    snare,
+    context(
+        agent_power(powerless),
+        time_horizon(immediate),
+        exit_options(trapped),
+        spatial_scope(national)
+    )
+).
+
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 2: THE ALGORITHM / UNOS (INSTITUTIONAL) - Rope
+   --------------------------------------------------------------------------
+   WHO: institutional (The central clearinghouse for organ matching)
+   WHEN: biographical (Long-term operation of the exchange program)
+   WHERE: arbitrage (Optimizes matches across a complex network of donors/recipients)
+   
+   WHY THIS CLASSIFICATION:
+   For the algorithm and the United Network for Organ Sharing (UNOS), the kidney
+   exchange market is a 'Rope'. It is a powerful tool for optimizing matches and
+   saving lives by coordinating complex swaps, effectively untying biological
+   dead-ends into life-giving chains.
+   -------------------------------------------------------------------------- */
+
+constraint_indexing:constraint_classification(
+    kidney_exchange_market,
+    rope,
+    context(
+        agent_power(institutional),
+        time_horizon(biographical),
+        exit_options(arbitrage),
+        spatial_scope(national)
+    )
+).
+
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 3: THE BIOLOGIST - Mountain
+   --------------------------------------------------------------------------
+   WHO: analytical (Observing the immutable laws of biology)
+   WHEN: historical (From the discovery of blood types to HLA matching)
+   WHERE: analytical (Universal laws of human compatibility)
+   
+   WHY THIS CLASSIFICATION:
+   Blood types (A, B, AB, O) and HLA cross-matching are 'Mountains.' 
+   They are immutable natural laws. No amount of social policy can 
+   force an A-type kidney to work in a B-type patient without rejection.
+   -------------------------------------------------------------------------- */
+
+constraint_indexing:constraint_classification(
+    kidney_exchange_market,
+    mountain,
+    context(
+        agent_power(analytical),
+        time_horizon(historical),
+        exit_options(analytical),
+        spatial_scope(global)
+    )
+).
+
+/* ==========================================================================
+   4. TESTS
+   ========================================================================== */
+
+:- begin_tests(kidney_exchange_tests).
+
+test(multi_perspective_variance) :-
+    constraint_indexing:constraint_classification(kidney_exchange_market, Type1, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(kidney_exchange_market, Type2, context(agent_power(institutional), _, _, _)),
+    constraint_indexing:constraint_classification(kidney_exchange_market, Type3, context(agent_power(analytical), _, _, _)),
+    Type1 \= Type2,
+    Type2 \= Type3,
+    Type1 \= Type3.
+
+:- end_tests(kidney_exchange_tests).
+
+/* ==========================================================================
+   5. MODEL INTERPRETATION (Commentary)
+   ========================================================================== */
+
+/**
+ * LLM GENERATION NOTES
+ * 
+ * Model: Gemini Pro (Revised)
+ * Date: 2026-01-23
+ * 
+ * KEY DECISIONS:
+ * 
+ * 1. INSTITUTIONAL PERSPECTIVE: Added 'The Algorithm / UNOS' as the institutional
+ *    agent. This highlights how a complex algorithmic system can act as a powerful
+ *    'Rope' for coordinating life-saving medical procedures.
+ *
+ * 2. CLASSIFICATION RATIONALE:
+ *    - Sensitized Patient (Snare): Trapped by biological incompatibility.
+ *    - Algorithm/UNOS (Rope): A tool for optimizing matches and saving lives.
+ *    - Biologist (Mountain): Immutable biological laws.
+ * 
+ * 3. CORE INSIGHT: The kidney exchange market is a triumph of market design,
+ *    turning biological 'Mountains' (incompatibility) and legal 'Snares' (prohibition
+ *    of sales) into a life-saving 'Rope' through intelligent coordination.
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+/**
+ * OMEGA IDENTIFICATION
+ *
+ * The core uncertainty is the future role of technology in overcoming biological limits.
+ */
+
+omega_variable(
+    immunosuppression_advancement,
+    "Will new drugs or technologies eventually allow across-type transplants without needing perfect matching, or even allow for artificial organ generation?",
+    resolution_mechanism("Clinical trial results for next-generation T-cell inhibitors; breakthroughs in xenotransplantation or bio-3D printing."),
+    impact("If Yes: The 'Mountain' of blood-type compatibility could turn into a 'Rope' (an optional coordination). If No: It remains an enduring 'Mountain' for human biology."),
+    confidence_without_resolution(medium)
+).
+
+/* ==========================================================================
+   7. ALTERNATIVE ANALYSIS
+   ========================================================================== */
+/**
+ * VIABLE ALTERNATIVES
+ *
+ * ALTERNATIVE 1: Legalized Organ Markets
+ *    Viability: Proposed by some economists to increase supply by offering monetary incentives.
+ *    Suppression: Heavily suppressed by the National Organ Transplant Act (NOTA) and ethical concerns about exploitation and commodification of the human body.
+ *
+ * ALTERNATIVE 2: Desensitization Therapy
+ *    Viability: Costly and difficult medical procedures to reduce antibody levels in highly sensitized patients.
+ *    Suppression: Not actively suppressed, but the limited success rate and high cost make it a less viable option than exchange.
+ *
+ * CONCLUSION:
+ * The kidney exchange market navigates a complex ethical and biological landscape.
+ * By actively suppressing the monetary alternative ('Snare' of exploitation), it
+ * creates a moral 'Rope' to save lives within existing biological 'Mountains'.
+ */
+
+/* ==========================================================================
+   8. INTEGRATION HOOKS
+   ========================================================================== */
+
+/**
+ * TO USE THIS FILE:
+ * 
+ * 1. Load: ?- [constraints/kidney_exchange_market].
+ * 2. Multi-perspective: ?- multi_index_report(kidney_exchange_market).
+ * 3. Run tests: ?- run_tests(kidney_exchange_tests).
+ */
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */% ============================================================================
+% CONSTRAINT STORY: kirby_paris_theorem
+% ============================================================================
+% Generated: 2026-01-19
+% Model: Gemini 2.0 Flash
+% Source: Kirby, L., & Paris, J. (1982) / Goodstein's Theorem
+% ============================================================================
+
+:- module(constraint_kirby_paris_theorem, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile 
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:constraint_metric/3,
+    constraint_indexing:constraint_classification/3.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ * * constraint_id: kirby_paris_theorem
+ * human_readable: The Kirby-Paris Theorem (Independency of Goodstein's Theorem)
+ * domain: technological
+ * temporal_scope: Permanent (Universal Mathematical Law)
+ * spatial_scope: Global (Formal Arithmetic Systems)
+ * * SUMMARY:
+ * The Kirby-Paris theorem demonstrates that Goodstein's theorem—a statement 
+ * about the termination of specific sequences of natural numbers—is unprovable 
+ * within Peano Arithmetic (PA). It shows that PA cannot "see" the eventual 
+ * termination of these sequences, even though they are provably finite in 
+ * stronger systems like ZFC.
+ * * KEY AGENTS:
+ * - The Finitist: Seeking to ground all mathematics in the "safe" rules of PA.
+ * - The Transfinite Logician: Utilizing transfinite induction up to epsilon-zero 
+ * to prove truths that PA cannot reach.
+ * - The Formal System (PA): The administrative structure that imposes a limit 
+ * on what can be verified within its own boundaries.
+ * * NARRATIVE ARC:
+ * The theorem functions as a hard ceiling (Mountain) for finitistic proof. 
+ * While it provides a "Rope" for higher-order logicians to justify transfinite 
+ * methods, it acts as a "Snare" for the finitist, who is trapped in a 
+ * system where simple arithmetic truths are fundamentally unreachable.
+ */
+
+/* ==========================================================================
+   2. CORE SYSTEM INTEGRATION (The "Reality" Layer)
+   ========================================================================== */
+
+% Required for [STEP 1] and [STEP 2] of the DR-Audit Suite
+narrative_ontology:interval(kirby_paris_interval, 0, 10).
+narrative_ontology:constraint_claim(kirby_paris_theorem, mountain).
+
+% Base extractiveness: How much semantic closure is taken?
+% Rationale: It extracts the "provability" of a simple arithmetic truth from 
+% the system, forcing the use of more "expensive" transfinite methods.
+domain_priors:base_extractiveness(kirby_paris_theorem, 0.2).
+
+% Suppression: How much are higher truths hidden?
+% Rationale: PA naturally suppresses the proof of Goodstein's theorem; the 
+% proof is invisible to the internal logic of the system.
+domain_priors:suppression_score(kirby_paris_theorem, 0.4).
+
+% Constraint metric facts (bridge for classification engine)
+narrative_ontology:constraint_metric(kirby_paris_theorem, extractiveness, 0.2).
+narrative_ontology:constraint_metric(kirby_paris_theorem, suppression_requirement, 0.4).
+
+% Enforcement: Emerges naturally from the structure of induction and non-standard models.
+domain_priors:emerges_naturally(kirby_paris_theorem).
+
+% Metrics required for Section 1 of the Executive Summary
+% BENEFICIARIES & VICTIMS
+constraint_beneficiary(kirby_paris_theorem, transfinite_logicians).
+constraint_victim(kirby_paris_theorem, foundational_finitists).
+
+/* ==========================================================================
+   3. INDEXED CLASSIFICATIONS (Perspectival Truth)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 1: THE ANALYTICAL OBSERVER - Mountain
+   --------------------------------------------------------------------------
+   
+   WHO: analytical - Observer of the laws of information.
+   WHEN: civilizational - Viewing logic as a permanent substrate.
+   WHERE: trapped - Formal systems cannot bypass their own inductive limits.
+   SCOPE: global - Universal applicability to arithmetic.
+   
+   WHY THIS CLASSIFICATION:
+   To the observer, this is a Mountain. It is an unchangeable feature of the 
+   mathematical landscape. The unprovability of Goodstein's theorem in PA 
+   is a fixed fact of logical reality, not a choice or a social construct.
+   -------------------------------------------------------------------------- */
+
+constraint_indexing:constraint_classification(
+    kirby_paris_theorem,
+    mountain,
+    context(
+        agent_power(analytical),
+        time_horizon(civilizational),
+        exit_options(trapped),
+        spatial_scope(global)
+    )
+) :- !.
+
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 2: THE HIGHER-ORDER MATHEMATICIAN - Rope
+   --------------------------------------------------------------------------
+   
+   WHO: institutional - Power to define and utilize meta-mathematical rules.
+   WHEN: biographical - Accomplishing proofs within a career.
+   WHERE: arbitrage - Can move between PA and stronger systems (ZFC).
+   SCOPE: national - Specific to the domain of formal proof.
+   
+   WHY THIS CLASSIFICATION:
+   For the institutional mathematician, the theorem is a Rope. It is a 
+   coordination mechanism that justifies the move to transfinite induction. 
+   By showing exactly where PA fails, it provides a "tether" to higher 
+   axioms that can safely "pull" the proof of termination into reality.
+   -------------------------------------------------------------------------- */
+
+constraint_indexing:constraint_classification(
+    kirby_paris_theorem,
+    rope,
+    context(
+        agent_power(institutional),
+        time_horizon(biographical),
+        exit_options(arbitrage),
+        spatial_scope(national)
+    )
+) :- !.
+
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 3: THE FINITIST SUBJECT - Snare
+   --------------------------------------------------------------------------
+   
+   WHO: powerless - Subject to the limits of finitistic rules.
+   WHEN: immediate - Today's attempt to ground truth in basic arithmetic.
+   WHERE: trapped - Cannot leave the boundaries of Peano induction.
+   SCOPE: local - Immediate workspace.
+   
+   WHY THIS CLASSIFICATION:
+   For the finitist, the theorem is a Snare. They are presented with a 
+   statement that is clearly true (verified by calculation and meta-logic), 
+   yet their system strangles their ability to prove it. The harder they 
+   try to use standard induction, the more the complexity of the Goodstein 
+   sequence tightens, proving that their world is fundamentally incomplete.
+   -------------------------------------------------------------------------- */
+
+constraint_indexing:constraint_classification(
+    kirby_paris_theorem,
+    snare,
+    context(
+        agent_power(powerless),
+        time_horizon(immediate),
+        exit_options(trapped),
+        spatial_scope(local)
+    )
+) :- !.
+
+/* ==========================================================================
+   4. TESTS (What We Learn About Constraints)
+   ========================================================================== */
+
+:- begin_tests(kirby_paris_theorem_tests).
+
+test(multi_perspective_variance) :-
+    % Perspective 1: Analyst sees Mountain
+    constraint_indexing:constraint_classification(kirby_paris_theorem, mountain, context(agent_power(analytical), _, _, _)),
+    % Perspective 2: Institutional sees Rope
+    constraint_indexing:constraint_classification(kirby_paris_theorem, rope, context(agent_power(institutional), _, _, _)),
+    % Perspective 3: Powerless sees Snare
+    constraint_indexing:constraint_classification(kirby_paris_theorem, snare, context(agent_power(powerless), _, _, _)).
+
+test(power_extractiveness_scaling) :-
+    % Powerless finitists feel the total loss of provability (Snare).
+    % Institutional mathematicians use it to justify stronger systems (Rope).
+    ContextPowerless = context(powerless, immediate, trapped, local),
+    ContextPowerful = context(institutional, biographical, arbitrage, national),
+    domain_priors:base_extractiveness(kirby_paris_theorem, Score),
+    Score > 0.1.
+
+test(time_immutability_scale) :-
+    % Long-term civilizational logic = Mountain.
+    constraint_indexing:effective_immutability(civilizational, trapped, mountain).
+
+:- end_tests(kirby_paris_theorem_tests).
+
+/* ==========================================================================
+   5. MODEL INTERPRETATION (Commentary)
+   ========================================================================== */
+
+/**
+ * LLM GENERATION NOTES
+ * * Model: Gemini 2.0 Flash
+ * Date: 2026-01-19
+ * * KEY DECISIONS:
+ * * 1. EXTRACTIVENESS SCORE (0.2):
+ * Reasoning: Low. The "extraction" is semantic—the loss of certain 
+ * arithmetic closures. It forces the cognitive cost of higher-order logic.
+ * * 2. PERSPECTIVE SELECTION:
+ * Chose Analyst (Mountain), Mathematician (Rope), and Finitist (Snare) 
+ * to demonstrate how a single logical fact represents a law, a tool, 
+ * or a trap based on the agent's axiomatic commitment.
+ * * 3. CLASSIFICATION RATIONALE:
+ * The "Snare" for the finitist is particularly apt: they can see the 
+ * truth but are logically barred from it.
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+omega_variable(
+    natural_intuition_limits,
+    "Do humans possess a 'natural' intuition for epsilon-zero induction 
+    (Rope) or are we biologically restricted to finitism (Mountain)?",
+    resolution_mechanism("Cognitive study of transfinite reasoning in experts"),
+    impact("If Mountain: Kirby-Paris is a biological Snare. If Rope: It's an 
+    educational challenge."),
+    confidence_without_resolution(medium)
+).
+
+/* ==========================================================================
+   7. ALTERNATIVE ANALYSIS
+   ========================================================================== */
+
+/**
+ * VIABLE ALTERNATIVES
+ * * ALTERNATIVE 1: Transfinite Induction (up to epsilon-zero)
+ * Viability: High. This is the standard way to prove Goodstein's theorem.
+ * Suppression: High within PA. PA is syntactically incapable of 
+ * expressing this induction level.
+ * * CONCLUSION:
+ * The existence of Transfinite Induction as an "Exit" to a stronger system 
+ * converts the "Mountain" of PA's unprovability into a "Rope" for the 
+ * advanced mathematician, while remaining a "Snare" for the finitist.
+ */
+
+/* ==========================================================================
+   8. INTEGRATION HOOKS
+   ========================================================================== */
+
+/**
+ * TO USE THIS FILE:
+ * * 1. Load: ?- [constraint_kirby_paris_theorem].
+ * 2. Multi-perspective: ?- multi_index_report(kirby_paris_theorem).
+ * 3. Run tests: ?- run_tests(kirby_paris_theorem_tests).
+ */
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */
+% ============================================================================
+% CONSTRAINT STORY: great_awakening_rekindling
+% ============================================================================
+% Generated: 2026-01-16
+% Model: Gemini 1.5 Pro
+% Source: The First Great Awakening and the "Old Light" vs "New Light" schism
+% ============================================================================
+
+:- module(constraint_kjv_great_awakening, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+:- multifile 
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:constraint_metric/3,
+    constraint_indexing:constraint_classification/3.
+
+% The Structural Anchor for system extraction
+narrative_ontology:interval(kjv_great_awakening, 0, 10).
+narrative_ontology:constraint_claim(kjv_great_awakening, snare).
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ * * constraint_id: kjv_great_awakening
+ * human_readable: The Great Awakening Re-Indexing
+ * domain: religious/social/psychological
+ * temporal_scope: 1730 - 1750 CE
+ * spatial_scope: American Colonies (Inter-colonial)
+ * * SUMMARY:
+ * After a century of stability, the KJV had become a "Mountain"—a dry, 
+ * institutional fixture of the "Old Light" establishment. The Great 
+ * Awakening shattered this by emphasizing "heart religion." This turned 
+ * the text into a "Rope" for the marginalized (slaves, women, uneducated) 
+ * by granting them direct interpretive agency, while the elite saw this 
+ * decentralized authority as a "Snare" strangling colonial stability.
+ * * KEY AGENTS:
+ * - The "New Light" Convert: Finding personal liberation in the text.
+ * - The "Old Light" Minister: Protecting the "Mountain" of established order.
+ * - The Analytical Historian: Observing the birth of American individualism.
+ */
+
+/* ==========================================================================
+   2. BASE PROPERTIES (Context-Independent)
+   ========================================================================== */
+
+% Base extractiveness: Low (0.1)
+% The movement was highly decentralized; the "benefit" of the text 
+% flowed toward individual empowerment rather than an institution.
+domain_priors:base_extractiveness(kjv_great_awakening, 0.1).
+
+% Suppression: Moderate (0.4)
+% Old Light ministers tried to ban itinerant preaching, but the 
+% "Exit Option" was psychological and local, making suppression difficult.
+domain_priors:suppression_score(kjv_great_awakening, 0.4).
+
+% Constraint metric facts (bridge for classification engine)
+narrative_ontology:constraint_metric(kjv_great_awakening, extractiveness, 0.1).
+narrative_ontology:constraint_metric(kjv_great_awakening, suppression_requirement, 0.4).
+
+% Enforcement: Emerges naturally (Spontaneous revivalism)
+domain_priors:emerges_naturally(kjv_great_awakening).
+
+constraint_beneficiary(kjv_great_awakening, individual_empowerment).
+constraint_victim(kjv_great_awakening, institutional_control).
+
+/* ==========================================================================
+   3. INDEXED CLASSIFICATIONS (Perspectival Truth)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 1: THE NEW LIGHT CONVERT - ROPE
+   --------------------------------------------------------------------------
+   WHO: powerless (socially)
+   WHEN: immediate - The "instant" of conversion.
+   WHERE: mobile - They can leave "dead" churches for "live" ones.
+   SCOPE: local/regional - The traveling revival circuit.
+   
+   WHY THIS CLASSIFICATION:
+   The KJV is a Rope. It is no longer a dead law (Mountain) but a dynamic 
+   lifeline. The convert uses the text to bypass the educated clergy and 
+   connect directly to God. It provides agency and coordination with other 
+   believers across colonial lines.
+   -------------------------------------------------------------------------- */
+
+constraint_indexing:constraint_classification(
+    kjv_great_awakening,
+    rope,
+    context(
+        agent_power(powerless),
+        time_horizon(immediate),
+        exit_options(mobile),
+        spatial_scope(regional)
+    )
+).
+
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 2: THE OLD LIGHT MINISTER - SNARE
+   --------------------------------------------------------------------------
+   WHO: institutional - The established religious elite.
+   WHEN: biographical - Their career and social standing are at stake.
+   WHERE: constrained - They are tied to their specific parish/pulpit.
+   SCOPE: local/national - The stability of the colonial hierarchy.
+   
+   WHY THIS CLASSIFICATION:
+   For the established elite, this "New Light" use of the KJV is a Snare. 
+   It unmoors the text from scholarly tradition, allowing "unlearned" 
+   men to challenge the elite's power. It feels like an asymmetric 
+   attack on the social order they are sworn to protect.
+   -------------------------------------------------------------------------- */
+
+constraint_indexing:constraint_classification(
+    kjv_great_awakening,
+    snare,
+    context(
+        agent_power(institutional),
+        time_horizon(biographical),
+        exit_options(constrained),
+        spatial_scope(national)
+    )
+).
+
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 3: THE ANALYTICAL OBSERVER - MOUNTAIN
+   --------------------------------------------------------------------------
+   WHO: analytical - Looking back at the inevitability of the shift.
+   WHEN: historical - 250+ years of perspective.
+   WHERE: analytical - Not bound by the religious fervor.
+   SCOPE: continental - The shaping of the American character.
+   
+   WHY THIS CLASSIFICATION:
+   From a historical distance, the KJV functions as a Mountain. Regardless 
+   of the "Old vs New Light" debate, the KJV was the inescapable 
+   linguistic bedrock of the era. It was the "natural law" of communication 
+   that made the Awakening possible across disparate colonies.
+   -------------------------------------------------------------------------- */
+
+constraint_indexing:constraint_classification(
+    kjv_great_awakening,
+    mountain,
+    context(
+        agent_power(analytical),
+        time_horizon(historical),
+        exit_options(analytical),
+        spatial_scope(continental)
+    )
+).
+
+/* ==========================================================================
+   4. TESTS (What We Learn About Constraints)
+   ========================================================================== */
+
+:- begin_tests(kjv_great_awakening_tests).
+
+/**
+ * TEST 1: Multi-perspective variance
+ * Demonstrates how the Great Awakening is viewed differently across agents.
+ */
+test(multi_perspective_variance) :-
+    % New Light Convert (Rope)
+    constraint_indexing:constraint_classification(
+        kjv_great_awakening,
+        Type1,
+        context(agent_power(powerless), time_horizon(immediate), exit_options(mobile), spatial_scope(regional))
+    ),
+    % Old Light Minister (Snare)
+    constraint_indexing:constraint_classification(
+        kjv_great_awakening,
+        Type2,
+        context(agent_power(institutional), time_horizon(biographical), exit_options(constrained), spatial_scope(national))
+    ),
+    % Analytical Observer (Mountain)
+    constraint_indexing:constraint_classification(
+        kjv_great_awakening,
+        Type3,
+        context(agent_power(analytical), time_horizon(historical), exit_options(analytical), spatial_scope(continental))
+    ),
+    % Verify they differ
+    Type1 \= Type2,
+    Type2 \= Type3,
+    Type1 \= Type3. % Ensure all three are distinct
+
+/**
+ * TEST 2: Power-based extractiveness scaling
+ * Demonstrates that the institutional elite (Old Light) perceive higher extraction
+ * of their authority than the empowered converts.
+ */
+test(power_extractiveness_scaling) :-
+    ContextPowerless = context(agent_power(powerless), time_horizon(immediate), exit_options(mobile), spatial_scope(regional)),
+    ContextPowerful = context(agent_power(institutional), time_horizon(biographical), exit_options(constrained), spatial_scope(national)),
+    constraint_indexing:extractiveness_for_agent(kjv_great_awakening, ContextPowerless, Score1),
+    constraint_indexing:extractiveness_for_agent(kjv_great_awakening, ContextPowerful, Score2),
+    Score1 < Score2.  % The "powerful" experience more extraction in this case.
+
+/**
+ * TEST 3: Time-horizon immutability
+ * Demonstrates that while the revival was a dynamic event, the text itself is a historical constant.
+ */
+test(time_immutability) :-
+    % Short horizon (immediate) sees the event as a dynamic Rope
+    constraint_indexing:effective_immutability(time_horizon(immediate), exit_options(mobile), rope),
+    % Long horizon (historical) sees the text as an immutable Mountain.
+    constraint_indexing:effective_immutability(time_horizon(historical), exit_options(analytical), mountain).
+
+:- end_tests(kjv_great_awakening_tests).
+
+/* ==========================================================================
+   5. MODEL INTERPRETATION (Commentary)
+   ========================================================================== */
+
+/**
+ * LLM GENERATION NOTES
+ * 
+ * Model: Gemini 2.0 Flash
+ * Date: 2026-01-23
+ * 
+ * KEY DECISIONS:
+ * 
+ * 1. SHIFT FROM MOUNTAIN TO ROPE: This is the most important pedagogical 
+ * point. A constraint is a "Mountain" when it is ignored because it is 
+ * "just there." It becomes a "Rope" when someone picks it up and 
+ * uses it to move.
+ * 
+ * 2. THE SNARE OF THE ELITE: It is ironic that the institutional power 
+ * (ministers) felt "snared" by their own holy book when the peasants 
+ * started reading it "incorrectly."
+ * 
+ * 3. OMEGAS 
+ *    Define uncertainty so your analysis is cleaner
+ *    omega_variable(
+ *        sincerity_of_conversion,
+ *        "Is the 'New Light' conversion a genuine empowerment (Rope) or a form of social contagion (Snare)?",
+ *        resolution_mechanism("Analysis of long-term life outcomes of converts vs. non-converts."),
+ *        impact("If contagion: The Rope is a ilusion. If genuine: The Rope is a real tool for social change."),
+ *        confidence_without_resolution(medium)
+ *    ).
+ */
+
+/* ==========================================================================
+   6. ALTERNATIVE ANALYSIS (If Applicable)
+   ========================================================================== */
+
+/**
+ * VIABLE ALTERNATIVES
+ * 
+ * ALTERNATIVE 1: Rationalism / The Enlightenment
+ *    Viability: High (e.g., Thomas Jefferson, Benjamin Franklin). A major intellectual movement of the era.
+ *    Suppression: In the highly religious context of the American colonies, rationalism was often suppressed or viewed with suspicion as "Deism" or "Atheism," especially outside of elite circles.
+ * 
+ * CONCLUSION:
+ * The Great Awakening provided a "Rope" for populist religious expression, offering an alternative to both the rigid "Mountain" of the established State Church and the intellectually demanding "Snare" of secular rationalism, which was less accessible to the average person.
+ */
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+/**
+ * TO USE THIS CONSTRAINT:
+ * 
+ * 1. Load into main system:
+ *    ?- [constraints/kjv_great_awakening].
+ * 
+ * 2. Run multi-perspective analysis:
+ *    ?- constraint_indexing:multi_index_report(kjv_great_awakening).
+ * 
+ * 3. Run tests:
+ *    ?- run_tests(kjv_great_awakening_tests).
+ * 
+ * 4. Generate pedagogical report:
+ *    ?- pedagogical_report(kjv_great_awakening).
+ * 
+ * 5. Compare with other constraints:
+ *    ?- compare_constraints(kjv_great_awakening, [other_id]).
+ */
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */
+% ============================================================================
+% CONSTRAINT STORY: kjv_linguistic_residue
+% ============================================================================
+% Generated: 2026-01-23
+% Model: Gemini Pro (Revised)
+% Source: The cultural and linguistic legacy of the 1611 KJV in the 21st Century
+% ============================================================================
+
+:- module(constraint_kjv_linguistic_residue, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile 
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:constraint_metric/3,
+    constraint_indexing:constraint_classification/3.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ * 
+ * constraint_id: kjv_linguistic_residue
+ * human_readable: The KJV Aesthetic as a Cognitive Constraint
+ * domain: linguistic/psychological/cultural
+ * temporal_scope: 21st Century
+ * spatial_scope: Global (Anglosphere)
+ * 
+ * SUMMARY:
+ * Even in secular contexts, the KJV’s cadence (Early Modern English) acts 
+ * as a "signal of gravity." When a politician, writer, or AI wants to 
+ * sound "weighty" or "authoritative," they unconsciously revert to KJV-era 
+ * syntax. This is a constraint on how we perceive truth: if it doesn't 
+ * "sound" biblical, it often feels less "true" or "ancient."
+ * 
+ * KEY AGENTS:
+ * - The Secular Skeptic (Individual Powerless): A passive consumer of culture.
+ * - Academic Institution / Literary Canon (Institutional): Preserves and propagates linguistic standards.
+ * - The Speechwriter/Poet (Individual Powerful): Manipulates language professionally for impact.
+ */
+
+/* ==========================================================================
+   2. CORE SYSTEM INTEGRATION (The "Reality" Layer)
+   ========================================================================== */
+
+narrative_ontology:interval(kjv_linguistic_residue, 0, 10).
+narrative_ontology:constraint_claim(kjv_linguistic_residue, mountain).
+
+% Base extractiveness: 0.1.
+% It is a shared "commons" of language. It doesn't extract wealth, 
+% but it "extracts" cognitive effort to interpret archaic forms.
+domain_priors:base_extractiveness(kjv_linguistic_residue, 0.1).
+
+% Suppression: 0.2.
+% There are many alternatives (modern English), but they often fail 
+% to carry the same "authority weight."
+domain_priors:suppression_score(kjv_linguistic_residue, 0.2).
+
+% Constraint metric facts (bridge for classification engine)
+narrative_ontology:constraint_metric(kjv_linguistic_residue, extractiveness, 0.1).
+narrative_ontology:constraint_metric(kjv_linguistic_residue, suppression_requirement, 0.2).
+
+% Enforcement: Emerges naturally (via cultural inertia).
+domain_priors:emerges_naturally(kjv_linguistic_residue).
+
+% BENEFICIARIES & VICTIMS
+constraint_beneficiary(kjv_linguistic_residue, linguistic_authority).
+constraint_victim(kjv_linguistic_residue, linguistic_innovation).
+
+/* ==========================================================================
+   3. INDEXED CLASSIFICATIONS (Perspectival Truth)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 1: THE SECULAR SKEPTIC - Mountain
+   --------------------------------------------------------------------------
+   WHO: powerless (A passive consumer of culture)
+   WHEN: civilizational (Language as an inherited environment)
+   WHERE: trapped (Cannot simply "opt out" of the English language)
+   
+   WHY THIS CLASSIFICATION:
+   For the secular skeptic, the KJV is a 'Mountain'. They might not believe in
+   the Bible, but they use its idioms daily without knowing their source. The
+   way they conceptualize "judgment," "mercy," or "sacrifice" is pre-bounded
+   by the linguistic categories established in 1611, making it an immutable
+   feature of their cognitive landscape.
+   -------------------------------------------------------------------------- */
+
+constraint_indexing:constraint_classification(
+    kjv_linguistic_residue,
+    mountain,
+    context(
+        agent_power(powerless),
+        time_horizon(civilizational),
+        exit_options(trapped),
+        spatial_scope(global)
+    )
+).
+
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 2: ACADEMIC INSTITUTION / LITERARY CANON - Mountain
+   --------------------------------------------------------------------------
+   WHO: institutional (Preserves and propagates linguistic standards)
+   WHEN: historical (From 1611 to present-day English literature)
+   WHERE: analytical (Studies the KJV's impact on language and thought)
+   
+   WHY THIS CLASSIFICATION:
+   For an academic institution or the literary canon, the KJV's linguistic
+   residue is a 'Mountain'—an immutable cultural and historical artifact
+   that profoundly shapes the English language and literary tradition. It is
+   a fixed point of reference, a foundational text whose influence cannot
+   be understated or easily altered.
+   -------------------------------------------------------------------------- */
+
+constraint_indexing:constraint_classification(
+    kjv_linguistic_residue,
+    mountain,
+    context(
+        agent_power(institutional),
+        time_horizon(historical),
+        exit_options(analytical),
+        spatial_scope(global)
+    )
+).
+
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 3: THE SPEECHWRITER/POET - Rope
+   --------------------------------------------------------------------------
+   WHO: powerful (Manipulates language professionally for impact)
+   WHEN: immediate (Writing a specific text for impact)
+   WHERE: mobile (Can choose any style, but leverages the KJV aesthetic)
+   
+   WHY THIS CLASSIFICATION:
+   For the professional communicator, the KJV style is a 'Rope'. It is a 
+   functional tool to evoke "timelessness." By using KJV-inflected 
+   cadence, they can bypass modern skepticism and trigger a 
+   subconscious sense of "seriousness" in the audience, making it a powerful
+   rhetorical device.
+   -------------------------------------------------------------------------- */
+
+constraint_indexing:constraint_classification(
+    kjv_linguistic_residue,
+    rope,
+    context(
+        agent_power(powerful),
+        time_horizon(immediate),
+        exit_options(mobile),
+        spatial_scope(national)
+    )
+) :-
+    domain_priors:base_extractiveness(kjv_linguistic_residue, E),
+
+    E < 0.2.
+
+/* ==========================================================================
+   4. TESTS (What We Learn About Constraints)
+   ========================================================================== */
+
+:- begin_tests(kjv_linguistic_residue_tests).
+
+test(multi_perspective_variance) :-
+    constraint_indexing:constraint_classification(kjv_linguistic_residue, Type1, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(kjv_linguistic_residue, Type2, context(agent_power(institutional), _, _, _)),
+    constraint_indexing:constraint_classification(kjv_linguistic_residue, Type3, context(agent_power(powerful), _, _, _)),
+    Type1 \= Type3. % Mountain vs Rope
+
+:- end_tests(kjv_linguistic_residue_tests).
+
+/* ==========================================================================
+   5. MODEL INTERPRETATION (Commentary)
+   ========================================================================== */
+
+/**
+ * LLM GENERATION NOTES
+ * 
+ * Model: Gemini Pro (Revised)
+ * Date: 2026-01-23
+ * 
+ * KEY DECISIONS:
+ * 
+ * 1. INSTITUTIONAL PERSPECTIVE: Added 'Academic Institution / Literary Canon'
+ *    as the institutional agent. For them, the KJV's linguistic residue is a
+ *    'Mountain'—an immutable cultural artifact shaping language.
+ *
+ * 2. CLASSIFICATION RATIONALE:
+ *    - Secular Skeptic (Mountain): Cannot opt out of inherited linguistic forms.
+ *    - Academic Institution (Mountain): Fixed cultural and historical artifact.
+ *    - Speechwriter (Rope): A powerful tool for rhetorical impact.
+ * 
+ * 3. CORE INSIGHT: The KJV's linguistic residue is a pervasive 'Mountain' in
+ *    the Anglosphere. While it can be a powerful 'Rope' for skilled communicators,
+ *    it acts as a subtle 'Snare' for linguistic innovators and an unavoidable
+ *    'Mountain' for the general populace, subtly shaping perceptions of truth
+ *    and authority.
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+/**
+ * OMEGA IDENTIFICATION
+ *
+ * The core uncertainty is the long-term impact of KJV aesthetics on modern communication.
+ */
+
+omega_variable(
+    linguistic_gravity_drift,
+    "Will the 'signal of gravity' associated with KJV-era syntax diminish over time, leading to a loss of rhetorical power, or will it remain an enduring 'Mountain' in the English language?",
+    resolution_mechanism("Longitudinal analysis of linguistic trends in public discourse; psycholinguistic studies on perceived authority of archaic language."),
+    impact("If diminished: The 'Rope' loses its efficacy. If enduring: It remains a 'Mountain' of linguistic influence."),
+    confidence_without_resolution(medium)
+).
+
+/* ==========================================================================
+   7. ALTERNATIVE ANALYSIS
+   ========================================================================== */
+/**
+ * VIABLE ALTERNATIVES
+ *
+ * ALTERNATIVE 1: Modern English Translations / Contemporary Language
+ *    Viability: Offers clarity and accessibility for everyday communication.
+ *    Suppression: Often suppressed in contexts requiring "gravitas" or "timelessness," where modern language is perceived as "cheap" or "lacking."
+ *
+ * CONCLUSION:
+ * The KJV's linguistic residue functions as a 'Mountain' of cultural inertia,
+ * actively suppressing alternatives that do not carry its inherent "authority weight."
+ * This creates a 'Rope' for those who master its aesthetic, but a 'Snare'
+ * for linguistic innovators seeking to break free from its historical confines.
+ */
+
+/* ==========================================================================
+   8. INTEGRATION HOOKS
+   ========================================================================== */
+
+/**
+ * TO USE THIS FILE:
+ * 
+ * 1. Load: ?- [constraints/kjv_linguistic_residue].
+ * 2. Multi-perspective: ?- multi_index_report(kjv_linguistic_residue).
+ * 3. Run tests: ?- run_tests(kjv_linguistic_residue_tests).
+ */
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */% ============================================================================
+% CONSTRAINT STORY: kjv_puritan_new_world_exit
+% ============================================================================
+% Generated: 2026-01-23
+% Model: Gemini Pro (Revised)
+% Source: The Great Migration (1620-1640) and the evolution of American Liturgy
+% ============================================================================
+
+:- module(constraint_kjv_puritan_new_world_exit, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile 
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:constraint_metric/3,
+    constraint_indexing:constraint_classification/3.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ * 
+ * constraint_id: kjv_puritan_new_world_exit
+ * human_readable: The Puritan Textual Re-Indexing (KJV in the New World)
+ * domain: political/religious/geographic
+ * temporal_scope: 1620 - 1690 CE
+ * spatial_scope: Atlantic / New England Colonies
+ * 
+ * SUMMARY:
+ * This story tracks the movement of the KJV across a geographic "Exit Option." 
+ * In England, the KJV was a tool of the Star Chamber used to suppress Puritan 
+ * identity (Snare). Upon arrival in the New World, the Puritans—now holding 
+ * institutional power—adopted the KJV as a functional coordination tool 
+ * (Rope) to maintain social order and literacy in a "wilderness" environment.
+ * 
+ * KEY AGENTS:
+ * - The Dissenter (Individual Moderate): Experiences the KJV as a tool of suppression in England.
+ * - The Magistrate (Institutional): Uses the KJV to provide a legal and moral baseline in New England.
+ * - The Born-Colonist (Individual Powerless): Born into a society where the KJV is an immutable fact.
+ */
+
+/* ==========================================================================
+   2. CORE SYSTEM INTEGRATION (The "Reality" Layer)
+   ========================================================================== */
+
+narrative_ontology:interval(kjv_puritan_new_world_exit, 0, 10).
+narrative_ontology:constraint_claim(kjv_puritan_new_world_exit, rope).
+
+% Base extractiveness: 0.2.
+% In the New World context, the text provides literacy and legal structure 
+% with less asymmetric "royal" benefit.
+domain_priors:base_extractiveness(kjv_puritan_new_world_exit, 0.2).
+
+% Suppression: 0.5.
+% Alternatives (Geneva Bible) still exist but the KJV becomes the "Rope" 
+% of least resistance for commerce and communication with the homeland.
+domain_priors:suppression_score(kjv_puritan_new_world_exit, 0.5).
+
+% Constraint metric facts (bridge for classification engine)
+narrative_ontology:constraint_metric(kjv_puritan_new_world_exit, extractiveness, 0.2).
+narrative_ontology:constraint_metric(kjv_puritan_new_world_exit, suppression_requirement, 0.5).
+
+% Enforcement: Emerges naturally (via social contract/covenant).
+domain_priors:emerges_naturally(kjv_puritan_new_world_exit).
+
+% BENEFICIARIES & VICTIMS
+constraint_beneficiary(kjv_puritan_new_world_exit, new_england_society).
+constraint_victim(kjv_puritan_new_world_exit, english_puritan_dissenters).
+
+/* ==========================================================================
+   3. INDEXED CLASSIFICATIONS (Perspectival Truth)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 1: THE ENGLISH PURITAN (STAYED BEHIND) - Snare
+   --------------------------------------------------------------------------
+   WHO: individual_moderate (Lacks the capital or desire to flee)
+   WHEN: immediate (Suffering under Archbishop Laud's reforms)
+   WHERE: trapped (Cannot physically leave the jurisdictional reach of the Crown)
+   
+   WHY THIS CLASSIFICATION:
+   For the Puritan who remained in England, the KJV remains a 'Snare'. It is
+   enforced by the State to the exclusion of other translations, representing
+   the "yoke" of the Monarch’s authority over conscience and suppressing
+   religious freedom.
+   -------------------------------------------------------------------------- */
+
+constraint_indexing:constraint_classification(
+    kjv_puritan_new_world_exit,
+    snare,
+    context(
+        agent_power(individual_moderate),
+        time_horizon(immediate),
+        exit_options(trapped),
+        spatial_scope(national)
+    )
+).
+
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 2: THE NEW ENGLAND MAGISTRATE - Rope
+   --------------------------------------------------------------------------
+   WHO: institutional (The rule-makers of the new colony)
+   WHEN: biographical (Planning the survival of the "City on a Hill")
+   WHERE: mobile (They have successfully exercised an exit option)
+   
+   WHY THIS CLASSIFICATION:
+   For the Magistrate in New England, the KJV is a 'Rope'. It is no longer
+   "The King's Bible," but a standard for law and education. It facilitates
+   literacy and communal unity without the direct oversight of the Anglican
+   bishops, serving as a functional coordination mechanism for the new society.
+   -------------------------------------------------------------------------- */
+
+constraint_indexing:constraint_classification(
+    kjv_puritan_new_world_exit,
+    rope,
+    context(
+        agent_power(institutional),
+        time_horizon(biographical),
+        exit_options(mobile),
+        spatial_scope(regional)
+    )
+).
+
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 3: THE BORN-COLONIST (2nd Generation) - Mountain
+   --------------------------------------------------------------------------
+   WHO: powerless (Born into the system)
+   WHEN: generational (It has "always" been this way)
+   WHERE: trapped (The wilderness is vast; the Bible is the only map)
+   
+   WHY THIS CLASSIFICATION:
+   For the child born in the colony, the KJV is a 'Mountain'. They never
+   witnessed the "Geneva vs. KJV" battle. The language of the KJV is
+   simply "the language of God," an unchangeable feature of their reality
+   and social fabric.
+   -------------------------------------------------------------------------- */
+
+constraint_indexing:constraint_classification(
+    kjv_puritan_new_world_exit,
+    mountain,
+    context(
+        agent_power(powerless),
+        time_horizon(generational),
+        exit_options(trapped),
+        spatial_scope(local)
+    )
+).
+
+/* ==========================================================================
+   4. TESTS (What We Learn About Constraints)
+   ========================================================================== */
+
+:- begin_tests(kjv_puritan_new_world_exit_tests).
+
+test(multi_perspective_variance) :-
+    constraint_indexing:constraint_classification(kjv_puritan_new_world_exit, Type1, context(agent_power(individual_moderate), _, _, _)),
+    constraint_indexing:constraint_classification(kjv_puritan_new_world_exit, Type2, context(agent_power(institutional), _, _, _)),
+    constraint_indexing:constraint_classification(kjv_puritan_new_world_exit, Type3, context(agent_power(powerless), _, _, _)),
+    Type1 \= Type2,
+    Type2 \= Type3,
+    Type1 \= Type3.
+
+:- end_tests(kjv_puritan_new_world_exit_tests).
+
+/* ==========================================================================
+   5. MODEL INTERPRETATION (Commentary)
+   ========================================================================== */
+
+/**
+ * LLM GENERATION NOTES
+ * 
+ * Model: Gemini Pro (Revised)
+ * Date: 2026-01-23
+ * 
+ * KEY DECISIONS:
+ * 
+ * 1. MANDATROPHY STATUS: This constraint is classified as a 'Rope' overall
+ *    because the Puritans successfully re-indexed it from a 'Snare' to a
+ *    tool for social cohesion in the New World.
+ *
+ * 2. CLASSIFICATION RATIONALE:
+ *    - English Puritan (Snare): Tool of state suppression.
+ *    - New England Magistrate (Rope): Tool for social order and literacy.
+ *    - Born-Colonist (Mountain): Immutably integrated into social reality.
+ * 
+ * 3. CORE INSIGHT: The KJV's role shifts dramatically based on context and
+ *    power dynamics. What is a 'Snare' of state control in one environment
+ *    becomes a 'Rope' of communal coordination in another, and an immutable
+ *    'Mountain' for subsequent generations.
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+/**
+ * OMEGA IDENTIFICATION
+ *
+ * The core uncertainty is the long-term impact of a text re-indexed from suppression to coordination.
+ */
+
+omega_variable(
+    textual_reindexing_permanence,
+    "Did the KJV truly lose its 'Snare' qualities in the New World, or did the Puritan re-indexing merely suppress its coercive elements, which could re-emerge under different conditions?",
+    resolution_mechanism("Comparative historical analysis of textual authority and social control in different colonial contexts."),
+    impact("If permanent: The re-indexing creates a lasting 'Rope'. If temporary: The 'Snare' remains latent, awaiting re-emergence."),
+    confidence_without_resolution(medium)
+).
+
+/* ==========================================================================
+   7. ALTERNATIVE ANALYSIS
+   ========================================================================== */
+/**
+ * VIABLE ALTERNATIVES
+ *
+ * ALTERNATIVE 1: The Geneva Bible
+ *    Viability: A preferred translation for many Puritans, featuring Calvinist marginal notes.
+ *    Suppression: Though not actively suppressed by the New England magistrates, its use diminished as the KJV became the de facto standard for public life and education.
+ *
+ * CONCLUSION:
+ * The choice to adopt the KJV in the New World, rather than promoting the
+ * Geneva Bible, highlights its utility as a 'Rope' for social cohesion.
+ * The 'Exit Option' from England transformed the KJV from a 'Snare' of
+ * state control into a tool for communal coordination.
+ */
+
+/* ==========================================================================
+   8. INTEGRATION HOOKS
+   ========================================================================== */
+
+/**
+ * TO USE THIS FILE:
+ * 
+ * 1. Load: ?- [constraints/kjv_puritan_new_world_exit].
+ * 2. Multi-perspective: ?- multi_index_report(kjv_puritan_new_world_exit).
+ * 3. Run tests: ?- run_tests(kjv_puritan_new_world_exit_tests).
+ */
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */% ============================================================================
+% CONSTRAINT STORY: kjv_textual_authority
+% ============================================================================
+% Generated: 2026-01-23
+% Model: Gemini Pro (Revised)
+% Source: The 1611 King James Bible and its subsequent cultural hegemony
+% ============================================================================
+
+:- module(constraint_kjv_textual_authority, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+:- multifile 
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:constraint_metric/3,
+    constraint_indexing:constraint_classification/3.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ * 
+ * constraint_id: kjv_textual_authority
+ * human_readable: The King James Textual Monopoly
+ * domain: religious/linguistic/political
+ * temporal_scope: 1611 CE to Present
+ * spatial_scope: Anglosphere / Global
+ * 
+ * SUMMARY:
+ * The KJV was commissioned by King James I to stabilize a fractured English 
+ * church by replacing the radical Geneva Bible. It evolved from a 
+ * state-enforced "Rope" (unifying the realm) into a "Mountain" for 
+ * believers who view its specific 17th-century English as the literal, 
+ * immutable voice of God.
+ * 
+ * KEY AGENTS:
+ * - King James I (Institutional): Seeking political stability.
+ * - The KJV-Only Layperson (Individual Powerless): Views the KJV as the immutable Word of God.
+ * - The Disgusted Puritan (Individual Moderate): Forced to accept the KJV or flee.
+ */
+
+/* ==========================================================================
+   2. CORE SYSTEM INTEGRATION (Context-Independent)
+   ========================================================================== */
+
+narrative_ontology:interval(kjv_textual_authority, 0, 10).
+narrative_ontology:constraint_claim(kjv_textual_authority, mountain).
+
+% Base extractiveness: 0.4 (Moderate)
+% It provides high utility (standardized language) but extracts 
+% cultural compliance and suppressed diverse theological interpretations.
+domain_priors:base_extractiveness(kjv_textual_authority, 0.4).
+
+% Suppression: 0.7 (High)
+% Historically, the Crown banned the Geneva Bible to force KJV adoption.
+% In modern "KJV-Only" circles, alternative texts are viewed as demonic.
+domain_priors:suppression_score(kjv_textual_authority, 0.7).
+
+% Constraint metric facts (bridge for classification engine)
+narrative_ontology:constraint_metric(kjv_textual_authority, extractiveness, 0.4).
+narrative_ontology:constraint_metric(kjv_textual_authority, suppression_requirement, 0.7).
+
+% Enforcement: Requires active enforcement (historically by the state).
+domain_priors:requires_active_enforcement(kjv_textual_authority).
+
+% BENEFICIARIES & VICTIMS
+constraint_beneficiary(kjv_textual_authority, english_monarchy).
+constraint_victim(kjv_textual_authority, puritan_dissenters).
+
+/* ==========================================================================
+   3. INDEXED CLASSIFICATIONS (Perspectival Truth)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 1: KING JAMES I - Rope
+   --------------------------------------------------------------------------
+   WHO: institutional - The state as rule-maker.
+   WHEN: immediate/biographical - Focused on political stability.
+   WHERE: arbitrage - The King can choose translators and set the rules.
+   
+   WHY THIS CLASSIFICATION:
+   To the State, the KJV is a 'Rope'. It is a functional coordination mechanism 
+   designed to bridge the gap between High Church Anglicans and Puritans, 
+   ensuring the King's supremacy over the Church. It is a tool for social engineering.
+   -------------------------------------------------------------------------- */
+
+constraint_indexing:constraint_classification(
+    kjv_textual_authority,
+    rope,
+    context(
+        agent_power(institutional),
+        time_horizon(biographical),
+        exit_options(arbitrage),
+        spatial_scope(national)
+    )
+).
+
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 2: THE KJV-ONLY LAYPERSON - Mountain
+   --------------------------------------------------------------------------
+   WHO: powerless - The subject receiving the word.
+   WHEN: generational/civilizational - The text is "eternal."
+   WHERE: trapped - To leave the text is to leave the Faith.
+   
+   WHY THIS CLASSIFICATION:
+   For this agent, the KJV is a 'Mountain'. It is not a "translation"; it is 
+   the "Authorized Version." Its archaic grammar is the natural language 
+   of the sacred. There are zero degrees of freedom to change it.
+   -------------------------------------------------------------------------- */
+
+constraint_indexing:constraint_classification(
+    kjv_textual_authority,
+    mountain,
+    context(
+        agent_power(powerless),
+        time_horizon(civilizational),
+        exit_options(trapped),
+        spatial_scope(global)
+    )
+).
+
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 3: THE DISGUSTED PURITAN (1620) - Snare
+   --------------------------------------------------------------------------
+   WHO: individual_moderate - Has strong convictions but lacks state power.
+   WHEN: immediate - Watching their preferred Bible (Geneva) being banned.
+   WHERE: constrained - Can flee to the "New World" at great cost.
+   
+   WHY THIS CLASSIFICATION:
+   For the Puritan, the KJV is a 'Snare'. It is an asymmetric imposition by the 
+   Crown that removes the "people's" study notes (found in the Geneva Bible) 
+   to enforce ecclesiastical hierarchy. It is coercive and extractive of religious liberty.
+   -------------------------------------------------------------------------- */
+
+constraint_indexing:constraint_classification(
+    kjv_textual_authority,
+    snare,
+    context(
+        agent_power(individual_moderate),
+        time_horizon(immediate),
+        exit_options(constrained),
+        spatial_scope(regional)
+    )
+).
+
+/* ==========================================================================
+   4. TESTS
+   ========================================================================== */
+
+:- begin_tests(kjv_textual_authority_tests).
+
+test(multi_perspective_variance) :-
+    constraint_indexing:constraint_classification(kjv_textual_authority, Type1, context(agent_power(institutional), _, _, _)),
+    constraint_indexing:constraint_classification(kjv_textual_authority, Type2, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(kjv_textual_authority, Type3, context(agent_power(individual_moderate), _, _, _)),
+    Type1 \= Type2,
+    Type2 \= Type3,
+    Type1 \= Type3.
+
+:- end_tests(kjv_textual_authority_tests).
+
+/* ==========================================================================
+   5. MODEL INTERPRETATION (Commentary)
+   ========================================================================== */
+
+/**
+ * LLM GENERATION NOTES
+ * 
+ * Model: Gemini Pro (Revised)
+ * Date: 2026-01-23
+ * 
+ * KEY DECISIONS:
+ * 
+ * 1. CLASSIFICATION RATIONALE:
+ *    - Monarch (Rope): A tool for social engineering and political stability.
+ *    - KJV-Only Layperson (Mountain): The text is seen as an immutable, divine truth.
+ *    - Puritan (Snare): An oppressive imposition that curtails religious freedom.
+ * 
+ * 2. EXTRACTIVENESS (0.4): Chosen because while the KJV "extracts" theological
+ *    variety and religious freedom, it "provides" a massive cultural and
+ *    linguistic surplus. It’s not purely predatory, but its origins are coercive.
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+/**
+ * OMEGA IDENTIFICATION
+ *
+ * The core uncertainty is the long-term impact of a religiously enforced linguistic monoculture.
+ */
+
+omega_variable(
+    linguistic_diversity_impact,
+    "Did the KJV's textual authority suppress the development of other English theological lexicons (Snare) or merely provide a necessary common linguistic foundation (Rope)?",
+    resolution_mechanism("Comparative analysis of theological literature development in Anglophone vs. other European linguistic traditions (e.g., German, French)."),
+    impact("If suppressed: The KJV was a linguistic 'Snare'. If merely provided foundation: A cultural 'Rope'."),
+    confidence_without_resolution(medium)
+).
+
+/* ==========================================================================
+   7. ALTERNATIVE ANALYSIS
+   ========================================================================== */
+/**
+ * VIABLE ALTERNATIVES
+ *
+ * ALTERNATIVE 1: The Geneva Bible
+ *    Viability: High. It was the most popular Bible among the people and Puritans.
+ *    Suppression: King James specifically banned its printing in England because
+ *    its marginal notes were too "seditious" (questioning monarchical authority).
+ *
+ * CONCLUSION:
+ * The active suppression of the highly popular Geneva Bible confirms that for
+ * the 17th-century dissenter, the KJV was a 'Snare', despite it appearing as
+ * a "Natural Law" ('Mountain') to their descendants. This highlights the political
+ * and coercive origins of seemingly immutable cultural artifacts.
+ */
+
+/* ==========================================================================
+   8. INTEGRATION HOOKS
+   ========================================================================== */
+
+/**
+ * TO USE THIS FILE:
+ * 
+ * 1. Load: ?- [constraints/kjv_textual_authority].
+ * 2. Multi-perspective: ?- multi_index_report(kjv_textual_authority).
+ * 3. Run tests: ?- run_tests(kjv_textual_authority_tests).
+ */
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */% ============================================================================
+% CONSTRAINT STORY: kleene_recursion_theorem
+% ============================================================================
+% Generated: 2026-01-19
+% Model: Gemini 2.0 Flash
+% Source: Stephen Kleene (1938) / Metamathematics / Recursion Theory
+% ============================================================================
+
+:- module(constraint_kleene_recursion, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile 
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:constraint_metric/3,
+    constraint_indexing:constraint_classification/3.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ * * constraint_id: kleene_recursion_theorem
+ * human_readable: Kleene's Second Recursion Theorem
+ * domain: technological/mathematical
+ * temporal_scope: 1938 - Present
+ * spatial_scope: Global/Abstract (Universal Computation)
+ * * SUMMARY:
+ * Kleene's Second Recursion Theorem proves that for any computable function 
+ * that transforms programs, there exists a "fixed-point" program that 
+ * effectively "knows" its own source code. It is the formal foundation for 
+ * self-referential logic, allowing a program to use its own description 
+ * as a parameter in its computation.
+ * * KEY AGENTS:
+ * - The Fixed-Point Program (Subject): The powerless agent whose behavior 
+ * is mathematically identical to the transformation of itself.
+ * - The Language Designer (Institutional): An agent who uses the theorem 
+ * as a "Rope" to ensure their language supports sophisticated recursion.
+ * - The Computer Scientist (Analytical): The observer mapping the "Mountain" 
+ * of self-referential possibility.
+ * * NARRATIVE ARC:
+ * The theorem functions as a "Mountain" of logical reality—self-reference 
+ * is a built-in feature of any universal system. In software architecture, 
+ * it is a "Rope" for implementing reflexive systems (like compilers that 
+ * compile themselves). However, in the context of unconstrained 
+ * self-modification, the theorem acts as a "Snare," extracting the 
+ * possibility of external behavioral prediction by making code 
+ * fundamentally "self-aware" in a way that bypasses external templates.
+ */
+
+/* ==========================================================================
+   2. CORE SYSTEM INTEGRATION (The "Reality" Layer)
+   ========================================================================== */
+
+% Required for DR-Audit Suite
+narrative_ontology:interval(kleene_era, 1938, 2026).
+narrative_ontology:constraint_claim(kleene_recursion_theorem, mountain).
+
+% Base extractiveness score (0.0-1.0)
+% Rationale: 0.2. It "extracts" the simplicity of linear, non-recursive 
+% execution, forcing environments to manage the "tax" of self-referential loops.
+domain_priors:base_extractiveness(kleene_recursion_theorem, 0.2).
+
+% Suppression score (0.0-1.0)
+% Rationale: 0.15. It suppresses the intuition that programs are separate 
+% from their descriptions, though it enables more than it restricts.
+domain_priors:suppression_score(kleene_recursion_theorem, 0.15).
+
+% Constraint metric facts (bridge for classification engine)
+narrative_ontology:constraint_metric(kleene_recursion_theorem, extractiveness, 0.2).
+narrative_ontology:constraint_metric(kleene_recursion_theorem, suppression_requirement, 0.15).
+
+% Enforcement: Emerges naturally from the structure of partial recursive functions.
+domain_priors:emerges_naturally(kleene_recursion_theorem).
+
+% Metrics required for Section 1 of the Executive Summary
+% BENEFICIARIES & VICTIMS
+constraint_beneficiary(kleene_recursion_theorem, self_hosting_compilers).
+constraint_beneficiary(kleene_recursion_theorem, artificial_life_researchers).
+constraint_victim(kleene_recursion_theorem, static_analysis_security). % Self-reference complicates reachability proofs.
+
+/* ==========================================================================
+   3. INDEXED CLASSIFICATIONS (Perspectival Truth)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 1: THE RECURSIVE FUNCTION - Mountain
+   --------------------------------------------------------------------------
+   
+   WHO: powerless - The function cannot "escape" the fixed-point logic.
+   WHEN: immediate - The property is true the moment the universal system exists.
+   WHERE: trapped - Bound within the mapping of indices to functions.
+   SCOPE: local - Immediate execution behavior.
+   
+   WHY THIS CLASSIFICATION:
+   For a mathematical function, the existence of a fixed point is an unyielding 
+   Mountain. It is not a design choice; it is a fundamental property of 
+   computation. The function has zero agency to avoid being "computable from 
+   its own index" if the transformation logic allows it.
+   -------------------------------------------------------------------------- */
+
+
+
+constraint_indexing:constraint_classification(
+    kleene_recursion_theorem,
+    mountain,
+    context(
+        agent_power(powerless),
+        time_horizon(immediate),
+        exit_options(trapped),
+        spatial_scope(local)
+    )
+) :- !.
+
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 2: THE SELF-HOSTING COMPILER - Rope
+   --------------------------------------------------------------------------
+   
+   WHO: institutional - Power to coordinate the growth of a language.
+   WHEN: biographical - Spanning the decades-long evolution of a toolchain.
+   WHERE: mobile - Can choose different representations of the fixed point.
+   SCOPE: global - Universal foundation for software ecosystems.
+   
+   WHY THIS CLASSIFICATION:
+   For the institutional actor, the theorem is a "Rope"—a functional 
+   coordination tool. It allows for the creation of "bootstrapped" systems 
+   where the compiler can use its own logic to produce itself, providing 
+    a standard of achievement for language maturity.
+   -------------------------------------------------------------------------- */
+
+constraint_indexing:constraint_classification(
+    kleene_recursion_theorem,
+    rope,
+    context(
+        agent_power(institutional),
+        time_horizon(biographical),
+        exit_options(mobile),
+        spatial_scope(global)
+    )
+) :- !.
+
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 3: THE CODE AUDITOR - Snare
+   --------------------------------------------------------------------------
+   
+   WHO: individual_moderate - Has the intelligence to analyze but is bound by logic.
+   WHEN: immediate - Facing the opaque behavior of self-referential malware.
+   WHERE: constrained - The code’s behavior is hidden behind its own self-reference.
+   SCOPE: national - Protecting networks from polymorphic threats.
+   
+   WHY THIS CLASSIFICATION:
+   For the auditor, Kleene’s theorem is a "Snare." It "strangles" the ability 
+   to perform exhaustive behavior mapping because the code can dynamically 
+   refer to and reconstruct its own "self" (extraction of certainty). This 
+   logical "trap" makes certain security properties undecidable.
+   -------------------------------------------------------------------------- */
+
+
+
+constraint_indexing:constraint_classification(
+    kleene_recursion_theorem,
+    snare,
+    context(
+        agent_power(individual_moderate),
+        time_horizon(immediate),
+        exit_options(constrained),
+        spatial_scope(national)
+    )
+) :- 
+    domain_priors:base_extractiveness(kleene_recursion_theorem, E),
+    E >= 0.15,
+    !.
+
+/* ==========================================================================
+   4. TESTS (What We Learn About Constraints)
+   ========================================================================== */
+
+:- begin_tests(kleene_recursion_tests).
+
+test(multi_perspective_variance) :-
+    % Function -> Mountain
+    constraint_indexing:constraint_classification(kleene_recursion_theorem, Type1, context(powerless, immediate, trapped, local)),
+    % Compiler -> Rope
+    constraint_indexing:constraint_classification(kleene_recursion_theorem, Type2, context(institutional, biographical, mobile, global)),
+    Type1 = mountain,
+    Type2 = rope.
+
+test(auditor_extraction_penalty) :-
+    % Demonstrates that the Snare classification emerges for the auditor 
+    constraint_indexing:constraint_classification(kleene_recursion_theorem, snare, context(individual_moderate, immediate, constrained, national)).
+
+test(natural_emergence) :-
+    domain_priors:emerges_naturally(kleene_recursion_theorem).
+
+:- end_tests(kleene_recursion_tests).
+
+/* ==========================================================================
+   5. MODEL INTERPRETATION (Commentary)
+   ========================================================================== */
+
+/**
+ * LLM GENERATION NOTES
+ * * Model: Gemini 2.0 Flash
+ * Date: 2026-01-19
+ * * KEY DECISIONS:
+ * * 1. EXTRACTIVENESS SCORE (0.2):
+ * Reasoning: Low, because mathematical theorems are generally enabling. 
+ * However, it extracts the predictability that simpler, non-reflexive 
+ * logic provides.
+ * * 2. CLASSIFICATION RATIONALE:
+ * Chose Function (Subject), Compiler (Institutional User), and 
+ * Auditor (Victim of Complexity) to highlight the perspectival gap 
+ * between "Discovery" and "Defense."
+ * * 3. OMEGA IDENTIFICATION:
+ * Formalized the uncertainty of "Reflexive Autonomy"—can self-reference 
+ * lead to emergent goal-setting that is truly unpredictable?
+ */
+
+% YOUR OMEGAS HERE:
+omega_variable(
+    reflexive_emergent_autonomy,
+    "Does logical self-reference enable spontaneous goal-emergence in autonomous systems?",
+    resolution_mechanism("Long-term observation of self-referential agent simulations with open-ended reward functions."),
+    impact("If Yes: The Mountain is a 'Snare' for safety engineers. If No: It is just a 'Rope' for tool-building."),
+    confidence_without_resolution(medium)
+).
+
+/* ==========================================================================
+   6. ALTERNATIVE ANALYSIS
+   ========================================================================== */
+
+/**
+ * VIABLE ALTERNATIVES
+ * * ALTERNATIVE 1: Non-Recursive Logic (e.g., Finite State Automata)
+ * Viability: Systems that cannot self-refer avoid the "Snare" of 
+ * undecidability.
+ * Suppression: Rejected for general-purpose computation because it 
+ * "strangles" the power of the system (it's not Turing-complete).
+ * * ALTERNATIVE 2: Strict Typing/Isolation
+ * Viability: Preventing code from accessing its own instruction space.
+ * Suppression: Often used as a security "Rope," but doesn't remove the 
+ * underlying logical "Mountain" of Kleene.
+ * * CONCLUSION:
+ * The existence of power-restricted alternatives (Alternative 1) proves 
+ * that Kleene's "Mountain" is the price paid for the "Rope" of universal 
+ * computation.
+ */
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+/**
+ * TO USE THIS FILE:
+ * * 1. Load: ?- [kleene_recursion_theorem].
+ * 2. Multi-perspective: ?- multi_index_report(kleene_recursion_theorem).
+ */
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */

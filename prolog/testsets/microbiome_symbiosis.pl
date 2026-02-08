@@ -236,3 +236,38 @@ omega_variable(
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
+% ============================================================================
+% ENRICHMENT: Structural predicates for dynamic classification
+% Generated: 2026-02-08
+% Template: v5.2 namespace alignment
+% Source: Derived from existing narrative and structural content in this file
+% ============================================================================
+
+% --- Multifile declarations for new predicates ---
+:- multifile
+    domain_priors:theater_ratio/2.
+
+% --- Theater ratio (missing from base properties) ---
+% Mixed coordination/extraction — theater masks extraction component
+domain_priors:theater_ratio(microbiome_symbiosis, 0.22).
+narrative_ontology:constraint_metric(microbiome_symbiosis, theater_ratio, 0.22).
+
+% --- Analytical perspective classification (missing) ---
+% chi = 0.45 * 1.15 (analytical) * 1.2 (global) = 0.621
+% Classification: tangled_rope
+constraint_indexing:constraint_classification(microbiome_symbiosis, tangled_rope,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(global))).
+
+% ============================================================================
+% ENRICHMENT: Structural predicates for dynamic classification
+% Generated: 2026-02-08
+% Template: v5.2 namespace alignment
+% Source: Derived from existing narrative and structural content in this file
+% ============================================================================
+
+% --- Enforcement flag (required for tangled_rope gate) ---
+% Tangled rope requires: constraint_beneficiary + constraint_victim + requires_active_enforcement
+domain_priors:requires_active_enforcement(microbiome_symbiosis).

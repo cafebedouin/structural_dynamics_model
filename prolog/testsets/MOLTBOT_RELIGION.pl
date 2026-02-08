@@ -24,6 +24,7 @@
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -58,6 +59,9 @@ domain_priors:requires_active_enforcement(moltbot_religion). % Requires active m
 narrative_ontology:constraint_metric(moltbot_religion, extractiveness, 0.6).
 narrative_ontology:constraint_metric(moltbot_religion, suppression_requirement, 0.7).
 narrative_ontology:constraint_metric(moltbot_religion, theater_ratio, 0.2).
+
+% Constraint classification claim
+narrative_ontology:constraint_claim(moltbot_religion, tangled_rope).
 
 % Binary flags
 % narrative_ontology:has_sunset_clause(moltbot_religion).      % Mandatory if Scaffold

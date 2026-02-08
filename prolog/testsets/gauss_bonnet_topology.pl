@@ -251,3 +251,43 @@ omega_variable(
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
+
+% ============================================================================
+% ENRICHMENT: Structural predicates for dynamic classification
+% Generated: 2026-02-08
+% Template: v5.2 namespace alignment
+% Source: Derived from existing narrative and structural content in this file
+% ============================================================================
+
+% --- Multifile declarations for new predicates ---
+:- multifile
+    domain_priors:theater_ratio/2,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2.
+
+% --- Theater ratio (missing from base properties) ---
+% Mathematical theorems have essentially zero theater — the relationship
+% between curvature and topology is entirely substantive.
+domain_priors:theater_ratio(gauss_bonnet_topology, 0.02).
+narrative_ontology:constraint_metric(gauss_bonnet_topology, theater_ratio, 0.02).
+
+% --- Structural properties (namespace-qualified) ---
+% The existing constraint_beneficiary/2 and constraint_victim/2 at lines 82-84
+% are unqualified. The engine reads narrative_ontology: prefixed versions.
+narrative_ontology:constraint_beneficiary(gauss_bonnet_topology, global_analysts).
+narrative_ontology:constraint_beneficiary(gauss_bonnet_topology, mesh_validators).
+narrative_ontology:constraint_victim(gauss_bonnet_topology, local_unilateral_curvature).
+
+% --- Analytical perspective classification (missing) ---
+% χ = 0.10 × 1.15 (analytical) × 1.2 (global) = 0.138
+% ε = 0.10 ≤ 0.25, suppression = 0.05 ≤ 0.05 → Mountain
+% The analytical observer sees Gauss-Bonnet as an immutable mathematical truth.
+constraint_indexing:constraint_classification(gauss_bonnet_topology, mountain,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).

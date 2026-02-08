@@ -24,6 +24,7 @@
     narrative_ontology:measurement/5,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -69,6 +70,9 @@ domain_priors:theater_ratio(zombie_reasoning_2026, 0.88).
 narrative_ontology:constraint_metric(zombie_reasoning_2026, extractiveness, 0.74).
 narrative_ontology:constraint_metric(zombie_reasoning_2026, suppression_requirement, 0.8).
 narrative_ontology:constraint_metric(zombie_reasoning_2026, theater_ratio, 0.88).
+
+% Constraint classification claim
+narrative_ontology:constraint_claim(zombie_reasoning_2026, mountain).
 
 % Primary keys for the classification engine
 % High-extraction stakeholders
@@ -121,6 +125,7 @@ test(perspectival_gap) :-
 
 test(theater_check) :-
     domain_priors:theater_ratio(zombie_reasoning_2026, TR),
+domain_priors:requires_active_enforcement(zombie_reasoning_2026).
     TR >= 0.70.
 
 :- end_tests(zombie_reasoning_2026_tests).

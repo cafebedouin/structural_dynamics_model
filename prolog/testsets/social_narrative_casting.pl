@@ -18,6 +18,7 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -71,6 +72,9 @@ domain_priors:suppression_score(social_narrative_casting, 0.6).
 % Constraint metric facts (bridge for classification engine)
 narrative_ontology:constraint_metric(social_narrative_casting, extractiveness, 0.3).
 narrative_ontology:constraint_metric(social_narrative_casting, suppression_requirement, 0.6).
+
+% Constraint classification claim
+narrative_ontology:constraint_claim(social_narrative_casting, mountain).
 
 % Enforcement requirements
 % The constraint "emerges naturally" from the ego's need to project itself and create 
@@ -339,3 +343,34 @@ test(time_immutability_casting) :-
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
+
+% ============================================================================
+% ENRICHMENT: Structural predicates for dynamic classification
+% Generated: 2026-02-08
+% Template: v5.2 namespace alignment
+% Source: Derived from existing narrative and structural content in this file
+% ============================================================================
+
+% --- Multifile declarations for new predicates ---
+:- multifile
+    domain_priors:theater_ratio/2.
+
+% --- Theater ratio (missing from base properties) ---
+% Structural constraint in social domain — low theater, high substance
+domain_priors:theater_ratio(social_narrative_casting, 0.06).
+narrative_ontology:constraint_metric(social_narrative_casting, theater_ratio, 0.06).
+
+% ============================================================================
+% ENRICHMENT: Structural predicates for remaining gaps
+% Generated: 2026-02-08
+% Template: v5.2 namespace alignment
+% Source: Derived from narrative context in this file (social_narrative_casting)
+% ============================================================================
+
+omega_variable(
+    omega_criticism_objectivity,
+    "Can criticism ever reflect an objective truth about the subject, or is it always a projection of the critic's internal narrative?",
+    "Cross-cultural studies of criticism reception and longitudinal tracking of projected vs. observed behavioral patterns.",
+    "If objective: Criticism is a Rope for self-improvement. If always projection: It remains a Snare until consciously reframed.",
+    confidence_without_resolution(medium)
+).

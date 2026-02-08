@@ -27,6 +27,7 @@
     narrative_ontology:measurement/5,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -62,6 +63,9 @@ domain_priors:theater_ratio(zipfs_law, 0.65).       % Performative "Recommendati
 narrative_ontology:constraint_metric(zipfs_law, extractiveness, 0.75).
 narrative_ontology:constraint_metric(zipfs_law, suppression_requirement, 0.7).
 narrative_ontology:constraint_metric(zipfs_law, theater_ratio, 0.65).
+
+% Constraint classification claim
+narrative_ontology:constraint_claim(zipfs_law, tangled_rope).
 
 % Constraint metric facts — primary keys used by the classification engine.
 % Resolved MISSING_TEMPORAL_DATA by anchoring metrics for drift detection.

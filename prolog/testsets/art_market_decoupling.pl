@@ -22,6 +22,7 @@
     narrative_ontology:constraint_metric/3,
     narrative_ontology:interval/3,
     narrative_ontology:measurement/5,
+    narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -61,6 +62,9 @@ domain_priors:theater_ratio(art_market_decoupling, 0.92).
 narrative_ontology:constraint_metric(art_market_decoupling, extractiveness, 0.84).
 narrative_ontology:constraint_metric(art_market_decoupling, suppression_requirement, 0.75).
 narrative_ontology:constraint_metric(art_market_decoupling, theater_ratio, 0.92).
+
+% Constraint classification claim
+narrative_ontology:constraint_claim(art_market_decoupling, piton).
 
 % Binary flags
 domain_priors:requires_active_enforcement(art_market_decoupling).

@@ -243,3 +243,27 @@ omega_variable(
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
+% ============================================================================
+% ENRICHMENT: Structural predicates for dynamic classification
+% Generated: 2026-02-08
+% Template: v5.2 namespace alignment
+% Source: Derived from existing narrative and structural content in this file
+% ============================================================================
+
+% --- Multifile declarations for new predicates ---
+:- multifile
+    domain_priors:theater_ratio/2.
+
+% --- Theater ratio (missing from base properties) ---
+% Mixed coordination/extraction — theater masks extraction component
+domain_priors:theater_ratio(planetary_diet_constraint_2026, 0.29).
+narrative_ontology:constraint_metric(planetary_diet_constraint_2026, theater_ratio, 0.29).
+
+% --- Analytical perspective classification (missing) ---
+% chi = 0.1 * 1.15 (analytical) * 1.2 (global) = 0.138
+% Classification: scaffold
+constraint_indexing:constraint_classification(planetary_diet_constraint_2026, scaffold,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(global))).

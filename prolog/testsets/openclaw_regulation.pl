@@ -1,9 +1,9 @@
 % ============================================================================
 % CONSTRAINT STORY: openclaw_regulation
 % ============================================================================
-% Version: 3.4 (Deferential Realism Core)
-% Logic: 3.3 (Indexed Tuple P,T,E,S)
-% Generated: 2024-02-29
+% Version: 5.2 (Deferential Realism Core + Boltzmann + Purity + Network)
+% Logic: 5.2 (Indexed Tuple P,T,E,S + Coupling + Purity + Network Drift)
+% Generated: 2024-05-21
 % ============================================================================
 
 :- module(constraint_openclaw_regulation, []).
@@ -24,6 +24,10 @@
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
+    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -58,6 +62,10 @@ narrative_ontology:constraint_metric(openclaw_regulation, extractiveness, 0.55).
 narrative_ontology:constraint_metric(openclaw_regulation, suppression_requirement, 0.70).
 narrative_ontology:constraint_metric(openclaw_regulation, theater_ratio, 0.30).
 
+% Constraint self-claim (what does the constraint claim to be?)
+% Values: natural_law, coordination, constructed, enforcement
+narrative_ontology:constraint_claim(openclaw_regulation, tangled_rope).
+
 % Binary flags
 % narrative_ontology:has_sunset_clause(openclaw_regulation).      % Mandatory if Scaffold
 domain_priors:requires_active_enforcement(openclaw_regulation). % Required for Tangled Rope
@@ -77,14 +85,9 @@ narrative_ontology:constraint_victim(openclaw_regulation, users).
                     continental=1.1, global=1.2, universal=1.0.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE SUBJECT (SNARE/MOUNTAIN)
+% PERSPECTIVE 1: THE SUBJECT (SNARE)
 % High extraction felt as an immutable limit or predatory trap.
-% NOTE: This may be upgraded to 'organized' power if a critical mass of victims exists.
-%
-% UNIFORM-TYPE EXCEPTION: For natural law constraints (mountain-only) or pure
-% coordination constraints (rope-only), perspectives 1 and 2 may use any power
-% atoms — the classification is the same from all perspectives.  Include at
-% least 2-3 perspectives to demonstrate the invariance.
+% χ = 0.55 * 1.5 (powerless) * 1.0 (national) = 0.825. This is a clear Snare.
 constraint_indexing:constraint_classification(openclaw_regulation, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
@@ -93,40 +96,22 @@ constraint_indexing:constraint_classification(openclaw_regulation, snare,
 
 % PERSPECTIVE 2: THE BENEFICIARY (ROPE)
 % Viewed as essential infrastructure or coordination.
+% χ = 0.55 * -0.2 (institutional) * 1.0 (national) = -0.11. Negative extraction is felt as a pure benefit. Rope.
 constraint_indexing:constraint_classification(openclaw_regulation, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(mobile),
             spatial_scope(national))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER
+% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED_ROPE)
 % Default analytical context (civilizational/analytical/global).
-% This perspective is used by the bridge to derive constraint_claim.
-% Type should reflect what the metrics compute: mountain, rope, tangled_rope, snare, scaffold, or piton.
+% χ = 0.55 * 1.15 (analytical) * 1.2 (global) = 0.759. High extraction.
+% The system has beneficiaries, victims, and requires enforcement, meeting all criteria for a Tangled Rope.
 constraint_indexing:constraint_classification(openclaw_regulation, tangled_rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
             spatial_scope(global))).
-
-% PERSPECTIVE 4: THE ARCHITECT (SCAFFOLD)
-% Temporary coordination that expires over time.
-% Requires: has_sunset_clause declared, extraction <= 0.30, theater_ratio < 0.70.
-/*constraint_indexing:constraint_classification(openclaw_regulation, scaffold,
-    context(agent_power(organized),
-            time_horizon(generational),
-            exit_options(constrained),
-            spatial_scope(continental))) :-
-    narrative_ontology:has_sunset_clause(openclaw_regulation).*/
-
-% PERSPECTIVE 5: THE SYSTEMS AUDITOR (PITON)
-% Inertial maintenance of a non-functional constraint.
-/*constraint_indexing:constraint_classification(openclaw_regulation, piton, 
-    context(agent_power(analytical), 
-            time_horizon(civilizational), 
-            exit_options(arbitrage), 
-            spatial_scope(universal))) :-
-    domain_priors:theater_ratio(openclaw_regulation, TR), TR > 0.70.*/
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -143,7 +128,7 @@ test(perspectival_gap) :-
 test(threshold_validation) :-
     config:param(extractiveness_metric_name, ExtMetricName),
     narrative_ontology:constraint_metric(openclaw_regulation, ExtMetricName, E),
-    (E =< 0.05 -> true ; E >= 0.46). % Ensures it's either a Mountain or high-extraction Snare/Tangled.
+    (E =< 0.15 -> false ; E >= 0.46). % Ensures it's a high-extraction Snare/Tangled, not a Rope or Mountain.
 
 :- end_tests(openclaw_regulation_tests).
 
@@ -153,9 +138,12 @@ test(threshold_validation) :-
 
 /**
  * LOGIC RATIONALE:
- * The OpenClaw regulation is classified as a Tangled Rope because it involves both coordination and asymmetric extraction. Regulators and developers benefit from the centralized control and potential profit (coordination), while users face potential privacy violations and manipulation (asymmetric extraction). The suppression score is high due to the potential for limited user choice and the enforcement of regulatory measures. The perspectival gap arises because users, being powerless, feel trapped by the regulation, while regulators view it as a necessary mechanism for societal benefit.
+ * The OpenClaw regulation is a canonical Tangled Rope. It has a genuine coordination function (benefiting developers and regulators by creating a stable, predictable market and mitigating systemic risk) while simultaneously imposing high costs and restrictions on end-users (asymmetric extraction). The high suppression score (0.70) reflects the mandatory nature of the regulations, limiting user choice and requiring active enforcement.
+ * The perspectival gap is stark: users (powerless, trapped) experience the system as a Snare, feeling its full extractive force (χ=0.825). In contrast, institutional beneficiaries perceive it as a Rope, as the negative power modifier makes the extraction feel like a net benefit (χ=-0.11). The analytical observer, accounting for all factors, correctly identifies the hybrid nature of the constraint as a Tangled Rope.
+ * The constraint claims to be 'coordination', which is true from the beneficiary's perspective, but this claim masks the high extraction felt by victims, a typical feature of Tangled Ropes.
+ *
  * * MANDATROPHY ANALYSIS:
- * The Tangled Rope classification prevents the system from mislabeling the regulation as pure extraction (Snare) by recognizing the coordination function provided to developers and regulators in maintaining the AI system and setting standards. This distinguishes it from purely exploitative systems where no genuine coordination benefit exists.
+ * The Tangled Rope classification prevents the system from mislabeling the regulation as pure extraction (Snare) by recognizing the coordination function provided to developers and regulators in maintaining the AI system and setting standards. This distinguishes it from purely exploitative systems where no genuine coordination benefit exists. This resolution is critical for policy analysis, as it acknowledges both the stated benefits and the hidden costs.
  */
 
 /* ==========================================================================
@@ -198,6 +186,24 @@ narrative_ontology:measurement(openclaw_regulation_tr_t10, openclaw_regulation, 
 narrative_ontology:measurement(openclaw_regulation_ex_t0, openclaw_regulation, base_extractiveness, 0, 0.35).
 narrative_ontology:measurement(openclaw_regulation_ex_t5, openclaw_regulation, base_extractiveness, 5, 0.45).
 narrative_ontology:measurement(openclaw_regulation_ex_t10, openclaw_regulation, base_extractiveness, 10, 0.55).
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA (v5.0-5.2)
+   ========================================================================== */
+
+% Coordination type (enables Boltzmann floor + complexity offset)
+% Valid types: information_standard, resource_allocation,
+%              enforcement_mechanism, global_infrastructure
+narrative_ontology:coordination_type(openclaw_regulation, enforcement_mechanism).
+
+% Boltzmann floor override (only if domain knowledge justifies)
+% Value must be in [0.0, 1.0]
+% narrative_ontology:boltzmann_floor_override(openclaw_regulation, 0.0).
+
+% Network relationships (structural influence edges)
+% Declare when constraints share regulatory domain, causal dependency,
+% or institutional coupling.
+% narrative_ontology:affects_constraint(openclaw_regulation, other_constraint_id).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

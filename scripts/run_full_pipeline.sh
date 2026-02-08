@@ -85,6 +85,20 @@ else
 fi
 
 # ==============================================================================
+# STEP 1b: Check for duplicate constraint IDs
+# ==============================================================================
+DUPE_OUTPUT=$(python3 "$PYTHON_DIR/duplicate_checker.py" --dir "$TESTSETS_DIR" 2>&1)
+DUPE_RC=$?
+if [ "$DUPE_RC" -ne 0 ]; then
+    warn "Duplicate constraint IDs detected:"
+    echo "$DUPE_OUTPUT" | while IFS= read -r line; do
+        echo "        $line"
+    done
+else
+    ok "No duplicate constraint IDs"
+fi
+
+# ==============================================================================
 # STEP 2: Run Prolog tests
 # ==============================================================================
 step "Running Prolog test suite"

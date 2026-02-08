@@ -21,6 +21,7 @@
     narrative_ontology:interval/3,
     narrative_ontology:constraint_metric/3,
     narrative_ontology:measurement/5,
+    narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -61,6 +62,9 @@ domain_priors:theater_ratio(epstein_honeytrap, 0.82).
 narrative_ontology:constraint_metric(epstein_honeytrap, extractiveness, 0.92).
 narrative_ontology:constraint_metric(epstein_honeytrap, suppression_requirement, 0.88).
 narrative_ontology:constraint_metric(epstein_honeytrap, theater_ratio, 0.82).
+
+% Constraint classification claim
+narrative_ontology:constraint_claim(epstein_honeytrap, piton).
 
 domain_priors:requires_active_enforcement(epstein_honeytrap).
 
@@ -159,3 +163,12 @@ narrative_ontology:measurement(eh_ex_t10, epstein_honeytrap, base_extractiveness
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
+
+% ============================================================================
+% ENRICHMENT: Structural predicates for remaining gaps
+% Generated: 2026-02-08
+% Template: v5.2 namespace alignment
+% Source: Derived from narrative context in this file (epstein_kgb_honeytrap)
+% ============================================================================
+constraint_beneficiary(epstein_honeytrap, intelligence_operators).
+constraint_victim(epstein_honeytrap, compromised_associates).

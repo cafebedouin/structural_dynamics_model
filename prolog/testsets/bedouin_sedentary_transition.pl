@@ -264,3 +264,30 @@ narrative_ontology:measurement(bedouin_ex_t10, bedouin_sedentary_transition, bas
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
+
+% ============================================================================
+% ENRICHMENT: Structural predicates for dynamic classification
+% Generated: 2026-02-08
+% Template: v5.2 namespace alignment
+% Source: Derived from existing narrative and structural content in this file
+% ============================================================================
+
+% --- Multifile declarations for new predicates ---
+:- multifile
+    narrative_ontology:constraint_claim/2.
+
+% --- Analytical perspective classification (missing) ---
+% χ = 0.75 × 1.15 (analytical) × 1.0 (national) = 0.8625
+% ε = 0.75 ≥ 0.46, suppression = 0.60 ≥ 0.60, χ = 0.8625 ≥ 0.66 → Snare
+% The analytical observer sees the sedentary transition as a snare:
+% an extractive system that liquidated millennia of nomadic resilience
+% for oil-state dependency, with no structural exit for the subjects.
+constraint_indexing:constraint_classification(bedouin_sedentary_transition, snare,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(regional))).
+
+% NOTE: constraint_claim is already declared at line 62 as 'snare'.
+% The analytical perspective confirms this: the chi formula yields 0.8625
+% which passes all snare gates (ε ≥ 0.46, suppression ≥ 0.60, χ ≥ 0.66).

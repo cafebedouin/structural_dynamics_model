@@ -18,6 +18,7 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -57,7 +58,7 @@
 
 % Required for [STEP 1] and [STEP 2] of the DR-Audit Suite
 narrative_ontology:interval(dldr_policy_interval, 0, 10).
-narrative_ontology:constraint_claim([dldr_information_policy], [information_architecture]).
+narrative_ontology:constraint_claim(dldr_information_policy, mountain).
 
 % Base extractiveness score (0.35 = Moderate-Low)
 % Rationale: It extracts a "tax" of labor (tagging) from creators and cognitive 

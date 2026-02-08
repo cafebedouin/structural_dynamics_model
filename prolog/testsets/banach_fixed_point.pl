@@ -24,6 +24,7 @@
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -59,6 +60,9 @@ domain_priors:theater_ratio(banach_fixed_point, 0.05). % Abstract math has low t
 narrative_ontology:constraint_metric(banach_fixed_point, extractiveness, 0.01).
 narrative_ontology:constraint_metric(banach_fixed_point, suppression_requirement, 0.99).
 narrative_ontology:constraint_metric(banach_fixed_point, theater_ratio, 0.05).
+
+% Constraint classification claim
+narrative_ontology:constraint_claim(banach_fixed_point, mountain).
 
 % Identification of coordination beneficiary (The integrity of the space)
 narrative_ontology:constraint_beneficiary(banach_fixed_point, mathematical_stability).

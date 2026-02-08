@@ -292,3 +292,19 @@ omega_variable(
 % --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
 constraint_indexing:constraint_classification(cuban_missile_crisis_excomm_delibration, mountain, agent_power(analytical)).
 constraint_indexing:constraint_classification(cuban_missile_crisis_excomm_delibration, rope, agent_power(institutional)).
+
+% ============================================================================
+% ENRICHMENT: Structural predicates for dynamic classification
+% Generated: 2026-02-08
+% Template: v5.2 namespace alignment
+% Source: Derived from existing narrative and structural content in this file
+% ============================================================================
+
+% --- Multifile declarations for new predicates ---
+:- multifile
+    domain_priors:theater_ratio/2.
+
+% --- Theater ratio (missing from base properties) ---
+% Coordination mechanism in political domain — moderate institutional framing
+domain_priors:theater_ratio(cuban_missile_crisis_excomm_deliberation, 0.16).
+narrative_ontology:constraint_metric(cuban_missile_crisis_excomm_deliberation, theater_ratio, 0.16).

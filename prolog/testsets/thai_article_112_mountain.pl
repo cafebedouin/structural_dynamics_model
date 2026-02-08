@@ -20,6 +20,7 @@
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:has_sunset_clause/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -63,6 +64,9 @@ domain_priors:theater_ratio(thai_article_112_mountain, 0.10).
 narrative_ontology:constraint_metric(thai_article_112_mountain, extractiveness, 0.04).
 narrative_ontology:constraint_metric(thai_article_112_mountain, suppression_requirement, 0.95).
 narrative_ontology:constraint_metric(thai_article_112_mountain, theater_ratio, 0.1).
+
+% Constraint classification claim
+narrative_ontology:constraint_claim(thai_article_112_mountain, mountain).
 
 % Binary flags
 domain_priors:requires_active_enforcement(thai_article_112_mountain).
@@ -156,3 +160,12 @@ narrative_ontology:interval(thai_article_112_mountain, 1908, 2026).
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
+
+% ============================================================================
+% ENRICHMENT: Structural predicates for remaining gaps
+% Generated: 2026-02-08
+% Template: v5.2 namespace alignment
+% Source: Derived from narrative context in this file (thai_article_112_mountain)
+% ============================================================================
+constraint_beneficiary(thai_article_112_mountain, royalist_establishment).
+constraint_victim(thai_article_112_mountain, progressive_political_movements).

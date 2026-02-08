@@ -1,9 +1,9 @@
 % ============================================================================
 % CONSTRAINT STORY: trump_indian_tariffs_2026
 % ============================================================================
-% Version: 3.4 (Deferential Realism Core)
-% Logic: 3.3 (Indexed Tuple P,T,E,S)
-% Generated: 2024-02-29
+% Version: 5.2 (Deferential Realism Core + Boltzmann + Purity + Network)
+% Logic: 5.2 (Indexed Tuple P,T,E,S + Coupling + Purity + Network Drift)
+% Generated: 2024-07-15
 % ============================================================================
 
 :- module(constraint_trump_indian_tariffs_2026, []).
@@ -24,6 +24,10 @@
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
+    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -36,11 +40,11 @@
  * human_readable: Trump's Tariff Reduction on India (2026)
  * domain: economic
  * * SUMMARY:
- * In 2026, Trump reduces tariffs on Indian goods to 18% after Modi agrees to reduce oil purchases from Russia. This is a quid-pro-quo arrangement where economic concessions are exchanged for political alignment, seemingly benefiting both countries at the expense of Russia.
+ * In a hypothetical 2026, a Trump administration reduces tariffs on Indian goods to 18% after the Modi government agrees to reduce oil purchases from Russia. This is a quid-pro-quo arrangement where economic concessions are exchanged for political alignment, seemingly benefiting both countries at the expense of Russia.
  * * KEY AGENTS:
  * - Indian Exporters: Subject (Powerless initially, potentially Organized)
  * - US Consumers/Importers: Beneficiary (Institutional)
- * - Russia: Victim
+ * - Russian State: Victim
  */
 
 /* ==========================================================================
@@ -58,16 +62,19 @@ narrative_ontology:constraint_metric(trump_indian_tariffs_2026, extractiveness, 
 narrative_ontology:constraint_metric(trump_indian_tariffs_2026, suppression_requirement, 0.70).
 narrative_ontology:constraint_metric(trump_indian_tariffs_2026, theater_ratio, 0.20).
 
+% Constraint self-claim (what does the constraint claim to be?)
+% Values: natural_law, coordination, constructed, enforcement
+narrative_ontology:constraint_claim(trump_indian_tariffs_2026, tangled_rope).
+
 % Binary flags
-% narrative_ontology:has_sunset_clause(trump_indian_tariffs_2026).      % Mandatory if Scaffold
 domain_priors:requires_active_enforcement(trump_indian_tariffs_2026). % Required for Tangled Rope
 
 % Structural property derivation hooks:
 %   has_coordination_function/1 is DERIVED from constraint_beneficiary/2
 %   has_asymmetric_extraction/1 is DERIVED from constraint_victim/2
 % Both are required for Tangled Rope. Coordination is also required for Scaffold.
-narrative_ontology:constraint_beneficiary(trump_indian_tariffs_2026, "US Consumers/Importers").
-narrative_ontology:constraint_victim(trump_indian_tariffs_2026, "Russia").
+narrative_ontology:constraint_beneficiary(trump_indian_tariffs_2026, us_consumers_importers).
+narrative_ontology:constraint_victim(trump_indian_tariffs_2026, russian_state).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
@@ -77,14 +84,9 @@ narrative_ontology:constraint_victim(trump_indian_tariffs_2026, "Russia").
                     continental=1.1, global=1.2, universal=1.0.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE SUBJECT (SNARE/MOUNTAIN)
-% High extraction felt as an immutable limit or predatory trap.
-% NOTE: This may be upgraded to 'organized' power if a critical mass of victims exists.
-%
-% UNIFORM-TYPE EXCEPTION: For natural law constraints (mountain-only) or pure
-% coordination constraints (rope-only), perspectives 1 and 2 may use any power
-% atoms — the classification is the same from all perspectives.  Include at
-% least 2-3 perspectives to demonstrate the invariance.
+% PERSPECTIVE 1: THE SUBJECT (SNARE)
+% For Indian exporters, the tariffs remain a significant barrier, and their reduction is conditional on geopolitical actions outside their control.
+% χ = 0.55 * π(powerless:1.5) * σ(national:1.0) = 0.825. This is a clear Snare.
 constraint_indexing:constraint_classification(trump_indian_tariffs_2026, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
@@ -92,41 +94,23 @@ constraint_indexing:constraint_classification(trump_indian_tariffs_2026, snare,
             spatial_scope(national))).
 
 % PERSPECTIVE 2: THE BENEFICIARY (ROPE)
-% Viewed as essential infrastructure or coordination.
+% For US importers and consumers, the deal is pure coordination, lowering prices and securing supply chains in exchange for geopolitical alignment they benefit from.
+% χ = 0.55 * π(institutional:-0.2) * σ(national:1.0) = -0.11. This is a clear Rope.
 constraint_indexing:constraint_classification(trump_indian_tariffs_2026, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(mobile),
             spatial_scope(national))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER
-% Default analytical context (civilizational/analytical/global).
-% This perspective is used by the bridge to derive constraint_claim.
-% Type should reflect what the metrics compute: mountain, rope, tangled_rope, snare, scaffold, or piton.
+% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
+% The observer sees both the coordination function (US-India trade) and the asymmetric extraction (coercing India, punishing Russia).
+% χ = 0.55 * π(analytical:1.15) * σ(global:1.2) = 0.759. High extraction.
+% With beneficiaries, victims, and active enforcement, this is a canonical Tangled Rope.
 constraint_indexing:constraint_classification(trump_indian_tariffs_2026, tangled_rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
             spatial_scope(global))).
-
-% PERSPECTIVE 4: THE ARCHITECT (SCAFFOLD)
-% Temporary coordination that expires over time.
-% Requires: has_sunset_clause declared, extraction <= 0.30, theater_ratio < 0.70.
-% constraint_indexing:constraint_classification(trump_indian_tariffs_2026, scaffold,
-%     context(agent_power(organized),
-%             time_horizon(generational),
-%             exit_options(constrained),
-%             spatial_scope(continental))) :-
-%     narrative_ontology:has_sunset_clause(trump_indian_tariffs_2026).
-
-% PERSPECTIVE 5: THE SYSTEMS AUDITOR (PITON)
-% Inertial maintenance of a non-functional constraint.
-% constraint_indexing:constraint_classification(trump_indian_tariffs_2026, piton,
-%     context(agent_power(analytical),
-%             time_horizon(civilizational),
-%             exit_options(arbitrage),
-%             spatial_scope(universal))) :-
-%     domain_priors:theater_ratio(trump_indian_tariffs_2026, TR), TR > 0.70.
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -140,10 +124,14 @@ test(perspectival_gap) :-
     constraint_indexing:constraint_classification(trump_indian_tariffs_2026, TypeInstitutional, context(agent_power(institutional), _, _, _)),
     TypePowerless \= TypeInstitutional.
 
+test(tangled_rope_conditions) :-
+    % Verify the analytical observer sees a Tangled Rope.
+    constraint_indexing:constraint_classification(trump_indian_tariffs_2026, tangled_rope, context(agent_power(analytical), _, _, _)).
+
 test(threshold_validation) :-
     config:param(extractiveness_metric_name, ExtMetricName),
     narrative_ontology:constraint_metric(trump_indian_tariffs_2026, ExtMetricName, E),
-    (E =< 0.05 -> true ; E >= 0.46). % Ensures it's either a Mountain or high-extraction Snare/Tangled.
+    E >= 0.46. % Ensures it's a high-extraction Snare/Tangled Rope.
 
 :- end_tests(trump_indian_tariffs_2026_tests).
 
@@ -153,14 +141,14 @@ test(threshold_validation) :-
 
 /**
  * LOGIC RATIONALE:
- * The scores are assigned as follows:
- *  - extractiveness: 0.55. The tariffs are a form of economic extraction for the US, and the reduction only partially mitigates that. This is a fairly high level.
- *  - suppression: 0.70. India is pressured into changing its foreign policy, limiting its options for oil sourcing. Russia faces limited options for selling oil.
- *  - theater_ratio: 0.20. There is a real change in policy and trade flows, so relatively low theater.
+ * The scores reflect a geopolitical trade deal that functions as both coordination and coercion.
+ *  - extractiveness: 0.55. High. The tariff structure itself is extractive, and its conditional reduction is a tool of coercive power.
+ *  - suppression: 0.70. High. India's sovereign economic policy (sourcing energy) is suppressed, and Russia's market access is directly targeted.
+ *  - theater_ratio: 0.20. Low. The deal has tangible economic and political consequences, it is not merely performative.
  *
- * The perspectival gap exists because Indian exporters initially see the tariffs as a snare (limiting their market access). However, from the US perspective (consumers/importers), the reduced tariffs offer a rope of benefit by offering cheaper imported goods. The analytical observer sees it as a Tangled Rope because it facilitates US economic coordination while extracting from Russia through geopolitical pressure.
+ * The perspectival gap is stark. For US institutional actors, it's a beneficial coordination mechanism (Rope). For Indian exporters subject to the policy, it's a coercive trap (Snare). The analytical view, which must account for both the coordination benefits and the coercive extraction, correctly identifies it as a Tangled Rope.
  * * MANDATROPHY ANALYSIS:
- * The Tangled Rope classification ensures that the system doesn't mislabel this as pure extraction (Snare). The benefit to US consumers and businesses represents a coordination function that offsets the extraction from Russia. The classification takes into account that active enforcement (of the implicit agreement to limit Russian oil purchases) is required to maintain the agreement, further supporting the Tangled Rope classification. If India decided to renege on its implicit agreement with the US, the benefit to US consumers and businesses from lower Indian tariffs would stop.
+ * [RESOLVED MANDATROPHY] The Tangled Rope classification is critical here. A simpler model might classify this as a Snare, focusing only on the coercion against Russia and India. However, that would ignore the genuine coordination function benefiting US importers and consumers. By requiring the declaration of beneficiaries, victims, and active enforcement, the system correctly identifies the hybrid nature of the constraint, preventing the misclassification of complex geopolitical agreements as simple extraction.
  */
 
 /* ==========================================================================
@@ -170,9 +158,9 @@ test(threshold_validation) :-
 % omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
     omega_trump_indian_tariffs_2026,
-    'Will India abide by the implicit agreement to reduce Russian oil purchases?',
-    'Monitor Indian oil import data from Russia over time.',
-    'If True: US benefits economically and geopolitically, Russia is weakened. If False: The US gains only limited economic benefits, agreement collapses.',
+    'Is India''s compliance with the oil purchase reduction sustainable against domestic pressure and its relationship with other BRICS nations?',
+    'Monitor Indian oil import data from Russia, and track diplomatic statements from India, Russia, and China.',
+    'If compliance is sustainable, the Tangled Rope holds. If not, the constraint may collapse or escalate into a more overt Snare (e.g., sanctions).',
     confidence_without_resolution(medium)
 ).
 
@@ -187,12 +175,9 @@ narrative_ontology:interval(trump_indian_tariffs_2026, 0, 10).
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Temporal data enables drift detection (metric_substitution,
-% extraction_accumulation) by providing measurements at multiple time points.
-% Model how the constraint intensified or changed across the interval.
-%
+% Temporal data enables drift detection. The narrative implies a shift from a
+% more extractive/suppressive state (higher tariffs) to the current deal.
 % Required for high-extraction constraints (base_extractiveness > 0.46).
-% Use at least 3 time points (T=0, midpoint, T=end) for each tracked metric.
 %
 % Theater ratio over time (triggers metric_substitution detection):
 narrative_ontology:measurement(trump_indian_tariffs_2026_tr_t0, trump_indian_tariffs_2026, theater_ratio, 0, 0.10).
@@ -200,9 +185,22 @@ narrative_ontology:measurement(trump_indian_tariffs_2026_tr_t5, trump_indian_tar
 narrative_ontology:measurement(trump_indian_tariffs_2026_tr_t10, trump_indian_tariffs_2026, theater_ratio, 10, 0.20).
 
 % Extraction over time (triggers extraction_accumulation detection):
+% T=0 represents the pre-deal higher tariff regime.
 narrative_ontology:measurement(trump_indian_tariffs_2026_ex_t0, trump_indian_tariffs_2026, base_extractiveness, 0, 0.65).
 narrative_ontology:measurement(trump_indian_tariffs_2026_ex_t5, trump_indian_tariffs_2026, base_extractiveness, 5, 0.55).
 narrative_ontology:measurement(trump_indian_tariffs_2026_ex_t10, trump_indian_tariffs_2026, base_extractiveness, 10, 0.55).
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA (v5.0-5.2)
+   ========================================================================== */
+
+% Coordination type (enables Boltzmann floor + complexity offset)
+% This is a geopolitical deal enforced through economic levers.
+narrative_ontology:coordination_type(trump_indian_tariffs_2026, enforcement_mechanism).
+
+% Network relationships (structural influence edges)
+% This deal would directly impact India's strategic alignment within economic blocs like BRICS.
+narrative_ontology:affects_constraint(trump_indian_tariffs_2026, india_brics_alignment_2027).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

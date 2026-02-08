@@ -24,6 +24,7 @@
     narrative_ontology:measurement/5,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -59,6 +60,9 @@ domain_priors:theater_ratio(visibility_bias_governance, 0.78).
 narrative_ontology:constraint_metric(visibility_bias_governance, extractiveness, 0.54).
 narrative_ontology:constraint_metric(visibility_bias_governance, suppression_requirement, 0.68).
 narrative_ontology:constraint_metric(visibility_bias_governance, theater_ratio, 0.78).
+
+% Constraint classification claim
+narrative_ontology:constraint_claim(visibility_bias_governance, tangled_rope).
 
 % Mandatory keys for classification engine v3.4
 domain_priors:requires_active_enforcement(visibility_bias_governance).

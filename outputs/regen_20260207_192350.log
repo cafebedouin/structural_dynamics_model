@@ -1,0 +1,141 @@
+2026-02-07 19:23:50,553 INFO     Log file: /home/scott/bin/structural_dynamics_model/outputs/regen_20260207_192350.log
+2026-02-07 19:23:50,555 INFO     Source: regeneration_list.md group C (19 files)
+2026-02-07 19:23:50,573 INFO     Resume filter: 19 → 19 files
+2026-02-07 19:23:50,573 INFO     Limit applied: processing 19 files
+2026-02-07 19:23:51,913 INFO     [1/19] abstraction_boundary_overrun (3 errors) [0.0/min, ETA 0min]
+2026-02-07 19:23:51,913 INFO       Generating abstraction_boundary_overrun (attempt 1/3)…
+2026-02-07 19:23:51,913 INFO     Creating/refreshing Gemini context cache (TTL=3600s)…
+2026-02-07 19:23:52,624 INFO     HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/cachedContents "HTTP/1.1 200 OK"
+2026-02-07 19:23:52,626 INFO     Cache created: cachedContents/blvpe8mg3wvb4qsqd29843pt7vysx7utprpobt0c (expires ~2026-02-08T02:23:51.913548)
+2026-02-07 19:23:52,627 INFO     AFC is enabled with max remote calls: 10.
+2026-02-07 19:24:36,900 INFO     HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent "HTTP/1.1 200 OK"
+2026-02-07 19:24:36,904 INFO       FAIL abstraction_boundary_overrun (attempt 1/3) — 1 error(s): UNRESOLVED_MANDATROPHY: Extraction 0.81 requires resolution hook.
+2026-02-07 19:24:36,904 INFO       Generating abstraction_boundary_overrun (attempt 2/3)…
+2026-02-07 19:24:36,904 INFO     AFC is enabled with max remote calls: 10.
+2026-02-07 19:25:49,592 INFO     HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent "HTTP/1.1 200 OK"
+2026-02-07 19:25:49,595 INFO       FAIL abstraction_boundary_overrun (attempt 2/3) — 1 error(s): UNRESOLVED_MANDATROPHY: Extraction 0.81 requires resolution hook.
+2026-02-07 19:25:49,595 INFO       Generating abstraction_boundary_overrun (attempt 3/3)…
+2026-02-07 19:25:49,595 INFO     AFC is enabled with max remote calls: 10.
+2026-02-07 19:26:32,518 INFO     HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent "HTTP/1.1 200 OK"
+2026-02-07 19:26:32,521 INFO       PASS abstraction_boundary_overrun on attempt 3
+2026-02-07 19:26:32,521 INFO     [2/19] abstraction_leakage (3 errors) [0.4/min, ETA 48min]
+2026-02-07 19:26:32,522 INFO       Generating abstraction_leakage (attempt 1/3)…
+2026-02-07 19:26:32,522 INFO     AFC is enabled with max remote calls: 10.
+2026-02-07 19:27:26,488 INFO     HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent "HTTP/1.1 200 OK"
+2026-02-07 19:27:26,493 INFO       PASS abstraction_leakage on attempt 1
+2026-02-07 19:27:26,493 INFO     [3/19] adaptive_lag_trap (3 errors) [0.6/min, ETA 30min]
+2026-02-07 19:27:26,493 INFO       Generating adaptive_lag_trap (attempt 1/3)…
+2026-02-07 19:27:26,493 INFO     AFC is enabled with max remote calls: 10.
+2026-02-07 19:28:08,884 INFO     HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent "HTTP/1.1 200 OK"
+2026-02-07 19:28:08,890 INFO       FAIL adaptive_lag_trap (attempt 1/3) — 1 error(s): UNRESOLVED_MANDATROPHY: Extraction 0.83 requires resolution hook.
+2026-02-07 19:28:08,890 INFO       Generating adaptive_lag_trap (attempt 2/3)…
+2026-02-07 19:28:08,890 INFO     AFC is enabled with max remote calls: 10.
+2026-02-07 19:28:57,013 INFO     HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent "HTTP/1.1 200 OK"
+2026-02-07 19:28:57,016 INFO       PASS adaptive_lag_trap on attempt 2
+2026-02-07 19:28:57,016 INFO     [4/19] adversarial_surface_inflation (2 errors) [0.6/min, ETA 27min]
+2026-02-07 19:28:57,016 INFO       Generating adversarial_surface_inflation (attempt 1/3)…
+2026-02-07 19:28:57,016 INFO     AFC is enabled with max remote calls: 10.
+2026-02-07 19:29:33,572 INFO     HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent "HTTP/1.1 200 OK"
+2026-02-07 19:29:33,575 INFO       FAIL adversarial_surface_inflation (attempt 1/3) — 1 error(s): UNRESOLVED_MANDATROPHY: Extraction 0.84 requires resolution hook.
+2026-02-07 19:29:33,575 INFO       Generating adversarial_surface_inflation (attempt 2/3)…
+2026-02-07 19:29:33,575 INFO     AFC is enabled with max remote calls: 10.
+2026-02-07 19:30:27,201 INFO     HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent "HTTP/1.1 200 OK"
+2026-02-07 19:30:27,209 INFO       FAIL adversarial_surface_inflation (attempt 2/3) — 1 error(s): UNRESOLVED_MANDATROPHY: Extraction 0.84 requires resolution hook.
+2026-02-07 19:30:27,209 INFO       Generating adversarial_surface_inflation (attempt 3/3)…
+2026-02-07 19:30:27,210 INFO     AFC is enabled with max remote calls: 10.
+2026-02-07 19:31:17,917 INFO     HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent "HTTP/1.1 200 OK"
+2026-02-07 19:31:17,930 INFO       FAIL adversarial_surface_inflation (attempt 3/3) — 1 error(s): UNRESOLVED_MANDATROPHY: Extraction 0.84 requires resolution hook.
+2026-02-07 19:31:17,933 INFO       PROBSET adversarial_surface_inflation — wrote to probsets/ after 3 attempts
+2026-02-07 19:31:17,934 INFO     [5/19] adversarial_truth_decay (3 errors) [0.5/min, ETA 28min]
+2026-02-07 19:31:17,934 INFO       Generating adversarial_truth_decay (attempt 1/3)…
+2026-02-07 19:31:17,935 INFO     AFC is enabled with max remote calls: 10.
+2026-02-07 19:32:00,325 INFO     HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent "HTTP/1.1 200 OK"
+2026-02-07 19:32:00,328 INFO       PASS adversarial_truth_decay on attempt 1
+2026-02-07 19:32:00,329 INFO     [6/19] agency_atrophy (2 errors) [0.6/min, ETA 23min]
+2026-02-07 19:32:00,329 INFO       Generating agency_atrophy (attempt 1/3)…
+2026-02-07 19:32:00,329 INFO     AFC is enabled with max remote calls: 10.
+2026-02-07 19:32:38,613 INFO     HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent "HTTP/1.1 200 OK"
+2026-02-07 19:32:38,619 INFO       PASS agency_atrophy on attempt 1
+2026-02-07 19:32:38,619 INFO     [7/19] aging_well_assessment (2 errors) [0.7/min, ETA 19min]
+2026-02-07 19:32:38,619 INFO       Generating aging_well_assessment (attempt 1/3)…
+2026-02-07 19:32:38,619 INFO     AFC is enabled with max remote calls: 10.
+2026-02-07 19:33:24,428 INFO     HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent "HTTP/1.1 200 OK"
+2026-02-07 19:33:24,431 INFO       PASS aging_well_assessment on attempt 1
+2026-02-07 19:33:24,431 INFO     [8/19] ai_banal_capture (2 errors) [0.7/min, ETA 16min]
+2026-02-07 19:33:24,432 INFO       Generating ai_banal_capture (attempt 1/3)…
+2026-02-07 19:33:24,432 INFO     AFC is enabled with max remote calls: 10.
+2026-02-07 19:34:06,079 INFO     HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent "HTTP/1.1 200 OK"
+2026-02-07 19:34:06,081 INFO       PASS ai_banal_capture on attempt 1
+2026-02-07 19:34:06,081 INFO     [9/19] c_physical_blue_wavelength (3 errors) [0.8/min, ETA 14min]
+2026-02-07 19:34:06,082 INFO       Generating c_physical_blue_wavelength (attempt 1/3)…
+2026-02-07 19:34:06,082 INFO     AFC is enabled with max remote calls: 10.
+2026-02-07 19:34:45,823 INFO     HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent "HTTP/1.1 200 OK"
+2026-02-07 19:34:45,826 INFO       PASS c_physical_blue_wavelength on attempt 1
+2026-02-07 19:34:45,826 INFO     [10/19] consumer_debt_slavery (2 errors) [0.8/min, ETA 12min]
+2026-02-07 19:34:45,827 INFO       Generating consumer_debt_slavery (attempt 1/3)…
+2026-02-07 19:34:45,827 INFO     AFC is enabled with max remote calls: 10.
+2026-02-07 19:35:22,806 INFO     HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent "HTTP/1.1 200 OK"
+2026-02-07 19:35:22,809 INFO       PASS consumer_debt_slavery on attempt 1
+2026-02-07 19:35:22,809 INFO     [11/19] isa_education_scaffold (2 errors) [0.9/min, ETA 10min]
+2026-02-07 19:35:22,809 INFO       Generating isa_education_scaffold (attempt 1/3)…
+2026-02-07 19:35:22,809 INFO     AFC is enabled with max remote calls: 10.
+2026-02-07 19:36:08,154 INFO     HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent "HTTP/1.1 200 OK"
+2026-02-07 19:36:08,159 INFO       PASS isa_education_scaffold on attempt 1
+2026-02-07 19:36:08,160 INFO     [12/19] marriage_market_asymmetry_2026 (3 errors) [0.9/min, ETA 9min]
+2026-02-07 19:36:08,160 INFO       Generating marriage_market_asymmetry_2026 (attempt 1/3)…
+2026-02-07 19:36:08,160 INFO     AFC is enabled with max remote calls: 10.
+2026-02-07 19:36:52,153 INFO     HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent "HTTP/1.1 200 OK"
+2026-02-07 19:36:52,156 INFO       PASS marriage_market_asymmetry_2026 on attempt 1
+2026-02-07 19:36:52,156 INFO     [13/19] multi_planetary_latency_lock (3 errors) [0.9/min, ETA 8min]
+2026-02-07 19:36:52,156 INFO       Generating multi_planetary_latency_lock (attempt 1/3)…
+2026-02-07 19:36:52,156 INFO     AFC is enabled with max remote calls: 10.
+2026-02-07 19:37:32,178 INFO     HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent "HTTP/1.1 200 OK"
+2026-02-07 19:37:32,183 INFO       PASS multi_planetary_latency_lock on attempt 1
+2026-02-07 19:37:32,183 INFO     [14/19] opioid_political_realignment_2026 (3 errors) [1.0/min, ETA 6min]
+2026-02-07 19:37:32,183 INFO       Generating opioid_political_realignment_2026 (attempt 1/3)…
+2026-02-07 19:37:32,183 INFO     AFC is enabled with max remote calls: 10.
+2026-02-07 19:38:11,187 INFO     HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent "HTTP/1.1 200 OK"
+2026-02-07 19:38:11,191 INFO       PASS opioid_political_realignment_2026 on attempt 1
+2026-02-07 19:38:11,191 INFO     [15/19] project_vault_extraction_2026 (2 errors) [1.0/min, ETA 5min]
+2026-02-07 19:38:11,191 INFO       Generating project_vault_extraction_2026 (attempt 1/3)…
+2026-02-07 19:38:11,191 INFO     AFC is enabled with max remote calls: 10.
+2026-02-07 19:38:47,217 INFO     HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent "HTTP/1.1 200 OK"
+2026-02-07 19:38:47,220 INFO       FAIL project_vault_extraction_2026 (attempt 1/3) — 1 error(s): UNRESOLVED_MANDATROPHY: Extraction 0.78 requires resolution hook.
+2026-02-07 19:38:47,220 INFO       Generating project_vault_extraction_2026 (attempt 2/3)…
+2026-02-07 19:38:47,220 INFO     AFC is enabled with max remote calls: 10.
+2026-02-07 19:39:32,710 INFO     HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent "HTTP/1.1 200 OK"
+2026-02-07 19:39:32,713 INFO       FAIL project_vault_extraction_2026 (attempt 2/3) — 1 error(s): UNRESOLVED_MANDATROPHY: Extraction 0.78 requires resolution hook.
+2026-02-07 19:39:32,713 INFO       Generating project_vault_extraction_2026 (attempt 3/3)…
+2026-02-07 19:39:32,713 INFO     AFC is enabled with max remote calls: 10.
+2026-02-07 19:40:23,015 INFO     HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent "HTTP/1.1 200 OK"
+2026-02-07 19:40:23,018 INFO       PASS project_vault_extraction_2026 on attempt 3
+2026-02-07 19:40:23,018 INFO     [16/19] tear_gas_repression_2026 (2 errors) [0.9/min, ETA 4min]
+2026-02-07 19:40:23,019 INFO       Generating tear_gas_repression_2026 (attempt 1/3)…
+2026-02-07 19:40:23,019 INFO     AFC is enabled with max remote calls: 10.
+2026-02-07 19:41:05,353 INFO     HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent "HTTP/1.1 200 OK"
+2026-02-07 19:41:05,355 INFO       PASS tear_gas_repression_2026 on attempt 1
+2026-02-07 19:41:05,355 INFO     [17/19] usc_26_469_passive_loss (2 errors) [0.9/min, ETA 3min]
+2026-02-07 19:41:05,356 INFO       Generating usc_26_469_passive_loss (attempt 1/3)…
+2026-02-07 19:41:05,356 INFO     AFC is enabled with max remote calls: 10.
+2026-02-07 19:41:44,588 INFO     HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent "HTTP/1.1 200 OK"
+2026-02-07 19:41:44,596 INFO       PASS usc_26_469_passive_loss on attempt 1
+2026-02-07 19:41:44,596 INFO     [18/19] edelman_2026_developing_volatility (3 errors) [1.0/min, ETA 2min]
+2026-02-07 19:41:44,596 INFO       Generating edelman_2026_developing_volatility (attempt 1/3)…
+2026-02-07 19:41:44,597 INFO     AFC is enabled with max remote calls: 10.
+2026-02-07 19:42:31,957 INFO     HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent "HTTP/1.1 200 OK"
+2026-02-07 19:42:31,967 INFO       PASS edelman_2026_developing_volatility on attempt 1
+2026-02-07 19:42:31,968 INFO     [19/19] edelman_2026_insularity (3 errors) [1.0/min, ETA 1min]
+2026-02-07 19:42:31,968 INFO       Generating edelman_2026_insularity (attempt 1/3)…
+2026-02-07 19:42:31,969 INFO     AFC is enabled with max remote calls: 10.
+2026-02-07 19:43:10,918 INFO     HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent "HTTP/1.1 200 OK"
+2026-02-07 19:43:10,926 INFO       PASS edelman_2026_insularity on attempt 1
+2026-02-07 19:43:10,926 INFO     
+2026-02-07 19:43:10,926 INFO     ============================================================
+2026-02-07 19:43:10,926 INFO     REGENERATION COMPLETE
+2026-02-07 19:43:10,927 INFO     ============================================================
+2026-02-07 19:43:10,927 INFO       Processed: 19
+2026-02-07 19:43:10,927 INFO       Passed:    18
+2026-02-07 19:43:10,928 INFO       Failed:    1 (→ probsets/)
+2026-02-07 19:43:10,928 INFO       Skipped:   0
+2026-02-07 19:43:10,928 INFO       API errors:0
+2026-02-07 19:43:10,928 INFO       Elapsed:   19.3 min

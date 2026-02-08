@@ -1,9 +1,9 @@
 % ============================================================================
 % CONSTRAINT STORY: cs_ecmo_bridge
 % ============================================================================
-% Version: 3.4 (Deferential Realism Core)
-% Logic: 3.3 (Indexed Tuple P,T,E,S)
-% Generated: 2024-02-11
+% Version: 5.2 (Deferential Realism Core + Boltzmann + Purity + Network)
+% Logic: 5.2 (Indexed Tuple P,T,E,S + Coupling + Purity + Network Drift)
+% Generated: 2024-07-22
 % ============================================================================
 
 :- module(constraint_cs_ecmo_bridge, []).
@@ -24,6 +24,10 @@
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
+    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -36,11 +40,11 @@
  * human_readable: ECMO Bridge to Transplant
  * domain: technological
  * * SUMMARY:
- * A new artificial lung system allows surgeons to keep a patient alive for 48 hours before a lung transplant. This acts as a bridge, providing crucial time to find a suitable organ and perform the complex surgery.
+ * An artificial lung system (ECMO) allows surgeons to keep a patient alive for a limited time before a lung transplant. This acts as a bridge, providing crucial time to find a suitable organ and perform the complex surgery. While life-saving, it involves immense cost, risk, and dependency for the patient.
  * * KEY AGENTS:
  * - Patient: Subject (Powerless)
  * - Hospital/Surgeons: Beneficiary (Institutional)
- * - Society: Auditor (Analytical)
+ * - Healthcare System Auditor: Auditor (Analytical)
  */
 
 /* ==========================================================================
@@ -58,6 +62,10 @@ narrative_ontology:constraint_metric(cs_ecmo_bridge, extractiveness, 0.55).
 narrative_ontology:constraint_metric(cs_ecmo_bridge, suppression_requirement, 0.30).
 narrative_ontology:constraint_metric(cs_ecmo_bridge, theater_ratio, 0.10).
 
+% Constraint self-claim (what does the constraint claim to be?)
+% Values: natural_law, coordination, constructed, enforcement
+narrative_ontology:constraint_claim(cs_ecmo_bridge, tangled_rope).
+
 % Binary flags
 % narrative_ontology:has_sunset_clause(cs_ecmo_bridge).      % Mandatory if Scaffold
 domain_priors:requires_active_enforcement(cs_ecmo_bridge). % Required for Tangled Rope
@@ -66,7 +74,7 @@ domain_priors:requires_active_enforcement(cs_ecmo_bridge). % Required for Tangle
 %   has_coordination_function/1 is DERIVED from constraint_beneficiary/2
 %   has_asymmetric_extraction/1 is DERIVED from constraint_victim/2
 % Both are required for Tangled Rope. Coordination is also required for Scaffold.
-narrative_ontology:constraint_beneficiary(cs_ecmo_bridge, hospital).
+narrative_ontology:constraint_beneficiary(cs_ecmo_bridge, hospital_system).
 narrative_ontology:constraint_victim(cs_ecmo_bridge, patient).
 
 /* ==========================================================================
@@ -77,14 +85,10 @@ narrative_ontology:constraint_victim(cs_ecmo_bridge, patient).
                     continental=1.1, global=1.2, universal=1.0.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE SUBJECT (SNARE/MOUNTAIN)
-% High extraction felt as an immutable limit or predatory trap.
-% NOTE: This may be upgraded to 'organized' power if a critical mass of victims exists.
-%
-% UNIFORM-TYPE EXCEPTION: For natural law constraints (mountain-only) or pure
-% coordination constraints (rope-only), perspectives 1 and 2 may use any power
-% atoms — the classification is the same from all perspectives.  Include at
-% least 2-3 perspectives to demonstrate the invariance.
+% PERSPECTIVE 1: THE SUBJECT (SNARE)
+% The patient is powerless and trapped, facing immense physical, emotional, and
+% financial extraction. The technology is their only hope, but it's a high-risk,
+% high-cost dependency. Effective extraction χ = 0.55 * 1.5 (powerless) * 1.0 (national) = 0.825.
 constraint_indexing:constraint_classification(cs_ecmo_bridge, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
@@ -92,44 +96,25 @@ constraint_indexing:constraint_classification(cs_ecmo_bridge, snare,
             spatial_scope(national))).
 
 % PERSPECTIVE 2: THE BENEFICIARY (ROPE)
-% Viewed as essential infrastructure or coordination.
+% The hospital system sees a powerful coordination tool. It enables them to save
+% lives that would otherwise be lost, enhancing their capabilities and reputation.
+% Effective extraction χ = 0.55 * -0.2 (institutional) * 1.0 (national) = -0.11 (a net benefit).
 constraint_indexing:constraint_classification(cs_ecmo_bridge, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(mobile),
             spatial_scope(national))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER
-% Default analytical context (civilizational/analytical/global).
-% This perspective is used by the bridge to derive constraint_claim.
-% Type should reflect what the metrics compute: mountain, rope, tangled_rope, snare, scaffold, or piton.
+% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
+% The analyst sees a system with both a genuine coordination function (saving lives)
+% and significant asymmetric extraction from the patient. It requires active enforcement
+% (medical teams, technology). This is the definition of a Tangled Rope.
+% Effective extraction χ = 0.55 * 1.15 (analytical) * 1.2 (global) = 0.759.
 constraint_indexing:constraint_classification(cs_ecmo_bridge, tangled_rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
             spatial_scope(global))).
-
-% PERSPECTIVE 4: THE ARCHITECT (SCAFFOLD)
-% Temporary coordination that expires over time.
-% Requires: has_sunset_clause declared, extraction <= 0.30, theater_ratio < 0.70.
-% The ECMO has a *de facto* sunset clause due to needing a transplant to complete the treatment.
-% Since the narrative does not specify a literal sunset clause, the has_sunset_clause declaration is omitted.
-% If the policy implied a sunset, this clause should be added.
-% constraint_indexing:constraint_classification(cs_ecmo_bridge, scaffold,
-%    context(agent_power(organized),
-%            time_horizon(generational),
-%            exit_options(constrained),
-%            spatial_scope(continental))) :-
-%    narrative_ontology:has_sunset_clause(cs_ecmo_bridge).
-
-% PERSPECTIVE 5: THE SYSTEMS AUDITOR (PITON)
-% Inertial maintenance of a non-functional constraint.
-% constraint_indexing:constraint_classification(cs_ecmo_bridge, piton,
-%    context(agent_power(analytical),
-%            time_horizon(civilizational),
-%            exit_options(arbitrage),
-%            spatial_scope(universal))) :-
-%    domain_priors:theater_ratio(cs_ecmo_bridge, TR), TR > 0.70.
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -143,10 +128,18 @@ test(perspectival_gap) :-
     constraint_indexing:constraint_classification(cs_ecmo_bridge, TypeInstitutional, context(agent_power(institutional), _, _, _)),
     TypePowerless \= TypeInstitutional.
 
-test(threshold_validation) :-
+test(tangled_rope_conditions) :-
+    % Verify the analytical observer sees a tangled_rope.
+    constraint_indexing:constraint_classification(cs_ecmo_bridge, tangled_rope, context(agent_power(analytical), _, _, _)),
+    % And that the structural conditions are met.
+    domain_priors:requires_active_enforcement(cs_ecmo_bridge),
+    narrative_ontology:constraint_beneficiary(cs_ecmo_bridge, _),
+    narrative_ontology:constraint_victim(cs_ecmo_bridge, _).
+
+test(high_extraction_base) :-
     config:param(extractiveness_metric_name, ExtMetricName),
     narrative_ontology:constraint_metric(cs_ecmo_bridge, ExtMetricName, E),
-    E >= 0.46. % Ensures it's  high-extraction Snare/Tangled.
+    E >= 0.46. % Ensures it's high-extraction Snare/Tangled.
 
 :- end_tests(cs_ecmo_bridge_tests).
 
@@ -156,13 +149,12 @@ test(threshold_validation) :-
 
 /**
  * LOGIC RATIONALE:
- * The ECMO bridge presents a perspectival gap because, from the patient's perspective (powerless, trapped), it can feel like a snare.
- * While it offers a chance at survival, it also represents a high-stakes gamble where the patient's fate is heavily reliant on the availability
- * of a donor organ and the success of the transplant.  The hospital/surgeons (institutional, mobile) view it as a rope - a crucial tool that
- * enables them to perform complex life-saving procedures. The analytical observer sees a tangled rope - a process that has genuine coordination to deliver a life saving surgery but has a strong asymmetric extraction of patient resources and potential harm if surgery fails.
- * * MANDATROPHY ANALYSIS:
- * The Tangled Rope classification prevents the system from mislabeling the ECMO bridge as pure extraction (Snare) by recognizing that it has a genuine coordination function:
- * it coordinates the patient's life support with the organ donation system, surgical teams, and post-operative care, resulting in the potential for a successful lung transplant. This prevents it from being categorized as a pure extraction mechanism, which would lack this critical coordination component. The requires_active_enforcement aspect reflects the need for trained medical staff and specialized equipment to maintain the ECMO system and facilitate the transplant.
+ * The ECMO bridge is a classic Tangled Rope. It has a clear, undeniable coordination function: it bridges a patient's biological failure to the availability of a transplant organ, coordinating complex medical resources to save a life. This function is why the hospital (institutional) sees it as a Rope. However, this coordination comes at a massive cost to the patient (powerless), who experiences extreme physical dependency, financial burden, and risk, making it feel like a Snare. The base extractiveness (0.55) reflects this high cost/risk factor, while the moderate suppression (0.30) reflects that while the patient is trapped in their condition, the technology itself is an option, not a mandate. The low theater ratio (0.10) confirms this is a highly functional, non-performative system, making a Piton classification impossible.
+ *
+ * The analytical perspective, which accounts for both the coordination and the asymmetric extraction, correctly identifies it as a Tangled Rope. This classification is critical because it acknowledges both the life-saving utility and the severe burdens imposed, preventing a simplistic "good" (Rope) or "bad" (Snare) judgment.
+ *
+ * [RESOLVED MANDATROPHY]
+ * The Tangled Rope classification prevents the system from mislabeling the ECMO bridge as a pure Snare. A Snare-only classification would ignore its genuine, life-saving coordination function. By requiring the declaration of a beneficiary, a victim, and active enforcement, the Tangled Rope type correctly models systems that are simultaneously beneficial for one group and extractive for another, which is common in advanced medical technology, finance, and platform economies.
  */
 
 /* ==========================================================================
@@ -171,10 +163,10 @@ test(threshold_validation) :-
 
 % omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
-    omega_ecmo_1,
-    'What are the long-term health outcomes for patients who receive an ECMO bridge to transplant?',
-    'Longitudinal studies tracking patient health, quality of life, and survival rates post-transplant.',
-    'If positive: Increased adoption of ECMO. If negative: Re-evaluation of ECMO benefits vs. risks.',
+    omega_cs_ecmo_bridge_1,
+    'Does the long-term quality of life for survivors justify the immense short-term extraction (cost, risk, suffering)?',
+    'Longitudinal studies tracking patient health, quality of life, and survival rates post-transplant against a control group.',
+    'If outcomes are poor, the constraint shifts closer to a Snare. If outcomes are excellent, it reinforces the Tangled Rope classification (high extraction for high reward).',
     confidence_without_resolution(medium)
 ).
 
@@ -191,20 +183,34 @@ narrative_ontology:interval(cs_ecmo_bridge, 0, 10).
 
 % Temporal data enables drift detection (metric_substitution,
 % extraction_accumulation) by providing measurements at multiple time points.
-% Model how the constraint intensified or changed across the interval.
-%
+% This models the technology's adoption and cost intensification over time.
 % Required for high-extraction constraints (base_extractiveness > 0.46).
-% Use at least 3 time points (T=0, midpoint, T=end) for each tracked metric.
 %
-% Theater ratio over time (triggers metric_substitution detection):
+% Theater ratio over time (remains low as it's a functional system):
 narrative_ontology:measurement(cs_ecmo_bridge_tr_t0, cs_ecmo_bridge, theater_ratio, 0, 0.05).
 narrative_ontology:measurement(cs_ecmo_bridge_tr_t5, cs_ecmo_bridge, theater_ratio, 5, 0.08).
 narrative_ontology:measurement(cs_ecmo_bridge_tr_t10, cs_ecmo_bridge, theater_ratio, 10, 0.10).
 
-% Extraction over time (triggers extraction_accumulation detection):
+% Extraction over time (costs and dependency increase as technology becomes standard):
 narrative_ontology:measurement(cs_ecmo_bridge_ex_t0, cs_ecmo_bridge, base_extractiveness, 0, 0.50).
 narrative_ontology:measurement(cs_ecmo_bridge_ex_t5, cs_ecmo_bridge, base_extractiveness, 5, 0.53).
 narrative_ontology:measurement(cs_ecmo_bridge_ex_t10, cs_ecmo_bridge, base_extractiveness, 10, 0.55).
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA (v5.0-5.2)
+   ========================================================================== */
+
+% Coordination type (enables Boltzmann floor + complexity offset)
+% This technology is a mechanism for allocating scarce resources (medical
+% staff, equipment, and the patient's viability) until another resource
+% (a donor organ) becomes available.
+narrative_ontology:coordination_type(cs_ecmo_bridge, resource_allocation).
+
+% Boltzmann floor override (only if domain knowledge justifies)
+% narrative_ontology:boltzmann_floor_override(cs_ecmo_bridge, 0.0).
+
+% Network relationships (structural influence edges)
+% narrative_ontology:affects_constraint(cs_ecmo_bridge, organ_donation_policy).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

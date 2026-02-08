@@ -1,0 +1,1672 @@
+% ============================================================================
+% CONSTRAINT STORY: qualified_immunity
+% ============================================================================
+% Version: 5.2 (Deferential Realism Core + Boltzmann + Purity + Network)
+% Logic: 5.2 (Indexed Tuple P,T,E,S + Coupling + Purity + Network Drift)
+% Generated: 2024-07-29
+% ============================================================================
+
+:- module(constraint_qualified_immunity, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
+    narrative_ontology:boltzmann_floor_override/2,
+    constraint_indexing:constraint_classification/3.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ * * constraint_id: qualified_immunity
+ * human_readable: Qualified Immunity Doctrine
+ * domain: political/legal
+ * * SUMMARY:
+ * Qualified immunity is a U.S. legal doctrine shielding government officials from liability for constitutional violations unless their conduct violates "clearly established" law. In practice, this creates a "catch-22" where a right cannot be clearly established without a prior case involving nearly identical facts, effectively preventing remedies for victims of misconduct.
+ * * KEY AGENTS:
+ * - Civil Rights Plaintiff: Subject (Powerless), seeking redress for violations.
+ * - State Official / Judiciary: Beneficiary (Institutional), protected from lawsuits and litigation floodgates.
+ * - Legal Scholar: Auditor (Analytical), observing the structural effects.
+ */
+
+/* ==========================================================================
+   2. BASE PROPERTIES (DOMAIN PRIORS)
+   ========================================================================== */
+
+% Numerical anchors for v3.4 thresholds
+domain_priors:base_extractiveness(qualified_immunity, 0.8). % It extracts the right to a legal remedy from victims, even when a violation is found.
+domain_priors:suppression_score(qualified_immunity, 0.7).   % The "clearly established" rule suppresses the creation of new legal precedents.
+domain_priors:theater_ratio(qualified_immunity, 0.1).       % The doctrine is highly functional and not performative.
+
+% Constraint metric facts — primary keys used by the classification engine.
+narrative_ontology:constraint_metric(qualified_immunity, extractiveness, 0.8).
+narrative_ontology:constraint_metric(qualified_immunity, suppression_requirement, 0.7).
+narrative_ontology:constraint_metric(qualified_immunity, theater_ratio, 0.1).
+
+% Constraint self-claim (what does the constraint claim to be?)
+% The judiciary presents it as a necessary coordination tool to prevent chilling government action.
+narrative_ontology:constraint_claim(qualified_immunity, coordination).
+
+% Binary flags
+domain_priors:requires_active_enforcement(qualified_immunity). % Requires active judicial enforcement via summary judgment.
+
+% Structural property derivation hooks:
+% has_coordination_function/1 is DERIVED from constraint_beneficiary/2
+% has_asymmetric_extraction/1 is DERIVED from constraint_victim/2
+narrative_ontology:constraint_beneficiary(qualified_immunity, state_officials).
+narrative_ontology:constraint_victim(qualified_immunity, civil_rights_plaintiffs).
+
+/* ==========================================================================
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × π(P) × σ(S)
+   Power (P) and Scope (S) both affect effective extraction.
+   Scope modifiers: local=0.8, regional=0.9, national=1.0,
+                    continental=1.1, global=1.2, universal=1.0.
+   ========================================================================== */
+
+% PERSPECTIVE 1: THE SUBJECT (SNARE)
+% For the victim, the doctrine is a Snare. They suffer a violation, yet the
+% legal system uses a technicality to strangle their right to a remedy.
+constraint_indexing:constraint_classification(qualified_immunity, snare,
+    context(agent_power(powerless),
+            time_horizon(immediate),
+            exit_options(trapped),
+            spatial_scope(local))).
+
+% PERSPECTIVE 2: THE BENEFICIARY (ROPE)
+% From the bench or the perspective of a state official, the doctrine is a
+% Rope, a necessary tool to prevent litigation from paralyzing government.
+constraint_indexing:constraint_classification(qualified_immunity, rope,
+    context(agent_power(institutional),
+            time_horizon(historical),
+            exit_options(arbitrage),
+            spatial_scope(national))).
+
+% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
+% Analytically, it's a Tangled Rope. It has a genuine (if debatable)
+% coordination function (protecting officials) but also imposes severe,
+% asymmetric extraction on a specific class of victims, requiring active
+% judicial enforcement to maintain.
+constraint_indexing:constraint_classification(qualified_immunity, tangled_rope,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(global))).
+
+% PERSPECTIVE 4: THE PRACTITIONER (MOUNTAIN)
+% For a civil rights attorney, it's a Mountain—an immovable feature of the
+% legal landscape that makes most cases "dead on arrival."
+constraint_indexing:constraint_classification(qualified_immunity, mountain,
+    context(agent_power(moderate),
+            time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(national))).
+
+/* ==========================================================================
+   4. VALIDATION TESTS
+   ========================================================================== */
+
+:- begin_tests(qualified_immunity_tests).
+
+test(perspectival_gap_snare_rope) :-
+    % Verify the core perspectival gap between the powerless and institutional views.
+    constraint_indexing:constraint_classification(qualified_immunity, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(qualified_immunity, rope, context(agent_power(institutional), _, _, _)).
+
+test(analytical_classification_is_tangled_rope) :-
+    % The analytical view must resolve the conflict by identifying it as a Tangled Rope.
+    constraint_indexing:constraint_classification(qualified_immunity, tangled_rope, context(agent_power(analytical), _, _, _)).
+
+test(tangled_rope_structural_requirements_met) :-
+    % Verify that all three conditions for a Tangled Rope are met.
+    narrative_ontology:constraint_beneficiary(qualified_immunity, _), % -> has_coordination_function
+    narrative_ontology:constraint_victim(qualified_immunity, _),     % -> has_asymmetric_extraction
+    domain_priors:requires_active_enforcement(qualified_immunity).
+
+test(high_extraction_and_suppression) :-
+    domain_priors:base_extractiveness(qualified_immunity, E), E >= 0.46,
+    domain_priors:suppression_score(qualified_immunity, S), S >= 0.6.
+
+:- end_tests(qualified_immunity_tests).
+
+/* ==========================================================================
+   5. GENERATIVE COMMENTARY
+   ========================================================================== */
+
+/**
+ * LOGIC RATIONALE:
+ * The scores reflect the dual nature of qualified immunity. The high base extractiveness (0.8) represents the near-total removal of legal remedy for victims. The high suppression (0.7) captures the "clearly established" clause's effect of preventing the law from evolving. The perspectival gap is stark: for beneficiaries (the state), it's a coordination tool (Rope) to ensure decisive action by officials. For victims (the powerless), it's a trap that denies justice (Snare).
+ *
+ * MANDATROPHY ANALYSIS:
+ * [RESOLVED MANDATROPHY] The high extraction (0.8) could be misread as a pure Snare. However, the system's claim that it serves a coordination function is non-zero. The Tangled Rope classification from the analytical perspective correctly resolves this ambiguity. It acknowledges the coordination claim (beneficiary exists) while formally recognizing the severe asymmetric extraction (victim exists) and coercive structure (requires enforcement). This prevents the system from simplifying the constraint into either a pure tool of oppression (Snare) or a benign coordination mechanism (Rope), capturing its complex and contested nature.
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
+omega_variable(
+    omega_qualified_immunity,
+    'Is the chilling effect on official conduct, which QI purports to prevent, a real and substantial threat or a pretext for shielding misconduct?',
+    'Comparative analysis of official conduct and litigation rates in jurisdictions that have abolished or limited qualified immunity (e.g., Colorado).',
+    'If the threat is real, the coordination aspect is stronger, leaning it towards a necessary (though harsh) Rope. If pretextual, it is almost purely a Snare.',
+    confidence_without_resolution(low)
+).
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+% Required for external script parsing
+narrative_ontology:interval(qualified_immunity, 0, 10).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Temporal data models the doctrine's evolution from a "good faith" defense
+% to a near-absolute barrier, showing extraction accumulation.
+% Theater ratio remains low as the mechanism is functionally potent.
+%
+% Theater ratio over time:
+narrative_ontology:measurement(qi_tr_t0, qualified_immunity, theater_ratio, 0, 0.1).
+narrative_ontology:measurement(qi_tr_t5, qualified_immunity, theater_ratio, 5, 0.1).
+narrative_ontology:measurement(qi_tr_t10, qualified_immunity, theater_ratio, 10, 0.1).
+
+% Extraction over time:
+narrative_ontology:measurement(qi_ex_t0, qualified_immunity, base_extractiveness, 0, 0.5).
+narrative_ontology:measurement(qi_ex_t5, qualified_immunity, base_extractiveness, 5, 0.7).
+narrative_ontology:measurement(qi_ex_t10, qualified_immunity, base_extractiveness, 10, 0.8).
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA (v5.0-5.2)
+   ========================================================================== */
+
+% Coordination type (enables Boltzmann floor + complexity offset)
+% As a legal doctrine, it is a core enforcement mechanism of the state.
+narrative_ontology:coordination_type(qualified_immunity, enforcement_mechanism).
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */% ============================================================================
+% CONSTRAINT STORY: quantum_decryption_risk_2026
+% ============================================================================
+% Version: 5.2 (Deferential Realism Core + Boltzmann + Purity + Network)
+% Logic: 5.2 (Indexed Tuple P,T,E,S + Coupling + Purity + Network Drift)
+% Generated: 2024-07-16
+% ============================================================================
+
+:- module(constraint_quantum_decryption_risk_2026, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
+    narrative_ontology:boltzmann_floor_override/2,
+    constraint_indexing:constraint_classification/3.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ * * constraint_id: quantum_decryption_risk_2026
+ * human_readable: Quantum Decryption Risk to Public Key Cryptography
+ * domain: technological
+ * * SUMMARY:
+ * The security of most modern digital communication (e.g., RSA, ECC) relies on the computational difficulty of certain mathematical problems like integer factorization. The advent of fault-tolerant quantum computers threatens to solve these problems efficiently (via Shor's algorithm), rendering current encryption standards obsolete. This creates a "harvest now, decrypt later" scenario, where encrypted data intercepted today could be decrypted retroactively once the technology matures.
+ * * KEY AGENTS:
+ * - Private Citizen: Subject (Powerless) whose current and past communications are at risk.
+ * - State Intelligence Agency: Beneficiary (Institutional) who can leverage this future capability for mass surveillance.
+ * - Quantum Physicist: Auditor (Analytical) who views the capability as an inevitable outcome of physical laws.
+ */
+
+/* ==========================================================================
+   2. BASE PROPERTIES (DOMAIN PRIORS)
+   ========================================================================== */
+
+% Numerical anchors for v3.4 thresholds
+domain_priors:base_extractiveness(quantum_decryption_risk_2026, 0.80). % Snare extraction >= 0.46. The ability to retroactively decrypt global communications is profoundly extractive.
+domain_priors:suppression_score(quantum_decryption_risk_2026, 0.30).   % Structural property (raw, unscaled). The risk is known, but alternatives (PQC) are slow to deploy.
+domain_priors:theater_ratio(quantum_decryption_risk_2026, 0.10).       % Piton detection (>= 0.70). The threat is real, not performative.
+
+% Constraint metric facts — primary keys used by the classification engine.
+narrative_ontology:constraint_metric(quantum_decryption_risk_2026, extractiveness, 0.80).
+narrative_ontology:constraint_metric(quantum_decryption_risk_2026, suppression_requirement, 0.30).
+narrative_ontology:constraint_metric(quantum_decryption_risk_2026, theater_ratio, 0.10).
+
+% Constraint self-claim (what does the constraint claim to be?)
+% From the physicist's perspective, this is a feature of the natural world.
+narrative_ontology:constraint_claim(quantum_decryption_risk_2026, natural_law).
+
+% Structural property derivation hooks:
+narrative_ontology:constraint_beneficiary(quantum_decryption_risk_2026, state_intelligence_agencies).
+narrative_ontology:constraint_victim(quantum_decryption_risk_2026, private_citizens).
+narrative_ontology:constraint_victim(quantum_decryption_risk_2026, human_rights_advocates).
+
+/* ==========================================================================
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × π(P) × σ(S)
+   Power (P) and Scope (S) both affect effective extraction.
+   Scope modifiers: local=0.8, regional=0.9, national=1.0,
+                    continental=1.1, global=1.2, universal=1.0.
+   ========================================================================== */
+
+% PERSPECTIVE 1: THE SUBJECT (SNARE)
+% For a private citizen, their past and present encrypted data is held in a
+% temporal trap. The security they rely on today becomes the source of
+% future vulnerability. Effective extraction is amplified by powerlessness.
+% χ = 0.80 * 1.5 (powerless) * 1.2 (global) = 1.44 (Extreme Snare)
+constraint_indexing:constraint_classification(quantum_decryption_risk_2026, snare,
+    context(agent_power(powerless),
+            time_horizon(biographical),
+            exit_options(trapped),
+            spatial_scope(global))).
+
+% PERSPECTIVE 2: THE BENEFICIARY (ROPE)
+% For a state agency, this is a powerful coordination tool for achieving
+% total information awareness. The negative power modifier reflects their
+% ability to absorb the costs and treat it as infrastructure.
+% χ = 0.80 * -0.2 (institutional) * 1.2 (global) = -0.192 (Pure Rope)
+constraint_indexing:constraint_classification(quantum_decryption_risk_2026, rope,
+    context(agent_power(institutional),
+            time_horizon(generational),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (MOUNTAIN)
+% To the physicist or computer scientist, the vulnerability is not a social
+% construct but a consequence of the laws of physics (quantum mechanics)
+% meeting the structure of mathematics (Shor's algorithm). It is an
+% unchangeable fact about what is computable in our universe.
+constraint_indexing:constraint_classification(quantum_decryption_risk_2026, mountain,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).
+
+/* ==========================================================================
+   4. VALIDATION TESTS
+   ========================================================================== */
+
+:- begin_tests(quantum_decryption_risk_2026_tests).
+
+test(perspectival_gap_snare_vs_rope) :-
+    % Verify the gap between the powerless (Snare) and institutional (Rope).
+    constraint_indexing:constraint_classification(quantum_decryption_risk_2026, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(quantum_decryption_risk_2026, rope, context(agent_power(institutional), _, _, _)).
+
+test(analytical_view_is_mountain) :-
+    % Verify the analytical observer correctly identifies the physical limit.
+    constraint_indexing:constraint_classification(quantum_decryption_risk_2026, mountain, context(agent_power(analytical), _, _, _)).
+
+test(high_extraction_threshold) :-
+    % Verify the base extractiveness meets the Snare threshold.
+    domain_priors:base_extractiveness(quantum_decryption_risk_2026, E),
+    E >= 0.46.
+
+:- end_tests(quantum_decryption_risk_2026_tests).
+
+/* ==========================================================================
+   5. GENERATIVE COMMENTARY
+   ========================================================================== */
+
+/**
+ * LOGIC RATIONALE:
+ * The scores reflect a constraint rooted in a physical reality (Mountain) that manifests as a social Snare.
+ * The base extractiveness is very high (0.80) because the potential for retroactive, mass decryption represents a near-total loss of privacy for targeted groups.
+ * The Perspectival Gap is extreme: what is a physical law to a scientist (Mountain) is a tool for total information awareness to a state (Rope) and an inescapable trap for a citizen (Snare). This is a classic example of how a change in physical paradigms can create new, highly asymmetric power structures.
+ *
+ * MANDATROPHY ANALYSIS: [RESOLVED MANDATROPHY]
+ * This constraint is a Mandatrophy risk because the "Rope" (total information awareness for the state) is constructed directly from the broken privacy of the "Snare" (for the citizen). The resolution lies not in changing the Mountain (the physics), but in building a new constraint: the widespread adoption of Post-Quantum Cryptography (PQC). PQC acts as a countermeasure, creating a new Rope for coordination around privacy that is resistant to this specific Mountain.
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
+omega_variable(
+    omega_q_day_arrival,
+    "When will a fault-tolerant quantum computer capable of breaking RSA-2048 be built?",
+    "Physical demonstration of Shor's algorithm on a relevant cryptographic target.",
+    "If soon: Immediate Snare for all legacy data. If distant: Ample time for PQC transition, mitigating the Snare.",
+    confidence_without_resolution(low)
+).
+
+omega_variable(
+    omega_extraction_intent,
+    "Is quantum computer development primarily a scientific pursuit (byproduct) or a strategic state-level goal for surveillance (deliberate)?",
+    "Declassification of state funding directives for quantum research programs.",
+    "If byproduct: Mountain. If deliberate: Reinforces the Snare classification from a policy perspective.",
+    confidence_without_resolution(medium)
+).
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+% Required for external script parsing
+narrative_ontology:interval(quantum_decryption_risk_2026, 0, 10).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% This constraint intensified as quantum computing moved from theory to reality.
+% The base extractiveness (the potential for harm) grew as the timeline to "Q-Day" shortened.
+% Theater ratio remains low as the threat is physical, not performative.
+
+% Theater ratio over time (metric_substitution detection):
+narrative_ontology:measurement(qdr_tr_t0, quantum_decryption_risk_2026, theater_ratio, 0, 0.05).
+narrative_ontology:measurement(qdr_tr_t5, quantum_decryption_risk_2026, theater_ratio, 5, 0.08).
+narrative_ontology:measurement(qdr_tr_t10, quantum_decryption_risk_2026, theater_ratio, 10, 0.10).
+
+% Extraction over time (extraction_accumulation detection):
+narrative_ontology:measurement(qdr_ex_t0, quantum_decryption_risk_2026, base_extractiveness, 0, 0.10). % T=0: Purely theoretical risk
+narrative_ontology:measurement(qdr_ex_t5, quantum_decryption_risk_2026, base_extractiveness, 5, 0.50).  % T=5: Experimental progress, "harvest now" begins
+narrative_ontology:measurement(qdr_ex_t10, quantum_decryption_risk_2026, base_extractiveness, 10, 0.80). % T=10: Imminent threat, PQC transition urgent
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA (v5.0-5.2)
+   ========================================================================== */
+
+% Network relationships (structural influence edges)
+% The risk of quantum decryption directly drives the need for and adoption of
+% post-quantum cryptography standards.
+narrative_ontology:affects_constraint(quantum_decryption_risk_2026, post_quantum_cryptography_adoption).
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */% ============================================================================
+% CONSTRAINT STORY: quantum_entanglement_protocol
+% ============================================================================
+% Generated: 2026-01-19
+% Model: Gemini 2.0 Flash
+% Source: Speculative Physics / Interstellar Communication Hypothesis
+% ============================================================================
+
+:- module(constraint_quantum_protocol, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile 
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:constraint_metric/3,
+    constraint_indexing:constraint_classification/3.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ * * constraint_id: quantum_entanglement_protocol
+ * human_readable: Instantaneous Quantum Entanglement Communication (Hypothetical)
+ * domain: technological/scientific
+ * temporal_scope: Future/R7 (Interstellar Era)
+ * spatial_scope: Galactic (Earth-Mars-Alpha Centauri)
+ * * SUMMARY:
+ * This hypothetical constraint represents a protocol where quantum 
+ * entanglement is used to bypass the "Mountain" of light-speed latency. 
+ * By maintaining pairs of entangled particles across interstellar distances, 
+ * synchronized state changes could theoretically allow for 0-latency 
+ * coordination, effectively "collapsing" the spatial constraints of the 
+ * universe into a single synchronized network.
+ * * KEY AGENTS:
+ * - Distant Colonist: Individual powerless; dependent on the entangled link 
+ * to maintain connection with the origin civilization.
+ * - Network Administrator: Institutional; manages the "Qubit Reservoir" and 
+ * ensures the integrity of the entanglement pairs.
+ * - Theoretical Physicist: Analytical; evaluates the persistent "Mountain" 
+ * of the No-Communication Theorem that currently prohibits this protocol.
+ * * NARRATIVE ARC:
+ * What begins as the ultimate Rope (instantaneous global coordination) 
+ * eventually functions as a Snare for the colonist. If the link 
+ * is broken, the "extraction" of social and technical support is 
+ * instantaneous and total, leaving the colony in an absolute temporal silo.
+ */
+
+/* ==========================================================================
+   2. CORE SYSTEM INTEGRATION (The "Reality" Layer)
+   ========================================================================== */
+
+% Structural Anchor for index extraction
+narrative_ontology:interval(interstellar_quantum_link, 0, 10).
+narrative_ontology:constraint_claim(quantum_entanglement_protocol, rope).
+
+% Base extractiveness score (0.0-1.0)
+% Rationale: 0.2. Low; while the infrastructure is expensive, it 
+% facilitates value rather than coercively extracting it, though it 
+% extracts "autonomy" from the distant agent.
+domain_priors:base_extractiveness(quantum_entanglement_protocol, 0.2).
+
+% Suppression score (0.0-1.0)
+% Rationale: 0.95. Extremely high; current physics (General Relativity 
+% and the No-Communication Theorem) suppresses the possibility of FTL 
+% information transfer. The "protocol" can only exist if these laws 
+% are bypassed or reframed.
+domain_priors:suppression_score(quantum_entanglement_protocol, 0.95).
+
+% Constraint metric facts (bridge for classification engine)
+narrative_ontology:constraint_metric(quantum_entanglement_protocol, extractiveness, 0.2).
+narrative_ontology:constraint_metric(quantum_entanglement_protocol, suppression_requirement, 0.95).
+
+% Enforcement requirements
+% Requires extreme active enforcement: Maintaining "quantum coherence" across 
+% parsecs requires active technical shielding and error-correction.
+domain_priors:requires_active_enforcement(quantum_entanglement_protocol).
+
+% Metrics for Executive Summary
+% BENEFICIARIES & VICTIMS
+constraint_beneficiary(quantum_entanglement_protocol, interstellar_governance).
+constraint_beneficiary(quantum_entanglement_protocol, high_frequency_galactic_trade).
+constraint_victim(quantum_entanglement_protocol, local_planetary_sovereignty).
+
+/* ==========================================================================
+   3. INDEXED CLASSIFICATIONS (Perspectival Truth)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 1: THE DISTANT COLONIST - Mountain
+   --------------------------------------------------------------------------
+   
+   WHO: powerless - Cannot repair the link if it fails; subject 
+         to the information provided by the origin world.
+   WHEN: immediate - Tactical reliance on instant data for colony survival.
+   WHERE: trapped - Bound by the fragility of the entangled qubit pairs.
+   SCOPE: local - A single habitat on a distant exoplanet.
+   
+   WHY THIS CLASSIFICATION:
+   For the colonist, the link is a Mountain. It is an unchangeable 
+   feature of their reality. They do not "use" the link as a tool; 
+   they live within the reality it creates. If the link dictates a 
+   procedure, it is received as an absolute law from the "instant" elsewhere.
+   -------------------------------------------------------------------------- */
+
+
+
+constraint_indexing:constraint_classification(
+    quantum_entanglement_protocol,
+    mountain,
+    context(
+        agent_power(powerless),
+        time_horizon(immediate),
+        exit_options(trapped),
+        spatial_scope(local)
+    )
+) :-
+    domain_priors:requires_active_enforcement(quantum_entanglement_protocol),
+    !.
+
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 2: THE NETWORK ADMINISTRATOR - Rope
+   --------------------------------------------------------------------------
+   
+   WHO: institutional - Power to allocate bandwidth and manage the pairs.
+   WHEN: biographical - Planning the generational maintenance of the Qubit Bank.
+   WHERE: mobile - Can move traffic between different entangled nodes.
+   SCOPE: global - Managing the link between multiple star systems.
+   
+   WHY THIS CLASSIFICATION:
+   For the administrator, the protocol is a Rope. It is the ultimate 
+   coordination tool. They "weave" the interstellar network, adjusting 
+   parameters to ensure the "tension" of the link remains stable. It is 
+   helpful, functional, and subject to their management.
+   -------------------------------------------------------------------------- */
+
+
+
+constraint_indexing:constraint_classification(
+    quantum_entanglement_protocol,
+    rope,
+    context(
+        agent_power(institutional),
+        time_horizon(biographical),
+        exit_options(mobile),
+        spatial_scope(global)
+    )
+) :-
+    domain_priors:base_extractiveness(quantum_entanglement_protocol, E),
+    E < 0.5,
+    !.
+
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 3: THE ANTI-COLONIAL REBEL - Snare
+   --------------------------------------------------------------------------
+   
+   WHO: individual_moderate - Seeking local autonomy from the origin world.
+   WHEN: biographical - Lifelong struggle against "Earth-centric" laws.
+   WHERE: constrained - High cost of "unplugging" from the quantum grid.
+   SCOPE: regional - A planetary star system.
+   
+   WHY THIS CLASSIFICATION:
+   To the rebel, the instant link is a Snare. It extracts local decision-making 
+   by allowing the origin world to micro-manage the colony from light-years 
+   away. The lack of "signal delay" chokes off the possibility of 
+   independent development that would naturally occur under light-speed 
+   latency (the Mountain of Distance).
+   -------------------------------------------------------------------------- */
+
+constraint_indexing:constraint_classification(
+    quantum_entanglement_protocol,
+    snare,
+    context(
+        agent_power(individual_moderate),
+        time_horizon(biographical),
+        exit_options(constrained),
+        spatial_scope(regional)
+    )
+) :-
+    domain_priors:suppression_score(quantum_entanglement_protocol, S),
+    S > 0.8,
+    !.
+
+/* ==========================================================================
+   4. TESTS (What We Learn About Constraints)
+   ========================================================================== */
+
+:- begin_tests(quantum_protocol_tests).
+
+test(multi_perspective_asymmetry) :-
+    % Admin (Rope) vs Rebel (Snare) vs Colonist (Mountain)
+    constraint_indexing:constraint_classification(quantum_entanglement_protocol, T1, context(institutional, biographical, mobile, global)),
+    constraint_indexing:constraint_classification(quantum_entanglement_protocol, T2, context(individual_moderate, biographical, constrained, regional)),
+    constraint_indexing:constraint_classification(quantum_entanglement_protocol, T3, context(powerless, immediate, trapped, local)),
+    T1 \= T2, T2 \= T3.
+
+test(absolute_suppression_of_classical_limits) :-
+    % Protocol depends on the maximum suppression of classical signal delay
+    domain_priors:suppression_score(quantum_entanglement_protocol, S),
+    S > 0.9.
+
+:- end_tests(quantum_protocol_tests).
+
+/* ==========================================================================
+   5. MODEL INTERPRETATION (Commentary)
+   ========================================================================== */
+
+/**
+ * LLM GENERATION NOTES
+ * * Model: Gemini 2.0 Flash
+ * * KEY DECISIONS:
+ * 1. SUPPRESSION SCORE (0.95): This reflects the "Violation of Physics" 
+ * requirement. In Deferential Realism, a speculative alternative to a 
+ * Mountain (Latency) must have an extremely high suppression score relative 
+ * to current consensus.
+ * 2. CLASSIFICATION SHIFT: The most significant insight is that removing 
+ * the Mountain of Latency (Physics) creates a Snare of Centralization 
+ * (Political). Without the delay, the distant agent loses the "natural 
+ * protection" of isolation.
+ */
+
+omega_variable(
+    information_causality_viability,
+    "Can information be encoded in the entanglement without violating the 
+     No-Communication Theorem?",
+    resolution_mechanism("Monitor the development of 'quantum-steering' or 
+    non-local state manipulation experiments"),
+    impact("If Yes: The protocol is a Rope. If No: The protocol remains a 
+            fictional Mountain."),
+    confidence_without_resolution(low)
+).
+
+/* ==========================================================================
+   6. ALTERNATIVE ANALYSIS
+   ========================================================================== */
+
+/**
+ * VIABLE ALTERNATIVES
+ * * ALTERNATIVE 1: High-Speed Physical Couriers (Seed Ships)
+ * Viability: Technically viable but subject to the Latency Mountain.
+ * * ALTERNATIVE 2: Sub-Space / Warp Comms
+ * Viability: Requires similar levels of theoretical reframing as 
+ * quantum entanglement.
+ * * CONCLUSION:
+ * The Quantum Protocol is the only alternative that transforms the 
+ * Mountain of signal delay into a Rope of instant coordination, 
+ * but it does so at the cost of turning the relationship between 
+ * star systems into a potentially extractive Snare.
+ */
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+% 1. Load: ?- [quantum_entanglement_protocol].
+% 2. Analyze: ?- multi_index_report(quantum_entanglement_protocol).
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */
+% ============================================================================
+% CONSTRAINT STORY: quantum_nonlocality_2026
+% ============================================================================
+% Generated: 2026-01-23
+% Model: Gemini Pro (Revised)
+% Source: "Embracing quantum spookiness" by Karmela Padavic-Callaghan
+% ============================================================================
+
+:- module(constraint_quantum_nonlocality_2026, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+:- multifile 
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:constraint_metric/3,
+    constraint_indexing:constraint_classification/3.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ * 
+ * constraint_id: quantum_nonlocality_2026
+ * human_readable: Bell Non-Locality & Quantum Entanglement
+ * domain: scientific/physical
+ * temporal_scope: 1920s - 2026
+ * spatial_scope: Cosmic
+ * 
+ * SUMMARY:
+ * The unavoidable constraint of quantum non-locality dictates that entangled 
+ * particles maintain coordinated behaviors across vast distances, absent any
+ * local signals. This "spookiness" was initially rejected by Einstein but was 
+ * experimentally verified as an inescapable feature of reality by 2015.
+ * 
+ * KEY AGENTS:
+ * - Albert Einstein (Individual Powerful): Representing classical local realism.
+ * - The Scientific Institution (Institutional): The Nobel Committee / experimentalists who verified the constraint.
+ * - Alice & Bob (Individual Powerless): Hypothetical experimenters interacting with entangled pairs.
+ */
+
+/* ==========================================================================
+   2. CORE SYSTEM INTEGRATION (Reality Layer)
+   ========================================================================== */
+
+narrative_ontology:interval(quantum_nonlocality_2026, 0, 10).
+narrative_ontology:constraint_claim(quantum_nonlocality_2026, mountain).
+
+% Base extractiveness: 0.0
+% Rationale: Non-locality is a fundamental law of the universe; it does not 
+% extract resources from agents, though it "extracts" certainty from 
+% classical intuition.
+domain_priors:base_extractiveness(quantum_nonlocality_2026, 0.0).
+
+% Suppression: 0.8 (High)
+% Rationale: Experiments in 2015 provided the "final nail to the coffin" 
+% for local hidden variable theories, effectively suppressing alternative 
+% classical explanations.
+domain_priors:suppression_score(quantum_nonlocality_2026, 0.8).
+
+% Constraint metric facts (bridge for classification engine)
+narrative_ontology:constraint_metric(quantum_nonlocality_2026, extractiveness, 0.0).
+narrative_ontology:constraint_metric(quantum_nonlocality_2026, suppression_requirement, 0.8).
+
+% Enforcement: Emerges naturally (Fundamental law of physics).
+domain_priors:emerges_naturally(quantum_nonlocality_2026).
+
+% BENEFICIARIES & VICTIMS
+constraint_beneficiary(quantum_nonlocality_2026, quantum_technologists).
+constraint_victim(quantum_nonlocality_2026, local_realists).
+
+/* ==========================================================================
+   3. INDEXED CLASSIFICATIONS (Perspectival Truth)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 1: THE LOCAL REALIST (EINSTEIN) - Snare
+   --------------------------------------------------------------------------
+   WHO: powerful (Scientific pioneer whose worldview is threatened)
+   WHEN: biographical (Seeking a complete theory within a lifetime)
+   WHERE: constrained (Bound by the logic of 3D local space)
+   
+   WHY THIS CLASSIFICATION:
+   Einstein viewed non-locality as a "flaw" that broke the logic of local 
+   variables. For an agent requiring local causality, entanglement is a 'Snare' 
+   because it forces a "spooky" reality that denies the autonomy of local objects.
+   -------------------------------------------------------------------------- */
+
+constraint_indexing:constraint_classification(
+    quantum_nonlocality_2026,
+    snare,
+    context(
+        agent_power(powerful),
+        time_horizon(biographical),
+        exit_options(constrained),
+        spatial_scope(global)
+    )
+).
+
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 2: THE MODERN PHYSICIST (INSTITUTIONAL) - Mountain
+   --------------------------------------------------------------------------
+   WHO: institutional (The scientific consensus/Nobel standard)
+   WHEN: historical (Century-scale verification)
+   WHERE: analytical (Observer stance)
+   
+   WHY THIS CLASSIFICATION:
+   For the established scientific community, non-locality is an inescapable 
+   'Mountain'. It is a fundamental feature of the universe that cannot be 
+   circumvented by any known physical mechanism.
+   -------------------------------------------------------------------------- */
+
+constraint_indexing:constraint_classification(
+    quantum_nonlocality_2026,
+    mountain,
+    context(
+        agent_power(institutional),
+        time_horizon(historical),
+        exit_options(analytical),
+        spatial_scope(global)
+    )
+).
+
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 3: ALICE & BOB (EXPERIMENTERS) - Rope
+   --------------------------------------------------------------------------
+   WHO: powerless (Subjects of the physical law)
+   WHEN: immediate (Moment of measurement)
+   WHERE: mobile (Can choose different measurement settings)
+   
+   WHY THIS CLASSIFICATION:
+   From the perspective of those interacting with the particles, entanglement is a 
+   'Rope'—a coordination mechanism that allows for correlated behaviors across 
+   distances, enabling novel technologies like quantum computing.
+   -------------------------------------------------------------------------- */
+
+constraint_indexing:constraint_classification(
+    quantum_nonlocality_2026,
+    rope,
+    context(
+        agent_power(powerless),
+        time_horizon(immediate),
+        exit_options(mobile),
+        spatial_scope(local)
+    )
+).
+
+/* ==========================================================================
+   4. TESTS
+   ========================================================================== */
+
+:- begin_tests(quantum_nonlocality_tests).
+
+test(multi_perspective_variance) :-
+    constraint_indexing:constraint_classification(quantum_nonlocality_2026, Type1, context(agent_power(powerful), _, _, _)),
+    constraint_indexing:constraint_classification(quantum_nonlocality_2026, Type2, context(agent_power(institutional), _, _, _)),
+    constraint_indexing:constraint_classification(quantum_nonlocality_2026, Type3, context(agent_power(powerless), _, _, _)),
+    Type1 \= Type2,
+    Type2 \= Type3,
+    Type1 \= Type3.
+
+test(institutional_consensus_is_mountain) :-
+    % Modern institutional view must see it as inescapable (Mountain)
+    constraint_indexing:constraint_classification(quantum_nonlocality_2026, mountain, context(agent_power(institutional), _, _, _)).
+
+:- end_tests(quantum_nonlocality_tests).
+
+/* ==========================================================================
+   5. MODEL INTERPRETATION (Commentary)
+   ========================================================================== */
+
+/**
+ * LLM GENERATION NOTES
+ * 
+ * Model: Gemini Pro (Revised)
+ * Date: 2026-01-23
+ * 
+ * KEY DECISIONS:
+ * 
+ * 1. EXTRACTIVENESS SCORE (0.0): Quantum mechanics is a physical law, not 
+ *    an extractive social construct. There is no asymmetric benefit flow in the 
+ *    physical sense. The 'Snare' for Einstein is ideological, not material.
+ * 
+ * 2. SUPPRESSION SCORE (0.8): The article describes a highly suppressive 
+ *    environment for classical alternatives, using phrases like "final nail in
+ *    the coffin," justifying a high score.
+ * 
+ * 3. PERSPECTIVE SELECTION: 
+ *    - Einstein (Snare): His classical worldview was "strangled" by the discovery.
+ *    - Modern Physics (Mountain): It's an inevitable, objective reality.
+ *    - Experimenters (Rope): It's a functional tool for new technology.
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+/**
+ * OMEGA IDENTIFICATION
+ *
+ * Core uncertainties about the nature of reality implied by non-locality.
+ */
+
+omega_variable(
+    quantum_gravity_unification,
+    "Is the inability to find 'local hidden variables' a limitation of our current theories, or an inherent feature of reality?",
+    resolution_mechanism("Development of theories that successfully bridge non-locality with quantum gravity, or experimental violation of Bell's theorem."),
+    impact("If tools: Future theories might reveal a new Rope. If inherent feature: Permanent Mountain."),
+    confidence_without_resolution(medium)
+).
+
+omega_variable(
+    no_communication_theorem,
+    "Can Alice and Bob ever send a signal faster than light using this correlation?",
+    resolution_mechanism("Long-term experimental verification of the 'no-communication' theorem under all possible conditions."),
+    impact("If yes: Causality as we know it (a Mountain) collapses. If no: Relativity remains a foundational Mountain."),
+    confidence_without_resolution(high)
+).
+
+/* ==========================================================================
+   7. ALTERNATIVE ANALYSIS
+   ========================================================================== */
+
+/**
+ * VIABLE ALTERNATIVES
+ * 
+ * ALTERNATIVE 1: Local Hidden Variables
+ *    Viability: Proposed by Einstein, Podolsky, and Rosen to save classical intuition.
+ *    Suppression: Disproven by decades of increasingly rigorous Bell's Inequality tests, culminating in the "loophole-free" experiments of 2015.
+ *    Evidence: "Hidden variables couldn’t save locality."
+ * 
+ * CONCLUSION:
+ * The conclusive experimental rejection of local hidden variables is what shifted quantum physics 
+ * from a contested theory (a 'Rope' for some, 'Snare' for others) to an absolute 'Mountain' 
+ * for the modern scientific institution.
+ */
+
+/* ==========================================================================
+   8. INTEGRATION HOOKS
+   ========================================================================== */
+
+/**
+ * TO USE THIS FILE:
+ * 
+ * 1. Load: ?- [constraints/quantum_nonlocality_2026].
+ * 2. Multi-perspective: ?- multi_index_report(quantum_nonlocality_2026).
+ * 3. Run tests: ?- run_tests(quantum_nonlocality_tests).
+ */
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */% ============================================================================
+% CONSTRAINT STORY: quellcrist_falconer_justice
+% ============================================================================
+% Version: 5.2 (Deferential Realism Core + Boltzmann + Purity + Network)
+% Logic: 5.2 (Indexed Tuple P,T,E,S + Coupling + Purity + Network Drift)
+% Generated: 2024-07-22
+% ============================================================================
+
+:- module(constraint_quellcrist_falconer_justice, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
+    narrative_ontology:boltzmann_floor_override/2,
+    constraint_indexing:constraint_classification/3.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ * * constraint_id: quellcrist_falconer_justice
+ * human_readable: The Machinery of Justice (Quellist)
+ * domain: political
+ * * SUMMARY:
+ * This constraint represents the "Machinery of Justice" as described by Quellcrist Falconer in Richard K. Morgan's "Altered Carbon": a cold, institutional apparatus that serves the "players" (creatures of power) while systematically liquidating, displacing, and torturing the "little people". It functions by reframing systemic harm as "just business" or "politics" to suppress personal accountability.
+ * * KEY AGENTS:
+ * - The Little People: Powerless subjects who suffer "torture and brutal execution".
+ * - The Power Player: Institutional actors who slide under Justice with a "wink and a grin".
+ * - The Insurrectionary (Falconer): An analytical observer who advocates for "clawing" justice through personal, dangerous action.
+ */
+
+/* ==========================================================================
+   2. BASE PROPERTIES (DOMAIN PRIORS)
+   ========================================================================== */
+
+% Numerical anchors for v3.4 thresholds
+domain_priors:base_extractiveness(quellcrist_falconer_justice, 0.90). % Mountain suppression <= 0.05, Rope extraction <= 0.15, Snare extraction >= 0.46
+domain_priors:suppression_score(quellcrist_falconer_justice, 0.80).   % Structural property (raw, unscaled). Only extractiveness is scaled (by power and scope).
+domain_priors:theater_ratio(quellcrist_falconer_justice, 0.10).       % Piton detection (>= 0.70)
+
+% Constraint metric facts — primary keys used by the classification engine.
+% These mirror domain_priors values using the metric key names from config.pl.
+narrative_ontology:constraint_metric(quellcrist_falconer_justice, extractiveness, 0.90).
+narrative_ontology:constraint_metric(quellcrist_falconer_justice, suppression_requirement, 0.80).
+narrative_ontology:constraint_metric(quellcrist_falconer_justice, theater_ratio, 0.10).
+
+% Constraint self-claim (what does the constraint claim to be?)
+% Values: natural_law, coordination, constructed, enforcement
+narrative_ontology:constraint_claim(quellcrist_falconer_justice, enforcement).
+
+% Binary flags
+domain_priors:requires_active_enforcement(quellcrist_falconer_justice). % Required for Tangled Rope
+
+% Structural property derivation hooks:
+%   has_coordination_function/1 is DERIVED from constraint_beneficiary/2
+%   has_asymmetric_extraction/1 is DERIVED from constraint_victim/2
+% Both are required for Tangled Rope.
+narrative_ontology:constraint_beneficiary(quellcrist_falconer_justice, power_players).
+narrative_ontology:constraint_victim(quellcrist_falconer_justice, little_people).
+
+/* ==========================================================================
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × π(P) × σ(S)
+   Power (P) and Scope (S) both affect effective extraction.
+   Scope modifiers: local=0.8, regional=0.9, national=1.0,
+                    continental=1.1, global=1.2, universal=1.0.
+   ========================================================================== */
+
+% PERSPECTIVE 1: THE SUBJECT (SNARE)
+% For the "little people", the system is a pure extraction machine.
+% χ = 0.90 (ε) * 1.5 (π(powerless)) * 0.8 (σ(local)) = 1.08. This is a definitive Snare.
+constraint_indexing:constraint_classification(quellcrist_falconer_justice, snare,
+    context(agent_power(powerless),
+            time_horizon(immediate),
+            exit_options(trapped),
+            spatial_scope(local))).
+
+% PERSPECTIVE 2: THE BENEFICIARY (ROPE)
+% For the "power players", the system is a coordination tool that benefits them.
+% χ = 0.90 (ε) * -0.2 (π(institutional)) * 1.2 (σ(global)) = -0.216. Negative extraction indicates a net benefit.
+constraint_indexing:constraint_classification(quellcrist_falconer_justice, rope,
+    context(agent_power(institutional),
+            time_horizon(historical),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
+% The analytical view must account for both the coordination function and the asymmetric extraction.
+% The system has beneficiaries, victims, high extraction, and requires active enforcement. This is the definition of a Tangled Rope.
+constraint_indexing:constraint_classification(quellcrist_falconer_justice, tangled_rope,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(global))).
+
+/* ==========================================================================
+   4. VALIDATION TESTS
+   ========================================================================== */
+
+:- begin_tests(quellcrist_falconer_justice_tests).
+
+test(perspectival_gap) :-
+    constraint_indexing:constraint_classification(quellcrist_falconer_justice, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(quellcrist_falconer_justice, TypeInstitutional, context(agent_power(institutional), _, _, _)),
+    assertion(TypePowerless == snare),
+    assertion(TypeInstitutional == rope),
+    TypePowerless \= TypeInstitutional.
+
+test(analytical_classification_is_tangled_rope) :-
+    constraint_indexing:constraint_classification(quellcrist_falconer_justice, tangled_rope, context(agent_power(analytical), _, _, _)).
+
+test(high_extraction_and_suppression) :-
+    domain_priors:base_extractiveness(quellcrist_falconer_justice, E),
+    domain_priors:suppression_score(quellcrist_falconer_justice, S),
+    assertion(E >= 0.46),
+    assertion(S >= 0.60).
+
+:- end_tests(quellcrist_falconer_justice_tests).
+
+/* ==========================================================================
+   5. GENERATIVE COMMENTARY
+   ========================================================================== */
+
+/**
+ * LOGIC RATIONALE:
+ * The base scores reflect Falconer's description of a system that performs "torture and brutal execution" (extractiveness: 0.9) and reframes this as "just business" to prevent recourse (suppression: 0.8). The system is highly functional, not theatrical, hence the low theater_ratio.
+ *
+ * The perspectival gap is extreme: for the institutional "players", it is a Rope that provides order and removes obstacles (negative effective extraction). For the powerless "little people", it is a lethal Snare (extremely high effective extraction).
+ *
+ * The analytical perspective must be Tangled Rope. The original file's classification of 'Mountain' was inconsistent with the high extraction, suppression, and active enforcement metrics. A Mountain is a passive, low-extraction limit. This system is an active, predatory machine. The Tangled Rope classification correctly captures its dual nature as a coordination mechanism for one group funded by the violent extraction from another.
+ *
+ * * MANDATROPHY ANALYSIS: [RESOLVED MANDATROPHY]
+ * This constraint is a classic example of resolved Mandatrophy. The system's claim to be "Justice" (a coordination mechanism) is a facade for its primary function of extraction. The Tangled Rope classification prevents the system from being misread as either a pure Snare (ignoring its utility to the powerful) or a pure Rope (ignoring its victims). It correctly identifies that the coordination and extraction are inextricably linked.
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+omega_variable(
+    omega_quellcrist_falconer_justice_1,
+    "At what threshold of 'dangerous' behavior does a 'little person' effectively transform into a 'player' in the eyes of the machine?",
+    "Audit of deal-making patterns vs. casualty rates in personal/insurrectionary actions.",
+    "If low: Insurrection is a Rope. If high: Insurrection is a suicide-Snare.",
+    confidence_without_resolution(medium)
+).
+
+omega_variable(
+    omega_quellcrist_falconer_justice_2,
+    "Is the cold, slow nature of the machine a functional necessity for galactic governance or a predatory choice for efficient liquidation?",
+    "Comparison of 'Hardware/Software' allocation for deal-making vs. execution.",
+    "If necessity: Mountain-like properties. If predatory choice: Pure Snare/Tangled Rope.",
+    confidence_without_resolution(medium)
+).
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+% Required for external script parsing
+narrative_ontology:interval(quellcrist_falconer_justice, 0, 10).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Temporal data enables drift detection. This model shows the "Machinery of Justice"
+% becoming more brutally efficient over time, shedding its performative aspects
+% (theater) and maximizing its extractive function.
+% Required for high-extraction constraints (base_extractiveness > 0.46).
+
+% Theater ratio over time (triggers metric_substitution detection):
+narrative_ontology:measurement(qfj_tr_t0, quellcrist_falconer_justice, theater_ratio, 0, 0.40).
+narrative_ontology:measurement(qfj_tr_t5, quellcrist_falconer_justice, theater_ratio, 5, 0.20).
+narrative_ontology:measurement(qfj_tr_t10, quellcrist_falconer_justice, theater_ratio, 10, 0.10).
+
+% Extraction over time (triggers extraction_accumulation detection):
+narrative_ontology:measurement(qfj_ex_t0, quellcrist_falconer_justice, base_extractiveness, 0, 0.70).
+narrative_ontology:measurement(qfj_ex_t5, quellcrist_falconer_justice, base_extractiveness, 5, 0.80).
+narrative_ontology:measurement(qfj_ex_t10, quellcrist_falconer_justice, base_extractiveness, 10, 0.90).
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA (v5.0-5.2)
+   ========================================================================== */
+
+% Coordination type (enables Boltzmann floor + complexity offset)
+% The "Machinery of Justice" is, by its own claim, a system for enforcing rules.
+narrative_ontology:coordination_type(quellcrist_falconer_justice, enforcement_mechanism).
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */% ============================================================================
+% CONSTRAINT STORY: quine_self_replication
+% ============================================================================
+% Generated: 2026-01-19
+% Model: Gemini 2.0 Flash
+% Source: Willard Van Orman Quine (1951) / Kleene's Second Recursion Theorem
+% ============================================================================
+
+:- module(constraint_quine_self_replication, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile 
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:constraint_metric/3,
+    constraint_indexing:constraint_classification/3.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ * * constraint_id: quine_self_replication
+ * human_readable: Quines (Computational Self-Replication)
+ * domain: technological/mathematical
+ * temporal_scope: 1951 - Present
+ * spatial_scope: Global/Abstract (Turing Complete Systems)
+ * * SUMMARY:
+ * A Quine is a non-empty computer program which takes no input and produces a 
+ * copy of its own source code as its only output. This demonstrates a 
+ * fundamental constraint of computability: any Turing-complete system possesses 
+ * the latent capability for self-description and replication without external 
+ * templates.
+ * * KEY AGENTS:
+ * - The Source Code (Subject): The powerless agent whose structure must 
+ * simultaneously encode logic and its own literal representation.
+ * - The Compiler/Interpreter (Institutional): The rule-enforcing environment 
+ * that translates the quine's "instructions" into its "physical" output.
+ * - The Computer Scientist (Analytical): The observer mapping the "Mountain" 
+ * of Kleene's Recursion Theorem through the "Rope" of specific code.
+ * * NARRATIVE ARC:
+ * The Quine functions as a "Mountain" of logical inevitability—self-replication 
+ * is a mandatory property of universal computation. In programming pedagogy, 
+ * it is a "Rope" for coordinating an understanding of fixed points. However, 
+ * in the context of self-replicating malware or autonomous agents, the Quine 
+ * structure acts as a "Snare," extracting the possibility of external control 
+ * by enabling entities to "strangle" the host system with unmediated growth.
+ */
+
+/* ==========================================================================
+   2. CORE SYSTEM INTEGRATION (The "Reality" Layer)
+   ========================================================================= */
+
+% Structural Anchor for extraction
+narrative_ontology:interval(quine_era, 1951, 2026).
+narrative_ontology:constraint_claim(quine_self_replication, mountain).
+
+% Base extractiveness score (0.0-1.0)
+% Rationale: 0.2. While a logic "gift," a quine "extracts" the distinction 
+% between data and instruction, forcing the environment to process a 
+% recursive loop that uses its own identity as fuel.
+domain_priors:base_extractiveness(quine_self_replication, 0.2).
+
+% Suppression score (0.0-1.0)
+% Rationale: 0.1. Quines do not suppress alternatives; they reveal a hidden 
+% property that was previously invisible, though they render the concept of 
+% "pure non-replicating logic" functionally incomplete.
+domain_priors:suppression_score(quine_self_replication, 0.1).
+
+% Constraint metric facts (bridge for classification engine)
+narrative_ontology:constraint_metric(quine_self_replication, extractiveness, 0.2).
+narrative_ontology:constraint_metric(quine_self_replication, suppression_requirement, 0.1).
+
+% Enforcement: Emerges naturally from Kleene's Second Recursion Theorem.
+domain_priors:emerges_naturally(quine_self_replication).
+
+% Metrics required for Section 1 of the Executive Summary
+% BENEFICIARIES & VICTIMS
+constraint_beneficiary(quine_self_replication, autonomous_agent_developers).
+constraint_beneficiary(quine_self_replication, cellular_automata_theory).
+constraint_victim(quine_self_replication, static_code_analysis). % Self-replication makes behavior harder to bound.
+
+/* ==========================================================================
+   3. INDEXED CLASSIFICATIONS (Perspectival Truth)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 1: THE EXECUTING QUINE - Mountain
+   --------------------------------------------------------------------------
+   
+   WHO: powerless - The code has zero agency to be anything other than its source.
+   WHEN: immediate - The replication is true at the moment of execution.
+   WHERE: trapped - Bound within the syntax and semantics of the host language.
+   SCOPE: local - Immediate neighborhood of the print buffer.
+   
+   WHY THIS CLASSIFICATION:
+   For the quine itself, its self-replication is a natural law of its internal 
+   logic. It cannot "choose" to output a random string if its fixed-point 
+   mechanisms are engaged. It is a mathematical Mountain; its identity is its 
+   destiny.
+   -------------------------------------------------------------------------- */
+
+
+
+constraint_indexing:constraint_classification(
+    quine_self_replication,
+    mountain,
+    context(
+        agent_power(powerless),
+        time_horizon(immediate),
+        exit_options(trapped),
+        spatial_scope(local)
+    )
+) :- !.
+
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 2: THE PEDAGOGICAL INSTRUCTOR - Rope
+   --------------------------------------------------------------------------
+   
+   WHO: institutional - Power to design curriculum and coding challenges.
+   WHEN: biographical - Spanning the duration of a student's introduction to logic.
+   WHERE: mobile - Can choose any Turing-complete language to demonstrate the paradox.
+   SCOPE: global - Universal application in CS education.
+   
+   WHY THIS CLASSIFICATION:
+   For the educator, the quine is a "Rope"—a tool for functional coordination. 
+   It allows them to "pull" students toward an understanding of recursion and 
+   self-reference, providing a standard of achievement for logical mastery.
+   -------------------------------------------------------------------------- */
+
+constraint_indexing:constraint_classification(
+    quine_self_replication,
+    rope,
+    context(
+        agent_power(institutional),
+        time_horizon(biographical),
+        exit_options(mobile),
+        spatial_scope(global)
+    )
+) :- !.
+
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 3: THE CYBERSECURITY DEFENDER - Snare
+   --------------------------------------------------------------------------
+   
+   WHO: individual_moderate - Has the tools to analyze but is bound by the quine's logic.
+   WHEN: immediate - Real-time defense against self-replicating worms.
+   WHERE: constrained - The host environment provides the "exit" that the quine exploits.
+   SCOPE: national - Protecting state infrastructure from autonomous threats.
+   
+   WHY THIS CLASSIFICATION:
+   For the defender, the ability for code to quine itself is a "Snare." It 
+   "strangles" containment strategies because the code carries its own 
+   blueprints for revival. It extracts massive compute and human overhead 
+   (extraction) to suppress a process that the underlying "Mountain" of logic 
+   naturally permits.
+   -------------------------------------------------------------------------- */
+
+
+
+constraint_indexing:constraint_classification(
+    quine_self_replication,
+    snare,
+    context(
+        agent_power(individual_moderate),
+        time_horizon(immediate),
+        exit_options(constrained),
+        spatial_scope(national)
+    )
+) :- 
+    domain_priors:base_extractiveness(quine_self_replication, E),
+    E >= 0.15,
+    !.
+
+/* ==========================================================================
+   4. TESTS (What We Learn About Constraints)
+   ========================================================================== */
+
+:- begin_tests(quine_self_replication_tests).
+
+test(multi_perspective_variance) :-
+    % Code -> Mountain
+    constraint_indexing:constraint_classification(quine_self_replication, Type1, context(powerless, immediate, trapped, local)),
+    % Instructor -> Rope
+    constraint_indexing:constraint_classification(quine_self_replication, Type2, context(institutional, biographical, mobile, global)),
+    Type1 = mountain,
+    Type2 = rope.
+
+test(autonomous_snare_insight) :-
+    % Demonstrates that for the defender, the self-replication is a Snare
+    constraint_indexing:constraint_classification(quine_self_replication, snare, context(individual_moderate, immediate, constrained, national)).
+
+test(emergence) :-
+    domain_priors:emerges_naturally(quine_self_replication).
+
+:- end_tests(quine_self_replication_tests).
+
+/* ==========================================================================
+   5. MODEL INTERPRETATION (Commentary)
+   ========================================================================== */
+
+/**
+ * LLM GENERATION NOTES
+ * * Model: Gemini 2.0 Flash
+ * Date: 2026-01-19
+ * * KEY DECISIONS:
+ * 1. EXTRACTIVENESS SCORE (0.2): Chose this because a Quine is essentially 
+ * "selfish" logic. It extracts the processor's resources solely to reproduce 
+ * its own state, creating an asymmetric benefit for the "code-organism" at 
+ * the expense of the host's utility.
+ * 2. CLASSIFICATION RATIONALE: Chose Code (Passive), Instructor (Active/Tool), 
+ * and Defender (Victim) to highlight how self-replication shifts from 
+ * "Curiosity" to "Weapon."
+ * 3. OMEGA IDENTIFICATION: Formalized the "Quine Entropy" uncertainty—can 
+ * a quine evolve into something non-quine-like without external input?
+ */
+
+% OMEGA IDENTIFICATION
+omega_variable(
+    autonomous_evolutionary_drift,
+    "Can a self-replicating quine spontaneously evolve complex new traits (Mountain) or is it a closed loop (Scaffold)?",
+    resolution_mechanism("Long-term observation of quine-based digital life simulations with random bit-flip mutations."),
+    impact("If Mountain: Quines are the seeds of true digital life. If Scaffold: They are mere parrots."),
+    confidence_without_resolution(medium)
+).
+
+/* ==========================================================================
+   6. ALTERNATIVE ANALYSIS
+   ========================================================================== */
+
+/**
+ * VIABLE ALTERNATIVES
+ * * ALTERNATIVE 1: External Template Replication (e.g., DNA/Ribosome model)
+ * Viability: Most real-world biological systems use an external reader 
+ * (Ribosome) to replicate a template (DNA).
+ * Suppression: Rejected in pure "computational" quining because the goal 
+ * is to prove that the code is its own ribosome.
+ * * ALTERNATIVE 2: Hard-coded Self-Copying (Impossible Paradox)
+ * Viability: Trying to write a program that simply contains its own source 
+ * string as a literal.
+ * Suppression: Suppressed by the "Infinite Regress" problem; the string 
+ * would have to contain a string that contains a string... ad infinitum.
+ * * CONCLUSION:
+ * The existence of Alternative 2's failure proves that the Quine's specific 
+ * "Mountain" (the Kleene fixed-point) is the only viable path to true 
+ * self-description.
+ */
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+/**
+ * TO USE THIS FILE:
+ * 1. Load: ?- [constraint_quine_self_replication].
+ * 2. Multi-perspective: ?- multi_index_report(quine_self_replication).
+ */
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */
+% ============================================================================
+% CONSTRAINT STORY: qwerty_vs_dvorak
+% ============================================================================
+% Generated: 2026-01-19
+% Model: Gemini 2.0 Flash
+% Source: Paul David (1985) / W. Brian Arthur / Path Dependence
+% ============================================================================
+
+:- module(constraint_qwerty_vs_dvorak, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile 
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:constraint_metric/3,
+    constraint_indexing:constraint_classification/3.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ * * constraint_id: qwerty_vs_dvorak
+ * human_readable: QWERTY vs. Dvorak (Technological Lock-in)
+ * domain: technological/economic
+ * temporal_scope: 1870s - Present
+ * spatial_scope: Global (Digital Computing)
+ * * SUMMARY:
+ * This constraint represents "Path Dependence" and "Technological Lock-in." 
+ * The QWERTY keyboard layout was designed to prevent mechanical jams in 19th-century 
+ * typewriters. Despite the development of more efficient layouts (like Dvorak), 
+ * the massive network effects and sunk costs in human training have made 
+ * QWERTY an immovable standard in the digital age.
+ * * KEY AGENTS:
+ * - The Economic Historian: Analytical observer of path-dependent systems.
+ * - The Software/Hardware Manufacturer: Institutional agent maintaining the standard for interoperability.
+ * - The Dvorak Enthusiast: Individual moderate attempting to arbitrage between systems for efficiency.
+ * - The Average Typist: Individual powerless subject to the historical "accident" of the layout.
+ * * NARRATIVE ARC:
+ * What began as a mechanical "Rope" (to solve jams) became a "Mountain" of 
+ * institutional reality. For the typist, it is a "Snare"—an invisible 
+ * inefficiency that strangles speed and health (RSI), yet is too costly to escape.
+ */
+
+/* ==========================================================================
+   2. CORE SYSTEM INTEGRATION (The "Reality" Layer)
+   ========================================================================== */
+
+% Structural Anchor
+narrative_ontology:interval(qwerty_lockin_interval, 0, 10).
+narrative_ontology:constraint_claim(qwerty_vs_dvorak, snare).
+
+% Base extractiveness score (0.0-1.0)
+% Rationale: Moderate (0.4). It extracts "human efficiency" and "physical health." 
+% The sub-optimal layout imposes a "tax" of slower typing and higher strain 
+% on billions of hands to maintain the network effect.
+domain_priors:base_extractiveness(qwerty_vs_dvorak, 0.4).
+
+% Suppression score (0.0-1.0)
+% Rationale: High (0.7). Alternatives like Dvorak or Colemak are technically 
+% available but socially suppressed. The cost of re-learning (sunk cost) 
+% makes them conceptually invisible to the majority.
+domain_priors:suppression_score(qwerty_vs_dvorak, 0.7).
+
+% Constraint metric facts (bridge for classification engine)
+narrative_ontology:constraint_metric(qwerty_vs_dvorak, extractiveness, 0.4).
+narrative_ontology:constraint_metric(qwerty_vs_dvorak, suppression_requirement, 0.7).
+
+% Enforcement requirements
+% Emerges naturally through network effects and positive feedback loops.
+domain_priors:emerges_naturally(qwerty_vs_dvorak).
+
+% Metrics required for Section 1 of the Executive Summary
+% BENEFICIARIES & VICTIMS
+constraint_beneficiary(qwerty_vs_dvorak, [legacy_manufacturers, educational_institutions]).
+constraint_victim(qwerty_vs_dvorak, [high_speed_typists, rsi_sufferers]).
+
+/* ==========================================================================
+   3. INDEXED CLASSIFICATIONS (Perspectival Truth)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 1: THE ECONOMIC HISTORIAN - Mountain
+   --------------------------------------------------------------------------
+   
+   WHO: analytical - Observer of historical trajectories and path dependence.
+   WHEN: civilizational - Viewing the standard as a permanent feature of the era.
+   WHERE: analytical - Not personally constrained, but mapping the "wall."
+   SCOPE: global - The standard spans the entire digital world.
+   
+   WHY THIS CLASSIFICATION:
+   To the historian, the QWERTY standard is a Mountain. It is an unchangeable 
+   feature of the technological landscape created by "quasi-irreversibility." 
+   Once the network effect crossed the threshold, the chance of shifting 
+   dropped to zero; it is a fixed peak of history.
+   -------------------------------------------------------------------------- */
+
+constraint_indexing:constraint_classification(
+    qwerty_vs_dvorak,
+    mountain,
+    context(
+        agent_power(analytical),
+        time_horizon(civilizational),
+        exit_options(analytical),
+        spatial_scope(global)
+    )
+) :- !.
+
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 2: THE TECH GIANT (Apple/Microsoft) - Rope
+   --------------------------------------------------------------------------
+   
+   WHO: institutional - Power to define hardware and software defaults.
+   WHEN: biographical - Maintaining market dominance over 30-50 years.
+   WHERE: arbitrage - Can offer Dvorak as an option but keeps QWERTY as default.
+   SCOPE: global - Global OS distribution.
+   
+   WHY THIS CLASSIFICATION:
+   For the institution, QWERTY is a Rope. It is the ultimate coordination 
+   mechanism. It ensures that every computer sold is immediately usable by 
+   every customer. They use the constraint to "tether" the world to their 
+   products, ensuring interoperability and minimizing support costs.
+   -------------------------------------------------------------------------- */
+
+constraint_indexing:constraint_classification(
+    qwerty_vs_dvorak,
+    rope,
+    context(
+        agent_power(institutional),
+        time_horizon(biographical),
+        exit_options(arbitrage),
+        spatial_scope(global)
+    )
+) :- !.
+
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 3: THE OFFICE WORKER - Snare
+   --------------------------------------------------------------------------
+   
+   WHO: powerless - Subject to the hardware provided by the employer.
+   WHEN: immediate - Today's 8-hour typing shift.
+   WHERE: trapped - Cannot change the hardware or re-train without loss of income.
+   SCOPE: local - Immediate desk/workstation.
+   
+   WHY THIS CLASSIFICATION:
+   For the worker, QWERTY is a Snare. They must use a layout designed to 
+   slow them down (initially to prevent jams) which now causes physical 
+   strain and limits their output. The "network effect" strangles their 
+   individual choice, as using an alternative makes them "incompatible" 
+   with other people's computers and shared spaces.
+   -------------------------------------------------------------------------- */
+
+constraint_indexing:constraint_classification(
+    qwerty_vs_dvorak,
+    snare,
+    context(
+        agent_power(powerless),
+        time_horizon(immediate),
+        exit_options(trapped),
+        spatial_scope(local)
+    )
+) :- !.
+
+/* ==========================================================================
+   4. TESTS (What We Learn About Constraints)
+   ========================================================================== */
+
+:- begin_tests(qwerty_lockin_tests).
+
+test(multi_perspective_variance) :-
+    % Analyst sees Mountain, Institutional sees Rope, Powerless sees Snare
+    constraint_indexing:constraint_classification(qwerty_vs_dvorak, mountain, context(analytical, civilizational, analytical, global)),
+    constraint_indexing:constraint_classification(qwerty_vs_dvorak, rope, context(institutional, biographical, arbitrage, global)),
+    constraint_indexing:constraint_classification(qwerty_vs_dvorak, snare, context(powerless, immediate, trapped, local)).
+
+test(power_extractiveness_efficiency) :-
+    % Powerless individuals feel the extraction of their time/health (Snare).
+    % Institutions use the standard to manage global supply chains (Rope).
+    ContextPowerless = context(powerless, immediate, trapped, local),
+    ContextPowerful = context(institutional, biographical, arbitrage, global),
+    constraint_indexing:extractiveness_for_agent(qwerty_vs_dvorak, ContextPowerless, Score1),
+    constraint_indexing:extractiveness_for_agent(qwerty_vs_dvorak, ContextPowerful, Score2),
+    Score1 > Score2.
+
+test(time_immutability_lockin) :-
+    % Short-term trapped = Mountain/Snare.
+    constraint_indexing:effective_immutability(biographical, trapped, mountain).
+
+:- end_tests(qwerty_lockin_tests).
+
+/* ==========================================================================
+   5. MODEL INTERPRETATION (Commentary)
+   ========================================================================== */
+
+/**
+ * LLM GENERATION NOTES
+ * * Model: Gemini 2.0 Flash
+ * Date: 2026-01-19
+ * * KEY DECISIONS:
+ * 1. EXTRACTIVENESS (0.4): QWERTY "extracts" human ergonomics. It is a 
+ * legacy of mechanical friction that now taxes digital human output.
+ * * 2. SUPPRESSION (0.7): High. Not because Dvorak is banned, but because 
+ * "Switching Costs" are so high that they act as a natural silencer for 
+ * any alternative.
+ * * 3. PERSPECTIVES: Chose the Historian (Law), the Corp (Tool), and the 
+ * Worker (Victim) to illustrate the perspectival gap.
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+omega_variable(
+    llm_input_decoupling,
+    "Will AI/Voice/Neural interfaces untie the QWERTY Snare (Rope), or will the 
+    legacy layout merely persist as a symbolic 'Mountain' of human interaction?",
+    resolution_mechanism("Monitor the adoption of non-textual input methods in professional settings"),
+    impact("If Rope: Inefficiency is finally escaped. If Mountain: The layout 
+    remains as a cultural artifact/Snare even when the original need is gone."),
+    confidence_without_resolution(medium)
+).
+
+/* ==========================================================================
+   7. ALTERNATIVE ANALYSIS
+   ========================================================================== */
+
+/**
+ * VIABLE ALTERNATIVES
+ * * ALTERNATIVE 1: Dvorak Simplified Keyboard
+ * Viability: High. Scientifically proven to reduce finger travel and 
+ * increase comfort.
+ * Suppression: High. Sunk costs in training and hardware manufacturing.
+ * * ALTERNATIVE 2: Colemak / Workman
+ * Viability: Modern layouts optimized for computers, keeping shortcuts (Z,X,C,V) 
+ * in place while moving common letters to the home row.
+ * * CONCLUSION:
+ * The existence of superior alternatives (Dvorak/Colemak) that are effectively 
+ * unusable due to network effects proves that QWERTY is a Snare for the 
+ * individual, despite being a Rope for global commerce.
+ */
+
+/* ==========================================================================
+   8. INTEGRATION HOOKS
+   ========================================================================== */
+
+/**
+ * TO USE THIS FILE:
+ * ?- [constraint_qwerty_vs_dvorak].
+ * ?- multi_index_report(qwerty_vs_dvorak).
+ */
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */

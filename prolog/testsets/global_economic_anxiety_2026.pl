@@ -24,6 +24,7 @@
     narrative_ontology:measurement/5,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -67,6 +68,9 @@ domain_priors:theater_ratio(global_economic_anxiety_2026, 0.75).
 narrative_ontology:constraint_metric(global_economic_anxiety_2026, extractiveness, 0.68).
 narrative_ontology:constraint_metric(global_economic_anxiety_2026, suppression_requirement, 0.72).
 narrative_ontology:constraint_metric(global_economic_anxiety_2026, theater_ratio, 0.75).
+
+% Constraint classification claim
+narrative_ontology:constraint_claim(global_economic_anxiety_2026, piton).
 
 % Primary keys for the classification engine
 % High-extraction stakeholders
@@ -116,6 +120,7 @@ test(perspectival_gap) :-
 
 test(perception_over_performance) :-
     domain_priors:theater_ratio(global_economic_anxiety_2026, TR),
+domain_priors:requires_active_enforcement(global_economic_anxiety_2026).
     TR > 0.70.
 
 :- end_tests(global_economic_anxiety_2026_tests).

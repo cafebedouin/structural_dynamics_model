@@ -27,6 +27,7 @@
     narrative_ontology:measurement/5,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -59,11 +60,15 @@
 domain_priors:base_extractiveness(winners_curse, 0.70). 
 domain_priors:suppression_score(winners_curse, 0.60).   % Competitive pressure suppresses rational models.
 domain_priors:theater_ratio(winners_curse, 0.65).       % Reflects performative "frenzy" and gamification.
+domain_priors:requires_active_enforcement(winners_curse).
 
 % Constraint metric facts (bridge for classification engine)
 narrative_ontology:constraint_metric(winners_curse, extractiveness, 0.7).
 narrative_ontology:constraint_metric(winners_curse, suppression_requirement, 0.6).
 narrative_ontology:constraint_metric(winners_curse, theater_ratio, 0.65).
+
+% Constraint classification claim
+narrative_ontology:constraint_claim(winners_curse, mountain).
 
 % Mandatory keys for classification engine v3.4
 % Resolved MISSING_TEMPORAL_DATA by anchoring metrics for drift detection.

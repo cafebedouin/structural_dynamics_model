@@ -24,6 +24,7 @@
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -57,6 +58,9 @@ domain_priors:theater_ratio(india_semi_mission, 0.20).       % Piton detection (
 narrative_ontology:constraint_metric(india_semi_mission, extractiveness, 0.65).
 narrative_ontology:constraint_metric(india_semi_mission, suppression_requirement, 0.50).
 narrative_ontology:constraint_metric(india_semi_mission, theater_ratio, 0.20).
+
+% Constraint classification claim
+narrative_ontology:constraint_claim(india_semi_mission, tangled_rope).
 
 % Binary flags
 domain_priors:requires_active_enforcement(india_semi_mission). % Required for Tangled Rope

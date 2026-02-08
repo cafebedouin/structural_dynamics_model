@@ -24,6 +24,7 @@
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -62,6 +63,9 @@ domain_priors:theater_ratio(ulysses_cyclops_1904, 0.92).      % Peak "Gigantism"
 narrative_ontology:constraint_metric(ulysses_cyclops_1904, extractiveness, 0.54).
 narrative_ontology:constraint_metric(ulysses_cyclops_1904, suppression_requirement, 0.88).
 narrative_ontology:constraint_metric(ulysses_cyclops_1904, theater_ratio, 0.92).
+
+% Constraint classification claim
+narrative_ontology:constraint_claim(ulysses_cyclops_1904, piton).
 
 % Structural Property Declarations
 narrative_ontology:constraint_beneficiary(ulysses_cyclops_1904, irish_nationalism).

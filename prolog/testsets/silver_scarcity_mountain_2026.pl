@@ -24,6 +24,7 @@
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -60,6 +61,9 @@ domain_priors:theater_ratio(silver_scarcity_2026, 0.40).       % Primarily funct
 narrative_ontology:constraint_metric(silver_scarcity_2026, extractiveness, 0.04).
 narrative_ontology:constraint_metric(silver_scarcity_2026, suppression_requirement, 0.95).
 narrative_ontology:constraint_metric(silver_scarcity_2026, theater_ratio, 0.40).
+
+% Constraint classification claim
+narrative_ontology:constraint_claim(silver_scarcity_2026, mountain).
 
 % Identification of extraction targets (Manufacturers facing the "Shortage")
 narrative_ontology:constraint_victim(silver_scarcity_2026, industrial_consumers).

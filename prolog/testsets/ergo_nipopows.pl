@@ -209,3 +209,33 @@ test(multi_perspective_variance) :-
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
+% ============================================================================
+% ENRICHMENT: Structural predicates for dynamic classification
+% Generated: 2026-02-08
+% Template: v5.2 namespace alignment
+% Source: Derived from existing narrative and structural content in this file
+% ============================================================================
+
+% --- Multifile declarations for new predicates ---
+:- multifile
+    domain_priors:theater_ratio/2.
+
+% --- Theater ratio (missing from base properties) ---
+% Functional coordination mechanism — primarily substantive
+domain_priors:theater_ratio(ergo_nipopows, 0.1).
+narrative_ontology:constraint_metric(ergo_nipopows, theater_ratio, 0.1).
+
+% ============================================================================
+% ENRICHMENT: Structural predicates for remaining gaps
+% Generated: 2026-02-08
+% Template: v5.2 namespace alignment
+% Source: Derived from narrative context in this file (ergo_nipopows)
+% ============================================================================
+
+omega_variable(
+    omega_nipopow_velvet_fork,
+    "Can a velvet fork or soft fork break NiPoPoW assumptions by altering the superblock interlink structure?",
+    "Formal verification of NiPoPoW security proofs against protocol upgrade scenarios on Ergo mainnet.",
+    "If vulnerable: The Rope weakens under governance disputes. If robust: Security guarantee holds across forks.",
+    confidence_without_resolution(medium)
+).

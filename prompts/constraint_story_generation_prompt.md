@@ -2,7 +2,7 @@ This is the full, corrected version of your generation prompt. It restores the c
 
 ---
 
-# Constraint Story Generation Prompt (v3.4 - Corrected)
+# Constraint Story Generation Prompt (v5.2 - Boltzmann + Purity + Network)
 
 ## Your Role
 
@@ -66,6 +66,8 @@ Provide a human-readable header identifying the constraint ID, domain, and a bri
 ### Section 2: Base Properties (Domain Priors)
 
 Define the objective metrics of the constraint:
+
+* `narrative_ontology:constraint_claim(id, Type).` — The constraint's classification type, matching the analytical perspective. Values: `mountain`, `rope`, `tangled_rope`, `snare`, `scaffold`, `piton`. Must match the type declared in the `agent_power(analytical)` classification perspective. This is used by the Boltzmann compliance engine for structural analysis.
 
 * `domain_priors:base_extractiveness(id, Value).` ()
 * `domain_priors:suppression_score(id, Value).` (Coercion/Lack of alternatives) **NOTE: Suppression is a structural property of the constraint. It is NOT scaled by any context dimension. Only extractiveness is scaled — by both power π(P) and scope σ(S) — per the formula χ = ε × π(P) × σ(S).**
@@ -141,6 +143,24 @@ narrative_ontology:measurement(id_ex_t10, id, base_extractiveness, 10, FinalExtr
 
 The final values should match your Section 2 base properties. The initial values represent the constraint's state at the start of the interval. If the constraint was always severe, use a flatter trajectory; if it degraded over time, show the progression.
 
+### Section 9: Boltzmann Data (v5.0)
+
+Declare optional Boltzmann-related properties that enable structural purity and coupling analysis:
+
+* **`narrative_ontology:coordination_type(id, Type).`** — Declares the constraint's coordination mechanism. Valid types: `information_standard`, `resource_allocation`, `enforcement_mechanism`, `global_infrastructure`. Declare this when the constraint has an identifiable coordination function — it enables complexity-adjusted Boltzmann thresholds and floor calculations. Omit for constraints with no coordination role.
+
+* **`narrative_ontology:boltzmann_floor_override(id, Value).`** — Override the default Boltzmann floor for this constraint's coordination type. Value in [0.0, 1.0]. Only declare when domain knowledge justifies a different floor than the type default (e.g., a resource allocation mechanism that operates with unusually low overhead). Most constraints should use the type default.
+
+### Section 10: Network Relationships (v5.2)
+
+Declare optional structural influence edges between constraints:
+
+* **`narrative_ontology:affects_constraint(id, other_constraint_id).`** — Declares that constraint `id` structurally influences `other_constraint_id`. Declare when: constraints share a regulatory domain, have causal dependency, or exhibit institutional coupling.
+
+Example: `narrative_ontology:affects_constraint(rare_earth_dependency, semiconductor_supply).`
+
+Network edges enable contamination propagation analysis — if one constraint's purity degrades, the system can predict which neighbors will be affected.
+
 ---
 
 ## Pre-Submission Validation Checklist
@@ -159,7 +179,10 @@ Before outputting your .pl file, verify:
 * [ ] **Perspective Minimum**: At least one `powerless` and one `institutional` perspective included — UNLESS the constraint is a uniform-type (mountain-only or rope-only), in which case any 2+ perspectives suffice.
 * [ ] **Temporal Data**: If base extraction > 0.46, include `measurement/5` facts at 3+ time points for `theater_ratio` and `base_extractiveness`.
 * [ ] **Constraint Metrics**: Include `narrative_ontology:constraint_metric/3` facts for `extractiveness`, `suppression_requirement`, and `theater_ratio` matching your domain priors values.
-* [ ] **Multifile Declarations**: Include `narrative_ontology:measurement/5`, `narrative_ontology:interval/3`, `narrative_ontology:constraint_metric/3`, and (if extraction > 0.46) `narrative_ontology:constraint_beneficiary/2` and `narrative_ontology:constraint_victim/2` in your multifile block.
+* [ ] **Constraint Claim**: Does the file declare `narrative_ontology:constraint_claim/2`? This is required for Boltzmann compliance analysis and false natural law detection.
+* [ ] **Coordination Type**: If the constraint has a coordination function, is `narrative_ontology:coordination_type/2` declared with one of the four valid types?
+* [ ] **Network Relationships**: If the constraint is part of a known constraint cluster, are `narrative_ontology:affects_constraint/2` relationships declared?
+* [ ] **Multifile Declarations**: Include `narrative_ontology:measurement/5`, `narrative_ontology:interval/3`, `narrative_ontology:constraint_metric/3`, `narrative_ontology:constraint_claim/2`, and (if extraction > 0.46) `narrative_ontology:constraint_beneficiary/2` and `narrative_ontology:constraint_victim/2` in your multifile block. If declaring Boltzmann or network data, also include `narrative_ontology:coordination_type/2`, `narrative_ontology:boltzmann_floor_override/2`, and `narrative_ontology:affects_constraint/2`.
 
 ---
 
@@ -167,14 +190,14 @@ Before outputting your .pl file, verify:
 
 The corpus needs balanced representation across all six types. When choosing scenarios for batch generation, prioritize the **underrepresented types**:
 
-| Type | Best Source Domains | Key Metric Signature |
-|------|-------------------|---------------------|
-| **Tangled Rope** (most needed) | Geopolitical treaties, regulatory frameworks, platform governance, public-private partnerships | ε ≥ 0.50, suppression ≥ 0.40, has both beneficiary AND victim, requires enforcement |
-| **Scaffold** (most needed) | Transitional policies, emergency measures, development programs, sunset legislation | ε ≤ 0.30, has beneficiary, has sunset clause, theater ≤ 0.70 |
-| **Snare** (needed) | Debt traps, predatory lending, coercive labor, monopolistic extraction, surveillance systems | ε ≥ 0.46, suppression ≥ 0.60, χ ≥ 0.66 |
-| **Mountain** (well-covered) | Mathematical theorems, physical laws, logical limits | ε ≤ 0.15, suppression ≤ 0.05, immutable |
-| **Rope** (well-covered) | Standards, protocols, cooperative agreements, coordination mechanisms | ε ≤ 0.15, χ ≤ 0.35 |
-| **Piton** (well-covered) | Degraded institutions, vestigial regulations, theatrical compliance | ε ≤ 0.10, theater ≥ 0.70 |
+| Type | Best Source Domains | Key Metric Signature | Boltzmann Data |
+|------|-------------------|---------------------|----------------|
+| **Tangled Rope** (most needed) | Geopolitical treaties, regulatory frameworks, platform governance, public-private partnerships | ε ≥ 0.50, suppression ≥ 0.40, has both beneficiary AND victim, requires enforcement | Benefits from `coordination_type` (enables floor calculation) |
+| **Scaffold** (most needed) | Transitional policies, emergency measures, development programs, sunset legislation | ε ≤ 0.30, has beneficiary, has sunset clause, theater ≤ 0.70 | Benefits from `coordination_type` |
+| **Snare** (needed) | Debt traps, predatory lending, coercive labor, monopolistic extraction, surveillance systems | ε ≥ 0.46, suppression ≥ 0.60, χ ≥ 0.66 | `constraint_claim(id, snare)` — high extraction with minimal coordination |
+| **Mountain** (well-covered) | Mathematical theorems, physical laws, logical limits | ε ≤ 0.15, suppression ≤ 0.05, immutable | `constraint_claim(id, mountain)` — enables Boltzmann invariant testing |
+| **Rope** (well-covered) | Standards, protocols, cooperative agreements, coordination mechanisms | ε ≤ 0.15, χ ≤ 0.35 | `constraint_claim(id, rope)` — `coordination_type` enables CI_Rope certification |
+| **Piton** (well-covered) | Degraded institutions, vestigial regulations, theatrical compliance | ε ≤ 0.10, theater ≥ 0.70 | `constraint_claim(id, piton)` — usually no Boltzmann data needed |
 
 **Scenarios that produce the richest perspectival gaps** (where powerless and institutional views diverge) come from: economic policy, labor regulation, healthcare access, housing markets, immigration systems, and platform economics. These domains naturally generate tangled ropes and snares with strong perspectival variance.
 

@@ -1,9 +1,9 @@
 % ============================================================================
 % CONSTRAINT STORY: microwave_weapon_1
 % ============================================================================
-% Version: 3.4 (Deferential Realism Core)
-% Logic: 3.3 (Indexed Tuple P,T,E,S)
-% Generated: 2024-02-29
+% Version: 5.2 (Deferential Realism Core + Boltzmann + Purity + Network)
+% Logic: 5.2 (Indexed Tuple P,T,E,S + Coupling + Purity + Network Drift)
+% Generated: 2024-07-25
 % ============================================================================
 
 :- module(constraint_microwave_weapon_1, []).
@@ -24,6 +24,10 @@
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
+    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -58,9 +62,13 @@ narrative_ontology:constraint_metric(microwave_weapon_1, extractiveness, 0.6).
 narrative_ontology:constraint_metric(microwave_weapon_1, suppression_requirement, 0.7).
 narrative_ontology:constraint_metric(microwave_weapon_1, theater_ratio, 0.2).
 
+% Constraint self-claim (what does the constraint claim to be?)
+% Values: natural_law, coordination, constructed, enforcement
+narrative_ontology:constraint_claim(microwave_weapon_1, tangled_rope).
+
 % Binary flags
 % narrative_ontology:has_sunset_clause(microwave_weapon_1).      % Mandatory if Scaffold
-% domain_priors:requires_active_enforcement(microwave_weapon_1). % Required for Tangled Rope
+domain_priors:requires_active_enforcement(microwave_weapon_1). % Required for Tangled Rope
 
 % Structural property derivation hooks:
 %   has_coordination_function/1 is DERIVED from constraint_beneficiary/2
@@ -80,11 +88,6 @@ narrative_ontology:constraint_victim(microwave_weapon_1, other_nations).
 % PERSPECTIVE 1: THE SUBJECT (SNARE/MOUNTAIN)
 % High extraction felt as an immutable limit or predatory trap.
 % NOTE: This may be upgraded to 'organized' power if a critical mass of victims exists.
-%
-% UNIFORM-TYPE EXCEPTION: For natural law constraints (mountain-only) or pure
-% coordination constraints (rope-only), perspectives 1 and 2 may use any power
-% atoms — the classification is the same from all perspectives.  Include at
-% least 2-3 perspectives to demonstrate the invariance.
 constraint_indexing:constraint_classification(microwave_weapon_1, snare,
     context(agent_power(powerless),
             time_horizon(generational),
@@ -119,15 +122,6 @@ constraint_indexing:constraint_classification(microwave_weapon_1, tangled_rope,
 %             spatial_scope(continental))) :-
 %     narrative_ontology:has_sunset_clause(microwave_weapon_1).
 
-% PERSPECTIVE 5: THE SYSTEMS AUDITOR (PITON)
-% Inertial maintenance of a non-functional constraint.
-% constraint_indexing:constraint_classification(microwave_weapon_1, piton, 
-%     context(agent_power(analytical), 
-%             time_horizon(civilizational), 
-%             exit_options(arbitrage), 
-%             spatial_scope(universal))) :-
-%     domain_priors:theater_ratio(microwave_weapon_1, TR), TR > 0.70.
-
 /* ==========================================================================
    4. VALIDATION TESTS
    ========================================================================== */
@@ -143,7 +137,13 @@ test(perspectival_gap) :-
 test(threshold_validation) :-
     config:param(extractiveness_metric_name, ExtMetricName),
     narrative_ontology:constraint_metric(microwave_weapon_1, ExtMetricName, E),
-    (E =< 0.05 -> true ; E >= 0.46). % Ensures it's either a Mountain or high-extraction Snare/Tangled.
+    (E =< 0.15 -> false ; E >= 0.46). % Ensures it's a high-extraction Snare/Tangled.
+
+test(tangled_rope_requirements_met) :-
+    % Verify all three structural properties for Tangled Rope are present.
+    domain_priors:requires_active_enforcement(microwave_weapon_1),
+    narrative_ontology:constraint_beneficiary(microwave_weapon_1, _),
+    narrative_ontology:constraint_victim(microwave_weapon_1, _).
 
 :- end_tests(microwave_weapon_1_tests).
 
@@ -153,11 +153,11 @@ test(threshold_validation) :-
 
 /**
  * LOGIC RATIONALE:
- * The Subject (Other Nations) perceives this as a Snare because they are relatively powerless to stop its development and deployment, and are trapped in a situation where their satellites are vulnerable. China sees this as a Rope, a tool for national security and potentially for establishing norms in space.
+ * The base extractiveness (0.6) and suppression (0.7) are high, reflecting the coercive potential of a strategic weapon system. For other nations (powerless, trapped), this is a Snare, as it creates a vulnerability they cannot easily escape. For its developer, China (institutional, mobile), it is a Rope—a tool for national security, strategic deterrence, and enforcing its interests in the space domain.
  *
- * The Analytical Observer sees this as a Tangled Rope. There is a coordination aspect: establishing some kind of order (albeit coercive) in space. There is also asymmetric extraction: China gains power and influence at the expense of other nations' security. Active enforcement is also required.
+ * The Analytical Observer classifies this as a Tangled Rope. This is critical because it captures the dual nature of the constraint. It has a genuine (if coercive) coordination function: establishing new rules and power dynamics in space (derived from `constraint_beneficiary`). It also has clear asymmetric extraction, benefiting one party at the expense of others' security (derived from `constraint_victim`). Finally, its strategic value depends on the credible threat of use, satisfying the `requires_active_enforcement` condition. The low theater ratio (0.2) confirms it is a functional, not performative, system.
  * * MANDATROPHY ANALYSIS:
- * The Tangled Rope classification prevents the system from mislabeling this as pure extraction (Snare) because it acknowledges the potential coordination aspect, such as establishing rules for space activities, even if those rules are enforced through coercion. It also prevents misclassification as pure coordination by explicitly capturing the asymmetric distribution of power and the potential for extraction.
+ * [RESOLVED MANDATROPHY] The Tangled Rope classification is essential here. A simpler model might classify this as a pure Snare, missing the strategic coordination aspect (establishing a coercive order). Conversely, classifying it as a Rope would ignore the high, asymmetric extraction imposed on other nations. Tangled Rope correctly identifies that it is a system of coercive coordination with unequal outcomes, preventing misclassification.
  */
 
 /* ==========================================================================
@@ -167,9 +167,9 @@ test(threshold_validation) :-
 % omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
     omega_microwave_weapon_1,
-    'Will this technology be used primarily for defense or offense?',
-    'Historical precedent and strategic doctrine analysis.',
-    'If defense, it reinforces a regional power balance; if offense, it creates a global instability.',
+    'Will this technology be used primarily for defense (deterrence) or offense (first strike)?',
+    'Observation of deployment patterns, declared strategic doctrine, and response to international treaties.',
+    'If defensive, it may stabilize a regional power balance; if offensive, it creates global instability and incentivizes an arms race in space.',
     confidence_without_resolution(medium)
 ).
 
@@ -193,13 +193,31 @@ narrative_ontology:interval(microwave_weapon_1, 0, 10).
 %
 % Theater ratio over time (triggers metric_substitution detection):
 narrative_ontology:measurement(microwave_weapon_1_tr_t0, microwave_weapon_1, theater_ratio, 0, 0.1).
-narrative_ontology:measurement(microwave_weapon_1_tr_t5, microwave_weapon_1, theater_ratio, 5, 0.2).
+narrative_ontology:measurement(microwave_weapon_1_tr_t5, microwave_weapon_1, theater_ratio, 5, 0.15).
 narrative_ontology:measurement(microwave_weapon_1_tr_t10, microwave_weapon_1, theater_ratio, 10, 0.2).
 
 % Extraction over time (triggers extraction_accumulation detection):
 narrative_ontology:measurement(microwave_weapon_1_ex_t0, microwave_weapon_1, base_extractiveness, 0, 0.4).
 narrative_ontology:measurement(microwave_weapon_1_ex_t5, microwave_weapon_1, base_extractiveness, 5, 0.5).
 narrative_ontology:measurement(microwave_weapon_1_ex_t10, microwave_weapon_1, base_extractiveness, 10, 0.6).
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA (v5.0-5.2)
+   ========================================================================== */
+
+% Coordination type (enables Boltzmann floor + complexity offset)
+% Valid types: information_standard, resource_allocation,
+%              enforcement_mechanism, global_infrastructure
+narrative_ontology:coordination_type(microwave_weapon_1, enforcement_mechanism).
+
+% Boltzmann floor override (only if domain knowledge justifies)
+% Value must be in [0.0, 1.0]
+% narrative_ontology:boltzmann_floor_override(microwave_weapon_1, 0.0).
+
+% Network relationships (structural influence edges)
+% Declare when constraints share regulatory domain, causal dependency,
+% or institutional coupling.
+narrative_ontology:affects_constraint(microwave_weapon_1, global_gps_reliance).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

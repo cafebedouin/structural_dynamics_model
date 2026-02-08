@@ -13,6 +13,7 @@
     domain_priors:theater_ratio/2,
     narrative_ontology:interval/3,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_claim/2,
     narrative_ontology:measurement/5,
     constraint_indexing:constraint_classification/3.
 
@@ -26,6 +27,8 @@
  */
 
 /* 2. BASE PROPERTIES */
+narrative_ontology:constraint_claim(open_source_commons, rope).
+
 domain_priors:base_extractiveness(open_source_commons, 0.05). % Near Mountain-low extraction
 domain_priors:suppression_score(open_source_commons, 0.10).   % High exit options
 domain_priors:theater_ratio(open_source_commons, 0.15).       % Low performativity
@@ -59,3 +62,37 @@ narrative_ontology:measurement(osc_tr_t0, open_source_commons, theater_ratio, 0,
 narrative_ontology:measurement(osc_tr_t10, open_source_commons, theater_ratio, 10, 0.15).
 narrative_ontology:measurement(osc_ex_t0, open_source_commons, base_extractiveness, 0, 0.05).
 narrative_ontology:measurement(osc_ex_t10, open_source_commons, base_extractiveness, 10, 0.05).
+
+% ============================================================================
+% ENRICHMENT: Structural predicates for remaining gaps
+% Generated: 2026-02-08
+% Template: v5.2 namespace alignment
+% Source: Derived from narrative context in this file (open_source_commons)
+% ============================================================================
+constraint_beneficiary(open_source_commons, open_source_contributors).
+constraint_victim(open_source_commons, none).
+
+% --- Analytical perspective classification ---
+% chi = 0.05 * 1.15 (analytical) * 1.2 (global) = 0.069
+% Classification: scaffold
+constraint_indexing:constraint_classification(open_source_commons, scaffold,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(global))).
+
+% PERSPECTIVE 2: THE PROJECT MAINTAINER (ROPE)
+% Institutional actors use the commons as coordination infrastructure.
+constraint_indexing:constraint_classification(open_source_commons, rope,
+    context(agent_power(institutional),
+            time_horizon(generational),
+            exit_options(mobile),
+            spatial_scope(global))).
+
+omega_variable(
+    omega_oss_sustainability,
+    "Can open-source commons survive the 'Maintainer Burnout' problem without introducing extractive funding mechanisms?",
+    "Analysis of long-term sustainability models (sponsorships, foundations, cooperatives) vs. maintainer attrition rates.",
+    "If sustainable: Remains a pure Rope. If burnout prevails: Drifts toward a Scaffold requiring external support.",
+    confidence_without_resolution(medium)
+).

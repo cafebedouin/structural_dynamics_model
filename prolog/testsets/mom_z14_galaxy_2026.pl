@@ -19,6 +19,7 @@
     domain_priors:theater_ratio/2,
     narrative_ontology:interval/3,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_claim/2,
     narrative_ontology:measurement/5,
     constraint_indexing:constraint_classification/3.
 
@@ -41,6 +42,8 @@
 /* ==========================================================================
    2. BASE PROPERTIES (DOMAIN PRIORS)
    ========================================================================== */
+
+narrative_ontology:constraint_claim(mom_z14_2026, mountain).
 
 domain_priors:base_extractiveness(mom_z14_2026, 0.05). % Low (Discovery of law).
 domain_priors:suppression_score(mom_z14_2026, 0.45).   % Suppresses old formation models.
@@ -101,3 +104,21 @@ omega_variable(
 ).
 
 narrative_ontology:interval(mom_z14_2026, 0, 10).
+
+% ============================================================================
+% ENRICHMENT: Structural predicates for remaining gaps
+% Generated: 2026-02-08
+% Template: v5.2 namespace alignment
+% Source: Derived from narrative context in this file (mom_z14_galaxy_2026)
+% ============================================================================
+constraint_beneficiary(mom_z14_2026, cosmological_research_programs).
+constraint_victim(mom_z14_2026, superseded_formation_models).
+
+% --- Analytical perspective classification ---
+% chi = 0.05 * 1.15 (analytical) * 1.2 (global) = 0.069
+% Classification: scaffold
+constraint_indexing:constraint_classification(mom_z14_2026, scaffold,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(global))).

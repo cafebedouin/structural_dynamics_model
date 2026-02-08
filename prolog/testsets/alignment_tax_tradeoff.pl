@@ -21,6 +21,7 @@
     narrative_ontology:has_sunset_clause/1,
     narrative_ontology:constraint_metric/3,
     narrative_ontology:interval/3,
+    narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -59,6 +60,9 @@ domain_priors:theater_ratio(alignment_tax_tradeoff, 0.76).
 narrative_ontology:constraint_metric(alignment_tax_tradeoff, extractiveness, 0.84).
 narrative_ontology:constraint_metric(alignment_tax_tradeoff, suppression_requirement, 0.62).
 narrative_ontology:constraint_metric(alignment_tax_tradeoff, theater_ratio, 0.76).
+
+% Constraint classification claim
+narrative_ontology:constraint_claim(alignment_tax_tradeoff, piton).
 
 % Mandatory keys for classification engine v3.4
 domain_priors:requires_active_enforcement(alignment_tax_tradeoff).

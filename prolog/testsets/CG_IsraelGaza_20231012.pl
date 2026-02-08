@@ -1,12 +1,12 @@
 % ============================================================================
 % CONSTRAINT STORY: CG_IsraelGaza_20231012
 % ============================================================================
-% Version: 3.4 (Deferential Realism Core)
-% Logic: 3.3 (Indexed Tuple P,T,E,S)
-% Generated: 2023-10-27
+% Version: 5.2 (Deferential Realism Core + Boltzmann + Purity + Network)
+% Logic: 5.2 (Indexed Tuple P,T,E,S + Coupling + Purity + Network Drift)
+% Generated: 2024-05-22
 % ============================================================================
 
-:- module(constraint_israelgaza_20231012, []).
+:- module(constraint_cg_israelgaza_20231012, []).
 
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
@@ -24,6 +24,10 @@
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
+    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -32,7 +36,7 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: CG_IsraelGaza_20231012
+ * * constraint_id: cg_israelgaza_20231012
  * human_readable: Israeli Blockade of Gaza Strip
  * domain: political
  * * SUMMARY:
@@ -58,6 +62,10 @@ narrative_ontology:constraint_metric(cg_israelgaza_20231012, extractiveness, 0.6
 narrative_ontology:constraint_metric(cg_israelgaza_20231012, suppression_requirement, 0.80).
 narrative_ontology:constraint_metric(cg_israelgaza_20231012, theater_ratio, 0.20).
 
+% Constraint self-claim (what does the constraint claim to be?)
+% Values: natural_law, coordination, constructed, enforcement
+narrative_ontology:constraint_claim(cg_israelgaza_20231012, tangled_rope).
+
 % Binary flags
 % narrative_ontology:has_sunset_clause(cg_israelgaza_20231012).      % Mandatory if Scaffold
 domain_priors:requires_active_enforcement(cg_israelgaza_20231012). % Required for Tangled Rope
@@ -80,11 +88,6 @@ narrative_ontology:constraint_victim(cg_israelgaza_20231012, gazan_civilians).
 % PERSPECTIVE 1: THE SUBJECT (SNARE/MOUNTAIN)
 % High extraction felt as an immutable limit or predatory trap.
 % NOTE: This may be upgraded to 'organized' power if a critical mass of victims exists.
-%
-% UNIFORM-TYPE EXCEPTION: For natural law constraints (mountain-only) or pure
-% coordination constraints (rope-only), perspectives 1 and 2 may use any power
-% atoms — the classification is the same from all perspectives.  Include at
-% least 2-3 perspectives to demonstrate the invariance.
 constraint_indexing:constraint_classification(cg_israelgaza_20231012, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
@@ -102,7 +105,6 @@ constraint_indexing:constraint_classification(cg_israelgaza_20231012, rope,
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER
 % Default analytical context (civilizational/analytical/global).
 % This perspective is used by the bridge to derive constraint_claim.
-% Type should reflect what the metrics compute: mountain, rope, tangled_rope, snare, scaffold, or piton.
 constraint_indexing:constraint_classification(cg_israelgaza_20231012, tangled_rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
@@ -119,15 +121,6 @@ constraint_indexing:constraint_classification(cg_israelgaza_20231012, tangled_ro
 %            spatial_scope(continental))) :-
 %    narrative_ontology:has_sunset_clause(cg_israelgaza_20231012).
 
-% PERSPECTIVE 5: THE SYSTEMS AUDITOR (PITON)
-% Inertial maintenance of a non-functional constraint.
-constraint_indexing:constraint_classification(cg_israelgaza_20231012, piton, 
-    context(agent_power(analytical), 
-            time_horizon(civilizational), 
-            exit_options(arbitrage), 
-            spatial_scope(universal))) :-
-    domain_priors:theater_ratio(cg_israelgaza_20231012, TR), TR > 0.70.
-
 /* ==========================================================================
    4. VALIDATION TESTS
    ========================================================================== */
@@ -143,7 +136,13 @@ test(perspectival_gap) :-
 test(threshold_validation) :-
     config:param(extractiveness_metric_name, ExtMetricName),
     narrative_ontology:constraint_metric(cg_israelgaza_20231012, ExtMetricName, E),
-    (E =< 0.05 -> true ; E >= 0.46). % Ensures it's either a Mountain or high-extraction Snare/Tangled.
+    (E =< 0.15 -> false ; E >= 0.46). % Ensures it's a high-extraction Snare/Tangled.
+
+test(tangled_rope_conditions_met) :-
+    % Verify that all structural conditions for a Tangled Rope are met.
+    domain_priors:requires_active_enforcement(cg_israelgaza_20231012),
+    narrative_ontology:constraint_beneficiary(cg_israelgaza_20231012, _),
+    narrative_ontology:constraint_victim(cg_israelgaza_20231012, _).
 
 :- end_tests(cg_israelgaza_20231012_tests).
 
@@ -153,9 +152,9 @@ test(threshold_validation) :-
 
 /**
  * LOGIC RATIONALE:
- * The high extractiveness and suppression scores reflect the significant impact the blockade has on the lives of Gazan civilians. The perspectival gap arises because the Israeli government views the blockade as a necessary security measure (Rope), while Gazans experience it as a severe restriction on their freedom and well-being (Snare). The analytical observer classifies it as a Tangled Rope due to the coordination function (security for Israel) coupled with asymmetric extraction (suffering for Gazans).
+ * The high extractiveness (0.65) and suppression (0.80) scores reflect the severe impact the blockade has on the lives and economic opportunities of Gazan civilians. The perspectival gap is stark: the Israeli government, as the institutional beneficiary, views the blockade as a necessary security coordination mechanism (Rope), while Gazans experience it as a coercive trap (Snare). The analytical observer classifies it as a Tangled Rope because it possesses both a genuine (from the beneficiary's perspective) coordination function (security) and a clear, asymmetric extractive effect on a distinct victim population. The low theater ratio (0.20) indicates this is an actively enforced and functional system, not a vestigial one.
  * * MANDATROPHY ANALYSIS:
- * The Tangled Rope classification helps prevent mislabeling the blockade as pure extraction. While the blockade clearly extracts resources and opportunities from Gaza, it also arguably provides a coordination function by addressing Israeli security concerns. Without acknowledging this coordination aspect, the analysis would be incomplete. The `requires_active_enforcement` fact reflects the ongoing military and logistical efforts needed to maintain the blockade.
+ * The Tangled Rope classification is critical here. It prevents the system from mislabeling the blockade as pure extraction (Snare), which would ignore the stated security rationale that underpins its existence and institutional support. By acknowledging both the coordination claim and the extractive reality, the Tangled Rope model provides a more complete and stable analysis. The `requires_active_enforcement` fact underscores the continuous military and logistical effort needed to maintain the constraint, a hallmark of both Snares and Tangled Ropes.
  */
 
 /* ==========================================================================
@@ -165,9 +164,9 @@ test(threshold_validation) :-
 % omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
     omega_cg_israelgaza_20231012,
-    'To what extent does the blockade effectively prevent weapons from entering Gaza?',
-    'Empirical analysis of intercepted weapons shipments and related data.',
-    'If highly effective, the coordination aspect is strengthened; if ineffective, the Snare classification becomes more dominant.',
+    'To what extent does the blockade effectively prevent weapons from entering Gaza versus primarily impacting civilian life?',
+    'Declassified intelligence reports on intercepted shipments vs. UN economic and humanitarian impact assessments.',
+    'If highly effective at stopping weapons, the coordination aspect is strengthened. If primarily impacting civilians with minimal effect on military capabilities, the Snare classification becomes more dominant.',
     confidence_without_resolution(medium)
 ).
 
@@ -185,9 +184,8 @@ narrative_ontology:interval(cg_israelgaza_20231012, 0, 10).
 % Temporal data enables drift detection (metric_substitution,
 % extraction_accumulation) by providing measurements at multiple time points.
 % Model how the constraint intensified or changed across the interval.
-%
 % Required for high-extraction constraints (base_extractiveness > 0.46).
-% Use at least 3 time points (T=0, midpoint, T=end) for each tracked metric.
+% The interval models the period from 2007 to the present.
 %
 % Theater ratio over time (triggers metric_substitution detection):
 narrative_ontology:measurement(cg_israelgaza_20231012_tr_t0, cg_israelgaza_20231012, theater_ratio, 0, 0.10).
@@ -198,6 +196,24 @@ narrative_ontology:measurement(cg_israelgaza_20231012_tr_t10, cg_israelgaza_2023
 narrative_ontology:measurement(cg_israelgaza_20231012_ex_t0, cg_israelgaza_20231012, base_extractiveness, 0, 0.50).
 narrative_ontology:measurement(cg_israelgaza_20231012_ex_t5, cg_israelgaza_20231012, base_extractiveness, 5, 0.58).
 narrative_ontology:measurement(cg_israelgaza_20231012_ex_t10, cg_israelgaza_20231012, base_extractiveness, 10, 0.65).
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA (v5.0-5.2)
+   ========================================================================== */
+
+% Coordination type (enables Boltzmann floor + complexity offset)
+% Valid types: information_standard, resource_allocation,
+%              enforcement_mechanism, global_infrastructure
+narrative_ontology:coordination_type(cg_israelgaza_20231012, enforcement_mechanism).
+
+% Boltzmann floor override (only if domain knowledge justifies)
+% Value must be in [0.0, 1.0]
+% narrative_ontology:boltzmann_floor_override(cg_israelgaza_20231012, 0.1).
+
+% Network relationships (structural influence edges)
+% Declare when constraints share regulatory domain, causal dependency,
+% or institutional coupling.
+% narrative_ontology:affects_constraint(cg_israelgaza_20231012, international_aid_delivery).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

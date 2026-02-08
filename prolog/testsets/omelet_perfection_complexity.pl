@@ -18,6 +18,7 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -56,7 +57,7 @@
 
 % Required for [STEP 1] and [STEP 2] of the DR-Audit Suite
 narrative_ontology:interval(omelet_perfection_interval, 0, 10).
-narrative_ontology:constraint_claim([omelet_perfection_complexity], [skill_acquisition]).
+narrative_ontology:constraint_claim(omelet_perfection_complexity, mountain).
 
 % Base extractiveness score (0.0 = no extraction, 1.0 = full extraction)
 % Rationale: Low (0.25). While the "obsession" extracts time and energy, the 
@@ -263,3 +264,28 @@ omega_variable(
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
+
+% ============================================================================
+% ENRICHMENT: Structural predicates for dynamic classification
+% Generated: 2026-02-08
+% Template: v5.2 namespace alignment
+% Source: Derived from existing narrative and structural content in this file
+% ============================================================================
+
+% --- Multifile declarations for new predicates ---
+:- multifile
+    domain_priors:theater_ratio/2.
+
+% --- Theater ratio (missing from base properties) ---
+% Structural constraint in social domain — low theater, high substance
+domain_priors:theater_ratio(omelet_perfection_complexity, 0.08).
+narrative_ontology:constraint_metric(omelet_perfection_complexity, theater_ratio, 0.08).
+
+% --- Analytical perspective classification (missing) ---
+% chi = 0.25 * 1.15 (analytical) * 1.2 (global) = 0.345
+% Classification: rope
+constraint_indexing:constraint_classification(omelet_perfection_complexity, rope,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(global))).

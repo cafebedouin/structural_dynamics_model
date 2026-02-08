@@ -22,6 +22,7 @@
     narrative_ontology:constraint_metric/3,
     narrative_ontology:interval/3,
     narrative_ontology:measurement/5,
+    narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -56,6 +57,9 @@ domain_priors:theater_ratio(communal_narcissism_social_trap, 0.88).
 narrative_ontology:constraint_metric(communal_narcissism_social_trap, extractiveness, 0.78).
 narrative_ontology:constraint_metric(communal_narcissism_social_trap, suppression_requirement, 0.65).
 narrative_ontology:constraint_metric(communal_narcissism_social_trap, theater_ratio, 0.88).
+
+% Constraint classification claim
+narrative_ontology:constraint_claim(communal_narcissism_social_trap, piton).
 
 % Binary flags
 domain_priors:requires_active_enforcement(communal_narcissism_social_trap).
@@ -164,3 +168,24 @@ narrative_ontology:measurement(cnt_ex_t10, communal_narcissism_social_trap, base
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
+
+% ============================================================================
+% ENRICHMENT: Structural predicates for dynamic classification
+% Generated: 2026-02-08
+% Template: v5.2 namespace alignment
+% Source: Derived from existing narrative and structural content in this file
+% ============================================================================
+
+% --- Multifile declarations for new predicates ---
+:- multifile
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2.
+
+% --- Structural properties (missing from base properties) ---
+% Beneficiary: "The Saint" — the charismatic leader who extracts emotional
+% and material labor through performative prosociality (Section 1 narrative).
+narrative_ontology:constraint_beneficiary(communal_narcissism_social_trap, charismatic_communal_narcissist).
+
+% Victim: "The Disciple" — bound by moral debt and social shaming,
+% unable to exit the extraction loop (Section 1: "Bound by moral debt").
+narrative_ontology:constraint_victim(communal_narcissism_social_trap, morally_indebted_followers).

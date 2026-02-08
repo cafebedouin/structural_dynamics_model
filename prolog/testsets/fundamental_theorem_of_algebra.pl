@@ -254,3 +254,19 @@ omega_variable(
 constraint_indexing:constraint_classification(fnudamental_theorem_of_algebra, mountain, agent_power(analytical)).
 constraint_indexing:constraint_classification(fnudamental_theorem_of_algebra, rope, agent_power(institutional)).
 constraint_indexing:constraint_classification(fnudamental_theorem_of_algebra, snare, agent_power(powerless)).
+
+% ============================================================================
+% ENRICHMENT: Structural predicates for dynamic classification
+% Generated: 2026-02-08
+% Template: v5.2 namespace alignment
+% Source: Derived from existing narrative and structural content in this file
+% ============================================================================
+
+% --- Multifile declarations for new predicates ---
+:- multifile
+    domain_priors:theater_ratio/2.
+
+% --- Theater ratio (missing from base properties) ---
+% Formal truth — substantive with near-zero performative component
+domain_priors:theater_ratio(fundamental_theorem_of_algebra, 0.0).
+narrative_ontology:constraint_metric(fundamental_theorem_of_algebra, theater_ratio, 0.0).

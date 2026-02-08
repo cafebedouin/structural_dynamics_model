@@ -24,6 +24,7 @@
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -57,6 +58,9 @@ domain_priors:theater_ratio(guinea_worm_eradication, 0.10).       % Piton detect
 narrative_ontology:constraint_metric(guinea_worm_eradication, extractiveness, 0.25).
 narrative_ontology:constraint_metric(guinea_worm_eradication, suppression_requirement, 0.30).
 narrative_ontology:constraint_metric(guinea_worm_eradication, theater_ratio, 0.10).
+
+% Constraint classification claim
+narrative_ontology:constraint_claim(guinea_worm_eradication, tangled_rope).
 
 % Binary flags
 % narrative_ontology:has_sunset_clause(guinea_worm_eradication).      % Mandatory if Scaffold

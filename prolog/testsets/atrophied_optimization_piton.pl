@@ -19,6 +19,7 @@
     domain_priors:theater_ratio/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -55,6 +56,9 @@ domain_priors:theater_ratio(atrophied_optimization_piton, 0.95).
 narrative_ontology:constraint_metric(atrophied_optimization_piton, extractiveness, 0.48).
 narrative_ontology:constraint_metric(atrophied_optimization_piton, suppression_requirement, 0.8).
 narrative_ontology:constraint_metric(atrophied_optimization_piton, theater_ratio, 0.95).
+
+% Constraint classification claim
+narrative_ontology:constraint_claim(atrophied_optimization_piton, piton).
 
 % Mandatory keys for classification engine v3.4
 % Binary flags

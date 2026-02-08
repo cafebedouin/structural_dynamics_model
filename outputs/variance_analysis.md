@@ -2,59 +2,72 @@
 
 ## Summary Statistics
 
-- **Total constraints analyzed:** 339
-- **Constraints with multiple index configs:** 330 (97.3%)
-- **High variance (>0.5):** 308 (90.9%)
-- **Stable (ratio=1.0):** 8 (2.4%)
+- **Total constraints analyzed:** 727
+- **Constraints with multiple index configs:** 10 (1.4%)
+- **High variance (>0.5):** 725 (99.7%)
+- **Stable (ratio=1.0):** 12 (1.7%)
 
 ## Variance Distribution
 
 | Ratio Range | Count | % of Corpus | Examples |
 |-------------|-------|-------------|----------|
-| 1.0 (stable)    |     8 |    2.4% | CG_IsraelGaza_20231012, ai_scholar_citation_tra... |
-| 0.7-0.9         |   140 |   41.3% | MOLTBOT_RELIGION, academic_fashion_modernism_20... |
-| 0.5-0.6         |    34 |   10.0% | 26usc469_real_estate_exemption, biological_curi... |
-| 0.3-0.4         |     3 |    0.9% | cuny_light_2026, fed_shutdown_2026, rare_earth_... |
-| <0.3            |   153 |   45.1% | adverse_possession, ai_driven_surveillance_sens... |
-| null            |     1 |    0.3% | unknown |
+| 1.0 (stable)    |    12 |    1.7% | c_physical_blue_wavelength, clt_convergence_202... |
+| 0.7-0.9         |     9 |    1.2% | CG_IsraelGaza_20231012, MOLTBOT_RELIGION, abstr... |
+| 0.5-0.6         |     1 |    0.1% | 26usc469_real_estate_exemption |
+| 0.3-0.4         |     0 |    0.0% | - |
+| <0.3            |   704 |   96.8% | 8k_tv_limit_2026, emergency_powers_ratchet, erg... |
+| null            |     1 |    0.1% | unknown |
 
 ## Domain Breakdown
 
 | Domain | N | Avg Variance | High Variance % |
 |--------|---|--------------|----------------|
+| artistic             |   2 |         4.00 |          100.0% |
+| cognitive            |   3 |         4.00 |          100.0% |
+| informational        |   2 |         4.00 |          100.0% |
+| infrastructure       |   1 |         4.00 |          100.0% |
+| logistical           |   1 |         4.00 |          100.0% |
+| logistics            |   1 |         4.00 |          100.0% |
+| socio_political      |   1 |         4.00 |          100.0% |
+| systems_engineering  |   1 |         4.00 |          100.0% |
+| analytical           |   2 |         3.50 |          100.0% |
+| mathematics          |   2 |         3.50 |          100.0% |
+| organizational       |   9 |         3.44 |          100.0% |
+| environmental        |   5 |         3.40 |          100.0% |
+| institutional        |   3 |         3.33 |          100.0% |
+| mathematical         |  42 |         3.26 |          100.0% |
+| geopolitical         |   8 |         3.25 |          100.0% |
+| technological        | 205 |         3.18 |          100.0% |
+| philosophical        |  12 |         3.17 |          100.0% |
+| religious            |   9 |         3.11 |          100.0% |
+| social               | 118 |         3.11 |          100.0% |
+| political            | 112 |         3.10 |          100.0% |
+| biological           |  15 |         3.05 |          100.0% |
+| economic             | 118 |         3.05 |          100.0% |
+| astrophysical        |   1 |         3.00 |          100.0% |
+| bio_industrial       |   1 |         3.00 |          100.0% |
+| corporate_governance |   1 |         3.00 |          100.0% |
+| ecological           |   1 |         3.00 |          100.0% |
+| linguistic           |   2 |         3.00 |          100.0% |
 | magical              |   1 |         3.00 |          100.0% |
-| analytical           |   2 |         1.50 |          100.0% |
-| mathematics          |   2 |         1.50 |          100.0% |
-| physics              |   1 |         1.50 |          100.0% |
-| mathematical         |  39 |         1.39 |           94.9% |
-| technological        | 109 |         1.15 |           94.5% |
-| artistic             |   2 |         1.12 |          100.0% |
-| philosophical        |   6 |         1.12 |          100.0% |
-| biological           |   8 |         1.07 |           87.5% |
-| psychological        |   4 |         1.06 |           75.0% |
-| economic             |  43 |         1.03 |           90.7% |
-| political            |  36 |         1.01 |           94.4% |
-| legal                |   7 |         1.00 |           71.4% |
-| social               |  53 |         0.99 |           88.7% |
-| religious            |   4 |         0.94 |          100.0% |
-| scientific           |   6 |         0.83 |           83.3% |
-| environmental        |   1 |         0.80 |          100.0% |
-| geopolitical         |   1 |         0.80 |          100.0% |
-| organizational       |   1 |         0.80 |          100.0% |
-| medical              |   2 |         0.78 |          100.0% |
-| astrophysical        |   1 |         0.67 |          100.0% |
-| health               |   3 |         0.67 |           66.7% |
-| physical             |   1 |         0.67 |          100.0% |
-| ecological           |   1 |         0.50 |            0.0% |
-| linguistic           |   1 |         0.50 |            0.0% |
-| technology           |   1 |         0.33 |            0.0% |
-| logical              |   1 |         0.25 |            0.0% |
+| military             |   2 |         3.00 |          100.0% |
+| physical             |   1 |         3.00 |          100.0% |
+| physics              |   2 |         3.00 |          100.0% |
+| psychological        |   9 |         3.00 |          100.0% |
+| psychology           |   1 |         3.00 |          100.0% |
+| legal                |   9 |         2.83 |           88.9% |
+| health               |   5 |         2.80 |          100.0% |
+| scientific           |   9 |         2.78 |          100.0% |
+| medical              |   4 |         2.45 |          100.0% |
+| atmospheric_science  |   1 |         2.00 |          100.0% |
+| logical              |   2 |         1.00 |          100.0% |
+| technology           |   1 |         1.00 |          100.0% |
 
 ## Key Findings
 
-1. **Domain variance spread:** magical shows highest variance (3.00), while logical shows lowest (0.25)
+1. **Domain variance spread:** artistic shows highest variance (4.00), while technology shows lowest (1.00)
 
-2. **High volatility:** 90.9% of constraints show high variance (>0.5)
+2. **High volatility:** 99.7% of constraints show high variance (>0.5)
 
 3. **Perspective-dependent constraints:** 10 constraints show strong perspective-dependence
 
@@ -64,41 +77,41 @@ Constraints that change type frequently based on index configuration:
 
 | Constraint ID | Variance | Configs | Types | Domain | Claimed Type |
 |---------------|----------|---------|-------|--------|-------------|
-| base_pair_complementarity      | 3.00 |       1 |     3 | biological | mountain     |
-| berkshire_compounding_culture  | 3.00 |       1 |     3 | economic   | rope         |
-| cinderella_midnight_deadline   | 3.00 |       1 |     3 | magical    | mountain     |
-| comitatus_bond                 | 3.00 |       1 |     3 | social     | rope         |
-| dldr_information_policy        | 3.00 |       1 |     3 | technological | tangled_rope |
-| magna_carta_liberties          | 3.00 |       1 |     3 | political  | rope         |
-| omelet_perfection_complexity   | 3.00 |       1 |     3 | social     | tangled_rope |
-| postman_survival_protocol      | 3.00 |       1 |     3 | social     | tangled_rope |
-| ai_driven_surveillance_sensor_layer | 2.00 |       2 |     4 | technological | tangled_rope |
-| ai_professional_displacement   | 2.00 |       2 |     4 | economic   | mountain     |
+| evolutionary_knowledge         | 5.00 |       1 |     5 | biological | tangled_rope |
+| emergency_powers_ratchet       | 4.00 |       1 |     4 | political  | tangled_rope |
+| rfc9293_state_machine          | 4.00 |       1 |     4 | technological | mountain     |
+| model_autonomy_creep           | 4.00 |       1 |     4 | technological | tangled_rope |
+| quine_self_replication         | 4.00 |       1 |     4 | technological | mountain     |
+| cross_domain_coupling_spiral   | 4.00 |       1 |     4 | technological | tangled_rope |
+| capital_misallocation_spiral   | 4.00 |       1 |     4 | economic   | tangled_rope |
+| goldbach_conjecture            | 4.00 |       1 |     4 | mathematical | mountain     |
+| asymmetric_burden_distribution | 4.00 |       1 |     4 | economic   | piton        |
+| semantic_overload_friction     | 4.00 |       1 |     4 | technological | tangled_rope |
 
 ### Detailed Examples
 
-**1. base_pair_complementarity**
+**1. evolutionary_knowledge**
 - Domain: biological
-- Variance: 3.00
-- Produces 3 different types across 1 index configurations
-- Type distribution: {'mountain': 2, 'rope': 2, 'snare': 1}
+- Variance: 5.00
+- Produces 5 different types across 1 index configurations
+- Type distribution: {'snare': 2, 'rope': 2, 'tangled_rope': 1, 'piton': 1, 'mountain': 1}
 
-**2. berkshire_compounding_culture**
-- Domain: economic
-- Variance: 3.00
-- Produces 3 different types across 1 index configurations
-- Type distribution: {'rope': 2, 'mountain': 1, 'snare': 1}
+**2. emergency_powers_ratchet**
+- Domain: political
+- Variance: 4.00
+- Produces 4 different types across 1 index configurations
+- Type distribution: {'snare': 2, 'rope': 2, 'tangled_rope': 2, 'scaffold': 1}
 
-**3. cinderella_midnight_deadline**
-- Domain: magical
-- Variance: 3.00
-- Produces 3 different types across 1 index configurations
-- Type distribution: {'mountain': 2, 'rope': 2, 'snare': 2}
+**3. rfc9293_state_machine**
+- Domain: technological
+- Variance: 4.00
+- Produces 4 different types across 1 index configurations
+- Type distribution: {'mountain': 1, 'rope': 1, 'snare': 1, 'scaffold': 1}
 
 ## Data Completeness
 
 | Field | % Complete | Impact |
 |-------|-----------|--------|
-| classifications | 99.7% | Core data for variance analysis |
-| variance_ratio | 99.7% | Calculated from classifications |
-| domain | 99.4% | Affects domain breakdown analysis |
+| classifications | 99.9% | Core data for variance analysis |
+| variance_ratio | 99.9% | Calculated from classifications |
+| domain | 99.7% | Affects domain breakdown analysis |

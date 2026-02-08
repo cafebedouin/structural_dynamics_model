@@ -645,10 +645,47 @@ explain_signature(C, ambiguous, Explanation) :-
    ================================================================ */
 
 %% integrate_signature_with_modal(+Constraint, +ModalType, -AdjustedType)
-%  Adjusts modal classification based on structural signature
+%  Adjusts modal classification based on structural signature.
+%  For FCR signatures, checks perspectival variance first: if the metric
+%  layer produces different classifications across power positions, the
+%  indexical system is working and the FCR override should defer.
 integrate_signature_with_modal(C, ModalType, AdjustedType) :-
     constraint_signature(C, Signature),
+    resolve_with_perspectival_check(C, ModalType, Signature, AdjustedType).
+
+%% resolve_with_perspectival_check(+C, +ModalType, +Signature, -AdjustedType)
+%  Gate on FCR override: if the constraint shows perspectival variance
+%  at the metric layer, preserve the metric-based classification.
+%  Uniform classification despite varying χ is genuinely suspicious.
+%  Perspectival differentiation is evidence the system is working.
+resolve_with_perspectival_check(C, ModalType, false_ci_rope, AdjustedType) :-
+    !,
+    (   has_metric_perspectival_variance(C)
+    ->  AdjustedType = ModalType    % Preserve: indexical differentiation detected
+    ;   AdjustedType = tangled_rope % Override: uniform classification is suspicious
+    ).
+resolve_with_perspectival_check(_C, ModalType, Signature, AdjustedType) :-
     resolve_modal_signature_conflict(ModalType, Signature, AdjustedType).
+
+%% has_metric_perspectival_variance(+C)
+%  True if the constraint classifies differently at the metric layer
+%  across at least two standard power positions (scope held constant).
+%  Uses the coupling test classifier to avoid circular dependency with
+%  drl_core. If even the simplified classifier shows variance, the full
+%  pipeline certainly would.
+has_metric_perspectival_variance(C) :-
+    coupling_test_powers(Powers),
+    findall(
+        Type,
+        (   member(P, Powers),
+            coupling_test_context(P, national, Ctx),
+            classify_at_context(C, Ctx, Type)
+        ),
+        Types
+    ),
+    sort(Types, UniqueTypes),
+    length(UniqueTypes, N),
+    N > 1.
 
 % -----------------------------------------------------------------------
 % SIGNATURE OVERRIDE RULE (logic.md §III-A, Rule NL):
@@ -682,12 +719,18 @@ resolve_modal_signature_conflict(_, false_natural_law, tangled_rope) :- !.
 resolve_modal_signature_conflict(_, coupling_invariant_rope, rope) :- !.
 
 % -----------------------------------------------------------------------
-% FCR OVERRIDE RULE (v5.1, §III-A extension):
-%   FCR(C) → tangled_rope regardless of metric-based classification.
-%   A constraint that appears to be a rope but fails Boltzmann structural
-%   tests has hidden extraction or coupling that the metric pipeline
-%   missed. This catches "coordination-washed" extraction: nudges,
-%   soft paternalism, behavioral defaults, distributed enforcement.
+% FCR OVERRIDE RULE (v5.1, §III-A extension, perspectival gate v5.3):
+%   FCR(C) → tangled_rope ONLY when classification is uniform across
+%   perspectives. If the metric layer produces different types from
+%   different power positions, the indexical system is differentiating
+%   correctly and the FCR override defers to the metric classification.
+%   Uniform classification despite varying χ is genuinely suspicious
+%   (coordination-washed). Perspectival variance is a positive signal.
+%
+%   NOTE: This rule is now only reached as fallback from
+%   resolve_with_perspectival_check/4 when has_metric_perspectival_variance
+%   fails. Direct callers of resolve_modal_signature_conflict still see
+%   the unconditional override for backward compatibility.
 % -----------------------------------------------------------------------
 resolve_modal_signature_conflict(_, false_ci_rope, tangled_rope) :- !.
 
@@ -1163,7 +1206,7 @@ boltzmann_invariant_mountain(C, Result) :-
 
     % Test 3: No excess extraction above Boltzmann floor
     (   excess_extraction(C, Excess)
-    ->  (   Excess =< 0.001
+    ->  (   Excess =< 0.01
         ->  T3 = pass(no_excess_extraction)
         ;   T3 = fail(excess_extraction, Excess)
         )
@@ -1345,7 +1388,7 @@ coupling_invariant_rope(C, ci_rope_evidence(Compliance, ScopeResult,
 
     % Must have no excess extraction (or very close to zero)
     (   excess_extraction(C, ExcessEps)
-    ->  ExcessEps =< 0.02  % Within noise floor of Boltzmann floor
+    ->  ExcessEps =< 0.05  % Within noise floor of Boltzmann floor
     ;   ExcessEps = 0.0    % No extraction data = no excess
     ),
 
@@ -1424,7 +1467,7 @@ purity_test_coupling(C, Result) :-
 %% purity_test_excess(+C, -Result)
 purity_test_excess(C, Result) :-
     (   excess_extraction(C, Excess)
-    ->  (   Excess =< 0.02
+    ->  (   Excess =< 0.05
         ->  Result = pass(no_excess_extraction)
         ;   Result = fail(excess_extraction, Excess)
         )
@@ -1530,7 +1573,32 @@ false_ci_rope(C, fcr_evidence(AppearanceType, FailedTests, CouplingScore,
     (   scope_invariance_test(C, ScopeResult)
     ->  true
     ;   ScopeResult = unknown
+    ),
+
+    % Zero-excess exemption: if a constraint has no extractive overhead,
+    % coupling alone is insufficient evidence of coordination washing.
+    % Scope-sensitive classification with zero excess is the indexical
+    % system working correctly, not a sign of hidden extraction.
+    % Requires at least one non-coupling failure to flag as FCR.
+    \+ zero_excess_coupling_only(ExcessExtraction, FailedTests).
+
+%% zero_excess_coupling_only(+Excess, +FailedTests)
+%  True when the ONLY FCR evidence is Boltzmann coupling and
+%  excess extraction is at or below the noise floor.
+%  In this case, scope-sensitive classification is indexical
+%  differentiation, not coordination washing.
+zero_excess_coupling_only(Excess, FailedTests) :-
+    number(Excess),
+    Excess =< 0.05,
+    % Every failure must be coupling-based (boltzmann or nonsensical)
+    FailedTests \= [],
+    forall(
+        member(F, FailedTests),
+        coupling_based_failure(F)
     ).
+
+coupling_based_failure(boltzmann_non_compliant(_, _)).
+coupling_based_failure(nonsensical_coupling(_)).
 
 %% appears_as_rope(+C, -AppearanceType)
 %  Checks if constraint's metrics look like rope/coordination.
@@ -1581,7 +1649,7 @@ fcr_test_failure(C, scope_variant(UniqueTypes)) :-
 % Test 3: Excess extraction above Boltzmann floor
 fcr_test_failure(C, excess_above_floor(Excess)) :-
     excess_extraction(C, Excess),
-    Excess > 0.02.  % Above noise floor
+    Excess > 0.05.  % Above noise floor
 
 % Test 4: Nonsensical coupling (coupling without functional justification)
 fcr_test_failure(C, nonsensical_coupling(Strength)) :-

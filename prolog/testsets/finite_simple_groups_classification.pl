@@ -260,3 +260,19 @@ omega_variable(
 constraint_indexing:constraint_classification(finite_simple_groups_classification, mountain, agent_power(analytical)).
 constraint_indexing:constraint_classification(finite_simple_groups_classification, rope, agent_power(institutional)).
 constraint_indexing:constraint_classification(finite_simple_groups_classification, snare, agent_power(powerless)).
+
+% ============================================================================
+% ENRICHMENT: Structural predicates for dynamic classification
+% Generated: 2026-02-08
+% Template: v5.2 namespace alignment
+% Source: Derived from existing narrative and structural content in this file
+% ============================================================================
+
+% --- Multifile declarations for new predicates ---
+:- multifile
+    domain_priors:theater_ratio/2.
+
+% --- Theater ratio (missing from base properties) ---
+% Formal truth — substantive with near-zero performative component
+domain_priors:theater_ratio(finite_simple_group_classification, 0.01).
+narrative_ontology:constraint_metric(finite_simple_group_classification, theater_ratio, 0.01).

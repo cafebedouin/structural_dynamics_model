@@ -143,3 +143,61 @@ constraint_indexing:constraint_classification(
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
+
+% ============================================================================
+% ENRICHMENT: Structural predicates for dynamic classification
+% Generated: 2026-02-08
+% Template: v5.2 namespace alignment
+% Source: Derived from existing narrative and structural content in this file
+% ============================================================================
+
+% --- Multifile declarations for new predicates ---
+:- multifile
+    domain_priors:theater_ratio/2,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2.
+
+% --- Theater ratio (missing from base properties) ---
+% IFT is grounded in evolutionary biology and validated by empirical HCI
+% research. The theory itself has minimal theater — functional predictions
+% match observed behavior closely. Low theater (0.08) accounts for the gap
+% between idealized foraging models and real-world platform manipulation.
+domain_priors:theater_ratio(information_foraging_theory, 0.08).
+narrative_ontology:constraint_metric(information_foraging_theory, theater_ratio, 0.08).
+
+% --- Structural properties (missing) ---
+% Beneficiary: UX designers and platform architects who use IFT's
+% "information scent" predictions to optimize navigation and engagement.
+narrative_ontology:constraint_beneficiary(information_foraging_theory, ux_designers_and_platform_architects).
+
+% Victim: Users trapped in attention-farming loops where IFT is weaponized
+% to maximize "time on site" via continuous micro-scents (Perspective 3).
+narrative_ontology:constraint_victim(information_foraging_theory, attention_farmed_users).
+
+% NOTE: requires_active_enforcement is NOT declared. IFT describes an
+% evolved biological heuristic — it emerges naturally from evolutionary
+% energy conservation (line 72: domain_priors:emerges_naturally).
+
+% --- Analytical perspective classification (missing) ---
+% χ = 0.20 × 1.15 (analytical) × 1.2 (global) = 0.276
+% ε = 0.20 ≤ 0.45, χ = 0.276 ≤ 0.35, theater = 0.08 → Rope
+% The analytical observer sees IFT as a coordination mechanism: an
+% evolutionary cognitive tool that enables efficient information navigation.
+constraint_indexing:constraint_classification(information_foraging_theory, rope,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(global))).
+
+% --- Omega variable (missing) ---
+omega_variable(
+    omega_ift_weaponization_threshold,
+    'At what point does platform optimization of information scent cross from coordination (Rope) to extraction (Snare)?',
+    'Compare user goal-completion rates vs time-on-site metrics across optimized vs non-optimized platforms',
+    'If scent serves goals: permanent Rope. If scent traps attention: Snare for powerless users, warranting reclassification.',
+    confidence_without_resolution(medium)
+).

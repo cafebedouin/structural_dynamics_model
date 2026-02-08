@@ -1,9 +1,9 @@
 % ============================================================================
 % CONSTRAINT STORY: child_marriage
 % ============================================================================
-% Version: 3.4 (Deferential Realism Core)
-% Logic: 3.3 (Indexed Tuple P,T,E,S)
-% Generated: 2024-02-29
+% Version: 5.2 (Deferential Realism Core + Boltzmann + Purity + Network)
+% Logic: 5.2 (Indexed Tuple P,T,E,S + Coupling + Purity + Network Drift)
+% Generated: 2024-07-28
 % ============================================================================
 
 :- module(constraint_child_marriage, []).
@@ -24,6 +24,10 @@
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
+    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -33,14 +37,14 @@
 /**
  * CONSTRAINT IDENTIFICATION
  * * constraint_id: child_marriage
- * human_readable: Child Marriage
+ * human_readable: Child Marriage as a Social Constraint
  * domain: social/religious
  * * SUMMARY:
- * Child marriage, especially in regions like sub-Saharan Africa, involves marrying off children, typically girls, before they reach adulthood. This practice stems from various factors, including poverty, cultural traditions, and perceived protection for girls. It severely limits the child's educational opportunities, exposes them to health risks associated with early pregnancy, and perpetuates cycles of poverty.
+ * Child marriage, especially in regions with high poverty and traditional social structures, involves marrying off children, typically girls, before they reach adulthood. This practice stems from various factors, including poverty, cultural traditions, and perceived protection for girls. It severely limits the child's educational opportunities, exposes them to health risks associated with early pregnancy, and perpetuates cycles of poverty and gender inequality.
  * * KEY AGENTS:
- * - Girl: Subject (Powerless)
- * - Family/Community: Beneficiary (Institutional)
- * - UNICEF/NGOs: Auditor (Analytical)
+ * - The Child Bride: Subject (Powerless)
+ * - The Family/Community Elders: Beneficiary (Institutional)
+ * - Human Rights Organizations (e.g., UNICEF): Auditor (Analytical)
  */
 
 /* ==========================================================================
@@ -58,16 +62,20 @@ narrative_ontology:constraint_metric(child_marriage, extractiveness, 0.75).
 narrative_ontology:constraint_metric(child_marriage, suppression_requirement, 0.85).
 narrative_ontology:constraint_metric(child_marriage, theater_ratio, 0.20).
 
+% Constraint self-claim (what does the constraint claim to be?)
+% Values: natural_law, coordination, constructed, enforcement
+narrative_ontology:constraint_claim(child_marriage, snare).
+
 % Binary flags
 % narrative_ontology:has_sunset_clause(child_marriage).      % Mandatory if Scaffold
-% domain_priors:requires_active_enforcement(child_marriage). % Required for Tangled Rope
+domain_priors:requires_active_enforcement(child_marriage). % Required for Tangled Rope
 
 % Structural property derivation hooks:
 %   has_coordination_function/1 is DERIVED from constraint_beneficiary/2
 %   has_asymmetric_extraction/1 is DERIVED from constraint_victim/2
 % Both are required for Tangled Rope. Coordination is also required for Scaffold.
-narrative_ontology:constraint_beneficiary(child_marriage, family).
-narrative_ontology:constraint_victim(child_marriage, child).
+narrative_ontology:constraint_beneficiary(child_marriage, family_and_community_elders).
+narrative_ontology:constraint_victim(child_marriage, child_bride).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
@@ -77,9 +85,9 @@ narrative_ontology:constraint_victim(child_marriage, child).
                     continental=1.1, global=1.2, universal=1.0.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE SUBJECT (SNARE/MOUNTAIN)
+% PERSPECTIVE 1: THE SUBJECT (SNARE)
 % High extraction felt as an immutable limit or predatory trap.
-% NOTE: This may be upgraded to 'organized' power if a critical mass of victims exists.
+% χ = 0.75 * 1.5 (powerless) * 0.8 (local) = 0.90. This is a clear Snare.
 constraint_indexing:constraint_classification(child_marriage, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
@@ -87,17 +95,19 @@ constraint_indexing:constraint_classification(child_marriage, snare,
             spatial_scope(local))).
 
 % PERSPECTIVE 2: THE BENEFICIARY (ROPE)
-% Viewed as essential infrastructure or coordination.
-constraint_indexing:constraint_classification(child_marriage, piton,
+% Viewed as essential coordination for social stability and economic transfer.
+% χ = 0.75 * -0.2 (institutional) * 0.8 (local) = -0.12. The negative effective
+% extraction confirms the Rope classification from this perspective.
+constraint_indexing:constraint_classification(child_marriage, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),
             spatial_scope(local))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER
+% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (SNARE)
 % Default analytical context (civilizational/analytical/global).
-% This perspective is used by the bridge to derive constraint_claim.
-% Type should reflect what the metrics compute: mountain, rope, tangled_rope, snare, scaffold, or piton.
+% χ = 0.75 * 1.15 (analytical) * 1.2 (global) = 1.035. Extremely high
+% extraction confirms the Snare classification.
 constraint_indexing:constraint_classification(child_marriage, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
@@ -114,12 +124,16 @@ test(perspectival_gap) :-
     % Verify there is a perspectival gap between powerless and institutional.
     constraint_indexing:constraint_classification(child_marriage, TypePowerless, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(child_marriage, TypeInstitutional, context(agent_power(institutional), _, _, _)),
-    TypePowerless \= TypeInstitutional.
+    TypePowerless \= TypeInstitutional,
+    TypePowerless == snare,
+    TypeInstitutional == rope.
 
 test(threshold_validation) :-
     config:param(extractiveness_metric_name, ExtMetricName),
     narrative_ontology:constraint_metric(child_marriage, ExtMetricName, E),
-    (E =< 0.05 -> true ; E >= 0.46). % Ensures it's either a Mountain or high-extraction Snare/Tangled.
+    E >= 0.46,
+    % Verify that the analytical observer sees a Snare.
+    constraint_indexing:constraint_classification(child_marriage, snare, context(agent_power(analytical), _, _, _)).
 
 :- end_tests(child_marriage_tests).
 
@@ -129,9 +143,14 @@ test(threshold_validation) :-
 
 /**
  * LOGIC RATIONALE:
- * Child marriage is scored with high extractiveness and suppression. The powerless subject is trapped and the institutional beneficiary (family/community) often views it as a cultural norm or economic necessity. However, from an analytical perspective, it's clearly a snare, depriving children of their fundamental rights and opportunities. The perspectival gap arises from the conflicting values and power dynamics within the system. The "institutional" perspective is classified as a Piton as the original justification (economic or safety) has degraded over time.
- * * MANDATROPHY ANALYSIS:
- * This is not a Tangled Rope because while there is a coordination function (family and community upholding the tradition), the extraction on the child is overwhelming and there is no genuine coordination function for the child's benefit.
+ * Child marriage is modeled as a high-extraction (0.75) and high-suppression (0.85) constraint. The perspectival gap is stark:
+ * - For the child (powerless, trapped), the effective extraction is amplified to 0.90, making it an inescapable Snare that forecloses life opportunities.
+ * - For the family/community elders (institutional), the constraint is perceived as a Rope. The institutional power modifier makes the effective extraction negative (-0.12), reflecting a belief that the practice provides net benefits (social cohesion, economic stability, perceived protection). They see it as essential coordination, not extraction.
+ * - The analytical observer, using a global scope, calculates an effective extraction of 1.035, confirming it as a severe Snare.
+ * The low theater_ratio (0.20) indicates this is an actively functional, not performative, system of control. The original classification of the institutional view as a Piton was incorrect, as a Piton requires a theater_ratio >= 0.70. The Rope classification is a more accurate representation of the beneficiary's deferential realism.
+ *
+ * MANDATROPHY ANALYSIS: [RESOLVED MANDATROPHY]
+ * This constraint is resolved as a Snare, not a Tangled Rope. While there is a beneficiary group (family/community) and thus a 'coordination function' from their perspective, the system's primary structural feature is the overwhelming, asymmetric extraction from the victim. The suppression score of 0.85 and the lack of any meaningful benefit or alternative for the child mean the coordination aspect is entirely subordinate to the extractive function. The system's existence depends on the suppression of the victim's agency, a hallmark of a Snare.
  */
 
 /* ==========================================================================
@@ -141,9 +160,9 @@ test(threshold_validation) :-
 % omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
     omega_child_marriage,
-    'To what extent is child marriage truly a choice versus a coerced outcome?',
-    'Longitudinal studies on the perceived autonomy of young brides and their long-term life satisfaction.',
-    'If a choice, the severity of the Snare is reduced; if coerced, the Snare classification is strengthened.',
+    'To what extent is the "beneficiary" view driven by genuine belief in social coordination versus direct economic desperation?',
+    'Comparative ethnographic studies correlating the prevalence of the practice with localized economic shocks versus stable cultural norms.',
+    'If primarily economic desperation, the constraint is a pure Snare of poverty. If primarily cultural belief, it has features of a degraded coordination system, making it a more complex Snare.',
     confidence_without_resolution(medium)
 ).
 
@@ -160,10 +179,9 @@ narrative_ontology:interval(child_marriage, 0, 10).
 
 % Temporal data enables drift detection (metric_substitution,
 % extraction_accumulation) by providing measurements at multiple time points.
-% Model how the constraint intensified or changed across the interval.
-%
 % Required for high-extraction constraints (base_extractiveness > 0.46).
-% Use at least 3 time points (T=0, midpoint, T=end) for each tracked metric.
+% The data models a slow intensification of the constraint's extractive nature
+% as external pressures (e.g., economic hardship) increase.
 %
 % Theater ratio over time (triggers metric_substitution detection):
 narrative_ontology:measurement(child_marriage_tr_t0, child_marriage, theater_ratio, 0, 0.10).
@@ -174,6 +192,22 @@ narrative_ontology:measurement(child_marriage_tr_t10, child_marriage, theater_ra
 narrative_ontology:measurement(child_marriage_ex_t0, child_marriage, base_extractiveness, 0, 0.70).
 narrative_ontology:measurement(child_marriage_ex_t5, child_marriage, base_extractiveness, 5, 0.73).
 narrative_ontology:measurement(child_marriage_ex_t10, child_marriage, base_extractiveness, 10, 0.75).
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA (v5.0-5.2)
+   ========================================================================== */
+
+% Coordination type (enables Boltzmann floor + complexity offset)
+% The practice is a mechanism for enforcing social norms and managing kinship ties.
+narrative_ontology:coordination_type(child_marriage, enforcement_mechanism).
+
+% Boltzmann floor override (only if domain knowledge justifies)
+% narrative_ontology:boltzmann_floor_override(child_marriage, 0.1).
+
+% Network relationships (structural influence edges)
+% Child marriage is structurally coupled with and negatively impacts access to
+% female education.
+narrative_ontology:affects_constraint(child_marriage, female_education_access).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

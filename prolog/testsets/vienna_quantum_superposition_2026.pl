@@ -22,6 +22,7 @@
     narrative_ontology:constraint_metric/3,
     narrative_ontology:interval/3,
     narrative_ontology:measurement/5,
+    narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -68,6 +69,9 @@ domain_priors:theater_ratio(vienna_quantum_superposition_2026, 0.15).
 narrative_ontology:constraint_metric(vienna_quantum_superposition_2026, extractiveness, 0.6).
 narrative_ontology:constraint_metric(vienna_quantum_superposition_2026, suppression_requirement, 0.88).
 narrative_ontology:constraint_metric(vienna_quantum_superposition_2026, theater_ratio, 0.15).
+
+% Constraint classification claim
+narrative_ontology:constraint_claim(vienna_quantum_superposition_2026, mountain).
 
 % Requires active enforcement via 2-meter interferometers and Earth-rotation 
 % compensation.

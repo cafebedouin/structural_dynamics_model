@@ -167,4 +167,77 @@ def lint_file(filepath):
             # Not an error if the bridge derives these, but flag as advisory
             pass  # Bridge auto-derives from metrics; no lint error needed
 
+    # 14. CONSTRAINT_CLAIM CHECK (v5.1)
+    # If file has constraint_classification/3, it must also have constraint_claim/2.
+    # The claim type must be one of the 6 valid classification types.
+    valid_claim_types = {'mountain', 'rope', 'tangled_rope', 'snare', 'scaffold', 'piton'}
+    if 'constraint_classification(' in content:
+        if 'constraint_claim(' not in content:
+            errors.append(
+                "MISSING_CLAIM: File declares constraint_classification/3 but no "
+                "constraint_claim/2. Add narrative_ontology:constraint_claim(id, Type) "
+                "where Type matches the analytical perspective classification."
+            )
+        else:
+            # Validate claim type is one of the 6 valid types.
+            # Only check ground atoms (lowercase first char) — skip Prolog
+            # variables (uppercase) used in test predicates.
+            claim_types = re.findall(
+                r'constraint_claim\(\s*\w+\s*,\s*(\w+)\s*\)', content)
+            for ct in claim_types:
+                if ct[0].isupper():
+                    continue  # Prolog variable, not a ground atom
+                if ct not in valid_claim_types:
+                    errors.append(
+                        f"INVALID_CLAIM_TYPE: constraint_claim type '{ct}' is not valid. "
+                        f"Must be one of: {sorted(valid_claim_types)}."
+                    )
+
+    # 15. COORDINATION_TYPE CONSISTENCY (v5.0)
+    # If coordination_type/2 is declared, validate the atom is one of the 4 valid types.
+    valid_coord_types = {
+        'information_standard', 'resource_allocation',
+        'enforcement_mechanism', 'global_infrastructure'
+    }
+    coord_type_matches = re.findall(
+        r"coordination_type\(\s*'?\w+'?\s*,\s*(\w+)\s*\)", content)
+    for ct in coord_type_matches:
+        if ct not in valid_coord_types:
+            errors.append(
+                f"INVALID_COORDINATION_TYPE: coordination_type value '{ct}' is not valid. "
+                f"Must be one of: {sorted(valid_coord_types)}."
+            )
+
+    # 16. AFFECTS_CONSTRAINT SELF-REFERENCE CHECK (v5.2)
+    # affects_constraint(X, X) is a self-referential error.
+    for match in re.finditer(
+            r"affects_constraint\(\s*'?(\w+)'?\s*,\s*'?(\w+)'?\s*\)", content):
+        source, target = match.group(1), match.group(2)
+        if source == target:
+            errors.append(
+                f"SELF_REFERENCE: affects_constraint({source}, {target}) is "
+                "self-referential. A constraint cannot structurally influence itself."
+            )
+        # Check that target is not a Prolog variable (starts with uppercase)
+        if target[0].isupper():
+            errors.append(
+                f"VARIABLE_IN_AFFECTS: affects_constraint({source}, {target}) uses "
+                "a variable as target. Both arguments must be ground atoms."
+            )
+
+    # 17. BOLTZMANN_FLOOR_OVERRIDE RANGE CHECK (v5.0)
+    for match in re.finditer(
+            r"boltzmann_floor_override\(\s*'?\w+'?\s*,\s*([\d.]+)\s*\)", content):
+        floor_val = float(match.group(1))
+        if floor_val < 0.0 or floor_val > 1.0:
+            errors.append(
+                f"INVALID_FLOOR_OVERRIDE: boltzmann_floor_override value {floor_val} "
+                "is out of range. Must be in [0.0, 1.0]."
+            )
+        if ext_val is not None and floor_val > ext_val:
+            errors.append(
+                f"FLOOR_EXCEEDS_EXTRACTION: boltzmann_floor_override ({floor_val}) "
+                f"exceeds base_extractiveness ({ext_val}). Floor should be <= extraction."
+            )
+
     return errors

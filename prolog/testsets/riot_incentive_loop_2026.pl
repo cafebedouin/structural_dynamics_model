@@ -22,6 +22,7 @@
     narrative_ontology:constraint_metric/3,
     narrative_ontology:interval/3,
     narrative_ontology:measurement/5,
+    narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -67,6 +68,9 @@ domain_priors:theater_ratio(riot_incentive_loop_2026, 0.90).
 narrative_ontology:constraint_metric(riot_incentive_loop_2026, extractiveness, 0.82).
 narrative_ontology:constraint_metric(riot_incentive_loop_2026, suppression_requirement, 0.85).
 narrative_ontology:constraint_metric(riot_incentive_loop_2026, theater_ratio, 0.9).
+
+% Constraint classification claim
+narrative_ontology:constraint_claim(riot_incentive_loop_2026, piton).
 
 % Requires active enforcement by federal tactical units (CBP, ICE, DHS).
 domain_priors:requires_active_enforcement(riot_incentive_loop_2026).
@@ -174,3 +178,12 @@ narrative_ontology:measurement(riot_ex_t10, riot_incentive_loop_2026, base_extra
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
+
+% ============================================================================
+% ENRICHMENT: Structural predicates for remaining gaps
+% Generated: 2026-02-08
+% Template: v5.2 namespace alignment
+% Source: Derived from narrative context in this file (riot_incentive_loop_2026)
+% ============================================================================
+constraint_beneficiary(riot_incentive_loop_2026, security_apparatus).
+constraint_victim(riot_incentive_loop_2026, civilian_protesters).

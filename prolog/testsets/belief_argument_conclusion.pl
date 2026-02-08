@@ -71,6 +71,7 @@ narrative_ontology:constraint_claim(belief_argument_conclusion, snare).
 domain_priors:base_extractiveness(belief_argument_conclusion, 0.70).
 domain_priors:suppression_score(belief_argument_conclusion, 0.80).
 domain_priors:theater_ratio(belief_argument_conclusion, 0.80). % Reflects performative justifications.
+domain_priors:requires_active_enforcement(belief_argument_conclusion).
 
 % Constraint metric facts (bridge for classification engine)
 narrative_ontology:constraint_metric(belief_argument_conclusion, extractiveness, 0.7).

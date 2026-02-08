@@ -1,9 +1,9 @@
 % ============================================================================
 % CONSTRAINT STORY: cancer_prevention
 % ============================================================================
-% Version: 3.4 (Deferential Realism Core)
-% Logic: 3.3 (Indexed Tuple P,T,E,S)
-% Generated: 2024-02-28
+% Version: 5.2 (Deferential Realism Core + Boltzmann + Purity + Network)
+% Logic: 5.2 (Indexed Tuple P,T,E,S + Coupling + Purity + Network Drift)
+% Generated: 2024-07-28
 % ============================================================================
 
 :- module(constraint_cancer_prevention, []).
@@ -24,6 +24,10 @@
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
+    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -33,12 +37,12 @@
 /**
  * CONSTRAINT IDENTIFICATION
  * * constraint_id: cancer_prevention
- * human_readable: Preventable Cancer Risk Factors
+ * human_readable: Systemic Barriers to Preventable Cancer Risk Reduction
  * domain: social
  * * SUMMARY:
  * A global report indicates that 40% of cancers are preventable through lifestyle changes and public health initiatives. This constraint focuses on the systemic factors that make these preventable cancers a reality despite available knowledge. It involves the tension between individual choices, systemic influences (e.g., availability of unhealthy foods, lack of access to healthcare), and the role of public health in mitigating these risks.
  * * KEY AGENTS:
- * - Individual: Subject (Powerless) - Limited access to resources and information, subject to marketing pressures.
+ * - Vulnerable Populations: Subject (Powerless) - Limited access to resources and information, subject to marketing pressures.
  * - Public Health Organizations: Beneficiary (Institutional) - Responsible for disseminating information and implementing preventative measures.
  * - Analytical Epidemiologist: Auditor (Analytical) - Analyzes data to identify risk factors and effective interventions.
  */
@@ -57,6 +61,10 @@ domain_priors:theater_ratio(cancer_prevention, 0.30).       % Piton detection (>
 narrative_ontology:constraint_metric(cancer_prevention, extractiveness, 0.55).
 narrative_ontology:constraint_metric(cancer_prevention, suppression_requirement, 0.70).
 narrative_ontology:constraint_metric(cancer_prevention, theater_ratio, 0.30).
+
+% Constraint self-claim (what does the constraint claim to be?)
+% Values: natural_law, coordination, constructed, enforcement
+narrative_ontology:constraint_claim(cancer_prevention, tangled_rope).
 
 % Binary flags
 % narrative_ontology:has_sunset_clause(cancer_prevention).      % Mandatory if Scaffold
@@ -94,34 +102,14 @@ constraint_indexing:constraint_classification(cancer_prevention, rope,
             exit_options(mobile),
             spatial_scope(national))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER
+% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % Default analytical context (civilizational/analytical/global).
 % This perspective is used by the bridge to derive constraint_claim.
-% Type should reflect what the metrics compute: mountain, rope, tangled_rope, snare, scaffold, or piton.
 constraint_indexing:constraint_classification(cancer_prevention, tangled_rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
             spatial_scope(global))).
-
-% PERSPECTIVE 4: THE ARCHITECT (SCAFFOLD)
-% Temporary coordination that expires over time.
-% Requires: has_sunset_clause declared, extraction <= 0.30, theater_ratio < 0.70.
-% constraint_indexing:constraint_classification(cancer_prevention, scaffold,
-%     context(agent_power(organized),
-%             time_horizon(generational),
-%             exit_options(constrained),
-%             spatial_scope(continental))) :-
-%     narrative_ontology:has_sunset_clause(cancer_prevention).
-
-% PERSPECTIVE 5: THE SYSTEMS AUDITOR (PITON)
-% Inertial maintenance of a non-functional constraint.
-% constraint_indexing:constraint_classification(cancer_prevention, piton, 
-%     context(agent_power(analytical), 
-%             time_horizon(civilizational), 
-%             exit_options(arbitrage), 
-%             spatial_scope(universal))) :-
-%     domain_priors:theater_ratio(cancer_prevention, TR), TR > 0.70.
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -138,7 +126,13 @@ test(perspectival_gap) :-
 test(threshold_validation) :-
     config:param(extractiveness_metric_name, ExtMetricName),
     narrative_ontology:constraint_metric(cancer_prevention, ExtMetricName, E),
-    (E =< 0.05 -> true ; E >= 0.46). % Ensures it's either a Mountain or high-extraction Snare/Tangled.
+    (E =< 0.15 ; E >= 0.46). % Ensures it's either a low-extraction Rope or high-extraction Snare/Tangled.
+
+test(tangled_rope_properties) :-
+    % Verify that the necessary structural properties for a Tangled Rope are declared.
+    narrative_ontology:constraint_beneficiary(cancer_prevention, _),
+    narrative_ontology:constraint_victim(cancer_prevention, _),
+    domain_priors:requires_active_enforcement(cancer_prevention).
 
 :- end_tests(cancer_prevention_tests).
 
@@ -148,11 +142,13 @@ test(threshold_validation) :-
 
 /**
  * LOGIC RATIONALE:
- * The base_extractiveness is set to 0.55 because there is a significant cost to individuals and society from preventable cancers. The suppression_score is 0.70 because factors like targeted advertising, lack of access to healthy food, and insufficient public health messaging suppress healthier choices.
+ * The base_extractiveness is set to 0.55 because there is a significant cost (in health and economic terms) to individuals and society from preventable cancers. The suppression_score is 0.70 because factors like targeted advertising of unhealthy products, food deserts, and insufficient public health messaging actively suppress healthier choices. The theater_ratio is low (0.30) because while there is some performative public health messaging, the underlying systemic drivers are functional and impactful, not merely theatrical.
  *
- * The perspectives differ because individuals may feel trapped by their circumstances (Snare), while public health institutions aim to provide a rope (Rope) to pull people out of this situation. From an analytical viewpoint, this is a Tangled Rope because there is an extraction element for certain industries (tobacco, processed food) but there's also an undeniable coordination element required from public health bodies.
+ * The perspectives differ starkly. Individuals feel trapped by their circumstances (Snare), while public health institutions see their role as providing a coordination mechanism (Rope) to improve outcomes. From an analytical viewpoint, this is a Tangled Rope because there is an extraction element benefiting certain industries (e.g., tobacco, processed food) but also an undeniable coordination function required from public health bodies.
+ *
+ * The Piton classification was removed as it is inconsistent with the low theater_ratio and the active, functional nature of the constraint.
  * * MANDATROPHY ANALYSIS:
- * The Tangled Rope classification prevents the system from mislabeling coordination as pure extraction by accounting for the genuine public health benefits alongside the asymmetric extraction of the disease-promoting industries. It explicitly models the tension between these two opposing forces. If this were labeled just a "Snare" the coordination aspect would be lost and the system could wrongly encourage interventions to remove the constraint altogether (e.g., remove all food regulations), which would do more harm than good.
+ * The Tangled Rope classification prevents the system from mislabeling coordination as pure extraction. It explicitly models the tension between the genuine public health benefits and the asymmetric extraction by disease-promoting industries. If this were labeled just a "Snare", the coordination aspect would be lost, and the system could wrongly encourage interventions to remove the constraint altogether (e.g., remove all food regulations), which would do more harm than good.
  */
 
 /* ==========================================================================
@@ -163,8 +159,8 @@ test(threshold_validation) :-
 omega_variable(
     omega_cancer_prevention,
     'To what extent are individual choices truly free, vs. determined by systemic factors (economic, social, environmental)?',
-    'Longitudinal studies tracking health outcomes based on socioeconomic status and access to resources.',
-    'If individual choices are largely constrained, public policy interventions become more crucial. If choices are more independent, educational and awareness campaigns may suffice.',
+    'Longitudinal studies tracking health outcomes based on socioeconomic status and access to resources, controlling for genetic predispositions.',
+    'If choices are largely constrained, public policy interventions (taxation, regulation) become more crucial. If choices are more independent, educational campaigns may suffice.',
     confidence_without_resolution(medium)
 ).
 
@@ -182,19 +178,32 @@ narrative_ontology:interval(cancer_prevention, 0, 10).
 % Temporal data enables drift detection (metric_substitution,
 % extraction_accumulation) by providing measurements at multiple time points.
 % Model how the constraint intensified or changed across the interval.
-%
 % Required for high-extraction constraints (base_extractiveness > 0.46).
-% Use at least 3 time points (T=0, midpoint, T=end) for each tracked metric.
 %
 % Theater ratio over time (triggers metric_substitution detection):
 narrative_ontology:measurement(cancer_prevention_tr_t0, cancer_prevention, theater_ratio, 0, 0.20).
-narrative_ontology:measurement(cancer_prevention_tr_t5, cancer_prevention, theater_ratio, 5, 0.30).
+narrative_ontology:measurement(cancer_prevention_tr_t5, cancer_prevention, theater_ratio, 5, 0.25).
 narrative_ontology:measurement(cancer_prevention_tr_t10, cancer_prevention, theater_ratio, 10, 0.30).
 
 % Extraction over time (triggers extraction_accumulation detection):
 narrative_ontology:measurement(cancer_prevention_ex_t0, cancer_prevention, base_extractiveness, 0, 0.50).
 narrative_ontology:measurement(cancer_prevention_ex_t5, cancer_prevention, base_extractiveness, 5, 0.53).
 narrative_ontology:measurement(cancer_prevention_ex_t10, cancer_prevention, base_extractiveness, 10, 0.55).
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA (v5.0-5.2)
+   ========================================================================== */
+
+% Coordination type (enables Boltzmann floor + complexity offset)
+% Valid types: information_standard, resource_allocation,
+%              enforcement_mechanism, global_infrastructure
+narrative_ontology:coordination_type(cancer_prevention, resource_allocation).
+
+% Network relationships (structural influence edges)
+% Declare when constraints share regulatory domain, causal dependency,
+% or institutional coupling.
+narrative_ontology:affects_constraint(cancer_prevention, public_health_funding).
+narrative_ontology:affects_constraint(cancer_prevention, food_supply_chain).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

@@ -25,6 +25,7 @@
     narrative_ontology:measurement/5,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -61,6 +62,9 @@ domain_priors:theater_ratio(ad_synaptic_deficit, 0.10).       % Primarily functi
 narrative_ontology:constraint_metric(ad_synaptic_deficit, extractiveness, 0.85).
 narrative_ontology:constraint_metric(ad_synaptic_deficit, suppression_requirement, 0.95).
 narrative_ontology:constraint_metric(ad_synaptic_deficit, theater_ratio, 0.1).
+
+% Constraint classification claim
+narrative_ontology:constraint_claim(ad_synaptic_deficit, mountain).
 
 % Mandatory keys for classification engine v3.4
 % These resolve the [FAIL] Schema mismatch by anchoring the measurement keys.

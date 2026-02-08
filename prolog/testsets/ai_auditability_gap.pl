@@ -20,6 +20,7 @@
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:has_sunset_clause/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -54,6 +55,9 @@ domain_priors:theater_ratio(ai_auditability_gap, 0.75). % Updated to satisfy Pit
 narrative_ontology:constraint_metric(ai_auditability_gap, extractiveness, 0.52).
 narrative_ontology:constraint_metric(ai_auditability_gap, suppression_requirement, 0.65).
 narrative_ontology:constraint_metric(ai_auditability_gap, theater_ratio, 0.75).
+
+% Constraint classification claim
+narrative_ontology:constraint_claim(ai_auditability_gap, tangled_rope).
 
 % Constraint metric facts used by classification engine v3.4
 domain_priors:requires_active_enforcement(ai_auditability_gap).

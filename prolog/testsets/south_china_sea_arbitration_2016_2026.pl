@@ -280,3 +280,28 @@ omega_variable(
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
+
+% ============================================================================
+% ENRICHMENT: Structural predicates for dynamic classification
+% Generated: 2026-02-08
+% Template: v5.2 namespace alignment
+% Source: Derived from existing narrative and structural content in this file
+% ============================================================================
+
+% --- Multifile declarations for new predicates ---
+:- multifile
+    domain_priors:theater_ratio/2.
+
+% --- Theater ratio (missing from base properties) ---
+% Structural constraint in legal domain — low theater, high substance
+domain_priors:theater_ratio(south_china_sea_arbitration_2016_2026, 0.04).
+narrative_ontology:constraint_metric(south_china_sea_arbitration_2016_2026, theater_ratio, 0.04).
+
+% --- Analytical perspective classification (missing) ---
+% chi = 0.45 * 1.15 (analytical) * 1.2 (global) = 0.621
+% Classification: rope
+constraint_indexing:constraint_classification(south_china_sea_arbitration_2016_2026, rope,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(global))).

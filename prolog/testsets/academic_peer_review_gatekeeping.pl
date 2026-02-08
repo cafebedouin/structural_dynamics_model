@@ -25,6 +25,7 @@
     narrative_ontology:measurement/5,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -59,6 +60,9 @@ domain_priors:theater_ratio(academic_peer_review_gatekeeping, 0.45).
 narrative_ontology:constraint_metric(academic_peer_review_gatekeeping, extractiveness, 0.75).
 narrative_ontology:constraint_metric(academic_peer_review_gatekeeping, suppression_requirement, 0.55).
 narrative_ontology:constraint_metric(academic_peer_review_gatekeeping, theater_ratio, 0.45).
+
+% Constraint classification claim
+narrative_ontology:constraint_claim(academic_peer_review_gatekeeping, tangled_rope).
 
 % Constraint metric facts
 domain_priors:requires_active_enforcement(academic_peer_review_gatekeeping).

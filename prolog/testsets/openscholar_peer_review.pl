@@ -24,6 +24,7 @@
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -57,6 +58,9 @@ domain_priors:theater_ratio(openscholar_peer_review, 0.30).       % Piton detect
 narrative_ontology:constraint_metric(openscholar_peer_review, extractiveness, 0.55).
 narrative_ontology:constraint_metric(openscholar_peer_review, suppression_requirement, 0.70).
 narrative_ontology:constraint_metric(openscholar_peer_review, theater_ratio, 0.30).
+
+% Constraint classification claim
+narrative_ontology:constraint_claim(openscholar_peer_review, tangled_rope).
 
 % Binary flags
 % narrative_ontology:has_sunset_clause(openscholar_peer_review).      % Mandatory if Scaffold

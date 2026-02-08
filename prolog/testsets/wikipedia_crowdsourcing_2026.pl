@@ -18,6 +18,7 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -69,6 +70,9 @@ domain_priors:suppression_score(wikipedia_crowdsourcing_2026, 0.4).
 % Constraint metric facts (bridge for classification engine)
 narrative_ontology:constraint_metric(wikipedia_crowdsourcing_2026, extractiveness, 0.05).
 narrative_ontology:constraint_metric(wikipedia_crowdsourcing_2026, suppression_requirement, 0.4).
+
+% Constraint classification claim
+narrative_ontology:constraint_claim(wikipedia_crowdsourcing_2026, mountain).
 
 % Enforcement requirements
 % Requires active enforcement (The "clever system" of editor hierarchy).
@@ -260,3 +264,19 @@ omega_variable(
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
+
+% ============================================================================
+% ENRICHMENT: Structural predicates for dynamic classification
+% Generated: 2026-02-08
+% Template: v5.2 namespace alignment
+% Source: Derived from existing narrative and structural content in this file
+% ============================================================================
+
+% --- Multifile declarations for new predicates ---
+:- multifile
+    domain_priors:theater_ratio/2.
+
+% --- Theater ratio (missing from base properties) ---
+% Technical constraint — mostly substantive, minimal implementation theater
+domain_priors:theater_ratio(wikipedia_crowdsourcing_2026, 0.04).
+narrative_ontology:constraint_metric(wikipedia_crowdsourcing_2026, theater_ratio, 0.04).

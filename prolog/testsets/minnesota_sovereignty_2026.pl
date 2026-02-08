@@ -24,6 +24,7 @@
     narrative_ontology:measurement/5,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -66,6 +67,9 @@ domain_priors:theater_ratio(minnesota_sovereignty_2026, 0.75).
 narrative_ontology:constraint_metric(minnesota_sovereignty_2026, extractiveness, 0.68).
 narrative_ontology:constraint_metric(minnesota_sovereignty_2026, suppression_requirement, 0.92).
 narrative_ontology:constraint_metric(minnesota_sovereignty_2026, theater_ratio, 0.75).
+
+% Constraint classification claim
+narrative_ontology:constraint_claim(minnesota_sovereignty_2026, piton).
 
 % Primary keys for the classification engine
 % Active enforcement is the core of this constraint.

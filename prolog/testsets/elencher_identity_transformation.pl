@@ -18,6 +18,7 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -50,7 +51,7 @@
 
 % Required for [STEP 1] and [STEP 2] of the DR-Audit Suite
 narrative_ontology:interval(elencher_identity_transformation, 0, 10).
-narrative_ontology:constraint_claim([elencher_identity_transformation], [philosophical_mandate]).
+narrative_ontology:constraint_claim(elencher_identity_transformation, mountain).
 
 % Base extractiveness score (0.0 = no extraction, 1.0 = full extraction)
 % Rationale: The Elench seek to be changed *by* the other, not to change the other. 
@@ -260,3 +261,19 @@ omega_variable(
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
+
+% ============================================================================
+% ENRICHMENT: Structural predicates for dynamic classification
+% Generated: 2026-02-08
+% Template: v5.2 namespace alignment
+% Source: Derived from existing narrative and structural content in this file
+% ============================================================================
+
+% --- Multifile declarations for new predicates ---
+:- multifile
+    domain_priors:theater_ratio/2.
+
+% --- Theater ratio (missing from base properties) ---
+% Technical constraint — mostly substantive, minimal implementation theater
+domain_priors:theater_ratio(elencher_identity_transformation, 0.06).
+narrative_ontology:constraint_metric(elencher_identity_transformation, theater_ratio, 0.06).

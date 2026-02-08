@@ -24,6 +24,7 @@
     narrative_ontology:measurement/5,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -67,6 +68,9 @@ domain_priors:theater_ratio(axiom_reasoner_2026, 0.08).
 narrative_ontology:constraint_metric(axiom_reasoner_2026, extractiveness, 0.48).
 narrative_ontology:constraint_metric(axiom_reasoner_2026, suppression_requirement, 0.35).
 narrative_ontology:constraint_metric(axiom_reasoner_2026, theater_ratio, 0.08).
+
+% Constraint classification claim
+narrative_ontology:constraint_claim(axiom_reasoner_2026, mountain).
 
 % Primary keys for the classification engine
 % High-extraction stakeholders (E > 0.46)

@@ -231,3 +231,33 @@ test(multi_perspective_variance) :-
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
+% ============================================================================
+% ENRICHMENT: Structural predicates for dynamic classification
+% Generated: 2026-02-08
+% Template: v5.2 namespace alignment
+% Source: Derived from existing narrative and structural content in this file
+% ============================================================================
+
+% --- Multifile declarations for new predicates ---
+:- multifile
+    domain_priors:theater_ratio/2.
+
+% --- Theater ratio (missing from base properties) ---
+% Formal truth — substantive with near-zero performative component
+domain_priors:theater_ratio(shannon_entropy_limit, 0.0).
+narrative_ontology:constraint_metric(shannon_entropy_limit, theater_ratio, 0.0).
+
+% ============================================================================
+% ENRICHMENT: Structural predicates for remaining gaps
+% Generated: 2026-02-08
+% Template: v5.2 namespace alignment
+% Source: Derived from narrative context in this file (shannon_entropy_limit)
+% ============================================================================
+
+omega_variable(
+    omega_quantum_channel_capacity,
+    "Does quantum information theory reveal channel capacities that fundamentally exceed Shannon's classical limits?",
+    "Experimental verification of quantum channel coding theorems and practical quantum error correction demonstrations.",
+    "If exceeded: The classical Mountain has a quantum escape route. If not: Shannon's limits remain absolute.",
+    confidence_without_resolution(high)
+).

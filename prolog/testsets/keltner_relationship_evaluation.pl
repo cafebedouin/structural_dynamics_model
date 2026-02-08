@@ -19,6 +19,7 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -72,6 +73,9 @@ domain_priors:suppression_score(keltner_relationship_evaluation, 0.45).
 % Constraint metric facts (bridge for classification engine)
 narrative_ontology:constraint_metric(keltner_relationship_evaluation, extractiveness, 0.35).
 narrative_ontology:constraint_metric(keltner_relationship_evaluation, suppression_requirement, 0.45).
+
+% Constraint classification claim
+narrative_ontology:constraint_claim(keltner_relationship_evaluation, mountain).
 
 % Enforcement: Requires active maintenance (Truthful answering).
 domain_priors:requires_active_enforcement(keltner_relationship_evaluation).
@@ -325,3 +329,19 @@ test(power_extractiveness_evaluation) :-
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
+
+% ============================================================================
+% ENRICHMENT: Structural predicates for dynamic classification
+% Generated: 2026-02-08
+% Template: v5.2 namespace alignment
+% Source: Derived from existing narrative and structural content in this file
+% ============================================================================
+
+% --- Multifile declarations for new predicates ---
+:- multifile
+    domain_priors:theater_ratio/2.
+
+% --- Theater ratio (missing from base properties) ---
+% Structural constraint in social domain — low theater, high substance
+domain_priors:theater_ratio(keltner_relationship_evaluation, 0.05).
+narrative_ontology:constraint_metric(keltner_relationship_evaluation, theater_ratio, 0.05).

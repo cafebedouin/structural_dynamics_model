@@ -1,9 +1,9 @@
 % ============================================================================
 % CONSTRAINT STORY: rare_earth_dependency
 % ============================================================================
-% Version: 3.4 (Deferential Realism Core)
-% Logic: 3.3 (Indexed Tuple P,T,E,S)
-% Generated: 2024-02-29
+% Version: 5.2 (Deferential Realism Core + Boltzmann + Purity + Network)
+% Logic: 5.2 (Indexed Tuple P,T,E,S + Coupling + Purity + Network Drift)
+% Generated: 2024-07-15
 % ============================================================================
 
 :- module(constraint_rare_earth_dependency, []).
@@ -24,6 +24,10 @@
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
+    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -33,14 +37,14 @@
 /**
  * CONSTRAINT IDENTIFICATION
  * * constraint_id: rare_earth_dependency
- * human_readable: Rare Earth Element Dependency
- * domain: economic
+ * human_readable: Strategic Rare Earth Element Dependency
+ * domain: economic/geopolitical
  * * SUMMARY:
- * Japan's reliance on China for rare earth elements (REEs) creates a strategic vulnerability.  The discovery of deep-sea sediment REE deposits offers a potential alternative source, but extraction is technically challenging and may have environmental consequences.
+ * A nation's strategic reliance on a single foreign power for critical resources, such as rare earth elements (REEs), creates a significant economic and security vulnerability. This dependency can be weaponized through export controls, price manipulation, or supply disruption, effectively extracting geopolitical concessions or economic rent. The constraint is maintained by high barriers to entry for alternative suppliers, including geological scarcity, technical challenges in extraction/processing, and long investment timelines.
  * * KEY AGENTS:
- * - Japanese Manufacturers: Subject (Powerless)
- * - Chinese Government: Beneficiary (Institutional)
- * - Global Analysts: Auditor (Analytical)
+ * - Dependent Nation's Industries (e.g., Japanese Manufacturers): Subject (Powerless)
+ * - Dominant Supplier Nation (e.g., Chinese Government): Beneficiary (Institutional)
+ * - International Trade Analysts: Auditor (Analytical)
  */
 
 /* ==========================================================================
@@ -58,17 +62,20 @@ narrative_ontology:constraint_metric(rare_earth_dependency, extractiveness, 0.60
 narrative_ontology:constraint_metric(rare_earth_dependency, suppression_requirement, 0.70).
 narrative_ontology:constraint_metric(rare_earth_dependency, theater_ratio, 0.20).
 
+% Constraint self-claim (what does the constraint claim to be?)
+% Values: natural_law, coordination, constructed, enforcement
+narrative_ontology:constraint_claim(rare_earth_dependency, tangled_rope).
+
 % Binary flags
 % narrative_ontology:has_sunset_clause(rare_earth_dependency).      % Mandatory if Scaffold
-% domain_priors:requires_active_enforcement(rare_earth_dependency). % Required for Tangled Rope
+domain_priors:requires_active_enforcement(rare_earth_dependency). % Required for Tangled Rope
 
 % Structural property derivation hooks:
 %   has_coordination_function/1 is DERIVED from constraint_beneficiary/2
 %   has_asymmetric_extraction/1 is DERIVED from constraint_victim/2
 % Both are required for Tangled Rope. Coordination is also required for Scaffold.
-narrative_ontology:constraint_beneficiary(rare_earth_dependency, chinese_government).
-narrative_ontology:constraint_victim(rare_earth_dependency, japanese_manufacturers).
-domain_priors:requires_active_enforcement(rare_earth_dependency).
+narrative_ontology:constraint_beneficiary(rare_earth_dependency, dominant_supplier_nation).
+narrative_ontology:constraint_victim(rare_earth_dependency, dependent_nations_industries).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
@@ -78,56 +85,30 @@ domain_priors:requires_active_enforcement(rare_earth_dependency).
                     continental=1.1, global=1.2, universal=1.0.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE SUBJECT (SNARE/MOUNTAIN)
-% High extraction felt as an immutable limit or predatory trap.
-% NOTE: This may be upgraded to 'organized' power if a critical mass of victims exists.
-%
-% UNIFORM-TYPE EXCEPTION: For natural law constraints (mountain-only) or pure
-% coordination constraints (rope-only), perspectives 1 and 2 may use any power
-% atoms — the classification is the same from all perspectives.  Include at
-% least 2-3 perspectives to demonstrate the invariance.
+% PERSPECTIVE 1: THE SUBJECT (SNARE)
+% High extraction felt as a predatory trap with no immediate escape.
 constraint_indexing:constraint_classification(rare_earth_dependency, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
-            spatial_scope(national))).
+            spatial_scope(global))). % Global market context amplifies extraction
 
 % PERSPECTIVE 2: THE BENEFICIARY (ROPE)
-% Viewed as essential infrastructure or coordination.
+% Viewed as a legitimate tool of economic statecraft and a valuable trade relationship.
 constraint_indexing:constraint_classification(rare_earth_dependency, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(mobile),
-            spatial_scope(national))).
+            spatial_scope(global))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER
+% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
 % Default analytical context (civilizational/analytical/global).
-% This perspective is used by the bridge to derive constraint_claim.
-% Type should reflect what the metrics compute: mountain, rope, tangled_rope, snare, scaffold, or piton.
+% Recognizes both the coordination function (trade) and the asymmetric extraction (geopolitical leverage).
 constraint_indexing:constraint_classification(rare_earth_dependency, tangled_rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
             spatial_scope(global))).
-
-% PERSPECTIVE 4: THE ARCHITECT (SCAFFOLD)
-% Temporary coordination that expires over time.
-% Requires: has_sunset_clause declared, extraction <= 0.30, theater_ratio < 0.70.
-% constraint_indexing:constraint_classification(rare_earth_dependency, scaffold,
-%     context(agent_power(organized),
-%             time_horizon(generational),
-%             exit_options(constrained),
-%             spatial_scope(continental))) :-
-%     narrative_ontology:has_sunset_clause(rare_earth_dependency).
-
-% PERSPECTIVE 5: THE SYSTEMS AUDITOR (PITON)
-% Inertial maintenance of a non-functional constraint.
-% constraint_indexing:constraint_classification(rare_earth_dependency, piton, 
-%     context(agent_power(analytical), 
-%             time_horizon(civilizational), 
-%             exit_options(arbitrage), 
-%             spatial_scope(universal))) :-
-%     domain_priors:theater_ratio(rare_earth_dependency, TR), TR > 0.70.
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -141,10 +122,14 @@ test(perspectival_gap) :-
     constraint_indexing:constraint_classification(rare_earth_dependency, TypeInstitutional, context(agent_power(institutional), _, _, _)),
     TypePowerless \= TypeInstitutional.
 
+test(tangled_rope_conditions) :-
+    % The analytical observer must see this as a tangled_rope.
+    constraint_indexing:constraint_classification(rare_earth_dependency, tangled_rope, context(agent_power(analytical), _, _, _)).
+
 test(threshold_validation) :-
-    config:param(extractiveness_metric_name, ExtMetricName),
-    narrative_ontology:constraint_metric(rare_earth_dependency, ExtMetricName, E),
-    (E =< 0.05 -> true ; E >= 0.46). % Ensures it's either a Mountain or high-extraction Snare/Tangled.
+    % Ensures it's a high-extraction constraint.
+    narrative_ontology:constraint_metric(rare_earth_dependency, extractiveness, E),
+    E >= 0.46.
 
 :- end_tests(rare_earth_dependency_tests).
 
@@ -154,9 +139,12 @@ test(threshold_validation) :-
 
 /**
  * LOGIC RATIONALE:
- * The dependency on China for REEs is classified as a Snare from the perspective of Japanese manufacturers, as they are vulnerable to supply disruptions and price manipulation. From the Chinese government's perspective, it appears as a Rope because it provides them with economic and political leverage.  However, an analytical observer sees this as a Tangled Rope.  While there is a clear beneficiary and victim, the trade relationship does involve some coordination, specifically economic benefits to both parties (China selling, Japan receiving). However, the significant asymmetric power makes this more than just a simple rope. The reliance on China creates vulnerabilities that Japan is actively trying to mitigate, indicating that extraction exceeds pure coordination.
+ * The base extractiveness (0.60) and suppression (0.70) reflect the high strategic cost and lack of immediate alternatives for dependent nations.
+ * - For a powerless industry (e.g., Japanese manufacturer), the dependency is a Snare. Their operations are trapped by the risk of supply cuts, leading to high effective extraction (χ = 0.60 * 1.5 * 1.2 = 1.08).
+ * - For the institutional beneficiary (e.g., Chinese state), it's a Rope. It's a tool for coordination and economic benefit, with the extractive nature being a feature, not a bug. Their power drastically reduces the felt extraction (χ = 0.60 * -0.2 * 1.2 = -0.144), appearing as a net benefit.
+ * - The analytical observer classifies it as a Tangled Rope. It has a genuine coordination function (a global trade market for a necessary resource) but also features clear asymmetric extraction and requires active enforcement (export quotas, state control) to maintain. This classification correctly captures the dual nature of the relationship, preventing a misclassification as a pure Snare (which would ignore the trade benefits) or a pure Rope (which would ignore the coercive power imbalance).
  * * MANDATROPHY ANALYSIS:
- * The Tangled Rope classification prevents the system from mislabeling coordination as pure extraction. The enforcement element reflects the inherent coercion and the active attempts to control or break free from the constraint. The presence of a beneficiary (China) and a victim (Japan) combined with active enforcement mechanisms pushes this away from being a neutral Rope or simple market dynamic.
+ * The Tangled Rope classification is critical here. A simpler model might view this as a pure Snare, but that would miss the fact that the dependent nations *do* receive vital resources, making it a functional (if coercive) system. The `requires_active_enforcement` flag, coupled with the clear beneficiary/victim roles, confirms the hybrid nature. The system isn't just passively extractive; it's an actively managed system of strategic leverage built on a coordination backbone.
  */
 
 /* ==========================================================================
@@ -166,9 +154,9 @@ test(threshold_validation) :-
 % omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
     omega_rare_earth_dependency,
-    'To what extent will Japan succeed in diversifying its REE supply chains, including developing domestic deep-sea resources?',
-    'Long-term monitoring of REE import data and Japanese investment in alternative sourcing and processing technologies.',
-    'If successful: constraint shifts towards a rope or is eliminated. If unsuccessful: constraint remains a snare or worsens.',
+    'Will technological breakthroughs (e.g., new magnet tech without REEs, efficient recycling) disrupt the fundamental demand for these elements faster than new supplies can be brought online?',
+    'Monitoring R&D in materials science and tracking adoption rates of REE-free technologies in key sectors (EVs, wind turbines).',
+    'If True: The constraint dissolves or becomes a Piton as the dependency becomes irrelevant. If False: The constraint remains a potent Tangled Rope/Snare.',
     confidence_without_resolution(medium)
 ).
 
@@ -183,22 +171,30 @@ narrative_ontology:interval(rare_earth_dependency, 0, 10).
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Temporal data enables drift detection (metric_substitution,
-% extraction_accumulation) by providing measurements at multiple time points.
-% Model how the constraint intensified or changed across the interval.
+% Temporal data models the intensification of this dependency over the last decade,
+% as REEs became more critical for green and digital technologies.
 %
-% Required for high-extraction constraints (base_extractiveness > 0.46).
-% Use at least 3 time points (T=0, midpoint, T=end) for each tracked metric.
-%
-% Theater ratio over time (triggers metric_substitution detection):
+% Theater ratio over time (remains low as this is a functional, not performative, constraint):
 narrative_ontology:measurement(rare_earth_dependency_tr_t0, rare_earth_dependency, theater_ratio, 0, 0.10).
-narrative_ontology:measurement(rare_earth_dependency_tr_t5, rare_earth_dependency, theater_ratio, 5, 0.20).
+narrative_ontology:measurement(rare_earth_dependency_tr_t5, rare_earth_dependency, theater_ratio, 5, 0.15).
 narrative_ontology:measurement(rare_earth_dependency_tr_t10, rare_earth_dependency, theater_ratio, 10, 0.20).
 
-% Extraction over time (triggers extraction_accumulation detection):
+% Extraction over time (increases as geopolitical leverage is recognized and applied):
 narrative_ontology:measurement(rare_earth_dependency_ex_t0, rare_earth_dependency, base_extractiveness, 0, 0.50).
 narrative_ontology:measurement(rare_earth_dependency_ex_t5, rare_earth_dependency, base_extractiveness, 5, 0.55).
 narrative_ontology:measurement(rare_earth_dependency_ex_t10, rare_earth_dependency, base_extractiveness, 10, 0.60).
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA (v5.0-5.2)
+   ========================================================================== */
+
+% Coordination type (enables Boltzmann floor + complexity offset)
+% This dependency functions as a mechanism for controlling resource allocation.
+narrative_ontology:coordination_type(rare_earth_dependency, resource_allocation).
+
+% Network relationships (structural influence edges)
+% The supply of REEs is a direct upstream dependency for semiconductor manufacturing.
+narrative_ontology:affects_constraint(rare_earth_dependency, semiconductor_supply_chain).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

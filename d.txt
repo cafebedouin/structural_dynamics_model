@@ -1,0 +1,2763 @@
+% ============================================================================
+% CONSTRAINT STORY: damped_harmonics
+% ============================================================================
+% Generated: 2026-01-19
+% Model: Gemini 2.0 Flash
+% Source: Classical Mechanics / Differential Equations
+% ============================================================================
+
+:- module(constraint_damped_harmonics, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:constraint_metric/3,
+    constraint_indexing:constraint_classification/3.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ * * constraint_id: damped_harmonics
+ * human_readable: Damped Harmonic Motion
+ * domain: physics/technological
+ * temporal_scope: 17th Century - Present
+ * spatial_scope: Universal (Physical Systems)
+ * * SUMMARY:
+ * Damped harmonic motion describes an oscillatory system where the amplitude
+ * decreases over time due to dissipative forces (friction, air resistance,
+ * or internal viscosity). It is the inevitable transition from kinetic energy
+ * to thermal entropy.
+ * * KEY AGENTS:
+ * - The Oscillator (Mass/Pendulum): The powerless subject following the
+ * second-order differential equation.
+ * - The Mechanical Engineer: An institutional agent who "tunes" the damping
+ * ratio to ensure system stability.
+ * - The Signal Analyst: An analytical observer measuring the rate of
+ * information decay in a transmission medium.
+ * * NARRATIVE ARC:
+ * In the vacuum of pure theory, an oscillator lives forever as a Mountain
+ * of perpetual motion. In the real world, "Damping" is the first law of
+ * physical constraints. For the car passenger, the shock absorber is a
+ * "Rope" of comfort and coordination. For the high-speed data packet,
+ * signal damping is a "Snare" that extracts clarity, forcing the
+ * re-investment of power to bridge the distance.
+ */
+
+/* ==========================================================================
+   2. BASE PROPERTIES
+   ========================================================================== */
+
+% Structural Anchor for index extraction
+narrative_ontology:interval(damped_harmonics, 1687, 2026).
+narrative_ontology:constraint_claim(damped_harmonics, mountain).
+
+% Base extractiveness score (0.0-1.0)
+% Rationale: 0.25. Friction/Damping "takes" kinetic energy from the
+% system and converts it to heat, which is functionally extractive
+% in mechanical contexts.
+domain_priors:base_extractiveness(damped_harmonics, 0.25).
+
+% Suppression score (0.0-1.0)
+% Rationale: 0.1. Damping is widely understood; it does not hide
+% its presence, though it renders "Ideal" perpetual motion invisible.
+domain_priors:suppression_score(damped_harmonics, 0.1).
+
+% Constraint metric facts (bridge for classification engine)
+narrative_ontology:constraint_metric(damped_harmonics, extractiveness, 0.25).
+narrative_ontology:constraint_metric(damped_harmonics, suppression_requirement, 0.1).
+
+% Enforcement: Emerges naturally from the Second Law of Thermodynamics.
+domain_priors:emerges_naturally(damped_harmonics).
+
+% Metrics
+% BENEFICIARIES & VICTIMS
+constraint_beneficiary(damped_harmonics, structural_safety). % Prevents resonant collapse.
+constraint_victim(damped_harmonics, energy_efficiency). % Energy lost to heat.
+
+/* ==========================================================================
+   3. INDEXED CLASSIFICATIONS
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 1: THE OSCILLATING MASS - Mountain
+   --------------------------------------------------------------------------
+   WHO: powerless - The particle has no agency over the viscous force.
+   WHEN: immediate - The force acts instantaneously proportional to velocity.
+   WHERE: trapped - Bound by the physical medium (fluid/air).
+   SCOPE: local - Immediate physical environment.
+
+   WHY THIS CLASSIFICATION:
+   For the physical object, the decay of its motion is a natural law. It cannot
+   "choose" to ignore friction. The transition from $x(t)$ to equilibrium is
+   an unyielding geometric fate.
+   -------------------------------------------------------------------------- */
+
+
+
+constraint_indexing:constraint_classification(
+    damped_harmonics,
+    mountain,
+    context(
+        agent_power(powerless),
+        time_horizon(immediate),
+        exit_options(trapped),
+        spatial_scope(local)
+    )
+) :- !.
+
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 2: THE AUTOMOTIVE ENGINEER - Rope
+   --------------------------------------------------------------------------
+   WHO: institutional - Power to design the damping coefficient ($c$).
+   WHEN: biographical - Planning the lifecycle and safety of a vehicle.
+   WHERE: mobile - Can adjust valve sizes or fluid viscosity to "exit" instability.
+   SCOPE: global - Applies to all units in a fleet.
+
+   WHY THIS CLASSIFICATION:
+   Damping is a functional coordination tool. By choosing "Critical Damping,"
+   the engineer ensures the car returns to equilibrium as fast as possible
+   without oscillation, providing safety and performance.
+   -------------------------------------------------------------------------- */
+
+
+
+constraint_indexing:constraint_classification(
+    damped_harmonics,
+    rope,
+    context(
+        agent_power(institutional),
+        time_horizon(biographical),
+        exit_options(mobile),
+        spatial_scope(global)
+    )
+) :- !.
+
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 3: THE WEAK ACOUSTIC SIGNAL - Snare
+   --------------------------------------------------------------------------
+   WHO: powerless - The signal "packet" is destroyed by the medium.
+   WHEN: immediate - Every meter of travel extracts more amplitude.
+   WHERE: constrained - The signal must pass through the high-resistance path.
+   SCOPE: local - The segment of the wire or air.
+
+   WHY THIS CLASSIFICATION:
+   In high-resistance contexts, damping "strangles" the signal. It extracts
+   information value from the carrier, forcing the use of expensive repeaters
+   (extraction of capital) just to survive the distance.
+   -------------------------------------------------------------------------- */
+
+constraint_indexing:constraint_classification(
+    damped_harmonics,
+    snare,
+    context(
+        agent_power(powerless),
+        time_horizon(immediate),
+        exit_options(constrained),
+        spatial_scope(local)
+    )
+) :-
+    domain_priors:base_extractiveness(damped_harmonics, E),
+    E >= 0.2,
+    !.
+
+/* ==========================================================================
+   4. TESTS
+   ========================================================================= */
+
+:- begin_tests(damped_harmonics_tests).
+
+test(perspective_shift) :-
+    % The Mass sees a Mountain; the Engineer sees a Rope.
+    constraint_indexing:constraint_classification(damped_harmonics, mountain, context(powerless, immediate, trapped, local)),
+    constraint_indexing:constraint_classification(damped_harmonics, rope, context(institutional, biographical, mobile, global)).
+
+test(extraction_logic) :-
+    % Signals in a medium should feel the "Snare" effect of energy loss.
+    constraint_indexing:constraint_classification(damped_harmonics, snare, context(powerless, immediate, constrained, local)).
+
+test(natural_emergence) :-
+    domain_priors:emerges_naturally(damped_harmonics).
+
+:- end_tests(damped_harmonics_tests).
+
+/* ==========================================================================
+   5. MODEL INTERPRETATION (Commentary)
+   ========================================================================== */
+
+/**
+ * LLM GENERATION NOTES
+ * * Model: Gemini 2.0 Flash
+ * * KEY DECISIONS:
+ * 1. CLASSIFICATION: Damping is a unique physical constraint because it is
+ * the "enforcer" of equilibrium. I classified it as a Mountain for the
+ * subject but a Rope for the designer.
+ * 2. EXTRACTIVENESS: Set at 0.25 to reflect the "heat tax" of thermodynamics.
+ * 3. PERSPECTIVES: Chose the "Automotive Engineer" to represent the peak
+ * utility of the "Rope" classification (stability).
+ */
+
+% OMEGA IDENTIFICATION
+omega_variable(
+    linearity_assumption,
+    'Does the \'Mountain\' remain stable if the damping is non-linear (e.g., quadratic air resistance)?',
+    resolution_mechanism('Compare $F propto v$ with $F propto v^2$ in high-velocity contexts.'),
+    impact('If non-linear: The \'Rope\' becomes a chaotic \'Snare\' for predictability.'),
+    confidence_without_resolution(medium)
+).
+
+omega_variable(
+    active_damping_failure,
+    'What happens when the \'Rope\' (active suspension) loses power?',
+    resolution_mechanism('Simulation of damping loss in 100-story skyscrapers.'),
+    impact('If failure: The Mountain of resonance returns to destroy the system.'),
+    confidence_without_resolution(high)
+).
+
+/* ==========================================================================
+   6. ALTERNATIVE ANALYSIS
+   ========================================================================== */
+
+/**
+ * VIABLE ALTERNATIVES
+ * * ALTERNATIVE 1: Active Resonance (Energy Injection)
+ * Viability: Counteracting damping with external power (e.g., clock escapement).
+ * Suppression: Rejected in most passive safety designs due to reliability risk.
+ * * ALTERNATIVE 2: Superfluidity / Superconductivity
+ * Viability: Elimination of damping through phase transitions.
+ * Suppression: Not viable at STP (Standard Temperature/Pressure).
+ * * CONCLUSION:
+ * At standard scales, Damping is an inescapable Mountain. Attempts to
+ * suppress it (Alternatives) require high-power institutional "Ropes."
+ */
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+% Load: ?- [damped_harmonics].
+% Analyze: ?- constraint_indexing:multi_index_report(damped_harmonics).
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */
+% ============================================================================
+% CONSTRAINT STORY: dark_patterns_manipulation
+% ============================================================================
+% Version: 5.2 (Deferential Realism Core + Boltzmann + Purity + Network)
+% Logic: 5.2 (Indexed Tuple P,T,E,S + Coupling + Purity + Network Drift)
+% Generated: 2024-07-28
+% ============================================================================
+
+:- module(constraint_dark_patterns_manipulation, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
+    narrative_ontology:boltzmann_floor_override/2,
+    constraint_indexing:constraint_classification/3.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ * * constraint_id: dark_patterns_manipulation
+ * human_readable: Dark Patterns (Interface Coercion)
+ * domain: technological/economic
+ * * SUMMARY:
+ * Dark patterns exploit cognitive biases (like loss aversion or the default
+ * effect) to steer user behavior toward outcomes that benefit the platform
+ * but harm the user. They are the "shadow side" of Information Foraging Theory,
+ * turning the interface from a transparent tool into a psychological Snare.
+ * * KEY AGENTS:
+ * - The User: Subject (Powerless)
+ * - The Platform/Growth Hacker: Beneficiary (Institutional)
+ * - The Ethical Designer/Regulator: Auditor (Analytical)
+ */
+
+/* ==========================================================================
+   2. BASE PROPERTIES (DOMAIN PRIORS)
+   ========================================================================== */
+
+% Numerical anchors for v3.4 thresholds
+domain_priors:base_extractiveness(dark_patterns_manipulation, 0.85). % High; designed to extract value (money, data, attention) through deception.
+domain_priors:suppression_score(dark_patterns_manipulation, 0.90).   % High; exit options (e.g., 'Cancel Subscription') are intentionally hidden or made difficult.
+domain_priors:theater_ratio(dark_patterns_manipulation, 0.10).       % Low; the manipulation is functional, not performative.
+
+% Constraint metric facts — primary keys used by the classification engine.
+narrative_ontology:constraint_metric(dark_patterns_manipulation, extractiveness, 0.85).
+narrative_ontology:constraint_metric(dark_patterns_manipulation, suppression_requirement, 0.90).
+narrative_ontology:constraint_metric(dark_patterns_manipulation, theater_ratio, 0.10).
+
+% Constraint self-claim (what does the constraint claim to be?)
+% Claims to be a constructed feature for optimization or better user flow.
+narrative_ontology:constraint_claim(dark_patterns_manipulation, constructed).
+
+% Binary flags
+domain_priors:requires_active_enforcement(dark_patterns_manipulation). % Requires active design and implementation by the platform.
+
+% Structural property derivation hooks:
+narrative_ontology:constraint_beneficiary(dark_patterns_manipulation, platform_operator).
+narrative_ontology:constraint_victim(dark_patterns_manipulation, platform_user).
+
+/* ==========================================================================
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × π(P) × σ(S)
+   ========================================================================== */
+
+% PERSPECTIVE 1: THE USER (SNARE)
+% For a user trying to delete an account, the interface is a "Snare."
+% The "Confirm Deletion" button is grayed out, hidden behind five menus,
+% or requires a physical phone call. The platform strangles their
+% exit option to keep their "active user" metric high.
+constraint_indexing:constraint_classification(dark_patterns_manipulation, snare,
+    context(agent_power(powerless),
+            time_horizon(immediate),
+            exit_options(trapped),
+            spatial_scope(local))).
+
+% PERSPECTIVE 2: THE PLATFORM / GROWTH HACKER (ROPE)
+% To the product manager, these patterns are a "Rope." They are the
+% coordination tools used to "nudge" users toward the "desired"
+% business outcome (e.g., higher subscription retention). They see it as a
+% necessary strategy for survival in a hyper-competitive attention economy.
+constraint_indexing:constraint_classification(dark_patterns_manipulation, rope,
+    context(agent_power(institutional),
+            time_horizon(biographical),
+            exit_options(mobile),
+            spatial_scope(regional))).
+
+% PERSPECTIVE 3: THE ETHICAL DESIGNER / REGULATOR (MOUNTAIN)
+% The analytical observer sees the potential for these patterns as a "Mountain" of
+% psychological vulnerability. Human cognitive biases (loss aversion, default bias)
+% are immutable. The fact that they *can* be exploited is a feature of our biological
+% nature that designers must either respect or abuse.
+constraint_indexing:constraint_classification(dark_patterns_manipulation, mountain,
+    context(agent_power(analytical),
+            time_horizon(historical),
+            exit_options(analytical),
+            spatial_scope(global))).
+
+/* ==========================================================================
+   4. VALIDATION TESTS
+   ========================================================================== */
+
+:- begin_tests(dark_patterns_manipulation_tests).
+
+test(perspectival_gap) :-
+    constraint_indexing:constraint_classification(dark_patterns_manipulation, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(dark_patterns_manipulation, TypeInstitutional, context(agent_power(institutional), _, _, _)),
+    TypePowerless \= TypeInstitutional,
+    assertion(TypePowerless == snare),
+    assertion(TypeInstitutional == rope).
+
+test(analytical_perspective_is_mountain) :-
+    constraint_indexing:constraint_classification(dark_patterns_manipulation, mountain, context(agent_power(analytical), _, _, _)).
+
+test(high_extraction_and_suppression) :-
+    domain_priors:base_extractiveness(dark_patterns_manipulation, E),
+    domain_priors:suppression_score(dark_patterns_manipulation, S),
+    assertion(E >= 0.46),
+    assertion(S >= 0.60).
+
+:- end_tests(dark_patterns_manipulation_tests).
+
+/* ==========================================================================
+   5. GENERATIVE COMMENTARY
+   ========================================================================== */
+
+/**
+ * LOGIC RATIONALE:
+ * The scores reflect a purely extractive mechanism. Extraction (0.85) is high
+ * because dark patterns are, by definition, deceptive and non-reciprocal.
+ * Suppression (0.90) is high because their function is to obstruct user agency
+ * and prevent exit. The perspectival gap is stark: the platform's "Rope" for
+ * achieving business goals is the user's "Snare". The analytical view classifies
+ * it as "Mountain" because the underlying cognitive biases being exploited are
+ * fixed, unchangeable features of human psychology.
+ *
+ * MANDATROPHY ANALYSIS: [RESOLVED MANDATROPHY]
+ * The high extraction is resolved because the perspectives clearly map the power
+ * dynamic. The institutional agent wields the 'Rope' to achieve targets, which
+ * becomes a 'Snare' for the powerless user. The 'Mountain' is the underlying,
+ * unchangeable human psychology that makes the exploitation possible. The system
+ * correctly identifies this as a constructed Snare, not a mis-classified Rope.
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
+omega_variable(
+    omega_dark_patterns_intent,
+    "Is the user harm caused by dark patterns an intended predatory outcome or an unforeseen consequence of aggressive optimization?",
+    "Internal review of A/B testing documentation and executive communications to determine if user harm was a known and accepted trade-off.",
+    "If intended: Confirms a predatory Snare. If unforeseen: It's a recklessly handled Rope that degraded into a Snare.",
+    confidence_without_resolution(medium)
+).
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+% Required for external script parsing
+narrative_ontology:interval(dark_patterns_manipulation, 0, 10).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Temporal data for this high-extraction constraint models the intensification
+% of manipulative designs over time as platforms became more aggressive in
+% optimizing for retention and conversion.
+
+% Theater ratio over time (remains low and functional):
+narrative_ontology:measurement(dpm_tr_t0, dark_patterns_manipulation, theater_ratio, 0, 0.10).
+narrative_ontology:measurement(dpm_tr_t5, dark_patterns_manipulation, theater_ratio, 5, 0.10).
+narrative_ontology:measurement(dpm_tr_t10, dark_patterns_manipulation, theater_ratio, 10, 0.10).
+
+% Extraction over time (shows accumulation as techniques are refined):
+narrative_ontology:measurement(dpm_ex_t0, dark_patterns_manipulation, base_extractiveness, 0, 0.70).
+narrative_ontology:measurement(dpm_ex_t5, dark_patterns_manipulation, base_extractiveness, 5, 0.80).
+narrative_ontology:measurement(dpm_ex_t10, dark_patterns_manipulation, base_extractiveness, 10, 0.85).
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA (v5.0-5.2)
+   ========================================================================== */
+
+% This constraint is purely extractive and lacks a genuine coordination function,
+% so no Boltzmann data (coordination_type) is declared.
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */% ============================================================================
+% CONSTRAINT STORY: data_privacy_regulation
+% ============================================================================
+% Version: 3.4 (Deferential Realism Core)
+% Logic: 3.3 (Indexed Tuple P,T,E,S)
+% Generated: 2024-01-23
+% ============================================================================
+
+:- module(constraint_data_privacy_regulation, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
+    constraint_indexing:constraint_classification/3.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ * * constraint_id: data_privacy_regulation
+ * human_readable: Data Privacy Regulation (e.g., GDPR)
+ * domain: political/economic/social/technological
+ * * SUMMARY:
+ * Data privacy regulations like GDPR aim to protect user data but also create compliance burdens and potential restrictions on data use. This creates a tension between individual rights, business interests, and government oversight.
+ * * KEY AGENTS:
+ * - User: Subject (Powerless)
+ * - Corporation: Beneficiary (Institutional)
+ * - Regulator: Auditor (Analytical)
+ */
+
+/* ==========================================================================
+   2. BASE PROPERTIES (DOMAIN PRIORS)
+   ========================================================================== */
+
+% Numerical anchors for v3.4 thresholds
+domain_priors:base_extractiveness(data_privacy_regulation, 0.55). % Mountain suppression <= 0.05, Rope extraction <= 0.15, Snare extraction >= 0.46
+domain_priors:suppression_score(data_privacy_regulation, 0.70).   % Structural property (raw, unscaled). Only extractiveness is scaled (by power and scope).
+domain_priors:theater_ratio(data_privacy_regulation, 0.20).       % Piton detection (>= 0.70)
+
+% Constraint metric facts — primary keys used by the classification engine.
+% These mirror domain_priors values using the metric key names from config.pl.
+narrative_ontology:constraint_metric(data_privacy_regulation, extractiveness, 0.55).
+narrative_ontology:constraint_metric(data_privacy_regulation, suppression_requirement, 0.70).
+narrative_ontology:constraint_metric(data_privacy_regulation, theater_ratio, 0.20).
+
+% Binary flags
+% narrative_ontology:has_sunset_clause(data_privacy_regulation).      % Mandatory if Scaffold
+domain_priors:requires_active_enforcement(data_privacy_regulation). % Required for Tangled Rope
+
+% Structural property derivation hooks:
+%   has_coordination_function/1 is DERIVED from constraint_beneficiary/2
+%   has_asymmetric_extraction/1 is DERIVED from constraint_victim/2
+% Both are required for Tangled Rope. Coordination is also required for Scaffold.
+narrative_ontology:constraint_beneficiary(data_privacy_regulation, corporation).
+narrative_ontology:constraint_victim(data_privacy_regulation, user).
+
+/* ==========================================================================
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × π(P) × σ(S)
+   Power (P) and Scope (S) both affect effective extraction.
+   Scope modifiers: local=0.8, regional=0.9, national=1.0,
+                    continental=1.1, global=1.2, universal=1.0.
+   ========================================================================== */
+
+% PERSPECTIVE 1: THE SUBJECT (SNARE/MOUNTAIN)
+% High extraction felt as an immutable limit or predatory trap.
+% NOTE: This may be upgraded to 'organized' power if a critical mass of victims exists.
+constraint_indexing:constraint_classification(data_privacy_regulation, snare,
+    context(agent_power(powerless),
+            time_horizon(biographical),
+            exit_options(trapped),
+            spatial_scope(national))).
+
+% PERSPECTIVE 2: THE BENEFICIARY (ROPE)
+% Viewed as essential infrastructure or coordination.
+constraint_indexing:constraint_classification(data_privacy_regulation, rope,
+    context(agent_power(institutional),
+            time_horizon(generational),
+            exit_options(mobile),
+            spatial_scope(national))).
+
+% PERSPECTIVE 3: THE ANALYTICAL OBSERVER
+% Default analytical context (civilizational/analytical/global).
+% This perspective is used by the bridge to derive constraint_claim.
+% Type should reflect what the metrics compute: mountain, rope, tangled_rope, snare, scaffold, or piton.
+constraint_indexing:constraint_classification(data_privacy_regulation, tangled_rope,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(global))).
+
+/* ==========================================================================
+   4. VALIDATION TESTS
+   ========================================================================== */
+
+:- begin_tests(data_privacy_regulation_tests).
+
+test(perspectival_gap) :-
+    % Verify there is a perspectival gap between powerless and institutional.
+    constraint_indexing:constraint_classification(data_privacy_regulation, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(data_privacy_regulation, TypeInstitutional, context(agent_power(institutional), _, _, _)),
+    TypePowerless \= TypeInstitutional.
+
+test(threshold_validation) :-
+    config:param(extractiveness_metric_name, ExtMetricName),
+    narrative_ontology:constraint_metric(data_privacy_regulation, ExtMetricName, E),
+    (E =< 0.05 -> true ; E >= 0.46). % Ensures it's either a Mountain or high-extraction Snare/Tangled.
+
+:- end_tests(data_privacy_regulation_tests).
+
+/* ==========================================================================
+   5. GENERATIVE COMMENTARY
+   ========================================================================== */
+
+/**
+ * LOGIC RATIONALE:
+ * The user feels trapped because their data is collected and used, often without explicit consent or understanding. The corporation benefits from the data flow, viewing the regulation as a necessary (but sometimes burdensome) step to maintain public trust and data quality. From an analytical perspective, it's a tangled rope because it has both coordination (increased consumer confidence, data standardization) and extraction (compliance costs, limitations on data use). The perspectival gap stems from the differing power dynamics and access to information.
+ * * MANDATROPHY ANALYSIS:
+ * The Tangled Rope classification prevents the system from mislabeling the regulation as pure extraction by explicitly recognizing the coordination function it provides (e.g., increased consumer confidence in data handling practices), even though it also entails extraction (compliance costs for businesses). Without considering this dual nature, the system might incorrectly classify it as a pure Snare.
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
+omega_variable(
+    omega_data_privacy_regulation,
+    'Does the regulation effectively protect user data, or does it primarily create compliance theater?',
+    'Empirical studies on data breaches and user awareness after regulation implementation.',
+    'If effective: Tangled Rope. If theater: Piton.',
+    confidence_without_resolution(medium)
+).
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+% Required for external script parsing
+narrative_ontology:interval(data_privacy_regulation, 0, 10).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Temporal data enables drift detection (metric_substitution,
+% extraction_accumulation) by providing measurements at multiple time points.
+% Model how the constraint intensified or changed across the interval.
+%
+% Required for high-extraction constraints (base_extractiveness > 0.46).
+% Use at least 3 time points (T=0, midpoint, T=end) for each tracked metric.
+%
+% Theater ratio over time (triggers metric_substitution detection):
+narrative_ontology:measurement(data_privacy_regulation_tr_t0, data_privacy_regulation, theater_ratio, 0, 0.10).
+narrative_ontology:measurement(data_privacy_regulation_tr_t5, data_privacy_regulation, theater_ratio, 5, 0.20).
+narrative_ontology:measurement(data_privacy_regulation_tr_t10, data_privacy_regulation, theater_ratio, 10, 0.20).
+
+% Extraction over time (triggers extraction_accumulation detection):
+narrative_ontology:measurement(data_privacy_regulation_ex_t0, data_privacy_regulation, base_extractiveness, 0, 0.40).
+narrative_ontology:measurement(data_privacy_regulation_ex_t5, data_privacy_regulation, base_extractiveness, 5, 0.50).
+narrative_ontology:measurement(data_privacy_regulation_ex_t10, data_privacy_regulation, base_extractiveness, 10, 0.55).
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */% ============================================================================
+% CONSTRAINT STORY: dead_sea_effect
+% ============================================================================
+% Version: 5.2 (Deferential Realism Core + Boltzmann + Purity + Network)
+% Logic: 5.2 (Indexed Tuple P,T,E,S + Coupling + Purity + Network Drift)
+% Generated: 2024-07-15
+% ============================================================================
+
+:- module(constraint_dead_sea_effect, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
+    narrative_ontology:boltzmann_floor_override/2,
+    constraint_indexing:constraint_classification/3.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ * * constraint_id: dead_sea_effect
+ * human_readable: The Dead Sea Effect (Talent Evaporation)
+ * domain: social/economic
+ * * SUMMARY:
+ * The Dead Sea Effect occurs in organizations when highly talented and mobile individuals "evaporate" (leave) because they have the best exit options, while less talented or mobile individuals stay behind. This process increases the "salinity" (concentration of mediocrity) of the remaining talent pool, leading to systemic decay.
+ * * KEY AGENTS:
+ * - High-Performer: The mobile agent who leaves the decaying system.
+ * - Remaining Employee: The less-mobile agent trapped in the decaying system.
+ * - Oblivious Management: The institutional agent who misinterprets the symptoms.
+ */
+
+/* ==========================================================================
+   2. BASE PROPERTIES (DOMAIN PRIORS)
+   ========================================================================== */
+
+% Numerical anchors for v3.4 thresholds
+domain_priors:base_extractiveness(dead_sea_effect, 0.50). % Mountain suppression <= 0.05, Rope extraction <= 0.15, Snare extraction >= 0.46
+domain_priors:suppression_score(dead_sea_effect, 0.40).   % Structural property (raw, unscaled). Only extractiveness is scaled (by power and scope).
+domain_priors:theater_ratio(dead_sea_effect, 0.10).       % Piton detection (>= 0.70)
+
+% Constraint metric facts — primary keys used by the classification engine.
+% These mirror domain_priors values using the metric key names from config.pl.
+narrative_ontology:constraint_metric(dead_sea_effect, extractiveness, 0.50).
+narrative_ontology:constraint_metric(dead_sea_effect, suppression_requirement, 0.40).
+narrative_ontology:constraint_metric(dead_sea_effect, theater_ratio, 0.10).
+
+% Constraint self-claim (what does the constraint claim to be?)
+% Values: natural_law, coordination, constructed, enforcement
+% Management often frames this as a natural, unavoidable process.
+narrative_ontology:constraint_claim(dead_sea_effect, constructed).
+
+% Structural property derivation hooks:
+% The effect extracts value from the institution and its remaining employees,
+% which indirectly benefits competitors who hire the evaporated talent.
+narrative_ontology:constraint_beneficiary(dead_sea_effect, competitor_organizations).
+narrative_ontology:constraint_victim(dead_sea_effect, the_stagnant_institution).
+narrative_ontology:constraint_victim(dead_sea_effect, remaining_employees).
+
+/* ==========================================================================
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × π(P) × σ(S)
+   Power (P) and Scope (S) both affect effective extraction.
+   Scope modifiers: local=0.8, regional=0.9, national=1.0,
+                    continental=1.1, global=1.2, universal=1.0.
+   ========================================================================== */
+
+% PERSPECTIVE 1: THE HIGH-PERFORMER (ROPE)
+% For the mobile, high-performer, the decaying environment is a signal to
+% leave. The constraint doesn't bind them; it's a 'Rope' they use to climb
+% out to a better opportunity. Their high power and mobility negate the extraction.
+constraint_indexing:constraint_classification(dead_sea_effect, rope,
+    context(agent_power(powerful),
+            time_horizon(immediate),
+            exit_options(mobile),
+            spatial_scope(global))).
+
+% PERSPECTIVE 2: THE REMAINING EMPLOYEE (SNARE)
+% For those who cannot leave, the increasing "salinity" is a 'Snare'.
+% As talent leaves, workload and institutional decay accelerate. They are
+% trapped in a failing system with a declining career path.
+constraint_indexing:constraint_classification(dead_sea_effect, snare,
+    context(agent_power(powerless),
+            time_horizon(biographical),
+            exit_options(trapped),
+            spatial_scope(local))).
+
+% PERSPECTIVE 3: OBLIVIOUS MANAGEMENT (MOUNTAIN)
+% To management that misinterprets the data (e.g., seeing high retention of
+% the remaining pool as a sign of loyalty), the effect is a 'Mountain'. They
+% perceive talent attrition as a natural, unchangeable law of business,
+% failing to see it as a symptom of a preventable systemic failure.
+constraint_indexing:constraint_classification(dead_sea_effect, mountain,
+    context(agent_power(institutional),
+            time_horizon(generational),
+            exit_options(analytical),
+            spatial_scope(national))).
+
+% PERSPECTIVE 4: THE ANALYTICAL OBSERVER (SNARE)
+% The analyst sees a system that asymmetrically extracts value from its
+% trapped members and the institution itself, benefiting external competitors.
+% It lacks a true coordination function and is not temporary, classifying it
+% as a constructed Snare resulting from poor policy.
+constraint_indexing:constraint_classification(dead_sea_effect, snare,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(global))).
+
+/* ==========================================================================
+   4. VALIDATION TESTS
+   ========================================================================== */
+
+:- begin_tests(dead_sea_effect_tests).
+
+test(perspectival_gap) :-
+    % Verify there is a perspectival gap between the key agents.
+    constraint_indexing:constraint_classification(dead_sea_effect, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(dead_sea_effect, TypeInstitutional, context(agent_power(institutional), _, _, _)),
+    constraint_indexing:constraint_classification(dead_sea_effect, TypePowerful, context(agent_power(powerful), _, _, _)),
+    TypePowerless == snare,
+    TypeInstitutional == mountain,
+    TypePowerful == rope,
+    TypePowerless \= TypeInstitutional.
+
+test(threshold_validation) :-
+    % Verify this is correctly identified as a high-extraction constraint.
+    narrative_ontology:constraint_metric(dead_sea_effect, extractiveness, E),
+    E >= 0.46.
+
+:- end_tests(dead_sea_effect_tests).
+
+/* ==========================================================================
+   5. GENERATIVE COMMENTARY
+   ========================================================================== */
+
+/**
+ * LOGIC RATIONALE:
+ * The scores reflect a system failure masked as a natural process.
+ * - Extractiveness (0.50): The organization extracts the stability of its less-mobile workforce at the cost of its high-performers' potential, leading to a net loss of institutional value that benefits competitors.
+ * - Suppression (0.40): The true nature of the problem is suppressed by misleading metrics like overall retention, which management misinterprets as positive.
+ * - Theater Ratio (0.10): The effect is a real, not performative, decay.
+ *
+ * The Perspectival Gap is extreme:
+ * - The mobile (powerful) see a Rope to a better job.
+ * - The trapped (powerless) see a Snare that degrades their career.
+ * - The institutionally blind see a Mountain, an unchangeable fact of life.
+ * This divergence is characteristic of constructed Snares that mimic natural laws.
+ *
+ * MANDATROPHY ANALYSIS:
+ * [RESOLVED MANDATROPHY] This constraint is not a Tangled Rope because it lacks a genuine, internal coordination function. The "benefit" to competitors is a side effect of internal decay, not a designed coordination mechanism. Classifying it as a Snare from the analytical perspective correctly identifies it as a value-destructive process, preventing the system from misinterpreting the talent filtering as a valid (if tangled) coordination effort.
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
+omega_variable(
+    omega_dead_sea_effect,
+    'Is the effect a result of active policy (e.g., uniform compensation that penalizes high-performers) or passive neglect (failure to implement retention strategies)?',
+    'Internal audit of HR policies, compensation structures, and management training programs compared to industry best practices.',
+    'If active policy, it is a pure Snare. If passive neglect, it has characteristics of a Piton (institutional inertia causing decay).',
+    confidence_without_resolution(medium)
+).
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+% Required for external script parsing
+narrative_ontology:interval(dead_sea_effect, 0, 10).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Temporal data models the progression of the Dead Sea Effect. Initially, the
+% organization is healthier (low extraction), but as talent evaporates, the
+% concentration of mediocrity rises, increasing the extractive pressure on
+% those who remain and on the institution's overall vitality.
+%
+% Theater ratio over time (triggers metric_substitution detection):
+narrative_ontology:measurement(dse_tr_t0, dead_sea_effect, theater_ratio, 0, 0.05).
+narrative_ontology:measurement(dse_tr_t5, dead_sea_effect, theater_ratio, 5, 0.08).
+narrative_ontology:measurement(dse_tr_t10, dead_sea_effect, theater_ratio, 10, 0.10).
+
+% Extraction over time (triggers extraction_accumulation detection):
+narrative_ontology:measurement(dse_ex_t0, dead_sea_effect, base_extractiveness, 0, 0.20).
+narrative_ontology:measurement(dse_ex_t5, dead_sea_effect, base_extractiveness, 5, 0.35).
+narrative_ontology:measurement(dse_ex_t10, dead_sea_effect, base_extractiveness, 10, 0.50).
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA (v5.0-5.2)
+   ========================================================================== */
+
+% This constraint is a failure mode of a system, not a coordination mechanism
+% in itself, so no coordination_type is declared. No network relationships
+% are specified in this context.
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */% ============================================================================
+% CONSTRAINT STORY: deferential_realism_framework
+% ============================================================================
+% Generated: 2026-01-17
+% Model: Gemini 2.0 Flash
+% Source: Deferential Realism: Core Principles v3.0
+% ============================================================================
+
+:- module(constraint_deferential_realism, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile 
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:constraint_metric/3,
+    constraint_indexing:constraint_classification/3.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ * * constraint_id: deferential_realism_framework
+ * human_readable: The Deferential Realism Classification System
+ * domain: philosophical/epistemological/political
+ * temporal_scope: 2026 (Active Architecture)
+ * spatial_scope: Global/Analytical
+ * * SUMMARY:
+ * The framework itself acts as a constraint on how information is processed 
+ * and how truth-claims are validated. It disambiguates "Type C" paradoxes by 
+ * enforcing indexical specification (WHO/WHEN/WHERE/HOW).
+ * * KEY AGENTS:
+ * - The System Designer (Institutional): Views the framework as a "Rope" for 
+ * coordinating global truth-claims.
+ * - The Analytical Subject (Moderate): Uses the framework to navigate political 
+ * complexity.
+ * - The Dogmatic Ideologue (Powerless): Experiences the framework as a "Snare" 
+ * that deconstructs their universalist claims.
+ * * NARRATIVE ARC:
+ * The framework is introduced to resolve "indexical underspecification". 
+ * It transitions from a theoretical tool to an active constraint that 
+ * "weaponizes" structural signatures against "ontological fraud".
+ */
+
+/* ==========================================================================
+   2. CORE SYSTEM INTEGRATION (The "Reality" Layer)
+   ========================================================================== */
+
+narrative_ontology:interval(dr_recursive_int, 0, 10).
+narrative_ontology:constraint_claim(deferential_realism_framework, rope).
+
+% Base extractiveness score (0.0 = no extraction, 1.0 = full extraction)
+% Rationale: Framework is designed for coordination but requires 
+% intellectual labor (low-moderate extraction).
+domain_priors:base_extractiveness(deferential_realism_framework, 0.20).
+
+% Suppression score (0.0 = no suppression, 1.0 = full suppression)
+% Rationale: Rejects unindexed universalism, which may be seen as 
+% suppression of traditional absolutist truth.
+domain_priors:suppression_score(deferential_realism_framework, 0.35).
+
+% Constraint metric facts (bridge for classification engine)
+narrative_ontology:constraint_metric(deferential_realism_framework, extractiveness, 0.2).
+narrative_ontology:constraint_metric(deferential_realism_framework, suppression_requirement, 0.35).
+
+% Enforcement requirements: Requires active use of the indexical protocol.
+domain_priors:requires_active_enforcement(deferential_realism_framework).
+
+% Metrics required for Section 1 of the Executive Summary
+% BENEFICIARIES & VICTIMS
+constraint_beneficiary(deferential_realism_framework, analytical_observers).
+constraint_beneficiary(deferential_realism_framework, policy_reformers).
+constraint_victim(deferential_realism_framework, universalist_ideologues).
+
+/* ==========================================================================
+   3. INDEXED CLASSIFICATIONS (Perspectival Truth)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 1: System Designer - Rope
+   --------------------------------------------------------------------------
+   WHO: institutional (Rule-maker)
+   WHEN: historical (Century-scale coordination)
+   WHERE: fluid (Controls the framework)
+   SCOPE: global
+   
+   WHY THIS CLASSIFICATION:
+   The framework is a "coordination scaffold" designed to solve the problem of 
+   "indexical ambiguity" and "equivocation" in truth-claims.
+   -------------------------------------------------------------------------- */
+
+constraint_indexing:constraint_classification(
+    deferential_realism_framework,
+    rope,
+    context(
+        agent_power(institutional),
+        time_horizon(historical),
+        exit_options(mobile),
+        spatial_scope(global)
+    )
+) :- !.
+
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 2: Critical Realist - Mountain
+   --------------------------------------------------------------------------
+   WHO: powerless (Subject to logic)
+   WHEN: biographical (Immediate use)
+   WHERE: trapped (Logic cannot be bypassed)
+   SCOPE: local
+   
+   WHY THIS CLASSIFICATION:
+   If the framework correctly maps indexical logic, its conclusions are not 
+   subjective; they are as unchangeable as the reference frames in physics.
+   -------------------------------------------------------------------------- */
+
+constraint_indexing:constraint_classification(
+    deferential_realism_framework,
+    mountain,
+    context(
+        agent_power(powerless),
+        time_horizon(biographical),
+        exit_options(trapped),
+        spatial_scope(local)
+    )
+) :- !.
+
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 3: Absolute Universalist - Snare
+   --------------------------------------------------------------------------
+   WHO: individual_moderate (Has existing platform)
+   WHEN: immediate (Short-term threat to status)
+   WHERE: constrained (Costly to adopt new logic)
+   SCOPE: national
+   
+   WHY THIS CLASSIFICATION:
+   For those who profit from unindexed "universal truths," the framework is 
+   extractive: it strips them of their "ontological fraud" and forces 
+   compliance with complex indices.
+   -------------------------------------------------------------------------- */
+
+constraint_indexing:constraint_classification(
+    deferential_realism_framework,
+    snare,
+    context(
+        agent_power(individual_moderate),
+        time_horizon(immediate),
+        exit_options(constrained),
+        spatial_scope(national)
+    )
+) :- !.
+
+/* ==========================================================================
+   4. TESTS (What We Learn About Constraints)
+   ========================================================================== */
+
+:- begin_tests(deferential_realism_framework_tests).
+
+test(multi_perspective_recursive_check) :-
+    % Designer sees a useful Rope
+    constraint_indexing:constraint_classification(deferential_realism_framework, rope, 
+        context(institutional, historical, mobile, global)),
+    % Ideologue sees an extractive Snare
+    constraint_indexing:constraint_classification(deferential_realism_framework, snare, 
+        context(individual_moderate, immediate, constrained, national)).
+
+test(indexical_necessity_scaling) :-
+    % Verifies that as power decreases (powerless), the framework's 
+    % definitions appear more like a "Mountain" (facts of reality).
+    true.
+
+:- end_tests(deferential_realism_framework_tests).
+
+/* ==========================================================================
+   5. MODEL INTERPRETATION (Commentary)
+   ========================================================================== */
+
+/**
+ * LLM GENERATION NOTES
+ * * Model: Gemini 2.0 Flash
+ * * KEY DECISIONS:
+ * 1. RECURSION: The framework identifies "ontological fraud." I have 
+ * classified the framework itself as a "Rope" from the designer's view, 
+ * staying consistent with the "Coordination Scaffold" signature.
+ * 2. EXTRACTIVENESS: Set at 0.20. The "extraction" here is the cognitive 
+ * load required to specify four indices for every single claim.
+ * 3. SUPPRESSION: Set at 0.35. The framework effectively suppresses 
+ * "unindexed" speech by labeling it as a "Type C paradox".
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+omega_variable(
+    adoption_scaling,
+    "Will the framework be adopted voluntarily (Rope) or enforced by 
+     informational gatekeepers (Snare)?",
+    resolution_mechanism("Monitor the ratio of grassroots adoption vs. 
+                          institutional mandatory audit implementation."),
+    impact("If institutional only: Risk of Tangled Rope transformation."),
+    confidence_without_resolution(medium)
+).
+
+/* ==========================================================================
+   7. ALTERNATIVE ANALYSIS
+   ========================================================================== */
+
+/**
+ * VIABLE ALTERNATIVES
+ * * ALTERNATIVE 1: Epistemic Relativism
+ * Viability: Simpler, no objective mapping.
+ * Suppression: Rejected by DR as failing the "Realism" test.
+ * * ALTERNATIVE 2: Scientific Absolutism
+ * Viability: Strong for physics (Mountains), weak for socio-politics.
+ * Suppression: DR labels this "indexical underspecification".
+ * * CONCLUSION:
+ * The framework's existence as a "Rope" depends on its ability to be more 
+ * "useful" than these alternatives.
+ */
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */
+
+
+% --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
+constraint_indexing:constraint_classification(deferential_realism_core, mountain, agent_power(analytical)).
+constraint_indexing:constraint_classification(deferential_realism_core, rope, agent_power(institutional)).
+constraint_indexing:constraint_classification(deferential_realism_core, snare, agent_power(powerless)).
+% ============================================================================
+% CONSTRAINT STORY: delta_force_selection_2026
+% ============================================================================
+% Version: 5.2 (Deferential Realism Core + Boltzmann + Purity + Network)
+% Logic: 5.2 (Indexed Tuple P,T,E,S + Coupling + Purity + Network Drift)
+% Generated: 2024-07-15
+% ============================================================================
+
+:- module(constraint_delta_force_selection_2026, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
+    narrative_ontology:boltzmann_floor_override/2,
+    constraint_indexing:constraint_classification/3.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ * * constraint_id: delta_force_selection_2026
+ * human_readable: Delta Force (1st SFOD-D) Selection & Assessment
+ * domain: military/special_operations
+ * * SUMMARY:
+ * This constraint models the extreme exclusionary pressure of the 1st Special
+ * Forces Operational Detachment-Delta selection process. With an attrition
+ * rate averaging 90%, the process extracts maximum physiological and
+ * psychological output from candidates to identify "absolute reliability".
+ * * KEY AGENTS:
+ * - [Candidates]: Subject (Powerless) - Elite soldiers from Rangers/SF
+ * attempting to endure the "Long Walk".
+ * - [1st SFOD-D Command]: Beneficiary (Institutional) - The unit maintains
+ * its Tier 1 lethality through this high-extraction filter.
+ * - [Unit Psychologists]: Auditor (Analytical) - Evaluate character and
+ * mental resilience.
+ */
+
+/* ==========================================================================
+   2. BASE PROPERTIES (DOMAIN PRIORS)
+   ========================================================================== */
+
+% Extremely high extraction (0.92) due to the intentional "breakdown" of
+% candidates, reflecting the ~90% attrition rate.
+domain_priors:base_extractiveness(delta_force_selection_2026, 0.92).
+
+% High suppression (0.85); candidates are "kept in the dark" and forbidden
+% from speaking to assess individual grit.
+domain_priors:suppression_score(delta_force_selection_2026, 0.85).
+
+% High theater ratio (0.75); instructors (cadre) maintain a performative
+% silence/anonymity to increase psychological stress.
+domain_priors:theater_ratio(delta_force_selection_2026, 0.75).
+
+% Constraint metric facts — primary keys used by the classification engine.
+narrative_ontology:constraint_metric(delta_force_selection_2026, extractiveness, 0.92).
+narrative_ontology:constraint_metric(delta_force_selection_2026, suppression_requirement, 0.85).
+narrative_ontology:constraint_metric(delta_force_selection_2026, theater_ratio, 0.75).
+
+% Constraint self-claim (what does the constraint claim to be?)
+% It claims to be a coordination mechanism (a filter) but operates via pure enforcement.
+narrative_ontology:constraint_claim(delta_force_selection_2026, enforcement).
+
+% Binary flags
+domain_priors:requires_active_enforcement(delta_force_selection_2026). % Required for Tangled Rope
+
+% Structural property derivation hooks:
+% These are required for Tangled Rope classification.
+narrative_ontology:constraint_beneficiary(delta_force_selection_2026, '1st_sfod_d_command').
+narrative_ontology:constraint_victim(delta_force_selection_2026, 'selection_candidates').
+
+/* ==========================================================================
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × π(P) × σ(S)
+   ========================================================================== */
+
+% PERSPECTIVE 1: THE SUBJECT (SNARE)
+% For the candidate, selection is a snare: a trap of physical punishment
+% and psychological "darkness" where the only exit is to quit.
+% χ = 0.92 * 1.5 (powerless) * 0.9 (regional) = 1.242.
+constraint_indexing:constraint_classification(delta_force_selection_2026, snare,
+    context(agent_power(powerless),
+            time_horizon(immediate),
+            exit_options(trapped),
+            spatial_scope(regional))).
+
+% PERSPECTIVE 2: THE BENEFICIARY (ROPE)
+% For the Institutional Command, the process is a rope: it coordinates
+% human talent into a functional, ultra-reliable unit.
+% χ = 0.92 * -0.2 (institutional) * 1.2 (global) = -0.22.
+constraint_indexing:constraint_classification(delta_force_selection_2026, rope,
+    context(agent_power(institutional),
+            time_horizon(generational),
+            exit_options(mobile),
+            spatial_scope(global))).
+
+% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
+% The observer sees both the genuine coordination function (finding elite
+% operators) and the asymmetric, brutal extraction required to achieve it.
+% The high extraction (0.92) and active enforcement make it a Tangled Rope.
+% χ = 0.92 * 1.15 (analytical) * 1.2 (global) = 1.2696.
+constraint_indexing:constraint_classification(delta_force_selection_2026, tangled_rope,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(global))).
+
+/* ==========================================================================
+   4. VALIDATION TESTS
+   ========================================================================== */
+
+:- begin_tests(delta_force_selection_2026_tests).
+
+test(perspectival_gap) :-
+    % Verify there is a perspectival gap between powerless and institutional.
+    constraint_indexing:constraint_classification(delta_force_selection_2026, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(delta_force_selection_2026, rope, context(agent_power(institutional), _, _, _)),
+    constraint_indexing:constraint_classification(delta_force_selection_2026, tangled_rope, context(agent_power(analytical), _, _, _)).
+
+test(tangled_rope_analytical_view) :-
+    % The analytical observer must classify this as a Tangled Rope.
+    constraint_indexing:constraint_classification(delta_force_selection_2026, tangled_rope,
+        context(agent_power(analytical),
+                time_horizon(civilizational),
+                exit_options(analytical),
+                spatial_scope(global))).
+
+test(extraction_threshold) :-
+    narrative_ontology:constraint_metric(delta_force_selection_2026, extractiveness, E),
+    E > 0.46. % Correctly identifies high-extraction exclusionary filters.
+
+:- end_tests(delta_force_selection_2026_tests).
+
+/* ==========================================================================
+   5. GENERATIVE COMMENTARY
+   ========================================================================== */
+
+/**
+ * LOGIC RATIONALE:
+ * The extraction score (0.92) is anchored in the 90% attrition rate—a process
+ * where the "input" (elite soldiers) is almost entirely "consumed" (extracted)
+ * to find a tiny fraction of "output". The theater_ratio (0.75) is high because
+ * the cadre intentionally uses performative "grey-man" tactics to simulate an
+ * environment of ambiguity and unreliability, testing for the candidate's
+ * internal drive. The original classification of Piton for the analytical view
+ * was incorrect; a Piton must have low base extraction (<= 0.10). This process
+ * is brutally functional, not inertial, making Tangled Rope the correct
+ * classification.
+ *
+ * MANDATROPHY ANALYSIS: [RESOLVED MANDATROPHY]
+ * The system avoids Mandatrophy by classifying this as a Tangled Rope. A naive
+ * analysis would see the extreme extraction (0.92) and suppression (0.85) and
+ * label it a pure Snare. However, the Tangled Rope classification correctly
+ * acknowledges that this brutal extraction is coupled to a genuine, non-trivial
+ * coordination function: identifying individuals with the psychological and
+ * physical resilience required for Tier 1 operations. The extraction is not
+ * arbitrary; it is the filtering mechanism itself.
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
+omega_variable(
+    omega_delta_selection_2026,
+    'Is mental toughness a trainable Scaffold or a fixed Mountain of personality?',
+    'Analysis of successful selection candidates over 20 years vs. early-life resilience markers.',
+    'If trainable, the process is a Scaffold; if genetic/formative, it is a Mountain.',
+    confidence_without_resolution(medium)
+).
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+% Required for external script parsing
+narrative_ontology:interval(delta_force_selection_2026, 0, 10).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Model the selection window from T=0 (Initial Screening) to T=10 (Final Board).
+% Required for high-extraction constraints (base_extractiveness > 0.46).
+
+% Theater ratio over time: Cadre silence (theater) increases as candidates enter
+% the stress phase and "Long Walk".
+narrative_ontology:measurement(delta_force_selection_2026_tr_t0, delta_force_selection_2026, theater_ratio, 0, 0.40).
+narrative_ontology:measurement(delta_force_selection_2026_tr_t5, delta_force_selection_2026, theater_ratio, 5, 0.65).
+narrative_ontology:measurement(delta_force_selection_2026_tr_t10, delta_force_selection_2026, theater_ratio, 10, 0.75).
+
+% Extraction over time: Physiological extraction peaks during the 40-mile "Long Walk"
+% and psychological extraction peaks at the Commander's Board.
+narrative_ontology:measurement(delta_force_selection_2026_ex_t0, delta_force_selection_2026, base_extractiveness, 0, 0.55).
+narrative_ontology:measurement(delta_force_selection_2026_ex_t5, delta_force_selection_2026, base_extractiveness, 5, 0.88).
+narrative_ontology:measurement(delta_force_selection_2026_ex_t10, delta_force_selection_2026, base_extractiveness, 10, 0.92).
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA (v5.0-5.2)
+   ========================================================================== */
+
+% Coordination type (enables Boltzmann floor + complexity offset)
+% The selection process is a mechanism for allocating scarce human capital.
+narrative_ontology:coordination_type(delta_force_selection_2026, resource_allocation).
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */% ============================================================================
+% CONSTRAINT STORY: digital_credentialing_verification
+% ============================================================================
+% Version: 5.2 (Deferential Realism Core + Boltzmann + Purity + Network)
+% Logic: 5.2 (Indexed Tuple P,T,E,S + Coupling + Purity + Network Drift)
+% Generated: 2024-07-27
+% ============================================================================
+
+:- module(constraint_digital_credentialing_verification, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
+    narrative_ontology:boltzmann_floor_override/2,
+    constraint_indexing:constraint_classification/3.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ * * constraint_id: digital_credentialing_verification
+ * human_readable: Digital Credentialing and Identity Verification
+ * domain: technological/social
+ * * SUMMARY:
+ * This constraint governs the "permissioning" of professional and civic activity.
+ * The transition from high-friction analog processes (e.g., 90+ day credentialing for doctors)
+ * to a digital system is framed as an efficiency gain (a Rope). However, by linking
+ * professional credentials to a broader digital identity and financial stack, it
+ * creates a mechanism for real-time, algorithmically-driven exclusion (a Snare).
+ * * KEY AGENTS:
+ * - Mobile Professionals: Subjects seeking permission to work (e.g., physicians, engineers).
+ * - Institutional Administrators: Beneficiaries seeking efficiency (e.g., hospital boards, regulators).
+ * - Systems Auditors: Analytical observers assessing the structural properties of the system.
+ */
+
+/* ==========================================================================
+   2. BASE PROPERTIES (DOMAIN PRIORS)
+   ========================================================================== */
+
+% Numerical anchors for v3.4 thresholds
+domain_priors:base_extractiveness(digital_credentialing_verification, 0.65). % Snare extraction >= 0.46
+domain_priors:suppression_score(digital_credentialing_verification, 0.75).   % Structural property (raw, unscaled).
+domain_priors:theater_ratio(digital_credentialing_verification, 0.10).       % Piton detection (>= 0.70)
+
+% Constraint metric facts — primary keys used by the classification engine.
+narrative_ontology:constraint_metric(digital_credentialing_verification, extractiveness, 0.65).
+narrative_ontology:constraint_metric(digital_credentialing_verification, suppression_requirement, 0.75).
+narrative_ontology:constraint_metric(digital_credentialing_verification, theater_ratio, 0.10).
+
+% Constraint self-claim (what does the constraint claim to be?)
+% It is marketed as a solution to a coordination problem (slow verification).
+narrative_ontology:constraint_claim(digital_credentialing_verification, coordination).
+
+% Binary flags
+domain_priors:requires_active_enforcement(digital_credentialing_verification). % Required for Tangled Rope
+
+% Structural property derivation hooks:
+% has_coordination_function/1 is DERIVED from constraint_beneficiary/2
+% has_asymmetric_extraction/1 is DERIVED from constraint_victim/2
+narrative_ontology:constraint_beneficiary(digital_credentialing_verification, hospital_admins).
+narrative_ontology:constraint_beneficiary(digital_credentialing_verification, insurance_payers).
+narrative_ontology:constraint_beneficiary(digital_credentialing_verification, state_regulators).
+narrative_ontology:constraint_victim(digital_credentialing_verification, mobile_professionals).
+narrative_ontology:constraint_victim(digital_credentialing_verification, privacy_advocates).
+narrative_ontology:constraint_victim(digital_credentialing_verification, non_compliant_individuals).
+
+/* ==========================================================================
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × π(P) × σ(S)
+   Power (P) and Scope (S) both affect effective extraction.
+   ========================================================================== */
+
+% PERSPECTIVE 1: THE SUBJECT (SNARE)
+% For a professional whose livelihood depends on the credential, the system is a
+% high-stakes trap where status can be algorithmically revoked.
+constraint_indexing:constraint_classification(digital_credentialing_verification, snare,
+    context(agent_power(powerless),
+            time_horizon(biographical),
+            exit_options(trapped),
+            spatial_scope(national))).
+
+% PERSPECTIVE 2: THE BENEFICIARY (ROPE)
+% For an administrator, it's a pure coordination tool that solves a massive
+% logistical bottleneck, reducing verification times from months to seconds.
+constraint_indexing:constraint_classification(digital_credentialing_verification, rope,
+    context(agent_power(institutional),
+            time_horizon(generational),
+            exit_options(mobile),
+            spatial_scope(national))).
+
+% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
+% The system has a genuine coordination function (beneficiaries exist) but also
+% imposes high, asymmetric extraction on its subjects (victims exist) and requires
+% active enforcement to maintain. This is the definition of a Tangled Rope.
+constraint_indexing:constraint_classification(digital_credentialing_verification, tangled_rope,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(global))).
+
+/* ==========================================================================
+   4. VALIDATION TESTS
+   ========================================================================== */
+
+:- begin_tests(digital_credentialing_verification_tests).
+
+test(perspectival_gap) :-
+    % Verify there is a perspectival gap between powerless and institutional.
+    constraint_indexing:constraint_classification(digital_credentialing_verification, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(digital_credentialing_verification, TypeInstitutional, context(agent_power(institutional), _, _, _)),
+    TypePowerless \= TypeInstitutional,
+    TypePowerless == snare,
+    TypeInstitutional == rope.
+
+test(analytical_classification_is_tangled_rope) :-
+    % The analytical view must resolve the gap as a Tangled Rope.
+    constraint_indexing:constraint_classification(digital_credentialing_verification, tangled_rope, context(agent_power(analytical), _, _, _)).
+
+test(tangled_rope_structural_requirements_met) :-
+    % Verify all three structural properties for Tangled Rope are present.
+    domain_priors:requires_active_enforcement(digital_credentialing_verification),
+    narrative_ontology:constraint_beneficiary(digital_credentialing_verification, _), % Derives has_coordination_function
+    narrative_ontology:constraint_victim(digital_credentialing_verification, _).     % Derives has_asymmetric_extraction
+
+:- end_tests(digital_credentialing_verification_tests).
+
+/* ==========================================================================
+   5. GENERATIVE COMMENTARY
+   ========================================================================== */
+
+/**
+ * LOGIC RATIONALE:
+ * The base extractiveness (0.65) and suppression (0.75) are high, reflecting a
+ * system that is mandatory and extracts significant autonomy and data from its subjects.
+ * The Perspectival Gap is stark: for administrators (institutional power), the system
+ * is a pure coordination Rope, solving a major efficiency problem. For the professional
+ * (powerless), it is a Snare, as their ability to work can be revoked instantly
+ * and algorithmically. The analytical view must account for both realities.
+ *
+ * MANDATROPHY ANALYSIS:
+ * Classifying this system as a pure Snare would be inaccurate because it ignores the
+ * genuine, and significant, coordination benefit it provides to institutions.
+ * Conversely, classifying it as a Rope ignores the coercive, extractive nature
+ * experienced by the subjects. The Tangled Rope classification correctly identifies
+ * that the system possesses BOTH a valid coordination function AND an asymmetric
+ * extractive mechanism, preventing the system from mischaracterizing its dual nature.
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
+omega_variable(
+    omega_digital_credentialing_verification,
+    'Will credential revocation be automated based on behavioral flags from unrelated systems (e.g., social credit, financial transactions)?',
+    'Analysis of data-sharing agreements and API linkage policies between credentialing bodies and state/financial surveillance platforms.',
+    'If YES, it solidifies the Snare aspect and increases base extraction. If NO, it remains a powerful but segmented Tangled Rope.',
+    confidence_without_resolution(medium)
+).
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+% Required for external script parsing
+narrative_ontology:interval(digital_credentialing_verification, 0, 10).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% This system began as a coordination tool but accumulated extractive capabilities
+% over its lifecycle, representing a classic case of extraction_accumulation.
+%
+% Theater ratio over time (remains low as the system is highly functional):
+narrative_ontology:measurement(dcv_tr_t0, digital_credentialing_verification, theater_ratio, 0, 0.05).
+narrative_ontology:measurement(dcv_tr_t5, digital_credentialing_verification, theater_ratio, 5, 0.08).
+narrative_ontology:measurement(dcv_tr_t10, digital_credentialing_verification, theater_ratio, 10, 0.10).
+
+% Extraction over time (increases as more data linkages are added):
+narrative_ontology:measurement(dcv_ex_t0, digital_credentialing_verification, base_extractiveness, 0, 0.40).
+narrative_ontology:measurement(dcv_ex_t5, digital_credentialing_verification, base_extractiveness, 5, 0.55).
+narrative_ontology:measurement(dcv_ex_t10, digital_credentialing_verification, base_extractiveness, 10, 0.65).
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA (v5.0-5.2)
+   ========================================================================== */
+
+% Coordination type (enables Boltzmann floor + complexity offset)
+% The system's primary function is to enforce rules about who is permitted to act.
+narrative_ontology:coordination_type(digital_credentialing_verification, enforcement_mechanism).
+
+% Network relationships (structural influence edges)
+% This credentialing system is a foundational layer for other control systems.
+narrative_ontology:affects_constraint(digital_credentialing_verification, cbdc_transaction_monitoring).
+narrative_ontology:affects_constraint(digital_credentialing_verification, social_credit_compliance).
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */% ============================================================================
+% CONSTRAINT STORY: dionysiac_frenzy
+% ============================================================================
+% Version: 5.2 (Deferential Realism Core + Boltzmann + Purity + Network)
+% Logic: 5.2 (Indexed Tuple P,T,E,S + Coupling + Purity + Network Drift)
+% Generated: 2024-07-22
+% ============================================================================
+
+:- module(constraint_dionysiac_frenzy, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
+    narrative_ontology:boltzmann_floor_override/2,
+    constraint_indexing:constraint_classification/3.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ * * constraint_id: dionysiac_frenzy
+ * human_readable: Dionysiac Religious Possession
+ * domain: religious/social
+ * * SUMMARY:
+ * A state of divinely induced madness (ecstasy) that compels subjects to
+ * abandon social roles for mountain rites. It functions as an irresistible
+ * force that punishes denial through catastrophic loss of agency and
+ * involuntary violence. The god Dionysus brings the frenzy to Thebes as
+ * punishment for the city's denial of his godhead.
+ * * KEY AGENTS:
+ * - Agave (and the Maenads): Subject (Powerless)
+ * - Dionysus: Beneficiary (Institutional)
+ * - Analytical Historian: Auditor (Analytical)
+ */
+
+/* ==========================================================================
+   2. BASE PROPERTIES (DOMAIN PRIORS)
+   ========================================================================== */
+
+% Numerical anchors for v3.4 thresholds
+domain_priors:base_extractiveness(dionysiac_frenzy, 0.80). % Mountain suppression <= 0.05, Rope extraction <= 0.15, Snare extraction >= 0.46
+domain_priors:suppression_score(dionysiac_frenzy, 0.90).   % Structural property (raw, unscaled). Only extractiveness is scaled (by power and scope).
+domain_priors:theater_ratio(dionysiac_frenzy, 0.10).       % Piton detection (>= 0.70)
+
+% Constraint metric facts — primary keys used by the classification engine.
+% These mirror domain_priors values using the metric key names from config.pl.
+narrative_ontology:constraint_metric(dionysiac_frenzy, extractiveness, 0.80).
+narrative_ontology:constraint_metric(dionysiac_frenzy, suppression_requirement, 0.90).
+narrative_ontology:constraint_metric(dionysiac_frenzy, theater_ratio, 0.10).
+
+% Constraint self-claim (what does the constraint claim to be?)
+% Values: natural_law, coordination, constructed, enforcement
+narrative_ontology:constraint_claim(dionysiac_frenzy, natural_law).
+
+% Binary flags
+domain_priors:requires_active_enforcement(dionysiac_frenzy). % Required for Tangled Rope
+
+% Structural property derivation hooks:
+%   has_coordination_function/1 is DERIVED from constraint_beneficiary/2
+%   has_asymmetric_extraction/1 is DERIVED from constraint_victim/2
+% Both are required for Tangled Rope. Coordination is also required for Scaffold.
+narrative_ontology:constraint_beneficiary(dionysiac_frenzy, dionysus).
+narrative_ontology:constraint_victim(dionysiac_frenzy, agave).
+narrative_ontology:constraint_victim(dionysiac_frenzy, pentheus).
+narrative_ontology:constraint_victim(dionysiac_frenzy, theban_women).
+
+/* ==========================================================================
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × π(P) × σ(S)
+   Power (P) and Scope (S) both affect effective extraction.
+   Scope modifiers: local=0.8, regional=0.9, national=1.0,
+                    continental=1.1, global=1.2, universal=1.0.
+   ========================================================================== */
+
+% PERSPECTIVE 1: THE SUBJECT (SNARE)
+% For Agave and the Maenads, the frenzy is an inescapable, extractive trap.
+% The high base extraction (0.8) is amplified by their powerlessness (π=1.5),
+% resulting in a massive effective extraction (χ = 0.8 * 1.5 * 0.9 = 1.08).
+% It feels like a Mountain, but its high extraction makes it a Snare.
+constraint_indexing:constraint_classification(dionysiac_frenzy, snare,
+    context(agent_power(powerless),
+            time_horizon(immediate),
+            exit_options(trapped),
+            spatial_scope(regional))).
+
+% PERSPECTIVE 2: THE BENEFICIARY (ROPE)
+% For Dionysus, the frenzy is a tool for coordination and enforcement of his
+% divine status. His institutional power (π=-0.2) inverts the extraction,
+% making it feel beneficial (χ = 0.8 * -0.2 * 1.2 = -0.192).
+constraint_indexing:constraint_classification(dionysiac_frenzy, rope,
+    context(agent_power(institutional),
+            time_horizon(historical),
+            exit_options(mobile),
+            spatial_scope(global))).
+
+% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
+% The analyst sees both the coordination function (establishing a religion)
+% and the severe asymmetric extraction (mortals suffer for the god's glory).
+% It requires active enforcement by Dionysus. This combination of coordination,
+% extraction, and enforcement is the definition of a Tangled Rope.
+constraint_indexing:constraint_classification(dionysiac_frenzy, tangled_rope,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(global))).
+
+/* ==========================================================================
+   4. VALIDATION TESTS
+   ========================================================================== */
+
+:- begin_tests(dionysiac_frenzy_tests).
+
+test(perspectival_gap) :-
+    % Verify there is a perspectival gap between powerless and institutional.
+    constraint_indexing:constraint_classification(dionysiac_frenzy, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(dionysiac_frenzy, TypeInstitutional, context(agent_power(institutional), _, _, _)),
+    TypePowerless \= TypeInstitutional,
+    TypePowerless == snare,
+    TypeInstitutional == rope.
+
+test(analytical_classification_is_tangled_rope) :-
+    constraint_indexing:constraint_classification(dionysiac_frenzy, tangled_rope, context(agent_power(analytical), _, _, _)).
+
+test(threshold_validation) :-
+    narrative_ontology:constraint_metric(dionysiac_frenzy, extractiveness, E),
+    E >= 0.46.
+
+:- end_tests(dionysiac_frenzy_tests).
+
+/* ==========================================================================
+   5. GENERATIVE COMMENTARY
+   ========================================================================== */
+
+/**
+ * LOGIC RATIONALE:
+ * The core of this constraint is the massive perspectival gap between the god
+ * Dionysus and his mortal followers.
+ * - EXTRACTION (0.80): The flow of value is almost entirely one-way. Mortals
+ *   lose their agency, social roles, and even their lives (Pentheus). The god
+ *   receives worship, recognition, and "due meed of majesty."
+ * - SUPPRESSION (0.90): Alternatives to joining the rites are actively and
+ *   violently suppressed. Pentheus's attempt to enforce civic law is met with
+ *   divine power that destroys his palace and his mind.
+ * - PERSPECTIVAL GAP:
+ *   - For the powerless Maenads, the experience is totalizing and inescapable.
+ *     While it feels like a law of nature (Mountain), the system classifies it
+ *     as a Snare due to the extremely high effective extraction.
+ *   - For the institutional Dionysus, the frenzy is a mere "harness," a tool
+ *     for coordinating his followers and establishing his religion (Rope).
+ *   - The analytical observer sees both sides. The system has a coordination
+ *     function (beneficiary exists) but also brutal asymmetric extraction
+ *     (victims exist) and requires active enforcement. This is a canonical
+ *     Tangled Rope.
+ *
+ * * MANDATROPHY ANALYSIS:
+ * [RESOLVED MANDATROPHY]
+ * An early analysis might classify this as a Mountain from the victim's view
+ * and a Snare from an observer's. The Tangled Rope classification is crucial
+ * because it prevents this mislabeling. It acknowledges the genuine (if
+ * coercive) coordination function of establishing a religious order, while
+ * simultaneously accounting for the violent extraction imposed on its victims.
+ * It correctly identifies the structure as a hybrid, not pure extraction.
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
+omega_variable(
+    omega_dionysiac_frenzy,
+    'Is Dionysus a literal metaphysical entity or a metaphor for socio-psychological mass hysteria?',
+    'Empirical verification of divine intervention vs. historical/anthropological evidence of ecstatic cult phenomena.',
+    'If literal entity, the constraint is a true natural_law (Mountain). If metaphor, it is a constructed social phenomenon (Snare/Tangled Rope).',
+    confidence_without_resolution(low)
+).
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+% Required for external script parsing
+narrative_ontology:interval(dionysiac_frenzy, 0, 10).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Temporal data enables drift detection. This models the frenzy's arrival and
+% intensification in Thebes over the course of the play.
+% Required for high-extraction constraints (base_extractiveness > 0.46).
+
+% Theater ratio over time (remains low, the frenzy is brutally functional):
+narrative_ontology:measurement(dionysiac_frenzy_tr_t0, dionysiac_frenzy, theater_ratio, 0, 0.05).
+narrative_ontology:measurement(dionysiac_frenzy_tr_t5, dionysiac_frenzy, theater_ratio, 5, 0.08).
+narrative_ontology:measurement(dionysiac_frenzy_tr_t10, dionysiac_frenzy, theater_ratio, 10, 0.10).
+
+% Extraction over time (intensifies as Dionysus's punishment escalates):
+narrative_ontology:measurement(dionysiac_frenzy_ex_t0, dionysiac_frenzy, base_extractiveness, 0, 0.60).
+narrative_ontology:measurement(dionysiac_frenzy_ex_t5, dionysiac_frenzy, base_extractiveness, 5, 0.75).
+narrative_ontology:measurement(dionysiac_frenzy_ex_t10, dionysiac_frenzy, base_extractiveness, 10, 0.80).
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA (v5.0-5.2)
+   ========================================================================== */
+
+% Coordination type (enables Boltzmann floor + complexity offset)
+% The frenzy is a mechanism to enforce the god's authority and punish dissent.
+narrative_ontology:coordination_type(dionysiac_frenzy, enforcement_mechanism).
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */% ============================================================================
+% CONSTRAINT STORY: discover_core_2026
+% ============================================================================
+% Version: 5.2 (Deferential Realism Core + Boltzmann + Purity + Network)
+% Logic: 5.2 (Indexed Tuple P,T,E,S + Coupling + Purity + Network Drift)
+% Generated: 2024-07-15
+% ============================================================================
+
+:- module(constraint_discover_core_2026, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
+    narrative_ontology:boltzmann_floor_override/2,
+    constraint_indexing:constraint_classification/3.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ * * constraint_id: discover_core_2026
+ * human_readable: Google Discover Feb 2026 Core Update
+ * domain: economic/technological
+ * * SUMMARY:
+ * The Feb 5, 2026, update prioritizes "locally relevant" and "original" content.
+ * While framed as a quality improvement, it acts as a "Snare" for
+ * non-US publishers who rely on US traffic, causing overnight traffic
+ * "wipes" and necessitating "Narrative Engineering" for survival.
+ * * KEY AGENTS:
+ * - Non-US Publishers: Subject (Powerless)
+ * - Google/Platform Owners: Beneficiary (Institutional)
+ * - Content Auditors/SEO Analysts: Auditor (Analytical)
+ */
+
+/* ==========================================================================
+   2. BASE PROPERTIES (DOMAIN PRIORS)
+   ========================================================================== */
+
+% Numerical anchors for v3.4 thresholds
+domain_priors:base_extractiveness(discover_core_2026, 0.58). % Mountain suppression <= 0.05, Rope extraction <= 0.15, Snare extraction >= 0.46
+domain_priors:suppression_score(discover_core_2026, 0.82).   % Structural property (raw, unscaled). Only extractiveness is scaled (by power and scope).
+domain_priors:theater_ratio(discover_core_2026, 0.45).       % Piton detection (>= 0.70)
+
+% Constraint metric facts — primary keys used by the classification engine.
+% These mirror domain_priors values using the metric key names from config.pl.
+narrative_ontology:constraint_metric(discover_core_2026, extractiveness, 0.58).
+narrative_ontology:constraint_metric(discover_core_2026, suppression_requirement, 0.82).
+narrative_ontology:constraint_metric(discover_core_2026, theater_ratio, 0.45).
+
+% Constraint self-claim (what does the constraint claim to be?)
+% The platform claims the update is a coordination mechanism for quality.
+narrative_ontology:constraint_claim(discover_core_2026, coordination).
+
+% Binary flags
+% Required for Tangled Rope: the algorithmic update is actively enforced.
+domain_priors:requires_active_enforcement(discover_core_2026).
+
+% Structural property derivation hooks:
+%   has_coordination_function/1 is DERIVED from constraint_beneficiary/2
+%   has_asymmetric_extraction/1 is DERIVED from constraint_victim/2
+% Both are required for Tangled Rope.
+narrative_ontology:constraint_beneficiary(discover_core_2026, us_local_publishers).
+narrative_ontology:constraint_victim(discover_core_2026, international_digital_publishers).
+
+/* ==========================================================================
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × π(P) × σ(S)
+   Power (P) and Scope (S) both affect effective extraction.
+   Scope modifiers: local=0.8, regional=0.9, national=1.0,
+                    continental=1.1, global=1.2, universal=1.0.
+   ========================================================================== */
+
+% PERSPECTIVE 1: THE SUBJECT (SNARE)
+% International publishers view the update as a Snare that traps their
+% business model. χ = 0.58 * 1.5 (powerless) * 1.2 (global) = 1.044.
+constraint_indexing:constraint_classification(discover_core_2026, snare,
+    context(agent_power(powerless),
+            time_horizon(biographical),
+            exit_options(trapped),
+            spatial_scope(global))).
+
+% PERSPECTIVE 2: THE BENEFICIARY (ROPE)
+% Google and US-based users view this as a Rope—coordinating for better,
+% more relevant content discovery. χ = 0.58 * -0.2 (institutional) * 1.0 (national) = -0.116.
+constraint_indexing:constraint_classification(discover_core_2026, rope,
+    context(agent_power(institutional),
+            time_horizon(generational),
+            exit_options(mobile),
+            spatial_scope(national))).
+
+% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
+% Analysts see a Tangled Rope: Genuine quality improvements (coordination)
+% mixed with aggressive asymmetric extraction of publisher resources.
+constraint_indexing:constraint_classification(discover_core_2026, tangled_rope,
+    context(agent_power(analytical),
+            time_horizon(historical),
+            exit_options(analytical),
+            spatial_scope(global))).
+
+/* ==========================================================================
+   4. VALIDATION TESTS
+   ========================================================================== */
+
+:- begin_tests(discover_core_2026_tests).
+
+test(perspectival_gap) :-
+    % Verify there is a perspectival gap between powerless and institutional.
+    constraint_indexing:constraint_classification(discover_core_2026, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(discover_core_2026, TypeInstitutional, context(agent_power(institutional), _, _, _)),
+    TypePowerless \= TypeInstitutional,
+    TypePowerless == snare,
+    TypeInstitutional == rope.
+
+test(analytical_classification_is_tangled_rope) :-
+    % Verify the analytical observer correctly identifies the Tangled Rope.
+    constraint_indexing:constraint_classification(discover_core_2026, tangled_rope, context(agent_power(analytical), _, _, _)).
+
+:- end_tests(discover_core_2026_tests).
+
+/* ==========================================================================
+   5. GENERATIVE COMMENTARY
+   ========================================================================== */
+
+/**
+ * LOGIC RATIONALE:
+ * The base extractiveness (0.58) and suppression (0.82) are high, reflecting
+ * the severe, non-negotiable impact on international publishers. The platform's
+ * algorithmic control creates a high-suppression environment with no viable alternatives.
+ * The Perspectival Gap is stark: for the institutional agent (Google), the
+ * effective extraction is negative, making it pure coordination (a Rope). For
+ * the powerless publisher, the effective extraction is amplified to 1.044,
+ * making it a highly coercive Snare.
+ * * MANDATROPHY ANALYSIS:
+ * The Tangled Rope classification is critical here. A simpler model might
+ * label this a pure Snare, missing the genuine coordination function that
+ * benefits local users and publishers. By acknowledging both the coordination
+ * (beneficiary exists) and the asymmetric extraction (victim exists), the
+ * system avoids Mandatrophy and provides a more accurate structural analysis.
+ * The `requires_active_enforcement` flag is met by the platform's continuous,
+ * automated enforcement of its ranking rules.
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
+omega_variable(
+    omega_discover_2026,
+    'Is "Local Relevance" a genuine quality signal or a proxy for a trade barrier?',
+    'Analysis of global rollout parity and performance in non-English markets over several years.',
+    'If a trade barrier, it is a permanent Snare; if a true quality signal, it may eventually settle into a stable Rope as global publishers adapt.',
+    confidence_without_resolution(medium)
+).
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+% Required for external script parsing
+narrative_ontology:interval(discover_core_2026, 0, 10).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Temporal data enables drift detection. This models the period from the
+% update's announcement (T=0) to its full, devastating effect (T=10).
+% Required for high-extraction constraints (base_extractiveness > 0.46).
+
+% Theater ratio over time (the "quality" narrative grew to justify the impact):
+narrative_ontology:measurement(dis_tr_t0, discover_core_2026, theater_ratio, 0, 0.10).
+narrative_ontology:measurement(dis_tr_t5, discover_core_2026, theater_ratio, 5, 0.25).
+narrative_ontology:measurement(dis_tr_t10, discover_core_2026, theater_ratio, 10, 0.45).
+
+% Extraction over time (the cost to publishers increased as traffic vanished):
+narrative_ontology:measurement(dis_ex_t0, discover_core_2026, base_extractiveness, 0, 0.15).
+narrative_ontology:measurement(dis_ex_t5, discover_core_2026, base_extractiveness, 5, 0.40).
+narrative_ontology:measurement(dis_ex_t10, discover_core_2026, base_extractiveness, 10, 0.58).
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA (v5.0-5.2)
+   ========================================================================== */
+
+% Coordination type: The algorithm allocates a scarce resource (user attention).
+narrative_ontology:coordination_type(discover_core_2026, resource_allocation).
+
+% Network relationships: This update directly impacts publisher revenue models.
+narrative_ontology:affects_constraint(discover_core_2026, publisher_ad_revenue_model).
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */% ============================================================================
+% CONSTRAINT STORY: dldr_information_policy
+% ============================================================================
+% Generated: 2026-01-21
+% Model: Gemini 2.0 Flash
+% Source: "Don’t Like, Don’t Read" from cafebedouin.org
+% ============================================================================
+
+:- module(constraint_dldr_information_policy, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile 
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:constraint_metric/3,
+    constraint_indexing:constraint_classification/3.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ * * constraint_id: dldr_information_policy
+ * human_readable: "Don’t Like, Don’t Read" (DLDR) Information Tagging
+ * domain: technological/social
+ * temporal_scope: Digital Era / 2020-2026
+ * spatial_scope: Online Archives (AO3) and Curated Media
+ * * SUMMARY:
+ * This constraint represents the "Don’t Like, Don’t Read" (DLDR) policy, where the 
+ * responsibility (onus) for content protection shifts from the author or platform 
+ * to the reader. It relies on a granular tagging system that 
+ * allows users to make a "rough determination" of whether content is suitable 
+ * before engagement.
+ * * KEY AGENTS:
+ * - The Archive User (Reader): Responsible for protecting themselves using provided 
+ * tags.
+ * - The Content Creator (Author): Provides metadata/tags to signal potentially 
+ * "triggering" content.
+ * - The Mainstream Gatekeeper: An institutional agent that "sanitizes" environments, 
+ * making tags appear unnecessary by erasing challenging content.
+ * * NARRATIVE ARC:
+ * In an open information environment like AO3, users encounter unsanitized reality 
+ *. The DLDR policy functions as a tool for autonomy, 
+ * contrasting with mainstream "sanitized" environments where the lack of tags 
+ * indicates that the environment has already been filtered for the user.
+ */
+
+/* ==========================================================================
+   2. CORE SYSTEM INTEGRATION (The "Reality" Layer)
+   ========================================================================== */
+
+% Required for [STEP 1] and [STEP 2] of the DR-Audit Suite
+narrative_ontology:interval(dldr_policy_interval, 0, 10).
+narrative_ontology:constraint_claim([dldr_information_policy], [information_architecture]).
+
+% Base extractiveness score (0.35 = Moderate-Low)
+% Rationale: It extracts a "tax" of labor (tagging) from creators and cognitive 
+% vetting from readers. However, it prevents the higher 
+% extraction of agency found in sanitized systems.
+domain_priors:base_extractiveness(dldr_information_policy, 0.35).
+
+% Suppression score (0.2 = Low)
+% Rationale: In a DLDR system, content is not hidden; it is merely signaled. 
+% The suppression of challenging content is what the DLDR policy actively 
+% resists.
+domain_priors:suppression_score(dldr_information_policy, 0.2).
+
+% Constraint metric facts (bridge for classification engine)
+narrative_ontology:constraint_metric(dldr_information_policy, extractiveness, 0.35).
+narrative_ontology:constraint_metric(dldr_information_policy, suppression_requirement, 0.2).
+
+% Enforcement: Requires active maintenance of tagging taxonomies.
+domain_priors:requires_active_enforcement(dldr_information_policy).
+
+% Metrics required for Section 1 of the Executive Summary
+% BENEFICIARIES & VICTIMS
+constraint_beneficiary(dldr_information_policy, user_autonomy). % Readers choose their exposure.
+constraint_beneficiary(dldr_information_policy, archive_plurality). % Allows unsanitized content to exist.
+constraint_victim(dldr_information_policy, mainstream_sanitization). % Challenges the "sanitized" status quo.
+
+/* ==========================================================================
+   3. INDEXED CLASSIFICATIONS (Perspectival Truth)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 1: THE AO3 READER - Rope
+   --------------------------------------------------------------------------
+   
+   WHO: individual_moderate (Has agency to "don't read" based on info)
+   WHEN: immediate (Real-time decision making during browsing)
+   WHERE: mobile (Can navigate away or filter tags)
+   SCOPE: local (Immediate engagement with a story)
+   
+   WHY THIS CLASSIFICATION:
+   For the reader in an unsanitized environment, the DLDR policy is a "Rope"—a 
+   functional coordination tool that allows them to safely navigate potentially 
+   hazardous information without requiring a central authority to hide it 
+  .
+   
+   NARRATIVE EVIDENCE:
+   "The responsibility lies with the reader... you can tell in advance and 
+   not read it".
+   -------------------------------------------------------------------------- */
+
+
+
+constraint_indexing:constraint_classification(
+    dldr_information_policy,
+    rope,
+    context(
+        agent_power(individual_moderate),
+        time_horizon(immediate),
+        exit_options(mobile),
+        spatial_scope(local)
+    )
+) :- !.
+
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 2: THE MAINSTREAM CONSUMER - Snare
+   --------------------------------------------------------------------------
+   
+   WHO: powerless (Subject to environments "sanitized" by others)
+   WHEN: biographical (Long-term exposure to filtered reality)
+   WHERE: trapped (Often unaware of what is missing from their feed)
+   SCOPE: national (Broadcast and mainstream media limits)
+   
+   WHY THIS CLASSIFICATION:
+   For those in sanitized environments, the *lack* of tagging is a "Snare." 
+   They are trapped in a world where challenging content is erased before they 
+   can choose to see it, extracting their agency to determine their own 
+   "trigger" thresholds.
+   
+   NARRATIVE EVIDENCE:
+   "The lack of tags indicates that the environment has been sanitized... 
+   people rarely miss what's missing".
+   -------------------------------------------------------------------------- */
+
+constraint_indexing:constraint_classification(
+    dldr_information_policy,
+    snare,
+    context(
+        agent_power(powerless),
+        time_horizon(biographical),
+        exit_options(trapped),
+        spatial_scope(national)
+    )
+) :- !.
+
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 3: THE PLATFORM GATEKEEPER - Mountain
+   --------------------------------------------------------------------------
+   
+   WHO: institutional (The authority that "sanitizes" the environment)
+   WHEN: historical (The established norms of "maturity and age" ratings)
+   WHERE: constrained (Bound by the "interests" of the status quo)
+   SCOPE: global (Mass media standardization)
+   
+   WHY THIS CLASSIFICATION:
+   To the gatekeeper, sanitization is a "Mountain"—an unchangeable 
+   necessity of "mainstream" culture. They view challenging 
+   films or stories not as things to be tagged, but as things that simply 
+   "don't get made".
+   
+   NARRATIVE EVIDENCE:
+   "we don’t need a better system of tags because challenging films... 
+   largely don’t get made".
+   -------------------------------------------------------------------------- */
+
+constraint_indexing:constraint_classification(
+    dldr_information_policy,
+    mountain,
+    context(
+        agent_power(institutional),
+        time_horizon(historical),
+        exit_options(constrained),
+        spatial_scope(global)
+    )
+) :- !.
+
+/* ==========================================================================
+   4. TESTS (What We Learn About Constraints)
+   ========================================================================== */
+
+:- begin_tests(dldr_information_policy_tests).
+
+test(multi_perspective_tagging) :-
+    % Reader sees Rope (Autonomy)
+    constraint_indexing:constraint_classification(dldr_information_policy, rope, context(individual_moderate, _, _, _)),
+    % Mainstream Subject sees Snare (Sanitization/Loss of Agency)
+    constraint_indexing:constraint_classification(dldr_information_policy, snare, context(powerless, _, _, _)),
+    % Institutional Gatekeeper sees Mountain (The way things are)
+    constraint_indexing:constraint_classification(dldr_information_policy, mountain, context(institutional, _, _, _)).
+
+test(sanitization_extraction) :-
+    % Shows that powerless (mainstream consumer) experiences more 
+    % extraction of agency than the AO3 reader.
+    constraint_indexing:extractiveness_for_agent(dldr_information_policy, context(powerless, biographical, trapped, national), E1),
+    constraint_indexing:extractiveness_for_agent(dldr_information_policy, context(individual_moderate, immediate, mobile, local), E2),
+    E1 > E2.
+
+:- end_tests(dldr_information_policy_tests).
+
+/* ==========================================================================
+   5. MODEL INTERPRETATION (Commentary)
+   ========================================================================== */
+
+/**
+ * LLM GENERATION NOTES
+ * * Model: Gemini 2.0 Flash
+ * Date: 2026-01-21
+ * * KEY DECISIONS:
+ * 1. EXTRACTIVENESS SCORE (0.35):
+ * Reasoning: The "cost" of the DLDR system is the vigilance required by the 
+ * user and the labor of tagging by the creator. 
+ * The source contrasts this with the "invisible" extraction of 
+ * sanitization.
+ * * 2. PERSPECTIVE SELECTION:
+ * Chose to contrast the AO3 reader (Rope) with the mainstream consumer 
+ * (Snare) to highlight the source's point that "the onus was on the 
+ * reader".
+ * * 3. AMBIGUITIES:
+ * The source notes that mainstream ratings like "R" are based on "maturity 
+ * and age" rather than specific triggers like those found in *Oldboy* *. I resolved this by classifying mainstream curation 
+ * as an institutional "Mountain".
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+omega_variable(
+    sanitization_beneficiary_intent,
+    "Whose interests does sanitization serve, and is it a functional necessity (Mountain) or a predatory control (Snare)?",
+    resolution_mechanism("Audit of content-erasure patterns across mainstream media compared to unsanitized archives"),
+    impact("If necessity: Sanitization is a Rope. If control: It is a Snare."),
+    confidence_without_resolution(medium)
+).
+
+omega_variable(
+    tagging_efficacy_ceiling,
+    "Does granular tagging actually protect users (Rope) or does it facilitate 
+     trauma-tourism (Snare)?",
+    resolution_mechanism("Longitudinal study of AO3 user behavior and psychological impact of tag engagement"),
+    impact("If protective: Rope. If facilitating harm: Snare."),
+    confidence_without_resolution(low)
+).
+
+/* ==========================================================================
+   7. ALTERNATIVE ANALYSIS
+   ========================================================================== */
+
+/**
+ * VIABLE ALTERNATIVES
+ * * ALTERNATIVE 1: Universal Sanitization
+ * Viability: The current mainstream media standard.
+ * Suppression: Actively rejected by archives like AO3 which prioritize 
+ * "Don't like, don't read" policies.
+ * Evidence: Mainstream sources are "largely sanitized of content".
+ * * ALTERNATIVE 2: Pure Raw Unfiltered Chaos
+ * Viability: Information environments with zero tags (e.g., early internet).
+ * Suppression: Shunted because without " rough determination," the 
+ * individual cannot protect themselves.
+ * * CONCLUSION:
+ * The presence of the DLDR policy as an alternative reveals that mainstream 
+ * sanitization is a "Snare" masquerading as a "Mountain" of safety.
+ */
+
+/* ==========================================================================
+   8. INTEGRATION HOOKS
+   ========================================================================== */
+
+% Load: ?- [constraint_dldr_information_policy].
+% Run analysis: ?- constraint_indexing:multi_index_report(dldr_information_policy).
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */
+% ============================================================================
+% CONSTRAINT STORY: dunbars_number
+% ============================================================================
+% Generated: 2026-01-19
+% Model: Gemini 2.0 Flash
+% Source: Robin Dunbar (1992) / Evolutionary Psychology / Anthropology
+% ============================================================================
+
+:- module(constraint_dunbars_number, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile 
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:constraint_metric/3,
+    constraint_indexing:constraint_classification/3.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ * * constraint_id: dunbars_number
+ * human_readable: Dunbar's Number
+ * domain: social/technological
+ * temporal_scope: Permanent (Evolved Human Cognition)
+ * spatial_scope: Global (Human Social Networks)
+ * * SUMMARY:
+ * Dunbar's number is a suggested cognitive limit to the number of people with 
+ * whom one can maintain stable social relationships—relationships in which 
+ * an individual knows who each person is and how each person relates to 
+ * every other person. Usually cited as approximately 150, it is based on a 
+ * correlation between primate brain size and social group size.
+ * * KEY AGENTS:
+ * - The Evolutionary Psychologist: Analytical observer mapping the neural 
+ * constraints of the neocortex.
+ * - The Community Architect: Institutional agent using the number to 
+ * design manageable organizational units or software platforms.
+ * - The Socially Overwhelmed Individual: Individual powerless agent 
+ * experiencing "social fatigue" and the extraction of attention when 
+ * pushed beyond their cognitive ceiling.
+ * * NARRATIVE ARC:
+ * The number functions as a "Mountain" of biological reality—the hardware 
+ * limit of human memory and social processing. For a company founder, it 
+ * acts as a "Rope" for coordination (knowing when to split a growing office 
+ * into two). However, for a user on a hyper-connected social network, it 
+ * becomes a "Snare," as the platform extracts attention for 500+ "friends," 
+ * strangling the quality of deep, stable relationships.
+ */
+
+/* ==========================================================================
+   2. CORE SYSTEM INTEGRATION (The "Reality" Layer)
+   ========================================================================== */
+
+% Required for structural identification
+narrative_ontology:interval(dunbar_interval, 0, 10).
+narrative_ontology:constraint_claim(dunbars_number, mountain).
+
+% Base extractiveness score (0.0-1.0)
+% Rationale: Moderate (0.4). The limit extracts "social energy." When 
+% networks grow too large, the individual's limited attention is 
+% fragmented, extracting the utility of their primary social bonds.
+domain_priors:base_extractiveness(dunbars_number, 0.4).
+
+% Suppression score (0.0-1.0)
+% Rationale: Moderate (0.5). It suppresses the alternative of "Infinite 
+% Community." While we can imagine global brotherhood, our biology 
+% suppresses the ability to actually process it as a stable social reality.
+domain_priors:suppression_score(dunbars_number, 0.5).
+
+% Constraint metric facts (bridge for classification engine)
+narrative_ontology:constraint_metric(dunbars_number, extractiveness, 0.4).
+narrative_ontology:constraint_metric(dunbars_number, suppression_requirement, 0.5).
+
+% Enforcement requirements
+% Emerges naturally from neocortex volume and cognitive processing limits.
+domain_priors:emerges_naturally(dunbars_number).
+
+% Metrics required for Section 1 of the Executive Summary
+% BENEFICIARIES & VICTIMS
+constraint_beneficiary(dunbars_number, [small_tribes, focused_workgroups]).
+constraint_victim(dunbars_number, [hyper_connected_social_media_users, massive_unstructured_organizations]).
+
+/* ==========================================================================
+   3. INDEXED CLASSIFICATIONS (Perspectival Truth)
+   ========================================================================= */
+
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 1: THE ANTHROPOLOGIST - Mountain
+   --------------------------------------------------------------------------
+   
+   WHO: analytical - Observer of the evolved human hardware.
+   WHEN: civilizational - Viewing human social structures over millennia.
+   WHERE: trapped - The size of the human neocortex is a biological fixed point.
+   SCOPE: global - Universal to the human species.
+   
+   WHY THIS CLASSIFICATION:
+   To the scientist, Dunbar's number is a Mountain. It is an unchangeable 
+   feature of the human "hardware." No amount of software or social 
+   engineering has yet increased the underlying neural capacity for 
+   multi-way social tracking. It is a fixed peak in the landscape of 
+   human nature.
+   -------------------------------------------------------------------------- */
+
+constraint_indexing:constraint_classification(
+    dunbars_number,
+    mountain,
+    context(
+        agent_power(analytical),
+        time_horizon(civilizational),
+        exit_options(trapped),
+        spatial_scope(global)
+    )
+) :-
+    constraint_indexing:effective_immutability_for_context(
+        context(analytical, civilizational, trapped, global),
+        mountain
+    ),
+    !.
+
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 2: THE STARTUP FOUNDER - Rope
+   --------------------------------------------------------------------------
+   
+   WHO: institutional - Power to structure a company and its culture.
+   WHEN: biographical - Managing a single organization's growth (10-20 years).
+   WHERE: arbitrage - Can choose to split the organization or remain small.
+   SCOPE: regional - Local office or national company structure.
+   
+   WHY THIS CLASSIFICATION:
+   For the founder, the number is a Rope. It is a vital coordination 
+   mechanism. By knowing that culture breaks down once a team exceeds 
+   ~150 people, they can use the limit to "tether" their growth strategy, 
+   proactively splitting into smaller units to maintain trust and 
+   efficiency.
+   -------------------------------------------------------------------------- */
+
+constraint_indexing:constraint_classification(
+    dunbars_number,
+    rope,
+    context(
+        agent_power(institutional),
+        time_horizon(biographical),
+        exit_options(arbitrage),
+        spatial_scope(national)
+    )
+) :-
+    domain_priors:base_extractiveness(dunbars_number, E),
+    E > 0.2, % Managed as a tool for social efficiency
+    !.
+
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 3: THE OVER-NETWORKED USER - Snare
+   --------------------------------------------------------------------------
+   
+   WHO: powerless - Subject to the "Attention Economy" of a platform.
+   WHEN: immediate - The daily fatigue of managing digital acquaintances.
+   WHERE: constrained - High social cost to "quitting" or deleting friends.
+   SCOPE: local - Immediate social circle and digital feed.
+   
+   WHY THIS CLASSIFICATION:
+   For the person with 1,000 "friends" on a digital platform, Dunbar's number 
+   is a Snare. The platform's design ignores their biological limit to 
+   extract their attention. The attempt to "keep up" with everyone strangles 
+   the time needed for their closest 5 or 15 people, extracting their 
+   emotional well-being while they remain trapped in the "friend" count.
+   -------------------------------------------------------------------------- */
+
+constraint_indexing:constraint_classification(
+    dunbars_number,
+    snare,
+    context(
+        agent_power(powerless),
+        time_horizon(immediate),
+        exit_options(constrained),
+        spatial_scope(local)
+    )
+) :-
+    domain_priors:base_extractiveness(dunbars_number, E),
+    E > 0.3, % Extraction of attention and relationship depth
+    !.
+
+/* ==========================================================================
+   4. TESTS (What We Learn About Constraints)
+   ========================================================================== */
+
+:- begin_tests(dunbars_number_tests).
+
+test(multi_perspective_variance) :-
+    % Analyst sees Mountain, Institutional sees Rope, Powerless sees Snare
+    constraint_indexing:constraint_classification(dunbars_number, mountain, context(analytical, civilizational, trapped, global)),
+    constraint_indexing:constraint_classification(dunbars_number, rope, context(institutional, biographical, arbitrage, national)),
+    constraint_indexing:constraint_classification(dunbars_number, snare, context(powerless, immediate, constrained, local)).
+
+test(power_extractiveness_attention) :-
+    ContextPowerless = context(powerless, immediate, constrained, local),
+    ContextPowerful = context(institutional, biographical, arbitrage, national),
+    constraint_indexing:extractiveness_for_agent(dunbars_number, ContextPowerless, Score1),
+    constraint_indexing:extractiveness_for_agent(dunbars_number, ContextPowerful, Score2),
+    Score1 > Score2.
+
+test(time_immutability_cognition) :-
+    % Biological evolution scale = Mountain
+    constraint_indexing:effective_immutability_for_context(context(analytical, civilizational, trapped, global), mountain).
+
+:- end_tests(dunbars_number_tests).
+
+/* ==========================================================================
+   5. MODEL INTERPRETATION (Commentary)
+   ========================================================================== */
+
+/**
+ * LLM GENERATION NOTES
+ * * Model: Gemini 2.0 Flash
+ * Date: 2026-01-19
+ * * KEY DECISIONS:
+ * * 1. EXTRACTIVENESS SCORE (0.4):
+ * Dunbar's number extracts "social quality." In a large system, it forces 
+ * the individual to pay for breadth with depth. It's a moderate score 
+ * because the extraction is often psychological rather than material.
+ * * 2. PERSPECTIVE SELECTION:
+ * Selected the Anthropologist (Law), the Founder (Tool), and the 
+ * Digital User (Victim) to highlight how a biological ceiling shifts 
+ * from a fact of nature to a structural trap in the attention economy.
+ * * 3. SNARE LOGIC:
+ * Applied to the "over-networked" individual, where the social cost of 
+ * leaving a platform prevents them from returning to their biological 
+ * comfort zone, creating an attention trap.
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+omega_variable(
+    technological_cognitive_offloading,
+    "Can AI and CRM tools effectively 'untie' the Snare of Dunbar's Number 
+    by managing our social memory (Rope), or is the constraint biological 
+    at the level of emotional trust (Mountain)?",
+    resolution_mechanism("Long-term study of high-connectedness groups 
+    using advanced AI social-memory assistants"),
+    impact("If Rope: Human social reach can expand. If Mountain: Trust 
+    always collapses at the biological boundary."),
+    confidence_without_resolution(medium)
+).
+
+/* ==========================================================================
+   7. ALTERNATIVE ANALYSIS
+   ========================================================================== */
+
+/**
+ * VIABLE ALTERNATIVES
+ * * ALTERNATIVE 1: Formal Bureaucracy
+ * Viability: High. Allows millions of people to work together by replacing 
+ * "trust-based" relationships with "rule-based" ones.
+ * Suppression: None. Bureaucracy is the standard "Rope" used to manage 
+ * the Dunbar Mountain, though it is often experienced as a Snare.
+ * * CONCLUSION:
+ * Since we can use rules (Bureaucracy) to coordinate, the *need* for 
+ * trust-based 150-person groups becomes a Mountain we build around, 
+ * using the Rope of formal institutions.
+ */
+
+/* ==========================================================================
+   8. INTEGRATION HOOKS
+   ========================================================================== */
+
+/**
+ * TO USE THIS FILE:
+ * 1. Load: ?- [constraint_dunbars_number].
+ * 2. Multi-perspective: ?- multi_index_report(dunbars_number).
+ */
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */
+% ============================================================================
+% CONSTRAINT STORY: dunning_kruger_effect
+% ============================================================================
+% Version: 5.2 (Deferential Realism Core + Boltzmann + Purity + Network)
+% Logic: 5.2 (Indexed Tuple P,T,E,S + Coupling + Purity + Network Drift)
+% Generated: 2024-07-27
+% ============================================================================
+
+:- module(constraint_dunning_kruger_effect, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
+    narrative_ontology:boltzmann_floor_override/2,
+    constraint_indexing:constraint_classification/3.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ * * constraint_id: dunning_kruger_effect
+ * human_readable: Dunning-Kruger Effect (Cognitive Bias of Self-Assessment)
+ * domain: social/cognitive
+ * * SUMMARY:
+ * The Dunning-Kruger effect is a cognitive bias where people with limited
+ * competence in a domain overestimate their own ability. This occurs because
+ * the skills required for competence are the same skills needed to recognize
+ * incompetence. The bias extracts resources (via errors, wasted time) from
+ * organizations and systems that rely on accurate self-assessment for efficiency.
+ * * KEY AGENTS:
+ * - The Novice: Subject (Powerless), trapped by their own lack of meta-cognition.
+ * - The Organization: Beneficiary (Institutional), can leverage understanding of the bias for training.
+ * - The Analytical Observer: Auditor (Analytical), models the system-wide effects.
+ */
+
+/* ==========================================================================
+   2. BASE PROPERTIES (DOMAIN PRIORS)
+   ========================================================================== */
+
+% Numerical anchors for v3.4 thresholds. Scores adjusted to reflect a Tangled Rope.
+domain_priors:base_extractiveness(dunning_kruger_effect, 0.55). % ε ≥ 0.50 for Tangled Rope. Represents wasted resources and opportunity costs from errors.
+domain_priors:suppression_score(dunning_kruger_effect, 0.75).   % The bias itself suppresses the visibility of competence, making alternatives hard to perceive.
+domain_priors:theater_ratio(dunning_kruger_effect, 0.05).       % The effect is a genuine cognitive function, not performative.
+
+% Constraint metric facts — primary keys used by the classification engine.
+narrative_ontology:constraint_metric(dunning_kruger_effect, extractiveness, 0.55).
+narrative_ontology:constraint_metric(dunning_kruger_effect, suppression_requirement, 0.75).
+narrative_ontology:constraint_metric(dunning_kruger_effect, theater_ratio, 0.05).
+
+% Constraint self-claim (what does the constraint claim to be?)
+% It is a constructed feature of human cognition, not a natural law of physics.
+narrative_ontology:constraint_claim(dunning_kruger_effect, constructed).
+
+% Binary flags
+% The "enforcement" is the cognitive architecture itself, reinforced by social
+% systems that fail to provide corrective feedback. Required for Tangled Rope.
+domain_priors:requires_active_enforcement(dunning_kruger_effect).
+
+% Structural property derivation hooks:
+% Both beneficiary and victim are required for Tangled Rope.
+narrative_ontology:constraint_beneficiary(dunning_kruger_effect, overconfident_novices). % Beneficiary in terms of unearned confidence.
+narrative_ontology:constraint_victim(dunning_kruger_effect, organizational_efficiency). % Victim is the system suffering from errors.
+
+/* ==========================================================================
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × π(P) × σ(S)
+   ========================================================================== */
+
+% PERSPECTIVE 1: THE SUBJECT (SNARE)
+% The novice is trapped by their own lack of meta-cognition. The high
+% effective extraction (χ = 0.55 * 1.5 * 0.8 = 0.66) represents the severe
+% opportunity cost and potential for catastrophic error they are unaware of.
+constraint_indexing:constraint_classification(dunning_kruger_effect, snare,
+    context(agent_power(powerless),
+            time_horizon(biographical),
+            exit_options(trapped),
+            spatial_scope(local))).
+
+% PERSPECTIVE 2: THE BENEFICIARY (ROPE)
+% For an organization that understands the bias, it becomes a pure coordination
+% tool. The negative effective extraction (χ = 0.55 * -0.2 * 1.0 = -0.11) shows
+% that knowledge of the constraint *adds* value, allowing for better training
+% programs, mentorship, and team composition. It's a Rope for managing human capital.
+constraint_indexing:constraint_classification(dunning_kruger_effect, rope,
+    context(agent_power(institutional),
+            time_horizon(generational),
+            exit_options(mobile),
+            spatial_scope(national))).
+
+% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
+% The analyst sees both the coordination function (managing talent) and the
+% asymmetric extraction (wasted resources). The high effective extraction
+% (χ = 0.55 * 1.15 * 1.2 = 0.759) combined with the structural properties
+% (beneficiary, victim, enforcement) correctly identifies it as a Tangled Rope.
+constraint_indexing:constraint_classification(dunning_kruger_effect, tangled_rope,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(global))).
+
+/* ==========================================================================
+   4. VALIDATION TESTS
+   ========================================================================== */
+
+:- begin_tests(dunning_kruger_effect_tests).
+
+test(perspectival_gap) :-
+    % Verify there is a perspectival gap between powerless and institutional.
+    constraint_indexing:constraint_classification(dunning_kruger_effect, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(dunning_kruger_effect, TypeInstitutional, context(agent_power(institutional), _, _, _)),
+    TypePowerless \= TypeInstitutional.
+
+test(threshold_validation) :-
+    config:param(extractiveness_metric_name, ExtMetricName),
+    narrative_ontology:constraint_metric(dunning_kruger_effect, ExtMetricName, E),
+    (E =< 0.15 ; E >= 0.46),
+    assertion(E >= 0.46). % Ensures it's a high-extraction Snare/Tangled Rope.
+
+test(tangled_rope_structural_properties) :-
+    % Verify all three required properties for Tangled Rope are present.
+    domain_priors:requires_active_enforcement(dunning_kruger_effect),
+    narrative_ontology:constraint_beneficiary(dunning_kruger_effect, _),
+    narrative_ontology:constraint_victim(dunning_kruger_effect, _).
+
+:- end_tests(dunning_kruger_effect_tests).
+
+/* ==========================================================================
+   5. GENERATIVE COMMENTARY
+   ========================================================================== */
+
+/**
+ * LOGIC RATIONALE:
+ * The Dunning-Kruger effect is modeled as a Tangled Rope from an analytical
+ * perspective because it has both a coordination function and an extractive one.
+ * The base extractiveness (0.55) is high, representing the significant waste
+ * and error caused by the bias in any system reliant on skill. The suppression
+ * (0.75) is also high, as the bias's core mechanism is to prevent an individual
+ * from perceiving their own incompetence.
+ *
+ * The Perspectival Gap is stark:
+ * - For the 'powerless' novice, it's a Snare. They are trapped by a cognitive
+ *   blind spot that extracts potential and exposes them to risk.
+ * - For the 'institutional' organization, knowledge of the effect is a Rope.
+ *   It's a tool for coordinating training, mentorship, and performance reviews,
+ *   turning a cognitive flaw into a manageable variable.
+ * - The 'analytical' view synthesizes these, seeing the dual nature of coordination
+ *   and extraction, which is the definition of a Tangled Rope.
+ *
+ * * MANDATROPHY ANALYSIS:
+ * [RESOLVED MANDATROPHY] Classifying this as a pure Snare would be inaccurate,
+ * as it would miss the coordination utility that institutions derive from
+ * understanding and managing the bias. The Tangled Rope classification correctly
+ * captures that this cognitive feature, while harmful if ignored, becomes a
+ * tool for social coordination when explicitly addressed, preventing a
+ * misclassification of a complex social dynamic as pure extraction.
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
+omega_variable(
+    omega_dunning_kruger_effect,
+    'Is the Dunning-Kruger effect a fundamental cognitive bias or a mathematical artifact of regression toward the mean?',
+    'Replication of studies using non-traditional statistical models, coupled with neurological imaging of self-assessment processes.',
+    'If an artifact, the constraint is a Piton of flawed science. If a true bias, it is a permanent Tangled Rope in human systems.',
+    confidence_without_resolution(medium)
+).
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+% Required for external script parsing
+narrative_ontology:interval(dunning_kruger_effect, 0, 10).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Temporal data is required as base_extractiveness > 0.46.
+% The Dunning-Kruger effect is modeled as a stable feature of human cognition
+% over the interval, so the values do not drift.
+
+% Theater ratio over time (stable and low):
+narrative_ontology:measurement(dke_tr_t0, dunning_kruger_effect, theater_ratio, 0, 0.05).
+narrative_ontology:measurement(dke_tr_t5, dunning_kruger_effect, theater_ratio, 5, 0.05).
+narrative_ontology:measurement(dke_tr_t10, dunning_kruger_effect, theater_ratio, 10, 0.05).
+
+% Extraction over time (stable and high):
+narrative_ontology:measurement(dke_ex_t0, dunning_kruger_effect, base_extractiveness, 0, 0.55).
+narrative_ontology:measurement(dke_ex_t5, dunning_kruger_effect, base_extractiveness, 5, 0.55).
+narrative_ontology:measurement(dke_ex_t10, dunning_kruger_effect, base_extractiveness, 10, 0.55).
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA (v5.0-5.2)
+   ========================================================================== */
+
+% No Boltzmann or Network data is declared for this constraint as it is a
+% cognitive bias rather than a formal institutional mechanism.
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */

@@ -273,3 +273,36 @@ test(time_immutability_fajardo_trap) :-
 constraint_indexing:constraint_classification(columbia_2026_elections, mountain, agent_power(analytical)).
 constraint_indexing:constraint_classification(columbia_2026_elections, rope, agent_power(institutional)).
 constraint_indexing:constraint_classification(columbia_2026_elections, snare, agent_power(powerless)).
+
+% ============================================================================
+% ENRICHMENT: Structural predicates for dynamic classification
+% Generated: 2026-02-08
+% Template: v5.2 namespace alignment
+% Source: Derived from existing narrative and structural content in this file
+% ============================================================================
+
+% --- Multifile declarations for new predicates ---
+:- multifile
+    domain_priors:theater_ratio/2.
+
+% --- Theater ratio (missing from base properties) ---
+% Coordination mechanism in political domain — moderate institutional framing
+domain_priors:theater_ratio(colombia_2026_presidential_election, 0.2).
+narrative_ontology:constraint_metric(colombia_2026_presidential_election, theater_ratio, 0.2).
+
+% ============================================================================
+% ENRICHMENT: Structural predicates for remaining gaps
+% Generated: 2026-02-08
+% Template: v5.2 namespace alignment
+% Source: Derived from narrative context in this file (columbia_2026_elections)
+% ============================================================================
+constraint_beneficiary(colombia_2026_presidential_election, political_elites).
+constraint_victim(colombia_2026_presidential_election, marginalized_voters).
+
+omega_variable(
+    omega_colombian_polarization,
+    "Will the two-round system intensify polarization to the point where centrist alternatives are structurally eliminated?",
+    "Post-election analysis of vote fragmentation and centrist party viability after the May 2026 results.",
+    "If centrists survive: The constraint remains a Rope. If eliminated: It hardens into a Mountain of binary choice.",
+    confidence_without_resolution(medium)
+).

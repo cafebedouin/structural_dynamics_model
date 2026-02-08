@@ -24,6 +24,7 @@
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -57,6 +58,9 @@ domain_priors:theater_ratio(israel_gaza_ceasefire_violation, 0.2).       % Piton
 narrative_ontology:constraint_metric(israel_gaza_ceasefire_violation, extractiveness, 0.6).
 narrative_ontology:constraint_metric(israel_gaza_ceasefire_violation, suppression_requirement, 0.7).
 narrative_ontology:constraint_metric(israel_gaza_ceasefire_violation, theater_ratio, 0.2).
+
+% Constraint classification claim
+narrative_ontology:constraint_claim(israel_gaza_ceasefire_violation, tangled_rope).
 
 % Binary flags
 domain_priors:requires_active_enforcement(israel_gaza_ceasefire_violation). % Required for Tangled Rope

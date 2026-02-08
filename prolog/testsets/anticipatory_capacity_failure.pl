@@ -21,6 +21,7 @@
     narrative_ontology:has_sunset_clause/1,
     narrative_ontology:constraint_metric/3,
     narrative_ontology:interval/3,
+    narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -59,6 +60,9 @@ domain_priors:theater_ratio(anticipatory_capacity_failure, 0.90).
 narrative_ontology:constraint_metric(anticipatory_capacity_failure, extractiveness, 0.83).
 narrative_ontology:constraint_metric(anticipatory_capacity_failure, suppression_requirement, 0.71).
 narrative_ontology:constraint_metric(anticipatory_capacity_failure, theater_ratio, 0.9).
+
+% Constraint classification claim
+narrative_ontology:constraint_claim(anticipatory_capacity_failure, piton).
 
 % Mandatory keys for classification engine v3.4
 domain_priors:requires_active_enforcement(anticipatory_capacity_failure).

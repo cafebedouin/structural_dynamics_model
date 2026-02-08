@@ -24,6 +24,7 @@
     narrative_ontology:measurement/5,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -60,6 +61,9 @@ domain_priors:theater_ratio(bangladesh_july_national_charter, 0.32). % Primarily
 narrative_ontology:constraint_metric(bangladesh_july_national_charter, extractiveness, 0.55).
 narrative_ontology:constraint_metric(bangladesh_july_national_charter, suppression_requirement, 0.78).
 narrative_ontology:constraint_metric(bangladesh_july_national_charter, theater_ratio, 0.32).
+
+% Constraint classification claim
+narrative_ontology:constraint_claim(bangladesh_july_national_charter, tangled_rope).
 
 % Mandatory keys for classification engine v3.4
 % [RESOLVED MISSING_SUNSET_CLAUSE]: Required for Scaffold classification.

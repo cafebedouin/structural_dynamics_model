@@ -269,3 +269,19 @@ omega_variable(
 constraint_indexing:constraint_classification(udhr_1946, mountain, agent_power(analytical)).
 constraint_indexing:constraint_classification(udhr_1946, rope, agent_power(institutional)).
 constraint_indexing:constraint_classification(udhr_1946, snare, agent_power(powerless)).
+
+% ============================================================================
+% ENRICHMENT: Structural predicates for dynamic classification
+% Generated: 2026-02-08
+% Template: v5.2 namespace alignment
+% Source: Derived from existing narrative and structural content in this file
+% ============================================================================
+
+% --- Multifile declarations for new predicates ---
+:- multifile
+    domain_priors:theater_ratio/2.
+
+% --- Theater ratio (missing from base properties) ---
+% Coordination mechanism in political domain — moderate institutional framing
+domain_priors:theater_ratio(udhr_1948, 0.16).
+narrative_ontology:constraint_metric(udhr_1948, theater_ratio, 0.16).

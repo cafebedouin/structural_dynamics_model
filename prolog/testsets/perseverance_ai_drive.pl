@@ -24,6 +24,7 @@
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -57,6 +58,9 @@ domain_priors:theater_ratio(perseverance_ai_drive, 0.05).       % Piton detectio
 narrative_ontology:constraint_metric(perseverance_ai_drive, extractiveness, 0.25).
 narrative_ontology:constraint_metric(perseverance_ai_drive, suppression_requirement, 0.10).
 narrative_ontology:constraint_metric(perseverance_ai_drive, theater_ratio, 0.05).
+
+% Constraint classification claim
+narrative_ontology:constraint_claim(perseverance_ai_drive, rope).
 
 % Binary flags
 % narrative_ontology:has_sunset_clause(perseverance_ai_drive).      % Mandatory if Scaffold

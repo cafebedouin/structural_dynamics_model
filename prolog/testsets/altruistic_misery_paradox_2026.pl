@@ -22,6 +22,7 @@
     narrative_ontology:constraint_metric/3,
     narrative_ontology:interval/3,
     narrative_ontology:measurement/5,
+    narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -68,6 +69,9 @@ narrative_ontology:constraint_metric(altruistic_misery_paradox_2026, extractiven
 narrative_ontology:constraint_metric(altruistic_misery_paradox_2026, suppression_requirement, 0.68).
 narrative_ontology:constraint_metric(altruistic_misery_paradox_2026, theater_ratio, 0.75).
 
+% Constraint classification claim
+narrative_ontology:constraint_claim(altruistic_misery_paradox_2026, piton).
+
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
    ========================================================================== */
@@ -99,6 +103,7 @@ constraint_indexing:constraint_classification(altruistic_misery_paradox_2026, pi
             exit_options(arbitrage), 
             spatial_scope(global))) :-
     domain_priors:theater_ratio(altruistic_misery_paradox_2026, TR), TR > 0.70.
+domain_priors:requires_active_enforcement(altruistic_misery_paradox_2026).
 
 /* ==========================================================================
    4. VALIDATION TESTS

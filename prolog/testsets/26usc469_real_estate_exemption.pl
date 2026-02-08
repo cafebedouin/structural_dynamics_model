@@ -19,6 +19,7 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -67,7 +68,7 @@ narrative_ontology:constraint_metric('26usc469_real_estate_exemption', extractiv
 narrative_ontology:constraint_metric('26usc469_real_estate_exemption', suppression_requirement, 0.8).
 
 % Enforcement: Requires active enforcement by the IRS during audits.
-domain_priors:requires_active_enforcement('26usc469_real_estate_exemption'). 
+domain_priors:requires_active_enforcement('26usc469_real_estate_exemption').
 
 % BENEFICIARIES & VICTIMS
 constraint_beneficiary('26usc469_real_estate_exemption', full_time_real_estate_professionals).

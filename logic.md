@@ -380,7 +380,7 @@ Terminal(C, t, state) ≡ Type(C[I], t) = state
 ```
 Constraint has reached endpoint (no further transitions expected or possible).
 
-### C. Drift Event Operators (Seven Types)
+### C. Drift Event Operators (Eleven Types — see also §IIb.H, §IIc.G, §IId.F)
 
 **Type 1 - Metric Substitution: `MS(C, t_drift, V, M)`**
 ```
@@ -648,6 +648,379 @@ Without degradation event, type persists (inertia).
 Created(C, t₀) → (∃t_terminal: Terminal(C, t_terminal, state)) ∨ □Exists(C, t)
 ```
 All created constraints either reach terminal state or persist indefinitely (Mountains).
+
+---
+
+
+## IIb. Boltzmann Compliance and Coupling Topology (v5.0)
+
+**Structural extension:** Mountains claim to be natural laws — constraints that emerge from physics, logic, or mathematical necessity rather than human design. The Boltzmann compliance framework provides a formal test for this claim, drawing on Tamuz & Sandomirskiy (2025): the Boltzmann distribution is the ONLY probability law describing uncoupled systems. If a constraint claimed as natural shows cross-index coupling, it fails the independence test that real natural laws satisfy.
+
+### A. Cross-Index Coupling Detection
+
+**Coupling Score: `CouplingScore(C) ∈ [0,1]`**
+
+Tests whether a constraint's classification factorizes across Power × Scope dimensions. If changing power level has *different effects* at different scope levels, the constraint exhibits coupling — a signature of constructed, not natural, origin.
+
+```
+CouplingScore(C) = min(1.0, Violations / MaxViolations)
+
+where:
+  Grid = {(P, S) | P ∈ {powerless, moderate, analytical}, S ∈ {local, national, global}}
+  Violations = |{(P, S₁, S₂) | Type(C[P,S₁]) ≠ Type(C[P,S₂]) for S₁ ≠ S₂}|
+  MaxViolations = |Grid| × (|Scopes| - 1)
+```
+
+Three coupling regimes:
+- `independent` (Score = 0.0): Classification factorizes perfectly — consistent with natural law
+- `weakly_coupled` (0 < Score ≤ 0.40): Minor coupling — may reflect measurement noise or edge cases
+- `strongly_coupled` (Score > 0.40): Significant coupling — inconsistent with natural law claim
+
+### B. Complexity-Adjusted Threshold
+
+Not all coupling indicates fraud. Complex coordination mechanisms (global infrastructure, enforcement systems) inherently exhibit some coupling because their effects genuinely vary by context. The threshold adjusts by coordination type:
+
+```
+Threshold(C) = BaseThreshold + Offset(coordination_type(C))
+
+BaseThreshold = 0.15
+
+Offsets:
+  information_standard    = 0.00  (pure information — no expected coupling)
+  resource_allocation     = 0.05  (allocation effects vary somewhat by context)
+  enforcement_mechanism   = 0.08  (enforcement inherently context-dependent)
+  global_infrastructure   = 0.15  (global systems have legitimate scope effects)
+```
+
+`coordination_type/2` is declared per-constraint in testset files. If undeclared, the default threshold (0.15) applies.
+
+### C. Boltzmann Floor (Price of Anarchy)
+
+Every coordination type has a minimum extraction inherent to its function — the "price of anarchy" that would exist even in an ideal implementation. Extraction below this floor is not exploitative; it's the structural cost of coordination.
+
+```
+Floor(coordination_type) → ℝ
+
+  information_standard    = 0.02  (near-zero overhead)
+  resource_allocation     = 0.15  (allocation requires infrastructure)
+  enforcement_mechanism   = 0.10  (enforcement has inherent costs)
+  global_infrastructure   = 0.20  (global coordination is expensive)
+  default                 = 0.05  (when type unknown)
+```
+
+**Excess Extraction:**
+```
+ExcessExtraction(C) = max(0, ε(C) - Floor(coordination_type(C)))
+```
+
+Excess extraction measures extraction *beyond* what the coordination type structurally requires. A constraint with ε = 0.15 and Floor = 0.15 has zero excess — it extracts exactly what coordination costs.
+
+### D. Boltzmann Invariant Mountain Test
+
+A constraint passes the Boltzmann invariant test if it satisfies four conditions:
+
+```
+BoltzmannInvariant(C) = invariant iff:
+  1. Factorization:      CouplingScore(C) ≤ Threshold(C)
+  2. Scope Invariance:   ∀S₁,S₂: Type(C[P,S₁]) = Type(C[P,S₂]) for fixed P
+  3. No Excess:          ExcessExtraction(C) ≤ 0.02
+  4. Natural Signature:  NL(C) holds (from §II.E)
+
+BoltzmannInvariant(C) = variant iff any condition fails with sufficient data
+BoltzmannInvariant(C) = inconclusive iff insufficient classifications (< 3)
+```
+
+**Relationship to Mountain classification:** A Mountain that fails the Boltzmann invariant test is not necessarily misclassified — it may be a Mountain from the metric perspective that exhibits non-natural structural properties. The test provides diagnostic evidence, not classification override.
+
+### E. Coupling-Aware Reformability
+
+Reform difficulty depends on how deeply coupled a constraint's extraction is with its coordination function:
+
+```
+ReformScore(C) = 0.30 × Separability(C) + 0.40 × (1 - CouplingScore(C)) + 0.30 × ExcessFactor(C)
+
+where:
+  Separability(C) ∈ [0,1]  (can coordination be separated from extraction?)
+  ExcessFactor(C) = min(1.0, ExcessExtraction(C) / ε(C))  (fraction that is excess)
+```
+
+Range [0,1] where 1.0 = easily reformable, 0.0 = extraction deeply entangled with coordination.
+
+### F. Boltzmann-Derived Signatures
+
+Three new structural signatures extend the detection pattern operators from §II.C:
+
+**False Natural Law: `FNL(C)`**
+```
+FNL(C) ↔ Claimed_Natural(C) ∧ BoltzmannInvariant(C) = variant
+         ∧ CouplingScore(C) > Threshold(C)
+```
+Constraint claims to be a natural law (Mountain) but fails the Boltzmann independence test. The coupling reveals constructed origin disguised as physics ("physics-washed").
+
+**Coupling-Invariant Rope: `CI_Rope(C)`**
+```
+CI_Rope(C) ↔ BoltzmannInvariant(C) = compliant
+             ∧ Scope_Invariant(C)
+             ∧ ExcessExtraction(C) ≤ 0.02
+             ∧ Coord(C)
+```
+Certified coordination mechanism. Passes all Boltzmann structural tests — extraction is minimal and consistent with coordination costs. This is what good ropes look like under structural scrutiny.
+
+**False CI-Rope: `FCR(C)`**
+```
+FCR(C) ↔ Appears_As_Rope(C) ∧ ∃Test ∈ {Factorization, Scope, Excess, Coupling}: Fails(C, Test)
+```
+Constraint appears to be a rope by metrics but fails one or more Boltzmann structural tests. "Coordination-washed" — hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+
+### G. Drift Events 8-9
+
+**Type 8 - Coupling Drift: `CD(C, t_drift)`**
+```
+CD(C, t_drift) ≡
+    CouplingScore(C, t < t_drift) ≤ Threshold(C)
+    ∧ CouplingScore(C, t ≥ t_drift) > Threshold(C)
+```
+Constraint that was Boltzmann-compliant develops cross-index coupling over time — coordination mechanism is being captured.
+
+**Type 9 - Boltzmann Floor Drift: `BFD(C, t_drift)`**
+```
+BFD(C, t_drift) ≡
+    ExcessExtraction(C, t < t_drift) ≤ 0.02
+    ∧ ExcessExtraction(C, t ≥ t_drift) > 0.02
+```
+Extraction rises above the coordination-type floor — the constraint is extracting more than its coordination function requires.
+
+---
+
+## IIc. Structural Purity (v5.1)
+
+**Structural extension:** While Boltzmann compliance tests whether a constraint *claims* to be natural, purity scoring measures how *cleanly* it operates regardless of type. A high-purity snare extracts efficiently without coupling artifacts; a low-purity rope has structural contamination that undermines its coordination function.
+
+### A. Purity Score
+
+**Purity: `Purity(C) ∈ [0,1]`**
+
+```
+Purity(C) = 0.30 × F + 0.25 × SI + 0.25 × CC + 0.20 × EX
+
+where:
+  F  = Factorization subscore    = 1 - CouplingScore(C)
+  SI = Scope Invariance subscore = 1.0 if scope-invariant, penalized by 0.25 per extra type
+  CC = Coupling Cleanliness      = 1.0 - max(nonsensical_coupling_strength)
+  EX = Excess Extraction subscore = 1 - min(1.0, ExcessExtraction(C) × 2)
+```
+
+Returns -1.0 (sentinel) when epistemic data is insufficient for computation.
+
+### B. Structural Purity Classification
+
+```
+Purity(C) ≥ 0.85              → pure_natural_law    (if NL(C))
+                                  pure_coordination   (if CS(C) or CI_Rope(C))
+                                  pure_scaffold       (if Scaffold(C))
+0.70 ≤ Purity(C) < 0.85       → sound               (structurally clean)
+0.50 ≤ Purity(C) < 0.70       → borderline           (monitoring recommended)
+0.30 ≤ Purity(C) < 0.50       → contaminated(Tests)  (failed structural tests listed)
+Purity(C) < 0.30              → degraded             (significant structural problems)
+Purity(C) = -1.0              → inconclusive         (insufficient data)
+```
+
+### C. Purity-Qualified Action Algebra
+
+The action algebra from §VI.B is extended with purity qualifiers:
+
+```
+Qualifier(C) =
+  stable          if Purity(C) ≥ 0.70  (sound floor)
+  monitor         if 0.50 ≤ Purity(C) < 0.70  (escalation floor)
+  escalate_reform if 0.30 ≤ Purity(C) < 0.50 ∧ Type(C) ∈ {tangled_rope}
+  escalate_cut    if 0.30 ≤ Purity(C) < 0.50 ∧ Type(C) ∈ {snare}
+  accelerate_sunset if 0.30 ≤ Purity(C) < 0.50 ∧ Type(C) ∈ {scaffold, piton}
+  degraded        if Purity(C) < 0.30
+```
+
+**Three Purity Floors:**
+- `sound` (0.70): Constraint operates cleanly — standard action algebra applies
+- `escalation` (0.50): Structural contamination detected — actions should be more aggressive
+- `degraded` (0.30): Severe contamination — constraint may not function as classified
+
+### D. Purity-Adjusted Energy Costs
+
+Purity affects the energy cost of actions. Contaminated constraints are harder to reform and more expensive to maintain:
+
+```
+E_reform(C, I) = E_base_reform(C, I) × ReformMultiplier(C)
+  ReformMultiplier(C) = 1.0 + 2.0 × (1 - Purity(C))  [up to 3× for degraded]
+
+E_cut(C, I) = E_base_cut(C, I) × CutMultiplier(C)
+  CutMultiplier(C) = 1.0 + 0.75 × (1 - Purity(C))    [up to 1.75× for degraded]
+
+E_maintain(C, I) = E_base_maintain(C, I) × MaintainMultiplier(C)
+  MaintainMultiplier(C) = 1.0 - 0.2 × Purity(C)       [down to 0.8× for pristine]
+```
+
+### E. Action Composition Gates
+
+Purity prerequisites for composed actions:
+
+```
+Surgical_Reform(⊞⊠C[I])  requires Purity(C) ≥ 0.30
+  [Below 0.30, coordination and extraction are too entangled for surgical separation]
+
+Safe_Transition(⊡C → ¬C)  requires Purity(⊡C) ≥ 0.50
+  [Below 0.50, scaffold has too much structural contamination for clean dissolution]
+
+Efficient_Coordination(⊞C[I])  requires Purity(⊞C) ≥ 0.50
+  [Below 0.50, rope's coordination function is compromised by structural contamination]
+```
+
+### F. Purity Reform Recommendations
+
+When purity is below target, the system identifies which subscores need improvement:
+
+```
+Target(C) = max(Current_Purity(C), 0.85)
+Deficit(subscore) = Target_contribution - Actual_contribution
+
+Urgency:
+  critical  if Purity(C) < 0.30
+  high      if 0.30 ≤ Purity(C) < 0.50
+  moderate  if 0.50 ≤ Purity(C) < 0.70
+  low       if 0.70 ≤ Purity(C) < 0.85
+  none      if Purity(C) ≥ 0.85
+```
+
+### G. Drift Event 10
+
+**Type 10 - Purity Drift: `PD(C, t_drift)`**
+```
+PD(C, t_drift) ≡
+    Purity(C, t < t_drift) ≥ Floor
+    ∧ Purity(C, t ≥ t_drift) < Floor
+    ∧ ∃Signal ∈ {extraction_rising, coupling_above_threshold,
+                  theater_rising, excess_above_floor}
+```
+Purity drops below a floor threshold with identifiable decline signals. Decline signals indicate the *source* of purity loss.
+
+---
+
+## IId. Constraint Network Dynamics (v5.2)
+
+**Structural extension:** Constraints do not exist in isolation. A constraint's effective purity depends not only on its intrinsic properties but on the purity of its neighbors. Network dynamics model how contamination propagates through constraint clusters and predict cascade failures.
+
+### A. Network Topology
+
+Three sources of edges between constraints:
+
+```
+Edge(C₁, C₂) ←
+  1. Explicit declaration:  affects_constraint(C₁, C₂)
+  2. Inferred coupling:     shared regulatory domain or causal dependency
+  3. Shared agents:         same beneficiary/victim groups
+```
+
+`constraint_neighbors(C, Context, Neighbors)` returns the set of constraints connected to C with edge strength and source type.
+
+### B. Contamination Model
+
+Contamination propagates one hop, downward only (from lower-purity to higher-purity neighbors):
+
+```
+EdgeContam(C₁ → C₂) = min(Cap, Delta × Attenuation × TypeStrength(C₁))
+
+where:
+  Cap = 0.30                    (contamination_cap — maximum single-edge effect)
+  Delta = max(0, Purity(C₂) - Purity(C₁))  (purity differential)
+  Attenuation = 0.50            (purity_attenuation_factor)
+  TypeStrength = emission strength by constraint type:
+    snare         = 1.0   (maximum contamination emission)
+    piton         = 0.8
+    tangled_rope  = 0.5
+    scaffold      = 0.2
+    rope          = 0.1
+    mountain      = 0.0   (zero emission — natural laws don't contaminate)
+```
+
+**Type Immunity** (receiving side):
+```
+Immunity(type) = 1.0 - TypeStrength(type)
+  mountain      = 1.0   (fully immune)
+  rope          = 0.9
+  scaffold      = 0.8
+  tangled_rope  = 0.5
+  piton         = 0.2
+  snare         = 0.0   (fully susceptible — already contaminated)
+```
+
+**Effective Purity:**
+```
+EffectivePurity(C) = max(0, IntrinsicPurity(C) - TotalContam(C) × Immunity(Type(C)))
+
+where TotalContam(C) = Σ EdgeContam(Neighbor → C) for all neighbors
+```
+
+### C. Network Metrics
+
+```
+WeakestLink(Network) = min(EffectivePurity(C)) for C ∈ Network
+AveragePurity(Network) = mean(EffectivePurity(C)) for C ∈ Network
+AtRiskCount(Network) = |{C | EffectivePurity(C) < 0.50}|
+ClusterPurity(Cluster) = mean(EffectivePurity(C)) for C ∈ Cluster
+```
+
+### D. Network-Qualified Actions
+
+When network contamination significantly reduces effective purity:
+
+```
+If EffectivePurity(C) - IntrinsicPurity(C) ≤ -0.05:
+  Use EffectivePurity(C) for action qualification (§IIc.C)
+  instead of IntrinsicPurity(C)
+```
+
+This means a constraint with intrinsic purity of 0.72 (sound) but effective purity of 0.55 (due to contaminated neighbors) would be qualified as `monitor` rather than `stable`.
+
+### E. Network Drift Dynamics
+
+**Induced Drift:** When a neighbor is drifting, it can induce drift in connected constraints:
+
+```
+InducedVelocity(C) = Σ(Rate_i × Sensitivity_i) for drifting neighbors i
+
+where:
+  Rate_i = drift rate of neighbor i (from metric trend analysis)
+  Sensitivity_i = EdgeStrength(i, C) × TypeStrength(i)
+```
+
+**Cascade Prediction:** Time to cross purity thresholds:
+
+```
+TimeToCross(C, Floor) = (EffectivePurity(C) - Floor) / InducedVelocity(C)
+  if InducedVelocity(C) > 0
+```
+
+**Network Stability Assessment:**
+```
+NetworkStability =
+  stable     if no constraints have induced velocity > threshold (0.01)
+  degrading  if 1-2 constraints above threshold
+  cascading  if ≥ 3 constraints above threshold (cascade_count_threshold)
+```
+
+**Severity Escalation:**
+- Hub escalation: If a drifting constraint has degree ≥ hub_degree_threshold (3), severity increases by 1 level
+- Multi-source escalation: If drift has multiple contributing neighbors, severity increases by 1 level
+
+### F. Drift Event 11
+
+**Type 11 - Network Drift: `ND(C, t_drift)`**
+```
+ND(C, t_drift) ≡
+    ∃Neighbor: Drifting(Neighbor, t_drift)
+    ∧ EdgeContam(Neighbor → C) > 0
+    ∧ EffectivePurity(C, t_drift) < IntrinsicPurity(C) - 0.05
+```
+Purity decline induced by contamination from drifting neighbors, not from the constraint's own metric changes.
 
 ---
 
@@ -1274,6 +1647,12 @@ Evidence(Type(C[I₁])) may contradict Belief(Type(C[I₂]))
 
 5. Scope modifier values (σ) are theoretically motivated but empirically untested
    → The verification-difficulty justification is sound but calibration is provisional
+
+6. Boltzmann floor values are provisionally calibrated
+   → Floor values for coordination types (§IIb.C) are theoretically motivated but
+     based on limited empirical data. The default floor (0.05) and type-specific
+     floors may need adjustment as more constraints with coordination_type
+     declarations enter the corpus.
 ```
 
 **Honest Framing:**
@@ -1437,6 +1816,14 @@ Traditional formal systems: Specification and implementation drift apart
 **Indexed Constraint-Logic:** Single canonical predicate (`classify_from_metrics/6`) ensures all classification pathways — primary, modal, lifecycle, and validation — apply identical threshold logic from `config.pl`. Two-regime architecture (metrics-first, signature-override) provides both precision and structural awareness.
 
 **Achievement:** Formal spec and implementation remain **aligned through architectural discipline**, not manual synchronization.
+
+### H. Structural Integrity
+
+Traditional formal systems: Classify objects in isolation
+
+**Indexed Constraint-Logic:** Purity scoring (§IIc) measures how cleanly each constraint operates across four structural dimensions. Network dynamics (§IId) propagate contamination between connected constraints, enabling cascade prediction. Boltzmann compliance (§IIb) provides a physics-grounded test for natural law claims.
+
+**Achievement:** The system reasons not only about **what a constraint is** but about **how structurally sound it is** and **how its neighbors affect it** — moving from static classification to dynamic structural health monitoring.
 
 ---
 

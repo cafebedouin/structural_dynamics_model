@@ -228,3 +228,42 @@ test(multi_perspective_variance) :-
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
+% ============================================================================
+% ENRICHMENT: Structural predicates for dynamic classification
+% Generated: 2026-02-08
+% Template: v5.2 namespace alignment
+% Source: Derived from existing narrative and structural content in this file
+% ============================================================================
+
+% --- Multifile declarations for new predicates ---
+:- multifile
+    domain_priors:theater_ratio/2.
+
+% --- Theater ratio (missing from base properties) ---
+% Functional coordination mechanism — primarily substantive
+domain_priors:theater_ratio(tcp_rfc9293_interoperability, 0.13).
+narrative_ontology:constraint_metric(tcp_rfc9293_interoperability, theater_ratio, 0.13).
+
+% --- Analytical perspective classification (missing) ---
+% chi = 0.2 * 1.15 (analytical) * 1.2 (global) = 0.276
+% Classification: scaffold
+constraint_indexing:constraint_classification(tcp_rfc9293_interoperability, scaffold,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(global))).
+
+% ============================================================================
+% ENRICHMENT: Structural predicates for remaining gaps
+% Generated: 2026-02-08
+% Template: v5.2 namespace alignment
+% Source: Derived from narrative context in this file (rfc9293_interoperability)
+% ============================================================================
+
+omega_variable(
+    omega_tcp_ossification,
+    "Will middlebox ossification permanently prevent TCP extension deployment, effectively converting the protocol from a Rope into a Mountain?",
+    "Longitudinal measurement of TCP option negotiation success rates across diverse network paths.",
+    "If ossified: TCP becomes an immutable Mountain. If extensible: Remains a living Rope that can adapt.",
+    confidence_without_resolution(medium)
+).

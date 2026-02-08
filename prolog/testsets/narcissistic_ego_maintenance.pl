@@ -22,6 +22,7 @@
     narrative_ontology:constraint_metric/3,
     narrative_ontology:interval/3,
     narrative_ontology:measurement/5,
+    narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -57,6 +58,9 @@ domain_priors:theater_ratio(narcissistic_ego_maintenance, 0.85).
 narrative_ontology:constraint_metric(narcissistic_ego_maintenance, extractiveness, 0.75).
 narrative_ontology:constraint_metric(narcissistic_ego_maintenance, suppression_requirement, 0.6).
 narrative_ontology:constraint_metric(narcissistic_ego_maintenance, theater_ratio, 0.85).
+
+% Constraint classification claim
+narrative_ontology:constraint_claim(narcissistic_ego_maintenance, piton).
 
 % Binary flags
 domain_priors:requires_active_enforcement(narcissistic_ego_maintenance).
@@ -158,3 +162,12 @@ narrative_ontology:measurement(nem_ex_t10, narcissistic_ego_maintenance, base_ex
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
+
+% ============================================================================
+% ENRICHMENT: Structural predicates for remaining gaps
+% Generated: 2026-02-08
+% Template: v5.2 namespace alignment
+% Source: Derived from narrative context in this file (narcissistic_ego_maintenance)
+% ============================================================================
+constraint_beneficiary(narcissistic_ego_maintenance, narcissists_self_image).
+constraint_victim(narcissistic_ego_maintenance, emotional_labor_providers).

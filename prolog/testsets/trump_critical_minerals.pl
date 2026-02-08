@@ -24,6 +24,7 @@
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -58,6 +59,9 @@ domain_priors:theater_ratio(trump_critical_minerals, 0.2).       % Piton detecti
 narrative_ontology:constraint_metric(trump_critical_minerals, extractiveness, 0.65).
 narrative_ontology:constraint_metric(trump_critical_minerals, suppression_requirement, 0.55).
 narrative_ontology:constraint_metric(trump_critical_minerals, theater_ratio, 0.2).
+
+% Constraint classification claim
+narrative_ontology:constraint_claim(trump_critical_minerals, tangled_rope).
 
 % Binary flags
 domain_priors:requires_active_enforcement(trump_critical_minerals). % Required for Tangled Rope

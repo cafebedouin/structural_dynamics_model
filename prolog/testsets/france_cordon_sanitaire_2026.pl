@@ -84,6 +84,9 @@ narrative_ontology:constraint_metric(france_cordon_sanitaire_2026, extractivenes
 narrative_ontology:constraint_metric(france_cordon_sanitaire_2026, suppression_requirement, 0.65).
 narrative_ontology:constraint_metric(france_cordon_sanitaire_2026, theater_ratio, 0.82).
 
+% Constraint classification claim
+narrative_ontology:constraint_claim(france_cordon_sanitaire_2026, piton).
+
 domain_priors:requires_active_enforcement(france_cordon_sanitaire_2026).
 
 /* ==========================================================================
@@ -179,3 +182,12 @@ narrative_ontology:interval(france_cordon_sanitaire_2026, 0, 10).
 /* ==========================================================================
 END OF CONSTRAINT STORY
 ========================================================================== */
+
+% ============================================================================
+% ENRICHMENT: Structural predicates for remaining gaps
+% Generated: 2026-02-08
+% Template: v5.2 namespace alignment
+% Source: Derived from narrative context in this file (france_cordon_sanitaire_2026)
+% ============================================================================
+constraint_beneficiary(france_cordon_sanitaire_2026, establishment_parties).
+constraint_victim(france_cordon_sanitaire_2026, excluded_populist_voters).

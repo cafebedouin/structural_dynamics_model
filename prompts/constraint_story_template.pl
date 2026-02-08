@@ -1,8 +1,8 @@
 % ============================================================================
 % CONSTRAINT STORY: [CONSTRAINT_ID]
 % ============================================================================
-% Version: 3.4 (Deferential Realism Core)
-% Logic: 3.3 (Indexed Tuple P,T,E,S)
+% Version: 5.2 (Deferential Realism Core + Boltzmann + Purity + Network)
+% Logic: 5.2 (Indexed Tuple P,T,E,S + Coupling + Purity + Network Drift)
 % Generated: [DATE]
 % ============================================================================
 
@@ -24,6 +24,10 @@
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
+    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -57,6 +61,10 @@ domain_priors:theater_ratio([id], [0.0-1.0]).       % Piton detection (>= 0.70)
 narrative_ontology:constraint_metric([id], extractiveness, [0.0-1.0]).
 narrative_ontology:constraint_metric([id], suppression_requirement, [0.0-1.0]).
 narrative_ontology:constraint_metric([id], theater_ratio, [0.0-1.0]).
+
+% Constraint classification claim (must match the analytical perspective type).
+% Values: mountain, rope, tangled_rope, snare, scaffold, piton
+narrative_ontology:constraint_claim([id], [mountain/rope/tangled_rope/snare/scaffold/piton]).
 
 % Binary flags
 % narrative_ontology:has_sunset_clause([id]).      % Mandatory if Scaffold
@@ -199,6 +207,24 @@ narrative_ontology:measurement([id]_tr_t10, [id], theater_ratio, 10, [final_thea
 narrative_ontology:measurement([id]_ex_t0, [id], base_extractiveness, 0, [initial_extraction]).
 narrative_ontology:measurement([id]_ex_t5, [id], base_extractiveness, 5, [mid_extraction]).
 narrative_ontology:measurement([id]_ex_t10, [id], base_extractiveness, 10, [final_extraction]).
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA (v5.0-5.2)
+   ========================================================================== */
+
+% Coordination type (enables Boltzmann floor + complexity offset)
+% Valid types: information_standard, resource_allocation,
+%              enforcement_mechanism, global_infrastructure
+% narrative_ontology:coordination_type([id], [information_standard/resource_allocation/enforcement_mechanism/global_infrastructure]).
+
+% Boltzmann floor override (only if domain knowledge justifies)
+% Value must be in [0.0, 1.0]
+% narrative_ontology:boltzmann_floor_override([id], [0.0-1.0]).
+
+% Network relationships (structural influence edges)
+% Declare when constraints share regulatory domain, causal dependency,
+% or institutional coupling.
+% narrative_ontology:affects_constraint([id], [other_constraint_id]).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

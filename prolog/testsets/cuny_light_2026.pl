@@ -22,6 +22,7 @@
     narrative_ontology:interval/3,
     narrative_ontology:measurement/5,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_claim/2,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
@@ -57,6 +58,8 @@ domain_priors:suppression_score(cuny_light_2026, 0.02).
 domain_priors:theater_ratio(cuny_light_2026, 0.15).
 
 % Primary keys for classification engine
+narrative_ontology:constraint_claim(cuny_light_2026, rope).
+
 narrative_ontology:constraint_metric(cuny_light_2026, extractiveness, 0.05).
 narrative_ontology:constraint_metric(cuny_light_2026, suppression_requirement, 0.02).
 narrative_ontology:constraint_metric(cuny_light_2026, theater_ratio, 0.15).

@@ -262,3 +262,19 @@ omega_variable(
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
+
+% ============================================================================
+% ENRICHMENT: Structural predicates for dynamic classification
+% Generated: 2026-02-08
+% Template: v5.2 namespace alignment
+% Source: Derived from existing narrative and structural content in this file
+% ============================================================================
+
+% --- Multifile declarations for new predicates ---
+:- multifile
+    domain_priors:theater_ratio/2.
+
+% --- Theater ratio (missing from base properties) ---
+% Extraction is substantive — the constraint's costs are real, not theatrical
+domain_priors:theater_ratio(hawthorne_effect, 0.19).
+narrative_ontology:constraint_metric(hawthorne_effect, theater_ratio, 0.19).

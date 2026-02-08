@@ -24,6 +24,7 @@
     narrative_ontology:measurement/5,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -67,6 +68,9 @@ domain_priors:theater_ratio(cultural_refragmentation_2026, 0.78).
 narrative_ontology:constraint_metric(cultural_refragmentation_2026, extractiveness, 0.72).
 narrative_ontology:constraint_metric(cultural_refragmentation_2026, suppression_requirement, 0.85).
 narrative_ontology:constraint_metric(cultural_refragmentation_2026, theater_ratio, 0.78).
+
+% Constraint classification claim
+narrative_ontology:constraint_claim(cultural_refragmentation_2026, piton).
 
 % Primary keys for the classification engine
 % High-extraction stakeholders
@@ -118,6 +122,7 @@ test(perspectival_gap) :-
 
 test(piton_threshold) :-
     domain_priors:theater_ratio(cultural_refragmentation_2026, TR),
+domain_priors:requires_active_enforcement(cultural_refragmentation_2026).
     TR >= 0.70.
 
 :- end_tests(cultural_refragmentation_2026_tests).

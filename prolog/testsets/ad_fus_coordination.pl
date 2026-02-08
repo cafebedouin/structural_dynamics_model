@@ -25,6 +25,7 @@
     narrative_ontology:measurement/5,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -59,6 +60,9 @@ domain_priors:theater_ratio(ad_fus_coordination, 0.15).       % High functional 
 narrative_ontology:constraint_metric(ad_fus_coordination, extractiveness, 0.75).
 narrative_ontology:constraint_metric(ad_fus_coordination, suppression_requirement, 0.8).
 narrative_ontology:constraint_metric(ad_fus_coordination, theater_ratio, 0.15).
+
+% Constraint classification claim
+narrative_ontology:constraint_claim(ad_fus_coordination, tangled_rope).
 
 % Constraint metric facts used by classification engine
 domain_priors:requires_active_enforcement(ad_fus_coordination).

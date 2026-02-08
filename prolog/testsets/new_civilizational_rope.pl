@@ -19,6 +19,7 @@
     domain_priors:theater_ratio/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -54,6 +55,9 @@ domain_priors:theater_ratio(decentralized_infrastructure_rope, 0.02).       % Mi
 narrative_ontology:constraint_metric(decentralized_infrastructure_rope, extractiveness, 0.08).
 narrative_ontology:constraint_metric(decentralized_infrastructure_rope, suppression_requirement, 0.25).
 narrative_ontology:constraint_metric(decentralized_infrastructure_rope, theater_ratio, 0.02).
+
+% Constraint classification claim
+narrative_ontology:constraint_claim(decentralized_infrastructure_rope, mountain).
 
 % Binary flags
 domain_priors:requires_active_enforcement(decentralized_infrastructure_rope). % Automated protocol enforcement.
@@ -143,3 +147,12 @@ narrative_ontology:interval(decentralized_infrastructure_rope, 0, 10).
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
+
+% ============================================================================
+% ENRICHMENT: Structural predicates for remaining gaps
+% Generated: 2026-02-08
+% Template: v5.2 namespace alignment
+% Source: Derived from narrative context in this file (new_civilizational_rope)
+% ============================================================================
+constraint_beneficiary(decentralized_infrastructure_rope, citizen_auditors).
+constraint_victim(decentralized_infrastructure_rope, legacy_rent_seeking_bureaucracies).

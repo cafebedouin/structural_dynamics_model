@@ -24,6 +24,7 @@
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -61,6 +62,9 @@ domain_priors:theater_ratio(fed_shutdown_2026, 0.85).
 narrative_ontology:constraint_metric(fed_shutdown_2026, extractiveness, 0.58).
 narrative_ontology:constraint_metric(fed_shutdown_2026, suppression_requirement, 0.62).
 narrative_ontology:constraint_metric(fed_shutdown_2026, theater_ratio, 0.85).
+
+% Constraint classification claim
+narrative_ontology:constraint_claim(fed_shutdown_2026, tangled_rope).
 
 % Tangled Rope Structural Property Declarations
 % Required by the linter and the canonical classifier to derive 

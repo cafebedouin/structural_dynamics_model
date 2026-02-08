@@ -54,7 +54,10 @@
     get_raw_suppression/2,          % Raw suppression (no temporal/scope scaling)
 
     % Shared classification (Single Source of Truth)
-    classify_from_metrics/6         % classify_from_metrics(C, BaseEps, Chi, Supp, Context, Type)
+    classify_from_metrics/6,        % classify_from_metrics(C, BaseEps, Chi, Supp, Context, Type)
+
+    % Reform threshold (minimum power to change a snare)
+    snare_reform_threshold/2        % snare_reform_threshold(Context, PowerLevel)
 ]).
 
 :- use_module(narrative_ontology).
@@ -203,6 +206,65 @@ is_piton(_C, _Context, fail).
 %
 % Priority: Mountain > Snare > Scaffold > Rope > Tangled Rope > Piton > unknown
 
+%% snare_immutability_check(+Context)
+%  The snare gate should only be blocked by STRUCTURAL immutability
+%  (genuine mountains like gravity), not POWER-INDEXED immutability
+%  (constraints that appear immutable from powerless but are changeable
+%  from organized/institutional power levels).
+%
+%  A serf cannot individually abolish serfdom — it appears as immutable
+%  as gravity from biographical/trapped perspective. But organized
+%  collective action CAN change it, proving it is a snare, not a mountain.
+%  Mountains are immutable at EVERY power level.
+%
+%  Fast path: if changeable from current perspective, pass immediately.
+%  Slow path: if current perspective says mountain, check whether ANY
+%  standard higher-power perspective sees changeability (rope).
+snare_immutability_check(Context) :-
+    constraint_indexing:effective_immutability_for_context(Context, rope), !.
+snare_immutability_check(_Context) :-
+    standard_context(AltCtx),
+    constraint_indexing:effective_immutability_for_context(AltCtx, rope), !.
+
+%% power_order(?PowerAtom, ?Rank)
+%  Ascending power ordering used by snare_reform_threshold/2.
+%  Lower rank = less power. Analytical is highest because it requires
+%  systemic-level view to perceive changeability.
+power_order(powerless,     1).
+power_order(moderate,      2).
+power_order(powerful,      3).
+power_order(organized,     4).
+power_order(institutional, 5).
+power_order(analytical,    6).
+
+%% snare_reform_threshold(+Context, -PowerLevel)
+%  Returns the minimum power level at which effective immutability
+%  transitions from mountain (unchangeable) to rope (changeable).
+%
+%  When the snare gate fires via power-indexed immutability (the
+%  current context sees mountain but a higher-power context sees rope),
+%  this predicate identifies WHERE on the power ladder the transition
+%  happens. This is actionable: "requires organized collective action"
+%  vs "requires institutional capture."
+%
+%  If changeable from the current perspective already, returns that
+%  power level (the constraint isn't power-indexed immutable at all).
+snare_reform_threshold(Context, PowerLevel) :-
+    % Fast path: changeable from current perspective
+    constraint_indexing:effective_immutability_for_context(Context, rope), !,
+    Context = context(agent_power(PowerLevel), _, _, _).
+snare_reform_threshold(Context, PowerLevel) :-
+    % Walk standard contexts in ascending power order
+    Context = context(agent_power(CurrentPower), _, _, _),
+    power_order(CurrentPower, CurrentRank),
+    % Find the lowest-rank standard context above current that sees rope
+    standard_context(AltCtx),
+    AltCtx = context(agent_power(AltPower), _, _, _),
+    power_order(AltPower, AltRank),
+    AltRank > CurrentRank,
+    constraint_indexing:effective_immutability_for_context(AltCtx, rope), !,
+    PowerLevel = AltPower.
+
 classify_from_metrics(_C, BaseEps, _Chi, Supp, Context, mountain) :-
     config:param(mountain_suppression_ceiling, SuppCeil),
     Supp =< SuppCeil,
@@ -217,15 +279,24 @@ classify_from_metrics(_C, BaseEps, Chi, Supp, Context, snare) :-
     BaseEps >= EpsFloor,
     config:param(snare_suppression_floor, SuppFloor),
     Supp >= SuppFloor,
-    constraint_indexing:effective_immutability_for_context(Context, rope), !.
+    snare_immutability_check(Context), !.
 
 classify_from_metrics(C, _BaseEps, Chi, _Supp, _Context, scaffold) :-
     config:param(scaffold_extraction_ceil, MaxX),
     Chi =< MaxX,
     narrative_ontology:has_coordination_function(C),
-    narrative_ontology:has_sunset_clause(C),
+    scaffold_temporality_check(C),
     config:param(theater_metric_name, TheaterMetricName),
     \+ (narrative_ontology:constraint_metric(C, TheaterMetricName, TR), TR > 0.70), !.
+
+%% scaffold_temporality_check(+C)
+%  Soft temporality gate: explicit sunset clause is strongest signal,
+%  but absence of enforcement requirement also qualifies (non-enforced
+%  coordination is inherently scaffold-like, not tangled-rope-like).
+scaffold_temporality_check(C) :-
+    narrative_ontology:has_sunset_clause(C), !.
+scaffold_temporality_check(C) :-
+    \+ requires_active_enforcement(C).
 
 classify_from_metrics(_C, BaseEps, Chi, _Supp, Context, rope) :-
     config:param(rope_chi_ceiling, ChiCeil),

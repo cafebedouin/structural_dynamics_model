@@ -1,9 +1,9 @@
 % ============================================================================
 % CONSTRAINT STORY: panama_canal_ports
 % ============================================================================
-% Version: 3.4 (Deferential Realism Core)
-% Logic: 3.3 (Indexed Tuple P,T,E,S)
-% Generated: 2024-02-29
+% Version: 5.2 (Deferential Realism Core + Boltzmann + Purity + Network)
+% Logic: 5.2 (Indexed Tuple P,T,E,S + Coupling + Purity + Network Drift)
+% Generated: 2024-07-15
 % ============================================================================
 
 :- module(constraint_panama_canal_ports, []).
@@ -24,6 +24,10 @@
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
+    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -36,11 +40,11 @@
  * human_readable: Panama Canal Port Control
  * domain: political/economic
  * * SUMMARY:
- * The US and China are vying for control of ports along the Panama Canal. This competition creates a strategic chokepoint with implications for global trade and security, potentially granting undue influence to the controlling party. The situation presents a complex interplay of economic interests and geopolitical power.
+ * The US and China are vying for control of ports along the Panama Canal. This competition creates a strategic chokepoint with implications for global trade and security, granting undue influence to the controlling party. The situation presents a complex interplay of economic interests and geopolitical power.
  * * KEY AGENTS:
  * - Panama: Subject (Powerless)
  * - China/US: Beneficiary (Institutional)
- * - Global Trade: Auditor (Analytical)
+ * - Global Trade Auditors: Auditor (Analytical)
  */
 
 /* ==========================================================================
@@ -58,16 +62,19 @@ narrative_ontology:constraint_metric(panama_canal_ports, extractiveness, 0.65).
 narrative_ontology:constraint_metric(panama_canal_ports, suppression_requirement, 0.70).
 narrative_ontology:constraint_metric(panama_canal_ports, theater_ratio, 0.20).
 
+% Constraint self-claim (what does the constraint claim to be?)
+% Values: natural_law, coordination, constructed, enforcement
+narrative_ontology:constraint_claim(panama_canal_ports, tangled_rope).
+
 % Binary flags
 % narrative_ontology:has_sunset_clause(panama_canal_ports).      % Mandatory if Scaffold
-% domain_priors:requires_active_enforcement(panama_canal_ports). % Required for Tangled Rope
 domain_priors:requires_active_enforcement(panama_canal_ports). % Required for Tangled Rope
 
 % Structural property derivation hooks:
 %   has_coordination_function/1 is DERIVED from constraint_beneficiary/2
 %   has_asymmetric_extraction/1 is DERIVED from constraint_victim/2
 % Both are required for Tangled Rope. Coordination is also required for Scaffold.
-narrative_ontology:constraint_beneficiary(panama_canal_ports, china_us).
+narrative_ontology:constraint_beneficiary(panama_canal_ports, global_powers).
 narrative_ontology:constraint_victim(panama_canal_ports, panama).
 
 /* ==========================================================================
@@ -81,11 +88,6 @@ narrative_ontology:constraint_victim(panama_canal_ports, panama).
 % PERSPECTIVE 1: THE SUBJECT (SNARE/MOUNTAIN)
 % High extraction felt as an immutable limit or predatory trap.
 % NOTE: This may be upgraded to 'organized' power if a critical mass of victims exists.
-%
-% UNIFORM-TYPE EXCEPTION: For natural law constraints (mountain-only) or pure
-% coordination constraints (rope-only), perspectives 1 and 2 may use any power
-% atoms — the classification is the same from all perspectives.  Include at
-% least 2-3 perspectives to demonstrate the invariance.
 constraint_indexing:constraint_classification(panama_canal_ports, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
@@ -111,8 +113,8 @@ constraint_indexing:constraint_classification(panama_canal_ports, tangled_rope,
             spatial_scope(global))).
 
 % PERSPECTIVE 4: THE ARCHITECT (SCAFFOLD)
-% Temporary coordination that expires over time.
-% Requires: has_sunset_clause declared, extraction <= 0.30, theater_ratio < 0.70.
+% This constraint is not a scaffold; it has no sunset clause and is not intended
+% to be temporary.
 % constraint_indexing:constraint_classification(panama_canal_ports, scaffold,
 %    context(agent_power(organized),
 %            time_horizon(generational),
@@ -121,13 +123,9 @@ constraint_indexing:constraint_classification(panama_canal_ports, tangled_rope,
 %    narrative_ontology:has_sunset_clause(panama_canal_ports).
 
 % PERSPECTIVE 5: THE SYSTEMS AUDITOR (PITON)
-% Inertial maintenance of a non-functional constraint.
-% constraint_indexing:constraint_classification(panama_canal_ports, piton, 
-%    context(agent_power(analytical), 
-%            time_horizon(civilizational), 
-%            exit_options(arbitrage), 
-%            spatial_scope(universal))) :-
-%    domain_priors:theater_ratio(panama_canal_ports, TR), TR > 0.70.
+% This constraint is not a piton. It is actively functional and enforced, not
+% inertial or theatrical. The theater_ratio is low (0.20), well below the
+% piton threshold of 0.70.
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -141,10 +139,16 @@ test(perspectival_gap) :-
     constraint_indexing:constraint_classification(panama_canal_ports, TypeInstitutional, context(agent_power(institutional), _, _, _)),
     TypePowerless \= TypeInstitutional.
 
-test(threshold_validation) :-
+test(threshold_validation_is_high_extraction) :-
     config:param(extractiveness_metric_name, ExtMetricName),
     narrative_ontology:constraint_metric(panama_canal_ports, ExtMetricName, E),
-    (E =< 0.05 -> true ; E >= 0.46). % Ensures it's either a Mountain or high-extraction Snare/Tangled.
+    E >= 0.46. % Ensures it's a high-extraction Snare/Tangled Rope.
+
+test(tangled_rope_conditions_met) :-
+    % A tangled_rope classification requires these three structural properties.
+    domain_priors:requires_active_enforcement(panama_canal_ports),
+    narrative_ontology:constraint_beneficiary(panama_canal_ports, _), % derives has_coordination_function
+    narrative_ontology:constraint_victim(panama_canal_ports, _). % derives has_asymmetric_extraction
 
 :- end_tests(panama_canal_ports_tests).
 
@@ -154,9 +158,9 @@ test(threshold_validation) :-
 
 /**
  * LOGIC RATIONALE:
- * The Panama Canal port control is classified as a Snare from Panama's perspective (powerless, trapped), as they perceive limited alternatives and high extraction.  China/US (institutional) view it as a Rope, facilitating global trade (coordination). The Analytical Observer sees it as a Tangled Rope because there is genuine coordination for international trade, but also asymmetric extraction and potential for geopolitical coercion against Panama and other nations. Active enforcement is required to maintain the status quo and suppress competing interests. The perspectival gap arises from the vastly different power dynamics between the involved parties.
+ * The Panama Canal port control is classified as a Snare from Panama's perspective (powerless, trapped), as they perceive limited alternatives and high extraction of sovereignty and economic potential. The global powers (institutional beneficiary) view it as a Rope, a vital coordination mechanism for global trade. The Analytical Observer classifies it as a Tangled Rope because it possesses both a genuine coordination function (facilitating international trade) and clear asymmetric extraction, backed by geopolitical power (active enforcement). The high extraction (0.65) and suppression (0.70) scores reflect the strategic importance and coercive potential of controlling this chokepoint. The low theater ratio (0.20) indicates this is an active, functional system, not a performative or inertial one.
  * * MANDATROPHY ANALYSIS:
- * The Tangled Rope classification prevents mislabeling coordination as pure extraction by acknowledging the coordination benefits for global trade while simultaneously highlighting the asymmetric extraction and potential coercion experienced by Panama. This distinguishes it from a pure "Rope" scenario where benefits are more evenly distributed. The need for active enforcement distinguishes it from a purely voluntary coordination mechanism.
+ * The Tangled Rope classification is critical here. It prevents the system from mislabeling the genuine coordination benefits (smoother global shipping) as the constraint's sole purpose, which would incorrectly classify it as a pure Rope. It correctly identifies that this coordination is coupled with significant, asymmetric extraction from Panama and requires active geopolitical maneuvering (enforcement) to maintain, distinguishing it from a purely voluntary or equitable system.
  */
 
 /* ==========================================================================
@@ -166,9 +170,9 @@ test(threshold_validation) :-
 % omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
     omega_panama_canal_ports,
-    'Will Panama retain genuine sovereignty over its canal ports, or will foreign powers exert undue influence?',
-    'Longitudinal monitoring of contractual agreements, enforcement mechanisms, and political lobbying efforts.',
-    'True: Panama maintains control, promoting fair trade. False: Foreign powers dominate, leading to economic exploitation and geopolitical instability.',
+    'To what extent can Panama leverage the competition between foreign powers to retain sovereignty versus being exploited by it?',
+    'Longitudinal analysis of port management contracts, revenue sharing agreements, and instances of political pressure or intervention.',
+    'High leverage: Panama negotiates favorable terms, becoming a Scaffold for its own development. Low leverage: Foreign powers dominate, solidifying the constraint as a Snare.',
     confidence_without_resolution(medium)
 ).
 
@@ -185,11 +189,9 @@ narrative_ontology:interval(panama_canal_ports, 0, 10).
 
 % Temporal data enables drift detection (metric_substitution,
 % extraction_accumulation) by providing measurements at multiple time points.
-% Model how the constraint intensified or changed across the interval.
-%
 % Required for high-extraction constraints (base_extractiveness > 0.46).
-% Use at least 3 time points (T=0, midpoint, T=end) for each tracked metric.
-%
+% The data models the intensification of geopolitical competition over the interval.
+
 % Theater ratio over time (triggers metric_substitution detection):
 narrative_ontology:measurement(panama_canal_ports_tr_t0, panama_canal_ports, theater_ratio, 0, 0.10).
 narrative_ontology:measurement(panama_canal_ports_tr_t5, panama_canal_ports, theater_ratio, 5, 0.15).
@@ -199,6 +201,24 @@ narrative_ontology:measurement(panama_canal_ports_tr_t10, panama_canal_ports, th
 narrative_ontology:measurement(panama_canal_ports_ex_t0, panama_canal_ports, base_extractiveness, 0, 0.50).
 narrative_ontology:measurement(panama_canal_ports_ex_t5, panama_canal_ports, base_extractiveness, 5, 0.58).
 narrative_ontology:measurement(panama_canal_ports_ex_t10, panama_canal_ports, base_extractiveness, 10, 0.65).
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA (v5.0-5.2)
+   ========================================================================== */
+
+% Coordination type (enables Boltzmann floor + complexity offset)
+% Valid types: information_standard, resource_allocation,
+%              enforcement_mechanism, global_infrastructure
+narrative_ontology:coordination_type(panama_canal_ports, global_infrastructure).
+
+% Boltzmann floor override (only if domain knowledge justifies)
+% Value must be in [0.0, 1.0]
+% narrative_ontology:boltzmann_floor_override(panama_canal_ports, 0.1).
+
+% Network relationships (structural influence edges)
+% Declare when constraints share regulatory domain, causal dependency,
+% or institutional coupling.
+narrative_ontology:affects_constraint(panama_canal_ports, global_shipping_lanes).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

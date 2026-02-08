@@ -19,6 +19,7 @@
     domain_priors:theater_ratio/2,
     narrative_ontology:interval/3,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -35,6 +36,8 @@
 /* ==========================================================================
    2. BASE PROPERTIES
    ========================================================================== */
+
+narrative_ontology:constraint_claim(rogue_wave_control_2026, mountain).
 
 domain_priors:base_extractiveness(rogue_wave_control_2026, 0.15). % Low extraction (Utility).
 domain_priors:suppression_score(rogue_wave_control_2026, 0.10).   % Passive physical law.
@@ -91,3 +94,21 @@ omega_variable(
 ).
 
 narrative_ontology:interval(rogue_wave_control_2026, 0, 10).
+
+% ============================================================================
+% ENRICHMENT: Structural predicates for remaining gaps
+% Generated: 2026-02-08
+% Template: v5.2 namespace alignment
+% Source: Derived from narrative context in this file (rogue_wave_control_2026)
+% ============================================================================
+constraint_beneficiary(rogue_wave_control_2026, photonics_researchers).
+constraint_victim(rogue_wave_control_2026, none).
+
+% --- Analytical perspective classification ---
+% chi = 0.15 * 1.15 (analytical) * 1.2 (global) = 0.207
+% Classification: scaffold
+constraint_indexing:constraint_classification(rogue_wave_control_2026, scaffold,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(global))).

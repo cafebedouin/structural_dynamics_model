@@ -25,6 +25,7 @@
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -59,6 +60,9 @@ domain_priors:theater_ratio(individual_revolution_autonomy, 0.45).       % Signi
 narrative_ontology:constraint_metric(individual_revolution_autonomy, extractiveness, 0.75).
 narrative_ontology:constraint_metric(individual_revolution_autonomy, suppression_requirement, 0.80).
 narrative_ontology:constraint_metric(individual_revolution_autonomy, theater_ratio, 0.45).
+
+% Constraint classification claim
+narrative_ontology:constraint_claim(individual_revolution_autonomy, tangled_rope).
 
 % Structural property derivation hooks
 % High extraction (> 0.46) requires beneficiary/victim declaration for proper modeling.

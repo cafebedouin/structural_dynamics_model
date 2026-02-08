@@ -19,6 +19,7 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -50,7 +51,7 @@
    ========================================================================== */
 
 narrative_ontology:interval(transient_event_detection, 0, 10).
-narrative_ontology:constraint_claim([transient_event_detection], [information_extraction]).
+narrative_ontology:constraint_claim(transient_event_detection, rope).
 
 % Base extractiveness score (0.45 = Moderate)
 % Rationale: The system extracts massive volumes of data (e.g., 1.6 petabytes from Pan-STARRS) 
@@ -264,3 +265,19 @@ omega_variable(
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
+
+% ============================================================================
+% ENRICHMENT: Structural predicates for dynamic classification
+% Generated: 2026-02-08
+% Template: v5.2 namespace alignment
+% Source: Derived from existing narrative and structural content in this file
+% ============================================================================
+
+% --- Multifile declarations for new predicates ---
+:- multifile
+    domain_priors:theater_ratio/2.
+
+% --- Theater ratio (missing from base properties) ---
+% Functional coordination mechanism — primarily substantive
+domain_priors:theater_ratio(transient_event_detection, 0.12).
+narrative_ontology:constraint_metric(transient_event_detection, theater_ratio, 0.12).

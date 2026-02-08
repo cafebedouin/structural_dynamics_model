@@ -24,6 +24,7 @@
     narrative_ontology:measurement/5,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -67,6 +68,9 @@ domain_priors:theater_ratio(coffee_cardiovascular_2026, 0.10).
 narrative_ontology:constraint_metric(coffee_cardiovascular_2026, extractiveness, 0.12).
 narrative_ontology:constraint_metric(coffee_cardiovascular_2026, suppression_requirement, 0.4).
 narrative_ontology:constraint_metric(coffee_cardiovascular_2026, theater_ratio, 0.1).
+
+% Constraint classification claim
+narrative_ontology:constraint_claim(coffee_cardiovascular_2026, scaffold).
 
 % Primary keys for the classification engine
 % High-fidelity stakeholders

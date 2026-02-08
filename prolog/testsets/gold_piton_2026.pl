@@ -24,6 +24,7 @@
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -60,6 +61,9 @@ domain_priors:theater_ratio(gold_piton_2026, 0.94). % High theater/speculation
 narrative_ontology:constraint_metric(gold_piton_2026, extractiveness, 0.20).
 narrative_ontology:constraint_metric(gold_piton_2026, suppression_requirement, 0.10).
 narrative_ontology:constraint_metric(gold_piton_2026, theater_ratio, 0.94).
+
+% Constraint classification claim
+narrative_ontology:constraint_claim(gold_piton_2026, piton).
 
 % Identification of extraction asymmetry during "Flash Crashes"
 narrative_ontology:constraint_beneficiary(gold_piton_2026, institutional_wealth).

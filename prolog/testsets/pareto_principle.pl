@@ -247,3 +247,27 @@ omega_variable(
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
+% ============================================================================
+% ENRICHMENT: Structural predicates for dynamic classification
+% Generated: 2026-02-08
+% Template: v5.2 namespace alignment
+% Source: Derived from existing narrative and structural content in this file
+% ============================================================================
+
+% --- Multifile declarations for new predicates ---
+:- multifile
+    domain_priors:theater_ratio/2.
+
+% --- Theater ratio (missing from base properties) ---
+% Structural constraint in economic domain — low theater, high substance
+domain_priors:theater_ratio(pareto_principle, 0.06).
+narrative_ontology:constraint_metric(pareto_principle, theater_ratio, 0.06).
+
+% --- Analytical perspective classification (missing) ---
+% chi = 0.4 * 1.15 (analytical) * 1.2 (global) = 0.552
+% Classification: rope
+constraint_indexing:constraint_classification(pareto_principle, rope,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(global))).

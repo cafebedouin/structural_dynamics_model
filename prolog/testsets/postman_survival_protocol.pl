@@ -19,6 +19,7 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -52,7 +53,7 @@
    ========================================================================== */
 
 narrative_ontology:interval(postman_survival_interval, 0, 10).
-narrative_ontology:constraint_claim([postman_survival_protocol], [social_hygiene]).
+narrative_ontology:constraint_claim(postman_survival_protocol, mountain).
 
 % Base extractiveness: Moderate (0.4)
 % Rationale: The protocol itself is a gift of wisdom, but the systems it describes (Bureaucracy) 
@@ -286,3 +287,19 @@ omega_variable(
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
+
+% ============================================================================
+% ENRICHMENT: Structural predicates for dynamic classification
+% Generated: 2026-02-08
+% Template: v5.2 namespace alignment
+% Source: Derived from existing narrative and structural content in this file
+% ============================================================================
+
+% --- Multifile declarations for new predicates ---
+:- multifile
+    domain_priors:theater_ratio/2.
+
+% --- Theater ratio (missing from base properties) ---
+% Structural constraint in social domain — low theater, high substance
+domain_priors:theater_ratio(postman_survival_protocol, 0.08).
+narrative_ontology:constraint_metric(postman_survival_protocol, theater_ratio, 0.08).

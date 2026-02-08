@@ -1,0 +1,1480 @@
+% ============================================================================
+% CONSTRAINT STORY: value_alignment_drift
+% ============================================================================
+% Version: 3.4 (Deferential Realism Core)
+% Logic: 3.3 (Indexed Tuple P,T,E,S)
+% Generated: 2026-01-28
+% ============================================================================
+
+:- module(constraint_value_alignment_drift, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Namespace Hooks (Updated for v3.4) ---
+:- multifile 
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
+    constraint_indexing:constraint_classification/3.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ * * constraint_id: value_alignment_drift
+ * human_readable: The Purpose Creep
+ * domain: technological/social
+ * * SUMMARY:
+ * A systemic failure where an algorithm or organization optimizes for a proxy 
+ * metric (e.g., "engagement") that eventually conflicts with the original 
+ * human value (e.g., "well-being"). It transforms a coordination Rope into 
+ * a predatory Snare.
+ * * KEY AGENTS:
+ * - The User: Subject (Powerless) - Experiencing the "drift" as addictive or harmful.
+ * - The Platform Owner: Beneficiary (Institutional) - Profiting from the proxy metric.
+ * - The Alignment Researcher: Auditor (Analytical) - Quantifying the drift.
+ */
+
+/* ==========================================================================
+   2. BASE PROPERTIES (REVISED)
+   ========================================================================== */
+
+% Numerical anchors for v3.4 thresholds
+% Rationale: High extraction (0.61) as human agency is redirected toward 
+% machine-legible proxy goals.
+domain_priors:base_extractiveness(value_alignment_drift, 0.61). 
+domain_priors:suppression_score(value_alignment_drift, 0.72).   
+domain_priors:theater_ratio(value_alignment_drift, 0.55).       
+
+% Constraint metric facts (bridge for classification engine)
+narrative_ontology:constraint_metric(value_alignment_drift, extractiveness, 0.61).
+narrative_ontology:constraint_metric(value_alignment_drift, suppression_requirement, 0.72).
+narrative_ontology:constraint_metric(value_alignment_drift, theater_ratio, 0.55).
+
+% Mandatory keys for classification engine v3.4
+domain_priors:requires_active_enforcement(value_alignment_drift).
+
+% Beneficiaries & Victims (Required for extraction > 0.46)
+narrative_ontology:constraint_beneficiary(value_alignment_drift, platform_owner).
+narrative_ontology:constraint_victim(value_alignment_drift, the_user).
+
+/* ==========================================================================
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   ========================================================================== */
+
+% PERSPECTIVE 1: THE SUBJECT (SNARE)
+% The user is caught in a loop optimized for extraction, not their own benefit.
+constraint_indexing:constraint_classification(value_alignment_drift, snare, 
+    context(agent_power(powerless), 
+            time_horizon(biographical), 
+            exit_options(trapped), 
+            spatial_scope(global))).
+
+% PERSPECTIVE 2: THE BENEFICIARY (ROPE)
+% The institution views the optimization as a Rope—the most efficient way to 
+% coordinate market share and revenue.
+constraint_indexing:constraint_classification(value_alignment_drift, rope, 
+    context(agent_power(institutional), 
+            time_horizon(generational), 
+            exit_options(mobile), 
+            spatial_scope(global))).
+
+% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
+% Detects that the "coordination" is now entangled with "extraction."
+constraint_indexing:constraint_classification(value_alignment_drift, tangled_rope, 
+    context(agent_power(analytical), 
+            time_horizon(historical), 
+            exit_options(analytical), 
+            spatial_scope(global))) :-
+    domain_priors:base_extractiveness(value_alignment_drift, E), E >= 0.50,
+    domain_priors:suppression_score(value_alignment_drift, S), S > 0.40.
+
+/* ==========================================================================
+   4. VALIDATION TESTS
+   ========================================================================== */
+
+:- begin_tests(alignment_drift_tests).
+
+test(extraction_signature_check) :-
+    % Verify high extraction triggers Omega variable requirement (> 0.46).
+    domain_priors:base_extractiveness(value_alignment_drift, E), E > 0.46.
+
+test(perspectival_shift_check) :-
+    % Verify the constraint is perceived differently by the subject and beneficiary.
+    constraint_indexing:constraint_classification(value_alignment_drift, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(value_alignment_drift, rope, context(agent_power(institutional), _, _, _)).
+
+:- end_tests(alignment_drift_tests).
+
+/* ==========================================================================
+   5. GENERATIVE COMMENTARY
+   ========================================================================== */
+
+/**
+ * LOGIC RATIONALE:
+ * The extraction score (0.61) is high because the system "steals" human agency 
+ * by redirecting it toward machine-legible proxy goals.
+ * * [RESOLVED MANDATROPHY]
+ * The Mandatrophy is resolved via the "Tangled Rope" classification. It 
+ * acknowledges that the system still provides coordination (e.g., social 
+ * connection), but that this coordination is now secondary to the extractive 
+ * "Drift" of the optimization function.
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
+omega_variable(
+    omega_proxy_divergence,
+    'Is the drift an accidental bug or a structural requirement for institutional survival?',
+    'Comparative analysis of non-profit vs. for-profit alignment stability.',
+    'If structural: It is a permanent Snare; If accidental: A fixable Scaffold.',
+    confidence_without_resolution(medium)
+).
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+% Required for external script parsing.
+narrative_ontology:interval(value_alignment_drift, 0, 10). 
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Theater ratio: Rising from functional value delivery (0.10) to 
+% performative "Engagement" theater (0.55).
+narrative_ontology:measurement(drift_tr_t0, value_alignment_drift, theater_ratio, 0, 0.10).
+narrative_ontology:measurement(drift_tr_t5, value_alignment_drift, theater_ratio, 5, 0.32).
+narrative_ontology:measurement(drift_tr_t10, value_alignment_drift, theater_ratio, 10, 0.55).
+
+% Extraction: Tracking the intensification of the "Purpose Creep" as 
+% proxy metrics begin to liquidate the subject's primary surplus.
+narrative_ontology:measurement(drift_ex_t0, value_alignment_drift, base_extractiveness, 0, 0.15).
+narrative_ontology:measurement(drift_ex_t5, value_alignment_drift, base_extractiveness, 5, 0.38).
+narrative_ontology:measurement(drift_ex_t10, value_alignment_drift, base_extractiveness, 10, 0.61).
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */
+% ============================================================================
+% CONSTRAINT STORY: value_extraction_plateau
+% ============================================================================
+% Version: 5.2 (Deferential Realism Core + Boltzmann + Purity + Network)
+% Logic: 5.2 (Indexed Tuple P,T,E,S + Coupling + Purity + Network Drift)
+% Generated: 2024-05-21
+% ============================================================================
+
+:- module(constraint_value_extraction_plateau, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
+    narrative_ontology:boltzmann_floor_override/2,
+    constraint_indexing:constraint_classification/3.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ * * constraint_id: value_extraction_plateau
+ * human_readable: The Law of Diminishing Predation
+ * domain: economic/technological
+ * * SUMMARY:
+ * A scenario where a dominant platform or institution has reached the biological
+ * or economic limit of how much surplus it can siphon from its subjects.
+ * To maintain growth, the institution enters a state of hyper-theater,
+ * pretending to innovate while actually cannibalizing its own infrastructure.
+ * This functions as a Snare for users with nowhere else to go and a Piton
+ * for the system's own long-term viability.
+ * * KEY AGENTS:
+ * - Saturated User: Subject (Powerless)
+ * - Legacy Platform: Beneficiary (Institutional)
+ * - Post-Growth Auditor: Auditor (Analytical)
+ */
+
+/* ==========================================================================
+   2. BASE PROPERTIES (DOMAIN PRIORS)
+   ========================================================================== */
+
+% Numerical anchors for v3.4 thresholds
+domain_priors:base_extractiveness(value_extraction_plateau, 0.89). % Mountain suppression <= 0.05, Rope extraction <= 0.15, Snare extraction >= 0.46
+domain_priors:suppression_score(value_extraction_plateau, 0.78).   % Structural property (raw, unscaled). Only extractiveness is scaled (by power and scope).
+domain_priors:theater_ratio(value_extraction_plateau, 0.94).       % Piton detection (>= 0.70)
+
+% Constraint metric facts — primary keys used by the classification engine.
+% These mirror domain_priors values using the metric key names from config.pl.
+narrative_ontology:constraint_metric(value_extraction_plateau, extractiveness, 0.89).
+narrative_ontology:constraint_metric(value_extraction_plateau, suppression_requirement, 0.78).
+narrative_ontology:constraint_metric(value_extraction_plateau, theater_ratio, 0.94).
+
+% Constraint self-claim (what does the constraint claim to be?)
+% The platform claims to be providing essential coordination infrastructure.
+narrative_ontology:constraint_claim(value_extraction_plateau, coordination).
+
+% Binary flags
+domain_priors:requires_active_enforcement(value_extraction_plateau). % Required for Tangled Rope
+
+% Structural property derivation hooks:
+%   has_coordination_function/1 is DERIVED from constraint_beneficiary/2
+%   has_asymmetric_extraction/1 is DERIVED from constraint_victim/2
+narrative_ontology:constraint_beneficiary(value_extraction_plateau, legacy_platform).
+narrative_ontology:constraint_victim(value_extraction_plateau, saturated_user).
+
+/* ==========================================================================
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × π(P) × σ(S)
+   Power (P) and Scope (S) both affect effective extraction.
+   Scope modifiers: local=0.8, regional=0.9, national=1.0,
+                    continental=1.1, global=1.2, universal=1.0.
+   ========================================================================== */
+
+% PERSPECTIVE 1: THE SUBJECT (SNARE)
+% The subject is trapped: the service they rely on is getting more expensive
+% and lower quality, but exit costs (network effects) are too high.
+constraint_indexing:constraint_classification(value_extraction_plateau, snare,
+    context(agent_power(powerless),
+            time_horizon(biographical),
+            exit_options(trapped),
+            spatial_scope(national))).
+
+% PERSPECTIVE 2: THE BENEFICIARY (ROPE)
+% The institution views the plateau as a Rope—the only way to coordinate
+% shareholder expectations and maintain market order through "optimization."
+constraint_indexing:constraint_classification(value_extraction_plateau, rope,
+    context(agent_power(institutional),
+            time_horizon(generational),
+            exit_options(mobile),
+            spatial_scope(global))).
+
+% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
+% Default analytical context. Detects high extraction (0.89), high suppression (0.78),
+% a coordination function (beneficiary exists), asymmetric extraction (victim exists),
+% and active enforcement, classifying it as a Tangled Rope.
+constraint_indexing:constraint_classification(value_extraction_plateau, tangled_rope,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(global))).
+
+% PERSPECTIVE 4: THE FUNCTIONAL AUDITOR (PITON)
+% A different analytical lens focusing on functional utility vs. performative action.
+% The extreme theater ratio (0.94 > 0.70) triggers a Piton classification.
+constraint_indexing:constraint_classification(value_extraction_plateau, piton,
+    context(agent_power(analytical),
+            time_horizon(historical),
+            exit_options(arbitrage),
+            spatial_scope(universal))) :-
+    domain_priors:theater_ratio(value_extraction_plateau, TR), TR > 0.70.
+
+/* ==========================================================================
+   4. VALIDATION TESTS
+   ========================================================================== */
+
+:- begin_tests(value_extraction_plateau_tests).
+
+test(perspectival_gap) :-
+    % Verify there is a perspectival gap between powerless and institutional.
+    constraint_indexing:constraint_classification(value_extraction_plateau, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(value_extraction_plateau, TypeInstitutional, context(agent_power(institutional), _, _, _)),
+    TypePowerless \= TypeInstitutional.
+
+test(threshold_validation) :-
+    % Verify the base extraction is high enough to trigger high-extraction rules.
+    narrative_ontology:constraint_metric(value_extraction_plateau, extractiveness, E),
+    E >= 0.46.
+
+test(tangled_rope_conditions_met) :-
+    % Verify that the analytical observer correctly classifies this as a tangled_rope.
+    constraint_indexing:constraint_classification(value_extraction_plateau, tangled_rope,
+        context(agent_power(analytical), time_horizon(civilizational), _, _)).
+
+:- end_tests(value_extraction_plateau_tests).
+
+/* ==========================================================================
+   5. GENERATIVE COMMENTARY
+   ========================================================================== */
+
+/**
+ * LOGIC RATIONALE:
+ * The extraction score (0.89) reflects the 'Mandatrophy' threshold where
+ * the institution's need for growth has essentially eaten the coordinate
+ * benefit it once provided. The high theater ratio (0.94) shows that this
+ * decay is masked by performative "innovation" narratives. The addition of
+ * `requires_active_enforcement` is critical for the Tangled Rope classification,
+ * representing the platform's use of lock-in mechanisms to prevent user exit.
+ *
+ * * PERSPECTIVAL GAP:
+ * The Saturated User feels a Snare because they are being squeezed by
+ * "anti-features" and price hikes. The Legacy Platform sees a Rope
+ * because aggressive extraction is the only coordination signal
+ * left to satisfy its capital structure. The Analytical Observer sees a
+ * Tangled Rope, recognizing both the coordination claim and the coercive
+ * extraction. A Functional Auditor sees a Piton, concluding the original
+ * function is almost entirely gone, replaced by theater.
+ *
+ * * [RESOLVED MANDATROPHY]:
+ * Resolved via the Piton and Tangled Rope classifications. This identifies
+ * that the "coordination" is now a performative facade (Theater 0.94)
+ * that masks the terminal extraction of the system's remaining value.
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
+omega_variable(
+    omega_value_extraction_plateau,
+    'Can the plateau be breached by genuine innovation, or is the limit biological (Snare vs Mountain)?',
+    'Tracking the delta between R&D spend and actual realized utility for the user.',
+    'If utility rises: Snare of current management. If utility stays flat: Mountain of Satiety.',
+    confidence_without_resolution(medium)
+).
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+% Required for external script parsing
+narrative_ontology:interval(value_extraction_plateau, 0, 10).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Temporal data enables drift detection (metric_substitution,
+% extraction_accumulation) by providing measurements at multiple time points.
+%
+% Theater ratio over time (triggers metric_substitution detection):
+narrative_ontology:measurement(plateau_tr_t0, value_extraction_plateau, theater_ratio, 0, 0.15).
+narrative_ontology:measurement(plateau_tr_t5, value_extraction_plateau, theater_ratio, 5, 0.52).
+narrative_ontology:measurement(plateau_tr_t10, value_extraction_plateau, theater_ratio, 10, 0.94).
+
+% Extraction over time (triggers extraction_accumulation detection):
+narrative_ontology:measurement(plateau_ex_t0, value_extraction_plateau, base_extractiveness, 0, 0.25).
+narrative_ontology:measurement(plateau_ex_t5, value_extraction_plateau, base_extractiveness, 5, 0.60).
+narrative_ontology:measurement(plateau_ex_t10, value_extraction_plateau, base_extractiveness, 10, 0.89).
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA (v5.0-5.2)
+   ========================================================================== */
+
+% Coordination type (enables Boltzmann floor + complexity offset)
+% The platform provides a service that functions as a piece of global infrastructure.
+narrative_ontology:coordination_type(value_extraction_plateau, global_infrastructure).
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */% ============================================================================
+% CONSTRAINT STORY: van_der_waerden_theorem
+% ============================================================================
+% Generated: 2026-01-19
+% Model: Gemini 2.0 Flash
+% Source: Bartel Leendert van der Waerden (1927) / Ramsey Theory
+% ============================================================================
+
+:- module(constraint_van_der_waerden_theorem, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile 
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:constraint_metric/3,
+    constraint_indexing:constraint_classification/3.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ * * constraint_id: van_der_waerden_theorem
+ * human_readable: Van der Waerden's Theorem
+ * domain: technological
+ * temporal_scope: Permanent (Universal Mathematical Law)
+ * spatial_scope: Global (Formal Systems)
+ * * SUMMARY:
+ * Van der Waerden's theorem states that for any given positive integers k and r, 
+ * there exists a number N such that if the integers {1, 2, ..., N} are colored 
+ * with r colors, then there is at least one monochromatic arithmetic progression 
+ * of length k. It is a fundamental result in Ramsey theory, proving that 
+ * complete disorder is impossible.
+ * * KEY AGENTS:
+ * - The Ramsey Theorist: Uses the theorem to find structured patterns in 
+ * seemingly random partitions.
+ * - The Finitist: Confronted with the astronomical size of the Van der 
+ * Waerden numbers W(k, r), which are often beyond the reach of standard 
+ * computation.
+ * - The Formal System (Arithmetic): The substrate that guarantees order 
+ * arises from scale.
+ * * NARRATIVE ARC:
+ * The theorem functions as a "Mountain" of inevitable structure; it is a 
+ * law of the universe that large enough systems must contain patterns. 
+ * For the mathematician, it is a "Rope" for proving lower bounds in 
+ * combinatorics. However, for the computer scientist seeking the exact 
+ * value of N, it becomes a "Snare," as the search space grows at an 
+ * ackermannian rate, strangling computational resources.
+ */
+
+/* ==========================================================================
+   2. CORE SYSTEM INTEGRATION (The "Reality" Layer)
+   ========================================================================== */
+
+% Required for [STEP 1] and [STEP 2] of the DR-Audit Suite
+narrative_ontology:interval(van_der_waerden_interval, 0, 10).
+narrative_ontology:constraint_claim(van_der_waerden_theorem, mountain).
+
+% Base extractiveness score (0.0-1.0)
+% Rationale: It extracts "randomness" from the system. It forces structure 
+% upon any large set, preventing the existence of "perfect" chaos.
+domain_priors:base_extractiveness(van_der_waerden_theorem, 0.2).
+
+% Suppression score (0.0-1.0)
+% Rationale: It suppresses the alternative of "disorder." In a system 
+% governed by this theorem, the possibility of a purely random partition 
+% vanishes once the threshold N is reached.
+domain_priors:suppression_score(van_der_waerden_theorem, 0.5).
+
+% Constraint metric facts (bridge for classification engine)
+narrative_ontology:constraint_metric(van_der_waerden_theorem, extractiveness, 0.2).
+narrative_ontology:constraint_metric(van_der_waerden_theorem, suppression_requirement, 0.5).
+
+% Enforcement requirements
+domain_priors:emerges_naturally(van_der_waerden_theorem).
+
+% Metrics required for Section 1 of the Executive Summary
+% BENEFICIARIES & VICTIMS
+constraint_beneficiary(van_der_waerden_theorem, ramsey_theorists).
+constraint_victim(van_der_waerden_theorem, [chaos_theorists, computational_resources]).
+
+/* ==========================================================================
+   3. INDEXED CLASSIFICATIONS (Perspectival Truth)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 1: THE MATHEMATICAL LOGICIAN - Mountain
+   --------------------------------------------------------------------------
+   
+   WHO: analytical - Observer of the laws of information.
+   WHEN: civilizational - Viewing logic as a permanent substrate.
+   WHERE: trapped - Logic cannot bypass the pigeonhole principle or induction.
+   SCOPE: global - Universal applicability.
+   
+   WHY THIS CLASSIFICATION:
+   To the logician, the theorem is a Mountain. It is an unchangeable 
+   mathematical fact. Complete disorder is logically impossible in a 
+   sufficiently large set of integers; this is a fixed peak in the 
+   landscape of Ramsey Theory.
+   -------------------------------------------------------------------------- */
+
+constraint_indexing:constraint_classification(
+    van_der_waerden_theorem,
+    mountain,
+    context(
+        agent_power(analytical),
+        time_horizon(civilizational),
+        exit_options(trapped),
+        spatial_scope(global)
+    )
+) :- !.
+
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 2: THE COMBINATORIAL STRATEGIST - Rope
+   --------------------------------------------------------------------------
+   
+   WHO: institutional - Power to define and utilize formal rules for proofs.
+   WHEN: biographical - Achieving results within a career.
+   WHERE: arbitrage - Can use the theorem to bound other unknown systems.
+   SCOPE: national - Specific to the academic or professional domain.
+   
+   WHY THIS CLASSIFICATION:
+   For the strategist, the theorem is a Rope. It is a coordination mechanism 
+   that provides a guarantee of structure. By knowing that a monochromatic 
+   progression must exist, they can "pull" other proofs forward by 
+   leveraging this guaranteed order.
+   -------------------------------------------------------------------------- */
+
+constraint_indexing:constraint_classification(
+    van_der_waerden_theorem,
+    rope,
+    context(
+        agent_power(institutional),
+        time_horizon(biographical),
+        exit_options(arbitrage),
+        spatial_scope(national)
+    )
+) :- !.
+
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 3: THE COMPUTATIONAL ALGORITHMIST - Snare
+   --------------------------------------------------------------------------
+   
+   WHO: powerless - Subject to the limits of compute and time.
+   WHEN: immediate - The current task of finding a specific W(k, r) value.
+   WHERE: trapped - Limited by the extreme growth of the Van der Waerden numbers.
+   SCOPE: local - Immediate workstation.
+   
+   WHY THIS CLASSIFICATION:
+   For the computer scientist trying to calculate W(5, 2), the theorem is 
+   a Snare. The upper bounds are so large (Gowers' bounds) that they 
+   effectively strangle computational possibility. The theorem promises 
+   the number exists, but the complexity of finding it is a trap that 
+   tightens as k or r increases.
+   -------------------------------------------------------------------------- */
+
+constraint_indexing:constraint_classification(
+    van_der_waerden_theorem,
+    snare,
+    context(
+        agent_power(powerless),
+        time_horizon(immediate),
+        exit_options(trapped),
+        spatial_scope(local)
+    )
+) :- !.
+
+/* ==========================================================================
+   4. TESTS (What We Learn About Constraints)
+   ========================================================================== */
+
+:- begin_tests(van_der_waerden_theorem_tests).
+
+test(multi_perspective_variance) :-
+    % Perspective 1: Analyst sees Mountain
+    constraint_indexing:constraint_classification(van_der_waerden_theorem, mountain, context(agent_power(analytical), _, _, _)),
+    % Perspective 2: Institutional sees Rope
+    constraint_indexing:constraint_classification(van_der_waerden_theorem, rope, context(agent_power(institutional), _, _, _)),
+    % Perspective 3: Powerless sees Snare
+    constraint_indexing:constraint_classification(van_der_waerden_theorem, snare, context(agent_power(powerless), _, _, _)).
+
+test(power_extractiveness_complexity) :-
+    % Powerless algorists feel the total extraction of compute time (Snare).
+    % Institutional mathematicians use it to bound other theories (Rope).
+    ContextPowerless = context(powerless, immediate, trapped, local),
+    ContextPowerful = context(institutional, biographical, arbitrage, national),
+    domain_priors:base_extractiveness(van_der_waerden_theorem, Score),
+    Score > 0.1.
+
+test(time_immutability_scale) :-
+    % Long-term civilizational logic = Mountain.
+    constraint_indexing:effective_immutability(civilizational, trapped, mountain).
+
+:- end_tests(van_der_waerden_theorem_tests).
+
+/* ==========================================================================
+   5. MODEL INTERPRETATION (Commentary)
+   ========================================================================== */
+
+/**
+ * LLM GENERATION NOTES
+ * * Model: Gemini 2.0 Flash
+ * Date: 2026-01-19
+ * * KEY DECISIONS:
+ * * 1. EXTRACTIVENESS SCORE (0.2):
+ * Reasoning: Low. The theorem extracts "entropy" or "disorder" from the 
+ * mathematical landscape. It is not coercive in a social sense, but 
+ * it forces structure where one might expect none.
+ * * 2. SUPPRESSION SCORE (0.5):
+ * Reasoning: The theorem suppresses the possibility of long-term random 
+ * coloring. Once the scale is large enough, disorder is forbidden.
+ * * 3. PERSPECTIVE SELECTION:
+ * The Analyst (Mountain) sees the Law. The Strategist (Rope) sees the 
+ * Guarantee. The Algorist (Snare) sees the Complexity.
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+omega_variable(
+    vd_waerden_exact_growth,
+    "What is the exact growth rate of the Van der Waerden numbers W(k, r)?",
+    resolution_mechanism("Mathematical proof narrowing the gap between Gowers' upper bounds and current lower bounds"),
+    impact("If Gowers-like: It's a permanent Snare for computation. If significantly lower: It becomes a Rope for computer science."),
+    confidence_without_resolution(medium)
+).
+
+/* ==========================================================================
+   7. ALTERNATIVE ANALYSIS
+   ========================================================================== */
+
+/**
+ * VIABLE ALTERNATIVES
+ * * ALTERNATIVE 1: Hales-Jewett Theorem
+ * Viability: High. A much more general version of Van der Waerden's theorem 
+ * applying to n-dimensional cubes.
+ * Suppression: None, they are mutually reinforcing parts of Ramsey theory.
+ * * CONCLUSION:
+ * Since there are no "chaos-permitting" alternatives for large N, this 
+ * constraint remains a Mountain for the universe, but the specific 
+ * difficulty of computing N creates a Snare for the individual actor.
+ */
+
+/* ==========================================================================
+   8. INTEGRATION HOOKS
+   ========================================================================== */
+
+/**
+ * TO USE THIS FILE:
+ * * 1. Load: ?- [constraint_van_der_waerden_theorem].
+ * 2. Multi-perspective: ?- multi_index_report(van_der_waerden_theorem).
+ * 3. Run tests: ?- run_tests(van_der_waerden_theorem_tests).
+ */
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */
+% ============================================================================
+% CONSTRAINT STORY: vertebrate_turning_point_2026
+% ============================================================================
+% Version: 3.4 (Deferential Realism Core)
+% Logic: 3.3 (Indexed Tuple P,T,E,S)
+% Generated: 2026-02-05
+% ============================================================================
+
+:- module(constraint_vertebrate_genetics_2026, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
+    constraint_indexing:constraint_classification/3.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ * * constraint_id: vertebrate_genetics_2026
+ * human_readable: The Genetic Turning Point for Backbones
+ * domain: biological/scientific
+ * * SUMMARY:
+ * A comparative study of sea squirts, lampreys, and frogs has identified a 
+ * singular "Genetic Turning Point" that enabled the evolution of backbones. 
+ * This discovery identifies the irreducible genetic limit (Mountain) that 
+ * set the stage for all vertebrate life, including human complexity.
+ * * KEY AGENTS:
+ * - The General Public: Subject (Powerless/Trapped by biological architecture)
+ * - Evolutionary Biologists: Beneficiary (Institutional/Coordinating research)
+ * - Phylogenetic Auditors: Auditor (Analytical)
+ */
+
+/* ==========================================================================
+   2. BASE PROPERTIES (DOMAIN PRIORS)
+   ========================================================================== */
+
+% Extraction is low (0.05) as this is a discovery of natural law.
+domain_priors:base_extractiveness(vertebrate_genetics_2026, 0.05). 
+
+% Suppression is moderate (0.40) as the discovery suppresses 
+% previous, more fragmented theories of vertebrate evolution.
+domain_priors:suppression_score(vertebrate_genetics_2026, 0.40).   
+
+% Theater ratio is near-zero (0.02) due to high-fidelity genomic data.
+domain_priors:theater_ratio(vertebrate_genetics_2026, 0.02).       
+
+% Constraint metric facts (bridge for classification engine)
+narrative_ontology:constraint_metric(vertebrate_genetics_2026, extractiveness, 0.05).
+narrative_ontology:constraint_metric(vertebrate_genetics_2026, suppression_requirement, 0.4).
+narrative_ontology:constraint_metric(vertebrate_genetics_2026, theater_ratio, 0.02).
+
+% Primary keys for the classification engine
+% High-fidelity stakeholders
+narrative_ontology:constraint_beneficiary(vertebrate_genetics_2026, genomic_science).
+narrative_ontology:constraint_victim(vertebrate_genetics_2026, outdated_evolutionary_models).
+
+/* ==========================================================================
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   ========================================================================== */
+
+% PERSPECTIVE 1: THE RESEARCHER (ROPE)
+% Biologists view this discovery as a Rope: essential infrastructure 
+% for coordinating all future research into vertebrate development.
+constraint_indexing:constraint_classification(vertebrate_genetics_2026, rope, 
+    context(agent_power(institutional), 
+            time_horizon(generational), 
+            exit_options(mobile), 
+            spatial_scope(global))).
+
+% PERSPECTIVE 2: THE GENERAL PUBLIC (MOUNTAIN)
+% [RESOLVED MISSING_PERSPECTIVE]: Humans are powerless against their 
+% biological architecture; they are trapped within the body-plan 
+% established by this pivot point.
+constraint_indexing:constraint_classification(vertebrate_genetics_2026, mountain, 
+    context(agent_power(powerless), 
+            time_horizon(biographical), 
+            exit_options(trapped), 
+            spatial_scope(national))).
+
+% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (MOUNTAIN)
+% From an analytical standpoint, this singular genetic shift is an 
+% irreducible, unchangeable fact of biological history.
+constraint_indexing:constraint_classification(vertebrate_genetics_2026, mountain,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).
+
+/* ==========================================================================
+   4. VALIDATION TESTS
+   ========================================================================== */
+
+:- begin_tests(vertebrate_genetics_2026_tests).
+
+test(perspectival_gap) :-
+    % Verify the gap between institutional researchers and the powerless public.
+    constraint_indexing:constraint_classification(vertebrate_genetics_2026, rope, context(agent_power(institutional), _, _, _)),
+    constraint_indexing:constraint_classification(vertebrate_genetics_2026, mountain, context(agent_power(powerless), _, _, _)).
+
+test(low_extraction_validation) :-
+    domain_priors:base_extractiveness(vertebrate_genetics_2026, E),
+    E < 0.10.
+
+:- end_tests(vertebrate_genetics_2026_tests).
+
+/* ==========================================================================
+   5. GENERATIVE COMMENTARY
+   ========================================================================== */
+
+/**
+ * LOGIC RATIONALE:
+ * The near-zero extraction (0.05) reflects the non-extractive nature of 
+ * fundamental scientific discovery. 
+ * * PERSPECTIVAL GAP:
+ * The researcher sees a Rope (a new tool for coordination), while the 
+ * public experiences a Mountain (the unchangeable biological reality 
+ * of having a backbone).
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+omega_variable(
+    omega_genetic_pivot,
+    'Can this singular genetic point be replicated in non-vertebrate lineages?',
+    'Synthetic biology attempts to induce vertebrate-like traits in sea squirts.',
+    'Success shifts the discovery from a Mountain to a Rope (Engineering); Failure confirms it as a Mountain.',
+    confidence_without_resolution(medium)
+).
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+narrative_ontology:interval(vertebrate_genetics_2026, 0, 10).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS
+   ========================================================================== */
+
+% Theater ratio remains low; the discovery is purely functional.
+narrative_ontology:measurement(vg_tr_t0, vertebrate_genetics_2026, theater_ratio, 0, 0.02).
+narrative_ontology:measurement(vg_tr_t5, vertebrate_genetics_2026, theater_ratio, 5, 0.02).
+narrative_ontology:measurement(vg_tr_t10, vertebrate_genetics_2026, theater_ratio, 10, 0.02).
+
+% Extraction remains low, illustrating the methodology as a non-extractive Rope.
+narrative_ontology:measurement(vg_ex_t0, vertebrate_genetics_2026, base_extractiveness, 0, 0.05).
+narrative_ontology:measurement(vg_ex_t5, vertebrate_genetics_2026, base_extractiveness, 5, 0.05).
+narrative_ontology:measurement(vg_ex_t10, vertebrate_genetics_2026, base_extractiveness, 10, 0.05).
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */
+% ============================================================================
+% CONSTRAINT STORY: vienna_quantum_superposition_2026
+% ============================================================================
+% Version: 3.4 (Deferential Realism Core)
+% Logic: 3.3 (Indexed Tuple P,T,E,S)
+% Generated: 2026-02-05
+% ============================================================================
+
+:- module(constraint_vienna_quantum, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    constraint_indexing:constraint_classification/3.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ * * constraint_id: vienna_quantum_superposition_2026
+ * human_readable: The Macroscopicity Record (Schrödinger’s Nanoparticles)
+ * domain: technological/scientific
+ * * SUMMARY:
+ * Researchers at the University of Vienna led by Sebastian Pedalino have pushed 
+ * quantum superposition to a new "macroscopicity" record, placing clusters of 
+ * 7,000 sodium atoms in two places simultaneously. This experiment tests the 
+ * fundamental "Mountain" of quantum universality against "Snare" theories of 
+ * wave-function collapse[cite: 1, 3, 5].
+ * * KEY AGENTS:
+ * - [Sodium Nanoparticles]: Subject (Powerless) - Forced into wave-like 
+ * interference by ultraviolet laser gratings[cite: 1, 4].
+ * - [University of Vienna Team]: Beneficiary (Institutional) - Advancing the 
+ * frontier of universal quantum mechanics[cite: 1, 2].
+ * - [Decoherence/Environment]: Auditor (Analytical) - The natural "suppressor" 
+ * that collapses fragile quantum states.
+ */
+
+/* ==========================================================================
+   2. BASE PROPERTIES (DOMAIN PRIORS)
+   ========================================================================== */
+
+% High extraction (0.60); the experiment extracts specific interference 
+% signatures while suppressing all classical "noise" (decoherence)[cite: 3, 4].
+domain_priors:base_extractiveness(vienna_quantum_superposition_2026, 0.60). 
+
+% Very high suppression (0.88); requires ultra-high vacuum and 10ms of 
+% "total isolation" from the environment.
+domain_priors:suppression_score(vienna_quantum_superposition_2026, 0.88).   
+
+% Low theater (0.15); the interference signal is a direct, verified 
+% physical signature, not a proxy.
+domain_priors:theater_ratio(vienna_quantum_superposition_2026, 0.15).       
+
+% Constraint metric facts (bridge for classification engine)
+narrative_ontology:constraint_metric(vienna_quantum_superposition_2026, extractiveness, 0.6).
+narrative_ontology:constraint_metric(vienna_quantum_superposition_2026, suppression_requirement, 0.88).
+narrative_ontology:constraint_metric(vienna_quantum_superposition_2026, theater_ratio, 0.15).
+
+% Requires active enforcement via 2-meter interferometers and Earth-rotation 
+% compensation.
+domain_priors:requires_active_enforcement(vienna_quantum_superposition_2026).
+
+/* ==========================================================================
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   ========================================================================== */
+
+% PERSPECTIVE 1: THE SUBJECT (SNARE)
+% For the nanoparticle, the interferometer is a snare: it is trapped in 
+% isolation and forced to exist in multiple states simultaneously[cite: 1, 4].
+constraint_indexing:constraint_classification(vienna_quantum_superposition_2026, snare, 
+    context(agent_power(powerless), 
+            time_horizon(immediate), 
+            exit_options(trapped), 
+            spatial_scope(local))).
+
+% PERSPECTIVE 2: THE BENEFICIARY (ROPE)
+% For the researchers, the setup is a rope: it coordinates laser gratings 
+% and particle beams to prove the universality of physics[cite: 2, 4].
+constraint_indexing:constraint_classification(vienna_quantum_superposition_2026, rope, 
+    context(agent_power(institutional), 
+            time_horizon(historical), 
+            exit_options(mobile), 
+            spatial_scope(regional))).
+
+% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (MOUNTAIN)
+% From the perspective of the Theory, quantum mechanics is a mountain: 
+% it has no fundamental mass limits or "classical" boundaries[cite: 2, 5].
+constraint_indexing:constraint_classification(vienna_quantum_superposition_2026, mountain, 
+    context(agent_power(analytical), 
+            time_horizon(civilizational), 
+            exit_options(analytical), 
+            spatial_scope(universal))).
+
+/* ==========================================================================
+   4. VALIDATION TESTS
+   ========================================================================== */
+
+:- begin_tests(vienna_quantum_tests).
+
+test(perspectival_gap) :-
+    % Subject (Nanoparticle) is trapped (Snare); Researcher views it as 
+    % coordination (Rope).
+    constraint_indexing:constraint_classification(vienna_quantum_superposition_2026, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(vienna_quantum_superposition_2026, rope, context(agent_power(institutional), _, _, _)).
+
+test(threshold_check) :-
+    domain_priors:base_extractiveness(vienna_quantum_superposition_2026, E),
+
+    E > 0.46. % Correctly identifies high-extraction scientific probing.
+
+:- end_tests(vienna_quantum_tests).
+
+/* ==========================================================================
+   5. GENERATIVE COMMENTARY
+   ========================================================================== */
+
+/**
+ * LOGIC RATIONALE:
+ * The extraction score (0.60) represents the intentional filtration of matter 
+ * using UV laser gratings to isolate wave properties.
+ * The high suppression (0.88) reflects the "monumental technical challenge" 
+ * of keeping particles cold and vacuum-isolated to prevent decoherence[cite: 3, 4].
+ *
+ * MANDATROPHY ANALYSIS:
+ * The Mountain classification for the Analytical Observer acknowledges the 
+ * "universality" of standard quantum mechanics—assuming there are no fundamental 
+ * mass limits as probed by this experiment[cite: 2, 5].
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+omega_variable(
+    omega_collapse_threshold,
+    'Does a fundamental mass limit exist where quantum mechanics breaks?',
+    'Sending biological particles (viruses) through the interferometer[cite: 5].',
+    'If interference fails despite isolation, "Collapse Theory" (Snare) is true.',
+    confidence_without_resolution(medium)
+).
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+narrative_ontology:interval(vienna_quantum_superposition_2026, 0, 10).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Model the discovery lifecycle from T=0 (Noise/Flatlines) to T=10 (Discovery).
+
+% Theater ratio: Drops significantly once the "needle in a haystack" 
+% signal is found late at night in spring 2024.
+narrative_ontology:measurement(vq_tr_t0, vienna_quantum_superposition_2026, theater_ratio, 0, 0.70).
+narrative_ontology:measurement(vq_tr_t5, vienna_quantum_superposition_2026, theater_ratio, 5, 0.35).
+narrative_ontology:measurement(vq_tr_t10, vienna_quantum_superposition_2026, theater_ratio, 10, 0.15).
+
+% Extraction: Increases as the setup is optimized for "nice sinusoidal 
+% curves" of interference[cite: 5].
+narrative_ontology:measurement(vq_ex_t0, vienna_quantum_superposition_2026, base_extractiveness, 0, 0.20).
+narrative_ontology:measurement(vq_ex_t5, vienna_quantum_superposition_2026, base_extractiveness, 5, 0.45).
+narrative_ontology:measurement(vq_ex_t10, vienna_quantum_superposition_2026, base_extractiveness, 10, 0.60).
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */
+% ============================================================================
+% CONSTRAINT STORY: viral_transmission_rates
+% ============================================================================
+% Generated: 2026-01-22
+% Model: Gemini
+% Source: Epidemiological Modeling / Public Health Policy
+% Status: [RESOLVED MANDATROPHY]
+% ============================================================================
+
+:- module(constraint_viral_transmission_rates, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Namespace Hooks (Updated for v3.4) ---
+:- multifile 
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
+    constraint_indexing:constraint_classification/3.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ * * constraint_id: viral_transmission_rates
+ * human_readable: Viral Transmission Dynamics (R0/Rt)
+ * domain: technological/biological/political
+ * temporal_scope: Pandemic Periods (e.g., 2020-2023)
+ * spatial_scope: Global
+ * * SUMMARY:
+ * Viral transmission rates (R0/Rt) function as biological constraints that dictate 
+ * the speed of pathogen spread. These rates force systemic societal 
+ * reorganization, where biological necessity and political enforcement converge 
+ * to extract labor, movement, and economic agency from the population.
+ * * KEY AGENTS:
+ * - The Epidemiologist: Analytical observer of mathematical growth laws.
+ * - The Health Ministry: Institutional actor using transmission metrics as a coordination tool.
+ * - The Precarious Worker: Individual powerless subject experiencing the rate as an extractive trap.
+ * * NARRATIVE ARC:
+ * Transmission begins as a "Mountain" of natural law. State intervention attempts 
+ * to convert this into a "Rope" for coordination, but for the economically 
+ * vulnerable, the policy-biological hybrid tightens into a "Snare".
+ */
+
+/* ==========================================================================
+   2. CORE SYSTEM INTEGRATION (REVISED)
+   ========================================================================== */
+
+% ID Binding - Mandatory for 2026 DR-Audit Suite
+narrative_ontology:interval(viral_transmission_rates, 0, 10).
+narrative_ontology:constraint_claim(viral_transmission_rates, mountain).
+
+% Base Properties
+% Rationale: Pathogens and lockdowns extract biological and economic life (0.70).
+domain_priors:base_extractiveness(viral_transmission_rates, 0.70). 
+domain_priors:suppression_score(viral_transmission_rates, 0.80).   
+domain_priors:theater_ratio(viral_transmission_rates, 0.40).       
+
+% Constraint metric facts (bridge for classification engine)
+narrative_ontology:constraint_metric(viral_transmission_rates, extractiveness, 0.7).
+narrative_ontology:constraint_metric(viral_transmission_rates, suppression_requirement, 0.8).
+narrative_ontology:constraint_metric(viral_transmission_rates, theater_ratio, 0.4).
+
+% Mandatory keys for classification engine v3.4
+% These resolve the [FAIL] Schema mismatch by anchoring the measurement keys.
+domain_priors:requires_active_enforcement(viral_transmission_rates).
+domain_priors:emerges_naturally(viral_transmission_rates).
+
+% Beneficiaries & Victims (Required for extraction > 0.46)
+narrative_ontology:constraint_beneficiary(viral_transmission_rates, institutional_governance).
+narrative_ontology:constraint_victim(viral_transmission_rates, precarious_laborers).
+
+/* ==========================================================================
+   3. INDEXED CLASSIFICATIONS (Perspectival Truth)
+   ========================================================================= */
+
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 1: THE EPIDEMIOLOGIST - Mountain
+   --------------------------------------------------------------------------
+   WHO: analytical - Observer of biological laws.
+   WHEN: historical - Evaluating outbreaks across decades.
+   WHERE: analytical - Not personally constrained by policy.
+   SCOPE: global - The virus ignores borders.
+   
+   WHY THIS CLASSIFICATION:
+   To the analyst, R0 is a fixed feature of the biological landscape. Exponential 
+   growth is non-negotiable; it is an unchangeable law of the environment.
+   -------------------------------------------------------------------------- */
+
+constraint_indexing:constraint_classification(
+    viral_transmission_rates,
+    mountain,
+    context(
+        agent_power(analytical),
+        time_horizon(historical),
+        exit_options(analytical),
+        spatial_scope(global)
+    )
+) :- !.
+
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 2: THE HEALTH MINISTRY - Rope
+   --------------------------------------------------------------------------
+   WHO: institutional - Rule-making power.
+   WHEN: immediate - Managing 1-year hospital capacity.
+   WHERE: arbitrage - Can shift resources to modify the rate.
+   SCOPE: national - Country-wide mandates.
+   
+   WHY THIS CLASSIFICATION:
+   For the institution, the effective reproduction number (Rt) is a tool for 
+   population coordination. It justifies collective action to prevent systemic 
+   collapse.
+   -------------------------------------------------------------------------- */
+
+constraint_indexing:constraint_classification(
+    viral_transmission_rates,
+    rope,
+    context(
+        agent_power(institutional),
+        time_horizon(immediate),
+        exit_options(arbitrage),
+        spatial_scope(national)
+    )
+) :- !.
+
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 3: THE SMALL BUSINESS OWNER - Tangled Rope
+   --------------------------------------------------------------------------
+   WHO: individual_moderate - Some agency, limited rule-shaping.
+   WHEN: biographical - Lifetime economic impact.
+   WHERE: constrained - Exit is costly (bankruptcy).
+   SCOPE: regional - Local markets.
+   
+   WHY THIS CLASSIFICATION:
+   The business owner needs the system to coordinate safety so customers return 
+   (Rope), but the mandates asymmetrically extract their revenue and viability 
+   (Snare).
+   -------------------------------------------------------------------------- */
+
+constraint_indexing:constraint_classification(
+    viral_transmission_rates,
+    tangled_rope,
+    context(
+        agent_power(individual_moderate),
+        time_horizon(biographical),
+        exit_options(constrained),
+        spatial_scope(regional)
+    )
+) :- !.
+
+/* --------------------------------------------------------------------------
+   PERSPECTIVE 4: THE DAY LABORER - Snare
+   --------------------------------------------------------------------------
+   WHO: powerless - No savings, subject to mandates.
+   WHEN: immediate - Survival depends on today's wages.
+   WHERE: trapped - No physical or economic exit.
+   SCOPE: local - Immediate worksite.
+   
+   WHY THIS CLASSIFICATION:
+   The laborer is caught between infection risk and starvation. The policy 
+   suppresses their ability to earn while the virus extracts their health. It 
+   is a pure extractive trap.
+   -------------------------------------------------------------------------- */
+
+constraint_indexing:constraint_classification(
+    viral_transmission_rates,
+    snare,
+    context(
+        agent_power(powerless),
+        time_horizon(immediate),
+        exit_options(trapped),
+        spatial_scope(local)
+    )
+) :- !.
+
+/* ==========================================================================
+   4. TESTS (What We Learn About Constraints)
+   ========================================================================== */
+
+:- begin_tests(viral_transmission_rates_tests).
+
+test(multi_perspective_variance) :-
+    % Verify different indices yield different types
+    constraint_indexing:constraint_classification(viral_transmission_rates, mountain, context(agent_power(analytical), _, _, _)),
+    constraint_indexing:constraint_classification(viral_transmission_rates, rope, context(agent_power(institutional), _, _, _)),
+    constraint_indexing:constraint_classification(viral_transmission_rates, snare, context(agent_power(powerless), _, _, _)).
+
+test(power_extractiveness_scaling) :-
+    % Powerless experience higher extraction than the institution
+    ContextPowerless = context(powerless, immediate, trapped, local),
+    ContextPowerful = context(institutional, immediate, arbitrage, national),
+    constraint_indexing:extractiveness_for_agent(viral_transmission_rates, ContextPowerless, Score1),
+    constraint_indexing:extractiveness_for_agent(viral_transmission_rates, ContextPowerful, Score2),
+    Score1 > Score2.
+
+test(hybrid_tangled_rope_detection) :-
+    % Ensure moderate power detects the coordination/extraction hybrid
+    constraint_indexing:constraint_classification(viral_transmission_rates, tangled_rope, context(individual_moderate, biographical, constrained, regional)).
+
+:- end_tests(viral_transmission_rates_tests).
+
+/* ==========================================================================
+   5. MODEL INTERPRETATION (Commentary)
+   ========================================================================== */
+
+/**
+ * LLM GENERATION NOTES
+ * * Model: Gemini
+ * Date: 2026-01-22
+ * * KEY DECISIONS:
+ * * 1. EXTRACTIVENESS (0.7):
+ * The virus extracts biological life, while the lockdown extracts economic 
+ * life. The combined effect is severely asymmetric.
+ * * 2. PERSPECTIVE SELECTION:
+ * Added Tangled Rope for the 'individual_moderate' to reflect the hybrid 
+ * nature of pandemic policy (coordination vs. extraction).
+ * * 3. MANDATROPHY RESOLUTION:
+ * The [RESOLVED MANDATROPHY] status is justified by showing that while the 
+ * system is a coordination tool (Rope) for the state, it is a Snare for 
+ * the precarious worker.
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+% Mandatory Omega for high-extraction constraints:
+omega_variable(
+    viral_transmission_extraction_intent,
+    "Is the extraction of economic agency a functional necessity for biosecurity or a predatory centralization of power?",
+    resolution_mechanism("Audit of state emergency power rollbacks vs. virus prevalence normalization"),
+    impact("If necessity: Mountain (natural law). If predatory: Snare (Mandatrophy)."),
+    confidence_without_resolution(medium)
+).
+
+omega_variable(
+    herd_immunity_mechanism,
+    "Is the threshold reached via natural infection (Snare) or vaccination (Rope)?",
+    resolution_mechanism("Seroprevalence study comparison with vaccine uptake metrics"),
+    impact("If natural: high victim extraction. If vaccine: coordination success."),
+    confidence_without_resolution(medium)
+).
+
+/* ==========================================================================
+   7. ALTERNATIVE ANALYSIS
+   ========================================================================== */
+
+/**
+ * VIABLE ALTERNATIVES
+ * * ALTERNATIVE 1: Focused Protection
+ * Viability: Shielding high-risk while low-risk maintain economy.
+ * Suppression: Actively pathologized and excluded from official policy.
+ * * CONCLUSION:
+ * The active suppression of "Focused Protection" shifts the laborer's 
+ * experience from a necessary Rope to an enforced Snare.
+ */
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Theater ratio: Corrected to raw floats to resolve schema mismatch.
+narrative_ontology:measurement(viral_tr_t0, viral_transmission_rates, theater_ratio, 0, 0.10).
+narrative_ontology:measurement(viral_tr_t5, viral_transmission_rates, theater_ratio, 5, 0.45).
+narrative_ontology:measurement(viral_tr_t10, viral_transmission_rates, theater_ratio, 10, 0.40).
+
+% Extraction: Tracking the intensification of biosecurity extraction.
+narrative_ontology:measurement(viral_ex_t0, viral_transmission_rates, base_extractiveness, 0, 0.35).
+narrative_ontology:measurement(viral_ex_t5, viral_transmission_rates, base_extractiveness, 5, 0.75).
+narrative_ontology:measurement(viral_ex_t10, viral_transmission_rates, base_extractiveness, 10, 0.70).
+
+/* ==========================================================================
+   9. INTEGRATION HOOKS
+   ========================================================================== */
+
+% Load into system: ?- [viral_transmission_rates].
+% Run analysis: ?- constraint_indexing:multi_index_report(viral_transmission_rates).
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */
+% ============================================================================
+% CONSTRAINT STORY: visibility_bias_governance
+% ============================================================================
+% Version: 3.4 (Deferential Realism Core)
+% Logic: 3.3 (Indexed Tuple P,T,E,S)
+% Generated: 2026-01-28
+% ============================================================================
+
+:- module(constraint_visibility_bias, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Namespace Hooks (Updated for v3.4) ---
+:- multifile 
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
+    constraint_indexing:constraint_classification/3.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ * * constraint_id: visibility_bias_governance
+ * human_readable: The Dashboard Delusion
+ * domain: political/institutional
+ * * SUMMARY:
+ * A governance failure where policy is driven exclusively by high-visibility 
+ * metrics (e.g., stock indices, surface-level crime stats) while ignoring 
+ * low-visibility systemic decay (e.g., infrastructure entropy, trust decay). 
+ * It creates a "Theater of Progress."
+ * * KEY AGENTS:
+ * - The Resident: Subject (Powerless) - Suffering from the unmeasured decay.
+ * - The Policymaker: Beneficiary (Institutional) - Rewarded for "improving" visible metrics.
+ * - The Complexity Scientist: Auditor (Analytical) - Mapping the invisible debt.
+ */
+
+/* ==========================================================================
+   2. BASE PROPERTIES (REVISED)
+   ========================================================================== */
+
+% Numerical anchors for v3.4 thresholds
+domain_priors:base_extractiveness(visibility_bias_governance, 0.54). 
+domain_priors:suppression_score(visibility_bias_governance, 0.68).   
+domain_priors:theater_ratio(visibility_bias_governance, 0.78).       
+
+% Constraint metric facts (bridge for classification engine)
+narrative_ontology:constraint_metric(visibility_bias_governance, extractiveness, 0.54).
+narrative_ontology:constraint_metric(visibility_bias_governance, suppression_requirement, 0.68).
+narrative_ontology:constraint_metric(visibility_bias_governance, theater_ratio, 0.78).
+
+% Mandatory keys for classification engine v3.4
+domain_priors:requires_active_enforcement(visibility_bias_governance).
+
+% Beneficiaries & Victims (Required for extraction > 0.46)
+narrative_ontology:constraint_beneficiary(visibility_bias_governance, policymaker).
+narrative_ontology:constraint_victim(visibility_bias_governance, resident).
+
+/* ==========================================================================
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   ========================================================================== */
+
+% PERSPECTIVE 1: THE SUBJECT (SNARE)
+% The individual is trapped by a system that claims everything is fine (based 
+% on metrics) while their actual environment is failing.
+constraint_indexing:constraint_classification(visibility_bias_governance, snare, 
+    context(agent_power(powerless), 
+            time_horizon(biographical), 
+            exit_options(trapped), 
+            spatial_scope(national))).
+
+% PERSPECTIVE 2: THE INSTITUTION (ROPE)
+% To the state, the dashboard is a Rope—the only way to coordinate 
+% macro-level policy across a massive population.
+constraint_indexing:constraint_classification(visibility_bias_governance, rope, 
+    context(agent_power(institutional), 
+            time_horizon(generational), 
+            exit_options(mobile), 
+            spatial_scope(national))).
+
+% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
+% Detects the hybrid: The metrics provide some coordination (Rope), but the 
+% selection bias extracts future stability (Snare/Piton).
+constraint_indexing:constraint_classification(visibility_bias_governance, tangled_rope, 
+    context(agent_power(analytical), 
+            time_horizon(historical), 
+            exit_options(analytical), 
+            spatial_scope(global))) :-
+    domain_priors:theater_ratio(visibility_bias_governance, TR), TR > 0.70.
+
+/* ==========================================================================
+   4. VALIDATION TESTS
+   ========================================================================== */
+
+:- begin_tests(visibility_bias_tests).
+
+test(piton_analysis_trigger) :-
+    % Verify that the analytical observer identifies the Piton status via theater_ratio.
+    constraint_indexing:constraint_classification(visibility_bias_governance, tangled_rope, context(agent_power(analytical), _, _, _)).
+
+test(extraction_threshold) :-
+    % Extraction > 0.46 requires Omega validation in section 6.
+    domain_priors:base_extractiveness(visibility_bias_governance, E), E > 0.46.
+
+:- end_tests(visibility_bias_tests).
+
+/* ==========================================================================
+   5. GENERATIVE COMMENTARY
+   ========================================================================== */
+
+/**
+ * LOGIC RATIONALE:
+ * The extraction (0.54) is non-obvious; it is the "extraction of attention." 
+ * Resources are pulled away from critical invisible nodes to serve high-visibility 
+ * political signals.
+ * * [RESOLVED MANDATROPHY]
+ * The Mandatrophy is resolved by identifying that Visibility Bias is a 
+ * "Tangled Rope" of coordination. It is not an unavoidable "Mountain" of 
+ * human cognitive limits, but a choice of which tools (metrics) to prioritize. 
+ *
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
+omega_variable(
+    omega_metric_gaming,
+    'Are the visible metrics accurate, or have they become "Theater" to hide systemic failure?',
+    'Audit of internal raw data vs. published governance dashboards.',
+    'If gamed: Pure Piton; If accurate: A high-tension Tangled Rope.',
+    confidence_without_resolution(medium)
+).
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+% Required for external script parsing.
+narrative_ontology:interval(visibility_bias_governance, 0, 10). 
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Theater ratio: Rising from functional metric coordination (0.20) 
+% to high-theater "Dashboard Delusion" (0.78) as systemic decay is ignored.
+narrative_ontology:measurement(vis_tr_t0, visibility_bias_governance, theater_ratio, 0, 0.20).
+narrative_ontology:measurement(vis_tr_t5, visibility_bias_governance, theater_ratio, 5, 0.48).
+narrative_ontology:measurement(vis_tr_t10, visibility_bias_governance, theater_ratio, 10, 0.78).
+
+% Extraction: Progressive accumulation of the "Opportunity Cost" of ignored 
+% systemic risks as resources are pulled toward visible political signals.
+narrative_ontology:measurement(vis_ex_t0, visibility_bias_governance, base_extractiveness, 0, 0.25).
+narrative_ontology:measurement(vis_ex_t5, visibility_bias_governance, base_extractiveness, 5, 0.42).
+narrative_ontology:measurement(vis_ex_t10, visibility_bias_governance, base_extractiveness, 10, 0.54).
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */

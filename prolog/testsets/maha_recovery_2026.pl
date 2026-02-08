@@ -24,6 +24,7 @@
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -64,6 +65,9 @@ domain_priors:theater_ratio(maha_recovery_2026, 0.65).
 narrative_ontology:constraint_metric(maha_recovery_2026, extractiveness, 0.42).
 narrative_ontology:constraint_metric(maha_recovery_2026, suppression_requirement, 0.35).
 narrative_ontology:constraint_metric(maha_recovery_2026, theater_ratio, 0.65).
+
+% Constraint classification claim
+narrative_ontology:constraint_claim(maha_recovery_2026, scaffold).
 
 % Scaffold Classification Requirements
 narrative_ontology:has_sunset_clause(maha_recovery_2026).

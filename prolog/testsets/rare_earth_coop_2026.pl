@@ -24,6 +24,7 @@
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -60,6 +61,9 @@ domain_priors:theater_ratio(rare_earth_coop_2026, 0.20).       % Functional tran
 narrative_ontology:constraint_metric(rare_earth_coop_2026, extractiveness, 0.02).
 narrative_ontology:constraint_metric(rare_earth_coop_2026, suppression_requirement, 0.15).
 narrative_ontology:constraint_metric(rare_earth_coop_2026, theater_ratio, 0.20).
+
+% Constraint classification claim
+narrative_ontology:constraint_claim(rare_earth_coop_2026, rope).
 
 % Rope Structural Property Declarations
 % A Rope is characterized by the agent being their own beneficiary.
@@ -156,3 +160,19 @@ narrative_ontology:measurement(rec_ex_t10, rare_earth_coop_2026, base_extractive
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
+
+% ============================================================================
+% ENRICHMENT: Structural predicates for remaining gaps
+% Generated: 2026-02-08
+% Template: v5.2 namespace alignment
+% Source: Derived from narrative context in this file (rare_earth_coop_2026)
+% ============================================================================
+constraint_victim(rare_earth_coop_2026, non_member_market_participants).
+
+% PERSPECTIVE 3: THE SMALL MANUFACTURER (ROPE)
+% Even non-members benefit from price stabilization; membership is voluntary.
+constraint_indexing:constraint_classification(rare_earth_coop_2026, rope,
+    context(agent_power(powerless),
+            time_horizon(immediate),
+            exit_options(mobile),
+            spatial_scope(global))).

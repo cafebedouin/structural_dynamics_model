@@ -243,3 +243,19 @@ omega_variable(
 % --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
 constraint_indexing:constraint_classification(educational_unbundling_implementation, rope, agent_power(institutional)).
 constraint_indexing:constraint_classification(educational_unbundling_implementation, snare, agent_power(powerless)).
+
+% ============================================================================
+% ENRICHMENT: Structural predicates for dynamic classification
+% Generated: 2026-02-08
+% Template: v5.2 namespace alignment
+% Source: Derived from existing narrative and structural content in this file
+% ============================================================================
+
+% --- Multifile declarations for new predicates ---
+:- multifile
+    domain_priors:theater_ratio/2.
+
+% --- Theater ratio (missing from base properties) ---
+% Functional coordination mechanism — primarily substantive
+domain_priors:theater_ratio(education_unbundling_implementation, 0.09).
+narrative_ontology:constraint_metric(education_unbundling_implementation, theater_ratio, 0.09).

@@ -24,6 +24,7 @@
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -64,6 +65,9 @@ domain_priors:theater_ratio(ulysses_oxen_1904, 0.98).      % Peak linguistic mum
 narrative_ontology:constraint_metric(ulysses_oxen_1904, extractiveness, 0.55).
 narrative_ontology:constraint_metric(ulysses_oxen_1904, suppression_requirement, 0.95).
 narrative_ontology:constraint_metric(ulysses_oxen_1904, theater_ratio, 0.98).
+
+% Constraint classification claim
+narrative_ontology:constraint_claim(ulysses_oxen_1904, piton).
 
 % Structural Property Declarations
 narrative_ontology:constraint_beneficiary(ulysses_oxen_1904, biological_continuance).

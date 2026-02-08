@@ -1,9 +1,9 @@
 % ============================================================================
 % CONSTRAINT STORY: semiconductor_mission_2026
 % ============================================================================
-% Version: 3.4 (Deferential Realism Core)
-% Logic: 3.3 (Indexed Tuple P,T,E,S)
-% Generated: 2024-02-29
+% Version: 5.2 (Deferential Realism Core + Boltzmann + Purity + Network)
+% Logic: 5.2 (Indexed Tuple P,T,E,S + Coupling + Purity + Network Drift)
+% Generated: 2024-07-08
 % ============================================================================
 
 :- module(constraint_semiconductor_mission_2026, []).
@@ -24,6 +24,10 @@
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
+    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -58,6 +62,10 @@ narrative_ontology:constraint_metric(semiconductor_mission_2026, extractiveness,
 narrative_ontology:constraint_metric(semiconductor_mission_2026, suppression_requirement, 0.55).
 narrative_ontology:constraint_metric(semiconductor_mission_2026, theater_ratio, 0.30).
 
+% Constraint self-claim (what does the constraint claim to be?)
+% Values: natural_law, coordination, constructed, enforcement
+narrative_ontology:constraint_claim(semiconductor_mission_2026, tangled_rope).
+
 % Binary flags
 % narrative_ontology:has_sunset_clause(semiconductor_mission_2026).      % Mandatory if Scaffold
 domain_priors:requires_active_enforcement(semiconductor_mission_2026). % Required for Tangled Rope
@@ -78,13 +86,7 @@ narrative_ontology:constraint_victim(semiconductor_mission_2026, global_chip_sup
    ========================================================================== */
 
 % PERSPECTIVE 1: THE SUBJECT (SNARE/MOUNTAIN)
-% High extraction felt as an immutable limit or predatory trap.
-% NOTE: This may be upgraded to 'organized' power if a critical mass of victims exists.
-%
-% UNIFORM-TYPE EXCEPTION: For natural law constraints (mountain-only) or pure
-% coordination constraints (rope-only), perspectives 1 and 2 may use any power
-% atoms — the classification is the same from all perspectives.  Include at
-% least 2-3 perspectives to demonstrate the invariance.
+% Domestic manufacturers face high compliance burdens and dependency, feeling trapped.
 constraint_indexing:constraint_classification(semiconductor_mission_2026, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
@@ -92,7 +94,7 @@ constraint_indexing:constraint_classification(semiconductor_mission_2026, snare,
             spatial_scope(national))).
 
 % PERSPECTIVE 2: THE BENEFICIARY (ROPE)
-% Viewed as essential infrastructure or coordination.
+% The government views this as essential coordination for national strategic goals.
 constraint_indexing:constraint_classification(semiconductor_mission_2026, rope,
     context(agent_power(institutional),
             time_horizon(generational),
@@ -100,33 +102,12 @@ constraint_indexing:constraint_classification(semiconductor_mission_2026, rope,
             spatial_scope(national))).
 
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER
-% Default analytical context (civilizational/analytical/global).
-% This perspective is used by the bridge to derive constraint_claim.
-% Type should reflect what the metrics compute: mountain, rope, tangled_rope, snare, scaffold, or piton.
+% The policy has both a genuine coordination function and asymmetric extraction.
 constraint_indexing:constraint_classification(semiconductor_mission_2026, tangled_rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
             spatial_scope(global))).
-
-% PERSPECTIVE 4: THE ARCHITECT (SCAFFOLD)
-% Temporary coordination that expires over time.
-% Requires: has_sunset_clause declared, extraction <= 0.30, theater_ratio < 0.70.
-% constraint_indexing:constraint_classification(semiconductor_mission_2026, scaffold,
-%    context(agent_power(organized),
-%            time_horizon(generational),
-%            exit_options(constrained),
-%            spatial_scope(continental))) :-
-%    narrative_ontology:has_sunset_clause(semiconductor_mission_2026).
-
-% PERSPECTIVE 5: THE SYSTEMS AUDITOR (PITON)
-% Inertial maintenance of a non-functional constraint.
-% constraint_indexing:constraint_classification(semiconductor_mission_2026, piton,
-%    context(agent_power(analytical),
-%            time_horizon(civilizational),
-%            exit_options(arbitrage),
-%            spatial_scope(universal))) :-
-%    domain_priors:theater_ratio(semiconductor_mission_2026, TR), TR > 0.70.
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -145,6 +126,12 @@ test(threshold_validation) :-
     narrative_ontology:constraint_metric(semiconductor_mission_2026, ExtMetricName, E),
     (E =< 0.05 -> true ; E >= 0.46). % Ensures it's either a Mountain or high-extraction Snare/Tangled.
 
+test(tangled_rope_properties) :-
+    % A tangled_rope classification requires these three structural properties.
+    narrative_ontology:constraint_beneficiary(semiconductor_mission_2026, _), % -> has_coordination_function
+    narrative_ontology:constraint_victim(semiconductor_mission_2026, _), % -> has_asymmetric_extraction
+    domain_priors:requires_active_enforcement(semiconductor_mission_2026).
+
 :- end_tests(semiconductor_mission_2026_tests).
 
 /* ==========================================================================
@@ -153,7 +140,7 @@ test(threshold_validation) :-
 
 /**
  * LOGIC RATIONALE:
- * I assigned a base extractiveness of 0.48 because the mission does extract resources from taxpayers to subsidize the industry. The suppression score is 0.55 because the mission limits the choices of domestic manufacturers to use only government approved programs, and may indirectly disadvantage non-participating foreign suppliers. The theater ratio is low (0.30) because the mission seems genuinely aimed at building capacity, not just performative. The perspectival gap arises because domestic manufacturers may perceive it as a necessary intervention, but they also face limitations and compliance burdens (Snare), whereas the government views it as a strategic investment (Rope). Global chip suppliers, initially beneficiaries of the Indian market, now find their access curtailed, making them victims of asymmetric extraction. The analytical observer classifies it as Tangled Rope due to its mix of coordination (domestic capacity building) and extraction (from global suppliers and taxpayers).
+ * I assigned a base extractiveness of 0.48 because the mission extracts resources from taxpayers to subsidize the industry. The suppression score is 0.55 because the mission limits the choices of domestic manufacturers to use only government approved programs, and may indirectly disadvantage non-participating foreign suppliers. The theater ratio is low (0.30) because the mission seems genuinely aimed at building capacity, not just performative. The perspectival gap arises because domestic manufacturers may perceive it as a necessary intervention, but they also face limitations and compliance burdens (Snare), whereas the government views it as a strategic investment (Rope). Global chip suppliers, initially beneficiaries of the Indian market, now find their access curtailed, making them victims of asymmetric extraction. The analytical observer classifies it as Tangled Rope due to its mix of coordination (domestic capacity building) and extraction (from global suppliers and taxpayers).
  * * MANDATROPHY ANALYSIS:
  * The Tangled Rope classification prevents the system from mislabeling coordination as pure extraction by explicitly acknowledging both the coordination function (building domestic semiconductor capacity) and the asymmetric extraction (potentially harming global chip suppliers and burdening taxpayers). Without considering both aspects, the system might incorrectly classify it as a simple Rope (pure coordination) or a Snare (pure extraction). The 'requires_active_enforcement' flag indicates that the mission needs continued government intervention to maintain its goals.
  */
@@ -198,6 +185,15 @@ narrative_ontology:measurement(semiconductor_mission_2026_tr_t10, semiconductor_
 narrative_ontology:measurement(semiconductor_mission_2026_ex_t0, semiconductor_mission_2026, base_extractiveness, 0, 0.40).
 narrative_ontology:measurement(semiconductor_mission_2026_ex_t5, semiconductor_mission_2026, base_extractiveness, 5, 0.45).
 narrative_ontology:measurement(semiconductor_mission_2026_ex_t10, semiconductor_mission_2026, base_extractiveness, 10, 0.48).
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA (v5.0-5.2)
+   ========================================================================== */
+
+% Coordination type (enables Boltzmann floor + complexity offset)
+% Valid types: information_standard, resource_allocation,
+%              enforcement_mechanism, global_infrastructure
+narrative_ontology:coordination_type(semiconductor_mission_2026, resource_allocation).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

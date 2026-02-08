@@ -24,6 +24,7 @@
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -64,6 +65,9 @@ domain_priors:theater_ratio(project_vault_2026, 0.65).       % National security
 narrative_ontology:constraint_metric(project_vault_2026, extractiveness, 0.55).
 narrative_ontology:constraint_metric(project_vault_2026, suppression_requirement, 0.94).
 narrative_ontology:constraint_metric(project_vault_2026, theater_ratio, 0.65).
+
+% Constraint classification claim
+narrative_ontology:constraint_claim(project_vault_2026, tangled_rope).
 
 % Scaffold/Tangled Rope Requirements
 domain_priors:requires_active_enforcement(project_vault_2026). % Mandatory buy-in contracts.

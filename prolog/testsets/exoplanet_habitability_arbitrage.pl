@@ -19,6 +19,7 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -53,7 +54,7 @@
    ========================================================================== */
 
 narrative_ontology:interval(exoplanetary_habitability_arbitrage, 0, 10).
-narrative_ontology:constraint_claim([exoplanetary_habitability_arbitrage], [scientific_prioritization]).
+narrative_ontology:constraint_claim(exoplanetary_habitability_arbitrage, rope).
 
 % Base extractiveness score (0.45 = Moderate)
 % Rationale: High-cost missions like the Habitable Worlds Observatory extract 
@@ -270,3 +271,19 @@ omega_variable(
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
+
+% ============================================================================
+% ENRICHMENT: Structural predicates for dynamic classification
+% Generated: 2026-02-08
+% Template: v5.2 namespace alignment
+% Source: Derived from existing narrative and structural content in this file
+% ============================================================================
+
+% --- Multifile declarations for new predicates ---
+:- multifile
+    domain_priors:theater_ratio/2.
+
+% --- Theater ratio (missing from base properties) ---
+% Functional coordination mechanism — primarily substantive
+domain_priors:theater_ratio(exoplanetary_habitability_arbitrage, 0.08).
+narrative_ontology:constraint_metric(exoplanetary_habitability_arbitrage, theater_ratio, 0.08).

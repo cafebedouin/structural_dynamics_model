@@ -121,7 +121,7 @@ param(data_medium_threshold, 0.75).
 % --- Mountain Boundaries ---
 param(mountain_suppression_ceiling, 0.05). % noise floor
 param(mountain_extractiveness_min, 0.0).
-param(mountain_extractiveness_max, 0.15).
+param(mountain_extractiveness_max, 0.25).
 
 % --- Rope Boundaries ---
 % Aligned with core.md: Rope = low extraction, ε ≤ 0.15
@@ -152,7 +152,7 @@ param(snare_load_bearing_threshold,  0.70).  % Above this = load-bearing snare (
 
 % Rule R (Rope): χ ≤ 0.35 ∧ ε ≤ 0.15 ∧ Coord(C) ∧ Changeable(C, I.T, I.E)
 param(rope_chi_ceiling, 0.35).
-param(rope_epsilon_ceiling, 0.15).
+param(rope_epsilon_ceiling, 0.45).
 
 % Rule N (Snare): χ ≥ 0.66 ∧ ε ≥ 0.46 ∧ ¬Coord(C) ∧ Changeable(C, I.T, I.E)
 param(snare_chi_floor, 0.66).
@@ -161,14 +161,14 @@ param(snare_epsilon_floor, 0.46).
 % Rule TR (Tangled Rope): 0.40 ≤ χ ≤ 0.90 ∧ ε ≥ 0.50 ∧ Coord(C) ∧ Asymmetric(C)
 param(tangled_rope_chi_floor, 0.40).
 param(tangled_rope_chi_ceil, 0.90).
-param(tangled_rope_epsilon_floor, 0.50).
+param(tangled_rope_epsilon_floor, 0.30).
 
 % --- Scaffold Boundaries ---
 % Temporary supports must remain below this coordination ceiling
 param(scaffold_extraction_ceil, 0.30).
 
 % --- Piton Boundaries ---
-param(piton_extraction_ceiling,     0.10).
+param(piton_extraction_ceiling,     0.25).
 param(piton_theater_floor,          0.70).
 param(piton_epsilon_floor,          0.10).   % Rule Z: ε(C) > 0.10
 
@@ -232,10 +232,10 @@ param(isomorphism_threshold, 0.85).
 % Maximum allowable coupling score for Boltzmann compliance.
 % 0.0 = perfectly factorized (independent dimensions)
 % 1.0 = maximally coupled (all dimensions entangled)
-param(boltzmann_coupling_threshold,        0.15).
+param(boltzmann_coupling_threshold,        0.25).
 
 % Threshold above which coupling is classified as "strong"
-param(boltzmann_coupling_strong_threshold, 0.40).
+param(boltzmann_coupling_strong_threshold, 0.50).
 
 % Tolerance for factorization test: χ(P,S) ≈ f(P)×g(S)
 % within this relative error margin

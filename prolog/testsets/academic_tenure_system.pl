@@ -25,6 +25,7 @@
     narrative_ontology:measurement/5,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -58,6 +59,9 @@ domain_priors:theater_ratio(academic_tenure_system, 0.52).       % Detected Pito
 narrative_ontology:constraint_metric(academic_tenure_system, extractiveness, 0.75).
 narrative_ontology:constraint_metric(academic_tenure_system, suppression_requirement, 0.6).
 narrative_ontology:constraint_metric(academic_tenure_system, theater_ratio, 0.52).
+
+% Constraint classification claim
+narrative_ontology:constraint_claim(academic_tenure_system, tangled_rope).
 
 % Constraint metric facts used by classification engine
 domain_priors:requires_active_enforcement(academic_tenure_system).

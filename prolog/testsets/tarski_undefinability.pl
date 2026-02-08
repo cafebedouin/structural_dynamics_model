@@ -265,3 +265,19 @@ omega_variable(
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
+
+% ============================================================================
+% ENRICHMENT: Structural predicates for dynamic classification
+% Generated: 2026-02-08
+% Template: v5.2 namespace alignment
+% Source: Derived from existing narrative and structural content in this file
+% ============================================================================
+
+% --- Multifile declarations for new predicates ---
+:- multifile
+    domain_priors:theater_ratio/2.
+
+% --- Theater ratio (missing from base properties) ---
+% Technical constraint — mostly substantive, minimal implementation theater
+domain_priors:theater_ratio(tarski_undefinability, 0.01).
+narrative_ontology:constraint_metric(tarski_undefinability, theater_ratio, 0.01).

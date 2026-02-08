@@ -270,3 +270,19 @@ omega_variable(
 constraint_indexing:constraint_classification(s1_visa_judgment_sharing_agreement, mountain, agent_power(analytical)).
 constraint_indexing:constraint_classification(s1_visa_judgment_sharing_agreement, rope, agent_power(institutional)).
 constraint_indexing:constraint_classification(s1_visa_judgment_sharing_agreement, snare, agent_power(powerless)).
+
+% ============================================================================
+% ENRICHMENT: Structural predicates for dynamic classification
+% Generated: 2026-02-08
+% Template: v5.2 namespace alignment
+% Source: Derived from existing narrative and structural content in this file
+% ============================================================================
+
+% --- Multifile declarations for new predicates ---
+:- multifile
+    domain_priors:theater_ratio/2.
+
+% --- Theater ratio (missing from base properties) ---
+% Coordination mechanism in legal domain — moderate institutional framing
+domain_priors:theater_ratio(visa_judgment_sharing_agreement, 0.14).
+narrative_ontology:constraint_metric(visa_judgment_sharing_agreement, theater_ratio, 0.14).

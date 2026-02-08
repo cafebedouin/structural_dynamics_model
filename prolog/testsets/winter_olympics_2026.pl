@@ -24,6 +24,7 @@
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -60,6 +61,9 @@ domain_priors:theater_ratio(milano_cortina_2026, 0.98). % Maximum theatricality
 narrative_ontology:constraint_metric(milano_cortina_2026, extractiveness, 0.12).
 narrative_ontology:constraint_metric(milano_cortina_2026, suppression_requirement, 0.05).
 narrative_ontology:constraint_metric(milano_cortina_2026, theater_ratio, 0.98).
+
+% Constraint classification claim
+narrative_ontology:constraint_claim(milano_cortina_2026, piton).
 
 % Structural Property Declarations
 % Coordination function is established by the massive logistical scale.
@@ -163,3 +167,11 @@ narrative_ontology:measurement(mc_be_t16, milano_cortina_2026, base_extractivene
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
+
+% ============================================================================
+% ENRICHMENT: Structural predicates for remaining gaps
+% Generated: 2026-02-08
+% Template: v5.2 namespace alignment
+% Source: Derived from narrative context in this file (winter_olympics_2026)
+% ============================================================================
+constraint_victim(milano_cortina_2026, none).

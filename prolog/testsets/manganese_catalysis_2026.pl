@@ -24,6 +24,7 @@
     narrative_ontology:measurement/5,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -66,6 +67,9 @@ domain_priors:theater_ratio(manganese_catalysis_2026, 0.08).
 narrative_ontology:constraint_metric(manganese_catalysis_2026, extractiveness, 0.18).
 narrative_ontology:constraint_metric(manganese_catalysis_2026, suppression_requirement, 0.25).
 narrative_ontology:constraint_metric(manganese_catalysis_2026, theater_ratio, 0.08).
+
+% Constraint classification claim
+narrative_ontology:constraint_claim(manganese_catalysis_2026, scaffold).
 
 % Primary keys for the classification engine
 % Beneficial and victim actors (E < 0.46 typically means broader coordination)

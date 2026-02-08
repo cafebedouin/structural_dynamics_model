@@ -25,6 +25,7 @@
     narrative_ontology:measurement/5,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -60,6 +61,9 @@ domain_priors:theater_ratio(antifragility, 0.55). % Reflects performative stabil
 narrative_ontology:constraint_metric(antifragility, extractiveness, 0.75).
 narrative_ontology:constraint_metric(antifragility, suppression_requirement, 0.65).
 narrative_ontology:constraint_metric(antifragility, theater_ratio, 0.55).
+
+% Constraint classification claim
+narrative_ontology:constraint_claim(antifragility, mountain).
 
 % Constraint metric facts used by the classification engine.
 domain_priors:requires_active_enforcement(antifragility).

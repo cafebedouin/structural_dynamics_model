@@ -22,6 +22,7 @@
     narrative_ontology:constraint_metric/3,
     narrative_ontology:interval/3,
     narrative_ontology:measurement/5,
+    narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -68,6 +69,9 @@ narrative_ontology:constraint_metric(other_peoples_troubles_2026, extractiveness
 narrative_ontology:constraint_metric(other_peoples_troubles_2026, suppression_requirement, 0.8).
 narrative_ontology:constraint_metric(other_peoples_troubles_2026, theater_ratio, 0.85).
 
+% Constraint classification claim
+narrative_ontology:constraint_claim(other_peoples_troubles_2026, piton).
+
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
    ========================================================================== */
@@ -99,6 +103,7 @@ constraint_indexing:constraint_classification(other_peoples_troubles_2026, piton
             exit_options(analytical), 
             spatial_scope(global))) :-
     domain_priors:theater_ratio(other_peoples_troubles_2026, TR), TR > 0.70.
+domain_priors:requires_active_enforcement(other_peoples_troubles_2026).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -174,3 +179,29 @@ narrative_ontology:measurement(ot_ex_t10, other_peoples_troubles_2026, base_extr
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
+
+% ============================================================================
+% ENRICHMENT: Structural predicates for dynamic classification
+% Generated: 2026-02-08
+% Template: v5.2 namespace alignment
+% Source: Derived from existing narrative and structural content in this file
+% ============================================================================
+
+% --- Multifile declarations for new predicates ---
+:- multifile
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2.
+
+% --- Structural properties (missing from base properties) ---
+% Beneficiary: The observer who maintains emotional stability through
+% psychological distance from the sufferer's distress (Section 1 narrative).
+narrative_ontology:constraint_beneficiary(other_peoples_troubles_2026, detached_observers).
+
+% Victim: The sufferer whose crisis signal is suppressed by the observer's
+% performative stoicism (Section 1: "Experiencing the actual trouble").
+narrative_ontology:constraint_victim(other_peoples_troubles_2026, isolated_sufferers).
+
+% NOTE: requires_active_enforcement is NOT declared because this constraint
+% emerges naturally from cognitive distance and empathy limits — it does not
+% dissolve without institutional enforcement. The asymmetry is sustained by
+% psychological architecture, not by an enforcing institution.

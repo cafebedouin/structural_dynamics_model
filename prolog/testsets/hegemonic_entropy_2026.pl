@@ -23,6 +23,7 @@
     narrative_ontology:constraint_metric/3,
     narrative_ontology:interval/3,
     narrative_ontology:measurement/5,
+    narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -63,6 +64,9 @@ domain_priors:theater_ratio(hegemonic_entropy_2026, 0.78).
 narrative_ontology:constraint_metric(hegemonic_entropy_2026, extractiveness, 0.72).
 narrative_ontology:constraint_metric(hegemonic_entropy_2026, suppression_requirement, 0.55).
 narrative_ontology:constraint_metric(hegemonic_entropy_2026, theater_ratio, 0.78).
+
+% Constraint classification claim
+narrative_ontology:constraint_claim(hegemonic_entropy_2026, piton).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)

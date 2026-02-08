@@ -24,6 +24,7 @@
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -61,6 +62,9 @@ domain_priors:theater_ratio(ulysses_scylla_1904, 0.90).      % Peak performance:
 narrative_ontology:constraint_metric(ulysses_scylla_1904, extractiveness, 0.50).
 narrative_ontology:constraint_metric(ulysses_scylla_1904, suppression_requirement, 0.70).
 narrative_ontology:constraint_metric(ulysses_scylla_1904, theater_ratio, 0.90).
+
+% Constraint classification claim
+narrative_ontology:constraint_claim(ulysses_scylla_1904, piton).
 
 % Structural Property Declarations
 narrative_ontology:constraint_beneficiary(ulysses_scylla_1904, dublin_intelligentsia). % Coordination of culture[cite: 7948].
