@@ -129,6 +129,27 @@ def lint_file(filepath):
         if 'has_sunset_clause(' not in content:
             errors.append("MISSING_SUNSET_CLAUSE: Scaffold classification requires narrative_ontology:has_sunset_clause/1.")
 
+    # 9b. SCAFFOLD DANGER ZONE (v6.0)
+    # Catch constraints whose metrics could produce false scaffold classifications
+    # at the engine level. The scaffold gate fires when:
+    #   chi <= 0.30 AND has_coordination_function AND NOT requires_active_enforcement
+    #   AND theater < 0.70
+    # If a constraint has eps <= 0.30, beneficiary data (coordination), no enforcement,
+    # and no sunset clause, it's in the scaffold danger zone — the engine may classify
+    # it as scaffold even though it lacks temporality (scaffold's defining feature).
+    if ext_val is not None and ext_val <= 0.30:
+        has_beneficiary_data = 'constraint_beneficiary(' in content
+        has_enforcement = 'requires_active_enforcement(' in content
+        has_sunset = 'has_sunset_clause(' in content
+        low_theater = theater_val is None or theater_val < 0.70
+        if has_beneficiary_data and not has_enforcement and not has_sunset and low_theater:
+            errors.append(
+                f"SCAFFOLD_DANGER_ZONE: eps={ext_val} with beneficiary data, no enforcement, "
+                "no sunset clause, and low theater. The engine's scaffold gate may fire "
+                "at moderate/analytical perspectives. Either add has_sunset_clause/1 (if "
+                "genuinely a scaffold) or verify that the intended classification is rope."
+            )
+
     # 10. PITON-SPECIFIC CHECKS
     if 'piton' in found_types:
         if theater_val is None:
@@ -159,13 +180,31 @@ def lint_file(filepath):
         if 'constraint_beneficiary(' not in content:
             errors.append("MISSING_BENEFICIARY: Scaffold requires constraint_beneficiary/2 (derives has_coordination_function).")
 
-    # 13. BENEFICIARY/VICTIM CHECK for high-extraction constraints
-    if ext_val is not None and ext_val > 0.46:
-        has_beneficiary = 'constraint_beneficiary(' in content
-        has_victim = 'constraint_victim(' in content
-        if not has_beneficiary and not has_victim:
-            # Not an error if the bridge derives these, but flag as advisory
-            pass  # Bridge auto-derives from metrics; no lint error needed
+    # 13. BENEFICIARY/VICTIM CHECK for all non-mountain constraints (v6.0)
+    # The directionality derivation chain requires beneficiary/victim data to
+    # compute constraint-specific d values. Without these, the engine falls back
+    # to generic canonical d from the power atom alone.
+    has_beneficiary = 'constraint_beneficiary(' in content
+    has_victim = 'constraint_victim(' in content
+    is_mountain_only = found_types == {'mountain'}
+    # Check for explicit "no enrichment needed" marker (mountains, symmetric ropes)
+    has_no_enrichment_marker = 'No enrichment needed' in content or 'no enrichment needed' in content
+
+    if not is_mountain_only and not has_no_enrichment_marker:
+        if not has_beneficiary:
+            errors.append(
+                "MISSING_BENEFICIARY: Non-mountain constraints require "
+                "narrative_ontology:constraint_beneficiary/2 for directionality derivation. "
+                "Without it, the engine falls back to canonical d (power atom only)."
+            )
+
+    # Snare-specific victim requirement
+    if 'snare' in found_types:
+        if not has_victim:
+            errors.append(
+                "MISSING_VICTIM: Snare classification requires "
+                "narrative_ontology:constraint_victim/2 to identify extraction target."
+            )
 
     # 14. CONSTRAINT_CLAIM CHECK (v5.1)
     # If file has constraint_classification/3, it must also have constraint_claim/2.
@@ -238,6 +277,52 @@ def lint_file(filepath):
             errors.append(
                 f"FLOOR_EXCEEDS_EXTRACTION: boltzmann_floor_override ({floor_val}) "
                 f"exceeds base_extractiveness ({ext_val}). Floor should be <= extraction."
+            )
+
+    # 18. DIRECTIONALITY_OVERRIDE VALIDATION (v6.0)
+    # directionality_override(ConstraintID, PowerAtom, D_Value)
+    valid_power_atoms = {
+        'powerless', 'moderate', 'powerful', 'organized', 'institutional', 'analytical'
+    }
+    for match in re.finditer(
+            r"directionality_override\(\s*'?\w+'?\s*,\s*(\w+)\s*,\s*([\d.]+)\s*\)", content):
+        power_atom = match.group(1)
+        d_val = float(match.group(2))
+        if power_atom not in valid_power_atoms:
+            errors.append(
+                f"INVALID_POWER_ATOM: directionality_override power atom '{power_atom}' "
+                f"is not valid. Must be one of: {sorted(valid_power_atoms)}."
+            )
+        if d_val < 0.0 or d_val > 1.0:
+            errors.append(
+                f"INVALID_D_VALUE: directionality_override d value {d_val} "
+                "is out of range. Must be in [0.0, 1.0]."
+            )
+
+    # 19. GENERIC PLACEHOLDER GROUP CHECK (v6.0)
+    # Beneficiary/victim group names must be domain-specific, not generic.
+    generic_groups = {
+        'stakeholders', 'affected_parties', 'the_public', 'society',
+        'everyone', 'all_parties', 'general_public', 'participants',
+        'users', 'people', 'individuals', 'entities',
+    }
+    for pred in ('constraint_beneficiary', 'constraint_victim'):
+        for match in re.finditer(
+                rf"{pred}\(\s*'?\w+'?\s*,\s*(\w+)\s*\)", content):
+            group = match.group(1)
+            if group.lower() in generic_groups:
+                errors.append(
+                    f"GENERIC_GROUP: {pred} uses generic group '{group}'. "
+                    "Use a domain-specific group name (e.g., 'payday_lenders' not 'stakeholders')."
+                )
+
+    # 20. MULTIFILE BLOCK COMPLETENESS (v6.0)
+    # If directionality_override is used, it must be in the multifile block.
+    if re.search(r'(?<!%).*directionality_override\(', content):
+        if 'constraint_indexing:directionality_override/3' not in content:
+            errors.append(
+                "MISSING_MULTIFILE: File uses directionality_override/3 but "
+                "does not declare it in the :- multifile block."
             )
 
     return errors

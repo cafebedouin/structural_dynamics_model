@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -81,9 +83,9 @@ domain_priors:emerges_naturally(reciprocity_laws_math).
 
 % Metrics
 % Beneficiaries & Victims
-constraint_beneficiary(reciprocity_laws_math, asymmetric_cryptography).
-constraint_beneficiary(reciprocity_laws_math, analytical_number_theory).
-constraint_victim(reciprocity_laws_math, computational_inefficiency). % In the absence of the law.
+narrative_ontology:constraint_beneficiary(reciprocity_laws_math, asymmetric_cryptography).
+narrative_ontology:constraint_beneficiary(reciprocity_laws_math, analytical_number_theory).
+narrative_ontology:constraint_victim(reciprocity_laws_math, computational_inefficiency). % In the absence of the law.
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS

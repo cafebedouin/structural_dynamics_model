@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -75,10 +77,10 @@ domain_priors:emerges_naturally(sig_usd_protocol).
 
 % BENEFICIARIES & VICTIMS
 % Primary beneficiaries are the reserve holders during bull markets.
-constraint_beneficiary(sig_usd_protocol, sig_rsv_holders).
+narrative_ontology:constraint_beneficiary(sig_usd_protocol, sig_rsv_holders).
 % Primary "victims" (risk-bearers) are reserve holders during bear markets, 
 % and stablecoin holders if the peg breaks.
-constraint_victim(sig_usd_protocol, sig_rsv_holders_at_low_reserve).
+narrative_ontology:constraint_victim(sig_usd_protocol, sig_rsv_holders_at_low_reserve).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

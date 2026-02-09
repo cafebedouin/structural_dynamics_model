@@ -20,8 +20,8 @@
     constraint_indexing:constraint_classification/3,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:constraint_metric/3,
-    constraint_beneficiary/2,
-    constraint_victim/2.
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -85,11 +85,11 @@ domain_priors:emerges_naturally(ergodic_theorems).
 % Metrics required for Section 1 of the Executive Summary
 % Beneficiaries: Institutional planners, insurers, and high-frequency traders 
 % who can play the ensemble.
-constraint_beneficiary(ergodic_theorems, institutional_aggregators).
+narrative_ontology:constraint_beneficiary(ergodic_theorems, institutional_aggregators).
 
 % Victims: Individual actors, small businesses, and biological entities 
 % subject to path-dependency and ruin.
-constraint_victim(ergodic_theorems, path_dependent_individuals).
+narrative_ontology:constraint_victim(ergodic_theorems, path_dependent_individuals).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

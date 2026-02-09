@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -74,10 +76,10 @@ domain_priors:emerges_naturally(gradient_descent_optimization).
 
 % Metrics
 % Beneficiaries & Victims
-constraint_beneficiary(gradient_descent_optimization, artificial_intelligence).
-constraint_beneficiary(gradient_descent_optimization, automation_systems).
-constraint_victim(gradient_descent_optimization, hardware_longevity). % Thermal/Compute wear.
-constraint_victim(gradient_descent_optimization, energy_budgets).
+narrative_ontology:constraint_beneficiary(gradient_descent_optimization, artificial_intelligence).
+narrative_ontology:constraint_beneficiary(gradient_descent_optimization, automation_systems).
+narrative_ontology:constraint_victim(gradient_descent_optimization, hardware_longevity). % Thermal/Compute wear.
+narrative_ontology:constraint_victim(gradient_descent_optimization, energy_budgets).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS

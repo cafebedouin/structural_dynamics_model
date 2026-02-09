@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -82,10 +84,10 @@ domain_priors:emerges_naturally(banach_tarski_paradox).
 
 % Metrics required for Section 1 of the Executive Summary
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(banach_tarski_paradox, axiomatic_set_theorists).
-constraint_beneficiary(banach_tarski_paradox, non_measurable_geometry).
-constraint_victim(banach_tarski_paradox, classical_physical_intuition).
-constraint_victim(banach_tarski_paradox, naive_measurability_advocates).
+narrative_ontology:constraint_beneficiary(banach_tarski_paradox, axiomatic_set_theorists).
+narrative_ontology:constraint_beneficiary(banach_tarski_paradox, non_measurable_geometry).
+narrative_ontology:constraint_victim(banach_tarski_paradox, classical_physical_intuition).
+narrative_ontology:constraint_victim(banach_tarski_paradox, naive_measurability_advocates).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

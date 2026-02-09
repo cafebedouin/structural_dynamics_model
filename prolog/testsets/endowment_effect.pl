@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -79,10 +81,10 @@ domain_priors:emerges_naturally(endowment_effect).
 
 % Metrics required for Section 1 of the Executive Summary
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(endowment_effect, existing_owners).
-constraint_beneficiary(endowment_effect, retailers_offering_trials).
-constraint_victim(endowment_effect, market_efficiency).
-constraint_victim(endowment_effect, asset_purchasers).
+narrative_ontology:constraint_beneficiary(endowment_effect, existing_owners).
+narrative_ontology:constraint_beneficiary(endowment_effect, retailers_offering_trials).
+narrative_ontology:constraint_victim(endowment_effect, market_efficiency).
+narrative_ontology:constraint_victim(endowment_effect, asset_purchasers).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

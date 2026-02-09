@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -82,10 +84,10 @@ domain_priors:emerges_naturally(four_color_theorem_topological_bound).
 
 % Metrics required for Section 1 of the Executive Summary
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(four_color_theorem_topological_bound, frequency_allocation_engineers).
-constraint_beneficiary(four_color_theorem_topological_bound, automated_theorem_provers).
-constraint_victim(four_color_theorem_topological_bound, classical_human_intuition).
-constraint_victim(four_color_theorem_topological_bound, map_complexity_enthusiasts).
+narrative_ontology:constraint_beneficiary(four_color_theorem_topological_bound, frequency_allocation_engineers).
+narrative_ontology:constraint_beneficiary(four_color_theorem_topological_bound, automated_theorem_provers).
+narrative_ontology:constraint_victim(four_color_theorem_topological_bound, classical_human_intuition).
+narrative_ontology:constraint_victim(four_color_theorem_topological_bound, map_complexity_enthusiasts).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

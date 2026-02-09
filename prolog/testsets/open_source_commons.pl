@@ -15,6 +15,8 @@
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:measurement/5,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* 1. NARRATIVE CONTEXT */
@@ -69,8 +71,8 @@ narrative_ontology:measurement(osc_ex_t10, open_source_commons, base_extractiven
 % Template: v5.2 namespace alignment
 % Source: Derived from narrative context in this file (open_source_commons)
 % ============================================================================
-constraint_beneficiary(open_source_commons, open_source_contributors).
-constraint_victim(open_source_commons, none).
+narrative_ontology:constraint_beneficiary(open_source_commons, open_source_contributors).
+narrative_ontology:constraint_victim(open_source_commons, none).
 
 % --- Analytical perspective classification ---
 % chi = 0.05 * 1.15 (analytical) * 1.2 (global) = 0.069

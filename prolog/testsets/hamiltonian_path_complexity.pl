@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -69,8 +71,8 @@ narrative_ontology:constraint_metric(hamiltonian_path_complexity, suppression_re
 domain_priors:emerges_naturally(hamiltonian_path_complexity).
 
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(hamiltonian_path_complexity, cryptography_systems).
-constraint_victim(hamiltonian_path_complexity, logistics_optimizers).
+narrative_ontology:constraint_beneficiary(hamiltonian_path_complexity, cryptography_systems).
+narrative_ontology:constraint_victim(hamiltonian_path_complexity, logistics_optimizers).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

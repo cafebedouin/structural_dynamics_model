@@ -24,6 +24,8 @@
     narrative_ontology:interval/3,
     narrative_ontology:measurement/5,
     narrative_ontology:constraint_claim/2,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -167,6 +169,16 @@ narrative_ontology:measurement(he_tr_t10, hegemonic_entropy_2026, theater_ratio,
 narrative_ontology:measurement(he_ex_t0, hegemonic_entropy_2026, base_extractiveness, 0, 0.30).
 narrative_ontology:measurement(he_ex_t5, hegemonic_entropy_2026, base_extractiveness, 5, 0.52).
 narrative_ontology:measurement(he_ex_t10, hegemonic_entropy_2026, base_extractiveness, 10, 0.72).
+
+/* ==========================================================================
+   9. STRUCTURAL ENRICHMENT (BENEFICIARY / VICTIM)
+   ========================================================================== */
+
+% Piton enrichment: vestigial extraction identified from narrative context.
+% Cantillon insiders benefit from proximity to money creation and tax havens,
+% while the fragmented middle class bears the extraction of wealth concentration.
+narrative_ontology:constraint_beneficiary(hegemonic_entropy_2026, cantillon_insiders).
+narrative_ontology:constraint_victim(hegemonic_entropy_2026, fragmented_middle_class).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

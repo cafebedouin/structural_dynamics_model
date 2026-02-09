@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -69,8 +71,8 @@ narrative_ontology:constraint_metric(sts86_ascent_checklist, suppression_require
 domain_priors:requires_active_enforcement(sts86_ascent_checklist).
 
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(sts86_ascent_checklist, mission_success).
-constraint_victim(sts86_ascent_checklist, pilot_discretion).
+narrative_ontology:constraint_beneficiary(sts86_ascent_checklist, mission_success).
+narrative_ontology:constraint_victim(sts86_ascent_checklist, pilot_discretion).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -70,8 +72,8 @@ narrative_ontology:constraint_metric(climate_attribution_2026, suppression_requi
 domain_priors:emerges_naturally(climate_attribution_2026).
 
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(climate_attribution_2026, climate_litigation_plaintiffs).
-constraint_victim(climate_attribution_2026, greenhouse_gas_emitters).
+narrative_ontology:constraint_beneficiary(climate_attribution_2026, climate_litigation_plaintiffs).
+narrative_ontology:constraint_victim(climate_attribution_2026, greenhouse_gas_emitters).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

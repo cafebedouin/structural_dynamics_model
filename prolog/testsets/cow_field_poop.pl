@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -70,8 +72,8 @@ narrative_ontology:constraint_metric(cow_field_poop, suppression_requirement, 0.
 domain_priors:emerges_naturally(cow_field_poop).
 
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(cow_field_poop, effective_navigators).
-constraint_victim(cow_field_poop, the_unwary_walker).
+narrative_ontology:constraint_beneficiary(cow_field_poop, effective_navigators).
+narrative_ontology:constraint_victim(cow_field_poop, the_unwary_walker).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

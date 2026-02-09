@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -84,9 +86,9 @@ domain_priors:emerges_naturally(buffons_needle_pi_estimation).
 
 % Metrics required for Section 1 of the Executive Summary
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(buffons_needle_pi_estimation, monte_carlo_engineers).
-constraint_beneficiary(buffons_needle_pi_estimation, geometric_statisticians).
-constraint_victim(buffons_needle_pi_estimation, deterministic_calculators). % Strangled by variance.
+narrative_ontology:constraint_beneficiary(buffons_needle_pi_estimation, monte_carlo_engineers).
+narrative_ontology:constraint_beneficiary(buffons_needle_pi_estimation, geometric_statisticians).
+narrative_ontology:constraint_victim(buffons_needle_pi_estimation, deterministic_calculators). % Strangled by variance.
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

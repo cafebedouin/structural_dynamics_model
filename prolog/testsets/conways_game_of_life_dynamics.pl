@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -80,10 +82,10 @@ domain_priors:emerges_naturally(conways_game_of_life_dynamics).
 
 % Metrics required for Section 1 of the Executive Summary
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(conways_game_of_life_dynamics, emergent_complexity_researchers).
-constraint_beneficiary(conways_game_of_life_dynamics, computer_scientists).
-constraint_victim(conways_game_of_life_dynamics, analytical_predictability).
-constraint_victim(conways_game_of_life_dynamics, individual_cell_autonomy).
+narrative_ontology:constraint_beneficiary(conways_game_of_life_dynamics, emergent_complexity_researchers).
+narrative_ontology:constraint_beneficiary(conways_game_of_life_dynamics, computer_scientists).
+narrative_ontology:constraint_victim(conways_game_of_life_dynamics, analytical_predictability).
+narrative_ontology:constraint_victim(conways_game_of_life_dynamics, individual_cell_autonomy).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

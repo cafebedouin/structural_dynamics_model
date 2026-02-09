@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -82,9 +84,9 @@ domain_priors:emerges_naturally(quine_self_replication).
 
 % Metrics required for Section 1 of the Executive Summary
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(quine_self_replication, autonomous_agent_developers).
-constraint_beneficiary(quine_self_replication, cellular_automata_theory).
-constraint_victim(quine_self_replication, static_code_analysis). % Self-replication makes behavior harder to bound.
+narrative_ontology:constraint_beneficiary(quine_self_replication, autonomous_agent_developers).
+narrative_ontology:constraint_beneficiary(quine_self_replication, cellular_automata_theory).
+narrative_ontology:constraint_victim(quine_self_replication, static_code_analysis). % Self-replication makes behavior harder to bound.
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

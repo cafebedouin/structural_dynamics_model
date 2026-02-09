@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -70,8 +72,8 @@ narrative_ontology:constraint_metric(e2ee_digital_privacy_2026, suppression_requ
 domain_priors:requires_active_enforcement(e2ee_digital_privacy_2026).
 
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(e2ee_digital_privacy_2026, individual_users).
-constraint_victim(e2ee_digital_privacy_2026, institutional_surveillance).
+narrative_ontology:constraint_beneficiary(e2ee_digital_privacy_2026, individual_users).
+narrative_ontology:constraint_victim(e2ee_digital_privacy_2026, institutional_surveillance).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -81,9 +83,9 @@ domain_priors:emerges_naturally(sylow_theorems_group_theory).
 
 % Metrics for Executive Summary
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(sylow_theorems_group_theory, algebraic_classifiers).
-constraint_beneficiary(sylow_theorems_group_theory, cryptographic_designers). % Secure group selection.
-constraint_victim(sylow_theorems_group_theory, non_existent_simple_groups). % Excluded from reality.
+narrative_ontology:constraint_beneficiary(sylow_theorems_group_theory, algebraic_classifiers).
+narrative_ontology:constraint_beneficiary(sylow_theorems_group_theory, cryptographic_designers). % Secure group selection.
+narrative_ontology:constraint_victim(sylow_theorems_group_theory, non_existent_simple_groups). % Excluded from reality.
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

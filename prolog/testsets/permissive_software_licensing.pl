@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -69,8 +71,8 @@ narrative_ontology:constraint_metric(permissive_software_licensing, suppression_
 domain_priors:requires_active_enforcement(permissive_software_licensing).
 
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(permissive_software_licensing, commercial_software_vendors).
-constraint_victim(permissive_software_licensing, reciprocal_commons).
+narrative_ontology:constraint_beneficiary(permissive_software_licensing, commercial_software_vendors).
+narrative_ontology:constraint_victim(permissive_software_licensing, reciprocal_commons).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

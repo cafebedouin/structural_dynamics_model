@@ -22,6 +22,8 @@
     narrative_ontology:constraint_metric/3,
     narrative_ontology:measurement/5,
     narrative_ontology:constraint_claim/2,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -170,5 +172,5 @@ narrative_ontology:measurement(eh_ex_t10, epstein_honeytrap, base_extractiveness
 % Template: v5.2 namespace alignment
 % Source: Derived from narrative context in this file (epstein_kgb_honeytrap)
 % ============================================================================
-constraint_beneficiary(epstein_honeytrap, intelligence_operators).
-constraint_victim(epstein_honeytrap, compromised_associates).
+narrative_ontology:constraint_beneficiary(epstein_honeytrap, intelligence_operators).
+narrative_ontology:constraint_victim(epstein_honeytrap, compromised_associates).

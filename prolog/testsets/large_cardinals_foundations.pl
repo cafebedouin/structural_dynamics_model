@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -85,10 +87,10 @@ domain_priors:emerges_naturally(large_cardinal_foundations).
 
 % Metrics required for Section 1 of the Executive Summary
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(large_cardinal_foundations, consistency_strength_researchers).
-constraint_beneficiary(large_cardinal_foundations, ontological_realists).
-constraint_victim(large_cardinal_foundations, mathematical_minimalists).
-constraint_victim(large_cardinal_foundations, finitist_intuition).
+narrative_ontology:constraint_beneficiary(large_cardinal_foundations, consistency_strength_researchers).
+narrative_ontology:constraint_beneficiary(large_cardinal_foundations, ontological_realists).
+narrative_ontology:constraint_victim(large_cardinal_foundations, mathematical_minimalists).
+narrative_ontology:constraint_victim(large_cardinal_foundations, finitist_intuition).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

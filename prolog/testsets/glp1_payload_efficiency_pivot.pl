@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -77,8 +79,8 @@ domain_priors:suppression_score(glp1_payload_efficiency_pivot, 0.20).
 % domain_priors:requires_active_enforcement(glp1_payload_efficiency_pivot). -> (Left out as per template for zero enforcement)
 
 % Beneficiaries and Victims
-constraint_beneficiary(glp1_payload_efficiency_pivot, [major_us_airlines, equity_investors]).
-constraint_victim(glp1_payload_efficiency_pivot, [onboard_catering_revenue, snack_manufacturers]).
+narrative_ontology:constraint_beneficiary(glp1_payload_efficiency_pivot, [major_us_airlines, equity_investors]).
+narrative_ontology:constraint_victim(glp1_payload_efficiency_pivot, [onboard_catering_revenue, snack_manufacturers]).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

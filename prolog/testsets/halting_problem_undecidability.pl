@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -81,10 +83,10 @@ domain_priors:emerges_naturally(halting_problem_undecidability).
 
 % Metrics required for Section 1 of the Executive Summary
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(halting_problem_undecidability, computational_complexity_researchers).
-constraint_beneficiary(halting_problem_undecidability, heuristic_security_vendors). % Job security through impossibility.
-constraint_victim(halting_problem_undecidability, formal_verification_purists).
-constraint_victim(halting_problem_undecidability, automated_malware_detectors).
+narrative_ontology:constraint_beneficiary(halting_problem_undecidability, computational_complexity_researchers).
+narrative_ontology:constraint_beneficiary(halting_problem_undecidability, heuristic_security_vendors). % Job security through impossibility.
+narrative_ontology:constraint_victim(halting_problem_undecidability, formal_verification_purists).
+narrative_ontology:constraint_victim(halting_problem_undecidability, automated_malware_detectors).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

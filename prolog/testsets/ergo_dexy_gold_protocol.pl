@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -80,10 +82,10 @@ narrative_ontology:constraint_metric(dexy_gold_protocol, suppression_requirement
 domain_priors:emerges_naturally(dexy_gold_protocol).
 
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(dexy_gold_protocol, arbitrageurs).
+narrative_ontology:constraint_beneficiary(dexy_gold_protocol, arbitrageurs).
 % Potential "victims" are the Bank's ERG reserves during massive 
 % sustained downward pressure on gold vs ERG.
-constraint_victim(dexy_gold_protocol, protocol_reserves).
+narrative_ontology:constraint_victim(dexy_gold_protocol, protocol_reserves).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

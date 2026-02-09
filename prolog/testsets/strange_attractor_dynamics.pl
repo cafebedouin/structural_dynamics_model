@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -83,10 +85,10 @@ domain_priors:emerges_naturally(strange_attractor_dynamics).
 
 % Metrics for Executive Summary
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(strange_attractor_dynamics, data_reconstruction_engineers).
-constraint_beneficiary(strange_attractor_dynamics, secure_communication_protocols). % Chaos-based encryption.
-constraint_victim(strange_attractor_dynamics, laplacian_determinists).
-constraint_victim(strange_attractor_dynamics, long_term_linear_extrapolators).
+narrative_ontology:constraint_beneficiary(strange_attractor_dynamics, data_reconstruction_engineers).
+narrative_ontology:constraint_beneficiary(strange_attractor_dynamics, secure_communication_protocols). % Chaos-based encryption.
+narrative_ontology:constraint_victim(strange_attractor_dynamics, laplacian_determinists).
+narrative_ontology:constraint_victim(strange_attractor_dynamics, long_term_linear_extrapolators).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

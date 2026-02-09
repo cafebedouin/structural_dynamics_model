@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -77,9 +79,9 @@ domain_priors:requires_active_enforcement(copyleft_viral_licensing).
 
 
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(copyleft_viral_licensing, the_user_community).
-constraint_beneficiary(copyleft_viral_licensing, open_source_ecosystems).
-constraint_victim(copyleft_viral_licensing, proprietary_software_vendors).
+narrative_ontology:constraint_beneficiary(copyleft_viral_licensing, the_user_community).
+narrative_ontology:constraint_beneficiary(copyleft_viral_licensing, open_source_ecosystems).
+narrative_ontology:constraint_victim(copyleft_viral_licensing, proprietary_software_vendors).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

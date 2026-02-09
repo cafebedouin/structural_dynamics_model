@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -80,10 +82,10 @@ domain_priors:requires_active_enforcement(burden_of_proof_scientific_empirical).
 
 % Metrics required for Section 1 of the Executive Summary
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(burden_of_proof_scientific_empirical, established_journals).
-constraint_beneficiary(burden_of_proof_scientific_empirical, scientific_consensus_stability).
-constraint_victim(burden_of_proof_scientific_empirical, novel_high_risk_hypotheses).
-constraint_victim(burden_of_proof_scientific_empirical, null_result_transparency).
+narrative_ontology:constraint_beneficiary(burden_of_proof_scientific_empirical, established_journals).
+narrative_ontology:constraint_beneficiary(burden_of_proof_scientific_empirical, scientific_consensus_stability).
+narrative_ontology:constraint_victim(burden_of_proof_scientific_empirical, novel_high_risk_hypotheses).
+narrative_ontology:constraint_victim(burden_of_proof_scientific_empirical, null_result_transparency).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

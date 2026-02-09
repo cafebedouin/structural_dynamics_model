@@ -20,8 +20,8 @@
     constraint_indexing:constraint_classification/3,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:constraint_metric/3,
-    constraint_beneficiary/2,
-    constraint_victim/2.
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -76,10 +76,10 @@ domain_priors:emerges_naturally(liar_paradox).
 
 % Metrics for Executive Summary
 % Beneficiaries: Meta-mathematicians (provides a career/domain of study).
-constraint_beneficiary(liar_paradox, analytical_observers).
+narrative_ontology:constraint_beneficiary(liar_paradox, analytical_observers).
 
 % Victims: Consistentists (those who require a single, universal, non-contradictory foundation).
-constraint_victim(liar_paradox, institutional_logicians).
+narrative_ontology:constraint_victim(liar_paradox, institutional_logicians).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

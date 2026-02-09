@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -81,10 +83,10 @@ narrative_ontology:constraint_metric(fmeca_procedures_1980, suppression_requirem
 domain_priors:requires_active_enforcement(fmeca_procedures_1980).
 
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(fmeca_procedures_1980, department_of_defense).
-constraint_beneficiary(fmeca_procedures_1980, system_safety).
-constraint_victim(fmeca_procedures_1980, contractors).
-constraint_victim(fmeca_procedures_1980, innovative_design_flexibility).
+narrative_ontology:constraint_beneficiary(fmeca_procedures_1980, department_of_defense).
+narrative_ontology:constraint_beneficiary(fmeca_procedures_1980, system_safety).
+narrative_ontology:constraint_victim(fmeca_procedures_1980, contractors).
+narrative_ontology:constraint_victim(fmeca_procedures_1980, innovative_design_flexibility).
 
 % Metrics for Section 1 of the Executive Summary
 /* ==========================================================================

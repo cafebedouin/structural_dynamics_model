@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -72,8 +74,8 @@ narrative_ontology:constraint_metric(proof_of_work_consensus, suppression_requir
 domain_priors:emerges_naturally(proof_of_work_consensus).
 
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(proof_of_work_consensus, peer_to_peer_network).
-constraint_victim(proof_of_work_consensus, double_spenders).
+narrative_ontology:constraint_beneficiary(proof_of_work_consensus, peer_to_peer_network).
+narrative_ontology:constraint_victim(proof_of_work_consensus, double_spenders).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

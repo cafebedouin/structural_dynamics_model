@@ -20,6 +20,8 @@
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_claim/2,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -77,9 +79,9 @@ domain_priors:emerges_naturally(exoplanetary_habitability_arbitrage).
 % Metrics required for Section 1 of the Executive Summary
 % BENEFICIARIES & VICTIMS
 % Modern planetary theorists benefit from the "rewrite" of formation stories.
-constraint_beneficiary(exoplanetary_habitability_arbitrage, planetary_theorists).
+narrative_ontology:constraint_beneficiary(exoplanetary_habitability_arbitrage, planetary_theorists).
 % Traditional "Earth twin" hunters lose funding as the search pivots to anomalies.
-constraint_victim(exoplanetary_habitability_arbitrage, legacy_astronomers).
+narrative_ontology:constraint_victim(exoplanetary_habitability_arbitrage, legacy_astronomers).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

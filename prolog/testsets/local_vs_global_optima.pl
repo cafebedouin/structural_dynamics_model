@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -69,8 +71,8 @@ narrative_ontology:constraint_metric(local_vs_global_optima, suppression_require
 domain_priors:emerges_naturally(local_vs_global_optima).
 
 % Asymmetry Metrics
-constraint_beneficiary(local_vs_global_optima, none).
-constraint_victim(local_vs_global_optima, none).
+narrative_ontology:constraint_beneficiary(local_vs_global_optima, none).
+narrative_ontology:constraint_victim(local_vs_global_optima, none).
 
 
 /* ==========================================================================

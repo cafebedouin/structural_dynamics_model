@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -81,8 +83,8 @@ domain_priors:emerges_naturally(cap_theorem).
 
 % Metrics required for Section 1 of the Executive Summary
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(cap_theorem, [cloud_consultants, architectural_purity]).
-constraint_victim(cap_theorem, [on_call_engineers, real_time_consistency_requirements]).
+narrative_ontology:constraint_beneficiary(cap_theorem, [cloud_consultants, architectural_purity]).
+narrative_ontology:constraint_victim(cap_theorem, [on_call_engineers, real_time_consistency_requirements]).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

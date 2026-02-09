@@ -19,6 +19,8 @@
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_claim/2,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -77,9 +79,9 @@ domain_priors:emerges_naturally(empty_tomb_transformation).
 % Metrics required for Section 1 of the Executive Summary
 % BENEFICIARIES & VICTIMS
 % Beneficiary: The New Self (Reborn into a "new, different life").
-constraint_beneficiary(empty_tomb_transformation, the_resurrected_self).
+narrative_ontology:constraint_beneficiary(empty_tomb_transformation, the_resurrected_self).
 % Victim: The Old Self (Who must die and be left behind).
-constraint_victim(empty_tomb_transformation, the_static_ego).
+narrative_ontology:constraint_victim(empty_tomb_transformation, the_static_ego).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

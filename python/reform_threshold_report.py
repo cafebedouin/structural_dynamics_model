@@ -59,15 +59,8 @@ STANDARD_CONTEXTS = [
     ("analytical",    "civilizational", "analytical",  "rope"),  # also mountain, but rope exists
 ]
 
-# Power modifiers for chi calculation
-POWER_MODIFIERS = {
-    "powerless": 1.5,
-    "moderate": 1.0,
-    "powerful": 0.6,
-    "organized": 0.4,
-    "institutional": -0.2,
-    "analytical": 1.15,
-}
+# Power modifiers for chi calculation (v5.0: sigmoid-derived)
+from sigmoid import POWER_MODIFIERS
 
 # Scope modifiers
 SCOPE_MODIFIERS = {

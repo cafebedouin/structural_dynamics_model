@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -78,8 +80,8 @@ domain_priors:emerges_naturally(church_turing_thesis).
 
 % Metrics required for Section 1 of the Executive Summary
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(church_turing_thesis, universal_computer_designers). % Predictable bounds.
-constraint_victim(church_turing_thesis, halting_problem_solvers). % Absolute logical barrier.
+narrative_ontology:constraint_beneficiary(church_turing_thesis, universal_computer_designers). % Predictable bounds.
+narrative_ontology:constraint_victim(church_turing_thesis, halting_problem_solvers). % Absolute logical barrier.
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

@@ -22,8 +22,8 @@
     narrative_ontology:interval/3,
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_claim/2,
-    constraint_beneficiary/2,
-    constraint_victim/2.
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -76,8 +76,8 @@ narrative_ontology:constraint_metric(wikipedia_notability_requirement_2026, supp
 domain_priors:requires_active_enforcement(wikipedia_notability_requirement_2026).
 
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(wikipedia_notability_requirement_2026, institutional_editors).
-constraint_victim(wikipedia_notability_requirement_2026, marginalized_knowledge_producers).
+narrative_ontology:constraint_beneficiary(wikipedia_notability_requirement_2026, institutional_editors).
+narrative_ontology:constraint_victim(wikipedia_notability_requirement_2026, marginalized_knowledge_producers).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

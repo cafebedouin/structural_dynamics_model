@@ -18,6 +18,8 @@ domain_priors:base_extractiveness/2,
 domain_priors:suppression_score/2,
 domain_priors:requires_active_enforcement/1,
 narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -135,8 +137,8 @@ context(
 agent_power(powerless),
 time_horizon(immediate),
 exit_options(trapped),
-constraint_beneficiary(universal_mathematics_communication, honeybee),
-constraint_victim(universal_mathematics_communication, none),
+narrative_ontology:constraint_beneficiary(universal_mathematics_communication, honeybee),
+narrative_ontology:constraint_victim(universal_mathematics_communication, none),
 spatial_scope(local)
 )
 ) :-
@@ -170,8 +172,8 @@ context(
 agent_power(institutional),
 time_horizon(historical),
 exit_options(mobile),
-constraint_beneficiary(universal_mathematics_communication, humanity),
-constraint_victim(universal_mathematics_communication, none),
+narrative_ontology:constraint_beneficiary(universal_mathematics_communication, humanity),
+narrative_ontology:constraint_victim(universal_mathematics_communication, none),
 spatial_scope(global)
 )
 ) :-
@@ -204,8 +206,8 @@ context(
 agent_power(analytical),
 time_horizon(civilizational),
 exit_options(analytical),
-constraint_beneficiary(universal_mathematics_communication, intelligent_life),
-constraint_victim(universal_mathematics_communication, none),
+narrative_ontology:constraint_beneficiary(universal_mathematics_communication, intelligent_life),
+narrative_ontology:constraint_victim(universal_mathematics_communication, none),
 spatial_scope(global)
 )
 ) :-

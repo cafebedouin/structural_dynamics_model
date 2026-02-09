@@ -19,6 +19,8 @@
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_claim/2,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -79,8 +81,8 @@ narrative_ontology:constraint_metric(openbsd_netiquette_protocol, suppression_re
 domain_priors:requires_active_enforcement(openbsd_netiquette_protocol).
 
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(openbsd_netiquette_protocol, technical_clarity). % The goal of the discussion
-constraint_victim(openbsd_netiquette_protocol, casual_expression). % Those who prefer "lazy" or formatted chat
+narrative_ontology:constraint_beneficiary(openbsd_netiquette_protocol, technical_clarity). % The goal of the discussion
+narrative_ontology:constraint_victim(openbsd_netiquette_protocol, casual_expression). % Those who prefer "lazy" or formatted chat
 
 % Metrics required for Section 1 of the Executive Summary
 /* ==========================================================================

@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -80,9 +82,9 @@ domain_priors:emerges_naturally(goldbach_conjecture).
 
 % Metrics
 % Beneficiaries & Victims
-constraint_beneficiary(goldbach_conjecture, heuristic_analysts).
-constraint_beneficiary(goldbach_conjecture, additive_number_theory).
-constraint_victim(goldbach_conjecture, cognitive_resources). % Centuries of failed proofs.
+narrative_ontology:constraint_beneficiary(goldbach_conjecture, heuristic_analysts).
+narrative_ontology:constraint_beneficiary(goldbach_conjecture, additive_number_theory).
+narrative_ontology:constraint_victim(goldbach_conjecture, cognitive_resources). % Centuries of failed proofs.
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS

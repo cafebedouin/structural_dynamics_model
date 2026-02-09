@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -77,10 +79,10 @@ domain_priors:emerges_naturally(newtons_method_convergence).
 
 % Metrics
 % Beneficiaries & Victims
-constraint_beneficiary(newtons_method_convergence, optimized_solvers).
-constraint_beneficiary(newtons_method_convergence, real_time_simulation).
-constraint_victim(newtons_method_convergence, unstable_initial_guesses).
-constraint_victim(newtons_method_convergence, non_differentiable_logic).
+narrative_ontology:constraint_beneficiary(newtons_method_convergence, optimized_solvers).
+narrative_ontology:constraint_beneficiary(newtons_method_convergence, real_time_simulation).
+narrative_ontology:constraint_victim(newtons_method_convergence, unstable_initial_guesses).
+narrative_ontology:constraint_victim(newtons_method_convergence, non_differentiable_logic).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS

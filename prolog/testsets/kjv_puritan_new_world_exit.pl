@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -71,8 +73,8 @@ narrative_ontology:constraint_metric(kjv_puritan_new_world_exit, suppression_req
 domain_priors:emerges_naturally(kjv_puritan_new_world_exit).
 
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(kjv_puritan_new_world_exit, new_england_society).
-constraint_victim(kjv_puritan_new_world_exit, english_puritan_dissenters).
+narrative_ontology:constraint_beneficiary(kjv_puritan_new_world_exit, new_england_society).
+narrative_ontology:constraint_victim(kjv_puritan_new_world_exit, english_puritan_dissenters).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -73,10 +75,10 @@ narrative_ontology:constraint_metric(optimal_stopping_marriage, suppression_requ
 domain_priors:emerges_naturally(optimal_stopping_marriage).
 
 % Beneficiaries: The "Winner" (the candidate selected by the optimal strategy).
-constraint_beneficiary(optimal_stopping_marriage, selected_optimal_candidate).
+narrative_ontology:constraint_beneficiary(optimal_stopping_marriage, selected_optimal_candidate).
 
 % Victims: The "37% Group" (qualified candidates rejected solely to set the baseline).
-constraint_victim(optimal_stopping_marriage, rejected_baseline_candidates).
+narrative_ontology:constraint_victim(optimal_stopping_marriage, rejected_baseline_candidates).
 
 % Metrics
 /* ==========================================================================

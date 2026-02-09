@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -73,8 +75,8 @@ narrative_ontology:constraint_metric(advice_as_dangerous_gift, suppression_requi
 domain_priors:emerges_naturally(advice_as_dangerous_gift).
 
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(advice_as_dangerous_gift, the_receiver).
-constraint_victim(advice_as_dangerous_gift, the_giver).
+narrative_ontology:constraint_beneficiary(advice_as_dangerous_gift, the_receiver).
+narrative_ontology:constraint_victim(advice_as_dangerous_gift, the_giver).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

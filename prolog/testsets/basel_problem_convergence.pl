@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -79,9 +81,9 @@ domain_priors:emerges_naturally(basel_problem_convergence).
 
 % Metrics
 % Beneficiaries & Victims
-constraint_beneficiary(basel_problem_convergence, quantum_mechanics). % Zeta regularisation.
-constraint_beneficiary(basel_problem_convergence, analytical_number_theory).
-constraint_victim(basel_problem_convergence, computational_brute_force). % Slow convergence.
+narrative_ontology:constraint_beneficiary(basel_problem_convergence, quantum_mechanics). % Zeta regularisation.
+narrative_ontology:constraint_beneficiary(basel_problem_convergence, analytical_number_theory).
+narrative_ontology:constraint_victim(basel_problem_convergence, computational_brute_force). % Slow convergence.
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

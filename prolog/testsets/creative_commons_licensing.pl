@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -69,8 +71,8 @@ narrative_ontology:constraint_metric(creative_commons_licensing, suppression_req
 domain_priors:requires_active_enforcement(creative_commons_licensing).
 
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(creative_commons_licensing, remix_culture).
-constraint_victim(creative_commons_licensing, legacy_publishers).
+narrative_ontology:constraint_beneficiary(creative_commons_licensing, remix_culture).
+narrative_ontology:constraint_victim(creative_commons_licensing, legacy_publishers).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

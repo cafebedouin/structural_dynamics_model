@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -75,11 +77,11 @@ narrative_ontology:constraint_metric(golden_handcuffs, suppression_requirement, 
 domain_priors:requires_active_enforcement(golden_handcuffs).
 
 % Beneficiaries: The Employer (stability), The Patient Investor.
-constraint_beneficiary(golden_handcuffs, institutional).
+narrative_ontology:constraint_beneficiary(golden_handcuffs, institutional).
 
 % Victims: The "Locked-In" Employee (may suffer burnout or lack of growth 
 % but feels unable to leave due to the financial penalty).
-constraint_victim(golden_handcuffs, powerless).
+narrative_ontology:constraint_victim(golden_handcuffs, powerless).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

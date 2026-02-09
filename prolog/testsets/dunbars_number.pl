@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -84,8 +86,8 @@ domain_priors:emerges_naturally(dunbars_number).
 
 % Metrics required for Section 1 of the Executive Summary
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(dunbars_number, [small_tribes, focused_workgroups]).
-constraint_victim(dunbars_number, [hyper_connected_social_media_users, massive_unstructured_organizations]).
+narrative_ontology:constraint_beneficiary(dunbars_number, [small_tribes, focused_workgroups]).
+narrative_ontology:constraint_victim(dunbars_number, [hyper_connected_social_media_users, massive_unstructured_organizations]).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

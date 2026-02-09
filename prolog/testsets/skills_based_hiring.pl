@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -72,8 +74,8 @@ domain_priors:emerges_naturally(skills_based_hiring). % Driven by labor scarcity
 
 % Metrics
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(skills_based_hiring, self_taught_experts).
-constraint_victim(skills_based_hiring, mid_tier_liberal_arts_colleges).
+narrative_ontology:constraint_beneficiary(skills_based_hiring, self_taught_experts).
+narrative_ontology:constraint_victim(skills_based_hiring, mid_tier_liberal_arts_colleges).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

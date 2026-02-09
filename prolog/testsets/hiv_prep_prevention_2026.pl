@@ -19,6 +19,8 @@
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_claim/2,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -81,9 +83,9 @@ domain_priors:requires_active_enforcement(hiv_prep_prevention_2026).
 
 % Metrics required for Section 1 of the Executive Summary
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(hiv_prep_prevention_2026, global_sexual_freedom). %
-constraint_beneficiary(hiv_prep_prevention_2026, healthcare_stability). %
-constraint_victim(hiv_prep_prevention_2026, hiv_pathogen_spread). %
+narrative_ontology:constraint_beneficiary(hiv_prep_prevention_2026, global_sexual_freedom). %
+narrative_ontology:constraint_beneficiary(hiv_prep_prevention_2026, healthcare_stability). %
+narrative_ontology:constraint_victim(hiv_prep_prevention_2026, hiv_pathogen_spread). %
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

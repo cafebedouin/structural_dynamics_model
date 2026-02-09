@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -71,8 +73,8 @@ narrative_ontology:constraint_metric(genetic_algorithms_evolution, suppression_r
 domain_priors:emerges_naturally(genetic_algorithms_evolution).
 
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(genetic_algorithms_evolution, complex_system_designers).
-constraint_victim(genetic_algorithms_evolution, sub_optimal_solutions).
+narrative_ontology:constraint_beneficiary(genetic_algorithms_evolution, complex_system_designers).
+narrative_ontology:constraint_victim(genetic_algorithms_evolution, sub_optimal_solutions).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

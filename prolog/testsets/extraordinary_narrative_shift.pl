@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -70,8 +72,8 @@ narrative_ontology:constraint_metric(extraordinary_narrative_shift, suppression_
 domain_priors:emerges_naturally(extraordinary_narrative_shift).
 
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(extraordinary_narrative_shift, the_storyteller).
-constraint_victim(extraordinary_narrative_shift, lived_experience).
+narrative_ontology:constraint_beneficiary(extraordinary_narrative_shift, the_storyteller).
+narrative_ontology:constraint_victim(extraordinary_narrative_shift, lived_experience).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

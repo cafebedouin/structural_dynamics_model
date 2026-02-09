@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -85,10 +87,10 @@ domain_priors:emerges_naturally(three_body_unpredictability).
 
 % Metrics required for Section 1 of the Executive Summary
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(three_body_unpredictability, chaos_theorists).
-constraint_beneficiary(three_body_unpredictability, n_body_simulators).
-constraint_victim(three_body_unpredictability, long_term_navigators).
-constraint_victim(three_body_unpredictability, triple_star_civilizations). % Absolute extraction of stability.
+narrative_ontology:constraint_beneficiary(three_body_unpredictability, chaos_theorists).
+narrative_ontology:constraint_beneficiary(three_body_unpredictability, n_body_simulators).
+narrative_ontology:constraint_victim(three_body_unpredictability, long_term_navigators).
+narrative_ontology:constraint_victim(three_body_unpredictability, triple_star_civilizations). % Absolute extraction of stability.
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

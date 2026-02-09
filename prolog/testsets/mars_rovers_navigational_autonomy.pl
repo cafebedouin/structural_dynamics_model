@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -83,10 +85,10 @@ domain_priors:requires_active_enforcement(mars_rover_navigational_autonomy).
 
 % Metrics required for Section 1 of the Executive Summary
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(mars_rover_navigational_autonomy, mission_longevity).
-constraint_beneficiary(mars_rover_navigational_autonomy, navigational_safety).
-constraint_victim(mars_rover_navigational_autonomy, traverse_speed).
-constraint_victim(mars_rover_navigational_autonomy, cpu_availability_for_science).
+narrative_ontology:constraint_beneficiary(mars_rover_navigational_autonomy, mission_longevity).
+narrative_ontology:constraint_beneficiary(mars_rover_navigational_autonomy, navigational_safety).
+narrative_ontology:constraint_victim(mars_rover_navigational_autonomy, traverse_speed).
+narrative_ontology:constraint_victim(mars_rover_navigational_autonomy, cpu_availability_for_science).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

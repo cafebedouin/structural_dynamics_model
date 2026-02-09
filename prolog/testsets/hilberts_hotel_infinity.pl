@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -81,9 +83,9 @@ domain_priors:emerges_naturally(hilberts_hotel_infinity).
 
 % Metrics for Executive Summary
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(hilberts_hotel_infinity, mathematicians). % Understanding cardinality.
-constraint_beneficiary(hilberts_hotel_infinity, logical_rigor). 
-constraint_victim(hilberts_hotel_infinity, finite_intuition). % Strangled by the logic of Aleph-0.
+narrative_ontology:constraint_beneficiary(hilberts_hotel_infinity, mathematicians). % Understanding cardinality.
+narrative_ontology:constraint_beneficiary(hilberts_hotel_infinity, logical_rigor). 
+narrative_ontology:constraint_victim(hilberts_hotel_infinity, finite_intuition). % Strangled by the logic of Aleph-0.
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS

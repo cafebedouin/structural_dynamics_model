@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -82,10 +84,10 @@ domain_priors:emerges_naturally(lorenz_attractor_dynamics).
 
 % Metrics for Executive Summary
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(lorenz_attractor_dynamics, ensemble_forecasting). % Profits from uncertainty management.
-constraint_beneficiary(lorenz_attractor_dynamics, complexity_science).
-constraint_victim(lorenz_attractor_dynamics, long_term_determinism). % The "death" of Laplace's Demon.
-constraint_victim(lorenz_attractor_dynamics, linear_extrapolation).
+narrative_ontology:constraint_beneficiary(lorenz_attractor_dynamics, ensemble_forecasting). % Profits from uncertainty management.
+narrative_ontology:constraint_beneficiary(lorenz_attractor_dynamics, complexity_science).
+narrative_ontology:constraint_victim(lorenz_attractor_dynamics, long_term_determinism). % The "death" of Laplace's Demon.
+narrative_ontology:constraint_victim(lorenz_attractor_dynamics, linear_extrapolation).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

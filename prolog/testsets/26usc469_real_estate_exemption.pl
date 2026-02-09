@@ -20,6 +20,8 @@
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_claim/2,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -71,8 +73,8 @@ narrative_ontology:constraint_metric('26usc469_real_estate_exemption', suppressi
 domain_priors:requires_active_enforcement('26usc469_real_estate_exemption').
 
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary('26usc469_real_estate_exemption', full_time_real_estate_professionals).
-constraint_victim('26usc469_real_estate_exemption', hybrid_w2_investors). 
+narrative_ontology:constraint_beneficiary('26usc469_real_estate_exemption', full_time_real_estate_professionals).
+narrative_ontology:constraint_victim('26usc469_real_estate_exemption', hybrid_w2_investors). 
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

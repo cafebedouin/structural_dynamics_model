@@ -19,6 +19,8 @@
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_claim/2,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -85,9 +87,9 @@ domain_priors:emerges_naturally(social_narrative_casting).
 
 % BENEFICIARIES & VICTIMS
 % Beneficiary: The Critic's Ego (gains meaning and brand reinforcement).
-constraint_beneficiary(social_narrative_casting, critics_ego).
+narrative_ontology:constraint_beneficiary(social_narrative_casting, critics_ego).
 % Victim: Lived Experience (is reduced to an illusion or plot).
-constraint_victim(social_narrative_casting, lived_experience).
+narrative_ontology:constraint_victim(social_narrative_casting, lived_experience).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

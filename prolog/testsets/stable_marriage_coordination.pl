@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -87,10 +89,10 @@ domain_priors:emerges_naturally(stable_marriage_coordination).
 
 % Metrics required for Section 1 of the Executive Summary
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(stable_marriage_coordination, proposing_set_agents). % Suitor-optimal results.
-constraint_beneficiary(stable_marriage_coordination, market_clearing_houses).
-constraint_victim(stable_marriage_coordination, receiving_set_agents). % Receiver-pessimal results.
-constraint_victim(stable_marriage_coordination, niche_preference_outliers).
+narrative_ontology:constraint_beneficiary(stable_marriage_coordination, proposing_set_agents). % Suitor-optimal results.
+narrative_ontology:constraint_beneficiary(stable_marriage_coordination, market_clearing_houses).
+narrative_ontology:constraint_victim(stable_marriage_coordination, receiving_set_agents). % Receiver-pessimal results.
+narrative_ontology:constraint_victim(stable_marriage_coordination, niche_preference_outliers).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

@@ -20,8 +20,8 @@
     constraint_indexing:constraint_classification/3,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:constraint_metric/3,
-    constraint_beneficiary/2,
-    constraint_victim/2.
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -75,10 +75,10 @@ narrative_ontology:constraint_metric(lindy_effect, suppression_requirement, 0.5)
 domain_priors:emerges_naturally(lindy_effect).
 
 % Beneficiaries: Classics, established religions, and long-standing technologies.
-constraint_beneficiary(lindy_effect, established_institutions).
+narrative_ontology:constraint_beneficiary(lindy_effect, established_institutions).
 
 % Victims: Novel ideas, startups, and new artistic movements.
-constraint_victim(lindy_effect, disruptive_innovators).
+narrative_ontology:constraint_victim(lindy_effect, disruptive_innovators).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

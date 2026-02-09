@@ -174,4 +174,4 @@ narrative_ontology:measurement(mc_be_t16, milano_cortina_2026, base_extractivene
 % Template: v5.2 namespace alignment
 % Source: Derived from narrative context in this file (winter_olympics_2026)
 % ============================================================================
-constraint_victim(milano_cortina_2026, none).
+narrative_ontology:constraint_victim(milano_cortina_2026, none).

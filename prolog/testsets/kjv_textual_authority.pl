@@ -17,6 +17,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -70,8 +72,8 @@ narrative_ontology:constraint_metric(kjv_textual_authority, suppression_requirem
 domain_priors:requires_active_enforcement(kjv_textual_authority).
 
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(kjv_textual_authority, english_monarchy).
-constraint_victim(kjv_textual_authority, puritan_dissenters).
+narrative_ontology:constraint_beneficiary(kjv_textual_authority, english_monarchy).
+narrative_ontology:constraint_victim(kjv_textual_authority, puritan_dissenters).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

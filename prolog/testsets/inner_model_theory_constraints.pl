@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -86,10 +88,10 @@ domain_priors:emerges_naturally(inner_model_theory_constraints).
 
 % Metrics required for Section 1 of the Executive Summary
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(inner_model_theory_constraints, consistency_proof_developers).
-constraint_beneficiary(inner_model_theory_constraints, fine_structure_theorists).
-constraint_victim(inner_model_theory_constraints, large_cardinal_pluralists).
-constraint_victim(inner_model_theory_constraints, geometric_intuition).
+narrative_ontology:constraint_beneficiary(inner_model_theory_constraints, consistency_proof_developers).
+narrative_ontology:constraint_beneficiary(inner_model_theory_constraints, fine_structure_theorists).
+narrative_ontology:constraint_victim(inner_model_theory_constraints, large_cardinal_pluralists).
+narrative_ontology:constraint_victim(inner_model_theory_constraints, geometric_intuition).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

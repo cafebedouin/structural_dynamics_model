@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -71,8 +73,8 @@ narrative_ontology:constraint_metric(constitutional_supremacy, suppression_requi
 domain_priors:requires_active_enforcement(constitutional_supremacy).
 
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(constitutional_supremacy, judicial_authority).
-constraint_victim(constitutional_supremacy, legislative_supremacy).
+narrative_ontology:constraint_beneficiary(constitutional_supremacy, judicial_authority).
+narrative_ontology:constraint_victim(constitutional_supremacy, legislative_supremacy).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

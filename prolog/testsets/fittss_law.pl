@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -88,9 +90,9 @@ domain_priors:emerges_naturally(fittss_law).
 % Metrics required for Section 1 of the Executive Summary
 % BENEFICIARIES & VICTIMS
 % Beneficiary: Institutional managers and UI architects who gain speed metrics.
-constraint_beneficiary(fittss_law, [industrial_engineers, ui_designers]).
+narrative_ontology:constraint_beneficiary(fittss_law, [industrial_engineers, ui_designers]).
 % Victim: Individual workers subject to repetitive motion strain.
-constraint_victim(fittss_law, [assembly_line_workers, data_entry_clerks]).
+narrative_ontology:constraint_victim(fittss_law, [assembly_line_workers, data_entry_clerks]).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

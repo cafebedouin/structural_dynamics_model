@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -83,10 +85,10 @@ domain_priors:emerges_naturally(pythagorean_geometric_constancy).
 
 % Metrics required for Section 1 of the Executive Summary
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(pythagorean_geometric_constancy, civil_engineers).
-constraint_beneficiary(pythagorean_geometric_constancy, gps_system_designers).
-constraint_victim(pythagorean_geometric_constancy, spherical_geometry_intuition).
-constraint_victim(pythagorean_geometric_constancy, architectural_anarchists).
+narrative_ontology:constraint_beneficiary(pythagorean_geometric_constancy, civil_engineers).
+narrative_ontology:constraint_beneficiary(pythagorean_geometric_constancy, gps_system_designers).
+narrative_ontology:constraint_victim(pythagorean_geometric_constancy, spherical_geometry_intuition).
+narrative_ontology:constraint_victim(pythagorean_geometric_constancy, architectural_anarchists).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

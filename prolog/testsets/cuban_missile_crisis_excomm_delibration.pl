@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -80,9 +82,9 @@ domain_priors:requires_active_enforcement(cuban_missile_crisis_excomm_deliberati
 
 % Metrics required for Section 1 of the Executive Summary
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(cuban_missile_crisis_excomm_deliberation, global_population).
-constraint_beneficiary(cuban_missile_crisis_excomm_deliberation, diplomatic_stability).
-constraint_victim(cuban_missile_crisis_excomm_deliberation, castro_regime_autonomy).
+narrative_ontology:constraint_beneficiary(cuban_missile_crisis_excomm_deliberation, global_population).
+narrative_ontology:constraint_beneficiary(cuban_missile_crisis_excomm_deliberation, diplomatic_stability).
+narrative_ontology:constraint_victim(cuban_missile_crisis_excomm_deliberation, castro_regime_autonomy).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

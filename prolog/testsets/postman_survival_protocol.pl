@@ -20,6 +20,8 @@
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_claim/2,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -76,9 +78,9 @@ domain_priors:requires_active_enforcement(postman_survival_protocol).
 
 % BENEFICIARIES & VICTIMS
 % Who benefits from this protocol? The Individual Subject (agency/humor).
-constraint_beneficiary(postman_survival_protocol, individual_subject).
+narrative_ontology:constraint_beneficiary(postman_survival_protocol, individual_subject).
 % Who/What is the victim? The Institutional Bureaucracy (it loses its grip on the subject).
-constraint_victim(postman_survival_protocol, institutional_bureaucracy).
+narrative_ontology:constraint_victim(postman_survival_protocol, institutional_bureaucracy).
 
 % Metrics required for Section 1 of the Executive Summary
 /* ==========================================================================

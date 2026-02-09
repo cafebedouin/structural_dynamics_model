@@ -71,10 +71,11 @@ PROBSET_DIR = BASE / "prolog" / "probsets"
 
 # ── Constants ────────────────────────────────────────────────────────────────
 
-# Power modifiers (pi)
-PI_POWERLESS = 1.5
-PI_ORGANIZED = 0.4
-PI_ANALYTICAL = 1.15
+# Power modifiers (pi) — v5.0: sigmoid-derived
+from sigmoid import POWER_MODIFIERS as _PM
+PI_POWERLESS = _PM["powerless"]
+PI_ORGANIZED = _PM["organized"]
+PI_ANALYTICAL = _PM["analytical"]
 
 # Scope modifiers (sigma)
 SIGMA_LOCAL = 0.8

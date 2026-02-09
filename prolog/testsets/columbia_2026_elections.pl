@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -296,8 +298,8 @@ narrative_ontology:constraint_metric(colombia_2026_presidential_election, theate
 % Template: v5.2 namespace alignment
 % Source: Derived from narrative context in this file (columbia_2026_elections)
 % ============================================================================
-constraint_beneficiary(colombia_2026_presidential_election, political_elites).
-constraint_victim(colombia_2026_presidential_election, marginalized_voters).
+narrative_ontology:constraint_beneficiary(colombia_2026_presidential_election, political_elites).
+narrative_ontology:constraint_victim(colombia_2026_presidential_election, marginalized_voters).
 
 omega_variable(
     omega_colombian_polarization,

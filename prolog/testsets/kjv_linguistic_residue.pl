@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -71,8 +73,8 @@ narrative_ontology:constraint_metric(kjv_linguistic_residue, suppression_require
 domain_priors:emerges_naturally(kjv_linguistic_residue).
 
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(kjv_linguistic_residue, linguistic_authority).
-constraint_victim(kjv_linguistic_residue, linguistic_innovation).
+narrative_ontology:constraint_beneficiary(kjv_linguistic_residue, linguistic_authority).
+narrative_ontology:constraint_victim(kjv_linguistic_residue, linguistic_innovation).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

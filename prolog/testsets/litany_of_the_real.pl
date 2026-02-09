@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -67,8 +69,8 @@ narrative_ontology:constraint_metric(litany_of_the_real, suppression_requirement
 domain_priors:emerges_naturally(litany_of_the_real).
 
 % Beneficiaries & Victims
-constraint_beneficiary(litany_of_the_real, practitioner).
-constraint_victim(litany_of_the_real, escapist).
+narrative_ontology:constraint_beneficiary(litany_of_the_real, practitioner).
+narrative_ontology:constraint_victim(litany_of_the_real, escapist).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

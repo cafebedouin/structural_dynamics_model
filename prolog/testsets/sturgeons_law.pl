@@ -20,8 +20,8 @@
     constraint_indexing:constraint_classification/3,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:constraint_metric/3,
-    constraint_beneficiary/2,
-    constraint_victim/2.
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -78,10 +78,10 @@ domain_priors:emerges_naturally(sturgeons_law).
 
 % Metrics for Executive Summary
 % Beneficiaries: Curators and critics who gain power by filtering the 90%.
-constraint_beneficiary(sturgeons_law, expert_curators).
+narrative_ontology:constraint_beneficiary(sturgeons_law, expert_curators).
 
 % Victims: The "Average" creator whose work is lost in the 90% noise.
-constraint_victim(sturgeons_law, mid_tier_creatives).
+narrative_ontology:constraint_victim(sturgeons_law, mid_tier_creatives).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

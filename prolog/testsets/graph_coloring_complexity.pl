@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -80,8 +82,8 @@ domain_priors:emerges_naturally(graph_coloring_complexity).
 
 % Metrics required for Section 1 of the Executive Summary
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(graph_coloring_complexity, spectrum_regulators).
-constraint_victim(graph_coloring_complexity, [compiler_optimizers, register_allocators]).
+narrative_ontology:constraint_beneficiary(graph_coloring_complexity, spectrum_regulators).
+narrative_ontology:constraint_victim(graph_coloring_complexity, [compiler_optimizers, register_allocators]).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

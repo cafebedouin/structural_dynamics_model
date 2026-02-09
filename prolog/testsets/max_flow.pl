@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -69,10 +71,10 @@ narrative_ontology:constraint_metric(max_flow_min_cut, suppression_requirement, 
 domain_priors:emerges_naturally(max_flow_min_cut).
 
 % Beneficiaries: The Bottleneck Owner (e.g., the bridge with the toll).
-constraint_beneficiary(max_flow_min_cut, bottleneck_controller).
+narrative_ontology:constraint_beneficiary(max_flow_min_cut, bottleneck_controller).
 
 % Victims: The Source/Sink Users (limited by the narrowest path).
-constraint_victim(max_flow_min_cut, end_users).
+narrative_ontology:constraint_victim(max_flow_min_cut, end_users).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

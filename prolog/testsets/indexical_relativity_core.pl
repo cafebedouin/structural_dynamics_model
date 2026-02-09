@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -68,9 +70,9 @@ domain_priors:emerges_naturally(indexical_relativity_core).
 
 % Metrics for Section 1
 % Beneficiaries of understanding this:
-constraint_beneficiary(indexical_relativity_core, [analytical_observers, strategic_planners]).
+narrative_ontology:constraint_beneficiary(indexical_relativity_core, [analytical_observers, strategic_planners]).
 % Victims of ignoring this:
-constraint_victim(indexical_relativity_core, [those_mistaking_snares_for_mountains]).
+narrative_ontology:constraint_victim(indexical_relativity_core, [those_mistaking_snares_for_mountains]).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

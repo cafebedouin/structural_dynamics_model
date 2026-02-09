@@ -189,5 +189,5 @@ END OF CONSTRAINT STORY
 % Template: v5.2 namespace alignment
 % Source: Derived from narrative context in this file (france_cordon_sanitaire_2026)
 % ============================================================================
-constraint_beneficiary(france_cordon_sanitaire_2026, establishment_parties).
-constraint_victim(france_cordon_sanitaire_2026, excluded_populist_voters).
+narrative_ontology:constraint_beneficiary(france_cordon_sanitaire_2026, establishment_parties).
+narrative_ontology:constraint_victim(france_cordon_sanitaire_2026, excluded_populist_voters).

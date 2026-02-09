@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -88,9 +90,9 @@ domain_priors:requires_active_enforcement(private_identity_integration).
 
 % BENEFICIARIES & VICTIMS
 % Beneficiary: The Social Fabric (protected from unnecessary drama).
-constraint_beneficiary(private_identity_integration, social_hygiene).
+narrative_ontology:constraint_beneficiary(private_identity_integration, social_hygiene).
 % Victim: The Raw Impulse (denied immediate public validation/expression).
-constraint_victim(private_identity_integration, radical_transparency).
+narrative_ontology:constraint_victim(private_identity_integration, radical_transparency).
 
 % Metrics required for Section 1 of the Executive Summary
 /* ==========================================================================

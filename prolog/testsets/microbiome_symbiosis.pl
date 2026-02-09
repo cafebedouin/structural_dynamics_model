@@ -17,6 +17,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -71,8 +73,8 @@ narrative_ontology:constraint_metric(microbiome_symbiosis, suppression_requireme
 domain_priors:emerges_naturally(microbiome_symbiosis).
 
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(microbiome_symbiosis, human_host). % When in symbiosis
-constraint_victim(microbiome_symbiosis, human_host). % When in dysbiosis
+narrative_ontology:constraint_beneficiary(microbiome_symbiosis, human_host). % When in symbiosis
+narrative_ontology:constraint_victim(microbiome_symbiosis, human_host). % When in dysbiosis
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

@@ -213,8 +213,8 @@ narrative_ontology:interval(prisoners_dilemma_equilibrium, 0, 10).
 % The equilibrium benefits analytical clarity — it reveals the structure of
 % non-cooperative interaction. The "victim" is the cooperative surplus that
 % rational agents cannot access without external coordination mechanisms.
-constraint_beneficiary(prisoners_dilemma_equilibrium, analytical_clarity).
-constraint_victim(prisoners_dilemma_equilibrium, cooperative_surplus).
+narrative_ontology:constraint_beneficiary(prisoners_dilemma_equilibrium, analytical_clarity).
+narrative_ontology:constraint_victim(prisoners_dilemma_equilibrium, cooperative_surplus).
 
 % --- Omega variable (irreducible uncertainty) ---
 omega_variable(

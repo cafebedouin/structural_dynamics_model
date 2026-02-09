@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -78,8 +80,8 @@ domain_priors:emerges_naturally(hawthorne_effect).
 
 % Metrics required for Section 1 of the Executive Summary
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(hawthorne_effect, [management, study_leads]).
-constraint_victim(hawthorne_effect, [monitored_subjects, experimental_integrity]).
+narrative_ontology:constraint_beneficiary(hawthorne_effect, [management, study_leads]).
+narrative_ontology:constraint_victim(hawthorne_effect, [monitored_subjects, experimental_integrity]).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

@@ -23,6 +23,8 @@
     narrative_ontology:interval/3,
     narrative_ontology:measurement/5,
     narrative_ontology:constraint_claim/2,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -179,6 +181,15 @@ narrative_ontology:measurement(vq_tr_t10, vienna_quantum_superposition_2026, the
 narrative_ontology:measurement(vq_ex_t0, vienna_quantum_superposition_2026, base_extractiveness, 0, 0.20).
 narrative_ontology:measurement(vq_ex_t5, vienna_quantum_superposition_2026, base_extractiveness, 5, 0.45).
 narrative_ontology:measurement(vq_ex_t10, vienna_quantum_superposition_2026, base_extractiveness, 10, 0.60).
+
+/* ==========================================================================
+   9. STRUCTURAL ENRICHMENT (BENEFICIARY / VICTIM)
+   ========================================================================== */
+
+% No enrichment needed — Mountain (quantum physics).
+% Quantum superposition is a natural law with no beneficiary/victim asymmetry.
+% The experimental apparatus extracts data, but no agent benefits at the expense
+% of another in the sense relevant to structural directionality.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

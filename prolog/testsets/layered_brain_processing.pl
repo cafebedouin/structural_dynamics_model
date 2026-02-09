@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -75,10 +77,10 @@ domain_priors:emerges_naturally(layered_brain_processing).
 
 % BENEFICIARIES & VICTIMS
 % AI Research/Models benefit from mimicking brain hierarchy[cite: 33, 48].
-constraint_beneficiary(layered_brain_processing, ai_researchers).
+narrative_ontology:constraint_beneficiary(layered_brain_processing, ai_researchers).
 % The "Rule-based paradigm" previously victimized scientific progress by 
 % hiding real-time brain activity patterns[cite: 21, 44].
-constraint_victim(layered_brain_processing, traditional_linguistics).
+narrative_ontology:constraint_victim(layered_brain_processing, traditional_linguistics).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

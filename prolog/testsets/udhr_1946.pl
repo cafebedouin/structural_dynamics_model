@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:extractiveness_for_agent/3.
 
@@ -74,10 +76,10 @@ narrative_ontology:constraint_metric(udhr_1948, suppression_requirement, 0.2).
 domain_priors:requires_active_enforcement(udhr_1948).
 
 % Beneficiaries & Victims
-constraint_beneficiary(udhr_1948, human_family).
-constraint_beneficiary(udhr_1948, individual_citizens).
-constraint_victim(udhr_1948, totalitarians).
-constraint_victim(udhr_1948, absolute_monarchs).
+narrative_ontology:constraint_beneficiary(udhr_1948, human_family).
+narrative_ontology:constraint_beneficiary(udhr_1948, individual_citizens).
+narrative_ontology:constraint_victim(udhr_1948, totalitarians).
+narrative_ontology:constraint_victim(udhr_1948, absolute_monarchs).
 
 % Metrics
 /* ==========================================================================

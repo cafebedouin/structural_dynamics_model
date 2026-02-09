@@ -19,6 +19,8 @@
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_claim/2,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -80,8 +82,8 @@ domain_priors:requires_active_enforcement(wikipedia_crowdsourcing_2026).
 
 % Metrics required for Section 1 of the Executive Summary
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(wikipedia_crowdsourcing_2026, global_internet_users). % 15 billion visits monthly
-constraint_victim(wikipedia_crowdsourcing_2026, unverified_information_peddlers). % Site bucks the trend of unverified data
+narrative_ontology:constraint_beneficiary(wikipedia_crowdsourcing_2026, global_internet_users). % 15 billion visits monthly
+narrative_ontology:constraint_victim(wikipedia_crowdsourcing_2026, unverified_information_peddlers). % Site bucks the trend of unverified data
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

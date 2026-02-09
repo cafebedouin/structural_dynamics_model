@@ -197,8 +197,8 @@ narrative_ontology:interval(fast_growing_hierarchy, 0, 10).
 % Template: v5.2 namespace alignment
 % Source: Derived from narrative context in this file (fast_growing_hierarchy)
 % ============================================================================
-constraint_beneficiary(fast_growing_hierarchy, proof_theorists).
-constraint_victim(fast_growing_hierarchy, none).
+narrative_ontology:constraint_beneficiary(fast_growing_hierarchy, proof_theorists).
+narrative_ontology:constraint_victim(fast_growing_hierarchy, none).
 
 omega_variable(
     omega_fgh_church_turing,

@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -80,9 +82,9 @@ domain_priors:emerges_naturally(poincare_conjecture).
 
 % Metrics
 % Beneficiaries & Victims
-constraint_beneficiary(poincare_conjecture, topological_physics).
-constraint_beneficiary(poincare_conjecture, geometrical_analysts).
-constraint_victim(poincare_conjecture, perelman_social_peace). % Social pressure of the prize.
+narrative_ontology:constraint_beneficiary(poincare_conjecture, topological_physics).
+narrative_ontology:constraint_beneficiary(poincare_conjecture, geometrical_analysts).
+narrative_ontology:constraint_victim(poincare_conjecture, perelman_social_peace). % Social pressure of the prize.
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS

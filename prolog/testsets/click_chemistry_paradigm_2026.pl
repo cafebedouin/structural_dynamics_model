@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -70,8 +72,8 @@ narrative_ontology:constraint_metric(click_chemistry_paradigm_2026, suppression_
 domain_priors:emerges_naturally(click_chemistry_paradigm_2026).
 
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(click_chemistry_paradigm_2026, pharmaceutical_researchers).
-constraint_victim(click_chemistry_paradigm_2026, traditional_chemists).
+narrative_ontology:constraint_beneficiary(click_chemistry_paradigm_2026, pharmaceutical_researchers).
+narrative_ontology:constraint_victim(click_chemistry_paradigm_2026, traditional_chemists).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

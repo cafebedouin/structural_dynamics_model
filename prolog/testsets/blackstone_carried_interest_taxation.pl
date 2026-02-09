@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -78,8 +80,8 @@ domain_priors:requires_active_enforcement(blackstone_carried_interest_taxation).
 
 % Metrics for Executive Summary
 % Beneficiaries and Victims
-constraint_beneficiary(blackstone_carried_interest_taxation, senior_managing_directors).
-constraint_victim(blackstone_carried_interest_taxation, public_tax_revenue).
+narrative_ontology:constraint_beneficiary(blackstone_carried_interest_taxation, senior_managing_directors).
+narrative_ontology:constraint_victim(blackstone_carried_interest_taxation, public_tax_revenue).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -79,10 +81,10 @@ domain_priors:emerges_naturally(minimax_decision_rule).
 
 % Metrics required for Section 1 of the Executive Summary
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(minimax_decision_rule, conservative_investors).
-constraint_beneficiary(minimax_decision_rule, adversarial_security_systems).
-constraint_victim(minimax_decision_rule, high_variance_gamblers).
-constraint_victim(minimax_decision_rule, innovative_asymmetric_attackers).
+narrative_ontology:constraint_beneficiary(minimax_decision_rule, conservative_investors).
+narrative_ontology:constraint_beneficiary(minimax_decision_rule, adversarial_security_systems).
+narrative_ontology:constraint_victim(minimax_decision_rule, high_variance_gamblers).
+narrative_ontology:constraint_victim(minimax_decision_rule, innovative_asymmetric_attackers).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

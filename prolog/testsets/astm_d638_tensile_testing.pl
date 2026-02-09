@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -76,9 +78,9 @@ domain_priors:requires_active_enforcement(astm_d638_tensile_testing).
 
 % Metrics required for Section 1 of the Executive Summary
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(astm_d638_tensile_testing, global_supply_chains).
-constraint_beneficiary(astm_d638_tensile_testing, testing_equipment_manufacturers).
-constraint_victim(astm_d638_tensile_testing, innovative_non_standard_testing_startups).
+narrative_ontology:constraint_beneficiary(astm_d638_tensile_testing, global_supply_chains).
+narrative_ontology:constraint_beneficiary(astm_d638_tensile_testing, testing_equipment_manufacturers).
+narrative_ontology:constraint_victim(astm_d638_tensile_testing, innovative_non_standard_testing_startups).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

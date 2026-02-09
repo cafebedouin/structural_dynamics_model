@@ -19,6 +19,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -83,9 +85,9 @@ domain_priors:emerges_naturally(migration_decision_threshold).
 
 % Metrics for Executive Summary
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(migration_decision_threshold, destination_labor_markets).
-constraint_beneficiary(migration_decision_threshold, migrant_households_remittances).
-constraint_victim(migration_decision_threshold, origin_country_local_services).
+narrative_ontology:constraint_beneficiary(migration_decision_threshold, destination_labor_markets).
+narrative_ontology:constraint_beneficiary(migration_decision_threshold, migrant_households_remittances).
+narrative_ontology:constraint_victim(migration_decision_threshold, origin_country_local_services).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

@@ -20,8 +20,8 @@
     constraint_indexing:constraint_classification/3,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:constraint_metric/3,
-    constraint_beneficiary/2,
-    constraint_victim/2.
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -81,10 +81,10 @@ domain_priors:requires_active_enforcement(overton_window).
 
 % Metrics for Section 1 of the Executive Summary
 % Beneficiaries: Institutional incumbents and "centrist" political parties.
-constraint_beneficiary(overton_window, political_incumbents).
+narrative_ontology:constraint_beneficiary(overton_window, political_incumbents).
 
 % Victims: Radical reformers and marginalized groups whose needs are "unthinkable."
-constraint_victim(overton_window, radical_reformers).
+narrative_ontology:constraint_victim(overton_window, radical_reformers).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

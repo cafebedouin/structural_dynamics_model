@@ -19,6 +19,8 @@
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_claim/2,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -81,9 +83,9 @@ domain_priors:requires_active_enforcement(dldr_information_policy).
 
 % Metrics required for Section 1 of the Executive Summary
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(dldr_information_policy, user_autonomy). % Readers choose their exposure.
-constraint_beneficiary(dldr_information_policy, archive_plurality). % Allows unsanitized content to exist.
-constraint_victim(dldr_information_policy, mainstream_sanitization). % Challenges the "sanitized" status quo.
+narrative_ontology:constraint_beneficiary(dldr_information_policy, user_autonomy). % Readers choose their exposure.
+narrative_ontology:constraint_beneficiary(dldr_information_policy, archive_plurality). % Allows unsanitized content to exist.
+narrative_ontology:constraint_victim(dldr_information_policy, mainstream_sanitization). % Challenges the "sanitized" status quo.
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

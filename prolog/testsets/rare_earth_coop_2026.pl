@@ -167,7 +167,7 @@ narrative_ontology:measurement(rec_ex_t10, rare_earth_coop_2026, base_extractive
 % Template: v5.2 namespace alignment
 % Source: Derived from narrative context in this file (rare_earth_coop_2026)
 % ============================================================================
-constraint_victim(rare_earth_coop_2026, non_member_market_participants).
+narrative_ontology:constraint_victim(rare_earth_coop_2026, non_member_market_participants).
 
 % PERSPECTIVE 3: THE SMALL MANUFACTURER (ROPE)
 % Even non-members benefit from price stabilization; membership is voluntary.

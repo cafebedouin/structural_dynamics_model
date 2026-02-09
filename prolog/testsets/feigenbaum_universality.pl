@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -77,10 +79,10 @@ domain_priors:emerges_naturally(feigenbaum_universality).
 
 % Metrics for Executive Summary
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(feigenbaum_universality, predictive_maintenance). % Can predict chaos before it happens.
-constraint_beneficiary(feigenbaum_universality, theoretical_physicists). % Discovery of hidden order.
-constraint_victim(feigenbaum_universality, computational_precision). % Successive bifurcations happen 4.6x faster.
-constraint_victim(feigenbaum_universality, design_flexibility). % You cannot "change" the rate of the transition.
+narrative_ontology:constraint_beneficiary(feigenbaum_universality, predictive_maintenance). % Can predict chaos before it happens.
+narrative_ontology:constraint_beneficiary(feigenbaum_universality, theoretical_physicists). % Discovery of hidden order.
+narrative_ontology:constraint_victim(feigenbaum_universality, computational_precision). % Successive bifurcations happen 4.6x faster.
+narrative_ontology:constraint_victim(feigenbaum_universality, design_flexibility). % You cannot "change" the rate of the transition.
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

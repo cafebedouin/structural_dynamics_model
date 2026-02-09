@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -72,8 +74,8 @@ narrative_ontology:constraint_metric(crispr_genomic_rewrite_2026, suppression_re
 domain_priors:requires_active_enforcement(crispr_genomic_rewrite_2026).
 
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(crispr_genomic_rewrite_2026, genetic_disease_patients).
-constraint_victim(crispr_genomic_rewrite_2026, congenital_disease_legacy).
+narrative_ontology:constraint_beneficiary(crispr_genomic_rewrite_2026, genetic_disease_patients).
+narrative_ontology:constraint_victim(crispr_genomic_rewrite_2026, congenital_disease_legacy).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

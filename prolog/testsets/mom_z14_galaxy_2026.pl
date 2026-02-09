@@ -21,6 +21,8 @@
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:measurement/5,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -111,8 +113,8 @@ narrative_ontology:interval(mom_z14_2026, 0, 10).
 % Template: v5.2 namespace alignment
 % Source: Derived from narrative context in this file (mom_z14_galaxy_2026)
 % ============================================================================
-constraint_beneficiary(mom_z14_2026, cosmological_research_programs).
-constraint_victim(mom_z14_2026, superseded_formation_models).
+narrative_ontology:constraint_beneficiary(mom_z14_2026, cosmological_research_programs).
+narrative_ontology:constraint_victim(mom_z14_2026, superseded_formation_models).
 
 % --- Analytical perspective classification ---
 % chi = 0.05 * 1.15 (analytical) * 1.2 (global) = 0.069

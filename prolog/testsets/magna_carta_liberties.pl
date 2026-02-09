@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -75,8 +77,8 @@ domain_priors:requires_active_enforcement(magna_carta_liberties).
 
 % Metrics for Section 1 of the Executive Summary
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(magna_carta_liberties, [the_barons, the_english_church, free_men]).
-constraint_victim(magna_carta_liberties, [arbitrary_monarchy, foreign_mercenaries]).
+narrative_ontology:constraint_beneficiary(magna_carta_liberties, [the_barons, the_english_church, free_men]).
+narrative_ontology:constraint_victim(magna_carta_liberties, [arbitrary_monarchy, foreign_mercenaries]).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

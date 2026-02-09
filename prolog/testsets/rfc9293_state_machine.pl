@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -71,8 +73,8 @@ narrative_ontology:constraint_metric(rfc9293_state_machine, suppression_requirem
 domain_priors:requires_active_enforcement(rfc9293_state_machine).
 
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(rfc9293_state_machine, protocol_stability).
-constraint_victim(rfc9293_state_machine, developer_effort).
+narrative_ontology:constraint_beneficiary(rfc9293_state_machine, protocol_stability).
+narrative_ontology:constraint_victim(rfc9293_state_machine, developer_effort).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

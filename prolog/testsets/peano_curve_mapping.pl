@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -79,9 +81,9 @@ domain_priors:emerges_naturally(peano_curve_mapping).
 
 % Metrics for Executive Summary
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(peano_curve_mapping, spatial_database_indexing). % Efficient 2D range queries.
-constraint_beneficiary(peano_curve_mapping, image_compression_algorithms). 
-constraint_victim(peano_curve_mapping, classical_dimension_intuition). % Strangled by the surjective mapping.
+narrative_ontology:constraint_beneficiary(peano_curve_mapping, spatial_database_indexing). % Efficient 2D range queries.
+narrative_ontology:constraint_beneficiary(peano_curve_mapping, image_compression_algorithms). 
+narrative_ontology:constraint_victim(peano_curve_mapping, classical_dimension_intuition). % Strangled by the surjective mapping.
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

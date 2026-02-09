@@ -88,6 +88,30 @@ param(scope_modifier_global,       1.2).   % Hardest verification, extraction am
 param(scope_modifier_universal,    1.0).   % Neutral (natural laws)
 
 /* ================================================================
+   4C. SIGMOID DIRECTIONALITY PARAMETERS (v5.0)
+   Replaces discrete power_modifier dispatch with continuous sigmoid f(d).
+   f(d) = L + (U - L) / (1 + e^(-k*(d - d0)))
+   where d is directionality in [0.0, 1.0].
+   ================================================================ */
+
+param(sigmoid_lower,    -0.20).    % L: lower asymptote
+param(sigmoid_upper,     1.50).    % U: upper asymptote
+param(sigmoid_midpoint,  0.50).    % d0: inflection point
+param(sigmoid_steepness, 6.00).    % k: steepness
+
+% Canonical d positions — calibrated so f(d) ≈ current pi values
+% Mid-range atoms match exactly; extremes have small residuals
+% (institutional: f(0.0)=-0.12 vs -0.20, powerless: f(1.0)=1.42 vs 1.50)
+% because sigmoid asymptotes are unreachable. These residuals are at
+% tails where chi is well beyond gate boundaries, so no classification shifts.
+param(canonical_d_powerless,     1.00).
+param(canonical_d_moderate,      0.6459).
+param(canonical_d_powerful,      0.4804).
+param(canonical_d_organized,     0.3990).
+param(canonical_d_institutional, 0.00).
+param(canonical_d_analytical,    0.7250).
+
+/* ================================================================
    5. INTENT & DETECTION THRESHOLDS
    Consolidated parameters for the intent_engine and pattern_analysis.
    ================================================================ */

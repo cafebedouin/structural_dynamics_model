@@ -208,5 +208,13 @@ narrative_ontology:measurement(blue_ex_t10, c_physical_blue_wavelength, base_ext
 narrative_ontology:affects_constraint(c_physical_blue_wavelength, c_tech_srgb_standard).
 
 /* ==========================================================================
+   10. STRUCTURAL ENRICHMENT (BENEFICIARY / VICTIM)
+   ========================================================================== */
+
+% No enrichment needed — Mountain (physical constant).
+% A physical law has no beneficiary/victim asymmetry; suppression is total
+% and extraction is negligible. No agent benefits at the expense of another.
+
+/* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */

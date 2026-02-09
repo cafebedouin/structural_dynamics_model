@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -80,9 +82,9 @@ domain_priors:emerges_naturally(noethers_theorem_symmetry).
 
 % Metrics for Executive Summary
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(noethers_theorem_symmetry, field_theorists). % Predict unknown symmetries.
-constraint_beneficiary(noethers_theorem_symmetry, aerospace_engineers). % Fuel/Momentum predictability.
-constraint_victim(noethers_theorem_symmetry, naive_numerical_schemes). % Drift-prone algorithms.
+narrative_ontology:constraint_beneficiary(noethers_theorem_symmetry, field_theorists). % Predict unknown symmetries.
+narrative_ontology:constraint_beneficiary(noethers_theorem_symmetry, aerospace_engineers). % Fuel/Momentum predictability.
+narrative_ontology:constraint_victim(noethers_theorem_symmetry, naive_numerical_schemes). % Drift-prone algorithms.
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

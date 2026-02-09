@@ -187,5 +187,5 @@ narrative_ontology:interval(square_cube_law, 0, 10).
 % Template: v5.2 namespace alignment
 % Source: Derived from narrative context in this file (square_cube_law)
 % ============================================================================
-constraint_beneficiary(square_cube_law, engineering_disciplines).
-constraint_victim(square_cube_law, none).
+narrative_ontology:constraint_beneficiary(square_cube_law, engineering_disciplines).
+narrative_ontology:constraint_victim(square_cube_law, none).

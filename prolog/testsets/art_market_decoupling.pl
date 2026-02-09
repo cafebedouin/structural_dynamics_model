@@ -23,6 +23,8 @@
     narrative_ontology:interval/3,
     narrative_ontology:measurement/5,
     narrative_ontology:constraint_claim/2,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -161,6 +163,16 @@ narrative_ontology:measurement(art_tr_t10, art_market_decoupling, theater_ratio,
 narrative_ontology:measurement(art_ex_t0, art_market_decoupling, base_extractiveness, 0, 0.30).
 narrative_ontology:measurement(art_ex_t5, art_market_decoupling, base_extractiveness, 5, 0.60).
 narrative_ontology:measurement(art_ex_t10, art_market_decoupling, base_extractiveness, 10, 0.84).
+
+/* ==========================================================================
+   9. STRUCTURAL ENRICHMENT (BENEFICIARY / VICTIM)
+   ========================================================================== */
+
+% Piton enrichment: vestigial extraction identified from narrative context.
+% The investor class treats art as speculative assets, while working artists
+% lose creative autonomy to the "obscene" decoupling of value from creation.
+narrative_ontology:constraint_beneficiary(art_market_decoupling, art_market_investors).
+narrative_ontology:constraint_victim(art_market_decoupling, working_artists).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

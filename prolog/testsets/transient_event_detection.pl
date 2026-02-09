@@ -20,6 +20,8 @@
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_claim/2,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -73,9 +75,9 @@ domain_priors:requires_active_enforcement(transient_event_detection).
 % Metrics required for Section 1 of the Executive Summary
 % BENEFICIARIES & VICTIMS
 % Modern astronomers benefit from the "automated serendipity" and petabyte-scale data.
-constraint_beneficiary(transient_event_detection, modern_astronomers).
+narrative_ontology:constraint_beneficiary(transient_event_detection, modern_astronomers).
 % Traditional "chance" methods are victims of the shift toward "search in time" conveyor belts.
-constraint_victim(transient_event_detection, traditional_methodologists).
+narrative_ontology:constraint_victim(transient_event_detection, traditional_methodologists).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

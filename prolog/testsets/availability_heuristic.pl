@@ -22,8 +22,8 @@
     narrative_ontology:interval/3,
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_claim/2,
-    constraint_beneficiary/2,
-    constraint_victim/2.
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -81,10 +81,10 @@ narrative_ontology:constraint_metric(availability_heuristic, suppression_require
 domain_priors:emerges_naturally(availability_heuristic).
 
 % Mandatory Asymmetry Hooks (Required for any score > 0.3)
-constraint_beneficiary(availability_heuristic, news_media).
-constraint_beneficiary(availability_heuristic, advertising_executives).
-constraint_victim(availability_heuristic, anxious_citizen).
-constraint_victim(availability_heuristic, public_health_policy).
+narrative_ontology:constraint_beneficiary(availability_heuristic, news_media).
+narrative_ontology:constraint_beneficiary(availability_heuristic, advertising_executives).
+narrative_ontology:constraint_victim(availability_heuristic, anxious_citizen).
+narrative_ontology:constraint_victim(availability_heuristic, public_health_policy).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

@@ -22,8 +22,8 @@
     narrative_ontology:interval/3,
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_claim/2,
-    constraint_beneficiary/2,
-    constraint_victim/2.
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -78,8 +78,8 @@ narrative_ontology:constraint_metric(asshole_filter_2015, theater_ratio, 0.55).
 domain_priors:requires_active_enforcement(asshole_filter_2015).
 
 % Beneficiaries & Victims (Required for extraction > 0.46)
-constraint_beneficiary(asshole_filter_2015, transgressive_agents).
-constraint_victim(asshole_filter_2015, rule_following_agents).
+narrative_ontology:constraint_beneficiary(asshole_filter_2015, transgressive_agents).
+narrative_ontology:constraint_victim(asshole_filter_2015, rule_following_agents).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

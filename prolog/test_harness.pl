@@ -71,7 +71,7 @@ run_all_tests(IntervalID, Context) :-
 
     % Step 5b: Scope Effect Analysis
     format('~n--- SCOPE EFFECT ANALYSIS ---~n'),
-    format('  Formula: χ = ε × π(P) × σ(S)~n'),
+    format('  Formula: χ = ε × f(d) × σ(S)~n'),
     forall(narrative_ontology:constraint_claim(C, _),
            report_scope_effect(C)),
 
@@ -126,19 +126,52 @@ validate_per_index(IntervalID) :-
 
 %% report_scope_effect(+Constraint)
 %  Shows how scope modifier differentiates chi across standard contexts.
-%  Formula: χ = ε × π(P) × σ(S)
+%  Formula: χ = ε × f(d) × σ(S)
+%  v6.0: Uses structural directionality derivation chain instead of legacy π(P).
 report_scope_effect(C) :-
     (   drl_core:base_extractiveness(C, Epsilon)
     ->  format('  ~w (ε=~2f):~n', [C, Epsilon]),
         forall(
-            member(Power-Scope, [powerless-local, moderate-national,
-                                 institutional-national, analytical-global]),
-            (   constraint_indexing:power_modifier(Power, Pi),
+            member(Power, [powerless, moderate, institutional, analytical]),
+            (   scope_effect_standard_context(Power, Ctx),
+                Ctx = context(agent_power(Power), _, _, spatial_scope(Scope)),
+                constraint_indexing:resolve_coalition_power(Power, C, ResolvedPower),
+                Ctx = context(_, T, E, S),
+                ResolvedCtx = context(agent_power(ResolvedPower), T, E, S),
+                constraint_indexing:derive_directionality(C, ResolvedCtx, D),
+                constraint_indexing:sigmoid_f(D, FD),
                 constraint_indexing:scope_modifier(Scope, Sigma),
-                Chi is Epsilon * Pi * Sigma,
-                format('    ~w@~w: χ = ~2f × ~2f × ~2f = ~3f~n',
-                       [Power, Scope, Epsilon, Pi, Sigma, Chi])
+                Chi is Epsilon * FD * Sigma,
+                (   ResolvedPower \= Power
+                ->  format('    ~w→~w@~w: d=~3f f(d)=~2f χ = ~2f × ~2f × ~2f = ~3f~n',
+                           [Power, ResolvedPower, Scope, D, FD, Epsilon, FD, Sigma, Chi])
+                ;   format('    ~w@~w: d=~3f f(d)=~2f χ = ~2f × ~2f × ~2f = ~3f~n',
+                           [Power, Scope, D, FD, Epsilon, FD, Sigma, Chi])
+                )
             )
         )
     ;   format('  ~w: no extractiveness data~n', [C])
     ).
+
+%% scope_effect_standard_context(+PowerLevel, -Context)
+%  Standard contexts for scope effect analysis, matching logical_fingerprint.pl.
+scope_effect_standard_context(powerless,
+    context(agent_power(powerless),
+            time_horizon(biographical),
+            exit_options(trapped),
+            spatial_scope(local))).
+scope_effect_standard_context(moderate,
+    context(agent_power(moderate),
+            time_horizon(biographical),
+            exit_options(mobile),
+            spatial_scope(national))).
+scope_effect_standard_context(institutional,
+    context(agent_power(institutional),
+            time_horizon(generational),
+            exit_options(arbitrage),
+            spatial_scope(national))).
+scope_effect_standard_context(analytical,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(global))).

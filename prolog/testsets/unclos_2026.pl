@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:extractiveness_for_agent/3.
 
@@ -76,9 +78,9 @@ narrative_ontology:constraint_metric(unclos_2026, suppression_requirement, 0.2).
 domain_priors:requires_active_enforcement(unclos_2026).
 
 % Beneficiaries & Victims
-constraint_beneficiary(unclos_2026, land_locked_states). % Access to sea.
-constraint_beneficiary(unclos_2026, coastal_middle_powers). % Stability of EEZ.
-constraint_victim(unclos_2026, maritime_unilateralists). % Powers seeking "historic" titles.
+narrative_ontology:constraint_beneficiary(unclos_2026, land_locked_states). % Access to sea.
+narrative_ontology:constraint_beneficiary(unclos_2026, coastal_middle_powers). % Stability of EEZ.
+narrative_ontology:constraint_victim(unclos_2026, maritime_unilateralists). % Powers seeking "historic" titles.
 
 % Metrics
 /* ==========================================================================

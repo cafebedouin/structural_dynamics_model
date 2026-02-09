@@ -275,31 +275,61 @@ perspectival_gap_audit(C) :-
 
 %% format_perspective_line(+C, +ContextPower, +Label, +Type)
 %  Prints a perspective line with chi annotation if data available.
+%  v6.0: Shows d-value and f(d) from structural derivation chain.
 format_perspective_line(C, ContextPower, Label, Type) :-
-    (   compute_chi(C, ContextPower, BaseE, Modifier, RawChi)
-    ->  (   RawChi > 1.0
-        ->  format(atom(Ann), ' [chi = ~2f x ~2f = ~2f -> capped 1.00]', [BaseE, Modifier, RawChi])
-        ;   RawChi < 0
-        ->  format(atom(Ann), ' [chi = ~2f x ~2f = ~2f -> net benefit]', [BaseE, Modifier, RawChi])
-        ;   format(atom(Ann), ' [chi = ~2f x ~2f = ~2f]', [BaseE, Modifier, RawChi])
+    (   compute_chi_v6(C, ContextPower, _BaseE, D, FD, Chi)
+    ->  (   Chi < 0
+        ->  format(atom(Ann), ' [d=~3f f(d)=~2f χ=~2f → net benefit]', [D, FD, Chi])
+        ;   format(atom(Ann), ' [d=~3f f(d)=~2f χ=~2f]', [D, FD, Chi])
         )
     ;   Ann = ''
     ),
-    format('    - ~w: ~w ~w~n', [Label, Type, Ann]).
+    format('    - ~w: ~w~w~n', [Label, Type, Ann]).
 
-%% compute_chi(+C, +ContextPower, -BaseE, -Modifier, -RawChi)
-%  Computes raw chi = BaseE * Modifier for a given power position.
-compute_chi(C, ContextPower, BaseE, Modifier, RawChi) :-
-    context_power_to_modifier_key(ContextPower, ModKey),
-    domain_priors:base_extractiveness(C, BaseE),
-    constraint_indexing:power_modifier(ModKey, Modifier),
-    RawChi is BaseE * Modifier.
+%% compute_chi_v6(+C, +ContextPower, -BaseE, -D, -FD, -Chi)
+%  Computes chi via v6.0 structural directionality chain.
+%  Chi = BaseE * f(d) * scope_modifier(Scope).
+compute_chi_v6(C, ContextPower, BaseE, D, FD, Chi) :-
+    standard_context(ContextPower, Ctx),
+    drl_core:base_extractiveness(C, BaseE),
+    Ctx = context(agent_power(Power), _, _, spatial_scope(Scope)),
+    constraint_indexing:resolve_coalition_power(Power, C, ResolvedPower),
+    Ctx = context(_, T, E, S),
+    ResolvedCtx = context(agent_power(ResolvedPower), T, E, S),
+    constraint_indexing:derive_directionality(C, ResolvedCtx, D),
+    constraint_indexing:sigmoid_f(D, FD),
+    constraint_indexing:scope_modifier(Scope, SM),
+    Chi is BaseE * FD * SM.
+
+%% standard_context(+PowerLevel, -Context)
+%  Canonical contexts for each power level, matching logical_fingerprint.pl.
+standard_context(powerless,
+    context(agent_power(powerless),
+            time_horizon(biographical),
+            exit_options(trapped),
+            spatial_scope(local))).
+standard_context(moderate,
+    context(agent_power(moderate),
+            time_horizon(biographical),
+            exit_options(mobile),
+            spatial_scope(national))).
+standard_context(institutional,
+    context(agent_power(institutional),
+            time_horizon(generational),
+            exit_options(arbitrage),
+            spatial_scope(national))).
+standard_context(analytical,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(global))).
 
 %% format_mandatrophy_gap(+C, +PowerA, +PowerB)
 %  Shows the extraction gap between two power positions.
+%  v6.0: Uses structural directionality chain.
 format_mandatrophy_gap(C, PowerA, PowerB) :-
-    (   compute_chi(C, PowerA, _, _, RawA),
-        compute_chi(C, PowerB, _, _, RawB)
+    (   compute_chi_v6(C, PowerA, _, _, _, RawA),
+        compute_chi_v6(C, PowerB, _, _, _, RawB)
     ->  EffA is min(1.0, max(0.0, RawA)),
         EffB is RawB,
         DeltaChi is abs(EffA - EffB),
@@ -311,21 +341,25 @@ format_mandatrophy_gap(C, PowerA, PowerB) :-
     ;   true
     ).
 
-%% context_power_to_modifier_key(+ContextPower, -ModifierKey)
-%  Maps context agent_power atoms to power_modifier/2 keys.
-context_power_to_modifier_key(powerless, powerless).
-context_power_to_modifier_key(individual_moderate, moderate).
-context_power_to_modifier_key(powerful, powerful).
-context_power_to_modifier_key(collective_organized, organized).
-context_power_to_modifier_key(institutional, institutional).
-context_power_to_modifier_key(analytical, analytical).
-
 report_constraint_signature(C) :-
     drl_core:dr_signature(C, Signature),
     structural_signatures:signature_confidence(C, Signature, Confidence),
     structural_signatures:explain_signature(C, Signature, Explanation),
     format('  ~20w: ~20w (confidence: ~w)~n', [C, Signature, Confidence]),
-    (Signature \= ambiguous -> format('    → ~w~n', [Explanation]) ; true).
+    (Signature \= ambiguous -> format('    → ~w~n', [Explanation]) ; true),
+    % v6.0: For false_ci_rope, surface directionality context
+    (   Signature = false_ci_rope
+    ->  (   narrative_ontology:constraint_beneficiary(C, B)
+        ->  format('    → Institutional beneficiary: ~w~n', [B])
+        ;   format('    → No declared beneficiary (structural derivation uses canonical d)~n')
+        ),
+        (   standard_context(institutional, ICtx),
+            constraint_indexing:derive_directionality(C, ICtx, D_inst)
+        ->  format('    → Institutional d=~3f~n', [D_inst])
+        ;   true
+        )
+    ;   true
+    ).
 
 % Remaining placeholders (generate_indexed_report, extract_constraints, generate_llm_feedback, sublist, etc.) 
 % should be placed here as top-level predicates...

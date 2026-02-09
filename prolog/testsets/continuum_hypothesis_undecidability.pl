@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -83,10 +85,10 @@ domain_priors:emerges_naturally(continuum_hypothesis_undecidability).
 
 % Metrics required for Section 1 of the Executive Summary
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(continuum_hypothesis_undecidability, model_theorists). % Profiting from forcing and independence.
-constraint_beneficiary(continuum_hypothesis_undecidability, mathematical_philosophers).
-constraint_victim(continuum_hypothesis_undecidability, hilbertian_purists). % Seeking a complete foundation.
-constraint_victim(continuum_hypothesis_undecidability, intuitive_determinists).
+narrative_ontology:constraint_beneficiary(continuum_hypothesis_undecidability, model_theorists). % Profiting from forcing and independence.
+narrative_ontology:constraint_beneficiary(continuum_hypothesis_undecidability, mathematical_philosophers).
+narrative_ontology:constraint_victim(continuum_hypothesis_undecidability, hilbertian_purists). % Seeking a complete foundation.
+narrative_ontology:constraint_victim(continuum_hypothesis_undecidability, intuitive_determinists).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

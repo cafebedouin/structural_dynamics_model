@@ -78,8 +78,8 @@ narrative_ontology:constraint_metric(xi_mao_ideological_centralization, theater_
 domain_priors:requires_active_enforcement(xi_mao_ideological_centralization).
 
 % Beneficiaries & Victims (Required for extraction > 0.46)
-constraint_beneficiary(xi_mao_ideological_centralization, ccp_leadership_core).
-constraint_victim(xi_mao_ideological_centralization, individual_political_autonomy).
+narrative_ontology:constraint_beneficiary(xi_mao_ideological_centralization, ccp_leadership_core).
+narrative_ontology:constraint_victim(xi_mao_ideological_centralization, individual_political_autonomy).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

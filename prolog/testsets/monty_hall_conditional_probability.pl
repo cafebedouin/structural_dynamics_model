@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -81,10 +83,10 @@ domain_priors:emerges_naturally(monty_hall_conditional_probability).
 
 % Metrics required for Section 1 of the Executive Summary
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(monty_hall_conditional_probability, bayesian_statisticians).
-constraint_beneficiary(monty_hall_conditional_probability, logical_pivoters).
-constraint_victim(monty_hall_conditional_probability, intuitive_thinkers).
-constraint_victim(monty_hall_conditional_probability, static_choice_advocates).
+narrative_ontology:constraint_beneficiary(monty_hall_conditional_probability, bayesian_statisticians).
+narrative_ontology:constraint_beneficiary(monty_hall_conditional_probability, logical_pivoters).
+narrative_ontology:constraint_victim(monty_hall_conditional_probability, intuitive_thinkers).
+narrative_ontology:constraint_victim(monty_hall_conditional_probability, static_choice_advocates).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

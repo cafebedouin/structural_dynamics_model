@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -81,9 +83,9 @@ domain_priors:emerges_naturally(countable_infinity_cardinality).
 
 % Metrics for Executive Summary
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(countable_infinity_cardinality, algorithm_designers). % Predictable iteration.
-constraint_beneficiary(countable_infinity_cardinality, logicians). 
-constraint_victim(countable_infinity_cardinality, intuitive_continuity). % The Rationals are "shrunk" to a line.
+narrative_ontology:constraint_beneficiary(countable_infinity_cardinality, algorithm_designers). % Predictable iteration.
+narrative_ontology:constraint_beneficiary(countable_infinity_cardinality, logicians). 
+narrative_ontology:constraint_victim(countable_infinity_cardinality, intuitive_continuity). % The Rationals are "shrunk" to a line.
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS

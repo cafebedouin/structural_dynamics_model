@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -78,9 +80,9 @@ domain_priors:requires_active_enforcement(gs1_gln_identification).
 
 % Metrics for Executive Summary
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(gs1_gln_identification, global_traceability_efficiency).
-constraint_beneficiary(gs1_gln_identification, enterprise_resource_planning_vendors).
-constraint_victim(gs1_gln_identification, small_scale_suppliers_overhead).
+narrative_ontology:constraint_beneficiary(gs1_gln_identification, global_traceability_efficiency).
+narrative_ontology:constraint_beneficiary(gs1_gln_identification, enterprise_resource_planning_vendors).
+narrative_ontology:constraint_victim(gs1_gln_identification, small_scale_suppliers_overhead).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

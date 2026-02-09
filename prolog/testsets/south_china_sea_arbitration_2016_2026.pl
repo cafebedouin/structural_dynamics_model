@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -77,9 +79,9 @@ domain_priors:suppression_score(south_china_sea_arbitration_2016_2026, 0.35).
 domain_priors:requires_active_enforcement(south_china_sea_arbitration_2016_2026).
 
 % Beneficiaries & Victims
-constraint_beneficiary(south_china_sea_arbitration_2016_2026, philippines).
-constraint_beneficiary(south_china_sea_arbitration_2016_2026, international_rules_based_order).
-constraint_victim(south_china_sea_arbitration_2016_2026, chinese_maritime_expansion).
+narrative_ontology:constraint_beneficiary(south_china_sea_arbitration_2016_2026, philippines).
+narrative_ontology:constraint_beneficiary(south_china_sea_arbitration_2016_2026, international_rules_based_order).
+narrative_ontology:constraint_victim(south_china_sea_arbitration_2016_2026, chinese_maritime_expansion).
 
 % Metrics
 /* ==========================================================================

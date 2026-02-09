@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -76,8 +78,8 @@ domain_priors:requires_active_enforcement(comitatus_bond).
 
 % Metrics required for Section 1 of the Executive Summary
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(comitatus_bond, tribal_stability).
-constraint_victim(comitatus_bond, [unferth, cowardly_thanes]).
+narrative_ontology:constraint_beneficiary(comitatus_bond, tribal_stability).
+narrative_ontology:constraint_victim(comitatus_bond, [unferth, cowardly_thanes]).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

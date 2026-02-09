@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -68,8 +70,8 @@ narrative_ontology:constraint_metric(automatic_enrollment_defaults, suppression_
 domain_priors:emerges_naturally(automatic_enrollment_defaults).
 
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(automatic_enrollment_defaults, employees).
-constraint_victim(automatic_enrollment_defaults, pure_choice_autonomy).
+narrative_ontology:constraint_beneficiary(automatic_enrollment_defaults, employees).
+narrative_ontology:constraint_victim(automatic_enrollment_defaults, pure_choice_autonomy).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

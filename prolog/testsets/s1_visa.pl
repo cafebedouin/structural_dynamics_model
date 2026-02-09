@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -74,8 +76,8 @@ domain_priors:requires_active_enforcement(visa_ipo_regulatory_compliance).
 
 % Metrics for Executive Summary
 % Beneficiaries and Victims
-constraint_beneficiary(visa_ipo_regulatory_compliance, institutional_investors).
-constraint_victim(visa_ipo_regulatory_compliance, registrant_legal_budget).
+narrative_ontology:constraint_beneficiary(visa_ipo_regulatory_compliance, institutional_investors).
+narrative_ontology:constraint_victim(visa_ipo_regulatory_compliance, registrant_legal_budget).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

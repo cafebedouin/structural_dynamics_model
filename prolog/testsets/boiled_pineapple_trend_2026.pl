@@ -23,6 +23,8 @@
     narrative_ontology:interval/3,
     narrative_ontology:measurement/5,
     narrative_ontology:constraint_claim/2,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -176,6 +178,16 @@ narrative_ontology:measurement(pine_tr_t10, boiled_pineapple_trend_2026, theater
 narrative_ontology:measurement(pine_ex_t0, boiled_pineapple_trend_2026, base_extractiveness, 0, 0.15).
 narrative_ontology:measurement(pine_ex_t5, boiled_pineapple_trend_2026, base_extractiveness, 5, 0.40).
 narrative_ontology:measurement(pine_ex_t10, boiled_pineapple_trend_2026, base_extractiveness, 10, 0.55).
+
+/* ==========================================================================
+   9. STRUCTURAL ENRICHMENT (BENEFICIARY / VICTIM)
+   ========================================================================== */
+
+% Piton enrichment: vestigial extraction identified from narrative context.
+% Social media influencers coordinate engagement around the denatured wellness hack,
+% while wellness seekers invest effort in a ritual whose core function is atrophied.
+narrative_ontology:constraint_beneficiary(boiled_pineapple_trend_2026, social_media_influencers).
+narrative_ontology:constraint_victim(boiled_pineapple_trend_2026, wellness_seekers).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

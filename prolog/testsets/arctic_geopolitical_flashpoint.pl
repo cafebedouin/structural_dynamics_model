@@ -22,8 +22,8 @@
     narrative_ontology:interval/3,
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_claim/2,
-    constraint_beneficiary/2,
-    constraint_victim/2.
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -76,10 +76,10 @@ narrative_ontology:constraint_metric(arctic_geopolitical_flashpoint, theater_rat
 domain_priors:requires_active_enforcement(arctic_geopolitical_flashpoint).
 
 % Beneficiaries & Victims (Mandatory for High Extractiveness)
-constraint_beneficiary(arctic_geopolitical_flashpoint, us_defense_sector).
-constraint_beneficiary(arctic_geopolitical_flashpoint, arctic_shipping_conglomerates).
-constraint_victim(arctic_geopolitical_flashpoint, greenlandic_sovereignty).
-constraint_victim(arctic_geopolitical_flashpoint, dmr_alliances).
+narrative_ontology:constraint_beneficiary(arctic_geopolitical_flashpoint, us_defense_sector).
+narrative_ontology:constraint_beneficiary(arctic_geopolitical_flashpoint, arctic_shipping_conglomerates).
+narrative_ontology:constraint_victim(arctic_geopolitical_flashpoint, greenlandic_sovereignty).
+narrative_ontology:constraint_victim(arctic_geopolitical_flashpoint, dmr_alliances).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

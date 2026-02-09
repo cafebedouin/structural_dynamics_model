@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -76,9 +78,9 @@ domain_priors:emerges_naturally(no_cloning_theorem).
 
 % BENEFICIARIES & VICTIMS
 % Beneficiary: Security protocols (e.g., BB84) that depend on non-clonability.
-constraint_beneficiary(no_cloning_theorem, quantum_cryptographers).
+narrative_ontology:constraint_beneficiary(no_cloning_theorem, quantum_cryptographers).
 % Victim: Hardware architects who must invent complex "Surface Codes" to bypass the lack of copying.
-constraint_victim(no_cloning_theorem, quantum_hardware_engineers).
+narrative_ontology:constraint_victim(no_cloning_theorem, quantum_hardware_engineers).
 
 % Metrics for Executive Summary
 /* ==========================================================================

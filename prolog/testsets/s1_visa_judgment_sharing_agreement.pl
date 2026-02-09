@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -76,8 +78,8 @@ domain_priors:requires_active_enforcement(visa_judgment_sharing_agreement).
 
 % Metrics for Executive Summary
 % Beneficiaries and Victims
-constraint_beneficiary(visa_judgment_sharing_agreement, visa_inc_shareholders).
-constraint_victim(visa_judgment_sharing_agreement, signatory_member_banks).
+narrative_ontology:constraint_beneficiary(visa_judgment_sharing_agreement, visa_inc_shareholders).
+narrative_ontology:constraint_victim(visa_judgment_sharing_agreement, signatory_member_banks).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -79,8 +81,8 @@ domain_priors:emerges_naturally(p_vs_np).
 
 % Metrics required for Section 1 of the Executive Summary
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(p_vs_np, cryptographers).
-constraint_victim(p_vs_np, [brute_force_attackers, optimization_solvers]).
+narrative_ontology:constraint_beneficiary(p_vs_np, cryptographers).
+narrative_ontology:constraint_victim(p_vs_np, [brute_force_attackers, optimization_solvers]).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

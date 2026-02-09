@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -74,9 +76,9 @@ domain_priors:requires_active_enforcement(deferential_realism_framework).
 
 % Metrics required for Section 1 of the Executive Summary
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(deferential_realism_framework, analytical_observers).
-constraint_beneficiary(deferential_realism_framework, policy_reformers).
-constraint_victim(deferential_realism_framework, universalist_ideologues).
+narrative_ontology:constraint_beneficiary(deferential_realism_framework, analytical_observers).
+narrative_ontology:constraint_beneficiary(deferential_realism_framework, policy_reformers).
+narrative_ontology:constraint_victim(deferential_realism_framework, universalist_ideologues).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

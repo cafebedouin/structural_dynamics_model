@@ -17,6 +17,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -73,8 +75,8 @@ narrative_ontology:constraint_metric(planetary_diet_constraint_2026, suppression
 domain_priors:requires_active_enforcement(planetary_diet_constraint_2026).
 
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(planetary_diet_constraint_2026, future_humanity).
-constraint_victim(planetary_diet_constraint_2026, industrial_animal_agriculture).
+narrative_ontology:constraint_beneficiary(planetary_diet_constraint_2026, future_humanity).
+narrative_ontology:constraint_victim(planetary_diet_constraint_2026, industrial_animal_agriculture).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

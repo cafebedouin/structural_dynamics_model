@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -84,9 +86,9 @@ domain_priors:requires_active_enforcement(quantum_entanglement_protocol).
 
 % Metrics for Executive Summary
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(quantum_entanglement_protocol, interstellar_governance).
-constraint_beneficiary(quantum_entanglement_protocol, high_frequency_galactic_trade).
-constraint_victim(quantum_entanglement_protocol, local_planetary_sovereignty).
+narrative_ontology:constraint_beneficiary(quantum_entanglement_protocol, interstellar_governance).
+narrative_ontology:constraint_beneficiary(quantum_entanglement_protocol, high_frequency_galactic_trade).
+narrative_ontology:constraint_victim(quantum_entanglement_protocol, local_planetary_sovereignty).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

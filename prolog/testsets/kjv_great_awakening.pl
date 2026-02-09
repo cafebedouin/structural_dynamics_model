@@ -17,6 +17,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 % The Structural Anchor for system extraction
@@ -68,8 +70,8 @@ narrative_ontology:constraint_metric(kjv_great_awakening, suppression_requiremen
 % Enforcement: Emerges naturally (Spontaneous revivalism)
 domain_priors:emerges_naturally(kjv_great_awakening).
 
-constraint_beneficiary(kjv_great_awakening, individual_empowerment).
-constraint_victim(kjv_great_awakening, institutional_control).
+narrative_ontology:constraint_beneficiary(kjv_great_awakening, individual_empowerment).
+narrative_ontology:constraint_victim(kjv_great_awakening, institutional_control).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

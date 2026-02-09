@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -68,8 +70,8 @@ narrative_ontology:constraint_metric(somatic_focusing_awareness, suppression_req
 domain_priors:requires_active_enforcement(somatic_focusing_awareness).
 
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(somatic_focusing_awareness, internal_clarity).
-constraint_victim(somatic_focusing_awareness, reactive_habit).
+narrative_ontology:constraint_beneficiary(somatic_focusing_awareness, internal_clarity).
+narrative_ontology:constraint_victim(somatic_focusing_awareness, reactive_habit).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

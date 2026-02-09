@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -83,10 +85,10 @@ domain_priors:emerges_naturally(axiom_of_choice_determinacy).
 
 % Metrics required for Section 1 of the Executive Summary
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(axiom_of_choice_determinacy, functional_analysts).
-constraint_beneficiary(axiom_of_choice_determinacy, transfinite_topologists).
-constraint_victim(axiom_of_choice_determinacy, mathematical_constructivists).
-constraint_victim(axiom_of_choice_determinacy, physical_intuitionists).
+narrative_ontology:constraint_beneficiary(axiom_of_choice_determinacy, functional_analysts).
+narrative_ontology:constraint_beneficiary(axiom_of_choice_determinacy, transfinite_topologists).
+narrative_ontology:constraint_victim(axiom_of_choice_determinacy, mathematical_constructivists).
+narrative_ontology:constraint_victim(axiom_of_choice_determinacy, physical_intuitionists).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

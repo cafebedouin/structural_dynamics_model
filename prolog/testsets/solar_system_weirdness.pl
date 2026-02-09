@@ -20,6 +20,8 @@
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_claim/2,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -73,8 +75,8 @@ narrative_ontology:constraint_metric(solar_system_weirdness, suppression_require
 domain_priors:emerges_naturally(solar_system_weirdness).
 
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(solar_system_weirdness, modern_planetary_theorists).
-constraint_victim(solar_system_weirdness, legacy_copernican_models).
+narrative_ontology:constraint_beneficiary(solar_system_weirdness, modern_planetary_theorists).
+narrative_ontology:constraint_victim(solar_system_weirdness, legacy_copernican_models).
 
 % Metrics for Section 1
 /* ==========================================================================

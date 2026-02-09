@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -79,10 +81,10 @@ domain_priors:emerges_naturally(central_limit_theorem_convergence).
 
 % Metrics
 % Beneficiaries & Victims
-constraint_beneficiary(central_limit_theorem_convergence, data_scientists).
-constraint_beneficiary(central_limit_theorem_convergence, pollsters).
-constraint_victim(central_limit_theorem_convergence, outlier_detection). % Outliers are "smoothed" away.
-constraint_victim(central_limit_theorem_convergence, tail_risk_analysts).
+narrative_ontology:constraint_beneficiary(central_limit_theorem_convergence, data_scientists).
+narrative_ontology:constraint_beneficiary(central_limit_theorem_convergence, pollsters).
+narrative_ontology:constraint_victim(central_limit_theorem_convergence, outlier_detection). % Outliers are "smoothed" away.
+narrative_ontology:constraint_victim(central_limit_theorem_convergence, tail_risk_analysts).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS

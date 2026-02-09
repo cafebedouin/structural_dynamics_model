@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -80,8 +82,8 @@ domain_priors:emerges_naturally(chaitins_omega_undecidability).
 
 % Metrics required for Section 1 of the Executive Summary
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(chaitins_omega_undecidability, algorithmic_information_theory).
-constraint_victim(chaitins_omega_undecidability, formal_logic_completeness).
+narrative_ontology:constraint_beneficiary(chaitins_omega_undecidability, algorithmic_information_theory).
+narrative_ontology:constraint_victim(chaitins_omega_undecidability, formal_logic_completeness).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

@@ -195,8 +195,8 @@ narrative_ontology:interval(material_tensile_strength, 0, 10).
 % Template: v5.2 namespace alignment
 % Source: Derived from narrative context in this file (material_tensile_strength)
 % ============================================================================
-constraint_beneficiary(material_tensile_strength, structural_engineers).
-constraint_victim(material_tensile_strength, none).
+narrative_ontology:constraint_beneficiary(material_tensile_strength, structural_engineers).
+narrative_ontology:constraint_victim(material_tensile_strength, none).
 
 omega_variable(
     omega_metamaterial_bypass,

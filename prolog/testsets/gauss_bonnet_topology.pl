@@ -79,9 +79,9 @@ domain_priors:emerges_naturally(gauss_bonnet_topology).
 
 % Metrics for Executive Summary
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(gauss_bonnet_topology, global_analysts). % Deduce global from local.
-constraint_beneficiary(gauss_bonnet_topology, mesh_validators).
-constraint_victim(gauss_bonnet_topology, local_unilateral_curvature). % Curvature must sum to chi.
+narrative_ontology:constraint_beneficiary(gauss_bonnet_topology, global_analysts). % Deduce global from local.
+narrative_ontology:constraint_beneficiary(gauss_bonnet_topology, mesh_validators).
+narrative_ontology:constraint_victim(gauss_bonnet_topology, local_unilateral_curvature). % Curvature must sum to chi.
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

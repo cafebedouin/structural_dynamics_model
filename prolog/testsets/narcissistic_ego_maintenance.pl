@@ -23,6 +23,8 @@
     narrative_ontology:interval/3,
     narrative_ontology:measurement/5,
     narrative_ontology:constraint_claim/2,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -169,5 +171,5 @@ narrative_ontology:measurement(nem_ex_t10, narcissistic_ego_maintenance, base_ex
 % Template: v5.2 namespace alignment
 % Source: Derived from narrative context in this file (narcissistic_ego_maintenance)
 % ============================================================================
-constraint_beneficiary(narcissistic_ego_maintenance, narcissists_self_image).
-constraint_victim(narcissistic_ego_maintenance, emotional_labor_providers).
+narrative_ontology:constraint_beneficiary(narcissistic_ego_maintenance, narcissists_self_image).
+narrative_ontology:constraint_victim(narcissistic_ego_maintenance, emotional_labor_providers).

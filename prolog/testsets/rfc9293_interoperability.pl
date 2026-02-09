@@ -17,6 +17,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -70,9 +72,9 @@ narrative_ontology:constraint_metric(tcp_rfc9293_interoperability, suppression_r
 domain_priors:requires_active_enforcement(tcp_rfc9293_interoperability).
 
 % Beneficiaries: All internet users (reliable connections).
-constraint_beneficiary(tcp_rfc9293_interoperability, global).
+narrative_ontology:constraint_beneficiary(tcp_rfc9293_interoperability, global).
 % Victims: None (overhead is a design trade-off, not targeted extraction).
-constraint_victim(tcp_rfc9293_interoperability, none).
+narrative_ontology:constraint_victim(tcp_rfc9293_interoperability, none).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

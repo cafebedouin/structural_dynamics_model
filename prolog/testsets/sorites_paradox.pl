@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -83,8 +85,8 @@ domain_priors:emerges_naturally(sorites_paradox).
 
 % Metrics required for Section 1 of the Executive Summary
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(sorites_paradox, [bureaucrats, software_engineers]).
-constraint_victim(sorites_paradox, [marginal_subjects, qualitative_nuance]).
+narrative_ontology:constraint_beneficiary(sorites_paradox, [bureaucrats, software_engineers]).
+narrative_ontology:constraint_victim(sorites_paradox, [marginal_subjects, qualitative_nuance]).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

@@ -16,6 +16,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -74,8 +76,8 @@ domain_priors:requires_active_enforcement(berkshire_compounding_culture).
 
 % Metrics for Executive Summary
 % Beneficiaries and Victims
-constraint_beneficiary(berkshire_compounding_culture, [shareholders, treasury, future_generations]).
-constraint_victim(berkshire_compounding_culture, [textile_destiny, entropic_decay, "scoundrels"]).
+narrative_ontology:constraint_beneficiary(berkshire_compounding_culture, [shareholders, treasury, future_generations]).
+narrative_ontology:constraint_victim(berkshire_compounding_culture, [textile_destiny, entropic_decay, "scoundrels"]).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

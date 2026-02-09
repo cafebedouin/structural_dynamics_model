@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -168,8 +170,8 @@ narrative_ontology:constraint_metric(rope_design, theater_ratio, 0.14).
 % Template: v5.2 namespace alignment
 % Source: Derived from narrative context in this file (choice_architecture_design)
 % ============================================================================
-constraint_beneficiary(rope_design, choosers_with_good_defaults).
-constraint_victim(rope_design, manipulated_consumers).
+narrative_ontology:constraint_beneficiary(rope_design, choosers_with_good_defaults).
+narrative_ontology:constraint_victim(rope_design, manipulated_consumers).
 
 omega_variable(
     omega_dark_pattern_drift,

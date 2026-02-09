@@ -23,6 +23,8 @@
     narrative_ontology:interval/3,
     narrative_ontology:measurement/5,
     narrative_ontology:constraint_claim/2,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -176,6 +178,16 @@ narrative_ontology:measurement(af_tr_t10, academic_fashion_modernism_2026, theat
 narrative_ontology:measurement(af_ex_t0, academic_fashion_modernism_2026, base_extractiveness, 0, 0.35).
 narrative_ontology:measurement(af_ex_t5, academic_fashion_modernism_2026, base_extractiveness, 5, 0.55).
 narrative_ontology:measurement(af_ex_t10, academic_fashion_modernism_2026, base_extractiveness, 10, 0.68).
+
+/* ==========================================================================
+   9. STRUCTURAL ENRICHMENT (BENEFICIARY / VICTIM)
+   ========================================================================== */
+
+% Piton enrichment: vestigial extraction identified from narrative context.
+% The academic institution gains authority by invalidating previous methodologies,
+% while individual scholars must consent to "current fashion" to remain relevant.
+narrative_ontology:constraint_beneficiary(academic_fashion_modernism_2026, academic_institutions).
+narrative_ontology:constraint_victim(academic_fashion_modernism_2026, individual_scholars).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

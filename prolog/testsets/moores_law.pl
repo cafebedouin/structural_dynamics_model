@@ -20,8 +20,8 @@
     constraint_indexing:constraint_classification/3,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:constraint_metric/3,
-    constraint_beneficiary/2,
-    constraint_victim/2.
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -83,10 +83,10 @@ domain_priors:requires_active_enforcement(moores_law).
 
 % Metrics for Section 1 of the Executive Summary
 % Beneficiaries: Consumer electronics industry and data-intensive services.
-constraint_beneficiary(moores_law, platform_capitalists).
+narrative_ontology:constraint_beneficiary(moores_law, platform_capitalists).
 
 % Victims: Older hardware owners and the environment (e-waste).
-constraint_victim(moores_law, legacy_infrastructure_owners).
+narrative_ontology:constraint_victim(moores_law, legacy_infrastructure_owners).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

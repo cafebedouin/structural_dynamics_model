@@ -17,6 +17,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -76,10 +78,10 @@ narrative_ontology:constraint_metric(med_diet_consensus_2026, suppression_requir
 domain_priors:emerges_naturally(med_diet_consensus_2026).
 
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(med_diet_consensus_2026, global_healthcare_systems).
-constraint_beneficiary(med_diet_consensus_2026, planetary_ecology).
-constraint_victim(med_diet_consensus_2026, processed_food_industry).
-constraint_victim(med_diet_consensus_2026, low_income_populations). % (Economic extraction via food-pricing)
+narrative_ontology:constraint_beneficiary(med_diet_consensus_2026, global_healthcare_systems).
+narrative_ontology:constraint_beneficiary(med_diet_consensus_2026, planetary_ecology).
+narrative_ontology:constraint_victim(med_diet_consensus_2026, processed_food_industry).
+narrative_ontology:constraint_victim(med_diet_consensus_2026, low_income_populations). % (Economic extraction via food-pricing)
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

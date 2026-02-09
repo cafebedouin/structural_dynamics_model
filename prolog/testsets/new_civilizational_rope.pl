@@ -20,6 +20,8 @@
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_claim/2,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -154,5 +156,5 @@ narrative_ontology:interval(decentralized_infrastructure_rope, 0, 10).
 % Template: v5.2 namespace alignment
 % Source: Derived from narrative context in this file (new_civilizational_rope)
 % ============================================================================
-constraint_beneficiary(decentralized_infrastructure_rope, citizen_auditors).
-constraint_victim(decentralized_infrastructure_rope, legacy_rent_seeking_bureaucracies).
+narrative_ontology:constraint_beneficiary(decentralized_infrastructure_rope, citizen_auditors).
+narrative_ontology:constraint_victim(decentralized_infrastructure_rope, legacy_rent_seeking_bureaucracies).

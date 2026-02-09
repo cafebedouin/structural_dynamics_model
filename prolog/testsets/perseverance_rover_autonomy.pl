@@ -208,4 +208,4 @@ narrative_ontology:affects_constraint(deep_space_network_bandwidth, perseverance
 % Template: v5.2 namespace alignment
 % Source: Derived from narrative context in this file (perseverance_rover_autonomy)
 % ============================================================================
-constraint_victim(perseverance_rover_autonomy, none).
+narrative_ontology:constraint_victim(perseverance_rover_autonomy, none).

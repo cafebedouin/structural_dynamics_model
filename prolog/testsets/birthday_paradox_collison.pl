@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -80,10 +82,10 @@ domain_priors:emerges_naturally(birthday_paradox_collision).
 
 % Metrics
 % Beneficiaries & Victims
-constraint_beneficiary(birthday_paradox_collision, cryptographic_attackers).
-constraint_beneficiary(birthday_paradox_collision, hardware_manufacturers). % Need more storage/bits.
-constraint_victim(birthday_paradox_collision, legacy_hash_functions).
-constraint_victim(birthday_paradox_collision, intuitive_expectations).
+narrative_ontology:constraint_beneficiary(birthday_paradox_collision, cryptographic_attackers).
+narrative_ontology:constraint_beneficiary(birthday_paradox_collision, hardware_manufacturers). % Need more storage/bits.
+narrative_ontology:constraint_victim(birthday_paradox_collision, legacy_hash_functions).
+narrative_ontology:constraint_victim(birthday_paradox_collision, intuitive_expectations).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS

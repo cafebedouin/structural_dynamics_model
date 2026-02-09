@@ -21,6 +21,8 @@
     narrative_ontology:has_sunset_clause/1,
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_claim/2,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -167,5 +169,5 @@ narrative_ontology:interval(thai_article_112_mountain, 1908, 2026).
 % Template: v5.2 namespace alignment
 % Source: Derived from narrative context in this file (thai_article_112_mountain)
 % ============================================================================
-constraint_beneficiary(thai_article_112_mountain, royalist_establishment).
-constraint_victim(thai_article_112_mountain, progressive_political_movements).
+narrative_ontology:constraint_beneficiary(thai_article_112_mountain, royalist_establishment).
+narrative_ontology:constraint_victim(thai_article_112_mountain, progressive_political_movements).

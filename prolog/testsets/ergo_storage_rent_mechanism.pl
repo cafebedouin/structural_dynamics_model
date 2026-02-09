@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -71,8 +73,8 @@ narrative_ontology:constraint_metric(ergo_storage_rent_mechanism, suppression_re
 domain_priors:requires_active_enforcement(ergo_storage_rent_mechanism).
 
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(ergo_storage_rent_mechanism, ergo_miners).
-constraint_victim(ergo_storage_rent_mechanism, inactive_wallet_addresses).
+narrative_ontology:constraint_beneficiary(ergo_storage_rent_mechanism, ergo_miners).
+narrative_ontology:constraint_victim(ergo_storage_rent_mechanism, inactive_wallet_addresses).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

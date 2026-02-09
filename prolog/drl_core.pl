@@ -301,8 +301,10 @@ scaffold_temporality_check(C) :-
 classify_from_metrics(_C, BaseEps, Chi, _Supp, Context, rope) :-
     config:param(rope_chi_ceiling, ChiCeil),
     Chi =< ChiCeil,
-    config:param(rope_epsilon_ceiling, EpsCeil),
-    BaseEps =< EpsCeil,
+    % v6.0: When Chi =< 0, agent is a net beneficiary — skip base extraction gate.
+    % Negative effective extraction means the constraint is experienced as
+    % coordination infrastructure regardless of how high the raw base is.
+    (Chi =< 0 -> true ; config:param(rope_epsilon_ceiling, EpsCeil), BaseEps =< EpsCeil),
     constraint_indexing:effective_immutability_for_context(Context, rope), !.
 
 classify_from_metrics(C, BaseEps, Chi, Supp, _Context, tangled_rope) :-
@@ -507,25 +509,25 @@ perspectival_gap(C, gap(Type1, Ctx1, Type2, Ctx2, PowerDelta)) :-
     % Find two classifications
     constraint_indexing:constraint_classification(C, Type1, Ctx1),
     constraint_indexing:constraint_classification(C, Type2, Ctx2),
-    
+
     % Must differ in type
     Type1 \= Type2,
-    
+
     % Extract power levels
     Ctx1 = context(agent_power(P1), _, _, _),
     Ctx2 = context(agent_power(P2), _, _, _),
-    
+
     % Must be non-analytical
     P1 \= analytical,
     P2 \= analytical,
-    
+
     % Must differ in power
     P1 \= P2,
-    
-    % Calculate power delta for severity assessment
-    constraint_indexing:power_modifier(P1, Mod1),
-    constraint_indexing:power_modifier(P2, Mod2),
-    PowerDelta is abs(Mod1 - Mod2),
+
+    % Calculate power delta using directionality (v5.0)
+    constraint_indexing:canonical_d_for_power(P1, D1),
+    constraint_indexing:canonical_d_for_power(P2, D2),
+    PowerDelta is abs(D1 - D2),
     !.
 
 % ============================================================================

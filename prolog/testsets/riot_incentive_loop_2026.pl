@@ -23,6 +23,8 @@
     narrative_ontology:interval/3,
     narrative_ontology:measurement/5,
     narrative_ontology:constraint_claim/2,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -185,5 +187,5 @@ narrative_ontology:measurement(riot_ex_t10, riot_incentive_loop_2026, base_extra
 % Template: v5.2 namespace alignment
 % Source: Derived from narrative context in this file (riot_incentive_loop_2026)
 % ============================================================================
-constraint_beneficiary(riot_incentive_loop_2026, security_apparatus).
-constraint_victim(riot_incentive_loop_2026, civilian_protesters).
+narrative_ontology:constraint_beneficiary(riot_incentive_loop_2026, security_apparatus).
+narrative_ontology:constraint_victim(riot_incentive_loop_2026, civilian_protesters).

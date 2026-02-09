@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -73,8 +75,8 @@ domain_priors:emerges_naturally(coinbase_crypto_volatility).
 
 % Metrics
 % Beneficiaries and Victims
-constraint_beneficiary(coinbase_crypto_volatility, short_term_arbitrageurs).
-constraint_victim(coinbase_crypto_volatility, long_term_capital_stability).
+narrative_ontology:constraint_beneficiary(coinbase_crypto_volatility, short_term_arbitrageurs).
+narrative_ontology:constraint_victim(coinbase_crypto_volatility, long_term_capital_stability).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

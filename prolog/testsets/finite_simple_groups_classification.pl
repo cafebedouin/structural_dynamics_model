@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -80,9 +82,9 @@ domain_priors:emerges_naturally(finite_simple_group_classification).
 
 % Metrics
 % BENEFICIARIES & VICTIMS (Required for extractiveness > 0.3)
-constraint_beneficiary(finite_simple_group_classification, group_theorists). % Power of induction over all groups.
-constraint_beneficiary(finite_simple_group_classification, mathematical_physics). % Symmetry classification.
-constraint_victim(finite_simple_group_classification, individual_verification). % The ability for a single person to verify the foundations.
+narrative_ontology:constraint_beneficiary(finite_simple_group_classification, group_theorists). % Power of induction over all groups.
+narrative_ontology:constraint_beneficiary(finite_simple_group_classification, mathematical_physics). % Symmetry classification.
+narrative_ontology:constraint_victim(finite_simple_group_classification, individual_verification). % The ability for a single person to verify the foundations.
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS

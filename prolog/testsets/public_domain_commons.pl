@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -69,8 +71,8 @@ narrative_ontology:constraint_metric(public_domain_commons, suppression_requirem
 domain_priors:emerges_naturally(public_domain_commons).
 
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(public_domain_commons, general_public).
-constraint_victim(public_domain_commons, none).
+narrative_ontology:constraint_beneficiary(public_domain_commons, general_public).
+narrative_ontology:constraint_victim(public_domain_commons, none).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

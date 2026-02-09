@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -81,10 +83,10 @@ domain_priors:emerges_naturally(lln_convergence).
 
 % Metrics
 % Beneficiaries & Victims
-constraint_beneficiary(lln_convergence, insurance_industry).
-constraint_beneficiary(lln_convergence, casino_operators).
-constraint_victim(lln_convergence, gamblers_with_finite_capital).
-constraint_victim(lln_convergence, short_term_variance_analysts).
+narrative_ontology:constraint_beneficiary(lln_convergence, insurance_industry).
+narrative_ontology:constraint_beneficiary(lln_convergence, casino_operators).
+narrative_ontology:constraint_victim(lln_convergence, gamblers_with_finite_capital).
+narrative_ontology:constraint_victim(lln_convergence, short_term_variance_analysts).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS

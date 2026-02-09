@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -81,10 +83,10 @@ domain_priors:emerges_naturally(logistic_map_dynamics).
 
 % Metrics
 % Beneficiaries & Victims (Required for E > 0.3)
-constraint_beneficiary(logistic_map_dynamics, nonlinear_analysts). % Gain insights into complexity.
-constraint_beneficiary(logistic_map_dynamics, cryptography_designers). % PRNGs using chaos.
-constraint_victim(logistic_map_dynamics, long_term_planners). % Certainty is extracted.
-constraint_victim(logistic_map_dynamics, ecological_stability). % Small shocks cause flips.
+narrative_ontology:constraint_beneficiary(logistic_map_dynamics, nonlinear_analysts). % Gain insights into complexity.
+narrative_ontology:constraint_beneficiary(logistic_map_dynamics, cryptography_designers). % PRNGs using chaos.
+narrative_ontology:constraint_victim(logistic_map_dynamics, long_term_planners). % Certainty is extracted.
+narrative_ontology:constraint_victim(logistic_map_dynamics, ecological_stability). % Small shocks cause flips.
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS

@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -81,8 +83,8 @@ domain_priors:emerges_naturally(landscape_of_fear_2026).
 
 % Metrics required for Section 1 of the Executive Summary
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(landscape_of_fear_2026, ecosystem_stability). % Fear prevents overgrazing
-constraint_victim(landscape_of_fear_2026, prey_populations). % Reduced reproduction and feeding
+narrative_ontology:constraint_beneficiary(landscape_of_fear_2026, ecosystem_stability). % Fear prevents overgrazing
+narrative_ontology:constraint_victim(landscape_of_fear_2026, prey_populations). % Reduced reproduction and feeding
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

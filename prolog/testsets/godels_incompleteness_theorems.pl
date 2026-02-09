@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -85,10 +87,10 @@ domain_priors:emerges_naturally(goedels_incompleteness_theorems).
 
 % Metrics required for Section 1 of the Executive Summary
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(goedels_incompleteness_theorems, meta_mathematicians).
-constraint_beneficiary(goedels_incompleteness_theorems, computational_complexity_researchers).
-constraint_victim(goedels_incompleteness_theorems, hilbert_program_advocates).
-constraint_victim(goedels_incompleteness_theorems, axiomatic_purists).
+narrative_ontology:constraint_beneficiary(goedels_incompleteness_theorems, meta_mathematicians).
+narrative_ontology:constraint_beneficiary(goedels_incompleteness_theorems, computational_complexity_researchers).
+narrative_ontology:constraint_victim(goedels_incompleteness_theorems, hilbert_program_advocates).
+narrative_ontology:constraint_victim(goedels_incompleteness_theorems, axiomatic_purists).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

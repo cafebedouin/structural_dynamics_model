@@ -20,6 +20,8 @@
     narrative_ontology:interval/3,
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_claim/2,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -101,8 +103,8 @@ narrative_ontology:interval(rogue_wave_control_2026, 0, 10).
 % Template: v5.2 namespace alignment
 % Source: Derived from narrative context in this file (rogue_wave_control_2026)
 % ============================================================================
-constraint_beneficiary(rogue_wave_control_2026, photonics_researchers).
-constraint_victim(rogue_wave_control_2026, none).
+narrative_ontology:constraint_beneficiary(rogue_wave_control_2026, photonics_researchers).
+narrative_ontology:constraint_victim(rogue_wave_control_2026, none).
 
 % --- Analytical perspective classification ---
 % chi = 0.15 * 1.15 (analytical) * 1.2 (global) = 0.207

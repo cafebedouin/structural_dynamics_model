@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -79,9 +81,9 @@ domain_priors:emerges_naturally(galois_theory_symmetry).
 
 % Metrics for Executive Summary
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(galois_theory_symmetry, theoretical_physicists). % Symmetry groups.
-constraint_beneficiary(galois_theory_symmetry, algebraic_number_theorists).
-constraint_victim(galois_theory_symmetry, radical_solvability_hope). % The death of the "general formula."
+narrative_ontology:constraint_beneficiary(galois_theory_symmetry, theoretical_physicists). % Symmetry groups.
+narrative_ontology:constraint_beneficiary(galois_theory_symmetry, algebraic_number_theorists).
+narrative_ontology:constraint_victim(galois_theory_symmetry, radical_solvability_hope). % The death of the "general formula."
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

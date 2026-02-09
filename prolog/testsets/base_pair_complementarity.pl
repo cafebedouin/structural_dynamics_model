@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -77,8 +79,8 @@ domain_priors:emerges_naturally(base_pair_complementarity).
 
 % Metrics required for Section 1 of the Executive Summary
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(base_pair_complementarity, [biological_order, heredity]).
-constraint_victim(base_pair_complementarity, [entropic_decay]).
+narrative_ontology:constraint_beneficiary(base_pair_complementarity, [biological_order, heredity]).
+narrative_ontology:constraint_victim(base_pair_complementarity, [entropic_decay]).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

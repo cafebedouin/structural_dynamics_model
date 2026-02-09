@@ -20,8 +20,8 @@
     constraint_indexing:constraint_classification/3,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:constraint_metric/3,
-    constraint_beneficiary/2,
-    constraint_victim/2.
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -84,11 +84,11 @@ domain_priors:emerges_naturally(currys_paradox).
 % Metrics for Executive Summary
 % Beneficiaries: Paraconsistent Logicians (those who study systems that 
 % tolerate contradictions without collapsing).
-constraint_beneficiary(currys_paradox, paraconsistent_logicians).
+narrative_ontology:constraint_beneficiary(currys_paradox, paraconsistent_logicians).
 
 % Victims: Naive System Architects (those whose systems "explode" under 
 % simple self-reference).
-constraint_victim(currys_paradox, naive_set_theorists).
+narrative_ontology:constraint_victim(currys_paradox, naive_set_theorists).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

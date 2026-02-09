@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -71,9 +73,9 @@ domain_priors:requires_active_enforcement(education_unbundling_implementation).
 
 % Metrics
 % Beneficiaries & Victims
-constraint_beneficiary(education_unbundling_implementation, independent_learners).
-constraint_beneficiary(education_unbundling_implementation, skills_based_employers).
-constraint_victim(education_unbundling_implementation, administrative_bureaucracies).
+narrative_ontology:constraint_beneficiary(education_unbundling_implementation, independent_learners).
+narrative_ontology:constraint_beneficiary(education_unbundling_implementation, skills_based_employers).
+narrative_ontology:constraint_victim(education_unbundling_implementation, administrative_bureaucracies).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

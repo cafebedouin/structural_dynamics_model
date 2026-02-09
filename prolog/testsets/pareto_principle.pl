@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -71,8 +73,8 @@ narrative_ontology:constraint_metric(pareto_principle, suppression_requirement, 
 domain_priors:emerges_naturally(pareto_principle).
 
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(pareto_principle, vital_few).
-constraint_victim(pareto_principle, trivial_many).
+narrative_ontology:constraint_beneficiary(pareto_principle, vital_few).
+narrative_ontology:constraint_victim(pareto_principle, trivial_many).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

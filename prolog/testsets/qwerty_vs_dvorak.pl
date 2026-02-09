@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -78,8 +80,8 @@ domain_priors:emerges_naturally(qwerty_vs_dvorak).
 
 % Metrics required for Section 1 of the Executive Summary
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(qwerty_vs_dvorak, [legacy_manufacturers, educational_institutions]).
-constraint_victim(qwerty_vs_dvorak, [high_speed_typists, rsi_sufferers]).
+narrative_ontology:constraint_beneficiary(qwerty_vs_dvorak, [legacy_manufacturers, educational_institutions]).
+narrative_ontology:constraint_victim(qwerty_vs_dvorak, [high_speed_typists, rsi_sufferers]).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

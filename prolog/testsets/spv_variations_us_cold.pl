@@ -200,4 +200,4 @@ narrative_ontology:coordination_type(spv_variations, information_standard).
 % Template: v5.2 namespace alignment
 % Source: Derived from narrative context in this file (spv_variations_us_cold)
 % ============================================================================
-constraint_victim(spv_variations, affected_populations_during_cold_outbreaks).
+narrative_ontology:constraint_victim(spv_variations, affected_populations_during_cold_outbreaks).

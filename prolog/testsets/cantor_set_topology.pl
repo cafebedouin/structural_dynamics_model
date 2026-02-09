@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -78,10 +80,10 @@ domain_priors:emerges_naturally(cantor_set_topology).
 
 % Metrics
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(cantor_set_topology, fractal_geometry). % Tool for recursion.
-constraint_beneficiary(cantor_set_topology, analytical_rigor).
-constraint_victim(cantor_set_topology, lebesgue_measure). % Measure is extracted to zero.
-constraint_victim(cantor_set_topology, geometric_intuition).
+narrative_ontology:constraint_beneficiary(cantor_set_topology, fractal_geometry). % Tool for recursion.
+narrative_ontology:constraint_beneficiary(cantor_set_topology, analytical_rigor).
+narrative_ontology:constraint_victim(cantor_set_topology, lebesgue_measure). % Measure is extracted to zero.
+narrative_ontology:constraint_victim(cantor_set_topology, geometric_intuition).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS

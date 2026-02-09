@@ -19,6 +19,8 @@
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_claim/2,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -73,8 +75,8 @@ domain_priors:emerges_naturally(elencher_identity_transformation).
 
 % Metrics required for Section 1 of the Executive Summary
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(elencher_identity_transformation, zetetic_elench). % Gain "pan-relevant truth"
-constraint_victim(elencher_identity_transformation, continuity_of_self). % The previous entity is "never encountered twice"
+narrative_ontology:constraint_beneficiary(elencher_identity_transformation, zetetic_elench). % Gain "pan-relevant truth"
+narrative_ontology:constraint_victim(elencher_identity_transformation, continuity_of_self). % The previous entity is "never encountered twice"
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

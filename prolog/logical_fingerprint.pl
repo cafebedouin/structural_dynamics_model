@@ -554,7 +554,8 @@ dimension_matches(C1, C2, coupling, Result) :-
 print_fingerprint(C) :-
     format('~n=== Logical Fingerprint: ~w ===~n', [C]),
     (fingerprint_shift(C, shift(Pw, Mod, Inst, An))
-    -> format('  Shift:      powerless=~w  moderate=~w  institutional=~w  analytical=~w~n',
+    -> format('  Shift (computed via dr_type/3):~n'),
+       format('    powerless=~w  moderate=~w  institutional=~w  analytical=~w~n',
               [Pw, Mod, Inst, An])
     ;  format('  Shift:      (unable to compute)~n')),
     (fingerprint_properties(C, Props)

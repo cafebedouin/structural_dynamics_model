@@ -19,6 +19,8 @@
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_claim/2,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -79,8 +81,8 @@ domain_priors:requires_active_enforcement(omelet_perfection_complexity).
 
 % Metrics required for Section 1 of the Executive Summary
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(omelet_perfection_complexity, complex_wisdom). % "World-opening" insight
-constraint_victim(omelet_perfection_complexity, simple_answer). % Mediocre, un-questioned existence
+narrative_ontology:constraint_beneficiary(omelet_perfection_complexity, complex_wisdom). % "World-opening" insight
+narrative_ontology:constraint_victim(omelet_perfection_complexity, simple_answer). % Mediocre, un-questioned existence
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

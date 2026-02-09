@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -80,9 +82,9 @@ domain_priors:emerges_naturally(prime_number_theorem).
 
 % Metrics
 % Beneficiaries & Victims
-constraint_beneficiary(prime_number_theorem, system_security). % RSA reliability.
-constraint_beneficiary(prime_number_theorem, mathematicians). % Proof-of-concept for chaos/order.
-constraint_victim(prime_number_theorem, computational_efficiency). % Search time at high x.
+narrative_ontology:constraint_beneficiary(prime_number_theorem, system_security). % RSA reliability.
+narrative_ontology:constraint_beneficiary(prime_number_theorem, mathematicians). % Proof-of-concept for chaos/order.
+narrative_ontology:constraint_victim(prime_number_theorem, computational_efficiency). % Search time at high x.
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS

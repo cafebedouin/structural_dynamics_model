@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -67,8 +69,8 @@ narrative_ontology:constraint_metric(climate_target_one_point_five, suppression_
 domain_priors:requires_active_enforcement(climate_target_one_point_five).
 
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(climate_target_one_point_five, small_island_states).
-constraint_victim(climate_target_one_point_five, fossil_fuel_reliant_economies).
+narrative_ontology:constraint_beneficiary(climate_target_one_point_five, small_island_states).
+narrative_ontology:constraint_victim(climate_target_one_point_five, fossil_fuel_reliant_economies).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

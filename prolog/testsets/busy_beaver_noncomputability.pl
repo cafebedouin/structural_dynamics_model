@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -84,10 +86,10 @@ domain_priors:emerges_naturally(busy_beaver_noncomputability).
 
 % Metrics required for Section 1 of the Executive Summary
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(busy_beaver_noncomputability, complexity_philosophers).
-constraint_beneficiary(busy_beaver_noncomputability, logic_educators).
-constraint_victim(busy_beaver_noncomputability, brute_force_optimizers).
-constraint_victim(busy_beaver_noncomputability, long_term_simulators).
+narrative_ontology:constraint_beneficiary(busy_beaver_noncomputability, complexity_philosophers).
+narrative_ontology:constraint_beneficiary(busy_beaver_noncomputability, logic_educators).
+narrative_ontology:constraint_victim(busy_beaver_noncomputability, brute_force_optimizers).
+narrative_ontology:constraint_victim(busy_beaver_noncomputability, long_term_simulators).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

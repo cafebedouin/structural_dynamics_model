@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -69,8 +71,8 @@ narrative_ontology:constraint_metric(kidney_exchange_market, suppression_require
 domain_priors:requires_active_enforcement(kidney_exchange_market).
 
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(kidney_exchange_market, organ_recipients).
-constraint_victim(kidney_exchange_market, sensitized_patients).
+narrative_ontology:constraint_beneficiary(kidney_exchange_market, organ_recipients).
+narrative_ontology:constraint_victim(kidney_exchange_market, sensitized_patients).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

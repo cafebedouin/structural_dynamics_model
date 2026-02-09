@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -69,8 +71,8 @@ narrative_ontology:constraint_metric(platform_cooperativism_governance, suppress
 domain_priors:requires_active_enforcement(platform_cooperativism_governance).
 
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(platform_cooperativism_governance, worker_members).
-constraint_victim(platform_cooperativism_governance, external_capital_investors).
+narrative_ontology:constraint_beneficiary(platform_cooperativism_governance, worker_members).
+narrative_ontology:constraint_victim(platform_cooperativism_governance, external_capital_investors).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -82,10 +84,10 @@ domain_priors:emerges_naturally(collatz_conjecture_determinism).
 
 % Metrics required for Section 1 of the Executive Summary
 % BENEFICIARIES & VICTIMS
-constraint_beneficiary(collatz_conjecture_determinism, distributed_computing_projects). % e.g., Collatz@Home.
-constraint_beneficiary(collatz_conjecture_determinism, heuristic_complexity_theorists).
-constraint_victim(collatz_conjecture_determinism, classical_analytical_simplicity).
-constraint_victim(collatz_conjecture_determinism, mathematical_certainty). % The lack of proof is a "tax."
+narrative_ontology:constraint_beneficiary(collatz_conjecture_determinism, distributed_computing_projects). % e.g., Collatz@Home.
+narrative_ontology:constraint_beneficiary(collatz_conjecture_determinism, heuristic_complexity_theorists).
+narrative_ontology:constraint_victim(collatz_conjecture_determinism, classical_analytical_simplicity).
+narrative_ontology:constraint_victim(collatz_conjecture_determinism, mathematical_certainty). % The lack of proof is a "tax."
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)

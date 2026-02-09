@@ -18,6 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -80,9 +82,9 @@ domain_priors:emerges_naturally(lobs_theorem).
 
 % BENEFICIARIES & VICTIMS
 % Beneficiary: Consistent systems (protects them from triviality).
-constraint_beneficiary(lobs_theorem, stable_logical_architectures).
+narrative_ontology:constraint_beneficiary(lobs_theorem, stable_logical_architectures).
 % Victim: Recursive optimists (who hope for internal proofs of soundness).
-constraint_victim(lobs_theorem, foundationalist_philosophers).
+narrative_ontology:constraint_victim(lobs_theorem, foundationalist_philosophers).
 
 % Metrics for Executive Summary
 /* ==========================================================================

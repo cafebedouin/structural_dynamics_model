@@ -23,6 +23,8 @@
     narrative_ontology:interval/3,
     narrative_ontology:measurement/5,
     narrative_ontology:constraint_claim/2,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -174,6 +176,16 @@ narrative_ontology:measurement(am_tr_t10, altruistic_misery_paradox_2026, theate
 narrative_ontology:measurement(am_ex_t0, altruistic_misery_paradox_2026, base_extractiveness, 0, 0.25).
 narrative_ontology:measurement(am_ex_t5, altruistic_misery_paradox_2026, base_extractiveness, 5, 0.48).
 narrative_ontology:measurement(am_ex_t10, altruistic_misery_paradox_2026, base_extractiveness, 10, 0.62).
+
+/* ==========================================================================
+   9. STRUCTURAL ENRICHMENT (BENEFICIARY / VICTIM)
+   ========================================================================== */
+
+% Piton enrichment: vestigial extraction identified from narrative context.
+% The social circle requires the subject's happiness as coordination infrastructure,
+% while the self-sacrificing individual is trapped in performative altruism.
+narrative_ontology:constraint_beneficiary(altruistic_misery_paradox_2026, social_circle).
+narrative_ontology:constraint_victim(altruistic_misery_paradox_2026, self_sacrificing_individual).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY
