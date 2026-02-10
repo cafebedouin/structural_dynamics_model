@@ -407,13 +407,13 @@ sublist(Sub, [_|T]) :- sublist(Sub, T).
 
 %% classify_interval(+IntervalID, -Pattern, -Confidence)
 %  Computes the structural pattern and confidence for an interval by
-%  delegating to pattern_analysis. Confidence is derived from data
-%  completeness: high (>=0.75), moderate (>=0.40), low otherwise.
+%  delegating to pattern_analysis. Uses the pure return-value API
+%  (analyze_interval/4) to avoid side-effect-driven data passing.
+%  Confidence is derived from data completeness: high (>=0.75),
+%  moderate (>=0.40), low otherwise.
 classify_interval(IntervalID, Pattern, Confidence) :-
     catch(
-        (   pattern_analysis:analyze_interval(IntervalID),
-            pattern_analysis:interval_preliminary_pattern(IntervalID, Pattern),
-            pattern_analysis:interval_data_completeness(IntervalID, Score),
+        (   pattern_analysis:analyze_interval(IntervalID, _Gradient, Score, Pattern),
             completeness_to_confidence(Score, Confidence)
         ),
         _Error,

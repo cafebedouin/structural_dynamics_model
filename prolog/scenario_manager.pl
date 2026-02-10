@@ -83,6 +83,10 @@ route_omega(ID) :-
 % =============================================================================
 % UPDATED Section 5: TEST EXECUTION (Scenario Manager)
 % =============================================================================
+% TODO (Issue #6): load_and_run/2 injects structural anchors and minimal
+% measurements directly into narrative_ontology via assertz (6 cross-module
+% assertions). Future refactoring should separate KB population from test
+% orchestration, allowing measurement injection to be tested independently.
 load_and_run(File, IntervalID) :-
     clear_kb,
     (   exists_file(File)

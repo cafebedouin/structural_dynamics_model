@@ -29,6 +29,15 @@
 
 /* ============================================================
    REPAIR ORCHESTRATOR
+   ============================================================
+   TODO (Issue #6): This module uses assertz to inject facts directly
+   into narrative_ontology's namespace (13 cross-module assertions).
+   This makes it difficult to unit test bridge logic in isolation.
+   Future refactoring should:
+   1. Add a bridge_v34_data/2 variant that returns bridge_result(...)
+      terms instead of asserting
+   2. Let scenario_manager decide when to persist results
+   3. Support a verify-only mode for testing without side effects
    ============================================================ */
 
 %% repair_interval(+IntervalID)

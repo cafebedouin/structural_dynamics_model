@@ -82,26 +82,28 @@ is_safe_to_cut(C) :-
    3. SCENARIO-AWARE DIAGNOSTIC REPORTING
    ================================================================ */
 
+%% compute_veto_actors(-Actors)
+%  Pure computation: derives veto players from beneficiary data for
+%  snares and tangled ropes. Returns a deduplicated list of actors
+%  without asserting into the database. Use this for explicit data flow.
+compute_veto_actors(Actors) :-
+    findall(Actor,
+        (   drl_core:dr_type(C, Type),
+            (Type = snare ; Type = tangled_rope),
+            narrative_ontology:constraint_beneficiary(C, Actor),
+            Actor \= none, Actor \= []
+        ),
+        RawActors),
+    list_to_set(RawActors, Actors).
+
 %% derive_veto_actors
-%  Automated 'Veto Player' Derivation.
-%  Infers veto players from beneficiary data for snares and tangled ropes.
+%  Legacy API: computes veto actors and asserts them into narrative_ontology.
+%  Kept for backward compatibility with dr_diagnostic_report/1.
 derive_veto_actors :-
-    findall(C, (
-        drl_core:dr_type(C, Type),
-        (Type = snare ; Type = tangled_rope)
-    ), Cs),
-    list_to_set(Cs, Constraints),
-    forall(member(C, Constraints),
-        (
-            forall(narrative_ontology:constraint_beneficiary(C, Actor),
-                (
-                    ( \+ narrative_ontology:veto_actor(Actor), Actor \= none, Actor \= [] ->
-                        assertz(narrative_ontology:veto_actor(Actor))
-                    ; true
-                    )
-                )
-            )
-        )
+    compute_veto_actors(Actors),
+    forall(
+        (member(Actor, Actors), \+ narrative_ontology:veto_actor(Actor)),
+        assertz(narrative_ontology:veto_actor(Actor))
     ).
 
 
