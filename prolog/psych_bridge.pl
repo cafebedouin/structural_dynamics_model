@@ -13,12 +13,15 @@
 % Helper predicate to temporarily swap metrics for psychological analysis.
 % It checks for 'internalization_depth' and maps it to 'suppression_requirement'
 % for the duration of a goal's execution.
+% Uses setup_call_cleanup/3 to guarantee the temporary fact is retracted
+% even if Goal fails or throws an exception.
 with_psych_metric(Constraint, Goal) :-
     (   narrative_ontology:constraint_metric(Constraint, internalization_depth, Depth)
-    ->  % If internalization_depth exists, use it for suppression_requirement
-        asserta(narrative_ontology:constraint_metric(Constraint, suppression_requirement, Depth)),
-        call(Goal),
-        retract(narrative_ontology:constraint_metric(Constraint, suppression_requirement, Depth))
+    ->  setup_call_cleanup(
+            asserta(narrative_ontology:constraint_metric(Constraint, suppression_requirement, Depth), Ref),
+            call(Goal),
+            erase(Ref)
+        )
     ;   % Otherwise, just call the goal with existing metrics
         call(Goal)
     ).
