@@ -405,7 +405,26 @@ sublist([], _).
 sublist([H|T], [H|T2]) :- !, sublist(T, T2).
 sublist(Sub, [_|T]) :- sublist(Sub, T).
 
-classify_interval(_IntervalID, stable, high).
+%% classify_interval(+IntervalID, -Pattern, -Confidence)
+%  Computes the structural pattern and confidence for an interval by
+%  delegating to pattern_analysis. Confidence is derived from data
+%  completeness: high (>=0.75), moderate (>=0.40), low otherwise.
+classify_interval(IntervalID, Pattern, Confidence) :-
+    catch(
+        (   pattern_analysis:analyze_interval(IntervalID),
+            pattern_analysis:interval_preliminary_pattern(IntervalID, Pattern),
+            pattern_analysis:interval_data_completeness(IntervalID, Score),
+            completeness_to_confidence(Score, Confidence)
+        ),
+        _Error,
+        (   Pattern = unknown,
+            Confidence = insufficient_data
+        )
+    ).
+
+completeness_to_confidence(Score, high) :- Score >= 0.75, !.
+completeness_to_confidence(Score, moderate) :- Score >= 0.40, !.
+completeness_to_confidence(_, low).
 
 % Ensure these are at the BOTTOM of report_generator.pl, NOT inside generate_full_report
 generate_isomorphism_audit(IntervalID) :-
