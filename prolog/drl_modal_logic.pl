@@ -314,6 +314,16 @@ check_capture_between(C, T1, T2) :-
 %% predict_transformation(+C, +CurrentType, -LikelyFutureType)
 % Predicts likely future transformation based on trajectory
 % NOTE: Uses analytical context for prediction
+%
+% TODO (Issue #8 — Statistical Review):
+%   CONCERN: N >= 2 is insufficient for trend detection. With only 2 data
+%   points, any monotonic change is trivially "increasing" and there is no
+%   way to distinguish signal from noise. Additionally, comparing only the
+%   first and last elements ignores the trajectory shape (e.g. a V-shaped
+%   recovery would be misclassified as increasing).
+%   SUGGESTED FIX: Require N >= 5 and use a linear regression slope or
+%   Mann-Kendall trend test instead of first-vs-last comparison. At minimum,
+%   check that the trend is monotonic across all points, not just endpoints.
 predict_transformation(C, rope, snare) :-
     findall(X, narrative_ontology:measurement(_, C, extractiveness, _, X), Xs),
     length(Xs, N), N >= 2,
@@ -442,6 +452,25 @@ estimate_impact_indexed(_, _, _, negligible, no_dependency) :- !.
 %% infer_structural_coupling(+C1, +C2, -Strength)
 % Discovers hidden dependencies via temporal correlation
 % NOTE: This is NOT indexed - coupling is structural fact
+%
+% TODO (Issue #8 — Statistical Review):
+%   CONCERN 1: Sign-matching is NOT a valid correlation metric. This
+%   counts co-directional gradient pairs but ignores magnitude entirely.
+%   Two series with gradients [+0.001, +0.001] and [+0.999, +0.999]
+%   would score identically to [+0.5, +0.5] and [+0.5, +0.5]. A proper
+%   Pearson or Spearman correlation would capture both direction AND
+%   magnitude/rank relationships.
+%   CONCERN 2: calculate_coupling_strength/3 is UNBOUNDED. The base case
+%   returns 1.0, and each matching pair adds 0.2, so N matching pairs
+%   yields 1.0 + 0.2*N. For 10 matching pairs, Strength = 3.0 — not a
+%   valid [0,1] metric. Downstream consumers (coupling_factor/2) compute
+%   Factor = max(0.0, 1.0 - Strength), which clamps to 0.0 for any
+%   Strength >= 1.0, making the coupling factor binary in practice.
+%   CONCERN 3: dr_gradient_at/3 uses cut (!) after finding the first
+%   T2 > T, but measurement ordering is not guaranteed by findall. This
+%   may compute gradients from non-adjacent time points.
+%   SUGGESTED FIX: Use msort on time points, compute proper Pearson
+%   correlation, and normalize Strength to [0, 1].
 infer_structural_coupling(C1, C2, Strength) :-
     C1 \= C2,
     findall(G1, dr_gradient_at(C1, _, G1), Gs1),
@@ -648,6 +677,14 @@ reformability_score(C, Context, Score) :-
     excess_extraction_factor(C, ExcessFactor),
 
     % Weighted combination (coupling topology most important for reform)
+    % TODO (Issue #8 — Statistical Review):
+    %   CONCERN: Weights 0.30/0.40/0.30 appear to be heuristic estimates
+    %   without empirical calibration or sensitivity analysis. The 40%
+    %   weight on coupling is justified by the comment "most important for
+    %   reform" but this claim is not backed by data. Consider deriving
+    %   weights from labeled reformability outcomes via logistic regression,
+    %   or at minimum documenting the theoretical rationale and performing
+    %   sensitivity analysis across the test corpus.
     Score is min(1.0, max(0.0,
         0.30 * SepFactor +
         0.40 * CouplingFactor +
@@ -696,6 +733,17 @@ coupling_factor(C, Factor) :-
 %  But also → higher MOTIVATION to reform.
 %  We model this as: moderate excess = highest reformability
 %  (enough motivation, not too entrenched).
+% TODO (Issue #8 — Statistical Review):
+%   CONCERN: The threshold buckets (0.10, 0.30, 0.50) and their output
+%   values (0.8, 1.0, 0.6, 0.3) encode a non-monotonic "inverted-U"
+%   hypothesis (moderate excess = highest reformability) as a step
+%   function with unjustified breakpoints. The discontinuities at
+%   boundaries (e.g. Excess=0.10 yields 0.8 but Excess=0.11 yields 1.0)
+%   create sensitivity to small measurement changes. Consider replacing
+%   with a smooth function, e.g. a Gaussian centered on the hypothesized
+%   sweet spot: Factor = exp(-((Excess - 0.20)^2) / (2 * 0.15^2)).
+%   The specific bucket boundaries should be validated against empirical
+%   reform outcomes if available.
 excess_extraction_factor(C, Factor) :-
     (   structural_signatures:excess_extraction(C, Excess)
     ->  (   Excess =< 0.10
@@ -902,6 +950,20 @@ purity_deficit(C, excess_extraction_deficit(Score)) :-
 %  Moderate: meaningful gap with reasonable reformability
 %  Low: small gap, system still in "sound" territory
 %  None: no gap (purity at or above target)
+%
+% TODO (Issue #8 — Statistical Review):
+%   CONCERN 1: All thresholds (Gap: 0.05/0.15/0.30/0.40; Pressure: 1.5/2.0)
+%   are hardcoded without documented justification. These should either be
+%   derived from config:param/2 for tuning, or backed by calibration data.
+%   CONCERN 2: The "high" clause uses disjunction (Gap > 0.30 OR Pressure > 1.5)
+%   while "critical" uses conjunction (AND). This means a Gap of 0.31 with
+%   zero Pressure classifies as "high" — the same level as Gap=0.41 with
+%   Pressure=1.9. Consider whether the disjunction is intentional or if
+%   "high" should require both conditions above separate thresholds.
+%   CONCERN 3: Reformability is only used in the "moderate" clause and
+%   completely ignored for critical/high/low/none. A deeply entrenched
+%   constraint (Reformability=0.1) with Gap=0.45, Pressure=2.1 gets
+%   "critical" urgency despite being nearly impossible to reform.
 compute_reform_urgency(Gap, Pressure, _, critical) :-
     Gap > 0.40, Pressure > 2.0, !.
 compute_reform_urgency(Gap, Pressure, _, high) :-
@@ -1489,6 +1551,20 @@ find_weakest([C1-EP1, C2-EP2 | Rest], Weakest) :-
 %% cluster_purity(+Constraints, +Context, -Score)
 %  Weighted average purity for a given list of constraints.
 %  Weight = sum of edge strengths to other cluster members.
+%
+% TODO (Issue #8 — Statistical Review):
+%   CONCERN 1: The EP >= 0.0 filter silently drops constraints with
+%   negative effective purity from the average. This biases the cluster
+%   score upward — a cluster with one EP=0.9 and one EP=-0.3 would
+%   report Score=0.9 instead of the true weighted average. If negative
+%   purities represent genuine contamination, they should arguably LOWER
+%   the cluster score, not be excluded.
+%   CONCERN 2: Isolated constraints (no intra-cluster neighbors) get
+%   Weight=1.0 by default. In a cluster with one well-connected node
+%   (Weight=5.0) and three isolated nodes (Weight=1.0 each), the
+%   isolated nodes collectively outweigh the connected one. Consider
+%   whether isolated nodes should use Weight=0 (excluded) or a fraction
+%   of the mean weight instead of a fixed default.
 cluster_purity(Constraints, Context, Score) :-
     constraint_indexing:valid_context(Context),
     findall(EP-Weight, (
