@@ -262,12 +262,3 @@ omega_variable(
 % Coordination mechanism in political domain — moderate institutional framing
 domain_priors:theater_ratio(kjv_puritan_new_world_exit, 0.17).
 narrative_ontology:constraint_metric(kjv_puritan_new_world_exit, theater_ratio, 0.17).
-
-% --- Analytical perspective classification (missing) ---
-% chi = 0.2 * 1.15 (analytical) * 1.2 (global) = 0.276
-% Classification: scaffold
-constraint_indexing:constraint_classification(kjv_puritan_new_world_exit, scaffold,
-    context(agent_power(analytical),
-            time_horizon(civilizational),
-            exit_options(analytical),
-            spatial_scope(global))).

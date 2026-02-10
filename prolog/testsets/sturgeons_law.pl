@@ -261,12 +261,3 @@ omega_variable(
 % Structural constraint in artistic domain — low theater, high substance
 domain_priors:theater_ratio(sturgeons_law, 0.11).
 narrative_ontology:constraint_metric(sturgeons_law, theater_ratio, 0.11).
-
-% --- Analytical perspective classification (missing) ---
-% chi = 0.1 * 1.15 (analytical) * 1.2 (global) = 0.138
-% Classification: scaffold
-constraint_indexing:constraint_classification(sturgeons_law, scaffold,
-    context(agent_power(analytical),
-            time_horizon(civilizational),
-            exit_options(analytical),
-            spatial_scope(global))).

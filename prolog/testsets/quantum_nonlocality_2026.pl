@@ -271,12 +271,3 @@ omega_variable(
 % Structural constraint in scientific domain — low theater, high substance
 domain_priors:theater_ratio(quantum_nonlocality_2026, 0.0).
 narrative_ontology:constraint_metric(quantum_nonlocality_2026, theater_ratio, 0.0).
-
-% --- Analytical perspective classification (missing) ---
-% chi = 0.0 * 1.15 (analytical) * 1.2 (global) = 0.000
-% Classification: scaffold
-constraint_indexing:constraint_classification(quantum_nonlocality_2026, scaffold,
-    context(agent_power(analytical),
-            time_horizon(civilizational),
-            exit_options(analytical),
-            spatial_scope(global))).

@@ -265,12 +265,3 @@ omega_variable(
 % Structural constraint in social domain — low theater, high substance
 domain_priors:theater_ratio(public_domain_commons, 0.08).
 narrative_ontology:constraint_metric(public_domain_commons, theater_ratio, 0.08).
-
-% --- Analytical perspective classification (missing) ---
-% chi = 0.0 * 1.15 (analytical) * 1.2 (global) = 0.000
-% Classification: scaffold
-constraint_indexing:constraint_classification(public_domain_commons, scaffold,
-    context(agent_power(analytical),
-            time_horizon(civilizational),
-            exit_options(analytical),
-            spatial_scope(global))).

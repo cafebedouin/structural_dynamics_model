@@ -267,12 +267,3 @@ omega_variable(
 % Functional coordination mechanism — primarily substantive
 domain_priors:theater_ratio(proof_of_work_consensus, 0.11).
 narrative_ontology:constraint_metric(proof_of_work_consensus, theater_ratio, 0.11).
-
-% --- Analytical perspective classification (missing) ---
-% chi = 0.2 * 1.15 (analytical) * 1.2 (global) = 0.276
-% Classification: scaffold
-constraint_indexing:constraint_classification(proof_of_work_consensus, scaffold,
-    context(agent_power(analytical),
-            time_horizon(civilizational),
-            exit_options(analytical),
-            spatial_scope(global))).

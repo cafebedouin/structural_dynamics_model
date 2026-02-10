@@ -265,15 +265,6 @@ omega_variable(
 domain_priors:theater_ratio(trade_secret_law, 0.3).
 narrative_ontology:constraint_metric(trade_secret_law, theater_ratio, 0.3).
 
-% --- Analytical perspective classification (missing) ---
-% chi = 0.2 * 1.15 (analytical) * 1.2 (global) = 0.276
-% Classification: scaffold
-constraint_indexing:constraint_classification(trade_secret_law, scaffold,
-    context(agent_power(analytical),
-            time_horizon(civilizational),
-            exit_options(analytical),
-            spatial_scope(global))).
-
 % ============================================================================
 % ENRICHMENT: Structural predicates for dynamic classification
 % Generated: 2026-02-08

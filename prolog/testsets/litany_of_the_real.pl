@@ -252,12 +252,3 @@ omega_variable(
 % Structural constraint in philosophical domain — low theater, high substance
 domain_priors:theater_ratio(litany_of_the_real, 0.08).
 narrative_ontology:constraint_metric(litany_of_the_real, theater_ratio, 0.08).
-
-% --- Analytical perspective classification (missing) ---
-% chi = 0.15 * 1.15 (analytical) * 1.2 (global) = 0.207
-% Classification: scaffold
-constraint_indexing:constraint_classification(litany_of_the_real, scaffold,
-    context(agent_power(analytical),
-            time_horizon(civilizational),
-            exit_options(analytical),
-            spatial_scope(global))).

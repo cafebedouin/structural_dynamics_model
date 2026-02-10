@@ -267,12 +267,3 @@ omega_variable(
 % Structural constraint in linguistic domain — low theater, high substance
 domain_priors:theater_ratio(kjv_linguistic_residue, 0.05).
 narrative_ontology:constraint_metric(kjv_linguistic_residue, theater_ratio, 0.05).
-
-% --- Analytical perspective classification (missing) ---
-% chi = 0.1 * 1.15 (analytical) * 1.2 (global) = 0.138
-% Classification: scaffold
-constraint_indexing:constraint_classification(kjv_linguistic_residue, scaffold,
-    context(agent_power(analytical),
-            time_horizon(civilizational),
-            exit_options(analytical),
-            spatial_scope(global))).

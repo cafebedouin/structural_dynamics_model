@@ -283,12 +283,3 @@ omega_variable(
 % Technical constraint — mostly substantive, minimal implementation theater
 domain_priors:theater_ratio(quine_self_replication, 0.01).
 narrative_ontology:constraint_metric(quine_self_replication, theater_ratio, 0.01).
-
-% --- Analytical perspective classification (missing) ---
-% chi = 0.2 * 1.15 (analytical) * 1.2 (global) = 0.276
-% Classification: scaffold
-constraint_indexing:constraint_classification(quine_self_replication, scaffold,
-    context(agent_power(analytical),
-            time_horizon(civilizational),
-            exit_options(analytical),
-            spatial_scope(global))).

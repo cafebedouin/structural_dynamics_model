@@ -271,12 +271,3 @@ omega_variable(
 % Formal truth — substantive with near-zero performative component
 domain_priors:theater_ratio(reciprocity_laws_math, 0.0).
 narrative_ontology:constraint_metric(reciprocity_laws_math, theater_ratio, 0.0).
-
-% --- Analytical perspective classification (missing) ---
-% chi = 0.1 * 1.15 (analytical) * 1.2 (global) = 0.138
-% Classification: scaffold
-constraint_indexing:constraint_classification(reciprocity_laws_math, scaffold,
-    context(agent_power(analytical),
-            time_horizon(civilizational),
-            exit_options(analytical),
-            spatial_scope(global))).

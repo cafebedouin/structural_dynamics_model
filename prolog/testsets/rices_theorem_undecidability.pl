@@ -280,12 +280,3 @@ omega_variable(
 % Technical constraint — mostly substantive, minimal implementation theater
 domain_priors:theater_ratio(rices_theorem_undecidability, 0.04).
 narrative_ontology:constraint_metric(rices_theorem_undecidability, theater_ratio, 0.04).
-
-% --- Analytical perspective classification (missing) ---
-% chi = 0.15 * 1.15 (analytical) * 1.2 (global) = 0.207
-% Classification: scaffold
-constraint_indexing:constraint_classification(rices_theorem_undecidability, scaffold,
-    context(agent_power(analytical),
-            time_horizon(civilizational),
-            exit_options(analytical),
-            spatial_scope(global))).

@@ -289,12 +289,3 @@ omega_variable(
 % Formal truth — substantive with near-zero performative component
 domain_priors:theater_ratio(suslin_hypothesis_undecidability, 0.03).
 narrative_ontology:constraint_metric(suslin_hypothesis_undecidability, theater_ratio, 0.03).
-
-% --- Analytical perspective classification (missing) ---
-% chi = 0.2 * 1.15 (analytical) * 1.2 (global) = 0.276
-% Classification: scaffold
-constraint_indexing:constraint_classification(suslin_hypothesis_undecidability, scaffold,
-    context(agent_power(analytical),
-            time_horizon(civilizational),
-            exit_options(analytical),
-            spatial_scope(global))).

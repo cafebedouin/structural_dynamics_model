@@ -274,12 +274,3 @@ omega_variable(
 % Formal truth — substantive with near-zero performative component
 domain_priors:theater_ratio(noethers_theorem_symmetry, 0.0).
 narrative_ontology:constraint_metric(noethers_theorem_symmetry, theater_ratio, 0.0).
-
-% --- Analytical perspective classification (missing) ---
-% chi = 0.1 * 1.15 (analytical) * 1.2 (global) = 0.138
-% Classification: scaffold
-constraint_indexing:constraint_classification(noethers_theorem_symmetry, scaffold,
-    context(agent_power(analytical),
-            time_horizon(civilizational),
-            exit_options(analytical),
-            spatial_scope(global))).
