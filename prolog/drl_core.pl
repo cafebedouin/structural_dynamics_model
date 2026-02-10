@@ -50,7 +50,6 @@
     is_tangled_rope/3,
     is_scaffold/3,
     is_piton/3,
-    calculate_scaled_metric/5,
     get_raw_suppression/2,          % Raw suppression (no temporal/scope scaling)
 
     % Gate precondition for natural laws
@@ -89,43 +88,6 @@ suppression_score(C, V) :-
     narrative_ontology:constraint_metric(C, SuppMetricName, V).
 requires_active_enforcement(C) :- domain_priors:requires_active_enforcement(C).
 emerges_naturally(C) :- domain_priors:emerges_naturally(C).
-
-% ============================================================================
-% SCALING LAW - PENALIZE COORDINATION AT SCALE (NEW Jan 2026)
-% ============================================================================
-% As spatial scope increases, coordination becomes more difficult and
-% the potential for extractive asymmetries grows. This penalty models
-% the "Dunbar-sensitive" scaling observation from sociology.md.
-
-scope_penalty(local,       0.0).  % Baseline
-scope_penalty(regional,    0.15). % e.g., State/Province
-scope_penalty(national,    0.40). % e.g., Country
-scope_penalty(continental, 0.75). % e.g., EU
-scope_penalty(global,      1.20). % Worldwide
-scope_penalty(universal,   2.0).  % Abstract/Universal claims
-
-%% temporal_penalty(+TimeHorizon, -PenaltyFactor)
-%  Models the "discount" or reduced impact of constraints over longer time horizons.
-%  Rule: Metric_eff = Metric * PenaltyFactor
-temporal_penalty(immediate,      1.0). % No discount for immediate effects
-temporal_penalty(biographical,   0.8). % Discount for effects over a lifetime
-temporal_penalty(generational,   0.5). % Significant discount for generational effects
-temporal_penalty(historical,     0.2). % Steep discount for historical scale
-temporal_penalty(civilizational, 0.1). % Very steep discount for civilizational scale
-
-%% calculate_scaled_metric(+ConfigParamName, +Constraint, +Scope, +Time, -ScaledValue)
-%  Calculates a metric value adjusted for both spatial scope and time horizon.
-%  ConfigParamName: The name of the config parameter holding the actual metric name (e.g., suppression_metric_name)
-%  Constraint: The constraint ID
-%  Scope: The spatial scope from the context
-%  Time: The time horizon from the context
-%  ScaledValue: The calculated metric value after applying scope and time adjustments.
-calculate_scaled_metric(ConfigParamName, Constraint, Scope, Time, ScaledValue) :-
-    config:param(ConfigParamName, ActualMetricName), % Get the actual metric name from config
-    (narrative_ontology:constraint_metric(Constraint, ActualMetricName, BaseValue) -> true; BaseValue = 0),
-    (scope_penalty(Scope, ScopeFactor) -> true ; ScopeFactor = 0),
-    (temporal_penalty(Time, TimeFactor) -> true ; TimeFactor = 1.0),
-    ScaledValue is BaseValue * (1 + ScopeFactor) * TimeFactor.
 
 %% get_raw_suppression(+Constraint, -Value)
 %  Suppression is a structural property of the constraint - no temporal or scope scaling.
