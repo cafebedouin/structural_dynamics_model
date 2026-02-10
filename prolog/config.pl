@@ -303,6 +303,14 @@ param(boltzmann_floor_default,               0.05).
 param(reformability_high_threshold,  0.70).
 param(reformability_low_threshold,   0.30).
 
+% --- Excess Extraction Factor (Gaussian) ---
+% Smooth inverted-U curve for reformability's excess extraction component.
+% Factor = Floor + (Peak - Floor) * exp(-((Excess - Center)^2) / (2 * Sigma^2))
+param(excess_factor_center,          0.20).  % Sweet spot for moderate excess
+param(excess_factor_sigma,           0.20).  % Width parameter
+param(excess_factor_peak,            1.0).   % Max factor at center
+param(excess_factor_floor,           0.25).  % Min factor at extremes
+
 % --- Dependency Coupling ---
 % Min sign-agreement ratio for inferred coupling to create a dependency chain.
 % With normalized [0,1] coupling strength, 0.70 means 70% of gradient pairs

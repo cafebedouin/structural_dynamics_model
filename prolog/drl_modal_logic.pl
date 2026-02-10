@@ -725,29 +725,19 @@ coupling_factor(C, Factor) :-
 %% excess_extraction_factor(+C, -Factor)
 %  Higher excess extraction → lower reformability (more entrenched).
 %  But also → higher MOTIVATION to reform.
-%  We model this as: moderate excess = highest reformability
-%  (enough motivation, not too entrenched).
-% TODO (Issue #8 — Statistical Review):
-%   CONCERN: The threshold buckets (0.10, 0.30, 0.50) and their output
-%   values (0.8, 1.0, 0.6, 0.3) encode a non-monotonic "inverted-U"
-%   hypothesis (moderate excess = highest reformability) as a step
-%   function with unjustified breakpoints. The discontinuities at
-%   boundaries (e.g. Excess=0.10 yields 0.8 but Excess=0.11 yields 1.0)
-%   create sensitivity to small measurement changes. Consider replacing
-%   with a smooth function, e.g. a Gaussian centered on the hypothesized
-%   sweet spot: Factor = exp(-((Excess - 0.20)^2) / (2 * 0.15^2)).
-%   The specific bucket boundaries should be validated against empirical
-%   reform outcomes if available.
+%  Smooth Gaussian inverted-U: moderate excess = highest reformability.
+%  Factor = Floor + (Peak - Floor) * exp(-((Excess - Center)^2) / (2 * Sigma^2))
+%  Parameters from config: excess_factor_center (sweet spot), excess_factor_sigma
+%  (width), excess_factor_peak (max at center), excess_factor_floor (min at extremes).
+%  Calibration: approximates old step values within ~0.1 at all boundary points
+%  (e.g. Excess=0.20→1.0, Excess=0.50→0.49 vs old 0.6, Excess=0.60→0.35 vs old 0.3).
 excess_extraction_factor(C, Factor) :-
     (   structural_signatures:excess_extraction(C, Excess)
-    ->  (   Excess =< 0.10
-        ->  Factor = 0.8   % Low excess: easy reform, low urgency
-        ;   Excess =< 0.30
-        ->  Factor = 1.0   % Moderate excess: sweet spot
-        ;   Excess =< 0.50
-        ->  Factor = 0.6   % High excess: entrenched interests
-        ;   Factor = 0.3   % Extreme excess: deeply entrenched
-        )
+    ->  config:param(excess_factor_center, Center),
+        config:param(excess_factor_sigma, Sigma),
+        config:param(excess_factor_peak, Peak),
+        config:param(excess_factor_floor, Floor),
+        Factor is Floor + (Peak - Floor) * exp(-((Excess - Center)**2) / (2 * Sigma**2))
     ;   Factor = 0.5  % No data
     ).
 
