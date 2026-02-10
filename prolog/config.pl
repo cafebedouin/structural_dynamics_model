@@ -303,6 +303,12 @@ param(boltzmann_floor_default,               0.05).
 param(reformability_high_threshold,  0.70).
 param(reformability_low_threshold,   0.30).
 
+% --- Dependency Coupling ---
+% Min sign-agreement ratio for inferred coupling to create a dependency chain.
+% With normalized [0,1] coupling strength, 0.70 means 70% of gradient pairs
+% must agree in sign direction to infer structural dependency.
+param(dependency_coupling_threshold, 0.70).
+
 % --- Coupling Drift Detection ---
 % Minimum coupling score change to register as a drift event.
 param(coupling_drift_threshold,      0.10).

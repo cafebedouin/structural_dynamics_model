@@ -390,7 +390,8 @@ dependency_chain(Source, Target, Impact, Reason, Context) :-
     
     % 2. Inferred structural coupling
     infer_structural_coupling(Source, Target, Strength),
-    Strength > 0.85,
+    config:param(dependency_coupling_threshold, CoupThresh),
+    Strength > CoupThresh,
     
     % But assess impact FROM THIS CONTEXT
     (   context_depends_critically(Target, Source, Context)
@@ -450,33 +451,18 @@ estimate_impact_indexed(Source, Target, Context, moderate, disrupts_coordination
 estimate_impact_indexed(_, _, _, negligible, no_dependency) :- !.
 
 %% infer_structural_coupling(+C1, +C2, -Strength)
-% Discovers hidden dependencies via temporal correlation
-% NOTE: This is NOT indexed - coupling is structural fact
-%
-% TODO (Issue #8 — Statistical Review):
-%   CONCERN 1: Sign-matching is NOT a valid correlation metric. This
-%   counts co-directional gradient pairs but ignores magnitude entirely.
-%   Two series with gradients [+0.001, +0.001] and [+0.999, +0.999]
-%   would score identically to [+0.5, +0.5] and [+0.5, +0.5]. A proper
-%   Pearson or Spearman correlation would capture both direction AND
-%   magnitude/rank relationships.
-%   CONCERN 2: calculate_coupling_strength/3 is UNBOUNDED. The base case
-%   returns 1.0, and each matching pair adds 0.2, so N matching pairs
-%   yields 1.0 + 0.2*N. For 10 matching pairs, Strength = 3.0 — not a
-%   valid [0,1] metric. Downstream consumers (coupling_factor/2) compute
-%   Factor = max(0.0, 1.0 - Strength), which clamps to 0.0 for any
-%   Strength >= 1.0, making the coupling factor binary in practice.
-%   CONCERN 3: dr_gradient_at/3 uses cut (!) after finding the first
-%   T2 > T, but measurement ordering is not guaranteed by findall. This
-%   may compute gradients from non-adjacent time points.
-%   SUGGESTED FIX: Use msort on time points, compute proper Pearson
-%   correlation, and normalize Strength to [0, 1].
+%  Discovers hidden dependencies via temporal gradient correlation.
+%  Strength is the sign-agreement ratio: Matches / Total, in [0, 1].
+%  A pair of gradients "matches" when both are positive, both negative,
+%  or both zero. This captures co-directional movement without requiring
+%  magnitude correlation.
 infer_structural_coupling(C1, C2, Strength) :-
     C1 \= C2,
     findall(G1, dr_gradient_at(C1, _, G1), Gs1),
     findall(G2, dr_gradient_at(C2, _, G2), Gs2),
     length(Gs1, L), L > 1, length(Gs2, L),
-    calculate_coupling_strength(Gs1, Gs2, Strength).
+    count_sign_matches(Gs1, Gs2, Matches, L),
+    Strength is Matches / L.
 
 dr_gradient_at(C, T, Grad) :-
     narrative_ontology:measurement(_, C, extractiveness, T, X1),
@@ -484,13 +470,21 @@ dr_gradient_at(C, T, Grad) :-
     T2 > T, !,
     Grad is X2 - X1.
 
-calculate_coupling_strength([], [], 1.0).
-calculate_coupling_strength([H1|T1], [H2|T2], S) :-
-    ( (H1 > 0, H2 > 0) ; (H1 < 0, H2 < 0) ; (H1 == 0, H2 == 0) ),
-    calculate_coupling_strength(T1, T2, SubS),
-    S is 0.2 + SubS.
-calculate_coupling_strength([_|T1], [_|T2], S) :-
-    calculate_coupling_strength(T1, T2, S).
+%% count_sign_matches(+Gs1, +Gs2, -Matches, +Total)
+%  Counts how many gradient pairs have matching signs.
+count_sign_matches([], [], 0, _).
+count_sign_matches([H1|T1], [H2|T2], Matches, Total) :-
+    count_sign_matches(T1, T2, SubMatches, Total),
+    (   signs_match(H1, H2)
+    ->  Matches is SubMatches + 1
+    ;   Matches = SubMatches
+    ).
+
+%% signs_match(+A, +B)
+%  True when A and B have the same sign (both positive, both negative, or both zero).
+signs_match(A, B) :- A > 0, B > 0.
+signs_match(A, B) :- A < 0, B < 0.
+signs_match(A, B) :- A =:= 0, B =:= 0.
 
 %% assess_scaffold_need(+Constraint, +Context, -Assessment)
 % PRIMARY API: Determines if cutting requires Scaffold FROM SPECIFIC CONTEXT
