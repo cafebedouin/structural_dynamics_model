@@ -18,6 +18,7 @@
     domain_priors:suppression_score/2,
     domain_priors:theater_ratio/2,
     domain_priors:requires_active_enforcement/1,
+    domain_priors:emerges_naturally/1,
     narrative_ontology:has_sunset_clause/1,
     narrative_ontology:interval/3,
     narrative_ontology:measurement/5,
@@ -62,17 +63,20 @@ narrative_ontology:constraint_metric(thermodynamics_entropy, extractiveness, 0.8
 narrative_ontology:constraint_metric(thermodynamics_entropy, suppression_requirement, 0.95).
 narrative_ontology:constraint_metric(thermodynamics_entropy, theater_ratio, 0.0).
 
-% Constraint self-claim (what does the constraint claim to be?)
-% Values: natural_law, coordination, constructed, enforcement
-narrative_ontology:constraint_claim(thermodynamics_entropy, snare).
+% Constraint self-claim — entropy is a natural law (Mountain).
+% The asymmetric *impact* is information about the Mountain, not its type.
+narrative_ontology:constraint_claim(thermodynamics_entropy, mountain).
 
 % Binary flags
 % This constraint does not require active enforcement; it is an emergent property of statistical mechanics.
+domain_priors:emerges_naturally(thermodynamics_entropy).
 
 % Structural property derivation hooks:
 %   has_coordination_function/1 is DERIVED from constraint_beneficiary/2
 %   has_asymmetric_extraction/1 is DERIVED from constraint_victim/2
-narrative_ontology:constraint_beneficiary(thermodynamics_entropy, industrial_engineers).
+% NOTE: No constraint_beneficiary — industrial engineers work *around* entropy,
+% they don't *benefit from* it in the coordination sense. The beneficiary framing
+% implies coordination that doesn't exist for a natural law.
 narrative_ontology:constraint_victim(thermodynamics_entropy, all_ordered_systems).
 
 /* ==========================================================================
@@ -132,9 +136,15 @@ test(perspectival_gap) :-
     TypePowerless == snare,
     TypeInstitutional == rope.
 
-test(analytical_observer_is_snare) :-
-    % Verify the analytical observer sees a Snare due to high extraction, not a Mountain.
-    constraint_indexing:constraint_classification(thermodynamics_entropy, snare, context(agent_power(analytical), _, _, _)).
+test(claim_is_mountain) :-
+    % The constraint's *claim* is mountain — it is a natural law.
+    % Perspectival classifications (snare/rope) remain as experienced types.
+    narrative_ontology:constraint_claim(thermodynamics_entropy, mountain).
+
+test(natural_law_gate_precondition) :-
+    % Entropy qualifies for the natural-law gate precondition, which
+    % blocks snare/tangled_rope classification at query time.
+    drl_core:natural_law_without_beneficiary(thermodynamics_entropy).
 
 test(threshold_validation) :-
     % Verify the constraint is correctly identified as high-extraction.
@@ -149,27 +159,24 @@ test(threshold_validation) :-
 
 /**
  * LOGIC RATIONALE:
- * This model challenges the intuitive classification of a physical law as a Mountain.
- * The Deferential Realism system defines a Mountain by its low extraction (ε <= 0.15).
- * The Second Law of Thermodynamics, however, is fundamentally extractive: it degrades
- * useful energy into waste heat, "extracting" the potential for work from every
- * system. Its base extraction is therefore set very high (0.80).
+ * Entropy is a natural law — a Mountain. The high base extraction (0.80) reflects
+ * its asymmetric *impact* on ordered systems, but impact is not type. A Mountain
+ * that produces asymmetric harm is still a Mountain; the asymmetry is information
+ * about the Mountain's impact, not about its type.
  *
- * This leads to a profound perspectival gap:
- * - For the powerless (an organism), this inescapable extraction is a Snare (aging, decay).
- * - For the institutional (an engineer), the law's predictability is a coordination
- *   mechanism (a Rope) for building efficient systems, generating value (negative
- *   effective extraction).
- * - For the analytical observer, the universal and inescapable nature of this
- *   extraction makes it the ultimate Snare, leading to the heat death of the universe.
+ * The perspectival gap remains profound and correct:
+ * - For the powerless (an organism), entropy is *experienced* as a Snare (aging, decay).
+ * - For the institutional (an engineer), its predictability is *experienced* as a Rope.
+ * - For the analytical observer, the framework's gate precondition recognizes that
+ *   natural laws without enforcement or beneficiaries cannot be snares or tangled
+ *   ropes — there is no coordinating agent to reform or resist.
  *
- * * MANDATROPHY ANALYSIS: [RESOLVED MANDATROPHY]
- * Classifying this constraint as a Snare from the analytical perspective, despite
- * its `natural_law` claim, is a critical resolution of Mandatrophy. It prevents the
- * system from mislabeling a highly extractive, terminal process as a neutral,
- * low-extraction "Mountain." It correctly identifies that immutability combined
- * with high extraction is the definition of an inescapable trap, not a neutral feature
- * of the landscape.
+ * MANDATROPHY ANALYSIS: [RE-RESOLVED]
+ * The earlier Mandatrophy resolution (claiming snare) was itself the error. It
+ * conflated "high impact" with "extractive type." The gate precondition
+ * (natural_law_without_beneficiary) now handles this structurally: natural laws
+ * are blocked from snare/tangled_rope classification regardless of metric values.
+ * The perspectival classifications (snare/rope/snare) remain as experienced types.
  */
 
 /* ==========================================================================

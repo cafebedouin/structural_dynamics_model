@@ -53,6 +53,9 @@
     calculate_scaled_metric/5,
     get_raw_suppression/2,          % Raw suppression (no temporal/scope scaling)
 
+    % Gate precondition for natural laws
+    natural_law_without_beneficiary/1,
+
     % Shared classification (Single Source of Truth)
     classify_from_metrics/6,        % classify_from_metrics(C, BaseEps, Chi, Supp, Context, Type)
 
@@ -274,6 +277,16 @@ scaffold_temporality_check(C) :-
 scaffold_temporality_check(C) :-
     \+ requires_active_enforcement(C).
 
+%% natural_law_without_beneficiary(+C)
+%  True when a constraint emerges naturally, requires no enforcement,
+%  and has no identifiable human beneficiary. Such constraints are
+%  Mountains regardless of metric values — asymmetric impact is not
+%  asymmetric extraction.
+natural_law_without_beneficiary(C) :-
+    emerges_naturally(C),
+    \+ requires_active_enforcement(C),
+    \+ narrative_ontology:constraint_beneficiary(C, _).
+
 classify_from_metrics(_C, BaseEps, _Chi, Supp, Context, mountain) :-
     config:param(mountain_suppression_ceiling, SuppCeil),
     Supp =< SuppCeil,
@@ -281,6 +294,8 @@ classify_from_metrics(_C, BaseEps, _Chi, Supp, Context, mountain) :-
     BaseEps =< MaxX,
     constraint_indexing:effective_immutability_for_context(Context, mountain), !.
 
+classify_from_metrics(C, _BaseEps, _Chi, _Supp, _Context, snare) :-
+    natural_law_without_beneficiary(C), !, fail.     % Block snare for natural laws
 classify_from_metrics(_C, BaseEps, Chi, Supp, Context, snare) :-
     config:param(snare_chi_floor, ChiFloor),
     Chi >= ChiFloor,
@@ -298,15 +313,19 @@ classify_from_metrics(C, _BaseEps, Chi, _Supp, _Context, scaffold) :-
     config:param(theater_metric_name, TheaterMetricName),
     \+ (narrative_ontology:constraint_metric(C, TheaterMetricName, TR), TR > 0.70), !.
 
-classify_from_metrics(_C, BaseEps, Chi, _Supp, Context, rope) :-
+classify_from_metrics(C, BaseEps, Chi, _Supp, Context, rope) :-
     config:param(rope_chi_ceiling, ChiCeil),
     Chi =< ChiCeil,
     % v6.0: When Chi =< 0, agent is a net beneficiary — skip base extraction gate.
     % Negative effective extraction means the constraint is experienced as
     % coordination infrastructure regardless of how high the raw base is.
     (Chi =< 0 -> true ; config:param(rope_epsilon_ceiling, EpsCeil), BaseEps =< EpsCeil),
-    constraint_indexing:effective_immutability_for_context(Context, rope), !.
+    (   constraint_indexing:effective_immutability_for_context(Context, rope)
+    ;   emerges_naturally(C)  % Domain-invariant: bypass power-indexed immutability
+    ), !.
 
+classify_from_metrics(C, _BaseEps, _Chi, _Supp, _Context, tangled_rope) :-
+    natural_law_without_beneficiary(C), !, fail.     % Block tangled_rope for natural laws
 classify_from_metrics(C, BaseEps, Chi, Supp, _Context, tangled_rope) :-
     config:param(tangled_rope_chi_floor, ChiFloor),
     config:param(tangled_rope_chi_ceil, ChiCeil),

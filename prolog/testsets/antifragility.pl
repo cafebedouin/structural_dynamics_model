@@ -63,7 +63,7 @@ narrative_ontology:constraint_metric(antifragility, suppression_requirement, 0.6
 narrative_ontology:constraint_metric(antifragility, theater_ratio, 0.55).
 
 % Constraint classification claim
-narrative_ontology:constraint_claim(antifragility, mountain).
+narrative_ontology:constraint_claim(antifragility, tangled_rope).
 
 % Constraint metric facts used by the classification engine.
 domain_priors:requires_active_enforcement(antifragility).

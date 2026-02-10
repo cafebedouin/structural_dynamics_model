@@ -1,6 +1,6 @@
 # Stress Test: Pre-Rebuild vs Current Classification Comparison
 
-**Generated:** 2026-02-10 11:27:06
+**Generated:** 2026-02-10 12:56:09
 **Baseline commit:** `8150d65` (pre-rebuild)
 **Current:** HEAD
 
@@ -28,8 +28,8 @@
 | piton | 0 | 0.0% | 87 | 11.9% |
 | rope | 83 | 17.8% | 64 | 8.8% |
 | scaffold | 0 | 0.0% | 15 | 2.1% |
-| snare | 0 | 0.0% | 52 | 7.1% |
-| tangled_rope | 0 | 0.0% | 347 | 47.5% |
+| snare | 0 | 0.0% | 51 | 7.0% |
+| tangled_rope | 0 | 0.0% | 348 | 47.6% |
 
 ## 2. Claimed Type Changes
 
@@ -232,6 +232,36 @@
 | wikipedia_crowdsourcing_2026 | technological | 0.05 | 0.05 | 0.40 | 0.40 |
 | wikipedia_notability_requirement_2026 | social | 0.40 | 0.40 | 0.70 | 0.70 |
 
+### mountain -> tangled_rope (25 constraints)
+
+| Constraint | Domain | Old Ext | New Ext | Old Sup | New Sup |
+|------------|--------|---------|---------|---------|---------|
+| ai_task_horizon_reliability | technological | 0.45 | 0.48 | 0.60 | 0.60 |
+| antifragility | technological | 0.40 | 0.75 | 0.60 | 0.65 |
+| china_taiwan_reunification_mandate | political | 0.80 | 0.80 | 0.90 | 0.90 |
+| cia_fbi_legal_wall | political | 0.70 | 0.70 | 0.85 | 0.85 |
+| coinbase_regulatory_uncertainty | political | 0.70 | 0.70 | 0.90 | 0.90 |
+| colorado_sbe_decentralization_friction | political | 0.70 | 0.70 | 0.60 | 0.60 |
+| couples_residency_match | technological | 0.50 | 0.50 | 0.95 | 0.95 |
+| dionysaic_frenzy | religious | 0.80 | 0.80 | 0.90 | 0.90 |
+| exploration_vs_exploitation | technological | 0.30 | 0.55 | 0.40 | 0.65 |
+| genetic_predisposition | technological | 0.60 | 0.60 | 0.50 | 0.50 |
+| gilgamesh_mortality_limit | philosophical | 1.00 | 1.00 | 0.90 | 0.90 |
+| greshams_law | economic | 0.60 | 0.60 | 0.70 | 0.70 |
+| hammurabi | political | 0.50 | 0.50 | 0.80 | 0.80 |
+| innovators_dilemma | economic | 0.50 | 0.55 | 0.70 | 0.70 |
+| iron_law_of_oligarchy | political | 0.60 | 0.60 | 0.60 | 0.60 |
+| medieval_church_hegemony | religious | 0.70 | 0.70 | 0.90 | 0.90 |
+| nash_equilibrium_coordination | economic | 0.50 | 0.52 | 0.40 | 0.45 |
+| network_effects | economic | 0.50 | 0.55 | 0.60 | 0.60 |
+| parkinsons_law | organizational | 0.50 | 0.50 | 0.40 | 0.40 |
+| peter_principle | organizational | 0.40 | 0.55 | 0.50 | 0.60 |
+| radiologic_diagnostic_threshold | medical | 0.70 | 0.70 | 0.60 | 0.60 |
+| s1_airbnb | economic | 0.60 | 0.60 | 0.80 | 0.80 |
+| st_petersburg_paradox | mathematical | 0.65 | 0.65 | 0.40 | 0.40 |
+| stoic_logos_governance | philosophical | 0.70 | 0.75 | 0.80 | 0.80 |
+| zipfs_law | technological | 0.50 | 0.75 | 0.70 | 0.70 |
+
 ### noose -> snare (24 constraints)
 
 | Constraint | Domain | Old Ext | New Ext | Old Sup | New Sup |
@@ -260,35 +290,6 @@
 | starwars_evolutionary_mutation | social | 0.75 | 0.75 | 0.80 | 0.80 |
 | sunk_cost_fallacy | economic | 0.50 | 0.50 | 0.60 | 0.60 |
 | trojan_war_spoils | military | 1.00 | 1.00 | 1.00 | 1.00 |
-
-### mountain -> tangled_rope (24 constraints)
-
-| Constraint | Domain | Old Ext | New Ext | Old Sup | New Sup |
-|------------|--------|---------|---------|---------|---------|
-| ai_task_horizon_reliability | technological | 0.45 | 0.48 | 0.60 | 0.60 |
-| china_taiwan_reunification_mandate | political | 0.80 | 0.80 | 0.90 | 0.90 |
-| cia_fbi_legal_wall | political | 0.70 | 0.70 | 0.85 | 0.85 |
-| coinbase_regulatory_uncertainty | political | 0.70 | 0.70 | 0.90 | 0.90 |
-| colorado_sbe_decentralization_friction | political | 0.70 | 0.70 | 0.60 | 0.60 |
-| couples_residency_match | technological | 0.50 | 0.50 | 0.95 | 0.95 |
-| dionysaic_frenzy | religious | 0.80 | 0.80 | 0.90 | 0.90 |
-| exploration_vs_exploitation | technological | 0.30 | 0.55 | 0.40 | 0.65 |
-| genetic_predisposition | technological | 0.60 | 0.60 | 0.50 | 0.50 |
-| gilgamesh_mortality_limit | philosophical | 1.00 | 1.00 | 0.90 | 0.90 |
-| greshams_law | economic | 0.60 | 0.60 | 0.70 | 0.70 |
-| hammurabi | political | 0.50 | 0.50 | 0.80 | 0.80 |
-| innovators_dilemma | economic | 0.50 | 0.55 | 0.70 | 0.70 |
-| iron_law_of_oligarchy | political | 0.60 | 0.60 | 0.60 | 0.60 |
-| medieval_church_hegemony | religious | 0.70 | 0.70 | 0.90 | 0.90 |
-| nash_equilibrium_coordination | economic | 0.50 | 0.52 | 0.40 | 0.45 |
-| network_effects | economic | 0.50 | 0.55 | 0.60 | 0.60 |
-| parkinsons_law | organizational | 0.50 | 0.50 | 0.40 | 0.40 |
-| peter_principle | organizational | 0.40 | 0.55 | 0.50 | 0.60 |
-| radiologic_diagnostic_threshold | medical | 0.70 | 0.70 | 0.60 | 0.60 |
-| s1_airbnb | economic | 0.60 | 0.60 | 0.80 | 0.80 |
-| st_petersburg_paradox | mathematical | 0.65 | 0.65 | 0.40 | 0.40 |
-| stoic_logos_governance | philosophical | 0.70 | 0.75 | 0.80 | 0.80 |
-| zipfs_law | technological | 0.50 | 0.75 | 0.70 | 0.70 |
 
 ### noose -> piton (17 constraints)
 
@@ -346,17 +347,6 @@
 | the_churn_systemic_upheaval | political | 0.90 | 0.90 | 0.80 | 0.80 |
 | the_wall_procedural_barrier | legal | 0.80 | 0.80 | 0.90 | 0.90 |
 
-### mountain -> snare (6 constraints)
-
-| Constraint | Domain | Old Ext | New Ext | Old Sup | New Sup |
-|------------|--------|---------|---------|---------|---------|
-| ergo_autolykos_asic_resistance | technological | 0.20 | 0.20 | 0.85 | 0.85 |
-| gamblers_ruin_stochastic_extinction | mathematical | 0.90 | 0.90 | 0.50 | 0.50 |
-| metamorphosis_samsa | economic | 0.80 | 0.80 | 0.70 | 0.70 |
-| russells_paradox_self_reference | mathematical | 0.70 | 0.70 | 0.40 | 0.40 |
-| thermodynamics_entropy | technological | 0.80 | 0.80 | 0.70 | 0.95 |
-| tractarian_logic_limit | philosophical | 0.70 | 0.70 | 0.95 | 0.95 |
-
 ### noose -> rope (5 constraints)
 
 | Constraint | Domain | Old Ext | New Ext | Old Sup | New Sup |
@@ -366,6 +356,16 @@
 | platform_cooperativism_governance | economic | 0.05 | 0.05 | 0.20 | 0.20 |
 | quantum_entanglement_protocol | technological | 0.20 | 0.20 | 0.95 | 0.95 |
 | shitty_feedback_handling | social | 0.40 | 0.40 | 0.30 | 0.30 |
+
+### mountain -> snare (5 constraints)
+
+| Constraint | Domain | Old Ext | New Ext | Old Sup | New Sup |
+|------------|--------|---------|---------|---------|---------|
+| ergo_autolykos_asic_resistance | technological | 0.20 | 0.20 | 0.85 | 0.85 |
+| gamblers_ruin_stochastic_extinction | mathematical | 0.90 | 0.90 | 0.50 | 0.50 |
+| metamorphosis_samsa | economic | 0.80 | 0.80 | 0.70 | 0.70 |
+| russells_paradox_self_reference | mathematical | 0.70 | 0.70 | 0.40 | 0.40 |
+| tractarian_logic_limit | philosophical | 0.70 | 0.70 | 0.95 | 0.95 |
 
 ### rope -> piton (3 constraints)
 
@@ -403,7 +403,6 @@ These constraints kept the same `claimed_type` but their perspective arrays chan
 
 | Constraint | Claimed Type | Old Perspectives | New Perspectives |
 |------------|-------------|------------------|------------------|
-| antifragility | mountain | mountain:1 | mountain:1, rope:1, snare:1, tangled_rope:1 |
 | automatic_enrollment_defaults | rope | rope:1 | mountain:1, rope:1, snare:1 |
 | banach_fixed_point | mountain | mountain:1 | mountain:3 |
 | birthday_paradox_collison | mountain |  | mountain:1 |
@@ -453,6 +452,7 @@ These constraints kept the same `claimed_type` but their perspective arrays chan
 | s1_visa | mountain |  | snare:1 |
 | s1_visa_judgment_sharing_agreement | rope |  | snare:1 |
 | south_china_sea_arbitration_2016_2026 | mountain | noose:1 | snare:1 |
+| square_cube_law | mountain | rope:1 | mountain:3 |
 | ... | ... | ... | ... |
 
 *(6 additional silent reclassifications omitted)*
@@ -463,7 +463,6 @@ These constraints kept the same `claimed_type` but their perspective arrays chan
 
 | Constraint | Domain | Old Type | New Type | Ext Delta | Sup Delta |
 |------------|--------|----------|----------|-----------|-----------|
-| banach_fixed_point | logical | mountain | mountain | -0.19 | +0.79 |
 | legacy_system_technical_debt | technological | noose | piton | -0.77 | -0.56 |
 | square_cube_law | technological | mountain | mountain | -0.49 | -0.69 |
 | mco_unit_system_discontinuity | technological | noose | piton | -0.60 | -0.60 |
@@ -476,20 +475,21 @@ These constraints kept the same `claimed_type` but their perspective arrays chan
 | ulysses_chp18 | social | rope | piton | +0.10 | +0.46 |
 | ulysses_chp08 | social | noose | piton | -0.10 | +0.40 |
 | hanlons_razor | social | noose | tangled_rope | +0.35 | +0.00 |
-| antifragility | technological | mountain | mountain | +0.35 | +0.05 |
+| antifragility | technological | mountain | tangled_rope | +0.35 | +0.05 |
 | ulysses_chp17 | technological | rope | piton | +0.06 | +0.35 |
 | ulysses_chp01 | social | noose | piton | -0.32 | -0.15 |
 | conversational_dogmas_interuption | social | NONE | tangled_rope | +0.25 | +0.00 |
 | dunning_kruger_effect | social | noose | tangled_rope | +0.25 | +0.05 |
 | exploration_vs_exploitation | technological | mountain | tangled_rope | +0.25 | +0.25 |
 | 26usc469_real_estate_exemption | legal | NONE | tangled_rope | +0.25 | +0.15 |
-| thermodynamics_entropy | technological | mountain | snare | +0.00 | +0.25 |
+| thermodynamics_entropy | technological | mountain | mountain | +0.00 | +0.25 |
 | ulysses_chp06 | social | noose | piton | -0.01 | +0.25 |
 | ulysses_chp07 | technological | noose | piton | +0.11 | +0.25 |
 | ulysses_chp13 | social | noose | piton | -0.01 | +0.25 |
 | zipfs_law | technological | mountain | tangled_rope | +0.25 | +0.00 |
 | ulysses_chp02 | economic | noose | piton | -0.21 | +0.02 |
 | hoa_covenants | economic | rope | piton | +0.10 | -0.20 |
+| banach_fixed_point | logical | mountain | mountain | -0.19 | -0.19 |
 | ulysses_chp12 | social | noose | piton | -0.06 | +0.18 |
 | algorithmic_bias | technological | noose | snare | +0.15 | +0.00 |
 | grete_samsa_transition | social | rope | tangled_rope | +0.15 | +0.00 |
@@ -506,7 +506,7 @@ Rows = old type, Columns = new type. Cells = number of constraints taking that p
 | Old \ New | mountain | piton | rope | snare | tangled_rope | **Total** |
 |-----------|----------|-------|-------|-------|--------------|-----------|
 | **NONE** | 27 | . | 13 | 11 | 53 | **104** |
-| **mountain** | 88 | 2 | 2 | 6 | 24 | **122** |
+| **mountain** | 88 | 2 | 2 | 5 | 25 | **122** |
 | **noose** | 27 | 17 | 5 | 24 | 35 | **108** |
 | **rope** | . | 3 | 36 | . | 30 | **69** |
-| **Total** | **142** | **22** | **56** | **41** | **142** | **403** |
+| **Total** | **142** | **22** | **56** | **40** | **143** | **403** |

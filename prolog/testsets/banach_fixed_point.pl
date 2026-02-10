@@ -51,14 +51,15 @@
    2. BASE PROPERTIES (DOMAIN PRIORS)
    ========================================================================== */
 
-% Mountains are defined by near-zero extraction and high suppression.
-domain_priors:base_extractiveness(banach_fixed_point, 0.01). 
-domain_priors:suppression_score(banach_fixed_point, 0.99).   
+% Mountains: near-zero extraction and near-zero suppression.
+% A theorem doesn't "suppress" — it simply IS. Supp=0.01 passes mountain gate.
+domain_priors:base_extractiveness(banach_fixed_point, 0.01).
+domain_priors:suppression_score(banach_fixed_point, 0.01).
 domain_priors:theater_ratio(banach_fixed_point, 0.05). % Abstract math has low theater.
 
 % Primary keys for classification engine
 narrative_ontology:constraint_metric(banach_fixed_point, extractiveness, 0.01).
-narrative_ontology:constraint_metric(banach_fixed_point, suppression_requirement, 0.99).
+narrative_ontology:constraint_metric(banach_fixed_point, suppression_requirement, 0.01).
 narrative_ontology:constraint_metric(banach_fixed_point, theater_ratio, 0.05).
 
 % Constraint classification claim
@@ -108,10 +109,11 @@ test(mountain_integrity) :-
     narrative_ontology:constraint_metric(banach_fixed_point, extractiveness, E),
     E < 0.05.
 
-test(absolute_suppression) :-
-    % Logical theorems have high suppression of contradictory states.
+test(mountain_suppression) :-
+    % Mathematical theorems don't "suppress" in the framework's sense —
+    % they simply ARE. Suppression must be below mountain ceiling (0.05).
     domain_priors:suppression_score(banach_fixed_point, S),
-    S > 0.95.
+    S =< 0.05.
 
 :- end_tests(banach_fixed_point_tests).
 

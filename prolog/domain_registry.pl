@@ -1,7 +1,7 @@
 :- module(domain_registry, [domain_category/2]).
 % --- AUTOMATICALLY GENERATED DOMAIN REGISTRY ---
 % Thresholds aligned with config.pl: Rope <= 0.15, Snare >= 0.46, Tangled Rope 0.16-0.9.
-% Total entries: 723
+% Total entries: 727
 
 domain_category('8k_tv_limit_2026', piton).
 domain_category(abstraction_boundary_overrun, snare).
@@ -249,6 +249,7 @@ domain_category(exoplanetary_habitability_arbitrage, rope).
 domain_category(expert_disempowerment, snare).
 domain_category(exploration_vs_exploitation, snare).
 domain_category(extraordinary_narrative_shift, tangled_rope).
+domain_category(faa_boeing_regulatory_capture, tangled_rope).
 domain_category(factional_instability, snare).
 domain_category(faint_blue_neural_bifurcation, snare).
 domain_category(fair_use_doctrine, rope).
@@ -534,6 +535,7 @@ domain_category(postman_survival_protocol, mountain).
 domain_category(power_without_responsibility, snare).
 domain_category(prestige_signal_inflation, piton).
 domain_category(price_signal_corruption, snare).
+domain_category(prime_age_male_unwork, snare).
 domain_category(prime_number_theorem, mountain).
 domain_category(prisoners_dilemma_equilibrium, mountain).
 domain_category(private_identity_integration, rope).
@@ -704,7 +706,9 @@ domain_category(ulysses_tower_1904, piton).
 domain_category(unclos_2026, rope).
 domain_category(union_protection_underperformance, snare).
 domain_category(universal_mathematics_communication, mountain).
+domain_category(us_employer_health_insurance, snare).
 domain_category(us_iran_drone_conflict, snare).
+domain_category(us_labor_mobility, snare).
 domain_category(us_suburban_zoning_2025, snare).
 domain_category(us_two_party_duopoly, snare).
 domain_category(usc_26_469_passive_loss, snare).

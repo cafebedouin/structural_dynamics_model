@@ -15,7 +15,8 @@
     drl_core:base_extractiveness/2,
     drl_core:suppression_score/2,
     drl_core:requires_active_enforcement/1,
-    drl_core:emerges_naturally/1.
+    drl_core:emerges_naturally/1,
+    emerges_naturally/1.
 
 drl_core:base_extractiveness(_, _) :- fail.
 drl_core:suppression_score(_, _) :- fail.
