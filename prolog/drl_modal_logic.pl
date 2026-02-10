@@ -930,34 +930,43 @@ purity_deficit(C, excess_extraction_deficit(Score)) :-
 
 %% compute_reform_urgency(+Gap, +Pressure, +Reformability, -Urgency)
 %  Maps quantitative inputs to categorical urgency level.
-%  Critical: large gap AND high pressure (active harm, reform overdue)
-%  High: large gap OR high pressure (significant but not crisis)
-%  Moderate: meaningful gap with reasonable reformability
-%  Low: small gap, system still in "sound" territory
-%  None: no gap (purity at or above target)
-%
-% TODO (Issue #8 — Statistical Review):
-%   CONCERN 1: All thresholds (Gap: 0.05/0.15/0.30/0.40; Pressure: 1.5/2.0)
-%   are hardcoded without documented justification. These should either be
-%   derived from config:param/2 for tuning, or backed by calibration data.
-%   CONCERN 2: The "high" clause uses disjunction (Gap > 0.30 OR Pressure > 1.5)
-%   while "critical" uses conjunction (AND). This means a Gap of 0.31 with
-%   zero Pressure classifies as "high" — the same level as Gap=0.41 with
-%   Pressure=1.9. Consider whether the disjunction is intentional or if
-%   "high" should require both conditions above separate thresholds.
-%   CONCERN 3: Reformability is only used in the "moderate" clause and
-%   completely ignored for critical/high/low/none. A deeply entrenched
-%   constraint (Reformability=0.1) with Gap=0.45, Pressure=2.1 gets
-%   "critical" urgency despite being nearly impossible to reform.
-compute_reform_urgency(Gap, Pressure, _, critical) :-
-    Gap > 0.40, Pressure > 2.0, !.
-compute_reform_urgency(Gap, Pressure, _, high) :-
-    (Gap > 0.30 ; Pressure > 1.5), !.
-compute_reform_urgency(Gap, _, Reformability, moderate) :-
-    Gap > 0.15, Reformability > 0.50, !.
-compute_reform_urgency(Gap, _, _, low) :-
-    Gap > 0.05, !.
-compute_reform_urgency(_, _, _, none).
+%  Two-phase: raw urgency from gap/pressure thresholds (config-driven),
+%  then modulation by reformability — if Reformability =< floor,
+%  urgency is downgraded one level (can't rush reform on entrenched
+%  constraints). Urgency is informational only (packed into
+%  reform_recommendation/7, not consumed for control flow).
+compute_reform_urgency(Gap, Pressure, Reformability, Urgency) :-
+    raw_urgency(Gap, Pressure, Reformability, RawUrgency),
+    config:param(reform_urgency_reformability_floor, ReformFloor),
+    (   Reformability =< ReformFloor,
+        member(RawUrgency, [critical, high, moderate])
+    ->  downgrade_urgency(RawUrgency, Urgency)
+    ;   Urgency = RawUrgency
+    ).
+
+%% raw_urgency(+Gap, +Pressure, +Reformability, -Urgency)
+%  Threshold-based urgency classification. Thresholds from config.pl.
+raw_urgency(Gap, Pressure, _, critical) :-
+    config:param(reform_urgency_gap_critical, GapCrit),
+    config:param(reform_urgency_pressure_critical, PresCrit),
+    Gap > GapCrit, Pressure > PresCrit, !.
+raw_urgency(Gap, Pressure, _, high) :-
+    config:param(reform_urgency_gap_high, GapHigh),
+    config:param(reform_urgency_pressure_high, PresHigh),
+    (Gap > GapHigh ; Pressure > PresHigh), !.
+raw_urgency(Gap, _, Reformability, moderate) :-
+    config:param(reform_urgency_gap_moderate, GapMod),
+    Gap > GapMod, Reformability > 0.50, !.
+raw_urgency(Gap, _, _, low) :-
+    config:param(reform_urgency_gap_low, GapLow),
+    Gap > GapLow, !.
+raw_urgency(_, _, _, none).
+
+%% downgrade_urgency(+Level, -Downgraded)
+%  Reduces urgency one level for low-reformability constraints.
+downgrade_urgency(critical, high).
+downgrade_urgency(high, moderate).
+downgrade_urgency(moderate, low).
 
 /* ================================================================
    STAGE 7: PURITY-QUALIFIED ACTION ALGEBRA (v5.1)

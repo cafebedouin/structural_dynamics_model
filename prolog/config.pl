@@ -317,6 +317,17 @@ param(excess_factor_floor,           0.25).  % Min factor at extremes
 % must agree in sign direction to infer structural dependency.
 param(dependency_coupling_threshold, 0.70).
 
+% --- Reform Urgency Thresholds ---
+% Gap and pressure thresholds for compute_reform_urgency classification.
+param(reform_urgency_gap_critical,          0.40).
+param(reform_urgency_gap_high,              0.30).
+param(reform_urgency_gap_moderate,          0.15).
+param(reform_urgency_gap_low,               0.05).
+param(reform_urgency_pressure_critical,     2.0).
+param(reform_urgency_pressure_high,         1.5).
+% Reformability below this floor triggers urgency downgrade (one level).
+param(reform_urgency_reformability_floor,   0.30).
+
 % --- Coupling Drift Detection ---
 % Minimum coupling score change to register as a drift event.
 param(coupling_drift_threshold,      0.10).
