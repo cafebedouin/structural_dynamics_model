@@ -916,62 +916,27 @@ coupling_test_context(analytical, Scope, context(
     exit_options(analytical), spatial_scope(Scope))).
 
 %% classify_at_context(+C, +Context, -Type)
-%  Classifies constraint at a specific context.
-%  Uses the metric pipeline directly to avoid circular dependency
-%  with drl_core (which uses structural_signatures).
+%  Computes metrics and delegates to drl_core:classify_from_metrics/6
+%  (the single source of truth for threshold classification).
+%  Uses explicit module qualification to avoid circular use_module
+%  dependency — drl_core imports structural_signatures, so we cannot
+%  import drl_core, but runtime-qualified calls work fine since both
+%  modules are loaded by the time any coupling test runs.
+%  Also uses extractiveness_for_agent (v6.0 directionality chain)
+%  instead of the legacy power_modifier * scope_modifier calculation.
 classify_at_context(C, Context, Type) :-
     config:param(extractiveness_metric_name, ExtMetricName),
     (   narrative_ontology:constraint_metric(C, ExtMetricName, BaseEps)
     ->  true
     ;   BaseEps = 0.5
     ),
-    Context = context(agent_power(Power), _, _, spatial_scope(Scope)),
-    constraint_indexing:power_modifier(Power, PowerMod),
-    constraint_indexing:scope_modifier(Scope, ScopeMod),
-    Chi is BaseEps * PowerMod * ScopeMod,
+    constraint_indexing:extractiveness_for_agent(C, Context, Chi),
     config:param(suppression_metric_name, SuppMetricName),
     (   narrative_ontology:constraint_metric(C, SuppMetricName, Supp)
     ->  true
     ;   Supp = 0
     ),
-    classify_for_coupling_test(C, BaseEps, Chi, Supp, Context, Type).
-
-%% classify_for_coupling_test(+C, +BaseEps, +Chi, +Supp, +Context, -Type)
-%  Simplified classification for coupling test — mirrors classify_from_metrics
-%  priority order but avoids calling into drl_core (prevents circular deps).
-classify_for_coupling_test(_C, BaseEps, _Chi, Supp, Context, mountain) :-
-    config:param(mountain_suppression_ceiling, SuppCeil),
-    Supp =< SuppCeil,
-    config:param(mountain_extractiveness_max, MaxX),
-    BaseEps =< MaxX,
-    constraint_indexing:effective_immutability_for_context(Context, mountain), !.
-
-classify_for_coupling_test(_C, BaseEps, Chi, Supp, Context, snare) :-
-    config:param(snare_chi_floor, ChiFloor),
-    Chi >= ChiFloor,
-    config:param(snare_epsilon_floor, EpsFloor),
-    BaseEps >= EpsFloor,
-    config:param(snare_suppression_floor, SuppFloor),
-    Supp >= SuppFloor,
-    constraint_indexing:effective_immutability_for_context(Context, rope), !.
-
-classify_for_coupling_test(_C, BaseEps, Chi, _Supp, Context, rope) :-
-    config:param(rope_chi_ceiling, ChiCeil),
-    Chi =< ChiCeil,
-    config:param(rope_epsilon_ceiling, EpsCeil),
-    BaseEps =< EpsCeil,
-    constraint_indexing:effective_immutability_for_context(Context, rope), !.
-
-classify_for_coupling_test(_C, BaseEps, Chi, Supp, _Context, tangled_rope) :-
-    config:param(tangled_rope_chi_floor, ChiFloor),
-    config:param(tangled_rope_chi_ceil, ChiCeil),
-    Chi >= ChiFloor, Chi =< ChiCeil,
-    config:param(tangled_rope_epsilon_floor, EpsFloor),
-    BaseEps >= EpsFloor,
-    config:param(tangled_rope_suppression_floor, MinS),
-    Supp >= MinS, !.
-
-classify_for_coupling_test(_C, _BaseEps, _Chi, _Supp, _Context, unknown).
+    drl_core:classify_from_metrics(C, BaseEps, Chi, Supp, Context, Type).
 
 %% count_coupling_violations(+Grid, +Powers, +Scopes, -Violations)
 %  Counts how many (Power, Scope) pairs show classification that
