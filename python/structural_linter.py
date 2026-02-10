@@ -361,4 +361,39 @@ def lint_file(filepath):
                         f"vacuous. Bind '{var}' to a value before comparing."
                     )
 
+    # 22. DUPLICATE MEASUREMENT DETECTION
+    # drl_lifecycle.pl uses msort to order measurement points by time.
+    # If two measurements share the same (Constraint, Metric, Time) but different
+    # values, msort orders them by value, creating a phantom step that can
+    # incorrectly trigger non_monotonic_trajectory.
+    measurements = {}  # (constraint, metric, time) -> [(id, value), ...]
+    for m_match in re.finditer(
+            r"narrative_ontology:measurement\(\s*(\w+)\s*,\s*(\w+)\s*,"
+            r"\s*([^,]+?)\s*,\s*([\d.]+)\s*,\s*([\d.]+)\s*\)",
+            content):
+        m_id = m_match.group(1)
+        constraint = m_match.group(2)
+        metric = m_match.group(3).strip()
+        time_pt = m_match.group(4)
+        value = m_match.group(5)
+        key = (constraint, metric, time_pt)
+        measurements.setdefault(key, []).append((m_id, value))
+
+    for (constraint, metric, time_pt), entries in measurements.items():
+        if len(entries) > 1:
+            values = [v for _, v in entries]
+            unique_values = set(values)
+            if len(unique_values) > 1:
+                errors.append(
+                    f"DUPLICATE_MEASUREMENT: ({constraint}, {metric}, {time_pt}) "
+                    f"appears {len(entries)} times with different values. "
+                    f"This can cause phantom steps in monotonicity detection. "
+                    f"Use unique time points or consolidate measurements."
+                )
+            else:
+                errors.append(
+                    f"REDUNDANT_MEASUREMENT: ({constraint}, {metric}, {time_pt}, "
+                    f"{values[0]}) is declared more than once. Remove the duplicate."
+                )
+
     return errors
