@@ -4,9 +4,13 @@
 :- use_module(data_validation).
 :- use_module(report_generator).
 
-:- chdir('../prolog').
+% Resolve the base directory at load time so test paths work regardless
+% of the caller's working directory, without mutating global state via chdir/1.
+:- prolog_load_context(directory, Dir),
+   asserta(validation_suite_base_dir(Dir)).
 
 :- dynamic test_passed/1, test_failed/3, test_case/4.
+:- dynamic validation_suite_base_dir/1.
 
 % --- Test Case Definitions ---
 test_case('testsets/26usc469_real_estate_exemption.pl', '26usc469_real_estate_exemption', '26USC469_REAL_ESTATE_EXEMPTION', 1).
@@ -741,14 +745,25 @@ test_case('testsets/zipfs_law.pl', 'zipfs_law', 'ZIPFS_LAW', 729).
 test_case('testsets/zombie_reasoning_2026.pl', 'zombie_reasoning_2026', 'ZOMBIE_REASONING_2026', 730).
 
 % --- Test Suite Runner ---
+%  Uses setup_call_cleanup to temporarily set the working directory to
+%  the module's base directory for the duration of the suite run. This
+%  ensures testset files can resolve their bare use_module/1 references
+%  without permanently mutating global working directory state.
 run_dynamic_suite :-
     retractall(test_passed(_)),
     retractall(test_failed(_, _, _)),
     writeln('--- STARTING DYNAMIC VALIDATION ---'),
-    forall(test_case(Path, ID, Label, N), run_single_test(Path, ID, Label, N)),
-    count_and_report,
-    % Call validate_all directly from data_validation module
-    data_validation:validate_all.
+    validation_suite_base_dir(BaseDir),
+    working_directory(OldDir, BaseDir),
+    setup_call_cleanup(
+        true,
+        (   forall(test_case(Path, ID, Label, N), run_single_test(Path, ID, Label, N)),
+            count_and_report,
+            % Call validate_all directly from data_validation module
+            data_validation:validate_all
+        ),
+        working_directory(_, OldDir)
+    ).
 
 % --- Single Test Executor ---
 run_single_test(Path, ID, _Label, N) :-
