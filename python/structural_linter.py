@@ -325,4 +325,33 @@ def lint_file(filepath):
                 "does not declare it in the :- multifile block."
             )
 
+    # 21. VACUOUS_TEST DETECTION
+    # Finds test/1 clauses where a comparison operator uses a Prolog variable
+    # that is never bound (singleton in clause body). These tests always
+    # succeed or fail vacuously.
+    comparison_ops = r'(?:>=|=<|>|<|=:=|=\\=)'
+    # Match test(Name) :- Body. across lines (clauses end with '.\n' or EOF)
+    for test_match in re.finditer(
+            r'test\((\w+)\)\s*:-\s*(.*?)\.(?:\n|$)', content, re.DOTALL):
+        test_name = test_match.group(1)
+        body = test_match.group(2)
+        body_start_line = content[:test_match.start()].count('\n') + 1
+
+        # Find all comparisons in the body
+        for cmp_match in re.finditer(
+                rf'(\b[A-Z_]\w*)\s*{comparison_ops}|{comparison_ops}\s*(\b[A-Z_]\w*)',
+                body):
+            var = cmp_match.group(1) or cmp_match.group(2)
+            if var and var != '_':
+                # Count occurrences of this variable in the body
+                var_count = len(re.findall(rf'\b{re.escape(var)}\b', body))
+                if var_count == 1:
+                    cmp_line = body_start_line + body[:cmp_match.start()].count('\n')
+                    errors.append(
+                        f"VACUOUS_TEST: test({test_name}) at line {cmp_line} uses "
+                        f"unbound variable '{var}' in comparison. The variable appears "
+                        f"only once in the clause body (singleton), making the test "
+                        f"vacuous. Bind '{var}' to a value before comparing."
+                    )
+
     return errors
