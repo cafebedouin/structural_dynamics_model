@@ -175,26 +175,27 @@ generate_full_report(IntervalID) :-
 generate_omegas_from_gaps(IntervalID) :-
     format('~n[OMEGA GENERATION FROM PERSPECTIVAL GAPS: ~w]~n', [IntervalID]),
     findall(
-        omega_entry(OmegaID, Type, Question, Gap),
-        (   narrative_ontology:constraint_claim(C, _),  % Look at ALL claimed constraints
-            detect_gap_pattern(C, Gap),
-            omega_from_gap(C, Gap, OmegaID, Type, Question)
+        omega_entry(OmegaID, Type, Question, Gap, Constraint),
+        (   narrative_ontology:constraint_claim(Constraint, _),
+            detect_gap_pattern(Constraint, Gap),
+            omega_from_gap(Constraint, Gap, OmegaID, Type, Question)
         ),
         OmegaEntries
     ),
     process_omega_entries(OmegaEntries).
 
-process_omega_entries([]) :- 
+process_omega_entries([]) :-
     format('  No perspectival gaps detected requiring Ω tracking.~n').
 process_omega_entries(OmegaEntries) :-
     OmegaEntries \= [],
     length(OmegaEntries, Count),
     format('  Generated ~w Omega variables from perspectival gaps:~n~n', [Count]),
-    forall(member(omega_entry(OID, OType, OQuestion, OGap), OmegaEntries),
+    forall(member(omega_entry(OID, OType, OQuestion, OGap, Constraint), OmegaEntries),
            (   format('  Ω: ~w (~w)~n', [OID, OType]),
                format('     Question: ~w~n', [OQuestion]),
                format('     Source: ~w~n~n', [OGap]),
-               assert_omega_if_new(OID, OType, OQuestion)
+               (OGap = gap(GapPattern, _, _) -> true ; GapPattern = unknown),
+               assert_omega_if_new(OID, OType, OQuestion, Constraint, GapPattern)
            )).
 
 % detect_gap_pattern and omega_from_gap logic remains unchanged...
@@ -248,11 +249,23 @@ omega_from_gap(C, gap(general_type_mismatch, TypeP, TypeI), OmegaID, conceptual,
     format(atom(OmegaID), 'omega_perspectival_~w', [C]),
     format(atom(Question), 'Constraint ~w appears as ~w to individuals but ~w to institutions...', [C, TypeP, TypeI]), !.
 
-assert_omega_if_new(OmegaID, Type, Question) :-
+:- dynamic omega_source/3.  % omega_source(OmegaID, Constraint, GapPattern)
+
+%% assert_omega_if_new(+OmegaID, +Type, +Question, +Constraint, +GapPattern)
+%  Stores omega variable along with its source metadata so that
+%  generate_omega_resolution_scenarios can look up the originating
+%  constraint and gap pattern programmatically, without brittle
+%  string parsing of the omega ID.
+assert_omega_if_new(OmegaID, Type, Question, Constraint, GapPattern) :-
     (   narrative_ontology:omega_variable(OmegaID, _, _)
     ->  true
-    ;   assertz(narrative_ontology:omega_variable(OmegaID, Type, Question))
+    ;   assertz(narrative_ontology:omega_variable(OmegaID, Type, Question)),
+        assertz(omega_source(OmegaID, Constraint, GapPattern))
     ).
+
+% Backward-compatible arity-3 version for external callers
+assert_omega_if_new(OmegaID, Type, Question) :-
+    assert_omega_if_new(OmegaID, Type, Question, unknown, unknown).
 
 /* ============================================================================
    3. INDEXED REPORTING & AUDITS
@@ -372,13 +385,17 @@ generate_indexed_report(Text, Context, Report) :-
 classify_with_context(Context, Constraint, classification(Constraint, Type)) :-
     constraint_indexing:constraint_classification(Constraint, Type, Context).
 
+%% extract_constraints(+Text, -Constraints)
+%  Extracts constraint names mentioned in Text by checking against
+%  all constraints declared in the knowledge base. Uses sub_atom/5
+%  on atom-level names rather than character-code list scanning.
 extract_constraints(Text, Constraints) :-
-    atom_codes(Text, Codes),
-    findall(C, (constraint_keyword(C), atom_codes(C, CCode), sublist(CCode, Codes)), Cs),
+    findall(C,
+        (   narrative_ontology:constraint_claim(C, _),
+            sub_atom(Text, _, _, _, C)
+        ),
+        Cs),
     sort(Cs, Constraints).
-
-constraint_keyword(catholic_church_1200).
-constraint_keyword(property_rights_2025).
 
 format_indexed_report(Classifications, Context, Report) :-
     Context = context(agent_power(Power), time_horizon(Time), exit_options(Exit), spatial_scope(Scope)),
@@ -401,9 +418,8 @@ generate_llm_feedback(IntervalID) :-
     (setof((OID, OTy, ODe), narrative_ontology:omega_variable(OID, OTy, ODe), Omegas) -> forall(member((OID, OTy, ODe), Omegas), format('  - ~w (~w): ~w~n', [OID, OTy, ODe])) ; format('  - None detected.~n')),
     format('~n### END REFINEMENT MANIFEST ###~n').
 
-sublist([], _).
-sublist([H|T], [H|T2]) :- !, sublist(T, T2).
-sublist(Sub, [_|T]) :- sublist(Sub, T).
+% sublist/2 removed — was only used by the old character-code-based
+% extract_constraints/2, now replaced with KB-aware sub_atom/5 matching.
 
 %% classify_interval(+IntervalID, -Pattern, -Confidence)
 %  Computes the structural pattern and confidence for an interval by
@@ -549,8 +565,7 @@ generate_omega_resolution_scenarios :-
     format('~n[OMEGA RESOLUTION SCENARIO GENERATION]~n'),
     findall(omega_data(OID, OType, ODesc, Constraint, GapPattern),
             (narrative_ontology:omega_variable(OID, OType, ODesc),
-             extract_constraint_from_omega_id(OID, Constraint),
-             determine_gap_pattern(OID, Constraint, GapPattern)),
+             resolve_omega_source(OID, Constraint, GapPattern)),
             Omegas),
     (Omegas = []
     -> format('  No unresolved Omegas. System is epistemically complete.~n')
@@ -560,43 +575,22 @@ generate_omega_resolution_scenarios :-
                generate_scenario_for_omega(OID, OType, ODesc, C, Gap)))
     ).
 
-%% extract_constraint_from_omega_id(+OmegaID, -Constraint)
-%  Extracts the constraint name from omega IDs like omega_extraction_blindness_CONSTRAINT
-extract_constraint_from_omega_id(OmegaID, Constraint) :-
-    atom_string(OmegaID, OIDStr),
-    (sub_string(OIDStr, _, _, _, "omega_extraction_blindness_")
-    -> split_string(OIDStr, "_", "", Parts),
-       append(["omega", "extraction", "blindness"], ConstraintParts, Parts),
-       atomic_list_concat(ConstraintParts, '_', Constraint)
-    ; sub_string(OIDStr, _, _, _, "omega_learned_helplessness_")
-    -> split_string(OIDStr, "_", "", Parts),
-       append(["omega", "learned", "helplessness"], ConstraintParts, Parts),
-       atomic_list_concat(ConstraintParts, '_', Constraint)
-    ; sub_string(OIDStr, _, _, _, "omega_cut_safety_")
-    -> split_string(OIDStr, "_", "", Parts),
-       append(["omega", "cut", "safety"], ConstraintParts, Parts),
-       atomic_list_concat(ConstraintParts, '_', Constraint)
-    ; sub_string(OIDStr, _, _, _, "omega_perspectival_")
-    -> split_string(OIDStr, "_", "", Parts),
-       append(["omega", "perspectival"], ConstraintParts, Parts),
-       atomic_list_concat(ConstraintParts, '_', Constraint)
-    ;  Constraint = unknown
-    ).
-
-%% determine_gap_pattern(+OmegaID, +Constraint, -Pattern)
-%  Determines which gap pattern caused this omega
-determine_gap_pattern(OmegaID, Constraint, Pattern) :-
-    atom_string(OmegaID, OIDStr),
-    (sub_string(OIDStr, _, _, _, "extraction_blindness")
-    -> (Pattern = snare_masked_as_rope)
-    ; sub_string(OIDStr, _, _, _, "learned_helplessness")
-    -> (Pattern = snare_mountain_confusion)
-    ; sub_string(OIDStr, _, _, _, "cut_safety")
-    -> (Pattern = mountain_coordination_confusion)
-    ;  (Constraint \= unknown,
-        detect_gap_pattern(Constraint, gap(Pattern, _, _))
-       -> true
-       ;  Pattern = general_type_mismatch)
+%% resolve_omega_source(+OmegaID, -Constraint, -GapPattern)
+%  Looks up the source constraint and gap pattern for an omega variable
+%  using the structured omega_source/3 metadata (populated at creation
+%  time by assert_omega_if_new/5). Falls back to detecting the gap
+%  pattern from current KB state for omegas created externally.
+resolve_omega_source(OmegaID, Constraint, GapPattern) :-
+    (   omega_source(OmegaID, Constraint, GapPattern),
+        Constraint \= unknown
+    ->  true
+    ;   % Fallback: try to find constraint via KB query
+        (   narrative_ontology:constraint_claim(C, _),
+            detect_gap_pattern(C, gap(GP, _, _)),
+            omega_from_gap(C, gap(GP, _, _), OmegaID, _, _)
+        ->  Constraint = C, GapPattern = GP
+        ;   Constraint = unknown, GapPattern = general_type_mismatch
+        )
     ).
 
 %% generate_scenario_for_omega(+OmegaID, +Type, +Description, +Constraint, +GapPattern)
