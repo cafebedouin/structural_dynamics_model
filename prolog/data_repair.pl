@@ -13,6 +13,21 @@
 :- dynamic narrative_ontology:measurement/5.
 
 /* ============================================================
+   DATA REPAIR — Stage 1 of Validation Pipeline
+   ============================================================
+   Imputation engine. Fills missing measurement/5 facts using
+   domain-specific epistemic priors before tests run. Also
+   bridges v3.4 testset data (constraint_classification/3,
+   domain_priors) into the narrative_ontology format
+   (constraint_claim/2, constraint_metric/3).
+
+   Run by scenario_manager:load_and_run/2 BEFORE test_harness.
+
+   See also: data_verification.pl (Stage 2 — verifies after repair),
+             data_validation.pl (Stage 3 — audits quality after tests).
+   ============================================================ */
+
+/* ============================================================
    REPAIR ORCHESTRATOR
    ============================================================ */
 

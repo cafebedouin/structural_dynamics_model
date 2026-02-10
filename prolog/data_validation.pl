@@ -16,13 +16,29 @@
 :- use_module(utils).  % For safe metric retrieval
 
 /* ============================================================================
-   DATA VALIDATION SUITE
+   DATA VALIDATION SUITE — Stage 3 of Validation Pipeline
    ============================================================================
 
-   This module provides comprehensive validation of constraint data quality,
-   completeness, and consistency. Unlike validation_suite.pl (which runs
-   scenarios), this validates the data itself.
+   Pipeline architecture (run in order):
+     Stage 1: data_repair.pl     — Imputation. Fills missing measurements
+                                    using domain priors. Run BEFORE tests.
+     Stage 2: data_verification.pl — Gate. Verifies structural completeness
+                                    of measurement/5 facts (32-point coercion
+                                    vectors, value ranges, intent logic,
+                                    paired temporal measurements). Blocks on
+                                    failure during test_harness execution.
+     Stage 3: data_validation.pl — Audit (THIS MODULE). Checks constraint_metric/3
+                                    quality: completeness, ranges, classification
+                                    consistency, edge cases, domain coverage.
+                                    Runs AFTER all tests, reports quality issues.
 
+   NOTE: Stage 2 and Stage 3 check different data structures:
+     - data_verification checks measurement/5 (temporal coercion vectors)
+     - data_validation checks constraint_metric/3 (static constraint properties)
+   This is intentional — they validate different layers of the ontology.
+
+   See also: test_harness.pl (orchestrates Stages 1-2 per test case),
+             validation_suite.pl (runs 730+ test scenarios, calls Stage 3 at end).
    ============================================================================ */
 
 :- dynamic validation_error/3.    % validation_error(Type, Constraint, Details)
@@ -222,14 +238,13 @@ validate_classification_consistency :-
 
 %% infer_expected_type(+Constraint, -Type)
 %  Infers what type a constraint should be based on metrics.
-%  Delegates to drl_core:classify_from_metrics/6 (Single Source of Truth).
+%  Uses extractiveness_for_agent (v6.0 directionality chain) for Chi
+%  and delegates to drl_core:classify_from_metrics/6 (Single Source of Truth).
 infer_expected_type(C, Type) :-
     (   drl_core:base_extractiveness(C, Extr),
         narrative_ontology:constraint_metric(C, suppression_requirement, Supp)
     ->  constraint_indexing:default_context(Context),
-        Context = context(agent_power(Power), _, _, _),
-        constraint_indexing:power_modifier(Power, Modifier),
-        Chi is Extr * Modifier,
+        constraint_indexing:extractiveness_for_agent(C, Context, Chi),
         drl_core:classify_from_metrics(C, Extr, Chi, Supp, Context, Type)
     ;   Type = unknown).
 

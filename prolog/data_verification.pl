@@ -10,6 +10,23 @@
 :- use_module(config).
 
 /* ============================================================
+   DATA VERIFICATION — Stage 2 of Validation Pipeline
+   ============================================================
+   Structural gate check for measurement/5 facts (temporal
+   coercion vectors). This module verifies:
+     - 32-point vector completeness per interval
+     - Value range [0,1] for all measurements
+     - Intent logic consistency (alternatives, power changes)
+     - Paired temporal measurements (extractiveness + suppression)
+
+   Run by test_harness.pl DURING test execution. Failures block
+   the test pipeline.
+
+   See also: data_repair.pl (Stage 1 — fills gaps before this runs),
+             data_validation.pl (Stage 3 — audits constraint_metric/3 after tests).
+   ============================================================ */
+
+/* ============================================================
    1. ENTRY POINTS
    ============================================================ */
 
