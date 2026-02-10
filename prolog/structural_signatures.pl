@@ -797,15 +797,15 @@ resolve_modal_signature_conflict(ModalType, _, ModalType).
 %  SHADOW MODE: This predicate does not affect classification.
 %  Use boltzmann_shadow_audit/2 for full diagnostic output.
 
-boltzmann_compliant(C, inconclusive(insufficient_classifications)) :-
-    epistemic_access_check(C, false), !.
-
 boltzmann_compliant(C, Result) :-
-    cross_index_coupling(C, CouplingScore),
-    complexity_adjusted_threshold(C, Threshold),
-    (   CouplingScore =< Threshold
-    ->  Result = compliant(CouplingScore)
-    ;   Result = non_compliant(CouplingScore, Threshold)
+    (   epistemic_access_check(C, true)
+    ->  cross_index_coupling(C, CouplingScore),
+        complexity_adjusted_threshold(C, Threshold),
+        (   CouplingScore =< Threshold
+        ->  Result = compliant(CouplingScore)
+        ;   Result = non_compliant(CouplingScore, Threshold)
+        )
+    ;   Result = inconclusive(insufficient_classifications)
     ).
 
 %% boltzmann_shadow_audit(+Constraint, -AuditReport)
