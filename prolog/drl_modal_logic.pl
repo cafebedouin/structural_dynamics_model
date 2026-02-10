@@ -83,7 +83,11 @@
     network_qualified_action/4,         % network_qualified_action(C, Context, QAction, Rationale)
     network_qualified_action/3,         % Backward compat
     type_contamination_strength/2,      % type_contamination_strength(Type, Strength)
-    type_immunity/2                     % type_immunity(Type, Immunity)
+    type_immunity/2,                    % type_immunity(Type, Immunity)
+
+    % Stage 9: Statistical Helpers
+    monotonic_increasing/1,             % monotonic_increasing(+TimeSortedPairs)
+    monotonic_decreasing/1              % monotonic_decreasing(+TimeSortedPairs)
 ]).
 
 :- use_module(drl_audit_core).
@@ -312,32 +316,28 @@ check_capture_between(C, T1, T2) :-
     X2 >= Floor.
 
 %% predict_transformation(+C, +CurrentType, -LikelyFutureType)
-% Predicts likely future transformation based on trajectory
-% NOTE: Uses analytical context for prediction
-%
-% TODO (Issue #8 — Statistical Review):
-%   CONCERN: N >= 2 is insufficient for trend detection. With only 2 data
-%   points, any monotonic change is trivially "increasing" and there is no
-%   way to distinguish signal from noise. Additionally, comparing only the
-%   first and last elements ignores the trajectory shape (e.g. a V-shaped
-%   recovery would be misclassified as increasing).
-%   SUGGESTED FIX: Require N >= 5 and use a linear regression slope or
-%   Mann-Kendall trend test instead of first-vs-last comparison. At minimum,
-%   check that the trend is monotonic across all points, not just endpoints.
+%  Predicts likely future transformation based on trajectory.
+%  Uses least-squares slope on time-sorted measurements (N >= 3)
+%  to detect genuine trends, avoiding false positives from noise
+%  or V-shaped recoveries that a first-vs-last comparison would miss.
 predict_transformation(C, rope, snare) :-
-    findall(X, narrative_ontology:measurement(_, C, extractiveness, _, X), Xs),
-    length(Xs, N), N >= 2,
-    last(Xs, X_latest),
+    findall(T-X, narrative_ontology:measurement(_, C, extractiveness, T, X), Pairs),
+    length(Pairs, N), N >= 3,
+    msort(Pairs, Sorted),
+    linear_slope(Sorted, Slope),
+    Slope > 0,
+    last(Sorted, _-X_latest),
     X_latest > 0.5,
     config:param(snare_epsilon_floor, Floor),
-    X_latest < Floor,
-    Xs = [X_first|_],
-    X_latest > X_first.
+    X_latest < Floor.
 
 predict_transformation(C, rope, piton) :-
-    findall(E, narrative_ontology:measurement(_, C, suppression_requirement, _, E), Es),
-    length(Es, N), N >= 2,
-    last(Es, E_latest),
+    findall(T-E, narrative_ontology:measurement(_, C, suppression_requirement, T, E), Pairs),
+    length(Pairs, N), N >= 3,
+    msort(Pairs, Sorted),
+    linear_slope(Sorted, Slope),
+    Slope > 0,
+    last(Sorted, _-E_latest),
     E_latest > 0.3,
     narrative_ontology:constraint_metric(C, extractiveness, X),
     X < 0.35.
@@ -485,6 +485,56 @@ count_sign_matches([H1|T1], [H2|T2], Matches, Total) :-
 signs_match(A, B) :- A > 0, B > 0.
 signs_match(A, B) :- A < 0, B < 0.
 signs_match(A, B) :- A =:= 0, B =:= 0.
+
+/* ----------------------------------------------------------------
+   STATISTICAL HELPERS: Slope and Monotonicity
+   Used by predict_transformation and drift report.
+   ---------------------------------------------------------------- */
+
+%% linear_slope(+TimeSortedPairs, -Slope)
+%  Least-squares slope from a list of T-V pairs (sorted by T).
+%  Slope = (N*Sum(T*V) - Sum(T)*Sum(V)) / (N*Sum(T^2) - Sum(T)^2)
+linear_slope(Pairs, Slope) :-
+    length(Pairs, N),
+    N >= 2,
+    foldl(slope_accum, Pairs, 0.0-0.0-0.0-0.0, SumT-SumV-SumTV-SumT2),
+    Denom is N * SumT2 - SumT * SumT,
+    (   abs(Denom) > 1.0e-12
+    ->  Slope is (N * SumTV - SumT * SumV) / Denom
+    ;   Slope = 0.0
+    ).
+
+slope_accum(T-V, ST-SV-STV-ST2, NST-NSV-NSTV-NST2) :-
+    NST is ST + T,
+    NSV is SV + V,
+    NSTV is STV + T * V,
+    NST2 is ST2 + T * T.
+
+%% monotonic_increasing(+TimeSortedPairs)
+%  True if values are non-decreasing when sorted by time.
+monotonic_increasing([]) :- !.
+monotonic_increasing([_]) :- !.
+monotonic_increasing([_-V1, T2-V2 | Rest]) :-
+    V2 >= V1,
+    monotonic_increasing([T2-V2 | Rest]).
+
+%% monotonic_decreasing(+TimeSortedPairs)
+%  True if values are non-increasing when sorted by time.
+monotonic_decreasing([]) :- !.
+monotonic_decreasing([_]) :- !.
+monotonic_decreasing([_-V1, T2-V2 | Rest]) :-
+    V2 =< V1,
+    monotonic_decreasing([T2-V2 | Rest]).
+
+%% non_monotonic_trajectory(+C, +Metric)
+%  True if the measurement series is neither monotonically increasing
+%  nor monotonically decreasing. Used by drift report.
+non_monotonic_trajectory(C, Metric) :-
+    findall(T-V, narrative_ontology:measurement(_, C, Metric, T, V), Pairs),
+    length(Pairs, N), N >= 3,
+    msort(Pairs, Sorted),
+    \+ monotonic_increasing(Sorted),
+    \+ monotonic_decreasing(Sorted).
 
 %% assess_scaffold_need(+Constraint, +Context, -Assessment)
 % PRIMARY API: Determines if cutting requires Scaffold FROM SPECIFIC CONTEXT

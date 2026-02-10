@@ -1182,6 +1182,11 @@ generate_drift_report(C) :-
     ->  format('  Extraction drift velocity: ~4f/year~n', [Rate])
     ;   true
     ),
+    % Non-monotonic trajectory flag
+    (   drl_modal_logic:non_monotonic_trajectory(C, base_extractiveness)
+    ->  format('  [!] Non-monotonic extraction trajectory (V-shaped or irregular)~n')
+    ;   true
+    ),
     % Network drift (v5.2)
     constraint_indexing:default_context(DCtx),
     (   detect_network_drift(C, DCtx, evidence(drifting_neighbors, CL, effective_purity, CEP, intrinsic_purity, CIP))
