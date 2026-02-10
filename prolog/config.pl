@@ -387,3 +387,9 @@ param(network_cascade_count_threshold,       3).     % Drifting constraints → 
 
 % --- Severity Escalation ---
 param(network_drift_hub_escalation,          1).     % 1=enable hub-based severity escalation
+
+/* ================================================================
+   CONFIG VALIDATION (loaded last so all param/2 facts are available)
+   ================================================================ */
+
+:- use_module(config_validation).
