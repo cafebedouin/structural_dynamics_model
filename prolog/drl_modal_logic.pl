@@ -1551,26 +1551,15 @@ find_weakest([C1-EP1, C2-EP2 | Rest], Weakest) :-
 %% cluster_purity(+Constraints, +Context, -Score)
 %  Weighted average purity for a given list of constraints.
 %  Weight = sum of edge strengths to other cluster members.
-%
-% TODO (Issue #8 — Statistical Review):
-%   CONCERN 1: The EP >= 0.0 filter silently drops constraints with
-%   negative effective purity from the average. This biases the cluster
-%   score upward — a cluster with one EP=0.9 and one EP=-0.3 would
-%   report Score=0.9 instead of the true weighted average. If negative
-%   purities represent genuine contamination, they should arguably LOWER
-%   the cluster score, not be excluded.
-%   CONCERN 2: Isolated constraints (no intra-cluster neighbors) get
-%   Weight=1.0 by default. In a cluster with one well-connected node
-%   (Weight=5.0) and three isolated nodes (Weight=1.0 each), the
-%   isolated nodes collectively outweigh the connected one. Consider
-%   whether isolated nodes should use Weight=0 (excluded) or a fraction
-%   of the mean weight instead of a fixed default.
+%  Note: effective_purity/4 clamps to [0.0, 1.0] via max(0.0, RawEff),
+%  so all EP values are non-negative. Isolated nodes (no intra-cluster
+%  neighbors) intentionally get Weight=1.0 so they contribute their
+%  intrinsic purity without distorting the cluster average.
 cluster_purity(Constraints, Context, Score) :-
     constraint_indexing:valid_context(Context),
     findall(EP-Weight, (
         member(C, Constraints),
         effective_purity(C, Context, EP, _),
-        EP >= 0.0,
         constraint_neighbors(C, Context, Neighbors),
         findall(S, (
             member(neighbor(Other, S, _), Neighbors),
