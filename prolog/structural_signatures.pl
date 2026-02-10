@@ -688,7 +688,7 @@ has_metric_perspectival_variance(C) :-
     N > 1.
 
 % -----------------------------------------------------------------------
-% SIGNATURE OVERRIDE RULE (logic.md §III-A, Rule NL):
+% SIGNATURE OVERRIDE RULE (logic.md §III-A, Rule NL):  [ACTIVE, unconditional]
 %   NL(C) → Mountain (▪) regardless of metric-based classification.
 %   Natural Law is the strongest structural signal. If a constraint
 %   passes the NL signature test (extreme collapse, zero enforcement,
@@ -698,7 +698,7 @@ has_metric_perspectival_variance(C) :-
 resolve_modal_signature_conflict(_, natural_law, mountain) :- !.
 
 % -----------------------------------------------------------------------
-% FNL OVERRIDE RULE (v5.1, §III-A extension):
+% FNL OVERRIDE RULE (v5.1, §III-A extension):  [ACTIVE, unconditional]
 %   FNL(C) → tangled_rope regardless of metric-based classification.
 %   A constraint that claims naturality but fails Boltzmann independence
 %   is structurally constructed. It has coupling topology inconsistent
@@ -709,7 +709,7 @@ resolve_modal_signature_conflict(_, natural_law, mountain) :- !.
 resolve_modal_signature_conflict(_, false_natural_law, tangled_rope) :- !.
 
 % -----------------------------------------------------------------------
-% CI_ROPE OVERRIDE RULE (v5.1, §III-A extension):
+% CI_ROPE OVERRIDE RULE (v5.1, §III-A extension):  [ACTIVE, unconditional]
 %   CI_Rope(C) → rope regardless of metric-based classification.
 %   A constraint that passes all four Boltzmann invariance tests and
 %   has a genuine coordination function is certified as a Rope.
@@ -719,7 +719,7 @@ resolve_modal_signature_conflict(_, false_natural_law, tangled_rope) :- !.
 resolve_modal_signature_conflict(_, coupling_invariant_rope, rope) :- !.
 
 % -----------------------------------------------------------------------
-% FCR OVERRIDE RULE (v5.1, §III-A extension, perspectival gate v5.3):
+% FCR OVERRIDE RULE (v5.1, §III-A extension, perspectival gate v5.3):  [ACTIVE, gated]
 %   FCR(C) → tangled_rope ONLY when classification is uniform across
 %   perspectives. If the metric layer produces different types from
 %   different power positions, the indexical system is differentiating
@@ -767,10 +767,12 @@ resolve_modal_signature_conflict(ModalType, _, ModalType).
    that couples independent dimensions is necessarily Constructed,
    not Natural.
 
-   SHADOW MODE: In the current version, Boltzmann compliance is
-   LOGGED but does NOT trigger classification overrides. This
-   allows calibration against the 691-constraint corpus before
-   the gate becomes active.
+   ACTIVE: Boltzmann compliance drives classification overrides via
+   integrate_signature_with_modal/3 (called from drl_core:dr_type/3).
+   Override rules NL, FNL, CI_Rope, and FCR are all live in the
+   classification pipeline. The original shadow-mode calibration
+   period ended when the override rules were wired into
+   resolve_modal_signature_conflict (v5.1).
 
    Edge Cases Handled:
    1. Complexity Offset — high-complexity coordination types have
@@ -794,7 +796,8 @@ resolve_modal_signature_conflict(ModalType, _, ModalType).
 %    non_compliant(CouplingScore, Threshold)
 %    inconclusive(Reason)
 %
-%  SHADOW MODE: This predicate does not affect classification.
+%  ACTIVE: This predicate feeds constraint_signature/2, which feeds
+%  integrate_signature_with_modal/3, which overrides dr_type/3.
 %  Use boltzmann_shadow_audit/2 for full diagnostic output.
 
 boltzmann_compliant(C, Result) :-
@@ -1263,8 +1266,10 @@ is_failure(fail(_, _)).
    the constraint's coupling topology reveals construction even
    when its metrics look natural.
 
-   SHADOW MODE: Detected and logged. Does not yet trigger
-   classification override (see resolve_modal_signature_conflict).
+   ACTIVE: FNL detection triggers the tangled_rope override via
+   constraint_signature/2 → resolve_modal_signature_conflict/3
+   (line 709: FNL → tangled_rope). Operational since FNL unification
+   fix (2026-02).
    ---------------------------------------------------------------- */
 
 %% false_natural_law(+Constraint, -Evidence)
@@ -1506,8 +1511,11 @@ ib_adjusted_threshold(C, Threshold) :-
    the structural gates. It answers: "Is this coordination
    real or performed?"
 
-   SHADOW MODE: Detected and logged. Does not yet override
-   the main drl_core classification.
+   ACTIVE: FCR detection triggers the tangled_rope override via
+   constraint_signature/2 → resolve_with_perspectival_check/4,
+   gated by has_metric_perspectival_variance/1. When perspectival
+   variance exists, the metric classification is preserved; when
+   absent, FCR overrides to tangled_rope (v5.1).
    ================================================================ */
 
 %% false_ci_rope(+Constraint, -Evidence)
