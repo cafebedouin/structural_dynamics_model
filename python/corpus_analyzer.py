@@ -11,7 +11,7 @@ from pyswip import Prolog
 class CorpusAnalyzer:
     def __init__(self, testsets_dir=None, prolog_stack_file=None):
         self.testsets_dir = Path(testsets_dir or "/home/scott/bin/structural_dynamics_model/prolog/testsets")
-        self.prolog_stack_file = Path(prolog_stack_file or "/home/scott/bin/structural_dynamics_model/prolog/v3_1_stack.pl")
+        self.prolog_stack_file = Path(prolog_stack_file or "/home/scott/bin/structural_dynamics_model/prolog/stack.pl")
         self.constraints = {}
         self.types = defaultdict(list)
         self.concepts = defaultdict(set)
@@ -31,7 +31,7 @@ class CorpusAnalyzer:
 
         # Use the Prolog engine for classification
         try:
-            query = f"dr_type({constraint_id}, Type)"
+            query = f"drl_core:dr_type('{constraint_id}', Type)"
             result = list(self.prolog.query(query))
             if result:
                 return result[0]['Type']
@@ -42,7 +42,14 @@ class CorpusAnalyzer:
 
     def analyze_corpus(self):
         if not self.testsets_dir.exists(): return False
-        for pl_file in self.testsets_dir.glob("*.pl"):
+        prolog_dir = str(self.prolog_stack_file.parent)
+        list(self.prolog.query(f"working_directory(_, '{prolog_dir}')"))
+        for pl_file in sorted(self.testsets_dir.glob("*.pl")):
+            try:
+                self.prolog.consult(str(pl_file))
+            except Exception:
+                pass
+        for pl_file in sorted(self.testsets_dir.glob("*.pl")):
             try:
                 content = pl_file.read_text(encoding='utf-8')
                 ids = self.id_pattern.findall(content)
@@ -55,7 +62,7 @@ class CorpusAnalyzer:
 
                 score_match = self.score_pattern.search(content)
                 score = float(score_match.group(1)) if score_match else 0.5
-                
+
                 c_type = self.classify_type(constraint_id, tag, score)
                 self.types[c_type].append(constraint_id)
 

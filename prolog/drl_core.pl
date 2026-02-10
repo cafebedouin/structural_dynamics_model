@@ -265,6 +265,15 @@ snare_reform_threshold(Context, PowerLevel) :-
     constraint_indexing:effective_immutability_for_context(AltCtx, rope), !,
     PowerLevel = AltPower.
 
+%% scaffold_temporality_check(+C)
+%  Soft temporality gate: explicit sunset clause is strongest signal,
+%  but absence of enforcement requirement also qualifies (non-enforced
+%  coordination is inherently scaffold-like, not tangled-rope-like).
+scaffold_temporality_check(C) :-
+    narrative_ontology:has_sunset_clause(C), !.
+scaffold_temporality_check(C) :-
+    \+ requires_active_enforcement(C).
+
 classify_from_metrics(_C, BaseEps, _Chi, Supp, Context, mountain) :-
     config:param(mountain_suppression_ceiling, SuppCeil),
     Supp =< SuppCeil,
@@ -288,15 +297,6 @@ classify_from_metrics(C, _BaseEps, Chi, _Supp, _Context, scaffold) :-
     scaffold_temporality_check(C),
     config:param(theater_metric_name, TheaterMetricName),
     \+ (narrative_ontology:constraint_metric(C, TheaterMetricName, TR), TR > 0.70), !.
-
-%% scaffold_temporality_check(+C)
-%  Soft temporality gate: explicit sunset clause is strongest signal,
-%  but absence of enforcement requirement also qualifies (non-enforced
-%  coordination is inherently scaffold-like, not tangled-rope-like).
-scaffold_temporality_check(C) :-
-    narrative_ontology:has_sunset_clause(C), !.
-scaffold_temporality_check(C) :-
-    \+ requires_active_enforcement(C).
 
 classify_from_metrics(_C, BaseEps, Chi, _Supp, Context, rope) :-
     config:param(rope_chi_ceiling, ChiCeil),
