@@ -114,6 +114,7 @@ test(perspectival_gap) :-
     constraint_indexing:constraint_classification(zipfs_law, rope, context(agent_power(institutional), _, _, _)).
 
 test(extraction_threshold) :-
+    domain_priors:base_extractiveness(zipfs_law, E),
     E >= 0.46.
 
 :- end_tests(zipfs_law_tests).

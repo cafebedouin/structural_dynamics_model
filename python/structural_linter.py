@@ -329,24 +329,31 @@ def lint_file(filepath):
     # Finds test/1 clauses where a comparison operator uses a Prolog variable
     # that is never bound (singleton in clause body). These tests always
     # succeed or fail vacuously.
-    comparison_ops = r'(?:>=|=<|>|<|=:=|=\\=)'
+    comparison_ops = r'(?:>=|=<|(?<!-)>|<|=:=|=\\=)'  # (?<!-) avoids matching -> as >
     # Match test(Name) :- Body. across lines (clauses end with '.\n' or EOF)
     for test_match in re.finditer(
             r'test\((\w+)\)\s*:-\s*(.*?)\.(?:\n|$)', content, re.DOTALL):
         test_name = test_match.group(1)
-        body = test_match.group(2)
+        raw_body = test_match.group(2)
         body_start_line = content[:test_match.start()].count('\n') + 1
 
-        # Find all comparisons in the body
+        # Strip Prolog line comments (% to EOL) to avoid false positives
+        # from variable names mentioned in comments.
+        body_lines = raw_body.split('\n')
+        stripped_body = '\n'.join(
+            re.sub(r'%.*$', '', line) for line in body_lines
+        )
+
+        # Find all comparisons in the stripped body
         for cmp_match in re.finditer(
                 rf'(\b[A-Z_]\w*)\s*{comparison_ops}|{comparison_ops}\s*(\b[A-Z_]\w*)',
-                body):
+                stripped_body):
             var = cmp_match.group(1) or cmp_match.group(2)
             if var and var != '_':
-                # Count occurrences of this variable in the body
-                var_count = len(re.findall(rf'\b{re.escape(var)}\b', body))
+                # Count occurrences of this variable in the stripped body
+                var_count = len(re.findall(rf'\b{re.escape(var)}\b', stripped_body))
                 if var_count == 1:
-                    cmp_line = body_start_line + body[:cmp_match.start()].count('\n')
+                    cmp_line = body_start_line + stripped_body[:cmp_match.start()].count('\n')
                     errors.append(
                         f"VACUOUS_TEST: test({test_name}) at line {cmp_line} uses "
                         f"unbound variable '{var}' in comparison. The variable appears "

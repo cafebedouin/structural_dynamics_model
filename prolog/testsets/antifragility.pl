@@ -117,6 +117,7 @@ test(perspectival_gap) :-
     TypePowerless \= TypeModerate.
 
 test(extraction_signature) :-
+    domain_priors:base_extractiveness(antifragility, E),
     E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
 
 :- end_tests(antifragility_tests).

@@ -113,6 +113,7 @@ test(perspectival_gap) :-
     constraint_indexing:constraint_classification(ad_synaptic_deficit, rope, context(agent_power(institutional), _, _, _)).
 
 test(extraction_signature) :-
+    domain_priors:base_extractiveness(ad_synaptic_deficit, E),
     E >= 0.80.
 
 :- end_tests(ad_synaptic_deficit_tests).

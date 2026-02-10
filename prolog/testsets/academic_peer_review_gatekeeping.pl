@@ -112,6 +112,7 @@ test(perspectival_gap) :-
     TypePowerless \= TypeInstitutional.
 
 test(extraction_threshold) :-
+    domain_priors:base_extractiveness(academic_peer_review_gatekeeping, E),
     E >= 0.46. % Confirms Snare/Tangled/Mountain territory.
 
 :- end_tests(academic_peer_review_gatekeeping_tests).

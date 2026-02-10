@@ -104,6 +104,7 @@ test(perspectival_gap) :-
     TypeRegime \= TypePrisoner.
 
 test(extraction_signature) :-
+    domain_priors:base_extractiveness(apartheid_nuclear_program, E),
     E >= 0.46. % Confirms high-extraction signature for drift detection requirement.
 
 :- end_tests(apartheid_nuclear_tests).
