@@ -26,13 +26,31 @@
     factorization_subscore/2,           % factorization_subscore(C, Score)
     scope_invariance_subscore/2,        % scope_invariance_subscore(C, Score)
     coupling_cleanliness_subscore/2,    % coupling_cleanliness_subscore(C, Score)
-    excess_extraction_subscore/2        % excess_extraction_subscore(C, Score)
+    excess_extraction_subscore/2,       % excess_extraction_subscore(C, Score)
+
+    % Cache management
+    clear_classification_cache/0        % clear_classification_cache
 ]).
 
 :- use_module(library(lists)).
 :- use_module(narrative_ontology).
 :- use_module(config).
 :- use_module(constraint_indexing).
+
+% --- Classification memoization cache ---
+% Avoids redundant classify_at_context/3 and cross_index_coupling/2
+% calls. classify_at_context is called 12 times per constraint
+% (4 powers × 3 scopes), and the same constraint may be classified
+% 100+ times per test run across Boltzmann, purity, FNL, FCR, etc.
+:- dynamic cached_classification/3.   % cached_classification(C, Context, Type)
+:- dynamic cached_coupling/2.         % cached_coupling(C, CouplingScore)
+
+%% clear_classification_cache/0
+%  Invalidates all memoized classifications and coupling scores.
+%  Called by scenario_manager:clear_kb/0 between test intervals.
+clear_classification_cache :-
+    retractall(cached_classification(_, _, _)),
+    retractall(cached_coupling(_, _)).
 
 /* ================================================================
    STRUCTURAL SIGNATURE DETECTION v3.2
@@ -870,6 +888,16 @@ boltzmann_shadow_audit(C, boltzmann_audit(C, Compliance, Coupling, Threshold,
 %  across Power × Scope grid.
 
 cross_index_coupling(C, CouplingScore) :-
+    (   cached_coupling(C, CachedScore)
+    ->  CouplingScore = CachedScore
+    ;   compute_cross_index_coupling(C, ComputedScore),
+        assertz(cached_coupling(C, ComputedScore)),
+        CouplingScore = ComputedScore
+    ).
+
+%% compute_cross_index_coupling(+Constraint, -CouplingScore)
+%  Implementation body for cross_index_coupling/2.
+compute_cross_index_coupling(C, CouplingScore) :-
     coupling_test_powers(Powers),
     coupling_test_scopes(Scopes),
     findall(
@@ -919,6 +947,21 @@ coupling_test_context(analytical, Scope, context(
     exit_options(analytical), spatial_scope(Scope))).
 
 %% classify_at_context(+C, +Context, -Type)
+%  Memoizing wrapper around classify_at_context_impl/3.
+%  Checks cached_classification/3 first; on miss, delegates to impl
+%  and caches the result. This avoids redundant metric lookups and
+%  classification calls — classify_at_context is invoked 12 times per
+%  constraint per Boltzmann test, and the same constraint participates
+%  in multiple tests (coupling, purity, FNL, FCR, scope invariance).
+classify_at_context(C, Context, Type) :-
+    (   cached_classification(C, Context, CachedType)
+    ->  Type = CachedType
+    ;   classify_at_context_impl(C, Context, ComputedType),
+        assertz(cached_classification(C, Context, ComputedType)),
+        Type = ComputedType
+    ).
+
+%% classify_at_context_impl(+C, +Context, -Type)
 %  Computes metrics and delegates to drl_core:classify_from_metrics/6
 %  (the single source of truth for threshold classification).
 %  Uses explicit module qualification to avoid circular use_module
@@ -927,7 +970,7 @@ coupling_test_context(analytical, Scope, context(
 %  modules are loaded by the time any coupling test runs.
 %  Also uses extractiveness_for_agent (v6.0 directionality chain)
 %  instead of the legacy power_modifier * scope_modifier calculation.
-classify_at_context(C, Context, Type) :-
+classify_at_context_impl(C, Context, Type) :-
     config:param(extractiveness_metric_name, ExtMetricName),
     (   narrative_ontology:constraint_metric(C, ExtMetricName, BaseEps)
     ->  true

@@ -145,7 +145,13 @@ def run_perturbed_suite(
 # ---------------------------------------------------------------------------
 
 def compute_perturbations(value, levels=(0.10, 0.25)):
-    """Return list of (label, perturbed_value) for ± each level."""
+    """Return list of (label, perturbed_value) for ± each level.
+
+    Identity perturbation guard: if rounding causes the perturbed value
+    to equal the original (common with integer params at ±10%), the
+    perturbation is skipped with a log message instead of running a
+    600s test that produces misleading timeout results.
+    """
     perturbations = []
     for level in levels:
         if value == 0:
@@ -161,6 +167,11 @@ def compute_perturbations(value, levels=(0.10, 0.25)):
                 pv = round(pv)
             else:
                 pv = round(pv, 6)
+            # Skip identity perturbations (e.g. integer params where rounding
+            # restores the original value: round(3 * 0.9) == 3)
+            if pv == value:
+                print(f"  [SKIP] {tag} identity perturbation: {value} → {pv} (unchanged after rounding)")
+                continue
             perturbations.append((tag, pv))
     return perturbations
 

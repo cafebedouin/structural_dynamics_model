@@ -7,7 +7,7 @@
 - **Methodology**: Each of 118 numeric `param/2` facts in `prolog/config.pl` was perturbed at ±10% and ±25% of its current value. For zero-valued params, perturbation uses an absolute delta equal to the percentage level. Each perturbation ran the full 733-test validation suite via a Prolog retract/asserta overlay.
 - **Total runs**: 472 (118 params × 4 perturbations)
 - **Workers**: 4 parallel, 600s timeout per run
-- **Summary**: 7 Critical, 8 Moderate, 103 Inert
+- **Summary**: 1 Critical, 8 Moderate, 103 Inert, 6 Artifact (timeout), 1 Removed (orphan)
 
 ## Critical Parameters
 
@@ -15,15 +15,22 @@ Do not modify without full test suite validation.
 
 | Parameter | Current | ±10% Failures | Explanation |
 |-----------|---------|---------------|-------------|
-| `power_modifier_moderate` | 1.0 | 720 | Baseline power multiplier — all chi calculations are scaled relative to this value, so any deviation cascades through every classification |
-| `data_high_threshold` | 0.95 | 721 | High-confidence data integrity gate — lowering to 0.855 causes nearly all test cases to fail quality filtering |
-| `piton_epsilon_floor` | 0.10 | 721 | Piton classification requires ε > 0.10 (Rule Z); raising to 0.11 excludes test cases sitting exactly at the boundary |
-| `coupling_drift_threshold` | 0.10 | 720 | Minimum coupling change to register drift — lowering to 0.09 triggers false drift events across the corpus |
-| `constructed_beneficiary_min` | 2 | 722 | Integer param where ±10% crosses a discrete boundary (2 → round(1.8) = 2, but the perturbation arithmetic yields 1.8 which Prolog treats as non-integer, breaking the ≥ 2 integer comparison) |
-| `critical_mass_threshold` | 3 | 720 | Integer param where ±10% crosses a discrete boundary (3 → 2.7 as float disrupts the integer coalition-count comparison) |
-| `power_modifier_analytical` | 1.15 | 37 | Analytical clarity multiplier — 37 failures (not catastrophic) indicate a subset of test cases with agents near the analytical/moderate boundary |
+| `power_modifier_analytical` | 1.15 | 37 | Analytical clarity multiplier — 37 failures (not catastrophic) indicate a subset of test cases with agents near the analytical/moderate boundary. Borderline timeout at +10% (696/733 tests completed). Needs revalidation with memoization. |
 
-Note: `critical_mass_threshold` and `constructed_beneficiary_min` are integer params where ±10% perturbation produces a float that crosses a discrete comparison boundary. Their "Critical" rating reflects arithmetic rounding behavior, not calibration fragility. These params are stable at their integer values.
+## Artifact Parameters (Timeout, Not Sensitivity)
+
+The following 6 parameters were initially rated "Critical" but cross-checking against the detailed results (pass_count, fail_count) reveals **all 6 are timeout artifacts**. Their pass_count values (11-13) match the pattern of runs that timed out at 600s before completing the suite — not runs that completed and found failures. In every case, fail_count was 0.
+
+Two of the six (`constructed_beneficiary_min` at -10%, `critical_mass_threshold` at -10%) have perturbed values that round back to the original integer value, making them literal identity perturbations that timed out for reasons unrelated to the parameter change.
+
+| Parameter | Current | Perturbation | Perturbed Value | Pass Count | Why Artifact |
+|-----------|---------|-------------|-----------------|------------|--------------|
+| `constructed_beneficiary_min` | 2 | -10% | 2.0 (= original) | 11 | Integer rounding: identity transform. pass_count 11/733 with 0 failures = timeout |
+| `critical_mass_threshold` | 3 | -10% | 3.0 (= original) | 13 | Integer rounding: identity transform. pass_count 13/733 with 0 failures = timeout |
+| `data_high_threshold` | 0.95 | -10% | 0.855 | 12 | pass_count 12/733 with 0 failures = timeout pattern |
+| `piton_epsilon_floor` | 0.10 | +10% | 0.11 | 12 | pass_count 12/733 with 0 failures = timeout pattern |
+| `power_modifier_moderate` | 1.0 | +10% | 1.1 | 13 | pass_count 13/733 with 0 failures = timeout pattern |
+| `coupling_drift_threshold` | 0.10 | -10% | 0.09 | 13 | **Removed — orphan parameter.** No code reads it; `detect_coupling_drift` uses `boltzmann_coupling_threshold` instead. Sweep failures were timeout artifacts. |
 
 ## Moderate Parameters
 

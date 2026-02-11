@@ -328,10 +328,6 @@ param(reform_urgency_pressure_high,         1.5).
 % Reformability below this floor triggers urgency downgrade (one level).
 param(reform_urgency_reformability_floor,   0.30).
 
-% --- Coupling Drift Detection ---
-% Minimum coupling score change to register as a drift event.
-param(coupling_drift_threshold,      0.10).
-
 % --- Boltzmann Floor Drift ---
 % Minimum floor increase to register as a drift event.
 % Distinguishes necessary complexity increase from extractive increase.
