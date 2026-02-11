@@ -9,7 +9,7 @@
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
-*   **Structural Signature Analysis:** FALSE CI_ROPE signature for adverse_possession: Appears to be rope (indexed_rope_classification) but fails 3 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.25),excess_above_floor(0.6),nonsensical_coupling(0.16666666666666666)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for adverse_possession: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [excess_above_floor(0.6),nonsensical_coupling(0.16666666666666666)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
     → Institutional beneficiary: squatter_or_possessor
     → Institutional d=0.120
 
@@ -119,9 +119,7 @@ IF context-dependent → Add indexical resolution
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
-*   **Structural Signature Analysis:** FALSE CI_ROPE signature for ai_cognitive_diversity_arbitrage: Appears to be rope (indexed_rope_classification) but fails 4 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.25),scope_variant([tangled_rope,unknown]),excess_above_floor(0.6699999999999999),nonsensical_coupling(0.3333333333333333)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
-    → Institutional beneficiary: strategic_ai_deployers
-    → Institutional d=0.120
+*   **Structural Signature Analysis:** FALSE NATURAL LAW signature for ai_cognitive_diversity_arbitrage: Claims naturality (indexed_mountain_classification) but fails Boltzmann independence test. Coupling score=1.000 with 6 coupled dimension pairs. Excess extraction=0.6699999999999999. This constraint is "physics-washed" — it appears natural but its coupling topology reveals structural construction.
 
 [UKE_DR FEASIBILITY BRIDGE]
   Recommendation | UKE Status
@@ -221,7 +219,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
-*   **Structural Signature Analysis:** FALSE CI_ROPE signature for algorithmic_bias: Appears to be rope (indexed_rope_classification) but fails 3 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.25),excess_above_floor(0.7),nonsensical_coupling(0.3333333333333333)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for algorithmic_bias: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.7)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
     → Institutional beneficiary: institutional_deployer
     → Institutional d=0.120
 
@@ -331,7 +329,7 @@ IF context-dependent → Add indexical resolution
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
-*   **Structural Signature Analysis:** FALSE CI_ROPE signature for amish_technological_renunciation: Appears to be rope (indexed_rope_classification) but fails 3 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.25),excess_above_floor(0.75),nonsensical_coupling(0.16666666666666666)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for amish_technological_renunciation: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.75)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
     → Institutional beneficiary: community_integrity
     → Institutional d=0.120
 
@@ -441,9 +439,7 @@ IF context-dependent → Add indexical resolution
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
-*   **Structural Signature Analysis:** FALSE CI_ROPE signature for arctic_geopolitical_flashpoint: Appears to be rope (indexed_rope_classification) but fails 3 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.25),excess_above_floor(0.7),nonsensical_coupling(0.3333333333333333)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
-    → Institutional beneficiary: us_defense_sector
-    → Institutional d=0.120
+*   **Structural Signature Analysis:** FALSE NATURAL LAW signature for arctic_geopolitical_flashpoint: Claims naturality (indexed_mountain_classification) but fails Boltzmann independence test. Coupling score=0.750 with 0 coupled dimension pairs. Excess extraction=0.7. This constraint is "physics-washed" — it appears natural but its coupling topology reveals structural construction.
 
 [UKE_DR FEASIBILITY BRIDGE]
   Recommendation | UKE Status
@@ -551,7 +547,7 @@ IF context-dependent → Add indexical resolution
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
-*   **Structural Signature Analysis:** FALSE CI_ROPE signature for asshole_filter_2015: Appears to be rope (indexed_rope_classification) but fails 3 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.25),excess_above_floor(0.7),nonsensical_coupling(0.3333333333333333)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for asshole_filter_2015: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.7)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
     → Institutional beneficiary: transgressive_agents
     → Institutional d=0.120
 
@@ -648,7 +644,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.52
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
-*   **Structural Signature Analysis:** FALSE CI_ROPE signature for authoritarian_power_paradox: Appears to be rope (indexed_rope_classification) but fails 3 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.25),excess_above_floor(0.75),nonsensical_coupling(0.16666666666666666)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for authoritarian_power_paradox: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.75)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
     → Institutional beneficiary: central_bureaucracy
     → Institutional d=0.120
 
@@ -784,7 +780,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.57
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
-*   **Structural Signature Analysis:** FALSE CI_ROPE signature for bay_of_pigs_operational_silo: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.25),excess_above_floor(0.85)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for bay_of_pigs_operational_silo: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.85)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
     → Institutional beneficiary: cia_operational_autonomy
     → Institutional d=0.120
 
@@ -888,7 +884,7 @@ IF uncertainty → HALT changes until resolved
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
-*   **Structural Signature Analysis:** FALSE CI_ROPE signature for bedouin_sedentary_transition: Appears to be rope (indexed_rope_classification) but fails 3 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.25),excess_above_floor(0.7),nonsensical_coupling(0.3333333333333333)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for bedouin_sedentary_transition: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.25),excess_above_floor(0.7)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
     → Institutional beneficiary: state_centralization
     → Institutional d=0.120
 
@@ -982,7 +978,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.52
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
-*   **Structural Signature Analysis:** FALSE CI_ROPE signature for belief_argument_conclusion: Appears to be rope (indexed_rope_classification) but fails 4 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.25),scope_variant([snare,tangled_rope]),excess_above_floor(0.6499999999999999),nonsensical_coupling(0.5)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for belief_argument_conclusion: Appears to be rope (indexed_rope_classification) but fails 3 Boltzmann structural test(s): [scope_variant([snare,tangled_rope]),excess_above_floor(0.6499999999999999),nonsensical_coupling(0.3333333333333333)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
     → Institutional beneficiary: instinctive_certainty
     → Institutional d=0.120
 
@@ -1092,7 +1088,7 @@ IF context-dependent → Add indexical resolution
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
-*   **Structural Signature Analysis:** FALSE CI_ROPE signature for biological_curiosity: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.375,0.25),excess_above_floor(0.09999999999999999)]. Coupling score=0.375. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for biological_curiosity: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.09999999999999999)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
     → Institutional beneficiary: the_scientific_method
     → Institutional d=0.120
 
@@ -1202,7 +1198,7 @@ IF context-dependent → Add indexical resolution
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
-*   **Structural Signature Analysis:** FALSE CI_ROPE signature for burden_of_proof_engineering_safety: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.33),excess_above_floor(0.8)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for burden_of_proof_engineering_safety: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.33),excess_above_floor(0.8)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
     → Institutional beneficiary: nasa_launch_schedule
     → Institutional d=0.120
 
@@ -1312,7 +1308,7 @@ IF context-dependent → Add indexical resolution
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
-*   **Structural Signature Analysis:** FALSE CI_ROPE signature for child_marriage: Appears to be rope (indexed_rope_classification) but fails 3 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.33),excess_above_floor(0.65),nonsensical_coupling(0.3333333333333333)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for child_marriage: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.33),excess_above_floor(0.65)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
     → Institutional beneficiary: family_and_community_elders
     → Institutional d=0.120
 
@@ -1514,7 +1510,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.54
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
-*   **Structural Signature Analysis:** FALSE CI_ROPE signature for confirmation_bias: Appears to be rope (indexed_rope_classification) but fails 4 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.25),scope_variant([rope,tangled_rope]),excess_above_floor(0.25),nonsensical_coupling(0.5)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for confirmation_bias: Appears to be rope (indexed_rope_classification) but fails 3 Boltzmann structural test(s): [scope_variant([rope,scaffold,unknown]),excess_above_floor(0.25),nonsensical_coupling(0.6666666666666666)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
     → Institutional beneficiary: [ideological_leaders,status_quo]
     → Institutional d=0.120
   confirmation_bias_interval: constructed_low_extraction (confidence: low)
@@ -1630,7 +1626,7 @@ IF context-dependent → Add indexical resolution
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
-*   **Structural Signature Analysis:** FALSE CI_ROPE signature for cuba_mandatrophic_collapse: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.3),excess_above_floor(0.7999999999999999)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for cuba_mandatrophic_collapse: Appears to be rope (indexed_rope_classification) but fails 3 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.3),excess_above_floor(0.7999999999999999),nonsensical_coupling(0.16666666666666666)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
     → Institutional beneficiary: gaesa_military_elite
     → Institutional d=0.120
 
@@ -1740,7 +1736,7 @@ IF context-dependent → Add indexical resolution
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
-*   **Structural Signature Analysis:** FALSE CI_ROPE signature for currys_paradox: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.375,0.25),excess_above_floor(0.15000000000000002)]. Coupling score=0.375. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for currys_paradox: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [excess_above_floor(0.15000000000000002),nonsensical_coupling(0.16666666666666666)]. Coupling score=0.375. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
     → Institutional beneficiary: paraconsistent_logicians
     → Institutional d=0.120
   currys_paradox_interval: constructed_low_extraction (confidence: low)
@@ -1848,9 +1844,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
-*   **Structural Signature Analysis:** FALSE CI_ROPE signature for dead_sea_effect: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.25),excess_above_floor(0.45)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
-    → Institutional beneficiary: competitor_organizations
-    → Institutional d=0.120
+*   **Structural Signature Analysis:** FALSE NATURAL LAW signature for dead_sea_effect: Claims naturality (indexed_mountain_classification) but fails Boltzmann independence test. Coupling score=0.750 with 0 coupled dimension pairs. Excess extraction=0.45. This constraint is "physics-washed" — it appears natural but its coupling topology reveals structural construction.
 
 [UKE_DR FEASIBILITY BRIDGE]
   Recommendation | UKE Status
@@ -1950,7 +1944,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
-*   **Structural Signature Analysis:** FALSE CI_ROPE signature for endowment_effect: Appears to be rope (indexed_rope_classification) but fails 4 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.25),scope_variant([rope,tangled_rope]),excess_above_floor(0.25),nonsensical_coupling(0.5)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for endowment_effect: Appears to be rope (indexed_rope_classification) but fails 3 Boltzmann structural test(s): [scope_variant([rope,scaffold,unknown]),excess_above_floor(0.25),nonsensical_coupling(0.6666666666666666)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
     → Institutional beneficiary: existing_owners
     → Institutional d=0.120
   endowment_interval: constructed_low_extraction (confidence: low)
@@ -2066,9 +2060,7 @@ IF context-dependent → Add indexical resolution
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
-*   **Structural Signature Analysis:** FALSE CI_ROPE signature for ergo_autolykos_asic_resistance: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.375,0.25),excess_above_floor(0.15000000000000002)]. Coupling score=0.375. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
-    → Institutional beneficiary: retail_gpu_miners
-    → Institutional d=0.120
+*   **Structural Signature Analysis:** FALSE NATURAL LAW signature for ergo_autolykos_asic_resistance: Claims naturality (indexed_mountain_classification) but fails Boltzmann independence test. Coupling score=0.375 with 0 coupled dimension pairs. Excess extraction=0.15000000000000002. This constraint is "physics-washed" — it appears natural but its coupling topology reveals structural construction.
 
 [UKE_DR FEASIBILITY BRIDGE]
   Recommendation | UKE Status
@@ -2160,9 +2152,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.56
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
-*   **Structural Signature Analysis:** FALSE CI_ROPE signature for faint_blue_neural_bifurcation: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.25),excess_above_floor(0.85)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
-    → Institutional beneficiary: lab_productivity_metrics
-    → Institutional d=0.120
+*   **Structural Signature Analysis:** FALSE NATURAL LAW signature for faint_blue_neural_bifurcation: Claims naturality (indexed_mountain_classification) but fails Boltzmann independence test. Coupling score=0.750 with 0 coupled dimension pairs. Excess extraction=0.85. This constraint is "physics-washed" — it appears natural but its coupling topology reveals structural construction.
 
 [UKE_DR FEASIBILITY BRIDGE]
   Recommendation | UKE Status
@@ -2264,7 +2254,7 @@ IF uncertainty → HALT changes until resolved
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
-*   **Structural Signature Analysis:** FALSE CI_ROPE signature for gamblers_ruin_stochastic_extinction: Appears to be rope (indexed_rope_classification) but fails 4 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.3),scope_variant([tangled_rope,unknown]),excess_above_floor(0.75),nonsensical_coupling(0.3333333333333333)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for gamblers_ruin_stochastic_extinction: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.3),excess_above_floor(0.75)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
     → Institutional beneficiary: casino_operators
     → Institutional d=0.120
 
@@ -2345,7 +2335,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.50
 
 ### END REFINEMENT MANIFEST ###
 
-[282] EXECUTING: testsets/gauss_bonnet_topology.pl
+[284] EXECUTING: testsets/gauss_bonnet_topology.pl
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** omega_extraction_blindness_gamblers_ruin_stochastic_extinction (conceptual)
 *   **Suggested Resolution Strategy:**
@@ -2374,7 +2364,7 @@ IF context-dependent → Add indexical resolution
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
-*   **Structural Signature Analysis:** FALSE CI_ROPE signature for generational_replacement_inertia: Appears to be rope (indexed_rope_classification) but fails 3 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.25),excess_above_floor(0.7),nonsensical_coupling(0.3333333333333333)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for generational_replacement_inertia: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.25),excess_above_floor(0.7)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
     → Institutional beneficiary: future_generations
     → Institutional d=0.120
 
@@ -2455,7 +2445,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.55
 
 ### END REFINEMENT MANIFEST ###
 
-[284] EXECUTING: testsets/genetic_algorithms_evolution.pl
+[286] EXECUTING: testsets/genetic_algorithms_evolution.pl
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** omega_extraction_blindness_generational_replacement_inertia (conceptual)
 *   **Suggested Resolution Strategy:**
@@ -2484,7 +2474,7 @@ IF context-dependent → Add indexical resolution
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
-*   **Structural Signature Analysis:** FALSE CI_ROPE signature for guthrie_kidnapping_2026: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.33),excess_above_floor(0.75)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for guthrie_kidnapping_2026: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.33),excess_above_floor(0.75)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
     → Institutional beneficiary: predatory_ai_actors
     → Institutional d=0.120
 
@@ -2565,7 +2555,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.57
 
 ### END REFINEMENT MANIFEST ###
 
-[318] EXECUTING: testsets/halting_problem_undecidability.pl
+[320] EXECUTING: testsets/halting_problem_undecidability.pl
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** omega_extraction_blindness_guthrie_kidnapping_2026 (conceptual)
 *   **Suggested Resolution Strategy:**
@@ -2594,7 +2584,7 @@ IF context-dependent → Add indexical resolution
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
-*   **Structural Signature Analysis:** FALSE CI_ROPE signature for hawthorne_effect: Appears to be rope (indexed_rope_classification) but fails 4 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.25),scope_variant([tangled_rope,unknown]),excess_above_floor(0.35000000000000003),nonsensical_coupling(0.3333333333333333)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for hawthorne_effect: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.35000000000000003)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
     → Institutional beneficiary: [management,study_leads]
     → Institutional d=0.120
   hawthorne_interval: constructed_low_extraction (confidence: low)
@@ -2681,7 +2671,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.58
 
 ### END REFINEMENT MANIFEST ###
 
-[326] EXECUTING: testsets/hedonic_adaptation_baseline.pl
+[328] EXECUTING: testsets/hedonic_adaptation_baseline.pl
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
@@ -2710,7 +2700,7 @@ IF context-dependent → Add indexical resolution
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
-*   **Structural Signature Analysis:** CONSTRUCTED LOW-EXTRACTION signature for kjv_great_awakening: Enforcement present (suppression=0.40, resistance=0.50) but extraction is low (0.10). This is a rule-based coordination structure, not an extraction mechanism.
+*   **Structural Signature Analysis:** COUPLING-INVARIANT ROPE signature for kjv_great_awakening: Certified true coordination mechanism. Boltzmann compliance=compliant(0), scope invariance=invariant, excess extraction=0.050. Passes all structural purity tests — this is genuine coordination, not low-extraction construction.
 
 [UKE_DR FEASIBILITY BRIDGE]
   Recommendation | UKE Status
@@ -2779,7 +2769,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.48
 
 ### END REFINEMENT MANIFEST ###
 
-[385] EXECUTING: testsets/kjv_linguistic_residue.pl
+[387] EXECUTING: testsets/kjv_linguistic_residue.pl
 *   **Generated Omega:** omega_perspectival_kjv_great_awakening (conceptual)
 *   **Suggested Resolution Strategy:**
     ```
@@ -2802,9 +2792,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.48
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
-*   **Structural Signature Analysis:** FALSE CI_ROPE signature for knowledge_action_gap: Appears to be rope (indexed_rope_classification) but fails 4 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.3),scope_variant([tangled_rope,unknown]),excess_above_floor(0.5599999999999999),nonsensical_coupling(0.3333333333333333)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
-    → Institutional beneficiary: status_quo_systems
-    → Institutional d=0.120
+*   **Structural Signature Analysis:** FALSE NATURAL LAW signature for knowledge_action_gap: Claims naturality (indexed_mountain_classification) but fails Boltzmann independence test. Coupling score=1.000 with 6 coupled dimension pairs. Excess extraction=0.5599999999999999. This constraint is "physics-washed" — it appears natural but its coupling topology reveals structural construction.
 
 [UKE_DR FEASIBILITY BRIDGE]
   Recommendation | UKE Status
@@ -2878,7 +2866,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.51
 
 ### END REFINEMENT MANIFEST ###
 
-[390] EXECUTING: testsets/landscape_of_fear_2026.pl
+[392] EXECUTING: testsets/landscape_of_fear_2026.pl
 *   **Related Gap/Alert:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Generated Omega:** omega_cut_safety_knowledge_action_gap (conceptual)
 *   **Suggested Resolution Strategy:**
@@ -2906,9 +2894,7 @@ IF uncertainty → HALT changes until resolved
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
-*   **Structural Signature Analysis:** FALSE CI_ROPE signature for layered_brain_processing: Appears to be rope (indexed_rope_classification) but fails 4 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.25),scope_variant([rope,tangled_rope]),excess_above_floor(0.3),nonsensical_coupling(0.3333333333333333)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
-    → Institutional beneficiary: ai_researchers
-    → Institutional d=0.120
+*   **Structural Signature Analysis:** FALSE NATURAL LAW signature for layered_brain_processing: Claims naturality (indexed_mountain_classification) but fails Boltzmann independence test. Coupling score=1.000 with 4 coupled dimension pairs. Excess extraction=0.3. This constraint is "physics-washed" — it appears natural but its coupling topology reveals structural construction.
 
 [UKE_DR FEASIBILITY BRIDGE]
   Recommendation | UKE Status
@@ -2983,7 +2969,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.54
 
 ### END REFINEMENT MANIFEST ###
 
-[396] EXECUTING: testsets/legacy_system_technical_debt.pl
+[398] EXECUTING: testsets/legacy_system_technical_debt.pl
 *   **Generated Omega:** omega_learned_helplessness_layered_brain_processing (conceptual)
 *   **Suggested Resolution Strategy:**
     ```
@@ -3008,9 +2994,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
-*   **Structural Signature Analysis:** FALSE CI_ROPE signature for lula_hemisphere_2026: Appears to be rope (indexed_rope_classification) but fails 3 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.25),excess_above_floor(0.7),nonsensical_coupling(0.3333333333333333)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
-    → Institutional beneficiary: hegemonic_powers
-    → Institutional d=0.120
+*   **Structural Signature Analysis:** FALSE NATURAL LAW signature for lula_hemisphere_2026: Claims naturality (indexed_mountain_classification) but fails Boltzmann independence test. Coupling score=0.750 with 0 coupled dimension pairs. Excess extraction=0.7. This constraint is "physics-washed" — it appears natural but its coupling topology reveals structural construction.
 
 [UKE_DR FEASIBILITY BRIDGE]
   Recommendation | UKE Status
@@ -3079,7 +3063,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.56
 
 ### END REFINEMENT MANIFEST ###
 
-[415] EXECUTING: testsets/lung_transplant_protocol.pl
+[417] EXECUTING: testsets/lung_transplant_protocol.pl
 *   **Generated Omega:** omega_perspectival_lula_hemisphere_2026 (conceptual)
 *   **Suggested Resolution Strategy:**
     ```
@@ -3102,9 +3086,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.56
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
-*   **Structural Signature Analysis:** FALSE CI_ROPE signature for med_diet_consensus_2026: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.375,0.25),excess_above_floor(0.15000000000000002)]. Coupling score=0.375. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
-    → Institutional beneficiary: global_healthcare_systems
-    → Institutional d=0.120
+*   **Structural Signature Analysis:** FALSE NATURAL LAW signature for med_diet_consensus_2026: Claims naturality (indexed_mountain_classification) but fails Boltzmann independence test. Coupling score=0.375 with 2 coupled dimension pairs. Excess extraction=0.15000000000000002. This constraint is "physics-washed" — it appears natural but its coupling topology reveals structural construction.
 
 [UKE_DR FEASIBILITY BRIDGE]
   Recommendation | UKE Status
@@ -3183,7 +3165,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.48
 
 ### END REFINEMENT MANIFEST ###
 
-[433] EXECUTING: testsets/medical_residency_match.pl
+[435] EXECUTING: testsets/medical_residency_match.pl
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** omega_extraction_blindness_med_diet_consensus_2026 (conceptual)
 *   **Suggested Resolution Strategy:**
@@ -3212,7 +3194,7 @@ IF context-dependent → Add indexical resolution
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
-*   **Structural Signature Analysis:** CONSTRUCTED HIGH-EXTRACTION signature for metamorphosis_samsa: Enforcement present (suppression=0.70, resistance=0.50) with high extraction (0.80). This is an extraction mechanism that metrics failed to classify as snare.
+*   **Structural Signature Analysis:** FALSE NATURAL LAW signature for metamorphosis_samsa: Claims naturality (indexed_mountain_classification) but fails Boltzmann independence test. Coupling score=0.750 with 0 coupled dimension pairs. Excess extraction=0.75. This constraint is "physics-washed" — it appears natural but its coupling topology reveals structural construction.
 
 [UKE_DR FEASIBILITY BRIDGE]
   Recommendation | UKE Status
@@ -3281,7 +3263,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.53
 
 ### END REFINEMENT MANIFEST ###
 
-[441] EXECUTING: testsets/micro_robot_electronics_integration.pl
+[443] EXECUTING: testsets/micro_robot_electronics_integration.pl
 *   **Generated Omega:** omega_perspectival_metamorphosis_samsa (conceptual)
 *   **Suggested Resolution Strategy:**
     ```
@@ -3304,7 +3286,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.53
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
-*   **Structural Signature Analysis:** FALSE CI_ROPE signature for micro_robot_electronics_integration: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.375,0.25),excess_above_floor(0.15000000000000002)]. Coupling score=0.375. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for micro_robot_electronics_integration: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [excess_above_floor(0.15000000000000002),nonsensical_coupling(0.16666666666666666)]. Coupling score=0.375. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
     → Institutional beneficiary: mechanical_simplicity
     → Institutional d=0.120
   ek_robot_integration_cycle: constructed_low_extraction (confidence: low)
@@ -3386,7 +3368,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.58
 
 ### END REFINEMENT MANIFEST ###
 
-[442] EXECUTING: testsets/microbiome_symbiosis.pl
+[444] EXECUTING: testsets/microbiome_symbiosis.pl
 *   **Related Gap/Alert:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
@@ -3414,9 +3396,7 @@ IF uncertainty → HALT changes until resolved
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
-*   **Structural Signature Analysis:** FALSE CI_ROPE signature for nasa_faster_better_cheaper: Appears to be rope (indexed_rope_classification) but fails 3 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.33),excess_above_floor(0.7000000000000001),nonsensical_coupling(0.16666666666666666)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
-    → Institutional beneficiary: nasa_administration_metrics
-    → Institutional d=0.120
+*   **Structural Signature Analysis:** FALSE NATURAL LAW signature for nasa_faster_better_cheaper: Claims naturality (indexed_mountain_classification) but fails Boltzmann independence test. Coupling score=0.750 with 0 coupled dimension pairs. Excess extraction=0.7000000000000001. This constraint is "physics-washed" — it appears natural but its coupling topology reveals structural construction.
 
 [UKE_DR FEASIBILITY BRIDGE]
   Recommendation | UKE Status
@@ -3490,7 +3470,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.53
 
 ### END REFINEMENT MANIFEST ###
 
-[470] EXECUTING: testsets/nash_equilibrium_coordination.pl
+[472] EXECUTING: testsets/nash_equilibrium_coordination.pl
 *   **Related Gap/Alert:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Generated Omega:** omega_cut_safety_nasa_faster_better_cheaper (conceptual)
 *   **Suggested Resolution Strategy:**
@@ -3518,7 +3498,7 @@ IF uncertainty → HALT changes until resolved
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
-*   **Structural Signature Analysis:** FALSE CI_ROPE signature for north_korea_songun_mandatrophy: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.33),excess_above_floor(0.85)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for north_korea_songun_mandatrophy: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.33),excess_above_floor(0.85)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
     → Institutional beneficiary: kpa_military_leadership
     → Institutional d=0.120
 
@@ -3599,7 +3579,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.58
 
 ### END REFINEMENT MANIFEST ###
 
-[489] EXECUTING: testsets/notary_ink_dependency.pl
+[491] EXECUTING: testsets/notary_ink_dependency.pl
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** omega_extraction_blindness_north_korea_songun_mandatrophy (conceptual)
 *   **Suggested Resolution Strategy:**
@@ -3628,7 +3608,7 @@ IF context-dependent → Add indexical resolution
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
-*   **Structural Signature Analysis:** FALSE CI_ROPE signature for prime_age_male_unwork: Appears to be rope (indexed_rope_classification) but fails 4 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.3),scope_variant([snare,tangled_rope]),excess_above_floor(0.47),nonsensical_coupling(0.5)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for prime_age_male_unwork: Appears to be rope (indexed_rope_classification) but fails 4 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.3),scope_variant([snare,tangled_rope]),excess_above_floor(0.47),nonsensical_coupling(0.3333333333333333)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
     → Institutional beneficiary: entitlement_dispensing_state
     → Institutional d=0.120
 
@@ -3709,7 +3689,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.53
 
 ### END REFINEMENT MANIFEST ###
 
-[535] EXECUTING: testsets/prime_number_theorem.pl
+[537] EXECUTING: testsets/prime_number_theorem.pl
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** omega_extraction_blindness_prime_age_male_unwork (conceptual)
 *   **Suggested Resolution Strategy:**
@@ -3738,7 +3718,7 @@ IF context-dependent → Add indexical resolution
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
-*   **Structural Signature Analysis:** FALSE CI_ROPE signature for qwerty_vs_dvorak: Appears to be rope (indexed_rope_classification) but fails 4 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.25),scope_variant([tangled_rope,unknown]),excess_above_floor(0.35000000000000003),nonsensical_coupling(0.3333333333333333)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for qwerty_vs_dvorak: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.35000000000000003)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
     → Institutional beneficiary: [legacy_manufacturers,educational_institutions]
     → Institutional d=0.120
   qwerty_lockin_interval: constructed_low_extraction (confidence: low)
@@ -3825,7 +3805,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.58
 
 ### END REFINEMENT MANIFEST ###
 
-[554] EXECUTING: testsets/radiologic_diagnostic_threshold.pl
+[556] EXECUTING: testsets/radiologic_diagnostic_threshold.pl
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
@@ -3854,9 +3834,7 @@ IF context-dependent → Add indexical resolution
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
-*   **Structural Signature Analysis:** FALSE CI_ROPE signature for rogers_commission_institutional_analysis: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.3),excess_above_floor(0.7)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
-    → Institutional beneficiary: nasa_institutional_prestige
-    → Institutional d=0.120
+*   **Structural Signature Analysis:** FALSE NATURAL LAW signature for rogers_commission_institutional_analysis: Claims naturality (indexed_mountain_classification) but fails Boltzmann independence test. Coupling score=0.750 with 0 coupled dimension pairs. Excess extraction=0.7. This constraint is "physics-washed" — it appears natural but its coupling topology reveals structural construction.
 
 [UKE_DR FEASIBILITY BRIDGE]
   Recommendation | UKE Status
@@ -3930,7 +3908,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.54
 
 ### END REFINEMENT MANIFEST ###
 
-[578] EXECUTING: testsets/rogue_wave_control_2026.pl
+[581] EXECUTING: testsets/rogue_wave_control_2026.pl
 *   **Related Gap/Alert:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Generated Omega:** omega_cut_safety_rogers_commission_institutional_analysis (conceptual)
 *   **Suggested Resolution Strategy:**
@@ -3958,7 +3936,7 @@ IF uncertainty → HALT changes until resolved
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
-*   **Structural Signature Analysis:** FALSE CI_ROPE signature for rotation_seven_isolation: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.33),excess_above_floor(0.75)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for rotation_seven_isolation: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.33),excess_above_floor(0.75)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
     → Institutional beneficiary: station_population_health
     → Institutional d=0.120
 
@@ -4039,7 +4017,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.53
 
 ### END REFINEMENT MANIFEST ###
 
-[581] EXECUTING: testsets/rotation_seven_kubo_ranking.pl
+[584] EXECUTING: testsets/rotation_seven_kubo_ranking.pl
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** omega_extraction_blindness_rotation_seven_isolation (conceptual)
 *   **Suggested Resolution Strategy:**
@@ -4068,7 +4046,7 @@ IF context-dependent → Add indexical resolution
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
-*   **Structural Signature Analysis:** FALSE CI_ROPE signature for russells_paradox_self_reference: Appears to be rope (indexed_rope_classification) but fails 4 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.33),scope_variant([tangled_rope,unknown]),excess_above_floor(0.6),nonsensical_coupling(0.3333333333333333)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for russells_paradox_self_reference: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.33),excess_above_floor(0.6)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
     → Institutional beneficiary: axiomatic_set_theorists
     → Institutional d=0.120
 
@@ -4149,7 +4127,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.48
 
 ### END REFINEMENT MANIFEST ###
 
-[587] EXECUTING: testsets/russian_war_cannibalization.pl
+[590] EXECUTING: testsets/russian_war_cannibalization.pl
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** omega_extraction_blindness_russells_paradox_self_reference (conceptual)
 *   **Suggested Resolution Strategy:**
@@ -4178,7 +4156,7 @@ IF context-dependent → Add indexical resolution
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
-*   **Structural Signature Analysis:** FALSE CI_ROPE signature for skolems_paradox: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.375,0.25),excess_above_floor(0.15000000000000002)]. Coupling score=0.375. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for skolems_paradox: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [excess_above_floor(0.15000000000000002),nonsensical_coupling(0.16666666666666666)]. Coupling score=0.375. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
     → Institutional beneficiary: model_theorists
     → Institutional d=0.120
   skolems_paradox_interval: constructed_low_extraction (confidence: low)
@@ -4265,7 +4243,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.58
 
 ### END REFINEMENT MANIFEST ###
 
-[613] EXECUTING: testsets/sleep_debt_externality.pl
+[616] EXECUTING: testsets/sleep_debt_externality.pl
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
@@ -4294,7 +4272,7 @@ IF context-dependent → Add indexical resolution
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
-*   **Structural Signature Analysis:** FALSE CI_ROPE signature for slow_crisis_invisibility: Appears to be rope (indexed_rope_classification) but fails 3 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.3),excess_above_floor(0.6),nonsensical_coupling(0.3333333333333333)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for slow_crisis_invisibility: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.3),excess_above_floor(0.6)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
     → Institutional beneficiary: legacy_institutions
     → Institutional d=0.120
 
@@ -4375,7 +4353,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.52
 
 ### END REFINEMENT MANIFEST ###
 
-[615] EXECUTING: testsets/sludge_bureaucratic_friction.pl
+[618] EXECUTING: testsets/sludge_bureaucratic_friction.pl
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** omega_extraction_blindness_slow_crisis_invisibility (conceptual)
 *   **Suggested Resolution Strategy:**
@@ -4404,9 +4382,7 @@ IF context-dependent → Add indexical resolution
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
-*   **Structural Signature Analysis:** FALSE CI_ROPE signature for starwars_evolutionary_mutation: Appears to be rope (indexed_rope_classification) but fails 3 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.33),excess_above_floor(0.65),nonsensical_coupling(0.3333333333333333)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
-    → Institutional beneficiary: bureaucratic_inertia
-    → Institutional d=0.120
+*   **Structural Signature Analysis:** FALSE NATURAL LAW signature for starwars_evolutionary_mutation: Claims naturality (indexed_mountain_classification) but fails Boltzmann independence test. Coupling score=0.750 with 0 coupled dimension pairs. Excess extraction=0.65. This constraint is "physics-washed" — it appears natural but its coupling topology reveals structural construction.
 
 [UKE_DR FEASIBILITY BRIDGE]
   Recommendation | UKE Status
@@ -4480,7 +4456,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.55
 
 ### END REFINEMENT MANIFEST ###
 
-[632] EXECUTING: testsets/statecraft_virtu.pl
+[635] EXECUTING: testsets/statecraft_virtu.pl
 *   **Related Gap/Alert:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Generated Omega:** omega_cut_safety_starwars_evolutionary_mutation (conceptual)
 *   **Suggested Resolution Strategy:**
@@ -4508,7 +4484,7 @@ IF uncertainty → HALT changes until resolved
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
-*   **Structural Signature Analysis:** FALSE CI_ROPE signature for sunk_cost_fallacy: Appears to be rope (indexed_rope_classification) but fails 4 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.25),scope_variant([snare,tangled_rope]),excess_above_floor(0.45),nonsensical_coupling(0.16666666666666666)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for sunk_cost_fallacy: Appears to be rope (indexed_rope_classification) but fails 4 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.25),scope_variant([snare,tangled_rope]),excess_above_floor(0.45),nonsensical_coupling(0.5)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
     → Institutional beneficiary: casinos
     → Institutional d=0.120
 
@@ -4589,7 +4565,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.52
 
 ### END REFINEMENT MANIFEST ###
 
-[644] EXECUTING: testsets/suslin_hypothesis_undecidability.pl
+[647] EXECUTING: testsets/suslin_hypothesis_undecidability.pl
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** omega_extraction_blindness_sunk_cost_fallacy (conceptual)
 *   **Suggested Resolution Strategy:**
@@ -4618,7 +4594,7 @@ IF context-dependent → Add indexical resolution
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
-*   **Structural Signature Analysis:** FALSE CI_ROPE signature for thai_senate_veto_2026: Appears to be rope (indexed_rope_classification) but fails 3 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.33),excess_above_floor(0.62),nonsensical_coupling(0.3333333333333333)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for thai_senate_veto_2026: Appears to be rope (indexed_rope_classification) but fails 4 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.33),scope_variant([snare,tangled_rope]),excess_above_floor(0.62),nonsensical_coupling(0.3333333333333333)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
     → Institutional beneficiary: conservative_establishment
     → Institutional d=0.120
 
@@ -4699,7 +4675,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.55
 
 ### END REFINEMENT MANIFEST ###
 
-[665] EXECUTING: testsets/the_bacchae_madness_protocol.pl
+[668] EXECUTING: testsets/the_bacchae_madness_protocol.pl
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** omega_extraction_blindness_thai_senate_veto_2026 (conceptual)
 *   **Suggested Resolution Strategy:**
@@ -4728,9 +4704,7 @@ IF context-dependent → Add indexical resolution
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
-*   **Structural Signature Analysis:** FALSE CI_ROPE signature for the_churn_systemic_upheaval: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.25),excess_above_floor(0.85)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
-    → Institutional beneficiary: the_new_system
-    → Institutional d=0.120
+*   **Structural Signature Analysis:** FALSE NATURAL LAW signature for the_churn_systemic_upheaval: Claims naturality (indexed_mountain_classification) but fails Boltzmann independence test. Coupling score=0.750 with 0 coupled dimension pairs. Excess extraction=0.85. This constraint is "physics-washed" — it appears natural but its coupling topology reveals structural construction.
 
 [UKE_DR FEASIBILITY BRIDGE]
   Recommendation | UKE Status
@@ -4809,7 +4783,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.55
 
 ### END REFINEMENT MANIFEST ###
 
-[668] EXECUTING: testsets/the_wall_procedural_barrier.pl
+[671] EXECUTING: testsets/the_wall_procedural_barrier.pl
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** omega_extraction_blindness_the_churn_systemic_upheaval (conceptual)
 *   **Suggested Resolution Strategy:**
@@ -4838,9 +4812,7 @@ IF context-dependent → Add indexical resolution
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
-*   **Structural Signature Analysis:** FALSE CI_ROPE signature for the_wall_procedural_barrier: Appears to be rope (indexed_rope_classification) but fails 3 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.33),excess_above_floor(0.7000000000000001),nonsensical_coupling(0.16666666666666666)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
-    → Institutional beneficiary: institutional_gatekeepers
-    → Institutional d=0.120
+*   **Structural Signature Analysis:** FALSE NATURAL LAW signature for the_wall_procedural_barrier: Claims naturality (indexed_mountain_classification) but fails Boltzmann independence test. Coupling score=0.750 with 0 coupled dimension pairs. Excess extraction=0.7000000000000001. This constraint is "physics-washed" — it appears natural but its coupling topology reveals structural construction.
 
 [UKE_DR FEASIBILITY BRIDGE]
   Recommendation | UKE Status
@@ -4914,7 +4886,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.57
 
 ### END REFINEMENT MANIFEST ###
 
-[669] EXECUTING: testsets/theory_of_visitors.pl
+[672] EXECUTING: testsets/theory_of_visitors.pl
 *   **Related Gap/Alert:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Generated Omega:** omega_cut_safety_the_wall_procedural_barrier (conceptual)
 *   **Suggested Resolution Strategy:**
@@ -4937,122 +4909,12 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 47. Snare: `thermodynamics_entropy`
+### 47. Snare: `tractarian_logic_limit`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
-*   **Structural Signature Analysis:** FALSE CI_ROPE signature for thermodynamics_entropy: Appears to be rope (indexed_rope_classification) but fails 3 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.25),excess_above_floor(0.75),nonsensical_coupling(0.16666666666666666)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
-    → Institutional beneficiary: industrial_engineers
-    → Institutional d=0.120
-
-[UKE_DR FEASIBILITY BRIDGE]
-  Recommendation | UKE Status
-  ----------------------------------------------------------------------
-
-Aggregate Magnitude (Kappa) at Tn: 0.58
-
-[PERSPECTIVAL GAP ANALYSIS]
-
-  Analysis for Constraint: thermodynamics_entropy
-    ! ALERT: Extractive "Snare" is masked as functional "Rope".
-    - Individual (Powerless): snare [d=0.900 f(d)=1.36 χ=0.87]
-    - Institutional (Manager): rope [d=0.120 f(d)=-0.04 χ=-0.03 → net benefit]
-    ! MANDATROPHY GAP: delta_chi = 0.90 (high)
-
-[OMEGA GENERATION FROM PERSPECTIVAL GAPS: thermodynamics_entropy]
-  Generated 1 Omega variables from perspectival gaps:
-
-  Ω: omega_extraction_blindness_thermodynamics_entropy (conceptual)
-     Question: Constraint thermodynamics_entropy appears extractive (Snare) to individuals but functional (Rope) to institutions...
-     Source: gap(snare_masked_as_rope,snare,rope)
-
-
-[OMEGA TRIAGE & PRIORITIZATION]
-
-  [critical] 1 omega(s):
-    - omega_extraction_blindness_thermodynamics_entropy (conceptual)
-      Constraint thermodynamics_entropy appears extractive (Snare) to individuals but functional (Rope) to institutions...
-
-  [high] 1 omega(s):
-    - omega_extraction_blindness_thermodynamics_entropy (conceptual)
-      Constraint thermodynamics_entropy appears extractive (Snare) to individuals but functional (Rope) to institutions...
-
-[OMEGA RESOLUTION SCENARIO GENERATION]
-  Generated 1 resolution scenario(s):
-
-  ┌─ [omega_extraction_blindness_thermodynamics_entropy] CONCEPTUAL CLARIFICATION
-  │  Constraint: thermodynamics_entropy
-  │  Gap: Constraint thermodynamics_entropy appears extractive (Snare) to individuals but functional (Rope) to institutions...
-  │
-  │  CRITICAL: Extraction Masking Detected
-  │  Powerless see: SNARE (extractive trap)
-  │  Institutions see: ROPE (functional rule)
-  │
-  │  RESOLUTION STRATEGY:
-  │  1. Interview affected individuals (N=10+):
-  │     - Who benefits from thermodynamics_entropy?
-  │     - Can you change/exit this constraint?
-  │     - What would happen if you tried?
-  │  2. Interview institutional actors (N=10+):
-  │     - What function does thermodynamics_entropy serve?
-  │     - Who would object to removing it?
-  │     - What alternatives exist?
-  │  3. Document benefit flows:
-  │     - Track who gains vs. who loses from status quo
-  │     - Measure asymmetric benefit distribution
-  │  4. Decision tree:
-  │     IF extraction confirmed → Reclassify as SNARE
-  │     IF functional & fair → Reclassify as ROPE
-  │     IF context-dependent → Add indexical resolution
-  └─
-
-====================================================
-[PASS] testsets/thermodynamics_entropy.pl
-
-### START LLM REFINEMENT MANIFEST: thermodynamics_entropy ###
-
-[PERSPECTIVAL_GAPS]
-  - Constraint "thermodynamics_entropy": Individual sees snare, but Institution sees rope.
-
-[ONTOLOGICAL_MISMATCHES]
-  - None detected.
-
-[UNRESOLVED_OMEGAS]
-  - omega_extraction_blindness_thermodynamics_entropy (conceptual): Constraint thermodynamics_entropy appears extractive (Snare) to individuals but functional (Rope) to institutions...
-
-### END REFINEMENT MANIFEST ###
-
-[671] EXECUTING: testsets/three_body_unpredicability.pl
-*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
-*   **Generated Omega:** omega_extraction_blindness_thermodynamics_entropy (conceptual)
-*   **Suggested Resolution Strategy:**
-    ```
-1. Interview affected individuals (N=10+):
-- Who benefits from thermodynamics_entropy?
-- Can you change/exit this constraint?
-- What would happen if you tried?
-2. Interview institutional actors (N=10+):
-- What function does thermodynamics_entropy serve?
-- Who would object to removing it?
-- What alternatives exist?
-3. Document benefit flows:
-- Track who gains vs. who loses from status quo
-- Measure asymmetric benefit distribution
-4. Decision tree:
-IF extraction confirmed → Reclassify as SNARE
-IF functional & fair → Reclassify as ROPE
-IF context-dependent → Add indexical resolution
-    ```
-
----
-
-### 48. Snare: `tractarian_logic_limit`
-
-*   **Claimed Type:** `snare`
-*   **Severity:** `N/A`
-*   **Perspectival Breakdown:**
-*   **Structural Signature Analysis:** FALSE CI_ROPE signature for tractarian_logic_limit: Appears to be rope (indexed_rope_classification) but fails 4 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.25),scope_variant([snare,tangled_rope]),excess_above_floor(0.6499999999999999),nonsensical_coupling(0.5)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for tractarian_logic_limit: Appears to be rope (indexed_rope_classification) but fails 4 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.25),scope_variant([snare,tangled_rope]),excess_above_floor(0.6499999999999999),nonsensical_coupling(0.3333333333333333)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
     → Institutional beneficiary: natural_science_philosophers
     → Institutional d=0.120
 
@@ -5133,7 +4995,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.58
 
 ### END REFINEMENT MANIFEST ###
 
-[674] EXECUTING: testsets/trade_secret_law.pl
+[677] EXECUTING: testsets/trade_secret_law.pl
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** omega_extraction_blindness_tractarian_logic_limit (conceptual)
 *   **Suggested Resolution Strategy:**
@@ -5157,12 +5019,12 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 49. Snare: `trillion_bond_rush_2026`
+### 48. Snare: `trillion_bond_rush_2026`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
-*   **Structural Signature Analysis:** FALSE CI_ROPE signature for trillion_bond_rush_2026: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.47000000000000003)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for trillion_bond_rush_2026: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.25),excess_above_floor(0.47000000000000003)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
     → Institutional beneficiary: debt_capital_markets
     → Institutional d=0.120
 
@@ -5243,7 +5105,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.43
 
 ### END REFINEMENT MANIFEST ###
 
-[680] EXECUTING: testsets/trojan_war_spoils.pl
+[683] EXECUTING: testsets/trojan_war_spoils.pl
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** omega_extraction_blindness_trillion_bond_rush_2026 (conceptual)
 *   **Suggested Resolution Strategy:**
@@ -5267,14 +5129,12 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 50. Snare: `trojan_war_spoils`
+### 49. Snare: `trojan_war_spoils`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
-*   **Structural Signature Analysis:** FALSE CI_ROPE signature for trojan_war_spoils: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.3),excess_above_floor(0.85)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
-    → Institutional beneficiary: greek_army
-    → Institutional d=0.120
+*   **Structural Signature Analysis:** FALSE NATURAL LAW signature for trojan_war_spoils: Claims naturality (indexed_mountain_classification) but fails Boltzmann independence test. Coupling score=1.000 with 2 coupled dimension pairs. Excess extraction=0.85. This constraint is "physics-washed" — it appears natural but its coupling topology reveals structural construction.
 
 [UKE_DR FEASIBILITY BRIDGE]
   Recommendation | UKE Status
@@ -5348,7 +5208,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.59
 
 ### END REFINEMENT MANIFEST ###
 
-[681] EXECUTING: testsets/trump_critical_minerals.pl
+[684] EXECUTING: testsets/trump_critical_minerals.pl
 *   **Related Gap/Alert:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Generated Omega:** omega_cut_safety_trojan_war_spoils (conceptual)
 *   **Suggested Resolution Strategy:**
@@ -5367,6 +5227,166 @@ IF changeable + safe alternatives → Correct powerless view to ROPE
 IF changeable + NO alternatives → ADD SCAFFOLD before any change
 IF uncertainty → HALT changes until resolved
 4. CRITICAL: Never proceed with changes until safety verified
+    ```
+
+---
+
+### 50. Snare: `zombie_reasoning_2026`
+
+*   **Claimed Type:** `snare`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for zombie_reasoning_2026: Appears to be rope (indexed_rope_classification) but fails 3 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.25),excess_above_floor(0.69),nonsensical_coupling(0.16666666666666666)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+    → Institutional beneficiary: generative_ai_marketing
+    → Institutional d=0.120
+
+[UKE_DR FEASIBILITY BRIDGE]
+  Recommendation | UKE Status
+  ----------------------------------------------------------------------
+
+Aggregate Magnitude (Kappa) at Tn: 0.55
+
+[PERSPECTIVAL GAP ANALYSIS]
+
+  Analysis for Constraint: zombie_reasoning_2026
+    ! ALERT: Extractive "Snare" is masked as functional "Rope".
+    - Individual (Powerless): snare [d=0.900 f(d)=1.36 χ=0.80]
+    - Institutional (Manager): rope [d=0.120 f(d)=-0.04 χ=-0.03 → net benefit]
+    ! MANDATROPHY GAP: delta_chi = 0.84 (high)
+
+[OMEGA GENERATION FROM PERSPECTIVAL GAPS: zombie_reasoning_2026]
+  Generated 1 Omega variables from perspectival gaps:
+
+  Ω: omega_extraction_blindness_zombie_reasoning_2026 (conceptual)
+     Question: Constraint zombie_reasoning_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+     Source: gap(snare_masked_as_rope,snare,rope)
+
+
+[OMEGA TRIAGE & PRIORITIZATION]
+
+  [critical] 1 omega(s):
+    - omega_extraction_blindness_zombie_reasoning_2026 (conceptual)
+      Constraint zombie_reasoning_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+  [high] 1 omega(s):
+    - omega_extraction_blindness_zombie_reasoning_2026 (conceptual)
+      Constraint zombie_reasoning_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+[OMEGA RESOLUTION SCENARIO GENERATION]
+  Generated 1 resolution scenario(s):
+
+  ┌─ [omega_extraction_blindness_zombie_reasoning_2026] CONCEPTUAL CLARIFICATION
+  │  Constraint: zombie_reasoning_2026
+  │  Gap: Constraint zombie_reasoning_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+  │
+  │  CRITICAL: Extraction Masking Detected
+  │  Powerless see: SNARE (extractive trap)
+  │  Institutions see: ROPE (functional rule)
+  │
+  │  RESOLUTION STRATEGY:
+  │  1. Interview affected individuals (N=10+):
+  │     - Who benefits from zombie_reasoning_2026?
+  │     - Can you change/exit this constraint?
+  │     - What would happen if you tried?
+  │  2. Interview institutional actors (N=10+):
+  │     - What function does zombie_reasoning_2026 serve?
+  │     - Who would object to removing it?
+  │     - What alternatives exist?
+  │  3. Document benefit flows:
+  │     - Track who gains vs. who loses from status quo
+  │     - Measure asymmetric benefit distribution
+  │  4. Decision tree:
+  │     IF extraction confirmed → Reclassify as SNARE
+  │     IF functional & fair → Reclassify as ROPE
+  │     IF context-dependent → Add indexical resolution
+  └─
+
+====================================================
+[PASS] testsets/zombie_reasoning_2026.pl
+
+### START LLM REFINEMENT MANIFEST: zombie_reasoning_2026 ###
+
+[PERSPECTIVAL_GAPS]
+  - Constraint "zombie_reasoning_2026": Individual sees snare, but Institution sees rope.
+
+[ONTOLOGICAL_MISMATCHES]
+  - None detected.
+
+[UNRESOLVED_OMEGAS]
+  - omega_extraction_blindness_zombie_reasoning_2026 (conceptual): Constraint zombie_reasoning_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+### END REFINEMENT MANIFEST ###
+
+==================================================
+           TEST SUITE SUMMARY
+==================================================
+Passed: 733
+Failed: 0
+==================================================
+
+====================================================
+   DATA VALIDATION SUITE                           
+====================================================
+
+Running validation checks...
+
+[CHECK 1: Constraint Completeness]
+  Checking 1 constraints...
+  ✓ All constraints complete
+
+[CHECK 2: Metric Range Validation]
+  Checking 3 metrics...
+  ✓ All metrics in valid range
+
+[CHECK 3: Classification Consistency]
+  Checking 1 constraints for consistency...
+  ✓ All classifications consistent with metrics
+
+[CHECK 4: Edge Case Detection]
+  ✓ No mandatrophies detected
+  ✓ No pitons detected
+  ✓ No extreme values
+
+[CHECK 5: Domain Coverage]
+  Found 1 domain categories
+    - piton: 1 constraint(s)
+
+  ⚠ Underrepresented categories (<3 constraints):
+    - piton
+
+====================================================
+   VALIDATION SUMMARY                              
+====================================================
+
+Results:
+  Errors:   0
+  Warnings: 0
+  Info:     1
+
+✓ DATA QUALITY: EXCELLENT - No issues detected
+
+====================================================
+------------------------------------------
+Test suite completed at: Tue Feb 10 20:53:48 CST 2026
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** omega_extraction_blindness_zombie_reasoning_2026 (conceptual)
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from zombie_reasoning_2026?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does zombie_reasoning_2026 serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
     ```
 
 ---

@@ -56,6 +56,7 @@
 domain_priors:base_extractiveness(rare_earth_coop_2026, 0.02). 
 domain_priors:suppression_score(rare_earth_coop_2026, 0.15).   % Low suppression; members can leave.
 domain_priors:theater_ratio(rare_earth_coop_2026, 0.20).       % Functional transparency over spectacle.
+domain_priors:requires_active_enforcement(rare_earth_coop_2026).
 
 % Primary keys for classification engine
 narrative_ontology:constraint_metric(rare_earth_coop_2026, extractiveness, 0.02).

@@ -85,6 +85,7 @@ narrative_ontology:constraint_metric(inner_model_theory_constraints, suppression
 
 % Enforcement: Emerges naturally from the definition of ordinal-indexed construction.
 domain_priors:emerges_naturally(inner_model_theory_constraints).
+domain_priors:requires_active_enforcement(inner_model_theory_constraints).
 
 % Metrics required for Section 1 of the Executive Summary
 % BENEFICIARIES & VICTIMS

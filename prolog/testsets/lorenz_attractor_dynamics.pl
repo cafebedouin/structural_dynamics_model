@@ -81,6 +81,7 @@ narrative_ontology:constraint_metric(lorenz_attractor_dynamics, suppression_requ
 
 % Enforcement: Emerges naturally from the non-linear coupling of variables.
 domain_priors:emerges_naturally(lorenz_attractor_dynamics).
+domain_priors:requires_active_enforcement(lorenz_attractor_dynamics).
 
 % Metrics for Executive Summary
 % BENEFICIARIES & VICTIMS

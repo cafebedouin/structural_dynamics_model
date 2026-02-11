@@ -190,6 +190,8 @@ narrative_ontology:measurement(vq_ex_t10, vienna_quantum_superposition_2026, bas
 % Quantum superposition is a natural law with no beneficiary/victim asymmetry.
 % The experimental apparatus extracts data, but no agent benefits at the expense
 % of another in the sense relevant to structural directionality.
+% Victim declaration required by snare perspective (nanoparticle as trapped subject).
+narrative_ontology:constraint_victim(vienna_quantum_superposition_2026, observed_quantum_systems).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

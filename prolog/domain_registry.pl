@@ -1,7 +1,7 @@
 :- module(domain_registry, [domain_category/2]).
 % --- AUTOMATICALLY GENERATED DOMAIN REGISTRY ---
 % Thresholds aligned with config.pl: Rope <= 0.15, Snare >= 0.46, Tangled Rope 0.16-0.9.
-% Total entries: 727
+% Total entries: 729
 
 domain_category('8k_tv_limit_2026', piton).
 domain_category(abstraction_boundary_overrun, snare).
@@ -38,7 +38,7 @@ domain_category(amish_technological_renunciation, snare).
 domain_category(ancestral_pueblo_hydrology, mountain).
 domain_category(ancient_grudge_verona, snare).
 domain_category(anticipatory_capacity_failure, piton).
-domain_category(antifragility, mountain).
+domain_category(antifragility, snare).
 domain_category(apartheid_nuclear_program, snare).
 domain_category(arctic_geopolitical_flashpoint, snare).
 domain_category(arrows_impossibility_theorem, mountain).
@@ -269,6 +269,7 @@ domain_category(fittss_law, mountain).
 domain_category(floating_wall_2026, snare).
 domain_category(fmeca_procedures_1980, rope).
 domain_category(fmt_oncology_2026, scaffold).
+domain_category(fnl_shadow_probe, mountain).
 domain_category(four_color_theorem_topological_bound, mountain).
 domain_category(fragile_middle_layer_collapse, snare).
 domain_category(framing_effect, snare).
@@ -568,6 +569,7 @@ domain_category(regulatory_capture, snare).
 domain_category(relativity_of_simultaneity, mountain).
 domain_category(relativity_physical_invariance, mountain).
 domain_category(rent_seeking_equilibrium, snare).
+domain_category(repair_probe_incomplete, snare).
 domain_category(responsibility_dilution, snare).
 domain_category(responsibility_without_power, snare).
 domain_category(rfc9293_state_machine, mountain).
@@ -667,7 +669,7 @@ domain_category(the_calm_protocol_suppression, snare).
 domain_category(the_churn_systemic_upheaval, snare).
 domain_category(the_wall_procedural_barrier, snare).
 domain_category(theory_of_visitors, snare).
-domain_category(thermodynamics_entropy, snare).
+domain_category(thermodynamics_entropy, mountain).
 domain_category(three_body_unpredictability, mountain).
 domain_category(toxic_social_infection, snare).
 domain_category(tractarian_logic_limit, snare).
@@ -729,4 +731,4 @@ domain_category(winners_curse, mountain).
 domain_category(world_factbook_sunset_2026, piton).
 domain_category(xi_mao_ideological_centralization, mountain).
 domain_category(zipfs_law, snare).
-domain_category(zombie_reasoning_2026, mountain).
+domain_category(zombie_reasoning_2026, snare).

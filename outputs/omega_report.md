@@ -1,6 +1,6 @@
 # Omega Epistemological Gap Report
 
-**Total Unique Omegas Found:** 687
+**Total Unique Omegas Found:** 690
 
 This report lists all unique Omega variables generated during the analysis. Each Omega represents a critical question, a perspectival gap, or a contradiction that requires further investigation.
 
@@ -13019,7 +13019,34 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 492. Omega: `omega_extraction_blindness_responsibility_dilution`
+### 492. Omega: `omega_extraction_blindness_repair_probe_incomplete`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `repair_probe_incomplete`
+*   **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+*   **Question:** Constraint repair_probe_incomplete appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from repair_probe_incomplete?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does repair_probe_incomplete serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 493. Omega: `omega_extraction_blindness_responsibility_dilution`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `responsibility_dilution`
@@ -13046,7 +13073,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 493. Omega: `omega_extraction_blindness_responsibility_without_power`
+### 494. Omega: `omega_extraction_blindness_responsibility_without_power`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `responsibility_without_power`
@@ -13073,7 +13100,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 494. Omega: `omega_extraction_blindness_riot_incentive_loop_2026`
+### 495. Omega: `omega_extraction_blindness_riot_incentive_loop_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `riot_incentive_loop_2026`
@@ -13100,7 +13127,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 495. Omega: `omega_extraction_blindness_risk_socialization_threshold`
+### 496. Omega: `omega_extraction_blindness_risk_socialization_threshold`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `risk_socialization_threshold`
@@ -13127,7 +13154,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 496. Omega: `omega_extraction_blindness_ritual_without_belief`
+### 497. Omega: `omega_extraction_blindness_ritual_without_belief`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ritual_without_belief`
@@ -13154,7 +13181,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 497. Omega: `omega_extraction_blindness_robustness_vs_efficiency_tradeoff`
+### 498. Omega: `omega_extraction_blindness_robustness_vs_efficiency_tradeoff`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `robustness_vs_efficiency_tradeoff`
@@ -13181,7 +13208,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 498. Omega: `omega_extraction_blindness_rosen_bridge_protocol`
+### 499. Omega: `omega_extraction_blindness_rosen_bridge_protocol`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ergo_rosen_bridge_protocol`
@@ -13208,7 +13235,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 499. Omega: `omega_extraction_blindness_rotation_seven_black_soil`
+### 500. Omega: `omega_extraction_blindness_rotation_seven_black_soil`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `rotation_seven_black_soil`
@@ -13235,7 +13262,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 500. Omega: `omega_extraction_blindness_rotation_seven_isolation`
+### 501. Omega: `omega_extraction_blindness_rotation_seven_isolation`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `rotation_seven_isolation`
@@ -13262,7 +13289,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 501. Omega: `omega_extraction_blindness_rotation_seven_kubo_ranking`
+### 502. Omega: `omega_extraction_blindness_rotation_seven_kubo_ranking`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `rotation_seven_kubo_ranking`
@@ -13289,7 +13316,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 502. Omega: `omega_extraction_blindness_royal_navy_middle_east_withdrawal`
+### 503. Omega: `omega_extraction_blindness_royal_navy_middle_east_withdrawal`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `royal_navy_middle_east_withdrawal`
@@ -13316,7 +13343,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 503. Omega: `omega_extraction_blindness_rule_update_failure`
+### 504. Omega: `omega_extraction_blindness_rule_update_failure`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `rule_update_failure`
@@ -13343,7 +13370,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 504. Omega: `omega_extraction_blindness_rules_based_international_order`
+### 505. Omega: `omega_extraction_blindness_rules_based_international_order`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `rules_based_international_order`
@@ -13370,7 +13397,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 505. Omega: `omega_extraction_blindness_russells_paradox_self_reference`
+### 506. Omega: `omega_extraction_blindness_russells_paradox_self_reference`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `russells_paradox_self_reference`
@@ -13397,7 +13424,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 506. Omega: `omega_extraction_blindness_russian_war_cannibalization`
+### 507. Omega: `omega_extraction_blindness_russian_war_cannibalization`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `russian_war_cannibalization`
@@ -13424,7 +13451,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 507. Omega: `omega_extraction_blindness_sapir_whorf_hypothesis`
+### 508. Omega: `omega_extraction_blindness_sapir_whorf_hypothesis`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `sapir_whorf_hypothesis`
@@ -13451,7 +13478,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 508. Omega: `omega_extraction_blindness_sat_csp_complexity`
+### 509. Omega: `omega_extraction_blindness_sat_csp_complexity`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `sat_csp_complexity`
@@ -13478,7 +13505,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 509. Omega: `omega_extraction_blindness_scam_compound_2026`
+### 510. Omega: `omega_extraction_blindness_scam_compound_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `scam_compound_grey_zone_2026`
@@ -13505,7 +13532,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 510. Omega: `omega_extraction_blindness_scurvy_maritime_extraction`
+### 511. Omega: `omega_extraction_blindness_scurvy_maritime_extraction`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `scurvy_maritime_extraction`
@@ -13532,7 +13559,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 511. Omega: `omega_extraction_blindness_second_order_unintended_consequences`
+### 512. Omega: `omega_extraction_blindness_second_order_unintended_consequences`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `second_order_unintended_consequences`
@@ -13559,7 +13586,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 512. Omega: `omega_extraction_blindness_semantic_attack_surface`
+### 513. Omega: `omega_extraction_blindness_semantic_attack_surface`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `semantic_attack_surface`
@@ -13586,7 +13613,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 513. Omega: `omega_extraction_blindness_semantic_overload_friction`
+### 514. Omega: `omega_extraction_blindness_semantic_overload_friction`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `semantic_overload_friction`
@@ -13613,7 +13640,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 514. Omega: `omega_extraction_blindness_semiconductor_mission_2026`
+### 515. Omega: `omega_extraction_blindness_semiconductor_mission_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `semiconductor_mission_2026`
@@ -13640,7 +13667,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 515. Omega: `omega_extraction_blindness_shadow_pricing_failure`
+### 516. Omega: `omega_extraction_blindness_shadow_pricing_failure`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `shadow_pricing_failure`
@@ -13667,7 +13694,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 516. Omega: `omega_extraction_blindness_shannon_entropy_limit`
+### 517. Omega: `omega_extraction_blindness_shannon_entropy_limit`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `shannon_entropy_limit`
@@ -13694,7 +13721,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 517. Omega: `omega_extraction_blindness_shobies_existential_commitment`
+### 518. Omega: `omega_extraction_blindness_shobies_existential_commitment`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `shobies_existential_commitment`
@@ -13721,7 +13748,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 518. Omega: `omega_extraction_blindness_signal_without_control`
+### 519. Omega: `omega_extraction_blindness_signal_without_control`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `signal_without_control`
@@ -13748,7 +13775,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 519. Omega: `omega_extraction_blindness_silent_dependency_activation`
+### 520. Omega: `omega_extraction_blindness_silent_dependency_activation`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `silent_dependency_activation`
@@ -13775,7 +13802,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 520. Omega: `omega_extraction_blindness_silicon_lexicon_overload`
+### 521. Omega: `omega_extraction_blindness_silicon_lexicon_overload`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `silicon_lexicon_overload`
@@ -13802,7 +13829,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 521. Omega: `omega_extraction_blindness_skolems_paradox`
+### 522. Omega: `omega_extraction_blindness_skolems_paradox`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `skolems_paradox`
@@ -13829,7 +13856,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 522. Omega: `omega_extraction_blindness_sleep_debt_externality`
+### 523. Omega: `omega_extraction_blindness_sleep_debt_externality`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `sleep_debt_externality`
@@ -13856,7 +13883,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 523. Omega: `omega_extraction_blindness_slow_crisis_invisibility`
+### 524. Omega: `omega_extraction_blindness_slow_crisis_invisibility`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `slow_crisis_invisibility`
@@ -13883,7 +13910,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 524. Omega: `omega_extraction_blindness_sludge_bureaucratic_friction`
+### 525. Omega: `omega_extraction_blindness_sludge_bureaucratic_friction`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `sludge_bureaucratic_friction`
@@ -13910,7 +13937,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 525. Omega: `omega_extraction_blindness_smartphone_ubiquity`
+### 526. Omega: `omega_extraction_blindness_smartphone_ubiquity`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `smartphone_ubiquity`
@@ -13937,7 +13964,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 526. Omega: `omega_extraction_blindness_social_loafing`
+### 527. Omega: `omega_extraction_blindness_social_loafing`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `social_loafing`
@@ -13964,7 +13991,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 527. Omega: `omega_extraction_blindness_social_media_participation_threshold`
+### 528. Omega: `omega_extraction_blindness_social_media_participation_threshold`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `social_media_participation_threshold`
@@ -13991,7 +14018,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 528. Omega: `omega_extraction_blindness_social_narrative_casting`
+### 529. Omega: `omega_extraction_blindness_social_narrative_casting`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `social_narrative_casting`
@@ -14018,7 +14045,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 529. Omega: `omega_extraction_blindness_soft_authoritarian_drift`
+### 530. Omega: `omega_extraction_blindness_soft_authoritarian_drift`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `soft_authoritarian_drift`
@@ -14045,7 +14072,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 530. Omega: `omega_extraction_blindness_somatic_focusing_awareness`
+### 531. Omega: `omega_extraction_blindness_somatic_focusing_awareness`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `somatic_focusing_awareness`
@@ -14072,7 +14099,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 531. Omega: `omega_extraction_blindness_sorites_paradox`
+### 532. Omega: `omega_extraction_blindness_sorites_paradox`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `sorites_paradox`
@@ -14099,7 +14126,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 532. Omega: `omega_extraction_blindness_spain_digital_offensive_2026`
+### 533. Omega: `omega_extraction_blindness_spain_digital_offensive_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `spain_digital_offensive_2026`
@@ -14126,7 +14153,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 533. Omega: `omega_extraction_blindness_st_petersburg_paradox`
+### 534. Omega: `omega_extraction_blindness_st_petersburg_paradox`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `st_petersburg_paradox`
@@ -14153,7 +14180,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 534. Omega: `omega_extraction_blindness_start_treaty`
+### 535. Omega: `omega_extraction_blindness_start_treaty`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `start_treaty`
@@ -14180,7 +14207,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 535. Omega: `omega_extraction_blindness_statecraft_virtu`
+### 536. Omega: `omega_extraction_blindness_statecraft_virtu`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `statecraft_virtu`
@@ -14207,7 +14234,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 536. Omega: `omega_extraction_blindness_status_flattening_effect`
+### 537. Omega: `omega_extraction_blindness_status_flattening_effect`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `status_flattening_effect`
@@ -14227,7 +14254,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 537. Omega: `omega_extraction_blindness_strait_coercion_2025`
+### 538. Omega: `omega_extraction_blindness_strait_coercion_2025`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `straight_coercion_2025`
@@ -14254,7 +14281,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 538. Omega: `omega_extraction_blindness_structural_extraction_without_actor`
+### 539. Omega: `omega_extraction_blindness_structural_extraction_without_actor`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `structural_extraction_without_actor`
@@ -14281,7 +14308,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 539. Omega: `omega_extraction_blindness_suanne_coup_of_peace`
+### 540. Omega: `omega_extraction_blindness_suanne_coup_of_peace`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `suanne_coup_of_peace`
@@ -14308,7 +14335,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 540. Omega: `omega_extraction_blindness_suanne_face_restoration`
+### 541. Omega: `omega_extraction_blindness_suanne_face_restoration`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `suanne_face_restoration`
@@ -14335,7 +14362,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 541. Omega: `omega_extraction_blindness_sunk_cost_fallacy`
+### 542. Omega: `omega_extraction_blindness_sunk_cost_fallacy`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `sunk_cost_fallacy`
@@ -14362,7 +14389,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 542. Omega: `omega_extraction_blindness_swift_legacy_piton`
+### 543. Omega: `omega_extraction_blindness_swift_legacy_piton`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `swift_legacy_piton`
@@ -14389,7 +14416,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 543. Omega: `omega_extraction_blindness_synthetic_data_feedback_loop`
+### 544. Omega: `omega_extraction_blindness_synthetic_data_feedback_loop`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `synthetic_data_feedback_loop`
@@ -14416,7 +14443,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 544. Omega: `omega_extraction_blindness_systemic_blindspot`
+### 545. Omega: `omega_extraction_blindness_systemic_blindspot`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `systemic_blindspot`
@@ -14443,7 +14470,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 545. Omega: `omega_extraction_blindness_tail_risk_compression`
+### 546. Omega: `omega_extraction_blindness_tail_risk_compression`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `tail_risk_compression`
@@ -14470,7 +14497,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 546. Omega: `omega_extraction_blindness_taiwan_existential_sovereignty`
+### 547. Omega: `omega_extraction_blindness_taiwan_existential_sovereignty`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `taiwan_existential_sovereignty`
@@ -14497,7 +14524,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 547. Omega: `omega_extraction_blindness_taiwan_grand_bargain`
+### 548. Omega: `omega_extraction_blindness_taiwan_grand_bargain`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `taiwan_grand_bargain`
@@ -14524,7 +14551,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 548. Omega: `omega_extraction_blindness_taiwan_storm_2026`
+### 549. Omega: `omega_extraction_blindness_taiwan_storm_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `taiwan_storm_2026`
@@ -14551,7 +14578,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 549. Omega: `omega_extraction_blindness_tarski_undefinability`
+### 550. Omega: `omega_extraction_blindness_tarski_undefinability`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `tarski_undefinability`
@@ -14578,7 +14605,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 550. Omega: `omega_extraction_blindness_taxonomy_drift`
+### 551. Omega: `omega_extraction_blindness_taxonomy_drift`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `taxonomy_drift`
@@ -14605,7 +14632,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 551. Omega: `omega_extraction_blindness_tcp_rfc9293_interoperability`
+### 552. Omega: `omega_extraction_blindness_tcp_rfc9293_interoperability`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `rfc9293_interoperability`
@@ -14632,7 +14659,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 552. Omega: `omega_extraction_blindness_teaching_horses_to_sing`
+### 553. Omega: `omega_extraction_blindness_teaching_horses_to_sing`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `teaching_horses_to_sing`
@@ -14659,7 +14686,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 553. Omega: `omega_extraction_blindness_tear_gas_repression_2026`
+### 554. Omega: `omega_extraction_blindness_tear_gas_repression_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `tear_gas_repression_2026`
@@ -14686,7 +14713,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 554. Omega: `omega_extraction_blindness_technocratic_overreach`
+### 555. Omega: `omega_extraction_blindness_technocratic_overreach`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `technocratic_overreach`
@@ -14713,7 +14740,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 555. Omega: `omega_extraction_blindness_temporal_scale_arbitrage`
+### 556. Omega: `omega_extraction_blindness_temporal_scale_arbitrage`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `temporal_scale_arbitrage`
@@ -14740,7 +14767,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 556. Omega: `omega_extraction_blindness_thai_senate_veto_2026`
+### 557. Omega: `omega_extraction_blindness_thai_senate_veto_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `thai_senate_veto_2026`
@@ -14767,7 +14794,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 557. Omega: `omega_extraction_blindness_the_bacchae_madness_protocol`
+### 558. Omega: `omega_extraction_blindness_the_bacchae_madness_protocol`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `the_bacchae_madness_protocol`
@@ -14794,7 +14821,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 558. Omega: `omega_extraction_blindness_the_calm_protocol_suppression`
+### 559. Omega: `omega_extraction_blindness_the_calm_protocol_suppression`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `the_calm_protocol_suppression`
@@ -14821,7 +14848,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 559. Omega: `omega_extraction_blindness_the_churn_systemic_upheaval`
+### 560. Omega: `omega_extraction_blindness_the_churn_systemic_upheaval`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `the_churn_systemic_upheaval`
@@ -14848,7 +14875,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 560. Omega: `omega_extraction_blindness_theory_of_visitors`
+### 561. Omega: `omega_extraction_blindness_theory_of_visitors`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `theory_of_visitors`
@@ -14875,7 +14902,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 561. Omega: `omega_extraction_blindness_thermodynamics_entropy`
+### 562. Omega: `omega_extraction_blindness_thermodynamics_entropy`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `thermodynamics_entropy`
@@ -14902,7 +14929,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 562. Omega: `omega_extraction_blindness_toxic_social_infection`
+### 563. Omega: `omega_extraction_blindness_toxic_social_infection`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `toxic_social_infection`
@@ -14929,7 +14956,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 563. Omega: `omega_extraction_blindness_tractarian_logic_limit`
+### 564. Omega: `omega_extraction_blindness_tractarian_logic_limit`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `tractarian_logic_limit`
@@ -14956,7 +14983,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 564. Omega: `omega_extraction_blindness_trade_secret_law`
+### 565. Omega: `omega_extraction_blindness_trade_secret_law`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `trade_secret_law`
@@ -14983,7 +15010,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 565. Omega: `omega_extraction_blindness_tragedy_of_the_commons`
+### 566. Omega: `omega_extraction_blindness_tragedy_of_the_commons`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `tragedy_of_the_commons`
@@ -15010,7 +15037,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 566. Omega: `omega_extraction_blindness_transformer_self_attention`
+### 567. Omega: `omega_extraction_blindness_transformer_self_attention`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `transformer_self_attention`
@@ -15037,7 +15064,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 567. Omega: `omega_extraction_blindness_traveling_salesperson_problem`
+### 568. Omega: `omega_extraction_blindness_traveling_salesperson_problem`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `traveling_salesperson_problem`
@@ -15064,7 +15091,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 568. Omega: `omega_extraction_blindness_trillion_bond_rush_2026`
+### 569. Omega: `omega_extraction_blindness_trillion_bond_rush_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `trillion_bond_rush_2026`
@@ -15091,7 +15118,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 569. Omega: `omega_extraction_blindness_trump_critical_minerals`
+### 570. Omega: `omega_extraction_blindness_trump_critical_minerals`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `trump_critical_minerals`
@@ -15118,7 +15145,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 570. Omega: `omega_extraction_blindness_trump_indian_tariffs_2026`
+### 571. Omega: `omega_extraction_blindness_trump_indian_tariffs_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `trump_indian_tariffs_2026`
@@ -15145,7 +15172,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 571. Omega: `omega_extraction_blindness_trump_making_china_great_2026`
+### 572. Omega: `omega_extraction_blindness_trump_making_china_great_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `trump_making_china_great_2026`
@@ -15172,7 +15199,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 572. Omega: `omega_extraction_blindness_trump_second_term_authoritarianism_2026`
+### 573. Omega: `omega_extraction_blindness_trump_second_term_authoritarianism_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `trumps_second_term_authoritarianism_2026`
@@ -15199,7 +15226,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 573. Omega: `omega_extraction_blindness_tx_hispanic_pivot`
+### 574. Omega: `omega_extraction_blindness_tx_hispanic_pivot`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `texas_hispanic_political_pivot`
@@ -15226,7 +15253,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 574. Omega: `omega_extraction_blindness_ukr_mobilization`
+### 575. Omega: `omega_extraction_blindness_ukr_mobilization`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ukr_mobilization`
@@ -15253,7 +15280,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 575. Omega: `omega_extraction_blindness_ulysses_aeolus_1904`
+### 576. Omega: `omega_extraction_blindness_ulysses_aeolus_1904`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ulysses_chp07`
@@ -15280,7 +15307,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 576. Omega: `omega_extraction_blindness_ulysses_calypso_1904`
+### 577. Omega: `omega_extraction_blindness_ulysses_calypso_1904`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ulysses_chp04`
@@ -15307,7 +15334,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 577. Omega: `omega_extraction_blindness_ulysses_cyclops_1904`
+### 578. Omega: `omega_extraction_blindness_ulysses_cyclops_1904`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ulysses_chp12`
@@ -15334,7 +15361,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 578. Omega: `omega_extraction_blindness_ulysses_eumaeus_1904`
+### 579. Omega: `omega_extraction_blindness_ulysses_eumaeus_1904`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ulysses_chp16`
@@ -15361,7 +15388,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 579. Omega: `omega_extraction_blindness_ulysses_ithaca_1904`
+### 580. Omega: `omega_extraction_blindness_ulysses_ithaca_1904`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ulysses_chp17`
@@ -15388,7 +15415,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 580. Omega: `omega_extraction_blindness_ulysses_lestrygonians_1904`
+### 581. Omega: `omega_extraction_blindness_ulysses_lestrygonians_1904`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ulysses_chp08`
@@ -15415,7 +15442,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 581. Omega: `omega_extraction_blindness_ulysses_lotus_1904`
+### 582. Omega: `omega_extraction_blindness_ulysses_lotus_1904`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ulysses_chp05`
@@ -15442,7 +15469,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 582. Omega: `omega_extraction_blindness_ulysses_nausicaa_1904`
+### 583. Omega: `omega_extraction_blindness_ulysses_nausicaa_1904`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ulysses_chp13`
@@ -15469,7 +15496,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 583. Omega: `omega_extraction_blindness_ulysses_rocks_1904`
+### 584. Omega: `omega_extraction_blindness_ulysses_rocks_1904`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ulysses_chp10`
@@ -15496,7 +15523,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 584. Omega: `omega_extraction_blindness_ulysses_school_1904`
+### 585. Omega: `omega_extraction_blindness_ulysses_school_1904`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ulysses_chp02`
@@ -15523,7 +15550,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 585. Omega: `omega_extraction_blindness_ulysses_scylla_1904`
+### 586. Omega: `omega_extraction_blindness_ulysses_scylla_1904`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ulysses_chp09`
@@ -15550,7 +15577,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 586. Omega: `omega_extraction_blindness_ulysses_sirens_1904`
+### 587. Omega: `omega_extraction_blindness_ulysses_sirens_1904`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ulysses_chp11`
@@ -15577,7 +15604,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 587. Omega: `omega_extraction_blindness_ulysses_tower_1904`
+### 588. Omega: `omega_extraction_blindness_ulysses_tower_1904`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ulysses_chp01`
@@ -15604,7 +15631,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 588. Omega: `omega_extraction_blindness_union_protection_underperformance`
+### 589. Omega: `omega_extraction_blindness_union_protection_underperformance`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `union_protection_underperformance`
@@ -15631,7 +15658,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 589. Omega: `omega_extraction_blindness_us_employer_health_insurance`
+### 590. Omega: `omega_extraction_blindness_us_employer_health_insurance`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `us_employer_health_insurance`
@@ -15658,7 +15685,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 590. Omega: `omega_extraction_blindness_us_iran_drone_conflict`
+### 591. Omega: `omega_extraction_blindness_us_iran_drone_conflict`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `us_iran_drone_conflict`
@@ -15685,7 +15712,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 591. Omega: `omega_extraction_blindness_us_labor_mobility`
+### 592. Omega: `omega_extraction_blindness_us_labor_mobility`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `us_labor_mobility`
@@ -15712,7 +15739,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 592. Omega: `omega_extraction_blindness_us_suburban_zoning_2025`
+### 593. Omega: `omega_extraction_blindness_us_suburban_zoning_2025`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `us_suburban_zoning_2025`
@@ -15739,7 +15766,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 593. Omega: `omega_extraction_blindness_us_two_party_duopoly`
+### 594. Omega: `omega_extraction_blindness_us_two_party_duopoly`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `us_two_party_duopoly`
@@ -15766,7 +15793,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 594. Omega: `omega_extraction_blindness_usc_26_469_passive_loss`
+### 595. Omega: `omega_extraction_blindness_usc_26_469_passive_loss`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `usc_26_469_passive_loss`
@@ -15793,7 +15820,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 595. Omega: `omega_extraction_blindness_utopia_apocalypse_fragility`
+### 596. Omega: `omega_extraction_blindness_utopia_apocalypse_fragility`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `utopia_apocalypse_fragility`
@@ -15820,7 +15847,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 596. Omega: `omega_extraction_blindness_value_alignment_drift`
+### 597. Omega: `omega_extraction_blindness_value_alignment_drift`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `value_alignment_drift`
@@ -15847,7 +15874,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 597. Omega: `omega_extraction_blindness_value_extraction_plateau`
+### 598. Omega: `omega_extraction_blindness_value_extraction_plateau`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `value_extraction_plateau`
@@ -15874,7 +15901,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 598. Omega: `omega_extraction_blindness_van_der_waerden_theorem`
+### 599. Omega: `omega_extraction_blindness_van_der_waerden_theorem`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `van_der_waerden_theorem`
@@ -15901,7 +15928,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 599. Omega: `omega_extraction_blindness_vienna_quantum_superposition_2026`
+### 600. Omega: `omega_extraction_blindness_vienna_quantum_superposition_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `vienna_quantum_superposition_2026`
@@ -15928,7 +15955,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 600. Omega: `omega_extraction_blindness_viral_transmission_rates`
+### 601. Omega: `omega_extraction_blindness_viral_transmission_rates`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `viral_transmission_rates`
@@ -15955,7 +15982,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 601. Omega: `omega_extraction_blindness_visibility_bias_governance`
+### 602. Omega: `omega_extraction_blindness_visibility_bias_governance`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `visibility_bias_governance`
@@ -15982,7 +16009,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 602. Omega: `omega_extraction_blindness_wikipedia_crowdsourcing_2026`
+### 603. Omega: `omega_extraction_blindness_wikipedia_crowdsourcing_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `wikipedia_crowdsourcing_2026`
@@ -16002,7 +16029,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 603. Omega: `omega_extraction_blindness_wikipedia_notability_requirement_2026`
+### 604. Omega: `omega_extraction_blindness_wikipedia_notability_requirement_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `wikipedia_notability_requirement_2026`
@@ -16022,7 +16049,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 604. Omega: `omega_extraction_blindness_winners_curse`
+### 605. Omega: `omega_extraction_blindness_winners_curse`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `winners_curse`
@@ -16049,7 +16076,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 605. Omega: `omega_extraction_blindness_world_factbook_sunset_2026`
+### 606. Omega: `omega_extraction_blindness_world_factbook_sunset_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `world_factbook_sunset_2026`
@@ -16076,7 +16103,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 606. Omega: `omega_extraction_blindness_xi_mao_ideological_centralization`
+### 607. Omega: `omega_extraction_blindness_xi_mao_ideological_centralization`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `xi_mao_ideological_centralization`
@@ -16096,7 +16123,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 607. Omega: `omega_extraction_blindness_zipfs_law`
+### 608. Omega: `omega_extraction_blindness_zipfs_law`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `zipfs_law`
@@ -16123,7 +16150,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 608. Omega: `omega_extraction_blindness_zombie_reasoning_2026`
+### 609. Omega: `omega_extraction_blindness_zombie_reasoning_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `zombie_reasoning_2026`
@@ -16150,7 +16177,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 609. Omega: `omega_learned_helplessness_ai_cognitive_diversity_arbitrage`
+### 610. Omega: `omega_learned_helplessness_ai_cognitive_diversity_arbitrage`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ai_cognitive_diversity_arbitrage`
@@ -16174,7 +16201,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 610. Omega: `omega_learned_helplessness_big_data_astrophysics_arbitrage`
+### 611. Omega: `omega_learned_helplessness_big_data_astrophysics_arbitrage`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `big_data_astrophysics_arbitrage`
@@ -16198,7 +16225,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 611. Omega: `omega_learned_helplessness_broke_vs_poor_grocery_math`
+### 612. Omega: `omega_learned_helplessness_broke_vs_poor_grocery_math`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `broke_vs_poor_grocery_math`
@@ -16222,7 +16249,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 612. Omega: `omega_learned_helplessness_castration_longevity_choice`
+### 613. Omega: `omega_learned_helplessness_castration_longevity_choice`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `castration_longevity_choice`
@@ -16246,7 +16273,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 613. Omega: `omega_learned_helplessness_cow_field_poop`
+### 614. Omega: `omega_learned_helplessness_cow_field_poop`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `cow_field_poop`
@@ -16270,7 +16297,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 614. Omega: `omega_learned_helplessness_currys_paradox`
+### 615. Omega: `omega_learned_helplessness_currys_paradox`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `currys_paradox`
@@ -16294,7 +16321,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 615. Omega: `omega_learned_helplessness_dead_sea_effect`
+### 616. Omega: `omega_learned_helplessness_dead_sea_effect`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `dead_sea_effect`
@@ -16318,7 +16345,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 616. Omega: `omega_learned_helplessness_dldr_information_policy`
+### 617. Omega: `omega_learned_helplessness_dldr_information_policy`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `dldr_information_policy`
@@ -16342,7 +16369,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 617. Omega: `omega_learned_helplessness_ergo_lets_protocol`
+### 618. Omega: `omega_learned_helplessness_ergo_lets_protocol`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ergo_lets_protocol`
@@ -16366,7 +16393,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 618. Omega: `omega_learned_helplessness_exoplanetary_habitability_arbitrage`
+### 619. Omega: `omega_learned_helplessness_exoplanetary_habitability_arbitrage`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `exoplanet_habitability_arbitrage`
@@ -16390,7 +16417,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 619. Omega: `omega_learned_helplessness_fair_use_doctrine`
+### 620. Omega: `omega_learned_helplessness_fair_use_doctrine`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `fair_use_doctrine`
@@ -16414,7 +16441,31 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 620. Omega: `omega_learned_helplessness_harm_principle_liberty`
+### 621. Omega: `omega_learned_helplessness_fnl_shadow_probe`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `fnl_shadow_probe`
+*   **Source Gap:** `gap(snare_mountain_confusion,snare,mountain)`
+*   **Question:** Constraint fnl_shadow_probe appears extractive (Snare) to individuals but unchangeable (Mountain) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Test changeability:
+- Can institutions modify fnl_shadow_probe?
+- What legal/political mechanisms exist?
+- Historical precedents of change?
+2. Test extraction:
+- Is benefit flow symmetric or asymmetric?
+- Who has veto power over changes?
+3. Decision tree:
+IF truly unchangeable + extractive → MANDATROPHY
+IF changeable + extractive → Correct to SNARE
+IF unchangeable + fair → Correct to MOUNTAIN
+IF institutions falsely claim necessity → SNARE + fraud flag
+    ```
+
+---
+
+### 622. Omega: `omega_learned_helplessness_harm_principle_liberty`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `harm_principle_liberty`
@@ -16438,7 +16489,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 621. Omega: `omega_learned_helplessness_hominin_evolutionary_bottleneck`
+### 623. Omega: `omega_learned_helplessness_hominin_evolutionary_bottleneck`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `hominin_evolutionary_bottleneck`
@@ -16462,7 +16513,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 622. Omega: `omega_learned_helplessness_information_foraging_theory`
+### 624. Omega: `omega_learned_helplessness_information_foraging_theory`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `information_foraging_theory`
@@ -16486,7 +16537,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 623. Omega: `omega_learned_helplessness_layered_brain_processing`
+### 625. Omega: `omega_learned_helplessness_layered_brain_processing`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `layered_brain_processing`
@@ -16510,7 +16561,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 624. Omega: `omega_learned_helplessness_local_vs_global_optima`
+### 626. Omega: `omega_learned_helplessness_local_vs_global_optima`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `local_vs_global_optima`
@@ -16534,7 +16585,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 625. Omega: `omega_learned_helplessness_omelet_perfection_complexity`
+### 627. Omega: `omega_learned_helplessness_omelet_perfection_complexity`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `omelet_perfection_complexity`
@@ -16558,7 +16609,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 626. Omega: `omega_learned_helplessness_openbsd_netiquette_protocol`
+### 628. Omega: `omega_learned_helplessness_openbsd_netiquette_protocol`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `openbsd_netiquette_protocol`
@@ -16582,7 +16633,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 627. Omega: `omega_learned_helplessness_overton_window`
+### 629. Omega: `omega_learned_helplessness_overton_window`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `overton_window`
@@ -16606,7 +16657,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 628. Omega: `omega_learned_helplessness_pareto_principle`
+### 630. Omega: `omega_learned_helplessness_pareto_principle`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `pareto_principle`
@@ -16630,7 +16681,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 629. Omega: `omega_learned_helplessness_relativity_physical_invariance`
+### 631. Omega: `omega_learned_helplessness_relativity_physical_invariance`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `relativity_physical_invariance`
@@ -16654,7 +16705,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 630. Omega: `omega_learned_helplessness_skills_based_hiring`
+### 632. Omega: `omega_learned_helplessness_skills_based_hiring`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `skills_based_hiring`
@@ -16678,7 +16729,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 631. Omega: `omega_learned_helplessness_south_china_sea_arbitration_2016_2026`
+### 633. Omega: `omega_learned_helplessness_south_china_sea_arbitration_2016_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `south_china_sea_arbitration_2016_2026`
@@ -16702,7 +16753,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 632. Omega: `omega_learned_helplessness_thai_article_112_mountain`
+### 634. Omega: `omega_learned_helplessness_thai_article_112_mountain`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `thai_article_112_mountain`
@@ -16726,7 +16777,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 633. Omega: `omega_learned_helplessness_ulysses_circe_1904`
+### 635. Omega: `omega_learned_helplessness_ulysses_circe_1904`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ulysses_chp15`
@@ -16750,7 +16801,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 634. Omega: `omega_learned_helplessness_ulysses_oxen_1904`
+### 636. Omega: `omega_learned_helplessness_ulysses_oxen_1904`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ulysses_chp14`
@@ -16774,7 +16825,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 635. Omega: `omega_learned_helplessness_ulysses_penelope_1904`
+### 637. Omega: `omega_learned_helplessness_ulysses_penelope_1904`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ulysses_chp18`
@@ -16798,7 +16849,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 636. Omega: `omega_learned_helplessness_ulysses_proteus_1904`
+### 638. Omega: `omega_learned_helplessness_ulysses_proteus_1904`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ulysses_chp03`
@@ -16822,7 +16873,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 637. Omega: `omega_perspectival_alternative_sovereignty_scaffold`
+### 639. Omega: `omega_perspectival_alternative_sovereignty_scaffold`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `alternative_sovereignty_scaffold`
@@ -16844,7 +16895,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 638. Omega: `omega_perspectival_ancient_grudge_verona`
+### 640. Omega: `omega_perspectival_ancient_grudge_verona`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ancient_grudge_verona`
@@ -16866,7 +16917,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 639. Omega: `omega_perspectival_antifragility`
+### 641. Omega: `omega_perspectival_antifragility`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `antifragility`
@@ -16888,7 +16939,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 640. Omega: `omega_perspectival_asymmetric_computational_difficulty`
+### 642. Omega: `omega_perspectival_asymmetric_computational_difficulty`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `asymmetric_computational_difficulty`
@@ -16908,7 +16959,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 641. Omega: `omega_perspectival_bedouin_sedentary_transition`
+### 643. Omega: `omega_perspectival_bedouin_sedentary_transition`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `bedouin_sedentary_transition`
@@ -16930,7 +16981,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 642. Omega: `omega_perspectival_cancer_chronotherapy_timing`
+### 644. Omega: `omega_perspectival_cancer_chronotherapy_timing`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `cancer_chronotherapy_timing`
@@ -16952,7 +17003,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 643. Omega: `omega_perspectival_cb_far_beyond_human`
+### 645. Omega: `omega_perspectival_cb_far_beyond_human`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `cb_far_beyond_human`
@@ -16974,7 +17025,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 644. Omega: `omega_perspectival_climate_target_one_point_five`
+### 646. Omega: `omega_perspectival_climate_target_one_point_five`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `climate_target_one_point_five`
@@ -16996,7 +17047,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 645. Omega: `omega_perspectival_cognitive_bicycle_scaffold`
+### 647. Omega: `omega_perspectival_cognitive_bicycle_scaffold`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `cognitive_bicycle_scaffold`
@@ -17018,7 +17069,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 646. Omega: `omega_perspectival_collective_stupidity_2026`
+### 648. Omega: `omega_perspectival_collective_stupidity_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `collective_stupidity_2026`
@@ -17040,7 +17091,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 647. Omega: `omega_perspectival_copyleft_viral_licensing`
+### 649. Omega: `omega_perspectival_copyleft_viral_licensing`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `copyleft_viral_licensing`
@@ -17062,7 +17113,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 648. Omega: `omega_perspectival_copyright_protection`
+### 650. Omega: `omega_perspectival_copyright_protection`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `copyright_protection`
@@ -17084,7 +17135,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 649. Omega: `omega_perspectival_creative_commons_licensing`
+### 651. Omega: `omega_perspectival_creative_commons_licensing`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `creative_commons_licensing`
@@ -17106,7 +17157,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 650. Omega: `omega_perspectival_decentralized_infrastructure_rope`
+### 652. Omega: `omega_perspectival_decentralized_infrastructure_rope`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `new_civilizational_rope`
@@ -17128,7 +17179,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 651. Omega: `omega_perspectival_e2ee_digital_privacy_2026`
+### 653. Omega: `omega_perspectival_e2ee_digital_privacy_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `e2ee_digital_privacy_2026`
@@ -17150,7 +17201,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 652. Omega: `omega_perspectival_edelman_2026_developing_volatility`
+### 654. Omega: `omega_perspectival_edelman_2026_developing_volatility`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `edelman_2026_developing_volatility`
@@ -17172,7 +17223,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 653. Omega: `omega_perspectival_emergency_oversight_bureau`
+### 655. Omega: `omega_perspectival_emergency_oversight_bureau`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `emergency_oversight_bureau`
@@ -17194,7 +17245,29 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 654. Omega: `omega_perspectival_ergo_autolykos_asic_resistance`
+### 656. Omega: `omega_perspectival_emotional_cycles_2026`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `emotional_cycles_of_change`
+*   **Source Gap:** `gap(general_type_mismatch,snare,scaffold)`
+*   **Question:** Constraint emotional_cycles_2026 appears as snare to individuals but scaffold to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive emotional_cycles_2026
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 657. Omega: `omega_perspectival_ergo_autolykos_asic_resistance`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ergo_autolykos_asic_resistance`
@@ -17216,7 +17289,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 655. Omega: `omega_perspectival_erised_expectation`
+### 658. Omega: `omega_perspectival_erised_expectation`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `mirror_of_erised_expectation`
@@ -17238,7 +17311,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 656. Omega: `omega_perspectival_faa_boeing_regulatory_capture`
+### 659. Omega: `omega_perspectival_faa_boeing_regulatory_capture`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `faa_boeing_regulatory_capture`
@@ -17260,7 +17333,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 657. Omega: `omega_perspectival_fed_shutdown_2026`
+### 660. Omega: `omega_perspectival_fed_shutdown_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `fed_shutdown_2026`
@@ -17282,7 +17355,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 658. Omega: `omega_perspectival_germany_tennet_takeover`
+### 661. Omega: `omega_perspectival_germany_tennet_takeover`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `germany_tennet_takeover`
@@ -17304,7 +17377,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 659. Omega: `omega_perspectival_gold_piton_2026`
+### 662. Omega: `omega_perspectival_gold_piton_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `gold_piton_2026`
@@ -17326,7 +17399,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 660. Omega: `omega_perspectival_greshams_law`
+### 663. Omega: `omega_perspectival_greshams_law`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `greshams_law`
@@ -17348,7 +17421,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 661. Omega: `omega_perspectival_hedonic_adaptation_baseline`
+### 664. Omega: `omega_perspectival_hedonic_adaptation_baseline`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `hedonic_adaptation_baseline`
@@ -17370,7 +17443,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 662. Omega: `omega_perspectival_kjv_great_awakening`
+### 665. Omega: `omega_perspectival_kjv_great_awakening`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `kjv_great_awakening`
@@ -17392,7 +17465,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 663. Omega: `omega_perspectival_liar_paradox`
+### 666. Omega: `omega_perspectival_liar_paradox`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `liar_paradox`
@@ -17414,7 +17487,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 664. Omega: `omega_perspectival_litany_of_the_real`
+### 667. Omega: `omega_perspectival_litany_of_the_real`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `litany_of_the_real`
@@ -17434,7 +17507,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 665. Omega: `omega_perspectival_lula_hemisphere_2026`
+### 668. Omega: `omega_perspectival_lula_hemisphere_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `lula_hemisphere_2026`
@@ -17456,7 +17529,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 666. Omega: `omega_perspectival_maha_recovery_2026`
+### 669. Omega: `omega_perspectival_maha_recovery_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `maha_recovery_2026`
@@ -17478,7 +17551,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 667. Omega: `omega_perspectival_meta_nda`
+### 670. Omega: `omega_perspectival_meta_nda`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `meta_nda`
@@ -17500,7 +17573,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 668. Omega: `omega_perspectival_metamorphosis_samsa`
+### 671. Omega: `omega_perspectival_metamorphosis_samsa`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `metamorphosis_samsa`
@@ -17522,7 +17595,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 669. Omega: `omega_perspectival_milano_cortina_2026`
+### 672. Omega: `omega_perspectival_milano_cortina_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `winter_olympics_2026`
@@ -17544,7 +17617,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 670. Omega: `omega_perspectival_moores_law`
+### 673. Omega: `omega_perspectival_moores_law`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `moores_law`
@@ -17566,7 +17639,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 671. Omega: `omega_perspectival_nuclear_order_2026`
+### 674. Omega: `omega_perspectival_nuclear_order_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `nuclear_order_2026`
@@ -17588,7 +17661,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 672. Omega: `omega_perspectival_paris_municipal_reform_2026`
+### 675. Omega: `omega_perspectival_paris_municipal_reform_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `paris_municipal_reform_2026`
@@ -17610,7 +17683,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 673. Omega: `omega_perspectival_platform_cooperativism_governance`
+### 676. Omega: `omega_perspectival_platform_cooperativism_governance`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `platform_cooperativism_governance`
@@ -17632,7 +17705,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 674. Omega: `omega_perspectival_postman_survival_protocol`
+### 677. Omega: `omega_perspectival_postman_survival_protocol`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `postman_survival_protocol`
@@ -17654,7 +17727,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 675. Omega: `omega_perspectival_project_vault_2026`
+### 678. Omega: `omega_perspectival_project_vault_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `project_vault_2026`
@@ -17676,7 +17749,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 676. Omega: `omega_perspectival_public_domain_commons`
+### 679. Omega: `omega_perspectival_public_domain_commons`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `public_domain_commons`
@@ -17698,7 +17771,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 677. Omega: `omega_perspectival_pythagorean_geometric_constancy`
+### 680. Omega: `omega_perspectival_pythagorean_geometric_constancy`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `pythagorean_theorem_geometric_constancy`
@@ -17720,7 +17793,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 678. Omega: `omega_perspectival_quantum_nonlocality_2026`
+### 681. Omega: `omega_perspectival_quantum_nonlocality_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `quantum_nonlocality_2026`
@@ -17742,7 +17815,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 679. Omega: `omega_perspectival_rafah_crossing_lifeline`
+### 682. Omega: `omega_perspectival_rafah_crossing_lifeline`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `rafah_crossing_lifeline`
@@ -17764,7 +17837,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 680. Omega: `omega_perspectival_shitty_feedback_handling`
+### 683. Omega: `omega_perspectival_shitty_feedback_handling`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `shitty_feedback_handling`
@@ -17786,7 +17859,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 681. Omega: `omega_perspectival_sig_usd_protocol`
+### 684. Omega: `omega_perspectival_sig_usd_protocol`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ergo_sig_usd_protocol`
@@ -17808,7 +17881,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 682. Omega: `omega_perspectival_solar_system_weirdness`
+### 685. Omega: `omega_perspectival_solar_system_weirdness`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `solar_system_weirdness`
@@ -17830,7 +17903,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 683. Omega: `omega_perspectival_steinmetz_valuation_asymmetry`
+### 686. Omega: `omega_perspectival_steinmetz_valuation_asymmetry`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `steinmetz_valuation_asymmetry`
@@ -17852,7 +17925,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 684. Omega: `omega_perspectival_stoic_logos_governance`
+### 687. Omega: `omega_perspectival_stoic_logos_governance`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `stoic_logos_governance`
@@ -17874,7 +17947,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 685. Omega: `omega_perspectival_sturgeons_law`
+### 688. Omega: `omega_perspectival_sturgeons_law`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `sturgeons_law`
@@ -17896,7 +17969,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 686. Omega: `omega_perspectival_swift_piton_snap`
+### 689. Omega: `omega_perspectival_swift_piton_snap`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `swift_piton_snap`
@@ -17918,7 +17991,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 687. Omega: `omega_perspectival_transient_event_detection`
+### 690. Omega: `omega_perspectival_transient_event_detection`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `transient_event_detection`

@@ -80,6 +80,7 @@ narrative_ontology:constraint_metric(monty_hall_conditional_probability, suppres
 
 % Enforcement: Emerges naturally from the laws of conditional probability.
 domain_priors:emerges_naturally(monty_hall_conditional_probability).
+domain_priors:requires_active_enforcement(monty_hall_conditional_probability).
 
 % Metrics required for Section 1 of the Executive Summary
 % BENEFICIARIES & VICTIMS

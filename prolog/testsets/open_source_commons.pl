@@ -58,6 +58,7 @@ constraint_indexing:constraint_classification(open_source_commons, rope,
 
 /* 7. INTEGRATION HOOKS */
 narrative_ontology:interval(open_source_commons, 0, 10).
+narrative_ontology:has_sunset_clause(open_source_commons).
 
 /* 8. TEMPORAL DATA (Flat line, no drift) */
 narrative_ontology:measurement(osc_tr_t0, open_source_commons, theater_ratio, 0, 0.15).

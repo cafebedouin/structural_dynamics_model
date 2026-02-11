@@ -80,15 +80,15 @@ constraint_indexing:constraint_classification(emotional_cycles_2026, snare,
     context(agent_power(powerless), 
             time_horizon(biographical), 
             exit_options(trapped), 
-            spatial_scope(personal))).
+            spatial_scope(local))).
 
 % PERSPECTIVE 2: THE COACH/SYSTEM (SCAFFOLD)
 % For the instructor, the cycle is a Scaffold: a necessary temporary 
 % framework to support the user until the habit becomes self-sustaining.
 constraint_indexing:constraint_classification(emotional_cycles_2026, scaffold, 
-    context(agent_power(organized), 
-            time_horizon(generational), 
-            exit_options(constrained), 
+    context(agent_power(institutional),
+            time_horizon(generational),
+            exit_options(constrained),
             spatial_scope(national))).
 
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (MOUNTAIN)
@@ -127,6 +127,7 @@ narrative_ontology:measurement(ec_ex_t5, emotional_cycles_2026, extractiveness, 
 narrative_ontology:constraint_claim(emotional_cycles_2026, tangled_rope).
 domain_priors:requires_active_enforcement(emotional_cycles_2026).
 narrative_ontology:interval(emotional_cycles_2026, 0, 10).
+narrative_ontology:has_sunset_clause(emotional_cycles_2026).
 
 omega_variable(
     omega_valley_of_despair_depth,

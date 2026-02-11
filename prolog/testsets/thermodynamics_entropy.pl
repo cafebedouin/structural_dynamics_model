@@ -74,7 +74,7 @@ domain_priors:emerges_naturally(thermodynamics_entropy).
 % Structural property derivation hooks:
 %   has_coordination_function/1 is DERIVED from constraint_beneficiary/2
 %   has_asymmetric_extraction/1 is DERIVED from constraint_victim/2
-% NOTE: No constraint_beneficiary — industrial engineers work *around* entropy,
+% NOTE: No enrichment needed — industrial engineers work *around* entropy,
 % they don't *benefit from* it in the coordination sense. The beneficiary framing
 % implies coordination that doesn't exist for a natural law.
 narrative_ontology:constraint_victim(thermodynamics_entropy, all_ordered_systems).
@@ -171,7 +171,7 @@ test(threshold_validation) :-
  *   natural laws without enforcement or beneficiaries cannot be snares or tangled
  *   ropes — there is no coordinating agent to reform or resist.
  *
- * MANDATROPHY ANALYSIS: [RE-RESOLVED]
+ * MANDATROPHY ANALYSIS: [RESOLVED MANDATROPHY]
  * The earlier Mandatrophy resolution (claiming snare) was itself the error. It
  * conflated "high impact" with "extractive type." The gate precondition
  * (natural_law_without_beneficiary) now handles this structurally: natural laws

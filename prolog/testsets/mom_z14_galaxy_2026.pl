@@ -106,6 +106,7 @@ omega_variable(
 ).
 
 narrative_ontology:interval(mom_z14_2026, 0, 10).
+narrative_ontology:has_sunset_clause(mom_z14_2026).
 
 % ============================================================================
 % ENRICHMENT: Structural predicates for remaining gaps

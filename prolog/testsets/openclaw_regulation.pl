@@ -75,7 +75,7 @@ domain_priors:requires_active_enforcement(openclaw_regulation). % Required for T
 %   has_asymmetric_extraction/1 is DERIVED from constraint_victim/2
 % Both are required for Tangled Rope. Coordination is also required for Scaffold.
 narrative_ontology:constraint_beneficiary(openclaw_regulation, developers_regulators).
-narrative_ontology:constraint_victim(openclaw_regulation, users).
+narrative_ontology:constraint_victim(openclaw_regulation, sandboxed_ai_users).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)

@@ -4,53 +4,53 @@
 
 ### Key Findings
 
-1. **[HIGH]** Found 38 structural signatures shared by 5+ constraints
+1. **[HIGH]** Found 36 structural signatures shared by 5+ constraints
    - Action: Investigate if these represent distinct categories beyond current framework
 
 2. **[HIGH]** Found 413 hybrid constraints (high extraction + high suppression)
    - Action: Strong evidence for 'Tangled Rope' category
    - Details: 413 constraints don't fit cleanly into mountain/rope/snare
 
-3. **[MEDIUM]** Found 302 constraints matching 'tangled_rope' pattern
+3. **[MEDIUM]** Found 301 constraints matching 'tangled_rope' pattern
    - Action: Consider formalizing 'tangled_rope' as new category
-   - Details: Type distribution: {'tangled_rope': 204, 'piton': 46, 'mountain': 23, 'snare': 28, 'rope': 1}
+   - Details: Type distribution: {'tangled_rope': 205, 'piton': 46, 'mountain': 21, 'snare': 28, 'rope': 1}
 
-4. **[MEDIUM]** Found 26 constraints matching 'piton' pattern
+4. **[MEDIUM]** Found 25 constraints matching 'piton' pattern
    - Action: Consider formalizing 'piton' as new category
-   - Details: Type distribution: {'mountain': 26}
+   - Details: Type distribution: {'mountain': 25}
 
-5. **[MEDIUM]** Found 99 constraints matching 'scaffold' pattern
+5. **[MEDIUM]** Found 100 constraints matching 'scaffold' pattern
    - Action: Consider formalizing 'scaffold' as new category
-   - Details: Type distribution: {'tangled_rope': 47, 'rope': 11, 'mountain': 30, 'piton': 4, 'snare': 4, 'scaffold': 3}
+   - Details: Type distribution: {'tangled_rope': 47, 'rope': 11, 'mountain': 31, 'piton': 4, 'snare': 4, 'scaffold': 3}
 
 ## Structural Twins
 
 Constraints with identical structural signatures but different claimed types.
 
-**Total twin groups found:** 70
+**Total twin groups found:** 71
 
 | Signature | Count | Types Present | Domains | Examples |
 |-----------|-------|---------------|---------|----------|
-| (0.8, 0.7, False, True)        |    64 | snare, piton, tangled_rope, mountain | social, psychological, systems_engineering | abstraction_boundary_overrun, adaptive_lag_trap |
-| (0.8, 0.8, False, True)        |    47 | snare, piton, tangled_rope, mountain | social, political, organizational | 26usc469_real_estate_exemption, ad_fus_coordination |
-| (0.9, 0.8, False, True)        |    47 | snare, piton, tangled_rope, mountain | social, logistical, political | adversarial_truth_decay, agency_atrophy |
-| (0.6, 0.7, False, True)        |    36 | snare, piton, tangled_rope | social, bio_industrial, political | MOLTBOT_RELIGION, ai_religion_regulation |
-| (0.7, 0.8, False, True)        |    25 | snare, piton, tangled_rope, mountain | social, political, geopolitical | CG_IsraelGaza_20231012, academic_fashion_modernism_2026 |
-| (0.8, 0.6, False, True)        |    24 | snare, piton, tangled_rope, rope, mountain | social, psychological, political | academic_peer_review_gatekeeping, academic_tenure_system |
-| (0.8, 0.9, False, True)        |    21 | snare, piton, tangled_rope, mountain | social, political, legal | ad_synaptic_deficit, apartheid_nuclear_program |
-| (0.1, 0.2, True, False)        |    18 | snare, rope, mountain | analytical, mathematical, mathematics | biological_curiosity, church_turing_thesis |
-| (0.7, 0.6, False, True)        |    16 | snare, piton, tangled_rope, mountain | social, psychological, political | abstraction_leakage, carrying_capacity |
-| (0.9, 0.7, False, True)        |    15 | piton, tangled_rope  | social, political, organizational | bureaucratic_legibility_collapse, capital_misallocation_spiral |
-| (0.7, 0.7, False, True)        |    14 | piton, tangled_rope  | social, psychological, political | awareness_without_leverage, cb_far_beyond_human |
-| (0.5, 0.7, False, True)        |    13 | piton, tangled_rope, mountain | social, political, economic | ai_auditability_gap, eurozone_fragmentation_2026 |
-| (0.5, 0.8, False, True)        |    13 | piton, tangled_rope, scaffold | social, philosophical, political | artificial_scarcity_scaffold, atrophied_optimization_piton |
-| (0.6, 0.8, False, True)        |    13 | piton, tangled_rope  | social, political, institutional | bangladesh_july_national_charter, discover_core_2026 |
-| (0.2, 0.3, True, False)        |    12 | rope, mountain       | scientific, mathematical, psychological | burali_forte_paradox, central_limit_theorem_convergence |
-| (0.7, 0.5, False, True)        |    11 | snare, piton, tangled_rope | social, economic, political | adverse_possession, ai_cognitive_diversity_arbitrage |
-| (0.6, 0.6, False, True)        |    11 | piton, tangled_rope  | social, economic, organizational | boiled_pineapple_trend_2026, carbon_credit_markets_2026 |
-| (0.1, 0.1, True, False)        |    10 | rope, mountain       | mathematical, economic, technological | automatic_enrollment_defaults, ergo_lets_protocol |
-| (0.2, 0.1, True, False)        |    10 | rope, mountain       | mathematical, mathematics, physics | basel_problem_convergence, brouwer_fixed_point |
-| (0.6, 0.9, False, True)        |    10 | piton, tangled_rope, mountain | social, political, geopolitical | constitutional_consecration, digital_identity_tether |
+| (0.8, 0.7, False, True)        |    64 | tangled_rope, mountain, snare, piton | technological, biological, linguistic | abstraction_boundary_overrun, adaptive_lag_trap |
+| (0.8, 0.8, False, True)        |    47 | tangled_rope, mountain, snare, piton | unknown, technological, geopolitical | 26usc469_real_estate_exemption, ad_fus_coordination |
+| (0.9, 0.8, False, True)        |    47 | piton, tangled_rope, mountain, snare | technological, military, economic | adversarial_truth_decay, agency_atrophy |
+| (0.6, 0.7, False, True)        |    36 | tangled_rope, snare, piton | geopolitical, technological, biological | MOLTBOT_RELIGION, ai_religion_regulation |
+| (0.7, 0.8, False, True)        |    24 | tangled_rope, mountain, snare, piton | geopolitical, technological, economic | CG_IsraelGaza_20231012, academic_fashion_modernism_2026 |
+| (0.8, 0.6, False, True)        |    24 | tangled_rope, snare, mountain, piton, rope | technological, biological, economic | academic_peer_review_gatekeeping, academic_tenure_system |
+| (0.8, 0.9, False, True)        |    21 | tangled_rope, mountain, snare, piton | technological, biological, economic | ad_synaptic_deficit, apartheid_nuclear_program |
+| (0.1, 0.2, True, False)        |    18 | snare, mountain, rope | technological, biological, linguistic | biological_curiosity, church_turing_thesis |
+| (0.7, 0.6, False, True)        |    16 | tangled_rope, mountain, snare, piton | technological, economic, social | abstraction_leakage, carrying_capacity |
+| (0.9, 0.7, False, True)        |    15 | tangled_rope, piton  | technological, biological, economic | bureaucratic_legibility_collapse, capital_misallocation_spiral |
+| (0.7, 0.7, False, True)        |    14 | tangled_rope, piton  | technological, economic, social | awareness_without_leverage, cb_far_beyond_human |
+| (0.5, 0.7, False, True)        |    13 | tangled_rope, mountain, piton | technological, biological, economic | ai_auditability_gap, eurozone_fragmentation_2026 |
+| (0.5, 0.8, False, True)        |    13 | piton, tangled_rope, scaffold | technological, social, political | artificial_scarcity_scaffold, atrophied_optimization_piton |
+| (0.6, 0.8, False, True)        |    13 | tangled_rope, piton  | technological, economic, social | bangladesh_july_national_charter, discover_core_2026 |
+| (0.2, 0.3, True, False)        |    12 | mountain, rope       | technological, mathematical, psychological | burali_forte_paradox, central_limit_theorem_convergence |
+| (0.7, 0.5, False, True)        |    11 | snare, tangled_rope, piton | technological, social, political | adverse_possession, ai_cognitive_diversity_arbitrage |
+| (0.6, 0.6, False, True)        |    11 | piton, tangled_rope  | social, political, economic | boiled_pineapple_trend_2026, carbon_credit_markets_2026 |
+| (0.1, 0.1, True, False)        |    10 | mountain, rope       | technological, mathematical, economic | automatic_enrollment_defaults, ergo_lets_protocol |
+| (0.2, 0.1, True, False)        |    10 | mountain, rope       | physics, technological, mathematical | basel_problem_convergence, brouwer_fixed_point |
+| (0.6, 0.9, False, True)        |    10 | tangled_rope, mountain, piton | geopolitical, technological, biological | constitutional_consecration, digital_identity_tether |
 
 ## Candidate Category Analysis
 
@@ -59,13 +59,13 @@ Constraints with identical structural signatures but different claimed types.
 **Pattern:** High extraction + High suppression + Requires enforcement
 **Interpretation:** Mix of snare and rope characteristics
 
-**Constraints matching pattern:** 302
+**Constraints matching pattern:** 301
 
 **Current type distribution:**
-- tangled_rope: 204
+- tangled_rope: 205
 - piton: 46
 - snare: 28
-- mountain: 23
+- mountain: 21
 - rope: 1
 
 **Examples:**
@@ -88,10 +88,10 @@ Constraints with identical structural signatures but different claimed types.
 **Pattern:** High suppression + Enforced + Claimed as mountain
 **Interpretation:** False mountains that are obviously constructed
 
-**Constraints matching pattern:** 26
+**Constraints matching pattern:** 25
 
 **Current type distribution:**
-- mountain: 26
+- mountain: 25
 
 **Examples:**
 
@@ -113,11 +113,11 @@ Constraints with identical structural signatures but different claimed types.
 **Pattern:** Medium extractiveness + Medium suppression
 **Interpretation:** Temporary transition mechanisms
 
-**Constraints matching pattern:** 99
+**Constraints matching pattern:** 100
 
 **Current type distribution:**
 - tangled_rope: 47
-- mountain: 30
+- mountain: 31
 - rope: 11
 - piton: 4
 - snare: 4
@@ -200,7 +200,7 @@ Constraints with both high extraction and high suppression.
 
 Constraints with mid-range metrics suggesting transitional states.
 
-**Total transition markers found:** 197
+**Total transition markers found:** 198
 
 | Constraint ID | Claimed Type | Extraction | Suppression | Resistance | Domain |
 |---------------|--------------|------------|-------------|------------|--------|
@@ -227,7 +227,7 @@ Constraints with mid-range metrics suggesting transitional states.
 
 ## Recommendations
 
-### 1. Found 38 structural signatures shared by 5+ constraints
+### 1. Found 36 structural signatures shared by 5+ constraints
 
 **Priority:** HIGH
 
@@ -246,29 +246,29 @@ Constraints with mid-range metrics suggesting transitional states.
 
 **Details:** 413 constraints don't fit cleanly into mountain/rope/snare
 
-### 3. Found 302 constraints matching 'tangled_rope' pattern
+### 3. Found 301 constraints matching 'tangled_rope' pattern
 
 **Priority:** MEDIUM
 
 **Recommended Action:** Consider formalizing 'tangled_rope' as new category
 
-**Details:** Type distribution: {'tangled_rope': 204, 'piton': 46, 'mountain': 23, 'snare': 28, 'rope': 1}
+**Details:** Type distribution: {'tangled_rope': 205, 'piton': 46, 'mountain': 21, 'snare': 28, 'rope': 1}
 
-### 4. Found 26 constraints matching 'piton' pattern
+### 4. Found 25 constraints matching 'piton' pattern
 
 **Priority:** MEDIUM
 
 **Recommended Action:** Consider formalizing 'piton' as new category
 
-**Details:** Type distribution: {'mountain': 26}
+**Details:** Type distribution: {'mountain': 25}
 
-### 5. Found 99 constraints matching 'scaffold' pattern
+### 5. Found 100 constraints matching 'scaffold' pattern
 
 **Priority:** MEDIUM
 
 **Recommended Action:** Consider formalizing 'scaffold' as new category
 
-**Details:** Type distribution: {'tangled_rope': 47, 'rope': 11, 'mountain': 30, 'piton': 4, 'snare': 4, 'scaffold': 3}
+**Details:** Type distribution: {'tangled_rope': 47, 'rope': 11, 'mountain': 31, 'piton': 4, 'snare': 4, 'scaffold': 3}
 
 ### 6. Found 62 constraints matching 'wings' pattern
 
@@ -278,7 +278,7 @@ Constraints with mid-range metrics suggesting transitional states.
 
 **Details:** Type distribution: {'rope': 15, 'mountain': 46, 'snare': 1}
 
-### 7. Found 197 constraints with mid-range metrics
+### 7. Found 198 constraints with mid-range metrics
 
 **Priority:** MEDIUM
 

@@ -1,6 +1,6 @@
 # Deferential Realism: Core Principles
 
-**Version 3.3 - Final Integrated**  
+**Version 4.0**  
 **Purpose:** Gateway introduction to the Deferential Realism framework  
 **Read this first.** If the core framework makes sense, the domain extensions follow naturally.
 
@@ -23,13 +23,13 @@
 - Lifecycle understanding (genesis, maturation, degradation, terminal states)
 
 **The framework does NOT provide:**
-- Ethical prescriptions (values determine response—see ethics.md)
-- Paradox resolution (some tensions are structural—requires containment)
+- Ethical prescriptions (values determine responseâ€”see ethics.md)
+- Paradox resolution (some tensions are structuralâ€”requires containment)
 - Outcome guarantees (classification informs, doesn't determine)
 - Universal truth claims (this is evidence-informed conjecture)
 - Replacement for existing theory (complements democratic theory, psychology, sociology)
 
-**The core problem:** Asking "Is this constraint real?" is ambiguous until you specify **WHO** is evaluating it, **WHEN**, **WHERE** they're positioned, and **HOW MUCH POWER** they have. The same constraint can be unchangeable from one perspective and reformable from another—both classifications objectively true at their respective indices.
+**The core problem:** Asking "Is this constraint real?" is ambiguous until you specify **WHO** is evaluating it, **WHEN**, **WHERE** they're positioned, and **HOW MUCH POWER** they have. The same constraint can be unchangeable from one perspective and reformable from anotherâ€”both classifications objectively true at their respective indices.
 
 **This is indexed realism:** Truth is position-relative, but each indexed claim is objectively true or false. Not "truth is whatever" (relativism) but "truth depends on structural position" (position-dependent objectivity). Multiple valid answers exist because different positions expose different structural properties of the same constraint.
 
@@ -67,7 +67,7 @@ Deferential Realism integrates five philosophical branches with three applied do
 - **Containment capacity** - Some tensions are structurally permanent; skillful navigation holds paradox without forcing resolution
 - **Lifecycle awareness** - Constraints emerge, mature, degrade, and die; temporal dynamics matter
 
-**Empirical validation:** Framework tested against 467 constraints across 35+ domains, 30+ electoral systems, 150+ relationship scenarios, 100+ institutional structures. Tangled Rope prevalence: 36% of social constraints, 60%+ of functional democratic institutions. Power-scaling eliminates classification collisions (8.2% without it, 0% with it). See `validation/validation_report.md` for complete findings.
+**Empirical validation:** Framework tested against +725 constraint stories across 35+ domains, 30+ electoral systems, 150+ relationship scenarios, 100+ institutional structures. Corpus is actively growing via automated generation pipeline. Tangled Rope prevalence: 36% of social constraints, 60%+ of functional democratic institutions. Power-scaling eliminates classification collisions (8.2% without it, 0% with it). See `validation/validation_report.md` for complete findings and `limitations.md` for empirically confirmed failure modes.
 
 ---
 
@@ -80,15 +80,15 @@ Deferential Realism integrates five philosophical branches with three applied do
 - **Consumer** [powerless/biographical/trapped/national]: "Mountain - prices just exist, we have no influence."
 - **Activist** [analytical/generational/analytical/global]: "Snare - extractive greenwashing delaying real action while enriching financial middlemen."
 
-All four are **objectively true** because they're answering from different power positions. Same base structure, four different types—not subjective interpretation but structural relativity.
+All four are **objectively true** because they're answering from different power positions. Same base structure, four different typesâ€”not subjective interpretation but structural relativity.
 
 **Power-scaling mechanism:**
 ```
-Base extraction ε = 0.40
+Base extraction Îµ = 0.40
 
-Consumer: χ = 0.40 × 1.5 = 0.60 (Snare threshold - extraction amplified)
-Small business: χ = 0.40 × 1.0 = 0.40 (Tangled Rope - baseline)
-Corporation: χ = 0.40 × 0.6 = 0.24 (Rope - extraction reduced)
+Consumer: Ï‡ = 0.40 Ã— 1.5 = 0.60 (Snare threshold - extraction amplified)
+Small business: Ï‡ = 0.40 Ã— 1.0 = 0.40 (Tangled Rope - baseline)
+Corporation: Ï‡ = 0.40 Ã— 0.6 = 0.24 (Rope - extraction reduced)
 ```
 
 This **proves** indexical relativity: same structure genuinely IS different types from different positions, based on observable power (control over exit, enforcement, resources).
@@ -124,13 +124,13 @@ Every constraint falls into one of six fundamental types, distinguished by how t
 - Has it been surpassed elsewhere?
 - **Discomfort vs. Damage**: Does violation produce subjective fear or objective harm?
 
-**Note:** Mountains can be unjust (constitutional locks protecting power asymmetries were Mountains until overthrown). Unchangeable ≠ legitimate. Even zero-freedom constraints allow navigation choices (which pass, when to attempt, route selection). See metaphysics.md for complete treatment.
+**Note:** Mountains can be unjust (constitutional locks protecting power asymmetries were Mountains until overthrown). Unchangeable â‰  legitimate. Even zero-freedom constraints allow navigation choices (which pass, when to attempt, route selection). See metaphysics.md for complete treatment.
 
 ---
 
 ### 2. Ropes (Coordination Tools)
 
-**Definition:** Constructed systems solving genuine coordination problems, broadly beneficial with low extraction (ε ≤ 0.15).
+**Definition:** Constructed systems solving genuine coordination problems, broadly beneficial with low extraction (Îµ â‰¤ 0.15).
 
 **Test:** Does this prevent collisions or manage scarcity? Who benefits? Is benefit approximately reciprocal?
 
@@ -138,7 +138,7 @@ Every constraint falls into one of six fundamental types, distinguished by how t
 
 **Response:** Maintain, refine as needed, replace if demonstrably better alternative exists. Monitor for degradation.
 
-**Degradation path:** Rope → Tangled Rope (extraction accumulates) → Piton (function lost, inertia remains).
+**Degradation path:** Rope â†’ Tangled Rope (extraction accumulates) â†’ Piton (function lost, inertia remains).
 
 **Quality markers:**
 - Voluntary participation (in principle)
@@ -157,16 +157,16 @@ Every constraint falls into one of six fundamental types, distinguished by how t
 **Examples across domains:** 
 - **Economic**: Carbon credits (climate coordination + financial rent), health insurance (risk pooling + admin extraction)
 - **Social**: Monogamy norms (expectation coordination + alternative suppression), professional networking (opportunity discovery + insider advantage), family caregiving (elder support + gendered extraction)
-- **Institutional**: Two-round elections (majority legitimacy + centrist compression), Centrão budget amendments (coalition governance + pork extraction), party-list PR with threshold (prevents fragmentation + suppresses near-threshold parties)
+- **Institutional**: Two-round elections (majority legitimacy + centrist compression), CentrÃ£o budget amendments (coalition governance + pork extraction), party-list PR with threshold (prevents fragmentation + suppresses near-threshold parties)
 - **Psychological**: Perfectionism (quality standards + worth-contingency), people-pleasing (genuine care + self-abandonment), achievement drive (goal pursuit + worth-contingency)
 
 **Response:** **Reform** - preserve coordination, excise extraction. Requires surgical precision: cutting whole rope destroys coordination; keeping all maintains extraction.
 
 **Power-scaling effect:** Same base extraction experienced differently by position:
-- **Powerless agents**: Extraction amplified (π = 1.5, often feels like Snare)
-- **Moderate agents**: See both functions (π = 1.0, recognize Tangled Rope)
-- **Powerful agents**: Extraction reduced (π = 0.6, may feel like Rope)
-- **Institutional actors**: Net beneficiaries (π = -0.2, experience as Rope)
+- **Powerless agents**: Extraction amplified (Ï€ = 1.5, often feels like Snare)
+- **Moderate agents**: See both functions (Ï€ = 1.0, recognize Tangled Rope)
+- **Powerful agents**: Extraction reduced (Ï€ = 0.6, may feel like Rope)
+- **Institutional actors**: Net beneficiaries (Ï€ = -0.2, experience as Rope)
 
 **Why this is the most important category:**
 - Most complex systems operate this way (norm, not exception)
@@ -175,14 +175,14 @@ Every constraint falls into one of six fundamental types, distinguished by how t
 - Resolves false dichotomy in theory (functional vs. exploitative)
 
 **Misclassification errors:**
-- Treat as pure Rope → defend extraction, block reform
-- Treat as pure Snare → destroy coordination, lose collective benefit
+- Treat as pure Rope â†’ defend extraction, block reform
+- Treat as pure Snare â†’ destroy coordination, lose collective benefit
 
 ---
 
 ### 4. Snares (Extraction Traps)
 
-**Definition:** Structures extracting asymmetrically through power maintenance, often masquerading as Mountains (natural) or Ropes (coordination). Base extraction ε ≥ 0.46.
+**Definition:** Structures extracting asymmetrically through power maintenance, often masquerading as Mountains (natural) or Ropes (coordination). Base extraction Îµ â‰¥ 0.46.
 
 **Test:** Who benefits systematically? Who loses? What enforcement maintains this? Are alternatives suppressed?
 
@@ -221,9 +221,9 @@ Every constraint falls into one of six fundamental types, distinguished by how t
 **Response:** **Use deliberately**, **monitor sunset compliance**, **dismantle when complete**, **celebrate** dissolution (not mourn).
 
 **Degradation paths:**
-- **Scaffold → Piton**: Purpose served but not removed (Thailand Senate veto retention after PM selection power expired)
-- **Scaffold → Snare**: "Temporary" extends indefinitely (authoritarian emergency powers)
-- **Scaffold → Tangled Rope**: Extraction added during transition (provisional government enriching itself)
+- **Scaffold â†’ Piton**: Purpose served but not removed (Thailand Senate veto retention after PM selection power expired)
+- **Scaffold â†’ Snare**: "Temporary" extends indefinitely (authoritarian emergency powers)
+- **Scaffold â†’ Tangled Rope**: Extraction added during transition (provisional government enriching itself)
 
 **Hidden risk:** Some "scaffolds" claim temporality but extract permanently (therapy creating dependency, mentorship exploitation, MFA programs creating institutional dependence).
 
@@ -267,14 +267,14 @@ Every constraint falls into one of six fundamental types, distinguished by how t
 ### WHO - Agent Power
 
 Observable power position (not subjective feeling):
-- **Powerless**: Subject to outcomes, minimal influence, high exit costs (π = 1.5)
-- **Moderate**: Some agency, negotiation capacity, moderate costs (π = 1.0)
-- **Powerful**: High agency, strong position, low exit costs (π = 0.6)
-- **Collective**: Organized group, shared resources (π = 0.4)
-- **Institutional**: Organization-level, sets rules (π = -0.2)
-- **Analytical**: Outside observer (π = 1.0)
+- **Powerless**: Subject to outcomes, minimal influence, high exit costs (Ï€ = 1.5)
+- **Moderate**: Some agency, negotiation capacity, moderate costs (Ï€ = 1.0)
+- **Powerful**: High agency, strong position, low exit costs (Ï€ = 0.6)
+- **Collective**: Organized group, shared resources (Ï€ = 0.4)
+- **Institutional**: Organization-level, sets rules (Ï€ = -0.2)
+- **Analytical**: Outside observer (Ï€ = 1.0)
 
-**Why power matters:** Determines extraction experience. Same base ε becomes different effective χ.
+**Why power matters:** Determines extraction experience. Same base Îµ becomes different effective Ï‡.
 
 ### WHEN - Time Horizon
 
@@ -298,12 +298,12 @@ Observable power position (not subjective feeling):
 
 ### HOW MUCH - Spatial Scope
 
-- **Local**: Dyadic/small group/community scope (up to Dunbar limit ~150)
-- **Regional**: Province, state, organizational (hundreds to thousands)
-- **National**: Country-scale (millions)
-- **Continental**: Multi-nation blocs (Europe, Asia, etc.)
-- **Global**: International systems (worldwide human systems)
-- **Universal**: Beyond human systems (natural law, physical constants)
+- **Dyadic**: Two-person (friendship, partnership)
+- **Small group**: 3-12 (family, team)
+- **Community**: 20-150 (Dunbar limit)
+- **Organizational**: Hundreds to thousands
+- **Regional/National**: Millions to billions
+- **Global**: International systems
 
 **Why scope matters:** Coordination that works locally may become extractive at scale. Verification difficulty increases with scope.
 
@@ -313,28 +313,28 @@ Observable power position (not subjective feeling):
 
 **The mechanism:**
 ```
-Effective extraction χ(C, P) = Base extraction ε(C) × Power modifier π(P)
+Effective extraction Ï‡(C, P) = Base extraction Îµ(C) Ã— Power modifier Ï€(P)
 
 Where:
-- ε(C) = structural property of constraint (observable)
+- Îµ(C) = structural property of constraint (observable)
 - P = agent's power position (observable: exit control, enforcement control, resources)
-- π(P) = modifier based on position
+- Ï€(P) = modifier based on position
 
 Modifiers:
-π(powerless) = 1.5 (extraction amplified)
-π(moderate) = 1.0 (baseline)
-π(powerful) = 0.6 (extraction reduced)
-π(collective) = 0.4 (shared burden)
-π(institutional) = -0.2 (net beneficiary)
+Ï€(powerless) = 1.5 (extraction amplified)
+Ï€(moderate) = 1.0 (baseline)
+Ï€(powerful) = 0.6 (extraction reduced)
+Ï€(collective) = 0.4 (shared burden)
+Ï€(institutional) = -0.2 (net beneficiary)
 ```
 
 **Critical insight:** Power must be **observable** (control over exit, enforcement, resources), not subjective, to avoid circularity.
 
-**Example: Professional networking (ε = 0.40)**
+**Example: Professional networking (Îµ = 0.40)**
 ```
-Without network (powerless): 0.40 × 1.5 = 0.60 (Snare - locked out)
-Moderate network: 0.40 × 1.0 = 0.40 (Tangled Rope - sees both)
-Strong network (powerful): 0.40 × 0.6 = 0.24 (Rope - opportunities flow)
+Without network (powerless): 0.40 Ã— 1.5 = 0.60 (Snare - locked out)
+Moderate network: 0.40 Ã— 1.0 = 0.40 (Tangled Rope - sees both)
+Strong network (powerful): 0.40 Ã— 0.6 = 0.24 (Rope - opportunities flow)
 ```
 
 **This explains:**
@@ -353,19 +353,19 @@ Strong network (powerful): 0.40 × 0.6 = 0.24 (Rope - opportunities flow)
 
 ### Universal Paradoxes (Across Domains):
 
-**Autonomy ⇄ Connection**
+**Autonomy â‡„ Connection**
 - Need both independence AND intimacy
 - Cannot maximize both simultaneously
 - Containment: Sequential alternation (autonomy this week, connection next)
 - Forcing resolution: Isolation (pure autonomy) or fusion (pure connection)
 
-**Security ⇄ Growth**
+**Security â‡„ Growth**
 - Need both stability AND challenge
 - Cannot have both fully at once
 - Containment: Rhythmic oscillation (periods of security, periods of growth)
 - Forcing resolution: Stagnation (pure security) or chaos (pure growth)
 
-**Present ⇄ Future**
+**Present â‡„ Future**
 - Need both current satisfaction AND future preparation
 - Cannot optimize both
 - Containment: Context-dependent priority (enjoy now, save later)
@@ -374,23 +374,23 @@ Strong network (powerful): 0.40 × 0.6 = 0.24 (Rope - opportunities flow)
 ### Domain-Specific Paradoxes:
 
 **Political:**
-- Majority Rule ⇄ Minority Rights
-- Representation ⇄ Expertise
-- Stability ⇄ Accountability
-- Federalism ⇄ Efficiency
+- Majority Rule â‡„ Minority Rights
+- Representation â‡„ Expertise
+- Stability â‡„ Accountability
+- Federalism â‡„ Efficiency
 
 **Psychological:**
-- Acceptance ⇄ Change
-- Material frame ⇄ Functional frame
+- Acceptance â‡„ Change
+- Material frame â‡„ Functional frame
 
 **Aesthetic:**
-- Innovation ⇄ Communication
-- Autonomy ⇄ Audience
-- Material ⇄ Concept
+- Innovation â‡„ Communication
+- Autonomy â‡„ Audience
+- Material â‡„ Concept
 
 **Relational:**
-- Individual Needs ⇄ Collective Needs
-- Honesty ⇄ Kindness
+- Individual Needs â‡„ Collective Needs
+- Honesty â‡„ Kindness
 
 **Containment Protocol (6 steps):**
 1. **Name** the paradox (what two goods are in tension?)
@@ -420,7 +420,7 @@ Strong network (powerful): 0.40 × 0.6 = 0.24 (Rope - opportunities flow)
 
 **Constraints aren't static.** They emerge, mature, degrade, and sometimes die.
 
-**Four phases:** Genesis → Maturation → Degradation → Terminal States
+**Four phases:** Genesis â†’ Maturation â†’ Degradation â†’ Terminal States
 
 ### Genesis (How Constraints Form)
 
@@ -428,7 +428,7 @@ Strong network (powerful): 0.40 × 0.6 = 0.24 (Rope - opportunities flow)
 
 **Ropes:** Designed to solve coordination problems
 - Creation event: Problem recognized + solution proposed + collective adoption
-- Initial extraction low (ε ≤ 0.15)
+- Initial extraction low (Îµ â‰¤ 0.15)
 
 **Tangled Ropes:** Two paths
 - **Designed hybrid:** Coordination + extraction from inception (carbon credits)
@@ -446,13 +446,13 @@ Strong network (powerful): 0.40 × 0.6 = 0.24 (Rope - opportunities flow)
 
 **Seven drift event types:**
 
-1. **Metric Substitution**: Proxy becomes goal (social media: connection → engagement)
+1. **Metric Substitution**: Proxy becomes goal (social media: connection â†’ engagement)
 2. **Extraction Accumulation**: Rent-seeking added (academic publishing capture)
 3. **Coordination Loss**: Function withers, extraction persists (cable TV obsolescence)
 4. **Function Obsolescence**: Environment shifts (fax requirements in email era)
 5. **Sunset Violation**: Temporary becomes permanent (Thailand Senate)
 6. **Extraction Dried Up**: Mechanism fails but structure persists (Soviet committees post-1991)
-7. **Algorithm Shutdown → I-Piton**: Extraction mechanism removed but habits remain (creepiest path)
+7. **Algorithm Shutdown â†’ I-Piton**: Extraction mechanism removed but habits remain (creepiest path)
 
 ### Terminal States
 
@@ -461,18 +461,18 @@ Strong network (powerful): 0.40 × 0.6 = 0.24 (Rope - opportunities flow)
 **Ropes:** Maintained indefinitely (rare) OR degrade to Tangled Rope/Piton
 
 **Tangled Ropes:** 
-- Reform → Rope (extraction excised)
-- Degradation → Snare (coordination lost) or Piton (both fail)
+- Reform â†’ Rope (extraction excised)
+- Degradation â†’ Snare (coordination lost) or Piton (both fail)
 - Revolutionary replacement (destroyed entirely)
 
 **Snares:**
-- Resistance → Dismantled
-- Naturalization → False Mountain (accepted as unchangeable)
-- Degradation → I-Piton (enforcement stops, habits remain)
+- Resistance â†’ Dismantled
+- Naturalization â†’ False Mountain (accepted as unchangeable)
+- Degradation â†’ I-Piton (enforcement stops, habits remain)
 
 **Scaffolds:**
-- Success → Dissolution (designed outcome)
-- Failure → Piton (sunset ignored)
+- Success â†’ Dissolution (designed outcome)
+- Failure â†’ Piton (sunset ignored)
 
 **Pitons:**
 - Elimination (administrative cleanup)
@@ -506,22 +506,22 @@ Use Six-Test Battery (from epistemology.md):
 
 **Test 2: Coordination Function**
 - Does this solve genuine scarcity/collision problem?
-- If no coordination → skip to power test (likely Snare or Piton)
+- If no coordination â†’ skip to power test (likely Snare or Piton)
 
 **Test 3: Extraction Present**
-- Low extraction (ε ≤ 0.15) → Rope
-- Moderate extraction (0.40 ≤ ε ≤ 0.90) + coordination → Tangled Rope
-- High extraction (ε ≥ 0.46) → Snare
+- Low extraction (Îµ â‰¤ 0.15) â†’ Rope
+- Moderate extraction (0.40 â‰¤ Îµ â‰¤ 0.90) + coordination â†’ Tangled Rope
+- High extraction (Îµ â‰¥ 0.46) â†’ Snare
 
 **Test 4: Power-Scaling Assessment**
-- Apply π(P) to base ε
-- Effective extraction χ determines type from your position
+- Apply Ï€(P) to base Îµ
+- Effective extraction Ï‡ determines type from your position
 
 **Test 5: Temporal Limitation**
-- Designed to sunset? → Scaffold (orthogonal property)
+- Designed to sunset? â†’ Scaffold (orthogonal property)
 
 **Test 6: Obsolescence Check**
-- Cost > benefit? No function remains? → Piton
+- Cost > benefit? No function remains? â†’ Piton
 
 ### 3. Choose Response Based on Classification + Values
 
@@ -541,12 +541,12 @@ Use Six-Test Battery (from epistemology.md):
 
 ### 4. Avoid Common Misclassification Errors
 
-**Type I (False Summit):** Calling Snare a Mountain → surrender to changeable injustice
-**Type II (False Snare/Rope):** Calling Mountain a Snare → waste energy fighting reality
-**Type III (Snare as Rope):** Defending extraction as coordination → maintain harm
-**Type IV (Rope as Snare):** Destroying coordination as extraction → lose benefit
-**Type V (Piton as active):** Fighting dead constraint → waste political capital
-**Type VI (Tangled Rope mishandled):** Treating hybrid as pure → either maintain extraction OR destroy coordination
+**Type I (False Summit):** Calling Snare a Mountain â†’ surrender to changeable injustice
+**Type II (False Snare/Rope):** Calling Mountain a Snare â†’ waste energy fighting reality
+**Type III (Snare as Rope):** Defending extraction as coordination â†’ maintain harm
+**Type IV (Rope as Snare):** Destroying coordination as extraction â†’ lose benefit
+**Type V (Piton as active):** Fighting dead constraint â†’ waste political capital
+**Type VI (Tangled Rope mishandled):** Treating hybrid as pure â†’ either maintain extraction OR destroy coordination
 
 **Error asymmetry:** Type I and Type III are most costly (surrender and complicity). When uncertain, err toward testing claimed Mountains and investigating claimed Ropes for extraction.
 
@@ -599,9 +599,9 @@ Classification is ongoing practice, not one-time assessment.
 
 ### What Accurate Classification Does NOT Enable:
 
-- Outcome guarantees (knowing ≠ changing)
+- Outcome guarantees (knowing â‰  changing)
 - Paradox resolution (some tensions permanent)
-- Moral certainty (classification ≠ obligation)
+- Moral certainty (classification â‰  obligation)
 - Power acquisition (knowledge doesn't grant control)
 - Effortless navigation (clarity reveals difficulty, doesn't eliminate it)
 
@@ -609,7 +609,7 @@ Classification is ongoing practice, not one-time assessment.
 
 ## Empirical Development & Epistemic Status
 
-**What we've done:** Systematic analysis of 467 constraints across 35+ domains, 30+ electoral systems, 150+ relationship scenarios, 100+ institutional structures over several months. 
+**What we've done:** Systematic analysis of +725 constraint stories across 35+ domains, 30+ electoral systems, 150+ relationship scenarios, 100+ institutional structures over several months. Corpus actively growing via automated generation pipeline (RSS ingestion + Gemini API). Corpus-wide audit conducted February 2026 including 13-file deep review testing predicted parser failure modes.
 
 **Within tested corpus:**
 - 0% collision rate when indices fully specified
@@ -638,10 +638,10 @@ Classification is ongoing practice, not one-time assessment.
 **Testable predictions:**
 - France 2027: Compression dynamics will match Colombia 2026 pattern
 - Thailand post-2026: Judicial gatekeeping will continue
-- Brazil 2026: Centrão dynamics will persist
+- Brazil 2026: CentrÃ£o dynamics will persist
 - U.S. 2026: Safe seat dominance continues (>88%)
 
-**Falsification criteria:** If power-scaling doesn't reduce collisions, if Tangled Ropes are always separable, if containment protocol consistently fails, if index specification doesn't resolve apparent contradictions → framework needs revision.
+**Falsification criteria:** If power-scaling doesn't reduce collisions, if Tangled Ropes are always separable, if containment protocol consistently fails, if index specification doesn't resolve apparent contradictions â†’ framework needs revision.
 
 **Details:** Complete methodology, corpus specifics, confidence levels, known limitations, and failure modes in `validation/validation_report.md`.
 
@@ -663,6 +663,7 @@ Classification is ongoing practice, not one-time assessment.
 
 ### **Lifecycle & Practice**
 - **constraint_lifecycles.md** - Genesis, maturation, degradation, terminal states; seven drift event types; Internalized Piton (I-Piton)
+- **limitations.md** - Empirically confirmed failure modes, verification architecture, parser vulnerabilities
 - **field_manual.md** - One-page quick reference, decision tree, classification table
 - **applied_guide.md** - Decision trees, case studies, error patterns (planned)
 - **validation/validation_report.md** - Corpus analysis, methodology, confidence levels, falsification criteria
@@ -676,7 +677,7 @@ Classification is ongoing practice, not one-time assessment.
 **What this framework does NOT claim:**
 - Universal empirical truth (patterns may not hold everywhere/everywhen)
 - Perfect measurement (power dynamics limit information access)  
-- Ethical prescription (classification ≠ obligation—values determine response)
+- Ethical prescription (classification â‰  obligationâ€”values determine response)
 - Paradox resolution (some tensions structural, require containment)
 - Predictive certainty (classification aids choice, doesn't guarantee outcomes)
 - Totalization (diagnostic tool, not theory of everything)
@@ -697,7 +698,7 @@ Classification is ongoing practice, not one-time assessment.
 - Does NOT resolve values conflicts (enables clarity about disagreement structure)
 - Does NOT eliminate complexity (maps terrain, doesn't flatten it)
 - Does NOT absorb objections (can be wrong about classifications)
-- Does NOT grant power (knowledge ≠ capability)
+- Does NOT grant power (knowledge â‰  capability)
 
 **What accurate classification enables:**
 - Strategic energy allocation (don't fight gravity, don't maintain pitons)
@@ -713,9 +714,9 @@ Classification is ongoing practice, not one-time assessment.
 
 ## Known Limitations and Failure Modes
 
-**Framework maturity:** Developed over several months, tested on 467 scenarios across 35+ domains, 30+ electoral systems, 150+ relationship scenarios. Shows internal coherence and practical utility. **Not validated through independent replication or peer review.**
+**Framework maturity:** Developed over several months, tested on +725 constraint stories across 35+ domains. Shows internal coherence and practical utility. **Not validated through independent replication or peer review.** Corpus-wide audit (February 2026) confirmed several failure modes empirically.
 
-**Known failure modes:**
+**Theoretical failure modes:**
 - Classification requires good information (power limits evidence access)
 - Users may misidentify their own power position
 - Risk of justifying inaction ("It's a Mountain for me" when it's False Summit)
@@ -723,12 +724,20 @@ Classification is ongoing practice, not one-time assessment.
 - Tangled Rope reform is politically difficult (beneficiaries resist)
 - Containment feels like giving up (culture demands resolution)
 
+**Empirically confirmed failure modes (corpus audit, February 2026):**
+- **Mountain naturalization:** LLM parsers classify constructed, actively-enforced systems as natural law. 252 of 594 files flagged by Prolog engine's False Mountain report; 96 with extraction > 0.15 directly violating Mountain definition. The framework's core concern — calling extraction "nature" — reproduced by the framework's own implementation pipeline.
+- **WHO assignment vulnerability:** Parser reads emotional valence rather than structural power dynamics. Narrative manipulation (narcissistic communication, media framing) inverts beneficiary/victim assignment. No mechanical check catches this; WHO assignment remains irreducible human judgment.
+- **Self-referential blind spot:** LLMs naturalizing AI-related constraints at higher rates than other domains. Confirmed case: AI professional displacement classified as "structural market law" (Mountain) while file's own metrics show ε=0.71, TR=0.55, requires_active_enforcement — all incompatible with Mountain by definition.
+- **Dominant cultural narrative embedding:** Parser adopts most statistically likely English-language frame for contested political situations, embedding editorial bias as classification input. Confirmed in geopolitical constraints (Israel-Gaza, Xi-Mao centralization).
+
 **Methodological limitations:**
 - Corpus Western-leaning (needs non-WEIRD replication)
 - Extraction thresholds may be context-dependent
 - Power modifiers calibrated from limited sample
 - Temporal dynamics underspecified (observe degradation, lack predictive model)
 - Fuzzy boundaries between categories (especially Tangled Rope/Snare border)
+- Verification architecture incomplete: structural linter and classification engine exist; meta-engine for triage and Omega tracking for resolution are designed but not yet fully implemented
+- Template version is strongest predictor of file quality — v5.2 necessary (not sufficient) for structural correctness
 
 **Open to:**
 - **Revision** (adjusting categories based on new evidence)
@@ -736,13 +745,13 @@ Classification is ongoing practice, not one-time assessment.
 - **Replacement** (if better frameworks emerge)
 - **Integration** (with existing theory approaches)
 
-See `epistemology.md` for complete methodological details and `validation/validation_report.md` for empirical findings, confidence levels, and falsification criteria.
+See `limitations.md` for full empirical findings, `epistemology.md` for methodology, and `validation/validation_report.md` for corpus-level data.
 
 ---
 
 **End of Core Document**  
-**Version 3.3 - Final Integrated**  
-**Word count: ~5,000 words**
+**Version 4.0**  
+**Word count: ~5,500 words**
 
 **Next steps:** Read `field_manual.md` for one-page quick reference, then explore domain documents based on interest:
 - **psychology.md** for internal navigation

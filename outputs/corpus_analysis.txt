@@ -1,31 +1,300 @@
 
+====================================================
+   STRUCTURAL ANALYSIS STACK INITIALIZED             
+====================================================
+Control:    Scenario Manager Active
+Usage:      run_scenario('file.pl', interval_id).
+====================================================
+
+============================================================
+  FNL SHADOW MODE DIAGNOSTIC TRACE
+============================================================
+
+[STEP 1] Loading fnl_shadow_probe through pipeline...
+
+[SCENARIO MANAGER] Clearing Knowledge Base...
+[OK] Knowledge Base is empty.
+[SCENARIO MANAGER] Loading: testsets/fnl_shadow_probe.pl...
+[SCENARIO MANAGER] Performing Global Repair...
+
+[REPAIR] Auditing vectors for: fnl_shadow_probe...
+  [FIXED] Imputed 0.5 for accessibility_collapse(organizational) at T=0
+  [FIXED] Imputed 0.5 for stakes_inflation(organizational) at T=0
+  [FIXED] Imputed 0.5 for suppression(organizational) at T=0
+  [FIXED] Imputed 0.5 for resistance(organizational) at T=0
+  [FIXED] Imputed 0.5 for accessibility_collapse(organizational) at T=10
+  [FIXED] Imputed 0.5 for stakes_inflation(organizational) at T=10
+  [FIXED] Imputed 0.5 for suppression(organizational) at T=10
+  [FIXED] Imputed 0.5 for resistance(organizational) at T=10
+  [FIXED] Imputed 0.5 for accessibility_collapse(class) at T=0
+  [FIXED] Imputed 0.5 for stakes_inflation(class) at T=0
+  [FIXED] Imputed 0.5 for suppression(class) at T=0
+  [FIXED] Imputed 0.5 for resistance(class) at T=0
+  [FIXED] Imputed 0.5 for accessibility_collapse(class) at T=10
+  [FIXED] Imputed 0.5 for stakes_inflation(class) at T=10
+  [FIXED] Imputed 0.5 for suppression(class) at T=10
+  [FIXED] Imputed 0.5 for resistance(class) at T=10
+  [FIXED] Imputed 0.5 for accessibility_collapse(individual) at T=0
+  [FIXED] Imputed 0.5 for stakes_inflation(individual) at T=0
+  [FIXED] Imputed 0.5 for suppression(individual) at T=0
+  [FIXED] Imputed 0.5 for resistance(individual) at T=0
+  [FIXED] Imputed 0.5 for accessibility_collapse(individual) at T=10
+  [FIXED] Imputed 0.5 for stakes_inflation(individual) at T=10
+  [FIXED] Imputed 0.5 for suppression(individual) at T=10
+  [FIXED] Imputed 0.5 for resistance(individual) at T=10
+
+[REPAIR] Auditing vectors for: fnl_shadow_probe...
+
+>>> INITIATING DR-AUDIT SUITE: fnl_shadow_probe
+
+[REPAIR] Auditing vectors for: fnl_shadow_probe...
+
+--- [START] Data Verification ---
+[OK] Ontology Schema matches.
+Checking Interval: fnl_shadow_probe (0-10)
+Checking Interval: fnl_shadow_probe (0-10)
+--- [END] Data Verification Complete ---
+[OK] Verification passed.
+
+=== PERSPECTIVE COMPARISON ===
+Constraint: fnl_shadow_probe
+
+From YOUR perspective (context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(global))): tangled_rope
+
+From ANALYTICAL perspective: tangled_rope
+
+→ Perspectives AGREE
+
+--- PER-INDEX VALIDATION ---
+  [INDEX MISMATCH] fnl_shadow_probe from context(agent_power(powerless),time_horizon(biographical),exit_options(trapped),spatial_scope(local)): declared=snare, computed=tangled_rope
+  [INDEX MISMATCH] fnl_shadow_probe from context(agent_power(institutional),time_horizon(generational),exit_options(mobile),spatial_scope(national)): declared=mountain, computed=tangled_rope
+  [INDEX OK] fnl_shadow_probe from context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(global)): declared=tangled_rope, computed=tangled_rope
+  [INTENT] Result: stable (Confidence: high)
+
+=== DEFERENTIAL REALISM (DR) DIAGNOSTIC: fnl_shadow_probe ===
+
+[CONSTRAINT INVENTORY]
+  No active constraints found.
+
+[FEASIBILITY BRIDGE]
+====================================================
+
+--- LIFECYCLE DRIFT ANALYSIS ---
+
+================================================================
+  DRIFT EVENT REPORT
+================================================================
+
+  Constraints scanned: 1
+  Total drift events:  2
+  Critical: 0 | Warning: 2 | Watch: 0
+
+  fnl_shadow_probe:
+    [warning] extraction_accumulation
+        Evidence: evidence(extraction_delta,0,10,0.25,0.3)
+    [warning] purity_drift
+        Evidence: evidence(current_purity,0.4525,decline_signals,[coupling_above_threshold(1.0),excess_above_floor(0.15)])
+
+--- Transition Path Analysis ---
+
+--- Terminal State Predictions ---
+  fnl_shadow_probe -> tangled_rope (confidence: low)
+
+--- Network Drift Analysis ---
+  Network stability: stable
+
+================================================================
+
+--- SCOPE EFFECT ANALYSIS ---
+  Formula: χ = ε × f(d) × σ(S)
+  fnl_shadow_probe (ε=0.30):
+    powerless@local: d=0.900 f(d)=1.36 χ = 0.30 × 1.36 × 0.80 = 0.326
+    moderate@national: d=0.700 f(d)=1.11 χ = 0.30 × 1.11 × 1.00 = 0.332
+    institutional@national: d=0.120 f(d)=-0.04 χ = 0.30 × -0.04 × 1.00 = -0.013
+    analytical@global: d=0.720 f(d)=1.14 χ = 0.30 × 1.14 × 1.20 = 0.411
+
+--- LOGICAL FINGERPRINT ---
+
+=== Logical Fingerprint: fnl_shadow_probe ===
+  Shift (computed via dr_type/3):
+    powerless=tangled_rope  moderate=tangled_rope  institutional=tangled_rope  analytical=tangled_rope
+  Properties: [asymmetric,coordination,enforcement,has_beneficiaries]
+  Voids:      [extractive_immutable,no_exit_for_victims]
+  Actors:     beneficiaries=concentrated  victims=concentrated
+  Drift:      extraction=stable  suppression=unknown  theater=stable
+  Zone:       extraction=low  suppression=high
+  Coupling:   strongly_coupled (score=1.000, pairs=[coupled(power_scope,powerless,local-national,1.0),coupled(power_scope,powerless,global-local,1.0),coupled(power_scope,moderate,global-local,1.0),coupled(power_scope,moderate,global-national,1.0),coupled(power_scope,analytical,global-local,1.0),coupled(power_scope,analytical,global-national,1.0)], boltzmann=non_compliant(1.0,0.3))
+  Purity:     0.453 (contaminated)
+
+
+--- SYSTEM INSIGHTS ---
+  Omegas Identified: 0
+
+
+====================================================
+   DEFERENTIAL REALISM (DR) EXECUTIVE SUMMARY      
+====================================================
+Timeline:       0 to 10
+Structural Pattern: stable
+Confidence:     high
+
+[CONSTRAINT INVENTORY: INDEXICAL AUDIT]
+
+
+Constraint: fnl_shadow_probe
+  Claimed Type: mountain
+  Perspectives:
+    - [context(agent_power(powerless),time_horizon(biographical),exit_options(trapped),spatial_scope(local))]: snare (Mismatch)
+    - [context(agent_power(institutional),time_horizon(generational),exit_options(mobile),spatial_scope(national))]: mountain (Matches Claim)
+    - [context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(global))]: tangled_rope (Mismatch)
+
+[CROSS-DOMAIN ISOMORPHISM & RISK AUDIT: fnl_shadow_probe]
+  No high-risk isomorphisms detected for current constraints.
+
+[COMPREHENSIVE CROSS-DOMAIN STRUCTURAL TWINS]
+  No cross-domain isomorphisms detected.
+
+[META-LOGICAL AUDIT: ONTOLOGICAL FRAUD DETECTION]
+  ! ALERT [severe]: type_1_false_summit detected for fnl_shadow_probe
+
+[ONTOLOGICAL FORENSIC AUDIT: FALSE MOUNTAINS]
+  All mountains are structurally validated.
+
+[STRUCTURAL SIGNATURE ANALYSIS]
+  fnl_shadow_probe: false_natural_law (confidence: high)
+    → FALSE NATURAL LAW signature for fnl_shadow_probe: Claims naturality (explicit_mountain_claim) but fails Boltzmann independence test. Coupling score=1.000 with 6 coupled dimension pairs. Excess extraction=0.15. This constraint is "physics-washed" — it appears natural but its coupling topology reveals structural construction.
+
+[UKE_DR FEASIBILITY BRIDGE]
+  Recommendation | UKE Status
+  ----------------------------------------------------------------------
+
+Aggregate Magnitude (Kappa) at Tn: 0.50
+
+[PERSPECTIVAL GAP ANALYSIS]
+
+  Analysis for Constraint: fnl_shadow_probe
+    - Individual (Powerless): snare [d=0.900 f(d)=1.36 χ=0.33]
+    - Institutional (Manager): mountain [d=0.120 f(d)=-0.04 χ=-0.01 → net benefit]
+    ! MANDATROPHY GAP: delta_chi = 0.34 (moderate)
+
+[OMEGA GENERATION FROM PERSPECTIVAL GAPS: fnl_shadow_probe]
+  Generated 1 Omega variables from perspectival gaps:
+
+  Ω: omega_learned_helplessness_fnl_shadow_probe (conceptual)
+     Question: Constraint fnl_shadow_probe appears extractive (Snare) to individuals but unchangeable (Mountain) to institutions...
+     Source: gap(snare_mountain_confusion,snare,mountain)
+
+
+[OMEGA TRIAGE & PRIORITIZATION]
+
+  [critical] 1 omega(s):
+    - omega_learned_helplessness_fnl_shadow_probe (conceptual)
+      Constraint fnl_shadow_probe appears extractive (Snare) to individuals but unchangeable (Mountain) to institutions...
+
+  [high] 1 omega(s):
+    - omega_learned_helplessness_fnl_shadow_probe (conceptual)
+      Constraint fnl_shadow_probe appears extractive (Snare) to individuals but unchangeable (Mountain) to institutions...
+
+[OMEGA RESOLUTION SCENARIO GENERATION]
+  Generated 1 resolution scenario(s):
+
+  ┌─ [omega_learned_helplessness_fnl_shadow_probe] CONCEPTUAL CLARIFICATION
+  │  Constraint: fnl_shadow_probe
+  │  Gap: Constraint fnl_shadow_probe appears extractive (Snare) to individuals but unchangeable (Mountain) to institutions...
+  │
+  │  CRITICAL: Learned Helplessness Pattern
+  │  Powerless see: SNARE (extractive trap)
+  │  Institutions see: MOUNTAIN (unchangeable law)
+  │
+  │  RESOLUTION STRATEGY:
+  │  1. Test changeability:
+  │     - Can institutions modify fnl_shadow_probe?
+  │     - What legal/political mechanisms exist?
+  │     - Historical precedents of change?
+  │  2. Test extraction:
+  │     - Is benefit flow symmetric or asymmetric?
+  │     - Who has veto power over changes?
+  │  3. Decision tree:
+  │     IF truly unchangeable + extractive → MANDATROPHY
+  │     IF changeable + extractive → Correct to SNARE
+  │     IF unchangeable + fair → Correct to MOUNTAIN
+  │     IF institutions falsely claim necessity → SNARE + fraud flag
+  └─
+
+====================================================
+
+============================================================
+  DIAGNOSTIC RESULTS
+============================================================
+
+[STEP 2] Metric-based classification (pre-override):
+  metric_based_type_indexed = tangled_rope
+
+[STEP 3] Structural signature:
+  constraint_signature = false_natural_law
+
+[STEP 4] Boltzmann compliance:
+  boltzmann_compliant = non_compliant(1.0,0.3)
+
+[STEP 5] Cross-index coupling:
+  cross_index_coupling = 1.0
+
+[STEP 6] Final classification (post-override via dr_type/3):
+  dr_type = tangled_rope
+
+============================================================
+  OVERRIDE ANALYSIS
+============================================================
+
+  MetricType  = tangled_rope
+  Signature   = false_natural_law
+  FinalType   = tangled_rope
+
+  >>> NO OVERRIDE DETECTED <<<
+  MetricType == FinalType. Either the override did not
+  fire, or both paths agree on the same type.
+
+============================================================
+  OVERRIDE RULE STATUS
+============================================================
+
+  Rule NL  (natural_law -> mountain):      ACTIVE (maps to mountain)
+  Rule FNL (false_natural_law -> tangled):  ACTIVE (maps to tangled_rope)
+  Rule CIR (coupling_invariant -> rope):    ACTIVE (maps to rope)
+  Rule FCR (false_ci_rope -> tangled):      ACTIVE (maps to tangled_rope)
+
+============================================================
+  END OF DIAGNOSTIC
+============================================================
+
+
 ================================================================================
   META-REPORT: Test Suite Analysis
 ================================================================================
 
 📚 CORPUS OVERVIEW
 --------------------------------------------------------------------------------
-  Total Constraints Analyzed: 613
-    - piton          :    6 (  1.0%) 
-    - snare          :  279 ( 45.5%) █████████
-    - tangled_rope   :   44 (  7.2%) █
-    - rope           :  108 ( 17.6%) ███
-    - mountain       :  165 ( 26.9%) █████
-    - false_mountain :    9 (  1.5%) 
+  Total Constraints Analyzed: 729
+    - piton          :    0 (  0.0%) 
+    - snare          :  193 ( 26.5%) █████
+    - tangled_rope   :  159 ( 21.8%) ████
+    - rope           :   36 (  4.9%) 
+    - mountain       :    1 (  0.1%) 
+    - false_mountain :   13 (  1.8%) 
 
 🕸️  CONCEPT NETWORK
 --------------------------------------------------------------------------------
-  arbitrage            ━━━━→ cognitive            (3)
-  feedback             ━━━━→ loop                 (3)
-  collapse             ━━━━→ mandatrophic         (3)
   burden               ━━━━→ proof                (3)
+  collapse             ━━━━→ mandatrophic         (3)
+  feedback             ━━━━→ loop                 (3)
+  earth                ━━━━→ rare                 (3)
   rotation             ━━━━→ seven                (3)
+  peer                 ━━━→ review               (2)
+  arbitrage            ━━━→ cognitive            (2)
   arbitrage            ━━━→ diversity            (2)
   cognitive            ━━━→ diversity            (2)
-  institutional        ━━━→ mutation             (2)
   fixed                ━━━→ point                (2)
-  ergo                 ━━━→ rent                 (2)
 
-  💡 Found 1200 unique concepts.
+  💡 Found 1357 unique concepts.
 ================================================================================
 

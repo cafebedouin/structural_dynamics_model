@@ -56,6 +56,7 @@
 domain_priors:base_extractiveness(cuny_light_2026, 0.05).
 domain_priors:suppression_score(cuny_light_2026, 0.02).
 domain_priors:theater_ratio(cuny_light_2026, 0.15).
+domain_priors:requires_active_enforcement(cuny_light_2026).
 
 % Primary keys for classification engine
 narrative_ontology:constraint_claim(cuny_light_2026, rope).

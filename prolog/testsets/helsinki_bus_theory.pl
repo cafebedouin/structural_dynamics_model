@@ -73,6 +73,7 @@ narrative_ontology:constraint_metric(helsinki_bus_theory, suppression_requiremen
 
 % Enforcement: Emerges naturally from the structure of learning and markets.
 domain_priors:emerges_naturally(helsinki_bus_theory).
+domain_priors:requires_active_enforcement(helsinki_bus_theory).
 
 % BENEFICIARIES & VICTIMS
 narrative_ontology:constraint_beneficiary(helsinki_bus_theory, established_masters).

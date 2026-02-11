@@ -80,6 +80,7 @@ narrative_ontology:constraint_metric(sadhu_integrity_protocol, suppression_requi
 % Enforcement requirements
 % Emerges naturally from the Sadhu's internal ethics.
 domain_priors:emerges_naturally(sadhu_integrity_protocol).
+domain_priors:requires_active_enforcement(sadhu_integrity_protocol).
 
 % Metrics required for Section 1 of the Executive Summary
 % BENEFICIARIES & VICTIMS

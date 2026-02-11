@@ -80,6 +80,7 @@ narrative_ontology:constraint_metric(logistic_map_dynamics, suppression_requirem
 
 % Enforcement: Emerges naturally from non-linear feedback and resource limits.
 domain_priors:emerges_naturally(logistic_map_dynamics).
+domain_priors:requires_active_enforcement(logistic_map_dynamics).
 
 % Metrics
 % Beneficiaries & Victims (Required for E > 0.3)

@@ -10,7 +10,7 @@
 ### Evidence For Index Sufficiency
 
 - 100.0% of constraints have no index collisions
-- 35 domains show high index sufficiency
+- 36 domains show high index sufficiency
 
 ## Index Collisions
 
@@ -24,20 +24,22 @@ How well do indices explain variance in each domain?
 | Domain | Constraints | Avg Variance | Sufficiency |
 |--------|-------------|--------------|-------------|
 | magical              |           1 |         3.00 | High        |
-| mathematics          |           2 |         1.75 | High        |
-| analytical           |           2 |         1.75 | High        |
-| mathematical         |          42 |         1.54 | High        |
-| artistic             |           2 |         1.40 | High        |
+| investigation        |           2 |         1.88 | High        |
+| mathematics          |           2 |         1.50 | High        |
+| analytical           |           2 |         1.50 | High        |
+| mathematical         |          42 |         1.38 | High        |
+| artistic             |           2 |         1.15 | High        |
 | physics              |           2 |         1.12 | High        |
-| technological        |         205 |         0.98 | High        |
-| legal                |           9 |         0.96 | High        |
-| philosophical        |          12 |         0.95 | High        |
+| technological        |         205 |         0.96 | High        |
+| legal                |           9 |         0.95 | High        |
 | biological           |          15 |         0.95 | High        |
+| philosophical        |          12 |         0.89 | High        |
+| unknown              |           3 |         0.88 | High        |
 | psychological        |           9 |         0.87 | High        |
-| economic             |         120 |         0.84 | High        |
 | religious            |           9 |         0.84 | High        |
-| social               |         119 |         0.83 | High        |
+| economic             |         120 |         0.84 | High        |
 | political            |         113 |         0.82 | High        |
+| social               |         119 |         0.82 | High        |
 | cognitive            |           3 |         0.80 | High        |
 | logistics            |           1 |         0.80 | High        |
 | informational        |           2 |         0.80 | High        |
@@ -50,17 +52,16 @@ How well do indices explain variance in each domain?
 | institutional        |           3 |         0.77 | High        |
 | medical              |           4 |         0.76 | High        |
 | geopolitical         |           8 |         0.76 | High        |
-| scientific           |           9 |         0.76 | High        |
-| unknown              |           2 |         0.75 | High        |
 | corporate_governance |           1 |         0.75 | High        |
+| scientific           |           9 |         0.75 | High        |
 | bio_industrial       |           1 |         0.75 | High        |
 | military             |           2 |         0.75 | High        |
 | psychology           |           1 |         0.75 | High        |
 | astrophysical        |           1 |         0.75 | High        |
 | physical             |           1 |         0.75 | High        |
 | health               |           5 |         0.70 | Medium      |
-| linguistic           |           2 |         0.68 | Medium      |
-| ecological           |           1 |         0.60 | Medium      |
+| linguistic           |           2 |         0.62 | Medium      |
+| ecological           |           1 |         0.50 | Medium      |
 | atmospheric_science  |           1 |         0.50 | Medium      |
 | technology           |           1 |         0.33 | Low         |
 | logical              |           2 |         0.25 | Low         |

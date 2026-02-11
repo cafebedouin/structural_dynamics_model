@@ -229,7 +229,7 @@
         "moltbook"
       ],
       "victims": [
-        "users"
+        "algorithmically_manipulated_users"
       ],
       "classifications": [
         {
@@ -2259,7 +2259,7 @@
         "_"
       ],
       "victims": [
-        "individuals",
+        "cognitively_vulnerable_users",
         "_"
       ],
       "classifications": [
@@ -9762,15 +9762,6 @@
             null,
             null
           ]
-        },
-        {
-          "type": "scaffold",
-          "context": [
-            null,
-            null,
-            null,
-            null
-          ]
         }
       ],
       "analysis": {
@@ -9782,9 +9773,9 @@
             "type": "conceptual"
           }
         ],
-        "variance_ratio": 2.0,
+        "variance_ratio": 1.5,
         "index_configs": 2,
-        "types_produced": 4
+        "types_produced": 3
       }
     },
     "challenger_o_ring_integrity": {
@@ -12497,15 +12488,6 @@
             null,
             null
           ]
-        },
-        {
-          "type": "scaffold",
-          "context": [
-            null,
-            null,
-            null,
-            null
-          ]
         }
       ],
       "analysis": {
@@ -12517,9 +12499,9 @@
             "type": "conceptual"
           }
         ],
-        "variance_ratio": 2.0,
+        "variance_ratio": 1.5,
         "index_configs": 2,
-        "types_produced": 4
+        "types_produced": 3
       }
     },
     "collective_action_deadlock": {
@@ -14021,15 +14003,6 @@
             null,
             null
           ]
-        },
-        {
-          "type": "scaffold",
-          "context": [
-            null,
-            null,
-            null,
-            null
-          ]
         }
       ],
       "analysis": {
@@ -14041,9 +14014,9 @@
             "type": "conceptual"
           }
         ],
-        "variance_ratio": 2.0,
+        "variance_ratio": 1.5,
         "index_configs": 2,
-        "types_produced": 4
+        "types_produced": 3
       }
     },
     "conversational_dogmas_interuption": {
@@ -14639,7 +14612,7 @@
         "creators"
       ],
       "victims": [
-        "the_public"
+        "cultural_consumers"
       ],
       "classifications": [
         {
@@ -14846,15 +14819,6 @@
             null,
             null
           ]
-        },
-        {
-          "type": "scaffold",
-          "context": [
-            null,
-            null,
-            null,
-            null
-          ]
         }
       ],
       "analysis": {
@@ -14866,9 +14830,9 @@
             "type": "conceptual"
           }
         ],
-        "variance_ratio": 2.0,
+        "variance_ratio": 1.5,
         "index_configs": 2,
-        "types_produced": 4
+        "types_produced": 3
       }
     },
     "couples_residency_match": {
@@ -16086,8 +16050,8 @@
         "extractiveness": 0.05,
         "suppression": 0.02,
         "resistance": null,
-        "emerges_naturally": null,
-        "requires_enforcement": null
+        "emerges_naturally": false,
+        "requires_enforcement": true
       },
       "beneficiaries": [
         "scientific_community",
@@ -16189,15 +16153,6 @@
             null,
             null
           ]
-        },
-        {
-          "type": "scaffold",
-          "context": [
-            null,
-            null,
-            null,
-            null
-          ]
         }
       ],
       "analysis": {
@@ -16209,9 +16164,9 @@
             "type": "conceptual"
           }
         ],
-        "variance_ratio": 2.0,
+        "variance_ratio": 1.5,
         "index_configs": 2,
-        "types_produced": 4
+        "types_produced": 3
       }
     },
     "cz_plea_agreement_2026": {
@@ -18385,10 +18340,6 @@
           "context": "context(agent_power(powerful),time_horizon(immediate),exit_options(constrained),spatial_scope(global))"
         },
         {
-          "type": "scaffold",
-          "context": "context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(global))"
-        },
-        {
           "type": "snare",
           "context": [
             null,
@@ -18414,15 +18365,6 @@
             null,
             null
           ]
-        },
-        {
-          "type": "scaffold",
-          "context": [
-            null,
-            null,
-            null,
-            null
-          ]
         }
       ],
       "analysis": {
@@ -18434,9 +18376,9 @@
             "type": "conceptual"
           }
         ],
-        "variance_ratio": 0.6,
-        "index_configs": 5,
-        "types_produced": 3
+        "variance_ratio": 0.5,
+        "index_configs": 4,
+        "types_produced": 2
       }
     },
     "elencher_identity_transformation": {
@@ -18918,7 +18860,7 @@
         "requires_enforcement": true
       },
       "beneficiaries": [
-        "general_public"
+        "crisis_affected_populations"
       ],
       "victims": [
         "citizens_under_vetting"
@@ -19285,11 +19227,11 @@
       "classifications": [
         {
           "type": "snare",
-          "context": "context(agent_power(powerless),time_horizon(biographical),exit_options(trapped),spatial_scope(personal))"
+          "context": "context(agent_power(powerless),time_horizon(biographical),exit_options(trapped),spatial_scope(local))"
         },
         {
           "type": "scaffold",
-          "context": "context(agent_power(organized),time_horizon(generational),exit_options(constrained),spatial_scope(national))"
+          "context": "context(agent_power(institutional),time_horizon(generational),exit_options(constrained),spatial_scope(national))"
         },
         {
           "type": "mountain",
@@ -19326,7 +19268,12 @@
       "analysis": {
         "structural_signature": null,
         "is_constructed": null,
-        "omegas": [],
+        "omegas": [
+          {
+            "id": "omega_perspectival_emotional_cycles_2026",
+            "type": "conceptual"
+          }
+        ],
         "variance_ratio": 0.75,
         "index_configs": 4,
         "types_produced": 3
@@ -20397,10 +20344,6 @@
           "context": "context(agent_power(powerless),time_horizon(immediate),exit_options(constrained),spatial_scope(local))"
         },
         {
-          "type": "scaffold",
-          "context": "context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(global))"
-        },
-        {
           "type": "rope",
           "context": [
             null,
@@ -20444,15 +20387,6 @@
             null,
             null
           ]
-        },
-        {
-          "type": "scaffold",
-          "context": [
-            null,
-            null,
-            null,
-            null
-          ]
         }
       ],
       "analysis": {
@@ -20464,9 +20398,9 @@
             "type": "conceptual"
           }
         ],
-        "variance_ratio": 0.6666666666666666,
-        "index_configs": 6,
-        "types_produced": 4
+        "variance_ratio": 0.6,
+        "index_configs": 5,
+        "types_produced": 3
       }
     },
     "ergo_mixer_protocol": {
@@ -20501,10 +20435,6 @@
           "context": "context(agent_power(powerless),time_horizon(biographical),exit_options(trapped),spatial_scope(regional))"
         },
         {
-          "type": "scaffold",
-          "context": "context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(global))"
-        },
-        {
           "type": "snare",
           "context": [
             null,
@@ -20530,24 +20460,15 @@
             null,
             null
           ]
-        },
-        {
-          "type": "scaffold",
-          "context": [
-            null,
-            null,
-            null,
-            null
-          ]
         }
       ],
       "analysis": {
         "structural_signature": null,
         "is_constructed": null,
         "omegas": [],
-        "variance_ratio": 0.6,
-        "index_configs": 5,
-        "types_produced": 3
+        "variance_ratio": 0.5,
+        "index_configs": 4,
+        "types_produced": 2
       }
     },
     "ergo_nipopows": {
@@ -21133,15 +21054,6 @@
             null,
             null
           ]
-        },
-        {
-          "type": "scaffold",
-          "context": [
-            null,
-            null,
-            null,
-            null
-          ]
         }
       ],
       "analysis": {
@@ -21153,9 +21065,9 @@
             "type": "conceptual"
           }
         ],
-        "variance_ratio": 2.0,
+        "variance_ratio": 1.5,
         "index_configs": 2,
-        "types_produced": 4
+        "types_produced": 3
       }
     },
     "eurozone_fragmentation_2026": {
@@ -22266,15 +22178,6 @@
             null,
             null
           ]
-        },
-        {
-          "type": "scaffold",
-          "context": [
-            null,
-            null,
-            null,
-            null
-          ]
         }
       ],
       "analysis": {
@@ -22286,9 +22189,9 @@
             "type": "conceptual"
           }
         ],
-        "variance_ratio": 2.0,
+        "variance_ratio": 1.5,
         "index_configs": 2,
-        "types_produced": 4
+        "types_produced": 3
       }
     },
     "family_estrangement_ratio": {
@@ -23637,6 +23540,80 @@
         "types_produced": 3
       }
     },
+    "fnl_trace_diagnostic": {
+      "constraint_id": "fnl_trace_diagnostic",
+      "claimed_type": "mountain",
+      "domain": null,
+      "human_readable": null,
+      "metrics": {
+        "extractiveness": null,
+        "suppression": null,
+        "resistance": null,
+        "emerges_naturally": null,
+        "requires_enforcement": null
+      },
+      "beneficiaries": [],
+      "victims": [],
+      "classifications": [
+        {
+          "type": "snare",
+          "context": "context(agent_power(powerless),time_horizon(biographical),exit_options(trapped),spatial_scope(local))"
+        },
+        {
+          "type": "mountain",
+          "context": "context(agent_power(institutional),time_horizon(generational),exit_options(mobile),spatial_scope(national))"
+        },
+        {
+          "type": "tangled_rope",
+          "context": "context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(global))"
+        },
+        {
+          "type": "snare",
+          "context": "context(agent_power(powerless),time_horizon(biographical),exit_options(trapped),spatial_scope(local))"
+        },
+        {
+          "type": "mountain",
+          "context": "context(agent_power(institutional),time_horizon(generational),exit_options(mobile),spatial_scope(national))"
+        },
+        {
+          "type": "tangled_rope",
+          "context": "context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(global))"
+        },
+        {
+          "type": "snare",
+          "context": "context(agent_power(powerless),time_horizon(biographical),exit_options(trapped),spatial_scope(local))"
+        },
+        {
+          "type": "mountain",
+          "context": "context(agent_power(institutional),time_horizon(generational),exit_options(mobile),spatial_scope(national))"
+        },
+        {
+          "type": "tangled_rope",
+          "context": "context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(global))"
+        }
+      ],
+      "analysis": {
+        "structural_signature": null,
+        "is_constructed": null,
+        "omegas": [
+          {
+            "id": "omega_learned_helplessness_fnl_shadow_probe",
+            "type": "conceptual"
+          },
+          {
+            "id": "omega_learned_helplessness_fnl_shadow_probe",
+            "type": "conceptual"
+          },
+          {
+            "id": "omega_learned_helplessness_fnl_shadow_probe",
+            "type": "conceptual"
+          }
+        ],
+        "variance_ratio": 1.0,
+        "index_configs": 3,
+        "types_produced": 3
+      }
+    },
     "four_color_theorem_topological_bound": {
       "constraint_id": "four_color_theorem_topological_bound",
       "claimed_type": "mountain",
@@ -24578,15 +24555,6 @@
             null,
             null
           ]
-        },
-        {
-          "type": "scaffold",
-          "context": [
-            null,
-            null,
-            null,
-            null
-          ]
         }
       ],
       "analysis": {
@@ -24598,9 +24566,9 @@
             "type": "conceptual"
           }
         ],
-        "variance_ratio": 2.0,
+        "variance_ratio": 1.5,
         "index_configs": 2,
-        "types_produced": 4
+        "types_produced": 3
       }
     },
     "gamblers_ruin_stochastic_extinction": {
@@ -26516,15 +26484,6 @@
             null,
             null
           ]
-        },
-        {
-          "type": "scaffold",
-          "context": [
-            null,
-            null,
-            null,
-            null
-          ]
         }
       ],
       "analysis": {
@@ -26536,9 +26495,9 @@
             "type": "conceptual"
           }
         ],
-        "variance_ratio": 2.0,
+        "variance_ratio": 1.5,
         "index_configs": 2,
-        "types_produced": 4
+        "types_produced": 3
       }
     },
     "golden_handcuffs": {
@@ -26745,7 +26704,7 @@
         "innovators"
       ],
       "victims": [
-        "general_public"
+        "unprotected_innovation_subjects"
       ],
       "classifications": [
         {
@@ -27927,15 +27886,6 @@
             null,
             null
           ]
-        },
-        {
-          "type": "scaffold",
-          "context": [
-            null,
-            null,
-            null,
-            null
-          ]
         }
       ],
       "analysis": {
@@ -27947,9 +27897,9 @@
             "type": "conceptual"
           }
         ],
-        "variance_ratio": 2.0,
+        "variance_ratio": 1.5,
         "index_configs": 2,
-        "types_produced": 4
+        "types_produced": 3
       }
     },
     "hamiltonian_path_complexity": {
@@ -28885,8 +28835,8 @@
         "extractiveness": 0.4,
         "suppression": 0.6,
         "resistance": null,
-        "emerges_naturally": true,
-        "requires_enforcement": false
+        "emerges_naturally": false,
+        "requires_enforcement": true
       },
       "beneficiaries": [
         "established_masters"
@@ -28994,10 +28944,6 @@
           "context": "context(agent_power(powerful),time_horizon(generational),exit_options(trapped),spatial_scope(global))"
         },
         {
-          "type": "scaffold",
-          "context": "context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(global))"
-        },
-        {
           "type": "mountain",
           "context": [
             null,
@@ -29023,15 +28969,6 @@
             null,
             null
           ]
-        },
-        {
-          "type": "scaffold",
-          "context": [
-            null,
-            null,
-            null,
-            null
-          ]
         }
       ],
       "analysis": {
@@ -29043,9 +28980,9 @@
             "type": "conceptual"
           }
         ],
-        "variance_ratio": 0.8,
-        "index_configs": 5,
-        "types_produced": 4
+        "variance_ratio": 0.75,
+        "index_configs": 4,
+        "types_produced": 3
       }
     },
     "hidden_interdependency_risk": {
@@ -29231,15 +29168,6 @@
             null,
             null
           ]
-        },
-        {
-          "type": "scaffold",
-          "context": [
-            null,
-            null,
-            null,
-            null
-          ]
         }
       ],
       "analysis": {
@@ -29251,9 +29179,9 @@
             "type": "conceptual"
           }
         ],
-        "variance_ratio": 2.0,
+        "variance_ratio": 1.5,
         "index_configs": 2,
-        "types_produced": 4
+        "types_produced": 3
       }
     },
     "hiv_prep_prevention_2026": {
@@ -30985,8 +30913,8 @@
         "extractiveness": 0.3,
         "suppression": 0.5,
         "resistance": null,
-        "emerges_naturally": true,
-        "requires_enforcement": false
+        "emerges_naturally": false,
+        "requires_enforcement": true
       },
       "beneficiaries": [
         "consistency_proof_developers",
@@ -34012,10 +33940,6 @@
           "context": "context(agent_power(powerful),time_horizon(immediate),exit_options(mobile),spatial_scope(national))"
         },
         {
-          "type": "scaffold",
-          "context": "context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(global))"
-        },
-        {
           "type": "mountain",
           "context": [
             null,
@@ -34041,24 +33965,15 @@
             null,
             null
           ]
-        },
-        {
-          "type": "scaffold",
-          "context": [
-            null,
-            null,
-            null,
-            null
-          ]
         }
       ],
       "analysis": {
         "structural_signature": null,
         "is_constructed": null,
         "omegas": [],
-        "variance_ratio": 0.6,
-        "index_configs": 5,
-        "types_produced": 3
+        "variance_ratio": 0.5,
+        "index_configs": 4,
+        "types_produced": 2
       }
     },
     "kjv_puritan_new_world_exit": {
@@ -34093,10 +34008,6 @@
           "context": "context(agent_power(powerless),time_horizon(generational),exit_options(trapped),spatial_scope(local))"
         },
         {
-          "type": "scaffold",
-          "context": "context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(global))"
-        },
-        {
           "type": "snare",
           "context": [
             null,
@@ -34122,15 +34033,6 @@
             null,
             null
           ]
-        },
-        {
-          "type": "scaffold",
-          "context": [
-            null,
-            null,
-            null,
-            null
-          ]
         }
       ],
       "analysis": {
@@ -34142,9 +34044,9 @@
             "type": "conceptual"
           }
         ],
-        "variance_ratio": 0.8,
-        "index_configs": 5,
-        "types_produced": 4
+        "variance_ratio": 0.75,
+        "index_configs": 4,
+        "types_produced": 3
       }
     },
     "kjv_textual_authority": {
@@ -34292,15 +34194,6 @@
             null,
             null
           ]
-        },
-        {
-          "type": "scaffold",
-          "context": [
-            null,
-            null,
-            null,
-            null
-          ]
         }
       ],
       "analysis": {
@@ -34312,9 +34205,9 @@
             "type": "conceptual"
           }
         ],
-        "variance_ratio": 2.0,
+        "variance_ratio": 1.5,
         "index_configs": 2,
-        "types_produced": 4
+        "types_produced": 3
       }
     },
     "knowledge_action_gap": {
@@ -35846,15 +35739,6 @@
             null,
             null
           ]
-        },
-        {
-          "type": "scaffold",
-          "context": [
-            null,
-            null,
-            null,
-            null
-          ]
         }
       ],
       "analysis": {
@@ -35866,9 +35750,9 @@
             "type": "conceptual"
           }
         ],
-        "variance_ratio": 2.0,
+        "variance_ratio": 1.5,
         "index_configs": 2,
-        "types_produced": 4
+        "types_produced": 3
       }
     },
     "litchfield_sensitive_locations_2026": {
@@ -36225,8 +36109,8 @@
         "extractiveness": 0.35,
         "suppression": 0.4,
         "resistance": null,
-        "emerges_naturally": true,
-        "requires_enforcement": false
+        "emerges_naturally": false,
+        "requires_enforcement": true
       },
       "beneficiaries": [
         "nonlinear_analysts",
@@ -36310,8 +36194,8 @@
         "extractiveness": 0.4,
         "suppression": 0.5,
         "resistance": null,
-        "emerges_naturally": true,
-        "requires_enforcement": false
+        "emerges_naturally": false,
+        "requires_enforcement": true
       },
       "beneficiaries": [
         "ensemble_forecasting",
@@ -37668,15 +37552,6 @@
             null,
             null
           ]
-        },
-        {
-          "type": "scaffold",
-          "context": [
-            null,
-            null,
-            null,
-            null
-          ]
         }
       ],
       "analysis": {
@@ -37688,9 +37563,9 @@
             "type": "conceptual"
           }
         ],
-        "variance_ratio": 2.0,
+        "variance_ratio": 1.5,
         "index_configs": 2,
-        "types_produced": 4
+        "types_produced": 3
       }
     },
     "mass_market_extinction_2026": {
@@ -40500,8 +40375,8 @@
         "extractiveness": 0.33,
         "suppression": 0.6,
         "resistance": null,
-        "emerges_naturally": true,
-        "requires_enforcement": false
+        "emerges_naturally": false,
+        "requires_enforcement": true
       },
       "beneficiaries": [
         "bayesian_statisticians",
@@ -42639,15 +42514,6 @@
             null,
             null
           ]
-        },
-        {
-          "type": "scaffold",
-          "context": [
-            null,
-            null,
-            null,
-            null
-          ]
         }
       ],
       "analysis": {
@@ -42659,9 +42525,9 @@
             "type": "conceptual"
           }
         ],
-        "variance_ratio": 2.0,
+        "variance_ratio": 1.5,
         "index_configs": 2,
-        "types_produced": 4
+        "types_produced": 3
       }
     },
     "nine_day_buffer": {
@@ -42921,15 +42787,6 @@
             null,
             null
           ]
-        },
-        {
-          "type": "scaffold",
-          "context": [
-            null,
-            null,
-            null,
-            null
-          ]
         }
       ],
       "analysis": {
@@ -42941,9 +42798,9 @@
             "type": "conceptual"
           }
         ],
-        "variance_ratio": 2.0,
+        "variance_ratio": 1.5,
         "index_configs": 2,
-        "types_produced": 4
+        "types_produced": 3
       }
     },
     "non_compete_agreements": {
@@ -44034,7 +43891,7 @@
         "developers_regulators"
       ],
       "victims": [
-        "users"
+        "sandboxed_ai_users"
       ],
       "classifications": [
         {
@@ -45340,10 +45197,6 @@
           "context": "context(agent_power(powerful),time_horizon(generational),exit_options(constrained),spatial_scope(global))"
         },
         {
-          "type": "scaffold",
-          "context": "context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(global))"
-        },
-        {
           "type": "mountain",
           "context": [
             null,
@@ -45369,15 +45222,6 @@
             null,
             null
           ]
-        },
-        {
-          "type": "scaffold",
-          "context": [
-            null,
-            null,
-            null,
-            null
-          ]
         }
       ],
       "analysis": {
@@ -45389,9 +45233,9 @@
             "type": "conceptual"
           }
         ],
-        "variance_ratio": 0.8,
-        "index_configs": 5,
-        "types_produced": 4
+        "variance_ratio": 0.75,
+        "index_configs": 4,
+        "types_produced": 3
       }
     },
     "perovskite_self_etching": {
@@ -45589,8 +45433,8 @@
         "extractiveness": 0.1,
         "suppression": 0.15,
         "resistance": null,
-        "emerges_naturally": null,
-        "requires_enforcement": null
+        "emerges_naturally": false,
+        "requires_enforcement": true
       },
       "beneficiaries": [
         "nasa_scientists"
@@ -45919,10 +45763,6 @@
           "context": "context(agent_power(powerful),time_horizon(biographical),exit_options(constrained),spatial_scope(national))"
         },
         {
-          "type": "scaffold",
-          "context": "context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(global))"
-        },
-        {
           "type": "snare",
           "context": [
             null,
@@ -45948,15 +45788,6 @@
             null,
             null
           ]
-        },
-        {
-          "type": "scaffold",
-          "context": [
-            null,
-            null,
-            null,
-            null
-          ]
         }
       ],
       "analysis": {
@@ -45968,9 +45799,9 @@
             "type": "conceptual"
           }
         ],
-        "variance_ratio": 0.6,
-        "index_configs": 5,
-        "types_produced": 3
+        "variance_ratio": 0.5,
+        "index_configs": 4,
+        "types_produced": 2
       }
     },
     "planning_fallacy": {
@@ -46104,10 +45935,6 @@
           "context": "context(agent_power(institutional),time_horizon(generational),exit_options(arbitrage),spatial_scope(global))"
         },
         {
-          "type": "scaffold",
-          "context": "context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(global))"
-        },
-        {
           "type": "rope",
           "context": [
             null,
@@ -46133,15 +45960,6 @@
             null,
             null
           ]
-        },
-        {
-          "type": "scaffold",
-          "context": [
-            null,
-            null,
-            null,
-            null
-          ]
         }
       ],
       "analysis": {
@@ -46153,9 +45971,9 @@
             "type": "conceptual"
           }
         ],
-        "variance_ratio": 0.8,
-        "index_configs": 5,
-        "types_produced": 4
+        "variance_ratio": 0.75,
+        "index_configs": 4,
+        "types_produced": 3
       }
     },
     "platonic_coparenting_decoupling": {
@@ -47462,15 +47280,6 @@
             null,
             null
           ]
-        },
-        {
-          "type": "scaffold",
-          "context": [
-            null,
-            null,
-            null,
-            null
-          ]
         }
       ],
       "analysis": {
@@ -47482,9 +47291,9 @@
             "type": "conceptual"
           }
         ],
-        "variance_ratio": 2.0,
+        "variance_ratio": 1.5,
         "index_configs": 2,
-        "types_produced": 4
+        "types_produced": 3
       }
     },
     "prisoners_dilemma_equilibrium": {
@@ -48034,10 +47843,6 @@
           "context": "context(agent_power(powerful),time_horizon(immediate),exit_options(constrained),spatial_scope(global))"
         },
         {
-          "type": "scaffold",
-          "context": "context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(global))"
-        },
-        {
           "type": "mountain",
           "context": [
             null,
@@ -48063,15 +47868,6 @@
             null,
             null
           ]
-        },
-        {
-          "type": "scaffold",
-          "context": [
-            null,
-            null,
-            null,
-            null
-          ]
         }
       ],
       "analysis": {
@@ -48083,9 +47879,9 @@
             "type": "conceptual"
           }
         ],
-        "variance_ratio": 0.8,
-        "index_configs": 5,
-        "types_produced": 4
+        "variance_ratio": 0.75,
+        "index_configs": 4,
+        "types_produced": 3
       }
     },
     "protocol_capture_tangled_rope": {
@@ -48307,7 +48103,7 @@
         "requires_enforcement": false
       },
       "beneficiaries": [
-        "general_public"
+        "commons_participants"
       ],
       "victims": [
         "none"
@@ -48326,10 +48122,6 @@
           "context": "context(agent_power(institutional),time_horizon(generational),exit_options(constrained),spatial_scope(global))"
         },
         {
-          "type": "scaffold",
-          "context": "context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(global))"
-        },
-        {
           "type": "mountain",
           "context": [
             null,
@@ -48355,15 +48147,6 @@
             null,
             null
           ]
-        },
-        {
-          "type": "scaffold",
-          "context": [
-            null,
-            null,
-            null,
-            null
-          ]
         }
       ],
       "analysis": {
@@ -48375,9 +48158,9 @@
             "type": "conceptual"
           }
         ],
-        "variance_ratio": 0.8,
-        "index_configs": 5,
-        "types_produced": 4
+        "variance_ratio": 0.75,
+        "index_configs": 4,
+        "types_produced": 3
       }
     },
     "pythagorean_theorem_geometric_constancy": {
@@ -48722,15 +48505,6 @@
             null,
             null
           ]
-        },
-        {
-          "type": "scaffold",
-          "context": [
-            null,
-            null,
-            null,
-            null
-          ]
         }
       ],
       "analysis": {
@@ -48742,9 +48516,9 @@
             "type": "conceptual"
           }
         ],
-        "variance_ratio": 2.0,
+        "variance_ratio": 1.5,
         "index_configs": 2,
-        "types_produced": 4
+        "types_produced": 3
       }
     },
     "quantum_nonlocality_2026": {
@@ -48779,10 +48553,6 @@
           "context": "context(agent_power(powerless),time_horizon(immediate),exit_options(mobile),spatial_scope(local))"
         },
         {
-          "type": "scaffold",
-          "context": "context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(global))"
-        },
-        {
           "type": "snare",
           "context": [
             null,
@@ -48817,15 +48587,6 @@
             null,
             null
           ]
-        },
-        {
-          "type": "scaffold",
-          "context": [
-            null,
-            null,
-            null,
-            null
-          ]
         }
       ],
       "analysis": {
@@ -48837,9 +48598,9 @@
             "type": "conceptual"
           }
         ],
-        "variance_ratio": 0.8,
-        "index_configs": 5,
-        "types_produced": 4
+        "variance_ratio": 0.75,
+        "index_configs": 4,
+        "types_produced": 3
       }
     },
     "quellcrist_falconer_justice": {
@@ -48983,15 +48744,6 @@
             null,
             null
           ]
-        },
-        {
-          "type": "scaffold",
-          "context": [
-            null,
-            null,
-            null,
-            null
-          ]
         }
       ],
       "analysis": {
@@ -49003,9 +48755,9 @@
             "type": "conceptual"
           }
         ],
-        "variance_ratio": 2.0,
+        "variance_ratio": 1.5,
         "index_configs": 2,
-        "types_produced": 4
+        "types_produced": 3
       }
     },
     "qwerty_vs_dvorak": {
@@ -49385,8 +49137,8 @@
         "extractiveness": 0.02,
         "suppression": 0.15,
         "resistance": null,
-        "emerges_naturally": null,
-        "requires_enforcement": null
+        "emerges_naturally": false,
+        "requires_enforcement": true
       },
       "beneficiaries": [
         "participating_manufacturers"
@@ -49899,15 +49651,6 @@
             null,
             null
           ]
-        },
-        {
-          "type": "scaffold",
-          "context": [
-            null,
-            null,
-            null,
-            null
-          ]
         }
       ],
       "analysis": {
@@ -49919,9 +49662,9 @@
             "type": "conceptual"
           }
         ],
-        "variance_ratio": 2.0,
+        "variance_ratio": 1.5,
         "index_configs": 2,
-        "types_produced": 4
+        "types_produced": 3
       }
     },
     "regulatory_capture": {
@@ -50157,10 +49900,6 @@
           "context": "context(agent_power(individual_moderate),time_horizon(biographical),exit_options(mobile),spatial_scope(global))"
         },
         {
-          "type": "scaffold",
-          "context": "context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(global))"
-        },
-        {
           "type": "snare",
           "context": [
             null,
@@ -50186,15 +49925,6 @@
             null,
             null
           ]
-        },
-        {
-          "type": "scaffold",
-          "context": [
-            null,
-            null,
-            null,
-            null
-          ]
         }
       ],
       "analysis": {
@@ -50206,9 +49936,9 @@
             "type": "conceptual"
           }
         ],
-        "variance_ratio": 0.8,
-        "index_configs": 5,
-        "types_produced": 4
+        "variance_ratio": 0.75,
+        "index_configs": 4,
+        "types_produced": 3
       }
     },
     "rent_seeking_equilibrium": {
@@ -50333,6 +50063,75 @@
         "variance_ratio": 0.8,
         "index_configs": 5,
         "types_produced": 4
+      }
+    },
+    "repair_probe_incomplete": {
+      "constraint_id": "repair_probe_incomplete",
+      "claimed_type": "tangled_rope",
+      "domain": "investigation",
+      "human_readable": null,
+      "metrics": {
+        "extractiveness": 0.55,
+        "suppression": null,
+        "resistance": null,
+        "emerges_naturally": false,
+        "requires_enforcement": true
+      },
+      "beneficiaries": [],
+      "victims": [],
+      "classifications": [
+        {
+          "type": "snare",
+          "context": "context(agent_power(powerless),time_horizon(biographical),exit_options(trapped),spatial_scope(local))"
+        },
+        {
+          "type": "rope",
+          "context": "context(agent_power(institutional),time_horizon(generational),exit_options(mobile),spatial_scope(regional))"
+        },
+        {
+          "type": "tangled_rope",
+          "context": "context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(global))"
+        },
+        {
+          "type": "snare",
+          "context": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "type": "rope",
+          "context": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "type": "tangled_rope",
+          "context": [
+            null,
+            null,
+            null,
+            null
+          ]
+        }
+      ],
+      "analysis": {
+        "structural_signature": null,
+        "is_constructed": null,
+        "omegas": [
+          {
+            "id": "omega_extraction_blindness_repair_probe_incomplete",
+            "type": "conceptual"
+          }
+        ],
+        "variance_ratio": 0.75,
+        "index_configs": 4,
+        "types_produced": 3
       }
     },
     "responsibility_dilution": {
@@ -50571,10 +50370,6 @@
           "context": "context(agent_power(individual_moderate),time_horizon(biographical),exit_options(constrained),spatial_scope(national))"
         },
         {
-          "type": "scaffold",
-          "context": "context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(global))"
-        },
-        {
           "type": "snare",
           "context": [
             null,
@@ -50600,15 +50395,6 @@
             null,
             null
           ]
-        },
-        {
-          "type": "scaffold",
-          "context": [
-            null,
-            null,
-            null,
-            null
-          ]
         }
       ],
       "analysis": {
@@ -50620,9 +50406,9 @@
             "type": "conceptual"
           }
         ],
-        "variance_ratio": 0.8,
-        "index_configs": 5,
-        "types_produced": 4
+        "variance_ratio": 0.75,
+        "index_configs": 4,
+        "types_produced": 3
       }
     },
     "rfc9293_state_machine": {
@@ -50657,10 +50443,6 @@
           "context": "context(agent_power(individual_moderate),time_horizon(biographical),exit_options(constrained),spatial_scope(local))"
         },
         {
-          "type": "scaffold",
-          "context": "context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(global))"
-        },
-        {
           "type": "mountain",
           "context": [
             null,
@@ -50686,15 +50468,6 @@
             null,
             null
           ]
-        },
-        {
-          "type": "scaffold",
-          "context": [
-            null,
-            null,
-            null,
-            null
-          ]
         }
       ],
       "analysis": {
@@ -50706,9 +50479,9 @@
             "type": "conceptual"
           }
         ],
-        "variance_ratio": 0.8,
-        "index_configs": 5,
-        "types_produced": 4
+        "variance_ratio": 0.75,
+        "index_configs": 4,
+        "types_produced": 3
       }
     },
     "rices_theorem_undecidability": {
@@ -50760,15 +50533,6 @@
             null,
             null
           ]
-        },
-        {
-          "type": "scaffold",
-          "context": [
-            null,
-            null,
-            null,
-            null
-          ]
         }
       ],
       "analysis": {
@@ -50780,9 +50544,9 @@
             "type": "conceptual"
           }
         ],
-        "variance_ratio": 2.0,
+        "variance_ratio": 1.5,
         "index_configs": 2,
-        "types_produced": 4
+        "types_produced": 3
       }
     },
     "riot_incentive_loop_2026": {
@@ -52390,7 +52154,7 @@
       "beneficiaries": [
         "institutional_investors",
         "sec",
-        "the_public",
+        "retail_investors",
         "visa_inc"
       ],
       "victims": [
@@ -52541,8 +52305,8 @@
         "extractiveness": 0.3,
         "suppression": 0.4,
         "resistance": null,
-        "emerges_naturally": true,
-        "requires_enforcement": false
+        "emerges_naturally": false,
+        "requires_enforcement": true
       },
       "beneficiaries": [
         "authentic_authority"
@@ -55536,10 +55300,6 @@
           "context": "context(agent_power(institutional),time_horizon(biographical),exit_options(arbitrage),spatial_scope(national))"
         },
         {
-          "type": "scaffold",
-          "context": "context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(global))"
-        },
-        {
           "type": "rope",
           "context": [
             null,
@@ -55565,15 +55325,6 @@
             null,
             null
           ]
-        },
-        {
-          "type": "scaffold",
-          "context": [
-            null,
-            null,
-            null,
-            null
-          ]
         }
       ],
       "analysis": {
@@ -55585,9 +55336,9 @@
             "type": "conceptual"
           }
         ],
-        "variance_ratio": 0.6,
-        "index_configs": 5,
-        "types_produced": 3
+        "variance_ratio": 0.5,
+        "index_configs": 4,
+        "types_produced": 2
       }
     },
     "sorites_paradox": {
@@ -57077,10 +56828,6 @@
           "context": "context(agent_power(powerless),time_horizon(immediate),exit_options(trapped),spatial_scope(local))"
         },
         {
-          "type": "scaffold",
-          "context": "context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(global))"
-        },
-        {
           "type": "rope",
           "context": [
             null,
@@ -57106,15 +56853,6 @@
             null,
             null
           ]
-        },
-        {
-          "type": "scaffold",
-          "context": [
-            null,
-            null,
-            null,
-            null
-          ]
         }
       ],
       "analysis": {
@@ -57126,9 +56864,9 @@
             "type": "conceptual"
           }
         ],
-        "variance_ratio": 0.8,
-        "index_configs": 5,
-        "types_produced": 4
+        "variance_ratio": 0.75,
+        "index_configs": 4,
+        "types_produced": 3
       }
     },
     "sturgeons_law": {
@@ -57189,15 +56927,6 @@
             null,
             null
           ]
-        },
-        {
-          "type": "scaffold",
-          "context": [
-            null,
-            null,
-            null,
-            null
-          ]
         }
       ],
       "analysis": {
@@ -57209,9 +56938,9 @@
             "type": "conceptual"
           }
         ],
-        "variance_ratio": 2.0,
+        "variance_ratio": 1.5,
         "index_configs": 2,
-        "types_produced": 4
+        "types_produced": 3
       }
     },
     "suanne_coup_of_peace": {
@@ -57513,15 +57242,6 @@
             null,
             null
           ]
-        },
-        {
-          "type": "scaffold",
-          "context": [
-            null,
-            null,
-            null,
-            null
-          ]
         }
       ],
       "analysis": {
@@ -57533,9 +57253,9 @@
             "type": "conceptual"
           }
         ],
-        "variance_ratio": 2.0,
+        "variance_ratio": 1.5,
         "index_configs": 2,
-        "types_produced": 4
+        "types_produced": 3
       }
     },
     "swift_legacy_piton": {
@@ -57775,15 +57495,6 @@
             null,
             null
           ]
-        },
-        {
-          "type": "scaffold",
-          "context": [
-            null,
-            null,
-            null,
-            null
-          ]
         }
       ],
       "analysis": {
@@ -57795,9 +57506,9 @@
             "type": "conceptual"
           }
         ],
-        "variance_ratio": 2.0,
+        "variance_ratio": 1.5,
         "index_configs": 2,
-        "types_produced": 4
+        "types_produced": 3
       }
     },
     "synthetic_data_feedback_loop": {
@@ -59689,7 +59400,7 @@
       ],
       "victims": [
         "national_security_agents",
-        "general_public"
+        "intelligence_gap_affected_civilians"
       ],
       "classifications": [
         {
@@ -60162,10 +59873,6 @@
           "context": "context(agent_power(powerful),time_horizon(historical),exit_options(arbitrage),spatial_scope(national))"
         },
         {
-          "type": "scaffold",
-          "context": "context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(global))"
-        },
-        {
           "type": "snare",
           "context": [
             null,
@@ -60191,15 +59898,6 @@
             null,
             null
           ]
-        },
-        {
-          "type": "scaffold",
-          "context": [
-            null,
-            null,
-            null,
-            null
-          ]
         }
       ],
       "analysis": {
@@ -60211,9 +59909,9 @@
             "type": "conceptual"
           }
         ],
-        "variance_ratio": 0.8,
-        "index_configs": 5,
-        "types_produced": 4
+        "variance_ratio": 0.75,
+        "index_configs": 4,
+        "types_produced": 3
       }
     },
     "tragedy_of_the_commons": {
@@ -64056,7 +63754,9 @@
         "requires_enforcement": true
       },
       "beneficiaries": [],
-      "victims": [],
+      "victims": [
+        "observed_quantum_systems"
+      ],
       "classifications": [
         {
           "type": "snare",
@@ -64373,15 +64073,6 @@
             null,
             null
           ]
-        },
-        {
-          "type": "scaffold",
-          "context": [
-            null,
-            null,
-            null,
-            null
-          ]
         }
       ],
       "analysis": {
@@ -64393,9 +64084,9 @@
             "type": "conceptual"
           }
         ],
-        "variance_ratio": 2.0,
+        "variance_ratio": 1.5,
         "index_configs": 2,
-        "types_produced": 4
+        "types_produced": 3
       }
     },
     "wikipedia_crowdsourcing_2026": {
@@ -65006,15 +64697,15 @@
     },
     "zombie_reasoning_2026": {
       "constraint_id": "zombie_reasoning_2026",
-      "claimed_type": "mountain",
+      "claimed_type": "snare",
       "domain": "philosophical",
       "human_readable": null,
       "metrics": {
         "extractiveness": 0.74,
         "suppression": 0.8,
         "resistance": null,
-        "emerges_naturally": false,
-        "requires_enforcement": true
+        "emerges_naturally": null,
+        "requires_enforcement": null
       },
       "beneficiaries": [
         "generative_ai_marketing"
@@ -65032,8 +64723,8 @@
           "context": "context(agent_power(institutional),time_horizon(generational),exit_options(mobile),spatial_scope(global))"
         },
         {
-          "type": "mountain",
-          "context": "context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(universal))"
+          "type": "snare",
+          "context": "context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(global))"
         },
         {
           "type": "snare",
@@ -65054,7 +64745,7 @@
           ]
         },
         {
-          "type": "mountain",
+          "type": "snare",
           "context": [
             null,
             null,
@@ -65090,17 +64781,91 @@
             "type": "conceptual"
           }
         ],
-        "variance_ratio": 0.75,
+        "variance_ratio": 0.5,
         "index_configs": 4,
+        "types_produced": 2
+      }
+    },
+    "fnl_shadow_probe": {
+      "constraint_id": "fnl_shadow_probe",
+      "claimed_type": "mountain",
+      "domain": "investigation",
+      "human_readable": null,
+      "metrics": {
+        "extractiveness": 0.3,
+        "suppression": 0.5,
+        "resistance": null,
+        "emerges_naturally": false,
+        "requires_enforcement": true
+      },
+      "beneficiaries": [
+        "institutional_apparatus"
+      ],
+      "victims": [
+        "constrained_subjects"
+      ],
+      "classifications": [
+        {
+          "type": "snare",
+          "context": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "type": "mountain",
+          "context": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "type": "tangled_rope",
+          "context": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "type": "mountain",
+          "context": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "type": "snare",
+          "context": [
+            null,
+            null,
+            null,
+            null
+          ]
+        }
+      ],
+      "analysis": {
+        "structural_signature": null,
+        "is_constructed": null,
+        "omegas": [],
+        "variance_ratio": 3.0,
+        "index_configs": 1,
         "types_produced": 3
       }
     }
   },
   "summary": {
-    "total_constraints": 731,
-    "with_extractiveness": 730,
-    "with_suppression": 730,
-    "with_classifications": 730,
-    "with_domain": 729
+    "total_constraints": 734,
+    "with_extractiveness": 732,
+    "with_suppression": 731,
+    "with_classifications": 733,
+    "with_domain": 731
   }
 }

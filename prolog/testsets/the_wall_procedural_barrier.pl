@@ -74,7 +74,7 @@ domain_priors:requires_active_enforcement(the_wall_procedural_barrier).
 % Structural property derivation hooks:
 narrative_ontology:constraint_beneficiary(the_wall_procedural_barrier, institutional_gatekeepers).
 narrative_ontology:constraint_victim(the_wall_procedural_barrier, national_security_agents).
-narrative_ontology:constraint_victim(the_wall_procedural_barrier, general_public).
+narrative_ontology:constraint_victim(the_wall_procedural_barrier, intelligence_gap_affected_civilians).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)

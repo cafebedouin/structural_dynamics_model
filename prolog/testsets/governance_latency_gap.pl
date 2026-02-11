@@ -78,7 +78,7 @@ domain_priors:requires_active_enforcement(governance_latency_gap).
 % Structural property derivation hooks:
 % Required for Tangled Rope classification.
 narrative_ontology:constraint_beneficiary(governance_latency_gap, innovators).
-narrative_ontology:constraint_victim(governance_latency_gap, general_public).
+narrative_ontology:constraint_victim(governance_latency_gap, unprotected_innovation_subjects).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)

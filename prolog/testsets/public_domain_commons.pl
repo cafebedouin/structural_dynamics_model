@@ -71,7 +71,7 @@ narrative_ontology:constraint_metric(public_domain_commons, suppression_requirem
 domain_priors:emerges_naturally(public_domain_commons).
 
 % BENEFICIARIES & VICTIMS
-narrative_ontology:constraint_beneficiary(public_domain_commons, general_public).
+narrative_ontology:constraint_beneficiary(public_domain_commons, commons_participants).
 narrative_ontology:constraint_victim(public_domain_commons, none).
 
 /* ==========================================================================

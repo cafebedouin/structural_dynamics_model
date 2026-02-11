@@ -146,7 +146,7 @@ constraint_indexing:constraint_classification(
         agent_power(powerless),
         time_horizon(biographical),
         exit_options(constrained),
-        constraint_beneficiary(visa_ipo_regulatory_compliance, the_public),
+        constraint_beneficiary(visa_ipo_regulatory_compliance, retail_investors),
         constraint_victim(visa_ipo_regulatory_compliance, none),
         spatial_scope(national)
     )

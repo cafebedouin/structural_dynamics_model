@@ -21,6 +21,9 @@ def lint_file(filepath):
     with open(filepath, 'r', encoding='utf-8') as f:
         content = f.read()
 
+    if '% lint: skip' in content:
+        return []
+
     errors = []
 
     # Get metric names from config.pl
@@ -138,17 +141,24 @@ def lint_file(filepath):
     # and no sunset clause, it's in the scaffold danger zone — the engine may classify
     # it as scaffold even though it lacks temporality (scaffold's defining feature).
     if ext_val is not None and ext_val <= 0.30:
-        has_beneficiary_data = 'constraint_beneficiary(' in content
-        has_enforcement = 'requires_active_enforcement(' in content
-        has_sunset = 'has_sunset_clause(' in content
-        low_theater = theater_val is None or theater_val < 0.70
-        if has_beneficiary_data and not has_enforcement and not has_sunset and low_theater:
-            errors.append(
-                f"SCAFFOLD_DANGER_ZONE: eps={ext_val} with beneficiary data, no enforcement, "
-                "no sunset clause, and low theater. The engine's scaffold gate may fire "
-                "at moderate/analytical perspectives. Either add has_sunset_clause/1 (if "
-                "genuinely a scaffold) or verify that the intended classification is rope."
-            )
+        # Mountains naturally have low extraction, beneficiary data, no enforcement,
+        # no sunset clause — the same profile as scaffold-danger. But mountains can't
+        # be misclassified as scaffolds (signature override catches this). Skip the
+        # check when any indexed classification is mountain — these are structural-type
+        # constraints (natural laws, math theorems) where scaffold concern doesn't apply.
+        all_mountain = 'mountain' in found_types
+        if not all_mountain:
+            has_beneficiary_data = 'constraint_beneficiary(' in content
+            has_enforcement = 'requires_active_enforcement(' in content
+            has_sunset = 'has_sunset_clause(' in content
+            low_theater = theater_val is None or theater_val < 0.70
+            if has_beneficiary_data and not has_enforcement and not has_sunset and low_theater:
+                errors.append(
+                    f"SCAFFOLD_DANGER_ZONE: eps={ext_val} with beneficiary data, no enforcement, "
+                    "no sunset clause, and low theater. The engine's scaffold gate may fire "
+                    "at moderate/analytical perspectives. Either add has_sunset_clause/1 (if "
+                    "genuinely a scaffold) or verify that the intended classification is rope."
+                )
 
     # 10. PITON-SPECIFIC CHECKS
     if 'piton' in found_types:

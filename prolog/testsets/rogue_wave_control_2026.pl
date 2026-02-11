@@ -96,6 +96,7 @@ omega_variable(
 ).
 
 narrative_ontology:interval(rogue_wave_control_2026, 0, 10).
+narrative_ontology:has_sunset_clause(rogue_wave_control_2026).
 
 % ============================================================================
 % ENRICHMENT: Structural predicates for remaining gaps

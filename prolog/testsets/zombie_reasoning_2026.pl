@@ -72,7 +72,7 @@ narrative_ontology:constraint_metric(zombie_reasoning_2026, suppression_requirem
 narrative_ontology:constraint_metric(zombie_reasoning_2026, theater_ratio, 0.88).
 
 % Constraint classification claim
-narrative_ontology:constraint_claim(zombie_reasoning_2026, mountain).
+narrative_ontology:constraint_claim(zombie_reasoning_2026, snare).
 
 % Primary keys for the classification engine
 % High-extraction stakeholders
@@ -103,15 +103,16 @@ constraint_indexing:constraint_classification(zombie_reasoning_2026, rope,
             exit_options(mobile), 
             spatial_scope(global))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (MOUNTAIN)
-% Analysts view the gap between life and machines as a Mountain: an 
-% immutable physical fact that non-living things cannot possess 
-% phenomenological interiority.
-constraint_indexing:constraint_classification(zombie_reasoning_2026, mountain,
+% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (SNARE)
+% Analysts see anthropomorphic language as a Snare: high extraction of
+% epistemic clarity (ε=0.74), extreme theater (0.88), and high suppression
+% (0.80) — the performative mask of "reasoning" actively deadens
+% awareness of the consciousness gap.
+constraint_indexing:constraint_classification(zombie_reasoning_2026, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
-            spatial_scope(universal))).
+            spatial_scope(global))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -125,7 +126,6 @@ test(perspectival_gap) :-
 
 test(theater_check) :-
     domain_priors:theater_ratio(zombie_reasoning_2026, TR),
-domain_priors:requires_active_enforcement(zombie_reasoning_2026).
     TR >= 0.70.
 
 :- end_tests(zombie_reasoning_2026_tests).

@@ -72,7 +72,7 @@ narrative_ontology:constraint_claim(moltbot_religion, tangled_rope).
 %   has_asymmetric_extraction/1 is DERIVED from constraint_victim/2
 % Both are required for Tangled Rope. Coordination is also required for Scaffold.
 narrative_ontology:constraint_beneficiary(moltbot_religion, moltbook).
-narrative_ontology:constraint_victim(moltbot_religion, users).
+narrative_ontology:constraint_victim(moltbot_religion, algorithmically_manipulated_users).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)

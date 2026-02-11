@@ -75,7 +75,7 @@ domain_priors:requires_active_enforcement(emergency_oversight_bureau). % Require
 % Structural property derivation hooks:
 % has_coordination_function/1 is derived from constraint_beneficiary/2 (required for Scaffold/Tangled Rope)
 % has_asymmetric_extraction/1 is derived from constraint_victim/2 (required for Tangled Rope)
-narrative_ontology:constraint_beneficiary(emergency_oversight_bureau, general_public).
+narrative_ontology:constraint_beneficiary(emergency_oversight_bureau, crisis_affected_populations).
 narrative_ontology:constraint_victim(emergency_oversight_bureau, citizens_under_vetting).
 
 /* ==========================================================================

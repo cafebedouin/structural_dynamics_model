@@ -55,6 +55,7 @@
 domain_priors:base_extractiveness(perseverance_rover_autonomy, 0.10). % Mountain suppression <= 0.05, Rope extraction <= 0.15, Snare extraction >= 0.46
 domain_priors:suppression_score(perseverance_rover_autonomy, 0.15).   % Structural property (raw, unscaled). Only extractiveness is scaled (by power and scope).
 domain_priors:theater_ratio(perseverance_rover_autonomy, 0.05).       % Piton detection (>= 0.70)
+domain_priors:requires_active_enforcement(perseverance_rover_autonomy).
 
 % Constraint metric facts — primary keys used by the classification engine.
 % These mirror domain_priors values using the metric key names from config.pl.

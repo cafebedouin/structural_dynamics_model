@@ -73,7 +73,7 @@ domain_priors:requires_active_enforcement(copyright_protection).
 
 % BENEFICIARIES & VICTIMS
 narrative_ontology:constraint_beneficiary(copyright_protection, creators).
-narrative_ontology:constraint_victim(copyright_protection, the_public).
+narrative_ontology:constraint_victim(copyright_protection, cultural_consumers).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (Perspectival Truth)
