@@ -44,6 +44,8 @@ where:
 
 ```
 
+The tuple is closed at arity 4. These four axes, combined with ε and the χ formula, fully determine classification. No additional contextual axis can change the classification outcome when ε and (P,T,E,S) are fixed. Observable-dependent constraints are handled by network decomposition (separate stories with different ε values), not by adding axes. See "Constraint Identity and the ε-Invariance Principle" below.
+
 ### The Chi Formula: χ = ε × f(d) × σ(S)
 
 Effective extraction (χ) is computed from base extraction (ε), the sigmoid directionality function f(d), and scope modifier σ(S).
@@ -93,6 +95,39 @@ Testsets can declare `constraint_indexing:directionality_override(ID, PowerAtom,
 * **Scope modifiers σ(S)**: How much scope affects verification difficulty. Larger scope = harder to verify = more extraction hidden behind complexity. `local=0.8`, `regional=0.9`, `national=1.0`, `continental=1.1`, `global=1.2`, `universal=1.0`.
 
 Suppression is a raw structural property — it is NOT scaled by power or scope. Only extractiveness is scaled.
+
+### Constraint Identity and the ε-Invariance Principle
+
+**ε is an intrinsic property of the constraint, not an observer-relative quantity.** If changing the observable used to evaluate a constraint changes ε, the observer is looking at a different constraint. This is not a convention — it follows from the χ formula. If ε and (P,T,E,S) are fixed, χ is determined, and classification is determined. There is no free parameter for observable selection to influence.
+
+**The authoring rule: disambiguate the label, don't complicate the logic.** When a natural-language concept (like "the BGS conjecture," "quantum measurement," "market efficiency," "freedom of speech") covers multiple structurally distinct claims, write separate constraint stories for each claim. Do not try to force one story to handle observable-dependent classification. Each story gets its own ε, its own perspectives, and its own classification. Link them with `affects_constraint/2`.
+
+**The ε-invariance test for authors:**
+
+1. You're writing a story and realize that measuring the constraint one way gives ε ≈ 0.08 but measuring it another way gives ε ≈ 0.42.
+2. Stop. You don't have one constraint. You have two.
+3. Write two `.pl` files. Give each its own `constraint_claim`, its own metrics, its own perspectives.
+4. Link them: `affects_constraint(upstream_story, downstream_story).`
+5. Document the relationship in both files' narrative context sections.
+
+**The BGS worked example** (gold standard for decomposition):
+
+Physicists refer to "the BGS conjecture" as a single claim: quantum systems with chaotic classical limits exhibit universal statistical properties. But this label conflates two structurally distinct claims:
+
+**Spectral universality** (`constraint_bgs_spectral_universality`): Eigenvalue level spacings follow Random Matrix Theory predictions. Verified for 40+ years across every tested system. ε = 0.08. Mountain from all perspectives.
+
+**Eigenvector thermalization** (`constraint_bgs_eigenvector_thermalization`): Individual eigenstates look thermal (ETH compliance). Contested — counterexamples exist (Magan & Wu ensembles, quantum kicked-top, Rydberg scars). ε = 0.42. Tangled Rope at the analytical level.
+
+These are not the same constraint viewed from two angles. Their ε values differ by a factor of five. They have different failure modes, different research communities, and different empirical status. The framework models them as two stories linked by `affects_constraint/2`, not as one story with a measurement parameter.
+
+The confusion was in the language (the label "BGS"), not in the mathematics. The framework's job is to disambiguate colloquial labels into structurally precise claims.
+
+**What NOT to do** (anti-patterns for authors):
+
+* Do not add arguments to `context()` beyond the four canonical axes. The linter (Rule 23) will reject files with context arity ≠ 4.
+* Do not create `measurement_basis` modifiers, visibility functions, or observable parameters.
+* Do not embed `constraint_beneficiary` or `constraint_victim` inside context tuples. These belong as module-level facts.
+* If you find yourself wanting to write `ε(Constraint, Observable1, Value1)` and `ε(Constraint, Observable2, Value2)` — you have two constraints. Decompose.
 
 ---
 
@@ -175,7 +210,7 @@ The engine differentiates these through the derivation chain: constrained exit +
 
 Some constraints classify identically from ALL perspectives. In these cases, the perspectival minimum is relaxed — you do not need powerless/institutional if they would produce the same type:
 
-* **Mountain-only (Natural Law)**: Logical/physical/mathematical limits (e.g., Gödel's Incompleteness, Halting Problem, speed of light). NL(C) → Mountain for all I. Base extraction ≤ 0.25, suppression ≤ 0.05. Include at least 2-3 perspectives to show the invariance, but all may be Mountain. No beneficiary/victim needed.
+* **Mountain-only (Natural Law)**: Logical/physical/mathematical limits (e.g., Gödel's Incompleteness, Halting Problem, speed of light). NL(C) → Mountain for all I. Base extraction ≤ 0.25, suppression ≤ 0.05. Include at least 2-3 perspectives to show the invariance, but all may be Mountain. No beneficiary/victim needed. Mountain-only constraints are invariant across all observables and measurement methodologies. If a constraint appears to be a Mountain under one observable but classifies differently under another, either (a) the alternative observable is revealing a structurally different constraint that should be decomposed into its own story, or (b) the Mountain classification was incorrect.
 * **Rope-only (Pure Coordination)**: Low-extraction coordination mechanisms where no agent perceives meaningful extraction (e.g., metasurface light steering, cooperative mineral sourcing). Base extraction ≤ 0.05, suppression low. Include at least 2 perspectives, but all may be Rope. Beneficiary recommended; victim usually absent.
 
 ### Section 4: Validation Tests
@@ -233,13 +268,44 @@ Declare optional Boltzmann-related properties that enable structural purity and 
 
 ### Section 10: Network Relationships (v5.2)
 
-Declare optional structural influence edges between constraints:
+Declare structural influence edges between constraints:
 
 * **`narrative_ontology:affects_constraint(id, other_constraint_id).`** — Declares that constraint `id` structurally influences `other_constraint_id`. Declare when: constraints share a regulatory domain, have causal dependency, or exhibit institutional coupling.
 
 Example: `narrative_ontology:affects_constraint(rare_earth_dependency, semiconductor_supply).`
 
 Network edges enable contamination propagation analysis — if one constraint's purity degrades, the system can predict which neighbors will be affected.
+
+#### Network Decomposition (Constraint Families)
+
+When a natural-language concept decomposes into multiple constraint stories (per the ε-invariance principle), the stories form a **constraint family**. All members of a family must be linked with `affects_constraint/2`.
+
+* Every story in a family must link to at least one other family member. Orphan stories with no network connections are a code smell.
+* When creating a new story that claims kinship with an existing constraint, document in the narrative context how the ε values differ and why.
+* The upstream story (higher empirical confidence, more established) typically `affects_constraint` the downstream story (more contested, more extractive), because the upstream claim is often cited as evidence for the downstream claim.
+* Include a dual-formulation comment block in BOTH files explaining the decomposition:
+
+```prolog
+% DUAL FORMULATION NOTE:
+% This constraint is one of N stories decomposed from [colloquial label].
+% Decomposed because ε differs across observables (ε-invariance principle, DP-001).
+% Related stories: [list other family members with their ε values and types].
+% See: epsilon_invariance_principle.md
+```
+
+**BGS network pattern** (gold standard):
+
+```prolog
+% BGS constraint family (3 stories):
+%   ehrenfest_barrier (ε=0.05, Mountain) — phase-space resolution floor
+%     └→ bgs_spectral_universality (ε=0.08, Mountain) — eigenvalue statistics
+%         └→ bgs_eigenvector_thermalization (ε=0.42, Tangled Rope) — ETH compliance
+%
+% Network edges:
+affects_constraint(ehrenfest_barrier, bgs_spectral_universality).
+affects_constraint(ehrenfest_barrier, bgs_eigenvector_thermalization).
+affects_constraint(bgs_spectral_universality, bgs_eigenvector_thermalization).
+```
 
 ### Section 10: Directionality Overrides (v6.0, Optional)
 
@@ -284,6 +350,8 @@ Before outputting your .pl file, verify:
 * [ ] **Coordination Type**: If the constraint has a coordination function, is `narrative_ontology:coordination_type/2` declared with one of the four valid types?
 * [ ] **Network Relationships**: If the constraint is part of a known constraint cluster, are `narrative_ontology:affects_constraint/2` relationships declared?
 * [ ] **Directionality Overrides**: If overrides are used, does the commentary explain WHY the derivation would produce the wrong d? Include `constraint_indexing:directionality_override/3` in the multifile block.
+* [ ] **Context Arity**: All `context()` terms have exactly 4 arguments: `agent_power`, `time_horizon`, `exit_options`, `spatial_scope`. Do not add beneficiary/victim, measurement_basis, or any other data to the context tuple. Linter Rule 23 enforces this.
+* [ ] **Constraint Identity**: If this constraint could be evaluated via different observables that yield different ε values, have you decomposed into separate stories? Each story must have a single, stable ε. If ε changes when you change how you measure, you have two constraints — write two files and link with `affects_constraint/2`.
 * [ ] **Multifile Block**: Includes all predicates used in the file: `narrative_ontology:constraint_beneficiary/2`, `narrative_ontology:constraint_victim/2`, `narrative_ontology:constraint_metric/3`, `narrative_ontology:constraint_claim/2`, `narrative_ontology:interval/3`, `constraint_indexing:constraint_classification/3`, `constraint_indexing:directionality_override/3` (if used), and `narrative_ontology:measurement/5` (if ε > 0.46). If declaring Boltzmann or network data, also include `narrative_ontology:coordination_type/2`, `narrative_ontology:boltzmann_floor_override/2`, and `narrative_ontology:affects_constraint/2`.
 
 ---

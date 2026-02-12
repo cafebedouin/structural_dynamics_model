@@ -101,6 +101,7 @@ narrative_ontology:constraint_victim(magna_carta_liberties, [arbitrary_monarchy,
    [cite: 1].
    -------------------------------------------------------------------------- */
 
+% 2026-02-11: Fixed context arity — removed beneficiary/victim from context tuples (context/4 enforcement)
 constraint_indexing:constraint_classification(
     magna_carta_liberties,
     mountain,
@@ -108,8 +109,6 @@ constraint_indexing:constraint_classification(
         agent_power(powerless),
         time_horizon(immediate),
         exit_options(trapped),
-        constraint_beneficiary(magna_carta_liberties, free_men),
-        constraint_victim(magna_carta_liberties, []),
         spatial_scope(national)
     )
 ) :-
@@ -140,8 +139,6 @@ constraint_indexing:constraint_classification(
         agent_power(collective_organized),
         time_horizon(biographical),
         exit_options(arbitrage),
-        constraint_beneficiary(magna_carta_liberties, the_barons),
-        constraint_victim(magna_carta_liberties, []),
         spatial_scope(national)
     )
 ) :-
@@ -170,8 +167,6 @@ constraint_indexing:constraint_classification(
         agent_power(institutional),
         time_horizon(immediate),
         exit_options(constrained),
-        constraint_beneficiary(magna_carta_liberties, the_barons),
-        constraint_victim(magna_carta_liberties, arbitrary_monarchy),
         spatial_scope(national)
     )
 ) :-
@@ -187,15 +182,15 @@ constraint_indexing:constraint_classification(
 
 test(baronial_coordination) :-
     % Barons see a Rope for coordination
-    constraint_indexing:constraint_classification(magna_carta_liberties, rope, context(agent_power(collective_organized), _, _, _, _, _)).
+    constraint_indexing:constraint_classification(magna_carta_liberties, rope, context(agent_power(collective_organized), _, _, _)).
 
 test(monarch_coercion) :-
     % King sees a Snare because of Clause 61 (distraint)
-    constraint_indexing:constraint_classification(magna_carta_liberties, snare, context(agent_power(institutional), _, constrained, _, _, _)).
+    constraint_indexing:constraint_classification(magna_carta_liberties, snare, context(agent_power(institutional), _, exit_options(constrained), _)).
 
 test(due_process_mountain) :-
     % For the powerless, due process is a fixed Mountain of protection
-    constraint_indexing:constraint_classification(magna_carta_liberties, mountain, context(agent_power(powerless), _, _, _, _, _)).
+    constraint_indexing:constraint_classification(magna_carta_liberties, mountain, context(agent_power(powerless), _, _, _)).
 
 :- end_tests(magna_carta_tests).
 

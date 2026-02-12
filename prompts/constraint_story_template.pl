@@ -12,6 +12,19 @@
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
 
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
+
 % --- Namespace Hooks (Required for loading) ---
 :- multifile
     domain_priors:base_extractiveness/2,
@@ -96,6 +109,9 @@ narrative_ontology:constraint_victim([id], [victim_group]).
    The engine derives d from beneficiary/victim membership + exit_options.
    Scope modifiers: local=0.8, regional=0.9, national=1.0,
                     continental=1.1, global=1.2, universal=1.0.
+   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
+   Do not add measurement_basis, beneficiary/victim, or other metadata.
+   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
 % PERSPECTIVE 1: THE PRIMARY TARGET (SNARE/MOUNTAIN)
@@ -276,6 +292,19 @@ narrative_ontology:measurement([id]_ex_t10, [id], base_extractiveness, 10, [fina
 % Declare when constraints share regulatory domain, causal dependency,
 % or institutional coupling.
 % narrative_ontology:affects_constraint([id], [other_constraint_id]).
+
+% --- Network Decomposition (Constraint Families) ---
+% When a natural-language label covers multiple constraints with different ε
+% values, each gets its own file. Link family members with affects_constraint:
+%
+% DUAL FORMULATION NOTE:
+% This constraint is one of [N] stories decomposed from [colloquial label].
+% Decomposed because ε differs across observables (ε-invariance principle).
+% Related stories:
+%   - [sibling_constraint_1] (ε=[value], [Type])
+%   - [sibling_constraint_2] (ε=[value], [Type])
+%
+% narrative_ontology:affects_constraint([id], [sibling_constraint_id]).
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

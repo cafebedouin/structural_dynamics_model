@@ -103,6 +103,7 @@ narrative_ontology:constraint_victim(visa_ipo_regulatory_compliance, registrant_
    dates as may be necessary to delay its effective date...".
    -------------------------------------------------------------------------- */
 
+% 2026-02-11: Fixed context arity — removed beneficiary/victim from context tuples (context/4 enforcement)
 constraint_indexing:constraint_classification(
     visa_ipo_regulatory_compliance,
     snare,
@@ -110,8 +111,6 @@ constraint_indexing:constraint_classification(
         agent_power(powerful),
         time_horizon(immediate),
         exit_options(trapped),
-        constraint_beneficiary(visa_ipo_regulatory_compliance, sec),
-        constraint_victim(visa_ipo_regulatory_compliance, joseph_saunders),
         spatial_scope(global)
     )
 ) :-
@@ -146,8 +145,6 @@ constraint_indexing:constraint_classification(
         agent_power(powerless),
         time_horizon(biographical),
         exit_options(constrained),
-        constraint_beneficiary(visa_ipo_regulatory_compliance, retail_investors),
-        constraint_victim(visa_ipo_regulatory_compliance, none),
         spatial_scope(national)
     )
 ) :-
@@ -181,8 +178,6 @@ constraint_indexing:constraint_classification(
         agent_power(analytical),
         time_horizon(historical),
         exit_options(arbitrage),
-        constraint_beneficiary(visa_ipo_regulatory_compliance, visa_inc),
-        constraint_victim(visa_ipo_regulatory_compliance, none),
         spatial_scope(global)
     )
 ) :-
@@ -197,20 +192,20 @@ constraint_indexing:constraint_classification(
 :- begin_tests(visa_ipo_regulatory_compliance_tests).
 
 test(multi_perspective_variance) :-
-    constraint_indexing:constraint_classification(visa_ipo_regulatory_compliance, Type1, 
-        context(powerful, immediate, trapped, _, _, global)),
-    constraint_indexing:constraint_classification(visa_ipo_regulatory_compliance, Type2, 
-        context(powerless, biographical, constrained, _, _, national)),
-    constraint_indexing:constraint_classification(visa_ipo_regulatory_compliance, Type3, 
-        context(analytical, historical, arbitrage, _, _, global)),
+    constraint_indexing:constraint_classification(visa_ipo_regulatory_compliance, Type1,
+        context(agent_power(powerful), time_horizon(immediate), exit_options(trapped), spatial_scope(global))),
+    constraint_indexing:constraint_classification(visa_ipo_regulatory_compliance, Type2,
+        context(agent_power(powerless), time_horizon(biographical), exit_options(constrained), spatial_scope(national))),
+    constraint_indexing:constraint_classification(visa_ipo_regulatory_compliance, Type3,
+        context(agent_power(analytical), time_horizon(historical), exit_options(arbitrage), spatial_scope(global))),
     Type1 = snare,
     Type2 = mountain,
     Type3 = rope.
 
 test(regulatory_barrier_impact) :-
     % Test that the 'trapped' CEO sees high friction (Snare) vs 'arbitrage' lawyer (Rope)
-    constraint_indexing:constraint_classification(visa_ipo_regulatory_compliance, snare, context(_, _, trapped, _, _, _)),
-    constraint_indexing:constraint_classification(visa_ipo_regulatory_compliance, rope, context(_, _, arbitrage, _, _, _)).
+    constraint_indexing:constraint_classification(visa_ipo_regulatory_compliance, snare, context(_, _, exit_options(trapped), _)),
+    constraint_indexing:constraint_classification(visa_ipo_regulatory_compliance, rope, context(_, _, exit_options(arbitrage), _)).
 
 :- end_tests(visa_ipo_regulatory_compliance_tests).
 

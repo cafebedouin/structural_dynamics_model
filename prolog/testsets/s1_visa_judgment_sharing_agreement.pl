@@ -105,6 +105,7 @@ narrative_ontology:constraint_victim(visa_judgment_sharing_agreement, signatory_
    thereto," implying a take-it-or-leave-it participation requirement.
    -------------------------------------------------------------------------- */
 
+% 2026-02-11: Fixed context arity — removed beneficiary/victim from context tuples (context/4 enforcement)
 constraint_indexing:constraint_classification(
     visa_judgment_sharing_agreement,
     snare,
@@ -112,8 +113,6 @@ constraint_indexing:constraint_classification(
         agent_power(individual_moderate),
         time_horizon(immediate),
         exit_options(trapped),
-        constraint_beneficiary(visa_judgment_sharing_agreement, visa_inc),
-        constraint_victim(visa_judgment_sharing_agreement, small_bank),
         spatial_scope(national)
     )
 ) :-
@@ -148,8 +147,6 @@ constraint_indexing:constraint_classification(
         agent_power(institutional),
         time_horizon(biographical),
         exit_options(arbitrage),
-        constraint_beneficiary(visa_judgment_sharing_agreement, global_payment_system),
-        constraint_victim(visa_judgment_sharing_agreement, none),
         spatial_scope(global)
     )
 ) :-
@@ -183,8 +180,6 @@ constraint_indexing:constraint_classification(
         agent_power(analytical),
         time_horizon(historical),
         exit_options(analytical),
-        constraint_beneficiary(visa_judgment_sharing_agreement, none),
-        constraint_victim(visa_judgment_sharing_agreement, none),
         spatial_scope(national)
     )
 ) :-
@@ -198,17 +193,17 @@ constraint_indexing:constraint_classification(
 :- begin_tests(visa_jsa_tests).
 
 test(multi_perspective_variance) :-
-    constraint_indexing:constraint_classification(visa_judgment_sharing_agreement, Type1, 
-        context(individual_moderate, immediate, trapped, _, _, national)),
-    constraint_indexing:constraint_classification(visa_judgment_sharing_agreement, Type2, 
-        context(institutional, biographical, arbitrage, _, _, global)),
+    constraint_indexing:constraint_classification(visa_judgment_sharing_agreement, Type1,
+        context(agent_power(individual_moderate), time_horizon(immediate), exit_options(trapped), spatial_scope(national))),
+    constraint_indexing:constraint_classification(visa_judgment_sharing_agreement, Type2,
+        context(agent_power(institutional), time_horizon(biographical), exit_options(arbitrage), spatial_scope(global))),
     Type1 = snare,
     Type2 = rope.
 
 test(systemic_stability_logic) :-
     % Testing that institutional power views this as a functional tool (Rope)
-    constraint_indexing:constraint_classification(visa_judgment_sharing_agreement, rope, 
-        context(institutional, _, _, _, _, _)).
+    constraint_indexing:constraint_classification(visa_judgment_sharing_agreement, rope,
+        context(agent_power(institutional), _, _, _)).
 
 :- end_tests(visa_jsa_tests).
 

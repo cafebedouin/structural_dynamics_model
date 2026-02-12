@@ -406,4 +406,60 @@ def lint_file(filepath):
                     f"{values[0]}) is declared more than once. Remove the duplicate."
                 )
 
+    # 23. CONTEXT_ARITY CHECK
+    # context() terms inside constraint_classification must have exactly 4 arguments
+    # (agent_power, time_horizon, exit_options, spatial_scope). Files that smuggle
+    # constraint_beneficiary/constraint_victim into context break the indexing framework.
+    # Pre-process: strip Prolog inline comments (% to end of line) to avoid
+    # counting commas inside comments (e.g., "exit_options(mobile), % materials, etc.")
+    cleaned_lines = []
+    for raw_line in content.split('\n'):
+        # Remove % comments that aren't inside quotes
+        in_quote = False
+        for i, ch in enumerate(raw_line):
+            if ch == "'" and (i == 0 or raw_line[i-1] != '\\'):
+                in_quote = not in_quote
+            elif ch == '%' and not in_quote:
+                raw_line = raw_line[:i]
+                break
+        cleaned_lines.append(raw_line)
+    cleaned_content = '\n'.join(cleaned_lines)
+
+    lines = content.split('\n')
+    for line_num, line in enumerate(lines, 1):
+        stripped = line.lstrip()
+        # Skip commented-out lines
+        if stripped.startswith('%'):
+            continue
+        # Look for context( that is part of a constraint_classification, not default_context etc.
+        # Use negative lookbehind to skip compound atoms like default_context(
+        for ctx_match in re.finditer(r'(?<!\w)context\(', line):
+            # Found a context( on this line — count top-level commas by tracking paren depth
+            # Use cleaned_content (comments stripped) for the character scan
+            cleaned_line = cleaned_lines[line_num - 1]
+            clean_pos = cleaned_content.index(cleaned_line) + ctx_match.start()
+            # Guard against index mismatch from duplicate lines
+            # by searching from the approximate position in cleaned_content
+            line_start_in_clean = sum(len(cl) + 1 for cl in cleaned_lines[:line_num - 1])
+            rest = cleaned_content[line_start_in_clean + ctx_match.start():]
+            depth = 0
+            comma_count = 0
+            found_close = False
+            for ch in rest[len('context('):]:
+                if ch == '(':
+                    depth += 1
+                elif ch == ')':
+                    if depth == 0:
+                        found_close = True
+                        break
+                    depth -= 1
+                elif ch == ',' and depth == 0:
+                    comma_count += 1
+            if found_close and comma_count != 3:
+                errors.append(
+                    f"CONTEXT_ARITY: Line {line_num}: context() has {comma_count + 1} "
+                    f"arguments (expected 4: agent_power, time_horizon, exit_options, spatial_scope). "
+                    f"Do not embed constraint_beneficiary/constraint_victim inside context terms."
+                )
+
     return errors

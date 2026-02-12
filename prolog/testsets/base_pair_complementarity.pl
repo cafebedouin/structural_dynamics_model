@@ -105,6 +105,7 @@ narrative_ontology:constraint_victim(base_pair_complementarity, [entropic_decay]
    must be a purine and the other a pyrimidine."
    -------------------------------------------------------------------------- */
 
+% 2026-02-11: Fixed context arity — removed beneficiary/victim from context tuples (context/4 enforcement)
 constraint_indexing:constraint_classification(
     base_pair_complementarity,
     mountain,
@@ -112,8 +113,6 @@ constraint_indexing:constraint_classification(
         agent_power(powerless),
         time_horizon(immediate),
         exit_options(trapped),
-        constraint_beneficiary(base_pair_complementarity, biological_order),
-        constraint_victim(base_pair_complementarity, []),
         spatial_scope(local)
     )
 ) :-
@@ -147,8 +146,6 @@ constraint_indexing:constraint_classification(
         agent_power(institutional),
         time_horizon(generational),
         exit_options(arbitrage),
-        constraint_beneficiary(base_pair_complementarity, heredity),
-        constraint_victim(base_pair_complementarity, []),
         spatial_scope(global)
     )
 ) :-
@@ -181,8 +178,6 @@ constraint_indexing:constraint_classification(
         agent_power(powerful),
         time_horizon(immediate),
         exit_options(constrained),
-        constraint_beneficiary(base_pair_complementarity, watson_crick_consensus),
-        constraint_victim(base_pair_complementarity, pauling_model),
         spatial_scope(national)
     )
 ) :-
@@ -198,11 +193,11 @@ constraint_indexing:constraint_classification(
 
 test(geometry_determines_type) :-
     % Verify that for the powerless nucleotide, the constraint is a Mountain
-    constraint_indexing:constraint_classification(base_pair_complementarity, mountain, context(agent_power(powerless), _, trapped, _, _, _)).
+    constraint_indexing:constraint_classification(base_pair_complementarity, mountain, context(agent_power(powerless), _, exit_options(trapped), _)).
 
 test(functional_replication) :-
     % Verify that for cellular machinery, the helix is a Rope
-    constraint_indexing:constraint_classification(base_pair_complementarity, rope, context(agent_power(institutional), _, arbitrage, _, _, _)).
+    constraint_indexing:constraint_classification(base_pair_complementarity, rope, context(agent_power(institutional), _, exit_options(arbitrage), _)).
 
 test(suppression_of_error) :-
     % Mismatched bases face 1.0 suppression (steric hindrance)

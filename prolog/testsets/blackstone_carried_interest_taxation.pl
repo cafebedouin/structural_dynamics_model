@@ -106,6 +106,7 @@ narrative_ontology:constraint_victim(blackstone_carried_interest_taxation, publi
    corporation for U.S. federal income tax purposes".
    -------------------------------------------------------------------------- */
 
+% 2026-02-11: Fixed context arity — removed beneficiary/victim from context tuples (context/4 enforcement)
 constraint_indexing:constraint_classification(
     blackstone_carried_interest_taxation,
     rope,
@@ -113,8 +114,6 @@ constraint_indexing:constraint_classification(
         agent_power(powerful),
         time_horizon(biographical),
         exit_options(arbitrage),
-        constraint_beneficiary(blackstone_carried_interest_taxation, senior_managing_directors),
-        constraint_victim(blackstone_carried_interest_taxation, none),
         spatial_scope(global)
     )
 ) :-
@@ -149,8 +148,6 @@ constraint_indexing:constraint_classification(
         agent_power(powerless),
         time_horizon(immediate),
         exit_options(constrained),
-        constraint_beneficiary(blackstone_carried_interest_taxation, blackstone_management),
-        constraint_victim(blackstone_carried_interest_taxation, retail_investor),
         spatial_scope(national)
     )
 ) :-
@@ -185,8 +182,6 @@ constraint_indexing:constraint_classification(
         agent_power(institutional),
         time_horizon(historical),
         exit_options(analytical),
-        constraint_beneficiary(blackstone_carried_interest_taxation, private_equity_industry),
-        constraint_victim(blackstone_carried_interest_taxation, public_equity_principles),
         spatial_scope(national)
     )
 ) :-
@@ -202,19 +197,19 @@ constraint_indexing:constraint_classification(
 :- begin_tests(blackstone_tax_tests).
 
 test(multi_perspective_variance) :-
-    constraint_indexing:constraint_classification(blackstone_carried_interest_taxation, Type1, 
-        context(powerful, biographical, arbitrage, _, _, global)),
-    constraint_indexing:constraint_classification(blackstone_carried_interest_taxation, Type2, 
-        context(powerless, immediate, constrained, _, _, national)),
-    constraint_indexing:constraint_classification(blackstone_carried_interest_taxation, Type3, 
-        context(institutional, historical, analytical, _, _, national)),
+    constraint_indexing:constraint_classification(blackstone_carried_interest_taxation, Type1,
+        context(agent_power(powerful), time_horizon(biographical), exit_options(arbitrage), spatial_scope(global))),
+    constraint_indexing:constraint_classification(blackstone_carried_interest_taxation, Type2,
+        context(agent_power(powerless), time_horizon(immediate), exit_options(constrained), spatial_scope(national))),
+    constraint_indexing:constraint_classification(blackstone_carried_interest_taxation, Type3,
+        context(agent_power(institutional), time_horizon(historical), exit_options(analytical), spatial_scope(national))),
     Type1 = rope,
     Type2 = mountain,
     Type3 = snare.
 
 test(tax_benefit_asymmetry) :-
     % Powerful agents should experience lower extraction (Rope) than the system's impact on others
-    constraint_indexing:constraint_classification(blackstone_carried_interest_taxation, rope, context(powerful, _, _, _, _, _)).
+    constraint_indexing:constraint_classification(blackstone_carried_interest_taxation, rope, context(agent_power(powerful), _, _, _)).
 
 :- end_tests(blackstone_tax_tests).
 

@@ -101,6 +101,7 @@ narrative_ontology:constraint_victim(coinbase_crypto_volatility, long_term_capit
    impact our ability to operate".
    -------------------------------------------------------------------------- */
 
+% 2026-02-11: Fixed context arity — removed beneficiary/victim from context tuples (context/4 enforcement)
 constraint_indexing:constraint_classification(
     coinbase_crypto_volatility,
     snare,
@@ -108,8 +109,6 @@ constraint_indexing:constraint_classification(
         agent_power(powerless),
         time_horizon(immediate),
         exit_options(trapped),
-        constraint_beneficiary(coinbase_crypto_volatility, market_makers),
-        constraint_victim(coinbase_crypto_volatility, retail_trader),
         spatial_scope(global)
     )
 ) :-
@@ -143,8 +142,6 @@ constraint_indexing:constraint_classification(
         agent_power(institutional),
         time_horizon(historical),
         exit_options(arbitrage),
-        constraint_beneficiary(coinbase_crypto_volatility, coinbase_revenue),
-        constraint_victim(coinbase_crypto_volatility, none),
         spatial_scope(global)
     )
 ) :-
@@ -198,13 +195,13 @@ narrative_ontology:constraint_metric(coinbase_crypto_volatility, suppression_req
 
 test(revenue_correlation_logic) :-
     % Verify that institutional revenue is tied to the "arbitrage" of volatility
-    constraint_indexing:constraint_classification(coinbase_crypto_volatility, rope, 
-        context(institutional, _, arbitrage, _, _, _)).
+    constraint_indexing:constraint_classification(coinbase_crypto_volatility, rope,
+        context(agent_power(institutional), _, exit_options(arbitrage), _)).
 
 test(retail_vulnerability_audit) :-
     % Verify that the powerless/trapped agent sees a Snare
-    constraint_indexing:constraint_classification(coinbase_crypto_volatility, snare, 
-        context(powerless, immediate, trapped, _, _, _)).
+    constraint_indexing:constraint_classification(coinbase_crypto_volatility, snare,
+        context(agent_power(powerless), time_horizon(immediate), exit_options(trapped), _)).
 
 :- end_tests(coinbase_volatility_tests).
 

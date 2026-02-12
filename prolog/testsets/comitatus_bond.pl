@@ -102,6 +102,7 @@ narrative_ontology:constraint_victim(comitatus_bond, [unferth, cowardly_thanes])
    [cite_start]"I would rather the fire should enfold my body / with my gold-friend." [cite: 1]
    -------------------------------------------------------------------------- */
 
+% 2026-02-11: Fixed context arity — removed beneficiary/victim from context tuples (context/4 enforcement)
 constraint_indexing:constraint_classification(
     comitatus_bond,
     mountain,
@@ -109,8 +110,6 @@ constraint_indexing:constraint_classification(
         agent_power(powerless),
         time_horizon(biographical),
         exit_options(trapped),
-        constraint_beneficiary(comitatus_bond, tribal_stability),
-        constraint_victim(comitatus_bond, []),
         spatial_scope(local)
     )
 ) :-
@@ -143,8 +142,6 @@ constraint_indexing:constraint_classification(
         agent_power(institutional),
         time_horizon(generational),
         exit_options(arbitrage),
-        constraint_beneficiary(comitatus_bond, tribal_stability),
-        constraint_victim(comitatus_bond, []),
         spatial_scope(national)
     )
 ) :-
@@ -176,8 +173,6 @@ constraint_indexing:constraint_classification(
         agent_power(powerless),
         time_horizon(immediate),
         exit_options(trapped),
-        constraint_beneficiary(comitatus_bond, tribal_stability),
-        constraint_victim(comitatus_bond, cowardly_thanes),
         spatial_scope(continental)
     )
 ) :-
@@ -192,13 +187,13 @@ constraint_indexing:constraint_classification(
 :- begin_tests(comitatus_bond_tests).
 
 test(multi_perspective_variance) :-
-    constraint_indexing:constraint_classification(comitatus_bond, Type1, context(agent_power(powerless), _, trapped, _, _, _)),
-    constraint_indexing:constraint_classification(comitatus_bond, Type2, context(agent_power(institutional), _, arbitrage, _, _, _)),
+    constraint_indexing:constraint_classification(comitatus_bond, Type1, context(agent_power(powerless), _, exit_options(trapped), _)),
+    constraint_indexing:constraint_classification(comitatus_bond, Type2, context(agent_power(institutional), _, exit_options(arbitrage), _)),
     Type1 \= Type2.
 
 test(exile_as_snare) :-
-    % Verify that for a victim (the coward), the classification is Snare
-    constraint_indexing:constraint_classification(comitatus_bond, snare, context(_, _, trapped, _, cowardly_thanes, _)).
+    % Verify that the powerless/trapped classification is Snare
+    constraint_indexing:constraint_classification(comitatus_bond, snare, context(agent_power(powerless), _, exit_options(trapped), _)).
 
 test(gold_enforcement) :-
     domain_priors:requires_active_enforcement(comitatus_bond).

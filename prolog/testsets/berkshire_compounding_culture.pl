@@ -98,6 +98,7 @@ narrative_ontology:constraint_victim(berkshire_compounding_culture, [textile_des
    [cite_start]to "mushroom" through the magic of compounding[cite: 165].
    -------------------------------------------------------------------------- */
 
+% 2026-02-11: Fixed context arity — removed beneficiary/victim from context tuples (context/4 enforcement)
 constraint_indexing:constraint_classification(
     berkshire_compounding_culture,
     rope,
@@ -105,8 +106,6 @@ constraint_indexing:constraint_classification(
         agent_power(powerless),
         time_horizon(generational),
         exit_options(arbitrage),
-        constraint_beneficiary(berkshire_compounding_culture, shareholders),
-        constraint_victim(berkshire_compounding_culture, []),
         spatial_scope(global)
     )
 ) :-
@@ -136,8 +135,6 @@ constraint_indexing:constraint_classification(
         agent_power(institutional),
         time_horizon(historical),
         exit_options(trapped),
-        constraint_beneficiary(berkshire_compounding_culture, human_progress),
-        constraint_victim(berkshire_compounding_culture, []),
         spatial_scope(national)
     )
 ) :-
@@ -164,8 +161,6 @@ constraint_indexing:constraint_classification(
         agent_power(analytical),
         time_horizon(immediate),
         exit_options(arbitrage),
-        constraint_beneficiary(berkshire_compounding_culture, the_union),
-        constraint_victim(berkshire_compounding_culture, []),
         spatial_scope(national)
     )
 ) :-
@@ -214,13 +209,12 @@ narrative_ontology:constraint_metric(berkshire_compounding_culture, suppression_
 :- begin_tests(berkshire_compounding_tests).
 
 test(compounding_magic) :-
-    % FIX: Removed backslash, moved 'rope' to the 3rd argument
-    % Matches: classification(ID, Perspective, Type)
-    constraint_indexing:constraint_classification(berkshire_compounding_culture, powerless, rope).
+    % Powerless investor sees a Rope (functional coordination through compounding)
+    constraint_indexing:constraint_classification(berkshire_compounding_culture, rope, context(agent_power(powerless), _, _, _)).
 
 test(size_constraint) :-
-    % FIX: Removed backslash, moved 'mountain' to the 3rd argument
-    constraint_indexing:constraint_classification(berkshire_compounding_culture, institutional, mountain).
+    % Institutional CEO sees a Mountain (size removes flexibility)
+    constraint_indexing:constraint_classification(berkshire_compounding_culture, mountain, context(agent_power(institutional), _, _, _)).
 
 test(low_extraction) :-
     % This test was failing because the syntax errors above prevented the file from compiling

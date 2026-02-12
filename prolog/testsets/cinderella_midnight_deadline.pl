@@ -98,6 +98,7 @@ narrative_ontology:constraint_victim(midnight_deadline, cinderella_status).
 
 
 
+% 2026-02-11: Fixed context arity — removed beneficiary/victim from context tuples (context/4 enforcement)
 constraint_indexing:constraint_classification(
     midnight_deadline,
     mountain,
@@ -105,8 +106,6 @@ constraint_indexing:constraint_classification(
         agent_power(powerless),
         time_horizon(immediate),
         exit_options(trapped),
-        constraint_beneficiary(midnight_deadline, []),
-        constraint_victim(midnight_deadline, cinderella_status),
         spatial_scope(regional)
     )
 ) :-
@@ -137,8 +136,6 @@ constraint_indexing:constraint_classification(
         agent_power(institutional),
         time_horizon(biographical),
         exit_options(arbitrage),
-        constraint_beneficiary(midnight_deadline, prince_search),
-        constraint_victim(midnight_deadline, []),
         spatial_scope(national)
     )
 ) :-
@@ -165,8 +162,6 @@ constraint_indexing:constraint_classification(
         agent_power(individual_moderate),
         time_horizon(immediate),
         exit_options(constrained),
-        constraint_beneficiary(midnight_deadline, prince_search),
-        constraint_victim(midnight_deadline, stepsisters),
         spatial_scope(local)
     )
 ) :-
@@ -182,12 +177,12 @@ constraint_indexing:constraint_classification(
 
 test(perspectival_gap) :-
     % Cinderella sees a Mountain; the Prince sees a Rope.
-    constraint_indexing:constraint_classification(midnight_deadline, mountain, context(agent_power(powerless), _, _, _, _, _)),
-    constraint_indexing:constraint_classification(midnight_deadline, rope, context(agent_power(institutional), _, _, _, _, _)).
+    constraint_indexing:constraint_classification(midnight_deadline, mountain, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(midnight_deadline, rope, context(agent_power(institutional), _, _, _)).
 
 test(extraction_limit) :-
     % The sisters' failure is the "Snare" experience.
-    constraint_indexing:constraint_classification(midnight_deadline, snare, context(agent_power(individual_moderate), _, _, _, stepsisters, _)).
+    constraint_indexing:constraint_classification(midnight_deadline, snare, context(agent_power(individual_moderate), _, _, _)).
 
 :- end_tests(cinderella_tests).
 

@@ -106,7 +106,10 @@ narrative_ontology:constraint_metric(universal_mathematics_communication, suppre
 % Emerges naturally as a consequence of intelligence and physical reality.
 domain_priors:emerges_naturally(universal_mathematics_communication).
 
-% Metrics required for Section 1 of the Executive Summary
+% 2026-02-11: Fixed context arity — removed beneficiary/victim from context tuples (context/4 enforcement)
+% Beneficiary/victim promoted to module-level facts (previously only inside context tuples).
+narrative_ontology:constraint_beneficiary(universal_mathematics_communication, intelligent_life).
+narrative_ontology:constraint_victim(universal_mathematics_communication, none).
 /* ==========================================================================
 3. INDEXED CLASSIFICATIONS (Perspectival Truth)
 ========================================================================== */
@@ -137,8 +140,6 @@ context(
 agent_power(powerless),
 time_horizon(immediate),
 exit_options(trapped),
-narrative_ontology:constraint_beneficiary(universal_mathematics_communication, honeybee),
-narrative_ontology:constraint_victim(universal_mathematics_communication, none),
 spatial_scope(local)
 )
 ) :-
@@ -172,8 +173,6 @@ context(
 agent_power(institutional),
 time_horizon(historical),
 exit_options(mobile),
-narrative_ontology:constraint_beneficiary(universal_mathematics_communication, humanity),
-narrative_ontology:constraint_victim(universal_mathematics_communication, none),
 spatial_scope(global)
 )
 ) :-
@@ -206,8 +205,6 @@ context(
 agent_power(analytical),
 time_horizon(civilizational),
 exit_options(analytical),
-narrative_ontology:constraint_beneficiary(universal_mathematics_communication, intelligent_life),
-narrative_ontology:constraint_victim(universal_mathematics_communication, none),
 spatial_scope(global)
 )
 ) :-
@@ -230,12 +227,12 @@ test(multi_perspective_utilization) :-
 constraint_indexing:constraint_classification(
 universal_mathematics_communication,
 mountain,
-context(powerless, immediate, trapped, _, _, local)
+context(agent_power(powerless), time_horizon(immediate), exit_options(trapped), spatial_scope(local))
 ),
 constraint_indexing:constraint_classification(
 universal_mathematics_communication,
 rope,
-context(institutional, historical, mobile, _, _, global)
+context(agent_power(institutional), time_horizon(historical), exit_options(mobile), spatial_scope(global))
 ).
 
 /**
@@ -254,7 +251,7 @@ E < 0.3.
 */
 test(time_immutability_scaling) :-
 % Immediate/Biographical + trapped tends to perceive Mountain
-constraint_indexing:constraint_classification(universal_mathematics_communication, mountain, context(_, immediate, trapped, _, _, _)).
+constraint_indexing:constraint_classification(universal_mathematics_communication, mountain, context(_, time_horizon(immediate), exit_options(trapped), _)).
 
 :- end_tests(universal_mathematics_tests).
 
