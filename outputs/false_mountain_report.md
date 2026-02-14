@@ -7,6 +7,7 @@
 ### 1. False Mountain: `26usc469_real_estate_exemption`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -36,6 +37,7 @@ IF context-dependent → Add indexical resolution
 ### 2. False Mountain: `CG_IsraelGaza_20231012`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -65,6 +67,7 @@ IF context-dependent → Add indexical resolution
 ### 3. False Mountain: `MOLTBOT_RELIGION`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -94,6 +97,7 @@ IF context-dependent → Add indexical resolution
 ### 4. False Mountain: `abstraction_boundary_overrun`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -123,6 +127,7 @@ IF context-dependent → Add indexical resolution
 ### 5. False Mountain: `abstraction_leakage`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -152,6 +157,7 @@ IF context-dependent → Add indexical resolution
 ### 6. False Mountain: `academic_fashion_modernism_2026`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -181,6 +187,7 @@ IF context-dependent → Add indexical resolution
 ### 7. False Mountain: `academic_peer_review_gatekeeping`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `mountain`
@@ -203,6 +210,7 @@ IF context-dependent → Add indexical resolution
 ### 8. False Mountain: `academic_tenure_system`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -225,6 +233,7 @@ IF context-dependent → Add indexical resolution
 ### 9. False Mountain: `ad_fus_coordination`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -254,6 +263,7 @@ IF context-dependent → Add indexical resolution
 ### 10. False Mountain: `ad_synaptic_deficit`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -276,6 +286,7 @@ IF context-dependent → Add indexical resolution
 ### 11. False Mountain: `adaptive_lag_trap`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -305,6 +316,7 @@ IF context-dependent → Add indexical resolution
 ### 12. False Mountain: `adversarial_surface_inflation`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -334,6 +346,7 @@ IF context-dependent → Add indexical resolution
 ### 13. False Mountain: `adversarial_truth_decay`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -363,6 +376,7 @@ IF context-dependent → Add indexical resolution
 ### 14. False Mountain: `adverse_possession`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -392,6 +406,7 @@ IF context-dependent → Add indexical resolution
 ### 15. False Mountain: `advice_as_dangerous_gift`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -421,6 +436,7 @@ IF context-dependent → Add indexical resolution
 ### 16. False Mountain: `agency_atrophy`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -450,6 +466,7 @@ IF context-dependent → Add indexical resolution
 ### 17. False Mountain: `agentive_optimism_2026`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -479,6 +496,7 @@ IF context-dependent → Add indexical resolution
 ### 18. False Mountain: `aging_well_assessment`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -508,6 +526,7 @@ IF context-dependent → Add indexical resolution
 ### 19. False Mountain: `ai_adoption_stigma`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -537,6 +556,7 @@ IF context-dependent → Add indexical resolution
 ### 20. False Mountain: `ai_auditability_gap`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -566,6 +586,7 @@ IF context-dependent → Add indexical resolution
 ### 21. False Mountain: `ai_banal_capture`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -595,6 +616,7 @@ IF context-dependent → Add indexical resolution
 ### 22. False Mountain: `ai_compute_capital_moat`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -624,6 +646,7 @@ IF context-dependent → Add indexical resolution
 ### 23. False Mountain: `ai_driven_surveillance_sensor_layer`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -646,6 +669,7 @@ IF context-dependent → Add indexical resolution
 ### 24. False Mountain: `ai_evaluators_matching`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -675,6 +699,7 @@ IF context-dependent → Add indexical resolution
 ### 25. False Mountain: `ai_nonconsensual_content_facilitation`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -704,6 +729,7 @@ IF context-dependent → Add indexical resolution
 ### 26. False Mountain: `ai_performance_watermark`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -733,6 +759,7 @@ IF context-dependent → Add indexical resolution
 ### 27. False Mountain: `ai_professional_displacement`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -762,6 +789,7 @@ IF context-dependent → Add indexical resolution
 ### 28. False Mountain: `ai_religion_regulation`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -791,6 +819,7 @@ IF context-dependent → Add indexical resolution
 ### 29. False Mountain: `ai_scholar_citation_trap`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -820,6 +849,7 @@ IF context-dependent → Add indexical resolution
 ### 30. False Mountain: `ai_superpowers_race_2026`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -849,6 +879,7 @@ IF context-dependent → Add indexical resolution
 ### 31. False Mountain: `ai_training_data_dependency`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -878,6 +909,7 @@ IF context-dependent → Add indexical resolution
 ### 32. False Mountain: `airport_slot_use_it_or_lose_it`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -907,6 +939,7 @@ IF context-dependent → Add indexical resolution
 ### 33. False Mountain: `algeria_france_colonial_legacy`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -936,6 +969,7 @@ IF context-dependent → Add indexical resolution
 ### 34. False Mountain: `algorithmic_bias`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -965,6 +999,7 @@ IF context-dependent → Add indexical resolution
 ### 35. False Mountain: `algorithmic_epistemic_capture`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -987,6 +1022,7 @@ IF context-dependent → Add indexical resolution
 ### 36. False Mountain: `alignment_tax_tradeoff`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -1009,6 +1045,7 @@ IF context-dependent → Add indexical resolution
 ### 37. False Mountain: `altruistic_misery_paradox_2026`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -1038,6 +1075,7 @@ IF context-dependent → Add indexical resolution
 ### 38. False Mountain: `alzheimers_levetiracetam`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -1067,6 +1105,7 @@ IF context-dependent → Add indexical resolution
 ### 39. False Mountain: `alzheimers_nlrp3_inflammasome`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -1096,6 +1135,7 @@ IF context-dependent → Add indexical resolution
 ### 40. False Mountain: `amish_technological_renunciation`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -1125,6 +1165,7 @@ IF context-dependent → Add indexical resolution
 ### 41. False Mountain: `ancestral_pueblo_hydrology`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -1154,6 +1195,7 @@ IF context-dependent → Add indexical resolution
 ### 42. False Mountain: `anticipatory_capacity_failure`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -1176,6 +1218,7 @@ IF context-dependent → Add indexical resolution
 ### 43. False Mountain: `apartheid_nuclear_program`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -1198,6 +1241,7 @@ IF context-dependent → Add indexical resolution
 ### 44. False Mountain: `ape_cognition_framework`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -1227,6 +1271,7 @@ IF context-dependent → Add indexical resolution
 ### 45. False Mountain: `appropriations_brinkmanship`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -1256,6 +1301,7 @@ IF context-dependent → Add indexical resolution
 ### 46. False Mountain: `arctic_geopolitical_flashpoint`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -1285,6 +1331,7 @@ IF context-dependent → Add indexical resolution
 ### 47. False Mountain: `arctic_maritime_control`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -1314,6 +1361,7 @@ IF context-dependent → Add indexical resolution
 ### 48. False Mountain: `arg_ev_tariff`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -1343,6 +1391,7 @@ IF context-dependent → Add indexical resolution
 ### 49. False Mountain: `armra_colostrum_regulation`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -1372,6 +1421,7 @@ IF context-dependent → Add indexical resolution
 ### 50. False Mountain: `arrows_impossibility_theorem`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -1401,6 +1451,7 @@ IF context-dependent → Add indexical resolution
 ### 51. False Mountain: `art_market_decoupling`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -1430,6 +1481,7 @@ IF context-dependent → Add indexical resolution
 ### 52. False Mountain: `artificial_scarcity_scaffold`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -1459,6 +1511,7 @@ IF context-dependent → Add indexical resolution
 ### 53. False Mountain: `artificial_snow_2026`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -1488,6 +1541,7 @@ IF context-dependent → Add indexical resolution
 ### 54. False Mountain: `asce_7_22_seismic_design`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -1517,6 +1571,7 @@ IF context-dependent → Add indexical resolution
 ### 55. False Mountain: `asymmetric_burden_distribution`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -1546,6 +1601,7 @@ IF context-dependent → Add indexical resolution
 ### 56. False Mountain: `atrophied_optimization_piton`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -1575,6 +1631,7 @@ IF context-dependent → Add indexical resolution
 ### 57. False Mountain: `attention_as_bottleneck_resource`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -1604,6 +1661,7 @@ IF context-dependent → Add indexical resolution
 ### 58. False Mountain: `attention_market_cannibalization`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -1633,6 +1691,7 @@ IF context-dependent → Add indexical resolution
 ### 59. False Mountain: `australia_social_ban_2026`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -1662,6 +1721,7 @@ IF context-dependent → Add indexical resolution
 ### 60. False Mountain: `automatic_enrollment_defaults`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -1691,6 +1751,7 @@ IF context-dependent → Add indexical resolution
 ### 61. False Mountain: `autonomous_toolchain_sprawl`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -1720,6 +1781,7 @@ IF context-dependent → Add indexical resolution
 ### 62. False Mountain: `availability_heuristic`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -1749,6 +1811,7 @@ IF context-dependent → Add indexical resolution
 ### 63. False Mountain: `average_is_over_2026`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -1778,6 +1841,7 @@ IF context-dependent → Add indexical resolution
 ### 64. False Mountain: `awareness_without_leverage`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -1807,6 +1871,7 @@ IF context-dependent → Add indexical resolution
 ### 65. False Mountain: `axiom_reasoner_2026`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -1836,6 +1901,7 @@ IF context-dependent → Add indexical resolution
 ### 66. False Mountain: `bangladesh_july_national_charter`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -1865,6 +1931,7 @@ IF context-dependent → Add indexical resolution
 ### 67. False Mountain: `belief_argument_conclusion`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -1894,6 +1961,7 @@ IF context-dependent → Add indexical resolution
 ### 68. False Mountain: `bgs_eigenvector_thermalization`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -1923,6 +1991,7 @@ IF context-dependent → Add indexical resolution
 ### 69. False Mountain: `big_data_astrophysics_arbitrage`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -1952,6 +2021,7 @@ IF context-dependent → Add indexical resolution
 ### 70. False Mountain: `biological_curiosity`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -1981,6 +2051,7 @@ IF context-dependent → Add indexical resolution
 ### 71. False Mountain: `bip_narrative_illusion`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -2010,6 +2081,7 @@ IF context-dependent → Add indexical resolution
 ### 72. False Mountain: `blackstone_conflicts_of_interest`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -2039,6 +2111,7 @@ IF context-dependent → Add indexical resolution
 ### 73. False Mountain: `blackstone_smd_control`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -2068,6 +2141,7 @@ IF context-dependent → Add indexical resolution
 ### 74. False Mountain: `blackstone_tax_receiveable_agreement`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -2097,6 +2171,7 @@ IF context-dependent → Add indexical resolution
 ### 75. False Mountain: `bnpl_payment_systems`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -2126,6 +2201,7 @@ IF context-dependent → Add indexical resolution
 ### 76. False Mountain: `board_of_peace_2026`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -2155,6 +2231,7 @@ IF context-dependent → Add indexical resolution
 ### 77. False Mountain: `boiled_pineapple_trend_2026`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -2184,6 +2261,7 @@ IF context-dependent → Add indexical resolution
 ### 78. False Mountain: `boltzmann_universality_2026`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -2213,6 +2291,7 @@ IF context-dependent → Add indexical resolution
 ### 79. False Mountain: `bor_tax_exemption_nl`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -2242,6 +2321,7 @@ IF context-dependent → Add indexical resolution
 ### 80. False Mountain: `boundary_dissolution_risk`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -2271,6 +2351,7 @@ IF context-dependent → Add indexical resolution
 ### 81. False Mountain: `brazil_2026_general_elections`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -2300,6 +2381,7 @@ IF context-dependent → Add indexical resolution
 ### 82. False Mountain: `brazil_mexico_financial_requirement`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -2329,6 +2411,7 @@ IF context-dependent → Add indexical resolution
 ### 83. False Mountain: `burali_forte_paradox`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -2358,6 +2441,7 @@ IF context-dependent → Add indexical resolution
 ### 84. False Mountain: `burden_of_proof_engineering_safety`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -2387,6 +2471,7 @@ IF context-dependent → Add indexical resolution
 ### 85. False Mountain: `burden_of_proof_scientific_empirical`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -2416,6 +2501,7 @@ IF context-dependent → Add indexical resolution
 ### 86. False Mountain: `bureaucratic_legibility_collapse`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -2445,6 +2531,7 @@ IF context-dependent → Add indexical resolution
 ### 87. False Mountain: `bureaucratic_self_preservation`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -2474,6 +2561,7 @@ IF context-dependent → Add indexical resolution
 ### 88. False Mountain: `bushman_money_magic`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -2503,6 +2591,7 @@ IF context-dependent → Add indexical resolution
 ### 89. False Mountain: `canal_panama_influence`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -2532,6 +2621,7 @@ IF context-dependent → Add indexical resolution
 ### 90. False Mountain: `cancer_prevention`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -2561,6 +2651,7 @@ IF context-dependent → Add indexical resolution
 ### 91. False Mountain: `capability_eval_overhang`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -2590,6 +2681,7 @@ IF context-dependent → Add indexical resolution
 ### 92. False Mountain: `capital_misallocation_spiral`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -2619,6 +2711,7 @@ IF context-dependent → Add indexical resolution
 ### 93. False Mountain: `capital_rotation_ai_narrative`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -2648,6 +2741,7 @@ IF context-dependent → Add indexical resolution
 ### 94. False Mountain: `carbon_credit_markets_2026`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -2677,6 +2771,7 @@ IF context-dependent → Add indexical resolution
 ### 95. False Mountain: `carrier_deployment_deterrence`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -2706,6 +2801,7 @@ IF context-dependent → Add indexical resolution
 ### 96. False Mountain: `carrying_capacity`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -2735,6 +2831,7 @@ IF context-dependent → Add indexical resolution
 ### 97. False Mountain: `cartel_drone_surveillance_el_paso`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -2764,6 +2861,7 @@ IF context-dependent → Add indexical resolution
 ### 98. False Mountain: `cascading_constraint_failure`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -2793,6 +2891,7 @@ IF context-dependent → Add indexical resolution
 ### 99. False Mountain: `cascading_uncertainty_2026`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -2822,6 +2921,7 @@ IF context-dependent → Add indexical resolution
 ### 100. False Mountain: `cbdc_implementation`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -2851,6 +2951,7 @@ IF context-dependent → Add indexical resolution
 ### 101. False Mountain: `cfius_hiefo_emcore_divestment`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -2880,6 +2981,7 @@ IF context-dependent → Add indexical resolution
 ### 102. False Mountain: `challenger_o_ring_integrity`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -2909,6 +3011,7 @@ IF context-dependent → Add indexical resolution
 ### 103. False Mountain: `champions_bass_fishing_exclusion`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -2938,6 +3041,7 @@ IF context-dependent → Add indexical resolution
 ### 104. False Mountain: `child_marriage`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -2967,6 +3071,7 @@ IF context-dependent → Add indexical resolution
 ### 105. False Mountain: `china_critical_mineral_chokepoint`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -2996,6 +3101,7 @@ IF context-dependent → Add indexical resolution
 ### 106. False Mountain: `china_ev_export_oversupply`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -3025,6 +3131,7 @@ IF context-dependent → Add indexical resolution
 ### 107. False Mountain: `china_vactrain_standard`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -3054,6 +3161,7 @@ IF context-dependent → Add indexical resolution
 ### 108. False Mountain: `cholesterol_pill_cost`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -3083,6 +3191,7 @@ IF context-dependent → Add indexical resolution
 ### 109. False Mountain: `chrome_imagen2_integration`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -3112,6 +3221,7 @@ IF context-dependent → Add indexical resolution
 ### 110. False Mountain: `cia_fbi_legal_wall`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -3141,6 +3251,7 @@ IF context-dependent → Add indexical resolution
 ### 111. False Mountain: `circadian_decoupling_arbitrage`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -3170,6 +3281,7 @@ IF context-dependent → Add indexical resolution
 ### 112. False Mountain: `citation_collapse_dynamics`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -3199,6 +3311,7 @@ IF context-dependent → Add indexical resolution
 ### 113. False Mountain: `civilizational_lifecycle_solara`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -3228,6 +3341,7 @@ IF context-dependent → Add indexical resolution
 ### 114. False Mountain: `civilizational_maintenance_debt`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -3257,6 +3371,7 @@ IF context-dependent → Add indexical resolution
 ### 115. False Mountain: `clawderberg_recursive_slop`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -3286,6 +3401,7 @@ IF context-dependent → Add indexical resolution
 ### 116. False Mountain: `cloudflare_dual_class_asymmetry`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -3315,6 +3431,7 @@ IF context-dependent → Add indexical resolution
 ### 117. False Mountain: `cmr_001`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -3344,6 +3461,7 @@ IF context-dependent → Add indexical resolution
 ### 118. False Mountain: `cn_tech_decoupling_security_software`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -3373,6 +3491,7 @@ IF context-dependent → Add indexical resolution
 ### 119. False Mountain: `coalition_disinfo_framework_2026`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -3402,6 +3521,7 @@ IF context-dependent → Add indexical resolution
 ### 120. False Mountain: `cobra_effect`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -3431,6 +3551,7 @@ IF context-dependent → Add indexical resolution
 ### 121. False Mountain: `codex_access`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -3460,6 +3581,7 @@ IF context-dependent → Add indexical resolution
 ### 122. False Mountain: `coffee_cardiovascular_2026`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -3489,6 +3611,7 @@ IF context-dependent → Add indexical resolution
 ### 123. False Mountain: `cognitive_diversity_arbitrage`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -3518,6 +3641,7 @@ IF context-dependent → Add indexical resolution
 ### 124. False Mountain: `cognitive_energy_budget`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -3547,6 +3671,7 @@ IF context-dependent → Add indexical resolution
 ### 125. False Mountain: `cognitive_hacking_2026`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -3576,6 +3701,7 @@ IF context-dependent → Add indexical resolution
 ### 126. False Mountain: `cognitive_induction_gap`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -3605,6 +3731,7 @@ IF context-dependent → Add indexical resolution
 ### 127. False Mountain: `cognitive_mimicry_arbitrage`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -3634,6 +3761,7 @@ IF context-dependent → Add indexical resolution
 ### 128. False Mountain: `cognitive_surrender_to_system_3`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -3663,6 +3791,7 @@ IF context-dependent → Add indexical resolution
 ### 129. False Mountain: `coinbase_crypto_volatility`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -3692,6 +3821,7 @@ IF context-dependent → Add indexical resolution
 ### 130. False Mountain: `coinbase_regulatory_uncertainty`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -3721,6 +3851,7 @@ IF context-dependent → Add indexical resolution
 ### 131. False Mountain: `cold_dark_matter_paradigm`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -3750,6 +3881,7 @@ IF context-dependent → Add indexical resolution
 ### 132. False Mountain: `collective_action_deadlock`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -3779,6 +3911,7 @@ IF context-dependent → Add indexical resolution
 ### 133. False Mountain: `college_admissions_market`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -3808,6 +3941,7 @@ IF context-dependent → Add indexical resolution
 ### 134. False Mountain: `colorado_sbe_decentralization_friction`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -3837,6 +3971,7 @@ IF context-dependent → Add indexical resolution
 ### 135. False Mountain: `communal_narcissism_social_trap`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -3866,6 +4001,7 @@ IF context-dependent → Add indexical resolution
 ### 136. False Mountain: `complexity_debt`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -3895,6 +4031,7 @@ IF context-dependent → Add indexical resolution
 ### 137. False Mountain: `compounding_logic`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -3924,6 +4061,7 @@ IF context-dependent → Add indexical resolution
 ### 138. False Mountain: `confirmation_bias`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -3953,6 +4091,7 @@ IF context-dependent → Add indexical resolution
 ### 139. False Mountain: `consensus_without_truth`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -3982,6 +4121,7 @@ IF context-dependent → Add indexical resolution
 ### 140. False Mountain: `constitutional_consecration`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -4011,6 +4151,7 @@ IF context-dependent → Add indexical resolution
 ### 141. False Mountain: `consumer_debt_slavery`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -4040,6 +4181,7 @@ IF context-dependent → Add indexical resolution
 ### 142. False Mountain: `container_capacity_mismatch`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -4069,6 +4211,7 @@ IF context-dependent → Add indexical resolution
 ### 143. False Mountain: `conversational_dogmas_interuption`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -4098,6 +4241,7 @@ IF context-dependent → Add indexical resolution
 ### 144. False Mountain: `coordination_attack_vulnerability`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -4127,6 +4271,7 @@ IF context-dependent → Add indexical resolution
 ### 145. False Mountain: `coordination_fatigue`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -4156,6 +4301,7 @@ IF context-dependent → Add indexical resolution
 ### 146. False Mountain: `coordination_threshold_failure`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -4185,6 +4331,7 @@ IF context-dependent → Add indexical resolution
 ### 147. False Mountain: `corporate_social_responsibility_theater`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -4214,6 +4361,7 @@ IF context-dependent → Add indexical resolution
 ### 148. False Mountain: `cost_of_observation`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -4243,6 +4391,7 @@ IF context-dependent → Add indexical resolution
 ### 149. False Mountain: `couples_residency_match`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -4272,6 +4421,7 @@ IF context-dependent → Add indexical resolution
 ### 150. False Mountain: `credentialism_national_security`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -4301,6 +4451,7 @@ IF context-dependent → Add indexical resolution
 ### 151. False Mountain: `credibility_inflation`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -4330,6 +4481,7 @@ IF context-dependent → Add indexical resolution
 ### 152. False Mountain: `crisis_signal_saturation`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -4359,6 +4511,7 @@ IF context-dependent → Add indexical resolution
 ### 153. False Mountain: `critical_actor_overcentralization`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -4388,6 +4541,7 @@ IF context-dependent → Add indexical resolution
 ### 154. False Mountain: `crop_defense_dependency`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -4417,6 +4571,7 @@ IF context-dependent → Add indexical resolution
 ### 155. False Mountain: `cross_domain_coupling_spiral`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -4446,6 +4601,7 @@ IF context-dependent → Add indexical resolution
 ### 156. False Mountain: `cs_ecmo_bridge`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -4475,6 +4631,7 @@ IF context-dependent → Add indexical resolution
 ### 157. False Mountain: `cuba_mandatrophic_collapse`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -4504,6 +4661,7 @@ IF context-dependent → Add indexical resolution
 ### 158. False Mountain: `cultural_homogenization_social_media`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -4533,6 +4691,7 @@ IF context-dependent → Add indexical resolution
 ### 159. False Mountain: `cultural_memory_decay`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -4562,6 +4721,7 @@ IF context-dependent → Add indexical resolution
 ### 160. False Mountain: `cultural_refragmentation_2026`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -4591,6 +4751,7 @@ IF context-dependent → Add indexical resolution
 ### 161. False Mountain: `cumbria_mine_rejection`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -4620,6 +4781,7 @@ IF context-dependent → Add indexical resolution
 ### 162. False Mountain: `cz_plea_agreement_2026`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -4649,6 +4811,7 @@ IF context-dependent → Add indexical resolution
 ### 163. False Mountain: `dark_patterns_manipulation`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -4678,6 +4841,7 @@ IF context-dependent → Add indexical resolution
 ### 164. False Mountain: `data_laundering_pipeline`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -4707,6 +4871,7 @@ IF context-dependent → Add indexical resolution
 ### 165. False Mountain: `data_privacy_regulation`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -4736,6 +4901,7 @@ IF context-dependent → Add indexical resolution
 ### 166. False Mountain: `debt_service_squeeze`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -4765,6 +4931,7 @@ IF context-dependent → Add indexical resolution
 ### 167. False Mountain: `debt_trap_microfinance`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -4794,6 +4961,7 @@ IF context-dependent → Add indexical resolution
 ### 168. False Mountain: `decision_latency_mismatch`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -4823,6 +4991,7 @@ IF context-dependent → Add indexical resolution
 ### 169. False Mountain: `deferred_risk_realization`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -4852,6 +5021,7 @@ IF context-dependent → Add indexical resolution
 ### 170. False Mountain: `delayed_feedback_instability`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -4881,6 +5051,7 @@ IF context-dependent → Add indexical resolution
 ### 171. False Mountain: `delta_force_selection_2026`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -4910,6 +5081,7 @@ IF context-dependent → Add indexical resolution
 ### 172. False Mountain: `demographic_inertia_trap`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -4939,6 +5111,7 @@ IF context-dependent → Add indexical resolution
 ### 173. False Mountain: `digital_credentialing_verification`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -4968,6 +5141,7 @@ IF context-dependent → Add indexical resolution
 ### 174. False Mountain: `digital_euro_cbdc`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -4997,6 +5171,7 @@ IF context-dependent → Add indexical resolution
 ### 175. False Mountain: `digital_identity_tether`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -5026,6 +5201,7 @@ IF context-dependent → Add indexical resolution
 ### 176. False Mountain: `dionysaic_frenzy`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -5055,6 +5231,7 @@ IF context-dependent → Add indexical resolution
 ### 177. False Mountain: `discover_core_2026`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -5084,6 +5261,7 @@ IF context-dependent → Add indexical resolution
 ### 178. False Mountain: `djia_as_economic_barometer`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -5113,6 +5291,7 @@ IF context-dependent → Add indexical resolution
 ### 179. False Mountain: `dk_foreign_convict_expulsion`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -5142,6 +5321,7 @@ IF context-dependent → Add indexical resolution
 ### 180. False Mountain: `dn_paywall`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -5171,6 +5351,7 @@ IF context-dependent → Add indexical resolution
 ### 181. False Mountain: `doomsday_clock_framework`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -5200,6 +5381,7 @@ IF context-dependent → Add indexical resolution
 ### 182. False Mountain: `dunning_kruger_effect`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -5229,6 +5411,7 @@ IF context-dependent → Add indexical resolution
 ### 183. False Mountain: `dutch_minority_govt_2026`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -5258,6 +5441,7 @@ IF context-dependent → Add indexical resolution
 ### 184. False Mountain: `dwp_carers_allowance_cliff`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -5287,6 +5471,7 @@ IF context-dependent → Add indexical resolution
 ### 185. False Mountain: `edelman_2026_developed_stagnation`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -5316,6 +5501,7 @@ IF context-dependent → Add indexical resolution
 ### 186. False Mountain: `edelman_2026_insularity`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -5345,6 +5531,7 @@ IF context-dependent → Add indexical resolution
 ### 187. False Mountain: `electrification_scale_2026`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -5374,6 +5561,7 @@ IF context-dependent → Add indexical resolution
 ### 188. False Mountain: `elencher_identity_transformation`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -5396,6 +5584,7 @@ IF context-dependent → Add indexical resolution
 ### 189. False Mountain: `elite_capture_2026`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -5425,6 +5614,7 @@ IF context-dependent → Add indexical resolution
 ### 190. False Mountain: `elite_identity_capture_2026`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -5454,6 +5644,7 @@ IF context-dependent → Add indexical resolution
 ### 191. False Mountain: `elite_overproduction_instability`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -5483,6 +5674,7 @@ IF context-dependent → Add indexical resolution
 ### 192. False Mountain: `elliq_ai_companion`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -5512,6 +5704,7 @@ IF context-dependent → Add indexical resolution
 ### 193. False Mountain: `emergency_deployment_scaffold`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -5541,6 +5734,7 @@ IF context-dependent → Add indexical resolution
 ### 194. False Mountain: `emergency_mode_lock_in`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -5570,6 +5764,7 @@ IF context-dependent → Add indexical resolution
 ### 195. False Mountain: `emergency_powers_ratchet`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -5599,6 +5794,7 @@ IF context-dependent → Add indexical resolution
 ### 196. False Mountain: `emergent_goal_misalignment`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -5628,6 +5824,7 @@ IF context-dependent → Add indexical resolution
 ### 197. False Mountain: `empty_tomb_transformation`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -5657,6 +5854,7 @@ IF context-dependent → Add indexical resolution
 ### 198. False Mountain: `emrgency_medicine_clinical_guidelines`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -5686,6 +5884,7 @@ IF context-dependent → Add indexical resolution
 ### 199. False Mountain: `endocrine_disruption_society`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -5715,6 +5914,7 @@ IF context-dependent → Add indexical resolution
 ### 200. False Mountain: `endowment_effect`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -5744,6 +5944,7 @@ IF context-dependent → Add indexical resolution
 ### 201. False Mountain: `epigenetics_complexity_2026`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -5773,6 +5974,7 @@ IF context-dependent → Add indexical resolution
 ### 202. False Mountain: `epistemic_free_rider_problem`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -5802,6 +6004,7 @@ IF context-dependent → Add indexical resolution
 ### 203. False Mountain: `epistemic_overload_collapse`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -5831,6 +6034,7 @@ IF context-dependent → Add indexical resolution
 ### 204. False Mountain: `epstein_espionage_crisis_2026`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -5860,6 +6064,7 @@ IF context-dependent → Add indexical resolution
 ### 205. False Mountain: `epstein_files_2026`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -5889,6 +6094,7 @@ IF context-dependent → Add indexical resolution
 ### 206. False Mountain: `epstein_kgb_honeytrap`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -5918,6 +6124,7 @@ IF context-dependent → Add indexical resolution
 ### 207. False Mountain: `ergo_rosen_bridge_protocol`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -5947,6 +6154,7 @@ IF context-dependent → Add indexical resolution
 ### 208. False Mountain: `ergo_storage_rent`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -5976,6 +6184,7 @@ IF context-dependent → Add indexical resolution
 ### 209. False Mountain: `ergo_storage_rent_mechanism`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -6005,6 +6214,7 @@ IF context-dependent → Add indexical resolution
 ### 210. False Mountain: `ergodic_theorems`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -6034,6 +6244,7 @@ IF context-dependent → Add indexical resolution
 ### 211. False Mountain: `ergot_grain_poisoning`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -6063,6 +6274,7 @@ IF context-dependent → Add indexical resolution
 ### 212. False Mountain: `eu_affordable_housing_initiative`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -6092,6 +6304,7 @@ IF context-dependent → Add indexical resolution
 ### 213. False Mountain: `eu_asylum_outsourcing_framework`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -6121,6 +6334,7 @@ IF context-dependent → Add indexical resolution
 ### 214. False Mountain: `eu_deforestation_regulation`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -6150,6 +6364,7 @@ IF context-dependent → Add indexical resolution
 ### 215. False Mountain: `eu_ev_tariff_wall`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -6179,6 +6394,7 @@ IF context-dependent → Add indexical resolution
 ### 216. False Mountain: `eu_irgc_terrorist_designation`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -6208,6 +6424,7 @@ IF context-dependent → Add indexical resolution
 ### 217. False Mountain: `eu_mercosur_trade_agreement`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -6237,6 +6454,7 @@ IF context-dependent → Add indexical resolution
 ### 218. False Mountain: `eu_renewable_energy_mandate`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -6266,6 +6484,7 @@ IF context-dependent → Add indexical resolution
 ### 219. False Mountain: `eu_unanimity_rule_foreign_policy`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -6295,6 +6514,7 @@ IF context-dependent → Add indexical resolution
 ### 220. False Mountain: `eurozone_fragmentation_2026`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -6324,6 +6544,7 @@ IF context-dependent → Add indexical resolution
 ### 221. False Mountain: `evfta_trade_agreement`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -6353,6 +6574,7 @@ IF context-dependent → Add indexical resolution
 ### 222. False Mountain: `evidence_half_life`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -6382,6 +6604,7 @@ IF context-dependent → Add indexical resolution
 ### 223. False Mountain: `evolutionary_knowledge`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -6411,6 +6634,7 @@ IF context-dependent → Add indexical resolution
 ### 224. False Mountain: `evolutionary_mismatch_load`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -6440,6 +6664,7 @@ IF context-dependent → Add indexical resolution
 ### 225. False Mountain: `expert_disempowerment`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -6469,6 +6694,7 @@ IF context-dependent → Add indexical resolution
 ### 226. False Mountain: `exploration_vs_exploitation`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -6498,6 +6724,7 @@ IF context-dependent → Add indexical resolution
 ### 227. False Mountain: `extraordinary_narrative_shift`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -6527,6 +6754,7 @@ IF context-dependent → Add indexical resolution
 ### 228. False Mountain: `factional_instability`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -6556,6 +6784,7 @@ IF context-dependent → Add indexical resolution
 ### 229. False Mountain: `family_estrangement_ratio`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -6585,6 +6814,7 @@ IF context-dependent → Add indexical resolution
 ### 230. False Mountain: `fcc_dji_covered_list`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -6614,6 +6844,7 @@ IF context-dependent → Add indexical resolution
 ### 231. False Mountain: `fda_component_efficacy_standard`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -6643,6 +6874,7 @@ IF context-dependent → Add indexical resolution
 ### 232. False Mountain: `feedback_loop_desynchronization`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -6672,6 +6904,7 @@ IF context-dependent → Add indexical resolution
 ### 233. False Mountain: `fiat_currency_lifecycle`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -6701,6 +6934,7 @@ IF context-dependent → Add indexical resolution
 ### 234. False Mountain: `financialization_drag`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -6730,6 +6964,7 @@ IF context-dependent → Add indexical resolution
 ### 235. False Mountain: `fine_particle_policy`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -6759,6 +6994,7 @@ IF context-dependent → Add indexical resolution
 ### 236. False Mountain: `finite_pool_of_worry`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -6788,6 +7024,7 @@ IF context-dependent → Add indexical resolution
 ### 237. False Mountain: `finnish_debt_adjustment`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -6817,6 +7054,7 @@ IF context-dependent → Add indexical resolution
 ### 238. False Mountain: `fiscal_dominance_trap`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -6846,6 +7084,7 @@ IF context-dependent → Add indexical resolution
 ### 239. False Mountain: `fittss_law`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -6875,6 +7114,7 @@ IF context-dependent → Add indexical resolution
 ### 240. False Mountain: `floating_wall_2026`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -6904,6 +7144,7 @@ IF context-dependent → Add indexical resolution
 ### 241. False Mountain: `fmeca_procedures_1980`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -6933,6 +7174,7 @@ IF context-dependent → Add indexical resolution
 ### 242. False Mountain: `fmt_oncology_realignment_2026`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -6962,6 +7204,7 @@ IF context-dependent → Add indexical resolution
 ### 243. False Mountain: `fragile_middle_layer_collapse`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -6991,6 +7234,7 @@ IF context-dependent → Add indexical resolution
 ### 244. False Mountain: `framing_effect`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -7020,6 +7264,7 @@ IF context-dependent → Add indexical resolution
 ### 245. False Mountain: `france_2027_presidential_election`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, unknown]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -7049,6 +7294,7 @@ IF context-dependent → Add indexical resolution
 ### 246. False Mountain: `france_cordon_sanitaire_2026`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -7071,6 +7317,7 @@ IF context-dependent → Add indexical resolution
 ### 247. False Mountain: `fraser_river_salmon_regulation`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -7100,6 +7347,7 @@ IF context-dependent → Add indexical resolution
 ### 248. False Mountain: `french_ag_land_concentration`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -7129,6 +7377,7 @@ IF context-dependent → Add indexical resolution
 ### 249. False Mountain: `french_local_elections_march_2026`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[scaffold, tangled_rope, unknown]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -7158,6 +7407,7 @@ IF context-dependent → Add indexical resolution
 ### 250. False Mountain: `frontex_pushback_coordination`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -7187,6 +7437,7 @@ IF context-dependent → Add indexical resolution
 ### 251. False Mountain: `future_dsm_integration_2026`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -7216,6 +7467,7 @@ IF context-dependent → Add indexical resolution
 ### 252. False Mountain: `g7_debt_trap`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -7245,6 +7497,7 @@ IF context-dependent → Add indexical resolution
 ### 253. False Mountain: `gale_shapley`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -7274,6 +7527,7 @@ IF context-dependent → Add indexical resolution
 ### 254. False Mountain: `gamblers_ruin_stochastic_extinction`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[scaffold, unknown]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -7303,6 +7557,7 @@ IF context-dependent → Add indexical resolution
 ### 255. False Mountain: `gaza_aid_permit_revocation`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -7332,6 +7587,7 @@ IF context-dependent → Add indexical resolution
 ### 256. False Mountain: `gaza_border_control_rafah`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -7361,6 +7617,7 @@ IF context-dependent → Add indexical resolution
 ### 257. False Mountain: `generational_replacement_inertia`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -7390,6 +7647,7 @@ IF context-dependent → Add indexical resolution
 ### 258. False Mountain: `genetic_algorithms_evolution`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -7419,6 +7677,7 @@ IF context-dependent → Add indexical resolution
 ### 259. False Mountain: `genetic_predisposition`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -7448,6 +7707,7 @@ IF context-dependent → Add indexical resolution
 ### 260. False Mountain: `genie_ip_constraint`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[scaffold, snare, unknown]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -7477,6 +7737,7 @@ IF context-dependent → Add indexical resolution
 ### 261. False Mountain: `geopolitical_insularity_2026`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -7506,6 +7767,7 @@ IF context-dependent → Add indexical resolution
 ### 262. False Mountain: `ghost_fishing_gear`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -7535,6 +7797,7 @@ IF context-dependent → Add indexical resolution
 ### 263. False Mountain: `gig_economy_algorithmic_managment`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -7564,6 +7827,7 @@ IF context-dependent → Add indexical resolution
 ### 264. False Mountain: `gita_kurukshetra`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -7593,6 +7857,7 @@ IF context-dependent → Add indexical resolution
 ### 265. False Mountain: `global_digital_divide`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -7622,6 +7887,7 @@ IF context-dependent → Add indexical resolution
 ### 266. False Mountain: `global_economic_anxiety_2026`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -7651,6 +7917,7 @@ IF context-dependent → Add indexical resolution
 ### 267. False Mountain: `global_stimulus_spree`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[scaffold, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -7680,6 +7947,7 @@ IF context-dependent → Add indexical resolution
 ### 268. False Mountain: `global_water_bankruptcy`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -7709,6 +7977,7 @@ IF context-dependent → Add indexical resolution
 ### 269. False Mountain: `goal_boundary_poisoning`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -7738,6 +8007,7 @@ IF context-dependent → Add indexical resolution
 ### 270. False Mountain: `gold_fomo_cycle`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -7767,6 +8037,7 @@ IF context-dependent → Add indexical resolution
 ### 271. False Mountain: `goodharts_law`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -7796,6 +8067,7 @@ IF context-dependent → Add indexical resolution
 ### 272. False Mountain: `google_ai_search_overview`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -7825,6 +8097,7 @@ IF context-dependent → Add indexical resolution
 ### 273. False Mountain: `google_universal_commerce_protocol`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[indexically_opaque, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -7854,6 +8127,7 @@ IF context-dependent → Add indexical resolution
 ### 274. False Mountain: `governance_latency_gap`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -7883,6 +8157,7 @@ IF context-dependent → Add indexical resolution
 ### 275. False Mountain: `governance_overfitting`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -7912,6 +8187,7 @@ IF context-dependent → Add indexical resolution
 ### 276. False Mountain: `gpt5_codex_dev_cycle`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -7941,6 +8217,7 @@ IF context-dependent → Add indexical resolution
 ### 277. False Mountain: `gpt_store_marketplace`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -7970,6 +8247,7 @@ IF context-dependent → Add indexical resolution
 ### 278. False Mountain: `graph_coloring_complexity`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -7999,6 +8277,7 @@ IF context-dependent → Add indexical resolution
 ### 279. False Mountain: `greenland_defence_pact_2026`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -8028,6 +8307,7 @@ IF context-dependent → Add indexical resolution
 ### 280. False Mountain: `greenland_seizure_trade_war`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -8057,6 +8337,7 @@ IF context-dependent → Add indexical resolution
 ### 281. False Mountain: `grievance_stack_overflow`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -8086,6 +8367,7 @@ IF context-dependent → Add indexical resolution
 ### 282. False Mountain: `guano_wealth_extraction`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -8115,6 +8397,7 @@ IF context-dependent → Add indexical resolution
 ### 283. False Mountain: `guinea_junta_legitimization_2024`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -8144,6 +8427,7 @@ IF context-dependent → Add indexical resolution
 ### 284. False Mountain: `guinea_worm_eradication`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, unknown]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -8173,6 +8457,7 @@ IF context-dependent → Add indexical resolution
 ### 285. False Mountain: `guthrie_kidnapping_2026`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -8202,6 +8487,7 @@ IF context-dependent → Add indexical resolution
 ### 286. False Mountain: `hammurabi`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -8231,6 +8517,7 @@ IF context-dependent → Add indexical resolution
 ### 287. False Mountain: `hanlons_razor`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -8260,6 +8547,7 @@ IF context-dependent → Add indexical resolution
 ### 288. False Mountain: `harry_potter_liberalism`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -8289,6 +8577,7 @@ IF context-dependent → Add indexical resolution
 ### 289. False Mountain: `hasbro_licensing_restriction`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -8318,6 +8607,7 @@ IF context-dependent → Add indexical resolution
 ### 290. False Mountain: `hawthorne_effect`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[scaffold, unknown]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -8347,6 +8637,7 @@ IF context-dependent → Add indexical resolution
 ### 291. False Mountain: `hegemonic_entropy_2026`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, unknown]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -8376,6 +8667,7 @@ IF context-dependent → Add indexical resolution
 ### 292. False Mountain: `heisenberg_uncertainty`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -8405,6 +8697,7 @@ IF context-dependent → Add indexical resolution
 ### 293. False Mountain: `help_to_buy_uk`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -8434,6 +8727,7 @@ IF context-dependent → Add indexical resolution
 ### 294. False Mountain: `helsinki_bus_theory`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -8463,6 +8757,7 @@ IF context-dependent → Add indexical resolution
 ### 295. False Mountain: `hershey_salt_strategy`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -8492,6 +8787,7 @@ IF context-dependent → Add indexical resolution
 ### 296. False Mountain: `hhs_fetal_tissue_research_ban_2019`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -8521,6 +8817,7 @@ IF context-dependent → Add indexical resolution
 ### 297. False Mountain: `hicbc_uk`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -8550,6 +8847,7 @@ IF context-dependent → Add indexical resolution
 ### 298. False Mountain: `hidden_interdependency_risk`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -8579,6 +8877,7 @@ IF context-dependent → Add indexical resolution
 ### 299. False Mountain: `hoa_covenants`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, unknown]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -8608,6 +8907,7 @@ IF context-dependent → Add indexical resolution
 ### 300. False Mountain: `hollow_state_syndrome`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -8637,6 +8937,7 @@ IF context-dependent → Add indexical resolution
 ### 301. False Mountain: `horizon_liability_contract`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -8666,6 +8967,7 @@ IF context-dependent → Add indexical resolution
 ### 302. False Mountain: `hu_2026_electoral_parity`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -8695,6 +8997,7 @@ IF context-dependent → Add indexical resolution
 ### 303. False Mountain: `huang_expectation_resilience_2026`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -8724,6 +9027,7 @@ IF context-dependent → Add indexical resolution
 ### 304. False Mountain: `hydra_game`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope, unknown]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -8753,6 +9057,7 @@ IF context-dependent → Add indexical resolution
 ### 305. False Mountain: `hypercompression_of_time_horizons`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -8782,6 +9087,7 @@ IF context-dependent → Add indexical resolution
 ### 306. False Mountain: `hypernormie_equilibrium`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -8811,6 +9117,7 @@ IF context-dependent → Add indexical resolution
 ### 307. False Mountain: `ibm_shield_2026`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -8840,6 +9147,7 @@ IF context-dependent → Add indexical resolution
 ### 308. False Mountain: `ibm_shield_contract_2026`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -8869,6 +9177,7 @@ IF context-dependent → Add indexical resolution
 ### 309. False Mountain: `ice_raids_minnesota_2026`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -8898,6 +9207,7 @@ IF context-dependent → Add indexical resolution
 ### 310. False Mountain: `ice_safe_departure`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -8927,6 +9237,7 @@ IF context-dependent → Add indexical resolution
 ### 311. False Mountain: `identity_stack_incompatibility`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -8956,6 +9267,7 @@ IF context-dependent → Add indexical resolution
 ### 312. False Mountain: `incentive_surface_warping`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -8985,6 +9297,7 @@ IF context-dependent → Add indexical resolution
 ### 313. False Mountain: `incumbent_steel_production`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -9014,6 +9327,7 @@ IF context-dependent → Add indexical resolution
 ### 314. False Mountain: `india_nuclear_liability_act_2010`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -9043,6 +9357,7 @@ IF context-dependent → Add indexical resolution
 ### 315. False Mountain: `india_semi_mission`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -9072,6 +9387,7 @@ IF context-dependent → Add indexical resolution
 ### 316. False Mountain: `indian_import_tariffs_eu`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -9101,6 +9417,7 @@ IF context-dependent → Add indexical resolution
 ### 317. False Mountain: `individual_revolution_autonomy`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -9130,6 +9447,7 @@ IF context-dependent → Add indexical resolution
 ### 318. False Mountain: `indo_german_defense_pact`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[indexically_opaque, rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -9159,6 +9477,7 @@ IF context-dependent → Add indexical resolution
 ### 319. False Mountain: `indonesia_penal_code_2023`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[indexically_opaque, rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -9188,6 +9507,7 @@ IF context-dependent → Add indexical resolution
 ### 320. False Mountain: `inference_cost_scaling_law`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -9217,6 +9537,7 @@ IF context-dependent → Add indexical resolution
 ### 321. False Mountain: `informational_time_2026`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -9246,6 +9567,7 @@ IF context-dependent → Add indexical resolution
 ### 322. False Mountain: `infrastructure_interoperability_decay`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -9275,6 +9597,7 @@ IF context-dependent → Add indexical resolution
 ### 323. False Mountain: `innovators_dilemma`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -9304,6 +9627,7 @@ IF context-dependent → Add indexical resolution
 ### 324. False Mountain: `institutional_inertia_lock`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -9333,6 +9657,7 @@ IF context-dependent → Add indexical resolution
 ### 325. False Mountain: `institutional_memory_loss`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -9362,6 +9687,7 @@ IF context-dependent → Add indexical resolution
 ### 326. False Mountain: `institutional_mutation_domestication`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -9391,6 +9717,7 @@ IF context-dependent → Add indexical resolution
 ### 327. False Mountain: `institutional_mutation_without_selection`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -9420,6 +9747,7 @@ IF context-dependent → Add indexical resolution
 ### 328. False Mountain: `institutional_trust_decay`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope, unknown]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -9449,6 +9777,7 @@ IF context-dependent → Add indexical resolution
 ### 329. False Mountain: `insult_wisdom_training`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope, unknown]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -9478,6 +9807,7 @@ IF context-dependent → Add indexical resolution
 ### 330. False Mountain: `integrated_digital_governance_stack`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -9507,6 +9837,7 @@ IF context-dependent → Add indexical resolution
 ### 331. False Mountain: `interaction_explosion`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -9529,6 +9860,7 @@ IF context-dependent → Add indexical resolution
 ### 332. False Mountain: `interface_contract_breakdown`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -9558,6 +9890,7 @@ IF context-dependent → Add indexical resolution
 ### 333. False Mountain: `intermediate_value_theorem`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -9587,6 +9920,7 @@ IF context-dependent → Add indexical resolution
 ### 334. False Mountain: `international_seabed_mining_regime`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[indexically_opaque, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -9616,6 +9950,7 @@ IF context-dependent → Add indexical resolution
 ### 335. False Mountain: `internet_archive_preservation`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[scaffold, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -9645,6 +9980,7 @@ IF context-dependent → Add indexical resolution
 ### 336. False Mountain: `internet_evolution_lifecycle`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -9674,6 +10010,7 @@ IF context-dependent → Add indexical resolution
 ### 337. False Mountain: `interpretive_frame_fragmentation`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -9703,6 +10040,7 @@ IF context-dependent → Add indexical resolution
 ### 338. False Mountain: `intertemporal_responsibility_gap`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -9732,6 +10070,7 @@ IF context-dependent → Add indexical resolution
 ### 339. False Mountain: `invisible_infrastructure_dependency`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -9761,6 +10100,7 @@ IF context-dependent → Add indexical resolution
 ### 340. False Mountain: `iran_guardian_council_vetting`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -9790,6 +10130,7 @@ IF context-dependent → Add indexical resolution
 ### 341. False Mountain: `iran_hijab_law`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -9819,6 +10160,7 @@ IF context-dependent → Add indexical resolution
 ### 342. False Mountain: `iran_mandatrophic_collapse`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -9848,6 +10190,7 @@ IF context-dependent → Add indexical resolution
 ### 343. False Mountain: `iran_nin_repression`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -9877,6 +10220,7 @@ IF context-dependent → Add indexical resolution
 ### 344. False Mountain: `iran_war_room_2026`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -9906,6 +10250,7 @@ IF context-dependent → Add indexical resolution
 ### 345. False Mountain: `iron_law_of_oligarchy`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -9935,6 +10280,7 @@ IF context-dependent → Add indexical resolution
 ### 346. False Mountain: `irreversible_policy_commitment`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -9964,6 +10310,7 @@ IF context-dependent → Add indexical resolution
 ### 347. False Mountain: `isa_education_scaffold`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[scaffold, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -9993,6 +10340,7 @@ IF context-dependent → Add indexical resolution
 ### 348. False Mountain: `israel_egypt_gas_deal`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -10022,6 +10370,7 @@ IF context-dependent → Add indexical resolution
 ### 349. False Mountain: `israel_electoral_threshold`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -10051,6 +10400,7 @@ IF context-dependent → Add indexical resolution
 ### 350. False Mountain: `israel_gaza_ceasefire_violation`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -10080,6 +10430,7 @@ IF context-dependent → Add indexical resolution
 ### 351. False Mountain: `israel_norwegian_law`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -10109,6 +10460,7 @@ IF context-dependent → Add indexical resolution
 ### 352. False Mountain: `israel_override_clause`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -10138,6 +10490,7 @@ IF context-dependent → Add indexical resolution
 ### 353. False Mountain: `israel_surplus_vote_agreements`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -10167,6 +10520,7 @@ IF context-dependent → Add indexical resolution
 ### 354. False Mountain: `iterated_function_systems`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -10196,6 +10550,7 @@ IF context-dependent → Add indexical resolution
 ### 355. False Mountain: `japanese_energy_scaffold_2025`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -10225,6 +10580,7 @@ IF context-dependent → Add indexical resolution
 ### 356. False Mountain: `jevons_paradox`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -10254,6 +10610,7 @@ IF context-dependent → Add indexical resolution
 ### 357. False Mountain: `job_hunt_volume_system_2026`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -10283,6 +10640,7 @@ IF context-dependent → Add indexical resolution
 ### 358. False Mountain: `jp_eez_enforcement`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -10312,6 +10670,7 @@ IF context-dependent → Add indexical resolution
 ### 359. False Mountain: `jp_nativist_politics`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[indexically_opaque, rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -10341,6 +10700,7 @@ IF context-dependent → Add indexical resolution
 ### 360. False Mountain: `khantivadin_radical_patience`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -10370,6 +10730,7 @@ IF context-dependent → Add indexical resolution
 ### 361. False Mountain: `kidney_exchange_market`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -10399,6 +10760,7 @@ IF context-dependent → Add indexical resolution
 ### 362. False Mountain: `kim_jong_un_succession`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -10428,6 +10790,7 @@ IF context-dependent → Add indexical resolution
 ### 363. False Mountain: `kirby_paris_theorem`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -10457,6 +10820,7 @@ IF context-dependent → Add indexical resolution
 ### 364. False Mountain: `labor_union_dues_structure`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -10486,6 +10850,7 @@ IF context-dependent → Add indexical resolution
 ### 365. False Mountain: `landscape_of_fear_2026`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -10508,6 +10873,7 @@ IF context-dependent → Add indexical resolution
 ### 366. False Mountain: `latent_goal_activation`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -10537,6 +10903,7 @@ IF context-dependent → Add indexical resolution
 ### 367. False Mountain: `latent_regulatory_bomb`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -10566,6 +10933,7 @@ IF context-dependent → Add indexical resolution
 ### 368. False Mountain: `lavender_ai_targeting`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -10595,6 +10963,7 @@ IF context-dependent → Add indexical resolution
 ### 369. False Mountain: `law_of_diminishing_returns`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -10624,6 +10993,7 @@ IF context-dependent → Add indexical resolution
 ### 370. False Mountain: `lcdm_hubble_tension`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -10653,6 +11023,7 @@ IF context-dependent → Add indexical resolution
 ### 371. False Mountain: `legal_formalism_overhang`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -10682,6 +11053,7 @@ IF context-dependent → Add indexical resolution
 ### 372. False Mountain: `legibility_trap`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -10711,6 +11083,7 @@ IF context-dependent → Add indexical resolution
 ### 373. False Mountain: `legitimacy_without_capacity`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -10740,6 +11113,7 @@ IF context-dependent → Add indexical resolution
 ### 374. False Mountain: `legitimacy_without_effectiveness`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -10769,6 +11143,7 @@ IF context-dependent → Add indexical resolution
 ### 375. False Mountain: `lehman_repo_105`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -10798,6 +11173,7 @@ IF context-dependent → Add indexical resolution
 ### 376. False Mountain: `lindy_effect`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -10827,6 +11203,7 @@ IF context-dependent → Add indexical resolution
 ### 377. False Mountain: `liquidity_illusion`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -10856,6 +11233,7 @@ IF context-dependent → Add indexical resolution
 ### 378. False Mountain: `litchfield_sensitive_locations_2026`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -10885,6 +11263,7 @@ IF context-dependent → Add indexical resolution
 ### 379. False Mountain: `logistic_map_dynamics`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `mountain`
@@ -10914,6 +11293,7 @@ IF context-dependent → Add indexical resolution
 ### 380. False Mountain: `lorenz_attractor_dynamics`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -10943,6 +11323,7 @@ IF context-dependent → Add indexical resolution
 ### 381. False Mountain: `lowenheim_skolem_theorem`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -10972,6 +11353,7 @@ IF context-dependent → Add indexical resolution
 ### 382. False Mountain: `lung_transplant_protocol`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -11001,6 +11383,7 @@ IF context-dependent → Add indexical resolution
 ### 383. False Mountain: `maintenance_capacity_shortfall`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -11030,6 +11413,7 @@ IF context-dependent → Add indexical resolution
 ### 384. False Mountain: `maladaptive_selection_process`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -11059,6 +11443,7 @@ IF context-dependent → Add indexical resolution
 ### 385. False Mountain: `mandatrophic_margin_collapse`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -11088,6 +11473,7 @@ IF context-dependent → Add indexical resolution
 ### 386. False Mountain: `mandatrophic_margin_collapse_diagnostic`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -11117,6 +11503,7 @@ IF context-dependent → Add indexical resolution
 ### 387. False Mountain: `manga_distribution_duopoly`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -11146,6 +11533,7 @@ IF context-dependent → Add indexical resolution
 ### 388. False Mountain: `marriage_market_asymmetry_2026`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -11175,6 +11563,7 @@ IF context-dependent → Add indexical resolution
 ### 389. False Mountain: `marriage_problem`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[scaffold]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -11204,6 +11593,7 @@ IF context-dependent → Add indexical resolution
 ### 390. False Mountain: `mass_market_extinction_2026`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -11233,6 +11623,7 @@ IF context-dependent → Add indexical resolution
 ### 391. False Mountain: `matching_markets_general`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -11262,6 +11653,7 @@ IF context-dependent → Add indexical resolution
 ### 392. False Mountain: `max_flow`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -11291,6 +11683,7 @@ IF context-dependent → Add indexical resolution
 ### 393. False Mountain: `med_diet_consensus_2026`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -11320,6 +11713,7 @@ IF context-dependent → Add indexical resolution
 ### 394. False Mountain: `medical_residency_match`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -11349,6 +11743,7 @@ IF context-dependent → Add indexical resolution
 ### 395. False Mountain: `medieval_church_hegemony`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -11378,6 +11773,7 @@ IF context-dependent → Add indexical resolution
 ### 396. False Mountain: `memetic_fitness_vs_truth`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -11407,6 +11803,7 @@ IF context-dependent → Add indexical resolution
 ### 397. False Mountain: `meta_governance_overload`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -11436,6 +11833,7 @@ IF context-dependent → Add indexical resolution
 ### 398. False Mountain: `meta_model_lock_in`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -11465,6 +11863,7 @@ IF context-dependent → Add indexical resolution
 ### 399. False Mountain: `meta_pay_or_okay_model`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[indexically_opaque, rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -11494,6 +11893,7 @@ IF context-dependent → Add indexical resolution
 ### 400. False Mountain: `metabolic_constraint_cognition`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -11523,6 +11923,7 @@ IF context-dependent → Add indexical resolution
 ### 401. False Mountain: `mexican_airline_merger`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -11552,6 +11953,7 @@ IF context-dependent → Add indexical resolution
 ### 402. False Mountain: `microbiome_symbiosis`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `mountain`
@@ -11581,6 +11983,7 @@ IF context-dependent → Add indexical resolution
 ### 403. False Mountain: `microwave_weapon_1`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -11610,6 +12013,7 @@ IF context-dependent → Add indexical resolution
 ### 404. False Mountain: `mil_std_461g_emi_control`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -11639,6 +12043,7 @@ IF context-dependent → Add indexical resolution
 ### 405. False Mountain: `mil_std_810f_tailoring`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -11668,6 +12073,7 @@ IF context-dependent → Add indexical resolution
 ### 406. False Mountain: `minimax_theorem`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -11697,6 +12103,7 @@ IF context-dependent → Add indexical resolution
 ### 407. False Mountain: `minnesota_sovereignty_2026`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -11726,6 +12133,7 @@ IF context-dependent → Add indexical resolution
 ### 408. False Mountain: `misunderstanding_as_mismatch`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -11755,6 +12163,7 @@ IF context-dependent → Add indexical resolution
 ### 409. False Mountain: `mit_tfus_consciousness_2026`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[scaffold, snare, unknown]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -11784,6 +12193,7 @@ IF context-dependent → Add indexical resolution
 ### 410. False Mountain: `model_autonomy_creep`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -11806,6 +12216,7 @@ IF context-dependent → Add indexical resolution
 ### 411. False Mountain: `model_collapse_feedback_loop`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -11835,6 +12246,7 @@ IF context-dependent → Add indexical resolution
 ### 412. False Mountain: `model_of_models_regression`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -11864,6 +12276,7 @@ IF context-dependent → Add indexical resolution
 ### 413. False Mountain: `moltbook_agent_theater`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope, unknown]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -11893,6 +12306,7 @@ IF context-dependent → Add indexical resolution
 ### 414. False Mountain: `moltbook_breach_2026`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -11922,6 +12336,7 @@ IF context-dependent → Add indexical resolution
 ### 415. False Mountain: `monetary_regime_transition`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -11951,6 +12366,7 @@ IF context-dependent → Add indexical resolution
 ### 416. False Mountain: `moral_outsourcing`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -11980,6 +12396,7 @@ IF context-dependent → Add indexical resolution
 ### 417. False Mountain: `mrna_melanoma_therapy`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -12009,6 +12426,7 @@ IF context-dependent → Add indexical resolution
 ### 418. False Mountain: `multi_agent_reward_hacking`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -12038,6 +12456,7 @@ IF context-dependent → Add indexical resolution
 ### 419. False Mountain: `multi_planetary_latency_lock`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -12067,6 +12486,7 @@ IF context-dependent → Add indexical resolution
 ### 420. False Mountain: `naming_as_control`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -12096,6 +12516,7 @@ IF context-dependent → Add indexical resolution
 ### 421. False Mountain: `narcissistic_ego_maintenance`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -12125,6 +12546,7 @@ IF context-dependent → Add indexical resolution
 ### 422. False Mountain: `narrative_capacity_exhaustion`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -12154,6 +12576,7 @@ IF context-dependent → Add indexical resolution
 ### 423. False Mountain: `narrative_overfitting`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -12183,6 +12606,7 @@ IF context-dependent → Add indexical resolution
 ### 424. False Mountain: `ncaa_eligibility_rules`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -12212,6 +12636,7 @@ IF context-dependent → Add indexical resolution
 ### 425. False Mountain: `nds_2022_pacing_challenge`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -12241,6 +12666,7 @@ IF context-dependent → Add indexical resolution
 ### 426. False Mountain: `necessary_day_job`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -12270,6 +12696,7 @@ IF context-dependent → Add indexical resolution
 ### 427. False Mountain: `negative_emissions_arbitrage`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope, unknown]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -12299,6 +12726,7 @@ IF context-dependent → Add indexical resolution
 ### 428. False Mountain: `net_zero_stabilization`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, unknown]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -12328,6 +12756,7 @@ IF context-dependent → Add indexical resolution
 ### 429. False Mountain: `network_effects`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -12357,6 +12786,7 @@ IF context-dependent → Add indexical resolution
 ### 430. False Mountain: `neural_interoperability`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, unknown]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -12386,6 +12816,7 @@ IF context-dependent → Add indexical resolution
 ### 431. False Mountain: `neural_substrate_2026`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -12415,6 +12846,7 @@ IF context-dependent → Add indexical resolution
 ### 432. False Mountain: `neurodiversity_spectrum`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope, unknown]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -12444,6 +12876,7 @@ IF context-dependent → Add indexical resolution
 ### 433. False Mountain: `new_start_expiration`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -12473,6 +12906,7 @@ IF context-dependent → Add indexical resolution
 ### 434. False Mountain: `news_paywall_inequality`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -12502,6 +12936,7 @@ IF context-dependent → Add indexical resolution
 ### 435. False Mountain: `nfl_superbowl_halftime_exclusivity`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -12531,6 +12966,7 @@ IF context-dependent → Add indexical resolution
 ### 436. False Mountain: `nfl_superbowl_marketing_regulation`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -12560,6 +12996,7 @@ IF context-dependent → Add indexical resolution
 ### 437. False Mountain: `nine_day_buffer`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -12589,6 +13026,7 @@ IF context-dependent → Add indexical resolution
 ### 438. False Mountain: `no_cloning_theorem`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -12618,6 +13056,7 @@ IF context-dependent → Add indexical resolution
 ### 439. False Mountain: `noethers_isomorphism_theorems`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -12647,6 +13086,7 @@ IF context-dependent → Add indexical resolution
 ### 440. False Mountain: `non_compete_agreements`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -12676,6 +13116,7 @@ IF context-dependent → Add indexical resolution
 ### 441. False Mountain: `norm_erosion_threshold`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -12705,6 +13146,7 @@ IF context-dependent → Add indexical resolution
 ### 442. False Mountain: `north_korea_songun_mandatrophy`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -12734,6 +13176,7 @@ IF context-dependent → Add indexical resolution
 ### 443. False Mountain: `north_sea_wind_grid`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -12763,6 +13206,7 @@ IF context-dependent → Add indexical resolution
 ### 444. False Mountain: `notary_ink_dependency`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope, unknown]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -12792,6 +13236,7 @@ IF context-dependent → Add indexical resolution
 ### 445. False Mountain: `nsl_hk`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -12821,6 +13266,7 @@ IF context-dependent → Add indexical resolution
 ### 446. False Mountain: `nsw_transmission_bottleneck`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[scaffold, snare, unknown]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -12850,6 +13296,7 @@ IF context-dependent → Add indexical resolution
 ### 447. False Mountain: `nuclear_vacuum_2026`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -12879,6 +13326,7 @@ IF context-dependent → Add indexical resolution
 ### 448. False Mountain: `nvidia_cuda_ecosystem_lockin`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[indexically_opaque, rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -12908,6 +13356,7 @@ IF context-dependent → Add indexical resolution
 ### 449. False Mountain: `ny_private_school_discount`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -12937,6 +13386,7 @@ IF context-dependent → Add indexical resolution
 ### 450. False Mountain: `nyc_metrocard_art_licensing`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -12966,6 +13416,7 @@ IF context-dependent → Add indexical resolution
 ### 451. False Mountain: `olympic_medal_allocation`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope, unknown]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -12995,6 +13446,7 @@ IF context-dependent → Add indexical resolution
 ### 452. False Mountain: `omega1_patches`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -13024,6 +13476,7 @@ IF context-dependent → Add indexical resolution
 ### 453. False Mountain: `omelet_perfection_complexity`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, unknown]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -13053,6 +13506,7 @@ IF context-dependent → Add indexical resolution
 ### 454. False Mountain: `openai_api_access`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[scaffold, snare, unknown]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -13082,6 +13536,7 @@ IF context-dependent → Add indexical resolution
 ### 455. False Mountain: `openai_codex_app_constraint`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[scaffold, snare, unknown]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -13111,6 +13566,7 @@ IF context-dependent → Add indexical resolution
 ### 456. False Mountain: `openai_health_review`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -13140,6 +13596,7 @@ IF context-dependent → Add indexical resolution
 ### 457. False Mountain: `openai_implicit_translator`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -13169,6 +13626,7 @@ IF context-dependent → Add indexical resolution
 ### 458. False Mountain: `openai_prism_development`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[indexically_opaque, rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -13198,6 +13656,7 @@ IF context-dependent → Add indexical resolution
 ### 459. False Mountain: `openbsd_netiquette_protocol`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -13227,6 +13686,7 @@ IF context-dependent → Add indexical resolution
 ### 460. False Mountain: `openclaw_data_lock_in`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -13256,6 +13716,7 @@ IF context-dependent → Add indexical resolution
 ### 461. False Mountain: `openclaw_regulation`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -13285,6 +13746,7 @@ IF context-dependent → Add indexical resolution
 ### 462. False Mountain: `openscholar_peer_review`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[scaffold, snare, unknown]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -13314,6 +13776,7 @@ IF context-dependent → Add indexical resolution
 ### 463. False Mountain: `opioid_political_realignment_2026`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -13343,6 +13806,7 @@ IF context-dependent → Add indexical resolution
 ### 464. False Mountain: `optimization_fragility`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -13365,6 +13829,7 @@ IF context-dependent → Add indexical resolution
 ### 465. False Mountain: `oral_glp1_market_access`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -13394,6 +13859,7 @@ IF context-dependent → Add indexical resolution
 ### 466. False Mountain: `orbital_data_center_2026`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -13423,6 +13889,7 @@ IF context-dependent → Add indexical resolution
 ### 467. False Mountain: `oscar_campaign_spending`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -13452,6 +13919,7 @@ IF context-dependent → Add indexical resolution
 ### 468. False Mountain: `other_peoples_troubles_2026`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -13481,6 +13949,7 @@ IF context-dependent → Add indexical resolution
 ### 469. False Mountain: `overfitting_to_frameworks`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -13510,6 +13979,7 @@ IF context-dependent → Add indexical resolution
 ### 470. False Mountain: `overton_window`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -13539,6 +14009,7 @@ IF context-dependent → Add indexical resolution
 ### 471. False Mountain: `p_g_golden_pear_surveillance`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -13568,6 +14039,7 @@ IF context-dependent → Add indexical resolution
 ### 472. False Mountain: `p_vs_np`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[mountain]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -13597,6 +14069,7 @@ IF context-dependent → Add indexical resolution
 ### 473. False Mountain: `panama_canal_ports`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -13626,6 +14099,7 @@ IF context-dependent → Add indexical resolution
 ### 474. False Mountain: `parable_fish_turtle`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -13655,6 +14129,7 @@ IF context-dependent → Add indexical resolution
 ### 475. False Mountain: `paradoxical_decompositions`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -13684,6 +14159,7 @@ IF context-dependent → Add indexical resolution
 ### 476. False Mountain: `parkinsons_law`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -13713,6 +14189,7 @@ IF context-dependent → Add indexical resolution
 ### 477. False Mountain: `participatory_observer_hypothesis`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -13742,6 +14219,7 @@ IF context-dependent → Add indexical resolution
 ### 478. False Mountain: `paxsilica_framework`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -13771,6 +14249,7 @@ IF context-dependent → Add indexical resolution
 ### 479. False Mountain: `pe_fund_level_leverage`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -13800,6 +14279,7 @@ IF context-dependent → Add indexical resolution
 ### 480. False Mountain: `pe_rental_market_lockin`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -13829,6 +14309,7 @@ IF context-dependent → Add indexical resolution
 ### 481. False Mountain: `perovskite_self_etching`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[scaffold, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -13858,6 +14339,7 @@ IF context-dependent → Add indexical resolution
 ### 482. False Mountain: `personalized_nutritional_arbitrage`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -13887,6 +14369,7 @@ IF context-dependent → Add indexical resolution
 ### 483. False Mountain: `peter_principle`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -13916,6 +14399,7 @@ IF context-dependent → Add indexical resolution
 ### 484. False Mountain: `pla_loyalty_purge`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -13945,6 +14429,7 @@ IF context-dependent → Add indexical resolution
 ### 485. False Mountain: `planetary_boundaries`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -13974,6 +14459,7 @@ IF context-dependent → Add indexical resolution
 ### 486. False Mountain: `planetary_diet_constraint_2026`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -14003,6 +14489,7 @@ IF context-dependent → Add indexical resolution
 ### 487. False Mountain: `planning_fallacy`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -14032,6 +14519,7 @@ IF context-dependent → Add indexical resolution
 ### 488. False Mountain: `plastic_asphalt_mandate`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -14061,6 +14549,7 @@ IF context-dependent → Add indexical resolution
 ### 489. False Mountain: `platform_app_store_duopoly`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -14090,6 +14579,7 @@ IF context-dependent → Add indexical resolution
 ### 490. False Mountain: `platonic_coparenting_decoupling`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[scaffold, unknown]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -14119,6 +14609,7 @@ IF context-dependent → Add indexical resolution
 ### 491. False Mountain: `po_investigation_protocol_bias`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -14148,6 +14639,7 @@ IF context-dependent → Add indexical resolution
 ### 492. False Mountain: `poetic_verse_and_past`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -14177,6 +14669,7 @@ IF context-dependent → Add indexical resolution
 ### 493. False Mountain: `policy_lag_catastrophe`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -14206,6 +14699,7 @@ IF context-dependent → Add indexical resolution
 ### 494. False Mountain: `politeness_face_negotiation`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -14235,6 +14729,7 @@ IF context-dependent → Add indexical resolution
 ### 495. False Mountain: `portugal_government_stability_ad`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[scaffold, tangled_rope, unknown]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -14264,6 +14759,7 @@ IF context-dependent → Add indexical resolution
 ### 496. False Mountain: `portugal_polarization_threshold_2026`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -14293,6 +14789,7 @@ IF context-dependent → Add indexical resolution
 ### 497. False Mountain: `power_without_responsibility`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -14322,6 +14819,7 @@ IF context-dependent → Add indexical resolution
 ### 498. False Mountain: `prestige_signal_inflation`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -14351,6 +14849,7 @@ IF context-dependent → Add indexical resolution
 ### 499. False Mountain: `price_signal_corruption`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -14380,6 +14879,7 @@ IF context-dependent → Add indexical resolution
 ### 500. False Mountain: `prime_age_male_unwork`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -14409,6 +14909,7 @@ IF context-dependent → Add indexical resolution
 ### 501. False Mountain: `private_credit_market_opacity`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -14438,6 +14939,7 @@ IF context-dependent → Add indexical resolution
 ### 502. False Mountain: `private_identity_integration`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -14467,6 +14969,7 @@ IF context-dependent → Add indexical resolution
 ### 503. False Mountain: `procedural_compliance_theater`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -14496,6 +14999,7 @@ IF context-dependent → Add indexical resolution
 ### 504. False Mountain: `procedural_legitimacy_decay`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -14525,6 +15029,7 @@ IF context-dependent → Add indexical resolution
 ### 505. False Mountain: `project_vault_extraction_2026`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -14554,6 +15059,7 @@ IF context-dependent → Add indexical resolution
 ### 506. False Mountain: `protocol_capture_tangled_rope`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -14583,6 +15089,7 @@ IF context-dependent → Add indexical resolution
 ### 507. False Mountain: `protocol_drift_accumulation`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -14612,6 +15119,7 @@ IF context-dependent → Add indexical resolution
 ### 508. False Mountain: `qualified_immunity`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -14641,6 +15149,7 @@ IF context-dependent → Add indexical resolution
 ### 509. False Mountain: `quellcrist_falconer_justice`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -14670,6 +15179,7 @@ IF context-dependent → Add indexical resolution
 ### 510. False Mountain: `qwerty_vs_dvorak`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[scaffold, unknown]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -14699,6 +15209,7 @@ IF context-dependent → Add indexical resolution
 ### 511. False Mountain: `raac_school_maintenance`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -14728,6 +15239,7 @@ IF context-dependent → Add indexical resolution
 ### 512. False Mountain: `radiologic_diagnostic_threshold`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -14757,6 +15269,7 @@ IF context-dependent → Add indexical resolution
 ### 513. False Mountain: `rare_earth_dependency`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -14786,6 +15299,7 @@ IF context-dependent → Add indexical resolution
 ### 514. False Mountain: `rare_earth_export_restrictions`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -14815,6 +15329,7 @@ IF context-dependent → Add indexical resolution
 ### 515. False Mountain: `rare_earth_hydrogen_extraction`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -14844,6 +15359,7 @@ IF context-dependent → Add indexical resolution
 ### 516. False Mountain: `rare_earth_seabed_mining`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -14873,6 +15389,7 @@ IF context-dependent → Add indexical resolution
 ### 517. False Mountain: `rational_inertia_trap`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -14902,6 +15419,7 @@ IF context-dependent → Add indexical resolution
 ### 518. False Mountain: `recipe_scaling_ai`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[scaffold, unknown]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -14931,6 +15449,7 @@ IF context-dependent → Add indexical resolution
 ### 519. False Mountain: `regional_military_deterrence_mideast`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -14960,6 +15479,7 @@ IF context-dependent → Add indexical resolution
 ### 520. False Mountain: `regulatory_capture`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, unknown]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -14989,6 +15509,7 @@ IF context-dependent → Add indexical resolution
 ### 521. False Mountain: `rent_seeking_equilibrium`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -15018,6 +15539,7 @@ IF context-dependent → Add indexical resolution
 ### 522. False Mountain: `repair_probe_incomplete`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, unknown]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -15047,6 +15569,7 @@ IF context-dependent → Add indexical resolution
 ### 523. False Mountain: `reputational_cascade_failure`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -15076,6 +15599,7 @@ IF context-dependent → Add indexical resolution
 ### 524. False Mountain: `responsibility_dilution`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -15105,6 +15629,7 @@ IF context-dependent → Add indexical resolution
 ### 525. False Mountain: `responsibility_without_power`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -15134,6 +15659,7 @@ IF context-dependent → Add indexical resolution
 ### 526. False Mountain: `rfc9293_interoperability`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, unknown]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -15163,6 +15689,7 @@ IF context-dependent → Add indexical resolution
 ### 527. False Mountain: `riot_incentive_loop_2026`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -15192,6 +15719,7 @@ IF context-dependent → Add indexical resolution
 ### 528. False Mountain: `risk_socialization_threshold`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -15221,6 +15749,7 @@ IF context-dependent → Add indexical resolution
 ### 529. False Mountain: `ritual_without_belief`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -15250,6 +15779,7 @@ IF context-dependent → Add indexical resolution
 ### 530. False Mountain: `robustness_vs_efficiency_tradeoff`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -15279,6 +15809,7 @@ IF context-dependent → Add indexical resolution
 ### 531. False Mountain: `rotation_seven_black_soil`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, unknown]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -15308,6 +15839,7 @@ IF context-dependent → Add indexical resolution
 ### 532. False Mountain: `rotation_seven_isolation`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -15337,6 +15869,7 @@ IF context-dependent → Add indexical resolution
 ### 533. False Mountain: `rotation_seven_kubo_ranking`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -15366,6 +15899,7 @@ IF context-dependent → Add indexical resolution
 ### 534. False Mountain: `royal_navy_middle_east_withdrawal`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope, unknown]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -15395,6 +15929,7 @@ IF context-dependent → Add indexical resolution
 ### 535. False Mountain: `rule_update_failure`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope, unknown]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -15424,6 +15959,7 @@ IF context-dependent → Add indexical resolution
 ### 536. False Mountain: `rules_based_international_order`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -15453,6 +15989,7 @@ IF context-dependent → Add indexical resolution
 ### 537. False Mountain: `russells_paradox_self_reference`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[scaffold, unknown]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -15482,6 +16019,7 @@ IF context-dependent → Add indexical resolution
 ### 538. False Mountain: `russian_war_cannibalization`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -15511,6 +16049,7 @@ IF context-dependent → Add indexical resolution
 ### 539. False Mountain: `s1_airbnb`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -15540,6 +16079,7 @@ IF context-dependent → Add indexical resolution
 ### 540. False Mountain: `sa_renewable_price_differential`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -15569,6 +16109,7 @@ IF context-dependent → Add indexical resolution
 ### 541. False Mountain: `sapir_whorf_hypothesis`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -15598,6 +16139,7 @@ IF context-dependent → Add indexical resolution
 ### 542. False Mountain: `sat_csp_complexity`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -15627,6 +16169,7 @@ IF context-dependent → Add indexical resolution
 ### 543. False Mountain: `scam_compound_grey_zone_2026`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -15656,6 +16199,7 @@ IF context-dependent → Add indexical resolution
 ### 544. False Mountain: `scurvy_maritime_extraction`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -15685,6 +16229,7 @@ IF context-dependent → Add indexical resolution
 ### 545. False Mountain: `second_order_unintended_consequences`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -15714,6 +16259,7 @@ IF context-dependent → Add indexical resolution
 ### 546. False Mountain: `semantic_attack_surface`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -15743,6 +16289,7 @@ IF context-dependent → Add indexical resolution
 ### 547. False Mountain: `semantic_overload_friction`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -15772,6 +16319,7 @@ IF context-dependent → Add indexical resolution
 ### 548. False Mountain: `semiconductor_fabrication_chokepoint`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[indexically_opaque, rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -15801,6 +16349,7 @@ IF context-dependent → Add indexical resolution
 ### 549. False Mountain: `semiconductor_mission_2026`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -15830,6 +16379,7 @@ IF context-dependent → Add indexical resolution
 ### 550. False Mountain: `shadow_fleet_sanctions_evasion`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -15859,6 +16409,7 @@ IF context-dependent → Add indexical resolution
 ### 551. False Mountain: `shadow_pricing_failure`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -15888,6 +16439,7 @@ IF context-dependent → Add indexical resolution
 ### 552. False Mountain: `shield_east_fortification`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[indexically_opaque, rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -15917,6 +16469,7 @@ IF context-dependent → Add indexical resolution
 ### 553. False Mountain: `shobies_existential_commitment`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -15946,6 +16499,7 @@ IF context-dependent → Add indexical resolution
 ### 554. False Mountain: `shock_propagation_asymmetry`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -15975,6 +16529,7 @@ IF context-dependent → Add indexical resolution
 ### 555. False Mountain: `signal_without_control`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -16004,6 +16559,7 @@ IF context-dependent → Add indexical resolution
 ### 556. False Mountain: `silent_dependency_activation`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -16033,6 +16589,7 @@ IF context-dependent → Add indexical resolution
 ### 557. False Mountain: `silicon_lexicon_overload`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -16062,6 +16619,7 @@ IF context-dependent → Add indexical resolution
 ### 558. False Mountain: `sk_ai_act_2026`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -16091,6 +16649,7 @@ IF context-dependent → Add indexical resolution
 ### 559. False Mountain: `skolems_paradox`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -16120,6 +16679,7 @@ IF context-dependent → Add indexical resolution
 ### 560. False Mountain: `sleep_debt_externality`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -16149,6 +16709,7 @@ IF context-dependent → Add indexical resolution
 ### 561. False Mountain: `slow_crisis_invisibility`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -16178,6 +16739,7 @@ IF context-dependent → Add indexical resolution
 ### 562. False Mountain: `sludge_bureaucratic_friction`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -16207,6 +16769,7 @@ IF context-dependent → Add indexical resolution
 ### 563. False Mountain: `sm_addictive_design`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -16236,6 +16799,7 @@ IF context-dependent → Add indexical resolution
 ### 564. False Mountain: `smartphone_ubiquity`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope, unknown]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -16265,6 +16829,7 @@ IF context-dependent → Add indexical resolution
 ### 565. False Mountain: `social_credit_architecture`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -16294,6 +16859,7 @@ IF context-dependent → Add indexical resolution
 ### 566. False Mountain: `social_loafing`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -16323,6 +16889,7 @@ IF context-dependent → Add indexical resolution
 ### 567. False Mountain: `social_media_participation_threshold`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -16352,6 +16919,7 @@ IF context-dependent → Add indexical resolution
 ### 568. False Mountain: `soe_property_bailout`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -16381,6 +16949,7 @@ IF context-dependent → Add indexical resolution
 ### 569. False Mountain: `soft_authoritarian_drift`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -16410,6 +16979,7 @@ IF context-dependent → Add indexical resolution
 ### 570. False Mountain: `somatic_focusing_awareness`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, unknown]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -16439,6 +17009,7 @@ IF context-dependent → Add indexical resolution
 ### 571. False Mountain: `sorites_paradox`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -16468,6 +17039,7 @@ IF context-dependent → Add indexical resolution
 ### 572. False Mountain: `south_china_sea_arbitration_2016_2026`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -16497,6 +17069,7 @@ IF context-dependent → Add indexical resolution
 ### 573. False Mountain: `spain_digital_offensive_2026`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -16526,6 +17099,7 @@ IF context-dependent → Add indexical resolution
 ### 574. False Mountain: `st_petersburg_paradox`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -16555,6 +17129,7 @@ IF context-dependent → Add indexical resolution
 ### 575. False Mountain: `start_treaty`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -16584,6 +17159,7 @@ IF context-dependent → Add indexical resolution
 ### 576. False Mountain: `statecraft_virtu`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -16613,6 +17189,7 @@ IF context-dependent → Add indexical resolution
 ### 577. False Mountain: `status_flattening_effect`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -16635,6 +17212,7 @@ IF context-dependent → Add indexical resolution
 ### 578. False Mountain: `sti_clinical_testing_bottleneck`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -16664,6 +17242,7 @@ IF context-dependent → Add indexical resolution
 ### 579. False Mountain: `straight_coercion_2025`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -16693,6 +17272,7 @@ IF context-dependent → Add indexical resolution
 ### 580. False Mountain: `strange_attractor_dynamics`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -16722,6 +17302,7 @@ IF context-dependent → Add indexical resolution
 ### 581. False Mountain: `strange_attractors`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -16751,6 +17332,7 @@ IF context-dependent → Add indexical resolution
 ### 582. False Mountain: `strategic_deep_sea_rare_earth_mining`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -16780,6 +17362,7 @@ IF context-dependent → Add indexical resolution
 ### 583. False Mountain: `streaming_bundling_mandate`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -16809,6 +17392,7 @@ IF context-dependent → Add indexical resolution
 ### 584. False Mountain: `structural_extraction_without_actor`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -16838,6 +17422,7 @@ IF context-dependent → Add indexical resolution
 ### 585. False Mountain: `student_loan_default_cliff`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -16867,6 +17452,7 @@ IF context-dependent → Add indexical resolution
 ### 586. False Mountain: `student_loan_interest_accrual`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -16896,6 +17482,7 @@ IF context-dependent → Add indexical resolution
 ### 587. False Mountain: `suanne_coup_of_peace`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -16925,6 +17512,7 @@ IF context-dependent → Add indexical resolution
 ### 588. False Mountain: `suanne_face_restoration`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -16954,6 +17542,7 @@ IF context-dependent → Add indexical resolution
 ### 589. False Mountain: `sunk_cost_fallacy`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -16983,6 +17572,7 @@ IF context-dependent → Add indexical resolution
 ### 590. False Mountain: `superbowl_advertising_extraction`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `mountain`
@@ -17011,6 +17601,7 @@ IF uncertainty → HALT changes until resolved
 ### 591. False Mountain: `swift_legacy_piton`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -17040,6 +17631,7 @@ IF context-dependent → Add indexical resolution
 ### 592. False Mountain: `synthetic_data_feedback_loop`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -17069,6 +17661,7 @@ IF context-dependent → Add indexical resolution
 ### 593. False Mountain: `systemic_blindspot`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -17098,6 +17691,7 @@ IF context-dependent → Add indexical resolution
 ### 594. False Mountain: `tail_risk_compression`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -17127,6 +17721,7 @@ IF context-dependent → Add indexical resolution
 ### 595. False Mountain: `taiwan_existential_sovereignty`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -17156,6 +17751,7 @@ IF context-dependent → Add indexical resolution
 ### 596. False Mountain: `taiwan_grand_bargain`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -17185,6 +17781,7 @@ IF context-dependent → Add indexical resolution
 ### 597. False Mountain: `taiwan_storm_2026`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -17214,6 +17811,7 @@ IF context-dependent → Add indexical resolution
 ### 598. False Mountain: `taiwan_university_application_system`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -17243,6 +17841,7 @@ IF context-dependent → Add indexical resolution
 ### 599. False Mountain: `taliban_slavery_law_2024`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -17272,6 +17871,7 @@ IF context-dependent → Add indexical resolution
 ### 600. False Mountain: `taxonomy_drift`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -17301,6 +17901,7 @@ IF context-dependent → Add indexical resolution
 ### 601. False Mountain: `teaching_horses_to_sing`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope, unknown]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -17330,6 +17931,7 @@ IF context-dependent → Add indexical resolution
 ### 602. False Mountain: `tear_gas_repression_2026`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -17359,6 +17961,7 @@ IF context-dependent → Add indexical resolution
 ### 603. False Mountain: `technocratic_overreach`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -17388,6 +17991,7 @@ IF context-dependent → Add indexical resolution
 ### 604. False Mountain: `temporal_scale_arbitrage`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope, unknown]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -17417,6 +18021,7 @@ IF context-dependent → Add indexical resolution
 ### 605. False Mountain: `texas_hispanic_political_pivot`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -17446,6 +18051,7 @@ IF context-dependent → Add indexical resolution
 ### 606. False Mountain: `texas_insurance_market_instability`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -17475,6 +18081,7 @@ IF context-dependent → Add indexical resolution
 ### 607. False Mountain: `thai_senate_veto_2026`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -17504,6 +18111,7 @@ IF context-dependent → Add indexical resolution
 ### 608. False Mountain: `the_bacchae_madness_protocol`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -17533,6 +18141,7 @@ IF context-dependent → Add indexical resolution
 ### 609. False Mountain: `the_calm_protocol_suppression`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -17562,6 +18171,7 @@ IF context-dependent → Add indexical resolution
 ### 610. False Mountain: `the_churn_systemic_upheaval`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -17591,6 +18201,7 @@ IF context-dependent → Add indexical resolution
 ### 611. False Mountain: `theory_of_visitors`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -17620,6 +18231,7 @@ IF context-dependent → Add indexical resolution
 ### 612. False Mountain: `tiktok_us_divestiture_mandate`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -17649,6 +18261,7 @@ IF context-dependent → Add indexical resolution
 ### 613. False Mountain: `toxic_social_infection`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -17678,6 +18291,7 @@ IF context-dependent → Add indexical resolution
 ### 614. False Mountain: `toxoplasma_hub_2026`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[scaffold, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -17707,6 +18321,7 @@ IF context-dependent → Add indexical resolution
 ### 615. False Mountain: `tractarian_logic_limit`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -17736,6 +18351,7 @@ IF context-dependent → Add indexical resolution
 ### 616. False Mountain: `trade_secret_law`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -17765,6 +18381,7 @@ IF context-dependent → Add indexical resolution
 ### 617. False Mountain: `tragedy_of_the_commons`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope, unknown]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -17794,6 +18411,7 @@ IF context-dependent → Add indexical resolution
 ### 618. False Mountain: `transformer_self_attention`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope, unknown]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -17823,6 +18441,7 @@ IF context-dependent → Add indexical resolution
 ### 619. False Mountain: `traveling_salesman_problem`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -17852,6 +18471,7 @@ IF context-dependent → Add indexical resolution
 ### 620. False Mountain: `traveling_salesperson_problem`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -17881,6 +18501,7 @@ IF context-dependent → Add indexical resolution
 ### 621. False Mountain: `trillion_bond_rush_2026`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[scaffold, unknown]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -17910,6 +18531,7 @@ IF context-dependent → Add indexical resolution
 ### 622. False Mountain: `trump_critical_minerals`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -17939,6 +18561,7 @@ IF context-dependent → Add indexical resolution
 ### 623. False Mountain: `trump_epa_greenhouse_gas_reversal`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[indexically_opaque, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -17968,6 +18591,7 @@ IF context-dependent → Add indexical resolution
 ### 624. False Mountain: `trump_indian_tariffs_2026`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -17997,6 +18621,7 @@ IF context-dependent → Add indexical resolution
 ### 625. False Mountain: `trump_making_china_great_2026`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -18026,6 +18651,7 @@ IF context-dependent → Add indexical resolution
 ### 626. False Mountain: `trumps_second_term_authoritarianism_2026`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -18055,6 +18681,7 @@ IF context-dependent → Add indexical resolution
 ### 627. False Mountain: `ua_mobilization_protector_cert`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -18084,6 +18711,7 @@ IF context-dependent → Add indexical resolution
 ### 628. False Mountain: `ua_wartime_mobilization`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -18113,6 +18741,7 @@ IF context-dependent → Add indexical resolution
 ### 629. False Mountain: `uk_graduate_visa_salary_threshold`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -18142,6 +18771,7 @@ IF context-dependent → Add indexical resolution
 ### 630. False Mountain: `uk_help_to_buy_scheme`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -18171,6 +18801,7 @@ IF context-dependent → Add indexical resolution
 ### 631. False Mountain: `uk_hicbc_trap`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -18200,6 +18831,7 @@ IF context-dependent → Add indexical resolution
 ### 632. False Mountain: `uk_necc_formation`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -18229,6 +18861,7 @@ IF context-dependent → Add indexical resolution
 ### 633. False Mountain: `uk_unpaid_care_system`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -18258,6 +18891,7 @@ IF context-dependent → Add indexical resolution
 ### 634. False Mountain: `ukr_mobilization`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -18287,6 +18921,7 @@ IF context-dependent → Add indexical resolution
 ### 635. False Mountain: `ukraine_tight_gas_pilot`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -18316,6 +18951,7 @@ IF context-dependent → Add indexical resolution
 ### 636. False Mountain: `ulysses_chp01`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -18345,6 +18981,7 @@ IF context-dependent → Add indexical resolution
 ### 637. False Mountain: `ulysses_chp02`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -18374,6 +19011,7 @@ IF context-dependent → Add indexical resolution
 ### 638. False Mountain: `ulysses_chp04`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -18403,6 +19041,7 @@ IF context-dependent → Add indexical resolution
 ### 639. False Mountain: `ulysses_chp05`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -18432,6 +19071,7 @@ IF context-dependent → Add indexical resolution
 ### 640. False Mountain: `ulysses_chp07`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -18461,6 +19101,7 @@ IF context-dependent → Add indexical resolution
 ### 641. False Mountain: `ulysses_chp08`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -18490,6 +19131,7 @@ IF context-dependent → Add indexical resolution
 ### 642. False Mountain: `ulysses_chp09`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -18519,6 +19161,7 @@ IF context-dependent → Add indexical resolution
 ### 643. False Mountain: `ulysses_chp10`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -18548,6 +19191,7 @@ IF context-dependent → Add indexical resolution
 ### 644. False Mountain: `ulysses_chp11`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -18577,6 +19221,7 @@ IF context-dependent → Add indexical resolution
 ### 645. False Mountain: `ulysses_chp12`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -18606,6 +19251,7 @@ IF context-dependent → Add indexical resolution
 ### 646. False Mountain: `ulysses_chp13`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -18635,6 +19281,7 @@ IF context-dependent → Add indexical resolution
 ### 647. False Mountain: `ulysses_chp16`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -18664,6 +19311,7 @@ IF context-dependent → Add indexical resolution
 ### 648. False Mountain: `ulysses_chp17`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -18693,6 +19341,7 @@ IF context-dependent → Add indexical resolution
 ### 649. False Mountain: `un_high_seas_treaty_2026`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -18722,6 +19371,7 @@ IF context-dependent → Add indexical resolution
 ### 650. False Mountain: `union_protection_underperformance`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -18751,6 +19401,7 @@ IF context-dependent → Add indexical resolution
 ### 651. False Mountain: `unrequited_love_protocol`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[scaffold, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -18773,6 +19424,7 @@ IF context-dependent → Add indexical resolution
 ### 652. False Mountain: `unrwa_eviction_order`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -18802,6 +19454,7 @@ IF context-dependent → Add indexical resolution
 ### 653. False Mountain: `us_arms_transfer_policy`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -18831,6 +19484,7 @@ IF context-dependent → Add indexical resolution
 ### 654. False Mountain: `us_china_chip_tariffs_v2`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -18860,6 +19514,7 @@ IF context-dependent → Add indexical resolution
 ### 655. False Mountain: `us_debt_ceiling`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -18889,6 +19544,7 @@ IF context-dependent → Add indexical resolution
 ### 656. False Mountain: `us_employer_health_insurance`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -18918,6 +19574,7 @@ IF context-dependent → Add indexical resolution
 ### 657. False Mountain: `us_greenland_envoy`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -18947,6 +19604,7 @@ IF context-dependent → Add indexical resolution
 ### 658. False Mountain: `us_iran_drone_conflict`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -18976,6 +19634,7 @@ IF context-dependent → Add indexical resolution
 ### 659. False Mountain: `us_isolationism_policy_2026`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -19005,6 +19664,7 @@ IF context-dependent → Add indexical resolution
 ### 660. False Mountain: `us_israel_faa_502b_nonenforcement`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -19034,6 +19694,7 @@ IF context-dependent → Add indexical resolution
 ### 661. False Mountain: `us_labor_mobility`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -19063,6 +19724,7 @@ IF context-dependent → Add indexical resolution
 ### 662. False Mountain: `us_legal_standard_reasonable_doubt`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -19092,6 +19754,7 @@ IF context-dependent → Add indexical resolution
 ### 663. False Mountain: `us_sanctions_icc_israel_case`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -19121,6 +19784,7 @@ IF context-dependent → Add indexical resolution
 ### 664. False Mountain: `us_sdf_alliance_abandonment_2026`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -19150,6 +19814,7 @@ IF context-dependent → Add indexical resolution
 ### 665. False Mountain: `us_suburban_zoning_2025`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -19179,6 +19844,7 @@ IF context-dependent → Add indexical resolution
 ### 666. False Mountain: `us_taiwan_arms_sales`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -19208,6 +19874,7 @@ IF context-dependent → Add indexical resolution
 ### 667. False Mountain: `us_tariffs_2025`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -19237,6 +19904,7 @@ IF context-dependent → Add indexical resolution
 ### 668. False Mountain: `us_two_party_duopoly`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -19266,6 +19934,7 @@ IF context-dependent → Add indexical resolution
 ### 669. False Mountain: `us_usmca_china_leverage`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[indexically_opaque, rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -19295,6 +19964,7 @@ IF context-dependent → Add indexical resolution
 ### 670. False Mountain: `us_vaccine_recommendation_dismantling_2026`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -19324,6 +19994,7 @@ IF context-dependent → Add indexical resolution
 ### 671. False Mountain: `us_venezuela_blockade`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -19353,6 +20024,7 @@ IF context-dependent → Add indexical resolution
 ### 672. False Mountain: `us_venezuela_oil_pressure`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -19382,6 +20054,7 @@ IF context-dependent → Add indexical resolution
 ### 673. False Mountain: `us_venezuela_plausible_deniability_2025`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -19411,6 +20084,7 @@ IF context-dependent → Add indexical resolution
 ### 674. False Mountain: `us_visa_lottery`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -19440,6 +20114,7 @@ IF context-dependent → Add indexical resolution
 ### 675. False Mountain: `usc_26_469_passive_loss`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -19469,6 +20144,7 @@ IF context-dependent → Add indexical resolution
 ### 676. False Mountain: `utopia_apocalypse_fragility`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -19498,6 +20174,7 @@ IF context-dependent → Add indexical resolution
 ### 677. False Mountain: `value_alignment_drift`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -19527,6 +20204,7 @@ IF context-dependent → Add indexical resolution
 ### 678. False Mountain: `value_extraction_plateau`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -19556,6 +20234,7 @@ IF context-dependent → Add indexical resolution
 ### 679. False Mountain: `venezuela_oil_privatization_v1`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -19585,6 +20264,7 @@ IF context-dependent → Add indexical resolution
 ### 680. False Mountain: `vienna_quantum_superposition_2026`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -19614,6 +20294,7 @@ IF context-dependent → Add indexical resolution
 ### 681. False Mountain: `viral_transmission_rates`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -19643,6 +20324,7 @@ IF context-dependent → Add indexical resolution
 ### 682. False Mountain: `visibility_bias_governance`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -19672,6 +20354,7 @@ IF context-dependent → Add indexical resolution
 ### 683. False Mountain: `vns_implant_for_trd`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -19701,6 +20384,7 @@ IF context-dependent → Add indexical resolution
 ### 684. False Mountain: `wikipedia_crowdsourcing_2026`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -19723,6 +20407,7 @@ IF context-dependent → Add indexical resolution
 ### 685. False Mountain: `wikipedia_notability_requirement_2026`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -19752,6 +20437,7 @@ IF context-dependent → Add indexical resolution
 ### 686. False Mountain: `winners_curse`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -19781,6 +20467,7 @@ IF context-dependent → Add indexical resolution
 ### 687. False Mountain: `world_factbook_sunset_2026`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -19810,6 +20497,7 @@ IF context-dependent → Add indexical resolution
 ### 688. False Mountain: `wpl_scotland`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -19839,6 +20527,7 @@ IF context-dependent → Add indexical resolution
 ### 689. False Mountain: `xi_mao_ideological_centralization`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -19868,6 +20557,7 @@ IF context-dependent → Add indexical resolution
 ### 690. False Mountain: `y_combinator`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -19897,6 +20587,7 @@ IF context-dependent → Add indexical resolution
 ### 691. False Mountain: `yangtze_fishing_ban`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -19926,6 +20617,7 @@ IF context-dependent → Add indexical resolution
 ### 692. False Mountain: `yoneda_lemma`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -19948,6 +20640,7 @@ IF context-dependent → Add indexical resolution
 ### 693. False Mountain: `yt_ai_slop_incentive`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -19977,6 +20670,7 @@ IF context-dependent → Add indexical resolution
 ### 694. False Mountain: `zipfs_law`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -20006,6 +20700,7 @@ IF context-dependent → Add indexical resolution
 ### 695. False Mountain: `zombie_reasoning_2026`
 
 *   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -20035,6 +20730,7 @@ IF context-dependent → Add indexical resolution
 ### 696. False Mountain: `ai_task_horizon_reliability`
 
 *   **Severity:** `high`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `mountain`
@@ -20063,6 +20759,7 @@ IF uncertainty → HALT changes until resolved
 ### 697. False Mountain: `astm_d638_tensile_testing`
 
 *   **Severity:** `high`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `mountain`
@@ -20091,6 +20788,7 @@ IF uncertainty → HALT changes until resolved
 ### 698. False Mountain: `authoritarian_power_paradox`
 
 *   **Severity:** `high`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `mountain`
@@ -20113,6 +20811,7 @@ IF uncertainty → HALT changes until resolved
 ### 699. False Mountain: `axiom_of_choice_determinacy`
 
 *   **Severity:** `high`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `mountain`
@@ -20141,6 +20840,7 @@ IF uncertainty → HALT changes until resolved
 ### 700. False Mountain: `bay_of_pigs_operational_silo`
 
 *   **Severity:** `high`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `mountain`
@@ -20169,6 +20869,7 @@ IF uncertainty → HALT changes until resolved
 ### 701. False Mountain: `burden_of_proof_legal_criminal`
 
 *   **Severity:** `high`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `mountain`
@@ -20197,6 +20898,7 @@ IF uncertainty → HALT changes until resolved
 ### 702. False Mountain: `canada_goose_realignment_2026`
 
 *   **Severity:** `high`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `mountain`
@@ -20225,6 +20927,7 @@ IF uncertainty → HALT changes until resolved
 ### 703. False Mountain: `china_taiwan_reunification_mandate`
 
 *   **Severity:** `high`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `mountain`
@@ -20253,6 +20956,7 @@ IF uncertainty → HALT changes until resolved
 ### 704. False Mountain: `click_chemistry_paradigm_2026`
 
 *   **Severity:** `high`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `mountain`
@@ -20281,6 +20985,7 @@ IF uncertainty → HALT changes until resolved
 ### 705. False Mountain: `climate_attribution_2026`
 
 *   **Severity:** `high`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `mountain`
@@ -20309,6 +21014,7 @@ IF uncertainty → HALT changes until resolved
 ### 706. False Mountain: `comitatus_bond`
 
 *   **Severity:** `high`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `mountain`
@@ -20337,6 +21043,7 @@ IF uncertainty → HALT changes until resolved
 ### 707. False Mountain: `damped_harmonics`
 
 *   **Severity:** `high`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `mountain`
@@ -20365,6 +21072,7 @@ IF uncertainty → HALT changes until resolved
 ### 708. False Mountain: `deferential_realism_core`
 
 *   **Severity:** `high`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `mountain`
@@ -20393,6 +21101,7 @@ IF uncertainty → HALT changes until resolved
 ### 709. False Mountain: `dunbars_number`
 
 *   **Severity:** `high`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `mountain`
@@ -20421,6 +21130,7 @@ IF uncertainty → HALT changes until resolved
 ### 710. False Mountain: `faint_blue_neural_bifurcation`
 
 *   **Severity:** `high`
+*   **Orbit Signature:** `N/A`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `mountain`
@@ -20449,6 +21159,7 @@ IF uncertainty → HALT changes until resolved
 ### 711. False Mountain: `frankenstein_creation_hubris`
 
 *   **Severity:** `high`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `mountain`
@@ -20477,6 +21188,7 @@ IF uncertainty → HALT changes until resolved
 ### 712. False Mountain: `germline_regulation_threshold_2026`
 
 *   **Severity:** `high`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `mountain`
@@ -20505,6 +21217,7 @@ IF uncertainty → HALT changes until resolved
 ### 713. False Mountain: `gilgamesh_mortality_limit`
 
 *   **Severity:** `high`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `mountain`
@@ -20533,6 +21246,7 @@ IF uncertainty → HALT changes until resolved
 ### 714. False Mountain: `global_hoarding_scaling_laws`
 
 *   **Severity:** `high`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `mountain`
@@ -20561,6 +21275,7 @@ IF uncertainty → HALT changes until resolved
 ### 715. False Mountain: `global_protocol_entrenchment`
 
 *   **Severity:** `high`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `mountain`
@@ -20589,6 +21304,7 @@ IF uncertainty → HALT changes until resolved
 ### 716. False Mountain: `glp1_payload_efficiency_pivot`
 
 *   **Severity:** `high`
+*   **Orbit Signature:** `[scaffold, unknown]`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `mountain`
@@ -20617,6 +21333,7 @@ IF uncertainty → HALT changes until resolved
 ### 717. False Mountain: `golden_handcuffs`
 
 *   **Severity:** `high`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `mountain`
@@ -20645,6 +21362,7 @@ IF uncertainty → HALT changes until resolved
 ### 718. False Mountain: `gradient_descent_optimization`
 
 *   **Severity:** `high`
+*   **Orbit Signature:** `[rope, scaffold, unknown]`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `mountain`
@@ -20673,6 +21391,7 @@ IF uncertainty → HALT changes until resolved
 ### 719. False Mountain: `gs1_gln_identification`
 
 *   **Severity:** `high`
+*   **Orbit Signature:** `[rope, tangled_rope, unknown]`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `mountain`
@@ -20701,6 +21420,7 @@ IF uncertainty → HALT changes until resolved
 ### 720. False Mountain: `gs1_standardized_identification`
 
 *   **Severity:** `high`
+*   **Orbit Signature:** `[rope, unknown]`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `mountain`
@@ -20729,6 +21449,7 @@ IF uncertainty → HALT changes until resolved
 ### 721. False Mountain: `hamiltonian_path_complexity`
 
 *   **Severity:** `high`
+*   **Orbit Signature:** `[mountain]`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `mountain`
@@ -20757,6 +21478,7 @@ IF uncertainty → HALT changes until resolved
 ### 722. False Mountain: `happiness_of_others`
 
 *   **Severity:** `high`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `mountain`
@@ -20785,6 +21507,7 @@ IF uncertainty → HALT changes until resolved
 ### 723. False Mountain: `heuristic_optimization`
 
 *   **Severity:** `high`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `mountain`
@@ -20813,6 +21536,7 @@ IF uncertainty → HALT changes until resolved
 ### 724. False Mountain: `ice_memory_archive`
 
 *   **Severity:** `high`
+*   **Orbit Signature:** `[rope]`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `mountain`
@@ -20841,6 +21565,7 @@ IF uncertainty → HALT changes until resolved
 ### 725. False Mountain: `indexical_relativity_core`
 
 *   **Severity:** `high`
+*   **Orbit Signature:** `[scaffold]`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `mountain`
@@ -20869,6 +21594,7 @@ IF uncertainty → HALT changes until resolved
 ### 726. False Mountain: `inner_model_theory_constraints`
 
 *   **Severity:** `high`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `mountain`
@@ -20897,6 +21623,7 @@ IF uncertainty → HALT changes until resolved
 ### 727. False Mountain: `juvenile_underclass_2026`
 
 *   **Severity:** `high`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `mountain`
@@ -20925,6 +21652,7 @@ IF uncertainty → HALT changes until resolved
 ### 728. False Mountain: `keltner_relationship_evaluation`
 
 *   **Severity:** `N/A`
+*   **Orbit Signature:** `[rope, tangled_rope, unknown]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -20940,6 +21668,7 @@ IF uncertainty → HALT changes until resolved
 ### 729. False Mountain: `kjv_puritan_new_world_exit`
 
 *   **Severity:** `high`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `mountain`
@@ -20968,6 +21697,7 @@ IF uncertainty → HALT changes until resolved
 ### 730. False Mountain: `knowledge_action_gap`
 
 *   **Severity:** `high`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `mountain`
@@ -20996,6 +21726,7 @@ IF uncertainty → HALT changes until resolved
 ### 731. False Mountain: `large_cardinals_foundations`
 
 *   **Severity:** `high`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `mountain`
@@ -21024,6 +21755,7 @@ IF uncertainty → HALT changes until resolved
 ### 732. False Mountain: `legacy_system_technical_debt`
 
 *   **Severity:** `high`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `mountain`
@@ -21052,6 +21784,7 @@ IF uncertainty → HALT changes until resolved
 ### 733. False Mountain: `lln_convergence`
 
 *   **Severity:** `high`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `mountain`
@@ -21080,6 +21813,7 @@ IF uncertainty → HALT changes until resolved
 ### 734. False Mountain: `manganese_catalysis_2026`
 
 *   **Severity:** `high`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `mountain`
@@ -21108,6 +21842,7 @@ IF uncertainty → HALT changes until resolved
 ### 735. False Mountain: `mars_rovers_navigational_autonomy`
 
 *   **Severity:** `high`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `mountain`
@@ -21136,6 +21871,7 @@ IF uncertainty → HALT changes until resolved
 ### 736. False Mountain: `mco_unit_system_discontinuity`
 
 *   **Severity:** `high`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `mountain`
@@ -21164,6 +21900,7 @@ IF uncertainty → HALT changes until resolved
 ### 737. False Mountain: `micro_robot_electronics_integration`
 
 *   **Severity:** `high`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `mountain`
@@ -21192,6 +21929,7 @@ IF uncertainty → HALT changes until resolved
 ### 738. False Mountain: `minimax_decision_rule`
 
 *   **Severity:** `high`
+*   **Orbit Signature:** `[mountain]`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `mountain`
@@ -21220,6 +21958,7 @@ IF uncertainty → HALT changes until resolved
 ### 739. False Mountain: `mutual_defection_equilibrium`
 
 *   **Severity:** `high`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `mountain`
@@ -21248,6 +21987,7 @@ IF uncertainty → HALT changes until resolved
 ### 740. False Mountain: `narrative_engineering_2026`
 
 *   **Severity:** `high`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `mountain`
@@ -21276,6 +22016,7 @@ IF uncertainty → HALT changes until resolved
 ### 741. False Mountain: `nasa_faster_better_cheaper`
 
 *   **Severity:** `high`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `mountain`
@@ -21304,6 +22045,7 @@ IF uncertainty → HALT changes until resolved
 ### 742. False Mountain: `nash_equilibrium_coordination`
 
 *   **Severity:** `high`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `mountain`
@@ -21332,6 +22074,7 @@ IF uncertainty → HALT changes until resolved
 ### 743. False Mountain: `neuroplasticity_plateau`
 
 *   **Severity:** `high`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `mountain`
@@ -21360,6 +22103,7 @@ IF uncertainty → HALT changes until resolved
 ### 744. False Mountain: `newtons_method_convergence`
 
 *   **Severity:** `high`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `mountain`
@@ -21388,6 +22132,7 @@ IF uncertainty → HALT changes until resolved
 ### 745. False Mountain: `nonstandard_arithmetic_models`
 
 *   **Severity:** `high`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `mountain`
@@ -21416,6 +22161,7 @@ IF uncertainty → HALT changes until resolved
 ### 746. False Mountain: `path_dependence_lock_in`
 
 *   **Severity:** `high`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `mountain`
@@ -21444,6 +22190,7 @@ IF uncertainty → HALT changes until resolved
 ### 747. False Mountain: `peano_curve_mapping`
 
 *   **Severity:** `high`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `mountain`
@@ -21472,6 +22219,7 @@ IF uncertainty → HALT changes until resolved
 ### 748. False Mountain: `permissive_software_licensing`
 
 *   **Severity:** `high`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `mountain`
@@ -21500,6 +22248,7 @@ IF uncertainty → HALT changes until resolved
 ### 749. False Mountain: `perseverance_ai_drive`
 
 *   **Severity:** `high`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `mountain`
@@ -21528,6 +22277,7 @@ IF uncertainty → HALT changes until resolved
 ### 750. False Mountain: `proof_of_work_consensus`
 
 *   **Severity:** `high`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `mountain`
@@ -21556,6 +22306,7 @@ IF uncertainty → HALT changes until resolved
 ### 751. False Mountain: `quantum_entanglement_protocol`
 
 *   **Severity:** `high`
+*   **Orbit Signature:** `[rope, unknown]`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `mountain`
@@ -21584,6 +22335,7 @@ IF uncertainty → HALT changes until resolved
 ### 752. False Mountain: `railway_gauge_standard`
 
 *   **Severity:** `high`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `mountain`
@@ -21612,6 +22364,7 @@ IF uncertainty → HALT changes until resolved
 ### 753. False Mountain: `rogers_commission_institutional_analysis`
 
 *   **Severity:** `high`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `mountain`
@@ -21640,6 +22393,7 @@ IF uncertainty → HALT changes until resolved
 ### 754. False Mountain: `sadhu_integrity_protocol`
 
 *   **Severity:** `high`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `mountain`
@@ -21662,6 +22416,7 @@ IF uncertainty → HALT changes until resolved
 ### 755. False Mountain: `self_enforced_boundary_protocol`
 
 *   **Severity:** `high`
+*   **Orbit Signature:** `[rope]`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `mountain`
@@ -21690,6 +22445,7 @@ IF uncertainty → HALT changes until resolved
 ### 756. False Mountain: `self_surpassing_superman`
 
 *   **Severity:** `high`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `mountain`
@@ -21718,6 +22474,7 @@ IF uncertainty → HALT changes until resolved
 ### 757. False Mountain: `social_narrative_casting`
 
 *   **Severity:** `N/A`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `snare`
@@ -21733,6 +22490,7 @@ IF uncertainty → HALT changes until resolved
 ### 758. False Mountain: `spv_variations_us_cold`
 
 *   **Severity:** `high`
+*   **Orbit Signature:** `[rope]`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `mountain`
@@ -21761,6 +22519,7 @@ IF uncertainty → HALT changes until resolved
 ### 759. False Mountain: `starwars_evolutionary_mutation`
 
 *   **Severity:** `high`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `mountain`
@@ -21789,6 +22548,7 @@ IF uncertainty → HALT changes until resolved
 ### 760. False Mountain: `taiwan_strait_hegemony_shift`
 
 *   **Severity:** `high`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `mountain`
@@ -21817,6 +22577,7 @@ IF uncertainty → HALT changes until resolved
 ### 761. False Mountain: `technological_point_of_no_return`
 
 *   **Severity:** `high`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `mountain`
@@ -21845,6 +22606,7 @@ IF uncertainty → HALT changes until resolved
 ### 762. False Mountain: `the_wall_procedural_barrier`
 
 *   **Severity:** `high`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `mountain`
@@ -21873,6 +22635,7 @@ IF uncertainty → HALT changes until resolved
 ### 763. False Mountain: `trojan_war_spoils`
 
 *   **Severity:** `high`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `mountain`
@@ -21901,6 +22664,7 @@ IF uncertainty → HALT changes until resolved
 ### 764. False Mountain: `udhr_1946`
 
 *   **Severity:** `high`
+*   **Orbit Signature:** `[rope]`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `mountain`
@@ -21929,6 +22693,7 @@ IF uncertainty → HALT changes until resolved
 ### 765. False Mountain: `ulysses_chp06`
 
 *   **Severity:** `high`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `mountain`
@@ -21957,6 +22722,7 @@ IF uncertainty → HALT changes until resolved
 ### 766. False Mountain: `unclos_2026`
 
 *   **Severity:** `high`
+*   **Orbit Signature:** `[rope, unknown]`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `mountain`
@@ -21985,6 +22751,7 @@ IF uncertainty → HALT changes until resolved
 ### 767. False Mountain: `us_canada_geopolitical_asymmetry`
 
 *   **Severity:** `high`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `mountain`

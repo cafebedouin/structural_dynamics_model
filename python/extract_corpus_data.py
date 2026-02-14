@@ -42,6 +42,10 @@ class ConstraintData:
         self.is_constructed = None
         self.omegas = []
 
+        # Orbit data (from orbit_data.json)
+        self.orbit_signature = None
+        self.orbit_contexts = None
+
         # Calculated
         self.variance_ratio = None
         self.index_configs_count = None
@@ -72,7 +76,9 @@ class ConstraintData:
                 'omegas': self.omegas,
                 'variance_ratio': self.variance_ratio,
                 'index_configs': self.index_configs_count,
-                'types_produced': self.types_produced_count
+                'types_produced': self.types_produced_count,
+                'orbit_signature': self.orbit_signature,
+                'orbit_contexts': self.orbit_contexts
             }
         }
 
@@ -97,6 +103,9 @@ class CorpusExtractor:
 
         print("Step 4: Inferring missing data...")
         self.infer_domains()
+
+        print("Step 5: Loading orbit data...")
+        self.load_orbit_data()
 
         return self.constraints
 
@@ -413,6 +422,59 @@ class CorpusExtractor:
                 best_domain = max(scores.items(), key=lambda x: x[1])[0]
                 constraint.domain = best_domain
 
+    def load_orbit_data(self):
+        """Enrich constraints with orbit signatures from orbit_data.json"""
+        orbit_path = self.output_txt_path.parent / 'orbit_data.json'
+        if not orbit_path.exists():
+            print(f"  orbit_data.json not found at {orbit_path} — skipping")
+            return
+
+        try:
+            with open(orbit_path, 'r', encoding='utf-8') as f:
+                orbit_data = json.load(f)
+        except (json.JSONDecodeError, OSError) as e:
+            print(f"  Error reading orbit_data.json: {e}")
+            return
+
+        # Build reverse mapping: internal_id → set of filenames that define it
+        internal_to_filenames = {}
+        id_pattern = re.compile(
+            r'(?:constraint_metric|base_extractiveness)\s*\(\s*(\w+)\s*,'
+        )
+        if self.testsets_dir.exists():
+            for pl_file in self.testsets_dir.glob('*.pl'):
+                try:
+                    content = pl_file.read_text(encoding='utf-8', errors='replace')
+                except OSError:
+                    continue
+                for match in id_pattern.finditer(content):
+                    atom = match.group(1)
+                    if atom[0].isupper() or atom.startswith('_'):
+                        continue
+                    if atom not in internal_to_filenames:
+                        internal_to_filenames[atom] = set()
+                    internal_to_filenames[atom].add(pl_file.stem)
+
+        matched = 0
+        for cid, entry in orbit_data.items():
+            sig = entry.get('orbit_signature')
+            ctx = entry.get('contexts')
+            # Try direct match (internal ID == corpus ID)
+            if cid in self.constraints:
+                self.constraints[cid].orbit_signature = sig
+                self.constraints[cid].orbit_contexts = ctx
+                matched += 1
+            else:
+                # Try filename-based match via reverse mapping
+                for fname in internal_to_filenames.get(cid, set()):
+                    if fname in self.constraints:
+                        self.constraints[fname].orbit_signature = sig
+                        self.constraints[fname].orbit_contexts = ctx
+                        matched += 1
+                        break
+
+        print(f"  Matched orbit data for {matched}/{len(orbit_data)} constraints")
+
     def save_json(self, output_path):
         """Save extracted data to JSON"""
         data = {
@@ -429,7 +491,9 @@ class CorpusExtractor:
                 'with_classifications': sum(1 for c in self.constraints.values()
                                           if c.classifications),
                 'with_domain': sum(1 for c in self.constraints.values()
-                                  if c.domain is not None)
+                                  if c.domain is not None),
+                'with_orbit_data': sum(1 for c in self.constraints.values()
+                                       if c.orbit_signature is not None)
             }
         }
 

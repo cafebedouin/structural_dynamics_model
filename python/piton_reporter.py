@@ -2,6 +2,9 @@ import re
 import sys
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).parent))
+from orbit_utils import load_orbit_data, get_orbit_signature, format_orbit_signature
+
 def parse_log_content(content):
     """
     Parses the log content to find and extract Piton details.
@@ -101,7 +104,7 @@ def parse_log_content(content):
 
     return unique_pitons
 
-def generate_markdown_report(pitons_data, output_path):
+def generate_markdown_report(pitons_data, output_path, orbit_data=None):
     """
     Generates a Markdown report from the list of Piton data.
     """
@@ -127,7 +130,9 @@ def generate_markdown_report(pitons_data, output_path):
                 f.write(f"    *   **Analytical View:** `{n['analytical_view']}`\n")
             
             f.write(f"*   **Structural Signature Analysis:** {n['structural_signature']}\n")
-            
+            orbit_sig = get_orbit_signature(orbit_data or {}, n['name'])
+            f.write(f"*   **Orbit Signature:** `{format_orbit_signature(orbit_sig)}`\n")
+
             if n['related_gap_alert'] != 'N/A':
                 f.write(f"*   **Related Gap/Alert:** {n['related_gap_alert']}\n")
             
@@ -154,11 +159,12 @@ def main():
         sys.exit(1)
         
     pitons_data = parse_log_content(log_content)
-    
+    orbit_data = load_orbit_data()
+
     if pitons_data:
         print(f"Found {len(pitons_data)} unique Pitons.")
         print(f"Generating report at {report_file}...")
-        generate_markdown_report(pitons_data, report_file)
+        generate_markdown_report(pitons_data, report_file, orbit_data)
         print("Report generated successfully.")
     else:
         print("No Pitons found in the log file.")

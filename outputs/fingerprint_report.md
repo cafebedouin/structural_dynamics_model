@@ -1328,5 +1328,43 @@ Constraints where changing scope (local vs national vs global) changes the class
 | moderate | 6 |
 | negligible | 71 |
 
+## Orbit Cross-Reference
+
+Maps shift pattern families to gauge orbit signatures.
+
+- `shift(indexically_opaque, snare, rope, snare)` (5 constraints): orbit `[indexically_opaque,rope,snare]`
+- `shift(indexically_opaque, tangled_rope, rope, snare)` (3 constraints): orbit `[indexically_opaque,rope,snare,tangled_rope]`
+- `shift(indexically_opaque, tangled_rope, rope, tangled_rope)` (2 constraints): orbit `[indexically_opaque,rope,tangled_rope]`
+- `shift(indexically_opaque, tangled_rope, tangled_rope, snare)` (1 constraints): orbit `[indexically_opaque,snare,tangled_rope]`
+- `shift(mountain, mountain, mountain, mountain)` (15 constraints): orbit `[mountain]`
+- `shift(mountain, unknown, unknown, mountain)` (32 constraints): orbit `[mountain,unknown]`
+- `shift(piton, rope, rope, rope)` (4 constraints): orbit `[piton,rope]`
+- `shift(rope, rope, rope, rope)` (21 constraints): orbit `[rope]`
+- `shift(rope, rope, rope, tangled_rope)` (3 constraints): orbit `[rope,tangled_rope]`
+- `shift(rope, rope, scaffold, unknown)` (2 constraints): orbit `[rope,scaffold,unknown]`
+- `shift(scaffold, scaffold, scaffold, rope)` (1 constraints): orbit `[rope,scaffold]`
+- `shift(scaffold, scaffold, scaffold, scaffold)` (10 constraints): orbit `[scaffold]`
+- `shift(snare, snare, rope, snare)` (190 constraints): orbit `[rope,snare]`
+- `shift(snare, snare, scaffold, snare)` (2 constraints): orbit `[scaffold,snare]`
+- `shift(tangled_rope, snare, rope, snare)` (17 constraints): orbit `[rope,snare,tangled_rope]`
+- `shift(tangled_rope, tangled_rope, indexically_opaque, snare)` (2 constraints): orbit `[indexically_opaque,snare,tangled_rope]`
+- `shift(tangled_rope, tangled_rope, rope, snare)` (94 constraints): orbit `[rope,snare,tangled_rope]`
+- `shift(tangled_rope, tangled_rope, rope, tangled_rope)` (94 constraints): orbit `[rope,tangled_rope]`
+- `shift(tangled_rope, tangled_rope, rope, unknown)` (13 constraints): orbit `[rope,tangled_rope,unknown]`
+- `shift(tangled_rope, tangled_rope, scaffold, snare)` (3 constraints): orbit `[scaffold,snare,tangled_rope]`
+- `shift(tangled_rope, tangled_rope, scaffold, tangled_rope)` (2 constraints): orbit `[scaffold,tangled_rope]`
+- `shift(tangled_rope, tangled_rope, tangled_rope, snare)` (1 constraints): orbit `[snare,tangled_rope]`
+- `shift(tangled_rope, tangled_rope, tangled_rope, tangled_rope)` (95 constraints): orbit `[tangled_rope]`
+- `shift(tangled_rope, unknown, rope, unknown)` (1 constraints): orbit `[rope,tangled_rope,unknown]`
+- `shift(unknown, rope, rope, rope)` (8 constraints): orbit `[rope,unknown]`
+- `shift(unknown, rope, rope, tangled_rope)` (4 constraints): orbit `[rope,tangled_rope,unknown]`
+- `shift(unknown, rope, rope, unknown)` (1 constraints): orbit `[rope,unknown]`
+- `shift(unknown, snare, scaffold, snare)` (1 constraints): orbit `[scaffold,snare,unknown]`
+- `shift(unknown, unknown, rope, tangled_rope)` (14 constraints): orbit `[rope,tangled_rope,unknown]`
+- `shift(unknown, unknown, rope, unknown)` (14 constraints): orbit `[rope,unknown]`
+- `shift(unknown, unknown, scaffold, snare)` (5 constraints): orbit `[scaffold,snare,unknown]`
+- `shift(unknown, unknown, scaffold, tangled_rope)` (2 constraints): orbit `[scaffold,tangled_rope,unknown]`
+- `shift(unknown, unknown, scaffold, unknown)` (9 constraints): orbit `[scaffold,unknown]`
+- `shift(unknown, unknown, unknown, unknown)` (16 constraints): orbit `[unknown]`
 ---
 *End of fingerprint report*

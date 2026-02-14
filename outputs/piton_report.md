@@ -10,6 +10,7 @@
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
 *   **Structural Signature Analysis:** N/A
+*   **Orbit Signature:** `N/A`
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
     ```
@@ -38,6 +39,7 @@ IF context-dependent → Add indexical resolution
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
 *   **Structural Signature Analysis:** N/A
+*   **Orbit Signature:** `N/A`
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
     ```
@@ -66,6 +68,7 @@ IF context-dependent → Add indexical resolution
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
 *   **Structural Signature Analysis:** N/A
+*   **Orbit Signature:** `N/A`
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
     ```
@@ -87,6 +90,7 @@ IF context-dependent → Add indexical resolution
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
 *   **Structural Signature Analysis:** N/A
+*   **Orbit Signature:** `N/A`
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
     ```
@@ -108,6 +112,7 @@ IF context-dependent → Add indexical resolution
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
 *   **Structural Signature Analysis:** N/A
+*   **Orbit Signature:** `N/A`
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
     ```
@@ -136,6 +141,7 @@ IF context-dependent → Add indexical resolution
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
 *   **Structural Signature Analysis:** N/A
+*   **Orbit Signature:** `N/A`
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
     ```
@@ -157,6 +163,7 @@ IF context-dependent → Add indexical resolution
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
 *   **Structural Signature Analysis:** N/A
+*   **Orbit Signature:** `N/A`
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
     ```
@@ -185,6 +192,7 @@ IF context-dependent → Add indexical resolution
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
 *   **Structural Signature Analysis:** N/A
+*   **Orbit Signature:** `N/A`
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
     ```
@@ -213,6 +221,7 @@ IF context-dependent → Add indexical resolution
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
 *   **Structural Signature Analysis:** N/A
+*   **Orbit Signature:** `N/A`
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
     ```
@@ -241,6 +250,7 @@ IF context-dependent → Add indexical resolution
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
 *   **Structural Signature Analysis:** N/A
+*   **Orbit Signature:** `N/A`
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
     ```
@@ -262,6 +272,7 @@ IF context-dependent → Add indexical resolution
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
 *   **Structural Signature Analysis:** N/A
+*   **Orbit Signature:** `N/A`
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
     ```
@@ -290,6 +301,7 @@ IF context-dependent → Add indexical resolution
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
 *   **Structural Signature Analysis:** N/A
+*   **Orbit Signature:** `N/A`
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
     ```
@@ -318,6 +330,7 @@ IF context-dependent → Add indexical resolution
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
 *   **Structural Signature Analysis:** N/A
+*   **Orbit Signature:** `N/A`
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
     ```
@@ -346,6 +359,7 @@ IF context-dependent → Add indexical resolution
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
 *   **Structural Signature Analysis:** N/A
+*   **Orbit Signature:** `N/A`
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
     ```
@@ -374,6 +388,7 @@ IF context-dependent → Add indexical resolution
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
 *   **Structural Signature Analysis:** N/A
+*   **Orbit Signature:** `N/A`
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
     ```
@@ -402,6 +417,7 @@ IF context-dependent → Add indexical resolution
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
 *   **Structural Signature Analysis:** N/A
+*   **Orbit Signature:** `N/A`
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
     ```
@@ -430,6 +446,7 @@ IF context-dependent → Add indexical resolution
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
 *   **Structural Signature Analysis:** N/A
+*   **Orbit Signature:** `N/A`
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
     ```
@@ -458,6 +475,7 @@ IF context-dependent → Add indexical resolution
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
 *   **Structural Signature Analysis:** N/A
+*   **Orbit Signature:** `N/A`
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
     ```
@@ -486,6 +504,7 @@ IF context-dependent → Add indexical resolution
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
 *   **Structural Signature Analysis:** N/A
+*   **Orbit Signature:** `N/A`
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
     ```
@@ -514,6 +533,7 @@ IF context-dependent → Add indexical resolution
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
 *   **Structural Signature Analysis:** N/A
+*   **Orbit Signature:** `N/A`
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
     ```
@@ -542,6 +562,7 @@ IF context-dependent → Add indexical resolution
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
 *   **Structural Signature Analysis:** N/A
+*   **Orbit Signature:** `N/A`
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
     ```
@@ -570,6 +591,7 @@ IF context-dependent → Add indexical resolution
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
 *   **Structural Signature Analysis:** N/A
+*   **Orbit Signature:** `N/A`
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
     ```
@@ -598,6 +620,7 @@ IF context-dependent → Add indexical resolution
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
 *   **Structural Signature Analysis:** N/A
+*   **Orbit Signature:** `N/A`
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
     ```
@@ -626,6 +649,7 @@ IF context-dependent → Add indexical resolution
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
 *   **Structural Signature Analysis:** N/A
+*   **Orbit Signature:** `N/A`
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
     ```
@@ -654,6 +678,7 @@ IF context-dependent → Add indexical resolution
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
 *   **Structural Signature Analysis:** N/A
+*   **Orbit Signature:** `N/A`
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
     ```
@@ -682,6 +707,7 @@ IF context-dependent → Add indexical resolution
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
 *   **Structural Signature Analysis:** N/A
+*   **Orbit Signature:** `N/A`
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
     ```
@@ -710,6 +736,7 @@ IF context-dependent → Add indexical resolution
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
 *   **Structural Signature Analysis:** N/A
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
     ```
@@ -731,6 +758,7 @@ IF context-dependent → Add indexical resolution
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
 *   **Structural Signature Analysis:** N/A
+*   **Orbit Signature:** `[rope, snare]`
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
     ```
@@ -759,6 +787,7 @@ IF context-dependent → Add indexical resolution
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
 *   **Structural Signature Analysis:** N/A
+*   **Orbit Signature:** `[piton, rope]`
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
     ```
@@ -782,6 +811,7 @@ IF context-dependent → Add indexical resolution
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
 *   **Structural Signature Analysis:** N/A
+*   **Orbit Signature:** `[rope, unknown]`
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
     ```
@@ -810,6 +840,7 @@ IF context-dependent → Add indexical resolution
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
 *   **Structural Signature Analysis:** N/A
+*   **Orbit Signature:** `[rope, unknown]`
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
     ```
@@ -838,6 +869,7 @@ IF context-dependent → Add indexical resolution
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
 *   **Structural Signature Analysis:** N/A
+*   **Orbit Signature:** `[rope, snare]`
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
     ```
@@ -866,6 +898,7 @@ IF context-dependent → Add indexical resolution
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
 *   **Structural Signature Analysis:** N/A
+*   **Orbit Signature:** `[rope, snare]`
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
     ```
@@ -894,6 +927,7 @@ IF context-dependent → Add indexical resolution
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
 *   **Structural Signature Analysis:** N/A
+*   **Orbit Signature:** `[rope, snare]`
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
     ```
@@ -922,6 +956,7 @@ IF context-dependent → Add indexical resolution
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
 *   **Structural Signature Analysis:** N/A
+*   **Orbit Signature:** `[rope, snare]`
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
     ```
@@ -950,6 +985,7 @@ IF context-dependent → Add indexical resolution
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
 *   **Structural Signature Analysis:** N/A
+*   **Orbit Signature:** `[rope, tangled_rope, unknown]`
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
     ```
@@ -978,6 +1014,7 @@ IF context-dependent → Add indexical resolution
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
 *   **Structural Signature Analysis:** N/A
+*   **Orbit Signature:** `[rope, snare]`
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
     ```
@@ -1006,6 +1043,7 @@ IF context-dependent → Add indexical resolution
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
 *   **Structural Signature Analysis:** N/A
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
     ```
@@ -1033,6 +1071,7 @@ IF uncertainty → HALT changes until resolved
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
 *   **Structural Signature Analysis:** N/A
+*   **Orbit Signature:** `[piton, rope]`
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
     ```
@@ -1047,6 +1086,7 @@ IF uncertainty → HALT changes until resolved
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
 *   **Structural Signature Analysis:** N/A
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
     ```
@@ -1074,6 +1114,7 @@ IF uncertainty → HALT changes until resolved
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
 *   **Structural Signature Analysis:** N/A
+*   **Orbit Signature:** `[rope, snare]`
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
     ```
@@ -1102,6 +1143,7 @@ IF context-dependent → Add indexical resolution
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
 *   **Structural Signature Analysis:** N/A
+*   **Orbit Signature:** `[rope, snare]`
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
     ```
@@ -1130,6 +1172,7 @@ IF context-dependent → Add indexical resolution
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
 *   **Structural Signature Analysis:** N/A
+*   **Orbit Signature:** `[rope, snare]`
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
     ```
@@ -1158,6 +1201,7 @@ IF context-dependent → Add indexical resolution
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
 *   **Structural Signature Analysis:** N/A
+*   **Orbit Signature:** `[rope, snare]`
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
     ```
@@ -1186,6 +1230,7 @@ IF context-dependent → Add indexical resolution
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
 *   **Structural Signature Analysis:** N/A
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
     ```
@@ -1213,6 +1258,7 @@ IF uncertainty → HALT changes until resolved
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
 *   **Structural Signature Analysis:** N/A
+*   **Orbit Signature:** `[rope, snare]`
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
     ```
@@ -1241,6 +1287,7 @@ IF context-dependent → Add indexical resolution
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
 *   **Structural Signature Analysis:** N/A
+*   **Orbit Signature:** `[rope, snare]`
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
     ```
@@ -1269,6 +1316,7 @@ IF context-dependent → Add indexical resolution
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
 *   **Structural Signature Analysis:** N/A
+*   **Orbit Signature:** `[rope, snare]`
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
     ```
@@ -1297,6 +1345,7 @@ IF context-dependent → Add indexical resolution
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
 *   **Structural Signature Analysis:** N/A
+*   **Orbit Signature:** `[rope, tangled_rope, unknown]`
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
     ```
@@ -1325,6 +1374,7 @@ IF context-dependent → Add indexical resolution
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
 *   **Structural Signature Analysis:** N/A
+*   **Orbit Signature:** `[rope, snare]`
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
     ```
@@ -1353,6 +1403,7 @@ IF context-dependent → Add indexical resolution
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
 *   **Structural Signature Analysis:** N/A
+*   **Orbit Signature:** `[rope, snare]`
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
     ```
@@ -1381,6 +1432,7 @@ IF context-dependent → Add indexical resolution
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
 *   **Structural Signature Analysis:** N/A
+*   **Orbit Signature:** `[rope, tangled_rope, unknown]`
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
     ```
@@ -1409,6 +1461,7 @@ IF context-dependent → Add indexical resolution
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
 *   **Structural Signature Analysis:** N/A
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
     ```
@@ -1432,6 +1485,7 @@ IF context-dependent → Add indexical resolution
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
 *   **Structural Signature Analysis:** N/A
+*   **Orbit Signature:** `[rope, snare]`
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
     ```
@@ -1460,6 +1514,7 @@ IF context-dependent → Add indexical resolution
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
 *   **Structural Signature Analysis:** N/A
+*   **Orbit Signature:** `[rope, snare]`
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
     ```
@@ -1488,6 +1543,7 @@ IF context-dependent → Add indexical resolution
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
 *   **Structural Signature Analysis:** N/A
+*   **Orbit Signature:** `[rope, snare]`
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
     ```
@@ -1516,6 +1572,7 @@ IF context-dependent → Add indexical resolution
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
 *   **Structural Signature Analysis:** N/A
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
     ```
@@ -1544,6 +1601,7 @@ IF context-dependent → Add indexical resolution
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
 *   **Structural Signature Analysis:** N/A
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
     ```
@@ -1571,6 +1629,7 @@ IF uncertainty → HALT changes until resolved
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
 *   **Structural Signature Analysis:** N/A
+*   **Orbit Signature:** `[rope, snare]`
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
     ```
@@ -1599,6 +1658,7 @@ IF context-dependent → Add indexical resolution
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
 *   **Structural Signature Analysis:** N/A
+*   **Orbit Signature:** `[rope, tangled_rope, unknown]`
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
     ```
@@ -1627,6 +1687,7 @@ IF context-dependent → Add indexical resolution
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
 *   **Structural Signature Analysis:** N/A
+*   **Orbit Signature:** `[rope, snare]`
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
     ```
@@ -1655,6 +1716,7 @@ IF context-dependent → Add indexical resolution
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
 *   **Structural Signature Analysis:** N/A
+*   **Orbit Signature:** `[rope, snare]`
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
     ```
@@ -1683,6 +1745,7 @@ IF context-dependent → Add indexical resolution
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
 *   **Structural Signature Analysis:** N/A
+*   **Orbit Signature:** `[rope, unknown]`
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
     ```
@@ -1706,6 +1769,7 @@ IF context-dependent → Add indexical resolution
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
 *   **Structural Signature Analysis:** N/A
+*   **Orbit Signature:** `[rope, snare]`
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
     ```
@@ -1734,6 +1798,7 @@ IF context-dependent → Add indexical resolution
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
 *   **Structural Signature Analysis:** N/A
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
     ```
@@ -1762,6 +1827,7 @@ IF context-dependent → Add indexical resolution
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
 *   **Structural Signature Analysis:** N/A
+*   **Orbit Signature:** `[rope, snare]`
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
     ```
@@ -1790,6 +1856,7 @@ IF context-dependent → Add indexical resolution
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
 *   **Structural Signature Analysis:** N/A
+*   **Orbit Signature:** `[rope, snare]`
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
     ```

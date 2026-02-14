@@ -27,6 +27,10 @@ class MetaReporter:
         self.network_drift_events = 0
         self.purity_drift_count = 0
 
+        # Orbit data
+        self.orbit_families = {}  # signature_tuple -> [constraint_ids]
+        self.orbit_total = 0
+
     def parse_output(self):
         if not self.output_file.exists():
             print(f"Error: {self.output_file} does not exist")
@@ -106,6 +110,9 @@ class MetaReporter:
         self.network_drift_events = len(re.findall(
             r'\[(warning|watch|critical)\]\s*network_drift', content))
 
+        # --- Orbit data (from orbit_data.json) ---
+        self._load_orbit_data()
+
         return True
 
     def generate_report(self):
@@ -118,6 +125,7 @@ class MetaReporter:
         self._section_purity()
         self._section_boltzmann()
         self._section_network()
+        self._section_orbit_families()
         print("="*80 + "\n")
 
     def _section_test_results(self):
@@ -241,6 +249,65 @@ class MetaReporter:
                 print(f"  ⚠ CASCADE WARNING: {cascade_count} constraint(s) in cascading state")
         else:
             print("  No network dynamics data found in output.")
+        print()
+
+    def _load_orbit_data(self):
+        """Load orbit data from orbit_data.json"""
+        orbit_path = os.path.join(ROOT_DIR, 'outputs', 'orbit_data.json')
+        if not os.path.exists(orbit_path):
+            return
+        try:
+            import json
+            with open(orbit_path, 'r', encoding='utf-8') as f:
+                orbit_data = json.load(f)
+            for cid, entry in orbit_data.items():
+                sig = tuple(entry.get('orbit_signature', []))
+                if sig not in self.orbit_families:
+                    self.orbit_families[sig] = []
+                self.orbit_families[sig].append(cid)
+            self.orbit_total = len(orbit_data)
+        except (Exception):
+            pass
+
+    def _section_orbit_families(self):
+        print("GAUGE ORBIT FAMILIES")
+        print("-" * 80)
+        if not self.orbit_families:
+            print("  No orbit data found (run orbit analysis step first).")
+            print()
+            return
+
+        print(f"  Constraints with Orbit Data: {self.orbit_total}")
+        print(f"  Total Orbit Families:        {len(self.orbit_families)}")
+
+        # Singleton families (single-type orbits = gauge-invariant)
+        singleton_count = sum(
+            len(members) for sig, members in self.orbit_families.items()
+            if len(sig) == 1
+        )
+        multi_count = self.orbit_total - singleton_count
+        print(f"  Gauge-Invariant:             {singleton_count}")
+        print(f"  Gauge-Variant:               {multi_count}")
+
+        # Top 5 families by size
+        sorted_families = sorted(
+            self.orbit_families.items(),
+            key=lambda x: len(x[1]),
+            reverse=True
+        )
+        print(f"  Top Families:")
+        for sig, members in sorted_families[:5]:
+            sig_str = '[' + ', '.join(sig) + ']'
+            print(f"    - {sig_str:40s}: {len(members):4d}")
+
+        # Unknown-containing orbits
+        unknown_families = [
+            (sig, members) for sig, members in self.orbit_families.items()
+            if 'unknown' in sig or 'indexically_opaque' in sig
+        ]
+        if unknown_families:
+            unknown_count = sum(len(m) for _, m in unknown_families)
+            print(f"  Unknown-Containing Orbits:   {len(unknown_families)} families ({unknown_count} constraints)")
         print()
 
 def main():

@@ -13,6 +13,7 @@
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `N/A`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for 26usc469_real_estate_exemption: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.25),excess_above_floor(0.7)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint 26usc469_real_estate_exemption appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -45,6 +46,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint cg_israelgaza_20231012 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -77,6 +79,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint moltbot_religion appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -109,6 +112,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `tangled_rope`
     *   Analytical View: `snare`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint absorbing_markov_chain_trap appears as snare to individuals but tangled_rope to institutions...
 *   **Suggested Resolution Strategy:**
@@ -136,6 +140,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint abstraction_boundary_overrun appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -168,6 +173,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for abstraction_leakage: Appears to be rope (indexed_rope_classification) but fails 4 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.4),scope_variant([tangled_rope,unknown]),excess_above_floor(0.54),nonsensical_coupling(0.5)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint abstraction_leakage appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -200,6 +206,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Generated Omega:** Constraint academic_peer_review_gatekeeping appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -225,6 +232,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for academic_tenure_system: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.25),excess_above_floor(0.7)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint academic_tenure_system appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -250,6 +258,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for ad_fus_coordination: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.25),excess_above_floor(0.7)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint ad_fus_coordination appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -282,6 +291,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint ad_synaptic_deficit appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -307,6 +317,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `piton`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint adaptive_lag_trap appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -339,6 +350,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `piton`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint adversarial_surface_inflation appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -371,6 +383,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for adversarial_truth_decay: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.33),excess_above_floor(0.79)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint adversarial_truth_decay appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -403,6 +416,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `N/A`
 *   **Structural Signature Analysis:** FALSE NATURAL LAW signature for advice_as_dangerous_gift: Claims naturality (indexed_mountain_classification) but fails Boltzmann independence test. Coupling score=0.375 with 2 coupled dimension pairs. Excess extraction=0.15000000000000002. This constraint is "physics-washed" — it appears natural but its coupling topology reveals structural construction.
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint advice_as_dangerous_gift appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -435,6 +449,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `piton`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint agency_atrophy appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -467,6 +482,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint aging_longevity_tests appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -499,6 +515,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint ai_adoption_stigma appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -531,6 +548,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `piton`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for ai_auditability_gap: Appears to be rope (indexed_rope_classification) but fails 4 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.25),scope_variant([snare,tangled_rope]),excess_above_floor(0.47000000000000003),nonsensical_coupling(0.5)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint ai_auditability_gap appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -563,6 +581,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for ai_banal_capture: Appears to be rope (indexed_rope_classification) but fails 4 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.4),scope_variant([snare,tangled_rope]),excess_above_floor(0.48000000000000004),nonsensical_coupling(0.3333333333333333)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint ai_banal_capture appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -595,6 +614,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint ai_compute_capital_moat appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -627,6 +647,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `N/A`
     *   Analytical View: `N/A`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for ai_driven_surveillance_sensor_layer: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.7)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint ai_driven_surveillance_sensor_layer appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -652,6 +673,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for ai_evaluators_matching: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.25),excess_above_floor(0.7)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint ai_evaluators_matching appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -684,6 +706,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint ai_nonconsensual_content_facilitation appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -716,6 +739,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `tangled_rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint ai_performance_watermark appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -748,6 +772,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint ai_professional_displacement appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -780,6 +805,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint ai_religion_regulation appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -812,6 +838,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `N/A`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for ai_scholar_citation_trap: Appears to be rope (indexed_rope_classification) but fails 3 Boltzmann structural test(s): [scope_variant([snare,unknown]),excess_above_floor(0.5),nonsensical_coupling(0.5)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint ai_scholar_citation_trap appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -844,6 +871,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Generated Omega:** Constraint ai_task_horizon_reliability appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -875,6 +903,7 @@ IF uncertainty → HALT changes until resolved
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint ai_training_data_dependency appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -907,6 +936,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint airport_slot_use_it_or_lose_it appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -939,6 +969,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint algeria_france_colonial_legacy appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -971,6 +1002,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for algorithmic_epistemic_capture: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.25),excess_above_floor(0.7999999999999999)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint algorithmic_epistemic_capture appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -996,6 +1028,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for alignment_tax_tradeoff: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.25),excess_above_floor(0.7899999999999999)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint alignment_tax_tradeoff appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -1021,6 +1054,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint alzheimers_levetiracetam appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -1053,6 +1087,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for ancestral_pueblo_hydrology: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.25),excess_above_floor(0.7699999999999999)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint ancestral_pueblo_hydrology appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -1085,6 +1120,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `snare`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint ancient_grudge_verona appears as mountain to individuals but snare to institutions...
 *   **Suggested Resolution Strategy:**
@@ -1112,6 +1148,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for anticipatory_capacity_failure: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.25),excess_above_floor(0.7799999999999999)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint anticipatory_capacity_failure appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -1137,6 +1174,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `tangled_rope`
     *   Analytical View: `mountain`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint antifragility appears as snare to individuals but tangled_rope to institutions...
 *   **Suggested Resolution Strategy:**
@@ -1164,6 +1202,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `mountain`
 *   **Structural Signature Analysis:** FALSE NATURAL LAW signature for apartheid_nuclear_program: Claims naturality (indexed_mountain_classification) but fails Boltzmann independence test. Coupling score=0.750 with 0 coupled dimension pairs. Excess extraction=0.7999999999999999. This constraint is "physics-washed" — it appears natural but its coupling topology reveals structural construction.
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint apartheid_nuclear_program appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -1189,6 +1228,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint ape_cognition_framework appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -1221,6 +1261,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `tangled_rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint appropriations_brinkmanship appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -1253,6 +1294,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `mountain`
 *   **Structural Signature Analysis:** FALSE NATURAL LAW signature for arctic_geopolitical_flashpoint: Claims naturality (indexed_mountain_classification) but fails Boltzmann independence test. Coupling score=0.750 with 0 coupled dimension pairs. Excess extraction=0.7. This constraint is "physics-washed" — it appears natural but its coupling topology reveals structural construction.
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint arctic_geopolitical_flashpoint appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -1285,6 +1327,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `tangled_rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint arctic_maritime_control appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -1317,6 +1360,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint arg_ev_tariff appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -1349,6 +1393,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint armra_colostrum_regulation appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -1381,6 +1426,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint arrows_impossibility_theorem appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -1413,6 +1459,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint asce_7_22_seismic_design appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -1445,6 +1492,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for asymmetric_burden_distribution: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.3),excess_above_floor(0.74)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint asymmetric_burden_distribution appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -1477,6 +1525,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `piton`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint attention_as_bottleneck_resource appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -1509,6 +1558,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `piton`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for attention_market_cannibalization: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.4),excess_above_floor(0.71)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint attention_market_cannibalization appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -1541,6 +1591,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for australia_social_ban_2026: Appears to be rope (indexed_rope_classification) but fails 4 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.25),scope_variant([snare,tangled_rope]),excess_above_floor(0.6699999999999999),nonsensical_coupling(0.3333333333333333)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint australia_social_ban_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -1573,6 +1624,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `piton`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint autonomous_toolchain_sprawl appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -1605,6 +1657,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for availability_heuristic: Appears to be rope (indexed_rope_classification) but fails 4 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.25),scope_variant([tangled_rope,unknown]),excess_above_floor(0.35000000000000003),nonsensical_coupling(0.3333333333333333)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint availability_heuristic appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -1637,6 +1690,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint average_is_over_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -1669,6 +1723,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint awareness_without_leverage appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -1701,6 +1756,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for axiom_reasoner_2026: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.25),excess_above_floor(0.43)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint axiom_reasoner_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -1733,6 +1789,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `N/A`
     *   Analytical View: `N/A`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for banach_tarski_paradox: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.15000000000000002)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint banach_tarski_paradox appears as tangled_rope to individuals but rope to institutions...
 *   **Suggested Resolution Strategy:**
@@ -1760,6 +1817,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for bangladesh_july_national_charter: Appears to be rope (indexed_rope_classification) but fails 4 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.25),scope_variant([snare,tangled_rope]),excess_above_floor(0.5),nonsensical_coupling(0.5)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint bangladesh_july_national_charter appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -1792,6 +1850,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `N/A`
     *   Analytical View: `N/A`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for base_pair_complementarity: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.15000000000000002)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint base_pair_complementarity appears as tangled_rope to individuals but rope to institutions...
 *   **Suggested Resolution Strategy:**
@@ -1819,6 +1878,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `N/A`
     *   Analytical View: `N/A`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for basel_problem_convergence: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.15000000000000002)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint basel_problem_convergence appears as tangled_rope to individuals but rope to institutions...
 *   **Suggested Resolution Strategy:**
@@ -1846,6 +1906,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `N/A`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
@@ -1864,6 +1925,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `tangled_rope`
     *   Analytical View: `snare`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for bedouin_sedentary_transition: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.25),excess_above_floor(0.7)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint bedouin_sedentary_transition appears as snare to individuals but tangled_rope to institutions...
 *   **Suggested Resolution Strategy:**
@@ -1891,6 +1953,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint beehiiv_platform_model appears as tangled_rope to individuals but rope to institutions...
 *   **Suggested Resolution Strategy:**
@@ -1918,6 +1981,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for bgs_eigenvector_thermalization: Appears to be rope (indexed_rope_classification) but fails 4 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.25),scope_variant([tangled_rope,unknown]),excess_above_floor(0.39999999999999997),nonsensical_coupling(0.3333333333333333)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint bgs_eigenvector_thermalization appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -1950,6 +2014,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint big_data_astrophysics_arbitrage appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -1982,6 +2047,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint bip_narrative_illusion appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -2014,6 +2080,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint blackstone_conflicts_of_interest appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -2046,6 +2113,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint blackstone_smd_control appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -2078,6 +2146,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint blackstone_tra appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -2110,6 +2179,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint bnpl_payment_systems appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -2142,6 +2212,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `tangled_rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint board_of_peace_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -2174,6 +2245,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for boltzmann_universality_2026: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.375,0.25),excess_above_floor(0.09999999999999999)]. Coupling score=0.375. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint boltzmann_universality_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -2206,6 +2278,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `tangled_rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint bor_tax_exemption_nl appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -2238,6 +2311,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `piton`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint boundary_dissolution_risk appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -2270,6 +2344,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
@@ -2288,6 +2363,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for brazil_2026_general_elections: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.3),excess_above_floor(0.37)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint brazil_2026_general_elections appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -2320,6 +2396,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint brazil_mexico_financial_requirement appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -2352,6 +2429,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `tangled_rope`
     *   Analytical View: `snare`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint broke_vs_poor_grocery_math appears as snare to individuals but tangled_rope to institutions...
 *   **Suggested Resolution Strategy:**
@@ -2379,6 +2457,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `N/A`
     *   Analytical View: `N/A`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for brouwer_fixed_point: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.15000000000000002)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint brouwer_fixed_point appears as tangled_rope to individuals but rope to institutions...
 *   **Suggested Resolution Strategy:**
@@ -2406,6 +2485,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `N/A`
     *   Analytical View: `N/A`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for buffons_needle_pi_estimation: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.15000000000000002)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint buffons_needle_pi_estimation appears as tangled_rope to individuals but rope to institutions...
 *   **Suggested Resolution Strategy:**
@@ -2433,6 +2513,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `N/A`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for burali_forti_paradox: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.15000000000000002)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint burali_forti_paradox appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -2465,6 +2546,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint bureaucratic_legibility_collapse appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -2497,6 +2579,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint bushman_money_magic appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -2529,6 +2612,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint canal_panama_influence appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -2561,6 +2645,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint cancer_prevention appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -2593,6 +2678,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for capability_eval_overhang: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.25),excess_above_floor(0.8099999999999999)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint capability_eval_overhang appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -2625,6 +2711,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `piton`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for capital_misallocation_spiral: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.3),excess_above_floor(0.72)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint capital_misallocation_spiral appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -2657,6 +2744,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint capital_rotation_ai_narrative appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -2689,6 +2777,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint carbon_credit_markets_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -2721,6 +2810,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint carrier_deployment_deterrence appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -2753,6 +2843,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint carrying_capacity appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -2785,6 +2876,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint cascading_constraint_failure appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -2817,6 +2909,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint cascading_uncertainty_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -2849,6 +2942,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `mountain`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint castration_longevity_choice appears extractive (Snare) to individuals but unchangeable (Mountain) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -2878,6 +2972,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
     *   Institutional (Manager) View: `tangled_rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint cb_far_beyond_human appears as snare to individuals but tangled_rope to institutions...
 *   **Suggested Resolution Strategy:**
@@ -2905,6 +3000,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint cbdc_implementation appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -2937,6 +3033,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint cfius_hiefo_emcore_divestment appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -2969,6 +3066,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `N/A`
     *   Analytical View: `N/A`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for chaitins_omega_undecidability: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.15000000000000002)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint chaitins_omega_undecidability appears as tangled_rope to individuals but rope to institutions...
 *   **Suggested Resolution Strategy:**
@@ -2996,6 +3094,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `snare`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint challenger_o_ring_integrity appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -3028,6 +3127,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint champions_bass_fishing_exclusion appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -3060,6 +3160,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint china_critical_mineral_chokepoint appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -3092,6 +3193,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `tangled_rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint china_ev_export_oversupply appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -3124,6 +3226,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Generated Omega:** Constraint china_taiwan_reunification_mandate appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -3155,6 +3258,7 @@ IF uncertainty → HALT changes until resolved
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint china_vactrain_standard appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -3187,6 +3291,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint cholesterol_pill_cost appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -3219,6 +3324,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint chrome_imagen2_integration appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -3251,6 +3357,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint cia_fbi_legal_wall appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -3283,6 +3390,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint circadian_decoupling_arbitrage appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -3315,6 +3423,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint citation_collapse_dynamics appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -3347,6 +3456,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint civilizational_lifecycle_solara appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -3379,6 +3489,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint civilizational_maintenance_debt appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -3411,6 +3522,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
@@ -3429,6 +3541,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `snare`
     *   Analytical View: `N/A`
 *   **Structural Signature Analysis:** FALSE NATURAL LAW signature for climate_target_one_point_five: Claims naturality (indexed_mountain_classification) but fails Boltzmann independence test. Coupling score=1.000 with 6 coupled dimension pairs. Excess extraction=0.25. This constraint is "physics-washed" — it appears natural but its coupling topology reveals structural construction.
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint climate_target_one_point_five appears as mountain to individuals but snare to institutions...
 *   **Suggested Resolution Strategy:**
@@ -3456,6 +3569,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint cloudflare_dual_class_asymmetry appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -3488,6 +3602,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint cmr_001 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -3520,6 +3635,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `snare`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint cn_tech_decoupling_security_software appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -3552,6 +3668,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint coalition_disinfo_framework_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -3584,6 +3701,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint cobra_effect appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -3616,6 +3734,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint codex_access appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -3648,6 +3767,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint coe_ukraine_reparations_register appears as rope to individuals but snare to institutions...
 *   **Suggested Resolution Strategy:**
@@ -3675,6 +3795,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint cognac_geopolitical_risk appears as tangled_rope to individuals but snare to institutions...
 *   **Suggested Resolution Strategy:**
@@ -3702,6 +3823,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint cognitive_diversity_arbitrage appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -3734,6 +3856,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `mountain`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint cognitive_energy_budget appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -3766,6 +3889,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint cognitive_hacking_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -3798,6 +3922,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint cognitive_induction_gap appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -3830,6 +3955,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint cma appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -3862,6 +3988,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint cognitive_surrender_to_system_3 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -3894,6 +4021,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint coinbase_crypto_volatility appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -3926,6 +4054,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint coinbase_regulatory_uncertainty appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -3958,6 +4087,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint cold_dark_matter_paradigm appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -3990,6 +4120,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `N/A`
     *   Analytical View: `N/A`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for collatz_conjecture_determinism: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.09999999999999999)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint collatz_conjecture_determinism appears as tangled_rope to individuals but rope to institutions...
 *   **Suggested Resolution Strategy:**
@@ -4017,6 +4148,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint collective_action_deadlock appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -4049,6 +4181,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint college_admissions_market appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -4081,6 +4214,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint colorado_sbe_decentralization_friction appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -4113,6 +4247,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for complexity_debt: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.4),excess_above_floor(0.6399999999999999)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint complexity_debt appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -4145,6 +4280,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint compounding_logic appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -4177,6 +4313,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint consensus_without_truth appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -4209,6 +4346,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint constitutional_consecration appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -4241,6 +4379,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `N/A`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for constitutional_supremacy: Appears to be rope (indexed_rope_classification) but fails 4 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.25),scope_variant([rope,tangled_rope]),excess_above_floor(0.25),nonsensical_coupling(0.5)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint constitutional_supremacy appears as tangled_rope to individuals but rope to institutions...
 *   **Suggested Resolution Strategy:**
@@ -4268,6 +4407,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for consumer_debt_slavery: Appears to be rope (indexed_rope_classification) but fails 4 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.3),scope_variant([snare,tangled_rope]),excess_above_floor(0.57),nonsensical_coupling(0.3333333333333333)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint consumer_debt_slavery appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -4300,6 +4440,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `piton`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint container_capacity_mismatch appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -4332,6 +4473,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `N/A`
     *   Analytical View: `N/A`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for continuum_hypothesis_undecidability: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.09999999999999999)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint continuum_hypothesis_undecidability appears as tangled_rope to individuals but rope to institutions...
 *   **Suggested Resolution Strategy:**
@@ -4359,6 +4501,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint conversational_dogmas_interruption appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -4391,6 +4534,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for coordination_attack_vulnerability: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.4),excess_above_floor(0.6499999999999999)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint coordination_attack_vulnerability appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -4423,6 +4567,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `piton`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for coordination_fatigue: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.33),excess_above_floor(0.68)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint coordination_fatigue appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -4455,6 +4600,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint coordination_threshold_failure appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -4487,6 +4633,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `snare`
     *   Analytical View: `N/A`
 *   **Structural Signature Analysis:** FALSE NATURAL LAW signature for copyright_protection: Claims naturality (indexed_mountain_classification) but fails Boltzmann independence test. Coupling score=1.000 with 4 coupled dimension pairs. Excess extraction=0.35000000000000003. This constraint is "physics-washed" — it appears natural but its coupling topology reveals structural construction.
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint copyright_protection appears as mountain to individuals but snare to institutions...
 *   **Suggested Resolution Strategy:**
@@ -4514,6 +4661,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for cost_of_observation: Appears to be rope (indexed_rope_classification) but fails 4 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.25),scope_variant([tangled_rope,unknown]),excess_above_floor(0.7999999999999999),nonsensical_coupling(0.3333333333333333)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint cost_of_observation appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -4546,6 +4694,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `N/A`
     *   Analytical View: `N/A`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for countable_infinity_cardinality: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.15000000000000002)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint countable_infinity_cardinality appears as tangled_rope to individuals but rope to institutions...
 *   **Suggested Resolution Strategy:**
@@ -4573,6 +4722,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint couples_residency_match appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -4605,6 +4755,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `tangled_rope`
     *   Analytical View: `N/A`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for cow_field_poop: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.25),excess_above_floor(0.35000000000000003)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint cow_field_poop appears as snare to individuals but tangled_rope to institutions...
 *   **Suggested Resolution Strategy:**
@@ -4632,6 +4783,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint credentialism_national_security appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -4664,6 +4816,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `piton`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint credibility_inflation appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -4696,6 +4849,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for crisis_signal_saturation: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.4),excess_above_floor(0.69)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint crisis_signal_saturation appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -4728,6 +4882,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `piton`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint critical_actor_overcentralization appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -4760,6 +4915,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint crop_defense_dependency appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -4792,6 +4948,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `piton`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint cross_domain_coupling_spiral appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -4824,6 +4981,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint cs_ecmo_bridge appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -4856,6 +5014,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `tangled_rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint cultural_homogenization_social_media appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -4888,6 +5047,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `piton`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint cultural_memory_decay appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -4920,6 +5080,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `tangled_rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint cumbria_mine_rejection appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -4952,6 +5113,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for cz_plea_agreement_2026: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.33),excess_above_floor(0.75)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint cz_plea_agreement_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -4984,6 +5146,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for dark_patterns_manipulation: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.25),excess_above_floor(0.7999999999999999)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint dark_patterns_manipulation appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -5016,6 +5179,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint data_laundering_pipeline appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -5048,6 +5212,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint data_privacy_regulation appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -5080,6 +5245,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint debt_service_squeeze appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -5112,6 +5278,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `snare`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint debt_trap_microfinance appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -5144,6 +5311,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for decision_latency_mismatch: Appears to be rope (indexed_rope_classification) but fails 4 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.4),scope_variant([tangled_rope,unknown]),excess_above_floor(0.48000000000000004),nonsensical_coupling(0.5)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint decision_latency_mismatch appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -5176,6 +5344,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint deferred_risk_realization appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -5208,6 +5377,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for delayed_feedback_instability: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.3),excess_above_floor(0.65)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint delayed_feedback_instability appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -5240,6 +5410,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint delta_force_selection_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -5272,6 +5443,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for demographic_inertia_trap: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.3),excess_above_floor(0.63)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint demographic_inertia_trap appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -5304,6 +5476,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint digital_credentialing_verification appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -5336,6 +5509,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `tangled_rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint digital_euro_cbdc appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -5368,6 +5542,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint digital_identity_tether appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -5400,6 +5575,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint dionysiac_frenzy appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -5432,6 +5608,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for discover_core_2026: Appears to be rope (indexed_rope_classification) but fails 4 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.3),scope_variant([snare,tangled_rope]),excess_above_floor(0.42999999999999994),nonsensical_coupling(0.5)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint discover_core_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -5464,6 +5641,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint djia_as_economic_barometer appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -5496,6 +5674,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint dk_foreign_convict_expulsion appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -5528,6 +5707,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint dn_paywall appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -5560,6 +5740,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint doomsday_clock_framework appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -5592,6 +5773,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint dunning_kruger_effect appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -5624,6 +5806,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint dutch_minority_govt_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -5656,6 +5839,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint dwp_carers_allowance_cliff appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -5688,6 +5872,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint ec_meta_manus_block appears as rope to individuals but snare to institutions...
 *   **Suggested Resolution Strategy:**
@@ -5715,6 +5900,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint edelman_2026_developed_stagnation appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -5747,6 +5933,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `snare`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for edelman_2026_developing_volatility: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.33),excess_above_floor(0.42000000000000004)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint edelman_2026_developing_volatility appears as rope to individuals but snare to institutions...
 *   **Suggested Resolution Strategy:**
@@ -5774,6 +5961,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for edelman_2026_insularity: Appears to be rope (indexed_rope_classification) but fails 4 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.3),scope_variant([snare,tangled_rope]),excess_above_floor(0.4),nonsensical_coupling(0.5)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint edelman_2026_insularity appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -5806,6 +5994,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `N/A`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for electrification_scale_2026: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.375,0.25),excess_above_floor(0.09999999999999999)]. Coupling score=0.375. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint electrification_scale_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -5838,6 +6027,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint elite_identity_capture_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -5870,6 +6060,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for elite_overproduction_instability: Appears to be rope (indexed_rope_classification) but fails 4 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.3),scope_variant([snare,tangled_rope]),excess_above_floor(0.42999999999999994),nonsensical_coupling(0.5)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint elite_overproduction_instability appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -5902,6 +6093,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint elliq_ai_companion appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -5934,6 +6126,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `piton`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for emergency_mode_lock_in: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.33),excess_above_floor(0.81)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint emergency_mode_lock_in appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -5966,6 +6159,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint emergency_oversight_bureau appears as tangled_rope to individuals but rope to institutions...
 *   **Suggested Resolution Strategy:**
@@ -5993,6 +6187,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for emergency_powers_ratchet: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.33),excess_above_floor(0.74)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint emergency_powers_ratchet appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -6025,6 +6220,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `piton`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint emergent_goal_misalignment appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -6057,6 +6253,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `scaffold`
     *   Analytical View: `mountain`
 *   **Structural Signature Analysis:** FALSE NATURAL LAW signature for emotional_cycles_2026: Claims naturality (indexed_mountain_classification) but fails Boltzmann independence test. Coupling score=0.750 with 0 coupled dimension pairs. Excess extraction=0.5. This constraint is "physics-washed" — it appears natural but its coupling topology reveals structural construction.
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint emotional_cycles_2026 appears as snare to individuals but scaffold to institutions...
 *   **Suggested Resolution Strategy:**
@@ -6084,6 +6281,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint empty_tomb_transformation appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -6116,6 +6314,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint em_clinical_guidelines appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -6148,6 +6347,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint endocrine_disruption_society appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -6180,6 +6380,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `piton`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint epistemic_free_rider_problem appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -6212,6 +6413,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `piton`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint epistemic_overload_collapse appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -6244,6 +6446,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `tangled_rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint epstein_document_release_2026 appears as snare to individuals but tangled_rope to institutions...
 *   **Suggested Resolution Strategy:**
@@ -6271,6 +6474,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `scaffold`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint erasmus_rejoining_scaffold appears as tangled_rope to individuals but scaffold to institutions...
 *   **Suggested Resolution Strategy:**
@@ -6298,6 +6502,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `snare`
     *   Analytical View: `N/A`
 *   **Structural Signature Analysis:** COUPLING-INVARIANT ROPE signature for ergo_mixer_protocol: Certified true coordination mechanism. Boltzmann compliance=compliant(0), scope invariance=invariant, excess extraction=0.050. Passes all structural purity tests — this is genuine coordination, not low-extraction construction.
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
@@ -6316,6 +6521,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint rosen_bridge_protocol appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -6348,6 +6554,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint ergo_storage_rent appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -6380,6 +6587,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `mountain`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint ergo_storage_rent_mechanism appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -6412,6 +6620,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `mountain`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint ergodic_theorems appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -6444,6 +6653,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint ergot_grain_poisoning appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -6476,6 +6686,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint eu_affordable_housing_initiative appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -6508,6 +6719,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `tangled_rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint eu_asylum_outsourcing_framework appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -6540,6 +6752,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint eu_deforestation_regulation appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -6572,6 +6785,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `snare`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint eu_digital_services_act appears as tangled_rope to individuals but rope to institutions...
 *   **Suggested Resolution Strategy:**
@@ -6599,6 +6813,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint eu_ev_tariff_wall appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -6631,6 +6846,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint eu_irgc_terrorist_designation appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -6663,6 +6879,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `tangled_rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint eu_mercosur_trade_agreement appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -6695,6 +6912,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `tangled_rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint eu_renewable_energy_mandate appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -6727,6 +6945,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `tangled_rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint eu_unanimity_rule_foreign_policy appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -6759,6 +6978,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for eurozone_fragmentation_2026: Appears to be rope (indexed_rope_classification) but fails 3 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.33),excess_above_floor(0.38),nonsensical_coupling(0.16666666666666666)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint eurozone_fragmentation_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -6791,6 +7011,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint evfta_trade_agreement appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -6823,6 +7044,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `piton`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint evidence_half_life appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -6855,6 +7077,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `piton`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint evolutionary_knowledge appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -6887,6 +7110,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint evolutionary_mismatch_load appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -6919,6 +7143,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `piton`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint expert_disempowerment appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -6951,6 +7176,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint exploration_vs_exploitation appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -6983,6 +7209,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint extraordinary_narrative_shift appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -7015,6 +7242,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint faa_boeing_regulatory_capture appears as tangled_rope to individuals but rope to institutions...
 *   **Suggested Resolution Strategy:**
@@ -7042,6 +7270,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint factional_instability appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -7074,6 +7303,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint family_estrangement_ratio appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -7106,6 +7336,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint family_succession_system appears as tangled_rope to individuals but rope to institutions...
 *   **Suggested Resolution Strategy:**
@@ -7133,6 +7364,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint fcc_dji_covered_list appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -7165,6 +7397,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `tangled_rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint fda_component_efficacy_standard appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -7197,6 +7430,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `tangled_rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint fed_shutdown_2026 appears as snare to individuals but tangled_rope to institutions...
 *   **Suggested Resolution Strategy:**
@@ -7224,6 +7458,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint feedback_loop_desynchronization appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -7256,6 +7491,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint fiat_currency_lifecycle appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -7288,6 +7524,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint fiber_optic_chip_tech appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -7320,6 +7557,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint financial_drag appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -7352,6 +7590,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint fine_particle_policy appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -7384,6 +7623,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint finite_pool_of_worry appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -7416,6 +7656,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint finnish_debt_adjustment appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -7448,6 +7689,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for fiscal_dominance_trap: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.3),excess_above_floor(0.72)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint fiscal_dominance_trap appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -7480,6 +7722,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint fitts_law_industrial_application appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -7512,6 +7755,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint floating_wall_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -7544,6 +7788,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope, unknown]`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint fnl_shadow_probe appears as tangled_rope to individuals but rope to institutions...
 *   **Suggested Resolution Strategy:**
@@ -7571,6 +7816,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `piton`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint fragile_middle_layer_collapse appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -7603,6 +7849,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint framing_effect appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -7635,6 +7882,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for france_2027_presidential_election: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.33),excess_above_floor(0.38)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[rope, unknown]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint france_2027_presidential_election appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -7667,6 +7915,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
@@ -7685,6 +7934,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Generated Omega:** Constraint frankenstein_creation_hubris appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -7716,6 +7966,7 @@ IF uncertainty → HALT changes until resolved
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint fraser_river_salmon_regulation appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -7748,6 +7999,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint french_ag_land_concentration appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -7780,6 +8032,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[scaffold, tangled_rope, unknown]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint france_local_elections_march_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -7812,6 +8065,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint frontex_pushback_coordination appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -7844,6 +8098,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint future_dsm_integration appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -7876,6 +8131,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint g7_debt_trap appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -7908,6 +8164,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint gale_shapley appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -7940,6 +8197,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope, unknown]`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint gs_market_clearing appears as tangled_rope to individuals but rope to institutions...
 *   **Suggested Resolution Strategy:**
@@ -7967,6 +8225,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `N/A`
     *   Analytical View: `N/A`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for galois_theory_symmetry: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.15000000000000002)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint galois_theory_symmetry appears as tangled_rope to individuals but rope to institutions...
 *   **Suggested Resolution Strategy:**
@@ -7994,6 +8253,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint gaza_border_control_rafah appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -8026,6 +8286,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope, unknown]`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint gemini_scientific_advancement appears as tangled_rope to individuals but rope to institutions...
 *   **Suggested Resolution Strategy:**
@@ -8053,6 +8314,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint genetic_predisposition appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -8085,6 +8347,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[scaffold, snare, unknown]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint genie_ip_constraint appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -8117,6 +8380,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for geopolitical_insularity_2026: Appears to be rope (indexed_rope_classification) but fails 4 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.33),scope_variant([snare,tangled_rope]),excess_above_floor(0.5),nonsensical_coupling(0.5)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint geopolitical_insularity_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -8149,6 +8413,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope, unknown]`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint germany_tennet_takeover appears as tangled_rope to individuals but rope to institutions...
 *   **Suggested Resolution Strategy:**
@@ -8176,6 +8441,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Generated Omega:** Constraint germline_regulation_threshold_2026 appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -8207,6 +8473,7 @@ IF uncertainty → HALT changes until resolved
     *   Institutional (Manager) View: `tangled_rope`
     *   Analytical View: `snare`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint ghost_fishing_gear appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -8239,6 +8506,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint gig_economy_algorithmic_management appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -8271,6 +8539,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Generated Omega:** Constraint gilgamesh_mortality_limit appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -8302,6 +8571,7 @@ IF uncertainty → HALT changes until resolved
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `mountain`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint gita_kurukshetra appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -8334,6 +8604,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `tangled_rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint glen_canyon_water_allocation appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -8366,6 +8637,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `tangled_rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint global_digital_divide appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -8398,6 +8670,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Generated Omega:** Constraint global_hoarding_scaling_laws appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -8429,6 +8702,7 @@ IF uncertainty → HALT changes until resolved
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Generated Omega:** Constraint global_protocol_entrenchment appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -8460,6 +8734,7 @@ IF uncertainty → HALT changes until resolved
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for global_stimulus_spree: Appears to be rope (indexed_rope_classification) but fails 3 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.3),excess_above_floor(0.47),nonsensical_coupling(0.16666666666666666)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[scaffold, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint global_stimulus_spree appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -8492,6 +8767,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for global_water_bankruptcy: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.3),excess_above_floor(0.7)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint global_water_bankruptcy appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -8524,6 +8800,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `piton`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for goal_boundary_poisoning: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.3),excess_above_floor(0.71)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint goal_boundary_poisoning appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -8556,6 +8833,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `N/A`
     *   Analytical View: `N/A`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for goedels_incompleteness_theorems: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.15000000000000002)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint goedels_incompleteness_theorems appears as tangled_rope to individuals but rope to institutions...
 *   **Suggested Resolution Strategy:**
@@ -8583,6 +8861,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint gold_fomo_cycle appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -8615,6 +8894,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `N/A`
     *   Analytical View: `N/A`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for goldbach_conjecture: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.09999999999999999)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint goldbach_conjecture appears as tangled_rope to individuals but rope to institutions...
 *   **Suggested Resolution Strategy:**
@@ -8642,6 +8922,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Generated Omega:** Constraint golden_handcuffs appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -8673,6 +8954,7 @@ IF uncertainty → HALT changes until resolved
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint goodharts_law appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -8705,6 +8987,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, unknown]`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint goodstein_theorem_finite_proof appears as tangled_rope to individuals but rope to institutions...
 *   **Suggested Resolution Strategy:**
@@ -8732,6 +9015,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint google_ai_search_overview appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -8764,6 +9048,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `tangled_rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[indexically_opaque, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint google_universal_commerce_protocol appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -8796,6 +9081,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `piton`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint governance_latency_gap appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -8828,6 +9114,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint governance_overfitting appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -8860,6 +9147,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint gpt5_codex_dev_cycle appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -8892,6 +9180,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint gpt_store_marketplace appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -8924,6 +9213,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint graph_coloring_complexity appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -8956,6 +9246,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `tangled_rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint great_mongolian_road_economic_dependency appears as snare to individuals but tangled_rope to institutions...
 *   **Suggested Resolution Strategy:**
@@ -8983,6 +9274,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint greenland_defence_pact_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -9015,6 +9307,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for greenland_seizure_trade_war: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.33),excess_above_floor(0.75)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint greenland_seizure_trade_war appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -9047,6 +9340,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `tangled_rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint greshams_law appears as snare to individuals but tangled_rope to institutions...
 *   **Suggested Resolution Strategy:**
@@ -9074,6 +9368,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope, unknown]`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint grete_samsa_transition appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -9106,6 +9401,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `piton`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for grievance_stack_overflow: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.3),excess_above_floor(0.7)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint grievance_stack_overflow appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -9138,6 +9434,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint guano_wealth_extraction appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -9170,6 +9467,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `tangled_rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint guinea_junta_legitimization_2024 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -9202,6 +9500,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, unknown]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint guinea_worm_eradication appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -9234,6 +9533,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `N/A`
     *   Analytical View: `N/A`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for halting_problem_undecidability: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.15000000000000002)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint halting_problem_undecidability appears as tangled_rope to individuals but rope to institutions...
 *   **Suggested Resolution Strategy:**
@@ -9261,6 +9561,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint hammurabi_lex_talionis appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -9293,6 +9594,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint hanlons_razor appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -9325,6 +9627,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Generated Omega:** Constraint happiness_of_others appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -9356,6 +9659,7 @@ IF uncertainty → HALT changes until resolved
     *   Institutional (Manager) View: `mountain`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint harm_principle_liberty appears extractive (Snare) to individuals but unchangeable (Mountain) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -9385,6 +9689,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `piton`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint hp_liberalism appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -9417,6 +9722,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint hasbro_licensing_restriction appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -9449,6 +9755,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `snare`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE NATURAL LAW signature for hedonic_adaptation_baseline: Claims naturality (indexed_mountain_classification) but fails Boltzmann independence test. Coupling score=1.000 with 2 coupled dimension pairs. Excess extraction=0.32999999999999996. This constraint is "physics-washed" — it appears natural but its coupling topology reveals structural construction.
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint hedonic_adaptation_baseline appears as mountain to individuals but snare to institutions...
 *   **Suggested Resolution Strategy:**
@@ -9476,6 +9783,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `N/A`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for heisenberg_uncertainty: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.15000000000000002)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint heisenberg_uncertainty appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -9508,6 +9816,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint help_to_buy_uk appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -9540,6 +9849,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint helsinki_bus_theory appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -9572,6 +9882,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint hershey_salt_strategy appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -9604,6 +9915,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint hicbc_uk appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -9636,6 +9948,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `piton`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint hidden_interdependency_risk appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -9668,6 +9981,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `N/A`
     *   Analytical View: `N/A`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for hilberts_hotel_infinity: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.09999999999999999)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint hilberts_hotel_infinity appears as tangled_rope to individuals but rope to institutions...
 *   **Suggested Resolution Strategy:**
@@ -9695,6 +10009,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `tangled_rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint horizon_liability_contract appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -9727,6 +10042,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for hu_2026_election_rules: Appears to be rope (indexed_rope_classification) but fails 4 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.3),scope_variant([snare,tangled_rope]),excess_above_floor(0.42999999999999994),nonsensical_coupling(0.5)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint hu_2026_election_rules appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -9759,6 +10075,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint hub_short_form_tv_market_fragmentation appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -9791,6 +10108,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for hydra_game: Appears to be rope (indexed_rope_classification) but fails 4 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.25),scope_variant([tangled_rope,unknown]),excess_above_floor(0.6799999999999999),nonsensical_coupling(0.5)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[rope, tangled_rope, unknown]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint hydra_game appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -9823,6 +10141,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint hypercompression_of_time_horizons appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -9855,6 +10174,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint hypernormie_equilibrium appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -9887,6 +10207,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for ibm_shield_2026: Appears to be rope (indexed_rope_classification) but fails 4 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.33),scope_variant([snare,tangled_rope]),excess_above_floor(0.52),nonsensical_coupling(0.3333333333333333)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint ibm_shield_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -9919,6 +10240,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint ibm_shield_contract_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -9951,6 +10273,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint ice_safe_departure appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -9983,6 +10306,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `piton`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint identity_stack_incompatibility appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -10015,6 +10339,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `piton`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint incentive_surface_warping appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -10047,6 +10372,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `tangled_rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint incumbent_steel_production appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -10079,6 +10405,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint india_nuclear_liability_act_2010 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -10111,6 +10438,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint india_semi_mission appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -10143,6 +10471,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `tangled_rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint indian_import_tariffs_eu appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -10175,6 +10504,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint individual_revolution_autonomy appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -10207,6 +10537,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `tangled_rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[indexically_opaque, rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint indo_german_defense_pact appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -10239,6 +10570,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[indexically_opaque, rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint indonesia_penal_code_2023 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -10271,6 +10603,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `piton`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint inference_cost_scaling_law appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -10303,6 +10636,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for informational_time_2026: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.25),excess_above_floor(0.73)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint informational_time_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -10335,6 +10669,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for infrastructure_interoperability_decay: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.4),excess_above_floor(0.6599999999999999)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint infrastructure_interoperability_decay appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -10367,6 +10702,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Generated Omega:** Constraint inner_model_theory_constraints appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -10398,6 +10734,7 @@ IF uncertainty → HALT changes until resolved
     *   Institutional (Manager) View: `N/A`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
@@ -10416,6 +10753,7 @@ IF uncertainty → HALT changes until resolved
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint innovators_dilemma appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -10448,6 +10786,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint institutional_inertia_lock appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -10480,6 +10819,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for institutional_memory_loss: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.33),excess_above_floor(0.74)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint institutional_memory_loss appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -10512,6 +10852,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint institutional_mutation_domestication appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -10544,6 +10885,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `piton`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint institutional_mutation_without_selection appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -10576,6 +10918,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope, unknown]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint insult_wisdom_training appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -10608,6 +10951,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint integrated_digital_governance_stack appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -10640,6 +10984,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint constraint_interaction_explosion appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -10665,6 +11010,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `piton`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint interface_contract_breakdown appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -10697,6 +11043,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint ivt_accessibility_barrier appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -10729,6 +11076,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[indexically_opaque, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint international_seabed_mining_regime appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -10761,6 +11109,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[scaffold, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint ia_digital_preservation appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -10793,6 +11142,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint internet_evolution_lifecycle appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -10825,6 +11175,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `piton`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for interpretive_frame_fragmentation: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.3),excess_above_floor(0.78)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint interpretive_frame_fragmentation appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -10857,6 +11208,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `piton`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for intertemporal_responsibility_gap: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.3),excess_above_floor(0.77)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint intertemporal_responsibility_gap appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -10889,6 +11241,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for invisible_infrastructure_dependency: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.4),excess_above_floor(0.6699999999999999)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint invisible_infrastructure_dependency appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -10921,6 +11274,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint iran_guardian_council_vetting appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -10953,6 +11307,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint iran_hijab_law appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -10985,6 +11340,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for iran_mandatrophic_collapse: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.3),excess_above_floor(0.75)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint iran_mandatrophic_collapse appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -11017,6 +11373,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for iran_war_room_2026: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.25),excess_above_floor(0.7699999999999999)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint iran_war_room_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -11049,6 +11406,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint iron_law_of_oligarchy appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -11081,6 +11439,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint irreversible_policy_commitment appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -11113,6 +11472,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `tangled_rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint israel_egypt_gas_deal appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -11145,6 +11505,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for israel_electoral_threshold: Appears to be rope (indexed_rope_classification) but fails 3 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.33),excess_above_floor(0.38),nonsensical_coupling(0.16666666666666666)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint israel_electoral_threshold appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -11177,6 +11538,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint israel_gaza_ceasefire_violation appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -11209,6 +11571,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for israel_norwegian_law: Appears to be rope (indexed_rope_classification) but fails 4 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.3),scope_variant([snare,tangled_rope]),excess_above_floor(0.37),nonsensical_coupling(0.5)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint israel_norwegian_law appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -11241,6 +11604,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for israel_override_clause: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.33),excess_above_floor(0.65)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint israel_override_clause appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -11273,6 +11637,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for israel_surplus_vote_agreements: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.3),excess_above_floor(0.31999999999999995)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint israel_surplus_vote_agreements appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -11305,6 +11670,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `piton`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint israeli_settlement_policy_authority_restriction appears as snare to individuals but piton to institutions...
 *   **Suggested Resolution Strategy:**
@@ -11332,6 +11698,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint iss_ped_ban appears as tangled_rope to individuals but rope to institutions...
 *   **Suggested Resolution Strategy:**
@@ -11359,6 +11726,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint iterated_function_system_convergence appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -11391,6 +11759,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint japanese_energy_scaffold_2025 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -11423,6 +11792,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint jevons_paradox appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -11455,6 +11825,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint job_hunt_volume_system_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -11487,6 +11858,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `snare`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint jp_eez_enforcement appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -11519,6 +11891,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[indexically_opaque, rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint jp_nativist_politics appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -11551,6 +11924,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for jupiter_composition_knowledge_gap: Appears to be rope (indexed_rope_classification) but fails 4 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.25),scope_variant([rope,tangled_rope,unknown]),excess_above_floor(0.32999999999999996),nonsensical_coupling(0.6666666666666666)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[rope, tangled_rope, unknown]`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint jupiter_composition_knowledge_gap appears as tangled_rope to individuals but rope to institutions...
 *   **Suggested Resolution Strategy:**
@@ -11578,6 +11952,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for keltner_relationship_evaluation: Appears to be rope (indexed_rope_classification) but fails 4 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.25),scope_variant([rope,tangled_rope,unknown]),excess_above_floor(0.3),nonsensical_coupling(0.6666666666666666)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[rope, tangled_rope, unknown]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint keltner_relationship_evaluation appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -11610,6 +11985,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint khantivadin_radical_patience appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -11642,6 +12018,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `tangled_rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint kim_jong_un_succession appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -11674,6 +12051,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `N/A`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for kirby_paris_theorem: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.15000000000000002)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint kirby_paris_theorem appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -11706,6 +12084,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint kjv_textual_authority appears as tangled_rope to individuals but rope to institutions...
 *   **Suggested Resolution Strategy:**
@@ -11733,6 +12112,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `N/A`
     *   Analytical View: `N/A`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for kleene_recursion_theorem: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.15000000000000002)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint kleene_recursion_theorem appears as tangled_rope to individuals but rope to institutions...
 *   **Suggested Resolution Strategy:**
@@ -11760,6 +12140,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE NATURAL LAW signature for knowledge_action_gap: Claims naturality (indexed_mountain_classification) but fails Boltzmann independence test. Coupling score=1.000 with 6 coupled dimension pairs. Excess extraction=0.5599999999999999. This constraint is "physics-washed" — it appears natural but its coupling topology reveals structural construction.
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Generated Omega:** Constraint knowledge_action_gap appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -11791,6 +12172,7 @@ IF uncertainty → HALT changes until resolved
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint labor_union_dues appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -11823,6 +12205,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope, unknown]`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint constraint_lagrange_multipliers appears as tangled_rope to individuals but rope to institutions...
 *   **Suggested Resolution Strategy:**
@@ -11848,6 +12231,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `N/A`
     *   Analytical View: `N/A`
 *   **Structural Signature Analysis:** CONSTRUCTED HIGH-EXTRACTION signature for [landscape_of_fear_2026]: Enforcement present (suppression=0.50, resistance=0.50) with high extraction (0.50). This is an extraction mechanism that metrics failed to classify as snare.
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint landscape_of_fear_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -11873,6 +12257,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Generated Omega:** Constraint large_cardinal_foundations appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -11904,6 +12289,7 @@ IF uncertainty → HALT changes until resolved
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `piton`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint latent_goal_activation appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -11936,6 +12322,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for latent_regulatory_bomb: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.33),excess_above_floor(0.74)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint latent_regulatory_bomb appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -11968,6 +12355,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint lavender_ai_targeting appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -12000,6 +12388,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint law_of_diminishing_returns appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -12032,6 +12421,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for lcdm_hubble_tension: Appears to be rope (indexed_rope_classification) but fails 3 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.25),excess_above_floor(0.44999999999999996),nonsensical_coupling(0.16666666666666666)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint lcdm_hubble_tension appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -12064,6 +12454,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for lcdm_small_scale_anomalies: Appears to be rope (indexed_rope_classification) but fails 4 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.25),scope_variant([tangled_rope,unknown]),excess_above_floor(0.39999999999999997),nonsensical_coupling(0.3333333333333333)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint lcdm_small_scale_anomalies appears as tangled_rope to individuals but rope to institutions...
 *   **Suggested Resolution Strategy:**
@@ -12091,6 +12482,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for legal_formalism_overhang: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.33),excess_above_floor(0.73)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint legal_formalism_overhang appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -12123,6 +12515,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint legibility_trap appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -12155,6 +12548,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `piton`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint legitimacy_without_capacity appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -12187,6 +12581,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint lehman_repo_105 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -12219,6 +12614,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for lindy_effect: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.15000000000000002)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint lindy_effect appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -12251,6 +12647,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `tangled_rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint linguistic_relativity_cultural_framing appears as tangled_rope to individuals but rope to institutions...
 *   **Suggested Resolution Strategy:**
@@ -12278,6 +12675,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `piton`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint liquidity_illusion appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -12310,6 +12708,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `N/A`
     *   Analytical View: `N/A`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for litany_of_the_real: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.09999999999999999)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint litany_of_the_real appears as rope to individuals but tangled_rope to institutions...
 *   **Suggested Resolution Strategy:**
@@ -12335,6 +12734,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `tangled_rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for local_vs_global_optima: Appears to be rope (indexed_rope_classification) but fails 4 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.25),scope_variant([rope,tangled_rope]),excess_above_floor(0.25),nonsensical_coupling(0.5)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint local_vs_global_optima appears as snare to individuals but tangled_rope to institutions...
 *   **Suggested Resolution Strategy:**
@@ -12362,6 +12762,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Generated Omega:** Constraint logistic_map_dynamics appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -12394,6 +12795,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint lorenz_attractor_dynamics appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -12426,6 +12828,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `N/A`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for lowenheim_skolem_theorem: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.15000000000000002)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint lowenheim_skolem_theorem appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -12458,6 +12861,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `snare`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
@@ -12476,6 +12880,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint lung_transplant_protocol appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -12508,6 +12913,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for maintenance_capacity_shortfall: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.4),excess_above_floor(0.6499999999999999)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint maintenance_capacity_shortfall appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -12540,6 +12946,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint maladaptive_selection_process appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -12572,6 +12979,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint mandatrophic_margin_collapse appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -12604,6 +13012,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint mandatrophy_systemic_collapse appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -12636,6 +13045,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint manga_distribution_duopoly appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -12668,6 +13078,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint marriage_market_asymmetry_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -12700,6 +13111,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for mass_market_extinction_2026: Appears to be rope (indexed_rope_classification) but fails 4 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.3),scope_variant([snare,tangled_rope]),excess_above_floor(0.5499999999999999),nonsensical_coupling(0.3333333333333333)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint mass_market_extinction_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -12732,6 +13144,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope, unknown]`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint matching_market_congestion_externality appears as tangled_rope to individuals but rope to institutions...
 *   **Suggested Resolution Strategy:**
@@ -12759,6 +13172,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `mountain`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint matching_markets_general appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -12791,6 +13205,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint max_flow_min_cut appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -12823,6 +13238,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint medical_residency_match appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -12855,6 +13271,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint medieval_church_hegemony appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -12887,6 +13304,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for memetic_fitness_vs_truth: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.3),excess_above_floor(0.71)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint memetic_fitness_vs_truth appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -12919,6 +13337,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for meta_governance_overload: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.33),excess_above_floor(0.72)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint meta_governance_overload appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -12951,6 +13370,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint meta_model_lock_in appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -12983,6 +13403,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `tangled_rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint meta_nda appears as snare to individuals but tangled_rope to institutions...
 *   **Suggested Resolution Strategy:**
@@ -13010,6 +13431,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint meta_nuclear_power_agreement appears as tangled_rope to individuals but rope to institutions...
 *   **Suggested Resolution Strategy:**
@@ -13037,6 +13459,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint metabolic_constraint_cognition appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -13069,6 +13492,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint mexican_airline_merger appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -13101,6 +13525,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Generated Omega:** Constraint microbiome_symbiosis appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -13133,6 +13558,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint microwave_weapon_1 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -13165,6 +13591,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint mil_std_461g_emi_control appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -13197,6 +13624,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint mil_std_810f_tailoring appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -13229,6 +13657,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint minimax_theorem_game_equilibrium appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -13261,6 +13690,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `tangled_rope`
     *   Analytical View: `piton`
 *   **Structural Signature Analysis:** CONSTRUCTED HIGH-EXTRACTION signature for erised_expectation: Enforcement present (suppression=0.70, resistance=0.50) with high extraction (0.65). This is an extraction mechanism that metrics failed to classify as snare.
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint erised_expectation appears as snare to individuals but tangled_rope to institutions...
 *   **Suggested Resolution Strategy:**
@@ -13288,6 +13718,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint misunderstanding_as_mismatch appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -13320,6 +13751,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `piton`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint model_autonomy_creep appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -13345,6 +13777,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `piton`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint model_collapse_feedback_loop appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -13377,6 +13810,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `piton`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint model_of_models_regression appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -13409,6 +13843,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint monetary_regime_transition appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -13441,6 +13876,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope, unknown]`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint moores_law appears as rope to individuals but snare to institutions...
 *   **Suggested Resolution Strategy:**
@@ -13468,6 +13904,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for moral_outsourcing: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.33),excess_above_floor(0.74)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint moral_outsourcing appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -13500,6 +13937,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `tangled_rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint mrna_melanoma_therapy appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -13532,6 +13970,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `piton`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint multi_agent_reward_hacking appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -13564,6 +14003,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for multi_planetary_latency_lock: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.3),excess_above_floor(0.6)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint multi_planetary_latency_lock appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -13596,6 +14036,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Generated Omega:** Constraint mutual_defection_equilibrium appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -13627,6 +14068,7 @@ IF uncertainty → HALT changes until resolved
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for naming_as_control: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.25),excess_above_floor(0.75)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint naming_as_control appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -13659,6 +14101,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `piton`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint narrative_capacity_exhaustion appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -13691,6 +14134,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint narrative_overfitting appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -13723,6 +14167,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Generated Omega:** Constraint nash_equilibrium_coordination appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -13754,6 +14199,7 @@ IF uncertainty → HALT changes until resolved
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint nato_arctic_defense_cooperation appears as tangled_rope to individuals but snare to institutions...
 *   **Suggested Resolution Strategy:**
@@ -13781,6 +14227,7 @@ IF uncertainty → HALT changes until resolved
     *   Institutional (Manager) View: `tangled_rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint ncaa_eligibility_rules appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -13813,6 +14260,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint nds_2022_pacing_challenge appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -13845,6 +14293,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint necessary_day_job appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -13877,6 +14326,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope, unknown]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint negative_emissions_arbitrage appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -13909,6 +14359,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, unknown]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint net_zero_stabilization appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -13941,6 +14392,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint network_effects appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -13973,6 +14425,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, unknown]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint neural_interoperability appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -14005,6 +14458,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint neural_substrate_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -14037,6 +14491,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope, unknown]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint neurodiversity_spectrum appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -14069,6 +14524,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE NATURAL LAW signature for neuroplasticity_plateau: Claims naturality (indexed_mountain_classification) but fails Boltzmann independence test. Coupling score=1.000 with 6 coupled dimension pairs. Excess extraction=0.6. This constraint is "physics-washed" — it appears natural but its coupling topology reveals structural construction.
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Generated Omega:** Constraint neuroplasticity_plateau appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -14100,6 +14556,7 @@ IF uncertainty → HALT changes until resolved
     *   Institutional (Manager) View: `snare`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope]`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint decentralized_infrastructure_rope appears as rope to individuals but snare to institutions...
 *   **Suggested Resolution Strategy:**
@@ -14127,6 +14584,7 @@ IF uncertainty → HALT changes until resolved
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint new_start_expiration appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -14159,6 +14617,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint news_paywall_inequality appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -14191,6 +14650,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint nfl_superbowl_halftime_exclusivity appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -14223,6 +14683,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint nfl_superbowl_marketing_regulation appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -14255,6 +14716,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `piton`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for nine_day_buffer: Appears to be rope (indexed_rope_classification) but fails 4 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.4),scope_variant([snare,tangled_rope]),excess_above_floor(0.32),nonsensical_coupling(0.5)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint nine_day_buffer appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -14287,6 +14749,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `N/A`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for no_cloning_theorem: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.15000000000000002)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint no_cloning_theorem appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -14319,6 +14782,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint noether_isomorphism_access appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -14351,6 +14815,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint non_compete_agreements appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -14383,6 +14848,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `piton`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint norm_erosion_threshold appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -14415,6 +14881,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint north_sea_wind_grid appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -14447,6 +14914,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `tangled_rope`
     *   Analytical View: `piton`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint nuclear_order_2026 appears as snare to individuals but tangled_rope to institutions...
 *   **Suggested Resolution Strategy:**
@@ -14474,6 +14942,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint nuclear_vacuum_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -14506,6 +14975,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[indexically_opaque, rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint nvidia_cuda_ecosystem_lockin appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -14538,6 +15008,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint ny_private_school_discount appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -14570,6 +15041,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint nyc_metrocard_art_licensing appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -14602,6 +15074,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope, unknown]`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint olympic_legacy_curling_investment appears as tangled_rope to individuals but rope to institutions...
 *   **Suggested Resolution Strategy:**
@@ -14629,6 +15102,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope, unknown]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint olympic_medal_allocation appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -14661,6 +15135,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint omega1_patching_process appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -14693,6 +15168,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[scaffold, snare, unknown]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint openai_api_access appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -14725,6 +15201,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[scaffold, snare, unknown]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint openai_codex_app_constraint appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -14757,6 +15234,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `snare`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint openai_health_review appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -14789,6 +15267,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `tangled_rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint openai_implicit_translator appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -14821,6 +15300,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `tangled_rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[indexically_opaque, rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint openai_prism_development appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -14853,6 +15333,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint openbsd_netiquette_protocol appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -14885,6 +15366,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint openclaw_data_lock_in appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -14917,6 +15399,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint openclaw_regulation appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -14949,6 +15432,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[scaffold, snare, unknown]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint openscholar_peer_review appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -14981,6 +15465,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for opioid_political_realignment_2026: Appears to be rope (indexed_rope_classification) but fails 4 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.33),scope_variant([snare,tangled_rope]),excess_above_floor(0.5800000000000001),nonsensical_coupling(0.3333333333333333)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint opioid_political_realignment_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -15013,6 +15498,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for optimization_fragility: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.3),excess_above_floor(0.6699999999999999)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint optimization_fragility appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -15038,6 +15524,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint oral_glp1_market_access appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -15070,6 +15557,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint orbital_data_center_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -15102,6 +15590,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint oscar_campaign_spending appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -15134,6 +15623,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `piton`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for overfitting_to_frameworks: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.25),excess_above_floor(0.76)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint overfitting_to_frameworks appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -15166,6 +15656,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint overton_window appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -15198,6 +15689,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint panama_canal_ports appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -15230,6 +15722,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for parable_fish_turtle: Appears to be rope (indexed_rope_classification) but fails 4 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.25),scope_variant([snare,tangled_rope]),excess_above_floor(0.6799999999999999),nonsensical_coupling(0.3333333333333333)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint parable_fish_turtle appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -15262,6 +15755,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint data_replication_paradox appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -15294,6 +15788,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `tangled_rope`
     *   Analytical View: `rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, unknown]`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint pareto_principle appears as snare to individuals but tangled_rope to institutions...
 *   **Suggested Resolution Strategy:**
@@ -15321,6 +15816,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `snare`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, unknown]`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint paris_municipal_reform_2026 appears as rope to individuals but snare to institutions...
 *   **Suggested Resolution Strategy:**
@@ -15348,6 +15844,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint parkinsons_law appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -15380,6 +15877,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for participatory_observer_hypothesis: Appears to be rope (indexed_rope_classification) but fails 4 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.25),scope_variant([rope,tangled_rope]),excess_above_floor(0.36),nonsensical_coupling(0.3333333333333333)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint participatory_observer_hypothesis appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -15412,6 +15910,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE NATURAL LAW signature for path_dependence_lock_in: Claims naturality (indexed_mountain_classification) but fails Boltzmann independence test. Coupling score=1.000 with 4 coupled dimension pairs. Excess extraction=0.63. This constraint is "physics-washed" — it appears natural but its coupling topology reveals structural construction.
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Generated Omega:** Constraint path_dependence_lock_in appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -15443,6 +15942,7 @@ IF uncertainty → HALT changes until resolved
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint paxsilica_framework appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -15475,6 +15975,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint pe_fund_level_leverage appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -15507,6 +16008,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `tangled_rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint pe_rental_market_lockin appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -15539,6 +16041,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[scaffold, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint perovskite_self_etching appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -15571,6 +16074,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint pna appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -15603,6 +16107,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint peter_principle appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -15635,6 +16140,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `tangled_rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint pla_loyalty_purge appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -15667,6 +16173,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint planetary_boundaries appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -15699,6 +16206,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `N/A`
 *   **Structural Signature Analysis:** CONSTRUCTED LOW-EXTRACTION signature for planetary_diet_constraint_2026: Enforcement present (suppression=0.60, resistance=0.50) but extraction is low (0.10). This is a rule-based coordination structure, not an extraction mechanism.
+*   **Orbit Signature:** `[rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint planetary_diet_constraint_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -15731,6 +16239,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint planning_fallacy appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -15763,6 +16272,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint plastic_asphalt_mandate appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -15795,6 +16305,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `tangled_rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint platform_app_store_duopoly appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -15827,6 +16338,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[scaffold, unknown]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint platonic_coparenting_decoupling appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -15859,6 +16371,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint po_investigation_protocol_bias appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -15891,6 +16404,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint poetic_verse_and_past appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -15923,6 +16437,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `N/A`
     *   Analytical View: `N/A`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for poincare_conjecture: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.15000000000000002)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint poincare_conjecture appears as tangled_rope to individuals but rope to institutions...
 *   **Suggested Resolution Strategy:**
@@ -15950,6 +16465,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `piton`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint policy_lag_catastrophe appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -15982,6 +16498,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint politeness_face_negotiation appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -16014,6 +16531,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[scaffold, tangled_rope, unknown]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint portugal_ad_stability_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -16046,6 +16564,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint portugal_polarization_threshold_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -16078,6 +16597,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `tangled_rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** CONSTRUCTED LOW-EXTRACTION signature for portuguese_presidential_term_limits: Enforcement present (suppression=0.98, resistance=0.50) but extraction is low (0.02). This is a rule-based coordination structure, not an extraction mechanism.
+*   **Orbit Signature:** `[rope]`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
@@ -16096,6 +16616,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for power_set_axiomatic_extraction: Appears to be rope (indexed_rope_classification) but fails 4 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.25),scope_variant([tangled_rope,unknown]),excess_above_floor(0.38999999999999996),nonsensical_coupling(0.3333333333333333)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint power_set_axiomatic_extraction appears as tangled_rope to individuals but rope to institutions...
 *   **Suggested Resolution Strategy:**
@@ -16123,6 +16644,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for power_without_responsibility: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.33),excess_above_floor(0.8200000000000001)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint power_without_responsibility appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -16155,6 +16677,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for prestige_signal_inflation: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.25),excess_above_floor(0.79)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint prestige_signal_inflation appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -16187,6 +16710,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint price_signal_corruption appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -16219,6 +16743,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `N/A`
     *   Analytical View: `N/A`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for prime_number_theorem: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.09999999999999999)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint prime_number_theorem appears as tangled_rope to individuals but rope to institutions...
 *   **Suggested Resolution Strategy:**
@@ -16246,6 +16771,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `tangled_rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint private_credit_market_opacity appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -16278,6 +16804,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `piton`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for procedural_legitimacy_decay: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.33),excess_above_floor(0.66)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint procedural_legitimacy_decay appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -16310,6 +16837,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `scaffold`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[scaffold, snare, tangled_rope]`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint project_vault_2026 appears as snare to individuals but scaffold to institutions...
 *   **Suggested Resolution Strategy:**
@@ -16337,6 +16865,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for project_vault_extraction_2026: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.3),excess_above_floor(0.63)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint project_vault_extraction_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -16369,6 +16898,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for protocol_capture_eee: Appears to be rope (indexed_rope_classification) but fails 4 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.4),scope_variant([snare,tangled_rope]),excess_above_floor(0.35000000000000003),nonsensical_coupling(0.5)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint protocol_capture_eee appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -16401,6 +16931,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `piton`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint protocol_drift_accumulation appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -16433,6 +16964,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope, unknown]`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint publishing_embargo appears as tangled_rope to individuals but rope to institutions...
 *   **Suggested Resolution Strategy:**
@@ -16460,6 +16992,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint qualified_immunity appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -16492,6 +17025,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint quellcrist_falconer_justice appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -16524,6 +17058,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `N/A`
     *   Analytical View: `N/A`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for quine_self_replication: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.15000000000000002)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint quine_self_replication appears as tangled_rope to individuals but rope to institutions...
 *   **Suggested Resolution Strategy:**
@@ -16551,6 +17086,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `snare`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint raac_school_maintenance appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -16583,6 +17119,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint radiologic_diagnostic_threshold appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -16615,6 +17152,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint rare_earth_dependency appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -16647,6 +17185,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint rare_earth_export_restrictions appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -16679,6 +17218,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint rare_earth_hydrogen_extraction appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -16711,6 +17251,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint rare_earth_seabed_mining appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -16743,6 +17284,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `piton`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for rational_inertia_trap: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.4),excess_above_floor(0.55)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint rational_inertia_trap appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -16775,6 +17317,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[scaffold, unknown]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint recipe_scaling_ai appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -16807,6 +17350,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint regional_military_deterrence_mideast appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -16839,6 +17383,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `piton`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, unknown]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint regulatory_capture appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -16871,6 +17416,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `piton`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint rent_seeking_equilibrium appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -16903,6 +17449,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, unknown]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint repair_probe_incomplete appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -16935,6 +17482,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `piton`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint reputational_cascade_failure appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -16967,6 +17515,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint responsibility_dilution appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -16999,6 +17548,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint responsibility_without_power appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -17031,6 +17581,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `N/A`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for tcp_rfc9293_interoperability: Appears to be rope (explicit_rope_claim) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.375,0.25),excess_above_floor(0.15000000000000002)]. Coupling score=0.375. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[rope, unknown]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint tcp_rfc9293_interoperability appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -17063,6 +17614,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `N/A`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for rfc9293_state_machine: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.375,0.25),excess_above_floor(0.15000000000000002)]. Coupling score=0.375. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[rope, unknown]`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint rfc9293_state_machine appears as tangled_rope to individuals but rope to institutions...
 *   **Suggested Resolution Strategy:**
@@ -17090,6 +17642,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `N/A`
     *   Analytical View: `N/A`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for rices_theorem_undecidability: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.09999999999999999)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint rices_theorem_undecidability appears as tangled_rope to individuals but rope to institutions...
 *   **Suggested Resolution Strategy:**
@@ -17117,6 +17670,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope, unknown]`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint constraint_riemann_mapping appears as tangled_rope to individuals but rope to institutions...
 *   **Suggested Resolution Strategy:**
@@ -17142,6 +17696,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `piton`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint risk_socialization_threshold appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -17174,6 +17729,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `piton`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for ritual_without_belief: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.33),excess_above_floor(0.73)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint ritual_without_belief appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -17206,6 +17762,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for ritual_transition_scaffold: Appears to be rope (indexed_rope_classification) but fails 4 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.33),scope_variant([rope,tangled_rope,unknown]),excess_above_floor(0.24999999999999997),nonsensical_coupling(0.6666666666666666)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[rope, tangled_rope, unknown]`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
@@ -17224,6 +17781,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint robustness_vs_efficiency_tradeoff appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -17256,6 +17814,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `scaffold`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint rogue_wave_control_2026 appears as tangled_rope to individuals but rope to institutions...
 *   **Suggested Resolution Strategy:**
@@ -17283,6 +17842,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for rotation_seven_black_soil: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.25),excess_above_floor(0.8999999999999999)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[rope, unknown]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint rotation_seven_black_soil appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -17315,6 +17875,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint rotation_seven_kubo_ranking appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -17347,6 +17908,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope, unknown]`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint migration_decision_threshold appears as tangled_rope to individuals but rope to institutions...
 *   **Suggested Resolution Strategy:**
@@ -17374,6 +17936,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for royal_navy_middle_east_withdrawal: Appears to be rope (indexed_rope_classification) but fails 4 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.25),scope_variant([tangled_rope,unknown]),excess_above_floor(0.75),nonsensical_coupling(0.5)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[rope, tangled_rope, unknown]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint royal_navy_middle_east_withdrawal appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -17406,6 +17969,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint rules_based_international_order appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -17438,6 +18002,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint russian_war_cannibalization appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -17470,6 +18035,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint airbnb_str_regulation appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -17502,6 +18068,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint visa_ipo_regulatory_compliance appears as tangled_rope to individuals but rope to institutions...
 *   **Suggested Resolution Strategy:**
@@ -17529,6 +18096,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint sa_renewable_price_differential appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -17561,6 +18129,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint sapir_whorf_hypothesis appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -17593,6 +18162,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint sat_csp_complexity appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -17625,6 +18195,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint satellite_d2m_standard appears as tangled_rope to individuals but rope to institutions...
 *   **Suggested Resolution Strategy:**
@@ -17652,6 +18223,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `piton`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint scientific_paradigm_lifecycle appears as snare to individuals but piton to institutions...
 *   **Suggested Resolution Strategy:**
@@ -17679,6 +18251,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint scurvy_maritime_extraction appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -17711,6 +18284,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for second_order_unintended_consequences: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.33),excess_above_floor(0.75)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint second_order_unintended_consequences appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -17743,6 +18317,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint seedance_export_restriction appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -17775,6 +18350,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Generated Omega:** Constraint self_surpassing appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -17806,6 +18382,7 @@ IF uncertainty → HALT changes until resolved
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `piton`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for semantic_attack_surface: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.4),excess_above_floor(0.6699999999999999)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint semantic_attack_surface appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -17838,6 +18415,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for semantic_overload_friction: Appears to be rope (indexed_rope_classification) but fails 4 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.25),scope_variant([snare,tangled_rope]),excess_above_floor(0.53),nonsensical_coupling(0.5)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint semantic_overload_friction appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -17870,6 +18448,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `tangled_rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[indexically_opaque, rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint semiconductor_fabrication_chokepoint appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -17902,6 +18481,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint semiconductor_mission_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -17934,6 +18514,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint shadow_fleet_sanctions_evasion appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -17966,6 +18547,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for shadow_pricing_failure: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.3),excess_above_floor(0.6699999999999999)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint shadow_pricing_failure appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -17998,6 +18580,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `tangled_rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** organized@local: d=0.500 f(d)=0.65 χ = 0.48 × 0.65 × 0.80 = 0.250
+*   **Orbit Signature:** `[indexically_opaque, rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint shield_east_fortification appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -18030,6 +18613,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `piton`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for ship_of_theseus: Appears to be rope (indexed_rope_classification) but fails 4 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.25),scope_variant([rope,unknown]),excess_above_floor(0.32999999999999996),nonsensical_coupling(0.3333333333333333)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[rope, unknown]`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint ship_of_theseus appears as tangled_rope to individuals but rope to institutions...
 *   **Suggested Resolution Strategy:**
@@ -18057,6 +18641,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `tangled_rope`
     *   Analytical View: `rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, unknown]`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint shitty_feedback_handling appears as snare to individuals but tangled_rope to institutions...
 *   **Suggested Resolution Strategy:**
@@ -18084,6 +18669,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint shobies_existential_commitment appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -18116,6 +18702,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `piton`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint shock_propagation_asymmetry appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -18148,6 +18735,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `piton`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint signal_without_control appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -18180,6 +18768,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for silent_dependency_activation: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.25),excess_above_floor(0.74)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint silent_dependency_activation appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -18212,6 +18801,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint silicon_lexicon_overload appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -18244,6 +18834,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint sk_ai_act_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -18276,6 +18867,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint sleep_debt_externality appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -18308,6 +18900,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for slow_crisis_invisibility: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.3),excess_above_floor(0.6)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint slow_crisis_invisibility appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -18340,6 +18933,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint sludge_bureaucratic_friction appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -18372,6 +18966,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `tangled_rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint sm_addictive_design appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -18404,6 +18999,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope, unknown]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint smartphone_ubiquity appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -18436,6 +19032,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint social_credit_architecture appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -18468,6 +19065,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint social_loafing appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -18500,6 +19098,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint social_media_participation_threshold appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -18532,6 +19131,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint social_narrative_casting appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -18564,6 +19164,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint soe_property_bailout appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -18596,6 +19197,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `piton`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for soft_authoritarian_drift: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.33),excess_above_floor(0.74)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint soft_authoritarian_drift appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -18628,6 +19230,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint sorites_paradox appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -18660,6 +19263,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `snare`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint south_china_sea_arbitration_2016_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -18692,6 +19296,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for spain_digital_offensive_2026: Appears to be rope (indexed_rope_classification) but fails 4 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.33),scope_variant([snare,tangled_rope]),excess_above_floor(0.62),nonsensical_coupling(0.3333333333333333)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint spain_digital_offensive_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -18724,6 +19329,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint st_petersburg_paradox appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -18756,6 +19362,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint stable_marriage_coordination appears as tangled_rope to individuals but rope to institutions...
 *   **Suggested Resolution Strategy:**
@@ -18783,6 +19390,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint start_treaty appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -18815,6 +19423,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint statecraft_virtu appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -18847,6 +19456,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for status_flattening_effect: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.25),excess_above_floor(0.7999999999999999)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint status_flattening_effect appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -18872,6 +19482,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `snare`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint steinmetz_valuation_asymmetry appears as mountain to individuals but snare to institutions...
 *   **Suggested Resolution Strategy:**
@@ -18899,6 +19510,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `tangled_rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint sti_clinical_testing_bottleneck appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -18931,6 +19543,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `snare`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint stoic_logos_governance appears as mountain to individuals but snare to institutions...
 *   **Suggested Resolution Strategy:**
@@ -18958,6 +19571,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for strait_coercion_2025: Appears to be rope (indexed_rope_classification) but fails 4 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.33),scope_variant([snare,tangled_rope]),excess_above_floor(0.45000000000000007),nonsensical_coupling(0.5)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint strait_coercion_2025 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -18990,6 +19604,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `snare`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint strange_attractor_dynamics appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -19022,6 +19637,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `tangled_rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint strange_attractor_systemic_risk appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -19054,6 +19670,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint strategic_deep_sea_rare_earth_mining appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -19086,6 +19703,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint streaming_bundling_mandate appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -19118,6 +19736,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint structural_extraction_without_actor appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -19150,6 +19769,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `N/A`
 *   **Structural Signature Analysis:** CONSTRUCTED LOW-EXTRACTION signature for sts86_ascent_checklist: Enforcement present (suppression=0.95, resistance=0.50) but extraction is low (0.05). This is a rule-based coordination structure, not an extraction mechanism.
+*   **Orbit Signature:** `[rope]`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint sts86_ascent_checklist appears as tangled_rope to individuals but rope to institutions...
 *   **Suggested Resolution Strategy:**
@@ -19177,6 +19797,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint student_loan_default_cliff appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -19209,6 +19830,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint student_loan_interest_accrual appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -19241,6 +19863,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint suanne_coup_of_peace appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -19273,6 +19896,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint suanne_face_restoration appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -19305,6 +19929,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Generated Omega:** Constraint superbowl_advertising_extraction appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -19336,6 +19961,7 @@ IF uncertainty → HALT changes until resolved
     *   Institutional (Manager) View: `N/A`
     *   Analytical View: `N/A`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for suslin_hypothesis_undecidability: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.15000000000000002)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint suslin_hypothesis_undecidability appears as tangled_rope to individuals but rope to institutions...
 *   **Suggested Resolution Strategy:**
@@ -19363,6 +19989,7 @@ IF uncertainty → HALT changes until resolved
     *   Institutional (Manager) View: `N/A`
     *   Analytical View: `N/A`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for sylow_theorems_group_theory: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.09999999999999999)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint sylow_theorems_group_theory appears as tangled_rope to individuals but rope to institutions...
 *   **Suggested Resolution Strategy:**
@@ -19390,6 +20017,7 @@ IF uncertainty → HALT changes until resolved
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `piton`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint synthetic_data_feedback_loop appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -19422,6 +20050,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `piton`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for systemic_blindspot: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.3),excess_above_floor(0.71)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint systemic_blindspot appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -19454,6 +20083,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for tail_risk_compression: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.33),excess_above_floor(0.78)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint tail_risk_compression appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -19486,6 +20116,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint taiwan_existential_sovereignty appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -19518,6 +20149,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint taiwan_grand_bargain appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -19550,6 +20182,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `tangled_rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint taiwan_ids_program appears as snare to individuals but tangled_rope to institutions...
 *   **Suggested Resolution Strategy:**
@@ -19577,6 +20210,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint taiwan_storm_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -19609,6 +20243,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Generated Omega:** Constraint taiwan_strait_hegemony_shift appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -19640,6 +20275,7 @@ IF uncertainty → HALT changes until resolved
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint taiwan_university_application_system appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -19672,6 +20308,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope, unknown]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint teaching_horses_to_sing appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -19704,6 +20341,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for tear_gas_repression_2026: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.33),excess_above_floor(0.78)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint tear_gas_repression_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -19736,6 +20374,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for technocratic_overreach: Appears to be rope (indexed_rope_classification) but fails 4 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.33),scope_variant([snare,tangled_rope]),excess_above_floor(0.54),nonsensical_coupling(0.3333333333333333)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint technocratic_overreach appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -19768,6 +20407,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE NATURAL LAW signature for technological_point_of_no_return: Claims naturality (indexed_mountain_classification) but fails Boltzmann independence test. Coupling score=0.750 with 0 coupled dimension pairs. Excess extraction=0.6599999999999999. This constraint is "physics-washed" — it appears natural but its coupling topology reveals structural construction.
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Generated Omega:** Constraint technological_point_of_no_return appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -19799,6 +20439,7 @@ IF uncertainty → HALT changes until resolved
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope, unknown]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint temporal_scale_arbitrage appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -19831,6 +20472,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint tx_hispanic_pivot appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -19863,6 +20505,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint texas_insurance_market_instability appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -19895,6 +20538,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `tangled_rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** CONSTRUCTED LOW-EXTRACTION signature for thai_article_112_mountain: Enforcement present (suppression=0.95, resistance=0.50) but extraction is low (0.04). This is a rule-based coordination structure, not an extraction mechanism.
+*   **Orbit Signature:** `[rope]`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint thai_article_112_mountain appears as snare to individuals but tangled_rope to institutions...
 *   **Suggested Resolution Strategy:**
@@ -19922,6 +20566,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint the_bacchae_madness_protocol appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -19954,6 +20599,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint the_calm_protocol_suppression appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -19986,6 +20632,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `N/A`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
@@ -20004,6 +20651,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint theory_of_visitors appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -20036,6 +20684,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint tiktok_us_divestiture_mandate appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -20068,6 +20717,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint toxic_social_infection appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -20100,6 +20750,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `N/A`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for trade_secret_law: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.15000000000000002)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint trade_secret_law appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -20132,6 +20783,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope, unknown]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint tragedy_of_the_commons appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -20164,6 +20816,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope, unknown]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint transformer_self_attention appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -20196,6 +20849,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint tsp_computational_complexity appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -20228,6 +20882,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint traveling_salesperson_problem appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -20260,6 +20915,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint trump_critical_minerals appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -20292,6 +20948,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[indexically_opaque, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint trump_epa_greenhouse_gas_reversal appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -20324,6 +20981,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint trump_indian_tariffs_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -20356,6 +21014,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint trump_making_china_great_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -20388,6 +21047,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** organized@local: d=0.500 f(d)=0.65 χ = 0.85 × 0.65 × 0.80 = 0.442
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint trump_second_term_authoritarianism_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -20420,6 +21080,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `tangled_rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint ua_mobilization_protector_cert appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -20452,6 +21113,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint ua_wartime_mobilization appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -20484,6 +21146,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `tangled_rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint uk_help_to_buy_scheme appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -20516,6 +21179,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint uk_hicbc_trap appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -20548,6 +21212,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint uk_necc_formation appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -20580,6 +21245,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint ukr_mobilization appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -20612,6 +21278,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint ukraine_tight_gas_pilot appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -20644,6 +21311,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint un_high_seas_treaty_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -20676,6 +21344,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint union_protection_underperformance appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -20708,6 +21377,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint us_arms_transfer_policy appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -20740,6 +21410,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Generated Omega:** Constraint us_canada_geopolitical_asymmetry appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -20771,6 +21442,7 @@ IF uncertainty → HALT changes until resolved
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint us_china_chip_tariffs_v2 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -20803,6 +21475,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `tangled_rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint us_debt_ceiling appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -20835,6 +21508,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `tangled_rope`
     *   Analytical View: `snare`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[indexically_opaque, rope, snare]`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint us_embargo_cuba appears as snare to individuals but tangled_rope to institutions...
 *   **Suggested Resolution Strategy:**
@@ -20862,6 +21536,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint us_employer_health_insurance appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -20894,6 +21569,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `snare`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint us_greenland_envoy appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -20926,6 +21602,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint us_iran_drone_conflict appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -20958,6 +21635,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `tangled_rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint us_israel_faa_502b_nonenforcement appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -20990,6 +21668,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint us_labor_mobility appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -21022,6 +21701,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint us_legal_standard_reasonable_doubt appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -21054,6 +21734,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `N/A`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
@@ -21072,6 +21753,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `snare`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint us_sanctions_icc_israel_case appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -21104,6 +21786,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint us_sdf_alliance_abandonment_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -21136,6 +21819,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint us_suburban_zoning_2025 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -21168,6 +21852,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `snare`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint us_taiwan_arms_sales appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -21200,6 +21885,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `tangled_rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint us_tariffs_2025 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -21232,6 +21918,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint us_two_party_duopoly appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -21264,6 +21951,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `snare`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[indexically_opaque, rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint us_usmca_china_leverage appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -21296,6 +21984,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `tangled_rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint us_venezuela_oil_pressure appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -21328,6 +22017,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint us_venezuela_plausible_deniability_2025 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -21360,6 +22050,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint us_visa_lottery appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -21392,6 +22083,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint usc_26_469_passive_loss appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -21424,6 +22116,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint utopia_apocalypse_fragility appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -21456,6 +22149,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for value_alignment_drift: Appears to be rope (indexed_rope_classification) but fails 4 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.25),scope_variant([snare,tangled_rope]),excess_above_floor(0.5599999999999999),nonsensical_coupling(0.3333333333333333)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint value_alignment_drift appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -21488,6 +22182,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `piton`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint value_extraction_plateau appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -21520,6 +22215,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint venezuela_oil_privatization_v1 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -21552,6 +22248,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint vienna_quantum_superposition_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -21584,6 +22281,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `piton`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[piton, rope]`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint viral_emergence_covid19_exemplar appears as snare to individuals but piton to institutions...
 *   **Suggested Resolution Strategy:**
@@ -21611,6 +22309,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for viral_transmission_rates: Appears to be rope (indexed_rope_classification) but fails 4 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.33),scope_variant([snare,tangled_rope]),excess_above_floor(0.6),nonsensical_coupling(0.3333333333333333)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint viral_transmission_rates appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -21643,6 +22342,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for visibility_bias_governance: Appears to be rope (indexed_rope_classification) but fails 4 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.25),scope_variant([snare,tangled_rope]),excess_above_floor(0.49000000000000005),nonsensical_coupling(0.5)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint visibility_bias_governance appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -21675,6 +22375,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `tangled_rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint vns_implant_for_trd appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -21707,6 +22408,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `N/A`
     *   Analytical View: `N/A`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for whitehead_problem_undecidability: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.15000000000000002)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint whitehead_problem_undecidability appears as tangled_rope to individuals but rope to institutions...
 *   **Suggested Resolution Strategy:**
@@ -21734,6 +22436,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint wikipedia_notability_requirement_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -21766,6 +22469,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint winners_curse appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -21798,6 +22502,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope, unknown]`
 *   **Related Gap/Alert:** N/A
 *   **Generated Omega:** Constraint working_dog_training appears as tangled_rope to individuals but rope to institutions...
 *   **Suggested Resolution Strategy:**
@@ -21825,6 +22530,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint wpl_scotland appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -21857,6 +22563,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `snare`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint xi_mao_ideological_centralization appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -21889,6 +22596,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint yc_equity_squeeze appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -21921,6 +22629,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint yangtze_fishing_ban appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -21953,6 +22662,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for constraint_yoneda: Appears to be rope (indexed_rope_classification) but fails 4 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.25),scope_variant([tangled_rope,unknown]),excess_above_floor(0.38),nonsensical_coupling(0.3333333333333333)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint constraint_yoneda appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -21978,6 +22688,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint yt_ai_slop_incentive appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -22010,6 +22721,7 @@ IF context-dependent → Add indexical resolution
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for zipfs_law: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.25),excess_above_floor(0.7)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint zipfs_law appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**

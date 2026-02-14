@@ -15,6 +15,7 @@
 :- use_module(logical_fingerprint).
 :- use_module(data_repair).
 :- use_module(domain_priors).
+:- use_module(dirac_classification).
 
 :- use_module(library(lists)).
 
@@ -68,6 +69,11 @@ run_fingerprint_report :-
     % Zone distribution
     format('## Metric Zone Distribution~n~n'),
     report_zone_distribution(Constraints),
+
+    % Orbit cross-reference
+    format('## Orbit Cross-Reference~n~n'),
+    format('Maps shift pattern families to gauge orbit signatures.~n~n'),
+    report_orbit_crossref(Patterns),
 
     format('---~n'),
     format('*End of fingerprint report*~n').
@@ -163,3 +169,39 @@ count_run(_, [], 1, []).
 count_run(H, [H|T], N, Rest) :-
     !, count_run(H, T, N1, Rest), N is N1 + 1.
 count_run(_, List, 1, List).
+
+%% report_orbit_crossref(+Patterns)
+%  For each shift pattern family, show the orbit signatures of its members.
+report_orbit_crossref(Patterns) :-
+    forall(
+        member(Pattern, Patterns),
+        report_orbit_for_family(Pattern)
+    ).
+
+report_orbit_for_family(Pattern) :-
+    Pattern = shift(Pw, Mod, Inst, An),
+    logical_fingerprint:shift_family(Pattern, Members),
+    length(Members, Count),
+    % Compute orbit signatures for members
+    findall(Sig,
+            (member(M, Members),
+             catch(orbit_sig_for(M, Sig), _, fail)),
+            Sigs),
+    sort(Sigs, UniqueSigs),
+    length(UniqueSigs, NSigs),
+    format('- `shift(~w, ~w, ~w, ~w)` (~w constraints): ',
+           [Pw, Mod, Inst, An, Count]),
+    (   NSigs =:= 1, UniqueSigs = [OneSig]
+    ->  format('orbit `~w`~n', [OneSig])
+    ;   NSigs > 0
+    ->  format('~w orbits: ~w~n', [NSigs, UniqueSigs])
+    ;   format('no orbit data~n')
+    ).
+
+%% orbit_sig_for(+Constraint, -Signature)
+%  Compute sorted orbit signature for a constraint.
+orbit_sig_for(C, Signature) :-
+    dirac_classification:gauge_orbit(C, OrbitPoints),
+    OrbitPoints \= [],
+    findall(T, member(orbit_point(T, _), OrbitPoints), Types),
+    sort(Types, Signature).

@@ -2,6 +2,9 @@ import re
 import sys
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).parent))
+from orbit_utils import load_orbit_data, get_orbit_signature, format_orbit_signature
+
 def parse_log_content(content):
     """
     Parses the log content to find and extract True Mountain details.
@@ -62,7 +65,7 @@ def parse_log_content(content):
 
     return unique_tms
 
-def generate_markdown_report(tm_data, output_path):
+def generate_markdown_report(tm_data, output_path, orbit_data=None):
     """
     Generates a Markdown report from the list of True Mountain data.
     """
@@ -78,6 +81,8 @@ def generate_markdown_report(tm_data, output_path):
             f.write(f"### {i}. True Mountain: `{tm['name']}`\n\n")
             f.write(f"*   **Claimed Type:** `{tm['claimed_type']}`\n")
             f.write(f"*   **Structural Signature Analysis:** {tm['structural_signature']}\n")
+            orbit_sig = get_orbit_signature(orbit_data or {}, tm['name'])
+            f.write(f"*   **Orbit Signature:** `{format_orbit_signature(orbit_sig)}`\n")
             f.write(f"*   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.\n\n")
             f.write("---\n\n")
 
@@ -99,11 +104,12 @@ def main():
         sys.exit(1)
         
     tm_data = parse_log_content(log_content)
-    
+    orbit_data = load_orbit_data()
+
     if tm_data:
         print(f"Found {len(tm_data)} validated True Mountains.")
         print(f"Generating report at {report_file}...")
-        generate_markdown_report(tm_data, report_file)
+        generate_markdown_report(tm_data, report_file, orbit_data)
         print("Report generated successfully.")
     else:
         print("No validated True Mountains found in the log file.")

@@ -2,6 +2,9 @@ import re
 import sys
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).parent))
+from orbit_utils import load_orbit_data, get_orbit_signature, format_orbit_signature
+
 def parse_log_content(content):
     """
     Parses the log content to find and extract False Mountain details.
@@ -87,7 +90,7 @@ def parse_log_content(content):
 
     return unique_fms
 
-def generate_markdown_report(false_mountains, output_path):
+def generate_markdown_report(false_mountains, output_path, orbit_data=None):
     """
     Generates a Markdown report from the list of False Mountain data.
     """
@@ -102,6 +105,8 @@ def generate_markdown_report(false_mountains, output_path):
         for i, fm in enumerate(sorted_fms, 1):
             f.write(f"### {i}. False Mountain: `{fm['name']}`\n\n")
             f.write(f"*   **Severity:** `{fm['severity']}`\n")
+            orbit_sig = get_orbit_signature(orbit_data or {}, fm['name'])
+            f.write(f"*   **Orbit Signature:** `{format_orbit_signature(orbit_sig)}`\n")
             f.write(f"*   **Gap Detected:** {fm['gap_detected']}\n")
             
             if fm['powerless_view'] != 'N/A' or fm['institutional_view'] != 'N/A':
@@ -135,11 +140,12 @@ def main():
         sys.exit(1)
         
     false_mountains_data = parse_log_content(log_content)
-    
+    orbit_data = load_orbit_data()
+
     if false_mountains_data:
         print(f"Found {len(false_mountains_data)} unique False Mountains.")
         print(f"Generating report at {report_file}...")
-        generate_markdown_report(false_mountains_data, report_file)
+        generate_markdown_report(false_mountains_data, report_file, orbit_data)
         print("Report generated successfully.")
     else:
         print("No False Mountains found in the log file.")

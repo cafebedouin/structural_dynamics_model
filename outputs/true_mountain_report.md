@@ -10,6 +10,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for banach_fixed_point: Extreme inaccessibility (collapse=1.00) with minimal enforcement (suppression=0.01, resistance=0.00). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
+*   **Orbit Signature:** `N/A`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -18,6 +19,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for banach_fixed_point_theorem: Extreme inaccessibility (collapse=0.95) with minimal enforcement (suppression=0.05, resistance=0.05). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
+*   **Orbit Signature:** `N/A`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -26,6 +28,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for bgs_spectral_universality: Extreme inaccessibility (collapse=0.98) with minimal enforcement (suppression=0.03, resistance=0.01). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
+*   **Orbit Signature:** `N/A`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -34,6 +37,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for bh_merger_gravitational_infall: Extreme inaccessibility (collapse=1.00) with minimal enforcement (suppression=0.02, resistance=0.00). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
+*   **Orbit Signature:** `N/A`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -42,6 +46,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for birthday_paradox_collision: Extreme inaccessibility (collapse=1.00) with minimal enforcement (suppression=0.00, resistance=0.00). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
+*   **Orbit Signature:** `N/A`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -50,6 +55,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for constraint_borsuk_ulam: Extreme inaccessibility (collapse=0.95) with minimal enforcement (suppression=0.01, resistance=0.05). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
+*   **Orbit Signature:** `N/A`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -58,6 +64,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for busy_beaver_noncomputability: Extreme inaccessibility (collapse=1.00) with minimal enforcement (suppression=0.05, resistance=0.00). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
+*   **Orbit Signature:** `N/A`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -66,6 +73,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for c_physical_blue_wavelength: Extreme inaccessibility (collapse=1.00) with minimal enforcement (suppression=0.01, resistance=0.00). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
+*   **Orbit Signature:** `N/A`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -74,6 +82,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for cantor_set_topology: Extreme inaccessibility (collapse=1.00) with minimal enforcement (suppression=0.01, resistance=0.00). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
+*   **Orbit Signature:** `N/A`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -82,6 +91,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for cantors_diagonal_argument: Extreme inaccessibility (collapse=0.95) with minimal enforcement (suppression=0.05, resistance=0.01). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
+*   **Orbit Signature:** `N/A`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -90,6 +100,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -98,6 +109,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -106,6 +118,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for clt_convergence_2026: Extreme inaccessibility (collapse=1.00) with minimal enforcement (suppression=0.01, resistance=0.00). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
+*   **Orbit Signature:** `N/A`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -114,6 +127,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for conways_game_of_life_dynamics: Extreme inaccessibility (collapse=1.00) with minimal enforcement (suppression=0.05, resistance=0.00). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
+*   **Orbit Signature:** `N/A`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -122,6 +136,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -130,6 +145,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for ehrenfest_barrier: Extreme inaccessibility (collapse=1.00) with minimal enforcement (suppression=0.02, resistance=0.00). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
+*   **Orbit Signature:** `N/A`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -138,6 +154,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `N/A`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -146,6 +163,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for fast_growing_hierarchy: Extreme inaccessibility (collapse=1.00) with minimal enforcement (suppression=0.01, resistance=0.00). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
+*   **Orbit Signature:** `N/A`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -154,6 +172,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for feigenbaum_universality: Extreme inaccessibility (collapse=0.98) with minimal enforcement (suppression=0.01, resistance=0.01). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
+*   **Orbit Signature:** `N/A`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -162,6 +181,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for fermat_proof_barrier: Extreme inaccessibility (collapse=0.90) with minimal enforcement (suppression=0.05, resistance=0.10). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
+*   **Orbit Signature:** `N/A`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -170,6 +190,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for fgh_hierarchy_2026: Extreme inaccessibility (collapse=1.00) with minimal enforcement (suppression=0.01, resistance=0.00). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
+*   **Orbit Signature:** `N/A`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -178,6 +199,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for finite_simple_group_classification: Extreme inaccessibility (collapse=1.00) with minimal enforcement (suppression=0.01, resistance=0.00). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
+*   **Orbit Signature:** `N/A`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -186,6 +208,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for four_color_theorem_topological_bound: Extreme inaccessibility (collapse=1.00) with minimal enforcement (suppression=0.05, resistance=0.00). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
+*   **Orbit Signature:** `[mountain, unknown]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -194,6 +217,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for constraint_ftc: Extreme inaccessibility (collapse=0.95) with minimal enforcement (suppression=0.05, resistance=0.01). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -202,6 +226,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for constraint_galois_solvability: Extreme inaccessibility (collapse=0.90) with minimal enforcement (suppression=0.05, resistance=0.05). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
+*   **Orbit Signature:** `[mountain, unknown]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -210,6 +235,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for gauss_bonnet_topology: Extreme inaccessibility (collapse=1.00) with minimal enforcement (suppression=0.05, resistance=0.00). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
+*   **Orbit Signature:** `[mountain, unknown]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -218,6 +244,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for genetic_predisposition_mania: Extreme inaccessibility (collapse=0.95) with minimal enforcement (suppression=0.02, resistance=0.05). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
+*   **Orbit Signature:** `[mountain, unknown]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -226,6 +253,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for geophysics_superionic_core: Extreme inaccessibility (collapse=0.98) with minimal enforcement (suppression=0.02, resistance=0.05). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
+*   **Orbit Signature:** `[mountain, unknown]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -234,6 +262,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for hd101584_stellar_evolution: Extreme inaccessibility (collapse=1.00) with minimal enforcement (suppression=0.01, resistance=0.00). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
+*   **Orbit Signature:** `[mountain, unknown]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -242,6 +271,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for heine_borel: Extreme inaccessibility (collapse=0.95) with minimal enforcement (suppression=0.05, resistance=0.02). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
+*   **Orbit Signature:** `[mountain, unknown]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -250,6 +280,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -258,6 +289,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for kolmogorov_complexity: Extreme inaccessibility (collapse=0.98) with minimal enforcement (suppression=0.05, resistance=0.01). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
+*   **Orbit Signature:** `[mountain, unknown]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -266,6 +298,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for large_cardinals_inaccessibility: Extreme inaccessibility (collapse=0.95) with minimal enforcement (suppression=0.05, resistance=0.05). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -274,6 +307,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for lobs_theorem: Extreme inaccessibility (collapse=1.00) with minimal enforcement (suppression=0.01, resistance=0.00). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
+*   **Orbit Signature:** `[mountain, unknown]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -282,6 +316,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for constraint_lorenz_sensitivity: Extreme inaccessibility (collapse=0.95) with minimal enforcement (suppression=0.03, resistance=0.01). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -290,6 +325,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for lyapunov_stability: Extreme inaccessibility (collapse=0.95) with minimal enforcement (suppression=0.05, resistance=0.05). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
+*   **Orbit Signature:** `[mountain, unknown]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -298,6 +334,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for material_tensile_strength: Extreme inaccessibility (collapse=1.00) with minimal enforcement (suppression=0.01, resistance=0.00). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
+*   **Orbit Signature:** `[mountain, unknown]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -306,6 +343,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for monty_hall_conditional_probability: Extreme inaccessibility (collapse=1.00) with minimal enforcement (suppression=0.01, resistance=0.01). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
+*   **Orbit Signature:** `[mountain, unknown]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -314,6 +352,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for noether_theorem: Extreme inaccessibility (collapse=0.95) with minimal enforcement (suppression=0.05, resistance=0.02). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -322,6 +361,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -330,6 +370,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for pancreatic_cancer_lethality_v1: Extreme inaccessibility (collapse=0.98) with minimal enforcement (suppression=0.02, resistance=0.10). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
+*   **Orbit Signature:** `[mountain, unknown]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -338,6 +379,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for prisoners_dilemma_equilibrium: Extreme inaccessibility (collapse=0.95) with minimal enforcement (suppression=0.05, resistance=0.00). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
+*   **Orbit Signature:** `[mountain, unknown]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -346,6 +388,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for constraint_pythagorean: Extreme inaccessibility (collapse=0.95) with minimal enforcement (suppression=0.01, resistance=0.00). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -354,6 +397,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for quantum_measurement_gap: Extreme inaccessibility (collapse=0.98) with minimal enforcement (suppression=0.03, resistance=0.02). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
+*   **Orbit Signature:** `[mountain, unknown]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -362,6 +406,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for quantum_nonlocality_2026: Extreme inaccessibility (collapse=1.00) with minimal enforcement (suppression=0.05, resistance=0.00). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
+*   **Orbit Signature:** `[mountain, unknown]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -370,6 +415,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for ramsey_numbers: Extreme inaccessibility (collapse=0.95) with minimal enforcement (suppression=0.01, resistance=0.05). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
+*   **Orbit Signature:** `[mountain, unknown]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -378,6 +424,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for relativity_of_simultaneity: Extreme inaccessibility (collapse=0.99) with minimal enforcement (suppression=0.05, resistance=0.00). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
+*   **Orbit Signature:** `[mountain, unknown]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -386,6 +433,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for relativity_physical_invariance: Extreme inaccessibility (collapse=1.00) with minimal enforcement (suppression=0.01, resistance=0.00). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
+*   **Orbit Signature:** `[mountain, unknown]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -394,6 +442,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for shannon_entropy_limit: Extreme inaccessibility (collapse=0.98) with minimal enforcement (suppression=0.05, resistance=0.00). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
+*   **Orbit Signature:** `[mountain, unknown]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -402,6 +451,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for shannon_source_coding: Extreme inaccessibility (collapse=0.95) with minimal enforcement (suppression=0.05, resistance=0.02). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
+*   **Orbit Signature:** `[mountain, unknown]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -410,6 +460,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[mountain, unknown]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -418,6 +469,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for square_cube_law: Extreme inaccessibility (collapse=1.00) with minimal enforcement (suppression=0.01, resistance=0.00). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
+*   **Orbit Signature:** `[mountain, unknown]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -426,6 +478,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for star_formation_barrier_g0253: Extreme inaccessibility (collapse=0.98) with minimal enforcement (suppression=0.02, resistance=0.00). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
+*   **Orbit Signature:** `[mountain, unknown]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -434,6 +487,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for star_to_black_hole_observational_limit: Extreme inaccessibility (collapse=0.90) with minimal enforcement (suppression=0.02, resistance=0.10). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
+*   **Orbit Signature:** `[mountain, unknown]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -442,6 +496,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for suslin_hypothesis_proof_limits: Extreme inaccessibility (collapse=0.90) with minimal enforcement (suppression=0.05, resistance=0.10). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -450,6 +505,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for constraint_sylow: Extreme inaccessibility (collapse=0.95) with minimal enforcement (suppression=0.01, resistance=0.05). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -458,6 +514,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for constraint_tarski_undefinability: Extreme inaccessibility (collapse=0.95) with minimal enforcement (suppression=0.01, resistance=0.01). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
+*   **Orbit Signature:** `[mountain, unknown]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -466,6 +523,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for terrain_inaccessibility_wheeled_vehicles: Extreme inaccessibility (collapse=0.95) with minimal enforcement (suppression=0.05, resistance=0.05). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
+*   **Orbit Signature:** `[mountain, unknown]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -474,6 +532,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for thermodynamics_entropy: Extreme inaccessibility (collapse=0.98) with minimal enforcement (suppression=0.05, resistance=0.00). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
+*   **Orbit Signature:** `[mountain, unknown]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -482,6 +541,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -490,6 +550,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for three_body_unpredictability: Extreme inaccessibility (collapse=1.00) with minimal enforcement (suppression=0.02, resistance=0.00). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
+*   **Orbit Signature:** `[mountain, unknown]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -498,6 +559,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for constraint_twin_prime_conjecture: Extreme inaccessibility (collapse=0.98) with minimal enforcement (suppression=0.05, resistance=0.02). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
+*   **Orbit Signature:** `[mountain, unknown]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -506,6 +568,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for van_der_waerden_theorem: Extreme inaccessibility (collapse=0.95) with minimal enforcement (suppression=0.01, resistance=0.01). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
+*   **Orbit Signature:** `[mountain, unknown]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -514,6 +577,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for weierstrass_proof_limits: Extreme inaccessibility (collapse=0.95) with minimal enforcement (suppression=0.02, resistance=0.05). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
+*   **Orbit Signature:** `[mountain, unknown]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -522,6 +586,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for whitehead_incompleteness: Extreme inaccessibility (collapse=0.95) with minimal enforcement (suppression=0.01, resistance=0.05). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---

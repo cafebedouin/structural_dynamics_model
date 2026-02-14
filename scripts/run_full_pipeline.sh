@@ -276,6 +276,25 @@ else
 fi
 
 # ==============================================================================
+# STEP 8b: Orbit analysis
+# ==============================================================================
+step "Generating orbit analysis"
+
+ORBIT_REPORT="$OUTPUT_DIR/orbit_report.md"
+ORBIT_RAW="$OUTPUT_DIR/orbit_report_raw.md"
+if (cd "$PROLOG_DIR" && swipl -l stack.pl -l covering_analysis.pl -l dirac_classification.pl -l orbit_report.pl -g "run_orbit_report, halt.") > "$ORBIT_RAW" 2>/dev/null; then
+    # Strip FNL preamble noise before the delimiter
+    sed -n '/<!-- ORBIT_REPORT_START -->/,$p' "$ORBIT_RAW" | tail -n +2 > "$ORBIT_REPORT"
+    rm -f "$ORBIT_RAW"
+    FAMILIES=$(grep -oP 'Orbit families\*\*: \K\d+' "$ORBIT_REPORT" || echo "?")
+    OCONSTRAINTS=$(grep -oP 'Constraints analyzed\*\*: \K\d+' "$ORBIT_REPORT" || echo "?")
+    ok "Orbit analysis: $OCONSTRAINTS constraints, $FAMILIES families -> orbit_report.md"
+else
+    rm -f "$ORBIT_RAW"
+    warn "Orbit analysis had issues"
+fi
+
+# ==============================================================================
 # STEP 9: Meta-report
 # ==============================================================================
 step "Generating meta-report"
@@ -349,6 +368,22 @@ else
 fi
 echo ""
 
+# Orbit analysis summary
+echo -e "${BOLD}  GAUGE ORBIT ANALYSIS${NC}"
+if [ -f "$OUTPUT_DIR/orbit_report.md" ]; then
+    OR_FAMILIES=$(grep -oP 'Orbit families\*\*: \K\d+' "$OUTPUT_DIR/orbit_report.md" 2>/dev/null || echo "?")
+    OR_CONSTRAINTS=$(grep -oP 'Constraints analyzed\*\*: \K\d+' "$OUTPUT_DIR/orbit_report.md" 2>/dev/null || echo "?")
+    OR_INVARIANT=$(grep -oP 'Gauge-invariant.*?: \K\d+' "$OUTPUT_DIR/orbit_report.md" 2>/dev/null || echo "?")
+    OR_VARIANT=$(grep -oP 'Gauge-variant.*?: \K\d+' "$OUTPUT_DIR/orbit_report.md" 2>/dev/null || echo "?")
+    echo "  Constraints:  $OR_CONSTRAINTS"
+    echo "  Orbit Families: $OR_FAMILIES"
+    echo "  Gauge-Invariant: $OR_INVARIANT"
+    echo "  Gauge-Variant: $OR_VARIANT"
+else
+    echo "  (not generated)"
+fi
+echo ""
+
 # Generated reports
 echo -e "${BOLD}  GENERATED REPORTS${NC}"
 for report in \
@@ -364,6 +399,8 @@ for report in \
     "omega_report.md" \
     "corpus_data.json" \
     "fingerprint_report.md" \
+    "orbit_report.md" \
+    "orbit_data.json" \
     "variance_analysis.md" \
     "pattern_mining.md" \
     "index_sufficiency.md" \

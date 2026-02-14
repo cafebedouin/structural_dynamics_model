@@ -2,6 +2,9 @@ import re
 import sys
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).parent))
+from orbit_utils import load_orbit_data, get_orbit_signature, format_orbit_signature
+
 def parse_log_content(content):
     """
     Parses the log content to find and extract details for any constraint
@@ -107,7 +110,7 @@ def parse_log_content(content):
 
     return unique_trs
 
-def generate_markdown_report(tr_data, output_path):
+def generate_markdown_report(tr_data, output_path, orbit_data=None):
     """
     Generates a Markdown report from the list of Tangled Rope data.
     """
@@ -129,6 +132,8 @@ def generate_markdown_report(tr_data, output_path):
             f.write(f"    *   Analytical View: `{tr['analytical_view']}`\n")
             
             f.write(f"*   **Structural Signature Analysis:** {tr['structural_signature']}\n")
+            orbit_sig = get_orbit_signature(orbit_data or {}, tr['name'])
+            f.write(f"*   **Orbit Signature:** `{format_orbit_signature(orbit_sig)}`\n")
             f.write(f"*   **Related Gap/Alert:** {tr['related_gap_alert']}\n")
             f.write(f"*   **Generated Omega:** {tr['omega_question']}\n")
             f.write(f"*   **Suggested Resolution Strategy:**\n")
@@ -153,11 +158,12 @@ def main():
         sys.exit(1)
         
     tr_data = parse_log_content(log_content)
-    
+    orbit_data = load_orbit_data()
+
     if tr_data:
         print(f"Found {len(tr_data)} constraints classified as Tangled Ropes.")
         print(f"Generating report at {report_file}...")
-        generate_markdown_report(tr_data, report_file)
+        generate_markdown_report(tr_data, report_file, orbit_data)
         print("Report generated successfully.")
     else:
         print("No constraints classified as Tangled Ropes found in the log file.")
