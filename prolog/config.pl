@@ -369,6 +369,11 @@ param(contamination_strength_indexically_opaque, 0.3).
 param(network_contamination_risk_threshold,    2).     % Low-purity neighbors → "at_risk"
 param(network_cluster_degraded_floor,          0.40).  % Below → cluster degraded
 
+% --- Fixed-Point Network Iteration (v5.3) ---
+param(fpn_epsilon,                             0.001). % Convergence threshold (< min zone gap 0.20)
+param(fpn_max_iterations,                      20).    % Hard cap (2x theoretical worst case)
+param(fpn_enabled,                             0).     % 0=disabled (one-hop), 1=enabled
+
 /* ================================================================
    10. NETWORK DRIFT DYNAMICS PARAMETERS (v5.2)
    ================================================================ */

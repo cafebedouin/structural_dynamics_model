@@ -227,6 +227,38 @@ config_violation(Msg) :-
            [Name, Value]).
 
 positive_divisor_param(excess_factor_sigma).
+positive_divisor_param(fpn_epsilon).
+
+% ============================================================
+% 2b. Strictly positive integer params
+% ============================================================
+
+config_violation(Msg) :-
+    positive_integer_param(Name),
+    config:param(Name, Value),
+    (   \+ integer(Value)
+    ;   Value =< 0
+    ),
+    format(atom(Msg),
+           'CONFIG ERROR: param(~w, ~w) must be a positive integer',
+           [Name, Value]).
+
+positive_integer_param(fpn_max_iterations).
+
+% ============================================================
+% 2c. Binary flag params (0 or 1)
+% ============================================================
+
+config_violation(Msg) :-
+    binary_flag_param(Name),
+    config:param(Name, Value),
+    Value \= 0,
+    Value \= 1,
+    format(atom(Msg),
+           'CONFIG ERROR: param(~w, ~w) must be 0 or 1',
+           [Name, Value]).
+
+binary_flag_param(fpn_enabled).
 
 % ============================================================
 % 3. Ordered threshold sets

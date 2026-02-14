@@ -295,6 +295,25 @@ else
 fi
 
 # ==============================================================================
+# STEP 8c: FPN (Fixed-Point Network) analysis
+# ==============================================================================
+step "Generating FPN analysis"
+
+FPN_REPORT="$OUTPUT_DIR/fpn_report.md"
+FPN_RAW="$OUTPUT_DIR/fpn_report_raw.md"
+if (cd "$PROLOG_DIR" && swipl -l stack.pl -l covering_analysis.pl -l fpn_report.pl -g "run_fpn_report, halt.") > "$FPN_RAW" 2>/dev/null; then
+    # Strip FNL preamble noise before the delimiter
+    sed -n '/<!-- FPN_REPORT_START -->/,$p' "$FPN_RAW" | tail -n +2 > "$FPN_REPORT"
+    rm -f "$FPN_RAW"
+    FPN_ITERS=$(grep -oP 'Iterations to convergence\*\* \| \K\d+' "$FPN_REPORT" || echo "?")
+    FPN_MIGRATIONS=$(grep -oP 'Zone migrations\*\* \| \K\d+' "$FPN_REPORT" || echo "?")
+    ok "FPN analysis: $FPN_ITERS iterations, $FPN_MIGRATIONS zone migrations -> fpn_report.md"
+else
+    rm -f "$FPN_RAW"
+    warn "FPN analysis had issues"
+fi
+
+# ==============================================================================
 # STEP 9: Meta-report
 # ==============================================================================
 step "Generating meta-report"
@@ -384,6 +403,20 @@ else
 fi
 echo ""
 
+# FPN analysis summary
+echo -e "${BOLD}  FIXED-POINT NETWORK (FPN) ANALYSIS${NC}"
+if [ -f "$OUTPUT_DIR/fpn_report.md" ]; then
+    FPN_D_ITERS=$(grep -oP 'Iterations to convergence\*\* \| \K\d+' "$OUTPUT_DIR/fpn_report.md" 2>/dev/null || echo "?")
+    FPN_D_MIGRATIONS=$(grep -oP 'Zone migrations\*\* \| \K\d+' "$OUTPUT_DIR/fpn_report.md" 2>/dev/null || echo "?")
+    FPN_D_SIGNIFICANT=$(grep -oP 'significant shift.*?\| \K\d+' "$OUTPUT_DIR/fpn_report.md" 2>/dev/null || echo "?")
+    echo "  Iterations:   $FPN_D_ITERS"
+    echo "  Zone Migrations: $FPN_D_MIGRATIONS"
+    echo "  Significant Movers: $FPN_D_SIGNIFICANT"
+else
+    echo "  (not generated)"
+fi
+echo ""
+
 # Generated reports
 echo -e "${BOLD}  GENERATED REPORTS${NC}"
 for report in \
@@ -401,6 +434,7 @@ for report in \
     "fingerprint_report.md" \
     "orbit_report.md" \
     "orbit_data.json" \
+    "fpn_report.md" \
     "variance_analysis.md" \
     "pattern_mining.md" \
     "index_sufficiency.md" \
