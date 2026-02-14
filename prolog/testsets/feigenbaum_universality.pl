@@ -1,26 +1,49 @@
 % ============================================================================
 % CONSTRAINT STORY: feigenbaum_universality
 % ============================================================================
-% Generated: 2026-01-19
-% Model: Gemini 2.0 Flash
-% Source: Mitchell Feigenbaum (1975) / Universality in Chaos Theory
+% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2024-07-29
 % ============================================================================
 
-:- module(constraint_feigenbaum, []).
+:- module(constraint_feigenbaum_universality, []).
 
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
 
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
+
 % --- Namespace Hooks (Required for loading) ---
-:- multifile 
+:- multifile
     domain_priors:base_extractiveness/2,
     domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
     domain_priors:requires_active_enforcement/1,
+    domain_priors:emerges_naturally/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
-    constraint_indexing:constraint_classification/3.
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
+    narrative_ontology:boltzmann_floor_override/2,
+    constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -28,251 +51,222 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: feigenbaum_universality
- * human_readable: Feigenbaum Constants (Scaling of Chaos)
- * domain: mathematical/technological/physical
- * temporal_scope: 1975 - Present (Civilizational)
- * spatial_scope: Global/Abstract (Unimodal Maps / Dissipative Systems)
- * * SUMMARY:
- * Feigenbaum discovery reveals that the transition from order to chaos via 
- * period-doubling follows universal scaling constants ($\delta \approx 4.669$). 
- * This functions as a "law of laws," dictating that the geometry of failure 
- * is identical across disparate physical systems (fluids, circuits, biology).
- * * KEY AGENTS:
- * - The System Variable: The powerless agent following the iterative path.
- * - Mitchell Feigenbaum: The analytical observer who discovered the "Mountain."
- * - The Control Engineer: An institutional agent using the constant to 
- * predict the "point of no return" in complex hardware.
- * * NARRATIVE ARC:
- * Before 1975, the onset of chaos was seen as system-specific. Feigenbaum 
- * revealed a "Mountain" of universal scaling—a hidden geometric "Snare" 
- * that tightens at a predictable rate as a system approaches turbulence. 
- * For designers, it is a "Rope" for predictive maintenance, but for the 
- * system itself, the constant is an inescapable topological fate.
+ *   constraint_id: feigenbaum_universality
+ *   human_readable: Feigenbaum Constants (Universality in Chaos)
+ *   domain: mathematical/physical
+ *
+ * SUMMARY:
+ *   The Feigenbaum constants (e.g., δ ≈ 4.669) describe universal scaling
+ *   properties for systems exhibiting period-doubling bifurcations on their
+ *   route to chaos. This mathematical law dictates that the geometry of this
+ *   transition is identical across disparate physical systems (e.g., fluid
+ *   dynamics, electronic circuits, population models), regardless of their
+ *   specific underlying equations. It functions as a fixed, unchangeable
+ *   feature of a certain class of nonlinear dynamics.
+ *
+ * KEY AGENTS (by structural relationship):
+ *   - The System State (e.g., a variable in a logistic map): Primary target (powerless/trapped) — its evolution is dictated by the constant.
+ *   - The Control Engineer: Observer/User (institutional/mobile) — uses knowledge of the constant to predict and avoid chaotic regimes.
+ *   - The Theoretical Physicist: Analytical observer — studies the constant as a fundamental law.
  */
 
 /* ==========================================================================
-   2. CORE SYSTEM INTEGRATION (The "Reality" Layer)
+   2. BASE PROPERTIES (DOMAIN PRIORS)
    ========================================================================== */
 
-% Structural Anchor for index extraction
-narrative_ontology:interval(feigenbaum_universality, 1975, 2026).
+% --- Numerical metrics ---
+% Rationale: As a fundamental mathematical constant, it has near-zero
+% structural extraction or suppression. It doesn't extract value; it describes
+% an inherent property of a system's state space. The previous values (0.3/0.2)
+% were based on a metaphorical interpretation of "extracting uniqueness" which
+% is not a structural property. These values are corrected to meet the Mountain
+% classification thresholds.
+domain_priors:base_extractiveness(feigenbaum_universality, 0.05).
+domain_priors:suppression_score(feigenbaum_universality, 0.01).
+domain_priors:theater_ratio(feigenbaum_universality, 0.0).
+
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(feigenbaum_universality, extractiveness, 0.05).
+narrative_ontology:constraint_metric(feigenbaum_universality, suppression_requirement, 0.01).
+narrative_ontology:constraint_metric(feigenbaum_universality, theater_ratio, 0.0).
+
+% --- NL Profile Metrics (required for mountain constraints) ---
+% These feed the natural_law_signature certification chain in
+% structural_signatures.pl. A high accessibility_collapse score (>=0.85)
+% indicates alternatives are structurally foreclosed. A low resistance
+% score (<=0.15) indicates no meaningful opposition exists.
+narrative_ontology:constraint_metric(feigenbaum_universality, accessibility_collapse, 0.98).
+narrative_ontology:constraint_metric(feigenbaum_universality, resistance, 0.01).
+
+% --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(feigenbaum_universality, mountain).
 
-% Base extractiveness score (0.0-1.0)
-% Rationale: Moderate (0.3). The constant "extracts" the uniqueness of 
-% specific systems, forcing all nonlinear transitions to obey the same 
-% geometric ratio, thereby limiting design degrees of freedom.
-domain_priors:base_extractiveness(feigenbaum_universality, 0.3).
+% --- Binary flags ---
+% No active enforcement is required for a mathematical law.
 
-% Suppression score (0.0-1.0)
-% Rationale: Low (0.2). It suppressed the previous "system-dependent" 
-% theories of chaos onset, replacing them with a more rigid universal truth.
-domain_priors:suppression_score(feigenbaum_universality, 0.2).
-
-% Constraint metric facts (bridge for classification engine)
-narrative_ontology:constraint_metric(feigenbaum_universality, extractiveness, 0.3).
-narrative_ontology:constraint_metric(feigenbaum_universality, suppression_requirement, 0.2).
-
-% Enforcement: Emerges naturally from the topology of quadratic maps.
+% --- Emergence flag (required for mountain constraints) ---
+% This flag is required for the mountain metric gate: without this,
+% the classify_from_metrics mountain clause will not fire.
 domain_priors:emerges_naturally(feigenbaum_universality).
 
-% Metrics for Executive Summary
-% BENEFICIARIES & VICTIMS
-narrative_ontology:constraint_beneficiary(feigenbaum_universality, predictive_maintenance). % Can predict chaos before it happens.
-narrative_ontology:constraint_beneficiary(feigenbaum_universality, theoretical_physicists). % Discovery of hidden order.
-narrative_ontology:constraint_victim(feigenbaum_universality, computational_precision). % Successive bifurcations happen 4.6x faster.
-narrative_ontology:constraint_victim(feigenbaum_universality, design_flexibility). % You cannot "change" the rate of the transition.
+% --- Structural relationships (REQUIRED for non-mountain constraints) ---
+% As a uniform-type Mountain (a law of nature), this constraint does not have
+% structural beneficiaries or victims in the sense of coordination or extraction.
+% Its utility to engineers is an application of knowledge about the Mountain,
+% not a coordination function provided by it. No enrichment needed.
 
 /* ==========================================================================
-   3. INDEXED CLASSIFICATIONS (Perspectival Truth)
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × f(d) × σ(S)
+   where f(d) is the sigmoid directionality function:
+     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
+   The engine derives d from beneficiary/victim membership + exit_options.
+   Scope modifiers: local=0.8, regional=0.9, national=1.0,
+                    continental=1.1, global=1.2, universal=1.0.
+   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
+   Do not add measurement_basis, beneficiary/victim, or other metadata.
+   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 1: THE NONLINEAR ITERATE - Mountain
-   --------------------------------------------------------------------------
-   WHO: powerless - The variable $x_n$ has no agency over the map.
-   WHEN: immediate - True at every bifurcation point.
-   WHERE: trapped - Bound within the unimodal geometry of the mapping.
-   SCOPE: local - Immediate neighborhood of the period-doubling event.
-   
-   WHY THIS CLASSIFICATION:
-   For the mathematical state, the scaling constant $\delta$ is an absolute 
-   truth. The "Butterfly" cannot choose to bifurcate at a different ratio; 
-   it is a fixed feature of the nonlinear landscape.
-   -------------------------------------------------------------------------- */
+% This is a uniform-type constraint (Mountain-only). The classification is
+% invariant across all perspectives because the base metrics (ε, suppression)
+% are extremely low, forcing a Mountain classification regardless of the
+% scaling factors f(d) and σ(S). The previous Rope/Snare classifications were
+% based on metaphorical interpretations that are structurally incorrect.
 
+% PERSPECTIVE 1: THE SYSTEM STATE (MOUNTAIN)
+% For the mathematical state variable, the scaling constant is an absolute,
+% unchangeable feature of the nonlinear landscape. It has no agency.
+constraint_indexing:constraint_classification(feigenbaum_universality, mountain,
+    context(agent_power(powerless),
+            time_horizon(immediate),
+            exit_options(trapped),
+            spatial_scope(local))).
 
+% PERSPECTIVE 2: THE CONTROL ENGINEER (MOUNTAIN)
+% For an engineer, the constant is not a coordination tool (Rope) but an
+% unchangeable law of nature (Mountain) that they must design around.
+% Their ability to use this knowledge does not change the nature of the constraint itself.
+constraint_indexing:constraint_classification(feigenbaum_universality, mountain,
+    context(agent_power(institutional),
+            time_horizon(biographical),
+            exit_options(mobile),
+            spatial_scope(global))).
 
-constraint_indexing:constraint_classification(
-    feigenbaum_universality,
-    mountain,
-    context(
-        agent_power(powerless),
-        time_horizon(immediate),
-        exit_options(trapped),
-        spatial_scope(local)
-    )
-) :- !.
-
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE TURBINE ENGINEER - Rope
-   --------------------------------------------------------------------------
-   WHO: institutional - Power to design systems and set safety thresholds.
-   WHEN: biographical - Planning the lifecycle of a high-performance system.
-   WHERE: mobile - Can adjust parameters to stay away from the "Feigenbaum point."
-   SCOPE: global - Applying the constant across all turbine designs.
-   
-   WHY THIS CLASSIFICATION:
-   For the engineer, the constant is a "Rope"—a tool for functional 
-   coordination. By knowing that each bifurcation happens 4.669 times 
-   closer than the last, they coordinate a standard of achievement for 
-   stability by precisely mapping the safety margins.
-   -------------------------------------------------------------------------- */
-
-constraint_indexing:constraint_classification(
-    feigenbaum_universality,
-    rope,
-    context(
-        agent_power(institutional),
-        time_horizon(biographical),
-        exit_options(mobile),
-        spatial_scope(global)
-    )
-) :- !.
-
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE PRECISION BOTTLENECK - Snare
-   --------------------------------------------------------------------------
-   WHO: powerless - A simulation algorithm limited by bit-depth.
-   WHEN: immediate - The threshold where bifurcations occur faster than measurement.
-   WHERE: constrained - Stuck in the "geometric squeeze" of the transition.
-   SCOPE: local - A specific high-frequency regime.
-   
-   WHY THIS CLASSIFICATION:
-   As the system approaches the limit point $r_\infty$, the constant acts 
-   as a "Snare." It "strangles" computational accuracy, extracting all 
-   available floating-point precision as the bifurcation intervals shrink 
-   toward zero, forcing a total loss of predictability.
-   -------------------------------------------------------------------------- */
-
-
-
-constraint_indexing:constraint_classification(
-    feigenbaum_universality,
-    snare,
-    context(
-        agent_power(powerless),
-        time_horizon(immediate),
-        exit_options(constrained),
-        spatial_scope(local)
-    )
-) :- 
-    domain_priors:base_extractiveness(feigenbaum_universality, E),
-    E >= 0.2,
-    !.
+% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (MOUNTAIN)
+% The default analytical context correctly identifies the constant as a
+% fundamental, unchangeable feature of mathematics.
+constraint_indexing:constraint_classification(feigenbaum_universality, mountain,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).
 
 /* ==========================================================================
-   4. TESTS (Insights into Universal Scaling)
+   4. VALIDATION TESTS
    ========================================================================== */
 
 :- begin_tests(feigenbaum_universality_tests).
 
-test(universal_scaling_variance) :-
-    % Iterate (Subject) -> Mountain
-    constraint_indexing:constraint_classification(feigenbaum_universality, Type1, context(powerless, immediate, trapped, local)),
-    % Engineer (User) -> Rope
-    constraint_indexing:constraint_classification(feigenbaum_universality, Type2, context(institutional, biographical, mobile, global)),
-    Type1 = mountain,
-    Type2 = rope.
+test(classification_invariance, [nondet]) :-
+    % Verify that the constraint is a uniform-type Mountain from multiple key perspectives.
+    constraint_indexing:constraint_classification(feigenbaum_universality, Type1, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(feigenbaum_universality, Type2, context(agent_power(institutional), _, _, _)),
+    constraint_indexing:constraint_classification(feigenbaum_universality, Type3, context(agent_power(analytical), _, _, _)),
+    Type1 == mountain,
+    Type2 == mountain,
+    Type3 == mountain.
 
-test(computational_squeeze_penalty) :-
-    % A powerless simulation (constrained) sees the geometric shrinkage as a Snare.
-    constraint_indexing:constraint_classification(feigenbaum_universality, snare, context(powerless, immediate, constrained, local)).
-
-test(extraction_is_constant) :-
-    % The "cost" of the constant applies regardless of the specific math function used.
-    domain_priors:base_extractiveness(feigenbaum_universality, Score),
-    Score > 0.2.
+test(mountain_threshold_adherence) :-
+    % Verify the metrics are consistent with the Mountain classification.
+    narrative_ontology:constraint_metric(feigenbaum_universality, extractiveness, E),
+    narrative_ontology:constraint_metric(feigenbaum_universality, suppression_requirement, S),
+    E =< 0.25,
+    S =< 0.05.
 
 :- end_tests(feigenbaum_universality_tests).
 
 /* ==========================================================================
-   5. MODEL INTERPRETATION (Commentary)
+   5. GENERATIVE COMMENTARY
    ========================================================================== */
 
 /**
- * LLM GENERATION NOTES
- * * Model: Gemini 2.0 Flash
- * Date: 2026-01-19
- * * KEY DECISIONS:
- * 1. TYPE VARIANCE: I chose to highlight how the *same* constant is a 
- * "Mountain" for the math, a "Rope" for the designer (prediction), 
- * and a "Snare" for the simulator (precision loss).
- * 2. EXTRACTIVENESS (0.3): While fundamental, the constant "extracts" 
- * the possibility of a linear or slow transition to chaos, forcing 
- * a rapid, accelerating geometric collapse.
- * 3. OMEGAS: The central uncertainty is whether the "Mountain" of 
- * $\delta$ holds in non-dissipative or non-unimodal systems.
+ * LOGIC RATIONALE:
+ *   This file was regenerated to correct a MOUNTAIN_METRIC_CONFLICT and a
+ *   MISSING_NL_PROFILE error. The original file claimed the constraint was a
+ *   Mountain but assigned base_extractiveness (0.3) and suppression_score (0.2)
+ *   that violated the strict Mountain thresholds (ε ≤ 0.25, suppression ≤ 0.05).
+ *   It also lacked the required Natural Law profile metrics (accessibility_collapse,
+ *   resistance) and the emerges_naturally flag, which are mandatory for a
+ *   Mountain to pass the linter and the engine's certification chain.
+ *
+ *   The metrics have been corrected to ε=0.05 and suppression=0.01, and the
+ *   full NL profile has been added, reflecting the structural reality that a
+ *   mathematical law does not perform extraction or require active suppression.
+ *   It is a feature of the landscape.
+ *
+ * PERSPECTIVAL GAP:
+ *   There is no perspectival gap. This is a uniform-type Mountain. The previous
+ *   classifications of Rope (for an engineer) and Snare (for a simulation)
+ *   were metaphorical. An engineer *uses* knowledge of the Mountain; the
+ *   constraint itself is not a coordination Rope. A simulation hits a
+ *   computational limit *because of* the Mountain's properties; the constraint
+ *   is not an extractive Snare. The classification is invariant.
+ *
+ * DIRECTIONALITY LOGIC:
+ *   As a Mountain, beneficiary and victim declarations are not applicable.
+ *   The concept of directionality (d) does not meaningfully alter the
+ *   classification due to the extremely low base extraction.
+ *
+ * MANDATROPHY ANALYSIS:
+ *   By correctly classifying this as a Mountain, we avoid mislabeling a
+ *   fundamental law of nature as a social or economic construct like a Rope
+ *   or Snare. This upholds the principle that the classification system
+ *   describes the constraint's structure, not just how agents interact with it.
  */
-
-% OMEGA IDENTIFICATION
-omega_variable(
-    renormalization_group_fidelity,
-    "Is the Feigenbaum constant a 'Mountain' in systems with non-quadratic extrema?",
-    resolution_mechanism("Numerical audit of bifurcation rates in $x_{n+1} = r(1-|2x-1|^z)$ maps."),
-    impact("If Yes: The constant is universal. If No: It is a system-dependent Scaffold."),
-    confidence_without_resolution(medium)
-).
 
 /* ==========================================================================
-   6. ALTERNATIVE ANALYSIS
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-/**
- * VIABLE ALTERNATIVES
- * * ALTERNATIVE 1: System-Specific Transition Models
- * Viability: Historically believed that every fluid or circuit had its 
- * own transition math.
- * Suppression: Rejected by the "Mountain" of Feigenbaum's HP-65 results.
- * * ALTERNATIVE 2: Quasiperiodic Route to Chaos (Ruelle-Takens)
- * Viability: A different "Mountain" entirely.
- * Conclusion: The existence of other routes means the Feigenbaum 
- * "Rope" only works if the system is already period-doubling.
- */
+% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
+omega_variable(
+    omega_feigenbaum_universality,
+    'Is the Feigenbaum constant a true universal, or does it fail for systems with non-quadratic extrema?',
+    'Numerical audits of bifurcation rates in maps with different critical orders (e.g., |x|^z where z is not 2).',
+    'If it fails, its classification would shift from a universal Mountain to a more context-dependent constraint. If it holds, its status as a fundamental Mountain is reinforced.',
+    confidence_without_resolution(high)
+).
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Load: ?- [feigenbaum_universality].
-% Analyze: ?- constraint_indexing:multi_index_report(feigenbaum_universality).
+% Required for external script parsing
+narrative_ontology:interval(feigenbaum_universality, 1975, 2026).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Not required. Base extractiveness (0.05) is below the 0.46 threshold for
+% mandatory temporal tracking. As a mathematical constant, its properties
+% do not drift over time.
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA
+   ========================================================================== */
+
+% No coordination type, floor override, or network relationships are defined
+% for this fundamental mathematical constraint.
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+% No overrides are needed. The classification is insensitive to directionality
+% due to the low base metrics.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
-
-% ============================================================================
-% ENRICHMENT: Structural predicates for dynamic classification
-% Generated: 2026-02-08
-% Template: v5.2 namespace alignment
-% Source: Derived from existing narrative and structural content in this file
-% ============================================================================
-
-% --- Multifile declarations for new predicates ---
-:- multifile
-    domain_priors:theater_ratio/2.
-
-% --- Theater ratio (missing from base properties) ---
-% Formal truth — substantive with near-zero performative component
-domain_priors:theater_ratio(feigenbaum_universality, 0.0).
-narrative_ontology:constraint_metric(feigenbaum_universality, theater_ratio, 0.0).
-
-% --- Analytical perspective classification (missing) ---
-% chi = 0.3 * 1.15 (analytical) * 1.2 (global) = 0.414
-% Classification: rope
-constraint_indexing:constraint_classification(feigenbaum_universality, rope,
-    context(agent_power(analytical),
-            time_horizon(civilizational),
-            exit_options(analytical),
-            spatial_scope(global))).

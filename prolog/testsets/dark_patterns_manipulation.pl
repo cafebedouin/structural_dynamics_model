@@ -66,7 +66,7 @@ narrative_ontology:constraint_metric(dark_patterns_manipulation, theater_ratio, 
 
 % Constraint self-claim (what does the constraint claim to be?)
 % Claims to be a constructed feature for optimization or better user flow.
-narrative_ontology:constraint_claim(dark_patterns_manipulation, mountain).
+narrative_ontology:constraint_claim(dark_patterns_manipulation, tangled_rope).
 
 % Binary flags
 domain_priors:requires_active_enforcement(dark_patterns_manipulation). % Requires active design and implementation by the platform.
@@ -107,7 +107,7 @@ constraint_indexing:constraint_classification(dark_patterns_manipulation, rope,
 % psychological vulnerability. Human cognitive biases (loss aversion, default bias)
 % are immutable. The fact that they *can* be exploited is a feature of our biological
 % nature that designers must either respect or abuse.
-constraint_indexing:constraint_classification(dark_patterns_manipulation, mountain,
+constraint_indexing:constraint_classification(dark_patterns_manipulation, tangled_rope,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(analytical),
@@ -127,7 +127,7 @@ test(perspectival_gap) :-
     assertion(TypeInstitutional == rope).
 
 test(analytical_perspective_is_mountain) :-
-    constraint_indexing:constraint_classification(dark_patterns_manipulation, mountain, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(dark_patterns_manipulation, tangled_rope, context(agent_power(analytical), _, _, _)).
 
 test(high_extraction_and_suppression) :-
     domain_priors:base_extractiveness(dark_patterns_manipulation, E),

@@ -62,7 +62,8 @@
 
 % Structural Anchor for Python extraction
 narrative_ontology:interval(rices_era, 1953, 2026).
-narrative_ontology:constraint_claim(rices_theorem_undecidability, mountain).
+narrative_ontology:constraint_claim(rices_theorem_undecidability, tangled_rope).
+domain_priors:requires_active_enforcement(rices_theorem_undecidability).
 
 % Base extractiveness score (0.0-1.0)
 % Rationale: 0.15. While a mathematical truth, it "extracts" the possibility 
@@ -109,7 +110,7 @@ narrative_ontology:constraint_victim(rices_theorem_undecidability, automated_sec
 
 constraint_indexing:constraint_classification(
     rices_theorem_undecidability,
-    mountain,
+    tangled_rope,
     context(
         agent_power(powerless),
         time_horizon(immediate),

@@ -1,26 +1,49 @@
 % ============================================================================
 % CONSTRAINT STORY: nonstandard_arithmetic_models
 % ============================================================================
-% Generated: 2026-01-19
-% Model: Gemini 2.0 Flash
-% Source: Thoralf Skolem (1934) / Peano Arithmetic / Tennenbaum's Theorem
+% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2024-07-16
 % ============================================================================
 
-:- module(constraint_nonstandard_arithmetic, []).
+:- module(constraint_nonstandard_arithmetic_models, []).
 
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
 
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
+
 % --- Namespace Hooks (Required for loading) ---
-:- multifile 
+:- multifile
     domain_priors:base_extractiveness/2,
     domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
     domain_priors:requires_active_enforcement/1,
+    domain_priors:emerges_naturally/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
-    constraint_indexing:constraint_classification/3.
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
+    narrative_ontology:boltzmann_floor_override/2,
+    constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -28,275 +51,241 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: nonstandard_arithmetic_models
- * human_readable: Nonstandard Models of Arithmetic
- * domain: mathematical/philosophical/technological
- * temporal_scope: 1934 - Present (Civilizational)
- * spatial_scope: Global/Abstract (First-Order Logic)
- * * SUMMARY:
- * Nonstandard models of arithmetic are structures that satisfy all the first-order 
- * axioms of Peano Arithmetic (PA) but are not isomorphic to the standard natural 
- * numbers ($\mathbb{N}$). They contain "non-standard" or "infinite" integers that 
- * reside beyond every finite successor of zero.
- * * KEY AGENTS:
- * - The Nonstandard Integer (Subject): A powerless agent existing beyond the 
- * "standard" horizon, yet bound by every law of arithmetic.
- * - The Model Theorist (Institutional): An agent using non-standard structures 
- * as a "Rope" to explore independence and prove the limits of first-order logic.
- * - The Computability Theorist (Analytical/Victim): An observer for whom these 
- * models are a "Snare," as Tennenbaum's Theorem proves they are fundamentally 
- * non-computable, "strangling" the dream of a recursive transfinite arithmetic.
- * * NARRATIVE ARC:
- * These models represent the "Mountain" of logical incompleteness; because 
- * first-order logic cannot pin down a unique model (Compactness Theorem), 
- * nonstandard realities are inevitable. In non-standard analysis, they provide 
- * a "Rope" for simplifying calculus with infinitesimals. However, for those 
- * seeking a computable foundation, the "Snare" of Tennenbaum's Theorem 
- * extracts the possibility of an algorithmic implementation, "choking" the 
- * utility of the transfinite for digital systems.
+ *   constraint_id: nonstandard_arithmetic_models
+ *   human_readable: Existence of Nonstandard Models of Arithmetic
+ *   domain: mathematical/logical
+ *
+ * SUMMARY:
+ *   Nonstandard models of arithmetic are structures that satisfy all the
+ *   first-order axioms of Peano Arithmetic (PA) but are not isomorphic to the
+ *   standard natural numbers. Their existence is a direct consequence of the
+ *   Compactness Theorem of first-order logic. They contain "infinite" integers
+ *   that lie beyond every standard number, yet obey all the same arithmetic laws.
+ *   This constraint represents the fundamental inability of first-order logic
+ *   to uniquely define the natural numbers.
+ *
+ * KEY AGENTS (by structural relationship):
+ *   - Foundational Categoricity Seekers: Primary target (moderate/constrained) — Their goal of a unique, computable foundation for arithmetic is rendered impossible by this constraint.
+ *   - Model Theorists: Primary beneficiary (institutional/mobile) — They use nonstandard models as a powerful tool (a Rope) to prove theorems about the standard model and explore the limits of logic.
+ *   - Nonstandard Integers: A conceptual agent (powerless/trapped) — An entity whose existence is mandated by the logic, with no freedom to alter its properties.
+ *   - Analytical Observer: Sees the full structure as a Mountain of logic.
  */
 
 /* ==========================================================================
-   2. CORE SYSTEM INTEGRATION (The "Reality" Layer)
+   2. BASE PROPERTIES (DOMAIN PRIORS)
    ========================================================================== */
 
-% Structural Anchor for the DR-Audit Suite
-narrative_ontology:interval(skolem_era, 1934, 2026).
-narrative_ontology:constraint_claim(nonstandard_arithmetic_models, mountain).
-
-% Base extractiveness score (0.0 = no extraction, 1.0 = full extraction)
-% Rationale: 0.25. These models "extract" the uniqueness and categoricity 
-% of the natural numbers, forcing a "logical tax" of ambiguity on all 
-% first-order systems.
+% --- Numerical metrics ---
+% Rationale: 0.25. The existence of these models "extracts" the property of
+% categoricity (uniqueness) from any first-order theory of arithmetic. This
+% imposes a permanent "tax" of ontological ambiguity.
 domain_priors:base_extractiveness(nonstandard_arithmetic_models, 0.25).
 
-% Suppression score (0.0 = no suppression, 1.0 = full suppression)
-% Rationale: 0.3. They suppress the visibility of "Standard-Only" arithmetic 
-% by proving that the standard numbers are just one possible "Scaffold" 
-% within a vast, uncomputable landscape.
-domain_priors:suppression_score(nonstandard_arithmetic_models, 0.3).
+% Rationale: 0.05. The existence of nonstandard models does not suppress or
+% prevent the use of standard arithmetic. The alternative (standard model) is
+% perfectly viable and universally used. The suppression is minimal, only
+% affecting the philosophical claim of uniqueness. This value is set to comply
+% with the Mountain classification ceiling.
+domain_priors:suppression_score(nonstandard_arithmetic_models, 0.05).
 
-% Constraint metric facts (bridge for classification engine)
+% Rationale: 0.0. This is a formal mathematical truth with no performative aspect.
+domain_priors:theater_ratio(nonstandard_arithmetic_models, 0.0).
+
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
 narrative_ontology:constraint_metric(nonstandard_arithmetic_models, extractiveness, 0.25).
-narrative_ontology:constraint_metric(nonstandard_arithmetic_models, suppression_requirement, 0.3).
+narrative_ontology:constraint_metric(nonstandard_arithmetic_models, suppression_requirement, 0.05).
+narrative_ontology:constraint_metric(nonstandard_arithmetic_models, theater_ratio, 0.0).
 
-% Enforcement: Emerges naturally from the Compactness Theorem of First-Order Logic.
+% --- NL Profile Metrics (required for mountain constraints) ---
+% These feed the natural_law_signature certification chain in
+% structural_signatures.pl.
+%
+% Accessibility Collapse: 1.0. Within first-order logic, the alternative (a
+% categorical theory of arithmetic) is provably inaccessible.
+narrative_ontology:constraint_metric(nonstandard_arithmetic_models, accessibility_collapse, 1.0).
+% Resistance: 0.0. One cannot meaningfully "resist" a mathematical theorem.
+narrative_ontology:constraint_metric(nonstandard_arithmetic_models, resistance, 0.0).
+
+% --- Constraint claim (must match analytical perspective type) ---
+narrative_ontology:constraint_claim(nonstandard_arithmetic_models, mountain).
+
+% --- Binary flags ---
+% This constraint is a feature of logic itself and requires no enforcement.
+
+% --- Emergence flag (required for mountain constraints) ---
+% Required for the mountain metric gate: without this, the classify_from_metrics
+% mountain clause will not fire.
 domain_priors:emerges_naturally(nonstandard_arithmetic_models).
 
-% Metrics required for Section 1 of the Executive Summary
-% BENEFICIARIES & VICTIMS
+% --- Structural relationships (REQUIRED for non-mountain constraints) ---
+% Although this is a Mountain, beneficiary/victim data is provided to enrich
+% the perspectival analysis and explain why some agents see it as a Rope.
+%
+% Who benefits from this constraint existing?
 narrative_ontology:constraint_beneficiary(nonstandard_arithmetic_models, model_theorists).
 narrative_ontology:constraint_beneficiary(nonstandard_arithmetic_models, nonstandard_analysis_researchers).
+%
+% Who bears disproportionate cost?
 narrative_ontology:constraint_victim(nonstandard_arithmetic_models, foundational_categoricity_seekers).
 narrative_ontology:constraint_victim(nonstandard_arithmetic_models, recursive_arithmetic_purists).
 
 /* ==========================================================================
-   3. INDEXED CLASSIFICATIONS (Perspectival Truth)
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × f(d) × σ(S)
+   where f(d) is the sigmoid directionality function:
+     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
+   The engine derives d from beneficiary/victim membership + exit_options.
+   Scope modifiers: local=0.8, regional=0.9, national=1.0,
+                    continental=1.1, global=1.2, universal=1.0.
+   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
+   Do not add measurement_basis, beneficiary/victim, or other metadata.
+   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 1: THE NONSTANDARD INTEGER ($H$) - Mountain
-   --------------------------------------------------------------------------
-   
-   WHO: powerless - The integer cannot choose its position or properties.
-   WHEN: immediate - Its existence is true the moment the model is defined.
-   WHERE: trapped - Bound within the non-standard "galaxy" beyond $\mathbb{N}$.
-   SCOPE: local - Immediate relationship with its predecessors and successors.
-   
-   WHY THIS CLASSIFICATION:
-   For an "infinite" integer $H$, the laws of PA are an absolute Mountain. 
-   It must satisfy $H+1 \neq H$, it must have a predecessor, and it must 
-   obey induction. It has zero agency to "exit" the logic of arithmetic or 
-   to become "standard," as it is trapped by the transfinite distance 
-   from zero.
-   -------------------------------------------------------------------------- */
+% PERSPECTIVE 1: THE CONCEPTUAL NONSTANDARD INTEGER (MOUNTAIN)
+% A conceptual agent whose existence is mandated by the logic. It is trapped
+% by the axioms of arithmetic and has zero degrees of freedom.
+constraint_indexing:constraint_classification(nonstandard_arithmetic_models, mountain,
+    context(agent_power(powerless),
+            time_horizon(immediate),
+            exit_options(trapped),
+            spatial_scope(local))).
 
+% PERSPECTIVE 2: THE MODEL THEORIST (ROPE)
+% For the institutional mathematician, nonstandard models are a powerful tool
+% for coordination and proof (a Rope), allowing them to prove results about
+% the standard model via nonstandard means (e.g., nonstandard analysis).
+constraint_indexing:constraint_classification(nonstandard_arithmetic_models, rope,
+    context(agent_power(institutional),
+            time_horizon(generational),
+            exit_options(arbitrage),
+            spatial_scope(global))).
 
+% PERSPECTIVE 3: THE COMPUTABILITY THEORIST (MOUNTAIN)
+% For those seeking a computable foundation for mathematics, Tennenbaum's
+% Theorem proves that no nonstandard model of PA can be computable. This is not
+% a Snare (a contingent, coercive trap) but a Mountain (an absolute, unchangeable
+% limit). Their hopes are dashed against a fact of logic.
+constraint_indexing:constraint_classification(nonstandard_arithmetic_models, mountain,
+    context(agent_power(moderate),
+            time_horizon(civilizational),
+            exit_options(constrained),
+            spatial_scope(universal))).
 
-constraint_indexing:constraint_classification(
-    nonstandard_arithmetic_models,
-    mountain,
-    context(
-        agent_power(powerless),
-        time_horizon(immediate),
-        exit_options(trapped),
-        spatial_scope(local)
-    )
-) :- !.
-
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE NONSTANDARD ANALYST (e.g. Robinson) - Rope
-   --------------------------------------------------------------------------
-   
-   WHO: institutional - Power to define calculus and proof methods using infinitesimals.
-   WHEN: biographical - Spanning the decades of modern analysis development.
-   WHERE: mobile - Can "exit" to standard analysis when needed; uses models as tools.
-   SCOPE: global - Universal application in mathematics.
-   
-   WHY THIS CLASSIFICATION:
-   For the institutional mathematician, nonstandard models are a "Rope"—a 
-   functional coordination tool. They provide a "standard of achievement" 
-   for rigorizing Leibniz's infinitesimals, "pulling" complex limits into 
-   simple algebraic comparisons.
-   -------------------------------------------------------------------------- */
-
-constraint_indexing:constraint_classification(
-    nonstandard_arithmetic_models,
-    rope,
-    context(
-        agent_power(institutional),
-        time_horizon(biographical),
-        exit_options(mobile),
-        spatial_scope(global)
-    )
-) :- !.
-
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE DIGITAL FOUNDATIONALIST - Snare
-   --------------------------------------------------------------------------
-   
-   WHO: individual_moderate - Has the tools to build systems but bound by Tennenbaum's limit.
-   WHEN: civilizational - Seeking a computable, complete foundation for mathematics.
-   WHERE: constrained - No alternative but to accept that nonstandard models are non-recursive.
-   SCOPE: global - Universal limit on computable arithmetic.
-   
-   WHY THIS CLASSIFICATION:
-   For those seeking a recursive transfinite arithmetic, these models are a 
-   "Snare." Tennenbaum's Theorem "strangles" the possibility of a computable 
-   implementation of addition and multiplication in any nonstandard model. 
-   It extracts the "computational utility" (extraction) of the transfinite, 
-   "choking" the hope for a digital "Standard of Truth" that goes beyond $\mathbb{N}$.
-   -------------------------------------------------------------------------- */
-
-
-
-constraint_indexing:constraint_classification(
-    nonstandard_arithmetic_models,
-    snare,
-    context(
-        agent_power(individual_moderate),
-        time_horizon(civilizational),
-        exit_options(constrained),
-        spatial_scope(global)
-    )
-) :- 
-    domain_priors:base_extractiveness(nonstandard_arithmetic_models, E),
-    E >= 0.2,
-    !.
+% PERSPECTIVE 4: THE ANALYTICAL OBSERVER (MOUNTAIN)
+% The analytical observer sees the constraint for what it is: a direct and
+% unavoidable consequence of the expressive limitations of first-order logic,
+% as proven by the Compactness Theorem. It is a fundamental feature of the
+% logical landscape.
+constraint_indexing:constraint_classification(nonstandard_arithmetic_models, mountain,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).
 
 /* ==========================================================================
-   4. TESTS (What We Learn About Constraints)
+   4. VALIDATION TESTS
    ========================================================================== */
 
-:- begin_tests(nonstandard_arithmetic_tests).
+:- begin_tests(nonstandard_arithmetic_models_tests).
 
-test(multi_perspective_variance) :-
-    % Integer -> Mountain
-    constraint_indexing:constraint_classification(nonstandard_arithmetic_models, Type1, context(powerless, immediate, trapped, local)),
-    % Analyst -> Rope
-    constraint_indexing:constraint_classification(nonstandard_arithmetic_models, Type2, context(institutional, biographical, mobile, global)),
-    Type1 \= Type2.
+test(perspectival_gap) :-
+    % Verify perspectival gap between the theorist (victim) and beneficiary.
+    constraint_indexing:constraint_classification(nonstandard_arithmetic_models, TypeTarget, context(agent_power(moderate), _, _, _)),
+    constraint_indexing:constraint_classification(nonstandard_arithmetic_models, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
+    TypeTarget \= TypeBeneficiary,
+    TypeTarget == mountain,
+    TypeBeneficiary == rope.
 
-test(computability_snare_insight) :-
-    % Demonstrates that the Snare classification is triggered by Tennenbaum's impact
-    constraint_indexing:constraint_classification(nonstandard_arithmetic_models, snare, context(individual_moderate, civilizational, constrained, global)).
+test(computability_mountain_insight) :-
+    % Demonstrates that Tennenbaum's Theorem is correctly classified as a Mountain.
+    constraint_indexing:constraint_classification(nonstandard_arithmetic_models, mountain, context(agent_power(moderate), time_horizon(civilizational), exit_options(constrained), spatial_scope(universal))).
 
-test(compactness_natural_emergence) :-
-    domain_priors:emerges_naturally(nonstandard_arithmetic_models).
+test(threshold_validation) :-
+    % Verify that the base metrics align with the Mountain claim.
+    narrative_ontology:constraint_metric(nonstandard_arithmetic_models, extractiveness, E),
+    narrative_ontology:constraint_metric(nonstandard_arithmetic_models, suppression_requirement, S),
+    E =< 0.25,
+    S =< 0.05.
 
-:- end_tests(nonstandard_arithmetic_tests).
+:- end_tests(nonstandard_arithmetic_models_tests).
 
 /* ==========================================================================
-   5. MODEL INTERPRETATION (Commentary)
+   5. GENERATIVE COMMENTARY
    ========================================================================== */
 
 /**
- * LLM GENERATION NOTES
- * * Model: Gemini 2.0 Flash
- * Date: 2026-01-19
- * * KEY DECISIONS:
- * * 1. EXTRACTIVENESS SCORE (0.25):
- * The system "extracts" the uniqueness of our most basic object: the 
- * number. This creates a permanent "tax" of ontological ambiguity.
- * * 2. PERSPECTIVE SELECTION:
- * Chose the Nonstandard Integer (Subject), the Analyst (User of the Rope), 
- * and the Foundationalist (Victim of the Snare) to show how 
- * "discovery" leads to "strangulation" of previous hopes.
- * * 3. CLASSIFICATION RATIONALE:
- * The Integer is a "Mountain" because it exists by logical necessity 
- * regardless of human desire. The Analyst uses this necessity as a 
- * "Rope" (tool). The Digital Foundationalist hit the "Snare" because 
- * the non-recursive nature of these models makes them useless for 
- * automated reasoning.
- * * 4. AMBIGUITIES:
- * The status of "Second-Order Logic" is the primary variable; if one 
- * rejects first-order logic as the primary "Mountain," these models 
- * become a mere "Scaffold."
+ * LOGIC RATIONALE:
+ *   The base extractiveness (0.25) represents the loss of uniqueness
+ *   (categoricity) for first-order arithmetic, a significant conceptual cost.
+ *   The suppression score (0.05) is low because the existence of nonstandard
+ *   models does not suppress the use of standard arithmetic. The Natural Law
+ *   profile metrics (accessibility_collapse=1.0, resistance=0.0) and the
+ *   `emerges_naturally` flag are included to ensure this constraint correctly
+ *   passes the engine's mountain certification chain.
+ *
+ * PERSPECTIVAL GAP:
+ *   The gap is between the Model Theorist (beneficiary) and the Computability
+ *   Theorist (victim). The beneficiary sees a useful tool (Rope) that enables
+ *   new proof techniques. The victim, whose goal is a computable foundation,
+ *   sees an impassable barrier (Mountain) proven by Tennenbaum's Theorem.
+ *   What is a resource for one is an absolute limit for another. This is not
+ *   a Snare, which implies artificial coercion, but a Mountain, an intrinsic
+ *   feature of the logical system.
+ *
+ * DIRECTIONALITY LOGIC:
+ *   - Beneficiaries: `model_theorists` and `nonstandard_analysis_researchers` gain powerful new tools for mathematical exploration. Their `arbitrage` exit option (they can switch to standard methods at will) gives them a low directionality `d`, resulting in a negative effective extraction `χ` and a Rope classification.
+ *   - Victims: `foundational_categoricity_seekers` have their primary goal defeated by this constraint. Their `constrained` exit option reflects that they cannot escape this logical fact, leading to a high `d` and the experience of hitting a Mountain.
+ *
+ * MANDATROPHY ANALYSIS:
+ *   This story demonstrates how a single logical fact can be a Mountain from a
+ *   foundational perspective while simultaneously serving as a Rope from an
+ *   instrumental one. Correctly identifying the Computability Theorist's
+ *   perspective as Mountain, not Snare, is crucial. A Snare implies artificial
+ *   coercion that could be removed; a Mountain correctly identifies the limit
+ *   as an intrinsic feature of the system (first-order logic) itself.
  */
 
-% OMEGA IDENTIFICATION
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
-    first_order_primacy,
-    "Is first-order logic the fundamental 'Mountain' of thought, or just a 'Scaffold' that hides higher-order categoricity?",
-    resolution_mechanism("Investigation into the physical or cognitive 'Ropes' that might allow us to perceive second-order categoricity directly."),
-    impact("If First-Order: Nonstandard models are a permanent Mountain. If Second-Order: They are an optional Snare."),
+    omega_first_order_primacy,
+    "Is first-order logic the fundamental 'Mountain' of formal reasoning, or just a 'Scaffold' that obscures a more natural, categorical higher-order logic?",
+    "Investigation into cognitive science or physics for evidence of natural, direct implementation of second-order quantification.",
+    "If first-order logic is fundamental, nonstandard models are a permanent Mountain. If it is a scaffold, they are an artifact of a limited toolset.",
     confidence_without_resolution(medium)
 ).
-
-/* ==========================================================================
-   6. ALTERNATIVE ANALYSIS
-   ========================================================================== */
-
-/**
- * VIABLE ALTERNATIVES
- * * ALTERNATIVE 1: Second-Order Peano Arithmetic
- * Viability: Second-order PA is "Categorical"—it has only one model ($\mathbb{N}$).
- * Suppression: Actively suppressed by the "Incompleteness" of second-order 
- * logic, which fails to have a complete proof system (making it a "Snare" 
- * for those who need proofs).
- * * ALTERNATIVE 2: Weak Sub-systems of Arithmetic (e.g. Robinson's Q)
- * Viability: Simpler systems that allow even more non-standard variety.
- * * CONCLUSION:
- * The existence of Second-Order Categoricity proves that the "Snare" of 
- * nonstandard models is a price we pay for the "Rope" of first-order 
- * completeness (Gödel's Completeness Theorem).
- */
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-/**
- * TO USE THIS FILE:
- * 1. Load: ?- [nonstandard_arithmetic_models].
- * 2. Multi-perspective: ?- multi_index_report(nonstandard_arithmetic_models).
- */
+% Required for external script parsing
+narrative_ontology:interval(nonstandard_arithmetic_models, 0, 10).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% No temporal data is required. Base extractiveness (0.25) is not > 0.46.
+% As a mathematical fact, its properties are static and do not drift over time.
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA
+   ========================================================================== */
+
+% No network relationships are declared for this foundational logical constraint.
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+% No overrides are needed. The structural derivation from beneficiary/victim
+% declarations and exit options accurately models the perspectives.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
-
-% ============================================================================
-% ENRICHMENT: Structural predicates for dynamic classification
-% Generated: 2026-02-08
-% Template: v5.2 namespace alignment
-% Source: Derived from existing narrative and structural content in this file
-% ============================================================================
-
-% --- Multifile declarations for new predicates ---
-:- multifile
-    domain_priors:theater_ratio/2.
-
-% --- Theater ratio (missing from base properties) ---
-% Formal truth — substantive with near-zero performative component
-domain_priors:theater_ratio(nonstandard_arithmetic_models, 0.0).
-narrative_ontology:constraint_metric(nonstandard_arithmetic_models, theater_ratio, 0.0).
-
-% --- Analytical perspective classification (missing) ---
-% chi = 0.25 * 1.15 (analytical) * 1.2 (global) = 0.345
-% Classification: rope
-constraint_indexing:constraint_classification(nonstandard_arithmetic_models, rope,
-    context(agent_power(analytical),
-            time_horizon(civilizational),
-            exit_options(analytical),
-            spatial_scope(global))).

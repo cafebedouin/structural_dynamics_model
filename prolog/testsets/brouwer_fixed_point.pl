@@ -58,7 +58,8 @@
 
 % Required for DR-Audit Suite
 narrative_ontology:interval(brouwer_era, 1911, 2026).
-narrative_ontology:constraint_claim(brouwer_fixed_point, mountain).
+narrative_ontology:constraint_claim(brouwer_fixed_point, tangled_rope).
+domain_priors:requires_active_enforcement(brouwer_fixed_point).
 
 % Base extractiveness score (0.0-1.0)
 % Rationale: Low (0.2). It is a passive existence guarantee. It "extracts" 
@@ -105,7 +106,7 @@ narrative_ontology:constraint_victim(brouwer_fixed_point, algorithmic_efficiency
 
 constraint_indexing:constraint_classification(
     brouwer_fixed_point,
-    mountain,
+    tangled_rope,
     context(
         agent_power(powerless),
         time_horizon(immediate),

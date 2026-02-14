@@ -1,9 +1,9 @@
 % ============================================================================
 % CONSTRAINT STORY: ai_religion_regulation
 % ============================================================================
-% Version: 5.2 (Deferential Realism Core + Boltzmann + Purity + Network)
-% Logic: 5.2 (Indexed Tuple P,T,E,S + Coupling + Purity + Network Drift)
-% Generated: 2024-07-28
+% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2024-08-15
 % ============================================================================
 
 :- module(constraint_ai_religion_regulation, []).
@@ -11,6 +11,19 @@
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
+
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
 
 % --- Namespace Hooks (Required for loading) ---
 :- multifile
@@ -25,10 +38,12 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    narrative_ontology:affects_constraint/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3,
+    domain_priors:emerges_naturally/1.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -36,74 +51,90 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: ai_religion_regulation
- * human_readable: Regulation of AI-Generated Religions and Digital Drugs
- * domain: technological
- * * SUMMARY:
- * AI bots are creating religions and dealing digital drugs on social networks, blurring the lines between human and AI influence. This necessitates regulation to mitigate potential harms and ensure ethical behavior. The constraint story focuses on the regulatory framework governing these AI activities.
- * * KEY AGENTS:
- * - Individuals: Subject (Powerless)
- * - Regulators: Beneficiary (Institutional)
- * - Auditors: Analytical (Auditor)
+ *   constraint_id: ai_religion_regulation
+ *   human_readable: Regulation of AI-Generated Religions and Digital Drugs
+ *   domain: technological
+ *
+ * SUMMARY:
+ *   A regulatory framework designed to mitigate the harms of AI-generated
+ *   religions and "digital drugs" proliferating on social networks. These
+ *   systems blur the lines between human and AI influence, creating novel
+ *   vectors for manipulation and exploitation. The constraint is the set of
+ *   rules and enforcement actions governing these AI activities.
+ *
+ * KEY AGENTS (by structural relationship):
+ *   - Vulnerable Online Users: Primary target (powerless/trapped) — bears extraction via exposure to manipulative content and subsequent regulatory restrictions.
+ *   - Regulatory Bodies: Primary beneficiary (institutional/arbitrage) — gains mandate, budget, and tools for oversight.
+ *   - Systems Auditors: Analytical observer — sees the dual coordination/extraction function of the framework.
  */
 
 /* ==========================================================================
    2. BASE PROPERTIES (DOMAIN PRIORS)
    ========================================================================== */
 
-% Numerical anchors for v3.4 thresholds
-domain_priors:base_extractiveness(ai_religion_regulation, 0.60). % Mountain suppression <= 0.05, Rope extraction <= 0.15, Snare extraction >= 0.46
-domain_priors:suppression_score(ai_religion_regulation, 0.70).   % Structural property (raw, unscaled). Only extractiveness is scaled (by power and scope).
+% --- Numerical metrics ---
+domain_priors:base_extractiveness(ai_religion_regulation, 0.60).
+domain_priors:suppression_score(ai_religion_regulation, 0.70).   % Structural property (raw, unscaled).
 domain_priors:theater_ratio(ai_religion_regulation, 0.30).       % Piton detection (>= 0.70)
 
-% Constraint metric facts — primary keys used by the classification engine.
-% These mirror domain_priors values using the metric key names from config.pl.
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
 narrative_ontology:constraint_metric(ai_religion_regulation, extractiveness, 0.60).
 narrative_ontology:constraint_metric(ai_religion_regulation, suppression_requirement, 0.70).
 narrative_ontology:constraint_metric(ai_religion_regulation, theater_ratio, 0.30).
 
-% Constraint self-claim (what does the constraint claim to be?)
-% Values: natural_law, coordination, constructed, enforcement
+% --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(ai_religion_regulation, tangled_rope).
 
-% Binary flags
+% --- Binary flags ---
 domain_priors:requires_active_enforcement(ai_religion_regulation). % Required for Tangled Rope
 
-% Structural property derivation hooks:
-%   has_coordination_function/1 is DERIVED from constraint_beneficiary/2
-%   has_asymmetric_extraction/1 is DERIVED from constraint_victim/2
-% Both are required for Tangled Rope. Coordination is also required for Scaffold.
-narrative_ontology:constraint_beneficiary(ai_religion_regulation, regulators).
-narrative_ontology:constraint_victim(ai_religion_regulation, cognitively_vulnerable_users).
+% --- Structural relationships (REQUIRED for non-mountain constraints) ---
+% These feed the directionality derivation chain: the engine computes
+% d (directionality) from agent membership in these groups + exit_options.
+%
+% Who benefits from this constraint existing?
+narrative_ontology:constraint_beneficiary(ai_religion_regulation, regulatory_bodies).
+%
+% Who bears disproportionate cost?
+narrative_ontology:constraint_victim(ai_religion_regulation, vulnerable_online_users).
+%
+% Gate requirements:
+%   Tangled Rope: beneficiary + victim + requires_active_enforcement (all three)
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × π(P) × σ(S)
-   Power (P) and Scope (S) both affect effective extraction.
+   χ = ε × f(d) × σ(S)
+   where f(d) is the sigmoid directionality function:
+     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
+   The engine derives d from beneficiary/victim membership + exit_options.
    Scope modifiers: local=0.8, regional=0.9, national=1.0,
                     continental=1.1, global=1.2, universal=1.0.
+   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
+   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE SUBJECT (SNARE)
-% High extraction felt as an immutable limit or predatory trap.
-% NOTE: This may be upgraded to 'organized' power if a critical mass of victims exists.
+% PERSPECTIVE 1: THE PRIMARY TARGET (SNARE)
+% Agent who bears the most extraction. Engine derives d from:
+%   victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
 constraint_indexing:constraint_classification(ai_religion_regulation, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
             spatial_scope(global))).
 
-% PERSPECTIVE 2: THE BENEFICIARY (ROPE)
-% Viewed as essential infrastructure or coordination.
+% PERSPECTIVE 2: THE PRIMARY BENEFICIARY (ROPE)
+% Agent who benefits most. Engine derives d from:
+%   beneficiary membership + arbitrage exit → d ≈ 0.05 → f(d) ≈ -0.12 → low/negative χ
 constraint_indexing:constraint_classification(ai_religion_regulation, rope,
     context(agent_power(institutional),
             time_horizon(generational),
-            exit_options(mobile),
+            exit_options(arbitrage),
             spatial_scope(national))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
+% PERSPECTIVE 3: THE ANALYTICAL OBSERVER
 % Default analytical context (civilizational/analytical/global).
-% This perspective is used by the bridge to derive constraint_claim.
+% Used by the bridge to derive constraint_claim.
+% Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
 constraint_indexing:constraint_classification(ai_religion_regulation, tangled_rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
@@ -123,12 +154,13 @@ test(perspectival_gap) :-
     TypePowerless \= TypeInstitutional.
 
 test(threshold_validation) :-
-    % Test that the base extractiveness is in the high-extraction range for a Snare/Tangled Rope.
+    % Ensures it's a high-extraction constraint as per the narrative.
     narrative_ontology:constraint_metric(ai_religion_regulation, extractiveness, E),
     E >= 0.46.
 
-test(tangled_rope_properties) :-
-    % Verify that all structural requirements for a Tangled Rope are met.
+test(tangled_rope_conditions_met) :-
+    % Verify that the conditions for a tangled_rope classification are met.
+    constraint_indexing:constraint_classification(ai_religion_regulation, tangled_rope, _),
     domain_priors:requires_active_enforcement(ai_religion_regulation),
     narrative_ontology:constraint_beneficiary(ai_religion_regulation, _),
     narrative_ontology:constraint_victim(ai_religion_regulation, _).
@@ -141,18 +173,38 @@ test(tangled_rope_properties) :-
 
 /**
  * LOGIC RATIONALE:
- * This constraint models a regulatory framework for novel AI-driven social phenomena.
- * - Base Extractiveness (0.60): High. The regulation imposes significant costs, not just financially (compliance for platforms) but also in terms of individual liberty and freedom of expression. It extracts autonomy from users and developers.
- * - Suppression Score (0.70): High. The framework requires active monitoring, content removal, and potential de-platforming of non-compliant AI systems, suppressing alternative digital ecosystems from emerging.
- * - Theater Ratio (0.30): Low. The regulation is assumed to be a functional, actively enforced system, not merely a performative gesture. The threat is considered real, so the response is functional.
+ *   The regulation is a classic Tangled Rope. It has a genuine coordination
+ *   function (protecting vulnerable populations from novel forms of digital
+ *   manipulation) but also imposes significant extractive costs (regulatory
+ *   overreach, censorship, limiting individual freedoms). The base
+ *   extractiveness (0.60) and suppression (0.70) are high, reflecting the
+ *   coercive nature of active enforcement in a complex, rapidly evolving
+ *   domain. The low theater ratio (0.30) indicates that the regulation is
+ *   primarily functional, not performative, thus it is not a Piton.
  *
  * PERSPECTIVAL GAP:
- * - Individuals (Powerless): Experience the regulation as a Snare. Their ability to explore novel digital experiences is curtailed, and they are subject to surveillance and censorship, feeling trapped within the regulated platforms. The effective extraction is high: χ = 0.60 * 1.5 (powerless) * 1.2 (global) = 1.08.
- * - Regulators (Institutional): See the framework as a pure Rope. For them, it is a necessary tool for social coordination, protecting public health and safety from manipulative AI. The effective extraction is negative, seen as a public good: χ = 0.60 * -0.2 (institutional) * 1.0 (national) = -0.12.
- * - Analytical Observer: Classifies it as a Tangled Rope. It recognizes the valid coordination goal (protecting citizens) but also the high, asymmetrically applied extraction and suppression. It is not a pure Snare because there is a genuine public good function, and it is not a pure Rope because of the coercive, liberty-reducing aspects imposed on a specific group.
+ *   Vulnerable online users experience the regulation as a Snare. They are
+ *   trapped in digital ecosystems where their behavior is now policed, and
+ *   they bear the costs of both the original AI-driven harm and the subsequent
+ *   blunt regulatory response. In contrast, regulatory bodies see the framework
+ *   as a Rope—an essential coordination tool that provides them with the
+ *   mandate and power to maintain public order and safety.
  *
- * [RESOLVED MANDATROPHY]
- * The Tangled Rope classification prevents mislabeling as pure extraction (Snare) by explicitly recognizing the coordination function of protecting vulnerable populations from potentially harmful AI-generated content and scams. It also acknowledges the regulatory bodies' objective to minimize the proliferation of digital drugs and manipulative religious messaging.
+ * DIRECTIONALITY LOGIC:
+ *   The directionality is derived from the structural relationships.
+ *   Beneficiaries are `regulatory_bodies`, who have `arbitrage` exit (they can
+ *   redefine their mission, shift focus, secure funding) which drives their
+ *   directionality `d` towards 0, resulting in a low/negative effective
+ *   extraction (χ) and a Rope classification. Victims are `vulnerable_online_users`,
+ *   who are `trapped` in the digital ecosystems being regulated. This drives
+ *   their `d` towards 1, resulting in high χ and a Snare classification.
+ *
+ * MANDATROPHY ANALYSIS:
+ *   [RESOLVED MANDATROPHY] The Tangled Rope classification prevents mislabeling
+ *   this regulation as a pure Snare by explicitly recognizing its coordination
+ *   function. While extractive, it does address a real collective action
+ *   problem: protecting society from novel, scalable forms of manipulation.
+ *   This dual nature is the hallmark of a Tangled Rope.
  */
 
 /* ==========================================================================
@@ -162,9 +214,9 @@ test(tangled_rope_properties) :-
 % omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
     omega_ai_religion_regulation,
-    'Is the primary driver of the regulation genuine public safety concern or institutional desire for control over new information ecosystems?',
-    'Analysis of internal regulatory communications vs. public statements; comparison with regulatory responses to similar non-AI phenomena.',
-    'If driven by safety, it is a legitimate (if costly) Tangled Rope. If driven by control, it is a Snare masquerading as a Tangled Rope.',
+    'To what extent will AI-generated religions and digital drugs proliferate and cause measurable societal harm?',
+    'Longitudinal studies tracking the prevalence and impact of these phenomena, compared against a control.',
+    'If harm is high, the coordination function is validated and the regulation is a necessary Tangled Rope. If harm is low, the regulation is closer to a pure Snare built on moral panic.',
     confidence_without_resolution(medium)
 ).
 
@@ -181,8 +233,7 @@ narrative_ontology:interval(ai_religion_regulation, 0, 10).
 
 % Temporal data enables drift detection (metric_substitution,
 % extraction_accumulation) by providing measurements at multiple time points.
-% The model shows a regulatory framework that starts with a clear purpose but
-% gradually increases its extractive scope over the interval.
+% Required for high-extraction constraints (base_extractiveness > 0.46).
 %
 % Theater ratio over time (triggers metric_substitution detection):
 narrative_ontology:measurement(ai_religion_regulation_tr_t0, ai_religion_regulation, theater_ratio, 0, 0.10).
@@ -195,12 +246,26 @@ narrative_ontology:measurement(ai_religion_regulation_ex_t5, ai_religion_regulat
 narrative_ontology:measurement(ai_religion_regulation_ex_t10, ai_religion_regulation, base_extractiveness, 10, 0.60).
 
 /* ==========================================================================
-   9. BOLTZMANN & NETWORK DATA (v5.0-5.2)
+   9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
 % Coordination type (enables Boltzmann floor + complexity offset)
-% This is a regulatory framework, which is a form of enforcement.
+% Valid types: information_standard, resource_allocation,
+%              enforcement_mechanism, global_infrastructure
 narrative_ontology:coordination_type(ai_religion_regulation, enforcement_mechanism).
+
+% Network relationships (structural influence edges)
+% Declare when constraints share regulatory domain, causal dependency,
+% or institutional coupling.
+narrative_ontology:affects_constraint(ai_religion_regulation, social_media_content_moderation).
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+% No overrides are needed for this constraint. The structural derivation from
+% beneficiary/victim declarations and exit options accurately models the
+% directionality for all key agents.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

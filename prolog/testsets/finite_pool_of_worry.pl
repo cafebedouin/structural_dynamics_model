@@ -75,7 +75,7 @@ narrative_ontology:constraint_metric(finite_pool_of_worry, theater_ratio, 0.15).
 
 % Constraint self-claim (what does the constraint claim to be?)
 % It is presented as a fundamental, unchangeable aspect of human psychology.
-narrative_ontology:constraint_claim(finite_pool_of_worry, mountain).
+narrative_ontology:constraint_claim(finite_pool_of_worry, tangled_rope).
 
 % Structural property derivation hooks:
 % Beneficiary: Immediate Crisis Management (receives all the attention/worry).
@@ -114,7 +114,7 @@ constraint_indexing:constraint_classification(finite_pool_of_worry, rope,
 % To the scientist, the finite pool is a "Mountain"—an immutable law of human
 % evolutionary psychology. We cannot escape the fact that our cognitive bandwidth
 % is finite and redirected by immediate, high-volume threats.
-constraint_indexing:constraint_classification(finite_pool_of_worry, mountain,
+constraint_indexing:constraint_classification(finite_pool_of_worry, tangled_rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

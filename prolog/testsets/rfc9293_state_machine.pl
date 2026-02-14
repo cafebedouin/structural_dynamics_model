@@ -52,7 +52,7 @@
    ========================================================================== */
 
 narrative_ontology:interval(rfc9293_state_machine, 0, 10).
-narrative_ontology:constraint_claim(rfc9293_state_machine, mountain).
+narrative_ontology:constraint_claim(rfc9293_state_machine, tangled_rope).
 
 % Base extractiveness: 0.2 (Moderate overhead). 
 % Requires memory for Transmission Control Blocks (TCBs) even in idle states.
@@ -95,7 +95,7 @@ narrative_ontology:constraint_victim(rfc9293_state_machine, developer_effort).
 
 constraint_indexing:constraint_classification(
     rfc9293_state_machine,
-    mountain,
+    tangled_rope,
     context(
         agent_power(powerless),
         time_horizon(immediate),

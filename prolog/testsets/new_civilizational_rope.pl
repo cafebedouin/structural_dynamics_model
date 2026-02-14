@@ -59,7 +59,7 @@ narrative_ontology:constraint_metric(decentralized_infrastructure_rope, suppress
 narrative_ontology:constraint_metric(decentralized_infrastructure_rope, theater_ratio, 0.02).
 
 % Constraint classification claim
-narrative_ontology:constraint_claim(decentralized_infrastructure_rope, mountain).
+narrative_ontology:constraint_claim(decentralized_infrastructure_rope, tangled_rope).
 
 % Binary flags
 domain_priors:requires_active_enforcement(decentralized_infrastructure_rope). % Automated protocol enforcement.
@@ -89,7 +89,7 @@ constraint_indexing:constraint_classification(decentralized_infrastructure_rope,
 % PERSPECTIVE 3: THE CIVILIZATIONAL OBSERVER (MOUNTAIN)
 % Over long horizons, the protocol becomes a Mountain—a fundamental, 
 % unchangeable physical/logical limit that society takes for granted.
-constraint_indexing:constraint_classification(decentralized_infrastructure_rope, mountain, 
+constraint_indexing:constraint_classification(decentralized_infrastructure_rope, tangled_rope, 
     context(agent_power(analytical), 
             time_horizon(civilizational), 
             exit_options(analytical), 

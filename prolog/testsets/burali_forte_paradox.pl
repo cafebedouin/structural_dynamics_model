@@ -59,7 +59,8 @@
 
 % Required for structural anchor
 narrative_ontology:interval(burali_forti_interval, 0, 10).
-narrative_ontology:constraint_claim(burali_forti_paradox, mountain).
+narrative_ontology:constraint_claim(burali_forti_paradox, tangled_rope).
+domain_priors:requires_active_enforcement(burali_forti_paradox).
 
 % Base extractiveness score: 0.2 (Low)
 % Rationale: It extracts "semantic closure" from naive systems but does not 
@@ -104,7 +105,7 @@ narrative_ontology:constraint_victim(burali_forti_paradox, naive_comprehension_p
 
 constraint_indexing:constraint_classification(
     burali_forti_paradox,
-    mountain,
+    tangled_rope,
     context(
         agent_power(analytical),
         time_horizon(civilizational),

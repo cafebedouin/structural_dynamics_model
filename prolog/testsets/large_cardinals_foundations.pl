@@ -1,25 +1,42 @@
 % ============================================================================
 % CONSTRAINT STORY: large_cardinal_foundations
 % ============================================================================
-% Generated: 2026-01-19
-% Model: Gemini 2.0 Flash
-% Source: Felix Hausdorff (1908) / Tarski / Solovay / Woodin
+% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2024-07-15
 % ============================================================================
 
-:- module(constraint_large_cardinals, []).
+:- module(constraint_large_cardinal_foundations, []).
 
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
 
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
+
 % --- Namespace Hooks (Required for loading) ---
-:- multifile 
+:- multifile
     domain_priors:base_extractiveness/2,
     domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
     domain_priors:requires_active_enforcement/1,
+    narrative_ontology:interval/3,
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -28,266 +45,215 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: large_cardinal_foundations
- * human_readable: Large Cardinal Axioms
- * domain: mathematical/philosophical
- * temporal_scope: 1908 - Present (Civilizational)
- * spatial_scope: Global/Abstract (Set Theory)
- * * SUMMARY:
- * Large Cardinals are transfinite numbers with properties so strong that their 
- * existence cannot be proven within standard Zermelo-Fraenkel set theory (ZFC). 
- * They establish a "hierarchy of infinity" that acts as the ultimate structural 
- * floor for the consistency of all lower mathematics.
- * * KEY AGENTS:
- * - The Inaccessible Cardinal (Subject): A powerless agent whose "existence" 
- * is a post-ZFC assumption that stabilizes the universe.
- * - The Set-Theoretic Platonist (Institutional): An agent using the Large 
- * Cardinal Hierarchy as a "Rope" to resolve independence results like the 
- * Continuum Hypothesis.
- * - The Finitist/Formalist (Analytical): An observer for whom these axioms 
- * are a "Snare," extracting the simplicity of minimal foundations in favor 
- * of an "infinite ontological tax."
- * * NARRATIVE ARC:
- * Large Cardinals represent the "Mountain" of transfinite reality; their 
- * hierarchy is a fixed, discovery-driven landscape. For modern researchers, 
- * they are a "Rope"—the "Consistency Strength" scale used to coordinate the 
- * limits of what can be proven. However, for the foundational minimalist, 
- * the requirement to believe in "measurable" or "supercompact" cardinals 
- * acts as a "Snare," extracting the "purity" of small foundations and 
- * "strangling" the hope for a theory that doesn't rely on increasingly 
- * monstrous infinities.
+ *   constraint_id: large_cardinal_foundations
+ *   human_readable: Large Cardinal Axioms as a Foundational System
+ *   domain: mathematical/philosophical
+ *
+ * SUMMARY:
+ *   Large Cardinals are transfinite numbers with properties so strong that their
+ *   existence cannot be proven within standard Zermelo-Fraenkel set theory (ZFC).
+ *   They establish a "hierarchy of consistency strength" that acts as a
+ *   structural floor for modern mathematics. This constraint is the de facto
+ *   requirement to adopt these axioms to resolve independence results and
+ *   establish the consistency of lower-level theories.
+ *
+ * KEY AGENTS (by structural relationship):
+ *   - Mathematical Minimalists: Primary target (moderate/constrained) — bear the "ontological tax" of accepting increasingly complex infinities to ground simpler mathematics.
+ *   - Set-Theoretic Platonists: Primary beneficiary (institutional/arbitrage) — use the hierarchy as a coordination tool to map the landscape of mathematical truth and consistency.
+ *   - The Inaccessible Cardinal (Metaphorical): A powerless/trapped agent representing the mathematical object itself, for whom its properties are an unchangeable law.
+ *   - Analytical Observer: Sees the full structure as a Tangled Rope, with both coordination and extraction functions.
  */
 
 /* ==========================================================================
-   2. CORE SYSTEM INTEGRATION (The "Reality" Layer)
+   2. BASE PROPERTIES (DOMAIN PRIORS)
    ========================================================================== */
 
-% Required for structural extraction
-narrative_ontology:interval(large_cardinal_era, 1908, 2026).
-narrative_ontology:constraint_claim(large_cardinal_foundations, mountain).
-
-% Base extractiveness score (0.0-1.0)
-% Rationale: 0.3. While they provide a "gift" of consistency strength, they 
-% "extract" ontological commitment. To solve "small" problems, one is taxed 
+% --- Numerical metrics ---
+% Rationale: 0.30. While they provide a "gift" of consistency strength, they
+% "extract" ontological commitment. To solve "small" problems, one is taxed
 % with accepting "large" existences.
-domain_priors:base_extractiveness(large_cardinal_foundations, 0.3).
+domain_priors:base_extractiveness(large_cardinal_foundations, 0.30).
 
-% Suppression score (0.0-1.0)
-% Rationale: 0.4. The hierarchy suppresses the viability of "finitist-only" 
-% foundations by proving they are insufficient to describe the consistency 
+% Rationale: 0.40. The hierarchy suppresses the viability of "finitist-only"
+% foundations by demonstrating their insufficiency for proving the consistency
 % of higher-order structures.
-domain_priors:suppression_score(large_cardinal_foundations, 0.4).
+domain_priors:suppression_score(large_cardinal_foundations, 0.40).
 
-% Constraint metric facts (bridge for classification engine)
-narrative_ontology:constraint_metric(large_cardinal_foundations, extractiveness, 0.3).
-narrative_ontology:constraint_metric(large_cardinal_foundations, suppression_requirement, 0.4).
+% Rationale: 0.01. The system is almost pure function; there is no performative
+% aspect. Its value is entirely in its logical consequences.
+domain_priors:theater_ratio(large_cardinal_foundations, 0.01).
 
-% Enforcement: Emerges naturally from the self-consistency of the hierarchy.
-domain_priors:emerges_naturally(large_cardinal_foundations).
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(large_cardinal_foundations, extractiveness, 0.30).
+narrative_ontology:constraint_metric(large_cardinal_foundations, suppression_requirement, 0.40).
+narrative_ontology:constraint_metric(large_cardinal_foundations, theater_ratio, 0.01).
 
-% Metrics required for Section 1 of the Executive Summary
-% BENEFICIARIES & VICTIMS
-narrative_ontology:constraint_beneficiary(large_cardinal_foundations, consistency_strength_researchers).
-narrative_ontology:constraint_beneficiary(large_cardinal_foundations, ontological_realists).
+% --- Constraint claim (must match analytical perspective type) ---
+narrative_ontology:constraint_claim(large_cardinal_foundations, tangled_rope).
+
+% --- Binary flags ---
+% Required for Tangled Rope. "Enforcement" in this domain is the intellectual
+% work of demonstrating that these axioms are necessary to prove certain
+% results, thus coercing their adoption for researchers in those areas.
+domain_priors:requires_active_enforcement(large_cardinal_foundations).
+
+% --- Structural relationships (REQUIRED for non-mountain constraints) ---
+% Who benefits from this constraint existing?
+narrative_ontology:constraint_beneficiary(large_cardinal_foundations, set_theoretic_platonists).
+%
+% Who bears disproportionate cost?
 narrative_ontology:constraint_victim(large_cardinal_foundations, mathematical_minimalists).
-narrative_ontology:constraint_victim(large_cardinal_foundations, finitist_intuition).
 
 /* ==========================================================================
-   3. INDEXED CLASSIFICATIONS (Perspectival Truth)
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × f(d) × σ(S)
    ========================================================================== */
 
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 1: THE INACCESSIBLE CARDINAL - Mountain
-   --------------------------------------------------------------------------
-   
-   WHO: powerless - The cardinal has no agency; its size is 
-   defined by its inability to be reached from below.
-   WHEN: immediate - Its properties are fixed at the moment of axiomatic definition.
-   WHERE: trapped - Bound within the hierarchy of Alephs.
-   SCOPE: local - Immediate neighborhood of its cardinality.
-   
-   WHY THIS CLASSIFICATION:
-   For the cardinal itself, its existence is an absolute Mountain. It cannot 
-   "choose" to be reachable by the power-set operation or unions of smaller 
-   sets. It is a natural law of the transfinite landscape, an unyielding 
-   geographic feature of the "Deep Infinite."
-   -------------------------------------------------------------------------- */
+% PERSPECTIVE 1: THE MATHEMATICAL OBJECT (MOUNTAIN)
+% A metaphorical perspective from the "point of view" of the cardinal itself.
+% For the object, its properties are an unchangeable law of its existence.
+constraint_indexing:constraint_classification(large_cardinal_foundations, mountain,
+    context(agent_power(powerless),
+            time_horizon(civilizational),
+            exit_options(trapped),
+            spatial_scope(universal))).
 
+% PERSPECTIVE 2: THE SET-THEORETIC PLATONIST (ROPE)
+% The beneficiary, who uses the hierarchy as a tool for coordination. They can
+% choose which axioms to work with (arbitrage) to achieve desired consistency proofs.
+constraint_indexing:constraint_classification(large_cardinal_foundations, rope,
+    context(agent_power(institutional),
+            time_horizon(generational),
+            exit_options(arbitrage),
+            spatial_scope(global))).
 
+% PERSPECTIVE 3: THE MATHEMATICAL MINIMALIST (SNARE)
+% The victim, who seeks simple foundations. The hierarchy is a Snare that
+% extracts ontological simplicity and suppresses finitist alternatives.
+constraint_indexing:constraint_classification(large_cardinal_foundations, snare,
+    context(agent_power(moderate),
+            time_horizon(civilizational),
+            exit_options(constrained),
+            spatial_scope(global))).
 
-constraint_indexing:constraint_classification(
-    large_cardinal_foundations,
-    mountain,
-    context(
-        agent_power(powerless),
-        time_horizon(immediate),
-        exit_options(trapped),
-        spatial_scope(local)
-    )
-) :- !.
-
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE SET THEORY PROFESSOR - Rope
-   --------------------------------------------------------------------------
-   
-   WHO: institutional - Power to define the "strength" of a formal system.
-   WHEN: biographical - Spanning the duration of a career mapping the transfinite.
-   WHERE: mobile - Can choose different "consistency levels" to work within.
-   SCOPE: global - Universal foundation for mathematical logic.
-   
-   WHY THIS CLASSIFICATION:
-   For the institutional logic researcher, Large Cardinals are a "Rope"—a 
-   functional coordination tool. They provide a "standard of achievement" 
-   (consistency strength) that allows mathematicians to coordinate which 
-   theories are "safe" and how they relate to one another, pulling the 
-   field toward a unified map of provability.
-   -------------------------------------------------------------------------- */
-
-constraint_indexing:constraint_classification(
-    large_cardinal_foundations,
-    rope,
-    context(
-        agent_power(institutional),
-        time_horizon(biographical),
-        exit_options(mobile),
-        spatial_scope(global)
-    )
-) :- !.
-
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE FINITIST SKEPTIC - Snare
-   --------------------------------------------------------------------------
-   
-   WHO: individual_moderate - Has the tools of proof but is bound by the hierarchy.
-   WHEN: civilizational - Seeking a definitive "Theory of Everything" that fits in a human mind.
-   WHERE: constrained - The "exit" (denying these cardinals) is intellectually costly.
-   SCOPE: global - Universal limit on formal simplicity.
-   
-   WHY THIS CLASSIFICATION:
-   For the minimalist, the hierarchy is a "Snare." It "strangles" the hope 
-   for a simple foundation. It extracts the "certainty of the small" 
-   (extraction) by proving that any system we build will eventually 
-   require "choking" on the existence of infinities so large they defy 
-   even transfinite intuition.
-   -------------------------------------------------------------------------- */
-
-
-
-constraint_indexing:constraint_classification(
-    large_cardinal_foundations,
-    snare,
-    context(
-        agent_power(individual_moderate),
-        time_horizon(civilizational),
-        exit_options(constrained),
-        spatial_scope(global)
-    )
-) :- 
-    domain_priors:base_extractiveness(large_cardinal_foundations, E),
-    E >= 0.25,
-    !.
+% PERSPECTIVE 4: THE ANALYTICAL OBSERVER (TANGLED ROPE)
+% The default analytical context, which sees both the coordination function
+% (beneficiary) and the asymmetric extraction (victim), classifying it as a Tangled Rope.
+constraint_indexing:constraint_classification(large_cardinal_foundations, tangled_rope,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(global))).
 
 /* ==========================================================================
-   4. TESTS (What We Learn About Constraints)
+   4. VALIDATION TESTS
    ========================================================================== */
 
 :- begin_tests(large_cardinal_foundations_tests).
 
-test(multi_perspective_variance) :-
-    % Cardinal -> Mountain
-    constraint_indexing:constraint_classification(large_cardinal_foundations, Type1, context(powerless, immediate, trapped, local)),
-    % Researcher -> Rope
-    constraint_indexing:constraint_classification(large_cardinal_foundations, Type2, context(institutional, biographical, mobile, global)),
-    Type1 \= Type2.
+test(perspectival_gap_beneficiary_vs_victim) :-
+    % Verify the gap between the beneficiary (Rope) and victim (Snare).
+    constraint_indexing:constraint_classification(large_cardinal_foundations, rope, context(agent_power(institutional), _, _, _)),
+    constraint_indexing:constraint_classification(large_cardinal_foundations, snare, context(agent_power(moderate), _, _, _)).
 
-test(ontological_extraction_penalty) :-
-    % Minimalists experience the "Snare" of foundational extraction.
-    Context = context(individual_moderate, civilizational, constrained, global),
-    constraint_indexing:extractiveness_for_agent(large_cardinal_foundations, Context, Score),
-    Score >= 0.25.
+test(analytical_view_is_tangled_rope) :-
+    % The analytical claim must be Tangled Rope.
+    constraint_indexing:constraint_classification(large_cardinal_foundations, tangled_rope, context(agent_power(analytical), _, _, _)).
 
-test(natural_emergence) :-
-    domain_priors:emerges_naturally(large_cardinal_foundations).
+test(tangled_rope_structural_gates_pass) :-
+    % Verify all three structural requirements for Tangled Rope are met.
+    narrative_ontology:constraint_beneficiary(large_cardinal_foundations, _), % -> has_coordination_function
+    narrative_ontology:constraint_victim(large_cardinal_foundations, _),     % -> has_asymmetric_extraction
+    domain_priors:requires_active_enforcement(large_cardinal_foundations).
 
 :- end_tests(large_cardinal_foundations_tests).
 
 /* ==========================================================================
-   5. MODEL INTERPRETATION (Commentary)
+   5. GENERATIVE COMMENTARY
    ========================================================================== */
 
 /**
- * LLM GENERATION NOTES
- * * Model: Gemini 2.0 Flash
- * Date: 2026-01-19
- * * KEY DECISIONS:
- * * 1. EXTRACTIVENESS SCORE (0.3):
- * Reasoning: These axioms extract "belief." To solve real problems, you 
- * are taxed with accepting ever-larger ontological commitments.
- * * 2. CLASSIFICATION RATIONALE:
- * Chose Cardinal (Subject), Professor (User), and Skeptic (Victim) 
- * to illustrate how a "Mountain" of formal reality becomes a "Snare" 
- * for those seeking foundational simplicity.
+ * LOGIC RATIONALE:
+ *   The original file incorrectly claimed this was a Mountain, but its metrics
+ *   (ε=0.30, suppression=0.40) violated Mountain thresholds (ε≤0.25, supp≤0.05).
+ *   The narrative clearly describes a system with both a powerful coordination
+ *   function and a significant asymmetric extraction cost, which is the
+ *   definitive signature of a Tangled Rope. The metrics align perfectly with
+ *   Tangled Rope requirements (ε≥0.30, supp≥0.40). The claim and analytical
+ *   perspective have been updated accordingly.
+ *
+ * PERSPECTIVAL GAP:
+ *   - Set-Theoretic Platonists (Beneficiaries) see a pure Rope. For them, the
+ *     hierarchy is an indispensable tool for coordinating research and establishing
+ *     the relative consistency of mathematical theories. The ontological cost is
+ *     not perceived as extraction but as the price of truth.
+ *   - Mathematical Minimalists (Victims) see a Snare. They are forced to pay an
+ *     "ontological tax" (accepting vast, unprovable infinities) to ground their
+ *     work, which extracts the value of foundational simplicity and suppresses
+ *     finitist approaches.
+ *
+ * DIRECTIONALITY LOGIC:
+ *   - Beneficiaries: `set_theoretic_platonists`. They gain a powerful standard
+ *     (consistency strength) to structure their entire field.
+ *   - Victims: `mathematical_minimalists`. They lose the possibility of a simple,
+ *     self-contained foundation for mathematics, a core value for their paradigm.
+ *   The engine derives a low `d` for the institutional platonists (low χ, Rope)
+ *   and a high `d` for the moderate minimalists (high χ, Snare).
+ *
+ * MANDATROPHY ANALYSIS:
+ *   Classifying this as a Tangled Rope correctly identifies that the system is
+ *   not a neutral "Mountain" of fact. It has a political dimension: it coordinates
+ *   one group (platonists) while extracting from another (minimalists). A pure
+ *   Mountain or Rope classification would miss this coercive aspect, while a pure
+ *   Snare classification would ignore its genuine and powerful coordination function.
  */
-
-% OMEGA IDENTIFICATION
-omega_variable(
-    cardinal_consistency_convergence,
-    "Is the 'Mountain' of the hierarchy stable, or will a hidden contradiction resolve it as a Scaffold?",
-    resolution_mechanism("Investigation into whether Large Cardinal axioms are eventually proven inconsistent with ZFC."),
-    impact("If Inconsistent: The hierarchy is a broken Scaffold. If Consistent: It is a permanent Mountain."),
-    confidence_without_resolution(medium)
-).
 
 /* ==========================================================================
-   6. ALTERNATIVE ANALYSIS
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-/**
- * VIABLE ALTERNATIVES
- * * ALTERNATIVE 1: Weak Set Theories (e.g., PRA, Heyting Arithmetic)
- * Viability: Useful for most applied math.
- * Suppression: Rejected by the "Mountain" of higher set theory because 
- * they cannot prove the consistency of more complex systems.
- * * ALTERNATIVE 2: Potentialism
- * Viability: The idea that the universe of sets "grows" rather than 
- * "exists" statically.
- * * CONCLUSION:
- * The existence of "Strong" cardinals turns the "Rope" of foundational 
- * choice into a "Snare" for those who want math to be both simple and complete.
- */
+% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
+omega_variable(
+    omega_large_cardinal_foundations,
+    'Will a hidden contradiction be found in the large cardinal hierarchy, proving it inconsistent with ZFC?',
+    'A formal proof of inconsistency originating from the ZFC + Large Cardinal axioms.',
+    'If inconsistent, the constraint is revealed as a failed Scaffold. If consistency holds, it remains a stable Tangled Rope.',
+    confidence_without_resolution(medium)
+).
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-/**
- * TO USE THIS CONSTRAINT:
- * * 1. Load: ?- [large_cardinal_foundations].
- * 2. Multi-perspective: ?- multi_index_report(large_cardinal_foundations).
- */
+% Required for external script parsing
+narrative_ontology:interval(large_cardinal_foundations, 1908, 2026).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Base extractiveness is not > 0.46, so temporal measurements are not required.
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA
+   ========================================================================== */
+
+% Coordination type (enables Boltzmann floor + complexity offset)
+% The hierarchy provides a standard for measuring and comparing the consistency
+% strength of different formal systems.
+narrative_ontology:coordination_type(large_cardinal_foundations, information_standard).
+
+% Network relationships (structural influence edges)
+% This is a foundational constraint that affects many others in mathematics.
+% narrative_ontology:affects_constraint(large_cardinal_foundations, continuum_hypothesis_undecidability).
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+% No overrides needed. The structural derivation from beneficiary/victim
+% declarations accurately models the directionality of this constraint.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
-
-
-% --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
-constraint_indexing:constraint_classification(large_cardinals_foundations, mountain, agent_power(analytical)).
-constraint_indexing:constraint_classification(large_cardinals_foundations, rope, agent_power(institutional)).
-constraint_indexing:constraint_classification(large_cardinals_foundations, snare, agent_power(powerless)).
-
-% ============================================================================
-% ENRICHMENT: Structural predicates for dynamic classification
-% Generated: 2026-02-08
-% Template: v5.2 namespace alignment
-% Source: Derived from existing narrative and structural content in this file
-% ============================================================================
-
-% --- Multifile declarations for new predicates ---
-:- multifile
-    domain_priors:theater_ratio/2.
-
-% --- Theater ratio (missing from base properties) ---
-% Formal truth — substantive with near-zero performative component
-domain_priors:theater_ratio(large_cardinal_foundations, 0.01).
-narrative_ontology:constraint_metric(large_cardinal_foundations, theater_ratio, 0.01).

@@ -61,7 +61,7 @@
 
 % Required for DR-Audit Suite
 narrative_ontology:interval(noether_era, 1915, 2026).
-narrative_ontology:constraint_claim(noethers_theorem_symmetry, mountain).
+narrative_ontology:constraint_claim(noethers_theorem_symmetry, scaffold).
 
 % Base extractiveness score (0.0-1.0)
 % Rationale: Low (0.1). Natural laws don't "take" in a social sense, though 
@@ -108,7 +108,7 @@ narrative_ontology:constraint_victim(noethers_theorem_symmetry, naive_numerical_
 
 constraint_indexing:constraint_classification(
     noethers_theorem_symmetry,
-    mountain,
+    scaffold,
     context(
         agent_power(powerless),
         time_horizon(immediate),

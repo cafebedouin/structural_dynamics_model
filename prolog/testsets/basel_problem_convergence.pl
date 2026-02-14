@@ -60,7 +60,8 @@
 
 % Required for DR-Audit Suite
 narrative_ontology:interval(basel_era, 1644, 2026).
-narrative_ontology:constraint_claim(basel_problem_convergence, mountain).
+narrative_ontology:constraint_claim(basel_problem_convergence, tangled_rope).
+domain_priors:requires_active_enforcement(basel_problem_convergence).
 
 % Base extractiveness: 0.2
 % Rationale: Low. Mathematical truth provides more than it takes. However, 
@@ -107,7 +108,7 @@ narrative_ontology:constraint_victim(basel_problem_convergence, computational_br
 
 constraint_indexing:constraint_classification(
     basel_problem_convergence,
-    mountain,
+    tangled_rope,
     context(
         agent_power(powerless),
         time_horizon(immediate),

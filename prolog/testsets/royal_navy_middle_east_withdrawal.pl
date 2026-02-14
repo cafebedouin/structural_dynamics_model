@@ -66,7 +66,7 @@ narrative_ontology:constraint_metric(royal_navy_middle_east_withdrawal, theater_
 
 % Constraint self-claim (what does the constraint claim to be?)
 % The government frames this as a deliberate, strategic reallocation.
-narrative_ontology:constraint_claim(royal_navy_middle_east_withdrawal, mountain).
+narrative_ontology:constraint_claim(royal_navy_middle_east_withdrawal, tangled_rope).
 
 % Binary flags
 domain_priors:requires_active_enforcement(royal_navy_middle_east_withdrawal). % The withdrawal is an active policy choice.
@@ -99,7 +99,7 @@ constraint_indexing:constraint_classification(royal_navy_middle_east_withdrawal,
 
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (MOUNTAIN)
 % A defense analyst viewing the withdrawal as the inevitable result of a decade of fleet decline.
-constraint_indexing:constraint_classification(royal_navy_middle_east_withdrawal, mountain,
+constraint_indexing:constraint_classification(royal_navy_middle_east_withdrawal, tangled_rope,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(analytical),
@@ -117,7 +117,7 @@ test(perspectival_gap_is_resolved) :-
         context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(royal_navy_middle_east_withdrawal, rope,
         context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(royal_navy_middle_east_withdrawal, mountain,
+    constraint_indexing:constraint_classification(royal_navy_middle_east_withdrawal, tangled_rope,
         context(agent_power(analytical), _, _, _)).
 
 test(high_extraction_is_validated) :-

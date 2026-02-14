@@ -108,6 +108,18 @@ constraint_signature(C, false_natural_law) :-
 constraint_signature(C, false_ci_rope) :-
     false_ci_rope(C, _), !.
 
+% Boltzmann-derived: Natural Law via Emergence (v6.1)
+% Intercepts before CI_Rope for natural laws with incidental beneficiaries.
+% A constraint that emerges naturally AND passes the full NL profile check
+% is certified as natural_law regardless of coordination-function status.
+% Without this, constraints like P!=NP (which have constraint_beneficiary
+% declarations for perspectival analysis) would be intercepted by CI_Rope
+% and misclassified as rope.
+constraint_signature(C, natural_law) :-
+    domain_priors:emerges_naturally(C),
+    get_constraint_profile(C, Profile),
+    natural_law_signature(Profile), !.
+
 % Boltzmann-derived: Coupling-Invariant Rope (v5.1)
 % Certifies true coordination mechanisms with full Boltzmann invariance.
 % Checked before profile-based classification for positive certification.
@@ -713,60 +725,51 @@ has_metric_perspectival_variance(C) :-
 %   no alternatives, no beneficiaries, temporally stable), it IS a
 %   Mountain no matter what the metric classifier says.
 % -----------------------------------------------------------------------
-resolve_modal_signature_conflict(_, natural_law, mountain) :- !.
-
 % -----------------------------------------------------------------------
+% BINDING-SAFE OVERRIDE RULES
+% All override clauses use body unification (Result = X) rather than head
+% unification for the output argument. This prevents a pre-bound third
+% argument from bypassing overrides via head unification failure and
+% falling through to the identity fallback.
+%
+% The cut fires BEFORE the output unification, so:
+% - With unbound Result: cut commits, unification succeeds → correct type
+% - With pre-bound Result: cut commits, unification may fail → query
+%   correctly returns false (the constraint is NOT that type)
+% -----------------------------------------------------------------------
+
+resolve_modal_signature_conflict(_, natural_law, Result) :- !, Result = mountain.
+
 % FNL OVERRIDE RULE (v5.1, §III-A extension):  [ACTIVE, unconditional]
 %   FNL(C) → tangled_rope regardless of metric-based classification.
-%   A constraint that claims naturality but fails Boltzmann independence
-%   is structurally constructed. It has coupling topology inconsistent
-%   with a natural law. Conservative override to tangled_rope (not snare)
-%   because the constraint may still have genuine coordination function
-%   entangled with its extractive coupling.
-% -----------------------------------------------------------------------
-resolve_modal_signature_conflict(_, false_natural_law, tangled_rope) :- !.
+resolve_modal_signature_conflict(_, false_natural_law, Result) :- !, Result = tangled_rope.
 
-% -----------------------------------------------------------------------
 % CI_ROPE OVERRIDE RULE (v5.1, §III-A extension):  [ACTIVE, unconditional]
 %   CI_Rope(C) → rope regardless of metric-based classification.
-%   A constraint that passes all four Boltzmann invariance tests and
-%   has a genuine coordination function is certified as a Rope.
-%   This overrides mountain classification (it's coordination, not nature)
-%   and reinforces rope/tangled_rope toward pure rope.
-% -----------------------------------------------------------------------
-resolve_modal_signature_conflict(_, coupling_invariant_rope, rope) :- !.
+resolve_modal_signature_conflict(_, coupling_invariant_rope, Result) :- !, Result = rope.
 
-% -----------------------------------------------------------------------
 % FCR OVERRIDE RULE (v5.1, §III-A extension, perspectival gate v5.3):  [ACTIVE, gated]
-%   FCR(C) → tangled_rope ONLY when classification is uniform across
-%   perspectives. If the metric layer produces different types from
-%   different power positions, the indexical system is differentiating
-%   correctly and the FCR override defers to the metric classification.
-%   Uniform classification despite varying χ is genuinely suspicious
-%   (coordination-washed). Perspectival variance is a positive signal.
-%
 %   NOTE: This rule is now only reached as fallback from
 %   resolve_with_perspectival_check/4 when has_metric_perspectival_variance
 %   fails. Direct callers of resolve_modal_signature_conflict still see
 %   the unconditional override for backward compatibility.
-% -----------------------------------------------------------------------
-resolve_modal_signature_conflict(_, false_ci_rope, tangled_rope) :- !.
+resolve_modal_signature_conflict(_, false_ci_rope, Result) :- !, Result = tangled_rope.
 
 % Coordination scaffolds should be ROPES not mountains
-resolve_modal_signature_conflict(mountain, coordination_scaffold, rope) :- !.
+resolve_modal_signature_conflict(mountain, coordination_scaffold, Result) :- !, Result = rope.
 
 % Constructed constraints override mountain classification
-resolve_modal_signature_conflict(mountain, constructed_low_extraction, rope) :- !.
-resolve_modal_signature_conflict(mountain, constructed_high_extraction, tangled_rope) :- !.
-resolve_modal_signature_conflict(mountain, constructed_constraint, tangled_rope) :- !.
+resolve_modal_signature_conflict(mountain, constructed_low_extraction, Result) :- !, Result = rope.
+resolve_modal_signature_conflict(mountain, constructed_high_extraction, Result) :- !, Result = tangled_rope.
+resolve_modal_signature_conflict(mountain, constructed_constraint, Result) :- !, Result = tangled_rope.
 
 % When metrics fail (unknown), signature provides extraction-aware classification
-resolve_modal_signature_conflict(unknown, coordination_scaffold, rope) :- !.
-resolve_modal_signature_conflict(unknown, constructed_low_extraction, rope) :- !.
-resolve_modal_signature_conflict(unknown, constructed_high_extraction, snare) :- !.
-resolve_modal_signature_conflict(unknown, constructed_constraint, tangled_rope) :- !.
-resolve_modal_signature_conflict(unknown, piton_signature, piton) :- !.
-resolve_modal_signature_conflict(unknown, ambiguous, unknown) :- !.
+resolve_modal_signature_conflict(unknown, coordination_scaffold, Result) :- !, Result = rope.
+resolve_modal_signature_conflict(unknown, constructed_low_extraction, Result) :- !, Result = rope.
+resolve_modal_signature_conflict(unknown, constructed_high_extraction, Result) :- !, Result = snare.
+resolve_modal_signature_conflict(unknown, constructed_constraint, Result) :- !, Result = tangled_rope.
+resolve_modal_signature_conflict(unknown, piton_signature, Result) :- !, Result = piton.
+resolve_modal_signature_conflict(unknown, ambiguous, Result) :- !, Result = unknown.
 
 % No conflict - keep original classification
 resolve_modal_signature_conflict(ModalType, _, ModalType).
@@ -1034,6 +1037,23 @@ expected_power_divergence(analytical, powerless, _, _) :- !.
 % Moderate-analytical divergence is expected (π = 1.0 vs 1.15)
 expected_power_divergence(moderate, analytical, _, _) :- !.
 expected_power_divergence(analytical, moderate, _, _) :- !.
+% Mountain-rope divergence at moderate/powerless and analytical/institutional
+% is expected: the immutability gate returns rope for (biographical, mobile)
+% and (generational, arbitrage) contexts. A natural constraint doesn't become
+% changeable because the observer has mobile exit options.
+% Type-conditioned: only suppresses divergence when one side is mountain.
+expected_power_divergence(moderate, powerless, _, mountain) :- !.
+expected_power_divergence(powerless, moderate, mountain, _) :- !.
+expected_power_divergence(analytical, institutional, mountain, _) :- !.
+expected_power_divergence(institutional, analytical, _, mountain) :- !.
+% Indexically opaque transitions: legitimate waypoint on rope → {tangled_rope, snare} path
+% As d increases from institutional, extraction becomes visible before consent activates.
+expected_power_divergence(_, _, rope, indexically_opaque) :- !.
+expected_power_divergence(_, _, indexically_opaque, rope) :- !.
+expected_power_divergence(_, _, indexically_opaque, tangled_rope) :- !.
+expected_power_divergence(_, _, tangled_rope, indexically_opaque) :- !.
+expected_power_divergence(_, _, indexically_opaque, snare) :- !.
+expected_power_divergence(_, _, snare, indexically_opaque) :- !.
 
 /* ----------------------------------------------------------------
    NONSENSICAL COUPLING DETECTION

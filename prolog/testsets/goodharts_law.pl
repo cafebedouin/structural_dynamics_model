@@ -63,7 +63,7 @@ narrative_ontology:constraint_metric(goodharts_law, theater_ratio, 0.10).
 
 % Constraint self-claim (what does the constraint claim to be?)
 % The metric is presented as a tool for alignment and efficiency.
-narrative_ontology:constraint_claim(goodharts_law, mountain).
+narrative_ontology:constraint_claim(goodharts_law, tangled_rope).
 
 % Binary flags
 % Performance management systems require active enforcement of their metrics.
@@ -104,7 +104,7 @@ constraint_indexing:constraint_classification(goodharts_law, rope,
 % PERSPECTIVE 3: THE SYSTEMS THEORIST (MOUNTAIN)
 % Goodhart's Law is an unchangeable feature of the informational landscape,
 % a natural law of social systems. Any proxy will eventually succumb.
-constraint_indexing:constraint_classification(goodharts_law, mountain,
+constraint_indexing:constraint_classification(goodharts_law, tangled_rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -120,7 +120,7 @@ test(perspectival_gap) :-
     % Verify the gap between Worker (Snare), Architect (Rope), and Theorist (Mountain).
     constraint_indexing:constraint_classification(goodharts_law, snare, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(goodharts_law, rope, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(goodharts_law, mountain, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(goodharts_law, tangled_rope, context(agent_power(analytical), _, _, _)).
 
 test(threshold_validation_high_extraction) :-
     config:param(extractiveness_metric_name, ExtMetricName),

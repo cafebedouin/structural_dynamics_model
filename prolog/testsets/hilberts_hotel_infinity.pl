@@ -61,7 +61,8 @@
 
 % Structural Anchor for index extraction
 narrative_ontology:interval(hilberts_hotel_infinity, 1924, 2026).
-narrative_ontology:constraint_claim(hilberts_hotel_infinity, mountain).
+narrative_ontology:constraint_claim(hilberts_hotel_infinity, tangled_rope).
+domain_priors:requires_active_enforcement(hilberts_hotel_infinity).
 
 % Base extractiveness score (0.0-1.0)
 % Rationale: 0.15. While infinity is a "gift" of space, the paradox 
@@ -110,7 +111,7 @@ narrative_ontology:constraint_victim(hilberts_hotel_infinity, finite_intuition).
 
 constraint_indexing:constraint_classification(
     hilberts_hotel_infinity,
-    mountain,
+    tangled_rope,
     context(
         agent_power(powerless),
         time_horizon(immediate),

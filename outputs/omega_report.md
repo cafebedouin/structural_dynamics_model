@@ -1,6 +1,6 @@
 # Omega Epistemological Gap Report
 
-**Total Unique Omegas Found:** 690
+**Total Unique Omegas Found:** 694
 
 This report lists all unique Omega variables generated during the analysis. Each Omega represents a critical question, a perspectival gap, or a contradiction that requires further investigation.
 
@@ -52,59 +52,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 3. Omega: `omega_cut_safety_arrows_impossibility_theorem`
-
-*   **Severity:** `N/A`
-*   **Associated Constraint:** `arrows_impossibility_theorem`
-*   **Source Gap:** `gap(mountain_coordination_confusion,mountain,rope)`
-*   **Question:** Constraint arrows_impossibility_theorem appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
-*   **Suggested Resolution Strategy:**
-    ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut arrows_impossibility_theorem, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
-    ```
-
----
-
-### 4. Omega: `omega_cut_safety_asce_7_22_seismic_design`
-
-*   **Severity:** `N/A`
-*   **Associated Constraint:** `asce_7_22_seismic_design`
-*   **Source Gap:** `gap(mountain_coordination_confusion,mountain,rope)`
-*   **Question:** Constraint asce_7_22_seismic_design appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
-*   **Suggested Resolution Strategy:**
-    ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut asce_7_22_seismic_design, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
-    ```
-
----
-
-### 5. Omega: `omega_cut_safety_astm_d638_tensile_testing`
+### 3. Omega: `omega_cut_safety_astm_d638_tensile_testing`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `astm_d638_tensile_testing`
@@ -130,7 +78,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 6. Omega: `omega_cut_safety_authoritarian_power_paradox`
+### 4. Omega: `omega_cut_safety_authoritarian_power_paradox`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `authoritarian_power_paradox`
@@ -150,16 +98,16 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 7. Omega: `omega_cut_safety_axiom_of_choice_determinacy`
+### 5. Omega: `omega_cut_safety_axiom_of_choice`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `axiom_of_choice_determinacy`
 *   **Source Gap:** `gap(mountain_coordination_confusion,mountain,rope)`
-*   **Question:** Constraint axiom_of_choice_determinacy appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
+*   **Question:** Constraint axiom_of_choice appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
     ```
 1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut axiom_of_choice_determinacy, do individuals have alternatives?
+- If institutions cut axiom_of_choice, do individuals have alternatives?
 - Is this their only survival mechanism?
 - What scaffolding exists for transition?
 2. Test institutional perception:
@@ -176,59 +124,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 8. Omega: `omega_cut_safety_banach_tarski_paradox`
-
-*   **Severity:** `N/A`
-*   **Associated Constraint:** `banach_tarski_paradox`
-*   **Source Gap:** `gap(mountain_coordination_confusion,mountain,rope)`
-*   **Question:** Constraint banach_tarski_paradox appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
-*   **Suggested Resolution Strategy:**
-    ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut banach_tarski_paradox, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
-    ```
-
----
-
-### 9. Omega: `omega_cut_safety_basel_problem_convergence`
-
-*   **Severity:** `N/A`
-*   **Associated Constraint:** `basel_problem_convergence`
-*   **Source Gap:** `gap(mountain_coordination_confusion,mountain,rope)`
-*   **Question:** Constraint basel_problem_convergence appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
-*   **Suggested Resolution Strategy:**
-    ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut basel_problem_convergence, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
-    ```
-
----
-
-### 10. Omega: `omega_cut_safety_bay_of_pigs_operational_silo`
+### 6. Omega: `omega_cut_safety_bay_of_pigs_operational_silo`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `bay_of_pigs_operational_silo`
@@ -254,33 +150,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 11. Omega: `omega_cut_safety_birthday_paradox_collision`
-
-*   **Severity:** `N/A`
-*   **Associated Constraint:** `birthday_paradox_collison`
-*   **Source Gap:** `gap(mountain_coordination_confusion,mountain,rope)`
-*   **Question:** Constraint birthday_paradox_collision appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
-*   **Suggested Resolution Strategy:**
-    ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut birthday_paradox_collision, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
-    ```
-
----
-
-### 12. Omega: `omega_cut_safety_boundary_protocol`
+### 7. Omega: `omega_cut_safety_boundary_protocol`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `self_enforced_boundary_protocol`
@@ -306,85 +176,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 13. Omega: `omega_cut_safety_brain_network_paradigm_2026`
-
-*   **Severity:** `N/A`
-*   **Associated Constraint:** `brain_network_paradigm_2026`
-*   **Source Gap:** `gap(mountain_coordination_confusion,mountain,rope)`
-*   **Question:** Constraint brain_network_paradigm_2026 appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
-*   **Suggested Resolution Strategy:**
-    ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut brain_network_paradigm_2026, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
-    ```
-
----
-
-### 14. Omega: `omega_cut_safety_brouwer_fixed_point`
-
-*   **Severity:** `N/A`
-*   **Associated Constraint:** `brouwer_fixed_point`
-*   **Source Gap:** `gap(mountain_coordination_confusion,mountain,rope)`
-*   **Question:** Constraint brouwer_fixed_point appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
-*   **Suggested Resolution Strategy:**
-    ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut brouwer_fixed_point, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
-    ```
-
----
-
-### 15. Omega: `omega_cut_safety_buffons_needle_pi_estimation`
-
-*   **Severity:** `N/A`
-*   **Associated Constraint:** `buffons_needle_pi_estimation`
-*   **Source Gap:** `gap(mountain_coordination_confusion,mountain,rope)`
-*   **Question:** Constraint buffons_needle_pi_estimation appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
-*   **Suggested Resolution Strategy:**
-    ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut buffons_needle_pi_estimation, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
-    ```
-
----
-
-### 16. Omega: `omega_cut_safety_burden_of_proof_legal_criminal`
+### 8. Omega: `omega_cut_safety_burden_of_proof_legal_criminal`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `burden_of_proof_legal_criminal`
@@ -410,59 +202,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 17. Omega: `omega_cut_safety_burden_of_proof_scientific_empirical`
-
-*   **Severity:** `N/A`
-*   **Associated Constraint:** `burden_of_proof_scientific_empirical`
-*   **Source Gap:** `gap(mountain_coordination_confusion,mountain,rope)`
-*   **Question:** Constraint burden_of_proof_scientific_empirical appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
-*   **Suggested Resolution Strategy:**
-    ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut burden_of_proof_scientific_empirical, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
-    ```
-
----
-
-### 18. Omega: `omega_cut_safety_busy_beaver_noncomputability`
-
-*   **Severity:** `N/A`
-*   **Associated Constraint:** `busy_beaver_noncomputability`
-*   **Source Gap:** `gap(mountain_coordination_confusion,mountain,rope)`
-*   **Question:** Constraint busy_beaver_noncomputability appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
-*   **Suggested Resolution Strategy:**
-    ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut busy_beaver_noncomputability, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
-    ```
-
----
-
-### 19. Omega: `omega_cut_safety_canada_goose_realignment_2026`
+### 9. Omega: `omega_cut_safety_canada_goose_realignment_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `canada_goose_realignment_2026`
@@ -488,85 +228,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 20. Omega: `omega_cut_safety_cantor_set_topology`
-
-*   **Severity:** `N/A`
-*   **Associated Constraint:** `cantor_set_topology`
-*   **Source Gap:** `gap(mountain_coordination_confusion,mountain,rope)`
-*   **Question:** Constraint cantor_set_topology appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
-*   **Suggested Resolution Strategy:**
-    ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut cantor_set_topology, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
-    ```
-
----
-
-### 21. Omega: `omega_cut_safety_central_limit_theorem_convergence`
-
-*   **Severity:** `N/A`
-*   **Associated Constraint:** `central_limit_theorem_convergence`
-*   **Source Gap:** `gap(mountain_coordination_confusion,mountain,rope)`
-*   **Question:** Constraint central_limit_theorem_convergence appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
-*   **Suggested Resolution Strategy:**
-    ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut central_limit_theorem_convergence, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
-    ```
-
----
-
-### 22. Omega: `omega_cut_safety_chaitins_omega_undecidability`
-
-*   **Severity:** `N/A`
-*   **Associated Constraint:** `chaitins_omega_undecidability`
-*   **Source Gap:** `gap(mountain_coordination_confusion,mountain,rope)`
-*   **Question:** Constraint chaitins_omega_undecidability appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
-*   **Suggested Resolution Strategy:**
-    ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut chaitins_omega_undecidability, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
-    ```
-
----
-
-### 23. Omega: `omega_cut_safety_china_taiwan_reunification_mandate`
+### 10. Omega: `omega_cut_safety_china_taiwan_reunification_mandate`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `china_taiwan_reunification_mandate`
@@ -592,33 +254,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 24. Omega: `omega_cut_safety_church_turing_thesis`
-
-*   **Severity:** `N/A`
-*   **Associated Constraint:** `church_turing_thesis`
-*   **Source Gap:** `gap(mountain_coordination_confusion,mountain,rope)`
-*   **Question:** Constraint church_turing_thesis appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
-*   **Suggested Resolution Strategy:**
-    ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut church_turing_thesis, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
-    ```
-
----
-
-### 25. Omega: `omega_cut_safety_click_chemistry_paradigm_2026`
+### 11. Omega: `omega_cut_safety_click_chemistry_paradigm_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `click_chemistry_paradigm_2026`
@@ -644,7 +280,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 26. Omega: `omega_cut_safety_climate_attribution_2026`
+### 12. Omega: `omega_cut_safety_climate_attribution_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `climate_attribution_2026`
@@ -670,16 +306,16 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 27. Omega: `omega_cut_safety_collatz_conjecture_determinism`
+### 13. Omega: `omega_cut_safety_comitatus_bond`
 
 *   **Severity:** `N/A`
-*   **Associated Constraint:** `collatz_conjecture_determinism`
+*   **Associated Constraint:** `comitatus_bond`
 *   **Source Gap:** `gap(mountain_coordination_confusion,mountain,rope)`
-*   **Question:** Constraint collatz_conjecture_determinism appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
+*   **Question:** Constraint comitatus_bond appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
     ```
 1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut collatz_conjecture_determinism, do individuals have alternatives?
+- If institutions cut comitatus_bond, do individuals have alternatives?
 - Is this their only survival mechanism?
 - What scaffolding exists for transition?
 2. Test institutional perception:
@@ -696,111 +332,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 28. Omega: `omega_cut_safety_constitutional_supremacy`
-
-*   **Severity:** `N/A`
-*   **Associated Constraint:** `constitutional_supremacy`
-*   **Source Gap:** `gap(mountain_coordination_confusion,mountain,rope)`
-*   **Question:** Constraint constitutional_supremacy appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
-*   **Suggested Resolution Strategy:**
-    ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut constitutional_supremacy, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
-    ```
-
----
-
-### 29. Omega: `omega_cut_safety_continuum_hypothesis_undecidability`
-
-*   **Severity:** `N/A`
-*   **Associated Constraint:** `continuum_hypothesis_undecidability`
-*   **Source Gap:** `gap(mountain_coordination_confusion,mountain,rope)`
-*   **Question:** Constraint continuum_hypothesis_undecidability appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
-*   **Suggested Resolution Strategy:**
-    ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut continuum_hypothesis_undecidability, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
-    ```
-
----
-
-### 30. Omega: `omega_cut_safety_conways_game_of_life_dynamics`
-
-*   **Severity:** `N/A`
-*   **Associated Constraint:** `conways_game_of_life_dynamics`
-*   **Source Gap:** `gap(mountain_coordination_confusion,mountain,rope)`
-*   **Question:** Constraint conways_game_of_life_dynamics appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
-*   **Suggested Resolution Strategy:**
-    ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut conways_game_of_life_dynamics, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
-    ```
-
----
-
-### 31. Omega: `omega_cut_safety_countable_infinity_cardinality`
-
-*   **Severity:** `N/A`
-*   **Associated Constraint:** `countable_infinity_cardinality`
-*   **Source Gap:** `gap(mountain_coordination_confusion,mountain,rope)`
-*   **Question:** Constraint countable_infinity_cardinality appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
-*   **Suggested Resolution Strategy:**
-    ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut countable_infinity_cardinality, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
-    ```
-
----
-
-### 32. Omega: `omega_cut_safety_damped_harmonics`
+### 14. Omega: `omega_cut_safety_damped_harmonics`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `damped_harmonics`
@@ -826,7 +358,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 33. Omega: `omega_cut_safety_deferential_realism_framework`
+### 15. Omega: `omega_cut_safety_deferential_realism_framework`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `deferential_realism_core`
@@ -852,16 +384,16 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 34. Omega: `omega_cut_safety_euler_characteristic_topology`
+### 16. Omega: `omega_cut_safety_dunbars_number`
 
 *   **Severity:** `N/A`
-*   **Associated Constraint:** `euler_characteristic_topology`
+*   **Associated Constraint:** `dunbars_number`
 *   **Source Gap:** `gap(mountain_coordination_confusion,mountain,rope)`
-*   **Question:** Constraint euler_characteristic_topology appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
+*   **Question:** Constraint dunbars_number appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
     ```
 1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut euler_characteristic_topology, do individuals have alternatives?
+- If institutions cut dunbars_number, do individuals have alternatives?
 - Is this their only survival mechanism?
 - What scaffolding exists for transition?
 2. Test institutional perception:
@@ -878,7 +410,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 35. Omega: `omega_cut_safety_faint_blue_neural_bifurcation`
+### 17. Omega: `omega_cut_safety_faint_blue_neural_bifurcation`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `faint_blue_neural_bifurcation`
@@ -904,111 +436,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 36. Omega: `omega_cut_safety_family_succession_system`
-
-*   **Severity:** `N/A`
-*   **Associated Constraint:** `family_succession_and_decadence`
-*   **Source Gap:** `gap(mountain_coordination_confusion,mountain,rope)`
-*   **Question:** Constraint family_succession_system appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
-*   **Suggested Resolution Strategy:**
-    ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut family_succession_system, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
-    ```
-
----
-
-### 37. Omega: `omega_cut_safety_feigenbaum_universality`
-
-*   **Severity:** `N/A`
-*   **Associated Constraint:** `feigenbaum_universality`
-*   **Source Gap:** `gap(mountain_coordination_confusion,mountain,rope)`
-*   **Question:** Constraint feigenbaum_universality appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
-*   **Suggested Resolution Strategy:**
-    ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut feigenbaum_universality, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
-    ```
-
----
-
-### 38. Omega: `omega_cut_safety_finite_simple_group_classification`
-
-*   **Severity:** `N/A`
-*   **Associated Constraint:** `finite_simple_groups_classification`
-*   **Source Gap:** `gap(mountain_coordination_confusion,mountain,rope)`
-*   **Question:** Constraint finite_simple_group_classification appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
-*   **Suggested Resolution Strategy:**
-    ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut finite_simple_group_classification, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
-    ```
-
----
-
-### 39. Omega: `omega_cut_safety_four_color_theorem_topological_bound`
-
-*   **Severity:** `N/A`
-*   **Associated Constraint:** `four_color_theorem_topological_bound`
-*   **Source Gap:** `gap(mountain_coordination_confusion,mountain,rope)`
-*   **Question:** Constraint four_color_theorem_topological_bound appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
-*   **Suggested Resolution Strategy:**
-    ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut four_color_theorem_topological_bound, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
-    ```
-
----
-
-### 40. Omega: `omega_cut_safety_frankenstein_creation_hubris`
+### 18. Omega: `omega_cut_safety_frankenstein_creation_hubris`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `frankenstein_creation_hubris`
@@ -1034,85 +462,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 41. Omega: `omega_cut_safety_fundamental_theorem_of_algebra`
-
-*   **Severity:** `N/A`
-*   **Associated Constraint:** `fundamental_theorem_of_algebra`
-*   **Source Gap:** `gap(mountain_coordination_confusion,mountain,rope)`
-*   **Question:** Constraint fundamental_theorem_of_algebra appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
-*   **Suggested Resolution Strategy:**
-    ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut fundamental_theorem_of_algebra, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
-    ```
-
----
-
-### 42. Omega: `omega_cut_safety_galois_theory_symmetry`
-
-*   **Severity:** `N/A`
-*   **Associated Constraint:** `galois_theory_symmetry`
-*   **Source Gap:** `gap(mountain_coordination_confusion,mountain,rope)`
-*   **Question:** Constraint galois_theory_symmetry appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
-*   **Suggested Resolution Strategy:**
-    ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut galois_theory_symmetry, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
-    ```
-
----
-
-### 43. Omega: `omega_cut_safety_gauss_bonnet_topology`
-
-*   **Severity:** `N/A`
-*   **Associated Constraint:** `gauss_bonnet_topology`
-*   **Source Gap:** `gap(mountain_coordination_confusion,mountain,rope)`
-*   **Question:** Constraint gauss_bonnet_topology appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
-*   **Suggested Resolution Strategy:**
-    ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut gauss_bonnet_topology, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
-    ```
-
----
-
-### 44. Omega: `omega_cut_safety_germline_regulation_threshold_2026`
+### 19. Omega: `omega_cut_safety_germline_regulation_threshold_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `germline_regulation_threshold_2026`
@@ -1138,7 +488,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 45. Omega: `omega_cut_safety_gilgamesh_mortality_limit`
+### 20. Omega: `omega_cut_safety_gilgamesh_mortality_limit`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `gilgamesh_mortality_limit`
@@ -1164,7 +514,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 46. Omega: `omega_cut_safety_global_hoarding_scaling_laws`
+### 21. Omega: `omega_cut_safety_global_hoarding_scaling_laws`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `global_hoarding_scaling_laws`
@@ -1190,7 +540,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 47. Omega: `omega_cut_safety_global_protocol_entrenchment`
+### 22. Omega: `omega_cut_safety_global_protocol_entrenchment`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `global_protocol_entrenchment`
@@ -1216,7 +566,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 48. Omega: `omega_cut_safety_glp1_payload_efficiency_pivot`
+### 23. Omega: `omega_cut_safety_glp1_payload_efficiency_pivot`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `glp1_payload_efficiency_pivot`
@@ -1242,59 +592,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 49. Omega: `omega_cut_safety_goedels_incompleteness_theorems`
-
-*   **Severity:** `N/A`
-*   **Associated Constraint:** `godels_incompleteness_theorems`
-*   **Source Gap:** `gap(mountain_coordination_confusion,mountain,rope)`
-*   **Question:** Constraint goedels_incompleteness_theorems appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
-*   **Suggested Resolution Strategy:**
-    ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut goedels_incompleteness_theorems, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
-    ```
-
----
-
-### 50. Omega: `omega_cut_safety_goldbach_conjecture`
-
-*   **Severity:** `N/A`
-*   **Associated Constraint:** `goldbach_conjecture`
-*   **Source Gap:** `gap(mountain_coordination_confusion,mountain,rope)`
-*   **Question:** Constraint goldbach_conjecture appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
-*   **Suggested Resolution Strategy:**
-    ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut goldbach_conjecture, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
-    ```
-
----
-
-### 51. Omega: `omega_cut_safety_golden_handcuffs`
+### 24. Omega: `omega_cut_safety_golden_handcuffs`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `golden_handcuffs`
@@ -1320,7 +618,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 52. Omega: `omega_cut_safety_gradient_descent_optimization`
+### 25. Omega: `omega_cut_safety_gradient_descent_optimization`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `gradient_descent_optimization`
@@ -1346,7 +644,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 53. Omega: `omega_cut_safety_gs1_gln_identification`
+### 26. Omega: `omega_cut_safety_gs1_gln_identification`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `gs1_gln_identification`
@@ -1372,7 +670,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 54. Omega: `omega_cut_safety_gs1_standardized_identification`
+### 27. Omega: `omega_cut_safety_gs1_standardized_identification`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `gs1_standardized_identification`
@@ -1398,16 +696,16 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 55. Omega: `omega_cut_safety_halting_problem_undecidability`
+### 28. Omega: `omega_cut_safety_hamiltonian_path_complexity`
 
 *   **Severity:** `N/A`
-*   **Associated Constraint:** `halting_problem_undecidability`
+*   **Associated Constraint:** `hamiltonian_path_complexity`
 *   **Source Gap:** `gap(mountain_coordination_confusion,mountain,rope)`
-*   **Question:** Constraint halting_problem_undecidability appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
+*   **Question:** Constraint hamiltonian_path_complexity appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
     ```
 1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut halting_problem_undecidability, do individuals have alternatives?
+- If institutions cut hamiltonian_path_complexity, do individuals have alternatives?
 - Is this their only survival mechanism?
 - What scaffolding exists for transition?
 2. Test institutional perception:
@@ -1424,7 +722,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 56. Omega: `omega_cut_safety_happiness_of_others`
+### 29. Omega: `omega_cut_safety_happiness_of_others`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `happiness_of_others`
@@ -1450,7 +748,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 57. Omega: `omega_cut_safety_heuristic_optimization`
+### 30. Omega: `omega_cut_safety_heuristic_optimization`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `heuristic_optimization`
@@ -1476,33 +774,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 58. Omega: `omega_cut_safety_hilberts_hotel_infinity`
-
-*   **Severity:** `N/A`
-*   **Associated Constraint:** `hilberts_hotel_infinity`
-*   **Source Gap:** `gap(mountain_coordination_confusion,mountain,rope)`
-*   **Question:** Constraint hilberts_hotel_infinity appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
-*   **Suggested Resolution Strategy:**
-    ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut hilberts_hotel_infinity, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
-    ```
-
----
-
-### 59. Omega: `omega_cut_safety_indexical_relativity_core`
+### 31. Omega: `omega_cut_safety_indexical_relativity_core`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `indexical_relativity_core`
@@ -1528,7 +800,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 60. Omega: `omega_cut_safety_inner_model_theory_constraints`
+### 32. Omega: `omega_cut_safety_inner_model_theory_constraints`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `inner_model_theory_constraints`
@@ -1554,7 +826,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 61. Omega: `omega_cut_safety_juvenile_underclass_2026`
+### 33. Omega: `omega_cut_safety_juvenile_underclass_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `juvenile_underclass_2026`
@@ -1580,7 +852,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 62. Omega: `omega_cut_safety_kjv_puritan_new_world_exit`
+### 34. Omega: `omega_cut_safety_kjv_puritan_new_world_exit`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `kjv_puritan_new_world_exit`
@@ -1606,59 +878,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 63. Omega: `omega_cut_safety_kjv_textual_authority`
-
-*   **Severity:** `N/A`
-*   **Associated Constraint:** `kjv_textual_authority`
-*   **Source Gap:** `gap(mountain_coordination_confusion,mountain,rope)`
-*   **Question:** Constraint kjv_textual_authority appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
-*   **Suggested Resolution Strategy:**
-    ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut kjv_textual_authority, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
-    ```
-
----
-
-### 64. Omega: `omega_cut_safety_kleene_recursion_theorem`
-
-*   **Severity:** `N/A`
-*   **Associated Constraint:** `kleene_recursion_theorem`
-*   **Source Gap:** `gap(mountain_coordination_confusion,mountain,rope)`
-*   **Question:** Constraint kleene_recursion_theorem appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
-*   **Suggested Resolution Strategy:**
-    ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut kleene_recursion_theorem, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
-    ```
-
----
-
-### 65. Omega: `omega_cut_safety_knowledge_action_gap`
+### 35. Omega: `omega_cut_safety_knowledge_action_gap`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `knowledge_action_gap`
@@ -1684,7 +904,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 66. Omega: `omega_cut_safety_large_cardinal_foundations`
+### 36. Omega: `omega_cut_safety_large_cardinal_foundations`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `large_cardinals_foundations`
@@ -1710,7 +930,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 67. Omega: `omega_cut_safety_legacy_system_technical_debt`
+### 37. Omega: `omega_cut_safety_legacy_system_technical_debt`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `legacy_system_technical_debt`
@@ -1736,7 +956,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 68. Omega: `omega_cut_safety_lln_convergence`
+### 38. Omega: `omega_cut_safety_lln_convergence`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `lln_convergence`
@@ -1762,59 +982,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 69. Omega: `omega_cut_safety_logistic_map_dynamics`
-
-*   **Severity:** `N/A`
-*   **Associated Constraint:** `logistic_map_dynamics`
-*   **Source Gap:** `gap(mountain_coordination_confusion,mountain,rope)`
-*   **Question:** Constraint logistic_map_dynamics appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
-*   **Suggested Resolution Strategy:**
-    ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut logistic_map_dynamics, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
-    ```
-
----
-
-### 70. Omega: `omega_cut_safety_lorenz_attractor_dynamics`
-
-*   **Severity:** `N/A`
-*   **Associated Constraint:** `lorenz_attractor_dynamics`
-*   **Source Gap:** `gap(mountain_coordination_confusion,mountain,rope)`
-*   **Question:** Constraint lorenz_attractor_dynamics appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
-*   **Suggested Resolution Strategy:**
-    ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut lorenz_attractor_dynamics, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
-    ```
-
----
-
-### 71. Omega: `omega_cut_safety_manganese_catalysis_2026`
+### 39. Omega: `omega_cut_safety_manganese_catalysis_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `manganese_catalysis_2026`
@@ -1840,7 +1008,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 72. Omega: `omega_cut_safety_mars_rover_navigational_autonomy`
+### 40. Omega: `omega_cut_safety_mars_rover_navigational_autonomy`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `mars_rovers_navigational_autonomy`
@@ -1866,59 +1034,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 73. Omega: `omega_cut_safety_martian_signal_latency`
-
-*   **Severity:** `N/A`
-*   **Associated Constraint:** `martian_signal_latency`
-*   **Source Gap:** `gap(mountain_coordination_confusion,mountain,rope)`
-*   **Question:** Constraint martian_signal_latency appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
-*   **Suggested Resolution Strategy:**
-    ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut martian_signal_latency, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
-    ```
-
----
-
-### 74. Omega: `omega_cut_safety_max_flow_min_cut`
-
-*   **Severity:** `N/A`
-*   **Associated Constraint:** `max_flow`
-*   **Source Gap:** `gap(mountain_coordination_confusion,mountain,rope)`
-*   **Question:** Constraint max_flow_min_cut appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
-*   **Suggested Resolution Strategy:**
-    ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut max_flow_min_cut, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
-    ```
-
----
-
-### 75. Omega: `omega_cut_safety_mco_unit_system_discontinuity`
+### 41. Omega: `omega_cut_safety_mco_unit_system_discontinuity`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `mco_unit_system_discontinuity`
@@ -1944,7 +1060,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 76. Omega: `omega_cut_safety_micro_robot_electronics_integration`
+### 42. Omega: `omega_cut_safety_micro_robot_electronics_integration`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `micro_robot_electronics_integration`
@@ -1970,7 +1086,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 77. Omega: `omega_cut_safety_minimax_decision_rule`
+### 43. Omega: `omega_cut_safety_minimax_decision_rule`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `minimax_decision_rule`
@@ -1996,59 +1112,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 78. Omega: `omega_cut_safety_mom_z14_2026`
-
-*   **Severity:** `N/A`
-*   **Associated Constraint:** `mom_z14_galaxy_2026`
-*   **Source Gap:** `gap(mountain_coordination_confusion,mountain,rope)`
-*   **Question:** Constraint mom_z14_2026 appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
-*   **Suggested Resolution Strategy:**
-    ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut mom_z14_2026, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
-    ```
-
----
-
-### 79. Omega: `omega_cut_safety_monty_hall_conditional_probability`
-
-*   **Severity:** `N/A`
-*   **Associated Constraint:** `monty_hall_conditional_probability`
-*   **Source Gap:** `gap(mountain_coordination_confusion,mountain,rope)`
-*   **Question:** Constraint monty_hall_conditional_probability appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
-*   **Suggested Resolution Strategy:**
-    ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut monty_hall_conditional_probability, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
-    ```
-
----
-
-### 80. Omega: `omega_cut_safety_mutual_defection_equilibrium`
+### 44. Omega: `omega_cut_safety_mutual_defection_equilibrium`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `mutual_defection_equilibrium`
@@ -2074,7 +1138,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 81. Omega: `omega_cut_safety_narrative_engineering_2026`
+### 45. Omega: `omega_cut_safety_narrative_engineering_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `narrative_engineering_2026`
@@ -2100,7 +1164,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 82. Omega: `omega_cut_safety_nasa_faster_better_cheaper`
+### 46. Omega: `omega_cut_safety_nasa_faster_better_cheaper`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `nasa_faster_better_cheaper`
@@ -2126,7 +1190,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 83. Omega: `omega_cut_safety_nash_equilibrium_coordination`
+### 47. Omega: `omega_cut_safety_nash_equilibrium_coordination`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `nash_equilibrium_coordination`
@@ -2152,7 +1216,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 84. Omega: `omega_cut_safety_neuroplasticity_plateau`
+### 48. Omega: `omega_cut_safety_neuroplasticity_plateau`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `neuroplasticity_plateau`
@@ -2178,7 +1242,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 85. Omega: `omega_cut_safety_newtons_method_convergence`
+### 49. Omega: `omega_cut_safety_newtons_method_convergence`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `newtons_method_convergence`
@@ -2204,33 +1268,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 86. Omega: `omega_cut_safety_noethers_theorem_symmetry`
-
-*   **Severity:** `N/A`
-*   **Associated Constraint:** `noethers_theorem_symmetry`
-*   **Source Gap:** `gap(mountain_coordination_confusion,mountain,rope)`
-*   **Question:** Constraint noethers_theorem_symmetry appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
-*   **Suggested Resolution Strategy:**
-    ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut noethers_theorem_symmetry, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
-    ```
-
----
-
-### 87. Omega: `omega_cut_safety_nonstandard_arithmetic_models`
+### 50. Omega: `omega_cut_safety_nonstandard_arithmetic_models`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `nonstandard_arithmetic_models`
@@ -2256,7 +1294,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 88. Omega: `omega_cut_safety_path_dependence_lock_in`
+### 51. Omega: `omega_cut_safety_path_dependence_lock_in`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `path_dependence_lock_in`
@@ -2282,7 +1320,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 89. Omega: `omega_cut_safety_peano_curve_mapping`
+### 52. Omega: `omega_cut_safety_peano_curve_mapping`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `peano_curve_mapping`
@@ -2308,7 +1346,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 90. Omega: `omega_cut_safety_permissive_software_licensing`
+### 53. Omega: `omega_cut_safety_permissive_software_licensing`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `permissive_software_licensing`
@@ -2334,7 +1372,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 91. Omega: `omega_cut_safety_perseverance_ai_drive`
+### 54. Omega: `omega_cut_safety_perseverance_ai_drive`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `perseverance_ai_drive`
@@ -2360,59 +1398,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 92. Omega: `omega_cut_safety_poincare_conjecture`
-
-*   **Severity:** `N/A`
-*   **Associated Constraint:** `poincare_conjucture`
-*   **Source Gap:** `gap(mountain_coordination_confusion,mountain,rope)`
-*   **Question:** Constraint poincare_conjecture appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
-*   **Suggested Resolution Strategy:**
-    ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut poincare_conjecture, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
-    ```
-
----
-
-### 93. Omega: `omega_cut_safety_prime_number_theorem`
-
-*   **Severity:** `N/A`
-*   **Associated Constraint:** `prime_number_theorem`
-*   **Source Gap:** `gap(mountain_coordination_confusion,mountain,rope)`
-*   **Question:** Constraint prime_number_theorem appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
-*   **Suggested Resolution Strategy:**
-    ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut prime_number_theorem, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
-    ```
-
----
-
-### 94. Omega: `omega_cut_safety_proof_of_work_consensus`
+### 55. Omega: `omega_cut_safety_proof_of_work_consensus`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `proof_of_work_consensus`
@@ -2438,7 +1424,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 95. Omega: `omega_cut_safety_quantum_entanglement_protocol`
+### 56. Omega: `omega_cut_safety_quantum_entanglement_protocol`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `quantum_entanglement_protocol`
@@ -2464,33 +1450,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 96. Omega: `omega_cut_safety_quine_self_replication`
-
-*   **Severity:** `N/A`
-*   **Associated Constraint:** `quine_self_replication`
-*   **Source Gap:** `gap(mountain_coordination_confusion,mountain,rope)`
-*   **Question:** Constraint quine_self_replication appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
-*   **Suggested Resolution Strategy:**
-    ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut quine_self_replication, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
-    ```
-
----
-
-### 97. Omega: `omega_cut_safety_railway_gauge_standard`
+### 57. Omega: `omega_cut_safety_railway_gauge_standard`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `railway_gauge_standard`
@@ -2516,85 +1476,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 98. Omega: `omega_cut_safety_reciprocity_laws_math`
-
-*   **Severity:** `N/A`
-*   **Associated Constraint:** `reciprocity_laws_math`
-*   **Source Gap:** `gap(mountain_coordination_confusion,mountain,rope)`
-*   **Question:** Constraint reciprocity_laws_math appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
-*   **Suggested Resolution Strategy:**
-    ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut reciprocity_laws_math, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
-    ```
-
----
-
-### 99. Omega: `omega_cut_safety_rfc9293_state_machine`
-
-*   **Severity:** `N/A`
-*   **Associated Constraint:** `rfc9293_state_machine`
-*   **Source Gap:** `gap(mountain_coordination_confusion,mountain,rope)`
-*   **Question:** Constraint rfc9293_state_machine appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
-*   **Suggested Resolution Strategy:**
-    ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut rfc9293_state_machine, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
-    ```
-
----
-
-### 100. Omega: `omega_cut_safety_rices_theorem_undecidability`
-
-*   **Severity:** `N/A`
-*   **Associated Constraint:** `rices_theorem_undecidability`
-*   **Source Gap:** `gap(mountain_coordination_confusion,mountain,rope)`
-*   **Question:** Constraint rices_theorem_undecidability appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
-*   **Suggested Resolution Strategy:**
-    ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut rices_theorem_undecidability, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
-    ```
-
----
-
-### 101. Omega: `omega_cut_safety_rogers_commission_institutional_analysis`
+### 58. Omega: `omega_cut_safety_rogers_commission_institutional_analysis`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `rogers_commission_institutional_analysis`
@@ -2620,33 +1502,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 102. Omega: `omega_cut_safety_rogue_wave_control_2026`
-
-*   **Severity:** `N/A`
-*   **Associated Constraint:** `rogue_wave_control_2026`
-*   **Source Gap:** `gap(mountain_coordination_confusion,mountain,rope)`
-*   **Question:** Constraint rogue_wave_control_2026 appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
-*   **Suggested Resolution Strategy:**
-    ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut rogue_wave_control_2026, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
-    ```
-
----
-
-### 103. Omega: `omega_cut_safety_sadhu_integrity_protocol`
+### 59. Omega: `omega_cut_safety_sadhu_integrity_protocol`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `sadhu_integrity_protocol`
@@ -2666,7 +1522,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 104. Omega: `omega_cut_safety_self_surpassing`
+### 60. Omega: `omega_cut_safety_self_surpassing`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `self_surpassing_superman`
@@ -2692,16 +1548,16 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 105. Omega: `omega_cut_safety_spv_variations`
+### 61. Omega: `omega_cut_safety_spv_variations_us_cold`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `spv_variations_us_cold`
 *   **Source Gap:** `gap(mountain_coordination_confusion,mountain,rope)`
-*   **Question:** Constraint spv_variations appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
+*   **Question:** Constraint spv_variations_us_cold appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
     ```
 1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut spv_variations, do individuals have alternatives?
+- If institutions cut spv_variations_us_cold, do individuals have alternatives?
 - Is this their only survival mechanism?
 - What scaffolding exists for transition?
 2. Test institutional perception:
@@ -2718,33 +1574,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 106. Omega: `omega_cut_safety_stable_marriage_coordination`
-
-*   **Severity:** `N/A`
-*   **Associated Constraint:** `stable_marriage_coordination`
-*   **Source Gap:** `gap(mountain_coordination_confusion,mountain,rope)`
-*   **Question:** Constraint stable_marriage_coordination appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
-*   **Suggested Resolution Strategy:**
-    ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut stable_marriage_coordination, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
-    ```
-
----
-
-### 107. Omega: `omega_cut_safety_starwars_evolutionary_mutation`
+### 62. Omega: `omega_cut_safety_starwars_evolutionary_mutation`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `starwars_evolutionary_mutation`
@@ -2770,111 +1600,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 108. Omega: `omega_cut_safety_strange_attractor_dynamics`
-
-*   **Severity:** `N/A`
-*   **Associated Constraint:** `strange_attractor_dynamics`
-*   **Source Gap:** `gap(mountain_coordination_confusion,mountain,rope)`
-*   **Question:** Constraint strange_attractor_dynamics appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
-*   **Suggested Resolution Strategy:**
-    ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut strange_attractor_dynamics, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
-    ```
-
----
-
-### 109. Omega: `omega_cut_safety_sts86_ascent_checklist`
-
-*   **Severity:** `N/A`
-*   **Associated Constraint:** `sts86_ascent_checklist`
-*   **Source Gap:** `gap(mountain_coordination_confusion,mountain,rope)`
-*   **Question:** Constraint sts86_ascent_checklist appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
-*   **Suggested Resolution Strategy:**
-    ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut sts86_ascent_checklist, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
-    ```
-
----
-
-### 110. Omega: `omega_cut_safety_suslin_hypothesis_undecidability`
-
-*   **Severity:** `N/A`
-*   **Associated Constraint:** `suslin_hypothesis_undecidability`
-*   **Source Gap:** `gap(mountain_coordination_confusion,mountain,rope)`
-*   **Question:** Constraint suslin_hypothesis_undecidability appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
-*   **Suggested Resolution Strategy:**
-    ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut suslin_hypothesis_undecidability, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
-    ```
-
----
-
-### 111. Omega: `omega_cut_safety_sylow_theorems_group_theory`
-
-*   **Severity:** `N/A`
-*   **Associated Constraint:** `sylow_theorems_group_theory`
-*   **Source Gap:** `gap(mountain_coordination_confusion,mountain,rope)`
-*   **Question:** Constraint sylow_theorems_group_theory appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
-*   **Suggested Resolution Strategy:**
-    ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut sylow_theorems_group_theory, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
-    ```
-
----
-
-### 112. Omega: `omega_cut_safety_taiwan_strait_hegemony_shift`
+### 63. Omega: `omega_cut_safety_taiwan_strait_hegemony_shift`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `taiwan_strait_hegemony_shift`
@@ -2900,7 +1626,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 113. Omega: `omega_cut_safety_technological_point_of_no_return`
+### 64. Omega: `omega_cut_safety_technological_point_of_no_return`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `technological_point_of_no_return`
@@ -2926,7 +1652,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 114. Omega: `omega_cut_safety_the_wall_procedural_barrier`
+### 65. Omega: `omega_cut_safety_the_wall_procedural_barrier`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `the_wall_procedural_barrier`
@@ -2952,33 +1678,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 115. Omega: `omega_cut_safety_three_body_unpredictability`
-
-*   **Severity:** `N/A`
-*   **Associated Constraint:** `three_body_unpredicability`
-*   **Source Gap:** `gap(mountain_coordination_confusion,mountain,rope)`
-*   **Question:** Constraint three_body_unpredictability appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
-*   **Suggested Resolution Strategy:**
-    ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut three_body_unpredictability, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
-    ```
-
----
-
-### 116. Omega: `omega_cut_safety_trojan_war_spoils`
+### 66. Omega: `omega_cut_safety_trojan_war_spoils`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `trojan_war_spoils`
@@ -3004,7 +1704,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 117. Omega: `omega_cut_safety_udhr_1948`
+### 67. Omega: `omega_cut_safety_udhr_1948`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `udhr_1946`
@@ -3030,7 +1730,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 118. Omega: `omega_cut_safety_ulysses_hades_1904`
+### 68. Omega: `omega_cut_safety_ulysses_hades_1904`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ulysses_chp06`
@@ -3056,7 +1756,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 119. Omega: `omega_cut_safety_unclos_2026`
+### 69. Omega: `omega_cut_safety_unclos_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `unclos_2026`
@@ -3082,59 +1782,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 120. Omega: `omega_cut_safety_vertebrate_genetics_2026`
-
-*   **Severity:** `N/A`
-*   **Associated Constraint:** `vertebrate_turning_point_2026`
-*   **Source Gap:** `gap(mountain_coordination_confusion,mountain,rope)`
-*   **Question:** Constraint vertebrate_genetics_2026 appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
-*   **Suggested Resolution Strategy:**
-    ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut vertebrate_genetics_2026, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
-    ```
-
----
-
-### 121. Omega: `omega_cut_safety_whitehead_problem_undecidability`
-
-*   **Severity:** `N/A`
-*   **Associated Constraint:** `whitehead_problem_undecidability`
-*   **Source Gap:** `gap(mountain_coordination_confusion,mountain,rope)`
-*   **Question:** Constraint whitehead_problem_undecidability appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
-*   **Suggested Resolution Strategy:**
-    ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut whitehead_problem_undecidability, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
-    ```
-
----
-
-### 122. Omega: `omega_extraction_blindness_26usc469_real_estate_exemption`
+### 70. Omega: `omega_extraction_blindness_26usc469_real_estate_exemption`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `26usc469_real_estate_exemption`
@@ -3161,7 +1809,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 123. Omega: `omega_extraction_blindness_abstraction_boundary_overrun`
+### 71. Omega: `omega_extraction_blindness_abstraction_boundary_overrun`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `abstraction_boundary_overrun`
@@ -3188,7 +1836,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 124. Omega: `omega_extraction_blindness_abstraction_leakage`
+### 72. Omega: `omega_extraction_blindness_abstraction_leakage`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `abstraction_leakage`
@@ -3215,7 +1863,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 125. Omega: `omega_extraction_blindness_academic_fashion_modernism_2026`
+### 73. Omega: `omega_extraction_blindness_academic_fashion_modernism_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `academic_fashion_modernism_2026`
@@ -3242,7 +1890,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 126. Omega: `omega_extraction_blindness_academic_tenure_system`
+### 74. Omega: `omega_extraction_blindness_academic_tenure_system`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `academic_tenure_system`
@@ -3262,7 +1910,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 127. Omega: `omega_extraction_blindness_ad_fus_coordination`
+### 75. Omega: `omega_extraction_blindness_ad_fus_coordination`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ad_fus_coordination`
@@ -3289,7 +1937,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 128. Omega: `omega_extraction_blindness_ad_synaptic_deficit`
+### 76. Omega: `omega_extraction_blindness_ad_synaptic_deficit`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ad_synaptic_deficit`
@@ -3309,7 +1957,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 129. Omega: `omega_extraction_blindness_adaptive_lag_trap`
+### 77. Omega: `omega_extraction_blindness_adaptive_lag_trap`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `adaptive_lag_trap`
@@ -3336,7 +1984,34 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 130. Omega: `omega_extraction_blindness_adversarial_truth_decay`
+### 78. Omega: `omega_extraction_blindness_adversarial_surface_inflation`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `adversarial_surface_inflation`
+*   **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+*   **Question:** Constraint adversarial_surface_inflation appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from adversarial_surface_inflation?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does adversarial_surface_inflation serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 79. Omega: `omega_extraction_blindness_adversarial_truth_decay`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `adversarial_truth_decay`
@@ -3363,7 +2038,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 131. Omega: `omega_extraction_blindness_adverse_possession`
+### 80. Omega: `omega_extraction_blindness_adverse_possession`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `adverse_possession`
@@ -3390,7 +2065,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 132. Omega: `omega_extraction_blindness_advice_as_dangerous_gift`
+### 81. Omega: `omega_extraction_blindness_advice_as_dangerous_gift`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `advice_as_dangerous_gift`
@@ -3417,7 +2092,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 133. Omega: `omega_extraction_blindness_agency_atrophy`
+### 82. Omega: `omega_extraction_blindness_agency_atrophy`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `agency_atrophy`
@@ -3444,7 +2119,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 134. Omega: `omega_extraction_blindness_agent_opt_2026`
+### 83. Omega: `omega_extraction_blindness_agent_opt_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `agentive_optimism_2026`
@@ -3471,7 +2146,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 135. Omega: `omega_extraction_blindness_aging_longevity_tests`
+### 84. Omega: `omega_extraction_blindness_aging_longevity_tests`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `aging_well_assessment`
@@ -3498,7 +2173,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 136. Omega: `omega_extraction_blindness_ai_auditability_gap`
+### 85. Omega: `omega_extraction_blindness_ai_auditability_gap`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ai_auditability_gap`
@@ -3525,7 +2200,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 137. Omega: `omega_extraction_blindness_ai_banal_capture`
+### 86. Omega: `omega_extraction_blindness_ai_banal_capture`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ai_banal_capture`
@@ -3552,7 +2227,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 138. Omega: `omega_extraction_blindness_ai_driven_surveillance_sensor_layer`
+### 87. Omega: `omega_extraction_blindness_ai_driven_surveillance_sensor_layer`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ai_driven_surveillance_sensor_layer`
@@ -3572,7 +2247,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 139. Omega: `omega_extraction_blindness_ai_evaluators_matching`
+### 88. Omega: `omega_extraction_blindness_ai_evaluators_matching`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ai_evaluators_matching`
@@ -3599,7 +2274,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 140. Omega: `omega_extraction_blindness_ai_professional_displacement`
+### 89. Omega: `omega_extraction_blindness_ai_professional_displacement`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ai_professional_displacement`
@@ -3607,19 +2282,26 @@ IF context-dependent → Add indexical resolution
 *   **Question:** Constraint ai_professional_displacement appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
     ```
-1. Design measurement protocol for unknown
-2. Collect data from N=30+ real-world instances
-3. Calculate empirical metrics:
-- suppression_requirement (enforcement needed)
-- resistance_to_change (pushback level)
-- base_extractiveness (asymmetric benefit flow)
-4. Update constraint_metric/3 declarations with data
-5. Re-run classification to resolve perspectival gap
+1. Interview affected individuals (N=10+):
+- Who benefits from ai_professional_displacement?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does ai_professional_displacement serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
     ```
 
 ---
 
-### 141. Omega: `omega_extraction_blindness_ai_religion_regulation`
+### 90. Omega: `omega_extraction_blindness_ai_religion_regulation`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ai_religion_regulation`
@@ -3646,7 +2328,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 142. Omega: `omega_extraction_blindness_ai_scholar_citation_trap`
+### 91. Omega: `omega_extraction_blindness_ai_scholar_citation_trap`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ai_scholar_citation_trap`
@@ -3673,7 +2355,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 143. Omega: `omega_extraction_blindness_ai_superpowers_2026`
+### 92. Omega: `omega_extraction_blindness_ai_superpowers_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ai_superpowers_race_2026`
@@ -3700,7 +2382,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 144. Omega: `omega_extraction_blindness_airbnb_str_regulation`
+### 93. Omega: `omega_extraction_blindness_airbnb_str_regulation`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `s1_airbnb`
@@ -3727,7 +2409,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 145. Omega: `omega_extraction_blindness_algorithmic_bias`
+### 94. Omega: `omega_extraction_blindness_algorithmic_bias`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `algorithmic_bias`
@@ -3754,7 +2436,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 146. Omega: `omega_extraction_blindness_algorithmic_epistemic_capture`
+### 95. Omega: `omega_extraction_blindness_algorithmic_epistemic_capture`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `algorithmic_epistemic_capture`
@@ -3774,7 +2456,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 147. Omega: `omega_extraction_blindness_alignment_tax_tradeoff`
+### 96. Omega: `omega_extraction_blindness_alignment_tax_tradeoff`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `alignment_tax_tradeoff`
@@ -3794,7 +2476,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 148. Omega: `omega_extraction_blindness_altruistic_misery_paradox_2026`
+### 97. Omega: `omega_extraction_blindness_altruistic_misery_paradox_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `altruistic_misery_paradox_2026`
@@ -3821,7 +2503,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 149. Omega: `omega_extraction_blindness_amish_technological_renunciation`
+### 98. Omega: `omega_extraction_blindness_amish_technological_renunciation`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `amish_technological_renunciation`
@@ -3848,7 +2530,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 150. Omega: `omega_extraction_blindness_ancestral_pueblo_hydrology`
+### 99. Omega: `omega_extraction_blindness_ancestral_pueblo_hydrology`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ancestral_pueblo_hydrology`
@@ -3875,7 +2557,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 151. Omega: `omega_extraction_blindness_anticipatory_capacity_failure`
+### 100. Omega: `omega_extraction_blindness_anticipatory_capacity_failure`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `anticipatory_capacity_failure`
@@ -3895,7 +2577,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 152. Omega: `omega_extraction_blindness_apartheid_nuclear_program`
+### 101. Omega: `omega_extraction_blindness_apartheid_nuclear_program`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `apartheid_nuclear_program`
@@ -3915,7 +2597,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 153. Omega: `omega_extraction_blindness_arctic_geopolitical_flashpoint`
+### 102. Omega: `omega_extraction_blindness_arctic_geopolitical_flashpoint`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `arctic_geopolitical_flashpoint`
@@ -3942,7 +2624,34 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 154. Omega: `omega_extraction_blindness_art_market_decoupling`
+### 103. Omega: `omega_extraction_blindness_arrows_impossibility_theorem`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `arrows_impossibility_theorem`
+*   **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+*   **Question:** Constraint arrows_impossibility_theorem appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from arrows_impossibility_theorem?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does arrows_impossibility_theorem serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 104. Omega: `omega_extraction_blindness_art_market_decoupling`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `art_market_decoupling`
@@ -3969,7 +2678,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 155. Omega: `omega_extraction_blindness_artificial_scarcity_scaffold`
+### 105. Omega: `omega_extraction_blindness_artificial_scarcity_scaffold`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `artificial_scarcity_scaffold`
@@ -3996,7 +2705,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 156. Omega: `omega_extraction_blindness_artificial_snow_2026`
+### 106. Omega: `omega_extraction_blindness_artificial_snow_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `artificial_snow_2026`
@@ -4023,7 +2732,34 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 157. Omega: `omega_extraction_blindness_asymmetric_burden_distribution`
+### 107. Omega: `omega_extraction_blindness_asce_7_22_seismic_design`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `asce_7_22_seismic_design`
+*   **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+*   **Question:** Constraint asce_7_22_seismic_design appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from asce_7_22_seismic_design?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does asce_7_22_seismic_design serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 108. Omega: `omega_extraction_blindness_asymmetric_burden_distribution`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `asymmetric_burden_distribution`
@@ -4050,7 +2786,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 158. Omega: `omega_extraction_blindness_atrophied_optimization_piton`
+### 109. Omega: `omega_extraction_blindness_atrophied_optimization_piton`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `atrophied_optimization_piton`
@@ -4077,7 +2813,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 159. Omega: `omega_extraction_blindness_attention_as_bottleneck_resource`
+### 110. Omega: `omega_extraction_blindness_attention_as_bottleneck_resource`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `attention_as_bottleneck_resource`
@@ -4104,7 +2840,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 160. Omega: `omega_extraction_blindness_attention_market_cannibalization`
+### 111. Omega: `omega_extraction_blindness_attention_market_cannibalization`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `attention_market_cannibalization`
@@ -4131,7 +2867,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 161. Omega: `omega_extraction_blindness_australia_social_ban_2026`
+### 112. Omega: `omega_extraction_blindness_australia_social_ban_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `australia_social_ban_2026`
@@ -4158,7 +2894,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 162. Omega: `omega_extraction_blindness_automatic_enrollment_defaults`
+### 113. Omega: `omega_extraction_blindness_automatic_enrollment_defaults`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `automatic_enrollment_defaults`
@@ -4185,7 +2921,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 163. Omega: `omega_extraction_blindness_autonomous_toolchain_sprawl`
+### 114. Omega: `omega_extraction_blindness_autonomous_toolchain_sprawl`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `autonomous_toolchain_sprawl`
@@ -4212,7 +2948,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 164. Omega: `omega_extraction_blindness_availability_heuristic`
+### 115. Omega: `omega_extraction_blindness_availability_heuristic`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `availability_heuristic`
@@ -4239,7 +2975,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 165. Omega: `omega_extraction_blindness_average_is_over_2026`
+### 116. Omega: `omega_extraction_blindness_average_is_over_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `average_is_over_2026`
@@ -4266,7 +3002,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 166. Omega: `omega_extraction_blindness_awareness_without_leverage`
+### 117. Omega: `omega_extraction_blindness_awareness_without_leverage`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `awareness_without_leverage`
@@ -4293,7 +3029,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 167. Omega: `omega_extraction_blindness_axiom_reasoner_2026`
+### 118. Omega: `omega_extraction_blindness_axiom_reasoner_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `axiom_reasoner_2026`
@@ -4320,7 +3056,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 168. Omega: `omega_extraction_blindness_bangladesh_july_national_charter`
+### 119. Omega: `omega_extraction_blindness_bangladesh_july_national_charter`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `bangladesh_july_national_charter`
@@ -4347,7 +3083,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 169. Omega: `omega_extraction_blindness_belief_argument_conclusion`
+### 120. Omega: `omega_extraction_blindness_belief_argument_conclusion`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `belief_argument_conclusion`
@@ -4374,7 +3110,61 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 170. Omega: `omega_extraction_blindness_biological_curiosity`
+### 121. Omega: `omega_extraction_blindness_bgs_eigenvector_thermalization`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `bgs_eigenvector_thermalization`
+*   **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+*   **Question:** Constraint bgs_eigenvector_thermalization appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from bgs_eigenvector_thermalization?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does bgs_eigenvector_thermalization serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 122. Omega: `omega_extraction_blindness_big_data_astrophysics_arbitrage`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `big_data_astrophysics_arbitrage`
+*   **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+*   **Question:** Constraint big_data_astrophysics_arbitrage appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from big_data_astrophysics_arbitrage?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does big_data_astrophysics_arbitrage serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 123. Omega: `omega_extraction_blindness_biological_curiosity`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `biological_curiosity`
@@ -4401,7 +3191,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 171. Omega: `omega_extraction_blindness_bip_narrative_illusion`
+### 124. Omega: `omega_extraction_blindness_bip_narrative_illusion`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `bip_narrative_illusion`
@@ -4428,7 +3218,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 172. Omega: `omega_extraction_blindness_blackstone_conflicts_of_interest`
+### 125. Omega: `omega_extraction_blindness_blackstone_conflicts_of_interest`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `blackstone_conflicts_of_interest`
@@ -4455,7 +3245,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 173. Omega: `omega_extraction_blindness_blackstone_smd_control`
+### 126. Omega: `omega_extraction_blindness_blackstone_smd_control`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `blackstone_smd_control`
@@ -4482,7 +3272,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 174. Omega: `omega_extraction_blindness_blackstone_tra`
+### 127. Omega: `omega_extraction_blindness_blackstone_tra`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `blackstone_tax_receiveable_agreement`
@@ -4509,7 +3299,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 175. Omega: `omega_extraction_blindness_boiled_pineapple_trend_2026`
+### 128. Omega: `omega_extraction_blindness_boiled_pineapple_trend_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `boiled_pineapple_trend_2026`
@@ -4536,7 +3326,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 176. Omega: `omega_extraction_blindness_boltzmann_universality_2026`
+### 129. Omega: `omega_extraction_blindness_boltzmann_universality_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `boltzmann_universality_2026`
@@ -4563,7 +3353,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 177. Omega: `omega_extraction_blindness_boundary_dissolution_risk`
+### 130. Omega: `omega_extraction_blindness_boundary_dissolution_risk`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `boundary_dissolution_risk`
@@ -4590,7 +3380,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 178. Omega: `omega_extraction_blindness_brazil_2026_general_elections`
+### 131. Omega: `omega_extraction_blindness_brazil_2026_general_elections`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `brazil_2026_general_elections`
@@ -4617,7 +3407,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 179. Omega: `omega_extraction_blindness_burali_forti_paradox`
+### 132. Omega: `omega_extraction_blindness_burali_forti_paradox`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `burali_forte_paradox`
@@ -4644,7 +3434,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 180. Omega: `omega_extraction_blindness_burden_of_proof_engineering_safety`
+### 133. Omega: `omega_extraction_blindness_burden_of_proof_engineering_safety`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `burden_of_proof_engineering_safety`
@@ -4671,7 +3461,34 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 181. Omega: `omega_extraction_blindness_bureaucratic_legibility_collapse`
+### 134. Omega: `omega_extraction_blindness_burden_of_proof_scientific`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `burden_of_proof_scientific_empirical`
+*   **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+*   **Question:** Constraint burden_of_proof_scientific appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from burden_of_proof_scientific?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does burden_of_proof_scientific serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 135. Omega: `omega_extraction_blindness_bureaucratic_legibility_collapse`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `bureaucratic_legibility_collapse`
@@ -4698,7 +3515,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 182. Omega: `omega_extraction_blindness_bureaucratic_self_preservation`
+### 136. Omega: `omega_extraction_blindness_bureaucratic_self_preservation`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `bureaucratic_self_preservation`
@@ -4725,7 +3542,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 183. Omega: `omega_extraction_blindness_bushman_money_magic`
+### 137. Omega: `omega_extraction_blindness_bushman_money_magic`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `bushman_money_magic`
@@ -4752,7 +3569,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 184. Omega: `omega_extraction_blindness_canal_panama_influence`
+### 138. Omega: `omega_extraction_blindness_canal_panama_influence`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `canal_panama_influence`
@@ -4779,7 +3596,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 185. Omega: `omega_extraction_blindness_cancer_prevention`
+### 139. Omega: `omega_extraction_blindness_cancer_prevention`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `cancer_prevention`
@@ -4806,34 +3623,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 186. Omega: `omega_extraction_blindness_cap_theorem`
-
-*   **Severity:** `N/A`
-*   **Associated Constraint:** `cap_theorem`
-*   **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
-*   **Question:** Constraint cap_theorem appears extractive (Snare) to individuals but functional (Rope) to institutions...
-*   **Suggested Resolution Strategy:**
-    ```
-1. Interview affected individuals (N=10+):
-- Who benefits from cap_theorem?
-- Can you change/exit this constraint?
-- What would happen if you tried?
-2. Interview institutional actors (N=10+):
-- What function does cap_theorem serve?
-- Who would object to removing it?
-- What alternatives exist?
-3. Document benefit flows:
-- Track who gains vs. who loses from status quo
-- Measure asymmetric benefit distribution
-4. Decision tree:
-IF extraction confirmed → Reclassify as SNARE
-IF functional & fair → Reclassify as ROPE
-IF context-dependent → Add indexical resolution
-    ```
-
----
-
-### 187. Omega: `omega_extraction_blindness_capability_eval_overhang`
+### 140. Omega: `omega_extraction_blindness_capability_eval_overhang`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `capability_eval_overhang`
@@ -4860,7 +3650,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 188. Omega: `omega_extraction_blindness_capital_misallocation_spiral`
+### 141. Omega: `omega_extraction_blindness_capital_misallocation_spiral`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `capital_misallocation_spiral`
@@ -4887,7 +3677,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 189. Omega: `omega_extraction_blindness_carbon_credit_markets_2026`
+### 142. Omega: `omega_extraction_blindness_carbon_credit_markets_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `carbon_credit_markets_2026`
@@ -4914,7 +3704,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 190. Omega: `omega_extraction_blindness_carrying_capacity`
+### 143. Omega: `omega_extraction_blindness_carrying_capacity`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `carrying_capacity`
@@ -4941,7 +3731,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 191. Omega: `omega_extraction_blindness_cascading_constraint_failure`
+### 144. Omega: `omega_extraction_blindness_cascading_constraint_failure`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `cascading_constraint_failure`
@@ -4968,7 +3758,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 192. Omega: `omega_extraction_blindness_cascading_uncertainty_2026`
+### 145. Omega: `omega_extraction_blindness_cascading_uncertainty_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `cascading_uncertainty_2026`
@@ -4995,7 +3785,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 193. Omega: `omega_extraction_blindness_cbdc_implementation`
+### 146. Omega: `omega_extraction_blindness_cbdc_implementation`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `cbdc_implementation`
@@ -5022,7 +3812,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 194. Omega: `omega_extraction_blindness_cg_israelgaza_20231012`
+### 147. Omega: `omega_extraction_blindness_cg_israelgaza_20231012`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `CG_IsraelGaza_20231012`
@@ -5049,7 +3839,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 195. Omega: `omega_extraction_blindness_challenger_o_ring_integrity`
+### 148. Omega: `omega_extraction_blindness_challenger_o_ring_integrity`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `challenger_o_ring_integrity`
@@ -5076,7 +3866,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 196. Omega: `omega_extraction_blindness_child_marriage`
+### 149. Omega: `omega_extraction_blindness_child_marriage`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `child_marriage`
@@ -5103,7 +3893,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 197. Omega: `omega_extraction_blindness_china_critical_mineral_chokepoint`
+### 150. Omega: `omega_extraction_blindness_china_critical_mineral_chokepoint`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `china_critical_mineral_chokepoint`
@@ -5130,7 +3920,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 198. Omega: `omega_extraction_blindness_cholesterol_pill_cost`
+### 151. Omega: `omega_extraction_blindness_cholesterol_pill_cost`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `cholesterol_pill_cost`
@@ -5157,7 +3947,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 199. Omega: `omega_extraction_blindness_cia_fbi_legal_wall`
+### 152. Omega: `omega_extraction_blindness_cia_fbi_legal_wall`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `cia_fbi_legal_wall`
@@ -5184,7 +3974,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 200. Omega: `omega_extraction_blindness_circadian_decoupling_arbitrage`
+### 153. Omega: `omega_extraction_blindness_circadian_decoupling_arbitrage`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `circadian_decoupling_arbitrage`
@@ -5211,7 +4001,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 201. Omega: `omega_extraction_blindness_citation_collapse_dynamics`
+### 154. Omega: `omega_extraction_blindness_citation_collapse_dynamics`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `citation_collapse_dynamics`
@@ -5238,7 +4028,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 202. Omega: `omega_extraction_blindness_civilizational_maintenance_debt`
+### 155. Omega: `omega_extraction_blindness_civilizational_maintenance_debt`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `civilizational_maintenance_debt`
@@ -5265,7 +4055,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 203. Omega: `omega_extraction_blindness_clawderberg_recursive_slop`
+### 156. Omega: `omega_extraction_blindness_clawderberg_recursive_slop`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `clawderberg_recursive_slop`
@@ -5292,7 +4082,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 204. Omega: `omega_extraction_blindness_cloudflare_dual_class_asymmetry`
+### 157. Omega: `omega_extraction_blindness_cloudflare_dual_class_asymmetry`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `cloudflare_dual_class_asymmetry`
@@ -5319,7 +4109,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 205. Omega: `omega_extraction_blindness_cma`
+### 158. Omega: `omega_extraction_blindness_cma`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `cognitive_mimicry_arbitrage`
@@ -5346,7 +4136,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 206. Omega: `omega_extraction_blindness_cmr_001`
+### 159. Omega: `omega_extraction_blindness_cmr_001`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `cmr_001`
@@ -5373,7 +4163,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 207. Omega: `omega_extraction_blindness_cobra_effect`
+### 160. Omega: `omega_extraction_blindness_cobra_effect`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `cobra_effect`
@@ -5400,7 +4190,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 208. Omega: `omega_extraction_blindness_codex_access`
+### 161. Omega: `omega_extraction_blindness_codex_access`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `codex_access`
@@ -5427,7 +4217,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 209. Omega: `omega_extraction_blindness_coffee_cardiovascular_2026`
+### 162. Omega: `omega_extraction_blindness_coffee_cardiovascular_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `coffee_cardiovascular_2026`
@@ -5454,7 +4244,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 210. Omega: `omega_extraction_blindness_cognitive_diversity_arbitrage`
+### 163. Omega: `omega_extraction_blindness_cognitive_diversity_arbitrage`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `cognitive_diversity_arbitrage`
@@ -5481,7 +4271,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 211. Omega: `omega_extraction_blindness_cognitive_energy_budget`
+### 164. Omega: `omega_extraction_blindness_cognitive_energy_budget`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `cognitive_energy_budget`
@@ -5508,7 +4298,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 212. Omega: `omega_extraction_blindness_cognitive_hacking_2026`
+### 165. Omega: `omega_extraction_blindness_cognitive_hacking_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `cognitive_hacking_2026`
@@ -5535,7 +4325,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 213. Omega: `omega_extraction_blindness_cognitive_induction_gap`
+### 166. Omega: `omega_extraction_blindness_cognitive_induction_gap`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `cognitive_induction_gap`
@@ -5562,7 +4352,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 214. Omega: `omega_extraction_blindness_cognitive_surrender_to_system_3`
+### 167. Omega: `omega_extraction_blindness_cognitive_surrender_to_system_3`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `cognitive_surrender_to_system_3`
@@ -5589,7 +4379,34 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 215. Omega: `omega_extraction_blindness_coinbase_regulatory_uncertainty`
+### 168. Omega: `omega_extraction_blindness_coinbase_crypto_volatility`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `coinbase_crypto_volatility`
+*   **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+*   **Question:** Constraint coinbase_crypto_volatility appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from coinbase_crypto_volatility?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does coinbase_crypto_volatility serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 169. Omega: `omega_extraction_blindness_coinbase_regulatory_uncertainty`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `coinbase_regulatory_uncertainty`
@@ -5616,7 +4433,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 216. Omega: `omega_extraction_blindness_collective_action_deadlock`
+### 170. Omega: `omega_extraction_blindness_collective_action_deadlock`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `collective_action_deadlock`
@@ -5643,7 +4460,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 217. Omega: `omega_extraction_blindness_college_admissions_market`
+### 171. Omega: `omega_extraction_blindness_college_admissions_market`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `college_admissions_market`
@@ -5670,7 +4487,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 218. Omega: `omega_extraction_blindness_colorado_sbe_decentralization_friction`
+### 172. Omega: `omega_extraction_blindness_colorado_sbe_decentralization_friction`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `colorado_sbe_decentralization_friction`
@@ -5697,7 +4514,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 219. Omega: `omega_extraction_blindness_communal_narcissism_social_trap`
+### 173. Omega: `omega_extraction_blindness_communal_narcissism_social_trap`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `communal_narcissism_social_trap`
@@ -5724,7 +4541,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 220. Omega: `omega_extraction_blindness_complexity_debt`
+### 174. Omega: `omega_extraction_blindness_complexity_debt`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `complexity_debt`
@@ -5751,7 +4568,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 221. Omega: `omega_extraction_blindness_compounding_logic`
+### 175. Omega: `omega_extraction_blindness_compounding_logic`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `compounding_logic`
@@ -5778,7 +4595,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 222. Omega: `omega_extraction_blindness_confirmation_bias`
+### 176. Omega: `omega_extraction_blindness_confirmation_bias`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `confirmation_bias`
@@ -5805,7 +4622,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 223. Omega: `omega_extraction_blindness_consensus_without_truth`
+### 177. Omega: `omega_extraction_blindness_consensus_without_truth`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `consensus_without_truth`
@@ -5832,7 +4649,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 224. Omega: `omega_extraction_blindness_constitutional_consecration`
+### 178. Omega: `omega_extraction_blindness_constitutional_consecration`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `constitutional_consecration`
@@ -5859,10 +4676,10 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 225. Omega: `omega_extraction_blindness_constraint_interaction_explosion`
+### 179. Omega: `omega_extraction_blindness_constraint_interaction_explosion`
 
 *   **Severity:** `N/A`
-*   **Associated Constraint:** `constraint_interaction_explosion`
+*   **Associated Constraint:** `interaction_explosion`
 *   **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
 *   **Question:** Constraint constraint_interaction_explosion appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -5879,7 +4696,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 226. Omega: `omega_extraction_blindness_consumer_debt_slavery`
+### 180. Omega: `omega_extraction_blindness_consumer_debt_slavery`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `consumer_debt_slavery`
@@ -5906,7 +4723,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 227. Omega: `omega_extraction_blindness_container_capacity_mismatch`
+### 181. Omega: `omega_extraction_blindness_container_capacity_mismatch`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `container_capacity_mismatch`
@@ -5933,7 +4750,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 228. Omega: `omega_extraction_blindness_conversational_dogmas_interruption`
+### 182. Omega: `omega_extraction_blindness_conversational_dogmas_interruption`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `conversational_dogmas_interuption`
@@ -5960,7 +4777,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 229. Omega: `omega_extraction_blindness_coordination_attack_vulnerability`
+### 183. Omega: `omega_extraction_blindness_coordination_attack_vulnerability`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `coordination_attack_vulnerability`
@@ -5987,7 +4804,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 230. Omega: `omega_extraction_blindness_coordination_fatigue`
+### 184. Omega: `omega_extraction_blindness_coordination_fatigue`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `coordination_fatigue`
@@ -6014,7 +4831,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 231. Omega: `omega_extraction_blindness_coordination_threshold_failure`
+### 185. Omega: `omega_extraction_blindness_coordination_threshold_failure`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `coordination_threshold_failure`
@@ -6041,7 +4858,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 232. Omega: `omega_extraction_blindness_cost_of_observation`
+### 186. Omega: `omega_extraction_blindness_cost_of_observation`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `cost_of_observation`
@@ -6068,7 +4885,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 233. Omega: `omega_extraction_blindness_couples_residency_match`
+### 187. Omega: `omega_extraction_blindness_couples_residency_match`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `couples_residency_match`
@@ -6095,7 +4912,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 234. Omega: `omega_extraction_blindness_credibility_inflation`
+### 188. Omega: `omega_extraction_blindness_credibility_inflation`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `credibility_inflation`
@@ -6122,7 +4939,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 235. Omega: `omega_extraction_blindness_crisis_signal_saturation`
+### 189. Omega: `omega_extraction_blindness_crisis_signal_saturation`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `crisis_signal_saturation`
@@ -6149,7 +4966,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 236. Omega: `omega_extraction_blindness_critical_actor_overcentralization`
+### 190. Omega: `omega_extraction_blindness_critical_actor_overcentralization`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `critical_actor_overcentralization`
@@ -6176,7 +4993,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 237. Omega: `omega_extraction_blindness_cross_domain_coupling_spiral`
+### 191. Omega: `omega_extraction_blindness_cross_domain_coupling_spiral`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `cross_domain_coupling_spiral`
@@ -6203,7 +5020,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 238. Omega: `omega_extraction_blindness_cs_ecmo_bridge`
+### 192. Omega: `omega_extraction_blindness_cs_ecmo_bridge`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `cs_ecmo_bridge`
@@ -6230,7 +5047,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 239. Omega: `omega_extraction_blindness_cuba_mandatrophic_collapse`
+### 193. Omega: `omega_extraction_blindness_cuba_mandatrophic_collapse`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `cuba_mandatrophic_collapse`
@@ -6257,7 +5074,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 240. Omega: `omega_extraction_blindness_cultural_memory_decay`
+### 194. Omega: `omega_extraction_blindness_cultural_memory_decay`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `cultural_memory_decay`
@@ -6284,7 +5101,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 241. Omega: `omega_extraction_blindness_cultural_refragmentation_2026`
+### 195. Omega: `omega_extraction_blindness_cultural_refragmentation_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `cultural_refragmentation_2026`
@@ -6311,7 +5128,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 242. Omega: `omega_extraction_blindness_cz_plea_agreement_2026`
+### 196. Omega: `omega_extraction_blindness_cz_plea_agreement_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `cz_plea_agreement_2026`
@@ -6338,7 +5155,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 243. Omega: `omega_extraction_blindness_dark_patterns_manipulation`
+### 197. Omega: `omega_extraction_blindness_dark_patterns_manipulation`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `dark_patterns_manipulation`
@@ -6365,7 +5182,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 244. Omega: `omega_extraction_blindness_data_laundering_pipeline`
+### 198. Omega: `omega_extraction_blindness_data_laundering_pipeline`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `data_laundering_pipeline`
@@ -6392,7 +5209,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 245. Omega: `omega_extraction_blindness_data_privacy_regulation`
+### 199. Omega: `omega_extraction_blindness_data_privacy_regulation`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `data_privacy_regulation`
@@ -6419,7 +5236,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 246. Omega: `omega_extraction_blindness_decision_latency_mismatch`
+### 200. Omega: `omega_extraction_blindness_decision_latency_mismatch`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `decision_latency_mismatch`
@@ -6446,7 +5263,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 247. Omega: `omega_extraction_blindness_deferred_risk_realization`
+### 201. Omega: `omega_extraction_blindness_deferred_risk_realization`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `deferred_risk_realization`
@@ -6473,7 +5290,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 248. Omega: `omega_extraction_blindness_delayed_feedback_instability`
+### 202. Omega: `omega_extraction_blindness_delayed_feedback_instability`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `delayed_feedback_instability`
@@ -6500,7 +5317,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 249. Omega: `omega_extraction_blindness_delta_force_selection_2026`
+### 203. Omega: `omega_extraction_blindness_delta_force_selection_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `delta_force_selection_2026`
@@ -6527,7 +5344,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 250. Omega: `omega_extraction_blindness_demographic_inertia_trap`
+### 204. Omega: `omega_extraction_blindness_demographic_inertia_trap`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `demographic_inertia_trap`
@@ -6554,7 +5371,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 251. Omega: `omega_extraction_blindness_digital_credentialing_verification`
+### 205. Omega: `omega_extraction_blindness_digital_credentialing_verification`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `digital_credentialing_verification`
@@ -6581,7 +5398,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 252. Omega: `omega_extraction_blindness_digital_identity_tether`
+### 206. Omega: `omega_extraction_blindness_digital_identity_tether`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `digital_identity_tether`
@@ -6608,7 +5425,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 253. Omega: `omega_extraction_blindness_dionysiac_frenzy`
+### 207. Omega: `omega_extraction_blindness_dionysiac_frenzy`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `dionysaic_frenzy`
@@ -6635,7 +5452,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 254. Omega: `omega_extraction_blindness_discover_core_2026`
+### 208. Omega: `omega_extraction_blindness_discover_core_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `discover_core_2026`
@@ -6662,34 +5479,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 255. Omega: `omega_extraction_blindness_dunbars_number`
-
-*   **Severity:** `N/A`
-*   **Associated Constraint:** `dunbars_number`
-*   **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
-*   **Question:** Constraint dunbars_number appears extractive (Snare) to individuals but functional (Rope) to institutions...
-*   **Suggested Resolution Strategy:**
-    ```
-1. Interview affected individuals (N=10+):
-- Who benefits from dunbars_number?
-- Can you change/exit this constraint?
-- What would happen if you tried?
-2. Interview institutional actors (N=10+):
-- What function does dunbars_number serve?
-- Who would object to removing it?
-- What alternatives exist?
-3. Document benefit flows:
-- Track who gains vs. who loses from status quo
-- Measure asymmetric benefit distribution
-4. Decision tree:
-IF extraction confirmed → Reclassify as SNARE
-IF functional & fair → Reclassify as ROPE
-IF context-dependent → Add indexical resolution
-    ```
-
----
-
-### 256. Omega: `omega_extraction_blindness_dunning_kruger_effect`
+### 209. Omega: `omega_extraction_blindness_dunning_kruger_effect`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `dunning_kruger_effect`
@@ -6716,7 +5506,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 257. Omega: `omega_extraction_blindness_edelman_2026_developed_stagnation`
+### 210. Omega: `omega_extraction_blindness_edelman_2026_developed_stagnation`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `edelman_2026_developed_stagnation`
@@ -6743,7 +5533,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 258. Omega: `omega_extraction_blindness_edelman_2026_insularity`
+### 211. Omega: `omega_extraction_blindness_edelman_2026_insularity`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `edelman_2026_insularity`
@@ -6770,7 +5560,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 259. Omega: `omega_extraction_blindness_electrification_scale_2026`
+### 212. Omega: `omega_extraction_blindness_electrification_scale_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `electrification_scale_2026`
@@ -6797,7 +5587,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 260. Omega: `omega_extraction_blindness_elencher_identity_transformation`
+### 213. Omega: `omega_extraction_blindness_elencher_identity_transformation`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `elencher_identity_transformation`
@@ -6817,7 +5607,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 261. Omega: `omega_extraction_blindness_elite_capture_2026`
+### 214. Omega: `omega_extraction_blindness_elite_capture_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `elite_capture_2026`
@@ -6844,7 +5634,34 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 262. Omega: `omega_extraction_blindness_elite_overproduction_instability`
+### 215. Omega: `omega_extraction_blindness_elite_identity_capture_2026`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `elite_identity_capture_2026`
+*   **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+*   **Question:** Constraint elite_identity_capture_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from elite_identity_capture_2026?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does elite_identity_capture_2026 serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 216. Omega: `omega_extraction_blindness_elite_overproduction_instability`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `elite_overproduction_instability`
@@ -6871,7 +5688,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 263. Omega: `omega_extraction_blindness_em_clinical_guidelines`
+### 217. Omega: `omega_extraction_blindness_em_clinical_guidelines`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `emrgency_medicine_clinical_guidelines`
@@ -6898,7 +5715,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 264. Omega: `omega_extraction_blindness_emergency_bridge_scaffold`
+### 218. Omega: `omega_extraction_blindness_emergency_bridge_scaffold`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `emergency_deployment_scaffold`
@@ -6925,7 +5742,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 265. Omega: `omega_extraction_blindness_emergency_mode_lock_in`
+### 219. Omega: `omega_extraction_blindness_emergency_mode_lock_in`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `emergency_mode_lock_in`
@@ -6952,7 +5769,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 266. Omega: `omega_extraction_blindness_emergency_powers_ratchet`
+### 220. Omega: `omega_extraction_blindness_emergency_powers_ratchet`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `emergency_powers_ratchet`
@@ -6979,7 +5796,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 267. Omega: `omega_extraction_blindness_emergent_goal_misalignment`
+### 221. Omega: `omega_extraction_blindness_emergent_goal_misalignment`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `emergent_goal_misalignment`
@@ -7006,7 +5823,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 268. Omega: `omega_extraction_blindness_empty_tomb_transformation`
+### 222. Omega: `omega_extraction_blindness_empty_tomb_transformation`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `empty_tomb_transformation`
@@ -7014,19 +5831,53 @@ IF context-dependent → Add indexical resolution
 *   **Question:** Constraint empty_tomb_transformation appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
     ```
-1. Design measurement protocol for unknown
-2. Collect data from N=30+ real-world instances
-3. Calculate empirical metrics:
-- suppression_requirement (enforcement needed)
-- resistance_to_change (pushback level)
-- base_extractiveness (asymmetric benefit flow)
-4. Update constraint_metric/3 declarations with data
-5. Re-run classification to resolve perspectival gap
+1. Interview affected individuals (N=10+):
+- Who benefits from empty_tomb_transformation?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does empty_tomb_transformation serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
     ```
 
 ---
 
-### 269. Omega: `omega_extraction_blindness_endowment_effect`
+### 223. Omega: `omega_extraction_blindness_endocrine_disruption_society`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `endocrine_disruption_society`
+*   **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+*   **Question:** Constraint endocrine_disruption_society appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from endocrine_disruption_society?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does endocrine_disruption_society serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 224. Omega: `omega_extraction_blindness_endowment_effect`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `endowment_effect`
@@ -7053,7 +5904,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 270. Omega: `omega_extraction_blindness_epigenetics_complexity_2026`
+### 225. Omega: `omega_extraction_blindness_epigenetics_complexity_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `epigenetics_complexity_2026`
@@ -7080,7 +5931,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 271. Omega: `omega_extraction_blindness_epistemic_free_rider_problem`
+### 226. Omega: `omega_extraction_blindness_epistemic_free_rider_problem`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `epistemic_free_rider_problem`
@@ -7107,7 +5958,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 272. Omega: `omega_extraction_blindness_epistemic_overload_collapse`
+### 227. Omega: `omega_extraction_blindness_epistemic_overload_collapse`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `epistemic_overload_collapse`
@@ -7134,7 +5985,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 273. Omega: `omega_extraction_blindness_epstein_espionage_2026`
+### 228. Omega: `omega_extraction_blindness_epstein_espionage_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `epstein_espionage_crisis_2026`
@@ -7161,7 +6012,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 274. Omega: `omega_extraction_blindness_epstein_files_2026`
+### 229. Omega: `omega_extraction_blindness_epstein_files_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `epstein_files_2026`
@@ -7188,7 +6039,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 275. Omega: `omega_extraction_blindness_epstein_honeytrap`
+### 230. Omega: `omega_extraction_blindness_epstein_honeytrap`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `epstein_kgb_honeytrap`
@@ -7215,7 +6066,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 276. Omega: `omega_extraction_blindness_ergo_storage_rent`
+### 231. Omega: `omega_extraction_blindness_ergo_storage_rent`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ergo_storage_rent`
@@ -7242,7 +6093,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 277. Omega: `omega_extraction_blindness_ergo_storage_rent_mechanism`
+### 232. Omega: `omega_extraction_blindness_ergo_storage_rent_mechanism`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ergo_storage_rent_mechanism`
@@ -7269,7 +6120,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 278. Omega: `omega_extraction_blindness_ergodic_theorems`
+### 233. Omega: `omega_extraction_blindness_ergodic_theorems`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ergodic_theorems`
@@ -7296,7 +6147,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 279. Omega: `omega_extraction_blindness_ergot_grain_poisoning`
+### 234. Omega: `omega_extraction_blindness_ergot_grain_poisoning`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ergot_grain_poisoning`
@@ -7323,7 +6174,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 280. Omega: `omega_extraction_blindness_eurozone_fragmentation_2026`
+### 235. Omega: `omega_extraction_blindness_eurozone_fragmentation_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `eurozone_fragmentation_2026`
@@ -7350,7 +6201,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 281. Omega: `omega_extraction_blindness_evidence_half_life`
+### 236. Omega: `omega_extraction_blindness_evidence_half_life`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `evidence_half_life`
@@ -7377,7 +6228,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 282. Omega: `omega_extraction_blindness_evolutionary_knowledge`
+### 237. Omega: `omega_extraction_blindness_evolutionary_knowledge`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `evolutionary_knowledge`
@@ -7404,7 +6255,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 283. Omega: `omega_extraction_blindness_evolutionary_mismatch_load`
+### 238. Omega: `omega_extraction_blindness_evolutionary_mismatch_load`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `evolutionary_mismatch_load`
@@ -7431,7 +6282,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 284. Omega: `omega_extraction_blindness_expert_disempowerment`
+### 239. Omega: `omega_extraction_blindness_expert_disempowerment`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `expert_disempowerment`
@@ -7458,7 +6309,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 285. Omega: `omega_extraction_blindness_exploration_vs_exploitation`
+### 240. Omega: `omega_extraction_blindness_exploration_vs_exploitation`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `exploration_vs_exploitation`
@@ -7485,7 +6336,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 286. Omega: `omega_extraction_blindness_extraordinary_narrative_shift`
+### 241. Omega: `omega_extraction_blindness_extraordinary_narrative_shift`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `extraordinary_narrative_shift`
@@ -7512,7 +6363,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 287. Omega: `omega_extraction_blindness_factional_instability`
+### 242. Omega: `omega_extraction_blindness_factional_instability`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `factional_instability`
@@ -7539,7 +6390,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 288. Omega: `omega_extraction_blindness_family_estrangement_ratio`
+### 243. Omega: `omega_extraction_blindness_family_estrangement_ratio`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `family_estrangement_ratio`
@@ -7566,7 +6417,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 289. Omega: `omega_extraction_blindness_feedback_loop_desynchronization`
+### 244. Omega: `omega_extraction_blindness_feedback_loop_desynchronization`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `feedback_loop_desynchronization`
@@ -7593,7 +6444,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 290. Omega: `omega_extraction_blindness_financial_drag`
+### 245. Omega: `omega_extraction_blindness_financial_drag`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `financialization_drag`
@@ -7620,7 +6471,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 291. Omega: `omega_extraction_blindness_fine_particle_policy`
+### 246. Omega: `omega_extraction_blindness_fine_particle_policy`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `fine_particle_policy`
@@ -7647,7 +6498,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 292. Omega: `omega_extraction_blindness_finite_pool_of_worry`
+### 247. Omega: `omega_extraction_blindness_finite_pool_of_worry`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `finite_pool_of_worry`
@@ -7674,7 +6525,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 293. Omega: `omega_extraction_blindness_fiscal_dominance_trap`
+### 248. Omega: `omega_extraction_blindness_fiscal_dominance_trap`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `fiscal_dominance_trap`
@@ -7701,20 +6552,20 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 294. Omega: `omega_extraction_blindness_fittss_law`
+### 249. Omega: `omega_extraction_blindness_fitts_law_industrial_application`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `fittss_law`
 *   **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
-*   **Question:** Constraint fittss_law appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Question:** Constraint fitts_law_industrial_application appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
     ```
 1. Interview affected individuals (N=10+):
-- Who benefits from fittss_law?
+- Who benefits from fitts_law_industrial_application?
 - Can you change/exit this constraint?
 - What would happen if you tried?
 2. Interview institutional actors (N=10+):
-- What function does fittss_law serve?
+- What function does fitts_law_industrial_application serve?
 - Who would object to removing it?
 - What alternatives exist?
 3. Document benefit flows:
@@ -7728,7 +6579,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 295. Omega: `omega_extraction_blindness_floating_wall_2026`
+### 250. Omega: `omega_extraction_blindness_floating_wall_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `floating_wall_2026`
@@ -7755,7 +6606,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 296. Omega: `omega_extraction_blindness_fmeca_procedures_1980`
+### 251. Omega: `omega_extraction_blindness_fmeca_procedures_1980`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `fmeca_procedures_1980`
@@ -7782,7 +6633,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 297. Omega: `omega_extraction_blindness_fmt_oncology_2026`
+### 252. Omega: `omega_extraction_blindness_fmt_oncology_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `fmt_oncology_realignment_2026`
@@ -7809,7 +6660,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 298. Omega: `omega_extraction_blindness_fragile_middle_layer_collapse`
+### 253. Omega: `omega_extraction_blindness_fragile_middle_layer_collapse`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `fragile_middle_layer_collapse`
@@ -7836,7 +6687,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 299. Omega: `omega_extraction_blindness_framing_effect`
+### 254. Omega: `omega_extraction_blindness_framing_effect`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `framing_effect`
@@ -7863,7 +6714,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 300. Omega: `omega_extraction_blindness_france_2027_presidential_election`
+### 255. Omega: `omega_extraction_blindness_france_2027_presidential_election`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `france_2027_presidential_election`
@@ -7890,7 +6741,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 301. Omega: `omega_extraction_blindness_france_cordon_sanitaire_2026`
+### 256. Omega: `omega_extraction_blindness_france_cordon_sanitaire_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `france_cordon_sanitaire_2026`
@@ -7910,7 +6761,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 302. Omega: `omega_extraction_blindness_france_local_elections_march_2026`
+### 257. Omega: `omega_extraction_blindness_france_local_elections_march_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `french_local_elections_march_2026`
@@ -7937,7 +6788,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 303. Omega: `omega_extraction_blindness_future_dsm_integration`
+### 258. Omega: `omega_extraction_blindness_future_dsm_integration`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `future_dsm_integration_2026`
@@ -7964,7 +6815,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 304. Omega: `omega_extraction_blindness_gale_shapley`
+### 259. Omega: `omega_extraction_blindness_gale_shapley`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `gale_shapley`
@@ -7991,7 +6842,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 305. Omega: `omega_extraction_blindness_gamblers_ruin_stochastic_extinction`
+### 260. Omega: `omega_extraction_blindness_gamblers_ruin_stochastic_extinction`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `gamblers_ruin_stochastic_extinction`
@@ -8018,7 +6869,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 306. Omega: `omega_extraction_blindness_generational_replacement_inertia`
+### 261. Omega: `omega_extraction_blindness_generational_replacement_inertia`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `generational_replacement_inertia`
@@ -8045,7 +6896,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 307. Omega: `omega_extraction_blindness_genetic_algorithms_evolution`
+### 262. Omega: `omega_extraction_blindness_genetic_algorithms_evolution`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `genetic_algorithms_evolution`
@@ -8072,7 +6923,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 308. Omega: `omega_extraction_blindness_genetic_predisposition`
+### 263. Omega: `omega_extraction_blindness_genetic_predisposition`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `genetic_predisposition`
@@ -8099,7 +6950,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 309. Omega: `omega_extraction_blindness_genie_ip_constraint`
+### 264. Omega: `omega_extraction_blindness_genie_ip_constraint`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `genie_ip_constraint`
@@ -8126,7 +6977,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 310. Omega: `omega_extraction_blindness_geopolitical_insularity_2026`
+### 265. Omega: `omega_extraction_blindness_geopolitical_insularity_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `geopolitical_insularity_2026`
@@ -8153,7 +7004,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 311. Omega: `omega_extraction_blindness_gig_economy_algorithmic_management`
+### 266. Omega: `omega_extraction_blindness_gig_economy_algorithmic_management`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `gig_economy_algorithmic_managment`
@@ -8180,7 +7031,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 312. Omega: `omega_extraction_blindness_gita_kurukshetra`
+### 267. Omega: `omega_extraction_blindness_gita_kurukshetra`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `gita_kurukshetra`
@@ -8207,7 +7058,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 313. Omega: `omega_extraction_blindness_global_economic_anxiety_2026`
+### 268. Omega: `omega_extraction_blindness_global_economic_anxiety_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `global_economic_anxiety_2026`
@@ -8234,7 +7085,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 314. Omega: `omega_extraction_blindness_global_stimulus_spree`
+### 269. Omega: `omega_extraction_blindness_global_stimulus_spree`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `global_stimulus_spree`
@@ -8261,7 +7112,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 315. Omega: `omega_extraction_blindness_global_water_bankruptcy`
+### 270. Omega: `omega_extraction_blindness_global_water_bankruptcy`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `global_water_bankruptcy`
@@ -8288,7 +7139,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 316. Omega: `omega_extraction_blindness_goal_boundary_poisoning`
+### 271. Omega: `omega_extraction_blindness_goal_boundary_poisoning`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `goal_boundary_poisoning`
@@ -8315,7 +7166,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 317. Omega: `omega_extraction_blindness_goodharts_law`
+### 272. Omega: `omega_extraction_blindness_goodharts_law`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `goodharts_law`
@@ -8342,7 +7193,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 318. Omega: `omega_extraction_blindness_governance_latency_gap`
+### 273. Omega: `omega_extraction_blindness_governance_latency_gap`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `governance_latency_gap`
@@ -8369,7 +7220,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 319. Omega: `omega_extraction_blindness_governance_overfitting`
+### 274. Omega: `omega_extraction_blindness_governance_overfitting`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `governance_overfitting`
@@ -8396,7 +7247,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 320. Omega: `omega_extraction_blindness_gpt5_codex_dev_cycle`
+### 275. Omega: `omega_extraction_blindness_gpt5_codex_dev_cycle`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `gpt5_codex_dev_cycle`
@@ -8423,7 +7274,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 321. Omega: `omega_extraction_blindness_graph_coloring_complexity`
+### 276. Omega: `omega_extraction_blindness_graph_coloring_complexity`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `graph_coloring_complexity`
@@ -8450,7 +7301,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 322. Omega: `omega_extraction_blindness_greenland_seizure_trade_war`
+### 277. Omega: `omega_extraction_blindness_greenland_seizure_trade_war`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `greenland_seizure_trade_war`
@@ -8477,7 +7328,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 323. Omega: `omega_extraction_blindness_grete_samsa_transition`
+### 278. Omega: `omega_extraction_blindness_grete_samsa_transition`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `grete_samsa_transition`
@@ -8504,7 +7355,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 324. Omega: `omega_extraction_blindness_grievance_stack_overflow`
+### 279. Omega: `omega_extraction_blindness_grievance_stack_overflow`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `grievance_stack_overflow`
@@ -8531,7 +7382,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 325. Omega: `omega_extraction_blindness_guinea_worm_eradication`
+### 280. Omega: `omega_extraction_blindness_guinea_worm_eradication`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `guinea_worm_eradication`
@@ -8558,7 +7409,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 326. Omega: `omega_extraction_blindness_guthrie_kidnapping_2026`
+### 281. Omega: `omega_extraction_blindness_guthrie_kidnapping_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `guthrie_kidnapping_2026`
@@ -8585,34 +7436,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 327. Omega: `omega_extraction_blindness_hamiltonian_path_complexity`
-
-*   **Severity:** `N/A`
-*   **Associated Constraint:** `hamiltonian_path_complexity`
-*   **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
-*   **Question:** Constraint hamiltonian_path_complexity appears extractive (Snare) to individuals but functional (Rope) to institutions...
-*   **Suggested Resolution Strategy:**
-    ```
-1. Interview affected individuals (N=10+):
-- Who benefits from hamiltonian_path_complexity?
-- Can you change/exit this constraint?
-- What would happen if you tried?
-2. Interview institutional actors (N=10+):
-- What function does hamiltonian_path_complexity serve?
-- Who would object to removing it?
-- What alternatives exist?
-3. Document benefit flows:
-- Track who gains vs. who loses from status quo
-- Measure asymmetric benefit distribution
-4. Decision tree:
-IF extraction confirmed → Reclassify as SNARE
-IF functional & fair → Reclassify as ROPE
-IF context-dependent → Add indexical resolution
-    ```
-
----
-
-### 328. Omega: `omega_extraction_blindness_hammurabi_lex_talionis`
+### 282. Omega: `omega_extraction_blindness_hammurabi_lex_talionis`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `hammurabi`
@@ -8639,7 +7463,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 329. Omega: `omega_extraction_blindness_hanlons_razor`
+### 283. Omega: `omega_extraction_blindness_hanlons_razor`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `hanlons_razor`
@@ -8666,7 +7490,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 330. Omega: `omega_extraction_blindness_hawthorne_effect`
+### 284. Omega: `omega_extraction_blindness_hawthorne_effect`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `hawthorne_effect`
@@ -8693,7 +7517,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 331. Omega: `omega_extraction_blindness_hegemonic_entropy_2026`
+### 285. Omega: `omega_extraction_blindness_hegemonic_entropy_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `hegemonic_entropy_2026`
@@ -8720,7 +7544,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 332. Omega: `omega_extraction_blindness_heisenberg_uncertainty`
+### 286. Omega: `omega_extraction_blindness_heisenberg_uncertainty`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `heisenberg_uncertainty`
@@ -8747,7 +7571,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 333. Omega: `omega_extraction_blindness_helsinki_bus_theory`
+### 287. Omega: `omega_extraction_blindness_helsinki_bus_theory`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `helsinki_bus_theory`
@@ -8774,7 +7598,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 334. Omega: `omega_extraction_blindness_hidden_interdependency_risk`
+### 288. Omega: `omega_extraction_blindness_hidden_interdependency_risk`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `hidden_interdependency_risk`
@@ -8801,7 +7625,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 335. Omega: `omega_extraction_blindness_hoa_covenants`
+### 289. Omega: `omega_extraction_blindness_hoa_covenants`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `hoa_covenants`
@@ -8828,7 +7652,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 336. Omega: `omega_extraction_blindness_hollow_state_syndrome`
+### 290. Omega: `omega_extraction_blindness_hollow_state_syndrome`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `hollow_state_syndrome`
@@ -8855,7 +7679,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 337. Omega: `omega_extraction_blindness_hp_liberalism`
+### 291. Omega: `omega_extraction_blindness_hp_liberalism`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `harry_potter_liberalism`
@@ -8882,7 +7706,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 338. Omega: `omega_extraction_blindness_hu_2026_election_rules`
+### 292. Omega: `omega_extraction_blindness_hu_2026_election_rules`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `hu_2026_electoral_parity`
@@ -8909,7 +7733,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 339. Omega: `omega_extraction_blindness_huang_expectation_resilience_2026`
+### 293. Omega: `omega_extraction_blindness_huang_expectation_resilience_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `huang_expectation_resilience_2026`
@@ -8936,7 +7760,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 340. Omega: `omega_extraction_blindness_hydra_game`
+### 294. Omega: `omega_extraction_blindness_hydra_game`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `hydra_game`
@@ -8963,7 +7787,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 341. Omega: `omega_extraction_blindness_hypercompression_of_time_horizons`
+### 295. Omega: `omega_extraction_blindness_hypercompression_of_time_horizons`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `hypercompression_of_time_horizons`
@@ -8990,7 +7814,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 342. Omega: `omega_extraction_blindness_hypernormie_equilibrium`
+### 296. Omega: `omega_extraction_blindness_hypernormie_equilibrium`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `hypernormie_equilibrium`
@@ -9017,7 +7841,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 343. Omega: `omega_extraction_blindness_ia_digital_preservation`
+### 297. Omega: `omega_extraction_blindness_ia_digital_preservation`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `internet_archive_preservation`
@@ -9044,7 +7868,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 344. Omega: `omega_extraction_blindness_ibm_shield_2026`
+### 298. Omega: `omega_extraction_blindness_ibm_shield_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ibm_shield_2026`
@@ -9071,7 +7895,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 345. Omega: `omega_extraction_blindness_ibm_shield_contract_2026`
+### 299. Omega: `omega_extraction_blindness_ibm_shield_contract_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ibm_shield_contract_2026`
@@ -9098,7 +7922,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 346. Omega: `omega_extraction_blindness_identity_stack_incompatibility`
+### 300. Omega: `omega_extraction_blindness_identity_stack_incompatibility`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `identity_stack_incompatibility`
@@ -9125,7 +7949,34 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 347. Omega: `omega_extraction_blindness_india_semi_mission`
+### 301. Omega: `omega_extraction_blindness_incentive_surface_warping`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `incentive_surface_warping`
+*   **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+*   **Question:** Constraint incentive_surface_warping appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from incentive_surface_warping?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does incentive_surface_warping serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 302. Omega: `omega_extraction_blindness_india_semi_mission`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `india_semi_mission`
@@ -9152,7 +8003,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 348. Omega: `omega_extraction_blindness_individual_revolution_autonomy`
+### 303. Omega: `omega_extraction_blindness_individual_revolution_autonomy`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `individual_revolution_autonomy`
@@ -9179,7 +8030,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 349. Omega: `omega_extraction_blindness_inference_cost_scaling_law`
+### 304. Omega: `omega_extraction_blindness_inference_cost_scaling_law`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `inference_cost_scaling_law`
@@ -9206,7 +8057,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 350. Omega: `omega_extraction_blindness_informational_time_2026`
+### 305. Omega: `omega_extraction_blindness_informational_time_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `informational_time_2026`
@@ -9233,7 +8084,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 351. Omega: `omega_extraction_blindness_infrastructure_interoperability_decay`
+### 306. Omega: `omega_extraction_blindness_infrastructure_interoperability_decay`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `infrastructure_interoperability_decay`
@@ -9260,7 +8111,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 352. Omega: `omega_extraction_blindness_innovators_dilemma`
+### 307. Omega: `omega_extraction_blindness_innovators_dilemma`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `innovators_dilemma`
@@ -9287,7 +8138,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 353. Omega: `omega_extraction_blindness_institutional_inertia_lock`
+### 308. Omega: `omega_extraction_blindness_institutional_inertia_lock`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `institutional_inertia_lock`
@@ -9314,7 +8165,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 354. Omega: `omega_extraction_blindness_institutional_memory_loss`
+### 309. Omega: `omega_extraction_blindness_institutional_memory_loss`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `institutional_memory_loss`
@@ -9341,7 +8192,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 355. Omega: `omega_extraction_blindness_institutional_mutation_domestication`
+### 310. Omega: `omega_extraction_blindness_institutional_mutation_domestication`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `institutional_mutation_domestication`
@@ -9368,7 +8219,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 356. Omega: `omega_extraction_blindness_institutional_mutation_without_selection`
+### 311. Omega: `omega_extraction_blindness_institutional_mutation_without_selection`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `institutional_mutation_without_selection`
@@ -9395,7 +8246,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 357. Omega: `omega_extraction_blindness_institutional_trust_decay`
+### 312. Omega: `omega_extraction_blindness_institutional_trust_decay`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `institutional_trust_decay`
@@ -9422,7 +8273,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 358. Omega: `omega_extraction_blindness_insult_wisdom_training`
+### 313. Omega: `omega_extraction_blindness_insult_wisdom_training`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `insult_wisdom_training`
@@ -9449,7 +8300,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 359. Omega: `omega_extraction_blindness_integrated_digital_governance_stack`
+### 314. Omega: `omega_extraction_blindness_integrated_digital_governance_stack`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `integrated_digital_governance_stack`
@@ -9476,7 +8327,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 360. Omega: `omega_extraction_blindness_interface_contract_breakdown`
+### 315. Omega: `omega_extraction_blindness_interface_contract_breakdown`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `interface_contract_breakdown`
@@ -9503,7 +8354,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 361. Omega: `omega_extraction_blindness_interpretive_frame_fragmentation`
+### 316. Omega: `omega_extraction_blindness_interpretive_frame_fragmentation`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `interpretive_frame_fragmentation`
@@ -9530,7 +8381,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 362. Omega: `omega_extraction_blindness_intertemporal_responsibility_gap`
+### 317. Omega: `omega_extraction_blindness_intertemporal_responsibility_gap`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `intertemporal_responsibility_gap`
@@ -9557,7 +8408,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 363. Omega: `omega_extraction_blindness_invisible_infrastructure_dependency`
+### 318. Omega: `omega_extraction_blindness_invisible_infrastructure_dependency`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `invisible_infrastructure_dependency`
@@ -9584,7 +8435,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 364. Omega: `omega_extraction_blindness_iran_mandatrophic_collapse`
+### 319. Omega: `omega_extraction_blindness_iran_mandatrophic_collapse`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `iran_mandatrophic_collapse`
@@ -9611,7 +8462,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 365. Omega: `omega_extraction_blindness_iran_war_room_2026`
+### 320. Omega: `omega_extraction_blindness_iran_war_room_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `iran_war_room_2026`
@@ -9638,7 +8489,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 366. Omega: `omega_extraction_blindness_iron_law_of_oligarchy`
+### 321. Omega: `omega_extraction_blindness_iron_law_of_oligarchy`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `iron_law_of_oligarchy`
@@ -9665,7 +8516,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 367. Omega: `omega_extraction_blindness_irreversible_policy_commitment`
+### 322. Omega: `omega_extraction_blindness_irreversible_policy_commitment`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `irreversible_policy_commitment`
@@ -9692,7 +8543,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 368. Omega: `omega_extraction_blindness_isa_education_scaffold`
+### 323. Omega: `omega_extraction_blindness_isa_education_scaffold`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `isa_education_scaffold`
@@ -9719,7 +8570,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 369. Omega: `omega_extraction_blindness_israel_electoral_threshold`
+### 324. Omega: `omega_extraction_blindness_israel_electoral_threshold`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `israel_electoral_threshold`
@@ -9746,7 +8597,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 370. Omega: `omega_extraction_blindness_israel_gaza_ceasefire_violation`
+### 325. Omega: `omega_extraction_blindness_israel_gaza_ceasefire_violation`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `israel_gaza_ceasefire_violation`
@@ -9773,7 +8624,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 371. Omega: `omega_extraction_blindness_israel_norwegian_law`
+### 326. Omega: `omega_extraction_blindness_israel_norwegian_law`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `israel_norwegian_law`
@@ -9800,7 +8651,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 372. Omega: `omega_extraction_blindness_israel_override_clause`
+### 327. Omega: `omega_extraction_blindness_israel_override_clause`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `israel_override_clause`
@@ -9827,7 +8678,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 373. Omega: `omega_extraction_blindness_israel_surplus_vote_agreements`
+### 328. Omega: `omega_extraction_blindness_israel_surplus_vote_agreements`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `israel_surplus_vote_agreements`
@@ -9854,7 +8705,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 374. Omega: `omega_extraction_blindness_japanese_energy_scaffold_2025`
+### 329. Omega: `omega_extraction_blindness_japanese_energy_scaffold_2025`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `japanese_energy_scaffold_2025`
@@ -9881,7 +8732,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 375. Omega: `omega_extraction_blindness_jevons_paradox`
+### 330. Omega: `omega_extraction_blindness_jevons_paradox`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `jevons_paradox`
@@ -9908,7 +8759,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 376. Omega: `omega_extraction_blindness_job_hunt_volume_system_2026`
+### 331. Omega: `omega_extraction_blindness_job_hunt_volume_system_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `job_hunt_volume_system_2026`
@@ -9935,7 +8786,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 377. Omega: `omega_extraction_blindness_keltner_relationship_evaluation`
+### 332. Omega: `omega_extraction_blindness_keltner_relationship_evaluation`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `keltner_relationship_evaluation`
@@ -9962,7 +8813,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 378. Omega: `omega_extraction_blindness_khantivadin_radical_patience`
+### 333. Omega: `omega_extraction_blindness_khantivadin_radical_patience`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `khantivadin_radical_patience`
@@ -9989,7 +8840,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 379. Omega: `omega_extraction_blindness_kidney_exchange_market`
+### 334. Omega: `omega_extraction_blindness_kidney_exchange_market`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `kidney_exchange_market`
@@ -10016,7 +8867,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 380. Omega: `omega_extraction_blindness_kirby_paris_theorem`
+### 335. Omega: `omega_extraction_blindness_kirby_paris_theorem`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `kirby_paris_theorem`
@@ -10043,7 +8894,34 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 381. Omega: `omega_extraction_blindness_landscape_of_fear_2026`
+### 336. Omega: `omega_extraction_blindness_labor_union_dues`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `labor_union_dues_structure`
+*   **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+*   **Question:** Constraint labor_union_dues appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from labor_union_dues?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does labor_union_dues serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 337. Omega: `omega_extraction_blindness_landscape_of_fear_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `landscape_of_fear_2026`
@@ -10063,7 +8941,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 382. Omega: `omega_extraction_blindness_latent_goal_activation`
+### 338. Omega: `omega_extraction_blindness_latent_goal_activation`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `latent_goal_activation`
@@ -10090,7 +8968,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 383. Omega: `omega_extraction_blindness_latent_regulatory_bomb`
+### 339. Omega: `omega_extraction_blindness_latent_regulatory_bomb`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `latent_regulatory_bomb`
@@ -10117,7 +8995,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 384. Omega: `omega_extraction_blindness_law_of_diminishing_returns`
+### 340. Omega: `omega_extraction_blindness_law_of_diminishing_returns`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `law_of_diminishing_returns`
@@ -10144,7 +9022,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 385. Omega: `omega_extraction_blindness_legal_formalism_overhang`
+### 341. Omega: `omega_extraction_blindness_legal_formalism_overhang`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `legal_formalism_overhang`
@@ -10171,7 +9049,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 386. Omega: `omega_extraction_blindness_legibility_trap`
+### 342. Omega: `omega_extraction_blindness_legibility_trap`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `legibility_trap`
@@ -10198,7 +9076,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 387. Omega: `omega_extraction_blindness_legitimacy_without_capacity`
+### 343. Omega: `omega_extraction_blindness_legitimacy_without_capacity`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `legitimacy_without_capacity`
@@ -10225,7 +9103,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 388. Omega: `omega_extraction_blindness_legitimacy_without_effectiveness`
+### 344. Omega: `omega_extraction_blindness_legitimacy_without_effectiveness`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `legitimacy_without_effectiveness`
@@ -10252,7 +9130,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 389. Omega: `omega_extraction_blindness_lehman_repo_105`
+### 345. Omega: `omega_extraction_blindness_lehman_repo_105`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `lehman_repo_105`
@@ -10279,7 +9157,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 390. Omega: `omega_extraction_blindness_lindy_effect`
+### 346. Omega: `omega_extraction_blindness_lindy_effect`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `lindy_effect`
@@ -10306,7 +9184,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 391. Omega: `omega_extraction_blindness_liquidity_illusion`
+### 347. Omega: `omega_extraction_blindness_liquidity_illusion`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `liquidity_illusion`
@@ -10333,7 +9211,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 392. Omega: `omega_extraction_blindness_litchfield_sensitive_locations_2026`
+### 348. Omega: `omega_extraction_blindness_litchfield_sensitive_locations_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `litchfield_sensitive_locations_2026`
@@ -10360,20 +9238,20 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 393. Omega: `omega_extraction_blindness_lobs_theorem`
+### 349. Omega: `omega_extraction_blindness_logistic_map_dynamics`
 
 *   **Severity:** `N/A`
-*   **Associated Constraint:** `lobs_theorem`
+*   **Associated Constraint:** `logistic_map_dynamics`
 *   **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
-*   **Question:** Constraint lobs_theorem appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Question:** Constraint logistic_map_dynamics appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
     ```
 1. Interview affected individuals (N=10+):
-- Who benefits from lobs_theorem?
+- Who benefits from logistic_map_dynamics?
 - Can you change/exit this constraint?
 - What would happen if you tried?
 2. Interview institutional actors (N=10+):
-- What function does lobs_theorem serve?
+- What function does logistic_map_dynamics serve?
 - Who would object to removing it?
 - What alternatives exist?
 3. Document benefit flows:
@@ -10387,7 +9265,34 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 394. Omega: `omega_extraction_blindness_lowenheim_skolem_theorem`
+### 350. Omega: `omega_extraction_blindness_lorenz_attractor_dynamics`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `lorenz_attractor_dynamics`
+*   **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+*   **Question:** Constraint lorenz_attractor_dynamics appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from lorenz_attractor_dynamics?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does lorenz_attractor_dynamics serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 351. Omega: `omega_extraction_blindness_lowenheim_skolem_theorem`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `lowenheim_skolem_theorem`
@@ -10414,7 +9319,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 395. Omega: `omega_extraction_blindness_lung_transplant_protocol`
+### 352. Omega: `omega_extraction_blindness_lung_transplant_protocol`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `lung_transplant_protocol`
@@ -10441,7 +9346,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 396. Omega: `omega_extraction_blindness_maintenance_capacity_shortfall`
+### 353. Omega: `omega_extraction_blindness_maintenance_capacity_shortfall`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `maintenance_capacity_shortfall`
@@ -10468,7 +9373,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 397. Omega: `omega_extraction_blindness_maladaptive_selection_process`
+### 354. Omega: `omega_extraction_blindness_maladaptive_selection_process`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `maladaptive_selection_process`
@@ -10495,7 +9400,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 398. Omega: `omega_extraction_blindness_mandatrophic_margin_collapse`
+### 355. Omega: `omega_extraction_blindness_mandatrophic_margin_collapse`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `mandatrophic_margin_collapse`
@@ -10522,7 +9427,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 399. Omega: `omega_extraction_blindness_mandatrophy_systemic_collapse`
+### 356. Omega: `omega_extraction_blindness_mandatrophy_systemic_collapse`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `mandatrophic_margin_collapse_diagnostic`
@@ -10549,7 +9454,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 400. Omega: `omega_extraction_blindness_marriage_market_asymmetry_2026`
+### 357. Omega: `omega_extraction_blindness_marriage_market_asymmetry_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `marriage_market_asymmetry_2026`
@@ -10576,7 +9481,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 401. Omega: `omega_extraction_blindness_mass_market_extinction_2026`
+### 358. Omega: `omega_extraction_blindness_mass_market_extinction_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `mass_market_extinction_2026`
@@ -10603,7 +9508,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 402. Omega: `omega_extraction_blindness_matching_markets_general`
+### 359. Omega: `omega_extraction_blindness_matching_markets_general`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `matching_markets_general`
@@ -10630,7 +9535,34 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 403. Omega: `omega_extraction_blindness_med_diet_consensus_2026`
+### 360. Omega: `omega_extraction_blindness_max_flow_min_cut`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `max_flow`
+*   **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+*   **Question:** Constraint max_flow_min_cut appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from max_flow_min_cut?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does max_flow_min_cut serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 361. Omega: `omega_extraction_blindness_med_diet_consensus_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `med_diet_consensus_2026`
@@ -10657,7 +9589,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 404. Omega: `omega_extraction_blindness_medical_residency_match`
+### 362. Omega: `omega_extraction_blindness_medical_residency_match`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `medical_residency_match`
@@ -10684,7 +9616,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 405. Omega: `omega_extraction_blindness_medieval_church_hegemony`
+### 363. Omega: `omega_extraction_blindness_medieval_church_hegemony`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `medieval_church_hegemony`
@@ -10711,7 +9643,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 406. Omega: `omega_extraction_blindness_memetic_fitness_vs_truth`
+### 364. Omega: `omega_extraction_blindness_memetic_fitness_vs_truth`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `memetic_fitness_vs_truth`
@@ -10738,7 +9670,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 407. Omega: `omega_extraction_blindness_meta_governance_overload`
+### 365. Omega: `omega_extraction_blindness_meta_governance_overload`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `meta_governance_overload`
@@ -10765,7 +9697,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 408. Omega: `omega_extraction_blindness_meta_model_lock_in`
+### 366. Omega: `omega_extraction_blindness_meta_model_lock_in`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `meta_model_lock_in`
@@ -10792,7 +9724,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 409. Omega: `omega_extraction_blindness_metabolic_constraint_cognition`
+### 367. Omega: `omega_extraction_blindness_metabolic_constraint_cognition`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `metabolic_constraint_cognition`
@@ -10819,7 +9751,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 410. Omega: `omega_extraction_blindness_microbiome_symbiosis`
+### 368. Omega: `omega_extraction_blindness_microbiome_symbiosis`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `microbiome_symbiosis`
@@ -10846,7 +9778,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 411. Omega: `omega_extraction_blindness_microwave_weapon_1`
+### 369. Omega: `omega_extraction_blindness_microwave_weapon_1`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `microwave_weapon_1`
@@ -10873,7 +9805,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 412. Omega: `omega_extraction_blindness_mil_std_461g_emi_control`
+### 370. Omega: `omega_extraction_blindness_mil_std_461g_emi_control`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `mil_std_461g_emi_control`
@@ -10900,7 +9832,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 413. Omega: `omega_extraction_blindness_mil_std_810f_tailoring`
+### 371. Omega: `omega_extraction_blindness_mil_std_810f_tailoring`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `mil_std_810f_tailoring`
@@ -10927,7 +9859,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 414. Omega: `omega_extraction_blindness_minnesota_sovereignty_2026`
+### 372. Omega: `omega_extraction_blindness_minnesota_sovereignty_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `minnesota_sovereignty_2026`
@@ -10954,7 +9886,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 415. Omega: `omega_extraction_blindness_misunderstanding_as_mismatch`
+### 373. Omega: `omega_extraction_blindness_misunderstanding_as_mismatch`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `misunderstanding_as_mismatch`
@@ -10981,7 +9913,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 416. Omega: `omega_extraction_blindness_mit_tfus_2026`
+### 374. Omega: `omega_extraction_blindness_mit_tfus_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `mit_tfus_consciousness_2026`
@@ -11008,7 +9940,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 417. Omega: `omega_extraction_blindness_model_autonomy_creep`
+### 375. Omega: `omega_extraction_blindness_model_autonomy_creep`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `model_autonomy_creep`
@@ -11028,7 +9960,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 418. Omega: `omega_extraction_blindness_model_collapse_feedback_loop`
+### 376. Omega: `omega_extraction_blindness_model_collapse_feedback_loop`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `model_collapse_feedback_loop`
@@ -11055,7 +9987,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 419. Omega: `omega_extraction_blindness_model_of_models_regression`
+### 377. Omega: `omega_extraction_blindness_model_of_models_regression`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `model_of_models_regression`
@@ -11082,7 +10014,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 420. Omega: `omega_extraction_blindness_moltbook_agent_theater`
+### 378. Omega: `omega_extraction_blindness_moltbook_agent_theater`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `moltbook_agent_theater`
@@ -11109,7 +10041,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 421. Omega: `omega_extraction_blindness_moltbook_breach_2026`
+### 379. Omega: `omega_extraction_blindness_moltbook_breach_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `moltbook_breach_2026`
@@ -11136,7 +10068,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 422. Omega: `omega_extraction_blindness_moltbot_religion`
+### 380. Omega: `omega_extraction_blindness_moltbot_religion`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `MOLTBOT_RELIGION`
@@ -11163,7 +10095,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 423. Omega: `omega_extraction_blindness_monetary_regime_transition`
+### 381. Omega: `omega_extraction_blindness_monetary_regime_transition`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `monetary_regime_transition`
@@ -11190,7 +10122,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 424. Omega: `omega_extraction_blindness_moral_outsourcing`
+### 382. Omega: `omega_extraction_blindness_moral_outsourcing`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `moral_outsourcing`
@@ -11217,7 +10149,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 425. Omega: `omega_extraction_blindness_multi_agent_reward_hacking`
+### 383. Omega: `omega_extraction_blindness_multi_agent_reward_hacking`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `multi_agent_reward_hacking`
@@ -11244,7 +10176,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 426. Omega: `omega_extraction_blindness_multi_planetary_latency_lock`
+### 384. Omega: `omega_extraction_blindness_multi_planetary_latency_lock`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `multi_planetary_latency_lock`
@@ -11271,7 +10203,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 427. Omega: `omega_extraction_blindness_naming_as_control`
+### 385. Omega: `omega_extraction_blindness_naming_as_control`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `naming_as_control`
@@ -11298,7 +10230,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 428. Omega: `omega_extraction_blindness_narcissistic_ego_maintenance`
+### 386. Omega: `omega_extraction_blindness_narcissistic_ego_maintenance`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `narcissistic_ego_maintenance`
@@ -11325,7 +10257,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 429. Omega: `omega_extraction_blindness_narrative_capacity_exhaustion`
+### 387. Omega: `omega_extraction_blindness_narrative_capacity_exhaustion`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `narrative_capacity_exhaustion`
@@ -11352,7 +10284,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 430. Omega: `omega_extraction_blindness_narrative_overfitting`
+### 388. Omega: `omega_extraction_blindness_narrative_overfitting`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `narrative_overfitting`
@@ -11379,7 +10311,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 431. Omega: `omega_extraction_blindness_necessary_day_job`
+### 389. Omega: `omega_extraction_blindness_necessary_day_job`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `necessary_day_job`
@@ -11406,7 +10338,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 432. Omega: `omega_extraction_blindness_negative_emissions_arbitrage`
+### 390. Omega: `omega_extraction_blindness_negative_emissions_arbitrage`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `negative_emissions_arbitrage`
@@ -11433,7 +10365,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 433. Omega: `omega_extraction_blindness_net_zero_stabilization`
+### 391. Omega: `omega_extraction_blindness_net_zero_stabilization`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `net_zero_stabilization`
@@ -11460,7 +10392,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 434. Omega: `omega_extraction_blindness_network_effects`
+### 392. Omega: `omega_extraction_blindness_network_effects`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `network_effects`
@@ -11487,7 +10419,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 435. Omega: `omega_extraction_blindness_neural_interoperability`
+### 393. Omega: `omega_extraction_blindness_neural_interoperability`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `neural_interoperability`
@@ -11514,7 +10446,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 436. Omega: `omega_extraction_blindness_neural_substrate_2026`
+### 394. Omega: `omega_extraction_blindness_neural_substrate_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `neural_substrate_2026`
@@ -11541,7 +10473,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 437. Omega: `omega_extraction_blindness_neurodiversity_spectrum`
+### 395. Omega: `omega_extraction_blindness_neurodiversity_spectrum`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `neurodiversity_spectrum`
@@ -11568,7 +10500,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 438. Omega: `omega_extraction_blindness_new_start_expiration`
+### 396. Omega: `omega_extraction_blindness_new_start_expiration`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `new_start_expiration`
@@ -11595,7 +10527,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 439. Omega: `omega_extraction_blindness_nine_day_buffer`
+### 397. Omega: `omega_extraction_blindness_nine_day_buffer`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `nine_day_buffer`
@@ -11622,7 +10554,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 440. Omega: `omega_extraction_blindness_no_cloning_theorem`
+### 398. Omega: `omega_extraction_blindness_no_cloning_theorem`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `no_cloning_theorem`
@@ -11649,7 +10581,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 441. Omega: `omega_extraction_blindness_non_compete_agreements`
+### 399. Omega: `omega_extraction_blindness_non_compete_agreements`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `non_compete_agreements`
@@ -11676,7 +10608,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 442. Omega: `omega_extraction_blindness_norm_erosion_threshold`
+### 400. Omega: `omega_extraction_blindness_norm_erosion_threshold`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `norm_erosion_threshold`
@@ -11703,7 +10635,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 443. Omega: `omega_extraction_blindness_north_korea_songun_mandatrophy`
+### 401. Omega: `omega_extraction_blindness_north_korea_songun_mandatrophy`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `north_korea_songun_mandatrophy`
@@ -11730,7 +10662,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 444. Omega: `omega_extraction_blindness_notary_ink_dependency`
+### 402. Omega: `omega_extraction_blindness_notary_ink_dependency`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `notary_ink_dependency`
@@ -11757,7 +10689,34 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 445. Omega: `omega_extraction_blindness_nuclear_vacuum_2026`
+### 403. Omega: `omega_extraction_blindness_nsw_transmission_bottleneck`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `nsw_transmission_bottleneck`
+*   **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+*   **Question:** Constraint nsw_transmission_bottleneck appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from nsw_transmission_bottleneck?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does nsw_transmission_bottleneck serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 404. Omega: `omega_extraction_blindness_nuclear_vacuum_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `nuclear_vacuum_2026`
@@ -11784,7 +10743,61 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 446. Omega: `omega_extraction_blindness_openai_api_access`
+### 405. Omega: `omega_extraction_blindness_omega1_patching_process`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `omega1_patches`
+*   **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+*   **Question:** Constraint omega1_patching_process appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from omega1_patching_process?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does omega1_patching_process serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 406. Omega: `omega_extraction_blindness_omelet_perfection_complexity`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `omelet_perfection_complexity`
+*   **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+*   **Question:** Constraint omelet_perfection_complexity appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from omelet_perfection_complexity?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does omelet_perfection_complexity serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 407. Omega: `omega_extraction_blindness_openai_api_access`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `openai_api_access`
@@ -11811,7 +10824,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 447. Omega: `omega_extraction_blindness_openai_codex_app_constraint`
+### 408. Omega: `omega_extraction_blindness_openai_codex_app_constraint`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `openai_codex_app_constraint`
@@ -11838,7 +10851,34 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 448. Omega: `omega_extraction_blindness_openclaw_regulation`
+### 409. Omega: `omega_extraction_blindness_openbsd_netiquette_protocol`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `openbsd_netiquette_protocol`
+*   **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+*   **Question:** Constraint openbsd_netiquette_protocol appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from openbsd_netiquette_protocol?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does openbsd_netiquette_protocol serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 410. Omega: `omega_extraction_blindness_openclaw_regulation`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `openclaw_regulation`
@@ -11865,7 +10905,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 449. Omega: `omega_extraction_blindness_openscholar_peer_review`
+### 411. Omega: `omega_extraction_blindness_openscholar_peer_review`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `openscholar_peer_review`
@@ -11892,7 +10932,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 450. Omega: `omega_extraction_blindness_opioid_political_realignment_2026`
+### 412. Omega: `omega_extraction_blindness_opioid_political_realignment_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `opioid_political_realignment_2026`
@@ -11919,7 +10959,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 451. Omega: `omega_extraction_blindness_optimal_stopping_marriage`
+### 413. Omega: `omega_extraction_blindness_optimal_stopping_marriage`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `marriage_problem`
@@ -11946,7 +10986,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 452. Omega: `omega_extraction_blindness_optimization_fragility`
+### 414. Omega: `omega_extraction_blindness_optimization_fragility`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `optimization_fragility`
@@ -11966,7 +11006,34 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 453. Omega: `omega_extraction_blindness_other_peoples_troubles_2026`
+### 415. Omega: `omega_extraction_blindness_orbital_data_center_2026`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `orbital_data_center_2026`
+*   **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+*   **Question:** Constraint orbital_data_center_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from orbital_data_center_2026?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does orbital_data_center_2026 serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 416. Omega: `omega_extraction_blindness_other_peoples_troubles_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `other_peoples_troubles_2026`
@@ -11993,7 +11060,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 454. Omega: `omega_extraction_blindness_overfitting_to_frameworks`
+### 417. Omega: `omega_extraction_blindness_overfitting_to_frameworks`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `overfitting_to_frameworks`
@@ -12020,7 +11087,34 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 455. Omega: `omega_extraction_blindness_p_vs_np`
+### 418. Omega: `omega_extraction_blindness_overton_window`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `overton_window`
+*   **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+*   **Question:** Constraint overton_window appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from overton_window?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does overton_window serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 419. Omega: `omega_extraction_blindness_p_vs_np`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `p_vs_np`
@@ -12047,7 +11141,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 456. Omega: `omega_extraction_blindness_panama_canal_ports`
+### 420. Omega: `omega_extraction_blindness_panama_canal_ports`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `panama_canal_ports`
@@ -12074,7 +11168,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 457. Omega: `omega_extraction_blindness_parable_fish_turtle`
+### 421. Omega: `omega_extraction_blindness_parable_fish_turtle`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `parable_fish_turtle`
@@ -12101,7 +11195,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 458. Omega: `omega_extraction_blindness_parkinsons_law`
+### 422. Omega: `omega_extraction_blindness_parkinsons_law`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `parkinsons_law`
@@ -12128,7 +11222,34 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 459. Omega: `omega_extraction_blindness_perovskite_self_etching`
+### 423. Omega: `omega_extraction_blindness_participatory_observer_hypothesis`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `participatory_observer_hypothesis`
+*   **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+*   **Question:** Constraint participatory_observer_hypothesis appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from participatory_observer_hypothesis?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does participatory_observer_hypothesis serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 424. Omega: `omega_extraction_blindness_perovskite_self_etching`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `perovskite_self_etching`
@@ -12155,7 +11276,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 460. Omega: `omega_extraction_blindness_peter_principle`
+### 425. Omega: `omega_extraction_blindness_peter_principle`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `peter_principle`
@@ -12182,7 +11303,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 461. Omega: `omega_extraction_blindness_planetary_boundaries`
+### 426. Omega: `omega_extraction_blindness_planetary_boundaries`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `planetary_boundaries`
@@ -12209,7 +11330,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 462. Omega: `omega_extraction_blindness_planetary_diet_constraint_2026`
+### 427. Omega: `omega_extraction_blindness_planetary_diet_constraint_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `planetary_diet_constraint_2026`
@@ -12236,7 +11357,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 463. Omega: `omega_extraction_blindness_planning_fallacy`
+### 428. Omega: `omega_extraction_blindness_planning_fallacy`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `planning_fallacy`
@@ -12263,7 +11384,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 464. Omega: `omega_extraction_blindness_platonic_coparenting_decoupling`
+### 429. Omega: `omega_extraction_blindness_platonic_coparenting_decoupling`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `platonic_coparenting_decoupling`
@@ -12290,7 +11411,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 465. Omega: `omega_extraction_blindness_pna`
+### 430. Omega: `omega_extraction_blindness_pna`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `personalized_nutritional_arbitrage`
@@ -12317,7 +11438,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 466. Omega: `omega_extraction_blindness_poetic_verse_and_past`
+### 431. Omega: `omega_extraction_blindness_poetic_verse_and_past`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `poetic_verse_and_past`
@@ -12344,7 +11465,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 467. Omega: `omega_extraction_blindness_policy_lag_catastrophe`
+### 432. Omega: `omega_extraction_blindness_policy_lag_catastrophe`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `policy_lag_catastrophe`
@@ -12371,7 +11492,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 468. Omega: `omega_extraction_blindness_politeness_face_negotiation`
+### 433. Omega: `omega_extraction_blindness_politeness_face_negotiation`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `politeness_face_negotiation`
@@ -12398,7 +11519,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 469. Omega: `omega_extraction_blindness_portugal_ad_stability_2026`
+### 434. Omega: `omega_extraction_blindness_portugal_ad_stability_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `portugal_government_stability_ad`
@@ -12425,7 +11546,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 470. Omega: `omega_extraction_blindness_portugal_polarization_threshold_2026`
+### 435. Omega: `omega_extraction_blindness_portugal_polarization_threshold_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `portugal_polarization_threshold_2026`
@@ -12452,7 +11573,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 471. Omega: `omega_extraction_blindness_power_without_responsibility`
+### 436. Omega: `omega_extraction_blindness_power_without_responsibility`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `power_without_responsibility`
@@ -12479,7 +11600,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 472. Omega: `omega_extraction_blindness_prestige_signal_inflation`
+### 437. Omega: `omega_extraction_blindness_prestige_signal_inflation`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `prestige_signal_inflation`
@@ -12506,7 +11627,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 473. Omega: `omega_extraction_blindness_price_signal_corruption`
+### 438. Omega: `omega_extraction_blindness_price_signal_corruption`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `price_signal_corruption`
@@ -12533,7 +11654,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 474. Omega: `omega_extraction_blindness_prime_age_male_unwork`
+### 439. Omega: `omega_extraction_blindness_prime_age_male_unwork`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `prime_age_male_unwork`
@@ -12560,7 +11681,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 475. Omega: `omega_extraction_blindness_private_identity_integration`
+### 440. Omega: `omega_extraction_blindness_private_identity_integration`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `private_identity_integration`
@@ -12587,7 +11708,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 476. Omega: `omega_extraction_blindness_procedural_compliance_theater`
+### 441. Omega: `omega_extraction_blindness_procedural_compliance_theater`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `procedural_compliance_theater`
@@ -12614,7 +11735,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 477. Omega: `omega_extraction_blindness_procedural_legitimacy_decay`
+### 442. Omega: `omega_extraction_blindness_procedural_legitimacy_decay`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `procedural_legitimacy_decay`
@@ -12641,7 +11762,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 478. Omega: `omega_extraction_blindness_project_vault_extraction_2026`
+### 443. Omega: `omega_extraction_blindness_project_vault_extraction_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `project_vault_extraction_2026`
@@ -12668,7 +11789,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 479. Omega: `omega_extraction_blindness_protocol_capture_eee`
+### 444. Omega: `omega_extraction_blindness_protocol_capture_eee`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `protocol_capture_tangled_rope`
@@ -12695,7 +11816,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 480. Omega: `omega_extraction_blindness_protocol_drift_accumulation`
+### 445. Omega: `omega_extraction_blindness_protocol_drift_accumulation`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `protocol_drift_accumulation`
@@ -12722,7 +11843,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 481. Omega: `omega_extraction_blindness_qualified_immunity`
+### 446. Omega: `omega_extraction_blindness_qualified_immunity`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `qualified_immunity`
@@ -12749,34 +11870,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 482. Omega: `omega_extraction_blindness_quantum_decryption_risk_2026`
-
-*   **Severity:** `N/A`
-*   **Associated Constraint:** `quantam_decryption_risk_2026`
-*   **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
-*   **Question:** Constraint quantum_decryption_risk_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
-*   **Suggested Resolution Strategy:**
-    ```
-1. Interview affected individuals (N=10+):
-- Who benefits from quantum_decryption_risk_2026?
-- Can you change/exit this constraint?
-- What would happen if you tried?
-2. Interview institutional actors (N=10+):
-- What function does quantum_decryption_risk_2026 serve?
-- Who would object to removing it?
-- What alternatives exist?
-3. Document benefit flows:
-- Track who gains vs. who loses from status quo
-- Measure asymmetric benefit distribution
-4. Decision tree:
-IF extraction confirmed → Reclassify as SNARE
-IF functional & fair → Reclassify as ROPE
-IF context-dependent → Add indexical resolution
-    ```
-
----
-
-### 483. Omega: `omega_extraction_blindness_quellcrist_falconer_justice`
+### 447. Omega: `omega_extraction_blindness_quellcrist_falconer_justice`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `quellcrist_falconer_justice`
@@ -12803,7 +11897,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 484. Omega: `omega_extraction_blindness_qwerty_vs_dvorak`
+### 448. Omega: `omega_extraction_blindness_qwerty_vs_dvorak`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `qwerty_vs_dvorak`
@@ -12830,7 +11924,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 485. Omega: `omega_extraction_blindness_radiologic_diagnostic_threshold`
+### 449. Omega: `omega_extraction_blindness_radiologic_diagnostic_threshold`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `radiologic_diagnostic_threshold`
@@ -12857,7 +11951,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 486. Omega: `omega_extraction_blindness_rare_earth_dependency`
+### 450. Omega: `omega_extraction_blindness_rare_earth_dependency`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `rare_earth_dependency`
@@ -12884,7 +11978,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 487. Omega: `omega_extraction_blindness_rare_earth_seabed_mining`
+### 451. Omega: `omega_extraction_blindness_rare_earth_seabed_mining`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `rare_earth_seabed_mining`
@@ -12911,7 +12005,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 488. Omega: `omega_extraction_blindness_rational_inertia_trap`
+### 452. Omega: `omega_extraction_blindness_rational_inertia_trap`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `rational_inertia_trap`
@@ -12938,7 +12032,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 489. Omega: `omega_extraction_blindness_recipe_scaling_ai`
+### 453. Omega: `omega_extraction_blindness_recipe_scaling_ai`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `recipe_scaling_ai`
@@ -12965,7 +12059,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 490. Omega: `omega_extraction_blindness_regulatory_capture`
+### 454. Omega: `omega_extraction_blindness_regulatory_capture`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `regulatory_capture`
@@ -12992,7 +12086,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 491. Omega: `omega_extraction_blindness_rent_seeking_equilibrium`
+### 455. Omega: `omega_extraction_blindness_rent_seeking_equilibrium`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `rent_seeking_equilibrium`
@@ -13019,7 +12113,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 492. Omega: `omega_extraction_blindness_repair_probe_incomplete`
+### 456. Omega: `omega_extraction_blindness_repair_probe_incomplete`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `repair_probe_incomplete`
@@ -13046,7 +12140,34 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 493. Omega: `omega_extraction_blindness_responsibility_dilution`
+### 457. Omega: `omega_extraction_blindness_reputational_cascade_failure`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `reputational_cascade_failure`
+*   **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+*   **Question:** Constraint reputational_cascade_failure appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from reputational_cascade_failure?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does reputational_cascade_failure serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 458. Omega: `omega_extraction_blindness_responsibility_dilution`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `responsibility_dilution`
@@ -13073,7 +12194,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 494. Omega: `omega_extraction_blindness_responsibility_without_power`
+### 459. Omega: `omega_extraction_blindness_responsibility_without_power`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `responsibility_without_power`
@@ -13100,7 +12221,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 495. Omega: `omega_extraction_blindness_riot_incentive_loop_2026`
+### 460. Omega: `omega_extraction_blindness_riot_incentive_loop_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `riot_incentive_loop_2026`
@@ -13127,7 +12248,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 496. Omega: `omega_extraction_blindness_risk_socialization_threshold`
+### 461. Omega: `omega_extraction_blindness_risk_socialization_threshold`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `risk_socialization_threshold`
@@ -13154,7 +12275,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 497. Omega: `omega_extraction_blindness_ritual_without_belief`
+### 462. Omega: `omega_extraction_blindness_ritual_without_belief`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ritual_without_belief`
@@ -13181,7 +12302,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 498. Omega: `omega_extraction_blindness_robustness_vs_efficiency_tradeoff`
+### 463. Omega: `omega_extraction_blindness_robustness_vs_efficiency_tradeoff`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `robustness_vs_efficiency_tradeoff`
@@ -13208,7 +12329,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 499. Omega: `omega_extraction_blindness_rosen_bridge_protocol`
+### 464. Omega: `omega_extraction_blindness_rosen_bridge_protocol`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ergo_rosen_bridge_protocol`
@@ -13235,7 +12356,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 500. Omega: `omega_extraction_blindness_rotation_seven_black_soil`
+### 465. Omega: `omega_extraction_blindness_rotation_seven_black_soil`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `rotation_seven_black_soil`
@@ -13262,7 +12383,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 501. Omega: `omega_extraction_blindness_rotation_seven_isolation`
+### 466. Omega: `omega_extraction_blindness_rotation_seven_isolation`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `rotation_seven_isolation`
@@ -13289,7 +12410,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 502. Omega: `omega_extraction_blindness_rotation_seven_kubo_ranking`
+### 467. Omega: `omega_extraction_blindness_rotation_seven_kubo_ranking`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `rotation_seven_kubo_ranking`
@@ -13316,7 +12437,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 503. Omega: `omega_extraction_blindness_royal_navy_middle_east_withdrawal`
+### 468. Omega: `omega_extraction_blindness_royal_navy_middle_east_withdrawal`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `royal_navy_middle_east_withdrawal`
@@ -13343,7 +12464,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 504. Omega: `omega_extraction_blindness_rule_update_failure`
+### 469. Omega: `omega_extraction_blindness_rule_update_failure`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `rule_update_failure`
@@ -13370,7 +12491,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 505. Omega: `omega_extraction_blindness_rules_based_international_order`
+### 470. Omega: `omega_extraction_blindness_rules_based_international_order`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `rules_based_international_order`
@@ -13397,7 +12518,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 506. Omega: `omega_extraction_blindness_russells_paradox_self_reference`
+### 471. Omega: `omega_extraction_blindness_russells_paradox_self_reference`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `russells_paradox_self_reference`
@@ -13424,7 +12545,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 507. Omega: `omega_extraction_blindness_russian_war_cannibalization`
+### 472. Omega: `omega_extraction_blindness_russian_war_cannibalization`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `russian_war_cannibalization`
@@ -13451,7 +12572,34 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 508. Omega: `omega_extraction_blindness_sapir_whorf_hypothesis`
+### 473. Omega: `omega_extraction_blindness_sa_renewable_price_differential`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `sa_renewable_price_differential`
+*   **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+*   **Question:** Constraint sa_renewable_price_differential appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from sa_renewable_price_differential?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does sa_renewable_price_differential serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 474. Omega: `omega_extraction_blindness_sapir_whorf_hypothesis`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `sapir_whorf_hypothesis`
@@ -13478,7 +12626,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 509. Omega: `omega_extraction_blindness_sat_csp_complexity`
+### 475. Omega: `omega_extraction_blindness_sat_csp_complexity`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `sat_csp_complexity`
@@ -13505,7 +12653,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 510. Omega: `omega_extraction_blindness_scam_compound_2026`
+### 476. Omega: `omega_extraction_blindness_scam_compound_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `scam_compound_grey_zone_2026`
@@ -13532,7 +12680,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 511. Omega: `omega_extraction_blindness_scurvy_maritime_extraction`
+### 477. Omega: `omega_extraction_blindness_scurvy_maritime_extraction`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `scurvy_maritime_extraction`
@@ -13559,7 +12707,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 512. Omega: `omega_extraction_blindness_second_order_unintended_consequences`
+### 478. Omega: `omega_extraction_blindness_second_order_unintended_consequences`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `second_order_unintended_consequences`
@@ -13586,7 +12734,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 513. Omega: `omega_extraction_blindness_semantic_attack_surface`
+### 479. Omega: `omega_extraction_blindness_semantic_attack_surface`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `semantic_attack_surface`
@@ -13613,7 +12761,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 514. Omega: `omega_extraction_blindness_semantic_overload_friction`
+### 480. Omega: `omega_extraction_blindness_semantic_overload_friction`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `semantic_overload_friction`
@@ -13640,7 +12788,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 515. Omega: `omega_extraction_blindness_semiconductor_mission_2026`
+### 481. Omega: `omega_extraction_blindness_semiconductor_mission_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `semiconductor_mission_2026`
@@ -13667,7 +12815,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 516. Omega: `omega_extraction_blindness_shadow_pricing_failure`
+### 482. Omega: `omega_extraction_blindness_shadow_pricing_failure`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `shadow_pricing_failure`
@@ -13694,34 +12842,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 517. Omega: `omega_extraction_blindness_shannon_entropy_limit`
-
-*   **Severity:** `N/A`
-*   **Associated Constraint:** `shannon_entropy_limit`
-*   **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
-*   **Question:** Constraint shannon_entropy_limit appears extractive (Snare) to individuals but functional (Rope) to institutions...
-*   **Suggested Resolution Strategy:**
-    ```
-1. Interview affected individuals (N=10+):
-- Who benefits from shannon_entropy_limit?
-- Can you change/exit this constraint?
-- What would happen if you tried?
-2. Interview institutional actors (N=10+):
-- What function does shannon_entropy_limit serve?
-- Who would object to removing it?
-- What alternatives exist?
-3. Document benefit flows:
-- Track who gains vs. who loses from status quo
-- Measure asymmetric benefit distribution
-4. Decision tree:
-IF extraction confirmed → Reclassify as SNARE
-IF functional & fair → Reclassify as ROPE
-IF context-dependent → Add indexical resolution
-    ```
-
----
-
-### 518. Omega: `omega_extraction_blindness_shobies_existential_commitment`
+### 483. Omega: `omega_extraction_blindness_shobies_existential_commitment`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `shobies_existential_commitment`
@@ -13748,7 +12869,34 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 519. Omega: `omega_extraction_blindness_signal_without_control`
+### 484. Omega: `omega_extraction_blindness_shock_propagation_asymmetry`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `shock_propagation_asymmetry`
+*   **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+*   **Question:** Constraint shock_propagation_asymmetry appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from shock_propagation_asymmetry?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does shock_propagation_asymmetry serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 485. Omega: `omega_extraction_blindness_signal_without_control`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `signal_without_control`
@@ -13775,7 +12923,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 520. Omega: `omega_extraction_blindness_silent_dependency_activation`
+### 486. Omega: `omega_extraction_blindness_silent_dependency_activation`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `silent_dependency_activation`
@@ -13802,7 +12950,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 521. Omega: `omega_extraction_blindness_silicon_lexicon_overload`
+### 487. Omega: `omega_extraction_blindness_silicon_lexicon_overload`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `silicon_lexicon_overload`
@@ -13829,7 +12977,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 522. Omega: `omega_extraction_blindness_skolems_paradox`
+### 488. Omega: `omega_extraction_blindness_skolems_paradox`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `skolems_paradox`
@@ -13856,7 +13004,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 523. Omega: `omega_extraction_blindness_sleep_debt_externality`
+### 489. Omega: `omega_extraction_blindness_sleep_debt_externality`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `sleep_debt_externality`
@@ -13883,7 +13031,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 524. Omega: `omega_extraction_blindness_slow_crisis_invisibility`
+### 490. Omega: `omega_extraction_blindness_slow_crisis_invisibility`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `slow_crisis_invisibility`
@@ -13910,7 +13058,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 525. Omega: `omega_extraction_blindness_sludge_bureaucratic_friction`
+### 491. Omega: `omega_extraction_blindness_sludge_bureaucratic_friction`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `sludge_bureaucratic_friction`
@@ -13937,7 +13085,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 526. Omega: `omega_extraction_blindness_smartphone_ubiquity`
+### 492. Omega: `omega_extraction_blindness_smartphone_ubiquity`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `smartphone_ubiquity`
@@ -13964,7 +13112,34 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 527. Omega: `omega_extraction_blindness_social_loafing`
+### 493. Omega: `omega_extraction_blindness_social_credit_architecture`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `social_credit_architecture`
+*   **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+*   **Question:** Constraint social_credit_architecture appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from social_credit_architecture?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does social_credit_architecture serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 494. Omega: `omega_extraction_blindness_social_loafing`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `social_loafing`
@@ -13991,7 +13166,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 528. Omega: `omega_extraction_blindness_social_media_participation_threshold`
+### 495. Omega: `omega_extraction_blindness_social_media_participation_threshold`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `social_media_participation_threshold`
@@ -14018,7 +13193,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 529. Omega: `omega_extraction_blindness_social_narrative_casting`
+### 496. Omega: `omega_extraction_blindness_social_narrative_casting`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `social_narrative_casting`
@@ -14045,7 +13220,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 530. Omega: `omega_extraction_blindness_soft_authoritarian_drift`
+### 497. Omega: `omega_extraction_blindness_soft_authoritarian_drift`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `soft_authoritarian_drift`
@@ -14072,7 +13247,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 531. Omega: `omega_extraction_blindness_somatic_focusing_awareness`
+### 498. Omega: `omega_extraction_blindness_somatic_focusing_awareness`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `somatic_focusing_awareness`
@@ -14099,7 +13274,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 532. Omega: `omega_extraction_blindness_sorites_paradox`
+### 499. Omega: `omega_extraction_blindness_sorites_paradox`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `sorites_paradox`
@@ -14126,7 +13301,34 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 533. Omega: `omega_extraction_blindness_spain_digital_offensive_2026`
+### 500. Omega: `omega_extraction_blindness_south_china_sea_arbitration_2016_2026`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `south_china_sea_arbitration_2016_2026`
+*   **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+*   **Question:** Constraint south_china_sea_arbitration_2016_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from south_china_sea_arbitration_2016_2026?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does south_china_sea_arbitration_2016_2026 serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 501. Omega: `omega_extraction_blindness_spain_digital_offensive_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `spain_digital_offensive_2026`
@@ -14153,7 +13355,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 534. Omega: `omega_extraction_blindness_st_petersburg_paradox`
+### 502. Omega: `omega_extraction_blindness_st_petersburg_paradox`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `st_petersburg_paradox`
@@ -14180,7 +13382,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 535. Omega: `omega_extraction_blindness_start_treaty`
+### 503. Omega: `omega_extraction_blindness_start_treaty`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `start_treaty`
@@ -14207,7 +13409,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 536. Omega: `omega_extraction_blindness_statecraft_virtu`
+### 504. Omega: `omega_extraction_blindness_statecraft_virtu`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `statecraft_virtu`
@@ -14234,7 +13436,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 537. Omega: `omega_extraction_blindness_status_flattening_effect`
+### 505. Omega: `omega_extraction_blindness_status_flattening_effect`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `status_flattening_effect`
@@ -14254,7 +13456,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 538. Omega: `omega_extraction_blindness_strait_coercion_2025`
+### 506. Omega: `omega_extraction_blindness_strait_coercion_2025`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `straight_coercion_2025`
@@ -14281,7 +13483,34 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 539. Omega: `omega_extraction_blindness_structural_extraction_without_actor`
+### 507. Omega: `omega_extraction_blindness_strange_attractor_dynamics`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `strange_attractor_dynamics`
+*   **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+*   **Question:** Constraint strange_attractor_dynamics appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from strange_attractor_dynamics?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does strange_attractor_dynamics serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 508. Omega: `omega_extraction_blindness_structural_extraction_without_actor`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `structural_extraction_without_actor`
@@ -14308,7 +13537,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 540. Omega: `omega_extraction_blindness_suanne_coup_of_peace`
+### 509. Omega: `omega_extraction_blindness_suanne_coup_of_peace`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `suanne_coup_of_peace`
@@ -14335,7 +13564,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 541. Omega: `omega_extraction_blindness_suanne_face_restoration`
+### 510. Omega: `omega_extraction_blindness_suanne_face_restoration`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `suanne_face_restoration`
@@ -14362,7 +13591,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 542. Omega: `omega_extraction_blindness_sunk_cost_fallacy`
+### 511. Omega: `omega_extraction_blindness_sunk_cost_fallacy`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `sunk_cost_fallacy`
@@ -14389,7 +13618,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 543. Omega: `omega_extraction_blindness_swift_legacy_piton`
+### 512. Omega: `omega_extraction_blindness_swift_legacy_piton`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `swift_legacy_piton`
@@ -14416,7 +13645,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 544. Omega: `omega_extraction_blindness_synthetic_data_feedback_loop`
+### 513. Omega: `omega_extraction_blindness_synthetic_data_feedback_loop`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `synthetic_data_feedback_loop`
@@ -14443,7 +13672,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 545. Omega: `omega_extraction_blindness_systemic_blindspot`
+### 514. Omega: `omega_extraction_blindness_systemic_blindspot`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `systemic_blindspot`
@@ -14470,7 +13699,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 546. Omega: `omega_extraction_blindness_tail_risk_compression`
+### 515. Omega: `omega_extraction_blindness_tail_risk_compression`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `tail_risk_compression`
@@ -14497,7 +13726,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 547. Omega: `omega_extraction_blindness_taiwan_existential_sovereignty`
+### 516. Omega: `omega_extraction_blindness_taiwan_existential_sovereignty`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `taiwan_existential_sovereignty`
@@ -14524,7 +13753,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 548. Omega: `omega_extraction_blindness_taiwan_grand_bargain`
+### 517. Omega: `omega_extraction_blindness_taiwan_grand_bargain`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `taiwan_grand_bargain`
@@ -14551,7 +13780,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 549. Omega: `omega_extraction_blindness_taiwan_storm_2026`
+### 518. Omega: `omega_extraction_blindness_taiwan_storm_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `taiwan_storm_2026`
@@ -14578,7 +13807,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 550. Omega: `omega_extraction_blindness_tarski_undefinability`
+### 519. Omega: `omega_extraction_blindness_tarski_undefinability`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `tarski_undefinability`
@@ -14605,7 +13834,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 551. Omega: `omega_extraction_blindness_taxonomy_drift`
+### 520. Omega: `omega_extraction_blindness_taxonomy_drift`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `taxonomy_drift`
@@ -14632,7 +13861,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 552. Omega: `omega_extraction_blindness_tcp_rfc9293_interoperability`
+### 521. Omega: `omega_extraction_blindness_tcp_rfc9293_interoperability`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `rfc9293_interoperability`
@@ -14659,7 +13888,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 553. Omega: `omega_extraction_blindness_teaching_horses_to_sing`
+### 522. Omega: `omega_extraction_blindness_teaching_horses_to_sing`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `teaching_horses_to_sing`
@@ -14686,7 +13915,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 554. Omega: `omega_extraction_blindness_tear_gas_repression_2026`
+### 523. Omega: `omega_extraction_blindness_tear_gas_repression_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `tear_gas_repression_2026`
@@ -14713,7 +13942,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 555. Omega: `omega_extraction_blindness_technocratic_overreach`
+### 524. Omega: `omega_extraction_blindness_technocratic_overreach`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `technocratic_overreach`
@@ -14740,7 +13969,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 556. Omega: `omega_extraction_blindness_temporal_scale_arbitrage`
+### 525. Omega: `omega_extraction_blindness_temporal_scale_arbitrage`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `temporal_scale_arbitrage`
@@ -14767,7 +13996,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 557. Omega: `omega_extraction_blindness_thai_senate_veto_2026`
+### 526. Omega: `omega_extraction_blindness_thai_senate_veto_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `thai_senate_veto_2026`
@@ -14794,7 +14023,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 558. Omega: `omega_extraction_blindness_the_bacchae_madness_protocol`
+### 527. Omega: `omega_extraction_blindness_the_bacchae_madness_protocol`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `the_bacchae_madness_protocol`
@@ -14821,7 +14050,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 559. Omega: `omega_extraction_blindness_the_calm_protocol_suppression`
+### 528. Omega: `omega_extraction_blindness_the_calm_protocol_suppression`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `the_calm_protocol_suppression`
@@ -14848,7 +14077,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 560. Omega: `omega_extraction_blindness_the_churn_systemic_upheaval`
+### 529. Omega: `omega_extraction_blindness_the_churn_systemic_upheaval`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `the_churn_systemic_upheaval`
@@ -14875,7 +14104,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 561. Omega: `omega_extraction_blindness_theory_of_visitors`
+### 530. Omega: `omega_extraction_blindness_theory_of_visitors`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `theory_of_visitors`
@@ -14902,34 +14131,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 562. Omega: `omega_extraction_blindness_thermodynamics_entropy`
-
-*   **Severity:** `N/A`
-*   **Associated Constraint:** `thermodynamics_entropy`
-*   **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
-*   **Question:** Constraint thermodynamics_entropy appears extractive (Snare) to individuals but functional (Rope) to institutions...
-*   **Suggested Resolution Strategy:**
-    ```
-1. Interview affected individuals (N=10+):
-- Who benefits from thermodynamics_entropy?
-- Can you change/exit this constraint?
-- What would happen if you tried?
-2. Interview institutional actors (N=10+):
-- What function does thermodynamics_entropy serve?
-- Who would object to removing it?
-- What alternatives exist?
-3. Document benefit flows:
-- Track who gains vs. who loses from status quo
-- Measure asymmetric benefit distribution
-4. Decision tree:
-IF extraction confirmed → Reclassify as SNARE
-IF functional & fair → Reclassify as ROPE
-IF context-dependent → Add indexical resolution
-    ```
-
----
-
-### 563. Omega: `omega_extraction_blindness_toxic_social_infection`
+### 531. Omega: `omega_extraction_blindness_toxic_social_infection`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `toxic_social_infection`
@@ -14956,7 +14158,34 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 564. Omega: `omega_extraction_blindness_tractarian_logic_limit`
+### 532. Omega: `omega_extraction_blindness_toxoplasma_hub_2026`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `toxoplasma_hub_2026`
+*   **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+*   **Question:** Constraint toxoplasma_hub_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from toxoplasma_hub_2026?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does toxoplasma_hub_2026 serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 533. Omega: `omega_extraction_blindness_tractarian_logic_limit`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `tractarian_logic_limit`
@@ -14983,7 +14212,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 565. Omega: `omega_extraction_blindness_trade_secret_law`
+### 534. Omega: `omega_extraction_blindness_trade_secret_law`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `trade_secret_law`
@@ -15010,7 +14239,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 566. Omega: `omega_extraction_blindness_tragedy_of_the_commons`
+### 535. Omega: `omega_extraction_blindness_tragedy_of_the_commons`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `tragedy_of_the_commons`
@@ -15037,7 +14266,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 567. Omega: `omega_extraction_blindness_transformer_self_attention`
+### 536. Omega: `omega_extraction_blindness_transformer_self_attention`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `transformer_self_attention`
@@ -15064,7 +14293,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 568. Omega: `omega_extraction_blindness_traveling_salesperson_problem`
+### 537. Omega: `omega_extraction_blindness_traveling_salesperson_problem`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `traveling_salesperson_problem`
@@ -15091,7 +14320,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 569. Omega: `omega_extraction_blindness_trillion_bond_rush_2026`
+### 538. Omega: `omega_extraction_blindness_trillion_bond_rush_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `trillion_bond_rush_2026`
@@ -15118,7 +14347,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 570. Omega: `omega_extraction_blindness_trump_critical_minerals`
+### 539. Omega: `omega_extraction_blindness_trump_critical_minerals`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `trump_critical_minerals`
@@ -15145,7 +14374,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 571. Omega: `omega_extraction_blindness_trump_indian_tariffs_2026`
+### 540. Omega: `omega_extraction_blindness_trump_indian_tariffs_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `trump_indian_tariffs_2026`
@@ -15172,7 +14401,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 572. Omega: `omega_extraction_blindness_trump_making_china_great_2026`
+### 541. Omega: `omega_extraction_blindness_trump_making_china_great_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `trump_making_china_great_2026`
@@ -15199,7 +14428,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 573. Omega: `omega_extraction_blindness_trump_second_term_authoritarianism_2026`
+### 542. Omega: `omega_extraction_blindness_trump_second_term_authoritarianism_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `trumps_second_term_authoritarianism_2026`
@@ -15226,7 +14455,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 574. Omega: `omega_extraction_blindness_tx_hispanic_pivot`
+### 543. Omega: `omega_extraction_blindness_tx_hispanic_pivot`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `texas_hispanic_political_pivot`
@@ -15253,7 +14482,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 575. Omega: `omega_extraction_blindness_ukr_mobilization`
+### 544. Omega: `omega_extraction_blindness_ukr_mobilization`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ukr_mobilization`
@@ -15280,7 +14509,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 576. Omega: `omega_extraction_blindness_ulysses_aeolus_1904`
+### 545. Omega: `omega_extraction_blindness_ulysses_aeolus_1904`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ulysses_chp07`
@@ -15307,7 +14536,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 577. Omega: `omega_extraction_blindness_ulysses_calypso_1904`
+### 546. Omega: `omega_extraction_blindness_ulysses_calypso_1904`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ulysses_chp04`
@@ -15334,7 +14563,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 578. Omega: `omega_extraction_blindness_ulysses_cyclops_1904`
+### 547. Omega: `omega_extraction_blindness_ulysses_cyclops_1904`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ulysses_chp12`
@@ -15361,7 +14590,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 579. Omega: `omega_extraction_blindness_ulysses_eumaeus_1904`
+### 548. Omega: `omega_extraction_blindness_ulysses_eumaeus_1904`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ulysses_chp16`
@@ -15388,7 +14617,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 580. Omega: `omega_extraction_blindness_ulysses_ithaca_1904`
+### 549. Omega: `omega_extraction_blindness_ulysses_ithaca_1904`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ulysses_chp17`
@@ -15415,7 +14644,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 581. Omega: `omega_extraction_blindness_ulysses_lestrygonians_1904`
+### 550. Omega: `omega_extraction_blindness_ulysses_lestrygonians_1904`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ulysses_chp08`
@@ -15442,7 +14671,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 582. Omega: `omega_extraction_blindness_ulysses_lotus_1904`
+### 551. Omega: `omega_extraction_blindness_ulysses_lotus_1904`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ulysses_chp05`
@@ -15469,7 +14698,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 583. Omega: `omega_extraction_blindness_ulysses_nausicaa_1904`
+### 552. Omega: `omega_extraction_blindness_ulysses_nausicaa_1904`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ulysses_chp13`
@@ -15496,7 +14725,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 584. Omega: `omega_extraction_blindness_ulysses_rocks_1904`
+### 553. Omega: `omega_extraction_blindness_ulysses_rocks_1904`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ulysses_chp10`
@@ -15523,7 +14752,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 585. Omega: `omega_extraction_blindness_ulysses_school_1904`
+### 554. Omega: `omega_extraction_blindness_ulysses_school_1904`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ulysses_chp02`
@@ -15550,7 +14779,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 586. Omega: `omega_extraction_blindness_ulysses_scylla_1904`
+### 555. Omega: `omega_extraction_blindness_ulysses_scylla_1904`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ulysses_chp09`
@@ -15577,7 +14806,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 587. Omega: `omega_extraction_blindness_ulysses_sirens_1904`
+### 556. Omega: `omega_extraction_blindness_ulysses_sirens_1904`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ulysses_chp11`
@@ -15604,7 +14833,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 588. Omega: `omega_extraction_blindness_ulysses_tower_1904`
+### 557. Omega: `omega_extraction_blindness_ulysses_tower_1904`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ulysses_chp01`
@@ -15631,7 +14860,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 589. Omega: `omega_extraction_blindness_union_protection_underperformance`
+### 558. Omega: `omega_extraction_blindness_union_protection_underperformance`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `union_protection_underperformance`
@@ -15658,7 +14887,27 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 590. Omega: `omega_extraction_blindness_us_employer_health_insurance`
+### 559. Omega: `omega_extraction_blindness_unrequited_love_protocol`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `unrequited_love_protocol`
+*   **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+*   **Question:** Constraint unrequited_love_protocol appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Design measurement protocol for unknown
+2. Collect data from N=30+ real-world instances
+3. Calculate empirical metrics:
+- suppression_requirement (enforcement needed)
+- resistance_to_change (pushback level)
+- base_extractiveness (asymmetric benefit flow)
+4. Update constraint_metric/3 declarations with data
+5. Re-run classification to resolve perspectival gap
+    ```
+
+---
+
+### 560. Omega: `omega_extraction_blindness_us_employer_health_insurance`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `us_employer_health_insurance`
@@ -15685,7 +14934,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 591. Omega: `omega_extraction_blindness_us_iran_drone_conflict`
+### 561. Omega: `omega_extraction_blindness_us_iran_drone_conflict`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `us_iran_drone_conflict`
@@ -15712,7 +14961,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 592. Omega: `omega_extraction_blindness_us_labor_mobility`
+### 562. Omega: `omega_extraction_blindness_us_labor_mobility`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `us_labor_mobility`
@@ -15739,7 +14988,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 593. Omega: `omega_extraction_blindness_us_suburban_zoning_2025`
+### 563. Omega: `omega_extraction_blindness_us_suburban_zoning_2025`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `us_suburban_zoning_2025`
@@ -15766,7 +15015,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 594. Omega: `omega_extraction_blindness_us_two_party_duopoly`
+### 564. Omega: `omega_extraction_blindness_us_two_party_duopoly`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `us_two_party_duopoly`
@@ -15793,7 +15042,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 595. Omega: `omega_extraction_blindness_usc_26_469_passive_loss`
+### 565. Omega: `omega_extraction_blindness_usc_26_469_passive_loss`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `usc_26_469_passive_loss`
@@ -15820,7 +15069,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 596. Omega: `omega_extraction_blindness_utopia_apocalypse_fragility`
+### 566. Omega: `omega_extraction_blindness_utopia_apocalypse_fragility`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `utopia_apocalypse_fragility`
@@ -15847,7 +15096,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 597. Omega: `omega_extraction_blindness_value_alignment_drift`
+### 567. Omega: `omega_extraction_blindness_value_alignment_drift`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `value_alignment_drift`
@@ -15874,7 +15123,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 598. Omega: `omega_extraction_blindness_value_extraction_plateau`
+### 568. Omega: `omega_extraction_blindness_value_extraction_plateau`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `value_extraction_plateau`
@@ -15901,7 +15150,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 599. Omega: `omega_extraction_blindness_van_der_waerden_theorem`
+### 569. Omega: `omega_extraction_blindness_van_der_waerden_theorem`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `van_der_waerden_theorem`
@@ -15928,7 +15177,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 600. Omega: `omega_extraction_blindness_vienna_quantum_superposition_2026`
+### 570. Omega: `omega_extraction_blindness_vienna_quantum_superposition_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `vienna_quantum_superposition_2026`
@@ -15955,7 +15204,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 601. Omega: `omega_extraction_blindness_viral_transmission_rates`
+### 571. Omega: `omega_extraction_blindness_viral_transmission_rates`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `viral_transmission_rates`
@@ -15982,7 +15231,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 602. Omega: `omega_extraction_blindness_visibility_bias_governance`
+### 572. Omega: `omega_extraction_blindness_visibility_bias_governance`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `visibility_bias_governance`
@@ -16009,7 +15258,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 603. Omega: `omega_extraction_blindness_wikipedia_crowdsourcing_2026`
+### 573. Omega: `omega_extraction_blindness_wikipedia_crowdsourcing_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `wikipedia_crowdsourcing_2026`
@@ -16029,7 +15278,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 604. Omega: `omega_extraction_blindness_wikipedia_notability_requirement_2026`
+### 574. Omega: `omega_extraction_blindness_wikipedia_notability_requirement_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `wikipedia_notability_requirement_2026`
@@ -16037,19 +15286,26 @@ IF context-dependent → Add indexical resolution
 *   **Question:** Constraint wikipedia_notability_requirement_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
     ```
-1. Design measurement protocol for unknown
-2. Collect data from N=30+ real-world instances
-3. Calculate empirical metrics:
-- suppression_requirement (enforcement needed)
-- resistance_to_change (pushback level)
-- base_extractiveness (asymmetric benefit flow)
-4. Update constraint_metric/3 declarations with data
-5. Re-run classification to resolve perspectival gap
+1. Interview affected individuals (N=10+):
+- Who benefits from wikipedia_notability_requirement_2026?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does wikipedia_notability_requirement_2026 serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
     ```
 
 ---
 
-### 605. Omega: `omega_extraction_blindness_winners_curse`
+### 575. Omega: `omega_extraction_blindness_winners_curse`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `winners_curse`
@@ -16076,7 +15332,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 606. Omega: `omega_extraction_blindness_world_factbook_sunset_2026`
+### 576. Omega: `omega_extraction_blindness_world_factbook_sunset_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `world_factbook_sunset_2026`
@@ -16103,7 +15359,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 607. Omega: `omega_extraction_blindness_xi_mao_ideological_centralization`
+### 577. Omega: `omega_extraction_blindness_xi_mao_ideological_centralization`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `xi_mao_ideological_centralization`
@@ -16111,19 +15367,26 @@ IF context-dependent → Add indexical resolution
 *   **Question:** Constraint xi_mao_ideological_centralization appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
     ```
-1. Design measurement protocol for unknown
-2. Collect data from N=30+ real-world instances
-3. Calculate empirical metrics:
-- suppression_requirement (enforcement needed)
-- resistance_to_change (pushback level)
-- base_extractiveness (asymmetric benefit flow)
-4. Update constraint_metric/3 declarations with data
-5. Re-run classification to resolve perspectival gap
+1. Interview affected individuals (N=10+):
+- Who benefits from xi_mao_ideological_centralization?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does xi_mao_ideological_centralization serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
     ```
 
 ---
 
-### 608. Omega: `omega_extraction_blindness_zipfs_law`
+### 578. Omega: `omega_extraction_blindness_zipfs_law`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `zipfs_law`
@@ -16150,7 +15413,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 609. Omega: `omega_extraction_blindness_zombie_reasoning_2026`
+### 579. Omega: `omega_extraction_blindness_zombie_reasoning_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `zombie_reasoning_2026`
@@ -16177,7 +15440,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 610. Omega: `omega_learned_helplessness_ai_cognitive_diversity_arbitrage`
+### 580. Omega: `omega_learned_helplessness_ai_cognitive_diversity_arbitrage`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ai_cognitive_diversity_arbitrage`
@@ -16201,55 +15464,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 611. Omega: `omega_learned_helplessness_big_data_astrophysics_arbitrage`
-
-*   **Severity:** `N/A`
-*   **Associated Constraint:** `big_data_astrophysics_arbitrage`
-*   **Source Gap:** `gap(snare_mountain_confusion,snare,mountain)`
-*   **Question:** Constraint big_data_astrophysics_arbitrage appears extractive (Snare) to individuals but unchangeable (Mountain) to institutions...
-*   **Suggested Resolution Strategy:**
-    ```
-1. Test changeability:
-- Can institutions modify big_data_astrophysics_arbitrage?
-- What legal/political mechanisms exist?
-- Historical precedents of change?
-2. Test extraction:
-- Is benefit flow symmetric or asymmetric?
-- Who has veto power over changes?
-3. Decision tree:
-IF truly unchangeable + extractive → MANDATROPHY
-IF changeable + extractive → Correct to SNARE
-IF unchangeable + fair → Correct to MOUNTAIN
-IF institutions falsely claim necessity → SNARE + fraud flag
-    ```
-
----
-
-### 612. Omega: `omega_learned_helplessness_broke_vs_poor_grocery_math`
-
-*   **Severity:** `N/A`
-*   **Associated Constraint:** `broke_vs_poor_grocery_math`
-*   **Source Gap:** `gap(snare_mountain_confusion,snare,mountain)`
-*   **Question:** Constraint broke_vs_poor_grocery_math appears extractive (Snare) to individuals but unchangeable (Mountain) to institutions...
-*   **Suggested Resolution Strategy:**
-    ```
-1. Test changeability:
-- Can institutions modify broke_vs_poor_grocery_math?
-- What legal/political mechanisms exist?
-- Historical precedents of change?
-2. Test extraction:
-- Is benefit flow symmetric or asymmetric?
-- Who has veto power over changes?
-3. Decision tree:
-IF truly unchangeable + extractive → MANDATROPHY
-IF changeable + extractive → Correct to SNARE
-IF unchangeable + fair → Correct to MOUNTAIN
-IF institutions falsely claim necessity → SNARE + fraud flag
-    ```
-
----
-
-### 613. Omega: `omega_learned_helplessness_castration_longevity_choice`
+### 581. Omega: `omega_learned_helplessness_castration_longevity_choice`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `castration_longevity_choice`
@@ -16273,31 +15488,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 614. Omega: `omega_learned_helplessness_cow_field_poop`
-
-*   **Severity:** `N/A`
-*   **Associated Constraint:** `cow_field_poop`
-*   **Source Gap:** `gap(snare_mountain_confusion,snare,mountain)`
-*   **Question:** Constraint cow_field_poop appears extractive (Snare) to individuals but unchangeable (Mountain) to institutions...
-*   **Suggested Resolution Strategy:**
-    ```
-1. Test changeability:
-- Can institutions modify cow_field_poop?
-- What legal/political mechanisms exist?
-- Historical precedents of change?
-2. Test extraction:
-- Is benefit flow symmetric or asymmetric?
-- Who has veto power over changes?
-3. Decision tree:
-IF truly unchangeable + extractive → MANDATROPHY
-IF changeable + extractive → Correct to SNARE
-IF unchangeable + fair → Correct to MOUNTAIN
-IF institutions falsely claim necessity → SNARE + fraud flag
-    ```
-
----
-
-### 615. Omega: `omega_learned_helplessness_currys_paradox`
+### 582. Omega: `omega_learned_helplessness_currys_paradox`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `currys_paradox`
@@ -16321,7 +15512,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 616. Omega: `omega_learned_helplessness_dead_sea_effect`
+### 583. Omega: `omega_learned_helplessness_dead_sea_effect`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `dead_sea_effect`
@@ -16345,31 +15536,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 617. Omega: `omega_learned_helplessness_dldr_information_policy`
-
-*   **Severity:** `N/A`
-*   **Associated Constraint:** `dldr_information_policy`
-*   **Source Gap:** `gap(snare_mountain_confusion,snare,mountain)`
-*   **Question:** Constraint dldr_information_policy appears extractive (Snare) to individuals but unchangeable (Mountain) to institutions...
-*   **Suggested Resolution Strategy:**
-    ```
-1. Test changeability:
-- Can institutions modify dldr_information_policy?
-- What legal/political mechanisms exist?
-- Historical precedents of change?
-2. Test extraction:
-- Is benefit flow symmetric or asymmetric?
-- Who has veto power over changes?
-3. Decision tree:
-IF truly unchangeable + extractive → MANDATROPHY
-IF changeable + extractive → Correct to SNARE
-IF unchangeable + fair → Correct to MOUNTAIN
-IF institutions falsely claim necessity → SNARE + fraud flag
-    ```
-
----
-
-### 618. Omega: `omega_learned_helplessness_ergo_lets_protocol`
+### 584. Omega: `omega_learned_helplessness_ergo_lets_protocol`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ergo_lets_protocol`
@@ -16393,7 +15560,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 619. Omega: `omega_learned_helplessness_exoplanetary_habitability_arbitrage`
+### 585. Omega: `omega_learned_helplessness_exoplanetary_habitability_arbitrage`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `exoplanet_habitability_arbitrage`
@@ -16417,7 +15584,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 620. Omega: `omega_learned_helplessness_fair_use_doctrine`
+### 586. Omega: `omega_learned_helplessness_fair_use_doctrine`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `fair_use_doctrine`
@@ -16441,31 +15608,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 621. Omega: `omega_learned_helplessness_fnl_shadow_probe`
-
-*   **Severity:** `N/A`
-*   **Associated Constraint:** `fnl_shadow_probe`
-*   **Source Gap:** `gap(snare_mountain_confusion,snare,mountain)`
-*   **Question:** Constraint fnl_shadow_probe appears extractive (Snare) to individuals but unchangeable (Mountain) to institutions...
-*   **Suggested Resolution Strategy:**
-    ```
-1. Test changeability:
-- Can institutions modify fnl_shadow_probe?
-- What legal/political mechanisms exist?
-- Historical precedents of change?
-2. Test extraction:
-- Is benefit flow symmetric or asymmetric?
-- Who has veto power over changes?
-3. Decision tree:
-IF truly unchangeable + extractive → MANDATROPHY
-IF changeable + extractive → Correct to SNARE
-IF unchangeable + fair → Correct to MOUNTAIN
-IF institutions falsely claim necessity → SNARE + fraud flag
-    ```
-
----
-
-### 622. Omega: `omega_learned_helplessness_harm_principle_liberty`
+### 587. Omega: `omega_learned_helplessness_harm_principle_liberty`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `harm_principle_liberty`
@@ -16489,7 +15632,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 623. Omega: `omega_learned_helplessness_hominin_evolutionary_bottleneck`
+### 588. Omega: `omega_learned_helplessness_hominin_evolutionary_bottleneck`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `hominin_evolutionary_bottleneck`
@@ -16513,7 +15656,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 624. Omega: `omega_learned_helplessness_information_foraging_theory`
+### 589. Omega: `omega_learned_helplessness_information_foraging_theory`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `information_foraging_theory`
@@ -16537,7 +15680,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 625. Omega: `omega_learned_helplessness_layered_brain_processing`
+### 590. Omega: `omega_learned_helplessness_layered_brain_processing`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `layered_brain_processing`
@@ -16561,151 +15704,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 626. Omega: `omega_learned_helplessness_local_vs_global_optima`
-
-*   **Severity:** `N/A`
-*   **Associated Constraint:** `local_vs_global_optima`
-*   **Source Gap:** `gap(snare_mountain_confusion,snare,mountain)`
-*   **Question:** Constraint local_vs_global_optima appears extractive (Snare) to individuals but unchangeable (Mountain) to institutions...
-*   **Suggested Resolution Strategy:**
-    ```
-1. Test changeability:
-- Can institutions modify local_vs_global_optima?
-- What legal/political mechanisms exist?
-- Historical precedents of change?
-2. Test extraction:
-- Is benefit flow symmetric or asymmetric?
-- Who has veto power over changes?
-3. Decision tree:
-IF truly unchangeable + extractive → MANDATROPHY
-IF changeable + extractive → Correct to SNARE
-IF unchangeable + fair → Correct to MOUNTAIN
-IF institutions falsely claim necessity → SNARE + fraud flag
-    ```
-
----
-
-### 627. Omega: `omega_learned_helplessness_omelet_perfection_complexity`
-
-*   **Severity:** `N/A`
-*   **Associated Constraint:** `omelet_perfection_complexity`
-*   **Source Gap:** `gap(snare_mountain_confusion,snare,mountain)`
-*   **Question:** Constraint omelet_perfection_complexity appears extractive (Snare) to individuals but unchangeable (Mountain) to institutions...
-*   **Suggested Resolution Strategy:**
-    ```
-1. Test changeability:
-- Can institutions modify omelet_perfection_complexity?
-- What legal/political mechanisms exist?
-- Historical precedents of change?
-2. Test extraction:
-- Is benefit flow symmetric or asymmetric?
-- Who has veto power over changes?
-3. Decision tree:
-IF truly unchangeable + extractive → MANDATROPHY
-IF changeable + extractive → Correct to SNARE
-IF unchangeable + fair → Correct to MOUNTAIN
-IF institutions falsely claim necessity → SNARE + fraud flag
-    ```
-
----
-
-### 628. Omega: `omega_learned_helplessness_openbsd_netiquette_protocol`
-
-*   **Severity:** `N/A`
-*   **Associated Constraint:** `openbsd_netiquette_protocol`
-*   **Source Gap:** `gap(snare_mountain_confusion,snare,mountain)`
-*   **Question:** Constraint openbsd_netiquette_protocol appears extractive (Snare) to individuals but unchangeable (Mountain) to institutions...
-*   **Suggested Resolution Strategy:**
-    ```
-1. Test changeability:
-- Can institutions modify openbsd_netiquette_protocol?
-- What legal/political mechanisms exist?
-- Historical precedents of change?
-2. Test extraction:
-- Is benefit flow symmetric or asymmetric?
-- Who has veto power over changes?
-3. Decision tree:
-IF truly unchangeable + extractive → MANDATROPHY
-IF changeable + extractive → Correct to SNARE
-IF unchangeable + fair → Correct to MOUNTAIN
-IF institutions falsely claim necessity → SNARE + fraud flag
-    ```
-
----
-
-### 629. Omega: `omega_learned_helplessness_overton_window`
-
-*   **Severity:** `N/A`
-*   **Associated Constraint:** `overton_window`
-*   **Source Gap:** `gap(snare_mountain_confusion,snare,mountain)`
-*   **Question:** Constraint overton_window appears extractive (Snare) to individuals but unchangeable (Mountain) to institutions...
-*   **Suggested Resolution Strategy:**
-    ```
-1. Test changeability:
-- Can institutions modify overton_window?
-- What legal/political mechanisms exist?
-- Historical precedents of change?
-2. Test extraction:
-- Is benefit flow symmetric or asymmetric?
-- Who has veto power over changes?
-3. Decision tree:
-IF truly unchangeable + extractive → MANDATROPHY
-IF changeable + extractive → Correct to SNARE
-IF unchangeable + fair → Correct to MOUNTAIN
-IF institutions falsely claim necessity → SNARE + fraud flag
-    ```
-
----
-
-### 630. Omega: `omega_learned_helplessness_pareto_principle`
-
-*   **Severity:** `N/A`
-*   **Associated Constraint:** `pareto_principle`
-*   **Source Gap:** `gap(snare_mountain_confusion,snare,mountain)`
-*   **Question:** Constraint pareto_principle appears extractive (Snare) to individuals but unchangeable (Mountain) to institutions...
-*   **Suggested Resolution Strategy:**
-    ```
-1. Test changeability:
-- Can institutions modify pareto_principle?
-- What legal/political mechanisms exist?
-- Historical precedents of change?
-2. Test extraction:
-- Is benefit flow symmetric or asymmetric?
-- Who has veto power over changes?
-3. Decision tree:
-IF truly unchangeable + extractive → MANDATROPHY
-IF changeable + extractive → Correct to SNARE
-IF unchangeable + fair → Correct to MOUNTAIN
-IF institutions falsely claim necessity → SNARE + fraud flag
-    ```
-
----
-
-### 631. Omega: `omega_learned_helplessness_relativity_physical_invariance`
-
-*   **Severity:** `N/A`
-*   **Associated Constraint:** `relativity_physical_invariance`
-*   **Source Gap:** `gap(snare_mountain_confusion,snare,mountain)`
-*   **Question:** Constraint relativity_physical_invariance appears extractive (Snare) to individuals but unchangeable (Mountain) to institutions...
-*   **Suggested Resolution Strategy:**
-    ```
-1. Test changeability:
-- Can institutions modify relativity_physical_invariance?
-- What legal/political mechanisms exist?
-- Historical precedents of change?
-2. Test extraction:
-- Is benefit flow symmetric or asymmetric?
-- Who has veto power over changes?
-3. Decision tree:
-IF truly unchangeable + extractive → MANDATROPHY
-IF changeable + extractive → Correct to SNARE
-IF unchangeable + fair → Correct to MOUNTAIN
-IF institutions falsely claim necessity → SNARE + fraud flag
-    ```
-
----
-
-### 632. Omega: `omega_learned_helplessness_skills_based_hiring`
+### 591. Omega: `omega_learned_helplessness_skills_based_hiring`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `skills_based_hiring`
@@ -16729,55 +15728,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 633. Omega: `omega_learned_helplessness_south_china_sea_arbitration_2016_2026`
-
-*   **Severity:** `N/A`
-*   **Associated Constraint:** `south_china_sea_arbitration_2016_2026`
-*   **Source Gap:** `gap(snare_mountain_confusion,snare,mountain)`
-*   **Question:** Constraint south_china_sea_arbitration_2016_2026 appears extractive (Snare) to individuals but unchangeable (Mountain) to institutions...
-*   **Suggested Resolution Strategy:**
-    ```
-1. Test changeability:
-- Can institutions modify south_china_sea_arbitration_2016_2026?
-- What legal/political mechanisms exist?
-- Historical precedents of change?
-2. Test extraction:
-- Is benefit flow symmetric or asymmetric?
-- Who has veto power over changes?
-3. Decision tree:
-IF truly unchangeable + extractive → MANDATROPHY
-IF changeable + extractive → Correct to SNARE
-IF unchangeable + fair → Correct to MOUNTAIN
-IF institutions falsely claim necessity → SNARE + fraud flag
-    ```
-
----
-
-### 634. Omega: `omega_learned_helplessness_thai_article_112_mountain`
-
-*   **Severity:** `N/A`
-*   **Associated Constraint:** `thai_article_112_mountain`
-*   **Source Gap:** `gap(snare_mountain_confusion,snare,mountain)`
-*   **Question:** Constraint thai_article_112_mountain appears extractive (Snare) to individuals but unchangeable (Mountain) to institutions...
-*   **Suggested Resolution Strategy:**
-    ```
-1. Test changeability:
-- Can institutions modify thai_article_112_mountain?
-- What legal/political mechanisms exist?
-- Historical precedents of change?
-2. Test extraction:
-- Is benefit flow symmetric or asymmetric?
-- Who has veto power over changes?
-3. Decision tree:
-IF truly unchangeable + extractive → MANDATROPHY
-IF changeable + extractive → Correct to SNARE
-IF unchangeable + fair → Correct to MOUNTAIN
-IF institutions falsely claim necessity → SNARE + fraud flag
-    ```
-
----
-
-### 635. Omega: `omega_learned_helplessness_ulysses_circe_1904`
+### 592. Omega: `omega_learned_helplessness_ulysses_circe_1904`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ulysses_chp15`
@@ -16801,7 +15752,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 636. Omega: `omega_learned_helplessness_ulysses_oxen_1904`
+### 593. Omega: `omega_learned_helplessness_ulysses_oxen_1904`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ulysses_chp14`
@@ -16825,7 +15776,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 637. Omega: `omega_learned_helplessness_ulysses_penelope_1904`
+### 594. Omega: `omega_learned_helplessness_ulysses_penelope_1904`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ulysses_chp18`
@@ -16849,7 +15800,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 638. Omega: `omega_learned_helplessness_ulysses_proteus_1904`
+### 595. Omega: `omega_learned_helplessness_ulysses_proteus_1904`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ulysses_chp03`
@@ -16873,7 +15824,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 639. Omega: `omega_perspectival_alternative_sovereignty_scaffold`
+### 596. Omega: `omega_perspectival_alternative_sovereignty_scaffold`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `alternative_sovereignty_scaffold`
@@ -16895,7 +15846,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 640. Omega: `omega_perspectival_ancient_grudge_verona`
+### 597. Omega: `omega_perspectival_ancient_grudge_verona`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ancient_grudge_verona`
@@ -16917,7 +15868,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 641. Omega: `omega_perspectival_antifragility`
+### 598. Omega: `omega_perspectival_antifragility`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `antifragility`
@@ -16939,7 +15890,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 642. Omega: `omega_perspectival_asymmetric_computational_difficulty`
+### 599. Omega: `omega_perspectival_asymmetric_computational_difficulty`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `asymmetric_computational_difficulty`
@@ -16959,7 +15910,73 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 643. Omega: `omega_perspectival_bedouin_sedentary_transition`
+### 600. Omega: `omega_perspectival_banach_tarski_paradox`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `banach_tarski_paradox`
+*   **Source Gap:** `gap(general_type_mismatch,tangled_rope,rope)`
+*   **Question:** Constraint banach_tarski_paradox appears as tangled_rope to individuals but rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive banach_tarski_paradox
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 601. Omega: `omega_perspectival_base_pair_complementarity`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `base_pair_complementarity`
+*   **Source Gap:** `gap(general_type_mismatch,tangled_rope,rope)`
+*   **Question:** Constraint base_pair_complementarity appears as tangled_rope to individuals but rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive base_pair_complementarity
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 602. Omega: `omega_perspectival_basel_problem_convergence`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `basel_problem_convergence`
+*   **Source Gap:** `gap(general_type_mismatch,tangled_rope,rope)`
+*   **Question:** Constraint basel_problem_convergence appears as tangled_rope to individuals but rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive basel_problem_convergence
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 603. Omega: `omega_perspectival_bedouin_sedentary_transition`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `bedouin_sedentary_transition`
@@ -16981,7 +15998,117 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 644. Omega: `omega_perspectival_cancer_chronotherapy_timing`
+### 604. Omega: `omega_perspectival_berkshire_compounding_culture`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `berkshire_compounding_culture`
+*   **Source Gap:** `gap(general_type_mismatch,rope,mountain)`
+*   **Question:** Constraint berkshire_compounding_culture appears as rope to individuals but mountain to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive berkshire_compounding_culture
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 605. Omega: `omega_perspectival_blackstone_carried_interest_taxation`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `blackstone_carried_interest_taxation`
+*   **Source Gap:** `gap(general_type_mismatch,mountain,snare)`
+*   **Question:** Constraint blackstone_carried_interest_taxation appears as mountain to individuals but snare to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive blackstone_carried_interest_taxation
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 606. Omega: `omega_perspectival_broke_vs_poor_grocery_math`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `broke_vs_poor_grocery_math`
+*   **Source Gap:** `gap(general_type_mismatch,snare,tangled_rope)`
+*   **Question:** Constraint broke_vs_poor_grocery_math appears as snare to individuals but tangled_rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive broke_vs_poor_grocery_math
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 607. Omega: `omega_perspectival_brouwer_fixed_point`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `brouwer_fixed_point`
+*   **Source Gap:** `gap(general_type_mismatch,tangled_rope,rope)`
+*   **Question:** Constraint brouwer_fixed_point appears as tangled_rope to individuals but rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive brouwer_fixed_point
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 608. Omega: `omega_perspectival_buffons_needle_pi_estimation`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `buffons_needle_pi_estimation`
+*   **Source Gap:** `gap(general_type_mismatch,tangled_rope,rope)`
+*   **Question:** Constraint buffons_needle_pi_estimation appears as tangled_rope to individuals but rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive buffons_needle_pi_estimation
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 609. Omega: `omega_perspectival_cancer_chronotherapy_timing`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `cancer_chronotherapy_timing`
@@ -17003,7 +16130,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 645. Omega: `omega_perspectival_cb_far_beyond_human`
+### 610. Omega: `omega_perspectival_cb_far_beyond_human`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `cb_far_beyond_human`
@@ -17025,7 +16152,51 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 646. Omega: `omega_perspectival_climate_target_one_point_five`
+### 611. Omega: `omega_perspectival_chaitins_omega_undecidability`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `chaitins_omega_undecidability`
+*   **Source Gap:** `gap(general_type_mismatch,tangled_rope,rope)`
+*   **Question:** Constraint chaitins_omega_undecidability appears as tangled_rope to individuals but rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive chaitins_omega_undecidability
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 612. Omega: `omega_perspectival_church_turing_thesis`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `church_turing_thesis`
+*   **Source Gap:** `gap(general_type_mismatch,scaffold,rope)`
+*   **Question:** Constraint church_turing_thesis appears as scaffold to individuals but rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive church_turing_thesis
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 613. Omega: `omega_perspectival_climate_target_one_point_five`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `climate_target_one_point_five`
@@ -17047,7 +16218,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 647. Omega: `omega_perspectival_cognitive_bicycle_scaffold`
+### 614. Omega: `omega_perspectival_cognitive_bicycle_scaffold`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `cognitive_bicycle_scaffold`
@@ -17069,7 +16240,29 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 648. Omega: `omega_perspectival_collective_stupidity_2026`
+### 615. Omega: `omega_perspectival_collatz_conjecture_determinism`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `collatz_conjecture_determinism`
+*   **Source Gap:** `gap(general_type_mismatch,tangled_rope,rope)`
+*   **Question:** Constraint collatz_conjecture_determinism appears as tangled_rope to individuals but rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive collatz_conjecture_determinism
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 616. Omega: `omega_perspectival_collective_stupidity_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `collective_stupidity_2026`
@@ -17091,7 +16284,51 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 649. Omega: `omega_perspectival_copyleft_viral_licensing`
+### 617. Omega: `omega_perspectival_constitutional_supremacy`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `constitutional_supremacy`
+*   **Source Gap:** `gap(general_type_mismatch,tangled_rope,rope)`
+*   **Question:** Constraint constitutional_supremacy appears as tangled_rope to individuals but rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive constitutional_supremacy
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 618. Omega: `omega_perspectival_continuum_hypothesis_undecidability`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `continuum_hypothesis_undecidability`
+*   **Source Gap:** `gap(general_type_mismatch,tangled_rope,rope)`
+*   **Question:** Constraint continuum_hypothesis_undecidability appears as tangled_rope to individuals but rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive continuum_hypothesis_undecidability
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 619. Omega: `omega_perspectival_copyleft_viral_licensing`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `copyleft_viral_licensing`
@@ -17113,7 +16350,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 650. Omega: `omega_perspectival_copyright_protection`
+### 620. Omega: `omega_perspectival_copyright_protection`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `copyright_protection`
@@ -17135,7 +16372,51 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 651. Omega: `omega_perspectival_creative_commons_licensing`
+### 621. Omega: `omega_perspectival_countable_infinity_cardinality`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `countable_infinity_cardinality`
+*   **Source Gap:** `gap(general_type_mismatch,tangled_rope,rope)`
+*   **Question:** Constraint countable_infinity_cardinality appears as tangled_rope to individuals but rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive countable_infinity_cardinality
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 622. Omega: `omega_perspectival_cow_field_poop`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `cow_field_poop`
+*   **Source Gap:** `gap(general_type_mismatch,snare,tangled_rope)`
+*   **Question:** Constraint cow_field_poop appears as snare to individuals but tangled_rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive cow_field_poop
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 623. Omega: `omega_perspectival_creative_commons_licensing`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `creative_commons_licensing`
@@ -17157,7 +16438,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 652. Omega: `omega_perspectival_decentralized_infrastructure_rope`
+### 624. Omega: `omega_perspectival_decentralized_infrastructure_rope`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `new_civilizational_rope`
@@ -17179,7 +16460,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 653. Omega: `omega_perspectival_e2ee_digital_privacy_2026`
+### 625. Omega: `omega_perspectival_e2ee_digital_privacy_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `e2ee_digital_privacy_2026`
@@ -17201,7 +16482,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 654. Omega: `omega_perspectival_edelman_2026_developing_volatility`
+### 626. Omega: `omega_perspectival_edelman_2026_developing_volatility`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `edelman_2026_developing_volatility`
@@ -17223,7 +16504,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 655. Omega: `omega_perspectival_emergency_oversight_bureau`
+### 627. Omega: `omega_perspectival_emergency_oversight_bureau`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `emergency_oversight_bureau`
@@ -17245,7 +16526,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 656. Omega: `omega_perspectival_emotional_cycles_2026`
+### 628. Omega: `omega_perspectival_emotional_cycles_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `emotional_cycles_of_change`
@@ -17267,7 +16548,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 657. Omega: `omega_perspectival_ergo_autolykos_asic_resistance`
+### 629. Omega: `omega_perspectival_ergo_autolykos_asic_resistance`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ergo_autolykos_asic_resistance`
@@ -17289,7 +16570,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 658. Omega: `omega_perspectival_erised_expectation`
+### 630. Omega: `omega_perspectival_erised_expectation`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `mirror_of_erised_expectation`
@@ -17311,7 +16592,29 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 659. Omega: `omega_perspectival_faa_boeing_regulatory_capture`
+### 631. Omega: `omega_perspectival_euler_characteristic_topology`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `euler_characteristic_topology`
+*   **Source Gap:** `gap(general_type_mismatch,scaffold,rope)`
+*   **Question:** Constraint euler_characteristic_topology appears as scaffold to individuals but rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive euler_characteristic_topology
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 632. Omega: `omega_perspectival_faa_boeing_regulatory_capture`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `faa_boeing_regulatory_capture`
@@ -17333,7 +16636,29 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 660. Omega: `omega_perspectival_fed_shutdown_2026`
+### 633. Omega: `omega_perspectival_family_succession_system`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `family_succession_and_decadence`
+*   **Source Gap:** `gap(general_type_mismatch,tangled_rope,rope)`
+*   **Question:** Constraint family_succession_system appears as tangled_rope to individuals but rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive family_succession_system
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 634. Omega: `omega_perspectival_fed_shutdown_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `fed_shutdown_2026`
@@ -17355,7 +16680,73 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 661. Omega: `omega_perspectival_germany_tennet_takeover`
+### 635. Omega: `omega_perspectival_fnl_shadow_probe`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `fnl_shadow_probe`
+*   **Source Gap:** `gap(general_type_mismatch,tangled_rope,rope)`
+*   **Question:** Constraint fnl_shadow_probe appears as tangled_rope to individuals but rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive fnl_shadow_probe
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 636. Omega: `omega_perspectival_fundamental_theorem_of_algebra`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `fundamental_theorem_of_algebra`
+*   **Source Gap:** `gap(general_type_mismatch,scaffold,rope)`
+*   **Question:** Constraint fundamental_theorem_of_algebra appears as scaffold to individuals but rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive fundamental_theorem_of_algebra
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 637. Omega: `omega_perspectival_galois_theory_symmetry`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `galois_theory_symmetry`
+*   **Source Gap:** `gap(general_type_mismatch,tangled_rope,rope)`
+*   **Question:** Constraint galois_theory_symmetry appears as tangled_rope to individuals but rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive galois_theory_symmetry
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 638. Omega: `omega_perspectival_germany_tennet_takeover`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `germany_tennet_takeover`
@@ -17377,7 +16768,29 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 662. Omega: `omega_perspectival_gold_piton_2026`
+### 639. Omega: `omega_perspectival_goedels_incompleteness_theorems`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `godels_incompleteness_theorems`
+*   **Source Gap:** `gap(general_type_mismatch,tangled_rope,rope)`
+*   **Question:** Constraint goedels_incompleteness_theorems appears as tangled_rope to individuals but rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive goedels_incompleteness_theorems
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 640. Omega: `omega_perspectival_gold_piton_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `gold_piton_2026`
@@ -17399,7 +16812,29 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 663. Omega: `omega_perspectival_greshams_law`
+### 641. Omega: `omega_perspectival_goldbach_conjecture`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `goldbach_conjecture`
+*   **Source Gap:** `gap(general_type_mismatch,tangled_rope,rope)`
+*   **Question:** Constraint goldbach_conjecture appears as tangled_rope to individuals but rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive goldbach_conjecture
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 642. Omega: `omega_perspectival_greshams_law`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `greshams_law`
@@ -17421,7 +16856,29 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 664. Omega: `omega_perspectival_hedonic_adaptation_baseline`
+### 643. Omega: `omega_perspectival_halting_problem_undecidability`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `halting_problem_undecidability`
+*   **Source Gap:** `gap(general_type_mismatch,tangled_rope,rope)`
+*   **Question:** Constraint halting_problem_undecidability appears as tangled_rope to individuals but rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive halting_problem_undecidability
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 644. Omega: `omega_perspectival_hedonic_adaptation_baseline`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `hedonic_adaptation_baseline`
@@ -17443,7 +16900,29 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 665. Omega: `omega_perspectival_kjv_great_awakening`
+### 645. Omega: `omega_perspectival_hilberts_hotel_infinity`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `hilberts_hotel_infinity`
+*   **Source Gap:** `gap(general_type_mismatch,tangled_rope,rope)`
+*   **Question:** Constraint hilberts_hotel_infinity appears as tangled_rope to individuals but rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive hilberts_hotel_infinity
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 646. Omega: `omega_perspectival_kjv_great_awakening`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `kjv_great_awakening`
@@ -17465,12 +16944,56 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 666. Omega: `omega_perspectival_liar_paradox`
+### 647. Omega: `omega_perspectival_kjv_textual_authority`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `kjv_textual_authority`
+*   **Source Gap:** `gap(general_type_mismatch,tangled_rope,rope)`
+*   **Question:** Constraint kjv_textual_authority appears as tangled_rope to individuals but rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive kjv_textual_authority
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 648. Omega: `omega_perspectival_kleene_recursion_theorem`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `kleene_recursion_theorem`
+*   **Source Gap:** `gap(general_type_mismatch,tangled_rope,rope)`
+*   **Question:** Constraint kleene_recursion_theorem appears as tangled_rope to individuals but rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive kleene_recursion_theorem
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 649. Omega: `omega_perspectival_liar_paradox`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `liar_paradox`
-*   **Source Gap:** `gap(general_type_mismatch,rope,mountain)`
-*   **Question:** Constraint liar_paradox appears as rope to individuals but mountain to institutions...
+*   **Source Gap:** `gap(general_type_mismatch,rope,scaffold)`
+*   **Question:** Constraint liar_paradox appears as rope to individuals but scaffold to institutions...
 *   **Suggested Resolution Strategy:**
     ```
 1. Map stakeholder perspectives:
@@ -17487,12 +17010,34 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 667. Omega: `omega_perspectival_litany_of_the_real`
+### 650. Omega: `omega_perspectival_linguistic_relativity_cultural_framing`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `linguistic_relativity_cultural_framing`
+*   **Source Gap:** `gap(general_type_mismatch,tangled_rope,rope)`
+*   **Question:** Constraint linguistic_relativity_cultural_framing appears as tangled_rope to individuals but rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive linguistic_relativity_cultural_framing
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 651. Omega: `omega_perspectival_litany_of_the_real`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `litany_of_the_real`
-*   **Source Gap:** `gap(general_type_mismatch,rope,mountain)`
-*   **Question:** Constraint litany_of_the_real appears as rope to individuals but mountain to institutions...
+*   **Source Gap:** `gap(general_type_mismatch,rope,tangled_rope)`
+*   **Question:** Constraint litany_of_the_real appears as rope to individuals but tangled_rope to institutions...
 *   **Suggested Resolution Strategy:**
     ```
 1. Design measurement protocol for unknown
@@ -17507,7 +17052,29 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 668. Omega: `omega_perspectival_lula_hemisphere_2026`
+### 652. Omega: `omega_perspectival_local_vs_global_optima`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `local_vs_global_optima`
+*   **Source Gap:** `gap(general_type_mismatch,snare,tangled_rope)`
+*   **Question:** Constraint local_vs_global_optima appears as snare to individuals but tangled_rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive local_vs_global_optima
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 653. Omega: `omega_perspectival_lula_hemisphere_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `lula_hemisphere_2026`
@@ -17529,7 +17096,29 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 669. Omega: `omega_perspectival_maha_recovery_2026`
+### 654. Omega: `omega_perspectival_magna_carta_liberties`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `magna_carta_liberties`
+*   **Source Gap:** `gap(general_type_mismatch,mountain,snare)`
+*   **Question:** Constraint magna_carta_liberties appears as mountain to individuals but snare to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive magna_carta_liberties
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 655. Omega: `omega_perspectival_maha_recovery_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `maha_recovery_2026`
@@ -17551,7 +17140,29 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 670. Omega: `omega_perspectival_meta_nda`
+### 656. Omega: `omega_perspectival_martian_signal_latency`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `martian_signal_latency`
+*   **Source Gap:** `gap(general_type_mismatch,scaffold,rope)`
+*   **Question:** Constraint martian_signal_latency appears as scaffold to individuals but rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive martian_signal_latency
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 657. Omega: `omega_perspectival_meta_nda`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `meta_nda`
@@ -17573,7 +17184,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 671. Omega: `omega_perspectival_metamorphosis_samsa`
+### 658. Omega: `omega_perspectival_metamorphosis_samsa`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `metamorphosis_samsa`
@@ -17595,7 +17206,51 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 672. Omega: `omega_perspectival_milano_cortina_2026`
+### 659. Omega: `omega_perspectival_midnight_deadline`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `cinderella_midnight_deadline`
+*   **Source Gap:** `gap(general_type_mismatch,scaffold,rope)`
+*   **Question:** Constraint midnight_deadline appears as scaffold to individuals but rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive midnight_deadline
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 660. Omega: `omega_perspectival_migration_decision_threshold`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `rotmigration_decision_threshold`
+*   **Source Gap:** `gap(general_type_mismatch,tangled_rope,rope)`
+*   **Question:** Constraint migration_decision_threshold appears as tangled_rope to individuals but rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive migration_decision_threshold
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 661. Omega: `omega_perspectival_milano_cortina_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `winter_olympics_2026`
@@ -17617,7 +17272,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 673. Omega: `omega_perspectival_moores_law`
+### 662. Omega: `omega_perspectival_moores_law`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `moores_law`
@@ -17639,7 +17294,29 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 674. Omega: `omega_perspectival_nuclear_order_2026`
+### 663. Omega: `omega_perspectival_noethers_theorem_symmetry`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `noethers_theorem_symmetry`
+*   **Source Gap:** `gap(general_type_mismatch,scaffold,rope)`
+*   **Question:** Constraint noethers_theorem_symmetry appears as scaffold to individuals but rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive noethers_theorem_symmetry
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 664. Omega: `omega_perspectival_nuclear_order_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `nuclear_order_2026`
@@ -17661,7 +17338,29 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 675. Omega: `omega_perspectival_paris_municipal_reform_2026`
+### 665. Omega: `omega_perspectival_pareto_principle`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `pareto_principle`
+*   **Source Gap:** `gap(general_type_mismatch,snare,tangled_rope)`
+*   **Question:** Constraint pareto_principle appears as snare to individuals but tangled_rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive pareto_principle
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 666. Omega: `omega_perspectival_paris_municipal_reform_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `paris_municipal_reform_2026`
@@ -17683,7 +17382,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 676. Omega: `omega_perspectival_platform_cooperativism_governance`
+### 667. Omega: `omega_perspectival_platform_cooperativism_governance`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `platform_cooperativism_governance`
@@ -17705,16 +17404,16 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 677. Omega: `omega_perspectival_postman_survival_protocol`
+### 668. Omega: `omega_perspectival_poincare_conjecture`
 
 *   **Severity:** `N/A`
-*   **Associated Constraint:** `postman_survival_protocol`
-*   **Source Gap:** `gap(general_type_mismatch,rope,snare)`
-*   **Question:** Constraint postman_survival_protocol appears as rope to individuals but snare to institutions...
+*   **Associated Constraint:** `poincare_conjucture`
+*   **Source Gap:** `gap(general_type_mismatch,tangled_rope,rope)`
+*   **Question:** Constraint poincare_conjecture appears as tangled_rope to individuals but rope to institutions...
 *   **Suggested Resolution Strategy:**
     ```
 1. Map stakeholder perspectives:
-- Document how different actors perceive postman_survival_protocol
+- Document how different actors perceive poincare_conjecture
 - Identify source of divergence
 2. Gather evidence:
 - Empirical metrics (suppression, extraction, resistance)
@@ -17727,7 +17426,29 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 678. Omega: `omega_perspectival_project_vault_2026`
+### 669. Omega: `omega_perspectival_prime_number_theorem`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `prime_number_theorem`
+*   **Source Gap:** `gap(general_type_mismatch,tangled_rope,rope)`
+*   **Question:** Constraint prime_number_theorem appears as tangled_rope to individuals but rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive prime_number_theorem
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 670. Omega: `omega_perspectival_project_vault_2026`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `project_vault_2026`
@@ -17749,12 +17470,12 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 679. Omega: `omega_perspectival_public_domain_commons`
+### 671. Omega: `omega_perspectival_public_domain_commons`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `public_domain_commons`
-*   **Source Gap:** `gap(general_type_mismatch,mountain,snare)`
-*   **Question:** Constraint public_domain_commons appears as mountain to individuals but snare to institutions...
+*   **Source Gap:** `gap(general_type_mismatch,rope,mountain)`
+*   **Question:** Constraint public_domain_commons appears as rope to individuals but mountain to institutions...
 *   **Suggested Resolution Strategy:**
     ```
 1. Map stakeholder perspectives:
@@ -17771,12 +17492,12 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 680. Omega: `omega_perspectival_pythagorean_geometric_constancy`
+### 672. Omega: `omega_perspectival_pythagorean_geometric_constancy`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `pythagorean_theorem_geometric_constancy`
-*   **Source Gap:** `gap(general_type_mismatch,mountain,snare)`
-*   **Question:** Constraint pythagorean_geometric_constancy appears as mountain to individuals but snare to institutions...
+*   **Source Gap:** `gap(general_type_mismatch,scaffold,snare)`
+*   **Question:** Constraint pythagorean_geometric_constancy appears as scaffold to individuals but snare to institutions...
 *   **Suggested Resolution Strategy:**
     ```
 1. Map stakeholder perspectives:
@@ -17793,16 +17514,16 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 681. Omega: `omega_perspectival_quantum_nonlocality_2026`
+### 673. Omega: `omega_perspectival_quine_self_replication`
 
 *   **Severity:** `N/A`
-*   **Associated Constraint:** `quantum_nonlocality_2026`
-*   **Source Gap:** `gap(general_type_mismatch,rope,mountain)`
-*   **Question:** Constraint quantum_nonlocality_2026 appears as rope to individuals but mountain to institutions...
+*   **Associated Constraint:** `quine_self_replication`
+*   **Source Gap:** `gap(general_type_mismatch,tangled_rope,rope)`
+*   **Question:** Constraint quine_self_replication appears as tangled_rope to individuals but rope to institutions...
 *   **Suggested Resolution Strategy:**
     ```
 1. Map stakeholder perspectives:
-- Document how different actors perceive quantum_nonlocality_2026
+- Document how different actors perceive quine_self_replication
 - Identify source of divergence
 2. Gather evidence:
 - Empirical metrics (suppression, extraction, resistance)
@@ -17815,7 +17536,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 682. Omega: `omega_perspectival_rafah_crossing_lifeline`
+### 674. Omega: `omega_perspectival_rafah_crossing_lifeline`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `rafah_crossing_lifeline`
@@ -17837,7 +17558,95 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 683. Omega: `omega_perspectival_shitty_feedback_handling`
+### 675. Omega: `omega_perspectival_reciprocity_laws_math`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `reciprocity_laws_math`
+*   **Source Gap:** `gap(general_type_mismatch,scaffold,rope)`
+*   **Question:** Constraint reciprocity_laws_math appears as scaffold to individuals but rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive reciprocity_laws_math
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 676. Omega: `omega_perspectival_rfc9293_state_machine`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `rfc9293_state_machine`
+*   **Source Gap:** `gap(general_type_mismatch,tangled_rope,rope)`
+*   **Question:** Constraint rfc9293_state_machine appears as tangled_rope to individuals but rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive rfc9293_state_machine
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 677. Omega: `omega_perspectival_rices_theorem_undecidability`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `rices_theorem_undecidability`
+*   **Source Gap:** `gap(general_type_mismatch,tangled_rope,rope)`
+*   **Question:** Constraint rices_theorem_undecidability appears as tangled_rope to individuals but rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive rices_theorem_undecidability
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 678. Omega: `omega_perspectival_rogue_wave_control_2026`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `rogue_wave_control_2026`
+*   **Source Gap:** `gap(general_type_mismatch,tangled_rope,rope)`
+*   **Question:** Constraint rogue_wave_control_2026 appears as tangled_rope to individuals but rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive rogue_wave_control_2026
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 679. Omega: `omega_perspectival_shitty_feedback_handling`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `shitty_feedback_handling`
@@ -17859,7 +17668,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 684. Omega: `omega_perspectival_sig_usd_protocol`
+### 680. Omega: `omega_perspectival_sig_usd_protocol`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `ergo_sig_usd_protocol`
@@ -17881,7 +17690,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 685. Omega: `omega_perspectival_solar_system_weirdness`
+### 681. Omega: `omega_perspectival_solar_system_weirdness`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `solar_system_weirdness`
@@ -17903,7 +17712,29 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 686. Omega: `omega_perspectival_steinmetz_valuation_asymmetry`
+### 682. Omega: `omega_perspectival_stable_marriage_coordination`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `stable_marriage_coordination`
+*   **Source Gap:** `gap(general_type_mismatch,tangled_rope,rope)`
+*   **Question:** Constraint stable_marriage_coordination appears as tangled_rope to individuals but rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive stable_marriage_coordination
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 683. Omega: `omega_perspectival_steinmetz_valuation_asymmetry`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `steinmetz_valuation_asymmetry`
@@ -17925,7 +17756,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 687. Omega: `omega_perspectival_stoic_logos_governance`
+### 684. Omega: `omega_perspectival_stoic_logos_governance`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `stoic_logos_governance`
@@ -17947,12 +17778,34 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 688. Omega: `omega_perspectival_sturgeons_law`
+### 685. Omega: `omega_perspectival_sts86_ascent_checklist`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `sts86_ascent_checklist`
+*   **Source Gap:** `gap(general_type_mismatch,tangled_rope,rope)`
+*   **Question:** Constraint sts86_ascent_checklist appears as tangled_rope to individuals but rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive sts86_ascent_checklist
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 686. Omega: `omega_perspectival_sturgeons_law`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `sturgeons_law`
-*   **Source Gap:** `gap(general_type_mismatch,mountain,snare)`
-*   **Question:** Constraint sturgeons_law appears as mountain to individuals but snare to institutions...
+*   **Source Gap:** `gap(general_type_mismatch,scaffold,snare)`
+*   **Question:** Constraint sturgeons_law appears as scaffold to individuals but snare to institutions...
 *   **Suggested Resolution Strategy:**
     ```
 1. Map stakeholder perspectives:
@@ -17969,7 +17822,29 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 689. Omega: `omega_perspectival_swift_piton_snap`
+### 687. Omega: `omega_perspectival_suslin_hypothesis_undecidability`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `suslin_hypothesis_undecidability`
+*   **Source Gap:** `gap(general_type_mismatch,tangled_rope,rope)`
+*   **Question:** Constraint suslin_hypothesis_undecidability appears as tangled_rope to individuals but rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive suslin_hypothesis_undecidability
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 688. Omega: `omega_perspectival_swift_piton_snap`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `swift_piton_snap`
@@ -17991,7 +17866,51 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 690. Omega: `omega_perspectival_transient_event_detection`
+### 689. Omega: `omega_perspectival_sylow_theorems_group_theory`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `sylow_theorems_group_theory`
+*   **Source Gap:** `gap(general_type_mismatch,tangled_rope,rope)`
+*   **Question:** Constraint sylow_theorems_group_theory appears as tangled_rope to individuals but rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive sylow_theorems_group_theory
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 690. Omega: `omega_perspectival_thai_article_112_mountain`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `thai_article_112_mountain`
+*   **Source Gap:** `gap(general_type_mismatch,snare,tangled_rope)`
+*   **Question:** Constraint thai_article_112_mountain appears as snare to individuals but tangled_rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive thai_article_112_mountain
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 691. Omega: `omega_perspectival_transient_event_detection`
 
 *   **Severity:** `N/A`
 *   **Associated Constraint:** `transient_event_detection`
@@ -18001,6 +17920,72 @@ IF institutions falsely claim necessity → SNARE + fraud flag
     ```
 1. Map stakeholder perspectives:
 - Document how different actors perceive transient_event_detection
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 692. Omega: `omega_perspectival_universal_mathematics_communication`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `universal_mathematics_communication`
+*   **Source Gap:** `gap(general_type_mismatch,scaffold,rope)`
+*   **Question:** Constraint universal_mathematics_communication appears as scaffold to individuals but rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive universal_mathematics_communication
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 693. Omega: `omega_perspectival_visa_ipo_regulatory_compliance`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `s1_visa`
+*   **Source Gap:** `gap(general_type_mismatch,tangled_rope,rope)`
+*   **Question:** Constraint visa_ipo_regulatory_compliance appears as tangled_rope to individuals but rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive visa_ipo_regulatory_compliance
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 694. Omega: `omega_perspectival_whitehead_problem_undecidability`
+
+*   **Severity:** `N/A`
+*   **Associated Constraint:** `whitehead_problem_undecidability`
+*   **Source Gap:** `gap(general_type_mismatch,tangled_rope,rope)`
+*   **Question:** Constraint whitehead_problem_undecidability appears as tangled_rope to individuals but rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive whitehead_problem_undecidability
 - Identify source of divergence
 2. Gather evidence:
 - Empirical metrics (suppression, extraction, resistance)

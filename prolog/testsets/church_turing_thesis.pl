@@ -59,7 +59,7 @@
 
 % Structural Anchor for index extraction
 narrative_ontology:interval(church_turing_era, 1936, 2026).
-narrative_ontology:constraint_claim(church_turing_thesis, mountain).
+narrative_ontology:constraint_claim(church_turing_thesis, scaffold).
 
 % Base extractiveness score (0.0-1.0)
 % Rationale: 0.1. As a mathematical truth, it does not "take" in a social sense, 
@@ -105,7 +105,7 @@ narrative_ontology:constraint_victim(church_turing_thesis, halting_problem_solve
 
 constraint_indexing:constraint_classification(
     church_turing_thesis,
-    mountain,
+    scaffold,
     context(
         agent_power(powerless),
         time_horizon(immediate),

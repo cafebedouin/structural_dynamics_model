@@ -68,7 +68,7 @@ narrative_ontology:constraint_metric(winners_curse, suppression_requirement, 0.6
 narrative_ontology:constraint_metric(winners_curse, theater_ratio, 0.65).
 
 % Constraint classification claim
-narrative_ontology:constraint_claim(winners_curse, mountain).
+narrative_ontology:constraint_claim(winners_curse, tangled_rope).
 
 % Mandatory keys for classification engine v3.4
 % Resolved MISSING_TEMPORAL_DATA by anchoring metrics for drift detection.
@@ -103,7 +103,7 @@ constraint_indexing:constraint_classification(winners_curse, rope,
 
 % PERSPECTIVE 3: THE MATHEMATICAL ECONOMIST (MOUNTAIN)
 % Viewing the curse as a permanent feature of trade and probability.
-constraint_indexing:constraint_classification(winners_curse, mountain, 
+constraint_indexing:constraint_classification(winners_curse, tangled_rope, 
     context(agent_power(analytical), 
             time_horizon(civilizational), 
             exit_options(analytical), 

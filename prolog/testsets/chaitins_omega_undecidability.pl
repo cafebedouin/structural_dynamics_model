@@ -61,7 +61,8 @@
 
 % Structural Anchor for index extraction
 narrative_ontology:interval(chaitin_era, 1975, 2026).
-narrative_ontology:constraint_claim(chaitins_omega_undecidability, mountain).
+narrative_ontology:constraint_claim(chaitins_omega_undecidability, tangled_rope).
+domain_priors:requires_active_enforcement(chaitins_omega_undecidability).
 
 % Base extractiveness score (0.0-1.0)
 % Rationale: 0.2. It "extracts" the hope for a finite, universal compressed 
@@ -109,7 +110,7 @@ narrative_ontology:constraint_victim(chaitins_omega_undecidability, formal_logic
 
 constraint_indexing:constraint_classification(
     chaitins_omega_undecidability,
-    mountain,
+    tangled_rope,
     context(
         agent_power(powerless),
         time_horizon(immediate),

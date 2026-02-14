@@ -45,7 +45,7 @@
    2. BASE PROPERTIES (DOMAIN PRIORS)
    ========================================================================== */
 
-narrative_ontology:constraint_claim(mom_z14_2026, mountain).
+narrative_ontology:constraint_claim(mom_z14_2026, rope).
 
 domain_priors:base_extractiveness(mom_z14_2026, 0.05). % Low (Discovery of law).
 domain_priors:suppression_score(mom_z14_2026, 0.45).   % Suppresses old formation models.
@@ -63,7 +63,7 @@ narrative_ontology:constraint_metric(mom_z14_2026, theater_ratio, 0.02).
 % PERSPECTIVE 1: THE THEORIST (MOUNTAIN)
 % To the astrophysicist, the age of MoM-z14 is an immutable Mountain 
 % that limits the degrees of freedom for cosmological theory.
-constraint_indexing:constraint_classification(mom_z14_2026, mountain, 
+constraint_indexing:constraint_classification(mom_z14_2026, rope, 
     context(agent_power(powerless), 
             time_horizon(civilizational), 
             exit_options(trapped), 
@@ -88,7 +88,7 @@ test(low_extraction) :-
     domain_priors:base_extractiveness(mom_z14_2026, E), E < 0.10.
 
 test(variance_check) :-
-    constraint_indexing:constraint_classification(mom_z14_2026, mountain, _),
+    constraint_indexing:constraint_classification(mom_z14_2026, rope, _),
     constraint_indexing:constraint_classification(mom_z14_2026, rope, _).
 
 :- end_tests(mom_z14_2026_tests).

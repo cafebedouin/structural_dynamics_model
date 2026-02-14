@@ -62,7 +62,8 @@
 
 % Required structural anchor for extraction
 narrative_ontology:interval(collatz_era, 1937, 2026).
-narrative_ontology:constraint_claim(collatz_conjecture_determinism, mountain).
+narrative_ontology:constraint_claim(collatz_conjecture_determinism, tangled_rope).
+domain_priors:requires_active_enforcement(collatz_conjecture_determinism).
 
 % Base extractiveness score (0.0-1.0)
 % Rationale: 0.15. Low. While it "extracts" massive human and computational 
@@ -113,7 +114,7 @@ narrative_ontology:constraint_victim(collatz_conjecture_determinism, mathematica
 
 constraint_indexing:constraint_classification(
     collatz_conjecture_determinism,
-    mountain,
+    tangled_rope,
     context(
         agent_power(powerless),
         time_horizon(immediate),

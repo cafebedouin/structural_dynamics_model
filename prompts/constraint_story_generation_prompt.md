@@ -162,6 +162,18 @@ Additionally, declare explicit `narrative_ontology:constraint_metric/3` facts mi
 * `narrative_ontology:constraint_metric(id, suppression_requirement, Value).`
 * `narrative_ontology:constraint_metric(id, theater_ratio, Value).`
 
+#### NL Profile Metrics (Mountain Constraints)
+
+Mountain constraints require two additional `constraint_metric/3` declarations and one binary flag to pass the natural law certification chain:
+
+* `narrative_ontology:constraint_metric(id, accessibility_collapse, Value).` — How completely the constraint forecloses alternatives. Range [0.0, 1.0]. Mountains require ≥ 0.85 (config: `natural_law_collapse_min`). A value of 1.0 means no alternative is even conceivable; 0.85+ means alternatives are theoretically possible but structurally inaccessible.
+
+* `narrative_ontology:constraint_metric(id, resistance, Value).` — Active opposition to the constraint. Range [0.0, 1.0]. Mountains require ≤ 0.15 (config: `natural_law_resistance_max`). Natural laws face zero meaningful resistance because resistance would be incoherent — you cannot oppose the second law of thermodynamics.
+
+* `domain_priors:emerges_naturally(id).` — Binary flag (declared or absent). **Required for the mountain metric gate.** Without this declaration, `classify_from_metrics/6` will not fire the mountain clause regardless of metric values. Declare for constraints that arise from the structure of reality without human design or enforcement. Do NOT declare for constraints that are human-constructed, even if they appear immutable (those are pitons, ropes, or tangled ropes). Add `domain_priors:emerges_naturally/1` to the `:- multifile` block when declaring this.
+
+**Why these matter:** Without `accessibility_collapse` and `resistance`, the `get_metric_average/3` helper defaults to 0.5, which fails the natural law certification thresholds (≥ 0.85 and ≤ 0.15 respectively). Without `emerges_naturally`, the mountain metric gate does not fire at all. All three are required for a constraint to achieve `natural_law` signature and `mountain` classification.
+
 **Structural relationship declarations** — these are the primary input to the directionality derivation chain. Every non-mountain constraint should declare at least one:
 
 * `narrative_ontology:constraint_beneficiary(id, group).` — **REQUIRED for all non-mountain constraints.** Identifies who benefits. Derives `has_coordination_function/1` (required for Tangled Rope and Scaffold gates). Feeds directionality derivation: agents identified as beneficiaries get low d values → low/negative χ.
@@ -335,6 +347,7 @@ Before outputting your .pl file, verify:
 
 * [ ] **Beneficiary/Victim Declared**: Every non-mountain constraint has `constraint_beneficiary/2`. Snare and tangled_rope also require `constraint_victim/2`. Group names are domain-specific, not generic placeholders ("low_income_borrowers" not "affected_parties").
 * [ ] **Threshold Accuracy**: Mountains ε ≤ 0.25, suppression ≤ 0.05. Snares ε ≥ 0.46, suppression ≥ 0.60, χ ≥ 0.66.
+* [ ] **Mountain NL Profile**: If claiming mountain, includes `constraint_metric(id, accessibility_collapse, V)` with V ≥ 0.85, `constraint_metric(id, resistance, V)` with V ≤ 0.15, and `domain_priors:emerges_naturally(id)`. Without all three, the NL certification chain fails and the mountain metric gate does not fire.
 * [ ] **Index Completeness**: Do your indices use the expanded 2026 values (e.g., `arbitrage`, `civilizational`)?
 * [ ] **Suppression Check**: Suppression is a raw structural property (unscaled). Extractiveness is scaled by f(d) and σ(S) per χ = ε × f(d) × σ(S). Does the commentary reflect this?
 * [ ] **Coalition Check**: If the constraint is a snare with multiple victims, does the analysis consider the possibility of coalition power for `powerless` agents?
@@ -366,7 +379,7 @@ The corpus needs balanced representation across all six types. When choosing sce
 | **Scaffold** (most needed) | Transitional policies, emergency measures, development programs, sunset legislation | χ ≤ 0.30, theater ≤ 0.70 | beneficiary + sunset clause |
 | **Snare** (needed) | Debt traps, predatory lending, coercive labor, monopolistic extraction, surveillance systems | ε ≥ 0.46, suppression ≥ 0.60, χ ≥ 0.66 | victim required |
 | **Inter-institutional** (NEW, needed) | Regulatory capture, trade agreements, sanctions, church/state, union/management | Varies by institutional perspective | Multiple institutional perspectives + overrides |
-| **Mountain** (well-covered) | Mathematical theorems, physical laws, logical limits | ε ≤ 0.25, suppression ≤ 0.05 | No beneficiary/victim needed |
+| **Mountain** (well-covered, needs NL metrics) | Mathematical theorems, physical laws, logical limits | ε ≤ 0.25, suppression ≤ 0.05, accessibility_collapse ≥ 0.85, resistance ≤ 0.15, emerges_naturally | No beneficiary/victim needed |
 | **Rope** (well-covered) | Standards, protocols, cooperative agreements, coordination mechanisms | ε ≤ 0.45, χ ≤ 0.35 | beneficiary; victim usually absent |
 | **Piton** (well-covered) | Degraded institutions, vestigial regulations, theatrical compliance | ε ≤ 0.25, theater ≥ 0.70 | victim possible; beneficiary unlikely |
 

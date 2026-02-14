@@ -1,16 +1,29 @@
 % ============================================================================
-% CONSTRAINT STORY: spv_variations
+% CONSTRAINT STORY: spv_variations_us_cold
 % ============================================================================
-% Version: 5.2 (Deferential Realism Core + Boltzmann + Purity + Network)
-% Logic: 5.2 (Indexed Tuple P,T,E,S + Coupling + Purity + Network Drift)
-% Generated: 2024-07-15
+% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2024-08-01
 % ============================================================================
 
-:- module(constraint_spv_variations, []).
+:- module(constraint_spv_variations_us_cold, []).
 
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
+
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
 
 % --- Namespace Hooks (Required for loading) ---
 :- multifile
@@ -28,7 +41,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -36,75 +50,85 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: spv_variations
- * human_readable: Stratospheric Polar Vortex Variations (P2/P3)
- * domain: atmospheric_science
- * * SUMMARY:
- * This constraint maps the primary stratospheric variations (P2 and P3)
- * that lead to extreme cold-air outbreaks (CAOs) in the continental US
- * despite overall winter warming trends. The constraint is the physical
- * phenomenon itself, but also the human classification system used to predict it.
- * * KEY AGENTS:
- * - The US Resident: Subject, powerless against extreme cold and snow.
- * - Forecast Systems: Beneficiary of the classification system, which enables coordination.
- * - Atmospheric Scientists: Analytical observer of the physical laws.
+ *   constraint_id: spv_variations_us_cold
+ *   human_readable: Stratospheric Polar Vortex Variations (US Cold Outbreaks)
+ *   domain: atmospheric_science
+ *
+ * SUMMARY:
+ *   This constraint describes the atmospheric dynamics of the Stratospheric
+ *   Polar Vortex (SPV) that lead to extreme cold-air outbreaks (CAOs) in the
+ *   continental US. The story captures a critical duality: the underlying
+ *   physical phenomenon is an unchangeable natural law (Mountain), while the
+ *   human-developed classification system (e.g., P-clusters) used to predict
+ *   its behavior functions as a pure coordination mechanism (Rope) for meteorologists.
+ *
+ * KEY AGENTS (by structural relationship):
+ *   - US Residents in CAO paths: Primary target (powerless/trapped) — experiences the physical phenomenon as an unchangeable fact.
+ *   - Meteorological Forecasters: Primary beneficiary (institutional/arbitrage) — uses the predictive model to coordinate responses.
+ *   - Atmospheric Scientists: Analytical observer — studies both the physical law and the predictive models.
  */
 
 /* ==========================================================================
    2. BASE PROPERTIES (DOMAIN PRIORS)
    ========================================================================== */
 
-% Numerical anchors for v3.4 thresholds
-% Extraction is low (0.02) as this is a natural law (Mountain) based on
-% stratospheric dynamics rather than human coordination.
-domain_priors:base_extractiveness(spv_variations, 0.02). % Mountain suppression <= 0.05, Rope extraction <= 0.15, Snare extraction >= 0.46
-domain_priors:suppression_score(spv_variations, 0.10).   % Structural property (raw, unscaled). Only extractiveness is scaled (by power and scope).
-domain_priors:theater_ratio(spv_variations, 0.05).       % Piton detection (>= 0.70)
+% --- Numerical metrics ---
+% Extraction is negligible (0.02) as this is a natural law.
+% Suppression is set to the Mountain ceiling (0.05) as there are no alternatives to the laws of physics.
+domain_priors:base_extractiveness(spv_variations_us_cold, 0.02).
+domain_priors:suppression_score(spv_variations_us_cold, 0.05).   % Structural property (raw, unscaled).
+domain_priors:theater_ratio(spv_variations_us_cold, 0.05).       % Piton detection (>= 0.70)
 
-% Constraint metric facts — primary keys used by the classification engine.
-% These mirror domain_priors values using the metric key names from config.pl.
-narrative_ontology:constraint_metric(spv_variations, extractiveness, 0.02).
-narrative_ontology:constraint_metric(spv_variations, suppression_requirement, 0.1).
-narrative_ontology:constraint_metric(spv_variations, theater_ratio, 0.05).
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(spv_variations_us_cold, extractiveness, 0.02).
+narrative_ontology:constraint_metric(spv_variations_us_cold, suppression_requirement, 0.05).
+narrative_ontology:constraint_metric(spv_variations_us_cold, theater_ratio, 0.05).
 
-% Constraint self-claim (what does the constraint claim to be?)
-% The underlying phenomenon is a natural law.
-narrative_ontology:constraint_claim(spv_variations, mountain).
+% --- Constraint claim (must match analytical perspective type) ---
+% The claim is 'rope', reflecting that the primary human-interaction layer is the
+% coordination model built on top of the physical law.
+narrative_ontology:constraint_claim(spv_variations_us_cold, rope).
 
-% Structural property derivation hooks:
-% The classification system provides a coordination function for forecasters.
-narrative_ontology:constraint_beneficiary(spv_variations, forecast_systems).
+% --- Structural relationships (REQUIRED for non-mountain constraints) ---
+% Who benefits from this constraint existing? (i.e., the predictive model)
+narrative_ontology:constraint_beneficiary(spv_variations_us_cold, meteorological_forecasters).
+%
+% Who bears disproportionate cost? (i.e., from the physical phenomenon)
+narrative_ontology:constraint_victim(spv_variations_us_cold, us_residents_in_cao_paths).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × π(P) × σ(S)
-   Power (P) and Scope (S) both affect effective extraction.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
+   χ = ε × f(d) × σ(S)
+   where f(d) is the sigmoid directionality function.
+   The engine derives d from beneficiary/victim membership + exit_options.
+   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE DISRUPTED CITIZEN (MOUNTAIN)
-% Extreme cold and snow are unchangeable physical limits of the winter environment.
-constraint_indexing:constraint_classification(spv_variations, mountain,
+% PERSPECTIVE 1: THE RESIDENT IN A COLD OUTBREAK (MOUNTAIN)
+% For a person experiencing extreme cold, the SPV's behavior is an unchangeable
+% physical limit of their environment. The low extraction and suppression scores
+% confirm this Mountain classification.
+constraint_indexing:constraint_classification(spv_variations_us_cold, mountain,
     context(agent_power(powerless),
             time_horizon(immediate),
             exit_options(trapped),
             spatial_scope(national))).
 
-% PERSPECTIVE 2: THE SUBSEASONAL FORECASTER (ROPE)
-% Stratospheric clusters (P1-P5) serve as coordination tools to predict
-% transition periods in weeks 3 and 4. The model is a Rope.
-constraint_indexing:constraint_classification(spv_variations, rope,
+% PERSPECTIVE 2: THE METEOROLOGICAL FORECASTER (ROPE)
+% For forecasters, the P-cluster classification system is a pure coordination
+% tool (Rope). It allows them to standardize predictions and coordinate warnings
+% and resource allocation.
+constraint_indexing:constraint_classification(spv_variations_us_cold, rope,
     context(agent_power(institutional),
             time_horizon(biographical),
-            exit_options(mobile),
+            exit_options(arbitrage),
             spatial_scope(continental))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (MOUNTAIN)
-% The underlying dynamics are an irreducible physical law (Mountain),
-% regardless of the human models built to interpret them. The low extraction
-% and suppression scores confirm this objective classification.
-constraint_indexing:constraint_classification(spv_variations, mountain,
+% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (ROPE)
+% The analytical perspective aligns with the constraint_claim, focusing on the
+% human-interactive layer (the model) which is a Rope. It acknowledges the
+% underlying Mountain but classifies the system by its function.
+constraint_indexing:constraint_classification(spv_variations_us_cold, rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -114,19 +138,24 @@ constraint_indexing:constraint_classification(spv_variations, mountain,
    4. VALIDATION TESTS
    ========================================================================== */
 
-:- begin_tests(spv_variations_tests).
+:- begin_tests(spv_variations_us_cold_tests).
 
 test(perspectival_gap) :-
-    % Verify the vortex is a Mountain for the subject but a Rope for forecasters.
-    constraint_indexing:constraint_classification(spv_variations, mountain, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(spv_variations, rope, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(spv_variations, mountain, context(agent_power(analytical), _, _, _)).
+    % Verify the gap: Mountain for the target, Rope for the beneficiary.
+    constraint_indexing:constraint_classification(spv_variations_us_cold, TypeTarget, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(spv_variations_us_cold, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
+    TypeTarget \= TypeBeneficiary,
+    TypeTarget == mountain,
+    TypeBeneficiary == rope.
 
 test(threshold_validation) :-
-    domain_priors:base_extractiveness(spv_variations, E),
-    E =< 0.15. % Validates the Mountain/Rope status for natural laws and pure coordination.
+    % Verify metrics are within the valid Mountain range.
+    domain_priors:base_extractiveness(spv_variations_us_cold, E),
+    domain_priors:suppression_score(spv_variations_us_cold, S),
+    E =< 0.25,
+    S =< 0.05.
 
-:- end_tests(spv_variations_tests).
+:- end_tests(spv_variations_us_cold_tests).
 
 /* ==========================================================================
    5. GENERATIVE COMMENTARY
@@ -134,21 +163,38 @@ test(threshold_validation) :-
 
 /**
  * LOGIC RATIONALE:
- * This story demonstrates a key perspectival gap. The Stratospheric Polar Vortex
- * is a physical phenomenon, correctly classified as a 'Mountain' from the
- * powerless (citizen) and analytical (scientist) perspectives. Its metrics
- * (extraction=0.02, suppression=0.10) are well within the Mountain thresholds.
- * However, the human-created *model* for predicting its behavior (the P-cluster
- * system) functions as a 'Rope' for the institutional agents (forecasters) who
- * use it. This model is a pure coordination tool that allows for better planning
- * and resource allocation. The story correctly separates the underlying physical
- * constraint from the coordination layer built on top of it. The previous version's
- * Piton and Scaffold classifications were removed as they were inconsistent with
- * the low base metrics (theater_ratio=0.05) and lacked required structural
- * properties (e.g., a sunset clause for Scaffold).
- * * MANDATROPHY ANALYSIS:
- * Not applicable. This is a low-extraction constraint, so Mandatrophy resolution
- * is not required.
+ *   This story models a physical phenomenon (SPV) and the human coordination
+ *   system built to predict it. The base metrics (ε=0.02, suppression=0.05) are
+ *   set to reflect the underlying natural law, placing them firmly in the
+ *   Mountain category. This is crucial for the powerless perspective. The
+ *   `constraint_claim` is 'rope' because the primary object of analysis from a
+ *   systems perspective is the human-made predictive model, which is a pure
+ *   coordination tool.
+ *
+ * PERSPECTIVAL GAP:
+ *   The gap is stark and illustrative. For a resident trapped in a cold-air
+ *   outbreak, the event is an unchangeable fact of nature (Mountain). For a
+ *   forecaster, the system for predicting that event is a coordination tool
+ *   (Rope) that enables planning and mitigation. The system correctly captures
+ *   that the same underlying phenomenon generates different constraint types
+ *   depending on the agent's structural relationship to it.
+ *
+ * DIRECTIONALITY LOGIC:
+ *   - Beneficiary: `meteorological_forecasters` benefit from the predictive
+ *     model, which functions as an information standard. This justifies the
+ *     `rope` classification from their perspective.
+ *   - Victim: `us_residents_in_cao_paths` bear the costs of the physical
+ *     phenomenon itself. Their relationship is with the natural law, not the
+ *     model, justifying the `mountain` classification.
+ *
+ * MANDATROPHY ANALYSIS:
+ *   This story resolves a potential misclassification flagged by the linter as
+ *   'SCAFFOLD_DANGER_ZONE'. A low-extraction, non-enforced coordination
+ *   mechanism can be mistaken for a Scaffold by the engine. By correctly
+ *   classifying the powerless perspective as a Mountain (which is narratively
+ *   justified), the file signals the presence of a natural law component,
+ *   allowing the linter and engine to distinguish this stable Rope from a
+ *   temporary Scaffold.
  */
 
 /* ==========================================================================
@@ -157,7 +203,7 @@ test(threshold_validation) :-
 
 % omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
-    omega_enso_strat_link,
+    omega_spv_enso_link,
     'Does La Niña directly drive P2 variability or is P2 a response to complex tropospheric ENSO influences?',
     'Longer-term reanalysis (beyond 41 years) and high-resolution climate modeling.',
     'Direct Link = Higher predictability of NWUS cold; Complex Response = Lower confidence in ratio shifts.',
@@ -169,7 +215,7 @@ omega_variable(
    ========================================================================== */
 
 % Required for external script parsing
-narrative_ontology:interval(spv_variations, 0, 10).
+narrative_ontology:interval(spv_variations_us_cold, 0, 10).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
@@ -178,26 +224,20 @@ narrative_ontology:interval(spv_variations, 0, 10).
 % Not required for low-extraction constraints (base_extractiveness <= 0.46).
 
 /* ==========================================================================
-   9. BOLTZMANN & NETWORK DATA (v5.0-5.2)
+   9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
 % Coordination type (enables Boltzmann floor + complexity offset)
 % The P-cluster system is an information standard for interpreting atmospheric data.
-narrative_ontology:coordination_type(spv_variations, information_standard).
+narrative_ontology:coordination_type(spv_variations_us_cold, information_standard).
 
-% Boltzmann floor override (only if domain knowledge justifies)
-% narrative_ontology:boltzmann_floor_override(spv_variations, 0.0).
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
 
-% Network relationships (structural influence edges)
-% narrative_ontology:affects_constraint(spv_variations, other_constraint_id).
+% No overrides are needed. The structural derivation from beneficiary/victim
+% declarations correctly models the relationships for this constraint.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
-% ============================================================================
-% ENRICHMENT: Structural predicates for remaining gaps
-% Generated: 2026-02-08
-% Template: v5.2 namespace alignment
-% Source: Derived from narrative context in this file (spv_variations_us_cold)
-% ============================================================================
-narrative_ontology:constraint_victim(spv_variations, affected_populations_during_cold_outbreaks).

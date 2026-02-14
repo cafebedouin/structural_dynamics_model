@@ -73,7 +73,7 @@ narrative_ontology:constraint_metric(bushman_money_magic, theater_ratio, 0.10).
 
 % Constraint self-claim (what does the constraint claim to be?)
 % The scam is a constructed reality, not a natural law or a coordination tool.
-narrative_ontology:constraint_claim(bushman_money_magic, mountain).
+narrative_ontology:constraint_claim(bushman_money_magic, tangled_rope).
 
 % Binary flags
 % The scam requires Jackal's active performance to maintain the illusion.
@@ -115,7 +115,7 @@ constraint_indexing:constraint_classification(bushman_money_magic, rope,
 % To the observer, the "scam" is a "Mountain"—an immutable feature of human
 % social systems where information asymmetry and greed inevitably produce
 % asymmetric extraction. It is a natural law of social interaction.
-constraint_indexing:constraint_classification(bushman_money_magic, mountain,
+constraint_indexing:constraint_classification(bushman_money_magic, tangled_rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -137,7 +137,7 @@ test(perspectival_gap) :-
 
 test(analytical_perspective) :-
     % Verify the analytical observer sees a Mountain.
-    constraint_indexing:constraint_classification(bushman_money_magic, mountain, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(bushman_money_magic, tangled_rope, context(agent_power(analytical), _, _, _)).
 
 test(threshold_validation_snare) :-
     % Verify the base metrics align with a high-extraction constraint.

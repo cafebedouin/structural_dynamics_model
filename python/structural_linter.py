@@ -128,9 +128,15 @@ def lint_file(filepath):
                 )
 
     # 9. SCAFFOLD-SPECIFIC CHECKS
+    # The engine's scaffold_temporality_check/1 accepts EITHER has_sunset_clause OR
+    # \+ requires_active_enforcement. Only flag missing sunset when enforcement IS
+    # declared (enforced scaffolds without sunset are suspicious; non-enforced ones
+    # like mathematical theorems are inherently scaffold-like without needing a sunset).
     if 'scaffold' in found_types:
-        if 'has_sunset_clause(' not in content:
-            errors.append("MISSING_SUNSET_CLAUSE: Scaffold classification requires narrative_ontology:has_sunset_clause/1.")
+        has_sunset = 'has_sunset_clause(' in content
+        has_enforcement = 'requires_active_enforcement(' in content
+        if not has_sunset and has_enforcement:
+            errors.append("MISSING_SUNSET_CLAUSE: Scaffold with requires_active_enforcement needs narrative_ontology:has_sunset_clause/1.")
 
     # 9b. SCAFFOLD DANGER ZONE (v6.0)
     # Catch constraints whose metrics could produce false scaffold classifications
@@ -141,13 +147,11 @@ def lint_file(filepath):
     # and no sunset clause, it's in the scaffold danger zone — the engine may classify
     # it as scaffold even though it lacks temporality (scaffold's defining feature).
     if ext_val is not None and ext_val <= 0.30:
-        # Mountains naturally have low extraction, beneficiary data, no enforcement,
-        # no sunset clause — the same profile as scaffold-danger. But mountains can't
-        # be misclassified as scaffolds (signature override catches this). Skip the
-        # check when any indexed classification is mountain — these are structural-type
-        # constraints (natural laws, math theorems) where scaffold concern doesn't apply.
-        all_mountain = 'mountain' in found_types
-        if not all_mountain:
+        # Skip when mountain or scaffold is already in the file's type set:
+        # - Mountains can't be misclassified as scaffolds (signature override)
+        # - Scaffolds: the scaffold gate firing is the INTENDED outcome, not a danger
+        exempt = 'mountain' in found_types or 'scaffold' in found_types
+        if not exempt:
             has_beneficiary_data = 'constraint_beneficiary(' in content
             has_enforcement = 'requires_active_enforcement(' in content
             has_sunset = 'has_sunset_clause(' in content
@@ -406,40 +410,84 @@ def lint_file(filepath):
                     f"{values[0]}) is declared more than once. Remove the duplicate."
                 )
 
-    # 23. CONTEXT_ARITY CHECK
+    # 23. MOUNTAIN METRIC CONSISTENCY CHECK
+    # The mountain gate in classify_from_metrics requires:
+    #   BaseEps <= mountain_extractiveness_max (config: 0.25)
+    #   Supp <= mountain_suppression_ceiling (config: 0.05)
+    # If a constraint claims mountain but its metrics exceed these thresholds,
+    # the engine will classify it as something else from most perspectives,
+    # producing coupling violations that trigger false_natural_law.
+    claim_match = re.search(r"constraint_claim\(\s*\w+\s*,\s*(\w+)\s*\)", content)
+    if claim_match:
+        claim_type = claim_match.group(1)
+        if claim_type == 'mountain':
+            if ext_val is not None and ext_val > 0.25:
+                errors.append(
+                    f"MOUNTAIN_METRIC_CONFLICT: constraint_claim is mountain but "
+                    f"base_extractiveness={ext_val} exceeds mountain threshold (0.25). "
+                    f"The engine's mountain gate will reject this, producing coupling "
+                    f"violations and a false_natural_law signature. Either reduce "
+                    f"extractiveness or reclassify the constraint."
+                )
+            if supp_val is not None and supp_val > 0.05:
+                errors.append(
+                    f"MOUNTAIN_METRIC_CONFLICT: constraint_claim is mountain but "
+                    f"suppression_score={supp_val} exceeds mountain suppression ceiling "
+                    f"(0.05). The engine's mountain gate will reject this, producing "
+                    f"coupling violations and a false_natural_law signature. Either "
+                    f"reduce suppression or reclassify the constraint."
+                )
+
+    # 24. CONTEXT_ARITY CHECK
     # context() terms inside constraint_classification must have exactly 4 arguments
     # (agent_power, time_horizon, exit_options, spatial_scope). Files that smuggle
     # constraint_beneficiary/constraint_victim into context break the indexing framework.
-    # Pre-process: strip Prolog inline comments (% to end of line) to avoid
-    # counting commas inside comments (e.g., "exit_options(mobile), % materials, etc.")
+    #
+    # Pre-process: build a set of line numbers inside /* */ block comments,
+    # and strip inline % comments, so we don't false-positive on commented code.
+    lines = content.split('\n')
+    in_block_comment = False
+    block_comment_lines = set()
+    for i, raw_line in enumerate(lines):
+        if in_block_comment:
+            block_comment_lines.add(i)
+            if '*/' in raw_line:
+                in_block_comment = False
+        else:
+            if '/*' in raw_line:
+                block_comment_lines.add(i)
+                # Only stay in block comment if there's no closing */ on this line
+                if '*/' not in raw_line or raw_line.index('/*') > raw_line.index('*/'):
+                    in_block_comment = True
+
+    # Strip inline % comments for comma counting (avoids counting commas
+    # in trailing comments like "exit_options(mobile), % materials, etc.")
     cleaned_lines = []
-    for raw_line in content.split('\n'):
-        # Remove % comments that aren't inside quotes
+    for raw_line in lines:
+        cleaned = raw_line
         in_quote = False
-        for i, ch in enumerate(raw_line):
-            if ch == "'" and (i == 0 or raw_line[i-1] != '\\'):
+        for j, ch in enumerate(cleaned):
+            if ch == "'" and (j == 0 or cleaned[j-1] != '\\'):
                 in_quote = not in_quote
             elif ch == '%' and not in_quote:
-                raw_line = raw_line[:i]
+                cleaned = cleaned[:j]
                 break
-        cleaned_lines.append(raw_line)
+        cleaned_lines.append(cleaned)
     cleaned_content = '\n'.join(cleaned_lines)
 
-    lines = content.split('\n')
     for line_num, line in enumerate(lines, 1):
+        # Skip lines inside /* */ block comments
+        if (line_num - 1) in block_comment_lines:
+            continue
         stripped = line.lstrip()
-        # Skip commented-out lines
+        # Skip %-commented lines
         if stripped.startswith('%'):
             continue
         # Look for context( that is part of a constraint_classification, not default_context etc.
         # Use negative lookbehind to skip compound atoms like default_context(
         for ctx_match in re.finditer(r'(?<!\w)context\(', line):
             # Found a context( on this line — count top-level commas by tracking paren depth
-            # Use cleaned_content (comments stripped) for the character scan
-            cleaned_line = cleaned_lines[line_num - 1]
-            clean_pos = cleaned_content.index(cleaned_line) + ctx_match.start()
-            # Guard against index mismatch from duplicate lines
-            # by searching from the approximate position in cleaned_content
+            # Use cleaned_content (inline comments stripped) for the character scan
             line_start_in_clean = sum(len(cl) + 1 for cl in cleaned_lines[:line_num - 1])
             rest = cleaned_content[line_start_in_clean + ctx_match.start():]
             depth = 0
@@ -461,5 +509,46 @@ def lint_file(filepath):
                     f"arguments (expected 4: agent_power, time_horizon, exit_options, spatial_scope). "
                     f"Do not embed constraint_beneficiary/constraint_victim inside context terms."
                 )
+
+    # 25. MOUNTAIN NL PROFILE METRIC COVERAGE
+    # The mountain metric gate in classify_from_metrics requires emerges_naturally(C).
+    # The natural_law_signature certification chain requires accessibility_collapse
+    # and resistance metrics. Without these, get_metric_average defaults to 0.5,
+    # failing the NL thresholds (collapse >= 0.85, resistance <= 0.15).
+    #
+    # Trigger: mountain in constraint_claim, OR mountain-only uniform type.
+    # NOT triggered by mixed-type files (mountain + rope = perspectival split,
+    # not a natural law claim) or by just having low metrics.
+    is_mountain_candidate = False
+    if claim_match and claim_match.group(1) == 'mountain':
+        is_mountain_candidate = True
+    if found_types == {'mountain'}:
+        is_mountain_candidate = True
+
+    if is_mountain_candidate:
+        has_ac = bool(re.search(
+            r'constraint_metric\(\s*\w+\s*,\s*accessibility_collapse\s*,', content))
+        has_res = bool(re.search(
+            r'constraint_metric\(\s*\w+\s*,\s*resistance\s*,', content))
+        has_en = bool(re.search(
+            r'emerges_naturally\(\s*\w+\s*\)', content))
+
+        missing = []
+        if not has_ac:
+            missing.append('accessibility_collapse')
+        if not has_res:
+            missing.append('resistance')
+        if not has_en:
+            missing.append('emerges_naturally')
+
+        if missing:
+            errors.append(
+                f"MISSING_NL_PROFILE: Mountain candidate is missing required NL "
+                f"profile data: {', '.join(missing)}. Without these, the mountain "
+                f"metric gate will not fire (emerges_naturally) and/or the "
+                f"natural_law_signature certification will fail (accessibility_collapse "
+                f"and resistance default to 0.5). Add the missing declarations or "
+                f"reclassify the constraint."
+            )
 
     return errors

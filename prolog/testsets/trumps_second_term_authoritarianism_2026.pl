@@ -64,7 +64,7 @@ narrative_ontology:constraint_metric(trump_second_term_authoritarianism_2026, th
 
 % Constraint self-claim (what does the constraint claim to be?)
 % The regime claims its actions are necessary for law and order.
-narrative_ontology:constraint_claim(trump_second_term_authoritarianism_2026, mountain).
+narrative_ontology:constraint_claim(trump_second_term_authoritarianism_2026, tangled_rope).
 
 % Binary flags
 domain_priors:requires_active_enforcement(trump_second_term_authoritarianism_2026). % Requires paramilitary deployment and judicial pressure.
@@ -105,7 +105,7 @@ constraint_indexing:constraint_classification(trump_second_term_authoritarianism
 % From a detached, historical viewpoint, the transition to authoritarianism appears
 % as an inevitable structural closure (Mountain). The system's internal logic
 % seems to be collapsing toward a fixed, oppressive state.
-constraint_indexing:constraint_classification(trump_second_term_authoritarianism_2026, mountain,
+constraint_indexing:constraint_classification(trump_second_term_authoritarianism_2026, tangled_rope,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(analytical),

@@ -67,7 +67,7 @@ narrative_ontology:constraint_metric(cancer_chronotherapy_timing, suppression_re
 narrative_ontology:constraint_metric(cancer_chronotherapy_timing, theater_ratio, 0.10).
 
 % Constraint self-claim (what does the constraint claim to be?)
-narrative_ontology:constraint_claim(cancer_chronotherapy_timing, mountain).
+narrative_ontology:constraint_claim(cancer_chronotherapy_timing, rope).
 
 % Binary flags
 narrative_ontology:has_sunset_clause(cancer_chronotherapy_timing). % The logistical constraint is temporary until scheduling adapts.
@@ -108,7 +108,7 @@ constraint_indexing:constraint_classification(cancer_chronotherapy_timing, scaff
 % PERSPECTIVE 3: THE BIOLOGICAL REALIST (MOUNTAIN)
 % From an analytical, universal perspective, the underlying circadian rhythms
 % are fixed biological limits ("Mountain") that the therapy must work around.
-constraint_indexing:constraint_classification(cancer_chronotherapy_timing, mountain,
+constraint_indexing:constraint_classification(cancer_chronotherapy_timing, rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

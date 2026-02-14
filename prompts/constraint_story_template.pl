@@ -42,7 +42,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3.
+    constraint_indexing:directionality_override/3,
+    domain_priors:emerges_naturally/1.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -78,12 +79,27 @@ narrative_ontology:constraint_metric([id], extractiveness, [0.0-1.0]).
 narrative_ontology:constraint_metric([id], suppression_requirement, [0.0-1.0]).
 narrative_ontology:constraint_metric([id], theater_ratio, [0.0-1.0]).
 
+% --- NL Profile Metrics (required for mountain constraints) ---
+% These feed the natural_law_signature certification chain in
+% structural_signatures.pl. Uncomment and set for mountain constraints.
+% Without these, the NL signature defaults to 0.5 and fails certification.
+%
+% narrative_ontology:constraint_metric([id], accessibility_collapse, [0.85-1.0]).
+% narrative_ontology:constraint_metric([id], resistance, [0.0-0.15]).
+
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim([id], [mountain/rope/tangled_rope/snare/scaffold/piton]).
 
 % --- Binary flags ---
 % narrative_ontology:has_sunset_clause([id]).      % Mandatory if Scaffold
 % domain_priors:requires_active_enforcement([id]). % Required for Tangled Rope
+
+% --- Emergence flag (required for mountain constraints) ---
+% Uncomment for constraints that emerge naturally without human design
+% or enforcement. Required for the mountain metric gate: without this,
+% the classify_from_metrics mountain clause will not fire.
+%
+% domain_priors:emerges_naturally([id]).
 
 % --- Structural relationships (REQUIRED for non-mountain constraints) ---
 % These feed the directionality derivation chain: the engine computes

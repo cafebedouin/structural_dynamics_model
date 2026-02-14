@@ -55,7 +55,8 @@
 
 % Required for structural extraction
 narrative_ontology:interval(lowenheim_skolem_interval, 0, 10).
-narrative_ontology:constraint_claim(lowenheim_skolem_theorem, mountain).
+narrative_ontology:constraint_claim(lowenheim_skolem_theorem, tangled_rope).
+domain_priors:requires_active_enforcement(lowenheim_skolem_theorem).
 
 % Base extractiveness: 0.2 (Low)
 % Rationale: It extracts "semantic uniqueness" or "absoluteness." 
@@ -103,7 +104,7 @@ narrative_ontology:constraint_victim(lowenheim_skolem_theorem, platonist_philoso
 
 constraint_indexing:constraint_classification(
     lowenheim_skolem_theorem,
-    mountain,
+    tangled_rope,
     context(
         agent_power(analytical),
         time_horizon(civilizational),
@@ -173,7 +174,7 @@ constraint_indexing:constraint_classification(
 
 test(multi_perspective_variance) :-
     % Test that different perspectives yield different classifications
-    constraint_indexing:constraint_classification(lowenheim_skolem_theorem, mountain, context(agent_power(analytical), _, _, _)),
+    constraint_indexing:constraint_classification(lowenheim_skolem_theorem, tangled_rope, context(agent_power(analytical), _, _, _)),
     constraint_indexing:constraint_classification(lowenheim_skolem_theorem, rope, context(agent_power(institutional), _, _, _)),
     constraint_indexing:constraint_classification(lowenheim_skolem_theorem, snare, context(agent_power(powerless), _, _, _)).
 

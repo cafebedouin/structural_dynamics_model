@@ -75,7 +75,7 @@ narrative_ontology:constraint_metric(the_bacchae_madness_protocol, theater_ratio
 
 % Constraint self-claim (what does the constraint claim to be?)
 % Dionysus presents his power not as a choice but as a fundamental, divine law of nature.
-narrative_ontology:constraint_claim(the_bacchae_madness_protocol, mountain).
+narrative_ontology:constraint_claim(the_bacchae_madness_protocol, tangled_rope).
 
 % Binary flags
 % The mandate requires active enforcement by Dionysus (divine influence) and the Maenads (physical violence).
@@ -116,7 +116,7 @@ constraint_indexing:constraint_classification(the_bacchae_madness_protocol, rope
 % but as a fundamental force. To them, the mandate is a Mountain—an unchangeable
 % law of the cosmos. One does not fight it; one coordinates with it to avoid
 % being crushed. This is the system's final classification.
-constraint_indexing:constraint_classification(the_bacchae_madness_protocol, mountain,
+constraint_indexing:constraint_classification(the_bacchae_madness_protocol, tangled_rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

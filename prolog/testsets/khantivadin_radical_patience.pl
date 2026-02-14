@@ -64,7 +64,7 @@ narrative_ontology:constraint_metric(khantivadin_radical_patience, theater_ratio
 
 % Constraint self-claim (what does the constraint claim to be?)
 % The teaching derived from the event claims to be a natural law of enlightenment.
-narrative_ontology:constraint_claim(khantivadin_radical_patience, mountain).
+narrative_ontology:constraint_claim(khantivadin_radical_patience, tangled_rope).
 
 % Binary flags
 domain_priors:requires_active_enforcement(khantivadin_radical_patience). % The king's violence is active and direct.
@@ -104,7 +104,7 @@ constraint_indexing:constraint_classification(khantivadin_radical_patience, rope
 % From the Buddha's perspective, the sage's response reveals an immutable
 % moral law (a Mountain): true patience is a property of mind, not body,
 % and is a zero-degree-of-freedom requirement for enlightenment.
-constraint_indexing:constraint_classification(khantivadin_radical_patience, mountain,
+constraint_indexing:constraint_classification(khantivadin_radical_patience, tangled_rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

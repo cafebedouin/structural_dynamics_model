@@ -1,9 +1,9 @@
 % ============================================================================
 % CONSTRAINT STORY: lobs_theorem
 % ============================================================================
-% Generated: 2026-01-19
-% Model: Gemini 2.0 Flash
-% Source: Martin Hugo Löb (1955) / Provability Logic
+% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2024-07-15
 % ============================================================================
 
 :- module(constraint_lobs_theorem, []).
@@ -12,15 +12,38 @@
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
 
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
+
 % --- Namespace Hooks (Required for loading) ---
-:- multifile 
+:- multifile
     domain_priors:base_extractiveness/2,
     domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
     domain_priors:requires_active_enforcement/1,
+    domain_priors:emerges_naturally/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
-    constraint_indexing:constraint_classification/3.
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
+    narrative_ontology:boltzmann_floor_override/2,
+    constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -28,260 +51,210 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: lobs_theorem
- * human_readable: Löb's Theorem
- * domain: technological
- * temporal_scope: Permanent (Universal Mathematical Law)
- * spatial_scope: Global (Formal Information Systems)
- * * SUMMARY:
- * Löb's Theorem states that for any proposition P, if a system can prove that 
- * "the provability of P implies P," then the system must already be able to 
- * prove P itself. It serves as a fundamental limit on a system's ability to 
- * "trust" its own soundness without becoming trivial.
- * * KEY AGENTS:
- * - The Logician: An observer analyzing the recursive limits of provability.
- * - The AI/Formal System: An agent attempting recursive self-improvement or 
- * meta-reflection on its own code.
- * - The Foundationalist: A subject seeking to ground a system's truth in a 
- * "reflection principle" that says "everything I prove is true."
- * * NARRATIVE ARC:
- * The theorem acts as a "Mountain" of recursive reality, preventing a system 
- * from gaining "unearned trust" in its own outputs. For an AI, it is a 
- * "Rope" for designing stable reflection, but for a human seeking to prove 
- * a system's absolute soundness from within, it is a "Snare" that collapses 
- * into circularity.
+ *   constraint_id: lobs_theorem
+ *   human_readable: Löb's Theorem
+ *   domain: technological
+ *
+ * SUMMARY:
+ *   Löb's Theorem states that for any proposition P in a sufficiently strong
+ *   formal system, if the system can prove "the provability of P implies P,"
+ *   then the system must already be able to prove P itself. It is a
+ *   fundamental limit on a system's ability to "trust" its own soundness
+ *   in a general way, acting as a fixed, unchangeable feature of the logical
+ *   landscape.
+ *
+ * KEY AGENTS (by structural relationship):
+ *   - The Logician: Analytical observer who understands the theorem as a
+ *     fixed feature of formal systems.
+ *   - The AI/Formal System: An agent whose operations are bounded by the
+ *     theorem's logical limits.
+ *   - The Foundationalist: A philosopher whose project of finding an internal
+ *     proof of a system's soundness is shown to be impossible by the theorem.
  */
 
 /* ==========================================================================
-   2. CORE SYSTEM INTEGRATION (The "Reality" Layer)
+   2. BASE PROPERTIES (DOMAIN PRIORS)
    ========================================================================== */
 
-% Required for structural anchor
-narrative_ontology:interval(lobs_theorem_interval, 0, 10).
+% --- Numerical metrics ---
+domain_priors:base_extractiveness(lobs_theorem, 0.02).
+domain_priors:suppression_score(lobs_theorem, 0.01).   % Structural property (raw, unscaled).
+domain_priors:theater_ratio(lobs_theorem, 0.04).       % Piton detection (>= 0.70)
+
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(lobs_theorem, extractiveness, 0.02).
+narrative_ontology:constraint_metric(lobs_theorem, suppression_requirement, 0.01).
+narrative_ontology:constraint_metric(lobs_theorem, theater_ratio, 0.04).
+
+% --- NL Profile Metrics (required for mountain constraints) ---
+% These feed the natural_law_signature certification chain in
+% structural_signatures.pl.
+narrative_ontology:constraint_metric(lobs_theorem, accessibility_collapse, 1.0).
+narrative_ontology:constraint_metric(lobs_theorem, resistance, 0.0).
+
+% --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(lobs_theorem, mountain).
 
-% Base extractiveness: 0.3 (Moderate)
-% Rationale: It extracts "semantic depth." It forces a system to either 
-% lack self-trust or prove the specific truth, preventing the "extraction" 
-% of truth status through mere meta-assertion.
-domain_priors:base_extractiveness(lobs_theorem, 0.3).
+% --- Binary flags ---
+% No active enforcement is required for a mathematical theorem.
 
-% Suppression: 0.5 (Moderate)
-% Rationale: Naive "Reflection Principles" (the idea that one can simply 
-% assume a system is sound) are suppressed by the inevitable emergence 
-% of contradictions if self-reference is allowed.
-domain_priors:suppression_score(lobs_theorem, 0.5).
-
-% Constraint metric facts (bridge for classification engine)
-narrative_ontology:constraint_metric(lobs_theorem, extractiveness, 0.3).
-narrative_ontology:constraint_metric(lobs_theorem, suppression_requirement, 0.5).
-
-% Enforcement: Emerges naturally from the structure of Peano Arithmetic and 
-% diagonal arguments.
+% --- Emergence flag (required for mountain constraints) ---
+% Required for the mountain metric gate: without this, the classify_from_metrics
+% mountain clause will not fire.
 domain_priors:emerges_naturally(lobs_theorem).
 
-% BENEFICIARIES & VICTIMS
-% Beneficiary: Consistent systems (protects them from triviality).
-narrative_ontology:constraint_beneficiary(lobs_theorem, stable_logical_architectures).
-% Victim: Recursive optimists (who hope for internal proofs of soundness).
-narrative_ontology:constraint_victim(lobs_theorem, foundationalist_philosophers).
+% --- Structural relationships (REQUIRED for non-mountain constraints) ---
+% No enrichment needed. As a Mountain (a mathematical theorem), this
+% constraint has no beneficiaries or victims in the structural sense. It is
+% a feature of the environment applicable to all relevant agents.
 
-% Metrics for Executive Summary
 /* ==========================================================================
-   3. INDEXED CLASSIFICATIONS (Perspectival Truth)
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × f(d) × σ(S)
+   where f(d) is the sigmoid directionality function:
+     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
+   The engine derives d from beneficiary/victim membership + exit_options.
+   Scope modifiers: local=0.8, regional=0.9, national=1.0,
+                    continental=1.1, global=1.2, universal=1.0.
+   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
+   Do not add measurement_basis, beneficiary/victim, or other metadata.
+   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 1: THE ANALYTICAL LOGICIAN - Mountain
-   --------------------------------------------------------------------------
-   
-   WHO: analytical - Observer of universal informational laws.
-   WHEN: civilizational - Viewing logic as a permanent substrate.
-   WHERE: trapped - Logic cannot bypass the diagonal lemma.
-   SCOPE: global - Applies to all sufficiently powerful systems.
-   
-   WHY THIS CLASSIFICATION:
-   To the analytical observer, the theorem is a Mountain. It is an 
-   unchangeable feature of the mathematical landscape. No amount of 
-   "better programming" or "new axioms" can remove the recursive wall 
-   that Löb identified.
-   -------------------------------------------------------------------------- */
+% PERSPECTIVE 1: THE ANALYTICAL LOGICIAN (MOUNTAIN)
+% To the analytical observer, the theorem is a Mountain. It is an
+% unchangeable feature of the mathematical landscape, a consequence of
+% diagonal arguments in any sufficiently powerful system.
+constraint_indexing:constraint_classification(lobs_theorem, mountain,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).
 
-constraint_indexing:constraint_classification(
-    lobs_theorem,
-    mountain,
-    context(
-        agent_power(analytical),
-        time_horizon(civilizational),
-        exit_options(trapped),
-        spatial_scope(global)
-    )
-) :- !.
+% PERSPECTIVE 2: THE REFLECTIVE AI SYSTEM (MOUNTAIN)
+% For a system designed for self-reflection, the theorem is not a coordination
+% tool (Rope) but a hard boundary (Mountain). It dictates the impassable
+% limits of its own self-verification capabilities. The AI is bound by it,
+% not coordinating with it.
+constraint_indexing:constraint_classification(lobs_theorem, mountain,
+    context(agent_power(institutional),
+            time_horizon(biographical),
+            exit_options(trapped),
+            spatial_scope(global))).
 
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE REFLECTIVE AI SYSTEM - Rope
-   --------------------------------------------------------------------------
-   
-   WHO: institutional - Rule-making power over its own internal logic.
-   WHEN: biographical - Operating within a single "run" or development life.
-   WHERE: arbitrage - Can move between different levels of the meta-hierarchy.
-   SCOPE: national - Specific to its own internal software ecosystem.
-   
-   WHY THIS CLASSIFICATION:
-   For a system designed for self-reflection, the theorem is a Rope. It is 
-   a coordination tool that allows the system to remain stable. By 
-   understanding that it cannot prove its own soundness without proving 
-   specific truths, it uses the theorem as a tether to keep its 
-   self-model grounded in provable reality.
-   -------------------------------------------------------------------------- */
-
-constraint_indexing:constraint_classification(
-    lobs_theorem,
-    rope,
-    context(
-        agent_power(institutional),
-        time_horizon(biographical),
-        exit_options(arbitrage),
-        spatial_scope(national)
-    )
-) :- !.
-
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE FOUNDATIONALIST SUBJECT - Snare
-   --------------------------------------------------------------------------
-   
-   WHO: powerless - Subject to the limits of their own reasoning.
-   WHEN: immediate - The current attempt to ground a system's truth.
-   WHERE: trapped - Limited by the syntax of the system they inhabit.
-   SCOPE: local - Immediate cognitive frame.
-   
-   WHY THIS CLASSIFICATION:
-   For the subject seeking to prove "Everything I say is true" within their 
-   own language, the theorem is a Snare. The harder they try to ground 
-   the general truth of their statements, the tighter the paradox pulls, 
-   forcing them to either remain silent on their own soundness or collapse 
-   into proving every possible absurdity.
-   -------------------------------------------------------------------------- */
-
-constraint_indexing:constraint_classification(
-    lobs_theorem,
-    snare,
-    context(
-        agent_power(powerless),
-        time_horizon(immediate),
-        exit_options(trapped),
-        spatial_scope(local)
-    )
-) :- !.
+% PERSPECTIVE 3: THE FOUNDATIONALIST PHILOSOPHER (MOUNTAIN)
+% For the subject seeking to prove "Everything this system proves is true"
+% from within, the theorem is not a Snare that extracts value, but a Mountain
+% that demonstrates the impossibility of their project. The cost is the
+% failure of the philosophical endeavor, not a coercive extraction.
+constraint_indexing:constraint_classification(lobs_theorem, mountain,
+    context(agent_power(powerless),
+            time_horizon(generational),
+            exit_options(trapped),
+            spatial_scope(universal))).
 
 /* ==========================================================================
-   4. TESTS (What We Learn About Constraints)
+   4. VALIDATION TESTS
    ========================================================================== */
 
 :- begin_tests(lobs_theorem_tests).
 
-test(multi_perspective_variance) :-
-    % Perspective 1: Analyst sees Mountain
+test(perspective_invariance) :-
+    % Verify that this is a uniform-type constraint (Mountain) from all key perspectives.
     constraint_indexing:constraint_classification(lobs_theorem, mountain, context(agent_power(analytical), _, _, _)),
-    % Perspective 2: Institutional sees Rope
-    constraint_indexing:constraint_classification(lobs_theorem, rope, context(agent_power(institutional), _, _, _)),
-    % Perspective 3: Powerless sees Snare
-    constraint_indexing:constraint_classification(lobs_theorem, snare, context(agent_power(powerless), _, _, _)).
+    constraint_indexing:constraint_classification(lobs_theorem, mountain, context(agent_power(institutional), _, _, _)),
+    constraint_indexing:constraint_classification(lobs_theorem, mountain, context(agent_power(powerless), _, _, _)).
 
-test(power_extractiveness_reflection) :-
-    % Powerless subjects feel the loss of foundational certainty (Snare)
-    ContextPowerless = context(powerless, immediate, trapped, local),
-    % Institutional systems manage the recursion as a design constraint (Rope)
-    ContextInstitutional = context(institutional, biographical, arbitrage, national),
+test(threshold_validation) :-
+    % Verify that the base metrics are within the allowed range for a Mountain.
     domain_priors:base_extractiveness(lobs_theorem, E),
-    E > 0.1.
-
-test(time_immutability_scale) :-
-    % Civilizational view treats logical invariants as Mountains
-    constraint_indexing:effective_immutability(civilizational, trapped, mountain).
+    domain_priors:suppression_score(lobs_theorem, S),
+    E =< 0.25,
+    S =< 0.05.
 
 :- end_tests(lobs_theorem_tests).
 
 /* ==========================================================================
-   5. MODEL INTERPRETATION (Commentary)
+   5. GENERATIVE COMMENTARY
    ========================================================================== */
 
 /**
- * LLM GENERATION NOTES
- * * Model: Gemini 2.0 Flash
- * Date: 2026-01-19
- * * KEY DECISIONS:
- * * 1. EXTRACTIVENESS SCORE (0.3):
- * Reasoning: Löb's theorem prevents the "free" assumption of soundness. 
- * It extracts the luxury of simple self-trust.
- * * 2. SUPPRESSION SCORE (0.5):
- * Reasoning: It suppresses naive reflection principles (e.g., "if Provable(P) 
- * then P"). These principles are invisible to consistent systems 
- * because they lead to triviality.
- * * 3. PERSPECTIVE SELECTION:
- * The Analyst sees the Law (Mountain). The System sees the Design 
- * Constraint (Rope). The Foundationalist sees the Trap (Snare).
+ * LOGIC RATIONALE:
+ *   The initial classification of this constraint as having perspectival
+ *   variance (Rope, Snare) was a category error, applying social metaphors
+ *   to a mathematical fact. This revised version corrects the base metrics
+ *   to be compliant with a Mountain classification (ε=0.02, suppression=0.01).
+ *   A mathematical theorem does not extract value or suppress alternatives in
+ *   a coercive, social sense; it describes an immutable feature of a formal
+ *   landscape. The Natural Law profile metrics (accessibility_collapse=1.0,
+ *   resistance=0.0) and the emerges_naturally flag confirm its status as a
+ *   fixed feature of reality.
+ *
+ * PERSPECTIVAL GAP:
+ *   There is no structural perspectival gap. All agents, regardless of their
+ *   goals or power, are subject to this logical limit in the same way. The
+ *   perceived differences (e.g., a "trap" for the foundationalist) are
+ *   metaphorical interpretations of the same underlying Mountain. The
+ *   constraint's classification is invariant across all indices.
+ *
+ * DIRECTIONALITY LOGIC:
+ *   As a Mountain, this constraint is symmetric and has no directionality.
+ *   It does not have beneficiaries or victims in a structural sense, so no
+ *   such declarations are made.
+ *
+ * MANDATROPHY ANALYSIS:
+ *   Classifying Löb's Theorem as a uniform Mountain prevents the mislabeling
+ *   of a fundamental logical limit as a social mechanism of extraction (Snare)
+ *   or coordination (Rope). This upholds the principle that the Deferential
+ *   Realism categories map to distinct structural realities, not just to
+ *   different subjective experiences of a single reality.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% Omega declaration
+% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
-    natural_language_soundness,
-    "Can human natural language avoid Löb's trap by virtue of its 
-    non-formal or 'fuzzy' semantics?",
-    resolution_mechanism("Formalization of natural language semantics to check for diagonalizability"),
-    impact("If Yes: Human reasoning is a Rope. If No: Human reasoning is 
-    subject to the same Snare as formal logic."),
+    omega_lobs_theorem,
+    "Can human natural language avoid Löb's trap by virtue of its non-formal or 'fuzzy' semantics?",
+    "Formalization of natural language semantics to check for sufficient expressive power and diagonalizability.",
+    "If Yes: Human reasoning operates under a different constraint set. If No: Human reasoning is subject to the same fundamental limits as formal logic.",
     confidence_without_resolution(low)
 ).
 
 /* ==========================================================================
-   7. ALTERNATIVE ANALYSIS
+   7. INTEGRATION HOOKS
    ========================================================================== */
 
-/**
- * VIABLE ALTERNATIVES
- * * ALTERNATIVE 1: Non-well-founded sets / Non-standard Logics
- * Viability: High in niche research. Some logics allow "circular" 
- * truth without triviality.
- * Suppression: High. These systems are ignored in "standard" 
- * foundations because they lack the intuitive power of PA.
- * * CONCLUSION:
- * The existence of niche alternatives makes the "Mountain" of Löb's 
- * Theorem a specific choice of the classical logician, and thus a 
- * "Snare" for those trapped in classical paradigms.
- */
+% Required for external script parsing
+narrative_ontology:interval(lobs_theorem, 0, 10).
 
 /* ==========================================================================
-   8. INTEGRATION HOOKS
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-/**
- * TO USE THIS CONSTRAINT:
- * 1. Load: ?- [constraint_lobs_theorem].
- * 2. Multi-perspective: ?- multi_index_report(lobs_theorem).
- * 3. Run tests: ?- run_tests(lobs_theorem_tests).
- */
+% As a mathematical theorem, this constraint does not experience lifecycle
+% drift. Its properties are static and time-invariant. Temporal measurements
+% are not required as base_extractiveness (0.02) is below the 0.46 threshold.
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA
+   ========================================================================== */
+
+% Network relationships (structural influence edges)
+% Löb's theorem is closely related to, and can be seen as a generalization of,
+% Gödel's second incompleteness theorem. It belongs to a family of constraints
+% on formal systems.
+narrative_ontology:affects_constraint(godels_incompleteness, lobs_theorem).
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+% No overrides are needed. As a Mountain, this constraint has no inherent
+% directionality, and the engine does not need to derive d values.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
-
-% ============================================================================
-% ENRICHMENT: Structural predicates for dynamic classification
-% Generated: 2026-02-08
-% Template: v5.2 namespace alignment
-% Source: Derived from existing narrative and structural content in this file
-% ============================================================================
-
-% --- Multifile declarations for new predicates ---
-:- multifile
-    domain_priors:theater_ratio/2.
-
-% --- Theater ratio (missing from base properties) ---
-% Technical constraint — mostly substantive, minimal implementation theater
-domain_priors:theater_ratio(lobs_theorem, 0.04).
-narrative_ontology:constraint_metric(lobs_theorem, theater_ratio, 0.04).

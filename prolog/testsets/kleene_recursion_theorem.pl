@@ -62,7 +62,8 @@
 
 % Required for DR-Audit Suite
 narrative_ontology:interval(kleene_era, 1938, 2026).
-narrative_ontology:constraint_claim(kleene_recursion_theorem, mountain).
+narrative_ontology:constraint_claim(kleene_recursion_theorem, tangled_rope).
+domain_priors:requires_active_enforcement(kleene_recursion_theorem).
 
 % Base extractiveness score (0.0-1.0)
 % Rationale: 0.2. It "extracts" the simplicity of linear, non-recursive 
@@ -111,7 +112,7 @@ narrative_ontology:constraint_victim(kleene_recursion_theorem, static_analysis_s
 
 constraint_indexing:constraint_classification(
     kleene_recursion_theorem,
-    mountain,
+    tangled_rope,
     context(
         agent_power(powerless),
         time_horizon(immediate),

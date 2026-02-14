@@ -1,9 +1,9 @@
 % ============================================================================
 % CONSTRAINT STORY: thermodynamics_entropy
 % ============================================================================
-% Version: 5.2 (Deferential Realism Core + Boltzmann + Purity + Network)
-% Logic: 5.2 (Indexed Tuple P,T,E,S + Coupling + Purity + Network Drift)
-% Generated: 2024-07-15
+% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2024-08-16
 % ============================================================================
 
 :- module(constraint_thermodynamics_entropy, []).
@@ -12,13 +12,25 @@
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
 
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
+
 % --- Namespace Hooks (Required for loading) ---
 :- multifile
     domain_priors:base_extractiveness/2,
     domain_priors:suppression_score/2,
     domain_priors:theater_ratio/2,
     domain_priors:requires_active_enforcement/1,
-    domain_priors:emerges_naturally/1,
     narrative_ontology:has_sunset_clause/1,
     narrative_ontology:interval/3,
     narrative_ontology:measurement/5,
@@ -29,7 +41,9 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3,
+    domain_priors:emerges_naturally/1.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -37,86 +51,106 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: thermodynamics_entropy
- * human_readable: The Second Law of Thermodynamics (Entropy)
- * domain: technological
- * * SUMMARY:
- * The Second Law of Thermodynamics dictates that in any isolated system, entropy (disorder) must increase over time. This imposes a fundamental "arrow of time" and a hard limit on the efficiency of any engine or biological process, representing the inevitable decay of concentrated energy into unusable heat. It is a universal "tax" on existence.
- * * KEY AGENTS:
- * - The Biological Organism: Subject (Powerless), trapped in a local struggle to maintain order (negentropy) by extracting energy from the environment.
- * - The Industrial Engineer: Beneficiary (Institutional), who leverages the predictability of the law to design efficient systems.
- * - The Cosmologist: Auditor (Analytical), observing the "Heat Death" of the universe as the ultimate expression of the law.
+ *   constraint_id: thermodynamics_entropy
+ *   human_readable: The Second Law of Thermodynamics (Entropy)
+ *   domain: technological
+ *
+ * SUMMARY:
+ *   The Second Law of Thermodynamics dictates that in any isolated system, the
+ *   total entropy (a measure of disorder) must increase or stay the same. This
+ *   imposes a fundamental "arrow of time" and a hard limit on the efficiency
+ *   of any engine or biological process, representing the inevitable decay of
+ *   concentrated energy into unusable heat. It is a universal, unchangeable
+ *   feature of the physical world.
+ *
+ * KEY AGENTS (by structural relationship):
+ *   - The Biological Organism: Subject (powerless/trapped) — experiences the law's effects as decay and limitation.
+ *   - The Industrial Engineer: User (institutional/arbitrage) — uses the law's predictability to design systems.
+ *   - The Cosmologist: Observer (analytical) — studies the law's universal implications.
  */
 
 /* ==========================================================================
    2. BASE PROPERTIES (DOMAIN PRIORS)
    ========================================================================== */
 
-% Numerical anchors for v3.4 thresholds
-domain_priors:base_extractiveness(thermodynamics_entropy, 0.80). % Mountain suppression <= 0.05, Rope extraction <= 0.15, Snare extraction >= 0.46
-domain_priors:suppression_score(thermodynamics_entropy, 0.95).   % Structural property (raw, unscaled). Suppresses perpetual motion.
-domain_priors:theater_ratio(thermodynamics_entropy, 0.0).       % Piton detection (>= 0.70). A physical law has no performative aspect.
+% --- Numerical metrics ---
+% A physical law has no beneficiary to whom value is extracted. Its "cost" is a
+% universal condition, not a transfer. Thus, base extractiveness is near zero.
+domain_priors:base_extractiveness(thermodynamics_entropy, 0.05).
+% Suppression is low because alternatives (like perpetual motion) are logically
+% incoherent, not coercively suppressed. The law doesn't fight alternatives;
+% it defines the space where no alternative is possible.
+domain_priors:suppression_score(thermodynamics_entropy, 0.05).
+domain_priors:theater_ratio(thermodynamics_entropy, 0.0).       % A physical law has no performative aspect.
 
-% Constraint metric facts — primary keys used by the classification engine.
-% These mirror domain_priors values using the metric key names from config.pl.
-narrative_ontology:constraint_metric(thermodynamics_entropy, extractiveness, 0.80).
-narrative_ontology:constraint_metric(thermodynamics_entropy, suppression_requirement, 0.95).
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(thermodynamics_entropy, extractiveness, 0.05).
+narrative_ontology:constraint_metric(thermodynamics_entropy, suppression_requirement, 0.05).
 narrative_ontology:constraint_metric(thermodynamics_entropy, theater_ratio, 0.0).
 
-% Constraint self-claim — entropy is a natural law (Mountain).
-% The asymmetric *impact* is information about the Mountain, not its type.
-narrative_ontology:constraint_claim(thermodynamics_entropy, mountain).
+% --- NL Profile Metrics (required for mountain certification) ---
+% Accessibility collapse: entropy increase is inescapable in any isolated system.
+% No conceivable alternative exists within the axioms of statistical mechanics.
+narrative_ontology:constraint_metric(thermodynamics_entropy, accessibility_collapse, 0.98).
+% Resistance: resisting the second law is physically incoherent.
+narrative_ontology:constraint_metric(thermodynamics_entropy, resistance, 0.0).
 
-% Binary flags
-% This constraint does not require active enforcement; it is an emergent property of statistical mechanics.
+% --- Emergence flag (required for mountain metric gate) ---
 domain_priors:emerges_naturally(thermodynamics_entropy).
 
-% Structural property derivation hooks:
-%   has_coordination_function/1 is DERIVED from constraint_beneficiary/2
-%   has_asymmetric_extraction/1 is DERIVED from constraint_victim/2
-% NOTE: No enrichment needed — industrial engineers work *around* entropy,
-% they don't *benefit from* it in the coordination sense. The beneficiary framing
-% implies coordination that doesn't exist for a natural law.
-narrative_ontology:constraint_victim(thermodynamics_entropy, all_ordered_systems).
+% --- Constraint claim (must match analytical perspective type) ---
+% As a fundamental, unchangeable law of physics, its structural type is Mountain.
+narrative_ontology:constraint_claim(thermodynamics_entropy, mountain).
+
+% --- Binary flags ---
+% No active enforcement is required; it is an emergent property of statistical mechanics.
+
+% --- Structural relationships (REQUIRED for non-mountain constraints) ---
+% As a Mountain (natural law), this constraint has no beneficiaries or victims
+% in the structural sense of value transfer. No enrichment needed.
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × π(P) × σ(S)
-   Power (P) and Scope (S) both affect effective extraction.
+   χ = ε × f(d) × σ(S)
+   where f(d) is the sigmoid directionality function:
+     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
+   The engine derives d from beneficiary/victim membership + exit_options.
    Scope modifiers: local=0.8, regional=0.9, national=1.0,
                     continental=1.1, global=1.2, universal=1.0.
+   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
+   Do not add measurement_basis, beneficiary/victim, or other metadata.
+   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE SUBJECT (SNARE)
-% For a biological organism, life is a constant struggle against decay. Entropy
-% is a Snare that slowly tightens, extracting vitality and order until the
-% system collapses into equilibrium (death).
-% χ = 0.80 (ε) * 1.5 (π(powerless)) * 0.8 (σ(local)) = 0.96
-constraint_indexing:constraint_classification(thermodynamics_entropy, snare,
+% This is a uniform-type constraint (Mountain-only). The classification is
+% invariant across all perspectives because the base metrics (ε ≤ 0.25,
+% suppression ≤ 0.05) force a Mountain classification regardless of context.
+
+% PERSPECTIVE 1: THE SUBJECT (MOUNTAIN)
+% For a biological organism, life is a constant struggle against decay. While
+% this *feels* like a Snare, its structural reality is that of an unchangeable
+% physical limit—a Mountain.
+constraint_indexing:constraint_classification(thermodynamics_entropy, mountain,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
             spatial_scope(local))).
 
-% PERSPECTIVE 2: THE BENEFICIARY (ROPE)
-% For an engineer with institutional power, the law's predictability is a Rope.
-% It provides the rules for coordination (e.g., the Carnot limit) that allow
-% for the design of efficient engines and power grids. The negative extraction
-% reflects the value created by leveraging this predictable limit.
-% χ = 0.80 (ε) * -0.2 (π(institutional)) * 1.0 (σ(national)) = -0.16
-constraint_indexing:constraint_classification(thermodynamics_entropy, rope,
+% PERSPECTIVE 2: THE ENGINEER (MOUNTAIN)
+% For an engineer, the law's predictability is a tool. While this utility
+% *feels* like a Rope, the law itself is not a coordination mechanism. It is a
+% fixed feature of the landscape—a Mountain—that enables coordination.
+constraint_indexing:constraint_classification(thermodynamics_entropy, mountain,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(arbitrage),
             spatial_scope(national))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (SNARE)
-% From a universal, analytical view, the Second Law is not a neutral Mountain
-% (which requires low extraction). Its high base extraction (0.8) makes it a
-% universal Snare, condemning the cosmos to an eventual "Heat Death" by
-% inexorably extracting all useful energy.
-% χ = 0.80 (ε) * 1.15 (π(analytical)) * 1.0 (σ(universal)) = 0.92
-constraint_indexing:constraint_classification(thermodynamics_entropy, snare,
+% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (MOUNTAIN)
+% From a universal, analytical view, the Second Law is a quintessential
+% Mountain. Its low extraction and suppression scores reflect its status as a
+% fundamental, non-coercive, non-extractive feature of reality.
+constraint_indexing:constraint_classification(thermodynamics_entropy, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -128,28 +162,25 @@ constraint_indexing:constraint_classification(thermodynamics_entropy, snare,
 
 :- begin_tests(thermodynamics_entropy_tests).
 
-test(perspectival_gap) :-
-    % Verify there is a perspectival gap between powerless and institutional.
+test(classification_invariance) :-
+    % Verify the classification is Mountain from all perspectives.
     constraint_indexing:constraint_classification(thermodynamics_entropy, TypePowerless, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(thermodynamics_entropy, TypeInstitutional, context(agent_power(institutional), _, _, _)),
-    TypePowerless \= TypeInstitutional,
-    TypePowerless == snare,
-    TypeInstitutional == rope.
+    constraint_indexing:constraint_classification(thermodynamics_entropy, TypeAnalytical, context(agent_power(analytical), _, _, _)),
+    TypePowerless == mountain,
+    TypeInstitutional == mountain,
+    TypeAnalytical == mountain.
 
 test(claim_is_mountain) :-
-    % The constraint's *claim* is mountain — it is a natural law.
-    % Perspectival classifications (snare/rope) remain as experienced types.
+    % The constraint's structural claim must be mountain.
     narrative_ontology:constraint_claim(thermodynamics_entropy, mountain).
 
-test(natural_law_gate_precondition) :-
-    % Entropy qualifies for the natural-law gate precondition, which
-    % blocks snare/tangled_rope classification at query time.
-    drl_core:natural_law_without_beneficiary(thermodynamics_entropy).
-
 test(threshold_validation) :-
-    % Verify the constraint is correctly identified as high-extraction.
+    % Verify the constraint's metrics fall within the Mountain thresholds.
     narrative_ontology:constraint_metric(thermodynamics_entropy, extractiveness, E),
-    E >= 0.46.
+    narrative_ontology:constraint_metric(thermodynamics_entropy, suppression_requirement, S),
+    E =< 0.25,
+    S =< 0.05.
 
 :- end_tests(thermodynamics_entropy_tests).
 
@@ -159,24 +190,32 @@ test(threshold_validation) :-
 
 /**
  * LOGIC RATIONALE:
- * Entropy is a natural law — a Mountain. The high base extraction (0.80) reflects
- * its asymmetric *impact* on ordered systems, but impact is not type. A Mountain
- * that produces asymmetric harm is still a Mountain; the asymmetry is information
- * about the Mountain's impact, not about its type.
+ *   This story models a fundamental physical law. The key was to distinguish
+ *   between the law's *impact* and its structural *type*. While the impact of
+ *   entropy on an ordered system is severe (feels like high extraction), the
+ *   law itself does not transfer value to a beneficiary. Therefore, its base
+ *   extractiveness (ε) is correctly set to a low value (0.05). Similarly, its
+ *   suppression score is low (0.05) because alternatives like perpetual motion
+ *   are logically impossible, not coercively suppressed. These metrics firmly
+ *   place the constraint in the Mountain category.
  *
- * The perspectival gap remains profound and correct:
- * - For the powerless (an organism), entropy is *experienced* as a Snare (aging, decay).
- * - For the institutional (an engineer), its predictability is *experienced* as a Rope.
- * - For the analytical observer, the framework's gate precondition recognizes that
- *   natural laws without enforcement or beneficiaries cannot be snares or tangled
- *   ropes — there is no coordinating agent to reform or resist.
+ * PERSPECTIVAL INVARIANCE:
+ *   There is no perspectival gap. As a Mountain-only constraint, the Second Law
+ *   is classified identically from all viewpoints. The *experience* of the law
+ *   differs—an organism feels its effects as decay (like a Snare), and an
+ *   engineer uses its predictability (like a Rope)—but the underlying
+ *   structure is invariant. The framework correctly identifies the objective
+ *   structure as a Mountain, while the narrative context captures the subjective
+ *   experiences.
  *
- * MANDATROPHY ANALYSIS: [RESOLVED MANDATROPHY]
- * The earlier Mandatrophy resolution (claiming snare) was itself the error. It
- * conflated "high impact" with "extractive type." The gate precondition
- * (natural_law_without_beneficiary) now handles this structurally: natural laws
- * are blocked from snare/tangled_rope classification regardless of metric values.
- * The perspectival classifications (snare/rope/snare) remain as experienced types.
+ * MANDATROPHY ANALYSIS:
+ *   This model resolves the Mandatrophy problem by correctly identifying the
+ *   constraint's type. An earlier, incorrect model used a high ε (0.80) to
+ *   represent the law's negative impact, which incorrectly triggered Mandatrophy
+ *   checks and required a `tangled_rope` or `snare` classification. This was a
+ *   category error, conflating universal cost with social extraction. By setting
+ *   ε to a structurally correct low value, the constraint is properly
+ *   classified as a Mountain, and the Mandatrophy question becomes moot.
  */
 
 /* ==========================================================================
@@ -186,9 +225,9 @@ test(threshold_validation) :-
 % omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
     omega_thermodynamics_entropy,
-    'Is the universe a truly isolated system subject to heat death (Snare), or could unknown physics (e.g., multiverse interactions, vacuum energy renewal) provide an escape (making it a contingent Tangled Rope)?',
+    'Is the universe a truly isolated system subject to heat death, or could unknown physics (e.g., multiverse interactions, vacuum energy renewal) provide an escape, making the law contingent rather than absolute?',
     'Empirical validation of cosmological models beyond the Standard Model.',
-    'If true Snare, all agency is ultimately futile. If contingent, long-term survival strategies may exist.',
+    'If absolute (Mountain), all agency is ultimately futile against heat death. If contingent, long-term survival strategies may exist.',
     confidence_without_resolution(low)
 ).
 
@@ -203,27 +242,34 @@ narrative_ontology:interval(thermodynamics_entropy, 0, 10).
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Temporal data enables drift detection. For a physical law, the metrics are
-% constant over the interval, representing its unchanging nature. This is
-% required because base_extractiveness > 0.46.
+% For a physical law, the metrics are constant over any interval, representing
+% its unchanging nature. While not strictly required for low-extraction
+% constraints, this data demonstrates its stability.
 %
 % Theater ratio over time (flat at zero):
 narrative_ontology:measurement(thermodynamics_entropy_tr_t0, thermodynamics_entropy, theater_ratio, 0, 0.0).
 narrative_ontology:measurement(thermodynamics_entropy_tr_t5, thermodynamics_entropy, theater_ratio, 5, 0.0).
 narrative_ontology:measurement(thermodynamics_entropy_tr_t10, thermodynamics_entropy, theater_ratio, 10, 0.0).
 
-% Extraction over time (flat at 0.80):
-narrative_ontology:measurement(thermodynamics_entropy_ex_t0, thermodynamics_entropy, base_extractiveness, 0, 0.80).
-narrative_ontology:measurement(thermodynamics_entropy_ex_t5, thermodynamics_entropy, base_extractiveness, 5, 0.80).
-narrative_ontology:measurement(thermodynamics_entropy_ex_t10, thermodynamics_entropy, base_extractiveness, 10, 0.80).
+% Extraction over time (flat at 0.05):
+narrative_ontology:measurement(thermodynamics_entropy_ex_t0, thermodynamics_entropy, base_extractiveness, 0, 0.05).
+narrative_ontology:measurement(thermodynamics_entropy_ex_t5, thermodynamics_entropy, base_extractiveness, 5, 0.05).
+narrative_ontology:measurement(thermodynamics_entropy_ex_t10, thermodynamics_entropy, base_extractiveness, 10, 0.05).
 
 /* ==========================================================================
-   9. BOLTZMANN & NETWORK DATA (v5.0-5.2)
+   9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
 % No Boltzmann or Network data is applicable for a fundamental physical law.
-% narrative_ontology:coordination_type(thermodynamics_entropy, enforcement_mechanism).
-% narrative_ontology:affects_constraint(thermodynamics_entropy, [other_constraint_id]).
+% It does not have a coordination function, nor is it coupled to other social
+% constraints in the typical sense.
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+% No overrides are needed. As a Mountain, the classification is invariant,
+% and directionality does not alter the outcome.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

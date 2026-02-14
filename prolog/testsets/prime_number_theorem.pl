@@ -60,7 +60,8 @@
 
 % Required for DR-Audit Suite
 narrative_ontology:interval(pnt_era, 1896, 2026).
-narrative_ontology:constraint_claim(prime_number_theorem, mountain).
+narrative_ontology:constraint_claim(prime_number_theorem, tangled_rope).
+domain_priors:requires_active_enforcement(prime_number_theorem).
 
 % Base extractiveness: 0.15
 % Rationale: While mathematical truth is free, the realization of PNT 
@@ -107,7 +108,7 @@ narrative_ontology:constraint_victim(prime_number_theorem, computational_efficie
 
 constraint_indexing:constraint_classification(
     prime_number_theorem,
-    mountain,
+    tangled_rope,
     context(
         agent_power(powerless),
         time_horizon(immediate),

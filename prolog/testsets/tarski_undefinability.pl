@@ -58,7 +58,8 @@
 
 % Required for structural integration and script extraction
 narrative_ontology:interval(tarski_interval, 0, 10).
-narrative_ontology:constraint_claim(tarski_undefinability, mountain).
+narrative_ontology:constraint_claim(tarski_undefinability, tangled_rope).
+domain_priors:requires_active_enforcement(tarski_undefinability).
 
 % Base extractiveness: 0.2 (Low)
 % Rationale: It extracts "semantic closure" but doesn't steal resources.
@@ -104,7 +105,7 @@ narrative_ontology:constraint_victim(tarski_undefinability, [monistic_philosophe
 
 constraint_indexing:constraint_classification(
     tarski_undefinability,
-    mountain,
+    tangled_rope,
     context(
         agent_power(analytical),
         time_horizon(civilizational),

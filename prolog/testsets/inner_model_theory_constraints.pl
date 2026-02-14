@@ -1,26 +1,48 @@
 % ============================================================================
 % CONSTRAINT STORY: inner_model_theory_constraints
 % ============================================================================
-% Generated: 2026-01-19
-% Model: Gemini 2.0 Flash
-% Source: Kurt Gödel (1938) / Ronald Jensen (1972) / Inner Model Theory
+% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2024-07-29
 % ============================================================================
 
-:- module(constraint_inner_models, []).
+:- module(constraint_inner_model_theory_constraints, []).
 
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
 
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
+
 % --- Namespace Hooks (Required for loading) ---
-:- multifile 
+:- multifile
     domain_priors:base_extractiveness/2,
     domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
     domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
-    constraint_indexing:constraint_classification/3.
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
+    narrative_ontology:boltzmann_floor_override/2,
+    constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -28,268 +50,232 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: inner_model_theory_constraints
- * human_readable: Inner Model Theory (L and its Descendants)
- * domain: mathematical/philosophical
- * temporal_scope: 1938 - Present (Civilizational)
- * spatial_scope: Global/Abstract (Transfinite Set Theory)
- * * SUMMARY:
- * Inner Model Theory studies sub-universes of the set-theoretic universe (V) 
- * that satisfy the axioms of ZFC. The archetypal inner model is Gödel's 
- * Constructible Universe (L), which imposes a "Mountain" of absolute 
- * determinacy on the transfinite, fixing independence results like the 
- * Continuum Hypothesis.
- * * KEY AGENTS:
- * - The Constructible Set (Subject): A powerless agent whose existence is 
- * strictly defined by previously constructed stages (The "L-Hierarchy").
- * - The Model Theorist (Institutional): An agent who uses Inner Models as 
- * a "Rope" to prove consistency results and map the "Consistency Strength" 
- * of large cardinals.
- * - The Pluralist Realist (Analytical): An observer for whom a specific 
- * inner model acts as a "Snare," as it "strangles" the rich variety of 
- * the full universe (V) to enforce a rigid, predictable structure.
- * * NARRATIVE ARC:
- * Inner Model Theory represents the "Mountain" of minimal, canonical reality 
- * within set theory. For the logician, it is a "Rope"—a functional 
- * coordination tool that allows for the "bootstrapping" of consistency. 
- * However, for those who believe the universe should be "rich" (e.g., the 
- * Axiom of Determinacy or large cardinals), the rigid constraints of $V=L$ 
- * act as a "Snare," extracting the "Fullness of V" (extraction) and 
- * "choking" the possibility of higher-order symmetry.
+ *   constraint_id: inner_model_theory_constraints
+ *   human_readable: The Axiom of Constructibility (V=L)
+ *   domain: mathematical/logical
+ *
+ * SUMMARY:
+ *   Inner Model Theory studies sub-universes of the set-theoretic universe (V)
+ *   that satisfy the axioms of ZFC. The archetypal inner model is Gödel's
+ *   Constructible Universe (L), defined by the axiom V=L. This axiom imposes
+ *   a rigid, determinate structure on the transfinite, resolving questions
+ *   like the Continuum Hypothesis. However, this determinacy comes at the cost
+ *   of excluding more complex structures like large cardinals, creating a
+ *   significant perspectival gap between different schools of set theorists.
+ *
+ * KEY AGENTS (by structural relationship):
+ *   - Large Cardinal Pluralists (Victim): Set theorists who view V=L as a snare that extracts the potential richness of the set-theoretic universe (V) to enforce a narrow, predictable structure. (moderate/constrained)
+ *   - Consistency Proof Developers (Beneficiary): Logicians and model theorists who use inner models like L as a coordination tool (a rope) to establish the relative consistency of various mathematical axioms. (institutional/mobile)
+ *   - The Constructible Set (Subject): A mathematical object whose existence is rigidly defined by the L-hierarchy, for which the constraint is an unchangeable law of its nature. (powerless/trapped)
+ *   - Analytical Observer: Sees the full structure as a Tangled Rope, acknowledging both its genuine coordination function for consistency proofs and its extractive nature in suppressing alternative set-theoretic ontologies.
  */
 
 /* ==========================================================================
-   2. CORE SYSTEM INTEGRATION (The "Reality" Layer)
+   2. BASE PROPERTIES (DOMAIN PRIORS)
    ========================================================================== */
 
-% Required for structural anchor extraction
-narrative_ontology:interval(inner_model_era, 1938, 2026).
-narrative_ontology:constraint_claim(inner_model_theory_constraints, mountain).
-
-% Base extractiveness score (0.0-1.0)
-% Rationale: 0.3. Inner models "extract" the combinatorial richness of the 
-% full universe (V) to provide a "clean" sub-model. This imposes a 
-% "complexity tax" by forcing researchers to differentiate between what 
+% --- Numerical metrics ---
+% Rationale: 0.30. Inner models "extract" the combinatorial richness of the
+% full universe (V) to provide a "clean" sub-model. This imposes a
+% "complexity tax" by forcing researchers to differentiate between what
 % is true in "L" vs what is true in "V."
-domain_priors:base_extractiveness(inner_model_theory_constraints, 0.3).
+domain_priors:base_extractiveness(inner_model_theory_constraints, 0.30).
 
-% Suppression score (0.0-1.0)
-% Rationale: 0.5. Historically, $V=L$ suppressed the visibility of 
-% non-constructible sets, rendering them "pathological" or "non-existent" 
-% until forcing and large cardinals revealed the broader landscape.
-domain_priors:suppression_score(inner_model_theory_constraints, 0.5).
+% Rationale: 0.50. Historically, the axiom V=L suppressed the visibility of
+% non-constructible sets (like those required for large cardinals), rendering
+% them "pathological" or "non-existent" until the development of forcing.
+domain_priors:suppression_score(inner_model_theory_constraints, 0.50).
 
-% Constraint metric facts (bridge for classification engine)
-narrative_ontology:constraint_metric(inner_model_theory_constraints, extractiveness, 0.3).
-narrative_ontology:constraint_metric(inner_model_theory_constraints, suppression_requirement, 0.5).
-
-% Enforcement: Emerges naturally from the definition of ordinal-indexed construction.
-domain_priors:emerges_naturally(inner_model_theory_constraints).
-domain_priors:requires_active_enforcement(inner_model_theory_constraints).
-
-% Metrics required for Section 1 of the Executive Summary
-% BENEFICIARIES & VICTIMS
-narrative_ontology:constraint_beneficiary(inner_model_theory_constraints, consistency_proof_developers).
-narrative_ontology:constraint_beneficiary(inner_model_theory_constraints, fine_structure_theorists).
-narrative_ontology:constraint_victim(inner_model_theory_constraints, large_cardinal_pluralists).
-narrative_ontology:constraint_victim(inner_model_theory_constraints, geometric_intuition).
-
-/* ==========================================================================
-   3. INDEXED CLASSIFICATIONS (Perspectival Truth)
-   ========================================================================== */
-
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 1: THE CONSTRUCTIBLE SET (x ∈ L) - Mountain
-   --------------------------------------------------------------------------
-   
-   WHO: powerless - The set cannot choose to be non-constructible.
-   WHEN: immediate - Its membership is fixed at the ordinal stage $\alpha+1$.
-   WHERE: trapped - Bound within the hierarchy of $L$.
-   SCOPE: local - Immediate definition via first-order logic.
-   
-   WHY THIS CLASSIFICATION:
-   For a set within $L$, the constraints of Inner Model Theory are a 
-   Mountain. It exists only because it was "named" by a formula at a 
-   specific level. It cannot "exit" to the outer universe (V) if $V=L$ 
-   is the law. Its identity is an unyielding geometric fact.
-   -------------------------------------------------------------------------- */
-
-
-
-constraint_indexing:constraint_classification(
-    inner_model_theory_constraints,
-    mountain,
-    context(
-        agent_power(powerless),
-        time_horizon(immediate),
-        exit_options(trapped),
-        spatial_scope(local)
-    )
-) :- !.
-
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE CONSISTENCY RESEARCHER - Rope
-   --------------------------------------------------------------------------
-   
-   WHO: institutional - Power to design proofs and define the working model.
-   WHEN: biographical - Spanning the effort to prove the consistency of AC/CH.
-   WHERE: mobile - Can choose to work in L, L[U], or Core Models.
-   SCOPE: global - Universal foundation for consistency results.
-   
-   WHY THIS CLASSIFICATION:
-   For the researcher, the Inner Model is a "Rope"—a functional coordination 
-   mechanism. It allows them to coordinate a "standard of achievement" 
-   (e.g., proving $Con(ZFC)$ implies $Con(ZFC+CH)$), pulling the 
-   field toward a stable understanding of relative consistency.
-   -------------------------------------------------------------------------- */
-
-constraint_indexing:constraint_classification(
-    inner_model_theory_constraints,
-    rope,
-    context(
-        agent_power(institutional),
-        time_horizon(biographical),
-        exit_options(mobile),
-        spatial_scope(global)
-    )
-) :- !.
-
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE LARGE CARDINAL PROPONENT - Snare
-   --------------------------------------------------------------------------
-   
-   WHO: individual_moderate - Has the intelligence to define but is bound by L's limit.
-   WHEN: civilizational - Seeking a "Large" universe where Measurable Cardinals exist.
-   WHERE: constrained - $V=L$ is a "Snare" because it denies the existence of $0^{\#}$.
-   SCOPE: global - Universal limit on set-theoretic ontology.
-   
-   WHY THIS CLASSIFICATION:
-   For those seeking a "Large" universe, the constraint of $V=L$ is a "Snare." 
-   It "strangles" the possibility of Measurable Cardinals (Scott's Theorem). 
-   It extracts the "Richness of V" (extraction), "choking" the 
-   growth of the transfinite to maintain a "thin" constructible line.
-   -------------------------------------------------------------------------- */
-
-
-
-constraint_indexing:constraint_classification(
-    inner_model_theory_constraints,
-    snare,
-    context(
-        agent_power(individual_moderate),
-        time_horizon(civilizational),
-        exit_options(constrained),
-        spatial_scope(global)
-    )
-) :- 
-    domain_priors:base_extractiveness(inner_model_theory_constraints, E),
-    E >= 0.25,
-    !.
-
-/* ==========================================================================
-   4. TESTS (What We Learn About Constraints)
-   ========================================================================== */
-
-:- begin_tests(inner_model_theory_tests).
-
-test(multi_perspective_variance) :-
-    % Set -> Mountain
-    constraint_indexing:constraint_classification(inner_model_theory_constraints, Type1, context(powerless, immediate, trapped, local)),
-    % Researcher -> Rope
-    constraint_indexing:constraint_classification(inner_model_theory_constraints, Type2, context(institutional, biographical, mobile, global)),
-    Type1 \= Type2.
-
-test(ontological_extraction_penalty) :-
-    % Pluralists feel the 0.3 extraction of "Richness" as a Snare.
-    Context = context(individual_moderate, civilizational, constrained, global),
-    constraint_indexing:extractiveness_for_agent(inner_model_theory_constraints, Context, Score),
-    Score >= 0.25.
-
-test(natural_emergence) :-
-    domain_priors:emerges_naturally(inner_model_theory_constraints).
-
-:- end_tests(inner_model_theory_tests).
-
-/* ==========================================================================
-   5. MODEL INTERPRETATION (Commentary)
-   ========================================================================== */
-
-/**
- * LLM GENERATION NOTES
- * * Model: Gemini 2.0 Flash
- * Date: 2026-01-19
- * * KEY DECISIONS:
- * * 1. BASE EXTRACTIVENESS (0.3):
- * Reasoning: Inner models are "lossy" compressions of V. They extract 
- * the potential for non-constructible variety to provide a safe, 
- * consistent sub-universe.
- * * 2. CLASSIFICATION RATIONALE:
- * Captured the transition from the "Mountain" of Gödel's L to the 
- * "Snare" it became for those discovering the "Large Cardinal" hierarchy.
- */
-
-% OMEGA IDENTIFICATION
-omega_variable(
-    inner_model_limit,
-    "Does there exist an inner model for a Supercompact Cardinal (Mountain) or is it a logical Scaffold?",
-    resolution_mechanism("Development of the 'Ultimate L' conjecture or higher core model theories."),
-    impact("If Mountain: We can reconcile Large Cardinals with Inner Models. If Snare: The two remain forever in conflict."),
-    confidence_without_resolution(medium)
-).
-
-/* ==========================================================================
-   6. ALTERNATIVE ANALYSIS
-   ========================================================================== */
-
-/**
- * VIABLE ALTERNATIVES
- * * ALTERNATIVE 1: Forcing (The "Rich" Universe)
- * Viability: Creating new sets that do not belong to L.
- * Suppression: Actively suppressed within the "Axiom of Constructibility" ($V=L$) 
- * framework to ensure a "Mountain" of decidability.
- * * ALTERNATIVE 2: The Core Model (K)
- * Viability: A "Rope" designed to accommodate larger cardinals while 
- * keeping the "L-like" structure.
- * * CONCLUSION:
- * The existence of Forcing (Alternative 1) is what turns the $V=L$ 
- * "Mountain" into a "Snare" for modern set theorists.
- */
-
-/* ==========================================================================
-   7. INTEGRATION HOOKS
-   ========================================================================== */
-
-/**
- * TO USE THIS CONSTRAINT:
- * 1. Load: ?- [constraint_inner_models].
- * 2. Multi-perspective: ?- multi_index_report(inner_model_theory_constraints).
- */
-
-/* ==========================================================================
-   END OF CONSTRAINT STORY
-   ========================================================================== */
-
-% ============================================================================
-% ENRICHMENT: Structural predicates for dynamic classification
-% Generated: 2026-02-08
-% Template: v5.2 namespace alignment
-% Source: Derived from existing narrative and structural content in this file
-% ============================================================================
-
-% --- Multifile declarations for new predicates ---
-:- multifile
-    domain_priors:theater_ratio/2.
-
-% --- Theater ratio (missing from base properties) ---
-% Formal truth — substantive with near-zero performative component
+% Rationale: 0.0. The constraint is a formal mathematical axiom; its function
+% is entirely substantive with no performative or theatrical component.
 domain_priors:theater_ratio(inner_model_theory_constraints, 0.0).
+
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(inner_model_theory_constraints, extractiveness, 0.30).
+narrative_ontology:constraint_metric(inner_model_theory_constraints, suppression_requirement, 0.50).
 narrative_ontology:constraint_metric(inner_model_theory_constraints, theater_ratio, 0.0).
 
-% --- Analytical perspective classification (missing) ---
-% chi = 0.3 * 1.15 (analytical) * 1.2 (global) = 0.414
-% Classification: tangled_rope
+% --- Constraint claim (must match analytical perspective type) ---
+narrative_ontology:constraint_claim(inner_model_theory_constraints, tangled_rope).
+
+% --- Binary flags ---
+% Enforcement is definitional; accepting V=L requires enforcing its consequences.
+% This is required for the Tangled Rope classification.
+domain_priors:requires_active_enforcement(inner_model_theory_constraints).
+
+% --- Structural relationships (REQUIRED for non-mountain constraints) ---
+% Who benefits from this constraint existing?
+narrative_ontology:constraint_beneficiary(inner_model_theory_constraints, consistency_proof_developers).
+narrative_ontology:constraint_beneficiary(inner_model_theory_constraints, fine_structure_theorists).
+%
+% Who bears disproportionate cost?
+narrative_ontology:constraint_victim(inner_model_theory_constraints, large_cardinal_pluralists).
+
+/* ==========================================================================
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × f(d) × σ(S)
+   where f(d) is the sigmoid directionality function:
+     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
+   The engine derives d from beneficiary/victim membership + exit_options.
+   Scope modifiers: local=0.8, regional=0.9, national=1.0,
+                    continental=1.1, global=1.2, universal=1.0.
+   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
+   Do not add measurement_basis, beneficiary/victim, or other metadata.
+   Linter Rule 23 rejects files with context arity ≠ 4.
+   ========================================================================== */
+
+% PERSPECTIVE 1: THE CONSTRUCTIBLE SET (SUBJECT)
+% For a set within L, the constraints of constructibility are a Mountain.
+% It exists only because it was defined by a formula at a specific level.
+% It cannot "exit" to the outer universe (V) if V=L is the governing law.
+constraint_indexing:constraint_classification(inner_model_theory_constraints, mountain,
+    context(agent_power(powerless),
+            time_horizon(immediate),
+            exit_options(trapped),
+            spatial_scope(local))).
+
+% PERSPECTIVE 2: THE CONSISTENCY RESEARCHER (BENEFICIARY)
+% For the logician, the Inner Model is a Rope—a functional coordination
+% mechanism. It allows them to coordinate a "standard of achievement"
+% (e.g., proving Con(ZFC) implies Con(ZFC+CH)), creating a stable
+% understanding of relative consistency.
+constraint_indexing:constraint_classification(inner_model_theory_constraints, rope,
+    context(agent_power(institutional),
+            time_horizon(biographical),
+            exit_options(mobile),
+            spatial_scope(global))).
+
+% PERSPECTIVE 3: THE LARGE CARDINAL PROPONENT (VICTIM)
+% For those seeking a "large" universe with measurable cardinals, the axiom
+% V=L is a Snare. It strangles this possibility (by Scott's Theorem). It
+% extracts the "richness of V" to maintain a thin, constructible reality.
+constraint_indexing:constraint_classification(inner_model_theory_constraints, snare,
+    context(agent_power(moderate),
+            time_horizon(civilizational),
+            exit_options(constrained),
+            spatial_scope(global))).
+
+% PERSPECTIVE 4: THE ANALYTICAL OBSERVER
+% The analytical view sees both the coordination function (Rope for logicians)
+% and the asymmetric extraction (Snare for pluralists), classifying the
+% overall structure as a Tangled Rope.
 constraint_indexing:constraint_classification(inner_model_theory_constraints, tangled_rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
             spatial_scope(global))).
+
+/* ==========================================================================
+   4. VALIDATION TESTS
+   ========================================================================== */
+
+:- begin_tests(inner_model_theory_constraints_tests).
+
+test(perspectival_gap_beneficiary_vs_victim) :-
+    % Verify the gap between the beneficiary (logician) and victim (pluralist).
+    constraint_indexing:constraint_classification(inner_model_theory_constraints, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
+    constraint_indexing:constraint_classification(inner_model_theory_constraints, TypeVictim, context(agent_power(moderate), _, _, _)),
+    assertion(TypeBeneficiary == rope),
+    assertion(TypeVictim == snare),
+    TypeBeneficiary \= TypeVictim.
+
+test(analytical_claim_matches_tangled_rope) :-
+    % The analytical perspective should resolve the conflict as Tangled Rope.
+    constraint_indexing:constraint_classification(inner_model_theory_constraints, AnalyticalType, context(agent_power(analytical), _, _, _)),
+    assertion(AnalyticalType == tangled_rope).
+
+:- end_tests(inner_model_theory_constraints_tests).
+
+/* ==========================================================================
+   5. GENERATIVE COMMENTARY
+   ========================================================================== */
+
+/**
+ * LOGIC RATIONALE:
+ *   The base extractiveness (ε=0.30) and suppression (S=0.50) are too high
+ *   for a Mountain, reflecting the axiom's effect of "extracting" ontological
+ *   richness and suppressing alternative models (like those with large
+ *   cardinals). The constraint serves a genuine coordination function for
+ *   logicians (proving relative consistency), justifying the `constraint_beneficiary`
+ *   and the Rope perspective. Simultaneously, it imposes a significant cost on
+ *   pluralists, justifying the `constraint_victim` and the Snare perspective.
+ *   The combination of a coordination function, asymmetric extraction, and
+ *   active (definitional) enforcement makes this a canonical Tangled Rope.
+ *
+ * PERSPECTIVAL GAP:
+ *   The gap is profound. For a logician focused on consistency, V=L is a
+ *   powerful tool (Rope) for establishing foundational results. For a set
+ *   theorist interested in the maximal possible universe, V=L is a prison
+ *   (Snare) that denies the existence of fascinating and powerful structures.
+ *   For an object *within* L, the axiom is simply the law of its existence (Mountain).
+ *
+ * DIRECTIONALITY LOGIC:
+ *   - Beneficiaries: `consistency_proof_developers` gain a stable, predictable
+ *     universe where difficult questions are settled, making their work tractable.
+ *   - Victims: `large_cardinal_pluralists` lose the ability to study a whole
+ *     class of mathematical objects they believe to be fundamental. The
+ *     constraint extracts this possibility from their domain.
+ *
+ * MANDATROPHY ANALYSIS:
+ *   Classifying this as a Tangled Rope correctly avoids two errors. It is not
+ *   a pure Snare, because it has a legitimate, non-trivial coordination function
+ *   for a specific community (logicians). It is not a pure Mountain, because
+ *   its "truth" is not absolute but an axiomatic choice with high suppression
+ *   of alternatives (the universe of non-constructible sets revealed by forcing).
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
+omega_variable(
+    omega_inner_model_limit,
+    'Does there exist an ultimate inner model (like "Ultimate L") that can accommodate all large cardinals, or is the conflict between constructibility and large cardinals fundamental?',
+    'The success or failure of the "Ultimate L" research program.',
+    'If resolved, the constraint could transform from a Tangled Rope into a true Rope (universal coordination) or a Mountain (fundamental law). If it remains unresolved, the perspectival conflict persists.',
+    confidence_without_resolution(medium)
+).
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+% Required for external script parsing
+narrative_ontology:interval(inner_model_theory_constraints, 1938, 2026).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Base extractiveness is < 0.46, so temporal measurements are not required.
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA
+   ========================================================================== */
+
+% Coordination type (enables Boltzmann floor + complexity offset)
+% Valid types: information_standard, resource_allocation,
+%              enforcement_mechanism, global_infrastructure
+% narrative_ontology:coordination_type(inner_model_theory_constraints, information_standard).
+
+% Boltzmann floor override (only if domain knowledge justifies)
+% Value must be in [0.0, 1.0]
+% narrative_ontology:boltzmann_floor_override(inner_model_theory_constraints, 0.0).
+
+% Network relationships (structural influence edges)
+% Declare when constraints share regulatory domain, causal dependency,
+% or institutional coupling.
+% narrative_ontology:affects_constraint(inner_model_theory_constraints, other_constraint_id).
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+% No overrides needed. The structural derivation from beneficiary/victim
+% declarations and exit options accurately models the directionality for
+% each agent group.
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */

@@ -55,7 +55,8 @@
 
 % Required for structural integration
 narrative_ontology:interval(lindy_effect, 0, 10).
-narrative_ontology:constraint_claim(lindy_effect, mountain).
+narrative_ontology:constraint_claim(lindy_effect, tangled_rope).
+domain_priors:requires_active_enforcement(lindy_effect).
 
 % Base extractiveness: 0.2 (Low)
 % Rationale: The effect doesn't actively steal value, but it does "extract" 
@@ -102,7 +103,7 @@ narrative_ontology:constraint_victim(lindy_effect, disruptive_innovators).
 
 constraint_indexing:constraint_classification(
     lindy_effect,
-    mountain,
+    tangled_rope,
     context(
         agent_power(analytical),
         time_horizon(civilizational),

@@ -1,27 +1,48 @@
 % ============================================================================
 % CONSTRAINT STORY: empty_tomb_transformation
 % ============================================================================
-% Generated: 2026-01-21
-% Model: Gemini 2.0 Flash
-% Source: "Life is a Series of Empty Tombs" by cafebedouin.org
+% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2024-07-22
 % ============================================================================
 
-:- module(empty_tomb_transformation, []).
+:- module(constraint_empty_tomb_transformation, []).
 
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
 
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
+
 % --- Namespace Hooks (Required for loading) ---
-:- multifile 
+:- multifile
     domain_priors:base_extractiveness/2,
     domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
     domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
     narrative_ontology:constraint_metric/3,
-    narrative_ontology:constraint_claim/2,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
-    constraint_indexing:constraint_classification/3.
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
+    narrative_ontology:boltzmann_floor_override/2,
+    constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -29,239 +50,170 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: empty_tomb_transformation
- * human_readable: The Resurrection Cycle (Empty Tombs)
- * domain: religious/social/psychological
- * temporal_scope: Perennial / Biographical
- * spatial_scope: Internal / The Familial and Social Fabric
- * * SUMMARY:
- * Life is framed as a constant series of dying to old selves and being reborn into new lives. 
- * Each life stage or "chapter" concludes with a "tomb of transition" that must be exited by rolling back 
- * the stone of the past to emerge transformed.
- * * KEY AGENTS:
- * - The Transitioning Subject: The individual currently "stuck in a tomb" or undergoing rebirth.
- * - The Old Self: The "dead" version of the person that must be left in the record of transformation.
- * - The Pastor/Witness: The analytical observer who frames the "profound wisdom" of the cycle.
- * - The Liturgical Institution: The "Church" context that provides the resurrection story as a social scaffold.
- * * NARRATIVE ARC:
- * The individual moves through a "string of pearls" of transformations. The constraint 
- * functions as a requirement for death (the end of a chapter) to precede new life. 
- * Without the "resurrection," the agent remains trapped in a stagnant tomb of their previous identity.
+ *   constraint_id: empty_tomb_transformation
+ *   human_readable: The Resurrection Cycle (Empty Tombs)
+ *   domain: religious/social/psychological
+ *
+ * SUMMARY:
+ *   Life is framed as a constant series of dying to old selves and being reborn
+ *   into new lives. Each life stage or "chapter" concludes with a "tomb of
+ *   transition" that must be exited by "rolling back the stone" of the past
+ *   to emerge transformed. The constraint is the requirement for this "death"
+ *   to precede "new life".
+ *
+ * KEY AGENTS (by structural relationship):
+ *   - The Transitioning Subject: Primary target (powerless/trapped) — bears the extraction of their old identity.
+ *   - The Resurrected Self: Primary beneficiary (moderate/mobile) — benefits from the transformation into a new life.
+ *   - The Liturgical Institution: Secondary beneficiary (institutional/arbitrage) — benefits by providing the coordinating narrative.
+ *   - The Pastor/Witness: Analytical observer — sees the full structure as a repeating cycle.
  */
 
 /* ==========================================================================
-   2. BASE PROPERTIES (Context-Independent)
+   2. BASE PROPERTIES (DOMAIN PRIORS)
    ========================================================================== */
 
-% Required for [STEP 1] and [STEP 2] of the DR-Audit Suite
-narrative_ontology:interval(empty_tomb_transformation, 0, 10).
-narrative_ontology:constraint_claim(empty_tomb_transformation, mountain).
-
-% Base extractiveness score (0.0-1.0)
-% Rationale: Moderate (0.4). The process extracts the "old life" and involves "facing our own suffering". 
+% --- Numerical metrics ---
+% Rationale: Moderate (0.4). The process extracts the "old life" and involves "facing our own suffering".
 % While generative of "new life," the transition phase is a temporary liquidation of the self.
 domain_priors:base_extractiveness(empty_tomb_transformation, 0.4).
-
-% Suppression score (0.0-1.0)
-% Rationale: Moderate (0.4). The "tomb" phase suppresses the visibility of the new life. 
-% Additionally, the "fairy tale" interpretation of resurrection often suppresses the "profound wisdom" 
-% of the actual cycle of growth.
+% Rationale: Moderate (0.4). The "tomb" phase suppresses the visibility of the new life.
+% The institutional framing can also suppress alternative, secular models of personal growth.
 domain_priors:suppression_score(empty_tomb_transformation, 0.4).
+% Rationale: Low theater. The constraint describes a substantive psychological process,
+% not a performative one.
+domain_priors:theater_ratio(empty_tomb_transformation, 0.08).
 
-% Constraint metric facts (bridge for classification engine)
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
 narrative_ontology:constraint_metric(empty_tomb_transformation, extractiveness, 0.4).
 narrative_ontology:constraint_metric(empty_tomb_transformation, suppression_requirement, 0.4).
+narrative_ontology:constraint_metric(empty_tomb_transformation, theater_ratio, 0.08).
 
-% Enforcement requirements
-% Emerges naturally from the human stages of experience and development.
-domain_priors:emerges_naturally(empty_tomb_transformation).
+% --- Constraint claim (must match analytical perspective type) ---
+% Rationale: The constraint has a genuine coordination function (helping people navigate
+% life transitions) but also involves asymmetric extraction (the death of the old self).
+% It requires active framing/enforcement by an institution to maintain its meaning.
+% This combination of coordination, extraction, and enforcement is characteristic of a Tangled Rope.
+narrative_ontology:constraint_claim(empty_tomb_transformation, tangled_rope).
 
-% Metrics required for Section 1 of the Executive Summary
-% BENEFICIARIES & VICTIMS
-% Beneficiary: The New Self (Reborn into a "new, different life").
+% --- Binary flags ---
+% Rationale: The institutional framing of the cycle as a core religious doctrine
+% constitutes a form of active enforcement of this psychological model.
+domain_priors:requires_active_enforcement(empty_tomb_transformation).
+
+% --- Structural relationships (REQUIRED for non-mountain constraints) ---
+% Who benefits from this constraint existing?
 narrative_ontology:constraint_beneficiary(empty_tomb_transformation, the_resurrected_self).
-% Victim: The Old Self (Who must die and be left behind).
+narrative_ontology:constraint_beneficiary(empty_tomb_transformation, liturgical_institutions).
+%
+% Who bears disproportionate cost?
 narrative_ontology:constraint_victim(empty_tomb_transformation, the_static_ego).
 
 /* ==========================================================================
-   3. INDEXED CLASSIFICATIONS (Perspectival Truth)
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × f(d) × σ(S)
    ========================================================================== */
 
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 1: THE STUCK INDIVIDUAL - Snare
-   --------------------------------------------------------------------------
-   
-   WHO: powerless (Unable to "roll back the stone")
-   WHEN: immediate (The present moment of being "stuck in a tomb")
-   WHERE: trapped (Bounded by the transition with no visibility of new life)
-   SCOPE: local (The immediate psychological state)
-   
-   WHY THIS CLASSIFICATION:
-   For the individual unable to emerge, the cycle is a "Snare." The "tomb of transition" 
-   becomes a static trap where life has ended but rebirth has not begun, extracting 
-   the agent's hope and agency.
-   
-   NARRATIVE EVIDENCE:
-   "Am I stuck in a tomb? ... The old us is dead... our suffering".
-   -------------------------------------------------------------------------- */
+% PERSPECTIVE 1: THE STUCK INDIVIDUAL (SNARE)
+% For the individual unable to emerge, the cycle is a Snare. The "tomb of
+% transition" becomes a static trap where life has ended but rebirth has not
+% begun, extracting the agent's hope and agency.
+constraint_indexing:constraint_classification(empty_tomb_transformation, snare,
+    context(agent_power(powerless),
+            time_horizon(immediate),
+            exit_options(trapped),
+            spatial_scope(local))).
 
+% PERSPECTIVE 2: THE REBORN AGENT (ROPE)
+% For the agent who successfully transitions, the cycle is a Rope. It is a
+% functional coordination mechanism for growth, allowing them to use past
+% "deaths" as a record of transformation that informs their new life.
+constraint_indexing:constraint_classification(empty_tomb_transformation, rope,
+    context(agent_power(moderate),
+            time_horizon(biographical),
+            exit_options(mobile),
+            spatial_scope(local))).
 
+% PERSPECTIVE 3: THE LITURGICAL INSTITUTION (ROPE)
+% For the institution, the story is a Rope—a tool used to coordinate the
+% community's response to suffering and change, transforming a "fairy tale"
+% into a functional map for resilience.
+constraint_indexing:constraint_classification(empty_tomb_transformation, rope,
+    context(agent_power(institutional),
+            time_horizon(generational),
+            exit_options(arbitrage),
+            spatial_scope(regional))).
 
-constraint_indexing:constraint_classification(
-    empty_tomb_transformation,
-    snare,
-    context(
-        agent_power(powerless),
-        time_horizon(immediate),
-        exit_options(trapped),
-        spatial_scope(local)
-    )
-) :-
-    domain_priors:base_extractiveness(empty_tomb_transformation, E),
-    E > 0.3,
-    !.
-
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE REBORN AGENT - Rope
-   --------------------------------------------------------------------------
-   
-   WHO: individual_moderate (Choosing to be "open to new life")
-   WHEN: biographical (The "string of pearls" across the lifespan)
-   WHERE: mobile (Emerged from the tomb; "roll back the stone")
-   SCOPE: local
-   
-   WHY THIS CLASSIFICATION:
-   For the agent who successfully transitions, the cycle is a "Rope." It is a 
-   functional coordination mechanism for growth, allowing them to use past 
-   "deaths" as a record of transformation that informs their new life.
-   
-   NARRATIVE EVIDENCE:
-   "like a string of pearls, the tombs leave a record of who we were and our 
-   transformation".
-   -------------------------------------------------------------------------- */
-
-constraint_indexing:constraint_classification(
-    empty_tomb_transformation,
-    rope,
-    context(
-        agent_power(individual_moderate),
-        time_horizon(biographical),
-        exit_options(mobile),
-        spatial_scope(local)
-    )
-) :- !.
-
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE PASTOR/WIZARD - Mountain
-   --------------------------------------------------------------------------
-   
-   WHO: analytical (Ancient and wise observer of the "profound wisdom")
-   WHEN: civilizational (Resurrection as an "Easter" message across thousands of years)
-   WHERE: analytical (Observer stance)
-   SCOPE: global
-   
-   WHY THIS CLASSIFICATION:
-   To the observer, this cycle is a "Mountain"—an unchangeable law of development. 
-   One cannot have "new life" without the "death" of the old; it is an objective 
-   requirement for human experience.
-   
-   NARRATIVE EVIDENCE:
-   "life is a constant series of dying and being reborn... from one moment to 
-   the next".
-   -------------------------------------------------------------------------- */
-
-constraint_indexing:constraint_classification(
-    empty_tomb_transformation,
-    mountain,
-    context(
-        agent_power(analytical),
-        time_horizon(civilizational),
-        exit_options(analytical),
-        spatial_scope(global)
-    )
-) :- !.
-
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 4: THE CHURCH DOCTRINE - Rope
-   --------------------------------------------------------------------------
-   
-   WHO: institutional (Providing the "resurrection story" as a framework)
-   WHEN: generational (Maintaining the homily and ritual over years)
-   WHERE: mobile (Using the story to help people "roll back the stone")
-   SCOPE: regional (The Holy Name Cathedral community)
-   
-   WHY THIS CLASSIFICATION:
-   For the institution, the story is a "Rope"—a tool used to coordinate the 
-   community's response to suffering and change, transforming the "fairy tale" 
-   into a functional map for resilience.
-   
-   NARRATIVE EVIDENCE:
-   "resurrection story made a kooky fairy tale into profound wisdom... the 
-   living Jesus and his message of peace".
-   -------------------------------------------------------------------------- */
-
-constraint_indexing:constraint_classification(
-    empty_tomb_transformation,
-    rope,
-    context(
-        agent_power(institutional),
-        time_horizon(generational),
-        exit_options(mobile),
-        spatial_scope(regional)
-    )
-) :- !.
+% PERSPECTIVE 4: THE ANALYTICAL OBSERVER (TANGLED ROPE)
+% The analytical observer sees the full structure: a coordination mechanism
+% (Rope for the reborn) that relies on asymmetric extraction (Snare for the stuck)
+% and requires active institutional framing. This hybrid nature is a Tangled Rope.
+% The "Mountain" view of the pastor is a valid perspective, but not the complete
+% analytical picture which must account for the extraction.
+constraint_indexing:constraint_classification(empty_tomb_transformation, tangled_rope,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(global))).
 
 /* ==========================================================================
-   4. TESTS (What We Learn About Constraints)
+   4. VALIDATION TESTS
    ========================================================================== */
 
 :- begin_tests(empty_tomb_transformation_tests).
 
-test(multi_perspective_tomb) :-
-    % Stuck (Powerless) sees Snare
-    constraint_indexing:constraint_classification(empty_tomb_transformation, T1, context(powerless, immediate, trapped, local)),
-    % Reborn (Moderate) sees Rope
-    constraint_indexing:constraint_classification(empty_tomb_transformation, T2, context(individual_moderate, biographical, mobile, local)),
-    % Pastor (Analytical) sees Mountain
-    constraint_indexing:constraint_classification(empty_tomb_transformation, T3, context(analytical, civilizational, analytical, global)),
-    T1 \= T2, T2 \= T3.
+test(perspectival_gap) :-
+    % Verify that the stuck individual (powerless) and the institution see different realities.
+    constraint_indexing:constraint_classification(empty_tomb_transformation, TypeTarget, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(empty_tomb_transformation, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
+    constraint_indexing:constraint_classification(empty_tomb_transformation, TypeAnalytical, context(agent_power(analytical), _, _, _)),
+    TypeTarget == snare,
+    TypeBeneficiary == rope,
+    TypeAnalytical == tangled_rope.
 
-test(power_extractiveness_tomb) :-
-    % The powerless (stuck in the tomb) experience more extraction of vitality/hope.
-    ContextPowerless = context(powerless, immediate, trapped, local),
-    ContextModerate = context(individual_moderate, biographical, mobile, local),
-    constraint_indexing:extractiveness_for_agent(empty_tomb_transformation, ContextPowerless, Score1),
-    constraint_indexing:extractiveness_for_agent(empty_tomb_transformation, ContextModerate, Score2),
-    Score1 > Score2.
-
-test(time_immutability_transformation) :-
-    % Over biographical time, transformation is a Rope (possible through choice).
-    % Over civilizational time, the cycle itself is a Mountain (fact of life).
-    constraint_indexing:effective_immutability(civilizational, analytical, mountain).
+test(threshold_validation_for_tangled_rope) :-
+    % Verify metrics are consistent with a Tangled Rope classification.
+    narrative_ontology:constraint_metric(empty_tomb_transformation, extractiveness, E),
+    narrative_ontology:constraint_metric(empty_tomb_transformation, suppression_requirement, S),
+    E >= 0.30,
+    S >= 0.40.
 
 :- end_tests(empty_tomb_transformation_tests).
 
 /* ==========================================================================
-   5. MODEL INTERPRETATION (Commentary)
+   5. GENERATIVE COMMENTARY
    ========================================================================== */
 
 /**
- * LLM GENERATION NOTES
- * * Model: Gemini 2.0 Flash
- * Date: 2026-01-21
- * * KEY DECISIONS:
- * * 1. EXTRACTIVENESS SCORE (0.4):
- * Reasoning: I chose a moderate score because the transition requires "dying" to the 
- * old self, which is an extraction of established identity and comfort.
- * * 2. PERSPECTIVE SELECTION:
- * I selected the "Stuck" individual (Snare) and the "Reborn" agent (Rope) to highlight 
- * the core pedagogical shift: moving from being a victim of transition to an 
- * author of resurrection.
- * * 3. CLASSIFICATION RATIONALE:
- * Individual Powerless → Snare: In the "immediate" moment of "suffering," the tomb is 
- * an inescapable death of the old self.
- * Analytical → Mountain: The observer sees the cycle as a fixed feature of human 
- * growth across "thousands of years".
+ * LOGIC RATIONALE:
+ *   The base scores (ε=0.4, S=0.4) reflect the significant psychological cost
+ *   ("death" of the old self) and the suppression of alternative models of
+ *   growth required by this framing. The analytical classification is
+ *   Tangled Rope because the constraint possesses both a genuine coordination
+ *   function (a map for resilience) and a clear mechanism of asymmetric
+ *   extraction (the suffering of the transition phase).
+ *
+ * PERSPECTIVAL GAP:
+ *   The gap is profound. For the powerless individual stuck in transition, it's
+ *   a Snare of despair. For the institution providing the narrative, it's a
+ *   coordinating Rope. For the analytical observer, it's a Tangled Rope that
+ *   contains both truths. The pastor's view of it as a "Mountain" (an
+ *   unchangeable law) is a valid perspective on the inevitability of change,
+ *   but this view elides the extractive and coercive elements seen from other
+ *   indices.
+ *
+ * DIRECTIONALITY LOGIC:
+ *   - Beneficiaries: 'the_resurrected_self' benefits by achieving a new state of
+ *     being. 'liturgical_institutions' benefit by having their central narrative
+ *     validated and used as a social coordination tool.
+ *   - Victim: 'the_static_ego' or the old self is the entity that must be
+ *     "liquidated" or "left behind," bearing the full cost of the transformation.
+ *
+ * MANDATROPHY ANALYSIS:
+ *   Classifying this as a Tangled Rope prevents two errors. It avoids mislabeling
+ *   it as a pure Mountain, which would ignore the real suffering (extraction)
+ *   of those who get stuck. It also avoids mislabeling it as a pure Snare,
+ *   which would ignore the genuine coordination benefit it provides to those
+ *   who successfully navigate the cycle using the provided narrative map.
  */
 
 /* ==========================================================================
@@ -270,64 +222,47 @@ test(time_immutability_transformation) :-
 
 omega_variable(
     resurrection_agency,
-    "Is the ability to 'roll back the stone' an internal choice (Rope) or a 
-     stochastic event that requires external grace (Mountain)?",
-    resolution_mechanism("Longitudinal tracking of individuals in 'tombs of transition' with vs. without internal 'hope' metrics"),
-    impact("If choice: Rebirth is a Rope. If stochastic: It is a Mountain/Snare."),
+    "Is the ability to 'roll back the stone' an internal choice (Rope) or a stochastic event that requires external grace (Mountain)?",
+    "Longitudinal tracking of individuals in 'tombs of transition' with vs. without internal 'hope' metrics",
+    "If choice: Rebirth is a Rope. If stochastic: It is a Mountain/Snare.",
     confidence_without_resolution(medium)
 ).
 
 omega_variable(
     tomb_duration_determinism,
-    "Is the length of the 'tomb of transition' fixed by the nature of the chapter (Mountain) 
-     or variable based on individual effort (Rope)?",
-    resolution_mechanism("Comparison of transition times across diverse psychological 'deaths'"),
-    impact("If fixed: The tomb is a Mountain. If variable: It is a Rope."),
+    "Is the length of the 'tomb of transition' fixed by the nature of the chapter (Mountain) or variable based on individual effort (Rope)?",
+    "Comparison of transition times across diverse psychological 'deaths'",
+    "If fixed: The tomb is a Mountain. If variable: It is a Rope.",
     confidence_without_resolution(low)
 ).
 
 /* ==========================================================================
-   7. ALTERNATIVE ANALYSIS
+   7. INTEGRATION HOOKS
    ========================================================================== */
 
-/**
- * VIABLE ALTERNATIVES
- * * ALTERNATIVE 1: Eternal Sameness (Stagnation)
- * Viability: Avoiding the "death" of a chapter to keep the old self.
- * Suppression: Suppressed by the text as a state of being "stuck in a tomb".
- * * ALTERNATIVE 2: Scientific Secular Materialism
- * Viability: Viewing life as a linear accumulation of data rather than a series of rebirths.
- * Suppression: Shunted by the Pastor as a "fairy tale" (the literal view) that misses 
- * the "profound wisdom" of the cycle.
- * * CONCLUSION:
- * The existence of Alternative 1 (Stagnation) makes the "Resurrection" a functional 
- * Rope for those who wish to live. Without the "Stone rolling,"sameness becomes 
- * a terminal Snare.
- */
+% Required for external script parsing
+narrative_ontology:interval(empty_tomb_transformation, 0, 10).
 
 /* ==========================================================================
-   8. INTEGRATION HOOKS
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Load: ?- [empty_tomb_transformation].
-% Multi-perspective: ?- constraint_indexing:multi_index_report(empty_tomb_transformation).
+% Base extractiveness is not > 0.46, so temporal measurements are not required.
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA
+   ========================================================================== */
+
+% This constraint functions as a standard for interpreting psychological change.
+narrative_ontology:coordination_type(empty_tomb_transformation, information_standard).
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+% No overrides needed; the structural derivation from beneficiary/victim
+% declarations is sufficient to model the dynamics.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
-
-% ============================================================================
-% ENRICHMENT: Structural predicates for dynamic classification
-% Generated: 2026-02-08
-% Template: v5.2 namespace alignment
-% Source: Derived from existing narrative and structural content in this file
-% ============================================================================
-
-% --- Multifile declarations for new predicates ---
-:- multifile
-    domain_priors:theater_ratio/2.
-
-% --- Theater ratio (missing from base properties) ---
-% Structural constraint in religious domain — low theater, high substance
-domain_priors:theater_ratio(empty_tomb_transformation, 0.08).
-narrative_ontology:constraint_metric(empty_tomb_transformation, theater_ratio, 0.08).

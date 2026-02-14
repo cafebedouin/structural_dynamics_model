@@ -173,6 +173,7 @@ range_bounded_param(P) :-
         contamination_strength_scaffold,
         contamination_strength_rope,
         contamination_strength_mountain,
+        contamination_strength_indexically_opaque,
         % --- Defaults ---
         default_extractiveness,
         default_suppression,

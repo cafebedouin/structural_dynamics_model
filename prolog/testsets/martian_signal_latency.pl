@@ -59,7 +59,7 @@
 
 % Required for [STEP 1] and [STEP 2] of the DR-Audit Suite
 narrative_ontology:interval(mariner_to_msl_era, 0, 10).
-narrative_ontology:constraint_claim(martian_signal_latency, mountain).
+narrative_ontology:constraint_claim(martian_signal_latency, scaffold).
 
 % Base extractiveness score (0.0-1.0)
 % Rationale: 0.1. Low; the speed of light does not "extract" value in a 
@@ -111,7 +111,7 @@ narrative_ontology:constraint_victim(martian_signal_latency, mission_cadence).
 
 constraint_indexing:constraint_classification(
     martian_signal_latency,
-    mountain,
+    scaffold,
     context(
         agent_power(powerless),
         time_horizon(immediate),

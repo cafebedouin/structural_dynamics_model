@@ -70,7 +70,7 @@ narrative_ontology:constraint_metric(delayed_feedback_instability, theater_ratio
 
 % Constraint self-claim: The system presents its dynamics as an unavoidable
 % consequence of complex interactions, a natural law of feedback.
-narrative_ontology:constraint_claim(delayed_feedback_instability, mountain).
+narrative_ontology:constraint_claim(delayed_feedback_instability, tangled_rope).
 
 % Binary flags & Structural properties for Tangled Rope
 domain_priors:requires_active_enforcement(delayed_feedback_instability).
@@ -104,7 +104,7 @@ constraint_indexing:constraint_classification(delayed_feedback_instability, rope
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (MOUNTAIN)
 % From a mathematical perspective, the Nyquist-Shannon limit and phase
 % shifts in feedback loops represent an irreducible Mountain of physics.
-constraint_indexing:constraint_classification(delayed_feedback_instability, mountain,
+constraint_indexing:constraint_classification(delayed_feedback_instability, tangled_rope,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(analytical),

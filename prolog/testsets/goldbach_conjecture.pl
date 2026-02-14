@@ -60,7 +60,8 @@
 
 % Required for DR-Audit Suite
 narrative_ontology:interval(goldbach_era, 1742, 2026).
-narrative_ontology:constraint_claim(goldbach_conjecture, mountain).
+narrative_ontology:constraint_claim(goldbach_conjecture, tangled_rope).
+domain_priors:requires_active_enforcement(goldbach_conjecture).
 
 % Base extractiveness: 0.15
 % Rationale: High-level mathematical truths are non-coercive. However, the 
@@ -108,7 +109,7 @@ narrative_ontology:constraint_victim(goldbach_conjecture, cognitive_resources). 
 
 constraint_indexing:constraint_classification(
     goldbach_conjecture,
-    mountain,
+    tangled_rope,
     context(
         agent_power(powerless),
         time_horizon(immediate),

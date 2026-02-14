@@ -54,7 +54,7 @@
 
 % Required for structural integration
 narrative_ontology:interval(liar_paradox_interval, 0, 10).
-narrative_ontology:constraint_claim(liar_paradox, mountain).
+narrative_ontology:constraint_claim(liar_paradox, scaffold).
 
 % Base extractiveness: 0.1 (Low)
 % Rationale: The paradox doesn't "steal" value, but it does consume cognitive 
@@ -100,7 +100,7 @@ narrative_ontology:constraint_victim(liar_paradox, institutional_logicians).
 
 constraint_indexing:constraint_classification(
     liar_paradox,
-    mountain,
+    scaffold,
     context(
         agent_power(institutional),
         time_horizon(civilizational),
@@ -174,7 +174,7 @@ test(multi_perspective_variance) :-
 
 test(immutability_scaling) :-
     % Institutional view sees it as eternal/unchangeable (Mountain)
-    constraint_indexing:constraint_classification(liar_paradox, mountain, context(agent_power(institutional), civilizational, trapped, _)).
+    constraint_indexing:constraint_classification(liar_paradox, scaffold, context(agent_power(institutional), civilizational, trapped, _)).
 
 test(exit_option_shift) :-
     % If you have exit options (can ignore the logic), it's just a Rope.

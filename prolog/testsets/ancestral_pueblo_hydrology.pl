@@ -60,7 +60,7 @@ narrative_ontology:constraint_metric(ancestral_pueblo_hydrology, suppression_req
 narrative_ontology:constraint_metric(ancestral_pueblo_hydrology, theater_ratio, 0.15).
 
 % Constraint classification claim
-narrative_ontology:constraint_claim(ancestral_pueblo_hydrology, mountain).
+narrative_ontology:constraint_claim(ancestral_pueblo_hydrology, tangled_rope).
 
 % Mandatory keys for classification engine v3.4
 % REQUIRED: Sunset clause for Scaffold classification (Far View Reservoir).
@@ -99,7 +99,7 @@ constraint_indexing:constraint_classification(ancestral_pueblo_hydrology, rope,
 % PERSPECTIVE 3: THE ARID ENVIRONMENT (MOUNTAIN)
 % The baseline moisture limit of the Southwest is an irreducible physical 
 % law that dictates the ultimate "interest rate" of the debt.
-constraint_indexing:constraint_classification(ancestral_pueblo_hydrology, mountain, 
+constraint_indexing:constraint_classification(ancestral_pueblo_hydrology, tangled_rope, 
     context(agent_power(analytical), 
             time_horizon(historical), 
             exit_options(analytical), 

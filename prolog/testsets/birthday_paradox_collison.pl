@@ -1,26 +1,49 @@
 % ============================================================================
 % CONSTRAINT STORY: birthday_paradox_collision
 % ============================================================================
-% Generated: 2026-01-19
-% Model: Gemini 2.0 Flash
-% Source: Combinatorial Probability / Cryptography
+% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2024-07-15
 % ============================================================================
 
-:- module(constraint_birthday_paradox, []).
+:- module(constraint_birthday_paradox_collision, []).
 
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
 
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
+
 % --- Namespace Hooks (Required for loading) ---
-:- multifile 
+:- multifile
     domain_priors:base_extractiveness/2,
     domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
     domain_priors:requires_active_enforcement/1,
+    domain_priors:emerges_naturally/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
-    constraint_indexing:constraint_classification/3.
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
+    narrative_ontology:boltzmann_floor_override/2,
+    constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -28,258 +51,222 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: birthday_paradox_collision
- * human_readable: The Birthday Paradox (Collision Probability)
- * domain: mathematical/technological
- * temporal_scope: 1939 (Von Mises) - Present
- * spatial_scope: Global/Abstract (Discrete probability spaces)
- * * SUMMARY:
- * The Birthday Paradox (or problem) demonstrates that in a set of n randomly 
- * chosen people, the probability that a pair of them will have the same 
- * birthday reaches 50% with only 23 people. This functions as a fundamental 
- * constraint on entropy, hashing, and digital uniqueness.
- * * KEY AGENTS:
- * - The Hash Function: A powerless agent whose output space is "compressed" 
- * by the inevitable logic of collisions.
- * - The Security Architect: An institutional agent who uses the paradox as a 
- * "Rope" to determine necessary bit-lengths for digital signatures.
- * - The Attacker (Birthday Attack): An agent who treats the paradox as a 
- * "Rope" (tool) to break cryptosystems.
- * - The Unsuspecting User: An agent for whom the paradox is a "Snare," 
- * strangling their expectation of uniqueness in small data sets.
- * * NARRATIVE ARC:
- * The paradox begins as a counter-intuitive "Mountain" of natural law. In 
- * engineering, it is a "Rope" for coordination (choosing ID lengths). However, 
- * in cryptography, it is a "Snare"—it extracts security from short hashes 
- * by guaranteeing collisions far sooner than intuition suggests.
+ *   constraint_id: birthday_paradox_collision
+ *   human_readable: The Birthday Paradox (Collision Probability)
+ *   domain: mathematical/technological
+ *
+ * SUMMARY:
+ *   The Birthday Paradox is a mathematical principle demonstrating that in a
+ *   set of n randomly chosen items, the probability of a collision (a shared
+ *   property, like a birthday) reaches 50% with only sqrt(N) items, where N is
+ *   the total number of possibilities. For 365 days, this is 23 people. This
+ *   functions as a fundamental, unchangeable constraint of probability theory,
+ *   affecting domains from cryptography (hash collisions) to biology (genetic
+ *   uniqueness). This story models the mathematical principle itself, which is
+ *   a pure Mountain. Its *application* in other systems (e.g., weak hashing)
+ *   would constitute separate, downstream constraints (Snares or Scaffolds).
+ *
+ * KEY AGENTS (by structural relationship):
+ *   - Hash Function Implementers: (powerless/trapped) — The logic is bound by this mathematical law.
+ *   - Security Architects: (institutional/mobile) — Must design systems that account for this law.
+ *   - Analytical Observer: (analytical/analytical) — Perceives the mathematical structure directly.
  */
 
 /* ==========================================================================
-   2. CORE SYSTEM INTEGRATION
+   2. BASE PROPERTIES (DOMAIN PRIORS)
    ========================================================================== */
 
-% Required for DR-Audit Suite
-narrative_ontology:interval(birthday_era, 1939, 2026).
+% --- Numerical metrics ---
+domain_priors:base_extractiveness(birthday_paradox_collision, 0.05).
+domain_priors:suppression_score(birthday_paradox_collision, 0.0).
+domain_priors:theater_ratio(birthday_paradox_collision, 0.0).
+
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(birthday_paradox_collision, extractiveness, 0.05).
+narrative_ontology:constraint_metric(birthday_paradox_collision, suppression_requirement, 0.0).
+narrative_ontology:constraint_metric(birthday_paradox_collision, theater_ratio, 0.0).
+
+% --- NL Profile Metrics (required for mountain constraints) ---
+% These feed the natural_law_signature certification chain.
+% accessibility_collapse=1.0: It is logically impossible to access an alternative to this mathematical law.
+% resistance=0.0: One cannot meaningfully "resist" a theorem of probability.
+narrative_ontology:constraint_metric(birthday_paradox_collision, accessibility_collapse, 1.0).
+narrative_ontology:constraint_metric(birthday_paradox_collision, resistance, 0.0).
+
+% --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(birthday_paradox_collision, mountain).
 
-% Base extractiveness: 0.4
-% Rationale: It "extracts" security and uniqueness. In a 64-bit hash space, 
-% you don't get 2^64 unique items; you get roughly 2^32 before a collision 
-% is likely. This "halving" of effective entropy is a structural extraction.
-domain_priors:base_extractiveness(birthday_paradox_collision, 0.4).
-
-% Suppression score: 0.25
-% Rationale: It suppresses human intuition (which expects a linear 
-% relationship) in favor of the exponential reality of combinations.
-domain_priors:suppression_score(birthday_paradox_collision, 0.25).
-
-% Constraint metric facts (bridge for classification engine)
-narrative_ontology:constraint_metric(birthday_paradox_collision, extractiveness, 0.4).
-narrative_ontology:constraint_metric(birthday_paradox_collision, suppression_requirement, 0.25).
-
-% Enforcement: Emerges naturally from the Pigeonhole Principle and combinatorics.
+% --- Emergence flag (required for mountain constraints) ---
+% This is a mathematical truth that emerges from the structure of probability
+% without human design or enforcement. Required for the mountain metric gate.
 domain_priors:emerges_naturally(birthday_paradox_collision).
 
-% Metrics
-% Beneficiaries & Victims
-narrative_ontology:constraint_beneficiary(birthday_paradox_collision, cryptographic_attackers).
-narrative_ontology:constraint_beneficiary(birthday_paradox_collision, hardware_manufacturers). % Need more storage/bits.
-narrative_ontology:constraint_victim(birthday_paradox_collision, legacy_hash_functions).
-narrative_ontology:constraint_victim(birthday_paradox_collision, intuitive_expectations).
+% --- Structural relationships (REQUIRED for non-mountain constraints) ---
+% As a Mountain (a law of mathematics), this constraint has no structural
+% beneficiaries or victims. Agents may benefit or suffer from its *consequences*
+% in other systems, but the principle itself is symmetric and non-extractive.
+% No enrichment needed.
 
 /* ==========================================================================
-   3. INDEXED CLASSIFICATIONS
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × f(d) × σ(S)
+   where f(d) is the sigmoid directionality function:
+     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
+   The engine derives d from beneficiary/victim membership + exit_options.
+   Scope modifiers: local=0.8, regional=0.9, national=1.0,
+                    continental=1.1, global=1.2, universal=1.0.
+   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
+   Do not add measurement_basis, beneficiary/victim, or other metadata.
+   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 1: THE HASH VALUE - Mountain
-   --------------------------------------------------------------------------
-   WHO: powerless - The bits have no choice in their collision probability.
-   WHEN: immediate - True at the moment of the 23rd insertion.
-   WHERE: trapped - Bound within the set of 365 (or 2^n) possible states.
-   SCOPE: local - Immediate neighborhood of a duplicate value.
-   
-   WHY THIS CLASSIFICATION:
-   For the data point, the paradox is a "Mountain." No amount of "willpower" 
-   by the algorithm can change the fact that the probability landscape is 
-   shaped by factorials and exponents.
-   -------------------------------------------------------------------------- */
+% PERSPECTIVE 1: THE HASH FUNCTION IMPLEMENTER (MOUNTAIN)
+% For any system operating within a finite state space, the probability of
+% collision is an unchangeable mathematical law.
+constraint_indexing:constraint_classification(birthday_paradox_collision, mountain,
+    context(agent_power(powerless),
+            time_horizon(immediate),
+            exit_options(trapped),
+            spatial_scope(universal))).
 
+% PERSPECTIVE 2: THE SECURITY ARCHITECT (MOUNTAIN)
+% An institutional actor cannot change the law, only account for it. They
+% "exit" the negative consequences by choosing a larger state space (e.g.,
+% moving from SHA-1 to SHA-256), but the underlying mathematical constraint
+% remains a Mountain.
+constraint_indexing:constraint_classification(birthday_paradox_collision, mountain,
+    context(agent_power(institutional),
+            time_horizon(generational),
+            exit_options(mobile),
+            spatial_scope(global))).
 
-
-constraint_indexing:constraint_classification(
-    birthday_paradox_collision,
-    mountain,
-    context(
-        agent_power(powerless),
-        time_horizon(immediate),
-        exit_options(trapped),
-        spatial_scope(local)
-    )
-) :- !.
-
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE CRYPTOGRAPHER - Rope
-   --------------------------------------------------------------------------
-   WHO: institutional - Power to set the bit-length of the hash (e.g., SHA-256).
-   WHEN: biographical - Planning the safety of a system for 20+ years.
-   WHERE: mobile - Can "exit" the Snare of collisions by doubling the bit-length.
-   SCOPE: global - Worldwide standard for digital signatures.
-   
-   WHY THIS CLASSIFICATION:
-   For the architect, the paradox is a "Rope"—a functional coordination tool. 
-   Knowing the "Birthday Bound" allows them to coordinate a standard of 
-   achievement (security) by simply using twice as many bits as the intended 
-   security level.
-   -------------------------------------------------------------------------- */
-
-constraint_indexing:constraint_classification(
-    birthday_paradox_collision,
-    rope,
-    context(
-        agent_power(institutional),
-        time_horizon(biographical),
-        exit_options(mobile),
-        spatial_scope(global)
-    )
-) :- !.
-
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE BIRTHDAY ATTACKER - Snare
-   --------------------------------------------------------------------------
-   WHO: powerful - Using the paradox to coerce a system.
-   WHEN: immediate - Cracking a signature in real-time.
-   WHERE: arbitrage - Exploiting the gap between the system's bits and its 
-        actual security.
-   SCOPE: global - Targeting global financial or identity systems.
-   
-   WHY THIS CLASSIFICATION:
-   For the attacker, the paradox is a "Snare" they tighten around a weak hash 
-   function. It allows them to "extract" a collision (and thus a forgery) 
-   asymmetrically, with far less effort than a brute-force search.
-   -------------------------------------------------------------------------- */
-
-
-
-constraint_indexing:constraint_classification(
-    birthday_paradox_collision,
-    snare,
-    context(
-        agent_power(powerful),
-        time_horizon(immediate),
-        exit_options(arbitrage),
-        spatial_scope(global)
-    )
-) :- 
-    domain_priors:base_extractiveness(birthday_paradox_collision, E),
-    E >= 0.3,
-    !.
+% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (MOUNTAIN)
+% The default analytical context perceives the constraint as a fundamental
+% and invariant feature of probability theory.
+constraint_indexing:constraint_classification(birthday_paradox_collision, mountain,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).
 
 /* ==========================================================================
-   4. TESTS
+   4. VALIDATION TESTS
    ========================================================================== */
 
-:- begin_tests(birthday_paradox_tests).
+:- begin_tests(birthday_paradox_collision_tests).
 
-test(collision_fate_variance) :-
-    % Subject -> Mountain
-    constraint_indexing:constraint_classification(birthday_paradox_collision, Type1, context(powerless, immediate, trapped, local)),
-    % Architect -> Rope
-    constraint_indexing:constraint_classification(birthday_paradox_collision, Type2, context(institutional, biographical, mobile, global)),
-    Type1 = mountain,
-    Type2 = rope.
+test(invariance_across_perspectives) :-
+    % Verify that the constraint is a Mountain from all key perspectives.
+    constraint_indexing:constraint_classification(birthday_paradox_collision, TypeTarget, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(birthday_paradox_collision, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
+    constraint_indexing:constraint_classification(birthday_paradox_collision, TypeAnalytical, context(agent_power(analytical), _, _, _)),
+    TypeTarget == mountain,
+    TypeBeneficiary == mountain,
+    TypeAnalytical == mountain.
 
-test(extraction_of_security) :-
-    % Attackers see it as a Snare/Arbitrage opportunity.
-    constraint_indexing:constraint_classification(birthday_paradox_collision, snare, context(powerful, immediate, arbitrage, global)).
+test(mountain_threshold_adherence) :-
+    % Verify metrics are within the canonical Mountain range.
+    narrative_ontology:constraint_metric(birthday_paradox_collision, extractiveness, E),
+    narrative_ontology:constraint_metric(birthday_paradox_collision, suppression_requirement, S),
+    E =< 0.25,
+    S =< 0.05.
 
-test(natural_emergence) :-
-    domain_priors:emerges_naturally(birthday_paradox_collision).
-
-:- end_tests(birthday_paradox_tests).
+:- end_tests(birthday_paradox_collision_tests).
 
 /* ==========================================================================
-   5. MODEL INTERPRETATION (Commentary)
+   5. GENERATIVE COMMENTARY
    ========================================================================== */
 
 /**
- * LLM GENERATION NOTES
- * * Model: Gemini 2.0 Flash
- * * KEY DECISIONS:
- * 1. EXTRACTIVENESS (0.4): I assigned this because the paradox creates 
- * a "hidden tax" on all digital systems. You pay for 128 bits of storage 
- * but only get 64 bits of collision resistance.
- * 2. PERSPECTIVE SHIFT: The core insight is that "knowledge" of the constraint 
- * transforms it from a Snare (for the victim) into a Rope (for the architect).
- * 3. SUPPRESSION: Set at 0.25. The paradox effectively "hides" the feasibility 
- * of collisions from non-experts, which is a form of informational suppression.
+ * LOGIC RATIONALE:
+ *   This regeneration corrects a structural error in the original file. The
+ *   original file conflated a mathematical principle (a Mountain) with its
+ *   application in technology (which can create Snares). Per the ε-invariance
+ *   principle, these are distinct constraints. This file now models only the
+ *   mathematical law.
+ *
+ *   - Base Extractiveness (ε=0.05): A mathematical truth does not extract
+ *     value; it simply describes reality. The low value reflects its status as
+ *     a non-extractive, structural fact. The original value of 0.4 incorrectly
+ *     attributed the "extraction" of security from weak systems to the law
+ *     itself, rather than to the design of those systems.
+ *   - Suppression Score (S=0.0): The paradox does not suppress alternatives;
+ *     it is a logical inevitability. The fact that it is counter-intuitive to
+ *     humans is a cognitive bias, not structural suppression.
+ *
+ * PERSPECTIVAL GAP:
+ *   There is no perspectival gap. As a pure Mountain, the constraint is
+ *   classified identically from all perspectives. The original file's attempt
+ *   to classify it as a Rope or Snare was a category error. An agent can *use*
+ *   a mountain as a tool (Rope) or to set a trap (Snare), but the mountain
+ *   itself remains a mountain. The design of a cryptographic system that
+ *   *leverages* this principle would be a separate constraint story.
+ *
+ * DIRECTIONALITY LOGIC:
+ *   As a Mountain, there are no structural beneficiaries or victims. The
+ *   declarations have been removed to reflect this.
+ *
+ * MANDATROPHY ANALYSIS:
+ *   By correctly identifying the mathematical law as a Mountain with ε≈0, this
+ *   classification avoids mislabeling a law of nature as an extractive Snare.
+ *   It forces a clear distinction between the principle and its application,
+ *   preventing the false naturalization of vulnerabilities in man-made systems.
+ *   A separate constraint, `weak_hash_vulnerability`, would correctly be
+ *   classified as a Snare, with this Mountain as a causal dependency.
  */
 
-% OMEGA IDENTIFICATION
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
-    non_uniform_birth_distribution,
-    "How does the 'Mountain' shift if births are seasonal rather than uniform?",
-    resolution_mechanism("Compare collision rates in datasets with actual demographic spikes (e.g., September births)."),
-    impact("If Spiked: The probability curve steepens, making the 'Snare' tighter."),
+    omega_birthday_paradox_collision_1,
+    'How does the collision probability shift if the underlying distribution is non-uniform (e.g., seasonal birthdays)?',
+    'Compare collision rates in datasets with uniform distributions versus real-world demographic data with known spikes.',
+    'If non-uniformity significantly accelerates collisions, then the "safe" input size (e.g., 23 people) is an overestimate, making downstream Snares (like weak hashes) even more dangerous than standard models predict.',
     confidence_without_resolution(high)
 ).
 
 omega_variable(
-    quantum_collision_acceleration,
-    "Does Grover's Algorithm turn the Birthday 'Rope' into a 'Snare' for modern hashes?",
-    resolution_mechanism("Audit of cube-root vs square-root collision speeds in quantum simulations."),
-    impact("If Cube-root: Current bit-length standards are a failing Scaffold."),
-    confidence_without_resolution(low)
+    omega_birthday_paradox_collision_2,
+    'Does a practical quantum algorithm (e.g., Grover''s) fundamentally change the sqrt(N) nature of the collision problem?',
+    'Theoretical analysis and simulation of quantum collision-finding algorithms against classical models.',
+    'If a quantum algorithm offers a speedup beyond sqrt(N), it would not change this constraint (which is classical) but would create a new, more severe quantum constraint that renders downstream security systems (Scaffolds) obsolete faster.',
+    confidence_without_resolution(medium)
 ).
-
-/* ==========================================================================
-   6. ALTERNATIVE ANALYSIS
-   ========================================================================== */
-
-/**
- * VIABLE ALTERNATIVES
- * * ALTERNATIVE 1: Brute Force Search (1/N)
- * Viability: Requires checking every single possible value.
- * Suppression: Suppressed by the sheer efficiency of the Birthday Attack 
- * (sqrt(N)), which makes the 1/N alternative functionally invisible to 
- * professional attackers.
- * * ALTERNATIVE 2: Collision-Free Perfect Hashing
- * Viability: Possible for fixed, known datasets.
- * Suppression: Rejected for dynamic systems where inputs are unknown or adversarial.
- * * CONCLUSION:
- * The existence of the sqrt(N) "Mountain" makes any security model based 
- * on 1/N a "Scaffold" that will inevitably collapse under load.
- */
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Load: ?- [birthday_paradox_collision].
-% Analyze: ?- constraint_indexing:multi_index_report(birthday_paradox_collision).
+% Required for external script parsing
+narrative_ontology:interval(birthday_paradox_collision, 0, 10).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Not required. As a Mountain with base_extractiveness <= 0.46, this
+% constraint does not exhibit lifecycle drift. Its properties are static.
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA
+   ========================================================================== */
+
+% Network relationships (structural influence edges)
+% This mathematical principle is a foundational Mountain that affects the
+% viability of many cryptographic and data-integrity constraints.
+narrative_ontology:affects_constraint(birthday_paradox_collision, weak_hash_vulnerability).
+narrative_ontology:affects_constraint(birthday_paradox_collision, uuid_uniqueness_guarantee).
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+% Not applicable. As a Mountain, there are no beneficiaries or victims,
+% so directionality derivation is not used.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
-
-
-% --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
-constraint_indexing:constraint_classification(birthday_paradox_collison, mountain, agent_power(analytical)).
-constraint_indexing:constraint_classification(birthday_paradox_collison, rope, agent_power(institutional)).
-constraint_indexing:constraint_classification(birthday_paradox_collison, snare, agent_power(powerless)).
-
-% ============================================================================
-% ENRICHMENT: Structural predicates for dynamic classification
-% Generated: 2026-02-08
-% Template: v5.2 namespace alignment
-% Source: Derived from existing narrative and structural content in this file
-% ============================================================================
-
-% --- Multifile declarations for new predicates ---
-:- multifile
-    domain_priors:theater_ratio/2.
-
-% --- Theater ratio (missing from base properties) ---
-% Formal truth — substantive with near-zero performative component
-domain_priors:theater_ratio(birthday_paradox_collision, 0.0).
-narrative_ontology:constraint_metric(birthday_paradox_collision, theater_ratio, 0.0).

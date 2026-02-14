@@ -54,7 +54,7 @@
 
 % Required for [STEP 1] and [STEP 2] of the DR-Audit Suite
 narrative_ontology:interval(midnight_deadline_period, 0, 10).
-narrative_ontology:constraint_claim(midnight_deadline, mountain).
+narrative_ontology:constraint_claim(midnight_deadline, scaffold).
 
 % Base extractiveness score: 0.1
 % Rationale: The magic is largely a gift; it does not extract value, 
@@ -101,7 +101,7 @@ narrative_ontology:constraint_victim(midnight_deadline, cinderella_status).
 % 2026-02-11: Fixed context arity — removed beneficiary/victim from context tuples (context/4 enforcement)
 constraint_indexing:constraint_classification(
     midnight_deadline,
-    mountain,
+    scaffold,
     context(
         agent_power(powerless),
         time_horizon(immediate),
@@ -177,7 +177,7 @@ constraint_indexing:constraint_classification(
 
 test(perspectival_gap) :-
     % Cinderella sees a Mountain; the Prince sees a Rope.
-    constraint_indexing:constraint_classification(midnight_deadline, mountain, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(midnight_deadline, scaffold, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(midnight_deadline, rope, context(agent_power(institutional), _, _, _)).
 
 test(extraction_limit) :-

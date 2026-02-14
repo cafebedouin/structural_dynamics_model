@@ -68,7 +68,7 @@ narrative_ontology:constraint_metric(sleep_debt_externality, suppression_require
 narrative_ontology:constraint_metric(sleep_debt_externality, theater_ratio, 0.38).
 
 % Constraint self-claim (what does the constraint claim to be?)
-narrative_ontology:constraint_claim(sleep_debt_externality, mountain).
+narrative_ontology:constraint_claim(sleep_debt_externality, tangled_rope).
 
 % Binary flags and structural properties for Tangled Rope classification
 domain_priors:requires_active_enforcement(sleep_debt_externality).
@@ -102,7 +102,7 @@ constraint_indexing:constraint_classification(sleep_debt_externality, rope,
 % From a biological standpoint, the need for glymphatic clearance during
 % sleep is an irreducible Mountain of mammalian physics. This is the underlying
 % reality the socio-economic constraint operates upon.
-constraint_indexing:constraint_classification(sleep_debt_externality, mountain,
+constraint_indexing:constraint_classification(sleep_debt_externality, tangled_rope,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(analytical),

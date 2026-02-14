@@ -63,7 +63,7 @@ narrative_ontology:constraint_metric(broke_vs_poor_grocery_math, theater_ratio, 
 
 % Constraint self-claim (what does the constraint claim to be?)
 % It is presented as a necessary consequence of scarcity, enforced by the checkout.
-narrative_ontology:constraint_claim(broke_vs_poor_grocery_math, mountain).
+narrative_ontology:constraint_claim(broke_vs_poor_grocery_math, tangled_rope).
 
 % Binary flags
 domain_priors:requires_active_enforcement(broke_vs_poor_grocery_math). % Enforced by the point-of-sale system.
@@ -104,7 +104,7 @@ constraint_indexing:constraint_classification(broke_vs_poor_grocery_math, rope,
 % intractable problem of poverty. It appears as a Mountain—a persistent,
 % systemic feature of the economic landscape that they must work around but
 % cannot easily change.
-constraint_indexing:constraint_classification(broke_vs_poor_grocery_math, mountain,
+constraint_indexing:constraint_classification(broke_vs_poor_grocery_math, tangled_rope,
     context(agent_power(institutional),
             time_horizon(civilizational),
             exit_options(analytical),

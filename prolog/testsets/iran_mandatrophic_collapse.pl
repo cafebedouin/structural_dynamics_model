@@ -75,7 +75,7 @@ narrative_ontology:constraint_metric(iran_mandatrophic_collapse, theater_ratio, 
 % Constraint self-claim (what does the constraint claim to be?)
 % Values: natural_law, coordination, constructed, enforcement
 % The regime frames its actions as necessary enforcement for national survival.
-narrative_ontology:constraint_claim(iran_mandatrophic_collapse, mountain).
+narrative_ontology:constraint_claim(iran_mandatrophic_collapse, tangled_rope).
 
 % Binary flags
 domain_priors:requires_active_enforcement(iran_mandatrophic_collapse). % Requires heavy active enforcement (Basij crackdowns, surveillance).
@@ -118,7 +118,7 @@ constraint_indexing:constraint_classification(iran_mandatrophic_collapse, rope,
 % The analyst identifies the current state as a Mountain. The geological damage
 % to aquifers is permanent, and "Water Bankruptcy" is an unyielding physical
 % limit that no policy can bypass. The Snare has hit a physical wall.
-constraint_indexing:constraint_classification(iran_mandatrophic_collapse, mountain,
+constraint_indexing:constraint_classification(iran_mandatrophic_collapse, tangled_rope,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(analytical),

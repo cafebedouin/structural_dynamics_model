@@ -52,7 +52,8 @@
    ========================================================================== */
 
 narrative_ontology:interval(cow_field_poop, 0, 10).
-narrative_ontology:constraint_claim(cow_field_poop, mountain).
+narrative_ontology:constraint_claim(cow_field_poop, tangled_rope).
+domain_priors:requires_active_enforcement(cow_field_poop).
 
 % Base extractiveness: 0.4.
 % Encountering a hazard extracts time, emotional energy, and resources (cleaning). 
@@ -119,7 +120,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     cow_field_poop,
-    mountain,
+    tangled_rope,
     context(
         agent_power(institutional),
         time_horizon(historical),

@@ -64,7 +64,8 @@ narrative_ontology:constraint_metric(hydra_game, theater_ratio, 0.0).
 
 % Constraint self-claim (what does the constraint claim to be?)
 % Values: natural_law, coordination, constructed, enforcement
-narrative_ontology:constraint_claim(hydra_game, mountain).
+narrative_ontology:constraint_claim(hydra_game, tangled_rope).
+domain_priors:requires_active_enforcement(hydra_game).
 
 % Structural property derivation hooks:
 %   has_coordination_function/1 is DERIVED from constraint_beneficiary/2
@@ -105,7 +106,7 @@ constraint_indexing:constraint_classification(hydra_game, rope,
 % To the proof theorist, the game's termination is a fixed, unchangeable fact
 % of the transfinite mathematical landscape (a property of the ordinal ε₀).
 % It is an immutable law, hence a Mountain.
-constraint_indexing:constraint_classification(hydra_game, mountain,
+constraint_indexing:constraint_classification(hydra_game, tangled_rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -126,7 +127,7 @@ test(perspectival_gap) :-
     TypeInstitutional == rope.
 
 test(analytical_view_is_mountain) :-
-    constraint_indexing:constraint_classification(hydra_game, mountain, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(hydra_game, tangled_rope, context(agent_power(analytical), _, _, _)).
 
 test(threshold_validation_high_extraction) :-
     config:param(extractiveness_metric_name, ExtMetricName),

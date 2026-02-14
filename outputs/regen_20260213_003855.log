@@ -1,0 +1,155 @@
+2026-02-13 00:38:55,822 INFO     Log file: /home/scott/bin/structural_dynamics_model/outputs/regen_20260213_003855.log
+2026-02-13 00:38:55,822 INFO     Running structural linter on testsets/ and origsets/…
+2026-02-13 00:38:57,905 INFO     Linter: 715/762 passed, 47 with errors → /home/scott/bin/structural_dynamics_model/outputs/lint_errors.txt
+2026-02-13 00:38:57,905 INFO     Source: lint_errors.txt (47 files)
+2026-02-13 00:38:58,031 INFO     Resume filter: 47 → 47 files
+2026-02-13 00:38:58,987 INFO     [1/47] conways_game_of_life_dynamics (1 errors) [0.0/min, ETA 0min]
+2026-02-13 00:38:58,987 INFO       Generating conways_game_of_life_dynamics (attempt 1/3)…
+2026-02-13 00:38:58,987 INFO     Creating/refreshing Gemini context cache (TTL=3600s)…
+2026-02-13 00:38:59,569 INFO     HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/cachedContents "HTTP/1.1 200 OK"
+2026-02-13 00:38:59,573 INFO     Cache created: cachedContents/8aawioq7yh5h1cvgj8w4p9l8a0dutvc4n0wqupp1 (expires ~2026-02-13T07:38:58.987392)
+2026-02-13 00:38:59,573 INFO     AFC is enabled with max remote calls: 10.
+2026-02-13 00:39:40,570 INFO     HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent "HTTP/1.1 200 OK"
+2026-02-13 00:39:40,604 INFO       PASS conways_game_of_life_dynamics on attempt 1
+2026-02-13 00:39:40,604 INFO     [2/47] gauss_bonnet_topology (1 errors) [1.4/min, ETA 32min]
+2026-02-13 00:39:40,604 INFO       Generating gauss_bonnet_topology (attempt 1/3)…
+2026-02-13 00:39:40,604 INFO     AFC is enabled with max remote calls: 10.
+2026-02-13 00:40:39,263 INFO     HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent "HTTP/1.1 200 OK"
+2026-02-13 00:40:39,299 INFO       PASS gauss_bonnet_topology on attempt 1
+2026-02-13 00:40:39,299 INFO     [3/47] temporal_measurements (7 errors) [1.2/min, ETA 38min]
+2026-02-13 00:40:39,299 INFO       Generating temporal_measurements (attempt 1/3)…
+2026-02-13 00:40:39,299 INFO     AFC is enabled with max remote calls: 10.
+2026-02-13 00:41:35,018 INFO     HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent "HTTP/1.1 200 OK"
+2026-02-13 00:41:35,042 INFO       FAIL temporal_measurements (attempt 1/3) — 1 error(s): UNRESOLVED_MANDATROPHY: Extraction 0.82 requires resolution hook.
+2026-02-13 00:41:35,043 INFO       Generating temporal_measurements (attempt 2/3)…
+2026-02-13 00:41:35,043 INFO     AFC is enabled with max remote calls: 10.
+2026-02-13 00:42:29,092 INFO     HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent "HTTP/1.1 200 OK"
+2026-02-13 00:42:29,121 INFO       FAIL temporal_measurements (attempt 2/3) — 1 error(s): GENERIC_GROUP: constraint_victim uses generic group 'general_public'. Use a domain-specific group name (e.g., 'payday_lenders' not 'stakeholders').
+2026-02-13 00:42:29,121 INFO       Generating temporal_measurements (attempt 3/3)…
+2026-02-13 00:42:29,122 INFO     AFC is enabled with max remote calls: 10.
+2026-02-13 00:43:23,161 INFO     HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent "HTTP/1.1 200 OK"
+2026-02-13 00:43:23,169 INFO       FAIL temporal_measurements (attempt 3/3) — 1 error(s): UNRESOLVED_MANDATROPHY: Extraction 0.82 requires resolution hook.
+2026-02-13 00:43:23,169 INFO       PROBSET temporal_measurements — wrote to probsets/ after 3 attempts
+2026-02-13 00:43:23,170 INFO     [4/47] adversarial_surface_inflation (2 errors) [0.7/min, ETA 65min]
+2026-02-13 00:43:23,170 INFO       Generating adversarial_surface_inflation (attempt 1/3)…
+2026-02-13 00:43:23,170 INFO     AFC is enabled with max remote calls: 10.
+2026-02-13 00:44:32,084 INFO     HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent "HTTP/1.1 200 OK"
+2026-02-13 00:44:32,134 INFO       PASS adversarial_surface_inflation on attempt 1
+2026-02-13 00:44:32,134 INFO     [5/47] ai_religion_regulation (3 errors) [0.7/min, ETA 60min]
+2026-02-13 00:44:32,134 INFO       Generating ai_religion_regulation (attempt 1/3)…
+2026-02-13 00:44:32,134 INFO     AFC is enabled with max remote calls: 10.
+2026-02-13 00:45:18,875 INFO     HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent "HTTP/1.1 200 OK"
+2026-02-13 00:45:18,912 INFO       PASS ai_religion_regulation on attempt 1
+2026-02-13 00:45:18,912 INFO     [6/47] axiom_of_choice_determinacy (1 errors) [0.8/min, ETA 53min]
+2026-02-13 00:45:18,912 INFO       Generating axiom_of_choice_determinacy (attempt 1/3)…
+2026-02-13 00:45:18,913 INFO     AFC is enabled with max remote calls: 10.
+2026-02-13 00:46:04,423 INFO     HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent "HTTP/1.1 200 OK"
+2026-02-13 00:46:04,452 INFO       PASS axiom_of_choice_determinacy on attempt 1
+2026-02-13 00:46:04,452 INFO     [7/47] banach_fixed_point (1 errors) [0.8/min, ETA 48min]
+2026-02-13 00:46:04,453 INFO       Generating banach_fixed_point (attempt 1/3)…
+2026-02-13 00:46:04,453 INFO     AFC is enabled with max remote calls: 10.
+2026-02-13 00:46:09,496 INFO     HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-02-13 00:46:09,497 WARNING    API/empty response for banach_fixed_point (attempt 1/3): 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+2026-02-13 00:46:09,498 INFO       Generating banach_fixed_point (attempt 2/3)…
+2026-02-13 00:46:09,498 INFO     AFC is enabled with max remote calls: 10.
+2026-02-13 00:47:05,758 INFO     HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent "HTTP/1.1 200 OK"
+2026-02-13 00:47:05,789 INFO       PASS banach_fixed_point on attempt 2
+2026-02-13 00:47:05,789 INFO     [8/47] bgs_spectral_universality (1 errors) [0.9/min, ETA 46min]
+2026-02-13 00:47:05,789 INFO       Generating bgs_spectral_universality (attempt 1/3)…
+2026-02-13 00:47:05,790 INFO     AFC is enabled with max remote calls: 10.
+2026-02-13 00:47:53,911 INFO     HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent "HTTP/1.1 200 OK"
+2026-02-13 00:47:53,973 INFO       PASS bgs_spectral_universality on attempt 1
+2026-02-13 00:47:53,973 INFO     [9/47] birthday_paradox_collison (1 errors) [0.9/min, ETA 43min]
+2026-02-13 00:47:53,973 INFO       Generating birthday_paradox_collison (attempt 1/3)…
+2026-02-13 00:47:53,973 INFO     AFC is enabled with max remote calls: 10.
+2026-02-13 00:48:35,781 INFO     HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent "HTTP/1.1 200 OK"
+2026-02-13 00:48:35,821 INFO       PASS birthday_paradox_collison on attempt 1
+2026-02-13 00:48:35,822 INFO     [10/47] busy_beaver_noncomputability (1 errors) [0.9/min, ETA 41min]
+2026-02-13 00:48:35,822 INFO       Generating busy_beaver_noncomputability (attempt 1/3)…
+2026-02-13 00:48:35,822 INFO     AFC is enabled with max remote calls: 10.
+2026-02-13 00:48:38,236 INFO     HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-02-13 00:48:38,236 WARNING    API/empty response for busy_beaver_noncomputability (attempt 1/3): 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+2026-02-13 00:48:38,237 INFO       Generating busy_beaver_noncomputability (attempt 2/3)…
+2026-02-13 00:48:38,237 INFO     AFC is enabled with max remote calls: 10.
+2026-02-13 00:49:18,525 INFO     HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent "HTTP/1.1 200 OK"
+2026-02-13 00:49:18,554 INFO       PASS busy_beaver_noncomputability on attempt 2
+2026-02-13 00:49:18,555 INFO     [11/47] cantor_set_topology (1 errors) [1.0/min, ETA 38min]
+2026-02-13 00:49:18,555 INFO       Generating cantor_set_topology (attempt 1/3)…
+2026-02-13 00:49:18,555 INFO     AFC is enabled with max remote calls: 10.
+2026-02-13 00:49:21,404 INFO     HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-02-13 00:49:21,406 WARNING    API/empty response for cantor_set_topology (attempt 1/3): 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+2026-02-13 00:49:21,406 INFO       Generating cantor_set_topology (attempt 2/3)…
+2026-02-13 00:49:21,407 INFO     AFC is enabled with max remote calls: 10.
+2026-02-13 00:49:24,244 INFO     HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-02-13 00:49:24,245 WARNING    API/empty response for cantor_set_topology (attempt 2/3): 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+2026-02-13 00:49:24,245 INFO       Generating cantor_set_topology (attempt 3/3)…
+2026-02-13 00:49:24,245 INFO     AFC is enabled with max remote calls: 10.
+2026-02-13 00:50:07,733 INFO     HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent "HTTP/1.1 200 OK"
+2026-02-13 00:50:07,771 INFO       PASS cantor_set_topology on attempt 3
+2026-02-13 00:50:07,771 INFO     [12/47] cap_theorem (1 errors) [1.0/min, ETA 36min]
+2026-02-13 00:50:07,771 INFO       Generating cap_theorem (attempt 1/3)…
+2026-02-13 00:50:07,771 INFO     AFC is enabled with max remote calls: 10.
+2026-02-13 00:50:47,199 INFO     HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent "HTTP/1.1 200 OK"
+2026-02-13 00:50:47,226 INFO       PASS cap_theorem on attempt 1
+2026-02-13 00:50:47,226 INFO     [13/47] central_limit_theorem_convergence (1 errors) [1.0/min, ETA 34min]
+2026-02-13 00:50:47,226 INFO       Generating central_limit_theorem_convergence (attempt 1/3)…
+2026-02-13 00:50:47,226 INFO     AFC is enabled with max remote calls: 10.
+2026-02-13 00:52:09,604 INFO     HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent "HTTP/1.1 200 OK"
+2026-02-13 00:52:09,633 INFO       PASS central_limit_theorem_convergence on attempt 1
+2026-02-13 00:52:09,633 INFO     [14/47] clt_convergence_2026 (1 errors) [1.0/min, ETA 34min]
+2026-02-13 00:52:09,634 INFO       Generating clt_convergence_2026 (attempt 1/3)…
+2026-02-13 00:52:09,634 INFO     AFC is enabled with max remote calls: 10.
+2026-02-13 00:52:11,983 INFO     HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-02-13 00:52:11,985 WARNING    API/empty response for clt_convergence_2026 (attempt 1/3): 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+2026-02-13 00:52:11,985 INFO       Generating clt_convergence_2026 (attempt 2/3)…
+2026-02-13 00:52:11,986 INFO     AFC is enabled with max remote calls: 10.
+2026-02-13 00:52:14,378 INFO     HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-02-13 00:52:14,380 WARNING    API/empty response for clt_convergence_2026 (attempt 2/3): 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+2026-02-13 00:52:14,380 INFO       Generating clt_convergence_2026 (attempt 3/3)…
+2026-02-13 00:52:14,380 INFO     AFC is enabled with max remote calls: 10.
+2026-02-13 00:52:15,904 INFO     HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-02-13 00:52:15,904 WARNING    API/empty response for clt_convergence_2026 (attempt 3/3): 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+2026-02-13 00:52:15,905 ERROR      FAILED clt_convergence_2026 — no usable response after 3 attempts
+2026-02-13 00:52:15,905 INFO     [15/47] damped_harmonics (1 errors) [1.1/min, ETA 31min]
+2026-02-13 00:52:15,905 INFO       Generating damped_harmonics (attempt 1/3)…
+2026-02-13 00:52:15,905 INFO     AFC is enabled with max remote calls: 10.
+2026-02-13 00:52:20,555 INFO     HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-02-13 00:52:20,557 WARNING    API/empty response for damped_harmonics (attempt 1/3): 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+2026-02-13 00:52:20,557 INFO       Generating damped_harmonics (attempt 2/3)…
+2026-02-13 00:52:20,558 INFO     AFC is enabled with max remote calls: 10.
+2026-02-13 00:52:22,203 INFO     HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-02-13 00:52:22,205 WARNING    API/empty response for damped_harmonics (attempt 2/3): 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+2026-02-13 00:52:22,205 INFO       Generating damped_harmonics (attempt 3/3)…
+2026-02-13 00:52:22,205 INFO     AFC is enabled with max remote calls: 10.
+2026-02-13 00:52:23,874 INFO     HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-02-13 00:52:23,875 WARNING    API/empty response for damped_harmonics (attempt 3/3): 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+2026-02-13 00:52:23,875 ERROR      FAILED damped_harmonics — no usable response after 3 attempts
+2026-02-13 00:52:23,875 INFO     [16/47] dunbars_number (1 errors) [1.1/min, ETA 29min]
+2026-02-13 00:52:23,876 INFO       Generating dunbars_number (attempt 1/3)…
+2026-02-13 00:52:23,876 INFO     AFC is enabled with max remote calls: 10.
+2026-02-13 00:52:27,050 INFO     HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-02-13 00:52:27,050 WARNING    API/empty response for dunbars_number (attempt 1/3): 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+2026-02-13 00:52:27,050 INFO       Generating dunbars_number (attempt 2/3)…
+2026-02-13 00:52:27,051 INFO     AFC is enabled with max remote calls: 10.
+2026-02-13 00:53:13,144 INFO     HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent "HTTP/1.1 200 OK"
+2026-02-13 00:53:13,174 INFO       PASS dunbars_number on attempt 2
+2026-02-13 00:53:13,175 INFO     [17/47] ehrenfest_barrier (1 errors) [1.1/min, ETA 28min]
+2026-02-13 00:53:13,175 INFO       Generating ehrenfest_barrier (attempt 1/3)…
+2026-02-13 00:53:13,175 INFO     AFC is enabled with max remote calls: 10.
+2026-02-13 00:53:20,231 INFO     HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-02-13 00:53:20,231 WARNING    API/empty response for ehrenfest_barrier (attempt 1/3): 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+2026-02-13 00:53:20,231 INFO       Generating ehrenfest_barrier (attempt 2/3)…
+2026-02-13 00:53:20,232 INFO     AFC is enabled with max remote calls: 10.
+2026-02-13 00:53:23,168 INFO     HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-02-13 00:53:23,169 WARNING    API/empty response for ehrenfest_barrier (attempt 2/3): 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+2026-02-13 00:53:23,169 INFO       Generating ehrenfest_barrier (attempt 3/3)…
+2026-02-13 00:53:23,169 INFO     AFC is enabled with max remote calls: 10.
+2026-02-13 00:54:11,832 INFO     HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent "HTTP/1.1 200 OK"
+2026-02-13 00:54:11,862 INFO       PASS ehrenfest_barrier on attempt 3
+2026-02-13 00:54:11,862 INFO     [18/47] elite_identity_capture_2026 (5 errors) [1.1/min, ETA 27min]
+2026-02-13 00:54:11,863 INFO       Generating elite_identity_capture_2026 (attempt 1/3)…
+2026-02-13 00:54:11,863 INFO     AFC is enabled with max remote calls: 10.
+2026-02-13 00:54:19,576 INFO     HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-02-13 00:54:19,580 WARNING    API/empty response for elite_identity_capture_2026 (attempt 1/3): 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+2026-02-13 00:54:19,581 INFO       Generating elite_identity_capture_2026 (attempt 2/3)…
+2026-02-13 00:54:19,582 INFO     AFC is enabled with max remote calls: 10.

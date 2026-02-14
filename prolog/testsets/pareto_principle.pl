@@ -52,7 +52,8 @@
    ========================================================================== */
 
 narrative_ontology:interval(pareto_principle, 0, 10).
-narrative_ontology:constraint_claim(pareto_principle, mountain).
+narrative_ontology:constraint_claim(pareto_principle, tangled_rope).
+domain_priors:requires_active_enforcement(pareto_principle).
 
 % Base extractiveness: 0.4 (Moderate)
 % It describes an inherent asymmetry where a small group of inputs 
@@ -145,7 +146,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     pareto_principle,
-    mountain,
+    tangled_rope,
     context(
         agent_power(institutional),
         time_horizon(generational),

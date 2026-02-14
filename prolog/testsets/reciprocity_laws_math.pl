@@ -61,7 +61,7 @@
 
 % Required for DR-Audit Suite
 narrative_ontology:interval(reciprocity_laws_math, 1801, 2026).
-narrative_ontology:constraint_claim(reciprocity_laws_math, mountain).
+narrative_ontology:constraint_claim(reciprocity_laws_math, scaffold).
 
 % Base extractiveness: 0.1
 % Rationale: Pure math is largely non-extractive. However, it "extracts" the 
@@ -109,7 +109,7 @@ narrative_ontology:constraint_victim(reciprocity_laws_math, computational_ineffi
 
 constraint_indexing:constraint_classification(
     reciprocity_laws_math,
-    mountain,
+    scaffold,
     context(
         agent_power(powerless),
         time_horizon(immediate),

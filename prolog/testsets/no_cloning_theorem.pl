@@ -56,7 +56,8 @@
 
 % Required for structural identification
 narrative_ontology:interval(no_cloning_interval, 0, 10).
-narrative_ontology:constraint_claim(no_cloning_theorem, mountain).
+narrative_ontology:constraint_claim(no_cloning_theorem, tangled_rope).
+domain_priors:requires_active_enforcement(no_cloning_theorem).
 
 % Base extractiveness: 0.2 (Low)
 % Rationale: It extracts "reproducibility" from the information system. It 
@@ -105,7 +106,7 @@ narrative_ontology:constraint_victim(no_cloning_theorem, quantum_hardware_engine
 
 constraint_indexing:constraint_classification(
     no_cloning_theorem,
-    mountain,
+    tangled_rope,
     context(
         agent_power(analytical),
         time_horizon(civilizational),
@@ -177,7 +178,7 @@ constraint_indexing:constraint_classification(
 
 test(multi_perspective_variance) :-
     % Analyst sees Mountain
-    constraint_indexing:constraint_classification(no_cloning_theorem, mountain, context(analytical, civilizational, trapped, global)),
+    constraint_indexing:constraint_classification(no_cloning_theorem, tangled_rope, context(analytical, civilizational, trapped, global)),
     % Institutional sees Rope
     constraint_indexing:constraint_classification(no_cloning_theorem, rope, context(institutional, biographical, arbitrage, national)),
     % Powerless sees Snare

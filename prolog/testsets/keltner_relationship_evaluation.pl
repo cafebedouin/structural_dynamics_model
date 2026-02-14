@@ -77,7 +77,7 @@ narrative_ontology:constraint_metric(keltner_relationship_evaluation, extractive
 narrative_ontology:constraint_metric(keltner_relationship_evaluation, suppression_requirement, 0.45).
 
 % Constraint classification claim
-narrative_ontology:constraint_claim(keltner_relationship_evaluation, mountain).
+narrative_ontology:constraint_claim(keltner_relationship_evaluation, tangled_rope).
 
 % Enforcement: Requires active maintenance (Truthful answering).
 domain_priors:requires_active_enforcement(keltner_relationship_evaluation).
@@ -177,7 +177,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     keltner_relationship_evaluation,
-    mountain,
+    tangled_rope,
     context(
         agent_power(analytical),
         time_horizon(historical),
@@ -229,7 +229,7 @@ test(multi_perspective_evaluation) :-
     % Subject sees Snare
     constraint_indexing:constraint_classification(keltner_relationship_evaluation, snare, context(agent_power(powerless), _, _, _)),
     % Counselor sees Mountain
-    constraint_indexing:constraint_classification(keltner_relationship_evaluation, mountain, context(agent_power(analytical), _, _, _)),
+    constraint_indexing:constraint_classification(keltner_relationship_evaluation, tangled_rope, context(agent_power(analytical), _, _, _)),
     % Publisher sees Rope
     constraint_indexing:constraint_classification(keltner_relationship_evaluation, rope, context(agent_power(institutional), _, _, _)).
 

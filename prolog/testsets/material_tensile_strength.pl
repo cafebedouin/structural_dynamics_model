@@ -1,9 +1,9 @@
 % ============================================================================
 % CONSTRAINT STORY: material_tensile_strength
 % ============================================================================
-% Version: 5.2 (Deferential Realism Core + Boltzmann + Purity + Network)
-% Logic: 5.2 (Indexed Tuple P,T,E,S + Coupling + Purity + Network Drift)
-% Generated: 2024-07-15
+% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2024-08-23
 % ============================================================================
 
 :- module(constraint_material_tensile_strength, []).
@@ -11,6 +11,19 @@
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
+
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
 
 % --- Namespace Hooks (Required for loading) ---
 :- multifile
@@ -28,7 +41,9 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3,
+    domain_priors:emerges_naturally/1.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -36,50 +51,69 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: material_tensile_strength
- * human_readable: Ultimate Tensile Strength (UTS)
- * domain: technological
- * * SUMMARY:
- * Tensile strength is the maximum stress that a material can withstand while
- * being stretched or pulled before breaking. It represents the fundamental
- * cohesive limit of atomic bonding within a solid, dictating the maximum load
- * a structure can carry per unit of cross-sectional area. This is a physical
- * law, not a social construct.
- * * KEY AGENTS:
- * - The Material Scientist: An analytical observer measuring a fixed property.
- * - The Civil Engineer: An institutional agent designing structures around this fixed limit.
- * - The Overloaded Component: A physical object subject to the limit.
+ *   constraint_id: material_tensile_strength
+ *   human_readable: Ultimate Tensile Strength (UTS)
+ *   domain: technological
+ *
+ * SUMMARY:
+ *   Tensile strength is the maximum stress that a material can withstand while
+ *   being stretched or pulled before breaking. It represents the fundamental
+ *   cohesive limit of atomic bonding within a solid, dictating the maximum load
+ *   a structure can carry per unit of cross-sectional area. This is a physical
+ *   law, not a social construct, and serves as a canonical example of a
+ *   Mountain constraint.
+ *
+ * KEY AGENTS (by structural relationship):
+ *   - The Material Scientist: An analytical observer measuring a fixed property.
+ *   - The Civil Engineer: An institutional agent designing structures around this fixed limit.
+ *   - The Overloaded Component: A physical object subject to the limit (powerless/trapped).
+ *   - Analytical Observer: Sees the full structure as a physical law.
  */
 
 /* ==========================================================================
    2. BASE PROPERTIES (DOMAIN PRIORS)
    ========================================================================== */
 
-% Numerical anchors for v3.4 thresholds
-% Rationale: As a fundamental physical property, tensile strength has near-zero
-% extractiveness. It doesn't "take" anything; it is simply a limit.
-% Suppression is also minimal; it doesn't suppress alternatives, it defines the
-% physical possibility space.
-domain_priors:base_extractiveness(material_tensile_strength, 0.02). % Mountain suppression <= 0.05, Rope extraction <= 0.15, Snare extraction >= 0.46
-domain_priors:suppression_score(material_tensile_strength, 0.01).   % Structural property (raw, unscaled). Only extractiveness is scaled (by power and scope).
+% --- Numerical metrics ---
+domain_priors:base_extractiveness(material_tensile_strength, 0.02).
+domain_priors:suppression_score(material_tensile_strength, 0.01).   % Structural property (raw, unscaled).
 domain_priors:theater_ratio(material_tensile_strength, 0.0).       % Piton detection (>= 0.70)
 
-% Constraint metric facts — primary keys used by the classification engine.
-% These mirror domain_priors values using the metric key names from config.pl.
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
 narrative_ontology:constraint_metric(material_tensile_strength, extractiveness, 0.02).
 narrative_ontology:constraint_metric(material_tensile_strength, suppression_requirement, 0.01).
 narrative_ontology:constraint_metric(material_tensile_strength, theater_ratio, 0.0).
 
-% Constraint self-claim (what does the constraint claim to be?)
-% Values: natural_law, coordination, constructed, enforcement
+% --- NL Profile Metrics (required for mountain constraints) ---
+% These feed the natural_law_signature certification chain in
+% structural_signatures.pl. Without these, the NL signature defaults to 0.5
+% and fails certification.
+narrative_ontology:constraint_metric(material_tensile_strength, accessibility_collapse, 1.0).
+narrative_ontology:constraint_metric(material_tensile_strength, resistance, 0.0).
+
+% --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(material_tensile_strength, mountain).
+
+% --- Emergence flag (required for mountain constraints) ---
+% Required for the mountain metric gate: without this, the classify_from_metrics
+% mountain clause will not fire.
+domain_priors:emerges_naturally(material_tensile_strength).
+
+% --- Structural relationships (REQUIRED for non-mountain constraints) ---
+% Not applicable. As a natural law (Mountain), this constraint has no
+% structural beneficiaries or victims. It is an inert feature of reality.
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × π(P) × σ(S)
-   Power (P) and Scope (S) both affect effective extraction.
+   χ = ε × f(d) × σ(S)
+   where f(d) is the sigmoid directionality function:
+     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
+   The engine derives d from beneficiary/victim membership + exit_options.
+   For Mountain constraints, χ is effectively zero regardless of perspective.
    Scope modifiers: local=0.8, regional=0.9, national=1.0,
                     continental=1.1, global=1.2, universal=1.0.
+   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
+   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
 % UNIFORM-TYPE CONSTRAINT: This is a natural law, which classifies as a
@@ -131,7 +165,7 @@ test(threshold_validation_mountain) :-
     config:param(suppression_metric_name, SuppMetricName),
     narrative_ontology:constraint_metric(material_tensile_strength, ExtMetricName, E),
     narrative_ontology:constraint_metric(material_tensile_strength, SuppMetricName, S),
-    E =< 0.15,
+    E =< 0.25,
     S =< 0.05.
 
 :- end_tests(material_tensile_strength_tests).
@@ -142,28 +176,48 @@ test(threshold_validation_mountain) :-
 
 /**
  * LOGIC RATIONALE:
- * This constraint was refactored to correctly model a physical law. The original
- * version incorrectly assigned high extraction (0.5) and perspectival variance
- * (Rope, Snare). This is a category error. A physical law like tensile strength
- * is the canonical example of a Mountain: it is a fixed, unchangeable feature
- * of reality with effectively zero base extractiveness or suppression.
+ * This constraint models a physical law, the canonical example of a Mountain.
+ * The base extractiveness (ε=0.02) and suppression (S=0.01) are set to near-zero
+ * values, well within the Mountain thresholds (ε ≤ 0.25, S ≤ 0.05).
  *
- * The scores were adjusted to E=0.02 and S=0.01 to fall well within the Mountain
- * thresholds (E<=0.15, S<=0.05). Consequently, all perspectives correctly
- * classify the constraint as a Mountain. An engineer using the law for
- * coordination does not change the law into a Rope; they are simply using a
- * known Mountain as a reference point. A component failing does not make the
- * law a Snare; it simply means a physical limit was reached.
+ * To pass the natural law certification chain, this file includes the full
+ * NL Profile:
+ *   - `emerges_naturally(id)`: The constraint arises from physics, not human design.
+ *   - `accessibility_collapse(1.0)`: Alternatives are physically inconceivable.
+ *   - `resistance(0.0)`: Meaningful resistance is incoherent.
  *
- * As a low-extraction constraint, it does not require Omega variables or
- * temporal lifecycle data.
+ * Without these three declarations, the engine's mountain metric gate would not
+ * fire, and the natural_law_signature certification would fail.
+ *
+ * PERSPECTIVAL GAP:
+ *   There is no perspectival gap. As a physical law, the constraint is a
+ *   Mountain from all perspectives, from the powerless component that fails
+ *   when the limit is exceeded to the institutional engineer who designs
+ *   around it.
+ *
+ * DIRECTIONALITY LOGIC:
+ *   Not applicable. Directionality (d) is irrelevant for Mountain constraints
+ *   because the base extractiveness (ε) is already near zero. The constraint
+ *   has no structural beneficiaries or victims.
+ *
+ * MANDATROPHY ANALYSIS:
+ *   This constraint serves as a baseline for what is NOT a social construct.
+ *   An engineer using this law for coordination (e.g., specifying a certain
+ *   grade of steel) does not change the law into a Rope; they are simply using
+ *   a known Mountain as a reference point for a separate, constructed Rope.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% Not required for low-extraction constraints.
+omega_variable(
+    omega_metamaterial_bypass,
+    "Could engineered metamaterials or nano-scale structures effectively bypass the classical tensile strength limits of bulk materials?",
+    "Laboratory testing of carbon nanotube composites and graphene structures at macro-scale loads.",
+    "If bypassed: The Mountain is conditional on material scale. If not: The physical law remains absolute.",
+    confidence_without_resolution(medium)
+).
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
@@ -180,28 +234,18 @@ narrative_ontology:interval(material_tensile_strength, 0, 10).
 % law are constant over the interval.
 
 /* ==========================================================================
-   9. BOLTZMANN & NETWORK DATA (v5.0-5.2)
+   9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
 % No coordination function or network relationships are applicable for a
 % fundamental physical constant.
 
 /* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+% Not applicable. Overrides are not needed for Mountain constraints.
+
+/* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
-% ============================================================================
-% ENRICHMENT: Structural predicates for remaining gaps
-% Generated: 2026-02-08
-% Template: v5.2 namespace alignment
-% Source: Derived from narrative context in this file (material_tensile_strength)
-% ============================================================================
-narrative_ontology:constraint_beneficiary(material_tensile_strength, structural_engineers).
-narrative_ontology:constraint_victim(material_tensile_strength, none).
-
-omega_variable(
-    omega_metamaterial_bypass,
-    "Could engineered metamaterials or nano-scale structures effectively bypass the classical tensile strength limits of bulk materials?",
-    "Laboratory testing of carbon nanotube composites and graphene structures at macro-scale loads.",
-    "If bypassed: The Mountain is conditional on material scale. If not: The physical law remains absolute.",
-    confidence_without_resolution(medium)
-).

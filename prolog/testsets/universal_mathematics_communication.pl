@@ -86,7 +86,7 @@ narrative_ontology:constraint_metric/3,
 
 % Required for [STEP 1] and [STEP 2] of the DR-Audit Suite
 narrative_ontology:interval(scientific_consensus_period, 0, 10).
-narrative_ontology:constraint_claim(universal_mathematics_communication, mountain).
+narrative_ontology:constraint_claim(universal_mathematics_communication, scaffold).
 
 % Base extractiveness score (0.0 = no extraction, 1.0 = full extraction)
 % Rationale: Mathematics is non-extractive; it is a shared discovery that
@@ -135,7 +135,7 @@ an understanding of 'zero'".
 
 constraint_indexing:constraint_classification(
 universal_mathematics_communication,
-mountain,
+scaffold,
 context(
 agent_power(powerless),
 time_horizon(immediate),
@@ -226,7 +226,7 @@ S < 0.3,
 test(multi_perspective_utilization) :-
 constraint_indexing:constraint_classification(
 universal_mathematics_communication,
-mountain,
+scaffold,
 context(agent_power(powerless), time_horizon(immediate), exit_options(trapped), spatial_scope(local))
 ),
 constraint_indexing:constraint_classification(
@@ -251,7 +251,7 @@ E < 0.3.
 */
 test(time_immutability_scaling) :-
 % Immediate/Biographical + trapped tends to perceive Mountain
-constraint_indexing:constraint_classification(universal_mathematics_communication, mountain, context(_, time_horizon(immediate), exit_options(trapped), _)).
+constraint_indexing:constraint_classification(universal_mathematics_communication, scaffold, context(_, time_horizon(immediate), exit_options(trapped), _)).
 
 :- end_tests(universal_mathematics_tests).
 

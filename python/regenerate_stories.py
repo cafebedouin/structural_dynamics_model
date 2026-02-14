@@ -73,6 +73,37 @@ def setup_logging():
 
 
 # =========================================================================
+# Linter pre-run
+# =========================================================================
+def run_linter():
+    """Run structural linter on testsets/ and origsets/, write lint_errors.txt."""
+    logging.info("Running structural linter on testsets/ and origsets/…")
+    lint_pass = 0
+    lint_fail = 0
+
+    with open(LINT_ERRORS_PATH, "w", encoding="utf-8") as f:
+        for directory in [TESTSETS_DIR, ORIGSETS_DIR]:
+            if not directory.exists():
+                continue
+            dir_name = directory.name
+            for pl_file in sorted(directory.glob("*.pl")):
+                errors = lint_file(str(pl_file))
+                if errors:
+                    lint_fail += 1
+                    f.write(f"{dir_name}/{pl_file.name}:\n")
+                    for e in errors:
+                        f.write(f"  {e}\n")
+                    f.write("\n")
+                else:
+                    lint_pass += 1
+
+    total = lint_pass + lint_fail
+    logging.info("Linter: %d/%d passed, %d with errors → %s",
+                 lint_pass, total, lint_fail, LINT_ERRORS_PATH)
+    return lint_fail
+
+
+# =========================================================================
 # Work-list parsers
 # =========================================================================
 def parse_regen_list(group_filter=None):
@@ -101,27 +132,33 @@ def parse_regen_list(group_filter=None):
         if m:
             basename = m.group(1)
             errors = [e.strip() for e in m.group(2).split(",")] if m.group(2) else []
-            results.append((basename, errors))
+            results.append((basename, None, errors))
     return results
 
 
 def parse_lint_errors():
-    """Parse outputs/lint_errors.txt → list of (basename, [errors]).
+    """Parse outputs/lint_errors.txt → list of (basename, source_dir, [errors]).
+
+    Handles both dir-prefixed entries (``testsets/foo.pl:``) produced by
+    ``run_linter()`` and bare entries (``foo.pl:``) for backward compat.
 
     Skips files whose only issue is WARNING_MISSING_CLAIM (advisory only).
     """
     content = LINT_ERRORS_PATH.read_text(encoding="utf-8")
     results = []
     current_file = None
+    current_dir = None
     current_errors = []
 
     for line in content.splitlines():
-        fm = re.match(r"^(\S+\.pl):$", line)
+        # Match dir-prefixed "testsets/foo.pl:" or bare "foo.pl:"
+        fm = re.match(r"^(?:(testsets|origsets)/)?(\S+\.pl):$", line)
         if fm:
             # Flush previous
             if current_file and current_errors:
-                results.append((current_file, current_errors))
-            current_file = fm.group(1).replace(".pl", "")
+                results.append((current_file, current_dir, current_errors))
+            current_dir = fm.group(1)  # None for bare filenames
+            current_file = fm.group(2).replace(".pl", "")
             current_errors = []
             continue
         stripped = line.strip()
@@ -130,7 +167,7 @@ def parse_lint_errors():
 
     # Flush last
     if current_file and current_errors:
-        results.append((current_file, current_errors))
+        results.append((current_file, current_dir, current_errors))
     return results
 
 
@@ -329,20 +366,32 @@ def build_user_prompt(basename, original_content, known_errors, retry_errors=Non
     return "".join(parts)
 
 
-def find_source_file(basename):
-    """Locate the source .pl file, checking testsets/ first, then origsets/."""
-    testset_path = TESTSETS_DIR / f"{basename}.pl"
-    if testset_path.exists():
-        return testset_path
-    origset_path = ORIGSETS_DIR / f"{basename}.pl"
-    if origset_path.exists():
-        return origset_path
+def find_source_file(basename, source_dir=None):
+    """Locate the source .pl file.
+
+    If *source_dir* is given (``"testsets"`` or ``"origsets"``), look there
+    first.  Otherwise fall back to testsets/ then origsets/.
+    """
+    dirs = {
+        "testsets": TESTSETS_DIR,
+        "origsets": ORIGSETS_DIR,
+    }
+    # Preferred directory first
+    if source_dir and source_dir in dirs:
+        preferred = dirs[source_dir] / f"{basename}.pl"
+        if preferred.exists():
+            return preferred
+    # Fall back to default search order
+    for d in [TESTSETS_DIR, ORIGSETS_DIR]:
+        path = d / f"{basename}.pl"
+        if path.exists():
+            return path
     return None
 
 
-def process_file(client, basename, known_errors, stats):
+def process_file(client, basename, source_dir, known_errors, stats):
     """Regenerate a single file. Returns True if it passed lint."""
-    source_path = find_source_file(basename)
+    source_path = find_source_file(basename, source_dir)
     if source_path is None:
         logging.warning("[SKIP] %s — not found in testsets/ or origsets/", basename)
         stats["skipped"] += 1
@@ -376,8 +425,8 @@ def process_file(client, basename, known_errors, stats):
                 tmp_path.unlink(missing_ok=True)
                 stats["failed"] += 1
                 return False
-            # Pass — write to testsets
-            dest = TESTSETS_DIR / f"{basename}.pl"
+            # Pass — write back to source directory
+            dest = source_path.parent / f"{basename}.pl"
             dest.write_text(content, encoding="utf-8")
             tmp_path.unlink(missing_ok=True)
             logging.info("  PASS %s on attempt %d", basename, attempt)
@@ -438,9 +487,10 @@ def main():
 
     # --- Build work list ---
     if args.files:
-        work_list = [(f, []) for f in args.files]
+        work_list = [(f, None, []) for f in args.files]
         logging.info("Source: explicit --files (%d)", len(work_list))
     elif args.source == "lint":
+        run_linter()
         work_list = parse_lint_errors()
         logging.info("Source: lint_errors.txt (%d files)", len(work_list))
     else:
@@ -454,15 +504,15 @@ def main():
     if not args.no_resume:
         before = len(work_list)
         filtered = []
-        for basename, errors in work_list:
-            src = find_source_file(basename)
+        for basename, source_dir, errors in work_list:
+            src = find_source_file(basename, source_dir)
             if src is not None:
                 existing_errors = lint_file(str(src))
                 if not existing_errors:
                     logging.info("  [skip] %s — already passes lint in %s",
                                  basename, src.parent.name)
                     continue
-            filtered.append((basename, errors))
+            filtered.append((basename, source_dir, errors))
         work_list = filtered
         logging.info("Resume filter: %d → %d files", before, len(work_list))
 
@@ -476,9 +526,10 @@ def main():
         print(f"\n{'='*70}")
         print(f"DRY RUN — {len(work_list)} file(s) would be processed")
         print(f"{'='*70}\n")
-        for i, (basename, errors) in enumerate(work_list, 1):
+        for i, (basename, source_dir, errors) in enumerate(work_list, 1):
+            dir_label = f" ({source_dir}/)" if source_dir else ""
             err_str = f"  [{', '.join(errors)}]" if errors else ""
-            print(f"  {i:4d}. {basename}{err_str}")
+            print(f"  {i:4d}. {basename}{dir_label}{err_str}")
         print()
         return
 
@@ -494,7 +545,7 @@ def main():
     total = len(work_list)
     start_time = time.time()
 
-    for i, (basename, known_errors) in enumerate(work_list, 1):
+    for i, (basename, source_dir, known_errors) in enumerate(work_list, 1):
         elapsed = time.time() - start_time
         rate = (i - 1) / (elapsed / 60) if elapsed > 0 and i > 1 else 0
         remaining = total - i + 1
@@ -505,7 +556,7 @@ def main():
             "[%d/%d] %s (%s errors) [%.1f/min, ETA %.0fmin]",
             i, total, basename, err_count, rate, eta,
         )
-        process_file(client, basename, known_errors, stats)
+        process_file(client, basename, source_dir, known_errors, stats)
 
     # --- Summary ---
     elapsed = time.time() - start_time

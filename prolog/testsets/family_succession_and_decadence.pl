@@ -60,7 +60,7 @@ narrative_ontology:constraint_metric(family_succession_system, theater_ratio, 0.
 
 % Constraint self-claim (what does the constraint claim to be?)
 % The system presents itself as a natural, unchangeable part of the social order.
-narrative_ontology:constraint_claim(family_succession_system, mountain).
+narrative_ontology:constraint_claim(family_succession_system, tangled_rope).
 
 % Binary flags
 domain_priors:requires_active_enforcement(family_succession_system). % Requires active enforcement by family heads.
@@ -77,7 +77,7 @@ narrative_ontology:constraint_victim(family_succession_system, young_heirs). % e
 % PERSPECTIVE 1: THE SUBJECT (Sōichi) - MOUNTAIN
 % For the youth, the "Ie" system is as unchangeable as a mountain. They cannot
 % negotiate with it; they can only collide with it and break.
-constraint_indexing:constraint_classification(family_succession_system, mountain,
+constraint_indexing:constraint_classification(family_succession_system, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -109,7 +109,7 @@ constraint_indexing:constraint_classification(family_succession_system, tangled_
 
 test(perspectival_gap) :-
     % Verify the gap between the powerless (Mountain) and institutional (Rope) views.
-    constraint_indexing:constraint_classification(family_succession_system, mountain, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(family_succession_system, tangled_rope, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(family_succession_system, rope, context(agent_power(institutional), _, _, _)),
     constraint_indexing:constraint_classification(family_succession_system, tangled_rope, context(agent_power(analytical), _, _, _)).
 

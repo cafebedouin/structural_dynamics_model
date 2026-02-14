@@ -61,7 +61,8 @@
 
 % Required for structural extraction
 narrative_ontology:interval(banach_tarski_era, 1924, 2026).
-narrative_ontology:constraint_claim(banach_tarski_paradox, mountain).
+narrative_ontology:constraint_claim(banach_tarski_paradox, tangled_rope).
+domain_priors:requires_active_enforcement(banach_tarski_paradox).
 
 % Base extractiveness score (0.0-1.0)
 % Rationale: 0.2. While mathematically a "gift" of structural depth, it 
@@ -113,7 +114,7 @@ narrative_ontology:constraint_victim(banach_tarski_paradox, naive_measurability_
 
 constraint_indexing:constraint_classification(
     banach_tarski_paradox,
-    mountain,
+    tangled_rope,
     context(
         agent_power(powerless),
         time_horizon(immediate),

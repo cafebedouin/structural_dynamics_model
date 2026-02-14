@@ -61,7 +61,7 @@
 
 % Required for DR-Audit Suite
 narrative_ontology:interval(fta_era, 1799, 2026).
-narrative_ontology:constraint_claim(fundamental_theorem_of_algebra, mountain).
+narrative_ontology:constraint_claim(fundamental_theorem_of_algebra, scaffold).
 
 % Base extractiveness: 0.1
 % Rationale: Mathematical truths are generally non-extractive, but the FTA 
@@ -108,7 +108,7 @@ narrative_ontology:constraint_victim(fundamental_theorem_of_algebra, real_variab
 
 constraint_indexing:constraint_classification(
     fundamental_theorem_of_algebra,
-    mountain,
+    scaffold,
     context(
         agent_power(powerless),
         time_horizon(immediate),

@@ -466,8 +466,10 @@ infer_structural_coupling(C1, C2, Strength) :-
 
 dr_gradient_at(C, T, Grad) :-
     narrative_ontology:measurement(_, C, extractiveness, T, X1),
-    narrative_ontology:measurement(_, C, extractiveness, T2, X2),
-    T2 > T, !,
+    once((
+        narrative_ontology:measurement(_, C, extractiveness, T2, X2),
+        T2 > T
+    )),
     Grad is X2 - X1.
 
 %% count_sign_matches(+Gs1, +Gs2, -Matches, +Total)
@@ -1134,6 +1136,10 @@ qualify_action(monitor_sunset, _Purity, _C, qualified_action(monitor_sunset, acc
 qualify_action(bypass, _Purity, _C, qualified_action(bypass, degraded, none),
               terminal_state) :- !.
 
+% investigate_opacity — passthrough (indexically opaque: consent dimension unresolvable)
+qualify_action(investigate_opacity, _Purity, _C, qualified_action(investigate_opacity, stable, none),
+              passthrough) :- !.
+
 % investigate — passthrough
 qualify_action(investigate, _Purity, _C, qualified_action(investigate, stable, none),
               passthrough) :- !.
@@ -1187,6 +1193,7 @@ base_action_complexity(reform,         4).
 base_action_complexity(cut,            2).
 base_action_complexity(monitor_sunset, 2).
 base_action_complexity(bypass,         1).
+base_action_complexity(investigate_opacity, 1).
 base_action_complexity(investigate,    1).
 
 %% energy_multiplier(+Action, +Purity, +MaxMult, -Mult)
@@ -1456,6 +1463,7 @@ type_contamination_strength(tangled_rope, 0.5) :- !.
 type_contamination_strength(scaffold,     0.2) :- !.
 type_contamination_strength(rope,         0.1) :- !.
 type_contamination_strength(mountain,     0.0) :- !.
+type_contamination_strength(indexically_opaque, 0.3) :- !.
 type_contamination_strength(_,            0.0).
 
 %% type_immunity(+Type, -Immunity)
@@ -1467,6 +1475,7 @@ type_immunity(snare,         0.5) :- !.
 type_immunity(tangled_rope,  0.8) :- !.
 type_immunity(scaffold,      0.9) :- !.
 type_immunity(rope,          1.0) :- !.
+type_immunity(indexically_opaque, 0.7) :- !.
 type_immunity(_,             0.5).
 
 %% effective_purity(+C, +Context, -EffPurity, -Components)

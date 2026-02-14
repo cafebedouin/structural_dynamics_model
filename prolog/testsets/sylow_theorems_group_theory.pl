@@ -61,7 +61,8 @@
 
 % Required for DR-Audit Suite
 narrative_ontology:interval(sylow_era, 1872, 2026).
-narrative_ontology:constraint_claim(sylow_theorems_group_theory, mountain).
+narrative_ontology:constraint_claim(sylow_theorems_group_theory, tangled_rope).
+domain_priors:requires_active_enforcement(sylow_theorems_group_theory).
 
 % Base extractiveness score (0.0-1.0)
 % Rationale: Low (0.15). Pure math truth is non-coercive. However, the theorems 
@@ -110,7 +111,7 @@ narrative_ontology:constraint_victim(sylow_theorems_group_theory, non_existent_s
 
 constraint_indexing:constraint_classification(
     sylow_theorems_group_theory,
-    mountain,
+    tangled_rope,
     context(
         agent_power(powerless),
         time_horizon(immediate),

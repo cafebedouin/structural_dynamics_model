@@ -1,9 +1,9 @@
 % ============================================================================
 % CONSTRAINT STORY: graph_coloring_complexity
 % ============================================================================
-% Generated: 2026-01-19
-% Model: Gemini 2.0 Flash
-% Source: Combinatorics / Brooks' Theorem / Appel & Haken (1976)
+% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2024-07-15
 % ============================================================================
 
 :- module(constraint_graph_coloring_complexity, []).
@@ -12,14 +12,33 @@
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
 
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
+
 % --- Namespace Hooks (Required for loading) ---
-:- multifile 
+:- multifile
     domain_priors:base_extractiveness/2,
     domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
     domain_priors:requires_active_enforcement/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -28,191 +47,174 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: graph_coloring_complexity
- * human_readable: Graph Coloring (k-Colorability)
- * domain: technological
- * temporal_scope: Permanent (Universal Mathematical Law)
- * spatial_scope: Global (Graph Theory)
- * * SUMMARY:
- * Graph coloring is the assignment of labels (colors) to elements of a graph 
- * (nodes) subject to specific constraints, most commonly that no two adjacent 
- * nodes share the same color. While finding the chromatic number $\chi(G)$ is 
- * NP-hard for general graphs, the constraint serves as the foundational model 
- * for resource allocation and scheduling.
- * * KEY AGENTS:
- * - The Network Architect: Designs systems to minimize interference and 
- * maximize resource reuse.
- * - The Combinatorialist: Seeks elegant proofs and upper bounds (like the 
- * Four Color Theorem).
- * - The Scheduling Algorithm: An agent trapped by the "Hardness" of the 
- * graph, forced to find sub-optimal but valid colorings.
- * * NARRATIVE ARC:
- * The constraint functions as a "Mountain" of state-space geometry—the 
- * topology of the graph dictates the minimum colors required. For the 
- * telecommunications engineer, it is a "Rope" for frequency coordination. 
- * For a compiler optimizer facing a massive interference graph, it is a 
- * "Snare" where the search for the optimal register allocation strangles 
- * compile-time performance.
+ *   constraint_id: graph_coloring_complexity
+ *   human_readable: Application of Graph Coloring to Resource Allocation
+ *   domain: technological
+ *
+ * SUMMARY:
+ *   This constraint models the application of graph coloring to solve practical
+ *   resource allocation and scheduling problems (e.g., frequency assignment,
+ *   register allocation). While the underlying mathematical theorems about
+ *   coloring are mountains of logic, their application in resource-constrained
+ *   systems creates both coordination benefits and extractive costs. The
+ *   NP-hard nature of finding the optimal coloring (chromatic number) forces
+ *   systems to use heuristics, which can lead to sub-optimal resource use,
+ *   imposing a performance cost.
+ *
+ * KEY AGENTS (by structural relationship):
+ *   - Compiler Optimizers: Primary target (powerless/constrained) — bears the
+ *     cost of sub-optimal register allocation ("spills") when the interference
+ *     graph is complex and available registers (colors) are few.
+ *   - Spectrum Regulators / Network Architects: Primary beneficiary
+ *     (institutional/arbitrage) — uses the coloring model as a coordination
+ *     mechanism to prevent interference and enable efficient resource reuse.
+ *   - Discrete Mathematicians: Analytical observer — studies the underlying
+ *     mathematical properties, which are a separate 'mountain' constraint.
  */
 
 /* ==========================================================================
-   2. CORE SYSTEM INTEGRATION (The "Reality" Layer)
+   2. BASE PROPERTIES (DOMAIN PRIORS)
    ========================================================================== */
 
-% Required for structural extraction
-narrative_ontology:interval(graph_coloring_interval, 0, 10).
-narrative_ontology:constraint_claim(graph_coloring_complexity, mountain).
+% --- Numerical metrics ---
+% Rationale: The constraint extracts "efficiency" and "simplicity." The
+% requirement to separate adjacent nodes forces the consumption of extra
+% "colors" (resources), and the computational difficulty of finding the
+% optimal solution extracts performance (e.g., compile time, runtime speed).
+domain_priors:base_extractiveness(graph_coloring_complexity, 0.40).
 
-% Base extractiveness score (0.0-1.0)
-% Rationale: It extracts "efficiency" and "simplicity." The requirement to 
-% separate adjacent nodes forces the consumption of extra "colors" (resources).
-domain_priors:base_extractiveness(graph_coloring_complexity, 0.4).
-
-% Suppression score (0.0-1.0)
-% Rationale: It suppresses "overlapping utility." The constraint makes 
+% Rationale: It suppresses "overlapping utility." The constraint makes
 % shared-resource alternatives invisible or illegal within the formal model.
-domain_priors:suppression_score(graph_coloring_complexity, 0.5).
+domain_priors:suppression_score(graph_coloring_complexity, 0.50).
 
-% Constraint metric facts (bridge for classification engine)
-narrative_ontology:constraint_metric(graph_coloring_complexity, extractiveness, 0.4).
-narrative_ontology:constraint_metric(graph_coloring_complexity, suppression_requirement, 0.5).
+% Rationale: A purely technical constraint with minimal performative aspect.
+domain_priors:theater_ratio(graph_coloring_complexity, 0.03).
 
-% Enforcement requirements
-domain_priors:emerges_naturally(graph_coloring_complexity).
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(graph_coloring_complexity, extractiveness, 0.40).
+narrative_ontology:constraint_metric(graph_coloring_complexity, suppression_requirement, 0.50).
+narrative_ontology:constraint_metric(graph_coloring_complexity, theater_ratio, 0.03).
 
-% Metrics required for Section 1 of the Executive Summary
-% BENEFICIARIES & VICTIMS
+% --- Constraint claim (must match analytical perspective type) ---
+narrative_ontology:constraint_claim(graph_coloring_complexity, tangled_rope).
+
+% --- Binary flags ---
+% Rationale: The rules of coloring must be actively enforced by the system
+% (e.g., the compiler's allocation algorithm, the network's protocol) to
+% function. This is required for the Tangled Rope classification.
+domain_priors:requires_active_enforcement(graph_coloring_complexity).
+
+% --- Structural relationships (REQUIRED for non-mountain constraints) ---
+% Who benefits from this constraint existing?
 narrative_ontology:constraint_beneficiary(graph_coloring_complexity, spectrum_regulators).
-narrative_ontology:constraint_victim(graph_coloring_complexity, [compiler_optimizers, register_allocators]).
+%
+% Who bears disproportionate cost?
+narrative_ontology:constraint_victim(graph_coloring_complexity, compiler_optimizers).
 
 /* ==========================================================================
-   3. INDEXED CLASSIFICATIONS (Perspectival Truth)
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
    ========================================================================== */
 
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 1: THE DISCRETE MATHEMATICIAN - Mountain
-   --------------------------------------------------------------------------
-   
-   WHO: analytical - Observer of universal informational laws.
-   WHEN: civilizational - Viewing the graph as a permanent geometric truth.
-   WHERE: trapped - Logic cannot bypass the chromatic number of a clique.
-   SCOPE: global - Universal computation.
-   
-   WHY THIS CLASSIFICATION:
-   To the mathematician, coloring is a Mountain. The existence of a $K_n$ 
-   subgraph (a clique) imposes an unchangeable requirement for $n$ colors. 
-   This is not a matter of policy; it is a fixed peak in the topography 
-   of the graph that no algorithm can level.
-   -------------------------------------------------------------------------- */
+% PERSPECTIVE 1: THE COMPILER OPTIMIZER (SNARE)
+% For a compiler performing register allocation, the constraint is a Snare.
+% As variables (nodes) increase and their lifetimes overlap (edges), the
+% available physical registers (colors) become insufficient. The optimizer is
+% trapped by the complexity, forced to "spill" variables to slow memory,
+% strangling performance.
+constraint_indexing:constraint_classification(graph_coloring_complexity, snare,
+    context(agent_power(powerless),
+            time_horizon(immediate),
+            exit_options(constrained),
+            spatial_scope(local))).
 
-constraint_indexing:constraint_classification(
-    graph_coloring_complexity,
-    mountain,
-    context(
-        agent_power(analytical),
-        time_horizon(civilizational),
-        exit_options(trapped),
-        spatial_scope(global)
-    )
-) :- !.
+% PERSPECTIVE 2: THE RF ENGINEER / SPECTRUM REGULATOR (ROPE)
+% For the engineer, graph coloring is a Rope. It is the coordination
+% mechanism that prevents signal interference. By treating cellular towers as
+% nodes and frequencies as colors, they use the constraint to create a
+% high-functioning network where chaos would otherwise reign.
+constraint_indexing:constraint_classification(graph_coloring_complexity, rope,
+    context(agent_power(institutional),
+            time_horizon(generational),
+            exit_options(arbitrage),
+            spatial_scope(national))).
 
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE RF ENGINEER - Rope
-   --------------------------------------------------------------------------
-   
-   WHO: institutional - Power to allocate frequency bands and rules.
-   WHEN: biographical - Managing a network's lifespan.
-   WHERE: arbitrage - Can reposition towers (nodes) to change the graph.
-   SCOPE: national - Country-wide cellular networks.
-   
-   WHY THIS CLASSIFICATION:
-   For the engineer, graph coloring is a Rope. It is the coordination 
-   mechanism that prevents signal interference. By treating cellular 
-   towers as nodes and frequencies as colors, they use the constraint to 
-   pull a high-functioning network into existence where chaos would 
-   otherwise reign.
-   -------------------------------------------------------------------------- */
-
-constraint_indexing:constraint_classification(
-    graph_coloring_complexity,
-    rope,
-    context(
-        agent_power(institutional),
-        time_horizon(biographical),
-        exit_options(arbitrage),
-        spatial_scope(national)
-    )
-) :- !.
-
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE COMPILER BACKEND - Snare
-   --------------------------------------------------------------------------
-   
-   WHO: powerless - Subject to the code's interference graph.
-   WHEN: immediate - The "Optimization" phase of compilation.
-   WHERE: constrained - Limited by a fixed number of CPU registers.
-   SCOPE: local - Immediate software process.
-   
-   WHY THIS CLASSIFICATION:
-   For a compiler performing register allocation, the constraint is a Snare. 
-   As variables (nodes) increase and their lifetimes overlap (edges), the 
-   available physical registers (colors) become insufficient. The harder 
-   the optimizer tries to avoid "spilling" to memory, the tighter the 
-   complexity of the coloring problem strangles the compilation speed.
-   -------------------------------------------------------------------------- */
-
-constraint_indexing:constraint_classification(
-    graph_coloring_complexity,
-    snare,
-    context(
-        agent_power(powerless),
-        time_horizon(immediate),
-        exit_options(constrained),
-        spatial_scope(local)
-    )
-) :- !.
+% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
+% The analyst sees both the coordination function (Rope for engineers) and
+% the asymmetric extraction (Snare for compilers). The system requires active
+% enforcement to maintain its structure. This dual nature—a genuine
+% coordination tool that also creates unavoidable, asymmetric costs due to its
+% inherent complexity—is the definition of a Tangled Rope.
+constraint_indexing:constraint_classification(graph_coloring_complexity, tangled_rope,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(global))).
 
 /* ==========================================================================
-   4. TESTS (What We Learn About Constraints)
+   4. VALIDATION TESTS
    ========================================================================== */
 
-:- begin_tests(graph_coloring_tests).
+:- begin_tests(graph_coloring_complexity_tests).
 
-test(multi_perspective_variance) :-
-    % Analyst sees Mountain
-    constraint_indexing:constraint_classification(graph_coloring_complexity, mountain, context(agent_power(analytical), _, _, _)),
-    % Institutional sees Rope
+test(perspectival_gap) :-
+    % Verify that the target, beneficiary, and analyst all see different types.
+    constraint_indexing:constraint_classification(graph_coloring_complexity, snare, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(graph_coloring_complexity, rope, context(agent_power(institutional), _, _, _)),
-    % Powerless sees Snare
-    constraint_indexing:constraint_classification(graph_coloring_complexity, snare, context(agent_power(powerless), _, _, _)).
+    constraint_indexing:constraint_classification(graph_coloring_complexity, tangled_rope, context(agent_power(analytical), _, _, _)).
 
-test(power_extractiveness_resource) :-
-    % Extraction of register efficiency (Snare) for the backend.
-    domain_priors:base_extractiveness(graph_coloring_complexity, Score),
-    Score >= 0.4.
+test(tangled_rope_structural_gates) :-
+    % Verify that all structural requirements for a Tangled Rope are met.
+    narrative_ontology:constraint_beneficiary(graph_coloring_complexity, _), % -> has_coordination_function
+    narrative_ontology:constraint_victim(graph_coloring_complexity, _),     % -> has_asymmetric_extraction
+    domain_priors:requires_active_enforcement(graph_coloring_complexity).
 
-test(time_immutability_geometry) :-
-    % Civilizational view of graph theory is an invariant Mountain.
-    constraint_indexing:effective_immutability(civilizational, trapped, mountain).
+test(threshold_validation) :-
+    % For a Tangled Rope, ε should be >= 0.30 and suppression >= 0.40.
+    narrative_ontology:constraint_metric(graph_coloring_complexity, extractiveness, E),
+    narrative_ontology:constraint_metric(graph_coloring_complexity, suppression_requirement, S),
+    E >= 0.30,
+    S >= 0.40.
 
-:- end_tests(graph_coloring_tests).
+:- end_tests(graph_coloring_complexity_tests).
 
 /* ==========================================================================
-   5. MODEL INTERPRETATION (Commentary)
+   5. GENERATIVE COMMENTARY
    ========================================================================== */
 
 /**
- * LLM GENERATION NOTES
- * * Model: Gemini 2.0 Flash
- * Date: 2026-01-19
- * * KEY DECISIONS:
- * 1. EXTRACTIVENESS (0.4): It extracts "simplicity." Coloring forces a 
- * fragmentation of the resource pool.
- * 2. SNARE CLASSIFICATION: Specifically applied to the "Register Allocation" 
- * problem, where the fixed limit of CPU registers (colors) makes the 
- * complexity of the graph a literal barrier to execution performance.
- * 3. MOUNTAIN LOGIC: Relies on the concept of the Chromatic Number as a 
- * topological invariant.
+ * LOGIC RATIONALE:
+ *   The original file incorrectly claimed this constraint was a 'mountain'
+ *   while assigning metrics (ε=0.4, S=0.5) that violate mountain thresholds
+ *   (ε<=0.25, S<=0.05). This regeneration resolves the conflict by reclassifying
+ *   the constraint as a 'tangled_rope'. This correctly models the dual nature
+ *   of applying graph coloring: it is a powerful coordination tool (Rope) for
+ *   some agents (network architects) but an extractive trap (Snare) for others
+ *   (compilers) due to its inherent computational complexity. The analytical
+ *   view, seeing both sides, correctly identifies it as a Tangled Rope.
+ *
+ * PERSPECTIVAL GAP:
+ *   - The Network Architect (institutional) has arbitrage exit; they can physically
+ *     move towers or lobby for more spectrum, changing the graph or the number
+ *     of colors. For them, it's a pure coordination Rope.
+ *   - The Compiler Optimizer (powerless) is constrained by the hardware (fixed
+ *     registers) and the user's code (fixed graph). It cannot change the rules
+ *     and must bear the performance cost of spills, making it a Snare.
+ *   - The Analyst sees this irreducible duality and classifies it as Tangled Rope.
+ *
+ * DIRECTIONALITY LOGIC:
+ *   - Beneficiaries: 'spectrum_regulators' who achieve a stable, interference-
+ *     free allocation of a public resource.
+ *   - Victims: 'compiler_optimizers' which are forced to expend computational
+ *     resources (time, memory) to solve or approximate a solution, with costs
+ *     passed on to developers and end-users as slower performance.
+ *
+ * MANDATROPHY ANALYSIS:
+ *   By classifying this as a Tangled Rope, we avoid the "false natural law"
+ *   error of calling it a Mountain. The NP-hardness theorem is a Mountain, but
+ *   its *application* in a socio-technical system is not. This distinction is
+ *   critical: it shows that while the math is fixed, the *costs* of applying
+ *   that math are a result of system design choices (e.g., how many registers
+ *   a CPU has) and are therefore subject to change and analysis.
  */
 
 /* ==========================================================================
@@ -221,57 +223,61 @@ test(time_immutability_geometry) :-
 
 omega_variable(
     p_np_coloring_gap,
-    "Is there a hidden heuristic that allows for nearly-optimal coloring 
-    on all 'real-world' graphs without hitting the NP-hard wall?",
-    resolution_mechanism("Longitudinal study of average-case vs. worst-case 
-    graph complexity in industrial datasets"),
-    impact("If Yes: The Snare becomes a Rope for all developers. 
-    If No: The Mountain of NP-hardness remains absolute."),
+    "Is there a hidden heuristic that allows for nearly-optimal coloring on all 'real-world' graphs without hitting the NP-hard wall?",
+    "Longitudinal study of average-case vs. worst-case graph complexity in industrial datasets",
+    "If Yes: The Snare aspect weakens significantly, shifting the constraint towards a pure Rope. If No: The Tangled Rope classification remains robust.",
     confidence_without_resolution(medium)
 ).
 
 /* ==========================================================================
-   7. ALTERNATIVE ANALYSIS
+   7. INTEGRATION HOOKS
    ========================================================================== */
 
-/**
- * VIABLE ALTERNATIVES
- * * ALTERNATIVE 1: List Coloring
- * Viability: High. Allows nodes to choose from specific subsets of colors.
- * Suppression: None. It is a refinement of the original constraint.
- * * ALTERNATIVE 2: Edge Coloring
- * Viability: High. Useful for scheduling links rather than nodes.
- * * CONCLUSION:
- * Since no "interference-friendly" alternative exists that allows adjacent 
- * nodes to share a color, the constraint remains a Mountain of logic.
- */
+% Required for external script parsing
+narrative_ontology:interval(graph_coloring_complexity, 0, 10).
 
 /* ==========================================================================
-   8. INTEGRATION HOOKS
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-/**
- * TO USE THIS CONSTRAINT:
- * 1. Load: ?- [constraint_graph_coloring_complexity].
- * 2. Multi-perspective: ?- multi_index_report(graph_coloring_complexity).
- */
+% This is a stable, long-standing technical constraint. The metrics are not
+% expected to drift over the interval.
+narrative_ontology:measurement(gcc_tr_t0, graph_coloring_complexity, theater_ratio, 0, 0.03).
+narrative_ontology:measurement(gcc_tr_t5, graph_coloring_complexity, theater_ratio, 5, 0.03).
+narrative_ontology:measurement(gcc_tr_t10, graph_coloring_complexity, theater_ratio, 10, 0.03).
+
+narrative_ontology:measurement(gcc_ex_t0, graph_coloring_complexity, base_extractiveness, 0, 0.40).
+narrative_ontology:measurement(gcc_ex_t5, graph_coloring_complexity, base_extractiveness, 5, 0.40).
+narrative_ontology:measurement(gcc_ex_t10, graph_coloring_complexity, base_extractiveness, 10, 0.40).
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA
+   ========================================================================== */
+
+% Coordination type (enables Boltzmann floor + complexity offset)
+% Graph coloring is a canonical example of a resource allocation problem.
+narrative_ontology:coordination_type(graph_coloring_complexity, resource_allocation).
+
+% --- Network Decomposition (Constraint Families) ---
+%
+% DUAL FORMULATION NOTE:
+% This constraint is one of 2 stories decomposed from "Graph Coloring".
+% Decomposed because ε differs across observables (ε-invariance principle).
+% This story models the *application* of coloring to resource allocation. The
+% underlying mathematical fact is a separate, non-extractive constraint.
+% Related stories:
+%   - graph_coloring_theorem_np_hard (ε=0.01, Mountain)
+%
+narrative_ontology:affects_constraint(graph_coloring_theorem_np_hard, graph_coloring_complexity).
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+% No overrides are needed. The structural derivation from beneficiary/victim
+% declarations and exit options correctly models the directionality for each
+% agent perspective.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
-
-% ============================================================================
-% ENRICHMENT: Structural predicates for dynamic classification
-% Generated: 2026-02-08
-% Template: v5.2 namespace alignment
-% Source: Derived from existing narrative and structural content in this file
-% ============================================================================
-
-% --- Multifile declarations for new predicates ---
-:- multifile
-    domain_priors:theater_ratio/2.
-
-% --- Theater ratio (missing from base properties) ---
-% Technical constraint — mostly substantive, minimal implementation theater
-domain_priors:theater_ratio(graph_coloring_complexity, 0.03).
-narrative_ontology:constraint_metric(graph_coloring_complexity, theater_ratio, 0.03).

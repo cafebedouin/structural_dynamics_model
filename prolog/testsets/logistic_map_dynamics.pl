@@ -1,26 +1,47 @@
 % ============================================================================
 % CONSTRAINT STORY: logistic_map_dynamics
 % ============================================================================
-% Generated: 2026-01-19
-% Model: Gemini 2.0 Flash
-% Source: Robert May (1976) / Logistic Map / Population Biology
+% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2024-07-15
 % ============================================================================
 
-:- module(constraint_logistic_map, []).
+:- module(constraint_logistic_map_dynamics, []).
 
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
 
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
+
 % --- Namespace Hooks (Required for loading) ---
-:- multifile 
+:- multifile
     domain_priors:base_extractiveness/2,
     domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
     domain_priors:requires_active_enforcement/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
-    constraint_indexing:constraint_classification/3.
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
+    narrative_ontology:boltzmann_floor_override/2,
+    constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -28,258 +49,228 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: logistic_map_dynamics
- * human_readable: The Logistic Map (Bifurcation and Chaos)
- * domain: mathematical/technological/biological
- * temporal_scope: 1976 - Present (Civilizational)
- * spatial_scope: Global/Abstract (Population constraints)
- * * SUMMARY:
- * The Logistic Map ($x_{n+1} = r x_n (1 - x_n)$) is a polynomial mapping that 
- * demonstrates how complex, chaotic behavior can arise from very simple 
- * non-linear dynamical equations. It serves as a fundamental constraint on 
- * the predictability of systems with limited resources and feedback.
- * * KEY AGENTS:
- * - The Population Iterate ($x_n$): The powerless subject whose "density" is 
- * dictated by the fixed parameter $r$.
- * - The Population Biologist (Institutional): An agent who uses the map as a 
- * "Rope" for coordination to prevent ecosystem collapse.
- * - The Chaos Theorist (Analytical): The observer who maps the "Mountain" of 
- * the bifurcation diagram.
- * * NARRATIVE ARC:
- * For a population in a stable environment ($r < 3$), the map is a "Mountain" 
- * of natural law leading to equilibrium. In management, it is a "Rope" for 
- * predicting sustainable yields. However, as $r$ enters the chaotic regime 
- * ($r > 3.57$), the "Mountain" becomes a "Snare," extracting all predictive 
- * certainty and "strangling" the observer with sensitive dependence on 
- * initial conditions.
+ *   constraint_id: logistic_map_dynamics
+ *   human_readable: The Logistic Map (Bifurcation and Chaos)
+ *   domain: mathematical/biological
+ *
+ * SUMMARY:
+ *   The Logistic Map (x_{n+1} = r * x_n * (1 - x_n)) is a simple polynomial
+ *   mapping that demonstrates how complex, chaotic behavior can arise from
+ *   simple non-linear dynamical equations. It serves as a fundamental
+ *   constraint on the predictability of systems with feedback and limited
+ *   resources, revealing a deep structure that both enables and limits control.
+ *
+ * KEY AGENTS (by structural relationship):
+ *   - Long-term Planners: Primary target (powerless/constrained) — bears the
+ *     extraction of predictive certainty in the chaotic regime.
+ *   - Nonlinear Analysts & Cryptographers: Primary beneficiary (organized/mobile) —
+ *     gain powerful tools for understanding complexity and generating randomness.
+ *   - Ecosystem Managers: Institutional beneficiary (institutional/mobile) — use
+ *     the map's stable regime as a coordination tool for sustainable yields.
+ *   - Analytical Observer: Sees the full dual nature of the constraint.
  */
 
 /* ==========================================================================
-   2. CORE SYSTEM INTEGRATION
+   2. BASE PROPERTIES (DOMAIN PRIORS)
    ========================================================================== */
 
-% Required for DR-Audit Suite
-narrative_ontology:interval(logistic_map_era, 1976, 2026).
-narrative_ontology:constraint_claim(logistic_map_dynamics, mountain).
-
-% Base extractiveness: 0.35
-% Rationale: Moderate. Chaos "extracts" information (precision) and returns 
-% entropy. To maintain functional control at high $r$, massive re-investment 
-% in computational precision is required.
+% --- Numerical metrics ---
+% Rationale: Moderate. In its chaotic regime (high r), the map "extracts"
+% information (precision) from any simulation and returns entropy. Maintaining
+% predictive control requires massive re-investment in computational precision
+% for only a few additional steps of foresight.
 domain_priors:base_extractiveness(logistic_map_dynamics, 0.35).
 
-% Suppression score: 0.4
-% Rationale: It suppresses the visibility of simple linear growth models 
-% (Malthusian), rendering them functionally fraudulent in resource-limited 
-% environments.
-domain_priors:suppression_score(logistic_map_dynamics, 0.4).
+% Rationale: It suppresses the viability of simple linear growth models
+% (e.g., Malthusian), rendering them functionally inadequate in
+% resource-limited environments by demonstrating the necessity of non-linear feedback.
+domain_priors:suppression_score(logistic_map_dynamics, 0.40).
 
-% Constraint metric facts (bridge for classification engine)
-narrative_ontology:constraint_metric(logistic_map_dynamics, extractiveness, 0.35).
-narrative_ontology:constraint_metric(logistic_map_dynamics, suppression_requirement, 0.4).
-
-% Enforcement: Emerges naturally from non-linear feedback and resource limits.
-domain_priors:emerges_naturally(logistic_map_dynamics).
-domain_priors:requires_active_enforcement(logistic_map_dynamics).
-
-% Metrics
-% Beneficiaries & Victims (Required for E > 0.3)
-narrative_ontology:constraint_beneficiary(logistic_map_dynamics, nonlinear_analysts). % Gain insights into complexity.
-narrative_ontology:constraint_beneficiary(logistic_map_dynamics, cryptography_designers). % PRNGs using chaos.
-narrative_ontology:constraint_victim(logistic_map_dynamics, long_term_planners). % Certainty is extracted.
-narrative_ontology:constraint_victim(logistic_map_dynamics, ecological_stability). % Small shocks cause flips.
-
-/* ==========================================================================
-   3. INDEXED CLASSIFICATIONS
-   ========================================================================== */
-
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 1: THE POPULATION FRACTION (SUBJECT) - Mountain
-   --------------------------------------------------------------------------
-   WHO: powerless - The iterate $x$ has no agency over the update rule.
-   WHEN: immediate - True at every single step $n \to n+1$.
-   WHERE: trapped - Bound within the interval [0, 1].
-   SCOPE: local - Immediate neighborhood of the current value.
-   
-   WHY THIS CLASSIFICATION:
-   For the state variable, the iterative law is an absolute, unyielding 
-   Mountain of reality. It cannot "choose" to exceed the carrying capacity 
-   or avoid the chaotic attractor once $r$ is set.
-   -------------------------------------------------------------------------- */
-
-
-
-constraint_indexing:constraint_classification(
-    logistic_map_dynamics,
-    mountain,
-    context(
-        agent_power(powerless),
-        time_horizon(immediate),
-        exit_options(trapped),
-        spatial_scope(local)
-    )
-) :- !.
-
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE ECOSYSTEM MANAGER - Rope
-   --------------------------------------------------------------------------
-   WHO: institutional - Power to influence $r$ (e.g., via harvest rates).
-   WHEN: biographical - Planning for the multi-year health of a fishery.
-   WHERE: mobile - Can adjust parameters to maintain a "Stable" regime ($r < 3$).
-   SCOPE: national/regional - Managing a specific environment.
-   
-   WHY THIS CLASSIFICATION:
-   For the manager, the map is a "Rope"—a functional coordination tool. 
-   By keeping the system in the non-chaotic region, they coordinate the 
-   standard of achievement (sustainable yield) through predictable math.
-   -------------------------------------------------------------------------- */
-
-constraint_indexing:constraint_classification(
-    logistic_map_dynamics,
-    rope,
-    context(
-        agent_power(institutional),
-        time_horizon(biographical),
-        exit_options(mobile),
-        spatial_scope(regional)
-    )
-) :- !.
-
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE CHAOTIC REGIME OBSERVER - Snare
-   --------------------------------------------------------------------------
-   WHO: powerless - Bound by the "Butterfly Effect" of the map.
-   WHEN: biographical - Attempting to predict outcomes over a long period.
-   WHERE: constrained - Knowing the law but having no path to certainty.
-   SCOPE: global - The mathematical limit of all such iterative systems.
-   
-   WHY THIS CLASSIFICATION:
-   In the chaotic region ($r = 3.9$), the map is a "Snare." It "strangles" 
-   the ability to plan, extracting enormous resources for data collection 
-   that ultimately fails to provide more than a few steps of foresight.
-   -------------------------------------------------------------------------- */
-
-
-
-constraint_indexing:constraint_classification(
-    logistic_map_dynamics,
-    snare,
-    context(
-        agent_power(powerless),
-        time_horizon(biographical),
-        exit_options(constrained),
-        spatial_scope(global)
-    )
-) :- 
-    domain_priors:base_extractiveness(logistic_map_dynamics, E),
-    E >= 0.3,
-    !.
-
-/* ==========================================================================
-   4. TESTS
-   ========================================================================== */
-
-:- begin_tests(logistic_map_tests).
-
-test(bifurcation_fate_variance) :-
-    % Subject -> Mountain
-    constraint_indexing:constraint_classification(logistic_map_dynamics, Type1, context(powerless, immediate, trapped, local)),
-    % Manager (Short-term/Stable) -> Rope
-    constraint_indexing:constraint_classification(logistic_map_dynamics, Type2, context(institutional, biographical, mobile, regional)),
-    Type1 = mountain,
-    Type2 = rope.
-
-test(chaos_extraction_penalty) :-
-    % Long-term observer (Powerless/Constrained) in Chaos sees it as a Snare.
-    constraint_indexing:constraint_classification(logistic_map_dynamics, snare, context(powerless, biographical, constrained, global)).
-
-test(natural_emergence) :-
-    domain_priors:emerges_naturally(logistic_map_dynamics).
-
-:- end_tests(logistic_map_tests).
-
-/* ==========================================================================
-   5. MODEL INTERPRETATION (Commentary)
-   ========================================================================== */
-
-/**
- * LLM GENERATION NOTES
- * * Model: Gemini 2.0 Flash
- * Date: 2026-01-19
- * * KEY DECISIONS:
- * * 1. BASE EXTRACTIVENESS (0.35): 
- * I chose this because the Logistic Map at high $r$ represents a form of 
- * "Geometrical Coercion." The system "takes" your initial precision and 
- * shreds it, making it an extractive mathematical constraint.
- * * 2. SUPPRESSION SCORE (0.4): 
- * It effectively suppressed the "simple growth" narratives of the early 
- * 20th century by proving that complexity is the default, not the exception.
- * * 3. PERSPECTIVES:
- * Chose the "Iterate" (Passive Subject), "Manager" (Institutional User), 
- * and "Chaotic Observer" (Victim of Entropy) to show how the *same* law 
- * shifts type based on the parameter $r$.
- */
-
-% OMEGA IDENTIFICATION
-omega_variable(
-    precision_decay_rate,
-    "How many iterates $n$ does it take for double-precision floating point to lose all physical meaning at $r=4$?",
-    resolution_mechanism("Numerical audit of divergence between $x_n$ and $x_n + \epsilon$ in 64-bit hardware."),
-    impact("If $n < 50$: The 'Mountain' is a 'Snare' for all digital simulation. If $n > 500$: It is a Rope."),
-    confidence_without_resolution(high)
-).
-
-/* ==========================================================================
-   6. ALTERNATIVE ANALYSIS
-   ========================================================================== */
-
-/**
- * VIABLE ALTERNATIVES
- * * ALTERNATIVE 1: Malthusian Growth ($x_{n+1} = rx_n$)
- * Viability: Historically the standard for 100 years.
- * Suppression: Rejected by the Logistic Map because it ignores the 
- * "Mountain" of limited resources (the $1-x$ term).
- * * ALTERNATIVE 2: Continuous-time Models (Logistic Differential Equation)
- * Viability: Smooth, predictable, no chaos in 1D.
- * Suppression: Chaos theory shows that discrete-time events (like seasons 
- * or distinct generations) are the true "Rope" for complex biology.
- * * CONCLUSION:
- * The shift from continuous to discrete modeling turned a "Stable Rope" into 
- * a "Chaotic Mountain/Snare."
- */
-
-/* ==========================================================================
-   7. INTEGRATION HOOKS
-   ========================================================================== */
-
-% Load: ?- [logistic_map_dynamics].
-% Analyze: ?- constraint_indexing:multi_index_report(logistic_map_dynamics).
-
-/* ==========================================================================
-   END OF CONSTRAINT STORY
-   ========================================================================== */
-
-% ============================================================================
-% ENRICHMENT: Structural predicates for dynamic classification
-% Generated: 2026-02-08
-% Template: v5.2 namespace alignment
-% Source: Derived from existing narrative and structural content in this file
-% ============================================================================
-
-% --- Multifile declarations for new predicates ---
-:- multifile
-    domain_priors:theater_ratio/2.
-
-% --- Theater ratio (missing from base properties) ---
-% Formal truth — substantive with near-zero performative component
+% Rationale: The map is a formal mathematical truth. It has zero performative
+% or theatrical component.
 domain_priors:theater_ratio(logistic_map_dynamics, 0.0).
+
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(logistic_map_dynamics, extractiveness, 0.35).
+narrative_ontology:constraint_metric(logistic_map_dynamics, suppression_requirement, 0.40).
 narrative_ontology:constraint_metric(logistic_map_dynamics, theater_ratio, 0.0).
 
-% --- Analytical perspective classification (missing) ---
-% chi = 0.35 * 1.15 (analytical) * 1.2 (global) = 0.483
-% Classification: tangled_rope
+% --- Constraint claim (must match analytical perspective type) ---
+% The map is a Tangled Rope: it provides a genuine coordination function
+% (predictability in stable regimes) while also containing an asymmetric
+% extractive component (information destruction in chaotic regimes).
+narrative_ontology:constraint_claim(logistic_map_dynamics, tangled_rope).
+
+% --- Binary flags ---
+% Required for Tangled Rope. The "enforcement" is the mathematical rule itself,
+% which is inescapable within its domain.
+domain_priors:requires_active_enforcement(logistic_map_dynamics).
+
+% --- Structural relationships (REQUIRED for non-mountain constraints) ---
+% Who benefits from this constraint existing?
+narrative_ontology:constraint_beneficiary(logistic_map_dynamics, nonlinear_analysts).
+narrative_ontology:constraint_beneficiary(logistic_map_dynamics, cryptography_designers).
+narrative_ontology:constraint_beneficiary(logistic_map_dynamics, ecosystem_managers).
+%
+% Who bears disproportionate cost?
+narrative_ontology:constraint_victim(logistic_map_dynamics, long_term_planners).
+narrative_ontology:constraint_victim(logistic_map_dynamics, proponents_of_linear_models).
+
+/* ==========================================================================
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × f(d) × σ(S)
+   ========================================================================== */
+
+% PERSPECTIVE 1: THE POPULATION ITERATE (THE SYSTEM STATE)
+% For the state variable x_n itself, the iterative law is an absolute,
+% unyielding Mountain. It cannot "choose" its next state; it is determined.
+constraint_indexing:constraint_classification(logistic_map_dynamics, mountain,
+    context(agent_power(powerless),
+            time_horizon(immediate),
+            exit_options(trapped),
+            spatial_scope(local))).
+
+% PERSPECTIVE 2: THE ECOSYSTEM MANAGER (INSTITUTIONAL BENEFICIARY)
+% For a manager who can control the parameter 'r' (e.g., via harvest rates),
+% the map is a Rope. By keeping the system in a stable, non-chaotic regime
+% (r < 3.57), they use it as a tool to coordinate for a sustainable yield.
+constraint_indexing:constraint_classification(logistic_map_dynamics, rope,
+    context(agent_power(institutional),
+            time_horizon(generational),
+            exit_options(mobile),
+            spatial_scope(regional))).
+
+% PERSPECTIVE 3: THE LONG-TERM PLANNER (IN CHAOTIC REGIME)
+% For a planner attempting to predict outcomes in the chaotic regime (high r),
+% the map is a Snare. It extracts predictive certainty due to sensitive
+% dependence on initial conditions (the "Butterfly Effect"), trapping the
+% planner in a state of irreducible uncertainty.
+constraint_indexing:constraint_classification(logistic_map_dynamics, snare,
+    context(agent_power(powerless),
+            time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(global))).
+
+% PERSPECTIVE 4: THE ANALYTICAL OBSERVER
+% The analyst sees the full structure: a system that provides coordination
+% (stable regime) but also has an inherent, asymmetric extractive property
+% (chaotic regime). This dual nature is the definition of a Tangled Rope.
+% χ = 0.35 * f(0.73) * 1.2 ≈ 0.35 * 1.15 * 1.2 ≈ 0.483
 constraint_indexing:constraint_classification(logistic_map_dynamics, tangled_rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
             spatial_scope(global))).
+
+/* ==========================================================================
+   4. VALIDATION TESTS
+   ========================================================================== */
+
+:- begin_tests(logistic_map_dynamics_tests).
+
+test(perspectival_gap) :-
+    % Verify the manager (beneficiary) and planner (victim) disagree.
+    constraint_indexing:constraint_classification(logistic_map_dynamics, rope, context(agent_power(institutional), _, _, _)),
+    constraint_indexing:constraint_classification(logistic_map_dynamics, snare, context(agent_power(powerless), time_horizon(biographical), _, _)),
+    constraint_indexing:constraint_classification(logistic_map_dynamics, mountain, context(agent_power(powerless), time_horizon(immediate), _, _)).
+
+test(analytical_classification_is_tangled_rope) :-
+    % The claim must match the analytical view.
+    narrative_ontology:constraint_claim(logistic_map_dynamics, tangled_rope),
+    constraint_indexing:constraint_classification(logistic_map_dynamics, tangled_rope, context(agent_power(analytical), _, _, _)).
+
+test(tangled_rope_structural_gates_pass) :-
+    % Verify all three structural requirements for Tangled Rope are met.
+    domain_priors:requires_active_enforcement(logistic_map_dynamics),
+    narrative_ontology:constraint_beneficiary(logistic_map_dynamics, _),
+    narrative_ontology:constraint_victim(logistic_map_dynamics, _).
+
+:- end_tests(logistic_map_dynamics_tests).
+
+/* ==========================================================================
+   5. GENERATIVE COMMENTARY
+   ========================================================================== */
+
+/**
+ * LOGIC RATIONALE:
+ *   The base extractiveness (0.35) and suppression (0.40) were chosen to
+ *   reflect the map's dual nature. It is not a pure, inert Mountain of
+ *   mathematics because its chaotic regime actively destroys information
+ *   (extracts precision) and suppresses simpler, inadequate models. These
+ *   values place it firmly in the Tangled Rope category from an analytical
+ *   view, which correctly captures its character as both a tool for
+ *   coordination (in stable regimes) and a source of irreducible complexity.
+ *
+ * PERSPECTIVAL GAP:
+ *   The gap is profound and depends entirely on the parameter 'r' and the
+ *   agent's ability to control it.
+ *   - The Ecosystem Manager (institutional) can set 'r' to a low value,
+ *     experiencing the map as a predictable, useful Rope for coordination.
+ *   - The Long-Term Planner (powerless) facing a system with high 'r'
+ *     experiences it as a Snare that destroys foresight.
+ *   - The system state variable itself (powerless, trapped) experiences the
+ *     update rule as an immutable Mountain of physics at every instant.
+ *
+ * DIRECTIONALITY LOGIC:
+ *   - Beneficiaries: Nonlinear analysts and cryptographers benefit from the
+ *     very complexity that victimizes planners. They gain a formal model for
+ *     chaos and a source of pseudo-randomness. Ecosystem managers benefit from
+ *     the map's predictive power in stable regimes.
+ *   - Victims: Long-term planners and proponents of simple linear models are
+ *     the primary victims. The former lose predictive certainty, and the
+ *     latter have their models invalidated by the map's demonstrated reality.
+ *
+ * MANDATROPHY ANALYSIS:
+ *   Classifying this as a Tangled Rope prevents two errors. First, it avoids
+ *   mislabeling it as a pure Mountain, which would ignore the extractive cost
+ *   of chaos and its role in suppressing other models. Second, it avoids
+ *   mislabeling it as a pure Snare, which would ignore its genuine and widely
+ *   used coordination function in stable, predictable regimes for fields like
+ *   ecology and resource management. The Tangled Rope classification correctly
+ *   holds both truths in tension.
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
+omega_variable(
+    omega_logistic_map_dynamics,
+    'Is the chaos in the logistic map a fundamental feature of reality (Mountain) or an artifact of a simplified model (Tangled Rope)?',
+    'Discovery of a higher-dimensional, more fundamental model that explains apparent chaos as a projection of a simpler, predictable dynamic.',
+    'If a simpler underlying model exists, this constraint is a Tangled Rope of modeling choice. If not, it is a true Mountain of computational irreducibility.',
+    confidence_without_resolution(medium)
+).
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+% Required for external script parsing
+narrative_ontology:interval(logistic_map_dynamics, 0, 10).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Base extractiveness is below the 0.46 threshold for mandatory temporal data.
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA
+   ========================================================================== */
+
+% The logistic map serves as a foundational standard for modeling and
+% understanding non-linear dynamics and the onset of chaos.
+narrative_ontology:coordination_type(logistic_map_dynamics, information_standard).
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+% No overrides needed. The structural derivation from beneficiary/victim
+% groups and exit options accurately models the dynamics.
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */

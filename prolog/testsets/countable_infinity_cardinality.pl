@@ -60,7 +60,8 @@
 
 % Structural Anchor
 narrative_ontology:interval(countable_infinity_cardinality, 1874, 2026).
-narrative_ontology:constraint_claim(countable_infinity_cardinality, mountain).
+narrative_ontology:constraint_claim(countable_infinity_cardinality, tangled_rope).
+domain_priors:requires_active_enforcement(countable_infinity_cardinality).
 
 % Base extractiveness score (0.0-1.0)
 % Rationale: 0.2. Countability "extracts" the sense of density from sets 
@@ -109,7 +110,7 @@ narrative_ontology:constraint_victim(countable_infinity_cardinality, intuitive_c
 
 constraint_indexing:constraint_classification(
     countable_infinity_cardinality,
-    mountain,
+    tangled_rope,
     context(
         agent_power(powerless),
         time_horizon(immediate),
@@ -183,7 +184,7 @@ constraint_indexing:constraint_classification(
 
 test(perspective_shift) :-
     % The integer sees a Mountain; the Engineer sees a Rope.
-    constraint_indexing:constraint_classification(countable_infinity_cardinality, mountain, context(powerless, immediate, trapped, local)),
+    constraint_indexing:constraint_classification(countable_infinity_cardinality, tangled_rope, context(powerless, immediate, trapped, local)),
     constraint_indexing:constraint_classification(countable_infinity_cardinality, rope, context(institutional, biographical, mobile, global)).
 
 test(rational_enumeration_snare) :-

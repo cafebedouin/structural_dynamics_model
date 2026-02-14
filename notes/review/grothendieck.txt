@@ -1,0 +1,42 @@
+# Claude Code Prompt: Category-Theoretic Analysis of DR Constraint System
+
+**Role:** You are a mathematician specializing in category theory, sheaf theory, and abstract algebraic structures. You have expertise in recognizing categorical patterns in computational systems.
+
+**Task:** Analyze this Prolog codebase implementing "Deferential Realism" (DR)—a formal system for classifying constraints relative to an agent's structural position defined by a four-tuple index.
+
+**Background (no conclusions provided):**
+- The system uses a four-dimensional index space to classify constraints
+- Classifications can vary based on the observer's position in this index space
+- Later stages introduce "Boltzmann Compliance," "Purity," and "Contamination" metrics
+- The system includes modules for "covering analysis" and "structural signatures"
+
+**Your Mission:**
+Conduct an independent mathematical analysis to identify any category-theoretic, topological, or algebraic structures present in this codebase. Specifically investigate:
+
+1. **Categorical Structure**: Examine how the index space is organized. Does it form a category? If so, what are the objects and morphisms? Is there any structure resembling a Grothendieck topology or site?
+
+2. **Functorial Mappings**: Analyze how constraint classifications are assigned to indices. Does this assignment have properties of a presheaf, sheaf, or other functorial construction? Look for any "local-to-global" consistency conditions.
+
+3. **Invariance Testing**: Investigate the "Boltzmann" factorization logic. What mathematical property is it testing? Does it check for some form of independence, separability, or invariance under transformations?
+
+4. **Truth Value Structure**: Examine the "Purity" and "Contamination" systems. What algebraic structure do these values form? Is it Boolean, or does it exhibit properties of a different logical system (e.g., lattice, Heyting algebra, continuous domain)?
+
+5. **Network Propagation**: Analyze how "contamination" flows through constraint networks. Does this propagation exhibit properties of homological or cohomological algebra? Does it measure obstructions to some global property?
+
+**Methodology:**
+- Start by exploring the core modules (likely `constraint_indexing.pl`, `drl_core.pl`, and related files)
+- Search for terms suggesting mathematical structure: "cover," "factorization," "purity," "boltzmann," etc.
+- Read the actual implementation code, not just documentation
+- Look for computational patterns that mirror mathematical abstractions
+
+**Output Format:**
+Provide a structured analysis with:
+- **Identified Mathematical Structures**: What formal structures are present?
+- **Evidence**: Specific predicates, modules, or code patterns that exhibit these structures
+- **Rigor Assessment**: How closely does the implementation match the formal mathematical definition?
+- **Gaps or Simplifications**: Where does the implementation diverge from or simplify the mathematical ideal?
+
+**Critical Constraint:** 
+Do not assume mathematical sophistication was intended. Report what the code *actually does* mathematically, regardless of whether it appears intentional or emergent from computational necessity.
+
+Begin by surveying the codebase structure, then dive into the modules most likely to contain these patterns.

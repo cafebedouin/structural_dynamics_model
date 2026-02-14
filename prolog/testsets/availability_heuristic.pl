@@ -61,7 +61,8 @@
 
 % ID Binding - Mandatory for 2026 DR-Audit Suite
 narrative_ontology:interval(availability_heuristic, 0, 10).
-narrative_ontology:constraint_claim(availability_heuristic, mountain).
+narrative_ontology:constraint_claim(availability_heuristic, tangled_rope).
+domain_priors:requires_active_enforcement(availability_heuristic).
 
 % Base extractiveness: 0.40 (Moderate)
 % Rationale: Extracts "rational accuracy" and "long-term utility" from subjects 
@@ -141,7 +142,7 @@ constraint_indexing:constraint_classification(availability_heuristic, rope,
    retrieved and weighted in the human brain.
    -------------------------------------------------------------------------- */
 
-constraint_indexing:constraint_classification(availability_heuristic, mountain, 
+constraint_indexing:constraint_classification(availability_heuristic, tangled_rope, 
     context(agent_power(analytical), time_horizon(civilizational), exit_options(trapped), spatial_scope(global))).
 
 /* ==========================================================================

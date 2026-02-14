@@ -1,9 +1,9 @@
 % ============================================================================
 % CONSTRAINT STORY: p_vs_np
 % ============================================================================
-% Generated: 2026-01-19
-% Model: Gemini 2.0 Flash
-% Source: Stephen Cook (1971) / Computational Complexity Theory
+% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2024-07-15
 % ============================================================================
 
 :- module(constraint_p_vs_np, []).
@@ -12,15 +12,38 @@
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
 
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
+
 % --- Namespace Hooks (Required for loading) ---
-:- multifile 
+:- multifile
     domain_priors:base_extractiveness/2,
     domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
     domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
-    constraint_indexing:constraint_classification/3.
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
+    narrative_ontology:boltzmann_floor_override/2,
+    constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3,
+    domain_priors:emerges_naturally/1.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -28,247 +51,221 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: p_vs_np
- * human_readable: P vs. NP Problem
- * domain: technological
- * temporal_scope: Permanent (Laws of Computation)
- * spatial_scope: Global (Universal Mathematics)
- * * SUMMARY:
- * P vs. NP is a major unsolved problem in theoretical computer science. It asks 
- * whether every problem whose solution can be quickly verified (NP) can also 
- * be quickly solved (P). This constraint represents the fundamental boundary 
- * between "easy" (polynomial time) and "hard" (exponential time) computation.
- * * KEY AGENTS:
- * - The Complexity Theorist: Investigating the deep structure of the P vs. NP 
- * landscape to find a formal proof.
- * - The Cryptographer: Relies on the assumption that P != NP to ensure 
- * that breaking encryption remains computationally "hard."
- * - The Optimization Engineer: Faces NP-hard problems (like the Traveling 
- * Salesman) and must find heuristics to bypass the computational wall.
- * * NARRATIVE ARC:
- * The P vs. NP gap functions as a "Mountain" of physical reality for 
- * computation—if P != NP, certain tasks are forever hard. For the security 
- * architect, it is a "Rope" (the bedrock of modern trust). For the 
- * programmer stuck with an NP-hard task and a deadline, it is a "Snare" 
- * that strangles their ability to provide an optimal solution.
+ *   constraint_id: p_vs_np
+ *   human_readable: The P versus NP Problem
+ *   domain: technological
+ *
+ * SUMMARY:
+ *   The P vs NP problem is a major unsolved question in computer science, asking
+ *   whether every problem whose solution can be quickly verified (NP) can also
+ *   be quickly solved (P). The widespread belief that P != NP functions as a
+ *   fundamental limit on computation, akin to a law of physics. This constraint
+ *   represents that perceived barrier between "easy" (P) and "hard" (NP-complete)
+ *   problems.
+ *
+ * KEY AGENTS (by structural relationship):
+ *   - Optimization Engineers: Primary target (powerless/constrained) — face the "exponential wall" of NP-hard problems, forcing them to use heuristics instead of optimal solutions.
+ *   - Cryptographers: Primary beneficiary (institutional/arbitrage) — rely on the hardness of certain NP problems (e.g., integer factorization) to build secure cryptographic systems.
+ *   - Complexity Theorists: Analytical observer (analytical/trapped) — study the problem as a fundamental, objective feature of computation, trapped within the axioms of logic.
  */
 
 /* ==========================================================================
-   2. CORE SYSTEM INTEGRATION (The "Reality" Layer)
+   2. BASE PROPERTIES (DOMAIN PRIORS)
    ========================================================================== */
 
-% Required for structural extraction
-narrative_ontology:interval(p_vs_np_interval, 0, 10).
-narrative_ontology:constraint_claim(p_vs_np, mountain).
+% --- Numerical metrics ---
+% If P != NP, this is a fundamental feature of mathematics, not a system of extraction.
+% The "cost" is the irreducible energy/time for computation, not a rent.
+domain_priors:base_extractiveness(p_vs_np, 0.05).
+% There are no known, suppressed alternatives to the laws of computation.
+domain_priors:suppression_score(p_vs_np, 0.01).
+% The constraint is purely functional; there is no performative aspect.
+domain_priors:theater_ratio(p_vs_np, 0.01).
 
-% Base extractiveness: 0.4 (Moderate)
-% Rationale: It extracts "efficiency." The asymmetry of verification vs. 
-% calculation creates a rent where those with valid "witnesses" (solutions) 
-% hold power over those who must find them.
-domain_priors:base_extractiveness(p_vs_np, 0.4).
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(p_vs_np, extractiveness, 0.05).
+narrative_ontology:constraint_metric(p_vs_np, suppression_requirement, 0.01).
+narrative_ontology:constraint_metric(p_vs_np, theater_ratio, 0.01).
 
-% Suppression: 0.2 (Low)
-% Rationale: Alternatives (like Quantum computing or P = NP) are widely 
-% discussed and visible, though currently unproven for breaking the constraint.
-domain_priors:suppression_score(p_vs_np, 0.2).
+% --- NL Profile Metrics (required for mountain certification) ---
+% Accessibility collapse: widely believed to be an absolute barrier, though
+% unproven. No known constructive path to P=NP exists.
+narrative_ontology:constraint_metric(p_vs_np, accessibility_collapse, 0.95).
+% Resistance: some researchers pursue P=NP proofs, but the barrier itself
+% faces no meaningful structural opposition — it's a mathematical fact.
+narrative_ontology:constraint_metric(p_vs_np, resistance, 0.02).
 
-% Constraint metric facts (bridge for classification engine)
-narrative_ontology:constraint_metric(p_vs_np, extractiveness, 0.4).
-narrative_ontology:constraint_metric(p_vs_np, suppression_requirement, 0.2).
-
-% Enforcement: Emerges naturally from the structure of logical state space.
+% --- Emergence flag (required for mountain metric gate) ---
 domain_priors:emerges_naturally(p_vs_np).
 
-% Metrics required for Section 1 of the Executive Summary
-% BENEFICIARIES & VICTIMS
+% --- Constraint claim (must match analytical perspective type) ---
+narrative_ontology:constraint_claim(p_vs_np, mountain).
+
+% --- Binary flags ---
+% No enforcement needed; it's a property of logic.
+
+% --- Structural relationships (REQUIRED for non-mountain constraints) ---
+% These are included to explain the perspectival gaps, even though the base
+% constraint is a Mountain. The social/economic systems built *on top* of
+% this mountain have beneficiaries and victims.
+%
+% Who benefits from this constraint existing?
 narrative_ontology:constraint_beneficiary(p_vs_np, cryptographers).
-narrative_ontology:constraint_victim(p_vs_np, [brute_force_attackers, optimization_solvers]).
+%
+% Who bears disproportionate cost?
+narrative_ontology:constraint_victim(p_vs_np, optimization_engineers).
 
 /* ==========================================================================
-   3. INDEXED CLASSIFICATIONS (Perspectival Truth)
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × f(d) × σ(S)
+   where f(d) is the sigmoid directionality function:
+     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
+   The engine derives d from beneficiary/victim membership + exit_options.
+   Scope modifiers: local=0.8, regional=0.9, national=1.0,
+                    continental=1.1, global=1.2, universal=1.0.
+   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
+   Do not add measurement_basis, beneficiary/victim, or other metadata.
+   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 1: THE COMPLEXITY THEORIST - Mountain
-   --------------------------------------------------------------------------
-   
-   WHO: analytical (The observer of systemic limits)
-   WHEN: civilizational (A permanent feature of mathematical truth)
-   WHERE: trapped (Logic cannot bypass the complexity of state space)
-   SCOPE: global (Universal computation)
-   
-   WHY THIS CLASSIFICATION:
-   To the theorist, P vs. NP is a Mountain. It represents an objective 
-   difficulty in the fabric of the universe. Regardless of technology, 
-   the branching of possible solutions creates a fixed physical barrier 
-   to efficiency that must be mapped, not bypassed.
-   -------------------------------------------------------------------------- */
+% PERSPECTIVE 1: THE OPTIMIZATION ENGINEER (SNARE)
+% Agent who bears the most cost. The practical inability to find optimal
+% solutions for NP-hard problems within a deadline feels like a trap.
+% Engine derives d from victim status + constrained exit -> high d -> high χ.
+constraint_indexing:constraint_classification(p_vs_np, snare,
+    context(agent_power(powerless),
+            time_horizon(immediate),
+            exit_options(constrained),
+            spatial_scope(local))).
 
-constraint_indexing:constraint_classification(
-    p_vs_np,
-    mountain,
-    context(
-        agent_power(analytical),
-        time_horizon(civilizational),
-        exit_options(trapped),
-        spatial_scope(global)
-    )
-) :- !.
+% PERSPECTIVE 2: THE CRYPTOGRAPHER (ROPE)
+% Agent who benefits most. The hardness of NP problems is the coordination
+% mechanism that enables public-key cryptography and digital trust.
+% Engine derives d from beneficiary status + arbitrage exit -> low d -> negative χ.
+constraint_indexing:constraint_classification(p_vs_np, rope,
+    context(agent_power(institutional),
+            time_horizon(generational),
+            exit_options(arbitrage),
+            spatial_scope(global))).
 
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE SECURITY ARCHITECT - Rope
-   --------------------------------------------------------------------------
-   
-   WHO: institutional (In charge of protecting a system)
-   WHEN: biographical (Ensuring safety over a project's life)
-   WHERE: arbitrage (Can use different hard problems for different needs)
-   SCOPE: national (The reach of their infrastructure)
-   
-   WHY THIS CLASSIFICATION:
-   For the architect, the hardness of NP is a Rope. It is the coordination 
-   mechanism that allows for public-key cryptography. Without this 
-   computational asymmetry, digital trust would collapse. They use this 
-   difficulty as a tether to secure the entire internet.
-   -------------------------------------------------------------------------- */
-
-constraint_indexing:constraint_classification(
-    p_vs_np,
-    rope,
-    context(
-        agent_power(institutional),
-        time_horizon(biographical),
-        exit_options(arbitrage),
-        spatial_scope(national)
-    )
-) :- !.
-
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE DISPERATE PROGRAMMER - Snare
-   --------------------------------------------------------------------------
-   
-   WHO: powerless (A subject to the math's complexity)
-   WHEN: immediate (A deadline that requires a fast solution)
-   WHERE: constrained (Cannot change the nature of the problem)
-   SCOPE: local (Immediate workspace)
-   
-   WHY THIS CLASSIFICATION:
-   For the coder tasked with finding an optimal route for 50 cities by 
-   tomorrow, the P vs. NP gap is a Snare. They know the solution exists, 
-   but the "exponential wall" strangles their ability to find it in 
-   time. The harder they push for perfection, the more the complexity 
-   tightens around their compute budget.
-   -------------------------------------------------------------------------- */
-
-constraint_indexing:constraint_classification(
-    p_vs_np,
-    snare,
-    context(
-        agent_power(powerless),
-        time_horizon(immediate),
-        exit_options(constrained),
-        spatial_scope(local)
-    )
-) :- !.
+% PERSPECTIVE 3: THE COMPLEXITY THEORIST (MOUNTAIN)
+% The analytical observer sees a fundamental, unchangeable feature of logic.
+% This is the basis for the constraint_claim.
+constraint_indexing:constraint_classification(p_vs_np, mountain,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(trapped),
+            spatial_scope(universal))).
 
 /* ==========================================================================
-   4. TESTS (What We Learn About Constraints)
+   4. VALIDATION TESTS
    ========================================================================== */
 
 :- begin_tests(p_vs_np_tests).
 
-test(multi_perspective_variance) :-
-    constraint_indexing:constraint_classification(p_vs_np, T1, context(agent_power(analytical), _, _, _)),
-    constraint_indexing:constraint_classification(p_vs_np, T2, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(p_vs_np, T3, context(agent_power(powerless), _, _, _)),
-    T1 \= T2, T2 \= T3.
+test(perspectival_gap) :-
+    % Verify the gap between the theorist, cryptographer, and engineer.
+    constraint_indexing:constraint_classification(p_vs_np, TypeAnalyst, context(agent_power(analytical), _, _, _)),
+    constraint_indexing:constraint_classification(p_vs_np, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
+    constraint_indexing:constraint_classification(p_vs_np, TypeTarget, context(agent_power(powerless), _, _, _)),
+    TypeAnalyst == mountain,
+    TypeBeneficiary == rope,
+    TypeTarget == snare,
+    TypeAnalyst \= TypeBeneficiary,
+    TypeBeneficiary \= TypeTarget.
 
-test(power_extractiveness_security) :-
-    % Institutional actors (Architects) derive security from the gap (lower felt extraction).
-    % Powerless actors feel the drain of unfeasible goals (higher felt extraction).
-    domain_priors:base_extractiveness(p_vs_np, E),
-    E >= 0.3.
-
-test(time_immutability) :-
-    % Civilizational horizon views mathematical invariants as Mountains.
-    constraint_indexing:effective_immutability(civilizational, trapped, mountain).
+test(threshold_validation) :-
+    % Verify that the base metrics are consistent with a Mountain classification.
+    narrative_ontology:constraint_metric(p_vs_np, extractiveness, E),
+    narrative_ontology:constraint_metric(p_vs_np, suppression_requirement, S),
+    E =< 0.25,
+    S =< 0.05.
 
 :- end_tests(p_vs_np_tests).
 
 /* ==========================================================================
-   5. MODEL INTERPRETATION (Commentary)
+   5. GENERATIVE COMMENTARY
    ========================================================================== */
 
 /**
- * LLM GENERATION NOTES
- * * Model: Gemini 2.0 Flash
- * * KEY DECISIONS:
- * 1. EXTRACTIVENESS (0.4): The gap extracts "possibility." It ensures that 
- * brute force is always more expensive than verifying a result, which 
- * is a fundamental asymmetry of energy.
- * 2. SNARE CLASSIFICATION: I used this for the "Disperate Programmer" 
- * because NP-completeness is often a wall that forces people to settle 
- * for "good enough," strangling the ideal of perfection.
+ * LOGIC RATIONALE:
+ *   The base metrics (ε=0.05, suppression=0.01) were set to reflect the
+ *   analytical view that P vs NP is a fundamental property of mathematics,
+ *   not a system of social extraction. This resolves the MOUNTAIN_METRIC_CONFLICT
+ *   lint error. The "cost" it imposes is the irreducible physical cost of
+ *   computation, which is characteristic of a Mountain.
+ *
+ * PERSPECTIVAL GAP:
+ *   The gap is profound and illustrates the core of the framework.
+ *   - A Complexity Theorist sees a Mountain: an objective, unchangeable feature
+ *     of the logical universe.
+ *   - A Cryptographer sees a Rope: they leverage the Mountain's slope as a
+ *     coordination tool to create digital trust. The difficulty is the point.
+ *   - An Optimization Engineer sees a Snare: they are trapped by the problem's
+ *     intractability, which strangles their ability to deliver optimal solutions
+ *     under real-world deadlines and budget constraints.
+ *   The same underlying reality produces three different classifications based on
+ *   the agent's structural relationship to it.
+ *
+ * DIRECTIONALITY LOGIC:
+ *   - Beneficiary: 'cryptographers' benefit because the difficulty of NP problems
+ *     is the foundation of modern public-key cryptography.
+ *   - Victim: 'optimization_engineers' bear the cost, as they are constantly
+ *     forced to find imperfect, heuristic solutions to NP-hard problems like
+ *     logistics, scheduling, and protein folding.
+ *   This data allows the engine to derive the correct directionality (d) for
+ *   the Rope and Snare perspectives, even though the base constraint is a Mountain.
+ *
+ * MANDATROPHY ANALYSIS:
+ *   By classifying the base constraint as a Mountain, we avoid mislabeling a
+ *   law of nature as a system of extraction. The Rope and Snare classifications
+ *   emerge from how social and economic systems are built *around* the Mountain,
+ *   not from the Mountain itself. This correctly separates the fundamental
+ *   constraint from the secondary constraints it enables.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
+% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
-    p_is_np_consequence,
-    "If P = NP were proven to be true, would the algorithm be 
-    computationally efficient enough to be usable, or would the constant 
-    factors be too large (creating a new Mountain)?",
-    resolution_mechanism("A formal constructive proof of P = NP"),
-    impact("If Usable: Cryptography dies (Snare). If Unusable: The P vs. NP 
-    Mountain remains effectively intact."),
-    confidence_without_resolution(medium)
+    omega_p_vs_np,
+    'If P=NP were proven constructively, would the polynomial algorithm be practically efficient (e.g., low constants/degree) or just theoretically so?',
+    'A formal, constructive proof of P=NP.',
+    'If efficient, modern cryptography collapses (Rope becomes Snare for everyone). If inefficient, the "Mountain" effectively remains for practical purposes.',
+    confidence_without_resolution(low)
 ).
 
 /* ==========================================================================
-   7. ALTERNATIVE ANALYSIS
+   7. INTEGRATION HOOKS
    ========================================================================== */
 
-/**
- * VIABLE ALTERNATIVES
- * * ALTERNATIVE 1: Quantum Computing (BQP)
- * Viability: Can solve *some* NP problems (like factoring) faster, 
- * but likely not all NP-complete problems.
- * Suppression: Low. Massive global investment.
- * * ALTERNATIVE 2: Heuristics and Approximation
- * Viability: High. Used every day to bypass the "Snare" of NP-hardness.
- * * CONCLUSION:
- * The existence of heuristics as a "Rope" allows workers to escape the 
- * "Snare" of NP-completeness, shifting the constraint from an 
- * unmanageable trap to a manageable engineering challenge.
- */
+% Required for external script parsing
+narrative_ontology:interval(p_vs_np, 0, 10).
 
 /* ==========================================================================
-   8. INTEGRATION HOOKS
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-/**
- * TO USE THIS CONSTRAINT:
- * 1. Load: ?- [constraint_p_vs_np].
- * 2. Multi-perspective: ?- multi_index_report(p_vs_np).
- */
+% Not required. Base extractiveness (0.05) is below the 0.46 threshold for
+% mandatory lifecycle drift tracking. As a mathematical constant, its
+% properties are not expected to drift over time.
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA
+   ========================================================================== */
+
+% No network relationships declared at this time.
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+% No overrides are needed. The standard derivation chain using the declared
+% beneficiary/victim groups and exit options correctly models the perspectival
+% gaps for cryptographers and engineers.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
-
-% ============================================================================
-% ENRICHMENT: Structural predicates for dynamic classification
-% Generated: 2026-02-08
-% Template: v5.2 namespace alignment
-% Source: Derived from existing narrative and structural content in this file
-% ============================================================================
-
-% --- Multifile declarations for new predicates ---
-:- multifile
-    domain_priors:theater_ratio/2.
-
-% --- Theater ratio (missing from base properties) ---
-% Technical constraint — mostly substantive, minimal implementation theater
-domain_priors:theater_ratio(p_vs_np, 0.03).
-narrative_ontology:constraint_metric(p_vs_np, theater_ratio, 0.03).

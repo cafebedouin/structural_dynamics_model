@@ -93,8 +93,11 @@ def check_incoming_file(testsets_dir, incoming_path):
     for filename in os.listdir(testsets_dir):
         if not filename.endswith('.pl'):
             continue
-        # Don't flag self or temp files
+        # Don't flag self, temp files, or the file being replaced
         if filename == incoming_name or filename.startswith('.tmp_'):
+            continue
+        # When incoming is .tmp_foo.pl, skip foo.pl (the replacement target)
+        if incoming_name.startswith('.tmp_') and filename == incoming_name[5:]:
             continue
 
         existing_path = os.path.join(testsets_dir, filename)

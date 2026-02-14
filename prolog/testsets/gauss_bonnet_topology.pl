@@ -1,23 +1,33 @@
 % ============================================================================
 % CONSTRAINT STORY: gauss_bonnet_topology
 % ============================================================================
-% Generated: 2026-01-19
-% Model: Gemini 2.0 Flash
-% Source: Gauss-Bonnet Theorem (Differential Geometry / Topology)
+% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2024-07-29
 % ============================================================================
 
-:- module(constraint_gauss_bonnet, []).
+:- module(constraint_gauss_bonnet_topology, []).
 
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
 
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+
 % --- Namespace Hooks (Required for loading) ---
-:- multifile 
+:- multifile
     domain_priors:base_extractiveness/2,
     domain_priors:suppression_score/2,
-    domain_priors:requires_active_enforcement/1,
+    domain_priors:theater_ratio/2,
+    domain_priors:emerges_naturally/1,
+    narrative_ontology:interval/3,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -26,268 +36,232 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: gauss_bonnet_topology
- * human_readable: Gauss-Bonnet Theorem (Curvature-Topology Link)
- * domain: mathematical/technological/physical
- * temporal_scope: 1848 - Present (Civilizational)
- * spatial_scope: Global/Abstract (2-Manifolds)
- * * SUMMARY:
- * The Gauss-Bonnet theorem relates the local geometry (Gaussian curvature K) 
- * of a surface to its global topology (Euler characteristic chi). Specifically, 
- * the integral of the curvature over a closed surface is equal to 2*pi*chi. 
- * This creates a rigid quantization of total curvature.
- * * KEY AGENTS:
- * - The Surface (Manifold): The powerless subject whose total curvature is 
- * predestined by its genus (number of holes).
- * - The Cosmologist/General Relativist: An analytical observer who uses 
- * the theorem to infer the global shape of the universe from local data.
- * - The Computer Graphics Architect: An institutional agent who uses the 
- * theorem to validate the "manifoldness" of digital meshes.
- * * NARRATIVE ARC:
- * Gauss-Bonnet is the ultimate "Mountain" of geometry. It demonstrates 
- * that no matter how you "stretch or bend" a surface (local agency), 
- * the total "angular deficit" is a fixed, non-negotiable constant 
- * (topological fate). It acts as a "Rope" for coordination in field 
- * theories but a "Snare" for designers trying to defy the genus 
- * of their workspace.
+ *   constraint_id: gauss_bonnet_topology
+ *   human_readable: Gauss-Bonnet Theorem (Curvature-Topology Link)
+ *   domain: mathematical
+ *
+ * SUMMARY:
+ *   The Gauss-Bonnet theorem relates the local geometry (Gaussian curvature K)
+ *   of a surface to its global topology (Euler characteristic chi). Specifically,
+ *   the integral of the curvature over a closed surface is equal to 2*pi*chi.
+ *   This creates a rigid quantization of total curvature, an unchangeable
+ *   fact of geometry.
+ *
+ * KEY AGENTS (by structural relationship):
+ *   - The Surface (Manifold): The powerless subject whose total curvature is
+ *     predestined by its genus (number of holes).
+ *   - The Cosmologist/General Relativist: An analytical observer who uses
+ *     the theorem to infer the global shape of the universe from local data.
+ *   - The Computer Graphics Architect: An institutional agent who uses the
+ *     theorem to validate the "manifoldness" of digital meshes.
+ *
+ * NARRATIVE ARC:
+ *   Gauss-Bonnet is the ultimate "Mountain" of geometry. It demonstrates
+ *   that no matter how you "stretch or bend" a surface (local agency),
+ *   the total "angular deficit" is a fixed, non-negotiable constant
+ *   (topological fate). While its application can feel like a coordination
+ *   tool (Rope) or an obstacle (Snare), the underlying constraint itself
+ *   is an invariant Mountain.
  */
 
 /* ==========================================================================
-   2. CORE SYSTEM INTEGRATION (The "Reality" Layer)
+   2. BASE PROPERTIES (DOMAIN PRIORS)
    ========================================================================== */
 
-% Required for DR-Audit Suite
-narrative_ontology:interval(gauss_bonnet_era, 1848, 2026).
-narrative_ontology:constraint_claim(gauss_bonnet_topology, mountain).
-
-% Base extractiveness score (0.0-1.0)
-% Rationale: Low (0.1). It is a passive structural truth. It "extracts" 
-% the ability to have arbitrary curvature/topology combinations.
+% --- Numerical metrics ---
+% Rationale: Low (0.1). It is a passive structural truth. It "extracts" the
+% ability to have arbitrary curvature/topology combinations.
 domain_priors:base_extractiveness(gauss_bonnet_topology, 0.1).
 
-% Suppression score (0.0-1.0)
-% Rationale: Low (0.05). It is self-evident in differential geometry; 
-% it does not hide alternatives so much as render them logically impossible.
+% Rationale: Low (0.05). It is self-evident in differential geometry; it does
+% not hide alternatives so much as render them logically impossible.
 domain_priors:suppression_score(gauss_bonnet_topology, 0.05).
 
-% Constraint metric facts (bridge for classification engine)
+% Rationale: Mathematical theorems have essentially zero theater. The relationship
+% is entirely substantive.
+domain_priors:theater_ratio(gauss_bonnet_topology, 0.02).
+
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
 narrative_ontology:constraint_metric(gauss_bonnet_topology, extractiveness, 0.1).
 narrative_ontology:constraint_metric(gauss_bonnet_topology, suppression_requirement, 0.05).
-
-% Enforcement: Emerges naturally from the axioms of calculus and topology.
-domain_priors:emerges_naturally(gauss_bonnet_topology).
-
-% Metrics for Executive Summary
-% BENEFICIARIES & VICTIMS
-narrative_ontology:constraint_beneficiary(gauss_bonnet_topology, global_analysts). % Deduce global from local.
-narrative_ontology:constraint_beneficiary(gauss_bonnet_topology, mesh_validators).
-narrative_ontology:constraint_victim(gauss_bonnet_topology, local_unilateral_curvature). % Curvature must sum to chi.
-
-/* ==========================================================================
-   3. INDEXED CLASSIFICATIONS (Perspectival Truth)
-   ========================================================================== */
-
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 1: THE LOCAL GEOMETRIC PATCH - Mountain
-   --------------------------------------------------------------------------
-   
-   WHO: powerless - The patch can be shaped, but the "total" is fixed.
-   WHEN: immediate - True at every point on the surface.
-   WHERE: trapped - Bound by the global Euler characteristic of the whole manifold.
-   SCOPE: local - Immediate neighborhood of curvature K.
-   
-   WHY THIS CLASSIFICATION:
-   For any local portion of a surface, the theorem is a "Mountain." No matter 
-   how you sharpen one area (high K), you *must* flatten or invert another 
-   to compensate, because the total sum is topologically locked.
-   -------------------------------------------------------------------------- */
-
-
-
-constraint_indexing:constraint_classification(
-    gauss_bonnet_topology,
-    mountain,
-    context(
-        agent_power(powerless),
-        time_horizon(immediate),
-        exit_options(trapped),
-        spatial_scope(local)
-    )
-) :- !.
-
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE PHYSICS RESEARCHER - Rope
-   --------------------------------------------------------------------------
-   
-   WHO: institutional - Power to design models and use the theorem as a check.
-   WHEN: biographical - Spanning the length of a research project or career.
-   WHERE: mobile - Can select different manifolds (spheres, tori) for their theory.
-   SCOPE: global - Applying the theorem to the topology of space-time.
-   
-   WHY THIS CLASSIFICATION:
-   The theorem is a "Rope" (tool). It allows for the coordination of complex 
-   mathematical proofs, letting the researcher skip the labor of full integration 
-   by simply identifying the genus of the space.
-   -------------------------------------------------------------------------- */
-
-
-
-constraint_indexing:constraint_classification(
-    gauss_bonnet_topology,
-    rope,
-    context(
-        agent_power(institutional),
-        time_horizon(biographical),
-        exit_options(mobile),
-        spatial_scope(global)
-    )
-) :- !.
-
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE ADAPTIVE MESH ALGORITHM - Snare
-   --------------------------------------------------------------------------
-   
-   WHO: powerless - An algorithm tasked with smoothing a mesh.
-   WHEN: immediate - Operating per iteration.
-   WHERE: constrained - The mesh must remain a specific genus.
-   SCOPE: local - Trying to smooth a point without changing connectivity.
-   
-   WHY THIS CLASSIFICATION:
-   In automated mesh optimization, Gauss-Bonnet is a "Snare." If an algorithm 
-   needs to resolve a sharp feature on a torus, it is "strangled" by the 
-   topological requirement to maintain an average curvature of zero. It 
-   extracts massive GPU cycles attempting to distribute the "topological debt" 
-   elsewhere.
-   -------------------------------------------------------------------------- */
-
-constraint_indexing:constraint_classification(
-    gauss_bonnet_topology,
-    snare,
-    context(
-        agent_power(powerless),
-        time_horizon(immediate),
-        exit_options(constrained),
-        spatial_scope(local)
-    )
-) :- 
-    domain_priors:base_extractiveness(gauss_bonnet_topology, E),
-    E >= 0.1,
-    !.
-
-/* ==========================================================================
-   4. TESTS
-   ========================================================================== */
-
-:- begin_tests(gauss_bonnet_tests).
-
-test(topology_fate_variance) :-
-    % Surface patch -> Mountain
-    constraint_indexing:constraint_classification(gauss_bonnet_topology, Type1, context(powerless, immediate, trapped, local)),
-    % Researcher -> Rope
-    constraint_indexing:constraint_classification(gauss_bonnet_topology, Type2, context(institutional, biographical, mobile, global)),
-    Type1 = mountain,
-    Type2 = rope.
-
-test(extraction_of_local_agency) :-
-    % Even low base extractiveness is felt as a Snare when agency is constrained.
-    constraint_indexing:constraint_classification(gauss_bonnet_topology, snare, context(powerless, immediate, constrained, local)).
-
-test(emergence) :-
-    domain_priors:emerges_naturally(gauss_bonnet_topology).
-
-:- end_tests(gauss_bonnet_tests).
-
-/* ==========================================================================
-   5. MODEL INTERPRETATION (Commentary)
-   ========================================================================== */
-
-/**
- * LLM GENERATION NOTES
- * * Model: Gemini 2.0 Flash
- * Date: 2026-01-19
- * * KEY DECISIONS:
- * * 1. BASE EXTRACTIVENESS (0.1): 
- * Mathematical laws are non-coercive but "extract" possibilities by 
- * establishing forbidden states.
- * * 2. CLASSIFICATION: 
- * Gauss-Bonnet is the quintessence of the "Mountain" type—local 
- * changes cannot escape the global truth.
- * * 3. PERSPECTIVES:
- * Chose the "Local Patch" as the primary subject to show that 
- * "Geometrical freedom is limited by topological reality."
- */
-
-% OMEGA IDENTIFICATION
-omega_variable(
-    discrete_gauss_bonnet_fidelity,
-    "Does the 'Mountain' logic hold for discrete meshes with angular deficit?",
-    resolution_mechanism("Verification of the Discrete Gauss-Bonnet theorem across varied mesh densities."),
-    impact("If Yes: The Mountain is robust. If No: Numerical noise makes it a Scaffold."),
-    confidence_without_resolution(high)
-).
-
-/* ==========================================================================
-   6. ALTERNATIVE ANALYSIS
-   ========================================================================== */
-
-/**
- * VIABLE ALTERNATIVES
- * * ALTERNATIVE 1: Non-continuous Geometry (Fractals)
- * Viability: Surfaces without defined curvature at every point.
- * Suppression: Gauss-Bonnet requires differentiability; it "suppresses" 
- * the fractal alternative by being the standard for smooth manifolds.
- * * ALTERNATIVE 2: Global Re-parameterization
- * Viability: Change the genus (tear the surface).
- * Suppression: This is a "mobile" exit option that turns the Mountain into a Rope.
- */
-
-/* ==========================================================================
-   7. INTEGRATION HOOKS
-   ========================================================================== */
-
-% Load: ?- [gauss_bonnet_topology].
-% Analyze: ?- constraint_indexing:multi_index_report(gauss_bonnet_topology).
-
-/* ==========================================================================
-   END OF CONSTRAINT STORY
-   ========================================================================== */
-
-% ============================================================================
-% ENRICHMENT: Structural predicates for dynamic classification
-% Generated: 2026-02-08
-% Template: v5.2 namespace alignment
-% Source: Derived from existing narrative and structural content in this file
-% ============================================================================
-
-% --- Multifile declarations for new predicates ---
-:- multifile
-    domain_priors:theater_ratio/2,
-    narrative_ontology:has_sunset_clause/1,
-    narrative_ontology:interval/3,
-    narrative_ontology:measurement/5,
-    narrative_ontology:constraint_beneficiary/2,
-    narrative_ontology:constraint_victim/2,
-    narrative_ontology:constraint_claim/2.
-
-% --- Theater ratio (missing from base properties) ---
-% Mathematical theorems have essentially zero theater — the relationship
-% between curvature and topology is entirely substantive.
-domain_priors:theater_ratio(gauss_bonnet_topology, 0.02).
 narrative_ontology:constraint_metric(gauss_bonnet_topology, theater_ratio, 0.02).
 
-% --- Structural properties (namespace-qualified) ---
-% The existing constraint_beneficiary/2 and constraint_victim/2 at lines 82-84
-% are unqualified. The engine reads narrative_ontology: prefixed versions.
-narrative_ontology:constraint_beneficiary(gauss_bonnet_topology, global_analysts).
-narrative_ontology:constraint_beneficiary(gauss_bonnet_topology, mesh_validators).
-narrative_ontology:constraint_victim(gauss_bonnet_topology, local_unilateral_curvature).
+% --- NL Profile Metrics (required for mountain constraints) ---
+% These feed the natural_law_signature certification chain.
+% Accessibility Collapse: Alternatives are axiomatically impossible.
+narrative_ontology:constraint_metric(gauss_bonnet_topology, accessibility_collapse, 1.0).
+% Resistance: Meaningful resistance is incoherent.
+narrative_ontology:constraint_metric(gauss_bonnet_topology, resistance, 0.0).
 
-% --- Analytical perspective classification (missing) ---
-% χ = 0.10 × 1.15 (analytical) × 1.2 (global) = 0.138
-% ε = 0.10 ≤ 0.25, suppression = 0.05 ≤ 0.05 → Mountain
-% The analytical observer sees Gauss-Bonnet as an immutable mathematical truth.
+% --- Constraint claim (must match analytical perspective type) ---
+narrative_ontology:constraint_claim(gauss_bonnet_topology, mountain).
+
+% --- Emergence flag (required for mountain constraints) ---
+% Emerges naturally from the axioms of calculus and topology.
+domain_priors:emerges_naturally(gauss_bonnet_topology).
+
+% --- Structural relationships (REQUIRED for non-mountain constraints) ---
+% No enrichment needed. As a Mountain (mathematical law), the constraint is
+% symmetric and has no specific beneficiaries or victims in the structural sense.
+
+/* ==========================================================================
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   ========================================================================== */
+
+% PERSPECTIVE 1: THE LOCAL GEOMETRIC PATCH
+%   WHO: powerless - The patch can be shaped, but the "total" is fixed.
+%   WHEN: immediate - True at every point on the surface.
+%   WHERE: trapped - Bound by the global Euler characteristic of the whole manifold.
+%   SCOPE: local - Immediate neighborhood of curvature K.
+%
+%   WHY THIS CLASSIFICATION (Mountain):
+%   For any local portion of a surface, the theorem is a "Mountain." No matter
+%   how you sharpen one area (high K), you *must* flatten or invert another
+%   to compensate, because the total sum is topologically locked.
+constraint_indexing:constraint_classification(gauss_bonnet_topology, mountain,
+    context(agent_power(powerless),
+            time_horizon(immediate),
+            exit_options(trapped),
+            spatial_scope(local))).
+
+% PERSPECTIVE 2: THE PHYSICS RESEARCHER
+%   WHO: institutional - Power to design models and use the theorem as a check.
+%   WHEN: biographical - Spanning the length of a research project or career.
+%   WHERE: mobile - Can select different manifolds (spheres, tori) for their theory.
+%   SCOPE: global - Applying the theorem to the topology of space-time.
+%
+%   WHY THIS CLASSIFICATION (Mountain):
+%   From the researcher's perspective, the theorem is an immutable law of the
+%   system they are studying. While it can be used as a tool for coordination
+%   (a rope-like function), the constraint itself is not a coordination agreement
+%   but a fundamental property of the space. Its classification remains Mountain.
+constraint_indexing:constraint_classification(gauss_bonnet_topology, mountain,
+    context(agent_power(institutional),
+            time_horizon(biographical),
+            exit_options(mobile),
+            spatial_scope(global))).
+
+% PERSPECTIVE 3: THE ADAPTIVE MESH ALGORITHM
+%   WHO: powerless - An algorithm tasked with smoothing a mesh.
+%   WHEN: immediate - Operating per iteration.
+%   WHERE: constrained - The mesh must remain a specific genus.
+%   SCOPE: local - Trying to smooth a point without changing connectivity.
+%
+%   WHY THIS CLASSIFICATION (Mountain):
+%   While the theorem's consequences may feel like a "Snare" to an optimization
+%   algorithm (constraining its options and costing cycles), this is a misperception
+%   of the constraint's nature. The constraint is not extracting value; it is
+%   defining the problem space. The cost is an artifact of trying to violate a
+%   mathematical law. The classification is Mountain.
+constraint_indexing:constraint_classification(gauss_bonnet_topology, mountain,
+    context(agent_power(powerless),
+            time_horizon(immediate),
+            exit_options(constrained),
+            spatial_scope(local))).
+
+% PERSPECTIVE 4: THE ANALYTICAL OBSERVER
+%   Default analytical context (civilizational/analytical/universal).
+%
+%   WHY THIS CLASSIFICATION (Mountain):
+%   The analytical observer sees Gauss-Bonnet as an immutable mathematical truth,
+%   a fundamental feature of the logical landscape.
 constraint_indexing:constraint_classification(gauss_bonnet_topology, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
             spatial_scope(universal))).
+
+/* ==========================================================================
+   4. VALIDATION TESTS
+   ========================================================================== */
+
+:- begin_tests(gauss_bonnet_topology_tests).
+
+test(classification_invariance) :-
+    % A mathematical law should be a Mountain from all perspectives.
+    constraint_indexing:constraint_classification(gauss_bonnet_topology, Type1, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(gauss_bonnet_topology, Type2, context(agent_power(institutional), _, _, _)),
+    Type1 == mountain,
+    Type2 == mountain.
+
+test(analytical_view_is_mountain) :-
+    constraint_indexing:constraint_classification(gauss_bonnet_topology, mountain,
+        context(agent_power(analytical), _, _, _)).
+
+test(emergence) :-
+    domain_priors:emerges_naturally(gauss_bonnet_topology).
+
+:- end_tests(gauss_bonnet_topology_tests).
+
+/* ==========================================================================
+   5. GENERATIVE COMMENTARY
+   ========================================================================== */
+
+/**
+ * LOGIC RATIONALE:
+ *   The Gauss-Bonnet theorem is a canonical example of a Mountain constraint.
+ *   Its base extractiveness (0.1) and suppression (0.05) are low, reflecting
+ *   its nature as a non-coercive, axiomatic truth that renders alternatives
+ *   logically impossible rather than actively suppressing them. The Natural
+ *   Law profile metrics (accessibility_collapse=1.0, resistance=0.0) confirm
+ *   this status.
+ *
+ * PERSPECTIVAL GAP:
+ *   There is no perspectival gap. This is a uniform-type constraint (Mountain-only).
+ *   The classification is invariant across all indices, which is the hallmark of
+ *   a natural law.
+ *
+ * DIRECTIONALITY LOGIC:
+ *   As a Mountain, the constraint is symmetric and does not have specific
+ *   beneficiaries or victims in the structural sense required for directionality
+ *   derivation. The concept is not applicable.
+ *
+ * MANDATROPHY ANALYSIS:
+ *   This story corrects a common category error: mistaking the *consequences*
+ *   of a constraint for the constraint itself. While the theorem can be *used*
+ *   as a coordination tool (Rope) or its effects can *feel* like an obstacle
+ *   (Snare), the theorem's structure is that of a Mountain. The framework
+ *   correctly classifies the invariant structure, not the contingent applications.
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+omega_variable(
+    omega_discrete_gauss_bonnet,
+    "Does the 'Mountain' logic hold perfectly for discrete meshes with angular deficit, or do numerical artifacts introduce contingency?",
+    "Verification of the Discrete Gauss-Bonnet theorem across varied mesh densities and floating-point precision regimes.",
+    "If Yes: The Mountain is robust in discrete domains. If No: Numerical noise makes its application a Scaffold, contingent on resolution.",
+    confidence_without_resolution(high)
+).
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+% Required for external script parsing
+narrative_ontology:interval(gauss_bonnet_topology, 1848, 2026).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Not required. Base extractiveness (0.1) is below the 0.46 threshold for
+% mandatory lifecycle drift tracking. The theorem is static.
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA
+   ========================================================================== */
+
+% Not applicable for this constraint.
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+% Not applicable for this constraint.
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */

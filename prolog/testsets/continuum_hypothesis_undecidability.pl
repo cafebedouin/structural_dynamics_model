@@ -62,7 +62,8 @@
 
 % Required for structural extraction and indexer coordination
 narrative_ontology:interval(continuum_era, 1878, 2026).
-narrative_ontology:constraint_claim(continuum_hypothesis_undecidability, mountain).
+narrative_ontology:constraint_claim(continuum_hypothesis_undecidability, tangled_rope).
+domain_priors:requires_active_enforcement(continuum_hypothesis_undecidability).
 
 % Base extractiveness score (0.0-1.0)
 % Rationale: 0.15. Low. While a "gift" of logical depth, it "extracts" 
@@ -114,7 +115,7 @@ narrative_ontology:constraint_victim(continuum_hypothesis_undecidability, intuit
 
 constraint_indexing:constraint_classification(
     continuum_hypothesis_undecidability,
-    mountain,
+    tangled_rope,
     context(
         agent_power(powerless),
         time_horizon(immediate),

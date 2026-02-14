@@ -60,7 +60,8 @@
 
 % Required for structural extraction of the ID and temporal range
 narrative_ontology:interval(whitehead_era, 1952, 2026).
-narrative_ontology:constraint_claim(whitehead_problem_undecidability, mountain).
+narrative_ontology:constraint_claim(whitehead_problem_undecidability, tangled_rope).
+domain_priors:requires_active_enforcement(whitehead_problem_undecidability).
 
 % Base extractiveness score (0.0-1.0)
 % Rationale: 0.2. While mathematically an "opening" of new models, it 
@@ -111,7 +112,7 @@ narrative_ontology:constraint_victim(whitehead_problem_undecidability, hilbertia
 
 constraint_indexing:constraint_classification(
     whitehead_problem_undecidability,
-    mountain,
+    tangled_rope,
     context(
         agent_power(powerless),
         time_horizon(immediate),

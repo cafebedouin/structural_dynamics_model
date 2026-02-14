@@ -74,7 +74,7 @@ narrative_ontology:constraint_metric(wikipedia_crowdsourcing_2026, extractivenes
 narrative_ontology:constraint_metric(wikipedia_crowdsourcing_2026, suppression_requirement, 0.4).
 
 % Constraint classification claim
-narrative_ontology:constraint_claim(wikipedia_crowdsourcing_2026, mountain).
+narrative_ontology:constraint_claim(wikipedia_crowdsourcing_2026, rope).
 
 % Enforcement requirements
 % Requires active enforcement (The "clever system" of editor hierarchy).
@@ -170,7 +170,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     wikipedia_crowdsourcing_2026,
-    mountain,
+    rope,
     context(
         agent_power(analytical),
         time_horizon(historical),
@@ -188,7 +188,7 @@ constraint_indexing:constraint_classification(
 test(multi_perspective_trust) :-
     constraint_indexing:constraint_classification(wikipedia_crowdsourcing_2026, rope, context(agent_power(institutional), _, _, _)),
     constraint_indexing:constraint_classification(wikipedia_crowdsourcing_2026, snare, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(wikipedia_crowdsourcing_2026, mountain, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(wikipedia_crowdsourcing_2026, rope, context(agent_power(analytical), _, _, _)).
 
 test(edit_frequency_governance) :-
     % 342 edits/min requires high suppression/coordination scores to avoid chaos.

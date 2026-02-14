@@ -1,6 +1,6 @@
 # Tangled Rope Diagnostic Report
 
-**Total Unique Tangled Ropes Found:** 390
+**Total Unique Tangled Ropes Found:** 500
 
 ---
 
@@ -246,7 +246,32 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 9. Tangled Rope: `adaptive_lag_trap`
+### 9. Tangled Rope: `ad_synaptic_deficit`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `snare`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** Perspectives AGREE
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** Constraint ad_synaptic_deficit appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Design measurement protocol for unknown
+2. Collect data from N=30+ real-world instances
+3. Calculate empirical metrics:
+- suppression_requirement (enforcement needed)
+- resistance_to_change (pushback level)
+- base_extractiveness (asymmetric benefit flow)
+4. Update constraint_metric/3 declarations with data
+5. Re-run classification to resolve perspectival gap
+    ```
+
+---
+
+### 10. Tangled Rope: `adaptive_lag_trap`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -278,7 +303,39 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 10. Tangled Rope: `adversarial_truth_decay`
+### 11. Tangled Rope: `adversarial_surface_inflation`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `snare`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `piton`
+*   **Structural Signature Analysis:** Perspectives AGREE
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** Constraint adversarial_surface_inflation appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from adversarial_surface_inflation?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does adversarial_surface_inflation serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 12. Tangled Rope: `adversarial_truth_decay`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -310,7 +367,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 11. Tangled Rope: `advice_as_dangerous_gift`
+### 13. Tangled Rope: `advice_as_dangerous_gift`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -342,7 +399,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 12. Tangled Rope: `agency_atrophy`
+### 14. Tangled Rope: `agency_atrophy`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -374,7 +431,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 13. Tangled Rope: `aging_well_assessment`
+### 15. Tangled Rope: `aging_well_assessment`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -406,7 +463,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 14. Tangled Rope: `ai_auditability_gap`
+### 16. Tangled Rope: `ai_auditability_gap`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -438,7 +495,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 15. Tangled Rope: `ai_banal_capture`
+### 17. Tangled Rope: `ai_banal_capture`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -470,7 +527,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 16. Tangled Rope: `ai_driven_surveillance_sensor_layer`
+### 18. Tangled Rope: `ai_driven_surveillance_sensor_layer`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -495,7 +552,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 17. Tangled Rope: `ai_evaluators_matching`
+### 19. Tangled Rope: `ai_evaluators_matching`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -527,7 +584,39 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 18. Tangled Rope: `ai_religion_regulation`
+### 20. Tangled Rope: `ai_professional_displacement`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `snare`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** Perspectives AGREE
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** Constraint ai_professional_displacement appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from ai_professional_displacement?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does ai_professional_displacement serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 21. Tangled Rope: `ai_religion_regulation`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -559,7 +648,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 19. Tangled Rope: `ai_scholar_citation_trap`
+### 22. Tangled Rope: `ai_scholar_citation_trap`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -591,7 +680,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 20. Tangled Rope: `ai_task_horizon_reliability`
+### 23. Tangled Rope: `ai_task_horizon_reliability`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -622,7 +711,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 21. Tangled Rope: `algorithmic_epistemic_capture`
+### 24. Tangled Rope: `algorithmic_epistemic_capture`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -647,7 +736,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 22. Tangled Rope: `alignment_tax_tradeoff`
+### 25. Tangled Rope: `alignment_tax_tradeoff`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -672,7 +761,39 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 23. Tangled Rope: `ancient_grudge_verona`
+### 26. Tangled Rope: `ancestral_pueblo_hydrology`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `snare`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for ancestral_pueblo_hydrology: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.25),excess_above_floor(0.7699999999999999)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** Constraint ancestral_pueblo_hydrology appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from ancestral_pueblo_hydrology?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does ancestral_pueblo_hydrology serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 27. Tangled Rope: `ancient_grudge_verona`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -699,7 +820,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 24. Tangled Rope: `anticipatory_capacity_failure`
+### 28. Tangled Rope: `anticipatory_capacity_failure`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -724,7 +845,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 25. Tangled Rope: `antifragility`
+### 29. Tangled Rope: `antifragility`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -751,7 +872,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 26. Tangled Rope: `apartheid_nuclear_program`
+### 30. Tangled Rope: `apartheid_nuclear_program`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -776,7 +897,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 27. Tangled Rope: `arctic_geopolitical_flashpoint`
+### 31. Tangled Rope: `arctic_geopolitical_flashpoint`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
@@ -808,7 +929,71 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 28. Tangled Rope: `asymmetric_burden_distribution`
+### 32. Tangled Rope: `arrows_impossibility_theorem`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `snare`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** Perspectives AGREE
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** Constraint arrows_impossibility_theorem appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from arrows_impossibility_theorem?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does arrows_impossibility_theorem serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 33. Tangled Rope: `asce_7_22_seismic_design`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `snare`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** Perspectives AGREE
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** Constraint asce_7_22_seismic_design appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from asce_7_22_seismic_design?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does asce_7_22_seismic_design serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 34. Tangled Rope: `asymmetric_burden_distribution`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -840,7 +1025,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 29. Tangled Rope: `attention_as_bottleneck_resource`
+### 35. Tangled Rope: `attention_as_bottleneck_resource`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -872,7 +1057,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 30. Tangled Rope: `attention_market_cannibalization`
+### 36. Tangled Rope: `attention_market_cannibalization`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -904,7 +1089,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 31. Tangled Rope: `australia_social_ban_2026`
+### 37. Tangled Rope: `australia_social_ban_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -936,7 +1121,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 32. Tangled Rope: `autonomous_toolchain_sprawl`
+### 38. Tangled Rope: `autonomous_toolchain_sprawl`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -968,7 +1153,39 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 33. Tangled Rope: `average_is_over_2026`
+### 39. Tangled Rope: `availability_heuristic`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `snare`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for availability_heuristic: Appears to be rope (indexed_rope_classification) but fails 4 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.25),scope_variant([tangled_rope,unknown]),excess_above_floor(0.35000000000000003),nonsensical_coupling(0.3333333333333333)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** Constraint availability_heuristic appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from availability_heuristic?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does availability_heuristic serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 40. Tangled Rope: `average_is_over_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -1000,7 +1217,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 34. Tangled Rope: `awareness_without_leverage`
+### 41. Tangled Rope: `awareness_without_leverage`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -1032,7 +1249,66 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 35. Tangled Rope: `bangladesh_july_national_charter`
+### 42. Tangled Rope: `axiom_reasoner_2026`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `snare`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for axiom_reasoner_2026: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.25),excess_above_floor(0.43)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** Constraint axiom_reasoner_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from axiom_reasoner_2026?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does axiom_reasoner_2026 serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 43. Tangled Rope: `banach_tarski_paradox`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `N/A`
+    *   Analytical View: `N/A`
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for banach_tarski_paradox: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.15000000000000002)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Related Gap/Alert:** N/A
+*   **Generated Omega:** Constraint banach_tarski_paradox appears as tangled_rope to individuals but rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive banach_tarski_paradox
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 44. Tangled Rope: `bangladesh_july_national_charter`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -1064,7 +1340,61 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 36. Tangled Rope: `bedouin_sedentary_transition`
+### 45. Tangled Rope: `base_pair_complementarity`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `N/A`
+    *   Analytical View: `N/A`
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for base_pair_complementarity: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.15000000000000002)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Related Gap/Alert:** N/A
+*   **Generated Omega:** Constraint base_pair_complementarity appears as tangled_rope to individuals but rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive base_pair_complementarity
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 46. Tangled Rope: `basel_problem_convergence`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `N/A`
+    *   Analytical View: `N/A`
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for basel_problem_convergence: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.15000000000000002)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Related Gap/Alert:** N/A
+*   **Generated Omega:** Constraint basel_problem_convergence appears as tangled_rope to individuals but rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive basel_problem_convergence
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 47. Tangled Rope: `bedouin_sedentary_transition`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
@@ -1091,7 +1421,71 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 37. Tangled Rope: `bip_narrative_illusion`
+### 48. Tangled Rope: `bgs_eigenvector_thermalization`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `snare`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for bgs_eigenvector_thermalization: Appears to be rope (indexed_rope_classification) but fails 4 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.25),scope_variant([tangled_rope,unknown]),excess_above_floor(0.39999999999999997),nonsensical_coupling(0.3333333333333333)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** Constraint bgs_eigenvector_thermalization appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from bgs_eigenvector_thermalization?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does bgs_eigenvector_thermalization serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 49. Tangled Rope: `big_data_astrophysics_arbitrage`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `snare`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** Perspectives AGREE
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** Constraint big_data_astrophysics_arbitrage appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from big_data_astrophysics_arbitrage?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does big_data_astrophysics_arbitrage serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 50. Tangled Rope: `bip_narrative_illusion`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -1123,7 +1517,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 38. Tangled Rope: `blackstone_conflicts_of_interest`
+### 51. Tangled Rope: `blackstone_conflicts_of_interest`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -1155,7 +1549,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 39. Tangled Rope: `blackstone_smd_control`
+### 52. Tangled Rope: `blackstone_smd_control`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -1187,7 +1581,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 40. Tangled Rope: `blackstone_tax_receiveable_agreement`
+### 53. Tangled Rope: `blackstone_tax_receiveable_agreement`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -1219,7 +1613,39 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 41. Tangled Rope: `boundary_dissolution_risk`
+### 54. Tangled Rope: `boltzmann_universality_2026`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `snare`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for boltzmann_universality_2026: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.375,0.25),excess_above_floor(0.09999999999999999)]. Coupling score=0.375. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** Constraint boltzmann_universality_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from boltzmann_universality_2026?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does boltzmann_universality_2026 serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 55. Tangled Rope: `boundary_dissolution_risk`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -1251,7 +1677,25 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 42. Tangled Rope: `brazil_2026_general_elections`
+### 56. Tangled Rope: `brain_network_paradigm_2026`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `rope`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** Perspectives AGREE
+*   **Related Gap/Alert:** N/A
+*   **Generated Omega:** N/A
+*   **Suggested Resolution Strategy:**
+    ```
+
+    ```
+
+---
+
+### 57. Tangled Rope: `brazil_2026_general_elections`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -1283,7 +1727,120 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 43. Tangled Rope: `bureaucratic_legibility_collapse`
+### 58. Tangled Rope: `broke_vs_poor_grocery_math`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `snare`
+    *   Institutional (Manager) View: `tangled_rope`
+    *   Analytical View: `snare`
+*   **Structural Signature Analysis:** Perspectives AGREE
+*   **Related Gap/Alert:** N/A
+*   **Generated Omega:** Constraint broke_vs_poor_grocery_math appears as snare to individuals but tangled_rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive broke_vs_poor_grocery_math
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 59. Tangled Rope: `brouwer_fixed_point`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `N/A`
+    *   Analytical View: `N/A`
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for brouwer_fixed_point: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.15000000000000002)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Related Gap/Alert:** N/A
+*   **Generated Omega:** Constraint brouwer_fixed_point appears as tangled_rope to individuals but rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive brouwer_fixed_point
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 60. Tangled Rope: `buffons_needle_pi_estimation`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `N/A`
+    *   Analytical View: `N/A`
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for buffons_needle_pi_estimation: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.15000000000000002)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Related Gap/Alert:** N/A
+*   **Generated Omega:** Constraint buffons_needle_pi_estimation appears as tangled_rope to individuals but rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive buffons_needle_pi_estimation
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 61. Tangled Rope: `burali_forte_paradox`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `N/A`
+    *   Institutional (Manager) View: `N/A`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for burali_forti_paradox: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.15000000000000002)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** Constraint burali_forti_paradox appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from burali_forti_paradox?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does burali_forti_paradox serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 62. Tangled Rope: `bureaucratic_legibility_collapse`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -1315,7 +1872,39 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 44. Tangled Rope: `canal_panama_influence`
+### 63. Tangled Rope: `bushman_money_magic`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `snare`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** Perspectives AGREE
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** Constraint bushman_money_magic appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from bushman_money_magic?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does bushman_money_magic serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 64. Tangled Rope: `canal_panama_influence`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -1347,7 +1936,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 45. Tangled Rope: `cancer_prevention`
+### 65. Tangled Rope: `cancer_prevention`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -1379,7 +1968,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 46. Tangled Rope: `capability_eval_overhang`
+### 66. Tangled Rope: `capability_eval_overhang`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -1411,7 +2000,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 47. Tangled Rope: `capital_misallocation_spiral`
+### 67. Tangled Rope: `capital_misallocation_spiral`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -1443,7 +2032,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 48. Tangled Rope: `carbon_credit_markets_2026`
+### 68. Tangled Rope: `carbon_credit_markets_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -1475,7 +2064,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 49. Tangled Rope: `carrying_capacity`
+### 69. Tangled Rope: `carrying_capacity`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -1507,7 +2096,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 50. Tangled Rope: `cascading_constraint_failure`
+### 70. Tangled Rope: `cascading_constraint_failure`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -1539,7 +2128,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 51. Tangled Rope: `cascading_uncertainty_2026`
+### 71. Tangled Rope: `cascading_uncertainty_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -1571,7 +2160,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 52. Tangled Rope: `castration_longevity_choice`
+### 72. Tangled Rope: `castration_longevity_choice`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -1600,7 +2189,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 53. Tangled Rope: `cb_far_beyond_human`
+### 73. Tangled Rope: `cb_far_beyond_human`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -1627,7 +2216,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 54. Tangled Rope: `cbdc_implementation`
+### 74. Tangled Rope: `cbdc_implementation`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -1659,7 +2248,66 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 55. Tangled Rope: `china_critical_mineral_chokepoint`
+### 75. Tangled Rope: `chaitins_omega_undecidability`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `N/A`
+    *   Analytical View: `N/A`
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for chaitins_omega_undecidability: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.15000000000000002)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Related Gap/Alert:** N/A
+*   **Generated Omega:** Constraint chaitins_omega_undecidability appears as tangled_rope to individuals but rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive chaitins_omega_undecidability
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 76. Tangled Rope: `challenger_o_ring_integrity`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `snare`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `snare`
+*   **Structural Signature Analysis:** Perspectives AGREE
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** Constraint challenger_o_ring_integrity appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from challenger_o_ring_integrity?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does challenger_o_ring_integrity serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 77. Tangled Rope: `china_critical_mineral_chokepoint`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -1691,7 +2339,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 56. Tangled Rope: `china_taiwan_reunification_mandate`
+### 78. Tangled Rope: `china_taiwan_reunification_mandate`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -1722,7 +2370,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 57. Tangled Rope: `cholesterol_pill_cost`
+### 79. Tangled Rope: `cholesterol_pill_cost`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -1754,7 +2402,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 58. Tangled Rope: `cia_fbi_legal_wall`
+### 80. Tangled Rope: `cia_fbi_legal_wall`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -1786,7 +2434,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 59. Tangled Rope: `circadian_decoupling_arbitrage`
+### 81. Tangled Rope: `circadian_decoupling_arbitrage`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -1818,7 +2466,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 60. Tangled Rope: `citation_collapse_dynamics`
+### 82. Tangled Rope: `citation_collapse_dynamics`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -1850,7 +2498,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 61. Tangled Rope: `civilizational_maintenance_debt`
+### 83. Tangled Rope: `civilizational_maintenance_debt`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -1882,7 +2530,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 62. Tangled Rope: `climate_target_one_point_five`
+### 84. Tangled Rope: `climate_target_one_point_five`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -1909,7 +2557,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 63. Tangled Rope: `cloudflare_dual_class_asymmetry`
+### 85. Tangled Rope: `cloudflare_dual_class_asymmetry`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -1941,7 +2589,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 64. Tangled Rope: `cmr_001`
+### 86. Tangled Rope: `cmr_001`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -1973,7 +2621,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 65. Tangled Rope: `cobra_effect`
+### 87. Tangled Rope: `cobra_effect`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -2005,7 +2653,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 66. Tangled Rope: `codex_access`
+### 88. Tangled Rope: `codex_access`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -2037,7 +2685,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 67. Tangled Rope: `cognitive_diversity_arbitrage`
+### 89. Tangled Rope: `cognitive_diversity_arbitrage`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -2069,7 +2717,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 68. Tangled Rope: `cognitive_energy_budget`
+### 90. Tangled Rope: `cognitive_energy_budget`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -2101,7 +2749,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 69. Tangled Rope: `cognitive_hacking_2026`
+### 91. Tangled Rope: `cognitive_hacking_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -2133,7 +2781,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 70. Tangled Rope: `cognitive_induction_gap`
+### 92. Tangled Rope: `cognitive_induction_gap`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -2165,7 +2813,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 71. Tangled Rope: `cognitive_mimicry_arbitrage`
+### 93. Tangled Rope: `cognitive_mimicry_arbitrage`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -2197,7 +2845,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 72. Tangled Rope: `cognitive_surrender_to_system_3`
+### 94. Tangled Rope: `cognitive_surrender_to_system_3`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -2229,7 +2877,39 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 73. Tangled Rope: `coinbase_regulatory_uncertainty`
+### 95. Tangled Rope: `coinbase_crypto_volatility`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `snare`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** Perspectives AGREE
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** Constraint coinbase_crypto_volatility appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from coinbase_crypto_volatility?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does coinbase_crypto_volatility serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 96. Tangled Rope: `coinbase_regulatory_uncertainty`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -2261,7 +2941,34 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 74. Tangled Rope: `collective_action_deadlock`
+### 97. Tangled Rope: `collatz_conjecture_determinism`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `N/A`
+    *   Analytical View: `N/A`
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for collatz_conjecture_determinism: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.09999999999999999)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Related Gap/Alert:** N/A
+*   **Generated Omega:** Constraint collatz_conjecture_determinism appears as tangled_rope to individuals but rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive collatz_conjecture_determinism
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 98. Tangled Rope: `collective_action_deadlock`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -2293,7 +3000,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 75. Tangled Rope: `college_admissions_market`
+### 99. Tangled Rope: `college_admissions_market`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -2325,7 +3032,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 76. Tangled Rope: `colorado_sbe_decentralization_friction`
+### 100. Tangled Rope: `colorado_sbe_decentralization_friction`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -2357,7 +3064,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 77. Tangled Rope: `complexity_debt`
+### 101. Tangled Rope: `complexity_debt`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -2389,7 +3096,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 78. Tangled Rope: `compounding_logic`
+### 102. Tangled Rope: `compounding_logic`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -2421,7 +3128,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 79. Tangled Rope: `consensus_without_truth`
+### 103. Tangled Rope: `consensus_without_truth`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -2453,7 +3160,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 80. Tangled Rope: `constitutional_consecration`
+### 104. Tangled Rope: `constitutional_consecration`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -2485,32 +3192,34 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 81. Tangled Rope: `constraint_interaction_explosion`
+### 105. Tangled Rope: `constitutional_supremacy`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
-    *   Individual (Powerless) View: `snare`
+    *   Individual (Powerless) View: `tangled_rope`
     *   Institutional (Manager) View: `rope`
-    *   Analytical View: `tangled_rope`
-*   **Structural Signature Analysis:** Perspectives AGREE
-*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
-*   **Generated Omega:** Constraint constraint_interaction_explosion appears extractive (Snare) to individuals but functional (Rope) to institutions...
+    *   Analytical View: `N/A`
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for constitutional_supremacy: Appears to be rope (indexed_rope_classification) but fails 4 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.25),scope_variant([rope,tangled_rope]),excess_above_floor(0.25),nonsensical_coupling(0.5)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Related Gap/Alert:** N/A
+*   **Generated Omega:** Constraint constitutional_supremacy appears as tangled_rope to individuals but rope to institutions...
 *   **Suggested Resolution Strategy:**
     ```
-1. Design measurement protocol for unknown
-2. Collect data from N=30+ real-world instances
-3. Calculate empirical metrics:
-- suppression_requirement (enforcement needed)
-- resistance_to_change (pushback level)
-- base_extractiveness (asymmetric benefit flow)
-4. Update constraint_metric/3 declarations with data
-5. Re-run classification to resolve perspectival gap
+1. Map stakeholder perspectives:
+- Document how different actors perceive constitutional_supremacy
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
     ```
 
 ---
 
-### 82. Tangled Rope: `consumer_debt_slavery`
+### 106. Tangled Rope: `consumer_debt_slavery`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -2542,7 +3251,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 83. Tangled Rope: `container_capacity_mismatch`
+### 107. Tangled Rope: `container_capacity_mismatch`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -2574,7 +3283,34 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 84. Tangled Rope: `conversational_dogmas_interuption`
+### 108. Tangled Rope: `continuum_hypothesis_undecidability`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `N/A`
+    *   Analytical View: `N/A`
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for continuum_hypothesis_undecidability: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.09999999999999999)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Related Gap/Alert:** N/A
+*   **Generated Omega:** Constraint continuum_hypothesis_undecidability appears as tangled_rope to individuals but rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive continuum_hypothesis_undecidability
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 109. Tangled Rope: `conversational_dogmas_interuption`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -2606,7 +3342,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 85. Tangled Rope: `coordination_attack_vulnerability`
+### 110. Tangled Rope: `coordination_attack_vulnerability`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -2638,7 +3374,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 86. Tangled Rope: `coordination_fatigue`
+### 111. Tangled Rope: `coordination_fatigue`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -2670,7 +3406,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 87. Tangled Rope: `coordination_threshold_failure`
+### 112. Tangled Rope: `coordination_threshold_failure`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -2702,7 +3438,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 88. Tangled Rope: `copyright_protection`
+### 113. Tangled Rope: `copyright_protection`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -2729,7 +3465,66 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 89. Tangled Rope: `couples_residency_match`
+### 114. Tangled Rope: `cost_of_observation`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `snare`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for cost_of_observation: Appears to be rope (indexed_rope_classification) but fails 4 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.25),scope_variant([tangled_rope,unknown]),excess_above_floor(0.7999999999999999),nonsensical_coupling(0.3333333333333333)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** Constraint cost_of_observation appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from cost_of_observation?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does cost_of_observation serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 115. Tangled Rope: `countable_infinity_cardinality`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `N/A`
+    *   Analytical View: `N/A`
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for countable_infinity_cardinality: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.15000000000000002)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Related Gap/Alert:** N/A
+*   **Generated Omega:** Constraint countable_infinity_cardinality appears as tangled_rope to individuals but rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive countable_infinity_cardinality
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 116. Tangled Rope: `couples_residency_match`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -2761,7 +3556,34 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 90. Tangled Rope: `credibility_inflation`
+### 117. Tangled Rope: `cow_field_poop`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `snare`
+    *   Institutional (Manager) View: `tangled_rope`
+    *   Analytical View: `N/A`
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for cow_field_poop: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.25),excess_above_floor(0.35000000000000003)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Related Gap/Alert:** N/A
+*   **Generated Omega:** Constraint cow_field_poop appears as snare to individuals but tangled_rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive cow_field_poop
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 118. Tangled Rope: `credibility_inflation`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -2793,7 +3615,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 91. Tangled Rope: `crisis_signal_saturation`
+### 119. Tangled Rope: `crisis_signal_saturation`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -2825,7 +3647,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 92. Tangled Rope: `critical_actor_overcentralization`
+### 120. Tangled Rope: `critical_actor_overcentralization`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -2857,7 +3679,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 93. Tangled Rope: `cross_domain_coupling_spiral`
+### 121. Tangled Rope: `cross_domain_coupling_spiral`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -2889,7 +3711,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 94. Tangled Rope: `cs_ecmo_bridge`
+### 122. Tangled Rope: `cs_ecmo_bridge`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -2921,7 +3743,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 95. Tangled Rope: `cultural_memory_decay`
+### 123. Tangled Rope: `cultural_memory_decay`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -2953,7 +3775,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 96. Tangled Rope: `cz_plea_agreement_2026`
+### 124. Tangled Rope: `cz_plea_agreement_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -2985,7 +3807,39 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 97. Tangled Rope: `data_laundering_pipeline`
+### 125. Tangled Rope: `dark_patterns_manipulation`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `snare`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for dark_patterns_manipulation: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.25),excess_above_floor(0.7999999999999999)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** Constraint dark_patterns_manipulation appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from dark_patterns_manipulation?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does dark_patterns_manipulation serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 126. Tangled Rope: `data_laundering_pipeline`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -3017,7 +3871,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 98. Tangled Rope: `data_privacy_regulation`
+### 127. Tangled Rope: `data_privacy_regulation`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -3049,7 +3903,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 99. Tangled Rope: `decision_latency_mismatch`
+### 128. Tangled Rope: `decision_latency_mismatch`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -3081,7 +3935,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 100. Tangled Rope: `deferred_risk_realization`
+### 129. Tangled Rope: `deferred_risk_realization`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -3113,15 +3967,15 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 101. Tangled Rope: `delayed_feedback_instability`
+### 130. Tangled Rope: `delayed_feedback_instability`
 
-*   **Claimed Type:** `mountain`
+*   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
     *   Individual (Powerless) View: `snare`
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
-*   **Structural Signature Analysis:** FALSE NATURAL LAW signature for delayed_feedback_instability: Claims naturality (explicit_mountain_claim) but fails Boltzmann independence test. Coupling score=0.750 with 0 coupled dimension pairs. Excess extraction=0.65. This constraint is "physics-washed" — it appears natural but its coupling topology reveals structural construction.
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for delayed_feedback_instability: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.3),excess_above_floor(0.65)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint delayed_feedback_instability appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -3145,7 +3999,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 102. Tangled Rope: `delta_force_selection_2026`
+### 131. Tangled Rope: `delta_force_selection_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -3177,7 +4031,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 103. Tangled Rope: `demographic_inertia_trap`
+### 132. Tangled Rope: `demographic_inertia_trap`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -3209,7 +4063,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 104. Tangled Rope: `digital_credentialing_verification`
+### 133. Tangled Rope: `digital_credentialing_verification`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -3241,7 +4095,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 105. Tangled Rope: `digital_identity_tether`
+### 134. Tangled Rope: `digital_identity_tether`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -3273,7 +4127,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 106. Tangled Rope: `dionysaic_frenzy`
+### 135. Tangled Rope: `dionysaic_frenzy`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -3305,7 +4159,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 107. Tangled Rope: `discover_core_2026`
+### 136. Tangled Rope: `discover_core_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -3337,7 +4191,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 108. Tangled Rope: `dunning_kruger_effect`
+### 137. Tangled Rope: `dunning_kruger_effect`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -3369,7 +4223,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 109. Tangled Rope: `edelman_2026_developed_stagnation`
+### 138. Tangled Rope: `edelman_2026_developed_stagnation`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -3401,7 +4255,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 110. Tangled Rope: `edelman_2026_developing_volatility`
+### 139. Tangled Rope: `edelman_2026_developing_volatility`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -3428,7 +4282,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 111. Tangled Rope: `edelman_2026_insularity`
+### 140. Tangled Rope: `edelman_2026_insularity`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -3460,7 +4314,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 112. Tangled Rope: `electrification_scale_2026`
+### 141. Tangled Rope: `electrification_scale_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -3492,7 +4346,39 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 113. Tangled Rope: `elite_overproduction_instability`
+### 142. Tangled Rope: `elite_identity_capture_2026`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `snare`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** Perspectives AGREE
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** Constraint elite_identity_capture_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from elite_identity_capture_2026?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does elite_identity_capture_2026 serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 143. Tangled Rope: `elite_overproduction_instability`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -3524,7 +4410,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 114. Tangled Rope: `emergency_mode_lock_in`
+### 144. Tangled Rope: `emergency_mode_lock_in`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -3556,7 +4442,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 115. Tangled Rope: `emergency_oversight_bureau`
+### 145. Tangled Rope: `emergency_oversight_bureau`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -3583,7 +4469,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 116. Tangled Rope: `emergency_powers_ratchet`
+### 146. Tangled Rope: `emergency_powers_ratchet`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -3615,7 +4501,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 117. Tangled Rope: `emergent_goal_misalignment`
+### 147. Tangled Rope: `emergent_goal_misalignment`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -3647,7 +4533,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 118. Tangled Rope: `emotional_cycles_of_change`
+### 148. Tangled Rope: `emotional_cycles_of_change`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -3674,7 +4560,39 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 119. Tangled Rope: `emrgency_medicine_clinical_guidelines`
+### 149. Tangled Rope: `empty_tomb_transformation`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `snare`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** Perspectives AGREE
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** Constraint empty_tomb_transformation appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from empty_tomb_transformation?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does empty_tomb_transformation serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 150. Tangled Rope: `emrgency_medicine_clinical_guidelines`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -3706,7 +4624,39 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 120. Tangled Rope: `epistemic_free_rider_problem`
+### 151. Tangled Rope: `endocrine_disruption_society`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `snare`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** Perspectives AGREE
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** Constraint endocrine_disruption_society appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from endocrine_disruption_society?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does endocrine_disruption_society serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 152. Tangled Rope: `epistemic_free_rider_problem`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -3738,7 +4688,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 121. Tangled Rope: `epistemic_overload_collapse`
+### 153. Tangled Rope: `epistemic_overload_collapse`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -3770,7 +4720,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 122. Tangled Rope: `ergo_mixer_protocol`
+### 154. Tangled Rope: `ergo_mixer_protocol`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -3788,7 +4738,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 123. Tangled Rope: `ergo_rosen_bridge_protocol`
+### 155. Tangled Rope: `ergo_rosen_bridge_protocol`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -3820,7 +4770,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 124. Tangled Rope: `ergo_storage_rent`
+### 156. Tangled Rope: `ergo_storage_rent`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -3852,7 +4802,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 125. Tangled Rope: `ergo_storage_rent_mechanism`
+### 157. Tangled Rope: `ergo_storage_rent_mechanism`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -3884,7 +4834,39 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 126. Tangled Rope: `ergot_grain_poisoning`
+### 158. Tangled Rope: `ergodic_theorems`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `snare`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `mountain`
+*   **Structural Signature Analysis:** Perspectives AGREE
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** Constraint ergodic_theorems appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from ergodic_theorems?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does ergodic_theorems serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 159. Tangled Rope: `ergot_grain_poisoning`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -3916,7 +4898,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 127. Tangled Rope: `eurozone_fragmentation_2026`
+### 160. Tangled Rope: `eurozone_fragmentation_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -3948,7 +4930,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 128. Tangled Rope: `evidence_half_life`
+### 161. Tangled Rope: `evidence_half_life`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -3980,7 +4962,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 129. Tangled Rope: `evolutionary_knowledge`
+### 162. Tangled Rope: `evolutionary_knowledge`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -4012,7 +4994,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 130. Tangled Rope: `evolutionary_mismatch_load`
+### 163. Tangled Rope: `evolutionary_mismatch_load`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -4044,7 +5026,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 131. Tangled Rope: `expert_disempowerment`
+### 164. Tangled Rope: `expert_disempowerment`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -4076,7 +5058,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 132. Tangled Rope: `exploration_vs_exploitation`
+### 165. Tangled Rope: `exploration_vs_exploitation`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -4108,7 +5090,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 133. Tangled Rope: `extraordinary_narrative_shift`
+### 166. Tangled Rope: `extraordinary_narrative_shift`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -4140,7 +5122,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 134. Tangled Rope: `faa_boeing_regulatory_capture`
+### 167. Tangled Rope: `faa_boeing_regulatory_capture`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -4167,7 +5149,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 135. Tangled Rope: `factional_instability`
+### 168. Tangled Rope: `factional_instability`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -4199,7 +5181,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 136. Tangled Rope: `family_estrangement_ratio`
+### 169. Tangled Rope: `family_estrangement_ratio`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -4231,38 +5213,34 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 137. Tangled Rope: `family_succession_and_decadence`
+### 170. Tangled Rope: `family_succession_and_decadence`
 
-*   **Claimed Type:** `mountain`
+*   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
-    *   Individual (Powerless) View: `mountain`
+    *   Individual (Powerless) View: `tangled_rope`
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
-*   **Related Gap/Alert:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
-*   **Generated Omega:** Constraint family_succession_system appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
+*   **Related Gap/Alert:** N/A
+*   **Generated Omega:** Constraint family_succession_system appears as tangled_rope to individuals but rope to institutions...
 *   **Suggested Resolution Strategy:**
     ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut family_succession_system, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
+1. Map stakeholder perspectives:
+- Document how different actors perceive family_succession_system
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
     ```
 
 ---
 
-### 138. Tangled Rope: `fed_shutdown_2026`
+### 171. Tangled Rope: `fed_shutdown_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -4289,7 +5267,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 139. Tangled Rope: `feedback_loop_desynchronization`
+### 172. Tangled Rope: `feedback_loop_desynchronization`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -4321,7 +5299,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 140. Tangled Rope: `financialization_drag`
+### 173. Tangled Rope: `financialization_drag`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -4353,7 +5331,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 141. Tangled Rope: `fine_particle_policy`
+### 174. Tangled Rope: `fine_particle_policy`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -4385,7 +5363,39 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 142. Tangled Rope: `fiscal_dominance_trap`
+### 175. Tangled Rope: `finite_pool_of_worry`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `snare`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** Perspectives AGREE
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** Constraint finite_pool_of_worry appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from finite_pool_of_worry?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does finite_pool_of_worry serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 176. Tangled Rope: `fiscal_dominance_trap`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -4417,7 +5427,39 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 143. Tangled Rope: `floating_wall_2026`
+### 177. Tangled Rope: `fittss_law`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `snare`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** Perspectives AGREE
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** Constraint fitts_law_industrial_application appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from fitts_law_industrial_application?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does fitts_law_industrial_application serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 178. Tangled Rope: `floating_wall_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -4449,36 +5491,34 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 144. Tangled Rope: `fnl_shadow_probe`
+### 179. Tangled Rope: `fnl_shadow_probe`
 
-*   **Claimed Type:** `mountain`
+*   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
-    *   Individual (Powerless) View: `snare`
-    *   Institutional (Manager) View: `mountain`
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
 *   **Related Gap/Alert:** N/A
-*   **Generated Omega:** Constraint fnl_shadow_probe appears extractive (Snare) to individuals but unchangeable (Mountain) to institutions...
+*   **Generated Omega:** Constraint fnl_shadow_probe appears as tangled_rope to individuals but rope to institutions...
 *   **Suggested Resolution Strategy:**
     ```
-1. Test changeability:
-- Can institutions modify fnl_shadow_probe?
-- What legal/political mechanisms exist?
-- Historical precedents of change?
-2. Test extraction:
-- Is benefit flow symmetric or asymmetric?
-- Who has veto power over changes?
-3. Decision tree:
-IF truly unchangeable + extractive → MANDATROPHY
-IF changeable + extractive → Correct to SNARE
-IF unchangeable + fair → Correct to MOUNTAIN
-IF institutions falsely claim necessity → SNARE + fraud flag
+1. Map stakeholder perspectives:
+- Document how different actors perceive fnl_shadow_probe
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
     ```
 
 ---
 
-### 145. Tangled Rope: `fragile_middle_layer_collapse`
+### 180. Tangled Rope: `fragile_middle_layer_collapse`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -4510,7 +5550,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 146. Tangled Rope: `framing_effect`
+### 181. Tangled Rope: `framing_effect`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -4542,7 +5582,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 147. Tangled Rope: `france_2027_presidential_election`
+### 182. Tangled Rope: `france_2027_presidential_election`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -4574,7 +5614,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 148. Tangled Rope: `frankenstein_creation_hubris`
+### 183. Tangled Rope: `frankenstein_creation_hubris`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -4605,7 +5645,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 149. Tangled Rope: `french_local_elections_march_2026`
+### 184. Tangled Rope: `french_local_elections_march_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -4637,7 +5677,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 150. Tangled Rope: `future_dsm_integration_2026`
+### 185. Tangled Rope: `future_dsm_integration_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -4669,7 +5709,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 151. Tangled Rope: `gale_shapley`
+### 186. Tangled Rope: `gale_shapley`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -4701,7 +5741,34 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 152. Tangled Rope: `genetic_predisposition`
+### 187. Tangled Rope: `galois_theory_symmetry`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `N/A`
+    *   Analytical View: `N/A`
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for galois_theory_symmetry: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.15000000000000002)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Related Gap/Alert:** N/A
+*   **Generated Omega:** Constraint galois_theory_symmetry appears as tangled_rope to individuals but rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive galois_theory_symmetry
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 188. Tangled Rope: `genetic_predisposition`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -4733,7 +5800,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 153. Tangled Rope: `genie_ip_constraint`
+### 189. Tangled Rope: `genie_ip_constraint`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -4765,7 +5832,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 154. Tangled Rope: `geopolitical_insularity_2026`
+### 190. Tangled Rope: `geopolitical_insularity_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -4797,7 +5864,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 155. Tangled Rope: `germany_tennet_takeover`
+### 191. Tangled Rope: `germany_tennet_takeover`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -4824,7 +5891,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 156. Tangled Rope: `germline_regulation_threshold_2026`
+### 192. Tangled Rope: `germline_regulation_threshold_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -4855,7 +5922,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 157. Tangled Rope: `gig_economy_algorithmic_managment`
+### 193. Tangled Rope: `gig_economy_algorithmic_managment`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -4887,7 +5954,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 158. Tangled Rope: `gilgamesh_mortality_limit`
+### 194. Tangled Rope: `gilgamesh_mortality_limit`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -4918,7 +5985,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 159. Tangled Rope: `gita_kurukshetra`
+### 195. Tangled Rope: `gita_kurukshetra`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -4950,7 +6017,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 160. Tangled Rope: `global_hoarding_scaling_laws`
+### 196. Tangled Rope: `global_hoarding_scaling_laws`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -4981,7 +6048,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 161. Tangled Rope: `global_protocol_entrenchment`
+### 197. Tangled Rope: `global_protocol_entrenchment`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -5012,7 +6079,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 162. Tangled Rope: `global_stimulus_spree`
+### 198. Tangled Rope: `global_stimulus_spree`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -5044,7 +6111,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 163. Tangled Rope: `global_water_bankruptcy`
+### 199. Tangled Rope: `global_water_bankruptcy`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -5076,7 +6143,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 164. Tangled Rope: `goal_boundary_poisoning`
+### 200. Tangled Rope: `goal_boundary_poisoning`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -5108,7 +6175,61 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 165. Tangled Rope: `golden_handcuffs`
+### 201. Tangled Rope: `godels_incompleteness_theorems`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `N/A`
+    *   Analytical View: `N/A`
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for goedels_incompleteness_theorems: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.15000000000000002)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Related Gap/Alert:** N/A
+*   **Generated Omega:** Constraint goedels_incompleteness_theorems appears as tangled_rope to individuals but rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive goedels_incompleteness_theorems
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 202. Tangled Rope: `goldbach_conjecture`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `N/A`
+    *   Analytical View: `N/A`
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for goldbach_conjecture: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.09999999999999999)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Related Gap/Alert:** N/A
+*   **Generated Omega:** Constraint goldbach_conjecture appears as tangled_rope to individuals but rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive goldbach_conjecture
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 203. Tangled Rope: `golden_handcuffs`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -5139,7 +6260,39 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 166. Tangled Rope: `governance_latency_gap`
+### 204. Tangled Rope: `goodharts_law`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `snare`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** Perspectives AGREE
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** Constraint goodharts_law appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from goodharts_law?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does goodharts_law serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 205. Tangled Rope: `governance_latency_gap`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -5171,7 +6324,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 167. Tangled Rope: `governance_overfitting`
+### 206. Tangled Rope: `governance_overfitting`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -5203,7 +6356,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 168. Tangled Rope: `gpt5_codex_dev_cycle`
+### 207. Tangled Rope: `gpt5_codex_dev_cycle`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -5235,7 +6388,71 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 169. Tangled Rope: `greshams_law`
+### 208. Tangled Rope: `graph_coloring_complexity`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `snare`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** Perspectives AGREE
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** Constraint graph_coloring_complexity appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from graph_coloring_complexity?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does graph_coloring_complexity serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 209. Tangled Rope: `greenland_seizure_trade_war`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `snare`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for greenland_seizure_trade_war: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.33),excess_above_floor(0.75)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** Constraint greenland_seizure_trade_war appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from greenland_seizure_trade_war?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does greenland_seizure_trade_war serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 210. Tangled Rope: `greshams_law`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -5262,7 +6479,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 170. Tangled Rope: `grete_samsa_transition`
+### 211. Tangled Rope: `grete_samsa_transition`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -5294,7 +6511,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 171. Tangled Rope: `grievance_stack_overflow`
+### 212. Tangled Rope: `grievance_stack_overflow`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -5326,7 +6543,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 172. Tangled Rope: `guinea_worm_eradication`
+### 213. Tangled Rope: `guinea_worm_eradication`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -5358,7 +6575,34 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 173. Tangled Rope: `hammurabi`
+### 214. Tangled Rope: `halting_problem_undecidability`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `N/A`
+    *   Analytical View: `N/A`
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for halting_problem_undecidability: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.15000000000000002)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Related Gap/Alert:** N/A
+*   **Generated Omega:** Constraint halting_problem_undecidability appears as tangled_rope to individuals but rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive halting_problem_undecidability
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 215. Tangled Rope: `hammurabi`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -5390,7 +6634,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 174. Tangled Rope: `hanlons_razor`
+### 216. Tangled Rope: `hanlons_razor`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -5422,7 +6666,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 175. Tangled Rope: `happiness_of_others`
+### 217. Tangled Rope: `happiness_of_others`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -5453,7 +6697,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 176. Tangled Rope: `harm_principle_liberty`
+### 218. Tangled Rope: `harm_principle_liberty`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -5482,7 +6726,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 177. Tangled Rope: `harry_potter_liberalism`
+### 219. Tangled Rope: `harry_potter_liberalism`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -5514,7 +6758,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 178. Tangled Rope: `hedonic_adaptation_baseline`
+### 220. Tangled Rope: `hedonic_adaptation_baseline`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -5541,7 +6785,39 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 179. Tangled Rope: `helsinki_bus_theory`
+### 221. Tangled Rope: `heisenberg_uncertainty`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `N/A`
+    *   Institutional (Manager) View: `N/A`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for heisenberg_uncertainty: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.15000000000000002)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** Constraint heisenberg_uncertainty appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from heisenberg_uncertainty?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does heisenberg_uncertainty serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 222. Tangled Rope: `helsinki_bus_theory`
 
 *   **Claimed Type:** `rope`
 *   **Severity:** `N/A`
@@ -5573,7 +6849,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 180. Tangled Rope: `hidden_interdependency_risk`
+### 223. Tangled Rope: `hidden_interdependency_risk`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -5605,7 +6881,34 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 181. Tangled Rope: `hu_2026_electoral_parity`
+### 224. Tangled Rope: `hilberts_hotel_infinity`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `N/A`
+    *   Analytical View: `N/A`
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for hilberts_hotel_infinity: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.09999999999999999)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Related Gap/Alert:** N/A
+*   **Generated Omega:** Constraint hilberts_hotel_infinity appears as tangled_rope to individuals but rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive hilberts_hotel_infinity
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 225. Tangled Rope: `hu_2026_electoral_parity`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -5637,7 +6940,39 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 182. Tangled Rope: `hypercompression_of_time_horizons`
+### 226. Tangled Rope: `hydra_game`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `snare`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for hydra_game: Appears to be rope (indexed_rope_classification) but fails 4 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.25),scope_variant([tangled_rope,unknown]),excess_above_floor(0.6799999999999999),nonsensical_coupling(0.5)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** Constraint hydra_game appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from hydra_game?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does hydra_game serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 227. Tangled Rope: `hypercompression_of_time_horizons`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -5669,7 +7004,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 183. Tangled Rope: `hypernormie_equilibrium`
+### 228. Tangled Rope: `hypernormie_equilibrium`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -5701,7 +7036,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 184. Tangled Rope: `ibm_shield_2026`
+### 229. Tangled Rope: `ibm_shield_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -5733,7 +7068,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 185. Tangled Rope: `ibm_shield_contract_2026`
+### 230. Tangled Rope: `ibm_shield_contract_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -5765,7 +7100,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 186. Tangled Rope: `identity_stack_incompatibility`
+### 231. Tangled Rope: `identity_stack_incompatibility`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -5797,7 +7132,39 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 187. Tangled Rope: `india_semi_mission`
+### 232. Tangled Rope: `incentive_surface_warping`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `snare`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `piton`
+*   **Structural Signature Analysis:** Perspectives AGREE
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** Constraint incentive_surface_warping appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from incentive_surface_warping?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does incentive_surface_warping serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 233. Tangled Rope: `india_semi_mission`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -5829,7 +7196,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 188. Tangled Rope: `individual_revolution_autonomy`
+### 234. Tangled Rope: `individual_revolution_autonomy`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -5861,7 +7228,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 189. Tangled Rope: `inference_cost_scaling_law`
+### 235. Tangled Rope: `inference_cost_scaling_law`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -5893,7 +7260,39 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 190. Tangled Rope: `infrastructure_interoperability_decay`
+### 236. Tangled Rope: `informational_time_2026`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `snare`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for informational_time_2026: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.25),excess_above_floor(0.73)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** Constraint informational_time_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from informational_time_2026?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does informational_time_2026 serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 237. Tangled Rope: `infrastructure_interoperability_decay`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -5925,7 +7324,38 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 191. Tangled Rope: `innovators_dilemma`
+### 238. Tangled Rope: `inner_model_theory_constraints`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `mountain`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** Perspectives AGREE
+*   **Related Gap/Alert:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
+*   **Generated Omega:** Constraint inner_model_theory_constraints appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. SAFETY ASSESSMENT (DO NOT SKIP):
+- If institutions cut inner_model_theory_constraints, do individuals have alternatives?
+- Is this their only survival mechanism?
+- What scaffolding exists for transition?
+2. Test institutional perception:
+- Can institutions unilaterally change this?
+- Do they understand downstream impacts?
+- Is their "optional" view empirically accurate?
+3. Decision tree:
+IF truly unchangeable → Correct institutional view to MOUNTAIN
+IF changeable + safe alternatives → Correct powerless view to ROPE
+IF changeable + NO alternatives → ADD SCAFFOLD before any change
+IF uncertainty → HALT changes until resolved
+4. CRITICAL: Never proceed with changes until safety verified
+    ```
+
+---
+
+### 239. Tangled Rope: `innovators_dilemma`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -5957,7 +7387,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 192. Tangled Rope: `institutional_inertia_lock`
+### 240. Tangled Rope: `institutional_inertia_lock`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -5989,7 +7419,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 193. Tangled Rope: `institutional_memory_loss`
+### 241. Tangled Rope: `institutional_memory_loss`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -6021,7 +7451,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 194. Tangled Rope: `institutional_mutation_domestication`
+### 242. Tangled Rope: `institutional_mutation_domestication`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -6053,7 +7483,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 195. Tangled Rope: `institutional_mutation_without_selection`
+### 243. Tangled Rope: `institutional_mutation_without_selection`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -6085,7 +7515,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 196. Tangled Rope: `insult_wisdom_training`
+### 244. Tangled Rope: `insult_wisdom_training`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -6117,7 +7547,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 197. Tangled Rope: `integrated_digital_governance_stack`
+### 245. Tangled Rope: `integrated_digital_governance_stack`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -6149,7 +7579,32 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 198. Tangled Rope: `interface_contract_breakdown`
+### 246. Tangled Rope: `interaction_explosion`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `snare`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** Perspectives AGREE
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** Constraint constraint_interaction_explosion appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Design measurement protocol for unknown
+2. Collect data from N=30+ real-world instances
+3. Calculate empirical metrics:
+- suppression_requirement (enforcement needed)
+- resistance_to_change (pushback level)
+- base_extractiveness (asymmetric benefit flow)
+4. Update constraint_metric/3 declarations with data
+5. Re-run classification to resolve perspectival gap
+    ```
+
+---
+
+### 247. Tangled Rope: `interface_contract_breakdown`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -6181,7 +7636,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 199. Tangled Rope: `internet_archive_preservation`
+### 248. Tangled Rope: `internet_archive_preservation`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -6213,7 +7668,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 200. Tangled Rope: `interpretive_frame_fragmentation`
+### 249. Tangled Rope: `interpretive_frame_fragmentation`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -6245,7 +7700,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 201. Tangled Rope: `intertemporal_responsibility_gap`
+### 250. Tangled Rope: `intertemporal_responsibility_gap`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -6277,7 +7732,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 202. Tangled Rope: `invisible_infrastructure_dependency`
+### 251. Tangled Rope: `invisible_infrastructure_dependency`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -6309,7 +7764,71 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 203. Tangled Rope: `iron_law_of_oligarchy`
+### 252. Tangled Rope: `iran_mandatrophic_collapse`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `snare`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for iran_mandatrophic_collapse: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.3),excess_above_floor(0.75)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** Constraint iran_mandatrophic_collapse appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from iran_mandatrophic_collapse?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does iran_mandatrophic_collapse serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 253. Tangled Rope: `iran_war_room_2026`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `snare`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for iran_war_room_2026: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.25),excess_above_floor(0.7699999999999999)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** Constraint iran_war_room_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from iran_war_room_2026?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does iran_war_room_2026 serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 254. Tangled Rope: `iron_law_of_oligarchy`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -6341,7 +7860,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 204. Tangled Rope: `irreversible_policy_commitment`
+### 255. Tangled Rope: `irreversible_policy_commitment`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -6373,7 +7892,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 205. Tangled Rope: `israel_electoral_threshold`
+### 256. Tangled Rope: `israel_electoral_threshold`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -6405,7 +7924,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 206. Tangled Rope: `israel_gaza_ceasefire_violation`
+### 257. Tangled Rope: `israel_gaza_ceasefire_violation`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -6437,7 +7956,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 207. Tangled Rope: `israel_norwegian_law`
+### 258. Tangled Rope: `israel_norwegian_law`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -6469,7 +7988,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 208. Tangled Rope: `israel_override_clause`
+### 259. Tangled Rope: `israel_override_clause`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -6501,7 +8020,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 209. Tangled Rope: `israel_surplus_vote_agreements`
+### 260. Tangled Rope: `israel_surplus_vote_agreements`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -6533,7 +8052,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 210. Tangled Rope: `japanese_energy_scaffold_2025`
+### 261. Tangled Rope: `japanese_energy_scaffold_2025`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -6565,7 +8084,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 211. Tangled Rope: `jevons_paradox`
+### 262. Tangled Rope: `jevons_paradox`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -6597,7 +8116,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 212. Tangled Rope: `job_hunt_volume_system_2026`
+### 263. Tangled Rope: `job_hunt_volume_system_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -6629,38 +8148,157 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 213. Tangled Rope: `kjv_textual_authority`
+### 264. Tangled Rope: `keltner_relationship_evaluation`
 
-*   **Claimed Type:** `mountain`
+*   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
-    *   Individual (Powerless) View: `mountain`
+    *   Individual (Powerless) View: `snare`
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `tangled_rope`
-*   **Structural Signature Analysis:** Perspectives AGREE
-*   **Related Gap/Alert:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
-*   **Generated Omega:** Constraint kjv_textual_authority appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for keltner_relationship_evaluation: Appears to be rope (indexed_rope_classification) but fails 4 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.25),scope_variant([rope,tangled_rope,unknown]),excess_above_floor(0.3),nonsensical_coupling(0.6666666666666666)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** Constraint keltner_relationship_evaluation appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
     ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut kjv_textual_authority, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
+1. Interview affected individuals (N=10+):
+- Who benefits from keltner_relationship_evaluation?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does keltner_relationship_evaluation serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
     ```
 
 ---
 
-### 214. Tangled Rope: `knowledge_action_gap`
+### 265. Tangled Rope: `khantivadin_radical_patience`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `snare`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** Perspectives AGREE
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** Constraint khantivadin_radical_patience appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from khantivadin_radical_patience?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does khantivadin_radical_patience serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 266. Tangled Rope: `kirby_paris_theorem`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `N/A`
+    *   Institutional (Manager) View: `N/A`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for kirby_paris_theorem: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.15000000000000002)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** Constraint kirby_paris_theorem appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from kirby_paris_theorem?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does kirby_paris_theorem serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 267. Tangled Rope: `kjv_textual_authority`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** Perspectives AGREE
+*   **Related Gap/Alert:** N/A
+*   **Generated Omega:** Constraint kjv_textual_authority appears as tangled_rope to individuals but rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive kjv_textual_authority
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 268. Tangled Rope: `kleene_recursion_theorem`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `N/A`
+    *   Analytical View: `N/A`
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for kleene_recursion_theorem: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.15000000000000002)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Related Gap/Alert:** N/A
+*   **Generated Omega:** Constraint kleene_recursion_theorem appears as tangled_rope to individuals but rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive kleene_recursion_theorem
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 269. Tangled Rope: `knowledge_action_gap`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
@@ -6691,7 +8329,39 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 215. Tangled Rope: `landscape_of_fear_2026`
+### 270. Tangled Rope: `labor_union_dues_structure`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `snare`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** Perspectives AGREE
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** Constraint labor_union_dues appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from labor_union_dues?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does labor_union_dues serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 271. Tangled Rope: `landscape_of_fear_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -6716,7 +8386,38 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 216. Tangled Rope: `latent_goal_activation`
+### 272. Tangled Rope: `large_cardinals_foundations`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `mountain`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** Perspectives AGREE
+*   **Related Gap/Alert:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
+*   **Generated Omega:** Constraint large_cardinal_foundations appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. SAFETY ASSESSMENT (DO NOT SKIP):
+- If institutions cut large_cardinal_foundations, do individuals have alternatives?
+- Is this their only survival mechanism?
+- What scaffolding exists for transition?
+2. Test institutional perception:
+- Can institutions unilaterally change this?
+- Do they understand downstream impacts?
+- Is their "optional" view empirically accurate?
+3. Decision tree:
+IF truly unchangeable → Correct institutional view to MOUNTAIN
+IF changeable + safe alternatives → Correct powerless view to ROPE
+IF changeable + NO alternatives → ADD SCAFFOLD before any change
+IF uncertainty → HALT changes until resolved
+4. CRITICAL: Never proceed with changes until safety verified
+    ```
+
+---
+
+### 273. Tangled Rope: `latent_goal_activation`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -6748,7 +8449,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 217. Tangled Rope: `latent_regulatory_bomb`
+### 274. Tangled Rope: `latent_regulatory_bomb`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -6780,7 +8481,39 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 218. Tangled Rope: `legal_formalism_overhang`
+### 275. Tangled Rope: `law_of_diminishing_returns`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `snare`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** Perspectives AGREE
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** Constraint law_of_diminishing_returns appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from law_of_diminishing_returns?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does law_of_diminishing_returns serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 276. Tangled Rope: `legal_formalism_overhang`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -6812,7 +8545,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 219. Tangled Rope: `legibility_trap`
+### 277. Tangled Rope: `legibility_trap`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -6844,7 +8577,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 220. Tangled Rope: `legitimacy_without_capacity`
+### 278. Tangled Rope: `legitimacy_without_capacity`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -6876,7 +8609,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 221. Tangled Rope: `lehman_repo_105`
+### 279. Tangled Rope: `lehman_repo_105`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -6908,7 +8641,66 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 222. Tangled Rope: `liquidity_illusion`
+### 280. Tangled Rope: `lindy_effect`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `snare`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for lindy_effect: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.15000000000000002)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** Constraint lindy_effect appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from lindy_effect?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does lindy_effect serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 281. Tangled Rope: `linguistic_relativity_cultural_framing`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `tangled_rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** Perspectives AGREE
+*   **Related Gap/Alert:** N/A
+*   **Generated Omega:** Constraint linguistic_relativity_cultural_framing appears as tangled_rope to individuals but rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive linguistic_relativity_cultural_framing
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 282. Tangled Rope: `liquidity_illusion`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -6940,7 +8732,155 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 223. Tangled Rope: `lsd_microdosing_professional_openness`
+### 283. Tangled Rope: `litany_of_the_real`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `rope`
+    *   Institutional (Manager) View: `N/A`
+    *   Analytical View: `N/A`
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for litany_of_the_real: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.09999999999999999)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Related Gap/Alert:** N/A
+*   **Generated Omega:** Constraint litany_of_the_real appears as rope to individuals but tangled_rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Design measurement protocol for unknown
+2. Collect data from N=30+ real-world instances
+3. Calculate empirical metrics:
+- suppression_requirement (enforcement needed)
+- resistance_to_change (pushback level)
+- base_extractiveness (asymmetric benefit flow)
+4. Update constraint_metric/3 declarations with data
+5. Re-run classification to resolve perspectival gap
+    ```
+
+---
+
+### 284. Tangled Rope: `local_vs_global_optima`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `snare`
+    *   Institutional (Manager) View: `tangled_rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for local_vs_global_optima: Appears to be rope (indexed_rope_classification) but fails 4 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.25),scope_variant([rope,tangled_rope]),excess_above_floor(0.25),nonsensical_coupling(0.5)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Related Gap/Alert:** N/A
+*   **Generated Omega:** Constraint local_vs_global_optima appears as snare to individuals but tangled_rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive local_vs_global_optima
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 285. Tangled Rope: `logistic_map_dynamics`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `snare`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** Perspectives AGREE
+*   **Related Gap/Alert:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
+*   **Generated Omega:** Constraint logistic_map_dynamics appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from logistic_map_dynamics?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does logistic_map_dynamics serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 286. Tangled Rope: `lorenz_attractor_dynamics`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `snare`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** Perspectives AGREE
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** Constraint lorenz_attractor_dynamics appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from lorenz_attractor_dynamics?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does lorenz_attractor_dynamics serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 287. Tangled Rope: `lowenheim_skolem_theorem`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `N/A`
+    *   Institutional (Manager) View: `N/A`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for lowenheim_skolem_theorem: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.15000000000000002)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** Constraint lowenheim_skolem_theorem appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from lowenheim_skolem_theorem?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does lowenheim_skolem_theorem serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 288. Tangled Rope: `lsd_microdosing_professional_openness`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -6958,7 +8898,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 224. Tangled Rope: `lung_transplant_protocol`
+### 289. Tangled Rope: `lung_transplant_protocol`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -6990,7 +8930,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 225. Tangled Rope: `maintenance_capacity_shortfall`
+### 290. Tangled Rope: `maintenance_capacity_shortfall`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -7022,7 +8962,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 226. Tangled Rope: `maladaptive_selection_process`
+### 291. Tangled Rope: `maladaptive_selection_process`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -7054,7 +8994,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 227. Tangled Rope: `mandatrophic_margin_collapse`
+### 292. Tangled Rope: `mandatrophic_margin_collapse`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -7086,7 +9026,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 228. Tangled Rope: `mandatrophic_margin_collapse_diagnostic`
+### 293. Tangled Rope: `mandatrophic_margin_collapse_diagnostic`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -7118,7 +9058,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 229. Tangled Rope: `marriage_market_asymmetry_2026`
+### 294. Tangled Rope: `marriage_market_asymmetry_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -7150,7 +9090,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 230. Tangled Rope: `mass_market_extinction_2026`
+### 295. Tangled Rope: `mass_market_extinction_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -7182,7 +9122,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 231. Tangled Rope: `matching_markets_general`
+### 296. Tangled Rope: `matching_markets_general`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -7214,7 +9154,39 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 232. Tangled Rope: `medical_residency_match`
+### 297. Tangled Rope: `max_flow`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `snare`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** Perspectives AGREE
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** Constraint max_flow_min_cut appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from max_flow_min_cut?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does max_flow_min_cut serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 298. Tangled Rope: `medical_residency_match`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -7246,7 +9218,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 233. Tangled Rope: `medieval_church_hegemony`
+### 299. Tangled Rope: `medieval_church_hegemony`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -7278,7 +9250,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 234. Tangled Rope: `memetic_fitness_vs_truth`
+### 300. Tangled Rope: `memetic_fitness_vs_truth`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -7310,7 +9282,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 235. Tangled Rope: `meta_governance_overload`
+### 301. Tangled Rope: `meta_governance_overload`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -7342,7 +9314,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 236. Tangled Rope: `meta_model_lock_in`
+### 302. Tangled Rope: `meta_model_lock_in`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -7374,7 +9346,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 237. Tangled Rope: `meta_nda`
+### 303. Tangled Rope: `meta_nda`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -7401,7 +9373,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 238. Tangled Rope: `metabolic_constraint_cognition`
+### 304. Tangled Rope: `metabolic_constraint_cognition`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -7433,7 +9405,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 239. Tangled Rope: `microbiome_symbiosis`
+### 305. Tangled Rope: `microbiome_symbiosis`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -7465,7 +9437,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 240. Tangled Rope: `microwave_weapon_1`
+### 306. Tangled Rope: `microwave_weapon_1`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -7497,7 +9469,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 241. Tangled Rope: `mil_std_461g_emi_control`
+### 307. Tangled Rope: `mil_std_461g_emi_control`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -7529,7 +9501,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 242. Tangled Rope: `mil_std_810f_tailoring`
+### 308. Tangled Rope: `mil_std_810f_tailoring`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -7561,7 +9533,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 243. Tangled Rope: `mirror_of_erised_expectation`
+### 309. Tangled Rope: `mirror_of_erised_expectation`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -7588,7 +9560,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 244. Tangled Rope: `misunderstanding_as_mismatch`
+### 310. Tangled Rope: `misunderstanding_as_mismatch`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -7620,7 +9592,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 245. Tangled Rope: `model_autonomy_creep`
+### 311. Tangled Rope: `model_autonomy_creep`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -7645,7 +9617,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 246. Tangled Rope: `model_collapse_feedback_loop`
+### 312. Tangled Rope: `model_collapse_feedback_loop`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -7677,7 +9649,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 247. Tangled Rope: `model_of_models_regression`
+### 313. Tangled Rope: `model_of_models_regression`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -7709,7 +9681,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 248. Tangled Rope: `monetary_regime_transition`
+### 314. Tangled Rope: `monetary_regime_transition`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -7741,7 +9713,34 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 249. Tangled Rope: `moral_outsourcing`
+### 315. Tangled Rope: `moores_law`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `rope`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** Perspectives AGREE
+*   **Related Gap/Alert:** N/A
+*   **Generated Omega:** Constraint moores_law appears as rope to individuals but snare to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive moores_law
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 316. Tangled Rope: `moral_outsourcing`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -7773,7 +9772,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 250. Tangled Rope: `multi_agent_reward_hacking`
+### 317. Tangled Rope: `multi_agent_reward_hacking`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -7805,7 +9804,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 251. Tangled Rope: `multi_planetary_latency_lock`
+### 318. Tangled Rope: `multi_planetary_latency_lock`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -7837,7 +9836,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 252. Tangled Rope: `mutual_defection_equilibrium`
+### 319. Tangled Rope: `mutual_defection_equilibrium`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -7868,7 +9867,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 253. Tangled Rope: `naming_as_control`
+### 320. Tangled Rope: `naming_as_control`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -7900,7 +9899,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 254. Tangled Rope: `narrative_capacity_exhaustion`
+### 321. Tangled Rope: `narrative_capacity_exhaustion`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -7932,7 +9931,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 255. Tangled Rope: `narrative_overfitting`
+### 322. Tangled Rope: `narrative_overfitting`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -7964,7 +9963,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 256. Tangled Rope: `nash_equilibrium_coordination`
+### 323. Tangled Rope: `nash_equilibrium_coordination`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -7995,7 +9994,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 257. Tangled Rope: `necessary_day_job`
+### 324. Tangled Rope: `necessary_day_job`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -8027,7 +10026,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 258. Tangled Rope: `negative_emissions_arbitrage`
+### 325. Tangled Rope: `negative_emissions_arbitrage`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -8059,7 +10058,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 259. Tangled Rope: `net_zero_stabilization`
+### 326. Tangled Rope: `net_zero_stabilization`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -8091,7 +10090,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 260. Tangled Rope: `network_effects`
+### 327. Tangled Rope: `network_effects`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -8123,7 +10122,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 261. Tangled Rope: `neural_interoperability`
+### 328. Tangled Rope: `neural_interoperability`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -8155,7 +10154,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 262. Tangled Rope: `neural_substrate_2026`
+### 329. Tangled Rope: `neural_substrate_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -8187,7 +10186,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 263. Tangled Rope: `neurodiversity_spectrum`
+### 330. Tangled Rope: `neurodiversity_spectrum`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -8219,7 +10218,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 264. Tangled Rope: `neuroplasticity_plateau`
+### 331. Tangled Rope: `neuroplasticity_plateau`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -8250,7 +10249,34 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 265. Tangled Rope: `new_start_expiration`
+### 332. Tangled Rope: `new_civilizational_rope`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `rope`
+    *   Institutional (Manager) View: `snare`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** Perspectives AGREE
+*   **Related Gap/Alert:** N/A
+*   **Generated Omega:** Constraint decentralized_infrastructure_rope appears as rope to individuals but snare to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive decentralized_infrastructure_rope
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 333. Tangled Rope: `new_start_expiration`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -8282,7 +10308,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 266. Tangled Rope: `nine_day_buffer`
+### 334. Tangled Rope: `nine_day_buffer`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -8314,7 +10340,39 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 267. Tangled Rope: `non_compete_agreements`
+### 335. Tangled Rope: `no_cloning_theorem`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `N/A`
+    *   Institutional (Manager) View: `N/A`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for no_cloning_theorem: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.15000000000000002)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** Constraint no_cloning_theorem appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from no_cloning_theorem?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does no_cloning_theorem serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 336. Tangled Rope: `non_compete_agreements`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -8346,7 +10404,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 268. Tangled Rope: `norm_erosion_threshold`
+### 337. Tangled Rope: `norm_erosion_threshold`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -8378,7 +10436,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 269. Tangled Rope: `nuclear_order_2026`
+### 338. Tangled Rope: `nuclear_order_2026`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -8405,7 +10463,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 270. Tangled Rope: `nuclear_vacuum_2026`
+### 339. Tangled Rope: `nuclear_vacuum_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -8437,7 +10495,39 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 271. Tangled Rope: `openai_api_access`
+### 340. Tangled Rope: `omega1_patches`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `snare`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** Perspectives AGREE
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** Constraint omega1_patching_process appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from omega1_patching_process?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does omega1_patching_process serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 341. Tangled Rope: `openai_api_access`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -8469,7 +10559,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 272. Tangled Rope: `openai_codex_app_constraint`
+### 342. Tangled Rope: `openai_codex_app_constraint`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -8501,7 +10591,39 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 273. Tangled Rope: `openclaw_regulation`
+### 343. Tangled Rope: `openbsd_netiquette_protocol`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `snare`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** Perspectives AGREE
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** Constraint openbsd_netiquette_protocol appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from openbsd_netiquette_protocol?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does openbsd_netiquette_protocol serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 344. Tangled Rope: `openclaw_regulation`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -8533,7 +10655,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 274. Tangled Rope: `openscholar_peer_review`
+### 345. Tangled Rope: `openscholar_peer_review`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -8565,7 +10687,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 275. Tangled Rope: `opioid_political_realignment_2026`
+### 346. Tangled Rope: `opioid_political_realignment_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -8597,7 +10719,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 276. Tangled Rope: `optimization_fragility`
+### 347. Tangled Rope: `optimization_fragility`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -8622,7 +10744,39 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 277. Tangled Rope: `overfitting_to_frameworks`
+### 348. Tangled Rope: `orbital_data_center_2026`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `snare`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** Perspectives AGREE
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** Constraint orbital_data_center_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from orbital_data_center_2026?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does orbital_data_center_2026 serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 349. Tangled Rope: `overfitting_to_frameworks`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -8654,7 +10808,39 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 278. Tangled Rope: `panama_canal_ports`
+### 350. Tangled Rope: `overton_window`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `snare`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** Perspectives AGREE
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** Constraint overton_window appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from overton_window?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does overton_window serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 351. Tangled Rope: `panama_canal_ports`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -8686,7 +10872,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 279. Tangled Rope: `parable_fish_turtle`
+### 352. Tangled Rope: `parable_fish_turtle`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -8718,7 +10904,34 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 280. Tangled Rope: `paris_municipal_reform_2026`
+### 353. Tangled Rope: `pareto_principle`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `snare`
+    *   Institutional (Manager) View: `tangled_rope`
+    *   Analytical View: `rope`
+*   **Structural Signature Analysis:** Perspectives AGREE
+*   **Related Gap/Alert:** N/A
+*   **Generated Omega:** Constraint pareto_principle appears as snare to individuals but tangled_rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive pareto_principle
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 354. Tangled Rope: `paris_municipal_reform_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -8745,7 +10958,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 281. Tangled Rope: `parkinsons_law`
+### 355. Tangled Rope: `parkinsons_law`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -8777,7 +10990,39 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 282. Tangled Rope: `path_dependence_lock_in`
+### 356. Tangled Rope: `participatory_observer_hypothesis`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `snare`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for participatory_observer_hypothesis: Appears to be rope (indexed_rope_classification) but fails 4 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.25),scope_variant([rope,tangled_rope]),excess_above_floor(0.36),nonsensical_coupling(0.3333333333333333)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** Constraint participatory_observer_hypothesis appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from participatory_observer_hypothesis?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does participatory_observer_hypothesis serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 357. Tangled Rope: `path_dependence_lock_in`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -8808,7 +11053,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 283. Tangled Rope: `perovskite_self_etching`
+### 358. Tangled Rope: `perovskite_self_etching`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -8840,7 +11085,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 284. Tangled Rope: `personalized_nutritional_arbitrage`
+### 359. Tangled Rope: `personalized_nutritional_arbitrage`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -8872,7 +11117,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 285. Tangled Rope: `peter_principle`
+### 360. Tangled Rope: `peter_principle`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -8904,7 +11149,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 286. Tangled Rope: `planetary_boundaries`
+### 361. Tangled Rope: `planetary_boundaries`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -8936,7 +11181,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 287. Tangled Rope: `planetary_diet_constraint_2026`
+### 362. Tangled Rope: `planetary_diet_constraint_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -8968,7 +11213,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 288. Tangled Rope: `planning_fallacy`
+### 363. Tangled Rope: `planning_fallacy`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -9000,7 +11245,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 289. Tangled Rope: `platonic_coparenting_decoupling`
+### 364. Tangled Rope: `platonic_coparenting_decoupling`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -9032,7 +11277,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 290. Tangled Rope: `poetic_verse_and_past`
+### 365. Tangled Rope: `poetic_verse_and_past`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -9064,7 +11309,34 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 291. Tangled Rope: `policy_lag_catastrophe`
+### 366. Tangled Rope: `poincare_conjucture`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `N/A`
+    *   Analytical View: `N/A`
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for poincare_conjecture: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.15000000000000002)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Related Gap/Alert:** N/A
+*   **Generated Omega:** Constraint poincare_conjecture appears as tangled_rope to individuals but rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive poincare_conjecture
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 367. Tangled Rope: `policy_lag_catastrophe`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -9096,7 +11368,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 292. Tangled Rope: `politeness_face_negotiation`
+### 368. Tangled Rope: `politeness_face_negotiation`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -9128,7 +11400,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 293. Tangled Rope: `portugal_government_stability_ad`
+### 369. Tangled Rope: `portugal_government_stability_ad`
 
 *   **Claimed Type:** `scaffold`
 *   **Severity:** `N/A`
@@ -9160,7 +11432,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 294. Tangled Rope: `portugal_polarization_threshold_2026`
+### 370. Tangled Rope: `portugal_polarization_threshold_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -9192,7 +11464,25 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 295. Tangled Rope: `power_without_responsibility`
+### 371. Tangled Rope: `portuguese_presidential_term_limits`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `tangled_rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** CONSTRUCTED LOW-EXTRACTION signature for portuguese_presidential_term_limits: Enforcement present (suppression=0.98, resistance=0.50) but extraction is low (0.02). This is a rule-based coordination structure, not an extraction mechanism.
+*   **Related Gap/Alert:** N/A
+*   **Generated Omega:** N/A
+*   **Suggested Resolution Strategy:**
+    ```
+
+    ```
+
+---
+
+### 372. Tangled Rope: `power_without_responsibility`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -9224,7 +11514,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 296. Tangled Rope: `prestige_signal_inflation`
+### 373. Tangled Rope: `prestige_signal_inflation`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -9256,7 +11546,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 297. Tangled Rope: `price_signal_corruption`
+### 374. Tangled Rope: `price_signal_corruption`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -9288,7 +11578,34 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 298. Tangled Rope: `procedural_legitimacy_decay`
+### 375. Tangled Rope: `prime_number_theorem`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `N/A`
+    *   Analytical View: `N/A`
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for prime_number_theorem: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.09999999999999999)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Related Gap/Alert:** N/A
+*   **Generated Omega:** Constraint prime_number_theorem appears as tangled_rope to individuals but rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive prime_number_theorem
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 376. Tangled Rope: `procedural_legitimacy_decay`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -9320,7 +11637,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 299. Tangled Rope: `project_vault_2026`
+### 377. Tangled Rope: `project_vault_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -9347,7 +11664,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 300. Tangled Rope: `project_vault_extraction_2026`
+### 378. Tangled Rope: `project_vault_extraction_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -9379,7 +11696,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 301. Tangled Rope: `protocol_capture_tangled_rope`
+### 379. Tangled Rope: `protocol_capture_tangled_rope`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -9411,7 +11728,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 302. Tangled Rope: `protocol_drift_accumulation`
+### 380. Tangled Rope: `protocol_drift_accumulation`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -9443,7 +11760,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 303. Tangled Rope: `qualified_immunity`
+### 381. Tangled Rope: `qualified_immunity`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -9475,7 +11792,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 304. Tangled Rope: `quellcrist_falconer_justice`
+### 382. Tangled Rope: `quellcrist_falconer_justice`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -9507,7 +11824,34 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 305. Tangled Rope: `radiologic_diagnostic_threshold`
+### 383. Tangled Rope: `quine_self_replication`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `N/A`
+    *   Analytical View: `N/A`
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for quine_self_replication: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.15000000000000002)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Related Gap/Alert:** N/A
+*   **Generated Omega:** Constraint quine_self_replication appears as tangled_rope to individuals but rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive quine_self_replication
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 384. Tangled Rope: `radiologic_diagnostic_threshold`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -9539,7 +11883,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 306. Tangled Rope: `rare_earth_dependency`
+### 385. Tangled Rope: `rare_earth_dependency`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -9571,7 +11915,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 307. Tangled Rope: `rare_earth_seabed_mining`
+### 386. Tangled Rope: `rare_earth_seabed_mining`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -9603,7 +11947,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 308. Tangled Rope: `rational_inertia_trap`
+### 387. Tangled Rope: `rational_inertia_trap`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -9635,7 +11979,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 309. Tangled Rope: `recipe_scaling_ai`
+### 388. Tangled Rope: `recipe_scaling_ai`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -9667,7 +12011,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 310. Tangled Rope: `regulatory_capture`
+### 389. Tangled Rope: `regulatory_capture`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -9699,7 +12043,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 311. Tangled Rope: `rent_seeking_equilibrium`
+### 390. Tangled Rope: `rent_seeking_equilibrium`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -9731,7 +12075,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 312. Tangled Rope: `repair_probe_incomplete`
+### 391. Tangled Rope: `repair_probe_incomplete`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -9763,7 +12107,39 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 313. Tangled Rope: `responsibility_dilution`
+### 392. Tangled Rope: `reputational_cascade_failure`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `snare`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `piton`
+*   **Structural Signature Analysis:** Perspectives AGREE
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** Constraint reputational_cascade_failure appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from reputational_cascade_failure?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does reputational_cascade_failure serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 393. Tangled Rope: `responsibility_dilution`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -9795,7 +12171,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 314. Tangled Rope: `responsibility_without_power`
+### 394. Tangled Rope: `responsibility_without_power`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -9827,7 +12203,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 315. Tangled Rope: `rfc9293_interoperability`
+### 395. Tangled Rope: `rfc9293_interoperability`
 
 *   **Claimed Type:** `rope`
 *   **Severity:** `N/A`
@@ -9859,7 +12235,61 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 316. Tangled Rope: `risk_socialization_threshold`
+### 396. Tangled Rope: `rfc9293_state_machine`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `N/A`
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for rfc9293_state_machine: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.375,0.25),excess_above_floor(0.15000000000000002)]. Coupling score=0.375. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Related Gap/Alert:** N/A
+*   **Generated Omega:** Constraint rfc9293_state_machine appears as tangled_rope to individuals but rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive rfc9293_state_machine
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 397. Tangled Rope: `rices_theorem_undecidability`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `N/A`
+    *   Analytical View: `N/A`
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for rices_theorem_undecidability: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.09999999999999999)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Related Gap/Alert:** N/A
+*   **Generated Omega:** Constraint rices_theorem_undecidability appears as tangled_rope to individuals but rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive rices_theorem_undecidability
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 398. Tangled Rope: `risk_socialization_threshold`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -9891,7 +12321,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 317. Tangled Rope: `ritual_without_belief`
+### 399. Tangled Rope: `ritual_without_belief`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -9923,7 +12353,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 318. Tangled Rope: `ritualistic_transition_scaffold`
+### 400. Tangled Rope: `ritualistic_transition_scaffold`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -9941,7 +12371,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 319. Tangled Rope: `robustness_vs_efficiency_tradeoff`
+### 401. Tangled Rope: `robustness_vs_efficiency_tradeoff`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -9973,7 +12403,66 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 320. Tangled Rope: `rotation_seven_kubo_ranking`
+### 402. Tangled Rope: `rogue_wave_control_2026`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `scaffold`
+*   **Structural Signature Analysis:** Perspectives AGREE
+*   **Related Gap/Alert:** N/A
+*   **Generated Omega:** Constraint rogue_wave_control_2026 appears as tangled_rope to individuals but rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive rogue_wave_control_2026
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 403. Tangled Rope: `rotation_seven_black_soil`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `snare`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for rotation_seven_black_soil: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.25),excess_above_floor(0.8999999999999999)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** Constraint rotation_seven_black_soil appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from rotation_seven_black_soil?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does rotation_seven_black_soil serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 404. Tangled Rope: `rotation_seven_kubo_ranking`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -10005,7 +12494,66 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 321. Tangled Rope: `rules_based_international_order`
+### 405. Tangled Rope: `rotmigration_decision_threshold`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** Perspectives AGREE
+*   **Related Gap/Alert:** N/A
+*   **Generated Omega:** Constraint migration_decision_threshold appears as tangled_rope to individuals but rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive migration_decision_threshold
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 406. Tangled Rope: `royal_navy_middle_east_withdrawal`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `snare`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for royal_navy_middle_east_withdrawal: Appears to be rope (indexed_rope_classification) but fails 4 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.25),scope_variant([tangled_rope,unknown]),excess_above_floor(0.75),nonsensical_coupling(0.5)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** Constraint royal_navy_middle_east_withdrawal appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from royal_navy_middle_east_withdrawal?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does royal_navy_middle_east_withdrawal serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 407. Tangled Rope: `rules_based_international_order`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -10037,7 +12585,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 322. Tangled Rope: `russian_war_cannibalization`
+### 408. Tangled Rope: `russian_war_cannibalization`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -10069,7 +12617,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 323. Tangled Rope: `s1_airbnb`
+### 409. Tangled Rope: `s1_airbnb`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -10101,7 +12649,66 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 324. Tangled Rope: `sapir_whorf_hypothesis`
+### 410. Tangled Rope: `s1_visa`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** Perspectives AGREE
+*   **Related Gap/Alert:** N/A
+*   **Generated Omega:** Constraint visa_ipo_regulatory_compliance appears as tangled_rope to individuals but rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive visa_ipo_regulatory_compliance
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 411. Tangled Rope: `sa_renewable_price_differential`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `snare`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** Perspectives AGREE
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** Constraint sa_renewable_price_differential appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from sa_renewable_price_differential?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does sa_renewable_price_differential serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 412. Tangled Rope: `sapir_whorf_hypothesis`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -10133,7 +12740,39 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 325. Tangled Rope: `scurvy_maritime_extraction`
+### 413. Tangled Rope: `sat_csp_complexity`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `snare`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** Perspectives AGREE
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** Constraint sat_csp_complexity appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from sat_csp_complexity?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does sat_csp_complexity serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 414. Tangled Rope: `scurvy_maritime_extraction`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -10165,7 +12804,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 326. Tangled Rope: `second_order_unintended_consequences`
+### 415. Tangled Rope: `second_order_unintended_consequences`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -10197,7 +12836,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 327. Tangled Rope: `self_surpassing_superman`
+### 416. Tangled Rope: `self_surpassing_superman`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -10228,7 +12867,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 328. Tangled Rope: `semantic_attack_surface`
+### 417. Tangled Rope: `semantic_attack_surface`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -10260,7 +12899,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 329. Tangled Rope: `semantic_overload_friction`
+### 418. Tangled Rope: `semantic_overload_friction`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -10292,7 +12931,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 330. Tangled Rope: `semiconductor_mission_2026`
+### 419. Tangled Rope: `semiconductor_mission_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -10324,7 +12963,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 331. Tangled Rope: `shadow_pricing_failure`
+### 420. Tangled Rope: `shadow_pricing_failure`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -10356,7 +12995,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 332. Tangled Rope: `shitty_feedback_handling`
+### 421. Tangled Rope: `shitty_feedback_handling`
 
 *   **Claimed Type:** `rope`
 *   **Severity:** `N/A`
@@ -10383,7 +13022,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 333. Tangled Rope: `shobies_existential_commitment`
+### 422. Tangled Rope: `shobies_existential_commitment`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -10415,7 +13054,39 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 334. Tangled Rope: `signal_without_control`
+### 423. Tangled Rope: `shock_propagation_asymmetry`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `snare`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `piton`
+*   **Structural Signature Analysis:** Perspectives AGREE
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** Constraint shock_propagation_asymmetry appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from shock_propagation_asymmetry?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does shock_propagation_asymmetry serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 424. Tangled Rope: `signal_without_control`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -10447,7 +13118,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 335. Tangled Rope: `silent_dependency_activation`
+### 425. Tangled Rope: `silent_dependency_activation`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -10479,7 +13150,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 336. Tangled Rope: `silicon_lexicon_overload`
+### 426. Tangled Rope: `silicon_lexicon_overload`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -10511,9 +13182,9 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 337. Tangled Rope: `sleep_debt_externality`
+### 427. Tangled Rope: `sleep_debt_externality`
 
-*   **Claimed Type:** `mountain`
+*   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
     *   Individual (Powerless) View: `snare`
@@ -10543,7 +13214,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 338. Tangled Rope: `slow_crisis_invisibility`
+### 428. Tangled Rope: `slow_crisis_invisibility`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
@@ -10575,7 +13246,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 339. Tangled Rope: `sludge_bureaucratic_friction`
+### 429. Tangled Rope: `sludge_bureaucratic_friction`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -10607,7 +13278,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 340. Tangled Rope: `smartphone_ubiquity`
+### 430. Tangled Rope: `smartphone_ubiquity`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -10639,7 +13310,39 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 341. Tangled Rope: `social_loafing`
+### 431. Tangled Rope: `social_credit_architecture`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `snare`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** Perspectives AGREE
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** Constraint social_credit_architecture appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from social_credit_architecture?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does social_credit_architecture serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 432. Tangled Rope: `social_loafing`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -10671,7 +13374,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 342. Tangled Rope: `social_media_participation_threshold`
+### 433. Tangled Rope: `social_media_participation_threshold`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -10703,7 +13406,39 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 343. Tangled Rope: `soft_authoritarian_drift`
+### 434. Tangled Rope: `social_narrative_casting`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `snare`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** Perspectives AGREE
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** Constraint social_narrative_casting appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from social_narrative_casting?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does social_narrative_casting serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 435. Tangled Rope: `soft_authoritarian_drift`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -10735,7 +13470,71 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 344. Tangled Rope: `spain_digital_offensive_2026`
+### 436. Tangled Rope: `sorites_paradox`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `snare`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** Perspectives AGREE
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** Constraint sorites_paradox appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from sorites_paradox?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does sorites_paradox serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 437. Tangled Rope: `south_china_sea_arbitration_2016_2026`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `snare`
+    *   Institutional (Manager) View: `snare`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** Perspectives AGREE
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** Constraint south_china_sea_arbitration_2016_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from south_china_sea_arbitration_2016_2026?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does south_china_sea_arbitration_2016_2026 serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 438. Tangled Rope: `spain_digital_offensive_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -10767,7 +13566,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 345. Tangled Rope: `st_petersburg_paradox`
+### 439. Tangled Rope: `st_petersburg_paradox`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -10799,7 +13598,34 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 346. Tangled Rope: `start_treaty`
+### 440. Tangled Rope: `stable_marriage_coordination`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** Perspectives AGREE
+*   **Related Gap/Alert:** N/A
+*   **Generated Omega:** Constraint stable_marriage_coordination appears as tangled_rope to individuals but rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive stable_marriage_coordination
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 441. Tangled Rope: `start_treaty`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -10831,7 +13657,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 347. Tangled Rope: `statecraft_virtu`
+### 442. Tangled Rope: `statecraft_virtu`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -10863,7 +13689,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 348. Tangled Rope: `status_flattening_effect`
+### 443. Tangled Rope: `status_flattening_effect`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -10888,7 +13714,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 349. Tangled Rope: `steinmetz_valuation_asymmetry`
+### 444. Tangled Rope: `steinmetz_valuation_asymmetry`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -10915,7 +13741,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 350. Tangled Rope: `stoic_logos_governance`
+### 445. Tangled Rope: `stoic_logos_governance`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -10942,7 +13768,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 351. Tangled Rope: `straight_coercion_2025`
+### 446. Tangled Rope: `straight_coercion_2025`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -10974,7 +13800,39 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 352. Tangled Rope: `structural_extraction_without_actor`
+### 447. Tangled Rope: `strange_attractor_dynamics`
+
+*   **Claimed Type:** `snare`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `snare`
+*   **Structural Signature Analysis:** Perspectives AGREE
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** Constraint strange_attractor_dynamics appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from strange_attractor_dynamics?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does strange_attractor_dynamics serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 448. Tangled Rope: `structural_extraction_without_actor`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -11006,38 +13864,34 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 353. Tangled Rope: `sts86_ascent_checklist`
+### 449. Tangled Rope: `sts86_ascent_checklist`
 
-*   **Claimed Type:** `mountain`
+*   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
-    *   Individual (Powerless) View: `mountain`
+    *   Individual (Powerless) View: `tangled_rope`
     *   Institutional (Manager) View: `rope`
     *   Analytical View: `N/A`
-*   **Structural Signature Analysis:** FALSE NATURAL LAW signature for sts86_ascent_checklist: Claims naturality (explicit_mountain_claim) but fails Boltzmann independence test. Coupling score=0.375 with 0 coupled dimension pairs. Excess extraction=0.0. This constraint is "physics-washed" — it appears natural but its coupling topology reveals structural construction.
-*   **Related Gap/Alert:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
-*   **Generated Omega:** Constraint sts86_ascent_checklist appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
+*   **Structural Signature Analysis:** CONSTRUCTED LOW-EXTRACTION signature for sts86_ascent_checklist: Enforcement present (suppression=0.95, resistance=0.50) but extraction is low (0.05). This is a rule-based coordination structure, not an extraction mechanism.
+*   **Related Gap/Alert:** N/A
+*   **Generated Omega:** Constraint sts86_ascent_checklist appears as tangled_rope to individuals but rope to institutions...
 *   **Suggested Resolution Strategy:**
     ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut sts86_ascent_checklist, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
+1. Map stakeholder perspectives:
+- Document how different actors perceive sts86_ascent_checklist
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
     ```
 
 ---
 
-### 354. Tangled Rope: `suanne_coup_of_peace`
+### 450. Tangled Rope: `suanne_coup_of_peace`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -11069,7 +13923,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 355. Tangled Rope: `suanne_face_restoration`
+### 451. Tangled Rope: `suanne_face_restoration`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -11101,7 +13955,61 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 356. Tangled Rope: `synthetic_data_feedback_loop`
+### 452. Tangled Rope: `suslin_hypothesis_undecidability`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `N/A`
+    *   Analytical View: `N/A`
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for suslin_hypothesis_undecidability: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.15000000000000002)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Related Gap/Alert:** N/A
+*   **Generated Omega:** Constraint suslin_hypothesis_undecidability appears as tangled_rope to individuals but rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive suslin_hypothesis_undecidability
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 453. Tangled Rope: `sylow_theorems_group_theory`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `N/A`
+    *   Analytical View: `N/A`
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for sylow_theorems_group_theory: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.09999999999999999)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Related Gap/Alert:** N/A
+*   **Generated Omega:** Constraint sylow_theorems_group_theory appears as tangled_rope to individuals but rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive sylow_theorems_group_theory
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 454. Tangled Rope: `synthetic_data_feedback_loop`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -11133,7 +14041,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 357. Tangled Rope: `systemic_blindspot`
+### 455. Tangled Rope: `systemic_blindspot`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -11165,7 +14073,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 358. Tangled Rope: `tail_risk_compression`
+### 456. Tangled Rope: `tail_risk_compression`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -11197,7 +14105,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 359. Tangled Rope: `taiwan_existential_sovereignty`
+### 457. Tangled Rope: `taiwan_existential_sovereignty`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -11229,7 +14137,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 360. Tangled Rope: `taiwan_grand_bargain`
+### 458. Tangled Rope: `taiwan_grand_bargain`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -11261,7 +14169,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 361. Tangled Rope: `taiwan_storm_2026`
+### 459. Tangled Rope: `taiwan_storm_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -11293,7 +14201,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 362. Tangled Rope: `taiwan_strait_hegemony_shift`
+### 460. Tangled Rope: `taiwan_strait_hegemony_shift`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -11324,7 +14232,39 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 363. Tangled Rope: `teaching_horses_to_sing`
+### 461. Tangled Rope: `tarski_undefinability`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `N/A`
+    *   Institutional (Manager) View: `N/A`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for tarski_undefinability: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.15000000000000002)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** Constraint tarski_undefinability appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from tarski_undefinability?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does tarski_undefinability serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 462. Tangled Rope: `teaching_horses_to_sing`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -11356,7 +14296,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 364. Tangled Rope: `tear_gas_repression_2026`
+### 463. Tangled Rope: `tear_gas_repression_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -11388,7 +14328,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 365. Tangled Rope: `technocratic_overreach`
+### 464. Tangled Rope: `technocratic_overreach`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -11420,7 +14360,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 366. Tangled Rope: `technological_point_of_no_return`
+### 465. Tangled Rope: `technological_point_of_no_return`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -11451,7 +14391,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 367. Tangled Rope: `temporal_scale_arbitrage`
+### 466. Tangled Rope: `temporal_scale_arbitrage`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -11483,7 +14423,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 368. Tangled Rope: `texas_hispanic_political_pivot`
+### 467. Tangled Rope: `texas_hispanic_political_pivot`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -11515,7 +14455,66 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 369. Tangled Rope: `the_calm_protocol_suppression`
+### 468. Tangled Rope: `thai_article_112_mountain`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `snare`
+    *   Institutional (Manager) View: `tangled_rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** CONSTRUCTED LOW-EXTRACTION signature for thai_article_112_mountain: Enforcement present (suppression=0.95, resistance=0.50) but extraction is low (0.04). This is a rule-based coordination structure, not an extraction mechanism.
+*   **Related Gap/Alert:** N/A
+*   **Generated Omega:** Constraint thai_article_112_mountain appears as snare to individuals but tangled_rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive thai_article_112_mountain
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 469. Tangled Rope: `the_bacchae_madness_protocol`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `snare`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** Perspectives AGREE
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** Constraint the_bacchae_madness_protocol appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from the_bacchae_madness_protocol?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does the_bacchae_madness_protocol serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 470. Tangled Rope: `the_calm_protocol_suppression`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -11547,7 +14546,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 370. Tangled Rope: `theory_of_visitors`
+### 471. Tangled Rope: `theory_of_visitors`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -11579,7 +14578,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 371. Tangled Rope: `toxic_social_infection`
+### 472. Tangled Rope: `toxic_social_infection`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -11611,7 +14610,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 372. Tangled Rope: `trade_secret_law`
+### 473. Tangled Rope: `trade_secret_law`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -11643,7 +14642,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 373. Tangled Rope: `tragedy_of_the_commons`
+### 474. Tangled Rope: `tragedy_of_the_commons`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -11675,7 +14674,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 374. Tangled Rope: `transformer_self_attention`
+### 475. Tangled Rope: `transformer_self_attention`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -11707,7 +14706,39 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 375. Tangled Rope: `trump_critical_minerals`
+### 476. Tangled Rope: `traveling_salesperson_problem`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `snare`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** Perspectives AGREE
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** Constraint traveling_salesperson_problem appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from traveling_salesperson_problem?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does traveling_salesperson_problem serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 477. Tangled Rope: `trump_critical_minerals`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -11739,7 +14770,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 376. Tangled Rope: `trump_indian_tariffs_2026`
+### 478. Tangled Rope: `trump_indian_tariffs_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -11771,7 +14802,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 377. Tangled Rope: `trump_making_china_great_2026`
+### 479. Tangled Rope: `trump_making_china_great_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -11803,7 +14834,39 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 378. Tangled Rope: `ukr_mobilization`
+### 480. Tangled Rope: `trumps_second_term_authoritarianism_2026`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `snare`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** organized@local: d=0.500 f(d)=0.65 χ = 0.85 × 0.65 × 0.80 = 0.442
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** Constraint trump_second_term_authoritarianism_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from trump_second_term_authoritarianism_2026?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does trump_second_term_authoritarianism_2026 serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 481. Tangled Rope: `ukr_mobilization`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -11835,7 +14898,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 379. Tangled Rope: `union_protection_underperformance`
+### 482. Tangled Rope: `union_protection_underperformance`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -11867,7 +14930,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 380. Tangled Rope: `us_employer_health_insurance`
+### 483. Tangled Rope: `us_employer_health_insurance`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -11899,7 +14962,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 381. Tangled Rope: `us_iran_drone_conflict`
+### 484. Tangled Rope: `us_iran_drone_conflict`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -11931,7 +14994,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 382. Tangled Rope: `us_labor_mobility`
+### 485. Tangled Rope: `us_labor_mobility`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -11963,7 +15026,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 383. Tangled Rope: `us_suburban_zoning_2025`
+### 486. Tangled Rope: `us_suburban_zoning_2025`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -11995,7 +15058,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 384. Tangled Rope: `us_two_party_duopoly`
+### 487. Tangled Rope: `us_two_party_duopoly`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -12027,7 +15090,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 385. Tangled Rope: `usc_26_469_passive_loss`
+### 488. Tangled Rope: `usc_26_469_passive_loss`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -12059,14 +15122,14 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 386. Tangled Rope: `utopia_apocalypse_fragility`
+### 489. Tangled Rope: `utopia_apocalypse_fragility`
 
-*   **Claimed Type:** `mountain`
+*   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
 *   **Perspectival Breakdown:**
     *   Individual (Powerless) View: `snare`
     *   Institutional (Manager) View: `rope`
-    *   Analytical View: `mountain`
+    *   Analytical View: `tangled_rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** Constraint utopia_apocalypse_fragility appears extractive (Snare) to individuals but functional (Rope) to institutions...
@@ -12091,7 +15154,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 387. Tangled Rope: `value_alignment_drift`
+### 490. Tangled Rope: `value_alignment_drift`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -12123,7 +15186,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 388. Tangled Rope: `value_extraction_plateau`
+### 491. Tangled Rope: `value_extraction_plateau`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -12155,7 +15218,103 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 389. Tangled Rope: `visibility_bias_governance`
+### 492. Tangled Rope: `van_der_waerden_theorem`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `N/A`
+    *   Institutional (Manager) View: `N/A`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for van_der_waerden_theorem: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.15000000000000002)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** Constraint van_der_waerden_theorem appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from van_der_waerden_theorem?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does van_der_waerden_theorem serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 493. Tangled Rope: `vienna_quantum_superposition_2026`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `snare`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** Perspectives AGREE
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** Constraint vienna_quantum_superposition_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from vienna_quantum_superposition_2026?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does vienna_quantum_superposition_2026 serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 494. Tangled Rope: `viral_transmission_rates`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `snare`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for viral_transmission_rates: Appears to be rope (indexed_rope_classification) but fails 4 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.33),scope_variant([snare,tangled_rope]),excess_above_floor(0.6),nonsensical_coupling(0.3333333333333333)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** Constraint viral_transmission_rates appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from viral_transmission_rates?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does viral_transmission_rates serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 495. Tangled Rope: `visibility_bias_governance`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -12187,7 +15346,130 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 390. Tangled Rope: `zipfs_law`
+### 496. Tangled Rope: `whitehead_problem_undecidability`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `N/A`
+    *   Analytical View: `N/A`
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for whitehead_problem_undecidability: Appears to be rope (indexed_rope_classification) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.15000000000000002)]. Coupling score=0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Related Gap/Alert:** N/A
+*   **Generated Omega:** Constraint whitehead_problem_undecidability appears as tangled_rope to individuals but rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive whitehead_problem_undecidability
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 497. Tangled Rope: `wikipedia_notability_requirement_2026`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `snare`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** Perspectives AGREE
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** Constraint wikipedia_notability_requirement_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from wikipedia_notability_requirement_2026?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does wikipedia_notability_requirement_2026 serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 498. Tangled Rope: `winners_curse`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `snare`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** Perspectives AGREE
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** Constraint winners_curse appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from winners_curse?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does winners_curse serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 499. Tangled Rope: `xi_mao_ideological_centralization`
+
+*   **Claimed Type:** `snare`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `snare`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `snare`
+*   **Structural Signature Analysis:** Perspectives AGREE
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** Constraint xi_mao_ideological_centralization appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from xi_mao_ideological_centralization?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does xi_mao_ideological_centralization serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 500. Tangled Rope: `zipfs_law`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`

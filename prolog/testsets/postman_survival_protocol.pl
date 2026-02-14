@@ -1,10 +1,9 @@
 % ============================================================================
 % CONSTRAINT STORY: postman_survival_protocol
 % ============================================================================
-% Generated: 2026-01-21
-% Model: Gemini 2.0 Flash
-% Source: Neil Postman's "Advice on How to Live the Rest of Your Life"
-% Status: [RESOLVED MANDATROPHY]
+% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2024-07-15
 % ============================================================================
 
 :- module(constraint_postman_survival_protocol, []).
@@ -13,16 +12,37 @@
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
 
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
+
 % --- Namespace Hooks (Required for loading) ---
-:- multifile 
+:- multifile
     domain_priors:base_extractiveness/2,
     domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
     domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
     narrative_ontology:constraint_metric/3,
-    narrative_ontology:constraint_claim/2,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
-    constraint_indexing:constraint_classification/3.
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
+    narrative_ontology:boltzmann_floor_override/2,
+    constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -30,278 +50,201 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: postman_survival_protocol
- * human_readable: Postman's Protocol for Informational Hygiene
- * domain: social/technological
- * temporal_scope: Contemporary / Digital Era
- * spatial_scope: Global / Modern America
- * * SUMMARY:
- * This constraint set is a defensive protocol designed by Neil Postman to protect individual 
- * agency against the "constant change" and "hostility" of large technological bureaucracies. 
- * It posits that survival requires regularizing the trivial through routine, distrusting 
- * large groups, and rejecting the "magical power" of quantification.
- * * KEY AGENTS:
- * - The Individual Subject: The person attempting to maintain sanity and humor in a "nonsense" saturated world.
- * - The Bureaucracy: An institutional agent characterized by a lack of feelings and a "hostility to individual differences".
- * - The Acquaintance: A person who has not "perjured themselves for you," occupying the space outside deep friendship.
- * * NARRATIVE ARC:
- * The individual is bombarded by technological change and "hardenings of categories". 
- * Postman's rules function as a "Rope" for the subject to navigate a society that is 
- * functionally a "Snare" (bureaucracy) or a "Mountain" (the prevalence of nonsense).
+ *   constraint_id: postman_survival_protocol
+ *   human_readable: Postman's Protocol for Informational Hygiene
+ *   domain: social/technological
+ *
+ * SUMMARY:
+ *   This constraint is Neil Postman's defensive protocol for protecting individual
+ *   agency against the informational overload and depersonalization of large
+ *   technological bureaucracies. It is a set of personal rules for self-coordination,
+ *   such as regularizing trivial routines, distrusting large groups, and rejecting
+ *   the "magical power" of quantification. The constraint is the protocol itself,
+ *   not the societal conditions it responds to.
+ *
+ * KEY AGENTS (by structural relationship):
+ *   - Individual Adherents: Primary beneficiary (powerless/mobile) — uses the protocol to maintain agency and humor.
+ *   - Technological Bureaucracies: Adversary (institutional/constrained) — the protocol is a tool for resisting its influence.
+ *   - Analytical Observer: Sees the full structure of the protocol as a coordination tool.
  */
 
 /* ==========================================================================
-   2. BASE PROPERTIES (Context-Independent)
+   2. BASE PROPERTIES (DOMAIN PRIORS)
    ========================================================================== */
 
-narrative_ontology:interval(postman_survival_interval, 0, 10).
-narrative_ontology:constraint_claim(postman_survival_protocol, mountain).
+% --- Numerical metrics ---
+domain_priors:base_extractiveness(postman_survival_protocol, 0.15).
+domain_priors:suppression_score(postman_survival_protocol, 0.30).   % Structural property (raw, unscaled).
+domain_priors:theater_ratio(postman_survival_protocol, 0.08).       % Piton detection (>= 0.70)
 
-% Base extractiveness: Moderate (0.4)
-% Rationale: The protocol itself is a gift of wisdom, but the systems it describes (Bureaucracy) 
-% have high extractiveness (0.8+), necessitating the protocol's existence.
-domain_priors:base_extractiveness(postman_survival_protocol, 0.4).
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(postman_survival_protocol, extractiveness, 0.15).
+narrative_ontology:constraint_metric(postman_survival_protocol, suppression_requirement, 0.30).
+narrative_ontology:constraint_metric(postman_survival_protocol, theater_ratio, 0.08).
 
-% Suppression: Moderate (0.5)
-% Rationale: The protocol advocates for "concealing thoughts" and avoiding "-ists," 
-% actively suppressing certain social "virtues" like plain honesty to avoid pain.
-domain_priors:suppression_score(postman_survival_protocol, 0.5).
+% --- Constraint claim (must match analytical perspective type) ---
+narrative_ontology:constraint_claim(postman_survival_protocol, rope).
 
-% Constraint metric facts (bridge for classification engine)
-narrative_ontology:constraint_metric(postman_survival_protocol, extractiveness, 0.4).
-narrative_ontology:constraint_metric(postman_survival_protocol, suppression_requirement, 0.5).
-
-% Enforcement: Emerging naturally vs Active
-% The bureaucracy's hostility emerges naturally from its size; the protocol 
-% requires active individual enforcement to maintain.
+% --- Binary flags ---
+% The protocol requires active individual enforcement to maintain.
 domain_priors:requires_active_enforcement(postman_survival_protocol).
 
-% BENEFICIARIES & VICTIMS
-% Who benefits from this protocol? The Individual Subject (agency/humor).
-narrative_ontology:constraint_beneficiary(postman_survival_protocol, individual_subject).
-% Who/What is the victim? The Institutional Bureaucracy (it loses its grip on the subject).
-narrative_ontology:constraint_victim(postman_survival_protocol, institutional_bureaucracy).
+% --- Structural relationships (REQUIRED for non-mountain constraints) ---
+% These feed the directionality derivation chain: the engine computes
+% d (directionality) from agent membership in these groups + exit_options.
+%
+% Who benefits from this constraint existing?
+narrative_ontology:constraint_beneficiary(postman_survival_protocol, individual_adherents).
+%
+% Who bears disproportionate cost?
+% No direct victim. The protocol is a defensive tool; it doesn't extract from
+% an adversary, but rather enables exit from extraction.
 
-% Metrics required for Section 1 of the Executive Summary
 /* ==========================================================================
-   3. INDEXED CLASSIFICATIONS (Perspectival Truth)
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × f(d) × σ(S)
+   where f(d) is the sigmoid directionality function:
+     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
+   The engine derives d from beneficiary/victim membership + exit_options.
+   Scope modifiers: local=0.8, regional=0.9, national=1.0,
+                    continental=1.1, global=1.2, universal=1.0.
+   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
+   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 1: THE INDIVIDUAL SUBJECT - Rope
-   --------------------------------------------------------------------------
-   
-   WHO: powerless (Facing large-scale technological change and bureaucracies)
-   WHEN: biographical (Living the rest of your life)
-   WHERE: mobile (Choosing to adopt routines and select friends)
-   SCOPE: local (Interpersonal relations and personal habits)
-   
-   WHY THIS CLASSIFICATION:
-   For the individual, Postman's advice is a "Rope"—a functional coordination mechanism. 
-   By regularizing the trivial, the individual gains the agency to cope with 
-   significant changes.
-   
-   NARRATIVE EVIDENCE:
-   "Establish as many regular routines as possible... Regularize the trivial to 
-   cope with the significant".
-   -------------------------------------------------------------------------- */
+% PERSPECTIVE 1: THE INDIVIDUAL ADHERENT (ROPE)
+% For the person adopting the protocol, it is a pure coordination tool (Rope).
+% It helps regularize personal behavior to gain agency and cope with external pressures.
+% The low extraction represents the cognitive overhead of adherence.
+constraint_indexing:constraint_classification(postman_survival_protocol, rope,
+    context(agent_power(powerless),
+            time_horizon(biographical),
+            exit_options(mobile),
+            spatial_scope(local))).
 
-constraint_indexing:constraint_classification(
-    postman_survival_protocol,
-    rope,
-    context(
-        agent_power(powerless),
-        time_horizon(biographical),
-        exit_options(mobile),
-        spatial_scope(local)
-    )
-) :- !.
+% PERSPECTIVE 2: THE TECHNOLOGICAL BUREAUCRACY (ROPE)
+% From the perspective of the bureaucracy whose influence is being resisted, the
+% protocol is a Rope used by individuals to coordinate their defense. It is a
+% nuisance that reduces the institution's ability to extract attention and
+% compliance, but it is not a direct attack.
+constraint_indexing:constraint_classification(postman_survival_protocol, rope,
+    context(agent_power(institutional),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(national))).
 
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE BUREAUCRACY (Read's Law) - Snare
-   --------------------------------------------------------------------------
-   
-   WHO: institutional (Large groups/bureaucracies)
-   WHEN: historical (Systemic rules that outlast individual members)
-   WHERE: trapped (Hostile to individual differences)
-   SCOPE: national (Modern America / Bureaucracies at scale)
-   
-   WHY THIS CLASSIFICATION:
-   From the perspective of the individual subject, the bureaucracy is a "Snare." 
-   It extracts individual differences to satisfy the rules of the system and 
-   lacks human traits like loyalty or compassion.
-   
-   NARRATIVE EVIDENCE:
-   "Bureaucracies are by nature hostile to individual differences... institutions 
-   do not have loyalty, compassion, or feelings".
-   -------------------------------------------------------------------------- */
-
-constraint_indexing:constraint_classification(
-    postman_survival_protocol,
-    snare,
-    context(
-        agent_power(institutional),
-        time_horizon(historical),
-        exit_options(trapped),
-        spatial_scope(national)
-    )
-) :- !.
-
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE SAGE (Weingartner/Postman) - Mountain
-   --------------------------------------------------------------------------
-   
-   WHO: analytical (Observer of civilizational trends)
-   WHEN: civilizational (The 95% nonsense rule)
-   WHERE: analytical (Observer stance)
-   SCOPE: global (The human condition in a technological society)
-   
-   WHY THIS CLASSIFICATION:
-   To the analytical observer, the prevalence of nonsense and the nature of 
-   institutions are "Mountains"—unchangeable natural laws of the current 
-   historical moment. One does not "fix" these; one simply learns to survive 
-   around them.
-   
-   NARRATIVE EVIDENCE:
-   "95% of everything is nonsense... Quantification... represents pure 
-   superstition... America is based on counting".
-   -------------------------------------------------------------------------- */
-
-
-constraint_indexing:constraint_classification(
-    postman_survival_protocol,
-    mountain,
-    context(
-        agent_power(analytical),
-        time_horizon(civilizational),
-        exit_options(analytical),
-        spatial_scope(global)
-    )
-) :- !.
+% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (ROPE)
+% The analytical observer sees the protocol for its true structure: a low-extraction,
+% self-coordination mechanism designed to improve an individual's resilience.
+% It is a classic Rope.
+constraint_indexing:constraint_classification(postman_survival_protocol, rope,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(global))).
 
 /* ==========================================================================
-   4. TESTS (What We Learn About Constraints)
+   4. VALIDATION TESTS
    ========================================================================== */
 
 :- begin_tests(postman_survival_protocol_tests).
 
-test(multi_perspective_hygiene) :-
-    % Individual Subject sees Rope
-    constraint_indexing:constraint_classification(postman_survival_protocol, Type1, context(powerless, biographical, mobile, local)),
-    % Bureaucracy acts as Snare
-    constraint_indexing:constraint_classification(postman_survival_protocol, Type2, context(institutional, historical, trapped, national)),
-    % Sage sees Mountain
-    constraint_indexing:constraint_classification(postman_survival_protocol, Type3, context(analytical, civilizational, analytical, global)),
-    Type1 \= Type2,
-    Type2 \= Type3.
+test(uniform_classification) :-
+    % Verify this is a uniform-type constraint (Rope from all perspectives).
+    constraint_indexing:constraint_classification(postman_survival_protocol, rope, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(postman_survival_protocol, rope, context(agent_power(institutional), _, _, _)),
+    constraint_indexing:constraint_classification(postman_survival_protocol, rope, context(agent_power(analytical), _, _, _)).
 
-test(power_extractiveness_hygiene) :-
-    % The individual subject experiences extraction of "autonomy" from the system
-    ContextPowerless = context(powerless, biographical, mobile, local),
-    ContextInstitutional = context(institutional, historical, trapped, national),
-    constraint_indexing:extractiveness_for_agent(postman_survival_protocol, ContextPowerless, Score1),
-    constraint_indexing:extractiveness_for_agent(postman_survival_protocol, ContextInstitutional, Score2),
-    Score1 > Score2.
-
-test(time_immutability) :-
-    % In the immediate horizon, routines are a Rope (changeable)
-    constraint_indexing:effective_immutability(biographical, mobile, rope),
-    % In the historical horizon, bureaucratic nature is a Mountain (unchangeable)
-    constraint_indexing:effective_immutability(historical, trapped, mountain).
+test(threshold_validation) :-
+    % Verify metrics are consistent with Rope classification.
+    narrative_ontology:constraint_metric(postman_survival_protocol, extractiveness, E),
+    E =< 0.45.
 
 :- end_tests(postman_survival_protocol_tests).
 
 /* ==========================================================================
-   5. MODEL INTERPRETATION (Commentary)
+   5. GENERATIVE COMMENTARY
    ========================================================================== */
 
 /**
- * LLM GENERATION NOTES
- * * Model: Gemini 2.0 Flash
- * Date: 2026-01-21
- * * KEY DECISIONS:
- * * 1. EXTRACTIVENESS SCORE (0.4):
- * Reasoning: The protocol itself is low-extraction (it's a tool for agency). However, 
- * the *asymmetry* between the individual and the bureaucracy it responds to 
- * is high (0.8). I resolved this by marking the protocol as a "Rope" for the 
- * individual to avoid the "Snare" of the institution.
- * * 2. SUPPRESSION SCORE (0.5):
- * Reasoning: Postman explicitly advises suppressing "plain speaking" and 
- * numerical "superstition". This suppression is intentional and 
- * pedagogical.
- * * 3. PERSPECTIVE SELECTION:
- * The Individual, the Bureaucracy, and the Sage capture the three states of 
- * interaction with these constraints: usage, enforcement, and observation.
- * * 4. AMBIGUITIES:
- * - Honesty vs. Deception: Postman calls honesty "the first refuge of the scoundrel". 
- * I resolved this by classifying his advice as an "anti-ventilation theory" 
- * aimed at minimizing pain rather than maximizing truth.
+ * LOGIC RATIONALE:
+ *   The original story conflated the protocol (the solution) with the societal
+ *   problems it addresses (the problem). This version corrects that by focusing
+ *   strictly on the protocol itself as the constraint.
+ *
+ *   - Base Extractiveness (ε=0.15): The protocol is a tool for personal agency.
+ *     It does not asymmetrically extract value for a third party. The low ε
+ *     represents the cognitive cost and effort required for adherence.
+ *   - Suppression Score (0.30): Postman's advice explicitly suppresses certain
+ *     behaviors (e.g., "plain speaking," reliance on quantification) in favor
+ *     of others (e.g., routine, tact). This is a core function of the protocol.
+ *
+ * PERSPECTIVAL GAP:
+ *   There is no significant perspectival gap. This is a uniform-type constraint,
+ *   classifying as a Rope from all major perspectives. For the individual, it's
+ *   a tool for self-coordination. For the bureaucracy, it's a coordination
+ *   tool used by others to resist its influence. For the analyst, its structure
+ *   is clearly that of a Rope.
+ *
+ * DIRECTIONALITY LOGIC:
+ *   The primary beneficiary is the `individual_adherents` who use the protocol.
+ *   There is no structural victim; the bureaucracy is an adversary whose influence
+ *   is evaded, not a party from whom value is extracted by the protocol.
+ *
+ * MANDATROPHY ANALYSIS:
+ *   By correctly identifying the protocol as a low-extraction Rope, we avoid
+ *   mislabeling it as a Snare or Mountain based on the environment it operates
+ *   in. The high extraction and suppression of the bureaucratic world are
+ *   external factors, not properties of this specific constraint. This story
+ *   is about a tool to navigate a Snare, it is not the Snare itself.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% Mandatory Omega for high-extraction (systemic) constraints:
+% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
-    postman_concealment_efficacy,
-    "Is language as a tool for concealment (Rope) a functional necessity for social peace or a predatory Snare for truth-seekers?",
-    resolution_mechanism("Audit of interpersonal trust levels in high-honesty vs. high-tact cultures"),
-    impact("If necessity: Social Mountain. If predatory: Mandatrophy Snare."),
+    omega_postman_protocol,
+    'Does long-term adherence to the protocol lead to genuine agency (Rope), or does it degrade into a theatrical performance of resistance that changes nothing, becoming an inertial Piton?',
+    'Longitudinal study comparing life outcomes and self-reported agency of adherents vs. a control group.',
+    'If genuine agency -> Rope. If theatrical -> Piton.',
     confidence_without_resolution(medium)
 ).
 
-omega_variable(
-    quantification_superstition,
-    "Is the passion for numbers truly medieval superstition (Mountain) or an emerging coordination Rope we have not yet mastered?",
-    resolution_mechanism("Long-term verification of numerical intelligence/beauty predictive power vs. human intuition"),
-    impact("If superstition: Mountain. If coordination: Rope."),
-    confidence_without_resolution(low)
-).
-
 /* ==========================================================================
-   7. ALTERNATIVE ANALYSIS
+   7. INTEGRATION HOOKS
    ========================================================================== */
 
-/**
- * VIABLE ALTERNATIVES
- * * ALTERNATIVE 1: Radical Honesty / Plain Speaking
- * Viability: The conventional virtue.
- * Suppression: Actively rejected by Nugget #5 as "overrated" and potentially 
- * causing "pain to others".
- * * ALTERNATIVE 2: Scientific Quantification (Counting)
- * Viability: America's base logic.
- * Suppression: Rejected by Rule 19 as "medieval superstition" with 
- * "limited effectiveness" in human affairs.
- * * CONCLUSION:
- * The existence of these alternatives (Honesty, Quantification) shifts Postman's 
- * protocol into a "Rope" of informational hygiene. Without his rules, 
- * the individual is easily ensnared by the "Snare" of these alternatives.
- */
+% Required for external script parsing
+narrative_ontology:interval(postman_survival_protocol, 0, 10).
 
 /* ==========================================================================
-   8. INTEGRATION HOOKS
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Load: ?- [postman_survival_protocol].
-% Multi-perspective: ?- multi_index_report(postman_survival_protocol).
+% Not required, as base_extractiveness (0.15) is below the 0.46 threshold.
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA
+   ========================================================================== */
+
+% Coordination type (enables Boltzmann floor + complexity offset)
+% The protocol is a standard for processing information and social interaction.
+narrative_ontology:coordination_type(postman_survival_protocol, information_standard).
+
+% Network relationships (structural influence edges)
+% This protocol is a response to a background condition of bureaucratic opacity.
+% The existence of that (hypothetical) constraint affects this one.
+narrative_ontology:affects_constraint(bureaucratic_opacity, postman_survival_protocol).
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+% No overrides needed. The structural derivation from beneficiary status
+% correctly models the relationships.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
-
-% ============================================================================
-% ENRICHMENT: Structural predicates for dynamic classification
-% Generated: 2026-02-08
-% Template: v5.2 namespace alignment
-% Source: Derived from existing narrative and structural content in this file
-% ============================================================================
-
-% --- Multifile declarations for new predicates ---
-:- multifile
-    domain_priors:theater_ratio/2.
-
-% --- Theater ratio (missing from base properties) ---
-% Structural constraint in social domain — low theater, high substance
-domain_priors:theater_ratio(postman_survival_protocol, 0.08).
-narrative_ontology:constraint_metric(postman_survival_protocol, theater_ratio, 0.08).

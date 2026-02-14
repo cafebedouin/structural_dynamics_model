@@ -68,7 +68,7 @@ narrative_ontology:constraint_metric(challenger_o_ring_integrity, theater_ratio,
 
 % Constraint self-claim (what does the constraint claim to be?)
 % Management framed the decision as a manageable risk (coordination), but it was pure enforcement of schedule.
-narrative_ontology:constraint_claim(challenger_o_ring_integrity, mountain).
+narrative_ontology:constraint_claim(challenger_o_ring_integrity, tangled_rope).
 
 % Binary flags
 domain_priors:requires_active_enforcement(challenger_o_ring_integrity). % Required active management override of engineering advice.
@@ -108,7 +108,7 @@ constraint_indexing:constraint_classification(challenger_o_ring_integrity, rope,
 % From the perspective of the physical components, the relationship between
 % temperature and material elasticity is an immutable 'Mountain'. Below a certain
 % temperature, the O-rings will fail. This is a non-negotiable law of physics.
-constraint_indexing:constraint_classification(challenger_o_ring_integrity, mountain,
+constraint_indexing:constraint_classification(challenger_o_ring_integrity, tangled_rope,
     context(agent_power(analytical),
             time_horizon(immediate),
             exit_options(trapped),

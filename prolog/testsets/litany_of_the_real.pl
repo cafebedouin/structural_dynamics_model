@@ -53,7 +53,8 @@
 
 % ID Binding - Mandatory for 2026 DR-Audit Suite
 narrative_ontology:interval(litany_of_the_real, 0, 10).
-narrative_ontology:constraint_claim(litany_of_the_real, mountain).
+narrative_ontology:constraint_claim(litany_of_the_real, tangled_rope).
+domain_priors:requires_active_enforcement(litany_of_the_real).
 
 % Base Properties
 % Extractiveness is low; it provides a coordination mechanism for the self.
@@ -104,7 +105,7 @@ constraint_indexing:constraint_classification(litany_of_the_real, rope,
    description of natural law. "Constraint is the double helix of the world."
    It is viewed as unchangeable (zero degrees of freedom).
    -------------------------------------------------------------------------- */
-constraint_indexing:constraint_classification(litany_of_the_real, mountain, 
+constraint_indexing:constraint_classification(litany_of_the_real, tangled_rope, 
     context(agent_power(institutional), time_horizon(historical), exit_options(trapped), spatial_scope(global))) :-
     !.
 

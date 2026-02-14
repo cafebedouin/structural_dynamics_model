@@ -1,26 +1,49 @@
 % ============================================================================
 % CONSTRAINT STORY: monty_hall_conditional_probability
 % ============================================================================
-% Generated: 2026-01-19
-% Model: Gemini 2.0 Flash
-% Source: Steve Selvin (1975) / Marilyn vos Savant (1990)
+% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2024-07-15
 % ============================================================================
 
-:- module(constraint_monty_hall, []).
+:- module(constraint_monty_hall_conditional_probability, []).
 
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
 
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
+
 % --- Namespace Hooks (Required for loading) ---
-:- multifile 
+:- multifile
     domain_priors:base_extractiveness/2,
     domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
     domain_priors:requires_active_enforcement/1,
+    domain_priors:emerges_naturally/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
-    constraint_indexing:constraint_classification/3.
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
+    narrative_ontology:boltzmann_floor_override/2,
+    constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -28,266 +51,214 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: monty_hall_conditional_probability
- * human_readable: The Monty Hall Problem
- * domain: mathematical/probabilistic
- * temporal_scope: 1975 - Present
- * spatial_scope: Global/Abstract (Game Theory)
- * * SUMMARY:
- * The Monty Hall problem is a counter-intuitive probability puzzle based on a 
- * game show scenario. It demonstrates how new information (opening a door) 
- * shifts probabilities in a way that defies linear human intuition, creating 
- * a structural constraint where "switching" is mathematically superior.
- * * KEY AGENTS:
- * - The Contestant (Subject): The powerless agent facing a choice with 
- * hidden variables and counter-intuitive odds.
- * - The Game Show Host (Institutional): The rule-enforcer who knows the 
- * location of the "Car" and uses the constraint to maintain dramatic tension.
- * - The Intuitive Skeptic (Victim): An agent whose common-sense logic 
- * ("it's 50/50") is "strangled" by the underlying Bayesian Mountain.
- * * NARRATIVE ARC:
- * The problem functions as a "Mountain" of Bayesian reality—the 2/3 vs 1/3 
- * odds are a fixed, unyielding truth of the system's state space. In 
- * education, it is a "Rope" for coordinating an understanding of conditional 
- * probability. However, for the contestant's ego, the paradox acts as a 
- * "Snare," extracting the possibility of a "rational" 50/50 choice and 
- * "strangling" those who refuse to pivot when the rules shift.
+ *   constraint_id: monty_hall_conditional_probability
+ *   human_readable: The Monty Hall Problem (Conditional Probability)
+ *   domain: mathematical
+ *
+ * SUMMARY:
+ *   The Monty Hall problem is a counter-intuitive probability puzzle that
+ *   demonstrates how new information (a host revealing a non-winning option)
+ *   alters the probability space. The core constraint is the mathematical
+ *   law of conditional probability itself, which dictates that switching doors
+ *   doubles the chance of winning (from 1/3 to 2/3). This logical fact is
+ *   unchangeable, classifying it as a Mountain. Human intuition often fails
+ *   to grasp this, leading to suboptimal choices, but this is a consequence
+ *   of interacting with the Mountain, not an extractive property of the
+ *   constraint itself.
+ *
+ * KEY AGENTS (by structural relationship):
+ *   - The Contestant: Agent confronting the mathematical reality (powerless/trapped).
+ *   - The Educator: Agent using the puzzle to demonstrate the principle (institutional/arbitrage).
+ *   - The Intuitive Skeptic: Agent whose "common sense" (50/50 odds) conflicts with the mathematical law.
+ *   - The Analytical Observer: Agent who sees the full probability space and its logical consequences.
  */
 
 /* ==========================================================================
-   2. BASE PROPERTIES (Context-Independent)
+   2. BASE PROPERTIES (DOMAIN PRIORS)
    ========================================================================== */
 
-% Structural Anchor for the Deferential Realism Auditor
-narrative_ontology:interval(probability_paradox_era, 1975, 2026).
+% --- Numerical metrics ---
+% Rationale: The mathematical law itself is not extractive. The "cost" is the
+% cognitive effort to understand it, which is near zero. The perceived 33%
+% loss from not switching is a consequence of choice, not an extraction by
+% the constraint. ε must be <= 0.25 for a Mountain.
+domain_priors:base_extractiveness(monty_hall_conditional_probability, 0.02).
+
+% Rationale: The law of probability does not suppress alternatives; it simply
+% renders them mathematically incorrect. There is no active coercion. The
+% suppression score must be <= 0.05 for a Mountain.
+domain_priors:suppression_score(monty_hall_conditional_probability, 0.01).
+
+% Rationale: The constraint is a formal mathematical truth with no performative
+% or theatrical component.
+domain_priors:theater_ratio(monty_hall_conditional_probability, 0.0).
+
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(monty_hall_conditional_probability, extractiveness, 0.02).
+narrative_ontology:constraint_metric(monty_hall_conditional_probability, suppression_requirement, 0.01).
+narrative_ontology:constraint_metric(monty_hall_conditional_probability, theater_ratio, 0.0).
+
+% --- NL Profile Metrics (required for mountain constraints) ---
+% These feed the natural_law_signature certification chain.
+% Accessibility Collapse: The laws of probability are absolute; alternatives are logically incoherent.
+narrative_ontology:constraint_metric(monty_hall_conditional_probability, accessibility_collapse, 1.0).
+% Resistance: One can argue against the conclusion, but cannot structurally resist the mathematical law itself.
+narrative_ontology:constraint_metric(monty_hall_conditional_probability, resistance, 0.01).
+
+% --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(monty_hall_conditional_probability, mountain).
 
-% Base extractiveness score (0.0-1.0)
-% Rationale: 0.33. The paradox "extracts" 1/3 of the winning probability from 
-% those who stay with their original choice, effectively taxing "loyalty" 
-% or "stasis" in a changing environment.
-domain_priors:base_extractiveness(monty_hall_conditional_probability, 0.33).
+% --- Binary flags ---
+% No active enforcement is needed; the constraint is a law of logic.
 
-% Suppression score (0.0-1.0)
-% Rationale: 0.6. It heavily suppresses the visibility of the "50/50" 
-% alternative, rendering the intuitive answer mathematically fraudulent 
-% and socially ridiculed in academic circles.
-domain_priors:suppression_score(monty_hall_conditional_probability, 0.6).
-
-% Constraint metric facts (bridge for classification engine)
-narrative_ontology:constraint_metric(monty_hall_conditional_probability, extractiveness, 0.33).
-narrative_ontology:constraint_metric(monty_hall_conditional_probability, suppression_requirement, 0.6).
-
-% Enforcement: Emerges naturally from the laws of conditional probability.
+% --- Emergence flag (required for mountain constraints) ---
+% Mathematical laws are discovered, not invented, and emerge from logical axioms.
 domain_priors:emerges_naturally(monty_hall_conditional_probability).
-domain_priors:requires_active_enforcement(monty_hall_conditional_probability).
 
-% Metrics required for Section 1 of the Executive Summary
-% BENEFICIARIES & VICTIMS
-narrative_ontology:constraint_beneficiary(monty_hall_conditional_probability, bayesian_statisticians).
-narrative_ontology:constraint_beneficiary(monty_hall_conditional_probability, logical_pivoters).
-narrative_ontology:constraint_victim(monty_hall_conditional_probability, intuitive_thinkers).
-narrative_ontology:constraint_victim(monty_hall_conditional_probability, static_choice_advocates).
+% --- Structural relationships (REQUIRED for non-mountain constraints) ---
+% No enrichment needed. As a Mountain (a mathematical law), this constraint
+% does not have structural beneficiaries or victims. The effects are uniform
+% consequences of interacting with an unchangeable logical reality.
 
 /* ==========================================================================
-   3. INDEXED CLASSIFICATIONS (Perspectival Truth)
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × f(d) × σ(S)
+   where f(d) is the sigmoid directionality function:
+     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
+   The engine derives d from beneficiary/victim membership + exit_options.
+   Scope modifiers: local=0.8, regional=0.9, national=1.0,
+                    continental=1.1, global=1.2, universal=1.0.
+   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
+   Do not add measurement_basis, beneficiary/victim, or other metadata.
+   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 1: THE DOORS (STATE SPACE) - Mountain
-   --------------------------------------------------------------------------
-   
-   WHO: powerless - The physical configuration of the car has no agency.
-   WHEN: immediate - The probability is set the moment the car is placed.
-   WHERE: trapped - Bound within the three-door system.
-   SCOPE: local - Immediate physical arrangement.
-   
-   WHY THIS CLASSIFICATION:
-   For the system itself, the conditional probabilities are a natural law. 
-   Opening a goat-door *must* concentrate the remaining probability into 
-   the unchosen, unopened door. It is an unyielding Mountain of logic.
-   -------------------------------------------------------------------------- */
+% PERSPECTIVE 1: THE CONTESTANT (MOUNTAIN)
+% The agent facing the choice. From this perspective, the odds are a fixed,
+% unchangeable feature of the environment. The feeling of being "tricked" is
+% a psychological reaction to confronting this logical Mountain.
+constraint_indexing:constraint_classification(monty_hall_conditional_probability, mountain,
+    context(agent_power(powerless),
+            time_horizon(immediate),
+            exit_options(trapped),
+            spatial_scope(local))).
 
+% PERSPECTIVE 2: THE EDUCATOR (MOUNTAIN)
+% The agent using the problem as a teaching tool. The educator is not creating
+% a coordination device (Rope) but is revealing a pre-existing, unchangeable
+% logical structure (Mountain) to coordinate understanding.
+constraint_indexing:constraint_classification(monty_hall_conditional_probability, mountain,
+    context(agent_power(institutional),
+            time_horizon(biographical),
+            exit_options(arbitrage),
+            spatial_scope(global))).
 
-
-constraint_indexing:constraint_classification(
-    monty_hall_conditional_probability,
-    mountain,
-    context(
-        agent_power(powerless),
-        time_horizon(immediate),
-        exit_options(trapped),
-        spatial_scope(local)
-    )
-) :- !.
-
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE PROBABILITY PROFESSOR - Rope
-   --------------------------------------------------------------------------
-   
-   WHO: institutional - Power to use the paradox to coordinate classroom learning.
-   WHEN: biographical - Spanning the duration of a student's cognitive shift.
-   WHERE: mobile - Can choose different variants (100 doors) to illustrate the point.
-   SCOPE: global - Universal pedagogical tool.
-   
-   WHY THIS CLASSIFICATION:
-   For the educator, the problem is a "Rope"—a functional coordination 
-   mechanism. It allows them to "pull" students away from the "Snare" of 
-   faulty intuition toward a standard of achievement in Bayesian thinking.
-   -------------------------------------------------------------------------- */
-
-constraint_indexing:constraint_classification(
-    monty_hall_conditional_probability,
-    rope,
-    context(
-        agent_power(institutional),
-        time_horizon(biographical),
-        exit_options(mobile),
-        spatial_scope(global)
-    )
-) :- !.
-
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE SKEPTICAL CONTESTANT - Snare
-   --------------------------------------------------------------------------
-   
-   WHO: powerless - Lacks the tools to compute the shift in real-time.
-   WHEN: immediate - Forced to choose between switching or staying NOW.
-   WHERE: constrained - The "exit" (switching) feels like a betrayal of intuition.
-   SCOPE: local - A specific, high-stakes game.
-   
-   WHY THIS CLASSIFICATION:
-   For the intuitive thinker, the problem is a "Snare." It "strangles" their 
-   common-sense confidence. Because they perceive a 50/50 choice, the system 
-   extracts 33% of their winning chance (extraction) if they fail to 
-   overcome their cognitive bias. The logic of the host "chokes" their 
-   original intent.
-   -------------------------------------------------------------------------- */
-
-
-
-constraint_indexing:constraint_classification(
-    monty_hall_conditional_probability,
-    snare,
-    context(
-        agent_power(powerless),
-        time_horizon(immediate),
-        exit_options(constrained),
-        spatial_scope(local)
-    )
-) :- 
-    domain_priors:base_extractiveness(monty_hall_conditional_probability, E),
-    E >= 0.3,
-    !.
+% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (MOUNTAIN)
+% The default analytical context. An observer with full knowledge of probability
+% theory sees the constraint as a direct and simple consequence of mathematical
+% axioms—a pure Mountain.
+constraint_indexing:constraint_classification(monty_hall_conditional_probability, mountain,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).
 
 /* ==========================================================================
-   4. TESTS (What We Learn About Constraints)
+   4. VALIDATION TESTS
    ========================================================================== */
 
 :- begin_tests(monty_hall_conditional_probability_tests).
 
-test(multi_perspective_variance) :-
-    % Doors -> Mountain
-    constraint_indexing:constraint_classification(monty_hall_conditional_probability, Type1, context(powerless, immediate, trapped, local)),
-    % Professor -> Rope
-    constraint_indexing:constraint_classification(monty_hall_conditional_probability, Type2, context(institutional, biographical, mobile, global)),
-    Type1 \= Type2.
+test(type_invariance) :-
+    % Verify that the constraint is a Mountain from all key perspectives,
+    % demonstrating its status as a uniform-type natural law.
+    constraint_indexing:constraint_classification(monty_hall_conditional_probability, mountain, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(monty_hall_conditional_probability, mountain, context(agent_power(institutional), _, _, _)),
+    constraint_indexing:constraint_classification(monty_hall_conditional_probability, mountain, context(agent_power(analytical), _, _, _)).
 
-test(intuitive_extraction_penalty) :-
-    % Demonstrates that the Snare classification extracts more value (win %) from the powerless agent.
-    ContextPowerless = context(powerless, immediate, constrained, local),
-    constraint_indexing:extractiveness_for_agent(monty_hall_conditional_probability, ContextPowerless, Score),
-    Score >= 0.33.
-
-test(natural_emergence) :-
-    domain_priors:emerges_naturally(monty_hall_conditional_probability).
+test(threshold_validation) :-
+    % Verify that the base metrics are within the allowed range for a Mountain.
+    narrative_ontology:constraint_metric(monty_hall_conditional_probability, extractiveness, E),
+    narrative_ontology:constraint_metric(monty_hall_conditional_probability, suppression_requirement, S),
+    E =< 0.25,
+    S =< 0.05.
 
 :- end_tests(monty_hall_conditional_probability_tests).
 
 /* ==========================================================================
-   5. MODEL INTERPRETATION (Commentary)
+   5. GENERATIVE COMMENTARY
    ========================================================================== */
 
 /**
- * LLM GENERATION NOTES
- * * Model: Gemini 2.0 Flash
- * Date: 2026-01-19
- * * KEY DECISIONS:
- * 1. EXTRACTIVENESS SCORE (0.33): 
- * The system is mathematically biased against the "Stay" strategy. It 
- * extracts exactly 33.3% of the potential win-rate compared to the "Switch" 
- * strategy.
- * 2. PERSPECTIVE SELECTION: 
- * Chose Doors (Subject), Professor (Institution), and Skeptic (Victim) 
- * to highlight the gap between "State," "Utility," and "Trap."
- * 3. SUPPRESSION SCORE (0.6): 
- * The paradox is famous because it so effectively suppresses the "linear" 
- * alternative, making those who hold onto it look "irrational."
+ * LOGIC RATIONALE:
+ *   The constraint is the law of conditional probability, which has near-zero
+ *   base extractiveness (ε=0.02) and suppression (0.01). The perceived 33%
+ *   "extraction" from a contestant who doesn't switch is a consequence of
+ *   their choice relative to an unchangeable fact, not an act of extraction
+ *   by the constraint. The metrics correctly reflect a Mountain. The addition
+ *   of the Natural Law (NL) profile metrics (accessibility_collapse=1.0,
+ *   resistance=0.01) and the emerges_naturally flag ensures the engine's
+ *   natural law certification chain will pass, correctly identifying this
+ *   as a mathematical law.
+ *
+ * PERSPECTIVAL GAP:
+ *   There is no perspectival gap. This is a uniform-type constraint that
+ *   classifies as a Mountain from all perspectives. The contestant, the
+ *   educator, and the analyst all confront the same unyielding logical
+ *   structure. Their psychological or utilitarian relationship to it differs,
+ *   but its fundamental type does not change.
+ *
+ * MANDATROPHY ANALYSIS:
+ *   By correctly identifying the mathematical law as a Mountain, this analysis
+ *   avoids mislabeling a natural law as a Snare or Tangled Rope. The framework
+ *   correctly distinguishes between the properties of the constraint itself
+ *   (the math) and the outcomes for agents who interact with it (winning or
+ *   losing the car). This prevents the "mandatrophy" of seeing social
+ *   extraction where there is only logical consequence.
  */
-
-% OMEGA IDENTIFICATION
-omega_variable(
-    host_behavior_certainty,
-    "Is the 'Mountain' stable if the host's behavior is not guaranteed (e.g., Monty only offers the switch when you have the car)?",
-    resolution_mechanism("Meta-analysis of game rules and host intent across different game show iterations."),
-    impact("If Host is malicious: The 'Switch' Rope becomes a 'Snare'. If Host is rule-bound: It is a Mountain."),
-    confidence_without_resolution(medium)
-).
 
 /* ==========================================================================
-   6. ALTERNATIVE ANALYSIS
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-/**
- * VIABLE ALTERNATIVES
- * * ALTERNATIVE 1: The "Stay" Strategy
- * Viability: Winning 1/3 of the time.
- * Suppression: Actively suppressed by math educators as "wrong."
- * Evidence: Vos Savant's column receiving thousands of angry (incorrect) letters.
- * * ALTERNATIVE 2: Malicious Host (The "Monty Fall" variant)
- * Viability: If the host only opens a door when you are currently winning.
- * Suppression: Ignored in the standard "idealized" version of the problem.
- * * CONCLUSION:
- * The standard problem assumes a "Rule-Bound" host, turning the "Switch" into 
- * a "Rope." If the host is not rule-bound, the entire Mountain collapses 
- * into a psychological Scaffold.
- */
+% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
+omega_variable(
+    omega_monty_hall,
+    'Is the Mountain stable if the host is not an ideal, rule-bound actor (e.g., the host only offers the switch when the contestant has already chosen the car)?',
+    'Analysis of the game rules and host intent. If the host has agency and can act strategically, the constraint is no longer a pure mathematical law.',
+    'If the host is malicious/strategic, the constraint ceases to be a Mountain and becomes a Snare (a rigged game). If the host is rule-bound, it remains a Mountain.',
+    confidence_without_resolution(high) % High confidence in the standard, idealized model.
+).
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-/**
- * TO USE THIS FILE:
- * 1. Load: ?- [monty_hall_conditional_probability].
- * 2. Multi-perspective: ?- multi_index_report(monty_hall_conditional_probability).
- */
+% Required for external script parsing
+narrative_ontology:interval(monty_hall_conditional_probability, 0, 10).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Temporal data is not required for this constraint because its base
+% extractiveness (0.02) is below the 0.46 threshold for mandatory tracking.
+% As a mathematical law, its properties are considered static over time.
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA
+   ========================================================================== */
+
+% No network relationships are declared for this fundamental mathematical constraint.
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+% No overrides are needed. As a Mountain, the constraint does not have
+% beneficiaries or victims, so directionality is not a primary factor in its
+% classification.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
-
-% ============================================================================
-% ENRICHMENT: Structural predicates for dynamic classification
-% Generated: 2026-02-08
-% Template: v5.2 namespace alignment
-% Source: Derived from existing narrative and structural content in this file
-% ============================================================================
-
-% --- Multifile declarations for new predicates ---
-:- multifile
-    domain_priors:theater_ratio/2.
-
-% --- Theater ratio (missing from base properties) ---
-% Formal truth — substantive with near-zero performative component
-domain_priors:theater_ratio(monty_hall_conditional_probability, 0.0).
-narrative_ontology:constraint_metric(monty_hall_conditional_probability, theater_ratio, 0.0).
-
-% --- Analytical perspective classification (missing) ---
-% chi = 0.33 * 1.15 (analytical) * 1.2 (global) = 0.455
-% Classification: tangled_rope
-constraint_indexing:constraint_classification(monty_hall_conditional_probability, tangled_rope,
-    context(agent_power(analytical),
-            time_horizon(civilizational),
-            exit_options(analytical),
-            spatial_scope(global))).

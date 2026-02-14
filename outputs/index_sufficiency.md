@@ -5,12 +5,12 @@
 **Verdict:** SUFFICIENT - Indices explain most variance. Current framework adequate.
 
 - **Collision Rate:** 0.0%
-- **Anomaly Rate:** 0.0%
+- **Anomaly Rate:** 0.9%
 
 ### Evidence For Index Sufficiency
 
 - 100.0% of constraints have no index collisions
-- 36 domains show high index sufficiency
+- 33 domains show high index sufficiency
 
 ## Index Collisions
 
@@ -23,50 +23,66 @@ How well do indices explain variance in each domain?
 
 | Domain | Constraints | Avg Variance | Sufficiency |
 |--------|-------------|--------------|-------------|
-| magical              |           1 |         3.00 | High        |
-| investigation        |           2 |         1.88 | High        |
 | mathematics          |           2 |         1.50 | High        |
+| magical              |           1 |         1.50 | High        |
 | analytical           |           2 |         1.50 | High        |
-| mathematical         |          42 |         1.38 | High        |
+| investigation        |           2 |         1.38 | High        |
 | artistic             |           2 |         1.15 | High        |
-| physics              |           2 |         1.12 | High        |
-| technological        |         205 |         0.96 | High        |
-| legal                |           9 |         0.95 | High        |
-| biological           |          15 |         0.95 | High        |
 | philosophical        |          12 |         0.89 | High        |
-| unknown              |           3 |         0.88 | High        |
 | psychological        |           9 |         0.87 | High        |
-| religious            |           9 |         0.84 | High        |
-| economic             |         120 |         0.84 | High        |
-| political            |         113 |         0.82 | High        |
-| social               |         119 |         0.82 | High        |
+| mathematical         |          44 |         0.86 | High        |
+| technological        |         207 |         0.85 | High        |
+| legal                |          10 |         0.83 | High        |
 | cognitive            |           3 |         0.80 | High        |
 | logistics            |           1 |         0.80 | High        |
 | informational        |           2 |         0.80 | High        |
 | logistical           |           1 |         0.80 | High        |
-| systems_engineering  |           1 |         0.80 | High        |
 | socio_political      |           1 |         0.80 | High        |
 | infrastructure       |           1 |         0.80 | High        |
+| biological           |          16 |         0.80 | High        |
 | organizational       |           9 |         0.77 | High        |
+| economic             |         125 |         0.77 | High        |
 | environmental        |           5 |         0.77 | High        |
+| political            |         115 |         0.77 | High        |
 | institutional        |           3 |         0.77 | High        |
 | medical              |           4 |         0.76 | High        |
-| geopolitical         |           8 |         0.76 | High        |
+| social               |         121 |         0.76 | High        |
 | corporate_governance |           1 |         0.75 | High        |
-| scientific           |           9 |         0.75 | High        |
+| physics              |           1 |         0.75 | High        |
 | bio_industrial       |           1 |         0.75 | High        |
 | military             |           2 |         0.75 | High        |
 | psychology           |           1 |         0.75 | High        |
-| astrophysical        |           1 |         0.75 | High        |
 | physical             |           1 |         0.75 | High        |
-| health               |           5 |         0.70 | Medium      |
-| linguistic           |           2 |         0.62 | Medium      |
+| geopolitical         |           9 |         0.74 | High        |
+| religious            |           9 |         0.72 | High        |
+| unknown              |           3 |         0.71 | High        |
+| health               |           5 |         0.65 | Medium      |
+| systems_engineering  |           1 |         0.60 | Medium      |
+| scientific           |          13 |         0.50 | Medium      |
+| astrophysical        |           1 |         0.50 | Medium      |
 | ecological           |           1 |         0.50 | Medium      |
 | atmospheric_science  |           1 |         0.50 | Medium      |
+| Social               |           1 |         0.50 | Medium      |
+| linguistic           |           3 |         0.47 | Medium      |
 | technology           |           1 |         0.33 | Low         |
-| logical              |           2 |         0.25 | Low         |
+| logical              |           1 |         0.25 | Low         |
 
 **Note:** Higher variance = indices capture more differences (good)
+
+## Stability Anomalies
+
+Constraints tested across many index configs but always produce same type.
+These may indicate need for new categories beyond current 4 indices.
+
+| Constraint ID | Configs | Type | Domain | Notes |
+|---------------|---------|------|--------|-------|
+| cantor_set_topology            |       5 | mountain        | mathematical | natural |
+| conways_game_of_life_dynamics  |       5 | mountain        | mathematical | natural |
+| dldr_information_policy        |       5 | rope            | technological | enforced |
+| ehrenfest_barrier              |       5 | mountain        | scientific | natural |
+| gauss_bonnet_topology          |       5 | mountain        | mathematical | natural |
+| quantum_measurement_gap        |       5 | mountain        | scientific | natural |
+| three_body_unpredicability     |       5 | mountain        | technological | natural |
 
 ## Recommendations
 

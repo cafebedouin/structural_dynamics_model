@@ -52,7 +52,8 @@
    ========================================================================== */
 
 narrative_ontology:interval(local_vs_global_optima, 0, 10).
-narrative_ontology:constraint_claim(local_vs_global_optima, mountain).
+narrative_ontology:constraint_claim(local_vs_global_optima, tangled_rope).
+domain_priors:requires_active_enforcement(local_vs_global_optima).
 
 % Base extractiveness score (0.3)
 % Sub-optimality extracts potential value from the system; being stuck at 
@@ -137,7 +138,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     local_vs_global_optima,
-    mountain,
+    tangled_rope,
     context(agent_power(analytical), time_horizon(historical), exit_options(analytical), spatial_scope(global))
 ).
 
@@ -160,7 +161,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     local_vs_global_optima,
-    mountain,
+    tangled_rope,
     context(agent_power(institutional), time_horizon(biographical), exit_options(mobile), spatial_scope(regional))
 ).
 

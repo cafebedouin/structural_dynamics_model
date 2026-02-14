@@ -69,7 +69,8 @@ narrative_ontology:constraint_metric(boltzmann_universality_2026, suppression_re
 narrative_ontology:constraint_metric(boltzmann_universality_2026, theater_ratio, 0.05).
 
 % Constraint self-claim (analytical classification)
-narrative_ontology:constraint_claim(boltzmann_universality_2026, mountain).
+narrative_ontology:constraint_claim(boltzmann_universality_2026, tangled_rope).
+domain_priors:requires_active_enforcement(boltzmann_universality_2026).
 
 narrative_ontology:constraint_beneficiary(boltzmann_universality_2026, interdisciplinary_modeling_fidelity).
 narrative_ontology:constraint_victim(boltzmann_universality_2026, non_boltzmann_theoretical_alternatives).
@@ -90,7 +91,7 @@ constraint_indexing:constraint_classification(boltzmann_universality_2026, rope,
 % PERSPECTIVE 2: THE ANALYTICAL OBSERVER (MOUNTAIN)
 % From the view of reality, the uniqueness of the distribution is a 
 % Mountain: an irreducible logical limit governing all chaotic systems.
-constraint_indexing:constraint_classification(boltzmann_universality_2026, mountain,
+constraint_indexing:constraint_classification(boltzmann_universality_2026, tangled_rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

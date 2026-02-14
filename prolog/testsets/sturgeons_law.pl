@@ -57,7 +57,7 @@
 
 % Required for structural integration
 narrative_ontology:interval(sturgeon_interval, 0, 10).
-narrative_ontology:constraint_claim(sturgeons_law, mountain).
+narrative_ontology:constraint_claim(sturgeons_law, scaffold).
 
 % Base extractiveness: 0.1 (Low)
 % Rationale: The "crud" doesn't necessarily extract value; it mostly 
@@ -132,7 +132,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     sturgeons_law,
-    mountain,
+    scaffold,
     context(
         agent_power(powerless),
         time_horizon(immediate),
@@ -184,7 +184,7 @@ test(multi_perspective_variance) :-
 
 test(crud_distribution_immutability) :-
     % From a civilizational view, the ratio is seen as a physical law (Mountain).
-    constraint_indexing:constraint_classification(sturgeons_law, mountain, context(_, civilizational, _, _)).
+    constraint_indexing:constraint_classification(sturgeons_law, scaffold, context(_, civilizational, _, _)).
 
 :- end_tests(sturgeons_law_tests).
 

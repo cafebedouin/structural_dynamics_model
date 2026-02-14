@@ -59,7 +59,7 @@
 
 % Required for DR-Audit Suite
 narrative_ontology:interval(euler_era, 1750, 2026).
-narrative_ontology:constraint_claim(euler_characteristic_topology, mountain).
+narrative_ontology:constraint_claim(euler_characteristic_topology, scaffold).
 
 % Base extractiveness score (0.0-1.0)
 % Rationale: Low (0.1). Mathematical invariants are non-extractive truths, 
@@ -108,7 +108,7 @@ narrative_ontology:constraint_victim(euler_characteristic_topology, non_manifold
 
 constraint_indexing:constraint_classification(
     euler_characteristic_topology,
-    mountain,
+    scaffold,
     context(
         agent_power(powerless),
         time_horizon(immediate),

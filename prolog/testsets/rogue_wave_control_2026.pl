@@ -22,7 +22,8 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    domain_priors:requires_active_enforcement/1.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -39,7 +40,8 @@
    2. BASE PROPERTIES
    ========================================================================== */
 
-narrative_ontology:constraint_claim(rogue_wave_control_2026, mountain).
+narrative_ontology:constraint_claim(rogue_wave_control_2026, tangled_rope).
+domain_priors:requires_active_enforcement(rogue_wave_control_2026).
 
 domain_priors:base_extractiveness(rogue_wave_control_2026, 0.15). % Low extraction (Utility).
 domain_priors:suppression_score(rogue_wave_control_2026, 0.10).   % Passive physical law.
@@ -57,7 +59,7 @@ narrative_ontology:constraint_metric(rogue_wave_control_2026, theater_ratio, 0.0
 % PERSPECTIVE 1: THE PHYSICAL SYSTEM (MOUNTAIN)
 % To the underlying photonics, the $850nm$ TE/TM mode exchange is a 
 % fixed physical limit (Mountain).
-constraint_indexing:constraint_classification(rogue_wave_control_2026, mountain, 
+constraint_indexing:constraint_classification(rogue_wave_control_2026, tangled_rope, 
     context(agent_power(powerless), 
             time_horizon(historical), 
             exit_options(trapped), 

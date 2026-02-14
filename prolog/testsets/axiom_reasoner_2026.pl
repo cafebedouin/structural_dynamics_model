@@ -70,7 +70,8 @@ narrative_ontology:constraint_metric(axiom_reasoner_2026, suppression_requiremen
 narrative_ontology:constraint_metric(axiom_reasoner_2026, theater_ratio, 0.08).
 
 % Constraint classification claim
-narrative_ontology:constraint_claim(axiom_reasoner_2026, mountain).
+narrative_ontology:constraint_claim(axiom_reasoner_2026, tangled_rope).
+domain_priors:requires_active_enforcement(axiom_reasoner_2026).
 
 % Primary keys for the classification engine
 % High-extraction stakeholders (E > 0.46)
@@ -102,7 +103,7 @@ constraint_indexing:constraint_classification(axiom_reasoner_2026, snare,
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (MOUNTAIN)
 % From a civilizational view, the mission identifies the "Reasoning Gap" as 
 % a Mountain: a foundational limit that can only be scaled via symbolic logic.
-constraint_indexing:constraint_classification(axiom_reasoner_2026, mountain,
+constraint_indexing:constraint_classification(axiom_reasoner_2026, tangled_rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

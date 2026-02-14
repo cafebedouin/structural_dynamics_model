@@ -56,7 +56,8 @@
 
 % Required for [STEP 1] and [STEP 2] of the DR-Audit Suite
 narrative_ontology:interval(heisenberg_interval, 0, 10).
-narrative_ontology:constraint_claim(heisenberg_uncertainty, mountain).
+narrative_ontology:constraint_claim(heisenberg_uncertainty, tangled_rope).
+domain_priors:requires_active_enforcement(heisenberg_uncertainty).
 
 % Base extractiveness score
 % Rationale: It extracts "absolute precision" from the observer. 
@@ -101,7 +102,7 @@ narrative_ontology:constraint_victim(heisenberg_uncertainty, classical_determini
 
 constraint_indexing:constraint_classification(
     heisenberg_uncertainty,
-    mountain,
+    tangled_rope,
     context(
         agent_power(analytical),
         time_horizon(civilizational),
@@ -172,7 +173,7 @@ constraint_indexing:constraint_classification(
 
 test(multi_perspective_variance) :-
     % Analyst sees Mountain
-    constraint_indexing:constraint_classification(heisenberg_uncertainty, mountain, context(analytical, civilizational, trapped, global)),
+    constraint_indexing:constraint_classification(heisenberg_uncertainty, tangled_rope, context(analytical, civilizational, trapped, global)),
     % Institutional sees Rope
     constraint_indexing:constraint_classification(heisenberg_uncertainty, rope, context(institutional, biographical, arbitrage, national)),
     % Powerless sees Snare

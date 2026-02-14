@@ -55,7 +55,7 @@
 
 % Required for system integration
 narrative_ontology:interval(optimal_stopping_marriage, 0, 10).
-narrative_ontology:constraint_claim(optimal_stopping_marriage, mountain).
+narrative_ontology:constraint_claim(optimal_stopping_marriage, scaffold).
 
 % Base extractiveness: Low (0.1). 
 % Nature/Math doesn't "profit" from the Searcher, but the "loss" of rejected 
@@ -129,7 +129,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     optimal_stopping_marriage,
-    mountain,
+    scaffold,
     context(
         agent_power(analytical),
         time_horizon(historical),
@@ -182,7 +182,7 @@ test(time_immutability_shift) :-
     % Short term (biographical) feels like a Snare due to regret.
     % Long term (civilizational) is a Mountain of probability.
     constraint_indexing:constraint_classification(optimal_stopping_marriage, snare, context(_, time_horizon(biographical), trapped, _)),
-    constraint_indexing:constraint_classification(optimal_stopping_marriage, mountain, context(_, time_horizon(civilizational), _, _)).
+    constraint_indexing:constraint_classification(optimal_stopping_marriage, scaffold, context(_, time_horizon(civilizational), _, _)).
 
 test(extraction_paradox) :-
     % The "powerless" actually experience more "loss" (perceived extractiveness) 

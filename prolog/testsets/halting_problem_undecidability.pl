@@ -60,7 +60,8 @@
 
 % Required for structural extraction
 narrative_ontology:interval(halting_era, 1936, 2026).
-narrative_ontology:constraint_claim(halting_problem_undecidability, mountain).
+narrative_ontology:constraint_claim(halting_problem_undecidability, tangled_rope).
+domain_priors:requires_active_enforcement(halting_problem_undecidability).
 
 % Base extractiveness score (0.0-1.0)
 % Rationale: 0.2. While it is a "gift" of clarity regarding limits, it 
@@ -111,7 +112,7 @@ narrative_ontology:constraint_victim(halting_problem_undecidability, automated_m
 
 constraint_indexing:constraint_classification(
     halting_problem_undecidability,
-    mountain,
+    tangled_rope,
     context(
         agent_power(powerless),
         time_horizon(immediate),

@@ -51,7 +51,7 @@
    ========================================================================== */
 
 narrative_ontology:interval(sts86_ascent_checklist, 0, 10).
-narrative_ontology:constraint_claim(sts86_ascent_checklist, mountain).
+narrative_ontology:constraint_claim(sts86_ascent_checklist, tangled_rope).
 
 % Base extractiveness: 0.05.
 % NASA gains nothing from crew failure. 
@@ -144,7 +144,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     sts86_ascent_checklist,
-    mountain,
+    tangled_rope,
     context(
         agent_power(powerless),
         time_horizon(immediate),

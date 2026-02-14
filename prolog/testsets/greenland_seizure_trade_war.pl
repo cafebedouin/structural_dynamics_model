@@ -65,7 +65,7 @@ narrative_ontology:constraint_metric(greenland_seizure_trade_war, suppression_re
 narrative_ontology:constraint_metric(greenland_seizure_trade_war, theater_ratio, 0.10).
 
 % Constraint self-claim (what does the constraint claim to be?)
-narrative_ontology:constraint_claim(greenland_seizure_trade_war, mountain).
+narrative_ontology:constraint_claim(greenland_seizure_trade_war, tangled_rope).
 
 % Binary flags
 domain_priors:requires_active_enforcement(greenland_seizure_trade_war). % Rationale: Maintained via explicit threats of military action and economic retaliation.
@@ -103,7 +103,7 @@ constraint_indexing:constraint_classification(greenland_seizure_trade_war, rope,
 % For investors, the rift is a Mountain—a structural "inflection point" where
 % geopolitical risk is now a permanent, unchangeable feature of the landscape
 % that requires rebalancing portfolios away from volatility.
-constraint_indexing:constraint_classification(greenland_seizure_trade_war, mountain,
+constraint_indexing:constraint_classification(greenland_seizure_trade_war, tangled_rope,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(analytical),
@@ -122,7 +122,7 @@ test(perspectival_gap) :-
 
 test(analytical_view_is_mountain) :-
     % Verify the analytical observer sees an unchangeable structural reality.
-    constraint_indexing:constraint_classification(greenland_seizure_trade_war, mountain, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(greenland_seizure_trade_war, tangled_rope, context(agent_power(analytical), _, _, _)).
 
 test(high_extraction_threshold) :-
     % Verify the base extractiveness meets the Snare/Tangled Rope threshold.

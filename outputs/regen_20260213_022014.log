@@ -1,0 +1,37 @@
+2026-02-13 02:20:14,463 INFO     Log file: /home/scott/bin/structural_dynamics_model/outputs/regen_20260213_022014.log
+2026-02-13 02:20:14,463 INFO     Running structural linter on testsets/ and origsets/…
+2026-02-13 02:20:16,543 INFO     Linter: 749/751 passed, 2 with errors → /home/scott/bin/structural_dynamics_model/outputs/lint_errors.txt
+2026-02-13 02:20:16,543 INFO     Source: lint_errors.txt (2 files)
+2026-02-13 02:20:16,549 INFO     Resume filter: 2 → 2 files
+2026-02-13 02:20:18,261 INFO     [1/2] fgh_hierarchy_2026 (1 errors) [0.0/min, ETA 0min]
+2026-02-13 02:20:18,262 INFO       Generating fgh_hierarchy_2026 (attempt 1/3)…
+2026-02-13 02:20:18,262 INFO     Creating/refreshing Gemini context cache (TTL=3600s)…
+2026-02-13 02:20:18,854 INFO     HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/cachedContents "HTTP/1.1 200 OK"
+2026-02-13 02:20:18,855 INFO     Cache created: cachedContents/bekixbsbguja98csr77jwwng3u2rh5fk0jku0ocg (expires ~2026-02-13T09:20:18.262275)
+2026-02-13 02:20:18,856 INFO     AFC is enabled with max remote calls: 10.
+2026-02-13 02:20:59,990 INFO     HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent "HTTP/1.1 200 OK"
+2026-02-13 02:21:00,043 INFO       PASS fgh_hierarchy_2026 on attempt 1
+2026-02-13 02:21:00,044 INFO     [2/2] four_color_theorem_topological_bound (1 errors) [1.4/min, ETA 1min]
+2026-02-13 02:21:00,044 INFO       Generating four_color_theorem_topological_bound (attempt 1/3)…
+2026-02-13 02:21:00,044 INFO     AFC is enabled with max remote calls: 10.
+2026-02-13 02:21:08,758 INFO     HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-02-13 02:21:08,759 WARNING    API/empty response for four_color_theorem_topological_bound (attempt 1/3): 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+2026-02-13 02:21:08,759 INFO       Generating four_color_theorem_topological_bound (attempt 2/3)…
+2026-02-13 02:21:08,759 INFO     AFC is enabled with max remote calls: 10.
+2026-02-13 02:21:11,385 INFO     HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-02-13 02:21:11,387 WARNING    API/empty response for four_color_theorem_topological_bound (attempt 2/3): 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+2026-02-13 02:21:11,387 INFO       Generating four_color_theorem_topological_bound (attempt 3/3)…
+2026-02-13 02:21:11,388 INFO     AFC is enabled with max remote calls: 10.
+2026-02-13 02:21:14,912 INFO     HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-02-13 02:21:14,915 WARNING    API/empty response for four_color_theorem_topological_bound (attempt 3/3): 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+2026-02-13 02:21:14,915 ERROR      FAILED four_color_theorem_topological_bound — no usable response after 3 attempts
+2026-02-13 02:21:14,916 INFO     
+2026-02-13 02:21:14,916 INFO     ============================================================
+2026-02-13 02:21:14,916 INFO     REGENERATION COMPLETE
+2026-02-13 02:21:14,916 INFO     ============================================================
+2026-02-13 02:21:14,917 INFO       Processed: 2
+2026-02-13 02:21:14,917 INFO       Passed:    1
+2026-02-13 02:21:14,917 INFO       Failed:    1 (→ probsets/)
+2026-02-13 02:21:14,917 INFO       Skipped:   0
+2026-02-13 02:21:14,917 INFO       API errors:0
+2026-02-13 02:21:14,917 INFO       Elapsed:   0.9 min

@@ -60,7 +60,8 @@
 
 % Required for DR-Audit Suite
 narrative_ontology:interval(poincare_era, 1904, 2026).
-narrative_ontology:constraint_claim(poincare_conjecture, mountain).
+narrative_ontology:constraint_claim(poincare_conjecture, tangled_rope).
+domain_priors:requires_active_enforcement(poincare_conjecture).
 
 % Base extractiveness: 0.2
 % Rationale: Mathematical truth itself is non-extractive, but the social 
@@ -107,7 +108,7 @@ narrative_ontology:constraint_victim(poincare_conjecture, perelman_social_peace)
 
 constraint_indexing:constraint_classification(
     poincare_conjecture,
-    mountain,
+    tangled_rope,
     context(
         agent_power(powerless),
         time_horizon(immediate),

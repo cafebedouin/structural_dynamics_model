@@ -70,7 +70,7 @@ narrative_ontology:constraint_metric(portuguese_presidential_term_limits, suppre
 narrative_ontology:constraint_metric(portuguese_presidential_term_limits, theater_ratio, 0.05).
 
 % Constraint self-claim: It claims to be a coordination mechanism for democratic turnover.
-narrative_ontology:constraint_claim(portuguese_presidential_term_limits, mountain).
+narrative_ontology:constraint_claim(portuguese_presidential_term_limits, tangled_rope).
 
 % Binary flags
 domain_priors:requires_active_enforcement(portuguese_presidential_term_limits).
@@ -88,7 +88,7 @@ narrative_ontology:constraint_victim(portuguese_presidential_term_limits, electo
 % For a voter who wishes to re-elect the incumbent, the law is not a predatory
 % snare (as extraction is near-zero), but an unchangeable, absolute limit
 % on their democratic choice. The high suppression score is what they experience.
-constraint_indexing:constraint_classification(portuguese_presidential_term_limits, mountain,
+constraint_indexing:constraint_classification(portuguese_presidential_term_limits, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
@@ -106,7 +106,7 @@ constraint_indexing:constraint_classification(portuguese_presidential_term_limit
 
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER -> MOUNTAIN
 % Viewed as an irreducible, physical-like limit of the democratic cycle.
-constraint_indexing:constraint_classification(portuguese_presidential_term_limits, mountain,
+constraint_indexing:constraint_classification(portuguese_presidential_term_limits, tangled_rope,
     context(agent_power(analytical),
             time_horizon(historical),
             exit_options(analytical),
@@ -115,7 +115,7 @@ constraint_indexing:constraint_classification(portuguese_presidential_term_limit
 % PERSPECTIVE 4: THE INCUMBENT (INSTITUTIONAL) -> MOUNTAIN
 % From the perspective of the incumbent president, the constitutional rule is
 % an absolute, non-negotiable barrier to continuing in office. It is a Mountain.
-constraint_indexing:constraint_classification(portuguese_presidential_term_limits, mountain,
+constraint_indexing:constraint_classification(portuguese_presidential_term_limits, tangled_rope,
     context(agent_power(institutional),
             time_horizon(biographical),
             exit_options(trapped),
@@ -129,9 +129,9 @@ constraint_indexing:constraint_classification(portuguese_presidential_term_limit
 
 test(perspectival_gap) :-
     % Verify there is a perspectival gap between the powerless voter and the organized candidate.
-    constraint_indexing:constraint_classification(portuguese_presidential_term_limits, mountain, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(portuguese_presidential_term_limits, tangled_rope, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(portuguese_presidential_term_limits, rope, context(agent_power(organized), _, _, _)),
-    constraint_indexing:constraint_classification(portuguese_presidential_term_limits, mountain, context(agent_power(institutional), _, _, _)).
+    constraint_indexing:constraint_classification(portuguese_presidential_term_limits, tangled_rope, context(agent_power(institutional), _, _, _)).
 
 test(mountain_threshold_validation) :-
     % Verify the constraint meets the low-extraction, high-suppression signature of a Mountain.

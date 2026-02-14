@@ -52,7 +52,7 @@
    ========================================================================== */
 
 narrative_ontology:interval(kjv_textual_authority, 0, 10).
-narrative_ontology:constraint_claim(kjv_textual_authority, mountain).
+narrative_ontology:constraint_claim(kjv_textual_authority, tangled_rope).
 
 % Base extractiveness: 0.4 (Moderate)
 % It provides high utility (standardized language) but extracts 
@@ -118,7 +118,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     kjv_textual_authority,
-    mountain,
+    tangled_rope,
     context(
         agent_power(powerless),
         time_horizon(civilizational),

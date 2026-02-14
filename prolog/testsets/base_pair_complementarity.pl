@@ -57,7 +57,8 @@
    ========================================================================== */
 
 narrative_ontology:interval(dna_structure_discovery, 0, 10).
-narrative_ontology:constraint_claim(base_pair_complementarity, mountain).
+narrative_ontology:constraint_claim(base_pair_complementarity, tangled_rope).
+domain_priors:requires_active_enforcement(base_pair_complementarity).
 
 % Base extractiveness score: 0.2
 % Rationale: The pairing coordinates information; it does not "extract" 
@@ -108,7 +109,7 @@ narrative_ontology:constraint_victim(base_pair_complementarity, [entropic_decay]
 % 2026-02-11: Fixed context arity — removed beneficiary/victim from context tuples (context/4 enforcement)
 constraint_indexing:constraint_classification(
     base_pair_complementarity,
-    mountain,
+    tangled_rope,
     context(
         agent_power(powerless),
         time_horizon(immediate),
@@ -193,7 +194,7 @@ constraint_indexing:constraint_classification(
 
 test(geometry_determines_type) :-
     % Verify that for the powerless nucleotide, the constraint is a Mountain
-    constraint_indexing:constraint_classification(base_pair_complementarity, mountain, context(agent_power(powerless), _, exit_options(trapped), _)).
+    constraint_indexing:constraint_classification(base_pair_complementarity, tangled_rope, context(agent_power(powerless), _, exit_options(trapped), _)).
 
 test(functional_replication) :-
     % Verify that for cellular machinery, the helix is a Rope

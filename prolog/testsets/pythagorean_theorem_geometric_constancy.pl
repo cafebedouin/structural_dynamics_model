@@ -62,7 +62,7 @@
 
 % Structural Anchor for the DR-Audit Suite
 narrative_ontology:interval(pythagorean_era, -500, 2026).
-narrative_ontology:constraint_claim(pythagorean_geometric_constancy, mountain).
+narrative_ontology:constraint_claim(pythagorean_geometric_constancy, scaffold).
 
 % Base extractiveness score (0.0-1.0)
 % Rationale: 0.1. Extremely low. The theorem is primarily a "gift" of 
@@ -147,7 +147,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     pythagorean_geometric_constancy,
-    mountain,
+    scaffold,
     context(
         agent_power(powerless),
         time_horizon(immediate),

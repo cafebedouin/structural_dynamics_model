@@ -249,11 +249,12 @@ natural_law_without_beneficiary(C) :-
     \+ requires_active_enforcement(C),
     \+ narrative_ontology:constraint_beneficiary(C, _).
 
-classify_from_metrics(_C, BaseEps, _Chi, Supp, Context, mountain) :-
+classify_from_metrics(C, BaseEps, _Chi, Supp, Context, mountain) :-
     config:param(mountain_suppression_ceiling, SuppCeil),
     Supp =< SuppCeil,
     config:param(mountain_extractiveness_max, MaxX),
     BaseEps =< MaxX,
+    emerges_naturally(C),
     constraint_indexing:effective_immutability_for_context(Context, mountain), !.
 
 classify_from_metrics(C, _BaseEps, _Chi, _Supp, _Context, snare) :-
@@ -311,6 +312,12 @@ classify_from_metrics(C, BaseEps, Chi, _Supp, _Context, piton) :-
     config:param(piton_theater_floor, TRFloor),
     TR >= TRFloor, !.
 
+classify_from_metrics(_C, BaseEps, Chi, _Supp, _Context, indexically_opaque) :-
+    config:param(rope_epsilon_ceiling, EpsCeil),
+    BaseEps > EpsCeil,
+    config:param(tangled_rope_chi_floor, ChiFloor),
+    Chi < ChiFloor, !.
+
 classify_from_metrics(_C, _BaseEps, _Chi, _Supp, _Context, unknown).
 
 % ============================================================================
@@ -326,13 +333,18 @@ classify_from_metrics(_C, _BaseEps, _Chi, _Supp, _Context, unknown).
 dr_type(C, Context, Type) :-
     % Validate context
     constraint_indexing:valid_context(Context),
-    
+
     % First: Try metric-based classification with power scaling
     metric_based_type_indexed(C, Context, MetricType),
-    
+
     % Second: Check if structural signature overrides
-    structural_signatures:integrate_signature_with_modal(C, MetricType, Type),
-    !.
+    % IMPORTANT: Use fresh variable FinalType to prevent pre-bound Type
+    % from leaking into resolve_modal_signature_conflict head unification,
+    % which would bypass override clauses and fall through to the identity
+    % fallback. Unify with caller's Type AFTER computation completes.
+    structural_signatures:integrate_signature_with_modal(C, MetricType, FinalType),
+    !,
+    Type = FinalType.
 
 dr_type(_C, _Context, unknown).
 
@@ -385,6 +397,9 @@ dr_action(C, Context, monitor_sunset) :-
 
 dr_action(C, Context, bypass) :-
     dr_type(C, Context, piton), !.
+
+dr_action(C, Context, investigate_opacity) :-
+    dr_type(C, Context, indexically_opaque), !.
 
 dr_action(_C, _Context, investigate).
 

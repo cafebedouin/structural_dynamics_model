@@ -1,0 +1,352 @@
+You're absolutely right. **Document 9's pragmatic approach is the winner** because it:
+
+1. **Builds on what exists** (your `effective_purity/4` and contamination logic)
+2. **Gives immediate narrative value** (destiny trajectories for stories)
+3. **Creates hooks for everything else** (Noether, Galois, MaxEnt all layer on top)
+
+The key insight: **Fixed-point dynamics is the foundation**, and everything else (abduction, symmetry, entropy) becomes *interpretive layers* on top of the trajectory data.
+
+---
+
+## Revised Priority: Fixed-Point First, Then Interpretive Layers
+
+### **Phase 1: Stage-10 Network Drift Iterator** (Week 1-2)
+
+This gives you the **"what happens next" engine** for generating story arcs:
+
+```prolog
+% Find equilibrium state of a constraint network
+find_equilibrium(InitialState, FinalState) :-
+    find_equilibrium(InitialState, FinalState, 100).  % Max 100 iterations
+
+find_equilibrium(State, State, _) :- !.  % Converged
+find_equilibrium(State, Final, MaxSteps) :-
+    MaxSteps > 0,
+    apply_drift(State, NextState),
+    (   states_equivalent(State, NextState, 0.01)  % Epsilon threshold
+    ->  Final = NextState
+    ;   MaxSteps1 is MaxSteps - 1,
+        find_equilibrium(NextState, Final, MaxSteps1)
+    ).
+
+% Apply contamination to all constraints in network
+apply_drift(StateIn, StateOut) :-
+    maplist(apply_contamination, StateIn, StateOut).
+
+apply_contamination(constraint_state(ID, Purity0, Type, Context), 
+                   constraint_state(ID, Purity1, NewType, Context)) :-
+    effective_purity(ID, Context, Purity1, _),
+    reclassify_if_threshold_crossed(ID, Context, Purity1, NewType).
+```
+
+**Narrative value**: 
+- "Given this initial state, the system inevitably degrades to X"
+- Generates plot trajectories automatically
+- Powers your "institutional decay" stories
+
+---
+
+### **Phase 2: Abductive Hooks on Trajectory Data** (Week 3-4)
+
+Once you have trajectories, **explain WHY they happen**:
+
+```prolog
+% Generate narrative explanation from trajectory
+explain_trajectory(Trajectory, Narrative) :-
+    identify_critical_events(Trajectory, Events),
+    maplist(explain_event, Events, Explanations),
+    format_narrative(Explanations, Narrative).
+
+% Critical events in a trajectory
+identify_critical_events(States, Events) :-
+    findall(Event, (
+        nth0(N, States, State),
+        nth0(M, States, NextState),
+        M is N + 1,
+        critical_transition(State, NextState, Event)
+    ), Events).
+
+critical_transition(S1, S2, Event) :-
+    S1 = constraint_state(ID, P1, Type1, _),
+    S2 = constraint_state(ID, P2, Type2, _),
+    (   Type1 \= Type2
+    ->  Event = type_shift(ID, Type1, Type2, reason(purity_threshold_crossed))
+    ;   abs(P1 - P2) > 0.1
+    ->  Event = purity_drift(ID, P1, P2, 
+                reason(contamination_from(neighbors)))
+    ).
+
+% Abductive explanation for events
+explain_event(type_shift(ID, tangled_rope, snare, _), Explanation) :-
+    format(atom(Explanation), 
+           '~w degraded from Tangled Rope to Snare: extraction overwhelmed coordination',
+           [ID]).
+
+explain_event(purity_drift(ID, P1, P2, reason(contamination_from(Neighbors))), 
+              Explanation) :-
+    format(atom(Explanation),
+           '~w purity dropped from ~2f to ~2f due to contamination from ~w',
+           [ID, P1, P2, Neighbors]).
+```
+
+**Narrative value**:
+- Auto-generates "turning point" explanations
+- "At step 3, elite capture contaminated the reform coalition, causing purity to drop below threshold, triggering type shift to unreformable snare"
+- Essay spine writes itself
+
+---
+
+### **Phase 3: Galois Symmetry Utilities** (Week 5-6)
+
+Use trajectories to find **structural isomorphisms**:
+
+```prolog
+% Find constraints with similar degradation patterns
+structural_isomorphism(Constraint1, Constraint2, SharedPattern) :-
+    trajectory(Constraint1, Traj1),
+    trajectory(Constraint2, Traj2),
+    abstract_pattern(Traj1, Pattern),
+    abstract_pattern(Traj2, Pattern),
+    Constraint1 \= Constraint2.
+
+% Abstract trajectory to pattern
+abstract_pattern(Trajectory, Pattern) :-
+    extract_sequence(Trajectory, TypeSeq),
+    extract_transitions(Trajectory, Transitions),
+    Pattern = degradation_pattern(TypeSeq, Transitions).
+
+extract_sequence(States, TypeSeq) :-
+    maplist(get_type, States, TypeSeq).
+
+get_type(constraint_state(_, _, Type, _), Type).
+```
+
+**Narrative value**:
+- "Thailand's judicial gatekeeping follows the same degradation pattern as HOA governance"
+- "Both start as Tangled Ropes, elite capture at T+2, terminal Snare by T+5"
+- **Narrative Transform**: Apply pattern to new domain
+
+---
+
+### **Phase 4: Noether Conservation Detection** (Week 7-8)
+
+Identify **what persists despite transformation**:
+
+```prolog
+% Test if constraint is symmetric under transformation
+noether_invariant(ConstraintID, Transformation, Conserved) :-
+    % Get baseline trajectory
+    initial_context(ConstraintID, Context0),
+    trajectory_with_context(ConstraintID, Context0, Traj0),
+    
+    % Apply transformation
+    transform_context(Context0, Transformation, Context1),
+    trajectory_with_context(ConstraintID, Context1, Traj1),
+    
+    % Check what's conserved
+    compare_trajectories(Traj0, Traj1, Conserved).
+
+compare_trajectories(Traj0, Traj1, Conserved) :-
+    final_purity(Traj0, P0),
+    final_purity(Traj1, P1),
+    abs(P0 - P1) < 0.05,  % Conserved within epsilon
+    Conserved = equilibrium_purity(P0).
+```
+
+**Narrative value**:
+- "No matter which coalition holds power, extraction stabilizes at 0.40"
+- "Scope shift doesn't affect trajectory—this is structurally locked"
+- Explains **why reform fails** (conserved quantities resist change)
+
+---
+
+### **Phase 5: MaxEnt Shadow Classifier** (Week 9-10)
+
+Flag **epistemically fragile** trajectories:
+
+```prolog
+% Shadow classifier with entropy
+classify_with_entropy(Constraint, Context, Type, Confidence) :-
+    % Deterministic classification (existing)
+    classify_from_metrics(Constraint, Context, Type, _, _, _),
+    
+    % Shadow probabilistic
+    classify_by_maxent(Constraint, Context, Distribution),
+    
+    % Compute entropy
+    entropy(Distribution, H),
+    Confidence is 1.0 - H.
+
+% High-entropy classifications are fragile
+fragile_trajectory(ConstraintID) :-
+    trajectory(ConstraintID, States),
+    member(State, States),
+    State = constraint_state(ConstraintID, _, Type, Context),
+    classify_with_entropy(ConstraintID, Context, Type, Conf),
+    Conf < 0.5.  % Low confidence = fragile
+```
+
+**Narrative value**:
+- Prioritize research: "These trajectories have high uncertainty"
+- "Classification is contested—here's why both interpretations valid"
+- Identifies where you need more empirical grounding
+
+---
+
+## Why This Ordering Works
+
+```
+Fixed-Point Dynamics (Week 1-2)
+    ↓
+    Generates trajectory data
+    ↓
+Abductive Explanations (Week 3-4)
+    ↓
+    Explains WHY trajectories happen
+    ↓
+Galois Patterns (Week 5-6)
+    ↓
+    Finds SIMILAR trajectories across domains
+    ↓
+Noether Invariants (Week 7-8)
+    ↓
+    Identifies what RESISTS change in trajectories
+    ↓
+MaxEnt Entropy (Week 9-10)
+    ↓
+    Flags FRAGILE trajectories needing research
+```
+
+Each layer **depends on** the previous one. You can't explain trajectories without having them. You can't find isomorphic patterns without trajectory comparison. You can't identify conserved quantities without transformation testing.
+
+---
+
+## Concrete Deliverables for Your Writing
+
+After 10 weeks, you'll have:
+
+1. **Destiny forecasts**: "Where does this institution go?" → story arcs
+2. **Turning point explanations**: "Why did it shift from Rope to Snare?" → essay structure  
+3. **Cross-domain mappings**: "This relationship = that political system" → narrative transform
+4. **Structural resistance**: "Why reform fails despite good intentions" → philosophical depth
+5. **Research priorities**: "These classifications need more evidence" → corpus refinement
+
+All of this **directly serves your writing workflow**: generate constraint story → Prolog trajectories → auto-generated analysis → you add research/prose → publish.
+
+---
+
+**Want me to prototype the Stage-10 fixed-point iterator?** I can write the actual Prolog code based on your existing `effective_purity/4` structure, ready to drop into your system.
+---
+
+At a high level, yes: the overall ordering and the narrative intent of each phase fit the structure of the existing system extremely well, and the five phases line up with the “sweet spots” in the Gemini evaluation. There are, however, a few technical adjustments you’ll want to make so the Prolog sketches actually behave with your current predicates and data model.
+​
+
+1. Phase 1 – Fixed‑point iterator
+Conceptually, this is exactly the Stage‑10 “find equilibrium by iterating Network Drift” that was recommended.
+​
+
+Two concrete tweaks:
+
+State representation: Make sure State is your full network snapshot, not per‑constraint. You’ll likely want something like:
+
+State = [constraint_state(ID, Purity, Type, Context, …)|…] and ensure effective_purity/4 uses this state (or the underlying graph) consistently. 
+​
+
+Type reclassification: reclassify_if_threshold_crossed/4 must be wired to your actual classification logic:
+
+It should compare Purity1 against the purity zones defined in logicextensions.md and call your existing classifyfrommetrics6 (or a thin wrapper) when crossing a zone boundary.
+​
+
+Your states_equivalent/3 epsilon check is a good idea; just implement it as a fold over the list comparing purities per ID.
+
+So: Phase 1 “works” as a design, but you need to (a) thread in the right state information for effective_purity/4 and (b) define states_equivalent/3 and reclassify_if_threshold_crossed/4 carefully against your real predicates.
+​
+
+2. Phase 2 – Abductive hooks
+This phase is strongly aligned with the Peirce/abduction evaluation: you’re turning anomalies in trajectories into narrative “hypotheses,” which is exactly what the integratesignaturewithmodal3 layer already does structurally.
+​
+
+Two refinements:
+
+identify_critical_events/2 as written uses nth0 twice; more idiomatic is a single pass over adjacent pairs (e.g., pairs/3 or a recursive “this, next” walk).
+
+Plug into real signals:
+
+In addition to type and purity shifts, you can hook into existing predicates like driftevent3, falsenaturallaw2, and falsecirope2 to tag events that the system already treats as “surprises.”
+​
+
+Conceptually, Phase 2 is sound and is exactly the recommended “abductive hooks on drift events.”
+​
+
+3. Phase 3 – Galois / structural isomorphism
+The basic idea—abstracting trajectories to patterns and matching them—is on target and nicely echoes the “Galois group as permutation of types across contexts” story.
+​
+
+You’ll probably want:
+
+trajectory/2 to be defined as “all states over time for a given constraint ID” from the Phase‑1 iterator output.
+
+abstract_pattern/2 to include more than just type sequence:
+
+For example, “where thresholds were crossed”, “signatures fired”, or coarse purity zones, so you’re robust to minor numeric differences.
+​
+
+So yes, Phase 3 works as a first pass, as long as you treat degradation_pattern/2 as a coarsened representation rather than raw numeric traces.
+​
+
+4. Phase 4 – Noether invariants
+This matches the Noether analysis quite well: checking whether equilibrium purity (or drift) is conserved under context transformations.
+​
+
+Two important clarifications:
+
+Use your network trajectories, not single‑constraint equilibrium only:
+
+The Noether write‑up suggests conservation of “effective purity” and possibly “drift velocity” across transformations; comparing just final purities per constraint is a good start, but you could later extend compare_trajectories/3 to look at drift shape as well.
+​
+
+transform_context/3 needs to be carefully constrained to the allowed index changes (power/scope shifts etc.) and should reuse the same scaling logic as extractivenessforagent3.
+​
+
+As a staged implementation, Phase 4’s sketch is compatible with the recommended noetherinvariant/… predicate, starting with equilibrium purity as your conserved quantity.
+​
+
+5. Phase 5 – MaxEnt shadow classifier
+This phase is exactly how the MaxEnt evaluation recommended you proceed: keep classifyfrommetrics6 as the main oracle and run a probabilistic classifier in “shadow mode.”
+​
+
+Points to adjust:
+
+classify_with_entropy/4:
+
+You’ll probably want it to call something like classifybymaxent/2 that returns [(Type, P), …], then compute entropy 
+H
+H of that distribution.
+​
+
+fragile_trajectory/1:
+
+Make sure you don’t recompute entropy needlessly; you might memoize classify_with_entropy/4 per (Constraint, Context) pair while traversing the trajectory.
+​
+
+The “Confidence = 1 − H” trick is fine for a first cut, as long as you normalize entropy to 
+[
+0
+,
+1
+]
+[0,1] (e.g., divide by log of number of types).
+​
+
+6. Overall ordering
+The dependency chain you spelled out—fixed‑point dynamics → abductive explanations → pattern‑mining → invariants → MaxEnt—is exactly the layering the evaluations implicitly suggest. You’re:
+​
+
+Building on existing Stage 9 drift and purity mechanics.
+
+Adding interpretive layers before touching the core classifier.
+
+Deferring the invasive MaxEnt change to a shadow role at the end.
+​
+
+So, with the small implementation‑detail fixes above, this plan “works” both technically and architecturally, and it’s a very sane ten‑week roadmap.

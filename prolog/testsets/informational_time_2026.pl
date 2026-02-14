@@ -71,7 +71,8 @@ narrative_ontology:constraint_metric(informational_time_2026, suppression_requir
 narrative_ontology:constraint_metric(informational_time_2026, theater_ratio, 0.45).
 
 % Constraint classification claim
-narrative_ontology:constraint_claim(informational_time_2026, mountain).
+narrative_ontology:constraint_claim(informational_time_2026, tangled_rope).
+domain_priors:requires_active_enforcement(informational_time_2026).
 
 % Primary keys for the classification engine
 % Stakeholder declarations
@@ -103,7 +104,7 @@ constraint_indexing:constraint_classification(informational_time_2026, rope,
 % PERSPECTIVE 3: THE RECORDING COSMOS (MOUNTAIN)
 % From the view of fundamental reality, informational imprinting is a 
 % Mountain: an irreducible physical limit from which spacetime geometry emerges.
-constraint_indexing:constraint_classification(informational_time_2026, mountain,
+constraint_indexing:constraint_classification(informational_time_2026, tangled_rope,
     context(agent_power(analytical),
             time_horizon(universal),
             exit_options(analytical),

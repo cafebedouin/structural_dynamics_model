@@ -27,6 +27,7 @@
     domain_priors:suppression_score/2,
     domain_priors:theater_ratio/2,
     domain_priors:requires_active_enforcement/1,
+    domain_priors:emerges_naturally/1,
     narrative_ontology:has_sunset_clause/1,
     narrative_ontology:interval/3,
     narrative_ontology:measurement/5,
@@ -94,8 +95,18 @@ narrative_ontology:constraint_metric(quantum_measurement_gap, extractiveness, 0.
 narrative_ontology:constraint_metric(quantum_measurement_gap, suppression_requirement, 0.03).
 narrative_ontology:constraint_metric(quantum_measurement_gap, theater_ratio, 0.05).
 
+% --- NL Profile Metrics (required for mountain constraints) ---
+% These feed the natural_law_signature certification chain.
+narrative_ontology:constraint_metric(quantum_measurement_gap, accessibility_collapse, 0.98).
+narrative_ontology:constraint_metric(quantum_measurement_gap, resistance, 0.02).
+
 % --- Constraint claim (Mountain — structural gap in formalism) ---
 narrative_ontology:constraint_claim(quantum_measurement_gap, mountain).
+
+% --- Emergence flag (required for mountain constraints) ---
+% The measurement problem is a feature of the physical formalism, not a
+% human-designed or enforced rule. Required for the mountain metric gate.
+domain_priors:emerges_naturally(quantum_measurement_gap).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
@@ -125,7 +136,7 @@ constraint_indexing:constraint_classification(quantum_measurement_gap, mountain,
 % Their entire field exists because the gap is irreducible.
 constraint_indexing:constraint_classification(quantum_measurement_gap, mountain,
     context(agent_power(institutional),
-            time_horizon(civilizational),
+            time_horizon(civil_ational),
             exit_options(constrained),
             spatial_scope(universal))).
 
@@ -155,6 +166,13 @@ test(threshold_validation) :-
     narrative_ontology:constraint_metric(quantum_measurement_gap, extractiveness, E),
     E =< 0.25.
 
+test(natural_law_profile_present) :-
+    narrative_ontology:constraint_metric(quantum_measurement_gap, accessibility_collapse, AC),
+    AC >= 0.85,
+    narrative_ontology:constraint_metric(quantum_measurement_gap, resistance, R),
+    R =< 0.15,
+    domain_priors:emerges_naturally(quantum_measurement_gap).
+
 :- end_tests(quantum_measurement_gap_tests).
 
 /* ==========================================================================
@@ -177,8 +195,11 @@ test(threshold_validation) :-
  *   measurement?" with "what selects a branch?" Pilot waves replace it with
  *   "what determines the initial configuration?"
  *
- *   Theater ratio 0.05: There is no performative maintenance of this
- *   constraint. It manifests directly in every quantum experiment.
+ *   Accessibility Collapse 0.98: Alternatives are almost completely foreclosed.
+ *   One cannot "do quantum mechanics" without encountering this gap.
+ *
+ *   Resistance 0.02: There is no meaningful resistance to the constraint,
+ *   only attempts to explain or interpret it. One cannot violate it.
  *
  * PERSPECTIVAL GAP:
  *   None. This is the signature of a genuine Mountain — the constraint
@@ -209,7 +230,7 @@ omega_variable(
     omega_measurement_gap_dissolution,
     'Could a future reformulation of quantum mechanics dissolve the measurement problem entirely, the way GR dissolved Newtonian absolute-space puzzles?',
     'Would require a new formalism that reproduces all QM predictions while making measurement a derived concept rather than a primitive one. No current candidate achieves this.',
-    'If True: Mountain reclassifies to historical artifact (ε drops to 0.0). If False: Mountain persists indefinitely as structural feature of physics.',
+    'If True: Mountain reclassifies to historical artifact (epsilon drops to 0.0). If False: Mountain persists indefinitely as structural feature of physics.',
     confidence_without_resolution(low)
 ).
 

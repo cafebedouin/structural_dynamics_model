@@ -1,26 +1,48 @@
 % ============================================================================
 % CONSTRAINT STORY: coinbase_crypto_volatility
 % ============================================================================
-% Generated: 2026-01-17
-% Model: Gemini 2.0 Flash
-% Source: Coinbase Global, Inc. Form S-1 (February 25, 2021)
+% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2024-07-15
 % ============================================================================
 
-:- module(coinbase_volatility, []).
+:- module(constraint_coinbase_crypto_volatility, []).
 
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
 
-% --- Namespace Hooks ---
-:- multifile 
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile
     domain_priors:base_extractiveness/2,
     domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
     domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
-    constraint_indexing:constraint_classification/3.
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
+    narrative_ontology:boltzmann_floor_override/2,
+    constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -28,227 +50,203 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: coinbase_crypto_volatility
- * human_readable: Crypto-Economy Market Cycles
- * domain: economic/technological
- * temporal_scope: 2021 (IPO context) - Ongoing
- * spatial_scope: Global
- * * SUMMARY:
- * The extreme price volatility and cyclical nature of the crypto-economy, 
- * particularly Bitcoin and Ethereum, which directly dictate Coinbase's 
- * revenue, trading volume, and platform activity.
- * * KEY AGENTS:
- * - Coinbase Management: Navigating a business where revenue can drop 50%+ 
- * due to external market shifts.
- * - Retail Investors: The "engine" of trading revenue, highly sensitive to 
- * price swings.
- * - Institutional Investors: A growing segment seeking a "Rope" into 
- * crypto through a regulated entity.
- * * NARRATIVE ARC:
- * Coinbase’s S-1 is a study in "High-Variance Reality". The 
- * document explicitly states that their financial results will fluctuate, 
- * often wildly, based on a market they do not control. This is 
- * the ultimate "Mountain" constraint—an environmental fact of the 
- * industry.
+ *   constraint_id: coinbase_crypto_volatility
+ *   human_readable: Centralized Exchange Market Structure on Volatile Assets
+ *   domain: economic/technological
+ *
+ * SUMMARY:
+ *   This constraint models the market structure of a centralized crypto
+ *   exchange like Coinbase, which is built upon the inherent price volatility
+ *   of crypto assets. While raw price volatility may be a Mountain-like
+ *   phenomenon, the exchange's rules, fee structures, and liquidation
+ *   mechanisms constitute a man-made system. This system provides a genuine
+ *   coordination function (liquidity, market access) while simultaneously
+ *   enabling asymmetric extraction from less sophisticated participants,
+ *   especially during periods of high volatility.
+ *
+ * KEY AGENTS (by structural relationship):
+ *   - Retail Investors: Primary target (powerless/trapped) — bears the cost of volatility through fees, liquidations, and inability to exit during crashes.
+ *   - Coinbase & Arbitrageurs: Primary beneficiary (institutional/arbitrage) — benefits directly from trading volume driven by volatility.
+ *   - Institutional Investors: Secondary beneficiary (organized/mobile) — uses the platform as a regulated on-ramp, benefiting from the coordination function.
+ *   - Analytical Observer: Sees the full hybrid structure of coordination and extraction.
  */
 
 /* ==========================================================================
-   2. CORE SYSTEM INTEGRATION
+   2. BASE PROPERTIES (DOMAIN PRIORS)
    ========================================================================== */
 
-narrative_ontology:interval(coinbase_ipo_window, 0, 10).
-narrative_ontology:constraint_claim(coinbase_crypto_volatility, mountain).
+% --- Numerical metrics ---
+domain_priors:base_extractiveness(coinbase_crypto_volatility, 0.42).
+domain_priors:suppression_score(coinbase_crypto_volatility, 0.85).   % Structural property (raw, unscaled).
+domain_priors:theater_ratio(coinbase_crypto_volatility, 0.15).       % Piton detection (>= 0.70)
 
-% Base extractiveness score (0.0 - 1.0)
-% Rationale: The market itself isn't "extractive" in a zero-sum sense, but 
-% volatility extracts capital from unprepared retail participants.
-domain_priors:base_extractiveness(coinbase_crypto_volatility, 0.4).
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(coinbase_crypto_volatility, extractiveness, 0.42).
+narrative_ontology:constraint_metric(coinbase_crypto_volatility, suppression_requirement, 0.85).
+narrative_ontology:constraint_metric(coinbase_crypto_volatility, theater_ratio, 0.15).
 
-% Suppression score (0.0 - 1.0)
-% Rationale: High; short-term price movements are absolute and cannot 
-% be managed or "voted" away by management or investors.
-domain_priors:suppression_score(coinbase_crypto_volatility, 0.9).
+% --- Constraint claim (must match analytical perspective type) ---
+narrative_ontology:constraint_claim(coinbase_crypto_volatility, tangled_rope).
 
-% Enforcement requirements
-% Rationale: Emerges naturally from global market dynamics.
-domain_priors:emerges_naturally(coinbase_crypto_volatility).
+% --- Binary flags ---
+domain_priors:requires_active_enforcement(coinbase_crypto_volatility). % Required for Tangled Rope
 
-% Metrics
-% Beneficiaries and Victims
-narrative_ontology:constraint_beneficiary(coinbase_crypto_volatility, short_term_arbitrageurs).
-narrative_ontology:constraint_victim(coinbase_crypto_volatility, long_term_capital_stability).
+% --- Structural relationships (REQUIRED for non-mountain constraints) ---
+% These feed the directionality derivation chain: the engine computes
+% d (directionality) from agent membership in these groups + exit_options.
+%
+% Who benefits from this constraint existing?
+narrative_ontology:constraint_beneficiary(coinbase_crypto_volatility, coinbase_and_arbitrageurs).
+%
+% Who bears disproportionate cost?
+narrative_ontology:constraint_victim(coinbase_crypto_volatility, retail_investors_without_hedging).
+%
+% Gate requirements:
+%   Tangled Rope: beneficiary + victim + requires_active_enforcement (all three)
 
 /* ==========================================================================
-   3. INDEXED CLASSIFICATIONS (Perspectival Truth)
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × f(d) × σ(S)
+   where f(d) is the sigmoid directionality function:
+     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
+   The engine derives d from beneficiary/victim membership + exit_options.
+   Scope modifiers: local=0.8, regional=0.9, national=1.0,
+                    continental=1.1, global=1.2, universal=1.0.
+   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
    ========================================================================== */
 
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 1: Retail Trader - Snare
-   --------------------------------------------------------------------------
-   
-   WHO: powerless.
-   WHEN: immediate - Trading on daily or weekly price action.
-   WHERE: trapped - Often "locked in" by exchange downtime or price crashes.
-   
-   WHY THIS CLASSIFICATION:
-   For the retail trader during a "crypto winter" or a flash crash, volatility 
-   is a "Snare." They are liquidated or unable to exit positions due to 
-   network congestion, resulting in an asymmetric loss of capital.
-   
-   NARRATIVE EVIDENCE:
-   "Our net revenue is substantially dependent on... the price of Crypto 
-   Assets... price volatility can result in increased costs... and potentially 
-   impact our ability to operate".
-   -------------------------------------------------------------------------- */
+% PERSPECTIVE 1: THE PRIMARY TARGET (SNARE)
+% For the retail trader during a flash crash, volatility combined with the
+% exchange's structure is a Snare. They are liquidated or unable to exit
+% positions due to platform congestion, resulting in asymmetric capital loss.
+constraint_indexing:constraint_classification(coinbase_crypto_volatility, snare,
+    context(agent_power(powerless),
+            time_horizon(immediate),
+            exit_options(trapped),
+            spatial_scope(global))).
 
-% 2026-02-11: Fixed context arity — removed beneficiary/victim from context tuples (context/4 enforcement)
-constraint_indexing:constraint_classification(
-    coinbase_crypto_volatility,
-    snare,
-    context(
-        agent_power(powerless),
-        time_horizon(immediate),
-        exit_options(trapped),
-        spatial_scope(global)
-    )
-) :-
-    domain_priors:suppression_score(coinbase_crypto_volatility, S),
-    S > 0.8,
-    !.
+% PERSPECTIVE 2: THE PRIMARY BENEFICIARY (ROPE)
+% For Coinbase as an entity, volatility is a Rope. It is the engine of their
+% business. Without price movement, there is no trading volume and no revenue.
+% They use this structure to pull capital into their ecosystem.
+constraint_indexing:constraint_classification(coinbase_crypto_volatility, rope,
+    context(agent_power(institutional),
+            time_horizon(generational),
+            exit_options(arbitrage),
+            spatial_scope(global))).
 
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 2: Coinbase Institutional Team - Rope
-   --------------------------------------------------------------------------
-   
-   WHO: institutional.
-   WHEN: historical - Building for the "100-year" crypto-economy.
-   WHERE: arbitrage - Capitalizing on volatility through transaction fees.
-   
-   WHY THIS CLASSIFICATION:
-   For Coinbase as an entity, volatility is a "Rope." It is the very engine 
-   of their business. Without price movement, there is no trading volume; 
-   without volume, there is no revenue. They use this 
-   volatility to pull institutional capital into their "regulated" ecosystem.
-   
-   NARRATIVE EVIDENCE:
-   "We have a highly scalable and reliable platform... our business is 
-   substantially dependent on the total volume of transactions".
-   -------------------------------------------------------------------------- */
-
-constraint_indexing:constraint_classification(
-    coinbase_crypto_volatility,
-    rope,
-    context(
-        agent_power(institutional),
-        time_horizon(historical),
-        exit_options(arbitrage),
-        spatial_scope(global)
-    )
-) :-
-    domain_priors:base_extractiveness(coinbase_crypto_volatility, E),
-    E < 0.6,
-    !.
-
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE ANALYTICAL OBSERVER (MARKET ANALYST) - Mountain
-   --------------------------------------------------------------------------
-   WHO: agent_power(analytical) - Observes the external market drivers.
-   WHEN: immediate - Volatility events occur with no warning.
-   WHERE: arbitrage - Operates in a global, 24/7 liquid market.
-   SCOPE: global - Crypto asset cycles are a worldwide phenomenon.
-   
-   WHY THIS CLASSIFICATION:
-   The "Mountain" is the exogenous volatility of Bitcoin and Ethereum. 
-   As stated in the S-1, transaction volume and revenue are "driven by 
-   factors that are not within our control." To the analyst, these cycles 
-   are the unyielding physical laws of the crypto terrain. They represent 
-   an immutable structural constraint that Coinbase must inhabit, rather 
-   than a mechanism they can significantly alter.
-   -------------------------------------------------------------------------- */
-
-constraint_indexing:constraint_classification(
-    coinbase_crypto_volatility,
-    mountain,
-    context(
-        agent_power(analytical),
-        time_horizon(immediate),
-        exit_options(arbitrage),
-        spatial_scope(global)
-    )
-) :-
-    domain_priors:suppression_score(coinbase_crypto_volatility, S),
-    S < 0.5.
-
-% Explicit priors reflecting the unyielding nature of market cycles.
-domain_priors:base_extractiveness(coinbase_crypto_volatility, 0.4).
-domain_priors:suppression_score(coinbase_crypto_volatility, 0.3).
-
-% Constraint metric facts (bridge for classification engine)
-narrative_ontology:constraint_metric(coinbase_crypto_volatility, extractiveness, 0.4).
-narrative_ontology:constraint_metric(coinbase_crypto_volatility, suppression_requirement, 0.9).
+% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
+% The analyst sees the complete system: a genuine coordination service
+% (liquidity provision) that is structurally coupled with an extractive
+% mechanism that profits from that same volatility, often at the expense of
+% the least sophisticated participants.
+constraint_indexing:constraint_classification(coinbase_crypto_volatility, tangled_rope,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(global))).
 
 /* ==========================================================================
-   4. TESTS
+   4. VALIDATION TESTS
    ========================================================================== */
 
-:- begin_tests(coinbase_volatility_tests).
+:- begin_tests(coinbase_crypto_volatility_tests).
 
-test(revenue_correlation_logic) :-
-    % Verify that institutional revenue is tied to the "arbitrage" of volatility
-    constraint_indexing:constraint_classification(coinbase_crypto_volatility, rope,
-        context(agent_power(institutional), _, exit_options(arbitrage), _)).
+test(perspectival_gap) :-
+    % Verify perspectival gap between target and beneficiary.
+    constraint_indexing:constraint_classification(coinbase_crypto_volatility, TypeTarget, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(coinbase_crypto_volatility, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
+    TypeTarget \= TypeBeneficiary.
 
-test(retail_vulnerability_audit) :-
-    % Verify that the powerless/trapped agent sees a Snare
-    constraint_indexing:constraint_classification(coinbase_crypto_volatility, snare,
-        context(agent_power(powerless), time_horizon(immediate), exit_options(trapped), _)).
+test(analytical_classification_is_tangled_rope) :-
+    % Verify the analytical observer correctly identifies the hybrid nature.
+    constraint_indexing:constraint_classification(coinbase_crypto_volatility, tangled_rope, context(agent_power(analytical), _, _, _)).
 
-:- end_tests(coinbase_volatility_tests).
+test(tangled_rope_structural_gates_pass) :-
+    % Verify all three structural requirements for Tangled Rope are met.
+    narrative_ontology:constraint_beneficiary(coinbase_crypto_volatility, _),
+    narrative_ontology:constraint_victim(coinbase_crypto_volatility, _),
+    domain_priors:requires_active_enforcement(coinbase_crypto_volatility).
+
+:- end_tests(coinbase_crypto_volatility_tests).
 
 /* ==========================================================================
-   5. MODEL INTERPRETATION
+   5. GENERATIVE COMMENTARY
    ========================================================================== */
 
 /**
- * LLM GENERATION NOTES
- * * KEY DECISIONS:
- * 1. CLASSIFICATION: Unlike Blackstone (Internal Snare), Coinbase is 
- * defined by an External Mountain (Market Cycles).
- * 2. VOLATILITY AS ENGINE: The paradox of Coinbase is that the 
- * "Risk Factor" (volatility) is also the primary "Growth Factor".
+ * LOGIC RATIONALE:
+ *   The original file misclassified this as a Mountain by conflating raw
+ *   market volatility with the man-made market structure built to harness it.
+ *   The revised scores reflect the properties of the exchange system itself.
+ *   - Base Extractiveness (0.42): Represents the portion of value captured through fees, spreads, and liquidations that exceeds the pure cost of providing the service.
+ *   - Suppression (0.85): High, as retail users have few liquid, regulated, and user-friendly alternatives. Centralized exchanges are a chokepoint.
+ *   - Enforcement: The matching engine, liquidation protocols, and fee collection mechanisms are all actively enforced by the platform operator.
+ *
+ * PERSPECTIVAL GAP:
+ *   The gap is stark. For Coinbase (beneficiary), the system is a Rope; volatility is the source of revenue and the core of their business model. For a retail investor (target), especially one caught in a downturn, the same system is a Snare that extracts capital through forced liquidations and an inability to exit positions. The analytical view must be Tangled Rope to capture both functions simultaneously.
+ *
+ * DIRECTIONALITY LOGIC:
+ *   - Beneficiary: `coinbase_and_arbitrageurs` directly profit from the trading volume that volatility generates. Their relationship is subsidized by the system's structure.
+ *   - Victim: `retail_investors_without_hedging` bear the direct costs of this volatility through fees and catastrophic losses during crashes, from which the platform still profits.
+ *
+ * MANDATROPHY ANALYSIS:
+ *   Classifying this as a Tangled Rope correctly prevents two errors. It avoids the "natural law" fallacy of calling it a Mountain, which would ignore the designed, extractive elements of the exchange. It also avoids calling it a pure Snare, which would ignore the genuine and valuable coordination function (liquidity, price discovery, access) that the exchange provides. The Tangled Rope classification acknowledges that it is both a service and a trap, depending on the market conditions and the agent's position.
  */
 
 /* ==========================================================================
-   6. OMEGA VARIABLES (Ω)
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
+% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
-    crypto_winter_duration,
-    "Can Coinbase survive a multi-year period of low volatility and low prices (Mountain) without a secondary revenue Rope?",
-    resolution_mechanism("Track growth of non-transaction revenue (Staking, Subscriptions) over 24 months"),
-    impact("If staking fails: it is a Snare for the stock. If it succeeds: a Rope for stability."),
+    omega_coinbase_crypto_volatility,
+    'Can Coinbase survive a multi-year period of low volatility and low prices without its secondary revenue streams (e.g., staking) becoming dominant?',
+    'Track the ratio of non-transaction revenue to transaction revenue over a 24-month crypto winter.',
+    'If non-transaction revenue fails to grow, the business model remains a Tangled Rope dependent on volatility. If it succeeds, the company may be transitioning to a more stable Rope.',
     confidence_without_resolution(medium)
 ).
 
 /* ==========================================================================
-   7. ALTERNATIVE ANALYSIS
+   7. INTEGRATION HOOKS
    ========================================================================== */
 
-/**
- * VIABLE ALTERNATIVES
- * * ALTERNATIVE 1: Decentralized Exchanges (DEXs)
- * Viability: Direct competitors mentioned in the S-1.
- * Suppression: Competitive suppression; Coinbase positions itself as 
- * "regulated and safe" to differentiate from the "unregulated" DEXs.
- */
+% Required for external script parsing
+narrative_ontology:interval(coinbase_crypto_volatility, 0, 10).
 
 /* ==========================================================================
-   8. INTEGRATION HOOKS
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Load: ?- [coinbase_volatility].
+% Temporal data models the cyclical nature of crypto markets. Extraction
+% spikes during peak volatility and crashes.
+%
+% Theater ratio over time:
+narrative_ontology:measurement(coinbase_crypto_volatility_tr_t0, coinbase_crypto_volatility, theater_ratio, 0, 0.10).
+narrative_ontology:measurement(coinbase_crypto_volatility_tr_t5, coinbase_crypto_volatility, theater_ratio, 5, 0.10).
+narrative_ontology:measurement(coinbase_crypto_volatility_tr_t10, coinbase_crypto_volatility, theater_ratio, 10, 0.15).
+
+% Extraction over time:
+narrative_ontology:measurement(coinbase_crypto_volatility_ex_t0, coinbase_crypto_volatility, base_extractiveness, 0, 0.30).
+narrative_ontology:measurement(coinbase_crypto_volatility_ex_t5, coinbase_crypto_volatility, base_extractiveness, 5, 0.50).
+narrative_ontology:measurement(coinbase_crypto_volatility_ex_t10, coinbase_crypto_volatility, base_extractiveness, 10, 0.42).
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA
+   ========================================================================== */
+
+% Coordination type (enables Boltzmann floor + complexity offset)
+% Valid types: information_standard, resource_allocation,
+%              enforcement_mechanism, global_infrastructure
+narrative_ontology:coordination_type(coinbase_crypto_volatility, resource_allocation).
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+% No overrides needed. The structural derivation from beneficiary/victim
+% declarations accurately models the relationships in this system.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
-

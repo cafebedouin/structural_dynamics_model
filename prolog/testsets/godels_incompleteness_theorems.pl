@@ -64,7 +64,8 @@
 
 % Required for structural extraction and indexer coordination
 narrative_ontology:interval(goedel_era, 1931, 2026).
-narrative_ontology:constraint_claim(goedels_incompleteness_theorems, mountain).
+narrative_ontology:constraint_claim(goedels_incompleteness_theorems, tangled_rope).
+domain_priors:requires_active_enforcement(goedels_incompleteness_theorems).
 
 % Base extractiveness score (0.0-1.0)
 % Rationale: 0.2. While a "gift" of structural depth, it "extracts" 
@@ -116,7 +117,7 @@ narrative_ontology:constraint_victim(goedels_incompleteness_theorems, axiomatic_
 
 constraint_indexing:constraint_classification(
     goedels_incompleteness_theorems,
-    mountain,
+    tangled_rope,
     context(
         agent_power(powerless),
         time_horizon(immediate),

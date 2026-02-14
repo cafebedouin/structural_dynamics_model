@@ -63,7 +63,8 @@
 
 % Structural Anchor for index extraction
 narrative_ontology:interval(buffon_era, 1777, 2026).
-narrative_ontology:constraint_claim(buffons_needle_pi_estimation, mountain).
+narrative_ontology:constraint_claim(buffons_needle_pi_estimation, tangled_rope).
+domain_priors:requires_active_enforcement(buffons_needle_pi_estimation).
 
 % Base extractiveness score (0.0-1.0)
 % Rationale: 0.2. It "extracts" the simplicity of a random drop to reveal a 
@@ -113,7 +114,7 @@ narrative_ontology:constraint_victim(buffons_needle_pi_estimation, deterministic
 
 constraint_indexing:constraint_classification(
     buffons_needle_pi_estimation,
-    mountain,
+    tangled_rope,
     context(
         agent_power(powerless),
         time_horizon(immediate),

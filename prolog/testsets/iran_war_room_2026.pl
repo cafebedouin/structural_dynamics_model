@@ -69,7 +69,8 @@ narrative_ontology:constraint_metric(iran_war_room_2026, suppression_requirement
 narrative_ontology:constraint_metric(iran_war_room_2026, theater_ratio, 0.65).
 
 % Constraint self-claim (analytical classification)
-narrative_ontology:constraint_claim(iran_war_room_2026, mountain).
+narrative_ontology:constraint_claim(iran_war_room_2026, tangled_rope).
+domain_priors:requires_active_enforcement(iran_war_room_2026).
 
 narrative_ontology:constraint_beneficiary(iran_war_room_2026, irgc_strategic_deterrence).
 narrative_ontology:constraint_victim(iran_war_room_2026, regional_economic_stability).
@@ -99,7 +100,7 @@ constraint_indexing:constraint_classification(iran_war_room_2026, rope,
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (MOUNTAIN)
 % Analysts view the potential for regional escalation as a Mountain: 
 % an irreducible geopolitical limit that forces a rethinking of US calculations.
-constraint_indexing:constraint_classification(iran_war_room_2026, mountain,
+constraint_indexing:constraint_classification(iran_war_room_2026, tangled_rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

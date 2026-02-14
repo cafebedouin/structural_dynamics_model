@@ -53,7 +53,7 @@
 
 % Required for [STEP 1] and [STEP 2] of the DR-Audit Suite
 narrative_ontology:interval(elencher_identity_transformation, 0, 10).
-narrative_ontology:constraint_claim(elencher_identity_transformation, mountain).
+narrative_ontology:constraint_claim(elencher_identity_transformation, scaffold).
 
 % Base extractiveness score (0.0 = no extraction, 1.0 = full extraction)
 % Rationale: The Elench seek to be changed *by* the other, not to change the other. 
@@ -164,7 +164,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     elencher_identity_transformation,
-    mountain,
+    scaffold,
     context(
         agent_power(analytical),
         time_horizon(civilizational),
@@ -185,7 +185,7 @@ test(multi_perspective_flux) :-
     % Individual Powerless (Culture Citizen) sees Snare
     constraint_indexing:constraint_classification(elencher_identity_transformation, snare, context(powerless, _, _, _)),
     % Analytical sees Mountain
-    constraint_indexing:constraint_classification(elencher_identity_transformation, mountain, context(analytical, _, _, _)).
+    constraint_indexing:constraint_classification(elencher_identity_transformation, scaffold, context(analytical, _, _, _)).
 
 test(extraction_internalization) :-
     % Demonstrates low extractiveness (0.1) because the "sacrifice" is the self.

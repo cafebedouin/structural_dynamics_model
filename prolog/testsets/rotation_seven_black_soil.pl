@@ -65,7 +65,8 @@ narrative_ontology:constraint_metric(rotation_seven_black_soil, theater_ratio, 0
 
 % Constraint self-claim (what does the constraint claim to be?)
 % The institutional framing is that this is an unchangeable fact of nature.
-narrative_ontology:constraint_claim(rotation_seven_black_soil, mountain).
+narrative_ontology:constraint_claim(rotation_seven_black_soil, tangled_rope).
+domain_priors:requires_active_enforcement(rotation_seven_black_soil).
 
 % Structural property derivation hooks:
 % The station's crisis management protocols create a coordination function.
@@ -103,7 +104,7 @@ constraint_indexing:constraint_classification(rotation_seven_black_soil, rope,
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (MOUNTAIN)
 % From a strategic, long-term perspective, the toxin's biological effect is an
 % immutable physical law—a Mountain that dictates policy like abandoning the sector.
-constraint_indexing:constraint_classification(rotation_seven_black_soil, mountain,
+constraint_indexing:constraint_classification(rotation_seven_black_soil, tangled_rope,
     context(agent_power(analytical),
             time_horizon(generational),
             exit_options(analytical),

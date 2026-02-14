@@ -62,7 +62,8 @@
 
 % Structural Anchor for index extraction
 narrative_ontology:interval(suslin_era, 1920, 2026).
-narrative_ontology:constraint_claim(suslin_hypothesis_undecidability, mountain).
+narrative_ontology:constraint_claim(suslin_hypothesis_undecidability, tangled_rope).
+domain_priors:requires_active_enforcement(suslin_hypothesis_undecidability).
 
 % Base extractiveness score (0.0-1.0)
 % Rationale: 0.2. SH "extracts" the definitive uniqueness of the real numbers 
@@ -115,7 +116,7 @@ narrative_ontology:constraint_victim(suslin_hypothesis_undecidability, hilbertia
 
 constraint_indexing:constraint_classification(
     suslin_hypothesis_undecidability,
-    mountain,
+    tangled_rope,
     context(
         agent_power(powerless),
         time_horizon(immediate),

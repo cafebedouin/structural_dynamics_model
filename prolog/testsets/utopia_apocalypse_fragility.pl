@@ -65,7 +65,7 @@ narrative_ontology:constraint_metric(utopia_apocalypse_fragility, theater_ratio,
 
 % Constraint self-claim (what does the constraint claim to be?)
 % Analytically, the stochastic nature of existence is claimed as an unchangeable law.
-narrative_ontology:constraint_claim(utopia_apocalypse_fragility, mountain).
+narrative_ontology:constraint_claim(utopia_apocalypse_fragility, tangled_rope).
 
 % Binary flags
 % The maintenance of "Utopia" requires constant, active effort to prevent the slide.
@@ -108,7 +108,7 @@ constraint_indexing:constraint_classification(utopia_apocalypse_fragility, tangl
 
 % PERSPECTIVE 4: THE EXISTENTIAL REALIST (MOUNTAIN)
 % Views the underlying fragility as an unchangeable, natural law of complex systems.
-constraint_indexing:constraint_classification(utopia_apocalypse_fragility, mountain,
+constraint_indexing:constraint_classification(utopia_apocalypse_fragility, tangled_rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

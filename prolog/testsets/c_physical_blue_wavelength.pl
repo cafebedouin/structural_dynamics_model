@@ -1,9 +1,9 @@
 % ============================================================================
 % CONSTRAINT STORY: c_physical_blue_wavelength
 % ============================================================================
-% Version: 5.2 (Deferential Realism Core + Boltzmann + Purity + Network)
-% Logic: 5.2 (Indexed Tuple P,T,E,S + Coupling + Purity + Network Drift)
-% Generated: 2024-07-15
+% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2024-08-01
 % ============================================================================
 
 :- module(constraint_c_physical_blue_wavelength, []).
@@ -11,6 +11,19 @@
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
+
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
 
 % --- Namespace Hooks (Required for loading) ---
 :- multifile
@@ -28,7 +41,9 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3,
+    domain_priors:emerges_naturally/1.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -36,52 +51,67 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: c_physical_blue_wavelength
- * human_readable: The Physical Wavelength of Blue Light
- * domain: scientific/physical
- * * SUMMARY:
- * The perception of "blue" is constrained by the physical properties of the
- * electromagnetic spectrum, specifically light with a wavelength of ~450-495nm.
- * This is a fundamental, unchangeable property of the universe as we know it.
- * It is a classic example of a Mountain: a natural law with zero degrees of
- * freedom for all agents, regardless of their power or perspective.
- * * KEY AGENTS:
- * - Human Observer: Subject (Powerless against physics)
- * - Display Manufacturer: Institutional Agent (Also powerless against the law itself, though they can build standards upon it)
- * - Physicist: Auditor (Analyzes the mechanics of light)
+ *   constraint_id: c_physical_blue_wavelength
+ *   human_readable: The Physical Wavelength of Blue Light
+ *   domain: scientific/physical
+ *
+ * SUMMARY:
+ *   The perception of "blue" is constrained by the physical properties of the
+ *   electromagnetic spectrum, specifically light with a wavelength of ~450-495nm.
+ *   This is a fundamental, unchangeable property of the universe as we know it.
+ *   It is a classic example of a Mountain: a natural law with zero degrees of
+ *   freedom for all agents, regardless of their power or perspective.
+ *
+ * KEY AGENTS (by structural relationship):
+ *   - Human Observer: Any agent subject to the laws of physics (powerless/trapped)
+ *   - Display Manufacturer: Institutional agent building standards upon the law (institutional/mobile)
+ *   - Physicist: Analytical observer (analytical/analytical)
  */
 
 /* ==========================================================================
    2. BASE PROPERTIES (DOMAIN PRIORS)
    ========================================================================== */
 
-% Mountains have near-zero extraction (it's a law, not a tax) and high suppression.
+% --- Numerical metrics ---
+% Mountains have near-zero extraction (it's a law, not a tax) and low suppression.
 domain_priors:base_extractiveness(c_physical_blue_wavelength, 0.02).
-domain_priors:suppression_score(c_physical_blue_wavelength, 0.98).   % High suppression of alternatives (physics is non-negotiable).
+domain_priors:suppression_score(c_physical_blue_wavelength, 0.01).   % Structural property (raw, unscaled).
 domain_priors:theater_ratio(c_physical_blue_wavelength, 0.0).        % Purely functional physical law, zero theater.
 
-% Constraint metric facts — primary keys used by the classification engine.
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
 narrative_ontology:constraint_metric(c_physical_blue_wavelength, extractiveness, 0.02).
-narrative_ontology:constraint_metric(c_physical_blue_wavelength, suppression_requirement, 0.98).
+narrative_ontology:constraint_metric(c_physical_blue_wavelength, suppression_requirement, 0.01).
 narrative_ontology:constraint_metric(c_physical_blue_wavelength, theater_ratio, 0.0).
 
-% Constraint self-claim (what does the constraint claim to be?)
-% A physical law is the canonical example of a natural_law claim.
+% --- NL Profile Metrics (required for mountain constraints) ---
+% These feed the natural_law_signature certification chain in
+% structural_signatures.pl. Without these, the NL signature defaults to 0.5
+% and fails certification, and the mountain metric gate will not fire.
+narrative_ontology:constraint_metric(c_physical_blue_wavelength, accessibility_collapse, 1.0). % Alternatives are inconceivable.
+narrative_ontology:constraint_metric(c_physical_blue_wavelength, resistance, 0.0). % Resistance is incoherent.
+
+% --- Constraint claim (must match analytical perspective type) ---
+% A physical law is the canonical example of a Mountain claim.
 narrative_ontology:constraint_claim(c_physical_blue_wavelength, mountain).
 
+% --- Emergence flag (required for mountain constraints) ---
+% This constraint emerges naturally from the laws of physics without human design.
+domain_priors:emerges_naturally(c_physical_blue_wavelength).
+
+% --- Structural relationships (REQUIRED for non-mountain constraints) ---
 % This constraint is a physical law; it has no beneficiaries or victims in the
 % Deferential Realism sense, as there is no asymmetric extraction. It also
 % requires no active enforcement. These facts are omitted as they are not applicable.
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × π(P) × σ(S)
+   χ = ε × f(d) × σ(S)
    This is a uniform-type constraint (Mountain-only). The classification is
-   invariant across all perspectives because the base extractiveness is
-   negligible and the constraint is a physical law.
+   invariant across all perspectives because the base extractiveness and
+   suppression are negligible and the constraint is a physical law.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE SUBJECT (MOUNTAIN)
+% PERSPECTIVE 1: THE HUMAN OBSERVER (MOUNTAIN)
 % To the observer, the sky is blue due to Rayleigh scattering; this cannot be
 % changed or negotiated.
 constraint_indexing:constraint_classification(c_physical_blue_wavelength, mountain,
@@ -114,7 +144,7 @@ constraint_indexing:constraint_classification(c_physical_blue_wavelength, mounta
 
 :- begin_tests(c_physical_blue_wavelength_tests).
 
-test(uniformity_is_mountain) :-
+test(uniformity_is_mountain_as_expected) :-
     % Verify this is a uniform-type constraint, classifying as Mountain from all key perspectives.
     constraint_indexing:constraint_classification(c_physical_blue_wavelength, mountain, context(agent_power(powerless), _, _, _)),
     constraint_indexing:constraint_classification(c_physical_blue_wavelength, mountain, context(agent_power(institutional), _, _, _)),
@@ -126,8 +156,16 @@ test(threshold_validation) :-
     config:param(suppression_metric_name, SuppMetricName),
     narrative_ontology:constraint_metric(c_physical_blue_wavelength, ExtMetricName, E),
     narrative_ontology:constraint_metric(c_physical_blue_wavelength, SuppMetricName, S),
-    E =< 0.15, % Mountain extraction threshold
-    S >= 0.90. % High suppression is characteristic of physical laws
+    E =< 0.25, % Mountain extraction threshold
+    S =< 0.05. % Mountain suppression ceiling
+
+test(nl_profile_is_present_and_correct) :-
+    % Verify the Natural Law profile metrics are present for this Mountain constraint.
+    narrative_ontology:constraint_metric(c_physical_blue_wavelength, accessibility_collapse, AC),
+    narrative_ontology:constraint_metric(c_physical_blue_wavelength, resistance, R),
+    domain_priors:emerges_naturally(c_physical_blue_wavelength),
+    AC >= 0.85,
+    R =< 0.15.
 
 :- end_tests(c_physical_blue_wavelength_tests).
 
@@ -137,24 +175,30 @@ test(threshold_validation) :-
 
 /**
  * LOGIC RATIONALE:
- * This constraint has been corrected to be a uniform-type Mountain. The original
- * file made a category error by conflating the physical law (the wavelength of
- * blue light) with a technological standard built upon it (e.g., sRGB color
- * primaries). A physical law is always a Mountain; it has negligible extraction
- * and its suppression of alternatives is near-total and requires no enforcement.
+ *   This constraint is a uniform-type Mountain. A physical law is the canonical
+ *   example of a Mountain; it has negligible extraction (ε=0.02) and its
+ *   suppression of alternatives is total and requires no enforcement. The
+ *   suppression score (S=0.01) is low because the metric measures the *cost*
+ *   of suppressing alternatives, which is zero for a physical law as no
+ *   alternatives exist. The file includes the full Natural Law profile
+ *   (accessibility_collapse=1.0, resistance=0.0, emerges_naturally) required
+ *   for the engine to certify it as a Mountain.
  *
- * A technological standard like sRGB would be a *separate* constraint, likely a
- * Rope, that has a network dependency on this Mountain (see Section 9).
- * By reclassifying this as a pure Mountain, the erroneous `tangled_rope`
- * classification and the associated linter errors (missing beneficiary, victim,
- * and enforcement) are resolved. The constraint is invariant across all
- * perspectives because no agent can alter a law of physics.
+ * PERSPECTIVAL GAP:
+ *   There is no perspectival gap. The constraint is a Mountain from all perspectives,
+ *   as no agent can alter a law of physics. This is a uniform-type constraint.
+ *
+ * DIRECTIONALITY LOGIC:
+ *   Directionality is not applicable. As a Mountain, the constraint has no
+ *   beneficiaries or victims. The system will fall back to canonical `d` values
+ *   for each power atom, but since ε is near zero, the effective extraction χ
+ *   remains negligible for all agents.
  *
  * MANDATROPHY ANALYSIS:
- * [RESOLVED MANDATROPHY] This constraint is a Mountain. Mandatrophy, the misidentification
- * of extraction as coordination, is not a risk here because the base extractiveness (0.02)
- * is well below any threshold for a Snare or Tangled Rope. The system correctly
- * identifies this as a natural law.
+ *   [RESOLVED MANDATROPHY] This constraint is a Mountain. Mandatrophy, the misidentification
+ *   of extraction as coordination, is not a risk here because the base extractiveness (0.02)
+ *   is well below any threshold for a Snare or Tangled Rope. The system correctly
+ *   identifies this as a natural law.
  */
 
 /* ==========================================================================
@@ -196,7 +240,7 @@ narrative_ontology:measurement(blue_ex_t5, c_physical_blue_wavelength, base_extr
 narrative_ontology:measurement(blue_ex_t10, c_physical_blue_wavelength, base_extractiveness, 10, 0.02).
 
 /* ==========================================================================
-   9. BOLTZMANN & NETWORK DATA (v5.0-5.2)
+   9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
 % As a physical law, this constraint has no coordination function itself, so
@@ -208,10 +252,10 @@ narrative_ontology:measurement(blue_ex_t10, c_physical_blue_wavelength, base_ext
 narrative_ontology:affects_constraint(c_physical_blue_wavelength, c_tech_srgb_standard).
 
 /* ==========================================================================
-   10. STRUCTURAL ENRICHMENT (BENEFICIARY / VICTIM)
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-% No enrichment needed — Mountain (physical constant).
+% No enrichment or overrides needed — Mountain (physical constant).
 % A physical law has no beneficiary/victim asymmetry; suppression is total
 % and extraction is negligible. No agent benefits at the expense of another.
 

@@ -76,7 +76,8 @@ narrative_ontology:constraint_metric(social_narrative_casting, extractiveness, 0
 narrative_ontology:constraint_metric(social_narrative_casting, suppression_requirement, 0.6).
 
 % Constraint classification claim
-narrative_ontology:constraint_claim(social_narrative_casting, mountain).
+narrative_ontology:constraint_claim(social_narrative_casting, tangled_rope).
+domain_priors:requires_active_enforcement(social_narrative_casting).
 
 % Enforcement requirements
 % The constraint "emerges naturally" from the ego's need to project itself and create 
@@ -181,7 +182,7 @@ constraint_indexing:constraint_classification(
 
 constraint_indexing:constraint_classification(
     social_narrative_casting,
-    mountain,
+    tangled_rope,
     context(
         agent_power(analytical),
         time_horizon(civilizational),
@@ -233,7 +234,7 @@ test(multi_perspective_belief) :-
     % Agent who knows it is just a role
     constraint_indexing:constraint_classification(social_narrative_casting, rope, context(agent_power(individual_moderate), _, _, _)),
     % Analyst who sees the underlying biological ego-system
-    constraint_indexing:constraint_classification(social_narrative_casting, mountain, context(agent_power(analytical), _, _, _)),
+    constraint_indexing:constraint_classification(social_narrative_casting, tangled_rope, context(agent_power(analytical), _, _, _)),
     % Therapist who uses the system as a tool
     constraint_indexing:constraint_classification(social_narrative_casting, rope, context(agent_power(institutional), _, _, _)).
 

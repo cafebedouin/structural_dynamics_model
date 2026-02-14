@@ -61,7 +61,8 @@
 
 % Structural Anchor for extraction
 narrative_ontology:interval(quine_era, 1951, 2026).
-narrative_ontology:constraint_claim(quine_self_replication, mountain).
+narrative_ontology:constraint_claim(quine_self_replication, tangled_rope).
+domain_priors:requires_active_enforcement(quine_self_replication).
 
 % Base extractiveness score (0.0-1.0)
 % Rationale: 0.2. While a logic "gift," a quine "extracts" the distinction 
@@ -112,7 +113,7 @@ narrative_ontology:constraint_victim(quine_self_replication, static_code_analysi
 
 constraint_indexing:constraint_classification(
     quine_self_replication,
-    mountain,
+    tangled_rope,
     context(
         agent_power(powerless),
         time_horizon(immediate),

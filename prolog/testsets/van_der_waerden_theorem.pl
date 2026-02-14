@@ -62,7 +62,8 @@
 
 % Required for [STEP 1] and [STEP 2] of the DR-Audit Suite
 narrative_ontology:interval(van_der_waerden_interval, 0, 10).
-narrative_ontology:constraint_claim(van_der_waerden_theorem, mountain).
+narrative_ontology:constraint_claim(van_der_waerden_theorem, tangled_rope).
+domain_priors:requires_active_enforcement(van_der_waerden_theorem).
 
 % Base extractiveness score (0.0-1.0)
 % Rationale: It extracts "randomness" from the system. It forces structure 
@@ -109,7 +110,7 @@ narrative_ontology:constraint_victim(van_der_waerden_theorem, [chaos_theorists, 
 
 constraint_indexing:constraint_classification(
     van_der_waerden_theorem,
-    mountain,
+    tangled_rope,
     context(
         agent_power(analytical),
         time_horizon(civilizational),
@@ -181,7 +182,7 @@ constraint_indexing:constraint_classification(
 
 test(multi_perspective_variance) :-
     % Perspective 1: Analyst sees Mountain
-    constraint_indexing:constraint_classification(van_der_waerden_theorem, mountain, context(agent_power(analytical), _, _, _)),
+    constraint_indexing:constraint_classification(van_der_waerden_theorem, tangled_rope, context(agent_power(analytical), _, _, _)),
     % Perspective 2: Institutional sees Rope
     constraint_indexing:constraint_classification(van_der_waerden_theorem, rope, context(agent_power(institutional), _, _, _)),
     % Perspective 3: Powerless sees Snare

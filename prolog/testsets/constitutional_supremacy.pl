@@ -53,7 +53,7 @@
    ========================================================================== */
 
 narrative_ontology:interval(constitutional_supremacy, 0, 10).
-narrative_ontology:constraint_claim(constitutional_supremacy, mountain).
+narrative_ontology:constraint_claim(constitutional_supremacy, tangled_rope).
 
 % Base extractiveness: 0.3.
 % The constraint primarily coordinates power rather than extracting it, though
@@ -96,7 +96,7 @@ narrative_ontology:constraint_victim(constitutional_supremacy, legislative_supre
 
 constraint_indexing:constraint_classification(
     constitutional_supremacy,
-    mountain,
+    tangled_rope,
     context(
         agent_power(powerless),
         time_horizon(biographical),

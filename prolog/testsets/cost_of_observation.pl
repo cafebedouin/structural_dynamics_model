@@ -68,7 +68,8 @@ narrative_ontology:constraint_metric(cost_of_observation, theater_ratio, 0.05).
 
 % Constraint self-claim (what does the constraint claim to be?)
 % It presents as a fundamental, unchangeable feature of reality.
-narrative_ontology:constraint_claim(cost_of_observation, mountain).
+narrative_ontology:constraint_claim(cost_of_observation, tangled_rope).
+domain_priors:requires_active_enforcement(cost_of_observation).
 
 % Structural property derivation hooks:
 narrative_ontology:constraint_beneficiary(cost_of_observation, evolutionary_process).
@@ -107,7 +108,7 @@ constraint_indexing:constraint_classification(cost_of_observation, rope,
 % and information theory, an unchangeable feature of the universe.
 % χ = 0.85 * 1.15 (analytical) * 1.0 (universal) = 0.9775
 % Despite high chi, the analytical frame recognizes it as a natural law, classifying it as Mountain.
-constraint_indexing:constraint_classification(cost_of_observation, mountain,
+constraint_indexing:constraint_classification(cost_of_observation, tangled_rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),

@@ -1,26 +1,49 @@
 % ============================================================================
 % CONSTRAINT STORY: lln_convergence
 % ============================================================================
-% Generated: 2026-01-19
-% Model: Gemini 2.0 Flash
-% Source: Law of Large Numbers (Jakob Bernoulli, 1713)
+% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2024-07-15
 % ============================================================================
 
-:- module(constraint_lln, []).
+:- module(constraint_lln_convergence, []).
 
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
 
-% --- Namespace Hooks ---
-:- multifile 
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile
     domain_priors:base_extractiveness/2,
     domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
     domain_priors:requires_active_enforcement/1,
+    domain_priors:emerges_naturally/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
-    constraint_indexing:constraint_classification/3.
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
+    narrative_ontology:boltzmann_floor_override/2,
+    constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -28,257 +51,211 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: lln_convergence
- * human_readable: Law of Large Numbers (LLN)
- * domain: mathematical/probabilistic
- * temporal_scope: 1713 - Present (Civilizational)
- * spatial_scope: Global/Abstract (Independent trials)
- * * SUMMARY:
- * The Law of Large Numbers (LLN) is a theorem that describes the result of 
- * performing the same experiment a large number of times. It states that the 
- * average of the results obtained from a large number of trials should be 
- * close to the expected value, and will tend to become closer as more trials 
- * are performed.
- * * KEY AGENTS:
- * - The Individual Trial: The powerless subject whose variance is eventually 
- * smoothed away by the aggregate.
- * - The Casino / Insurance Firm (Institutional): An agent who uses the LLN 
- * as a "Rope" to ensure predictable profitability across millions of events.
- * - The Gambler (Victim): An agent with finite capital for whom the LLN 
- * acts as a "Snare" (Gambler's Ruin), ensuring they go broke before reaching 
- * the "long run" equilibrium.
- * * NARRATIVE ARC:
- * LLN is the "Mountain" of equilibrium—it is the inescapable gravity of 
- * probability. For the institutional architect, it is the "Rope" of 
- * coordination that turns randomness into business. However, for the 
- * individual with finite resources, the "Long Run" is a "Snare" because 
- * "in the long run, we are all dead" (Keynes).
+ *   constraint_id: lln_convergence
+ *   human_readable: Law of Large Numbers (LLN)
+ *   domain: mathematical
+ *
+ * SUMMARY:
+ *   The Law of Large Numbers (LLN) is a theorem stating that the average of
+ *   results from a large number of independent, identical trials will converge
+ *   to the expected value. This constraint models the mathematical law itself,
+ *   not its specific applications in extractive systems (e.g., casino house edge),
+ *   which would constitute a separate, higher-extraction constraint.
+ *
+ * KEY AGENTS (by structural relationship):
+ *   - The Individual Trial: Primary subject (powerless/trapped) — whose variance is smoothed away by the aggregate.
+ *   - Casino Operators / Insurance Firms: Primary beneficiary (institutional/arbitrage) — uses the LLN to ensure predictable profitability.
+ *   - Gamblers with Finite Capital: Victim (powerless/constrained) — experiences the law's convergence as a ruinous force due to finite resources.
+ *   - Analytical Observer: Sees the full mathematical structure.
  */
 
 /* ==========================================================================
-   2. CORE SYSTEM INTEGRATION
+   2. BASE PROPERTIES (DOMAIN PRIORS)
    ========================================================================== */
 
-% Required for DR-Audit Suite
-narrative_ontology:interval(lln_era, 1713, 2026).
-narrative_ontology:constraint_claim(lln_convergence, mountain).
-
-% Base extractiveness: 0.25
-% Rationale: Moderate. While a mathematical truth, the LLN "extracts" 
-% capital from those who bet against the mean (Casinos) and "extracts" 
-% the relevance of the individual event for the sake of the average.
+% --- Numerical metrics ---
 domain_priors:base_extractiveness(lln_convergence, 0.25).
+domain_priors:suppression_score(lln_convergence, 0.05).   % Structural property (raw, unscaled).
+domain_priors:theater_ratio(lln_convergence, 0.0).       % Piton detection (>= 0.70)
 
-% Suppression score: 0.2
-% Rationale: It suppresses the visibility of short-term variance in favor 
-% of long-term stability.
-domain_priors:suppression_score(lln_convergence, 0.2).
-
-% Constraint metric facts (bridge for classification engine)
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
 narrative_ontology:constraint_metric(lln_convergence, extractiveness, 0.25).
-narrative_ontology:constraint_metric(lln_convergence, suppression_requirement, 0.2).
-
-% Enforcement: Emerges naturally from the axioms of probability.
-domain_priors:emerges_naturally(lln_convergence).
-
-% Metrics
-% Beneficiaries & Victims
-narrative_ontology:constraint_beneficiary(lln_convergence, insurance_industry).
-narrative_ontology:constraint_beneficiary(lln_convergence, casino_operators).
-narrative_ontology:constraint_victim(lln_convergence, gamblers_with_finite_capital).
-narrative_ontology:constraint_victim(lln_convergence, short_term_variance_analysts).
-
-/* ==========================================================================
-   3. INDEXED CLASSIFICATIONS
-   ========================================================================== */
-
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 1: THE SINGLE COIN FLIP - Mountain
-   --------------------------------------------------------------------------
-   WHO: powerless - The single trial has no agency over the total mean.
-   WHEN: immediate - True at the moment of aggregation.
-   WHERE: trapped - Bound within the laws of large-scale numbers.
-   SCOPE: local - Immediate neighborhood of the specific trial.
-   
-   WHY THIS CLASSIFICATION:
-   For the individual trial, the LLN is a natural law. It cannot "choose" to 
-   skew the average of a billion flips; it is an insignificant, powerless 
-   component of an inevitable convergence.
-   -------------------------------------------------------------------------- */
-
-
-
-constraint_indexing:constraint_classification(
-    lln_convergence,
-    mountain,
-    context(
-        agent_power(powerless),
-        time_horizon(immediate),
-        exit_options(trapped),
-        spatial_scope(local)
-    )
-) :- !.
-
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE ACTUARY - Rope
-   --------------------------------------------------------------------------
-   WHO: institutional - Power to price risk based on the aggregate.
-   WHEN: biographical - Planning the multi-decade stability of a fund.
-   WHERE: mobile - Can choose different sample pools to tune convergence.
-   SCOPE: global - Applying the law to millions of policyholders.
-   
-   WHY THIS CLASSIFICATION:
-   For the institution, LLN is a "Rope"—a functional coordination tool. 
-   It allows the conversion of individual chaos into institutional order, 
-   providing a "standard of achievement" for fiscal stability.
-   -------------------------------------------------------------------------- */
-
-
-
-constraint_indexing:constraint_classification(
-    lln_convergence,
-    rope,
-    context(
-        agent_power(institutional),
-        time_horizon(biographical),
-        exit_options(mobile),
-        spatial_scope(global)
-    )
-) :- !.
-
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE FINITE-CAPITAL GAMBLER - Snare
-   --------------------------------------------------------------------------
-   WHO: powerless - Trapped by the "Law of Small Numbers" fallacy.
-   WHEN: immediate - Running out of capital before the mean is reached.
-   WHERE: constrained - The agent is bound by the specific limits of their wallet.
-   SCOPE: local - A specific table or session.
-   
-   WHY THIS CLASSIFICATION:
-   When capital is finite, the "guarantee" of convergence is a "Snare." 
-   The agent is "strangled" by the variance (the path to the mean) before the 
-   equilibrium (the mean itself) can save them. This is the extractive 
-   reality of Gambler's Ruin.
-   -------------------------------------------------------------------------- */
-
-constraint_indexing:constraint_classification(
-    lln_convergence,
-    snare,
-    context(
-        agent_power(powerless),
-        time_horizon(immediate),
-        exit_options(constrained),
-        spatial_scope(local)
-    )
-) :- 
-    domain_priors:base_extractiveness(lln_convergence, E),
-    E >= 0.2,
-    !.
-
-/* ==========================================================================
-   4. TESTS
-   ========================================================================== */
-
-:- begin_tests(lln_convergence_tests).
-
-test(aggregation_fate_variance) :-
-    % Trial -> Mountain
-    constraint_indexing:constraint_classification(lln_convergence, Type1, context(powerless, immediate, trapped, local)),
-    % Institution -> Rope
-    constraint_indexing:constraint_classification(lln_convergence, Type2, context(institutional, biographical, mobile, global)),
-    Type1 = mountain,
-    Type2 = rope.
-
-test(gamblers_ruin_penalty) :-
-    % A powerless agent with constrained options (finite capital) sees the law as a Snare.
-    constraint_indexing:constraint_classification(lln_convergence, snare, context(powerless, immediate, constrained, local)).
-
-test(emergence) :-
-    domain_priors:emerges_naturally(lln_convergence).
-
-:- end_tests(lln_convergence_tests).
-
-/* ==========================================================================
-   5. MODEL INTERPRETATION (Commentary)
-   ========================================================================== */
-
-/**
- * LLM GENERATION NOTES
- * * Model: Gemini 2.0 Flash
- * * KEY DECISIONS:
- * 1. PERSPECTIVE SHIFT: The core insight is that the "Law" is a gift to the 
- * infinite (or the large institution) but a trap (Snare) for the finite 
- * individual who cannot survive the variance.
- * 2. EXTRACTIVENESS (0.25): High enough to trigger the beneficiary/victim 
- * logic, reflecting that the LLN is the engine of extractive industries like 
- * commercial gambling.
- * 3. IMAGES: Triggered diagrams for convergence plots and dice simulations to 
- * clarify the transition from variance to stability.
- */
-
-% OMEGA IDENTIFICATION
-omega_variable(
-    path_dependency,
-    "Can the 'Snare' of the gambler be avoided if the 'Rope' of the mean 
-    is visible in real-time?",
-    resolution_mechanism("Experimental trial of gambling behavior with vs without live-mean visualizations."),
-    impact("If Yes: The Snare becomes a Rope. If No: It is a permanent Mountain of biological limitation."),
-    confidence_without_resolution(medium)
-).
-
-/* ==========================================================================
-   6. ALTERNATIVE ANALYSIS
-   ========================================================================== */
-
-/**
- * VIABLE ALTERNATIVES
- * * ALTERNATIVE 1: The "Law of Small Numbers" (Fallacy)
- * Viability: Psychologically dominant in human brains.
- * Suppression: Suppressed by formal education and scientific method.
- * Evidence: Common in "Gambler's Fallacy" where players expect a "win" 
- * after a "loss."
- * * ALTERNATIVE 2: Cauchy Distributions (Infinite Variance)
- * Viability: The LLN does not apply here; the mean never stabilizes.
- * Suppression: Functionally "invisible" in standard business models that 
- * assume finite variance.
- * * CONCLUSION:
- * The institutional dominance of the LLN "Rope" effectively suppresses 
- * awareness of Alternative 2 (Fat Tails), leading to systemic "Black Swan" 
- * events when the Mountain collapses.
- */
-
-/* ==========================================================================
-   7. INTEGRATION HOOKS
-   ========================================================================== */
-
-% Load: ?- [lln_convergence].
-% Analyze: ?- constraint_indexing:multi_index_report(lln_convergence).
-
-/* ==========================================================================
-   END OF CONSTRAINT STORY
-   ========================================================================== */
-
-% ============================================================================
-% ENRICHMENT: Structural predicates for dynamic classification
-% Generated: 2026-02-08
-% Template: v5.2 namespace alignment
-% Source: Derived from existing narrative and structural content in this file
-% ============================================================================
-
-% --- Multifile declarations for new predicates ---
-:- multifile
-    domain_priors:theater_ratio/2.
-
-% --- Theater ratio (missing from base properties) ---
-% Formal truth — substantive with near-zero performative component
-domain_priors:theater_ratio(lln_convergence, 0.0).
+narrative_ontology:constraint_metric(lln_convergence, suppression_requirement, 0.05).
 narrative_ontology:constraint_metric(lln_convergence, theater_ratio, 0.0).
 
-% --- Analytical perspective classification (missing) ---
-% chi = 0.25 * 1.15 (analytical) * 1.2 (global) = 0.345
-% Classification: rope
+% --- NL Profile Metrics (required for mountain constraints) ---
+% These feed the natural_law_signature certification chain in
+% structural_signatures.pl. Without these, the NL signature defaults to 0.5
+% and fails certification.
+narrative_ontology:constraint_metric(lln_convergence, accessibility_collapse, 1.0).
+narrative_ontology:constraint_metric(lln_convergence, resistance, 0.0).
+
+% --- Constraint claim (must match analytical perspective type) ---
+narrative_ontology:constraint_claim(lln_convergence, mountain).
+
+% --- Binary flags ---
+% No active enforcement needed for a mathematical theorem.
+
+% --- Emergence flag (required for mountain constraints) ---
+% Required for the mountain metric gate: without this, the classify_from_metrics
+% mountain clause will not fire.
+domain_priors:emerges_naturally(lln_convergence).
+
+% --- Structural relationships (REQUIRED for non-mountain constraints) ---
+% These feed the directionality derivation chain. While the claim is mountain,
+% the law is experienced differently by various agents, justifying these declarations.
+%
+% Who benefits from this constraint existing?
+narrative_ontology:constraint_beneficiary(lln_convergence, insurance_industry).
+narrative_ontology:constraint_beneficiary(lln_convergence, casino_operators).
+%
+% Who bears disproportionate cost?
+narrative_ontology:constraint_victim(lln_convergence, gamblers_with_finite_capital).
+
+/* ==========================================================================
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × f(d) × σ(S)
+   where f(d) is the sigmoid directionality function:
+     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
+   The engine derives d from beneficiary/victim membership + exit_options.
+   Scope modifiers: local=0.8, regional=0.9, national=1.0,
+                    continental=1.1, global=1.2, universal=1.0.
+   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
+   Do not add measurement_basis, beneficiary/victim, or other metadata.
+   Linter Rule 23 rejects files with context arity ≠ 4.
+   ========================================================================== */
+
+% PERSPECTIVE 1: THE SINGLE TRIAL (MOUNTAIN)
+% For an individual event (e.g., one coin flip), the law is an unchangeable
+% feature of the mathematical space it inhabits. It has no agency.
+constraint_indexing:constraint_classification(lln_convergence, mountain,
+    context(agent_power(powerless),
+            time_horizon(immediate),
+            exit_options(trapped),
+            spatial_scope(local))).
+
+% PERSPECTIVE 2: THE INSTITUTIONAL BENEFICIARY (ROPE)
+% For an actuary or casino, the LLN is a pure coordination tool. It allows
+% the conversion of individual chaos into institutional order and profit.
+% χ = 0.25 * f(d≈0.05) * σ(1.2) ≈ 0.25 * -0.12 * 1.2 ≈ -0.036 (negative extraction)
+constraint_indexing:constraint_classification(lln_convergence, rope,
+    context(agent_power(institutional),
+            time_horizon(generational),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 3: THE FINITE-CAPITAL GAMBLER (ROPE)
+% For a gambler with limited funds, the convergence guarantees ruin. While the
+% outcome is snare-like, the underlying law's low extraction (ε=0.25) classifies
+% it as a Rope. The "snare" is an emergent property of repeated interaction,
+% not the law itself.
+% χ = 0.25 * f(d≈0.95) * σ(0.8) ≈ 0.25 * 1.42 * 0.8 ≈ 0.284 (Rope, not Snare)
+constraint_indexing:constraint_classification(lln_convergence, rope,
+    context(agent_power(powerless),
+            time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(local))).
+
+% PERSPECTIVE 4: THE ANALYTICAL OBSERVER (ROPE)
+% From a detached analytical view, the LLN is a tool for understanding and
+% prediction, a form of coordination between theory and observation.
+% χ = 0.25 * f(d≈0.73) * σ(1.2) ≈ 0.25 * 1.15 * 1.2 ≈ 0.345 (Rope)
 constraint_indexing:constraint_classification(lln_convergence, rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
             spatial_scope(global))).
+
+/* ==========================================================================
+   4. VALIDATION TESTS
+   ========================================================================== */
+
+:- begin_tests(lln_convergence_tests).
+
+test(perspectival_gap) :-
+    % Verify the gap between the single trial (Mountain) and the institution (Rope).
+    constraint_indexing:constraint_classification(lln_convergence, mountain, context(agent_power(powerless), time_horizon(immediate), exit_options(trapped), spatial_scope(local))),
+    constraint_indexing:constraint_classification(lln_convergence, rope, context(agent_power(institutional), _, _, _)),
+    true.
+
+test(finite_capital_perspective) :-
+    % A powerless agent with constrained options sees the law as a Rope, not a Snare,
+    % due to the low base extractiveness of the mathematical principle itself.
+    constraint_indexing:constraint_classification(lln_convergence, rope, context(agent_power(powerless), time_horizon(biographical), exit_options(constrained), spatial_scope(local))).
+
+test(mountain_metric_validation) :-
+    % Verify that the base metrics are consistent with the 'mountain' claim.
+    narrative_ontology:constraint_metric(lln_convergence, extractiveness, E),
+    narrative_ontology:constraint_metric(lln_convergence, suppression_requirement, S),
+    E =< 0.25,
+    S =< 0.05.
+
+:- end_tests(lln_convergence_tests).
+
+/* ==========================================================================
+   5. GENERATIVE COMMENTARY
+   ========================================================================== */
+
+/**
+ * LOGIC RATIONALE:
+ *   - Base Extractiveness (0.25): Set at the maximum for a Mountain. This reflects that while the LLN is a mathematical truth, its structure enables extractive applications. It "extracts" the significance of individual variance in favor of the mean.
+ *   - Suppression Score (0.05): A mathematical theorem does not suppress alternatives through coercion; it simply describes a feature of reality. Alternatives (e.g., Cauchy distributions) are different systems, not suppressed ones.
+ *   - NL Profile: As a mathematical law, it emerges naturally (emerges_naturally), alternatives are logically incoherent (accessibility_collapse=1.0), and it faces no meaningful resistance (resistance=0.0).
+ *
+ * PERSPECTIVAL GAP:
+ *   The core gap is between the law as an abstract, unchangeable fact (Mountain for a single trial) and the law as a functional tool (Rope for institutions and analysts). For the gambler, the ruinous outcome feels like a Snare, but the underlying structure is a Rope due to the low base extraction.
+ *
+ * DIRECTIONALITY LOGIC:
+ *   - Beneficiaries: `insurance_industry`, `casino_operators`. These entities build business models on the predictability the LLN provides. Their institutional power and arbitrage exit options result in a negative effective extraction (χ < 0).
+ *   - Victims: `gamblers_with_finite_capital`. They are victims of the convergence process itself. Their finite resources mean they cannot withstand the variance required to reach the "long run," ensuring their capital is extracted.
+ *
+ * MANDATROPHY ANALYSIS:
+ *   This story carefully avoids mislabeling the LLN as a Snare. The original story classified the gambler's perspective as Snare, but the math (χ ≈ 0.284) does not support this. The ruinous outcome (Gambler's Ruin) is an emergent property of applying a low-extraction Rope repeatedly to a resource-constrained agent. The Snare is not the law itself, but the *game* built upon it (e.g., `casino_house_edge`), which would be a separate constraint with ε > 0.46. This decomposition respects the ε-invariance principle.
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
+omega_variable(
+    omega_lln_convergence,
+    'Is the ruinous experience of the gambler a property of the mathematical law, or an artifact of human cognitive biases (e.g., Gambler''s Fallacy) interacting with the law?',
+    'Experimental trials of gambling behavior with vs. without live-mean visualizations and cognitive bias training.',
+    'If it is a property of the law, the Rope classification holds. If it is primarily cognitive, the law is a Mountain and the bias is a separate Snare.',
+    confidence_without_resolution(medium)
+).
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+% Required for external script parsing
+narrative_ontology:interval(lln_convergence, 1713, 2026).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Not applicable. Base extractiveness is 0.25, below the 0.46 threshold
+% for required temporal tracking. As a mathematical law, its properties
+% are considered stable over the interval.
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA
+   ========================================================================== */
+
+% As a fundamental mathematical theorem, it could be considered a type of
+% 'information_standard' for probabilistic systems.
+narrative_ontology:coordination_type(lln_convergence, information_standard).
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+% No overrides needed. The structural derivation from beneficiary/victim
+% status and exit options accurately models the relationships.
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */

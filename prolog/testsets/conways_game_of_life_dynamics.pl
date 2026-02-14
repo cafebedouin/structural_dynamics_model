@@ -1,26 +1,49 @@
 % ============================================================================
 % CONSTRAINT STORY: conways_game_of_life_dynamics
 % ============================================================================
-% Generated: 2026-01-19
-% Model: Gemini 2.0 Flash
-% Source: John Horton Conway (1970) / Cellular Automata / Emergence
+% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2024-07-15
 % ============================================================================
 
-:- module(constraint_conway_life, []).
+:- module(constraint_conways_game_of_life_dynamics, []).
 
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
 
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
+
 % --- Namespace Hooks (Required for loading) ---
-:- multifile 
+:- multifile
     domain_priors:base_extractiveness/2,
     domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
     domain_priors:requires_active_enforcement/1,
+    domain_priors:emerges_naturally/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
-    constraint_indexing:constraint_classification/3.
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
+    narrative_ontology:boltzmann_floor_override/2,
+    constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -28,244 +51,248 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: conways_game_of_life_dynamics
- * human_readable: Conway's Game of Life
- * domain: technological/mathematical
- * temporal_scope: 1970 - Present
- * spatial_scope: Global/Abstract (2D Grid Systems)
- * * SUMMARY:
- * Conway's Game of Life is a zero-player cellular automaton where simple local 
- * rules (survival, birth, death) applied to a 2D grid lead to complex emergent 
- * behaviors. It serves as a fundamental model for how deterministic constraints 
- * generate unpredictable, life-like complexity.
- * * KEY AGENTS:
- * - The Individual Cell (Subject): A powerless agent that lives or dies based 
- * solely on its eight immediate neighbors.
- * - The Pattern Architect (Institutional): An agent who coordinates complex 
- * structures (Gliders, Puffer Trains) as a "Rope" for universal computation.
- * - The Unpredictable Observer (Victim): An agent whose ability to predict the 
- * system without simulation is "strangled" by the rule-set.
- * * NARRATIVE ARC:
- * The Game of Life functions as a "Mountain" of logical destiny; once the seed 
- * is planted, the future is fixed by the B3/S23 rules. In computational 
- * research, it is a "Rope" used to prove Turing completeness in simple 
- * systems. However, for an observer seeking a shortcut to the end-state, the 
- * deterministic logic acts as a "Snare," extracting the possibility of 
- * analytic prediction and forcing the "tax" of step-by-step simulation.
+ *   constraint_id: conways_game_of_life_dynamics
+ *   human_readable: Conway's Game of Life Dynamics
+ *   domain: mathematical/computational
+ *
+ * SUMMARY:
+ *   Conway's Game of Life is a zero-player cellular automaton where simple local
+ *   rules (survival, birth, death) applied to a 2D grid lead to complex emergent
+ *   behaviors. This constraint represents the fixed, deterministic rule-set
+ *   (B3/S23) itself, which functions as a fundamental law of its universe,
+ *   independent of any observer.
+ *
+ * KEY AGENTS (by structural relationship):
+ *   This is a uniform-type Mountain constraint (a mathematical law), so there are
+ *   no structural beneficiaries or victims. Instead, agents are defined by how
+ *   they interact with this unchangeable law:
+ *   - The Individual Cell (powerless/trapped): An entity whose existence is
+ *     entirely determined by the rules.
+ *   - The Pattern Architect (institutional/mobile): A designer who uses the
+ *     predictable nature of the rules to build complex computational structures.
+ *   - The Analytical Predictor (powerless/constrained): An observer who finds
+ *     the rules' emergent complexity computationally irreducible, making long-term
+ *     prediction without simulation impossible.
+ *   - The Analytical Observer (analytical/analytical): Sees the complete structure
+ *     as a fixed mathematical object.
  */
 
 /* ==========================================================================
-   2. BASE PROPERTIES (Context-Independent)
+   2. BASE PROPERTIES (DOMAIN PRIORS)
    ========================================================================== */
 
-% Structural Anchor for index extraction
-narrative_ontology:interval(conway_era, 1970, 2026).
+% --- Numerical metrics ---
+% Rationale: As a set of mathematical rules, the base extractiveness and
+% suppression are effectively zero. The values are set to a minimal non-zero
+% value to represent the logical "cost" of enforcing determinism.
+domain_priors:base_extractiveness(conways_game_of_life_dynamics, 0.05).
+domain_priors:suppression_score(conways_game_of_life_dynamics, 0.05).
+domain_priors:theater_ratio(conways_game_of_life_dynamics, 0.0).
+
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(conways_game_of_life_dynamics, extractiveness, 0.05).
+narrative_ontology:constraint_metric(conways_game_of_life_dynamics, suppression_requirement, 0.05).
+narrative_ontology:constraint_metric(conways_game_of_life_dynamics, theater_ratio, 0.0).
+
+% --- NL Profile Metrics (required for mountain constraints) ---
+% These feed the natural_law_signature certification chain in
+% structural_signatures.pl.
+% Accessibility Collapse: Within the universe of the game, the rules are absolute.
+% No alternative physics is conceivable or accessible.
+narrative_ontology:constraint_metric(conways_game_of_life_dynamics, accessibility_collapse, 1.0).
+% Resistance: It is incoherent to "resist" a mathematical rule. One can only
+% operate within its confines.
+narrative_ontology:constraint_metric(conways_game_of_life_dynamics, resistance, 0.0).
+
+% --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(conways_game_of_life_dynamics, mountain).
 
-% Base extractiveness score (0.0-1.0)
-% Rationale: 0.3. The system "extracts" the potential for arbitrary behavior 
-% to enforce strict emergent order. Any cell that does not follow the count 
-% is "purged" (dies).
-domain_priors:base_extractiveness(conways_game_of_life_dynamics, 0.3).
-
-% Suppression score (0.0-1.0)
-% Rationale: 0.4. It suppresses the visibility of non-deterministic causality, 
-% rendering any "random" alternative functionally invisible within the grid.
-domain_priors:suppression_score(conways_game_of_life_dynamics, 0.4).
-
-% Constraint metric facts (bridge for classification engine)
-narrative_ontology:constraint_metric(conways_game_of_life_dynamics, extractiveness, 0.3).
-narrative_ontology:constraint_metric(conways_game_of_life_dynamics, suppression_requirement, 0.4).
-
-% Enforcement: Emerges naturally from the interaction of local neighbors.
+% --- Emergence flag (required for mountain constraints) ---
+% The rules emerge from mathematical logic, not human design or enforcement.
+% This is required for the mountain metric gate to fire.
 domain_priors:emerges_naturally(conways_game_of_life_dynamics).
 
-% Metrics required for Section 1 of the Executive Summary
-% BENEFICIARIES & VICTIMS
-narrative_ontology:constraint_beneficiary(conways_game_of_life_dynamics, emergent_complexity_researchers).
-narrative_ontology:constraint_beneficiary(conways_game_of_life_dynamics, computer_scientists).
-narrative_ontology:constraint_victim(conways_game_of_life_dynamics, analytical_predictability).
-narrative_ontology:constraint_victim(conways_game_of_life_dynamics, individual_cell_autonomy).
+% --- Structural relationships (REQUIRED for non-mountain constraints) ---
+% No enrichment needed. As a uniform-type Mountain (mathematical law), there
+% are no structural beneficiaries or victims. The rules are symmetric and apply
+% universally within their domain.
 
 /* ==========================================================================
-   3. INDEXED CLASSIFICATIONS (Perspectival Truth)
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × f(d) × σ(S)
+   where f(d) is the sigmoid directionality function:
+     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
+   The engine derives d from beneficiary/victim membership + exit_options.
+   Scope modifiers: local=0.8, regional=0.9, national=1.0,
+                    continental=1.1, global=1.2, universal=1.0.
+   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
+   Do not add measurement_basis, beneficiary/victim, or other metadata.
+   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 1: THE SINGLE GRID CELL - Mountain
-   --------------------------------------------------------------------------
-   
-   WHO: powerless - The cell has zero agency; it is a slave to the count.
-   WHEN: immediate - The rule is applied at every discrete tick.
-   WHERE: trapped - Bound to its coordinates (x, y).
-   SCOPE: local - Can only see its eight neighbors.
-   
-   WHY THIS CLASSIFICATION:
-   For the cell, the laws of Life are an absolute, unyielding Mountain. If it has 
-   fewer than two neighbors, it *must* die of underpopulation. It cannot appeal 
-   or negotiate; the logic is a fixed feature of its universe.
-   
-   NARRATIVE EVIDENCE:
-   "Any live cell with fewer than two live neighbors dies, as if by 
-   underpopulation." (Standard Conway Rule).
-   -------------------------------------------------------------------------- */
+% PERSPECTIVE 1: THE INDIVIDUAL CELL
+% For a cell, the rules are an absolute, unchangeable law of nature. Its fate
+% is determined entirely by its local neighborhood, with no possibility of
+% appeal or deviation. This is the classic Mountain perspective.
+constraint_indexing:constraint_classification(conways_game_of_life_dynamics, mountain,
+    context(agent_power(powerless),
+            time_horizon(immediate),
+            exit_options(trapped),
+            spatial_scope(local))).
 
+% PERSPECTIVE 2: THE PATTERN ARCHITECT
+% For a designer of complex patterns (like glider guns), the rules are not a
+% tool to be wielded (Rope) but the fixed landscape upon which tools can be
+% built. The rules themselves remain a Mountain; the architect's skill is in
+% arranging initial conditions to achieve desired outcomes within those fixed laws.
+constraint_indexing:constraint_classification(conways_game_of_life_dynamics, mountain,
+    context(agent_power(institutional),
+            time_horizon(biographical),
+            exit_options(mobile),
+            spatial_scope(global))).
 
+% PERSPECTIVE 3: THE ANALYTICAL PREDICTOR
+% For an observer trying to predict a pattern's ultimate fate, the rules'
+% computational irreducibility feels like a Snare, extracting effort. However,
+% the constraint is the rule-set itself, not the difficulty of prediction. The
+% rules are still a fixed Mountain; the "snare-like" property is an emergent
+% consequence (undecidability), which would be a separate constraint.
+constraint_indexing:constraint_classification(conways_game_of_life_dynamics, mountain,
+    context(agent_power(powerless),
+            time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(national))).
 
-constraint_indexing:constraint_classification(
-    conways_game_of_life_dynamics,
-    mountain,
-    context(
-        agent_power(powerless),
-        time_horizon(immediate),
-        exit_options(trapped),
-        spatial_scope(local)
-    )
-) :- !.
+% PERSPECTIVE 4: THE ANALYTICAL OBSERVER
+% The default analytical context sees the rule-set as a pure mathematical
+% object: fixed, deterministic, and unchangeable. This is the canonical
+% Mountain classification.
+constraint_indexing:constraint_classification(conways_game_of_life_dynamics, mountain,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).
 
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE PATTERN ARCHITECT - Rope
-   --------------------------------------------------------------------------
-   
-   WHO: institutional - Power to design massive start-states (seeds).
-   WHEN: biographical - Planning the lifecycle of a complex "Glider Gun."
-   WHERE: mobile - Can choose different starting patterns to achieve specific goals.
-   SCOPE: global - Views the entire infinite or toroidal grid.
-   
-   WHY THIS CLASSIFICATION:
-   For the architect, the rules are a "Rope"—a functional coordination 
-   mechanism. By understanding the "Mountain" of the rules, they can coordinate 
-   gliders to perform logic gates, essentially "pulling" a universal computer 
-   out of the grid, providing a standard of achievement for emergent design.
-   -------------------------------------------------------------------------- */
+/* ==========================================================================
+   4. VALIDATION TESTS
+   ========================================================================== */
 
+:- begin_tests(conways_game_of_life_dynamics_tests).
 
+test(classification_invariance) :-
+    % Verify that this is a uniform-type Mountain, invariant across perspectives.
+    constraint_indexing:constraint_classification(conways_game_of_life_dynamics, mountain, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(conways_game_of_life_dynamics, mountain, context(agent_power(institutional), _, _, _)),
+    constraint_indexing:constraint_classification(conways_game_of_life_dynamics, mountain, context(agent_power(analytical), _, _, _)).
 
-constraint_indexing:constraint_classification(
-    conways_game_of_life_dynamics,
-    rope,
-    context(
-        agent_power(institutional),
-        time_horizon(biographical),
-        exit_options(mobile),
-        spatial_scope(global)
-    )
-) :- !.
-
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE ANALYTIC PREDICTOR - Snare
-   --------------------------------------------------------------------------
-   
-   WHO: powerless - Bound by the "Undecidability" of the end-state.
-   WHEN: biographical - Attempting to predict if a pattern eventually dies out.
-   WHERE: constrained - No alternative but to run the simulation to see.
-   SCOPE: local - A specific complex pattern (e.g., a "Methuselah").
-   
-   WHY THIS CLASSIFICATION:
-   For someone seeking to know the future without paying the "tax" of time, 
-   the rules are a "Snare." Because the game is Turing-complete, it "strangles" 
-   general analytic solutions. It extracts computational cycles (extraction) 
-   by making the "Long Run" unpredictable without manual iteration.
-   -------------------------------------------------------------------------- */
-
-
-
-constraint_indexing:constraint_classification(
-    conways_game_of_life_dynamics,
-    snare,
-    context(
-        agent_power(powerless),
-        time_horizon(biographical),
-        exit_options(constrained),
-        spatial_scope(local)
-    )
-) :- 
+test(threshold_validation) :-
+    % Verify metrics are within the Mountain classification thresholds.
     domain_priors:base_extractiveness(conways_game_of_life_dynamics, E),
-    E >= 0.2,
-    !.
+    domain_priors:suppression_score(conways_game_of_life_dynamics, S),
+    E =< 0.25,
+    S =< 0.05.
+
+test(natural_law_profile_present) :-
+    % Verify that the required metrics for NL certification are present.
+    narrative_ontology:constraint_metric(conways_game_of_life_dynamics, accessibility_collapse, AC),
+    narrative_ontology:constraint_metric(conways_game_of_life_dynamics, resistance, R),
+    domain_priors:emerges_naturally(conways_game_of_life_dynamics),
+    AC >= 0.85,
+    R =< 0.15.
+
+:- end_tests(conways_game_of_life_dynamics_tests).
 
 /* ==========================================================================
-   4. TESTS (What We Learn About Constraints)
-   ========================================================================== */
-
-:- begin_tests(conways_game_of_life_tests).
-
-test(multi_perspective_variance) :-
-    % Cell -> Mountain
-    constraint_indexing:constraint_classification(conways_game_of_life_dynamics, Type1, context(powerless, immediate, trapped, local)),
-    % Architect -> Rope
-    constraint_indexing:constraint_classification(conways_game_of_life_dynamics, Type2, context(institutional, biographical, mobile, global)),
-    Type1 \= Type2.
-
-test(predictive_snare_insight) :-
-    % Demonstrates that for the predictor, the determinism is a Snare
-    constraint_indexing:constraint_classification(conways_game_of_life_dynamics, snare, context(powerless, biographical, constrained, local)).
-
-test(emergence) :-
-    domain_priors:emerges_naturally(conways_game_of_life_dynamics).
-
-:- end_tests(conways_game_of_life_tests).
-
-/* ==========================================================================
-   5. MODEL INTERPRETATION (Commentary)
+   5. GENERATIVE COMMENTARY
    ========================================================================== */
 
 /**
- * LLM GENERATION NOTES
- * * Model: Gemini 2.0 Flash
- * Date: 2026-01-19
- * * KEY DECISIONS:
- * * 1. EXTRACTIVENESS SCORE (0.3):
- * Reasoning: Low-to-moderate. The "cost" of the system is the elimination 
- * of non-rule-abiding states, which is necessary for the "gift" of 
- * emergent complexity.
- * * 2. CLASSIFICATION RATIONALE:
- * Cell (Mountain): The quintessential "powerless" subject of natural law.
- * Architect (Rope): Using the law to build tools (Turing machines).
- * Predictor (Snare): Facing the "Halting Problem" inherent in the game.
- * * 3. OMEGA IDENTIFICATION:
- * Formalized the uncertainty regarding the grid's finiteness—different 
- * edge behaviors change the "Mountain" into a "Scaffold."
+ * LOGIC RATIONALE:
+ *   The Game of Life rules are modeled as a pure, uniform-type Mountain.
+ *   The base extractiveness (0.05) and suppression (0.05) are set to minimal
+ *   non-zero values, reflecting the logical "cost" of determinism (i.e., it
+ *   "extracts" randomness and "suppresses" alternative physics). These values
+ *   are well within the Mountain thresholds (ε ≤ 0.25, S ≤ 0.05).
+ *   The constraint passes the Natural Law certification chain by declaring
+ *   `emerges_naturally`, `accessibility_collapse` (1.0, as no other physics
+ *   is possible within the system), and `resistance` (0.0, as resistance is
+ *   incoherent).
+ *
+ * PERSPECTIVAL GAP:
+ *   There is no perspectival gap. The constraint is a Mountain from all
+ *   perspectives. The different experiences of the "architect" (who uses the
+ *   law) or the "predictor" (who is stymied by it) are consequences of
+ *   interacting with the Mountain, not different classifications of the law
+ *   itself. A more complex model would decompose these consequences into
+ *   separate, linked constraints (e.g., a Rope for 'computation_via_gliders'
+ *   and a Snare for 'pattern_undecidability').
+ *
+ * DIRECTIONALITY LOGIC:
+ *   As a uniform-type Mountain, there are no structural beneficiaries or
+ *   victims, so no directionality is derived. The rules apply symmetrically
+ *   to all entities within the system.
+ *
+ * MANDATROPHY ANALYSIS:
+ *   By classifying this as a pure Mountain, we avoid mislabeling a fundamental
+ *   law as having an extractive or coordinative function. The coordination
+ *   (Rope) and extraction (Snare) are emergent phenomena built *on top of*
+ *   the Mountain, not properties of the Mountain itself. This maintains a
+ *   clear distinction between foundational rules and their application.
  */
 
-% YOUR OMEGAS HERE:
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
-    grid_edge_topology,
-    "Is the 'Mountain' of the rules stable if the grid is finite (Scaffold) vs infinite (Mountain)?",
-    resolution_mechanism("Comparison of long-term stability in toroidal vs zero-padding edge conditions."),
-    impact("If finite: Complexity eventually stabilizes or dies. If infinite: Complexity can grow forever."),
-    confidence_without_resolution(medium)
+    omega_conways_game_of_life_dynamics,
+    'Does the classification as a Mountain hold for all possible cellular automata rule-sets, or is B3/S23 uniquely stable?',
+    'A systematic survey of the rule space (e.g., using computational complexity metrics) to determine if other simple rules generate similarly stable, complex universes.',
+    'If B3/S23 is unique, it remains a Mountain. If many such rule-sets exist, the choice of B3/S23 could be seen as a weak Rope (a convention).',
+    confidence_without_resolution(high)
 ).
-
-/* ==========================================================================
-   6. ALTERNATIVE ANALYSIS
-   ========================================================================== */
-
-/**
- * VIABLE ALTERNATIVES
- * * ALTERNATIVE 1: Different Rule Sets (e.g., HighLife B36/S23)
- * Viability: Other cellular automata can produce similar but distinct 
- * universes (e.g., HighLife produces self-replicators).
- * Suppression: Conway's B3/S23 is so dominant that it "suppresses" the 
- * visibility of other rules in pop-culture and introductory research.
- * * ALTERNATIVE 2: Purely Random Systems
- * Viability: Systems without rules (White Noise).
- * Suppression: Rejected because they lack the "Rope" of coordination—order 
- * cannot be built from them.
- * * CONCLUSION:
- * The dominance of Conway's rules as a "Mountain" effectively makes 
- * Alternative 1 a "hidden Rope" only visible to specialists.
- */
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-/**
- * TO USE THIS FILE:
- * * 1. Load: ?- [constraint_conway_life].
- * 2. Analyze: ?- multi_index_report(conways_game_of_life_dynamics).
- */
+% Required for external script parsing
+narrative_ontology:interval(conways_game_of_life_dynamics, 0, 10).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% No temporal measurements are required. The base extractiveness (0.05) is
+% below the 0.46 threshold for mandatory drift detection. As a mathematical
+% constant, its properties do not drift over time.
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA
+   ========================================================================== */
+
+% Coordination type (enables Boltzmann floor + complexity offset)
+% Valid types: information_standard, resource_allocation,
+%              enforcement_mechanism, global_infrastructure
+% narrative_ontology:coordination_type(conways_game_of_life_dynamics, information_standard).
+
+% Boltzmann floor override (only if domain knowledge justifies)
+% Value must be in [0.0, 1.0]
+% narrative_ontology:boltzmann_floor_override(conways_game_of_life_dynamics, 0.05).
+
+% Network relationships (structural influence edges)
+% Declare when constraints share regulatory domain, causal dependency,
+% or institutional coupling.
+% narrative_ontology:affects_constraint(conways_game_of_life_dynamics, halting_problem_undecidability).
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+% No directionality overrides are needed. As a uniform-type Mountain with no
+% declared beneficiaries or victims, the directionality derivation chain is
+% not engaged.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

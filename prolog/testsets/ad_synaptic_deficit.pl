@@ -64,7 +64,7 @@ narrative_ontology:constraint_metric(ad_synaptic_deficit, suppression_requiremen
 narrative_ontology:constraint_metric(ad_synaptic_deficit, theater_ratio, 0.1).
 
 % Constraint classification claim
-narrative_ontology:constraint_claim(ad_synaptic_deficit, mountain).
+narrative_ontology:constraint_claim(ad_synaptic_deficit, tangled_rope).
 
 % Mandatory keys for classification engine v3.4
 % These resolve the [FAIL] Schema mismatch by anchoring the measurement keys.
@@ -96,7 +96,7 @@ constraint_indexing:constraint_classification(ad_synaptic_deficit, rope,
 
 % PERSPECTIVE 3: THE ANALYTICAL OBSERVER (MOUNTAIN)
 % [RESOLVED ONTOLOGICAL_MISMATCH]: Corrects false_summit by identifying irreducible law.
-constraint_indexing:constraint_classification(ad_synaptic_deficit, mountain, 
+constraint_indexing:constraint_classification(ad_synaptic_deficit, tangled_rope, 
     context(agent_power(analytical), 
             time_horizon(civilizational), 
             exit_options(analytical), 

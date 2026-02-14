@@ -363,6 +363,7 @@ param(contamination_strength_tangled_rope,     0.5).
 param(contamination_strength_scaffold,         0.2).
 param(contamination_strength_rope,             0.1).
 param(contamination_strength_mountain,         0.0).   % Mountains don't contaminate
+param(contamination_strength_indexically_opaque, 0.3).
 
 % --- Network Metrics ---
 param(network_contamination_risk_threshold,    2).     % Low-purity neighbors → "at_risk"

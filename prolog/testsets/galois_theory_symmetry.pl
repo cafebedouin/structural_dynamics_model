@@ -59,7 +59,8 @@
 
 % Required for DR-Audit Suite
 narrative_ontology:interval(galois_era, 1832, 2026).
-narrative_ontology:constraint_claim(galois_theory_symmetry, mountain).
+narrative_ontology:constraint_claim(galois_theory_symmetry, tangled_rope).
+domain_priors:requires_active_enforcement(galois_theory_symmetry).
 
 % Base extractiveness score (0.0-1.0)
 % Rationale: Low (0.2). It is a structural truth. However, it "extracts" 
@@ -108,7 +109,7 @@ narrative_ontology:constraint_victim(galois_theory_symmetry, radical_solvability
 
 constraint_indexing:constraint_classification(
     galois_theory_symmetry,
-    mountain,
+    tangled_rope,
     context(
         agent_power(powerless),
         time_horizon(immediate),

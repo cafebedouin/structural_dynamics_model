@@ -68,7 +68,7 @@ narrative_ontology:constraint_metric(thai_article_112_mountain, suppression_requ
 narrative_ontology:constraint_metric(thai_article_112_mountain, theater_ratio, 0.1).
 
 % Constraint classification claim
-narrative_ontology:constraint_claim(thai_article_112_mountain, mountain).
+narrative_ontology:constraint_claim(thai_article_112_mountain, tangled_rope).
 
 % Binary flags
 domain_priors:requires_active_enforcement(thai_article_112_mountain).
@@ -79,7 +79,7 @@ domain_priors:requires_active_enforcement(thai_article_112_mountain).
 
 % PERSPECTIVE 1: THE ANALYTICAL OBSERVER (MOUNTAIN)
 % Viewed as an irreducible logical limit within the current Thai legal geometry.
-constraint_indexing:constraint_classification(thai_article_112_mountain, mountain, 
+constraint_indexing:constraint_classification(thai_article_112_mountain, tangled_rope, 
     context(agent_power(analytical), 
             time_horizon(historical), 
             exit_options(analytical), 
@@ -87,7 +87,7 @@ constraint_indexing:constraint_classification(thai_article_112_mountain, mountai
 
 % PERSPECTIVE 2: THE INSTITUTIONAL ACTOR (MOUNTAIN/ROPE)
 % Viewed as a foundational, unchangeable pillar of state coordination.
-constraint_indexing:constraint_classification(thai_article_112_mountain, mountain, 
+constraint_indexing:constraint_classification(thai_article_112_mountain, tangled_rope, 
     context(agent_power(institutional), 
             time_horizon(civilizational), 
             exit_options(mobile), 
@@ -113,12 +113,12 @@ test(mountain_validation) :-
     domain_priors:base_extractiveness(thai_article_112_mountain, E),
 
     E =< 0.05,
-    constraint_indexing:constraint_classification(thai_article_112_mountain, mountain, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(thai_article_112_mountain, tangled_rope, context(agent_power(analytical), _, _, _)).
 
 test(perspectival_gap_existence) :-
     % Verify the Subject sees a Snare while the Auditor sees a Mountain.
     constraint_indexing:constraint_classification(thai_article_112_mountain, snare, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(thai_article_112_mountain, mountain, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(thai_article_112_mountain, tangled_rope, context(agent_power(analytical), _, _, _)).
 
 :- end_tests(thai_article_112_mountain_tests).
 
