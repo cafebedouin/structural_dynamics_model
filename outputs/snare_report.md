@@ -1,6 +1,6 @@
 # Snare Diagnostic Report
 
-**Total Unique Snares Found:** 55
+**Total Unique Snares Found:** 74
 
 ---
 
@@ -90,7 +90,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.49
 
 ### END REFINEMENT MANIFEST ###
 
-[16] EXECUTING: testsets/advice_as_dangerous_gift.pl
+[17] EXECUTING: testsets/advice_as_dangerous_gift.pl
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** omega_extraction_blindness_adverse_possession (conceptual)
 *   **Suggested Resolution Strategy:**
@@ -194,7 +194,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.49
 
 ### END REFINEMENT MANIFEST ###
 
-[23] EXECUTING: testsets/ai_driven_surveillance_sensor_layer.pl
+[25] EXECUTING: testsets/ai_compute_capital_moat.pl
 *   **Generated Omega:** omega_learned_helplessness_ai_cognitive_diversity_arbitrage (conceptual)
 *   **Suggested Resolution Strategy:**
     ```
@@ -300,7 +300,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.53
 
 ### END REFINEMENT MANIFEST ###
 
-[32] EXECUTING: testsets/algorithmic_epistemic_capture.pl
+[40] EXECUTING: testsets/algorithmic_epistemic_capture.pl
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** omega_extraction_blindness_algorithmic_bias (conceptual)
 *   **Suggested Resolution Strategy:**
@@ -324,7 +324,117 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 4. Snare: `amish_technological_renunciation`
+### 4. Snare: `alzheimers_nlrp3_inflammasome`
+
+*   **Claimed Type:** `snare`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for alzheimers_nlrp3_inflammasome: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.3),excess_above_floor(0.7)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+    → Institutional beneficiary: pharma_and_care_industry
+    → Institutional d=0.120
+
+[UKE_DR FEASIBILITY BRIDGE]
+  Recommendation | UKE Status
+  ----------------------------------------------------------------------
+
+Aggregate Magnitude (Kappa) at Tn: 0.57
+
+[PERSPECTIVAL GAP ANALYSIS]
+
+  Analysis for Constraint: alzheimers_nlrp3_inflammasome
+    ! ALERT: Extractive "Snare" is masked as functional "Rope".
+    - Individual (Powerless): snare [d=0.900 f(d)=1.36 χ=0.92]
+    - Institutional (Manager): rope [d=0.120 f(d)=-0.04 χ=-0.04 → net benefit]
+    ! MANDATROPHY GAP: delta_chi = 0.96 (high)
+
+[OMEGA GENERATION FROM PERSPECTIVAL GAPS: alzheimers_nlrp3_inflammasome]
+  Generated 1 Omega variables from perspectival gaps:
+
+  Ω: omega_extraction_blindness_alzheimers_nlrp3_inflammasome (conceptual)
+     Question: Constraint alzheimers_nlrp3_inflammasome appears extractive (Snare) to individuals but functional (Rope) to institutions...
+     Source: gap(snare_masked_as_rope,snare,rope)
+
+
+[OMEGA TRIAGE & PRIORITIZATION]
+
+  [critical] 1 omega(s):
+    - omega_extraction_blindness_alzheimers_nlrp3_inflammasome (conceptual)
+      Constraint alzheimers_nlrp3_inflammasome appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+  [high] 1 omega(s):
+    - omega_extraction_blindness_alzheimers_nlrp3_inflammasome (conceptual)
+      Constraint alzheimers_nlrp3_inflammasome appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+[OMEGA RESOLUTION SCENARIO GENERATION]
+  Generated 1 resolution scenario(s):
+
+  ┌─ [omega_extraction_blindness_alzheimers_nlrp3_inflammasome] CONCEPTUAL CLARIFICATION
+  │  Constraint: alzheimers_nlrp3_inflammasome
+  │  Gap: Constraint alzheimers_nlrp3_inflammasome appears extractive (Snare) to individuals but functional (Rope) to institutions...
+  │
+  │  CRITICAL: Extraction Masking Detected
+  │  Powerless see: SNARE (extractive trap)
+  │  Institutions see: ROPE (functional rule)
+  │
+  │  RESOLUTION STRATEGY:
+  │  1. Interview affected individuals (N=10+):
+  │     - Who benefits from alzheimers_nlrp3_inflammasome?
+  │     - Can you change/exit this constraint?
+  │     - What would happen if you tried?
+  │  2. Interview institutional actors (N=10+):
+  │     - What function does alzheimers_nlrp3_inflammasome serve?
+  │     - Who would object to removing it?
+  │     - What alternatives exist?
+  │  3. Document benefit flows:
+  │     - Track who gains vs. who loses from status quo
+  │     - Measure asymmetric benefit distribution
+  │  4. Decision tree:
+  │     IF extraction confirmed → Reclassify as SNARE
+  │     IF functional & fair → Reclassify as ROPE
+  │     IF context-dependent → Add indexical resolution
+  └─
+
+====================================================
+[PASS] testsets/alzheimers_nlrp3_inflammasome.pl
+
+### START LLM REFINEMENT MANIFEST: alzheimers_nlrp3_inflammasome ###
+
+[PERSPECTIVAL_GAPS]
+  - Constraint "alzheimers_nlrp3_inflammasome": Individual sees snare, but Institution sees rope.
+
+[ONTOLOGICAL_MISMATCHES]
+  - None detected.
+
+[UNRESOLVED_OMEGAS]
+  - omega_extraction_blindness_alzheimers_nlrp3_inflammasome (conceptual): Constraint alzheimers_nlrp3_inflammasome appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+### END REFINEMENT MANIFEST ###
+
+[46] EXECUTING: testsets/amish_technological_renunciation.pl
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** omega_extraction_blindness_alzheimers_nlrp3_inflammasome (conceptual)
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from alzheimers_nlrp3_inflammasome?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does alzheimers_nlrp3_inflammasome serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 5. Snare: `amish_technological_renunciation`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
@@ -410,7 +520,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.54
 
 ### END REFINEMENT MANIFEST ###
 
-[37] EXECUTING: testsets/ancestral_pueblo_hydrology.pl
+[47] EXECUTING: testsets/ancestral_pueblo_hydrology.pl
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** omega_extraction_blindness_amish_technological_renunciation (conceptual)
 *   **Suggested Resolution Strategy:**
@@ -434,7 +544,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 5. Snare: `arctic_geopolitical_flashpoint`
+### 6. Snare: `arctic_geopolitical_flashpoint`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
@@ -518,7 +628,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.55
 
 ### END REFINEMENT MANIFEST ###
 
-[43] EXECUTING: testsets/arrows_impossibility_theorem.pl
+[55] EXECUTING: testsets/arctic_maritime_control.pl
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** omega_extraction_blindness_arctic_geopolitical_flashpoint (conceptual)
 *   **Suggested Resolution Strategy:**
@@ -542,7 +652,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 6. Snare: `asshole_filter_2015`
+### 7. Snare: `asshole_filter_2015`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
@@ -623,7 +733,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.52
 
 ### END REFINEMENT MANIFEST ###
 
-[49] EXECUTING: testsets/astm_d638_tensile_testing.pl
+[65] EXECUTING: testsets/astm_d638_tensile_testing.pl
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
     ```
@@ -639,7 +749,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.52
 
 ---
 
-### 7. Snare: `authoritarian_power_paradox`
+### 8. Snare: `authoritarian_power_paradox`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
@@ -758,7 +868,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.57
 
 ### END REFINEMENT MANIFEST ###
 
-[57] EXECUTING: testsets/automatic_enrollment_defaults.pl
+[73] EXECUTING: testsets/automatic_enrollment_defaults.pl
 *   **Related Gap/Alert:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Generated Omega:** omega_cut_safety_authoritarian_power_paradox (conceptual)
 *   **Suggested Resolution Strategy:**
@@ -775,7 +885,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.57
 
 ---
 
-### 8. Snare: `bay_of_pigs_operational_silo`
+### 9. Snare: `bay_of_pigs_operational_silo`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
@@ -856,7 +966,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.55
 
 ### END REFINEMENT MANIFEST ###
 
-[70] EXECUTING: testsets/bedouin_sedentary_transition.pl
+[87] EXECUTING: testsets/bayes_theorem.pl
 *   **Related Gap/Alert:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Generated Omega:** omega_cut_safety_bay_of_pigs_operational_silo (conceptual)
 *   **Suggested Resolution Strategy:**
@@ -879,7 +989,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 9. Snare: `bedouin_sedentary_transition`
+### 10. Snare: `bedouin_sedentary_transition`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
@@ -955,7 +1065,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.52
 
 ### END REFINEMENT MANIFEST ###
 
-[71] EXECUTING: testsets/belief_argument_conclusion.pl
+[89] EXECUTING: testsets/beehiiv_platform_model.pl
 *   **Generated Omega:** omega_perspectival_bedouin_sedentary_transition (conceptual)
 *   **Suggested Resolution Strategy:**
     ```
@@ -973,7 +1083,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.52
 
 ---
 
-### 10. Snare: `belief_argument_conclusion`
+### 11. Snare: `belief_argument_conclusion`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
@@ -1059,7 +1169,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.55
 
 ### END REFINEMENT MANIFEST ###
 
-[72] EXECUTING: testsets/berkshire_compounding_culture.pl
+[91] EXECUTING: testsets/berkshire_compounding_culture.pl
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** omega_extraction_blindness_belief_argument_conclusion (conceptual)
 *   **Suggested Resolution Strategy:**
@@ -1083,7 +1193,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 11. Snare: `biological_curiosity`
+### 12. Snare: `biological_curiosity`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
@@ -1169,7 +1279,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.45
 
 ### END REFINEMENT MANIFEST ###
 
-[77] EXECUTING: testsets/bip_narrative_illusion.pl
+[97] EXECUTING: testsets/bip_narrative_illusion.pl
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** omega_extraction_blindness_biological_curiosity (conceptual)
 *   **Suggested Resolution Strategy:**
@@ -1193,7 +1303,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 12. Snare: `burden_of_proof_engineering_safety`
+### 13. Snare: `burden_of_proof_engineering_safety`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
@@ -1279,7 +1389,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.55
 
 ### END REFINEMENT MANIFEST ###
 
-[93] EXECUTING: testsets/burden_of_proof_legal_criminal.pl
+[118] EXECUTING: testsets/burden_of_proof_legal_criminal.pl
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** omega_extraction_blindness_burden_of_proof_engineering_safety (conceptual)
 *   **Suggested Resolution Strategy:**
@@ -1303,7 +1413,117 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 13. Snare: `child_marriage`
+### 14. Snare: `cartel_drone_surveillance_el_paso`
+
+*   **Claimed Type:** `snare`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for cartel_drone_surveillance_el_paso: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.33),excess_above_floor(0.65)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+    → Institutional beneficiary: mexican_drug_cartels
+    → Institutional d=0.120
+
+[UKE_DR FEASIBILITY BRIDGE]
+  Recommendation | UKE Status
+  ----------------------------------------------------------------------
+
+Aggregate Magnitude (Kappa) at Tn: 0.55
+
+[PERSPECTIVAL GAP ANALYSIS]
+
+  Analysis for Constraint: cartel_drone_surveillance_el_paso
+    ! ALERT: Extractive "Snare" is masked as functional "Rope".
+    - Individual (Powerless): snare [d=0.900 f(d)=1.36 χ=0.82]
+    - Institutional (Manager): rope [d=0.120 f(d)=-0.04 χ=-0.03 → net benefit]
+    ! MANDATROPHY GAP: delta_chi = 0.85 (high)
+
+[OMEGA GENERATION FROM PERSPECTIVAL GAPS: cartel_drone_surveillance_el_paso]
+  Generated 1 Omega variables from perspectival gaps:
+
+  Ω: omega_extraction_blindness_cartel_drone_surveillance_el_paso (conceptual)
+     Question: Constraint cartel_drone_surveillance_el_paso appears extractive (Snare) to individuals but functional (Rope) to institutions...
+     Source: gap(snare_masked_as_rope,snare,rope)
+
+
+[OMEGA TRIAGE & PRIORITIZATION]
+
+  [critical] 1 omega(s):
+    - omega_extraction_blindness_cartel_drone_surveillance_el_paso (conceptual)
+      Constraint cartel_drone_surveillance_el_paso appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+  [high] 1 omega(s):
+    - omega_extraction_blindness_cartel_drone_surveillance_el_paso (conceptual)
+      Constraint cartel_drone_surveillance_el_paso appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+[OMEGA RESOLUTION SCENARIO GENERATION]
+  Generated 1 resolution scenario(s):
+
+  ┌─ [omega_extraction_blindness_cartel_drone_surveillance_el_paso] CONCEPTUAL CLARIFICATION
+  │  Constraint: cartel_drone_surveillance_el_paso
+  │  Gap: Constraint cartel_drone_surveillance_el_paso appears extractive (Snare) to individuals but functional (Rope) to institutions...
+  │
+  │  CRITICAL: Extraction Masking Detected
+  │  Powerless see: SNARE (extractive trap)
+  │  Institutions see: ROPE (functional rule)
+  │
+  │  RESOLUTION STRATEGY:
+  │  1. Interview affected individuals (N=10+):
+  │     - Who benefits from cartel_drone_surveillance_el_paso?
+  │     - Can you change/exit this constraint?
+  │     - What would happen if you tried?
+  │  2. Interview institutional actors (N=10+):
+  │     - What function does cartel_drone_surveillance_el_paso serve?
+  │     - Who would object to removing it?
+  │     - What alternatives exist?
+  │  3. Document benefit flows:
+  │     - Track who gains vs. who loses from status quo
+  │     - Measure asymmetric benefit distribution
+  │  4. Decision tree:
+  │     IF extraction confirmed → Reclassify as SNARE
+  │     IF functional & fair → Reclassify as ROPE
+  │     IF context-dependent → Add indexical resolution
+  └─
+
+====================================================
+[PASS] testsets/cartel_drone_surveillance_el_paso.pl
+
+### START LLM REFINEMENT MANIFEST: cartel_drone_surveillance_el_paso ###
+
+[PERSPECTIVAL_GAPS]
+  - Constraint "cartel_drone_surveillance_el_paso": Individual sees snare, but Institution sees rope.
+
+[ONTOLOGICAL_MISMATCHES]
+  - None detected.
+
+[UNRESOLVED_OMEGAS]
+  - omega_extraction_blindness_cartel_drone_surveillance_el_paso (conceptual): Constraint cartel_drone_surveillance_el_paso appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+### END REFINEMENT MANIFEST ###
+
+[139] EXECUTING: testsets/cascading_constraint_failure.pl
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** omega_extraction_blindness_cartel_drone_surveillance_el_paso (conceptual)
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from cartel_drone_surveillance_el_paso?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does cartel_drone_surveillance_el_paso serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 15. Snare: `child_marriage`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
@@ -1389,7 +1609,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.56
 
 ### END REFINEMENT MANIFEST ###
 
-[119] EXECUTING: testsets/china_critical_mineral_chokepoint.pl
+[150] EXECUTING: testsets/china_critical_mineral_chokepoint.pl
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** omega_extraction_blindness_child_marriage (conceptual)
 *   **Suggested Resolution Strategy:**
@@ -1413,7 +1633,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 14. Snare: `collective_stupidity_2026`
+### 16. Snare: `collective_stupidity_2026`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
@@ -1487,7 +1707,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.54
 
 ### END REFINEMENT MANIFEST ###
 
-[151] EXECUTING: testsets/college_admissions_market.pl
+[192] EXECUTING: testsets/college_admissions_market.pl
 *   **Generated Omega:** omega_perspectival_collective_stupidity_2026 (conceptual)
 *   **Suggested Resolution Strategy:**
     ```
@@ -1505,7 +1725,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.54
 
 ---
 
-### 15. Snare: `confirmation_bias`
+### 17. Snare: `confirmation_bias`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
@@ -1597,7 +1817,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.58
 
 ### END REFINEMENT MANIFEST ###
 
-[159] EXECUTING: testsets/consensus_without_truth.pl
+[200] EXECUTING: testsets/consensus_without_truth.pl
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
@@ -1621,7 +1841,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 16. Snare: `cuba_mandatrophic_collapse`
+### 18. Snare: `cuba_mandatrophic_collapse`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
@@ -1707,7 +1927,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.56
 
 ### END REFINEMENT MANIFEST ###
 
-[184] EXECUTING: testsets/cuban_missile_crisis_excomm_delibration.pl
+[229] EXECUTING: testsets/cuban_missile_crisis_excomm_delibration.pl
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** omega_extraction_blindness_cuba_mandatrophic_collapse (conceptual)
 *   **Suggested Resolution Strategy:**
@@ -1731,7 +1951,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 17. Snare: `currys_paradox`
+### 19. Snare: `currys_paradox`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
@@ -1819,7 +2039,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.58
 
 ### END REFINEMENT MANIFEST ###
 
-[189] EXECUTING: testsets/cz_plea_agreement_2026.pl
+[236] EXECUTING: testsets/cz_plea_agreement_2026.pl
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
     ```
@@ -1839,7 +2059,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 18. Snare: `dead_sea_effect`
+### 20. Snare: `dead_sea_effect`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
@@ -1919,7 +2139,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.48
 
 ### END REFINEMENT MANIFEST ###
 
-[195] EXECUTING: testsets/decision_latency_mismatch.pl
+[242] EXECUTING: testsets/debt_service_squeeze.pl
 *   **Generated Omega:** omega_learned_helplessness_dead_sea_effect (conceptual)
 *   **Suggested Resolution Strategy:**
     ```
@@ -1939,7 +2159,117 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 19. Snare: `endowment_effect`
+### 21. Snare: `debt_trap_microfinance`
+
+*   **Claimed Type:** `snare`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for debt_trap_microfinance: Appears to be rope (indexed_rope_classification) but fails 4 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.3),scope_variant([snare,tangled_rope]),excess_above_floor(0.4),nonsensical_coupling(0.5)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+    → Institutional beneficiary: microfinance_institutions
+    → Institutional d=0.120
+
+[UKE_DR FEASIBILITY BRIDGE]
+  Recommendation | UKE Status
+  ----------------------------------------------------------------------
+
+Aggregate Magnitude (Kappa) at Tn: 0.53
+
+[PERSPECTIVAL GAP ANALYSIS]
+
+  Analysis for Constraint: debt_trap_microfinance
+    ! ALERT: Extractive "Snare" is masked as functional "Rope".
+    - Individual (Powerless): snare [d=0.900 f(d)=1.36 χ=0.60]
+    - Institutional (Manager): rope [d=0.120 f(d)=-0.04 χ=-0.02 → net benefit]
+    ! MANDATROPHY GAP: delta_chi = 0.62 (high)
+
+[OMEGA GENERATION FROM PERSPECTIVAL GAPS: debt_trap_microfinance]
+  Generated 1 Omega variables from perspectival gaps:
+
+  Ω: omega_extraction_blindness_debt_trap_microfinance (conceptual)
+     Question: Constraint debt_trap_microfinance appears extractive (Snare) to individuals but functional (Rope) to institutions...
+     Source: gap(snare_masked_as_rope,snare,rope)
+
+
+[OMEGA TRIAGE & PRIORITIZATION]
+
+  [critical] 1 omega(s):
+    - omega_extraction_blindness_debt_trap_microfinance (conceptual)
+      Constraint debt_trap_microfinance appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+  [high] 1 omega(s):
+    - omega_extraction_blindness_debt_trap_microfinance (conceptual)
+      Constraint debt_trap_microfinance appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+[OMEGA RESOLUTION SCENARIO GENERATION]
+  Generated 1 resolution scenario(s):
+
+  ┌─ [omega_extraction_blindness_debt_trap_microfinance] CONCEPTUAL CLARIFICATION
+  │  Constraint: debt_trap_microfinance
+  │  Gap: Constraint debt_trap_microfinance appears extractive (Snare) to individuals but functional (Rope) to institutions...
+  │
+  │  CRITICAL: Extraction Masking Detected
+  │  Powerless see: SNARE (extractive trap)
+  │  Institutions see: ROPE (functional rule)
+  │
+  │  RESOLUTION STRATEGY:
+  │  1. Interview affected individuals (N=10+):
+  │     - Who benefits from debt_trap_microfinance?
+  │     - Can you change/exit this constraint?
+  │     - What would happen if you tried?
+  │  2. Interview institutional actors (N=10+):
+  │     - What function does debt_trap_microfinance serve?
+  │     - Who would object to removing it?
+  │     - What alternatives exist?
+  │  3. Document benefit flows:
+  │     - Track who gains vs. who loses from status quo
+  │     - Measure asymmetric benefit distribution
+  │  4. Decision tree:
+  │     IF extraction confirmed → Reclassify as SNARE
+  │     IF functional & fair → Reclassify as ROPE
+  │     IF context-dependent → Add indexical resolution
+  └─
+
+====================================================
+[PASS] testsets/debt_trap_microfinance.pl
+
+### START LLM REFINEMENT MANIFEST: debt_trap_microfinance ###
+
+[PERSPECTIVAL_GAPS]
+  - Constraint "debt_trap_microfinance": Individual sees snare, but Institution sees rope.
+
+[ONTOLOGICAL_MISMATCHES]
+  - None detected.
+
+[UNRESOLVED_OMEGAS]
+  - omega_extraction_blindness_debt_trap_microfinance (conceptual): Constraint debt_trap_microfinance appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+### END REFINEMENT MANIFEST ###
+
+[244] EXECUTING: testsets/decision_latency_mismatch.pl
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** omega_extraction_blindness_debt_trap_microfinance (conceptual)
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from debt_trap_microfinance?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does debt_trap_microfinance serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 22. Snare: `endowment_effect`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
@@ -2031,7 +2361,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.58
 
 ### END REFINEMENT MANIFEST ###
 
-[229] EXECUTING: testsets/english_chinese_tense_structure.pl
+[288] EXECUTING: testsets/english_chinese_tense_structure.pl
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
@@ -2055,7 +2385,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 20. Snare: `ergo_autolykos_asic_resistance`
+### 23. Snare: `ergo_autolykos_asic_resistance`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
@@ -2129,7 +2459,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.56
 
 ### END REFINEMENT MANIFEST ###
 
-[237] EXECUTING: testsets/ergo_dexy_gold_protocol.pl
+[298] EXECUTING: testsets/ergo_dexy_gold_protocol.pl
 *   **Generated Omega:** omega_perspectival_ergo_autolykos_asic_resistance (conceptual)
 *   **Suggested Resolution Strategy:**
     ```
@@ -2147,7 +2477,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.56
 
 ---
 
-### 21. Snare: `faint_blue_neural_bifurcation`
+### 24. Snare: `faint_blue_neural_bifurcation`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
@@ -2226,7 +2556,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.55
 
 ### END REFINEMENT MANIFEST ###
 
-[259] EXECUTING: testsets/fair_use_doctrine.pl
+[330] EXECUTING: testsets/fair_use_doctrine.pl
 *   **Related Gap/Alert:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Generated Omega:** omega_cut_safety_faint_blue_neural_bifurcation (conceptual)
 *   **Suggested Resolution Strategy:**
@@ -2249,7 +2579,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 22. Snare: `gamblers_ruin_stochastic_extinction`
+### 25. Snare: `gamblers_ruin_stochastic_extinction`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
@@ -2335,7 +2665,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.50
 
 ### END REFINEMENT MANIFEST ###
 
-[290] EXECUTING: testsets/gauss_bonnet_topology.pl
+[376] EXECUTING: testsets/gauss_bonnet_topology.pl
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** omega_extraction_blindness_gamblers_ruin_stochastic_extinction (conceptual)
 *   **Suggested Resolution Strategy:**
@@ -2359,7 +2689,117 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 23. Snare: `generational_replacement_inertia`
+### 26. Snare: `gaza_aid_permit_revocation`
+
+*   **Claimed Type:** `snare`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for gaza_aid_permit_revocation: Appears to be rope (indexed_rope_classification) but fails 3 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.33),excess_above_floor(0.75),nonsensical_coupling(0.16666666666666666)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+    → Institutional beneficiary: israeli_state_and_military
+    → Institutional d=0.120
+
+[UKE_DR FEASIBILITY BRIDGE]
+  Recommendation | UKE Status
+  ----------------------------------------------------------------------
+
+Aggregate Magnitude (Kappa) at Tn: 0.57
+
+[PERSPECTIVAL GAP ANALYSIS]
+
+  Analysis for Constraint: gaza_aid_permit_revocation
+    ! ALERT: Extractive "Snare" is masked as functional "Rope".
+    - Individual (Powerless): snare [d=0.500 f(d)=0.65 χ=0.44]
+    - Institutional (Manager): rope [d=0.120 f(d)=-0.04 χ=-0.04 → net benefit]
+    ! MANDATROPHY GAP: delta_chi = 0.48 (moderate)
+
+[OMEGA GENERATION FROM PERSPECTIVAL GAPS: gaza_aid_permit_revocation]
+  Generated 1 Omega variables from perspectival gaps:
+
+  Ω: omega_extraction_blindness_gaza_aid_permit_revocation (conceptual)
+     Question: Constraint gaza_aid_permit_revocation appears extractive (Snare) to individuals but functional (Rope) to institutions...
+     Source: gap(snare_masked_as_rope,snare,rope)
+
+
+[OMEGA TRIAGE & PRIORITIZATION]
+
+  [critical] 1 omega(s):
+    - omega_extraction_blindness_gaza_aid_permit_revocation (conceptual)
+      Constraint gaza_aid_permit_revocation appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+  [high] 1 omega(s):
+    - omega_extraction_blindness_gaza_aid_permit_revocation (conceptual)
+      Constraint gaza_aid_permit_revocation appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+[OMEGA RESOLUTION SCENARIO GENERATION]
+  Generated 1 resolution scenario(s):
+
+  ┌─ [omega_extraction_blindness_gaza_aid_permit_revocation] CONCEPTUAL CLARIFICATION
+  │  Constraint: gaza_aid_permit_revocation
+  │  Gap: Constraint gaza_aid_permit_revocation appears extractive (Snare) to individuals but functional (Rope) to institutions...
+  │
+  │  CRITICAL: Extraction Masking Detected
+  │  Powerless see: SNARE (extractive trap)
+  │  Institutions see: ROPE (functional rule)
+  │
+  │  RESOLUTION STRATEGY:
+  │  1. Interview affected individuals (N=10+):
+  │     - Who benefits from gaza_aid_permit_revocation?
+  │     - Can you change/exit this constraint?
+  │     - What would happen if you tried?
+  │  2. Interview institutional actors (N=10+):
+  │     - What function does gaza_aid_permit_revocation serve?
+  │     - Who would object to removing it?
+  │     - What alternatives exist?
+  │  3. Document benefit flows:
+  │     - Track who gains vs. who loses from status quo
+  │     - Measure asymmetric benefit distribution
+  │  4. Decision tree:
+  │     IF extraction confirmed → Reclassify as SNARE
+  │     IF functional & fair → Reclassify as ROPE
+  │     IF context-dependent → Add indexical resolution
+  └─
+
+====================================================
+[PASS] testsets/gaza_aid_permit_revocation.pl
+
+### START LLM REFINEMENT MANIFEST: gaza_aid_permit_revocation ###
+
+[PERSPECTIVAL_GAPS]
+  - Constraint "gaza_aid_permit_revocation": Individual sees snare, but Institution sees rope.
+
+[ONTOLOGICAL_MISMATCHES]
+  - None detected.
+
+[UNRESOLVED_OMEGAS]
+  - omega_extraction_blindness_gaza_aid_permit_revocation (conceptual): Constraint gaza_aid_permit_revocation appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+### END REFINEMENT MANIFEST ###
+
+[378] EXECUTING: testsets/gaza_border_control_rafah.pl
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** omega_extraction_blindness_gaza_aid_permit_revocation (conceptual)
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from gaza_aid_permit_revocation?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does gaza_aid_permit_revocation serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 27. Snare: `generational_replacement_inertia`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
@@ -2445,7 +2885,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.55
 
 ### END REFINEMENT MANIFEST ###
 
-[292] EXECUTING: testsets/genetic_algorithms_evolution.pl
+[381] EXECUTING: testsets/genetic_algorithms_evolution.pl
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** omega_extraction_blindness_generational_replacement_inertia (conceptual)
 *   **Suggested Resolution Strategy:**
@@ -2469,7 +2909,117 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 24. Snare: `guthrie_kidnapping_2026`
+### 28. Snare: `ghost_fishing_gear`
+
+*   **Claimed Type:** `snare`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for ghost_fishing_gear: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.3),excess_above_floor(0.6)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+    → Institutional beneficiary: industrial_fishing_operators
+    → Institutional d=0.120
+
+[UKE_DR FEASIBILITY BRIDGE]
+  Recommendation | UKE Status
+  ----------------------------------------------------------------------
+
+Aggregate Magnitude (Kappa) at Tn: 0.55
+
+[PERSPECTIVAL GAP ANALYSIS]
+
+  Analysis for Constraint: ghost_fishing_gear
+    ! ALERT: Extractive "Snare" is masked as functional "Rope".
+    - Individual (Powerless): snare [d=0.900 f(d)=1.36 χ=0.82]
+    - Institutional (Manager): rope [d=0.120 f(d)=-0.04 χ=-0.03 → net benefit]
+    ! MANDATROPHY GAP: delta_chi = 0.85 (high)
+
+[OMEGA GENERATION FROM PERSPECTIVAL GAPS: ghost_fishing_gear]
+  Generated 1 Omega variables from perspectival gaps:
+
+  Ω: omega_extraction_blindness_ghost_fishing_gear (conceptual)
+     Question: Constraint ghost_fishing_gear appears extractive (Snare) to individuals but functional (Rope) to institutions...
+     Source: gap(snare_masked_as_rope,snare,rope)
+
+
+[OMEGA TRIAGE & PRIORITIZATION]
+
+  [critical] 1 omega(s):
+    - omega_extraction_blindness_ghost_fishing_gear (conceptual)
+      Constraint ghost_fishing_gear appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+  [high] 1 omega(s):
+    - omega_extraction_blindness_ghost_fishing_gear (conceptual)
+      Constraint ghost_fishing_gear appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+[OMEGA RESOLUTION SCENARIO GENERATION]
+  Generated 1 resolution scenario(s):
+
+  ┌─ [omega_extraction_blindness_ghost_fishing_gear] CONCEPTUAL CLARIFICATION
+  │  Constraint: ghost_fishing_gear
+  │  Gap: Constraint ghost_fishing_gear appears extractive (Snare) to individuals but functional (Rope) to institutions...
+  │
+  │  CRITICAL: Extraction Masking Detected
+  │  Powerless see: SNARE (extractive trap)
+  │  Institutions see: ROPE (functional rule)
+  │
+  │  RESOLUTION STRATEGY:
+  │  1. Interview affected individuals (N=10+):
+  │     - Who benefits from ghost_fishing_gear?
+  │     - Can you change/exit this constraint?
+  │     - What would happen if you tried?
+  │  2. Interview institutional actors (N=10+):
+  │     - What function does ghost_fishing_gear serve?
+  │     - Who would object to removing it?
+  │     - What alternatives exist?
+  │  3. Document benefit flows:
+  │     - Track who gains vs. who loses from status quo
+  │     - Measure asymmetric benefit distribution
+  │  4. Decision tree:
+  │     IF extraction confirmed → Reclassify as SNARE
+  │     IF functional & fair → Reclassify as ROPE
+  │     IF context-dependent → Add indexical resolution
+  └─
+
+====================================================
+[PASS] testsets/ghost_fishing_gear.pl
+
+### START LLM REFINEMENT MANIFEST: ghost_fishing_gear ###
+
+[PERSPECTIVAL_GAPS]
+  - Constraint "ghost_fishing_gear": Individual sees snare, but Institution sees rope.
+
+[ONTOLOGICAL_MISMATCHES]
+  - None detected.
+
+[UNRESOLVED_OMEGAS]
+  - omega_extraction_blindness_ghost_fishing_gear (conceptual): Constraint ghost_fishing_gear appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+### END REFINEMENT MANIFEST ###
+
+[390] EXECUTING: testsets/gig_economy_algorithmic_managment.pl
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** omega_extraction_blindness_ghost_fishing_gear (conceptual)
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from ghost_fishing_gear?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does ghost_fishing_gear serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 29. Snare: `guthrie_kidnapping_2026`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
@@ -2555,7 +3105,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.57
 
 ### END REFINEMENT MANIFEST ###
 
-[326] EXECUTING: testsets/halting_problem_undecidability.pl
+[429] EXECUTING: testsets/halting_problem_undecidability.pl
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** omega_extraction_blindness_guthrie_kidnapping_2026 (conceptual)
 *   **Suggested Resolution Strategy:**
@@ -2579,7 +3129,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 25. Snare: `hawthorne_effect`
+### 30. Snare: `hawthorne_effect`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
@@ -2671,7 +3221,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.58
 
 ### END REFINEMENT MANIFEST ###
 
-[334] EXECUTING: testsets/hedonic_adaptation_baseline.pl
+[438] EXECUTING: testsets/hd101584_stellar_evolution.pl
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
@@ -2695,7 +3245,337 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 26. Snare: `kjv_great_awakening`
+### 31. Snare: `hhs_fetal_tissue_research_ban_2019`
+
+*   **Claimed Type:** `snare`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for hhs_fetal_tissue_research_ban_2019: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.25),excess_above_floor(0.7)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+    → Institutional beneficiary: anti_abortion_advocacy_groups
+    → Institutional d=0.120
+
+[UKE_DR FEASIBILITY BRIDGE]
+  Recommendation | UKE Status
+  ----------------------------------------------------------------------
+
+Aggregate Magnitude (Kappa) at Tn: 0.55
+
+[PERSPECTIVAL GAP ANALYSIS]
+
+  Analysis for Constraint: hhs_fetal_tissue_research_ban_2019
+    ! ALERT: Extractive "Snare" is masked as functional "Rope".
+    - Individual (Powerless): snare [d=0.900 f(d)=1.36 χ=0.82]
+    - Institutional (Manager): rope [d=0.120 f(d)=-0.04 χ=-0.03 → net benefit]
+    ! MANDATROPHY GAP: delta_chi = 0.85 (high)
+
+[OMEGA GENERATION FROM PERSPECTIVAL GAPS: hhs_fetal_tissue_research_ban_2019]
+  Generated 1 Omega variables from perspectival gaps:
+
+  Ω: omega_extraction_blindness_hhs_fetal_tissue_research_ban_2019 (conceptual)
+     Question: Constraint hhs_fetal_tissue_research_ban_2019 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+     Source: gap(snare_masked_as_rope,snare,rope)
+
+
+[OMEGA TRIAGE & PRIORITIZATION]
+
+  [critical] 1 omega(s):
+    - omega_extraction_blindness_hhs_fetal_tissue_research_ban_2019 (conceptual)
+      Constraint hhs_fetal_tissue_research_ban_2019 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+  [high] 1 omega(s):
+    - omega_extraction_blindness_hhs_fetal_tissue_research_ban_2019 (conceptual)
+      Constraint hhs_fetal_tissue_research_ban_2019 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+[OMEGA RESOLUTION SCENARIO GENERATION]
+  Generated 1 resolution scenario(s):
+
+  ┌─ [omega_extraction_blindness_hhs_fetal_tissue_research_ban_2019] CONCEPTUAL CLARIFICATION
+  │  Constraint: hhs_fetal_tissue_research_ban_2019
+  │  Gap: Constraint hhs_fetal_tissue_research_ban_2019 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+  │
+  │  CRITICAL: Extraction Masking Detected
+  │  Powerless see: SNARE (extractive trap)
+  │  Institutions see: ROPE (functional rule)
+  │
+  │  RESOLUTION STRATEGY:
+  │  1. Interview affected individuals (N=10+):
+  │     - Who benefits from hhs_fetal_tissue_research_ban_2019?
+  │     - Can you change/exit this constraint?
+  │     - What would happen if you tried?
+  │  2. Interview institutional actors (N=10+):
+  │     - What function does hhs_fetal_tissue_research_ban_2019 serve?
+  │     - Who would object to removing it?
+  │     - What alternatives exist?
+  │  3. Document benefit flows:
+  │     - Track who gains vs. who loses from status quo
+  │     - Measure asymmetric benefit distribution
+  │  4. Decision tree:
+  │     IF extraction confirmed → Reclassify as SNARE
+  │     IF functional & fair → Reclassify as ROPE
+  │     IF context-dependent → Add indexical resolution
+  └─
+
+====================================================
+[PASS] testsets/hhs_fetal_tissue_research_ban_2019.pl
+
+### START LLM REFINEMENT MANIFEST: hhs_fetal_tissue_research_ban_2019 ###
+
+[PERSPECTIVAL_GAPS]
+  - Constraint "hhs_fetal_tissue_research_ban_2019": Individual sees snare, but Institution sees rope.
+
+[ONTOLOGICAL_MISMATCHES]
+  - None detected.
+
+[UNRESOLVED_OMEGAS]
+  - omega_extraction_blindness_hhs_fetal_tissue_research_ban_2019 (conceptual): Constraint hhs_fetal_tissue_research_ban_2019 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+### END REFINEMENT MANIFEST ###
+
+[448] EXECUTING: testsets/hicbc_uk.pl
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** omega_extraction_blindness_hhs_fetal_tissue_research_ban_2019 (conceptual)
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from hhs_fetal_tissue_research_ban_2019?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does hhs_fetal_tissue_research_ban_2019 serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 32. Snare: `ice_raids_minnesota_2026`
+
+*   **Claimed Type:** `snare`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for ice_raids_minnesota_2026: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.33),excess_above_floor(0.75)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+    → Institutional beneficiary: immigration_enforcement_complex
+    → Institutional d=0.120
+
+[UKE_DR FEASIBILITY BRIDGE]
+  Recommendation | UKE Status
+  ----------------------------------------------------------------------
+
+Aggregate Magnitude (Kappa) at Tn: 0.57
+
+[PERSPECTIVAL GAP ANALYSIS]
+
+  Analysis for Constraint: ice_raids_minnesota_2026
+    ! ALERT: Extractive "Snare" is masked as functional "Rope".
+    - Individual (Powerless): snare [d=0.900 f(d)=1.36 χ=0.92]
+    - Institutional (Manager): rope [d=0.120 f(d)=-0.04 χ=-0.04 → net benefit]
+    ! MANDATROPHY GAP: delta_chi = 0.96 (high)
+
+[OMEGA GENERATION FROM PERSPECTIVAL GAPS: ice_raids_minnesota_2026]
+  Generated 1 Omega variables from perspectival gaps:
+
+  Ω: omega_extraction_blindness_ice_raids_minnesota_2026 (conceptual)
+     Question: Constraint ice_raids_minnesota_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+     Source: gap(snare_masked_as_rope,snare,rope)
+
+
+[OMEGA TRIAGE & PRIORITIZATION]
+
+  [critical] 1 omega(s):
+    - omega_extraction_blindness_ice_raids_minnesota_2026 (conceptual)
+      Constraint ice_raids_minnesota_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+  [high] 1 omega(s):
+    - omega_extraction_blindness_ice_raids_minnesota_2026 (conceptual)
+      Constraint ice_raids_minnesota_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+[OMEGA RESOLUTION SCENARIO GENERATION]
+  Generated 1 resolution scenario(s):
+
+  ┌─ [omega_extraction_blindness_ice_raids_minnesota_2026] CONCEPTUAL CLARIFICATION
+  │  Constraint: ice_raids_minnesota_2026
+  │  Gap: Constraint ice_raids_minnesota_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+  │
+  │  CRITICAL: Extraction Masking Detected
+  │  Powerless see: SNARE (extractive trap)
+  │  Institutions see: ROPE (functional rule)
+  │
+  │  RESOLUTION STRATEGY:
+  │  1. Interview affected individuals (N=10+):
+  │     - Who benefits from ice_raids_minnesota_2026?
+  │     - Can you change/exit this constraint?
+  │     - What would happen if you tried?
+  │  2. Interview institutional actors (N=10+):
+  │     - What function does ice_raids_minnesota_2026 serve?
+  │     - Who would object to removing it?
+  │     - What alternatives exist?
+  │  3. Document benefit flows:
+  │     - Track who gains vs. who loses from status quo
+  │     - Measure asymmetric benefit distribution
+  │  4. Decision tree:
+  │     IF extraction confirmed → Reclassify as SNARE
+  │     IF functional & fair → Reclassify as ROPE
+  │     IF context-dependent → Add indexical resolution
+  └─
+
+====================================================
+[PASS] testsets/ice_raids_minnesota_2026.pl
+
+### START LLM REFINEMENT MANIFEST: ice_raids_minnesota_2026 ###
+
+[PERSPECTIVAL_GAPS]
+  - Constraint "ice_raids_minnesota_2026": Individual sees snare, but Institution sees rope.
+
+[ONTOLOGICAL_MISMATCHES]
+  - None detected.
+
+[UNRESOLVED_OMEGAS]
+  - omega_extraction_blindness_ice_raids_minnesota_2026 (conceptual): Constraint ice_raids_minnesota_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+### END REFINEMENT MANIFEST ###
+
+[467] EXECUTING: testsets/ice_safe_departure.pl
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** omega_extraction_blindness_ice_raids_minnesota_2026 (conceptual)
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from ice_raids_minnesota_2026?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does ice_raids_minnesota_2026 serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 33. Snare: `iran_nin_repression`
+
+*   **Claimed Type:** `snare`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for iran_nin_repression: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.33),excess_above_floor(0.75)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+    → Institutional beneficiary: iranian_regime
+    → Institutional d=0.120
+
+[UKE_DR FEASIBILITY BRIDGE]
+  Recommendation | UKE Status
+  ----------------------------------------------------------------------
+
+Aggregate Magnitude (Kappa) at Tn: 0.58
+
+[PERSPECTIVAL GAP ANALYSIS]
+
+  Analysis for Constraint: iran_nin_repression
+    ! ALERT: Extractive "Snare" is masked as functional "Rope".
+    - Individual (Powerless): snare [d=0.900 f(d)=1.36 χ=0.92]
+    - Institutional (Manager): rope [d=0.120 f(d)=-0.04 χ=-0.04 → net benefit]
+    ! MANDATROPHY GAP: delta_chi = 0.96 (high)
+
+[OMEGA GENERATION FROM PERSPECTIVAL GAPS: iran_nin_repression]
+  Generated 1 Omega variables from perspectival gaps:
+
+  Ω: omega_extraction_blindness_iran_nin_repression (conceptual)
+     Question: Constraint iran_nin_repression appears extractive (Snare) to individuals but functional (Rope) to institutions...
+     Source: gap(snare_masked_as_rope,snare,rope)
+
+
+[OMEGA TRIAGE & PRIORITIZATION]
+
+  [critical] 1 omega(s):
+    - omega_extraction_blindness_iran_nin_repression (conceptual)
+      Constraint iran_nin_repression appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+  [high] 1 omega(s):
+    - omega_extraction_blindness_iran_nin_repression (conceptual)
+      Constraint iran_nin_repression appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+[OMEGA RESOLUTION SCENARIO GENERATION]
+  Generated 1 resolution scenario(s):
+
+  ┌─ [omega_extraction_blindness_iran_nin_repression] CONCEPTUAL CLARIFICATION
+  │  Constraint: iran_nin_repression
+  │  Gap: Constraint iran_nin_repression appears extractive (Snare) to individuals but functional (Rope) to institutions...
+  │
+  │  CRITICAL: Extraction Masking Detected
+  │  Powerless see: SNARE (extractive trap)
+  │  Institutions see: ROPE (functional rule)
+  │
+  │  RESOLUTION STRATEGY:
+  │  1. Interview affected individuals (N=10+):
+  │     - Who benefits from iran_nin_repression?
+  │     - Can you change/exit this constraint?
+  │     - What would happen if you tried?
+  │  2. Interview institutional actors (N=10+):
+  │     - What function does iran_nin_repression serve?
+  │     - Who would object to removing it?
+  │     - What alternatives exist?
+  │  3. Document benefit flows:
+  │     - Track who gains vs. who loses from status quo
+  │     - Measure asymmetric benefit distribution
+  │  4. Decision tree:
+  │     IF extraction confirmed → Reclassify as SNARE
+  │     IF functional & fair → Reclassify as ROPE
+  │     IF context-dependent → Add indexical resolution
+  └─
+
+====================================================
+[PASS] testsets/iran_nin_repression.pl
+
+### START LLM REFINEMENT MANIFEST: iran_nin_repression ###
+
+[PERSPECTIVAL_GAPS]
+  - Constraint "iran_nin_repression": Individual sees snare, but Institution sees rope.
+
+[ONTOLOGICAL_MISMATCHES]
+  - None detected.
+
+[UNRESOLVED_OMEGAS]
+  - omega_extraction_blindness_iran_nin_repression (conceptual): Constraint iran_nin_repression appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+### END REFINEMENT MANIFEST ###
+
+[505] EXECUTING: testsets/iran_war_room_2026.pl
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** omega_extraction_blindness_iran_nin_repression (conceptual)
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from iran_nin_repression?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does iran_nin_repression serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 34. Snare: `kjv_great_awakening`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
@@ -2769,7 +3649,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.48
 
 ### END REFINEMENT MANIFEST ###
 
-[395] EXECUTING: testsets/kjv_linguistic_residue.pl
+[531] EXECUTING: testsets/kjv_linguistic_residue.pl
 *   **Generated Omega:** omega_perspectival_kjv_great_awakening (conceptual)
 *   **Suggested Resolution Strategy:**
     ```
@@ -2787,7 +3667,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.48
 
 ---
 
-### 27. Snare: `knowledge_action_gap`
+### 35. Snare: `knowledge_action_gap`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
@@ -2866,7 +3746,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.51
 
 ### END REFINEMENT MANIFEST ###
 
-[400] EXECUTING: testsets/labor_union_dues_structure.pl
+[536] EXECUTING: testsets/kolmogorov_complexity.pl
 *   **Related Gap/Alert:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Generated Omega:** omega_cut_safety_knowledge_action_gap (conceptual)
 *   **Suggested Resolution Strategy:**
@@ -2889,7 +3769,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 28. Snare: `layered_brain_processing`
+### 36. Snare: `layered_brain_processing`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
@@ -2969,7 +3849,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.54
 
 ### END REFINEMENT MANIFEST ###
 
-[407] EXECUTING: testsets/legacy_system_technical_debt.pl
+[547] EXECUTING: testsets/lcdm_hubble_tension.pl
 *   **Generated Omega:** omega_learned_helplessness_layered_brain_processing (conceptual)
 *   **Suggested Resolution Strategy:**
     ```
@@ -2989,7 +3869,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 29. Snare: `lula_hemisphere_2026`
+### 37. Snare: `lula_hemisphere_2026`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
@@ -3063,7 +3943,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.56
 
 ### END REFINEMENT MANIFEST ###
 
-[427] EXECUTING: testsets/lung_transplant_protocol.pl
+[570] EXECUTING: testsets/lung_transplant_protocol.pl
 *   **Generated Omega:** omega_perspectival_lula_hemisphere_2026 (conceptual)
 *   **Suggested Resolution Strategy:**
     ```
@@ -3081,7 +3961,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.56
 
 ---
 
-### 30. Snare: `med_diet_consensus_2026`
+### 38. Snare: `med_diet_consensus_2026`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
@@ -3165,7 +4045,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.48
 
 ### END REFINEMENT MANIFEST ###
 
-[445] EXECUTING: testsets/medical_residency_match.pl
+[592] EXECUTING: testsets/medical_residency_match.pl
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** omega_extraction_blindness_med_diet_consensus_2026 (conceptual)
 *   **Suggested Resolution Strategy:**
@@ -3189,7 +4069,117 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 31. Snare: `metamorphosis_samsa`
+### 39. Snare: `meta_pay_or_okay_model`
+
+*   **Claimed Type:** `snare`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for meta_pay_or_okay_model: Appears to be rope (indexed_rope_classification) but fails 3 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.3),excess_above_floor(0.6),nonsensical_coupling(0.16666666666666666)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+    → Institutional beneficiary: meta_platforms
+    → Institutional d=0.120
+
+[UKE_DR FEASIBILITY BRIDGE]
+  Recommendation | UKE Status
+  ----------------------------------------------------------------------
+
+Aggregate Magnitude (Kappa) at Tn: 0.56
+
+[PERSPECTIVAL GAP ANALYSIS]
+
+  Analysis for Constraint: meta_pay_or_okay_model
+    ! ALERT: Extractive "Snare" is masked as functional "Rope".
+    - Individual (Powerless): snare [d=0.500 f(d)=0.65 χ=0.39]
+    - Institutional (Manager): rope [d=0.120 f(d)=-0.04 χ=-0.03 → net benefit]
+    ! MANDATROPHY GAP: delta_chi = 0.42 (moderate)
+
+[OMEGA GENERATION FROM PERSPECTIVAL GAPS: meta_pay_or_okay_model]
+  Generated 1 Omega variables from perspectival gaps:
+
+  Ω: omega_extraction_blindness_meta_pay_or_okay_model (conceptual)
+     Question: Constraint meta_pay_or_okay_model appears extractive (Snare) to individuals but functional (Rope) to institutions...
+     Source: gap(snare_masked_as_rope,snare,rope)
+
+
+[OMEGA TRIAGE & PRIORITIZATION]
+
+  [critical] 1 omega(s):
+    - omega_extraction_blindness_meta_pay_or_okay_model (conceptual)
+      Constraint meta_pay_or_okay_model appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+  [high] 1 omega(s):
+    - omega_extraction_blindness_meta_pay_or_okay_model (conceptual)
+      Constraint meta_pay_or_okay_model appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+[OMEGA RESOLUTION SCENARIO GENERATION]
+  Generated 1 resolution scenario(s):
+
+  ┌─ [omega_extraction_blindness_meta_pay_or_okay_model] CONCEPTUAL CLARIFICATION
+  │  Constraint: meta_pay_or_okay_model
+  │  Gap: Constraint meta_pay_or_okay_model appears extractive (Snare) to individuals but functional (Rope) to institutions...
+  │
+  │  CRITICAL: Extraction Masking Detected
+  │  Powerless see: SNARE (extractive trap)
+  │  Institutions see: ROPE (functional rule)
+  │
+  │  RESOLUTION STRATEGY:
+  │  1. Interview affected individuals (N=10+):
+  │     - Who benefits from meta_pay_or_okay_model?
+  │     - Can you change/exit this constraint?
+  │     - What would happen if you tried?
+  │  2. Interview institutional actors (N=10+):
+  │     - What function does meta_pay_or_okay_model serve?
+  │     - Who would object to removing it?
+  │     - What alternatives exist?
+  │  3. Document benefit flows:
+  │     - Track who gains vs. who loses from status quo
+  │     - Measure asymmetric benefit distribution
+  │  4. Decision tree:
+  │     IF extraction confirmed → Reclassify as SNARE
+  │     IF functional & fair → Reclassify as ROPE
+  │     IF context-dependent → Add indexical resolution
+  └─
+
+====================================================
+[PASS] testsets/meta_pay_or_okay_model.pl
+
+### START LLM REFINEMENT MANIFEST: meta_pay_or_okay_model ###
+
+[PERSPECTIVAL_GAPS]
+  - Constraint "meta_pay_or_okay_model": Individual sees snare, but Institution sees rope.
+
+[ONTOLOGICAL_MISMATCHES]
+  - None detected.
+
+[UNRESOLVED_OMEGAS]
+  - omega_extraction_blindness_meta_pay_or_okay_model (conceptual): Constraint meta_pay_or_okay_model appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+### END REFINEMENT MANIFEST ###
+
+[600] EXECUTING: testsets/metabolic_constraint_cognition.pl
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** omega_extraction_blindness_meta_pay_or_okay_model (conceptual)
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from meta_pay_or_okay_model?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does meta_pay_or_okay_model serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 40. Snare: `metamorphosis_samsa`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
@@ -3263,7 +4253,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.53
 
 ### END REFINEMENT MANIFEST ###
 
-[453] EXECUTING: testsets/micro_robot_electronics_integration.pl
+[602] EXECUTING: testsets/mexican_airline_merger.pl
 *   **Generated Omega:** omega_perspectival_metamorphosis_samsa (conceptual)
 *   **Suggested Resolution Strategy:**
     ```
@@ -3281,7 +4271,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.53
 
 ---
 
-### 32. Snare: `micro_robot_electronics_integration`
+### 41. Snare: `micro_robot_electronics_integration`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
@@ -3368,7 +4358,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.58
 
 ### END REFINEMENT MANIFEST ###
 
-[454] EXECUTING: testsets/microbiome_symbiosis.pl
+[604] EXECUTING: testsets/microbiome_symbiosis.pl
 *   **Related Gap/Alert:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
@@ -3391,7 +4381,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 33. Snare: `nasa_faster_better_cheaper`
+### 42. Snare: `nasa_faster_better_cheaper`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
@@ -3470,7 +4460,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.53
 
 ### END REFINEMENT MANIFEST ###
 
-[482] EXECUTING: testsets/nash_equilibrium_coordination.pl
+[635] EXECUTING: testsets/nash_equilibrium_coordination.pl
 *   **Related Gap/Alert:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Generated Omega:** omega_cut_safety_nasa_faster_better_cheaper (conceptual)
 *   **Suggested Resolution Strategy:**
@@ -3493,7 +4483,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 34. Snare: `north_korea_songun_mandatrophy`
+### 43. Snare: `north_korea_songun_mandatrophy`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
@@ -3579,7 +4569,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.58
 
 ### END REFINEMENT MANIFEST ###
 
-[501] EXECUTING: testsets/notary_ink_dependency.pl
+[663] EXECUTING: testsets/north_sea_wind_grid.pl
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** omega_extraction_blindness_north_korea_songun_mandatrophy (conceptual)
 *   **Suggested Resolution Strategy:**
@@ -3603,7 +4593,117 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 35. Snare: `nsw_transmission_bottleneck`
+### 44. Snare: `nsl_hk`
+
+*   **Claimed Type:** `snare`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for nsl_hk: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.33),excess_above_floor(0.75)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+    → Institutional beneficiary: beijing_aligned_authorities
+    → Institutional d=0.120
+
+[UKE_DR FEASIBILITY BRIDGE]
+  Recommendation | UKE Status
+  ----------------------------------------------------------------------
+
+Aggregate Magnitude (Kappa) at Tn: 0.58
+
+[PERSPECTIVAL GAP ANALYSIS]
+
+  Analysis for Constraint: nsl_hk
+    ! ALERT: Extractive "Snare" is masked as functional "Rope".
+    - Individual (Powerless): snare [d=0.900 f(d)=1.36 χ=0.92]
+    - Institutional (Manager): rope [d=0.120 f(d)=-0.04 χ=-0.04 → net benefit]
+    ! MANDATROPHY GAP: delta_chi = 0.96 (high)
+
+[OMEGA GENERATION FROM PERSPECTIVAL GAPS: nsl_hk]
+  Generated 1 Omega variables from perspectival gaps:
+
+  Ω: omega_extraction_blindness_nsl_hk (conceptual)
+     Question: Constraint nsl_hk appears extractive (Snare) to individuals but functional (Rope) to institutions...
+     Source: gap(snare_masked_as_rope,snare,rope)
+
+
+[OMEGA TRIAGE & PRIORITIZATION]
+
+  [critical] 1 omega(s):
+    - omega_extraction_blindness_nsl_hk (conceptual)
+      Constraint nsl_hk appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+  [high] 1 omega(s):
+    - omega_extraction_blindness_nsl_hk (conceptual)
+      Constraint nsl_hk appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+[OMEGA RESOLUTION SCENARIO GENERATION]
+  Generated 1 resolution scenario(s):
+
+  ┌─ [omega_extraction_blindness_nsl_hk] CONCEPTUAL CLARIFICATION
+  │  Constraint: nsl_hk
+  │  Gap: Constraint nsl_hk appears extractive (Snare) to individuals but functional (Rope) to institutions...
+  │
+  │  CRITICAL: Extraction Masking Detected
+  │  Powerless see: SNARE (extractive trap)
+  │  Institutions see: ROPE (functional rule)
+  │
+  │  RESOLUTION STRATEGY:
+  │  1. Interview affected individuals (N=10+):
+  │     - Who benefits from nsl_hk?
+  │     - Can you change/exit this constraint?
+  │     - What would happen if you tried?
+  │  2. Interview institutional actors (N=10+):
+  │     - What function does nsl_hk serve?
+  │     - Who would object to removing it?
+  │     - What alternatives exist?
+  │  3. Document benefit flows:
+  │     - Track who gains vs. who loses from status quo
+  │     - Measure asymmetric benefit distribution
+  │  4. Decision tree:
+  │     IF extraction confirmed → Reclassify as SNARE
+  │     IF functional & fair → Reclassify as ROPE
+  │     IF context-dependent → Add indexical resolution
+  └─
+
+====================================================
+[PASS] testsets/nsl_hk.pl
+
+### START LLM REFINEMENT MANIFEST: nsl_hk ###
+
+[PERSPECTIVAL_GAPS]
+  - Constraint "nsl_hk": Individual sees snare, but Institution sees rope.
+
+[ONTOLOGICAL_MISMATCHES]
+  - None detected.
+
+[UNRESOLVED_OMEGAS]
+  - omega_extraction_blindness_nsl_hk (conceptual): Constraint nsl_hk appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+### END REFINEMENT MANIFEST ###
+
+[666] EXECUTING: testsets/nsw_transmission_bottleneck.pl
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** omega_extraction_blindness_nsl_hk (conceptual)
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from nsl_hk?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does nsl_hk serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 45. Snare: `nsw_transmission_bottleneck`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
@@ -3689,7 +4789,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.54
 
 ### END REFINEMENT MANIFEST ###
 
-[503] EXECUTING: testsets/nuclear_order_2026.pl
+[667] EXECUTING: testsets/nuclear_order_2026.pl
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** omega_extraction_blindness_nsw_transmission_bottleneck (conceptual)
 *   **Suggested Resolution Strategy:**
@@ -3713,7 +4813,117 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 36. Snare: `prime_age_male_unwork`
+### 46. Snare: `p_g_golden_pear_surveillance`
+
+*   **Claimed Type:** `snare`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for p_g_golden_pear_surveillance: Appears to be rope (indexed_rope_classification) but fails 4 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.25),scope_variant([snare,tangled_rope]),excess_above_floor(0.53),nonsensical_coupling(0.5)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+    → Institutional beneficiary: procter_gamble
+    → Institutional d=0.120
+
+[UKE_DR FEASIBILITY BRIDGE]
+  Recommendation | UKE Status
+  ----------------------------------------------------------------------
+
+Aggregate Magnitude (Kappa) at Tn: 0.53
+
+[PERSPECTIVAL GAP ANALYSIS]
+
+  Analysis for Constraint: p_g_golden_pear_surveillance
+    ! ALERT: Extractive "Snare" is masked as functional "Rope".
+    - Individual (Powerless): snare [d=0.900 f(d)=1.36 χ=0.60]
+    - Institutional (Manager): rope [d=0.120 f(d)=-0.04 χ=-0.02 → net benefit]
+    ! MANDATROPHY GAP: delta_chi = 0.62 (high)
+
+[OMEGA GENERATION FROM PERSPECTIVAL GAPS: p_g_golden_pear_surveillance]
+  Generated 1 Omega variables from perspectival gaps:
+
+  Ω: omega_extraction_blindness_p_g_golden_pear_surveillance (conceptual)
+     Question: Constraint p_g_golden_pear_surveillance appears extractive (Snare) to individuals but functional (Rope) to institutions...
+     Source: gap(snare_masked_as_rope,snare,rope)
+
+
+[OMEGA TRIAGE & PRIORITIZATION]
+
+  [critical] 1 omega(s):
+    - omega_extraction_blindness_p_g_golden_pear_surveillance (conceptual)
+      Constraint p_g_golden_pear_surveillance appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+  [high] 1 omega(s):
+    - omega_extraction_blindness_p_g_golden_pear_surveillance (conceptual)
+      Constraint p_g_golden_pear_surveillance appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+[OMEGA RESOLUTION SCENARIO GENERATION]
+  Generated 1 resolution scenario(s):
+
+  ┌─ [omega_extraction_blindness_p_g_golden_pear_surveillance] CONCEPTUAL CLARIFICATION
+  │  Constraint: p_g_golden_pear_surveillance
+  │  Gap: Constraint p_g_golden_pear_surveillance appears extractive (Snare) to individuals but functional (Rope) to institutions...
+  │
+  │  CRITICAL: Extraction Masking Detected
+  │  Powerless see: SNARE (extractive trap)
+  │  Institutions see: ROPE (functional rule)
+  │
+  │  RESOLUTION STRATEGY:
+  │  1. Interview affected individuals (N=10+):
+  │     - Who benefits from p_g_golden_pear_surveillance?
+  │     - Can you change/exit this constraint?
+  │     - What would happen if you tried?
+  │  2. Interview institutional actors (N=10+):
+  │     - What function does p_g_golden_pear_surveillance serve?
+  │     - Who would object to removing it?
+  │     - What alternatives exist?
+  │  3. Document benefit flows:
+  │     - Track who gains vs. who loses from status quo
+  │     - Measure asymmetric benefit distribution
+  │  4. Decision tree:
+  │     IF extraction confirmed → Reclassify as SNARE
+  │     IF functional & fair → Reclassify as ROPE
+  │     IF context-dependent → Add indexical resolution
+  └─
+
+====================================================
+[PASS] testsets/p_g_golden_pear_surveillance.pl
+
+### START LLM REFINEMENT MANIFEST: p_g_golden_pear_surveillance ###
+
+[PERSPECTIVAL_GAPS]
+  - Constraint "p_g_golden_pear_surveillance": Individual sees snare, but Institution sees rope.
+
+[ONTOLOGICAL_MISMATCHES]
+  - None detected.
+
+[UNRESOLVED_OMEGAS]
+  - omega_extraction_blindness_p_g_golden_pear_surveillance (conceptual): Constraint p_g_golden_pear_surveillance appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+### END REFINEMENT MANIFEST ###
+
+[695] EXECUTING: testsets/p_vs_np.pl
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** omega_extraction_blindness_p_g_golden_pear_surveillance (conceptual)
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from p_g_golden_pear_surveillance?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does p_g_golden_pear_surveillance serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 47. Snare: `prime_age_male_unwork`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
@@ -3799,7 +5009,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.53
 
 ### END REFINEMENT MANIFEST ###
 
-[551] EXECUTING: testsets/prime_number_theorem.pl
+[737] EXECUTING: testsets/prime_number_theorem.pl
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** omega_extraction_blindness_prime_age_male_unwork (conceptual)
 *   **Suggested Resolution Strategy:**
@@ -3823,7 +5033,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 37. Snare: `qwerty_vs_dvorak`
+### 48. Snare: `qwerty_vs_dvorak`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
@@ -3915,7 +5125,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.58
 
 ### END REFINEMENT MANIFEST ###
 
-[570] EXECUTING: testsets/radiologic_diagnostic_threshold.pl
+[759] EXECUTING: testsets/raac_school_maintenance.pl
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
@@ -3939,7 +5149,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 38. Snare: `rogers_commission_institutional_analysis`
+### 49. Snare: `rogers_commission_institutional_analysis`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
@@ -4018,7 +5228,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.54
 
 ### END REFINEMENT MANIFEST ###
 
-[596] EXECUTING: testsets/rogue_wave_control_2026.pl
+[792] EXECUTING: testsets/rogue_wave_control_2026.pl
 *   **Related Gap/Alert:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Generated Omega:** omega_cut_safety_rogers_commission_institutional_analysis (conceptual)
 *   **Suggested Resolution Strategy:**
@@ -4041,7 +5251,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 39. Snare: `rotation_seven_isolation`
+### 50. Snare: `rotation_seven_isolation`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
@@ -4127,7 +5337,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.53
 
 ### END REFINEMENT MANIFEST ###
 
-[599] EXECUTING: testsets/rotation_seven_kubo_ranking.pl
+[795] EXECUTING: testsets/rotation_seven_kubo_ranking.pl
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** omega_extraction_blindness_rotation_seven_isolation (conceptual)
 *   **Suggested Resolution Strategy:**
@@ -4151,7 +5361,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 40. Snare: `russells_paradox_self_reference`
+### 51. Snare: `russells_paradox_self_reference`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
@@ -4237,7 +5447,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.48
 
 ### END REFINEMENT MANIFEST ###
 
-[605] EXECUTING: testsets/russian_war_cannibalization.pl
+[801] EXECUTING: testsets/russian_war_cannibalization.pl
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** omega_extraction_blindness_russells_paradox_self_reference (conceptual)
 *   **Suggested Resolution Strategy:**
@@ -4261,7 +5471,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 41. Snare: `skolems_paradox`
+### 52. Snare: `skolems_paradox`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
@@ -4353,7 +5563,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.58
 
 ### END REFINEMENT MANIFEST ###
 
-[633] EXECUTING: testsets/sleep_debt_externality.pl
+[838] EXECUTING: testsets/sleep_debt_externality.pl
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
@@ -4377,7 +5587,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 42. Snare: `slow_crisis_invisibility`
+### 53. Snare: `slow_crisis_invisibility`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
@@ -4463,7 +5673,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.52
 
 ### END REFINEMENT MANIFEST ###
 
-[635] EXECUTING: testsets/sludge_bureaucratic_friction.pl
+[840] EXECUTING: testsets/sludge_bureaucratic_friction.pl
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** omega_extraction_blindness_slow_crisis_invisibility (conceptual)
 *   **Suggested Resolution Strategy:**
@@ -4487,7 +5697,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 43. Snare: `starwars_evolutionary_mutation`
+### 54. Snare: `starwars_evolutionary_mutation`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
@@ -4566,7 +5776,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.55
 
 ### END REFINEMENT MANIFEST ###
 
-[653] EXECUTING: testsets/statecraft_virtu.pl
+[862] EXECUTING: testsets/statecraft_virtu.pl
 *   **Related Gap/Alert:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Generated Omega:** omega_cut_safety_starwars_evolutionary_mutation (conceptual)
 *   **Suggested Resolution Strategy:**
@@ -4589,7 +5799,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 44. Snare: `strange_attractor_dynamics`
+### 55. Snare: `strange_attractor_dynamics`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
@@ -4675,7 +5885,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.52
 
 ### END REFINEMENT MANIFEST ###
 
-[659] EXECUTING: testsets/structural_extraction_without_actor.pl
+[869] EXECUTING: testsets/strange_attractors.pl
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** omega_extraction_blindness_strange_attractor_dynamics (conceptual)
 *   **Suggested Resolution Strategy:**
@@ -4699,7 +5909,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 45. Snare: `sunk_cost_fallacy`
+### 56. Snare: `sunk_cost_fallacy`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
@@ -4785,7 +5995,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.52
 
 ### END REFINEMENT MANIFEST ###
 
-[665] EXECUTING: testsets/suslin_hypothesis_undecidability.pl
+[880] EXECUTING: testsets/superbowl_advertising_extraction.pl
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** omega_extraction_blindness_sunk_cost_fallacy (conceptual)
 *   **Suggested Resolution Strategy:**
@@ -4809,7 +6019,117 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 46. Snare: `thai_senate_veto_2026`
+### 57. Snare: `taliban_slavery_law_2024`
+
+*   **Claimed Type:** `snare`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for taliban_slavery_law_2024: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.33),excess_above_floor(0.8)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+    → Institutional beneficiary: taliban_regime_and_fighters
+    → Institutional d=0.120
+
+[UKE_DR FEASIBILITY BRIDGE]
+  Recommendation | UKE Status
+  ----------------------------------------------------------------------
+
+Aggregate Magnitude (Kappa) at Tn: 0.58
+
+[PERSPECTIVAL GAP ANALYSIS]
+
+  Analysis for Constraint: taliban_slavery_law_2024
+    ! ALERT: Extractive "Snare" is masked as functional "Rope".
+    - Individual (Powerless): snare [d=0.900 f(d)=1.36 χ=0.98]
+    - Institutional (Manager): rope [d=0.120 f(d)=-0.04 χ=-0.04 → net benefit]
+    ! MANDATROPHY GAP: delta_chi = 1.02 (critical)
+
+[OMEGA GENERATION FROM PERSPECTIVAL GAPS: taliban_slavery_law_2024]
+  Generated 1 Omega variables from perspectival gaps:
+
+  Ω: omega_extraction_blindness_taliban_slavery_law_2024 (conceptual)
+     Question: Constraint taliban_slavery_law_2024 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+     Source: gap(snare_masked_as_rope,snare,rope)
+
+
+[OMEGA TRIAGE & PRIORITIZATION]
+
+  [critical] 1 omega(s):
+    - omega_extraction_blindness_taliban_slavery_law_2024 (conceptual)
+      Constraint taliban_slavery_law_2024 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+  [high] 1 omega(s):
+    - omega_extraction_blindness_taliban_slavery_law_2024 (conceptual)
+      Constraint taliban_slavery_law_2024 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+[OMEGA RESOLUTION SCENARIO GENERATION]
+  Generated 1 resolution scenario(s):
+
+  ┌─ [omega_extraction_blindness_taliban_slavery_law_2024] CONCEPTUAL CLARIFICATION
+  │  Constraint: taliban_slavery_law_2024
+  │  Gap: Constraint taliban_slavery_law_2024 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+  │
+  │  CRITICAL: Extraction Masking Detected
+  │  Powerless see: SNARE (extractive trap)
+  │  Institutions see: ROPE (functional rule)
+  │
+  │  RESOLUTION STRATEGY:
+  │  1. Interview affected individuals (N=10+):
+  │     - Who benefits from taliban_slavery_law_2024?
+  │     - Can you change/exit this constraint?
+  │     - What would happen if you tried?
+  │  2. Interview institutional actors (N=10+):
+  │     - What function does taliban_slavery_law_2024 serve?
+  │     - Who would object to removing it?
+  │     - What alternatives exist?
+  │  3. Document benefit flows:
+  │     - Track who gains vs. who loses from status quo
+  │     - Measure asymmetric benefit distribution
+  │  4. Decision tree:
+  │     IF extraction confirmed → Reclassify as SNARE
+  │     IF functional & fair → Reclassify as ROPE
+  │     IF context-dependent → Add indexical resolution
+  └─
+
+====================================================
+[PASS] testsets/taliban_slavery_law_2024.pl
+
+### START LLM REFINEMENT MANIFEST: taliban_slavery_law_2024 ###
+
+[PERSPECTIVAL_GAPS]
+  - Constraint "taliban_slavery_law_2024": Individual sees snare, but Institution sees rope.
+
+[ONTOLOGICAL_MISMATCHES]
+  - None detected.
+
+[UNRESOLVED_OMEGAS]
+  - omega_extraction_blindness_taliban_slavery_law_2024 (conceptual): Constraint taliban_slavery_law_2024 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+### END REFINEMENT MANIFEST ###
+
+[897] EXECUTING: testsets/tarski_undefinability_theorem.pl
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** omega_extraction_blindness_taliban_slavery_law_2024 (conceptual)
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from taliban_slavery_law_2024?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does taliban_slavery_law_2024 serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 58. Snare: `thai_senate_veto_2026`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
@@ -4895,7 +6215,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.55
 
 ### END REFINEMENT MANIFEST ###
 
-[686] EXECUTING: testsets/the_bacchae_madness_protocol.pl
+[909] EXECUTING: testsets/the_bacchae_madness_protocol.pl
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** omega_extraction_blindness_thai_senate_veto_2026 (conceptual)
 *   **Suggested Resolution Strategy:**
@@ -4919,7 +6239,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 47. Snare: `the_churn_systemic_upheaval`
+### 59. Snare: `the_churn_systemic_upheaval`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
@@ -5003,7 +6323,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.55
 
 ### END REFINEMENT MANIFEST ###
 
-[689] EXECUTING: testsets/the_wall_procedural_barrier.pl
+[912] EXECUTING: testsets/the_trivial_topology.pl
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** omega_extraction_blindness_the_churn_systemic_upheaval (conceptual)
 *   **Suggested Resolution Strategy:**
@@ -5027,7 +6347,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 48. Snare: `the_wall_procedural_barrier`
+### 60. Snare: `the_wall_procedural_barrier`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
@@ -5106,7 +6426,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.57
 
 ### END REFINEMENT MANIFEST ###
 
-[690] EXECUTING: testsets/theory_of_visitors.pl
+[914] EXECUTING: testsets/theory_of_visitors.pl
 *   **Related Gap/Alert:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Generated Omega:** omega_cut_safety_the_wall_procedural_barrier (conceptual)
 *   **Suggested Resolution Strategy:**
@@ -5129,7 +6449,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 49. Snare: `toxoplasma_hub_2026`
+### 61. Snare: `toxoplasma_hub_2026`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
@@ -5215,7 +6535,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.56
 
 ### END REFINEMENT MANIFEST ###
 
-[695] EXECUTING: testsets/tractarian_logic_limit.pl
+[921] EXECUTING: testsets/tractarian_logic_limit.pl
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** omega_extraction_blindness_toxoplasma_hub_2026 (conceptual)
 *   **Suggested Resolution Strategy:**
@@ -5239,7 +6559,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 50. Snare: `tractarian_logic_limit`
+### 62. Snare: `tractarian_logic_limit`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
@@ -5325,7 +6645,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.58
 
 ### END REFINEMENT MANIFEST ###
 
-[696] EXECUTING: testsets/trade_secret_law.pl
+[922] EXECUTING: testsets/trade_secret_law.pl
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** omega_extraction_blindness_tractarian_logic_limit (conceptual)
 *   **Suggested Resolution Strategy:**
@@ -5349,7 +6669,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 51. Snare: `trillion_bond_rush_2026`
+### 63. Snare: `trillion_bond_rush_2026`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
@@ -5435,7 +6755,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.43
 
 ### END REFINEMENT MANIFEST ###
 
-[702] EXECUTING: testsets/trojan_war_spoils.pl
+[929] EXECUTING: testsets/trojan_war_spoils.pl
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** omega_extraction_blindness_trillion_bond_rush_2026 (conceptual)
 *   **Suggested Resolution Strategy:**
@@ -5459,7 +6779,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 52. Snare: `trojan_war_spoils`
+### 64. Snare: `trojan_war_spoils`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
@@ -5538,7 +6858,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.59
 
 ### END REFINEMENT MANIFEST ###
 
-[703] EXECUTING: testsets/trump_critical_minerals.pl
+[930] EXECUTING: testsets/trump_critical_minerals.pl
 *   **Related Gap/Alert:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Generated Omega:** omega_cut_safety_trojan_war_spoils (conceptual)
 *   **Suggested Resolution Strategy:**
@@ -5561,7 +6881,227 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 53. Snare: `unrequited_love_protocol`
+### 65. Snare: `uk_graduate_visa_salary_threshold`
+
+*   **Claimed Type:** `snare`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for uk_graduate_visa_salary_threshold: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.3),excess_above_floor(0.6)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+    → Institutional beneficiary: uk_government_home_office
+    → Institutional d=0.120
+
+[UKE_DR FEASIBILITY BRIDGE]
+  Recommendation | UKE Status
+  ----------------------------------------------------------------------
+
+Aggregate Magnitude (Kappa) at Tn: 0.55
+
+[PERSPECTIVAL GAP ANALYSIS]
+
+  Analysis for Constraint: uk_graduate_visa_salary_threshold
+    ! ALERT: Extractive "Snare" is masked as functional "Rope".
+    - Individual (Powerless): snare [d=0.900 f(d)=1.36 χ=0.82]
+    - Institutional (Manager): rope [d=0.120 f(d)=-0.04 χ=-0.03 → net benefit]
+    ! MANDATROPHY GAP: delta_chi = 0.85 (high)
+
+[OMEGA GENERATION FROM PERSPECTIVAL GAPS: uk_graduate_visa_salary_threshold]
+  Generated 1 Omega variables from perspectival gaps:
+
+  Ω: omega_extraction_blindness_uk_graduate_visa_salary_threshold (conceptual)
+     Question: Constraint uk_graduate_visa_salary_threshold appears extractive (Snare) to individuals but functional (Rope) to institutions...
+     Source: gap(snare_masked_as_rope,snare,rope)
+
+
+[OMEGA TRIAGE & PRIORITIZATION]
+
+  [critical] 1 omega(s):
+    - omega_extraction_blindness_uk_graduate_visa_salary_threshold (conceptual)
+      Constraint uk_graduate_visa_salary_threshold appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+  [high] 1 omega(s):
+    - omega_extraction_blindness_uk_graduate_visa_salary_threshold (conceptual)
+      Constraint uk_graduate_visa_salary_threshold appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+[OMEGA RESOLUTION SCENARIO GENERATION]
+  Generated 1 resolution scenario(s):
+
+  ┌─ [omega_extraction_blindness_uk_graduate_visa_salary_threshold] CONCEPTUAL CLARIFICATION
+  │  Constraint: uk_graduate_visa_salary_threshold
+  │  Gap: Constraint uk_graduate_visa_salary_threshold appears extractive (Snare) to individuals but functional (Rope) to institutions...
+  │
+  │  CRITICAL: Extraction Masking Detected
+  │  Powerless see: SNARE (extractive trap)
+  │  Institutions see: ROPE (functional rule)
+  │
+  │  RESOLUTION STRATEGY:
+  │  1. Interview affected individuals (N=10+):
+  │     - Who benefits from uk_graduate_visa_salary_threshold?
+  │     - Can you change/exit this constraint?
+  │     - What would happen if you tried?
+  │  2. Interview institutional actors (N=10+):
+  │     - What function does uk_graduate_visa_salary_threshold serve?
+  │     - Who would object to removing it?
+  │     - What alternatives exist?
+  │  3. Document benefit flows:
+  │     - Track who gains vs. who loses from status quo
+  │     - Measure asymmetric benefit distribution
+  │  4. Decision tree:
+  │     IF extraction confirmed → Reclassify as SNARE
+  │     IF functional & fair → Reclassify as ROPE
+  │     IF context-dependent → Add indexical resolution
+  └─
+
+====================================================
+[PASS] testsets/uk_graduate_visa_salary_threshold.pl
+
+### START LLM REFINEMENT MANIFEST: uk_graduate_visa_salary_threshold ###
+
+[PERSPECTIVAL_GAPS]
+  - Constraint "uk_graduate_visa_salary_threshold": Individual sees snare, but Institution sees rope.
+
+[ONTOLOGICAL_MISMATCHES]
+  - None detected.
+
+[UNRESOLVED_OMEGAS]
+  - omega_extraction_blindness_uk_graduate_visa_salary_threshold (conceptual): Constraint uk_graduate_visa_salary_threshold appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+### END REFINEMENT MANIFEST ###
+
+[941] EXECUTING: testsets/uk_help_to_buy_scheme.pl
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** omega_extraction_blindness_uk_graduate_visa_salary_threshold (conceptual)
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from uk_graduate_visa_salary_threshold?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does uk_graduate_visa_salary_threshold serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 66. Snare: `uk_unpaid_care_system`
+
+*   **Claimed Type:** `snare`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for uk_unpaid_care_system: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.3),excess_above_floor(0.7)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+    → Institutional beneficiary: uk_government_and_taxpayers
+    → Institutional d=0.120
+
+[UKE_DR FEASIBILITY BRIDGE]
+  Recommendation | UKE Status
+  ----------------------------------------------------------------------
+
+Aggregate Magnitude (Kappa) at Tn: 0.57
+
+[PERSPECTIVAL GAP ANALYSIS]
+
+  Analysis for Constraint: uk_unpaid_care_system
+    ! ALERT: Extractive "Snare" is masked as functional "Rope".
+    - Individual (Powerless): snare [d=0.900 f(d)=1.36 χ=0.92]
+    - Institutional (Manager): rope [d=0.120 f(d)=-0.04 χ=-0.04 → net benefit]
+    ! MANDATROPHY GAP: delta_chi = 0.96 (high)
+
+[OMEGA GENERATION FROM PERSPECTIVAL GAPS: uk_unpaid_care_system]
+  Generated 1 Omega variables from perspectival gaps:
+
+  Ω: omega_extraction_blindness_uk_unpaid_care_system (conceptual)
+     Question: Constraint uk_unpaid_care_system appears extractive (Snare) to individuals but functional (Rope) to institutions...
+     Source: gap(snare_masked_as_rope,snare,rope)
+
+
+[OMEGA TRIAGE & PRIORITIZATION]
+
+  [critical] 1 omega(s):
+    - omega_extraction_blindness_uk_unpaid_care_system (conceptual)
+      Constraint uk_unpaid_care_system appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+  [high] 1 omega(s):
+    - omega_extraction_blindness_uk_unpaid_care_system (conceptual)
+      Constraint uk_unpaid_care_system appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+[OMEGA RESOLUTION SCENARIO GENERATION]
+  Generated 1 resolution scenario(s):
+
+  ┌─ [omega_extraction_blindness_uk_unpaid_care_system] CONCEPTUAL CLARIFICATION
+  │  Constraint: uk_unpaid_care_system
+  │  Gap: Constraint uk_unpaid_care_system appears extractive (Snare) to individuals but functional (Rope) to institutions...
+  │
+  │  CRITICAL: Extraction Masking Detected
+  │  Powerless see: SNARE (extractive trap)
+  │  Institutions see: ROPE (functional rule)
+  │
+  │  RESOLUTION STRATEGY:
+  │  1. Interview affected individuals (N=10+):
+  │     - Who benefits from uk_unpaid_care_system?
+  │     - Can you change/exit this constraint?
+  │     - What would happen if you tried?
+  │  2. Interview institutional actors (N=10+):
+  │     - What function does uk_unpaid_care_system serve?
+  │     - Who would object to removing it?
+  │     - What alternatives exist?
+  │  3. Document benefit flows:
+  │     - Track who gains vs. who loses from status quo
+  │     - Measure asymmetric benefit distribution
+  │  4. Decision tree:
+  │     IF extraction confirmed → Reclassify as SNARE
+  │     IF functional & fair → Reclassify as ROPE
+  │     IF context-dependent → Add indexical resolution
+  └─
+
+====================================================
+[PASS] testsets/uk_unpaid_care_system.pl
+
+### START LLM REFINEMENT MANIFEST: uk_unpaid_care_system ###
+
+[PERSPECTIVAL_GAPS]
+  - Constraint "uk_unpaid_care_system": Individual sees snare, but Institution sees rope.
+
+[ONTOLOGICAL_MISMATCHES]
+  - None detected.
+
+[UNRESOLVED_OMEGAS]
+  - omega_extraction_blindness_uk_unpaid_care_system (conceptual): Constraint uk_unpaid_care_system appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+### END REFINEMENT MANIFEST ###
+
+[945] EXECUTING: testsets/ukr_mobilization.pl
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** omega_extraction_blindness_uk_unpaid_care_system (conceptual)
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from uk_unpaid_care_system?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does uk_unpaid_care_system serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 67. Snare: `unrequited_love_protocol`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
@@ -5667,7 +7207,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.54
 
 ### END REFINEMENT MANIFEST ###
 
-[731] EXECUTING: testsets/us_employer_health_insurance.pl
+[970] EXECUTING: testsets/unrwa_eviction_order.pl
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** omega_extraction_blindness_unrequited_love_protocol (conceptual)
 *   **Suggested Resolution Strategy:**
@@ -5684,7 +7224,547 @@ Aggregate Magnitude (Kappa) at Tn: 0.54
 
 ---
 
-### 54. Snare: `xi_mao_ideological_centralization`
+### 68. Snare: `unrwa_eviction_order`
+
+*   **Claimed Type:** `snare`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for unrwa_eviction_order: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.25),excess_above_floor(0.7)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+    → Institutional beneficiary: israeli_land_authority
+    → Institutional d=0.120
+
+[UKE_DR FEASIBILITY BRIDGE]
+  Recommendation | UKE Status
+  ----------------------------------------------------------------------
+
+Aggregate Magnitude (Kappa) at Tn: 0.56
+
+[PERSPECTIVAL GAP ANALYSIS]
+
+  Analysis for Constraint: unrwa_eviction_order
+    ! ALERT: Extractive "Snare" is masked as functional "Rope".
+    - Individual (Powerless): snare [d=0.900 f(d)=1.36 χ=0.82]
+    - Institutional (Manager): rope [d=0.120 f(d)=-0.04 χ=-0.03 → net benefit]
+    ! MANDATROPHY GAP: delta_chi = 0.85 (high)
+
+[OMEGA GENERATION FROM PERSPECTIVAL GAPS: unrwa_eviction_order]
+  Generated 1 Omega variables from perspectival gaps:
+
+  Ω: omega_extraction_blindness_unrwa_eviction_order (conceptual)
+     Question: Constraint unrwa_eviction_order appears extractive (Snare) to individuals but functional (Rope) to institutions...
+     Source: gap(snare_masked_as_rope,snare,rope)
+
+
+[OMEGA TRIAGE & PRIORITIZATION]
+
+  [critical] 1 omega(s):
+    - omega_extraction_blindness_unrwa_eviction_order (conceptual)
+      Constraint unrwa_eviction_order appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+  [high] 1 omega(s):
+    - omega_extraction_blindness_unrwa_eviction_order (conceptual)
+      Constraint unrwa_eviction_order appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+[OMEGA RESOLUTION SCENARIO GENERATION]
+  Generated 1 resolution scenario(s):
+
+  ┌─ [omega_extraction_blindness_unrwa_eviction_order] CONCEPTUAL CLARIFICATION
+  │  Constraint: unrwa_eviction_order
+  │  Gap: Constraint unrwa_eviction_order appears extractive (Snare) to individuals but functional (Rope) to institutions...
+  │
+  │  CRITICAL: Extraction Masking Detected
+  │  Powerless see: SNARE (extractive trap)
+  │  Institutions see: ROPE (functional rule)
+  │
+  │  RESOLUTION STRATEGY:
+  │  1. Interview affected individuals (N=10+):
+  │     - Who benefits from unrwa_eviction_order?
+  │     - Can you change/exit this constraint?
+  │     - What would happen if you tried?
+  │  2. Interview institutional actors (N=10+):
+  │     - What function does unrwa_eviction_order serve?
+  │     - Who would object to removing it?
+  │     - What alternatives exist?
+  │  3. Document benefit flows:
+  │     - Track who gains vs. who loses from status quo
+  │     - Measure asymmetric benefit distribution
+  │  4. Decision tree:
+  │     IF extraction confirmed → Reclassify as SNARE
+  │     IF functional & fair → Reclassify as ROPE
+  │     IF context-dependent → Add indexical resolution
+  └─
+
+====================================================
+[PASS] testsets/unrwa_eviction_order.pl
+
+### START LLM REFINEMENT MANIFEST: unrwa_eviction_order ###
+
+[PERSPECTIVAL_GAPS]
+  - Constraint "unrwa_eviction_order": Individual sees snare, but Institution sees rope.
+
+[ONTOLOGICAL_MISMATCHES]
+  - None detected.
+
+[UNRESOLVED_OMEGAS]
+  - omega_extraction_blindness_unrwa_eviction_order (conceptual): Constraint unrwa_eviction_order appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+### END REFINEMENT MANIFEST ###
+
+[971] EXECUTING: testsets/us_arms_transfer_policy.pl
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** omega_extraction_blindness_unrwa_eviction_order (conceptual)
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from unrwa_eviction_order?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does unrwa_eviction_order serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 69. Snare: `us_embargo_cuba`
+
+*   **Claimed Type:** `snare`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+*   **Structural Signature Analysis:** CONSTRUCTED HIGH-EXTRACTION signature for us_embargo_cuba: Enforcement present (suppression=0.75, resistance=0.50) with high extraction (0.65). This is an extraction mechanism that metrics failed to classify as snare.
+
+[UKE_DR FEASIBILITY BRIDGE]
+  Recommendation | UKE Status
+  ----------------------------------------------------------------------
+
+Aggregate Magnitude (Kappa) at Tn: 0.54
+
+[PERSPECTIVAL GAP ANALYSIS]
+
+  Analysis for Constraint: us_embargo_cuba
+    - Individual (Powerless): snare [d=0.500 f(d)=0.65 χ=0.34]
+    - Institutional (Manager): tangled_rope [d=0.120 f(d)=-0.04 χ=-0.03 → net benefit]
+    ! MANDATROPHY GAP: delta_chi = 0.37 (moderate)
+
+[OMEGA GENERATION FROM PERSPECTIVAL GAPS: us_embargo_cuba]
+  Generated 3 Omega variables from perspectival gaps:
+
+  Ω: omega_perspectival_us_embargo_cuba (conceptual)
+     Question: Constraint us_embargo_cuba appears as snare to individuals but tangled_rope to institutions...
+     Source: gap(general_type_mismatch,snare,tangled_rope)
+
+  Ω: omega_perspectival_us_embargo_cuba (conceptual)
+     Question: Constraint us_embargo_cuba appears as snare to individuals but tangled_rope to institutions...
+     Source: gap(general_type_mismatch,snare,tangled_rope)
+
+  Ω: omega_perspectival_us_embargo_cuba (conceptual)
+     Question: Constraint us_embargo_cuba appears as snare to individuals but tangled_rope to institutions...
+     Source: gap(general_type_mismatch,snare,tangled_rope)
+
+
+[OMEGA TRIAGE & PRIORITIZATION]
+
+  [critical] 1 omega(s):
+    - omega_perspectival_us_embargo_cuba (conceptual)
+      Constraint us_embargo_cuba appears as snare to individuals but tangled_rope to institutions...
+
+  [high] 1 omega(s):
+    - omega_perspectival_us_embargo_cuba (conceptual)
+      Constraint us_embargo_cuba appears as snare to individuals but tangled_rope to institutions...
+
+[OMEGA RESOLUTION SCENARIO GENERATION]
+  Generated 1 resolution scenario(s):
+
+  ┌─ [omega_perspectival_us_embargo_cuba] CONCEPTUAL CLARIFICATION
+  │  Constraint: us_embargo_cuba
+  │  Gap: Constraint us_embargo_cuba appears as snare to individuals but tangled_rope to institutions...
+  │
+  │  RESOLUTION STRATEGY:
+  │  1. Map stakeholder perspectives:
+  │     - Document how different actors perceive us_embargo_cuba
+  │     - Identify source of divergence
+  │  2. Gather evidence:
+  │     - Empirical metrics (suppression, extraction, resistance)
+  │     - Historical behavior patterns
+  │  3. Create indexical classification:
+  │     - From powerless context: classify as X
+  │     - From institutional context: classify as Y
+  │     - Add explicit context annotations
+  └─
+
+====================================================
+[PASS] testsets/us_embargo_cuba.pl
+
+### START LLM REFINEMENT MANIFEST: us_embargo_cuba ###
+
+[PERSPECTIVAL_GAPS]
+  - Constraint "us_embargo_cuba": Individual sees snare, but Institution sees tangled_rope.
+
+[ONTOLOGICAL_MISMATCHES]
+  - None detected.
+
+[UNRESOLVED_OMEGAS]
+  - omega_perspectival_us_embargo_cuba (conceptual): Constraint us_embargo_cuba appears as snare to individuals but tangled_rope to institutions...
+
+### END REFINEMENT MANIFEST ###
+
+[976] EXECUTING: testsets/us_employer_health_insurance.pl
+*   **Generated Omega:** omega_perspectival_us_embargo_cuba (conceptual)
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive us_embargo_cuba
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 70. Snare: `us_isolationism_policy_2026`
+
+*   **Claimed Type:** `snare`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for us_isolationism_policy_2026: Appears to be rope (indexed_rope_classification) but fails 4 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.33),scope_variant([snare,tangled_rope]),excess_above_floor(0.5800000000000001),nonsensical_coupling(0.3333333333333333)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+    → Institutional beneficiary: us_executive_branch
+    → Institutional d=0.120
+
+[UKE_DR FEASIBILITY BRIDGE]
+  Recommendation | UKE Status
+  ----------------------------------------------------------------------
+
+Aggregate Magnitude (Kappa) at Tn: 0.54
+
+[PERSPECTIVAL GAP ANALYSIS]
+
+  Analysis for Constraint: us_isolationism_policy_2026
+    ! ALERT: Extractive "Snare" is masked as functional "Rope".
+    - Individual (Powerless): snare [d=0.900 f(d)=1.36 χ=0.74]
+    - Institutional (Manager): rope [d=0.120 f(d)=-0.04 χ=-0.03 → net benefit]
+    ! MANDATROPHY GAP: delta_chi = 0.77 (high)
+
+[OMEGA GENERATION FROM PERSPECTIVAL GAPS: us_isolationism_policy_2026]
+  Generated 1 Omega variables from perspectival gaps:
+
+  Ω: omega_extraction_blindness_us_isolationism_policy_2026 (conceptual)
+     Question: Constraint us_isolationism_policy_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+     Source: gap(snare_masked_as_rope,snare,rope)
+
+
+[OMEGA TRIAGE & PRIORITIZATION]
+
+  [critical] 1 omega(s):
+    - omega_extraction_blindness_us_isolationism_policy_2026 (conceptual)
+      Constraint us_isolationism_policy_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+  [high] 1 omega(s):
+    - omega_extraction_blindness_us_isolationism_policy_2026 (conceptual)
+      Constraint us_isolationism_policy_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+[OMEGA RESOLUTION SCENARIO GENERATION]
+  Generated 1 resolution scenario(s):
+
+  ┌─ [omega_extraction_blindness_us_isolationism_policy_2026] CONCEPTUAL CLARIFICATION
+  │  Constraint: us_isolationism_policy_2026
+  │  Gap: Constraint us_isolationism_policy_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+  │
+  │  CRITICAL: Extraction Masking Detected
+  │  Powerless see: SNARE (extractive trap)
+  │  Institutions see: ROPE (functional rule)
+  │
+  │  RESOLUTION STRATEGY:
+  │  1. Interview affected individuals (N=10+):
+  │     - Who benefits from us_isolationism_policy_2026?
+  │     - Can you change/exit this constraint?
+  │     - What would happen if you tried?
+  │  2. Interview institutional actors (N=10+):
+  │     - What function does us_isolationism_policy_2026 serve?
+  │     - Who would object to removing it?
+  │     - What alternatives exist?
+  │  3. Document benefit flows:
+  │     - Track who gains vs. who loses from status quo
+  │     - Measure asymmetric benefit distribution
+  │  4. Decision tree:
+  │     IF extraction confirmed → Reclassify as SNARE
+  │     IF functional & fair → Reclassify as ROPE
+  │     IF context-dependent → Add indexical resolution
+  └─
+
+====================================================
+[PASS] testsets/us_isolationism_policy_2026.pl
+
+### START LLM REFINEMENT MANIFEST: us_isolationism_policy_2026 ###
+
+[PERSPECTIVAL_GAPS]
+  - Constraint "us_isolationism_policy_2026": Individual sees snare, but Institution sees rope.
+
+[ONTOLOGICAL_MISMATCHES]
+  - None detected.
+
+[UNRESOLVED_OMEGAS]
+  - omega_extraction_blindness_us_isolationism_policy_2026 (conceptual): Constraint us_isolationism_policy_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+### END REFINEMENT MANIFEST ###
+
+[980] EXECUTING: testsets/us_israel_faa_502b_nonenforcement.pl
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** omega_extraction_blindness_us_isolationism_policy_2026 (conceptual)
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from us_isolationism_policy_2026?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does us_isolationism_policy_2026 serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 71. Snare: `us_vaccine_recommendation_dismantling_2026`
+
+*   **Claimed Type:** `snare`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for us_vaccine_recommendation_dismantling_2026: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.25),excess_above_floor(0.7)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+    → Institutional beneficiary: anti_regulation_advocates
+    → Institutional d=0.120
+
+[UKE_DR FEASIBILITY BRIDGE]
+  Recommendation | UKE Status
+  ----------------------------------------------------------------------
+
+Aggregate Magnitude (Kappa) at Tn: 0.55
+
+[PERSPECTIVAL GAP ANALYSIS]
+
+  Analysis for Constraint: us_vaccine_recommendation_dismantling_2026
+    ! ALERT: Extractive "Snare" is masked as functional "Rope".
+    - Individual (Powerless): snare [d=0.900 f(d)=1.36 χ=0.82]
+    - Institutional (Manager): rope [d=0.120 f(d)=-0.04 χ=-0.03 → net benefit]
+    ! MANDATROPHY GAP: delta_chi = 0.85 (high)
+
+[OMEGA GENERATION FROM PERSPECTIVAL GAPS: us_vaccine_recommendation_dismantling_2026]
+  Generated 1 Omega variables from perspectival gaps:
+
+  Ω: omega_extraction_blindness_us_vaccine_recommendation_dismantling_2026 (conceptual)
+     Question: Constraint us_vaccine_recommendation_dismantling_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+     Source: gap(snare_masked_as_rope,snare,rope)
+
+
+[OMEGA TRIAGE & PRIORITIZATION]
+
+  [critical] 1 omega(s):
+    - omega_extraction_blindness_us_vaccine_recommendation_dismantling_2026 (conceptual)
+      Constraint us_vaccine_recommendation_dismantling_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+  [high] 1 omega(s):
+    - omega_extraction_blindness_us_vaccine_recommendation_dismantling_2026 (conceptual)
+      Constraint us_vaccine_recommendation_dismantling_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+[OMEGA RESOLUTION SCENARIO GENERATION]
+  Generated 1 resolution scenario(s):
+
+  ┌─ [omega_extraction_blindness_us_vaccine_recommendation_dismantling_2026] CONCEPTUAL CLARIFICATION
+  │  Constraint: us_vaccine_recommendation_dismantling_2026
+  │  Gap: Constraint us_vaccine_recommendation_dismantling_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+  │
+  │  CRITICAL: Extraction Masking Detected
+  │  Powerless see: SNARE (extractive trap)
+  │  Institutions see: ROPE (functional rule)
+  │
+  │  RESOLUTION STRATEGY:
+  │  1. Interview affected individuals (N=10+):
+  │     - Who benefits from us_vaccine_recommendation_dismantling_2026?
+  │     - Can you change/exit this constraint?
+  │     - What would happen if you tried?
+  │  2. Interview institutional actors (N=10+):
+  │     - What function does us_vaccine_recommendation_dismantling_2026 serve?
+  │     - Who would object to removing it?
+  │     - What alternatives exist?
+  │  3. Document benefit flows:
+  │     - Track who gains vs. who loses from status quo
+  │     - Measure asymmetric benefit distribution
+  │  4. Decision tree:
+  │     IF extraction confirmed → Reclassify as SNARE
+  │     IF functional & fair → Reclassify as ROPE
+  │     IF context-dependent → Add indexical resolution
+  └─
+
+====================================================
+[PASS] testsets/us_vaccine_recommendation_dismantling_2026.pl
+
+### START LLM REFINEMENT MANIFEST: us_vaccine_recommendation_dismantling_2026 ###
+
+[PERSPECTIVAL_GAPS]
+  - Constraint "us_vaccine_recommendation_dismantling_2026": Individual sees snare, but Institution sees rope.
+
+[ONTOLOGICAL_MISMATCHES]
+  - None detected.
+
+[UNRESOLVED_OMEGAS]
+  - omega_extraction_blindness_us_vaccine_recommendation_dismantling_2026 (conceptual): Constraint us_vaccine_recommendation_dismantling_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+### END REFINEMENT MANIFEST ###
+
+[992] EXECUTING: testsets/us_venezuela_blockade.pl
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** omega_extraction_blindness_us_vaccine_recommendation_dismantling_2026 (conceptual)
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from us_vaccine_recommendation_dismantling_2026?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does us_vaccine_recommendation_dismantling_2026 serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 72. Snare: `us_venezuela_blockade`
+
+*   **Claimed Type:** `snare`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for us_venezuela_blockade: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.33),excess_above_floor(0.75)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+    → Institutional beneficiary: us_administration
+    → Institutional d=0.120
+
+[UKE_DR FEASIBILITY BRIDGE]
+  Recommendation | UKE Status
+  ----------------------------------------------------------------------
+
+Aggregate Magnitude (Kappa) at Tn: 0.58
+
+[PERSPECTIVAL GAP ANALYSIS]
+
+  Analysis for Constraint: us_venezuela_blockade
+    ! ALERT: Extractive "Snare" is masked as functional "Rope".
+    - Individual (Powerless): snare [d=0.900 f(d)=1.36 χ=0.92]
+    - Institutional (Manager): rope [d=0.120 f(d)=-0.04 χ=-0.04 → net benefit]
+    ! MANDATROPHY GAP: delta_chi = 0.96 (high)
+
+[OMEGA GENERATION FROM PERSPECTIVAL GAPS: us_venezuela_blockade]
+  Generated 1 Omega variables from perspectival gaps:
+
+  Ω: omega_extraction_blindness_us_venezuela_blockade (conceptual)
+     Question: Constraint us_venezuela_blockade appears extractive (Snare) to individuals but functional (Rope) to institutions...
+     Source: gap(snare_masked_as_rope,snare,rope)
+
+
+[OMEGA TRIAGE & PRIORITIZATION]
+
+  [critical] 1 omega(s):
+    - omega_extraction_blindness_us_venezuela_blockade (conceptual)
+      Constraint us_venezuela_blockade appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+  [high] 1 omega(s):
+    - omega_extraction_blindness_us_venezuela_blockade (conceptual)
+      Constraint us_venezuela_blockade appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+[OMEGA RESOLUTION SCENARIO GENERATION]
+  Generated 1 resolution scenario(s):
+
+  ┌─ [omega_extraction_blindness_us_venezuela_blockade] CONCEPTUAL CLARIFICATION
+  │  Constraint: us_venezuela_blockade
+  │  Gap: Constraint us_venezuela_blockade appears extractive (Snare) to individuals but functional (Rope) to institutions...
+  │
+  │  CRITICAL: Extraction Masking Detected
+  │  Powerless see: SNARE (extractive trap)
+  │  Institutions see: ROPE (functional rule)
+  │
+  │  RESOLUTION STRATEGY:
+  │  1. Interview affected individuals (N=10+):
+  │     - Who benefits from us_venezuela_blockade?
+  │     - Can you change/exit this constraint?
+  │     - What would happen if you tried?
+  │  2. Interview institutional actors (N=10+):
+  │     - What function does us_venezuela_blockade serve?
+  │     - Who would object to removing it?
+  │     - What alternatives exist?
+  │  3. Document benefit flows:
+  │     - Track who gains vs. who loses from status quo
+  │     - Measure asymmetric benefit distribution
+  │  4. Decision tree:
+  │     IF extraction confirmed → Reclassify as SNARE
+  │     IF functional & fair → Reclassify as ROPE
+  │     IF context-dependent → Add indexical resolution
+  └─
+
+====================================================
+[PASS] testsets/us_venezuela_blockade.pl
+
+### START LLM REFINEMENT MANIFEST: us_venezuela_blockade ###
+
+[PERSPECTIVAL_GAPS]
+  - Constraint "us_venezuela_blockade": Individual sees snare, but Institution sees rope.
+
+[ONTOLOGICAL_MISMATCHES]
+  - None detected.
+
+[UNRESOLVED_OMEGAS]
+  - omega_extraction_blindness_us_venezuela_blockade (conceptual): Constraint us_venezuela_blockade appears extractive (Snare) to individuals but functional (Rope) to institutions...
+
+### END REFINEMENT MANIFEST ###
+
+[993] EXECUTING: testsets/us_venezuela_oil_pressure.pl
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** omega_extraction_blindness_us_venezuela_blockade (conceptual)
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from us_venezuela_blockade?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does us_venezuela_blockade serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 73. Snare: `xi_mao_ideological_centralization`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
@@ -5770,7 +7850,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.56
 
 ### END REFINEMENT MANIFEST ###
 
-[752] EXECUTING: testsets/zipfs_law.pl
+[1020] EXECUTING: testsets/y_combinator.pl
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** omega_extraction_blindness_xi_mao_ideological_centralization (conceptual)
 *   **Suggested Resolution Strategy:**
@@ -5794,7 +7874,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 55. Snare: `zombie_reasoning_2026`
+### 74. Snare: `zombie_reasoning_2026`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
@@ -5883,7 +7963,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.55
 ==================================================
            TEST SUITE SUMMARY
 ==================================================
-Passed: 753
+Passed: 1025
 Failed: 0
 ==================================================
 
@@ -5930,7 +8010,7 @@ Results:
 
 ====================================================
 ------------------------------------------
-Test suite completed at: Fri Feb 13 13:26:20 CST 2026
+Test suite completed at: Sat Feb 14 12:40:25 CST 2026
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** omega_extraction_blindness_zombie_reasoning_2026 (conceptual)
 *   **Suggested Resolution Strategy:**

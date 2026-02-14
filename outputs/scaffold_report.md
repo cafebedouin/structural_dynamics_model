@@ -1,6 +1,6 @@
 # Scaffold Diagnostic Report
 
-**Total Unique Scaffolds Found:** 20
+**Total Unique Scaffolds Found:** 25
 
 ---
 
@@ -80,7 +80,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.47
 
 ### END REFINEMENT MANIFEST ###
 
-[35] EXECUTING: testsets/altruistic_misery_paradox_2026.pl
+[43] EXECUTING: testsets/altruistic_misery_paradox_2026.pl
 *   **Generated Omega:** omega_perspectival_alternative_sovereignty_scaffold (conceptual)
 *   **Suggested Resolution Strategy:**
     ```
@@ -184,7 +184,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.54
 
 ### END REFINEMENT MANIFEST ###
 
-[46] EXECUTING: testsets/artificial_snow_2026.pl
+[61] EXECUTING: testsets/artificial_snow_2026.pl
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** omega_extraction_blindness_artificial_scarcity_scaffold (conceptual)
 *   **Suggested Resolution Strategy:**
@@ -208,7 +208,58 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 3. Scaffold: `canada_goose_realignment_2026`
+### 3. Scaffold: `asean_ceasefire_2011`
+
+*   **Claimed Type:** `scaffold`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+*   **Structural Signature Analysis:** COUPLING-INVARIANT ROPE signature for asean_ceasefire_2011: Certified true coordination mechanism. Boltzmann compliance=compliant(0), scope invariance=invariant, excess extraction=0.050. Passes all structural purity tests — this is genuine coordination, not low-extraction construction.
+
+[UKE_DR FEASIBILITY BRIDGE]
+  Recommendation | UKE Status
+  ----------------------------------------------------------------------
+
+Aggregate Magnitude (Kappa) at Tn: 0.46
+
+[PERSPECTIVAL GAP ANALYSIS]
+
+  Analysis for Constraint: asean_ceasefire_2011
+    - Individual (Powerless): scaffold [d=0.900 f(d)=1.36 χ=0.16]
+    - Institutional (Manager): scaffold [d=0.120 f(d)=-0.04 χ=-0.01 → net benefit]
+
+[OMEGA GENERATION FROM PERSPECTIVAL GAPS: asean_ceasefire_2011]
+  No perspectival gaps detected requiring Ω tracking.
+
+[OMEGA TRIAGE & PRIORITIZATION]
+  No omegas to triage.
+
+[OMEGA RESOLUTION SCENARIO GENERATION]
+  No unresolved Omegas. System is epistemically complete.
+====================================================
+[PASS] testsets/asean_ceasefire_2011.pl
+
+### START LLM REFINEMENT MANIFEST: asean_ceasefire_2011 ###
+
+[PERSPECTIVAL_GAPS]
+
+[ONTOLOGICAL_MISMATCHES]
+  - None detected.
+
+[UNRESOLVED_OMEGAS]
+  - None detected.
+
+### END REFINEMENT MANIFEST ###
+
+[64] EXECUTING: testsets/asshole_filter_2015.pl
+*   **Generated Omega:** N/A
+*   **Suggested Resolution Strategy:**
+    ```
+
+    ```
+
+---
+
+### 4. Scaffold: `canada_goose_realignment_2026`
 
 *   **Claimed Type:** `scaffold`
 *   **Severity:** `N/A`
@@ -287,7 +338,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.44
 
 ### END REFINEMENT MANIFEST ###
 
-[101] EXECUTING: testsets/canal_panama_influence.pl
+[126] EXECUTING: testsets/canal_panama_influence.pl
 *   **Related Gap/Alert:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Generated Omega:** omega_cut_safety_canada_goose_realignment_2026 (conceptual)
 *   **Suggested Resolution Strategy:**
@@ -310,7 +361,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 4. Scaffold: `church_turing_thesis`
+### 5. Scaffold: `church_turing_thesis`
 
 *   **Claimed Type:** `scaffold`
 *   **Severity:** `N/A`
@@ -386,7 +437,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.60
 
 ### END REFINEMENT MANIFEST ###
 
-[124] EXECUTING: testsets/cia_fbi_legal_wall.pl
+[158] EXECUTING: testsets/cia_fbi_legal_wall.pl
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
     ```
@@ -404,7 +455,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.60
 
 ---
 
-### 5. Scaffold: `coffee_cardiovascular_2026`
+### 6. Scaffold: `coffee_cardiovascular_2026`
 
 *   **Claimed Type:** `scaffold`
 *   **Severity:** `N/A`
@@ -490,7 +541,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.48
 
 ### END REFINEMENT MANIFEST ###
 
-[139] EXECUTING: testsets/cognitive_bicycle_scaffold.pl
+[178] EXECUTING: testsets/cognac_geopolitical_risk.pl
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** omega_extraction_blindness_coffee_cardiovascular_2026 (conceptual)
 *   **Suggested Resolution Strategy:**
@@ -514,7 +565,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 6. Scaffold: `elencher_identity_transformation`
+### 7. Scaffold: `elencher_identity_transformation`
 
 *   **Claimed Type:** `scaffold`
 *   **Severity:** `N/A`
@@ -639,7 +690,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.45
 
 ### END REFINEMENT MANIFEST ###
 
-[216] EXECUTING: testsets/elite_capture_2026.pl
+[274] EXECUTING: testsets/elite_capture_2026.pl
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** omega_extraction_blindness_elencher_identity_transformation (conceptual)
 *   **Suggested Resolution Strategy:**
@@ -656,7 +707,101 @@ Aggregate Magnitude (Kappa) at Tn: 0.45
 
 ---
 
-### 7. Scaffold: `euler_characteristic_topology`
+### 8. Scaffold: `erasmus_rejoining_scaffold`
+
+*   **Claimed Type:** `scaffold`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for erasmus_rejoining_scaffold: Appears to be rope (indexed_rope_classification) but fails 4 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.3),scope_variant([rope,scaffold,unknown]),excess_above_floor(0.13000000000000003),nonsensical_coupling(0.5)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+    → Institutional beneficiary: uk_students_and_universities
+    → Institutional d=0.120
+
+[UKE_DR FEASIBILITY BRIDGE]
+  Recommendation | UKE Status
+  ----------------------------------------------------------------------
+
+Aggregate Magnitude (Kappa) at Tn: 0.45
+
+[PERSPECTIVAL GAP ANALYSIS]
+
+  Analysis for Constraint: erasmus_rejoining_scaffold
+    - Individual (Powerless): tangled_rope [d=0.900 f(d)=1.36 χ=0.30]
+    - Institutional (Manager): scaffold [d=0.120 f(d)=-0.04 χ=-0.01 → net benefit]
+    ! MANDATROPHY GAP: delta_chi = 0.32 (moderate)
+
+[OMEGA GENERATION FROM PERSPECTIVAL GAPS: erasmus_rejoining_scaffold]
+  Generated 2 Omega variables from perspectival gaps:
+
+  Ω: omega_perspectival_erasmus_rejoining_scaffold (conceptual)
+     Question: Constraint erasmus_rejoining_scaffold appears as tangled_rope to individuals but scaffold to institutions...
+     Source: gap(general_type_mismatch,tangled_rope,scaffold)
+
+  Ω: omega_perspectival_erasmus_rejoining_scaffold (conceptual)
+     Question: Constraint erasmus_rejoining_scaffold appears as tangled_rope to individuals but rope to institutions...
+     Source: gap(general_type_mismatch,tangled_rope,rope)
+
+
+[OMEGA TRIAGE & PRIORITIZATION]
+
+  [high] 1 omega(s):
+    - omega_perspectival_erasmus_rejoining_scaffold (conceptual)
+      Constraint erasmus_rejoining_scaffold appears as tangled_rope to individuals but scaffold to institutions...
+
+[OMEGA RESOLUTION SCENARIO GENERATION]
+  Generated 1 resolution scenario(s):
+
+  ┌─ [omega_perspectival_erasmus_rejoining_scaffold] CONCEPTUAL CLARIFICATION
+  │  Constraint: erasmus_rejoining_scaffold
+  │  Gap: Constraint erasmus_rejoining_scaffold appears as tangled_rope to individuals but scaffold to institutions...
+  │
+  │  RESOLUTION STRATEGY:
+  │  1. Map stakeholder perspectives:
+  │     - Document how different actors perceive erasmus_rejoining_scaffold
+  │     - Identify source of divergence
+  │  2. Gather evidence:
+  │     - Empirical metrics (suppression, extraction, resistance)
+  │     - Historical behavior patterns
+  │  3. Create indexical classification:
+  │     - From powerless context: classify as X
+  │     - From institutional context: classify as Y
+  │     - Add explicit context annotations
+  └─
+
+====================================================
+[PASS] testsets/erasmus_rejoining_scaffold.pl
+
+### START LLM REFINEMENT MANIFEST: erasmus_rejoining_scaffold ###
+
+[PERSPECTIVAL_GAPS]
+  - Constraint "erasmus_rejoining_scaffold": Individual sees tangled_rope, but Institution sees scaffold.
+
+[ONTOLOGICAL_MISMATCHES]
+  - None detected.
+
+[UNRESOLVED_OMEGAS]
+  - omega_perspectival_erasmus_rejoining_scaffold (conceptual): Constraint erasmus_rejoining_scaffold appears as tangled_rope to individuals but scaffold to institutions...
+
+### END REFINEMENT MANIFEST ###
+
+[297] EXECUTING: testsets/ergo_autolykos_asic_resistance.pl
+*   **Generated Omega:** omega_perspectival_erasmus_rejoining_scaffold (conceptual)
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive erasmus_rejoining_scaffold
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 9. Scaffold: `euler_characteristic_topology`
 
 *   **Claimed Type:** `scaffold`
 *   **Severity:** `N/A`
@@ -732,7 +877,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.60
 
 ### END REFINEMENT MANIFEST ###
 
-[248] EXECUTING: testsets/eurozone_fragmentation_2026.pl
+[318] EXECUTING: testsets/eurozone_fragmentation_2026.pl
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
     ```
@@ -750,7 +895,60 @@ Aggregate Magnitude (Kappa) at Tn: 0.60
 
 ---
 
-### 8. Scaffold: `fundamental_theorem_of_algebra`
+### 10. Scaffold: `finnish_ubi_experiment`
+
+*   **Claimed Type:** `scaffold`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for finnish_ubi_experiment: Appears to be rope (indexed_rope_classification) but fails 3 Boltzmann structural test(s): [boltzmann_non_compliant(0.375,0.3),excess_above_floor(0.05000000000000002),nonsensical_coupling(0.16666666666666666)]. Coupling score=0.375. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+    → Institutional beneficiary: kela_policymakers
+    → Institutional d=0.120
+
+[UKE_DR FEASIBILITY BRIDGE]
+  Recommendation | UKE Status
+  ----------------------------------------------------------------------
+
+Aggregate Magnitude (Kappa) at Tn: 0.47
+
+[PERSPECTIVAL GAP ANALYSIS]
+
+  Analysis for Constraint: finnish_ubi_experiment
+    - Individual (Powerless): rope [d=0.900 f(d)=1.36 χ=0.22]
+    - Institutional (Manager): rope [d=0.120 f(d)=-0.04 χ=-0.01 → net benefit]
+
+[OMEGA GENERATION FROM PERSPECTIVAL GAPS: finnish_ubi_experiment]
+  No perspectival gaps detected requiring Ω tracking.
+
+[OMEGA TRIAGE & PRIORITIZATION]
+  No omegas to triage.
+
+[OMEGA RESOLUTION SCENARIO GENERATION]
+  No unresolved Omegas. System is epistemically complete.
+====================================================
+[PASS] testsets/finnish_ubi_experiment.pl
+
+### START LLM REFINEMENT MANIFEST: finnish_ubi_experiment ###
+
+[PERSPECTIVAL_GAPS]
+
+[ONTOLOGICAL_MISMATCHES]
+  - None detected.
+
+[UNRESOLVED_OMEGAS]
+  - None detected.
+
+### END REFINEMENT MANIFEST ###
+
+[349] EXECUTING: testsets/fiscal_dominance_trap.pl
+*   **Generated Omega:** N/A
+*   **Suggested Resolution Strategy:**
+    ```
+
+    ```
+
+---
+
+### 11. Scaffold: `fundamental_theorem_of_algebra`
 
 *   **Claimed Type:** `scaffold`
 *   **Severity:** `N/A`
@@ -826,7 +1024,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.60
 
 ### END REFINEMENT MANIFEST ###
 
-[286] EXECUTING: testsets/future_dsm_integration_2026.pl
+[368] EXECUTING: testsets/fundamental_theorem_of_calculus.pl
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
     ```
@@ -844,7 +1042,109 @@ Aggregate Magnitude (Kappa) at Tn: 0.60
 
 ---
 
-### 9. Scaffold: `isa_education_scaffold`
+### 12. Scaffold: `ice_memory_archive`
+
+*   **Claimed Type:** `scaffold`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+*   **Structural Signature Analysis:** COUPLING-INVARIANT ROPE signature for ice_memory_archive: Certified true coordination mechanism. Boltzmann compliance=compliant(0), scope invariance=invariant, excess extraction=0.000. Passes all structural purity tests — this is genuine coordination, not low-extraction construction.
+
+[UKE_DR FEASIBILITY BRIDGE]
+  Recommendation | UKE Status
+  ----------------------------------------------------------------------
+
+Aggregate Magnitude (Kappa) at Tn: 0.58
+
+[PERSPECTIVAL GAP ANALYSIS]
+
+  Analysis for Constraint: ice_memory_archive
+    ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
+    - Individual (Powerless): mountain [d=0.900 f(d)=1.36 χ=0.11]
+    - Institutional (Manager): rope [d=0.120 f(d)=-0.04 χ=-0.00 → net benefit]
+    ! MANDATROPHY GAP: delta_chi = 0.11 (moderate)
+
+[OMEGA GENERATION FROM PERSPECTIVAL GAPS: ice_memory_archive]
+  Generated 1 Omega variables from perspectival gaps:
+
+  Ω: omega_cut_safety_ice_memory_archive (conceptual)
+     Question: Constraint ice_memory_archive appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
+     Source: gap(mountain_coordination_confusion,mountain,rope)
+
+
+[OMEGA TRIAGE & PRIORITIZATION]
+
+  [high] 1 omega(s):
+    - omega_cut_safety_ice_memory_archive (conceptual)
+      Constraint ice_memory_archive appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
+
+[OMEGA RESOLUTION SCENARIO GENERATION]
+  Generated 1 resolution scenario(s):
+
+  ┌─ [omega_cut_safety_ice_memory_archive] CONCEPTUAL CLARIFICATION
+  │  Constraint: ice_memory_archive
+  │  Gap: Constraint ice_memory_archive appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
+  │
+  │  HIGH RISK: Coordination Cut Safety
+  │  Powerless see: MOUNTAIN (unchangeable, survival-critical)
+  │  Institutions see: ROPE (optional, changeable)
+  │
+  │  RESOLUTION STRATEGY:
+  │  1. SAFETY ASSESSMENT (DO NOT SKIP):
+  │     - If institutions cut ice_memory_archive, do individuals have alternatives?
+  │     - Is this their only survival mechanism?
+  │     - What scaffolding exists for transition?
+  │  2. Test institutional perception:
+  │     - Can institutions unilaterally change this?
+  │     - Do they understand downstream impacts?
+  │     - Is their "optional" view empirically accurate?
+  │  3. Decision tree:
+  │     IF truly unchangeable → Correct institutional view to MOUNTAIN
+  │     IF changeable + safe alternatives → Correct powerless view to ROPE
+  │     IF changeable + NO alternatives → ADD SCAFFOLD before any change
+  │     IF uncertainty → HALT changes until resolved
+  │  4. CRITICAL: Never proceed with changes until safety verified
+  └─
+
+====================================================
+[PASS] testsets/ice_memory_archive.pl
+
+### START LLM REFINEMENT MANIFEST: ice_memory_archive ###
+
+[PERSPECTIVAL_GAPS]
+  - Constraint "ice_memory_archive": Individual sees mountain, but Institution sees rope.
+
+[ONTOLOGICAL_MISMATCHES]
+  - None detected.
+
+[UNRESOLVED_OMEGAS]
+  - omega_cut_safety_ice_memory_archive (conceptual): Constraint ice_memory_archive appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
+
+### END REFINEMENT MANIFEST ###
+
+[466] EXECUTING: testsets/ice_raids_minnesota_2026.pl
+*   **Related Gap/Alert:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
+*   **Generated Omega:** omega_cut_safety_ice_memory_archive (conceptual)
+*   **Suggested Resolution Strategy:**
+    ```
+1. SAFETY ASSESSMENT (DO NOT SKIP):
+- If institutions cut ice_memory_archive, do individuals have alternatives?
+- Is this their only survival mechanism?
+- What scaffolding exists for transition?
+2. Test institutional perception:
+- Can institutions unilaterally change this?
+- Do they understand downstream impacts?
+- Is their "optional" view empirically accurate?
+3. Decision tree:
+IF truly unchangeable → Correct institutional view to MOUNTAIN
+IF changeable + safe alternatives → Correct powerless view to ROPE
+IF changeable + NO alternatives → ADD SCAFFOLD before any change
+IF uncertainty → HALT changes until resolved
+4. CRITICAL: Never proceed with changes until safety verified
+    ```
+
+---
+
+### 13. Scaffold: `isa_education_scaffold`
 
 *   **Claimed Type:** `scaffold`
 *   **Severity:** `N/A`
@@ -930,7 +1230,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.49
 
 ### END REFINEMENT MANIFEST ###
 
-[381] EXECUTING: testsets/israel_electoral_threshold.pl
+[509] EXECUTING: testsets/israel_egypt_gas_deal.pl
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** omega_extraction_blindness_isa_education_scaffold (conceptual)
 *   **Suggested Resolution Strategy:**
@@ -954,7 +1254,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 10. Scaffold: `liar_paradox`
+### 14. Scaffold: `liar_paradox`
 
 *   **Claimed Type:** `scaffold`
 *   **Severity:** `N/A`
@@ -1030,7 +1330,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.58
 
 ### END REFINEMENT MANIFEST ###
 
-[414] EXECUTING: testsets/lindy_effect.pl
+[556] EXECUTING: testsets/lindy_effect.pl
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
     ```
@@ -1048,7 +1348,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.58
 
 ---
 
-### 11. Scaffold: `maha_recovery_2026`
+### 15. Scaffold: `maha_recovery_2026`
 
 *   **Claimed Type:** `scaffold`
 *   **Severity:** `N/A`
@@ -1124,7 +1424,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.47
 
 ### END REFINEMENT MANIFEST ###
 
-[430] EXECUTING: testsets/maintenance_capacity_shortfall.pl
+[574] EXECUTING: testsets/maintenance_capacity_shortfall.pl
 *   **Generated Omega:** omega_perspectival_maha_recovery_2026 (conceptual)
 *   **Suggested Resolution Strategy:**
     ```
@@ -1142,7 +1442,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.47
 
 ---
 
-### 12. Scaffold: `manganese_catalysis_2026`
+### 16. Scaffold: `manganese_catalysis_2026`
 
 *   **Claimed Type:** `scaffold`
 *   **Severity:** `N/A`
@@ -1223,7 +1523,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.46
 
 ### END REFINEMENT MANIFEST ###
 
-[435] EXECUTING: testsets/marriage_market_asymmetry_2026.pl
+[580] EXECUTING: testsets/marriage_market_asymmetry_2026.pl
 *   **Related Gap/Alert:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Generated Omega:** omega_cut_safety_manganese_catalysis_2026 (conceptual)
 *   **Suggested Resolution Strategy:**
@@ -1246,7 +1546,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 13. Scaffold: `martian_signal_latency`
+### 17. Scaffold: `martian_signal_latency`
 
 *   **Claimed Type:** `scaffold`
 *   **Severity:** `N/A`
@@ -1322,7 +1622,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.58
 
 ### END REFINEMENT MANIFEST ###
 
-[439] EXECUTING: testsets/mass_market_extinction_2026.pl
+[584] EXECUTING: testsets/mass_market_extinction_2026.pl
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
     ```
@@ -1340,7 +1640,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.58
 
 ---
 
-### 14. Scaffold: `narrative_engineering_2026`
+### 18. Scaffold: `narrative_engineering_2026`
 
 *   **Claimed Type:** `scaffold`
 *   **Severity:** `N/A`
@@ -1421,7 +1721,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.49
 
 ### END REFINEMENT MANIFEST ###
 
-[480] EXECUTING: testsets/narrative_overfitting.pl
+[633] EXECUTING: testsets/narrative_overfitting.pl
 *   **Related Gap/Alert:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Generated Omega:** omega_cut_safety_narrative_engineering_2026 (conceptual)
 *   **Suggested Resolution Strategy:**
@@ -1444,7 +1744,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 15. Scaffold: `noethers_theorem_symmetry`
+### 19. Scaffold: `noethers_theorem_symmetry`
 
 *   **Claimed Type:** `scaffold`
 *   **Severity:** `N/A`
@@ -1520,7 +1820,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.60
 
 ### END REFINEMENT MANIFEST ###
 
-[497] EXECUTING: testsets/non_compete_agreements.pl
+[658] EXECUTING: testsets/non_compete_agreements.pl
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
     ```
@@ -1538,7 +1838,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.60
 
 ---
 
-### 16. Scaffold: `reciprocity_laws_math`
+### 20. Scaffold: `reciprocity_laws_math`
 
 *   **Claimed Type:** `scaffold`
 *   **Severity:** `N/A`
@@ -1608,7 +1908,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.41
 
 ### END REFINEMENT MANIFEST ###
 
-[579] EXECUTING: testsets/regulatory_capture.pl
+[772] EXECUTING: testsets/regional_military_deterrence_mideast.pl
 *   **Generated Omega:** omega_perspectival_reciprocity_laws_math (conceptual)
 *   **Suggested Resolution Strategy:**
     ```
@@ -1626,7 +1926,60 @@ Aggregate Magnitude (Kappa) at Tn: 0.41
 
 ---
 
-### 17. Scaffold: `silklink_2026`
+### 21. Scaffold: `rn_proteus_adoption`
+
+*   **Claimed Type:** `scaffold`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for rn_proteus_adoption: Appears to be rope (indexed_rope_classification) but fails 3 Boltzmann structural test(s): [boltzmann_non_compliant(0.375,0.3),excess_above_floor(0.05000000000000002),nonsensical_coupling(0.16666666666666666)]. Coupling score=0.375. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+    → Institutional beneficiary: defense_contractors_leonardo
+    → Institutional d=0.120
+
+[UKE_DR FEASIBILITY BRIDGE]
+  Recommendation | UKE Status
+  ----------------------------------------------------------------------
+
+Aggregate Magnitude (Kappa) at Tn: 0.47
+
+[PERSPECTIVAL GAP ANALYSIS]
+
+  Analysis for Constraint: rn_proteus_adoption
+    - Individual (Powerless): rope [d=0.900 f(d)=1.36 χ=0.22]
+    - Institutional (Manager): rope [d=0.120 f(d)=-0.04 χ=-0.01 → net benefit]
+
+[OMEGA GENERATION FROM PERSPECTIVAL GAPS: rn_proteus_adoption]
+  No perspectival gaps detected requiring Ω tracking.
+
+[OMEGA TRIAGE & PRIORITIZATION]
+  No omegas to triage.
+
+[OMEGA RESOLUTION SCENARIO GENERATION]
+  No unresolved Omegas. System is epistemically complete.
+====================================================
+[PASS] testsets/rn_proteus_adoption.pl
+
+### START LLM REFINEMENT MANIFEST: rn_proteus_adoption ###
+
+[PERSPECTIVAL_GAPS]
+
+[ONTOLOGICAL_MISMATCHES]
+  - None detected.
+
+[UNRESOLVED_OMEGAS]
+  - None detected.
+
+### END REFINEMENT MANIFEST ###
+
+[790] EXECUTING: testsets/robustness_vs_efficiency_tradeoff.pl
+*   **Generated Omega:** N/A
+*   **Suggested Resolution Strategy:**
+    ```
+
+    ```
+
+---
+
+### 22. Scaffold: `silklink_2026`
 
 *   **Claimed Type:** `scaffold`
 *   **Severity:** `N/A`
@@ -1670,7 +2023,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.48
 
 ### END REFINEMENT MANIFEST ###
 
-[630] EXECUTING: testsets/silver_scarcity_mountain_2026.pl
+[834] EXECUTING: testsets/silver_scarcity_mountain_2026.pl
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
     ```
@@ -1679,7 +2032,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.48
 
 ---
 
-### 18. Scaffold: `sturgeons_law`
+### 23. Scaffold: `sturgeons_law`
 
 *   **Claimed Type:** `scaffold`
 *   **Severity:** `N/A`
@@ -1759,7 +2112,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.58
 
 ### END REFINEMENT MANIFEST ###
 
-[662] EXECUTING: testsets/suanne_coup_of_peace.pl
+[877] EXECUTING: testsets/suanne_coup_of_peace.pl
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
     ```
@@ -1777,7 +2130,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.58
 
 ---
 
-### 19. Scaffold: `swift_piton_snap`
+### 24. Scaffold: `swift_piton_snap`
 
 *   **Claimed Type:** `scaffold`
 *   **Severity:** `N/A`
@@ -1851,7 +2204,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.43
 
 ### END REFINEMENT MANIFEST ###
 
-[668] EXECUTING: testsets/sylow_theorems_group_theory.pl
+[885] EXECUTING: testsets/sylow_theorems.pl
 *   **Generated Omega:** omega_perspectival_swift_piton_snap (conceptual)
 *   **Suggested Resolution Strategy:**
     ```
@@ -1869,7 +2222,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.43
 
 ---
 
-### 20. Scaffold: `universal_mathematics_communication`
+### 25. Scaffold: `universal_mathematics_communication`
 
 *   **Claimed Type:** `scaffold`
 *   **Severity:** `N/A`
@@ -1945,7 +2298,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.58
 
 ### END REFINEMENT MANIFEST ###
 
-[730] EXECUTING: testsets/unrequited_love_protocol.pl
+[969] EXECUTING: testsets/unrequited_love_protocol.pl
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
     ```

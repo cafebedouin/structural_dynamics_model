@@ -1,6 +1,6 @@
 # Rope Validation Report
 
-**Total Validated:** 22
+**Total Validated:** 26
 
 This report lists all constraints that are consistently classified as 'rope' across all tested perspectives, indicating their functional and potentially beneficial nature within the model.
 
@@ -254,7 +254,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 15. Rope: `perseverance_rover_autonomy`
+### 15. Rope: `mean_value_theorem`
 
 *   **Claimed Type:** `rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
@@ -262,7 +262,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 16. Rope: `postman_survival_protocol`
+### 16. Rope: `microrobot_manipulation`
 
 *   **Claimed Type:** `rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
@@ -270,7 +270,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 17. Rope: `rare_earth_coop_2026`
+### 17. Rope: `perseverance_rover_autonomy`
 
 *   **Claimed Type:** `rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
@@ -278,7 +278,23 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 18. Rope: `sadhu_integrity_protocol`
+### 18. Rope: `postman_survival_protocol`
+
+*   **Claimed Type:** `rope`
+*   **Structural Signature Analysis:** Perspectives AGREE
+*   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'rope' classification.
+
+---
+
+### 19. Rope: `rare_earth_coop_2026`
+
+*   **Claimed Type:** `rope`
+*   **Structural Signature Analysis:** Perspectives AGREE
+*   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'rope' classification.
+
+---
+
+### 20. Rope: `sadhu_integrity_protocol`
 
 *   **Claimed Type:** `rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
@@ -299,7 +315,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 19. Rope: `skills_based_hiring`
+### 21. Rope: `skills_based_hiring`
 
 *   **Claimed Type:** `rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
@@ -323,7 +339,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 20. Rope: `solar_system_weirdness`
+### 22. Rope: `solar_system_weirdness`
 
 *   **Claimed Type:** `rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for solar_system_weirdness: Appears to be rope (explicit_rope_claim) but fails 2 Boltzmann structural test(s): [excess_above_floor(0.15000000000000002),nonsensical_coupling(0.16666666666666666)]. Coupling score=0.375. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
@@ -345,7 +361,15 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 21. Rope: `vertebrate_turning_point_2026`
+### 23. Rope: `tsp`
+
+*   **Claimed Type:** `rope`
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for tsp_duplicate_elimination: Appears to be rope (explicit_rope_claim) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.375,0.25),excess_above_floor(0.13)]. Coupling score=0.375. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'rope' classification.
+
+---
+
+### 24. Rope: `vertebrate_turning_point_2026`
 
 *   **Claimed Type:** `rope`
 *   **Structural Signature Analysis:** CONSTRUCTED LOW-EXTRACTION signature for vertebrate_turning_point_2026: Enforcement present (suppression=0.40, resistance=0.50) but extraction is low (0.05). This is a rule-based coordination structure, not an extraction mechanism.
@@ -353,7 +377,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 22. Rope: `wikipedia_crowdsourcing_2026`
+### 25. Rope: `wikipedia_crowdsourcing_2026`
 
 *   **Claimed Type:** `rope`
 *   **Structural Signature Analysis:** CONSTRUCTED HIGH-EXTRACTION signature for [wikipedia_crowdsourcing_2026]: Enforcement present (suppression=0.50, resistance=0.50) with high extraction (0.50). This is an extraction mechanism that metrics failed to classify as snare.
@@ -371,6 +395,14 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 4. Update constraint_metric/3 declarations with data
 5. Re-run classification to resolve perspectival gap
     ```
+
+---
+
+### 26. Rope: `wikipedia_noncommercial_model`
+
+*   **Claimed Type:** `rope`
+*   **Structural Signature Analysis:** Perspectives AGREE
+*   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'rope' classification.
 
 ---
 

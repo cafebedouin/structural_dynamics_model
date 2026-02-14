@@ -1,6 +1,6 @@
 # Piton Diagnostic Report
 
-**Total Unique Pitons Found:** 65
+**Total Unique Pitons Found:** 67
 
 ---
 
@@ -536,7 +536,35 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 21. Piton: `crisis_signal_saturation`
+### 21. Piton: `corporate_social_responsibility_theater`
+
+*   **Claimed Type:** `piton`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+*   **Structural Signature Analysis:** N/A
+*   **Generated Omega:** N/A
+*   **Suggested Resolution Strategy:**
+    ```
+1. Interview affected individuals (N=10+):
+- Who benefits from corporate_social_responsibility_theater?
+- Can you change/exit this constraint?
+- What would happen if you tried?
+2. Interview institutional actors (N=10+):
+- What function does corporate_social_responsibility_theater serve?
+- Who would object to removing it?
+- What alternatives exist?
+3. Document benefit flows:
+- Track who gains vs. who loses from status quo
+- Measure asymmetric benefit distribution
+4. Decision tree:
+IF extraction confirmed → Reclassify as SNARE
+IF functional & fair → Reclassify as ROPE
+IF context-dependent → Add indexical resolution
+    ```
+
+---
+
+### 22. Piton: `crisis_signal_saturation`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -564,7 +592,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 22. Piton: `cultural_refragmentation_2026`
+### 23. Piton: `cultural_refragmentation_2026`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -592,7 +620,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 23. Piton: `elite_capture_2026`
+### 24. Piton: `elite_capture_2026`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -620,7 +648,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 24. Piton: `epstein_files_2026`
+### 25. Piton: `epstein_files_2026`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -648,7 +676,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 25. Piton: `fiscal_dominance_trap`
+### 26. Piton: `fiscal_dominance_trap`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -676,7 +704,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 26. Piton: `france_cordon_sanitaire_2026`
+### 27. Piton: `france_cordon_sanitaire_2026`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -697,7 +725,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 27. Piton: `global_economic_anxiety_2026`
+### 28. Piton: `global_economic_anxiety_2026`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -725,7 +753,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 28. Piton: `gold_piton_2026`
+### 29. Piton: `gold_piton_2026`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -748,7 +776,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 29. Piton: `hegemonic_entropy_2026`
+### 30. Piton: `hegemonic_entropy_2026`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -776,7 +804,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 30. Piton: `hoa_covenants`
+### 31. Piton: `hoa_covenants`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -804,7 +832,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 31. Piton: `hollow_state_syndrome`
+### 32. Piton: `hollow_state_syndrome`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -832,7 +860,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 32. Piton: `huang_expectation_resilience_2026`
+### 33. Piton: `huang_expectation_resilience_2026`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -860,7 +888,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 33. Piton: `infrastructure_interoperability_decay`
+### 34. Piton: `infrastructure_interoperability_decay`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -888,7 +916,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 34. Piton: `institutional_memory_loss`
+### 35. Piton: `institutional_memory_loss`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -916,7 +944,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 35. Piton: `institutional_trust_decay`
+### 36. Piton: `institutional_trust_decay`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -944,7 +972,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 36. Piton: `invisible_infrastructure_dependency`
+### 37. Piton: `invisible_infrastructure_dependency`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -972,7 +1000,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 37. Piton: `juvenile_underclass_2026`
+### 38. Piton: `juvenile_underclass_2026`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -999,7 +1027,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 38. Piton: `kjv_linguistic_residue`
+### 39. Piton: `kjv_linguistic_residue`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -1013,7 +1041,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 39. Piton: `legacy_system_technical_debt`
+### 40. Piton: `legacy_system_technical_debt`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -1040,7 +1068,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 40. Piton: `legal_formalism_overhang`
+### 41. Piton: `legal_formalism_overhang`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -1068,7 +1096,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 41. Piton: `legitimacy_without_effectiveness`
+### 42. Piton: `legitimacy_without_effectiveness`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -1096,7 +1124,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 42. Piton: `litchfield_sensitive_locations_2026`
+### 43. Piton: `litchfield_sensitive_locations_2026`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -1124,7 +1152,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 43. Piton: `maintenance_capacity_shortfall`
+### 44. Piton: `maintenance_capacity_shortfall`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -1152,7 +1180,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 44. Piton: `mco_unit_system_discontinuity`
+### 45. Piton: `mco_unit_system_discontinuity`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -1179,7 +1207,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 45. Piton: `memetic_fitness_vs_truth`
+### 46. Piton: `memetic_fitness_vs_truth`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -1207,7 +1235,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 46. Piton: `meta_governance_overload`
+### 47. Piton: `meta_governance_overload`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -1235,7 +1263,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 47. Piton: `minnesota_sovereignty_2026`
+### 48. Piton: `minnesota_sovereignty_2026`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -1263,7 +1291,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 48. Piton: `moltbook_agent_theater`
+### 49. Piton: `moltbook_agent_theater`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -1291,7 +1319,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 49. Piton: `moltbook_breach_2026`
+### 50. Piton: `moltbook_breach_2026`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -1319,7 +1347,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 50. Piton: `narcissistic_ego_maintenance`
+### 51. Piton: `narcissistic_ego_maintenance`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -1347,7 +1375,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 51. Piton: `notary_ink_dependency`
+### 52. Piton: `notary_ink_dependency`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -1375,7 +1403,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 52. Piton: `nuclear_order_2026`
+### 53. Piton: `nuclear_order_2026`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -1398,7 +1426,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 53. Piton: `other_peoples_troubles_2026`
+### 54. Piton: `other_peoples_troubles_2026`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -1426,7 +1454,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 54. Piton: `policy_lag_catastrophe`
+### 55. Piton: `policy_lag_catastrophe`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -1454,7 +1482,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 55. Piton: `prestige_signal_inflation`
+### 56. Piton: `prestige_signal_inflation`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -1482,7 +1510,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 56. Piton: `procedural_compliance_theater`
+### 57. Piton: `procedural_compliance_theater`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -1510,7 +1538,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 57. Piton: `railway_gauge_standard`
+### 58. Piton: `railway_gauge_standard`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -1537,7 +1565,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 58. Piton: `riot_incentive_loop_2026`
+### 59. Piton: `riot_incentive_loop_2026`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -1565,7 +1593,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 59. Piton: `rule_update_failure`
+### 60. Piton: `rule_update_failure`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -1593,7 +1621,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 60. Piton: `second_order_unintended_consequences`
+### 61. Piton: `second_order_unintended_consequences`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -1621,7 +1649,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 61. Piton: `shadow_pricing_failure`
+### 62. Piton: `shadow_pricing_failure`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -1649,7 +1677,30 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 62. Piton: `structural_extraction_without_actor`
+### 63. Piton: `ship_of_theseus`
+
+*   **Claimed Type:** `piton`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+*   **Structural Signature Analysis:** N/A
+*   **Generated Omega:** N/A
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive ship_of_theseus
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 64. Piton: `structural_extraction_without_actor`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -1677,7 +1728,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 63. Piton: `swift_legacy_piton`
+### 65. Piton: `swift_legacy_piton`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -1705,7 +1756,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 64. Piton: `taxonomy_drift`
+### 66. Piton: `taxonomy_drift`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -1733,7 +1784,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 65. Piton: `world_factbook_sunset_2026`
+### 67. Piton: `world_factbook_sunset_2026`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`

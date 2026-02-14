@@ -1,0 +1,43 @@
+2026-02-14 12:36:04,447 INFO     Log file: /home/scott/bin/structural_dynamics_model/outputs/regen_20260214_123604.log
+2026-02-14 12:36:04,447 INFO     Running structural linter on testsets/ and origsets/…
+2026-02-14 12:36:07,606 INFO     Linter: 1020/1025 passed, 5 with errors → /home/scott/bin/structural_dynamics_model/outputs/lint_errors.txt
+2026-02-14 12:36:07,607 INFO     Source: lint_errors.txt (5 files)
+2026-02-14 12:36:07,628 INFO     Resume filter: 5 → 5 files
+2026-02-14 12:36:08,665 INFO     [1/5] carrier_deployment_deterrence (1 errors) [0.0/min, ETA 0min]
+2026-02-14 12:36:08,665 INFO       Generating carrier_deployment_deterrence (attempt 1/3)…
+2026-02-14 12:36:08,666 INFO     Creating/refreshing Gemini context cache (TTL=3600s)…
+2026-02-14 12:36:09,527 INFO     HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/cachedContents "HTTP/1.1 200 OK"
+2026-02-14 12:36:09,530 INFO     Cache created: cachedContents/lvvysc5uf7zmt17xf4hzrfooeywrp8nhnsge78az (expires ~2026-02-14T19:36:08.666003)
+2026-02-14 12:36:09,530 INFO     AFC is enabled with max remote calls: 10.
+2026-02-14 12:37:00,269 INFO     HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent "HTTP/1.1 200 OK"
+2026-02-14 12:37:00,311 INFO       PASS carrier_deployment_deterrence on attempt 1
+2026-02-14 12:37:00,311 INFO     [2/5] cartel_drone_surveillance_el_paso (1 errors) [1.2/min, ETA 3min]
+2026-02-14 12:37:00,311 INFO       Generating cartel_drone_surveillance_el_paso (attempt 1/3)…
+2026-02-14 12:37:00,311 INFO     AFC is enabled with max remote calls: 10.
+2026-02-14 12:37:45,829 INFO     HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent "HTTP/1.1 200 OK"
+2026-02-14 12:37:45,870 INFO       PASS cartel_drone_surveillance_el_paso on attempt 1
+2026-02-14 12:37:45,870 INFO     [3/5] ice_raids_minnesota_2026 (1 errors) [1.2/min, ETA 2min]
+2026-02-14 12:37:45,870 INFO       Generating ice_raids_minnesota_2026 (attempt 1/3)…
+2026-02-14 12:37:45,871 INFO     AFC is enabled with max remote calls: 10.
+2026-02-14 12:38:42,423 INFO     HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent "HTTP/1.1 200 OK"
+2026-02-14 12:38:42,465 INFO       PASS ice_raids_minnesota_2026 on attempt 1
+2026-02-14 12:38:42,465 INFO     [4/5] ice_safe_departure (1 errors) [1.2/min, ETA 2min]
+2026-02-14 12:38:42,466 INFO       Generating ice_safe_departure (attempt 1/3)…
+2026-02-14 12:38:42,466 INFO     AFC is enabled with max remote calls: 10.
+2026-02-14 12:39:24,368 INFO     HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent "HTTP/1.1 200 OK"
+2026-02-14 12:39:24,410 INFO       PASS ice_safe_departure on attempt 1
+2026-02-14 12:39:24,410 INFO     [5/5] iran_guardian_council_vetting (1 errors) [1.2/min, ETA 1min]
+2026-02-14 12:39:24,411 INFO       Generating iran_guardian_council_vetting (attempt 1/3)…
+2026-02-14 12:39:24,411 INFO     AFC is enabled with max remote calls: 10.
+2026-02-14 12:40:11,524 INFO     HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent "HTTP/1.1 200 OK"
+2026-02-14 12:40:11,565 INFO       PASS iran_guardian_council_vetting on attempt 1
+2026-02-14 12:40:11,566 INFO     
+2026-02-14 12:40:11,566 INFO     ============================================================
+2026-02-14 12:40:11,566 INFO     REGENERATION COMPLETE
+2026-02-14 12:40:11,566 INFO     ============================================================
+2026-02-14 12:40:11,566 INFO       Processed: 5
+2026-02-14 12:40:11,566 INFO       Passed:    5
+2026-02-14 12:40:11,566 INFO       Failed:    0 (→ probsets/)
+2026-02-14 12:40:11,566 INFO       Skipped:   0
+2026-02-14 12:40:11,566 INFO       API errors:0
+2026-02-14 12:40:11,566 INFO       Elapsed:   4.0 min

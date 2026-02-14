@@ -2,20 +2,20 @@
 
 ## Summary Statistics
 
-- **Total constraints analyzed:** 754
-- **Constraints with multiple index configs:** 751 (99.6%)
-- **High variance (>0.5):** 653 (86.6%)
-- **Stable (ratio=1.0):** 6 (0.8%)
+- **Total constraints analyzed:** 1026
+- **Constraints with multiple index configs:** 1023 (99.7%)
+- **High variance (>0.5):** 801 (78.1%)
+- **Stable (ratio=1.0):** 6 (0.6%)
 
 ## Variance Distribution
 
 | Ratio Range | Count | % of Corpus | Examples |
 |-------------|-------|-------------|----------|
-| 1.0 (stable)    |     6 |    0.8% | ai_scholar_citation_trap, evolutionary_knowledg... |
-| 0.7-0.9         |   490 |   65.0% | CG_IsraelGaza_20231012, MOLTBOT_RELIGION, abstr... |
-| 0.5-0.6         |   113 |   15.0% | 26usc469_real_estate_exemption, ai_professional... |
-| 0.3-0.4         |    14 |    1.9% | cuny_light_2026, fed_shutdown_2026, kjv_linguis... |
-| <0.3            |   130 |   17.2% | 8k_tv_limit_2026, adverse_possession, ai_driven... |
+| 1.0 (stable)    |     6 |    0.6% | ai_scholar_citation_trap, evolutionary_knowledg... |
+| 0.7-0.9         |   537 |   52.3% | CG_IsraelGaza_20231012, MOLTBOT_RELIGION, abstr... |
+| 0.5-0.6         |   266 |   25.9% | 26usc469_real_estate_exemption, absorbing_marko... |
+| 0.3-0.4         |    49 |    4.8% | asean_ceasefire_2011, beehiiv_platform_model, b... |
+| <0.3            |   167 |   16.3% | 8k_tv_limit_2026, adverse_possession, ai_driven... |
 | null            |     1 |    0.1% | unknown |
 
 ## Domain Breakdown
@@ -27,11 +27,9 @@
 | mathematics          |   2 |         1.50 |          100.0% |
 | investigation        |   2 |         1.38 |          100.0% |
 | artistic             |   2 |         1.15 |          100.0% |
-| philosophical        |  12 |         0.89 |           83.3% |
+| philosophical        |  13 |         0.88 |           84.6% |
 | psychological        |   9 |         0.87 |          100.0% |
-| mathematical         |  44 |         0.86 |           59.1% |
-| technological        | 207 |         0.85 |           87.9% |
-| legal                |  10 |         0.83 |           70.0% |
+| legal                |  11 |         0.81 |           72.7% |
 | cognitive            |   3 |         0.80 |          100.0% |
 | informational        |   2 |         0.80 |          100.0% |
 | infrastructure       |   1 |         0.80 |          100.0% |
@@ -40,36 +38,40 @@
 | socio_political      |   1 |         0.80 |          100.0% |
 | biological           |  16 |         0.80 |           87.5% |
 | organizational       |   9 |         0.77 |          100.0% |
-| economic             | 125 |         0.77 |           91.2% |
 | environmental        |   5 |         0.77 |          100.0% |
-| political            | 115 |         0.77 |           93.0% |
 | institutional        |   3 |         0.77 |          100.0% |
 | medical              |   4 |         0.76 |          100.0% |
-| social               | 121 |         0.76 |           87.6% |
 | bio_industrial       |   1 |         0.75 |          100.0% |
 | corporate_governance |   1 |         0.75 |          100.0% |
 | military             |   2 |         0.75 |          100.0% |
-| physical             |   1 |         0.75 |          100.0% |
-| physics              |   1 |         0.75 |          100.0% |
 | psychology           |   1 |         0.75 |          100.0% |
-| geopolitical         |   9 |         0.74 |          100.0% |
+| social               | 134 |         0.75 |           85.1% |
+| technological        | 284 |         0.74 |           75.4% |
+| mathematical         |  56 |         0.73 |           46.4% |
+| political            | 152 |         0.72 |           86.2% |
 | religious            |   9 |         0.72 |          100.0% |
+| economic             | 205 |         0.70 |           84.9% |
 | health               |   5 |         0.65 |           60.0% |
 | systems_engineering  |   1 |         0.60 |          100.0% |
+| physics              |   2 |         0.57 |           50.0% |
+| geopolitical         |  48 |         0.57 |           56.2% |
+| ecological           |   2 |         0.55 |           50.0% |
+| scientific           |  19 |         0.51 |           52.6% |
+| Political            |   1 |         0.50 |            0.0% |
 | Social               |   1 |         0.50 |            0.0% |
 | astrophysical        |   1 |         0.50 |            0.0% |
 | atmospheric_science  |   1 |         0.50 |            0.0% |
-| ecological           |   1 |         0.50 |            0.0% |
-| scientific           |  13 |         0.50 |           53.8% |
 | linguistic           |   3 |         0.47 |           33.3% |
+| physical             |   3 |         0.42 |           33.3% |
 | technology           |   1 |         0.33 |            0.0% |
+| Physics              |   1 |         0.25 |            0.0% |
 | logical              |   1 |         0.25 |            0.0% |
 
 ## Key Findings
 
 1. **Domain variance spread:** analytical shows highest variance (1.50), while logical shows lowest (0.25)
 
-2. **High volatility:** 86.6% of constraints show high variance (>0.5)
+2. **High volatility:** 78.1% of constraints show high variance (>0.5)
 
 3. **Perspective-dependent constraints:** 10 constraints show strong perspective-dependence
 
@@ -116,13 +118,16 @@ Constraints with many index configs but low variance (possible modeling issues):
 
 | Constraint ID | Configs | Types | Variance | Domain |
 |---------------|---------|-------|----------|--------|
+| great_mongolian_road_economic_dependency |       7 |     2 |     0.29 | economic        |
+| us_embargo_cuba                |       7 |     2 |     0.29 | political       |
+| banach_fixed_point_theorem     |       5 |     1 |     0.20 | technological   |
 | cantor_set_topology            |       5 |     1 |     0.20 | mathematical    |
 | conways_game_of_life_dynamics  |       5 |     1 |     0.20 | mathematical    |
 | dldr_information_policy        |       5 |     1 |     0.20 | technological   |
 | ehrenfest_barrier              |       5 |     1 |     0.20 | scientific      |
 | gauss_bonnet_topology          |       5 |     1 |     0.20 | mathematical    |
-| quantum_measurement_gap        |       5 |     1 |     0.20 | scientific      |
-| three_body_unpredicability     |       5 |     1 |     0.20 | technological   |
+| heine_borel_theorem            |       5 |     1 |     0.20 | mathematical    |
+| microrobot_manipulation        |       5 |     1 |     0.20 | technological   |
 
 **Note:** These constraints have many perspective configurations but produce the same type. This might indicate:
 - The constraint is genuinely invariant (e.g., physical laws)
@@ -135,4 +140,4 @@ Constraints with many index configs but low variance (possible modeling issues):
 |-------|-----------|--------|
 | classifications | 99.9% | Core data for variance analysis |
 | variance_ratio | 99.9% | Calculated from classifications |
-| domain | 99.6% | Affects domain breakdown analysis |
+| domain | 99.7% | Affects domain breakdown analysis |
