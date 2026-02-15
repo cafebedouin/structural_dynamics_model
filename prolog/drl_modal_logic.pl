@@ -182,6 +182,7 @@ composite_type(C1, C2, Result) :-
     constraint_indexing:default_context(Ctx),
     composite_type(C1, C2, Ctx, Result).
 
+% Categorical: Binary operation on type space — NOT a lattice meet (two absorbing elements: mountain, piton)
 %% composition_rule(+Type1, +Type2, -CompositeType)
 % Formal modal composition rules from DR logic
 % NOTE: These rules are NOT indexed - they're about logical structure
@@ -246,6 +247,7 @@ detect_necessity_inheritance(Source, Derived) :-
    Temporal modal logic for constraint evolution
    ================================================================ */
 
+% Categorical: Temporal presheaf — collects presheaf evaluations along the time dimension of the site
 %% constraint_history(+C, +Context, -Timeline)
 % PRIMARY API: Collects constraint history FROM A SPECIFIC CONTEXT
 % Same constraint may have different transformation patterns from different perspectives
@@ -1493,6 +1495,7 @@ type_immunity(rope,          1.0) :- !.
 type_immunity(indexically_opaque, 0.7) :- !.
 type_immunity(_,             0.5).
 
+% Categorical: Contravariant purity propagation — effective purity decreases when neighbors have lower purity
 %% effective_purity(+C, +Context, -EffPurity, -Components)
 %  PRIMARY API: Computes effective purity accounting for neighbor contamination.
 %  Components = purity_components(IntrinsicPurity, TotalContamination, Detail)
@@ -1882,6 +1885,7 @@ fpn_run(Constraints, Context, fpn_result(Iterations, MaxDelta, Converged, NConst
    8b-D. ITERATION LOOP (Jacobi-style simultaneous update)
    ---------------------------------------------------------------- */
 
+% Categorical: Greatest fixed point computation — Jacobi iteration converging to equilibrium of contamination endofunctor
 %% fpn_iterate(+Constraints, +Context, +K, +MaxIter, +Eps)
 %  Recursive iteration loop. Each iteration:
 %  1. Computes all new EPs from current state (Jacobi: read old, write new)

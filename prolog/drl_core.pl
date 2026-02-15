@@ -163,6 +163,7 @@ is_piton(_C, _Context, fail).
 % ============================================================================
 % SHARED THRESHOLD CLASSIFICATION (Single Source of Truth)
 % ============================================================================
+% Categorical: Stalk computation — threshold logic evaluating the presheaf at each context
 % classify_from_metrics(+C, +BaseEps, +Chi, +Supp, +Context, -Type)
 %
 % Given pre-computed metrics, determines classification.
@@ -171,6 +172,7 @@ is_piton(_C, _Context, fail).
 %
 % Priority: Mountain > Snare > Scaffold > Rope > Tangled Rope > Piton > unknown
 
+% Categorical: Cross-stalk query (existential) — checks mutability across site points
 %% snare_immutability_check(+Context)
 %  The snare gate should only be blocked by STRUCTURAL immutability
 %  (genuine mountains like gravity), not POWER-INDEXED immutability
@@ -327,6 +329,7 @@ classify_from_metrics(_C, _BaseEps, _Chi, _Supp, _Context, unknown).
 % ----------------------------------------------------------------------------
 % Primary Classification: dr_type/3
 % ----------------------------------------------------------------------------
+% Categorical: Presheaf evaluation — computes local truth value from Omega at a point of the site
 % Determines constraint type FROM A SPECIFIC CONTEXT
 % Integrates: (1) Metric-based classification, (2) Structural signatures
 

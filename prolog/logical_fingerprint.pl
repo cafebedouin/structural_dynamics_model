@@ -69,6 +69,7 @@
 % CORE FINGERPRINT
 % ============================================================================
 
+% Categorical: Presheaf invariant — qualitative shape of the constraint's logic, abstracting away domain content
 %% logical_fingerprint(+Constraint, -Fingerprint)
 %  Computes the full logical fingerprint — a structured term capturing
 %  the qualitative shape of a constraint's logic.

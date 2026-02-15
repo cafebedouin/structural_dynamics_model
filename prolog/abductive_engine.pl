@@ -155,6 +155,7 @@ available_subsystems(Subs) :-
    Requires: maxent + signature
    ================================================================ */
 
+% Categorical: Naturality artifact diagnosis — explains cross-functor disagreement as known override effect
 trigger_signature_override_artifact(C, Context, Hypothesis) :-
     subsystem_available(maxent),
     % MaxEnt must show a hard disagreement

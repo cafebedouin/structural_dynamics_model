@@ -449,6 +449,12 @@ param(trajectory_isomorphism_threshold,    0.15).    % Max distance for trajecto
 param(trajectory_coupling_band_width,      0.15).    % Coupling match tolerance for isomorphism
 
 /* ================================================================
+   GROTHENDIECK COHOMOLOGY (v7.0)
+   ================================================================ */
+
+param(cohomology_enabled,                  0).       % 0=disabled, 1=enabled
+
+/* ================================================================
    CONFIG VALIDATION (loaded last so all param/2 facts are available)
    ================================================================ */
 

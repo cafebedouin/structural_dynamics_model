@@ -738,6 +738,7 @@ has_metric_perspectival_variance(C) :-
 %   correctly returns false (the constraint is NOT that type)
 % -----------------------------------------------------------------------
 
+% Categorical: Priority resolution on type space — structural signal overrides metric classification
 resolve_modal_signature_conflict(_, natural_law, Result) :- !, Result = mountain.
 
 % FNL OVERRIDE RULE (v5.1, §III-A extension):  [ACTIVE, unconditional]
@@ -808,6 +809,7 @@ resolve_modal_signature_conflict(ModalType, _, ModalType).
    BOLTZMANN COMPLIANCE TEST
    ---------------------------------------------------------------- */
 
+% Categorical: Naturality condition [STRICT] — tests factorizability of classification across index dimensions
 %% boltzmann_compliant(+Constraint, -Result)
 %  Tests whether a constraint's classification across index
 %  dimensions is consistent with Boltzmann independence.
@@ -885,6 +887,7 @@ boltzmann_shadow_audit(C, boltzmann_audit(C, Compliance, Coupling, Threshold,
    not another, there's a coupling that violates independence.
    ---------------------------------------------------------------- */
 
+% Categorical: Naturality square test [STRICT] — checks commutativity of classification on Power x Scope grid
 %% cross_index_coupling(+Constraint, -CouplingScore)
 %  Computes coupling score from 0.0 (fully independent) to 1.0
 %  (maximally coupled) by testing classification factorizability
@@ -1335,6 +1338,7 @@ is_failure(fail(_, _)).
    fix (2026-02).
    ---------------------------------------------------------------- */
 
+% Categorical: Naturality failure witness [STRICT] — detects non-commutativity for constraints claiming naturality
 %% false_natural_law(+Constraint, -Evidence)
 %  Detects constraints that claim naturality but fail Boltzmann
 %  compliance. Returns structured evidence for diagnostics.
@@ -1402,6 +1406,7 @@ claimed_natural(C, natural_law_signature_match) :-
    is structurally sound, not just metrically passing.
    ---------------------------------------------------------------- */
 
+% Categorical: Naturality certificate [STRICT] — passes all four naturality conditions
 %% coupling_invariant_rope(+Constraint, -Evidence)
 %  Detects coupling-invariant coordination mechanisms.
 %  Returns structured evidence for diagnostics.
@@ -1719,6 +1724,7 @@ fcr_test_failure(C, nonsensical_coupling(Strength)) :-
      - Integrate into fingerprint coupling dimension
    ================================================================ */
 
+% Categorical: Naturality health scalar — weighted composite of four naturality test subscores
 %% purity_score(+Constraint, -Score)
 %  Computes scalar purity score. Returns -1.0 for insufficient data.
 purity_score(C, Score) :-

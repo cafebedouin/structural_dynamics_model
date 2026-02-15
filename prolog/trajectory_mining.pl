@@ -101,6 +101,7 @@ standard_contexts(Contexts) :-
 %  Human-readable label for a standard context.
 context_label(context(agent_power(P), _, _, _), P).
 
+% Categorical: Natural transformation representative — full presheaf evaluation across all site points
 %% constraint_trajectory(+Constraint, +Context, -Trajectory)
 %  Public API: retrieves a cached trajectory, or computes and caches it.
 constraint_trajectory(C, Context, Trajectory) :-
@@ -731,6 +732,7 @@ cluster_members(FamilyID, Members) :-
    PHASE 4: ISOMORPHISM DETECTION
    ================================================================ */
 
+% Categorical: Natural isomorphism test — two constraints with equivalent transformation behavior across the site
 %% structural_isomorphism(+C1, +C2, -Level, -Evidence)
 %  Tests whether two constraints are structurally isomorphic.
 %  Level in { strict, trajectory, family, none }.

@@ -361,6 +361,7 @@ entropy_acc(_Type-P, Acc, NewAcc) :-
    PUBLIC QUERY API
    ================================================================ */
 
+% Categorical: Distribution on Omega — probability measure over the type space (structurally analogous to Giry monad image)
 %% maxent_distribution(+C, +Context, -Distribution)
 maxent_distribution(C, Context, Dist) :-
     maxent_dist(C, Context, Dist).

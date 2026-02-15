@@ -149,6 +149,7 @@ standard_context(context(agent_power(analytical),
    appears as coordination choice from another.
    ================================================================ */
 
+% Categorical: Orbit under site automorphisms — all type evaluations across standard contexts
 %% gauge_orbit(+Constraint, -OrbitPoints)
 %  Collects all (Type, Context) pairs across standard contexts.
 %  OrbitPoints = [orbit_point(Type, Context), ...]
@@ -160,6 +161,7 @@ gauge_orbit(C, OrbitPoints) :-
             Points),
     sort(Points, OrbitPoints).
 
+% Categorical: Invariance test — whether presheaf evaluation is constant across all site morphisms
 %% preserved_under_context_shift(+Constraint, -Result)
 %  Tests whether classification is invariant under all standard
 %  context transformations. This is the analog of Dirac's consistency
