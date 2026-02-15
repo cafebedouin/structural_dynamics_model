@@ -23,6 +23,7 @@
 
     % Core API
     maxent_run/2,                    % maxent_run(Context, Summary)
+    maxent_multi_run/2,              % maxent_multi_run(Contexts, Summaries)
     maxent_distribution/3,           % maxent_distribution(C, Context, Distribution)
     maxent_confidence/3,             % maxent_confidence(C, Context, Confidence)
     maxent_entropy/3,                % maxent_entropy(C, Context, NormalizedEntropy)
@@ -640,6 +641,71 @@ maxent_run(Context, Summary) :-
 
 is_hard_disagreement(_-hard(_, _)).
 is_soft_disagreement(_-soft(_, _, _)).
+
+/* ================================================================
+   MULTI-CONTEXT MAXENT (v6.4 — Trajectory Mining Support)
+   ================================================================
+   Runs MaxEnt at multiple contexts (typically the 4 standard
+   contexts from dirac_classification.pl). Stores distributions
+   indexed by (Constraint, Context). The existing maxent_dist/3
+   dynamic fact already supports multi-context storage; this
+   predicate just iterates maxent_precompute across contexts
+   without cleaning between them.
+   ================================================================ */
+
+%% maxent_multi_run(+Contexts, -Summaries)
+%  Runs MaxEnt at each context in Contexts. Each context produces
+%  independent profiles and distributions. Results accumulate —
+%  distributions from earlier contexts are preserved.
+%
+%  Usage: maxent_multi_run([Ctx1, Ctx2, Ctx3, Ctx4], Summaries)
+%  After: maxent_entropy(C, Ctx1, H1), maxent_entropy(C, Ctx2, H2) etc.
+maxent_multi_run(Contexts, Summaries) :-
+    % Clean all prior state once
+    maxent_cleanup,
+    % Discover constraints once
+    findall(C, (
+        narrative_ontology:constraint_claim(C, _),
+        \+ is_list(C),
+        atom(C)
+    ), RawConstraints),
+    sort(RawConstraints, Constraints),
+    length(Constraints, NTotal),
+    format(user_error, '[maxent_multi] Found ~w constraints, running ~w contexts.~n',
+           [NTotal, Contexts]),
+    maxent_multi_run_contexts(Contexts, Constraints, NTotal, Summaries).
+
+maxent_multi_run_contexts([], _, _, []).
+maxent_multi_run_contexts([Ctx|Rest], Constraints, NTotal, [Summary|RestSummaries]) :-
+    format(user_error, '[maxent_multi] Computing profiles for context ~w...~n', [Ctx]),
+    % Compute profiles for this context (don't cleanup between contexts)
+    maxent_compute_profiles(Constraints, Ctx),
+    maxent_compute_priors(Constraints),
+    maxent_classify_all(Constraints, Ctx),
+    get_time(T),
+    assertz(maxent_run_info(Ctx, NTotal, T)),
+    % Compute summary stats for this context
+    config:param(maxent_uncertainty_threshold, Threshold),
+    maxent_high_uncertainty(Ctx, Threshold, HighUncertainty),
+    length(HighUncertainty, NHighUncertainty),
+    maxent_disagreements(Ctx, Disagreements),
+    include(is_hard_disagreement, Disagreements, HardDisagreements),
+    length(HardDisagreements, NHard),
+    include(is_soft_disagreement, Disagreements, SoftDisagreements),
+    length(SoftDisagreements, NSoft),
+    findall(HN,
+        (maxent_dist(C2, Ctx, _), maxent_entropy(C2, Ctx, HN)),
+        Entropies),
+    (   Entropies \= []
+    ->  sum_list(Entropies, SumE),
+        length(Entropies, NE),
+        MeanEntropy is SumE / NE
+    ;   MeanEntropy = 0.0
+    ),
+    Summary = maxent_summary(NTotal, MeanEntropy, NHighUncertainty, NHard, NSoft),
+    format(user_error, '[maxent_multi] Context ~w done. Mean entropy=~4f, flagged=~w~n',
+           [Ctx, MeanEntropy, NHighUncertainty]),
+    maxent_multi_run_contexts(Rest, Constraints, NTotal, RestSummaries).
 
 /* ================================================================
    SELF-TEST

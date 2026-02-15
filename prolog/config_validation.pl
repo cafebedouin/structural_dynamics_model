@@ -215,7 +215,15 @@ range_bounded_param(P) :-
         maxent_uncertainty_threshold,
         maxent_disagreement_prob_threshold,
         maxent_signature_override_strength,
-        maxent_boolean_bonus
+        maxent_boolean_bonus,
+        % --- Trajectory mining ---
+        trajectory_distance_shift_weight,
+        trajectory_distance_metric_weight,
+        trajectory_distance_stability_weight,
+        trajectory_distance_pathology_weight,
+        trajectory_family_cut_level,
+        trajectory_isomorphism_threshold,
+        trajectory_coupling_band_width
     ]).
 
 % ============================================================
@@ -265,6 +273,8 @@ config_violation(Msg) :-
 
 binary_flag_param(fpn_enabled).
 binary_flag_param(maxent_enabled).
+binary_flag_param(abductive_enabled).
+binary_flag_param(trajectory_enabled).
 
 % ============================================================
 % 2e. Negative-allowed maxent params (penalty is negative)

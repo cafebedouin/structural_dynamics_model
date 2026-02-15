@@ -354,6 +354,31 @@ else
 fi
 
 # ==============================================================================
+# STEP 8f: Trajectory mining analysis
+# ==============================================================================
+step "Generating trajectory mining analysis"
+
+TRAJ_ENABLED=$(cd "$PROLOG_DIR" && swipl -g "use_module(config), (config:param(trajectory_enabled, 1) -> write(1) ; write(0)), halt." 2>/dev/null || echo "0")
+if [ "$TRAJ_ENABLED" = "1" ]; then
+    TRAJ_REPORT="$OUTPUT_DIR/trajectory_report.md"
+    TRAJ_RAW="$OUTPUT_DIR/trajectory_report_raw.md"
+    if (cd "$PROLOG_DIR" && swipl -l stack.pl -l covering_analysis.pl -l dirac_classification.pl \
+          -l maxent_classifier.pl -l trajectory_mining.pl \
+          -l trajectory_report.pl -g "run_trajectory_report, halt.") > "$TRAJ_RAW" 2>/dev/null; then
+        sed -n '/<!-- TRAJECTORY_REPORT_START -->/,$p' "$TRAJ_RAW" | tail -n +2 > "$TRAJ_REPORT"
+        rm -f "$TRAJ_RAW"
+        TRAJ_FAMILIES=$(grep -oP 'Structural families\*\* \| \K\d+' "$TRAJ_REPORT" || echo "?")
+        TRAJ_TWINS=$(grep -oP 'Cross-domain twins\*\* \| \K\d+' "$TRAJ_REPORT" || echo "?")
+        ok "Trajectory mining: $TRAJ_FAMILIES families, $TRAJ_TWINS twins -> trajectory_report.md"
+    else
+        rm -f "$TRAJ_RAW"
+        warn "Trajectory mining had issues"
+    fi
+else
+    echo -e "  ${CYAN}--${NC}  Trajectory mining disabled (trajectory_enabled=0)"
+fi
+
+# ==============================================================================
 # STEP 9: Meta-report
 # ==============================================================================
 step "Generating meta-report"
@@ -487,6 +512,22 @@ else
 fi
 echo ""
 
+# Trajectory mining summary
+echo -e "${BOLD}  TRAJECTORY MINING${NC}"
+if [ -f "$OUTPUT_DIR/trajectory_report.md" ]; then
+    TM_TRAJECTORIES=$(grep -oP 'Total trajectories\*\* \| \K\d+' "$OUTPUT_DIR/trajectory_report.md" 2>/dev/null || echo "?")
+    TM_FAMILIES=$(grep -oP 'Structural families\*\* \| \K\d+' "$OUTPUT_DIR/trajectory_report.md" 2>/dev/null || echo "?")
+    TM_TWINS=$(grep -oP 'Cross-domain twins\*\* \| \K\d+' "$OUTPUT_DIR/trajectory_report.md" 2>/dev/null || echo "?")
+    TM_SINGLETONS=$(grep -oP 'Singletons \(anomalies\)\*\* \| \K\d+' "$OUTPUT_DIR/trajectory_report.md" 2>/dev/null || echo "?")
+    echo "  Trajectories: $TM_TRAJECTORIES"
+    echo "  Structural Families: $TM_FAMILIES"
+    echo "  Cross-Domain Twins: $TM_TWINS"
+    echo "  Singletons: $TM_SINGLETONS"
+else
+    echo "  (not generated)"
+fi
+echo ""
+
 # Generated reports
 echo -e "${BOLD}  GENERATED REPORTS${NC}"
 for report in \
@@ -507,6 +548,7 @@ for report in \
     "fpn_report.md" \
     "maxent_report.md" \
     "abductive_report.md" \
+    "trajectory_report.md" \
     "variance_analysis.md" \
     "pattern_mining.md" \
     "index_sufficiency.md" \

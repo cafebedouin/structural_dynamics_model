@@ -430,6 +430,25 @@ param(abductive_maxent_mountain_deception, 0.50).    % P(mountain) threshold for
 param(abductive_dormant_entropy_ceiling,   0.15).    % Max H_norm for dormant_extraction trigger
 
 /* ================================================================
+   13. TRAJECTORY MINING (v6.4)
+   ================================================================
+   Extends 24 orbit families (type-only) into richer structural
+   families incorporating continuous metrics, entropy, coupling,
+   drift, and fingerprint voids. Detects structural isomorphisms
+   — constraints from different domains that behave identically
+   under observer shift.
+   ================================================================ */
+
+param(trajectory_enabled,                  0).       % 0=disabled, 1=enabled
+param(trajectory_distance_shift_weight,    0.35).    % Weight for shift (type sequence) distance
+param(trajectory_distance_metric_weight,   0.25).    % Weight for metric (chi, entropy) distance
+param(trajectory_distance_stability_weight, 0.25).   % Weight for stability (coupling, purity) distance
+param(trajectory_distance_pathology_weight, 0.15).   % Weight for pathology (drift, voids) distance
+param(trajectory_family_cut_level,         0.30).    % Dendrogram cut height for family assignment
+param(trajectory_isomorphism_threshold,    0.15).    % Max distance for trajectory isomorphism
+param(trajectory_coupling_band_width,      0.15).    % Coupling match tolerance for isomorphism
+
+/* ================================================================
    CONFIG VALIDATION (loaded last so all param/2 facts are available)
    ================================================================ */
 
