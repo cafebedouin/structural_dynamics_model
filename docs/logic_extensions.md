@@ -185,7 +185,7 @@ Named after the only pair of dice that produce the same distribution as standard
    - 1.0 = maximally coupled
 
 4. **Apply Threshold**:
-   - If `CouplingScore ≤ boltzmann_coupling_threshold` (0.15) → **compliant**
+   - If `CouplingScore ≤ boltzmann_coupling_threshold` (0.25) → **compliant**
    - If `CouplingScore > boltzmann_coupling_threshold` → **non_compliant**
 
 **Edge Case: Complexity Offset**
@@ -222,8 +222,8 @@ cross_index_coupling(C, CouplingScore) :-
 ```
 
 **Parameters (logic_thresholds.md §5a):**
-- `boltzmann_coupling_threshold` = 0.15
-- `boltzmann_coupling_strong_threshold` = 0.40
+- `boltzmann_coupling_threshold` = 0.25 *(Updated February 2026 to match calibrated config.pl value; see §4.1 for calibration rationale.)*
+- `boltzmann_coupling_strong_threshold` = 0.50
 - `boltzmann_factorization_tolerance` = 0.10
 - `boltzmann_min_classifications` = 3
 
@@ -306,7 +306,7 @@ constraint_signature(C, false_natural_law) :-
 - Coupling topology reveals construction, not natural law
 
 **Parameters:**
-- Detection relies on `boltzmann_coupling_threshold` (0.15)
+- Detection relies on `boltzmann_coupling_threshold` (0.25)
 - Excess extraction uses `boltzmann_floor_*` values
 
 ---
@@ -408,7 +408,7 @@ constraint_signature(C, coupling_invariant_rope) :-
 → **Certified CI_Rope**
 
 **Parameters:**
-- Uses `boltzmann_coupling_threshold` (0.15)
+- Uses `boltzmann_coupling_threshold` (0.25)
 - Excess tolerance typically 0.10
 - Boltzmann floor varies by coordination type
 
@@ -564,7 +564,7 @@ For each coupled pair `(P, S)` from Boltzmann test:
 % structural_signatures.pl
 detect_nonsensical_coupling(C, CoupledPairs, AvgStrength) :-
     cross_index_coupling(C, CouplingScore),
-    CouplingScore > 0.15,  % Has coupling
+    CouplingScore > 0.25,  % Has coupling
     identify_coupled_dimensions(C, CoupledPairs),
     filter_nonsensical(C, CoupledPairs, Nonsensical),
     Nonsensical \= [],
@@ -583,7 +583,7 @@ Nonsensical coupling is **extractive complexity**. It's how constraints hide:
 If your cereal choice determines your soap brand, someone's making money off that coupling.
 
 **Parameters:**
-- Strong coupling threshold: 0.40
+- Strong coupling threshold: 0.50
 - Functional justification checked via coordination_type/2
 
 ---
@@ -636,7 +636,7 @@ Where:
 - **F(C)** = Factorization score = `1.0 - coupling_score(C)`
 - **S(C)** = Scope invariance score = `1.0 - scope_variance_penalty(C)`
 - **K(C)** = Coupling cleanliness = `1.0 - nonsensical_coupling_strength(C)`
-- **E(C)** = Excess extraction decay = `exp(-λ · excess_extraction(C))`
+- **E(C)** = Excess extraction decay = `max(0.0, 1.0 - min(1.0, excess_extraction(C) × 2.0))`
 
 **Weights** (from theoretical considerations):
 - w₁ = 0.30 (Factorization — most fundamental)
@@ -674,14 +674,15 @@ K(C) = 1.0 - nonsensical_coupling_strength(C)
 
 **E(C): Excess Extraction Decay** (20%)
 ```
-E(C) = exp(-2.0 · excess_extraction(C))
+E(C) = max(0.0, 1.0 - min(1.0, excess_extraction(C) × 2.0))
 ```
 Where:
 - excess_extraction(C) = ε(C) - BoltzmannFloor(coordination_type)
-- λ = 2.0 (decay rate)
+- This is a **clamped linear decay**, not exponential
 - At floor (0): E = 1.0
-- At 0.5 excess: E ≈ 0.37
-- Exponential decay penalizes heavily
+- At 0.25 excess: E = 0.50
+- At 0.5 excess: E = 0.0 (fully penalized)
+- Linear decay reaches zero at excess = 0.5, rather than the asymptotic approach of an exponential
 
 **Sentinel Value:**
 

@@ -562,7 +562,7 @@ The name comes from mountaineering: you don't move a mountain, you route around 
 - **"Human nature is competitive"**: Claims universality, but cooperation levels vary dramatically by scope and cultural context.
 - **"Scarcity is fundamental"**: Claims natural necessity, but often reflects constructed property systems rather than physical limits.
 
-**The critical distinction:** True Mountains have **zero or minimal extraction** (Îµ â‰¤ 0.15) and **zero or minimal suppression** (Supp â‰¤ 0.05). If a constraint requires active enforcement or extracts heavily from participants, it's not a natural lawâ€”it's a constructed constraint claiming inevitability.
+**The critical distinction:** True Mountains have **zero or minimal extraction** (Îµ â‰¤ 0.25) and **zero or minimal suppression** (Supp â‰¤ 0.05). If a constraint requires active enforcement or extracts heavily from participants, it's not a natural lawâ€”it's a constructed constraint claiming inevitability.
 
 **Why such strict thresholds?**
 
@@ -571,14 +571,14 @@ Because calling something a Mountain has massive consequences. It shifts from "r
 ##### Formal Definition
 
 ```
-â– C[I] â†” Îµ(C) â‰¤ 0.15 âˆ§ Supp(C) â‰¤ 0.05 âˆ§ Immutable(C, I.T, I.E)
+â– C[I] â†” Îµ(C) â‰¤ 0.25 âˆ§ Supp(C) â‰¤ 0.05 âˆ§ Immutable(C, I.T, I.E)
 ```
 
 **Components:**
 
-- **Îµ(C) â‰¤ 0.15**: Base extractiveness at coordination floor
-  - Natural laws don't extractâ€”they simply constrain what's possible
-  - The 0.15 threshold allows for minimal necessary coordination overhead
+- **Îµ(C) â‰¤ 0.25**: Base extractiveness at coordination floor
+  - Natural laws don't extractâ€"they simply constrain what's possible
+  - The 0.25 threshold allows for minimal necessary coordination overhead
   - Reference: logic_thresholds.md Â§3a, `mountain_extractiveness_max`
 
 - **Supp(C) â‰¤ 0.05**: Suppression at noise floor
@@ -622,7 +622,7 @@ classify_from_metrics(_C, BaseEps, _Chi, Supp, Context, mountain) :-
 **Key observation:** The cut (!) means if Mountain classification succeeds, we don't check other types. Mountain has highest priority.
 
 **Canonical Thresholds** (from logic_thresholds.md Â§3a):
-- `mountain_extractiveness_max` = **0.15**
+- `mountain_extractiveness_max` = **0.25**
 - `mountain_suppression_ceiling` = **0.05**
 - `mountain_extractiveness_min` = **0.0** (theoretical minimum, unused in practice)
 
@@ -638,7 +638,7 @@ classify_from_metrics(_C, BaseEps, _Chi, Supp, Context, mountain) :-
 >
 > Natural laws do not "senselessly couple" unrelated index dimensions. If a constraint's classification depends on the product of Power and Scope in a non-factorizable way, it is **constructed**, not naturalâ€”regardless of how low its Îµ and Supp values are.
 >
-> **Note:** Boltzmann compliance is **necessary but not sufficient** for Natural Law classification. A constraint must ALSO meet the Mountain thresholds (Îµ â‰¤ 0.15, Supp â‰¤ 0.05) AND show temporal stability AND have zero beneficiaries. Boltzmann compliance alone doesn't make something a Mountainâ€”it just prevents false Mountains from passing as natural laws.
+> **Note:** Boltzmann compliance is **necessary but not sufficient** for Natural Law classification. A constraint must ALSO meet the Mountain thresholds (Îµ â‰¤ 0.25, Supp â‰¤ 0.05) AND show temporal stability AND have zero beneficiaries. Boltzmann compliance alone doesn't make something a Mountainâ€”it just prevents false Mountains from passing as natural laws.
 >
 > **The Test:**
 >
@@ -653,7 +653,7 @@ classify_from_metrics(_C, BaseEps, _Chi, Supp, Context, mountain) :-
 >
 > **Critical: FNL Detection is Signature Override, Not Audit.**
 >
-> When False Natural Law (FNL) is detected, it's not merely flagged for reviewâ€”it **overrides the metric-based classification**. A constraint that passes Mountain thresholds (Îµ â‰¤ 0.15, Supp â‰¤ 0.05) but fails Boltzmann compliance is **demoted** from "Universal Necessity" (Mountain) to "Asymmetric Construction" (Tangled Rope). This happens in structural_signatures.pl, which runs after drl_core.pl's metric classification.
+> When False Natural Law (FNL) is detected, it's not merely flagged for reviewâ€”it **overrides the metric-based classification**. A constraint that passes Mountain thresholds (Îµ â‰¤ 0.25, Supp â‰¤ 0.05) but fails Boltzmann compliance is **demoted** from "Universal Necessity" (Mountain) to "Asymmetric Construction" (Tangled Rope). This happens in structural_signatures.pl, which runs after drl_core.pl's metric classification.
 >
 > **Note: Boltzmann compliance is necessary but not sufficient for Natural Law (NL) signature.** A constraint can factorize perfectly and still not be naturalâ€”it could be a well-designed coordination standard (CS). The full NL signature requires: Boltzmann compliance AND no viable alternatives AND zero beneficiaries AND temporal stability. See logic_extensions.md Â§1.2 for complete NL signature requirements.
 >
@@ -795,7 +795,7 @@ Note: May become Rope from (analytical, civilizational) as technology evolves
 
 **Summary: Mountain Operator**
 
-**Use when:** Constraint genuinely unchangeable from your index (Îµ â‰¤ 0.15, Supp â‰¤ 0.05, immutable)
+**Use when:** Constraint genuinely unchangeable from your index (Îµ â‰¤ 0.25, Supp â‰¤ 0.05, immutable)
 
 **Verify with:** Boltzmann compliance test (factorization across PowerÃ—Scope)
 
@@ -830,7 +830,7 @@ From your index I, a Rope provides **genuine coordination value while extracting
 
 **The critical distinction:** True Ropes have **dual threshold protection**:
 1. Low power-scaled extraction: Ï‡ â‰¤ 0.35
-2. Low base extraction: Îµ â‰¤ 0.15
+2. Low base extraction: Îµ â‰¤ 0.45
 
 **Why dual thresholds?**
 
@@ -844,7 +844,7 @@ From (institutional, generational, arbitrage, global):
   Ï‡ = 0.60 Ã— -0.2 Ã— 1.2 = -0.144
   â†’ Net benefit! Appears as Rope from institutional view
   
-BUT Îµ = 0.60 fails rope_epsilon_ceiling (0.15)
+BUT Îµ = 0.60 fails rope_epsilon_ceiling (0.45)
 â†’ NOT a Rope, even from institutional index
 â†’ Prevents powerful from reclassifying extraction as coordination
 ```
@@ -854,7 +854,7 @@ The dual threshold ensures: "If it extracts heavily from ANYONE, it's not a Rope
 **Formal Definition:**
 
 ```
-âŠžC[I] â†” Ï‡(C, I.P, I.S) â‰¤ 0.35 âˆ§ Îµ(C) â‰¤ 0.15 âˆ§ Changeable(C, I.T, I.E)
+âŠžC[I] â†" Ï‡(C, I.P, I.S) â‰¤ 0.35 âˆ§ Îµ(C) â‰¤ 0.45 âˆ§ Changeable(C, I.T, I.E)
 ```
 
 **Components:**
@@ -864,9 +864,9 @@ The dual threshold ensures: "If it extracts heavily from ANYONE, it's not a Rope
   - Accounts for how extraction scales with power position and scope
   - Reference: logic_thresholds.md Â§3b, `rope_chi_ceiling`
 
-- **Îµ(C) â‰¤ 0.15**: Base extraction at coordination floor
-  - Same as Mountain thresholdâ€”genuine coordination shouldn't extract
-  - The 0.15 allows minimal overhead (learning costs, protocol maintenance)
+- **Îµ(C) â‰¤ 0.45**: Base extraction ceiling for coordination
+  - Wider than Mountain threshold to accommodate coordination with moderate overhead
+  - The 0.45 allows for coordination mechanisms with real but bounded costs
   - Reference: logic_thresholds.md Â§3b, `rope_epsilon_ceiling`
 
 - **Changeable(C, I.T, I.E)**: Not immutableâ€”can be modified or replaced
@@ -877,8 +877,8 @@ The dual threshold ensures: "If it extracts heavily from ANYONE, it's not a Rope
 **Changeability vs Immutability:**
 
 The key distinction between Rope and Mountain at low Îµ:
-- **Mountain**: Îµ â‰¤ 0.15, Supp â‰¤ 0.05, **Immutable**
-- **Rope**: Ï‡ â‰¤ 0.35, Îµ â‰¤ 0.15, **Changeable**
+- **Mountain**: Îµ â‰¤ 0.25, Supp â‰¤ 0.05, **Immutable**
+- **Rope**: Ï‡ â‰¤ 0.35, Îµ â‰¤ 0.45, **Changeable**
 
 UTF-8 is a Rope (could be replaced by different encoding standard, unlikely but possible). Thermodynamics is a Mountain (cannot be replacedâ€”it's how reality works).
 
@@ -898,7 +898,7 @@ classify_from_metrics(_C, BaseEps, Chi, _Supp, Context, rope) :-
 
 **Canonical Thresholds** (from logic_thresholds.md Â§3b):
 - `rope_chi_ceiling` = **0.35**
-- `rope_epsilon_ceiling` = **0.15**
+- `rope_epsilon_ceiling` = **0.45**
 - `rope_suppression_ceiling` = **0.16** (base suppression, used in other predicates)
 - `rope_extractiveness_min` = **0.0** (theoretical minimum)
 
@@ -916,7 +916,7 @@ From (powerless, biographical, trapped, global):
   Ï‡ = 0.12 Ã— 1.5 Ã— 1.2 = 0.216
   
   Check: Ï‡ = 0.216 â‰¤ 0.35 âœ“
-  Check: Îµ = 0.12 â‰¤ 0.15 âœ“
+  Check: Îµ = 0.12 â‰¤ 0.45 âœ"
   Check: Changeable (could adopt different encoding) âœ“
   â†’ Rope from powerless/global âœ“
 
@@ -926,7 +926,7 @@ From (institutional, generational, arbitrage, global):
   Ï‡ = 0.12 Ã— -0.2 Ã— 1.2 = -0.029
   
   Check: Ï‡ = -0.029 â‰¤ 0.35 âœ“ (net benefit!)
-  Check: Îµ = 0.12 â‰¤ 0.15 âœ“
+  Check: Îµ = 0.12 â‰¤ 0.45 âœ"
   Check: Changeable âœ“
   â†’ Rope from institutional/global âœ“
 
@@ -958,7 +958,7 @@ But base Îµ low â†’ genuinely symmetric coordination, not extraction mech
 > **Test 1: Boltzmann Compliance (Factorization)**
 > - Classification factorizes across Power Ã— Scope
 > - No nonsensical coupling
-> - Coupling score â‰¤ 0.15
+> - Coupling score â‰¤ 0.25
 > - Changing Power has same effect at all Scope levels
 >
 > **Test 2: Scope Invariance**
@@ -980,7 +980,7 @@ But base Îµ low â†’ genuinely symmetric coordination, not extraction mech
 >
 > **What Certification Means:**
 >
-> - **Rope** (from metrics): Ï‡ â‰¤ 0.35, Îµ â‰¤ 0.15 â€” passes thresholds
+> - **Rope** (from metrics): Ï‡ â‰¤ 0.35, Îµ â‰¤ 0.45 â€" passes thresholds
 >   - Could be: true coordination OR low-extraction nudge OR behavioral default
 >
 > - **CI_Rope** (Boltzmann-certified): Passes all four tests
@@ -1131,7 +1131,7 @@ Action: Reform or exit (not genuine coordination)
 
 **Summary: Rope Operator**
 
-**Use when:** Genuine coordination with minimal extraction (Ï‡ â‰¤ 0.35, Îµ â‰¤ 0.15, changeable)
+**Use when:** Genuine coordination with bounded extraction (Ï‡ â‰¤ 0.35, Îµ â‰¤ 0.45, changeable)
 
 **Verify with:** CI_Rope certification tests (four Boltzmann invariance tests)
 
@@ -1333,7 +1333,7 @@ Powerful agent: avoids mechanism entirely or uses strategically (Tangled/Rope)
 
 > **Shadow Mode Reminder:** Nonsensical coupling detection runs AFTER metric-based classification. A constraint classified as Snare by `classify_from_metrics/6` can have this classification confirmed (or a Mountain/Rope can be demoted to Tangled Rope) if nonsensical coupling is detected. This operates in `structural_signatures.pl`.
 >
-> **Extraction is often hidden.** If a constraint fails the Boltzmann Factorization test (coupling score > 0.15), it couples independent dimensions in ways that natural laws cannotâ€”this is mathematical evidence of construction, even if it mimics a natural law or claims symmetric benefits.
+> **Extraction is often hidden.** If a constraint fails the Boltzmann Factorization test (coupling score > 0.25), it couples independent dimensions in ways that natural laws cannotâ€”this is mathematical evidence of construction, even if it mimics a natural law or claims symmetric benefits.
 >
 > **The Core Insight:**
 >
@@ -1353,7 +1353,7 @@ Powerful agent: avoids mechanism entirely or uses strategically (Tangled/Rope)
 >
 > For each coupled pair (Dâ‚, Dâ‚‚) from Boltzmann test:
 > 1. Check if coordination function justifies coupling
-> 2. Check if coupling strength exceeds threshold (> 0.40)
+> 2. Check if coupling strength exceeds threshold (> 0.50)
 > 3. If strong coupling without justification â†’ nonsensical
 >
 > **Functional Justifications:**
@@ -1526,7 +1526,7 @@ True classification: Tangled Rope â†’ Snare (index-dependent)
 
 **Action:** Cut/Exit if mobile; Resist/Organize if trapped; Build alternatives before destroying load-bearing Snares
 
-**Distinction from Tangled Rope:** Snares extract heavily (Îµ â‰¥ 0.46); Tangled Ropes have genuine coordination (Îµ typically 0.40-0.60, requires Coord predicate)
+**Distinction from Tangled Rope:** Snares extract heavily (Îµ â‰¥ 0.46); Tangled Ropes have genuine coordination (Îµ typically 0.30-0.60, requires Coord predicate)
 
 **Next operator:** Tangled Rope (âŠžâŠ ) â€” the hybrid coordination-extraction type
 
@@ -1555,8 +1555,8 @@ The metaphor: ropes tangled with extraction mechanisms. The rope genuinely helps
 
 ```
 âŠžâŠ C[I] â†” 0.40 â‰¤ Ï‡(C, I.P, I.S) â‰¤ 0.90 
-         âˆ§ Îµ(C) â‰¥ 0.50 
-         âˆ§ Supp(C) â‰¥ 0.40 
+         âˆ§ Îµ(C) â‰¥ 0.30
+         âˆ§ Supp(C) â‰¥ 0.40
          âˆ§ Enforce(C) 
          âˆ§ Coord(C) 
          âˆ§ Asymmetric(C)
@@ -1569,8 +1569,8 @@ The metaphor: ropes tangled with extraction mechanisms. The rope genuinely helps
   - Same constraint can be Tangled from one index, Snare from another
   - Reference: logic_thresholds.md Â§3d, `tangled_rope_chi_floor`, `tangled_rope_chi_ceil`
 
-- **Îµ(C) â‰¥ 0.50**: High base extraction
-  - Distinguishes from Rope (Îµ â‰¤ 0.15)
+- **Îµ(C) â‰¥ 0.30**: Moderate-to-high base extraction
+  - Distinguishes from Rope (Îµ â‰¤ 0.45)
   - Ensures genuine extraction, not just coordination overhead
   - Reference: logic_thresholds.md Â§3d, `tangled_rope_epsilon_floor`
 
@@ -1618,7 +1618,7 @@ classify_from_metrics(C, BaseEps, Chi, Supp, _Context, tangled_rope) :-
 From logic_thresholds.md Â§3d:
 - `tangled_rope_chi_floor` = **0.40**
 - `tangled_rope_chi_ceil` = **0.90**
-- `tangled_rope_epsilon_floor` = **0.50**
+- `tangled_rope_epsilon_floor` = **0.30**
 - `tangled_rope_suppression_floor` = **0.40**
 
 **Priority:** Tangled Rope > Piton (checked after Mountain, Snare, Scaffold, Rope)
@@ -1721,7 +1721,7 @@ See logic_extensions.md Â§5.3 for composition gates (surgical reform requires 
 
 **Why so common?**
 
-Real-world coordination is messy. Pure coordination (Rope, Îµ â‰¤ 0.15) is rare. Pure extraction (Snare, Îµ â‰¥ 0.46, no coordination) is also rare. Most constraints fall in the middle: they coordinate something while extracting asymmetrically.
+Real-world coordination is messy. Pure coordination (Rope, Îµ â‰¤ 0.45) is rare. Pure extraction (Snare, Îµ â‰¥ 0.46, no coordination) is also rare. Most constraints fall in the middle: they coordinate something while extracting asymmetrically.
 
 **Distribution:**
 - Mountains: ~8%
@@ -1733,7 +1733,7 @@ Real-world coordination is messy. Pure coordination (Rope, Îµ â‰¤ 0.15) is
 
 ##### Summary: Tangled Rope Operator
 
-**Use when:** Genuine coordination exists but extraction high (0.40 â‰¤ Ï‡ â‰¤ 0.90, Îµ â‰¥ 0.50, both Coord and Asymmetric)
+**Use when:** Genuine coordination exists but extraction present (0.40 â‰¤ Ï‡ â‰¤ 0.90, Îµ â‰¥ 0.30, both Coord and Asymmetric)
 
 **Key insight:** Not failed Ropesâ€”irreducible hybrids providing value AND extracting
 
@@ -1879,22 +1879,22 @@ Theater(C) = Performance / Substance
 When Performance >> Substance, constraint is "coordination in name only."
 
 **Pitons are characterized by:**
-- **Ï‡ â‰¤ 0.10**: Minimal effective extraction (inactive)
+- **Ï‡ â‰¤ 0.25**: Low effective extraction (inactive or near-inactive)
 - **Îµ > 0.10**: Still costs energy (maintenance burden)
 - **Theater â‰¥ 0.70**: High performance/substance ratio
 
 The theater floor (â‰¥ 0.70) distinguishes Pitons from low-extraction Ropes:
-- **Rope**: Ï‡ â‰¤ 0.35, Îµ â‰¤ 0.15, Theater < 0.70 (real coordination)
-- **Piton**: Ï‡ â‰¤ 0.10, Îµ > 0.10, Theater â‰¥ 0.70 (theater dominates)
+- **Rope**: Ï‡ â‰¤ 0.35, Îµ â‰¤ 0.45, Theater < 0.70 (real coordination)
+- **Piton**: Ï‡ â‰¤ 0.25, Îµ > 0.10, Theater â‰¥ 0.70 (theater dominates)
 
 ##### Formal Definition
 
 ```
-âŠŸC[I] â†” Ï‡(C, I.P, I.S) â‰¤ 0.10 âˆ§ Îµ(C) > 0.10 âˆ§ Theater(C) â‰¥ 0.70
+âŠŸC[I] â†" Ï‡(C, I.P, I.S) â‰¤ 0.25 âˆ§ Îµ(C) > 0.10 âˆ§ Theater(C) â‰¥ 0.70
 ```
 
 **Components:**
-- **Ï‡ â‰¤ 0.10**: Minimal effective extraction
+- **Ï‡ â‰¤ 0.25**: Low effective extraction
 - **Îµ > 0.10**: Still requires maintenance
 - **Theater â‰¥ 0.70**: Performance >> Substance
 
@@ -1914,7 +1914,7 @@ classify_from_metrics(C, BaseEps, Chi, _Supp, _Context, piton) :-
 ```
 
 **Canonical Thresholds** (logic_thresholds.md Â§3f):
-- `piton_extraction_ceiling` = **0.10**
+- `piton_extraction_ceiling` = **0.25**
 - `piton_epsilon_floor` = **0.10**
 - `piton_theater_floor` = **0.70**
 
@@ -1931,7 +1931,7 @@ classify_from_metrics(C, BaseEps, Chi, _Supp, _Context, piton) :-
 
 The energy-accounting logic differs:
 - **Snare**: High extraction (Îµ â‰¥ 0.46), high suppression (Supp â‰¥ 0.60) â†’ **active harm** â†’ justify energy cost of cutting
-- **Piton**: Low extraction (Ï‡ â‰¤ 0.10), mostly theater (â‰¥ 0.70) â†’ **inert decay** â†’ energy better spent building alternatives
+- **Piton**: Low extraction (Ï‡ â‰¤ 0.25), mostly theater (â‰¥ 0.70) â†' **inert decay** â†' energy better spent building alternatives
 
 Don't waste energy maintaining or fighting Pitons:
 - Ignore where possible
@@ -1943,7 +1943,7 @@ Don't waste energy maintaining or fighting Pitons:
 
 ##### Summary
 
-**Use when:** Degraded constraint with high theater (Ï‡ â‰¤ 0.10, Îµ > 0.10, Theater â‰¥ 0.70)
+**Use when:** Degraded constraint with high theater (Ï‡ â‰¤ 0.25, Îµ > 0.10, Theater â‰¥ 0.70)
 
 **Distinguisher:** Theater ratio â‰¥ 0.70
 
@@ -2122,7 +2122,7 @@ FCR(C) â†” appears_as_rope(C)
 **Detection logic:**
 
 If a constraint:
-- Passes Rope thresholds (Ï‡ â‰¤ 0.35, Îµ â‰¤ 0.15), BUT
+- Passes Rope thresholds (Ï‡ â‰¤ 0.35, Îµ â‰¤ 0.45), BUT
 - Fails any of the four CI_Rope tests
 
 Then it's coordination-washingâ€”extraction hidden behind low metrics.
@@ -2907,7 +2907,7 @@ Classification checks types in strict order (first match wins):
 
 **Why this ordering?**
 
-1. **Mountain first:** Most restrictive gate (Îµ â‰¤ 0.15, Supp â‰¤ 0.05, immutable). Must rule out before considering changeable types.
+1. **Mountain first:** Most restrictive gate (Îµ â‰¤ 0.25, Supp â‰¤ 0.05, immutable). Must rule out before considering changeable types.
 
 2. **Snare before Scaffold:** High extraction should be flagged before low-extraction temporaries. Safety-critical to catch Snares.
 
@@ -2974,14 +2974,14 @@ Signatures do NOT modify `classify_from_metrics/6`. They operate afterward, prov
 
 **Rule M (Mountain):**
 ```
-Îµ(C) â‰¤ 0.15 âˆ§ Supp(C) â‰¤ 0.05 âˆ§ Immutable(C, I.T, I.E)
+Îµ(C) â‰¤ 0.25 âˆ§ Supp(C) â‰¤ 0.05 âˆ§ Immutable(C, I.T, I.E)
 â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
                     â– C[I]
 ```
 
 **Rule R (Rope):**
 ```
-Ï‡(C, I.P, I.S) â‰¤ 0.35 âˆ§ Îµ(C) â‰¤ 0.15 âˆ§ Changeable(C, I.T, I.E)
+Ï‡(C, I.P, I.S) â‰¤ 0.35 âˆ§ Îµ(C) â‰¤ 0.45 âˆ§ Changeable(C, I.T, I.E)
 â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
                          âŠžC[I]
 ```
@@ -2995,7 +2995,7 @@ Signatures do NOT modify `classify_from_metrics/6`. They operate afterward, prov
 
 **Rule TR (Tangled Rope):**
 ```
-0.40 â‰¤ Ï‡(C, I.P, I.S) â‰¤ 0.90 âˆ§ Îµ(C) â‰¥ 0.50 âˆ§ Supp(C) â‰¥ 0.40
+0.40 â‰¤ Ï‡(C, I.P, I.S) â‰¤ 0.90 âˆ§ Îµ(C) â‰¥ 0.30 âˆ§ Supp(C) â‰¥ 0.40
 âˆ§ Enforce(C) âˆ§ Coord(C) âˆ§ Asymmetric(C)
 â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
                       âŠžâŠ C[I]
@@ -3010,7 +3010,7 @@ Signatures do NOT modify `classify_from_metrics/6`. They operate afterward, prov
 
 **Rule Z (Piton):**
 ```
-Ï‡(C, I.P, I.S) â‰¤ 0.10 âˆ§ Îµ(C) > 0.10 âˆ§ Theater(C) â‰¥ 0.70
+Ï‡(C, I.P, I.S) â‰¤ 0.25 âˆ§ Îµ(C) > 0.10 âˆ§ Theater(C) â‰¥ 0.70
 â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
                         âŠŸC[I]
 ```
@@ -3046,8 +3046,8 @@ Misclassification has consequences. The six error types:
 
 **Indexical note:** From some indices, constraint genuinely IS a Mountain (biographical + trapped = unchangeable within lifetime). Error is claiming universal unchangeability.
 
-**Empirical findings (corpus audit, February 2026):** Type I is the primary empirically confirmed failure mode. 252 of 594 files flagged by the Prolog engine's False Mountain report; 96 with base extractiveness > 0.15 directly violating Mountain definition. Three threshold rules formalize detection:
-- ε > 0.15 incompatible with Mountain (Mountains have near-zero extraction)
+**Empirical findings (corpus audit, February 2026):** Type I is the primary empirically confirmed failure mode. 252 of 594 files flagged by the Prolog engine's False Mountain report; 96 with base extractiveness > 0.25 directly violating Mountain definition. Three threshold rules formalize detection:
+- ε > 0.25 incompatible with Mountain (Mountains have near-zero extraction)
 - Theater ratio > 0.50 incompatible with Mountain (natural laws don't need theater)
 - `requires_active_enforcement` incompatible with Mountain (natural laws enforce themselves)
 
@@ -3167,9 +3167,9 @@ The Prolog implementation operates as a three-layer verification system:
 **Layer 2 — Classification Engine (Prolog):** Runs indexed classification across perspectives, computes perspectival gaps (χ divergence), generates reports (false_mountain_report, gap_report, snare_report). Deterministic. Catches what rules encode. The False Mountain report is Layer 2's primary error-detection output — it flags all cases where perspectives disagree about Mountain status.
 
 **Layer 3 — Meta-Engine (second Prolog system):** Operates on Layer 2's outputs as its own fact base. Different ontology, different rules, different update cycle. Partitions Layer 2's findings into actionable categories:
-- **Category A (Naturalization Errors):** Mountain + ε > 0.15 + requires_active_enforcement → auto-queue for regeneration
+- **Category A (Naturalization Errors):** Mountain + ε > 0.25 + requires_active_enforcement → auto-queue for regeneration
 - **Category B (Theater-Mountain Conflicts):** Mountain + TR > 0.50 → flag for review
-- **Category C (Legitimate Perspectival Gaps):** Mountain + ε ≤ 0.15 + no enforcement → no action needed (e.g., mathematical theorems experienced differently by power level)
+- **Category C (Legitimate Perspectival Gaps):** Mountain + ε ≤ 0.25 + no enforcement → no action needed (e.g., mathematical theorems experienced differently by power level)
 - **Category D (WHO Assignment Suspects):** High extraction + declared beneficiary/victim but no powerless/institutional gap → human review
 - **Category E (Structural Defects):** Illegal claim values, missing theater ratio → fixable without regeneration
 - **Category F (Corpus-Wide Bias):** Domain naturalization rates, model naturalization rates → research findings
@@ -3503,7 +3503,7 @@ carbon_credits:
 
 Tangled Rope threshold check:
   0.40 â‰¤ Ï‡=0.66 â‰¤ 0.90 âœ“
-  Îµ=0.55 â‰¥ 0.50 âœ“
+  Îµ=0.55 â‰¥ 0.30 âœ"
   Supp=0.60 â‰¥ 0.40 âœ“
   
 Classification: âŠžâŠ  (Tangled Rope)
@@ -3526,8 +3526,8 @@ Experience: Balancedâ€”coordination value matches extraction cost
 
 Rope threshold check:
   Ï‡=-0.132 â‰¤ 0.35 âœ“
-  Îµ=0.55 â‰° 0.15 âœ—
-  
+  Îµ=0.55 â‰° 0.45 âœ—
+
 FAILS rope_epsilon_ceiling (dual threshold protection)
 
 Tangled Rope check:
@@ -3676,7 +3676,7 @@ Whatever extensions or modifications we make to this system, these invariants MU
 3. **Action flows from final type** â€” Recommendations derive from integrated classification, not raw metrics
 4. **Thresholds are calibration points** â€” Not moral boundaries, not absolute truths, but measurement regime parameters subject to empirical validation
 
-**On Thresholds:** The values in logic_thresholds.md (Îµ â‰¤ 0.15 for Rope, Ï‡ â‰¥ 0.66 for Snare, etc.) are **calibration points in a noisy measurement regime**, not Platonic ideals. They represent empirically observed boundaries in the 691-constraint corpus but remain subject to:
+**On Thresholds:** The values in logic_thresholds.md (Îµ â‰¤ 0.45 for Rope, Ï‡ â‰¥ 0.66 for Snare, etc.) are **calibration points in a noisy measurement regime**, not Platonic ideals. They represent empirically observed boundaries in the 691-constraint corpus but remain subject to:
 - Sensitivity testing (perturbation analysis)
 - Cross-corpus validation (non-Western contexts)
 - Temporal recalibration (as power structures evolve)

@@ -174,7 +174,7 @@ param(snare_load_bearing_threshold,  0.70).  % Above this = load-bearing snare (
    Audit module (drl_audit_core.pl) uses χ thresholds only.
    ================================================================ */
 
-% Rule R (Rope): χ ≤ 0.35 ∧ ε ≤ 0.15 ∧ Coord(C) ∧ Changeable(C, I.T, I.E)
+% Rule R (Rope): χ ≤ 0.35 ∧ ε ≤ 0.45 ∧ Coord(C) ∧ Changeable(C, I.T, I.E)
 param(rope_chi_ceiling, 0.35).
 param(rope_epsilon_ceiling, 0.45).
 
@@ -182,7 +182,7 @@ param(rope_epsilon_ceiling, 0.45).
 param(snare_chi_floor, 0.66).
 param(snare_epsilon_floor, 0.46).
 
-% Rule TR (Tangled Rope): 0.40 ≤ χ ≤ 0.90 ∧ ε ≥ 0.50 ∧ Coord(C) ∧ Asymmetric(C)
+% Rule TR (Tangled Rope): 0.40 ≤ χ ≤ 0.90 ∧ ε ≥ 0.30 ∧ Coord(C) ∧ Asymmetric(C)
 param(tangled_rope_chi_floor, 0.40).
 param(tangled_rope_chi_ceil, 0.90).
 param(tangled_rope_epsilon_floor, 0.30).

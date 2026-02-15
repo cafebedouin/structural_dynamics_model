@@ -82,11 +82,11 @@ This document provides the **canonical threshold values** for all parameters in 
 
 ### 3a. Mountain (â– C[I])
 
-**Formal:** `â– C[I] â†” Îµ(C) â‰¤ 0.15 âˆ§ Supp(C) â‰¤ 0.05 âˆ§ Immutable(C, I.T, I.E)`
+**Formal:** `â– C[I] â†” Îµ(C) â‰¤ 0.25 âˆ§ Supp(C) â‰¤ 0.05 âˆ§ Immutable(C, I.T, I.E)`
 
 | Parameter | Value | Stage | Logic/Significance |
 |-----------|-------|-------|-------------------|
-| `mountain_extractiveness_max` | **0.15** | 1-6 | Max base extraction for natural law (coordination floor) |
+| `mountain_extractiveness_max` | **0.25** | 1-6 | Max base extraction for natural law (coordination floor) |
 | `mountain_suppression_ceiling` | **0.05** | 1-6 | Noise floor â€” no enforcement needed |
 | `mountain_extractiveness_min` | **0.0** | 1-6 | Theoretical minimum (unused in practice) |
 
@@ -98,12 +98,12 @@ This document provides the **canonical threshold values** for all parameters in 
 Three threshold rules are individually sufficient to invalidate Mountain classification. The corpus audit confirmed these as bright-line rules — every file violating any of them was correctly flagged as a false Mountain (96 of 594 files with direct definitional violations).
 
 ```
-Mountain_valid(C) ↔ ε(C) ≤ 0.15 ∧ TR(C) ≤ 0.10 ∧ ¬requires_active_enforcement(C)
+Mountain_valid(C) ↔ ε(C) ≤ 0.25 ∧ TR(C) ≤ 0.10 ∧ ¬requires_active_enforcement(C)
 ```
 
 | Rule | Threshold | Rationale |
 |------|-----------|-----------|
-| Extraction ceiling | ε ≤ 0.15 | Natural law does not extract from subjects |
+| Extraction ceiling | ε ≤ 0.25 | Natural law does not extract from subjects |
 | Theater ratio ceiling | TR ≤ 0.10 | Natural law needs no legitimation theater |
 | No active enforcement | ¬requires_active_enforcement | Natural law self-enforces through reality, not institutions |
 
@@ -113,12 +113,12 @@ Mountain_valid(C) ↔ ε(C) ≤ 0.15 ∧ TR(C) ≤ 0.10 ∧ ¬requires_active_en
 
 ### 3b. Rope (âŠžC[I])
 
-**Formal:** `âŠžC[I] â†” Ï‡(C, I.P, I.S) â‰¤ 0.35 âˆ§ Îµ(C) â‰¤ 0.15 âˆ§ Changeable(C, I.T, I.E)`
+**Formal:** `âŠžC[I] â†” Ï‡(C, I.P, I.S) â‰¤ 0.35 âˆ§ Îµ(C) â‰¤ 0.45 âˆ§ Changeable(C, I.T, I.E)`
 
 | Parameter | Value | Stage | Logic/Significance |
 |-----------|-------|-------|-------------------|
 | `rope_chi_ceiling` | **0.35** | 1-6 | Max power-scaled extraction for pure coordination |
-| `rope_epsilon_ceiling` | **0.15** | 1-6 | Max base extraction (same as Mountain â€” coordination floor) |
+| `rope_epsilon_ceiling` | **0.45** | 1-6 | Max base extraction for coordination (wider gate than Mountain) |
 | `rope_suppression_ceiling` | **0.16** | 1-6 | Base suppression ceiling for pure coordination |
 | `rope_extractiveness_min` | **0.0** | 1-6 | Theoretical minimum |
 
@@ -150,13 +150,13 @@ Mountain_valid(C) ↔ ε(C) ≤ 0.15 ∧ TR(C) ≤ 0.10 ∧ ¬requires_active_en
 
 ### 3d. Tangled Rope (âŠžâŠ C[I])
 
-**Formal:** `âŠžâŠ C[I] â†” 0.40 â‰¤ Ï‡(C, I.P, I.S) â‰¤ 0.90 âˆ§ Îµ(C) â‰¥ 0.50 âˆ§ Supp(C) â‰¥ 0.40 âˆ§ Enforce(C) âˆ§ Coord(C) âˆ§ Asymmetric(C)`
+**Formal:** `âŠžâŠ C[I] â†” 0.40 â‰¤ Ï‡(C, I.P, I.S) â‰¤ 0.90 âˆ§ Îµ(C) â‰¥ 0.30 âˆ§ Supp(C) â‰¥ 0.40 âˆ§ Enforce(C) âˆ§ Coord(C) âˆ§ Asymmetric(C)`
 
 | Parameter | Value | Stage | Logic/Significance |
 |-----------|-------|-------|-------------------|
 | `tangled_rope_chi_floor` | **0.40** | 1-6 | Min power-scaled extraction for hybrid |
 | `tangled_rope_chi_ceil` | **0.90** | 1-6 | Max power-scaled extraction (overlaps with snare) |
-| `tangled_rope_epsilon_floor` | **0.50** | 1-6 | Min base extraction for hybrid classification |
+| `tangled_rope_epsilon_floor` | **0.30** | 1-6 | Min base extraction for hybrid classification |
 | `tangled_rope_suppression_floor` | **0.40** | 1-6 | Requires active enforcement |
 | `tangled_rope_suppression_ceil` | **1.00** | 1-6 | Maximum suppression |
 
@@ -166,7 +166,7 @@ Mountain_valid(C) ↔ ε(C) ≤ 0.15 ∧ TR(C) ≤ 0.10 ∧ ¬requires_active_en
 - **Empirical prevalence:** ~36% of analyzed constraints (most common type)
 - **Structural requirements:** Requires Coord(C) âˆ§ Enforce(C) âˆ§ Asymmetric(C)
 - **Overlap with snare:** A constraint can be tangled at moderate power, snare at powerless power
-- **CRITICAL:** Îµ threshold (0.50) appears higher than some examples (e.g., carbon credits at 0.40). This needs reconciliation â€” see Known Issues.
+- **Calibration note:** Îµ threshold lowered to 0.30 during calibration to accommodate real constraints with moderate extractiveness that exhibit both coordination and extraction.
 
 ---
 
@@ -189,11 +189,11 @@ Mountain_valid(C) ↔ ε(C) ≤ 0.15 ∧ TR(C) ≤ 0.10 ∧ ¬requires_active_en
 
 ### 3f. Piton (âŠŸC[I])
 
-**Formal:** `âŠŸC[I] â†” Ï‡(C, I.P, I.S) â‰¤ 0.10 âˆ§ Îµ(C) > 0.10 âˆ§ Theater(C) â‰¥ 0.70`
+**Formal:** `âŠŸC[I] â†” Ï‡(C, I.P, I.S) â‰¤ 0.25 âˆ§ Îµ(C) > 0.10 âˆ§ Theater(C) â‰¥ 0.70`
 
 | Parameter | Value | Stage | Logic/Significance |
 |-----------|-------|-------|-------------------|
-| `piton_extraction_ceiling` | **0.10** | 1-6 | Minimal effective extraction for anyone |
+| `piton_extraction_ceiling` | **0.25** | 1-6 | Minimal effective extraction for anyone |
 | `piton_epsilon_floor` | **0.10** | 1-6 | Still costs energy to maintain (distinguishes from Îµ=0) |
 | `piton_theater_floor` | **0.70** | 1-6 | High theater ratio distinguishes from low-extraction ropes |
 
@@ -273,8 +273,8 @@ Mountain_valid(C) ↔ ε(C) ≤ 0.15 ∧ TR(C) ≤ 0.10 ∧ ¬requires_active_en
 
 | Parameter | Value | Stage | Logic/Significance |
 |-----------|-------|-------|-------------------|
-| `boltzmann_coupling_threshold` | **0.15** | 7 | Max allowable coupling score for Boltzmann compliance |
-| `boltzmann_coupling_strong_threshold` | **0.40** | 7 | Above â†’ "strong coupling" classification |
+| `boltzmann_coupling_threshold` | **0.25** | 7 | Max allowable coupling score for Boltzmann compliance |
+| `boltzmann_coupling_strong_threshold` | **0.50** | 7 | Above â†' "strong coupling" classification |
 | `boltzmann_factorization_tolerance` | **0.10** | 7 | Relative error margin for Ï‡(P,S) â‰ˆ f(P)Ã—g(S) test |
 | `boltzmann_min_classifications` | **3** | 7 | Min indexed classifications for reliable test (epistemic access) |
 
@@ -554,10 +554,11 @@ Boltzmann/Purity/Network logic runs alongside core, doesn't modify `classify_fro
 
 ## Known Issues & Calibration Needs
 
-### Issue 1: Tangled Rope Threshold Mismatch
-**Problem:** `tangled_rope_epsilon_floor` = 0.50, but carbon credits example uses Îµ = 0.40  
-**Status:** Requires reconciliation or example update  
-**Impact:** High â€” affects canonical examples
+### Issue 1: Tangled Rope Threshold Mismatch — RESOLVED
+**Problem:** `tangled_rope_epsilon_floor` was documented as 0.50, but carbon credits example uses Îµ = 0.40.
+**Resolution:** The threshold was lowered to 0.30 during calibration to accommodate real constraints with moderate extractiveness that exhibit both coordination and extraction. Documentation updated February 2026 to match config.pl.
+**Status:** Resolved
+**Impact:** No longer an issue — threshold, documentation, and examples are now consistent
 
 ### Issue 2: Boltzmann Floor Calibration
 **Problem:** Current values (0.02-0.20) are provisional estimates  
