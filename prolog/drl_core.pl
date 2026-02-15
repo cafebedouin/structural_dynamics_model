@@ -414,61 +414,77 @@ dr_action(C, Action) :-
 % ============================================================================
 % ERROR DETECTION (INDEXED)
 % ============================================================================
+% Coverage gap fix (abductive engine finding): 88 constraints with multi-type
+% Dirac orbits were invisible to perspectival_incoherence detection. Three
+% root causes fixed below:
+%
+% 1. Stored-fact dependency: the old perspectival_incoherence clause queried
+%    constraint_classification/3, which typically stores only 1-3 perspectives
+%    per constraint. gauge_orbit/2 computes types on-the-fly via dr_type/3
+%    across all 4 standard contexts. Fix: match gauge_orbit methodology.
+%
+% 2. Cut isolation: claim-vs-reality clauses (false_summit, snare_as_rope,
+%    piton_as_snare) used cuts that prevented perspectival_incoherence from
+%    firing for the same constraint when ErrorType was unbound. Fix: delegate
+%    claim mismatches to a helper predicate so cuts are local.
+%
+% 3. Analytical context exclusion: perspectival_incoherence excluded context
+%    pairs involving the analytical observer, but gauge_orbit/2 includes all
+%    4 standard contexts. 87/88 coverage-gap constraints have variance between
+%    non-analytical contexts, so this was not the primary blocker, but
+%    excluding a calibrated observer position was over-conservative. Fix:
+%    include all standard contexts (matching gauge_orbit/2).
 
 % ----------------------------------------------------------------------------
+% Route 1: Claim-vs-Reality Mismatches (delegated for cut isolation)
+% ----------------------------------------------------------------------------
+
+dr_mismatch(C, Context, ErrorType, Severity) :-
+    dr_claim_mismatch(C, Context, ErrorType, Severity).
+
+% ----------------------------------------------------------------------------
+% Route 2: Perspectival Incoherence (independent of claim mismatches)
+% ----------------------------------------------------------------------------
+% Same constraint classified differently across standard observer positions.
+% This is NOT an error but a FEATURE — it indicates indexical relativity.
+%
+% Computes classifications on the fly via dr_type/3 across standard_context/1,
+% matching gauge_orbit/2 methodology. All 4 standard contexts are included.
+
+dr_mismatch(C, perspectival_gap(Type1, Ctx1, Type2, Ctx2),
+            perspectival_incoherence, informational) :-
+    standard_context(Ctx1),
+    standard_context(Ctx2),
+    Ctx1 = context(agent_power(P1), _, _, _),
+    Ctx2 = context(agent_power(P2), _, _, _),
+    P1 @< P2,
+    dr_type(C, Ctx1, Type1),
+    dr_type(C, Ctx2, Type2),
+    Type1 \= Type2.
+
+% ----------------------------------------------------------------------------
+% Claim-vs-Reality Helper (cuts are local to this predicate)
+% ----------------------------------------------------------------------------
+
 % Type 1: False Mountain (Indexed)
-% ----------------------------------------------------------------------------
 % Claimed as Mountain but ISN'T from this context
-
-dr_mismatch(C, Context, type_1_false_summit, severe) :-
-    % Check if claimed as mountain in data
+dr_claim_mismatch(C, Context, type_1_false_summit, severe) :-
     narrative_ontology:constraint_claim(C, mountain),
-    
-    % Verify it's NOT a mountain from this context
     is_mountain(C, Context, fail),
     !.
 
-% ----------------------------------------------------------------------------
 % Type 3: Snare Misidentified as Rope (Indexed)
-% ----------------------------------------------------------------------------
 % Claimed as Rope but is actually Snare from this context
-
-dr_mismatch(C, Context, type_3_snare_as_rope, severe) :-
+dr_claim_mismatch(C, Context, type_3_snare_as_rope, severe) :-
     narrative_ontology:constraint_claim(C, rope),
     is_snare(C, Context, snare),
     !.
 
-% ----------------------------------------------------------------------------
 % Type 5: Piton Misidentified as Snare (Indexed)
-% ----------------------------------------------------------------------------
 % Claimed as Snare but is actually Piton from this context
-
-dr_mismatch(C, Context, type_5_piton_as_snare, moderate) :-
+dr_claim_mismatch(C, Context, type_5_piton_as_snare, moderate) :-
     narrative_ontology:constraint_claim(C, theater_ratio, TR), TR >= 0.70,
     is_piton(C, Context, piton),
-    !.
-
-% ----------------------------------------------------------------------------
-% Type 7: Perspectival Incoherence (NEW)
-% ----------------------------------------------------------------------------
-% Same constraint classified differently across meaningful perspectives
-% This is NOT an error but a FEATURE - it indicates indexical relativity
-
-dr_mismatch(C, perspectival_gap(Type1, Ctx1, Type2, Ctx2), 
-            perspectival_incoherence, informational) :-
-    % Find two different classifications
-    constraint_indexing:constraint_classification(C, Type1, Ctx1),
-    constraint_indexing:constraint_classification(C, Type2, Ctx2),
-    
-    % Types must differ
-    Type1 \= Type2,
-    
-    % Contexts must differ in meaningful way (not analytical vs analytical)
-    Ctx1 = context(agent_power(P1), _, _, _),
-    Ctx2 = context(agent_power(P2), _, _, _),
-    P1 \= analytical,
-    P2 \= analytical,
-    P1 \= P2,
     !.
 
 % ----------------------------------------------------------------------------
@@ -478,6 +494,10 @@ dr_mismatch(C, perspectival_gap(Type1, Ctx1, Type2, Ctx2),
 dr_mismatch(C, ErrorType, Severity) :-
     constraint_indexing:default_context(Ctx),
     dr_mismatch(C, Ctx, ErrorType, Severity).
+% Perspectival incoherence uses perspectival_gap/4 as its Context arg,
+% which cannot unify with a bound context term. Expose it via /3 directly.
+dr_mismatch(C, perspectival_incoherence, informational) :-
+    dr_mismatch(C, _, perspectival_incoherence, informational).
 
 % ============================================================================
 % STRUCTURAL SIGNATURE DETECTION

@@ -10,7 +10,7 @@ This report lists all constraints that are consistently classified as 'rope' acr
 
 *   **Claimed Type:** `rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for ai_edu_decentralization: Appears to be rope (explicit_rope_claim) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.45)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'rope' classification.
 *   **Suggested Resolution Strategy:**
     ```
@@ -30,7 +30,7 @@ This report lists all constraints that are consistently classified as 'rope' acr
 
 *   **Claimed Type:** `rope`
 *   **Structural Signature Analysis:** CONSTRUCTED LOW-EXTRACTION signature for berkshire_compounding_culture: Enforcement present (suppression=0.20, resistance=0.50) but extraction is low (0.10). This is a rule-based coordination structure, not an extraction mechanism.
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'rope' classification.
 *   **Generated Omega:** Constraint berkshire_compounding_culture appears as rope to individuals but mountain to institutions...
 *   **Suggested Resolution Strategy:**
@@ -53,7 +53,7 @@ This report lists all constraints that are consistently classified as 'rope' acr
 
 *   **Claimed Type:** `rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for blackstone_carried_interest_taxation: Appears to be rope (explicit_rope_claim) but fails 3 Boltzmann structural test(s): [scope_variant([rope,tangled_rope]),excess_above_floor(0.25),nonsensical_coupling(0.5)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, tangled_rope, unknown]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'rope' classification.
 *   **Generated Omega:** Constraint blackstone_carried_interest_taxation appears as mountain to individuals but snare to institutions...
 *   **Suggested Resolution Strategy:**
@@ -76,7 +76,7 @@ This report lists all constraints that are consistently classified as 'rope' acr
 
 *   **Claimed Type:** `rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for rope_design: Appears to be rope (explicit_rope_claim) but fails 2 Boltzmann structural test(s): [excess_above_floor(0.15000000000000002),nonsensical_coupling(0.16666666666666666)]. Coupling score=0.375. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'rope' classification.
 
 ---
@@ -85,7 +85,7 @@ This report lists all constraints that are consistently classified as 'rope' acr
 
 *   **Claimed Type:** `rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for colombia_2026_presidential_election: Appears to be rope (explicit_rope_claim) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.4)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, unknown]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'rope' classification.
 *   **Suggested Resolution Strategy:**
     ```
@@ -105,7 +105,7 @@ This report lists all constraints that are consistently classified as 'rope' acr
 
 *   **Claimed Type:** `rope`
 *   **Structural Signature Analysis:** CONSTRUCTED LOW-EXTRACTION signature for cuny_light_2026: Enforcement present (suppression=0.02, resistance=0.50) but extraction is low (0.05). This is a rule-based coordination structure, not an extraction mechanism.
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'rope' classification.
 
 ---
@@ -114,7 +114,7 @@ This report lists all constraints that are consistently classified as 'rope' acr
 
 *   **Claimed Type:** `rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for deferential_realism_framework: Appears to be rope (explicit_rope_claim) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.15000000000000002)]. Coupling score=0.375. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, unknown]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'rope' classification.
 *   **Related Gap/Alert:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Generated Omega:** Constraint deferential_realism_framework appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
@@ -142,7 +142,7 @@ IF uncertainty → HALT changes until resolved
 
 *   **Claimed Type:** `rope`
 *   **Structural Signature Analysis:** Perspectives AGREE
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, unknown]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'rope' classification.
 
 ---
@@ -151,7 +151,7 @@ IF uncertainty → HALT changes until resolved
 
 *   **Claimed Type:** `rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for education_unbundling_implementation: Appears to be rope (explicit_rope_claim) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.35000000000000003)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, unknown]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'rope' classification.
 
 ---
@@ -160,7 +160,7 @@ IF uncertainty → HALT changes until resolved
 
 *   **Claimed Type:** `rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for dexy_gold_protocol: Appears to be rope (explicit_rope_claim) but fails 2 Boltzmann structural test(s): [excess_above_floor(0.15000000000000002),nonsensical_coupling(0.16666666666666666)]. Coupling score=0.375. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'rope' classification.
 
 ---
@@ -169,7 +169,7 @@ IF uncertainty → HALT changes until resolved
 
 *   **Claimed Type:** `rope`
 *   **Structural Signature Analysis:** FALSE CI_ROPE signature for exoplanetary_habitability_arbitrage: Appears to be rope (explicit_rope_claim) but fails 1 Boltzmann structural test(s): [excess_above_floor(0.4)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[scaffold, unknown]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'rope' classification.
 *   **Generated Omega:** Constraint exoplanetary_habitability_arbitrage appears extractive (Snare) to individuals but unchangeable (Mountain) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -194,7 +194,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 *   **Claimed Type:** `rope`
 *   **Structural Signature Analysis:** CONSTRUCTED LOW-EXTRACTION signature for fair_use_doctrine: Enforcement present (suppression=0.40, resistance=0.50) but extraction is low (0.10). This is a rule-based coordination structure, not an extraction mechanism.
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'rope' classification.
 *   **Generated Omega:** Constraint fair_use_doctrine appears extractive (Snare) to individuals but unchangeable (Mountain) to institutions...
 *   **Suggested Resolution Strategy:**

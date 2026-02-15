@@ -81,7 +81,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.47
 ### END REFINEMENT MANIFEST ###
 
 [43] EXECUTING: testsets/altruistic_misery_paradox_2026.pl
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Generated Omega:** omega_perspectival_alternative_sovereignty_scaffold (conceptual)
 *   **Suggested Resolution Strategy:**
     ```
@@ -178,7 +178,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.54
   - Constraint "artificial_scarcity_scaffold": Individual sees snare, but Institution sees rope.
 
 [ONTOLOGICAL_MISMATCHES]
-  - None detected.
+  - artificial_scarcity_scaffold: [informational] perspectival_incoherence detected.
 
 [UNRESOLVED_OMEGAS]
   - omega_extraction_blindness_artificial_scarcity_scaffold (conceptual): Constraint artificial_scarcity_scaffold appears extractive (Snare) to individuals but functional (Rope) to institutions...
@@ -186,7 +186,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.54
 ### END REFINEMENT MANIFEST ###
 
 [61] EXECUTING: testsets/artificial_snow_2026.pl
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[scaffold, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** omega_extraction_blindness_artificial_scarcity_scaffold (conceptual)
 *   **Suggested Resolution Strategy:**
@@ -253,7 +253,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.46
 ### END REFINEMENT MANIFEST ###
 
 [64] EXECUTING: testsets/asshole_filter_2015.pl
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope]`
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
     ```
@@ -342,7 +342,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.44
 ### END REFINEMENT MANIFEST ###
 
 [126] EXECUTING: testsets/canal_panama_influence.pl
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Generated Omega:** omega_cut_safety_canada_goose_realignment_2026 (conceptual)
 *   **Suggested Resolution Strategy:**
@@ -442,7 +442,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.60
 ### END REFINEMENT MANIFEST ###
 
 [158] EXECUTING: testsets/cia_fbi_legal_wall.pl
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[scaffold]`
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
     ```
@@ -547,7 +547,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.48
 ### END REFINEMENT MANIFEST ###
 
 [178] EXECUTING: testsets/cognac_geopolitical_risk.pl
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** omega_extraction_blindness_coffee_cardiovascular_2026 (conceptual)
 *   **Suggested Resolution Strategy:**
@@ -697,7 +697,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.45
 ### END REFINEMENT MANIFEST ###
 
 [274] EXECUTING: testsets/elite_capture_2026.pl
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[scaffold]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** omega_extraction_blindness_elencher_identity_transformation (conceptual)
 *   **Suggested Resolution Strategy:**
@@ -783,7 +783,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.45
   - Constraint "erasmus_rejoining_scaffold": Individual sees tangled_rope, but Institution sees scaffold.
 
 [ONTOLOGICAL_MISMATCHES]
-  - None detected.
+  - erasmus_rejoining_scaffold: [informational] perspectival_incoherence detected.
 
 [UNRESOLVED_OMEGAS]
   - omega_perspectival_erasmus_rejoining_scaffold (conceptual): Constraint erasmus_rejoining_scaffold appears as tangled_rope to individuals but scaffold to institutions...
@@ -791,7 +791,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.45
 ### END REFINEMENT MANIFEST ###
 
 [297] EXECUTING: testsets/ergo_autolykos_asic_resistance.pl
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, scaffold, unknown]`
 *   **Generated Omega:** omega_perspectival_erasmus_rejoining_scaffold (conceptual)
 *   **Suggested Resolution Strategy:**
     ```
@@ -886,7 +886,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.60
 ### END REFINEMENT MANIFEST ###
 
 [318] EXECUTING: testsets/eurozone_fragmentation_2026.pl
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[scaffold]`
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
     ```
@@ -949,7 +949,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.47
 ### END REFINEMENT MANIFEST ###
 
 [349] EXECUTING: testsets/fiscal_dominance_trap.pl
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
     ```
@@ -1235,7 +1235,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.49
   - Constraint "isa_education_scaffold": Individual sees snare, but Institution sees rope.
 
 [ONTOLOGICAL_MISMATCHES]
-  - None detected.
+  - isa_education_scaffold: [informational] perspectival_incoherence detected.
 
 [UNRESOLVED_OMEGAS]
   - omega_extraction_blindness_isa_education_scaffold (conceptual): Constraint isa_education_scaffold appears extractive (Snare) to individuals but functional (Rope) to institutions...
@@ -1431,7 +1431,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.47
   - Constraint "maha_recovery_2026": Individual sees snare, but Institution sees scaffold.
 
 [ONTOLOGICAL_MISMATCHES]
-  - None detected.
+  - maha_recovery_2026: [informational] perspectival_incoherence detected.
 
 [UNRESOLVED_OMEGAS]
   - omega_perspectival_maha_recovery_2026 (conceptual): Constraint maha_recovery_2026 appears as snare to individuals but scaffold to institutions...
@@ -2037,7 +2037,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.48
 [PERSPECTIVAL_GAPS]
 
 [ONTOLOGICAL_MISMATCHES]
-  - None detected.
+  - silklink_2026: [informational] perspectival_incoherence detected.
 
 [UNRESOLVED_OMEGAS]
   - None detected.

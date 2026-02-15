@@ -83,7 +83,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.49
   - Constraint "adverse_possession": Individual sees snare, but Institution sees rope.
 
 [ONTOLOGICAL_MISMATCHES]
-  - None detected.
+  - adverse_possession: [informational] perspectival_incoherence detected.
 
 [UNRESOLVED_OMEGAS]
   - omega_extraction_blindness_adverse_possession (conceptual): Constraint adverse_possession appears extractive (Snare) to individuals but functional (Rope) to institutions...
@@ -91,7 +91,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.49
 ### END REFINEMENT MANIFEST ###
 
 [17] EXECUTING: testsets/advice_as_dangerous_gift.pl
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** omega_extraction_blindness_adverse_possession (conceptual)
 *   **Suggested Resolution Strategy:**
@@ -196,7 +196,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.49
 ### END REFINEMENT MANIFEST ###
 
 [25] EXECUTING: testsets/ai_compute_capital_moat.pl
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Generated Omega:** omega_learned_helplessness_ai_cognitive_diversity_arbitrage (conceptual)
 *   **Suggested Resolution Strategy:**
     ```
@@ -295,7 +295,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.53
   - Constraint "algorithmic_bias": Individual sees snare, but Institution sees rope.
 
 [ONTOLOGICAL_MISMATCHES]
-  - None detected.
+  - algorithmic_bias: [informational] perspectival_incoherence detected.
 
 [UNRESOLVED_OMEGAS]
   - omega_extraction_blindness_algorithmic_bias (conceptual): Constraint algorithmic_bias appears extractive (Snare) to individuals but functional (Rope) to institutions...
@@ -303,7 +303,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.53
 ### END REFINEMENT MANIFEST ###
 
 [40] EXECUTING: testsets/algorithmic_epistemic_capture.pl
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** omega_extraction_blindness_algorithmic_bias (conceptual)
 *   **Suggested Resolution Strategy:**
@@ -406,7 +406,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.57
   - Constraint "alzheimers_nlrp3_inflammasome": Individual sees snare, but Institution sees rope.
 
 [ONTOLOGICAL_MISMATCHES]
-  - None detected.
+  - alzheimers_nlrp3_inflammasome: [informational] perspectival_incoherence detected.
 
 [UNRESOLVED_OMEGAS]
   - omega_extraction_blindness_alzheimers_nlrp3_inflammasome (conceptual): Constraint alzheimers_nlrp3_inflammasome appears extractive (Snare) to individuals but functional (Rope) to institutions...
@@ -414,7 +414,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.57
 ### END REFINEMENT MANIFEST ###
 
 [46] EXECUTING: testsets/amish_technological_renunciation.pl
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[scaffold, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** omega_extraction_blindness_alzheimers_nlrp3_inflammasome (conceptual)
 *   **Suggested Resolution Strategy:**
@@ -517,7 +517,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.54
   - Constraint "amish_technological_renunciation": Individual sees snare, but Institution sees rope.
 
 [ONTOLOGICAL_MISMATCHES]
-  - None detected.
+  - amish_technological_renunciation: [informational] perspectival_incoherence detected.
 
 [UNRESOLVED_OMEGAS]
   - omega_extraction_blindness_amish_technological_renunciation (conceptual): Constraint amish_technological_renunciation appears extractive (Snare) to individuals but functional (Rope) to institutions...
@@ -525,7 +525,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.54
 ### END REFINEMENT MANIFEST ###
 
 [47] EXECUTING: testsets/ancestral_pueblo_hydrology.pl
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** omega_extraction_blindness_amish_technological_renunciation (conceptual)
 *   **Suggested Resolution Strategy:**
@@ -634,7 +634,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.55
 ### END REFINEMENT MANIFEST ###
 
 [55] EXECUTING: testsets/arctic_maritime_control.pl
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** omega_extraction_blindness_arctic_geopolitical_flashpoint (conceptual)
 *   **Suggested Resolution Strategy:**
@@ -731,7 +731,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.52
 [PERSPECTIVAL_GAPS]
 
 [ONTOLOGICAL_MISMATCHES]
-  - None detected.
+  - asshole_filter_2015: [informational] perspectival_incoherence detected.
 
 [UNRESOLVED_OMEGAS]
   - agreeableness_mutability (empirical): Can 'agreeableness' be recalibrated through boundary training (Rope), or is it a fixed personality trait (Mountain)?
@@ -740,7 +740,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.52
 ### END REFINEMENT MANIFEST ###
 
 [65] EXECUTING: testsets/astm_d638_tensile_testing.pl
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
     ```
@@ -866,7 +866,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.57
   - Constraint "authoritarian_power_paradox": Individual sees mountain, but Institution sees rope.
 
 [ONTOLOGICAL_MISMATCHES]
-  - None detected.
+  - authoritarian_power_paradox: [informational] perspectival_incoherence detected.
 
 [UNRESOLVED_OMEGAS]
   - authoritarian_power_paradox_extraction_intent (empirical): Is high extraction (0.8) an intentional predatory choice by the bureaucracy or a functional side-effect of seeking stability?
@@ -876,7 +876,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.57
 ### END REFINEMENT MANIFEST ###
 
 [73] EXECUTING: testsets/automatic_enrollment_defaults.pl
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Generated Omega:** omega_cut_safety_authoritarian_power_paradox (conceptual)
 *   **Suggested Resolution Strategy:**
@@ -967,7 +967,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.55
   - Constraint "bay_of_pigs_operational_silo": Individual sees mountain, but Institution sees rope.
 
 [ONTOLOGICAL_MISMATCHES]
-  - None detected.
+  - bay_of_pigs_operational_silo: [informational] perspectival_incoherence detected.
 
 [UNRESOLVED_OMEGAS]
   - omega_cut_safety_bay_of_pigs_operational_silo (conceptual): Constraint bay_of_pigs_operational_silo appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
@@ -975,7 +975,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.55
 ### END REFINEMENT MANIFEST ###
 
 [87] EXECUTING: testsets/bayes_theorem.pl
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Generated Omega:** omega_cut_safety_bay_of_pigs_operational_silo (conceptual)
 *   **Suggested Resolution Strategy:**
@@ -1067,7 +1067,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.52
   - Constraint "bedouin_sedentary_transition": Individual sees snare, but Institution sees tangled_rope.
 
 [ONTOLOGICAL_MISMATCHES]
-  - None detected.
+  - bedouin_sedentary_transition: [informational] perspectival_incoherence detected.
 
 [UNRESOLVED_OMEGAS]
   - omega_perspectival_bedouin_sedentary_transition (conceptual): Constraint bedouin_sedentary_transition appears as snare to individuals but tangled_rope to institutions...
@@ -1075,7 +1075,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.52
 ### END REFINEMENT MANIFEST ###
 
 [89] EXECUTING: testsets/beehiiv_platform_model.pl
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Generated Omega:** omega_perspectival_bedouin_sedentary_transition (conceptual)
 *   **Suggested Resolution Strategy:**
     ```
@@ -1172,7 +1172,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.55
   - Constraint "belief_argument_conclusion": Individual sees snare, but Institution sees rope.
 
 [ONTOLOGICAL_MISMATCHES]
-  - None detected.
+  - belief_argument_conclusion: [informational] perspectival_incoherence detected.
 
 [UNRESOLVED_OMEGAS]
   - omega_extraction_blindness_belief_argument_conclusion (conceptual): Constraint belief_argument_conclusion appears extractive (Snare) to individuals but functional (Rope) to institutions...
@@ -1180,7 +1180,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.55
 ### END REFINEMENT MANIFEST ###
 
 [91] EXECUTING: testsets/berkshire_compounding_culture.pl
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** omega_extraction_blindness_belief_argument_conclusion (conceptual)
 *   **Suggested Resolution Strategy:**
@@ -1291,7 +1291,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.45
 ### END REFINEMENT MANIFEST ###
 
 [97] EXECUTING: testsets/bip_narrative_illusion.pl
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** omega_extraction_blindness_biological_curiosity (conceptual)
 *   **Suggested Resolution Strategy:**
@@ -1394,7 +1394,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.55
   - Constraint "burden_of_proof_engineering_safety": Individual sees snare, but Institution sees rope.
 
 [ONTOLOGICAL_MISMATCHES]
-  - None detected.
+  - burden_of_proof_engineering_safety: [informational] perspectival_incoherence detected.
 
 [UNRESOLVED_OMEGAS]
   - omega_extraction_blindness_burden_of_proof_engineering_safety (conceptual): Constraint burden_of_proof_engineering_safety appears extractive (Snare) to individuals but functional (Rope) to institutions...
@@ -1402,7 +1402,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.55
 ### END REFINEMENT MANIFEST ###
 
 [118] EXECUTING: testsets/burden_of_proof_legal_criminal.pl
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** omega_extraction_blindness_burden_of_proof_engineering_safety (conceptual)
 *   **Suggested Resolution Strategy:**
@@ -1505,7 +1505,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.55
   - Constraint "cartel_drone_surveillance_el_paso": Individual sees snare, but Institution sees rope.
 
 [ONTOLOGICAL_MISMATCHES]
-  - None detected.
+  - cartel_drone_surveillance_el_paso: [informational] perspectival_incoherence detected.
 
 [UNRESOLVED_OMEGAS]
   - omega_extraction_blindness_cartel_drone_surveillance_el_paso (conceptual): Constraint cartel_drone_surveillance_el_paso appears extractive (Snare) to individuals but functional (Rope) to institutions...
@@ -1513,7 +1513,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.55
 ### END REFINEMENT MANIFEST ###
 
 [139] EXECUTING: testsets/cascading_constraint_failure.pl
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** omega_extraction_blindness_cartel_drone_surveillance_el_paso (conceptual)
 *   **Suggested Resolution Strategy:**
@@ -1616,7 +1616,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.56
   - Constraint "child_marriage": Individual sees snare, but Institution sees rope.
 
 [ONTOLOGICAL_MISMATCHES]
-  - None detected.
+  - child_marriage: [informational] perspectival_incoherence detected.
 
 [UNRESOLVED_OMEGAS]
   - omega_extraction_blindness_child_marriage (conceptual): Constraint child_marriage appears extractive (Snare) to individuals but functional (Rope) to institutions...
@@ -1624,7 +1624,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.56
 ### END REFINEMENT MANIFEST ###
 
 [150] EXECUTING: testsets/china_critical_mineral_chokepoint.pl
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** omega_extraction_blindness_child_marriage (conceptual)
 *   **Suggested Resolution Strategy:**
@@ -1715,7 +1715,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.54
   - Constraint "collective_stupidity_2026": Individual sees snare, but Institution sees piton.
 
 [ONTOLOGICAL_MISMATCHES]
-  - None detected.
+  - collective_stupidity_2026: [informational] perspectival_incoherence detected.
 
 [UNRESOLVED_OMEGAS]
   - omega_perspectival_collective_stupidity_2026 (conceptual): Constraint collective_stupidity_2026 appears as snare to individuals but piton to institutions...
@@ -1723,7 +1723,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.54
 ### END REFINEMENT MANIFEST ###
 
 [192] EXECUTING: testsets/college_admissions_market.pl
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, snare]`
 *   **Generated Omega:** omega_perspectival_collective_stupidity_2026 (conceptual)
 *   **Suggested Resolution Strategy:**
     ```
@@ -1826,7 +1826,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.58
   - Constraint "confirmation_bias": Individual sees snare, but Institution sees rope.
 
 [ONTOLOGICAL_MISMATCHES]
-  - None detected.
+  - confirmation_bias: [informational] perspectival_incoherence detected.
 
 [UNRESOLVED_OMEGAS]
   - omega_extraction_blindness_confirmation_bias (conceptual): Constraint confirmation_bias appears extractive (Snare) to individuals but functional (Rope) to institutions...
@@ -1834,7 +1834,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.58
 ### END REFINEMENT MANIFEST ###
 
 [200] EXECUTING: testsets/consensus_without_truth.pl
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, scaffold, unknown]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
@@ -1937,7 +1937,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.56
   - Constraint "cuba_mandatrophic_collapse": Individual sees snare, but Institution sees rope.
 
 [ONTOLOGICAL_MISMATCHES]
-  - None detected.
+  - cuba_mandatrophic_collapse: [informational] perspectival_incoherence detected.
 
 [UNRESOLVED_OMEGAS]
   - omega_extraction_blindness_cuba_mandatrophic_collapse (conceptual): Constraint cuba_mandatrophic_collapse appears extractive (Snare) to individuals but functional (Rope) to institutions...
@@ -1945,7 +1945,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.56
 ### END REFINEMENT MANIFEST ###
 
 [229] EXECUTING: testsets/cuban_missile_crisis_excomm_delibration.pl
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** omega_extraction_blindness_cuba_mandatrophic_collapse (conceptual)
 *   **Suggested Resolution Strategy:**
@@ -2058,7 +2058,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.58
 ### END REFINEMENT MANIFEST ###
 
 [236] EXECUTING: testsets/cz_plea_agreement_2026.pl
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
     ```
@@ -2159,7 +2159,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.48
 ### END REFINEMENT MANIFEST ###
 
 [242] EXECUTING: testsets/debt_service_squeeze.pl
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Generated Omega:** omega_learned_helplessness_dead_sea_effect (conceptual)
 *   **Suggested Resolution Strategy:**
     ```
@@ -2258,7 +2258,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.53
   - Constraint "debt_trap_microfinance": Individual sees snare, but Institution sees rope.
 
 [ONTOLOGICAL_MISMATCHES]
-  - None detected.
+  - debt_trap_microfinance: [informational] perspectival_incoherence detected.
 
 [UNRESOLVED_OMEGAS]
   - omega_extraction_blindness_debt_trap_microfinance (conceptual): Constraint debt_trap_microfinance appears extractive (Snare) to individuals but functional (Rope) to institutions...
@@ -2266,7 +2266,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.53
 ### END REFINEMENT MANIFEST ###
 
 [244] EXECUTING: testsets/decision_latency_mismatch.pl
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** omega_extraction_blindness_debt_trap_microfinance (conceptual)
 *   **Suggested Resolution Strategy:**
@@ -2375,7 +2375,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.58
   - Constraint "endowment_effect": Individual sees snare, but Institution sees rope.
 
 [ONTOLOGICAL_MISMATCHES]
-  - None detected.
+  - endowment_effect: [informational] perspectival_incoherence detected.
 
 [UNRESOLVED_OMEGAS]
   - omega_extraction_blindness_endowment_effect (conceptual): Constraint endowment_effect appears extractive (Snare) to individuals but functional (Rope) to institutions...
@@ -2383,7 +2383,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.58
 ### END REFINEMENT MANIFEST ###
 
 [288] EXECUTING: testsets/english_chinese_tense_structure.pl
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[rope, scaffold, unknown]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
@@ -2482,7 +2482,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.56
 ### END REFINEMENT MANIFEST ###
 
 [298] EXECUTING: testsets/ergo_dexy_gold_protocol.pl
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Generated Omega:** omega_perspectival_ergo_autolykos_asic_resistance (conceptual)
 *   **Suggested Resolution Strategy:**
     ```
@@ -2580,7 +2580,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.55
 ### END REFINEMENT MANIFEST ###
 
 [330] EXECUTING: testsets/fair_use_doctrine.pl
-*   **Orbit Signature:** `N/A`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Generated Omega:** omega_cut_safety_faint_blue_neural_bifurcation (conceptual)
 *   **Suggested Resolution Strategy:**
@@ -2682,7 +2682,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.50
   - Constraint "gamblers_ruin_stochastic_extinction": Individual sees snare, but Institution sees rope.
 
 [ONTOLOGICAL_MISMATCHES]
-  - None detected.
+  - gamblers_ruin_stochastic_extinction: [informational] perspectival_incoherence detected.
 
 [UNRESOLVED_OMEGAS]
   - omega_extraction_blindness_gamblers_ruin_stochastic_extinction (conceptual): Constraint gamblers_ruin_stochastic_extinction appears extractive (Snare) to individuals but functional (Rope) to institutions...
@@ -2793,7 +2793,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.57
   - Constraint "gaza_aid_permit_revocation": Individual sees snare, but Institution sees rope.
 
 [ONTOLOGICAL_MISMATCHES]
-  - None detected.
+  - gaza_aid_permit_revocation: [informational] perspectival_incoherence detected.
 
 [UNRESOLVED_OMEGAS]
   - omega_extraction_blindness_gaza_aid_permit_revocation (conceptual): Constraint gaza_aid_permit_revocation appears extractive (Snare) to individuals but functional (Rope) to institutions...
@@ -2904,7 +2904,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.55
   - Constraint "generational_replacement_inertia": Individual sees snare, but Institution sees rope.
 
 [ONTOLOGICAL_MISMATCHES]
-  - None detected.
+  - generational_replacement_inertia: [informational] perspectival_incoherence detected.
 
 [UNRESOLVED_OMEGAS]
   - omega_extraction_blindness_generational_replacement_inertia (conceptual): Constraint generational_replacement_inertia appears extractive (Snare) to individuals but functional (Rope) to institutions...
@@ -3015,7 +3015,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.55
   - Constraint "ghost_fishing_gear": Individual sees snare, but Institution sees rope.
 
 [ONTOLOGICAL_MISMATCHES]
-  - None detected.
+  - ghost_fishing_gear: [informational] perspectival_incoherence detected.
 
 [UNRESOLVED_OMEGAS]
   - omega_extraction_blindness_ghost_fishing_gear (conceptual): Constraint ghost_fishing_gear appears extractive (Snare) to individuals but functional (Rope) to institutions...
@@ -3126,7 +3126,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.57
   - Constraint "guthrie_kidnapping_2026": Individual sees snare, but Institution sees rope.
 
 [ONTOLOGICAL_MISMATCHES]
-  - None detected.
+  - guthrie_kidnapping_2026: [informational] perspectival_incoherence detected.
 
 [UNRESOLVED_OMEGAS]
   - omega_extraction_blindness_guthrie_kidnapping_2026 (conceptual): Constraint guthrie_kidnapping_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
@@ -3243,7 +3243,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.58
   - Constraint "hawthorne_effect": Individual sees snare, but Institution sees rope.
 
 [ONTOLOGICAL_MISMATCHES]
-  - None detected.
+  - hawthorne_effect: [informational] perspectival_incoherence detected.
 
 [UNRESOLVED_OMEGAS]
   - omega_extraction_blindness_hawthorne_effect (conceptual): Constraint hawthorne_effect appears extractive (Snare) to individuals but functional (Rope) to institutions...
@@ -3354,7 +3354,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.55
   - Constraint "hhs_fetal_tissue_research_ban_2019": Individual sees snare, but Institution sees rope.
 
 [ONTOLOGICAL_MISMATCHES]
-  - None detected.
+  - hhs_fetal_tissue_research_ban_2019: [informational] perspectival_incoherence detected.
 
 [UNRESOLVED_OMEGAS]
   - omega_extraction_blindness_hhs_fetal_tissue_research_ban_2019 (conceptual): Constraint hhs_fetal_tissue_research_ban_2019 appears extractive (Snare) to individuals but functional (Rope) to institutions...
@@ -3465,7 +3465,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.57
   - Constraint "ice_raids_minnesota_2026": Individual sees snare, but Institution sees rope.
 
 [ONTOLOGICAL_MISMATCHES]
-  - None detected.
+  - ice_raids_minnesota_2026: [informational] perspectival_incoherence detected.
 
 [UNRESOLVED_OMEGAS]
   - omega_extraction_blindness_ice_raids_minnesota_2026 (conceptual): Constraint ice_raids_minnesota_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
@@ -3576,7 +3576,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.58
   - Constraint "iran_nin_repression": Individual sees snare, but Institution sees rope.
 
 [ONTOLOGICAL_MISMATCHES]
-  - None detected.
+  - iran_nin_repression: [informational] perspectival_incoherence detected.
 
 [UNRESOLVED_OMEGAS]
   - omega_extraction_blindness_iran_nin_repression (conceptual): Constraint iran_nin_repression appears extractive (Snare) to individuals but functional (Rope) to institutions...
@@ -4186,7 +4186,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.56
   - Constraint "meta_pay_or_okay_model": Individual sees snare, but Institution sees rope.
 
 [ONTOLOGICAL_MISMATCHES]
-  - None detected.
+  - meta_pay_or_okay_model: [informational] perspectival_incoherence detected.
 
 [UNRESOLVED_OMEGAS]
   - omega_extraction_blindness_meta_pay_or_okay_model (conceptual): Constraint meta_pay_or_okay_model appears extractive (Snare) to individuals but functional (Rope) to institutions...
@@ -4604,7 +4604,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.58
   - Constraint "north_korea_songun_mandatrophy": Individual sees snare, but Institution sees rope.
 
 [ONTOLOGICAL_MISMATCHES]
-  - None detected.
+  - north_korea_songun_mandatrophy: [informational] perspectival_incoherence detected.
 
 [UNRESOLVED_OMEGAS]
   - omega_extraction_blindness_north_korea_songun_mandatrophy (conceptual): Constraint north_korea_songun_mandatrophy appears extractive (Snare) to individuals but functional (Rope) to institutions...
@@ -4715,7 +4715,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.58
   - Constraint "nsl_hk": Individual sees snare, but Institution sees rope.
 
 [ONTOLOGICAL_MISMATCHES]
-  - None detected.
+  - nsl_hk: [informational] perspectival_incoherence detected.
 
 [UNRESOLVED_OMEGAS]
   - omega_extraction_blindness_nsl_hk (conceptual): Constraint nsl_hk appears extractive (Snare) to individuals but functional (Rope) to institutions...
@@ -4826,7 +4826,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.54
   - Constraint "nsw_transmission_bottleneck": Individual sees snare, but Institution sees rope.
 
 [ONTOLOGICAL_MISMATCHES]
-  - None detected.
+  - nsw_transmission_bottleneck: [informational] perspectival_incoherence detected.
 
 [UNRESOLVED_OMEGAS]
   - omega_extraction_blindness_nsw_transmission_bottleneck (conceptual): Constraint nsw_transmission_bottleneck appears extractive (Snare) to individuals but functional (Rope) to institutions...
@@ -4937,7 +4937,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.53
   - Constraint "p_g_golden_pear_surveillance": Individual sees snare, but Institution sees rope.
 
 [ONTOLOGICAL_MISMATCHES]
-  - None detected.
+  - p_g_golden_pear_surveillance: [informational] perspectival_incoherence detected.
 
 [UNRESOLVED_OMEGAS]
   - omega_extraction_blindness_p_g_golden_pear_surveillance (conceptual): Constraint p_g_golden_pear_surveillance appears extractive (Snare) to individuals but functional (Rope) to institutions...
@@ -5048,7 +5048,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.53
   - Constraint "prime_age_male_unwork": Individual sees snare, but Institution sees rope.
 
 [ONTOLOGICAL_MISMATCHES]
-  - None detected.
+  - prime_age_male_unwork: [informational] perspectival_incoherence detected.
 
 [UNRESOLVED_OMEGAS]
   - omega_extraction_blindness_prime_age_male_unwork (conceptual): Constraint prime_age_male_unwork appears extractive (Snare) to individuals but functional (Rope) to institutions...
@@ -5165,7 +5165,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.58
   - Constraint "qwerty_vs_dvorak": Individual sees snare, but Institution sees rope.
 
 [ONTOLOGICAL_MISMATCHES]
-  - None detected.
+  - qwerty_vs_dvorak: [informational] perspectival_incoherence detected.
 
 [UNRESOLVED_OMEGAS]
   - omega_extraction_blindness_qwerty_vs_dvorak (conceptual): Constraint qwerty_vs_dvorak appears extractive (Snare) to individuals but functional (Rope) to institutions...
@@ -5379,7 +5379,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.53
   - Constraint "rotation_seven_isolation": Individual sees snare, but Institution sees rope.
 
 [ONTOLOGICAL_MISMATCHES]
-  - None detected.
+  - rotation_seven_isolation: [informational] perspectival_incoherence detected.
 
 [UNRESOLVED_OMEGAS]
   - omega_extraction_blindness_rotation_seven_isolation (conceptual): Constraint rotation_seven_isolation appears extractive (Snare) to individuals but functional (Rope) to institutions...
@@ -5490,7 +5490,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.48
   - Constraint "russells_paradox_self_reference": Individual sees snare, but Institution sees rope.
 
 [ONTOLOGICAL_MISMATCHES]
-  - None detected.
+  - russells_paradox_self_reference: [informational] perspectival_incoherence detected.
 
 [UNRESOLVED_OMEGAS]
   - omega_extraction_blindness_russells_paradox_self_reference (conceptual): Constraint russells_paradox_self_reference appears extractive (Snare) to individuals but functional (Rope) to institutions...
@@ -5718,7 +5718,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.52
   - Constraint "slow_crisis_invisibility": Individual sees snare, but Institution sees rope.
 
 [ONTOLOGICAL_MISMATCHES]
-  - None detected.
+  - slow_crisis_invisibility: [informational] perspectival_incoherence detected.
 
 [UNRESOLVED_OMEGAS]
   - omega_extraction_blindness_slow_crisis_invisibility (conceptual): Constraint slow_crisis_invisibility appears extractive (Snare) to individuals but functional (Rope) to institutions...
@@ -5932,7 +5932,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.52
   - Constraint "strange_attractor_dynamics": Individual sees snare, but Institution sees rope.
 
 [ONTOLOGICAL_MISMATCHES]
-  - None detected.
+  - strange_attractor_dynamics: [informational] perspectival_incoherence detected.
 
 [UNRESOLVED_OMEGAS]
   - omega_extraction_blindness_strange_attractor_dynamics (conceptual): Constraint strange_attractor_dynamics appears extractive (Snare) to individuals but functional (Rope) to institutions...
@@ -6043,7 +6043,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.52
   - Constraint "sunk_cost_fallacy": Individual sees snare, but Institution sees rope.
 
 [ONTOLOGICAL_MISMATCHES]
-  - None detected.
+  - sunk_cost_fallacy: [informational] perspectival_incoherence detected.
 
 [UNRESOLVED_OMEGAS]
   - omega_extraction_blindness_sunk_cost_fallacy (conceptual): Constraint sunk_cost_fallacy appears extractive (Snare) to individuals but functional (Rope) to institutions...
@@ -6154,7 +6154,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.58
   - Constraint "taliban_slavery_law_2024": Individual sees snare, but Institution sees rope.
 
 [ONTOLOGICAL_MISMATCHES]
-  - None detected.
+  - taliban_slavery_law_2024: [informational] perspectival_incoherence detected.
 
 [UNRESOLVED_OMEGAS]
   - omega_extraction_blindness_taliban_slavery_law_2024 (conceptual): Constraint taliban_slavery_law_2024 appears extractive (Snare) to individuals but functional (Rope) to institutions...
@@ -6265,7 +6265,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.55
   - Constraint "thai_senate_veto_2026": Individual sees snare, but Institution sees rope.
 
 [ONTOLOGICAL_MISMATCHES]
-  - None detected.
+  - thai_senate_veto_2026: [informational] perspectival_incoherence detected.
 
 [UNRESOLVED_OMEGAS]
   - omega_extraction_blindness_thai_senate_veto_2026 (conceptual): Constraint thai_senate_veto_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
@@ -6588,7 +6588,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.56
   - Constraint "toxoplasma_hub_2026": Individual sees snare, but Institution sees rope.
 
 [ONTOLOGICAL_MISMATCHES]
-  - None detected.
+  - toxoplasma_hub_2026: [informational] perspectival_incoherence detected.
 
 [UNRESOLVED_OMEGAS]
   - omega_extraction_blindness_toxoplasma_hub_2026 (conceptual): Constraint toxoplasma_hub_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
@@ -6699,7 +6699,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.58
   - Constraint "tractarian_logic_limit": Individual sees snare, but Institution sees rope.
 
 [ONTOLOGICAL_MISMATCHES]
-  - None detected.
+  - tractarian_logic_limit: [informational] perspectival_incoherence detected.
 
 [UNRESOLVED_OMEGAS]
   - omega_extraction_blindness_tractarian_logic_limit (conceptual): Constraint tractarian_logic_limit appears extractive (Snare) to individuals but functional (Rope) to institutions...
@@ -6810,7 +6810,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.43
   - Constraint "trillion_bond_rush_2026": Individual sees snare, but Institution sees rope.
 
 [ONTOLOGICAL_MISMATCHES]
-  - None detected.
+  - trillion_bond_rush_2026: [informational] perspectival_incoherence detected.
 
 [UNRESOLVED_OMEGAS]
   - omega_extraction_blindness_trillion_bond_rush_2026 (conceptual): Constraint trillion_bond_rush_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
@@ -7024,7 +7024,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.55
   - Constraint "uk_graduate_visa_salary_threshold": Individual sees snare, but Institution sees rope.
 
 [ONTOLOGICAL_MISMATCHES]
-  - None detected.
+  - uk_graduate_visa_salary_threshold: [informational] perspectival_incoherence detected.
 
 [UNRESOLVED_OMEGAS]
   - omega_extraction_blindness_uk_graduate_visa_salary_threshold (conceptual): Constraint uk_graduate_visa_salary_threshold appears extractive (Snare) to individuals but functional (Rope) to institutions...
@@ -7135,7 +7135,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.57
   - Constraint "uk_unpaid_care_system": Individual sees snare, but Institution sees rope.
 
 [ONTOLOGICAL_MISMATCHES]
-  - None detected.
+  - uk_unpaid_care_system: [informational] perspectival_incoherence detected.
 
 [UNRESOLVED_OMEGAS]
   - omega_extraction_blindness_uk_unpaid_care_system (conceptual): Constraint uk_unpaid_care_system appears extractive (Snare) to individuals but functional (Rope) to institutions...
@@ -7265,7 +7265,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.54
   - Constraint "unrequited_love_protocol": Individual sees snare, but Institution sees rope.
 
 [ONTOLOGICAL_MISMATCHES]
-  - None detected.
+  - unrequited_love_protocol: [informational] perspectival_incoherence detected.
 
 [UNRESOLVED_OMEGAS]
   - omega_extraction_blindness_unrequited_love_protocol (conceptual): Constraint unrequited_love_protocol appears extractive (Snare) to individuals but functional (Rope) to institutions...
@@ -7370,7 +7370,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.56
   - Constraint "unrwa_eviction_order": Individual sees snare, but Institution sees rope.
 
 [ONTOLOGICAL_MISMATCHES]
-  - None detected.
+  - unrwa_eviction_order: [informational] perspectival_incoherence detected.
 
 [UNRESOLVED_OMEGAS]
   - omega_extraction_blindness_unrwa_eviction_order (conceptual): Constraint unrwa_eviction_order appears extractive (Snare) to individuals but functional (Rope) to institutions...
@@ -7477,7 +7477,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.54
   - Constraint "us_embargo_cuba": Individual sees snare, but Institution sees tangled_rope.
 
 [ONTOLOGICAL_MISMATCHES]
-  - None detected.
+  - us_embargo_cuba: [informational] perspectival_incoherence detected.
 
 [UNRESOLVED_OMEGAS]
   - omega_perspectival_us_embargo_cuba (conceptual): Constraint us_embargo_cuba appears as snare to individuals but tangled_rope to institutions...
@@ -7582,7 +7582,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.54
   - Constraint "us_isolationism_policy_2026": Individual sees snare, but Institution sees rope.
 
 [ONTOLOGICAL_MISMATCHES]
-  - None detected.
+  - us_isolationism_policy_2026: [informational] perspectival_incoherence detected.
 
 [UNRESOLVED_OMEGAS]
   - omega_extraction_blindness_us_isolationism_policy_2026 (conceptual): Constraint us_isolationism_policy_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
@@ -7693,7 +7693,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.55
   - Constraint "us_vaccine_recommendation_dismantling_2026": Individual sees snare, but Institution sees rope.
 
 [ONTOLOGICAL_MISMATCHES]
-  - None detected.
+  - us_vaccine_recommendation_dismantling_2026: [informational] perspectival_incoherence detected.
 
 [UNRESOLVED_OMEGAS]
   - omega_extraction_blindness_us_vaccine_recommendation_dismantling_2026 (conceptual): Constraint us_vaccine_recommendation_dismantling_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
@@ -7804,7 +7804,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.58
   - Constraint "us_venezuela_blockade": Individual sees snare, but Institution sees rope.
 
 [ONTOLOGICAL_MISMATCHES]
-  - None detected.
+  - us_venezuela_blockade: [informational] perspectival_incoherence detected.
 
 [UNRESOLVED_OMEGAS]
   - omega_extraction_blindness_us_venezuela_blockade (conceptual): Constraint us_venezuela_blockade appears extractive (Snare) to individuals but functional (Rope) to institutions...
@@ -7915,7 +7915,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.56
   - Constraint "xi_mao_ideological_centralization": Individual sees snare, but Institution sees rope.
 
 [ONTOLOGICAL_MISMATCHES]
-  - None detected.
+  - xi_mao_ideological_centralization: [informational] perspectival_incoherence detected.
 
 [UNRESOLVED_OMEGAS]
   - omega_extraction_blindness_xi_mao_ideological_centralization (conceptual): Constraint xi_mao_ideological_centralization appears extractive (Snare) to individuals but functional (Rope) to institutions...
@@ -8026,7 +8026,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.55
   - Constraint "zombie_reasoning_2026": Individual sees snare, but Institution sees rope.
 
 [ONTOLOGICAL_MISMATCHES]
-  - None detected.
+  - zombie_reasoning_2026: [informational] perspectival_incoherence detected.
 
 [UNRESOLVED_OMEGAS]
   - omega_extraction_blindness_zombie_reasoning_2026 (conceptual): Constraint zombie_reasoning_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
@@ -8083,7 +8083,7 @@ Results:
 
 ====================================================
 ------------------------------------------
-Test suite completed at: Sat Feb 14 15:37:56 CST 2026
+Test suite completed at: Sat Feb 14 20:04:20 CST 2026
 *   **Orbit Signature:** `[rope, snare]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** omega_extraction_blindness_zombie_reasoning_2026 (conceptual)

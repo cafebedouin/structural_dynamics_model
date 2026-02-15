@@ -333,6 +333,27 @@ else
 fi
 
 # ==============================================================================
+# STEP 8e: Abductive reasoning analysis
+# ==============================================================================
+step "Generating abductive reasoning analysis"
+
+ABD_REPORT="$OUTPUT_DIR/abductive_report.md"
+ABD_RAW="$OUTPUT_DIR/abductive_report_raw.md"
+if (cd "$PROLOG_DIR" && swipl -l stack.pl -l covering_analysis.pl \
+      -l dirac_classification.pl -l maxent_classifier.pl \
+      -l abductive_engine.pl -l abductive_report.pl \
+      -g "run_abductive_report, halt.") > "$ABD_RAW" 2>/dev/null; then
+    sed -n '/<!-- ABDUCTIVE_REPORT_START -->/,$p' "$ABD_RAW" | tail -n +2 > "$ABD_REPORT"
+    rm -f "$ABD_RAW"
+    ABD_TOTAL=$(grep -oP 'Total hypotheses\*\* \| \K\d+' "$ABD_REPORT" || echo "?")
+    ABD_GENUINE=$(grep -oP 'Genuine findings\*\* \| \K\d+' "$ABD_REPORT" || echo "?")
+    ok "Abductive analysis: $ABD_TOTAL hypotheses, $ABD_GENUINE genuine -> abductive_report.md"
+else
+    rm -f "$ABD_RAW"
+    warn "Abductive analysis had issues"
+fi
+
+# ==============================================================================
 # STEP 9: Meta-report
 # ==============================================================================
 step "Generating meta-report"
@@ -452,6 +473,20 @@ else
 fi
 echo ""
 
+# Abductive analysis summary
+echo -e "${BOLD}  ABDUCTIVE REASONING${NC}"
+if [ -f "$OUTPUT_DIR/abductive_report.md" ]; then
+    ABD_D_TOTAL=$(grep -oP 'Total hypotheses\*\* \| \K\d+' "$OUTPUT_DIR/abductive_report.md" 2>/dev/null || echo "?")
+    ABD_D_GENUINE=$(grep -oP 'Genuine findings\*\* \| \K\d+' "$OUTPUT_DIR/abductive_report.md" 2>/dev/null || echo "?")
+    ABD_D_ARTIFACTS=$(grep -oP 'Override artifacts\*\* \| \K\d+' "$OUTPUT_DIR/abductive_report.md" 2>/dev/null || echo "?")
+    echo "  Total Hypotheses: $ABD_D_TOTAL"
+    echo "  Genuine Findings: $ABD_D_GENUINE"
+    echo "  Override Artifacts: $ABD_D_ARTIFACTS"
+else
+    echo "  (not generated)"
+fi
+echo ""
+
 # Generated reports
 echo -e "${BOLD}  GENERATED REPORTS${NC}"
 for report in \
@@ -471,6 +506,7 @@ for report in \
     "orbit_data.json" \
     "fpn_report.md" \
     "maxent_report.md" \
+    "abductive_report.md" \
     "variance_analysis.md" \
     "pattern_mining.md" \
     "index_sufficiency.md" \

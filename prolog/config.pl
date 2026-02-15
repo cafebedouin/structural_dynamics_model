@@ -416,6 +416,20 @@ param(maxent_prior_mode,                  corpus).   % corpus | uniform
 param(maxent_signature_override_strength,    0.95).  % P assigned to unconditional override target
 
 /* ================================================================
+   12. ABDUCTIVE REASONING ENGINE (v6.3)
+   ================================================================
+   Cross-subsystem anomaly detection layer. Synthesizes signals from
+   structural signatures, MaxEnt, FPN, Dirac orbits, drift detection,
+   and logical fingerprints to produce structured diagnostic hypotheses.
+   ================================================================ */
+
+param(abductive_enabled,                    0).      % 0=disabled, 1=enabled
+param(abductive_confidence_floor,          0.30).    % Hypotheses below this confidence not stored
+param(abductive_fpn_divergence_threshold,  0.02).    % FPN EP divergence threshold for triggers
+param(abductive_maxent_mountain_deception, 0.50).    % P(mountain) threshold for deep_deception
+param(abductive_dormant_entropy_ceiling,   0.15).    % Max H_norm for dormant_extraction trigger
+
+/* ================================================================
    CONFIG VALIDATION (loaded last so all param/2 facts are available)
    ================================================================ */
 
