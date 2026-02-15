@@ -1,26 +1,50 @@
 % ============================================================================
 % CONSTRAINT STORY: gradient_descent_optimization
 % ============================================================================
-% Generated: 2026-01-19
-% Model: Gemini 2.0 Flash
-% Source: Numerical Optimization / Machine Learning Theory
+% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2024-07-15
 % ============================================================================
 
-:- module(constraint_gradient_descent, []).
+:- module(constraint_gradient_descent_optimization, []).
 
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
 
-% --- Namespace Hooks ---
-:- multifile 
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile
     domain_priors:base_extractiveness/2,
     domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
     domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
-    constraint_indexing:constraint_classification/3.
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
+    narrative_ontology:boltzmann_floor_override/2,
+    constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3,
+    domain_priors:emerges_naturally/1,
+    narrative_ontology:omega_variable/3.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -28,250 +52,204 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: gradient_descent_optimization
- * human_readable: Gradient Descent (Iterative Optimization)
- * domain: technological/mathematical
- * temporal_scope: 1847 (Cauchy) - Present (Civilizational)
- * spatial_scope: Global/Abstract (Differentiable loss landscapes)
- * * SUMMARY:
- * Gradient Descent is a first-order iterative optimization algorithm for finding 
- * a local minimum of a differentiable function. It takes steps proportional to 
- * the negative of the gradient of the function at the current point.
- * * KEY AGENTS:
- * - The Parameter Iterate (theta): A powerless agent following the geometric path.
- * - The ML Practitioner: An institutional agent who "tailors" the learning rate.
- * - The Loss Landscape: The "Mountain" of objective reality the agents must navigate.
- * * NARRATIVE ARC:
- * Gradient Descent functions as a "Rope" for the practitioner—a functional tool 
- * to reach equilibrium. For the parameter set itself, the loss landscape is a 
- * "Mountain" of fixed physical truth. However, in "vanishing gradient" 
- * scenarios or poorly tuned hyper-parameters, the method becomes a "Snare," 
- * extracting massive GPU cycles for zero movement toward the root.
+ *   constraint_id: gradient_descent_optimization
+ *   human_readable: Gradient Descent Iterative Optimization
+ *   domain: technological/mathematical
+ *
+ * SUMMARY:
+ *   Gradient Descent is a first-order iterative optimization algorithm for finding
+ *   a local minimum of a differentiable function. It functions as a fundamental
+ *   tool in machine learning, but its behavior is highly dependent on the
+ *   topology of the "loss landscape" it traverses. The constraint models the
+ *   rules of this traversal.
+ *
+ * KEY AGENTS (by structural relationship):
+ *   - Parameter Vector (theta): Primary target (powerless/trapped) — its state is dictated by the update rule.
+ *   - ML Practitioner: Primary beneficiary (institutional/mobile) — uses the algorithm as a tool to achieve a goal.
+ *   - Hardware & Energy Budgets: Secondary victims (powerless/trapped) — bear the computational cost.
+ *   - Analytical Observer: Analytical observer — sees the full mathematical structure.
  */
 
 /* ==========================================================================
-   2. CORE SYSTEM INTEGRATION
+   2. BASE PROPERTIES (DOMAIN PRIORS)
    ========================================================================== */
 
-% Required for DR-Audit Suite
-narrative_ontology:interval(gradient_descent_optimization, 1847, 2026).
+% --- Numerical metrics ---
+% Rationale: It extracts "computational labor" (FLOPs). While fundamental,
+% the cost of convergence is a direct extraction from the system's energy.
+domain_priors:base_extractiveness(gradient_descent_optimization, 0.30).
+
+% Rationale: Low. While GD is the "default," second-order methods (Newton)
+% or evolutionary strategies are highly visible alternatives.
+domain_priors:suppression_score(gradient_descent_optimization, 0.20).
+
+% Rationale: The algorithm is almost entirely functional, with little to no
+% performative aspect. It is a pure coordination mechanism for finding a minimum.
+domain_priors:theater_ratio(gradient_descent_optimization, 0.10).
+
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(gradient_descent_optimization, extractiveness, 0.30).
+narrative_ontology:constraint_metric(gradient_descent_optimization, suppression_requirement, 0.20).
+narrative_ontology:constraint_metric(gradient_descent_optimization, theater_ratio, 0.10).
+
+% --- NL Profile Metrics (required for mountain constraints) ---
+% These are included because one perspective classifies as Mountain. They model
+% the unchangeable nature of the mathematical laws for the parameter vector.
+narrative_ontology:constraint_metric(gradient_descent_optimization, accessibility_collapse, 0.95).
+narrative_ontology:constraint_metric(gradient_descent_optimization, resistance, 0.05).
+
+% --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(gradient_descent_optimization, rope).
 
-% Base extractiveness: 0.3
-% Rationale: It extracts "computational labor" (FLOPs). While fundamental, 
-% the cost of convergence is a direct extraction from the system's energy.
-domain_priors:base_extractiveness(gradient_descent_optimization, 0.3).
-
-% Suppression score: 0.2
-% Rationale: Low. While GD is the "default," second-order methods (Newton) 
-% or Evolutionary strategies are highly visible alternatives.
-domain_priors:suppression_score(gradient_descent_optimization, 0.2).
-
-% Constraint metric facts (bridge for classification engine)
-narrative_ontology:constraint_metric(gradient_descent_optimization, extractiveness, 0.3).
-narrative_ontology:constraint_metric(gradient_descent_optimization, suppression_requirement, 0.2).
-
-% Enforcement: Emerges from the laws of multivariate calculus.
+% --- Emergence flag (required for mountain constraints) ---
+% The update rule emerges from the laws of multivariate calculus.
 domain_priors:emerges_naturally(gradient_descent_optimization).
 
-% Metrics
-% Beneficiaries & Victims
-narrative_ontology:constraint_beneficiary(gradient_descent_optimization, artificial_intelligence).
+% --- Structural relationships (REQUIRED for non-mountain constraints) ---
+% Who benefits from this constraint existing?
+narrative_ontology:constraint_beneficiary(gradient_descent_optimization, ml_practitioners).
 narrative_ontology:constraint_beneficiary(gradient_descent_optimization, automation_systems).
-narrative_ontology:constraint_victim(gradient_descent_optimization, hardware_longevity). % Thermal/Compute wear.
+%
+% Who bears disproportionate cost?
+narrative_ontology:constraint_victim(gradient_descent_optimization, hardware_longevity).
 narrative_ontology:constraint_victim(gradient_descent_optimization, energy_budgets).
 
 /* ==========================================================================
-   3. INDEXED CLASSIFICATIONS
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × f(d) × σ(S)
    ========================================================================== */
 
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 1: THE PARAMETER VECTOR (theta) - Mountain
-   --------------------------------------------------------------------------
-   WHO: powerless - The iterate has zero agency over the update rule.
-   WHEN: immediate - Focused on the single step from t to t+1.
-   WHERE: trapped - Bound by the gradient $\nabla J(\theta)$ and the topology.
-   SCOPE: local - Immediate neighborhood of the current coordinate.
-   
-   WHY THIS CLASSIFICATION:
-   For the parameters being optimized, the update rule is a natural law. 
-   The iterate cannot "choose" to go uphill or sidestep a saddle point. 
-   The landscape is its absolute, unchangeable reality.
-   -------------------------------------------------------------------------- */
+% PERSPECTIVE 1: THE PARAMETER VECTOR (theta)
+% For the parameters being optimized, the update rule is a natural law.
+% The iterate cannot "choose" to go uphill or sidestep a saddle point.
+% The landscape is its absolute, unchangeable reality.
+% NOTE: The Mountain classification reflects the agent's perspective of
+% unchangeability. The engine will likely reject this classification due to
+% ε=0.30 > 0.25, producing a false_natural_law signature, which is the
+% intended diagnostic result here.
+constraint_indexing:constraint_classification(gradient_descent_optimization, mountain,
+    context(agent_power(powerless),
+            time_horizon(immediate),
+            exit_options(trapped),
+            spatial_scope(local))).
 
+% PERSPECTIVE 2: THE ML PRACTITIONER
+% For the engineer, GD is a "Rope"—a tool for functional coordination.
+% By adjusting the "tension" (learning rate), they guide the model toward
+% the desired state (low error). They have high agency and exit options.
+constraint_indexing:constraint_classification(gradient_descent_optimization, rope,
+    context(agent_power(institutional),
+            time_horizon(biographical),
+            exit_options(mobile),
+            spatial_scope(global))).
 
-
-constraint_indexing:constraint_classification(
-    gradient_descent_optimization,
-    mountain,
-    context(
-        agent_power(powerless),
-        time_horizon(immediate),
-        exit_options(trapped),
-        spatial_scope(local)
-    )
-) :- !.
-
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE ML ENGINEER - Rope
-   --------------------------------------------------------------------------
-   WHO: institutional - Power to set the learning rate $\eta$ and momentum.
-   WHEN: biographical - Planning the training run of a model (days/weeks).
-   WHERE: mobile - Can switch to Adam, RMSProp, or change the loss function.
-   SCOPE: global - Designing the overall convergence strategy.
-   
-   WHY THIS CLASSIFICATION:
-   For the engineer, GD is a "Rope"—a tool for functional coordination. 
-   By adjusting the "tension" (learning rate), they pull the model toward 
-   the desired standard of achievement (low error).
-   -------------------------------------------------------------------------- */
-
-constraint_indexing:constraint_classification(
-    gradient_descent_optimization,
-    rope,
-    context(
-        agent_power(institutional),
-        time_horizon(biographical),
-        exit_options(mobile),
-        spatial_scope(global)
-    )
-) :- !.
-
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 3: VANISHING GRADIENTS / FLAT PLATEAUS - Snare
-   --------------------------------------------------------------------------
-   WHO: powerless - An iterate stuck with a gradient of $\approx 0$.
-   WHEN: immediate - Each update step yields no progress.
-   WHERE: constrained - The iterate is "legally" iterating but functionally dead.
-   SCOPE: local - A vast, flat region of the loss surface.
-   
-   WHY THIS CLASSIFICATION:
-   In a flat plateau, the algorithm "strangles" the model. It extracts massive 
-   computational power (energy/time) while providing no movement. The iterate 
-   is "trapped" in a convergent loop that leads nowhere, acting as a Snare.
-   -------------------------------------------------------------------------- */
-
-
-
-constraint_indexing:constraint_classification(
-    gradient_descent_optimization,
-    snare,
-    context(
-        agent_power(powerless),
-        time_horizon(immediate),
-        exit_options(constrained),
-        spatial_scope(local)
-    )
-) :-
-    domain_priors:base_extractiveness(gradient_descent_optimization, E),
-    E >= 0.3.
-
-/* ==========================================================================
-   4. TESTS
-   ========================================================================== */
-
-:- begin_tests(gradient_descent_tests).
-
-test(geometry_vs_agency_variance) :-
-    % Iterate -> Mountain
-    constraint_indexing:constraint_classification(gradient_descent_optimization, Type1, context(powerless, immediate, trapped, local)),
-    % Engineer -> Rope
-    constraint_indexing:constraint_classification(gradient_descent_optimization, Type2, context(institutional, biographical, mobile, global)),
-    Type1 = mountain,
-    Type2 = rope.
-
-test(extraction_efficiency) :-
-    % The powerless iterate experiences the extraction of cycles as a hard limit.
-    ContextPowerless = context(powerless, immediate, trapped, local),
-    constraint_indexing:extractiveness_for_agent(gradient_descent_optimization, ContextPowerless, Score),
-    Score > 0.2.
-
-test(emergence) :-
-    domain_priors:emerges_naturally(gradient_descent_optimization).
-
-:- end_tests(gradient_descent_tests).
-
-/* ==========================================================================
-   5. MODEL INTERPRETATION (Commentary)
-   ========================================================================== */
-
-/**
- * LLM GENERATION NOTES
- * * Model: Gemini 2.0 Flash
- * * KEY DECISIONS:
- * 1. BASE EXTRACTIVENESS (0.3): GD is "expensive." It is a brute-force approach 
- * compared to analytical solutions (which aren't always possible).
- * 2. TYPE SHIFT: Highlighted the transition from "Mountain" (geometry) 
- * to "Snare" (vanishing gradients). This captures the technical reality 
- * that the same law can be a stable path or a resource trap depending 
- * on the coordinate.
- * 3. SUPPRESSION: Low, because mathematics encourages the study of 
- * second-order Hessian-based methods as superior (though more compute-heavy).
- */
-
-/* ==========================================================================
-   6. OMEGA VARIABLES (Ω)
-   ========================================================================== */
-
-omega_variable(
-    global_minimum_reachability,
-    "Is the loss landscape convex (Mountain) or non-convex (Labyrinth)?",
-    resolution_mechanism("Formal verification of the loss function's second derivative matrix (Hessian)."),
-    impact("If Convex: GD is a reliable Rope. If Non-Convex: GD is a Snare of local minima."),
-    confidence_without_resolution(medium)
-).
-
-omega_variable(
-    learning_rate_stability,
-    "Does the engineer choose a learning rate that causes oscillation (Snare) or convergence (Rope)?",
-    resolution_mechanism("Step-by-step trace of loss values over 1000 epochs."),
-    impact("If Oscillation: The 'Rope' has snapped and become a 'Snare' of wasted energy."),
-    confidence_without_resolution(high)
-).
-
-/* ==========================================================================
-   7. ALTERNATIVE ANALYSIS
-   ========================================================================== */
-
-/**
- * VIABLE ALTERNATIVES
- * * ALTERNATIVE 1: Stochastic Gradient Descent (SGD) with Noise
- * Viability: Breaks the "Mountain" fixity by allowing jumps out of local minima.
- * Evidence: Standard in deep learning.
- * * ALTERNATIVE 2: Newton's Method
- * Viability: Uses the second derivative for a more "intelligent" Rope.
- * Suppression: Rejected for large models due to $O(N^2)$ memory extraction for the Hessian.
- * * CONCLUSION:
- * The continued dominance of Gradient Descent as a "Rope" for modern AI 
- * despite its "Snare" tendencies in deep networks is a result of the 
- * prohibitive extractiveness of the second-order alternatives.
- */
-
-/* ==========================================================================
-   END OF CONSTRAINT STORY
-   ========================================================================== */
-
-% ============================================================================
-% ENRICHMENT: Structural predicates for dynamic classification
-% Generated: 2026-02-08
-% Template: v5.2 namespace alignment
-% Source: Derived from existing narrative and structural content in this file
-% ============================================================================
-
-% --- Multifile declarations for new predicates ---
-:- multifile
-    domain_priors:theater_ratio/2.
-
-% --- Theater ratio (missing from base properties) ---
-% Functional coordination mechanism — primarily substantive
-domain_priors:theater_ratio(gradient_descent_optimization, 0.1).
-narrative_ontology:constraint_metric(gradient_descent_optimization, theater_ratio, 0.1).
-
-% --- Analytical perspective classification (missing) ---
-% chi = 0.3 * 1.15 (analytical) * 1.2 (global) = 0.414
-% Classification: rope
+% PERSPECTIVE 3: THE ANALYTICAL OBSERVER
+% The analytical view sees a functional coordination tool with moderate,
+% non-coercive extraction (computational cost), classifying it as a Rope.
+% This matches the constraint_claim.
 constraint_indexing:constraint_classification(gradient_descent_optimization, rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
             spatial_scope(global))).
+
+% PERSPECTIVE 4: VANISHING GRADIENTS / FLAT PLATEAUS
+% In a flat plateau, the algorithm extracts massive computational power for
+% no progress. The iterate is trapped in a loop that leads nowhere.
+% This represents a failure mode where the tool becomes purely extractive.
+constraint_indexing:constraint_classification(gradient_descent_optimization, snare,
+    context(agent_power(powerless),
+            time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(regional))).
+
+/* ==========================================================================
+   4. VALIDATION TESTS
+   ========================================================================== */
+
+:- begin_tests(gradient_descent_optimization_tests).
+
+test(perspectival_gap) :-
+    % Verify perspectival gap between target (powerless) and beneficiary (institutional).
+    constraint_indexing:constraint_classification(gradient_descent_optimization, TypeTarget, context(agent_power(powerless), _, trapped, _)),
+    constraint_indexing:constraint_classification(gradient_descent_optimization, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
+    TypeTarget \= TypeBeneficiary.
+
+test(threshold_validation) :-
+    % Verify that the base metrics are within a plausible, non-mountain range.
+    narrative_ontology:constraint_metric(gradient_descent_optimization, extractiveness, E),
+    narrative_ontology:constraint_metric(gradient_descent_optimization, suppression_requirement, S),
+    E > 0.25,
+    S > 0.05.
+
+test(emergence) :-
+    domain_priors:emerges_naturally(gradient_descent_optimization).
+
+:- end_tests(gradient_descent_optimization_tests).
+
+/* ==========================================================================
+   5. GENERATIVE COMMENTARY
+   ========================================================================== */
+
+/**
+ * LOGIC RATIONALE:
+ *   - Base Extractiveness (0.30): Represents the non-trivial computational cost (energy, hardware cycles) required to use the algorithm. It's not free, but it's not designed to be punitive.
+ *   - Suppression (0.20): Low, as many alternative optimizers exist (Adam, RMSProp, second-order methods), though GD remains a common baseline.
+ *   - Mountain Perspective: The core tension in this story is the dual nature of the constraint. For the parameter vector being updated, the laws of calculus are absolute and unchangeable (a Mountain). However, the algorithm itself, as a system, has an extractive cost (ε=0.30) that is too high for a true Mountain. This file models the *perceived* unchangeability for the powerless agent, while allowing the system's `false_natural_law` detector to correctly flag the metric inconsistency.
+ *
+ * PERSPECTIVAL GAP:
+ *   The gap is stark. The ML practitioner sees a flexible Rope they can tune (learning rate) or replace. The parameter vector sees an immutable Mountain whose topology dictates its every move. In failure modes (vanishing gradients), this same immutable law becomes a Snare, extracting resources for no benefit.
+ *
+ * DIRECTIONALITY LOGIC:
+ *   - Beneficiaries: `ml_practitioners` directly benefit by using this tool to solve optimization problems.
+ *   - Victims: `hardware_longevity` and `energy_budgets` bear the direct physical cost of the computation, representing the extractive component of the algorithm.
+ *
+ * MANDATROPHY ANALYSIS:
+ *   The classification correctly identifies GD as primarily a coordination tool (Rope) from the user and analytical perspectives. It avoids mislabeling the computational cost as a purely extractive Snare (in its normal function) while still capturing the Snare-like failure mode in specific topological contexts (flat plateaus). The Mountain perspective highlights how a natural law can be the basis for a tool with non-zero extraction.
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+% /5 form: narrative detail for story context
+omega_variable(
+    omega_gradient_descent_1,
+    'Is the loss landscape convex (reliable convergence) or non-convex (many local minima)?',
+    'Formal verification of the loss function''s second derivative matrix (Hessian).',
+    'If Convex: GD is a reliable Rope. If Non-Convex: GD risks becoming a Snare of local minima.',
+    confidence_without_resolution(medium)
+).
+
+% /3 form: typed classification for reporting engine (REQUIRED)
+narrative_ontology:omega_variable(omega_gradient_descent_1, empirical, 'Whether the specific loss landscape is convex, determining if local minima are a trap.').
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+% Required for external script parsing
+narrative_ontology:interval(gradient_descent_optimization, 1847, 2026).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Not required as base_extractiveness (0.30) is below the 0.46 threshold.
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA
+   ========================================================================== */
+
+% No specific Boltzmann or Network data declared for this constraint.
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+% No overrides needed; the structural derivation from beneficiary/victim
+% groups is sufficient to model the directionality.
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */

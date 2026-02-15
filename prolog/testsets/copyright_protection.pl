@@ -1,9 +1,9 @@
 % ============================================================================
 % CONSTRAINT STORY: copyright_protection
 % ============================================================================
-% Generated: 2026-01-23
-% Model: Gemini Pro (Revised)
-% Source: U.S. Copyright Act of 1976 / Berne Convention
+% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2024-07-15
 % ============================================================================
 
 :- module(constraint_copyright_protection, []).
@@ -12,15 +12,38 @@
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
 
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
+
 % --- Namespace Hooks (Required for loading) ---
-:- multifile 
+:- multifile
     domain_priors:base_extractiveness/2,
     domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
     domain_priors:requires_active_enforcement/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
-    constraint_indexing:constraint_classification/3.
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
+    narrative_ontology:boltzmann_floor_override/2,
+    constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3,
+    domain_priors:emerges_naturally/1,
+    narrative_ontology:omega_variable/3.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -28,227 +51,205 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * 
- * constraint_id: copyright_protection
- * human_readable: Copyright (Creative Monopoly)
- * domain: social/economic/technological/legal
- * temporal_scope: Civilizational (Life + 70 years)
- * spatial_scope: Global
- * 
+ *   constraint_id: copyright_protection
+ *   human_readable: Copyright Protection Framework
+ *   domain: economic/legal/technological
+ *
  * SUMMARY:
- * Copyright is a legal framework granting creators exclusive rights to their 
- * original works. It separates "Expression" (protected) from "Idea" (free).
- * For creators, it's a foundation for a career; for the public, it's a fence
- * around the cultural commons, creating an artificial scarcity.
- * 
- * KEY AGENTS:
- * - The Casual Internet User (Individual Powerless): Consumes content without understanding legal nuances.
- * - The Independent Artist (Individual Moderate): Seeks to monetize or control their work.
- * - The AI Training Lab (Institutional): Seeks to use vast amounts of data, regardless of copyright.
+ *   Copyright is a legal framework granting creators exclusive rights to their
+ *   original works for a limited time. It creates an artificial scarcity of
+ *   expression to incentivize creation, separating protected "expression" from
+ *   unprotected "idea". This creates a fundamental tension between creator
+ *   livelihoods, corporate control over culture, public access, and new forms
+ *   of technological innovation (e.g., AI training).
+ *
+ * KEY AGENTS (by structural relationship):
+ *   - Public Consumers & Derivative Creators: Primary target (powerless/trapped) — bears extraction of usage rights.
+ *   - Large Media Corporations: Primary beneficiary (institutional/arbitrage) — benefits from monopoly rights and enforcement.
+ *   - Independent Artists: Secondary beneficiary (moderate/mobile) — uses the system for coordination and income.
+ *   - AI Developers: Secondary target (institutional/constrained) — experiences the system as a barrier to data access.
+ *   - Analytical Observer: Sees the full coordination/extraction structure.
  */
 
 /* ==========================================================================
-   2. CORE SYSTEM INTEGRATION (The "Reality" Layer)
+   2. BASE PROPERTIES (DOMAIN PRIORS)
    ========================================================================== */
 
-narrative_ontology:interval(copyright_protection, 0, 10).
+% --- Numerical metrics ---
+domain_priors:base_extractiveness(copyright_protection, 0.40).
+domain_priors:suppression_score(copyright_protection, 0.50).   % Structural property (raw, unscaled).
+domain_priors:theater_ratio(copyright_protection, 0.10).       % Piton detection (>= 0.70)
+
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(copyright_protection, extractiveness, 0.40).
+narrative_ontology:constraint_metric(copyright_protection, suppression_requirement, 0.50).
+narrative_ontology:constraint_metric(copyright_protection, theater_ratio, 0.10).
+
+% --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(copyright_protection, tangled_rope).
 
-% Base extractiveness: 0.4.
-% While it allows creators to earn, it extracts "freedom of use" from the 
-% public, and often large corporations extract the copyright from creators.
-domain_priors:base_extractiveness(copyright_protection, 0.4).
+% --- Binary flags ---
+domain_priors:requires_active_enforcement(copyright_protection). % Required for Tangled Rope
 
-% Suppression: 0.5.
-% Fair Use provides an "exit," but automated enforcement systems often 
-% suppress even legal uses (chilling effect).
-domain_priors:suppression_score(copyright_protection, 0.5).
-
-% Constraint metric facts (bridge for classification engine)
-narrative_ontology:constraint_metric(copyright_protection, extractiveness, 0.4).
-narrative_ontology:constraint_metric(copyright_protection, suppression_requirement, 0.5).
-
-% Enforcement: Requires active enforcement (legal system, Content ID).
-domain_priors:requires_active_enforcement(copyright_protection).
-
-% BENEFICIARIES & VICTIMS
-narrative_ontology:constraint_beneficiary(copyright_protection, creators).
-narrative_ontology:constraint_victim(copyright_protection, cultural_consumers).
+% --- Structural relationships (REQUIRED for non-mountain constraints) ---
+% These feed the directionality derivation chain.
+% Who benefits from this constraint existing?
+narrative_ontology:constraint_beneficiary(copyright_protection, copyright_holders).
+%
+% Who bears disproportionate cost?
+narrative_ontology:constraint_victim(copyright_protection, public_domain_advocates).
+narrative_ontology:constraint_victim(copyright_protection, ai_developers).
 
 /* ==========================================================================
-   3. INDEXED CLASSIFICATIONS (Perspectival Truth)
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × f(d) × σ(S)
    ========================================================================== */
 
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 1: THE CASUAL INTERNET USER - Mountain
-   --------------------------------------------------------------------------
-   WHO: powerless (Consumes content without legal understanding)
-   WHEN: immediate (Sees a video, wants to share it)
-   WHERE: trapped (Cannot discern fair use from infringement)
-   
-   WHY THIS CLASSIFICATION:
-   For the casual internet user, copyright is an immutable 'Mountain' of legal
-   restrictions. They simply consume content as presented, without considering
-   fair use or licensing, because the perceived barrier to usage is too high.
-   It's a fixed part of the digital landscape.
-   -------------------------------------------------------------------------- */
+% PERSPECTIVE 1: THE PUBLIC CONSUMER (MOUNTAIN)
+% Agent who bears extraction of usage rights. Experiences copyright as an
+% immutable fact of the digital landscape, too complex to navigate.
+constraint_indexing:constraint_classification(copyright_protection, mountain,
+    context(agent_power(powerless),
+            time_horizon(immediate),
+            exit_options(trapped),
+            spatial_scope(global))).
 
-constraint_indexing:constraint_classification(
-    copyright_protection,
-    mountain,
-    context(
-        agent_power(powerless),
-        time_horizon(immediate),
-        exit_options(trapped),
-        spatial_scope(local)
-    )
-).
+% PERSPECTIVE 2: THE MEDIA CORPORATION (ROPE)
+% Primary beneficiary who leverages the system for profit. For them, it is a
+% pure coordination mechanism to structure markets and enforce monopoly rights.
+constraint_indexing:constraint_classification(copyright_protection, rope,
+    context(agent_power(institutional),
+            time_horizon(generational),
+            exit_options(arbitrage),
+            spatial_scope(global))).
 
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE INDEPENDENT ARTIST - Rope
-   --------------------------------------------------------------------------
-   WHO: individual_moderate (Seeks to monetize or control their work)
-   WHEN: biographical (Building a career over time)
-   WHERE: mobile (Can choose different licensing options or enforcement levels)
-   
-   WHY THIS CLASSIFICATION:
-   For the small creator, copyright is a 'Rope'. It is the only tool they 
-   have to prevent their work from being captured and monetized by 
-   large entities without compensation. It coordinates their ability to 
-   participate in the marketplace and protects their livelihood.
-   -------------------------------------------------------------------------- */
+% PERSPECTIVE 3: THE INDEPENDENT ARTIST (ROPE)
+% A secondary beneficiary who uses the system to coordinate income and control
+% their work, though with less power than large institutions.
+constraint_indexing:constraint_classification(copyright_protection, rope,
+    context(agent_power(moderate),
+            time_horizon(biographical),
+            exit_options(mobile),
+            spatial_scope(global))).
 
-constraint_indexing:constraint_classification(
-    copyright_protection,
-    rope,
-    context(
-        agent_power(individual_moderate),
-        time_horizon(biographical),
-        exit_options(mobile),
-        spatial_scope(global)
-    )
-).
+% --- INTER-INSTITUTIONAL PERSPECTIVE ---
 
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE AI TRAINING LAB (INSTITUTIONAL) - Snare
-   --------------------------------------------------------------------------
-   WHO: institutional (Seeking to build generative AI systems)
-   WHEN: immediate (Needing vast datasets for training)
-   WHERE: trapped (Cannot easily "un-train" on copyrighted data)
-   
-   WHY THIS CLASSIFICATION:
-   For an entity attempting to build generative AI, copyright is a 'Snare.' 
-   The massive scale of data required makes individual licensing 
-   impossible, creating a legal bottleneck that threatens the viability 
-   of the entire technological enterprise. It strangles innovation at scale.
-   -------------------------------------------------------------------------- */
+% PERSPECTIVE 4: THE AI DEVELOPER (SNARE)
+% An institutional actor, but one targeted by the constraint. The need for
+% massive datasets makes individual licensing impossible, creating a legal
+% bottleneck that traps and strangles large-scale innovation.
+constraint_indexing:constraint_classification(copyright_protection, snare,
+    context(agent_power(institutional),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(global))).
 
-constraint_indexing:constraint_classification(
-    copyright_protection,
-    snare,
-    context(
-        agent_power(institutional),
-        time_horizon(immediate),
-        exit_options(trapped),
-        spatial_scope(global)
-    )
-).
+% PERSPECTIVE 5: THE ANALYTICAL OBSERVER (TANGLED ROPE)
+% The default analytical context, which sees both the valid coordination
+% function for creators and the asymmetric extraction from the public and
+% innovators. This matches the constraint_claim.
+constraint_indexing:constraint_classification(copyright_protection, tangled_rope,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(global))).
 
 /* ==========================================================================
-   4. TESTS
+   4. VALIDATION TESTS
    ========================================================================== */
 
-:- begin_tests(copyright_tests).
+:- begin_tests(copyright_protection_tests).
 
-test(multi_perspective_variance) :-
-    constraint_indexing:constraint_classification(copyright_protection, Type1, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(copyright_protection, Type2, context(agent_power(individual_moderate), _, _, _)),
-    constraint_indexing:constraint_classification(copyright_protection, Type3, context(agent_power(institutional), _, _, _)),
-    Type1 \= Type2,
-    Type2 \= Type3,
-    Type1 \= Type3.
+test(perspectival_gap) :-
+    % Verify perspectival gap between different agents.
+    constraint_indexing:constraint_classification(copyright_protection, TypeConsumer, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(copyright_protection, TypeCorp, context(agent_power(institutional), _, exit_options(arbitrage), _)),
+    constraint_indexing:constraint_classification(copyright_protection, TypeAI, context(agent_power(institutional), _, exit_options(constrained), _)),
+    TypeConsumer \= TypeCorp,
+    TypeCorp \= TypeAI.
 
-:- end_tests(copyright_tests).
+test(analytical_claim_consistency) :-
+    narrative_ontology:constraint_claim(copyright_protection, ClaimedType),
+    constraint_indexing:constraint_classification(copyright_protection, AnalyticalType, context(agent_power(analytical), _, _, _)),
+    ClaimedType == AnalyticalType.
+
+:- end_tests(copyright_protection_tests).
 
 /* ==========================================================================
-   5. MODEL INTERPRETATION (Commentary)
+   5. GENERATIVE COMMENTARY
    ========================================================================== */
 
 /**
- * LLM GENERATION NOTES
- * 
- * Model: Gemini Pro (Revised)
- * Date: 2026-01-23
- * 
- * KEY DECISIONS:
- * 
- * 1. PERSPECTIVE SELECTION: Added the 'Casual Internet User' as the
- *    'powerless' agent, highlighting their experience of copyright
- *    as an unyielding 'Mountain' of legal complexity.
+ * LOGIC RATIONALE:
+ *   - Base Extractiveness (0.40): Represents the value extracted from the public commons (freedom to use, share, adapt) and transferred to rights holders. It's significant but not total, as fair use provides some relief.
+ *   - Suppression (0.50): High due to the chilling effects of automated enforcement (e.g., YouTube's Content ID) and the high cost of legal challenges, which suppresses even legitimate uses.
+ *   - Theater (0.10): The system is largely functional, not performative.
  *
- * 2. CLASSIFICATION RATIONALE:
- *    - User (Mountain): Perceived as an immutable law due to complexity.
- *    - Artist (Rope): A tool for monetization and control.
- *    - AI Lab (Snare): A barrier to innovation due to data scale.
- * 
- * 3. TANGLED ROPE: Copyright is inherently a 'Tangled Rope'. It's a 'Rope' for
- *    creators to coordinate income, but it's 'Tangled' because it extracts
- *    freedom of use from the public and can strangle new forms of innovation
- *    (like AI training) if not carefully balanced.
+ * PERSPECTIVAL GAP:
+ *   The gap is extreme. For a consumer, it's an incomprehensible Mountain. For a media corporation, it's a perfect Rope for organizing their business model. For an AI developer, it's a Snare that halts their work. For an artist, it's a necessary Rope to build a career. This divergence highlights the constraint's hybrid nature.
+ *
+ * DIRECTIONALITY LOGIC:
+ *   - Beneficiaries: 'copyright_holders' captures both large corporations and individual creators who benefit from the state-granted monopoly.
+ *   - Victims: 'public_domain_advocates' and 'ai_developers' represent groups whose activities are directly curtailed by the expansion and enforcement of copyright.
+ *
+ * INTER-INSTITUTIONAL DYNAMICS:
+ *   The story shows two institutional actors with opposite experiences. The media corporation (beneficiary, arbitrage exit) sees a Rope. The AI developer (victim, constrained exit) sees a Snare. This is a classic inter-institutional conflict mediated by a single legal constraint.
+ *
+ * MANDATROPHY ANALYSIS:
+ *   The classification as Tangled Rope correctly identifies that copyright has a genuine coordination function (allowing creators to earn a living) that cannot be dismissed, while also acknowledging the significant, asymmetric extraction it imposes on the public and on technological innovation. It is neither pure coordination (Rope) nor pure extraction (Snare).
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
-/**
- * OMEGA IDENTIFICATION
- *
- * The core uncertainty is how copyright law will adapt (or fail to adapt) to new technologies.
- */
 
+% /5 form: narrative detail for story context
 omega_variable(
-    ai_fair_use_precedent,
+    omega_copyright_protection,
     "Will training AI on copyrighted material be legally classified as 'Transformative Fair Use', or will it require new licensing models?",
-    resolution_mechanism("Supreme Court rulings on AI training datasets (e.g., NYT v. OpenAI), and the development of new, industry-standard AI licensing frameworks."),
-    impact("If Yes (Fair Use): The 'Snare' for AI labs vanishes. If No: Copyright becomes an insurmountable 'Mountain' for AI, requiring fundamental shifts in data acquisition."),
+    "Supreme Court rulings on AI training datasets (e.g., NYT v. OpenAI), and the development of new, industry-standard AI licensing frameworks.",
+    "If Yes (Fair Use): The 'Snare' for AI labs vanishes, shifting the constraint towards Rope. If No: The 'Snare' aspect intensifies, potentially becoming a Mountain for AI development.",
     confidence_without_resolution(low)
 ).
 
-/* ==========================================================================
-   7. ALTERNATIVE ANALYSIS
-   ========================================================================== */
-/**
- * VIABLE ALTERNATIVES
- *
- * ALTERNATIVE 1: Public Domain
- *    Viability: Historically, works eventually enter the public domain.
- *    Suppression: Term extensions (e.g., Sonny Bono Act) have significantly
- *    delayed works entering the public domain, suppressing this alternative for
- *    contemporary works.
- *
- * ALTERNATIVE 2: Creative Commons Licensing
- *    Viability: A flexible framework allowing creators to choose terms.
- *    Suppression: Often perceived as a complex alternative to traditional copyright
- *    by the public, and by institutions as a threat to maximal control.
- *
- * CONCLUSION:
- * Copyright is a dynamic 'Tangled Rope' that balances creator rights with public
- * access. Its constant evolution (e.g., term extensions, digital rights management)
- * is an ongoing attempt to manage the tension between individual ownership and
- * the cultural commons.
- */
+% /3 form: typed classification for reporting engine (REQUIRED)
+narrative_ontology:omega_variable(omega_copyright_protection, empirical, "Legal precedent for AI training under Fair Use doctrine.").
 
 /* ==========================================================================
-   8. INTEGRATION HOOKS
+   7. INTEGRATION HOOKS
    ========================================================================== */
 
-/**
- * TO USE THIS FILE:
- * 
- * 1. Load: ?- [constraints/copyright_protection].
- * 2. Multi-perspective: ?- multi_index_report(copyright_protection).
- * 3. Run tests: ?- run_tests(copyright_tests).
- */
+% Required for external script parsing
+narrative_ontology:interval(copyright_protection, 0, 10).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Base extractiveness is < 0.46, so temporal data is not strictly required.
+% This section is included for structural completeness.
+%
+% narrative_ontology:measurement(copyright_protection_tr_t0, copyright_protection, theater_ratio, 0, 0.05).
+% narrative_ontology:measurement(copyright_protection_tr_t5, copyright_protection, theater_ratio, 5, 0.08).
+% narrative_ontology:measurement(copyright_protection_tr_t10, copyright_protection, theater_ratio, 10, 0.10).
+%
+% narrative_ontology:measurement(copyright_protection_ex_t0, copyright_protection, base_extractiveness, 0, 0.35).
+% narrative_ontology:measurement(copyright_protection_ex_t5, copyright_protection, base_extractiveness, 5, 0.38).
+% narrative_ontology:measurement(copyright_protection_ex_t10, copyright_protection, base_extractiveness, 10, 0.40).
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA
+   ========================================================================== */
+
+% Coordination type (enables Boltzmann floor + complexity offset)
+narrative_ontology:coordination_type(copyright_protection, enforcement_mechanism).
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+% No overrides needed; the structural derivation from beneficiary/victim
+% status and exit options accurately models the directionality for each agent.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

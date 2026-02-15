@@ -1,26 +1,50 @@
 % ============================================================================
 % CONSTRAINT STORY: kleene_recursion_theorem
 % ============================================================================
-% Generated: 2026-01-19
-% Model: Gemini 2.0 Flash
-% Source: Stephen Kleene (1938) / Metamathematics / Recursion Theory
+% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2024-07-22
 % ============================================================================
 
-:- module(constraint_kleene_recursion, []).
+:- module(constraint_kleene_recursion_theorem, []).
 
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
 
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
+
 % --- Namespace Hooks (Required for loading) ---
-:- multifile 
+:- multifile
     domain_priors:base_extractiveness/2,
     domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
     domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
-    constraint_indexing:constraint_classification/3.
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
+    narrative_ontology:boltzmann_floor_override/2,
+    constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3,
+    domain_priors:emerges_naturally/1,
+    narrative_ontology:omega_variable/3.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -28,259 +52,215 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: kleene_recursion_theorem
- * human_readable: Kleene's Second Recursion Theorem
- * domain: technological/mathematical
- * temporal_scope: 1938 - Present
- * spatial_scope: Global/Abstract (Universal Computation)
- * * SUMMARY:
- * Kleene's Second Recursion Theorem proves that for any computable function 
- * that transforms programs, there exists a "fixed-point" program that 
- * effectively "knows" its own source code. It is the formal foundation for 
- * self-referential logic, allowing a program to use its own description 
- * as a parameter in its computation.
- * * KEY AGENTS:
- * - The Fixed-Point Program (Subject): The powerless agent whose behavior 
- * is mathematically identical to the transformation of itself.
- * - The Language Designer (Institutional): An agent who uses the theorem 
- * as a "Rope" to ensure their language supports sophisticated recursion.
- * - The Computer Scientist (Analytical): The observer mapping the "Mountain" 
- * of self-referential possibility.
- * * NARRATIVE ARC:
- * The theorem functions as a "Mountain" of logical reality—self-reference 
- * is a built-in feature of any universal system. In software architecture, 
- * it is a "Rope" for implementing reflexive systems (like compilers that 
- * compile themselves). However, in the context of unconstrained 
- * self-modification, the theorem acts as a "Snare," extracting the 
- * possibility of external behavioral prediction by making code 
- * fundamentally "self-aware" in a way that bypasses external templates.
+ *   constraint_id: kleene_recursion_theorem
+ *   human_readable: Kleene's Second Recursion Theorem
+ *   domain: mathematical/technological
+ *
+ * SUMMARY:
+ *   Kleene's Second Recursion Theorem proves that for any computable function
+ *   that transforms programs, there exists a "fixed-point" program that can
+ *   access its own source code. It is the formal foundation for
+ *   self-referential logic in any Turing-complete system. This constraint is
+ *   a Mountain: a fundamental, unchangeable feature of the logical landscape
+ *   of computation. While its *applications* can be Ropes (e.g., self-hosting
+ *   compilers) or Snares (e.g., polymorphic malware), the theorem itself is
+ *   an invariant fact with no inherent extractiveness.
+ *
+ * KEY AGENTS (by structural relationship):
+ *   - Any Turing-Complete System: The subject domain where the theorem holds true (powerless/trapped).
+ *   - The Computer Scientist: An observer who maps this feature of the logical landscape (analytical/analytical).
+ *   - The Language Designer: An actor who must account for this property in system design (institutional/constrained).
  */
 
 /* ==========================================================================
-   2. CORE SYSTEM INTEGRATION (The "Reality" Layer)
+   2. BASE PROPERTIES (DOMAIN PRIORS)
    ========================================================================== */
 
-% Required for DR-Audit Suite
-narrative_ontology:interval(kleene_era, 1938, 2026).
-narrative_ontology:constraint_claim(kleene_recursion_theorem, tangled_rope).
-domain_priors:requires_active_enforcement(kleene_recursion_theorem).
+% --- Numerical metrics ---
+% A mathematical theorem has no inherent extractiveness.
+domain_priors:base_extractiveness(kleene_recursion_theorem, 0.02).
+% It does not suppress alternatives; it is a logical consequence of the axioms of computation.
+domain_priors:suppression_score(kleene_recursion_theorem, 0.01).
+% The theorem is pure substance; no performative theater.
+domain_priors:theater_ratio(kleene_recursion_theorem, 0.01).
 
-% Base extractiveness score (0.0-1.0)
-% Rationale: 0.2. It "extracts" the simplicity of linear, non-recursive 
-% execution, forcing environments to manage the "tax" of self-referential loops.
-domain_priors:base_extractiveness(kleene_recursion_theorem, 0.2).
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(kleene_recursion_theorem, extractiveness, 0.02).
+narrative_ontology:constraint_metric(kleene_recursion_theorem, suppression_requirement, 0.01).
+narrative_ontology:constraint_metric(kleene_recursion_theorem, theater_ratio, 0.01).
 
-% Suppression score (0.0-1.0)
-% Rationale: 0.15. It suppresses the intuition that programs are separate 
-% from their descriptions, though it enables more than it restricts.
-domain_priors:suppression_score(kleene_recursion_theorem, 0.15).
+% --- NL Profile Metrics (required for mountain constraints) ---
+% These feed the natural_law_signature certification chain in
+% structural_signatures.pl.
+% Alternatives to the theorem are logically impossible within a Turing-complete system.
+narrative_ontology:constraint_metric(kleene_recursion_theorem, accessibility_collapse, 1.0).
+% One cannot "resist" a mathematical proof.
+narrative_ontology:constraint_metric(kleene_recursion_theorem, resistance, 0.0).
 
-% Constraint metric facts (bridge for classification engine)
-narrative_ontology:constraint_metric(kleene_recursion_theorem, extractiveness, 0.2).
-narrative_ontology:constraint_metric(kleene_recursion_theorem, suppression_requirement, 0.15).
+% --- Constraint claim (must match analytical perspective type) ---
+narrative_ontology:constraint_claim(kleene_recursion_theorem, mountain).
 
-% Enforcement: Emerges naturally from the structure of partial recursive functions.
+% --- Emergence flag (required for mountain constraints) ---
+% The theorem emerges naturally from the structure of partial recursive functions.
 domain_priors:emerges_naturally(kleene_recursion_theorem).
 
-% Metrics required for Section 1 of the Executive Summary
-% BENEFICIARIES & VICTIMS
-narrative_ontology:constraint_beneficiary(kleene_recursion_theorem, self_hosting_compilers).
-narrative_ontology:constraint_beneficiary(kleene_recursion_theorem, artificial_life_researchers).
-narrative_ontology:constraint_victim(kleene_recursion_theorem, static_analysis_security). % Self-reference complicates reachability proofs.
+% --- Structural relationships (REQUIRED for non-mountain constraints) ---
+% No enrichment needed. As a Mountain (natural law), the theorem has no
+% inherent beneficiaries or victims. These roles emerge from its applications,
+% which are separate constraints.
 
 /* ==========================================================================
-   3. INDEXED CLASSIFICATIONS (Perspectival Truth)
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × f(d) × σ(S)
+   where f(d) is the sigmoid directionality function:
+     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
+   The engine derives d from beneficiary/victim membership + exit_options.
+   Scope modifiers: local=0.8, regional=0.9, national=1.0,
+                    continental=1.1, global=1.2, universal=1.0.
+   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
+   Do not add measurement_basis, beneficiary/victim, or other metadata.
+   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 1: THE RECURSIVE FUNCTION - Mountain
-   --------------------------------------------------------------------------
-   
-   WHO: powerless - The function cannot "escape" the fixed-point logic.
-   WHEN: immediate - The property is true the moment the universal system exists.
-   WHERE: trapped - Bound within the mapping of indices to functions.
-   SCOPE: local - Immediate execution behavior.
-   
-   WHY THIS CLASSIFICATION:
-   For a mathematical function, the existence of a fixed point is an unyielding 
-   Mountain. It is not a design choice; it is a fundamental property of 
-   computation. The function has zero agency to avoid being "computable from 
-   its own index" if the transformation logic allows it.
-   -------------------------------------------------------------------------- */
+% PERSPECTIVE 1: THE COMPUTATIONAL SYSTEM (MOUNTAIN)
+% A function within a Turing-complete system cannot escape the logic of
+% fixed points. It is a fundamental, unchangeable property of its environment.
+constraint_indexing:constraint_classification(kleene_recursion_theorem, mountain,
+    context(agent_power(powerless),
+            time_horizon(immediate),
+            exit_options(trapped),
+            spatial_scope(universal))).
 
+% PERSPECTIVE 2: THE LANGUAGE DESIGNER (MOUNTAIN)
+% An institutional actor designing a programming language must contend with
+% the existence of self-reference. It is a feature of the logical terrain,
+% not a design choice that can be opted out of without sacrificing universality.
+constraint_indexing:constraint_classification(kleene_recursion_theorem, mountain,
+    context(agent_power(institutional),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(universal))).
 
-
-constraint_indexing:constraint_classification(
-    kleene_recursion_theorem,
-    tangled_rope,
-    context(
-        agent_power(powerless),
-        time_horizon(immediate),
-        exit_options(trapped),
-        spatial_scope(local)
-    )
-) :- !.
-
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE SELF-HOSTING COMPILER - Rope
-   --------------------------------------------------------------------------
-   
-   WHO: institutional - Power to coordinate the growth of a language.
-   WHEN: biographical - Spanning the decades-long evolution of a toolchain.
-   WHERE: mobile - Can choose different representations of the fixed point.
-   SCOPE: global - Universal foundation for software ecosystems.
-   
-   WHY THIS CLASSIFICATION:
-   For the institutional actor, the theorem is a "Rope"—a functional 
-   coordination tool. It allows for the creation of "bootstrapped" systems 
-   where the compiler can use its own logic to produce itself, providing 
-    a standard of achievement for language maturity.
-   -------------------------------------------------------------------------- */
-
-constraint_indexing:constraint_classification(
-    kleene_recursion_theorem,
-    rope,
-    context(
-        agent_power(institutional),
-        time_horizon(biographical),
-        exit_options(mobile),
-        spatial_scope(global)
-    )
-) :- !.
-
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE CODE AUDITOR - Snare
-   --------------------------------------------------------------------------
-   
-   WHO: individual_moderate - Has the intelligence to analyze but is bound by logic.
-   WHEN: immediate - Facing the opaque behavior of self-referential malware.
-   WHERE: constrained - The code’s behavior is hidden behind its own self-reference.
-   SCOPE: national - Protecting networks from polymorphic threats.
-   
-   WHY THIS CLASSIFICATION:
-   For the auditor, Kleene’s theorem is a "Snare." It "strangles" the ability 
-   to perform exhaustive behavior mapping because the code can dynamically 
-   refer to and reconstruct its own "self" (extraction of certainty). This 
-   logical "trap" makes certain security properties undecidable.
-   -------------------------------------------------------------------------- */
-
-
-
-constraint_indexing:constraint_classification(
-    kleene_recursion_theorem,
-    snare,
-    context(
-        agent_power(individual_moderate),
-        time_horizon(immediate),
-        exit_options(constrained),
-        spatial_scope(national)
-    )
-) :- 
-    domain_priors:base_extractiveness(kleene_recursion_theorem, E),
-    E >= 0.15,
-    !.
+% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (MOUNTAIN)
+% From a detached, analytical viewpoint, the theorem is a foundational truth
+% of computability theory, classifying as a pure Mountain.
+constraint_indexing:constraint_classification(kleene_recursion_theorem, mountain,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).
 
 /* ==========================================================================
-   4. TESTS (What We Learn About Constraints)
+   4. VALIDATION TESTS
    ========================================================================== */
 
-:- begin_tests(kleene_recursion_tests).
+:- begin_tests(kleene_recursion_theorem_tests).
 
-test(multi_perspective_variance) :-
-    % Function -> Mountain
-    constraint_indexing:constraint_classification(kleene_recursion_theorem, Type1, context(powerless, immediate, trapped, local)),
-    % Compiler -> Rope
-    constraint_indexing:constraint_classification(kleene_recursion_theorem, Type2, context(institutional, biographical, mobile, global)),
-    Type1 = mountain,
-    Type2 = rope.
-
-test(auditor_extraction_penalty) :-
-    % Demonstrates that the Snare classification emerges for the auditor 
-    constraint_indexing:constraint_classification(kleene_recursion_theorem, snare, context(individual_moderate, immediate, constrained, national)).
+test(classification_invariance) :-
+    % Verify that the classification is Mountain from all key perspectives.
+    constraint_indexing:constraint_classification(kleene_recursion_theorem, Type1, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(kleene_recursion_theorem, Type2, context(agent_power(institutional), _, _, _)),
+    constraint_indexing:constraint_classification(kleene_recursion_theorem, Type3, context(agent_power(analytical), _, _, _)),
+    Type1 == mountain,
+    Type2 == mountain,
+    Type3 == mountain.
 
 test(natural_emergence) :-
     domain_priors:emerges_naturally(kleene_recursion_theorem).
 
-:- end_tests(kleene_recursion_tests).
+test(threshold_validation) :-
+    config:param(extractiveness_metric_name, ExtMetricName),
+    narrative_ontology:constraint_metric(kleene_recursion_theorem, ExtMetricName, E),
+    config:param(mountain_extractiveness_max, MaxE),
+    E =< MaxE.
+
+:- end_tests(kleene_recursion_theorem_tests).
 
 /* ==========================================================================
-   5. MODEL INTERPRETATION (Commentary)
+   5. GENERATIVE COMMENTARY
    ========================================================================== */
 
 /**
- * LLM GENERATION NOTES
- * * Model: Gemini 2.0 Flash
- * Date: 2026-01-19
- * * KEY DECISIONS:
- * * 1. EXTRACTIVENESS SCORE (0.2):
- * Reasoning: Low, because mathematical theorems are generally enabling. 
- * However, it extracts the predictability that simpler, non-reflexive 
- * logic provides.
- * * 2. CLASSIFICATION RATIONALE:
- * Chose Function (Subject), Compiler (Institutional User), and 
- * Auditor (Victim of Complexity) to highlight the perspectival gap 
- * between "Discovery" and "Defense."
- * * 3. OMEGA IDENTIFICATION:
- * Formalized the uncertainty of "Reflexive Autonomy"—can self-reference 
- * lead to emergent goal-setting that is truly unpredictable?
+ * LOGIC RATIONALE:
+ *   The core theorem is a fact of mathematical logic, not a system of
+ *   extraction or coordination. Therefore, its base extractiveness (ε=0.02)
+ *   and suppression (0.01) are minimal, qualifying it as a Mountain. The
+ *   previous classification as Tangled Rope conflated the theorem with its
+ *   downstream applications (e.g., malware), which are distinct constraints.
+ *   This version adheres to the ε-invariance principle by modeling only the
+ *   theorem itself. The Natural Law (NL) profile metrics are set to their
+ *   extremes (accessibility_collapse=1.0, resistance=0.0) because a
+ *   mathematical proof is both inescapable and impossible to resist.
+ *
+ * PERSPECTIVAL GAP:
+ *   There is no perspectival gap. As a Mountain of logic, the theorem is
+ *   classified identically from all perspectives. The different ways agents
+ *   interact with it (e.g., using it as a Rope for compilers, or seeing it as
+ *   a Snare in security) are properties of those *application constraints*,
+ *   not of the theorem itself.
+ *
+ * DIRECTIONALITY LOGIC:
+ *   Not applicable. As a Mountain, there are no inherent beneficiaries or
+ *   victims, so no structural relationship declarations are needed.
+ *
+ * MANDATROPHY ANALYSIS:
+ *   By classifying the theorem as a Mountain, we avoid mislabeling a
+ *   fundamental property of reality as a system of coordination or
+ *   extraction. This correctly separates the logical foundation from the
+ *   social or technical systems built upon it.
  */
 
-% YOUR OMEGAS HERE:
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+% Omega variables — open questions the framework cannot yet resolve
+%
+% /5 form: narrative detail for story context
 omega_variable(
-    reflexive_emergent_autonomy,
-    "Does logical self-reference enable spontaneous goal-emergence in autonomous systems?",
-    resolution_mechanism("Long-term observation of self-referential agent simulations with open-ended reward functions."),
-    impact("If Yes: The Mountain is a 'Snare' for safety engineers. If No: It is just a 'Rope' for tool-building."),
+    omega_kleene_recursion_theorem,
+    'Does logical self-reference enable spontaneous goal-emergence in autonomous systems?',
+    'Long-term observation of self-referential agent simulations with open-ended reward functions.',
+    'If Yes: The application of the theorem becomes a Snare for safety engineers. If No: Its application remains a Rope for tool-building.',
     confidence_without_resolution(medium)
 ).
 
-/* ==========================================================================
-   6. ALTERNATIVE ANALYSIS
-   ========================================================================== */
-
-/**
- * VIABLE ALTERNATIVES
- * * ALTERNATIVE 1: Non-Recursive Logic (e.g., Finite State Automata)
- * Viability: Systems that cannot self-refer avoid the "Snare" of 
- * undecidability.
- * Suppression: Rejected for general-purpose computation because it 
- * "strangles" the power of the system (it's not Turing-complete).
- * * ALTERNATIVE 2: Strict Typing/Isolation
- * Viability: Preventing code from accessing its own instruction space.
- * Suppression: Often used as a security "Rope," but doesn't remove the 
- * underlying logical "Mountain" of Kleene.
- * * CONCLUSION:
- * The existence of power-restricted alternatives (Alternative 1) proves 
- * that Kleene's "Mountain" is the price paid for the "Rope" of universal 
- * computation.
- */
+% /3 form: typed classification for reporting engine (REQUIRED)
+narrative_ontology:omega_variable(omega_kleene_recursion_theorem, conceptual, 'Does logical self-reference enable spontaneous goal-emergence in autonomous systems?').
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-/**
- * TO USE THIS FILE:
- * * 1. Load: ?- [kleene_recursion_theorem].
- * 2. Multi-perspective: ?- multi_index_report(kleene_recursion_theorem).
- */
+% Required for external script parsing
+narrative_ontology:interval(kleene_recursion_theorem, 0, 10).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Not required for low-extraction constraints (base_extractiveness <= 0.46).
+% As a mathematical theorem, its properties are static and do not drift.
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA
+   ========================================================================== */
+
+% Coordination type (enables Boltzmann floor + complexity offset)
+% As a Mountain, it has no coordination function.
+% narrative_ontology:coordination_type(kleene_recursion_theorem, [type]).
+
+% Network relationships (structural influence edges)
+% This theorem would affect constraints related to computability and AI safety.
+% narrative_ontology:affects_constraint(kleene_recursion_theorem, halting_problem).
+% narrative_ontology:affects_constraint(kleene_recursion_theorem, godels_incompleteness).
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+% Not applicable for a uniform-type Mountain constraint.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
-
-% ============================================================================
-% ENRICHMENT: Structural predicates for dynamic classification
-% Generated: 2026-02-08
-% Template: v5.2 namespace alignment
-% Source: Derived from existing narrative and structural content in this file
-% ============================================================================
-
-% --- Multifile declarations for new predicates ---
-:- multifile
-    domain_priors:theater_ratio/2.
-
-% --- Theater ratio (missing from base properties) ---
-% Technical constraint — mostly substantive, minimal implementation theater
-domain_priors:theater_ratio(kleene_recursion_theorem, 0.01).
-narrative_ontology:constraint_metric(kleene_recursion_theorem, theater_ratio, 0.01).

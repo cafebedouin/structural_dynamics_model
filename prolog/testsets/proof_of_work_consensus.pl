@@ -1,9 +1,9 @@
 % ============================================================================
 % CONSTRAINT STORY: proof_of_work_consensus
 % ============================================================================
-% Generated: 2026-01-23
-% Model: Gemini Pro (Revised)
-% Source: Bitcoin: A Peer-to-Peer Electronic Cash System (Satoshi Nakamoto)
+% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2024-07-22
 % ============================================================================
 
 :- module(constraint_proof_of_work_consensus, []).
@@ -12,15 +12,34 @@
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
 
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
+
 % --- Namespace Hooks (Required for loading) ---
-:- multifile 
+:- multifile
     domain_priors:base_extractiveness/2,
     domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
     domain_priors:requires_active_enforcement/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
-    constraint_indexing:constraint_classification/3.
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:coordination_type/2,
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:omega_variable/3.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -28,242 +47,227 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * 
- * constraint_id: proof_of_work_consensus
- * human_readable: Hash-Based Proof-of-Work
- * domain: technological/economic/social
- * temporal_scope: 2008 - Present (Digital Era)
- * spatial_scope: Global (Distributed Network)
- * 
+ *   constraint_id: proof_of_work_consensus
+ *   human_readable: Hash-Based Proof-of-Work Consensus
+ *   domain: technological/economic
+ *
  * SUMMARY:
- * A distributed consensus mechanism that replaces trusted third parties with 
- * computational proof. It timestamps transactions by hashing them into an 
- * ongoing chain of hash-based proof-of-work, forming a record that cannot 
- * be changed without redoing the work.
- * 
- * KEY AGENTS:
- * - Non-Mining User (Individual Powerless): Relies on the network's security without contributing hash power.
- * - The Network Protocol (Institutional): The rule-set that defines validity and incentive structures.
- * - The Honest Node (Individual Moderate): Contributes CPU power to extend the blockchain.
+ *   A distributed consensus mechanism that replaces trusted third parties with
+ *   computational proof. It timestamps transactions by hashing them into an
+ *   ongoing chain, forming a record that is computationally impractical to
+ *   change. This provides a coordination function (ordering transactions) but
+ *   extracts significant value via energy consumption, paid for through
+ *   protocol-defined inflation and transaction fees.
+ *
+ * KEY AGENTS (by structural relationship):
+ *   - Non-Mining User: Primary target (powerless/trapped) — relies on the network's security but pays for it via inflation and fees.
+ *   - Miners and Protocol Developers: Primary beneficiary (institutional/arbitrage) — benefit from block rewards, fees, and control over the protocol's direction.
+ *   - Malicious Attacker: Secondary target (powerful/constrained) — actively suppressed by the computational difficulty and economic incentives.
+ *   - Analytical Observer: Sees the full structure of coordination and extraction.
  */
 
 /* ==========================================================================
-   2. CORE SYSTEM INTEGRATION (The "Reality" Layer)
+   2. BASE PROPERTIES (DOMAIN PRIORS)
    ========================================================================== */
 
-narrative_ontology:interval(proof_of_work_consensus, 0, 10).
-narrative_ontology:constraint_claim(proof_of_work_consensus, rope).
+% --- Numerical metrics ---
+domain_priors:base_extractiveness(proof_of_work_consensus, 0.50).
+domain_priors:suppression_score(proof_of_work_consensus, 0.90).   % Structural property (raw, unscaled).
+domain_priors:theater_ratio(proof_of_work_consensus, 0.11).       % Piton detection (>= 0.70)
 
-% Base extractiveness: 0.2.
-% The system does not "extract" value in a zero-sum sense; 
-% instead, it consumes energy to produce the "security" of the ledger, 
-% rewarding participants with new coins.
-domain_priors:base_extractiveness(proof_of_work_consensus, 0.2).
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(proof_of_work_consensus, extractiveness, 0.50).
+narrative_ontology:constraint_metric(proof_of_work_consensus, suppression_requirement, 0.90).
+narrative_ontology:constraint_metric(proof_of_work_consensus, theater_ratio, 0.11).
 
-% Suppression score: 0.9.
-% The mechanism makes it "computationally impractical" for 
-% an attacker to change the record once it is buried under subsequent 
-% blocks.
-domain_priors:suppression_score(proof_of_work_consensus, 0.9).
+% --- Constraint claim (must match analytical perspective type) ---
+narrative_ontology:constraint_claim(proof_of_work_consensus, tangled_rope).
 
-% Constraint metric facts (bridge for classification engine)
-narrative_ontology:constraint_metric(proof_of_work_consensus, extractiveness, 0.2).
-narrative_ontology:constraint_metric(proof_of_work_consensus, suppression_requirement, 0.9).
+% --- Binary flags ---
+domain_priors:requires_active_enforcement(proof_of_work_consensus). % Required for Tangled Rope
 
-% Enforcement: Emerges naturally from computation and rules.
-domain_priors:emerges_naturally(proof_of_work_consensus).
-
-% BENEFICIARIES & VICTIMS
-narrative_ontology:constraint_beneficiary(proof_of_work_consensus, peer_to_peer_network).
-narrative_ontology:constraint_victim(proof_of_work_consensus, double_spenders).
+% --- Structural relationships (REQUIRED for non-mountain constraints) ---
+% Who benefits from this constraint existing?
+narrative_ontology:constraint_beneficiary(proof_of_work_consensus, miners_and_protocol_developers).
+%
+% Who bears disproportionate cost?
+narrative_ontology:constraint_victim(proof_of_work_consensus, network_users).
+narrative_ontology:constraint_victim(proof_of_work_consensus, malicious_attackers).
 
 /* ==========================================================================
-   3. INDEXED CLASSIFICATIONS (Perspectival Truth)
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × f(d) × σ(S)
+   where f(d) is the sigmoid directionality function:
+     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
+   The engine derives d from beneficiary/victim membership + exit_options.
+   Scope modifiers: local=0.8, regional=0.9, national=1.0,
+                    continental=1.1, global=1.2, universal=1.0.
+   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
+   Do not add measurement_basis, beneficiary/victim, or other metadata.
+   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 1: NON-MINING USER - Mountain
-   --------------------------------------------------------------------------
-   WHO: powerless (Relies on the network's security without contributing hash power)
-   WHEN: biographical (Long-term trust in the ledger's immutability)
-   WHERE: trapped (Cannot alter the blockchain without immense computational resources)
-   
-   WHY THIS CLASSIFICATION:
-   For a non-mining user, the Proof-of-Work consensus is a 'Mountain'. They 
-   rely on the immutable mathematical difficulty of reversing transactions. 
-   This forms an unchangeable foundation of trust, a fixed reality that ensures
-   the integrity of their digital assets without their direct involvement.
-   -------------------------------------------------------------------------- */
+% PERSPECTIVE 1: THE NON-MINING USER (MOUNTAIN)
+% Agent who relies on the network's security. This is a subjective
+% classification overriding the metrics; the user perceives an unchangeable
+% foundation of trust, even though it is an actively maintained system.
+constraint_indexing:constraint_classification(proof_of_work_consensus, mountain,
+    context(agent_power(powerless),
+            time_horizon(biographical),
+            exit_options(trapped),
+            spatial_scope(global))).
 
-constraint_indexing:constraint_classification(
-    proof_of_work_consensus,
-    mountain,
-    context(
-        agent_power(powerless),
-        time_horizon(biographical),
-        exit_options(trapped),
-        spatial_scope(global)
-    )
-).
+% PERSPECTIVE 2: THE MINER / PROTOCOL (ROPE)
+% Agent who benefits from the system's incentives. Engine derives d from:
+%   beneficiary membership + arbitrage exit → d ≈ 0.05 → f(d) ≈ -0.12 → low/negative χ
+constraint_indexing:constraint_classification(proof_of_work_consensus, rope,
+    context(agent_power(institutional),
+            time_horizon(generational),
+            exit_options(arbitrage),
+            spatial_scope(global))).
 
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE NETWORK PROTOCOL - Rope
-   --------------------------------------------------------------------------
-   WHO: institutional (The rule-set that defines validity and incentive structures)
-   WHEN: historical (From whitepaper inception to ongoing development)
-   WHERE: arbitrage (Balances security, decentralization, and scalability)
-   
-   WHY THIS CLASSIFICATION:
-   For the Network Protocol itself, Proof-of-Work is a 'Rope'. It is the
-   functional coordination mechanism that ensures distributed consensus.
-   It leverages computational work to secure the ledger, align incentives,
-   and resist attacks, creating a robust, trustless system.
-   -------------------------------------------------------------------------- */
+% PERSPECTIVE 3: THE MALICIOUS ATTACKER (SNARE)
+% Agent seeking to subvert the system. The high suppression and extraction
+% (cost to attack) make the constraint a Snare from this perspective.
+constraint_indexing:constraint_classification(proof_of_work_consensus, snare,
+    context(agent_power(powerful),
+            time_horizon(immediate),
+            exit_options(constrained),
+            spatial_scope(global))).
 
-constraint_indexing:constraint_classification(
-    proof_of_work_consensus,
-    rope,
-    context(
-        agent_power(institutional),
-        time_horizon(historical),
-        exit_options(arbitrage),
-        spatial_scope(global)
-    )
-).
-
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE ATTACKER - Snare
-   --------------------------------------------------------------------------
-   WHO: powerful (An entity seeking to subvert the system)
-   WHEN: immediate (The moment of the "race" against the honest network)
-   WHERE: constrained (Prevented from succeeding by the cumulative work)
-   
-   WHY THIS CLASSIFICATION:
-   To the attacker, the Proof-of-Work is a 'Snare'. It is a coercive 
-   mechanism that "penalizes" their behavior by making the cost of 
-   cheating (energy and CPU) likely higher than the potential gain. 
-   It strangles their ability to profitably manipulate the ledger.
-   -------------------------------------------------------------------------- */
-
-constraint_indexing:constraint_classification(
-    proof_of_work_consensus,
-    snare,
-    context(
-        agent_power(powerful),
-        time_horizon(immediate),
-        exit_options(constrained),
-        spatial_scope(global)
-    )
-).
+% PERSPECTIVE 4: THE ANALYTICAL OBSERVER (TANGLED ROPE)
+% Default analytical context. Recognizes both the vital coordination function
+% (Rope) and the significant, asymmetric extraction (Snare component).
+constraint_indexing:constraint_classification(proof_of_work_consensus, tangled_rope,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(global))).
 
 /* ==========================================================================
-   4. TESTS (What We Learn About Constraints)
+   4. VALIDATION TESTS
    ========================================================================== */
 
 :- begin_tests(proof_of_work_consensus_tests).
 
-test(multi_perspective_variance) :-
-    constraint_indexing:constraint_classification(proof_of_work_consensus, Type1, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(proof_of_work_consensus, Type2, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(proof_of_work_consensus, Type3, context(agent_power(powerful), _, _, _)),
-    Type1 \= Type2,
-    Type2 \= Type3,
-    Type1 \= Type3.
+test(perspectival_gap) :-
+    % Verify perspectival gap between key agents.
+    constraint_indexing:constraint_classification(proof_of_work_consensus, TypeUser, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(proof_of_work_consensus, TypeMiner, context(agent_power(institutional), _, _, _)),
+    constraint_indexing:constraint_classification(proof_of_work_consensus, TypeAnalyst, context(agent_power(analytical), _, _, _)),
+    TypeUser == mountain,
+    TypeMiner == rope,
+    TypeAnalyst == tangled_rope.
+
+test(tangled_rope_structural_properties) :-
+    % Verify the structural requirements for a Tangled Rope are met.
+    narrative_ontology:constraint_beneficiary(proof_of_work_consensus, _),
+    narrative_ontology:constraint_victim(proof_of_work_consensus, _),
+    domain_priors:requires_active_enforcement(proof_of_work_consensus).
 
 :- end_tests(proof_of_work_consensus_tests).
 
 /* ==========================================================================
-   5. MODEL INTERPRETATION (Commentary)
+   5. GENERATIVE COMMENTARY
    ========================================================================== */
 
 /**
- * LLM GENERATION NOTES
- * 
- * Model: Gemini Pro (Revised)
- * Date: 2026-01-23
- * 
- * KEY DECISIONS:
- * 
- * 1. INDIVIDUAL POWERLESS PERSPECTIVE: Added 'Non-Mining User' as the
- *    individual powerless agent. For them, the Proof-of-Work is a 'Mountain',
- *    an immutable foundation of trust.
+ * LOGIC RATIONALE:
+ *   - Base Extractiveness (ε=0.50): This value reflects the significant and continuous
+ *     cost of securing the network. It is not a direct tax but an indirect one paid
+ *     by all holders through protocol-level inflation (block rewards) and direct
+ *     costs via transaction fees. The energy consumption is a real-world value
+ *     extraction required to produce the intangible good of "security".
+ *   - Suppression Score (0.90): The mechanism is explicitly designed to make
+ *     alternative versions of the ledger computationally impractical to create,
+ *     thus suppressing double-spending attacks with extreme prejudice.
+ *   - requires_active_enforcement: The consensus rules are not passive; they
+ *     require continuous, active enforcement by all nodes on the network through
+ *     computational work and software validation.
  *
- * 2. INSTITUTIONAL PERSPECTIVE: Added 'The Network Protocol' as the
- *    institutional agent. For them, Proof-of-Work is a 'Rope', the core
- *    coordination mechanism of the system.
+ * PERSPECTIVAL GAP:
+ *   - The gap is profound. A non-technical user (powerless) perceives the ledger's
+ *     immutability as a law of nature (Mountain). The protocol's beneficiaries
+ *     (institutional) see a pure coordination tool (Rope). An attacker sees a
+ *     coercive trap (Snare). The analytical observer sees the synthesis: a system
+ *     that performs a coordination function at the cost of high, asymmetric
+ *     extraction (Tangled Rope).
  *
- * 3. CLASSIFICATION RATIONALE:
- *    - Non-Mining User (Mountain): Immutable trust in computational difficulty.
- *    - Network Protocol (Rope): Mechanism for distributed consensus.
- *    - Attacker (Snare): Computationally impractical to subvert.
- * 
- * 4. CORE INSIGHT: Proof-of-Work creates a powerful 'Rope' of trustless
- *    coordination by leveraging a 'Mountain' of computational difficulty.
- *    This simultaneously acts as a 'Snare' for malicious actors and provides
- *    an immutable foundation for passive users.
+ * DIRECTIONALITY LOGIC:
+ *   - Beneficiaries: Miners and protocol developers directly profit from the system's
+ *     operation through block rewards and transaction fees.
+ *   - Victims: All users of the network bear the cost of security through currency
+ *     debasement (inflation) and fees. Malicious attackers are also victims in the
+ *     sense that the system is designed to extract maximum cost from their attempts
+ *     to subvert it.
+ *
+ * MANDATROPHY ANALYSIS:
+ *   The Tangled Rope classification correctly identifies that Proof-of-Work is not
+ *   a pure public good (Rope) nor a pure coercive trap (Snare). It has an
+ *   essential coordination function (ordering transactions) that cannot be dismissed,
+ *   but this function is bundled with a significant extractive process. Labeling it
+ *   a pure Rope ignores the immense energy costs and wealth transfer to miners.
+ *   Labeling it a pure Snare ignores its function in solving the Byzantine Generals Problem.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
-/**
- * OMEGA IDENTIFICATION
- *
- * The core uncertainty revolves around the long-term security and sustainability of the Proof-of-Work mechanism.
- */
 
+% Omega variables — open questions the framework cannot yet resolve
+%
+% /5 form: narrative detail for story context
 omega_variable(
-    fifty_one_percent_threshold,
-    "What happens when the 'majority of CPU power' on the network is no longer controlled by honest participants, leading to a 51% attack?",
-    resolution_mechanism("Requires continuous monitoring of network hash distribution and decentralization metrics; analysis of economic incentives for honest mining versus attacking."),
-    impact("If majority is attacker-controlled: The 'Rope' snaps, and the Ledger becomes a 'Snare' for all users, eroding trust. If always honest: The 'Rope' remains secure."),
+    omega_pow_centralization,
+    "Does the economic incentive for miners to consolidate into large pools inevitably centralize the network, undermining its core value proposition of decentralization?",
+    "Continuous monitoring of hash rate distribution across mining pools and geographic locations; economic analysis of economies of scale in mining.",
+    "If centralization occurs, the 'Tangled Rope' degrades into a 'Snare' controlled by a few powerful entities. If decentralization is maintained, it remains a functional (if costly) coordination mechanism.",
     confidence_without_resolution(medium)
 ).
 
-/* ==========================================================================
-   7. ALTERNATIVE ANALYSIS
-   ========================================================================== */
-/**
- * VIABLE ALTERNATIVES
- *
- * ALTERNATIVE 1: Trusted Third Parties (e.g., Banks, Financial Intermediaries)
- *    Viability: The traditional system for managing electronic cash, relying on central authorities for trust.
- *    Suppression: Rejected by Nakamoto due to the "double-spending problem" and the need for a trustless, peer-to-peer system, effectively turning this "Rope" into a "Snare" for users.
- *
- * CONCLUSION:
- * Proof-of-Work fundamentally suppresses the traditional 'Rope' of trusted
- * third parties, instead building a new 'Rope' of trustless consensus.
- * This shift transforms the "double-spending problem" from an unavoidable
- * 'Mountain' into a solvable constraint.
- */
+% /3 form: typed classification for reporting engine (REQUIRED)
+narrative_ontology:omega_variable(omega_pow_centralization, empirical, "The long-term tendency of mining incentives toward centralization.").
 
 /* ==========================================================================
-   8. INTEGRATION HOOKS
+   7. INTEGRATION HOOKS
    ========================================================================== */
 
-/**
- * TO USE THIS FILE:
- * 
- * 1. Load: ?- [constraints/proof_of_work_consensus].
- * 2. Multi-perspective: ?- multi_index_report(proof_of_work_consensus).
- * 3. Run tests: ?- run_tests(proof_of_work_consensus_tests).
- */
+% Required for external script parsing
+narrative_ontology:interval(proof_of_work_consensus, 0, 10).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Temporal data for high-extraction constraint (base_extractiveness > 0.46).
+% Models the increasing energy cost and professionalization of mining over time.
+
+% Theater ratio over time (remains low and functional):
+narrative_ontology:measurement(pow_tr_t0, proof_of_work_consensus, theater_ratio, 0, 0.05).
+narrative_ontology:measurement(pow_tr_t5, proof_of_work_consensus, theater_ratio, 5, 0.10).
+narrative_ontology:measurement(pow_tr_t10, proof_of_work_consensus, theater_ratio, 10, 0.11).
+
+% Extraction over time (increases as network value and competition grow):
+narrative_ontology:measurement(pow_ex_t0, proof_of_work_consensus, base_extractiveness, 0, 0.35).
+narrative_ontology:measurement(pow_ex_t5, proof_of_work_consensus, base_extractiveness, 5, 0.45).
+narrative_ontology:measurement(pow_ex_t10, proof_of_work_consensus, base_extractiveness, 10, 0.50).
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA
+   ========================================================================== */
+
+% Coordination type (enables Boltzmann floor + complexity offset)
+% Valid types: information_standard, resource_allocation,
+%              enforcement_mechanism, global_infrastructure
+narrative_ontology:coordination_type(proof_of_work_consensus, enforcement_mechanism).
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+% No overrides needed. The structural derivation from beneficiary/victim
+% declarations accurately models the relationships.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
-% ============================================================================
-% ENRICHMENT: Structural predicates for dynamic classification
-% Generated: 2026-02-08
-% Template: v5.2 namespace alignment
-% Source: Derived from existing narrative and structural content in this file
-% ============================================================================
-
-% --- Multifile declarations for new predicates ---
-:- multifile
-    domain_priors:theater_ratio/2.
-
-% --- Theater ratio (missing from base properties) ---
-% Functional coordination mechanism — primarily substantive
-domain_priors:theater_ratio(proof_of_work_consensus, 0.11).
-narrative_ontology:constraint_metric(proof_of_work_consensus, theater_ratio, 0.11).

@@ -17,6 +17,33 @@ def get_metric_names_from_config(config_path):
         print(f"Warning: Could not read or parse {config_path}: {e}", file=sys.stderr)
     return metric_names
 
+
+def get_threshold_values_from_config(config_path):
+    """Read threshold param/2 values from config.pl.
+
+    Returns a dict mapping param names to float values, e.g.
+    {'mountain_extractiveness_max': 0.25, 'snare_epsilon_floor': 0.46, ...}
+    """
+    thresholds = {}
+    try:
+        with open(config_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+            for line in content.splitlines():
+                match = re.search(r"param\((\w+),\s*([\d.]+)\)", line)
+                if match:
+                    param_name = match.group(1)
+                    # Skip metric_name params (handled by get_metric_names_from_config)
+                    if param_name.endswith('_metric_name'):
+                        continue
+                    try:
+                        thresholds[param_name] = float(match.group(2))
+                    except ValueError:
+                        pass
+        print(f"Loaded {len(thresholds)} threshold values from config.pl", file=sys.stderr)
+    except Exception as e:
+        print(f"Warning: Could not read thresholds from {config_path}: {e}", file=sys.stderr)
+    return thresholds
+
 def lint_file(filepath):
     with open(filepath, 'r', encoding='utf-8') as f:
         content = f.read()
@@ -26,13 +53,21 @@ def lint_file(filepath):
 
     errors = []
 
-    # Get metric names from config.pl
+    # Get metric names and threshold values from config.pl
     prolog_dir = os.path.dirname(os.path.dirname(filepath))
     config_path = os.path.join(prolog_dir, 'config.pl')
     metric_names = get_metric_names_from_config(config_path)
+    config_thresholds = get_threshold_values_from_config(config_path)
     extractiveness_metric = metric_names.get('extractiveness_metric_name', 'extractiveness')
     suppression_metric = metric_names.get('suppression_metric_name', 'suppression_requirement')
     theater_metric = metric_names.get('theater_metric_name', 'theater_ratio')
+
+    # Threshold values from config (with fallback defaults matching current config.pl)
+    snare_epsilon_floor = config_thresholds.get('snare_epsilon_floor', 0.46)
+    scaffold_extraction_ceil = config_thresholds.get('scaffold_extraction_ceil', 0.30)
+    piton_theater_floor = config_thresholds.get('piton_theater_floor', 0.70)
+    mountain_extractiveness_max = config_thresholds.get('mountain_extractiveness_max', 0.25)
+    mountain_suppression_ceiling = config_thresholds.get('mountain_suppression_ceiling', 0.05)
 
     # 1. CORE STRUCTURE & v4.0 INTEGRATION HOOKS
     if not re.search(r':- module\(', content):
@@ -106,15 +141,15 @@ def lint_file(filepath):
         if ext_val > 0.7:
             if "is_mandatrophy_resolved" not in content and "[RESOLVED MANDATROPHY]" not in content:
                 errors.append(f"UNRESOLVED_MANDATROPHY: Extraction {ext_val} requires resolution hook.")
-        if ext_val > 0.46 and "omega_variable(" not in content:
-            errors.append("MISSING_OMEGA: High-extraction constraints (> 0.46) require omega_variable/5.")
+        if ext_val > snare_epsilon_floor and "omega_variable(" not in content:
+            errors.append(f"MISSING_OMEGA: High-extraction constraints (> {snare_epsilon_floor}) require omega_variable/5.")
 
     # 8. TEMPORAL MEASUREMENT DATA (LIFECYCLE DRIFT)
-    if ext_val is not None and ext_val > 0.46:
+    if ext_val is not None and ext_val > snare_epsilon_floor:
         has_measurements = re.search(r'narrative_ontology:measurement\(', content)
         if not has_measurements:
             errors.append(
-                f"MISSING_TEMPORAL_DATA: Extraction {ext_val} > 0.46 requires "
+                f"MISSING_TEMPORAL_DATA: Extraction {ext_val} > {snare_epsilon_floor} requires "
                 "narrative_ontology:measurement/5 facts for drift detection. "
                 f"Add at least 3 time points for {theater_metric} and base_extractiveness."
             )
@@ -146,7 +181,7 @@ def lint_file(filepath):
     # If a constraint has eps <= 0.30, beneficiary data (coordination), no enforcement,
     # and no sunset clause, it's in the scaffold danger zone — the engine may classify
     # it as scaffold even though it lacks temporality (scaffold's defining feature).
-    if ext_val is not None and ext_val <= 0.30:
+    if ext_val is not None and ext_val <= scaffold_extraction_ceil:
         # Skip when mountain or scaffold is already in the file's type set:
         # - Mountains can't be misclassified as scaffolds (signature override)
         # - Scaffolds: the scaffold gate firing is the INTENDED outcome, not a danger
@@ -155,7 +190,7 @@ def lint_file(filepath):
             has_beneficiary_data = 'constraint_beneficiary(' in content
             has_enforcement = 'requires_active_enforcement(' in content
             has_sunset = 'has_sunset_clause(' in content
-            low_theater = theater_val is None or theater_val < 0.70
+            low_theater = theater_val is None or theater_val < piton_theater_floor
             if has_beneficiary_data and not has_enforcement and not has_sunset and low_theater:
                 errors.append(
                     f"SCAFFOLD_DANGER_ZONE: eps={ext_val} with beneficiary data, no enforcement, "
@@ -168,8 +203,8 @@ def lint_file(filepath):
     if 'piton' in found_types:
         if theater_val is None:
             errors.append("MISSING_THEATER_RATIO: Piton classification requires domain_priors:theater_ratio/2.")
-        elif theater_val < 0.70:
-            errors.append(f"LOW_THEATER_RATIO: Piton requires theater_ratio >= 0.70, found {theater_val}.")
+        elif theater_val < piton_theater_floor:
+            errors.append(f"LOW_THEATER_RATIO: Piton requires theater_ratio >= {piton_theater_floor}, found {theater_val}.")
 
     # 11. TANGLED ROPE STRUCTURAL PROPERTY CHECKS
     # classify_from_metrics/6 requires all three for tangled_rope:
@@ -421,19 +456,19 @@ def lint_file(filepath):
     if claim_match:
         claim_type = claim_match.group(1)
         if claim_type == 'mountain':
-            if ext_val is not None and ext_val > 0.25:
+            if ext_val is not None and ext_val > mountain_extractiveness_max:
                 errors.append(
                     f"MOUNTAIN_METRIC_CONFLICT: constraint_claim is mountain but "
-                    f"base_extractiveness={ext_val} exceeds mountain threshold (0.25). "
+                    f"base_extractiveness={ext_val} exceeds mountain threshold ({mountain_extractiveness_max}). "
                     f"The engine's mountain gate will reject this, producing coupling "
                     f"violations and a false_natural_law signature. Either reduce "
                     f"extractiveness or reclassify the constraint."
                 )
-            if supp_val is not None and supp_val > 0.05:
+            if supp_val is not None and supp_val > mountain_suppression_ceiling:
                 errors.append(
                     f"MOUNTAIN_METRIC_CONFLICT: constraint_claim is mountain but "
                     f"suppression_score={supp_val} exceeds mountain suppression ceiling "
-                    f"(0.05). The engine's mountain gate will reject this, producing "
+                    f"({mountain_suppression_ceiling}). The engine's mountain gate will reject this, producing "
                     f"coupling violations and a false_natural_law signature. Either "
                     f"reduce suppression or reclassify the constraint."
                 )
@@ -516,13 +551,14 @@ def lint_file(filepath):
     # and resistance metrics. Without these, get_metric_average defaults to 0.5,
     # failing the NL thresholds (collapse >= 0.85, resistance <= 0.15).
     #
-    # Trigger: mountain in constraint_claim, OR mountain-only uniform type.
-    # NOT triggered by mixed-type files (mountain + rope = perspectival split,
-    # not a natural law claim) or by just having low metrics.
+    # Trigger: emerges_naturally declared (definitive mountain signal),
+    # OR mountain in constraint_claim, OR mountain-only uniform type.
     is_mountain_candidate = False
     if claim_match and claim_match.group(1) == 'mountain':
         is_mountain_candidate = True
     if found_types == {'mountain'}:
+        is_mountain_candidate = True
+    if 'emerges_naturally(' in content:
         is_mountain_candidate = True
 
     if is_mountain_candidate:
@@ -549,6 +585,57 @@ def lint_file(filepath):
                 f"natural_law_signature certification will fail (accessibility_collapse "
                 f"and resistance default to 0.5). Add the missing declarations or "
                 f"reclassify the constraint."
+            )
+
+    # 26. METRIC_SOURCE_INCONSISTENCY CHECK
+    # The Prolog engine reads metrics via constraint_metric/3. Some files also
+    # declare domain_priors facts (base_extractiveness/2, suppression_score/2,
+    # theater_ratio/2). If only domain_priors exists, the engine will use defaults.
+    # If both exist with different values, classification uses constraint_metric
+    # while the linter may validate against domain_priors.
+    metric_checks = [
+        {
+            'name': 'extractiveness',
+            'cm_pattern': r'constraint_metric\(\s*\w+\s*,\s*extractiveness\s*,\s*([\d.]+)\)',
+            'dp_pattern': r'base_extractiveness\(\s*\w+\s*,\s*([\d.]+)\)',
+            'default': 0.10,
+        },
+        {
+            'name': 'suppression_requirement',
+            'cm_pattern': r'constraint_metric\(\s*\w+\s*,\s*suppression_requirement\s*,\s*([\d.]+)\)',
+            'dp_pattern': r'suppression_score\(\s*\w+\s*,\s*([\d.]+)\)',
+            'default': 0.10,
+        },
+        {
+            'name': 'theater_ratio',
+            'cm_pattern': r'constraint_metric\(\s*\w+\s*,\s*theater_ratio\s*,\s*([\d.]+)\)',
+            'dp_pattern': r'theater_ratio\(\s*\w+\s*,\s*([\d.]+)\)',
+            'default': 0.0,
+        },
+    ]
+    for mc in metric_checks:
+        cm_match = re.search(mc['cm_pattern'], content)
+        dp_match = re.search(mc['dp_pattern'], content)
+        has_cm = cm_match is not None
+        has_dp = dp_match is not None
+        if has_dp and not has_cm:
+            errors.append(
+                f"METRIC_SOURCE_INCONSISTENCY: Engine reads constraint_metric/3, not "
+                f"domain_priors. This file's {mc['name']} will default to "
+                f"{mc['default']} during classification."
+            )
+        elif has_cm and has_dp:
+            cm_val = float(cm_match.group(1))
+            dp_val = float(dp_match.group(1))
+            if abs(cm_val - dp_val) > 1e-9:
+                errors.append(
+                    f"METRIC_SOURCE_INCONSISTENCY: constraint_metric({mc['name']}) = "
+                    f"{cm_val} but domain_priors = {dp_val}. Engine uses constraint_metric."
+                )
+        elif not has_cm and not has_dp:
+            errors.append(
+                f"METRIC_SOURCE_INCONSISTENCY: Missing {mc['name']} — engine will "
+                f"use default {mc['default']}."
             )
 
     return errors

@@ -1,26 +1,50 @@
 % ============================================================================
 % CONSTRAINT STORY: whitehead_problem_undecidability
 % ============================================================================
-% Generated: 2026-01-19
-% Model: Gemini 2.0 Flash
-% Source: J.H.C. Whitehead (1952) / Shelah (1974) / Infinite Abelian Groups
+% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2024-07-15
 % ============================================================================
 
-:- module(constraint_whitehead_problem, []).
+:- module(constraint_whitehead_problem_undecidability, []).
 
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
 
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
+
 % --- Namespace Hooks (Required for loading) ---
-:- multifile 
+:- multifile
     domain_priors:base_extractiveness/2,
     domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
     domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
-    constraint_indexing:constraint_classification/3.
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
+    narrative_ontology:boltzmann_floor_override/2,
+    constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3,
+    domain_priors:emerges_naturally/1,
+    narrative_ontology:omega_variable/3.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -28,259 +52,215 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: whitehead_problem_undecidability
- * human_readable: The Whitehead Problem (Group Theory Undecidability)
- * domain: mathematical/technological
- * temporal_scope: 1952 - Present (Civilizational)
- * spatial_scope: Global/Abstract (Infinite Algebraic Structures)
- * * SUMMARY:
- * The Whitehead Problem asks whether every abelian group $A$ such that every 
- * extension of the integers by $A$ is split (a "Whitehead group") must be a free 
- * abelian group. Saharon Shelah proved in 1974 that this is undecidable in 
- * standard Zermelo-Fraenkel set theory with the Axiom of Choice (ZFC).
- * * KEY AGENTS:
- * - The Infinite Abelian Group (Subject): A powerless agent whose structural 
- * classification depends on the underlying axioms of the mathematical universe.
- * - Saharon Shelah (Institutional): The architect who demonstrated that the 
- * problem's truth depends on the model of set theory chosen.
- * - The Algebraic Purist (Analytical): An observer seeking a definitive 
- * "yes" or "no" answer, only to find the "Mountain" of ZFC is incomplete.
- * * NARRATIVE ARC:
- * The Whitehead Problem functions as a "Mountain" of logical reality where the 
- * path to the summit is missing. In homological algebra, it serves as a 
- * "Rope" for exploring the boundaries of freeness. However, for those seeking 
- * absolute algebraic certainty, the independence from ZFC acts as a "Snare," 
- * extracting the hope of a single "True" algebra (extraction) and "strangling" 
- * the intuition that basic group properties are absolute.
+ *   constraint_id: whitehead_problem_undecidability
+ *   human_readable: The Whitehead Problem (Group Theory Undecidability)
+ *   domain: mathematical/logical
+ *
+ * SUMMARY:
+ *   The Whitehead Problem asks whether every abelian group A such that every
+ *   extension of the integers by A is split (a "Whitehead group") must be a free
+ *   abelian group. Saharon Shelah proved in 1974 that this is undecidable in
+ *   standard Zermelo-Fraenkel set theory with the Axiom of Choice (ZFC). This
+ *   undecidability is a fixed, unchangeable feature of the ZFC axiomatic system,
+ *   functioning as a Mountain of logic. It establishes a hard limit on what can
+ *   be proven about certain infinite algebraic structures within that system.
+ *
+ * KEY AGENTS (by structural relationship):
+ *   - Classical Algebraist: Seeker of a definitive "yes" or "no" answer, who
+ *     encounters the logical limit (powerless/trapped).
+ *   - Set Theorist/Logician: Uses the undecidability to explore different models
+ *     of set theory (institutional/arbitrage).
+ *   - Analytical Observer: Recognizes the undecidability as a structural property
+ *     of the ZFC system.
  */
 
 /* ==========================================================================
-   2. CORE SYSTEM INTEGRATION (The "Reality" Layer)
+   2. BASE PROPERTIES (DOMAIN PRIORS)
    ========================================================================== */
 
-% Required for structural extraction of the ID and temporal range
-narrative_ontology:interval(whitehead_era, 1952, 2026).
-narrative_ontology:constraint_claim(whitehead_problem_undecidability, tangled_rope).
-domain_priors:requires_active_enforcement(whitehead_problem_undecidability).
+% --- Numerical metrics ---
+% Rationale: A proven mathematical theorem has near-zero extraction. It is a
+% statement of fact about a logical system.
+domain_priors:base_extractiveness(whitehead_problem_undecidability, 0.05).
+% Rationale: The theorem does not suppress alternatives; it reveals the
+% existence of alternative models of set theory where the answer is different.
+domain_priors:suppression_score(whitehead_problem_undecidability, 0.01).
+% Rationale: Formal mathematical truth has no performative component.
+domain_priors:theater_ratio(whitehead_problem_undecidability, 0.02).
 
-% Base extractiveness score (0.0-1.0)
-% Rationale: 0.2. While mathematically an "opening" of new models, it 
-% extracts the possibility of a final, unified classification of 
-% Whitehead groups, imposing a "metaphysical tax" on researchers.
-domain_priors:base_extractiveness(whitehead_problem_undecidability, 0.2).
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(whitehead_problem_undecidability, extractiveness, 0.05).
+narrative_ontology:constraint_metric(whitehead_problem_undecidability, suppression_requirement, 0.01).
+narrative_ontology:constraint_metric(whitehead_problem_undecidability, theater_ratio, 0.02).
 
-% Suppression score (0.0-1.0)
-% Rationale: 0.3. It suppresses the visibility of "Naive Algebra" by 
-% proving that group properties can be dependent on set-theoretic axioms 
-% like the Continuum Hypothesis.
-domain_priors:suppression_score(whitehead_problem_undecidability, 0.3).
+% --- NL Profile Metrics (required for mountain constraints) ---
+% These feed the natural_law_signature certification chain in
+% structural_signatures.pl.
+% Rationale: The logical conclusion is inescapable within ZFC.
+narrative_ontology:constraint_metric(whitehead_problem_undecidability, accessibility_collapse, 1.0).
+% Rationale: One cannot "resist" a mathematical proof, only change the axioms.
+narrative_ontology:constraint_metric(whitehead_problem_undecidability, resistance, 0.0).
 
-% Constraint metric facts (bridge for classification engine)
-narrative_ontology:constraint_metric(whitehead_problem_undecidability, extractiveness, 0.2).
-narrative_ontology:constraint_metric(whitehead_problem_undecidability, suppression_requirement, 0.3).
+% --- Constraint claim (must match analytical perspective type) ---
+narrative_ontology:constraint_claim(whitehead_problem_undecidability, mountain).
 
-% Enforcement: Emerges naturally from the axioms of ZFC and forcing.
+% --- Emergence flag (required for mountain constraints) ---
+% Emerges naturally from the axioms of ZFC and the rules of logic.
 domain_priors:emerges_naturally(whitehead_problem_undecidability).
 
-% Metrics required for Section 1 of the Executive Summary
-% BENEFICIARIES & VICTIMS
-narrative_ontology:constraint_beneficiary(whitehead_problem_undecidability, model_theorists).
-narrative_ontology:constraint_beneficiary(whitehead_problem_undecidability, shelah_independence_research).
-narrative_ontology:constraint_victim(whitehead_problem_undecidability, classical_abelian_group_theorists).
-narrative_ontology:constraint_victim(whitehead_problem_undecidability, hilbertian_deductive_completeness).
+% --- Structural relationships (REQUIRED for non-mountain constraints) ---
+% No enrichment needed. As a Mountain (a logical fact), the constraint has no
+% inherent beneficiaries or victims. The impact on different groups is a
+% downstream effect of their relationship to the axiomatic system itself.
 
 /* ==========================================================================
-   3. INDEXED CLASSIFICATIONS (Perspectival Truth)
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × f(d) × σ(S)
+   where f(d) is the sigmoid directionality function:
+     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
+   The engine derives d from beneficiary/victim membership + exit_options.
+   Scope modifiers: local=0.8, regional=0.9, national=1.0,
+                    continental=1.1, global=1.2, universal=1.0.
+   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
+   Do not add measurement_basis, beneficiary/victim, or other metadata.
+   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 1: THE WHITEHEAD GROUP (W) - Mountain
-   --------------------------------------------------------------------------
-   
-   WHO: powerless - The group has no agency; its properties are fixed by its definition.
-   WHEN: immediate - The status of freeness is true at the moment of construction.
-   WHERE: trapped - Bound within the logical universe of the current model.
-   SCOPE: local - Immediate algebraic relations.
-   
-   WHY THIS CLASSIFICATION:
-   For an individual group, the Whitehead property is an absolute Mountain. 
-   Whether it "appears" free or not is a fixed feature of the model it 
-   inhabits. It cannot "choose" to split extensions differently; the 
-   homological arithmetic is an unyielding law.
-   -------------------------------------------------------------------------- */
+% PERSPECTIVE 1: THE CLASSICAL ALGEBRAIST (MOUNTAIN)
+% For an algebraist seeking a single, definitive answer within ZFC, the
+% undecidability is an unyielding logical barrier.
+constraint_indexing:constraint_classification(whitehead_problem_undecidability, mountain,
+    context(agent_power(powerless),
+            time_horizon(generational),
+            exit_options(trapped),
+            spatial_scope(universal))).
 
+% PERSPECTIVE 2: THE SET THEORIST / LOGICIAN (MOUNTAIN)
+% For the logician, the undecidability is also a fixed fact, but one that
+% enables the exploration of different models (e.g., V=L vs. MA+¬CH). The
+% fact itself remains a Mountain.
+constraint_indexing:constraint_classification(whitehead_problem_undecidability, mountain,
+    context(agent_power(institutional),
+            time_horizon(biographical),
+            exit_options(arbitrage),
+            spatial_scope(universal))).
 
-constraint_indexing:constraint_classification(
-    whitehead_problem_undecidability,
-    tangled_rope,
-    context(
-        agent_power(powerless),
-        time_horizon(immediate),
-        exit_options(trapped),
-        spatial_scope(local)
-    )
-) :- !.
-
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE SHELAH-ERA LOGICIAN - Rope
-   --------------------------------------------------------------------------
-   
-   WHO: institutional - Power to select the Axiom of Choice (AC), CH, or V=L.
-   WHEN: biographical - Planning a career or a specific proof in model theory.
-   WHERE: mobile - Can choose different models of set theory via forcing.
-   SCOPE: global - Universal application in abstract mathematics.
-   
-   WHY THIS CLASSIFICATION:
-   For the institutional logic researcher, the Whitehead problem is a "Rope"—a 
-   functional coordination tool. By assuming the Continuum Hypothesis (CH) 
-   or Martin's Axiom, they coordinate a "standard of achievement" for 
-   group classification, pulling the problem into a state of provability.
-   -------------------------------------------------------------------------- */
-
-constraint_indexing:constraint_classification(
-    whitehead_problem_undecidability,
-    rope,
-    context(
-        agent_power(institutional),
-        time_horizon(biographical),
-        exit_options(mobile),
-        spatial_scope(global)
-    )
-) :- !.
-
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE CLASSICAL ALGEBRAIST - Snare
-   --------------------------------------------------------------------------
-   
-   WHO: individual_moderate - Has the tools of group theory but is bound by independence.
-   WHEN: civilizational - Seeking a complete and final classification of groups.
-   WHERE: constrained - The "exit" (a ZFC-based answer) is mathematically barred.
-   SCOPE: global - Universal limit on formal algebraic knowledge.
-   
-   WHY THIS CLASSIFICATION:
-   For the seeker of absolute algebraic truth, the Whitehead independence is 
-   a "Snare." It "strangles" the dream that algebra is independent of 
-   the "messy" foundations of set theory. It extracts the "certainty of 
-   freeness" (extraction) by proving that even basic group-theoretic 
-   questions are "choked" by the incompleteness of ZFC.
-   -------------------------------------------------------------------------- */
-
-constraint_indexing:constraint_classification(
-    whitehead_problem_undecidability,
-    snare,
-    context(
-        agent_power(individual_moderate),
-        time_horizon(civilizational),
-        exit_options(constrained),
-        spatial_scope(global)
-    )
-) :- 
-    domain_priors:base_extractiveness(whitehead_problem_undecidability, E),
-    E >= 0.15,
-    !.
+% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (MOUNTAIN)
+% Analytically, the undecidability is a fundamental, structural property of
+% the ZFC axiomatic system.
+constraint_indexing:constraint_classification(whitehead_problem_undecidability, mountain,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).
 
 /* ==========================================================================
-   4. TESTS (What We Learn About Constraints)
+   4. VALIDATION TESTS
    ========================================================================== */
 
-:- begin_tests(whitehead_problem_tests).
+:- begin_tests(whitehead_problem_undecidability_tests).
 
-test(multi_perspective_variance) :-
-    % Group -> Mountain
-    constraint_indexing:constraint_classification(whitehead_problem_undecidability, Type1, context(powerless, immediate, trapped, local)),
-    % Logician -> Rope
-    constraint_indexing:constraint_classification(whitehead_problem_undecidability, Type2, context(institutional, biographical, mobile, global)),
-    Type1 \= Type2.
+test(classification_invariance) :-
+    % Verify that as a Mountain, the classification is invariant.
+    constraint_indexing:constraint_classification(whitehead_problem_undecidability, Type1, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(whitehead_problem_undecidability, Type2, context(agent_power(institutional), _, _, _)),
+    constraint_indexing:constraint_classification(whitehead_problem_undecidability, Type3, context(agent_power(analytical), _, _, _)),
+    Type1 == mountain,
+    Type2 == mountain,
+    Type3 == mountain.
 
-test(deductive_extraction_penalty) :-
-    % Algebraists experience the "Snare" of foundational extraction.
-    Context = context(individual_moderate, civilizational, constrained, global),
-    constraint_indexing:extractiveness_for_agent(whitehead_problem_undecidability, Context, Score),
-    Score >= 0.15.
+test(mountain_metric_thresholds) :-
+    % Verify metrics are within Mountain thresholds.
+    config:param(extractiveness_metric_name, ExtMetricName),
+    config:param(suppression_metric_name, SuppMetricName),
+    narrative_ontology:constraint_metric(whitehead_problem_undecidability, ExtMetricName, E),
+    narrative_ontology:constraint_metric(whitehead_problem_undecidability, SuppMetricName, S),
+    E =< 0.25,
+    S =< 0.05.
 
-test(natural_emergence) :-
-    domain_priors:emerges_naturally(whitehead_problem_undecidability).
+test(natural_law_profile_present) :-
+    % Verify the NL profile metrics required for certification are present.
+    domain_priors:emerges_naturally(whitehead_problem_undecidability),
+    narrative_ontology:constraint_metric(whitehead_problem_undecidability, accessibility_collapse, AC),
+    narrative_ontology:constraint_metric(whitehead_problem_undecidability, resistance, R),
+    AC >= 0.85,
+    R =< 0.15.
 
-:- end_tests(whitehead_problem_tests).
+:- end_tests(whitehead_problem_undecidability_tests).
 
 /* ==========================================================================
-   5. MODEL INTERPRETATION (Commentary)
+   5. GENERATIVE COMMENTARY
    ========================================================================== */
 
 /**
- * LLM GENERATION NOTES
- * * Model: Gemini 2.0 Flash
- * Date: 2026-01-19
- * * KEY DECISIONS:
- * * 1. EXTRACTIVENESS SCORE (0.2):
- * Reasoning: The Whitehead problem extracts the "unity" of group theory. 
- * It forces a "metaphysical tax" where algebraic truth is no longer local 
- * to algebra but contingent on set-theoretic choices.
- * * 2. PERSPECTIVE SELECTION:
- * Chose the Group (Subject), the Shelah-era Logician (Institutional User), 
- * and the Classical Algebraist (Victim of Indeterminacy).
- * * 3. CLASSIFICATION RATIONALE:
- * The problem is a "Mountain" because the logic is unyielding, but 
- * becomes a "Snare" for those who refuse to use the "Rope" of 
- * extended axioms (like CH).
- * * 4. AMBIGUITIES:
- * The biggest variable is whether there exists a "Natural" model of 
- * sets that resolves the problem.
+ * LOGIC RATIONALE:
+ *   This constraint is re-classified as a pure Mountain. Shelah's proof
+ *   establishes a logical fact about the ZFC system. Such facts are the
+ *   canonical example of Mountain constraints: fixed, unchangeable, and with
+ *   near-zero intrinsic extraction or suppression. The original file's attempt
+ *   to classify it as a Tangled Rope/Snare based on the "metaphysical tax" on
+ *   researchers conflates the constraint itself with the downstream reaction to
+ *   it. The framework requires classifying the structural fact, which is a Mountain.
+ *
+ * PERSPECTIVAL GAP:
+ *   There is no perspectival gap. As a Mountain of logic, the classification is
+ *   invariant across all observers. The *implications* of the mountain differ
+ *   (an obstacle for one, a tool for another), but the constraint's type does not.
+ *
+ * DIRECTIONALITY LOGIC:
+ *   Not applicable. As a Mountain, there are no beneficiaries or victims.
+ *
+ * MANDATROPHY ANALYSIS:
+ *   Classifying this as a Mountain prevents the mislabeling of a fundamental
+ *   logical limit as a form of social or economic extraction. It correctly
+ *   locates the constraint in the realm of logical necessity rather than
+ *   contingent social arrangement.
  */
 
-% OMEGA IDENTIFICATION
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+% Omega variables — open questions the framework cannot yet resolve
+%
+% /5 form: narrative detail for story context
 omega_variable(
-    natural_set_universe_consensus,
-    "Is there a 'True' universe of sets (e.g., V=L or Large Cardinals) that makes Whitehead decidable (Mountain) or is it a pluralist Scaffold?",
-    resolution_mechanism("Consensus on 'Ultimate L' or similar foundational proposals."),
-    impact("If Mountain: The Whitehead problem has a 'True' answer. If Scaffold: It is permanently a Rope/Snare hybrid."),
-    confidence_without_resolution(medium)
+    omega_whitehead_problem_undecidability,
+    'Does a "natural" or "standard" model of set theory exist that is universally accepted and resolves the Whitehead problem?',
+    'Broad consensus among mathematicians and logicians on a canonical extension to ZFC (e.g., accepting large cardinal axioms as standard).',
+    'If consensus emerges, the problem becomes decidable (a resolved Mountain). If not, it remains a permanent feature of axiomatic pluralism.',
+    confidence_without_resolution(low)
 ).
 
-/* ==========================================================================
-   6. ALTERNATIVE ANALYSIS
-   ========================================================================== */
-
-/**
- * VIABLE ALTERNATIVES
- * * ALTERNATIVE 1: Constructible Universe (V=L)
- * Viability: In V=L, the answer is "Yes" (every Whitehead group is free).
- * Suppression: Rejected by those who view V=L as too "restrictive" or 
- * "unnatural" compared to the full power of Choice.
- * * ALTERNATIVE 2: Martin's Axiom (MA) + ¬CH
- * Viability: In this model, the answer is "No" (there are non-free Whitehead groups).
- * * CONCLUSION:
- * The existence of Alternative 1 (V=L) proves that the "Snare" of 
- * undecidability is a choice. We can climb the Mountain if we agree on 
- * which Rope to use.
- */
+% /3 form: typed classification for reporting engine (REQUIRED)
+narrative_ontology:omega_variable(omega_whitehead_problem_undecidability, conceptual, 'Whether a canonical "true" model of set theory exists to resolve the undecidability.').
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-/**
- * TO USE THIS CONSTRAINT:
- * * 1. Load: ?- [whitehead_problem_undecidability].
- * 2. Multi-perspective: ?- multi_index_report(whitehead_problem_undecidability).
- */
+% Required for external script parsing
+narrative_ontology:interval(whitehead_problem_undecidability, 1974, 2024).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Not required. Base extractiveness is below the 0.46 threshold for mandatory
+% temporal tracking. As a mathematical theorem, its properties are static.
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA
+   ========================================================================== */
+
+% Not applicable. As a pure Mountain, it has no coordination function.
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+% Not applicable for a Mountain constraint.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
-
-% ============================================================================
-% ENRICHMENT: Structural predicates for dynamic classification
-% Generated: 2026-02-08
-% Template: v5.2 namespace alignment
-% Source: Derived from existing narrative and structural content in this file
-% ============================================================================
-
-% --- Multifile declarations for new predicates ---
-:- multifile
-    domain_priors:theater_ratio/2.
-
-% --- Theater ratio (missing from base properties) ---
-% Formal truth — substantive with near-zero performative component
-domain_priors:theater_ratio(whitehead_problem_undecidability, 0.02).
-narrative_ontology:constraint_metric(whitehead_problem_undecidability, theater_ratio, 0.02).

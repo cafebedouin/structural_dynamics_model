@@ -7,7 +7,7 @@
 | Property | Value |
 |----------|-------|
 | **Constraints in corpus** | 1021 |
-| **Constraints compared** | 928 |
+| **Constraints compared** | 992 |
 | **Iterations to convergence** | 4 |
 | **Final max residual** | 0.000421 |
 | **Converged** | Yes |
@@ -21,7 +21,7 @@
 | **Constraints with significant shift (>0.01)** | 3 |
 | **Zone migrations** | 0 |
 | **Max EP shift** | 0.017582 |
-| **Average EP shift** | 0.000176 |
+| **Average EP shift** | 0.000140 |
 
 ## Zone Migrations
 
@@ -41,11 +41,11 @@ Average EP shift by constraint type:
 
 | Type | Count | Avg One-Hop EP | Avg FPN EP | Avg Shift |
 |------|-------|---------------|------------|-----------|
-| mountain | 71 | 0.9860 | 0.9860 | 0.0000 |
-| rope | 42 | 0.8798 | 0.8792 | 0.0006 |
-| snare | 508 | 0.4498 | 0.4498 | 0.0001 |
-| tangled_rope | 259 | 0.5249 | 0.5244 | 0.0004 |
-| unknown | 48 | 0.4572 | 0.4572 | 0.0000 |
+| mountain | 124 | 0.9839 | 0.9839 | 0.0000 |
+| rope | 43 | 0.8661 | 0.8660 | 0.0001 |
+| snare | 511 | 0.4487 | 0.4486 | 0.0001 |
+| tangled_rope | 267 | 0.5094 | 0.5089 | 0.0004 |
+| unknown | 47 | 0.4538 | 0.4538 | 0.0000 |
 
 ---
 *End of FPN report*

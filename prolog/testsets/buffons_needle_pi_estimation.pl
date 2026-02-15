@@ -1,26 +1,45 @@
 % ============================================================================
 % CONSTRAINT STORY: buffons_needle_pi_estimation
 % ============================================================================
-% Generated: 2026-01-19
-% Model: Gemini 2.0 Flash
-% Source: Georges-Louis Leclerc, Comte de Buffon (1777) / Geometric Probability
+% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2024-07-20
 % ============================================================================
 
-:- module(constraint_buffons_needle, []).
+:- module(constraint_buffons_needle_pi_estimation, []).
 
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
 
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
+
 % --- Namespace Hooks (Required for loading) ---
-:- multifile 
+:- multifile
     domain_priors:base_extractiveness/2,
     domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
     domain_priors:requires_active_enforcement/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
-    constraint_indexing:constraint_classification/3.
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
+    narrative_ontology:omega_variable/3.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -28,234 +47,244 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: buffons_needle_pi_estimation
- * human_readable: Buffon's Needle (Geometric Probability)
- * domain: mathematical/technological
- * temporal_scope: 1777 - Present
- * spatial_scope: Global/Abstract (Euclidean Space)
- * * SUMMARY:
- * Buffon's Needle is a classic problem in geometric probability where a needle 
- * of length $l$ is dropped onto a floor with parallel lines a distance $d$ apart. 
- * The probability that the needle crosses a line ($P = 2l / (d\pi)$) reveals 
- * a fundamental constraint: $\pi$ is woven into the very geometry of random 
- * physical interactions.
- * * KEY AGENTS:
- * - The Needle (Subject): The powerless agent whose physical landing is 
- * bound by the trigonometric constraints of its angle and position.
- * - The Monte Carlo Simulator (Institutional): An agent who uses this 
- * randomness as a "Rope" to estimate transcendental constants.
- * - The Analytical Purist (Victim): An agent for whom the "messiness" of 
- * physical randomness acts as a "Snare," extracting the elegance of 
- * pure symbolic calculation.
- * * NARRATIVE ARC:
- * Buffon's Needle functions as a "Mountain" of geometric reality—the 
- * relationship between linear drops and circular constants is an unyielding 
- * feature of space. In early computing, it was a "Rope" for coordinating the 
- * first Monte Carlo methods. However, for those seeking high-precision 
- * constants, the requirement of infinite physical trials acts as a "Snare," 
- * extracting massive time and effort (extraction) to yield only a few 
- * digits of $\pi$.
+ *   constraint_id: buffons_needle_pi_estimation
+ *   human_readable: Buffon's Needle as a Pi Estimation Method
+ *   domain: mathematical/technological
+ *
+ * SUMMARY:
+ *   This constraint models the Buffon's Needle problem not as a pure mathematical
+ *   law, but as a *method* for estimating the value of Pi. The method involves
+ *   dropping a needle onto a ruled surface and counting line crossings. While it
+ *   elegantly coordinates physical randomness with a transcendental constant, its
+ *   slow convergence (error decreases as 1/sqrt(N)) imposes a high "statistical
+ *   tax" on anyone seeking precision, making it a highly inefficient algorithm.
+ *
+ * KEY AGENTS (by structural relationship):
+ *   - High-Precision Seeker: Primary target (powerless/trapped) — bears the
+ *     extractive cost of the method's slow convergence.
+ *   - Educators & Monte Carlo Pioneers: Primary beneficiary (institutional/arbitrage) —
+ *     uses the method as a pedagogical tool or a foundational example of
+ *     stochastic simulation.
+ *   - Analytical Observer: Sees the full structure, including the coordination
+ *     function and the severe inefficiency.
  */
 
 /* ==========================================================================
-   2. CORE SYSTEM INTEGRATION (The "Reality" Layer)
+   2. BASE PROPERTIES (DOMAIN PRIORS)
    ========================================================================== */
 
-% Structural Anchor for index extraction
-narrative_ontology:interval(buffon_era, 1777, 2026).
+% --- Numerical metrics ---
+% Rationale: The high extraction score reflects the immense computational
+% cost (in time and trials) required to achieve even modest precision for Pi,
+% making it a highly inefficient algorithm compared to modern methods.
+domain_priors:base_extractiveness(buffons_needle_pi_estimation, 0.48).
+% Rationale: The method's historical and conceptual elegance "suppresses"
+% more practical approaches in pedagogical contexts, trapping students in an
+% inefficient paradigm.
+domain_priors:suppression_score(buffons_needle_pi_estimation, 0.45).
+% Rationale: While a functional method, its modern use is often more for
+% demonstrating a principle than for serious computation, giving it a minor
+% theatrical component.
+domain_priors:theater_ratio(buffons_needle_pi_estimation, 0.10).
+
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(buffons_needle_pi_estimation, extractiveness, 0.48).
+narrative_ontology:constraint_metric(buffons_needle_pi_estimation, suppression_requirement, 0.45).
+narrative_ontology:constraint_metric(buffons_needle_pi_estimation, theater_ratio, 0.10).
+
+% --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(buffons_needle_pi_estimation, tangled_rope).
+
+% --- Binary flags ---
+% Rationale: Required for Tangled Rope. The "enforcement" is not by a human
+% agent but by the unyielding mathematics of the Law of Large Numbers, which
+% forces the user to perform massive numbers of trials to reduce error.
 domain_priors:requires_active_enforcement(buffons_needle_pi_estimation).
 
-% Base extractiveness score (0.0-1.0)
-% Rationale: 0.2. It "extracts" the simplicity of a random drop to reveal a 
-% complex constant, forcing a "statistical tax" on any agent seeking to 
-% derive $\pi$ from physical space.
-domain_priors:base_extractiveness(buffons_needle_pi_estimation, 0.2).
-
-% Suppression score (0.0-1.0)
-% Rationale: 0.1. It does not actively suppress alternatives, but it 
-% renders "non-trigonometric" explanations of the crossing probability 
-% functionally fraudulent.
-domain_priors:suppression_score(buffons_needle_pi_estimation, 0.1).
-
-% Constraint metric facts (bridge for classification engine)
-narrative_ontology:constraint_metric(buffons_needle_pi_estimation, extractiveness, 0.2).
-narrative_ontology:constraint_metric(buffons_needle_pi_estimation, suppression_requirement, 0.1).
-
-% Enforcement: Emerges naturally from the integration of the sine function.
-domain_priors:emerges_naturally(buffons_needle_pi_estimation).
-
-% Metrics required for Section 1 of the Executive Summary
-% BENEFICIARIES & VICTIMS
-narrative_ontology:constraint_beneficiary(buffons_needle_pi_estimation, monte_carlo_engineers).
-narrative_ontology:constraint_beneficiary(buffons_needle_pi_estimation, geometric_statisticians).
-narrative_ontology:constraint_victim(buffons_needle_pi_estimation, deterministic_calculators). % Strangled by variance.
+% --- Structural relationships (REQUIRED for non-mountain constraints) ---
+% Who benefits from this constraint existing?
+narrative_ontology:constraint_beneficiary(buffons_needle_pi_estimation, educators_and_statisticians).
+% Who bears disproportionate cost?
+narrative_ontology:constraint_victim(buffons_needle_pi_estimation, high_precision_seekers).
 
 /* ==========================================================================
-   3. INDEXED CLASSIFICATIONS (Perspectival Truth)
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × f(d) × σ(S)
+   where f(d) is the sigmoid directionality function:
+     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
+   The engine derives d from beneficiary/victim membership + exit_options.
+   Scope modifiers: local=0.8, regional=0.9, national=1.0,
+                    continental=1.1, global=1.2, universal=1.0.
+   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
+   Do not add measurement_basis, beneficiary/victim, or other metadata.
+   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 1: THE FALLING NEEDLE - Mountain
-   --------------------------------------------------------------------------
-   
-   WHO: powerless - The needle has no agency over the laws of gravity or trig.
-   WHEN: immediate - The crossing is determined the instant the needle settles.
-   WHERE: trapped - Bound within the $d$-width lines of the floor.
-   SCOPE: local - Immediate neighborhood of the landing.
-   
-   WHY THIS CLASSIFICATION:
-   For the needle, the condition $x \le (l/2)\sin\theta$ is an absolute Mountain. 
-   It cannot "choose" to cross a line if the geometry of its angle and 
-   center-point does not permit it. The law is a fixed feature of its physics.
-   -------------------------------------------------------------------------- */
+% PERSPECTIVE 1: THE HIGH-PRECISION SEEKER (TANGLED ROPE)
+% Agent who bears the most extraction due to the method's slow convergence.
+% Engine derives d from: victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
+constraint_indexing:constraint_classification(buffons_needle_pi_estimation, tangled_rope,
+    context(agent_power(powerless),
+            time_horizon(generational),
+            exit_options(trapped),
+            spatial_scope(local))).
 
+% PERSPECTIVE 2: THE EDUCATOR / MONTE CARLO PIONEER (ROPE)
+% Agent who benefits from the method's conceptual elegance and simplicity.
+% Engine derives d from: beneficiary membership + arbitrage exit → d ≈ 0.05 → f(d) ≈ -0.12 → low/negative χ
+constraint_indexing:constraint_classification(buffons_needle_pi_estimation, rope,
+    context(agent_power(institutional),
+            time_horizon(generational),
+            exit_options(arbitrage),
+            spatial_scope(global))).
 
-
-constraint_indexing:constraint_classification(
-    buffons_needle_pi_estimation,
-    tangled_rope,
-    context(
-        agent_power(powerless),
-        time_horizon(immediate),
-        exit_options(trapped),
-        spatial_scope(local)
-    )
-) :- !.
-
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE STATISTICAL RESEARCHER - Rope
-   --------------------------------------------------------------------------
-   
-   WHO: institutional - Power to design experiments and choose trial counts.
-   WHEN: biographical - Planning the duration of a data collection project.
-   WHERE: mobile - Can adjust $l$ and $d$ to optimize the crossing probability.
-   SCOPE: global - Universal application in stochastic modeling.
-   
-   WHY THIS CLASSIFICATION:
-   For the researcher, the problem is a "Rope"—a functional coordination 
-   mechanism. By dropping needles, they coordinate a "standard of achievement" 
-   for estimating $\pi$ through physical action, pulling abstract math 
-   into the tangible world.
-   -------------------------------------------------------------------------- */
-
-constraint_indexing:constraint_classification(
-    buffons_needle_pi_estimation,
-    rope,
-    context(
-        agent_power(institutional),
-        time_horizon(biographical),
-        exit_options(mobile),
-        spatial_scope(global)
-    )
-) :- !.
-
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE HIGH-PRECISION OBSERVER - Snare
-   --------------------------------------------------------------------------
-   
-   WHO: powerless - Bound by the Law of Large Numbers.
-   WHEN: generational - It would take lifetimes of drops to reach 10 digits of $\pi$.
-   WHERE: constrained - No alternative but to increase $N$ at a $1/\sqrt{N}$ rate.
-   SCOPE: local - A specific, tedious physical experiment.
-   
-   WHY THIS CLASSIFICATION:
-   For the seeker of precision, Buffon's Needle is a "Snare." It "strangles" 
-   efficiency. Because the error decreases so slowly, the method extracts 
-   enormous labor (extraction) for diminishing returns, "choking" the 
-   viability of the experiment as a serious computational tool.
-   -------------------------------------------------------------------------- */
-
-
-
-constraint_indexing:constraint_classification(
-    buffons_needle_pi_estimation,
-    snare,
-    context(
-        agent_power(powerless),
-        time_horizon(generational),
-        exit_options(constrained),
-        spatial_scope(local)
-    )
-) :- 
-    domain_priors:base_extractiveness(buffons_needle_pi_estimation, E),
-    E >= 0.15,
-    !.
+% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
+% Default analytical context, which recognizes both the coordination function
+% and the severe extractive inefficiency. Matches the constraint_claim.
+constraint_indexing:constraint_classification(buffons_needle_pi_estimation, tangled_rope,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(global))).
 
 /* ==========================================================================
-   4. TESTS (What We Learn About Constraints)
+   4. VALIDATION TESTS
    ========================================================================== */
 
-:- begin_tests(buffons_needle_tests).
+:- begin_tests(buffons_needle_pi_estimation_tests).
 
-test(multi_perspective_variance) :-
-    % Needle -> Mountain
-    constraint_indexing:constraint_classification(buffons_needle_pi_estimation, Type1, context(powerless, immediate, trapped, local)),
-    % Researcher -> Rope
-    constraint_indexing:constraint_classification(buffons_needle_pi_estimation, Type2, context(institutional, biographical, mobile, global)),
-    Type1 \= Type2.
+test(perspectival_gap) :-
+    % Verify perspectival gap between target and beneficiary.
+    constraint_indexing:constraint_classification(buffons_needle_pi_estimation, TypeTarget,
+        context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(buffons_needle_pi_estimation, TypeBeneficiary,
+        context(agent_power(institutional), _, _, _)),
+    assertion(TypeTarget == tangled_rope),
+    assertion(TypeBeneficiary == rope),
+    TypeTarget \= TypeBeneficiary.
 
-test(variance_extraction_penalty) :-
-    % The high-precision seeker feels the "Snare" of the 1/sqrt(N) convergence.
-    Context = context(powerless, generational, constrained, local),
-    constraint_indexing:extractiveness_for_agent(buffons_needle_pi_estimation, Context, Score),
-    Score >= 0.2.
+test(analytical_claim_consistency) :-
+    % Verify the analytical perspective matches the constraint_claim.
+    narrative_ontology:constraint_claim(buffons_needle_pi_estimation, ClaimedType),
+    constraint_indexing:constraint_classification(buffons_needle_pi_estimation, AnalyticalType,
+        context(agent_power(analytical), _, _, _)),
+    assertion(ClaimedType == AnalyticalType).
 
-test(natural_emergence) :-
-    domain_priors:emerges_naturally(buffons_needle_pi_estimation).
+test(tangled_rope_structural_properties) :-
+    % Verify that all three required properties for a Tangled Rope are present.
+    narrative_ontology:constraint_beneficiary(buffons_needle_pi_estimation, _), % -> has_coordination_function
+    narrative_ontology:constraint_victim(buffons_needle_pi_estimation, _),     % -> has_asymmetric_extraction
+    domain_priors:requires_active_enforcement(buffons_needle_pi_estimation).
 
-:- end_tests(buffons_needle_tests).
+:- end_tests(buffons_needle_pi_estimation_tests).
 
 /* ==========================================================================
-   5. MODEL INTERPRETATION (Commentary)
+   5. GENERATIVE COMMENTARY
    ========================================================================== */
 
 /**
- * LLM GENERATION NOTES
- * * Model: Gemini 2.0 Flash
- * Date: 2026-01-19
- * * KEY DECISIONS:
- * * 1. EXTRACTIVENESS SCORE (0.2):
- * Chose 0.2 because while the math is a "gift," the physical effort to use 
- * it for estimation is a "tax" of time and variance.
- * * 2. PERSPECTIVE SELECTION:
- * Chose Needle (Subject), Researcher (User), and Precision Seeker (Victim) 
- * to demonstrate how a "Mountain" of logic becomes a "Snare" of inefficiency.
+ * LOGIC RATIONALE:
+ *   The key decision was to model the *method* of estimation, not the underlying
+ *   mathematical *law*. The law itself is a Mountain (ε≈0), but the method is
+ *   a human construct with costs. The base extractiveness (ε=0.48) and
+ *   suppression (s=0.45) were set high to reflect the extreme inefficiency
+ *   (the "statistical tax") of the method compared to modern algorithms. This
+ *   is what makes it a Tangled Rope: it has a genuine coordination function
+ *   (linking geometry to Pi) but also a severe extractive component (wasted time/effort).
+ *
+ * PERSPECTIVAL GAP:
+ *   The gap is stark. For an educator or statistician (institutional), the method
+ *   is a perfect Rope: a simple, elegant way to coordinate a physical experiment
+ *   with a deep mathematical concept. For them, the inefficiency is irrelevant;
+ *   the pedagogical value is the benefit. For a high-precision seeker (powerless),
+ *   that same inefficiency is a massive extractive cost, making the method a
+ *   Tangled Rope that traps them in a computationally expensive process for
+ *   meager returns.
+ *
+ * DIRECTIONALITY LOGIC:
+ *   - Beneficiaries: `educators_and_statisticians` benefit from a simple,
+ *     demonstrable link between probability and Pi. They have `arbitrage` exit,
+ *     as they can choose from countless other examples to teach.
+ *   - Victims: `high_precision_seekers` are victimized by the 1/sqrt(N)
+ *     convergence rate. They are `trapped` because, within the confines of this
+ *     specific method, there is no way to accelerate convergence.
+ *
+ * MANDATROPHY ANALYSIS:
+ *   This classification correctly identifies that a tool with a valid coordination
+ *   function can still be highly extractive. A naive analysis might label this
+ *   a pure Rope because it "works." The Tangled Rope classification, driven by
+ *   the high ε, correctly captures the dual nature of the constraint and prevents
+ *   the inefficiency from being ignored.
  */
 
-% OMEGA IDENTIFICATION
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+% /5 form: narrative detail for story context
 omega_variable(
-    needle_shape_universality,
-    "Does the 'Mountain' hold for non-linear needles (e.g., Buffon's Noodle)?",
-    resolution_mechanism("Verification of Barbier's Theorem for curves of constant length."),
-    impact("If Yes: The 'Mountain' is a universal property of length, not just straight lines."),
+    omega_buffons_needle_pi_estimation,
+    'Does the geometric principle hold for non-linear needles (e.g., Buffon''s Noodle)?',
+    'Verification via Barbier''s Theorem for curves of constant width.',
+    'If Yes: The underlying principle is a universal property of length, not just linearity, strengthening the Mountain-like nature of the core law. If No: The constraint is more specific to Euclidean lines.',
     confidence_without_resolution(high)
 ).
 
-/* ==========================================================================
-   6. ALTERNATIVE ANALYSIS
-   ========================================================================== */
-
-/**
- * VIABLE ALTERNATIVES
- * * ALTERNATIVE 1: Deterministic Algorithms (e.g., Chudnovsky Algorithm)
- * Viability: Millions of times more efficient than needle dropping.
- * Suppression: Renders Buffon's Needle functionally a "Toy" or "Scaffold" 
- * in the modern era.
- * * ALTERNATIVE 2: Barbier's Theorem (Buffon's Noodle)
- * Viability: Shows that the shape doesn't matter, only the length.
- * Evidence: A broader "Mountain" that explains the straight-needle case.
- */
+% /3 form: typed classification for reporting engine (REQUIRED)
+narrative_ontology:omega_variable(omega_buffons_needle_pi_estimation, conceptual, 'Universality of the geometric principle for non-linear shapes (Barbier''s Theorem).').
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-/**
- * TO USE THIS FILE:
- * * 1. Load: ?- [buffons_needle_pi_estimation].
- * 2. Multi-perspective: ?- multi_index_report(buffons_needle_pi_estimation).
- */
+% Required for external script parsing
+narrative_ontology:interval(buffons_needle_pi_estimation, 0, 10).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% This is a high-extraction constraint (ε > 0.46), requiring temporal data.
+% The extraction increases over time not because the method changed, but because
+% external standards of computational efficiency and required precision rose,
+% making the method's fixed inefficiency progressively more costly.
+%
+% Theater ratio over time:
+narrative_ontology:measurement(buffons_needle_pi_estimation_tr_t0, buffons_needle_pi_estimation, theater_ratio, 0, 0.05).
+narrative_ontology:measurement(buffons_needle_pi_estimation_tr_t5, buffons_needle_pi_estimation, theater_ratio, 5, 0.08).
+narrative_ontology:measurement(buffons_needle_pi_estimation_tr_t10, buffons_needle_pi_estimation, theater_ratio, 10, 0.10).
+
+% Extraction over time:
+narrative_ontology:measurement(buffons_needle_pi_estimation_ex_t0, buffons_needle_pi_estimation, base_extractiveness, 0, 0.20).
+narrative_ontology:measurement(buffons_needle_pi_estimation_ex_t5, buffons_needle_pi_estimation, base_extractiveness, 5, 0.35).
+narrative_ontology:measurement(buffons_needle_pi_estimation_ex_t10, buffons_needle_pi_estimation, base_extractiveness, 10, 0.48).
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA
+   ========================================================================== */
+
+% Coordination type: It provides a standard method for linking a physical
+% random process to an abstract mathematical constant.
+narrative_ontology:coordination_type(buffons_needle_pi_estimation, information_standard).
+
+% --- Network Decomposition (Constraint Families) ---
+%
+% DUAL FORMULATION NOTE:
+% This constraint is one of 2 stories decomposed from "Buffon's Needle".
+% Decomposed because ε differs across observables (ε-invariance principle).
+% This story models the *estimation method* (Tangled Rope). The underlying
+% mathematical truth is a separate constraint.
+% Related stories:
+%   - buffons_needle_law (ε≈0.01, Mountain) - The immutable geometric relationship.
+%
+narrative_ontology:affects_constraint(buffons_needle_law, buffons_needle_pi_estimation).
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+% No overrides needed. The structural derivation from beneficiary/victim
+% groups and exit options accurately models the directionality.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

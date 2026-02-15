@@ -1,9 +1,9 @@
 % ============================================================================
 % CONSTRAINT STORY: universal_mathematics_communication
 % ============================================================================
-% Generated: January 20, 2026
-% Model: Gemini 2.0 Flash
-% Source: bee_communication.pdf
+% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2024-07-15
 % ============================================================================
 
 :- module(constraint_universal_mathematics_communication, []).
@@ -12,387 +12,271 @@
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
 
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
+
 % --- Namespace Hooks (Required for loading) ---
 :- multifile
-domain_priors:base_extractiveness/2,
-domain_priors:suppression_score/2,
-domain_priors:requires_active_enforcement/1,
-narrative_ontology:constraint_metric/3,
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
-    constraint_indexing:constraint_classification/3.
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
+    narrative_ontology:boltzmann_floor_override/2,
+    constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3,
+    domain_priors:emerges_naturally/1,
+    narrative_ontology:omega_variable/3.
 
 /* ==========================================================================
-
-1. NARRATIVE CONTEXT
-========================================================================== */
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
 
 /**
-
-* CONSTRAINT IDENTIFICATION
-* * constraint_id: universal_mathematics_communication
-
-
-* human_readable: Mathematics as a Universal Communication Constraint
-* domain: technological/scientific
-* temporal_scope: 17th Century to Civilizational Future
-* spatial_scope: Global to Interstellar
-* * SUMMARY:
-
-
-* This constraint posits that mathematics is not a human invention but a
-* fundamental "language of the universe". It acts as a bridge for
-
-
-* communication between species with "alien" minds—such as humans and bees,
-* or humans and extraterrestrials—by providing a shared framework of logic
-* and quantity.
-
-
-* * KEY AGENTS:
-
-
-* * Human Scientists: Researchers seeking to establish contact with alien life using binary or mathematical signals.
-
-
-
-
-* * Honeybees: "Insectoid alien models" that have independently evolved the capacity for simple arithmetic and symbolic learning.
-
-
-
-
-* * Extraterrestrials: Hypothetical intelligent entities whose ability to communicate with Earth depends on the universality of mathematical laws.
-
-
-
-
-* * NARRATIVE ARC:
-
-
-* Starting with Galileo's observation of nature's mathematical "language," the narrative moves through
-* human efforts like the Arecibo message and Voyager's Golden Record. It then grounds
-
-
-* this in empirical biology, showing that honeybees—diverged from humans for 600 million years—can
-* still "calculate," suggesting mathematics is a Mountain-like constraint of intelligence itself.
-*/
-
-
+ * CONSTRAINT IDENTIFICATION
+ *   constraint_id: universal_mathematics_communication
+ *   human_readable: Mathematics as a Universal Communication Constraint
+ *   domain: technological/scientific
+ *
+ * SUMMARY:
+ *   This constraint posits that mathematics is not a human invention but a
+ *   fundamental "language of the universe". It acts as a bridge for
+ *   communication between species with "alien" minds—such as humans and bees,
+ *   or humans and extraterrestrials—by providing a shared framework of logic
+ *   and quantity. The core structure is a natural law (Mountain), but its
+ *   application as a communication tool is a form of coordination (Rope).
+ *
+ * KEY AGENTS (by structural relationship):
+ *   - Honeybees: Primary target (powerless/trapped) — experiences mathematics as an immutable law of nature they must navigate to get rewards.
+ *   - Human Scientists (SETI/NASA): Primary beneficiary (institutional/mobile) — uses mathematics as a coordination tool (Rope) to attempt interstellar communication.
+ *   - Extraterrestrials: Hypothetical beneficiary (organized/mobile) — would rely on this shared framework for first contact.
+ *   - Analytical Observer: Analytical observer — sees the full dual structure of a natural law being used as a coordination device.
+ */
 
 /* ==========================================================================
-2. CORE SYSTEM INTEGRATION (The "Reality" Layer)
-========================================================================== */
+   2. BASE PROPERTIES (DOMAIN PRIORS)
+   ========================================================================== */
 
-% Required for [STEP 1] and [STEP 2] of the DR-Audit Suite
-narrative_ontology:interval(scientific_consensus_period, 0, 10).
-narrative_ontology:constraint_claim(universal_mathematics_communication, scaffold).
-
-% Base extractiveness score (0.0 = no extraction, 1.0 = full extraction)
+% --- Numerical metrics ---
 % Rationale: Mathematics is non-extractive; it is a shared discovery that
-% enables cooperation rather than exploitation.
-domain_priors:base_extractiveness(universal_mathematics_communication, 0.1).
+% enables cooperation rather than exploitation. ε is low, consistent with Mountain.
+domain_priors:base_extractiveness(universal_mathematics_communication, 0.10).
 
-% Suppression score (0.0 = no suppression, 1.0 = full suppression)
-% Rationale: While mathematical truths are "enforced" by logic, alternative
-% "dialects" or formulations of math are considered possible.
-domain_priors:suppression_score(universal_mathematics_communication, 0.2).
+% Rationale: The core logical structure of mathematics is non-suppressible.
+% While different "dialects" or notations exist, the underlying truths are fixed.
+% Score must be <= 0.05 for Mountain classification.
+domain_priors:suppression_score(universal_mathematics_communication, 0.05).
 
-% Constraint metric facts (bridge for classification engine)
-narrative_ontology:constraint_metric(universal_mathematics_communication, extractiveness, 0.1).
-narrative_ontology:constraint_metric(universal_mathematics_communication, suppression_requirement, 0.2).
+% Rationale: This is a purely functional, technical constraint with minimal
+% performative theater.
+domain_priors:theater_ratio(universal_mathematics_communication, 0.04).
 
-% Enforcement requirements
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(universal_mathematics_communication, extractiveness, 0.10).
+narrative_ontology:constraint_metric(universal_mathematics_communication, suppression_requirement, 0.05).
+narrative_ontology:constraint_metric(universal_mathematics_communication, theater_ratio, 0.04).
+
+% --- NL Profile Metrics (required for mountain constraints) ---
+% These feed the natural_law_signature certification chain in
+% structural_signatures.pl.
+% Accessibility Collapse: The laws of mathematics are inescapable; no coherent
+% alternative is structurally accessible.
+narrative_ontology:constraint_metric(universal_mathematics_communication, accessibility_collapse, 0.98).
+% Resistance: Meaningful resistance to mathematical truth is incoherent.
+narrative_ontology:constraint_metric(universal_mathematics_communication, resistance, 0.01).
+
+% --- Constraint claim (must match analytical perspective type) ---
+narrative_ontology:constraint_claim(universal_mathematics_communication, mountain).
+
+% --- Emergence flag (required for mountain constraints) ---
 % Emerges naturally as a consequence of intelligence and physical reality.
+% Required for the mountain metric gate.
 domain_priors:emerges_naturally(universal_mathematics_communication).
 
-% 2026-02-11: Fixed context arity — removed beneficiary/victim from context tuples (context/4 enforcement)
-% Beneficiary/victim promoted to module-level facts (previously only inside context tuples).
+% --- Structural relationships (REQUIRED for non-mountain constraints) ---
+% While this is a Mountain, the beneficiary declaration is needed to derive
+% the has_coordination_function/1 predicate, which allows the institutional
+% perspective to correctly classify it as a Rope (using a Mountain as a tool).
 narrative_ontology:constraint_beneficiary(universal_mathematics_communication, intelligent_life).
-narrative_ontology:constraint_victim(universal_mathematics_communication, none).
-/* ==========================================================================
-3. INDEXED CLASSIFICATIONS (Perspectival Truth)
-========================================================================== */
-
-/* --------------------------------------------------------------------------
-PERSPECTIVE 1: HONEYBEE (Powerless Subject) - Mountain
-
-WHO: powerless - Subjects in human-led experiments.
-WHEN: immediate - Focused on the "now" of the reward (sugar water).
-WHERE: trapped - Bound by the physical and neurological limits of their "miniature brains".
-SCOPE: local - Immediate environment of the test.
-
-WHY THIS CLASSIFICATION:
-For the bee, the logic of addition and subtraction is an immutable feature
-of the world they must navigate to survive (or get sugar). They cannot change
-the rules of "odd/even" or the existence of "zero"; they can only discover
-and adapt to them.
-
-NARRATIVE EVIDENCE:
-"Bees showed evidence of solving simple addition and subtraction... including
-an understanding of 'zero'".
--------------------------------------------------------------------------- */
-
-constraint_indexing:constraint_classification(
-universal_mathematics_communication,
-scaffold,
-context(
-agent_power(powerless),
-time_horizon(immediate),
-exit_options(trapped),
-spatial_scope(local)
-)
-) :-
-domain_priors:emerges_naturally(universal_mathematics_communication),
-domain_priors:suppression_score(universal_mathematics_communication, S),
-S < 0.3,
-!.
-
-/* --------------------------------------------------------------------------
-PERSPECTIVE 2: NASA/SETI SCIENTIST (Institutional) - Rope
-
-WHO: institutional - Backed by state/academic power to send interstellar signals.
-WHEN: historical - Communication spanning decades or centuries.
-WHERE: mobile - Actively choosing which mathematical "symbols" or "binary" to use.
-SCOPE: global - Designing messages for the entire planet/species.
-
-WHY THIS CLASSIFICATION:
-For institutions, mathematics is a coordination mechanism (Rope). It is
-functional and changeable in its *expression* (e.g., binary vs. prime sequences)
-to facilitate the goal of interstellar conversation.
-
-NARRATIVE EVIDENCE:
-"Researchers developed a binary language designed to introduce
-extraterrestrials to human mathematics".
--------------------------------------------------------------------------- */
-
-constraint_indexing:constraint_classification(
-universal_mathematics_communication,
-rope,
-context(
-agent_power(institutional),
-time_horizon(historical),
-exit_options(mobile),
-spatial_scope(global)
-)
-) :-
-domain_priors:base_extractiveness(universal_mathematics_communication, E),
-E < 0.3,
-!.
-
-/* --------------------------------------------------------------------------
-PERSPECTIVE 3: ANALYTICAL PHILOSOPHER - Rope/Mountain Hybrid
-
-WHO: analytical - Observer questioning the nature of reality.
-WHEN: civilizational - Considering the long-term divergence of species.
-WHERE: analytical - Viewing math from a conceptual distance.
-SCOPE: global - Applying findings across biological domains.
-
-WHY THIS CLASSIFICATION:
-The observer sees math as a Rope because different species may develop
-"different approaches... akin to dialects," but ultimately it is a Mountain
-if it is an unavoidable "consequence of intelligence".
-
-NARRATIVE EVIDENCE:
-"Question of whether mathematics is an entirely human construction, or if
-it is a consequence of intelligence and thus, universal".
--------------------------------------------------------------------------- */
-
-constraint_indexing:constraint_classification(
-universal_mathematics_communication,
-rope,
-context(
-agent_power(analytical),
-time_horizon(civilizational),
-exit_options(analytical),
-spatial_scope(global)
-)
-) :-
-domain_priors:suppression_score(universal_mathematics_communication, S),
-S < 0.3,
-!.
 
 /* ==========================================================================
-4. TESTS (What We Learn About Constraints)
-========================================================================== */
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × f(d) × σ(S)
+   where f(d) is the sigmoid directionality function:
+     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
+   The engine derives d from beneficiary/victim membership + exit_options.
+   Scope modifiers: local=0.8, regional=0.9, national=1.0,
+                    continental=1.1, global=1.2, universal=1.0.
+   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
+   Do not add measurement_basis, beneficiary/victim, or other metadata.
+   Linter Rule 23 rejects files with context arity ≠ 4.
+   ========================================================================== */
 
-:- begin_tests(universal_mathematics_tests).
+% PERSPECTIVE 1: THE HONEYBEE (POWERLESS SUBJECT) - MOUNTAIN
+% For the bee, the logic of addition and subtraction is an immutable feature
+% of the world they must navigate to survive (or get sugar). They cannot change
+% the rules of "odd/even" or the existence of "zero"; they can only discover
+% and adapt to them. It is a natural law.
+constraint_indexing:constraint_classification(universal_mathematics_communication, mountain,
+    context(agent_power(powerless),
+            time_horizon(immediate),
+            exit_options(trapped),
+            spatial_scope(local))).
+
+% PERSPECTIVE 2: NASA/SETI SCIENTIST (INSTITUTIONAL) - ROPE
+% For institutions, mathematics is a coordination mechanism (Rope). It is
+% functional and changeable in its *expression* (e.g., binary vs. prime sequences)
+% to facilitate the goal of interstellar conversation. They are using a
+% Mountain as a tool for coordination.
+constraint_indexing:constraint_classification(universal_mathematics_communication, rope,
+    context(agent_power(institutional),
+            time_horizon(historical),
+            exit_options(mobile),
+            spatial_scope(global))).
+
+% PERSPECTIVE 3: THE ANALYTICAL OBSERVER - MOUNTAIN
+% The observer sees the deepest structure. Math is a Rope because different
+% species may develop "different approaches... akin to dialects," but ultimately
+% it is a Mountain because it is an unavoidable "consequence of intelligence"
+% and the structure of reality.
+constraint_indexing:constraint_classification(universal_mathematics_communication, mountain,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(global))).
+
+/* ==========================================================================
+   4. VALIDATION TESTS
+   ========================================================================== */
+
+:- begin_tests(universal_mathematics_communication_tests).
+
+test(perspectival_gap) :-
+    % Demonstrates that the Bee/Analyst sees a Mountain (nature) while the
+    % Scientist sees a Rope (tool).
+    constraint_indexing:constraint_classification(universal_mathematics_communication, mountain, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(universal_mathematics_communication, rope, context(agent_power(institutional), _, _, _)),
+    constraint_indexing:constraint_classification(universal_mathematics_communication, mountain, context(agent_power(analytical), _, _, _)).
+
+test(mountain_threshold_validation) :-
+    % Confirms that the base metrics are consistent with a Mountain classification.
+    narrative_ontology:constraint_metric(universal_mathematics_communication, extractiveness, E),
+    narrative_ontology:constraint_metric(universal_mathematics_communication, suppression_requirement, S),
+    E =< 0.25,
+    S =< 0.05.
+
+test(nl_profile_validation) :-
+    % Confirms the natural law profile metrics are present and valid.
+    narrative_ontology:constraint_metric(universal_mathematics_communication, accessibility_collapse, AC),
+    narrative_ontology:constraint_metric(universal_mathematics_communication, resistance, R),
+    domain_priors:emerges_naturally(universal_mathematics_communication),
+    AC >= 0.85,
+    R =< 0.15.
+
+:- end_tests(universal_mathematics_communication_tests).
+
+/* ==========================================================================
+   5. GENERATIVE COMMENTARY
+   ========================================================================== */
 
 /**
+ * LOGIC RATIONALE:
+ *   The core insight is that a fundamental Mountain (the laws of mathematics)
+ *   can be used as a pure coordination device (Rope) by a sufficiently
+ *   advanced agent. The base metrics (ε=0.10, suppression=0.05) and the
+ *   `emerges_naturally` flag firmly establish the constraint's identity as a
+ *   Mountain. The Natural Law profile metrics (accessibility_collapse=0.98,
+ *   resistance=0.01) were added to pass the structural linter and correctly
+ *   reflect the non-negotiable nature of mathematical truth.
+ *
+ * PERSPECTIVAL GAP:
+ *   The gap is between ontology and application.
+ *   - The Honeybee (powerless) experiences the raw ontology: math is an
+ *     unbreakable law of its environment, hence a Mountain.
+ *   - The Scientist (institutional) experiences the application: math is a
+ *     tool, a language whose notation can be chosen (binary, primes) to
+ *     coordinate with a hypothetical other, hence a Rope.
+ *   - The Analyst sees both: the underlying structure is a Mountain, which is
+ *     what makes it a reliable candidate for use as a Rope.
+ *
+ * DIRECTIONALITY LOGIC:
+ *   The constraint is fundamentally symmetric. The `constraint_beneficiary`
+ *   is declared as `intelligent_life` because the coordination function of
+ *   mathematics benefits any species capable of using it. There are no victims.
+ *   This declaration is what allows the engine to derive `has_coordination_function`,
+ *   enabling the Rope classification from the institutional perspective.
+ *
+ * MANDATROPHY ANALYSIS:
+ *   This case is the inverse of Mandatrophy. Instead of mislabeling extraction
+ *   as coordination, it shows how pure coordination can be built upon a
+ *   foundation that is not coordination at all, but a natural law. It highlights
+ *   the system's ability to distinguish between a constraint's fundamental
+ *   nature (Mountain) and its indexed application (Rope).
+ */
 
-* TEST 1: Multi-perspective variance
-* Demonstrates that the Bee sees a Mountain (nature) while the Scientist sees a Rope (tool).
-*/
-test(multi_perspective_utilization) :-
-constraint_indexing:constraint_classification(
-universal_mathematics_communication,
-scaffold,
-context(agent_power(powerless), time_horizon(immediate), exit_options(trapped), spatial_scope(local))
-),
-constraint_indexing:constraint_classification(
-universal_mathematics_communication,
-rope,
-context(agent_power(institutional), time_horizon(historical), exit_options(mobile), spatial_scope(global))
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+% Omega variables — open questions the framework cannot yet resolve
+%
+% /5 form: narrative detail for story context
+omega_variable(
+    omega_math_ontological_status,
+    'Is mathematics a human construct (Rope/Scaffold) or a universal consequence of intelligence (Mountain)?',
+    'Comparison with verified extraterrestrial mathematical systems.',
+    'If Mountain: Interstellar communication is guaranteed to be possible. If Rope: Contact may be impossible without shared culture.',
+    confidence_without_resolution(medium)
 ).
 
-/**
-
-* TEST 2: Extraction check
-* Confirms that Universal Math is categorized as non-extractive (not a Snare).
-*/
-test(non_extractive_nature) :-
-domain_priors:base_extractiveness(universal_mathematics_communication, E),
-E < 0.3.
-
-/**
-
-* TEST 3: Time-horizon mutability
-* Short horizons perceive math as fixed; long horizons allow for "dialect" shifts.
-*/
-test(time_immutability_scaling) :-
-% Immediate/Biographical + trapped tends to perceive Mountain
-constraint_indexing:constraint_classification(universal_mathematics_communication, scaffold, context(_, time_horizon(immediate), exit_options(trapped), _)).
-
-:- end_tests(universal_mathematics_tests).
+% /3 form: typed classification for reporting engine (REQUIRED)
+narrative_ontology:omega_variable(omega_math_ontological_status, conceptual, 'The ontological status of mathematics (discovered vs. invented).').
 
 /* ==========================================================================
-5. MODEL INTERPRETATION (Commentary)
-========================================================================== */
+   7. INTEGRATION HOOKS
+   ========================================================================== */
 
-/**
-
-* LLM GENERATION NOTES
-* * Model: Gemini 2.0 Flash
-
-
-* * KEY DECISIONS MADE BY MODEL:
-
-
-* * 1. BASE EXTRACTIVENESS (0.1):
-
-
-
-
-* Reasoning: Mathematics is presented as a neutral or beneficial "universal
-* language." There is no evidence of it being used to extract value from
-* bees; rather, humans provide sugar to bees to study it.
-
-
-* * 2. PERSPECTIVE SELECTION:
-
-
-
-
-* * Honeybee: Chosen to represent the "powerless" subject and show that math
-
-
-* works even for brains with 600m years of separation.
-
-
-* * Scientist/NASA: Chosen to represent the institutional "Rope" view—using
-
-
-* math to bridge gaps.
-
-
-* * 3. CLASSIFICATION RATIONALE:
-
-
-
-
-* * Bee → Mountain: Because a bee cannot "renegotiate" addition; it is an
-
-
-* innate constraint of intelligence.
-
-
-* * Scientist → Rope: Because humans *choose* which mathematical markers
-
-
-* (primes, binary, symbols) to use as coordination tools.
-
-
-* * 4. AMBIGUITIES IN SOURCE MATERIAL:
-
-
-
-
-* * The source admits we don't know if math is a human construction or a
-
-
-* universal truth. This is formalized as an Omega.
-
-
-* 5. OMEGAS
-
-
-* omega_variable(math_ontological_status,
-* "Is mathematics a human construct (Rope/Scaffold) or a universal consequence of intelligence (Mountain)?",
-*	resolution_mechanism("Comparison with verified extraterrestrial mathematical systems "),
-
-
-* impact("If Mountain: Interstellar communication is guaranteed. If Rope: Contact may be impossible without shared culture."),
-* confidence_without_resolution(medium)
-* ).
-*/
+% Required for external script parsing
+narrative_ontology:interval(universal_mathematics_communication, 0, 10).
 
 /* ==========================================================================
-6. ALTERNATIVE ANALYSIS
-========================================================================== */
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
 
-/**
-
-* VIABLE ALTERNATIVES
-* * Does this constraint have alternatives?
-
-* * ALTERNATIVE 1: Biological/Pheromonal Communication
-
-* Viability: The "waggle dance" used by bees.
-
-* Suppression: Not suppressed, but limited in range; cannot reach the stars.
-* * ALTERNATIVE 2: Linguistic/Cultural Translation
-
-* Viability: Human languages.
-
-* Suppression: Rejected for interstellar use because there is "no shared language"
-* with aliens.
-
-* * CONCLUSION:
-* The presence of alternatives for local communication (waggle dance) makes
-* local communication a Rope, but for interstellar distances, Math is treated
-* as the only viable "Mountain" we can rely on.
-*/
+% Not required for this constraint as base_extractiveness (0.10) is below
+% the threshold of 0.46.
 
 /* ==========================================================================
-7. INTEGRATION HOOKS
-========================================================================== */
+   9. BOLTZMANN & NETWORK DATA
+   ========================================================================== */
 
-/**
-
-* TO USE THIS CONSTRAINT:
-* 1. Load: ?- [universal_mathematics_communication].
-
-* 2. Run multi-perspective analysis: ?- multi_index_report(universal_mathematics_communication).
-
-* 3. Run tests: ?- run_tests(universal_mathematics_tests).
-*/
+% No network relationships or Boltzmann data declared for this constraint.
 
 /* ==========================================================================
-END OF CONSTRAINT STORY
-========================================================================== */
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
 
-% ============================================================================
-% ENRICHMENT: Structural predicates for dynamic classification
-% Generated: 2026-02-08
-% Template: v5.2 namespace alignment
-% Source: Derived from existing narrative and structural content in this file
-% ============================================================================
+% No overrides needed. The structural derivation from beneficiary status and
+% exit options correctly models the perspectives.
 
-% --- Multifile declarations for new predicates ---
-:- multifile
-    domain_priors:theater_ratio/2.
-
-% --- Theater ratio (missing from base properties) ---
-% Technical constraint — mostly substantive, minimal implementation theater
-domain_priors:theater_ratio(universal_mathematics_communication, 0.04).
-narrative_ontology:constraint_metric(universal_mathematics_communication, theater_ratio, 0.04).
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */

@@ -1,9 +1,9 @@
 % ============================================================================
 % CONSTRAINT STORY: comitatus_bond
 % ============================================================================
-% Generated: 2026-01-20
-% Model: Gemini 2.0 Flash
-% Source: Beowulf (Epic Poem)
+% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2024-07-28
 % ============================================================================
 
 :- module(constraint_comitatus_bond, []).
@@ -12,15 +12,39 @@
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
 
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
+
 % --- Namespace Hooks (Required for loading) ---
-:- multifile 
+:- multifile
     domain_priors:base_extractiveness/2,
     domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
     domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
-    constraint_indexing:constraint_classification/3.
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
+    narrative_ontology:boltzmann_floor_override/2,
+    constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3,
+    domain_priors:emerges_naturally/1,
+    narrative_ontology:omega_variable/3.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -28,226 +52,207 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: comitatus_bond
- * human_readable: The Germanic Comitatus Code
- * domain: social/political
- * temporal_scope: Migration Period / Early Middle Ages (c. 5th-6th Century)
- * spatial_scope: Northern Europe (Denmark/Sweden)
- * * SUMMARY:
- * The comitatus is the foundational socio-political constraint governing the relationship 
- * between a lord (gold-friend) and his thanes. It mandates absolute loyalty, the 
- * distribution of spoils for service, and the blood-feud obligation. To break it 
- * [cite_start]is to become "wrackful" (exiled), a fate often described as worse than death. [cite: 1]
- * * KEY AGENTS:
- * - [cite_start]Hrothgar: The "Ring-giver," an institutional figure who maintains the bond through generosity. [cite: 1]
- * - [cite_start]Beowulf: The idealized Thane, whose power is moderate but grows to institutional as a king. [cite: 1]
- * - [cite_start]Wiglaf: The loyal youth who illustrates the bond's binding nature during Beowulf's final fight. [cite: 1]
- * - [cite_start]The Cowardly Thanes: Those who flee, illustrating the "Snare" of social exile. [cite: 1]
- * * NARRATIVE ARC:
- * The poem opens with the establishment of Hrothgar's hall, Heorot, the physical manifestation 
- * of the comitatus. The constraint drives Beowulf's journey to help Hrothgar (repaying a 
- * debt of his father) and culminates in Wiglaf's refusal to abandon Beowulf against the 
- * [cite_start]dragon, even when all others have fled. [cite: 1]
+ *   constraint_id: comitatus_bond
+ *   human_readable: The Germanic Comitatus Code
+ *   domain: social/political
+ *
+ * SUMMARY:
+ *   The comitatus is the foundational socio-political constraint governing the
+ *   relationship between a lord (the "ring-giver") and his thanes in early
+ *   Germanic society. It mandates absolute loyalty in exchange for protection,
+ *   sustenance, and a share of spoils. Breaking the bond results in exile
+ *   (becoming "wrackful"), a fate often considered worse than death due to the
+ *   complete lack of social or economic alternatives.
+ *
+ * KEY AGENTS (by structural relationship):
+ *   - Thanes (e.g., Wiglaf, the cowardly thanes): Primary targets (powerless/trapped) — bear the extraction of life-risking service and absolute loyalty.
+ *   - Lords (e.g., Hrothgar, Beowulf as king): Primary beneficiaries (institutional/arbitrage) — benefit from a stable warrior class to defend and expand their domain.
+ *   - Analytical Observer: Sees the full structure as a hybrid coordination/extraction mechanism.
  */
 
 /* ==========================================================================
-   2. CORE SYSTEM INTEGRATION (The "Reality" Layer)
+   2. BASE PROPERTIES (DOMAIN PRIORS)
    ========================================================================== */
 
-% Required for [STEP 1] and [STEP 2] of the DR-Audit Suite
-narrative_ontology:interval(comitatus_era, 0, 10).
-narrative_ontology:constraint_claim(comitatus_bond, rope).
+% --- Numerical metrics ---
+% Rationale: Moderate. While the lord extracts life-risking labor, he provides
+% protection, land, and gold. It is a functional coordination with high cost.
+domain_priors:base_extractiveness(comitatus_bond, 0.40).
+% Rationale: High. Alternatives to the bond are practically invisible. To be
+% without a lord is to be a "wanderer," a social outcast with no rights.
+domain_priors:suppression_score(comitatus_bond, 0.80).
+% Rationale: Low. The system is highly functional, not performative.
+domain_priors:theater_ratio(comitatus_bond, 0.10).
 
-% Base extractiveness score
-% Rationale: Moderate. While the lord extracts life-risking labor, he 
-% provides protection, land, and gold. [cite_start]It is a functional coordination. [cite: 1]
-domain_priors:base_extractiveness(comitatus_bond, 0.4).
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(comitatus_bond, extractiveness, 0.40).
+narrative_ontology:constraint_metric(comitatus_bond, suppression_requirement, 0.80).
+narrative_ontology:constraint_metric(comitatus_bond, theater_ratio, 0.10).
 
-% Suppression score
-% Rationale: High. Alternatives to the bond are practically invisible. 
-% To be without a lord is to be a "wanderer" or a "wraith." [cite: 1]
-domain_priors:suppression_score(comitatus_bond, 0.8).
+% --- Constraint claim (must match analytical perspective type) ---
+narrative_ontology:constraint_claim(comitatus_bond, tangled_rope).
 
-% Constraint metric facts (bridge for classification engine)
-narrative_ontology:constraint_metric(comitatus_bond, extractiveness, 0.4).
-narrative_ontology:constraint_metric(comitatus_bond, suppression_requirement, 0.8).
-
-% Enforcement requirements
-% Requires active enforcement (gold-giving) and cultural transmission. [cite: 1]
+% --- Binary flags ---
+% Requires active enforcement (gold-giving, feasting) and cultural transmission.
 domain_priors:requires_active_enforcement(comitatus_bond).
 
-% Metrics required for Section 1 of the Executive Summary
-% BENEFICIARIES & VICTIMS
-narrative_ontology:constraint_beneficiary(comitatus_bond, tribal_stability).
-narrative_ontology:constraint_victim(comitatus_bond, [unferth, cowardly_thanes]).
+% --- Structural relationships (REQUIRED for non-mountain constraints) ---
+% Who benefits from this constraint existing?
+narrative_ontology:constraint_beneficiary(comitatus_bond, lords_and_tribal_leadership).
+% Who bears disproportionate cost?
+narrative_ontology:constraint_victim(comitatus_bond, thanes_and_warrior_class).
 
 /* ==========================================================================
-   3. INDEXED CLASSIFICATIONS (Perspectival Truth)
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × f(d) × σ(S)
+   where f(d) is the sigmoid directionality function.
+   The engine derives d from beneficiary/victim membership + exit_options.
    ========================================================================== */
 
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 1: WIGLAF - Mountain
-   --------------------------------------------------------------------------
-   
-   [cite_start]WHO: powerless - A young, unproven thane. [cite: 1]
-   [cite_start]WHEN: biographical - The code defines his entire identity and future. [cite: 1]
-   [cite_start]WHERE: trapped - Desertion means social death; there is no "exit." [cite: 1]
-   [cite_start]SCOPE: local - Focused on the immediate duty in the dragon's lair. [cite: 1]
-   
-   WHY THIS CLASSIFICATION:
-   For Wiglaf, the code is an unchangeable law. He cannot conceive of 
-   survival outside the bond. [cite_start]It is the "Mountain" that dictates his reality. [cite: 1]
-   
-   NARRATIVE EVIDENCE:
-   [cite_start]"I would rather the fire should enfold my body / with my gold-friend." [cite: 1]
-   -------------------------------------------------------------------------- */
+% PERSPECTIVE 1: THE LOYAL OR EXILED THANE (SNARE)
+% Agent who bears the most extraction. For the thane, the bond is coercive.
+% Loyalty is compelled by the threat of social death (exile), which is the
+% ultimate sanction in a world with no alternative social structures.
+% Engine derives d from: victim membership + trapped exit -> d ≈ 0.95 -> high χ.
+constraint_indexing:constraint_classification(comitatus_bond, snare,
+    context(agent_power(powerless),
+            time_horizon(biographical),
+            exit_options(trapped),
+            spatial_scope(regional))).
 
-% 2026-02-11: Fixed context arity — removed beneficiary/victim from context tuples (context/4 enforcement)
-constraint_indexing:constraint_classification(
-    comitatus_bond,
-    mountain,
-    context(
-        agent_power(powerless),
-        time_horizon(biographical),
-        exit_options(trapped),
-        spatial_scope(local)
-    )
-) :-
-    domain_priors:suppression_score(comitatus_bond, S),
-    S > 0.7,
-    !.
+% PERSPECTIVE 2: THE LORD / RING-GIVER (ROPE)
+% Agent who benefits most. For the lord, the bond is a pure coordination
+% mechanism to organize military power and ensure social stability.
+% Engine derives d from: beneficiary membership + arbitrage exit -> d ≈ 0.05 -> low/negative χ.
+constraint_indexing:constraint_classification(comitatus_bond, rope,
+    context(agent_power(institutional),
+            time_horizon(generational),
+            exit_options(arbitrage),
+            spatial_scope(national))).
 
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 2: HROTHGAR - Rope
-   --------------------------------------------------------------------------
-   
-   [cite_start]WHO: institutional - The King who uses the code to build Heorot. [cite: 1]
-   [cite_start]WHEN: generational - Concerned with the succession and tribal survival. [cite: 1]
-   [cite_start]WHERE: arbitrage - He can pay off feuds (as he did for Beowulf's father). [cite: 1]
-   [cite_start]SCOPE: national - The scope of the Spear-Danes. [cite: 1]
-   
-   WHY THIS CLASSIFICATION:
-   For the King, the code is a "Rope"—a functional tool for coordination. 
-   [cite_start]He knows it requires maintenance (gifts/mead) to keep the tribe together. [cite: 1]
-   
-   NARRATIVE EVIDENCE:
-   "He be-thought him... to bid men build a hall... and there-in all to deal 
-   [cite_start]out to young and old." [cite: 1]
-   -------------------------------------------------------------------------- */
-
-constraint_indexing:constraint_classification(
-    comitatus_bond,
-    rope,
-    context(
-        agent_power(institutional),
-        time_horizon(generational),
-        exit_options(arbitrage),
-        spatial_scope(national)
-    )
-) :-
-    !.
-
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE EXILED THANE - Snare
-   --------------------------------------------------------------------------
-   
-   [cite_start]WHO: powerless - The lordless man. [cite: 1]
-   [cite_start]WHEN: immediate - The pain of current isolation. [cite: 1]
-   [cite_start]WHERE: trapped - Nowhere to go but the "whale-road." [cite: 1]
-   [cite_start]SCOPE: continental - Wandering across many lands. [cite: 1]
-   
-   WHY THIS CLASSIFICATION:
-   For the one who breaks the code or loses his lord, the comitatus becomes 
-   a "Snare." It is a coercive system that now chokes his existence, as 
-   [cite_start]everyone else is bound by the "Rope" he has lost. [cite: 1]
-   
-   NARRATIVE EVIDENCE:
-   "He shall waken... and see before him the fallow waves... but the heart 
-   [cite_start]is the heavier." [cite: 1]
-   -------------------------------------------------------------------------- */
-
-constraint_indexing:constraint_classification(
-    comitatus_bond,
-    snare,
-    context(
-        agent_power(powerless),
-        time_horizon(immediate),
-        exit_options(trapped),
-        spatial_scope(continental)
-    )
-) :-
-    domain_priors:base_extractiveness(comitatus_bond, E),
-    E > 0.3,
-    !.
+% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
+% The analytical view recognizes both the genuine coordination function (Rope)
+% and the highly coercive, asymmetric extraction (Snare). The system cannot
+% be reduced to either pure function; it is a hybrid.
+% Engine derives d ≈ 0.72 for analytical perspective.
+constraint_indexing:constraint_classification(comitatus_bond, tangled_rope,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(global))).
 
 /* ==========================================================================
-   4. TESTS (What We Learn About Constraints)
+   4. VALIDATION TESTS
    ========================================================================== */
 
 :- begin_tests(comitatus_bond_tests).
 
-test(multi_perspective_variance) :-
-    constraint_indexing:constraint_classification(comitatus_bond, Type1, context(agent_power(powerless), _, exit_options(trapped), _)),
-    constraint_indexing:constraint_classification(comitatus_bond, Type2, context(agent_power(institutional), _, exit_options(arbitrage), _)),
-    Type1 \= Type2.
+test(perspectival_gap_is_snare_vs_rope) :-
+    % Verify the core perspectival gap between the target (thane) and beneficiary (lord).
+    constraint_indexing:constraint_classification(comitatus_bond, snare, context(agent_power(powerless), _, exit_options(trapped), _)),
+    constraint_indexing:constraint_classification(comitatus_bond, rope, context(agent_power(institutional), _, exit_options(arbitrage), _)).
 
-test(exile_as_snare) :-
-    % Verify that the powerless/trapped classification is Snare
-    constraint_indexing:constraint_classification(comitatus_bond, snare, context(agent_power(powerless), _, exit_options(trapped), _)).
+test(analytical_view_is_tangled_rope) :-
+    % The synthesis of the two perspectives is a Tangled Rope.
+    constraint_indexing:constraint_classification(comitatus_bond, tangled_rope, context(agent_power(analytical), _, _, _)).
 
-test(gold_enforcement) :-
+test(tangled_rope_structural_properties_present) :-
+    % Verify the three structural requirements for a Tangled Rope are declared.
+    narrative_ontology:constraint_beneficiary(comitatus_bond, _), % -> has_coordination_function
+    narrative_ontology:constraint_victim(comitatus_bond, _),     % -> has_asymmetric_extraction
     domain_priors:requires_active_enforcement(comitatus_bond).
 
 :- end_tests(comitatus_bond_tests).
 
 /* ==========================================================================
-   5. MODEL INTERPRETATION (Commentary)
+   5. GENERATIVE COMMENTARY
    ========================================================================== */
 
 /**
- * LLM GENERATION NOTES
- * * Model: Gemini 2.0 Flash
- * * KEY DECISIONS:
- * 1. CLASSIFICATION: The Comitatus code is the ultimate "Rope" for the 
- * survival of the tribe, but it is experienced as a "Mountain" (inevitability) 
- * [cite_start]by the noble and a "Snare" (shame/exile) by the failure. [cite: 1]
- * 2. EXTRACTIVENESS: Set at 0.4 because while it asks for the ultimate sacrifice 
- * (death), it offers the ultimate reward (immortality in song and lordly 
- * [cite_start]provision). [cite: 1]
+ * LOGIC RATIONALE:
+ *   The base extractiveness (ε=0.40) reflects the high cost (risk of death)
+ *   demanded of thanes, balanced by material rewards and social status. The
+ *   suppression score (0.80) is critical: the non-existence of viable
+ *   alternatives is what makes the system so coercive. A thane cannot simply
+ *   "opt out" and become a farmer; to be lordless is to be an outcast.
+ *
+ * PERSPECTIVAL GAP:
+ *   The gap is profound. For the lord (Hrothgar), the comitatus is a tool for
+ *   social order and defense—a classic Rope. For the thane (Wiglaf), it is a
+ *   coercive system where the only alternative to compliance is social death.
+ *   This high suppression and cost makes it a Snare from his perspective, even
+ *   if he embraces it willingly. The willingness is itself a product of the
+ *   constraint's totalizing nature.
+ *
+ * DIRECTIONALITY LOGIC:
+ *   - Beneficiaries: `lords_and_tribal_leadership`. They gain a loyal fighting
+ *     force, enabling stability and expansion.
+ *   - Victims: `thanes_and_warrior_class`. They bear the physical risks and are
+ *     trapped by the social code, exchanging autonomy for security.
+ *   This clear division drives the directionality calculation and the resulting
+ *   perspectival gap.
+ *
+ * MANDATROPHY ANALYSIS:
+ *   This is a canonical Tangled Rope. To call it a pure Rope ignores the
+ *   immense coercion and suppression of alternatives. To call it a pure Snare
+ *   ignores its genuine, and essential, coordination function for tribal
+ *   survival in a violent era. The Tangled Rope classification correctly
+ *   captures this dual nature, preventing mislabeling.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
+% /5 form: narrative detail for story context
 omega_variable(
     wyrd_nature,
-    'Is \'Wyrd\' (Fate) a literal Mountain constraint or a retrospective Rope used to explain failure?',
-    resolution_mechanism('Textual analysis of whether Beowulf attributes success to God or Fate consistently.'),
-    impact('If Mountain: The comitatus is secondary to Fate. If Rope: The comitatus is the primary driver.'),
+    'Is \'Wyrd\' (Fate) a literal Mountain constraint of physics, or a conceptual Rope used to rationalize outcomes within the comitatus system?',
+    'Textual analysis of whether characters attribute success/failure to Fate consistently, or instrumentally to uphold the social code.',
+    'If Mountain: The comitatus is secondary to an external, unchangeable reality. If Rope: The comitatus is the primary driver of action, and "Fate" is a post-hoc justification.',
     confidence_without_resolution(medium)
 ).
 
-/* ==========================================================================
-   7. ALTERNATIVE ANALYSIS
-   ========================================================================== */
-
-/**
- * VIABLE ALTERNATIVES
- * * ALTERNATIVE 1: Christian Individualism
- * Suppression: Actively suppressed by the heroic narrative, though 
- * blending occurs. The idea of the individual soul's salvation vs 
- * [cite_start]tribal glory is a nascent tension. [cite: 1]
- * * CONCLUSION:
- * The lack of viable alternatives beyond tribal membership makes this a 
- * [cite_start]"Rope" for the group but a "Mountain" for the individual. [cite: 1]
- */
+% /3 form: typed classification for reporting engine (REQUIRED)
+narrative_ontology:omega_variable(wyrd_nature, conceptual, 'Distinguishing the structural role of Fate (Wyrd) from its narrative function as justification for the comitatus code.').
 
 /* ==========================================================================
-   8. INTEGRATION HOOKS
+   7. INTEGRATION HOOKS
    ========================================================================== */
 
-% To use: ?- [constraints/comitatus_bond].
+% Required for external script parsing
+narrative_ontology:interval(comitatus_bond, 0, 10).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Not required, as base_extractiveness (0.40) is below the 0.46 threshold.
+
+/*
+narrative_ontology:measurement(comitatus_bond_tr_t0, comitatus_bond, theater_ratio, 0, 0.1).
+narrative_ontology:measurement(comitatus_bond_tr_t5, comitatus_bond, theater_ratio, 5, 0.1).
+narrative_ontology:measurement(comitatus_bond_tr_t10, comitatus_bond, theater_ratio, 10, 0.1).
+
+narrative_ontology:measurement(comitatus_bond_ex_t0, comitatus_bond, base_extractiveness, 0, 0.4).
+narrative_ontology:measurement(comitatus_bond_ex_t5, comitatus_bond, base_extractiveness, 5, 0.4).
+narrative_ontology:measurement(comitatus_bond_ex_t10, comitatus_bond, base_extractiveness, 10, 0.4).
+*/
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA
+   ========================================================================== */
+
+% Coordination type (enables Boltzmann floor + complexity offset)
+% The comitatus is a mechanism for enforcing a social contract.
+narrative_ontology:coordination_type(comitatus_bond, enforcement_mechanism).
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+% No overrides needed. The structural derivation from beneficiary/victim
+% declarations accurately models the power dynamics.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

@@ -1,26 +1,50 @@
 % ============================================================================
 % CONSTRAINT STORY: martian_signal_latency
 % ============================================================================
-% Generated: 2026-01-19
-% Model: Gemini 2.0 Flash
-% Source: NASA JPL / Planetary Science Mission Operations
+% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2024-07-27
 % ============================================================================
 
-:- module(constraint_martian_latency, []).
+:- module(constraint_martian_signal_latency, []).
 
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
 
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
+
 % --- Namespace Hooks (Required for loading) ---
-:- multifile 
+:- multifile
     domain_priors:base_extractiveness/2,
     domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
     domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
-    constraint_indexing:constraint_classification/3.
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
+    narrative_ontology:boltzmann_floor_override/2,
+    constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3,
+    domain_priors:emerges_naturally/1,
+    narrative_ontology:omega_variable/3.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -28,256 +52,233 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: martian_signal_latency
- * human_readable: Martian Signal Latency (One-Way Light Time)
- * domain: technological/scientific
- * temporal_scope: 1965-Present
- * spatial_scope: Interplanetary (Earth-Mars)
- * * SUMMARY:
- * Martian signal latency is the absolute delay in communication between Earth 
- * and Mars caused by the speed of light. Ranging from 3 to 22 minutes depending 
- * on orbital positions, this constraint dictates the architecture of all 
- * deep-space missions, rendering real-time teleoperation of assets impossible.
- * * KEY AGENTS:
- * - Rover Driver (JPL): Individual powerless; must wait for "next sol" to 
- * see the results of a command.
- * - Mission Architect: Institutional; designs the "Rope" of autonomy to 
- * bypass the "Snare" of latency.
- * - Radio Physicist: Analytical; measures the constraint as a fundamental 
- * property of the universe.
- * * NARRATIVE ARC:
- * Latency is the ultimate Mountain—a natural law that cannot be negotiated. 
- * In the early days of exploration, it was a Snare that threatened to destroy 
- * any lander that couldn't think for itself. To survive, NASA wove the 
- * Rope of autonomy, transforming a terminal physical limit into a 
- * predictable coordination rhythm for mission operations.
+ *   constraint_id: martian_signal_latency
+ *   human_readable: Martian Signal Latency (One-Way Light Time)
+ *   domain: technological/scientific
+ *
+ * SUMMARY:
+ *   Martian signal latency is the absolute delay in communication between Earth
+ *   and Mars caused by the finite speed of light. Ranging from 3 to 22 minutes
+ *   one-way depending on orbital positions, this constraint dictates the
+ *   architecture of all deep-space missions, rendering real-time teleoperation
+ *   of assets impossible. It is a fundamental, non-negotiable property of
+ *   the physical universe.
+ *
+ * KEY AGENTS (by structural relationship):
+ *   - Rover Driver (JPL): Primary target (powerless/trapped) — cannot act in
+ *     real-time; must operate asynchronously.
+ *   - Mission Architect (NASA): Analytical observer (institutional/arbitrage) —
+ *     designs systems (e.g., rover autonomy) to operate within the constraint.
+ *   - Radio Physicist: Analytical observer (analytical/analytical) — measures
+ *     the constraint as a fundamental property of spacetime.
  */
 
 /* ==========================================================================
-   2. CORE SYSTEM INTEGRATION (The "Reality" Layer)
+   2. BASE PROPERTIES (DOMAIN PRIORS)
    ========================================================================== */
 
-% Required for [STEP 1] and [STEP 2] of the DR-Audit Suite
-narrative_ontology:interval(mariner_to_msl_era, 0, 10).
-narrative_ontology:constraint_claim(martian_signal_latency, scaffold).
+% --- Numerical metrics ---
+domain_priors:base_extractiveness(martian_signal_latency, 0.05).
+domain_priors:suppression_score(martian_signal_latency, 0.0).
+domain_priors:theater_ratio(martian_signal_latency, 0.02).
 
-% Base extractiveness score (0.0-1.0)
-% Rationale: 0.1. Low; the speed of light does not "extract" value in a 
-% coercive sense, but it imposes a high "opportunity cost" on mission 
-% duration and real-time scientific discovery.
-domain_priors:base_extractiveness(martian_signal_latency, 0.1).
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(martian_signal_latency, extractiveness, 0.05).
+narrative_ontology:constraint_metric(martian_signal_latency, suppression_requirement, 0.0).
+narrative_ontology:constraint_metric(martian_signal_latency, theater_ratio, 0.02).
 
-% Suppression score (0.0-1.0)
-% Rationale: 1.0. Absolute; signal latency suppresses the very possibility 
-% of real-time remote control. There are no known physical alternatives 
-% to electromagnetic wave propagation.
-domain_priors:suppression_score(martian_signal_latency, 1.0).
+% --- NL Profile Metrics (required for mountain constraints) ---
+% These feed the natural_law_signature certification chain in
+% structural_signatures.pl. Without these, the NL signature defaults to 0.5
+% and fails certification.
+narrative_ontology:constraint_metric(martian_signal_latency, accessibility_collapse, 1.0).
+narrative_ontology:constraint_metric(martian_signal_latency, resistance, 0.0).
 
-% Constraint metric facts (bridge for classification engine)
-narrative_ontology:constraint_metric(martian_signal_latency, extractiveness, 0.1).
-narrative_ontology:constraint_metric(martian_signal_latency, suppression_requirement, 1.0).
+% --- Constraint claim (must match analytical perspective type) ---
+narrative_ontology:constraint_claim(martian_signal_latency, mountain).
 
-% Enforcement requirements
-% Emerges naturally from the physics of the universe.
+% --- Emergence flag (required for mountain constraints) ---
+% This constraint emerges naturally from the physics of the universe.
+% Required for the mountain metric gate.
 domain_priors:emerges_naturally(martian_signal_latency).
 
-% Metrics required for Section 1 of the Executive Summary
-% BENEFICIARIES & VICTIMS
-narrative_ontology:constraint_beneficiary(martian_signal_latency, autonomy_software_development).
-narrative_ontology:constraint_victim(martian_signal_latency, real_time_human_intuition).
-narrative_ontology:constraint_victim(martian_signal_latency, mission_cadence).
+% --- Structural relationships (REQUIRED for non-mountain constraints) ---
+% As a Mountain (natural law), this constraint has no direct beneficiaries or
+% victims in the structural sense. Human adaptations to it (e.g., autonomy
+% software) are separate constraints (Ropes) that are affected by this one.
+% No enrichment needed.
 
 /* ==========================================================================
-   3. INDEXED CLASSIFICATIONS (Perspectival Truth)
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × f(d) × σ(S)
+   where f(d) is the sigmoid directionality function:
+     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
+   The engine derives d from beneficiary/victim membership + exit_options.
+   Scope modifiers: local=0.8, regional=0.9, national=1.0,
+                    continental=1.1, global=1.2, universal=1.0.
+   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
+   Do not add measurement_basis, beneficiary/victim, or other metadata.
+   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 1: ROVER DRIVER - Mountain
-   --------------------------------------------------------------------------
-   
-   WHO: powerless - Bound by the laws of physics; cannot "drive" 
-         fast enough to outrun the delay.
-   WHEN: immediate - Tactical focus on the current wheel-turn or hazard.
-   WHERE: trapped - Bound by the Earth-Mars distance.
-   SCOPE: local - Focused on the immediate traverse of the rover.
-   
-   WHY THIS CLASSIFICATION:
-   For the driver, the delay is a Mountain. It is an unchangeable, 
-   non-negotiable fact of their workday. They cannot "negotiate" with 
-   the speed of light to get a faster image back from the surface.
-   -------------------------------------------------------------------------- */
+% This is a uniform-type constraint (Mountain-only). The classification is
+% invariant across all perspectives because it is a fundamental law of physics.
+% The perspectival minimum (powerless/institutional) is relaxed.
 
+% PERSPECTIVE 1: THE ROVER DRIVER (MOUNTAIN)
+% Agent who directly experiences the operational impossibility of real-time control.
+constraint_indexing:constraint_classification(martian_signal_latency, mountain,
+    context(agent_power(powerless),
+            time_horizon(immediate),
+            exit_options(trapped),
+            spatial_scope(local))).
 
+% PERSPECTIVE 2: THE MISSION ARCHITECT (MOUNTAIN)
+% Agent who must design systems around this immutable fact.
+constraint_indexing:constraint_classification(martian_signal_latency, mountain,
+    context(agent_power(institutional),
+            time_horizon(generational),
+            exit_options(arbitrage), % Can 'exit' by designing more autonomy
+            spatial_scope(global))).
 
-constraint_indexing:constraint_classification(
-    martian_signal_latency,
-    scaffold,
-    context(
-        agent_power(powerless),
-        time_horizon(immediate),
-        exit_options(trapped),
-        spatial_scope(local)
-    )
-) :-
+% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (MOUNTAIN)
+% The physicist measuring a fundamental constant of nature.
+constraint_indexing:constraint_classification(martian_signal_latency, mountain,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).
+
+% PERSPECTIVE 4: THE FUTURE MARS COLONIST (MOUNTAIN)
+% An individual whose entire life is structured by this communication barrier.
+constraint_indexing:constraint_classification(martian_signal_latency, mountain,
+    context(agent_power(moderate),
+            time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(global))).
+
+/* ==========================================================================
+   4. VALIDATION TESTS
+   ========================================================================== */
+
+:- begin_tests(martian_signal_latency_tests).
+
+test(type_invariance) :-
+    % Verify that as a natural law, it is a Mountain from all perspectives.
+    constraint_indexing:constraint_classification(martian_signal_latency, Type1, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(martian_signal_latency, Type2, context(agent_power(institutional), _, _, _)),
+    constraint_indexing:constraint_classification(martian_signal_latency, Type3, context(agent_power(analytical), _, _, _)),
+    Type1 == mountain,
+    Type2 == mountain,
+    Type3 == mountain.
+
+test(mountain_thresholds) :-
+    % Verify metrics adhere to Mountain classification thresholds.
+    config:param(extractiveness_metric_name, ExtMetricName),
+    config:param(suppression_metric_name, SuppMetricName),
+    narrative_ontology:constraint_metric(martian_signal_latency, ExtMetricName, E),
+    narrative_ontology:constraint_metric(martian_signal_latency, SuppMetricName, S),
+    E =< 0.25,
+    S =< 0.05.
+
+test(natural_law_profile_present) :-
+    % Verify the required metrics for NL certification are present.
+    narrative_ontology:constraint_metric(martian_signal_latency, accessibility_collapse, AC),
+    narrative_ontology:constraint_metric(martian_signal_latency, resistance, R),
     domain_priors:emerges_naturally(martian_signal_latency),
-    !.
+    AC >= 0.85,
+    R =< 0.15.
 
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 2: MISSION MANAGER - Rope
-   --------------------------------------------------------------------------
-   
-   WHO: institutional - Power to design the mission architecture and 
-         software capabilities.
-   WHEN: biographical - Planning the multi-year mission arc.
-   WHERE: mobile - Can choose to invest in more autonomy or slower 
-         "directed" sequences.
-   SCOPE: national - Managing the US planetary exploration budget.
-   
-   WHY THIS CLASSIFICATION:
-   Management views the latency as a Rope. It is the core coordination 
-   mechanism that dictates how they structure their teams (e.g., Sol-path 
-   planning cycles). They "weave" the mission's software around the delay, 
-   using it as a structural anchor for the entire project.
-   -------------------------------------------------------------------------- */
-
-constraint_indexing:constraint_classification(
-    martian_signal_latency,
-    rope,
-    context(
-        agent_power(institutional),
-        time_horizon(biographical),
-        exit_options(mobile),
-        spatial_scope(national)
-    )
-) :-
-    domain_priors:base_extractiveness(martian_signal_latency, E),
-    E < 0.5,
-    !.
-
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 3: MARS COLONIST (FUTURE) - Snare
-   --------------------------------------------------------------------------
-   
-   WHO: individual_moderate - Has agency on Mars but is socially/technologically 
-         bound to Earth for resources/data.
-   WHEN: biographical - Lifetime spent on another planet.
-   WHERE: constrained - High cost of communication; cannot "call home" for help.
-   SCOPE: global - Impact on interplanetary civilization.
-   
-   WHY THIS CLASSIFICATION:
-   For a future colonist, the 20-minute lag is a Snare. It extracts 
-   human connection and chokes off the ability to receive emergency 
-   instructions from Earth in real-time. It separates the two worlds 
-   into distinct, often asynchronous realities.
-   -------------------------------------------------------------------------- */
-
-constraint_indexing:constraint_classification(
-    martian_signal_latency,
-    snare,
-    context(
-        agent_power(individual_moderate),
-        time_horizon(biographical),
-        exit_options(constrained),
-        spatial_scope(global)
-    )
-) :-
-    domain_priors:suppression_score(martian_signal_latency, S),
-    S > 0.8,
-    !.
+:- end_tests(martian_signal_latency_tests).
 
 /* ==========================================================================
-   4. TESTS (What We Learn About Constraints)
-   ========================================================================== */
-
-:- begin_tests(martian_latency_tests).
-
-test(multi_perspective_variance) :-
-    % Driver (Mountain) vs Manager (Rope) vs Colonist (Snare)
-    constraint_indexing:constraint_classification(martian_signal_latency, T1, context(powerless, immediate, trapped, local)),
-    constraint_indexing:constraint_classification(martian_signal_latency, T2, context(institutional, biographical, mobile, national)),
-    constraint_indexing:constraint_classification(martian_signal_latency, T3, context(individual_moderate, biographical, constrained, global)),
-    T1 \= T2, T2 \= T3.
-
-test(absolute_suppression) :-
-    % Latency should always show maximum suppression of real-time control
-    domain_priors:suppression_score(martian_signal_latency, S),
-    S =:= 1.0.
-
-:- end_tests(martian_latency_tests).
-
-/* ==========================================================================
-   5. MODEL INTERPRETATION (Commentary)
+   5. GENERATIVE COMMENTARY
    ========================================================================== */
 
 /**
- * LLM GENERATION NOTES
- * * Model: Gemini 2.0 Flash
- * * KEY DECISIONS:
- * 1. SUPPRESSION SCORE (1.0): This is the defining characteristic of 
- * the speed of light. It is the only constraint in this system where 
- * suppression is legally and physically absolute.
- * 2. CLASSIFICATION: I primary-labeled this as a 'Mountain'. While 
- * mission managers treat it as a 'Rope' for planning, they are 
- * effectively coordinating within a prison of physics.
- * 3. EXTRACTIVENESS: I set this low (0.1) because the universe is not 
- * "extractive" in a moral sense, though the *result* of the constraint 
- * is the extraction of time.
+ * LOGIC RATIONALE:
+ *   This constraint is a canonical example of a Mountain. Its properties are
+ *   derived from fundamental physics, not human systems.
+ *
+ *   - Extractiveness (0.05): Low. The speed of light does not "extract" value
+ *     in a coercive sense, but it imposes an irreducible opportunity cost on
+ *     mission duration and real-time scientific discovery.
+ *   - Suppression (0.0): The suppression score for a natural law is zero. It
+ *     does not "suppress" alternatives (like FTL communication) in the way a
+ *     human policy suppresses dissent; the alternatives are simply physically
+ *     incoherent or non-existent. The constraint doesn't need to expend energy
+ *     to maintain its dominance.
+ *   - NL Profile: Accessibility Collapse is 1.0 because no alternative is
+ *     conceivable under current physics. Resistance is 0.0 because one cannot
+ *     meaningfully "resist" the speed of light.
+ *
+ * PERSPECTIVAL GAP:
+ *   There is no perspectival gap. As a fundamental physical law, its
+ *   classification is Mountain from all possible indices. Human agents can
+ *   build adaptive systems (Ropes, like the sol-based planning cycle) in
+ *   response to the Mountain, but this does not change the nature of the
+ *   Mountain itself. This aligns with the ε-invariance principle: the human
+ *   adaptation is a separate constraint with its own properties.
+ *
+ * DIRECTIONALITY LOGIC:
+ *   As a Mountain, this constraint does not have beneficiaries or victims.
+ *   The concept is inapplicable to a natural law.
+ *
+ * MANDATROPHY ANALYSIS:
+ *   The classification as a uniform Mountain prevents mislabeling a physical
+ *   law as a human-construct like a Snare or Rope. It correctly identifies
+ *   the constraint as an immutable boundary condition for human action, not
+ *   a product of it.
  */
 
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+% Omega variables — open questions the framework cannot yet resolve
+%
+% /5 form: narrative detail for story context
 omega_variable(
-    quantum_entanglement_comms,
-    "Will quantum entanglement eventually provide a non-extractive Rope 
-     that bypasses the light-speed Mountain?",
-    resolution_mechanism("Monitor theoretical physics for proof of FTL information transfer"),
-    impact("If Yes: Signal latency was a temporary Snare. If No: It is an 
-            eternal Mountain of the physical world."),
+    omega_martian_signal_latency,
+    'Will quantum entanglement or other exotic physics provide a method for faster-than-light information transfer?',
+    'Resolution requires a fundamental breakthrough in theoretical and experimental physics, specifically violating the no-communication theorem.',
+    'If Yes: Signal latency was a temporary Scaffold of physics, not a permanent Mountain. If No: It remains an eternal Mountain.',
     confidence_without_resolution(low)
 ).
 
-/* ==========================================================================
-   6. ALTERNATIVE ANALYSIS
-   ========================================================================== */
-
-/**
- * VIABLE ALTERNATIVES
- * * ALTERNATIVE 1: On-Site Human Presence
- * Viability: Sending humans to Mars eliminates the latency constraint 
- * for local operations, though it creates a new "Mountain" of life 
- * support.
- * Suppression: Suppressed by current launch technology, budget, and 
- * radiation risk thresholds.
- * * ALTERNATIVE 2: Advanced AI Autonomy
- * Viability: Moving the "Decision Brain" to the rover (e.g., AutoNav) 
- * allows the mission to ignore the latency Mountain for local safety.
- * * CONCLUSION:
- * The existence of Autonomy as a viable alternative shifts the 
- * experience of the latency from a terminal Snare (mission death) 
- * to a manageable Rope (planned delay).
- */
+% /3 form: typed classification for reporting engine (REQUIRED)
+narrative_ontology:omega_variable(omega_martian_signal_latency, empirical, 'Possibility of FTL information transfer via exotic physics.').
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% 1. Load: ?- [martian_signal_latency].
-% 2. Analyze: ?- multi_index_report(martian_signal_latency).
+% Required for external script parsing
+narrative_ontology:interval(martian_signal_latency, 0, 10).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Not applicable. As a physical constant, the metrics do not drift over time.
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA
+   ========================================================================== */
+
+% --- Network Decomposition (Constraint Families) ---
+% The human response to this Mountain is a separate constraint. For example,
+% the rigid "sol-based" planning cycle used by JPL is a Rope built to
+% coordinate activity around the latency. This could be modeled as:
+%
+% narrative_ontology:affects_constraint(martian_signal_latency, jpl_sol_planning_cycle).
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+% Not applicable. This is a Mountain with no beneficiaries or victims.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
-
-% ============================================================================
-% ENRICHMENT: Structural predicates for dynamic classification
-% Generated: 2026-02-08
-% Template: v5.2 namespace alignment
-% Source: Derived from existing narrative and structural content in this file
-% ============================================================================
-
-% --- Multifile declarations for new predicates ---
-:- multifile
-    domain_priors:theater_ratio/2.
-
-% --- Theater ratio (missing from base properties) ---
-% Technical constraint — mostly substantive, minimal implementation theater
-domain_priors:theater_ratio(martian_signal_latency, 0.02).
-narrative_ontology:constraint_metric(martian_signal_latency, theater_ratio, 0.02).

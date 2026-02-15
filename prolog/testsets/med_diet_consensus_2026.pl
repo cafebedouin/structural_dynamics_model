@@ -1,9 +1,9 @@
 % ============================================================================
 % CONSTRAINT STORY: med_diet_consensus_2026
 % ============================================================================
-% Generated: 2026-01-21
-% Model: Gemini 2.0 Flash
-% Source: "The one diet that’s good for everything" by Carissa Wong (Jan 2026)
+% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2024-07-15
 % ============================================================================
 
 :- module(constraint_med_diet_consensus_2026, []).
@@ -12,13 +12,33 @@
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
 
-:- multifile 
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile
     domain_priors:base_extractiveness/2,
     domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
     domain_priors:requires_active_enforcement/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:coordination_type/2,
+    narrative_ontology:omega_variable/3,
     constraint_indexing:constraint_classification/3.
 
 /* ==========================================================================
@@ -27,474 +47,240 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: med_diet_consensus_2026
- * human_readable: Mediterranean Diet Scientific Hegemony
- * domain: health/scientific/economic
- * temporal_scope: 1999-2026 (The "RCT Era" of nutrition)
- * spatial_scope: Global (Scientific/Medical community)
- * * SUMMARY:
- * The establishment of the Mediterranean diet as the "gold standard" of nutrition 
- * through Randomized Controlled Trials (RCTs). This creates a normative health 
- * constraint where alternative dietary patterns are classified as "fads" or 
- * "sub-optimal," influencing insurance, public health policy, and social status.
- * * KEY AGENTS:
- * - Institutional Scientist: (e.g., Luigi Fontana) - Views the diet as a verified 
- * biological tool for longevity.
- * - Health-Conscious Citizen: (Individual Moderate) - Experiences the diet as a 
- * voluntary coordination mechanism for better health.
- * - Low-Income Subject: (Individual Powerless) - Experiences the diet as a 
- * normative "Snare" due to the high cost of fresh legumes, fish, and olive oil.
- * * NARRATIVE ARC:
- * From 1940s observation (Ancel Keys) to 1999 heart attack trials, to 2026 
- * consensus. The constraint moves from a "suggestion" to a "scientific truth" 
- * that dictates what is considered "delicious" and "planetary-friendly."
+ *   constraint_id: med_diet_consensus_2026
+ *   human_readable: Mediterranean Diet Scientific Hegemony
+ *   domain: health/scientific/economic
+ *
+ * SUMMARY:
+ *   This constraint models the socio-economic and scientific consensus that
+ *   establishes the Mediterranean diet as the "gold standard" of nutrition.
+ *   While based on positive health outcomes, the consensus functions as a
+ *   Tangled Rope: it provides a genuine coordination benefit for public health
+ *   while simultaneously creating economic extraction for low-income populations
+ *   and suppressing alternative dietary patterns by classifying them as "fads"
+ *   or "sub-optimal." This influences insurance, public health policy, and
+ *   social status.
+ *
+ * KEY AGENTS (by structural relationship):
+ *   - Low-Income Populations: Primary target (powerless/trapped) — bears economic extraction from high food costs and social pressure.
+ *   - Public Health Bodies & Scientists: Primary beneficiary (institutional/mobile) — benefits from a clear, evidence-backed standard for policy and research.
+ *   - Processed Food Industry: Secondary victim (organized/constrained) — loses market share and legitimacy.
+ *   - Analytical Observer: Sees the full structure of coordination and asymmetric extraction.
  */
 
 /* ==========================================================================
-   2. BASE PROPERTIES (Reality Layer)
+   2. BASE PROPERTIES (DOMAIN PRIORS)
    ========================================================================== */
 
-% Required for [STEP 1] and [STEP 2] of the DR-Audit Suite
-narrative_ontology:interval(med_diet_consensus_2026, 0, 10).
-narrative_ontology:constraint_claim(med_diet_consensus_2026, snare).
+% --- Numerical metrics ---
+% Rationale: The economic cost of "required" foods (olive oil, fresh fish, nuts)
+% for low-income groups, plus the social cost of non-compliance, represents
+% significant extraction.
+domain_priors:base_extractiveness(med_diet_consensus_2026, 0.48).
 
-% Base extractiveness score: 0.2 (Low)
-% Rationale: The primary beneficiary is the subject's own health and the planet. 
-% However, there is mild asymmetry in "health-washing" and the premium pricing 
-% of Mediterranean staples.
-domain_priors:base_extractiveness(med_diet_consensus_2026, 0.2).
+% Rationale: The scientific consensus actively delegitimizes and suppresses
+% alternative dietary models ("fads," "beaten in RCTs"), creating high barriers
+% to their adoption in mainstream medicine and public health.
+domain_priors:suppression_score(med_diet_consensus_2026, 0.65).
 
-% Suppression score: 0.4 (Moderate)
-% Rationale: The text explicitly dismisses "dietary fads" and contrasts the 
-% Mediterranean diet with the "low-fat" alternative which was beaten in RCTs. 
-% Alternatives are visible but scientifically delegitimized.
-domain_priors:suppression_score(med_diet_consensus_2026, 0.4).
+% Rationale: The costs and benefits are real; the constraint is not primarily
+% performative, though it has status-signaling elements.
+domain_priors:theater_ratio(med_diet_consensus_2026, 0.17).
 
-% Constraint metric facts (bridge for classification engine)
-narrative_ontology:constraint_metric(med_diet_consensus_2026, extractiveness, 0.2).
-narrative_ontology:constraint_metric(med_diet_consensus_2026, suppression_requirement, 0.4).
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(med_diet_consensus_2026, extractiveness, 0.48).
+narrative_ontology:constraint_metric(med_diet_consensus_2026, suppression_requirement, 0.65).
+narrative_ontology:constraint_metric(med_diet_consensus_2026, theater_ratio, 0.17).
 
-% Enforcement: Emerges naturally through consensus/scientific validation.
-domain_priors:emerges_naturally(med_diet_consensus_2026).
+% --- Constraint claim (must match analytical perspective type) ---
+narrative_ontology:constraint_claim(med_diet_consensus_2026, tangled_rope).
 
-% BENEFICIARIES & VICTIMS
+% --- Binary flags ---
+% Rationale: The consensus is actively maintained by journals, universities,
+% public health bodies, and media, not a law of nature.
+domain_priors:requires_active_enforcement(med_diet_consensus_2026).
+
+% --- Structural relationships (REQUIRED for non-mountain constraints) ---
+% Who benefits from this constraint existing?
 narrative_ontology:constraint_beneficiary(med_diet_consensus_2026, global_healthcare_systems).
-narrative_ontology:constraint_beneficiary(med_diet_consensus_2026, planetary_ecology).
+narrative_ontology:constraint_beneficiary(med_diet_consensus_2026, public_health_scientists).
+
+% Who bears disproportionate cost?
+narrative_ontology:constraint_victim(med_diet_consensus_2026, low_income_populations).
 narrative_ontology:constraint_victim(med_diet_consensus_2026, processed_food_industry).
-narrative_ontology:constraint_victim(med_diet_consensus_2026, low_income_populations). % (Economic extraction via food-pricing)
 
 /* ==========================================================================
-   3. INDEXED CLASSIFICATIONS (Perspectival Truth)
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × f(d) × σ(S)
    ========================================================================== */
 
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 1: INSTITUTIONAL SCIENTIST - Rope
-   --------------------------------------------------------------------------
-   WHO: institutional (Rule-making/Scientific consensus)
-   WHEN: generational (Thinking in terms of decades of evidence)
-   WHERE: mobile (Can choose different research focuses)
-   SCOPE: global (The "Scientific Gold Standard")
-   
-   WHY THIS CLASSIFICATION:
-   The scientist sees the diet as a "Rope"—a beneficial coordination mechanism 
-   grounded in RCT data. It is a tool to be used to improve public health 
-   outcomes, with high degrees of freedom for the expert to recommend or tweak.
-   
-   NARRATIVE EVIDENCE:
-   "It’s not only healthy, it’s also extremely tasty... established it as 
-   the scientific gold standard."
-   -------------------------------------------------------------------------- */
+% PERSPECTIVE 1: THE PRIMARY TARGET (SNARE)
+% For those who cannot afford fresh fish, nuts, and high-quality olive oil,
+% the "Gold Standard" acts as a Snare. It is a normative requirement for
+% health that is economically inaccessible, creating systemic exclusion.
+% Engine derives d ≈ 0.95 → high χ.
+constraint_indexing:constraint_classification(med_diet_consensus_2026, snare,
+    context(agent_power(powerless),
+            time_horizon(biographical),
+            exit_options(trapped),
+            spatial_scope(national))).
 
-constraint_indexing:constraint_classification(
-    med_diet_consensus_2026,
-    rope,
-    context(
-        agent_power(institutional),
-        time_horizon(generational),
-        exit_options(mobile),
-        spatial_scope(global)
-    )
-).
+% PERSPECTIVE 2: THE PRIMARY BENEFICIARY (ROPE)
+% The scientist or public health body sees the diet as a "Rope"—a beneficial
+% coordination mechanism grounded in RCT data. It is a tool to improve public
+% health outcomes, with low perceived extraction.
+% Engine derives d ≈ 0.15 → low/negative χ.
+constraint_indexing:constraint_classification(med_diet_consensus_2026, rope,
+    context(agent_power(institutional),
+            time_horizon(generational),
+            exit_options(mobile),
+            spatial_scope(global))).
 
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 2: LOW-INCOME CITIZEN - Snare
-   --------------------------------------------------------------------------
-   WHO: powerless (No control over food supply/pricing)
-   WHEN: biographical (Short-term survival/budget)
-   WHERE: trapped (Living in food deserts or economic constraints)
-   SCOPE: local (Limited to local supermarket inventory)
-   
-   WHY THIS CLASSIFICATION:
-   For those who cannot afford fresh fish, nuts, and high-quality olive oil, 
-   the "Gold Standard" acts as a Snare. It is a normative requirement for 
-   health that is economically inaccessible, creating a sense of failure or 
-   systemic exclusion while the "experts" celebrate its deliciousness.
-   
-   NARRATIVE EVIDENCE:
-   The article focuses on "fibre, vegetables, legumes, fruit, nuts, fish" 
-   without addressing the income levels of participants in the Seven Countries 
-   Study, which Ancel Keys ignored.
-   -------------------------------------------------------------------------- */
-
-constraint_indexing:constraint_classification(
-    med_diet_consensus_2026,
-    snare,
-    context(
-        agent_power(powerless),
-        time_horizon(biographical),
-        exit_options(trapped),
-        spatial_scope(local)
-    )
-).
-
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 3: BIOLOGICAL ANALYST - Mountain
-   --------------------------------------------------------------------------
-   WHO: analytical (Observer of physiology)
-   WHEN: civilizational (Evolutionary human metabolism)
-   WHERE: analytical (Universal application)
-   SCOPE: global (Biological reality)
-   
-   WHY THIS CLASSIFICATION:
-   From an evolutionary biology perspective, the human body's positive response 
-   to these specific nutrient ratios (Omega-3s, fibre) is a "Mountain." It is 
-   not a choice but a fixed biological law of human health that we must 
-   navigate, similar to the law of gravity.
-   
-   NARRATIVE EVIDENCE:
-   "Time and time again, scientists have found that one diet beats all others... 
-   backed up by decades of evidence."
-   -------------------------------------------------------------------------- */
-
-constraint_indexing:constraint_classification(
-    med_diet_consensus_2026,
-    mountain,
-    context(
-        agent_power(analytical),
-        time_horizon(civilizational),
-        exit_options(analytical),
-        spatial_scope(global)
-    )
-).
+% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
+% The analyst sees the complete structure: a genuine coordination function
+% (health benefits) tangled with significant asymmetric extraction (economic
+% costs for the poor) and active suppression of alternatives.
+% Engine derives d ≈ 0.72 → moderate/high χ.
+constraint_indexing:constraint_classification(med_diet_consensus_2026, tangled_rope,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(global))).
 
 /* ==========================================================================
-
-   4. TESTS (What We Learn About Constraints)
-
+   4. VALIDATION TESTS
    ========================================================================== */
-
-
 
 :- begin_tests(med_diet_consensus_2026_tests).
 
-
-
-/**
-
- * TEST 1: Multi-perspective variance
-
- * Demonstrates that the Mediterranean diet is viewed differently across agents.
-
- */
-
-test(multi_perspective_variance) :-
-
-    % Institutional Scientist (Rope)
-
-    constraint_indexing:constraint_classification(
-
-        med_diet_consensus_2026,
-
-        Type1,
-
-        context(agent_power(institutional), time_horizon(generational), exit_options(mobile), spatial_scope(global))
-
-    ),
-
-    % Low-Income Subject (Snare)
-
-    constraint_indexing:constraint_classification(
-
-        med_diet_consensus_2026,
-
-        Type2,
-
-        context(agent_power(powerless), time_horizon(biographical), exit_options(trapped), spatial_scope(local))
-
-    ),
-
-    % Biological Analyst (Mountain)
-
-    constraint_indexing:constraint_classification(
-
-        med_diet_consensus_2026,
-
-        Type3,
-
-        context(agent_power(analytical), time_horizon(civilizational), exit_options(analytical), spatial_scope(global))
-
-    ),
-
-    % Verify they differ
-
-    Type1 \= Type2,
-
-    Type2 \= Type3,
-
-    Type1 \= Type3. % Ensure all three are distinct
-
-
-
-/**
-
- * TEST 2: Power-based extractiveness scaling
-
- * Demonstrates that low-income subjects (powerless) experience higher extraction (economic inaccessibility) than institutional scientists.
-
- */
-
-test(power_extractiveness_scaling) :-
-
-    ContextPowerless = context(agent_power(powerless), time_horizon(biographical), exit_options(trapped), spatial_scope(local)),
-
-    ContextPowerful = context(agent_power(institutional), time_horizon(generational), exit_options(mobile), spatial_scope(global)),
-
-    constraint_indexing:extractiveness_for_agent(med_diet_consensus_2026, ContextPowerless, Score1),
-
-    constraint_indexing:extractiveness_for_agent(med_diet_consensus_2026, ContextPowerful, Score2),
-
-    Score1 > Score2.  % Powerless experience more extraction
-
-
-
-/**
-
- * TEST 3: Time-horizon immutability
-
- * Demonstrates that while individual choices are flexible, biological realities are immutable over long time horizons.
-
- */
-
-test(time_immutability) :-
-
-    % Short horizon (biographical) sees it as a chore/choice (Rope)
-
-    constraint_indexing:effective_immutability(time_horizon(biographical), exit_options(mobile), rope),
-
-    % Long horizon (civilizational) sees it as a fixed biological law (Mountain).
-
-    constraint_indexing:effective_immutability(time_horizon(civilizational), exit_options(analytical), mountain).
-
-
-
-/**
-
- * TEST 4: Domain-specific insight - Economic Accessibility as a Constraint
-
- * Demonstrates that economic factors can transform a scientifically proven "Rope" into a "Snare".
-
- */
-
-test(economic_accessibility) :-
-
-    constraint_indexing:constraint_classification(med_diet_consensus_2026, ClassificationLowIncome, context(agent_power(powerless), _, _, _)),
-
-    constraint_indexing:constraint_classification(med_diet_consensus_2026, ClassificationScientist, context(agent_power(institutional), _, _, _)),
-
-    ClassificationLowIncome = snare,
-
-    ClassificationScientist = rope.
-
-
+test(perspectival_gap) :-
+    % Verify perspectival gap between target (Snare) and beneficiary (Rope).
+    constraint_indexing:constraint_classification(med_diet_consensus_2026, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(med_diet_consensus_2026, rope, context(agent_power(institutional), _, _, _)),
+    constraint_indexing:constraint_classification(med_diet_consensus_2026, tangled_rope, context(agent_power(analytical), _, _, _)).
+
+test(tangled_rope_structural_properties) :-
+    % Verify the structural requirements for a Tangled Rope are met.
+    domain_priors:requires_active_enforcement(med_diet_consensus_2026),
+    narrative_ontology:constraint_beneficiary(med_diet_consensus_2026, _),
+    narrative_ontology:constraint_victim(med_diet_consensus_2026, _).
 
 :- end_tests(med_diet_consensus_2026_tests).
 
-
-
 /* ==========================================================================
-
-   5. MODEL INTERPRETATION (Commentary)
-
+   5. GENERATIVE COMMENTARY
    ========================================================================== */
 
-
-
 /**
-
- * LLM GENERATION NOTES
-
- * 
-
- * Model: Gemini 2.0 Flash
-
- * Date: 2026-01-23
-
- * 
-
- * KEY DECISIONS:
-
- * 
-
- * 1. BASE EXTRACTIVENESS (0.2): Chose low because the diet genuinely helps the individual. 
-
- * The "extraction" is largely symbolic (social pressure) or economic 
-
- * (market premium on Mediterranean goods).
-
- * 
-
- * 2. PERSPECTIVE SELECTION:
-
- *    Highlighted the "Low-Income Subject" as a Snare because dietary advice often 
-
- *    ignores the material constraints of poverty, effectively punishing those who 
-
- *    can't comply. Contrasted this with the Institutional Scientist (Rope) and 
-
- *    Biological Analyst (Mountain) to show the multi-faceted nature.
-
- * 
-
- * 3. OMEGAS 
-
- *    Define uncertainty so your analysis is cleaner
-
- *    omega_variable(
-
- *        med_diet_genetic_universality,
-
- *        "Does the Mediterranean diet benefit all genetic haplotypes equally, or is the 'gold standard' biased toward European metabolic history?",
-
- *        resolution_mechanism("Genome-wide association studies across diverse global populations (beyond the Seven Countries Study)"),
-
- *        impact("If biased: Snare for non-European populations. If universal: Mountain."),
-
- *        confidence_without_resolution(medium)
-
- *    ).
-
- * 
-
- *    omega_variable(
-
- *        med_diet_supply_chain_collapse,
-
- *        "Will climate change render the Mediterranean staples (olive oil, specific fish) so scarce that the diet becomes an elitist Snare?",
-
- *        resolution_mechanism("Monitoring agricultural yields in the Mediterranean basin vs. global demand over next 20 years"),
-
- *        impact("If scarce: Becomes a marker of class (Snare). If adaptable: Remains a Rope."),
-
- *        confidence_without_resolution(low)
-
- *    ).
-
+ * LOGIC RATIONALE:
+ *   The original file conflated the biological basis for the diet (a potential
+ *   Mountain) with the socio-economic policy consensus built upon it. This
+ *   regeneration focuses strictly on the policy consensus, which is a human-
+ *   constructed constraint. The metrics were adjusted to reflect a Tangled
+ *   Rope structure: base_extractiveness (0.48) captures the high economic cost
+ *   for the poor, and suppression_score (0.65) reflects the active
+ *   delegitimization of alternative diets by the scientific establishment.
+ *   The constraint requires active enforcement via journals, grants, and public
+ *   health messaging to maintain its hegemony.
+ *
+ * PERSPECTIVAL GAP:
+ *   The gap is stark. For institutional beneficiaries (scientists, health bodies),
+ *   the consensus is a pure coordination Rope that simplifies their work and
+ *   improves outcomes. For powerless victims (low-income populations), it is a
+ *   Snare of social judgment and economic burden, where they are blamed for
+ *   failing to adhere to a standard they cannot afford. The analytical observer
+ *   sees both sides and classifies it as a Tangled Rope.
+ *
+ * DIRECTIONALITY LOGIC:
+ *   - Beneficiaries: `global_healthcare_systems` and `public_health_scientists`
+ *     benefit from a simplified, evidence-based public health message that
+ *     reduces long-term healthcare costs and provides clear research direction.
+ *   - Victims: `low_income_populations` bear the direct cost of expensive
+ *     staples, while the `processed_food_industry` bears the cost of
+ *     delegitimization and lost market share. This asymmetric cost/benefit
+ *     structure is the core of the Tangled Rope.
+ *
+ * MANDATROPHY ANALYSIS:
+ *   This classification correctly identifies that a constraint with a genuine,
+ *   data-backed coordination function can still be highly extractive and
+ *   coercive. It avoids mislabeling the consensus as a pure Rope (ignoring
+ *   the economic victims) or a pure Snare (ignoring the real health benefits).
+ *   The Tangled Rope classification captures this duality.
  */
 
-
-
 /* ==========================================================================
-
-   6. ALTERNATIVE ANALYSIS (If Applicable)
-
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
+omega_variable(
+    omega_med_diet_genetic_universality,
+    "Does the Mediterranean diet benefit all genetic haplotypes equally, or is the 'gold standard' biased toward European metabolic history?",
+    "Genome-wide association studies across diverse global populations (beyond the Seven Countries Study)",
+    "If biased: Snare for non-European populations. If universal: Strengthens Rope/coordination aspect.",
+    confidence_without_resolution(medium)
+).
 
+narrative_ontology:omega_variable(omega_med_diet_genetic_universality, empirical, "Universality of diet benefits across different genetic populations.").
 
-/**
+omega_variable(
+    omega_med_diet_supply_chain_collapse,
+    "Will climate change render Mediterranean staples (olive oil, specific fish) so scarce that the diet becomes an elitist Snare for all but the wealthy?",
+    "Monitoring agricultural yields in the Mediterranean basin vs. global demand over next 20 years",
+    "If scarce: Degrades from Tangled Rope to a pure Snare. If adaptable: Remains a Tangled Rope.",
+    confidence_without_resolution(low)
+).
 
- * VIABLE ALTERNATIVES
-
- * 
-
- * ALTERNATIVE 1: Low-Fat Diet
-
- *    Viability: Was the standard in the late 20th century, representing a scientifically backed alternative approach.
-
- *    Suppression: Explicitly rejected by the 1999 RCT mentioned in the text, which scientifically delegitimized it in favor of the Mediterranean diet.
-
- * 
-
- * ALTERNATIVE 2: Ancestral/Regional Diets (e.g., Nordic, Japanese)
-
- *    Viability: High health outcomes reported in populations adhering to these diets, suggesting regional dietary patterns can be equally or more effective within their specific contexts.
-
- *    Suppression: Largely ignored by the "Mediterranean" branding and scientific consensus, leading to a monoculture of dietary advice that overlooks other effective, culturally relevant approaches.
-
- * 
-
- * CONCLUSION:
-
- * The scientific consensus around the Mediterranean diet, while well-intentioned, suppresses awareness and scientific exploration of equally viable alternative dietary patterns. This suppression, especially when combined with economic inaccessibility for some populations, solidifies its "Snare" aspect for those outside the "gold standard."
-
- */
-
-
+narrative_ontology:omega_variable(omega_med_diet_supply_chain_collapse, empirical, "Impact of climate change on the economic accessibility of diet staples.").
 
 /* ==========================================================================
-
    7. INTEGRATION HOOKS
-
    ========================================================================== */
 
-
-
-/**
-
- * TO USE THIS CONSTRAINT:
-
- * 
-
- * 1. Load into main system:
-
- *    ?- [constraints/med_diet_consensus_2026].
-
- * 
-
- * 2. Run multi-perspective analysis:
-
- *    ?- constraint_indexing:multi_index_report(med_diet_consensus_2026).
-
- * 
-
- * 3. Run tests:
-
- *    ?- run_tests(med_diet_consensus_2026_tests).
-
- * 
-
- * 4. Generate pedagogical report:
-
- *    ?- pedagogical_report(med_diet_consensus_2026).
-
- * 
-
- * 5. Compare with other constraints:
-
- *    ?- compare_constraints(med_diet_consensus_2026, [other_id]).
-
- */
-
-
+narrative_ontology:interval(med_diet_consensus_2026, 0, 10).
 
 /* ==========================================================================
-
-   END OF CONSTRAINT STORY
-
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% ============================================================================
-% ENRICHMENT: Structural predicates for dynamic classification
-% Generated: 2026-02-08
-% Template: v5.2 namespace alignment
-% Source: Derived from existing narrative and structural content in this file
-% ============================================================================
+% Base extraction > 0.46 requires temporal data.
+% Models the intensification of the consensus from 1999 (initial RCTs) to 2026.
+% As the consensus solidified, the economic premium (extraction) on "approved"
+% foods increased.
+narrative_ontology:measurement(med_diet_ex_t0, med_diet_consensus_2026, base_extractiveness, 0, 0.35).
+narrative_ontology:measurement(med_diet_ex_t5, med_diet_consensus_2026, base_extractiveness, 5, 0.42).
+narrative_ontology:measurement(med_diet_ex_t10, med_diet_consensus_2026, base_extractiveness, 10, 0.48).
 
-% --- Multifile declarations for new predicates ---
-:- multifile
-    domain_priors:theater_ratio/2.
+% Theater ratio remained low and stable; the constraint's function is substantive.
+narrative_ontology:measurement(med_diet_tr_t0, med_diet_consensus_2026, theater_ratio, 0, 0.15).
+narrative_ontology:measurement(med_diet_tr_t5, med_diet_consensus_2026, theater_ratio, 5, 0.16).
+narrative_ontology:measurement(med_diet_tr_t10, med_diet_consensus_2026, theater_ratio, 10, 0.17).
 
-% --- Theater ratio (missing from base properties) ---
-% Extraction is substantive — the constraint's costs are real, not theatrical
-domain_priors:theater_ratio(med_diet_consensus_2026, 0.17).
-narrative_ontology:constraint_metric(med_diet_consensus_2026, theater_ratio, 0.17).
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA
+   ========================================================================== */
+
+% The consensus acts as a standard for information (what is "healthy").
+narrative_ontology:coordination_type(med_diet_consensus_2026, information_standard).
+
+% --- Network Decomposition (Constraint Families) ---
+% DUAL FORMULATION NOTE:
+% This constraint (the policy consensus) is one of two stories decomposed from
+% the colloquial label "the Mediterranean diet". The other is the underlying
+% biological reality.
+% Decomposed because ε differs across observables (ε-invariance principle).
+% Related stories:
+%   - med_diet_biology (ε≈0.05, Mountain) - The physiological response to nutrients.
+%   - med_diet_consensus_2026 (ε=0.48, Tangled Rope) - This file.
+%
+% narrative_ontology:affects_constraint(med_diet_biology, med_diet_consensus_2026).
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+% No overrides needed. The structural derivation from beneficiary/victim
+% declarations and exit options accurately models the directionality.
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */

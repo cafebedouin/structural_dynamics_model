@@ -174,6 +174,12 @@ Mountain constraints require two additional `constraint_metric/3` declarations a
 
 **Why these matter:** Without `accessibility_collapse` and `resistance`, the `get_metric_average/3` helper defaults to 0.5, which fails the natural law certification thresholds (≥ 0.85 and ≤ 0.15 respectively). Without `emerges_naturally`, the mountain metric gate does not fire at all. All three are required for a constraint to achieve `natural_law` signature and `mountain` classification.
 
+> **WARNING — CRITICAL FOR MOUNTAINS:** If you set `emerges_naturally(ConstraintName)`, you MUST also provide:
+> - `constraint_metric(ConstraintName, accessibility_collapse, V)` where V >= 0.85
+> - `constraint_metric(ConstraintName, resistance, V)` where V <= 0.15
+>
+> WITHOUT these metrics, the constraint will classify as mountain but its `natural_law_signature` certification **FAILS SILENTLY**. The Prolog engine defaults missing metrics to 0.5, which fails both gates. This is the #1 source of degraded mountain diagnostics in the current corpus.
+
 **Structural relationship declarations** — these are the primary input to the directionality derivation chain. Every non-mountain constraint should declare at least one:
 
 * `narrative_ontology:constraint_beneficiary(id, group).` — **REQUIRED for all non-mountain constraints.** Identifies who benefits. Derives `has_coordination_function/1` (required for Tangled Rope and Scaffold gates). Feeds directionality derivation: agents identified as beneficiaries get low d values → low/negative χ.
@@ -244,6 +250,13 @@ Explain your reasoning for specific scores. Explicitly address:
 ### Section 6: Alternative Analysis (Mandatrophy Resolution)
 
 Identify at least one `omega_variable/5` for irreducible uncertainties (e.g., "Is this a Mountain of physics or a Snare of policy?").
+
+**You must declare BOTH forms of omega_variable:**
+
+1. **`omega_variable/5`** — narrative detail for story context: `omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).`
+2. **`narrative_ontology:omega_variable/3`** — typed classification for the reporting engine (this is what the engine reads): `narrative_ontology:omega_variable(ID, TypeClass, Description).` where TypeClass is one of: `empirical` (resolvable by data), `conceptual` (depends on framing), or `preference` (depends on values/policy).
+
+Include `narrative_ontology:omega_variable/3` in the `:- multifile` block.
 
 ### Section 7: Integration Hooks
 

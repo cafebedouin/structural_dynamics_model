@@ -43,7 +43,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1.
+    domain_priors:emerges_naturally/1,
+    narrative_ontology:omega_variable/3.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -255,6 +256,9 @@ test(threshold_validation) :-
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
+% Omega variables — open questions the framework cannot yet resolve
+%
+% /5 form: narrative detail for story context
 % omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
     omega_[id],
@@ -263,6 +267,15 @@ omega_variable(
     '[Result if True vs Result if False]',
     confidence_without_resolution(medium)
 ).
+
+% /3 form: typed classification for reporting engine (REQUIRED)
+% The reporting engine reads narrative_ontology:omega_variable/3 with structure
+% (ID, TypeClass, Description) where TypeClass is one of:
+%   empirical   — resolvable by gathering more data
+%   conceptual  — depends on definitional or theoretical framing
+%   preference  — depends on value judgments or policy choices
+% The /3 form is what the engine reads; /5 provides narrative context.
+narrative_ontology:omega_variable(omega_[id], empirical, '[Brief description of open question]').
 
 /* ==========================================================================
    7. INTEGRATION HOOKS

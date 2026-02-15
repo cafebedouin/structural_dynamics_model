@@ -892,13 +892,13 @@ classify_snapshot(C, Time, Type) :-
     ->  true
     ;   safe_metric(C, extractiveness, E)
     ->  true
-    ;   E = 0.5
+    ;   config:param(default_extractiveness, E)
     ),
     (   metric_at(C, suppression_requirement, Time, S)
     ->  true
     ;   safe_metric(C, suppression_requirement, S)
     ->  true
-    ;   S = 0.5
+    ;   config:param(default_suppression, S)
     ),
     constraint_indexing:default_context(Context),
     Context = context(agent_power(Power), _, _, _),

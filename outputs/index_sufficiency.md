@@ -5,12 +5,12 @@
 **Verdict:** SUFFICIENT - Indices explain most variance. Current framework adequate.
 
 - **Collision Rate:** 0.0%
-- **Anomaly Rate:** 1.5%
+- **Anomaly Rate:** 0.0%
 
 ### Evidence For Index Sufficiency
 
 - 100.0% of constraints have no index collisions
-- 29 domains show high index sufficiency
+- 48 domains show high index sufficiency
 
 ## Index Collisions
 
@@ -23,76 +23,56 @@ How well do indices explain variance in each domain?
 
 | Domain | Constraints | Avg Variance | Sufficiency |
 |--------|-------------|--------------|-------------|
+| informational        |           2 |         4.00 | High        |
+| infrastructure       |           1 |         4.00 | High        |
+| socio_political      |           1 |         4.00 | High        |
+| logistical           |           1 |         4.00 | High        |
+| logistics            |           1 |         4.00 | High        |
+| cognitive            |           4 |         3.75 | High        |
+| organizational       |           9 |         3.44 | High        |
+| environmental        |           5 |         3.40 | High        |
+| institutional        |           3 |         3.33 | High        |
+| medical              |           4 |         3.25 | High        |
+| social               |         132 |         3.02 | High        |
+| political            |         152 |         3.02 | High        |
+| unknown              |           3 |         3.00 | High        |
+| psychological        |           9 |         3.00 | High        |
+| religious            |           9 |         3.00 | High        |
+| psychology           |           1 |         3.00 | High        |
+| bio_industrial       |           1 |         3.00 | High        |
+| corporate_governance |           1 |         3.00 | High        |
+| military             |           2 |         3.00 | High        |
+| systems_engineering  |           1 |         3.00 | High        |
+| economic             |         206 |         2.99 | High        |
+| geopolitical         |          48 |         2.96 | High        |
+| philosophical        |          12 |         2.92 | High        |
+| legal                |          10 |         2.90 | High        |
+| biological           |          16 |         2.81 | High        |
+| technological        |         280 |         2.74 | High        |
+| health               |           5 |         2.60 | High        |
+| physics              |           2 |         2.50 | High        |
+| investigation        |           2 |         2.50 | High        |
+| ecological           |           2 |         2.50 | High        |
+| scientific           |          19 |         2.16 | High        |
+| linguistic           |           3 |         2.00 | High        |
+| Political            |           1 |         2.00 | High        |
+| magical              |           1 |         2.00 | High        |
+| atmospheric_science  |           1 |         2.00 | High        |
+| analytical           |           1 |         2.00 | High        |
+| astrophysical        |           1 |         2.00 | High        |
+| Social               |           1 |         2.00 | High        |
+| physical             |           3 |         1.67 | High        |
 | mathematics          |           2 |         1.50 | High        |
-| magical              |           1 |         1.50 | High        |
-| analytical           |           2 |         1.50 | High        |
-| artistic             |           2 |         1.15 | High        |
-| philosophical        |          13 |         0.88 | High        |
-| psychological        |           9 |         0.87 | High        |
-| legal                |          11 |         0.81 | High        |
-| cognitive            |           3 |         0.80 | High        |
-| logistics            |           1 |         0.80 | High        |
-| informational        |           2 |         0.80 | High        |
-| logistical           |           1 |         0.80 | High        |
-| socio_political      |           1 |         0.80 | High        |
-| infrastructure       |           1 |         0.80 | High        |
-| biological           |          16 |         0.80 | High        |
-| organizational       |           9 |         0.77 | High        |
-| environmental        |           5 |         0.77 | High        |
-| institutional        |           3 |         0.77 | High        |
-| medical              |           4 |         0.76 | High        |
-| unknown              |           3 |         0.75 | High        |
-| corporate_governance |           1 |         0.75 | High        |
-| bio_industrial       |           1 |         0.75 | High        |
-| military             |           2 |         0.75 | High        |
-| psychology           |           1 |         0.75 | High        |
-| social               |         134 |         0.75 | High        |
-| technological        |         284 |         0.74 | High        |
-| mathematical         |          56 |         0.73 | High        |
-| political            |         152 |         0.72 | High        |
-| religious            |           9 |         0.72 | High        |
-| economic             |         205 |         0.70 | High        |
-| health               |           5 |         0.65 | Medium      |
-| investigation        |           2 |         0.62 | Medium      |
-| systems_engineering  |           1 |         0.60 | Medium      |
-| physics              |           2 |         0.57 | Medium      |
-| geopolitical         |          48 |         0.57 | Medium      |
-| ecological           |           2 |         0.55 | Medium      |
-| scientific           |          19 |         0.51 | Medium      |
-| Political            |           1 |         0.50 | Medium      |
-| astrophysical        |           1 |         0.50 | Medium      |
-| atmospheric_science  |           1 |         0.50 | Medium      |
-| Social               |           1 |         0.50 | Medium      |
-| linguistic           |           3 |         0.47 | Medium      |
-| physical             |           3 |         0.42 | Medium      |
-| technology           |           1 |         0.33 | Low         |
-| logical              |           1 |         0.25 | Low         |
-| Physics              |           1 |         0.25 | Low         |
+| mathematical         |          61 |         1.49 | High        |
+| logic                |           1 |         1.00 | High        |
+| statistical          |           1 |         1.00 | High        |
+| technology           |           1 |         1.00 | High        |
+| logical              |           1 |         1.00 | High        |
+| epistemological      |           1 |         1.00 | High        |
+| Physics              |           1 |         1.00 | High        |
+| sociological         |           1 |         1.00 | High        |
 
 **Note:** Higher variance = indices capture more differences (good)
-
-## Stability Anomalies
-
-Constraints tested across many index configs but always produce same type.
-These may indicate need for new categories beyond current 4 indices.
-
-| Constraint ID | Configs | Type | Domain | Notes |
-|---------------|---------|------|--------|-------|
-| banach_fixed_point_theorem     |       5 | mountain        | technological | natural |
-| cantor_set_topology            |       5 | mountain        | mathematical | natural |
-| conways_game_of_life_dynamics  |       5 | mountain        | mathematical | natural |
-| dldr_information_policy        |       5 | rope            | technological | enforced |
-| ehrenfest_barrier              |       5 | mountain        | scientific | natural |
-| gauss_bonnet_topology          |       5 | mountain        | mathematical | natural |
-| heine_borel_theorem            |       5 | mountain        | mathematical | enforced |
-| microrobot_manipulation        |       5 | rope            | technological | enforced |
-| quantum_measurement_gap        |       5 | mountain        | scientific | natural |
-| shannons_source_coding_theorem |       5 | mountain        | technological | enforced |
-| terrain_inaccessibility_wheeled_vehicles |       5 | mountain        | technological | natural |
-| three_body_unpredicability     |       5 | mountain        | technological | natural |
-| twin_prime_conjecture          |       5 | mountain        | mathematical | natural |
-| weierstrass_function           |       5 | mountain        | technological | natural |
-| wikipedia_noncommercial_model  |       5 | rope            | technological | enforced |
 
 ## Recommendations
 

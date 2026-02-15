@@ -1,9 +1,9 @@
 % ============================================================================
 % CONSTRAINT STORY: kirby_paris_theorem
 % ============================================================================
-% Generated: 2026-01-19
-% Model: Gemini 2.0 Flash
-% Source: Kirby, L., & Paris, J. (1982) / Goodstein's Theorem
+% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2024-07-28
 % ============================================================================
 
 :- module(constraint_kirby_paris_theorem, []).
@@ -12,15 +12,39 @@
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
 
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
+
 % --- Namespace Hooks (Required for loading) ---
-:- multifile 
+:- multifile
     domain_priors:base_extractiveness/2,
     domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
     domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
-    constraint_indexing:constraint_classification/3.
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
+    narrative_ontology:boltzmann_floor_override/2,
+    constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3,
+    domain_priors:emerges_naturally/1,
+    narrative_ontology:omega_variable/3.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -28,252 +52,211 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: kirby_paris_theorem
- * human_readable: The Kirby-Paris Theorem (Independency of Goodstein's Theorem)
- * domain: technological
- * temporal_scope: Permanent (Universal Mathematical Law)
- * spatial_scope: Global (Formal Arithmetic Systems)
- * * SUMMARY:
- * The Kirby-Paris theorem demonstrates that Goodstein's theorem—a statement 
- * about the termination of specific sequences of natural numbers—is unprovable 
- * within Peano Arithmetic (PA). It shows that PA cannot "see" the eventual 
- * termination of these sequences, even though they are provably finite in 
- * stronger systems like ZFC.
- * * KEY AGENTS:
- * - The Finitist: Seeking to ground all mathematics in the "safe" rules of PA.
- * - The Transfinite Logician: Utilizing transfinite induction up to epsilon-zero 
- * to prove truths that PA cannot reach.
- * - The Formal System (PA): The administrative structure that imposes a limit 
- * on what can be verified within its own boundaries.
- * * NARRATIVE ARC:
- * The theorem functions as a hard ceiling (Mountain) for finitistic proof. 
- * While it provides a "Rope" for higher-order logicians to justify transfinite 
- * methods, it acts as a "Snare" for the finitist, who is trapped in a 
- * system where simple arithmetic truths are fundamentally unreachable.
+ *   constraint_id: kirby_paris_theorem
+ *   human_readable: The Kirby-Paris Theorem (Independence of Goodstein's Theorem)
+ *   domain: technological
+ *
+ * SUMMARY:
+ *   The Kirby-Paris theorem demonstrates that Goodstein's theorem—a true statement
+ *   about the termination of specific sequences of natural numbers—is unprovable
+ *   within Peano Arithmetic (PA). It is a foundational result in mathematical
+ *   logic, showing an inherent limitation of a formal system. This constraint
+ *   is a pure example of a Mountain: an unchangeable, non-coercive, and
+ *   fundamental feature of the logical landscape.
+ *
+ * KEY AGENTS (by structural relationship):
+ *   - Foundational Finitist: Agent attempting to work exclusively within the axioms of PA. Experiences the theorem as an impassable barrier.
+ *   - Transfinite Logician: Agent utilizing stronger axiomatic systems (like ZFC). Experiences the theorem as a landmark confirming the necessity of their tools.
+ *   - Analytical Observer: Views the theorem as a fixed, structural property of formal systems.
  */
 
 /* ==========================================================================
-   2. CORE SYSTEM INTEGRATION (The "Reality" Layer)
+   2. BASE PROPERTIES (DOMAIN PRIORS)
    ========================================================================== */
 
-% Required for [STEP 1] and [STEP 2] of the DR-Audit Suite
-narrative_ontology:interval(kirby_paris_interval, 0, 10).
-narrative_ontology:constraint_claim(kirby_paris_theorem, tangled_rope).
-domain_priors:requires_active_enforcement(kirby_paris_theorem).
+% --- Numerical metrics ---
+domain_priors:base_extractiveness(kirby_paris_theorem, 0.20).
+domain_priors:suppression_score(kirby_paris_theorem, 0.05).   % Structural property (raw, unscaled).
+domain_priors:theater_ratio(kirby_paris_theorem, 0.05).       % Piton detection (>= 0.70)
 
-% Base extractiveness: How much semantic closure is taken?
-% Rationale: It extracts the "provability" of a simple arithmetic truth from 
-% the system, forcing the use of more "expensive" transfinite methods.
-domain_priors:base_extractiveness(kirby_paris_theorem, 0.2).
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(kirby_paris_theorem, extractiveness, 0.20).
+narrative_ontology:constraint_metric(kirby_paris_theorem, suppression_requirement, 0.05).
+narrative_ontology:constraint_metric(kirby_paris_theorem, theater_ratio, 0.05).
 
-% Suppression: How much are higher truths hidden?
-% Rationale: PA naturally suppresses the proof of Goodstein's theorem; the 
-% proof is invisible to the internal logic of the system.
-domain_priors:suppression_score(kirby_paris_theorem, 0.4).
+% --- NL Profile Metrics (required for mountain constraints) ---
+% These feed the natural_law_signature certification chain in
+% structural_signatures.pl. Without these, the NL signature defaults to 0.5
+% and fails certification.
+narrative_ontology:constraint_metric(kirby_paris_theorem, accessibility_collapse, 1.0).
+narrative_ontology:constraint_metric(kirby_paris_theorem, resistance, 0.0).
 
-% Constraint metric facts (bridge for classification engine)
-narrative_ontology:constraint_metric(kirby_paris_theorem, extractiveness, 0.2).
-narrative_ontology:constraint_metric(kirby_paris_theorem, suppression_requirement, 0.4).
+% --- Constraint claim (must match analytical perspective type) ---
+narrative_ontology:constraint_claim(kirby_paris_theorem, mountain).
 
-% Enforcement: Emerges naturally from the structure of induction and non-standard models.
+% --- Emergence flag (required for mountain constraints) ---
+% This constraint emerges naturally from the structure of formal logic.
+% Required for the mountain metric gate.
 domain_priors:emerges_naturally(kirby_paris_theorem).
 
-% Metrics required for Section 1 of the Executive Summary
-% BENEFICIARIES & VICTIMS
-narrative_ontology:constraint_beneficiary(kirby_paris_theorem, transfinite_logicians).
-narrative_ontology:constraint_victim(kirby_paris_theorem, foundational_finitists).
+% --- Structural relationships (REQUIRED for non-mountain constraints) ---
+% No enrichment needed. As a uniform-type Mountain, this constraint does not
+% have structural beneficiaries or victims. Its effects are a consequence of
+% an agent's position relative to the logical landscape, not of the constraint's
+% design.
 
 /* ==========================================================================
-   3. INDEXED CLASSIFICATIONS (Perspectival Truth)
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × f(d) × σ(S)
+   where f(d) is the sigmoid directionality function.
+   For a Mountain, classification is invariant across all indices.
+   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
+   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 1: THE ANALYTICAL OBSERVER - Mountain
-   --------------------------------------------------------------------------
-   
-   WHO: analytical - Observer of the laws of information.
-   WHEN: civilizational - Viewing logic as a permanent substrate.
-   WHERE: trapped - Formal systems cannot bypass their own inductive limits.
-   SCOPE: global - Universal applicability to arithmetic.
-   
-   WHY THIS CLASSIFICATION:
-   To the observer, this is a Mountain. It is an unchangeable feature of the 
-   mathematical landscape. The unprovability of Goodstein's theorem in PA 
-   is a fixed fact of logical reality, not a choice or a social construct.
-   -------------------------------------------------------------------------- */
+% PERSPECTIVE 1: THE ANALYTICAL OBSERVER (MOUNTAIN)
+% Views the theorem as a permanent, unchangeable feature of the logical landscape.
+constraint_indexing:constraint_classification(kirby_paris_theorem, mountain,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).
 
-constraint_indexing:constraint_classification(
-    kirby_paris_theorem,
-    tangled_rope,
-    context(
-        agent_power(analytical),
-        time_horizon(civilizational),
-        exit_options(trapped),
-        spatial_scope(global)
-    )
-) :- !.
+% PERSPECTIVE 2: THE TRANSFINITE LOGICIAN (MOUNTAIN)
+% For an agent with access to stronger systems (ZFC), the theorem is still a
+% fixed landmark. It doesn't extract from them; it confirms the landscape
+% they already inhabit.
+constraint_indexing:constraint_classification(kirby_paris_theorem, mountain,
+    context(agent_power(institutional),
+            time_horizon(generational),
+            exit_options(arbitrage),
+            spatial_scope(global))).
 
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE HIGHER-ORDER MATHEMATICIAN - Rope
-   --------------------------------------------------------------------------
-   
-   WHO: institutional - Power to define and utilize meta-mathematical rules.
-   WHEN: biographical - Accomplishing proofs within a career.
-   WHERE: arbitrage - Can move between PA and stronger systems (ZFC).
-   SCOPE: national - Specific to the domain of formal proof.
-   
-   WHY THIS CLASSIFICATION:
-   For the institutional mathematician, the theorem is a Rope. It is a 
-   coordination mechanism that justifies the move to transfinite induction. 
-   By showing exactly where PA fails, it provides a "tether" to higher 
-   axioms that can safely "pull" the proof of termination into reality.
-   -------------------------------------------------------------------------- */
-
-constraint_indexing:constraint_classification(
-    kirby_paris_theorem,
-    rope,
-    context(
-        agent_power(institutional),
-        time_horizon(biographical),
-        exit_options(arbitrage),
-        spatial_scope(national)
-    )
-) :- !.
-
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE FINITIST SUBJECT - Snare
-   --------------------------------------------------------------------------
-   
-   WHO: powerless - Subject to the limits of finitistic rules.
-   WHEN: immediate - Today's attempt to ground truth in basic arithmetic.
-   WHERE: trapped - Cannot leave the boundaries of Peano induction.
-   SCOPE: local - Immediate workspace.
-   
-   WHY THIS CLASSIFICATION:
-   For the finitist, the theorem is a Snare. They are presented with a 
-   statement that is clearly true (verified by calculation and meta-logic), 
-   yet their system strangles their ability to prove it. The harder they 
-   try to use standard induction, the more the complexity of the Goodstein 
-   sequence tightens, proving that their world is fundamentally incomplete.
-   -------------------------------------------------------------------------- */
-
-constraint_indexing:constraint_classification(
-    kirby_paris_theorem,
-    snare,
-    context(
-        agent_power(powerless),
-        time_horizon(immediate),
-        exit_options(trapped),
-        spatial_scope(local)
-    )
-) :- !.
+% PERSPECTIVE 3: THE FINITIST (MOUNTAIN)
+% For an agent committed to Peano Arithmetic, the theorem is an impassable
+% wall. They are trapped by it, but it is still a feature of nature, not a
+% coercive Snare. It is a limit, not a trap designed by another agent.
+constraint_indexing:constraint_classification(kirby_paris_theorem, mountain,
+    context(agent_power(powerless),
+            time_horizon(biographical),
+            exit_options(trapped),
+            spatial_scope(local))).
 
 /* ==========================================================================
-   4. TESTS (What We Learn About Constraints)
+   4. VALIDATION TESTS
    ========================================================================== */
 
 :- begin_tests(kirby_paris_theorem_tests).
 
-test(multi_perspective_variance) :-
-    % Perspective 1: Analyst sees Mountain
-    constraint_indexing:constraint_classification(kirby_paris_theorem, tangled_rope, context(agent_power(analytical), _, _, _)),
-    % Perspective 2: Institutional sees Rope
-    constraint_indexing:constraint_classification(kirby_paris_theorem, rope, context(agent_power(institutional), _, _, _)),
-    % Perspective 3: Powerless sees Snare
-    constraint_indexing:constraint_classification(kirby_paris_theorem, snare, context(agent_power(powerless), _, _, _)).
+test(invariance_across_perspectives) :-
+    % Verify that this is a uniform-type Mountain, invariant across indices.
+    constraint_indexing:constraint_classification(kirby_paris_theorem, Type1, context(agent_power(analytical), _, _, _)),
+    constraint_indexing:constraint_classification(kirby_paris_theorem, Type2, context(agent_power(institutional), _, _, _)),
+    constraint_indexing:constraint_classification(kirby_paris_theorem, Type3, context(agent_power(powerless), _, _, _)),
+    Type1 == mountain,
+    Type2 == mountain,
+    Type3 == mountain.
 
-test(power_extractiveness_scaling) :-
-    % Powerless finitists feel the total loss of provability (Snare).
-    % Institutional mathematicians use it to justify stronger systems (Rope).
-    ContextPowerless = context(powerless, immediate, trapped, local),
-    ContextPowerful = context(institutional, biographical, arbitrage, national),
-    domain_priors:base_extractiveness(kirby_paris_theorem, Score),
-    Score > 0.1.
+test(mountain_metric_thresholds) :-
+    % Verify that the base metrics adhere to the Mountain classification thresholds.
+    config:param(extractiveness_metric_name, ExtMetricName),
+    config:param(suppression_metric_name, SuppMetricName),
+    config:param(mountain_extractiveness_max, MountainEpsMax),
+    config:param(mountain_suppression_ceiling, MountainSuppMax),
+    narrative_ontology:constraint_metric(kirby_paris_theorem, ExtMetricName, E),
+    narrative_ontology:constraint_metric(kirby_paris_theorem, SuppMetricName, S),
+    E =< MountainEpsMax,
+    S =< MountainSuppMax.
 
-test(time_immutability_scale) :-
-    % Long-term civilizational logic = Mountain.
-    constraint_indexing:effective_immutability(civilizational, trapped, mountain).
+test(natural_law_profile_present) :-
+    % Verify the required NL profile metrics are declared for certification.
+    narrative_ontology:constraint_metric(kirby_paris_theorem, accessibility_collapse, AC),
+    narrative_ontology:constraint_metric(kirby_paris_theorem, resistance, R),
+    domain_priors:emerges_naturally(kirby_paris_theorem),
+    AC >= 0.85,
+    R =< 0.15.
 
 :- end_tests(kirby_paris_theorem_tests).
 
 /* ==========================================================================
-   5. MODEL INTERPRETATION (Commentary)
+   5. GENERATIVE COMMENTARY
    ========================================================================== */
 
 /**
- * LLM GENERATION NOTES
- * * Model: Gemini 2.0 Flash
- * Date: 2026-01-19
- * * KEY DECISIONS:
- * * 1. EXTRACTIVENESS SCORE (0.2):
- * Reasoning: Low. The "extraction" is semantic—the loss of certain 
- * arithmetic closures. It forces the cognitive cost of higher-order logic.
- * * 2. PERSPECTIVE SELECTION:
- * Chose Analyst (Mountain), Mathematician (Rope), and Finitist (Snare) 
- * to demonstrate how a single logical fact represents a law, a tool, 
- * or a trap based on the agent's axiomatic commitment.
- * * 3. CLASSIFICATION RATIONALE:
- * The "Snare" for the finitist is particularly apt: they can see the 
- * truth but are logically barred from it.
+ * LOGIC RATIONALE:
+ *   This constraint was re-classified from a mixed-type (Tangled Rope/Snare/Rope)
+ *   to a uniform-type Mountain. Mathematical theorems about the limits of
+ *   formal systems are canonical examples of Mountains. They are fixed,
+ *   non-negotiable, and emerge from the structure of logic itself.
+ *
+ *   - Base Extractiveness (0.20): Represents the semantic "cost" of the theorem,
+ *     which is the loss of provability for a class of truths within a specific
+ *     system (PA). This is an informational, not a material, extraction.
+ *   - Suppression Score (0.05): Corrected from 0.4. The theorem does not
+ *     coercively suppress alternatives; it is a statement of fact about an
+ *     inherent limitation. The low score is required for Mountain classification.
+ *   - NL Profile (AC=1.0, R=0.0): The theorem's consequences are absolute within
+ *     PA (accessibility_collapse=1.0), and resistance is incoherent (resistance=0.0).
+ *
+ * PERSPECTIVAL GAP:
+ *   There is no perspectival gap in classification; all agents perceive a
+ *   Mountain. The perceived difference is in the *implication* of the Mountain.
+ *   For the finitist, it's a barrier. For the transfinite logician, it's a
+ *   signpost justifying the need for stronger tools. The constraint itself,
+ *   however, remains an invariant feature of the landscape for both.
+ *
+ * MANDATROPHY ANALYSIS:
+ *   Classifying this as a Mountain correctly identifies it as a feature of
+ *   reality rather than a system of control. The original classification of
+ *   Snare/Tangled Rope was a category error, anthropomorphizing a logical
+ *   limit as if it were a coercive instrument. The Mountain classification
+ *   prevents this mislabeling.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
+% Omega variables — open questions the framework cannot yet resolve
 omega_variable(
-    natural_intuition_limits,
-    "Do humans possess a 'natural' intuition for epsilon-zero induction 
-    (Rope) or are we biologically restricted to finitism (Mountain)?",
-    resolution_mechanism("Cognitive study of transfinite reasoning in experts"),
-    impact("If Mountain: Kirby-Paris is a biological Snare. If Rope: It's an 
-    educational challenge."),
+    omega_kirby_paris_theorem,
+    'Is human mathematical intuition fundamentally finitistic, making transfinite reasoning a purely formal tool, or does intuition extend to concepts like epsilon-zero induction?',
+    'Cognitive studies on how mathematicians develop and use transfinite reasoning; formal analysis of the cognitive leaps required.',
+    'If intuition is finitistic, the theorem reveals a hard cognitive limit (Mountain). If intuition can be extended, it is merely an educational challenge to overcome.',
     confidence_without_resolution(medium)
 ).
 
-/* ==========================================================================
-   7. ALTERNATIVE ANALYSIS
-   ========================================================================== */
-
-/**
- * VIABLE ALTERNATIVES
- * * ALTERNATIVE 1: Transfinite Induction (up to epsilon-zero)
- * Viability: High. This is the standard way to prove Goodstein's theorem.
- * Suppression: High within PA. PA is syntactically incapable of 
- * expressing this induction level.
- * * CONCLUSION:
- * The existence of Transfinite Induction as an "Exit" to a stronger system 
- * converts the "Mountain" of PA's unprovability into a "Rope" for the 
- * advanced mathematician, while remaining a "Snare" for the finitist.
- */
+% /3 form: typed classification for reporting engine (REQUIRED)
+narrative_ontology:omega_variable(omega_kirby_paris_theorem, conceptual, 'The relationship between formal transfinite methods and innate human mathematical intuition.').
 
 /* ==========================================================================
-   8. INTEGRATION HOOKS
+   7. INTEGRATION HOOKS
    ========================================================================== */
 
-/**
- * TO USE THIS FILE:
- * * 1. Load: ?- [constraint_kirby_paris_theorem].
- * 2. Multi-perspective: ?- multi_index_report(kirby_paris_theorem).
- * 3. Run tests: ?- run_tests(kirby_paris_theorem_tests).
- */
+% Required for external script parsing
+narrative_ontology:interval(kirby_paris_theorem, 0, 10).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Not applicable. As a mathematical theorem, its properties are fixed and do
+% not drift over time. No measurement facts are needed.
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA
+   ========================================================================== */
+
+% Not applicable. This is a standalone logical fact with no coordination
+% function or direct structural influence on other policy constraints.
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+% Not applicable. As a Mountain, there are no beneficiaries or victims, so
+% directionality is not a relevant concept.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
-
-% ============================================================================
-% ENRICHMENT: Structural predicates for dynamic classification
-% Generated: 2026-02-08
-% Template: v5.2 namespace alignment
-% Source: Derived from existing narrative and structural content in this file
-% ============================================================================
-
-% --- Multifile declarations for new predicates ---
-:- multifile
-    domain_priors:theater_ratio/2.
-
-% --- Theater ratio (missing from base properties) ---
-% Technical constraint — mostly substantive, minimal implementation theater
-domain_priors:theater_ratio(kirby_paris_theorem, 0.05).
-narrative_ontology:constraint_metric(kirby_paris_theorem, theater_ratio, 0.05).

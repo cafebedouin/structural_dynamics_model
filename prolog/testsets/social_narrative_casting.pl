@@ -1,9 +1,9 @@
 % ============================================================================
 % CONSTRAINT STORY: social_narrative_casting
 % ============================================================================
-% Generated: 2026-01-21
-% Model: Gemini 2.0 Flash
-% Source: "Criticism as Other People’s Stories" by cafebedouin.org
+% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2024-07-15
 % ============================================================================
 
 :- module(constraint_social_narrative_casting, []).
@@ -12,16 +12,38 @@
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
 
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
+
 % --- Namespace Hooks (Required for loading) ---
-:- multifile 
+:- multifile
     domain_priors:base_extractiveness/2,
     domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
     domain_priors:requires_active_enforcement/1,
+    domain_priors:emerges_naturally/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
     narrative_ontology:constraint_metric/3,
-    narrative_ontology:constraint_claim/2,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
-    constraint_indexing:constraint_classification/3.
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
+    narrative_ontology:boltzmann_floor_override/2,
+    constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3,
+    narrative_ontology:omega_variable/3.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -29,347 +51,163 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: social_narrative_casting
- * human_readable: Social Narrative Casting (Criticism-as-Projection)
- * domain: social/psychological
- * temporal_scope: Contemporary / Ongoing
- * spatial_scope: Interpersonal / Cognitive
- * * SUMMARY:
- * This constraint defines criticism as an attempt by a critic (the "Director") to "hire" the 
- * subject into a specific role (extra, villain, victim) within the critic's internal narrative 
- * fiction. It frames these stories as "falsehoods" and "understandable illusions" 
- * that the subject can choose to navigate without internalizing.
- * * KEY AGENTS:
- * - The Critic (Director): Projects their internal story to give meaning to their life and 
- * reinforce their ego.
- * - The Subject (Actor): The person being criticized, who must choose whether to "believe in 
- * the part" or "play the role" with awareness.
- * - The Ego: The internal force that reduces experience into narrative fiction to create a 
- * certain "look" that doesn't reflect reality.
- * * NARRATIVE ARC:
- * Criticism begins as an extractive "role assignment" where the critic attempts to use 
- * the subject to make their internal fiction work. The subject can 
- * transform this constraint from a "Snare" of trapped identity into a "Rope" of 
- * useful lessons by maintaining a conscious choice about playing the part.
+ *   constraint_id: social_narrative_casting
+ *   human_readable: Social Narrative Casting (Criticism-as-Projection)
+ *   domain: social/psychological
+ *
+ * SUMMARY:
+ *   This constraint models the act of criticism as an attempt by a critic (the "Director")
+ *   to "hire" the subject into a specific role (villain, victim, obstacle) within the
+ *   critic's internal narrative. The subject must choose whether to internalize this
+ *   casting (a Snare) or consciously play the role to learn from it (a Rope). The
+ *   underlying mechanism is the ego's tendency to reduce complex reality into simple,
+ *   self-serving stories.
+ *
+ * KEY AGENTS (by structural relationship):
+ *   - The Subject (Actor): Primary target (powerless/trapped) — bears the extraction of having their identity constrained by another's narrative.
+ *   - The Critic (Director): Primary beneficiary (organized/mobile) — benefits by reinforcing their ego and worldview through the narrative casting of others.
+ *   - The Therapist/Coach: Secondary beneficiary (institutional/arbitrage) — uses the understanding of this dynamic as a tool to help others.
+ *   - The Analytical Observer: Sees the full structure of ego-driven narrative projection as a system.
  */
 
 /* ==========================================================================
-   2. CORE SYSTEM INTEGRATION (The "Reality" Layer)
+   2. BASE PROPERTIES (DOMAIN PRIORS)
    ========================================================================== */
 
-narrative_ontology:interval(social_narrative_casting, 0, 10).
-narrative_ontology:constraint_claim(social_narrative_casting, [psychological_projection]).
+% --- Numerical metrics ---
+domain_priors:base_extractiveness(social_narrative_casting, 0.30).
+domain_priors:suppression_score(social_narrative_casting, 0.60).   % Structural property (raw, unscaled).
+domain_priors:theater_ratio(social_narrative_casting, 0.06).       % Piton detection (>= 0.70)
 
-% Base extractiveness score (0.3 = Moderate-Low)
-% Rationale: While the critic attempts to extract the subject's identity for their "brand," 
-% the subject's ultimate agency to refuse belief mitigates total extraction.
-domain_priors:base_extractiveness(social_narrative_casting, 0.3).
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(social_narrative_casting, extractiveness, 0.30).
+narrative_ontology:constraint_metric(social_narrative_casting, suppression_requirement, 0.60).
+narrative_ontology:constraint_metric(social_narrative_casting, theater_ratio, 0.06).
 
-% Suppression score (0.6 = High-Moderate)
-% Rationale: Narrative fiction is "designed to create a certain look that doesn’t reflect 
-% reality," effectively suppressing lived experience in favor of an understandable 
-% illusion.
-domain_priors:suppression_score(social_narrative_casting, 0.6).
+% --- NL Profile Metrics (required for mountain candidates) ---
+% This constraint EMERGES NATURALLY from ego psychology, making it a mountain
+% candidate. However, its metrics (high suppression, alternatives exist) mean it
+% FAILS the natural law certification. These values ensure the `false_natural_law`
+% signature fires correctly.
+narrative_ontology:constraint_metric(social_narrative_casting, accessibility_collapse, 0.40). % Fails NL gate (>= 0.85). Alternatives (conscious awareness) are accessible.
+narrative_ontology:constraint_metric(social_narrative_casting, resistance, 0.70).             % Fails NL gate (<= 0.15). Resistance (therapy, self-awareness) is common.
 
-% Constraint metric facts (bridge for classification engine)
-narrative_ontology:constraint_metric(social_narrative_casting, extractiveness, 0.3).
-narrative_ontology:constraint_metric(social_narrative_casting, suppression_requirement, 0.6).
-
-% Constraint classification claim
+% --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(social_narrative_casting, tangled_rope).
-domain_priors:requires_active_enforcement(social_narrative_casting).
 
-% Enforcement requirements
-% The constraint "emerges naturally" from the ego's need to project itself and create 
-% meaning through stories.
+% --- Binary flags ---
+domain_priors:requires_active_enforcement(social_narrative_casting). % The critic must actively enforce the narrative.
+
+% --- Emergence flag (required for mountain candidates) ---
+% This constraint emerges from the ego's need to project itself and create
+% meaning through stories. This makes it a mountain candidate, triggering the
+% NL profile metric checks above.
 domain_priors:emerges_naturally(social_narrative_casting).
 
-
-
-% BENEFICIARIES & VICTIMS
-% Beneficiary: The Critic's Ego (gains meaning and brand reinforcement).
+% --- Structural relationships (REQUIRED for non-mountain constraints) ---
+% Who benefits from this constraint existing?
 narrative_ontology:constraint_beneficiary(social_narrative_casting, critics_ego).
-% Victim: Lived Experience (is reduced to an illusion or plot).
-narrative_ontology:constraint_victim(social_narrative_casting, lived_experience).
+%
+% Who bears disproportionate cost?
+narrative_ontology:constraint_victim(social_narrative_casting, criticized_subject).
 
 /* ==========================================================================
-   3. INDEXED CLASSIFICATIONS (Perspectival Truth)
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × f(d) × σ(S)
    ========================================================================== */
 
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 1: THE CRITICIZED SUBJECT (Actor) - Snare
-   --------------------------------------------------------------------------
-   
-   WHO: powerless (Target of "you are X" role assignment)
-   WHEN: immediate (A specific moment of confrontation/criticism)
-   WHERE: trapped (If they believe the role is their life)
-   SCOPE: local (The immediate social interaction)
-   
-   WHY THIS CLASSIFICATION:
-   For a subject who internalizes criticism, it is a "Snare." The critic's narrative 
-   constrains their identity to a "personification of some trait [the critic] doesn’t 
-   like about themselves," leaving them trapped in someone else's movie.
-   
-   NARRATIVE EVIDENCE:
-   "when someone makes a criticism of you... they are trying to hire you as an extra 
-   in their movie... as the villain, the victim, the obstacle".
-   -------------------------------------------------------------------------- */
+% PERSPECTIVE 1: THE CRITICIZED SUBJECT (Unaware Actor)
+% For a subject who internalizes the criticism, it is a Snare. The critic's
+% narrative constrains their identity, leaving them trapped in someone else's movie.
+constraint_indexing:constraint_classification(social_narrative_casting, snare,
+    context(agent_power(powerless),
+            time_horizon(immediate),
+            exit_options(trapped),
+            spatial_scope(local))).
 
+% PERSPECTIVE 2: THE PRIMARY BENEFICIARY (The Critic/Director)
+% For the critic, casting others into roles is a coordination mechanism (Rope) for
+% managing their internal world and reinforcing their ego. The extraction is externalized.
+constraint_indexing:constraint_classification(social_narrative_casting, rope,
+    context(agent_power(organized),
+            time_horizon(biographical),
+            exit_options(mobile),
+            spatial_scope(local))).
 
+% PERSPECTIVE 3: THE ANALYTICAL OBSERVER
+% The analyst sees the full system: a coordination function for the critic's ego
+% (beneficiary) layered on top of asymmetric extraction from the subject (victim),
+% requiring active enforcement. This is a classic Tangled Rope. It appears like a
+% Mountain (natural law of the ego) but its high suppression and available
+% alternatives reveal its constructed, extractive nature.
+constraint_indexing:constraint_classification(social_narrative_casting, tangled_rope,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(global))).
 
-constraint_indexing:constraint_classification(
-    social_narrative_casting,
-    snare,
-    context(
-        agent_power(powerless),
-        time_horizon(immediate),
-        exit_options(trapped),
-        spatial_scope(local)
-    )
-) :-
-    domain_priors:suppression_score(social_narrative_casting, S),
-
-    S > 0.5.
-
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE CONSCIOUS AGENT (Aware Actor) - Rope
-   --------------------------------------------------------------------------
-   
-   WHO: individual_moderate (Has the agency to "pause the production")
-   WHEN: biographical (Long-term navigation of social roles)
-   WHERE: mobile (Can see roles for what they are)
-   SCOPE: local (Managing specific circumstances)
-   
-   WHY THIS CLASSIFICATION:
-   For the aware agent, roles are a "Rope." They may be "obligated to play them by 
-   circumstances," but they use the role as a functional coordination tool while 
-   remaining detached from the underlying "belief" in the part.
-   
-   NARRATIVE EVIDENCE:
-   "you always have the choice about whether to play the part... Some parts have 
-   useful lessons to teach us... play it knowing it’s a role".
-   -------------------------------------------------------------------------- */
-
-constraint_indexing:constraint_classification(
-    social_narrative_casting,
-    rope,
-    context(
-        agent_power(individual_moderate),
-        time_horizon(biographical),
-        exit_options(mobile),
-        spatial_scope(local)
-    )
-).
-
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE EXISTENTIAL ANALYST (Ego-Breaker) - Mountain
-   --------------------------------------------------------------------------
-   
-   WHO: analytical (Observer of "narrative fiction" as a system)
-   WHEN: civilizational (Fundamental human ego-mechanism)
-   WHERE: analytical (Observer stance)
-   SCOPE: global (Applies to all human story-telling)
-   
-   WHY THIS CLASSIFICATION:
-   To the analyst, the ego's tendency to create illusions is a "Mountain"—an unchangeable 
-   natural law of human consciousness. "No one escape[s]" the ego's control except through 
-   radical breaking of plots.
-   
-   NARRATIVE EVIDENCE:
-   "The stories we tell ourselves are narrative fiction... a reduction of our 
-   experience to an easily understandable illusion... It’s our ego taking control".
-   -------------------------------------------------------------------------- */
-
-constraint_indexing:constraint_classification(
-    social_narrative_casting,
-    tangled_rope,
-    context(
-        agent_power(analytical),
-        time_horizon(civilizational),
-        exit_options(analytical),
-        spatial_scope(global)
-    )
-).
-
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 4: THE THERAPIST / COACH - Rope
-   --------------------------------------------------------------------------
-   WHO: institutional (Guides others in navigating narratives)
-   WHEN: biographical (Over the course of a client's therapy)
-   WHERE: arbitrage (Can analyze and reframe narratives from a position of professional distance)
-   SCOPE: regional (The scope of a client's life and social interactions)
-   
-   WHY THIS CLASSIFICATION:
-   For a therapist or coach, understanding social narrative casting is a
-   powerful diagnostic and therapeutic tool (Rope). They teach clients to
-   recognize when they are being "cast" in a role, helping them detangle
-   their identity from the projections of others. The concept is a mechanism
-   for building resilience and social awareness.
-   -------------------------------------------------------------------------- */
-
-constraint_indexing:constraint_classification(
-    social_narrative_casting,
-    rope,
-    context(
-        agent_power(institutional),
-        time_horizon(biographical),
-        exit_options(arbitrage),
-        spatial_scope(regional)
-    )
-).
+% PERSPECTIVE 4: THE THERAPIST / COACH
+% For a therapist, understanding this dynamic is a powerful diagnostic and
+% therapeutic tool (Rope). They use the concept as a pure coordination mechanism
+% to help clients build resilience and social awareness.
+constraint_indexing:constraint_classification(social_narrative_casting, rope,
+    context(agent_power(institutional),
+            time_horizon(biographical),
+            exit_options(arbitrage),
+            spatial_scope(regional))).
 
 /* ==========================================================================
-   4. TESTS (What We Learn About Constraints)
+   4. VALIDATION TESTS
    ========================================================================== */
 
 :- begin_tests(social_narrative_casting_tests).
 
-/**
- * TEST 1: Multi-perspective variance
- * Demonstrates that belief vs. detachment transforms a Snare into a Rope.
- */
-test(multi_perspective_belief) :-
-    % Victim who believes the role is life
+test(perspectival_gap) :-
+    % Verify the gap between the subject who internalizes the role (Snare)
+    % and the therapist who uses the concept as a tool (Rope).
     constraint_indexing:constraint_classification(social_narrative_casting, snare, context(agent_power(powerless), _, _, _)),
-    % Agent who knows it is just a role
-    constraint_indexing:constraint_classification(social_narrative_casting, rope, context(agent_power(individual_moderate), _, _, _)),
-    % Analyst who sees the underlying biological ego-system
-    constraint_indexing:constraint_classification(social_narrative_casting, tangled_rope, context(agent_power(analytical), _, _, _)),
-    % Therapist who uses the system as a tool
-    constraint_indexing:constraint_classification(social_narrative_casting, rope, context(agent_power(institutional), _, _, _)).
+    constraint_indexing:constraint_classification(social_narrative_casting, rope, context(agent_power(institutional), _, _, _)),
+    constraint_indexing:constraint_classification(social_narrative_casting, tangled_rope, context(agent_power(analytical), _, _, _)).
 
-/**
- * TEST 2: Power-based extractiveness scaling
- * Demonstrates that those who don't choose the part suffer more identity extraction.
- */
-test(power_extractiveness_casting) :-
+test(power_based_extractiveness_scaling) :-
+    % Demonstrates that the powerless, trapped subject experiences higher effective
+    % extraction than the institutional agent who can arbitrage the situation.
     ContextPowerless = context(agent_power(powerless), time_horizon(immediate), exit_options(trapped), spatial_scope(local)),
     ContextInstitutional = context(agent_power(institutional), time_horizon(biographical), exit_options(arbitrage), spatial_scope(regional)),
     constraint_indexing:extractiveness_for_agent(social_narrative_casting, ContextPowerless, Score1),
     constraint_indexing:extractiveness_for_agent(social_narrative_casting, ContextInstitutional, Score2),
     Score1 > Score2.
 
-/**
- * TEST 3: Time-horizon immutability
- * Demonstrates that while a single role can be escaped (Rope), the human tendency 
- * to tell stories is civilizational (Mountain).
- */
-test(time_immutability_casting) :-
-    % Long horizon = fundamental ego law
-    constraint_indexing:effective_immutability(time_horizon(civilizational), exit_options(analytical), mountain).
-
 :- end_tests(social_narrative_casting_tests).
 
 /* ==========================================================================
-   5. MODEL INTERPRETATION (Commentary)
+   5. GENERATIVE COMMENTARY
    ========================================================================== */
 
 /**
- * LLM GENERATION NOTES
- * 
- * Model: Gemini 2.0 Flash
- * Date: 2026-01-23
- * 
- * KEY DECISIONS:
- * 
- * 1. BASE EXTRACTIVENESS (0.3):
- *    Reasoning: Chose moderate-low because while someone "hiring" you for their villain 
- *    role is extractive, the source emphasizes the subject's "choice" and "lessons".
- * 
- * 2. PERSPECTIVE SELECTION:
- *    Focused on the transition from "Unconscious Actor" (Snare) to "Conscious Actor" 
- *    (Rope) to "Observer" (Mountain) to reflect the source's pedagogical arc. Added 
- *    "Therapist" (Institutional) to show the constraint as a tool.
- * 
- * 3. CLASSIFICATION RATIONALE:
- *    [Individual Powerless] → [Snare]: Believing the roles assigned by others makes the 
- *    criticism an inescapable trap of identity.
- *    [Analytical] → [Mountain]: The ego's storytelling is framed as an inherent, 
- *    systemic filter of human experience.
- *    [Institutional] -> [Rope]: A therapist uses the understanding of this system as a tool to help others.
- * 
- * 4. AMBIGUITIES:
- *    - The text mentions "lived experience" as the goal but doesn't define it outside 
- *    the negative space of "breaking free". Resolved via Omega.
- * 
- * 5. OMEGAS 
- *    Define uncertainty so your analysis is cleaner
- * 
- * 6. CONFIDENCE:
- *    High: Classifications of Snare/Rope based on internal vs external belief.
- *    Medium: Extractiveness score (dependent on the severity of the "villain" casting).
+ * LOGIC RATIONALE:
+ *   - ε=0.30: The extraction is moderate because the subject retains ultimate agency to refuse belief in the cast role.
+ *   - Suppression=0.60: High, as the critic's narrative actively suppresses the subject's complex reality in favor of a simple, useful illusion.
+ *   - `emerges_naturally`: The constraint arises from fundamental ego psychology, making it appear like a natural law.
+ *   - NL Profile Metrics: The `accessibility_collapse` (0.40) and `resistance` (0.70) scores are set to fail the mountain certification thresholds. This is intentional. It models a "false natural law" — a constraint that seems immutable but is actually a constructed social dynamic with high suppression and available exits (e.g., therapy, self-awareness).
+ *
+ * PERSPECTIVAL GAP:
+ *   The gap is stark: the subject who internalizes the criticism sees a Snare (their identity is trapped). The critic who projects it sees a Rope (a tool to manage their worldview). The therapist who analyzes it also sees a Rope (a diagnostic tool). The analytical observer sees the complete picture: a Tangled Rope that combines a coordination function for one party with extraction from another.
+ *
+ * DIRECTIONALITY LOGIC:
+ *   - Beneficiary: `critics_ego`. The critic benefits by having their internal narrative validated and simplified, reducing cognitive dissonance.
+ *   - Victim: `criticized_subject`. The subject bears the cost of having their identity and lived experience reduced to a simplistic role in someone else's story.
+ *   This clear beneficiary/victim structure drives the directionality calculation, leading to high effective extraction (χ) for the victim and low/negative χ for the beneficiary.
+ *
+ * MANDATROPHY ANALYSIS:
+ *   This model correctly identifies the constraint as a Tangled Rope from the analytical view, preventing the misclassification of this psychological mechanism as either a pure Mountain (an unchangeable law of nature) or a pure Snare (ignoring the coordination function it serves for the critic's ego). The `emerges_naturally` flag combined with the failing NL profile metrics is key to detecting this "false natural law" structure.
  */
 
 /* ==========================================================================
-   6. ALTERNATIVE ANALYSIS (If Applicable)
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-/**
- * VIABLE ALTERNATIVES
- * * ALTERNATIVE 1: Objective Self-Correction
- * Viability: The idea that criticism reflects an external, observable truth rather 
- * than just a critic's projection.
- * Suppression: Actively suppressed by the source's claim that stories are "falsehoods" 
- * and criticism is most likely a projection of "traits [critics] don’t like".
- * * ALTERNATIVE 2: Social Narrative Harmony
- * Viability: Harmonizing internal and external stories to reduce friction.
- * Suppression: Rejected in favor of "breaking free" to get to reality.
- * * CONCLUSION:
- * The source's rejection of alternative 1 (objective criticism) shifts the social 
- * interaction from a potential "Rope" for self-improvement into a "Snare" (projection) 
- * that requires an external "Rope" (conscious awareness) to survive.
- */
-
-/* ==========================================================================
-   7. INTEGRATION HOOKS
-   ========================================================================== */
-
-/**
- * TO USE THIS CONSTRAINT:
- * 
- * 1. Load into main system:
- *    ?- [constraints/social_narrative_casting].
- * 
- * 2. Run multi-perspective analysis:
- *    ?- constraint_indexing:multi_index_report(social_narrative_casting).
- * 
- * 3. Run tests:
- *    ?- run_tests(social_narrative_casting_tests).
- * 
- * 4. Generate pedagogical report:
- *    ?- pedagogical_report(social_narrative_casting).
- * 
- * 5. Compare with other constraints:
- *    ?- compare_constraints(social_narrative_casting, [other_id]).
- */
-
-/* ==========================================================================
-   END OF CONSTRAINT STORY
-   ========================================================================== */
-
-% ============================================================================
-% ENRICHMENT: Structural predicates for dynamic classification
-% Generated: 2026-02-08
-% Template: v5.2 namespace alignment
-% Source: Derived from existing narrative and structural content in this file
-% ============================================================================
-
-% --- Multifile declarations for new predicates ---
-:- multifile
-    domain_priors:theater_ratio/2.
-
-% --- Theater ratio (missing from base properties) ---
-% Structural constraint in social domain — low theater, high substance
-domain_priors:theater_ratio(social_narrative_casting, 0.06).
-narrative_ontology:constraint_metric(social_narrative_casting, theater_ratio, 0.06).
-
-% ============================================================================
-% ENRICHMENT: Structural predicates for remaining gaps
-% Generated: 2026-02-08
-% Template: v5.2 namespace alignment
-% Source: Derived from narrative context in this file (social_narrative_casting)
-% ============================================================================
-
+% /5 form: narrative detail for story context
 omega_variable(
     omega_criticism_objectivity,
     "Can criticism ever reflect an objective truth about the subject, or is it always a projection of the critic's internal narrative?",
@@ -377,3 +215,37 @@ omega_variable(
     "If objective: Criticism is a Rope for self-improvement. If always projection: It remains a Snare until consciously reframed.",
     confidence_without_resolution(medium)
 ).
+
+% /3 form: typed classification for reporting engine (REQUIRED)
+narrative_ontology:omega_variable(omega_criticism_objectivity, empirical, "Is criticism always projection, or can it be objective feedback?").
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+% Required for external script parsing
+narrative_ontology:interval(social_narrative_casting, 0, 10).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Base extractiveness is 0.30, which is below the 0.46 threshold for
+% mandatory temporal data. No measurements are required for this constraint.
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA
+   ========================================================================== */
+
+% No Boltzmann or Network data declared for this constraint.
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+% No directionality overrides are needed. The structural derivation from
+% beneficiary/victim declarations accurately models the dynamics.
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */

@@ -1,26 +1,49 @@
 % ============================================================================
 % CONSTRAINT STORY: astm_d638_tensile_testing
 % ============================================================================
-% Generated: 2026-01-19
-% Model: Gemini 2.0 Flash
-% Source: ASTM D638: Standard Test Method for Tensile Properties of Plastics
+% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2024-07-29
 % ============================================================================
 
-:- module(constraint_astm_d638, []).
+:- module(constraint_astm_d638_tensile_testing, []).
 
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
 
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
+
 % --- Namespace Hooks (Required for loading) ---
-:- multifile 
+:- multifile
     domain_priors:base_extractiveness/2,
     domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
     domain_priors:requires_active_enforcement/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
-    constraint_indexing:constraint_classification/3.
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
+    narrative_ontology:boltzmann_floor_override/2,
+    constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3,
+    domain_priors:emerges_naturally/1,
+    narrative_ontology:omega_variable/3.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -28,249 +51,217 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: astm_d638_tensile_testing
- * human_readable: ASTM D638 Tensile Property Standard
- * domain: technological/industrial
- * temporal_scope: Active Standard (Current Version)
- * spatial_scope: Global (Industrial Materials Science)
- * * SUMMARY:
- * ASTM D638 establishes the standard "rules of the game" for determining the 
- * tensile properties of unreinforced and reinforced plastics. It 
- * mandates specific specimen geometries (dogbones), testing speeds, and 
- * environmental conditions to ensure data reproducibility across global 
- * supply chains.
- * * KEY AGENTS:
- * - Lab Technician: Powerless subject who must execute the test exactly as 
- * written to ensure valid results.
- * - Quality Assurance Manager: Institutional agent using the standard as a 
- * coordination mechanism for product certification.
- * - Material Scientist (R&D): Analytical agent seeking to understand 
- * physical reality through the lens of the standard's constraints.
- * * NARRATIVE ARC:
- * To the lab worker, ASTM D638 is a Mountain—the physical dimensions and 
- * speeds are immutable facts of their workday. To the industry, 
- * it is a Rope—a functional coordination mechanism allowing a buyer in 
- * Germany to trust a test result from Malaysia. Without this 
- * constraint, the global plastics market would devolve into chaos.
+ *   constraint_id: astm_d638_tensile_testing
+ *   human_readable: ASTM D638 Tensile Property Standard for Plastics
+ *   domain: technological
+ *
+ * SUMMARY:
+ *   ASTM D638 establishes the standard method for determining the tensile
+ *   properties of unreinforced and reinforced plastics. It mandates specific
+ *   specimen geometries ("dogbones"), testing speeds, and environmental
+ *   conditions to ensure data reproducibility and comparability across
+ *   global supply chains. It functions as a core coordination mechanism for
+ *   the plastics industry.
+ *
+ * KEY AGENTS (by structural relationship):
+ *   - Lab Technicians & Small Lab Owners: Primary target (powerless/trapped) — bear the costs of compliance, training, and capital equipment.
+ *   - Global Supply Chains & QA Managers: Primary beneficiary (institutional/arbitrage) — benefit from the interoperability and reduced transaction costs the standard provides.
+ *   - ASTM Committee D20: Architect/Beneficiary (institutional/arbitrage) - The rule-making body that maintains the standard.
+ *   - Innovative Testing Startups: Victim (organized/constrained) - Their novel methods are suppressed by the standard's incumbency.
+ *   - Analytical Observer: Analytical observer — sees the full structure of coordination and extraction.
  */
 
 /* ==========================================================================
-   2. CORE SYSTEM INTEGRATION (The "Reality" Layer)
+   2. BASE PROPERTIES (DOMAIN PRIORS)
    ========================================================================== */
 
-narrative_ontology:interval(industrial_testing_regime, 0, 10).
+% --- Numerical metrics ---
+% Rationale: Low extraction; the primary "cost" is compliance labor and
+% equipment, while the benefit is market-wide interoperability and safety.
+domain_priors:base_extractiveness(astm_d638_tensile_testing, 0.10).
+% Rationale: High suppression. Alternatives (e.g., ISO 527) are visible but
+% suppressed by regional market dominance and the "stickiness" of specified
+% testing equipment and historical data sets.
+domain_priors:suppression_score(astm_d638_tensile_testing, 0.60).
+% Rationale: The standard is highly functional with little performative waste.
+domain_priors:theater_ratio(astm_d638_tensile_testing, 0.05).
+
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(astm_d638_tensile_testing, extractiveness, 0.10).
+narrative_ontology:constraint_metric(astm_d638_tensile_testing, suppression_requirement, 0.60).
+narrative_ontology:constraint_metric(astm_d638_tensile_testing, theater_ratio, 0.05).
+
+% --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(astm_d638_tensile_testing, rope).
 
-% Base extractiveness score (0.0 = no extraction, 1.0 = full extraction)
-% Rationale: 0.1. Low extraction; the primary "cost" is compliance labor, 
-% while the benefit is market-wide interoperability and safety.
-domain_priors:base_extractiveness(astm_d638_tensile_testing, 0.1).
-
-% Suppression score (0.0 = no suppression, 1.0 = full suppression)
-% Rationale: 0.6. Alternatives (ISO 527) are visible but suppressed by 
-% regional market dominance and the "stickiness" of specified testing equipment 
-% and historical data sets.
-domain_priors:suppression_score(astm_d638_tensile_testing, 0.6).
-
-% Enforcement requirements
-% Requires active enforcement (Audit/Certification) to be valid in trade.
+% --- Binary flags ---
+% Requires active enforcement (via audits, lab certification) to be valid in trade.
 domain_priors:requires_active_enforcement(astm_d638_tensile_testing).
 
-% Metrics required for Section 1 of the Executive Summary
-% BENEFICIARIES & VICTIMS
+% --- Structural relationships (REQUIRED for non-mountain constraints) ---
+% Who benefits from this constraint existing?
 narrative_ontology:constraint_beneficiary(astm_d638_tensile_testing, global_supply_chains).
 narrative_ontology:constraint_beneficiary(astm_d638_tensile_testing, testing_equipment_manufacturers).
+% Who bears disproportionate cost?
+narrative_ontology:constraint_victim(astm_d638_tensile_testing, small_testing_labs).
 narrative_ontology:constraint_victim(astm_d638_tensile_testing, innovative_non_standard_testing_startups).
 
 /* ==========================================================================
-   3. INDEXED CLASSIFICATIONS (Perspectival Truth)
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × f(d) × σ(S)
+   where f(d) is the sigmoid directionality function:
+     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
+   The engine derives d from beneficiary/victim membership + exit_options.
+   Scope modifiers: local=0.8, regional=0.9, national=1.0,
+                    continental=1.1, global=1.2, universal=1.0.
+   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
+   Do not add measurement_basis, beneficiary/victim, or other metadata.
+   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 1: LAB TECHNICIAN - Mountain
-   --------------------------------------------------------------------------
-   
-   WHO: powerless - Must follow Section 10 (Procedure) exactly.
-   WHEN: immediate - Today's testing batch.
-   WHERE: trapped - Bound by the geometry of the Type I dogbone mold.
-   SCOPE: local - The testing machine and specimen in front of them.
-   
-   WHY THIS CLASSIFICATION:
-   The technician cannot "negotiate" with the crosshead speed of 5mm/min. 
-   If they change it, the data is invalid. It is an unchangeable law of 
-   their immediate environment.
-   -------------------------------------------------------------------------- */
+% PERSPECTIVE 1: THE LAB TECHNICIAN / SMALL LAB OWNER (SNARE)
+% Agent who bears the costs of compliance and capital equipment.
+% Engine derives d from: victim membership + trapped exit -> d ≈ 0.95 -> high χ.
+% The high suppression score and enforcement make this a Snare, despite low ε.
+% It feels like a Mountain (immutable rules), but is structurally a Snare
+% because it's a human-made system that traps participants via certification.
+constraint_indexing:constraint_classification(astm_d638_tensile_testing, snare,
+    context(agent_power(powerless),
+            time_horizon(biographical),
+            exit_options(trapped),
+            spatial_scope(local))).
 
-constraint_indexing:constraint_classification(
-    astm_d638_tensile_testing,
-    mountain,
-    context(
-        agent_power(powerless),
-        time_horizon(immediate),
-        exit_options(trapped),
-        spatial_scope(local)
-    )
-) :-
-    domain_priors:requires_active_enforcement(astm_d638_tensile_testing),
-    !.
+% PERSPECTIVE 2: THE ASTM COMMITTEE / QA MANAGER (ROPE)
+% Agent who benefits from the coordination function. Engine derives d from:
+%   beneficiary membership + arbitrage exit → d ≈ 0.05 → f(d) ≈ -0.12 → low/negative χ
+constraint_indexing:constraint_classification(astm_d638_tensile_testing, rope,
+    context(agent_power(institutional),
+            time_horizon(generational),
+            exit_options(arbitrage),
+            spatial_scope(global))).
 
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 2: MATERIAL PROCUREMENT MANAGER - Rope
-   --------------------------------------------------------------------------
-   
-   WHO: individual_moderate - Can choose between different materials/standards.
-   WHEN: biographical - Planning product lifecycles over 5-10 years.
-   WHERE: mobile - Can specify ISO 527 if required by European markets.
-   SCOPE: continental - Managing vendors across North America.
-   
-   WHY THIS CLASSIFICATION:
-   ASTM D638 is a functional tool (Rope). It allows the manager to coordinate 
-   between vendors using a shared language of "Tensile Strength at Yield" 
-   and "Elongation". It is helpful and changeable if the market shifts.
-   -------------------------------------------------------------------------- */
+% PERSPECTIVE 3: THE MATERIAL PROCUREMENT MANAGER (ROPE)
+% An agent with mobility who can choose between standards (e.g., ASTM vs ISO).
+% The constraint is a useful but non-coercive coordination tool.
+constraint_indexing:constraint_classification(astm_d638_tensile_testing, rope,
+    context(agent_power(moderate),
+            time_horizon(biographical),
+            exit_options(mobile),
+            spatial_scope(continental))).
 
-constraint_indexing:constraint_classification(
-    astm_d638_tensile_testing,
-    rope,
-    context(
-        agent_power(individual_moderate),
-        time_horizon(biographical),
-        exit_options(mobile),
-        spatial_scope(continental)
-    )
-) :-
-    domain_priors:base_extractiveness(astm_d638_tensile_testing, E),
-    E < 0.3,
-    !.
-
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 3: ASTM COMMITTEE D20 - Institutional
-   --------------------------------------------------------------------------
-   
-   WHO: institutional - Rule-making power to revise the standard.
-   WHEN: generational - Managing a standard that has existed for decades.
-   WHERE: arbitrage - Balances industrial needs vs. academic accuracy.
-   SCOPE: global - The standard is used worldwide.
-   
-   WHY THIS CLASSIFICATION:
-   For the committee, the standard is a Rope they are constantly weaving. 
-   They recognize it as a coordination mechanism that must adapt to new 
-   materials like 3D-printed polymers.
-   -------------------------------------------------------------------------- */
-
-constraint_indexing:constraint_classification(
-    astm_d638_tensile_testing,
-    rope,
-    context(
-        agent_power(institutional),
-        time_horizon(generational),
-        exit_options(arbitrage),
-        spatial_scope(global)
-    )
-) :-
-    !.
-
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 4: SMALL LAB OWNER / TECHNICIAN (FINANCIAL) - Snare
-   --------------------------------------------------------------------------
-   WHO: powerless - Bound by the high capital cost of compliance.
-   WHEN: immediate - Ongoing daily maintenance and calibration costs.
-   WHERE: trapped - Cannot exit the ASTM ecosystem without losing certification.
-   SCOPE: local - The lab's operational margin.
-   
-   WHY THIS CLASSIFICATION:
-   The "Snare" represents the capital extraction required to maintain the 
-   standard. This includes the cost of the standard itself, specialized grips, 
-   Class B-2 extensometers, and the labor for daily accuracy verification 
-   required by Section 5.1.5.
-   -------------------------------------------------------------------------- */
-
-constraint_indexing:constraint_classification(
-    astm_d638_tensile_testing,
-    snare,
-    context(
-        agent_power(powerless),
-        time_horizon(immediate),
-        exit_options(trapped),
-        spatial_scope(local)
-    )
-) :-
-    domain_priors:requires_active_enforcement(astm_d638_tensile_testing),
-    domain_priors:suppression_score(astm_d638_tensile_testing, S),
-    S > 0.5.
-
-% This explicit prior ensures the Snare perspective is mathematically weighted.
-domain_priors:base_extractiveness(astm_d638_tensile_testing, 0.1).
-
-% Constraint metric facts (bridge for classification engine)
-narrative_ontology:constraint_metric(astm_d638_tensile_testing, extractiveness, 0.1).
-narrative_ontology:constraint_metric(astm_d638_tensile_testing, suppression_requirement, 0.6).
+% PERSPECTIVE 4: THE ANALYTICAL OBSERVER (ROPE)
+% Default analytical context. Recognizes the primary function is coordination,
+% classifying it as a Rope despite the snare-like properties for trapped agents.
+constraint_indexing:constraint_classification(astm_d638_tensile_testing, rope,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(global))).
 
 /* ==========================================================================
-   4. TESTS (What We Learn About Constraints)
+   4. VALIDATION TESTS
    ========================================================================== */
 
-:- begin_tests(astm_d638_tests).
+:- begin_tests(astm_d638_tensile_testing_tests).
 
-test(multi_perspective_variance) :-
-    % Technician (Mountain) vs Manager (Rope)
-    constraint_indexing:constraint_classification(astm_d638_tensile_testing, Mountain, context(powerless, immediate, trapped, local)),
-    constraint_indexing:constraint_classification(astm_d638_tensile_testing, Rope, context(individual_moderate, biographical, mobile, continental)),
-    Mountain \= Rope.
+test(perspectival_gap) :-
+    % Verify perspectival gap between target (Snare) and beneficiary (Rope).
+    constraint_indexing:constraint_classification(astm_d638_tensile_testing, snare, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(astm_d638_tensile_testing, rope, context(agent_power(institutional), _, _, _)).
 
 test(low_extractiveness_check) :-
-    domain_priors:base_extractiveness(astm_d638_tensile_testing, E),
+    config:param(extractiveness_metric_name, ExtMetricName),
+    narrative_ontology:constraint_metric(astm_d638_tensile_testing, ExtMetricName, E),
     E < 0.2.
 
-:- end_tests(astm_d638_tests).
+:- end_tests(astm_d638_tensile_testing_tests).
 
 /* ==========================================================================
-   5. MODEL INTERPRETATION (Commentary)
+   5. GENERATIVE COMMENTARY
    ========================================================================== */
 
 /**
- * LLM GENERATION NOTES
- * * Model: Gemini 2.0 Flash
- * * KEY DECISIONS:
- * 1. CLASSIFICATION: I primary-labeled this as 'Rope'. Industrial standards 
- * are the quintessential coordination mechanisms. They provide 0.1 
- * extractiveness because they generally solve more problems than they 
- * create.
- * * 2. MOUNTAIN PERSPECTIVE: It's vital to model the technician's view as 
- * 'Mountain'. For the person at the bench, a "Standard" is not a 
- * suggestion; it is the physical architecture of their labor.
+ * LOGIC RATIONALE:
+ *   The base extractiveness (ε=0.10) is low because industrial standards are
+ *   quintessential coordination mechanisms that create more value than they
+ *   extract. The high suppression score (0.60) reflects the significant
+ *   incumbency advantage and switching costs that lock out alternatives like
+ *   ISO 527 in certain markets (e.g., US aerospace). The theater ratio is
+ *   very low (0.05) as the standard is almost entirely functional.
+ *
+ * PERSPECTIVAL GAP:
+ *   The gap is stark: for institutional beneficiaries (QA managers, ASTM
+ *   committee), it's a pure Rope—a tool for coordination. For the powerless
+ *   and trapped agent (lab technician, small lab owner), the high capital
+ *   costs, mandatory certification, and high suppression of alternatives
+ *   make it a Snare. They cannot easily exit the system without losing their
+ *   livelihood, and they bear the direct costs of compliance.
+ *
+ * DIRECTIONALITY LOGIC:
+ *   - Beneficiaries: `global_supply_chains` and `testing_equipment_manufacturers`
+ *     directly profit from the interoperability and guaranteed market for
+ *     compliant machines.
+ *   - Victims: `small_testing_labs` face high capital barriers, while
+ *     `innovative_non-standard_testing_startups` are structurally suppressed
+ *     by the standard's dominance. This maps the costs of the system.
+ *
+ * MANDATROPHY ANALYSIS:
+ *   This case demonstrates how a low-extraction Rope (ε=0.10) can still
+ *   function as a Snare for a specific index (powerless, trapped). The
+ *   classification is not determined by ε alone, but by the effective
+ *   extraction χ, which is amplified for the victim by their high
+ *   directionality (d≈0.95) and the constraint's high suppression score.
+ *   This correctly identifies the coercive aspect without mislabeling the
+ *   entire coordination system as purely extractive.
  */
 
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+% Omega variables — open questions the framework cannot yet resolve
+%
+% /5 form: narrative detail for story context
 omega_variable(
-    iso_convergence,
-    "Will ASTM D638 and ISO 527 ever fully merge?",
-    resolution_mechanism("Monitor Joint Committee activities and ballot results"),
-    impact("If Yes: Global Mountain. If No: Continued regional arbitrage/Rope."),
+    omega_astm_d638,
+    'Will ASTM D638 and ISO 527 ever fully merge into a single global standard?',
+    'Monitor joint committee activities, ballot results, and adoption rates in key industries (automotive, aerospace).',
+    'If Yes: The constraint would become a global Rope with even higher suppression, potentially approaching a Piton if innovation stagnates. If No: The current Rope/Snare dynamic persists, with continued regional arbitrage.',
     confidence_without_resolution(medium)
 ).
 
-/* ==========================================================================
-   6. ALTERNATIVE ANALYSIS
-   ========================================================================== */
-
-/**
- * VIABLE ALTERNATIVES
- * * ALTERNATIVE 1: ISO 527
- * Viability: The primary global alternative. Technically similar but 
- * mathematically distinct in some modulus calculations.
- * Suppression: Market-driven. US government agencies and Boeing/Ford 
- * often mandate ASTM, suppressing ISO adoption in NA.
- * * CONCLUSION:
- * The existence of ISO 527 proves ASTM D638 isn't a "natural law" (Mountain), 
- * but an institutional choice (Rope).
- */
+% /3 form: typed classification for reporting engine (REQUIRED)
+narrative_ontology:omega_variable(omega_astm_d638, empirical, 'The potential for convergence between ASTM D638 and ISO 527 standards.').
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% 1. Load: ?- [astm_d638].
-% 2. Run: ?- constraint_indexing:multi_index_report(astm_d638_tensile_testing).
+% Required for external script parsing
+narrative_ontology:interval(astm_d638_tensile_testing, 0, 10).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% No temporal data required. Base extractiveness (0.10) is below the
+% threshold (0.46) for mandatory lifecycle drift monitoring.
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA
+   ========================================================================== */
+
+% Coordination type (enables Boltzmann floor + complexity offset)
+% An industrial standard is a classic example of an information standard.
+narrative_ontology:coordination_type(astm_d638_tensile_testing, information_standard).
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+% No overrides needed. The structural derivation from beneficiary/victim
+% declarations and exit options accurately models the directionality for
+% all key agents in this scenario.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

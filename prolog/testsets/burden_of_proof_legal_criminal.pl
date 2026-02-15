@@ -1,26 +1,49 @@
 % ============================================================================
 % CONSTRAINT STORY: burden_of_proof_legal_criminal
 % ============================================================================
-% Generated: 2026-01-19
-% Model: Gemini 2.0 Flash
-% Source: General Jurisprudence / Common Law Criminal Procedure
+% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2024-07-28
 % ============================================================================
 
-:- module(constraint_legal_burden_of_proof, []).
+:- module(constraint_burden_of_proof_legal_criminal, []).
 
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
 
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
+
 % --- Namespace Hooks (Required for loading) ---
-:- multifile 
+:- multifile
     domain_priors:base_extractiveness/2,
     domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
     domain_priors:requires_active_enforcement/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
-    constraint_indexing:constraint_classification/3.
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
+    narrative_ontology:boltzmann_floor_override/2,
+    constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3,
+    domain_priors:emerges_naturally/1,
+    narrative_ontology:omega_variable/3.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -28,254 +51,210 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: burden_of_proof_legal_criminal
- * human_readable: Beyond a Reasonable Doubt (Criminal Legal Burden)
- * domain: political/social
- * temporal_scope: Modern Era (Common Law Jurisdictions)
- * spatial_scope: National
- * * SUMMARY:
- * In criminal law, the burden of proof rests entirely on the prosecution to 
- * prove every element of a crime "beyond a reasonable doubt." This is a 
- * foundational constraint designed to protect individuals from the 
- * overwhelming power of the state, codifying the principle that it is better 
- * for ten guilty persons to escape than for one innocent to suffer.
- * * KEY AGENTS:
- * - The Defendant: Individual powerless; subject to the state's accusation and potential loss of liberty.
- * - The Prosecutor: Institutional; represents the state and carries the weight of proving the charge.
- * - The Juror: Analytical; the immediate arbiter of whether the burden has been met.
- * * NARRATIVE ARC:
- * Unlike the engineering variety which extracts safety to meet schedules, 
- * the legal burden acts as a Rope (coordination) for the state but a 
- * Mountain (unchangeable protection) for the accused. It defines the 
- * "rules of the game" for civil society to ensure the state's power is 
- * not used as a Snare against its citizens.
+ *   constraint_id: burden_of_proof_legal_criminal
+ *   human_readable: "Beyond a Reasonable Doubt" (Criminal Legal Burden)
+ *   domain: political/social
+ *
+ * SUMMARY:
+ *   In common law criminal systems, the burden of proof rests entirely on the
+ *   prosecution to prove every element of a crime "beyond a reasonable doubt."
+ *   This is a foundational constraint designed to protect individuals from the
+ *   overwhelming power of the state, codifying the principle that it is better
+ *   for ten guilty persons to escape than for one innocent to suffer. It functions
+ *   as a pure coordination rule (Rope) that standardizes the state's use of
+ *   coercive power.
+ *
+ * KEY AGENTS (by structural relationship):
+ *   - Criminal Defendants: Primary beneficiary (powerless/trapped) — protected by the high standard.
+ *   - State Prosecutors: Primary target (institutional/mobile) — constrained by the high standard, which limits their ability to secure convictions.
+ *   - Civil Society: Secondary beneficiary (organized/mobile) — benefits from the limitation on state power.
+ *   - Analytical Observer: Sees the full structure as a coordination mechanism.
  */
 
 /* ==========================================================================
-   2. CORE SYSTEM INTEGRATION (The "Reality" Layer)
+   2. BASE PROPERTIES (DOMAIN PRIORS)
    ========================================================================== */
 
-% Required for [STEP 1] and [STEP 2] of the DR-Audit Suite
-narrative_ontology:interval(criminal_trial_sequence, 0, 10).
+% --- Numerical metrics ---
+domain_priors:base_extractiveness(burden_of_proof_legal_criminal, 0.10).
+domain_priors:suppression_score(burden_of_proof_legal_criminal, 0.20).   % Structural property (raw, unscaled).
+domain_priors:theater_ratio(burden_of_proof_legal_criminal, 0.05).       % Piton detection (>= 0.70)
+
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(burden_of_proof_legal_criminal, extractiveness, 0.10).
+narrative_ontology:constraint_metric(burden_of_proof_legal_criminal, suppression_requirement, 0.20).
+narrative_ontology:constraint_metric(burden_of_proof_legal_criminal, theater_ratio, 0.05).
+
+% --- NL Profile Metrics (required for mountain constraints) ---
+% This constraint is not a mountain; it is a human-designed legal construct.
+% The suppression score of 0.20 also exceeds the mountain ceiling of 0.05.
+
+% --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(burden_of_proof_legal_criminal, rope).
 
-% Base extractiveness score (0.0-1.0)
-% Rationale: 0.1. Low extraction; the burden is designed to *prevent* % extraction (wrongful imprisonment) rather than facilitate it.
-domain_priors:base_extractiveness(burden_of_proof_legal_criminal, 0.1).
+% --- Binary flags ---
+domain_priors:requires_active_enforcement(burden_of_proof_legal_criminal). % Judges must instruct juries, appellate courts review.
 
-% Suppression score (0.0-1.0)
-% Rationale: 0.2. Low suppression; the legal system (ideally) allows for 
-% all relevant evidence and alternative theories of the crime to be presented.
-domain_priors:suppression_score(burden_of_proof_legal_criminal, 0.2).
+% --- Structural relationships (REQUIRED for non-mountain constraints) ---
+% These feed the directionality derivation chain: the engine computes
+% d (directionality) from agent membership in these groups + exit_options.
 
-% Enforcement requirements
-% Requires active enforcement: Judges must instruct juries, and appellate 
-% courts must review if the burden was properly applied.
-domain_priors:requires_active_enforcement(burden_of_proof_legal_criminal).
+% Who benefits from this constraint existing?
+narrative_ontology:constraint_beneficiary(burden_of_proof_legal_criminal, criminal_defendants).
+narrative_ontology:constraint_beneficiary(burden_of_proof_legal_criminal, civil_society).
 
-% Metrics required for Section 1 of the Executive Summary
-% BENEFICIARIES & VICTIMS
-narrative_ontology:constraint_beneficiary(burden_of_proof_legal_criminal, civil_liberties).
-narrative_ontology:constraint_beneficiary(burden_of_proof_legal_criminal, the_accused).
-narrative_ontology:constraint_victim(burden_of_proof_legal_criminal, prosecutorial_efficiency).
+% Who bears disproportionate cost?
+% The "cost" is reduced efficiency in prosecution.
+narrative_ontology:constraint_victim(burden_of_proof_legal_criminal, state_prosecutors).
 
 /* ==========================================================================
-   3. INDEXED CLASSIFICATIONS (Perspectival Truth)
-   ========================================================================= */
-
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 1: THE DEFENDANT - Mountain
-   --------------------------------------------------------------------------
-   
-   WHO: powerless - Facing the state's resources; cannot change the law.
-   WHEN: immediate - The duration of the trial and potential sentencing.
-   WHERE: trapped - Bound by the court's jurisdiction and the finality of the verdict.
-   SCOPE: local - Impact on their specific life and liberty.
-   
-   WHY THIS CLASSIFICATION:
-   For the defendant, the high burden of proof is an unchangeable Mountain 
-   of protection. They do not have to "do" anything for it to exist; it is 
-   a pre-existing feature of the legal landscape that the state must climb 
-   over to reach them.
-   -------------------------------------------------------------------------- */
-
-constraint_indexing:constraint_classification(
-    burden_of_proof_legal_criminal,
-    mountain,
-    context(
-        agent_power(powerless),
-        time_horizon(immediate),
-        exit_options(trapped),
-        spatial_scope(local)
-    )
-) :-
-    domain_priors:requires_active_enforcement(burden_of_proof_legal_criminal),
-    !.
-
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE PROSECUTOR - Rope
-   --------------------------------------------------------------------------
-   
-   WHO: institutional - Rule-making and rule-applying power representing the state.
-   WHEN: biographical - Careers built on the successful navigation of trials.
-   WHERE: mobile - Can choose which cases to bring based on evidence strength.
-   SCOPE: national - Operating within a country's legal framework.
-   
-   WHY THIS CLASSIFICATION:
-   For the prosecutor, the burden of proof is a Rope—a coordination mechanism. 
-   It tells them how much evidence they must gather and how to structure 
-   their narrative to gain a conviction. It is a functional tool that 
-   standardizes the state's exercise of power.
-   -------------------------------------------------------------------------- */
-
-constraint_indexing:constraint_classification(
-    burden_of_proof_legal_criminal,
-    rope,
-    context(
-        agent_power(institutional),
-        time_horizon(biographical),
-        exit_options(mobile),
-        spatial_scope(national)
-    )
-) :-
-    domain_priors:base_extractiveness(burden_of_proof_legal_criminal, E),
-    E < 0.3,
-    !.
-
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE JUROR - Analytical
-   --------------------------------------------------------------------------
-   
-   WHO: analytical - Temporary citizen-judge tasked with weighing the evidence.
-   WHEN: immediate - Limited to the evidence presented during the trial.
-   WHERE: analytical - Not personally trapped by the outcome, but morally bound.
-   SCOPE: local - A single specific case and defendant.
-   
-   WHY THIS CLASSIFICATION:
-   The juror views the burden as a Rope (standard) they must use to measure 
-   the truth. It is the objective scale upon which they place the 
-   prosecution's case.
-   -------------------------------------------------------------------------- */
-
-constraint_indexing:constraint_classification(
-    burden_of_proof_legal_criminal,
-    rope,
-    context(
-        agent_power(analytical),
-        time_horizon(immediate),
-        exit_options(analytical),
-        spatial_scope(local)
-    )
-) :-
-    !.
-
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE DEFENDANT (ACCUSED) - Snare
-   --------------------------------------------------------------------------
-   WHO: powerless - Subject to the overwhelming power of the state.
-   WHEN: immediate - The duration of the trial and pre-trial detention.
-   WHERE: trapped - Bound by the legal process with no meaningful exit.
-   SCOPE: local - The individual's life, liberty, and financial solvency.
-   
-   WHY THIS CLASSIFICATION:
-   The "Snare" is the process of prosecution. While "Beyond a Reasonable Doubt"
-   is a protection, the individual must still survive the state's extraction of 
-   their resources, time, and reputation. For the defendant, the high burden 
-   is not a "tool" they use, but a narrow opening in a trap that otherwise 
-   seeks their total suppression within the penal system.
-   -------------------------------------------------------------------------- */
-
-constraint_indexing:constraint_classification(
-    burden_of_proof_legal_criminal,
-    snare,
-    context(
-        agent_power(powerless),
-        time_horizon(immediate),
-        exit_options(trapped),
-        spatial_scope(local)
-    )
-) :-
-    domain_priors:suppression_score(burden_of_proof_legal_criminal, S),
-    S > 0.3.
-
-% Explicit priors reflecting the high stakes and resource cost for the defendant.
-domain_priors:base_extractiveness(burden_of_proof_legal_criminal, 0.4).
-domain_priors:suppression_score(burden_of_proof_legal_criminal, 0.5).
-
-% Constraint metric facts (bridge for classification engine)
-narrative_ontology:constraint_metric(burden_of_proof_legal_criminal, extractiveness, 0.1).
-narrative_ontology:constraint_metric(burden_of_proof_legal_criminal, suppression_requirement, 0.2).
-
-/* ==========================================================================
-   4. TESTS (What We Learn About Constraints)
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × f(d) × σ(S)
+   where f(d) is the sigmoid directionality function:
+     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
+   The engine derives d from beneficiary/victim membership + exit_options.
+   Scope modifiers: local=0.8, regional=0.9, national=1.0,
+                    continental=1.1, global=1.2, universal=1.0.
+   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
+   Do not add measurement_basis, beneficiary/victim, or other metadata.
+   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-:- begin_tests(legal_burden_of_proof_tests).
+% PERSPECTIVE 1: THE DEFENDANT (ROPE)
+% Agent who is protected by the constraint. While it feels like an
+% unchangeable Mountain, it is structurally a highly stable Rope.
+% The suppression score (0.20) is too high for a Mountain (max 0.05).
+constraint_indexing:constraint_classification(burden_of_proof_legal_criminal, rope,
+    context(agent_power(powerless),
+            time_horizon(biographical),
+            exit_options(trapped),
+            spatial_scope(local))).
 
-test(multi_perspective_variance) :-
-    % Defendant (Mountain) vs Prosecutor (Rope)
-    constraint_indexing:constraint_classification(burden_of_proof_legal_criminal, T1, context(powerless, immediate, trapped, local)),
-    constraint_indexing:constraint_classification(burden_of_proof_legal_criminal, T2, context(institutional, biographical, mobile, national)),
-    T1 \= T2.
+% PERSPECTIVE 2: THE PROSECUTOR (ROPE)
+% Agent who must abide by the constraint. It is a coordination rule
+% defining the requirements for a successful prosecution.
+constraint_indexing:constraint_classification(burden_of_proof_legal_criminal, rope,
+    context(agent_power(institutional),
+            time_horizon(generational),
+            exit_options(mobile),
+            spatial_scope(national))).
 
-test(anti_extraction_nature) :-
-    % High extractiveness would imply a Snare; legal burden should be low.
-    domain_priors:base_extractiveness(burden_of_proof_legal_criminal, E),
-    E < 0.2.
-
-:- end_tests(legal_burden_of_proof_tests).
+% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (ROPE)
+% Default analytical context. Sees the constraint as a pure coordination
+% mechanism designed to balance state power and individual liberty.
+constraint_indexing:constraint_classification(burden_of_proof_legal_criminal, rope,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(global))).
 
 /* ==========================================================================
-   5. MODEL INTERPRETATION (Commentary)
+   4. VALIDATION TESTS
+   ========================================================================== */
+
+:- begin_tests(burden_of_proof_legal_criminal_tests).
+
+test(uniform_rope_classification) :-
+    % Verify that from all key perspectives, this is a Rope.
+    constraint_indexing:constraint_classification(burden_of_proof_legal_criminal, rope, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(burden_of_proof_legal_criminal, rope, context(agent_power(institutional), _, _, _)),
+    constraint_indexing:constraint_classification(burden_of_proof_legal_criminal, rope, context(agent_power(analytical), _, _, _)).
+
+test(low_extraction_and_suppression) :-
+    % The constraint's function is to prevent extraction, not enable it.
+    narrative_ontology:constraint_metric(burden_of_proof_legal_criminal, extractiveness, E),
+    narrative_ontology:constraint_metric(burden_of_proof_legal_criminal, suppression_requirement, S),
+    E < 0.25,
+    S < 0.25.
+
+:- end_tests(burden_of_proof_legal_criminal_tests).
+
+/* ==========================================================================
+   5. GENERATIVE COMMENTARY
    ========================================================================== */
 
 /**
- * LLM GENERATION NOTES
- * * Model: Gemini 2.0 Flash
- * * KEY DECISIONS:
- * * 1. DOMAIN ISOLATION: This is a **legal/social** burden of proof. It differs 
- * from the **engineering** variety because it is designed to increase 
- * friction against state action (protecting the subject), whereas the 
- * Challenger-style burden reversal decreased friction against risky 
- * activity (extracting safety).
- * * 2. CLASSIFICATION: Primarily labeled as 'Rope' because it is the 
- * quintessential coordination tool for a fair society.
- * * 3. EXTRACTIVENESS: Set to 0.1 because its primary function is protective.
+ * LOGIC RATIONALE:
+ *   The base extractiveness (ε=0.10) is low because the constraint's primary
+ *   function is protective, preventing the state from wrongfully extracting
+ *   liberty. The suppression score (S=0.20) reflects that while the standard
+ *   is high, the legal system itself has coercive elements, but the burden
+ *   itself does not suppress alternatives; it mandates a high bar for one
+ *   specific action (conviction). The theater ratio (0.05) is low as this is
+ *   a core, functional legal doctrine, not a performative one.
+ *
+ * PERSPECTIVAL GAP:
+ *   There is no perspectival gap in classification; all agents perceive a Rope.
+ *   However, the *experience* of the Rope differs dramatically. For the defendant,
+ *   it is a lifeline that feels as fixed and protective as a Mountain. For the
+ *   prosecutor, it is a high bar that must be cleared. The analytical observer
+ *   sees it as the intended coordination mechanism of a liberal society.
+ *
+ * DIRECTIONALITY LOGIC:
+ *   - Beneficiaries: `criminal_defendants` are the direct beneficiaries, as the
+ *     constraint protects them from the state's power. `civil_society` is a
+ *     broader beneficiary, as the rule reinforces the principle of limited government.
+ *   - Victims: `state_prosecutors` are the "victims" in a structural sense. The
+ *     constraint extracts prosecutorial efficiency and makes their job harder,
+ *     which is the intended design.
+ *
+ * MANDATROPHY ANALYSIS:
+ *   This constraint is a clear example of a functional Rope. It prevents the
+ *   mislabeling of state prosecution as a simple coordination task by imposing
+ *   a high friction cost. An attempt to lower this burden (e.g., to a
+ *   "preponderance of the evidence" standard) would increase the constraint's
+ *   extractiveness, shifting it towards a Tangled Rope or Snare by making it
+ *   easier for the state to extract liberty.
  */
 
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+% Omega variables — open questions the framework cannot yet resolve
+%
+% /5 form: narrative detail for story context
 omega_variable(
-    subjective_certainty_threshold,
-    "Is 'Beyond a Reasonable Doubt' an objective mathematical threshold or 
-     an irreducible psychological state of the juror?",
-    resolution_mechanism("Comparative neuro-legal studies on juror brain states during verdict deliberation"),
-    impact("If Objective: The burden is a Rope. If Subjective: The burden 
-            is a persistent psychological Mountain."),
+    omega_burden_of_proof_legal_criminal,
+    'Is "Beyond a Reasonable Doubt" an objective standard or an irreducible psychological state of the juror?',
+    'Comparative neuro-legal studies on juror brain states during verdict deliberation.',
+    'If objective, it is a pure information_standard Rope. If subjective, it has elements of irreducible complexity, making its application less predictable.',
     confidence_without_resolution(medium)
 ).
 
-/* ==========================================================================
-   6. ALTERNATIVE ANALYSIS
-   ========================================================================== */
-
-/**
- * VIABLE ALTERNATIVES
- * * ALTERNATIVE 1: Preponderance of the Evidence
- * Viability: Used in civil law (51% certainty). Highly viable but 
- * rejected in criminal law because the stakes (liberty) are too high.
- * Suppression: Suppressed by Constitutional protections and centuries 
- * of common law tradition.
- * * CONCLUSION:
- * The existence of lower burdens (preponderance, clear and convincing) 
- * demonstrates that the high criminal burden is an intentional 
- * institutional choice (Rope) designed to safeguard the individual.
- */
+% /3 form: typed classification for reporting engine (REQUIRED)
+narrative_ontology:omega_variable(omega_burden_of_proof_legal_criminal, conceptual, 'The objectivity vs. subjectivity of the "reasonable doubt" standard.').
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% 1. Load: ?- [burden_of_proof_legal_criminal].
-% 2. Analyze: ?- multi_index_report(burden_of_proof_legal_criminal).
+% Required for external script parsing
+narrative_ontology:interval(burden_of_proof_legal_criminal, 0, 10).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Temporal data is not required for this constraint as its base extractiveness
+% (0.10) is below the 0.46 threshold for mandatory lifecycle drift monitoring.
+% The constraint has been historically stable.
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA
+   ========================================================================== */
+
+% Coordination type (enables Boltzmann floor + complexity offset)
+% Valid types: information_standard, resource_allocation,
+%              enforcement_mechanism, global_infrastructure
+narrative_ontology:coordination_type(burden_of_proof_legal_criminal, information_standard).
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+% No overrides are necessary. The structural derivation from beneficiary/victim
+% declarations accurately captures the relationships.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

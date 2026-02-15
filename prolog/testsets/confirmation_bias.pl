@@ -1,9 +1,9 @@
 % ============================================================================
 % CONSTRAINT STORY: confirmation_bias
 % ============================================================================
-% Generated: 2026-01-19
-% Model: Gemini 2.0 Flash
-% Source: Cognitive Psychology / Wason (1960)
+% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2024-07-15
 % ============================================================================
 
 :- module(constraint_confirmation_bias, []).
@@ -12,15 +12,32 @@
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
 
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
+
 % --- Namespace Hooks (Required for loading) ---
-:- multifile 
+:- multifile
     domain_priors:base_extractiveness/2,
     domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
     domain_priors:requires_active_enforcement/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
-    constraint_indexing:constraint_classification/3.
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:omega_variable/3.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -28,181 +45,149 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: confirmation_bias
- * human_readable: Confirmation Bias
- * domain: social/cognitive/political
- * temporal_scope: Permanent (Human Evolutionary History)
- * spatial_scope: Global (Human Cognition)
- * * SUMMARY:
- * Confirmation bias is the tendency to search for, interpret, favor, and recall 
- * information in a way that confirms one's prior beliefs or values. It acts 
- * as a structural filter on reality, preventing the objective processing 
- * of contradictory evidence.
- * * KEY AGENTS:
- * - The Believer: An agent seeking validation for an existing world-view.
- * - The Dissenter: An agent presenting contradictory evidence that is ignored.
- * - The Algorithm: A digital system that automates and scales the bias through 
- * echo chambers.
- * * NARRATIVE ARC:
- * The bias functions as a "Mountain" of biological pre-programming. For the 
- * individual, it is a "Rope" providing cognitive ease and social cohesion. 
- * In polarized societies, it becomes a "Snare," as groups become trapped in 
- * incompatible realities, strangling the possibility of collective 
- * problem-solving.
+ *   constraint_id: confirmation_bias
+ *   human_readable: Confirmation Bias (Socially Amplified)
+ *   domain: social/cognitive/technological
+ *
+ * SUMMARY:
+ *   Confirmation bias is the tendency to search for, interpret, favor, and recall
+ *   information in a way that confirms one's prior beliefs. While having a
+ *   biological basis, this story models its socially and algorithmically
+ *   amplified form, where it functions as a powerful mechanism for social
+ *   control and epistemic closure, extracting objectivity and entrenching polarization.
+ *
+ * KEY AGENTS (by structural relationship):
+ *   - Polarized Citizen: Primary target (powerless/trapped) — bears the cost of epistemic closure and inability to process objective reality.
+ *   - Ideological Leaders: Primary beneficiary (institutional/arbitrage) — benefit from a predictable and cohesive in-group that is resistant to dissent.
+ *   - Social Media Platforms: Secondary beneficiary (institutional/arbitrage) — benefit from engagement driven by reinforcing user beliefs.
+ *   - Analytical Observer: Analytical observer — sees the full structure, including the coordination function and the asymmetric extraction.
  */
 
 /* ==========================================================================
-   2. CORE SYSTEM INTEGRATION (The "Reality" Layer)
+   2. BASE PROPERTIES (DOMAIN PRIORS)
    ========================================================================== */
 
-% Required for structural integration
-narrative_ontology:interval(confirmation_bias_interval, 0, 10).
-narrative_ontology:constraint_claim(confirmation_bias, snare).
+% --- Numerical metrics ---
+domain_priors:base_extractiveness(confirmation_bias, 0.48).
+domain_priors:suppression_score(confirmation_bias, 0.80).   % Structural property (raw, unscaled).
+domain_priors:theater_ratio(confirmation_bias, 0.10).       % Piton detection (>= 0.70)
 
-% Base extractiveness: 0.3 (Moderate)
-% Rationale: It extracts "objective truth" and "rationality." It benefits 
-% the ego and existing power structures by ignoring the costs of incorrect beliefs.
-domain_priors:base_extractiveness(confirmation_bias, 0.3).
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(confirmation_bias, extractiveness, 0.48).
+narrative_ontology:constraint_metric(confirmation_bias, suppression_requirement, 0.80).
+narrative_ontology:constraint_metric(confirmation_bias, theater_ratio, 0.10).
 
-% Suppression: 0.8 (High)
-% Rationale: The bias inherently suppresses contradictory information by 
-% making it invisible or devaluing it before it can be cognitively processed.
-domain_priors:suppression_score(confirmation_bias, 0.8).
+% --- Constraint claim (must match analytical perspective type) ---
+narrative_ontology:constraint_claim(confirmation_bias, tangled_rope).
 
-% Constraint metric facts (bridge for classification engine)
-narrative_ontology:constraint_metric(confirmation_bias, extractiveness, 0.3).
-narrative_ontology:constraint_metric(confirmation_bias, suppression_requirement, 0.8).
+% --- Binary flags ---
+domain_priors:requires_active_enforcement(confirmation_bias). % Required for Tangled Rope
 
-% Enforcement: Emerges naturally from neural efficiency and identity protection.
-domain_priors:emerges_naturally(confirmation_bias).
-
-% Metrics required for Section 1 of the Executive Summary
-% BENEFICIARIES & VICTIMS
-narrative_ontology:constraint_beneficiary(confirmation_bias, [ideological_leaders, status_quo]).
-narrative_ontology:constraint_victim(confirmation_bias, [scientific_objectivity, minority_dissenters]).
+% --- Structural relationships (REQUIRED for non-mountain constraints) ---
+% These feed the directionality derivation chain.
+% Who benefits from this constraint existing?
+narrative_ontology:constraint_beneficiary(confirmation_bias, ideological_leaders).
+narrative_ontology:constraint_beneficiary(confirmation_bias, social_media_platforms).
+%
+% Who bears disproportionate cost?
+narrative_ontology:constraint_victim(confirmation_bias, polarized_citizens).
+narrative_ontology:constraint_victim(confirmation_bias, minority_dissenters).
 
 /* ==========================================================================
-   3. INDEXED CLASSIFICATIONS (Perspectival Truth)
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × f(d) × σ(S)
    ========================================================================== */
 
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 1: THE NEUROSCIENTIST - MOUNTAIN
-   --------------------------------------------------------------------------
-   
-   WHO: analytical (The objective observer)
-   WHEN: civilizational (Observing a universal biological trait)
-   WHERE: trapped (Human brain architecture is currently fixed)
-   SCOPE: global
-   
-   WHY THIS CLASSIFICATION:
-   To the scientist, confirmation bias is a Mountain. It is an evolved 
-   efficiency mechanism—the brain's way of conserving energy by not 
-   re-evaluating every belief. It is an unchangeable feature of the 
-   human hardware.
-   -------------------------------------------------------------------------- */
+% PERSPECTIVE 1: THE POLARIZED CITIZEN (SNARE)
+% Agent trapped within an information ecosystem that reinforces their biases.
+% Engine derives d from: victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
+% χ = 0.48 * 1.42 * 1.0 ≈ 0.68, which is >= 0.66 (Snare threshold).
+constraint_indexing:constraint_classification(confirmation_bias, snare,
+    context(agent_power(powerless),
+            time_horizon(biographical),
+            exit_options(trapped),
+            spatial_scope(national))).
 
-constraint_indexing:constraint_classification(
-    confirmation_bias,
-    mountain,
-    context(
-        agent_power(analytical),
-        time_horizon(civilizational),
-        exit_options(trapped),
-        spatial_scope(global)
-    )
-) :- !.
+% PERSPECTIVE 2: THE IDEOLOGICAL LEADER (ROPE)
+% Agent who benefits from the coordination function of shared belief.
+% Engine derives d from: beneficiary membership + arbitrage exit → d ≈ 0.05 → f(d) ≈ -0.12 → negative χ
+constraint_indexing:constraint_classification(confirmation_bias, rope,
+    context(agent_power(institutional),
+            time_horizon(generational),
+            exit_options(arbitrage),
+            spatial_scope(national))).
 
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE COMMUNITY LEADER - ROPE
-   --------------------------------------------------------------------------
-   
-   WHO: institutional (Rule-shaping power within a group)
-   WHEN: biographical (Maintaining social order over decades)
-   WHERE: arbitrage (Can frame narratives to align with group bias)
-   SCOPE: regional
-   
-   WHY THIS CLASSIFICATION:
-   For the leader, the bias is a Rope. It is a coordination mechanism that 
-   builds social capital and group identity. By reinforcing shared beliefs, 
-   the leader pulls the community together, creating a unified force that is 
-   resistant to external disruption.
-   -------------------------------------------------------------------------- */
-
-constraint_indexing:constraint_classification(
-    confirmation_bias,
-    rope,
-    context(
-        agent_power(institutional),
-        time_horizon(biographical),
-        exit_options(arbitrage),
-        spatial_scope(regional)
-    )
-) :- !.
-
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE POLARIZED CITIZEN - SNARE
-   --------------------------------------------------------------------------
-   
-   WHO: powerless (A subject in a high-conflict social system)
-   WHEN: immediate (Today's news cycle and social interaction)
-   WHERE: constrained (Cannot easily leave their information bubble)
-   SCOPE: national
-   
-   WHY THIS CLASSIFICATION:
-   For the citizen trapped in a polarized environment, the bias is a Snare. 
-   Every piece of information they consume tightens their existing 
-   prejudices, making it impossible to see the "other side" as human or 
-   rational. Their ability to think independently is strangled by the 
-   echo chamber they inhabit.
-   -------------------------------------------------------------------------- */
-
-constraint_indexing:constraint_classification(
-    confirmation_bias,
-    snare,
-    context(
-        agent_power(powerless),
-        time_horizon(immediate),
-        exit_options(constrained),
-        spatial_scope(national)
-    )
-) :- !.
+% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
+% Sees both the coordination function (Rope) and the asymmetric extraction (Snare).
+% The high suppression and extraction, combined with a clear beneficiary, define a Tangled Rope.
+constraint_indexing:constraint_classification(confirmation_bias, tangled_rope,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(global))).
 
 /* ==========================================================================
-   4. TESTS (What We Learn About Constraints)
+   4. VALIDATION TESTS
    ========================================================================== */
 
 :- begin_tests(confirmation_bias_tests).
 
-test(multi_perspective_variance) :-
-    constraint_indexing:constraint_classification(confirmation_bias, T1, context(agent_power(analytical), _, _, _)),
-    constraint_indexing:constraint_classification(confirmation_bias, T2, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(confirmation_bias, T3, context(agent_power(powerless), _, _, _)),
-    T1 \= T2, T2 \= T3.
+test(perspectival_gap) :-
+    % Verify perspectival gap between target, beneficiary, and analyst.
+    constraint_indexing:constraint_classification(confirmation_bias, TypeTarget, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(confirmation_bias, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
+    constraint_indexing:constraint_classification(confirmation_bias, TypeAnalyst, context(agent_power(analytical), _, _, _)),
+    TypeTarget == snare,
+    TypeBeneficiary == rope,
+    TypeAnalyst == tangled_rope.
 
-test(bias_suppression_scaling) :-
-    % Confirmation bias relies on high internal suppression of alternatives.
-    domain_priors:suppression_score(confirmation_bias, Score),
-    Score >= 0.7.
+test(tangled_rope_structural_properties) :-
+    % Verify the structural requirements for a Tangled Rope are met.
+    domain_priors:requires_active_enforcement(confirmation_bias),
+    narrative_ontology:constraint_beneficiary(confirmation_bias, _),
+    narrative_ontology:constraint_victim(confirmation_bias, _).
 
-test(time_horizon_immutability) :-
-    % Civilizational view sees biological invariants as Mountains.
-    constraint_indexing:effective_immutability(civilizational, trapped, mountain).
+test(snare_threshold_validation) :-
+    % Verify the metrics support a Snare classification from the target's perspective.
+    config:param(extractiveness_metric_name, ExtMetricName),
+    config:param(snare_epsilon_floor, SnareEpsilonFloor),
+    narrative_ontology:constraint_metric(confirmation_bias, ExtMetricName, E),
+    E >= SnareEpsilonFloor.
 
 :- end_tests(confirmation_bias_tests).
 
 /* ==========================================================================
-   5. MODEL INTERPRETATION (Commentary)
+   5. GENERATIVE COMMENTARY
    ========================================================================== */
 
 /**
- * LLM GENERATION NOTES
- * * Model: Gemini 2.0 Flash
- * * KEY DECISIONS:
- * 1. SUPPRESSION SCORE (0.8): The bias is defined by the active avoidance 
- * and devaluing of contradictory evidence.
- * 2. SNARE CLASSIFICATION: I chose this for the citizen because the 
- * "echo chamber" effect is an active trap that consumes the agent's 
- * epistemic agency.
+ * LOGIC RATIONALE:
+ *   This model departs from viewing confirmation bias as a low-extraction,
+ *   biological 'Mountain'. Instead, it models the socially and algorithmically
+ *   amplified version, which is highly extractive.
+ *   - Base Extractiveness (ε=0.48): Set just above the Snare floor (0.46) to
+ *     reflect the high cost of epistemic closure. What is extracted is not
+ *     money, but cognitive agency and access to objective reality.
+ *   - Suppression (0.80): The bias is defined by its function of suppressing
+ *     contradictory information, making alternatives invisible or devalued.
+ *   - Active Enforcement: This is met through social pressure (in-group policing)
+ *     and algorithmic filtering, which actively curate a biased information diet.
+ *
+ * PERSPECTIVAL GAP:
+ *   - The Polarized Citizen (Snare): They are trapped in an echo chamber. Their
+ *     ability to think independently is constrained, and the cost is high.
+ *   - The Ideological Leader (Rope): They leverage the bias as a pure coordination
+ *     tool to build social cohesion and a loyal base, experiencing no extraction.
+ *   - The Analyst (Tangled Rope): They see the complete picture: a system that
+ *     provides genuine coordination for one group (the 'Rope' aspect) by
+ *     asymmetrically extracting cognitive freedom from another (the 'Snare' aspect).
+ *
+ * MANDATROPHY ANALYSIS:
+ *   Classifying this as a Tangled Rope correctly avoids two major errors. It is
+ *   not a 'Mountain' of pure biology, because its social impact is constructed
+ *   and enforced. It is not a pure 'Snare', because it serves a genuine (if
+ *   problematic) coordination function for the in-group. The Tangled Rope
+ *   classification acknowledges this duality, which is critical for analysis.
  */
 
 /* ==========================================================================
@@ -210,37 +195,52 @@ test(time_horizon_immutability) :-
    ========================================================================== */
 
 omega_variable(
-    algorithmic_feedback_weight,
-    "To what extent is modern polarization caused by biological bias (Mountain) vs. algorithmic amplification (Snare)?",
-    resolution_mechanism("Comparative study of polarized groups with and without digital social media exposure"),
-    impact("If Mountain: Education is the only fix. If Snare: Regulation can loosen the trap."),
+    omega_confirmation_bias,
+    "To what extent is modern polarization caused by innate biological bias vs. contingent algorithmic amplification?",
+    "Comparative study of polarized groups with and without digital social media exposure.",
+    "If primarily biological, the constraint is closer to a Mountain and requires education. If primarily algorithmic, it is a Tangled Rope/Snare that can be mitigated by regulation.",
     confidence_without_resolution(medium)
 ).
 
-/* ==========================================================================
-   7. ALTERNATIVE ANALYSIS
-   ========================================================================== */
-
-/**
- * VIABLE ALTERNATIVES
- * * ALTERNATIVE 1: Falsificationism (Scientific Method)
- * Viability: Actively seeking to disprove one's beliefs.
- * Suppression: High. It is cognitively expensive and socially isolating.
- * * CONCLUSION:
- * The existence of the scientific method as an alternative makes 
- * confirmation bias a Snare for those who refuse (or are unable) to 
- * use it, but a Rope for those who use it strategically.
- */
+narrative_ontology:omega_variable(omega_confirmation_bias, empirical, 'Disentangling biological predisposition from algorithmic amplification in modern polarization.').
 
 /* ==========================================================================
-   8. INTEGRATION HOOKS
+   7. INTEGRATION HOOKS
    ========================================================================== */
 
-/**
- * TO USE THIS FILE:
- * 1. Load: ?- [constraint_confirmation_bias].
- * 2. Multi-perspective: ?- multi_index_report(confirmation_bias).
- */
+% Required for external script parsing
+narrative_ontology:interval(confirmation_bias, 0, 10).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Temporal data models the intensification of the bias from a biological
+% baseline to an algorithmically amplified state. Required as ε > 0.46.
+
+% Theater ratio over time (remains low as the function is genuine):
+narrative_ontology:measurement(confirmation_bias_tr_t0, confirmation_bias, theater_ratio, 0, 0.10).
+narrative_ontology:measurement(confirmation_bias_tr_t5, confirmation_bias, theater_ratio, 5, 0.10).
+narrative_ontology:measurement(confirmation_bias_tr_t10, confirmation_bias, theater_ratio, 10, 0.10).
+
+% Extraction over time (increases with communication technology):
+narrative_ontology:measurement(confirmation_bias_ex_t0, confirmation_bias, base_extractiveness, 0, 0.20).
+narrative_ontology:measurement(confirmation_bias_ex_t5, confirmation_bias, base_extractiveness, 5, 0.35).
+narrative_ontology:measurement(confirmation_bias_ex_t10, confirmation_bias, base_extractiveness, 10, 0.48).
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA
+   ========================================================================== */
+
+% Coordination type: Information standard (enforces a shared reality).
+narrative_ontology:coordination_type(confirmation_bias, information_standard).
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+% No overrides needed. The structural derivation from beneficiary/victim
+% declarations accurately models the directionality.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

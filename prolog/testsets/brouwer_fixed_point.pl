@@ -1,9 +1,9 @@
 % ============================================================================
 % CONSTRAINT STORY: brouwer_fixed_point
 % ============================================================================
-% Generated: 2026-01-19
-% Model: Gemini 2.0 Flash
-% Source: Brouwer Fixed Point Theorem (Topology / Game Theory)
+% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2024-07-15
 % ============================================================================
 
 :- module(constraint_brouwer_fixed_point, []).
@@ -12,15 +12,39 @@
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
 
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
+
 % --- Namespace Hooks (Required for loading) ---
-:- multifile 
+:- multifile
     domain_priors:base_extractiveness/2,
     domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
     domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
-    constraint_indexing:constraint_classification/3.
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
+    narrative_ontology:boltzmann_floor_override/2,
+    constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3,
+    domain_priors:emerges_naturally/1,
+    narrative_ontology:omega_variable/3.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -28,228 +52,212 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: brouwer_fixed_point
- * human_readable: Brouwer Fixed Point Theorem
- * domain: mathematics/topological/economic
- * temporal_scope: 1911 - Present (Civilizational)
- * spatial_scope: Global/Abstract (Compact convex sets)
- * * SUMMARY:
- * The Brouwer Fixed Point Theorem states that for any continuous function 
- * mapping a compact convex set to itself, there is at least one point x 
- * such that f(x) = x. It is a fundamental "existence" theorem that guarantees 
- * equilibrium in complex systems without necessarily providing a method to find it.
- * * KEY AGENTS:
- * - The Topological Subject (The Point): An agent trapped within the set, 
- * guaranteed to have a "home" but no agency to choose it.
- * - The Game Theorist / Economist: An institutional agent who uses the 
- * theorem to prove the existence of Nash Equilibria or Market Clearing prices.
- * - The Searcher (Numerical Analyst): An agent struggling with the "non-constructive" 
- * nature of the theorem, knowing a solution exists but lacking a map.
- * * NARRATIVE ARC:
- * Brouwer acts as a "Mountain" of topological inevitability. In the narrative 
- * of a system (like an economy), it is the "Rope" that guarantees consistency. 
- * However, to the searcher, its non-constructive nature is a "Snare"—a 
- * promise of a solution that offers no relief from the labor of finding it.
+ *   constraint_id: brouwer_fixed_point
+ *   human_readable: Brouwer Fixed Point Theorem
+ *   domain: mathematics/topological
+ *
+ * SUMMARY:
+ *   The Brouwer Fixed Point Theorem states that for any continuous function
+ *   mapping a compact convex set to itself, there is at least one point x
+ *   such that f(x) = x. It is a fundamental "existence" theorem that guarantees
+ *   equilibrium in certain systems without providing a method to find it.
+ *   As a mathematical truth, it functions as a Mountain: an unchangeable,
+ *   non-negotiable feature of the logical landscape.
+ *
+ * KEY AGENTS (by structural relationship):
+ *   - The Mathematician (analytical/analytical): An observer who understands and applies the theorem as a foundational truth.
+ *   - The Game Theorist (institutional/arbitrage): An agent who uses the theorem to prove the existence of Nash Equilibria, treating it as a given law.
+ *   - The Numerical Analyst (moderate/constrained): An agent who experiences the non-constructive nature of the theorem as a practical barrier, but this is a downstream effect, not a property of the theorem itself.
  */
 
 /* ==========================================================================
-   2. CORE SYSTEM INTEGRATION (The "Reality" Layer)
+   2. BASE PROPERTIES (DOMAIN PRIORS)
    ========================================================================== */
 
-% Required for DR-Audit Suite
-narrative_ontology:interval(brouwer_era, 1911, 2026).
-narrative_ontology:constraint_claim(brouwer_fixed_point, tangled_rope).
-domain_priors:requires_active_enforcement(brouwer_fixed_point).
+% --- Numerical metrics ---
+% Rationale: As a mathematical theorem, it has no inherent extractiveness.
+domain_priors:base_extractiveness(brouwer_fixed_point, 0.05).
+% Rationale: It is a fundamental topological result; alternatives are inconceivable within standard mathematics.
+domain_priors:suppression_score(brouwer_fixed_point, 0.01).
+% Rationale: The theorem is purely functional, with no performative aspect.
+domain_priors:theater_ratio(brouwer_fixed_point, 0.0).
 
-% Base extractiveness score (0.0-1.0)
-% Rationale: Low (0.2). It is a passive existence guarantee. It "extracts" 
-% the possibility of total chaos by forcing the existence of a stationary state.
-domain_priors:base_extractiveness(brouwer_fixed_point, 0.2).
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(brouwer_fixed_point, extractiveness, 0.05).
+narrative_ontology:constraint_metric(brouwer_fixed_point, suppression_requirement, 0.01).
+narrative_ontology:constraint_metric(brouwer_fixed_point, theater_ratio, 0.0).
 
-% Suppression score (0.0-1.0)
-% Rationale: Low (0.1). It is foundational; it does not hide its 
-% non-constructive nature, though it dominates the proof of existence.
-domain_priors:suppression_score(brouwer_fixed_point, 0.1).
+% --- NL Profile Metrics (required for mountain constraints) ---
+% These feed the natural_law_signature certification chain in
+% structural_signatures.pl.
+% Rationale: The theorem's conclusion is logically necessary given its premises; no alternatives are accessible.
+narrative_ontology:constraint_metric(brouwer_fixed_point, accessibility_collapse, 1.0).
+% Rationale: Resistance is incoherent; one cannot "resist" a mathematical proof.
+narrative_ontology:constraint_metric(brouwer_fixed_point, resistance, 0.0).
 
-% Constraint metric facts (bridge for classification engine)
-narrative_ontology:constraint_metric(brouwer_fixed_point, extractiveness, 0.2).
-narrative_ontology:constraint_metric(brouwer_fixed_point, suppression_requirement, 0.1).
+% --- Constraint claim (must match analytical perspective type) ---
+narrative_ontology:constraint_claim(brouwer_fixed_point, mountain).
 
-% Enforcement: Emerges from the axioms of topology and continuity.
+% --- Emergence flag (required for mountain constraints) ---
+% The theorem emerges from the axioms of topology and continuity without human enforcement.
 domain_priors:emerges_naturally(brouwer_fixed_point).
 
-% Metrics required for Section 1 of the Executive Summary
-% BENEFICIARIES & VICTIMS
-narrative_ontology:constraint_beneficiary(brouwer_fixed_point, institutional_stability). % Equilibrium exists.
-narrative_ontology:constraint_beneficiary(brouwer_fixed_point, theoretical_physicists).
-narrative_ontology:constraint_victim(brouwer_fixed_point, algorithmic_efficiency). % Existence doesn't help find it.
+% --- Structural relationships (REQUIRED for non-mountain constraints) ---
+% No enrichment needed. As a Mountain (natural law), the theorem does not have
+% beneficiaries or victims in a structural sense. Its effects are universal
+% and symmetric for all agents interacting with the logical system it describes.
 
 /* ==========================================================================
-   3. INDEXED CLASSIFICATIONS (Perspectival Truth)
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × f(d) × σ(S)
+   where f(d) is the sigmoid directionality function:
+     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
+   The engine derives d from beneficiary/victim membership + exit_options.
+   Scope modifiers: local=0.8, regional=0.9, national=1.0,
+                    continental=1.1, global=1.2, universal=1.0.
+   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
+   Do not add measurement_basis, beneficiary/victim, or other metadata.
+   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 1: THE TOPOLOGICAL POINT - Mountain
-   --------------------------------------------------------------------------
-   
-   WHO: powerless - The point has no agency over its transformation.
-   WHEN: immediate - True for every single mapping instance.
-   WHERE: trapped - Bound within the compact convex set X.
-   SCOPE: local - Immediate coordinate of the stationary point.
-   
-   WHY THIS CLASSIFICATION:
-   For the point, the fixed state is an unyielding law of the universe. 
-   If the set is "crumpled" or "stirred," the point *must* remain.
-   -------------------------------------------------------------------------- */
+% UNIFORM-TYPE: This is a natural law constraint (mountain-only). The
+% classification is the same from all perspectives, demonstrating invariance.
 
+% PERSPECTIVE 1: THE STUDENT (POWERLESS)
+% A student learning topology for the first time encounters the theorem as an
+% unchangeable fact they must accept and understand.
+constraint_indexing:constraint_classification(brouwer_fixed_point, mountain,
+    context(agent_power(powerless),
+            time_horizon(biographical),
+            exit_options(trapped),
+            spatial_scope(universal))).
 
+% PERSPECTIVE 2: THE GAME THEORIST (INSTITUTIONAL)
+% An economist or game theorist uses the theorem as a foundational tool to
+% guarantee the existence of market equilibria. For them, it is a law of the system.
+constraint_indexing:constraint_classification(brouwer_fixed_point, mountain,
+    context(agent_power(institutional),
+            time_horizon(generational),
+            exit_options(arbitrage),
+            spatial_scope(universal))).
 
-constraint_indexing:constraint_classification(
-    brouwer_fixed_point,
-    tangled_rope,
-    context(
-        agent_power(powerless),
-        time_horizon(immediate),
-        exit_options(trapped),
-        spatial_scope(local)
-    )
-) :- !.
-
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE MARKET ARCHITECT - Rope
-   --------------------------------------------------------------------------
-   
-   WHO: institutional - Power to design rules (sets) that satisfy Brouwer.
-   WHEN: biographical - Planning the stability of a market or game for years.
-   WHERE: mobile - Can choose different spaces/rules to ensure equilibrium.
-   SCOPE: national/global - Applies to entire economic models.
-   
-   WHY THIS CLASSIFICATION:
-   For the architect, the theorem is a "Rope" for functional coordination. 
-   It provides a "proof of concept" that allows for the creation of 
-   stable systems and regulatory frameworks.
-   
-   NARRATIVE EVIDENCE:
-   "The theorem is used in proving the existence of Nash Equilibrium in game theory."
-   -------------------------------------------------------------------------- */
-
-
-
-constraint_indexing:constraint_classification(
-    brouwer_fixed_point,
-    rope,
-    context(
-        agent_power(institutional),
-        time_horizon(biographical),
-        exit_options(mobile),
-        spatial_scope(global)
-    )
-) :- !.
-
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE NUMERICAL SEARCHER - Snare
-   --------------------------------------------------------------------------
-   
-   WHO: individual_moderate - Has the knowledge to search, but limited by math.
-   WHEN: immediate - Stuck in the "infinite" loops of searching for existence.
-   WHERE: constrained - Knowing the target exists but having no path.
-   SCOPE: local - Lost in the high-dimensional space.
-   
-   WHY THIS CLASSIFICATION:
-   When existence is guaranteed but non-constructive, it acts as a "Snare." 
-   The searcher is bound to a solution that they can "see" in theory but 
-   never "touch" in practice, extracting infinite labor for zero certainty.
-   -------------------------------------------------------------------------- */
-
-constraint_indexing:constraint_classification(
-    brouwer_fixed_point,
-    snare,
-    context(
-        agent_power(individual_moderate),
-        time_horizon(immediate),
-        exit_options(constrained),
-        spatial_scope(local)
-    )
-) :- 
-    domain_priors:base_extractiveness(brouwer_fixed_point, E),
-    E > 0.1,
-    !.
+% PERSPECTIVE 3: THE ANALYTICAL OBSERVER
+% The analytical perspective confirms the theorem's status as a fundamental,
+% non-negotiable feature of mathematics.
+constraint_indexing:constraint_classification(brouwer_fixed_point, mountain,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).
 
 /* ==========================================================================
-   4. TESTS (What We Learn About Constraints)
+   4. VALIDATION TESTS
    ========================================================================== */
 
 :- begin_tests(brouwer_fixed_point_tests).
 
-test(multi_perspective_variance) :-
-    constraint_indexing:constraint_classification(brouwer_fixed_point, Type1, context(powerless, immediate, trapped, local)),
-    constraint_indexing:constraint_classification(brouwer_fixed_point, Type2, context(institutional, biographical, mobile, global)),
-    Type1 = mountain,
-    Type2 = rope.
+test(perspectival_invariance) :-
+    % Verify that the classification is Mountain from all key perspectives.
+    constraint_indexing:constraint_classification(brouwer_fixed_point, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(brouwer_fixed_point, TypeInstitutional, context(agent_power(institutional), _, _, _)),
+    TypePowerless == mountain,
+    TypeInstitutional == mountain.
 
-test(non_constructive_snare_penalty) :-
-    % The searcher (moderate power, constrained) suffers the gap between theory and praxis.
-    constraint_indexing:constraint_classification(brouwer_fixed_point, snare, context(individual_moderate, immediate, constrained, local)).
+test(mountain_threshold_validation) :-
+    config:param(extractiveness_metric_name, ExtMetricName),
+    config:param(suppression_metric_name, SuppMetricName),
+    narrative_ontology:constraint_metric(brouwer_fixed_point, ExtMetricName, E),
+    narrative_ontology:constraint_metric(brouwer_fixed_point, SuppMetricName, S),
+    E =< 0.25,
+    S =< 0.05.
 
-test(emergence) :-
-    domain_priors:emerges_naturally(brouwer_fixed_point).
+test(natural_law_profile_present) :-
+    domain_priors:emerges_naturally(brouwer_fixed_point),
+    narrative_ontology:constraint_metric(brouwer_fixed_point, accessibility_collapse, AC), AC >= 0.85,
+    narrative_ontology:constraint_metric(brouwer_fixed_point, resistance, R), R =< 0.15.
 
 :- end_tests(brouwer_fixed_point_tests).
 
 /* ==========================================================================
-   5. MODEL INTERPRETATION (Commentary)
+   5. GENERATIVE COMMENTARY
    ========================================================================== */
 
 /**
- * LLM GENERATION NOTES
- * * Model: Gemini 2.0 Flash
- * Date: 2026-01-19
- * * KEY DECISIONS:
- * * 1. BASE EXTRACTIVENESS (0.2):
- * Reasoning: Brouwer is less "expensive" than Banach (which demands iterates) 
- * but it still extracts cognitive and computational cycles by providing 
- * an "existence trap"—the knowledge that a solution is there.
- * * 2. TYPE SHIFT:
- * Reasoning: The primary perspectival gap is between the "Institutional" 
- * sense of stability (Rope) and the "Moderate" searcher's frustration 
- * with the lack of a constructive path (Snare).
- * * 3. PERSPECTIVE SELECTION:
- * Chose Point (Passive), Architect (User), and Searcher (Victim) to highlight 
- * the specific topological-computational friction.
+ * LOGIC RATIONALE:
+ *   The Brouwer Fixed Point Theorem is a canonical example of a Mountain
+ *   constraint. Its base extractiveness (ε=0.05) and suppression (0.01) are
+ *   near zero, reflecting its status as a proven mathematical fact. It does not
+ *   require enforcement, it emerges naturally from axioms, and resistance to it
+ *   is logically incoherent. The Natural Law profile metrics (accessibility_collapse=1.0,
+ *   resistance=0.0) are set to their theoretical limits to reflect this.
+ *
+ * PERSPECTIVAL GAP:
+ *   There is no perspectival gap. The theorem's classification is Mountain
+ *   from all perspectives, demonstrating the invariance characteristic of
+ *   natural laws. The original file's attempt to classify it as a Snare or
+ *   Tangled Rope from a practitioner's view was a category error. The
+ *   *difficulty of finding the fixed point* is a separate, downstream
+ *   constraint (e.g., `constraint_fixed_point_computation`), not a property
+ *   of the existence theorem itself. This decomposition adheres to the
+ *   ε-invariance principle.
+ *
+ * DIRECTIONALITY LOGIC:
+ *   As a Mountain, the theorem has no structural beneficiaries or victims.
+ *   Its implications are universal for any system that meets its criteria.
+ *   Therefore, no beneficiary/victim declarations are needed.
+ *
+ * MANDATROPHY ANALYSIS:
+ *   The Mountain classification correctly identifies the theorem as a
+ *   foundational, non-extractive feature of reality. Misclassifying it as a
+ *   Tangled Rope or Snare based on its non-constructive nature would conflate
+ *   the map (the theorem) with the territory (the difficulty of navigating the
+ *   space it describes).
  */
-
-% OMEGA IDENTIFICATION
-omega_variable(
-    constructive_complexity,
-    "Will a universal constructive version of Brouwer (e.g., Scarf's algorithm) succeed?",
-    resolution_mechanism("Measure the average-case runtime vs existence-proof utility over 10 years."),
-    impact("If Yes: The 'Snare' becomes a 'Rope'. If No: It remains a Snare for practitioners."),
-    confidence_without_resolution(low)
-).
 
 /* ==========================================================================
-   6. ALTERNATIVE ANALYSIS
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-/**
- * VIABLE ALTERNATIVES
- * * ALTERNATIVE 1: Banach Fixed Point Theorem
- * Viability: Constructive, provides a path (Rope).
- * Suppression: Requires a contraction mapping, which many real systems lack.
- * * ALTERNATIVE 2: Schauder Fixed Point Theorem
- * Viability: Generalizes to infinite-dimensional spaces.
- * Suppression: Used for more complex PDEs, but Brouwer remains the finite-dim base.
- * * CONCLUSION:
- * The existence of Banach's "Rope" makes Brouwer's "Snare" (non-constructiveness) 
- * more visible to the Searcher, who wishes the world were contractive.
- */
+% Omega variables — open questions the framework cannot yet resolve
+%
+% /5 form: narrative detail for story context
+omega_variable(
+    omega_brouwer_fixed_point,
+    'Is the non-constructive nature of the theorem a fundamental barrier, or will efficient, universal fixed-point algorithms (like extensions of Scarf''s algorithm) become practical for high-dimensional problems?',
+    'Measure the average-case runtime vs. existence-proof utility for fixed-point problems in economics and engineering over a 10-year period.',
+    'If practical algorithms emerge, the downstream computational constraint softens from a Snare to a Rope. If not, the gap between existence and construction remains a major practical hurdle.',
+    confidence_without_resolution(medium)
+).
+
+% /3 form: typed classification for reporting engine (REQUIRED)
+narrative_ontology:omega_variable(omega_brouwer_fixed_point, empirical, 'The practical computational complexity of finding guaranteed fixed points in high dimensions.').
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Load: ?- [brouwer_fixed_point].
-% Run tests: ?- run_tests(brouwer_fixed_point_tests).
+% Required for external script parsing
+narrative_ontology:interval(brouwer_fixed_point, 0, 10).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Not applicable. As a mathematical theorem, its properties are static and do
+% not drift over time. Base extractiveness is below the 0.46 threshold for
+% required temporal data.
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA
+   ========================================================================== */
+
+% No network relationships declared. This is a foundational mathematical constraint.
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+% Not applicable for a Mountain constraint.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

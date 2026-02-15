@@ -31,19 +31,15 @@
     domain_priors:suppression_score/2,
     domain_priors:theater_ratio/2,
     domain_priors:requires_active_enforcement/1,
-    narrative_ontology:has_sunset_clause/1,
     narrative_ontology:interval/3,
     narrative_ontology:measurement/5,
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
-    narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1.
+    narrative_ontology:omega_variable/3.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -79,27 +75,11 @@ narrative_ontology:constraint_metric(armra_colostrum_regulation, extractiveness,
 narrative_ontology:constraint_metric(armra_colostrum_regulation, suppression_requirement, 0.55).
 narrative_ontology:constraint_metric(armra_colostrum_regulation, theater_ratio, 0.30).
 
-% --- NL Profile Metrics (required for mountain constraints) ---
-% These feed the natural_law_signature certification chain in
-% structural_signatures.pl. Uncomment and set for mountain constraints.
-% Without these, the NL signature defaults to 0.5 and fails certification.
-%
-% narrative_ontology:constraint_metric([id], accessibility_collapse, [0.85-1.0]).
-% narrative_ontology:constraint_metric([id], resistance, [0.0-0.15]).
-
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(armra_colostrum_regulation, tangled_rope).
 
 % --- Binary flags ---
-% narrative_ontology:has_sunset_clause([id]).      % Mandatory if Scaffold
 domain_priors:requires_active_enforcement(armra_colostrum_regulation). % Required for Tangled Rope
-
-% --- Emergence flag (required for mountain constraints) ---
-% Uncomment for constraints that emerge naturally without human design
-% or enforcement. Required for the mountain metric gate: without this,
-% the classify_from_metrics mountain clause will not fire.
-%
-% domain_priors:emerges_naturally([id]).
 
 % --- Structural relationships (REQUIRED for non-mountain constraints) ---
 % These feed the directionality derivation chain: the engine computes
@@ -219,6 +199,9 @@ test(threshold_validation) :-
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
+% Omega variables — open questions the framework cannot yet resolve
+%
+% /5 form: narrative detail for story context
 % omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
     omega_armra_regulation,
@@ -227,6 +210,15 @@ omega_variable(
     'If True: Reduced need for strict regulation; If False: Increased need for strict regulation.',
     confidence_without_resolution(medium)
 ).
+
+% /3 form: typed classification for reporting engine (REQUIRED)
+% The reporting engine reads narrative_ontology:omega_variable/3 with structure
+% (ID, TypeClass, Description) where TypeClass is one of:
+%   empirical   — resolvable by gathering more data
+%   conceptual  — depends on definitional or theoretical framing
+%   preference  — depends on value judgments or policy choices
+% The /3 form is what the engine reads; /5 provides narrative context.
+narrative_ontology:omega_variable(omega_armra_regulation, empirical, 'Uncertainty over the true efficacy of the colostrum supplement, resolvable by independent studies.').
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
@@ -264,49 +256,13 @@ narrative_ontology:measurement(armra_colostrum_regulation_ex_t10, armra_colostru
 %              enforcement_mechanism, global_infrastructure
 narrative_ontology:coordination_type(armra_colostrum_regulation, enforcement_mechanism).
 
-% Boltzmann floor override (only if domain knowledge justifies)
-% Value must be in [0.0, 1.0]
-% narrative_ontology:boltzmann_floor_override([id], [0.0-1.0]).
-
-% Network relationships (structural influence edges)
-% Declare when constraints share regulatory domain, causal dependency,
-% or institutional coupling.
-% narrative_ontology:affects_constraint([id], [other_constraint_id]).
-
-% --- Network Decomposition (Constraint Families) ---
-% When a natural-language label covers multiple constraints with different ε
-% values, each gets its own file. Link family members with affects_constraint:
-%
-% DUAL FORMULATION NOTE:
-% This constraint is one of [N] stories decomposed from [colloquial label].
-% Decomposed because ε differs across observables (ε-invariance principle).
-% Related stories:
-%   - [sibling_constraint_1] (ε=[value], [Type])
-%   - [sibling_constraint_2] (ε=[value], [Type])
-%
-% narrative_ontology:affects_constraint([id], [sibling_constraint_id]).
-
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-% Use ONLY when the automatic derivation (beneficiary/victim + exit → d)
-% would produce an inaccurate directionality value. The derivation chain
-% priority is: override > structural > canonical fallback.
-%
-% Format: directionality_override(ConstraintID, PowerAtom, D_Value)
-%   D_Value in [0.0, 1.0]: 0.0 = full beneficiary, 1.0 = full target
-%
-% Common override scenarios:
-%   - Regulatory capture: institution that appears to benefit but is
-%     actually partly captured → override d upward (0.25-0.40)
-%   - Indirect beneficiary: agent in victim group who actually benefits
-%     through secondary effects → override d downward
-%   - Asymmetric institutional: two institutional actors that the
-%     derivation can't distinguish → override to differentiate
-%
-% Example (uncomment if needed):
-% constraint_indexing:directionality_override([id], institutional, 0.30).
+% This constraint does not require directionality overrides as the structural
+% derivation from beneficiary/victim groups and exit options accurately
+% models the relationships between ARMRA, consumers, and regulators.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

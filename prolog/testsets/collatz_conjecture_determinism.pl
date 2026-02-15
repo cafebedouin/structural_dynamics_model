@@ -1,26 +1,48 @@
 % ============================================================================
 % CONSTRAINT STORY: collatz_conjecture_determinism
 % ============================================================================
-% Generated: 2026-01-19
-% Model: Gemini 2.0 Flash
-% Source: Lothar Collatz (1937) / Number Theory
+% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2024-07-08
 % ============================================================================
 
-:- module(constraint_collatz_conjecture, []).
+:- module(constraint_collatz_conjecture_determinism, []).
 
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
 
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
+
 % --- Namespace Hooks (Required for loading) ---
-:- multifile 
+:- multifile
     domain_priors:base_extractiveness/2,
     domain_priors:suppression_score/2,
-    domain_priors:requires_active_enforcement/1,
+    domain_priors:theater_ratio/2,
+    domain_priors:emerges_naturally/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
-    constraint_indexing:constraint_classification/3.
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
+    narrative_ontology:boltzmann_floor_override/2,
+    constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3,
+    narrative_ontology:omega_variable/3.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -28,261 +50,224 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: collatz_conjecture_determinism
- * human_readable: The Collatz Conjecture (3n + 1)
- * domain: mathematical/technological
- * temporal_scope: 1937 - Present (Civilizational)
- * spatial_scope: Global/Abstract (Natural Numbers)
- * * SUMMARY:
- * The Collatz conjecture is an unsolved problem in mathematics involving an 
- * iterative sequence: if n is even, divide by 2; if n is odd, multiply by 3 
- * and add 1. It represents a fundamental constraint where simple arithmetic 
- * rules generate a "Mountain" of unpredictable, pseudo-random behavior 
- * that seemingly always collapses to the 4-2-1 loop.
- * * KEY AGENTS:
- * - The Natural Number (Subject): A powerless agent whose path is 
- * absolutely dictated by the parity of its current value.
- * - The Computational Researcher (Institutional): An agent who uses the 
- * conjecture as a "Rope" to test the limits of distributed computing and 
- * verification.
- * - The Number Theorist (Analytical): The observer attempting to map the 
- * "Mountain" to find a formal proof of convergence.
- * * NARRATIVE ARC:
- * The Collatz sequence functions as a "Mountain" of deterministic fate—for 
- * every number tested, the path is unyielding. In computer science, it is a 
- * "Rope" for benchmarking. However, for the mathematician, the absence of a 
- * proof acts as a "Snare," extracting decades of cognitive labor (extraction) 
- * while "strangling" the progress of arithmetic theory with its deceptive 
- * simplicity.
+ *   constraint_id: collatz_conjecture_determinism
+ *   human_readable: The Collatz Conjecture (3n + 1) Determinism
+ *   domain: mathematical/logical
+ *
+ * SUMMARY:
+ *   The Collatz conjecture posits that an iterative sequence (if n is even,
+ *   n/2; if n is odd, 3n+1) will always eventually reach 1 for any positive
+ *   integer starting value. This represents a fundamental, unchangeable
+ *   constraint on the behavior of integers under these simple arithmetic
+ *   rules. It is a canonical example of a Mountain: a fixed, immutable
+ *   feature of a logical system that appears to be true, has resisted all
+ *   attempts at falsification, and whose properties are invariant from all
+ *   perspectives.
+ *
+ * KEY AGENTS (by structural relationship):
+ *   - Natural Numbers (e.g., '27'): The subject of the constraint (powerless/trapped) — its path is absolutely dictated by the rules.
+ *   - Computational Researcher: An observer using the conjecture to test computing limits (institutional/mobile).
+ *   - Number Theorist: An analytical observer attempting to prove or disprove the conjecture (analytical/analytical).
  */
 
 /* ==========================================================================
-   2. CORE SYSTEM INTEGRATION (The "Reality" Layer)
+   2. BASE PROPERTIES (DOMAIN PRIORS)
    ========================================================================== */
 
-% Required structural anchor for extraction
-narrative_ontology:interval(collatz_era, 1937, 2026).
-narrative_ontology:constraint_claim(collatz_conjecture_determinism, tangled_rope).
-domain_priors:requires_active_enforcement(collatz_conjecture_determinism).
+% --- Numerical metrics ---
+% Rationale: ε is near-zero. The conjecture does not extract resources or
+% freedom in a structural sense. The "extraction" of cognitive labor from
+% mathematicians is a metaphorical, not structural, cost.
+domain_priors:base_extractiveness(collatz_conjecture_determinism, 0.02).
 
-% Base extractiveness score (0.0-1.0)
-% Rationale: 0.15. Low. While it "extracts" massive human and computational 
-% effort to verify higher bounds, it primarily functions as a mathematical 
-% "gift" of structural mystery.
-domain_priors:base_extractiveness(collatz_conjecture_determinism, 0.15).
+% Rationale: Suppression is near-zero. The rules do not suppress alternatives;
+% they are a defined property of the system being studied.
+domain_priors:suppression_score(collatz_conjecture_determinism, 0.01).
 
-% Suppression score (0.0-1.0)
-% Rationale: 0.2. It suppresses the visibility of simple "linear" 
-% transformations, proving that even basic arithmetic can hide chaos.
-domain_priors:suppression_score(collatz_conjecture_determinism, 0.2).
+% Rationale: Theater is zero. The constraint is a pure mathematical statement
+% with no performative aspect.
+domain_priors:theater_ratio(collatz_conjecture_determinism, 0.0).
 
-% Constraint metric facts (bridge for classification engine)
-narrative_ontology:constraint_metric(collatz_conjecture_determinism, extractiveness, 0.15).
-narrative_ontology:constraint_metric(collatz_conjecture_determinism, suppression_requirement, 0.2).
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(collatz_conjecture_determinism, extractiveness, 0.02).
+narrative_ontology:constraint_metric(collatz_conjecture_determinism, suppression_requirement, 0.01).
+narrative_ontology:constraint_metric(collatz_conjecture_determinism, theater_ratio, 0.0).
 
-% Enforcement: Emerges naturally from the axioms of the integers.
+% --- NL Profile Metrics (required for mountain constraints) ---
+% These feed the natural_law_signature certification chain in
+% structural_signatures.pl.
+%
+% Rationale: Accessibility Collapse is 1.0 because within the rules of
+% arithmetic, no alternative path is conceivable for a given number.
+narrative_ontology:constraint_metric(collatz_conjecture_determinism, accessibility_collapse, 1.0).
+% Rationale: Resistance is 0.0. One cannot "resist" a mathematical function;
+% one can only compute its result.
+narrative_ontology:constraint_metric(collatz_conjecture_determinism, resistance, 0.0).
+
+% --- Constraint claim (must match analytical perspective type) ---
+narrative_ontology:constraint_claim(collatz_conjecture_determinism, mountain).
+
+% --- Binary flags ---
+% No sunset clause, no active enforcement.
+
+% --- Emergence flag (required for mountain constraints) ---
+% The constraint emerges from the axioms of integer arithmetic without human design.
 domain_priors:emerges_naturally(collatz_conjecture_determinism).
 
-% Metrics required for Section 1 of the Executive Summary
-% BENEFICIARIES & VICTIMS
-narrative_ontology:constraint_beneficiary(collatz_conjecture_determinism, distributed_computing_projects). % e.g., Collatz@Home.
-narrative_ontology:constraint_beneficiary(collatz_conjecture_determinism, heuristic_complexity_theorists).
-narrative_ontology:constraint_victim(collatz_conjecture_determinism, classical_analytical_simplicity).
-narrative_ontology:constraint_victim(collatz_conjecture_determinism, mathematical_certainty). % The lack of proof is a "tax."
+% --- Structural relationships (REQUIRED for non-mountain constraints) ---
+% No enrichment needed. As a Mountain constraint representing a mathematical
+% property, there are no structural beneficiaries or victims.
 
 /* ==========================================================================
-   3. INDEXED CLASSIFICATIONS (Perspectival Truth)
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × f(d) × σ(S)
+   where f(d) is the sigmoid directionality function:
+     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
+   The engine derives d from beneficiary/victim membership + exit_options.
+   Scope modifiers: local=0.8, regional=0.9, national=1.0,
+                    continental=1.1, global=1.2, universal=1.0.
+   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
+   Do not add measurement_basis, beneficiary/victim, or other metadata.
+   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 1: THE NUMBER '27' - Mountain
-   --------------------------------------------------------------------------
-   
-   WHO: powerless - The number has no agency; its parity is its fate.
-   WHEN: immediate - The rule applies at every step n -> n+1.
-   WHERE: trapped - Bound within the set of natural numbers.
-   SCOPE: local - Immediate neighborhood of the current value.
-   
-   WHY THIS CLASSIFICATION:
-   For an individual number, the Collatz rules are an absolute Mountain. 
-   '27' must climb to 9232 before finally descending to 1. It cannot 
-   "choose" a shorter path; the arithmetic is an unyielding law of its 
-   existence.
-   -------------------------------------------------------------------------- */
+% PERSPECTIVE 1: THE NATURAL NUMBER (e.g., '27')
+% For any number, the rules are an absolute, unchangeable law of its existence.
+% Its path is fixed. This is a Mountain.
+constraint_indexing:constraint_classification(collatz_conjecture_determinism, mountain,
+    context(agent_power(powerless),
+            time_horizon(immediate),
+            exit_options(trapped),
+            spatial_scope(universal))).
 
+% PERSPECTIVE 2: THE COMPUTATIONAL RESEARCHER
+% For an institution using the problem to benchmark hardware, the rules are
+% still a fixed, external reality they must compute against. This is a Mountain.
+constraint_indexing:constraint_classification(collatz_conjecture_determinism, mountain,
+    context(agent_power(institutional),
+            time_horizon(generational),
+            exit_options(arbitrage),
+            spatial_scope(global))).
 
-
-constraint_indexing:constraint_classification(
-    collatz_conjecture_determinism,
-    tangled_rope,
-    context(
-        agent_power(powerless),
-        time_horizon(immediate),
-        exit_options(trapped),
-        spatial_scope(local)
-    )
-) :- !.
-
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE GRID-COMPUTING ARCHITECT - Rope
-   --------------------------------------------------------------------------
-   
-   WHO: institutional - Power to coordinate millions of CPUs to test ranges.
-   WHEN: biographical - Planning a multi-year computational search project.
-   WHERE: mobile - Can choose which ranges of N to test or which algorithms to use.
-   SCOPE: global - Using world-wide hardware resources.
-   
-   WHY THIS CLASSIFICATION:
-   For the architect, the conjecture is a "Rope"—a tool for functional 
-   coordination. It allows them to coordinate a standard of achievement 
-   (testing up to $2^{68}$) that pushes the boundaries of hardware 
-   reliability and distributed software.
-   -------------------------------------------------------------------------- */
-
-
-
-constraint_indexing:constraint_classification(
-    collatz_conjecture_determinism,
-    rope,
-    context(
-        agent_power(institutional),
-        time_horizon(biographical),
-        exit_options(mobile),
-        spatial_scope(global)
-    )
-) :- !.
-
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE FIELDS MEDAL ASPIRANT - Snare
-   --------------------------------------------------------------------------
-   
-   WHO: individual_moderate - Has the intelligence to analyze but is bound by the problem.
-   WHEN: biographical - Spending decades of a career on a single proof.
-   WHERE: constrained - The "exit" (a proof) is seemingly unreachable.
-   SCOPE: global - Universal mathematical problem.
-   
-   WHY THIS CLASSIFICATION:
-   For the mathematician, the conjecture is a "Snare." It "strangles" their 
-   career by being "too simple to be this hard." It extracts massive 
-   intellectual capital (extraction) while providing no guarantee of 
-   success, "choking" the theorist with the possibility of an undecidable 
-   outcome.
-   -------------------------------------------------------------------------- */
-
-constraint_indexing:constraint_classification(
-    collatz_conjecture_determinism,
-    snare,
-    context(
-        agent_power(individual_moderate),
-        time_horizon(biographical),
-        exit_options(constrained),
-        spatial_scope(global)
-    )
-) :- 
-    domain_priors:base_extractiveness(collatz_conjecture_determinism, E),
-    E >= 0.1,
-    !.
+% PERSPECTIVE 3: THE NUMBER THEORIST
+% For the analytical observer trying to formulate a proof, the conjecture's
+% apparent truth is a fixed feature of the mathematical landscape they are
+% trying to map. This is a Mountain.
+constraint_indexing:constraint_classification(collatz_conjecture_determinism, mountain,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).
 
 /* ==========================================================================
-   4. TESTS (What We Learn About Constraints)
+   4. VALIDATION TESTS
    ========================================================================== */
 
-:- begin_tests(collatz_conjecture_tests).
+:- begin_tests(collatz_conjecture_determinism_tests).
 
-test(multi_perspective_variance) :-
-    % Number -> Mountain
-    constraint_indexing:constraint_classification(collatz_conjecture_determinism, Type1, context(powerless, immediate, trapped, local)),
-    % Architect -> Rope
-    constraint_indexing:constraint_classification(collatz_conjecture_determinism, Type2, context(institutional, biographical, mobile, global)),
-    Type1 \= Type2.
+test(invariance_across_perspectives) :-
+    % Verify that the classification is Mountain from all key perspectives.
+    constraint_indexing:constraint_classification(collatz_conjecture_determinism, Type1, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(collatz_conjecture_determinism, Type2, context(agent_power(institutional), _, _, _)),
+    constraint_indexing:constraint_classification(collatz_conjecture_determinism, Type3, context(agent_power(analytical), _, _, _)),
+    Type1 == mountain,
+    Type1 == Type2,
+    Type2 == Type3.
 
-test(career_extraction_penalty) :-
-    % The theorist feels the "Snare" of the unproven extraction.
-    Context = context(individual_moderate, biographical, constrained, global),
-    constraint_indexing:extractiveness_for_agent(collatz_conjecture_determinism, Context, Score),
-    Score >= 0.1.
+test(mountain_threshold_validation) :-
+    config:param(extractiveness_metric_name, ExtMetricName),
+    config:param(suppression_metric_name, SuppMetricName),
+    narrative_ontology:constraint_metric(collatz_conjecture_determinism, ExtMetricName, E),
+    narrative_ontology:constraint_metric(collatz_conjecture_determinism, SuppMetricName, S),
+    E =< 0.25,
+    S =< 0.05.
 
-test(natural_emergence) :-
-    domain_priors:emerges_naturally(collatz_conjecture_determinism).
+test(natural_law_profile_present) :-
+    domain_priors:emerges_naturally(collatz_conjecture_determinism),
+    narrative_ontology:constraint_metric(collatz_conjecture_determinism, accessibility_collapse, AC), AC >= 0.85,
+    narrative_ontology:constraint_metric(collatz_conjecture_determinism, resistance, R), R =< 0.15.
 
-:- end_tests(collatz_conjecture_tests).
+:- end_tests(collatz_conjecture_determinism_tests).
 
 /* ==========================================================================
-   5. MODEL INTERPRETATION (Commentary)
+   5. GENERATIVE COMMENTARY
    ========================================================================== */
 
 /**
- * LLM GENERATION NOTES
- * * Model: Gemini 2.0 Flash
- * Date: 2026-01-19
- * * KEY DECISIONS:
- * * 1. EXTRACTIVENESS SCORE (0.15):
- * Reasoning: Low, because it's a theoretical problem. However, the 
- * "Extraction of Time" is real for the mathematical community. It takes 
- * genius and returns only empirical data, not structural proof.
- * * 2. PERSPECTIVE SELECTION:
- * Chose Number (Subject), Architect (User), and Theorist (Victim) to 
- * show how a simple "Mountain" of logic is a "Rope" for engineering but 
- * a "Snare" for theory.
- * * 3. OMEGA IDENTIFICATION:
- * Formalized the "Undecidability" uncertainty—is Collatz a Mountain of 
- * truth or an unprovable Scaffold of the integers?
+ * LOGIC RATIONALE:
+ *   The Collatz conjecture is a statement about the fundamental properties of
+ *   numbers. As such, it is a canonical Mountain. The base extractiveness (ε)
+ *   and suppression scores are set near-zero (0.02, 0.01) because the
+ *   constraint does not structurally extract resources or foreclose options
+ *   in the way a social or economic constraint does. The immense cognitive
+ *   effort expended by mathematicians is a consequence of its complexity, not
+ *   an extraction in the framework's sense. The classification is uniformly
+ *   Mountain across all perspectives because its properties are invariant; a
+ *   number, a researcher, and a theorist all confront the same immutable rules.
+ *
+ * PERSPECTIVAL GAP:
+ *   There is no perspectival gap. This is a uniform-type constraint (Mountain-only),
+ *   a characteristic of natural laws and logical tautologies. The rules of the
+ *   sequence are the same for everyone and everything.
+ *
+ * DIRECTIONALITY LOGIC:
+ *   Not applicable. As a Mountain constraint, there are no structural
+ *   beneficiaries or victims, so directionality (d) is not a factor in its
+ *   classification.
+ *
+ * MANDATROPHY ANALYSIS:
+ *   This story clarifies the definition of a Mountain. By refusing to
+ *   metaphorically interpret "effort" as "extraction," it maintains the
+ *   structural integrity of the ε metric. This prevents misclassifying a
+ *   difficult-to-understand natural law as a Snare or Tangled Rope, which
+ *   are categories reserved for constraints with designed, asymmetric social
+ *   or economic impacts.
  */
 
-% YOUR OMEGAS HERE:
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+% Omega variables — open questions the framework cannot yet resolve
+%
+% /5 form: narrative detail for story context
 omega_variable(
-    collatz_undecidability,
-    "Is the Collatz conjecture unprovable (Mountain) within standard Peano Arithmetic?",
-    resolution_mechanism("Investigation into whether the conjecture is independent of ZFC."),
-    impact("If Undecidable: The 'Mountain' is a mirage; it's a permanent 'Snare' for logic."),
+    omega_collatz_undecidability,
+    'Is the Collatz conjecture unprovable within standard axiomatic systems like ZFC?',
+    'Formal investigation into whether the conjecture is independent of ZFC, similar to the Continuum Hypothesis.',
+    'If True (undecidable), the Mountain is a fundamental feature of our chosen logic. If False (provable), the Mountain is simply a very tall, but finite, peak of complexity.',
     confidence_without_resolution(medium)
 ).
 
-/* ==========================================================================
-   6. ALTERNATIVE ANALYSIS
-   ========================================================================== */
-
-/**
- * VIABLE ALTERNATIVES
- * * ALTERNATIVE 1: 3n - 1 Sequence
- * Viability: A similar rule that leads to multiple loops (e.g., 5-14-7-20-10-5).
- * Suppression: Often ignored to maintain the "purity" of the 3n+1 "Mountain."
- * * ALTERNATIVE 2: Generalized Collatz Functions
- * Viability: Functions where the parity rules are more complex.
- * Evidence: Conway (1972) proved that general Collatz-like problems 
- * are undecidable.
- * * CONCLUSION:
- * The existence of Alternative 2 (Conway's proof) transforms the Collatz 
- * "Snare" into a "Mountain" of complexity—proving that our specific Snare 
- * is likely part of a broader undecidable landscape.
- */
+% /3 form: typed classification for reporting engine (REQUIRED)
+narrative_ontology:omega_variable(omega_collatz_undecidability, conceptual, 'Is the conjecture unprovable within standard axiomatic systems like ZFC?').
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-/**
- * TO USE THIS FILE:
- * * 1. Load: ?- [constraint_collatz_conjecture].
- * 2. Multi-perspective: ?- multi_index_report(collatz_conjecture_determinism).
- */
+% Required for external script parsing
+narrative_ontology:interval(collatz_conjecture_determinism, 0, 10).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Not required for low-extraction constraints (base_extractiveness <= 0.46).
+% The properties of this mathematical constraint are time-invariant.
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA
+   ========================================================================== */
+
+% Not applicable for a fundamental mathematical constraint.
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+% Not applicable for a Mountain constraint.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
-
-% ============================================================================
-% ENRICHMENT: Structural predicates for dynamic classification
-% Generated: 2026-02-08
-% Template: v5.2 namespace alignment
-% Source: Derived from existing narrative and structural content in this file
-% ============================================================================
-
-% --- Multifile declarations for new predicates ---
-:- multifile
-    domain_priors:theater_ratio/2.
-
-% --- Theater ratio (missing from base properties) ---
-% Formal truth — substantive with near-zero performative component
-domain_priors:theater_ratio(collatz_conjecture_determinism, 0.0).
-narrative_ontology:constraint_metric(collatz_conjecture_determinism, theater_ratio, 0.0).
