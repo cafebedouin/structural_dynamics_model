@@ -33504,20 +33504,26 @@
         "orbit_contexts": null
       }
     },
-    "fnl_trace_diagnostic": {
-      "constraint_id": "fnl_trace_diagnostic",
+    "fnl_shadow_probe": {
+      "constraint_id": "fnl_shadow_probe",
       "claimed_type": "tangled_rope",
-      "domain": null,
+      "domain": "investigation",
       "human_readable": null,
       "metrics": {
-        "extractiveness": null,
-        "suppression": null,
+        "extractiveness": 0.3,
+        "suppression": 0.5,
         "resistance": null,
-        "emerges_naturally": null,
-        "requires_enforcement": null
+        "emerges_naturally": false,
+        "requires_enforcement": true
       },
-      "beneficiaries": [],
-      "victims": [],
+      "beneficiaries": [
+        "institutional_apparatus",
+        "_"
+      ],
+      "victims": [
+        "constrained_subjects",
+        "_"
+      ],
       "classifications": [
         {
           "type": "tangled_rope",
@@ -33533,27 +33539,48 @@
         },
         {
           "type": "tangled_rope",
-          "context": "context(agent_power(powerless),time_horizon(biographical),exit_options(trapped),spatial_scope(national))"
+          "context": [
+            null,
+            null,
+            null,
+            null
+          ]
         },
         {
           "type": "rope",
-          "context": "context(agent_power(institutional),time_horizon(generational),exit_options(arbitrage),spatial_scope(national))"
+          "context": [
+            null,
+            null,
+            null,
+            null
+          ]
         },
         {
           "type": "tangled_rope",
-          "context": "context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(global))"
-        },
-        {
-          "type": "tangled_rope",
-          "context": "context(agent_power(powerless),time_horizon(biographical),exit_options(trapped),spatial_scope(national))"
+          "context": [
+            null,
+            null,
+            null,
+            null
+          ]
         },
         {
           "type": "rope",
-          "context": "context(agent_power(institutional),time_horizon(generational),exit_options(arbitrage),spatial_scope(national))"
+          "context": [
+            null,
+            null,
+            null,
+            null
+          ]
         },
         {
           "type": "tangled_rope",
-          "context": "context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(global))"
+          "context": [
+            null,
+            null,
+            null,
+            null
+          ]
         }
       ],
       "analysis": {
@@ -33563,19 +33590,46 @@
           {
             "id": "omega_perspectival_fnl_shadow_probe",
             "type": "conceptual"
-          },
-          {
-            "id": "omega_perspectival_fnl_shadow_probe",
-            "type": "conceptual"
-          },
-          {
-            "id": "omega_perspectival_fnl_shadow_probe",
-            "type": "conceptual"
           }
         ],
-        "variance_ratio": 0.6666666666666666,
-        "index_configs": 3,
+        "variance_ratio": 0.5,
+        "index_configs": 4,
         "types_produced": 2,
+        "orbit_signature": [
+          "rope",
+          "tangled_rope",
+          "unknown"
+        ],
+        "orbit_contexts": {
+          "institutional": "rope",
+          "moderate": "rope",
+          "analytical": "tangled_rope",
+          "powerless": "unknown"
+        }
+      }
+    },
+    "fnl_trace_diagnostic": {
+      "constraint_id": "fnl_trace_diagnostic",
+      "claimed_type": "rope",
+      "domain": null,
+      "human_readable": null,
+      "metrics": {
+        "extractiveness": null,
+        "suppression": null,
+        "resistance": null,
+        "emerges_naturally": null,
+        "requires_enforcement": null
+      },
+      "beneficiaries": [],
+      "victims": [],
+      "classifications": [],
+      "analysis": {
+        "structural_signature": null,
+        "is_constructed": null,
+        "omegas": [],
+        "variance_ratio": null,
+        "index_configs": 0,
+        "types_produced": 0,
         "orbit_signature": null,
         "orbit_contexts": null
       }
@@ -102712,100 +102766,13 @@
           "powerless": "snare"
         }
       }
-    },
-    "fnl_shadow_probe": {
-      "constraint_id": "fnl_shadow_probe",
-      "claimed_type": "tangled_rope",
-      "domain": "investigation",
-      "human_readable": null,
-      "metrics": {
-        "extractiveness": 0.3,
-        "suppression": 0.5,
-        "resistance": null,
-        "emerges_naturally": false,
-        "requires_enforcement": true
-      },
-      "beneficiaries": [
-        "institutional_apparatus",
-        "_"
-      ],
-      "victims": [
-        "constrained_subjects",
-        "_"
-      ],
-      "classifications": [
-        {
-          "type": "tangled_rope",
-          "context": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "type": "rope",
-          "context": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "type": "tangled_rope",
-          "context": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "type": "rope",
-          "context": [
-            null,
-            null,
-            null,
-            null
-          ]
-        },
-        {
-          "type": "tangled_rope",
-          "context": [
-            null,
-            null,
-            null,
-            null
-          ]
-        }
-      ],
-      "analysis": {
-        "structural_signature": null,
-        "is_constructed": null,
-        "omegas": [],
-        "variance_ratio": 2.0,
-        "index_configs": 1,
-        "types_produced": 2,
-        "orbit_signature": [
-          "rope",
-          "tangled_rope",
-          "unknown"
-        ],
-        "orbit_contexts": {
-          "institutional": "rope",
-          "moderate": "rope",
-          "analytical": "tangled_rope",
-          "powerless": "unknown"
-        }
-      }
     }
   },
   "summary": {
     "total_constraints": 1026,
     "with_extractiveness": 1024,
     "with_suppression": 1023,
-    "with_classifications": 1025,
+    "with_classifications": 1024,
     "with_domain": 1023,
     "with_orbit_data": 671
   }

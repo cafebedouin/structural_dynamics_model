@@ -391,6 +391,31 @@ param(network_cascade_count_threshold,       3).     % Drifting constraints → 
 param(network_drift_hub_escalation,          1).     % 1=enable hub-based severity escalation
 
 /* ================================================================
+   11. MAXIMUM ENTROPY SHADOW CLASSIFIER (v6.2)
+   ================================================================
+   Diagnostic shadow classifier running alongside the deterministic
+   cascade. Produces probability distributions, entropy scores,
+   and disagreement flags — purely as diagnostics.
+   ================================================================ */
+
+% --- MaxEnt Enable/Disable ---
+param(maxent_enabled,                        0).    % 0=disabled, 1=enabled
+
+% --- Uncertainty Thresholds ---
+param(maxent_uncertainty_threshold,          0.40).  % H_norm above this = flagged
+param(maxent_disagreement_prob_threshold,    0.50).  % P(det_type) below this = soft disagreement
+
+% --- Boolean Feature Weights ---
+param(maxent_boolean_penalty,               -4.0).   % Log-likelihood for violated boolean gate
+param(maxent_boolean_bonus,                  1.0).   % Log-likelihood for satisfied bonus feature
+
+% --- Prior Distribution ---
+param(maxent_prior_mode,                  corpus).   % corpus | uniform
+
+% --- Signature Override ---
+param(maxent_signature_override_strength,    0.95).  % P assigned to unconditional override target
+
+/* ================================================================
    CONFIG VALIDATION (loaded last so all param/2 facts are available)
    ================================================================ */
 

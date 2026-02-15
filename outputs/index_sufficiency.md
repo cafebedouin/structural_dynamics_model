@@ -10,7 +10,7 @@
 ### Evidence For Index Sufficiency
 
 - 100.0% of constraints have no index collisions
-- 30 domains show high index sufficiency
+- 29 domains show high index sufficiency
 
 ## Index Collisions
 
@@ -26,7 +26,6 @@ How well do indices explain variance in each domain?
 | mathematics          |           2 |         1.50 | High        |
 | magical              |           1 |         1.50 | High        |
 | analytical           |           2 |         1.50 | High        |
-| investigation        |           2 |         1.38 | High        |
 | artistic             |           2 |         1.15 | High        |
 | philosophical        |          13 |         0.88 | High        |
 | psychological        |           9 |         0.87 | High        |
@@ -42,6 +41,7 @@ How well do indices explain variance in each domain?
 | environmental        |           5 |         0.77 | High        |
 | institutional        |           3 |         0.77 | High        |
 | medical              |           4 |         0.76 | High        |
+| unknown              |           3 |         0.75 | High        |
 | corporate_governance |           1 |         0.75 | High        |
 | bio_industrial       |           1 |         0.75 | High        |
 | military             |           2 |         0.75 | High        |
@@ -51,9 +51,9 @@ How well do indices explain variance in each domain?
 | mathematical         |          56 |         0.73 | High        |
 | political            |         152 |         0.72 | High        |
 | religious            |           9 |         0.72 | High        |
-| unknown              |           3 |         0.71 | High        |
 | economic             |         205 |         0.70 | High        |
 | health               |           5 |         0.65 | Medium      |
+| investigation        |           2 |         0.62 | Medium      |
 | systems_engineering  |           1 |         0.60 | Medium      |
 | physics              |           2 |         0.57 | Medium      |
 | geopolitical         |          48 |         0.57 | Medium      |

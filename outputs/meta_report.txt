@@ -13,10 +13,10 @@
 --------------------------------------------------------------------------------
   Total Constraints Analyzed: 1025
   Identified Constraint Type Distribution (from test output):
-    - tangled_rope   :  671 (65.5%)
+    - tangled_rope   :  670 (65.4%)
     - piton          :   90 (8.8%)
+    - rope           :   78 (7.6%)
     - snare          :   78 (7.6%)
-    - rope           :   77 (7.5%)
     - mountain       :   76 (7.4%)
     - scaffold       :   33 (3.2%)
 
@@ -27,47 +27,47 @@
 
 🔬 STRUCTURAL PURITY OVERVIEW (v5.1)
 --------------------------------------------------------------------------------
-  Constraints with Purity Data: 933
-  Average Purity:               0.534
+  Constraints with Purity Data: 931
+  Average Purity:               0.535
   Purity Distribution:
     - pristine       :   98
     - sound          :   49
     - borderline     :  358
-    - contaminated   :  416
+    - contaminated   :  414
     - degraded       :   12
-  Purity Drift Events:          881
+  Purity Drift Events:          879
 
 ⚡ BOLTZMANN COMPLIANCE SUMMARY (v5.0)
 --------------------------------------------------------------------------------
-  Boltzmann Structural Signatures Detected: 915
+  Boltzmann Structural Signatures Detected: 913
     - False Natural Law (FNL):     90
     - Coupling-Invariant Rope:     19
-    - False CI-Rope (FCR):         806
-  Coupling Analysis (1095 constraints):
+    - False CI-Rope (FCR):         804
+  Coupling Analysis (1093 constraints):
     - independent         :  101
     - weakly_coupled      :   45
-    - strongly_coupled    :  786
+    - strongly_coupled    :  784
     - inconclusive        :  162
 
 🌐 NETWORK DYNAMICS (v5.2)
 --------------------------------------------------------------------------------
-  Network Stability Assessments: 1026
-    - stable      : 1026 (100.0%)
+  Network Stability Assessments: 1025
+    - stable      : 1025 (100.0%)
   Network Drift Events:          0
 
 GAUGE ORBIT FAMILIES
 --------------------------------------------------------------------------------
-  Constraints with Orbit Data: 671
+  Constraints with Orbit Data: 1023
   Total Orbit Families:        24
-  Gauge-Invariant:             141
-  Gauge-Variant:               530
+  Gauge-Invariant:             212
+  Gauge-Variant:               811
   Top Families:
-    - [rope, snare]                           :  190
-    - [rope, snare, tangled_rope]             :  111
-    - [rope, tangled_rope]                    :   97
-    - [tangled_rope]                          :   95
-    - [mountain, unknown]                     :   32
-  Unknown-Containing Orbits:   11 families (119 constraints)
+    - [rope, snare]                           :  315
+    - [rope, snare, tangled_rope]             :  164
+    - [tangled_rope]                          :  143
+    - [rope, tangled_rope]                    :  135
+    - [mountain, unknown]                     :   50
+  Unknown-Containing Orbits:   11 families (174 constraints)
 
 ================================================================================
 

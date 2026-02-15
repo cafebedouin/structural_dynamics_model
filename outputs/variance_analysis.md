@@ -4,7 +4,7 @@
 
 - **Total constraints analyzed:** 1026
 - **Constraints with multiple index configs:** 1023 (99.7%)
-- **High variance (>0.5):** 801 (78.1%)
+- **High variance (>0.5):** 799 (77.9%)
 - **Stable (ratio=1.0):** 6 (0.6%)
 
 ## Variance Distribution
@@ -15,8 +15,8 @@
 | 0.7-0.9         |   537 |   52.3% | CG_IsraelGaza_20231012, MOLTBOT_RELIGION, abstr... |
 | 0.5-0.6         |   266 |   25.9% | 26usc469_real_estate_exemption, absorbing_marko... |
 | 0.3-0.4         |    49 |    4.8% | asean_ceasefire_2011, beehiiv_platform_model, b... |
-| <0.3            |   167 |   16.3% | 8k_tv_limit_2026, adverse_possession, ai_driven... |
-| null            |     1 |    0.1% | unknown |
+| <0.3            |   166 |   16.2% | 8k_tv_limit_2026, adverse_possession, ai_driven... |
+| null            |     2 |    0.2% | unknown, fnl_trace_diagnostic |
 
 ## Domain Breakdown
 
@@ -25,7 +25,6 @@
 | analytical           |   2 |         1.50 |          100.0% |
 | magical              |   1 |         1.50 |          100.0% |
 | mathematics          |   2 |         1.50 |          100.0% |
-| investigation        |   2 |         1.38 |          100.0% |
 | artistic             |   2 |         1.15 |          100.0% |
 | philosophical        |  13 |         0.88 |           84.6% |
 | psychological        |   9 |         0.87 |          100.0% |
@@ -52,6 +51,7 @@
 | religious            |   9 |         0.72 |          100.0% |
 | economic             | 205 |         0.70 |           84.9% |
 | health               |   5 |         0.65 |           60.0% |
+| investigation        |   2 |         0.62 |           50.0% |
 | systems_engineering  |   1 |         0.60 |          100.0% |
 | physics              |   2 |         0.57 |           50.0% |
 | geopolitical         |  48 |         0.57 |           56.2% |
@@ -71,7 +71,7 @@
 
 1. **Domain variance spread:** analytical shows highest variance (1.50), while logical shows lowest (0.25)
 
-2. **High volatility:** 78.1% of constraints show high variance (>0.5)
+2. **High volatility:** 77.9% of constraints show high variance (>0.5)
 
 3. **Perspective-dependent constraints:** 10 constraints show strong perspective-dependence
 
@@ -86,11 +86,11 @@ Constraints that change type frequently based on index configuration:
 | algorithmic_bias               | 2.00 |       2 |     4 | technological | snare        |
 | magna_carta_liberties          | 2.00 |       2 |     4 | political  | rope         |
 | sadhu_integrity_protocol       | 2.00 |       2 |     4 | social     | rope         |
-| fnl_shadow_probe               | 2.00 |       1 |     2 | investigation | tangled_rope |
 | adverse_possession             | 1.50 |       2 |     3 | economic   | snare        |
 | ai_edu_decentralization        | 1.50 |       2 |     3 | technological | rope         |
 | amish_technological_renunciation | 1.50 |       2 |     3 | social     | snare        |
 | asshole_filter_2015            | 1.50 |       2 |     3 | psychological | snare        |
+| astm_d638_tensile_testing      | 1.50 |       2 |     3 | technological | rope         |
 
 ### Detailed Examples
 
@@ -138,6 +138,6 @@ Constraints with many index configs but low variance (possible modeling issues):
 
 | Field | % Complete | Impact |
 |-------|-----------|--------|
-| classifications | 99.9% | Core data for variance analysis |
-| variance_ratio | 99.9% | Calculated from classifications |
+| classifications | 99.8% | Core data for variance analysis |
+| variance_ratio | 99.8% | Calculated from classifications |
 | domain | 99.7% | Affects domain breakdown analysis |

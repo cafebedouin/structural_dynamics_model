@@ -16,7 +16,7 @@
 :- use_module(constraint_indexing).
 :- use_module(narrative_ontology).
 
-:- initialization(run_fnl_trace).
+% :- initialization(run_fnl_trace).  % REMOVED: triggers clear_kb during batch loading, wiping all previously-loaded constraint_claims
 
 run_fnl_trace :-
     format('~n~`=t~60|~n'),

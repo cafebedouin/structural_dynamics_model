@@ -314,6 +314,25 @@ else
 fi
 
 # ==============================================================================
+# STEP 8d: MaxEnt shadow classifier analysis
+# ==============================================================================
+step "Generating MaxEnt analysis"
+
+MAXENT_REPORT="$OUTPUT_DIR/maxent_report.md"
+MAXENT_RAW="$OUTPUT_DIR/maxent_report_raw.md"
+if (cd "$PROLOG_DIR" && swipl -l stack.pl -l covering_analysis.pl -l dirac_classification.pl \
+      -l maxent_classifier.pl -l maxent_report.pl -g "run_maxent_report, halt.") > "$MAXENT_RAW" 2>/dev/null; then
+    sed -n '/<!-- MAXENT_REPORT_START -->/,$p' "$MAXENT_RAW" | tail -n +2 > "$MAXENT_REPORT"
+    rm -f "$MAXENT_RAW"
+    MAXENT_FLAGGED=$(grep -oP 'High uncertainty constraints\*\* \| \K\d+' "$MAXENT_REPORT" || echo "?")
+    MAXENT_DISAGREE=$(grep -oP 'Hard disagreements\*\* \| \K\d+' "$MAXENT_REPORT" || echo "?")
+    ok "MaxEnt analysis: $MAXENT_FLAGGED flagged, $MAXENT_DISAGREE disagreements -> maxent_report.md"
+else
+    rm -f "$MAXENT_RAW"
+    warn "MaxEnt analysis had issues"
+fi
+
+# ==============================================================================
 # STEP 9: Meta-report
 # ==============================================================================
 step "Generating meta-report"
@@ -417,6 +436,22 @@ else
 fi
 echo ""
 
+# MaxEnt analysis summary
+echo -e "${BOLD}  MAXENT SHADOW CLASSIFIER${NC}"
+if [ -f "$OUTPUT_DIR/maxent_report.md" ]; then
+    ME_CONSTRAINTS=$(grep -oP 'Constraints analyzed\*\* \| \K\d+' "$OUTPUT_DIR/maxent_report.md" 2>/dev/null || echo "?")
+    ME_ENTROPY=$(grep -oP 'Mean normalized entropy\*\* \| \K[0-9.]+' "$OUTPUT_DIR/maxent_report.md" 2>/dev/null || echo "?")
+    ME_FLAGGED=$(grep -oP 'High uncertainty constraints\*\* \| \K\d+' "$OUTPUT_DIR/maxent_report.md" 2>/dev/null || echo "?")
+    ME_HARD=$(grep -oP 'Hard disagreements\*\* \| \K\d+' "$OUTPUT_DIR/maxent_report.md" 2>/dev/null || echo "?")
+    echo "  Constraints:  $ME_CONSTRAINTS"
+    echo "  Mean Entropy: $ME_ENTROPY"
+    echo "  High Uncertainty: $ME_FLAGGED"
+    echo "  Hard Disagreements: $ME_HARD"
+else
+    echo "  (not generated)"
+fi
+echo ""
+
 # Generated reports
 echo -e "${BOLD}  GENERATED REPORTS${NC}"
 for report in \
@@ -435,6 +470,7 @@ for report in \
     "orbit_report.md" \
     "orbit_data.json" \
     "fpn_report.md" \
+    "maxent_report.md" \
     "variance_analysis.md" \
     "pattern_mining.md" \
     "index_sufficiency.md" \

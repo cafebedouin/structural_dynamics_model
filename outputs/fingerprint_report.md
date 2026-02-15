@@ -1,286 +1,36 @@
-
-============================================================
-  FNL SHADOW MODE DIAGNOSTIC TRACE
-============================================================
-
-[STEP 1] Loading fnl_shadow_probe through pipeline...
-
-[SCENARIO MANAGER] Clearing Knowledge Base...
-[OK] Knowledge Base is empty.
-[SCENARIO MANAGER] Loading: testsets/fnl_shadow_probe.pl...
-[SCENARIO MANAGER] Performing Global Repair...
-
-[REPAIR] Auditing vectors for: fnl_shadow_probe...
-  [FIXED] Imputed 0.5 for accessibility_collapse(organizational) at T=0
-  [FIXED] Imputed 0.5 for stakes_inflation(organizational) at T=0
-  [FIXED] Imputed 0.5 for suppression(organizational) at T=0
-  [FIXED] Imputed 0.5 for resistance(organizational) at T=0
-  [FIXED] Imputed 0.5 for accessibility_collapse(organizational) at T=10
-  [FIXED] Imputed 0.5 for stakes_inflation(organizational) at T=10
-  [FIXED] Imputed 0.5 for suppression(organizational) at T=10
-  [FIXED] Imputed 0.5 for resistance(organizational) at T=10
-  [FIXED] Imputed 0.5 for accessibility_collapse(class) at T=0
-  [FIXED] Imputed 0.5 for stakes_inflation(class) at T=0
-  [FIXED] Imputed 0.5 for suppression(class) at T=0
-  [FIXED] Imputed 0.5 for resistance(class) at T=0
-  [FIXED] Imputed 0.5 for accessibility_collapse(class) at T=10
-  [FIXED] Imputed 0.5 for stakes_inflation(class) at T=10
-  [FIXED] Imputed 0.5 for suppression(class) at T=10
-  [FIXED] Imputed 0.5 for resistance(class) at T=10
-  [FIXED] Imputed 0.5 for accessibility_collapse(individual) at T=0
-  [FIXED] Imputed 0.5 for stakes_inflation(individual) at T=0
-  [FIXED] Imputed 0.5 for suppression(individual) at T=0
-  [FIXED] Imputed 0.5 for resistance(individual) at T=0
-  [FIXED] Imputed 0.5 for accessibility_collapse(individual) at T=10
-  [FIXED] Imputed 0.5 for stakes_inflation(individual) at T=10
-  [FIXED] Imputed 0.5 for suppression(individual) at T=10
-  [FIXED] Imputed 0.5 for resistance(individual) at T=10
-
-[REPAIR] Auditing vectors for: fnl_shadow_probe...
-
->>> INITIATING DR-AUDIT SUITE: fnl_shadow_probe
-
-[REPAIR] Auditing vectors for: fnl_shadow_probe...
-
---- [START] Data Verification ---
-[OK] Ontology Schema matches.
-Checking Interval: fnl_shadow_probe (0-10)
-Checking Interval: fnl_shadow_probe (0-10)
---- [END] Data Verification Complete ---
-[OK] Verification passed.
-
-=== PERSPECTIVE COMPARISON ===
-Constraint: fnl_shadow_probe
-
-From YOUR perspective (context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(global))): tangled_rope
-
-From ANALYTICAL perspective: tangled_rope
-
-→ Perspectives AGREE
-
---- PER-INDEX VALIDATION ---
-  [INDEX OK] fnl_shadow_probe from context(agent_power(powerless),time_horizon(biographical),exit_options(trapped),spatial_scope(national)): declared=tangled_rope, computed=tangled_rope
-  [INDEX OK] fnl_shadow_probe from context(agent_power(institutional),time_horizon(generational),exit_options(arbitrage),spatial_scope(national)): declared=rope, computed=rope
-  [INDEX OK] fnl_shadow_probe from context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(global)): declared=tangled_rope, computed=tangled_rope
-  [INTENT] Result: stable (Confidence: high)
-
-=== DEFERENTIAL REALISM (DR) DIAGNOSTIC: fnl_shadow_probe ===
-
-[CONSTRAINT INVENTORY]
-  - fnl_shadow_probe: hybrid_extraction (Intensity: 0.30)
-
-[FEASIBILITY BRIDGE]
-====================================================
-
---- LIFECYCLE DRIFT ANALYSIS ---
-
-================================================================
-  DRIFT EVENT REPORT
-================================================================
-
-  Constraints scanned: 1
-  Total drift events:  2
-  Critical: 0 | Warning: 2 | Watch: 0
-
-  fnl_shadow_probe:
-    [warning] extraction_accumulation
-        Evidence: evidence(extraction_delta,0,10,0.25,0.3)
-    [warning] purity_drift
-        Evidence: evidence(current_purity,0.4525,decline_signals,[coupling_above_threshold(1.0),excess_above_floor(0.15)])
-
---- Transition Path Analysis ---
-
---- Terminal State Predictions ---
-  fnl_shadow_probe -> tangled_rope (confidence: low)
-
---- Network Drift Analysis ---
-  Network stability: stable
-
-================================================================
-
---- SCOPE EFFECT ANALYSIS ---
-  Formula: χ = ε × f(d) × σ(S)
-  fnl_shadow_probe (ε=0.30):
-    powerless@local: d=0.900 f(d)=1.36 χ = 0.30 × 1.36 × 0.80 = 0.326
-    moderate@national: d=0.700 f(d)=1.11 χ = 0.30 × 1.11 × 1.00 = 0.332
-    institutional@national: d=0.120 f(d)=-0.04 χ = 0.30 × -0.04 × 1.00 = -0.013
-    analytical@global: d=0.720 f(d)=1.14 χ = 0.30 × 1.14 × 1.20 = 0.411
-
---- LOGICAL FINGERPRINT ---
-
-=== Logical Fingerprint: fnl_shadow_probe ===
-  Shift (computed via dr_type/3):
-    powerless=unknown  moderate=rope  institutional=rope  analytical=tangled_rope
-  Properties: [asymmetric,coordination,enforcement,has_beneficiaries]
-  Voids:      [no_exit_for_victims]
-  Actors:     beneficiaries=concentrated  victims=concentrated
-  Drift:      extraction=stable  suppression=unknown  theater=stable
-  Zone:       extraction=low  suppression=high
-  Coupling:   strongly_coupled (score=1.000, pairs=[coupled(power_scope,powerless,local-national,1.0),coupled(power_scope,powerless,global-local,1.0),coupled(power_scope,moderate,global-local,1.0),coupled(power_scope,moderate,global-national,1.0),coupled(power_scope,analytical,global-local,1.0),coupled(power_scope,analytical,global-national,1.0)], boltzmann=non_compliant(1.0,0.3))
-  Purity:     0.453 (contaminated)
-
-
---- SYSTEM INSIGHTS ---
-  Omegas Identified: 0
-
-
-====================================================
-   DEFERENTIAL REALISM (DR) EXECUTIVE SUMMARY      
-====================================================
-Timeline:       0 to 10
-Structural Pattern: stable
-Confidence:     high
-
-[CONSTRAINT INVENTORY: INDEXICAL AUDIT]
-
-
-Constraint: fnl_shadow_probe
-  Claimed Type: tangled_rope
-  Perspectives:
-    - [context(agent_power(powerless),time_horizon(biographical),exit_options(trapped),spatial_scope(national))]: tangled_rope (Matches Claim)
-    - [context(agent_power(institutional),time_horizon(generational),exit_options(arbitrage),spatial_scope(national))]: rope (Mismatch)
-    - [context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(global))]: tangled_rope (Matches Claim)
-
-[CROSS-DOMAIN ISOMORPHISM & RISK AUDIT: fnl_shadow_probe]
-  No high-risk isomorphisms detected for current constraints.
-
-[COMPREHENSIVE CROSS-DOMAIN STRUCTURAL TWINS]
-  No cross-domain isomorphisms detected.
-
-[META-LOGICAL AUDIT: ONTOLOGICAL FRAUD DETECTION]
-  No classification errors detected. System is Ontologically Coherent.
-
-[ONTOLOGICAL FORENSIC AUDIT: FALSE MOUNTAINS]
-  All mountains are structurally validated.
-
-[STRUCTURAL SIGNATURE ANALYSIS]
-  fnl_shadow_probe: false_ci_rope (confidence: high)
-    → FALSE CI_ROPE signature for fnl_shadow_probe: Appears to be rope (indexed_rope_classification) but fails 4 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.3),scope_variant([rope,tangled_rope]),excess_above_floor(0.15),nonsensical_coupling(0.5)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
-    → Institutional beneficiary: institutional_apparatus
-    → Institutional d=0.120
-
-[UKE_DR FEASIBILITY BRIDGE]
-  Recommendation | UKE Status
-  ----------------------------------------------------------------------
-
-Aggregate Magnitude (Kappa) at Tn: 0.50
-
-[PERSPECTIVAL GAP ANALYSIS]
-
-  Analysis for Constraint: fnl_shadow_probe
-    - Individual (Powerless): tangled_rope [d=0.900 f(d)=1.36 χ=0.33]
-    - Institutional (Manager): rope [d=0.120 f(d)=-0.04 χ=-0.01 → net benefit]
-    ! MANDATROPHY GAP: delta_chi = 0.34 (moderate)
-
-[OMEGA GENERATION FROM PERSPECTIVAL GAPS: fnl_shadow_probe]
-  Generated 1 Omega variables from perspectival gaps:
-
-  Ω: omega_perspectival_fnl_shadow_probe (conceptual)
-     Question: Constraint fnl_shadow_probe appears as tangled_rope to individuals but rope to institutions...
-     Source: gap(general_type_mismatch,tangled_rope,rope)
-
-
-[OMEGA TRIAGE & PRIORITIZATION]
-
-  [high] 1 omega(s):
-    - omega_perspectival_fnl_shadow_probe (conceptual)
-      Constraint fnl_shadow_probe appears as tangled_rope to individuals but rope to institutions...
-
-[OMEGA RESOLUTION SCENARIO GENERATION]
-  Generated 1 resolution scenario(s):
-
-  ┌─ [omega_perspectival_fnl_shadow_probe] CONCEPTUAL CLARIFICATION
-  │  Constraint: fnl_shadow_probe
-  │  Gap: Constraint fnl_shadow_probe appears as tangled_rope to individuals but rope to institutions...
-  │
-  │  RESOLUTION STRATEGY:
-  │  1. Map stakeholder perspectives:
-  │     - Document how different actors perceive fnl_shadow_probe
-  │     - Identify source of divergence
-  │  2. Gather evidence:
-  │     - Empirical metrics (suppression, extraction, resistance)
-  │     - Historical behavior patterns
-  │  3. Create indexical classification:
-  │     - From powerless context: classify as X
-  │     - From institutional context: classify as Y
-  │     - Add explicit context annotations
-  └─
-
-====================================================
-
-============================================================
-  DIAGNOSTIC RESULTS
-============================================================
-
-[STEP 2] Metric-based classification (pre-override):
-  metric_based_type_indexed = tangled_rope
-
-[STEP 3] Structural signature:
-  constraint_signature = false_ci_rope
-
-[STEP 4] Boltzmann compliance:
-  boltzmann_compliant = non_compliant(1.0,0.3)
-
-[STEP 5] Cross-index coupling:
-  cross_index_coupling = 1.0
-
-[STEP 6] Final classification (post-override via dr_type/3):
-  dr_type = tangled_rope
-
-============================================================
-  OVERRIDE ANALYSIS
-============================================================
-
-  MetricType  = tangled_rope
-  Signature   = false_ci_rope
-  FinalType   = tangled_rope
-
-  >>> NO OVERRIDE DETECTED <<<
-  MetricType == FinalType. Either the override did not
-  fire, or both paths agree on the same type.
-
-============================================================
-  OVERRIDE RULE STATUS
-============================================================
-
-  Rule NL  (natural_law -> mountain):      ACTIVE (maps to mountain)
-  Rule FNL (false_natural_law -> tangled):  ACTIVE (maps to tangled_rope)
-  Rule CIR (coupling_invariant -> rope):    ACTIVE (maps to rope)
-  Rule FCR (false_ci_rope -> tangled):      ACTIVE (maps to tangled_rope)
-
-============================================================
-  END OF DIAGNOSTIC
-============================================================
-
 # Logical Fingerprint Report
 
 *Generated: corpus-wide structural fingerprint analysis*
 
 ## Summary
 
-- **Constraints analyzed**: 687
-- **Distinct shift patterns**: 34
+- **Constraints analyzed**: 1024
+- **Distinct shift patterns**: 36
 
 ## Shift Pattern Families
 
 Each family groups constraints with identical perspectival shift — same classification at each power level.
 
-### `shift(indexically_opaque, snare, rope, snare)` — 5 constraints
+### `shift(indexically_opaque, snare, rope, snare)` — 7 constraints
 
+- `ai_compute_capital_moat`
+- `digital_credentialing_verification`
 - `indonesia_penal_code_2023`
 - `jp_nativist_politics`
 - `meta_pay_or_okay_model`
 - `nvidia_cuda_ecosystem_lockin`
 - `us_embargo_cuba`
 
-### `shift(indexically_opaque, tangled_rope, rope, snare)` — 3 constraints
+### `shift(indexically_opaque, tangled_rope, rope, snare)` — 4 constraints
 
+- `ai_performance_watermark`
 - `openai_prism_development`
 - `semiconductor_fabrication_chokepoint`
 - `us_usmca_china_leverage`
 
-### `shift(indexically_opaque, tangled_rope, rope, tangled_rope)` — 2 constraints
+### `shift(indexically_opaque, tangled_rope, rope, tangled_rope)` — 3 constraints
 
+- `eu_mercosur_trade_agreement`
 - `indo_german_defense_pact`
 - `shield_east_fortification`
 
@@ -288,13 +38,19 @@ Each family groups constraints with identical perspectival shift — same classi
 
 - `google_universal_commerce_protocol`
 
-### `shift(mountain, mountain, mountain, mountain)` — 15 constraints
+### `shift(mountain, mountain, mountain, mountain)` — 21 constraints
 
+- `cantor_set_topology`
+- `cantors_diagonal_argument`
+- `constraint_borsuk_ulam`
 - `constraint_ftc`
 - `constraint_lorenz_sensitivity`
 - `constraint_nonstandard_arithmetic`
 - `constraint_pythagorean`
 - `constraint_sylow`
+- `cosmological_evolution_alpha_omega`
+- `deep_earth_hydrogen_availability`
+- `dunbars_number`
 - `hamiltonian_path_complexity`
 - `hilbert_hotel_infinite_capacity`
 - `hiv_prep_prevention_2026`
@@ -306,11 +62,29 @@ Each family groups constraints with identical perspectival shift — same classi
 - `three_body_problem_predictability_limit`
 - `whitehead_incompleteness`
 
-### `shift(mountain, unknown, unknown, mountain)` — 32 constraints
+### `shift(mountain, unknown, unknown, mountain)` — 50 constraints
 
+- `banach_fixed_point`
+- `banach_fixed_point_theorem`
+- `bgs_spectral_universality`
+- `bh_merger_gravitational_infall`
+- `birthday_paradox_collision`
+- `busy_beaver_noncomputability`
+- `c_physical_blue_wavelength`
+- `cap_theorem`
+- `central_limit_theorem`
+- `clt_convergence_2026`
 - `constraint_galois_solvability`
 - `constraint_tarski_undefinability`
 - `constraint_twin_prime_conjecture`
+- `conways_game_of_life_dynamics`
+- `ehrenfest_barrier`
+- `english_chinese_tense_structure`
+- `fast_growing_hierarchy`
+- `feigenbaum_universality`
+- `fermat_proof_barrier`
+- `fgh_hierarchy_2026`
+- `finite_simple_group_classification`
 - `four_color_theorem_topological_bound`
 - `gauss_bonnet_topology`
 - `genetic_predisposition_mania`
@@ -348,10 +122,23 @@ Each family groups constraints with identical perspectival shift — same classi
 - `milano_cortina_2026`
 - `viral_emergence_covid19_exemplar`
 
-### `shift(rope, rope, rope, rope)` — 21 constraints
+### `shift(rope, rope, rope, rope)` — 34 constraints
 
+- `asean_ceasefire_2011`
+- `astm_d638_tensile_testing`
+- `automatic_enrollment_defaults`
+- `berkshire_compounding_culture`
 - `boundary_protocol`
+- `burden_of_proof_legal_criminal`
+- `cancer_chronotherapy_timing`
+- `click_chemistry_paradigm_2026`
+- `creative_commons_licensing`
+- `cuny_light_2026`
 - `decentralized_infrastructure_rope`
+- `epigenetics_complexity_2026`
+- `ergo_mixer_protocol`
+- `ergo_nipopows`
+- `fair_use_doctrine`
 - `genetic_algorithms_evolution`
 - `ice_memory_archive`
 - `kjv_great_awakening`
@@ -378,8 +165,10 @@ Each family groups constraints with identical perspectival shift — same classi
 - `sadhu_integrity_protocol`
 - `social_narrative_casting`
 
-### `shift(rope, rope, scaffold, unknown)` — 2 constraints
+### `shift(rope, rope, scaffold, unknown)` — 4 constraints
 
+- `confirmation_bias`
+- `endowment_effect`
 - `gradient_descent_optimization`
 - `skills_based_hiring`
 
@@ -387,12 +176,16 @@ Each family groups constraints with identical perspectival shift — same classi
 
 - `silklink_2026`
 
-### `shift(scaffold, scaffold, scaffold, scaffold)` — 10 constraints
+### `shift(scaffold, scaffold, scaffold, scaffold)` — 14 constraints
 
+- `church_turing_thesis`
+- `elencher_identity_transformation`
+- `euler_characteristic_topology`
 - `fundamental_theorem_of_algebra`
 - `indexical_relativity_core`
 - `liar_paradox`
 - `martian_signal_latency`
+- `midnight_deadline`
 - `noethers_theorem_symmetry`
 - `optimal_stopping_marriage`
 - `pythagorean_geometric_constancy`
@@ -400,10 +193,135 @@ Each family groups constraints with identical perspectival shift — same classi
 - `sturgeons_law`
 - `universal_mathematics_communication`
 
-### `shift(snare, snare, rope, snare)` — 190 constraints
+### `shift(snare, snare, rope, snare)` — 315 constraints
 
+- `26usc469_real_estate_exemption`
+- `abstraction_boundary_overrun`
+- `academic_fashion_modernism_2026`
+- `academic_tenure_system`
+- `ad_synaptic_deficit`
+- `adaptive_lag_trap`
+- `adversarial_surface_inflation`
+- `adversarial_truth_decay`
+- `agency_atrophy`
+- `agent_opt_2026`
+- `ai_banal_capture`
+- `ai_driven_surveillance_sensor_layer`
+- `ai_evaluators_matching`
+- `ai_nonconsensual_content_facilitation`
+- `ai_professional_displacement`
+- `airport_slot_use_it_or_lose_it`
+- `algeria_france_colonial_legacy`
+- `algorithmic_bias`
+- `algorithmic_epistemic_capture`
+- `alignment_tax_tradeoff`
+- `altruistic_misery_paradox_2026`
+- `amish_technological_renunciation`
+- `anticipatory_capacity_failure`
+- `appropriations_brinkmanship`
+- `art_market_decoupling`
+- `asshole_filter_2015`
+- `asymmetric_burden_distribution`
+- `attention_as_bottleneck_resource`
+- `attention_market_cannibalization`
+- `australia_social_ban_2026`
+- `authoritarian_power_paradox`
+- `autonomous_toolchain_sprawl`
+- `average_is_over_2026`
+- `awareness_without_leverage`
+- `bay_of_pigs_operational_silo`
+- `bedouin_sedentary_transition`
+- `belief_argument_conclusion`
+- `bip_narrative_illusion`
+- `blackstone_conflicts_of_interest`
+- `blackstone_smd_control`
+- `blackstone_tra`
+- `bor_tax_exemption_nl`
+- `boundary_dissolution_risk`
+- `brazil_mexico_financial_requirement`
+- `broke_vs_poor_grocery_math`
+- `burden_of_proof_engineering_safety`
+- `bureaucratic_legibility_collapse`
+- `bureaucratic_self_preservation`
+- `bushman_money_magic`
+- `capability_eval_overhang`
+- `capital_misallocation_spiral`
+- `carrying_capacity`
+- `cartel_drone_surveillance_el_paso`
+- `cascading_constraint_failure`
+- `cascading_uncertainty_2026`
+- `cb_far_beyond_human`
+- `cbdc_implementation`
+- `cfius_hiefo_emcore_divestment`
+- `cg_israelgaza_20231012`
+- `challenger_o_ring_integrity`
+- `child_marriage`
+- `china_critical_mineral_chokepoint`
+- `cholesterol_pill_cost`
+- `chrome_imagen2_integration`
+- `cia_fbi_legal_wall`
+- `circadian_decoupling_arbitrage`
+- `citation_collapse_dynamics`
+- `civilizational_lifecycle_solara`
+- `cloudflare_dual_class_asymmetry`
+- `coe_ukraine_reparations_register`
+- `cognitive_hacking_2026`
+- `cognitive_induction_gap`
+- `cognitive_surrender_to_system_3`
+- `coinbase_regulatory_uncertainty`
+- `collective_action_deadlock`
+- `collective_stupidity_2026`
+- `colorado_sbe_decentralization_friction`
+- `communal_narcissism_social_trap`
+- `complexity_debt`
+- `consensus_without_truth`
 - `constraint_interaction_explosion`
+- `consumer_debt_slavery`
+- `container_capacity_mismatch`
+- `coordination_attack_vulnerability`
+- `coordination_fatigue`
+- `credibility_inflation`
+- `crisis_signal_saturation`
+- `critical_actor_overcentralization`
+- `cross_domain_coupling_spiral`
+- `cultural_memory_decay`
+- `cultural_refragmentation_2026`
+- `cumbria_mine_rejection`
+- `cz_plea_agreement_2026`
+- `dark_patterns_manipulation`
+- `data_laundering_pipeline`
+- `debt_service_squeeze`
+- `deferred_risk_realization`
+- `delayed_feedback_instability`
+- `delta_force_selection_2026`
+- `demographic_inertia_trap`
+- `dk_foreign_convict_expulsion`
+- `dwp_carers_allowance_cliff`
+- `elite_capture_2026`
+- `elite_identity_capture_2026`
+- `emergency_mode_lock_in`
+- `emergent_goal_misalignment`
+- `endocrine_disruption_society`
+- `epistemic_free_rider_problem`
+- `epistemic_overload_collapse`
+- `epstein_espionage_2026`
+- `epstein_files_2026`
+- `epstein_honeytrap`
+- `ergot_grain_poisoning`
 - `erised_expectation`
+- `eu_asylum_outsourcing_framework`
+- `evidence_half_life`
+- `evolutionary_mismatch_load`
+- `expert_disempowerment`
+- `family_estrangement_ratio`
+- `family_succession_system`
+- `feedback_loop_desynchronization`
+- `fiat_currency_lifecycle`
+- `financial_drag`
+- `finite_pool_of_worry`
+- `finnish_debt_adjustment`
+- `fiscal_dominance_trap`
+- `floating_wall_2026`
 - `fragile_middle_layer_collapse`
 - `frontex_pushback_coordination`
 - `gale_shapley`
@@ -593,14 +511,28 @@ Each family groups constraints with identical perspectival shift — same classi
 - `zipfs_law`
 - `zombie_reasoning_2026`
 
-### `shift(snare, snare, scaffold, snare)` — 2 constraints
+### `shift(snare, snare, scaffold, snare)` — 8 constraints
 
+- `ad_fus_coordination`
+- `ai_superpowers_2026`
+- `alzheimers_nlrp3_inflammasome`
+- `ancestral_pueblo_hydrology`
+- `coordination_threshold_failure`
+- `emergency_powers_ratchet`
 - `toxoplasma_hub_2026`
 - `unrequited_love_protocol`
 
-### `shift(tangled_rope, snare, rope, snare)` — 17 constraints
+### `shift(tangled_rope, snare, rope, snare)` — 26 constraints
 
+- `ai_religion_regulation`
 - `airbnb_str_regulation`
+- `canal_panama_influence`
+- `constitutional_consecration`
+- `crop_defense_dependency`
+- `cuba_mandatrophic_collapse`
+- `dionysiac_frenzy`
+- `eu_irgc_terrorist_designation`
+- `fitts_law_industrial_application`
 - `gaza_aid_permit_revocation`
 - `geopolitical_insularity_2026`
 - `greshams_law`
@@ -609,6 +541,7 @@ Each family groups constraints with identical perspectival shift — same classi
 - `medical_residency_match`
 - `meta_nda`
 - `microwave_weapon_1`
+- `moltbot_religion`
 - `new_start_expiration`
 - `openbsd_netiquette_protocol`
 - `rare_earth_dependency`
@@ -618,13 +551,61 @@ Each family groups constraints with identical perspectival shift — same classi
 - `us_sanctions_icc_israel_case`
 - `vienna_quantum_superposition_2026`
 
+### `shift(tangled_rope, snare, tangled_rope, snare)` — 1 constraints
+
+- `epstein_document_release_2026`
+
 ### `shift(tangled_rope, tangled_rope, indexically_opaque, snare)` — 2 constraints
 
 - `international_seabed_mining_regime`
 - `trump_epa_greenhouse_gas_reversal`
 
-### `shift(tangled_rope, tangled_rope, rope, snare)` — 94 constraints
+### `shift(tangled_rope, tangled_rope, rope, snare)` — 138 constraints
 
+- `ai_adoption_stigma`
+- `ai_auditability_gap`
+- `ape_cognition_framework`
+- `arctic_maritime_control`
+- `arg_ev_tariff`
+- `boiled_pineapple_trend_2026`
+- `brain_network_paradigm_2026`
+- `cancer_prevention`
+- `carbon_credit_markets_2026`
+- `carrier_deployment_deterrence`
+- `china_ev_export_oversupply`
+- `china_vactrain_standard`
+- `climate_event_attribution`
+- `cn_tech_decoupling_security_software`
+- `codex_access`
+- `cognac_geopolitical_risk`
+- `conversational_dogmas_interruption`
+- `corporate_social_responsibility_theater`
+- `couples_residency_match`
+- `credentialism_national_security`
+- `cultural_homogenization_social_media`
+- `data_privacy_regulation`
+- `debt_trap_microfinance`
+- `digital_euro_cbdc`
+- `digital_identity_tether`
+- `discover_core_2026`
+- `dn_paywall`
+- `doomsday_clock_framework`
+- `dunning_kruger_effect`
+- `ec_meta_manus_block`
+- `edelman_2026_developed_stagnation`
+- `edelman_2026_insularity`
+- `elite_overproduction_instability`
+- `elliq_ai_companion`
+- `eu_digital_services_act`
+- `eu_ev_tariff_wall`
+- `eu_unanimity_rule_foreign_policy`
+- `evolutionary_knowledge`
+- `exploration_vs_exploitation`
+- `fcc_dji_covered_list`
+- `fda_component_efficacy_standard`
+- `fed_shutdown_2026`
+- `fiber_optic_chip_tech`
+- `fine_particle_policy`
 - `fraser_river_salmon_regulation`
 - `french_ag_land_concentration`
 - `future_dsm_integration`
@@ -720,10 +701,48 @@ Each family groups constraints with identical perspectival shift — same classi
 - `wpl_scotland`
 - `yangtze_fishing_ban`
 
-### `shift(tangled_rope, tangled_rope, rope, tangled_rope)` — 94 constraints
+### `shift(tangled_rope, tangled_rope, rope, tangled_rope)` — 132 constraints
 
+- `adverse_possession`
+- `aging_longevity_tests`
+- `ai_edu_decentralization`
+- `ai_training_data_dependency`
+- `armra_colostrum_regulation`
+- `arrows_impossibility_theorem`
+- `atrophied_optimization_piton`
+- `availability_heuristic`
+- `bayes_theorem_cognitive_bias`
+- `beehiiv_platform_model`
+- `bgs_eigenvector_thermalization`
+- `bnpl_payment_systems`
+- `board_of_peace_2026`
+- `brazil_2026_general_elections`
+- `burden_of_proof_scientific`
+- `capital_rotation_ai_narrative`
+- `champions_bass_fishing_exclusion`
+- `civilizational_maintenance_debt`
+- `cmr_001`
+- `coalition_disinfo_framework_2026`
+- `cobra_effect`
+- `coinbase_crypto_volatility`
+- `cold_dark_matter_paradigm`
+- `comitatus_bond`
+- `compounding_logic`
 - `constraint_yoneda`
 - `data_replication_paradox`
+- `djia_as_economic_barometer`
+- `dutch_minority_govt_2026`
+- `edelman_2026_developing_volatility`
+- `em_clinical_guidelines`
+- `empty_tomb_transformation`
+- `eu_affordable_housing_initiative`
+- `eu_deforestation_regulation`
+- `eu_renewable_energy_mandate`
+- `eurozone_fragmentation_2026`
+- `evfta_trade_agreement`
+- `extraordinary_narrative_shift`
+- `faa_boeing_regulatory_capture`
+- `fmeca_procedures_1980`
 - `framing_effect`
 - `france_cordon_sanitaire_2026`
 - `franchisee_corporate_squeeze`
@@ -817,8 +836,13 @@ Each family groups constraints with identical perspectival shift — same classi
 - `wikipedia_notability_requirement_2026`
 - `yc_equity_squeeze`
 
-### `shift(tangled_rope, tangled_rope, rope, unknown)` — 13 constraints
+### `shift(tangled_rope, tangled_rope, rope, unknown)` — 18 constraints
 
+- `abstraction_leakage`
+- `big_data_astrophysics_arbitrage`
+- `college_admissions_market`
+- `decision_latency_mismatch`
+- `factional_instability`
 - `grete_samsa_transition`
 - `hydra_game`
 - `institutional_trust_decay`
@@ -833,14 +857,17 @@ Each family groups constraints with identical perspectival shift — same classi
 - `tragedy_of_the_commons`
 - `transformer_self_attention`
 
-### `shift(tangled_rope, tangled_rope, scaffold, snare)` — 3 constraints
+### `shift(tangled_rope, tangled_rope, scaffold, snare)` — 5 constraints
 
+- `bangladesh_july_national_charter`
+- `emergency_bridge_scaffold`
 - `ia_digital_preservation`
 - `perovskite_self_etching`
 - `project_vault_2026`
 
-### `shift(tangled_rope, tangled_rope, scaffold, tangled_rope)` — 2 constraints
+### `shift(tangled_rope, tangled_rope, scaffold, tangled_rope)` — 3 constraints
 
+- `artificial_scarcity_scaffold`
 - `global_stimulus_spree`
 - `isa_education_scaffold`
 
@@ -848,8 +875,55 @@ Each family groups constraints with identical perspectival shift — same classi
 
 - `private_credit_market_opacity`
 
-### `shift(tangled_rope, tangled_rope, tangled_rope, tangled_rope)` — 95 constraints
+### `shift(tangled_rope, tangled_rope, tangled_rope, tangled_rope)` — 143 constraints
 
+- `academic_peer_review_gatekeeping`
+- `advice_as_dangerous_gift`
+- `ai_cognitive_diversity_arbitrage`
+- `ai_task_horizon_reliability`
+- `alternative_sovereignty_scaffold`
+- `ancient_grudge_verona`
+- `antifragility`
+- `apartheid_nuclear_program`
+- `arctic_geopolitical_flashpoint`
+- `asymmetric_computational_difficulty`
+- `axiom_of_choice`
+- `banach_tarski_paradox`
+- `base_pair_complementarity`
+- `basel_problem_convergence`
+- `biological_curiosity`
+- `brouwer_fixed_point`
+- `buffons_needle_pi_estimation`
+- `burali_forti_paradox`
+- `canada_goose_realignment_2026`
+- `castration_longevity_choice`
+- `chaitins_omega_undecidability`
+- `china_taiwan_reunification_mandate`
+- `climate_attribution_2026`
+- `climate_target_one_point_five`
+- `coffee_cardiovascular_2026`
+- `cognitive_bicycle_scaffold`
+- `cognitive_diversity_arbitrage`
+- `cognitive_energy_budget`
+- `collatz_conjecture_determinism`
+- `continuum_hypothesis_undecidability`
+- `copyleft_viral_licensing`
+- `copyright_protection`
+- `countable_infinity_cardinality`
+- `crispr_genomic_rewrite_2026`
+- `currys_paradox`
+- `damped_harmonics`
+- `dead_sea_effect`
+- `dexy_gold_protocol`
+- `e2ee_digital_privacy_2026`
+- `emotional_cycles_2026`
+- `ergo_autolykos_asic_resistance`
+- `ergo_lets_protocol`
+- `ergo_storage_rent_mechanism`
+- `ergodic_theorems`
+- `faint_blue_neural_bifurcation`
+- `finnish_ubi_experiment`
+- `fmt_oncology_2026`
 - `frankenstein_creation_hubris`
 - `galois_theory_symmetry`
 - `germline_regulation_threshold_2026`
@@ -922,6 +996,7 @@ Each family groups constraints with identical perspectival shift — same classi
 - `rn_proteus_adoption`
 - `rogers_commission_institutional_analysis`
 - `rogue_wave_control_2026`
+- `rope_design`
 - `self_surpassing`
 - `skolems_paradox`
 - `sm_addictive_design`
@@ -946,12 +1021,18 @@ Each family groups constraints with identical perspectival shift — same classi
 - `us_canada_geopolitical_asymmetry`
 - `whitehead_problem_undecidability`
 
-### `shift(tangled_rope, unknown, rope, unknown)` — 1 constraints
+### `shift(tangled_rope, unknown, rope, unknown)` — 2 constraints
 
+- `cma`
 - `negative_emissions_arbitrage`
 
-### `shift(unknown, rope, rope, rope)` — 8 constraints
+### `shift(unknown, rope, rope, rope)` — 13 constraints
 
+- `boltzmann_universality_2026`
+- `cuban_missile_crisis_excomm_deliberation`
+- `deferential_realism_framework`
+- `dldr_information_policy`
+- `electrification_scale_2026`
 - `guinea_worm_eradication`
 - `omelet_perfection_complexity`
 - `postman_survival_protocol`
@@ -961,8 +1042,10 @@ Each family groups constraints with identical perspectival shift — same classi
 - `tcp_rfc9293_interoperability`
 - `tsp_duplicate_elimination`
 
-### `shift(unknown, rope, rope, tangled_rope)` — 4 constraints
+### `shift(unknown, rope, rope, tangled_rope)` — 6 constraints
 
+- `blackstone_carried_interest_taxation`
+- `constitutional_supremacy`
 - `fnl_shadow_probe`
 - `gs1_gln_identification`
 - `migration_decision_threshold`
@@ -972,12 +1055,19 @@ Each family groups constraints with identical perspectival shift — same classi
 
 - `unclos_2026`
 
+### `shift(unknown, rope, scaffold, unknown)` — 2 constraints
+
+- `emergency_oversight_bureau`
+- `erasmus_rejoining_scaffold`
+
 ### `shift(unknown, snare, scaffold, snare)` — 1 constraints
 
 - `genie_ip_constraint`
 
-### `shift(unknown, unknown, rope, tangled_rope)` — 14 constraints
+### `shift(unknown, unknown, rope, tangled_rope)` — 16 constraints
 
+- `alzheimers_levetiracetam`
+- `asce_7_22_seismic_design`
 - `constraint_lagrange_multipliers`
 - `constraint_riemann_mapping`
 - `gemini_scientific_advancement`
@@ -993,8 +1083,16 @@ Each family groups constraints with identical perspectival shift — same classi
 - `ritual_transition_scaffold`
 - `working_dog_training`
 
-### `shift(unknown, unknown, rope, unknown)` — 14 constraints
+### `shift(unknown, unknown, rope, unknown)` — 23 constraints
 
+- `artificial_snow_2026`
+- `clawderberg_recursive_slop`
+- `colombia_2026_presidential_election`
+- `cost_of_observation`
+- `cow_field_poop`
+- `cs_ecmo_bridge`
+- `education_unbundling_implementation`
+- `ergo_storage_rent`
 - `france_2027_presidential_election`
 - `goodstein_theorem_finite_proof`
 - `gs1_standardized_identification`
@@ -1006,12 +1104,15 @@ Each family groups constraints with identical perspectival shift — same classi
 - `paris_municipal_reform_2026`
 - `regulatory_capture`
 - `repair_probe_incomplete`
+- `rosen_bridge_protocol`
 - `rotation_seven_black_soil`
 - `ship_of_theseus`
 - `shitty_feedback_handling`
 
-### `shift(unknown, unknown, scaffold, snare)` — 5 constraints
+### `shift(unknown, unknown, scaffold, snare)` — 7 constraints
 
+- `absorbing_markov_chain_trap`
+- `ai_scholar_citation_trap`
 - `mit_tfus_2026`
 - `nsw_transmission_bottleneck`
 - `openai_api_access`
@@ -1023,8 +1124,10 @@ Each family groups constraints with identical perspectival shift — same classi
 - `france_local_elections_march_2026`
 - `portugal_ad_stability_2026`
 
-### `shift(unknown, unknown, scaffold, unknown)` — 9 constraints
+### `shift(unknown, unknown, scaffold, unknown)` — 12 constraints
 
+- `axiom_reasoner_2026`
+- `exoplanetary_habitability_arbitrage`
 - `gamblers_ruin_stochastic_extinction`
 - `glp1_payload_efficiency_pivot`
 - `hawthorne_effect`
@@ -1033,38 +1136,140 @@ Each family groups constraints with identical perspectival shift — same classi
 - `qwerty_vs_dvorak`
 - `recipe_scaling_ai`
 - `russells_paradox_self_reference`
+- `sig_usd_protocol`
 - `trillion_bond_rush_2026`
 
-### `shift(unknown, unknown, unknown, unknown)` — 16 constraints
+### `shift(unknown, unknown, unknown, unknown)` — 1 constraints
 
-- `26usc469_real_estate_exemption`
-- `absorbing_markov_chain_trap`
-- `abstraction_boundary_overrun`
-- `abstraction_leakage`
-- `academic_fashion_modernism_2026`
-- `academic_peer_review_gatekeeping`
-- `academic_tenure_system`
-- `ad_fus_coordination`
-- `ad_synaptic_deficit`
-- `adaptive_lag_trap`
-- `adversarial_surface_inflation`
-- `adversarial_truth_decay`
-- `adverse_possession`
 - `catholic_church_1200`
-- `cg_israelgaza_20231012`
-- `moltbot_religion`
 
 ## Scope Differentiation
 
 Constraints where changing scope (local vs national vs global) changes the classification type, holding power/time/exit constant.
 
-- **Scope-sensitive constraints**: 252 / 687
+- **Scope-sensitive constraints**: 369 / 1024
 
+- `absorbing_markov_chain_trap`: local=unknown, national=unknown, global=snare
+- `abstraction_leakage`: local=tangled_rope, national=tangled_rope, global=unknown
+- `academic_fashion_modernism_2026`: local=unknown, national=snare, global=snare
+- `agent_opt_2026`: local=unknown, national=snare, global=snare
+- `ai_adoption_stigma`: local=tangled_rope, national=tangled_rope, global=snare
+- `ai_auditability_gap`: local=tangled_rope, national=tangled_rope, global=snare
+- `ai_banal_capture`: local=tangled_rope, national=snare, global=snare
+- `ai_compute_capital_moat`: local=tangled_rope, national=snare, global=snare
+- `ai_performance_watermark`: local=tangled_rope, national=tangled_rope, global=snare
+- `ai_professional_displacement`: local=tangled_rope, national=snare, global=snare
+- `ai_religion_regulation`: local=tangled_rope, national=snare, global=snare
+- `ai_scholar_citation_trap`: local=unknown, national=unknown, global=snare
+- `ai_superpowers_2026`: local=unknown, national=snare, global=snare
 - `airbnb_str_regulation`: local=tangled_rope, national=snare, global=snare
+- `altruistic_misery_paradox_2026`: local=tangled_rope, national=snare, global=snare
+- `alzheimers_levetiracetam`: local=rope, national=unknown, global=tangled_rope
+- `ape_cognition_framework`: local=tangled_rope, national=tangled_rope, global=snare
+- `appropriations_brinkmanship`: local=tangled_rope, national=snare, global=snare
+- `arctic_maritime_control`: local=tangled_rope, national=tangled_rope, global=snare
+- `arg_ev_tariff`: local=tangled_rope, national=tangled_rope, global=snare
+- `asce_7_22_seismic_design`: local=rope, national=unknown, global=tangled_rope
+- `australia_social_ban_2026`: local=tangled_rope, national=snare, global=snare
+- `availability_heuristic`: local=unknown, national=tangled_rope, global=tangled_rope
+- `average_is_over_2026`: local=tangled_rope, national=snare, global=snare
+- `awareness_without_leverage`: local=tangled_rope, national=snare, global=snare
+- `bangladesh_july_national_charter`: local=tangled_rope, national=tangled_rope, global=snare
+- `belief_argument_conclusion`: local=tangled_rope, national=snare, global=snare
+- `bgs_eigenvector_thermalization`: local=unknown, national=tangled_rope, global=tangled_rope
+- `big_data_astrophysics_arbitrage`: local=tangled_rope, national=tangled_rope, global=unknown
+- `blackstone_carried_interest_taxation`: local=rope, national=rope, global=unknown
+- `boiled_pineapple_trend_2026`: local=tangled_rope, national=tangled_rope, global=snare
+- `brain_network_paradigm_2026`: local=tangled_rope, national=tangled_rope, global=snare
+- `bureaucratic_self_preservation`: local=tangled_rope, national=snare, global=snare
+- `canal_panama_influence`: local=tangled_rope, national=snare, global=snare
+- `cancer_prevention`: local=tangled_rope, national=tangled_rope, global=snare
+- `carbon_credit_markets_2026`: local=tangled_rope, national=tangled_rope, global=snare
+- `carrier_deployment_deterrence`: local=tangled_rope, national=tangled_rope, global=snare
+- `carrying_capacity`: local=tangled_rope, national=snare, global=snare
+- `cb_far_beyond_human`: local=tangled_rope, national=snare, global=snare
+- `cfius_hiefo_emcore_divestment`: local=tangled_rope, national=snare, global=snare
+- `cg_israelgaza_20231012`: local=tangled_rope, national=snare, global=snare
+- `china_ev_export_oversupply`: local=tangled_rope, national=tangled_rope, global=snare
+- `china_vactrain_standard`: local=tangled_rope, national=tangled_rope, global=snare
+- `cholesterol_pill_cost`: local=tangled_rope, national=snare, global=snare
+- `chrome_imagen2_integration`: local=tangled_rope, national=snare, global=snare
+- `cia_fbi_legal_wall`: local=tangled_rope, national=snare, global=snare
+- `circadian_decoupling_arbitrage`: local=tangled_rope, national=snare, global=snare
+- `climate_event_attribution`: local=tangled_rope, national=tangled_rope, global=snare
+- `cma`: local=tangled_rope, national=unknown, global=unknown
+- `cn_tech_decoupling_security_software`: local=tangled_rope, national=tangled_rope, global=snare
+- `codex_access`: local=tangled_rope, national=tangled_rope, global=snare
+- `coe_ukraine_reparations_register`: local=tangled_rope, national=snare, global=snare
+- `cognac_geopolitical_risk`: local=tangled_rope, national=tangled_rope, global=snare
+- `cognitive_hacking_2026`: local=tangled_rope, national=snare, global=snare
+- `cognitive_induction_gap`: local=tangled_rope, national=snare, global=snare
+- `cognitive_surrender_to_system_3`: local=tangled_rope, national=snare, global=snare
+- `coinbase_crypto_volatility`: local=unknown, national=tangled_rope, global=tangled_rope
+- `coinbase_regulatory_uncertainty`: local=tangled_rope, national=snare, global=snare
+- `college_admissions_market`: local=tangled_rope, national=tangled_rope, global=unknown
+- `colorado_sbe_decentralization_friction`: local=tangled_rope, national=snare, global=snare
+- `comitatus_bond`: local=unknown, national=tangled_rope, global=tangled_rope
+- `confirmation_bias`: local=scaffold, national=rope, global=unknown
+- `constitutional_consecration`: local=tangled_rope, national=snare, global=snare
+- `constitutional_supremacy`: local=rope, national=rope, global=unknown
 - `constraint_lagrange_multipliers`: local=rope, national=unknown, global=tangled_rope
 - `constraint_riemann_mapping`: local=rope, national=unknown, global=tangled_rope
 - `constraint_yoneda`: local=unknown, national=tangled_rope, global=tangled_rope
+- `consumer_debt_slavery`: local=tangled_rope, national=snare, global=snare
+- `conversational_dogmas_interruption`: local=tangled_rope, national=tangled_rope, global=snare
+- `corporate_social_responsibility_theater`: local=tangled_rope, national=tangled_rope, global=snare
+- `cost_of_observation`: local=tangled_rope, national=unknown, global=unknown
+- `couples_residency_match`: local=tangled_rope, national=tangled_rope, global=snare
+- `credentialism_national_security`: local=tangled_rope, national=tangled_rope, global=snare
+- `crop_defense_dependency`: local=tangled_rope, national=snare, global=snare
+- `cultural_homogenization_social_media`: local=tangled_rope, national=tangled_rope, global=snare
+- `cultural_refragmentation_2026`: local=unknown, national=snare, global=snare
+- `cumbria_mine_rejection`: local=tangled_rope, national=snare, global=snare
+- `data_privacy_regulation`: local=tangled_rope, national=tangled_rope, global=snare
+- `debt_service_squeeze`: local=tangled_rope, national=snare, global=snare
+- `debt_trap_microfinance`: local=indexically_opaque, national=tangled_rope, global=tangled_rope
+- `decision_latency_mismatch`: local=tangled_rope, national=tangled_rope, global=unknown
+- `digital_credentialing_verification`: local=tangled_rope, national=snare, global=snare
+- `digital_euro_cbdc`: local=tangled_rope, national=tangled_rope, global=snare
+- `digital_identity_tether`: local=tangled_rope, national=tangled_rope, global=snare
+- `discover_core_2026`: local=tangled_rope, national=tangled_rope, global=snare
+- `dn_paywall`: local=tangled_rope, national=tangled_rope, global=snare
+- `doomsday_clock_framework`: local=tangled_rope, national=tangled_rope, global=snare
+- `dunning_kruger_effect`: local=tangled_rope, national=tangled_rope, global=snare
+- `ec_meta_manus_block`: local=tangled_rope, national=tangled_rope, global=snare
+- `edelman_2026_developed_stagnation`: local=tangled_rope, national=tangled_rope, global=snare
+- `edelman_2026_insularity`: local=tangled_rope, national=tangled_rope, global=snare
+- `elite_overproduction_instability`: local=tangled_rope, national=tangled_rope, global=snare
+- `elliq_ai_companion`: local=tangled_rope, national=tangled_rope, global=snare
+- `emergency_oversight_bureau`: local=scaffold, national=rope, global=unknown
+- `empty_tomb_transformation`: local=unknown, national=tangled_rope, global=tangled_rope
+- `endowment_effect`: local=scaffold, national=rope, global=unknown
+- `epstein_document_release_2026`: local=tangled_rope, national=snare, global=snare
+- `epstein_espionage_2026`: local=unknown, national=snare, global=snare
+- `epstein_files_2026`: local=unknown, national=snare, global=snare
+- `erasmus_rejoining_scaffold`: local=scaffold, national=rope, global=unknown
 - `erised_expectation`: local=tangled_rope, national=snare, global=snare
+- `eu_digital_services_act`: local=tangled_rope, national=tangled_rope, global=snare
+- `eu_ev_tariff_wall`: local=tangled_rope, national=tangled_rope, global=snare
+- `eu_irgc_terrorist_designation`: local=tangled_rope, national=snare, global=snare
+- `eu_unanimity_rule_foreign_policy`: local=tangled_rope, national=tangled_rope, global=snare
+- `evolutionary_knowledge`: local=tangled_rope, national=tangled_rope, global=snare
+- `expert_disempowerment`: local=tangled_rope, national=snare, global=snare
+- `exploration_vs_exploitation`: local=tangled_rope, national=tangled_rope, global=snare
+- `extraordinary_narrative_shift`: local=unknown, national=tangled_rope, global=tangled_rope
+- `faa_boeing_regulatory_capture`: local=unknown, national=tangled_rope, global=tangled_rope
+- `factional_instability`: local=tangled_rope, national=tangled_rope, global=unknown
+- `fcc_dji_covered_list`: local=tangled_rope, national=tangled_rope, global=snare
+- `fda_component_efficacy_standard`: local=tangled_rope, national=tangled_rope, global=snare
+- `fed_shutdown_2026`: local=tangled_rope, national=tangled_rope, global=snare
+- `feedback_loop_desynchronization`: local=tangled_rope, national=snare, global=snare
+- `fiber_optic_chip_tech`: local=tangled_rope, national=tangled_rope, global=snare
+- `fine_particle_policy`: local=tangled_rope, national=tangled_rope, global=snare
+- `finnish_debt_adjustment`: local=tangled_rope, national=snare, global=snare
+- `fitts_law_industrial_application`: local=tangled_rope, national=snare, global=snare
+- `floating_wall_2026`: local=tangled_rope, national=snare, global=snare
+- `fmeca_procedures_1980`: local=unknown, national=tangled_rope, global=tangled_rope
 - `fnl_shadow_probe`: local=rope, national=rope, global=unknown
 - `france_cordon_sanitaire_2026`: local=unknown, national=tangled_rope, global=tangled_rope
 - `france_local_elections_march_2026`: local=rope, national=unknown, global=tangled_rope
@@ -1157,6 +1362,7 @@ Constraints where changing scope (local vs national vs global) changes the class
 - `mit_tfus_2026`: local=unknown, national=unknown, global=snare
 - `moltbook_agent_theater`: local=tangled_rope, national=tangled_rope, global=unknown
 - `moltbook_breach_2026`: local=unknown, national=snare, global=snare
+- `moltbot_religion`: local=tangled_rope, national=snare, global=snare
 - `moores_law`: local=rope, national=rope, global=unknown
 - `mrna_melanoma_therapy`: local=tangled_rope, national=tangled_rope, global=snare
 - `nato_arctic_defense_cooperation`: local=unknown, national=tangled_rope, global=tangled_rope
@@ -1316,55 +1522,57 @@ Constraints where changing scope (local vs national vs global) changes the class
 
 ### Extraction Zones
 
-| extreme | 460 |
-| low | 76 |
-| negligible | 135 |
+| extreme | 712 |
+| low | 101 |
+| negligible | 210 |
 
 ### Suppression Zones
 
-| extreme | 424 |
-| high | 123 |
-| low | 63 |
-| moderate | 6 |
-| negligible | 71 |
+| extreme | 659 |
+| high | 169 |
+| low | 102 |
+| moderate | 11 |
+| negligible | 83 |
 
 ## Orbit Cross-Reference
 
 Maps shift pattern families to gauge orbit signatures.
 
-- `shift(indexically_opaque, snare, rope, snare)` (5 constraints): orbit `[indexically_opaque,rope,snare]`
-- `shift(indexically_opaque, tangled_rope, rope, snare)` (3 constraints): orbit `[indexically_opaque,rope,snare,tangled_rope]`
-- `shift(indexically_opaque, tangled_rope, rope, tangled_rope)` (2 constraints): orbit `[indexically_opaque,rope,tangled_rope]`
+- `shift(indexically_opaque, snare, rope, snare)` (7 constraints): orbit `[indexically_opaque,rope,snare]`
+- `shift(indexically_opaque, tangled_rope, rope, snare)` (4 constraints): orbit `[indexically_opaque,rope,snare,tangled_rope]`
+- `shift(indexically_opaque, tangled_rope, rope, tangled_rope)` (3 constraints): orbit `[indexically_opaque,rope,tangled_rope]`
 - `shift(indexically_opaque, tangled_rope, tangled_rope, snare)` (1 constraints): orbit `[indexically_opaque,snare,tangled_rope]`
-- `shift(mountain, mountain, mountain, mountain)` (15 constraints): orbit `[mountain]`
-- `shift(mountain, unknown, unknown, mountain)` (32 constraints): orbit `[mountain,unknown]`
+- `shift(mountain, mountain, mountain, mountain)` (21 constraints): orbit `[mountain]`
+- `shift(mountain, unknown, unknown, mountain)` (50 constraints): orbit `[mountain,unknown]`
 - `shift(piton, rope, rope, rope)` (4 constraints): orbit `[piton,rope]`
-- `shift(rope, rope, rope, rope)` (21 constraints): orbit `[rope]`
+- `shift(rope, rope, rope, rope)` (34 constraints): orbit `[rope]`
 - `shift(rope, rope, rope, tangled_rope)` (3 constraints): orbit `[rope,tangled_rope]`
-- `shift(rope, rope, scaffold, unknown)` (2 constraints): orbit `[rope,scaffold,unknown]`
+- `shift(rope, rope, scaffold, unknown)` (4 constraints): orbit `[rope,scaffold,unknown]`
 - `shift(scaffold, scaffold, scaffold, rope)` (1 constraints): orbit `[rope,scaffold]`
-- `shift(scaffold, scaffold, scaffold, scaffold)` (10 constraints): orbit `[scaffold]`
-- `shift(snare, snare, rope, snare)` (190 constraints): orbit `[rope,snare]`
-- `shift(snare, snare, scaffold, snare)` (2 constraints): orbit `[scaffold,snare]`
-- `shift(tangled_rope, snare, rope, snare)` (17 constraints): orbit `[rope,snare,tangled_rope]`
+- `shift(scaffold, scaffold, scaffold, scaffold)` (14 constraints): orbit `[scaffold]`
+- `shift(snare, snare, rope, snare)` (315 constraints): orbit `[rope,snare]`
+- `shift(snare, snare, scaffold, snare)` (8 constraints): orbit `[scaffold,snare]`
+- `shift(tangled_rope, snare, rope, snare)` (26 constraints): orbit `[rope,snare,tangled_rope]`
+- `shift(tangled_rope, snare, tangled_rope, snare)` (1 constraints): orbit `[snare,tangled_rope]`
 - `shift(tangled_rope, tangled_rope, indexically_opaque, snare)` (2 constraints): orbit `[indexically_opaque,snare,tangled_rope]`
-- `shift(tangled_rope, tangled_rope, rope, snare)` (94 constraints): orbit `[rope,snare,tangled_rope]`
-- `shift(tangled_rope, tangled_rope, rope, tangled_rope)` (94 constraints): orbit `[rope,tangled_rope]`
-- `shift(tangled_rope, tangled_rope, rope, unknown)` (13 constraints): orbit `[rope,tangled_rope,unknown]`
-- `shift(tangled_rope, tangled_rope, scaffold, snare)` (3 constraints): orbit `[scaffold,snare,tangled_rope]`
-- `shift(tangled_rope, tangled_rope, scaffold, tangled_rope)` (2 constraints): orbit `[scaffold,tangled_rope]`
+- `shift(tangled_rope, tangled_rope, rope, snare)` (138 constraints): orbit `[rope,snare,tangled_rope]`
+- `shift(tangled_rope, tangled_rope, rope, tangled_rope)` (132 constraints): orbit `[rope,tangled_rope]`
+- `shift(tangled_rope, tangled_rope, rope, unknown)` (18 constraints): orbit `[rope,tangled_rope,unknown]`
+- `shift(tangled_rope, tangled_rope, scaffold, snare)` (5 constraints): orbit `[scaffold,snare,tangled_rope]`
+- `shift(tangled_rope, tangled_rope, scaffold, tangled_rope)` (3 constraints): orbit `[scaffold,tangled_rope]`
 - `shift(tangled_rope, tangled_rope, tangled_rope, snare)` (1 constraints): orbit `[snare,tangled_rope]`
-- `shift(tangled_rope, tangled_rope, tangled_rope, tangled_rope)` (95 constraints): orbit `[tangled_rope]`
-- `shift(tangled_rope, unknown, rope, unknown)` (1 constraints): orbit `[rope,tangled_rope,unknown]`
-- `shift(unknown, rope, rope, rope)` (8 constraints): orbit `[rope,unknown]`
-- `shift(unknown, rope, rope, tangled_rope)` (4 constraints): orbit `[rope,tangled_rope,unknown]`
+- `shift(tangled_rope, tangled_rope, tangled_rope, tangled_rope)` (143 constraints): orbit `[tangled_rope]`
+- `shift(tangled_rope, unknown, rope, unknown)` (2 constraints): orbit `[rope,tangled_rope,unknown]`
+- `shift(unknown, rope, rope, rope)` (13 constraints): orbit `[rope,unknown]`
+- `shift(unknown, rope, rope, tangled_rope)` (6 constraints): orbit `[rope,tangled_rope,unknown]`
 - `shift(unknown, rope, rope, unknown)` (1 constraints): orbit `[rope,unknown]`
+- `shift(unknown, rope, scaffold, unknown)` (2 constraints): orbit `[rope,scaffold,unknown]`
 - `shift(unknown, snare, scaffold, snare)` (1 constraints): orbit `[scaffold,snare,unknown]`
-- `shift(unknown, unknown, rope, tangled_rope)` (14 constraints): orbit `[rope,tangled_rope,unknown]`
-- `shift(unknown, unknown, rope, unknown)` (14 constraints): orbit `[rope,unknown]`
-- `shift(unknown, unknown, scaffold, snare)` (5 constraints): orbit `[scaffold,snare,unknown]`
+- `shift(unknown, unknown, rope, tangled_rope)` (16 constraints): orbit `[rope,tangled_rope,unknown]`
+- `shift(unknown, unknown, rope, unknown)` (23 constraints): orbit `[rope,unknown]`
+- `shift(unknown, unknown, scaffold, snare)` (7 constraints): orbit `[scaffold,snare,unknown]`
 - `shift(unknown, unknown, scaffold, tangled_rope)` (2 constraints): orbit `[scaffold,tangled_rope,unknown]`
-- `shift(unknown, unknown, scaffold, unknown)` (9 constraints): orbit `[scaffold,unknown]`
-- `shift(unknown, unknown, unknown, unknown)` (16 constraints): orbit `[unknown]`
+- `shift(unknown, unknown, scaffold, unknown)` (12 constraints): orbit `[scaffold,unknown]`
+- `shift(unknown, unknown, unknown, unknown)` (1 constraints): orbit `[unknown]`
 ---
 *End of fingerprint report*

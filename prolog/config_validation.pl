@@ -210,7 +210,12 @@ range_bounded_param(P) :-
         canonical_d_powerful,
         canonical_d_organized,
         canonical_d_institutional,
-        canonical_d_analytical
+        canonical_d_analytical,
+        % --- MaxEnt shadow classifier ---
+        maxent_uncertainty_threshold,
+        maxent_disagreement_prob_threshold,
+        maxent_signature_override_strength,
+        maxent_boolean_bonus
     ]).
 
 % ============================================================
@@ -259,6 +264,31 @@ config_violation(Msg) :-
            [Name, Value]).
 
 binary_flag_param(fpn_enabled).
+binary_flag_param(maxent_enabled).
+
+% ============================================================
+% 2e. Negative-allowed maxent params (penalty is negative)
+% ============================================================
+
+config_violation(Msg) :-
+    config:param(maxent_boolean_penalty, Value),
+    number(Value),
+    Value > 0,
+    format(atom(Msg),
+           'CONFIG ERROR: param(maxent_boolean_penalty, ~w) must be <= 0 (log-likelihood penalty)',
+           [Value]).
+
+% ============================================================
+% 2f. Atom-valued maxent params
+% ============================================================
+
+config_violation(Msg) :-
+    config:param(maxent_prior_mode, Value),
+    Value \= corpus,
+    Value \= uniform,
+    format(atom(Msg),
+           'CONFIG ERROR: param(maxent_prior_mode, ~w) must be corpus or uniform',
+           [Value]).
 
 % ============================================================
 % 3. Ordered threshold sets
