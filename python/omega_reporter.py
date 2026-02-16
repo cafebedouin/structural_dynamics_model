@@ -1,3 +1,4 @@
+import json
 import re
 import sys
 from pathlib import Path
@@ -57,7 +58,7 @@ def parse_log_content(content):
                 if search_area_match:
                     search_area = search_area_match.group(1)
                     
-                    triage_section_match = re.search(r'\[OMEGA TRIAGE & PRIORITIZATION\](.*?)(?=\n\n|\n\[OMEGA RESOLUTION)', search_area, re.DOTALL)
+                    triage_section_match = re.search(r'\[OMEGA TRIAGE & PRIORITIZATION\](.*?)(?=\[OMEGA RESOLUTION)', search_area, re.DOTALL)
                     if triage_section_match:
                         if '[critical]' in triage_section_match.group(1):
                             omega_data['severity'] = 'critical'
@@ -126,6 +127,12 @@ def main():
         
     omega_data = parse_log_content(log_content)
     
+    # Write JSON intermediate for downstream enrichment
+    json_file = script_dir / '../outputs/omega_data.json'
+    with open(json_file, 'w', encoding='utf-8') as f:
+        json.dump(omega_data, f, indent=2)
+    print(f"JSON data written to {json_file}")
+
     if omega_data:
         print(f"Found {len(omega_data)} unique Omegas.")
         print(f"Generating report at {report_file}...")

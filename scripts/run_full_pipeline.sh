@@ -225,6 +225,28 @@ else
 fi
 
 # ==============================================================================
+# STEP 6b: Enriched Omega report (depends on corpus_data.json + omega_data.json)
+# ==============================================================================
+step "Enriching Omega report"
+
+if [ -f "$OUTPUT_DIR/corpus_data.json" ] && [ -f "$OUTPUT_DIR/omega_data.json" ]; then
+    if output=$(python3 "$PYTHON_DIR/omega_enricher.py" 2>&1); then
+        ok "Enriched omega report -> enriched_omega_report.md"
+        # Print severity distribution
+        echo "$output" | grep -A6 "Severity Distribution" | while IFS= read -r line; do
+            echo "        $line"
+        done
+    else
+        warn "Omega enrichment had issues"
+        echo "$output" | tail -3 | while IFS= read -r line; do
+            echo "        $line"
+        done
+    fi
+else
+    echo -e "  ${CYAN}--${NC}  Skipping omega enrichment (missing corpus_data.json or omega_data.json)"
+fi
+
+# ==============================================================================
 # STEP 7: Analysis reports (depend on corpus_data.json)
 # ==============================================================================
 step "Running analysis reports"
@@ -541,6 +563,9 @@ for report in \
     "scaffold_report.md" \
     "piton_report.md" \
     "omega_report.md" \
+    "omega_data.json" \
+    "enriched_omega_report.md" \
+    "enriched_omega_data.json" \
     "corpus_data.json" \
     "fingerprint_report.md" \
     "orbit_report.md" \
