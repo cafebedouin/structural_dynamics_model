@@ -317,6 +317,21 @@ else
 fi
 
 # ==============================================================================
+# STEP 8b½: Normalize orbit_data.json IDs to filename stems
+# ==============================================================================
+step "Normalizing orbit data IDs"
+
+if [ -f "$OUTPUT_DIR/orbit_data.json" ]; then
+    if python3 "$PYTHON_DIR/normalize_orbit_ids.py" 2>&1; then
+        ok "Orbit data IDs normalized to filenames"
+    else
+        warn "Orbit data normalization had issues"
+    fi
+else
+    echo -e "  ${CYAN}--${NC}  Skipping orbit normalization (orbit_data.json not found)"
+fi
+
+# ==============================================================================
 # STEP 8c: FPN (Fixed-Point Network) analysis
 # ==============================================================================
 step "Generating FPN analysis"
@@ -398,6 +413,58 @@ if [ "$TRAJ_ENABLED" = "1" ]; then
     fi
 else
     echo -e "  ${CYAN}--${NC}  Trajectory mining disabled (trajectory_enabled=0)"
+fi
+
+# ==============================================================================
+# STEP 8g: Covering analysis
+# ==============================================================================
+step "Generating covering analysis"
+COVERING_REPORT="$OUTPUT_DIR/covering_analysis.md"
+if (cd "$PROLOG_DIR" && swipl -l stack.pl -l covering_analysis.pl \
+      -g "run_covering_analysis, halt.") > "$COVERING_REPORT" 2>/dev/null; then
+    COVER_CONSTRAINTS=$(grep -oP 'Constraints analyzed\*\*: \K\d+' "$COVERING_REPORT" || echo "?")
+    ok "Covering analysis: $COVER_CONSTRAINTS constraints -> covering_analysis.md"
+else
+    warn "Covering analysis had issues"
+fi
+
+# ==============================================================================
+# STEP 8h: Giant component analysis
+# ==============================================================================
+step "Generating giant component analysis"
+GC_REPORT="$OUTPUT_DIR/giant_component_analysis.md"
+if (cd "$PROLOG_DIR" && swipl -l stack.pl -l giant_component_analysis.pl \
+      -g "run_giant_component_analysis, halt.") > "$GC_REPORT" 2>/dev/null; then
+    GC_NODES=$(grep -oP 'Constraints.*?: \K\d+' "$GC_REPORT" | head -1 || echo "?")
+    ok "Giant component analysis: $GC_NODES nodes -> giant_component_analysis.md"
+else
+    warn "Giant component analysis had issues"
+fi
+
+# ==============================================================================
+# STEP 8i: Coupling protocol
+# ==============================================================================
+step "Generating coupling protocol"
+CP_REPORT="$OUTPUT_DIR/coupling_protocol.md"
+if (cd "$PROLOG_DIR" && swipl -l stack.pl -l covering_analysis.pl -l inferred_coupling_protocol.pl \
+      -g "run_coupling_protocol, halt.") > "$CP_REPORT" 2>/dev/null; then
+    ok "Coupling protocol -> coupling_protocol.md"
+else
+    warn "Coupling protocol had issues"
+fi
+
+# ==============================================================================
+# STEP 8j: MaxEnt diagnostic
+# ==============================================================================
+step "Generating MaxEnt diagnostic"
+MAXDIAG_REPORT="$OUTPUT_DIR/maxent_diagnostic_report.md"
+if (cd "$PROLOG_DIR" && swipl -l stack.pl -l covering_analysis.pl -l maxent_classifier.pl \
+      -l dirac_classification.pl -l maxent_diagnostic.pl \
+      -g "run_maxent_diagnostic, halt.") > "$MAXDIAG_REPORT" 2>/dev/null; then
+    MAXDIAG_CONSTRAINTS=$(grep -oP 'constraints analyzed\D*\K\d+' "$MAXDIAG_REPORT" | head -1 || echo "?")
+    ok "MaxEnt diagnostic: $MAXDIAG_CONSTRAINTS constraints -> maxent_diagnostic_report.md"
+else
+    warn "MaxEnt diagnostic had issues"
 fi
 
 # ==============================================================================
@@ -574,6 +641,10 @@ for report in \
     "maxent_report.md" \
     "abductive_report.md" \
     "trajectory_report.md" \
+    "covering_analysis.md" \
+    "giant_component_analysis.md" \
+    "coupling_protocol.md" \
+    "maxent_diagnostic_report.md" \
     "variance_analysis.md" \
     "pattern_mining.md" \
     "index_sufficiency.md" \

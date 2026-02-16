@@ -62,7 +62,7 @@ class MetaReporter:
                 self.constraint_types[ctype_match.group(1)] += 1
 
             # Find omegas (more flexible regex for the preceding "Ω:" and type)
-            for match in re.finditer(r'Ω:\s*omega_\w+_(\w+)\s*\((conceptual|empirical|preference)\)', chunk): # Removed trailing ':'
+            for match in re.finditer(r'Ω:\s*(omega_\w+)\s*\((conceptual|empirical|preference)\)', chunk): # Removed trailing ':'
                 constraint, omega_type = match.groups()
                 if (constraint, omega_type) not in self.omegas:
                     self.omegas.append((constraint, omega_type))

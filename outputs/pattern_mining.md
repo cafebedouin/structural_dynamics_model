@@ -31,26 +31,26 @@ Constraints with identical structural signatures but different claimed types.
 
 | Signature | Count | Types Present | Domains | Examples |
 |-----------|-------|---------------|---------|----------|
-| (0.6, 0.7, False, True)        |    81 | piton, tangled_rope, snare | social, bio_industrial, political | MOLTBOT_RELIGION, absorbing_markov_chains |
-| (0.8, 0.8, False, True)        |    69 | piton, tangled_rope, rope, snare | Political, organizational, unknown | 26usc469_real_estate_exemption, ad_fus_coordination |
-| (0.8, 0.7, False, True)        |    68 | piton, tangled_rope, snare | institutional, organizational, social | abstraction_boundary_overrun, adaptive_lag_trap |
-| (0.6, 0.8, False, True)        |    51 | piton, tangled_rope  | social, legal, political | ai_compute_capital_moat, ape_cognition_framework |
-| (0.9, 0.8, False, True)        |    50 | piton, tangled_rope, snare | logistical, organizational, religious | adversarial_truth_decay, agency_atrophy |
-| (0.7, 0.8, False, True)        |    44 | piton, tangled_rope, snare | social, philosophical, political | CG_IsraelGaza_20231012, academic_fashion_modernism_2026 |
-| (0.5, 0.7, False, True)        |    43 | piton, tangled_rope, snare | health, social, legal | ai_auditability_gap, ai_training_data_dependency |
-| (0.5, 0.8, False, True)        |    38 | piton, tangled_rope, scaffold | social, philosophical, political | ai_adoption_stigma, artificial_scarcity_scaffold |
-| (0.8, 0.9, False, True)        |    35 | piton, tangled_rope, snare | religious, social, legal | ad_synaptic_deficit, apartheid_nuclear_program |
-| (0.1, 0.1, True, False)        |    29 | mountain, rope       | sociological, epistemological, mathematical | banach_fixed_point_theorem, banach_tarski_paradox |
-| (0.8, 0.6, False, True)        |    24 | piton, tangled_rope, rope, snare | social, political, environmental | academic_peer_review_gatekeeping, academic_tenure_system |
-| (0.5, 0.6, False, True)        |    24 | piton, tangled_rope, snare | religious, mathematical, social | ai_task_horizon_reliability, armra_colostrum_regulation |
-| (0.4, 0.5, False, True)        |    19 | tangled_rope, rope, scaffold | mathematical, social, legal | bgs_eigenvector_thermalization, copyright_protection |
-| (0.1, 0.1, False, True)        |    18 | mountain, tangled_rope, rope | mathematical, philosophical, economic | automatic_enrollment_defaults, biological_curiosity |
-| (0.7, 0.6, False, True)        |    16 | piton, tangled_rope, snare | social, political, economic | abstraction_leakage, carrying_capacity |
-| (0.7, 0.7, False, True)        |    16 | piton, tangled_rope  | social, political, economic | awareness_without_leverage, cb_far_beyond_human |
-| (0.3, 0.5, False, True)        |    15 | tangled_rope, scaffold | mathematical, social, political | alzheimers_levetiracetam, fnl_shadow_probe |
-| (0.9, 0.7, False, True)        |    15 | piton, tangled_rope  | organizational, social, informational | bureaucratic_legibility_collapse, capital_misallocation_spiral |
-| (0.2, 0.1, True, False)        |    14 | mountain, rope       | mathematical, biological, scientific | axiom_of_choice_determinacy, base_pair_complementarity |
-| (0.6, 0.6, False, True)        |    13 | piton, tangled_rope  | organizational, social, political | boiled_pineapple_trend_2026, carbon_credit_markets_2026 |
+| (0.6, 0.7, False, True)        |    81 | tangled_rope, snare, piton | technological, economic, biological | MOLTBOT_RELIGION, absorbing_markov_chains |
+| (0.8, 0.8, False, True)        |    69 | tangled_rope, snare, piton, rope | geopolitical, corporate_governance, technological | 26usc469_real_estate_exemption, ad_fus_coordination |
+| (0.8, 0.7, False, True)        |    68 | tangled_rope, snare, piton | institutional, technological, economic | abstraction_boundary_overrun, adaptive_lag_trap |
+| (0.6, 0.8, False, True)        |    51 | tangled_rope, piton  | institutional, technological, economic | ai_compute_capital_moat, ape_cognition_framework |
+| (0.9, 0.8, False, True)        |    50 | tangled_rope, piton, snare | informational, institutional, religious | adversarial_truth_decay, agency_atrophy |
+| (0.7, 0.8, False, True)        |    44 | tangled_rope, snare, piton | technological, economic, philosophical | CG_IsraelGaza_20231012, academic_fashion_modernism_2026 |
+| (0.5, 0.7, False, True)        |    43 | tangled_rope, snare, piton | health, technological, economic | ai_auditability_gap, ai_training_data_dependency |
+| (0.5, 0.8, False, True)        |    38 | tangled_rope, scaffold, piton | technological, economic, scientific | ai_adoption_stigma, artificial_scarcity_scaffold |
+| (0.8, 0.9, False, True)        |    35 | tangled_rope, snare, piton | religious, technological, economic | ad_synaptic_deficit, apartheid_nuclear_program |
+| (0.1, 0.1, True, False)        |    29 | rope, mountain       | sociological, mathematics, technological | banach_fixed_point_theorem, banach_tarski_paradox |
+| (0.8, 0.6, False, True)        |    24 | tangled_rope, snare, piton, rope | technological, psychological, economic | academic_peer_review_gatekeeping, academic_tenure_system |
+| (0.5, 0.6, False, True)        |    24 | tangled_rope, snare, piton | religious, technological, psychological | ai_task_horizon_reliability, armra_colostrum_regulation |
+| (0.4, 0.5, False, True)        |    19 | tangled_rope, scaffold, rope | technological, economic, psychological | bgs_eigenvector_thermalization, copyright_protection |
+| (0.1, 0.1, False, True)        |    18 | tangled_rope, rope, mountain | technological, economic, mathematical | automatic_enrollment_defaults, biological_curiosity |
+| (0.7, 0.6, False, True)        |    16 | tangled_rope, snare, piton | technological, psychological, economic | abstraction_leakage, carrying_capacity |
+| (0.7, 0.7, False, True)        |    16 | tangled_rope, piton  | technological, psychological, economic | awareness_without_leverage, cb_far_beyond_human |
+| (0.3, 0.5, False, True)        |    15 | tangled_rope, scaffold | technological, economic, mathematical | alzheimers_levetiracetam, fnl_shadow_probe |
+| (0.9, 0.7, False, True)        |    15 | tangled_rope, piton  | informational, technological, economic | bureaucratic_legibility_collapse, capital_misallocation_spiral |
+| (0.2, 0.1, True, False)        |    14 | rope, mountain       | technological, mathematical, biological | axiom_of_choice_determinacy, base_pair_complementarity |
+| (0.6, 0.6, False, True)        |    13 | tangled_rope, piton  | technological, economic, organizational | boiled_pineapple_trend_2026, carbon_credit_markets_2026 |
 
 ## Candidate Category Analysis
 

@@ -150,6 +150,8 @@ class CorpusExtractor:
                 continue
 
             internal_id = id_match.group(1)
+            if internal_id in ('unknown', 'none', 'undefined'):
+                continue
             # Use filename-based ID as canonical key when available
             constraint_id = internal_to_filename.get(internal_id, internal_id)
 
@@ -254,7 +256,7 @@ class CorpusExtractor:
             # Extract domain
             domain_match = re.search(r'domain:\s*(\w+)', content)
             if domain_match:
-                constraint.domain = domain_match.group(1)
+                constraint.domain = domain_match.group(1).lower()
 
             # Alternative domain extraction from category_of
             cat_match = re.search(
@@ -262,7 +264,7 @@ class CorpusExtractor:
                 content
             )
             if cat_match and not constraint.domain:
-                constraint.domain = cat_match.group(1)
+                constraint.domain = cat_match.group(1).lower()
 
             # Extract base_extractiveness
             extr_match = re.search(
@@ -436,43 +438,12 @@ class CorpusExtractor:
             print(f"  Error reading orbit_data.json: {e}")
             return
 
-        # Build reverse mapping: internal_id → set of filenames that define it
-        internal_to_filenames = {}
-        id_pattern = re.compile(
-            r'(?:constraint_metric|base_extractiveness)\s*\(\s*(\w+)\s*,'
-        )
-        if self.testsets_dir.exists():
-            for pl_file in self.testsets_dir.glob('*.pl'):
-                try:
-                    content = pl_file.read_text(encoding='utf-8', errors='replace')
-                except OSError:
-                    continue
-                for match in id_pattern.finditer(content):
-                    atom = match.group(1)
-                    if atom[0].isupper() or atom.startswith('_'):
-                        continue
-                    if atom not in internal_to_filenames:
-                        internal_to_filenames[atom] = set()
-                    internal_to_filenames[atom].add(pl_file.stem)
-
         matched = 0
         for cid, entry in orbit_data.items():
-            sig = entry.get('orbit_signature')
-            ctx = entry.get('contexts')
-            # Try direct match (internal ID == corpus ID)
             if cid in self.constraints:
-                self.constraints[cid].orbit_signature = sig
-                self.constraints[cid].orbit_contexts = ctx
+                self.constraints[cid].orbit_signature = entry.get('orbit_signature')
+                self.constraints[cid].orbit_contexts = entry.get('contexts')
                 matched += 1
-            else:
-                # Try filename-based match via reverse mapping
-                for fname in internal_to_filenames.get(cid, set()):
-                    if fname in self.constraints:
-                        self.constraints[fname].orbit_signature = sig
-                        self.constraints[fname].orbit_contexts = ctx
-                        matched += 1
-                        break
-
         print(f"  Matched orbit data for {matched}/{len(orbit_data)} constraints")
 
     def save_json(self, output_path):

@@ -5,7 +5,7 @@
 **Verdict:** SUFFICIENT - Indices explain most variance. Current framework adequate.
 
 - **Collision Rate:** 0.0%
-- **Anomaly Rate:** 1.9%
+- **Anomaly Rate:** 2.0%
 
 ### Evidence For Index Sufficiency
 
@@ -35,30 +35,28 @@ How well do indices explain variance in each domain?
 | environmental        |           5 |         0.77 | High        |
 | institutional        |           3 |         0.77 | High        |
 | medical              |           4 |         0.76 | High        |
-| unknown              |           3 |         0.75 | High        |
+| unknown              |           1 |         0.75 | High        |
 | corporate_governance |           1 |         0.75 | High        |
 | bio_industrial       |           1 |         0.75 | High        |
 | military             |           2 |         0.75 | High        |
 | psychology           |           1 |         0.75 | High        |
 | philosophical        |          12 |         0.74 | High        |
 | religious            |           9 |         0.72 | High        |
-| social               |         132 |         0.71 | High        |
-| political            |         152 |         0.71 | High        |
+| social               |         133 |         0.71 | High        |
+| political            |         153 |         0.71 | High        |
 | economic             |         206 |         0.68 | Medium      |
 | technological        |         280 |         0.66 | Medium      |
 | biological           |          16 |         0.66 | Medium      |
 | health               |           5 |         0.65 | Medium      |
 | investigation        |           2 |         0.62 | Medium      |
 | systems_engineering  |           1 |         0.60 | Medium      |
-| physics              |           2 |         0.57 | Medium      |
 | geopolitical         |          48 |         0.57 | Medium      |
 | ecological           |           2 |         0.55 | Medium      |
 | magical              |           1 |         0.50 | Medium      |
-| Political            |           1 |         0.50 | Medium      |
 | astrophysical        |           1 |         0.50 | Medium      |
 | atmospheric_science  |           1 |         0.50 | Medium      |
-| Social               |           1 |         0.50 | Medium      |
 | scientific           |          19 |         0.47 | Medium      |
+| physics              |           3 |         0.47 | Medium      |
 | linguistic           |           3 |         0.47 | Medium      |
 | physical             |           3 |         0.42 | Medium      |
 | analytical           |           1 |         0.40 | Low         |
@@ -68,7 +66,6 @@ How well do indices explain variance in each domain?
 | epistemological      |           1 |         0.25 | Low         |
 | logic                |           1 |         0.25 | Low         |
 | logical              |           1 |         0.25 | Low         |
-| Physics              |           1 |         0.25 | Low         |
 | sociological         |           1 |         0.25 | Low         |
 | statistical          |           1 |         0.20 | Low         |
 

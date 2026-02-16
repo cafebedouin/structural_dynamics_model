@@ -813,7 +813,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.58
 
 ### END REFINEMENT MANIFEST ###
 
-[466] EXECUTING: testsets/ice_raids_minnesota_2026.pl
+[465] EXECUTING: testsets/ice_raids_minnesota_2026.pl
 *   **Orbit Signature:** `[rope]`
 *   **Related Gap/Alert:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Generated Omega:** omega_cut_safety_ice_memory_archive (conceptual)
@@ -923,7 +923,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.49
 
 ### END REFINEMENT MANIFEST ###
 
-[509] EXECUTING: testsets/israel_egypt_gas_deal.pl
+[508] EXECUTING: testsets/israel_egypt_gas_deal.pl
 *   **Orbit Signature:** `[scaffold, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** omega_extraction_blindness_isa_education_scaffold (conceptual)
@@ -1024,7 +1024,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.47
 
 ### END REFINEMENT MANIFEST ###
 
-[574] EXECUTING: testsets/maintenance_capacity_shortfall.pl
+[573] EXECUTING: testsets/maintenance_capacity_shortfall.pl
 *   **Orbit Signature:** `[scaffold, unknown]`
 *   **Generated Omega:** omega_perspectival_maha_recovery_2026 (conceptual)
 *   **Suggested Resolution Strategy:**
@@ -1124,7 +1124,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.46
 
 ### END REFINEMENT MANIFEST ###
 
-[580] EXECUTING: testsets/marriage_market_asymmetry_2026.pl
+[579] EXECUTING: testsets/marriage_market_asymmetry_2026.pl
 *   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Generated Omega:** omega_cut_safety_manganese_catalysis_2026 (conceptual)
@@ -1229,7 +1229,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.49
 
 ### END REFINEMENT MANIFEST ###
 
-[633] EXECUTING: testsets/narrative_overfitting.pl
+[632] EXECUTING: testsets/narrative_overfitting.pl
 *   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Generated Omega:** omega_cut_safety_narrative_engineering_2026 (conceptual)
@@ -1297,7 +1297,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.47
 
 ### END REFINEMENT MANIFEST ###
 
-[790] EXECUTING: testsets/robustness_vs_efficiency_tradeoff.pl
+[789] EXECUTING: testsets/robustness_vs_efficiency_tradeoff.pl
 *   **Orbit Signature:** `[tangled_rope]`
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
@@ -1351,7 +1351,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.48
 
 ### END REFINEMENT MANIFEST ###
 
-[834] EXECUTING: testsets/silver_scarcity_mountain_2026.pl
+[833] EXECUTING: testsets/silver_scarcity_mountain_2026.pl
 *   **Orbit Signature:** `[rope, scaffold]`
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
@@ -1435,7 +1435,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.43
 
 ### END REFINEMENT MANIFEST ###
 
-[885] EXECUTING: testsets/sylow_theorems.pl
+[884] EXECUTING: testsets/sylow_theorems.pl
 *   **Orbit Signature:** `[rope]`
 *   **Generated Omega:** omega_perspectival_swift_piton_snap (conceptual)
 *   **Suggested Resolution Strategy:**

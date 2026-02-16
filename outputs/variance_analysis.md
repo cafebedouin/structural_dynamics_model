@@ -2,9 +2,9 @@
 
 ## Summary Statistics
 
-- **Total constraints analyzed:** 1026
-- **Constraints with multiple index configs:** 1022 (99.6%)
-- **High variance (>0.5):** 748 (72.9%)
+- **Total constraints analyzed:** 1024
+- **Constraints with multiple index configs:** 1022 (99.8%)
+- **High variance (>0.5):** 748 (73.0%)
 - **Stable (ratio=1.0):** 5 (0.5%)
 
 ## Variance Distribution
@@ -12,11 +12,11 @@
 | Ratio Range | Count | % of Corpus | Examples |
 |-------------|-------|-------------|----------|
 | 1.0 (stable)    |     5 |    0.5% | ai_scholar_citation_trap, evolutionary_knowledg... |
-| 0.7-0.9         |   538 |   52.4% | CG_IsraelGaza_20231012, MOLTBOT_RELIGION, abstr... |
+| 0.7-0.9         |   538 |   52.5% | CG_IsraelGaza_20231012, MOLTBOT_RELIGION, abstr... |
 | 0.5-0.6         |   287 |   28.0% | absorbing_markov_chains, ai_compute_capital_moa... |
 | 0.3-0.4         |    54 |    5.3% | asean_ceasefire_2011, astm_d638_tensile_testing... |
-| <0.3            |   140 |   13.6% | 26usc469_real_estate_exemption, 8k_tv_limit_202... |
-| null            |     2 |    0.2% | unknown, fnl_trace_diagnostic |
+| <0.3            |   140 |   13.7% | 26usc469_real_estate_exemption, 8k_tv_limit_202... |
+| null            |     0 |    0.0% | - |
 
 ## Domain Breakdown
 
@@ -40,30 +40,27 @@
 | psychology           |   1 |         0.75 |          100.0% |
 | philosophical        |  12 |         0.74 |           75.0% |
 | religious            |   9 |         0.72 |          100.0% |
-| social               | 132 |         0.71 |           84.8% |
-| political            | 152 |         0.71 |           85.5% |
+| social               | 133 |         0.71 |           84.2% |
+| political            | 153 |         0.71 |           85.0% |
 | economic             | 206 |         0.68 |           83.5% |
 | technological        | 280 |         0.66 |           70.4% |
 | biological           |  16 |         0.66 |           75.0% |
 | health               |   5 |         0.65 |           60.0% |
 | investigation        |   2 |         0.62 |           50.0% |
 | systems_engineering  |   1 |         0.60 |          100.0% |
-| physics              |   2 |         0.57 |           50.0% |
 | geopolitical         |  48 |         0.57 |           56.2% |
 | ecological           |   2 |         0.55 |           50.0% |
-| Political            |   1 |         0.50 |            0.0% |
-| Social               |   1 |         0.50 |            0.0% |
 | astrophysical        |   1 |         0.50 |            0.0% |
 | atmospheric_science  |   1 |         0.50 |            0.0% |
 | magical              |   1 |         0.50 |            0.0% |
 | scientific           |  19 |         0.47 |           42.1% |
 | linguistic           |   3 |         0.47 |           33.3% |
+| physics              |   3 |         0.47 |           33.3% |
 | physical             |   3 |         0.42 |           33.3% |
 | analytical           |   1 |         0.40 |            0.0% |
 | mathematics          |   2 |         0.38 |            0.0% |
 | mathematical         |  61 |         0.34 |           14.8% |
 | technology           |   1 |         0.33 |            0.0% |
-| Physics              |   1 |         0.25 |            0.0% |
 | epistemological      |   1 |         0.25 |            0.0% |
 | logic                |   1 |         0.25 |            0.0% |
 | logical              |   1 |         0.25 |            0.0% |
@@ -74,7 +71,7 @@
 
 1. **Domain variance spread:** legal shows highest variance (0.81), while statistical shows lowest (0.20)
 
-2. **High volatility:** 72.9% of constraints show high variance (>0.5)
+2. **High volatility:** 73.0% of constraints show high variance (>0.5)
 
 3. **Perspective-dependent constraints:** 10 constraints show strong perspective-dependence
 
@@ -141,6 +138,6 @@ Constraints with many index configs but low variance (possible modeling issues):
 
 | Field | % Complete | Impact |
 |-------|-----------|--------|
-| classifications | 99.8% | Core data for variance analysis |
-| variance_ratio | 99.8% | Calculated from classifications |
-| domain | 99.7% | Affects domain breakdown analysis |
+| classifications | 100.0% | Core data for variance analysis |
+| variance_ratio | 100.0% | Calculated from classifications |
+| domain | 99.9% | Affects domain breakdown analysis |
