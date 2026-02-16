@@ -362,7 +362,7 @@ if (cd "$PROLOG_DIR" && swipl -l stack.pl -l covering_analysis.pl -l dirac_class
     sed -n '/<!-- MAXENT_REPORT_START -->/,$p' "$MAXENT_RAW" | tail -n +2 > "$MAXENT_REPORT"
     rm -f "$MAXENT_RAW"
     MAXENT_FLAGGED=$(grep -oP 'High uncertainty constraints\*\* \| \K\d+' "$MAXENT_REPORT" || echo "?")
-    MAXENT_DISAGREE=$(grep -oP 'Hard disagreements\*\* \| \K\d+' "$MAXENT_REPORT" || echo "?")
+    MAXENT_DISAGREE=$(grep -oP 'Hard disagreements\*\* \| \K\d+' "$MAXENT_REPORT" | head -1 || echo "?")
     ok "MaxEnt analysis: $MAXENT_FLAGGED flagged, $MAXENT_DISAGREE disagreements -> maxent_report.md"
 else
     rm -f "$MAXENT_RAW"
@@ -577,7 +577,7 @@ if [ -f "$OUTPUT_DIR/maxent_report.md" ]; then
     ME_CONSTRAINTS=$(grep -oP 'Constraints analyzed\*\* \| \K\d+' "$OUTPUT_DIR/maxent_report.md" 2>/dev/null || echo "?")
     ME_ENTROPY=$(grep -oP 'Mean normalized entropy\*\* \| \K[0-9.]+' "$OUTPUT_DIR/maxent_report.md" 2>/dev/null || echo "?")
     ME_FLAGGED=$(grep -oP 'High uncertainty constraints\*\* \| \K\d+' "$OUTPUT_DIR/maxent_report.md" 2>/dev/null || echo "?")
-    ME_HARD=$(grep -oP 'Hard disagreements\*\* \| \K\d+' "$OUTPUT_DIR/maxent_report.md" 2>/dev/null || echo "?")
+    ME_HARD=$(grep -oP 'Hard disagreements\*\* \| \K\d+' "$OUTPUT_DIR/maxent_report.md" 2>/dev/null | head -1 || echo "?")
     echo "  Constraints:  $ME_CONSTRAINTS"
     echo "  Mean Entropy: $ME_ENTROPY"
     echo "  High Uncertainty: $ME_FLAGGED"
