@@ -33,7 +33,7 @@ TESTSETS_DIR = ROOT_DIR / "prolog" / "testsets"
 PROBSETS_DIR = ROOT_DIR / "prolog" / "probsets"
 PROMPT_PATH = ROOT_DIR / "prompts" / "constraint_story_generation_prompt.md"
 TEMPLATE_PATH = ROOT_DIR / "prompts" / "constraint_story_template.pl"
-LINTER_PATH = SCRIPT_DIR / "structural_linter.py"
+LINTER_PATH = SCRIPT_DIR / "linter.py"
 REGEN_LIST_PATH = ROOT_DIR / "outputs" / "regeneration_list.md"
 LINT_ERRORS_PATH = ROOT_DIR / "outputs" / "lint_errors.txt"
 OUTPUTS_DIR = ROOT_DIR / "outputs"
@@ -42,7 +42,7 @@ OUTPUTS_DIR = ROOT_DIR / "outputs"
 # Linter import
 # ---------------------------------------------------------------------------
 sys.path.insert(0, str(SCRIPT_DIR))
-from structural_linter import lint_file
+from linter import lint_file
 from duplicate_checker import check_incoming_file
 
 # ---------------------------------------------------------------------------

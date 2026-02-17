@@ -76,7 +76,7 @@ Cases where same index configuration produces multiple types:
 
 | Constraint ID | Index Config | Types Produced | Domain |
 |---------------|--------------|----------------|--------|
-| absorbing_markov_chain_trap    | ('powerless', 'biographical', ... | snare, unknown       | technological |
+| absorbing_markov_chain_trap    | ('powerless', 'biographical', ... | unknown, snare       | technological |
 | abstraction_boundary_overrun   | ('analytical', 'civilizational... | snare, tangled_rope  | technological |
 | ad_synaptic_deficit            | ('analytical', 'civilizational... | snare, tangled_rope  | biological |
 | adaptive_lag_trap              | ('analytical', 'civilizational... | snare, tangled_rope  | economic   |
@@ -86,7 +86,7 @@ Cases where same index configuration produces multiple types:
 | ai_adoption_stigma             | ('analytical', 'civilizational... | snare, tangled_rope  | technological |
 | ai_cognitive_diversity_arbitrage | ('powerless', 'biographical', ... | snare, tangled_rope  | technological |
 | ai_compute_capital_moat        | ('analytical', 'civilizational... | snare, tangled_rope  | technological |
-| ai_edu_decentralization        | ('powerless', 'biographical', ... | tangled_rope, mountain | technological |
+| ai_edu_decentralization        | ('powerless', 'biographical', ... | mountain, tangled_rope | technological |
 | ai_nonconsensual_content_facilitation | ('analytical', 'civilizational... | snare, tangled_rope  | technological |
 | ai_performance_watermark       | ('analytical', 'civilizational... | snare, tangled_rope  | technological |
 | ai_professional_displacement   | ('analytical', 'civilizational... | snare, tangled_rope  | economic   |

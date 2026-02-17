@@ -166,7 +166,7 @@ $(LINT_ERRORS): $(PREP_STAMP)
 	for pl_file in $(TESTSETS)/*.pl; do \
 		[ -f "$$pl_file" ] || continue; \
 		filename=$$(basename "$$pl_file"); \
-		result=$$(python3 -c "import sys; sys.path.insert(0, '$(PYTHON_DIR)'); from structural_linter import lint_file; errors = lint_file('$$pl_file'); [print(e) for e in (errors or [])]; sys.exit(1 if errors else 0)" 2>&1) || { \
+		result=$$(python3 -c "import sys; sys.path.insert(0, '$(PYTHON_DIR)'); from linter import lint_file; errors = lint_file('$$pl_file'); [print(e) for e in (errors or [])]; sys.exit(1 if errors else 0)" 2>&1) || { \
 			echo "$$filename:" >> $@; \
 			echo "$$result" | while IFS= read -r line; do echo "  $$line" >> $@; done; \
 			echo "" >> $@; \
