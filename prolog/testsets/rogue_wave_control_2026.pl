@@ -23,7 +23,8 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     constraint_indexing:constraint_classification/3,
-    domain_priors:requires_active_enforcement/1.
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -31,8 +32,11 @@
 
 /**
  * SUMMARY:
- * Researchers have achieved deterministic control over chaotic "rogue waves" 
- * in VCSEL lasers using a $\lambda/2$-waveplate. This turns a 
+ *   constraint_id: rogue_wave_control_2026
+ *   human_readable: Rogue Wave Control in VCSEL Lasers (2026)
+ *
+ * Researchers have achieved deterministic control over chaotic "rogue waves"
+ * in VCSEL lasers using a $\lambda/2$-waveplate. This turns a
  * physical "Mountain" of chaos into a "Rope" of engineered signaling.
  */
 
@@ -41,6 +45,7 @@
    ========================================================================== */
 
 narrative_ontology:constraint_claim(rogue_wave_control_2026, tangled_rope).
+narrative_ontology:human_readable(rogue_wave_control_2026, "Rogue Wave Control in VCSEL Lasers (2026)").
 domain_priors:requires_active_enforcement(rogue_wave_control_2026).
 
 domain_priors:base_extractiveness(rogue_wave_control_2026, 0.15). % Low extraction (Utility).

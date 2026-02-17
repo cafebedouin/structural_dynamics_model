@@ -37,6 +37,7 @@ Usage: python3 python/reform_threshold_report.py
 
 import json
 import re
+import sys
 from collections import defaultdict, Counter
 from pathlib import Path
 
@@ -62,17 +63,41 @@ STANDARD_CONTEXTS = [
 # Power modifiers for chi calculation (v5.0: sigmoid-derived)
 from sigmoid import POWER_MODIFIERS
 
+# =============================================================================
+# THRESHOLDS — loaded from prolog/config.pl (single source of truth)
+# =============================================================================
+
+def _read_config():
+    """Read param/2 values from prolog/config.pl."""
+    config_path = Path(__file__).resolve().parent.parent / "prolog" / "config.pl"
+    thresholds = {}
+    try:
+        with open(config_path, 'r', encoding='utf-8') as f:
+            for line in f:
+                match = re.search(r"param\((\w+),\s*(-?[\d.]+)\)", line)
+                if match:
+                    param_name = match.group(1)
+                    try:
+                        thresholds[param_name] = float(match.group(2))
+                    except ValueError:
+                        pass
+    except Exception as e:
+        print(f"Warning: Could not read {config_path}: {e}", file=sys.stderr)
+    return thresholds
+
+_CFG = _read_config()
+
 # Scope modifiers
 SCOPE_MODIFIERS = {
-    "local": 0.8,
-    "national": 1.0,
-    "global": 1.2,
+    "local": _CFG.get('scope_modifier_local', 0.8),
+    "national": _CFG.get('scope_modifier_national', 1.0),
+    "global": _CFG.get('scope_modifier_global', 1.2),
 }
 
 # Coalition modeling thresholds
-COALITION_VICTIM_THRESHOLD = 3
-COALITION_EPS_FLOOR = 0.46
-COALITION_SUPP_FLOOR = 0.60
+COALITION_VICTIM_THRESHOLD = int(_CFG.get('critical_mass_threshold', 3))
+COALITION_EPS_FLOOR = _CFG.get('snare_epsilon_floor', 0.46)
+COALITION_SUPP_FLOOR = _CFG.get('snare_suppression_floor', 0.60)
 
 # Reform threshold action implications
 THRESHOLD_IMPLICATIONS = {

@@ -21,7 +21,9 @@
     narrative_ontology:constraint_metric/3,
     constraint_indexing:constraint_classification/3,
     narrative_ontology:constraint_beneficiary/2,
-    narrative_ontology:constraint_victim/2.
+    narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -29,7 +31,10 @@
 
 /**
  * SUMMARY:
- * AI-Evaluators function as a Tangled Rope: they provide critical coordination by 
+ *   constraint_id: ai_evaluators_matching
+ *   human_readable: AI Talent Evaluators: Efficiency vs. Opacity in Automated Hiring
+ *
+ * AI-Evaluators function as a Tangled Rope: they provide critical coordination by
  * reducing hire time by 50% and improving talent matching by 67%. 
  * However, they extract "performance labor" from applicants and often function 
  * as a Black-Box Sieve that suppresses human discretion.
@@ -41,6 +46,7 @@
 
 narrative_ontology:interval(ai_evaluators_matching, 0, 10).
 narrative_ontology:constraint_claim(ai_evaluators_matching, tangled_rope).
+narrative_ontology:human_readable(ai_evaluators_matching, "AI Talent Evaluators: Efficiency vs. Opacity in Automated Hiring").
 
 % Base Properties
 domain_priors:base_extractiveness(ai_evaluators_matching, 0.75).

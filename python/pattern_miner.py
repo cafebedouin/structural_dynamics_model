@@ -118,8 +118,15 @@ class PatternMiner:
                 'requires_enforcement': enforced
             }
 
+            # NOTE: The thresholds below are INTENTIONALLY SEPARATE from the
+            # engine gate thresholds in prolog/config.pl. These are independent
+            # analytical heuristics for exploratory pattern mining — they cast a
+            # wider or different net than the deterministic classification gates.
+            # Do NOT synchronize these with config.pl values.
+
             # Tangled Rope: High extraction + High suppression + Enforced
             # (Mix of snare and rope characteristics)
+            # Heuristic: ε≥0.6, s≥0.6 (wider than config tangled_rope_extraction_floor=0.16)
             if (extractiveness >= 0.6 and
                 suppression >= 0.6 and
                 enforced):
@@ -127,6 +134,7 @@ class PatternMiner:
 
             # Piton: High suppression + Enforced but still claimed as mountain
             # (False mountain that's obviously constructed)
+            # Heuristic: s≥0.7 (no piton suppression param in config)
             if (suppression >= 0.7 and
                 enforced and
                 constraint.get('claimed_type') == 'mountain'):
@@ -134,12 +142,14 @@ class PatternMiner:
 
             # Scaffold: Medium everything, temporary transition markers
             # (Not extreme on any dimension)
+            # Heuristic: 0.3≤ε≤0.6 (different semantics from config scaffold_extraction_ceil=0.30)
             if (0.3 <= extractiveness <= 0.6 and
                 0.3 <= suppression <= 0.6):
                 candidates['scaffold'].append(entry)
 
             # Wings: Low extraction + Low suppression + Emerges naturally
             # (Enabling constraints, opposite of snare)
+            # Heuristic: ε≤0.3, s≤0.3 (no config equivalent)
             if (extractiveness <= 0.3 and
                 suppression <= 0.3 and
                 emerges):

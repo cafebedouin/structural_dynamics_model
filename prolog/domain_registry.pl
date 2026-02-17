@@ -1,7 +1,7 @@
 :- module(domain_registry, [domain_category/2]).
 % --- AUTOMATICALLY GENERATED DOMAIN REGISTRY ---
 % Thresholds aligned with config.pl: Rope <= 0.15, Snare >= 0.46, Tangled Rope 0.16-0.9.
-% Total entries: 1030
+% Total entries: 1035
 
 domain_category('26usc469_real_estate_exemption', snare).
 domain_category('8k_tv_limit_2026', piton).
@@ -11,6 +11,7 @@ domain_category(abstraction_leakage, snare).
 domain_category(academic_fashion_modernism_2026, piton).
 domain_category(academic_peer_review_gatekeeping, snare).
 domain_category(academic_tenure_system, snare).
+domain_category(access_arbitrage, tangled_rope).
 domain_category(ad_fus_coordination, snare).
 domain_category(ad_synaptic_deficit, snare).
 domain_category(adaptive_lag_trap, snare).
@@ -28,6 +29,7 @@ domain_category(ai_cognitive_diversity_arbitrage, snare).
 domain_category(ai_compute_capital_moat, snare).
 domain_category(ai_driven_surveillance_sensor_layer, snare).
 domain_category(ai_edu_decentralization, rope).
+domain_category(ai_evaluators_matching, snare).
 domain_category(ai_nonconsensual_content_facilitation, snare).
 domain_category(ai_performance_watermark, snare).
 domain_category(ai_professional_displacement, snare).
@@ -337,6 +339,7 @@ domain_category(eu_renewable_energy_mandate, snare).
 domain_category(eu_unanimity_rule_foreign_policy, snare).
 domain_category(euler_characteristic_topology, mountain).
 domain_category(eurozone_fragmentation_2026, snare).
+domain_category(event_fragmentation, mountain).
 domain_category(evfta_trade_agreement, snare).
 domain_category(evidence_half_life, snare).
 domain_category(evolutionary_knowledge, snare).
@@ -802,6 +805,7 @@ domain_category(ritual_without_belief, snare).
 domain_category(rn_proteus_adoption, scaffold).
 domain_category(robustness_vs_efficiency_tradeoff, snare).
 domain_category(rogers_commission_institutional_analysis, snare).
+domain_category(rogue_wave_control_2026, tangled_rope).
 domain_category(rosen_bridge_protocol, snare).
 domain_category(rotation_seven_black_soil, snare).
 domain_category(rotation_seven_isolation, snare).
@@ -919,6 +923,7 @@ domain_category(the_bacchae_madness_protocol, snare).
 domain_category(the_calm_protocol_suppression, snare).
 domain_category(the_churn_systemic_upheaval, snare).
 domain_category(the_wall_procedural_barrier, snare).
+domain_category(theatrical_neutrality, snare).
 domain_category(theory_of_visitors, snare).
 domain_category(thermodynamics_entropy, mountain).
 domain_category(three_body_problem_predictability_limit, mountain).

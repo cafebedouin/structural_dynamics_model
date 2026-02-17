@@ -15,17 +15,21 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:omega_variable/3.
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
    ========================================================================== */
 /**
  * SUMMARY:
- * The "View from Nowhere." By framing asymmetric claims as equally 
- * valid "perspectives" to avoid charges of bias, the publication 
- * actively extracts the reader's ability to discern truth. 
- * This is the ultimate Snare: it suppresses accuracy to maintain 
+ *   constraint_id: theatrical_neutrality
+ *   human_readable: Theatrical Neutrality: The View from Nowhere as Epistemic Extraction
+ *
+ * The "View from Nowhere." By framing asymmetric claims as equally
+ * valid "perspectives" to avoid charges of bias, the publication
+ * actively extracts the reader's ability to discern truth.
+ * This is the ultimate Snare: it suppresses accuracy to maintain
  * professional standing.
  */
 
@@ -41,6 +45,7 @@ narrative_ontology:constraint_metric(theatrical_neutrality, suppression_requirem
 narrative_ontology:constraint_metric(theatrical_neutrality, theater_ratio, 0.85).
 
 narrative_ontology:constraint_claim(theatrical_neutrality, snare).
+narrative_ontology:human_readable(theatrical_neutrality, "Theatrical Neutrality: The View from Nowhere as Epistemic Extraction").
 
 narrative_ontology:constraint_beneficiary(theatrical_neutrality, editorial_boards).
 narrative_ontology:constraint_victim(theatrical_neutrality, civic_discourse).

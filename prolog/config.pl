@@ -200,6 +200,10 @@ param(piton_extraction_ceiling,     0.25).
 param(piton_theater_floor,          0.70).
 param(piton_epsilon_floor,          0.10).   % Rule Z: ε(C) > 0.10
 
+% --- Audit triage thresholds (Python classification_audit.py only) ---
+param(audit_theater_naturalization_threshold, 0.50).
+param(audit_theater_conflict_threshold, 0.50).
+
 /* ================================================================
    5A. DEFAULTS (NEW)
    ================================================================ */

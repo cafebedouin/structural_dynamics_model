@@ -58,6 +58,7 @@ Chi formula: chi = eps * pi(Power) * sigma(Scope)
 
 import json
 import re
+import sys
 from collections import defaultdict, Counter
 from pathlib import Path
 
@@ -77,14 +78,38 @@ PI_POWERLESS = _PM["powerless"]
 PI_ORGANIZED = _PM["organized"]
 PI_ANALYTICAL = _PM["analytical"]
 
-# Scope modifiers (sigma)
-SIGMA_LOCAL = 0.8
-SIGMA_GLOBAL = 1.2
+# =============================================================================
+# THRESHOLDS — loaded from prolog/config.pl (single source of truth)
+# =============================================================================
 
-# Coalition modeling: powerless upgrades to organized when snare-like + enough victims
-COALITION_VICTIM_THRESHOLD = 3  # critical_mass_threshold in config.pl
-COALITION_EPS_FLOOR = 0.46      # snare_epsilon_floor
-COALITION_SUPP_FLOOR = 0.60     # snare_suppression_floor
+def _read_config():
+    """Read param/2 values from prolog/config.pl."""
+    config_path = Path(__file__).resolve().parent.parent / "prolog" / "config.pl"
+    thresholds = {}
+    try:
+        with open(config_path, 'r', encoding='utf-8') as f:
+            for line in f:
+                match = re.search(r"param\((\w+),\s*(-?[\d.]+)\)", line)
+                if match:
+                    param_name = match.group(1)
+                    try:
+                        thresholds[param_name] = float(match.group(2))
+                    except ValueError:
+                        pass
+    except Exception as e:
+        print(f"Warning: Could not read {config_path}: {e}", file=sys.stderr)
+    return thresholds
+
+_CFG = _read_config()
+
+# Scope modifiers (sigma)
+SIGMA_LOCAL = _CFG.get('scope_modifier_local', 0.8)
+SIGMA_GLOBAL = _CFG.get('scope_modifier_global', 1.2)
+
+# Coalition modeling
+COALITION_VICTIM_THRESHOLD = int(_CFG.get('critical_mass_threshold', 3))
+COALITION_EPS_FLOOR = _CFG.get('snare_epsilon_floor', 0.46)
+COALITION_SUPP_FLOOR = _CFG.get('snare_suppression_floor', 0.60)
 
 # Effective immutability for powerless context (biographical/trapped) = mountain
 # BUT snare_immutability_check passes because moderate context (biographical/mobile) = rope.
@@ -92,22 +117,22 @@ COALITION_SUPP_FLOOR = 0.60     # snare_suppression_floor
 POWERLESS_IMMUTABILITY = "mountain"   # biographical + trapped -> mountain
 
 # Gate metric thresholds
-MOUNTAIN_EPS_MAX = 0.25
-MOUNTAIN_SUPP_MAX = 0.05
-SNARE_CHI_FLOOR = 0.66
-SNARE_EPS_FLOOR = 0.46
-SNARE_SUPP_FLOOR = 0.60
-SCAFFOLD_CHI_CEIL = 0.30
-SCAFFOLD_THEATER_MAX = 0.70
-ROPE_CHI_CEIL = 0.35
-ROPE_EPS_CEIL = 0.45
-TANGLED_CHI_FLOOR = 0.40
-TANGLED_CHI_CEIL = 0.90
-TANGLED_EPS_FLOOR = 0.30
-TANGLED_SUPP_FLOOR = 0.40
-PITON_CHI_CEIL = 0.25
-PITON_EPS_FLOOR = 0.10
-PITON_THEATER_FLOOR = 0.70
+MOUNTAIN_EPS_MAX = _CFG.get('mountain_extractiveness_max', 0.25)
+MOUNTAIN_SUPP_MAX = _CFG.get('mountain_suppression_ceiling', 0.05)
+SNARE_CHI_FLOOR = _CFG.get('snare_chi_floor', 0.66)
+SNARE_EPS_FLOOR = _CFG.get('snare_epsilon_floor', 0.46)
+SNARE_SUPP_FLOOR = _CFG.get('snare_suppression_floor', 0.60)
+SCAFFOLD_CHI_CEIL = _CFG.get('scaffold_extraction_ceil', 0.30)
+SCAFFOLD_THEATER_MAX = _CFG.get('piton_theater_floor', 0.70)
+ROPE_CHI_CEIL = _CFG.get('rope_chi_ceiling', 0.35)
+ROPE_EPS_CEIL = _CFG.get('rope_epsilon_ceiling', 0.45)
+TANGLED_CHI_FLOOR = _CFG.get('tangled_rope_chi_floor', 0.40)
+TANGLED_CHI_CEIL = _CFG.get('tangled_rope_chi_ceil', 0.90)
+TANGLED_EPS_FLOOR = _CFG.get('tangled_rope_epsilon_floor', 0.30)
+TANGLED_SUPP_FLOOR = _CFG.get('tangled_rope_suppression_floor', 0.40)
+PITON_CHI_CEIL = _CFG.get('piton_extraction_ceiling', 0.25)
+PITON_EPS_FLOOR = _CFG.get('piton_epsilon_floor', 0.10)
+PITON_THEATER_FLOOR = _CFG.get('piton_theater_floor', 0.70)
 
 
 # ── 1. Parse fingerprint report ─────────────────────────────────────────────

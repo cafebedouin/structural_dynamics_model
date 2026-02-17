@@ -47,13 +47,13 @@ How well do indices explain variance in each domain?
 
 | Domain | Constraints | Avg Variance | Sufficiency |
 |--------|----------:|-------------:|:-----------:|
+| unknown_novel | 2 | 1.00 | High |
 | piton | 91 | 0.98 | High |
-| unknown_novel | 7 | 0.93 | High |
-| snare | 638 | 0.89 | High |
+| snare | 640 | 0.89 | High |
 | scaffold | 21 | 0.82 | High |
-| tangled_rope | 90 | 0.78 | High |
+| tangled_rope | 92 | 0.78 | High |
 | rope | 60 | 0.69 | Medium |
-| mountain | 127 | 0.40 | Medium |
+| mountain | 128 | 0.40 | Medium |
 
 **Note:** Higher variance = indices capture more differences (good)
 

@@ -16,16 +16,20 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:omega_variable/3.
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
    ========================================================================== */
 /**
  * SUMMARY:
- * Reporters at the NYT require access to elite institutions (The White House, 
- * The Fed). This access is an arbitrage: the institution grants a quote, 
- * and the reporter grants a framing that uses the institution's own 
+ *   constraint_id: access_arbitrage
+ *   human_readable: Access Arbitrage: Reporters Pay in Framing for Institutional Access
+ *
+ * Reporters at the NYT require access to elite institutions (The White House,
+ * The Fed). This access is an arbitrage: the institution grants a quote,
+ * and the reporter grants a framing that uses the institution's own
  * lexicon. To break the framing is to lose the access.
  */
 
@@ -41,6 +45,7 @@ narrative_ontology:constraint_metric(access_arbitrage, suppression_requirement, 
 narrative_ontology:constraint_metric(access_arbitrage, theater_ratio, 0.35).
 
 narrative_ontology:constraint_claim(access_arbitrage, tangled_rope).
+narrative_ontology:human_readable(access_arbitrage, "Access Arbitrage: Reporters Pay in Framing for Institutional Access").
 domain_priors:requires_active_enforcement(access_arbitrage).
 
 narrative_ontology:constraint_beneficiary(access_arbitrage, government_institutions).

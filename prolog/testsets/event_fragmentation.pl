@@ -16,17 +16,21 @@
     narrative_ontology:affects_constraint/2,
     constraint_indexing:constraint_classification/3,
     domain_priors:emerges_naturally/1,
-    narrative_ontology:omega_variable/3.
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
    ========================================================================== */
 /**
  * SUMMARY:
- * Journalism is structurally bound to the "Event." It perceives discrete 
- * points in time (bill signings, accidents, elections) while remaining 
- * effectively blind to slow-moving systemic processes (soil erosion, 
- * cultural drift). This is a Mountain because the medium's unit of 
+ *   constraint_id: event_fragmentation
+ *   human_readable: Event Fragmentation: Journalism's Structural Blindness to Slow Processes
+ *
+ * Journalism is structurally bound to the "Event." It perceives discrete
+ * points in time (bill signings, accidents, elections) while remaining
+ * effectively blind to slow-moving systemic processes (soil erosion,
+ * cultural drift). This is a Mountain because the medium's unit of
  * production is the "Story," which requires a beginning and an end.
  */
 
@@ -47,6 +51,7 @@ narrative_ontology:constraint_metric(event_fragmentation, resistance, 0.05).
 domain_priors:emerges_naturally(event_fragmentation).
 
 narrative_ontology:constraint_claim(event_fragmentation, mountain).
+narrative_ontology:human_readable(event_fragmentation, "Event Fragmentation: Journalism's Structural Blindness to Slow Processes").
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS

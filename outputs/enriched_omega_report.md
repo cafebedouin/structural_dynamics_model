@@ -15,18 +15,18 @@
 
 | Family | Orbit Signature | Gap Class | Domain | Count |
 |--------|----------------|-----------|--------|------:|
-| F001 | [rope, snare] | coordination_washing | snare | 265 |
+| F001 | [rope, snare] | coordination_washing | snare | 267 |
 | F002 | [rope, snare, tangled_rope] | coordination_washing | snare | 153 |
 | F003 | [rope, tangled_rope] | coordination_washing | snare | 122 |
-| F004 | [rope, tangled_rope] | coordination_washing | tangled_rope | 72 |
+| F004 | [rope, tangled_rope] | coordination_washing | tangled_rope | 73 |
 | F005 | [tangled_rope] | consensus | snare | 53 |
 
 ## Top 5 Domains by Omega Count
 
 | Domain | Count | Mean Score |
 |--------|------:|-----------:|
-| snare | 638 | 0.682 |
-| tangled_rope | 97 | 0.426 |
+| snare | 640 | 0.682 |
+| tangled_rope | 99 | 0.423 |
 | piton | 90 | 0.663 |
 | mountain | 56 | 0.078 |
 | rope | 55 | 0.288 |
@@ -49,7 +49,7 @@
 - **Suppression:** `0.90`
 - **Question:** Constraint khantivadin_radical_patience appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -67,7 +67,7 @@
 - **Suppression:** `0.95`
 - **Question:** Constraint north_korea_songun_mandatrophy appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -85,7 +85,7 @@
 - **Suppression:** `0.90`
 - **Question:** Constraint fiat_currency_lifecycle appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -103,7 +103,7 @@
 - **Suppression:** `0.95`
 - **Question:** Constraint integrated_digital_governance_stack appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -121,7 +121,7 @@
 - **Suppression:** `0.95`
 - **Question:** Constraint taliban_slavery_law_2024 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -157,7 +157,7 @@
 - **Suppression:** `0.85`
 - **Question:** Constraint the_bacchae_madness_protocol appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -193,7 +193,7 @@
 - **Suppression:** `0.86`
 - **Question:** Constraint interpretive_frame_fragmentation appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -211,7 +211,7 @@
 - **Suppression:** `0.85`
 - **Question:** Constraint delta_force_selection_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -229,7 +229,7 @@
 - **Suppression:** `0.85`
 - **Question:** Constraint intertemporal_responsibility_gap appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -247,7 +247,7 @@
 - **Suppression:** `0.85`
 - **Question:** Constraint power_without_responsibility appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -265,7 +265,7 @@
 - **Suppression:** `0.95`
 - **Question:** Constraint ad_synaptic_deficit appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -283,7 +283,7 @@
 - **Suppression:** `0.95`
 - **Question:** Constraint blackstone_tra appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -301,7 +301,7 @@
 - **Suppression:** `0.85`
 - **Question:** Constraint emergency_mode_lock_in appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -319,7 +319,7 @@
 - **Suppression:** `0.95`
 - **Question:** Constraint iran_nin_repression appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -337,7 +337,7 @@
 - **Suppression:** `0.95`
 - **Question:** Constraint nsl_hk appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -355,7 +355,7 @@
 - **Suppression:** `0.95`
 - **Question:** Constraint us_venezuela_blockade appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -373,7 +373,7 @@
 - **Suppression:** `0.84`
 - **Question:** Constraint attention_market_cannibalization appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -391,7 +391,7 @@
 - **Suppression:** `0.85`
 - **Question:** Constraint iran_mandatrophic_collapse appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -409,7 +409,7 @@
 - **Suppression:** `0.85`
 - **Question:** Constraint lehman_repo_105 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -427,7 +427,7 @@
 - **Suppression:** `0.82`
 - **Question:** Constraint reputational_cascade_failure appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -445,7 +445,7 @@
 - **Suppression:** `0.82`
 - **Question:** Constraint responsibility_without_power appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -463,7 +463,7 @@
 - **Suppression:** `0.83`
 - **Question:** Constraint responsibility_dilution appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -481,7 +481,7 @@
 - **Suppression:** `0.82`
 - **Question:** Constraint shock_propagation_asymmetry appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -499,7 +499,7 @@
 - **Suppression:** `0.90`
 - **Question:** Constraint civilizational_lifecycle_solara appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -517,7 +517,7 @@
 - **Suppression:** `0.90`
 - **Question:** Constraint dark_patterns_manipulation appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -535,7 +535,7 @@
 - **Suppression:** `0.90`
 - **Question:** Constraint dwp_carers_allowance_cliff appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -571,7 +571,7 @@
 - **Suppression:** `0.90`
 - **Question:** Constraint guthrie_kidnapping_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -589,7 +589,7 @@
 - **Suppression:** `0.90`
 - **Question:** Constraint ice_raids_minnesota_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -607,7 +607,7 @@
 - **Suppression:** `0.90`
 - **Question:** Constraint scam_compound_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -643,7 +643,7 @@
 - **Suppression:** `0.90`
 - **Question:** Constraint ua_wartime_mobilization appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -661,7 +661,7 @@
 - **Suppression:** `0.90`
 - **Question:** Constraint uk_unpaid_care_system appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -697,7 +697,7 @@
 - **Suppression:** `0.80`
 - **Question:** Constraint bay_of_pigs_operational_silo appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -715,7 +715,7 @@
 - **Suppression:** `0.80`
 - **Question:** Constraint burden_of_proof_engineering_safety appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -733,7 +733,7 @@
 - **Suppression:** `0.80`
 - **Question:** Constraint bushman_money_magic appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -751,7 +751,7 @@
 - **Suppression:** `0.80`
 - **Question:** Constraint quellcrist_falconer_justice appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -787,7 +787,7 @@
 - **Suppression:** `0.81`
 - **Question:** Constraint epistemic_overload_collapse appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -805,7 +805,7 @@
 - **Suppression:** `0.81`
 - **Question:** Constraint multi_agent_reward_hacking appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -823,7 +823,7 @@
 - **Suppression:** `0.82`
 - **Question:** Constraint consensus_without_truth appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -841,7 +841,7 @@
 - **Suppression:** `0.82`
 - **Question:** Constraint tear_gas_repression_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -859,7 +859,7 @@
 - **Suppression:** `0.80`
 - **Question:** Constraint cascading_constraint_failure appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -913,7 +913,7 @@
 - **Suppression:** `0.78`
 - **Question:** Constraint value_extraction_plateau appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -931,7 +931,7 @@
 - **Suppression:** `0.79`
 - **Question:** Constraint agency_atrophy appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -949,7 +949,7 @@
 - **Suppression:** `0.79`
 - **Question:** Constraint cross_domain_coupling_spiral appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -967,7 +967,7 @@
 - **Suppression:** `0.79`
 - **Question:** Constraint hypercompression_of_time_horizons appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -985,7 +985,7 @@
 - **Suppression:** `0.79`
 - **Question:** Constraint legibility_trap appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -1003,7 +1003,7 @@
 - **Suppression:** `0.77`
 - **Question:** Constraint model_collapse_feedback_loop appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -1021,7 +1021,7 @@
 - **Suppression:** `0.78`
 - **Question:** Constraint critical_actor_overcentralization appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -1057,7 +1057,7 @@
 - **Suppression:** `0.77`
 - **Question:** Constraint narrative_capacity_exhaustion appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -1075,7 +1075,7 @@
 - **Suppression:** `0.90`
 - **Question:** Constraint authoritarian_power_paradox appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -1093,7 +1093,7 @@
 - **Suppression:** `0.90`
 - **Question:** Constraint blackstone_smd_control appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -1111,7 +1111,7 @@
 - **Suppression:** `0.90`
 - **Question:** Constraint cloudflare_dual_class_asymmetry appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -1147,7 +1147,7 @@
 - **Suppression:** `0.90`
 - **Question:** Constraint family_succession_system appears as tangled_rope to individuals but rope to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -1165,7 +1165,7 @@
 - **Suppression:** `0.78`
 - **Question:** Constraint semantic_attack_surface appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -1201,7 +1201,7 @@
 - **Suppression:** `0.79`
 - **Question:** Constraint latent_goal_activation appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -1219,7 +1219,7 @@
 - **Suppression:** `0.79`
 - **Question:** Constraint meta_model_lock_in appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -1237,7 +1237,7 @@
 - **Suppression:** `0.75`
 - **Question:** Constraint collective_stupidity_2026 appears as snare to individuals but piton to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -1273,7 +1273,7 @@
 - **Suppression:** `0.78`
 - **Question:** Constraint data_laundering_pipeline appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -1327,7 +1327,7 @@
 - **Suppression:** `0.76`
 - **Question:** Constraint boundary_dissolution_risk appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -1345,7 +1345,7 @@
 - **Suppression:** `0.76`
 - **Question:** Constraint narrative_overfitting appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -1363,7 +1363,7 @@
 - **Suppression:** `0.95`
 - **Question:** Constraint dk_foreign_convict_expulsion appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -1381,7 +1381,7 @@
 - **Suppression:** `0.95`
 - **Question:** Constraint pla_loyalty_purge appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -1399,7 +1399,7 @@
 - **Suppression:** `0.70`
 - **Question:** Constraint scurvy_maritime_extraction appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -1417,7 +1417,7 @@
 - **Suppression:** `0.70`
 - **Question:** Constraint toxic_social_infection appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -1435,7 +1435,7 @@
 - **Suppression:** `0.78`
 - **Question:** Constraint cz_plea_agreement_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -1453,7 +1453,7 @@
 - **Suppression:** `0.78`
 - **Question:** Constraint emergent_goal_misalignment appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -1471,7 +1471,7 @@
 - **Suppression:** `0.73`
 - **Question:** Constraint risk_socialization_threshold appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -1489,7 +1489,7 @@
 - **Suppression:** `0.74`
 - **Question:** Constraint capital_misallocation_spiral appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -1507,7 +1507,7 @@
 - **Suppression:** `0.74`
 - **Question:** Constraint epistemic_free_rider_problem appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -1525,7 +1525,7 @@
 - **Suppression:** `0.72`
 - **Question:** Constraint synthetic_data_feedback_loop appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -1543,7 +1543,7 @@
 - **Suppression:** `0.72`
 - **Question:** Constraint tail_risk_compression appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -1597,7 +1597,7 @@
 - **Suppression:** `0.75`
 - **Question:** Constraint incentive_surface_warping appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -1669,7 +1669,7 @@
 - **Suppression:** `0.74`
 - **Question:** Constraint bureaucratic_legibility_collapse appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -1687,7 +1687,7 @@
 - **Suppression:** `0.74`
 - **Question:** Constraint goal_boundary_poisoning appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -1705,7 +1705,7 @@
 - **Suppression:** `0.74`
 - **Question:** Constraint hypernormie_equilibrium appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -1723,7 +1723,7 @@
 - **Suppression:** `0.74`
 - **Question:** Constraint maladaptive_selection_process appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -1759,7 +1759,7 @@
 - **Suppression:** `0.75`
 - **Question:** Constraint bip_narrative_illusion appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -1777,7 +1777,7 @@
 - **Suppression:** `0.75`
 - **Question:** Constraint greenland_seizure_trade_war appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -1795,7 +1795,7 @@
 - **Suppression:** `0.73`
 - **Question:** Constraint fragile_middle_layer_collapse appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -1813,7 +1813,7 @@
 - **Suppression:** `0.76`
 - **Question:** Constraint complexity_debt appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -1831,7 +1831,7 @@
 - **Suppression:** `0.76`
 - **Question:** Constraint institutional_mutation_without_selection appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -1849,7 +1849,7 @@
 - **Suppression:** `0.76`
 - **Question:** Constraint moral_outsourcing appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -1867,7 +1867,7 @@
 - **Suppression:** `0.76`
 - **Question:** Constraint rent_seeking_equilibrium appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -1903,7 +1903,7 @@
 - **Suppression:** `0.74`
 - **Question:** Constraint container_capacity_mismatch appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -1939,7 +1939,7 @@
 - **Suppression:** `0.95`
 - **Question:** Constraint cognitive_hacking_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -1957,7 +1957,7 @@
 - **Suppression:** `0.90`
 - **Question:** Constraint iran_guardian_council_vetting appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -1975,7 +1975,7 @@
 - **Suppression:** `0.90`
 - **Question:** Constraint lavender_ai_targeting appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -1993,7 +1993,7 @@
 - **Suppression:** `0.90`
 - **Question:** Constraint multi_planetary_latency_lock appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -2011,7 +2011,7 @@
 - **Suppression:** `0.90`
 - **Question:** Constraint rotation_seven_kubo_ranking appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -2029,7 +2029,7 @@
 - **Suppression:** `0.78`
 - **Question:** Constraint iran_war_room_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -2083,7 +2083,7 @@
 - **Suppression:** `0.78`
 - **Question:** Constraint taiwan_storm_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -2101,7 +2101,7 @@
 - **Suppression:** `0.76`
 - **Question:** Constraint identity_stack_incompatibility appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -2119,7 +2119,7 @@
 - **Suppression:** `0.84`
 - **Question:** Constraint project_vault_extraction_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -2137,7 +2137,7 @@
 - **Suppression:** `0.72`
 - **Question:** Constraint endocrine_disruption_society appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -2155,7 +2155,7 @@
 - **Suppression:** `0.72`
 - **Question:** Constraint evidence_half_life appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -2173,7 +2173,7 @@
 - **Suppression:** `0.72`
 - **Question:** Constraint grievance_stack_overflow appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -2191,7 +2191,7 @@
 - **Suppression:** `0.80`
 - **Question:** Constraint gale_shapley appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -2209,7 +2209,7 @@
 - **Suppression:** `0.75`
 - **Question:** Constraint inference_cost_scaling_law appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -2227,7 +2227,7 @@
 - **Suppression:** `0.80`
 - **Question:** Constraint planetary_boundaries appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -2245,7 +2245,7 @@
 - **Suppression:** `0.75`
 - **Question:** Constraint ritual_without_belief appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -2263,7 +2263,7 @@
 - **Suppression:** `0.70`
 - **Question:** Constraint systemic_blindspot appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -2299,7 +2299,7 @@
 - **Suppression:** `0.88`
 - **Question:** Constraint cascading_uncertainty_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -2353,7 +2353,7 @@
 - **Suppression:** `0.72`
 - **Question:** Constraint adversarial_surface_inflation appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -2389,7 +2389,7 @@
 - **Suppression:** `0.82`
 - **Question:** Constraint elite_identity_capture_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -2407,7 +2407,7 @@
 - **Suppression:** `0.72`
 - **Question:** Constraint financial_drag appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -2425,7 +2425,7 @@
 - **Suppression:** `0.72`
 - **Question:** Constraint latent_regulatory_bomb appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -2443,7 +2443,7 @@
 - **Suppression:** `0.72`
 - **Question:** Constraint robustness_vs_efficiency_tradeoff appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -2461,7 +2461,7 @@
 - **Suppression:** `0.72`
 - **Question:** Constraint soft_authoritarian_drift appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -2479,7 +2479,7 @@
 - **Suppression:** `0.70`
 - **Question:** Constraint china_critical_mineral_chokepoint appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -2497,7 +2497,7 @@
 - **Suppression:** `0.70`
 - **Question:** Constraint mandatrophic_margin_collapse appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -2533,7 +2533,7 @@
 - **Suppression:** `0.70`
 - **Question:** Constraint model_autonomy_creep appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -2551,7 +2551,7 @@
 - **Suppression:** `0.70`
 - **Question:** Constraint norm_erosion_threshold appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -2569,7 +2569,7 @@
 - **Suppression:** `0.75`
 - **Question:** Constraint optimization_fragility appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -2587,7 +2587,7 @@
 - **Suppression:** `0.75`
 - **Question:** Constraint orbital_data_center_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -2605,7 +2605,7 @@
 - **Suppression:** `0.70`
 - **Question:** Constraint rotation_seven_isolation appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -2641,7 +2641,7 @@
 - **Suppression:** `0.75`
 - **Question:** Constraint status_flattening_effect appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -2659,7 +2659,7 @@
 - **Suppression:** `0.95`
 - **Question:** Constraint tractarian_logic_limit appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -2677,7 +2677,7 @@
 - **Suppression:** `0.71`
 - **Question:** Constraint legitimacy_without_capacity appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -2695,7 +2695,7 @@
 - **Suppression:** `0.72`
 - **Question:** Constraint interface_contract_breakdown appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -2713,7 +2713,7 @@
 - **Suppression:** `0.82`
 - **Question:** Constraint naming_as_control appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -2731,7 +2731,7 @@
 - **Suppression:** `0.85`
 - **Question:** Constraint airport_slot_use_it_or_lose_it appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -2749,7 +2749,7 @@
 - **Suppression:** `0.85`
 - **Question:** Constraint blackstone_conflicts_of_interest appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -2767,7 +2767,7 @@
 - **Suppression:** `0.85`
 - **Question:** Constraint child_marriage appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -2785,7 +2785,7 @@
 - **Suppression:** `0.85`
 - **Question:** Constraint ice_safe_departure appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -2803,7 +2803,7 @@
 - **Suppression:** `0.85`
 - **Question:** Constraint israel_override_clause appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -2839,7 +2839,7 @@
 - **Suppression:** `0.85`
 - **Question:** Constraint unrwa_eviction_order appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -2857,7 +2857,7 @@
 - **Suppression:** `0.85`
 - **Question:** Constraint xi_mao_ideological_centralization appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -2875,7 +2875,7 @@
 - **Suppression:** `0.68`
 - **Question:** Constraint liquidity_illusion appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -2893,7 +2893,7 @@
 - **Suppression:** `0.71`
 - **Question:** Constraint adaptive_lag_trap appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -2929,7 +2929,7 @@
 - **Suppression:** `0.71`
 - **Question:** Constraint price_signal_corruption appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -2947,7 +2947,7 @@
 - **Suppression:** `0.74`
 - **Question:** Constraint constraint_interaction_explosion appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -2965,7 +2965,7 @@
 - **Suppression:** `0.82`
 - **Question:** Constraint silent_dependency_activation appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -2983,7 +2983,7 @@
 - **Suppression:** `0.75`
 - **Question:** Constraint amish_technological_renunciation appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -3001,7 +3001,7 @@
 - **Suppression:** `0.70`
 - **Question:** Constraint evolutionary_mismatch_load appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -3019,7 +3019,7 @@
 - **Suppression:** `0.70`
 - **Question:** Constraint model_of_models_regression appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -3037,7 +3037,7 @@
 - **Suppression:** `0.70`
 - **Question:** Constraint protocol_drift_accumulation appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -3055,7 +3055,7 @@
 - **Suppression:** `0.75`
 - **Question:** Constraint russian_war_cannibalization appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -3073,7 +3073,7 @@
 - **Suppression:** `0.88`
 - **Question:** Constraint australia_social_ban_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -3109,7 +3109,7 @@
 - **Suppression:** `0.71`
 - **Question:** Constraint credibility_inflation appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -3145,7 +3145,7 @@
 - **Suppression:** `0.90`
 - **Question:** Constraint coinbase_regulatory_uncertainty appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -3163,7 +3163,7 @@
 - **Suppression:** `0.90`
 - **Question:** Constraint medieval_church_hegemony appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -3181,7 +3181,7 @@
 - **Suppression:** `0.90`
 - **Question:** Constraint statecraft_virtu appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -3217,7 +3217,7 @@
 - **Suppression:** `0.80`
 - **Question:** Constraint ai_driven_surveillance_sensor_layer appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -3225,7 +3225,7 @@
 
 - **Severity:** `critical` (score: 0.775)
 - **Constraint:** `ai_evaluators_matching`
-- **Domain:** `unknown_novel`
+- **Domain:** `snare`
 - **Orbit Signature:** `[rope, snare]`
 - **Orbit Span:** `4`
 - **Gap Class:** `coordination_washing`
@@ -3235,7 +3235,7 @@
 - **Suppression:** `0.80`
 - **Question:** Constraint ai_evaluators_matching appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F029` (3 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -3253,7 +3253,7 @@
 - **Suppression:** `0.80`
 - **Question:** Constraint ai_nonconsensual_content_facilitation appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -3271,7 +3271,7 @@
 - **Suppression:** `0.80`
 - **Question:** Constraint algeria_france_colonial_legacy appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -3289,7 +3289,7 @@
 - **Suppression:** `0.80`
 - **Question:** Constraint bor_tax_exemption_nl appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -3307,7 +3307,7 @@
 - **Suppression:** `0.80`
 - **Question:** Constraint brazil_mexico_financial_requirement appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -3325,7 +3325,7 @@
 - **Suppression:** `0.80`
 - **Question:** Constraint cartel_drone_surveillance_el_paso appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -3361,7 +3361,7 @@
 - **Suppression:** `0.80`
 - **Question:** Constraint eu_asylum_outsourcing_framework appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -3379,7 +3379,7 @@
 - **Suppression:** `0.80`
 - **Question:** Constraint generational_replacement_inertia appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -3397,7 +3397,7 @@
 - **Suppression:** `0.80`
 - **Question:** Constraint ghost_fishing_gear appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -3415,7 +3415,7 @@
 - **Suppression:** `0.80`
 - **Question:** Constraint hhs_fetal_tissue_research_ban_2019 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -3433,7 +3433,7 @@
 - **Suppression:** `0.80`
 - **Question:** Constraint individual_revolution_autonomy appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -3469,7 +3469,7 @@
 - **Suppression:** `0.80`
 - **Question:** Constraint iran_hijab_law appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -3487,7 +3487,7 @@
 - **Suppression:** `0.85`
 - **Question:** Constraint irreversible_policy_commitment appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -3541,7 +3541,7 @@
 - **Suppression:** `0.80`
 - **Question:** Constraint the_calm_protocol_suppression appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -3559,7 +3559,7 @@
 - **Suppression:** `0.80`
 - **Question:** Constraint uk_graduate_visa_salary_threshold appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -3577,7 +3577,7 @@
 - **Suppression:** `0.80`
 - **Question:** Constraint us_israel_faa_502b_nonenforcement appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -3595,7 +3595,7 @@
 - **Suppression:** `0.80`
 - **Question:** Constraint us_two_party_duopoly appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -3613,7 +3613,7 @@
 - **Suppression:** `0.80`
 - **Question:** Constraint us_vaccine_recommendation_dismantling_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -3631,7 +3631,7 @@
 - **Suppression:** `0.85`
 - **Question:** Constraint us_venezuela_plausible_deniability_2025 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -3649,7 +3649,7 @@
 - **Suppression:** `0.80`
 - **Question:** Constraint venezuela_oil_privatization_v1 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -3667,7 +3667,7 @@
 - **Suppression:** `0.80`
 - **Question:** Constraint yt_ai_slop_incentive appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -3703,7 +3703,7 @@
 - **Suppression:** `0.68`
 - **Question:** Constraint hidden_interdependency_risk appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -3739,7 +3739,7 @@
 - **Suppression:** `0.69`
 - **Question:** Constraint abstraction_boundary_overrun appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -3757,7 +3757,7 @@
 - **Suppression:** `0.70`
 - **Question:** Constraint cbdc_implementation appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -3775,7 +3775,7 @@
 - **Suppression:** `0.70`
 - **Question:** Constraint challenger_o_ring_integrity appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -3793,7 +3793,7 @@
 - **Suppression:** `0.70`
 - **Question:** Constraint ergot_grain_poisoning appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -3811,7 +3811,7 @@
 - **Suppression:** `0.70`
 - **Question:** Constraint family_estrangement_ratio appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -3829,7 +3829,7 @@
 - **Suppression:** `0.70`
 - **Question:** Constraint gig_economy_algorithmic_management appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -3865,7 +3865,7 @@
 - **Suppression:** `0.70`
 - **Question:** Constraint non_compete_agreements appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -3883,7 +3883,7 @@
 - **Suppression:** `0.70`
 - **Question:** Constraint silicon_lexicon_overload appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -3901,7 +3901,7 @@
 - **Suppression:** `0.70`
 - **Question:** Constraint social_credit_architecture appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -3919,7 +3919,7 @@
 - **Suppression:** `0.70`
 - **Question:** Constraint suanne_coup_of_peace appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -3937,7 +3937,7 @@
 - **Suppression:** `0.80`
 - **Question:** Constraint zombie_reasoning_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -3991,7 +3991,7 @@
 - **Suppression:** `0.85`
 - **Question:** Constraint cia_fbi_legal_wall appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -4009,7 +4009,7 @@
 - **Suppression:** `0.60`
 - **Question:** Constraint global_water_bankruptcy appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -4027,7 +4027,7 @@
 - **Suppression:** `0.65`
 - **Question:** Constraint governance_latency_gap appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -4045,7 +4045,7 @@
 - **Suppression:** `0.85`
 - **Question:** Constraint parable_fish_turtle appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -4063,7 +4063,7 @@
 - **Suppression:** `0.65`
 - **Question:** Constraint sleep_debt_externality appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -4135,7 +4135,7 @@
 - **Suppression:** `0.65`
 - **Question:** Constraint cultural_memory_decay appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -4153,7 +4153,7 @@
 - **Suppression:** `0.80`
 - **Question:** Constraint spain_digital_offensive_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -4171,7 +4171,7 @@
 - **Suppression:** `0.80`
 - **Question:** Constraint thai_senate_veto_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -4189,7 +4189,7 @@
 - **Suppression:** `0.82`
 - **Question:** Constraint mass_market_extinction_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -4207,7 +4207,7 @@
 - **Suppression:** `0.80`
 - **Question:** Constraint ai_professional_displacement appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -4243,7 +4243,7 @@
 - **Suppression:** `0.90`
 - **Question:** Constraint cfius_hiefo_emcore_divestment appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -4261,7 +4261,7 @@
 - **Suppression:** `0.65`
 - **Question:** Constraint delayed_feedback_instability appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -4279,7 +4279,7 @@
 - **Suppression:** `0.85`
 - **Question:** Constraint frontex_pushback_coordination appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -4297,7 +4297,7 @@
 - **Suppression:** `0.90`
 - **Question:** Constraint guinea_junta_legitimization_2024 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -4315,7 +4315,7 @@
 - **Suppression:** `0.85`
 - **Question:** Constraint us_venezuela_oil_pressure appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -4351,7 +4351,7 @@
 - **Suppression:** `0.80`
 - **Question:** Constraint belief_argument_conclusion appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -4369,7 +4369,7 @@
 - **Suppression:** `0.60`
 - **Question:** Constraint deferred_risk_realization appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -4387,7 +4387,7 @@
 - **Suppression:** `0.80`
 - **Question:** Constraint institutional_mutation_domestication appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -4405,7 +4405,7 @@
 - **Suppression:** `0.80`
 - **Question:** Constraint taiwan_existential_sovereignty appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -4423,7 +4423,7 @@
 - **Suppression:** `0.80`
 - **Question:** Constraint viral_transmission_rates appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -4441,7 +4441,7 @@
 - **Suppression:** `0.70`
 - **Question:** Constraint algorithmic_bias appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -4477,7 +4477,7 @@
 - **Suppression:** `0.65`
 - **Question:** Constraint demographic_inertia_trap appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -4495,7 +4495,7 @@
 - **Suppression:** `0.65`
 - **Question:** Constraint informational_time_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -4531,7 +4531,7 @@
 - **Suppression:** `0.70`
 - **Question:** Constraint misunderstanding_as_mismatch appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -4549,7 +4549,7 @@
 - **Suppression:** `0.65`
 - **Question:** Constraint overfitting_to_frameworks appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -4585,7 +4585,7 @@
 - **Suppression:** `0.70`
 - **Question:** Constraint zipfs_law appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -4603,7 +4603,7 @@
 - **Suppression:** `0.60`
 - **Question:** Constraint broke_vs_poor_grocery_math appears as snare to individuals but tangled_rope to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -4621,7 +4621,7 @@
 - **Suppression:** `0.80`
 - **Question:** Constraint debt_service_squeeze appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -4639,7 +4639,7 @@
 - **Suppression:** `0.85`
 - **Question:** Constraint ua_mobilization_protector_cert appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -4657,7 +4657,7 @@
 - **Suppression:** `0.68`
 - **Question:** Constraint rational_inertia_trap appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -4675,7 +4675,7 @@
 - **Suppression:** `0.62`
 - **Question:** Constraint coordination_fatigue appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -4711,7 +4711,7 @@
 - **Suppression:** `0.60`
 - **Question:** Constraint metabolic_constraint_cognition appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -4729,7 +4729,7 @@
 - **Suppression:** `0.60`
 - **Question:** Constraint signal_without_control appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -4765,7 +4765,7 @@
 - **Suppression:** `0.68`
 - **Question:** Constraint governance_overfitting appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -4783,7 +4783,7 @@
 - **Suppression:** `0.65`
 - **Question:** Constraint collective_action_deadlock appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -4819,7 +4819,7 @@
 - **Suppression:** `0.65`
 - **Question:** Constraint finite_pool_of_worry appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -4855,7 +4855,7 @@
 - **Suppression:** `0.65`
 - **Question:** Constraint suanne_face_restoration appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -4891,7 +4891,7 @@
 - **Suppression:** `0.62`
 - **Question:** Constraint procedural_legitimacy_decay appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -4927,7 +4927,7 @@
 - **Suppression:** `0.75`
 - **Question:** Constraint ai_banal_capture appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -4945,7 +4945,7 @@
 - **Suppression:** `0.80`
 - **Question:** Constraint appropriations_brinkmanship appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -4963,7 +4963,7 @@
 - **Suppression:** `0.75`
 - **Question:** Constraint average_is_over_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -4981,7 +4981,7 @@
 - **Suppression:** `0.80`
 - **Question:** Constraint cg_israelgaza_20231012 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -4999,7 +4999,7 @@
 - **Suppression:** `0.80`
 - **Question:** Constraint coe_ukraine_reparations_register appears as rope to individuals but snare to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -5017,7 +5017,7 @@
 - **Suppression:** `0.80`
 - **Question:** Constraint cumbria_mine_rejection appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -5035,7 +5035,7 @@
 - **Suppression:** `0.65`
 - **Question:** Constraint expert_disempowerment appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -5053,7 +5053,7 @@
 - **Suppression:** `0.75`
 - **Question:** Constraint finnish_debt_adjustment appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -5071,7 +5071,7 @@
 - **Suppression:** `0.80`
 - **Question:** Constraint floating_wall_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -5107,7 +5107,7 @@
 - **Suppression:** `0.75`
 - **Question:** Constraint pe_fund_level_leverage appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -5125,7 +5125,7 @@
 - **Suppression:** `0.80`
 - **Question:** Constraint regional_military_deterrence_mideast appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -5143,7 +5143,7 @@
 - **Suppression:** `0.75`
 - **Question:** Constraint us_isolationism_policy_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -5197,7 +5197,7 @@
 - **Suppression:** `0.65`
 - **Question:** Constraint awareness_without_leverage appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -5215,7 +5215,7 @@
 - **Suppression:** `0.70`
 - **Question:** Constraint cholesterol_pill_cost appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -5233,7 +5233,7 @@
 - **Suppression:** `0.80`
 - **Question:** Constraint internet_evolution_lifecycle appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -5269,7 +5269,7 @@
 - **Suppression:** `0.72`
 - **Question:** Constraint opioid_political_realignment_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -5277,7 +5277,7 @@
 
 - **Severity:** `critical` (score: 0.716)
 - **Constraint:** `theatrical_neutrality`
-- **Domain:** `unknown_novel`
+- **Domain:** `snare`
 - **Orbit Signature:** `[rope, snare]`
 - **Orbit Span:** `4`
 - **Gap Class:** `coordination_washing`
@@ -5287,7 +5287,7 @@
 - **Suppression:** `0.72`
 - **Question:** Constraint theatrical_neutrality appears as snare to individuals but piton to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F029` (3 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -5305,7 +5305,7 @@
 - **Suppression:** `0.60`
 - **Question:** Constraint academic_tenure_system appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -5323,7 +5323,7 @@
 - **Suppression:** `0.60`
 - **Question:** Constraint bedouin_sedentary_transition appears as snare to individuals but tangled_rope to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -5359,7 +5359,7 @@
 - **Suppression:** `0.65`
 - **Question:** Constraint feedback_loop_desynchronization appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -5377,7 +5377,7 @@
 - **Suppression:** `0.60`
 - **Question:** Constraint job_hunt_volume_system_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -5431,7 +5431,7 @@
 - **Suppression:** `0.60`
 - **Question:** Constraint poetic_verse_and_past appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -5449,7 +5449,7 @@
 - **Suppression:** `0.60`
 - **Question:** Constraint rules_based_international_order appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -5467,7 +5467,7 @@
 - **Suppression:** `0.60`
 - **Question:** Constraint slow_crisis_invisibility appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -5485,7 +5485,7 @@
 - **Suppression:** `0.78`
 - **Question:** Constraint technocratic_overreach appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -5503,7 +5503,7 @@
 - **Suppression:** `0.75`
 - **Question:** Constraint chrome_imagen2_integration appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -5521,7 +5521,7 @@
 - **Suppression:** `0.75`
 - **Question:** Constraint cognitive_surrender_to_system_3 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -5593,7 +5593,7 @@
 - **Suppression:** `0.75`
 - **Question:** Constraint marriage_market_asymmetry_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -5629,7 +5629,7 @@
 - **Suppression:** `0.75`
 - **Question:** Constraint pe_rental_market_lockin appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -5647,7 +5647,7 @@
 - **Suppression:** `0.75`
 - **Question:** Constraint ukr_mobilization appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -5683,7 +5683,7 @@
 - **Suppression:** `0.75`
 - **Question:** Constraint us_greenland_envoy appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -5701,7 +5701,7 @@
 - **Suppression:** `0.75`
 - **Question:** Constraint us_sdf_alliance_abandonment_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -5719,7 +5719,7 @@
 - **Suppression:** `0.65`
 - **Question:** Constraint agent_opt_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F029` (3 members)
+- **Family:** `F032` (1 members)
 
 ---
 
@@ -5845,7 +5845,7 @@
 - **Suppression:** `0.65`
 - **Question:** Constraint us_suburban_zoning_2025 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -5881,7 +5881,7 @@
 - **Suppression:** `0.78`
 - **Question:** Constraint ibm_shield_contract_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -5917,7 +5917,7 @@
 - **Suppression:** `0.60`
 - **Question:** Constraint consumer_debt_slavery appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -6063,7 +6063,7 @@
 - **Suppression:** `0.70`
 - **Question:** Constraint cb_far_beyond_human appears as snare to individuals but tangled_rope to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -6153,7 +6153,7 @@
 - **Suppression:** `0.70`
 - **Question:** Constraint gold_fomo_cycle appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -6171,7 +6171,7 @@
 - **Suppression:** `0.70`
 - **Question:** Constraint hicbc_uk appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -6189,7 +6189,7 @@
 - **Suppression:** `0.75`
 - **Question:** Constraint ibm_shield_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -6207,7 +6207,7 @@
 - **Suppression:** `0.70`
 - **Question:** Constraint necessary_day_job appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -6261,7 +6261,7 @@
 - **Suppression:** `0.70`
 - **Question:** Constraint panama_canal_ports appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -6279,7 +6279,7 @@
 - **Suppression:** `0.70`
 - **Question:** Constraint taiwan_grand_bargain appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -6315,7 +6315,7 @@
 - **Suppression:** `0.60`
 - **Question:** Constraint carrying_capacity appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -6351,7 +6351,7 @@
 - **Suppression:** `0.60`
 - **Question:** Constraint cognitive_induction_gap appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -6369,7 +6369,7 @@
 - **Suppression:** `0.60`
 - **Question:** Constraint colorado_sbe_decentralization_friction appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -6513,7 +6513,7 @@
 - **Suppression:** `0.60`
 - **Question:** Constraint radiologic_diagnostic_threshold appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -6549,7 +6549,7 @@
 - **Suppression:** `0.60`
 - **Question:** Constraint sludge_bureaucratic_friction appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -6603,7 +6603,7 @@
 - **Suppression:** `0.60`
 - **Question:** Constraint tx_hispanic_pivot appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -6621,7 +6621,7 @@
 - **Suppression:** `0.60`
 - **Question:** Constraint utopia_apocalypse_fragility appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -6693,7 +6693,7 @@
 - **Suppression:** `0.72`
 - **Question:** Constraint value_alignment_drift appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -6711,7 +6711,7 @@
 - **Suppression:** `0.70`
 - **Question:** Constraint circadian_decoupling_arbitrage appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -6765,7 +6765,7 @@
 - **Suppression:** `0.70`
 - **Question:** Constraint prime_age_male_unwork appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -7287,7 +7287,7 @@
 - **Suppression:** `0.60`
 - **Question:** Constraint winners_curse appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -7305,7 +7305,7 @@
 - **Suppression:** `0.60`
 - **Question:** Distinguishing between overpayment as a system bug vs. an exploited feature.
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F001` (265 members)
+- **Family:** `F001` (267 members)
 
 ---
 
@@ -7809,7 +7809,7 @@
 - **Suppression:** `0.70`
 - **Question:** Constraint ai_superpowers_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F034` (1 members)
+- **Family:** `F033` (1 members)
 
 ---
 
@@ -8961,7 +8961,7 @@
 - **Suppression:** `0.84`
 - **Question:** Constraint mit_tfus_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F039` (1 members)
+- **Family:** `F038` (1 members)
 
 ---
 
@@ -9825,7 +9825,7 @@
 - **Suppression:** `0.85`
 - **Question:** Constraint shield_east_fortification appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F030` (3 members)
+- **Family:** `F029` (3 members)
 
 ---
 
@@ -9951,7 +9951,7 @@
 - **Suppression:** `0.90`
 - **Question:** Constraint visa_ipo_regulatory_compliance appears as tangled_rope to individuals but rope to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F004` (72 members)
+- **Family:** `F004` (73 members)
 
 ---
 
@@ -10527,7 +10527,7 @@
 - **Suppression:** `0.85`
 - **Question:** Constraint coinbase_crypto_volatility appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F004` (72 members)
+- **Family:** `F004` (73 members)
 
 ---
 
@@ -10707,7 +10707,7 @@
 - **Suppression:** `0.80`
 - **Question:** Constraint epstein_document_release_2026 appears as snare to individuals but tangled_rope to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F031` (2 members)
+- **Family:** `F030` (2 members)
 
 ---
 
@@ -10959,7 +10959,7 @@
 - **Suppression:** `0.75`
 - **Question:** Constraint north_sea_wind_grid appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F004` (72 members)
+- **Family:** `F004` (73 members)
 
 ---
 
@@ -11103,7 +11103,7 @@
 - **Suppression:** `0.80`
 - **Question:** Constraint comitatus_bond appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F004` (72 members)
+- **Family:** `F004` (73 members)
 
 ---
 
@@ -11121,7 +11121,7 @@
 - **Suppression:** `0.80`
 - **Question:** Constraint gs1_standardized_identification appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F010` (16 members)
+- **Family:** `F011` (16 members)
 
 ---
 
@@ -11139,7 +11139,7 @@
 - **Suppression:** `0.80`
 - **Question:** Constraint magna_carta_liberties appears as mountain to individuals but snare to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F010` (16 members)
+- **Family:** `F011` (16 members)
 
 ---
 
@@ -11391,7 +11391,7 @@
 - **Suppression:** `0.65`
 - **Question:** Constraint eu_mercosur_trade_agreement appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F030` (3 members)
+- **Family:** `F029` (3 members)
 
 ---
 
@@ -11463,7 +11463,7 @@
 - **Suppression:** `0.65`
 - **Question:** Constraint indo_german_defense_pact appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F030` (3 members)
+- **Family:** `F029` (3 members)
 
 ---
 
@@ -11877,7 +11877,7 @@
 - **Suppression:** `0.75`
 - **Question:** Constraint private_credit_market_opacity appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F031` (2 members)
+- **Family:** `F030` (2 members)
 
 ---
 
@@ -11949,7 +11949,7 @@
 - **Suppression:** `0.70`
 - **Question:** Distinguishing inherent biological cost from systemic exploitation in the availability heuristic.
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F004` (72 members)
+- **Family:** `F004` (73 members)
 
 ---
 
@@ -11967,7 +11967,7 @@
 - **Suppression:** `0.70`
 - **Question:** Constraint availability_heuristic appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F004` (72 members)
+- **Family:** `F004` (73 members)
 
 ---
 
@@ -12003,7 +12003,7 @@
 - **Suppression:** `0.70`
 - **Question:** Constraint kjv_textual_authority appears as tangled_rope to individuals but rope to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F004` (72 members)
+- **Family:** `F004` (73 members)
 
 ---
 
@@ -12021,7 +12021,7 @@
 - **Suppression:** `0.70`
 - **Question:** Constraint landscape_of_fear_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F004` (72 members)
+- **Family:** `F004` (73 members)
 
 ---
 
@@ -12039,7 +12039,7 @@
 - **Suppression:** `0.70`
 - **Question:** Constraint qwerty_vs_dvorak appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F004` (72 members)
+- **Family:** `F004` (73 members)
 
 ---
 
@@ -12057,7 +12057,7 @@
 - **Suppression:** `0.70`
 - **Question:** The future relevance of keyboard layouts in the face of new input technologies.
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F004` (72 members)
+- **Family:** `F004` (73 members)
 
 ---
 
@@ -12093,7 +12093,7 @@
 - **Suppression:** `0.70`
 - **Question:** Constraint sorites_paradox appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F004` (72 members)
+- **Family:** `F004` (73 members)
 
 ---
 
@@ -12129,7 +12129,7 @@
 - **Suppression:** `0.70`
 - **Question:** Constraint visa_judgment_sharing_agreement appears as tangled_rope to individuals but rope to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F004` (72 members)
+- **Family:** `F004` (73 members)
 
 ---
 
@@ -12147,7 +12147,7 @@
 - **Suppression:** `0.70`
 - **Question:** The fairness of the liability allocation formula, which is detailed in a confidential legal exhibit.
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F004` (72 members)
+- **Family:** `F004` (73 members)
 
 ---
 
@@ -12165,7 +12165,7 @@
 - **Suppression:** `0.70`
 - **Question:** Constraint wikipedia_notability_requirement_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F004` (72 members)
+- **Family:** `F004` (73 members)
 
 ---
 
@@ -12291,7 +12291,7 @@
 - **Suppression:** `0.75`
 - **Question:** Constraint google_universal_commerce_protocol appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F038` (1 members)
+- **Family:** `F037` (1 members)
 
 ---
 
@@ -12345,7 +12345,7 @@
 - **Suppression:** `0.70`
 - **Question:** Constraint international_seabed_mining_regime appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Analyst cannot classify but affected population can. Collect ground-truth from affected populations. Test whether analytical abstraction obscures lived experience.
-- **Family:** `F032` (2 members)
+- **Family:** `F031` (2 members)
 
 ---
 
@@ -12363,7 +12363,7 @@
 - **Suppression:** `0.65`
 - **Question:** Constraint lcdm_small_scale_anomalies appears as tangled_rope to individuals but rope to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F004` (72 members)
+- **Family:** `F004` (73 members)
 
 ---
 
@@ -12489,7 +12489,7 @@
 - **Suppression:** `0.70`
 - **Question:** Constraint trump_epa_greenhouse_gas_reversal appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Analyst cannot classify but affected population can. Collect ground-truth from affected populations. Test whether analytical abstraction obscures lived experience.
-- **Family:** `F032` (2 members)
+- **Family:** `F031` (2 members)
 
 ---
 
@@ -12543,7 +12543,7 @@
 - **Suppression:** `0.65`
 - **Question:** Constraint power_set_axiomatic_extraction appears as tangled_rope to individuals but rope to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F004` (72 members)
+- **Family:** `F004` (73 members)
 
 ---
 
@@ -12795,7 +12795,7 @@
 - **Suppression:** `0.70`
 - **Question:** Constraint asce_7_22_seismic_design appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F004` (72 members)
+- **Family:** `F004` (73 members)
 
 ---
 
@@ -12831,7 +12831,7 @@
 - **Suppression:** `0.95`
 - **Question:** Constraint quantum_entanglement_protocol appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F010` (16 members)
+- **Family:** `F011` (16 members)
 
 ---
 
@@ -12839,7 +12839,7 @@
 
 - **Severity:** `high` (score: 0.495)
 - **Constraint:** `access_arbitrage`
-- **Domain:** `unknown_novel`
+- **Domain:** `tangled_rope`
 - **Orbit Signature:** `[rope, tangled_rope]`
 - **Orbit Span:** `3`
 - **Gap Class:** `coordination_washing`
@@ -12849,7 +12849,7 @@
 - **Suppression:** `0.50`
 - **Question:** Constraint access_arbitrage appears as tangled_rope to individuals but rope to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F033` (1 members)
+- **Family:** `F004` (73 members)
 
 ---
 
@@ -12939,7 +12939,7 @@
 - **Suppression:** `0.55`
 - **Question:** Constraint linguistic_relativity_cultural_framing appears as tangled_rope to individuals but rope to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F004` (72 members)
+- **Family:** `F004` (73 members)
 
 ---
 
@@ -12957,7 +12957,7 @@
 - **Suppression:** `0.55`
 - **Question:** Constraint meta_nuclear_power_agreement appears as tangled_rope to individuals but rope to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F004` (72 members)
+- **Family:** `F004` (73 members)
 
 ---
 
@@ -12993,7 +12993,7 @@
 - **Suppression:** `0.55`
 - **Question:** Constraint sa_renewable_price_differential appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F004` (72 members)
+- **Family:** `F004` (73 members)
 
 ---
 
@@ -13011,7 +13011,7 @@
 - **Suppression:** `0.50`
 - **Question:** Constraint transient_event_detection appears as mountain to individuals but snare to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F010` (16 members)
+- **Family:** `F011` (16 members)
 
 ---
 
@@ -13137,7 +13137,7 @@
 - **Suppression:** `0.48`
 - **Question:** Constraint satellite_d2m_standard appears as tangled_rope to individuals but rope to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F004` (72 members)
+- **Family:** `F004` (73 members)
 
 ---
 
@@ -13209,7 +13209,7 @@
 - **Suppression:** `0.75`
 - **Question:** Constraint emergency_oversight_bureau appears as tangled_rope to individuals but rope to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F035` (1 members)
+- **Family:** `F034` (1 members)
 
 ---
 
@@ -13227,7 +13227,7 @@
 - **Suppression:** `0.55`
 - **Question:** Constraint faa_boeing_regulatory_capture appears as tangled_rope to individuals but rope to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F004` (72 members)
+- **Family:** `F004` (73 members)
 
 ---
 
@@ -13263,7 +13263,7 @@
 - **Suppression:** `0.55`
 - **Question:** Constraint un_high_seas_treaty_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F004` (72 members)
+- **Family:** `F004` (73 members)
 
 ---
 
@@ -13299,7 +13299,7 @@
 - **Suppression:** `0.70`
 - **Question:** Constraint blackstone_carried_interest_taxation appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F004` (72 members)
+- **Family:** `F004` (73 members)
 
 ---
 
@@ -13317,7 +13317,7 @@
 - **Suppression:** `0.70`
 - **Question:** Constraint gs1_gln_identification appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F010` (16 members)
+- **Family:** `F011` (16 members)
 
 ---
 
@@ -13407,7 +13407,7 @@
 - **Suppression:** `0.50`
 - **Question:** Constraint fmeca_procedures_1980 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F010` (16 members)
+- **Family:** `F011` (16 members)
 
 ---
 
@@ -13425,7 +13425,7 @@
 - **Suppression:** `0.50`
 - **Question:** Constraint graph_coloring_complexity appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F004` (72 members)
+- **Family:** `F004` (73 members)
 
 ---
 
@@ -13443,7 +13443,7 @@
 - **Suppression:** `0.50`
 - **Question:** Constraint lorenz_attractor_dynamics appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F004` (72 members)
+- **Family:** `F004` (73 members)
 
 ---
 
@@ -13461,7 +13461,7 @@
 - **Suppression:** `0.50`
 - **Question:** Constraint mars_rovers_navigational_autonomy appears as tangled_rope to individuals but rope to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F004` (72 members)
+- **Family:** `F004` (73 members)
 
 ---
 
@@ -13479,7 +13479,7 @@
 - **Suppression:** `0.50`
 - **Question:** Constraint nato_arctic_defense_cooperation appears as tangled_rope to individuals but snare to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F004` (72 members)
+- **Family:** `F004` (73 members)
 
 ---
 
@@ -13497,7 +13497,7 @@
 - **Suppression:** `0.50`
 - **Question:** Constraint oscar_campaign_spending appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F004` (72 members)
+- **Family:** `F004` (73 members)
 
 ---
 
@@ -13515,7 +13515,7 @@
 - **Suppression:** `0.50`
 - **Question:** Constraint private_identity_integration appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F010` (16 members)
+- **Family:** `F011` (16 members)
 
 ---
 
@@ -13533,7 +13533,7 @@
 - **Suppression:** `0.50`
 - **Question:** Constraint sat_csp_complexity appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F004` (72 members)
+- **Family:** `F004` (73 members)
 
 ---
 
@@ -13551,7 +13551,7 @@
 - **Suppression:** `0.52`
 - **Question:** Constraint participatory_observer_hypothesis appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F004` (72 members)
+- **Family:** `F004` (73 members)
 
 ---
 
@@ -13569,7 +13569,7 @@
 - **Suppression:** `0.45`
 - **Question:** Constraint bgs_eigenvector_thermalization appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F004` (72 members)
+- **Family:** `F004` (73 members)
 
 ---
 
@@ -13587,7 +13587,7 @@
 - **Suppression:** `0.40`
 - **Question:** Constraint colombia_2026_presidential_election appears as tangled_rope to individuals but rope to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F004` (72 members)
+- **Family:** `F004` (73 members)
 
 ---
 
@@ -13605,7 +13605,7 @@
 - **Suppression:** `0.45`
 - **Question:** Constraint iterated_function_system_convergence appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F004` (72 members)
+- **Family:** `F004` (73 members)
 
 ---
 
@@ -13623,7 +13623,7 @@
 - **Suppression:** `0.55`
 - **Question:** Constraint germany_tennet_takeover appears as tangled_rope to individuals but rope to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F004` (72 members)
+- **Family:** `F004` (73 members)
 
 ---
 
@@ -13659,7 +13659,7 @@
 - **Suppression:** `0.45`
 - **Question:** Constraint constraint_yoneda appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F004` (72 members)
+- **Family:** `F004` (73 members)
 
 ---
 
@@ -13677,7 +13677,7 @@
 - **Suppression:** `0.45`
 - **Question:** Constraint cow_field_poop appears as snare to individuals but tangled_rope to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F004` (72 members)
+- **Family:** `F004` (73 members)
 
 ---
 
@@ -13695,7 +13695,7 @@
 - **Suppression:** `0.45`
 - **Question:** Constraint creative_commons_licensing appears as rope to individuals but tangled_rope to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F004` (72 members)
+- **Family:** `F004` (73 members)
 
 ---
 
@@ -13731,7 +13731,7 @@
 - **Suppression:** `0.45`
 - **Question:** Constraint law_of_diminishing_returns appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F004` (72 members)
+- **Family:** `F004` (73 members)
 
 ---
 
@@ -13785,7 +13785,7 @@
 - **Suppression:** `0.45`
 - **Question:** Constraint stable_marriage_coordination appears as tangled_rope to individuals but rope to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F004` (72 members)
+- **Family:** `F004` (73 members)
 
 ---
 
@@ -13823,7 +13823,7 @@
 - **Suppression:** `0.60`
 - **Question:** Constraint social_narrative_casting appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F042` (1 members)
+- **Family:** `F040` (1 members)
 
 ---
 
@@ -13841,7 +13841,7 @@
 - **Suppression:** `0.50`
 - **Question:** Constraint constraint_riemann_mapping appears as tangled_rope to individuals but rope to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F004` (72 members)
+- **Family:** `F004` (73 members)
 
 ---
 
@@ -13859,7 +13859,7 @@
 - **Suppression:** `0.50`
 - **Question:** Constraint matching_market_congestion_externality appears as tangled_rope to individuals but rope to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F004` (72 members)
+- **Family:** `F004` (73 members)
 
 ---
 
@@ -13877,7 +13877,7 @@
 - **Suppression:** `0.50`
 - **Question:** Constraint olympic_medal_allocation appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F004` (72 members)
+- **Family:** `F004` (73 members)
 
 ---
 
@@ -13895,7 +13895,7 @@
 - **Suppression:** `0.50`
 - **Question:** Constraint publishing_embargo appears as tangled_rope to individuals but rope to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F004` (72 members)
+- **Family:** `F004` (73 members)
 
 ---
 
@@ -13913,7 +13913,7 @@
 - **Suppression:** `0.40`
 - **Question:** Constraint empty_tomb_transformation appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F004` (72 members)
+- **Family:** `F004` (73 members)
 
 ---
 
@@ -13931,7 +13931,7 @@
 - **Suppression:** `0.40`
 - **Question:** Constraint extraordinary_narrative_shift appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F004` (72 members)
+- **Family:** `F004` (73 members)
 
 ---
 
@@ -13949,7 +13949,7 @@
 - **Suppression:** `0.40`
 - **Question:** The empirical threshold at which novelty collapses into routine, affecting the constraint's stability.
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F004` (72 members)
+- **Family:** `F004` (73 members)
 
 ---
 
@@ -13967,7 +13967,7 @@
 - **Suppression:** `0.45`
 - **Question:** Constraint alzheimers_levetiracetam appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F004` (72 members)
+- **Family:** `F004` (73 members)
 
 ---
 
@@ -13985,7 +13985,7 @@
 - **Suppression:** `0.45`
 - **Question:** Constraint constraint_lagrange_multipliers appears as tangled_rope to individuals but rope to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F004` (72 members)
+- **Family:** `F004` (73 members)
 
 ---
 
@@ -14003,7 +14003,7 @@
 - **Suppression:** `0.45`
 - **Question:** Constraint gemini_scientific_advancement appears as tangled_rope to individuals but rope to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F004` (72 members)
+- **Family:** `F004` (73 members)
 
 ---
 
@@ -14021,7 +14021,7 @@
 - **Suppression:** `0.45`
 - **Question:** Constraint gs_market_clearing appears as tangled_rope to individuals but rope to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F004` (72 members)
+- **Family:** `F004` (73 members)
 
 ---
 
@@ -14039,7 +14039,7 @@
 - **Suppression:** `0.45`
 - **Question:** Constraint jupiter_composition_knowledge_gap appears as tangled_rope to individuals but rope to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F004` (72 members)
+- **Family:** `F004` (73 members)
 
 ---
 
@@ -14057,7 +14057,7 @@
 - **Suppression:** `0.45`
 - **Question:** Constraint keltner_relationship_evaluation appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F004` (72 members)
+- **Family:** `F004` (73 members)
 
 ---
 
@@ -14129,7 +14129,7 @@
 - **Suppression:** `0.70`
 - **Question:** Constraint tcp_rfc9293_interoperability appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F010` (16 members)
+- **Family:** `F011` (16 members)
 
 ---
 
@@ -14201,7 +14201,7 @@
 - **Suppression:** `0.42`
 - **Question:** Constraint working_dog_training appears as tangled_rope to individuals but rope to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F004` (72 members)
+- **Family:** `F004` (73 members)
 
 ---
 
@@ -14237,7 +14237,7 @@
 - **Suppression:** `0.50`
 - **Question:** Constraint fnl_shadow_probe appears as tangled_rope to individuals but rope to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F004` (72 members)
+- **Family:** `F004` (73 members)
 
 ---
 
@@ -14255,7 +14255,7 @@
 - **Suppression:** `0.65`
 - **Question:** Constraint microbiome_symbiosis appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F011` (16 members)
+- **Family:** `F010` (17 members)
 
 ---
 
@@ -14273,7 +14273,7 @@
 - **Suppression:** `0.65`
 - **Question:** Distinguishing microbial dysfunction as a cause versus a symptom of chronic illness.
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F011` (16 members)
+- **Family:** `F010` (17 members)
 
 ---
 
@@ -14291,7 +14291,7 @@
 - **Suppression:** `0.50`
 - **Question:** Constraint moores_law appears as rope to individuals but snare to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F004` (72 members)
+- **Family:** `F004` (73 members)
 
 ---
 
@@ -14309,7 +14309,7 @@
 - **Suppression:** `0.40`
 - **Question:** Distinguishing inherent risk of advice from circumstantial risk.
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F004` (72 members)
+- **Family:** `F004` (73 members)
 
 ---
 
@@ -14327,7 +14327,7 @@
 - **Suppression:** `0.40`
 - **Question:** Constraint advice_as_dangerous_gift appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F004` (72 members)
+- **Family:** `F004` (73 members)
 
 ---
 
@@ -14345,7 +14345,7 @@
 - **Suppression:** `0.45`
 - **Question:** Constraint china_africa_zero_tariff_2026 appears as tangled_rope to individuals but rope to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F004` (72 members)
+- **Family:** `F004` (73 members)
 
 ---
 
@@ -14363,7 +14363,7 @@
 - **Suppression:** `0.40`
 - **Question:** Constraint olympic_legacy_curling_investment appears as tangled_rope to individuals but rope to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F004` (72 members)
+- **Family:** `F004` (73 members)
 
 ---
 
@@ -14381,7 +14381,7 @@
 - **Suppression:** `0.30`
 - **Question:** Constraint education_unbundling_implementation appears as rope to individuals but snare to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F004` (72 members)
+- **Family:** `F004` (73 members)
 
 ---
 
@@ -14417,7 +14417,7 @@
 - **Suppression:** `0.30`
 - **Question:** Constraint goodstein_theorem_finite_proof appears as tangled_rope to individuals but rope to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F004` (72 members)
+- **Family:** `F004` (73 members)
 
 ---
 
@@ -14435,7 +14435,7 @@
 - **Suppression:** `0.70`
 - **Question:** Constraint matching_markets_general appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F011` (16 members)
+- **Family:** `F010` (17 members)
 
 ---
 
@@ -14453,7 +14453,7 @@
 - **Suppression:** `0.30`
 - **Question:** Constraint shitty_feedback_handling appears as snare to individuals but tangled_rope to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F010` (16 members)
+- **Family:** `F011` (16 members)
 
 ---
 
@@ -14543,7 +14543,7 @@
 - **Suppression:** `0.60`
 - **Question:** Constraint rfc9293_state_machine appears as tangled_rope to individuals but rope to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F004` (72 members)
+- **Family:** `F004` (73 members)
 
 ---
 
@@ -14633,7 +14633,7 @@
 - **Suppression:** `0.65`
 - **Question:** Constraint boltzmann_universality_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F004` (72 members)
+- **Family:** `F004` (73 members)
 
 ---
 
@@ -14651,7 +14651,7 @@
 - **Suppression:** `0.45`
 - **Question:** Constraint france_local_elections_march_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F037` (1 members)
+- **Family:** `F036` (1 members)
 
 ---
 
@@ -14669,7 +14669,7 @@
 - **Suppression:** `0.40`
 - **Question:** Constraint migration_decision_threshold appears as tangled_rope to individuals but rope to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F004` (72 members)
+- **Family:** `F004` (73 members)
 
 ---
 
@@ -14705,7 +14705,7 @@
 - **Suppression:** `0.40`
 - **Question:** Constraint sadhu_integrity_protocol appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F004` (72 members)
+- **Family:** `F004` (73 members)
 
 ---
 
@@ -14723,7 +14723,7 @@
 - **Suppression:** `0.40`
 - **Question:** Causality of advisor's internal state vs. narrative of their state on advisee compliance.
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F004` (72 members)
+- **Family:** `F004` (73 members)
 
 ---
 
@@ -14759,7 +14759,7 @@
 - **Suppression:** `0.60`
 - **Question:** Constraint helsinki_bus_theory appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F011` (16 members)
+- **Family:** `F010` (17 members)
 
 ---
 
@@ -14777,7 +14777,7 @@
 - **Suppression:** `0.60`
 - **Question:** Whether all creative paths eventually diverge or if some remain derivative indefinitely.
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F011` (16 members)
+- **Family:** `F010` (17 members)
 
 ---
 
@@ -14795,7 +14795,7 @@
 - **Suppression:** `0.45`
 - **Question:** Constraint omelet_perfection_complexity appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F010` (16 members)
+- **Family:** `F011` (16 members)
 
 ---
 
@@ -14831,7 +14831,7 @@
 - **Suppression:** `0.90`
 - **Question:** Constraint gita_kurukshetra appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F011` (16 members)
+- **Family:** `F010` (17 members)
 
 ---
 
@@ -14849,7 +14849,7 @@
 - **Suppression:** `0.50`
 - **Question:** Constraint lindy_effect appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F004` (72 members)
+- **Family:** `F004` (73 members)
 
 ---
 
@@ -14867,7 +14867,7 @@
 - **Suppression:** `0.50`
 - **Question:** Whether the Lindy Effect holds for rapidly iterating digital phenomena.
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F004` (72 members)
+- **Family:** `F004` (73 members)
 
 ---
 
@@ -14939,7 +14939,7 @@
 - **Suppression:** `0.60`
 - **Question:** Constraint ergodic_theorems appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F011` (16 members)
+- **Family:** `F010` (17 members)
 
 ---
 
@@ -14957,7 +14957,7 @@
 - **Suppression:** `0.60`
 - **Question:** Constraint astm_d638_tensile_testing appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F010` (16 members)
+- **Family:** `F011` (16 members)
 
 ---
 
@@ -14975,7 +14975,7 @@
 - **Suppression:** `0.50`
 - **Question:** Legal precedent for AI training under Fair Use doctrine.
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F011` (16 members)
+- **Family:** `F010` (17 members)
 
 ---
 
@@ -14993,7 +14993,7 @@
 - **Suppression:** `0.50`
 - **Question:** Constraint copyright_protection appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F011` (16 members)
+- **Family:** `F010` (17 members)
 
 ---
 
@@ -15011,7 +15011,7 @@
 - **Suppression:** `0.50`
 - **Question:** Constraint electrification_scale_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F004` (72 members)
+- **Family:** `F004` (73 members)
 
 ---
 
@@ -15029,7 +15029,7 @@
 - **Suppression:** `0.30`
 - **Question:** Constraint guinea_worm_eradication appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F004` (72 members)
+- **Family:** `F004` (73 members)
 
 ---
 
@@ -15065,7 +15065,7 @@
 - **Suppression:** `0.60`
 - **Question:** Physical attainability of the 1.5C target given current global inertia.
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F011` (16 members)
+- **Family:** `F010` (17 members)
 
 ---
 
@@ -15083,7 +15083,7 @@
 - **Suppression:** `0.60`
 - **Question:** Constraint climate_target_one_point_five appears as mountain to individuals but snare to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F011` (16 members)
+- **Family:** `F010` (17 members)
 
 ---
 
@@ -15101,7 +15101,7 @@
 - **Suppression:** `0.20`
 - **Question:** Constraint unclos_2026 appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F010` (16 members)
+- **Family:** `F011` (16 members)
 
 ---
 
@@ -15155,7 +15155,7 @@
 - **Suppression:** `0.20`
 - **Question:** Constraint erasmus_rejoining_scaffold appears as tangled_rope to individuals but scaffold to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F036` (1 members)
+- **Family:** `F035` (1 members)
 
 ---
 
@@ -15191,7 +15191,7 @@
 - **Suppression:** `0.80`
 - **Question:** Constraint ergo_storage_rent_mechanism appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F011` (16 members)
+- **Family:** `F010` (17 members)
 
 ---
 
@@ -15227,7 +15227,7 @@
 - **Suppression:** `0.30`
 - **Question:** Constraint somatic_focusing_awareness appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F010` (16 members)
+- **Family:** `F011` (16 members)
 
 ---
 
@@ -15263,7 +15263,7 @@
 - **Suppression:** `0.20`
 - **Question:** Rate of skill obsolescence and its impact on the long-term extractiveness of continuous certification.
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F010` (16 members)
+- **Family:** `F011` (16 members)
 
 ---
 
@@ -15299,7 +15299,7 @@
 - **Suppression:** `0.50`
 - **Question:** Constraint inner_model_theory_constraints appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F011` (16 members)
+- **Family:** `F010` (17 members)
 
 ---
 
@@ -15317,7 +15317,7 @@
 - **Suppression:** `0.40`
 - **Question:** Constraint logistic_map_dynamics appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F011` (16 members)
+- **Family:** `F010` (17 members)
 
 ---
 
@@ -15353,7 +15353,7 @@
 - **Suppression:** `0.20`
 - **Question:** Resilience of redemption locks against sophisticated economic attacks.
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F004` (72 members)
+- **Family:** `F004` (73 members)
 
 ---
 
@@ -15425,7 +15425,7 @@
 - **Suppression:** `0.40`
 - **Question:** Constraint large_cardinal_foundations appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F011` (16 members)
+- **Family:** `F010` (17 members)
 
 ---
 
@@ -15443,7 +15443,7 @@
 - **Suppression:** `0.15`
 - **Question:** Uncertainty over Soviet command-and-control and response doctrine during the crisis.
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F010` (16 members)
+- **Family:** `F011` (16 members)
 
 ---
 
@@ -15461,7 +15461,7 @@
 - **Suppression:** `0.20`
 - **Question:** Constraint golden_handcuffs appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F011` (16 members)
+- **Family:** `F010` (17 members)
 
 ---
 
@@ -15589,7 +15589,7 @@
 - **Suppression:** `0.30`
 - **Question:** Constraint viral_emergence_covid19_exemplar appears as snare to individuals but piton to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F043` (1 members)
+- **Family:** `F041` (1 members)
 
 ---
 
@@ -15607,7 +15607,7 @@
 - **Suppression:** `0.20`
 - **Question:** The objectivity vs. subjectivity of the "reasonable doubt" standard.
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F010` (16 members)
+- **Family:** `F011` (16 members)
 
 ---
 
@@ -16165,7 +16165,7 @@
 - **Suppression:** `0.05`
 - **Question:** Constraint quine_self_replication appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 - **Resolution Strategy:** Investigate why analyst sees worse than affected population. Possible causes: information asymmetry, normalization of extraction, or genuine coordination value invisible to outsiders.
-- **Family:** `F040` (1 members)
+- **Family:** `F039` (1 members)
 
 ---
 
@@ -16515,7 +16515,7 @@
 
 - **Severity:** `low` (score: 0.105)
 - **Constraint:** `rogue_wave_control_2026`
-- **Domain:** `unknown_novel`
+- **Domain:** `tangled_rope`
 - **Orbit Signature:** `[tangled_rope]`
 - **Orbit Span:** `0`
 - **Gap Class:** `consensus`
@@ -16525,7 +16525,7 @@
 - **Suppression:** `0.10`
 - **Question:** Constraint rogue_wave_control_2026 appears as tangled_rope to individuals but rope to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F041` (1 members)
+- **Family:** `F010` (17 members)
 
 ---
 
@@ -17305,7 +17305,7 @@
 
 ## Family Index (24 families with 5+ members)
 
-### F001: [rope, snare] / coordination_washing / snare (265 members)
+### F001: [rope, snare] / coordination_washing / snare (267 members)
 
 - `abstraction_boundary_overrun`
 - `academic_tenure_system`
@@ -17315,6 +17315,7 @@
 - `agency_atrophy`
 - `ai_banal_capture`
 - `ai_driven_surveillance_sensor_layer`
+- `ai_evaluators_matching`
 - `ai_nonconsensual_content_facilitation`
 - `ai_professional_displacement`
 - `airport_slot_use_it_or_lose_it`
@@ -17542,6 +17543,7 @@
 - `thai_senate_veto_2026`
 - `the_bacchae_madness_protocol`
 - `the_calm_protocol_suppression`
+- `theatrical_neutrality`
 - `toxic_social_infection`
 - `tractarian_logic_limit`
 - `tx_hispanic_pivot`
@@ -17854,8 +17856,9 @@
 - `us_tariffs_2025`
 - `yc_equity_squeeze`
 
-### F004: [rope, tangled_rope] / coordination_washing / tangled_rope (72 members)
+### F004: [rope, tangled_rope] / coordination_washing / tangled_rope (73 members)
 
+- `access_arbitrage`
 - `advice_as_dangerous_gift`
 - `advice_as_dangerous_gift`
 - `alzheimers_levetiracetam`
@@ -18123,26 +18126,7 @@
 - `ulysses_rocks_1904`
 - `ulysses_tower_1904`
 
-### F010: [rope, tangled_rope] / coordination_washing / rope (16 members)
-
-- `astm_d638_tensile_testing`
-- `burden_of_proof_legal_criminal`
-- `cuban_missile_crisis_excomm_deliberation`
-- `fmeca_procedures_1980`
-- `gs1_gln_identification`
-- `gs1_standardized_identification`
-- `magna_carta_liberties`
-- `omelet_perfection_complexity`
-- `private_identity_integration`
-- `quantum_entanglement_protocol`
-- `shitty_feedback_handling`
-- `skills_based_hiring`
-- `somatic_focusing_awareness`
-- `tcp_rfc9293_interoperability`
-- `transient_event_detection`
-- `unclos_2026`
-
-### F011: [tangled_rope] / consensus / tangled_rope (16 members)
+### F010: [tangled_rope] / consensus / tangled_rope (17 members)
 
 - `climate_target_one_point_five`
 - `climate_target_one_point_five`
@@ -18160,6 +18144,26 @@
 - `matching_markets_general`
 - `microbiome_symbiosis`
 - `microbiome_symbiosis`
+- `rogue_wave_control_2026`
+
+### F011: [rope, tangled_rope] / coordination_washing / rope (16 members)
+
+- `astm_d638_tensile_testing`
+- `burden_of_proof_legal_criminal`
+- `cuban_missile_crisis_excomm_deliberation`
+- `fmeca_procedures_1980`
+- `gs1_gln_identification`
+- `gs1_standardized_identification`
+- `magna_carta_liberties`
+- `omelet_perfection_complexity`
+- `private_identity_integration`
+- `quantum_entanglement_protocol`
+- `shitty_feedback_handling`
+- `skills_based_hiring`
+- `somatic_focusing_awareness`
+- `tcp_rfc9293_interoperability`
+- `transient_event_detection`
+- `unclos_2026`
 
 ### F012: [scaffold, snare, tangled_rope] / coordination_washing / snare (12 members)
 
@@ -18299,7 +18303,7 @@
 - `fiscal_equalization_friction`
 - `glp1_payload_efficiency_pivot`
 
-## Appendix: Small Families (19 families, 37 omegas, <5 members each)
+## Appendix: Small Families (17 families, 33 omegas, <5 members each)
 
 | Family | Orbit Signature | Gap Class | Domain | Count |
 |--------|----------------|-----------|--------|------:|
@@ -18307,21 +18311,19 @@
 | F026 | [scaffold, tangled_rope] | coordination_washing | scaffold | 4 |
 | F027 | [rope] | consensus | tangled_rope | 4 |
 | F028 | [piton, rope] | coordination_washing | piton | 4 |
-| F029 | [rope, snare] | coordination_washing | unknown_novel | 3 |
-| F030 | [indexically_opaque, rope, tangled_rope] | powerless_blind | snare | 3 |
-| F031 | [snare, tangled_rope] | consensus | snare | 2 |
-| F032 | [indexically_opaque, snare, tangled_rope] | analytical_blind | snare | 2 |
-| F033 | [rope, tangled_rope] | coordination_washing | unknown_novel | 1 |
-| F034 | [scaffold, snare] | coordination_washing | scaffold | 1 |
-| F035 | [rope, scaffold, tangled_rope] | coordination_washing | tangled_rope | 1 |
-| F036 | [rope, scaffold, tangled_rope] | coordination_washing | scaffold | 1 |
-| F037 | [scaffold, tangled_rope] | coordination_washing | tangled_rope | 1 |
-| F038 | [indexically_opaque, snare, tangled_rope] | powerless_blind | snare | 1 |
-| F039 | [scaffold, snare, tangled_rope] | coordination_washing | scaffold | 1 |
-| F040 | [mountain, rope] | protective_framing | tangled_rope | 1 |
-| F041 | [tangled_rope] | consensus | unknown_novel | 1 |
-| F042 | [rope, tangled_rope] | consensus | tangled_rope | 1 |
-| F043 | [piton, rope] | coordination_washing | tangled_rope | 1 |
+| F029 | [indexically_opaque, rope, tangled_rope] | powerless_blind | snare | 3 |
+| F030 | [snare, tangled_rope] | consensus | snare | 2 |
+| F031 | [indexically_opaque, snare, tangled_rope] | analytical_blind | snare | 2 |
+| F032 | [rope, snare] | coordination_washing | unknown_novel | 1 |
+| F033 | [scaffold, snare] | coordination_washing | scaffold | 1 |
+| F034 | [rope, scaffold, tangled_rope] | coordination_washing | tangled_rope | 1 |
+| F035 | [rope, scaffold, tangled_rope] | coordination_washing | scaffold | 1 |
+| F036 | [scaffold, tangled_rope] | coordination_washing | tangled_rope | 1 |
+| F037 | [indexically_opaque, snare, tangled_rope] | powerless_blind | snare | 1 |
+| F038 | [scaffold, snare, tangled_rope] | coordination_washing | scaffold | 1 |
+| F039 | [mountain, rope] | protective_framing | tangled_rope | 1 |
+| F040 | [rope, tangled_rope] | consensus | tangled_rope | 1 |
+| F041 | [piton, rope] | coordination_washing | tangled_rope | 1 |
 
 *Full member lists for small families available in `enriched_omega_data.json`.*
 
@@ -18329,10 +18331,10 @@
 
 | Domain | Count | Mean Score |
 |--------|------:|-----------:|
-| snare | 638 | 0.682 |
+| unknown_novel | 1 | 0.705 |
+| snare | 640 | 0.682 |
 | piton | 90 | 0.663 |
-| unknown_novel | 5 | 0.559 |
-| tangled_rope | 97 | 0.426 |
+| tangled_rope | 99 | 0.423 |
 | scaffold | 18 | 0.310 |
 | rope | 55 | 0.288 |
 | mountain | 56 | 0.078 |

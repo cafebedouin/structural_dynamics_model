@@ -22,17 +22,17 @@
 
 | Domain | N | Avg Variance | High Variance % |
 |--------|---|--------------|----------------|
+| unknown_novel        |   2 |         1.00 |          100.0% |
 | piton                |  91 |         0.98 |           97.8% |
-| unknown_novel        |   7 |         0.93 |           85.7% |
-| snare                | 638 |         0.89 |           96.2% |
+| snare                | 640 |         0.89 |           96.2% |
 | scaffold             |  21 |         0.82 |           85.7% |
-| tangled_rope         |  90 |         0.78 |           82.2% |
+| tangled_rope         |  92 |         0.78 |           82.6% |
 | rope                 |  60 |         0.69 |           65.0% |
-| mountain             | 127 |         0.40 |           15.0% |
+| mountain             | 128 |         0.40 |           14.8% |
 
 ## Key Findings
 
-1. **Domain variance spread:** piton shows highest variance (0.98), while mountain shows lowest (0.40)
+1. **Domain variance spread:** unknown_novel shows highest variance (1.00), while mountain shows lowest (0.40)
 
 2. **High stability:** 54.8% of constraints are completely stable across index configs
 
@@ -49,7 +49,7 @@ Constraints that change type frequently based on index configuration:
 | academic_fashion_modernism_2026 | 1.00 |       3 |     3 | piton      | piton        |
 | academic_peer_review_gatekeeping | 1.00 |       3 |     3 | snare      | tangled_rope |
 | academic_tenure_system         | 1.00 |       3 |     3 | snare      | tangled_rope |
-| access_arbitrage               | 1.00 |       2 |     2 | unknown_novel | tangled_rope |
+| access_arbitrage               | 1.00 |       2 |     2 | tangled_rope | tangled_rope |
 | ad_fus_coordination            | 1.00 |       4 |     4 | snare      | tangled_rope |
 | ad_synaptic_deficit            | 1.00 |       3 |     3 | snare      | tangled_rope |
 | adaptive_lag_trap              | 1.00 |       4 |     4 | snare      | tangled_rope |

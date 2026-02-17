@@ -21,36 +21,39 @@ from pathlib import Path
 from typing import Dict, List, Optional, Tuple
 
 # =============================================================================
-# THRESHOLDS (from logic.md canonical definitions)
+# THRESHOLDS — loaded from prolog/config.pl (single source of truth)
 # =============================================================================
 
-# Mountain: ε ≤ 0.15, suppression ≤ 0.05
-MOUNTAIN_MAX_EXTRACTIVENESS = 0.15
-MOUNTAIN_MAX_SUPPRESSION = 0.05
+def _read_config():
+    """Read param/2 values from prolog/config.pl."""
+    config_path = Path(__file__).resolve().parent.parent / "prolog" / "config.pl"
+    thresholds = {}
+    try:
+        with open(config_path, 'r', encoding='utf-8') as f:
+            for line in f:
+                match = re.search(r"param\((\w+),\s*(-?[\d.]+)\)", line)
+                if match:
+                    param_name = match.group(1)
+                    try:
+                        thresholds[param_name] = float(match.group(2))
+                    except ValueError:
+                        pass
+    except Exception as e:
+        print(f"Warning: Could not read {config_path}: {e}", file=sys.stderr)
+    return thresholds
 
-# Snare: ε ≥ 0.46, suppression ≥ 0.60
-SNARE_MIN_EXTRACTIVENESS = 0.46
-SNARE_MIN_SUPPRESSION = 0.60
+_CFG = _read_config()
 
-# Tangled Rope: ε ≥ 0.50, suppression ≥ 0.40
-TANGLED_MIN_EXTRACTIVENESS = 0.50
-TANGLED_MIN_SUPPRESSION = 0.40
-
-# Piton: theater ≥ 0.70
-PITON_MIN_THEATER = 0.70
-
-# Scaffold: theater < 0.70
-SCAFFOLD_MAX_THEATER = 0.70
-
-# Category A naturalization: mountain + ε > 0.15 + enforcement
-# Category A+ upgrade: also theater > 0.50
-THEATER_NATURALIZATION_THRESHOLD = 0.50
-
-# Category B theater-mountain conflict: mountain + theater > 0.50 (not in A)
-THEATER_CONFLICT_THRESHOLD = 0.50
-
-# Category D WHO suspects: ε > 0.46
-WHO_MIN_EXTRACTIVENESS = 0.46
+MOUNTAIN_MAX_EXTRACTIVENESS = _CFG.get('mountain_extractiveness_max', 0.25)
+MOUNTAIN_MAX_SUPPRESSION = _CFG.get('mountain_suppression_ceiling', 0.05)
+SNARE_MIN_EXTRACTIVENESS = _CFG.get('snare_epsilon_floor', 0.46)
+SNARE_MIN_SUPPRESSION = _CFG.get('snare_suppression_floor', 0.60)
+TANGLED_MIN_SUPPRESSION = _CFG.get('tangled_rope_suppression_floor', 0.40)
+PITON_MIN_THEATER = _CFG.get('piton_theater_floor', 0.70)
+SCAFFOLD_MAX_THEATER = _CFG.get('piton_theater_floor', 0.70)
+THEATER_NATURALIZATION_THRESHOLD = _CFG.get('audit_theater_naturalization_threshold', 0.50)
+THEATER_CONFLICT_THRESHOLD = _CFG.get('audit_theater_conflict_threshold', 0.50)
+WHO_MIN_EXTRACTIVENESS = _CFG.get('snare_epsilon_floor', 0.46)
 
 # Valid claim values (E1 check)
 VALID_CLAIM_VALUES = {
