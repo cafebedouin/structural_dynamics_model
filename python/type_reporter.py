@@ -1,12 +1,15 @@
 #!/usr/bin/env python3
 """
-Parameterized type reporter — replaces snare/piton/scaffold/rope/true_mountain
-reporters plus count_computed_classifications and high_friction.
+Parameterized type reporter — replaces snare/piton/scaffold/rope/true_mountain/
+tangled_rope/false_mountain reporters plus count_computed_classifications and
+high_friction.
 
 Reads outputs/pipeline_output.json instead of regex-parsing output.txt.
 
 Usage:
     python3 type_reporter.py --type snare
+    python3 type_reporter.py --type tangled_rope
+    python3 type_reporter.py --type false_mountain
     python3 type_reporter.py --type mountain
     python3 type_reporter.py --all
     python3 type_reporter.py --summary counts
@@ -32,9 +35,10 @@ _PIPELINE_JSON = _OUTPUT_DIR / 'pipeline_output.json'
 # ---------------------------------------------------------------------------
 # Type configs
 # ---------------------------------------------------------------------------
-# family: "diagnostic" (A) or "validation" (B)
+# family: "diagnostic" (A), "validation" (B), or "false_mountain" (C)
 #   diagnostic — one entry per omega, dedup on (name, omega_question)
 #   validation — one entry per constraint, dedup on name
+#   false_mountain — one entry per gap, dedup on (name, gap_detected)
 
 TYPE_CONFIGS = {
     'snare': {
@@ -101,6 +105,32 @@ TYPE_CONFIGS = {
         'sort_key': lambda e: e['name'],
         'fields': ['signature', 'orbit', 'agreement'],
     },
+    'tangled_rope': {
+        'family': 'diagnostic',
+        'filter_type': 'tangled_rope',
+        'custom_filter': 'any_perspective',
+        'require_unanimity': False,
+        'report_title': 'Tangled Rope Diagnostic Report',
+        'entity_label': 'Tangled Rope',
+        'entity_label_plural': 'Tangled Ropes',
+        'output_filename': 'tangled_rope_report.md',
+        'found_msg': 'Found {n} constraints classified as Tangled Ropes.',
+        'empty_msg': 'No constraints classified as Tangled Ropes found.',
+        'sort_key': lambda e: (e['severity'] != 'critical', e['name']),
+        'show_all_perspectives': True,
+        'bold_perspectives': False,
+        'always_show_gap': True,
+    },
+    'false_mountain': {
+        'family': 'false_mountain',
+        'report_title': 'False Mountain Diagnostic Report',
+        'entity_label': 'False Mountain',
+        'entity_label_plural': 'False Mountains',
+        'output_filename': 'false_mountain_report.md',
+        'found_msg': 'Found {n} unique False Mountains.',
+        'empty_msg': 'No False Mountains found.',
+        'sort_key': lambda e: (e['severity'] != 'critical', e['name']),
+    },
 }
 
 # ---------------------------------------------------------------------------
@@ -139,6 +169,16 @@ def filter_constraints(constraints, filter_type, require_unanimity):
     return results
 
 
+def _filter_any_perspective(constraints, type_name):
+    """Return constraints where ANY perspective value equals type_name."""
+    results = []
+    for c in constraints:
+        perspectives = c.get('perspectives', {})
+        if any(v == type_name for v in perspectives.values()):
+            results.append(c)
+    return results
+
+
 # ---------------------------------------------------------------------------
 # Gap/alert formatting
 # ---------------------------------------------------------------------------
@@ -158,24 +198,41 @@ def _format_gap_alert(gap):
     return f"! GAP: {gap_type} ({detail})"
 
 
+def _format_gap_detected(gap):
+    """Convert a gap dict into readable text (false_mountain variant).
+
+    Like _format_gap_alert but only triggers ALERT for 'masked'.
+    """
+    gap_type = gap.get('gap_type', '')
+    parts = []
+    for key in ('powerless_type', 'institutional_type', 'analytical_type',
+                'moderate_type'):
+        if key in gap:
+            parts.append(f"{key.replace('_type', '')}: {gap[key]}")
+    detail = ', '.join(parts)
+    if 'masked' in gap_type.lower():
+        return f"! ALERT: {gap_type} ({detail})"
+    return f"! GAP: {gap_type} ({detail})"
+
+
 # ---------------------------------------------------------------------------
-# Normalization — JSON constraint → flat report-ready dicts
+# Normalization — JSON constraint -> flat report-ready dicts
 # ---------------------------------------------------------------------------
 
 def _normalize_diagnostic(constraint):
     """Family A: emit one entry per omega."""
     base = {
         'name': constraint['id'],
-        'claimed_type': constraint.get('claimed_type', 'N/A'),
-        'powerless_view': constraint.get('perspectives', {}).get('powerless', 'N/A'),
-        'institutional_view': constraint.get('perspectives', {}).get('institutional', 'N/A'),
-        'analytical_view': constraint.get('perspectives', {}).get('analytical', 'N/A'),
-        'structural_signature': constraint.get('signature', 'N/A') or 'N/A',
+        'claimed_type': constraint.get('claimed_type') or 'N/A',
+        'powerless_view': constraint.get('perspectives', {}).get('powerless') or 'N/A',
+        'institutional_view': constraint.get('perspectives', {}).get('institutional') or 'N/A',
+        'analytical_view': constraint.get('perspectives', {}).get('analytical') or 'N/A',
+        'structural_signature': constraint.get('signature') or 'N/A',
         'related_gap_alert': 'N/A',
         'resolution_strategy': constraint.get('resolution_strategy') or 'N/A',
     }
 
-    # Gap/alert — use first gap
+    # Gap/alert -- use first gap
     gaps = constraint.get('gaps') or []
     if gaps:
         base['related_gap_alert'] = _format_gap_alert(gaps[0])
@@ -190,8 +247,8 @@ def _normalize_diagnostic(constraint):
     entries = []
     for omega in omegas:
         entry = dict(base)
-        entry['omega_question'] = omega.get('question', 'N/A')
-        entry['severity'] = omega.get('severity', 'N/A') or 'N/A'
+        entry['omega_question'] = omega.get('question') or 'N/A'
+        entry['severity'] = omega.get('severity') or 'N/A'
         entries.append(entry)
     return entries
 
@@ -216,6 +273,45 @@ def _normalize_validation(constraint):
         entry['omega_question'] = omegas[0].get('question', 'N/A')
 
     return [entry]
+
+
+def _normalize_false_mountain(constraints):
+    """False mountain: one entry per gap (gap-as-entity normalization)."""
+    entries = []
+    for c in constraints:
+        gaps = c.get('gaps') or []
+        if not gaps:
+            continue
+
+        omegas = c.get('omegas') or []
+        perspectives = c.get('perspectives', {})
+
+        for gap in gaps:
+            entry = {
+                'name': c['id'],
+                'powerless_view': gap.get('powerless_type') or perspectives.get('powerless') or 'N/A',
+                'institutional_view': gap.get('institutional_type') or perspectives.get('institutional') or 'N/A',
+                'gap_detected': _format_gap_detected(gap),
+                'resolution_strategy': c.get('resolution_strategy') or 'N/A',
+            }
+
+            # Severity: use highest severity among omegas
+            if omegas:
+                severity_order = {'critical': 0, 'high': 1, 'moderate': 2, 'unknown': 3}
+                best = min(omegas, key=lambda o: severity_order.get(o.get('severity', 'unknown'), 99))
+                entry['severity'] = best.get('severity') or 'N/A'
+            else:
+                entry['severity'] = 'N/A'
+
+            # Omega: show id (type) format
+            if omegas:
+                o = omegas[0]
+                entry['omega_question'] = f"{o['id']} ({o.get('type', 'conceptual')})"
+            else:
+                entry['omega_question'] = 'N/A'
+
+            entries.append(entry)
+    return entries
 
 
 def normalize_entries(constraints, family):
@@ -246,6 +342,18 @@ def dedup_entries(entries, family):
     return unique
 
 
+def _dedup_false_mountain(entries):
+    """Dedup on (name, gap_detected)."""
+    seen = set()
+    unique = []
+    for e in entries:
+        key = (e['name'], e['gap_detected'])
+        if key not in seen:
+            seen.add(key)
+            unique.append(e)
+    return unique
+
+
 def sort_entries(entries, sort_key):
     return sorted(entries, key=sort_key)
 
@@ -257,6 +365,9 @@ def sort_entries(entries, sort_key):
 def _write_diagnostic_report(entries, cfg, output_path, orbit_data):
     label = cfg['entity_label']
     label_plural = cfg['entity_label_plural']
+    show_all = cfg.get('show_all_perspectives', False)
+    bold_persp = cfg.get('bold_perspectives', True)
+    always_gap = cfg.get('always_show_gap', False)
 
     with open(output_path, 'w', encoding='utf-8') as f:
         f.write(f"# {cfg['report_title']}\n\n")
@@ -269,18 +380,28 @@ def _write_diagnostic_report(entries, cfg, output_path, orbit_data):
             f.write(f"*   **Severity:** `{e['severity']}`\n")
 
             f.write(f"*   **Perspectival Breakdown:**\n")
-            if e['powerless_view'] not in ('N/A', 'unknown', None):
-                f.write(f"    *   **Individual (Powerless) View:** `{e['powerless_view']}`\n")
-            if e['institutional_view'] not in ('N/A', 'unknown', None):
-                f.write(f"    *   **Institutional (Manager) View:** `{e['institutional_view']}`\n")
-            if e['analytical_view'] not in ('N/A', 'unknown', None):
-                f.write(f"    *   **Analytical View:** `{e['analytical_view']}`\n")
+            if show_all:
+                if bold_persp:
+                    f.write(f"    *   **Individual (Powerless) View:** `{e['powerless_view']}`\n")
+                    f.write(f"    *   **Institutional (Manager) View:** `{e['institutional_view']}`\n")
+                    f.write(f"    *   **Analytical View:** `{e['analytical_view']}`\n")
+                else:
+                    f.write(f"    *   Individual (Powerless) View: `{e['powerless_view']}`\n")
+                    f.write(f"    *   Institutional (Manager) View: `{e['institutional_view']}`\n")
+                    f.write(f"    *   Analytical View: `{e['analytical_view']}`\n")
+            else:
+                if e['powerless_view'] not in ('N/A', 'unknown', None):
+                    f.write(f"    *   **Individual (Powerless) View:** `{e['powerless_view']}`\n")
+                if e['institutional_view'] not in ('N/A', 'unknown', None):
+                    f.write(f"    *   **Institutional (Manager) View:** `{e['institutional_view']}`\n")
+                if e['analytical_view'] not in ('N/A', 'unknown', None):
+                    f.write(f"    *   **Analytical View:** `{e['analytical_view']}`\n")
 
             f.write(f"*   **Structural Signature Analysis:** {e['structural_signature']}\n")
             orbit_sig = get_orbit_signature(orbit_data, e['name'])
             f.write(f"*   **Orbit Signature:** `{format_orbit_signature(orbit_sig)}`\n")
 
-            if e['related_gap_alert'] != 'N/A':
+            if always_gap or e['related_gap_alert'] != 'N/A':
                 f.write(f"*   **Related Gap/Alert:** {e['related_gap_alert']}\n")
 
             f.write(f"*   **Generated Omega:** {e['omega_question']}\n")
@@ -341,6 +462,45 @@ def _write_validation_empty(cfg, output_path):
 
 
 # ---------------------------------------------------------------------------
+# Report writing — false mountain (Family C)
+# ---------------------------------------------------------------------------
+
+def _write_false_mountain_report(entries, cfg, output_path, orbit_data):
+    label = cfg['entity_label']
+    label_plural = cfg['entity_label_plural']
+
+    with open(output_path, 'w', encoding='utf-8') as f:
+        f.write(f"# {cfg['report_title']}\n\n")
+        f.write(f"**Total Unique {label_plural} Found:** {len(entries)}\n\n")
+        f.write("---\n\n")
+
+        for i, fm in enumerate(entries, 1):
+            f.write(f"### {i}. {label}: `{fm['name']}`\n\n")
+            f.write(f"*   **Severity:** `{fm['severity']}`\n")
+            orbit_sig = get_orbit_signature(orbit_data, fm['name'])
+            f.write(f"*   **Orbit Signature:** `{format_orbit_signature(orbit_sig)}`\n")
+            f.write(f"*   **Gap Detected:** {fm['gap_detected']}\n")
+
+            if fm['powerless_view'] != 'N/A' or fm['institutional_view'] != 'N/A':
+                f.write(f"*   **Perspectival Mismatch:**\n")
+                if fm['powerless_view'] != 'N/A':
+                    f.write(f"    *   **Powerless View:** `{fm['powerless_view']}`\n")
+                if fm['institutional_view'] != 'N/A':
+                    f.write(f"    *   **Institutional View:** `{fm['institutional_view']}`\n")
+
+            f.write(f"*   **Generated Omega:** {fm['omega_question']}\n")
+            f.write(f"*   **Suggested Resolution Strategy:**\n")
+            f.write(f"    ```\n{fm['resolution_strategy']}\n    ```\n\n")
+            f.write("---\n\n")
+
+
+def _write_false_mountain_empty(cfg, output_path):
+    with open(output_path, 'w', encoding='utf-8') as f:
+        f.write(f"# {cfg['report_title']}\n\n")
+        f.write(f"**Total Unique {cfg['entity_label_plural']} Found:** 0\n")
+
+
+# ---------------------------------------------------------------------------
 # Unified report driver
 # ---------------------------------------------------------------------------
 
@@ -350,16 +510,35 @@ def run_type_report(type_key, pipeline_data, orbit_data):
     family = cfg['family']
     constraints = pipeline_data['per_constraint']
 
-    filtered = filter_constraints(constraints, cfg['filter_type'],
-                                  cfg['require_unanimity'])
-    entries = normalize_entries(filtered, family)
-    entries = dedup_entries(entries, family)
+    # Filtering
+    if cfg.get('custom_filter') == 'any_perspective':
+        filtered = _filter_any_perspective(constraints, cfg['filter_type'])
+    elif family == 'false_mountain':
+        filtered = constraints
+    else:
+        filtered = filter_constraints(constraints, cfg['filter_type'],
+                                      cfg['require_unanimity'])
+
+    # Normalization
+    if family == 'false_mountain':
+        entries = _normalize_false_mountain(filtered)
+    else:
+        entries = normalize_entries(filtered, family)
+
+    # Dedup
+    if family == 'false_mountain':
+        entries = _dedup_false_mountain(entries)
+    else:
+        entries = dedup_entries(entries, family)
+
     entries = sort_entries(entries, cfg['sort_key'])
 
     output_path = _OUTPUT_DIR / cfg['output_filename']
 
     if entries:
-        if family == 'diagnostic':
+        if family == 'false_mountain':
+            _write_false_mountain_report(entries, cfg, output_path, orbit_data)
+        elif family == 'diagnostic':
             _write_diagnostic_report(entries, cfg, output_path, orbit_data)
         else:
             _write_validation_report(entries, cfg, output_path, orbit_data)
@@ -367,7 +546,9 @@ def run_type_report(type_key, pipeline_data, orbit_data):
         print(f"Generating report at {output_path}...")
         print("Report generated successfully.")
     else:
-        if family == 'diagnostic':
+        if family == 'false_mountain':
+            _write_false_mountain_empty(cfg, output_path)
+        elif family == 'diagnostic':
             _write_diagnostic_empty(cfg, output_path)
         else:
             _write_validation_empty(cfg, output_path)

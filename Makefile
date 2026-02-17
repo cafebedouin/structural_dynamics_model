@@ -354,15 +354,14 @@ $(MOUNTAIN_REPORT): $(PIPELINE_JSON) $(ORBIT_NORM_STAMP)
 	python3 $(PYTHON_DIR)/type_reporter.py --type mountain 2>&1 || true
 	echo "[REPORT] Done -> true_mountain_report.md"
 
-# Family C: separate reporters
 $(TANGLED_ROPE_REPORT): $(PIPELINE_JSON) $(ORBIT_NORM_STAMP)
 	echo "[REPORT] Generating tangled_rope report..."
-	python3 $(PYTHON_DIR)/tangled_rope_reporter.py 2>&1 || true
+	python3 $(PYTHON_DIR)/type_reporter.py --type tangled_rope 2>&1 || true
 	echo "[REPORT] Done -> tangled_rope_report.md"
 
 $(FALSE_MOUNTAIN_REPORT): $(PIPELINE_JSON) $(ORBIT_NORM_STAMP)
 	echo "[REPORT] Generating false_mountain report..."
-	python3 $(PYTHON_DIR)/false_mountain_reporter.py 2>&1 || true
+	python3 $(PYTHON_DIR)/type_reporter.py --type false_mountain 2>&1 || true
 	echo "[REPORT] Done -> false_mountain_report.md"
 
 # ==============================================================================

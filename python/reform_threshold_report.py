@@ -42,7 +42,7 @@ from pathlib import Path
 
 # ── Paths ────────────────────────────────────────────────────────────────────
 
-BASE = Path("/home/scott/bin/structural_dynamics_model")
+BASE = Path(__file__).resolve().parent.parent
 FINGERPRINT = BASE / "outputs" / "fingerprint_report.md"
 CORPUS_DATA = BASE / "outputs" / "corpus_data.json"
 TESTSET_DIR = BASE / "prolog" / "testsets"

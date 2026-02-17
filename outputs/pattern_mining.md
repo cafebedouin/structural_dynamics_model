@@ -31,26 +31,26 @@ Constraints with identical structural signatures but different claimed types.
 
 | Signature | Count | Types Present | Domains | Examples |
 |-----------|-------|---------------|---------|----------|
-| (0.6, 0.7, False, True)        |    76 | piton, tangled_rope, snare | piton, snare    | ai_performance_watermark, ai_religion_regulation |
-| (0.8, 0.7, False, True)        |    68 | piton, tangled_rope, snare | piton, snare    | abstraction_boundary_overrun, adaptive_lag_trap |
-| (0.8, 0.8, False, True)        |    68 | piton, tangled_rope, snare | unknown_novel, piton, snare | ad_fus_coordination, ai_driven_surveillance_sensor_layer |
-| (0.6, 0.8, False, True)        |    51 | piton, tangled_rope  | piton, snare    | ai_compute_capital_moat, airbnb_str_regulation |
-| (0.9, 0.8, False, True)        |    50 | piton, tangled_rope, snare | piton, snare    | adversarial_truth_decay, agency_atrophy |
-| (0.5, 0.7, False, True)        |    42 | piton, tangled_rope, snare | piton, snare    | ai_auditability_gap, ai_training_data_dependency |
-| (0.7, 0.8, False, True)        |    42 | piton, tangled_rope, snare | piton, snare    | ai_banal_capture, ai_professional_displacement |
+| (0.6, 0.7, False, True)        |    76 | tangled_rope, piton, snare | piton, snare    | ai_performance_watermark, ai_religion_regulation |
+| (0.8, 0.7, False, True)        |    68 | tangled_rope, piton, snare | piton, snare    | abstraction_boundary_overrun, adaptive_lag_trap |
+| (0.8, 0.8, False, True)        |    68 | tangled_rope, piton, snare | unknown_novel, piton, snare | ad_fus_coordination, ai_driven_surveillance_sensor_layer |
+| (0.6, 0.8, False, True)        |    51 | tangled_rope, piton  | piton, snare    | ai_compute_capital_moat, airbnb_str_regulation |
+| (0.9, 0.8, False, True)        |    50 | tangled_rope, piton, snare | piton, snare    | adversarial_truth_decay, agency_atrophy |
+| (0.5, 0.7, False, True)        |    42 | tangled_rope, piton, snare | piton, snare    | ai_auditability_gap, ai_training_data_dependency |
+| (0.7, 0.8, False, True)        |    42 | tangled_rope, piton, snare | piton, snare    | ai_banal_capture, ai_professional_displacement |
 | (0.1, 0.1, True, False)        |    39 | rope, mountain       | rope, mountain  | banach_fixed_point_theorem, banach_tarski_paradox |
-| (0.5, 0.8, False, True)        |    38 | scaffold, piton, tangled_rope | scaffold, piton, tangled_rope | ai_adoption_stigma, artificial_scarcity_scaffold |
-| (0.8, 0.9, False, True)        |    35 | piton, tangled_rope, snare | piton, snare    | ad_synaptic_deficit, apartheid_nuclear_program |
-| (0.8, 0.6, False, True)        |    24 | piton, tangled_rope, rope, snare | piton, rope, snare | academic_peer_review_gatekeeping, academic_tenure_system |
-| (0.5, 0.6, False, True)        |    23 | piton, tangled_rope, snare | piton, snare    | ai_task_horizon_reliability, armra_colostrum_regulation |
-| (0.4, 0.5, False, True)        |    19 | scaffold, tangled_rope, rope | scaffold, tangled_rope, rope | bgs_eigenvector_thermalization, constraint_yoneda |
-| (0.7, 0.6, False, True)        |    16 | piton, tangled_rope, snare | piton, snare    | abstraction_leakage, carrying_capacity |
-| (0.3, 0.5, False, True)        |    16 | scaffold, [social_governance], tangled_rope | scaffold, tangled_rope | alzheimers_levetiracetam, china_africa_zero_tariff_2026 |
+| (0.5, 0.8, False, True)        |    38 | tangled_rope, piton, scaffold | tangled_rope, piton, scaffold | ai_adoption_stigma, artificial_scarcity_scaffold |
+| (0.8, 0.9, False, True)        |    35 | tangled_rope, piton, snare | piton, snare    | ad_synaptic_deficit, apartheid_nuclear_program |
+| (0.8, 0.6, False, True)        |    24 | tangled_rope, rope, piton, snare | rope, piton, snare | academic_peer_review_gatekeeping, academic_tenure_system |
+| (0.5, 0.6, False, True)        |    23 | tangled_rope, piton, snare | piton, snare    | ai_task_horizon_reliability, armra_colostrum_regulation |
+| (0.4, 0.5, False, True)        |    19 | tangled_rope, rope, scaffold | tangled_rope, rope, scaffold | bgs_eigenvector_thermalization, constraint_yoneda |
+| (0.7, 0.6, False, True)        |    16 | tangled_rope, piton, snare | piton, snare    | abstraction_leakage, carrying_capacity |
+| (0.3, 0.5, False, True)        |    16 | tangled_rope, scaffold, [social_governance] | tangled_rope, scaffold | alzheimers_levetiracetam, china_africa_zero_tariff_2026 |
 | (0.2, 0.1, True, False)        |    16 | rope, mountain       | rope, mountain  | axiom_of_choice, base_pair_complementarity |
-| (0.9, 0.7, False, True)        |    15 | piton, tangled_rope  | piton, snare    | bureaucratic_legibility_collapse, capital_misallocation_spiral |
-| (0.7, 0.7, False, True)        |    14 | piton, tangled_rope  | piton, snare    | awareness_without_leverage, cb_far_beyond_human |
-| (0.5, 0.5, False, True)        |    13 | tangled_rope, rope   | unknown_novel, tangled_rope, rope | access_arbitrage, aging_longevity_tests |
-| (0.6, 0.6, False, True)        |    13 | piton, tangled_rope  | piton, snare    | boiled_pineapple_trend_2026, carbon_credit_markets_2026 |
+| (0.9, 0.7, False, True)        |    15 | tangled_rope, piton  | piton, snare    | bureaucratic_legibility_collapse, capital_misallocation_spiral |
+| (0.7, 0.7, False, True)        |    14 | tangled_rope, piton  | piton, snare    | awareness_without_leverage, cb_far_beyond_human |
+| (0.5, 0.5, False, True)        |    13 | tangled_rope, rope   | tangled_rope, rope, unknown_novel | access_arbitrage, aging_longevity_tests |
+| (0.6, 0.6, False, True)        |    13 | tangled_rope, piton  | piton, snare    | boiled_pineapple_trend_2026, carbon_credit_markets_2026 |
 
 ## Candidate Category Analysis
 

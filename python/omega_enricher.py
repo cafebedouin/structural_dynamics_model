@@ -24,7 +24,46 @@ from pathlib import Path
 # Import shared utilities
 sys.path.insert(0, str(Path(__file__).parent))
 from orbit_utils import load_orbit_data, get_orbit_signature
-from conflict_map import classify_shift, SEVERITY
+# --- Severity ordering (inlined from conflict_map.py) ---
+
+SEVERITY = {
+    'mountain': 0,
+    'rope': 1,
+    'scaffold': 2,
+    'piton': 3,
+    'tangled_rope': 4,
+    'snare': 5,
+    'unknown': -1,  # Treated specially
+}
+
+
+def classify_shift(type_analytical, type_powerless):
+    """Classify the direction of perspectival gap."""
+    sa = SEVERITY.get(type_analytical, -1)
+    sp = SEVERITY.get(type_powerless, -1)
+
+    if type_analytical == type_powerless:
+        return 'consensus'
+
+    # Unknown from either side is a classification gap, not a shift
+    if sa == -1 or sp == -1:
+        if sa == -1 and sp == -1:
+            return 'both_unknown'
+        elif sa == -1:
+            return 'analytical_blind'  # Analyst can't classify, powerless can
+        else:
+            return 'powerless_blind'   # Powerless can't classify, analyst can
+
+    # Both have real types
+    if sa < sp:
+        # Analyst sees lighter, powerless sees heavier
+        if sa <= 2:  # rope, scaffold, mountain
+            return 'coordination_washing'  # Benign->extractive
+        else:
+            return 'severity_amplification'  # Both extractive, powerless worse
+    else:
+        return 'protective_framing'  # Analyst sees worse (rare)
+
 
 # --- Configuration ---
 
