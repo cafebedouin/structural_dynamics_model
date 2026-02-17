@@ -2,25 +2,97 @@
 
 ## Executive Summary
 
-**Verdict:** INSUFFICIENT - Indices do not explain all variance. New categories recommended.
+**Verdict:** MIXED — Mostly sufficient but classification failures need investigation.
 
-- **Collision Rate:** 50.2%
-- **Anomaly Rate:** 2.7%
+### Collision Breakdown
 
-### Evidence Against Index Sufficiency
+| Category | Count | Rate |
+|----------|------:|-----:|
+| Classification failures (unknown/opaque) | 63 | 11.0% of collisions |
+| Expected perspectival variance | 501 | 87.7% of collisions |
+| Genuine collisions | 7 | 0.7% of constraints |
+| **Total collisions** | **571** | across 1036 constraints |
 
-- 50.2% of constraints have index collisions
-- Most common collision: snare ↔ tangled_rope (403 cases)
+- **Non-mountain anomaly rate:** 0.8% (7 of 908 non-mountain constraints)
 
-## Index Collisions
+### Data Quality: Domain Label Consolidation
 
-**Total collisions detected:** 571
-**Constraints affected:** 520
+The following domain labels were normalized at load time:
+
+- logistics → logistical (1 constraints)
+- mathematics → mathematical (2 constraints)
+- physics → physical (3 constraints)
+- psychology → psychological (1 constraints)
+- technology → technological (1 constraints)
+
+## Classification Failures
+
+**63 collisions** involve `unknown` or `indexically_opaque` types — these represent real classification insufficiency.
+
+| Constraint ID | Types | Domain | Signature |
+|---------------|-------|--------|-----------|
+| absorbing_markov_chain_trap | snare, unknown | technological | false_ci_rope |
+| artificial_snow_2026 | snare, unknown | environmental | false_ci_rope |
+| astm_d638_tensile_testing | snare, unknown | technological | false_ci_rope |
+| big_data_astrophysics_arbitrage | tangled_rope, unknown | technological | false_ci_rope |
+| burden_of_proof_legal_criminal | rope, unknown | political | false_ci_rope |
+| cap_theorem | mountain, unknown | technological | natural_law |
+| central_limit_theorem | mountain, unknown | mathematical | natural_law |
+| clawderberg_recursive_slop | piton, unknown | technological | false_ci_rope |
+| cma | tangled_rope, unknown | technological | false_ci_rope |
+| college_admissions_market | tangled_rope, unknown | social | false_ci_rope |
+| cost_of_observation | snare, unknown | philosophical | false_ci_rope |
+| cs_ecmo_bridge | tangled_rope, unknown | technological | false_ci_rope |
+| education_unbundling_implementation | tangled_rope, unknown | technological | false_ci_rope |
+| emergency_oversight_bureau | tangled_rope, unknown | political | false_ci_rope |
+| erasmus_rejoining_scaffold | scaffold, unknown | political | false_ci_rope |
+| ergo_storage_rent | tangled_rope, unknown | technological | false_ci_rope |
+| exoplanetary_habitability_arbitrage | rope, unknown | technological | false_ci_rope |
+| factional_instability | tangled_rope, unknown | political | false_ci_rope |
+| fiscal_equalization_friction | rope, unknown | economic | false_ci_rope |
+| four_color_theorem_topological_bound | mountain, unknown | mathematical | natural_law |
+
+*...and 43 more*
+
+## Expected Perspectival Variance
+
+**501 collisions** are explained by agent_power perspective shifts — the framework working as designed.
+
+| Transition | Count |
+|------------|------:|
+| snare ↔ tangled_rope | 400 |
+| rope ↔ tangled_rope | 27 |
+| piton ↔ snare | 20 |
+| mountain ↔ tangled_rope | 13 |
+| piton ↔ tangled_rope | 11 |
+| rope ↔ scaffold | 9 |
+| mountain ↔ rope | 7 |
+| piton ↔ rope | 6 |
+| scaffold ↔ tangled_rope | 5 |
+| mountain ↔ snare | 2 |
+
+## Genuine Collisions
+
+**7 collisions** remain unexplained — same index config produces different types without perspectival justification.
+
+| Constraint ID | Index Config | Types | Domain | Purity |
+|---------------|--------------|-------|--------|--------|
+| biological_curiosity | ('institutional', 'generational', ' | rope, scaffold | biological | pristine |
+| collective_stupidity_2026 | ('institutional', 'generational', ' | piton, rope | social | borderline |
+| israeli_settlement_policy_authority_restriction | ('analytical', 'civilizational', 'a | snare, tangled_rope | political | contaminated |
+| nsw_transmission_bottleneck | ('institutional', 'generational', ' | rope, scaffold | technological | contaminated |
+| openbsd_netiquette_protocol | ('analytical', 'civilizational', 'a | snare, tangled_rope | technological | contaminated |
+| shadow_fleet_sanctions_evasion | ('analytical', 'civilizational', 'a | snare, tangled_rope | geopolitical | contaminated |
+| theatrical_neutrality | ('institutional', 'generational', ' | piton, rope | unknown | - |
+
+## All Collision Patterns
+
+**Total collisions:** 571 across 520 constraints
 
 ### Most Common Type Transitions
 
 | Transition | Frequency |
-|------------|----------|
+|------------|----------:|
 | snare ↔ tangled_rope | 403 |
 | tangled_rope ↔ unknown | 29 |
 | rope ↔ tangled_rope | 27 |
@@ -35,149 +107,108 @@
 ### Collisions by Domain
 
 | Domain | Collisions | Constraints Affected |
-|--------|-----------|---------------------|
-| technological        |        147 |                  138 |
-| economic             |        140 |                  129 |
-| political            |         94 |                   86 |
-| social               |         84 |                   67 |
-| geopolitical         |         32 |                   31 |
-| biological           |         11 |                    9 |
-| mathematical         |          7 |                    7 |
-| organizational       |          7 |                    6 |
-| scientific           |          6 |                    6 |
-| philosophical        |          5 |                    4 |
-| religious            |          5 |                    5 |
-| legal                |          4 |                    4 |
-| psychological        |          4 |                    4 |
-| environmental        |          2 |                    2 |
-| institutional        |          2 |                    2 |
-| investigation        |          2 |                    1 |
-| linguistic           |          2 |                    2 |
-| military             |          2 |                    2 |
-| astrophysical        |          1 |                    1 |
-| bio_industrial       |          1 |                    1 |
-| cognitive            |          1 |                    1 |
-| corporate_governance |          1 |                    1 |
-| health               |          1 |                    1 |
-| informational        |          1 |                    1 |
-| logical              |          1 |                    1 |
-| logistical           |          1 |                    1 |
-| logistics            |          1 |                    1 |
-| magical              |          1 |                    1 |
-| medical              |          1 |                    1 |
-| physical             |          1 |                    1 |
-| psychology           |          1 |                    1 |
-| statistical          |          1 |                    1 |
-| unknown              |          1 |                    1 |
-
-### Collision Examples
-
-Cases where same index configuration produces multiple types:
-
-| Constraint ID | Index Config | Types Produced | Domain |
-|---------------|--------------|----------------|--------|
-| absorbing_markov_chain_trap    | ('powerless', 'biographical', ... | unknown, snare       | technological |
-| abstraction_boundary_overrun   | ('analytical', 'civilizational... | snare, tangled_rope  | technological |
-| ad_synaptic_deficit            | ('analytical', 'civilizational... | snare, tangled_rope  | biological |
-| adaptive_lag_trap              | ('analytical', 'civilizational... | snare, tangled_rope  | economic   |
-| adversarial_surface_inflation  | ('analytical', 'civilizational... | snare, tangled_rope  | technological |
-| agency_atrophy                 | ('analytical', 'civilizational... | snare, tangled_rope  | technological |
-| agent_opt_2026                 | ('analytical', 'civilizational... | snare, piton         | political  |
-| ai_adoption_stigma             | ('analytical', 'civilizational... | snare, tangled_rope  | technological |
-| ai_cognitive_diversity_arbitrage | ('powerless', 'biographical', ... | snare, tangled_rope  | technological |
-| ai_compute_capital_moat        | ('analytical', 'civilizational... | snare, tangled_rope  | technological |
-| ai_edu_decentralization        | ('powerless', 'biographical', ... | mountain, tangled_rope | technological |
-| ai_nonconsensual_content_facilitation | ('analytical', 'civilizational... | snare, tangled_rope  | technological |
-| ai_performance_watermark       | ('analytical', 'civilizational... | snare, tangled_rope  | technological |
-| ai_professional_displacement   | ('analytical', 'civilizational... | snare, tangled_rope  | economic   |
-| ai_religion_regulation         | ('analytical', 'civilizational... | snare, tangled_rope  | technological |
+|--------|----------:|--------------------:|
+| technological | 147 | 138 |
+| economic | 140 | 129 |
+| political | 94 | 86 |
+| social | 84 | 67 |
+| geopolitical | 32 | 31 |
+| biological | 11 | 9 |
+| mathematical | 7 | 7 |
+| organizational | 7 | 6 |
+| scientific | 6 | 6 |
+| philosophical | 5 | 4 |
+| psychological | 5 | 5 |
+| religious | 5 | 5 |
+| legal | 4 | 4 |
+| environmental | 2 | 2 |
+| institutional | 2 | 2 |
+| investigation | 2 | 1 |
+| linguistic | 2 | 2 |
+| logistical | 2 | 2 |
+| military | 2 | 2 |
+| astrophysical | 1 | 1 |
+| bio_industrial | 1 | 1 |
+| cognitive | 1 | 1 |
+| corporate_governance | 1 | 1 |
+| health | 1 | 1 |
+| informational | 1 | 1 |
+| logical | 1 | 1 |
+| magical | 1 | 1 |
+| medical | 1 | 1 |
+| physical | 1 | 1 |
+| statistical | 1 | 1 |
+| unknown | 1 | 1 |
 
 ## Domain Sufficiency Analysis
 
 How well do indices explain variance in each domain?
 
 | Domain | Constraints | Avg Variance | Sufficiency |
-|--------|-------------|--------------|-------------|
-| investigation        |           2 |         0.70 | Medium      |
-| psychology           |           1 |         0.67 | Medium      |
-| institutional        |           3 |         0.61 | Medium      |
-| bio_industrial       |           1 |         0.60 | Medium      |
-| military             |           2 |         0.58 | Medium      |
-| logistics            |           1 |         0.57 | Medium      |
-| logistical           |           1 |         0.57 | Medium      |
-| socio_political      |           1 |         0.57 | Medium      |
-| medical              |           4 |         0.56 | Medium      |
-| environmental        |           6 |         0.55 | Medium      |
-| social               |         133 |         0.54 | Medium      |
-| cognitive            |           4 |         0.54 | Medium      |
-| informational        |           2 |         0.54 | Medium      |
-| organizational       |           9 |         0.53 | Medium      |
-| religious            |           9 |         0.52 | Medium      |
-| economic             |         210 |         0.52 | Medium      |
-| philosophical        |          11 |         0.51 | Medium      |
-| biological           |          16 |         0.50 | Medium      |
-| corporate_governance |           1 |         0.50 | Medium      |
-| infrastructure       |           1 |         0.50 | Medium      |
-| political            |         154 |         0.50 | Medium      |
-| psychological        |           9 |         0.49 | Medium      |
-| technological        |         281 |         0.49 | Medium      |
-| legal                |          11 |         0.47 | Medium      |
-| health               |           5 |         0.47 | Medium      |
-| geopolitical         |          48 |         0.44 | Medium      |
-| unknown              |           5 |         0.42 | Medium      |
-| linguistic           |           3 |         0.41 | Medium      |
-| scientific           |          19 |         0.39 | Low         |
-| physics              |           3 |         0.39 | Low         |
-| analytical           |           1 |         0.38 | Low         |
-| systems_engineering  |           1 |         0.38 | Low         |
-| physical             |           3 |         0.36 | Low         |
-| ecological           |           2 |         0.36 | Low         |
-| magical              |           1 |         0.33 | Low         |
-| epistemological      |           2 |         0.33 | Low         |
-| astrophysical        |           1 |         0.33 | Low         |
-| logical              |           1 |         0.33 | Low         |
-| atmospheric_science  |           1 |         0.33 | Low         |
-| mathematical         |          61 |         0.32 | Low         |
-| mathematics          |           2 |         0.29 | Low         |
-| logic                |           1 |         0.29 | Low         |
-| statistical          |           1 |         0.29 | Low         |
-| sociological         |           1 |         0.29 | Low         |
-| technology           |           1 |         0.17 | Low         |
+|--------|----------:|-------------:|:-----------:|
+| investigation | 2 | 0.70 | Medium |
+| institutional | 3 | 0.61 | Medium |
+| bio_industrial | 1 | 0.60 | Medium |
+| military | 2 | 0.58 | Medium |
+| logistical | 2 | 0.57 | Medium |
+| socio_political | 1 | 0.57 | Medium |
+| medical | 4 | 0.56 | Medium |
+| environmental | 6 | 0.55 | Medium |
+| social | 133 | 0.54 | Medium |
+| cognitive | 4 | 0.54 | Medium |
+| informational | 2 | 0.54 | Medium |
+| organizational | 9 | 0.53 | Medium |
+| religious | 9 | 0.52 | Medium |
+| economic | 210 | 0.52 | Medium |
+| philosophical | 11 | 0.51 | Medium |
+| psychological | 10 | 0.51 | Medium |
+| biological | 16 | 0.50 | Medium |
+| corporate_governance | 1 | 0.50 | Medium |
+| infrastructure | 1 | 0.50 | Medium |
+| political | 154 | 0.50 | Medium |
+| technological | 282 | 0.49 | Medium |
+| legal | 11 | 0.47 | Medium |
+| health | 5 | 0.47 | Medium |
+| geopolitical | 48 | 0.44 | Medium |
+| unknown | 5 | 0.42 | Medium |
+| linguistic | 3 | 0.41 | Medium |
+| scientific | 19 | 0.39 | Low |
+| analytical | 1 | 0.38 | Low |
+| systems_engineering | 1 | 0.38 | Low |
+| physical | 6 | 0.37 | Low |
+| ecological | 2 | 0.36 | Low |
+| magical | 1 | 0.33 | Low |
+| epistemological | 2 | 0.33 | Low |
+| astrophysical | 1 | 0.33 | Low |
+| logical | 1 | 0.33 | Low |
+| atmospheric_science | 1 | 0.33 | Low |
+| mathematical | 63 | 0.32 | Low |
+| logic | 1 | 0.29 | Low |
+| statistical | 1 | 0.29 | Low |
+| sociological | 1 | 0.29 | Low |
 
 **Note:** Higher variance = indices capture more differences (good)
 
-## Stability Anomalies
+## Stability Anomalies (Mountains Excluded)
 
-Constraints tested across many index configs but always produce same type.
-These may indicate need for new categories beyond current 4 indices.
+Non-mountain constraints tested across 6+ index configs that always produce the same type.
+These may indicate misclassification (mountains are excluded since they SHOULD be invariant).
 
 | Constraint ID | Configs | Type | Domain | Notes |
-|---------------|---------|------|--------|-------|
-| cantor_set_topology            |       8 | mountain        | mathematical | natural |
-| treaty_land_entrenchment       |       8 | mountain        | legal      | natural |
-| basel_problem_convergence      |       7 | mountain        | mathematical | natural |
-| cantors_diagonal_argument      |       7 | mountain        | technological | natural |
-| constraint_ftc                 |       7 | mountain        | technological | enforced |
-| constraint_lorenz_sensitivity  |       7 | mountain        | technological | enforced |
-| constraint_pythagorean         |       7 | mountain        | mathematical | enforced |
-| constraint_sylow               |       7 | mountain        | technological | enforced |
-| continuum_hypothesis_undecidability |       7 | mountain        | mathematical | natural |
-| copyleft_viral_licensing       |       7 | rope            | technological | enforced |
-| large_cardinals_inaccessibility |       7 | mountain        | technological | enforced |
-| microrobot_manipulation        |       7 | rope            | technological | enforced |
-| noether_theorem                |       7 | mountain        | technological | enforced |
-| suslin_hypothesis_proof_limits |       7 | mountain        | mathematical | enforced |
-| vertebrate_turning_point_2026  |       7 | rope            | biological | enforced |
-| whitehead_incompleteness       |       7 | mountain        | mathematical | enforced |
-| wikipedia_noncommercial_model  |       7 | rope            | technological | enforced |
-| constraint_borsuk_ulam         |       6 | mountain        | mathematical | enforced |
-| constraint_nonstandard_arithmetic |       6 | mountain        | technological | enforced |
-| cuny_light_2026                |       6 | rope            | technology | enforced |
+|---------------|--------:|------|--------|-------|
+| copyleft_viral_licensing | 7 | rope | technological | enforced |
+| microrobot_manipulation | 7 | rope | technological | enforced |
+| vertebrate_turning_point_2026 | 7 | rope | biological | enforced |
+| wikipedia_noncommercial_model | 7 | rope | technological | enforced |
+| cuny_light_2026 | 6 | rope | technological | enforced |
+| perseverance_rover_autonomy | 6 | rope | technological | enforced |
+| rare_earth_coop_2026 | 6 | rope | economic | enforced |
 
 ## Recommendations
 
-1. **High collision rate detected.** Consider:
-   - Adding 5th index dimension
-   - Creating hybrid categories (Tangled Rope, Piton, etc.)
-   - Refining existing index definitions
+1. **Classification failures (11.0%):** Investigate specific index configurations producing `unknown` types. These represent real gaps in the classification engine.
+
+2. **Data quality:** Domain label normalization consolidated 8 constraints across 5 variant labels. Consider standardizing domain labels upstream in the test corpus.
+
+3. **Perspectival health:** 87.7% of collisions are expected perspectival variance (agent_power driving type shifts). This confirms the index system is capturing real structural dynamics.
 

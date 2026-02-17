@@ -91,6 +91,7 @@ CORPUS_DATA   := $(OUTPUT_DIR)/corpus_data.json
 VARIANCE_REPORT    := $(OUTPUT_DIR)/variance_analysis.md
 PATTERN_REPORT     := $(OUTPUT_DIR)/pattern_mining.md
 SUFFICIENCY_REPORT := $(OUTPUT_DIR)/index_sufficiency.md
+SUFFICIENCY_JSON   := $(OUTPUT_DIR)/index_sufficiency.json
 
 # Omega enrichment stamp
 OMEGA_ENRICH_STAMP := $(STAMP_DIR)/omega_enrich
@@ -380,11 +381,12 @@ $(PATTERN_REPORT): $(CORPUS_DATA)
 		--corpus-data $(CORPUS_DATA) --output $@ 2>&1 | tail -1
 	echo "[ANALYSIS] Done -> pattern_mining.md"
 
-$(SUFFICIENCY_REPORT): $(CORPUS_DATA)
+$(SUFFICIENCY_REPORT): $(CORPUS_DATA) $(PIPELINE_JSON)
 	echo "[ANALYSIS] Index sufficiency test..."
 	python3 $(PYTHON_DIR)/sufficiency_tester.py \
-		--corpus-data $(CORPUS_DATA) --output $@ 2>&1 | tail -1
-	echo "[ANALYSIS] Done -> index_sufficiency.md"
+		--corpus-data $(CORPUS_DATA) --pipeline-data $(PIPELINE_JSON) \
+		--output $@ --json-output $(SUFFICIENCY_JSON) 2>&1 | tail -1
+	echo "[ANALYSIS] Done -> index_sufficiency.md + index_sufficiency.json"
 
 # ==============================================================================
 # OMEGA ENRICHMENT — depends on omega_data + corpus_data + orbit_norm
@@ -431,7 +433,7 @@ clean:
 	rm -f $(OUTPUT_DIR)/enriched_omega_report.md $(OUTPUT_DIR)/enriched_omega_data.json
 	rm -f $(OUTPUT_DIR)/corpus_data.json
 	rm -f $(OUTPUT_DIR)/variance_analysis.md $(OUTPUT_DIR)/pattern_mining.md
-	rm -f $(OUTPUT_DIR)/index_sufficiency.md
+	rm -f $(OUTPUT_DIR)/index_sufficiency.md $(OUTPUT_DIR)/index_sufficiency.json
 	rm -f $(OUTPUT_DIR)/meta_report.txt
 	rm -rf $(STAMP_DIR)
 	echo "Clean."
