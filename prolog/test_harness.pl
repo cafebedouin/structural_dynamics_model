@@ -56,7 +56,7 @@ run_all_tests(IntervalID, _Context) :-
 
     % Step 4: Intent and Reporting
     intent_engine:analyze_intent(IntervalID),
-    constraint_bridge:dr_diagnostic_report(IntervalID),
+    constraint_bridge:derive_diagnostic_state(IntervalID),
 
     % Step 5: Lifecycle Drift Analysis
     format('~n--- LIFECYCLE DRIFT ANALYSIS ---~n'),

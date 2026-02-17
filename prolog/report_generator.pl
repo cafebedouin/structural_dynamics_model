@@ -764,20 +764,21 @@ omega_severity(_, unknown).
 
 %% generate_omega_triage/0
 %  Displays omegas organized by severity level.
+%  Computes each omega's severity exactly once via once/1 with Sev unbound,
+%  so the first matching clause wins and no omega appears in multiple buckets.
 generate_omega_triage :-
     format('~n[OMEGA TRIAGE & PRIORITIZATION]~n'),
-    % First collect all actual omegas
-    findall(OID, narrative_ontology:omega_variable(OID, _, _), AllOmegas),
-    (AllOmegas = []
+    findall(Sev-OID,
+            (narrative_ontology:omega_variable(OID, _, _),
+             once(omega_severity(OID, Sev))),
+            Pairs),
+    (Pairs = []
     -> format('  No omegas to triage.~n')
-    ;  % Then organize by severity (once/1 prevents cross-clause double-counting)
-       forall(member(Sev, [critical, high, moderate, low]),
-              (findall(OID,
-                       (member(OID, AllOmegas), once(omega_severity(OID, Sev))),
-                       OIDs),
+    ;  forall(member(Level, [critical, high, moderate, low]),
+              (findall(OID, member(Level-OID, Pairs), OIDs),
                (OIDs \= []
                -> (length(OIDs, N),
-                   format('~n  [~w] ~w omega(s):~n', [Sev, N]),
+                   format('~n  [~w] ~w omega(s):~n', [Level, N]),
                    forall(member(OID, OIDs),
                           (narrative_ontology:omega_variable(OID, Type, Desc),
                            format('    - ~w (~w)~n      ~w~n', [OID, Type, Desc]))))

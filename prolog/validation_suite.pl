@@ -1070,7 +1070,8 @@ run_single_test(Path, ID, _Label, N) :-
             format('[FAIL] Exception for ~w: ~w~n', [Path, E]),
             print_prolog_backtrace(current_output, E)
         )
-    ).
+    ),
+    report_generator:generate_llm_feedback(ID).
 
 % --- Result Counter & Reporter ---
 count_and_report :-

@@ -280,8 +280,11 @@ impute_missing_metrics(IntervalID, Results) :-
         ),
         Results
     ),
-    forall(member(bridge_result(measurement(_, _, M, T, V)), Results),
-           format('  [FIXED] Imputed ~w for ~w at T=~w~n', [V, M, T])).
+    length(Results, N),
+    (   N > 0
+    ->  format('  [FIXED] Imputed ~w missing vectors using domain priors~n', [N])
+    ;   true
+    ).
 
 %% repair_interval(+IntervalID, -Results)
 %  Pure version of repair_interval/1. Returns all bridge and impute

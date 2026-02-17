@@ -97,7 +97,11 @@ load_and_run(File, IntervalID) :-
 
 	% INJECT STRUCTURAL ANCHOR: Resolves [STEP 1] errors
         % This provides the audit suite with the interval it expects.
-        assertz(narrative_ontology:interval(IntervalID, 0, 10)),
+        % Guard: testset may already declare this interval.
+        (   narrative_ontology:interval(IntervalID, _, _)
+        ->  true
+        ;   assertz(narrative_ontology:interval(IntervalID, 0, 10))
+        ),
         inject_minimal_measurements(IntervalID),
 	
         % FIX: Repair ALL intervals found in the KB, not just the primary one.

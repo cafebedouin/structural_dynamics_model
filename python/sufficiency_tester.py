@@ -110,7 +110,7 @@ class SufficiencyTester:
 
         # Domain breakdown
         domain_stats = []
-        for domain in sorted(by_domain.keys()):
+        for domain in sorted(by_domain.keys(), key=lambda x: (x is None, x or "")):
             domain_collisions = by_domain[domain]
             domain_stats.append({
                 'domain': domain,
