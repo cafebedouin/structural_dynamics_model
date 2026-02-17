@@ -70,8 +70,10 @@ def lint_file(filepath):
     mountain_suppression_ceiling = config_thresholds.get('mountain_suppression_ceiling', 0.05)
 
     # 1. CORE STRUCTURE & v4.0 INTEGRATION HOOKS
-    if not re.search(r':- module\(', content):
+    module_match = re.search(r':- module\((\w+)\s*,', content)
+    if not module_match:
         errors.append("MISSING_MODULE: Prolog files must begin with :- module(id, []).")
+    module_id = module_match.group(1) if module_match else None
 
     if "narrative_ontology:interval(" not in content:
         errors.append("MISSING_HOOK: Missing narrative_ontology:interval/3.")
@@ -636,6 +638,65 @@ def lint_file(filepath):
             errors.append(
                 f"METRIC_SOURCE_INCONSISTENCY: Missing {mc['name']} — engine will "
                 f"use default {mc['default']}."
+            )
+
+    # 27-30. v3.1 STUB DETECTION
+    # Build comment-stripped code_content for ID extraction
+    code_lines = [cleaned_lines[i] for i in range(len(cleaned_lines))
+                  if i not in block_comment_lines]
+    code_content = '\n'.join(code_lines)
+
+    metric_ids = {x for x in re.findall(r'constraint_metric\(\s*(\w+)\s*,', code_content)
+                  if x[0].islower()}
+    claim_ids = {x for x in re.findall(r'constraint_claim\(\s*(\w+)\s*,', code_content)
+                 if x[0].islower()}
+    classification_ids = {x for x in re.findall(r'constraint_classification\(\s*(\w+)\s*,', code_content)
+                          if x[0].islower()}
+    all_constraint_ids = metric_ids | claim_ids | classification_ids
+    filename = os.path.basename(filepath)
+
+    # 27. MULTI_ID — multiple distinct constraint IDs
+    if len(all_constraint_ids) > 1:
+        id_list = ', '.join(sorted(all_constraint_ids))
+        errors.append(
+            f"MULTI_ID: {filename} declares {len(all_constraint_ids)} constraint IDs: "
+            f"{id_list}. Expected single ID matching module: {module_id}"
+        )
+
+    # 28. BARE_CONTEXT — classifications using bare agent_power() instead of context() wrapper
+    bare_count = 0
+    for cl in code_lines:
+        if re.search(r'constraint_classification\(\s*\w+\s*,\s*\w+\s*,\s*agent_power\(', cl):
+            bare_count += 1
+    if bare_count > 0:
+        errors.append(
+            f"BARE_CONTEXT: {filename} has {bare_count} classifications using bare "
+            f"agent_power() instead of context() wrapper — stubs from v3.1 fleet repair"
+        )
+
+    # 29. STUB_MISMATCH — classification IDs that don't match module or any declared metric
+    if module_id:
+        for cid in sorted(classification_ids):
+            matches_module = (cid == module_id)
+            # Handle constraint_ prefix convention
+            if not matches_module:
+                matches_module = (cid == f'constraint_{module_id}' or
+                                  f'constraint_{cid}' == module_id)
+            matches_metric = (cid in metric_ids)
+            if not matches_module and not matches_metric:
+                errors.append(
+                    f"STUB_MISMATCH: {filename} has classifications for '{cid}' which "
+                    f"doesn't match module '{module_id}' or any declared constraint_metric"
+                )
+
+    # 30. MISSING_METRICS — constraint_claim without corresponding constraint_metric
+    for cid in sorted(claim_ids):
+        has_extractiveness = bool(re.search(
+            rf'constraint_metric\(\s*{re.escape(cid)}\s*,\s*extractiveness\s*,', code_content))
+        if not has_extractiveness:
+            errors.append(
+                f"MISSING_METRICS: {filename} declares constraint_claim for '{cid}' but "
+                f"has no constraint_metric declarations — metrics will be imputed from config defaults"
             )
 
     return errors

@@ -1,6 +1,6 @@
 # True Mountain Validation Report
 
-**Total Validated:** 99
+**Total Validated:** 102
 
 This report lists all constraints that are consistently classified as 'mountain' across all tested perspectives, confirming their immutability within the model.
 
@@ -249,7 +249,16 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 ---
 
-### 28. True Mountain: `fast_growing_hierarchy`
+### 28. True Mountain: `event_fragmentation`
+
+*   **Claimed Type:** `mountain`
+*   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[mountain, unknown]`
+*   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
+
+---
+
+### 29. True Mountain: `fast_growing_hierarchy`
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for fast_growing_hierarchy: Extreme inaccessibility (collapse=1.00) with minimal enforcement (suppression=0.01, resistance=0.00). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
@@ -258,7 +267,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 ---
 
-### 29. True Mountain: `feigenbaum_universality`
+### 30. True Mountain: `feigenbaum_universality`
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for feigenbaum_universality: Extreme inaccessibility (collapse=0.98) with minimal enforcement (suppression=0.01, resistance=0.01). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
@@ -267,7 +276,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 ---
 
-### 30. True Mountain: `fermats_last_theorem`
+### 31. True Mountain: `fermats_last_theorem`
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for fermat_proof_barrier: Extreme inaccessibility (collapse=0.90) with minimal enforcement (suppression=0.05, resistance=0.10). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
@@ -276,7 +285,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 ---
 
-### 31. True Mountain: `fgh_hierarchy_2026`
+### 32. True Mountain: `fgh_hierarchy_2026`
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for fgh_hierarchy_2026: Extreme inaccessibility (collapse=1.00) with minimal enforcement (suppression=0.01, resistance=0.00). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
@@ -285,7 +294,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 ---
 
-### 32. True Mountain: `finite_simple_groups_classification`
+### 33. True Mountain: `finite_simple_groups_classification`
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for finite_simple_group_classification: Extreme inaccessibility (collapse=1.00) with minimal enforcement (suppression=0.01, resistance=0.00). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
@@ -294,7 +303,16 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 ---
 
-### 33. True Mountain: `four_color_theorem_topological_bound`
+### 34. True Mountain: `fossil_fuel_lock_in`
+
+*   **Claimed Type:** `mountain`
+*   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[mountain]`
+*   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
+
+---
+
+### 35. True Mountain: `four_color_theorem_topological_bound`
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for four_color_theorem_topological_bound: Extreme inaccessibility (collapse=1.00) with minimal enforcement (suppression=0.05, resistance=0.00). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
@@ -303,7 +321,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 ---
 
-### 34. True Mountain: `fundamental_theorem_of_algebra`
+### 36. True Mountain: `fundamental_theorem_of_algebra`
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for fundamental_theorem_of_algebra: Extreme inaccessibility (collapse=1.00) with minimal enforcement (suppression=0.01, resistance=0.00). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
@@ -312,7 +330,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 ---
 
-### 35. True Mountain: `fundamental_theorem_of_calculus`
+### 37. True Mountain: `fundamental_theorem_of_calculus`
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for constraint_ftc: Extreme inaccessibility (collapse=0.95) with minimal enforcement (suppression=0.05, resistance=0.01). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
@@ -321,7 +339,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 ---
 
-### 36. True Mountain: `galois_theory`
+### 38. True Mountain: `galois_theory`
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for constraint_galois_solvability: Extreme inaccessibility (collapse=0.90) with minimal enforcement (suppression=0.05, resistance=0.05). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
@@ -330,7 +348,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 ---
 
-### 37. True Mountain: `gauss_bonnet_topology`
+### 39. True Mountain: `gauss_bonnet_topology`
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for gauss_bonnet_topology: Extreme inaccessibility (collapse=1.00) with minimal enforcement (suppression=0.05, resistance=0.00). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
@@ -339,7 +357,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 ---
 
-### 38. True Mountain: `genetic_predisposition_mania`
+### 40. True Mountain: `genetic_predisposition_mania`
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for genetic_predisposition_mania: Extreme inaccessibility (collapse=0.95) with minimal enforcement (suppression=0.02, resistance=0.05). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
@@ -348,7 +366,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 ---
 
-### 39. True Mountain: `geophysics_superionic_core`
+### 41. True Mountain: `geophysics_superionic_core`
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for geophysics_superionic_core: Extreme inaccessibility (collapse=0.98) with minimal enforcement (suppression=0.02, resistance=0.05). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
@@ -357,7 +375,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 ---
 
-### 40. True Mountain: `godels_incompleteness_theorems`
+### 42. True Mountain: `godels_incompleteness_theorems`
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for goedels_incompleteness_theorems: Extreme inaccessibility (collapse=1.00) with minimal enforcement (suppression=0.01, resistance=0.00). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
@@ -366,7 +384,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 ---
 
-### 41. True Mountain: `goldbach_conjecture`
+### 43. True Mountain: `goldbach_conjecture`
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for goldbach_conjecture: Extreme inaccessibility (collapse=1.00) with minimal enforcement (suppression=0.05, resistance=0.00). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
@@ -375,7 +393,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 ---
 
-### 42. True Mountain: `halting_problem_undecidability`
+### 44. True Mountain: `halting_problem_undecidability`
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for halting_problem_undecidability: Extreme inaccessibility (collapse=1.00) with minimal enforcement (suppression=0.01, resistance=0.00). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
@@ -384,7 +402,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 ---
 
-### 43. True Mountain: `hd101584_stellar_evolution`
+### 45. True Mountain: `hd101584_stellar_evolution`
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for hd101584_stellar_evolution: Extreme inaccessibility (collapse=1.00) with minimal enforcement (suppression=0.01, resistance=0.00). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
@@ -393,7 +411,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 ---
 
-### 44. True Mountain: `heine_borel_theorem`
+### 46. True Mountain: `heine_borel_theorem`
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for heine_borel: Extreme inaccessibility (collapse=0.95) with minimal enforcement (suppression=0.05, resistance=0.02). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
@@ -402,7 +420,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 ---
 
-### 45. True Mountain: `heisenberg_uncertainty`
+### 47. True Mountain: `heisenberg_uncertainty`
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for heisenberg_uncertainty: Extreme inaccessibility (collapse=1.00) with minimal enforcement (suppression=0.02, resistance=0.00). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
@@ -411,7 +429,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 ---
 
-### 46. True Mountain: `hilberts_hotel`
+### 48. True Mountain: `hilberts_hotel`
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** Perspectives AGREE
@@ -420,7 +438,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 ---
 
-### 47. True Mountain: `indexical_relativity_core`
+### 49. True Mountain: `indexical_relativity_core`
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for indexical_relativity_core: Extreme inaccessibility (collapse=0.95) with minimal enforcement (suppression=0.05, resistance=0.05). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
@@ -429,7 +447,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 ---
 
-### 48. True Mountain: `kirby_paris_theorem`
+### 50. True Mountain: `kirby_paris_theorem`
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for kirby_paris_theorem: Extreme inaccessibility (collapse=1.00) with minimal enforcement (suppression=0.05, resistance=0.00). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
@@ -438,7 +456,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 ---
 
-### 49. True Mountain: `kleene_recursion_theorem`
+### 51. True Mountain: `kleene_recursion_theorem`
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for kleene_recursion_theorem: Extreme inaccessibility (collapse=1.00) with minimal enforcement (suppression=0.01, resistance=0.00). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
@@ -447,7 +465,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 ---
 
-### 50. True Mountain: `kolmogorov_complexity`
+### 52. True Mountain: `kolmogorov_complexity`
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for kolmogorov_complexity: Extreme inaccessibility (collapse=0.98) with minimal enforcement (suppression=0.05, resistance=0.01). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
@@ -456,7 +474,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 ---
 
-### 51. True Mountain: `large_cardinals`
+### 53. True Mountain: `large_cardinals`
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for large_cardinals_inaccessibility: Extreme inaccessibility (collapse=0.95) with minimal enforcement (suppression=0.05, resistance=0.05). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
@@ -465,7 +483,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 ---
 
-### 52. True Mountain: `liar_paradox`
+### 54. True Mountain: `liar_paradox`
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for liar_paradox: Extreme inaccessibility (collapse=1.00) with minimal enforcement (suppression=0.01, resistance=0.01). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
@@ -474,7 +492,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 ---
 
-### 53. True Mountain: `lobs_theorem`
+### 55. True Mountain: `lobs_theorem`
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for lobs_theorem: Extreme inaccessibility (collapse=1.00) with minimal enforcement (suppression=0.01, resistance=0.00). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
@@ -483,7 +501,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 ---
 
-### 54. True Mountain: `local_vs_global_optima`
+### 56. True Mountain: `local_vs_global_optima`
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for local_vs_global_optima: Extreme inaccessibility (collapse=1.00) with minimal enforcement (suppression=0.05, resistance=0.00). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
@@ -492,7 +510,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 ---
 
-### 55. True Mountain: `lorenz_attractor`
+### 57. True Mountain: `lorenz_attractor`
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for constraint_lorenz_sensitivity: Extreme inaccessibility (collapse=0.95) with minimal enforcement (suppression=0.03, resistance=0.01). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
@@ -501,7 +519,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 ---
 
-### 56. True Mountain: `lowenheim_skolem_theorem`
+### 58. True Mountain: `lowenheim_skolem_theorem`
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for lowenheim_skolem_theorem: Extreme inaccessibility (collapse=1.00) with minimal enforcement (suppression=0.00, resistance=0.00). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
@@ -510,7 +528,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 ---
 
-### 57. True Mountain: `lyapunov_stability`
+### 59. True Mountain: `lyapunov_stability`
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for lyapunov_stability: Extreme inaccessibility (collapse=0.95) with minimal enforcement (suppression=0.05, resistance=0.05). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
@@ -519,7 +537,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 ---
 
-### 58. True Mountain: `marriage_problem`
+### 60. True Mountain: `marriage_problem`
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** Perspectives AGREE
@@ -528,7 +546,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 ---
 
-### 59. True Mountain: `martian_signal_latency`
+### 61. True Mountain: `martian_signal_latency`
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for martian_signal_latency: Extreme inaccessibility (collapse=1.00) with minimal enforcement (suppression=0.00, resistance=0.00). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
@@ -537,7 +555,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 ---
 
-### 60. True Mountain: `material_tensile_strength`
+### 62. True Mountain: `material_tensile_strength`
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for material_tensile_strength: Extreme inaccessibility (collapse=1.00) with minimal enforcement (suppression=0.01, resistance=0.00). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
@@ -546,7 +564,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 ---
 
-### 61. True Mountain: `monty_hall_conditional_probability`
+### 63. True Mountain: `monty_hall_conditional_probability`
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for monty_hall_conditional_probability: Extreme inaccessibility (collapse=1.00) with minimal enforcement (suppression=0.01, resistance=0.01). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
@@ -555,7 +573,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 ---
 
-### 62. True Mountain: `no_cloning_theorem`
+### 64. True Mountain: `no_cloning_theorem`
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for no_cloning_theorem: Extreme inaccessibility (collapse=0.98) with minimal enforcement (suppression=0.02, resistance=0.01). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
@@ -564,7 +582,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 ---
 
-### 63. True Mountain: `noethers_theorem`
+### 65. True Mountain: `noethers_theorem`
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for noether_theorem: Extreme inaccessibility (collapse=0.95) with minimal enforcement (suppression=0.05, resistance=0.02). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
@@ -573,7 +591,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 ---
 
-### 64. True Mountain: `nonstandard_models_of_arithmetic`
+### 66. True Mountain: `nonstandard_models_of_arithmetic`
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** Perspectives AGREE
@@ -582,7 +600,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 ---
 
-### 65. True Mountain: `pancreatic_cancer_lethality_v1`
+### 67. True Mountain: `pancreatic_cancer_lethality_v1`
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for pancreatic_cancer_lethality_v1: Extreme inaccessibility (collapse=0.98) with minimal enforcement (suppression=0.02, resistance=0.10). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
@@ -591,7 +609,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 ---
 
-### 66. True Mountain: `pareto_principle`
+### 68. True Mountain: `pareto_principle`
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for pareto_principle: Extreme inaccessibility (collapse=0.95) with minimal enforcement (suppression=0.02, resistance=0.05). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
@@ -600,7 +618,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 ---
 
-### 67. True Mountain: `poincare_conjucture`
+### 69. True Mountain: `poincare_conjucture`
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for poincare_conjecture: Extreme inaccessibility (collapse=0.99) with minimal enforcement (suppression=0.01, resistance=0.01). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
@@ -609,7 +627,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 ---
 
-### 68. True Mountain: `prime_number_theorem`
+### 70. True Mountain: `prime_number_theorem`
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for prime_number_theorem: Extreme inaccessibility (collapse=1.00) with minimal enforcement (suppression=0.02, resistance=0.00). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
@@ -618,7 +636,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 ---
 
-### 69. True Mountain: `prisoners_dilemma_equilibrium`
+### 71. True Mountain: `prisoners_dilemma_equilibrium`
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for prisoners_dilemma_equilibrium: Extreme inaccessibility (collapse=0.95) with minimal enforcement (suppression=0.05, resistance=0.00). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
@@ -627,7 +645,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 ---
 
-### 70. True Mountain: `pythagorean_theorem`
+### 72. True Mountain: `pythagorean_theorem`
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for constraint_pythagorean: Extreme inaccessibility (collapse=0.95) with minimal enforcement (suppression=0.01, resistance=0.00). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
@@ -636,7 +654,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 ---
 
-### 71. True Mountain: `pythagorean_theorem_geometric_constancy`
+### 73. True Mountain: `pythagorean_theorem_geometric_constancy`
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for pythagorean_geometric_constancy: Extreme inaccessibility (collapse=1.00) with minimal enforcement (suppression=0.01, resistance=0.00). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
@@ -645,7 +663,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 ---
 
-### 72. True Mountain: `quantum_measurement_gap`
+### 74. True Mountain: `quantum_measurement_gap`
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for quantum_measurement_gap: Extreme inaccessibility (collapse=0.98) with minimal enforcement (suppression=0.03, resistance=0.02). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
@@ -654,7 +672,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 ---
 
-### 73. True Mountain: `quantum_nonlocality_2026`
+### 75. True Mountain: `quantum_nonlocality_2026`
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for quantum_nonlocality_2026: Extreme inaccessibility (collapse=1.00) with minimal enforcement (suppression=0.05, resistance=0.00). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
@@ -663,7 +681,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 ---
 
-### 74. True Mountain: `ramsey_numbers`
+### 76. True Mountain: `ramsey_numbers`
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for ramsey_numbers: Extreme inaccessibility (collapse=0.95) with minimal enforcement (suppression=0.01, resistance=0.05). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
@@ -672,7 +690,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 ---
 
-### 75. True Mountain: `reciprocity_laws_math`
+### 77. True Mountain: `reciprocity_laws_math`
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for reciprocity_laws_math: Extreme inaccessibility (collapse=1.00) with minimal enforcement (suppression=0.02, resistance=0.00). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
@@ -681,7 +699,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 ---
 
-### 76. True Mountain: `relativity_of_simultaneity`
+### 78. True Mountain: `relativity_of_simultaneity`
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for relativity_of_simultaneity: Extreme inaccessibility (collapse=0.99) with minimal enforcement (suppression=0.05, resistance=0.00). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
@@ -690,7 +708,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 ---
 
-### 77. True Mountain: `relativity_physical_invariance`
+### 79. True Mountain: `relativity_physical_invariance`
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for relativity_physical_invariance: Extreme inaccessibility (collapse=1.00) with minimal enforcement (suppression=0.01, resistance=0.00). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
@@ -699,7 +717,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 ---
 
-### 78. True Mountain: `rices_theorem_undecidability`
+### 80. True Mountain: `rices_theorem_undecidability`
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for rices_theorem_undecidability: Extreme inaccessibility (collapse=1.00) with minimal enforcement (suppression=0.02, resistance=0.00). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
@@ -708,7 +726,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 ---
 
-### 79. True Mountain: `shannon_entropy_limit`
+### 81. True Mountain: `shannon_entropy_limit`
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for shannon_entropy_limit: Extreme inaccessibility (collapse=0.98) with minimal enforcement (suppression=0.05, resistance=0.00). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
@@ -717,7 +735,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 ---
 
-### 80. True Mountain: `shannons_source_coding_theorem`
+### 82. True Mountain: `shannons_source_coding_theorem`
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for shannon_source_coding: Extreme inaccessibility (collapse=0.95) with minimal enforcement (suppression=0.05, resistance=0.02). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
@@ -726,7 +744,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 ---
 
-### 81. True Mountain: `silver_scarcity_mountain_2026`
+### 83. True Mountain: `silver_scarcity_mountain_2026`
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** Perspectives AGREE
@@ -735,7 +753,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 ---
 
-### 82. True Mountain: `square_cube_law`
+### 84. True Mountain: `square_cube_law`
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for square_cube_law: Extreme inaccessibility (collapse=1.00) with minimal enforcement (suppression=0.01, resistance=0.00). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
@@ -744,7 +762,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 ---
 
-### 83. True Mountain: `star_formation_barrier_g0253`
+### 85. True Mountain: `star_formation_barrier_g0253`
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for star_formation_barrier_g0253: Extreme inaccessibility (collapse=0.98) with minimal enforcement (suppression=0.02, resistance=0.00). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
@@ -753,7 +771,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 ---
 
-### 84. True Mountain: `star_to_black_hole_observational_limit`
+### 86. True Mountain: `star_to_black_hole_observational_limit`
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for star_to_black_hole_observational_limit: Extreme inaccessibility (collapse=0.90) with minimal enforcement (suppression=0.02, resistance=0.10). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
@@ -762,7 +780,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 ---
 
-### 85. True Mountain: `sturgeons_law`
+### 87. True Mountain: `sturgeons_law`
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for sturgeons_law: Extreme inaccessibility (collapse=0.95) with minimal enforcement (suppression=0.05, resistance=0.05). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
@@ -771,7 +789,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 ---
 
-### 86. True Mountain: `suslin_hypothesis`
+### 88. True Mountain: `suslin_hypothesis`
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for suslin_hypothesis_proof_limits: Extreme inaccessibility (collapse=0.90) with minimal enforcement (suppression=0.05, resistance=0.10). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
@@ -780,7 +798,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 ---
 
-### 87. True Mountain: `suslin_hypothesis_undecidability`
+### 89. True Mountain: `suslin_hypothesis_undecidability`
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for suslin_hypothesis_undecidability: Extreme inaccessibility (collapse=1.00) with minimal enforcement (suppression=0.00, resistance=0.00). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
@@ -789,7 +807,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 ---
 
-### 88. True Mountain: `sylow_theorems`
+### 90. True Mountain: `sylow_theorems`
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for constraint_sylow: Extreme inaccessibility (collapse=0.95) with minimal enforcement (suppression=0.01, resistance=0.05). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
@@ -798,7 +816,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 ---
 
-### 89. True Mountain: `sylow_theorems_group_theory`
+### 91. True Mountain: `sylow_theorems_group_theory`
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for sylow_theorems_group_theory: Extreme inaccessibility (collapse=1.00) with minimal enforcement (suppression=0.01, resistance=0.00). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
@@ -807,7 +825,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 ---
 
-### 90. True Mountain: `tarski_undefinability_theorem`
+### 92. True Mountain: `tarski_undefinability_theorem`
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for constraint_tarski_undefinability: Extreme inaccessibility (collapse=0.95) with minimal enforcement (suppression=0.01, resistance=0.01). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
@@ -816,7 +834,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 ---
 
-### 91. True Mountain: `terrain_inaccessibility_wheeled_vehicles`
+### 93. True Mountain: `terrain_inaccessibility_wheeled_vehicles`
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for terrain_inaccessibility_wheeled_vehicles: Extreme inaccessibility (collapse=0.95) with minimal enforcement (suppression=0.05, resistance=0.05). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
@@ -825,7 +843,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 ---
 
-### 92. True Mountain: `thermodynamics_entropy`
+### 94. True Mountain: `thermodynamics_entropy`
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for thermodynamics_entropy: Extreme inaccessibility (collapse=0.98) with minimal enforcement (suppression=0.05, resistance=0.00). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
@@ -834,7 +852,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 ---
 
-### 93. True Mountain: `three_body_problem`
+### 95. True Mountain: `three_body_problem`
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** Perspectives AGREE
@@ -843,7 +861,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 ---
 
-### 94. True Mountain: `three_body_unpredicability`
+### 96. True Mountain: `three_body_unpredicability`
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for three_body_unpredictability: Extreme inaccessibility (collapse=1.00) with minimal enforcement (suppression=0.02, resistance=0.00). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
@@ -852,7 +870,16 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 ---
 
-### 95. True Mountain: `twin_prime_conjecture`
+### 97. True Mountain: `treaty_land_entrenchment`
+
+*   **Claimed Type:** `mountain`
+*   **Structural Signature Analysis:** NATURAL LAW signature for treaty_land_entrenchment: Extreme inaccessibility (collapse=0.95) with minimal enforcement (suppression=0.02, resistance=0.01). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
+*   **Orbit Signature:** `[mountain]`
+*   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
+
+---
+
+### 98. True Mountain: `twin_prime_conjecture`
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for constraint_twin_prime_conjecture: Extreme inaccessibility (collapse=0.98) with minimal enforcement (suppression=0.05, resistance=0.02). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
@@ -861,7 +888,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 ---
 
-### 96. True Mountain: `van_der_waerden`
+### 99. True Mountain: `van_der_waerden`
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for van_der_waerden_theorem: Extreme inaccessibility (collapse=0.95) with minimal enforcement (suppression=0.01, resistance=0.01). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
@@ -870,7 +897,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 ---
 
-### 97. True Mountain: `weierstrass_function`
+### 100. True Mountain: `weierstrass_function`
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for weierstrass_proof_limits: Extreme inaccessibility (collapse=0.95) with minimal enforcement (suppression=0.02, resistance=0.05). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
@@ -879,7 +906,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 ---
 
-### 98. True Mountain: `whitehead_problem`
+### 101. True Mountain: `whitehead_problem`
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for whitehead_incompleteness: Extreme inaccessibility (collapse=0.95) with minimal enforcement (suppression=0.01, resistance=0.05). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.
@@ -888,7 +915,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 ---
 
-### 99. True Mountain: `whitehead_problem_undecidability`
+### 102. True Mountain: `whitehead_problem_undecidability`
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** NATURAL LAW signature for whitehead_problem_undecidability: Extreme inaccessibility (collapse=1.00) with minimal enforcement (suppression=0.01, resistance=0.00). No viable alternatives exist. This represents an inherent property of the system, not a coordination choice. Cannot be changed by policy.

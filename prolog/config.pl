@@ -146,15 +146,19 @@ param(data_medium_threshold, 0.75).
 param(mountain_suppression_ceiling, 0.05). % noise floor
 param(mountain_extractiveness_min, 0.0).
 param(mountain_extractiveness_max, 0.25).
+param(false_mountain_extraction_threshold, 0.90). % Claimed mountain with ε > 0.90 → reclassify as snare
 
 % --- Rope Boundaries ---
 % Aligned with core.md: Rope = low extraction, ε ≤ 0.15
 param(rope_extractiveness_min, 0.0).
+param(rope_extraction_ceiling, 0.15).       % Registry classification: ε ≤ 0.15 → rope
 % Base suppression ceiling for pure coordination
 param(rope_suppression_ceiling,      0.16).
 
 % --- Tangled Rope (Hybrid Zone) ---
 % Note: Tangled Rope requires BOTH coordination AND extraction markers.
+param(tangled_rope_extraction_floor, 0.16). % Registry classification: 0.16 ≤ ε ≤ 0.90
+param(tangled_rope_extraction_ceil, 0.90).  % Registry classification upper bound
 param(tangled_rope_suppression_floor, 0.40). % Requires active enforcement
 param(tangled_rope_suppression_ceil, 1.00).
 

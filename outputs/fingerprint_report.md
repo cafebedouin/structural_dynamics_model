@@ -4,7 +4,7 @@
 
 ## Summary
 
-- **Constraints analyzed**: 1023
+- **Constraints analyzed**: 1034
 - **Distinct shift patterns**: 36
 
 ## Shift Pattern Families
@@ -38,7 +38,7 @@ Each family groups constraints with identical perspectival shift — same classi
 
 - `google_universal_commerce_protocol`
 
-### `shift(mountain, mountain, mountain, mountain)` — 30 constraints
+### `shift(mountain, mountain, mountain, mountain)` — 32 constraints
 
 - `basel_problem_convergence`
 - `cantor_set_topology`
@@ -55,6 +55,7 @@ Each family groups constraints with identical perspectival shift — same classi
 - `dunbars_number`
 - `elencher_identity_transformation`
 - `epigenetics_complexity_2026`
+- `fossil_fuel_lock_in`
 - `hamiltonian_path_complexity`
 - `hilbert_hotel_infinite_capacity`
 - `hiv_prep_prevention_2026`
@@ -68,6 +69,7 @@ Each family groups constraints with identical perspectival shift — same classi
 - `p_vs_np`
 - `suslin_hypothesis_proof_limits`
 - `three_body_problem_predictability_limit`
+- `treaty_land_entrenchment`
 - `universal_mathematics_communication`
 - `whitehead_incompleteness`
 
@@ -91,7 +93,7 @@ Each family groups constraints with identical perspectival shift — same classi
 - `information_foraging_theory`
 - `skolems_paradox`
 
-### `shift(mountain, unknown, unknown, mountain)` — 81 constraints
+### `shift(mountain, unknown, unknown, mountain)` — 82 constraints
 
 - `banach_fixed_point`
 - `banach_fixed_point_theorem`
@@ -117,6 +119,7 @@ Each family groups constraints with identical perspectival shift — same classi
 - `ehrenfest_barrier`
 - `english_chinese_tense_structure`
 - `euler_characteristic_topology`
+- `event_fragmentation`
 - `fast_growing_hierarchy`
 - `feigenbaum_universality`
 - `fermat_proof_barrier`
@@ -175,14 +178,16 @@ Each family groups constraints with identical perspectival shift — same classi
 - `weierstrass_proof_limits`
 - `whitehead_problem_undecidability`
 
-### `shift(piton, rope, rope, rope)` — 4 constraints
+### `shift(piton, rope, rope, rope)` — 6 constraints
 
+- `boom_bust_path_dependency`
 - `gold_piton_2026`
 - `kjv_linguistic_residue`
 - `milano_cortina_2026`
+- `temporal_scarcity`
 - `viral_emergence_covid19_exemplar`
 
-### `shift(rope, rope, rope, rope)` — 27 constraints
+### `shift(rope, rope, rope, rope)` — 26 constraints
 
 - `asean_ceasefire_2011`
 - `automatic_enrollment_defaults`
@@ -207,7 +212,6 @@ Each family groups constraints with identical perspectival shift — same classi
 - `sts86_ascent_checklist`
 - `swift_piton_snap`
 - `thai_article_112_mountain`
-- `udhr_1948`
 - `vertebrate_turning_point_2026`
 - `wikipedia_crowdsourcing_2026`
 - `wikipedia_noncommercial_model`
@@ -220,7 +224,7 @@ Each family groups constraints with identical perspectival shift — same classi
 
 - `silklink_2026`
 
-### `shift(snare, snare, rope, snare)` — 314 constraints
+### `shift(snare, snare, rope, snare)` — 315 constraints
 
 - `abstraction_boundary_overrun`
 - `academic_fashion_modernism_2026`
@@ -506,6 +510,7 @@ Each family groups constraints with identical perspectival shift — same classi
 - `thai_senate_veto_2026`
 - `the_bacchae_madness_protocol`
 - `the_calm_protocol_suppression`
+- `theatrical_neutrality`
 - `toxic_social_infection`
 - `tractarian_logic_limit`
 - `tx_hispanic_pivot`
@@ -730,8 +735,9 @@ Each family groups constraints with identical perspectival shift — same classi
 - `wpl_scotland`
 - `yangtze_fishing_ban`
 
-### `shift(tangled_rope, tangled_rope, rope, tangled_rope)` — 142 constraints
+### `shift(tangled_rope, tangled_rope, rope, tangled_rope)` — 145 constraints
 
+- `access_arbitrage`
 - `adverse_possession`
 - `aging_longevity_tests`
 - `ai_edu_decentralization`
@@ -757,6 +763,7 @@ Each family groups constraints with identical perspectival shift — same classi
 - `cobra_effect`
 - `coinbase_crypto_volatility`
 - `cold_dark_matter_paradigm`
+- `colombia_2026_presidential_election`
 - `comitatus_bond`
 - `compounding_logic`
 - `confirmation_bias`
@@ -809,7 +816,7 @@ Each family groups constraints with identical perspectival shift — same classi
 - `lsd_microdosing_professional_openness`
 - `magna_carta_liberties`
 - `manga_distribution_duopoly`
-- `mars_rover_navigational_autonomy`
+- `mars_rovers_navigational_autonomy`
 - `med_diet_consensus_2026`
 - `meta_nuclear_power_agreement`
 - `mil_std_461g_emi_control`
@@ -847,6 +854,7 @@ Each family groups constraints with identical perspectival shift — same classi
 - `social_loafing`
 - `social_media_participation_threshold`
 - `sorites_paradox`
+- `sovereignty_as_arbitrage`
 - `st_petersburg_paradox`
 - `stable_marriage_coordination`
 - `theory_of_visitors`
@@ -914,7 +922,7 @@ Each family groups constraints with identical perspectival shift — same classi
 
 - `private_credit_market_opacity`
 
-### `shift(tangled_rope, tangled_rope, tangled_rope, tangled_rope)` — 102 constraints
+### `shift(tangled_rope, tangled_rope, tangled_rope, tangled_rope)` — 104 constraints
 
 - `academic_peer_review_gatekeeping`
 - `ai_cognitive_diversity_arbitrage`
@@ -929,6 +937,7 @@ Each family groups constraints with identical perspectival shift — same classi
 - `canada_goose_realignment_2026`
 - `castration_longevity_choice`
 - `china_taiwan_reunification_mandate`
+- `climate_policy_extraction`
 - `climate_target_one_point_five`
 - `coffee_cardiovascular_2026`
 - `cognitive_bicycle_scaffold`
@@ -1012,6 +1021,7 @@ Each family groups constraints with identical perspectival shift — same classi
 - `the_churn_systemic_upheaval`
 - `the_wall_procedural_barrier`
 - `trojan_war_spoils`
+- `udhr_1948`
 - `ulysses_circe_1904`
 - `ulysses_hades_1904`
 - `ulysses_oxen_1904`
@@ -1067,11 +1077,12 @@ Each family groups constraints with identical perspectival shift — same classi
 
 - `genie_ip_constraint`
 
-### `shift(unknown, unknown, rope, tangled_rope)` — 17 constraints
+### `shift(unknown, unknown, rope, tangled_rope)` — 18 constraints
 
 - `advice_as_dangerous_gift`
 - `alzheimers_levetiracetam`
 - `asce_7_22_seismic_design`
+- `china_africa_zero_tariff_2026`
 - `constraint_lagrange_multipliers`
 - `constraint_riemann_mapping`
 - `gemini_scientific_advancement`
@@ -1087,11 +1098,10 @@ Each family groups constraints with identical perspectival shift — same classi
 - `ritual_transition_scaffold`
 - `working_dog_training`
 
-### `shift(unknown, unknown, rope, unknown)` — 21 constraints
+### `shift(unknown, unknown, rope, unknown)` — 20 constraints
 
 - `artificial_snow_2026`
 - `clawderberg_recursive_slop`
-- `colombia_2026_presidential_election`
 - `cost_of_observation`
 - `cs_ecmo_bridge`
 - `education_unbundling_implementation`
@@ -1126,10 +1136,11 @@ Each family groups constraints with identical perspectival shift — same classi
 - `france_local_elections_march_2026`
 - `portugal_ad_stability_2026`
 
-### `shift(unknown, unknown, scaffold, unknown)` — 9 constraints
+### `shift(unknown, unknown, scaffold, unknown)` — 10 constraints
 
 - `axiom_reasoner_2026`
 - `exoplanetary_habitability_arbitrage`
+- `fiscal_equalization_friction`
 - `gamblers_ruin_stochastic_extinction`
 - `glp1_payload_efficiency_pivot`
 - `maha_recovery_2026`
@@ -1146,11 +1157,12 @@ Each family groups constraints with identical perspectival shift — same classi
 
 Constraints where changing scope (local vs national vs global) changes the classification type, holding power/time/exit constant.
 
-- **Scope-sensitive constraints**: 371 / 1023
+- **Scope-sensitive constraints**: 375 / 1034
 
 - `absorbing_markov_chain_trap`: local=unknown, national=unknown, global=snare
 - `abstraction_leakage`: local=tangled_rope, national=tangled_rope, global=unknown
 - `academic_fashion_modernism_2026`: local=unknown, national=snare, global=snare
+- `access_arbitrage`: local=unknown, national=tangled_rope, global=tangled_rope
 - `advice_as_dangerous_gift`: local=rope, national=unknown, global=tangled_rope
 - `agent_opt_2026`: local=unknown, national=snare, global=snare
 - `ai_adoption_stigma`: local=tangled_rope, national=tangled_rope, global=snare
@@ -1190,6 +1202,7 @@ Constraints where changing scope (local vs national vs global) changes the class
 - `cb_far_beyond_human`: local=tangled_rope, national=snare, global=snare
 - `cfius_hiefo_emcore_divestment`: local=tangled_rope, national=snare, global=snare
 - `cg_israelgaza_20231012`: local=tangled_rope, national=snare, global=snare
+- `china_africa_zero_tariff_2026`: local=rope, national=unknown, global=tangled_rope
 - `china_ev_export_oversupply`: local=tangled_rope, national=tangled_rope, global=snare
 - `china_vactrain_standard`: local=tangled_rope, national=tangled_rope, global=snare
 - `cholesterol_pill_cost`: local=tangled_rope, national=snare, global=snare
@@ -1208,6 +1221,7 @@ Constraints where changing scope (local vs national vs global) changes the class
 - `coinbase_crypto_volatility`: local=unknown, national=tangled_rope, global=tangled_rope
 - `coinbase_regulatory_uncertainty`: local=tangled_rope, national=snare, global=snare
 - `college_admissions_market`: local=tangled_rope, national=tangled_rope, global=unknown
+- `colombia_2026_presidential_election`: local=unknown, national=tangled_rope, global=tangled_rope
 - `colorado_sbe_decentralization_friction`: local=tangled_rope, national=snare, global=snare
 - `comitatus_bond`: local=unknown, national=tangled_rope, global=tangled_rope
 - `constitutional_consecration`: local=tangled_rope, national=snare, global=snare
@@ -1268,6 +1282,7 @@ Constraints where changing scope (local vs national vs global) changes the class
 - `fiber_optic_chip_tech`: local=tangled_rope, national=tangled_rope, global=snare
 - `fine_particle_policy`: local=tangled_rope, national=tangled_rope, global=snare
 - `finnish_debt_adjustment`: local=tangled_rope, national=snare, global=snare
+- `fiscal_equalization_friction`: local=scaffold, national=unknown, global=unknown
 - `fitts_law_industrial_application`: local=tangled_rope, national=snare, global=snare
 - `floating_wall_2026`: local=tangled_rope, national=snare, global=snare
 - `fmeca_procedures_1980`: local=unknown, national=tangled_rope, global=tangled_rope
@@ -1348,7 +1363,7 @@ Constraints where changing scope (local vs national vs global) changes the class
 - `lung_transplant_protocol`: local=tangled_rope, national=tangled_rope, global=snare
 - `magna_carta_liberties`: local=unknown, national=tangled_rope, global=tangled_rope
 - `marriage_market_asymmetry_2026`: local=tangled_rope, national=snare, global=snare
-- `mars_rover_navigational_autonomy`: local=unknown, national=tangled_rope, global=tangled_rope
+- `mars_rovers_navigational_autonomy`: local=unknown, national=tangled_rope, global=tangled_rope
 - `mass_market_extinction_2026`: local=tangled_rope, national=snare, global=snare
 - `matching_market_congestion_externality`: local=rope, national=unknown, global=tangled_rope
 - `max_flow_min_cut`: local=tangled_rope, national=tangled_rope, global=snare
@@ -1523,17 +1538,17 @@ Constraints where changing scope (local vs national vs global) changes the class
 
 ### Extraction Zones
 
-| extreme | 722 |
-| low | 96 |
-| negligible | 204 |
+| extreme | 725 |
+| low | 99 |
+| negligible | 209 |
 
 ### Suppression Zones
 
-| extreme | 661 |
-| high | 161 |
-| low | 54 |
+| extreme | 663 |
+| high | 165 |
+| low | 56 |
 | moderate | 10 |
-| negligible | 137 |
+| negligible | 140 |
 
 ## Orbit Cross-Reference
 
@@ -1543,37 +1558,37 @@ Maps shift pattern families to gauge orbit signatures.
 - `shift(indexically_opaque, tangled_rope, rope, snare)` (4 constraints): orbit `[indexically_opaque,rope,snare,tangled_rope]`
 - `shift(indexically_opaque, tangled_rope, rope, tangled_rope)` (3 constraints): orbit `[indexically_opaque,rope,tangled_rope]`
 - `shift(indexically_opaque, tangled_rope, tangled_rope, snare)` (1 constraints): orbit `[indexically_opaque,snare,tangled_rope]`
-- `shift(mountain, mountain, mountain, mountain)` (30 constraints): orbit `[mountain]`
+- `shift(mountain, mountain, mountain, mountain)` (32 constraints): orbit `[mountain]`
 - `shift(mountain, rope, rope, mountain)` (1 constraints): orbit `[mountain,rope]`
 - `shift(mountain, scaffold, scaffold, mountain)` (13 constraints): orbit `[mountain,scaffold]`
-- `shift(mountain, unknown, unknown, mountain)` (81 constraints): orbit `[mountain,unknown]`
-- `shift(piton, rope, rope, rope)` (4 constraints): orbit `[piton,rope]`
-- `shift(rope, rope, rope, rope)` (27 constraints): orbit `[rope]`
+- `shift(mountain, unknown, unknown, mountain)` (82 constraints): orbit `[mountain,unknown]`
+- `shift(piton, rope, rope, rope)` (6 constraints): orbit `[piton,rope]`
+- `shift(rope, rope, rope, rope)` (26 constraints): orbit `[rope]`
 - `shift(rope, rope, rope, tangled_rope)` (1 constraints): orbit `[rope,tangled_rope]`
 - `shift(scaffold, scaffold, scaffold, rope)` (1 constraints): orbit `[rope,scaffold]`
-- `shift(snare, snare, rope, snare)` (314 constraints): orbit `[rope,snare]`
+- `shift(snare, snare, rope, snare)` (315 constraints): orbit `[rope,snare]`
 - `shift(snare, snare, scaffold, snare)` (8 constraints): orbit `[scaffold,snare]`
 - `shift(tangled_rope, snare, rope, snare)` (27 constraints): orbit `[rope,snare,tangled_rope]`
 - `shift(tangled_rope, snare, tangled_rope, snare)` (1 constraints): orbit `[snare,tangled_rope]`
 - `shift(tangled_rope, tangled_rope, indexically_opaque, snare)` (2 constraints): orbit `[indexically_opaque,snare,tangled_rope]`
 - `shift(tangled_rope, tangled_rope, rope, snare)` (140 constraints): orbit `[rope,snare,tangled_rope]`
-- `shift(tangled_rope, tangled_rope, rope, tangled_rope)` (142 constraints): orbit `[rope,tangled_rope]`
+- `shift(tangled_rope, tangled_rope, rope, tangled_rope)` (145 constraints): orbit `[rope,tangled_rope]`
 - `shift(tangled_rope, tangled_rope, rope, unknown)` (18 constraints): orbit `[rope,tangled_rope,unknown]`
 - `shift(tangled_rope, tangled_rope, scaffold, snare)` (5 constraints): orbit `[scaffold,snare,tangled_rope]`
 - `shift(tangled_rope, tangled_rope, scaffold, tangled_rope)` (3 constraints): orbit `[scaffold,tangled_rope]`
 - `shift(tangled_rope, tangled_rope, tangled_rope, snare)` (1 constraints): orbit `[snare,tangled_rope]`
-- `shift(tangled_rope, tangled_rope, tangled_rope, tangled_rope)` (102 constraints): orbit `[tangled_rope]`
+- `shift(tangled_rope, tangled_rope, tangled_rope, tangled_rope)` (104 constraints): orbit `[tangled_rope]`
 - `shift(tangled_rope, unknown, rope, unknown)` (2 constraints): orbit `[rope,tangled_rope,unknown]`
 - `shift(unknown, rope, rope, rope)` (18 constraints): orbit `[rope,unknown]`
 - `shift(unknown, rope, rope, tangled_rope)` (6 constraints): orbit `[rope,tangled_rope,unknown]`
 - `shift(unknown, rope, rope, unknown)` (1 constraints): orbit `[rope,unknown]`
 - `shift(unknown, rope, scaffold, unknown)` (2 constraints): orbit `[rope,scaffold,unknown]`
 - `shift(unknown, snare, scaffold, snare)` (1 constraints): orbit `[scaffold,snare,unknown]`
-- `shift(unknown, unknown, rope, tangled_rope)` (17 constraints): orbit `[rope,tangled_rope,unknown]`
-- `shift(unknown, unknown, rope, unknown)` (21 constraints): orbit `[rope,unknown]`
+- `shift(unknown, unknown, rope, tangled_rope)` (18 constraints): orbit `[rope,tangled_rope,unknown]`
+- `shift(unknown, unknown, rope, unknown)` (20 constraints): orbit `[rope,unknown]`
 - `shift(unknown, unknown, scaffold, snare)` (7 constraints): orbit `[scaffold,snare,unknown]`
 - `shift(unknown, unknown, scaffold, tangled_rope)` (2 constraints): orbit `[scaffold,tangled_rope,unknown]`
-- `shift(unknown, unknown, scaffold, unknown)` (9 constraints): orbit `[scaffold,unknown]`
+- `shift(unknown, unknown, scaffold, unknown)` (10 constraints): orbit `[scaffold,unknown]`
 - `shift(unknown, unknown, unknown, unknown)` (1 constraints): orbit `[unknown]`
 ---
 *End of fingerprint report*

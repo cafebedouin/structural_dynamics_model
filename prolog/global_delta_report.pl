@@ -14,6 +14,7 @@
 :- use_module(narrative_ontology).
 :- use_module(constraint_indexing).
 :- use_module(drl_core).
+:- use_module(corpus_loader).
 
 % Standard contexts to test (matching drl_core:standard_context/1)
 std_ctx(powerless,
@@ -39,23 +40,6 @@ std_ctx(analytical,
             time_horizon(civilizational),
             exit_options(analytical),
             spatial_scope(global))).
-
-% ── Load all testsets ──────────────────────────────────────────────────────
-
-load_all_testsets :-
-    expand_file_name('testsets/*.pl', Files),
-    length(Files, N),
-    format(user_error, '[delta] Loading ~w testset files...~n', [N]),
-    load_testset_list(Files, 0, Loaded),
-    format(user_error, '[delta] Loaded ~w testsets successfully.~n', [Loaded]).
-
-load_testset_list([], N, N).
-load_testset_list([F|Fs], Acc, N) :-
-    (   catch(user:consult(F), _, true)
-    ->  Acc1 is Acc + 1
-    ;   Acc1 = Acc
-    ),
-    load_testset_list(Fs, Acc1, N).
 
 % ── Discover all constraints with extractiveness data ─────────────────────
 

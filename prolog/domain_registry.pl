@@ -1,7 +1,7 @@
 :- module(domain_registry, [domain_category/2]).
 % --- AUTOMATICALLY GENERATED DOMAIN REGISTRY ---
 % Thresholds aligned with config.pl: Rope <= 0.15, Snare >= 0.46, Tangled Rope 0.16-0.9.
-% Total entries: 1022
+% Total entries: 1030
 
 domain_category('26usc469_real_estate_exemption', snare).
 domain_category('8k_tv_limit_2026', piton).
@@ -107,6 +107,7 @@ domain_category(bnpl_payment_systems, snare).
 domain_category(board_of_peace_2026, snare).
 domain_category(boiled_pineapple_trend_2026, piton).
 domain_category(boltzmann_universality_2026, tangled_rope).
+domain_category(boom_bust_path_dependency, piton).
 domain_category(bor_tax_exemption_nl, snare).
 domain_category(boundary_dissolution_risk, snare).
 domain_category(boundary_protocol, scaffold).
@@ -151,6 +152,7 @@ domain_category(chaitins_omega_undecidability, mountain).
 domain_category(challenger_o_ring_integrity, snare).
 domain_category(champions_bass_fishing_exclusion, snare).
 domain_category(child_marriage, snare).
+domain_category(china_africa_zero_tariff_2026, tangled_rope).
 domain_category(china_critical_mineral_chokepoint, snare).
 domain_category(china_ev_export_oversupply, snare).
 domain_category(china_taiwan_reunification_mandate, snare).
@@ -169,6 +171,7 @@ domain_category(clawderberg_recursive_slop, piton).
 domain_category(click_chemistry_paradigm_2026, rope).
 domain_category(climate_attribution_2026, rope).
 domain_category(climate_event_attribution, snare).
+domain_category(climate_policy_extraction, snare).
 domain_category(climate_target_one_point_five, tangled_rope).
 domain_category(cloudflare_dual_class_asymmetry, snare).
 domain_category(clt_convergence_2026, mountain).
@@ -194,7 +197,7 @@ domain_category(collatz_conjecture_determinism, mountain).
 domain_category(collective_action_deadlock, snare).
 domain_category(collective_stupidity_2026, snare).
 domain_category(college_admissions_market, snare).
-domain_category(colombia_2026_presidential_election, rope).
+domain_category(colombia_2026_presidential_election, tangled_rope).
 domain_category(colorado_sbe_decentralization_friction, snare).
 domain_category(comitatus_bond, tangled_rope).
 domain_category(communal_narcissism_social_trap, piton).
@@ -287,7 +290,7 @@ domain_category(ec_meta_manus_block, snare).
 domain_category(edelman_2026_developed_stagnation, snare).
 domain_category(edelman_2026_developing_volatility, snare).
 domain_category(edelman_2026_insularity, snare).
-domain_category(education_unbundling_implementation, rope).
+domain_category(education_unbundling_implementation, tangled_rope).
 domain_category(ehrenfest_barrier, mountain).
 domain_category(electrification_scale_2026, tangled_rope).
 domain_category(elencher_identity_transformation, mountain).
@@ -365,11 +368,13 @@ domain_category(finite_simple_group_classification, mountain).
 domain_category(finnish_debt_adjustment, snare).
 domain_category(finnish_ubi_experiment, scaffold).
 domain_category(fiscal_dominance_trap, piton).
+domain_category(fiscal_equalization_friction, rope).
 domain_category(fitts_law_industrial_application, snare).
 domain_category(floating_wall_2026, snare).
 domain_category(fmeca_procedures_1980, rope).
 domain_category(fmt_oncology_2026, scaffold).
 domain_category(fnl_shadow_probe, tangled_rope).
+domain_category(fossil_fuel_lock_in, mountain).
 domain_category(four_color_theorem_topological_bound, mountain).
 domain_category(fragile_middle_layer_collapse, snare).
 domain_category(framing_effect, snare).
@@ -590,7 +595,7 @@ domain_category(mandatrophy_systemic_collapse, snare).
 domain_category(manga_distribution_duopoly, snare).
 domain_category(manganese_catalysis_2026, scaffold).
 domain_category(marriage_market_asymmetry_2026, snare).
-domain_category(mars_rover_navigational_autonomy, rope).
+domain_category(mars_rovers_navigational_autonomy, tangled_rope).
 domain_category(martian_signal_latency, mountain).
 domain_category(mass_market_extinction_2026, snare).
 domain_category(matching_market_congestion_externality, tangled_rope).
@@ -854,6 +859,7 @@ domain_category(solar_system_weirdness, rope).
 domain_category(somatic_focusing_awareness, rope).
 domain_category(sorites_paradox, tangled_rope).
 domain_category(south_china_sea_arbitration_2016_2026, snare).
+domain_category(sovereignty_as_arbitrage, snare).
 domain_category(spain_digital_offensive_2026, snare).
 domain_category(spv_variations_us_cold, rope).
 domain_category(square_cube_law, mountain).
@@ -904,6 +910,7 @@ domain_category(tear_gas_repression_2026, snare).
 domain_category(technocratic_overreach, snare).
 domain_category(technological_point_of_no_return, snare).
 domain_category(temporal_scale_arbitrage, snare).
+domain_category(temporal_scarcity, piton).
 domain_category(terrain_inaccessibility_wheeled_vehicles, mountain).
 domain_category(texas_insurance_market_instability, snare).
 domain_category(thai_article_112_mountain, tangled_rope).
@@ -925,6 +932,7 @@ domain_category(tragedy_of_the_commons, snare).
 domain_category(transformer_self_attention, snare).
 domain_category(transient_event_detection, rope).
 domain_category(traveling_salesperson_problem, snare).
+domain_category(treaty_land_entrenchment, mountain).
 domain_category(trillion_bond_rush_2026, snare).
 domain_category(trivial_topology_info_asymmetry, snare).
 domain_category(trojan_war_spoils, snare).
@@ -1006,7 +1014,7 @@ domain_category(vienna_quantum_superposition_2026, snare).
 domain_category(viral_emergence_covid19_exemplar, tangled_rope).
 domain_category(viral_transmission_rates, snare).
 domain_category(visa_ipo_regulatory_compliance, tangled_rope).
-domain_category(visa_judgment_sharing_agreement, rope).
+domain_category(visa_judgment_sharing_agreement, tangled_rope).
 domain_category(visibility_bias_governance, snare).
 domain_category(vns_implant_for_trd, snare).
 domain_category(weierstrass_proof_limits, mountain).

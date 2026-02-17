@@ -32,7 +32,7 @@
 %  engine, outputs markdown report.
 run_abductive_report :-
     format(user_error, '[abductive_report] Starting abductive reasoning analysis...~n', []),
-    covering_analysis:load_all_testsets,
+    corpus_loader:load_all_testsets,
     constraint_indexing:default_context(Context),
 
     % Run MaxEnt classifier (prerequisite for most triggers)

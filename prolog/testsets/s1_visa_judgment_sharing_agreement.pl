@@ -1,26 +1,49 @@
 % ============================================================================
 % CONSTRAINT STORY: visa_judgment_sharing_agreement
 % ============================================================================
-% Generated: 2026-01-17
-% Model: Gemini 2.0 Flash
-% Source: Visa Inc. Amendment No. 6 to Form S-1 
+% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2024-07-29
 % ============================================================================
 
-:- module(visa_judgment_sharing_agreement, []).
+:- module(constraint_visa_judgment_sharing_agreement, []).
 
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
 
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
+
 % --- Namespace Hooks (Required for loading) ---
-:- multifile 
+:- multifile
     domain_priors:base_extractiveness/2,
     domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
     domain_priors:requires_active_enforcement/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
-    constraint_indexing:constraint_classification/3.
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
+    narrative_ontology:boltzmann_floor_override/2,
+    constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3,
+    domain_priors:emerges_naturally/1,
+    narrative_ontology:omega_variable/3.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -28,258 +51,227 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: visa_judgment_sharing_agreement
- * human_readable: Judgment Sharing Agreement (AMEX Case)
- * domain: legal/economic
- * temporal_scope: July 2007 (Filing date) 
- * spatial_scope: National (United States Judiciary) 
- * * SUMMARY:
- * A contractual coordination mechanism between Visa U.S.A. Inc. and its 
- * signatory member banks to allocate financial liability arising from 
- * antitrust litigation (specifically the American Express case). 
- * This agreement prevents individual member banks from being single-handedly 
- * destroyed by joint and several liability.
- * * KEY AGENTS:
- * - Visa U.S.A. Inc.: The central entity coordinating the defense.
- * - Signatory Banks: Member institutions sharing the risk of a multi-billion dollar judgment.
- * - American Express (AMEX): The plaintiff whose legal victory creates the liability pressure.
- * * NARRATIVE ARC:
- * To facilitate the IPO, Visa must ringfence and quantify its massive legal 
- * liabilities. The Judgment Sharing Agreement (JSA) transforms an unpredictable 
- * external threat (antitrust judgment) into a structured internal obligation 
- * (shared loss) .
+ *   constraint_id: visa_judgment_sharing_agreement
+ *   human_readable: Visa Judgment Sharing Agreement (AMEX Antitrust Case)
+ *   domain: legal/economic
+ *
+ * SUMMARY:
+ *   A contractual coordination mechanism between Visa U.S.A. Inc. and its
+ *   signatory member banks to allocate financial liability arising from
+ *   antitrust litigation (specifically the American Express case). This
+ *   agreement prevents individual member banks from being destroyed by
+ *   joint and several liability, thereby stabilizing the network to
+ *   facilitate Visa's IPO.
+ *
+ * KEY AGENTS (by structural relationship):
+ *   - signatory_member_banks: Primary target (organized/trapped) — bear the allocated financial liability.
+ *   - visa_inc_shareholders: Primary beneficiary (institutional/arbitrage) — benefit from the de-risked IPO and stabilized network.
+ *   - american_express: External pressure (institutional/mobile) — the plaintiff whose legal victory creates the liability.
+ *   - Analytical Observer: Sees the full structure of coordination and extraction.
  */
 
 /* ==========================================================================
-   2. CORE SYSTEM INTEGRATION (The "Reality" Layer)
+   2. BASE PROPERTIES (DOMAIN PRIORS)
    ========================================================================== */
 
-% Required for [STEP 1] and [STEP 2] of the DR-Audit Suite
-narrative_ontology:interval(visa_litigation_ringfencing, 0, 10).
-narrative_ontology:constraint_claim(visa_judgment_sharing_agreement, rope).
+% --- Numerical metrics ---
+domain_priors:base_extractiveness(visa_judgment_sharing_agreement, 0.40).
+domain_priors:suppression_score(visa_judgment_sharing_agreement, 0.70).   % Structural property (raw, unscaled).
+domain_priors:theater_ratio(visa_judgment_sharing_agreement, 0.14).       % Piton detection (>= 0.70)
 
-% Base extractiveness score (0.0 = no extraction, 1.0 = full extraction)
-% Rationale: The agreement extracts capital from banks to pay settlements, but 
-% the flow is proportional to their historical involvement and protects the 
-% system from collapse.
-domain_priors:base_extractiveness(visa_judgment_sharing_agreement, 0.4).
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(visa_judgment_sharing_agreement, extractiveness, 0.40).
+narrative_ontology:constraint_metric(visa_judgment_sharing_agreement, suppression_requirement, 0.70).
+narrative_ontology:constraint_metric(visa_judgment_sharing_agreement, theater_ratio, 0.14).
 
-% Suppression score (0.0 = no suppression, 1.0 = full suppression)
-% Rationale: Banks that want to remain part of the Visa network for the IPO 
-% restructure essentially have no alternative but to sign.
-domain_priors:suppression_score(visa_judgment_sharing_agreement, 0.7).
+% --- Constraint claim (must match analytical perspective type) ---
+narrative_ontology:constraint_claim(visa_judgment_sharing_agreement, tangled_rope).
 
-% Constraint metric facts (bridge for classification engine)
-narrative_ontology:constraint_metric(visa_judgment_sharing_agreement, extractiveness, 0.4).
-narrative_ontology:constraint_metric(visa_judgment_sharing_agreement, suppression_requirement, 0.7).
+% --- Binary flags ---
+domain_priors:requires_active_enforcement(visa_judgment_sharing_agreement). % Required for Tangled Rope
 
-% Enforcement requirements
-domain_priors:requires_active_enforcement(visa_judgment_sharing_agreement).
-
-% Metrics for Executive Summary
-% Beneficiaries and Victims
+% --- Structural relationships (REQUIRED for non-mountain constraints) ---
+% These feed the directionality derivation chain: the engine computes
+% d (directionality) from agent membership in these groups + exit_options.
+%
+% Who benefits from this constraint existing?
 narrative_ontology:constraint_beneficiary(visa_judgment_sharing_agreement, visa_inc_shareholders).
+%
+% Who bears disproportionate cost?
 narrative_ontology:constraint_victim(visa_judgment_sharing_agreement, signatory_member_banks).
+%
+% Gate requirements:
+%   Tangled Rope: beneficiary + victim + requires_active_enforcement (all three)
 
 /* ==========================================================================
-   3. INDEXED CLASSIFICATIONS (Perspectival Truth)
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × f(d) × σ(S)
+   where f(d) is the sigmoid directionality function:
+     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
+   The engine derives d from beneficiary/victim membership + exit_options.
+   Scope modifiers: local=0.8, regional=0.9, national=1.0,
+                    continental=1.1, global=1.2, universal=1.0.
+   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
+   Do not add measurement_basis, beneficiary/victim, or other metadata.
+   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 1: Small Signatory Bank - Snare
-   --------------------------------------------------------------------------
-   
-   WHO: individual_moderate - Financial institution but small relative to the system.
-   WHEN: immediate - Concerned with the upcoming quarterly impact of loss sharing.
-   WHERE: trapped - Leaving the network during an IPO restructuring is prohibitively costly.
-   SCOPE: national.
-   
-   WHY THIS CLASSIFICATION:
-   For a smaller bank, this is a "Snare." They are forced to sign an agreement 
-   that binds them to pay for the "sins" of the network's past antitrust 
-   behavior, with the terms dictated by the larger Visa corporate entity 
-   to ensure the IPO's success.
-   
-   NARRATIVE EVIDENCE:
-   The agreement is "by and between Visa U.S.A. Inc. and the signatory banks 
-   thereto," implying a take-it-or-leave-it participation requirement.
-   -------------------------------------------------------------------------- */
+% PERSPECTIVE 1: THE PRIMARY TARGET (TANGLED ROPE)
+% A smaller signatory bank. They are forced to sign an agreement that binds
+% them to pay for the network's past behavior. Leaving the network during
+% the IPO restructuring is prohibitively costly.
+% Engine derives d from: victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42
+% χ ≈ 0.40 * 1.42 * 1.0 = 0.568. This is not a Snare (χ < 0.66) but a Tangled Rope.
+constraint_indexing:constraint_classification(visa_judgment_sharing_agreement, tangled_rope,
+    context(agent_power(powerless),
+            time_horizon(biographical),
+            exit_options(trapped),
+            spatial_scope(national))).
 
-% 2026-02-11: Fixed context arity — removed beneficiary/victim from context tuples (context/4 enforcement)
-constraint_indexing:constraint_classification(
-    visa_judgment_sharing_agreement,
-    snare,
-    context(
-        agent_power(individual_moderate),
-        time_horizon(immediate),
-        exit_options(trapped),
-        spatial_scope(national)
-    )
-) :-
-    domain_priors:suppression_score(visa_judgment_sharing_agreement, S),
-    S > 0.6,
-    !.
+% PERSPECTIVE 2: THE PRIMARY BENEFICIARY (ROPE)
+% Visa's legal team or new IPO shareholders. The agreement is a pure
+% coordination tool that transforms unquantifiable systemic risk into a
+% structured, manageable liability, enabling the IPO to proceed.
+% Engine derives d from: beneficiary membership + arbitrage exit → d ≈ 0.05 → f(d) ≈ -0.12 → negative χ
+constraint_indexing:constraint_classification(visa_judgment_sharing_agreement, rope,
+    context(agent_power(institutional),
+            time_horizon(generational),
+            exit_options(arbitrage),
+            spatial_scope(global))).
 
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 2: Visa Chief Legal Officer - Rope
-   --------------------------------------------------------------------------
-   
-   WHO: institutional - Crafting the legal architecture of the IPO.
-   WHEN: biographical - Aiming for a stable, public Visa Inc. over the next 20 years.
-   WHERE: arbitrage - Using contract law to mitigate judicial risk.
-   SCOPE: global.
-   
-   WHY THIS CLASSIFICATION:
-   From the institutional perspective, the JSA is a "Rope." It is a functional 
-   coordination tool that prevents the "systemic risk" of one bank failing and 
-   dragging down the network. It allows the IPO to proceed by providing 
-   certainty to new investors.
-   
-   NARRATIVE EVIDENCE:
-   "Judgment Sharing Agreement among Defendants... incorporated by reference" 
-   as a key exhibit for investor transparency.
-   -------------------------------------------------------------------------- */
-
-constraint_indexing:constraint_classification(
-    visa_judgment_sharing_agreement,
-    rope,
-    context(
-        agent_power(institutional),
-        time_horizon(biographical),
-        exit_options(arbitrage),
-        spatial_scope(global)
-    )
-) :-
-    domain_priors:base_extractiveness(visa_judgment_sharing_agreement, E),
-    E < 0.5,
-    !.
-
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 3: The Judiciary / SEC Observer - Mountain
-   --------------------------------------------------------------------------
-   
-   WHO: analytical - Observing the legal reality of the filings.
-   WHEN: historical - The antitrust case is a settled "fact" of the 2000s era.
-   WHERE: analytical - Not a party to the contract.
-   SCOPE: national.
-   
-   WHY THIS CLASSIFICATION:
-   For an observer, these liabilities and the agreements to share them are a 
-   "Mountain." They are the fixed landscape of Visa's history that cannot be 
-   erased; they must be navigated and disclosed as immutable risks.
-   
-   NARRATIVE EVIDENCE:
-   Referenced repeatedly across multiple amendments (No. 1 through No. 6) 
-   as a permanent part of the registration statement.
-   -------------------------------------------------------------------------- */
-
-constraint_indexing:constraint_classification(
-    visa_judgment_sharing_agreement,
-    mountain,
-    context(
-        agent_power(analytical),
-        time_horizon(historical),
-        exit_options(analytical),
-        spatial_scope(national)
-    )
-) :-
-    true,
-    !.
+% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
+% Default analytical context. Recognizes both the essential coordination
+% function (stabilizing the network) and the coercive, extractive nature
+% of forcing members to cover liabilities under high exit costs.
+% Engine derives d ≈ 0.72 → f(d) ≈ 1.15. Scope is global (σ=1.2).
+% χ ≈ 0.40 * 1.15 * 1.2 = 0.552. This is a clear Tangled Rope.
+constraint_indexing:constraint_classification(visa_judgment_sharing_agreement, tangled_rope,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(global))).
 
 /* ==========================================================================
-   4. TESTS
+   4. VALIDATION TESTS
    ========================================================================== */
 
-:- begin_tests(visa_jsa_tests).
+:- begin_tests(visa_judgment_sharing_agreement_tests).
 
-test(multi_perspective_variance) :-
-    constraint_indexing:constraint_classification(visa_judgment_sharing_agreement, Type1,
-        context(agent_power(individual_moderate), time_horizon(immediate), exit_options(trapped), spatial_scope(national))),
-    constraint_indexing:constraint_classification(visa_judgment_sharing_agreement, Type2,
-        context(agent_power(institutional), time_horizon(biographical), exit_options(arbitrage), spatial_scope(global))),
-    Type1 = snare,
-    Type2 = rope.
+test(perspectival_gap) :-
+    % Verify perspectival gap between target and beneficiary.
+    constraint_indexing:constraint_classification(visa_judgment_sharing_agreement, TypeTarget, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(visa_judgment_sharing_agreement, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
+    TypeTarget = tangled_rope,
+    TypeBeneficiary = rope,
+    TypeTarget \= TypeBeneficiary.
 
-test(systemic_stability_logic) :-
-    % Testing that institutional power views this as a functional tool (Rope)
-    constraint_indexing:constraint_classification(visa_judgment_sharing_agreement, rope,
-        context(agent_power(institutional), _, _, _)).
+test(analytical_classification_matches_claim) :-
+    narrative_ontology:constraint_claim(visa_judgment_sharing_agreement, ClaimedType),
+    constraint_indexing:constraint_classification(visa_judgment_sharing_agreement, AnalyticalType, context(agent_power(analytical), _, _, _)),
+    ClaimedType == AnalyticalType.
 
-:- end_tests(visa_jsa_tests).
+test(tangled_rope_structural_properties_present) :-
+    narrative_ontology:constraint_beneficiary(visa_judgment_sharing_agreement, _),
+    narrative_ontology:constraint_victim(visa_judgment_sharing_agreement, _),
+    domain_priors:requires_active_enforcement(visa_judgment_sharing_agreement).
+
+:- end_tests(visa_judgment_sharing_agreement_tests).
 
 /* ==========================================================================
-   5. MODEL INTERPRETATION (Commentary)
+   5. GENERATIVE COMMENTARY
    ========================================================================== */
 
 /**
- * LLM GENERATION NOTES
- * * Model: Gemini 2.0 Flash
- * * KEY DECISIONS:
- * 1. EXTRACTIVENESS (0.4): Significant because it mandates large payments 
- * from banks to cover settlements.
- * 2. CLASSIFICATION: Chose "Rope" for the institution because the JSA is 
- * what enables the "Global Restructuring Agreement". Without it, 
- * the IPO (a larger Rope) would fail.
- * * AMBIGUITIES:
- * The S-1 does not disclose the *exact* percentages of liability sharing, 
- * which are likely in the "confidential treatment" portions.
+ * LOGIC RATIONALE:
+ *   The base metrics (ε=0.40, S=0.70) strongly indicate a hybrid constraint.
+ *   The extractiveness represents the mandatory financial contributions from
+ *   member banks to cover the legal judgment. The high suppression score
+ *   reflects the prohibitive cost for a bank to exit the Visa network,
+ *   especially during the IPO restructuring, making participation in the
+ *   agreement non-optional. The constraint requires active legal enforcement,
+ *   has clear beneficiaries (shareholders) and victims (member banks), fitting
+ *   the Tangled Rope profile perfectly.
+ *
+ * PERSPECTIVAL GAP:
+ *   The gap is stark. For Visa Inc. and its new shareholders (institutional),
+ *   the agreement is a pure Rope: a brilliant legal instrument for risk
+ *   coordination that makes a multi-billion dollar IPO possible. For a
+ *   signatory bank (powerless/trapped), it's a Tangled Rope: they are coerced
+ *   into paying for the network's past actions to protect an upside (the IPO)
+ *   that primarily benefits the central corporation and its new owners. They
+ *   are simultaneously coordinated and extracted from.
+ *
+ * DIRECTIONALITY LOGIC:
+ *   - Beneficiaries: `visa_inc_shareholders`. They receive the primary benefit
+ *     of a de-risked, stable, publicly-traded company. Their relationship is
+ *     one of pure upside, shielded from the direct liability.
+ *   - Victims: `signatory_member_banks`. They bear the direct financial cost
+ *     of the settlement. While they also benefit from network stability, the
+ *     cost is imposed upon them with no viable alternative, making them the
+ *     structural victims of the extraction.
+ *
+ * MANDATROPHY ANALYSIS:
+ *   This case is a classic example of a Tangled Rope that could be mislabeled.
+ *   A purely institutional view would call it a Rope, ignoring the coercive
+ *   extraction from members. A purely victim-focused view might call it a Snare,
+ *   ignoring the genuine and critical coordination function it serves in
+ *   preventing network collapse. The Tangled Rope classification correctly
+ *   captures this duality: it is a tool of both coordination and extraction.
  */
 
 /* ==========================================================================
-   6. OMEGA VARIABLES (Ω)
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
+% Omega variables — open questions the framework cannot yet resolve
+%
+% /5 form: narrative detail for story context
 omega_variable(
-    allocation_fairness,
-    "Is the liability allocation based on revenue (Rope) or on political leverage within the Visa association (Snare)?",
-    resolution_mechanism("Audit of the confidential exhibit filed with the SEC Secretary"),
-    impact("If leverage-based: it is a Snare for smaller banks. If revenue-based: it is a Rope for the network."),
-    confidence_without_resolution(low)
+    omega_visa_judgment_sharing_agreement,
+    'Is the liability allocation formula based on proportional historical revenue (fair coordination) or on political leverage within the Visa association (asymmetric extraction)?',
+    'Audit of the confidential exhibit filed with the SEC, which details the allocation formula.',
+    'If revenue-based, the constraint is closer to a pure Rope. If leverage-based, the extractive component is stronger, reinforcing the Tangled Rope/Snare classification for smaller members.',
+    confidence_without_resolution(medium)
 ).
 
-/* ==========================================================================
-   7. ALTERNATIVE ANALYSIS
-   ========================================================================== */
-
-/**
- * VIABLE ALTERNATIVES
- * * ALTERNATIVE 1: Individual Litigation
- * Viability: Every bank defends itself against AMEX. 
- * Suppression: Rejected because it would lead to inconsistent judgments and 
- * potentially bankrupt smaller members, ruining the Visa brand before the IPO.
- * * CONCLUSION:
- * The rejection of individual litigation effectively forces the JSA into a 
- * "Mountain" status for those who want to remain in the payment ecosystem.
- */
+% /3 form: typed classification for reporting engine (REQUIRED)
+narrative_ontology:omega_variable(omega_visa_judgment_sharing_agreement, empirical, 'The fairness of the liability allocation formula, which is detailed in a confidential legal exhibit.').
 
 /* ==========================================================================
-   8. INTEGRATION HOOKS
+   7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Load: ?- [visa_judgment_sharing_agreement].
+% Required for external script parsing
+narrative_ontology:interval(visa_judgment_sharing_agreement, 0, 10).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Base extractiveness is < 0.46, so temporal measurements are not required.
+% narrative_ontology:measurement(visa_judgment_sharing_agreement_tr_t0, visa_judgment_sharing_agreement, theater_ratio, 0, 0.14).
+% narrative_ontology:measurement(visa_judgment_sharing_agreement_tr_t5, visa_judgment_sharing_agreement, theater_ratio, 5, 0.14).
+% narrative_ontology:measurement(visa_judgment_sharing_agreement_tr_t10, visa_judgment_sharing_agreement, theater_ratio, 10, 0.14).
+%
+% narrative_ontology:measurement(visa_judgment_sharing_agreement_ex_t0, visa_judgment_sharing_agreement, base_extractiveness, 0, 0.40).
+% narrative_ontology:measurement(visa_judgment_sharing_agreement_ex_t5, visa_judgment_sharing_agreement, base_extractiveness, 5, 0.40).
+% narrative_ontology:measurement(visa_judgment_sharing_agreement_ex_t10, visa_judgment_sharing_agreement, base_extractiveness, 10, 0.40).
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA
+   ========================================================================== */
+
+% Coordination type (enables Boltzmann floor + complexity offset)
+% The agreement allocates a shared financial burden (a resource).
+narrative_ontology:coordination_type(visa_judgment_sharing_agreement, resource_allocation).
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+% No overrides needed. The structural derivation from beneficiary/victim
+% declarations and exit options accurately models the dynamics.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
-
-
-% --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
-constraint_indexing:constraint_classification(s1_visa_judgment_sharing_agreement, mountain, agent_power(analytical)).
-constraint_indexing:constraint_classification(s1_visa_judgment_sharing_agreement, rope, agent_power(institutional)).
-constraint_indexing:constraint_classification(s1_visa_judgment_sharing_agreement, snare, agent_power(powerless)).
-
-% ============================================================================
-% ENRICHMENT: Structural predicates for dynamic classification
-% Generated: 2026-02-08
-% Template: v5.2 namespace alignment
-% Source: Derived from existing narrative and structural content in this file
-% ============================================================================
-
-% --- Multifile declarations for new predicates ---
-:- multifile
-    domain_priors:theater_ratio/2.
-
-% --- Theater ratio (missing from base properties) ---
-% Coordination mechanism in legal domain — moderate institutional framing
-domain_priors:theater_ratio(visa_judgment_sharing_agreement, 0.14).
-narrative_ontology:constraint_metric(visa_judgment_sharing_agreement, theater_ratio, 0.14).

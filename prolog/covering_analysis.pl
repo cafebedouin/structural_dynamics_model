@@ -33,36 +33,10 @@
 :- use_module(narrative_ontology).
 :- use_module(constraint_indexing).
 :- use_module(structural_signatures).
+:- use_module(corpus_loader).
 :- use_module(library(lists)).
 
 :- dynamic cached_grid_sig/2.
-:- dynamic corpus_loaded/0.
-
-/* ================================================================
-   SHARED INFRASTRUCTURE
-   ================================================================ */
-
-%% load_all_testsets
-%  Bulk-loads all .pl files from testsets/ directory.
-%  Pattern from global_delta_report.pl.
-load_all_testsets :-
-    (   corpus_loaded
-    ->  true
-    ;   expand_file_name('testsets/*.pl', Files),
-        length(Files, N),
-        format(user_error, '[covering] Loading ~w testset files...~n', [N]),
-        load_testset_list(Files, 0, Loaded),
-        format(user_error, '[covering] Loaded ~w testsets successfully.~n', [Loaded]),
-        assertz(corpus_loaded)
-    ).
-
-load_testset_list([], N, N).
-load_testset_list([F|Fs], Acc, N) :-
-    (   catch(user:consult(F), _, true)
-    ->  Acc1 is Acc + 1
-    ;   Acc1 = Acc
-    ),
-    load_testset_list(Fs, Acc1, N).
 
 %% all_corpus_constraints(-Constraints)
 %  Discovers all constraint atoms with extractiveness data.

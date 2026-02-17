@@ -1,6 +1,6 @@
 # Tangled Rope Diagnostic Report
 
-**Total Unique Tangled Ropes Found:** 697
+**Total Unique Tangled Ropes Found:** 705
 
 ---
 
@@ -216,7 +216,35 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 8. Tangled Rope: `ad_fus_coordination`
+### 8. Tangled Rope: `access_arbitrage`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `N/A`
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for access_arbitrage: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [excess_above_floor(0.4),nonsensical_coupling(0.16666666666666666)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[rope, tangled_rope]`
+*   **Related Gap/Alert:** N/A
+*   **Generated Omega:** Constraint access_arbitrage appears as tangled_rope to individuals but rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive access_arbitrage
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 9. Tangled Rope: `ad_fus_coordination`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -249,7 +277,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 9. Tangled Rope: `ad_synaptic_deficit`
+### 10. Tangled Rope: `ad_synaptic_deficit`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -275,7 +303,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 10. Tangled Rope: `adaptive_lag_trap`
+### 11. Tangled Rope: `adaptive_lag_trap`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -308,7 +336,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 11. Tangled Rope: `adversarial_surface_inflation`
+### 12. Tangled Rope: `adversarial_surface_inflation`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -341,7 +369,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 12. Tangled Rope: `adversarial_truth_decay`
+### 13. Tangled Rope: `adversarial_truth_decay`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -374,7 +402,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 13. Tangled Rope: `advice_as_dangerous_gift`
+### 14. Tangled Rope: `advice_as_dangerous_gift`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -402,7 +430,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 14. Tangled Rope: `agency_atrophy`
+### 15. Tangled Rope: `agency_atrophy`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -435,7 +463,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 15. Tangled Rope: `aging_well_assessment`
+### 16. Tangled Rope: `aging_well_assessment`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -468,7 +496,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 16. Tangled Rope: `ai_adoption_stigma`
+### 17. Tangled Rope: `ai_adoption_stigma`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -501,7 +529,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 17. Tangled Rope: `ai_auditability_gap`
+### 18. Tangled Rope: `ai_auditability_gap`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -534,7 +562,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 18. Tangled Rope: `ai_banal_capture`
+### 19. Tangled Rope: `ai_banal_capture`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -567,7 +595,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 19. Tangled Rope: `ai_compute_capital_moat`
+### 20. Tangled Rope: `ai_compute_capital_moat`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -600,7 +628,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 20. Tangled Rope: `ai_driven_surveillance_sensor_layer`
+### 21. Tangled Rope: `ai_driven_surveillance_sensor_layer`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -626,7 +654,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 21. Tangled Rope: `ai_evaluators_matching`
+### 22. Tangled Rope: `ai_evaluators_matching`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -659,7 +687,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 22. Tangled Rope: `ai_nonconsensual_content_facilitation`
+### 23. Tangled Rope: `ai_nonconsensual_content_facilitation`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -692,7 +720,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 23. Tangled Rope: `ai_performance_watermark`
+### 24. Tangled Rope: `ai_performance_watermark`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -725,7 +753,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 24. Tangled Rope: `ai_professional_displacement`
+### 25. Tangled Rope: `ai_professional_displacement`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -758,7 +786,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 25. Tangled Rope: `ai_religion_regulation`
+### 26. Tangled Rope: `ai_religion_regulation`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -791,7 +819,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 26. Tangled Rope: `ai_scholar_citation_trap`
+### 27. Tangled Rope: `ai_scholar_citation_trap`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -824,7 +852,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 27. Tangled Rope: `ai_task_horizon_reliability`
+### 28. Tangled Rope: `ai_task_horizon_reliability`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -856,7 +884,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 28. Tangled Rope: `ai_training_data_dependency`
+### 29. Tangled Rope: `ai_training_data_dependency`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -889,7 +917,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 29. Tangled Rope: `airport_slot_use_it_or_lose_it`
+### 30. Tangled Rope: `airport_slot_use_it_or_lose_it`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -922,7 +950,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 30. Tangled Rope: `algeria_france_colonial_legacy`
+### 31. Tangled Rope: `algeria_france_colonial_legacy`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -955,7 +983,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 31. Tangled Rope: `algorithmic_epistemic_capture`
+### 32. Tangled Rope: `algorithmic_epistemic_capture`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -981,7 +1009,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 32. Tangled Rope: `alignment_tax_tradeoff`
+### 33. Tangled Rope: `alignment_tax_tradeoff`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -1007,7 +1035,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 33. Tangled Rope: `alzheimers_levetiracetam`
+### 34. Tangled Rope: `alzheimers_levetiracetam`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -1040,7 +1068,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 34. Tangled Rope: `ancestral_pueblo_hydrology`
+### 35. Tangled Rope: `ancestral_pueblo_hydrology`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -1073,7 +1101,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 35. Tangled Rope: `ancient_grudge_verona`
+### 36. Tangled Rope: `ancient_grudge_verona`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -1101,7 +1129,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 36. Tangled Rope: `anticipatory_capacity_failure`
+### 37. Tangled Rope: `anticipatory_capacity_failure`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -1127,7 +1155,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 37. Tangled Rope: `antifragility`
+### 38. Tangled Rope: `antifragility`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -1155,7 +1183,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 38. Tangled Rope: `apartheid_nuclear_program`
+### 39. Tangled Rope: `apartheid_nuclear_program`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -1181,7 +1209,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 39. Tangled Rope: `ape_cognition_framework`
+### 40. Tangled Rope: `ape_cognition_framework`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -1214,7 +1242,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 40. Tangled Rope: `appropriations_brinkmanship`
+### 41. Tangled Rope: `appropriations_brinkmanship`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -1247,7 +1275,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 41. Tangled Rope: `arctic_geopolitical_flashpoint`
+### 42. Tangled Rope: `arctic_geopolitical_flashpoint`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
@@ -1280,7 +1308,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 42. Tangled Rope: `arctic_maritime_control`
+### 43. Tangled Rope: `arctic_maritime_control`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -1313,7 +1341,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 43. Tangled Rope: `arg_ev_tariff`
+### 44. Tangled Rope: `arg_ev_tariff`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -1346,7 +1374,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 44. Tangled Rope: `armra_colostrum_regulation`
+### 45. Tangled Rope: `armra_colostrum_regulation`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -1372,7 +1400,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 45. Tangled Rope: `arrows_impossibility_theorem`
+### 46. Tangled Rope: `arrows_impossibility_theorem`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -1405,7 +1433,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 46. Tangled Rope: `asce_7_22_seismic_design`
+### 47. Tangled Rope: `asce_7_22_seismic_design`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -1438,7 +1466,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 47. Tangled Rope: `asymmetric_burden_distribution`
+### 48. Tangled Rope: `asymmetric_burden_distribution`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -1471,7 +1499,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 48. Tangled Rope: `attention_as_bottleneck_resource`
+### 49. Tangled Rope: `attention_as_bottleneck_resource`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -1504,7 +1532,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 49. Tangled Rope: `attention_market_cannibalization`
+### 50. Tangled Rope: `attention_market_cannibalization`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -1537,7 +1565,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 50. Tangled Rope: `australia_social_ban_2026`
+### 51. Tangled Rope: `australia_social_ban_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -1570,7 +1598,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 51. Tangled Rope: `autonomous_toolchain_sprawl`
+### 52. Tangled Rope: `autonomous_toolchain_sprawl`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -1603,7 +1631,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 52. Tangled Rope: `availability_heuristic`
+### 53. Tangled Rope: `availability_heuristic`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -1631,7 +1659,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 53. Tangled Rope: `average_is_over_2026`
+### 54. Tangled Rope: `average_is_over_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -1664,7 +1692,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 54. Tangled Rope: `awareness_without_leverage`
+### 55. Tangled Rope: `awareness_without_leverage`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -1697,7 +1725,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 55. Tangled Rope: `axiom_reasoner_2026`
+### 56. Tangled Rope: `axiom_reasoner_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -1730,7 +1758,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 56. Tangled Rope: `bangladesh_july_national_charter`
+### 57. Tangled Rope: `bangladesh_july_national_charter`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -1763,7 +1791,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 57. Tangled Rope: `bayes_theorem`
+### 58. Tangled Rope: `bayes_theorem`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -1782,7 +1810,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 58. Tangled Rope: `bedouin_sedentary_transition`
+### 59. Tangled Rope: `bedouin_sedentary_transition`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
@@ -1810,7 +1838,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 59. Tangled Rope: `beehiiv_platform_model`
+### 60. Tangled Rope: `beehiiv_platform_model`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -1838,7 +1866,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 60. Tangled Rope: `bgs_eigenvector_thermalization`
+### 61. Tangled Rope: `bgs_eigenvector_thermalization`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -1871,7 +1899,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 61. Tangled Rope: `big_data_astrophysics_arbitrage`
+### 62. Tangled Rope: `big_data_astrophysics_arbitrage`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -1904,7 +1932,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 62. Tangled Rope: `bip_narrative_illusion`
+### 63. Tangled Rope: `bip_narrative_illusion`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -1937,7 +1965,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 63. Tangled Rope: `blackstone_carried_interest_taxation`
+### 64. Tangled Rope: `blackstone_carried_interest_taxation`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -1965,7 +1993,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 64. Tangled Rope: `blackstone_conflicts_of_interest`
+### 65. Tangled Rope: `blackstone_conflicts_of_interest`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -1998,7 +2026,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 65. Tangled Rope: `blackstone_smd_control`
+### 66. Tangled Rope: `blackstone_smd_control`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -2031,7 +2059,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 66. Tangled Rope: `blackstone_tax_receiveable_agreement`
+### 67. Tangled Rope: `blackstone_tax_receiveable_agreement`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -2064,7 +2092,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 67. Tangled Rope: `bnpl_payment_systems`
+### 68. Tangled Rope: `bnpl_payment_systems`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -2097,7 +2125,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 68. Tangled Rope: `board_of_peace_2026`
+### 69. Tangled Rope: `board_of_peace_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -2130,7 +2158,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 69. Tangled Rope: `boltzmann_universality_2026`
+### 70. Tangled Rope: `boltzmann_universality_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -2163,7 +2191,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 70. Tangled Rope: `bor_tax_exemption_nl`
+### 71. Tangled Rope: `bor_tax_exemption_nl`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -2196,7 +2224,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 71. Tangled Rope: `boundary_dissolution_risk`
+### 72. Tangled Rope: `boundary_dissolution_risk`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -2229,7 +2257,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 72. Tangled Rope: `brain_network_paradigm_2026`
+### 73. Tangled Rope: `brain_network_paradigm_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -2248,7 +2276,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 73. Tangled Rope: `brazil_2026_general_elections`
+### 74. Tangled Rope: `brazil_2026_general_elections`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -2281,7 +2309,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 74. Tangled Rope: `brazil_mexico_financial_requirement`
+### 75. Tangled Rope: `brazil_mexico_financial_requirement`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -2314,7 +2342,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 75. Tangled Rope: `broke_vs_poor_grocery_math`
+### 76. Tangled Rope: `broke_vs_poor_grocery_math`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -2342,7 +2370,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 76. Tangled Rope: `buffons_needle_pi_estimation`
+### 77. Tangled Rope: `buffons_needle_pi_estimation`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -2370,7 +2398,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 77. Tangled Rope: `bureaucratic_legibility_collapse`
+### 78. Tangled Rope: `bureaucratic_legibility_collapse`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -2403,7 +2431,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 78. Tangled Rope: `bushman_money_magic`
+### 79. Tangled Rope: `bushman_money_magic`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -2436,7 +2464,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 79. Tangled Rope: `canal_panama_influence`
+### 80. Tangled Rope: `canal_panama_influence`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -2469,7 +2497,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 80. Tangled Rope: `cancer_prevention`
+### 81. Tangled Rope: `cancer_prevention`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -2502,7 +2530,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 81. Tangled Rope: `capability_eval_overhang`
+### 82. Tangled Rope: `capability_eval_overhang`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -2535,7 +2563,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 82. Tangled Rope: `capital_misallocation_spiral`
+### 83. Tangled Rope: `capital_misallocation_spiral`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -2568,7 +2596,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 83. Tangled Rope: `capital_rotation_ai_narrative`
+### 84. Tangled Rope: `capital_rotation_ai_narrative`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -2601,7 +2629,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 84. Tangled Rope: `carbon_credit_markets_2026`
+### 85. Tangled Rope: `carbon_credit_markets_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -2634,7 +2662,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 85. Tangled Rope: `carrier_deployment_deterrence`
+### 86. Tangled Rope: `carrier_deployment_deterrence`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -2667,7 +2695,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 86. Tangled Rope: `carrying_capacity`
+### 87. Tangled Rope: `carrying_capacity`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -2700,7 +2728,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 87. Tangled Rope: `cascading_constraint_failure`
+### 88. Tangled Rope: `cascading_constraint_failure`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -2733,7 +2761,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 88. Tangled Rope: `cascading_uncertainty_2026`
+### 89. Tangled Rope: `cascading_uncertainty_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -2766,7 +2794,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 89. Tangled Rope: `castration_longevity_choice`
+### 90. Tangled Rope: `castration_longevity_choice`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -2796,7 +2824,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 90. Tangled Rope: `cb_far_beyond_human`
+### 91. Tangled Rope: `cb_far_beyond_human`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -2824,7 +2852,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 91. Tangled Rope: `cbdc_implementation`
+### 92. Tangled Rope: `cbdc_implementation`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -2857,7 +2885,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 92. Tangled Rope: `cfius_hiefo_emcore_divestment`
+### 93. Tangled Rope: `cfius_hiefo_emcore_divestment`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -2890,7 +2918,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 93. Tangled Rope: `challenger_o_ring_integrity`
+### 94. Tangled Rope: `challenger_o_ring_integrity`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -2923,7 +2951,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 94. Tangled Rope: `champions_bass_fishing_exclusion`
+### 95. Tangled Rope: `champions_bass_fishing_exclusion`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -2956,7 +2984,33 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 95. Tangled Rope: `china_critical_mineral_chokepoint`
+### 96. Tangled Rope: `china_africa_zero_tariff_2026`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope, unknown]`
+*   **Related Gap/Alert:** N/A
+*   **Generated Omega:** Constraint china_africa_zero_tariff_2026 appears as tangled_rope to individuals but rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Design measurement protocol for unknown
+2. Collect data from N=30+ real-world instances
+3. Calculate empirical metrics:
+- suppression_requirement (enforcement needed)
+- resistance_to_change (pushback level)
+- base_extractiveness (asymmetric benefit flow)
+4. Update constraint_metric/3 declarations with data
+5. Re-run classification to resolve perspectival gap
+    ```
+
+---
+
+### 97. Tangled Rope: `china_critical_mineral_chokepoint`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -2989,7 +3043,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 96. Tangled Rope: `china_ev_export_oversupply`
+### 98. Tangled Rope: `china_ev_export_oversupply`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -3022,7 +3076,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 97. Tangled Rope: `china_taiwan_reunification_mandate`
+### 99. Tangled Rope: `china_taiwan_reunification_mandate`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -3054,7 +3108,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 98. Tangled Rope: `china_vactrain_standard`
+### 100. Tangled Rope: `china_vactrain_standard`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -3087,7 +3141,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 99. Tangled Rope: `choice_architecture_design`
+### 101. Tangled Rope: `choice_architecture_design`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -3115,7 +3169,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 100. Tangled Rope: `cholesterol_pill_cost`
+### 102. Tangled Rope: `cholesterol_pill_cost`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -3148,7 +3202,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 101. Tangled Rope: `chrome_imagen2_integration`
+### 103. Tangled Rope: `chrome_imagen2_integration`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -3181,7 +3235,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 102. Tangled Rope: `cia_fbi_legal_wall`
+### 104. Tangled Rope: `cia_fbi_legal_wall`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -3214,7 +3268,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 103. Tangled Rope: `circadian_decoupling_arbitrage`
+### 105. Tangled Rope: `circadian_decoupling_arbitrage`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -3247,7 +3301,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 104. Tangled Rope: `citation_collapse_dynamics`
+### 106. Tangled Rope: `citation_collapse_dynamics`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -3280,7 +3334,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 105. Tangled Rope: `civilizational_lifecycle_solara`
+### 107. Tangled Rope: `civilizational_lifecycle_solara`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -3313,7 +3367,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 106. Tangled Rope: `civilizational_maintenance_debt`
+### 108. Tangled Rope: `civilizational_maintenance_debt`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -3346,7 +3400,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 107. Tangled Rope: `climate_event_attribution`
+### 109. Tangled Rope: `climate_event_attribution`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -3365,7 +3419,33 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 108. Tangled Rope: `climate_target_one_point_five`
+### 110. Tangled Rope: `climate_policy_extraction`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `rope`
+    *   Institutional (Manager) View: `mountain`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[tangled_rope]`
+*   **Related Gap/Alert:** N/A
+*   **Generated Omega:** Constraint climate_policy_extraction appears as rope to individuals but mountain to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Design measurement protocol for unknown
+2. Collect data from N=30+ real-world instances
+3. Calculate empirical metrics:
+- suppression_requirement (enforcement needed)
+- resistance_to_change (pushback level)
+- base_extractiveness (asymmetric benefit flow)
+4. Update constraint_metric/3 declarations with data
+5. Re-run classification to resolve perspectival gap
+    ```
+
+---
+
+### 111. Tangled Rope: `climate_target_one_point_five`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -3391,7 +3471,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 109. Tangled Rope: `cloudflare_dual_class_asymmetry`
+### 112. Tangled Rope: `cloudflare_dual_class_asymmetry`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -3424,7 +3504,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 110. Tangled Rope: `cmr_001`
+### 113. Tangled Rope: `cmr_001`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -3457,7 +3537,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 111. Tangled Rope: `cn_tech_decoupling_security_software`
+### 114. Tangled Rope: `cn_tech_decoupling_security_software`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -3490,7 +3570,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 112. Tangled Rope: `coalition_disinfo_framework_2026`
+### 115. Tangled Rope: `coalition_disinfo_framework_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -3523,7 +3603,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 113. Tangled Rope: `cobra_effect`
+### 116. Tangled Rope: `cobra_effect`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -3556,7 +3636,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 114. Tangled Rope: `codex_access`
+### 117. Tangled Rope: `codex_access`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -3589,7 +3669,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 115. Tangled Rope: `coe_ukraine_reparations_register`
+### 118. Tangled Rope: `coe_ukraine_reparations_register`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -3617,7 +3697,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 116. Tangled Rope: `cognac_geopolitical_risk`
+### 119. Tangled Rope: `cognac_geopolitical_risk`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -3645,7 +3725,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 117. Tangled Rope: `cognitive_diversity_arbitrage`
+### 120. Tangled Rope: `cognitive_diversity_arbitrage`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -3678,7 +3758,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 118. Tangled Rope: `cognitive_energy_budget`
+### 121. Tangled Rope: `cognitive_energy_budget`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -3711,7 +3791,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 119. Tangled Rope: `cognitive_hacking_2026`
+### 122. Tangled Rope: `cognitive_hacking_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -3744,7 +3824,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 120. Tangled Rope: `cognitive_induction_gap`
+### 123. Tangled Rope: `cognitive_induction_gap`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -3777,7 +3857,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 121. Tangled Rope: `cognitive_mimicry_arbitrage`
+### 124. Tangled Rope: `cognitive_mimicry_arbitrage`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -3810,7 +3890,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 122. Tangled Rope: `cognitive_surrender_to_system_3`
+### 125. Tangled Rope: `cognitive_surrender_to_system_3`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -3843,7 +3923,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 123. Tangled Rope: `coinbase_crypto_volatility`
+### 126. Tangled Rope: `coinbase_crypto_volatility`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -3876,7 +3956,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 124. Tangled Rope: `coinbase_regulatory_uncertainty`
+### 127. Tangled Rope: `coinbase_regulatory_uncertainty`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -3909,7 +3989,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 125. Tangled Rope: `cold_dark_matter_paradigm`
+### 128. Tangled Rope: `cold_dark_matter_paradigm`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -3942,7 +4022,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 126. Tangled Rope: `collective_action_deadlock`
+### 129. Tangled Rope: `collective_action_deadlock`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -3975,7 +4055,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 127. Tangled Rope: `college_admissions_market`
+### 130. Tangled Rope: `college_admissions_market`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -4008,7 +4088,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 128. Tangled Rope: `colorado_sbe_decentralization_friction`
+### 131. Tangled Rope: `colorado_sbe_decentralization_friction`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -4041,7 +4121,33 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 129. Tangled Rope: `comitatus_bond`
+### 132. Tangled Rope: `columbia_2026_elections`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope]`
+*   **Related Gap/Alert:** N/A
+*   **Generated Omega:** Constraint colombia_2026_presidential_election appears as tangled_rope to individuals but rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Design measurement protocol for unknown
+2. Collect data from N=30+ real-world instances
+3. Calculate empirical metrics:
+- suppression_requirement (enforcement needed)
+- resistance_to_change (pushback level)
+- base_extractiveness (asymmetric benefit flow)
+4. Update constraint_metric/3 declarations with data
+5. Re-run classification to resolve perspectival gap
+    ```
+
+---
+
+### 133. Tangled Rope: `comitatus_bond`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -4069,7 +4175,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 130. Tangled Rope: `complexity_debt`
+### 134. Tangled Rope: `complexity_debt`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -4102,7 +4208,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 131. Tangled Rope: `compounding_logic`
+### 135. Tangled Rope: `compounding_logic`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -4135,7 +4241,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 132. Tangled Rope: `confirmation_bias`
+### 136. Tangled Rope: `confirmation_bias`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -4161,7 +4267,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 133. Tangled Rope: `consensus_without_truth`
+### 137. Tangled Rope: `consensus_without_truth`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -4194,7 +4300,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 134. Tangled Rope: `constitutional_consecration`
+### 138. Tangled Rope: `constitutional_consecration`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -4227,7 +4333,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 135. Tangled Rope: `constitutional_supremacy`
+### 139. Tangled Rope: `constitutional_supremacy`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -4253,7 +4359,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 136. Tangled Rope: `consumer_debt_slavery`
+### 140. Tangled Rope: `consumer_debt_slavery`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -4286,7 +4392,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 137. Tangled Rope: `container_capacity_mismatch`
+### 141. Tangled Rope: `container_capacity_mismatch`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -4319,7 +4425,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 138. Tangled Rope: `conversational_dogmas_interuption`
+### 142. Tangled Rope: `conversational_dogmas_interuption`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -4352,7 +4458,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 139. Tangled Rope: `coordination_attack_vulnerability`
+### 143. Tangled Rope: `coordination_attack_vulnerability`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -4385,7 +4491,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 140. Tangled Rope: `coordination_fatigue`
+### 144. Tangled Rope: `coordination_fatigue`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -4418,7 +4524,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 141. Tangled Rope: `coordination_threshold_failure`
+### 145. Tangled Rope: `coordination_threshold_failure`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -4451,7 +4557,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 142. Tangled Rope: `copyright_protection`
+### 146. Tangled Rope: `copyright_protection`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -4477,7 +4583,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 143. Tangled Rope: `cost_of_observation`
+### 147. Tangled Rope: `cost_of_observation`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -4510,7 +4616,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 144. Tangled Rope: `couples_residency_match`
+### 148. Tangled Rope: `couples_residency_match`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -4543,7 +4649,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 145. Tangled Rope: `cow_field_poop`
+### 149. Tangled Rope: `cow_field_poop`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -4569,7 +4675,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 146. Tangled Rope: `creative_commons_licensing`
+### 150. Tangled Rope: `creative_commons_licensing`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -4595,7 +4701,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 147. Tangled Rope: `credentialism_national_security`
+### 151. Tangled Rope: `credentialism_national_security`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -4628,7 +4734,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 148. Tangled Rope: `credibility_inflation`
+### 152. Tangled Rope: `credibility_inflation`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -4661,7 +4767,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 149. Tangled Rope: `crisis_signal_saturation`
+### 153. Tangled Rope: `crisis_signal_saturation`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -4694,7 +4800,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 150. Tangled Rope: `crispr_genomic_rewrite_2026`
+### 154. Tangled Rope: `crispr_genomic_rewrite_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -4720,7 +4826,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 151. Tangled Rope: `critical_actor_overcentralization`
+### 155. Tangled Rope: `critical_actor_overcentralization`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -4753,7 +4859,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 152. Tangled Rope: `crop_defense_dependency`
+### 156. Tangled Rope: `crop_defense_dependency`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -4786,7 +4892,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 153. Tangled Rope: `cross_domain_coupling_spiral`
+### 157. Tangled Rope: `cross_domain_coupling_spiral`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -4819,7 +4925,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 154. Tangled Rope: `cs_ecmo_bridge`
+### 158. Tangled Rope: `cs_ecmo_bridge`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -4852,7 +4958,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 155. Tangled Rope: `cultural_homogenization_social_media`
+### 159. Tangled Rope: `cultural_homogenization_social_media`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -4885,7 +4991,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 156. Tangled Rope: `cultural_memory_decay`
+### 160. Tangled Rope: `cultural_memory_decay`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -4918,7 +5024,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 157. Tangled Rope: `cumbria_mine_rejection`
+### 161. Tangled Rope: `cumbria_mine_rejection`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -4951,7 +5057,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 158. Tangled Rope: `cz_plea_agreement_2026`
+### 162. Tangled Rope: `cz_plea_agreement_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -4984,7 +5090,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 159. Tangled Rope: `dark_patterns_manipulation`
+### 163. Tangled Rope: `dark_patterns_manipulation`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -5017,7 +5123,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 160. Tangled Rope: `data_laundering_pipeline`
+### 164. Tangled Rope: `data_laundering_pipeline`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -5050,7 +5156,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 161. Tangled Rope: `data_privacy_regulation`
+### 165. Tangled Rope: `data_privacy_regulation`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -5083,7 +5189,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 162. Tangled Rope: `debt_service_squeeze`
+### 166. Tangled Rope: `debt_service_squeeze`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -5116,7 +5222,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 163. Tangled Rope: `debt_trap_microfinance`
+### 167. Tangled Rope: `debt_trap_microfinance`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
@@ -5149,7 +5255,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 164. Tangled Rope: `decision_latency_mismatch`
+### 168. Tangled Rope: `decision_latency_mismatch`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -5182,7 +5288,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 165. Tangled Rope: `deferred_risk_realization`
+### 169. Tangled Rope: `deferred_risk_realization`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -5215,7 +5321,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 166. Tangled Rope: `delayed_feedback_instability`
+### 170. Tangled Rope: `delayed_feedback_instability`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -5248,7 +5354,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 167. Tangled Rope: `delta_force_selection_2026`
+### 171. Tangled Rope: `delta_force_selection_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -5281,7 +5387,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 168. Tangled Rope: `demographic_inertia_trap`
+### 172. Tangled Rope: `demographic_inertia_trap`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -5314,7 +5420,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 169. Tangled Rope: `digital_credentialing_verification`
+### 173. Tangled Rope: `digital_credentialing_verification`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -5347,7 +5453,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 170. Tangled Rope: `digital_euro_cbdc`
+### 174. Tangled Rope: `digital_euro_cbdc`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -5380,7 +5486,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 171. Tangled Rope: `digital_identity_tether`
+### 175. Tangled Rope: `digital_identity_tether`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -5413,7 +5519,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 172. Tangled Rope: `dionysaic_frenzy`
+### 176. Tangled Rope: `dionysaic_frenzy`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -5446,7 +5552,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 173. Tangled Rope: `discover_core_2026`
+### 177. Tangled Rope: `discover_core_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -5479,7 +5585,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 174. Tangled Rope: `djia_as_economic_barometer`
+### 178. Tangled Rope: `djia_as_economic_barometer`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -5512,7 +5618,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 175. Tangled Rope: `dk_foreign_convict_expulsion`
+### 179. Tangled Rope: `dk_foreign_convict_expulsion`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -5545,7 +5651,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 176. Tangled Rope: `dn_paywall`
+### 180. Tangled Rope: `dn_paywall`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -5578,7 +5684,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 177. Tangled Rope: `doomsday_clock_framework`
+### 181. Tangled Rope: `doomsday_clock_framework`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -5611,7 +5717,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 178. Tangled Rope: `dunning_kruger_effect`
+### 182. Tangled Rope: `dunning_kruger_effect`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -5644,7 +5750,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 179. Tangled Rope: `dutch_minority_govt_2026`
+### 183. Tangled Rope: `dutch_minority_govt_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -5677,7 +5783,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 180. Tangled Rope: `dwp_carers_allowance_cliff`
+### 184. Tangled Rope: `dwp_carers_allowance_cliff`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -5710,7 +5816,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 181. Tangled Rope: `ec_meta_manus_block`
+### 185. Tangled Rope: `ec_meta_manus_block`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -5738,7 +5844,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 182. Tangled Rope: `edelman_2026_developed_stagnation`
+### 186. Tangled Rope: `edelman_2026_developed_stagnation`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -5771,7 +5877,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 183. Tangled Rope: `edelman_2026_developing_volatility`
+### 187. Tangled Rope: `edelman_2026_developing_volatility`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -5799,7 +5905,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 184. Tangled Rope: `edelman_2026_insularity`
+### 188. Tangled Rope: `edelman_2026_insularity`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -5832,7 +5938,33 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 185. Tangled Rope: `electrification_scale_2026`
+### 189. Tangled Rope: `educational_unbundling_implementation`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `rope`
+    *   Institutional (Manager) View: `snare`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, unknown]`
+*   **Related Gap/Alert:** N/A
+*   **Generated Omega:** Constraint education_unbundling_implementation appears as rope to individuals but snare to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Design measurement protocol for unknown
+2. Collect data from N=30+ real-world instances
+3. Calculate empirical metrics:
+- suppression_requirement (enforcement needed)
+- resistance_to_change (pushback level)
+- base_extractiveness (asymmetric benefit flow)
+4. Update constraint_metric/3 declarations with data
+5. Re-run classification to resolve perspectival gap
+    ```
+
+---
+
+### 190. Tangled Rope: `electrification_scale_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -5865,7 +5997,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 186. Tangled Rope: `elite_identity_capture_2026`
+### 191. Tangled Rope: `elite_identity_capture_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -5898,7 +6030,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 187. Tangled Rope: `elite_overproduction_instability`
+### 192. Tangled Rope: `elite_overproduction_instability`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -5931,7 +6063,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 188. Tangled Rope: `elliq_ai_companion`
+### 193. Tangled Rope: `elliq_ai_companion`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -5964,7 +6096,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 189. Tangled Rope: `emergency_mode_lock_in`
+### 194. Tangled Rope: `emergency_mode_lock_in`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -5997,7 +6129,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 190. Tangled Rope: `emergency_oversight_bureau`
+### 195. Tangled Rope: `emergency_oversight_bureau`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -6025,7 +6157,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 191. Tangled Rope: `emergency_powers_ratchet`
+### 196. Tangled Rope: `emergency_powers_ratchet`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -6058,7 +6190,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 192. Tangled Rope: `emergent_goal_misalignment`
+### 197. Tangled Rope: `emergent_goal_misalignment`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -6091,7 +6223,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 193. Tangled Rope: `emotional_cycles_of_change`
+### 198. Tangled Rope: `emotional_cycles_of_change`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -6119,7 +6251,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 194. Tangled Rope: `empty_tomb_transformation`
+### 199. Tangled Rope: `empty_tomb_transformation`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -6152,7 +6284,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 195. Tangled Rope: `emrgency_medicine_clinical_guidelines`
+### 200. Tangled Rope: `emrgency_medicine_clinical_guidelines`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -6185,7 +6317,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 196. Tangled Rope: `endocrine_disruption_society`
+### 201. Tangled Rope: `endocrine_disruption_society`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -6218,7 +6350,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 197. Tangled Rope: `epistemic_free_rider_problem`
+### 202. Tangled Rope: `epistemic_free_rider_problem`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -6251,7 +6383,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 198. Tangled Rope: `epistemic_overload_collapse`
+### 203. Tangled Rope: `epistemic_overload_collapse`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -6284,7 +6416,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 199. Tangled Rope: `epstein_document_release_2026`
+### 204. Tangled Rope: `epstein_document_release_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -6312,7 +6444,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 200. Tangled Rope: `erasmus_rejoining_scaffold`
+### 205. Tangled Rope: `erasmus_rejoining_scaffold`
 
 *   **Claimed Type:** `scaffold`
 *   **Severity:** `N/A`
@@ -6340,7 +6472,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 201. Tangled Rope: `ergo_dexy_gold_protocol`
+### 206. Tangled Rope: `ergo_dexy_gold_protocol`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -6366,7 +6498,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 202. Tangled Rope: `ergo_mixer_protocol`
+### 207. Tangled Rope: `ergo_mixer_protocol`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -6392,7 +6524,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 203. Tangled Rope: `ergo_rosen_bridge_protocol`
+### 208. Tangled Rope: `ergo_rosen_bridge_protocol`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -6425,7 +6557,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 204. Tangled Rope: `ergo_storage_rent`
+### 209. Tangled Rope: `ergo_storage_rent`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -6458,7 +6590,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 205. Tangled Rope: `ergo_storage_rent_mechanism`
+### 210. Tangled Rope: `ergo_storage_rent_mechanism`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -6491,7 +6623,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 206. Tangled Rope: `ergodic_theorems`
+### 211. Tangled Rope: `ergodic_theorems`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -6524,7 +6656,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 207. Tangled Rope: `ergot_grain_poisoning`
+### 212. Tangled Rope: `ergot_grain_poisoning`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -6557,7 +6689,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 208. Tangled Rope: `eu_affordable_housing_initiative`
+### 213. Tangled Rope: `eu_affordable_housing_initiative`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -6590,7 +6722,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 209. Tangled Rope: `eu_asylum_outsourcing_framework`
+### 214. Tangled Rope: `eu_asylum_outsourcing_framework`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -6623,7 +6755,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 210. Tangled Rope: `eu_deforestation_regulation`
+### 215. Tangled Rope: `eu_deforestation_regulation`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -6656,7 +6788,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 211. Tangled Rope: `eu_digital_services_act`
+### 216. Tangled Rope: `eu_digital_services_act`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -6684,7 +6816,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 212. Tangled Rope: `eu_ev_tariff_wall`
+### 217. Tangled Rope: `eu_ev_tariff_wall`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -6717,7 +6849,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 213. Tangled Rope: `eu_irgc_terrorist_designation`
+### 218. Tangled Rope: `eu_irgc_terrorist_designation`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -6750,7 +6882,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 214. Tangled Rope: `eu_mercosur_trade_agreement`
+### 219. Tangled Rope: `eu_mercosur_trade_agreement`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -6783,7 +6915,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 215. Tangled Rope: `eu_renewable_energy_mandate`
+### 220. Tangled Rope: `eu_renewable_energy_mandate`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -6816,7 +6948,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 216. Tangled Rope: `eu_unanimity_rule_foreign_policy`
+### 221. Tangled Rope: `eu_unanimity_rule_foreign_policy`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -6849,7 +6981,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 217. Tangled Rope: `eurozone_fragmentation_2026`
+### 222. Tangled Rope: `eurozone_fragmentation_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -6882,7 +7014,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 218. Tangled Rope: `evfta_trade_agreement`
+### 223. Tangled Rope: `evfta_trade_agreement`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -6915,7 +7047,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 219. Tangled Rope: `evidence_half_life`
+### 224. Tangled Rope: `evidence_half_life`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -6948,7 +7080,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 220. Tangled Rope: `evolutionary_knowledge`
+### 225. Tangled Rope: `evolutionary_knowledge`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -6981,7 +7113,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 221. Tangled Rope: `evolutionary_mismatch_load`
+### 226. Tangled Rope: `evolutionary_mismatch_load`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -7014,7 +7146,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 222. Tangled Rope: `expert_disempowerment`
+### 227. Tangled Rope: `expert_disempowerment`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -7047,7 +7179,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 223. Tangled Rope: `exploration_vs_exploitation`
+### 228. Tangled Rope: `exploration_vs_exploitation`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -7080,7 +7212,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 224. Tangled Rope: `extraordinary_narrative_shift`
+### 229. Tangled Rope: `extraordinary_narrative_shift`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -7106,7 +7238,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 225. Tangled Rope: `faa_boeing_regulatory_capture`
+### 230. Tangled Rope: `faa_boeing_regulatory_capture`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -7134,7 +7266,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 226. Tangled Rope: `factional_instability`
+### 231. Tangled Rope: `factional_instability`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -7167,7 +7299,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 227. Tangled Rope: `family_estrangement_ratio`
+### 232. Tangled Rope: `family_estrangement_ratio`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -7200,7 +7332,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 228. Tangled Rope: `family_succession_and_decadence`
+### 233. Tangled Rope: `family_succession_and_decadence`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -7228,7 +7360,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 229. Tangled Rope: `fcc_dji_covered_list`
+### 234. Tangled Rope: `fcc_dji_covered_list`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -7261,7 +7393,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 230. Tangled Rope: `fda_component_efficacy_standard`
+### 235. Tangled Rope: `fda_component_efficacy_standard`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -7294,7 +7426,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 231. Tangled Rope: `fed_shutdown_2026`
+### 236. Tangled Rope: `fed_shutdown_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -7322,7 +7454,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 232. Tangled Rope: `feedback_loop_desynchronization`
+### 237. Tangled Rope: `feedback_loop_desynchronization`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -7355,7 +7487,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 233. Tangled Rope: `fiat_currency_lifecycle`
+### 238. Tangled Rope: `fiat_currency_lifecycle`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -7388,7 +7520,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 234. Tangled Rope: `fiber_optic_chip_tech`
+### 239. Tangled Rope: `fiber_optic_chip_tech`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -7421,7 +7553,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 235. Tangled Rope: `financialization_drag`
+### 240. Tangled Rope: `financialization_drag`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -7454,7 +7586,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 236. Tangled Rope: `fine_particle_policy`
+### 241. Tangled Rope: `fine_particle_policy`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -7487,7 +7619,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 237. Tangled Rope: `finite_pool_of_worry`
+### 242. Tangled Rope: `finite_pool_of_worry`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -7520,7 +7652,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 238. Tangled Rope: `finnish_debt_adjustment`
+### 243. Tangled Rope: `finnish_debt_adjustment`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -7553,7 +7685,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 239. Tangled Rope: `fiscal_dominance_trap`
+### 244. Tangled Rope: `fiscal_dominance_trap`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -7586,7 +7718,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 240. Tangled Rope: `fittss_law`
+### 245. Tangled Rope: `fittss_law`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -7619,7 +7751,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 241. Tangled Rope: `floating_wall_2026`
+### 246. Tangled Rope: `floating_wall_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -7652,7 +7784,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 242. Tangled Rope: `fnl_shadow_probe`
+### 247. Tangled Rope: `fnl_shadow_probe`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -7680,7 +7812,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 243. Tangled Rope: `fragile_middle_layer_collapse`
+### 248. Tangled Rope: `fragile_middle_layer_collapse`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -7713,7 +7845,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 244. Tangled Rope: `framing_effect`
+### 249. Tangled Rope: `framing_effect`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -7746,7 +7878,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 245. Tangled Rope: `france_2027_presidential_election`
+### 250. Tangled Rope: `france_2027_presidential_election`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -7779,7 +7911,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 246. Tangled Rope: `franchisee_corporate_squeeze`
+### 251. Tangled Rope: `franchisee_corporate_squeeze`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -7798,7 +7930,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 247. Tangled Rope: `frankenstein_creation_hubris`
+### 252. Tangled Rope: `frankenstein_creation_hubris`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -7830,7 +7962,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 248. Tangled Rope: `fraser_river_salmon_regulation`
+### 253. Tangled Rope: `fraser_river_salmon_regulation`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -7863,7 +7995,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 249. Tangled Rope: `french_ag_land_concentration`
+### 254. Tangled Rope: `french_ag_land_concentration`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -7896,7 +8028,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 250. Tangled Rope: `french_local_elections_march_2026`
+### 255. Tangled Rope: `french_local_elections_march_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -7929,7 +8061,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 251. Tangled Rope: `frontex_pushback_coordination`
+### 256. Tangled Rope: `frontex_pushback_coordination`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -7962,7 +8094,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 252. Tangled Rope: `future_dsm_integration_2026`
+### 257. Tangled Rope: `future_dsm_integration_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -7995,7 +8127,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 253. Tangled Rope: `g7_debt_trap`
+### 258. Tangled Rope: `g7_debt_trap`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -8028,7 +8160,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 254. Tangled Rope: `gale_shapley`
+### 259. Tangled Rope: `gale_shapley`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -8061,7 +8193,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 255. Tangled Rope: `gale_shapley_variants`
+### 260. Tangled Rope: `gale_shapley_variants`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -8089,7 +8221,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 256. Tangled Rope: `gaza_border_control_rafah`
+### 261. Tangled Rope: `gaza_border_control_rafah`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -8122,7 +8254,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 257. Tangled Rope: `gemini_scientific_advancement`
+### 262. Tangled Rope: `gemini_scientific_advancement`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -8150,7 +8282,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 258. Tangled Rope: `genetic_predisposition`
+### 263. Tangled Rope: `genetic_predisposition`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -8183,7 +8315,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 259. Tangled Rope: `genie_ip_constraint`
+### 264. Tangled Rope: `genie_ip_constraint`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -8216,7 +8348,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 260. Tangled Rope: `geopolitical_insularity_2026`
+### 265. Tangled Rope: `geopolitical_insularity_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -8249,7 +8381,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 261. Tangled Rope: `germany_tennet_takeover`
+### 266. Tangled Rope: `germany_tennet_takeover`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -8277,7 +8409,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 262. Tangled Rope: `germline_regulation_threshold_2026`
+### 267. Tangled Rope: `germline_regulation_threshold_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -8309,7 +8441,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 263. Tangled Rope: `ghost_fishing_gear`
+### 268. Tangled Rope: `ghost_fishing_gear`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
@@ -8342,7 +8474,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 264. Tangled Rope: `gig_economy_algorithmic_managment`
+### 269. Tangled Rope: `gig_economy_algorithmic_managment`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -8375,7 +8507,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 265. Tangled Rope: `gilgamesh_mortality_limit`
+### 270. Tangled Rope: `gilgamesh_mortality_limit`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -8407,7 +8539,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 266. Tangled Rope: `gita_kurukshetra`
+### 271. Tangled Rope: `gita_kurukshetra`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -8435,7 +8567,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 267. Tangled Rope: `glen_canyon_water_allocation`
+### 272. Tangled Rope: `glen_canyon_water_allocation`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -8468,7 +8600,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 268. Tangled Rope: `global_digital_divide`
+### 273. Tangled Rope: `global_digital_divide`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -8501,7 +8633,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 269. Tangled Rope: `global_hoarding_scaling_laws`
+### 274. Tangled Rope: `global_hoarding_scaling_laws`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -8533,7 +8665,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 270. Tangled Rope: `global_protocol_entrenchment`
+### 275. Tangled Rope: `global_protocol_entrenchment`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -8565,7 +8697,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 271. Tangled Rope: `global_stimulus_spree`
+### 276. Tangled Rope: `global_stimulus_spree`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -8598,7 +8730,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 272. Tangled Rope: `global_water_bankruptcy`
+### 277. Tangled Rope: `global_water_bankruptcy`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -8631,7 +8763,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 273. Tangled Rope: `goal_boundary_poisoning`
+### 278. Tangled Rope: `goal_boundary_poisoning`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -8664,7 +8796,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 274. Tangled Rope: `gold_fomo_cycle`
+### 279. Tangled Rope: `gold_fomo_cycle`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -8697,7 +8829,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 275. Tangled Rope: `golden_handcuffs`
+### 280. Tangled Rope: `golden_handcuffs`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -8729,7 +8861,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 276. Tangled Rope: `goodharts_law`
+### 281. Tangled Rope: `goodharts_law`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -8762,7 +8894,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 277. Tangled Rope: `goodsteins_theorem`
+### 282. Tangled Rope: `goodsteins_theorem`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -8790,7 +8922,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 278. Tangled Rope: `google_ai_search_overview`
+### 283. Tangled Rope: `google_ai_search_overview`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -8823,7 +8955,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 279. Tangled Rope: `google_universal_commerce_protocol`
+### 284. Tangled Rope: `google_universal_commerce_protocol`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -8856,7 +8988,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 280. Tangled Rope: `governance_latency_gap`
+### 285. Tangled Rope: `governance_latency_gap`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -8889,7 +9021,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 281. Tangled Rope: `governance_overfitting`
+### 286. Tangled Rope: `governance_overfitting`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -8922,7 +9054,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 282. Tangled Rope: `gpt5_codex_dev_cycle`
+### 287. Tangled Rope: `gpt5_codex_dev_cycle`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -8955,7 +9087,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 283. Tangled Rope: `gpt_store_marketplace`
+### 288. Tangled Rope: `gpt_store_marketplace`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -8988,7 +9120,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 284. Tangled Rope: `graph_coloring_complexity`
+### 289. Tangled Rope: `graph_coloring_complexity`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -9021,7 +9153,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 285. Tangled Rope: `great_mongolian_road_economic_dependency`
+### 290. Tangled Rope: `great_mongolian_road_economic_dependency`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -9049,7 +9181,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 286. Tangled Rope: `greenland_defence_pact_2026`
+### 291. Tangled Rope: `greenland_defence_pact_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -9082,7 +9214,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 287. Tangled Rope: `greenland_seizure_trade_war`
+### 292. Tangled Rope: `greenland_seizure_trade_war`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -9115,7 +9247,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 288. Tangled Rope: `greshams_law`
+### 293. Tangled Rope: `greshams_law`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -9143,7 +9275,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 289. Tangled Rope: `grete_samsa_transition`
+### 294. Tangled Rope: `grete_samsa_transition`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -9176,7 +9308,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 290. Tangled Rope: `grievance_stack_overflow`
+### 295. Tangled Rope: `grievance_stack_overflow`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -9209,7 +9341,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 291. Tangled Rope: `guano_wealth_extraction`
+### 296. Tangled Rope: `guano_wealth_extraction`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -9242,7 +9374,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 292. Tangled Rope: `guinea_junta_legitimization_2024`
+### 297. Tangled Rope: `guinea_junta_legitimization_2024`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -9275,7 +9407,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 293. Tangled Rope: `guinea_worm_eradication`
+### 298. Tangled Rope: `guinea_worm_eradication`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -9308,7 +9440,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 294. Tangled Rope: `hammurabi`
+### 299. Tangled Rope: `hammurabi`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -9341,7 +9473,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 295. Tangled Rope: `hanlons_razor`
+### 300. Tangled Rope: `hanlons_razor`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -9374,7 +9506,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 296. Tangled Rope: `happiness_of_others`
+### 301. Tangled Rope: `happiness_of_others`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -9406,7 +9538,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 297. Tangled Rope: `harm_principle_liberty`
+### 302. Tangled Rope: `harm_principle_liberty`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -9436,7 +9568,7 @@ IF institutions falsely claim necessity → SNARE + fraud flag
 
 ---
 
-### 298. Tangled Rope: `harry_potter_liberalism`
+### 303. Tangled Rope: `harry_potter_liberalism`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -9469,7 +9601,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 299. Tangled Rope: `hasbro_licensing_restriction`
+### 304. Tangled Rope: `hasbro_licensing_restriction`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -9502,7 +9634,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 300. Tangled Rope: `hawthorne_effect`
+### 305. Tangled Rope: `hawthorne_effect`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -9528,7 +9660,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 301. Tangled Rope: `hedonic_adaptation_baseline`
+### 306. Tangled Rope: `hedonic_adaptation_baseline`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -9556,7 +9688,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 302. Tangled Rope: `help_to_buy_uk`
+### 307. Tangled Rope: `help_to_buy_uk`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -9589,7 +9721,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 303. Tangled Rope: `helsinki_bus_theory`
+### 308. Tangled Rope: `helsinki_bus_theory`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -9615,7 +9747,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 304. Tangled Rope: `hershey_salt_strategy`
+### 309. Tangled Rope: `hershey_salt_strategy`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -9648,7 +9780,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 305. Tangled Rope: `hicbc_uk`
+### 310. Tangled Rope: `hicbc_uk`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -9681,7 +9813,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 306. Tangled Rope: `hidden_interdependency_risk`
+### 311. Tangled Rope: `hidden_interdependency_risk`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -9714,7 +9846,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 307. Tangled Rope: `horizon_liability_contract`
+### 312. Tangled Rope: `horizon_liability_contract`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -9747,7 +9879,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 308. Tangled Rope: `hu_2026_electoral_parity`
+### 313. Tangled Rope: `hu_2026_electoral_parity`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -9780,7 +9912,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 309. Tangled Rope: `hub_short_form_tv_market_fragmentation`
+### 314. Tangled Rope: `hub_short_form_tv_market_fragmentation`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -9813,7 +9945,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 310. Tangled Rope: `hydra_game`
+### 315. Tangled Rope: `hydra_game`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -9846,7 +9978,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 311. Tangled Rope: `hypercompression_of_time_horizons`
+### 316. Tangled Rope: `hypercompression_of_time_horizons`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -9879,7 +10011,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 312. Tangled Rope: `hypernormie_equilibrium`
+### 317. Tangled Rope: `hypernormie_equilibrium`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -9912,7 +10044,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 313. Tangled Rope: `ibm_shield_2026`
+### 318. Tangled Rope: `ibm_shield_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -9945,7 +10077,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 314. Tangled Rope: `ibm_shield_contract_2026`
+### 319. Tangled Rope: `ibm_shield_contract_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -9978,7 +10110,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 315. Tangled Rope: `ice_safe_departure`
+### 320. Tangled Rope: `ice_safe_departure`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -10011,7 +10143,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 316. Tangled Rope: `identity_stack_incompatibility`
+### 321. Tangled Rope: `identity_stack_incompatibility`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -10044,7 +10176,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 317. Tangled Rope: `incentive_surface_warping`
+### 322. Tangled Rope: `incentive_surface_warping`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -10077,7 +10209,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 318. Tangled Rope: `incumbent_steel_production`
+### 323. Tangled Rope: `incumbent_steel_production`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -10110,7 +10242,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 319. Tangled Rope: `india_nuclear_liability_act_2010`
+### 324. Tangled Rope: `india_nuclear_liability_act_2010`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -10143,7 +10275,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 320. Tangled Rope: `india_semi_mission`
+### 325. Tangled Rope: `india_semi_mission`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -10176,7 +10308,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 321. Tangled Rope: `indian_import_tariffs_eu`
+### 326. Tangled Rope: `indian_import_tariffs_eu`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -10209,7 +10341,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 322. Tangled Rope: `individual_revolution_autonomy`
+### 327. Tangled Rope: `individual_revolution_autonomy`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -10242,7 +10374,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 323. Tangled Rope: `indo_german_defense_pact`
+### 328. Tangled Rope: `indo_german_defense_pact`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -10275,7 +10407,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 324. Tangled Rope: `indonesia_penal_code_2023`
+### 329. Tangled Rope: `indonesia_penal_code_2023`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -10308,7 +10440,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 325. Tangled Rope: `inference_cost_scaling_law`
+### 330. Tangled Rope: `inference_cost_scaling_law`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -10341,7 +10473,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 326. Tangled Rope: `informational_time_2026`
+### 331. Tangled Rope: `informational_time_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -10374,7 +10506,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 327. Tangled Rope: `infrastructure_interoperability_decay`
+### 332. Tangled Rope: `infrastructure_interoperability_decay`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -10407,7 +10539,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 328. Tangled Rope: `inner_model_theory_constraints`
+### 333. Tangled Rope: `inner_model_theory_constraints`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -10439,7 +10571,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 329. Tangled Rope: `inner_models`
+### 334. Tangled Rope: `inner_models`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -10458,7 +10590,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 330. Tangled Rope: `innovators_dilemma`
+### 335. Tangled Rope: `innovators_dilemma`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -10491,7 +10623,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 331. Tangled Rope: `institutional_inertia_lock`
+### 336. Tangled Rope: `institutional_inertia_lock`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -10524,7 +10656,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 332. Tangled Rope: `institutional_memory_loss`
+### 337. Tangled Rope: `institutional_memory_loss`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -10557,7 +10689,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 333. Tangled Rope: `institutional_mutation_domestication`
+### 338. Tangled Rope: `institutional_mutation_domestication`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -10590,7 +10722,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 334. Tangled Rope: `institutional_mutation_without_selection`
+### 339. Tangled Rope: `institutional_mutation_without_selection`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -10623,7 +10755,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 335. Tangled Rope: `insult_wisdom_training`
+### 340. Tangled Rope: `insult_wisdom_training`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -10656,7 +10788,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 336. Tangled Rope: `integrated_digital_governance_stack`
+### 341. Tangled Rope: `integrated_digital_governance_stack`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -10689,7 +10821,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 337. Tangled Rope: `interaction_explosion`
+### 342. Tangled Rope: `interaction_explosion`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -10715,7 +10847,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 338. Tangled Rope: `interface_contract_breakdown`
+### 343. Tangled Rope: `interface_contract_breakdown`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -10748,7 +10880,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 339. Tangled Rope: `intermediate_value_theorem`
+### 344. Tangled Rope: `intermediate_value_theorem`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -10781,7 +10913,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 340. Tangled Rope: `international_seabed_mining_regime`
+### 345. Tangled Rope: `international_seabed_mining_regime`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -10814,7 +10946,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 341. Tangled Rope: `internet_archive_preservation`
+### 346. Tangled Rope: `internet_archive_preservation`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -10847,7 +10979,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 342. Tangled Rope: `internet_evolution_lifecycle`
+### 347. Tangled Rope: `internet_evolution_lifecycle`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -10880,7 +11012,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 343. Tangled Rope: `interpretive_frame_fragmentation`
+### 348. Tangled Rope: `interpretive_frame_fragmentation`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -10913,7 +11045,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 344. Tangled Rope: `intertemporal_responsibility_gap`
+### 349. Tangled Rope: `intertemporal_responsibility_gap`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -10946,7 +11078,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 345. Tangled Rope: `invisible_infrastructure_dependency`
+### 350. Tangled Rope: `invisible_infrastructure_dependency`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -10979,7 +11111,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 346. Tangled Rope: `iran_guardian_council_vetting`
+### 351. Tangled Rope: `iran_guardian_council_vetting`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -11012,7 +11144,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 347. Tangled Rope: `iran_hijab_law`
+### 352. Tangled Rope: `iran_hijab_law`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -11045,7 +11177,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 348. Tangled Rope: `iran_mandatrophic_collapse`
+### 353. Tangled Rope: `iran_mandatrophic_collapse`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -11078,7 +11210,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 349. Tangled Rope: `iran_war_room_2026`
+### 354. Tangled Rope: `iran_war_room_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -11111,7 +11243,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 350. Tangled Rope: `iron_law_of_oligarchy`
+### 355. Tangled Rope: `iron_law_of_oligarchy`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -11144,7 +11276,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 351. Tangled Rope: `irreversible_policy_commitment`
+### 356. Tangled Rope: `irreversible_policy_commitment`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -11177,7 +11309,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 352. Tangled Rope: `israel_egypt_gas_deal`
+### 357. Tangled Rope: `israel_egypt_gas_deal`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -11210,7 +11342,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 353. Tangled Rope: `israel_electoral_threshold`
+### 358. Tangled Rope: `israel_electoral_threshold`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -11243,7 +11375,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 354. Tangled Rope: `israel_gaza_ceasefire_violation`
+### 359. Tangled Rope: `israel_gaza_ceasefire_violation`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -11276,7 +11408,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 355. Tangled Rope: `israel_norwegian_law`
+### 360. Tangled Rope: `israel_norwegian_law`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -11309,7 +11441,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 356. Tangled Rope: `israel_override_clause`
+### 361. Tangled Rope: `israel_override_clause`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -11342,7 +11474,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 357. Tangled Rope: `israel_surplus_vote_agreements`
+### 362. Tangled Rope: `israel_surplus_vote_agreements`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -11375,7 +11507,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 358. Tangled Rope: `israeli_settlement_policy_authority_restriction`
+### 363. Tangled Rope: `israeli_settlement_policy_authority_restriction`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -11403,7 +11535,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 359. Tangled Rope: `iss_ped_ban`
+### 364. Tangled Rope: `iss_ped_ban`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -11431,7 +11563,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 360. Tangled Rope: `iterated_function_systems`
+### 365. Tangled Rope: `iterated_function_systems`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -11464,7 +11596,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 361. Tangled Rope: `japanese_energy_scaffold_2025`
+### 366. Tangled Rope: `japanese_energy_scaffold_2025`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -11497,7 +11629,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 362. Tangled Rope: `jevons_paradox`
+### 367. Tangled Rope: `jevons_paradox`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -11530,7 +11662,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 363. Tangled Rope: `job_hunt_volume_system_2026`
+### 368. Tangled Rope: `job_hunt_volume_system_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -11563,7 +11695,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 364. Tangled Rope: `jp_eez_enforcement`
+### 369. Tangled Rope: `jp_eez_enforcement`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -11596,7 +11728,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 365. Tangled Rope: `jp_nativist_politics`
+### 370. Tangled Rope: `jp_nativist_politics`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -11629,7 +11761,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 366. Tangled Rope: `jupiter_composition_knowledge_gap`
+### 371. Tangled Rope: `jupiter_composition_knowledge_gap`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -11657,7 +11789,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 367. Tangled Rope: `keltner_relationship_evaluation`
+### 372. Tangled Rope: `keltner_relationship_evaluation`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -11690,7 +11822,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 368. Tangled Rope: `khantivadin_radical_patience`
+### 373. Tangled Rope: `khantivadin_radical_patience`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -11723,7 +11855,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 369. Tangled Rope: `kim_jong_un_succession`
+### 374. Tangled Rope: `kim_jong_un_succession`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -11756,7 +11888,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 370. Tangled Rope: `kjv_great_awakening`
+### 375. Tangled Rope: `kjv_great_awakening`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -11784,7 +11916,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 371. Tangled Rope: `kjv_textual_authority`
+### 376. Tangled Rope: `kjv_textual_authority`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -11812,7 +11944,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 372. Tangled Rope: `knowledge_action_gap`
+### 377. Tangled Rope: `knowledge_action_gap`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
@@ -11844,7 +11976,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 373. Tangled Rope: `labor_union_dues_structure`
+### 378. Tangled Rope: `labor_union_dues_structure`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -11877,7 +12009,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 374. Tangled Rope: `lagrange_multipliers`
+### 379. Tangled Rope: `lagrange_multipliers`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -11903,7 +12035,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 375. Tangled Rope: `landscape_of_fear_2026`
+### 380. Tangled Rope: `landscape_of_fear_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -11929,7 +12061,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 376. Tangled Rope: `large_cardinals_foundations`
+### 381. Tangled Rope: `large_cardinals_foundations`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -11961,7 +12093,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 377. Tangled Rope: `latent_goal_activation`
+### 382. Tangled Rope: `latent_goal_activation`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -11994,7 +12126,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 378. Tangled Rope: `latent_regulatory_bomb`
+### 383. Tangled Rope: `latent_regulatory_bomb`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -12027,7 +12159,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 379. Tangled Rope: `lavender_ai_targeting`
+### 384. Tangled Rope: `lavender_ai_targeting`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -12060,7 +12192,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 380. Tangled Rope: `law_of_diminishing_returns`
+### 385. Tangled Rope: `law_of_diminishing_returns`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -12093,7 +12225,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 381. Tangled Rope: `lcdm_hubble_tension`
+### 386. Tangled Rope: `lcdm_hubble_tension`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -12126,7 +12258,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 382. Tangled Rope: `lcdm_small_scale_anomalies`
+### 387. Tangled Rope: `lcdm_small_scale_anomalies`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -12154,7 +12286,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 383. Tangled Rope: `legal_formalism_overhang`
+### 388. Tangled Rope: `legal_formalism_overhang`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -12187,7 +12319,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 384. Tangled Rope: `legibility_trap`
+### 389. Tangled Rope: `legibility_trap`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -12220,7 +12352,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 385. Tangled Rope: `legitimacy_without_capacity`
+### 390. Tangled Rope: `legitimacy_without_capacity`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -12253,7 +12385,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 386. Tangled Rope: `lehman_repo_105`
+### 391. Tangled Rope: `lehman_repo_105`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -12286,7 +12418,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 387. Tangled Rope: `lindy_effect`
+### 392. Tangled Rope: `lindy_effect`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -12312,7 +12444,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 388. Tangled Rope: `linguistic_relativity_cultural_framing`
+### 393. Tangled Rope: `linguistic_relativity_cultural_framing`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -12340,7 +12472,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 389. Tangled Rope: `liquidity_illusion`
+### 394. Tangled Rope: `liquidity_illusion`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -12373,7 +12505,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 390. Tangled Rope: `logistic_map_dynamics`
+### 395. Tangled Rope: `logistic_map_dynamics`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -12406,7 +12538,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 391. Tangled Rope: `lorenz_attractor_dynamics`
+### 396. Tangled Rope: `lorenz_attractor_dynamics`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -12439,7 +12571,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 392. Tangled Rope: `lsd_microdosing_professional_openness`
+### 397. Tangled Rope: `lsd_microdosing_professional_openness`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -12458,7 +12590,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 393. Tangled Rope: `lung_transplant_protocol`
+### 398. Tangled Rope: `lung_transplant_protocol`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -12491,7 +12623,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 394. Tangled Rope: `maintenance_capacity_shortfall`
+### 399. Tangled Rope: `maintenance_capacity_shortfall`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -12524,7 +12656,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 395. Tangled Rope: `maladaptive_selection_process`
+### 400. Tangled Rope: `maladaptive_selection_process`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -12557,7 +12689,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 396. Tangled Rope: `mandatrophic_margin_collapse`
+### 401. Tangled Rope: `mandatrophic_margin_collapse`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -12590,7 +12722,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 397. Tangled Rope: `mandatrophic_margin_collapse_diagnostic`
+### 402. Tangled Rope: `mandatrophic_margin_collapse_diagnostic`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -12623,7 +12755,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 398. Tangled Rope: `manga_distribution_duopoly`
+### 403. Tangled Rope: `manga_distribution_duopoly`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -12656,7 +12788,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 399. Tangled Rope: `marriage_market_asymmetry_2026`
+### 404. Tangled Rope: `marriage_market_asymmetry_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -12689,7 +12821,33 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 400. Tangled Rope: `mass_market_extinction_2026`
+### 405. Tangled Rope: `mars_rovers_navigational_autonomy`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for mars_rovers_navigational_autonomy: Appears to be rope (indexed_rope_classification) but fails 4 Boltzmann structural test(s): [boltzmann_non_compliant(1.0,0.3),scope_variant([tangled_rope,unknown]),excess_above_floor(0.25),nonsensical_coupling(0.3333333333333333)]. Coupling score=1.0. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[rope, tangled_rope]`
+*   **Related Gap/Alert:** N/A
+*   **Generated Omega:** Constraint mars_rovers_navigational_autonomy appears as tangled_rope to individuals but rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Design measurement protocol for unknown
+2. Collect data from N=30+ real-world instances
+3. Calculate empirical metrics:
+- suppression_requirement (enforcement needed)
+- resistance_to_change (pushback level)
+- base_extractiveness (asymmetric benefit flow)
+4. Update constraint_metric/3 declarations with data
+5. Re-run classification to resolve perspectival gap
+    ```
+
+---
+
+### 406. Tangled Rope: `mass_market_extinction_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -12722,7 +12880,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 401. Tangled Rope: `matching_markets`
+### 407. Tangled Rope: `matching_markets`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -12750,7 +12908,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 402. Tangled Rope: `matching_markets_general`
+### 408. Tangled Rope: `matching_markets_general`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -12783,7 +12941,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 403. Tangled Rope: `max_flow`
+### 409. Tangled Rope: `max_flow`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -12816,7 +12974,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 404. Tangled Rope: `med_diet_consensus_2026`
+### 410. Tangled Rope: `med_diet_consensus_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -12842,7 +13000,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 405. Tangled Rope: `medical_residency_match`
+### 411. Tangled Rope: `medical_residency_match`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -12875,7 +13033,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 406. Tangled Rope: `medieval_church_hegemony`
+### 412. Tangled Rope: `medieval_church_hegemony`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -12908,7 +13066,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 407. Tangled Rope: `memetic_fitness_vs_truth`
+### 413. Tangled Rope: `memetic_fitness_vs_truth`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -12941,7 +13099,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 408. Tangled Rope: `meta_governance_overload`
+### 414. Tangled Rope: `meta_governance_overload`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -12974,7 +13132,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 409. Tangled Rope: `meta_model_lock_in`
+### 415. Tangled Rope: `meta_model_lock_in`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -13007,7 +13165,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 410. Tangled Rope: `meta_nda`
+### 416. Tangled Rope: `meta_nda`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -13035,7 +13193,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 411. Tangled Rope: `meta_nuclear_power_agreement`
+### 417. Tangled Rope: `meta_nuclear_power_agreement`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -13063,7 +13221,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 412. Tangled Rope: `metabolic_constraint_cognition`
+### 418. Tangled Rope: `metabolic_constraint_cognition`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -13096,7 +13254,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 413. Tangled Rope: `mexican_airline_merger`
+### 419. Tangled Rope: `mexican_airline_merger`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -13129,7 +13287,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 414. Tangled Rope: `micro_robot_electronics_integration`
+### 420. Tangled Rope: `micro_robot_electronics_integration`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -13155,7 +13313,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 415. Tangled Rope: `microbiome_symbiosis`
+### 421. Tangled Rope: `microbiome_symbiosis`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -13181,7 +13339,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 416. Tangled Rope: `microwave_weapon_1`
+### 422. Tangled Rope: `microwave_weapon_1`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -13214,7 +13372,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 417. Tangled Rope: `mil_std_461g_emi_control`
+### 423. Tangled Rope: `mil_std_461g_emi_control`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -13247,7 +13405,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 418. Tangled Rope: `mil_std_810f_tailoring`
+### 424. Tangled Rope: `mil_std_810f_tailoring`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -13280,7 +13438,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 419. Tangled Rope: `minimax_theorem`
+### 425. Tangled Rope: `minimax_theorem`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -13313,7 +13471,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 420. Tangled Rope: `mirror_of_erised_expectation`
+### 426. Tangled Rope: `mirror_of_erised_expectation`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -13341,7 +13499,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 421. Tangled Rope: `misunderstanding_as_mismatch`
+### 427. Tangled Rope: `misunderstanding_as_mismatch`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -13374,7 +13532,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 422. Tangled Rope: `model_autonomy_creep`
+### 428. Tangled Rope: `model_autonomy_creep`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -13400,7 +13558,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 423. Tangled Rope: `model_collapse_feedback_loop`
+### 429. Tangled Rope: `model_collapse_feedback_loop`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -13433,7 +13591,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 424. Tangled Rope: `model_of_models_regression`
+### 430. Tangled Rope: `model_of_models_regression`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -13466,7 +13624,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 425. Tangled Rope: `monetary_regime_transition`
+### 431. Tangled Rope: `monetary_regime_transition`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -13499,7 +13657,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 426. Tangled Rope: `moores_law`
+### 432. Tangled Rope: `moores_law`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -13527,7 +13685,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 427. Tangled Rope: `moral_outsourcing`
+### 433. Tangled Rope: `moral_outsourcing`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -13560,7 +13718,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 428. Tangled Rope: `mrna_melanoma_therapy`
+### 434. Tangled Rope: `mrna_melanoma_therapy`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -13593,7 +13751,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 429. Tangled Rope: `multi_agent_reward_hacking`
+### 435. Tangled Rope: `multi_agent_reward_hacking`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -13626,7 +13784,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 430. Tangled Rope: `multi_planetary_latency_lock`
+### 436. Tangled Rope: `multi_planetary_latency_lock`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -13659,7 +13817,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 431. Tangled Rope: `mutual_defection_equilibrium`
+### 437. Tangled Rope: `mutual_defection_equilibrium`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -13691,7 +13849,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 432. Tangled Rope: `naming_as_control`
+### 438. Tangled Rope: `naming_as_control`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -13724,7 +13882,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 433. Tangled Rope: `narrative_capacity_exhaustion`
+### 439. Tangled Rope: `narrative_capacity_exhaustion`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -13757,7 +13915,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 434. Tangled Rope: `narrative_overfitting`
+### 440. Tangled Rope: `narrative_overfitting`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -13790,7 +13948,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 435. Tangled Rope: `nash_equilibrium_coordination`
+### 441. Tangled Rope: `nash_equilibrium_coordination`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -13822,7 +13980,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 436. Tangled Rope: `nato_arctic_defense_cooperation`
+### 442. Tangled Rope: `nato_arctic_defense_cooperation`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -13850,7 +14008,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 437. Tangled Rope: `ncaa_eligibility_rules`
+### 443. Tangled Rope: `ncaa_eligibility_rules`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -13883,7 +14041,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 438. Tangled Rope: `nds_2022_pacing_challenge`
+### 444. Tangled Rope: `nds_2022_pacing_challenge`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -13916,7 +14074,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 439. Tangled Rope: `necessary_day_job`
+### 445. Tangled Rope: `necessary_day_job`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -13949,7 +14107,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 440. Tangled Rope: `negative_emissions_arbitrage`
+### 446. Tangled Rope: `negative_emissions_arbitrage`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -13982,7 +14140,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 441. Tangled Rope: `net_zero_stabilization`
+### 447. Tangled Rope: `net_zero_stabilization`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -14015,7 +14173,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 442. Tangled Rope: `network_effects`
+### 448. Tangled Rope: `network_effects`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -14048,7 +14206,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 443. Tangled Rope: `neural_interoperability`
+### 449. Tangled Rope: `neural_interoperability`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -14081,7 +14239,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 444. Tangled Rope: `neural_substrate_2026`
+### 450. Tangled Rope: `neural_substrate_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -14114,7 +14272,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 445. Tangled Rope: `neurodiversity_spectrum`
+### 451. Tangled Rope: `neurodiversity_spectrum`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -14147,7 +14305,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 446. Tangled Rope: `neuroplasticity_plateau`
+### 452. Tangled Rope: `neuroplasticity_plateau`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -14179,7 +14337,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 447. Tangled Rope: `new_civilizational_rope`
+### 453. Tangled Rope: `new_civilizational_rope`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -14207,7 +14365,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 448. Tangled Rope: `new_start_expiration`
+### 454. Tangled Rope: `new_start_expiration`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -14240,7 +14398,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 449. Tangled Rope: `news_paywall_inequality`
+### 455. Tangled Rope: `news_paywall_inequality`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -14273,7 +14431,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 450. Tangled Rope: `nfl_superbowl_halftime_exclusivity`
+### 456. Tangled Rope: `nfl_superbowl_halftime_exclusivity`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -14306,7 +14464,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 451. Tangled Rope: `nfl_superbowl_marketing_regulation`
+### 457. Tangled Rope: `nfl_superbowl_marketing_regulation`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -14339,7 +14497,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 452. Tangled Rope: `nine_day_buffer`
+### 458. Tangled Rope: `nine_day_buffer`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -14372,7 +14530,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 453. Tangled Rope: `noethers_isomorphism_theorems`
+### 459. Tangled Rope: `noethers_isomorphism_theorems`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -14405,7 +14563,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 454. Tangled Rope: `non_compete_agreements`
+### 460. Tangled Rope: `non_compete_agreements`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -14438,7 +14596,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 455. Tangled Rope: `norm_erosion_threshold`
+### 461. Tangled Rope: `norm_erosion_threshold`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -14471,7 +14629,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 456. Tangled Rope: `north_sea_wind_grid`
+### 462. Tangled Rope: `north_sea_wind_grid`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -14504,7 +14662,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 457. Tangled Rope: `nuclear_order_2026`
+### 463. Tangled Rope: `nuclear_order_2026`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -14532,7 +14690,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 458. Tangled Rope: `nuclear_vacuum_2026`
+### 464. Tangled Rope: `nuclear_vacuum_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -14565,7 +14723,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 459. Tangled Rope: `nvidia_cuda_ecosystem_lockin`
+### 465. Tangled Rope: `nvidia_cuda_ecosystem_lockin`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -14598,7 +14756,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 460. Tangled Rope: `ny_private_school_discount`
+### 466. Tangled Rope: `ny_private_school_discount`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -14631,7 +14789,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 461. Tangled Rope: `nyc_metrocard_art_licensing`
+### 467. Tangled Rope: `nyc_metrocard_art_licensing`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -14664,7 +14822,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 462. Tangled Rope: `olympic_legacy_curling_investment`
+### 468. Tangled Rope: `olympic_legacy_curling_investment`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -14692,7 +14850,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 463. Tangled Rope: `olympic_medal_allocation`
+### 469. Tangled Rope: `olympic_medal_allocation`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -14725,7 +14883,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 464. Tangled Rope: `omega1_patches`
+### 470. Tangled Rope: `omega1_patches`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -14758,7 +14916,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 465. Tangled Rope: `openai_api_access`
+### 471. Tangled Rope: `openai_api_access`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -14791,7 +14949,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 466. Tangled Rope: `openai_codex_app_constraint`
+### 472. Tangled Rope: `openai_codex_app_constraint`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -14824,7 +14982,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 467. Tangled Rope: `openai_health_review`
+### 473. Tangled Rope: `openai_health_review`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -14857,7 +15015,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 468. Tangled Rope: `openai_implicit_translator`
+### 474. Tangled Rope: `openai_implicit_translator`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -14890,7 +15048,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 469. Tangled Rope: `openai_prism_development`
+### 475. Tangled Rope: `openai_prism_development`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -14923,7 +15081,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 470. Tangled Rope: `openbsd_netiquette_protocol`
+### 476. Tangled Rope: `openbsd_netiquette_protocol`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -14956,7 +15114,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 471. Tangled Rope: `openclaw_data_lock_in`
+### 477. Tangled Rope: `openclaw_data_lock_in`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -14989,7 +15147,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 472. Tangled Rope: `openclaw_regulation`
+### 478. Tangled Rope: `openclaw_regulation`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -15022,7 +15180,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 473. Tangled Rope: `openscholar_peer_review`
+### 479. Tangled Rope: `openscholar_peer_review`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -15055,7 +15213,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 474. Tangled Rope: `opioid_political_realignment_2026`
+### 480. Tangled Rope: `opioid_political_realignment_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -15088,7 +15246,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 475. Tangled Rope: `optimization_fragility`
+### 481. Tangled Rope: `optimization_fragility`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -15114,7 +15272,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 476. Tangled Rope: `oral_glp1_market_access`
+### 482. Tangled Rope: `oral_glp1_market_access`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -15147,7 +15305,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 477. Tangled Rope: `orbital_data_center_2026`
+### 483. Tangled Rope: `orbital_data_center_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -15180,7 +15338,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 478. Tangled Rope: `oscar_campaign_spending`
+### 484. Tangled Rope: `oscar_campaign_spending`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -15213,7 +15371,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 479. Tangled Rope: `overfitting_to_frameworks`
+### 485. Tangled Rope: `overfitting_to_frameworks`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -15246,7 +15404,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 480. Tangled Rope: `overton_window`
+### 486. Tangled Rope: `overton_window`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -15279,7 +15437,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 481. Tangled Rope: `panama_canal_ports`
+### 487. Tangled Rope: `panama_canal_ports`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -15312,7 +15470,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 482. Tangled Rope: `parable_fish_turtle`
+### 488. Tangled Rope: `parable_fish_turtle`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -15345,7 +15503,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 483. Tangled Rope: `paradoxical_decompositions`
+### 489. Tangled Rope: `paradoxical_decompositions`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -15378,7 +15536,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 484. Tangled Rope: `paris_municipal_reform_2026`
+### 490. Tangled Rope: `paris_municipal_reform_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -15406,7 +15564,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 485. Tangled Rope: `parkinsons_law`
+### 491. Tangled Rope: `parkinsons_law`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -15439,7 +15597,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 486. Tangled Rope: `participatory_observer_hypothesis`
+### 492. Tangled Rope: `participatory_observer_hypothesis`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -15472,7 +15630,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 487. Tangled Rope: `path_dependence_lock_in`
+### 493. Tangled Rope: `path_dependence_lock_in`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -15504,7 +15662,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 488. Tangled Rope: `paxsilica_framework`
+### 494. Tangled Rope: `paxsilica_framework`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -15537,7 +15695,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 489. Tangled Rope: `pe_fund_level_leverage`
+### 495. Tangled Rope: `pe_fund_level_leverage`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -15570,7 +15728,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 490. Tangled Rope: `pe_rental_market_lockin`
+### 496. Tangled Rope: `pe_rental_market_lockin`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -15603,7 +15761,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 491. Tangled Rope: `perovskite_self_etching`
+### 497. Tangled Rope: `perovskite_self_etching`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -15636,7 +15794,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 492. Tangled Rope: `personalized_nutritional_arbitrage`
+### 498. Tangled Rope: `personalized_nutritional_arbitrage`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -15669,7 +15827,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 493. Tangled Rope: `peter_principle`
+### 499. Tangled Rope: `peter_principle`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -15702,7 +15860,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 494. Tangled Rope: `pla_loyalty_purge`
+### 500. Tangled Rope: `pla_loyalty_purge`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -15735,7 +15893,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 495. Tangled Rope: `planetary_boundaries`
+### 501. Tangled Rope: `planetary_boundaries`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -15768,7 +15926,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 496. Tangled Rope: `planetary_diet_constraint_2026`
+### 502. Tangled Rope: `planetary_diet_constraint_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -15801,7 +15959,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 497. Tangled Rope: `planning_fallacy`
+### 503. Tangled Rope: `planning_fallacy`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -15834,7 +15992,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 498. Tangled Rope: `plastic_asphalt_mandate`
+### 504. Tangled Rope: `plastic_asphalt_mandate`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -15867,7 +16025,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 499. Tangled Rope: `platform_app_store_duopoly`
+### 505. Tangled Rope: `platform_app_store_duopoly`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -15900,7 +16058,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 500. Tangled Rope: `platonic_coparenting_decoupling`
+### 506. Tangled Rope: `platonic_coparenting_decoupling`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -15933,7 +16091,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 501. Tangled Rope: `po_investigation_protocol_bias`
+### 507. Tangled Rope: `po_investigation_protocol_bias`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -15966,7 +16124,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 502. Tangled Rope: `poetic_verse_and_past`
+### 508. Tangled Rope: `poetic_verse_and_past`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -15999,7 +16157,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 503. Tangled Rope: `policy_lag_catastrophe`
+### 509. Tangled Rope: `policy_lag_catastrophe`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -16032,7 +16190,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 504. Tangled Rope: `politeness_face_negotiation`
+### 510. Tangled Rope: `politeness_face_negotiation`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -16065,7 +16223,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 505. Tangled Rope: `portugal_government_stability_ad`
+### 511. Tangled Rope: `portugal_government_stability_ad`
 
 *   **Claimed Type:** `scaffold`
 *   **Severity:** `N/A`
@@ -16098,7 +16256,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 506. Tangled Rope: `portugal_polarization_threshold_2026`
+### 512. Tangled Rope: `portugal_polarization_threshold_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -16131,7 +16289,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 507. Tangled Rope: `portuguese_presidential_term_limits`
+### 513. Tangled Rope: `portuguese_presidential_term_limits`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -16150,7 +16308,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 508. Tangled Rope: `power_set`
+### 514. Tangled Rope: `power_set`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -16178,7 +16336,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 509. Tangled Rope: `power_without_responsibility`
+### 515. Tangled Rope: `power_without_responsibility`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -16211,7 +16369,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 510. Tangled Rope: `prestige_signal_inflation`
+### 516. Tangled Rope: `prestige_signal_inflation`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -16244,7 +16402,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 511. Tangled Rope: `price_signal_corruption`
+### 517. Tangled Rope: `price_signal_corruption`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -16277,7 +16435,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 512. Tangled Rope: `private_credit_market_opacity`
+### 518. Tangled Rope: `private_credit_market_opacity`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -16310,7 +16468,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 513. Tangled Rope: `procedural_legitimacy_decay`
+### 519. Tangled Rope: `procedural_legitimacy_decay`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -16343,7 +16501,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 514. Tangled Rope: `project_vault_2026`
+### 520. Tangled Rope: `project_vault_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -16371,7 +16529,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 515. Tangled Rope: `project_vault_extraction_2026`
+### 521. Tangled Rope: `project_vault_extraction_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -16404,7 +16562,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 516. Tangled Rope: `proof_of_work_consensus`
+### 522. Tangled Rope: `proof_of_work_consensus`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -16430,7 +16588,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 517. Tangled Rope: `protocol_capture_tangled_rope`
+### 523. Tangled Rope: `protocol_capture_tangled_rope`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -16463,7 +16621,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 518. Tangled Rope: `protocol_drift_accumulation`
+### 524. Tangled Rope: `protocol_drift_accumulation`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -16496,7 +16654,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 519. Tangled Rope: `publishing_embargo`
+### 525. Tangled Rope: `publishing_embargo`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -16524,7 +16682,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 520. Tangled Rope: `qualified_immunity`
+### 526. Tangled Rope: `qualified_immunity`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -16557,7 +16715,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 521. Tangled Rope: `quellcrist_falconer_justice`
+### 527. Tangled Rope: `quellcrist_falconer_justice`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -16590,7 +16748,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 522. Tangled Rope: `quine_self_replication`
+### 528. Tangled Rope: `quine_self_replication`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -16616,7 +16774,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 523. Tangled Rope: `qwerty_vs_dvorak`
+### 529. Tangled Rope: `qwerty_vs_dvorak`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -16642,7 +16800,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 524. Tangled Rope: `raac_school_maintenance`
+### 530. Tangled Rope: `raac_school_maintenance`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -16675,7 +16833,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 525. Tangled Rope: `radiologic_diagnostic_threshold`
+### 531. Tangled Rope: `radiologic_diagnostic_threshold`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -16708,7 +16866,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 526. Tangled Rope: `rare_earth_dependency`
+### 532. Tangled Rope: `rare_earth_dependency`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -16741,7 +16899,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 527. Tangled Rope: `rare_earth_export_restrictions`
+### 533. Tangled Rope: `rare_earth_export_restrictions`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -16774,7 +16932,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 528. Tangled Rope: `rare_earth_hydrogen_extraction`
+### 534. Tangled Rope: `rare_earth_hydrogen_extraction`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -16807,7 +16965,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 529. Tangled Rope: `rare_earth_seabed_mining`
+### 535. Tangled Rope: `rare_earth_seabed_mining`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -16840,7 +16998,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 530. Tangled Rope: `rational_inertia_trap`
+### 536. Tangled Rope: `rational_inertia_trap`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -16873,7 +17031,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 531. Tangled Rope: `recipe_scaling_ai`
+### 537. Tangled Rope: `recipe_scaling_ai`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -16906,7 +17064,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 532. Tangled Rope: `regional_military_deterrence_mideast`
+### 538. Tangled Rope: `regional_military_deterrence_mideast`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -16939,7 +17097,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 533. Tangled Rope: `regulatory_capture`
+### 539. Tangled Rope: `regulatory_capture`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -16972,7 +17130,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 534. Tangled Rope: `rent_seeking_equilibrium`
+### 540. Tangled Rope: `rent_seeking_equilibrium`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -17005,7 +17163,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 535. Tangled Rope: `repair_probe_incomplete`
+### 541. Tangled Rope: `repair_probe_incomplete`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -17038,7 +17196,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 536. Tangled Rope: `reputational_cascade_failure`
+### 542. Tangled Rope: `reputational_cascade_failure`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -17071,7 +17229,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 537. Tangled Rope: `responsibility_dilution`
+### 543. Tangled Rope: `responsibility_dilution`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -17104,7 +17262,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 538. Tangled Rope: `responsibility_without_power`
+### 544. Tangled Rope: `responsibility_without_power`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -17137,7 +17295,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 539. Tangled Rope: `rfc9293_interoperability`
+### 545. Tangled Rope: `rfc9293_interoperability`
 
 *   **Claimed Type:** `rope`
 *   **Severity:** `N/A`
@@ -17170,7 +17328,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 540. Tangled Rope: `rfc9293_state_machine`
+### 546. Tangled Rope: `rfc9293_state_machine`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -17198,7 +17356,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 541. Tangled Rope: `riemann_mapping_theorem`
+### 547. Tangled Rope: `riemann_mapping_theorem`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -17224,7 +17382,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 542. Tangled Rope: `risk_socialization_threshold`
+### 548. Tangled Rope: `risk_socialization_threshold`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -17257,7 +17415,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 543. Tangled Rope: `ritual_without_belief`
+### 549. Tangled Rope: `ritual_without_belief`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -17290,7 +17448,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 544. Tangled Rope: `ritualistic_transition_scaffold`
+### 550. Tangled Rope: `ritualistic_transition_scaffold`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -17309,7 +17467,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 545. Tangled Rope: `robustness_vs_efficiency_tradeoff`
+### 551. Tangled Rope: `robustness_vs_efficiency_tradeoff`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -17342,7 +17500,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 546. Tangled Rope: `rogue_wave_control_2026`
+### 552. Tangled Rope: `rogue_wave_control_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -17370,7 +17528,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 547. Tangled Rope: `rotation_seven_black_soil`
+### 553. Tangled Rope: `rotation_seven_black_soil`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -17403,7 +17561,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 548. Tangled Rope: `rotation_seven_kubo_ranking`
+### 554. Tangled Rope: `rotation_seven_kubo_ranking`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -17436,7 +17594,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 549. Tangled Rope: `rotmigration_decision_threshold`
+### 555. Tangled Rope: `rotmigration_decision_threshold`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -17464,7 +17622,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 550. Tangled Rope: `royal_navy_middle_east_withdrawal`
+### 556. Tangled Rope: `royal_navy_middle_east_withdrawal`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -17497,7 +17655,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 551. Tangled Rope: `rules_based_international_order`
+### 557. Tangled Rope: `rules_based_international_order`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -17530,7 +17688,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 552. Tangled Rope: `russian_war_cannibalization`
+### 558. Tangled Rope: `russian_war_cannibalization`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -17563,7 +17721,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 553. Tangled Rope: `s1_airbnb`
+### 559. Tangled Rope: `s1_airbnb`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -17596,7 +17754,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 554. Tangled Rope: `s1_visa`
+### 560. Tangled Rope: `s1_visa`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -17624,7 +17782,33 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 555. Tangled Rope: `sa_renewable_price_differential`
+### 561. Tangled Rope: `s1_visa_judgment_sharing_agreement`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `tangled_rope`
+    *   Institutional (Manager) View: `rope`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** Perspectives AGREE
+*   **Orbit Signature:** `[rope, tangled_rope]`
+*   **Related Gap/Alert:** N/A
+*   **Generated Omega:** Constraint visa_judgment_sharing_agreement appears as tangled_rope to individuals but rope to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Design measurement protocol for unknown
+2. Collect data from N=30+ real-world instances
+3. Calculate empirical metrics:
+- suppression_requirement (enforcement needed)
+- resistance_to_change (pushback level)
+- base_extractiveness (asymmetric benefit flow)
+4. Update constraint_metric/3 declarations with data
+5. Re-run classification to resolve perspectival gap
+    ```
+
+---
+
+### 562. Tangled Rope: `sa_renewable_price_differential`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -17657,7 +17841,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 556. Tangled Rope: `sadhu_integrity_protocol`
+### 563. Tangled Rope: `sadhu_integrity_protocol`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -17683,7 +17867,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 557. Tangled Rope: `sapir_whorf_hypothesis`
+### 564. Tangled Rope: `sapir_whorf_hypothesis`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -17716,7 +17900,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 558. Tangled Rope: `sat_csp_complexity`
+### 565. Tangled Rope: `sat_csp_complexity`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -17749,7 +17933,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 559. Tangled Rope: `satellite_d2m_standard`
+### 566. Tangled Rope: `satellite_d2m_standard`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -17777,7 +17961,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 560. Tangled Rope: `scientific_paradigm_lifecycle`
+### 567. Tangled Rope: `scientific_paradigm_lifecycle`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -17805,7 +17989,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 561. Tangled Rope: `scurvy_maritime_extraction`
+### 568. Tangled Rope: `scurvy_maritime_extraction`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -17838,7 +18022,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 562. Tangled Rope: `second_order_unintended_consequences`
+### 569. Tangled Rope: `second_order_unintended_consequences`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -17871,7 +18055,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 563. Tangled Rope: `seedance_export_restriction`
+### 570. Tangled Rope: `seedance_export_restriction`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -17904,7 +18088,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 564. Tangled Rope: `self_surpassing_superman`
+### 571. Tangled Rope: `self_surpassing_superman`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -17936,7 +18120,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 565. Tangled Rope: `semantic_attack_surface`
+### 572. Tangled Rope: `semantic_attack_surface`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -17969,7 +18153,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 566. Tangled Rope: `semantic_overload_friction`
+### 573. Tangled Rope: `semantic_overload_friction`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -18002,7 +18186,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 567. Tangled Rope: `semiconductor_fabrication_chokepoint`
+### 574. Tangled Rope: `semiconductor_fabrication_chokepoint`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -18035,7 +18219,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 568. Tangled Rope: `semiconductor_mission_2026`
+### 575. Tangled Rope: `semiconductor_mission_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -18068,7 +18252,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 569. Tangled Rope: `shadow_fleet_sanctions_evasion`
+### 576. Tangled Rope: `shadow_fleet_sanctions_evasion`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -18101,7 +18285,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 570. Tangled Rope: `shadow_pricing_failure`
+### 577. Tangled Rope: `shadow_pricing_failure`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -18134,7 +18318,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 571. Tangled Rope: `shield_east_fortification`
+### 578. Tangled Rope: `shield_east_fortification`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -18167,7 +18351,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 572. Tangled Rope: `ship_of_theseus`
+### 579. Tangled Rope: `ship_of_theseus`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -18195,7 +18379,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 573. Tangled Rope: `shitty_feedback_handling`
+### 580. Tangled Rope: `shitty_feedback_handling`
 
 *   **Claimed Type:** `rope`
 *   **Severity:** `N/A`
@@ -18223,7 +18407,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 574. Tangled Rope: `shobies_existential_commitment`
+### 581. Tangled Rope: `shobies_existential_commitment`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -18256,7 +18440,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 575. Tangled Rope: `shock_propagation_asymmetry`
+### 582. Tangled Rope: `shock_propagation_asymmetry`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -18289,7 +18473,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 576. Tangled Rope: `signal_without_control`
+### 583. Tangled Rope: `signal_without_control`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -18322,7 +18506,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 577. Tangled Rope: `silent_dependency_activation`
+### 584. Tangled Rope: `silent_dependency_activation`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -18355,7 +18539,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 578. Tangled Rope: `silicon_lexicon_overload`
+### 585. Tangled Rope: `silicon_lexicon_overload`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -18388,7 +18572,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 579. Tangled Rope: `sk_ai_act_2026`
+### 586. Tangled Rope: `sk_ai_act_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -18421,7 +18605,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 580. Tangled Rope: `sleep_debt_externality`
+### 587. Tangled Rope: `sleep_debt_externality`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -18454,7 +18638,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 581. Tangled Rope: `slow_crisis_invisibility`
+### 588. Tangled Rope: `slow_crisis_invisibility`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
@@ -18487,7 +18671,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 582. Tangled Rope: `sludge_bureaucratic_friction`
+### 589. Tangled Rope: `sludge_bureaucratic_friction`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -18520,7 +18704,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 583. Tangled Rope: `sm_addictive_design`
+### 590. Tangled Rope: `sm_addictive_design`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -18553,7 +18737,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 584. Tangled Rope: `smartphone_ubiquity`
+### 591. Tangled Rope: `smartphone_ubiquity`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -18586,7 +18770,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 585. Tangled Rope: `social_credit_architecture`
+### 592. Tangled Rope: `social_credit_architecture`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -18619,7 +18803,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 586. Tangled Rope: `social_loafing`
+### 593. Tangled Rope: `social_loafing`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -18652,7 +18836,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 587. Tangled Rope: `social_media_participation_threshold`
+### 594. Tangled Rope: `social_media_participation_threshold`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -18685,7 +18869,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 588. Tangled Rope: `social_narrative_casting`
+### 595. Tangled Rope: `social_narrative_casting`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -18711,7 +18895,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 589. Tangled Rope: `soe_property_bailout`
+### 596. Tangled Rope: `soe_property_bailout`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -18744,7 +18928,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 590. Tangled Rope: `soft_authoritarian_drift`
+### 597. Tangled Rope: `soft_authoritarian_drift`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -18777,7 +18961,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 591. Tangled Rope: `sorites_paradox`
+### 598. Tangled Rope: `sorites_paradox`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -18810,7 +18994,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 592. Tangled Rope: `south_china_sea_arbitration_2016_2026`
+### 599. Tangled Rope: `south_china_sea_arbitration_2016_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -18843,7 +19027,33 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 593. Tangled Rope: `spain_digital_offensive_2026`
+### 600. Tangled Rope: `sovereignty_as_arbitrage`
+
+*   **Claimed Type:** `tangled_rope`
+*   **Severity:** `N/A`
+*   **Perspectival Breakdown:**
+    *   Individual (Powerless) View: `snare`
+    *   Institutional (Manager) View: `snare`
+    *   Analytical View: `tangled_rope`
+*   **Structural Signature Analysis:** FALSE CI_ROPE signature for sovereignty_as_arbitrage: Appears to be rope (indexed_rope_classification) but fails 2 Boltzmann structural test(s): [boltzmann_non_compliant(0.75,0.33),excess_above_floor(0.38)]. Coupling score=0.75. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.
+*   **Orbit Signature:** `[rope, tangled_rope]`
+*   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Generated Omega:** Constraint sovereignty_as_arbitrage appears extractive (Snare) to individuals but functional (Rope) to institutions...
+*   **Suggested Resolution Strategy:**
+    ```
+1. Design measurement protocol for unknown
+2. Collect data from N=30+ real-world instances
+3. Calculate empirical metrics:
+- suppression_requirement (enforcement needed)
+- resistance_to_change (pushback level)
+- base_extractiveness (asymmetric benefit flow)
+4. Update constraint_metric/3 declarations with data
+5. Re-run classification to resolve perspectival gap
+    ```
+
+---
+
+### 601. Tangled Rope: `spain_digital_offensive_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -18876,7 +19086,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 594. Tangled Rope: `st_petersburg_paradox`
+### 602. Tangled Rope: `st_petersburg_paradox`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -18909,7 +19119,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 595. Tangled Rope: `stable_marriage_coordination`
+### 603. Tangled Rope: `stable_marriage_coordination`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -18937,7 +19147,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 596. Tangled Rope: `start_treaty`
+### 604. Tangled Rope: `start_treaty`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -18970,7 +19180,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 597. Tangled Rope: `statecraft_virtu`
+### 605. Tangled Rope: `statecraft_virtu`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -19003,7 +19213,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 598. Tangled Rope: `status_flattening_effect`
+### 606. Tangled Rope: `status_flattening_effect`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -19029,7 +19239,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 599. Tangled Rope: `steinmetz_valuation_asymmetry`
+### 607. Tangled Rope: `steinmetz_valuation_asymmetry`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -19057,7 +19267,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 600. Tangled Rope: `sti_clinical_testing_bottleneck`
+### 608. Tangled Rope: `sti_clinical_testing_bottleneck`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -19090,7 +19300,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 601. Tangled Rope: `stoic_logos_governance`
+### 609. Tangled Rope: `stoic_logos_governance`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -19118,7 +19328,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 602. Tangled Rope: `straight_coercion_2025`
+### 610. Tangled Rope: `straight_coercion_2025`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -19151,7 +19361,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 603. Tangled Rope: `strange_attractor_dynamics`
+### 611. Tangled Rope: `strange_attractor_dynamics`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
@@ -19184,7 +19394,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 604. Tangled Rope: `strange_attractors`
+### 612. Tangled Rope: `strange_attractors`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -19217,7 +19427,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 605. Tangled Rope: `strategic_deep_sea_rare_earth_mining`
+### 613. Tangled Rope: `strategic_deep_sea_rare_earth_mining`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -19250,7 +19460,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 606. Tangled Rope: `streaming_bundling_mandate`
+### 614. Tangled Rope: `streaming_bundling_mandate`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -19283,7 +19493,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 607. Tangled Rope: `structural_extraction_without_actor`
+### 615. Tangled Rope: `structural_extraction_without_actor`
 
 *   **Claimed Type:** `piton`
 *   **Severity:** `N/A`
@@ -19316,7 +19526,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 608. Tangled Rope: `sts86_ascent_checklist`
+### 616. Tangled Rope: `sts86_ascent_checklist`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -19344,7 +19554,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 609. Tangled Rope: `student_loan_default_cliff`
+### 617. Tangled Rope: `student_loan_default_cliff`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -19377,7 +19587,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 610. Tangled Rope: `student_loan_interest_accrual`
+### 618. Tangled Rope: `student_loan_interest_accrual`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -19410,7 +19620,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 611. Tangled Rope: `suanne_coup_of_peace`
+### 619. Tangled Rope: `suanne_coup_of_peace`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -19443,7 +19653,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 612. Tangled Rope: `suanne_face_restoration`
+### 620. Tangled Rope: `suanne_face_restoration`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -19476,7 +19686,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 613. Tangled Rope: `superbowl_advertising_extraction`
+### 621. Tangled Rope: `superbowl_advertising_extraction`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -19508,7 +19718,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 614. Tangled Rope: `synthetic_data_feedback_loop`
+### 622. Tangled Rope: `synthetic_data_feedback_loop`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -19541,7 +19751,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 615. Tangled Rope: `systemic_blindspot`
+### 623. Tangled Rope: `systemic_blindspot`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -19574,7 +19784,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 616. Tangled Rope: `tail_risk_compression`
+### 624. Tangled Rope: `tail_risk_compression`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -19607,7 +19817,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 617. Tangled Rope: `taiwan_existential_sovereignty`
+### 625. Tangled Rope: `taiwan_existential_sovereignty`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -19640,7 +19850,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 618. Tangled Rope: `taiwan_grand_bargain`
+### 626. Tangled Rope: `taiwan_grand_bargain`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -19673,7 +19883,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 619. Tangled Rope: `taiwan_ids_program`
+### 627. Tangled Rope: `taiwan_ids_program`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -19701,7 +19911,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 620. Tangled Rope: `taiwan_storm_2026`
+### 628. Tangled Rope: `taiwan_storm_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -19734,7 +19944,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 621. Tangled Rope: `taiwan_strait_hegemony_shift`
+### 629. Tangled Rope: `taiwan_strait_hegemony_shift`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -19766,7 +19976,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 622. Tangled Rope: `taiwan_university_application_system`
+### 630. Tangled Rope: `taiwan_university_application_system`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -19799,7 +20009,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 623. Tangled Rope: `teaching_horses_to_sing`
+### 631. Tangled Rope: `teaching_horses_to_sing`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -19832,7 +20042,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 624. Tangled Rope: `tear_gas_repression_2026`
+### 632. Tangled Rope: `tear_gas_repression_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -19865,7 +20075,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 625. Tangled Rope: `technocratic_overreach`
+### 633. Tangled Rope: `technocratic_overreach`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -19898,7 +20108,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 626. Tangled Rope: `technological_point_of_no_return`
+### 634. Tangled Rope: `technological_point_of_no_return`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -19930,7 +20140,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 627. Tangled Rope: `temporal_scale_arbitrage`
+### 635. Tangled Rope: `temporal_scale_arbitrage`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -19963,7 +20173,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 628. Tangled Rope: `texas_hispanic_political_pivot`
+### 636. Tangled Rope: `texas_hispanic_political_pivot`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -19996,7 +20206,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 629. Tangled Rope: `texas_insurance_market_instability`
+### 637. Tangled Rope: `texas_insurance_market_instability`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -20029,7 +20239,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 630. Tangled Rope: `thai_article_112_mountain`
+### 638. Tangled Rope: `thai_article_112_mountain`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -20057,7 +20267,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 631. Tangled Rope: `the_bacchae_madness_protocol`
+### 639. Tangled Rope: `the_bacchae_madness_protocol`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -20090,7 +20300,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 632. Tangled Rope: `the_calm_protocol_suppression`
+### 640. Tangled Rope: `the_calm_protocol_suppression`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -20123,7 +20333,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 633. Tangled Rope: `the_trivial_topology`
+### 641. Tangled Rope: `the_trivial_topology`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -20142,7 +20352,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 634. Tangled Rope: `theory_of_visitors`
+### 642. Tangled Rope: `theory_of_visitors`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -20175,7 +20385,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 635. Tangled Rope: `tiktok_us_divestiture_mandate`
+### 643. Tangled Rope: `tiktok_us_divestiture_mandate`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -20208,7 +20418,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 636. Tangled Rope: `toxic_social_infection`
+### 644. Tangled Rope: `toxic_social_infection`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -20241,7 +20451,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 637. Tangled Rope: `trade_secret_law`
+### 645. Tangled Rope: `trade_secret_law`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -20267,7 +20477,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 638. Tangled Rope: `tragedy_of_the_commons`
+### 646. Tangled Rope: `tragedy_of_the_commons`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -20300,7 +20510,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 639. Tangled Rope: `transformer_self_attention`
+### 647. Tangled Rope: `transformer_self_attention`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -20333,7 +20543,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 640. Tangled Rope: `traveling_salesman_problem`
+### 648. Tangled Rope: `traveling_salesman_problem`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -20366,7 +20576,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 641. Tangled Rope: `traveling_salesperson_problem`
+### 649. Tangled Rope: `traveling_salesperson_problem`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -20399,7 +20609,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 642. Tangled Rope: `trump_critical_minerals`
+### 650. Tangled Rope: `trump_critical_minerals`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -20432,7 +20642,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 643. Tangled Rope: `trump_epa_greenhouse_gas_reversal`
+### 651. Tangled Rope: `trump_epa_greenhouse_gas_reversal`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -20465,7 +20675,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 644. Tangled Rope: `trump_indian_tariffs_2026`
+### 652. Tangled Rope: `trump_indian_tariffs_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -20498,7 +20708,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 645. Tangled Rope: `trump_making_china_great_2026`
+### 653. Tangled Rope: `trump_making_china_great_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -20531,7 +20741,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 646. Tangled Rope: `trumps_second_term_authoritarianism_2026`
+### 654. Tangled Rope: `trumps_second_term_authoritarianism_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -20564,7 +20774,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 647. Tangled Rope: `ua_mobilization_protector_cert`
+### 655. Tangled Rope: `ua_mobilization_protector_cert`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -20597,7 +20807,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 648. Tangled Rope: `ua_wartime_mobilization`
+### 656. Tangled Rope: `ua_wartime_mobilization`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -20630,7 +20840,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 649. Tangled Rope: `uk_help_to_buy_scheme`
+### 657. Tangled Rope: `uk_help_to_buy_scheme`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -20663,7 +20873,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 650. Tangled Rope: `uk_hicbc_trap`
+### 658. Tangled Rope: `uk_hicbc_trap`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -20696,7 +20906,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 651. Tangled Rope: `uk_necc_formation`
+### 659. Tangled Rope: `uk_necc_formation`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -20729,7 +20939,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 652. Tangled Rope: `ukr_mobilization`
+### 660. Tangled Rope: `ukr_mobilization`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -20762,7 +20972,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 653. Tangled Rope: `ukraine_tight_gas_pilot`
+### 661. Tangled Rope: `ukraine_tight_gas_pilot`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -20795,7 +21005,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 654. Tangled Rope: `un_high_seas_treaty_2026`
+### 662. Tangled Rope: `un_high_seas_treaty_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -20828,7 +21038,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 655. Tangled Rope: `union_protection_underperformance`
+### 663. Tangled Rope: `union_protection_underperformance`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -20861,7 +21071,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 656. Tangled Rope: `us_arms_transfer_policy`
+### 664. Tangled Rope: `us_arms_transfer_policy`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -20894,7 +21104,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 657. Tangled Rope: `us_canada_geopolitical_asymmetry`
+### 665. Tangled Rope: `us_canada_geopolitical_asymmetry`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -20926,7 +21136,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 658. Tangled Rope: `us_china_chip_tariffs_v2`
+### 666. Tangled Rope: `us_china_chip_tariffs_v2`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -20959,7 +21169,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 659. Tangled Rope: `us_debt_ceiling`
+### 667. Tangled Rope: `us_debt_ceiling`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -20992,7 +21202,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 660. Tangled Rope: `us_embargo_cuba`
+### 668. Tangled Rope: `us_embargo_cuba`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
@@ -21020,7 +21230,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 661. Tangled Rope: `us_employer_health_insurance`
+### 669. Tangled Rope: `us_employer_health_insurance`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -21053,7 +21263,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 662. Tangled Rope: `us_greenland_envoy`
+### 670. Tangled Rope: `us_greenland_envoy`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -21086,7 +21296,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 663. Tangled Rope: `us_iran_drone_conflict`
+### 671. Tangled Rope: `us_iran_drone_conflict`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -21119,7 +21329,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 664. Tangled Rope: `us_israel_faa_502b_nonenforcement`
+### 672. Tangled Rope: `us_israel_faa_502b_nonenforcement`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -21152,7 +21362,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 665. Tangled Rope: `us_labor_mobility`
+### 673. Tangled Rope: `us_labor_mobility`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -21185,7 +21395,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 666. Tangled Rope: `us_legal_standard_reasonable_doubt`
+### 674. Tangled Rope: `us_legal_standard_reasonable_doubt`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -21218,7 +21428,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 667. Tangled Rope: `us_military_recruitment_advertising`
+### 675. Tangled Rope: `us_military_recruitment_advertising`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -21237,7 +21447,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 668. Tangled Rope: `us_sanctions_icc_israel_case`
+### 676. Tangled Rope: `us_sanctions_icc_israel_case`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -21270,7 +21480,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 669. Tangled Rope: `us_sdf_alliance_abandonment_2026`
+### 677. Tangled Rope: `us_sdf_alliance_abandonment_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -21303,7 +21513,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 670. Tangled Rope: `us_suburban_zoning_2025`
+### 678. Tangled Rope: `us_suburban_zoning_2025`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -21336,7 +21546,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 671. Tangled Rope: `us_taiwan_arms_sales`
+### 679. Tangled Rope: `us_taiwan_arms_sales`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -21369,7 +21579,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 672. Tangled Rope: `us_tariffs_2025`
+### 680. Tangled Rope: `us_tariffs_2025`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -21402,7 +21612,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 673. Tangled Rope: `us_two_party_duopoly`
+### 681. Tangled Rope: `us_two_party_duopoly`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -21435,7 +21645,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 674. Tangled Rope: `us_usmca_china_leverage`
+### 682. Tangled Rope: `us_usmca_china_leverage`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -21468,7 +21678,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 675. Tangled Rope: `us_venezuela_oil_pressure`
+### 683. Tangled Rope: `us_venezuela_oil_pressure`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -21501,7 +21711,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 676. Tangled Rope: `us_venezuela_plausible_deniability_2025`
+### 684. Tangled Rope: `us_venezuela_plausible_deniability_2025`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -21534,7 +21744,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 677. Tangled Rope: `us_visa_lottery`
+### 685. Tangled Rope: `us_visa_lottery`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -21567,7 +21777,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 678. Tangled Rope: `usc_26_469_passive_loss`
+### 686. Tangled Rope: `usc_26_469_passive_loss`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -21600,7 +21810,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 679. Tangled Rope: `utopia_apocalypse_fragility`
+### 687. Tangled Rope: `utopia_apocalypse_fragility`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -21633,7 +21843,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 680. Tangled Rope: `value_alignment_drift`
+### 688. Tangled Rope: `value_alignment_drift`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -21666,7 +21876,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 681. Tangled Rope: `value_extraction_plateau`
+### 689. Tangled Rope: `value_extraction_plateau`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -21699,7 +21909,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 682. Tangled Rope: `venezuela_oil_privatization_v1`
+### 690. Tangled Rope: `venezuela_oil_privatization_v1`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -21732,7 +21942,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 683. Tangled Rope: `vienna_quantum_superposition_2026`
+### 691. Tangled Rope: `vienna_quantum_superposition_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -21765,7 +21975,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 684. Tangled Rope: `viral_emergence_covid19_exemplar`
+### 692. Tangled Rope: `viral_emergence_covid19_exemplar`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -21793,7 +22003,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 685. Tangled Rope: `viral_transmission_rates`
+### 693. Tangled Rope: `viral_transmission_rates`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -21826,7 +22036,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 686. Tangled Rope: `visibility_bias_governance`
+### 694. Tangled Rope: `visibility_bias_governance`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -21859,7 +22069,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 687. Tangled Rope: `vns_implant_for_trd`
+### 695. Tangled Rope: `vns_implant_for_trd`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -21892,7 +22102,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 688. Tangled Rope: `wikipedia_notability_requirement_2026`
+### 696. Tangled Rope: `wikipedia_notability_requirement_2026`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -21925,7 +22135,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 689. Tangled Rope: `winners_curse`
+### 697. Tangled Rope: `winners_curse`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -21951,7 +22161,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 690. Tangled Rope: `working_dog_training`
+### 698. Tangled Rope: `working_dog_training`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -21979,7 +22189,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 691. Tangled Rope: `wpl_scotland`
+### 699. Tangled Rope: `wpl_scotland`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -22012,7 +22222,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 692. Tangled Rope: `xi_mao_ideological_centralization`
+### 700. Tangled Rope: `xi_mao_ideological_centralization`
 
 *   **Claimed Type:** `snare`
 *   **Severity:** `N/A`
@@ -22045,7 +22255,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 693. Tangled Rope: `y_combinator`
+### 701. Tangled Rope: `y_combinator`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -22078,7 +22288,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 694. Tangled Rope: `yangtze_fishing_ban`
+### 702. Tangled Rope: `yangtze_fishing_ban`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -22111,7 +22321,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 695. Tangled Rope: `yoneda_lemma`
+### 703. Tangled Rope: `yoneda_lemma`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -22137,7 +22347,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 696. Tangled Rope: `yt_ai_slop_incentive`
+### 704. Tangled Rope: `yt_ai_slop_incentive`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`
@@ -22170,7 +22380,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 697. Tangled Rope: `zipfs_law`
+### 705. Tangled Rope: `zipfs_law`
 
 *   **Claimed Type:** `tangled_rope`
 *   **Severity:** `N/A`

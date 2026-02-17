@@ -27,7 +27,7 @@
 %  Main entry point. Loads corpus, runs MaxEnt, outputs markdown.
 run_maxent_report :-
     format(user_error, '[maxent_report] Starting MaxEnt shadow classifier analysis...~n', []),
-    covering_analysis:load_all_testsets,
+    corpus_loader:load_all_testsets,
     constraint_indexing:default_context(Context),
 
     % Run MaxEnt classifier

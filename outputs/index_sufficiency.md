@@ -5,12 +5,12 @@
 **Verdict:** SUFFICIENT - Indices explain most variance. Current framework adequate.
 
 - **Collision Rate:** 0.0%
-- **Anomaly Rate:** 2.0%
+- **Anomaly Rate:** 2.1%
 
 ### Evidence For Index Sufficiency
 
 - 100.0% of constraints have no index collisions
-- 21 domains show high index sufficiency
+- 17 domains show high index sufficiency
 
 ## Index Collisions
 
@@ -23,7 +23,6 @@ How well do indices explain variance in each domain?
 
 | Domain | Constraints | Avg Variance | Sufficiency |
 |--------|-------------|--------------|-------------|
-| legal                |          10 |         0.81 | High        |
 | logistics            |           1 |         0.80 | High        |
 | informational        |           2 |         0.80 | High        |
 | logistical           |           1 |         0.80 | High        |
@@ -31,24 +30,25 @@ How well do indices explain variance in each domain?
 | infrastructure       |           1 |         0.80 | High        |
 | cognitive            |           4 |         0.79 | High        |
 | psychological        |           9 |         0.78 | High        |
+| environmental        |           6 |         0.78 | High        |
 | organizational       |           9 |         0.77 | High        |
-| environmental        |           5 |         0.77 | High        |
 | institutional        |           3 |         0.77 | High        |
 | medical              |           4 |         0.76 | High        |
-| unknown              |           1 |         0.75 | High        |
 | corporate_governance |           1 |         0.75 | High        |
 | bio_industrial       |           1 |         0.75 | High        |
 | military             |           2 |         0.75 | High        |
 | psychology           |           1 |         0.75 | High        |
-| philosophical        |          12 |         0.74 | High        |
 | religious            |           9 |         0.72 | High        |
 | social               |         133 |         0.71 | High        |
-| political            |         153 |         0.71 | High        |
-| economic             |         206 |         0.68 | Medium      |
-| technological        |         280 |         0.66 | Medium      |
+| political            |         154 |         0.69 | Medium      |
+| economic             |         210 |         0.68 | Medium      |
+| philosophical        |          11 |         0.67 | Medium      |
+| legal                |          11 |         0.66 | Medium      |
 | biological           |          16 |         0.66 | Medium      |
 | health               |           5 |         0.65 | Medium      |
+| technological        |         281 |         0.65 | Medium      |
 | investigation        |           2 |         0.62 | Medium      |
+| unknown              |           4 |         0.60 | Medium      |
 | systems_engineering  |           1 |         0.60 | Medium      |
 | geopolitical         |          48 |         0.57 | Medium      |
 | ecological           |           2 |         0.55 | Medium      |
@@ -63,7 +63,7 @@ How well do indices explain variance in each domain?
 | mathematics          |           2 |         0.38 | Low         |
 | mathematical         |          61 |         0.34 | Low         |
 | technology           |           1 |         0.33 | Low         |
-| epistemological      |           1 |         0.25 | Low         |
+| epistemological      |           2 |         0.25 | Low         |
 | logic                |           1 |         0.25 | Low         |
 | logical              |           1 |         0.25 | Low         |
 | sociological         |           1 |         0.25 | Low         |
@@ -78,10 +78,12 @@ These may indicate need for new categories beyond current 4 indices.
 
 | Constraint ID | Configs | Type | Domain | Notes |
 |---------------|---------|------|--------|-------|
+| treaty_land_entrenchment       |       6 | mountain        | legal      | natural |
 | banach_fixed_point_theorem     |       5 | mountain        | technological | natural |
 | cantor_set_topology            |       5 | mountain        | mathematical | natural |
 | conways_game_of_life_dynamics  |       5 | mountain        | mathematical | natural |
 | copyleft_viral_licensing       |       5 | rope            | technological | enforced |
+| cuban_missile_crisis_excomm_delibration |       5 | rope            | political  | enforced |
 | dldr_information_policy        |       5 | rope            | technological | enforced |
 | ehrenfest_barrier              |       5 | mountain        | scientific | natural |
 | gauss_bonnet_topology          |       5 | mountain        | mathematical | natural |
@@ -96,8 +98,6 @@ These may indicate need for new categories beyond current 4 indices.
 | terrain_inaccessibility_wheeled_vehicles |       5 | mountain        | technological | natural |
 | three_body_unpredicability     |       5 | mountain        | technological | natural |
 | twin_prime_conjecture          |       5 | mountain        | mathematical | natural |
-| weierstrass_function           |       5 | mountain        | technological | natural |
-| wikipedia_noncommercial_model  |       5 | rope            | technological | enforced |
 
 ## Recommendations
 

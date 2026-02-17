@@ -16,6 +16,7 @@
 :- use_module(data_repair).
 :- use_module(domain_priors).
 :- use_module(dirac_classification).
+:- use_module(corpus_loader).
 
 :- use_module(library(lists)).
 
@@ -77,20 +78,6 @@ run_fingerprint_report :-
 
     format('---~n'),
     format('*End of fingerprint report*~n').
-
-%% load_all_testsets
-%  Bulk-loads all .pl files from testsets/ directory.
-load_all_testsets :-
-    expand_file_name('testsets/*.pl', Files),
-    length(Files, N),
-    format(user_error, 'Loading ~w testset files...~n', [N]),
-    forall(
-        member(F, Files),
-        ( catch(consult(F), E,
-                format(user_error, 'Warning: failed to load ~w: ~w~n', [F, E]))
-        )
-    ),
-    format(user_error, 'Testset loading complete.~n', []).
 
 %% report_shift_family(+Pattern)
 %  Reports one shift pattern family with its members.

@@ -4,17 +4,17 @@
 
 ## Summary
 
-- **Constraints analyzed**: 1022
+- **Constraints analyzed**: 1033
 - **Orbit families**: 25
 - **Single-type families** (gauge-invariant): 3
 - **Multi-type families** (gauge-variant): 22
-- **Largest family**: [rope,snare] (314 constraints)
+- **Largest family**: [rope,snare] (315 constraints)
 
 ## Family Inventory
 
 Families sorted by population (largest first).
 
-### `[rope,snare]` — 314 constraints
+### `[rope,snare]` — 315 constraints
 
 *Two-type: coordination/extraction bifurcation along power axis*
 
@@ -302,6 +302,7 @@ Families sorted by population (largest first).
 - `thai_senate_veto_2026`
 - `the_bacchae_madness_protocol`
 - `the_calm_protocol_suppression`
+- `theatrical_neutrality`
 - `toxic_social_infection`
 - `tractarian_logic_limit`
 - `tx_hispanic_pivot`
@@ -505,10 +506,11 @@ Families sorted by population (largest first).
 - `wpl_scotland`
 - `yangtze_fishing_ban`
 
-### `[rope,tangled_rope]` — 143 constraints
+### `[rope,tangled_rope]` — 146 constraints
 
 *Two-type: pure vs tangled coordination*
 
+- `access_arbitrage`
 - `adverse_possession`
 - `aging_longevity_tests`
 - `ai_edu_decentralization`
@@ -534,6 +536,7 @@ Families sorted by population (largest first).
 - `cobra_effect`
 - `coinbase_crypto_volatility`
 - `cold_dark_matter_paradigm`
+- `colombia_2026_presidential_election`
 - `comitatus_bond`
 - `compounding_logic`
 - `confirmation_bias`
@@ -586,7 +589,7 @@ Families sorted by population (largest first).
 - `lsd_microdosing_professional_openness`
 - `magna_carta_liberties`
 - `manga_distribution_duopoly`
-- `mars_rover_navigational_autonomy`
+- `mars_rovers_navigational_autonomy`
 - `med_diet_consensus_2026`
 - `meta_nuclear_power_agreement`
 - `mil_std_461g_emi_control`
@@ -625,6 +628,7 @@ Families sorted by population (largest first).
 - `social_media_participation_threshold`
 - `social_narrative_casting`
 - `sorites_paradox`
+- `sovereignty_as_arbitrage`
 - `st_petersburg_paradox`
 - `stable_marriage_coordination`
 - `theory_of_visitors`
@@ -653,7 +657,7 @@ Families sorted by population (largest first).
 - `wikipedia_notability_requirement_2026`
 - `yc_equity_squeeze`
 
-### `[tangled_rope]` — 102 constraints
+### `[tangled_rope]` — 104 constraints
 
 *Gauge-invariant: tangled coordination-extraction from all perspectives*
 
@@ -670,6 +674,7 @@ Families sorted by population (largest first).
 - `canada_goose_realignment_2026`
 - `castration_longevity_choice`
 - `china_taiwan_reunification_mandate`
+- `climate_policy_extraction`
 - `climate_target_one_point_five`
 - `coffee_cardiovascular_2026`
 - `cognitive_bicycle_scaffold`
@@ -753,6 +758,7 @@ Families sorted by population (largest first).
 - `the_churn_systemic_upheaval`
 - `the_wall_procedural_barrier`
 - `trojan_war_spoils`
+- `udhr_1948`
 - `ulysses_circe_1904`
 - `ulysses_hades_1904`
 - `ulysses_oxen_1904`
@@ -760,7 +766,7 @@ Families sorted by population (largest first).
 - `ulysses_proteus_1904`
 - `us_canada_geopolitical_asymmetry`
 
-### `[mountain,unknown]` — 81 constraints
+### `[mountain,unknown]` — 82 constraints
 
 *Contains unresolved types: [mountain,unknown]*
 
@@ -788,6 +794,7 @@ Families sorted by population (largest first).
 - `ehrenfest_barrier`
 - `english_chinese_tense_structure`
 - `euler_characteristic_topology`
+- `event_fragmentation`
 - `fast_growing_hierarchy`
 - `feigenbaum_universality`
 - `fermat_proof_barrier`
@@ -846,7 +853,7 @@ Families sorted by population (largest first).
 - `weierstrass_proof_limits`
 - `whitehead_problem_undecidability`
 
-### `[rope,tangled_rope,unknown]` — 43 constraints
+### `[rope,tangled_rope,unknown]` — 44 constraints
 
 *Contains unresolved types: [rope,tangled_rope,unknown]*
 
@@ -856,6 +863,7 @@ Families sorted by population (largest first).
 - `asce_7_22_seismic_design`
 - `big_data_astrophysics_arbitrage`
 - `blackstone_carried_interest_taxation`
+- `china_africa_zero_tariff_2026`
 - `cma`
 - `college_admissions_market`
 - `constraint_lagrange_multipliers`
@@ -894,7 +902,7 @@ Families sorted by population (largest first).
 - `transformer_self_attention`
 - `working_dog_training`
 
-### `[rope,unknown]` — 40 constraints
+### `[rope,unknown]` — 39 constraints
 
 *Contains unresolved types: [rope,unknown]*
 
@@ -903,7 +911,6 @@ Families sorted by population (largest first).
 - `boltzmann_universality_2026`
 - `burden_of_proof_legal_criminal`
 - `clawderberg_recursive_slop`
-- `colombia_2026_presidential_election`
 - `cost_of_observation`
 - `cs_ecmo_bridge`
 - `cuban_missile_crisis_excomm_deliberation`
@@ -939,7 +946,7 @@ Families sorted by population (largest first).
 - `tsp_duplicate_elimination`
 - `unclos_2026`
 
-### `[mountain]` — 30 constraints
+### `[mountain]` — 32 constraints
 
 *Gauge-invariant: immutable restriction from all perspectives*
 
@@ -958,6 +965,7 @@ Families sorted by population (largest first).
 - `dunbars_number`
 - `elencher_identity_transformation`
 - `epigenetics_complexity_2026`
+- `fossil_fuel_lock_in`
 - `hamiltonian_path_complexity`
 - `hilbert_hotel_infinite_capacity`
 - `hiv_prep_prevention_2026`
@@ -971,10 +979,11 @@ Families sorted by population (largest first).
 - `p_vs_np`
 - `suslin_hypothesis_proof_limits`
 - `three_body_problem_predictability_limit`
+- `treaty_land_entrenchment`
 - `universal_mathematics_communication`
 - `whitehead_incompleteness`
 
-### `[rope]` — 27 constraints
+### `[rope]` — 26 constraints
 
 *Gauge-invariant: pure coordination from all perspectives*
 
@@ -1001,7 +1010,6 @@ Families sorted by population (largest first).
 - `sts86_ascent_checklist`
 - `swift_piton_snap`
 - `thai_article_112_mountain`
-- `udhr_1948`
 - `vertebrate_turning_point_2026`
 - `wikipedia_crowdsourcing_2026`
 - `wikipedia_noncommercial_model`
@@ -1024,12 +1032,13 @@ Families sorted by population (largest first).
 - `information_foraging_theory`
 - `skolems_paradox`
 
-### `[scaffold,unknown]` — 9 constraints
+### `[scaffold,unknown]` — 10 constraints
 
 *Contains unresolved types: [scaffold,unknown]*
 
 - `axiom_reasoner_2026`
 - `exoplanetary_habitability_arbitrage`
+- `fiscal_equalization_friction`
 - `gamblers_ruin_stochastic_extinction`
 - `glp1_payload_efficiency_pivot`
 - `maha_recovery_2026`
@@ -1076,6 +1085,17 @@ Families sorted by population (largest first).
 - `nvidia_cuda_ecosystem_lockin`
 - `us_embargo_cuba`
 
+### `[piton,rope]` — 6 constraints
+
+*2-type orbit: [piton,rope]*
+
+- `boom_bust_path_dependency`
+- `gold_piton_2026`
+- `kjv_linguistic_residue`
+- `milano_cortina_2026`
+- `temporal_scarcity`
+- `viral_emergence_covid19_exemplar`
+
 ### `[scaffold,snare,tangled_rope]` — 5 constraints
 
 *3-type orbit: [scaffold,snare,tangled_rope]*
@@ -1085,15 +1105,6 @@ Families sorted by population (largest first).
 - `ia_digital_preservation`
 - `perovskite_self_etching`
 - `project_vault_2026`
-
-### `[piton,rope]` — 4 constraints
-
-*2-type orbit: [piton,rope]*
-
-- `gold_piton_2026`
-- `kjv_linguistic_residue`
-- `milano_cortina_2026`
-- `viral_emergence_covid19_exemplar`
 
 ### `[indexically_opaque,rope,snare,tangled_rope]` — 4 constraints
 
@@ -1166,13 +1177,13 @@ Families sorted by population (largest first).
 ### Types Observed
 
 - **indexically_opaque**: appears in 4 families (17 constraints total)
-- **mountain**: appears in 4 families (125 constraints total)
-- **piton**: appears in 1 families (4 constraints total)
-- **rope**: appears in 13 families (756 constraints total)
-- **scaffold**: appears in 9 families (51 constraints total)
-- **snare**: appears in 9 families (518 constraints total)
-- **tangled_rope**: appears in 11 families (477 constraints total)
-- **unknown**: appears in 7 families (185 constraints total)
+- **mountain**: appears in 4 families (128 constraints total)
+- **piton**: appears in 1 families (6 constraints total)
+- **rope**: appears in 13 families (761 constraints total)
+- **scaffold**: appears in 9 families (52 constraints total)
+- **snare**: appears in 9 families (519 constraints total)
+- **tangled_rope**: appears in 11 families (483 constraints total)
+- **unknown**: appears in 7 families (187 constraints total)
 
 ### Type Co-occurrence
 
@@ -1184,21 +1195,21 @@ Which types appear together in multi-type orbits:
 - [indexically_opaque,snare,tangled_rope] (3 constraints)
 - [mountain,rope] (1 constraints)
 - [mountain,scaffold] (13 constraints)
-- [mountain,unknown] (81 constraints)
-- [piton,rope] (4 constraints)
+- [mountain,unknown] (82 constraints)
+- [piton,rope] (6 constraints)
 - [rope,scaffold] (1 constraints)
 - [rope,scaffold,unknown] (2 constraints)
-- [rope,snare] (314 constraints)
+- [rope,snare] (315 constraints)
 - [rope,snare,tangled_rope] (167 constraints)
-- [rope,tangled_rope] (143 constraints)
-- [rope,tangled_rope,unknown] (43 constraints)
-- [rope,unknown] (40 constraints)
+- [rope,tangled_rope] (146 constraints)
+- [rope,tangled_rope,unknown] (44 constraints)
+- [rope,unknown] (39 constraints)
 - [scaffold,snare] (8 constraints)
 - [scaffold,snare,tangled_rope] (5 constraints)
 - [scaffold,snare,unknown] (8 constraints)
 - [scaffold,tangled_rope] (3 constraints)
 - [scaffold,tangled_rope,unknown] (2 constraints)
-- [scaffold,unknown] (9 constraints)
+- [scaffold,unknown] (10 constraints)
 - [snare,tangled_rope] (2 constraints)
 
 ## Unknown-Containing Orbits
@@ -1234,7 +1245,7 @@ Which types appear together in multi-type orbits:
 - `international_seabed_mining_regime`
 - `trump_epa_greenhouse_gas_reversal`
 
-### `[mountain,unknown]` — 81 constraints
+### `[mountain,unknown]` — 82 constraints
 
 - `banach_fixed_point`
 - `banach_fixed_point_theorem`
@@ -1260,6 +1271,7 @@ Which types appear together in multi-type orbits:
 - `ehrenfest_barrier`
 - `english_chinese_tense_structure`
 - `euler_characteristic_topology`
+- `event_fragmentation`
 - `fast_growing_hierarchy`
 - `feigenbaum_universality`
 - `fermat_proof_barrier`
@@ -1323,7 +1335,7 @@ Which types appear together in multi-type orbits:
 - `emergency_oversight_bureau`
 - `erasmus_rejoining_scaffold`
 
-### `[rope,tangled_rope,unknown]` — 43 constraints
+### `[rope,tangled_rope,unknown]` — 44 constraints
 
 - `abstraction_leakage`
 - `advice_as_dangerous_gift`
@@ -1331,6 +1343,7 @@ Which types appear together in multi-type orbits:
 - `asce_7_22_seismic_design`
 - `big_data_astrophysics_arbitrage`
 - `blackstone_carried_interest_taxation`
+- `china_africa_zero_tariff_2026`
 - `cma`
 - `college_admissions_market`
 - `constraint_lagrange_multipliers`
@@ -1369,14 +1382,13 @@ Which types appear together in multi-type orbits:
 - `transformer_self_attention`
 - `working_dog_training`
 
-### `[rope,unknown]` — 40 constraints
+### `[rope,unknown]` — 39 constraints
 
 - `artificial_snow_2026`
 - `astm_d638_tensile_testing`
 - `boltzmann_universality_2026`
 - `burden_of_proof_legal_criminal`
 - `clawderberg_recursive_slop`
-- `colombia_2026_presidential_election`
 - `cost_of_observation`
 - `cs_ecmo_bridge`
 - `cuban_missile_crisis_excomm_deliberation`
@@ -1428,10 +1440,11 @@ Which types appear together in multi-type orbits:
 - `france_local_elections_march_2026`
 - `portugal_ad_stability_2026`
 
-### `[scaffold,unknown]` — 9 constraints
+### `[scaffold,unknown]` — 10 constraints
 
 - `axiom_reasoner_2026`
 - `exoplanetary_habitability_arbitrage`
+- `fiscal_equalization_friction`
 - `gamblers_ruin_stochastic_extinction`
 - `glp1_payload_efficiency_pivot`
 - `maha_recovery_2026`
@@ -1442,8 +1455,8 @@ Which types appear together in multi-type orbits:
 
 ## Gauge Invariance Summary
 
-- **Gauge-invariant** (single type across all contexts): 159 constraints (15.6%)
-- **Gauge-variant** (type changes with observer): 863 constraints (84.4%)
+- **Gauge-invariant** (single type across all contexts): 162 constraints (15.7%)
+- **Gauge-variant** (type changes with observer): 871 constraints (84.3%)
 
 ---
 *End of orbit report*

@@ -27,7 +27,7 @@
 %  Main entry point. Loads corpus, computes orbits, outputs markdown + JSON.
 run_orbit_report :-
     format(user_error, '[orbit] Starting orbit analysis...~n', []),
-    covering_analysis:load_all_testsets,
+    corpus_loader:load_all_testsets,
     covering_analysis:all_corpus_constraints(Constraints),
     length(Constraints, NTotal),
     format(user_error, '[orbit] Computing orbits for ~w constraints...~n', [NTotal]),

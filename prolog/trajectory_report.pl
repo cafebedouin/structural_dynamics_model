@@ -31,7 +31,7 @@
 %  Main entry point. Loads corpus, runs trajectory mining, outputs markdown.
 run_trajectory_report :-
     format(user_error, '[trajectory_report] Starting trajectory mining analysis...~n', []),
-    covering_analysis:load_all_testsets,
+    corpus_loader:load_all_testsets,
     constraint_indexing:default_context(Context),
 
     % Run trajectory mining

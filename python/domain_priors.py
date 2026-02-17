@@ -1,16 +1,51 @@
 import os
 import re
 import glob
+import sys
 import argparse
 from pathlib import Path
 
-# Classification thresholds aligned with config.pl / core.md
-# These MUST match the values in prolog/config.pl
-ROPE_EXTRACTION_CEILING = 0.15         # core.md: ε ≤ 0.15
-TANGLED_ROPE_EXTRACTION_FLOOR = 0.16   # core.md: 0.16-0.90 with coordination
-TANGLED_ROPE_EXTRACTION_CEIL = 0.90
-SNARE_EXTRACTION_FLOOR = 0.46          # core.md: ε ≥ 0.46
-FALSE_MOUNTAIN_THRESHOLD = 0.90        # Extraction above this + claimed mountain = false mountain
+
+def _read_config_thresholds():
+    """Read param/2 threshold values from prolog/config.pl.
+
+    Uses the same pattern as structural_linter.py to ensure a single source
+    of truth for all classification thresholds.
+    """
+    config_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'prolog', 'config.pl')
+    thresholds = {}
+    try:
+        with open(config_path, 'r', encoding='utf-8') as f:
+            for line in f:
+                match = re.search(r"param\((\w+),\s*([\d.]+)\)", line)
+                if match:
+                    param_name = match.group(1)
+                    if param_name.endswith('_metric_name'):
+                        continue
+                    try:
+                        thresholds[param_name] = float(match.group(2))
+                    except ValueError:
+                        pass
+    except Exception as e:
+        print(f"Warning: Could not read thresholds from {config_path}: {e}", file=sys.stderr)
+    return thresholds
+
+
+# Explicit mapping: Python constant name → config.pl param name → fallback default
+_PARAM_MAP = {
+    'ROPE_EXTRACTION_CEILING':        ('rope_extraction_ceiling',              0.15),
+    'TANGLED_ROPE_EXTRACTION_FLOOR':  ('tangled_rope_extraction_floor',        0.16),
+    'TANGLED_ROPE_EXTRACTION_CEIL':   ('tangled_rope_extraction_ceil',         0.90),
+    'SNARE_EXTRACTION_FLOOR':         ('snare_epsilon_floor',                  0.46),
+    'FALSE_MOUNTAIN_THRESHOLD':       ('false_mountain_extraction_threshold',  0.90),
+}
+
+_config = _read_config_thresholds()
+ROPE_EXTRACTION_CEILING        = _config.get(_PARAM_MAP['ROPE_EXTRACTION_CEILING'][0],        _PARAM_MAP['ROPE_EXTRACTION_CEILING'][1])
+TANGLED_ROPE_EXTRACTION_FLOOR  = _config.get(_PARAM_MAP['TANGLED_ROPE_EXTRACTION_FLOOR'][0],  _PARAM_MAP['TANGLED_ROPE_EXTRACTION_FLOOR'][1])
+TANGLED_ROPE_EXTRACTION_CEIL   = _config.get(_PARAM_MAP['TANGLED_ROPE_EXTRACTION_CEIL'][0],   _PARAM_MAP['TANGLED_ROPE_EXTRACTION_CEIL'][1])
+SNARE_EXTRACTION_FLOOR         = _config.get(_PARAM_MAP['SNARE_EXTRACTION_FLOOR'][0],         _PARAM_MAP['SNARE_EXTRACTION_FLOOR'][1])
+FALSE_MOUNTAIN_THRESHOLD       = _config.get(_PARAM_MAP['FALSE_MOUNTAIN_THRESHOLD'][0],       _PARAM_MAP['FALSE_MOUNTAIN_THRESHOLD'][1])
 
 def infer_type_from_score(score):
     """Infer constraint type from base extractiveness score.

@@ -120,6 +120,23 @@ TOTAL_FAILED=$((FAILED_EX + FAILED_AUDIT))
 ok "Results: $PASSED passed, $TOTAL_FAILED failed"
 
 # ==============================================================================
+# STEP 2.5: Structured JSON report
+# ==============================================================================
+step "Generating structured JSON report"
+
+if (cd "$PROLOG_DIR" && swipl -l stack.pl -l json_report.pl \
+    -g "run_json_report, halt.") 2>/dev/null; then
+    if [ -f "$OUTPUT_DIR/pipeline_output.json" ]; then
+        JSON_CONSTRAINTS=$(python3 -c "import json; d=json.load(open('$OUTPUT_DIR/pipeline_output.json')); print(len(d['per_constraint']))" 2>/dev/null || echo "?")
+        ok "JSON report: $JSON_CONSTRAINTS constraints -> pipeline_output.json"
+    else
+        warn "JSON report did not produce pipeline_output.json"
+    fi
+else
+    warn "JSON report generation had issues"
+fi
+
+# ==============================================================================
 # STEP 3: Structural linter
 # ==============================================================================
 step "Running structural linter on testsets"
@@ -634,6 +651,7 @@ for report in \
     "enriched_omega_report.md" \
     "enriched_omega_data.json" \
     "corpus_data.json" \
+    "pipeline_output.json" \
     "fingerprint_report.md" \
     "orbit_report.md" \
     "orbit_data.json" \

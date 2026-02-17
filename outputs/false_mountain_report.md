@@ -7082,7 +7082,32 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 242. False Mountain: `fittss_law`
+### 242. False Mountain: `fiscal_equalization_friction`
+
+*   **Severity:** `critical`
+*   **Orbit Signature:** `[scaffold, unknown]`
+*   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Perspectival Mismatch:**
+    *   **Powerless View:** `snare`
+    *   **Institutional View:** `rope`
+*   **Generated Omega:** omega_extraction_blindness_fiscal_equalization_friction (conceptual)
+*   **Suggested Resolution Strategy:**
+    ```
+1. Map stakeholder perspectives:
+- Document how different actors perceive unknown
+- Identify source of divergence
+2. Gather evidence:
+- Empirical metrics (suppression, extraction, resistance)
+- Historical behavior patterns
+3. Create indexical classification:
+- From powerless context: classify as X
+- From institutional context: classify as Y
+- Add explicit context annotations
+    ```
+
+---
+
+### 243. False Mountain: `fittss_law`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -7112,7 +7137,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 243. False Mountain: `floating_wall_2026`
+### 244. False Mountain: `floating_wall_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -7142,7 +7167,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 244. False Mountain: `fmeca_procedures_1980`
+### 245. False Mountain: `fmeca_procedures_1980`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -7172,7 +7197,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 245. False Mountain: `fmt_oncology_realignment_2026`
+### 246. False Mountain: `fmt_oncology_realignment_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -7202,7 +7227,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 246. False Mountain: `fragile_middle_layer_collapse`
+### 247. False Mountain: `fragile_middle_layer_collapse`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -7232,7 +7257,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 247. False Mountain: `framing_effect`
+### 248. False Mountain: `framing_effect`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -7262,7 +7287,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 248. False Mountain: `france_2027_presidential_election`
+### 249. False Mountain: `france_2027_presidential_election`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, unknown]`
@@ -7292,7 +7317,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 249. False Mountain: `france_cordon_sanitaire_2026`
+### 250. False Mountain: `france_cordon_sanitaire_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -7315,7 +7340,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 250. False Mountain: `fraser_river_salmon_regulation`
+### 251. False Mountain: `fraser_river_salmon_regulation`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -7345,7 +7370,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 251. False Mountain: `french_ag_land_concentration`
+### 252. False Mountain: `french_ag_land_concentration`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -7375,7 +7400,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 252. False Mountain: `french_local_elections_march_2026`
+### 253. False Mountain: `french_local_elections_march_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[scaffold, tangled_rope, unknown]`
@@ -7405,7 +7430,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 253. False Mountain: `frontex_pushback_coordination`
+### 254. False Mountain: `frontex_pushback_coordination`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -7435,7 +7460,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 254. False Mountain: `future_dsm_integration_2026`
+### 255. False Mountain: `future_dsm_integration_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -7465,7 +7490,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 255. False Mountain: `g7_debt_trap`
+### 256. False Mountain: `g7_debt_trap`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -7495,7 +7520,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 256. False Mountain: `gale_shapley`
+### 257. False Mountain: `gale_shapley`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -7525,7 +7550,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 257. False Mountain: `gamblers_ruin_stochastic_extinction`
+### 258. False Mountain: `gamblers_ruin_stochastic_extinction`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[scaffold, unknown]`
@@ -7555,7 +7580,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 258. False Mountain: `gaza_aid_permit_revocation`
+### 259. False Mountain: `gaza_aid_permit_revocation`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -7585,7 +7610,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 259. False Mountain: `gaza_border_control_rafah`
+### 260. False Mountain: `gaza_border_control_rafah`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -7615,7 +7640,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 260. False Mountain: `generational_replacement_inertia`
+### 261. False Mountain: `generational_replacement_inertia`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -7645,7 +7670,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 261. False Mountain: `genetic_algorithms_evolution`
+### 262. False Mountain: `genetic_algorithms_evolution`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[mountain, scaffold]`
@@ -7668,7 +7693,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 262. False Mountain: `genetic_predisposition`
+### 263. False Mountain: `genetic_predisposition`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -7698,7 +7723,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 263. False Mountain: `genie_ip_constraint`
+### 264. False Mountain: `genie_ip_constraint`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[scaffold, snare, unknown]`
@@ -7728,7 +7753,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 264. False Mountain: `geopolitical_insularity_2026`
+### 265. False Mountain: `geopolitical_insularity_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -7758,7 +7783,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 265. False Mountain: `ghost_fishing_gear`
+### 266. False Mountain: `ghost_fishing_gear`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -7788,7 +7813,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 266. False Mountain: `gig_economy_algorithmic_managment`
+### 267. False Mountain: `gig_economy_algorithmic_managment`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -7818,7 +7843,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 267. False Mountain: `gita_kurukshetra`
+### 268. False Mountain: `gita_kurukshetra`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -7843,7 +7868,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 268. False Mountain: `global_digital_divide`
+### 269. False Mountain: `global_digital_divide`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -7873,7 +7898,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 269. False Mountain: `global_economic_anxiety_2026`
+### 270. False Mountain: `global_economic_anxiety_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -7903,7 +7928,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 270. False Mountain: `global_stimulus_spree`
+### 271. False Mountain: `global_stimulus_spree`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[scaffold, tangled_rope]`
@@ -7933,7 +7958,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 271. False Mountain: `global_water_bankruptcy`
+### 272. False Mountain: `global_water_bankruptcy`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -7963,7 +7988,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 272. False Mountain: `goal_boundary_poisoning`
+### 273. False Mountain: `goal_boundary_poisoning`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -7993,7 +8018,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 273. False Mountain: `gold_fomo_cycle`
+### 274. False Mountain: `gold_fomo_cycle`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -8023,7 +8048,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 274. False Mountain: `goodharts_law`
+### 275. False Mountain: `goodharts_law`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -8053,7 +8078,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 275. False Mountain: `google_ai_search_overview`
+### 276. False Mountain: `google_ai_search_overview`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -8083,7 +8108,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 276. False Mountain: `google_universal_commerce_protocol`
+### 277. False Mountain: `google_universal_commerce_protocol`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[indexically_opaque, snare, tangled_rope]`
@@ -8113,7 +8138,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 277. False Mountain: `governance_latency_gap`
+### 278. False Mountain: `governance_latency_gap`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -8143,7 +8168,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 278. False Mountain: `governance_overfitting`
+### 279. False Mountain: `governance_overfitting`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -8173,7 +8198,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 279. False Mountain: `gpt5_codex_dev_cycle`
+### 280. False Mountain: `gpt5_codex_dev_cycle`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -8203,7 +8228,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 280. False Mountain: `gpt_store_marketplace`
+### 281. False Mountain: `gpt_store_marketplace`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -8233,7 +8258,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 281. False Mountain: `gradient_descent_optimization`
+### 282. False Mountain: `gradient_descent_optimization`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -8256,7 +8281,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 282. False Mountain: `graph_coloring_complexity`
+### 283. False Mountain: `graph_coloring_complexity`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -8286,7 +8311,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 283. False Mountain: `greenland_defence_pact_2026`
+### 284. False Mountain: `greenland_defence_pact_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -8316,7 +8341,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 284. False Mountain: `greenland_seizure_trade_war`
+### 285. False Mountain: `greenland_seizure_trade_war`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -8346,7 +8371,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 285. False Mountain: `grievance_stack_overflow`
+### 286. False Mountain: `grievance_stack_overflow`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -8376,7 +8401,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 286. False Mountain: `guano_wealth_extraction`
+### 287. False Mountain: `guano_wealth_extraction`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -8406,7 +8431,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 287. False Mountain: `guinea_junta_legitimization_2024`
+### 288. False Mountain: `guinea_junta_legitimization_2024`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -8436,7 +8461,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 288. False Mountain: `guinea_worm_eradication`
+### 289. False Mountain: `guinea_worm_eradication`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, unknown]`
@@ -8466,7 +8491,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 289. False Mountain: `guthrie_kidnapping_2026`
+### 290. False Mountain: `guthrie_kidnapping_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -8496,7 +8521,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 290. False Mountain: `hammurabi`
+### 291. False Mountain: `hammurabi`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -8526,7 +8551,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 291. False Mountain: `hanlons_razor`
+### 292. False Mountain: `hanlons_razor`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -8556,7 +8581,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 292. False Mountain: `harry_potter_liberalism`
+### 293. False Mountain: `harry_potter_liberalism`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -8586,7 +8611,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 293. False Mountain: `hasbro_licensing_restriction`
+### 294. False Mountain: `hasbro_licensing_restriction`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -8616,7 +8641,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 294. False Mountain: `hawthorne_effect`
+### 295. False Mountain: `hawthorne_effect`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -8639,7 +8664,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 295. False Mountain: `hegemonic_entropy_2026`
+### 296. False Mountain: `hegemonic_entropy_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, unknown]`
@@ -8669,7 +8694,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 296. False Mountain: `help_to_buy_uk`
+### 297. False Mountain: `help_to_buy_uk`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -8699,7 +8724,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 297. False Mountain: `helsinki_bus_theory`
+### 298. False Mountain: `helsinki_bus_theory`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -8722,7 +8747,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 298. False Mountain: `hershey_salt_strategy`
+### 299. False Mountain: `hershey_salt_strategy`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -8752,7 +8777,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 299. False Mountain: `hhs_fetal_tissue_research_ban_2019`
+### 300. False Mountain: `hhs_fetal_tissue_research_ban_2019`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -8782,7 +8807,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 300. False Mountain: `hicbc_uk`
+### 301. False Mountain: `hicbc_uk`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -8812,7 +8837,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 301. False Mountain: `hidden_interdependency_risk`
+### 302. False Mountain: `hidden_interdependency_risk`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -8842,7 +8867,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 302. False Mountain: `hoa_covenants`
+### 303. False Mountain: `hoa_covenants`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, unknown]`
@@ -8872,7 +8897,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 303. False Mountain: `hollow_state_syndrome`
+### 304. False Mountain: `hollow_state_syndrome`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -8902,7 +8927,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 304. False Mountain: `horizon_liability_contract`
+### 305. False Mountain: `horizon_liability_contract`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -8932,7 +8957,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 305. False Mountain: `hu_2026_electoral_parity`
+### 306. False Mountain: `hu_2026_electoral_parity`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -8962,7 +8987,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 306. False Mountain: `huang_expectation_resilience_2026`
+### 307. False Mountain: `huang_expectation_resilience_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -8992,7 +9017,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 307. False Mountain: `hydra_game`
+### 308. False Mountain: `hydra_game`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope, unknown]`
@@ -9022,7 +9047,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 308. False Mountain: `hypercompression_of_time_horizons`
+### 309. False Mountain: `hypercompression_of_time_horizons`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -9052,7 +9077,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 309. False Mountain: `hypernormie_equilibrium`
+### 310. False Mountain: `hypernormie_equilibrium`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -9082,7 +9107,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 310. False Mountain: `ibm_shield_2026`
+### 311. False Mountain: `ibm_shield_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -9112,7 +9137,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 311. False Mountain: `ibm_shield_contract_2026`
+### 312. False Mountain: `ibm_shield_contract_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -9142,7 +9167,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 312. False Mountain: `ice_raids_minnesota_2026`
+### 313. False Mountain: `ice_raids_minnesota_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -9172,7 +9197,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 313. False Mountain: `ice_safe_departure`
+### 314. False Mountain: `ice_safe_departure`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -9202,7 +9227,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 314. False Mountain: `identity_stack_incompatibility`
+### 315. False Mountain: `identity_stack_incompatibility`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -9232,7 +9257,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 315. False Mountain: `incentive_surface_warping`
+### 316. False Mountain: `incentive_surface_warping`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -9262,7 +9287,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 316. False Mountain: `incumbent_steel_production`
+### 317. False Mountain: `incumbent_steel_production`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -9292,7 +9317,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 317. False Mountain: `india_nuclear_liability_act_2010`
+### 318. False Mountain: `india_nuclear_liability_act_2010`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -9322,7 +9347,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 318. False Mountain: `india_semi_mission`
+### 319. False Mountain: `india_semi_mission`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -9352,7 +9377,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 319. False Mountain: `indian_import_tariffs_eu`
+### 320. False Mountain: `indian_import_tariffs_eu`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -9382,7 +9407,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 320. False Mountain: `individual_revolution_autonomy`
+### 321. False Mountain: `individual_revolution_autonomy`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -9412,7 +9437,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 321. False Mountain: `indo_german_defense_pact`
+### 322. False Mountain: `indo_german_defense_pact`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[indexically_opaque, rope, tangled_rope]`
@@ -9442,7 +9467,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 322. False Mountain: `indonesia_penal_code_2023`
+### 323. False Mountain: `indonesia_penal_code_2023`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[indexically_opaque, rope, snare]`
@@ -9472,7 +9497,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 323. False Mountain: `inference_cost_scaling_law`
+### 324. False Mountain: `inference_cost_scaling_law`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -9502,7 +9527,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 324. False Mountain: `informational_time_2026`
+### 325. False Mountain: `informational_time_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -9532,7 +9557,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 325. False Mountain: `infrastructure_interoperability_decay`
+### 326. False Mountain: `infrastructure_interoperability_decay`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -9562,7 +9587,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 326. False Mountain: `innovators_dilemma`
+### 327. False Mountain: `innovators_dilemma`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -9592,7 +9617,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 327. False Mountain: `institutional_inertia_lock`
+### 328. False Mountain: `institutional_inertia_lock`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -9622,7 +9647,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 328. False Mountain: `institutional_memory_loss`
+### 329. False Mountain: `institutional_memory_loss`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -9652,7 +9677,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 329. False Mountain: `institutional_mutation_domestication`
+### 330. False Mountain: `institutional_mutation_domestication`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -9682,7 +9707,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 330. False Mountain: `institutional_mutation_without_selection`
+### 331. False Mountain: `institutional_mutation_without_selection`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -9712,7 +9737,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 331. False Mountain: `institutional_trust_decay`
+### 332. False Mountain: `institutional_trust_decay`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope, unknown]`
@@ -9742,7 +9767,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 332. False Mountain: `insult_wisdom_training`
+### 333. False Mountain: `insult_wisdom_training`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope, unknown]`
@@ -9772,7 +9797,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 333. False Mountain: `integrated_digital_governance_stack`
+### 334. False Mountain: `integrated_digital_governance_stack`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -9802,7 +9827,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 334. False Mountain: `interaction_explosion`
+### 335. False Mountain: `interaction_explosion`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -9825,7 +9850,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 335. False Mountain: `interface_contract_breakdown`
+### 336. False Mountain: `interface_contract_breakdown`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -9855,7 +9880,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 336. False Mountain: `intermediate_value_theorem`
+### 337. False Mountain: `intermediate_value_theorem`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -9885,7 +9910,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 337. False Mountain: `international_seabed_mining_regime`
+### 338. False Mountain: `international_seabed_mining_regime`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[indexically_opaque, snare, tangled_rope]`
@@ -9915,7 +9940,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 338. False Mountain: `internet_archive_preservation`
+### 339. False Mountain: `internet_archive_preservation`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[scaffold, snare, tangled_rope]`
@@ -9945,7 +9970,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 339. False Mountain: `internet_evolution_lifecycle`
+### 340. False Mountain: `internet_evolution_lifecycle`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -9975,7 +10000,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 340. False Mountain: `interpretive_frame_fragmentation`
+### 341. False Mountain: `interpretive_frame_fragmentation`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -10005,7 +10030,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 341. False Mountain: `intertemporal_responsibility_gap`
+### 342. False Mountain: `intertemporal_responsibility_gap`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -10035,7 +10060,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 342. False Mountain: `invisible_infrastructure_dependency`
+### 343. False Mountain: `invisible_infrastructure_dependency`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -10065,7 +10090,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 343. False Mountain: `iran_guardian_council_vetting`
+### 344. False Mountain: `iran_guardian_council_vetting`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -10095,7 +10120,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 344. False Mountain: `iran_hijab_law`
+### 345. False Mountain: `iran_hijab_law`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -10125,7 +10150,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 345. False Mountain: `iran_mandatrophic_collapse`
+### 346. False Mountain: `iran_mandatrophic_collapse`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -10155,7 +10180,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 346. False Mountain: `iran_nin_repression`
+### 347. False Mountain: `iran_nin_repression`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -10185,7 +10210,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 347. False Mountain: `iran_war_room_2026`
+### 348. False Mountain: `iran_war_room_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -10215,7 +10240,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 348. False Mountain: `iron_law_of_oligarchy`
+### 349. False Mountain: `iron_law_of_oligarchy`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -10245,7 +10270,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 349. False Mountain: `irreversible_policy_commitment`
+### 350. False Mountain: `irreversible_policy_commitment`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -10275,7 +10300,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 350. False Mountain: `isa_education_scaffold`
+### 351. False Mountain: `isa_education_scaffold`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[scaffold, tangled_rope]`
@@ -10305,7 +10330,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 351. False Mountain: `israel_egypt_gas_deal`
+### 352. False Mountain: `israel_egypt_gas_deal`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -10335,7 +10360,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 352. False Mountain: `israel_electoral_threshold`
+### 353. False Mountain: `israel_electoral_threshold`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -10365,7 +10390,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 353. False Mountain: `israel_gaza_ceasefire_violation`
+### 354. False Mountain: `israel_gaza_ceasefire_violation`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -10395,7 +10420,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 354. False Mountain: `israel_norwegian_law`
+### 355. False Mountain: `israel_norwegian_law`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -10425,7 +10450,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 355. False Mountain: `israel_override_clause`
+### 356. False Mountain: `israel_override_clause`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -10455,7 +10480,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 356. False Mountain: `israel_surplus_vote_agreements`
+### 357. False Mountain: `israel_surplus_vote_agreements`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -10485,7 +10510,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 357. False Mountain: `iterated_function_systems`
+### 358. False Mountain: `iterated_function_systems`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -10515,7 +10540,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 358. False Mountain: `japanese_energy_scaffold_2025`
+### 359. False Mountain: `japanese_energy_scaffold_2025`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -10545,7 +10570,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 359. False Mountain: `jevons_paradox`
+### 360. False Mountain: `jevons_paradox`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -10575,7 +10600,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 360. False Mountain: `job_hunt_volume_system_2026`
+### 361. False Mountain: `job_hunt_volume_system_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -10605,7 +10630,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 361. False Mountain: `jp_eez_enforcement`
+### 362. False Mountain: `jp_eez_enforcement`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -10635,7 +10660,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 362. False Mountain: `jp_nativist_politics`
+### 363. False Mountain: `jp_nativist_politics`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[indexically_opaque, rope, snare]`
@@ -10665,7 +10690,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 363. False Mountain: `khantivadin_radical_patience`
+### 364. False Mountain: `khantivadin_radical_patience`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -10695,7 +10720,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 364. False Mountain: `kidney_exchange_market`
+### 365. False Mountain: `kidney_exchange_market`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -10725,7 +10750,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 365. False Mountain: `kim_jong_un_succession`
+### 366. False Mountain: `kim_jong_un_succession`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -10755,7 +10780,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 366. False Mountain: `labor_union_dues_structure`
+### 367. False Mountain: `labor_union_dues_structure`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -10785,7 +10810,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 367. False Mountain: `landscape_of_fear_2026`
+### 368. False Mountain: `landscape_of_fear_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -10808,7 +10833,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 368. False Mountain: `latent_goal_activation`
+### 369. False Mountain: `latent_goal_activation`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -10838,7 +10863,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 369. False Mountain: `latent_regulatory_bomb`
+### 370. False Mountain: `latent_regulatory_bomb`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -10868,7 +10893,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 370. False Mountain: `lavender_ai_targeting`
+### 371. False Mountain: `lavender_ai_targeting`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -10898,7 +10923,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 371. False Mountain: `law_of_diminishing_returns`
+### 372. False Mountain: `law_of_diminishing_returns`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -10928,7 +10953,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 372. False Mountain: `lcdm_hubble_tension`
+### 373. False Mountain: `lcdm_hubble_tension`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -10958,7 +10983,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 373. False Mountain: `legal_formalism_overhang`
+### 374. False Mountain: `legal_formalism_overhang`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -10988,7 +11013,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 374. False Mountain: `legibility_trap`
+### 375. False Mountain: `legibility_trap`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -11018,7 +11043,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 375. False Mountain: `legitimacy_without_capacity`
+### 376. False Mountain: `legitimacy_without_capacity`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -11048,7 +11073,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 376. False Mountain: `legitimacy_without_effectiveness`
+### 377. False Mountain: `legitimacy_without_effectiveness`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -11078,7 +11103,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 377. False Mountain: `lehman_repo_105`
+### 378. False Mountain: `lehman_repo_105`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -11108,7 +11133,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 378. False Mountain: `lindy_effect`
+### 379. False Mountain: `lindy_effect`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, unknown]`
@@ -11131,7 +11156,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 379. False Mountain: `liquidity_illusion`
+### 380. False Mountain: `liquidity_illusion`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -11161,7 +11186,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 380. False Mountain: `litchfield_sensitive_locations_2026`
+### 381. False Mountain: `litchfield_sensitive_locations_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -11191,7 +11216,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 381. False Mountain: `logistic_map_dynamics`
+### 382. False Mountain: `logistic_map_dynamics`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -11221,7 +11246,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 382. False Mountain: `lorenz_attractor_dynamics`
+### 383. False Mountain: `lorenz_attractor_dynamics`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -11251,7 +11276,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 383. False Mountain: `lung_transplant_protocol`
+### 384. False Mountain: `lung_transplant_protocol`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -11281,7 +11306,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 384. False Mountain: `maintenance_capacity_shortfall`
+### 385. False Mountain: `maintenance_capacity_shortfall`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -11311,7 +11336,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 385. False Mountain: `maladaptive_selection_process`
+### 386. False Mountain: `maladaptive_selection_process`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -11341,7 +11366,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 386. False Mountain: `mandatrophic_margin_collapse`
+### 387. False Mountain: `mandatrophic_margin_collapse`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -11371,7 +11396,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 387. False Mountain: `mandatrophic_margin_collapse_diagnostic`
+### 388. False Mountain: `mandatrophic_margin_collapse_diagnostic`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -11401,7 +11426,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 388. False Mountain: `manga_distribution_duopoly`
+### 389. False Mountain: `manga_distribution_duopoly`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -11431,7 +11456,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 389. False Mountain: `marriage_market_asymmetry_2026`
+### 390. False Mountain: `marriage_market_asymmetry_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -11461,7 +11486,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 390. False Mountain: `mass_market_extinction_2026`
+### 391. False Mountain: `mass_market_extinction_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -11491,7 +11516,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 391. False Mountain: `matching_markets_general`
+### 392. False Mountain: `matching_markets_general`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -11521,7 +11546,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 392. False Mountain: `max_flow`
+### 393. False Mountain: `max_flow`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -11551,7 +11576,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 393. False Mountain: `med_diet_consensus_2026`
+### 394. False Mountain: `med_diet_consensus_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -11574,7 +11599,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 394. False Mountain: `medical_residency_match`
+### 395. False Mountain: `medical_residency_match`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -11604,7 +11629,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 395. False Mountain: `medieval_church_hegemony`
+### 396. False Mountain: `medieval_church_hegemony`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -11634,7 +11659,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 396. False Mountain: `memetic_fitness_vs_truth`
+### 397. False Mountain: `memetic_fitness_vs_truth`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -11664,7 +11689,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 397. False Mountain: `meta_governance_overload`
+### 398. False Mountain: `meta_governance_overload`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -11694,7 +11719,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 398. False Mountain: `meta_model_lock_in`
+### 399. False Mountain: `meta_model_lock_in`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -11724,7 +11749,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 399. False Mountain: `meta_pay_or_okay_model`
+### 400. False Mountain: `meta_pay_or_okay_model`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[indexically_opaque, rope, snare]`
@@ -11754,7 +11779,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 400. False Mountain: `metabolic_constraint_cognition`
+### 401. False Mountain: `metabolic_constraint_cognition`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -11784,7 +11809,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 401. False Mountain: `mexican_airline_merger`
+### 402. False Mountain: `mexican_airline_merger`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -11814,7 +11839,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 402. False Mountain: `micro_robot_electronics_integration`
+### 403. False Mountain: `micro_robot_electronics_integration`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -11837,7 +11862,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 403. False Mountain: `microbiome_symbiosis`
+### 404. False Mountain: `microbiome_symbiosis`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -11860,7 +11885,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 404. False Mountain: `microwave_weapon_1`
+### 405. False Mountain: `microwave_weapon_1`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -11890,7 +11915,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 405. False Mountain: `mil_std_461g_emi_control`
+### 406. False Mountain: `mil_std_461g_emi_control`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -11920,7 +11945,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 406. False Mountain: `mil_std_810f_tailoring`
+### 407. False Mountain: `mil_std_810f_tailoring`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -11950,7 +11975,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 407. False Mountain: `minimax_theorem`
+### 408. False Mountain: `minimax_theorem`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -11980,7 +12005,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 408. False Mountain: `minnesota_sovereignty_2026`
+### 409. False Mountain: `minnesota_sovereignty_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -12010,7 +12035,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 409. False Mountain: `misunderstanding_as_mismatch`
+### 410. False Mountain: `misunderstanding_as_mismatch`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -12040,7 +12065,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 410. False Mountain: `mit_tfus_consciousness_2026`
+### 411. False Mountain: `mit_tfus_consciousness_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[scaffold, snare, unknown]`
@@ -12070,7 +12095,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 411. False Mountain: `model_autonomy_creep`
+### 412. False Mountain: `model_autonomy_creep`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -12093,7 +12118,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 412. False Mountain: `model_collapse_feedback_loop`
+### 413. False Mountain: `model_collapse_feedback_loop`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -12123,7 +12148,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 413. False Mountain: `model_of_models_regression`
+### 414. False Mountain: `model_of_models_regression`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -12153,7 +12178,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 414. False Mountain: `moltbook_agent_theater`
+### 415. False Mountain: `moltbook_agent_theater`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope, unknown]`
@@ -12183,7 +12208,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 415. False Mountain: `moltbook_breach_2026`
+### 416. False Mountain: `moltbook_breach_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -12213,7 +12238,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 416. False Mountain: `monetary_regime_transition`
+### 417. False Mountain: `monetary_regime_transition`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -12243,7 +12268,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 417. False Mountain: `moral_outsourcing`
+### 418. False Mountain: `moral_outsourcing`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -12273,7 +12298,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 418. False Mountain: `mrna_melanoma_therapy`
+### 419. False Mountain: `mrna_melanoma_therapy`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -12303,7 +12328,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 419. False Mountain: `multi_agent_reward_hacking`
+### 420. False Mountain: `multi_agent_reward_hacking`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -12333,7 +12358,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 420. False Mountain: `multi_planetary_latency_lock`
+### 421. False Mountain: `multi_planetary_latency_lock`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -12363,7 +12388,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 421. False Mountain: `naming_as_control`
+### 422. False Mountain: `naming_as_control`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -12393,7 +12418,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 422. False Mountain: `narcissistic_ego_maintenance`
+### 423. False Mountain: `narcissistic_ego_maintenance`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -12423,7 +12448,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 423. False Mountain: `narrative_capacity_exhaustion`
+### 424. False Mountain: `narrative_capacity_exhaustion`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -12453,7 +12478,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 424. False Mountain: `narrative_overfitting`
+### 425. False Mountain: `narrative_overfitting`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -12483,7 +12508,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 425. False Mountain: `ncaa_eligibility_rules`
+### 426. False Mountain: `ncaa_eligibility_rules`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -12513,7 +12538,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 426. False Mountain: `nds_2022_pacing_challenge`
+### 427. False Mountain: `nds_2022_pacing_challenge`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -12543,7 +12568,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 427. False Mountain: `necessary_day_job`
+### 428. False Mountain: `necessary_day_job`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -12573,7 +12598,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 428. False Mountain: `negative_emissions_arbitrage`
+### 429. False Mountain: `negative_emissions_arbitrage`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope, unknown]`
@@ -12603,7 +12628,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 429. False Mountain: `net_zero_stabilization`
+### 430. False Mountain: `net_zero_stabilization`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, unknown]`
@@ -12633,7 +12658,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 430. False Mountain: `network_effects`
+### 431. False Mountain: `network_effects`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -12663,7 +12688,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 431. False Mountain: `neural_interoperability`
+### 432. False Mountain: `neural_interoperability`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, unknown]`
@@ -12693,7 +12718,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 432. False Mountain: `neural_substrate_2026`
+### 433. False Mountain: `neural_substrate_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -12723,7 +12748,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 433. False Mountain: `neurodiversity_spectrum`
+### 434. False Mountain: `neurodiversity_spectrum`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope, unknown]`
@@ -12753,7 +12778,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 434. False Mountain: `new_start_expiration`
+### 435. False Mountain: `new_start_expiration`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -12783,7 +12808,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 435. False Mountain: `news_paywall_inequality`
+### 436. False Mountain: `news_paywall_inequality`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -12813,7 +12838,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 436. False Mountain: `nfl_superbowl_halftime_exclusivity`
+### 437. False Mountain: `nfl_superbowl_halftime_exclusivity`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -12843,7 +12868,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 437. False Mountain: `nfl_superbowl_marketing_regulation`
+### 438. False Mountain: `nfl_superbowl_marketing_regulation`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -12873,7 +12898,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 438. False Mountain: `nine_day_buffer`
+### 439. False Mountain: `nine_day_buffer`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -12903,7 +12928,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 439. False Mountain: `noethers_isomorphism_theorems`
+### 440. False Mountain: `noethers_isomorphism_theorems`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -12933,7 +12958,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 440. False Mountain: `noethers_theorem_symmetry`
+### 441. False Mountain: `noethers_theorem_symmetry`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[mountain]`
@@ -12956,7 +12981,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 441. False Mountain: `non_compete_agreements`
+### 442. False Mountain: `non_compete_agreements`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -12986,7 +13011,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 442. False Mountain: `norm_erosion_threshold`
+### 443. False Mountain: `norm_erosion_threshold`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -13016,7 +13041,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 443. False Mountain: `north_korea_songun_mandatrophy`
+### 444. False Mountain: `north_korea_songun_mandatrophy`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -13046,7 +13071,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 444. False Mountain: `north_sea_wind_grid`
+### 445. False Mountain: `north_sea_wind_grid`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -13076,7 +13101,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 445. False Mountain: `notary_ink_dependency`
+### 446. False Mountain: `notary_ink_dependency`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope, unknown]`
@@ -13106,7 +13131,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 446. False Mountain: `nsl_hk`
+### 447. False Mountain: `nsl_hk`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -13136,7 +13161,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 447. False Mountain: `nsw_transmission_bottleneck`
+### 448. False Mountain: `nsw_transmission_bottleneck`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[scaffold, snare, unknown]`
@@ -13166,7 +13191,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 448. False Mountain: `nuclear_vacuum_2026`
+### 449. False Mountain: `nuclear_vacuum_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -13196,7 +13221,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 449. False Mountain: `nvidia_cuda_ecosystem_lockin`
+### 450. False Mountain: `nvidia_cuda_ecosystem_lockin`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[indexically_opaque, rope, snare]`
@@ -13226,7 +13251,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 450. False Mountain: `ny_private_school_discount`
+### 451. False Mountain: `ny_private_school_discount`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -13256,7 +13281,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 451. False Mountain: `nyc_metrocard_art_licensing`
+### 452. False Mountain: `nyc_metrocard_art_licensing`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -13286,7 +13311,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 452. False Mountain: `olympic_medal_allocation`
+### 453. False Mountain: `olympic_medal_allocation`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope, unknown]`
@@ -13316,7 +13341,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 453. False Mountain: `omega1_patches`
+### 454. False Mountain: `omega1_patches`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -13346,7 +13371,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 454. False Mountain: `omelet_perfection_complexity`
+### 455. False Mountain: `omelet_perfection_complexity`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, unknown]`
@@ -13376,7 +13401,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 455. False Mountain: `openai_api_access`
+### 456. False Mountain: `openai_api_access`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[scaffold, snare, unknown]`
@@ -13406,7 +13431,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 456. False Mountain: `openai_codex_app_constraint`
+### 457. False Mountain: `openai_codex_app_constraint`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[scaffold, snare, unknown]`
@@ -13436,7 +13461,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 457. False Mountain: `openai_health_review`
+### 458. False Mountain: `openai_health_review`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -13466,7 +13491,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 458. False Mountain: `openai_implicit_translator`
+### 459. False Mountain: `openai_implicit_translator`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -13496,7 +13521,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 459. False Mountain: `openai_prism_development`
+### 460. False Mountain: `openai_prism_development`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[indexically_opaque, rope, snare, tangled_rope]`
@@ -13526,7 +13551,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 460. False Mountain: `openbsd_netiquette_protocol`
+### 461. False Mountain: `openbsd_netiquette_protocol`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -13556,7 +13581,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 461. False Mountain: `openclaw_data_lock_in`
+### 462. False Mountain: `openclaw_data_lock_in`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -13586,7 +13611,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 462. False Mountain: `openclaw_regulation`
+### 463. False Mountain: `openclaw_regulation`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -13616,7 +13641,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 463. False Mountain: `openscholar_peer_review`
+### 464. False Mountain: `openscholar_peer_review`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[scaffold, snare, unknown]`
@@ -13646,7 +13671,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 464. False Mountain: `opioid_political_realignment_2026`
+### 465. False Mountain: `opioid_political_realignment_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -13676,7 +13701,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 465. False Mountain: `optimization_fragility`
+### 466. False Mountain: `optimization_fragility`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -13699,7 +13724,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 466. False Mountain: `oral_glp1_market_access`
+### 467. False Mountain: `oral_glp1_market_access`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -13729,7 +13754,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 467. False Mountain: `orbital_data_center_2026`
+### 468. False Mountain: `orbital_data_center_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -13759,7 +13784,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 468. False Mountain: `oscar_campaign_spending`
+### 469. False Mountain: `oscar_campaign_spending`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -13789,7 +13814,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 469. False Mountain: `other_peoples_troubles_2026`
+### 470. False Mountain: `other_peoples_troubles_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -13819,7 +13844,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 470. False Mountain: `overfitting_to_frameworks`
+### 471. False Mountain: `overfitting_to_frameworks`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -13849,7 +13874,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 471. False Mountain: `overton_window`
+### 472. False Mountain: `overton_window`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -13879,7 +13904,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 472. False Mountain: `p_g_golden_pear_surveillance`
+### 473. False Mountain: `p_g_golden_pear_surveillance`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -13909,7 +13934,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 473. False Mountain: `p_vs_np`
+### 474. False Mountain: `p_vs_np`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[mountain]`
@@ -13939,7 +13964,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 474. False Mountain: `panama_canal_ports`
+### 475. False Mountain: `panama_canal_ports`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -13969,7 +13994,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 475. False Mountain: `parable_fish_turtle`
+### 476. False Mountain: `parable_fish_turtle`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -13999,7 +14024,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 476. False Mountain: `paradoxical_decompositions`
+### 477. False Mountain: `paradoxical_decompositions`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -14029,7 +14054,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 477. False Mountain: `parkinsons_law`
+### 478. False Mountain: `parkinsons_law`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -14059,7 +14084,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 478. False Mountain: `participatory_observer_hypothesis`
+### 479. False Mountain: `participatory_observer_hypothesis`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -14089,7 +14114,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 479. False Mountain: `paxsilica_framework`
+### 480. False Mountain: `paxsilica_framework`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -14119,7 +14144,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 480. False Mountain: `pe_fund_level_leverage`
+### 481. False Mountain: `pe_fund_level_leverage`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -14149,7 +14174,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 481. False Mountain: `pe_rental_market_lockin`
+### 482. False Mountain: `pe_rental_market_lockin`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -14179,7 +14204,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 482. False Mountain: `perovskite_self_etching`
+### 483. False Mountain: `perovskite_self_etching`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[scaffold, snare, tangled_rope]`
@@ -14209,7 +14234,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 483. False Mountain: `personalized_nutritional_arbitrage`
+### 484. False Mountain: `personalized_nutritional_arbitrage`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -14239,7 +14264,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 484. False Mountain: `peter_principle`
+### 485. False Mountain: `peter_principle`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -14269,7 +14294,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 485. False Mountain: `pla_loyalty_purge`
+### 486. False Mountain: `pla_loyalty_purge`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -14299,7 +14324,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 486. False Mountain: `planetary_boundaries`
+### 487. False Mountain: `planetary_boundaries`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -14329,7 +14354,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 487. False Mountain: `planetary_diet_constraint_2026`
+### 488. False Mountain: `planetary_diet_constraint_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope]`
@@ -14359,7 +14384,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 488. False Mountain: `planning_fallacy`
+### 489. False Mountain: `planning_fallacy`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -14389,7 +14414,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 489. False Mountain: `plastic_asphalt_mandate`
+### 490. False Mountain: `plastic_asphalt_mandate`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -14419,7 +14444,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 490. False Mountain: `platform_app_store_duopoly`
+### 491. False Mountain: `platform_app_store_duopoly`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -14449,7 +14474,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 491. False Mountain: `platonic_coparenting_decoupling`
+### 492. False Mountain: `platonic_coparenting_decoupling`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[scaffold, unknown]`
@@ -14479,7 +14504,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 492. False Mountain: `po_investigation_protocol_bias`
+### 493. False Mountain: `po_investigation_protocol_bias`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -14509,7 +14534,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 493. False Mountain: `poetic_verse_and_past`
+### 494. False Mountain: `poetic_verse_and_past`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -14539,7 +14564,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 494. False Mountain: `policy_lag_catastrophe`
+### 495. False Mountain: `policy_lag_catastrophe`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -14569,7 +14594,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 495. False Mountain: `politeness_face_negotiation`
+### 496. False Mountain: `politeness_face_negotiation`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -14599,7 +14624,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 496. False Mountain: `portugal_government_stability_ad`
+### 497. False Mountain: `portugal_government_stability_ad`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[scaffold, tangled_rope, unknown]`
@@ -14629,7 +14654,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 497. False Mountain: `portugal_polarization_threshold_2026`
+### 498. False Mountain: `portugal_polarization_threshold_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -14659,7 +14684,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 498. False Mountain: `power_without_responsibility`
+### 499. False Mountain: `power_without_responsibility`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -14689,7 +14714,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 499. False Mountain: `prestige_signal_inflation`
+### 500. False Mountain: `prestige_signal_inflation`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -14719,7 +14744,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 500. False Mountain: `price_signal_corruption`
+### 501. False Mountain: `price_signal_corruption`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -14749,7 +14774,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 501. False Mountain: `prime_age_male_unwork`
+### 502. False Mountain: `prime_age_male_unwork`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -14779,7 +14804,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 502. False Mountain: `private_credit_market_opacity`
+### 503. False Mountain: `private_credit_market_opacity`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[snare, tangled_rope]`
@@ -14809,7 +14834,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 503. False Mountain: `private_identity_integration`
+### 504. False Mountain: `private_identity_integration`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -14839,7 +14864,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 504. False Mountain: `procedural_compliance_theater`
+### 505. False Mountain: `procedural_compliance_theater`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -14869,7 +14894,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 505. False Mountain: `procedural_legitimacy_decay`
+### 506. False Mountain: `procedural_legitimacy_decay`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -14899,7 +14924,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 506. False Mountain: `project_vault_extraction_2026`
+### 507. False Mountain: `project_vault_extraction_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -14929,7 +14954,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 507. False Mountain: `protocol_capture_tangled_rope`
+### 508. False Mountain: `protocol_capture_tangled_rope`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -14959,7 +14984,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 508. False Mountain: `protocol_drift_accumulation`
+### 509. False Mountain: `protocol_drift_accumulation`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -14989,7 +15014,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 509. False Mountain: `qualified_immunity`
+### 510. False Mountain: `qualified_immunity`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -15019,7 +15044,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 510. False Mountain: `quellcrist_falconer_justice`
+### 511. False Mountain: `quellcrist_falconer_justice`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -15049,7 +15074,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 511. False Mountain: `qwerty_vs_dvorak`
+### 512. False Mountain: `qwerty_vs_dvorak`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -15072,7 +15097,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 512. False Mountain: `raac_school_maintenance`
+### 513. False Mountain: `raac_school_maintenance`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -15102,7 +15127,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 513. False Mountain: `radiologic_diagnostic_threshold`
+### 514. False Mountain: `radiologic_diagnostic_threshold`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -15132,7 +15157,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 514. False Mountain: `rare_earth_dependency`
+### 515. False Mountain: `rare_earth_dependency`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -15162,7 +15187,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 515. False Mountain: `rare_earth_export_restrictions`
+### 516. False Mountain: `rare_earth_export_restrictions`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -15192,7 +15217,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 516. False Mountain: `rare_earth_hydrogen_extraction`
+### 517. False Mountain: `rare_earth_hydrogen_extraction`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -15222,7 +15247,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 517. False Mountain: `rare_earth_seabed_mining`
+### 518. False Mountain: `rare_earth_seabed_mining`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -15252,7 +15277,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 518. False Mountain: `rational_inertia_trap`
+### 519. False Mountain: `rational_inertia_trap`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -15282,7 +15307,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 519. False Mountain: `recipe_scaling_ai`
+### 520. False Mountain: `recipe_scaling_ai`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[scaffold, unknown]`
@@ -15312,7 +15337,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 520. False Mountain: `regional_military_deterrence_mideast`
+### 521. False Mountain: `regional_military_deterrence_mideast`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -15342,7 +15367,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 521. False Mountain: `regulatory_capture`
+### 522. False Mountain: `regulatory_capture`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, unknown]`
@@ -15372,7 +15397,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 522. False Mountain: `rent_seeking_equilibrium`
+### 523. False Mountain: `rent_seeking_equilibrium`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -15402,7 +15427,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 523. False Mountain: `repair_probe_incomplete`
+### 524. False Mountain: `repair_probe_incomplete`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, unknown]`
@@ -15432,7 +15457,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 524. False Mountain: `reputational_cascade_failure`
+### 525. False Mountain: `reputational_cascade_failure`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -15462,7 +15487,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 525. False Mountain: `responsibility_dilution`
+### 526. False Mountain: `responsibility_dilution`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -15492,7 +15517,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 526. False Mountain: `responsibility_without_power`
+### 527. False Mountain: `responsibility_without_power`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -15522,7 +15547,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 527. False Mountain: `rfc9293_interoperability`
+### 528. False Mountain: `rfc9293_interoperability`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, unknown]`
@@ -15552,7 +15577,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 528. False Mountain: `riot_incentive_loop_2026`
+### 529. False Mountain: `riot_incentive_loop_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -15582,7 +15607,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 529. False Mountain: `risk_socialization_threshold`
+### 530. False Mountain: `risk_socialization_threshold`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -15612,7 +15637,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 530. False Mountain: `ritual_without_belief`
+### 531. False Mountain: `ritual_without_belief`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -15642,7 +15667,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 531. False Mountain: `robustness_vs_efficiency_tradeoff`
+### 532. False Mountain: `robustness_vs_efficiency_tradeoff`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -15672,7 +15697,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 532. False Mountain: `rotation_seven_black_soil`
+### 533. False Mountain: `rotation_seven_black_soil`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, unknown]`
@@ -15702,7 +15727,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 533. False Mountain: `rotation_seven_isolation`
+### 534. False Mountain: `rotation_seven_isolation`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -15732,7 +15757,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 534. False Mountain: `rotation_seven_kubo_ranking`
+### 535. False Mountain: `rotation_seven_kubo_ranking`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -15762,7 +15787,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 535. False Mountain: `royal_navy_middle_east_withdrawal`
+### 536. False Mountain: `royal_navy_middle_east_withdrawal`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope, unknown]`
@@ -15792,7 +15817,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 536. False Mountain: `rule_update_failure`
+### 537. False Mountain: `rule_update_failure`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope, unknown]`
@@ -15822,7 +15847,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 537. False Mountain: `rules_based_international_order`
+### 538. False Mountain: `rules_based_international_order`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -15852,7 +15877,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 538. False Mountain: `russells_paradox_self_reference`
+### 539. False Mountain: `russells_paradox_self_reference`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[scaffold, unknown]`
@@ -15882,7 +15907,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 539. False Mountain: `russian_war_cannibalization`
+### 540. False Mountain: `russian_war_cannibalization`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -15912,7 +15937,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 540. False Mountain: `s1_airbnb`
+### 541. False Mountain: `s1_airbnb`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -15942,7 +15967,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 541. False Mountain: `sa_renewable_price_differential`
+### 542. False Mountain: `sa_renewable_price_differential`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -15972,7 +15997,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 542. False Mountain: `sapir_whorf_hypothesis`
+### 543. False Mountain: `sapir_whorf_hypothesis`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -16002,7 +16027,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 543. False Mountain: `sat_csp_complexity`
+### 544. False Mountain: `sat_csp_complexity`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -16032,7 +16057,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 544. False Mountain: `scam_compound_grey_zone_2026`
+### 545. False Mountain: `scam_compound_grey_zone_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -16062,7 +16087,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 545. False Mountain: `scurvy_maritime_extraction`
+### 546. False Mountain: `scurvy_maritime_extraction`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -16092,7 +16117,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 546. False Mountain: `second_order_unintended_consequences`
+### 547. False Mountain: `second_order_unintended_consequences`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -16122,7 +16147,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 547. False Mountain: `semantic_attack_surface`
+### 548. False Mountain: `semantic_attack_surface`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -16152,7 +16177,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 548. False Mountain: `semantic_overload_friction`
+### 549. False Mountain: `semantic_overload_friction`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -16182,7 +16207,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 549. False Mountain: `semiconductor_fabrication_chokepoint`
+### 550. False Mountain: `semiconductor_fabrication_chokepoint`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[indexically_opaque, rope, snare, tangled_rope]`
@@ -16212,7 +16237,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 550. False Mountain: `semiconductor_mission_2026`
+### 551. False Mountain: `semiconductor_mission_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -16242,7 +16267,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 551. False Mountain: `shadow_fleet_sanctions_evasion`
+### 552. False Mountain: `shadow_fleet_sanctions_evasion`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -16272,7 +16297,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 552. False Mountain: `shadow_pricing_failure`
+### 553. False Mountain: `shadow_pricing_failure`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -16302,7 +16327,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 553. False Mountain: `shield_east_fortification`
+### 554. False Mountain: `shield_east_fortification`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[indexically_opaque, rope, tangled_rope]`
@@ -16332,7 +16357,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 554. False Mountain: `shobies_existential_commitment`
+### 555. False Mountain: `shobies_existential_commitment`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -16362,7 +16387,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 555. False Mountain: `shock_propagation_asymmetry`
+### 556. False Mountain: `shock_propagation_asymmetry`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -16392,7 +16417,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 556. False Mountain: `signal_without_control`
+### 557. False Mountain: `signal_without_control`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -16422,7 +16447,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 557. False Mountain: `silent_dependency_activation`
+### 558. False Mountain: `silent_dependency_activation`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -16452,7 +16477,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 558. False Mountain: `silicon_lexicon_overload`
+### 559. False Mountain: `silicon_lexicon_overload`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -16482,7 +16507,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 559. False Mountain: `sk_ai_act_2026`
+### 560. False Mountain: `sk_ai_act_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -16512,7 +16537,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 560. False Mountain: `sleep_debt_externality`
+### 561. False Mountain: `sleep_debt_externality`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -16542,7 +16567,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 561. False Mountain: `slow_crisis_invisibility`
+### 562. False Mountain: `slow_crisis_invisibility`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -16572,7 +16597,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 562. False Mountain: `sludge_bureaucratic_friction`
+### 563. False Mountain: `sludge_bureaucratic_friction`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -16602,7 +16627,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 563. False Mountain: `sm_addictive_design`
+### 564. False Mountain: `sm_addictive_design`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -16632,7 +16657,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 564. False Mountain: `smartphone_ubiquity`
+### 565. False Mountain: `smartphone_ubiquity`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope, unknown]`
@@ -16662,7 +16687,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 565. False Mountain: `social_credit_architecture`
+### 566. False Mountain: `social_credit_architecture`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -16692,7 +16717,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 566. False Mountain: `social_loafing`
+### 567. False Mountain: `social_loafing`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -16722,7 +16747,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 567. False Mountain: `social_media_participation_threshold`
+### 568. False Mountain: `social_media_participation_threshold`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -16752,7 +16777,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 568. False Mountain: `social_narrative_casting`
+### 569. False Mountain: `social_narrative_casting`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -16775,7 +16800,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 569. False Mountain: `soe_property_bailout`
+### 570. False Mountain: `soe_property_bailout`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -16805,7 +16830,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 570. False Mountain: `soft_authoritarian_drift`
+### 571. False Mountain: `soft_authoritarian_drift`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -16835,7 +16860,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 571. False Mountain: `somatic_focusing_awareness`
+### 572. False Mountain: `somatic_focusing_awareness`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, unknown]`
@@ -16865,7 +16890,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 572. False Mountain: `sorites_paradox`
+### 573. False Mountain: `sorites_paradox`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -16895,7 +16920,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 573. False Mountain: `south_china_sea_arbitration_2016_2026`
+### 574. False Mountain: `south_china_sea_arbitration_2016_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -16925,7 +16950,30 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 574. False Mountain: `spain_digital_offensive_2026`
+### 575. False Mountain: `sovereignty_as_arbitrage`
+
+*   **Severity:** `critical`
+*   **Orbit Signature:** `[rope, tangled_rope]`
+*   **Gap Detected:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
+*   **Perspectival Mismatch:**
+    *   **Powerless View:** `snare`
+    *   **Institutional View:** `rope`
+*   **Generated Omega:** omega_extraction_blindness_sovereignty_as_arbitrage (conceptual)
+*   **Suggested Resolution Strategy:**
+    ```
+1. Design measurement protocol for unknown
+2. Collect data from N=30+ real-world instances
+3. Calculate empirical metrics:
+- suppression_requirement (enforcement needed)
+- resistance_to_change (pushback level)
+- base_extractiveness (asymmetric benefit flow)
+4. Update constraint_metric/3 declarations with data
+5. Re-run classification to resolve perspectival gap
+    ```
+
+---
+
+### 576. False Mountain: `spain_digital_offensive_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -16955,7 +17003,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 575. False Mountain: `st_petersburg_paradox`
+### 577. False Mountain: `st_petersburg_paradox`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -16985,7 +17033,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 576. False Mountain: `start_treaty`
+### 578. False Mountain: `start_treaty`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -17015,7 +17063,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 577. False Mountain: `statecraft_virtu`
+### 579. False Mountain: `statecraft_virtu`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -17045,7 +17093,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 578. False Mountain: `status_flattening_effect`
+### 580. False Mountain: `status_flattening_effect`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -17068,7 +17116,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 579. False Mountain: `sti_clinical_testing_bottleneck`
+### 581. False Mountain: `sti_clinical_testing_bottleneck`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -17098,7 +17146,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 580. False Mountain: `straight_coercion_2025`
+### 582. False Mountain: `straight_coercion_2025`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -17128,7 +17176,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 581. False Mountain: `strange_attractor_dynamics`
+### 583. False Mountain: `strange_attractor_dynamics`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -17158,7 +17206,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 582. False Mountain: `strange_attractors`
+### 584. False Mountain: `strange_attractors`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -17188,7 +17236,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 583. False Mountain: `strategic_deep_sea_rare_earth_mining`
+### 585. False Mountain: `strategic_deep_sea_rare_earth_mining`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -17218,7 +17266,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 584. False Mountain: `streaming_bundling_mandate`
+### 586. False Mountain: `streaming_bundling_mandate`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -17248,7 +17296,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 585. False Mountain: `structural_extraction_without_actor`
+### 587. False Mountain: `structural_extraction_without_actor`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -17278,7 +17326,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 586. False Mountain: `student_loan_default_cliff`
+### 588. False Mountain: `student_loan_default_cliff`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -17308,7 +17356,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 587. False Mountain: `student_loan_interest_accrual`
+### 589. False Mountain: `student_loan_interest_accrual`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -17338,7 +17386,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 588. False Mountain: `suanne_coup_of_peace`
+### 590. False Mountain: `suanne_coup_of_peace`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -17368,7 +17416,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 589. False Mountain: `suanne_face_restoration`
+### 591. False Mountain: `suanne_face_restoration`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -17398,7 +17446,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 590. False Mountain: `sunk_cost_fallacy`
+### 592. False Mountain: `sunk_cost_fallacy`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -17428,7 +17476,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 591. False Mountain: `superbowl_advertising_extraction`
+### 593. False Mountain: `superbowl_advertising_extraction`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -17457,7 +17505,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 592. False Mountain: `swift_legacy_piton`
+### 594. False Mountain: `swift_legacy_piton`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -17487,7 +17535,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 593. False Mountain: `synthetic_data_feedback_loop`
+### 595. False Mountain: `synthetic_data_feedback_loop`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -17517,7 +17565,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 594. False Mountain: `systemic_blindspot`
+### 596. False Mountain: `systemic_blindspot`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -17547,7 +17595,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 595. False Mountain: `tail_risk_compression`
+### 597. False Mountain: `tail_risk_compression`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -17577,7 +17625,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 596. False Mountain: `taiwan_existential_sovereignty`
+### 598. False Mountain: `taiwan_existential_sovereignty`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -17607,7 +17655,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 597. False Mountain: `taiwan_grand_bargain`
+### 599. False Mountain: `taiwan_grand_bargain`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -17637,7 +17685,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 598. False Mountain: `taiwan_storm_2026`
+### 600. False Mountain: `taiwan_storm_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -17667,7 +17715,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 599. False Mountain: `taiwan_university_application_system`
+### 601. False Mountain: `taiwan_university_application_system`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -17697,7 +17745,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 600. False Mountain: `taliban_slavery_law_2024`
+### 602. False Mountain: `taliban_slavery_law_2024`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -17727,7 +17775,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 601. False Mountain: `taxonomy_drift`
+### 603. False Mountain: `taxonomy_drift`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -17757,7 +17805,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 602. False Mountain: `teaching_horses_to_sing`
+### 604. False Mountain: `teaching_horses_to_sing`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope, unknown]`
@@ -17787,7 +17835,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 603. False Mountain: `tear_gas_repression_2026`
+### 605. False Mountain: `tear_gas_repression_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -17817,7 +17865,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 604. False Mountain: `technocratic_overreach`
+### 606. False Mountain: `technocratic_overreach`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -17847,7 +17895,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 605. False Mountain: `temporal_scale_arbitrage`
+### 607. False Mountain: `temporal_scale_arbitrage`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope, unknown]`
@@ -17877,7 +17925,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 606. False Mountain: `texas_hispanic_political_pivot`
+### 608. False Mountain: `texas_hispanic_political_pivot`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -17907,7 +17955,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 607. False Mountain: `texas_insurance_market_instability`
+### 609. False Mountain: `texas_insurance_market_instability`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -17937,7 +17985,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 608. False Mountain: `thai_senate_veto_2026`
+### 610. False Mountain: `thai_senate_veto_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -17967,7 +18015,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 609. False Mountain: `the_bacchae_madness_protocol`
+### 611. False Mountain: `the_bacchae_madness_protocol`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -17997,7 +18045,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 610. False Mountain: `the_calm_protocol_suppression`
+### 612. False Mountain: `the_calm_protocol_suppression`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -18027,7 +18075,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 611. False Mountain: `the_churn_systemic_upheaval`
+### 613. False Mountain: `the_churn_systemic_upheaval`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -18057,7 +18105,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 612. False Mountain: `theory_of_visitors`
+### 614. False Mountain: `theory_of_visitors`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -18087,7 +18135,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 613. False Mountain: `tiktok_us_divestiture_mandate`
+### 615. False Mountain: `tiktok_us_divestiture_mandate`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -18117,7 +18165,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 614. False Mountain: `toxic_social_infection`
+### 616. False Mountain: `toxic_social_infection`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -18147,7 +18195,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 615. False Mountain: `toxoplasma_hub_2026`
+### 617. False Mountain: `toxoplasma_hub_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[scaffold, snare]`
@@ -18177,7 +18225,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 616. False Mountain: `tractarian_logic_limit`
+### 618. False Mountain: `tractarian_logic_limit`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -18207,7 +18255,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 617. False Mountain: `trade_secret_law`
+### 619. False Mountain: `trade_secret_law`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -18230,7 +18278,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 618. False Mountain: `tragedy_of_the_commons`
+### 620. False Mountain: `tragedy_of_the_commons`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope, unknown]`
@@ -18260,7 +18308,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 619. False Mountain: `transformer_self_attention`
+### 621. False Mountain: `transformer_self_attention`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope, unknown]`
@@ -18290,7 +18338,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 620. False Mountain: `traveling_salesman_problem`
+### 622. False Mountain: `traveling_salesman_problem`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -18320,7 +18368,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 621. False Mountain: `traveling_salesperson_problem`
+### 623. False Mountain: `traveling_salesperson_problem`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -18350,7 +18398,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 622. False Mountain: `trillion_bond_rush_2026`
+### 624. False Mountain: `trillion_bond_rush_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[scaffold, unknown]`
@@ -18380,7 +18428,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 623. False Mountain: `trump_critical_minerals`
+### 625. False Mountain: `trump_critical_minerals`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -18410,7 +18458,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 624. False Mountain: `trump_epa_greenhouse_gas_reversal`
+### 626. False Mountain: `trump_epa_greenhouse_gas_reversal`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[indexically_opaque, snare, tangled_rope]`
@@ -18440,7 +18488,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 625. False Mountain: `trump_indian_tariffs_2026`
+### 627. False Mountain: `trump_indian_tariffs_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -18470,7 +18518,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 626. False Mountain: `trump_making_china_great_2026`
+### 628. False Mountain: `trump_making_china_great_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -18500,7 +18548,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 627. False Mountain: `trumps_second_term_authoritarianism_2026`
+### 629. False Mountain: `trumps_second_term_authoritarianism_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -18530,7 +18578,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 628. False Mountain: `ua_mobilization_protector_cert`
+### 630. False Mountain: `ua_mobilization_protector_cert`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -18560,7 +18608,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 629. False Mountain: `ua_wartime_mobilization`
+### 631. False Mountain: `ua_wartime_mobilization`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -18590,7 +18638,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 630. False Mountain: `uk_graduate_visa_salary_threshold`
+### 632. False Mountain: `uk_graduate_visa_salary_threshold`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -18620,7 +18668,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 631. False Mountain: `uk_help_to_buy_scheme`
+### 633. False Mountain: `uk_help_to_buy_scheme`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -18650,7 +18698,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 632. False Mountain: `uk_hicbc_trap`
+### 634. False Mountain: `uk_hicbc_trap`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -18680,7 +18728,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 633. False Mountain: `uk_necc_formation`
+### 635. False Mountain: `uk_necc_formation`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -18710,7 +18758,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 634. False Mountain: `uk_unpaid_care_system`
+### 636. False Mountain: `uk_unpaid_care_system`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -18740,7 +18788,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 635. False Mountain: `ukr_mobilization`
+### 637. False Mountain: `ukr_mobilization`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -18770,7 +18818,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 636. False Mountain: `ukraine_tight_gas_pilot`
+### 638. False Mountain: `ukraine_tight_gas_pilot`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -18800,7 +18848,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 637. False Mountain: `ulysses_chp01`
+### 639. False Mountain: `ulysses_chp01`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -18830,7 +18878,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 638. False Mountain: `ulysses_chp02`
+### 640. False Mountain: `ulysses_chp02`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -18860,7 +18908,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 639. False Mountain: `ulysses_chp04`
+### 641. False Mountain: `ulysses_chp04`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -18890,7 +18938,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 640. False Mountain: `ulysses_chp05`
+### 642. False Mountain: `ulysses_chp05`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -18920,7 +18968,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 641. False Mountain: `ulysses_chp07`
+### 643. False Mountain: `ulysses_chp07`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -18950,7 +18998,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 642. False Mountain: `ulysses_chp08`
+### 644. False Mountain: `ulysses_chp08`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -18980,7 +19028,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 643. False Mountain: `ulysses_chp09`
+### 645. False Mountain: `ulysses_chp09`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -19010,7 +19058,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 644. False Mountain: `ulysses_chp10`
+### 646. False Mountain: `ulysses_chp10`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -19040,7 +19088,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 645. False Mountain: `ulysses_chp11`
+### 647. False Mountain: `ulysses_chp11`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -19070,7 +19118,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 646. False Mountain: `ulysses_chp12`
+### 648. False Mountain: `ulysses_chp12`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -19100,7 +19148,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 647. False Mountain: `ulysses_chp13`
+### 649. False Mountain: `ulysses_chp13`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -19130,7 +19178,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 648. False Mountain: `ulysses_chp16`
+### 650. False Mountain: `ulysses_chp16`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -19160,7 +19208,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 649. False Mountain: `ulysses_chp17`
+### 651. False Mountain: `ulysses_chp17`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -19190,7 +19238,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 650. False Mountain: `un_high_seas_treaty_2026`
+### 652. False Mountain: `un_high_seas_treaty_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -19220,7 +19268,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 651. False Mountain: `union_protection_underperformance`
+### 653. False Mountain: `union_protection_underperformance`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -19250,7 +19298,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 652. False Mountain: `unrequited_love_protocol`
+### 654. False Mountain: `unrequited_love_protocol`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[scaffold, snare]`
@@ -19273,7 +19321,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 653. False Mountain: `unrwa_eviction_order`
+### 655. False Mountain: `unrwa_eviction_order`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -19303,7 +19351,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 654. False Mountain: `us_arms_transfer_policy`
+### 656. False Mountain: `us_arms_transfer_policy`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -19333,7 +19381,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 655. False Mountain: `us_china_chip_tariffs_v2`
+### 657. False Mountain: `us_china_chip_tariffs_v2`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -19363,7 +19411,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 656. False Mountain: `us_debt_ceiling`
+### 658. False Mountain: `us_debt_ceiling`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -19393,7 +19441,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 657. False Mountain: `us_employer_health_insurance`
+### 659. False Mountain: `us_employer_health_insurance`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -19423,7 +19471,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 658. False Mountain: `us_greenland_envoy`
+### 660. False Mountain: `us_greenland_envoy`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -19453,7 +19501,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 659. False Mountain: `us_iran_drone_conflict`
+### 661. False Mountain: `us_iran_drone_conflict`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -19483,7 +19531,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 660. False Mountain: `us_isolationism_policy_2026`
+### 662. False Mountain: `us_isolationism_policy_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -19513,7 +19561,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 661. False Mountain: `us_israel_faa_502b_nonenforcement`
+### 663. False Mountain: `us_israel_faa_502b_nonenforcement`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -19543,7 +19591,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 662. False Mountain: `us_labor_mobility`
+### 664. False Mountain: `us_labor_mobility`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -19573,7 +19621,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 663. False Mountain: `us_legal_standard_reasonable_doubt`
+### 665. False Mountain: `us_legal_standard_reasonable_doubt`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -19603,7 +19651,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 664. False Mountain: `us_sanctions_icc_israel_case`
+### 666. False Mountain: `us_sanctions_icc_israel_case`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -19633,7 +19681,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 665. False Mountain: `us_sdf_alliance_abandonment_2026`
+### 667. False Mountain: `us_sdf_alliance_abandonment_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -19663,7 +19711,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 666. False Mountain: `us_suburban_zoning_2025`
+### 668. False Mountain: `us_suburban_zoning_2025`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -19693,7 +19741,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 667. False Mountain: `us_taiwan_arms_sales`
+### 669. False Mountain: `us_taiwan_arms_sales`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -19723,7 +19771,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 668. False Mountain: `us_tariffs_2025`
+### 670. False Mountain: `us_tariffs_2025`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -19753,7 +19801,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 669. False Mountain: `us_two_party_duopoly`
+### 671. False Mountain: `us_two_party_duopoly`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -19783,7 +19831,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 670. False Mountain: `us_usmca_china_leverage`
+### 672. False Mountain: `us_usmca_china_leverage`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[indexically_opaque, rope, snare, tangled_rope]`
@@ -19813,7 +19861,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 671. False Mountain: `us_vaccine_recommendation_dismantling_2026`
+### 673. False Mountain: `us_vaccine_recommendation_dismantling_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -19843,7 +19891,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 672. False Mountain: `us_venezuela_blockade`
+### 674. False Mountain: `us_venezuela_blockade`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -19873,7 +19921,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 673. False Mountain: `us_venezuela_oil_pressure`
+### 675. False Mountain: `us_venezuela_oil_pressure`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -19903,7 +19951,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 674. False Mountain: `us_venezuela_plausible_deniability_2025`
+### 676. False Mountain: `us_venezuela_plausible_deniability_2025`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -19933,7 +19981,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 675. False Mountain: `us_visa_lottery`
+### 677. False Mountain: `us_visa_lottery`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -19963,7 +20011,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 676. False Mountain: `usc_26_469_passive_loss`
+### 678. False Mountain: `usc_26_469_passive_loss`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -19993,7 +20041,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 677. False Mountain: `utopia_apocalypse_fragility`
+### 679. False Mountain: `utopia_apocalypse_fragility`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -20023,7 +20071,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 678. False Mountain: `value_alignment_drift`
+### 680. False Mountain: `value_alignment_drift`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -20053,7 +20101,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 679. False Mountain: `value_extraction_plateau`
+### 681. False Mountain: `value_extraction_plateau`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -20083,7 +20131,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 680. False Mountain: `venezuela_oil_privatization_v1`
+### 682. False Mountain: `venezuela_oil_privatization_v1`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -20113,7 +20161,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 681. False Mountain: `vienna_quantum_superposition_2026`
+### 683. False Mountain: `vienna_quantum_superposition_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -20143,7 +20191,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 682. False Mountain: `viral_transmission_rates`
+### 684. False Mountain: `viral_transmission_rates`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -20173,7 +20221,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 683. False Mountain: `visibility_bias_governance`
+### 685. False Mountain: `visibility_bias_governance`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -20203,7 +20251,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 684. False Mountain: `vns_implant_for_trd`
+### 686. False Mountain: `vns_implant_for_trd`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -20233,7 +20281,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 685. False Mountain: `wikipedia_crowdsourcing_2026`
+### 687. False Mountain: `wikipedia_crowdsourcing_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope]`
@@ -20256,7 +20304,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 686. False Mountain: `wikipedia_notability_requirement_2026`
+### 688. False Mountain: `wikipedia_notability_requirement_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -20286,7 +20334,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 687. False Mountain: `winners_curse`
+### 689. False Mountain: `winners_curse`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -20309,7 +20357,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 688. False Mountain: `world_factbook_sunset_2026`
+### 690. False Mountain: `world_factbook_sunset_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -20339,7 +20387,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 689. False Mountain: `wpl_scotland`
+### 691. False Mountain: `wpl_scotland`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -20369,7 +20417,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 690. False Mountain: `xi_mao_ideological_centralization`
+### 692. False Mountain: `xi_mao_ideological_centralization`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -20399,7 +20447,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 691. False Mountain: `y_combinator`
+### 693. False Mountain: `y_combinator`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -20429,7 +20477,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 692. False Mountain: `yangtze_fishing_ban`
+### 694. False Mountain: `yangtze_fishing_ban`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -20459,7 +20507,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 693. False Mountain: `yoneda_lemma`
+### 695. False Mountain: `yoneda_lemma`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -20482,7 +20530,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 694. False Mountain: `yt_ai_slop_incentive`
+### 696. False Mountain: `yt_ai_slop_incentive`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -20512,7 +20560,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 695. False Mountain: `zipfs_law`
+### 697. False Mountain: `zipfs_law`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -20542,7 +20590,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 696. False Mountain: `zombie_reasoning_2026`
+### 698. False Mountain: `zombie_reasoning_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -20572,7 +20620,7 @@ IF context-dependent → Add indexical resolution
 
 ---
 
-### 697. False Mountain: `ai_task_horizon_reliability`
+### 699. False Mountain: `ai_task_horizon_reliability`
 
 *   **Severity:** `high`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -20601,7 +20649,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 698. False Mountain: `authoritarian_power_paradox`
+### 700. False Mountain: `authoritarian_power_paradox`
 
 *   **Severity:** `high`
 *   **Orbit Signature:** `[rope, snare]`
@@ -20624,7 +20672,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 699. False Mountain: `axiom_of_choice_determinacy`
+### 701. False Mountain: `axiom_of_choice_determinacy`
 
 *   **Severity:** `high`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -20653,7 +20701,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 700. False Mountain: `bay_of_pigs_operational_silo`
+### 702. False Mountain: `bay_of_pigs_operational_silo`
 
 *   **Severity:** `high`
 *   **Orbit Signature:** `[rope, snare]`
@@ -20682,7 +20730,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 701. False Mountain: `canada_goose_realignment_2026`
+### 703. False Mountain: `canada_goose_realignment_2026`
 
 *   **Severity:** `high`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -20711,7 +20759,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 702. False Mountain: `china_taiwan_reunification_mandate`
+### 704. False Mountain: `china_taiwan_reunification_mandate`
 
 *   **Severity:** `high`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -20740,7 +20788,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 703. False Mountain: `click_chemistry_paradigm_2026`
+### 705. False Mountain: `click_chemistry_paradigm_2026`
 
 *   **Severity:** `high`
 *   **Orbit Signature:** `[mountain, scaffold]`
@@ -20763,7 +20811,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 704. False Mountain: `climate_attribution_2026`
+### 706. False Mountain: `climate_attribution_2026`
 
 *   **Severity:** `high`
 *   **Orbit Signature:** `[mountain, scaffold]`
@@ -20786,7 +20834,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 705. False Mountain: `copyright_protection`
+### 707. False Mountain: `copyright_protection`
 
 *   **Severity:** `high`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -20809,7 +20857,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 706. False Mountain: `damped_harmonics`
+### 708. False Mountain: `damped_harmonics`
 
 *   **Severity:** `high`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -20838,36 +20886,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 707. False Mountain: `deferential_realism_core`
-
-*   **Severity:** `high`
-*   **Orbit Signature:** `[rope, unknown]`
-*   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
-*   **Perspectival Mismatch:**
-    *   **Powerless View:** `mountain`
-    *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_cut_safety_deferential_realism_framework (conceptual)
-*   **Suggested Resolution Strategy:**
-    ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut deferential_realism_framework, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
-    ```
-
----
-
-### 708. False Mountain: `dunbars_number`
+### 709. False Mountain: `dunbars_number`
 
 *   **Severity:** `high`
 *   **Orbit Signature:** `[mountain]`
@@ -20896,7 +20915,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 709. False Mountain: `epigenetics_complexity_2026`
+### 710. False Mountain: `epigenetics_complexity_2026`
 
 *   **Severity:** `high`
 *   **Orbit Signature:** `[mountain]`
@@ -20919,7 +20938,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 710. False Mountain: `faint_blue_neural_bifurcation`
+### 711. False Mountain: `faint_blue_neural_bifurcation`
 
 *   **Severity:** `high`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -20948,7 +20967,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 711. False Mountain: `frankenstein_creation_hubris`
+### 712. False Mountain: `frankenstein_creation_hubris`
 
 *   **Severity:** `high`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -20977,7 +20996,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 712. False Mountain: `galois_theory_symmetry`
+### 713. False Mountain: `galois_theory_symmetry`
 
 *   **Severity:** `high`
 *   **Orbit Signature:** `[mountain, scaffold]`
@@ -21000,7 +21019,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 713. False Mountain: `germline_regulation_threshold_2026`
+### 714. False Mountain: `germline_regulation_threshold_2026`
 
 *   **Severity:** `high`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -21029,7 +21048,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 714. False Mountain: `gilgamesh_mortality_limit`
+### 715. False Mountain: `gilgamesh_mortality_limit`
 
 *   **Severity:** `high`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -21058,7 +21077,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 715. False Mountain: `global_hoarding_scaling_laws`
+### 716. False Mountain: `global_hoarding_scaling_laws`
 
 *   **Severity:** `high`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -21087,7 +21106,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 716. False Mountain: `global_protocol_entrenchment`
+### 717. False Mountain: `global_protocol_entrenchment`
 
 *   **Severity:** `high`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -21116,7 +21135,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 717. False Mountain: `glp1_payload_efficiency_pivot`
+### 718. False Mountain: `glp1_payload_efficiency_pivot`
 
 *   **Severity:** `high`
 *   **Orbit Signature:** `[scaffold, unknown]`
@@ -21145,7 +21164,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 718. False Mountain: `golden_handcuffs`
+### 719. False Mountain: `golden_handcuffs`
 
 *   **Severity:** `high`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -21174,7 +21193,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 719. False Mountain: `gs1_gln_identification`
+### 720. False Mountain: `gs1_gln_identification`
 
 *   **Severity:** `high`
 *   **Orbit Signature:** `[rope, tangled_rope, unknown]`
@@ -21203,7 +21222,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 720. False Mountain: `gs1_standardized_identification`
+### 721. False Mountain: `gs1_standardized_identification`
 
 *   **Severity:** `high`
 *   **Orbit Signature:** `[rope, unknown]`
@@ -21232,7 +21251,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 721. False Mountain: `hamiltonian_path_complexity`
+### 722. False Mountain: `hamiltonian_path_complexity`
 
 *   **Severity:** `high`
 *   **Orbit Signature:** `[mountain]`
@@ -21261,7 +21280,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 722. False Mountain: `happiness_of_others`
+### 723. False Mountain: `happiness_of_others`
 
 *   **Severity:** `high`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -21290,7 +21309,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 723. False Mountain: `heuristic_optimization`
+### 724. False Mountain: `heuristic_optimization`
 
 *   **Severity:** `high`
 *   **Orbit Signature:** `[mountain, scaffold]`
@@ -21315,7 +21334,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 724. False Mountain: `hilberts_hotel_infinity`
+### 725. False Mountain: `hilberts_hotel_infinity`
 
 *   **Severity:** `high`
 *   **Orbit Signature:** `[mountain, scaffold]`
@@ -21340,7 +21359,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 725. False Mountain: `ice_memory_archive`
+### 726. False Mountain: `ice_memory_archive`
 
 *   **Severity:** `high`
 *   **Orbit Signature:** `[rope]`
@@ -21369,7 +21388,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 726. False Mountain: `inner_model_theory_constraints`
+### 727. False Mountain: `inner_model_theory_constraints`
 
 *   **Severity:** `high`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -21398,7 +21417,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 727. False Mountain: `juvenile_underclass_2026`
+### 728. False Mountain: `juvenile_underclass_2026`
 
 *   **Severity:** `high`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -21427,7 +21446,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 728. False Mountain: `keltner_relationship_evaluation`
+### 729. False Mountain: `keltner_relationship_evaluation`
 
 *   **Severity:** `N/A`
 *   **Orbit Signature:** `[rope, tangled_rope, unknown]`
@@ -21443,7 +21462,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 729. False Mountain: `kjv_puritan_new_world_exit`
+### 730. False Mountain: `kjv_puritan_new_world_exit`
 
 *   **Severity:** `high`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -21468,7 +21487,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 730. False Mountain: `knowledge_action_gap`
+### 731. False Mountain: `knowledge_action_gap`
 
 *   **Severity:** `high`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -21497,7 +21516,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 731. False Mountain: `large_cardinals_foundations`
+### 732. False Mountain: `large_cardinals_foundations`
 
 *   **Severity:** `high`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -21526,7 +21545,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 732. False Mountain: `legacy_system_technical_debt`
+### 733. False Mountain: `legacy_system_technical_debt`
 
 *   **Severity:** `high`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -21555,7 +21574,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 733. False Mountain: `lln_convergence`
+### 734. False Mountain: `lln_convergence`
 
 *   **Severity:** `high`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -21584,7 +21603,7 @@ IF uncertainty → HALT changes until resolved
 
 ---
 
-### 734. False Mountain: `manganese_catalysis_2026`
+### 735. False Mountain: `manganese_catalysis_2026`
 
 *   **Severity:** `high`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -21597,35 +21616,6 @@ IF uncertainty → HALT changes until resolved
     ```
 1. SAFETY ASSESSMENT (DO NOT SKIP):
 - If institutions cut manganese_catalysis_2026, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
-    ```
-
----
-
-### 735. False Mountain: `mars_rovers_navigational_autonomy`
-
-*   **Severity:** `high`
-*   **Orbit Signature:** `[rope, tangled_rope]`
-*   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
-*   **Perspectival Mismatch:**
-    *   **Powerless View:** `mountain`
-    *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_cut_safety_mars_rover_navigational_autonomy (conceptual)
-*   **Suggested Resolution Strategy:**
-    ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut mars_rover_navigational_autonomy, do individuals have alternatives?
 - Is this their only survival mechanism?
 - What scaffolding exists for transition?
 2. Test institutional perception:
@@ -22381,7 +22371,7 @@ IF uncertainty → HALT changes until resolved
 ### 762. False Mountain: `udhr_1946`
 
 *   **Severity:** `high`
-*   **Orbit Signature:** `[rope]`
+*   **Orbit Signature:** `[tangled_rope]`
 *   **Gap Detected:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Perspectival Mismatch:**
     *   **Powerless View:** `mountain`
@@ -22389,20 +22379,14 @@ IF uncertainty → HALT changes until resolved
 *   **Generated Omega:** omega_cut_safety_udhr_1948 (conceptual)
 *   **Suggested Resolution Strategy:**
     ```
-1. SAFETY ASSESSMENT (DO NOT SKIP):
-- If institutions cut udhr_1948, do individuals have alternatives?
-- Is this their only survival mechanism?
-- What scaffolding exists for transition?
-2. Test institutional perception:
-- Can institutions unilaterally change this?
-- Do they understand downstream impacts?
-- Is their "optional" view empirically accurate?
-3. Decision tree:
-IF truly unchangeable → Correct institutional view to MOUNTAIN
-IF changeable + safe alternatives → Correct powerless view to ROPE
-IF changeable + NO alternatives → ADD SCAFFOLD before any change
-IF uncertainty → HALT changes until resolved
-4. CRITICAL: Never proceed with changes until safety verified
+1. Design measurement protocol for unknown
+2. Collect data from N=30+ real-world instances
+3. Calculate empirical metrics:
+- suppression_requirement (enforcement needed)
+- resistance_to_change (pushback level)
+- base_extractiveness (asymmetric benefit flow)
+4. Update constraint_metric/3 declarations with data
+5. Re-run classification to resolve perspectival gap
     ```
 
 ---

@@ -80,7 +80,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.47
 
 ### END REFINEMENT MANIFEST ###
 
-[43] EXECUTING: testsets/altruistic_misery_paradox_2026.pl
+[44] EXECUTING: testsets/altruistic_misery_paradox_2026.pl
 *   **Orbit Signature:** `[tangled_rope]`
 *   **Generated Omega:** omega_perspectival_alternative_sovereignty_scaffold (conceptual)
 *   **Suggested Resolution Strategy:**
@@ -185,7 +185,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.54
 
 ### END REFINEMENT MANIFEST ###
 
-[61] EXECUTING: testsets/artificial_snow_2026.pl
+[62] EXECUTING: testsets/artificial_snow_2026.pl
 *   **Orbit Signature:** `[scaffold, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** omega_extraction_blindness_artificial_scarcity_scaffold (conceptual)
@@ -252,7 +252,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.46
 
 ### END REFINEMENT MANIFEST ###
 
-[64] EXECUTING: testsets/asshole_filter_2015.pl
+[65] EXECUTING: testsets/asshole_filter_2015.pl
 *   **Orbit Signature:** `[rope]`
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
@@ -341,7 +341,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.44
 
 ### END REFINEMENT MANIFEST ###
 
-[126] EXECUTING: testsets/canal_panama_influence.pl
+[128] EXECUTING: testsets/canal_panama_influence.pl
 *   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Generated Omega:** omega_cut_safety_canada_goose_realignment_2026 (conceptual)
@@ -455,7 +455,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.57
 
 ### END REFINEMENT MANIFEST ###
 
-[160] EXECUTING: testsets/circadian_decoupling_arbitrage.pl
+[163] EXECUTING: testsets/circadian_decoupling_arbitrage.pl
 *   **Orbit Signature:** `[rope]`
 *   **Generated Omega:** omega_perspectival_cinderella_midnight_deadline (conceptual)
 *   **Suggested Resolution Strategy:**
@@ -560,7 +560,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.48
 
 ### END REFINEMENT MANIFEST ###
 
-[178] EXECUTING: testsets/cognac_geopolitical_risk.pl
+[182] EXECUTING: testsets/cognac_geopolitical_risk.pl
 *   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** omega_extraction_blindness_coffee_cardiovascular_2026 (conceptual)
@@ -661,7 +661,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.45
 
 ### END REFINEMENT MANIFEST ###
 
-[297] EXECUTING: testsets/ergo_autolykos_asic_resistance.pl
+[301] EXECUTING: testsets/ergo_autolykos_asic_resistance.pl
 *   **Orbit Signature:** `[rope, scaffold, unknown]`
 *   **Generated Omega:** omega_perspectival_erasmus_rejoining_scaffold (conceptual)
 *   **Suggested Resolution Strategy:**
@@ -724,7 +724,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.47
 
 ### END REFINEMENT MANIFEST ###
 
-[349] EXECUTING: testsets/fiscal_dominance_trap.pl
+[354] EXECUTING: testsets/fiscal_dominance_trap.pl
 *   **Orbit Signature:** `[tangled_rope]`
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
@@ -813,7 +813,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.58
 
 ### END REFINEMENT MANIFEST ###
 
-[465] EXECUTING: testsets/ice_raids_minnesota_2026.pl
+[472] EXECUTING: testsets/ice_raids_minnesota_2026.pl
 *   **Orbit Signature:** `[rope]`
 *   **Related Gap/Alert:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Generated Omega:** omega_cut_safety_ice_memory_archive (conceptual)
@@ -923,7 +923,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.49
 
 ### END REFINEMENT MANIFEST ###
 
-[508] EXECUTING: testsets/israel_egypt_gas_deal.pl
+[515] EXECUTING: testsets/israel_egypt_gas_deal.pl
 *   **Orbit Signature:** `[scaffold, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: Extractive "Snare" is masked as functional "Rope".
 *   **Generated Omega:** omega_extraction_blindness_isa_education_scaffold (conceptual)
@@ -1024,7 +1024,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.47
 
 ### END REFINEMENT MANIFEST ###
 
-[573] EXECUTING: testsets/maintenance_capacity_shortfall.pl
+[580] EXECUTING: testsets/maintenance_capacity_shortfall.pl
 *   **Orbit Signature:** `[scaffold, unknown]`
 *   **Generated Omega:** omega_perspectival_maha_recovery_2026 (conceptual)
 *   **Suggested Resolution Strategy:**
@@ -1124,7 +1124,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.46
 
 ### END REFINEMENT MANIFEST ###
 
-[579] EXECUTING: testsets/marriage_market_asymmetry_2026.pl
+[586] EXECUTING: testsets/marriage_market_asymmetry_2026.pl
 *   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Generated Omega:** omega_cut_safety_manganese_catalysis_2026 (conceptual)
@@ -1229,7 +1229,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.49
 
 ### END REFINEMENT MANIFEST ###
 
-[632] EXECUTING: testsets/narrative_overfitting.pl
+[639] EXECUTING: testsets/narrative_overfitting.pl
 *   **Orbit Signature:** `[tangled_rope]`
 *   **Related Gap/Alert:** ! GAP: Institutional "Rope" appears as "Mountain" to Powerless.
 *   **Generated Omega:** omega_cut_safety_narrative_engineering_2026 (conceptual)
@@ -1297,7 +1297,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.47
 
 ### END REFINEMENT MANIFEST ###
 
-[789] EXECUTING: testsets/robustness_vs_efficiency_tradeoff.pl
+[796] EXECUTING: testsets/robustness_vs_efficiency_tradeoff.pl
 *   **Orbit Signature:** `[tangled_rope]`
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
@@ -1351,7 +1351,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.48
 
 ### END REFINEMENT MANIFEST ###
 
-[833] EXECUTING: testsets/silver_scarcity_mountain_2026.pl
+[840] EXECUTING: testsets/silver_scarcity_mountain_2026.pl
 *   **Orbit Signature:** `[rope, scaffold]`
 *   **Generated Omega:** N/A
 *   **Suggested Resolution Strategy:**
@@ -1435,7 +1435,7 @@ Aggregate Magnitude (Kappa) at Tn: 0.43
 
 ### END REFINEMENT MANIFEST ###
 
-[884] EXECUTING: testsets/sylow_theorems.pl
+[892] EXECUTING: testsets/sylow_theorems.pl
 *   **Orbit Signature:** `[rope]`
 *   **Generated Omega:** omega_perspectival_swift_piton_snap (conceptual)
 *   **Suggested Resolution Strategy:**

@@ -1,9 +1,9 @@
 % ============================================================================
 % CONSTRAINT STORY: udhr_1948
 % ============================================================================
-% Generated: 2026-01-19
-% Model: Gemini 2.0 Flash
-% Source: Universal Declaration of Human Rights (1948)
+% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2024-07-15
 % ============================================================================
 
 :- module(constraint_udhr_1948, []).
@@ -12,16 +12,38 @@
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
 
-% --- Namespace Hooks ---
-:- multifile 
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile
     domain_priors:base_extractiveness/2,
     domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
     domain_priors:requires_active_enforcement/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
+    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:extractiveness_for_agent/3.
+    constraint_indexing:directionality_override/3,
+    domain_priors:emerges_naturally/1,
+    narrative_ontology:omega_variable/3.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -29,261 +51,237 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: udhr_1948
- * human_readable: Universal Declaration of Human Rights
- * domain: political/legal/social
- * temporal_scope: 1948 - Present (Civilizational aspiration)
- * spatial_scope: Global
- * * SUMMARY:
- * The UDHR is a foundational international document establishing "inalienable" 
- * rights for all humans. It serves as a "common standard of achievement" to 
- * prevent "barbarous acts" and provide a framework for freedom, justice, and peace.
- * * KEY AGENTS:
- * - The UN General Assembly: Institutional architect and rule-maker.
- * - The Individual Citizen: The intended beneficiary, often powerless relative to states.
- * - The Sovereign State: The primary enforcer and potential violator of the constraint.
- * * NARRATIVE ARC:
- * Born from the horrors of WWII, the UDHR moves from a proclamation of "natural law"
- * (Mountain) to a functional treaty framework (Rope), though it is often experienced
- * as a coercive limit (Snare) by states or a distant, unreachble ideal (Mountain)
- * by the oppressed.
+ *   constraint_id: udhr_1948
+ *   human_readable: Universal Declaration of Human Rights (1948)
+ *   domain: political/legal
+ *
+ * SUMMARY:
+ *   The UDHR is a foundational international document establishing "inalienable"
+ *   rights for all humans. It serves as a "common standard of achievement" to
+ *   prevent "barbarous acts" and provide a framework for freedom, justice, and peace.
+ *   Born from the horrors of WWII, it moves from a proclamation of "natural law"
+ *   (Mountain) to a functional treaty framework (Rope), though it is often experienced
+ *   as a coercive limit (Snare) by states or a distant, unreachable ideal (Mountain)
+ *   by the oppressed.
+ *
+ * KEY AGENTS (by structural relationship):
+ *   - Individual Citizens: Primary target/beneficiary (powerless/trapped) — intended to be protected by the constraint, but often bear the costs of its non-enforcement.
+ *   - UN General Assembly: Primary beneficiary/architect (institutional/arbitrage) — benefits from a stable international order based on shared norms.
+ *   - Authoritarian Regimes: Secondary target (institutional/constrained) — experiences the constraint as an external imposition limiting their sovereignty.
+ *   - Analytical Observer: Sees the full structure of aspiration vs. enforcement.
  */
 
 /* ==========================================================================
-   2. CORE SYSTEM INTEGRATION
+   2. BASE PROPERTIES (DOMAIN PRIORS)
    ========================================================================== */
 
-% Required for DR-Audit Suite
-narrative_ontology:interval(un_era, 1948, 2026).
+% --- Numerical metrics ---
+domain_priors:base_extractiveness(udhr_1948, 0.10).
+domain_priors:suppression_score(udhr_1948, 0.20).   % Structural property (raw, unscaled).
+domain_priors:theater_ratio(udhr_1948, 0.16).       % Piton detection (>= 0.70)
+
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(udhr_1948, extractiveness, 0.10).
+narrative_ontology:constraint_metric(udhr_1948, suppression_requirement, 0.20).
+narrative_ontology:constraint_metric(udhr_1948, theater_ratio, 0.16).
+
+% --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(udhr_1948, rope).
 
-% Base extractiveness: 0.1
-% Rationale: The UDHR is designed to be anti-extractive, returning agency to 
-% individuals. However, minimal "extraction" exists in the form of states 
-% yielding absolute sovereignty to the international order.
-domain_priors:base_extractiveness(udhr_1948, 0.1).
-
-% Suppression score: 0.2
-% Rationale: It suppresses "tyranny and oppression" but encourages the visibility 
-% of alternatives to authoritarianism. It presents itself as "natural."
-domain_priors:suppression_score(udhr_1948, 0.2).
-
-% Constraint metric facts (bridge for classification engine)
-narrative_ontology:constraint_metric(udhr_1948, extractiveness, 0.1).
-narrative_ontology:constraint_metric(udhr_1948, suppression_requirement, 0.2).
-
-% Enforcement: Requires active maintenance through treaties and international pressure.
+% --- Binary flags ---
 domain_priors:requires_active_enforcement(udhr_1948).
 
-% Beneficiaries & Victims
-narrative_ontology:constraint_beneficiary(udhr_1948, human_family).
+% --- Structural relationships (REQUIRED for non-mountain constraints) ---
+% These feed the directionality derivation chain: the engine computes
+% d (directionality) from agent membership in these groups + exit_options.
+%
+% Who benefits from this constraint existing?
 narrative_ontology:constraint_beneficiary(udhr_1948, individual_citizens).
-narrative_ontology:constraint_victim(udhr_1948, totalitarians).
-narrative_ontology:constraint_victim(udhr_1948, absolute_monarchs).
+%
+% Who bears disproportionate cost?
+narrative_ontology:constraint_victim(udhr_1948, authoritarian_regimes).
 
-% Metrics
 /* ==========================================================================
-   3. INDEXED CLASSIFICATIONS
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   χ = ε × f(d) × σ(S)
+   where f(d) is the sigmoid directionality function:
+     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
+   The engine derives d from beneficiary/victim membership + exit_options.
+   Scope modifiers: local=0.8, regional=0.9, national=1.0,
+                    continental=1.1, global=1.2, universal=1.0.
+   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
+   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 1: THE DISPOSSESSED REFUGEE - Mountain
-   --------------------------------------------------------------------------
-   WHO: powerless - No state protection, relying on "inherent" rights.
-   WHEN: biographical - Their immediate survival depends on these "eternal" truths.
-   WHERE: trapped - Often physically or legally unable to exit their situation.
-   SCOPE: local/global - Focused on immediate safety via global principles.
-   
-   WHY THIS CLASSIFICATION:
-   For the powerless, the UDHR is framed as "natural law" (born free and equal). 
-   Because they cannot change the declaration and rely on its "inalienable" 
-   status to survive, it functions as an unchangeable Mountain of reality.
-   
-   NARRATIVE EVIDENCE:
-   "All human beings are born free and equal... endowed with reason and conscience." (Article 1)
-   -------------------------------------------------------------------------- */
+% PERSPECTIVE 1: THE DISPOSSESSED INDIVIDUAL (MOUNTAIN)
+% For the powerless, the UDHR is framed as "natural law" (born free and equal).
+% Because they cannot change the declaration and rely on its "inalienable"
+% status to survive, it functions as an unchangeable Mountain of reality.
+constraint_indexing:constraint_classification(udhr_1948, mountain,
+    context(agent_power(powerless),
+            time_horizon(biographical),
+            exit_options(trapped),
+            spatial_scope(global))).
 
-constraint_indexing:constraint_classification(
-    udhr_1948,
-    mountain,
-    context(
-        agent_power(powerless),
-        time_horizon(biographical),
-        exit_options(trapped),
-        spatial_scope(global)
-    )
-) :- !.
+% PERSPECTIVE 2: THE UN GENERAL ASSEMBLY (ROPE)
+% To the UN, the UDHR is a "common standard of achievement." It is a
+% coordination mechanism (Rope) designed to promote "social progress" and
+% "friendly relations between nations." It is a tool for functional harmony.
+constraint_indexing:constraint_classification(udhr_1948, rope,
+    context(agent_power(institutional),
+            time_horizon(civilizational),
+            exit_options(arbitrage),
+            spatial_scope(global))).
 
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE UN GENERAL ASSEMBLY - Rope
-   --------------------------------------------------------------------------
-   WHO: institutional - The collective power of member states.
-   WHEN: civilizational - Looking at the long-term progress of humanity.
-   WHERE: mobile - States can negotiate, draft, and amend treaties.
-   SCOPE: global - Worldwide jurisdiction of the declaration.
-   
-   WHY THIS CLASSIFICATION:
-   To the UN, the UDHR is a "common standard of achievement" (Article 1). It is 
-   a coordination mechanism (Rope) designed to promote "social progress" and 
-   "friendly relations between nations." It is a tool for functional harmony.
-   
-   NARRATIVE EVIDENCE:
-   "A common understanding... is of the greatest importance for the full realization of this pledge." (Preamble)
-   -------------------------------------------------------------------------- */
+% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (ROPE)
+% The analytical view sees the UDHR as a coordination device, a Rope intended
+% to align state behavior, even if its enforcement is inconsistent.
+constraint_indexing:constraint_classification(udhr_1948, rope,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(global))).
 
-constraint_indexing:constraint_classification(
-    udhr_1948,
-    rope,
-    context(
-        agent_power(institutional),
-        time_horizon(civilizational),
-        exit_options(mobile),
-        spatial_scope(global)
-    )
-) :- !.
+% --- INTER-INSTITUTIONAL PERSPECTIVE ---
 
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE AUTHORITARIAN REGIME - Snare
-   --------------------------------------------------------------------------
-   WHO: institutional (local) - Power over a specific territory.
-   WHEN: immediate - Focused on maintaining current control.
-   WHERE: constrained - Subject to international sanctions/pressure if they fail.
-   SCOPE: national - Their power is limited by these international standards.
-   
-   WHY THIS CLASSIFICATION:
-   For a regime seeking absolute control, the UDHR is an asymmetric constraint 
-   imposed by an external collective (UN). It restricts their "sovereign right" 
-   to suppress dissent, acting as a Snare that tightens via international law.
-   
-   NARRATIVE EVIDENCE:
-   "No one shall be subjected to arbitrary arrest... Everyone has the right to leave any country." (Articles 9, 13)
-   -------------------------------------------------------------------------- */
-
-constraint_indexing:constraint_classification(
-    udhr_1948,
-    snare,
-    context(
-        agent_power(institutional),
-        time_horizon(immediate),
-        exit_options(constrained),
-        spatial_scope(national)
-    )
-) :-
-    domain_priors:base_extractiveness(udhr_1948, E),
-    E < 0.2. % Even low extraction is seen as coercive by those losing power.
+% PERSPECTIVE 4: THE AUTHORITARIAN REGIME (SNARE)
+% For a regime seeking absolute control, the UDHR is an asymmetric constraint
+% imposed by an external collective. It restricts their "sovereign right"
+% to suppress dissent, acting as a Snare that tightens via international law.
+constraint_indexing:constraint_classification(udhr_1948, snare,
+    context(agent_power(institutional),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(national))).
 
 /* ==========================================================================
-   4. TESTS
+   4. VALIDATION TESTS
    ========================================================================== */
 
 :- begin_tests(udhr_1948_tests).
 
-test(multi_perspective_variance) :-
-    constraint_indexing:constraint_classification(udhr_1948, Type1, context(agent_power(powerless), time_horizon(biographical), exit_options(trapped), spatial_scope(global))),
-    constraint_indexing:constraint_classification(udhr_1948, Type2, context(agent_power(institutional), time_horizon(civil_horizon), exit_options(mobile), spatial_scope(global))),
-    Type1 = mountain,
-    Type2 = rope.
+test(perspectival_gap_powerless_vs_architect) :-
+    % Verify the gap between the powerless individual and the institutional architect.
+    constraint_indexing:constraint_classification(udhr_1948, TypeTarget,
+        context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(udhr_1948, TypeArchitect,
+        context(agent_power(institutional), _, exit_options(arbitrage), _)),
+    TypeTarget == mountain,
+    TypeArchitect == rope.
 
-test(regime_snare_perception) :-
-    constraint_indexing:constraint_classification(udhr_1948, snare, context(agent_power(institutional), time_horizon(immediate), exit_options(constrained), spatial_scope(national))).
+test(perspectival_gap_architect_vs_target_regime) :-
+    % Verify the gap between the institutional architect and the targeted regime.
+    constraint_indexing:constraint_classification(udhr_1948, TypeArchitect,
+        context(agent_power(institutional), _, exit_options(arbitrage), _)),
+    constraint_indexing:constraint_classification(udhr_1948, TypeRegime,
+        context(agent_power(institutional), _, exit_options(constrained), _)),
+    TypeArchitect == rope,
+    TypeRegime == snare.
 
-test(low_extractiveness_baseline) :-
-    domain_priors:base_extractiveness(udhr_1948, E),
-    E < 0.3.
+test(analytical_claim_matches_rope) :-
+    narrative_ontology:constraint_claim(udhr_1948, ClaimedType),
+    constraint_indexing:constraint_classification(udhr_1948, AnalyticalType,
+        context(agent_power(analytical), _, _, _)),
+    ClaimedType == rope,
+    AnalyticalType == rope.
 
 :- end_tests(udhr_1948_tests).
 
 /* ==========================================================================
-   5. MODEL INTERPRETATION
+   5. GENERATIVE COMMENTARY
    ========================================================================== */
 
 /**
- * LLM GENERATION NOTES
- * * Model: Gemini 2.0 Flash
- * * KEY DECISIONS:
- * 1. BASE EXTRACTIVENESS (0.1): The UDHR is a "gift" of rights, but it extracts 
- * sovereignty from states.
- * 2. PERSPECTIVE SELECTION: Included the 'Dispossessed Refugee' (Powerless) 
- * to highlight the 'Mountain' aspect of natural law vs. the 'UN' (Institutional) 
- * 'Rope' of administrative coordination.
- * 3. CLASSIFICATION RATIONALE:
- * - Refugee -> Mountain: Because rights are declared "inalienable," they are
- * treated as fixed features of the universe.
- * - UN -> Rope: Because the document is a "standard of achievement" (a goal/tool).
- * - Authoritarian -> Snare: Because it limits the exercise of absolute power.
- * * AMBIGUITIES:
- * - The transition from a non-binding "Declaration" to binding "Covenants" (1966)
- * blurs the line between Rope and Snare. I kept the focus on the 1948 Declaration.
+ * LOGIC RATIONALE:
+ *   Base extractiveness (0.1) is low because the UDHR is designed to be
+ *   anti-extractive, returning agency to individuals. The minimal "extraction"
+ *   is the yielding of absolute sovereignty by states to an international order.
+ *   Suppression (0.2) is also low, as it aims to suppress "tyranny and
+ *   oppression" while encouraging alternatives to authoritarianism.
+ *
+ * PERSPECTIVAL GAP:
+ *   The core gap is between aspiration and implementation.
+ *   - For a powerless individual, the rights are presented as an unchangeable
+ *     fact of existence (Mountain), their only recourse.
+ *   - For the UN architects, it's a coordination tool (Rope) for global stability.
+ *   - For an authoritarian state, this same coordination tool is perceived as a
+ *     coercive external limit on its power (Snare), demonstrating a classic
+ *     inter-institutional perspectival conflict.
+ *
+ * DIRECTIONALITY LOGIC:
+ *   - Beneficiaries: 'individual_citizens' are the intended beneficiaries, receiving
+ *     protection and agency. This declaration drives the coordination function.
+ *   - Victims: 'authoritarian_regimes' are the structural victims, as the constraint
+ *     is designed to extract their power of absolute sovereignty. This drives the
+ *     asymmetric extraction function.
+ *
+ * INTER-INSTITUTIONAL DYNAMICS:
+ *   The model captures the conflict between two institutional actors: the UN
+ *   (architect, `exit_options(arbitrage)`) and a targeted member state
+ *   (target, `exit_options(constrained)`). Though both are `institutional`, their
+ *   different exit options and structural relationships (beneficiary vs. victim)
+ *   produce different directionality values (d), leading to the Rope vs. Snare
+ *   classification divergence.
+ *
+ * MANDATROPHY ANALYSIS:
+ *   The low base extraction prevents mislabeling this as a pure Snare. The
+ *   framework correctly identifies that the coercive (Snare) aspect is
+ *   perspectival, arising from the target's relationship to the constraint,
+ *   while the overall structure is one of coordination (Rope).
  */
 
 /* ==========================================================================
-   6. OMEGA VARIABLES (Ω)
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
+% Omega variable 1: Enforcement Gap
 omega_variable(
-    enforcement_gap,
-    "Is a right a 'Mountain' if there is no mechanism to enforce it?",
-    resolution_mechanism("Observe correlation between UDHR citations and actual reduction in state violence."),
-    impact("If no correlation: UDHR is a 'Scaffold' (hollow). If high: it is a true 'Mountain'."),
+    omega_udhr_1948_enforcement,
+    'Is a right a "Mountain" of natural law if there is no consistent mechanism to enforce it?',
+    'Observe correlation between UDHR treaty ratification and actual reduction in state violence over decades.',
+    'If no correlation, the UDHR is a Piton (theatrical). If high correlation, it functions as a genuine Rope.',
     confidence_without_resolution(medium)
 ).
+narrative_ontology:omega_variable(omega_udhr_1948_enforcement, empirical, 'The gap between declared rights and their practical enforcement.').
 
+% Omega variable 2: Universalism vs. Cultural Relativism
 omega_variable(
-    universal_consensus,
-    "Is the UDHR truly universal (Mountain) or a western liberal construct (Rope/Snare)?",
-    resolution_mechanism("Cross-cultural longitudinal survey of value alignment across non-Western states."),
-    impact("If Western only: Snare for non-Western states. If Universal: Mountain for humanity."),
+    omega_udhr_1948_universalism,
+    'Is the UDHR truly universal (Mountain/Rope) or a Western liberal construct imposed on other cultures (Snare)?',
+    'Cross-cultural longitudinal surveys of value alignment across non-Western states.',
+    'If perceived as an imposition, it is a Snare for non-Western states. If values are convergent, it is a global Rope.',
     confidence_without_resolution(low)
 ).
+narrative_ontology:omega_variable(omega_udhr_1948_universalism, conceptual, 'The debate over whether UDHR values are universal or culturally specific.').
 
 /* ==========================================================================
-   7. ALTERNATIVE ANALYSIS
+   7. INTEGRATION HOOKS
    ========================================================================== */
 
-/**
- * VIABLE ALTERNATIVES
- * * ALTERNATIVE 1: Westphalian Sovereignty (Absolute)
- * Viability: The status quo prior to 1948.
- * Suppression: Explicitly rejected by the UDHR's preamble ("barbarous acts").
- * Evidence: "It is essential... human rights should be protected by the rule of law."
- * * ALTERNATIVE 2: Regional/Religious Rights Codes
- * Viability: Cairo Declaration on Human Rights in Islam, etc.
- * Suppression: UDHR claims "universal" and "without distinction" status.
- * * CONCLUSION:
- * The presence of these alternatives, which the UDHR seeks to supersede or 
- * coordinate, confirms its role as a Rope/Snare depending on power level.
- */
+% Required for external script parsing
+narrative_ontology:interval(udhr_1948, 1948, 2026).
 
 /* ==========================================================================
-   8. INTEGRATION HOOKS
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% TO USE:
-% ?- [udhr_1948].
-% ?- run_tests(udhr_1948_tests).
+% Base extractiveness is < 0.46, so temporal measurements are not required.
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA
+   ========================================================================== */
+
+% Coordination type (enables Boltzmann floor + complexity offset)
+% The UDHR acts as a global standard for legal and moral reasoning.
+narrative_ontology:coordination_type(udhr_1948, information_standard).
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+% No overrides needed. The structural derivation from beneficiary/victim
+% declarations and exit options correctly models the dynamics.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
-
-
-% --- v3.1 Indexical Relativity Stubs (Fleet Repair) ---
-constraint_indexing:constraint_classification(udhr_1946, mountain, agent_power(analytical)).
-constraint_indexing:constraint_classification(udhr_1946, rope, agent_power(institutional)).
-constraint_indexing:constraint_classification(udhr_1946, snare, agent_power(powerless)).
-
-% ============================================================================
-% ENRICHMENT: Structural predicates for dynamic classification
-% Generated: 2026-02-08
-% Template: v5.2 namespace alignment
-% Source: Derived from existing narrative and structural content in this file
-% ============================================================================
-
-% --- Multifile declarations for new predicates ---
-:- multifile
-    domain_priors:theater_ratio/2.
-
-% --- Theater ratio (missing from base properties) ---
-% Coordination mechanism in political domain — moderate institutional framing
-domain_priors:theater_ratio(udhr_1948, 0.16).
-narrative_ontology:constraint_metric(udhr_1948, theater_ratio, 0.16).

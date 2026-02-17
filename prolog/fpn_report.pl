@@ -24,7 +24,7 @@
 %  Main entry point. Loads corpus, runs FPN, outputs markdown.
 run_fpn_report :-
     format(user_error, '[fpn] Starting fixed-point network analysis...~n', []),
-    covering_analysis:load_all_testsets,
+    corpus_loader:load_all_testsets,
     constraint_indexing:default_context(Context),
 
     % Discover constraints

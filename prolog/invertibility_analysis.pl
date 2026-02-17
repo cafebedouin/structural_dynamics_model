@@ -204,7 +204,7 @@ invert_chi_to_directionality(Chi, BaseEps, Sigma, D) :-
 %  Asserts inv_orbit_family(OrbitSig, Constraints) for each family.
 enumerate_orbit_families :-
     retractall(inv_orbit_family(_, _)),
-    covering_analysis:load_all_testsets,
+    corpus_loader:load_all_testsets,
     covering_analysis:all_corpus_constraints(AllCs),
     length(AllCs, Total),
     format(user_error, '[invertibility] Computing orbits for ~w constraints...~n', [Total]),

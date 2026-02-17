@@ -34,6 +34,7 @@
 :- use_module(structural_signatures).
 :- use_module(drl_core).
 :- use_module(drl_modal_logic).
+:- use_module(corpus_loader).
 :- use_module(library(lists)).
 :- use_module(library(apply)).
 :- use_module(library(ordsets)).
@@ -43,38 +44,12 @@
    DYNAMIC FACT DECLARATIONS
    ================================================================ */
 
-:- dynamic corpus_loaded/0.
 :- dynamic gc_edge/4.             % gc_edge(C1, C2, Strength, Source) where C1 @< C2
 :- dynamic gc_node_type/3.        % gc_node_type(C, Context, Type)
 :- dynamic gc_node_purity/3.      % gc_node_purity(C, IntrinsicP, EffP)
 :- dynamic gc_sweep_result/5.     % gc_sweep_result(Thresh, NEdges, NComps, LargestSize, LargestFrac)
 :- dynamic adj/2.                 % adj(A, B) — symmetric adjacency for BFS
 :- dynamic gc_edges_precomputed/0.
-
-/* ================================================================
-   SHARED INFRASTRUCTURE
-   ================================================================ */
-
-%% load_all_testsets
-%  Bulk-loads all .pl files from testsets/ directory.
-load_all_testsets :-
-    (   corpus_loaded
-    ->  true
-    ;   expand_file_name('testsets/*.pl', Files),
-        length(Files, N),
-        format(user_error, '[giant] Loading ~w testset files...~n', [N]),
-        load_testset_list(Files, 0, Loaded),
-        format(user_error, '[giant] Loaded ~w testsets successfully.~n', [Loaded]),
-        assertz(corpus_loaded)
-    ).
-
-load_testset_list([], N, N).
-load_testset_list([F|Fs], Acc, N) :-
-    (   catch(user:consult(F), _, true)
-    ->  Acc1 is Acc + 1
-    ;   Acc1 = Acc
-    ),
-    load_testset_list(Fs, Acc1, N).
 
 %% all_corpus_constraints(-Constraints)
 %  Discovers all constraint atoms with extractiveness data.

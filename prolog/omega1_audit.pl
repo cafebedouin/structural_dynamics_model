@@ -29,7 +29,7 @@
 
 run_omega1_audit :-
     format(user_error, '[omega1] Starting Omega1 Unknown Audit...~n', []),
-    covering_analysis:load_all_testsets,
+    corpus_loader:load_all_testsets,
     covering_analysis:all_corpus_constraints(Cs),
     length(Cs, NC),
     format(user_error, '[omega1] Corpus: ~w constraints~n', [NC]),

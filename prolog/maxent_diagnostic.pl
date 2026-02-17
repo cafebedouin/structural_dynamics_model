@@ -25,7 +25,7 @@
 
 run_maxent_diagnostic :-
     format(user_error, '[diag] Starting MaxEnt diagnostic deep dive...~n', []),
-    covering_analysis:load_all_testsets,
+    corpus_loader:load_all_testsets,
     constraint_indexing:default_context(Context),
 
     % Run MaxEnt classifier

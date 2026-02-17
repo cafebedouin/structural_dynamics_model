@@ -16,7 +16,7 @@ Usage:      run_scenario('file.pl', interval_id).
 
 ### Summary
 
-- **Corpus size**: 1022 constraints
+- **Corpus size**: 1033 constraints
 - **Grid dimensions**: 4 powers x 3 scopes = 12 cells
 - **Cell pairs analyzed**: 66
 
@@ -24,18 +24,18 @@ Usage:      run_scenario('file.pl', interval_id).
 
 | Cell | pw/loc | pw/nat | pw/glo | mo/loc | mo/nat | mo/glo | in/loc | in/nat | in/glo | an/loc | an/nat | an/glo |
 |------|------|------|------|------|------|------|------|------|------|------|------|------|
-| pw/loc | 1.000 | 0.745 | 0.662 | 0.629 | 0.765 | 0.572 | 0.027 | 0.029 | 0.029 | 0.767 | 0.878 | 0.684 |
-| pw/nat | 0.745 | 1.000 | 0.918 | 0.418 | 0.579 | 0.787 | 0.023 | 0.023 | 0.023 | 0.555 | 0.721 | 0.929 |
-| pw/glo | 0.662 | 0.918 | 1.000 | 0.353 | 0.515 | 0.717 | 0.017 | 0.020 | 0.020 | 0.490 | 0.657 | 0.860 |
-| mo/loc | 0.629 | 0.418 | 0.353 | 1.000 | 0.804 | 0.598 | 0.239 | 0.241 | 0.241 | 0.862 | 0.662 | 0.470 |
-| mo/nat | 0.765 | 0.579 | 0.515 | 0.804 | 1.000 | 0.770 | 0.212 | 0.216 | 0.216 | 0.688 | 0.858 | 0.641 |
-| mo/glo | 0.572 | 0.787 | 0.717 | 0.598 | 0.770 | 1.000 | 0.192 | 0.194 | 0.194 | 0.486 | 0.662 | 0.856 |
-| in/loc | 0.027 | 0.023 | 0.017 | 0.239 | 0.212 | 0.192 | 1.000 | 0.996 | 0.996 | 0.111 | 0.085 | 0.068 |
-| in/nat | 0.029 | 0.023 | 0.020 | 0.241 | 0.216 | 0.194 | 0.996 | 1.000 | 1.000 | 0.113 | 0.089 | 0.070 |
-| in/glo | 0.029 | 0.023 | 0.020 | 0.241 | 0.216 | 0.194 | 0.996 | 1.000 | 1.000 | 0.113 | 0.089 | 0.070 |
-| an/loc | 0.767 | 0.555 | 0.490 | 0.862 | 0.688 | 0.486 | 0.111 | 0.113 | 0.113 | 1.000 | 0.800 | 0.607 |
-| an/nat | 0.878 | 0.721 | 0.657 | 0.662 | 0.858 | 0.662 | 0.085 | 0.089 | 0.089 | 0.800 | 1.000 | 0.783 |
-| an/glo | 0.684 | 0.929 | 0.860 | 0.470 | 0.641 | 0.856 | 0.068 | 0.070 | 0.070 | 0.607 | 0.783 | 1.000 |
+| pw/loc | 1.000 | 0.745 | 0.664 | 0.622 | 0.763 | 0.571 | 0.027 | 0.029 | 0.029 | 0.764 | 0.877 | 0.684 |
+| pw/nat | 0.745 | 1.000 | 0.919 | 0.413 | 0.578 | 0.784 | 0.022 | 0.023 | 0.023 | 0.554 | 0.721 | 0.927 |
+| pw/glo | 0.664 | 0.919 | 1.000 | 0.349 | 0.514 | 0.715 | 0.016 | 0.019 | 0.019 | 0.490 | 0.657 | 0.860 |
+| mo/loc | 0.622 | 0.413 | 0.349 | 1.000 | 0.801 | 0.596 | 0.243 | 0.245 | 0.245 | 0.859 | 0.657 | 0.467 |
+| mo/nat | 0.763 | 0.578 | 0.514 | 0.801 | 1.000 | 0.772 | 0.215 | 0.219 | 0.219 | 0.684 | 0.857 | 0.641 |
+| mo/glo | 0.571 | 0.784 | 0.715 | 0.596 | 0.772 | 1.000 | 0.195 | 0.197 | 0.197 | 0.485 | 0.662 | 0.855 |
+| in/loc | 0.027 | 0.022 | 0.016 | 0.243 | 0.215 | 0.195 | 1.000 | 0.996 | 0.996 | 0.113 | 0.086 | 0.070 |
+| in/nat | 0.029 | 0.023 | 0.019 | 0.245 | 0.219 | 0.197 | 0.996 | 1.000 | 1.000 | 0.115 | 0.090 | 0.072 |
+| in/glo | 0.029 | 0.023 | 0.019 | 0.245 | 0.219 | 0.197 | 0.996 | 1.000 | 1.000 | 0.115 | 0.090 | 0.072 |
+| an/loc | 0.764 | 0.554 | 0.490 | 0.859 | 0.684 | 0.485 | 0.113 | 0.115 | 0.115 | 1.000 | 0.799 | 0.607 |
+| an/nat | 0.877 | 0.721 | 0.657 | 0.657 | 0.857 | 0.662 | 0.086 | 0.090 | 0.090 | 0.799 | 1.000 | 0.784 |
+| an/glo | 0.684 | 0.927 | 0.860 | 0.467 | 0.641 | 0.855 | 0.070 | 0.072 | 0.072 | 0.607 | 0.784 | 1.000 |
 
 ### Tier A: Fully Redundant Pairs (100% Agreement)
 
@@ -68,7 +68,7 @@ Greedy set cover selected **9** cells (out of 12):
 8. `mo/nat`
 9. `an/glo`
 
-**68 unique grid signatures** across the corpus.
+**69 unique grid signatures** across the corpus.
 
 ### Embedded Prolog Facts
 
@@ -115,11 +115,11 @@ tier_a_pair(cell(institutional,global), cell(institutional,national)).
 
 ### Missed Transitions
 
-- **Corpus size**: 1022 constraints
-- **Total missed transitions**: 9859
-- **Power-axis transitions**: 8074
-- **Scope-axis transitions**: 1785
-- **Unique constraints affected**: 830
+- **Corpus size**: 1033 constraints
+- **Total missed transitions**: 9928
+- **Power-axis transitions**: 8121
+- **Scope-axis transitions**: 1807
+- **Unique constraints affected**: 838
 
 ### Transition Detail
 
@@ -187,6 +187,12 @@ tier_a_pair(cell(institutional,global), cell(institutional,national)).
 | academic_tenure_system | 0.3230 | 1.10 | indexically_opaque | 0.6459 | 1.10 | snare | power |
 | academic_tenure_system | 0.3230 | 1.20 | indexically_opaque | 0.6459 | 1.20 | snare | power |
 | academic_tenure_system | 0.6855 | 0.80 | tangled_rope | 0.7250 | 0.80 | snare | power |
+| access_arbitrage | 0.3230 | 0.80 | rope | 0.6459 | 0.80 | unknown | power |
+| access_arbitrage | 0.3230 | 0.90 | rope | 0.6459 | 0.90 | tangled_rope | power |
+| access_arbitrage | 0.3230 | 1.00 | rope | 0.6459 | 1.00 | tangled_rope | power |
+| access_arbitrage | 0.3230 | 1.10 | rope | 0.6459 | 1.10 | tangled_rope | power |
+| access_arbitrage | 0.3230 | 1.20 | rope | 0.6459 | 1.20 | tangled_rope | power |
+| access_arbitrage | 0.6855 | 0.80 | unknown | 0.7250 | 0.80 | tangled_rope | power |
 | ad_fus_coordination | 0.3230 | 0.80 | scaffold | 0.6459 | 0.80 | tangled_rope | power |
 | ad_fus_coordination | 0.3230 | 0.90 | scaffold | 0.6459 | 0.90 | snare | power |
 | ad_fus_coordination | 0.3230 | 1.00 | scaffold | 0.6459 | 1.00 | snare | power |
@@ -1306,6 +1312,11 @@ tier_a_pair(cell(institutional,global), cell(institutional,national)).
 | child_marriage | 0.3230 | 1.10 | indexically_opaque | 0.6459 | 1.10 | snare | power |
 | child_marriage | 0.3230 | 1.20 | indexically_opaque | 0.6459 | 1.20 | snare | power |
 | child_marriage | 0.6855 | 0.80 | tangled_rope | 0.7250 | 0.80 | snare | power |
+| china_africa_zero_tariff_2026 | 0.3230 | 1.10 | rope | 0.6459 | 1.10 | unknown | power |
+| china_africa_zero_tariff_2026 | 0.3230 | 1.20 | rope | 0.6459 | 1.20 | unknown | power |
+| china_africa_zero_tariff_2026 | 0.6855 | 1.00 | rope | 0.7250 | 1.00 | unknown | power |
+| china_africa_zero_tariff_2026 | 0.6855 | 1.10 | unknown | 0.7250 | 1.10 | tangled_rope | power |
+| china_africa_zero_tariff_2026 | 0.8625 | 0.90 | unknown | 1.0000 | 0.90 | tangled_rope | power |
 | china_critical_mineral_chokepoint | 0.0000 | 0.80 | rope | 0.3230 | 0.80 | indexically_opaque | power |
 | china_critical_mineral_chokepoint | 0.0000 | 0.90 | rope | 0.3230 | 0.90 | indexically_opaque | power |
 | china_critical_mineral_chokepoint | 0.0000 | 1.00 | rope | 0.3230 | 1.00 | indexically_opaque | power |
@@ -1453,6 +1464,17 @@ tier_a_pair(cell(institutional,global), cell(institutional,national)).
 | climate_event_attribution | 0.3230 | 1.20 | indexically_opaque | 0.6459 | 1.20 | tangled_rope | power |
 | climate_event_attribution | 0.6855 | 1.10 | tangled_rope | 0.7250 | 1.10 | snare | power |
 | climate_event_attribution | 0.8625 | 0.90 | tangled_rope | 1.0000 | 0.90 | snare | power |
+| climate_policy_extraction | 0.0000 | 0.80 | rope | 0.3230 | 0.80 | indexically_opaque | power |
+| climate_policy_extraction | 0.0000 | 0.90 | rope | 0.3230 | 0.90 | indexically_opaque | power |
+| climate_policy_extraction | 0.0000 | 1.00 | rope | 0.3230 | 1.00 | indexically_opaque | power |
+| climate_policy_extraction | 0.0000 | 1.10 | rope | 0.3230 | 1.10 | indexically_opaque | power |
+| climate_policy_extraction | 0.0000 | 1.20 | rope | 0.3230 | 1.20 | indexically_opaque | power |
+| climate_policy_extraction | 0.3230 | 0.80 | indexically_opaque | 0.6459 | 0.80 | tangled_rope | power |
+| climate_policy_extraction | 0.3230 | 0.90 | indexically_opaque | 0.6459 | 0.90 | tangled_rope | power |
+| climate_policy_extraction | 0.3230 | 1.00 | indexically_opaque | 0.6459 | 1.00 | tangled_rope | power |
+| climate_policy_extraction | 0.3230 | 1.10 | indexically_opaque | 0.6459 | 1.10 | snare | power |
+| climate_policy_extraction | 0.3230 | 1.20 | indexically_opaque | 0.6459 | 1.20 | snare | power |
+| climate_policy_extraction | 0.8625 | 0.80 | tangled_rope | 1.0000 | 0.80 | snare | power |
 | climate_target_one_point_five | 0.3230 | 1.20 | rope | 0.6459 | 1.20 | unknown | power |
 | climate_target_one_point_five | 0.6855 | 1.20 | unknown | 0.7250 | 1.20 | tangled_rope | power |
 | climate_target_one_point_five | 0.8625 | 1.00 | unknown | 1.0000 | 1.00 | tangled_rope | power |
@@ -1668,10 +1690,11 @@ tier_a_pair(cell(institutional,global), cell(institutional,national)).
 | college_admissions_market | 0.3230 | 1.10 | indexically_opaque | 0.6459 | 1.10 | tangled_rope | power |
 | college_admissions_market | 0.3230 | 1.20 | indexically_opaque | 0.6459 | 1.20 | tangled_rope | power |
 | colombia_2026_presidential_election | 0.3230 | 0.80 | rope | 0.6459 | 0.80 | unknown | power |
-| colombia_2026_presidential_election | 0.3230 | 0.90 | rope | 0.6459 | 0.90 | unknown | power |
-| colombia_2026_presidential_election | 0.3230 | 1.00 | rope | 0.6459 | 1.00 | unknown | power |
-| colombia_2026_presidential_election | 0.3230 | 1.10 | rope | 0.6459 | 1.10 | unknown | power |
-| colombia_2026_presidential_election | 0.3230 | 1.20 | rope | 0.6459 | 1.20 | unknown | power |
+| colombia_2026_presidential_election | 0.3230 | 0.90 | rope | 0.6459 | 0.90 | tangled_rope | power |
+| colombia_2026_presidential_election | 0.3230 | 1.00 | rope | 0.6459 | 1.00 | tangled_rope | power |
+| colombia_2026_presidential_election | 0.3230 | 1.10 | rope | 0.6459 | 1.10 | tangled_rope | power |
+| colombia_2026_presidential_election | 0.3230 | 1.20 | rope | 0.6459 | 1.20 | tangled_rope | power |
+| colombia_2026_presidential_election | 0.6855 | 0.80 | unknown | 0.7250 | 0.80 | tangled_rope | power |
 | colorado_sbe_decentralization_friction | 0.0000 | 0.80 | rope | 0.3230 | 0.80 | indexically_opaque | power |
 | colorado_sbe_decentralization_friction | 0.0000 | 0.90 | rope | 0.3230 | 0.90 | indexically_opaque | power |
 | colorado_sbe_decentralization_friction | 0.0000 | 1.00 | rope | 0.3230 | 1.00 | indexically_opaque | power |
@@ -2925,6 +2948,10 @@ tier_a_pair(cell(institutional,global), cell(institutional,national)).
 | fiscal_dominance_trap | 0.3230 | 1.00 | piton | 0.6459 | 1.00 | snare | power |
 | fiscal_dominance_trap | 0.3230 | 1.10 | piton | 0.6459 | 1.10 | snare | power |
 | fiscal_dominance_trap | 0.3230 | 1.20 | piton | 0.6459 | 1.20 | snare | power |
+| fiscal_equalization_friction | 0.3230 | 1.00 | scaffold | 0.6459 | 1.00 | rope | power |
+| fiscal_equalization_friction | 0.3230 | 1.10 | scaffold | 0.6459 | 1.10 | unknown | power |
+| fiscal_equalization_friction | 0.3230 | 1.20 | scaffold | 0.6459 | 1.20 | unknown | power |
+| fiscal_equalization_friction | 0.6855 | 1.00 | rope | 0.7250 | 1.00 | unknown | power |
 | fitts_law_industrial_application | 0.0000 | 0.80 | rope | 0.3230 | 0.80 | indexically_opaque | power |
 | fitts_law_industrial_application | 0.0000 | 0.90 | rope | 0.3230 | 0.90 | indexically_opaque | power |
 | fitts_law_industrial_application | 0.0000 | 1.00 | rope | 0.3230 | 1.00 | indexically_opaque | power |
@@ -4681,12 +4708,12 @@ tier_a_pair(cell(institutional,global), cell(institutional,national)).
 | marriage_market_asymmetry_2026 | 0.3230 | 1.10 | indexically_opaque | 0.6459 | 1.10 | snare | power |
 | marriage_market_asymmetry_2026 | 0.3230 | 1.20 | indexically_opaque | 0.6459 | 1.20 | snare | power |
 | marriage_market_asymmetry_2026 | 0.6855 | 0.90 | tangled_rope | 0.7250 | 0.90 | snare | power |
-| mars_rover_navigational_autonomy | 0.3230 | 0.90 | rope | 0.6459 | 0.90 | unknown | power |
-| mars_rover_navigational_autonomy | 0.3230 | 1.00 | rope | 0.6459 | 1.00 | unknown | power |
-| mars_rover_navigational_autonomy | 0.3230 | 1.10 | rope | 0.6459 | 1.10 | tangled_rope | power |
-| mars_rover_navigational_autonomy | 0.3230 | 1.20 | rope | 0.6459 | 1.20 | tangled_rope | power |
-| mars_rover_navigational_autonomy | 0.6855 | 0.80 | rope | 0.7250 | 0.80 | unknown | power |
-| mars_rover_navigational_autonomy | 0.6855 | 0.90 | unknown | 0.7250 | 0.90 | tangled_rope | power |
+| mars_rovers_navigational_autonomy | 0.3230 | 0.90 | rope | 0.6459 | 0.90 | unknown | power |
+| mars_rovers_navigational_autonomy | 0.3230 | 1.00 | rope | 0.6459 | 1.00 | unknown | power |
+| mars_rovers_navigational_autonomy | 0.3230 | 1.10 | rope | 0.6459 | 1.10 | tangled_rope | power |
+| mars_rovers_navigational_autonomy | 0.3230 | 1.20 | rope | 0.6459 | 1.20 | tangled_rope | power |
+| mars_rovers_navigational_autonomy | 0.6855 | 0.80 | rope | 0.7250 | 0.80 | unknown | power |
+| mars_rovers_navigational_autonomy | 0.6855 | 0.90 | unknown | 0.7250 | 0.90 | tangled_rope | power |
 | mass_market_extinction_2026 | 0.0000 | 0.80 | rope | 0.3230 | 0.80 | indexically_opaque | power |
 | mass_market_extinction_2026 | 0.0000 | 0.90 | rope | 0.3230 | 0.90 | indexically_opaque | power |
 | mass_market_extinction_2026 | 0.0000 | 1.00 | rope | 0.3230 | 1.00 | indexically_opaque | power |
@@ -6691,6 +6718,15 @@ tier_a_pair(cell(institutional,global), cell(institutional,national)).
 | south_china_sea_arbitration_2016_2026 | 0.3230 | 1.20 | indexically_opaque | 0.6459 | 1.20 | tangled_rope | power |
 | south_china_sea_arbitration_2016_2026 | 0.6855 | 1.10 | tangled_rope | 0.7250 | 1.10 | snare | power |
 | south_china_sea_arbitration_2016_2026 | 0.8625 | 0.90 | tangled_rope | 1.0000 | 0.90 | snare | power |
+| sovereignty_as_arbitrage | 0.0000 | 0.80 | rope | 0.3230 | 0.80 | indexically_opaque | power |
+| sovereignty_as_arbitrage | 0.0000 | 0.90 | rope | 0.3230 | 0.90 | indexically_opaque | power |
+| sovereignty_as_arbitrage | 0.0000 | 1.00 | rope | 0.3230 | 1.00 | indexically_opaque | power |
+| sovereignty_as_arbitrage | 0.0000 | 1.10 | rope | 0.3230 | 1.10 | indexically_opaque | power |
+| sovereignty_as_arbitrage | 0.0000 | 1.20 | rope | 0.3230 | 1.20 | indexically_opaque | power |
+| sovereignty_as_arbitrage | 0.3230 | 0.90 | indexically_opaque | 0.6459 | 0.90 | tangled_rope | power |
+| sovereignty_as_arbitrage | 0.3230 | 1.00 | indexically_opaque | 0.6459 | 1.00 | tangled_rope | power |
+| sovereignty_as_arbitrage | 0.3230 | 1.10 | indexically_opaque | 0.6459 | 1.10 | tangled_rope | power |
+| sovereignty_as_arbitrage | 0.3230 | 1.20 | indexically_opaque | 0.6459 | 1.20 | tangled_rope | power |
 | spain_digital_offensive_2026 | 0.0000 | 0.80 | rope | 0.3230 | 0.80 | indexically_opaque | power |
 | spain_digital_offensive_2026 | 0.0000 | 0.90 | rope | 0.3230 | 0.90 | indexically_opaque | power |
 | spain_digital_offensive_2026 | 0.0000 | 1.00 | rope | 0.3230 | 1.00 | indexically_opaque | power |
@@ -7108,6 +7144,7 @@ tier_a_pair(cell(institutional,global), cell(institutional,national)).
 | temporal_scale_arbitrage | 0.3230 | 1.00 | indexically_opaque | 0.6459 | 1.00 | tangled_rope | power |
 | temporal_scale_arbitrage | 0.3230 | 1.10 | indexically_opaque | 0.6459 | 1.10 | tangled_rope | power |
 | temporal_scale_arbitrage | 0.3230 | 1.20 | indexically_opaque | 0.6459 | 1.20 | unknown | power |
+| temporal_scarcity | 0.8625 | 1.20 | piton | 1.0000 | 1.20 | unknown | power |
 | texas_insurance_market_instability | 0.0000 | 0.80 | rope | 0.3230 | 0.80 | indexically_opaque | power |
 | texas_insurance_market_instability | 0.0000 | 0.90 | rope | 0.3230 | 0.90 | indexically_opaque | power |
 | texas_insurance_market_instability | 0.0000 | 1.00 | rope | 0.3230 | 1.00 | indexically_opaque | power |
@@ -7167,6 +7204,16 @@ tier_a_pair(cell(institutional,global), cell(institutional,national)).
 | the_wall_procedural_barrier | 0.3230 | 1.00 | indexically_opaque | 0.6459 | 1.00 | snare | power |
 | the_wall_procedural_barrier | 0.3230 | 1.10 | indexically_opaque | 0.6459 | 1.10 | snare | power |
 | the_wall_procedural_barrier | 0.3230 | 1.20 | indexically_opaque | 0.6459 | 1.20 | snare | power |
+| theatrical_neutrality | 0.0000 | 0.80 | rope | 0.3230 | 0.80 | piton | power |
+| theatrical_neutrality | 0.0000 | 0.90 | rope | 0.3230 | 0.90 | piton | power |
+| theatrical_neutrality | 0.0000 | 1.00 | rope | 0.3230 | 1.00 | piton | power |
+| theatrical_neutrality | 0.0000 | 1.10 | rope | 0.3230 | 1.10 | piton | power |
+| theatrical_neutrality | 0.0000 | 1.20 | rope | 0.3230 | 1.20 | piton | power |
+| theatrical_neutrality | 0.3230 | 0.80 | piton | 0.6459 | 0.80 | unknown | power |
+| theatrical_neutrality | 0.3230 | 0.90 | piton | 0.6459 | 0.90 | unknown | power |
+| theatrical_neutrality | 0.3230 | 1.00 | piton | 0.6459 | 1.00 | snare | power |
+| theatrical_neutrality | 0.3230 | 1.10 | piton | 0.6459 | 1.10 | snare | power |
+| theatrical_neutrality | 0.3230 | 1.20 | piton | 0.6459 | 1.20 | snare | power |
 | theory_of_visitors | 0.0000 | 0.80 | rope | 0.3230 | 0.80 | indexically_opaque | power |
 | theory_of_visitors | 0.0000 | 0.90 | rope | 0.3230 | 0.90 | indexically_opaque | power |
 | theory_of_visitors | 0.0000 | 1.00 | rope | 0.3230 | 1.00 | indexically_opaque | power |
@@ -8214,6 +8261,8 @@ tier_a_pair(cell(institutional,global), cell(institutional,national)).
 | academic_peer_review_gatekeeping | 1.0000 | 0.80 | tangled_rope | 1.0000 | 0.90 | unknown | scope |
 | academic_tenure_system | 0.6459 | 0.80 | tangled_rope | 0.6459 | 0.90 | snare | scope |
 | academic_tenure_system | 0.6855 | 0.80 | tangled_rope | 0.6855 | 0.90 | snare | scope |
+| access_arbitrage | 0.6459 | 0.80 | unknown | 0.6459 | 0.90 | tangled_rope | scope |
+| access_arbitrage | 0.6855 | 0.80 | unknown | 0.6855 | 0.90 | tangled_rope | scope |
 | ad_fus_coordination | 0.6459 | 0.80 | tangled_rope | 0.6459 | 0.90 | snare | scope |
 | ad_fus_coordination | 0.6855 | 0.80 | tangled_rope | 0.6855 | 0.90 | snare | scope |
 | adversarial_truth_decay | 0.3230 | 1.10 | piton | 0.3230 | 1.20 | indexically_opaque | scope |
@@ -8374,6 +8423,8 @@ tier_a_pair(cell(institutional,global), cell(institutional,national)).
 | boiled_pineapple_trend_2026 | 0.6855 | 1.10 | tangled_rope | 0.6855 | 1.20 | snare | scope |
 | boiled_pineapple_trend_2026 | 0.8625 | 0.90 | tangled_rope | 0.8625 | 1.00 | snare | scope |
 | boiled_pineapple_trend_2026 | 1.0000 | 0.80 | tangled_rope | 1.0000 | 0.90 | snare | scope |
+| boom_bust_path_dependency | 0.8625 | 0.80 | piton | 0.8625 | 0.90 | unknown | scope |
+| boom_bust_path_dependency | 1.0000 | 0.80 | piton | 1.0000 | 0.90 | unknown | scope |
 | bor_tax_exemption_nl | 0.6459 | 0.80 | tangled_rope | 0.6459 | 0.90 | snare | scope |
 | bor_tax_exemption_nl | 0.6855 | 0.80 | tangled_rope | 0.6855 | 0.90 | snare | scope |
 | brain_network_paradigm_2026 | 0.6459 | 0.80 | indexically_opaque | 0.6459 | 0.90 | tangled_rope | scope |
@@ -8430,6 +8481,10 @@ tier_a_pair(cell(institutional,global), cell(institutional,national)).
 | champions_bass_fishing_exclusion | 1.0000 | 0.90 | tangled_rope | 1.0000 | 1.00 | snare | scope |
 | child_marriage | 0.6459 | 0.80 | tangled_rope | 0.6459 | 0.90 | snare | scope |
 | child_marriage | 0.6855 | 0.80 | tangled_rope | 0.6855 | 0.90 | snare | scope |
+| china_africa_zero_tariff_2026 | 0.6855 | 1.10 | unknown | 0.6855 | 1.20 | tangled_rope | scope |
+| china_africa_zero_tariff_2026 | 0.7250 | 0.90 | rope | 0.7250 | 1.00 | unknown | scope |
+| china_africa_zero_tariff_2026 | 0.8625 | 0.90 | unknown | 0.8625 | 1.00 | tangled_rope | scope |
+| china_africa_zero_tariff_2026 | 1.0000 | 0.80 | unknown | 1.0000 | 0.90 | tangled_rope | scope |
 | china_ev_export_oversupply | 0.6855 | 1.10 | tangled_rope | 0.6855 | 1.20 | snare | scope |
 | china_ev_export_oversupply | 0.8625 | 0.90 | tangled_rope | 0.8625 | 1.00 | snare | scope |
 | china_ev_export_oversupply | 1.0000 | 0.80 | tangled_rope | 1.0000 | 0.90 | snare | scope |
@@ -8452,6 +8507,9 @@ tier_a_pair(cell(institutional,global), cell(institutional,national)).
 | climate_event_attribution | 0.6855 | 1.10 | tangled_rope | 0.6855 | 1.20 | snare | scope |
 | climate_event_attribution | 0.8625 | 0.90 | tangled_rope | 0.8625 | 1.00 | snare | scope |
 | climate_event_attribution | 1.0000 | 0.80 | tangled_rope | 1.0000 | 0.90 | snare | scope |
+| climate_policy_extraction | 0.6855 | 0.90 | tangled_rope | 0.6855 | 1.00 | snare | scope |
+| climate_policy_extraction | 0.7250 | 0.90 | tangled_rope | 0.7250 | 1.00 | snare | scope |
+| climate_policy_extraction | 0.8625 | 0.80 | tangled_rope | 0.8625 | 0.90 | snare | scope |
 | climate_target_one_point_five | 0.6459 | 1.10 | rope | 0.6459 | 1.20 | unknown | scope |
 | climate_target_one_point_five | 0.7250 | 1.10 | unknown | 0.7250 | 1.20 | tangled_rope | scope |
 | climate_target_one_point_five | 1.0000 | 0.90 | unknown | 1.0000 | 1.00 | tangled_rope | scope |
@@ -8503,6 +8561,8 @@ tier_a_pair(cell(institutional,global), cell(institutional,national)).
 | college_admissions_market | 0.7250 | 1.10 | tangled_rope | 0.7250 | 1.20 | unknown | scope |
 | college_admissions_market | 0.8625 | 0.90 | tangled_rope | 0.8625 | 1.00 | unknown | scope |
 | college_admissions_market | 1.0000 | 0.90 | tangled_rope | 1.0000 | 1.00 | unknown | scope |
+| colombia_2026_presidential_election | 0.6459 | 0.80 | unknown | 0.6459 | 0.90 | tangled_rope | scope |
+| colombia_2026_presidential_election | 0.6855 | 0.80 | unknown | 0.6855 | 0.90 | tangled_rope | scope |
 | colorado_sbe_decentralization_friction | 0.6459 | 0.90 | tangled_rope | 0.6459 | 1.00 | snare | scope |
 | colorado_sbe_decentralization_friction | 0.6855 | 0.80 | tangled_rope | 0.6855 | 0.90 | snare | scope |
 | colorado_sbe_decentralization_friction | 0.7250 | 0.80 | tangled_rope | 0.7250 | 0.90 | snare | scope |
@@ -8780,6 +8840,10 @@ tier_a_pair(cell(institutional,global), cell(institutional,national)).
 | finnish_debt_adjustment | 0.6855 | 0.80 | tangled_rope | 0.6855 | 0.90 | snare | scope |
 | finnish_debt_adjustment | 0.7250 | 0.80 | tangled_rope | 0.7250 | 0.90 | snare | scope |
 | finnish_ubi_experiment | 0.8625 | 1.10 | scaffold | 0.8625 | 1.20 | unknown | scope |
+| fiscal_equalization_friction | 0.6459 | 0.90 | scaffold | 0.6459 | 1.00 | rope | scope |
+| fiscal_equalization_friction | 0.6855 | 0.80 | scaffold | 0.6855 | 0.90 | rope | scope |
+| fiscal_equalization_friction | 0.7250 | 0.80 | scaffold | 0.7250 | 0.90 | rope | scope |
+| fiscal_equalization_friction | 0.7250 | 0.90 | rope | 0.7250 | 1.00 | unknown | scope |
 | fitts_law_industrial_application | 0.6459 | 1.10 | tangled_rope | 0.6459 | 1.20 | snare | scope |
 | fitts_law_industrial_application | 0.7250 | 0.90 | tangled_rope | 0.7250 | 1.00 | snare | scope |
 | fitts_law_industrial_application | 0.8625 | 0.80 | tangled_rope | 0.8625 | 0.90 | snare | scope |
@@ -9182,10 +9246,10 @@ tier_a_pair(cell(institutional,global), cell(institutional,national)).
 | manganese_catalysis_2026 | 1.0000 | 1.10 | scaffold | 1.0000 | 1.20 | unknown | scope |
 | marriage_market_asymmetry_2026 | 0.6855 | 0.90 | tangled_rope | 0.6855 | 1.00 | snare | scope |
 | marriage_market_asymmetry_2026 | 0.7250 | 0.80 | tangled_rope | 0.7250 | 0.90 | snare | scope |
-| mars_rover_navigational_autonomy | 0.6459 | 0.80 | rope | 0.6459 | 0.90 | unknown | scope |
-| mars_rover_navigational_autonomy | 0.6855 | 0.80 | rope | 0.6855 | 0.90 | unknown | scope |
-| mars_rover_navigational_autonomy | 0.6855 | 0.90 | unknown | 0.6855 | 1.00 | tangled_rope | scope |
-| mars_rover_navigational_autonomy | 0.7250 | 0.80 | unknown | 0.7250 | 0.90 | tangled_rope | scope |
+| mars_rovers_navigational_autonomy | 0.6459 | 0.80 | rope | 0.6459 | 0.90 | unknown | scope |
+| mars_rovers_navigational_autonomy | 0.6855 | 0.80 | rope | 0.6855 | 0.90 | unknown | scope |
+| mars_rovers_navigational_autonomy | 0.6855 | 0.90 | unknown | 0.6855 | 1.00 | tangled_rope | scope |
+| mars_rovers_navigational_autonomy | 0.7250 | 0.80 | unknown | 0.7250 | 0.90 | tangled_rope | scope |
 | mass_market_extinction_2026 | 0.6459 | 0.90 | tangled_rope | 0.6459 | 1.00 | snare | scope |
 | mass_market_extinction_2026 | 0.6855 | 0.80 | tangled_rope | 0.6855 | 0.90 | snare | scope |
 | mass_market_extinction_2026 | 0.7250 | 0.80 | tangled_rope | 0.7250 | 0.90 | snare | scope |
@@ -9644,6 +9708,7 @@ tier_a_pair(cell(institutional,global), cell(institutional,national)).
 | south_china_sea_arbitration_2016_2026 | 0.6855 | 1.10 | tangled_rope | 0.6855 | 1.20 | snare | scope |
 | south_china_sea_arbitration_2016_2026 | 0.8625 | 0.90 | tangled_rope | 0.8625 | 1.00 | snare | scope |
 | south_china_sea_arbitration_2016_2026 | 1.0000 | 0.80 | tangled_rope | 1.0000 | 0.90 | snare | scope |
+| sovereignty_as_arbitrage | 0.6459 | 0.80 | indexically_opaque | 0.6459 | 0.90 | tangled_rope | scope |
 | spain_digital_offensive_2026 | 0.6459 | 0.90 | tangled_rope | 0.6459 | 1.00 | snare | scope |
 | spain_digital_offensive_2026 | 0.6855 | 0.80 | tangled_rope | 0.6855 | 0.90 | snare | scope |
 | st_petersburg_paradox | 1.0000 | 0.90 | tangled_rope | 1.0000 | 1.00 | unknown | scope |
@@ -9725,6 +9790,7 @@ tier_a_pair(cell(institutional,global), cell(institutional,national)).
 | temporal_scale_arbitrage | 0.6459 | 1.10 | tangled_rope | 0.6459 | 1.20 | unknown | scope |
 | temporal_scale_arbitrage | 0.8625 | 0.80 | tangled_rope | 0.8625 | 0.90 | unknown | scope |
 | temporal_scale_arbitrage | 1.0000 | 0.80 | tangled_rope | 1.0000 | 0.90 | unknown | scope |
+| temporal_scarcity | 1.0000 | 1.10 | piton | 1.0000 | 1.20 | unknown | scope |
 | texas_insurance_market_instability | 0.6855 | 1.10 | tangled_rope | 0.6855 | 1.20 | snare | scope |
 | texas_insurance_market_instability | 0.8625 | 0.90 | tangled_rope | 0.8625 | 1.00 | snare | scope |
 | texas_insurance_market_instability | 1.0000 | 0.80 | tangled_rope | 1.0000 | 0.90 | snare | scope |
@@ -9733,6 +9799,9 @@ tier_a_pair(cell(institutional,global), cell(institutional,national)).
 | the_calm_protocol_suppression | 0.6459 | 0.80 | tangled_rope | 0.6459 | 0.90 | snare | scope |
 | the_calm_protocol_suppression | 0.6855 | 0.80 | tangled_rope | 0.6855 | 0.90 | snare | scope |
 | the_wall_procedural_barrier | 0.6459 | 0.80 | tangled_rope | 0.6459 | 0.90 | snare | scope |
+| theatrical_neutrality | 0.6459 | 0.90 | unknown | 0.6459 | 1.00 | snare | scope |
+| theatrical_neutrality | 0.6855 | 0.80 | unknown | 0.6855 | 0.90 | snare | scope |
+| theatrical_neutrality | 0.7250 | 0.80 | unknown | 0.7250 | 0.90 | snare | scope |
 | theory_of_visitors | 1.0000 | 0.90 | tangled_rope | 1.0000 | 1.00 | unknown | scope |
 | tiktok_us_divestiture_mandate | 0.6459 | 0.80 | indexically_opaque | 0.6459 | 0.90 | tangled_rope | scope |
 | tiktok_us_divestiture_mandate | 0.7250 | 1.10 | tangled_rope | 0.7250 | 1.20 | snare | scope |
@@ -9989,9 +10058,9 @@ tier_a_pair(cell(institutional,global), cell(institutional,national)).
 
 | Power Interval | local-national | national-global |
 |----------------|----------|----------|
-| institutional - moderate | 4639 | 4571 |
-| moderate - analytical | 1123 | 630 |
-| analytical - powerless | 1034 | 237 |
+| institutional - moderate | 4665 | 4597 |
+| moderate - analytical | 1142 | 634 |
+| analytical - powerless | 1046 | 239 |
 
 ### Most Transition-Prone Constraints
 
@@ -10019,9 +10088,9 @@ tier_a_pair(cell(institutional,global), cell(institutional,national)).
 | castration_longevity_choice | 15 | indexically_opaque, rope, tangled_rope, unknown |
 ### Recommendation
 
-**81.9% of missed transitions are along the power axis.** Consider adding intermediate power levels (especially between institutional and moderate, where the d-value gap is largest: 0.00 to 0.646).
+**81.8% of missed transitions are along the power axis.** Consider adding intermediate power levels (especially between institutional and moderate, where the d-value gap is largest: 0.00 to 0.646).
 
-**Overall**: 9859 missed transitions affecting 830 of 1022 constraints (81.2%). This is a high rate; grid refinement is recommended.
+**Overall**: 9928 missed transitions affecting 838 of 1033 constraints (81.1%). This is a high rate; grid refinement is recommended.
 
 ---
 

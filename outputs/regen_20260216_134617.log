@@ -1,0 +1,61 @@
+2026-02-16 13:46:17,649 INFO     Log file: /home/scott/bin/structural_dynamics_model/outputs/regen_20260216_134617.log
+2026-02-16 13:46:17,649 INFO     Running structural linter on testsets/ and origsets/…
+2026-02-16 13:46:22,109 INFO     Linter: 1028/1035 passed, 7 with errors → /home/scott/bin/structural_dynamics_model/outputs/lint_errors.txt
+2026-02-16 13:46:22,109 INFO     Source: lint_errors.txt (7 files)
+2026-02-16 13:46:22,129 INFO     Resume filter: 7 → 7 files
+2026-02-16 13:46:35,925 INFO     [1/7] boom_bust_path_dependency (1 errors) [0.0/min, ETA 0min]
+2026-02-16 13:46:35,932 INFO       Generating boom_bust_path_dependency (attempt 1/3)…
+2026-02-16 13:46:35,932 INFO     Creating/refreshing Gemini context cache (TTL=3600s)…
+2026-02-16 13:46:36,992 INFO     HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/cachedContents "HTTP/1.1 200 OK"
+2026-02-16 13:46:37,013 INFO     Cache created: cachedContents/3gb54o2cesjmhk962eqskgaqw9luio4ulrnqtli1 (expires ~2026-02-16T20:46:35.932638)
+2026-02-16 13:46:37,013 INFO     AFC is enabled with max remote calls: 10.
+2026-02-16 13:47:25,872 INFO     HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent "HTTP/1.1 200 OK"
+2026-02-16 13:47:25,913 INFO       PASS boom_bust_path_dependency on attempt 1
+2026-02-16 13:47:25,913 INFO     [2/7] china_africa_zero_tariff_2026 (1 errors) [1.2/min, ETA 5min]
+2026-02-16 13:47:25,914 INFO       Generating china_africa_zero_tariff_2026 (attempt 1/3)…
+2026-02-16 13:47:25,914 INFO     AFC is enabled with max remote calls: 10.
+2026-02-16 13:48:17,697 INFO     HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent "HTTP/1.1 200 OK"
+2026-02-16 13:48:17,754 INFO       PASS china_africa_zero_tariff_2026 on attempt 1
+2026-02-16 13:48:17,754 INFO     [3/7] climate_policy_extraction (3 errors) [1.2/min, ETA 4min]
+2026-02-16 13:48:17,755 INFO       Generating climate_policy_extraction (attempt 1/3)…
+2026-02-16 13:48:17,755 INFO     AFC is enabled with max remote calls: 10.
+2026-02-16 13:49:04,616 INFO     HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent "HTTP/1.1 200 OK"
+2026-02-16 13:49:04,669 INFO       PASS climate_policy_extraction on attempt 1
+2026-02-16 13:49:04,669 INFO     [4/7] fiscal_equalization_friction (1 errors) [1.2/min, ETA 3min]
+2026-02-16 13:49:04,669 INFO       Generating fiscal_equalization_friction (attempt 1/3)…
+2026-02-16 13:49:04,669 INFO     AFC is enabled with max remote calls: 10.
+2026-02-16 13:49:47,492 INFO     HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent "HTTP/1.1 200 OK"
+2026-02-16 13:49:47,534 INFO       PASS fiscal_equalization_friction on attempt 1
+2026-02-16 13:49:47,535 INFO     [5/7] sovereignty_as_arbitrage (2 errors) [1.3/min, ETA 2min]
+2026-02-16 13:49:47,535 INFO       Generating sovereignty_as_arbitrage (attempt 1/3)…
+2026-02-16 13:49:47,535 INFO     AFC is enabled with max remote calls: 10.
+2026-02-16 13:50:27,769 INFO     HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent "HTTP/1.1 200 OK"
+2026-02-16 13:50:27,824 INFO       PASS sovereignty_as_arbitrage on attempt 1
+2026-02-16 13:50:27,825 INFO     [6/7] temporal_scarcity (1 errors) [1.3/min, ETA 2min]
+2026-02-16 13:50:27,825 INFO       Generating temporal_scarcity (attempt 1/3)…
+2026-02-16 13:50:27,825 INFO     AFC is enabled with max remote calls: 10.
+2026-02-16 13:51:28,150 INFO     HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent "HTTP/1.1 200 OK"
+2026-02-16 13:51:28,163 INFO       FAIL temporal_scarcity (attempt 1/3) — 1 error(s): MISSING_SUNSET_CLAUSE: Scaffold with requires_active_enforcement needs narrative_ontology:has_sunset_clause/1.
+2026-02-16 13:51:28,163 INFO       Generating temporal_scarcity (attempt 2/3)…
+2026-02-16 13:51:28,164 INFO     AFC is enabled with max remote calls: 10.
+2026-02-16 13:52:51,005 INFO     HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent "HTTP/1.1 200 OK"
+2026-02-16 13:52:51,012 INFO       FAIL temporal_scarcity (attempt 2/3) — 1 error(s): GENERIC_GROUP: constraint_victim uses generic group 'the_public'. Use a domain-specific group name (e.g., 'payday_lenders' not 'stakeholders').
+2026-02-16 13:52:51,012 INFO       Generating temporal_scarcity (attempt 3/3)…
+2026-02-16 13:52:51,012 INFO     AFC is enabled with max remote calls: 10.
+2026-02-16 13:54:10,652 INFO     HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent "HTTP/1.1 200 OK"
+2026-02-16 13:54:10,730 INFO       PASS temporal_scarcity on attempt 3
+2026-02-16 13:54:10,730 INFO     [7/7] treaty_land_entrenchment (2 errors) [0.8/min, ETA 1min]
+2026-02-16 13:54:10,730 INFO       Generating treaty_land_entrenchment (attempt 1/3)…
+2026-02-16 13:54:10,731 INFO     AFC is enabled with max remote calls: 10.
+2026-02-16 13:55:13,132 INFO     HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent "HTTP/1.1 200 OK"
+2026-02-16 13:55:13,185 INFO       PASS treaty_land_entrenchment on attempt 1
+2026-02-16 13:55:13,185 INFO     
+2026-02-16 13:55:13,185 INFO     ============================================================
+2026-02-16 13:55:13,186 INFO     REGENERATION COMPLETE
+2026-02-16 13:55:13,186 INFO     ============================================================
+2026-02-16 13:55:13,186 INFO       Processed: 7
+2026-02-16 13:55:13,186 INFO       Passed:    7
+2026-02-16 13:55:13,186 INFO       Failed:    0 (→ probsets/)
+2026-02-16 13:55:13,186 INFO       Skipped:   0
+2026-02-16 13:55:13,186 INFO       API errors:0
+2026-02-16 13:55:13,186 INFO       Elapsed:   8.6 min

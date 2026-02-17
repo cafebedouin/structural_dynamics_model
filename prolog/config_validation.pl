@@ -27,7 +27,9 @@
        piton_extraction_ceiling
      Extraction boundaries:
        mountain_extractiveness_min, mountain_extractiveness_max,
-       rope_extractiveness_min
+       rope_extractiveness_min, rope_extraction_ceiling,
+       false_mountain_extraction_threshold,
+       tangled_rope_extraction_floor, tangled_rope_extraction_ceil
      Floors:
        tangled_rope_suppression_floor, tangled_rope_chi_floor,
        tangled_rope_epsilon_floor,
@@ -83,6 +85,9 @@
 
    CLASSIFICATION THRESHOLD CONSISTENCY:
      mountain_extractiveness_max < rope_epsilon_ceiling < snare_epsilon_floor
+   REGISTRY CLASSIFICATION CONSISTENCY:
+     tangled_rope_extraction_floor < tangled_rope_extraction_ceil
+     rope_extraction_ceiling < snare_epsilon_floor
    ================================================================ */
 
 %% validate_config/0
@@ -144,6 +149,10 @@ range_bounded_param(P) :-
         mountain_extractiveness_min,
         mountain_extractiveness_max,
         rope_extractiveness_min,
+        rope_extraction_ceiling,
+        false_mountain_extraction_threshold,
+        tangled_rope_extraction_floor,
+        tangled_rope_extraction_ceil,
         % --- Floors ---
         tangled_rope_suppression_floor,
         tangled_rope_chi_floor,
@@ -362,6 +371,28 @@ config_violation(Msg) :-
     RopeCeil >= SnareFloor,
     format(atom(Msg),
            'CONFIG ERROR: classification overlap: rope_epsilon_ceiling (~w) must be < snare_epsilon_floor (~w)',
+           [RopeCeil, SnareFloor]).
+
+% --- Registry classification consistency ---
+% tangled_rope_extraction_floor < tangled_rope_extraction_ceil
+% rope_extraction_ceiling < snare_epsilon_floor
+
+config_violation(Msg) :-
+    config:param(tangled_rope_extraction_floor, TRFloor),
+    config:param(tangled_rope_extraction_ceil, TRCeil),
+    number(TRFloor), number(TRCeil),
+    TRFloor >= TRCeil,
+    format(atom(Msg),
+           'CONFIG ERROR: registry range invalid: tangled_rope_extraction_floor (~w) must be < tangled_rope_extraction_ceil (~w)',
+           [TRFloor, TRCeil]).
+
+config_violation(Msg) :-
+    config:param(rope_extraction_ceiling, RopeCeil),
+    config:param(snare_epsilon_floor, SnareFloor),
+    number(RopeCeil), number(SnareFloor),
+    RopeCeil >= SnareFloor,
+    format(atom(Msg),
+           'CONFIG ERROR: registry overlap: rope_extraction_ceiling (~w) must be < snare_epsilon_floor (~w)',
            [RopeCeil, SnareFloor]).
 
 % ============================================================

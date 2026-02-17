@@ -23,7 +23,7 @@
 
 run_query :-
     format(user_error, '[query] Loading corpus...~n', []),
-    covering_analysis:load_all_testsets,
+    corpus_loader:load_all_testsets,
     constraint_indexing:default_context(Context),
 
     % Run MaxEnt

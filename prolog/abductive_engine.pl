@@ -720,7 +720,7 @@ abductive_selftest :-
 
     % Load corpus
     format('Loading corpus...~n'),
-    covering_analysis:load_all_testsets,
+    corpus_loader:load_all_testsets,
     constraint_indexing:default_context(Context),
 
     % Run MaxEnt (prerequisite for most triggers)

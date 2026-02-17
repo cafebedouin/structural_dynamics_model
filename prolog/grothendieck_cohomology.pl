@@ -197,7 +197,7 @@ descent_status(C, fails_descent(H1, UniqueTypes)) :-
 %  Computes H0, H1 for all corpus constraints and aggregates.
 corpus_cohomology(Summary) :-
     cohomology_cleanup,
-    covering_analysis:load_all_testsets,
+    corpus_loader:load_all_testsets,
     covering_analysis:all_corpus_constraints(Constraints),
     length(Constraints, N),
     format(user_error, '[cohomology] Computing for ~w constraints...~n', [N]),
@@ -299,7 +299,7 @@ analytical_type(C, Type) :-
 
 cohomology_selftest :-
     format('~n=== Grothendieck Cohomology Selftest ===~n~n'),
-    covering_analysis:load_all_testsets,
+    corpus_loader:load_all_testsets,
 
     corpus_cohomology(Summary),
     Summary = cohomology_summary(

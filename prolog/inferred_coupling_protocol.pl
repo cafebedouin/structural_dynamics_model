@@ -58,7 +58,7 @@ all_measurement_constraints(Cs) :-
 
 run_coupling_protocol :-
     format(user_error, '[coupling] Starting Inferred Coupling Activation Protocol...~n', []),
-    covering_analysis:load_all_testsets,
+    corpus_loader:load_all_testsets,
     covering_analysis:all_corpus_constraints(AllCs),
     length(AllCs, NC),
     format(user_error, '[coupling] Corpus: ~w constraints~n', [NC]),

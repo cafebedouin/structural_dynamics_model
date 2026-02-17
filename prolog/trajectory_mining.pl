@@ -914,7 +914,7 @@ ensure_maxent(Context) :-
 
 trajectory_selftest :-
     format('=== Trajectory Mining Self-Test ===~n~n'),
-    covering_analysis:load_all_testsets,
+    corpus_loader:load_all_testsets,
     constraint_indexing:default_context(Context),
 
     format('Running trajectory mining...~n'),

@@ -714,7 +714,7 @@ maxent_multi_run_contexts([Ctx|Rest], Constraints, NTotal, [Summary|RestSummarie
 
 maxent_selftest :-
     format(user_error, '[maxent] Running self-test...~n', []),
-    covering_analysis:load_all_testsets,
+    corpus_loader:load_all_testsets,
     constraint_indexing:default_context(Context),
     maxent_run(Context, Summary),
     Summary = maxent_summary(NTotal, MeanEntropy, NHighUncertainty, NHard, NSoft),

@@ -103,8 +103,8 @@ Total inferred edges above threshold: **22**
 
 | Metric | Baseline | With Inferred | Delta |
 |--------|----------|---------------|-------|
-| Total edges | 673 | 695 | +22 |
-| Connected components | 793 | 786 | -7 |
+| Total edges | 689 | 711 | +22 |
+| Connected components | 796 | 789 | -7 |
 | Largest component | 39 | 39 | +39-39 |
 | Largest as % of corpus | 3.8% | 3.8% | +0.0% |
 
@@ -145,8 +145,8 @@ Inferred edges that connect previously separate components:
 
 ### Component Merges
 
-- Baseline components: 793
-- After inferred coupling: 786
+- Baseline components: 796
+- After inferred coupling: 789
 - Components merged: 7
 
 ### Merged Component Members

@@ -8,6 +8,7 @@
 :- use_module(config).             % Grounded Weights & Thresholds
 
 % 2. Load Data & Priors
+:- use_module(corpus_loader).        % Centralized testset loading
 :- use_module(domain_priors).
 :- use_module(constraint_instances).
 
