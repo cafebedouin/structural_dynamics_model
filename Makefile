@@ -6,8 +6,11 @@
 # dependencies, enabling parallel execution via `make -j`.
 #
 # Usage:
-#   make              # full pipeline + dashboard
+#   make              # full pipeline + quality gates + dashboard
 #   make -j4          # parallel (4 workers)
+#   make quick        # pipeline + dashboard, skip quality gates
+#   make check        # quality gates only (linter + duplicate checker)
+#   make lint-fix     # auto-fix AI-generated Prolog artifacts
 #   make reports      # category reports + omega + enriched omega + meta
 #   make prolog-analysis  # all Prolog analysis steps
 #   make clean        # remove all generated outputs
@@ -31,9 +34,12 @@ STAMP_DIR  := $(ROOT_DIR)/.stamps
 # ==============================================================================
 # Phony targets
 # ==============================================================================
-.PHONY: all dashboard reports prolog-analysis clean
+.PHONY: all dashboard quick check lint-fix reports prolog-analysis clean
 
 all: dashboard
+
+# Testset files — PREP rebuilds when testsets change
+TESTSET_FILES := $(wildcard $(TESTSETS)/*.pl)
 
 # ==============================================================================
 # Output files — declared for readability
@@ -107,28 +113,44 @@ PROLOG_ANALYSES := $(FINGERPRINT_REPORT) $(ORBIT_STAMP) $(FPN_REPORT) \
                    $(MAXENT_REPORT) $(ABDUCTIVE_REPORT) $(TRAJECTORY_REPORT) \
                    $(COVERING_REPORT) $(GC_REPORT) $(CP_REPORT) $(MAXDIAG_REPORT)
 
-dashboard: $(TYPE_REPORTS) $(OMEGA_DATA) $(OMEGA_ENRICH_STAMP) \
-           $(CORPUS_DATA) $(VARIANCE_REPORT) $(PATTERN_REPORT) $(SUFFICIENCY_REPORT) \
-           $(PROLOG_ANALYSES) $(ORBIT_NORM_STAMP) \
-           $(OUTPUT_TXT) $(PIPELINE_JSON) $(LINT_ERRORS) \
-           $(META_REPORT)
+PIPELINE_OUTPUTS := $(TYPE_REPORTS) $(OMEGA_DATA) $(OMEGA_ENRICH_STAMP) \
+                    $(CORPUS_DATA) $(VARIANCE_REPORT) $(PATTERN_REPORT) $(SUFFICIENCY_REPORT) \
+                    $(PROLOG_ANALYSES) $(ORBIT_NORM_STAMP) \
+                    $(OUTPUT_TXT) $(PIPELINE_JSON) $(META_REPORT)
+
+dashboard: $(PIPELINE_OUTPUTS) $(LINT_ERRORS)
 	echo ""; echo "Running dashboard..."; echo ""
 	bash scripts/pipeline_dashboard.sh
+
+# Quick build: pipeline + dashboard, no quality gates (linter, duplicate check)
+quick: $(PIPELINE_OUTPUTS)
+	echo ""; echo "Running dashboard..."; echo ""
+	bash scripts/pipeline_dashboard.sh
+
+# Quality gates only
+check: $(LINT_ERRORS)
+	echo "[CHECK] Running duplicate checker..."
+	python3 $(PYTHON_DIR)/duplicate_checker.py --dir $(TESTSETS) 2>&1 || true
+	echo "[CHECK] Done."
+
+# Auto-fix AI-generated Prolog artifacts (writes to testset files)
+lint-fix:
+	echo "[FIX] Running Prolog cleaner..."
+	python3 $(PYTHON_DIR)/prolog_cleaner.py $(TESTSETS)/
+	echo "[FIX] Done."
 
 reports: $(TYPE_REPORTS) $(OMEGA_DATA) $(OMEGA_ENRICH_STAMP) $(META_REPORT)
 
 prolog-analysis: $(PROLOG_ANALYSES)
 
 # ==============================================================================
-# PREP — 4 sequential scripts, stamp target
+# PREP — generate build artifacts from testsets (reruns when testsets change)
 # ==============================================================================
 
-$(PREP_STAMP): | $(STAMP_DIR) $(OUTPUT_DIR)
+$(PREP_STAMP): $(TESTSET_FILES) | $(STAMP_DIR) $(OUTPUT_DIR)
 	echo "[PREP] Preparing test suite..."
-	python3 $(PYTHON_DIR)/prolog_cleaner.py $(TESTSETS)/ > /dev/null 2>&1 || true
 	python3 $(PYTHON_DIR)/domain_priors.py --input $(TESTSETS)/ --output $(PROLOG_DIR)/domain_registry.pl > /dev/null 2>&1
 	python3 $(PYTHON_DIR)/python_test_suite.py > /dev/null 2>&1
-	python3 $(PYTHON_DIR)/duplicate_checker.py --dir $(TESTSETS) > /dev/null 2>&1 || true
 	echo "[PREP] Done."
 	touch $@
 

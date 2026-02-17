@@ -118,28 +118,28 @@ Inferred edges that connect previously separate components:
 
 | C1 | Type1 | C2 | Type2 | Strength | Bridge? |
 |----|-------|----|-------|----------|---------|
-| artificial_snow_2026 | unknown | emotional_cycles_2026 | tangled_rope | 0.500 | yes |
-| artificial_snow_2026 | unknown | floating_wall_2026 | snare | 1.000 | yes |
-| artificial_snow_2026 | unknown | iran_war_room_2026 | snare | 1.000 | yes |
-| artificial_snow_2026 | unknown | silklink_2026 | rope | 1.000 | yes |
-| artificial_snow_2026 | unknown | trillion_bond_rush_2026 | unknown | 1.000 | yes |
-| artificial_snow_2026 | unknown | world_factbook_sunset_2026 | snare | 1.000 | yes |
+| artificial_snow_2026 | tangled_rope | emotional_cycles_2026 | tangled_rope | 0.500 | yes |
+| artificial_snow_2026 | tangled_rope | floating_wall_2026 | snare | 1.000 | yes |
+| artificial_snow_2026 | tangled_rope | iran_war_room_2026 | snare | 1.000 | yes |
+| artificial_snow_2026 | tangled_rope | silklink_2026 | rope | 1.000 | yes |
+| artificial_snow_2026 | tangled_rope | trillion_bond_rush_2026 | tangled_rope | 1.000 | yes |
+| artificial_snow_2026 | tangled_rope | world_factbook_sunset_2026 | snare | 1.000 | yes |
 | boltzmann_universality_2026 | rope | emotional_cycles_2026 | tangled_rope | 0.500 | yes |
 | emotional_cycles_2026 | tangled_rope | floating_wall_2026 | snare | 0.500 | yes |
 | emotional_cycles_2026 | tangled_rope | iran_war_room_2026 | snare | 0.500 | yes |
 | emotional_cycles_2026 | tangled_rope | silklink_2026 | rope | 0.500 | yes |
-| emotional_cycles_2026 | tangled_rope | trillion_bond_rush_2026 | unknown | 0.500 | yes |
+| emotional_cycles_2026 | tangled_rope | trillion_bond_rush_2026 | tangled_rope | 0.500 | yes |
 | emotional_cycles_2026 | tangled_rope | world_factbook_sunset_2026 | snare | 0.500 | yes |
 | floating_wall_2026 | snare | iran_war_room_2026 | snare | 1.000 | yes |
 | floating_wall_2026 | snare | silklink_2026 | rope | 1.000 | yes |
-| floating_wall_2026 | snare | trillion_bond_rush_2026 | unknown | 1.000 | yes |
+| floating_wall_2026 | snare | trillion_bond_rush_2026 | tangled_rope | 1.000 | yes |
 | floating_wall_2026 | snare | world_factbook_sunset_2026 | snare | 1.000 | yes |
 | iran_war_room_2026 | snare | silklink_2026 | rope | 1.000 | yes |
-| iran_war_room_2026 | snare | trillion_bond_rush_2026 | unknown | 1.000 | yes |
+| iran_war_room_2026 | snare | trillion_bond_rush_2026 | tangled_rope | 1.000 | yes |
 | iran_war_room_2026 | snare | world_factbook_sunset_2026 | snare | 1.000 | yes |
-| silklink_2026 | rope | trillion_bond_rush_2026 | unknown | 1.000 | yes |
+| silklink_2026 | rope | trillion_bond_rush_2026 | tangled_rope | 1.000 | yes |
 | silklink_2026 | rope | world_factbook_sunset_2026 | snare | 1.000 | yes |
-| trillion_bond_rush_2026 | unknown | world_factbook_sunset_2026 | snare | 1.000 | yes |
+| trillion_bond_rush_2026 | tangled_rope | world_factbook_sunset_2026 | snare | 1.000 | yes |
 
 **22/22 inferred edges are bridges** (connecting previously separate components).
 
@@ -378,134 +378,112 @@ If inferred coupling edges carry contamination, what types are now reachable fro
 Component containing `artificial_snow_2026` and `emotional_cycles_2026`:
   - rope: 2
   - snare: 3
-  - tangled_rope: 1
-  - unknown: 2
+  - tangled_rope: 3
 
 Component containing `artificial_snow_2026` and `floating_wall_2026`:
   - rope: 2
   - snare: 3
-  - tangled_rope: 1
-  - unknown: 2
+  - tangled_rope: 3
 
 Component containing `artificial_snow_2026` and `iran_war_room_2026`:
   - rope: 2
   - snare: 3
-  - tangled_rope: 1
-  - unknown: 2
+  - tangled_rope: 3
 
 Component containing `artificial_snow_2026` and `silklink_2026`:
   - rope: 2
   - snare: 3
-  - tangled_rope: 1
-  - unknown: 2
+  - tangled_rope: 3
 
 Component containing `artificial_snow_2026` and `trillion_bond_rush_2026`:
   - rope: 2
   - snare: 3
-  - tangled_rope: 1
-  - unknown: 2
+  - tangled_rope: 3
 
 Component containing `artificial_snow_2026` and `world_factbook_sunset_2026`:
   - rope: 2
   - snare: 3
-  - tangled_rope: 1
-  - unknown: 2
+  - tangled_rope: 3
 
 Component containing `boltzmann_universality_2026` and `emotional_cycles_2026`:
   - rope: 2
   - snare: 3
-  - tangled_rope: 1
-  - unknown: 2
+  - tangled_rope: 3
 
 Component containing `emotional_cycles_2026` and `floating_wall_2026`:
   - rope: 2
   - snare: 3
-  - tangled_rope: 1
-  - unknown: 2
+  - tangled_rope: 3
 
 Component containing `emotional_cycles_2026` and `iran_war_room_2026`:
   - rope: 2
   - snare: 3
-  - tangled_rope: 1
-  - unknown: 2
+  - tangled_rope: 3
 
 Component containing `emotional_cycles_2026` and `silklink_2026`:
   - rope: 2
   - snare: 3
-  - tangled_rope: 1
-  - unknown: 2
+  - tangled_rope: 3
 
 Component containing `emotional_cycles_2026` and `trillion_bond_rush_2026`:
   - rope: 2
   - snare: 3
-  - tangled_rope: 1
-  - unknown: 2
+  - tangled_rope: 3
 
 Component containing `emotional_cycles_2026` and `world_factbook_sunset_2026`:
   - rope: 2
   - snare: 3
-  - tangled_rope: 1
-  - unknown: 2
+  - tangled_rope: 3
 
 Component containing `floating_wall_2026` and `iran_war_room_2026`:
   - rope: 2
   - snare: 3
-  - tangled_rope: 1
-  - unknown: 2
+  - tangled_rope: 3
 
 Component containing `floating_wall_2026` and `silklink_2026`:
   - rope: 2
   - snare: 3
-  - tangled_rope: 1
-  - unknown: 2
+  - tangled_rope: 3
 
 Component containing `floating_wall_2026` and `trillion_bond_rush_2026`:
   - rope: 2
   - snare: 3
-  - tangled_rope: 1
-  - unknown: 2
+  - tangled_rope: 3
 
 Component containing `floating_wall_2026` and `world_factbook_sunset_2026`:
   - rope: 2
   - snare: 3
-  - tangled_rope: 1
-  - unknown: 2
+  - tangled_rope: 3
 
 Component containing `iran_war_room_2026` and `silklink_2026`:
   - rope: 2
   - snare: 3
-  - tangled_rope: 1
-  - unknown: 2
+  - tangled_rope: 3
 
 Component containing `iran_war_room_2026` and `trillion_bond_rush_2026`:
   - rope: 2
   - snare: 3
-  - tangled_rope: 1
-  - unknown: 2
+  - tangled_rope: 3
 
 Component containing `iran_war_room_2026` and `world_factbook_sunset_2026`:
   - rope: 2
   - snare: 3
-  - tangled_rope: 1
-  - unknown: 2
+  - tangled_rope: 3
 
 Component containing `silklink_2026` and `trillion_bond_rush_2026`:
   - rope: 2
   - snare: 3
-  - tangled_rope: 1
-  - unknown: 2
+  - tangled_rope: 3
 
 Component containing `silklink_2026` and `world_factbook_sunset_2026`:
   - rope: 2
   - snare: 3
-  - tangled_rope: 1
-  - unknown: 2
+  - tangled_rope: 3
 
 Component containing `trillion_bond_rush_2026` and `world_factbook_sunset_2026`:
   - rope: 2
   - snare: 3
-  - tangled_rope: 1
-  - unknown: 2
+  - tangled_rope: 3
 
 ---
 

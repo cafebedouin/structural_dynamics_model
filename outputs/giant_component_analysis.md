@@ -87,9 +87,8 @@ Usage:      run_scenario('file.pl', interval_id).
 |------|-------|----------|
 | mountain | 128 | 0.124 |
 | rope | 51 | 0.049 |
-| tangled_rope | 282 | 0.273 |
+| tangled_rope | 335 | 0.324 |
 | snare | 519 | 0.502 |
-| unknown | 53 | 0.051 |
 
 ### Purity Landscape
 
@@ -110,21 +109,21 @@ Usage:      run_scenario('file.pl', interval_id).
 |------|-------|
 | Min | 0.271 |
 | Q1 | 0.354 |
-| Median | 0.561 |
+| Median | 0.558 |
 | Q3 | 0.575 |
 | Max | 1.000 |
-| Mean | 0.552 |
+| Mean | 0.551 |
 
 #### Purity Zone Distribution
 
 | Zone | Intrinsic | Effective | Shift |
 |------|-----------|-----------|-------|
 | Sound (>= 0.70) | 200 | 198 | 2 |
-| Borderline (0.50 - 0.70) | 362 | 359 | 3 |
-| Warning (0.30 - 0.50) | 434 | 439 | -5 |
+| Borderline (0.50 - 0.70) | 362 | 356 | 6 |
+| Warning (0.30 - 0.50) | 434 | 442 | -8 |
 | Degraded (< 0.30) | 12 | 12 | 0 |
 
-**7 constraints shifted purity zone** due to network contamination effects.
+**10 constraints shifted purity zone** due to network contamination effects.
 
 ### Super-spreaders (Highest Contamination Potential)
 
@@ -132,20 +131,20 @@ Usage:      run_scenario('file.pl', interval_id).
 |------------|------|--------|------------|------------|-----------|
 | us_sanctions_icc_israel_case | snare | 10 | 1.00 | 0.312 | 10.00 |
 | us_usmca_china_leverage | snare | 9 | 1.00 | 0.331 | 9.00 |
-| deferred_risk_realization | snare | 8 | 1.00 | 0.561 | 8.00 |
+| deferred_risk_realization | snare | 8 | 1.00 | 0.551 | 8.00 |
 | hypernormie_equilibrium | snare | 7 | 1.00 | 0.520 | 7.00 |
 | climate_event_attribution | snare | 6 | 1.00 | 0.312 | 6.00 |
 | carbon_credit_markets_2026 | snare | 5 | 1.00 | 0.352 | 5.00 |
 | tiktok_us_divestiture_mandate | tangled_rope | 9 | 0.50 | 0.420 | 4.50 |
 | adversarial_truth_decay | snare | 4 | 1.00 | 0.575 | 4.00 |
-| civilizational_maintenance_debt | tangled_rope | 7 | 0.50 | 0.461 | 3.50 |
+| civilizational_maintenance_debt | tangled_rope | 7 | 0.50 | 0.451 | 3.50 |
 | ai_nonconsensual_content_facilitation | snare | 3 | 1.00 | 0.575 | 3.00 |
 | rare_earth_hydrogen_extraction | tangled_rope | 5 | 0.50 | 0.529 | 2.50 |
 | ai_adoption_stigma | snare | 2 | 1.00 | 0.312 | 2.00 |
-| eu_mercosur_trade_agreement | tangled_rope | 3 | 0.50 | 0.606 | 1.50 |
+| erasmus_rejoining_scaffold | tangled_rope | 3 | 0.50 | 0.394 | 1.50 |
 | academic_fashion_modernism_2026 | snare | 1 | 1.00 | 0.354 | 1.00 |
-| boom_bust_path_dependency | rope | 7 | 0.10 | 0.585 | 0.70 |
-| academic_peer_review_gatekeeping | tangled_rope | 1 | 0.50 | 0.310 | 0.50 |
+| boom_bust_path_dependency | rope | 7 | 0.10 | 0.552 | 0.70 |
+| abstraction_leakage | tangled_rope | 1 | 0.50 | 0.312 | 0.50 |
 | open_source_commons | rope | 4 | 0.10 | 0.991 | 0.40 |
 | ice_memory_archive | rope | 3 | 0.10 | 0.833 | 0.30 |
 | cuny_light_2026 | rope | 2 | 0.10 | -1.000 | 0.20 |
@@ -225,14 +224,14 @@ The edge set is context-independent (edges come from `affects_constraint`, `infe
 
 | Type | Institutional/Local | Moderate/National | Analytical/Global (default) |
 |------|------|------|------|
-| mountain | 32 | 32 | 128 |
+| mountain | 114 | 114 | 128 |
 | rope | 758 | 61 | 51 |
 | scaffold | 52 | 14 | 0 |
-| tangled_rope | 105 | 426 | 282 |
+| tangled_rope | 105 | 485 | 335 |
 | piton | 0 | 0 | 0 |
 | snare | 0 | 359 | 519 |
 | indexically_opaque | 4 | 0 | 0 |
-| unknown | 82 | 141 | 53 |
+| unknown | 0 | 0 | 0 |
 
 ### Contamination Source Comparison
 
@@ -241,8 +240,8 @@ Number of constraints that are active contamination sources (type strength > 0, 
 | Context | Snare | Piton | Tangled Rope | Scaffold | Total Sources |
 |---------|-------|-------|-------------|----------|---------------|
 | Institutional/Local | 0 | 0 | 105 | 52 | 157 |
-| Moderate/National | 359 | 0 | 426 | 14 | 799 |
-| Analytical/Global (default) | 519 | 0 | 282 | 0 | 801 |
+| Moderate/National | 359 | 0 | 485 | 14 | 858 |
+| Analytical/Global (default) | 519 | 0 | 335 | 0 | 854 |
 
 ### Key Finding
 

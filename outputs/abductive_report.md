@@ -6,19 +6,19 @@
 
 | Property | Value |
 |----------|-------|
-| **Total hypotheses** | 33 |
-| **Genuine findings** | 12 |
-| **Override artifacts** | 21 |
+| **Total hypotheses** | 36 |
+| **Genuine findings** | 10 |
+| **Override artifacts** | 26 |
 | **Subsystems available** | [maxent,dirac,drift,signature,mismatch,fingerprint] |
 
 ### Hypothesis Counts by Class
 
 | Class | Count | Category |
 |-------|-------|----------|
-| signature_override_artifact | 21 | artifact |
+| signature_override_artifact | 26 | artifact |
 | deep_deception | 0 | genuine |
 | metric_structural_divergence | 0 | genuine |
-| confirmed_liminal | 12 | genuine |
+| confirmed_liminal | 10 | genuine |
 | coverage_gap | 0 | genuine |
 | accelerating_pathology | 0 | genuine |
 | contamination_cascade | 0 | genuine |
@@ -32,10 +32,10 @@ How many MaxEnt hard disagreements are explained by known signature overrides?
 
 | Metric | Count |
 |--------|-------|
-| **Total hard disagreements** | 163 |
-| **Explained by override** | 21 |
-| **Unexplained** | 142 |
-| **Explanation rate** | 12.9% |
+| **Total hard disagreements** | 177 |
+| **Explained by override** | 26 |
+| **Unexplained** | 151 |
+| **Explanation rate** | 14.7% |
 
 A significant portion of hard disagreements are mechanistic artifacts of known signature override rules. These constraints have metrics that predict one type, but a structural signature unconditionally forces a different classification.
 
@@ -43,28 +43,26 @@ A significant portion of hard disagreements are mechanistic artifacts of known s
 
 | Signature | Count |
 |-----------|-------|
-| false_ci_rope | 21 |
+| false_ci_rope | 26 |
 
 ## Genuine Findings
 
-### confirmed_liminal (12)
+### confirmed_liminal (10)
 
 Triple-confirmed liminality: high entropy + multi-type orbit + active drift events.
 
 | Constraint | Confidence | Anomaly | Key Evidence |
 |------------|------------|---------|--------------|
-| astm_d638_tensile_testing | 0.85 | triple_confirmed_liminality | H=0.40 orbit=[rope,unknown] |
-| boiled_pineapple_trend_2026 | 0.85 | triple_confirmed_liminality | H=0.42 orbit=[rope,snare,tangled_rope] |
-| clawderberg_recursive_slop | 0.85 | triple_confirmed_liminality | H=0.41 orbit=[rope,unknown] |
-| cuban_missile_crisis_excomm_deliberation | 0.85 | triple_confirmed_liminality | H=0.44 orbit=[rope,unknown] |
-| dexy_gold_protocol | 0.85 | triple_confirmed_liminality | H=0.44 orbit=[rope,unknown] |
-| dldr_information_policy | 0.85 | triple_confirmed_liminality | H=0.44 orbit=[rope,unknown] |
-| fiscal_equalization_friction | 0.85 | triple_confirmed_liminality | H=0.43 orbit=[scaffold,unknown] |
-| france_cordon_sanitaire_2026 | 0.85 | triple_confirmed_liminality | H=0.44 orbit=[rope,tangled_rope] |
-| institutional_trust_decay | 0.85 | triple_confirmed_liminality | H=0.44 orbit=[rope,tangled_rope,unknown] |
-| moltbook_agent_theater | 0.85 | triple_confirmed_liminality | H=0.44 orbit=[rope,tangled_rope,unknown] |
-| quine_self_replication | 0.85 | triple_confirmed_liminality | H=0.49 orbit=[mountain,rope] |
-| silklink_2026 | 0.85 | triple_confirmed_liminality | H=0.46 orbit=[rope,scaffold] |
+| astm_d638_tensile_testing | 0.85 | triple_confirmed_liminality | H=0.40 orbit=[rope,tangled_rope] |
+| boiled_pineapple_trend_2026 | 0.85 | triple_confirmed_liminality | H=0.45 orbit=[rope,snare,tangled_rope] |
+| cuban_missile_crisis_excomm_deliberation | 0.85 | triple_confirmed_liminality | H=0.43 orbit=[rope,tangled_rope] |
+| dexy_gold_protocol | 0.85 | triple_confirmed_liminality | H=0.42 orbit=[rope,tangled_rope] |
+| djia_as_economic_barometer | 0.85 | triple_confirmed_liminality | H=0.41 orbit=[rope,tangled_rope] |
+| dldr_information_policy | 0.85 | triple_confirmed_liminality | H=0.44 orbit=[rope,tangled_rope] |
+| fiscal_equalization_friction | 0.85 | triple_confirmed_liminality | H=0.42 orbit=[scaffold,tangled_rope] |
+| france_cordon_sanitaire_2026 | 0.85 | triple_confirmed_liminality | H=0.42 orbit=[rope,tangled_rope] |
+| quine_self_replication | 0.85 | triple_confirmed_liminality | H=0.52 orbit=[mountain,rope] |
+| silklink_2026 | 0.85 | triple_confirmed_liminality | H=0.47 orbit=[rope,scaffold] |
 
 ## Highest-Confidence Hypotheses (Top 20)
 
@@ -72,22 +70,20 @@ Triple-confirmed liminality: high entropy + multi-type orbit + active drift even
 |------|------------|-------|------------|---------|
 | 1 | silklink_2026 | confirmed_liminal | 0.85 | triple_confirmed_liminality |
 | 2 | quine_self_replication | confirmed_liminal | 0.85 | triple_confirmed_liminality |
-| 3 | moltbook_agent_theater | confirmed_liminal | 0.85 | triple_confirmed_liminality |
-| 4 | institutional_trust_decay | confirmed_liminal | 0.85 | triple_confirmed_liminality |
-| 5 | france_cordon_sanitaire_2026 | confirmed_liminal | 0.85 | triple_confirmed_liminality |
-| 6 | fiscal_equalization_friction | confirmed_liminal | 0.85 | triple_confirmed_liminality |
-| 7 | dldr_information_policy | confirmed_liminal | 0.85 | triple_confirmed_liminality |
-| 8 | dexy_gold_protocol | confirmed_liminal | 0.85 | triple_confirmed_liminality |
-| 9 | cuban_missile_crisis_excomm_deliberation | confirmed_liminal | 0.85 | triple_confirmed_liminality |
-| 10 | clawderberg_recursive_slop | confirmed_liminal | 0.85 | triple_confirmed_liminality |
-| 11 | boiled_pineapple_trend_2026 | confirmed_liminal | 0.85 | triple_confirmed_liminality |
-| 12 | astm_d638_tensile_testing | confirmed_liminal | 0.85 | triple_confirmed_liminality |
+| 3 | france_cordon_sanitaire_2026 | confirmed_liminal | 0.85 | triple_confirmed_liminality |
+| 4 | fiscal_equalization_friction | confirmed_liminal | 0.85 | triple_confirmed_liminality |
+| 5 | dldr_information_policy | confirmed_liminal | 0.85 | triple_confirmed_liminality |
+| 6 | djia_as_economic_barometer | confirmed_liminal | 0.85 | triple_confirmed_liminality |
+| 7 | dexy_gold_protocol | confirmed_liminal | 0.85 | triple_confirmed_liminality |
+| 8 | cuban_missile_crisis_excomm_deliberation | confirmed_liminal | 0.85 | triple_confirmed_liminality |
+| 9 | boiled_pineapple_trend_2026 | confirmed_liminal | 0.85 | triple_confirmed_liminality |
+| 10 | astm_d638_tensile_testing | confirmed_liminal | 0.85 | triple_confirmed_liminality |
 
 ## Investigation Queue
 
 Suggested next steps grouped by investigation action, sorted by priority.
 
-### monitor_drift (12 constraints)
+### monitor_drift (10 constraints)
 
 Track temporal evolution of these constraints across measurement periods.
 
@@ -95,15 +91,14 @@ Track temporal evolution of these constraints across measurement periods.
 |------------|-------|------------|
 | silklink_2026 | confirmed_liminal | 0.85 |
 | quine_self_replication | confirmed_liminal | 0.85 |
-| moltbook_agent_theater | confirmed_liminal | 0.85 |
-| institutional_trust_decay | confirmed_liminal | 0.85 |
 | france_cordon_sanitaire_2026 | confirmed_liminal | 0.85 |
 | fiscal_equalization_friction | confirmed_liminal | 0.85 |
 | dldr_information_policy | confirmed_liminal | 0.85 |
+| djia_as_economic_barometer | confirmed_liminal | 0.85 |
 | dexy_gold_protocol | confirmed_liminal | 0.85 |
 | cuban_missile_crisis_excomm_deliberation | confirmed_liminal | 0.85 |
-| clawderberg_recursive_slop | confirmed_liminal | 0.85 |
-| ... | (2 more) | |
+| boiled_pineapple_trend_2026 | confirmed_liminal | 0.85 |
+| astm_d638_tensile_testing | confirmed_liminal | 0.85 |
 
 ---
 *End of abductive report*

@@ -10,7 +10,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** natural_law
-*   **Orbit Signature:** `[mountain, unknown]`
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -19,7 +19,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** natural_law
-*   **Orbit Signature:** `[mountain, unknown]`
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -28,7 +28,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** natural_law
-*   **Orbit Signature:** `[mountain, unknown]`
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -37,7 +37,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** natural_law
-*   **Orbit Signature:** `[mountain, unknown]`
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -55,7 +55,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** natural_law
-*   **Orbit Signature:** `[mountain, unknown]`
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -64,7 +64,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** natural_law
-*   **Orbit Signature:** `[mountain, unknown]`
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -73,7 +73,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** natural_law
-*   **Orbit Signature:** `[mountain, unknown]`
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -82,7 +82,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** natural_law
-*   **Orbit Signature:** `[mountain, unknown]`
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -91,7 +91,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** natural_law
-*   **Orbit Signature:** `[mountain, unknown]`
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -100,7 +100,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** natural_law
-*   **Orbit Signature:** `[mountain, unknown]`
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -127,7 +127,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** natural_law
-*   **Orbit Signature:** `[mountain, unknown]`
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -136,7 +136,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** natural_law
-*   **Orbit Signature:** `[mountain, unknown]`
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -145,7 +145,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** natural_law
-*   **Orbit Signature:** `[mountain, unknown]`
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -154,7 +154,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** natural_law
-*   **Orbit Signature:** `[mountain, unknown]`
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -163,7 +163,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** natural_law
-*   **Orbit Signature:** `[mountain, unknown]`
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -172,7 +172,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** natural_law
-*   **Orbit Signature:** `[mountain, unknown]`
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -199,7 +199,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** natural_law
-*   **Orbit Signature:** `[mountain, unknown]`
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -244,7 +244,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** natural_law
-*   **Orbit Signature:** `[mountain, unknown]`
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -253,7 +253,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** natural_law
-*   **Orbit Signature:** `[mountain, unknown]`
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -271,7 +271,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** natural_law
-*   **Orbit Signature:** `[mountain, unknown]`
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -289,7 +289,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** natural_law
-*   **Orbit Signature:** `[mountain, unknown]`
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -316,7 +316,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** natural_law
-*   **Orbit Signature:** `[mountain, unknown]`
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -334,7 +334,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** natural_law
-*   **Orbit Signature:** `[mountain, unknown]`
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -352,7 +352,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** natural_law
-*   **Orbit Signature:** `[mountain, unknown]`
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -361,7 +361,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** natural_law
-*   **Orbit Signature:** `[mountain, unknown]`
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -370,7 +370,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** natural_law
-*   **Orbit Signature:** `[mountain, unknown]`
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -379,7 +379,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** natural_law
-*   **Orbit Signature:** `[mountain, unknown]`
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -388,7 +388,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** natural_law
-*   **Orbit Signature:** `[mountain, unknown]`
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -397,7 +397,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** natural_law
-*   **Orbit Signature:** `[mountain, unknown]`
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -406,7 +406,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** natural_law
-*   **Orbit Signature:** `[mountain, unknown]`
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -424,7 +424,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** natural_law
-*   **Orbit Signature:** `[mountain, unknown]`
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -433,7 +433,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** natural_law
-*   **Orbit Signature:** `[mountain, unknown]`
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -442,7 +442,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** natural_law
-*   **Orbit Signature:** `[mountain, unknown]`
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -451,7 +451,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** natural_law
-*   **Orbit Signature:** `[mountain, unknown]`
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -460,7 +460,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** natural_law
-*   **Orbit Signature:** `[mountain, unknown]`
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -469,7 +469,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** natural_law
-*   **Orbit Signature:** `[mountain, unknown]`
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -478,7 +478,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** natural_law
-*   **Orbit Signature:** `[mountain, unknown]`
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -487,7 +487,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** natural_law
-*   **Orbit Signature:** `[mountain, unknown]`
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -505,7 +505,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** natural_law
-*   **Orbit Signature:** `[mountain, unknown]`
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -514,7 +514,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** natural_law
-*   **Orbit Signature:** `[mountain, unknown]`
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -523,7 +523,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** natural_law
-*   **Orbit Signature:** `[mountain, unknown]`
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -550,7 +550,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** natural_law
-*   **Orbit Signature:** `[mountain, unknown]`
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -559,7 +559,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** natural_law
-*   **Orbit Signature:** `[mountain, unknown]`
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -568,7 +568,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** natural_law
-*   **Orbit Signature:** `[mountain, unknown]`
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -577,7 +577,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** natural_law
-*   **Orbit Signature:** `[mountain, unknown]`
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -595,7 +595,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** natural_law
-*   **Orbit Signature:** `[mountain, unknown]`
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -613,7 +613,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** natural_law
-*   **Orbit Signature:** `[mountain, unknown]`
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -622,7 +622,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** natural_law
-*   **Orbit Signature:** `[mountain, unknown]`
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -631,7 +631,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** natural_law
-*   **Orbit Signature:** `[mountain, unknown]`
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -640,7 +640,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** natural_law
-*   **Orbit Signature:** `[mountain, unknown]`
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -649,7 +649,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** natural_law
-*   **Orbit Signature:** `[mountain, unknown]`
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -658,7 +658,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** natural_law
-*   **Orbit Signature:** `[mountain, unknown]`
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -676,7 +676,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** natural_law
-*   **Orbit Signature:** `[mountain, unknown]`
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -694,7 +694,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** natural_law
-*   **Orbit Signature:** `[mountain, unknown]`
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -739,7 +739,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** natural_law
-*   **Orbit Signature:** `[mountain, unknown]`
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -748,7 +748,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** natural_law
-*   **Orbit Signature:** `[mountain, unknown]`
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -757,7 +757,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** natural_law
-*   **Orbit Signature:** `[mountain, unknown]`
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -766,7 +766,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** natural_law
-*   **Orbit Signature:** `[mountain, unknown]`
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -775,7 +775,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** natural_law
-*   **Orbit Signature:** `[mountain, unknown]`
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -784,7 +784,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** natural_law
-*   **Orbit Signature:** `[mountain, unknown]`
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -793,7 +793,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** natural_law
-*   **Orbit Signature:** `[mountain, unknown]`
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -802,7 +802,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** natural_law
-*   **Orbit Signature:** `[mountain, unknown]`
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -811,7 +811,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** natural_law
-*   **Orbit Signature:** `[mountain, unknown]`
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -820,7 +820,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** natural_law
-*   **Orbit Signature:** `[mountain, unknown]`
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -829,7 +829,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** natural_law
-*   **Orbit Signature:** `[mountain, unknown]`
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -838,7 +838,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** natural_law
-*   **Orbit Signature:** `[mountain, unknown]`
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -847,7 +847,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** natural_law
-*   **Orbit Signature:** `[mountain, unknown]`
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -856,7 +856,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** natural_law
-*   **Orbit Signature:** `[mountain, unknown]`
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -865,7 +865,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** natural_law
-*   **Orbit Signature:** `[mountain, unknown]`
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -874,7 +874,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** natural_law
-*   **Orbit Signature:** `[mountain, unknown]`
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -883,7 +883,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** natural_law
-*   **Orbit Signature:** `[mountain, unknown]`
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -892,7 +892,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** natural_law
-*   **Orbit Signature:** `[mountain, unknown]`
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -901,7 +901,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** natural_law
-*   **Orbit Signature:** `[mountain, unknown]`
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -910,7 +910,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** natural_law
-*   **Orbit Signature:** `[mountain, unknown]`
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -928,7 +928,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** natural_law
-*   **Orbit Signature:** `[mountain, unknown]`
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -937,7 +937,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** natural_law
-*   **Orbit Signature:** `[mountain, unknown]`
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -946,7 +946,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** natural_law
-*   **Orbit Signature:** `[mountain, unknown]`
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -955,7 +955,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** natural_law
-*   **Orbit Signature:** `[mountain, unknown]`
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -973,7 +973,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** natural_law
-*   **Orbit Signature:** `[mountain, unknown]`
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -1000,7 +1000,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** natural_law
-*   **Orbit Signature:** `[mountain, unknown]`
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -1009,7 +1009,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** natural_law
-*   **Orbit Signature:** `[mountain, unknown]`
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---
@@ -1027,7 +1027,7 @@ This report lists all constraints that are consistently classified as 'mountain'
 
 *   **Claimed Type:** `mountain`
 *   **Structural Signature Analysis:** natural_law
-*   **Orbit Signature:** `[mountain, unknown]`
+*   **Orbit Signature:** `[mountain]`
 *   **Perspectival Agreement:** Confirmed. All tested perspectives agree on the 'mountain' classification.
 
 ---

@@ -68,7 +68,7 @@ Greedy set cover selected **9** cells (out of 12):
 8. `mo/nat`
 9. `an/glo`
 
-**69 unique grid signatures** across the corpus.
+**68 unique grid signatures** across the corpus.
 
 ### Embedded Prolog Facts
 

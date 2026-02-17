@@ -108,7 +108,7 @@ N/A
     *   **Institutional (Manager) View:** `scaffold`
     *   **Analytical View:** `snare`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `[scaffold, snare, unknown]`
+*   **Orbit Signature:** `[scaffold, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Generated Omega:** Constraint mit_tfus_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -127,7 +127,7 @@ N/A
     *   **Institutional (Manager) View:** `scaffold`
     *   **Analytical View:** `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `[scaffold, tangled_rope, unknown]`
+*   **Orbit Signature:** `[scaffold, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Generated Omega:** Constraint portugal_ad_stability_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -259,7 +259,7 @@ N/A
     *   **Institutional (Manager) View:** `scaffold`
     *   **Analytical View:** `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `[rope, scaffold, unknown]`
+*   **Orbit Signature:** `[rope, scaffold, tangled_rope]`
 *   **Related Gap/Alert:** ! GAP: general_type_mismatch (powerless: tangled_rope, institutional: scaffold)
 *   **Generated Omega:** Constraint erasmus_rejoining_scaffold appears as tangled_rope to individuals but scaffold to institutions...
 *   **Suggested Resolution Strategy:**
@@ -315,7 +315,7 @@ N/A
     *   **Institutional (Manager) View:** `scaffold`
     *   **Analytical View:** `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `[scaffold, unknown]`
+*   **Orbit Signature:** `[scaffold, tangled_rope]`
 *   **Related Gap/Alert:** ! GAP: general_type_mismatch (powerless: snare, institutional: scaffold)
 *   **Generated Omega:** Constraint maha_recovery_2026 appears as snare to individuals but scaffold to institutions...
 *   **Suggested Resolution Strategy:**

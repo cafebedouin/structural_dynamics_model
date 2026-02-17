@@ -5,9 +5,9 @@
 ## Summary
 
 - **Constraints analyzed**: 1033
-- **Orbit families**: 25
+- **Orbit families**: 19
 - **Single-type families** (gauge-invariant): 3
-- **Multi-type families** (gauge-variant): 22
+- **Multi-type families** (gauge-variant): 16
 - **Largest family**: [rope,snare] (315 constraints)
 
 ## Family Inventory
@@ -334,6 +334,240 @@ Families sorted by population (largest first).
 - `zipfs_law`
 - `zombie_reasoning_2026`
 
+### `[rope,tangled_rope]` — 229 constraints
+
+*Two-type: pure vs tangled coordination*
+
+- `abstraction_leakage`
+- `access_arbitrage`
+- `adverse_possession`
+- `advice_as_dangerous_gift`
+- `aging_longevity_tests`
+- `ai_edu_decentralization`
+- `ai_training_data_dependency`
+- `alzheimers_levetiracetam`
+- `armra_colostrum_regulation`
+- `arrows_impossibility_theorem`
+- `artificial_snow_2026`
+- `asce_7_22_seismic_design`
+- `astm_d638_tensile_testing`
+- `atrophied_optimization_piton`
+- `availability_heuristic`
+- `bayes_theorem_cognitive_bias`
+- `beehiiv_platform_model`
+- `bgs_eigenvector_thermalization`
+- `big_data_astrophysics_arbitrage`
+- `blackstone_carried_interest_taxation`
+- `bnpl_payment_systems`
+- `board_of_peace_2026`
+- `boltzmann_universality_2026`
+- `brazil_2026_general_elections`
+- `buffons_needle_pi_estimation`
+- `burden_of_proof_legal_criminal`
+- `burden_of_proof_scientific`
+- `capital_rotation_ai_narrative`
+- `champions_bass_fishing_exclusion`
+- `china_africa_zero_tariff_2026`
+- `choice_architecture_design`
+- `civilizational_maintenance_debt`
+- `clawderberg_recursive_slop`
+- `cma`
+- `cmr_001`
+- `coalition_disinfo_framework_2026`
+- `cobra_effect`
+- `coinbase_crypto_volatility`
+- `cold_dark_matter_paradigm`
+- `college_admissions_market`
+- `colombia_2026_presidential_election`
+- `comitatus_bond`
+- `compounding_logic`
+- `confirmation_bias`
+- `constraint_lagrange_multipliers`
+- `constraint_riemann_mapping`
+- `constraint_yoneda`
+- `cost_of_observation`
+- `cow_field_poop`
+- `creative_commons_licensing`
+- `crispr_genomic_rewrite_2026`
+- `cs_ecmo_bridge`
+- `cuban_missile_crisis_excomm_deliberation`
+- `data_replication_paradox`
+- `decision_latency_mismatch`
+- `deferential_realism_framework`
+- `dexy_gold_protocol`
+- `djia_as_economic_barometer`
+- `dldr_information_policy`
+- `dutch_minority_govt_2026`
+- `edelman_2026_developing_volatility`
+- `education_unbundling_implementation`
+- `electrification_scale_2026`
+- `em_clinical_guidelines`
+- `empty_tomb_transformation`
+- `ergo_mixer_protocol`
+- `ergo_storage_rent`
+- `eu_affordable_housing_initiative`
+- `eu_deforestation_regulation`
+- `eu_renewable_energy_mandate`
+- `eurozone_fragmentation_2026`
+- `evfta_trade_agreement`
+- `extraordinary_narrative_shift`
+- `faa_boeing_regulatory_capture`
+- `factional_instability`
+- `fmeca_procedures_1980`
+- `fnl_shadow_probe`
+- `framing_effect`
+- `france_2027_presidential_election`
+- `france_cordon_sanitaire_2026`
+- `franchisee_corporate_squeeze`
+- `gemini_scientific_advancement`
+- `genetic_predisposition`
+- `germany_tennet_takeover`
+- `goodstein_theorem_finite_proof`
+- `gpt5_codex_dev_cycle`
+- `gpt_store_marketplace`
+- `graph_coloring_complexity`
+- `grete_samsa_transition`
+- `gs1_gln_identification`
+- `gs1_standardized_identification`
+- `gs_market_clearing`
+- `guinea_worm_eradication`
+- `hanlons_razor`
+- `hasbro_licensing_restriction`
+- `hegemonic_entropy_2026`
+- `hershey_salt_strategy`
+- `hoa_covenants`
+- `hp_liberalism`
+- `hydra_game`
+- `india_semi_mission`
+- `institutional_inertia_lock`
+- `institutional_trust_decay`
+- `insult_wisdom_training`
+- `israel_egypt_gas_deal`
+- `israel_electoral_threshold`
+- `israel_surplus_vote_agreements`
+- `iterated_function_system_convergence`
+- `ivt_accessibility_barrier`
+- `jevons_paradox`
+- `jupiter_composition_knowledge_gap`
+- `keltner_relationship_evaluation`
+- `kjv_textual_authority`
+- `labor_union_dues`
+- `landscape_of_fear_2026`
+- `law_of_diminishing_returns`
+- `lcdm_hubble_tension`
+- `lcdm_small_scale_anomalies`
+- `lindy_effect`
+- `linguistic_relativity_cultural_framing`
+- `lorenz_attractor_dynamics`
+- `lsd_microdosing_professional_openness`
+- `magna_carta_liberties`
+- `manga_distribution_duopoly`
+- `mars_rovers_navigational_autonomy`
+- `matching_market_congestion_externality`
+- `med_diet_consensus_2026`
+- `meta_nuclear_power_agreement`
+- `migration_decision_threshold`
+- `mil_std_461g_emi_control`
+- `mil_std_810f_tailoring`
+- `minimax_theorem_game_equilibrium`
+- `moltbook_agent_theater`
+- `monetary_regime_transition`
+- `moores_law`
+- `nato_arctic_defense_cooperation`
+- `nds_2022_pacing_challenge`
+- `negative_emissions_arbitrage`
+- `net_zero_stabilization`
+- `neural_interoperability`
+- `neurodiversity_spectrum`
+- `news_paywall_inequality`
+- `nfl_superbowl_halftime_exclusivity`
+- `noether_isomorphism_access`
+- `north_sea_wind_grid`
+- `notary_ink_dependency`
+- `ny_private_school_discount`
+- `nyc_metrocard_art_licensing`
+- `olympic_legacy_curling_investment`
+- `olympic_medal_allocation`
+- `omega1_patching_process`
+- `omelet_perfection_complexity`
+- `oscar_campaign_spending`
+- `overton_window`
+- `paris_municipal_reform_2026`
+- `parkinsons_law`
+- `participatory_observer_hypothesis`
+- `paxsilica_framework`
+- `plastic_asphalt_mandate`
+- `pna`
+- `politeness_face_negotiation`
+- `postman_survival_protocol`
+- `power_set_axiomatic_extraction`
+- `private_identity_integration`
+- `publishing_embargo`
+- `quantum_entanglement_protocol`
+- `qwerty_vs_dvorak`
+- `rare_earth_hydrogen_extraction`
+- `rare_earth_seabed_mining`
+- `regulatory_capture`
+- `repair_probe_incomplete`
+- `rfc9293_state_machine`
+- `ritual_transition_scaffold`
+- `rosen_bridge_protocol`
+- `rotation_seven_black_soil`
+- `royal_navy_middle_east_withdrawal`
+- `rule_update_failure`
+- `sa_renewable_price_differential`
+- `sadhu_integrity_protocol`
+- `sat_csp_complexity`
+- `satellite_d2m_standard`
+- `scientific_paradigm_lifecycle`
+- `semiconductor_mission_2026`
+- `ship_of_theseus`
+- `shitty_feedback_handling`
+- `shobies_existential_commitment`
+- `skills_based_hiring`
+- `smartphone_ubiquity`
+- `social_loafing`
+- `social_media_participation_threshold`
+- `social_narrative_casting`
+- `somatic_focusing_awareness`
+- `sorites_paradox`
+- `sovereignty_as_arbitrage`
+- `st_petersburg_paradox`
+- `stable_marriage_coordination`
+- `tcp_rfc9293_interoperability`
+- `teaching_horses_to_sing`
+- `temporal_scale_arbitrage`
+- `theory_of_visitors`
+- `tiktok_us_divestiture_mandate`
+- `trade_secret_law`
+- `tragedy_of_the_commons`
+- `transformer_self_attention`
+- `transient_event_detection`
+- `trivial_topology_info_asymmetry`
+- `trump_critical_minerals`
+- `trump_making_china_great_2026`
+- `tsp_computational_complexity`
+- `tsp_duplicate_elimination`
+- `uk_necc_formation`
+- `ukraine_tight_gas_pilot`
+- `ulysses_calypso_1904`
+- `ulysses_eumaeus_1904`
+- `ulysses_ithaca_1904`
+- `ulysses_lotus_1904`
+- `ulysses_rocks_1904`
+- `ulysses_tower_1904`
+- `un_high_seas_treaty_2026`
+- `unclos_2026`
+- `union_protection_underperformance`
+- `us_labor_mobility`
+- `us_legal_standard_reasonable_doubt`
+- `us_tariffs_2025`
+- `visa_ipo_regulatory_compliance`
+- `visa_judgment_sharing_agreement`
+- `wikipedia_notability_requirement_2026`
+- `working_dog_training`
+- `yc_equity_squeeze`
+
 ### `[rope,snare,tangled_rope]` — 167 constraints
 
 *Three-type: full rope-tangled-snare gauge structure with irreducible middle band*
@@ -506,156 +740,124 @@ Families sorted by population (largest first).
 - `wpl_scotland`
 - `yangtze_fishing_ban`
 
-### `[rope,tangled_rope]` — 146 constraints
+### `[mountain]` — 114 constraints
 
-*Two-type: pure vs tangled coordination*
+*Gauge-invariant: immutable restriction from all perspectives*
 
-- `access_arbitrage`
-- `adverse_possession`
-- `aging_longevity_tests`
-- `ai_edu_decentralization`
-- `ai_training_data_dependency`
-- `armra_colostrum_regulation`
-- `arrows_impossibility_theorem`
-- `atrophied_optimization_piton`
-- `availability_heuristic`
-- `bayes_theorem_cognitive_bias`
-- `beehiiv_platform_model`
-- `bgs_eigenvector_thermalization`
-- `bnpl_payment_systems`
-- `board_of_peace_2026`
-- `brazil_2026_general_elections`
-- `buffons_needle_pi_estimation`
-- `burden_of_proof_scientific`
-- `capital_rotation_ai_narrative`
-- `champions_bass_fishing_exclusion`
-- `choice_architecture_design`
-- `civilizational_maintenance_debt`
-- `cmr_001`
-- `coalition_disinfo_framework_2026`
-- `cobra_effect`
-- `coinbase_crypto_volatility`
-- `cold_dark_matter_paradigm`
-- `colombia_2026_presidential_election`
-- `comitatus_bond`
-- `compounding_logic`
-- `confirmation_bias`
-- `constraint_yoneda`
-- `cow_field_poop`
-- `creative_commons_licensing`
-- `crispr_genomic_rewrite_2026`
-- `data_replication_paradox`
-- `djia_as_economic_barometer`
-- `dutch_minority_govt_2026`
-- `edelman_2026_developing_volatility`
-- `em_clinical_guidelines`
-- `empty_tomb_transformation`
-- `ergo_mixer_protocol`
-- `eu_affordable_housing_initiative`
-- `eu_deforestation_regulation`
-- `eu_renewable_energy_mandate`
-- `eurozone_fragmentation_2026`
-- `evfta_trade_agreement`
-- `extraordinary_narrative_shift`
-- `faa_boeing_regulatory_capture`
-- `fmeca_procedures_1980`
-- `framing_effect`
-- `france_cordon_sanitaire_2026`
-- `franchisee_corporate_squeeze`
-- `genetic_predisposition`
-- `gpt5_codex_dev_cycle`
-- `gpt_store_marketplace`
-- `graph_coloring_complexity`
-- `hanlons_razor`
-- `hasbro_licensing_restriction`
-- `hershey_salt_strategy`
-- `hp_liberalism`
-- `india_semi_mission`
-- `institutional_inertia_lock`
-- `israel_egypt_gas_deal`
-- `israel_electoral_threshold`
-- `israel_surplus_vote_agreements`
-- `iterated_function_system_convergence`
-- `ivt_accessibility_barrier`
-- `jevons_paradox`
-- `kjv_textual_authority`
-- `labor_union_dues`
-- `landscape_of_fear_2026`
-- `law_of_diminishing_returns`
-- `lcdm_hubble_tension`
-- `lcdm_small_scale_anomalies`
-- `linguistic_relativity_cultural_framing`
-- `lorenz_attractor_dynamics`
-- `lsd_microdosing_professional_openness`
-- `magna_carta_liberties`
-- `manga_distribution_duopoly`
-- `mars_rovers_navigational_autonomy`
-- `med_diet_consensus_2026`
-- `meta_nuclear_power_agreement`
-- `mil_std_461g_emi_control`
-- `mil_std_810f_tailoring`
-- `minimax_theorem_game_equilibrium`
-- `monetary_regime_transition`
-- `nato_arctic_defense_cooperation`
-- `nds_2022_pacing_challenge`
-- `news_paywall_inequality`
-- `nfl_superbowl_halftime_exclusivity`
-- `noether_isomorphism_access`
-- `north_sea_wind_grid`
-- `ny_private_school_discount`
-- `nyc_metrocard_art_licensing`
-- `omega1_patching_process`
-- `oscar_campaign_spending`
-- `overton_window`
-- `parkinsons_law`
-- `participatory_observer_hypothesis`
-- `paxsilica_framework`
-- `plastic_asphalt_mandate`
-- `pna`
-- `politeness_face_negotiation`
-- `power_set_axiomatic_extraction`
-- `private_identity_integration`
-- `qwerty_vs_dvorak`
-- `rare_earth_hydrogen_extraction`
-- `rare_earth_seabed_mining`
-- `sa_renewable_price_differential`
-- `sat_csp_complexity`
-- `satellite_d2m_standard`
-- `scientific_paradigm_lifecycle`
-- `semiconductor_mission_2026`
-- `shobies_existential_commitment`
-- `social_loafing`
-- `social_media_participation_threshold`
-- `social_narrative_casting`
-- `sorites_paradox`
-- `sovereignty_as_arbitrage`
-- `st_petersburg_paradox`
-- `stable_marriage_coordination`
-- `theory_of_visitors`
-- `tiktok_us_divestiture_mandate`
-- `trade_secret_law`
-- `transient_event_detection`
-- `trivial_topology_info_asymmetry`
-- `trump_critical_minerals`
-- `trump_making_china_great_2026`
-- `tsp_computational_complexity`
-- `uk_necc_formation`
-- `ukraine_tight_gas_pilot`
-- `ulysses_calypso_1904`
-- `ulysses_eumaeus_1904`
-- `ulysses_ithaca_1904`
-- `ulysses_lotus_1904`
-- `ulysses_rocks_1904`
-- `ulysses_tower_1904`
-- `un_high_seas_treaty_2026`
-- `union_protection_underperformance`
-- `us_labor_mobility`
-- `us_legal_standard_reasonable_doubt`
-- `us_tariffs_2025`
-- `visa_ipo_regulatory_compliance`
-- `visa_judgment_sharing_agreement`
-- `wikipedia_notability_requirement_2026`
-- `yc_equity_squeeze`
+- `banach_fixed_point`
+- `banach_fixed_point_theorem`
+- `banach_tarski_paradox`
+- `base_pair_complementarity`
+- `basel_problem_convergence`
+- `bgs_spectral_universality`
+- `bh_merger_gravitational_infall`
+- `birthday_paradox_collision`
+- `brouwer_fixed_point`
+- `busy_beaver_noncomputability`
+- `c_physical_blue_wavelength`
+- `cantor_set_topology`
+- `cantors_diagonal_argument`
+- `cap_theorem`
+- `central_limit_theorem`
+- `chaitins_omega_undecidability`
+- `church_turing_thesis`
+- `clt_convergence_2026`
+- `collatz_conjecture_determinism`
+- `constraint_borsuk_ulam`
+- `constraint_ftc`
+- `constraint_galois_solvability`
+- `constraint_lorenz_sensitivity`
+- `constraint_nonstandard_arithmetic`
+- `constraint_pythagorean`
+- `constraint_sylow`
+- `constraint_tarski_undefinability`
+- `constraint_twin_prime_conjecture`
+- `continuum_hypothesis_undecidability`
+- `conways_game_of_life_dynamics`
+- `cosmological_evolution_alpha_omega`
+- `countable_infinity_cardinality`
+- `deep_earth_hydrogen_availability`
+- `dunbars_number`
+- `ehrenfest_barrier`
+- `elencher_identity_transformation`
+- `english_chinese_tense_structure`
+- `epigenetics_complexity_2026`
+- `euler_characteristic_topology`
+- `event_fragmentation`
+- `fast_growing_hierarchy`
+- `feigenbaum_universality`
+- `fermat_proof_barrier`
+- `fgh_hierarchy_2026`
+- `finite_simple_group_classification`
+- `fossil_fuel_lock_in`
+- `four_color_theorem_topological_bound`
+- `fundamental_theorem_of_algebra`
+- `gauss_bonnet_topology`
+- `genetic_predisposition_mania`
+- `geophysics_superionic_core`
+- `goedels_incompleteness_theorems`
+- `goldbach_conjecture`
+- `halting_problem_undecidability`
+- `hamiltonian_path_complexity`
+- `hd101584_stellar_evolution`
+- `heine_borel`
+- `heisenberg_uncertainty`
+- `hilbert_hotel_infinite_capacity`
+- `hiv_prep_prevention_2026`
+- `indexical_relativity_core`
+- `kirby_paris_theorem`
+- `kleene_recursion_theorem`
+- `kolmogorov_complexity`
+- `large_cardinals_inaccessibility`
+- `liar_paradox`
+- `litany_of_the_real`
+- `lobs_theorem`
+- `local_vs_global_optima`
+- `lowenheim_skolem_theorem`
+- `lyapunov_stability`
+- `martian_signal_latency`
+- `material_tensile_strength`
+- `minimax_decision_rule`
+- `monty_hall_conditional_probability`
+- `newtons_method_convergence`
+- `no_cloning_theorem`
+- `noether_theorem`
+- `noethers_theorem_symmetry`
+- `optimal_stopping_marriage`
+- `p_vs_np`
+- `pancreatic_cancer_lethality_v1`
+- `pareto_principle`
+- `poincare_conjecture`
+- `prime_number_theorem`
+- `prisoners_dilemma_equilibrium`
+- `pythagorean_geometric_constancy`
+- `quantum_measurement_gap`
+- `quantum_nonlocality_2026`
+- `ramsey_numbers`
+- `reciprocity_laws_math`
+- `relativity_of_simultaneity`
+- `relativity_physical_invariance`
+- `rices_theorem_undecidability`
+- `shannon_entropy_limit`
+- `shannon_source_coding`
+- `silver_scarcity_2026`
+- `square_cube_law`
+- `star_formation_barrier_g0253`
+- `star_to_black_hole_observational_limit`
+- `sturgeons_law`
+- `suslin_hypothesis_proof_limits`
+- `suslin_hypothesis_undecidability`
+- `sylow_theorems_group_theory`
+- `terrain_inaccessibility_wheeled_vehicles`
+- `thermodynamics_entropy`
+- `three_body_problem_predictability_limit`
+- `three_body_unpredictability`
+- `treaty_land_entrenchment`
+- `universal_mathematics_communication`
+- `van_der_waerden_theorem`
+- `weierstrass_proof_limits`
+- `whitehead_incompleteness`
+- `whitehead_problem_undecidability`
 
 ### `[tangled_rope]` — 104 constraints
 
@@ -766,223 +968,6 @@ Families sorted by population (largest first).
 - `ulysses_proteus_1904`
 - `us_canada_geopolitical_asymmetry`
 
-### `[mountain,unknown]` — 82 constraints
-
-*Contains unresolved types: [mountain,unknown]*
-
-- `banach_fixed_point`
-- `banach_fixed_point_theorem`
-- `banach_tarski_paradox`
-- `base_pair_complementarity`
-- `bgs_spectral_universality`
-- `bh_merger_gravitational_infall`
-- `birthday_paradox_collision`
-- `brouwer_fixed_point`
-- `busy_beaver_noncomputability`
-- `c_physical_blue_wavelength`
-- `cap_theorem`
-- `central_limit_theorem`
-- `chaitins_omega_undecidability`
-- `church_turing_thesis`
-- `clt_convergence_2026`
-- `collatz_conjecture_determinism`
-- `constraint_galois_solvability`
-- `constraint_tarski_undefinability`
-- `constraint_twin_prime_conjecture`
-- `conways_game_of_life_dynamics`
-- `countable_infinity_cardinality`
-- `ehrenfest_barrier`
-- `english_chinese_tense_structure`
-- `euler_characteristic_topology`
-- `event_fragmentation`
-- `fast_growing_hierarchy`
-- `feigenbaum_universality`
-- `fermat_proof_barrier`
-- `fgh_hierarchy_2026`
-- `finite_simple_group_classification`
-- `four_color_theorem_topological_bound`
-- `fundamental_theorem_of_algebra`
-- `gauss_bonnet_topology`
-- `genetic_predisposition_mania`
-- `geophysics_superionic_core`
-- `goedels_incompleteness_theorems`
-- `goldbach_conjecture`
-- `halting_problem_undecidability`
-- `hd101584_stellar_evolution`
-- `heine_borel`
-- `heisenberg_uncertainty`
-- `indexical_relativity_core`
-- `kirby_paris_theorem`
-- `kleene_recursion_theorem`
-- `kolmogorov_complexity`
-- `liar_paradox`
-- `lobs_theorem`
-- `local_vs_global_optima`
-- `lowenheim_skolem_theorem`
-- `lyapunov_stability`
-- `martian_signal_latency`
-- `material_tensile_strength`
-- `monty_hall_conditional_probability`
-- `no_cloning_theorem`
-- `pancreatic_cancer_lethality_v1`
-- `pareto_principle`
-- `poincare_conjecture`
-- `prime_number_theorem`
-- `prisoners_dilemma_equilibrium`
-- `pythagorean_geometric_constancy`
-- `quantum_measurement_gap`
-- `quantum_nonlocality_2026`
-- `ramsey_numbers`
-- `reciprocity_laws_math`
-- `relativity_of_simultaneity`
-- `relativity_physical_invariance`
-- `rices_theorem_undecidability`
-- `shannon_entropy_limit`
-- `shannon_source_coding`
-- `silver_scarcity_2026`
-- `square_cube_law`
-- `star_formation_barrier_g0253`
-- `star_to_black_hole_observational_limit`
-- `sturgeons_law`
-- `suslin_hypothesis_undecidability`
-- `sylow_theorems_group_theory`
-- `terrain_inaccessibility_wheeled_vehicles`
-- `thermodynamics_entropy`
-- `three_body_unpredictability`
-- `van_der_waerden_theorem`
-- `weierstrass_proof_limits`
-- `whitehead_problem_undecidability`
-
-### `[rope,tangled_rope,unknown]` — 44 constraints
-
-*Contains unresolved types: [rope,tangled_rope,unknown]*
-
-- `abstraction_leakage`
-- `advice_as_dangerous_gift`
-- `alzheimers_levetiracetam`
-- `asce_7_22_seismic_design`
-- `big_data_astrophysics_arbitrage`
-- `blackstone_carried_interest_taxation`
-- `china_africa_zero_tariff_2026`
-- `cma`
-- `college_admissions_market`
-- `constraint_lagrange_multipliers`
-- `constraint_riemann_mapping`
-- `decision_latency_mismatch`
-- `factional_instability`
-- `fnl_shadow_probe`
-- `gemini_scientific_advancement`
-- `germany_tennet_takeover`
-- `grete_samsa_transition`
-- `gs1_gln_identification`
-- `gs_market_clearing`
-- `hydra_game`
-- `institutional_trust_decay`
-- `insult_wisdom_training`
-- `jupiter_composition_knowledge_gap`
-- `keltner_relationship_evaluation`
-- `matching_market_congestion_externality`
-- `migration_decision_threshold`
-- `moltbook_agent_theater`
-- `moores_law`
-- `negative_emissions_arbitrage`
-- `neurodiversity_spectrum`
-- `notary_ink_dependency`
-- `olympic_legacy_curling_investment`
-- `olympic_medal_allocation`
-- `publishing_embargo`
-- `ritual_transition_scaffold`
-- `royal_navy_middle_east_withdrawal`
-- `rule_update_failure`
-- `sadhu_integrity_protocol`
-- `smartphone_ubiquity`
-- `teaching_horses_to_sing`
-- `temporal_scale_arbitrage`
-- `tragedy_of_the_commons`
-- `transformer_self_attention`
-- `working_dog_training`
-
-### `[rope,unknown]` — 39 constraints
-
-*Contains unresolved types: [rope,unknown]*
-
-- `artificial_snow_2026`
-- `astm_d638_tensile_testing`
-- `boltzmann_universality_2026`
-- `burden_of_proof_legal_criminal`
-- `clawderberg_recursive_slop`
-- `cost_of_observation`
-- `cs_ecmo_bridge`
-- `cuban_missile_crisis_excomm_deliberation`
-- `deferential_realism_framework`
-- `dexy_gold_protocol`
-- `dldr_information_policy`
-- `education_unbundling_implementation`
-- `electrification_scale_2026`
-- `ergo_storage_rent`
-- `france_2027_presidential_election`
-- `goodstein_theorem_finite_proof`
-- `gs1_standardized_identification`
-- `guinea_worm_eradication`
-- `hegemonic_entropy_2026`
-- `hoa_covenants`
-- `lindy_effect`
-- `net_zero_stabilization`
-- `neural_interoperability`
-- `omelet_perfection_complexity`
-- `paris_municipal_reform_2026`
-- `postman_survival_protocol`
-- `quantum_entanglement_protocol`
-- `regulatory_capture`
-- `repair_probe_incomplete`
-- `rfc9293_state_machine`
-- `rosen_bridge_protocol`
-- `rotation_seven_black_soil`
-- `ship_of_theseus`
-- `shitty_feedback_handling`
-- `skills_based_hiring`
-- `somatic_focusing_awareness`
-- `tcp_rfc9293_interoperability`
-- `tsp_duplicate_elimination`
-- `unclos_2026`
-
-### `[mountain]` — 32 constraints
-
-*Gauge-invariant: immutable restriction from all perspectives*
-
-- `basel_problem_convergence`
-- `cantor_set_topology`
-- `cantors_diagonal_argument`
-- `constraint_borsuk_ulam`
-- `constraint_ftc`
-- `constraint_lorenz_sensitivity`
-- `constraint_nonstandard_arithmetic`
-- `constraint_pythagorean`
-- `constraint_sylow`
-- `continuum_hypothesis_undecidability`
-- `cosmological_evolution_alpha_omega`
-- `deep_earth_hydrogen_availability`
-- `dunbars_number`
-- `elencher_identity_transformation`
-- `epigenetics_complexity_2026`
-- `fossil_fuel_lock_in`
-- `hamiltonian_path_complexity`
-- `hilbert_hotel_infinite_capacity`
-- `hiv_prep_prevention_2026`
-- `large_cardinals_inaccessibility`
-- `litany_of_the_real`
-- `minimax_decision_rule`
-- `newtons_method_convergence`
-- `noether_theorem`
-- `noethers_theorem_symmetry`
-- `optimal_stopping_marriage`
-- `p_vs_np`
-- `suslin_hypothesis_proof_limits`
-- `three_body_problem_predictability_limit`
-- `treaty_land_entrenchment`
-- `universal_mathematics_communication`
-- `whitehead_incompleteness`
-
 ### `[rope]` — 26 constraints
 
 *Gauge-invariant: pure coordination from all perspectives*
@@ -1014,6 +999,44 @@ Families sorted by population (largest first).
 - `wikipedia_crowdsourcing_2026`
 - `wikipedia_noncommercial_model`
 
+### `[scaffold,tangled_rope]` — 15 constraints
+
+*Two-type: scaffold/tangled transition*
+
+- `artificial_scarcity_scaffold`
+- `axiom_reasoner_2026`
+- `exoplanetary_habitability_arbitrage`
+- `fiscal_equalization_friction`
+- `france_local_elections_march_2026`
+- `gamblers_ruin_stochastic_extinction`
+- `global_stimulus_spree`
+- `glp1_payload_efficiency_pivot`
+- `isa_education_scaffold`
+- `maha_recovery_2026`
+- `platonic_coparenting_decoupling`
+- `portugal_ad_stability_2026`
+- `recipe_scaling_ai`
+- `russells_paradox_self_reference`
+- `trillion_bond_rush_2026`
+
+### `[scaffold,snare,tangled_rope]` — 13 constraints
+
+*3-type orbit: [scaffold,snare,tangled_rope]*
+
+- `absorbing_markov_chain_trap`
+- `ai_scholar_citation_trap`
+- `bangladesh_july_national_charter`
+- `emergency_bridge_scaffold`
+- `genie_ip_constraint`
+- `ia_digital_preservation`
+- `mit_tfus_2026`
+- `nsw_transmission_bottleneck`
+- `openai_api_access`
+- `openai_codex_app_constraint`
+- `openscholar_peer_review`
+- `perovskite_self_etching`
+- `project_vault_2026`
+
 ### `[mountain,scaffold]` — 13 constraints
 
 *2-type orbit: [mountain,scaffold]*
@@ -1031,34 +1054,6 @@ Families sorted by population (largest first).
 - `hilberts_hotel_infinity`
 - `information_foraging_theory`
 - `skolems_paradox`
-
-### `[scaffold,unknown]` — 10 constraints
-
-*Contains unresolved types: [scaffold,unknown]*
-
-- `axiom_reasoner_2026`
-- `exoplanetary_habitability_arbitrage`
-- `fiscal_equalization_friction`
-- `gamblers_ruin_stochastic_extinction`
-- `glp1_payload_efficiency_pivot`
-- `maha_recovery_2026`
-- `platonic_coparenting_decoupling`
-- `recipe_scaling_ai`
-- `russells_paradox_self_reference`
-- `trillion_bond_rush_2026`
-
-### `[scaffold,snare,unknown]` — 8 constraints
-
-*Contains unresolved types: [scaffold,snare,unknown]*
-
-- `absorbing_markov_chain_trap`
-- `ai_scholar_citation_trap`
-- `genie_ip_constraint`
-- `mit_tfus_2026`
-- `nsw_transmission_bottleneck`
-- `openai_api_access`
-- `openai_codex_app_constraint`
-- `openscholar_peer_review`
 
 ### `[scaffold,snare]` — 8 constraints
 
@@ -1096,16 +1091,6 @@ Families sorted by population (largest first).
 - `temporal_scarcity`
 - `viral_emergence_covid19_exemplar`
 
-### `[scaffold,snare,tangled_rope]` — 5 constraints
-
-*3-type orbit: [scaffold,snare,tangled_rope]*
-
-- `bangladesh_july_national_charter`
-- `emergency_bridge_scaffold`
-- `ia_digital_preservation`
-- `perovskite_self_etching`
-- `project_vault_2026`
-
 ### `[indexically_opaque,rope,snare,tangled_rope]` — 4 constraints
 
 *Contains unresolved types: [indexically_opaque,rope,snare,tangled_rope]*
@@ -1114,14 +1099,6 @@ Families sorted by population (largest first).
 - `openai_prism_development`
 - `semiconductor_fabrication_chokepoint`
 - `us_usmca_china_leverage`
-
-### `[scaffold,tangled_rope]` — 3 constraints
-
-*Two-type: scaffold/tangled transition*
-
-- `artificial_scarcity_scaffold`
-- `global_stimulus_spree`
-- `isa_education_scaffold`
 
 ### `[indexically_opaque,snare,tangled_rope]` — 3 constraints
 
@@ -1146,16 +1123,9 @@ Families sorted by population (largest first).
 - `epstein_document_release_2026`
 - `private_credit_market_opacity`
 
-### `[scaffold,tangled_rope,unknown]` — 2 constraints
+### `[rope,scaffold,tangled_rope]` — 2 constraints
 
-*Contains unresolved types: [scaffold,tangled_rope,unknown]*
-
-- `france_local_elections_march_2026`
-- `portugal_ad_stability_2026`
-
-### `[rope,scaffold,unknown]` — 2 constraints
-
-*Contains unresolved types: [rope,scaffold,unknown]*
+*3-type orbit: [rope,scaffold,tangled_rope]*
 
 - `emergency_oversight_bureau`
 - `erasmus_rejoining_scaffold`
@@ -1177,13 +1147,12 @@ Families sorted by population (largest first).
 ### Types Observed
 
 - **indexically_opaque**: appears in 4 families (17 constraints total)
-- **mountain**: appears in 4 families (128 constraints total)
+- **mountain**: appears in 3 families (128 constraints total)
 - **piton**: appears in 1 families (6 constraints total)
-- **rope**: appears in 13 families (761 constraints total)
-- **scaffold**: appears in 9 families (52 constraints total)
-- **snare**: appears in 9 families (519 constraints total)
-- **tangled_rope**: appears in 11 families (483 constraints total)
-- **unknown**: appears in 7 families (187 constraints total)
+- **rope**: appears in 11 families (761 constraints total)
+- **scaffold**: appears in 6 families (52 constraints total)
+- **snare**: appears in 8 families (519 constraints total)
+- **tangled_rope**: appears in 10 families (542 constraints total)
 
 ### Type Co-occurrence
 
@@ -1195,26 +1164,20 @@ Which types appear together in multi-type orbits:
 - [indexically_opaque,snare,tangled_rope] (3 constraints)
 - [mountain,rope] (1 constraints)
 - [mountain,scaffold] (13 constraints)
-- [mountain,unknown] (82 constraints)
 - [piton,rope] (6 constraints)
 - [rope,scaffold] (1 constraints)
-- [rope,scaffold,unknown] (2 constraints)
+- [rope,scaffold,tangled_rope] (2 constraints)
 - [rope,snare] (315 constraints)
 - [rope,snare,tangled_rope] (167 constraints)
-- [rope,tangled_rope] (146 constraints)
-- [rope,tangled_rope,unknown] (44 constraints)
-- [rope,unknown] (39 constraints)
+- [rope,tangled_rope] (229 constraints)
 - [scaffold,snare] (8 constraints)
-- [scaffold,snare,tangled_rope] (5 constraints)
-- [scaffold,snare,unknown] (8 constraints)
-- [scaffold,tangled_rope] (3 constraints)
-- [scaffold,tangled_rope,unknown] (2 constraints)
-- [scaffold,unknown] (10 constraints)
+- [scaffold,snare,tangled_rope] (13 constraints)
+- [scaffold,tangled_rope] (15 constraints)
 - [snare,tangled_rope] (2 constraints)
 
 ## Unknown-Containing Orbits
 
-11 orbit families contain unresolved types:
+4 orbit families contain unresolved types:
 
 ### `[indexically_opaque,rope,snare]` — 7 constraints
 
@@ -1245,218 +1208,10 @@ Which types appear together in multi-type orbits:
 - `international_seabed_mining_regime`
 - `trump_epa_greenhouse_gas_reversal`
 
-### `[mountain,unknown]` — 82 constraints
-
-- `banach_fixed_point`
-- `banach_fixed_point_theorem`
-- `banach_tarski_paradox`
-- `base_pair_complementarity`
-- `bgs_spectral_universality`
-- `bh_merger_gravitational_infall`
-- `birthday_paradox_collision`
-- `brouwer_fixed_point`
-- `busy_beaver_noncomputability`
-- `c_physical_blue_wavelength`
-- `cap_theorem`
-- `central_limit_theorem`
-- `chaitins_omega_undecidability`
-- `church_turing_thesis`
-- `clt_convergence_2026`
-- `collatz_conjecture_determinism`
-- `constraint_galois_solvability`
-- `constraint_tarski_undefinability`
-- `constraint_twin_prime_conjecture`
-- `conways_game_of_life_dynamics`
-- `countable_infinity_cardinality`
-- `ehrenfest_barrier`
-- `english_chinese_tense_structure`
-- `euler_characteristic_topology`
-- `event_fragmentation`
-- `fast_growing_hierarchy`
-- `feigenbaum_universality`
-- `fermat_proof_barrier`
-- `fgh_hierarchy_2026`
-- `finite_simple_group_classification`
-- `four_color_theorem_topological_bound`
-- `fundamental_theorem_of_algebra`
-- `gauss_bonnet_topology`
-- `genetic_predisposition_mania`
-- `geophysics_superionic_core`
-- `goedels_incompleteness_theorems`
-- `goldbach_conjecture`
-- `halting_problem_undecidability`
-- `hd101584_stellar_evolution`
-- `heine_borel`
-- `heisenberg_uncertainty`
-- `indexical_relativity_core`
-- `kirby_paris_theorem`
-- `kleene_recursion_theorem`
-- `kolmogorov_complexity`
-- `liar_paradox`
-- `lobs_theorem`
-- `local_vs_global_optima`
-- `lowenheim_skolem_theorem`
-- `lyapunov_stability`
-- `martian_signal_latency`
-- `material_tensile_strength`
-- `monty_hall_conditional_probability`
-- `no_cloning_theorem`
-- `pancreatic_cancer_lethality_v1`
-- `pareto_principle`
-- `poincare_conjecture`
-- `prime_number_theorem`
-- `prisoners_dilemma_equilibrium`
-- `pythagorean_geometric_constancy`
-- `quantum_measurement_gap`
-- `quantum_nonlocality_2026`
-- `ramsey_numbers`
-- `reciprocity_laws_math`
-- `relativity_of_simultaneity`
-- `relativity_physical_invariance`
-- `rices_theorem_undecidability`
-- `shannon_entropy_limit`
-- `shannon_source_coding`
-- `silver_scarcity_2026`
-- `square_cube_law`
-- `star_formation_barrier_g0253`
-- `star_to_black_hole_observational_limit`
-- `sturgeons_law`
-- `suslin_hypothesis_undecidability`
-- `sylow_theorems_group_theory`
-- `terrain_inaccessibility_wheeled_vehicles`
-- `thermodynamics_entropy`
-- `three_body_unpredictability`
-- `van_der_waerden_theorem`
-- `weierstrass_proof_limits`
-- `whitehead_problem_undecidability`
-
-### `[rope,scaffold,unknown]` — 2 constraints
-
-- `emergency_oversight_bureau`
-- `erasmus_rejoining_scaffold`
-
-### `[rope,tangled_rope,unknown]` — 44 constraints
-
-- `abstraction_leakage`
-- `advice_as_dangerous_gift`
-- `alzheimers_levetiracetam`
-- `asce_7_22_seismic_design`
-- `big_data_astrophysics_arbitrage`
-- `blackstone_carried_interest_taxation`
-- `china_africa_zero_tariff_2026`
-- `cma`
-- `college_admissions_market`
-- `constraint_lagrange_multipliers`
-- `constraint_riemann_mapping`
-- `decision_latency_mismatch`
-- `factional_instability`
-- `fnl_shadow_probe`
-- `gemini_scientific_advancement`
-- `germany_tennet_takeover`
-- `grete_samsa_transition`
-- `gs1_gln_identification`
-- `gs_market_clearing`
-- `hydra_game`
-- `institutional_trust_decay`
-- `insult_wisdom_training`
-- `jupiter_composition_knowledge_gap`
-- `keltner_relationship_evaluation`
-- `matching_market_congestion_externality`
-- `migration_decision_threshold`
-- `moltbook_agent_theater`
-- `moores_law`
-- `negative_emissions_arbitrage`
-- `neurodiversity_spectrum`
-- `notary_ink_dependency`
-- `olympic_legacy_curling_investment`
-- `olympic_medal_allocation`
-- `publishing_embargo`
-- `ritual_transition_scaffold`
-- `royal_navy_middle_east_withdrawal`
-- `rule_update_failure`
-- `sadhu_integrity_protocol`
-- `smartphone_ubiquity`
-- `teaching_horses_to_sing`
-- `temporal_scale_arbitrage`
-- `tragedy_of_the_commons`
-- `transformer_self_attention`
-- `working_dog_training`
-
-### `[rope,unknown]` — 39 constraints
-
-- `artificial_snow_2026`
-- `astm_d638_tensile_testing`
-- `boltzmann_universality_2026`
-- `burden_of_proof_legal_criminal`
-- `clawderberg_recursive_slop`
-- `cost_of_observation`
-- `cs_ecmo_bridge`
-- `cuban_missile_crisis_excomm_deliberation`
-- `deferential_realism_framework`
-- `dexy_gold_protocol`
-- `dldr_information_policy`
-- `education_unbundling_implementation`
-- `electrification_scale_2026`
-- `ergo_storage_rent`
-- `france_2027_presidential_election`
-- `goodstein_theorem_finite_proof`
-- `gs1_standardized_identification`
-- `guinea_worm_eradication`
-- `hegemonic_entropy_2026`
-- `hoa_covenants`
-- `lindy_effect`
-- `net_zero_stabilization`
-- `neural_interoperability`
-- `omelet_perfection_complexity`
-- `paris_municipal_reform_2026`
-- `postman_survival_protocol`
-- `quantum_entanglement_protocol`
-- `regulatory_capture`
-- `repair_probe_incomplete`
-- `rfc9293_state_machine`
-- `rosen_bridge_protocol`
-- `rotation_seven_black_soil`
-- `ship_of_theseus`
-- `shitty_feedback_handling`
-- `skills_based_hiring`
-- `somatic_focusing_awareness`
-- `tcp_rfc9293_interoperability`
-- `tsp_duplicate_elimination`
-- `unclos_2026`
-
-### `[scaffold,snare,unknown]` — 8 constraints
-
-- `absorbing_markov_chain_trap`
-- `ai_scholar_citation_trap`
-- `genie_ip_constraint`
-- `mit_tfus_2026`
-- `nsw_transmission_bottleneck`
-- `openai_api_access`
-- `openai_codex_app_constraint`
-- `openscholar_peer_review`
-
-### `[scaffold,tangled_rope,unknown]` — 2 constraints
-
-- `france_local_elections_march_2026`
-- `portugal_ad_stability_2026`
-
-### `[scaffold,unknown]` — 10 constraints
-
-- `axiom_reasoner_2026`
-- `exoplanetary_habitability_arbitrage`
-- `fiscal_equalization_friction`
-- `gamblers_ruin_stochastic_extinction`
-- `glp1_payload_efficiency_pivot`
-- `maha_recovery_2026`
-- `platonic_coparenting_decoupling`
-- `recipe_scaling_ai`
-- `russells_paradox_self_reference`
-- `trillion_bond_rush_2026`
-
 ## Gauge Invariance Summary
 
-- **Gauge-invariant** (single type across all contexts): 162 constraints (15.7%)
-- **Gauge-variant** (type changes with observer): 871 constraints (84.3%)
+- **Gauge-invariant** (single type across all contexts): 244 constraints (23.6%)
+- **Gauge-variant** (type changes with observer): 789 constraints (76.4%)
 
 ---
 *End of orbit report*

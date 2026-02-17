@@ -7,9 +7,9 @@
 | Severity | Count | % |
 |----------|------:|--:|
 | critical | 329 | 34.3% |
-| high | 424 | 44.2% |
+| high | 435 | 45.4% |
 | medium | 99 | 10.3% |
-| low | 107 | 11.2% |
+| low | 96 | 10.0% |
 
 ## Top 5 Families
 
@@ -17,19 +17,19 @@
 |--------|----------------|-----------|--------|------:|
 | F001 | [rope, snare] | coordination_washing | snare | 265 |
 | F002 | [rope, snare, tangled_rope] | coordination_washing | snare | 153 |
-| F003 | [rope, tangled_rope] | coordination_washing | snare | 94 |
-| F004 | [tangled_rope] | consensus | snare | 53 |
-| F005 | [rope, snare] | coordination_washing | piton | 47 |
+| F003 | [rope, tangled_rope] | coordination_washing | snare | 122 |
+| F004 | [rope, tangled_rope] | coordination_washing | tangled_rope | 72 |
+| F005 | [tangled_rope] | consensus | snare | 53 |
 
 ## Top 5 Domains by Omega Count
 
 | Domain | Count | Mean Score |
 |--------|------:|-----------:|
-| snare | 638 | 0.679 |
-| tangled_rope | 97 | 0.414 |
-| piton | 90 | 0.656 |
+| snare | 638 | 0.682 |
+| tangled_rope | 97 | 0.426 |
+| piton | 90 | 0.663 |
 | mountain | 56 | 0.078 |
-| rope | 55 | 0.257 |
+| rope | 55 | 0.288 |
 
 ---
 
@@ -175,7 +175,7 @@
 - **Suppression:** `0.88`
 - **Question:** Constraint epstein_honeytrap appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F005` (47 members)
+- **Family:** `F006` (47 members)
 
 ---
 
@@ -679,7 +679,7 @@
 - **Suppression:** `0.82`
 - **Question:** Constraint crisis_signal_saturation appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F005` (47 members)
+- **Family:** `F006` (47 members)
 
 ---
 
@@ -769,7 +769,7 @@
 - **Suppression:** `0.81`
 - **Question:** Constraint asymmetric_burden_distribution appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F005` (47 members)
+- **Family:** `F006` (47 members)
 
 ---
 
@@ -877,7 +877,7 @@
 - **Suppression:** `0.82`
 - **Question:** Constraint invisible_infrastructure_dependency appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F005` (47 members)
+- **Family:** `F006` (47 members)
 
 ---
 
@@ -895,7 +895,7 @@
 - **Suppression:** `0.78`
 - **Question:** Constraint adversarial_truth_decay appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F005` (47 members)
+- **Family:** `F006` (47 members)
 
 ---
 
@@ -1039,7 +1039,7 @@
 - **Suppression:** `0.94`
 - **Question:** Constraint litchfield_sensitive_locations_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F005` (47 members)
+- **Family:** `F006` (47 members)
 
 ---
 
@@ -1183,7 +1183,7 @@
 - **Suppression:** `0.76`
 - **Question:** Constraint policy_lag_catastrophe appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F005` (47 members)
+- **Family:** `F006` (47 members)
 
 ---
 
@@ -1255,7 +1255,7 @@
 - **Suppression:** `0.85`
 - **Question:** Constraint riot_incentive_loop_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F005` (47 members)
+- **Family:** `F006` (47 members)
 
 ---
 
@@ -1291,7 +1291,7 @@
 - **Suppression:** `0.78`
 - **Question:** Constraint infrastructure_interoperability_decay appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F005` (47 members)
+- **Family:** `F006` (47 members)
 
 ---
 
@@ -1309,7 +1309,7 @@
 - **Suppression:** `0.76`
 - **Question:** Constraint attention_as_bottleneck_resource appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F005` (47 members)
+- **Family:** `F006` (47 members)
 
 ---
 
@@ -1561,7 +1561,7 @@
 - **Suppression:** `0.90`
 - **Question:** Constraint alzheimers_nlrp3_inflammasome appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F021` (7 members)
+- **Family:** `F016` (7 members)
 
 ---
 
@@ -1579,7 +1579,7 @@
 - **Suppression:** `0.75`
 - **Question:** Constraint citation_collapse_dynamics appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F005` (47 members)
+- **Family:** `F006` (47 members)
 
 ---
 
@@ -1615,7 +1615,7 @@
 - **Suppression:** `0.75`
 - **Question:** Constraint memetic_fitness_vs_truth appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F005` (47 members)
+- **Family:** `F006` (47 members)
 
 ---
 
@@ -1633,7 +1633,7 @@
 - **Suppression:** `0.73`
 - **Question:** Constraint hollow_state_syndrome appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F005` (47 members)
+- **Family:** `F006` (47 members)
 
 ---
 
@@ -1651,7 +1651,7 @@
 - **Suppression:** `0.76`
 - **Question:** Constraint coordination_attack_vulnerability appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F005` (47 members)
+- **Family:** `F006` (47 members)
 
 ---
 
@@ -1741,7 +1741,7 @@
 - **Suppression:** `0.72`
 - **Question:** Constraint fiscal_dominance_trap appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F005` (47 members)
+- **Family:** `F006` (47 members)
 
 ---
 
@@ -1885,7 +1885,7 @@
 - **Suppression:** `0.74`
 - **Question:** Constraint algorithmic_epistemic_capture appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F005` (47 members)
+- **Family:** `F006` (47 members)
 
 ---
 
@@ -1921,7 +1921,7 @@
 - **Suppression:** `0.75`
 - **Question:** Constraint art_market_decoupling appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F005` (47 members)
+- **Family:** `F006` (47 members)
 
 ---
 
@@ -2047,7 +2047,7 @@
 - **Suppression:** `0.73`
 - **Question:** Constraint maintenance_capacity_shortfall appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F005` (47 members)
+- **Family:** `F006` (47 members)
 
 ---
 
@@ -2065,7 +2065,7 @@
 - **Suppression:** `0.73`
 - **Question:** Constraint second_order_unintended_consequences appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F005` (47 members)
+- **Family:** `F006` (47 members)
 
 ---
 
@@ -2281,7 +2281,7 @@
 - **Suppression:** `1.00`
 - **Question:** Constraint trojan_war_spoils appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F004` (53 members)
+- **Family:** `F005` (53 members)
 
 ---
 
@@ -2317,7 +2317,7 @@
 - **Suppression:** `0.73`
 - **Question:** Constraint institutional_memory_loss appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F005` (47 members)
+- **Family:** `F006` (47 members)
 
 ---
 
@@ -2335,7 +2335,7 @@
 - **Suppression:** `0.74`
 - **Question:** Constraint legal_formalism_overhang appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F005` (47 members)
+- **Family:** `F006` (47 members)
 
 ---
 
@@ -2371,7 +2371,7 @@
 - **Suppression:** `0.82`
 - **Question:** Constraint elite_capture_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F005` (47 members)
+- **Family:** `F006` (47 members)
 
 ---
 
@@ -2515,7 +2515,7 @@
 - **Suppression:** `0.75`
 - **Question:** Constraint meta_governance_overload appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F005` (47 members)
+- **Family:** `F006` (47 members)
 
 ---
 
@@ -2623,7 +2623,7 @@
 - **Suppression:** `0.75`
 - **Question:** Constraint shadow_pricing_failure appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F005` (47 members)
+- **Family:** `F006` (47 members)
 
 ---
 
@@ -2821,7 +2821,7 @@
 - **Suppression:** `0.85`
 - **Question:** Constraint meta_pay_or_okay_model appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F022` (7 members)
+- **Family:** `F017` (7 members)
 
 ---
 
@@ -2911,7 +2911,7 @@
 - **Suppression:** `0.71`
 - **Question:** Constraint anticipatory_capacity_failure appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F005` (47 members)
+- **Family:** `F006` (47 members)
 
 ---
 
@@ -3091,7 +3091,7 @@
 - **Suppression:** `0.68`
 - **Question:** Constraint autonomous_toolchain_sprawl appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F005` (47 members)
+- **Family:** `F006` (47 members)
 
 ---
 
@@ -3127,7 +3127,7 @@
 - **Suppression:** `0.82`
 - **Question:** Constraint legitimacy_without_effectiveness appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F005` (47 members)
+- **Family:** `F006` (47 members)
 
 ---
 
@@ -3199,7 +3199,7 @@
 - **Suppression:** `0.92`
 - **Question:** Constraint minnesota_sovereignty_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F005` (47 members)
+- **Family:** `F006` (47 members)
 
 ---
 
@@ -3235,7 +3235,7 @@
 - **Suppression:** `0.80`
 - **Question:** Constraint ai_evaluators_matching appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F036` (3 members)
+- **Family:** `F029` (3 members)
 
 ---
 
@@ -3343,7 +3343,7 @@
 - **Suppression:** `0.85`
 - **Question:** Constraint cultural_refragmentation_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F005` (47 members)
+- **Family:** `F006` (47 members)
 
 ---
 
@@ -3451,7 +3451,7 @@
 - **Suppression:** `0.80`
 - **Question:** Constraint indonesia_penal_code_2023 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F022` (7 members)
+- **Family:** `F017` (7 members)
 
 ---
 
@@ -3505,7 +3505,7 @@
 - **Suppression:** `0.80`
 - **Question:** Constraint other_peoples_troubles_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F005` (47 members)
+- **Family:** `F006` (47 members)
 
 ---
 
@@ -3523,7 +3523,7 @@
 - **Suppression:** `0.70`
 - **Question:** Constraint prestige_signal_inflation appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F005` (47 members)
+- **Family:** `F006` (47 members)
 
 ---
 
@@ -3685,7 +3685,7 @@
 - **Suppression:** `0.78`
 - **Question:** Constraint emergency_powers_ratchet appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F021` (7 members)
+- **Family:** `F016` (7 members)
 
 ---
 
@@ -3721,7 +3721,7 @@
 - **Suppression:** `0.91`
 - **Question:** Constraint epstein_espionage_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F005` (47 members)
+- **Family:** `F006` (47 members)
 
 ---
 
@@ -3847,7 +3847,7 @@
 - **Suppression:** `0.90`
 - **Question:** Constraint gilgamesh_mortality_limit appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F004` (53 members)
+- **Family:** `F005` (53 members)
 
 ---
 
@@ -3955,7 +3955,7 @@
 - **Suppression:** `0.64`
 - **Question:** Constraint capability_eval_overhang appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F005` (47 members)
+- **Family:** `F006` (47 members)
 
 ---
 
@@ -3973,7 +3973,7 @@
 - **Suppression:** `0.62`
 - **Question:** Constraint alignment_tax_tradeoff appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F005` (47 members)
+- **Family:** `F006` (47 members)
 
 ---
 
@@ -4081,7 +4081,7 @@
 - **Suppression:** `0.85`
 - **Question:** Constraint toxoplasma_hub_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F021` (7 members)
+- **Family:** `F016` (7 members)
 
 ---
 
@@ -4099,7 +4099,7 @@
 - **Suppression:** `0.85`
 - **Question:** Constraint world_factbook_sunset_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F005` (47 members)
+- **Family:** `F006` (47 members)
 
 ---
 
@@ -4117,7 +4117,7 @@
 - **Suppression:** `0.80`
 - **Question:** Constraint bureaucratic_self_preservation appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F005` (47 members)
+- **Family:** `F006` (47 members)
 
 ---
 
@@ -4225,7 +4225,7 @@
 - **Suppression:** `0.75`
 - **Question:** Constraint ancestral_pueblo_hydrology appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F021` (7 members)
+- **Family:** `F016` (7 members)
 
 ---
 
@@ -4333,7 +4333,7 @@
 - **Suppression:** `0.89`
 - **Question:** Constraint epstein_files_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F005` (47 members)
+- **Family:** `F006` (47 members)
 
 ---
 
@@ -4459,7 +4459,7 @@
 - **Suppression:** `0.65`
 - **Question:** Constraint communal_narcissism_social_trap appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F005` (47 members)
+- **Family:** `F006` (47 members)
 
 ---
 
@@ -4567,7 +4567,7 @@
 - **Suppression:** `0.65`
 - **Question:** Constraint structural_extraction_without_actor appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F005` (47 members)
+- **Family:** `F006` (47 members)
 
 ---
 
@@ -4693,7 +4693,7 @@
 - **Suppression:** `0.80`
 - **Question:** Constraint ad_fus_coordination appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F021` (7 members)
+- **Family:** `F016` (7 members)
 
 ---
 
@@ -4747,7 +4747,7 @@
 - **Suppression:** `0.78`
 - **Question:** Constraint academic_fashion_modernism_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F005` (47 members)
+- **Family:** `F006` (47 members)
 
 ---
 
@@ -4837,7 +4837,7 @@
 - **Suppression:** `0.65`
 - **Question:** Constraint huang_expectation_resilience_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F005` (47 members)
+- **Family:** `F006` (47 members)
 
 ---
 
@@ -4909,7 +4909,7 @@
 - **Suppression:** `0.62`
 - **Question:** Constraint taxonomy_drift appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F005` (47 members)
+- **Family:** `F006` (47 members)
 
 ---
 
@@ -5089,7 +5089,7 @@
 - **Suppression:** `0.75`
 - **Question:** Constraint jp_nativist_politics appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F022` (7 members)
+- **Family:** `F017` (7 members)
 
 ---
 
@@ -5161,7 +5161,7 @@
 - **Suppression:** `0.98`
 - **Question:** Constraint technological_point_of_no_return appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F004` (53 members)
+- **Family:** `F005` (53 members)
 
 ---
 
@@ -5251,7 +5251,7 @@
 - **Suppression:** `0.72`
 - **Question:** Constraint global_economic_anxiety_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F005` (47 members)
+- **Family:** `F006` (47 members)
 
 ---
 
@@ -5287,7 +5287,7 @@
 - **Suppression:** `0.72`
 - **Question:** Constraint theatrical_neutrality appears as snare to individuals but piton to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F036` (3 members)
+- **Family:** `F029` (3 members)
 
 ---
 
@@ -5395,7 +5395,7 @@
 - **Suppression:** `0.65`
 - **Question:** Constraint moltbook_breach_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F005` (47 members)
+- **Family:** `F006` (47 members)
 
 ---
 
@@ -5413,7 +5413,7 @@
 - **Suppression:** `0.60`
 - **Question:** Constraint narcissistic_ego_maintenance appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F005` (47 members)
+- **Family:** `F006` (47 members)
 
 ---
 
@@ -5557,7 +5557,7 @@
 - **Suppression:** `0.75`
 - **Question:** Constraint digital_credentialing_verification appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F022` (7 members)
+- **Family:** `F017` (7 members)
 
 ---
 
@@ -5575,7 +5575,7 @@
 - **Suppression:** `0.95`
 - **Question:** Constraint horizon_liability_contract appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F004` (53 members)
+- **Family:** `F005` (53 members)
 
 ---
 
@@ -5611,7 +5611,7 @@
 - **Suppression:** `0.75`
 - **Question:** Constraint nvidia_cuda_ecosystem_lockin appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F022` (7 members)
+- **Family:** `F017` (7 members)
 
 ---
 
@@ -5665,7 +5665,7 @@
 - **Suppression:** `0.75`
 - **Question:** Constraint us_embargo_cuba appears as snare to individuals but tangled_rope to institutions...
 - **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F022` (7 members)
+- **Family:** `F017` (7 members)
 
 ---
 
@@ -5719,7 +5719,7 @@
 - **Suppression:** `0.65`
 - **Question:** Constraint agent_opt_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F036` (3 members)
+- **Family:** `F029` (3 members)
 
 ---
 
@@ -5755,7 +5755,7 @@
 - **Suppression:** `0.85`
 - **Question:** Constraint frankenstein_creation_hubris appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F004` (53 members)
+- **Family:** `F005` (53 members)
 
 ---
 
@@ -5957,7 +5957,7 @@
 
 ---
 
-## HIGH (424)
+## HIGH (435)
 
 ### `omega_perspectival_nuclear_order_2026` [HIGH]
 
@@ -5991,7 +5991,7 @@
 - **Suppression:** `0.62`
 - **Question:** Constraint coordination_threshold_failure appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F021` (7 members)
+- **Family:** `F016` (7 members)
 
 ---
 
@@ -6027,7 +6027,7 @@
 - **Suppression:** `0.75`
 - **Question:** Constraint ai_compute_capital_moat appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F022` (7 members)
+- **Family:** `F017` (7 members)
 
 ---
 
@@ -6045,7 +6045,7 @@
 - **Suppression:** `0.90`
 - **Question:** Constraint apartheid_nuclear_program appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F004` (53 members)
+- **Family:** `F005` (53 members)
 
 ---
 
@@ -6072,7 +6072,7 @@
 - **Severity:** `high` (score: 0.695)
 - **Constraint:** `cma`
 - **Domain:** `snare`
-- **Orbit Signature:** `[rope, tangled_rope, unknown]`
+- **Orbit Signature:** `[rope, tangled_rope]`
 - **Orbit Span:** `3`
 - **Gap Class:** `coordination_washing`
 - **Gap Pattern:** `snare_masked_as_rope`
@@ -6081,7 +6081,7 @@
 - **Suppression:** `0.55`
 - **Question:** Constraint cma appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F010` (17 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -6117,7 +6117,7 @@
 - **Suppression:** `0.70`
 - **Question:** Constraint erised_expectation appears as snare to individuals but tangled_rope to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F005` (47 members)
+- **Family:** `F006` (47 members)
 
 ---
 
@@ -6135,7 +6135,7 @@
 - **Suppression:** `0.90`
 - **Question:** Constraint global_hoarding_scaling_laws appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F004` (53 members)
+- **Family:** `F005` (53 members)
 
 ---
 
@@ -6216,7 +6216,7 @@
 - **Severity:** `high` (score: 0.695)
 - **Constraint:** `negative_emissions_arbitrage`
 - **Domain:** `snare`
-- **Orbit Signature:** `[rope, tangled_rope, unknown]`
+- **Orbit Signature:** `[rope, tangled_rope]`
 - **Orbit Span:** `3`
 - **Gap Class:** `coordination_washing`
 - **Gap Pattern:** `snare_masked_as_rope`
@@ -6225,7 +6225,25 @@
 - **Suppression:** `0.55`
 - **Question:** Constraint negative_emissions_arbitrage appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F010` (17 members)
+- **Family:** `F003` (122 members)
+
+---
+
+### `omega_extraction_blindness_neural_interoperability` [HIGH]
+
+- **Severity:** `high` (score: 0.695)
+- **Constraint:** `neural_interoperability`
+- **Domain:** `snare`
+- **Orbit Signature:** `[rope, tangled_rope]`
+- **Orbit Span:** `3`
+- **Gap Class:** `coordination_washing`
+- **Gap Pattern:** `snare_masked_as_rope`
+- **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+- **Epsilon:** `0.85`
+- **Suppression:** `0.50`
+- **Question:** Constraint neural_interoperability appears extractive (Snare) to individuals but functional (Rope) to institutions...
+- **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -6387,7 +6405,7 @@
 - **Suppression:** `0.80`
 - **Question:** Constraint faint_blue_neural_bifurcation appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F004` (53 members)
+- **Family:** `F005` (53 members)
 
 ---
 
@@ -6513,7 +6531,7 @@
 - **Suppression:** `0.85`
 - **Question:** Constraint semiconductor_fabrication_chokepoint appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F032` (4 members)
+- **Family:** `F025` (4 members)
 
 ---
 
@@ -6549,7 +6567,7 @@
 - **Suppression:** `0.80`
 - **Question:** Constraint taiwan_strait_hegemony_shift appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F004` (53 members)
+- **Family:** `F005` (53 members)
 
 ---
 
@@ -6567,7 +6585,7 @@
 - **Suppression:** `0.80`
 - **Question:** Constraint the_churn_systemic_upheaval appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F004` (53 members)
+- **Family:** `F005` (53 members)
 
 ---
 
@@ -6657,7 +6675,7 @@
 - **Suppression:** `0.95`
 - **Question:** Constraint global_protocol_entrenchment appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F004` (53 members)
+- **Family:** `F005` (53 members)
 
 ---
 
@@ -6697,6 +6715,42 @@
 
 ---
 
+### `omega_extraction_blindness_gamblers_ruin_stochastic_extinction` [HIGH]
+
+- **Severity:** `high` (score: 0.680)
+- **Constraint:** `gamblers_ruin_stochastic_extinction`
+- **Domain:** `snare`
+- **Orbit Signature:** `[scaffold, tangled_rope]`
+- **Orbit Span:** `2`
+- **Gap Class:** `coordination_washing`
+- **Gap Pattern:** `snare_masked_as_rope`
+- **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+- **Epsilon:** `0.90`
+- **Suppression:** `0.50`
+- **Question:** Constraint gamblers_ruin_stochastic_extinction appears extractive (Snare) to individuals but functional (Rope) to institutions...
+- **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
+- **Family:** `F018` (7 members)
+
+---
+
+### `omega_extraction_blindness_net_zero_stabilization` [HIGH]
+
+- **Severity:** `high` (score: 0.680)
+- **Constraint:** `net_zero_stabilization`
+- **Domain:** `snare`
+- **Orbit Signature:** `[rope, tangled_rope]`
+- **Orbit Span:** `3`
+- **Gap Class:** `coordination_washing`
+- **Gap Pattern:** `snare_masked_as_rope`
+- **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+- **Epsilon:** `0.85`
+- **Suppression:** `0.45`
+- **Question:** Constraint net_zero_stabilization appears extractive (Snare) to individuals but functional (Rope) to institutions...
+- **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
+- **Family:** `F003` (122 members)
+
+---
+
 ### `omega_extraction_blindness_prime_age_male_unwork` [HIGH]
 
 - **Severity:** `high` (score: 0.680)
@@ -6729,7 +6783,7 @@
 - **Suppression:** `0.94`
 - **Question:** Constraint project_vault_2026 appears as snare to individuals but scaffold to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F028` (5 members)
+- **Family:** `F012` (12 members)
 
 ---
 
@@ -6747,7 +6801,7 @@
 - **Suppression:** `0.72`
 - **Question:** Constraint unrequited_love_protocol appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F021` (7 members)
+- **Family:** `F016` (7 members)
 
 ---
 
@@ -6819,7 +6873,7 @@
 - **Suppression:** `0.75`
 - **Question:** Constraint mandatrophy_systemic_collapse appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F004` (53 members)
+- **Family:** `F005` (53 members)
 
 ---
 
@@ -6909,7 +6963,7 @@
 - **Suppression:** `0.68`
 - **Question:** Constraint altruistic_misery_paradox_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F005` (47 members)
+- **Family:** `F006` (47 members)
 
 ---
 
@@ -6981,7 +7035,7 @@
 - **Suppression:** `0.90`
 - **Question:** Constraint china_taiwan_reunification_mandate appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F004` (53 members)
+- **Family:** `F005` (53 members)
 
 ---
 
@@ -7134,7 +7188,7 @@
 - **Severity:** `high` (score: 0.670)
 - **Constraint:** `royal_navy_middle_east_withdrawal`
 - **Domain:** `snare`
-- **Orbit Signature:** `[rope, tangled_rope, unknown]`
+- **Orbit Signature:** `[rope, tangled_rope]`
 - **Orbit Span:** `3`
 - **Gap Class:** `coordination_washing`
 - **Gap Pattern:** `snare_masked_as_rope`
@@ -7143,7 +7197,7 @@
 - **Suppression:** `0.50`
 - **Question:** Constraint royal_navy_middle_east_withdrawal appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F010` (17 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -7161,7 +7215,7 @@
 - **Suppression:** `0.90`
 - **Question:** Constraint the_wall_procedural_barrier appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F004` (53 members)
+- **Family:** `F005` (53 members)
 
 ---
 
@@ -7180,6 +7234,42 @@
 - **Question:** Constraint us_iran_drone_conflict appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
 - **Family:** `F002` (153 members)
+
+---
+
+### `omega_extraction_blindness_clawderberg_recursive_slop` [HIGH]
+
+- **Severity:** `high` (score: 0.665)
+- **Constraint:** `clawderberg_recursive_slop`
+- **Domain:** `piton`
+- **Orbit Signature:** `[rope, tangled_rope]`
+- **Orbit Span:** `3`
+- **Gap Class:** `coordination_washing`
+- **Gap Pattern:** `snare_masked_as_rope`
+- **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+- **Epsilon:** `0.85`
+- **Suppression:** `0.40`
+- **Question:** Constraint clawderberg_recursive_slop appears extractive (Snare) to individuals but functional (Rope) to institutions...
+- **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
+- **Family:** `F009` (17 members)
+
+---
+
+### `omega_extraction_blindness_cost_of_observation` [HIGH]
+
+- **Severity:** `high` (score: 0.665)
+- **Constraint:** `cost_of_observation`
+- **Domain:** `snare`
+- **Orbit Signature:** `[rope, tangled_rope]`
+- **Orbit Span:** `3`
+- **Gap Class:** `coordination_washing`
+- **Gap Pattern:** `snare_masked_as_rope`
+- **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+- **Epsilon:** `0.85`
+- **Suppression:** `0.40`
+- **Question:** Constraint cost_of_observation appears extractive (Snare) to individuals but functional (Rope) to institutions...
+- **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -7521,7 +7611,7 @@
 - **Suppression:** `0.75`
 - **Question:** Constraint openai_prism_development appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F032` (4 members)
+- **Family:** `F025` (4 members)
 
 ---
 
@@ -7611,7 +7701,7 @@
 - **Suppression:** `0.75`
 - **Question:** Constraint us_usmca_china_leverage appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F032` (4 members)
+- **Family:** `F025` (4 members)
 
 ---
 
@@ -7620,7 +7710,7 @@
 - **Severity:** `high` (score: 0.655)
 - **Constraint:** `abstraction_leakage`
 - **Domain:** `snare`
-- **Orbit Signature:** `[rope, tangled_rope, unknown]`
+- **Orbit Signature:** `[rope, tangled_rope]`
 - **Orbit Span:** `3`
 - **Gap Class:** `coordination_washing`
 - **Gap Pattern:** `snare_masked_as_rope`
@@ -7629,7 +7719,7 @@
 - **Suppression:** `0.55`
 - **Question:** Constraint abstraction_leakage appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F010` (17 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -7692,7 +7782,7 @@
 - **Severity:** `high` (score: 0.654)
 - **Constraint:** `rule_update_failure`
 - **Domain:** `piton`
-- **Orbit Signature:** `[rope, tangled_rope, unknown]`
+- **Orbit Signature:** `[rope, tangled_rope]`
 - **Orbit Span:** `3`
 - **Gap Class:** `coordination_washing`
 - **Gap Pattern:** `snare_masked_as_rope`
@@ -7701,7 +7791,7 @@
 - **Suppression:** `0.58`
 - **Question:** Constraint rule_update_failure appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F038` (3 members)
+- **Family:** `F009` (17 members)
 
 ---
 
@@ -7719,7 +7809,7 @@
 - **Suppression:** `0.70`
 - **Question:** Constraint ai_superpowers_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F043` (1 members)
+- **Family:** `F034` (1 members)
 
 ---
 
@@ -7737,7 +7827,7 @@
 - **Suppression:** `0.95`
 - **Question:** Constraint emergency_bridge_scaffold appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F028` (5 members)
+- **Family:** `F012` (12 members)
 
 ---
 
@@ -7773,7 +7863,7 @@
 - **Suppression:** `0.75`
 - **Question:** Constraint rogers_commission_institutional_analysis appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F004` (53 members)
+- **Family:** `F005` (53 members)
 
 ---
 
@@ -8052,7 +8142,7 @@
 - **Severity:** `high` (score: 0.645)
 - **Constraint:** `grete_samsa_transition`
 - **Domain:** `snare`
-- **Orbit Signature:** `[rope, tangled_rope, unknown]`
+- **Orbit Signature:** `[rope, tangled_rope]`
 - **Orbit Span:** `3`
 - **Gap Class:** `coordination_washing`
 - **Gap Pattern:** `snare_masked_as_rope`
@@ -8061,7 +8151,7 @@
 - **Suppression:** `0.50`
 - **Question:** Constraint grete_samsa_transition appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F010` (17 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -8080,6 +8170,24 @@
 - **Question:** Constraint guano_wealth_extraction appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
 - **Family:** `F002` (153 members)
+
+---
+
+### `omega_extraction_blindness_hegemonic_entropy_2026` [HIGH]
+
+- **Severity:** `high` (score: 0.645)
+- **Constraint:** `hegemonic_entropy_2026`
+- **Domain:** `piton`
+- **Orbit Signature:** `[rope, tangled_rope]`
+- **Orbit Span:** `3`
+- **Gap Class:** `coordination_washing`
+- **Gap Pattern:** `snare_masked_as_rope`
+- **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+- **Epsilon:** `0.72`
+- **Suppression:** `0.55`
+- **Question:** Constraint hegemonic_entropy_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+- **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
+- **Family:** `F009` (17 members)
 
 ---
 
@@ -8124,7 +8232,7 @@
 - **Severity:** `high` (score: 0.645)
 - **Constraint:** `insult_wisdom_training`
 - **Domain:** `snare`
-- **Orbit Signature:** `[rope, tangled_rope, unknown]`
+- **Orbit Signature:** `[rope, tangled_rope]`
 - **Orbit Span:** `3`
 - **Gap Class:** `coordination_washing`
 - **Gap Pattern:** `snare_masked_as_rope`
@@ -8133,7 +8241,7 @@
 - **Suppression:** `0.50`
 - **Question:** Constraint insult_wisdom_training appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F010` (17 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -8169,7 +8277,7 @@
 - **Suppression:** `0.90`
 - **Question:** Constraint juvenile_underclass_2026 appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F017` (10 members)
+- **Family:** `F015` (10 members)
 
 ---
 
@@ -8232,7 +8340,7 @@
 - **Severity:** `high` (score: 0.645)
 - **Constraint:** `neurodiversity_spectrum`
 - **Domain:** `snare`
-- **Orbit Signature:** `[rope, tangled_rope, unknown]`
+- **Orbit Signature:** `[rope, tangled_rope]`
 - **Orbit Span:** `3`
 - **Gap Class:** `coordination_washing`
 - **Gap Pattern:** `snare_masked_as_rope`
@@ -8241,7 +8349,7 @@
 - **Suppression:** `0.55`
 - **Question:** Constraint neurodiversity_spectrum appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F010` (17 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -8412,7 +8520,7 @@
 - **Severity:** `high` (score: 0.645)
 - **Constraint:** `smartphone_ubiquity`
 - **Domain:** `snare`
-- **Orbit Signature:** `[rope, tangled_rope, unknown]`
+- **Orbit Signature:** `[rope, tangled_rope]`
 - **Orbit Span:** `3`
 - **Gap Class:** `coordination_washing`
 - **Gap Pattern:** `snare_masked_as_rope`
@@ -8421,7 +8529,7 @@
 - **Suppression:** `0.50`
 - **Question:** Constraint smartphone_ubiquity appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F010` (17 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -8781,7 +8889,7 @@
 - **Suppression:** `0.70`
 - **Question:** Constraint asymmetric_computational_difficulty appears as mountain to individuals but snare to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F017` (10 members)
+- **Family:** `F015` (10 members)
 
 ---
 
@@ -8817,7 +8925,7 @@
 - **Suppression:** `0.95`
 - **Question:** Constraint ulysses_ithaca_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F019` (8 members)
+- **Family:** `F009` (17 members)
 
 ---
 
@@ -8844,16 +8952,16 @@
 - **Severity:** `high` (score: 0.632)
 - **Constraint:** `mit_tfus_2026`
 - **Domain:** `scaffold`
-- **Orbit Signature:** `[scaffold, snare, unknown]`
+- **Orbit Signature:** `[scaffold, snare, tangled_rope]`
 - **Orbit Span:** `3`
-- **Gap Class:** `powerless_blind`
+- **Gap Class:** `coordination_washing`
 - **Gap Pattern:** `snare_masked_as_rope`
 - **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
 - **Epsilon:** `0.52`
 - **Suppression:** `0.84`
 - **Question:** Constraint mit_tfus_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
-- **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F051` (1 members)
+- **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
+- **Family:** `F039` (1 members)
 
 ---
 
@@ -8871,7 +8979,7 @@
 - **Suppression:** `0.65`
 - **Question:** Constraint ai_performance_watermark appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F032` (4 members)
+- **Family:** `F025` (4 members)
 
 ---
 
@@ -8880,7 +8988,7 @@
 - **Severity:** `high` (score: 0.630)
 - **Constraint:** `big_data_astrophysics_arbitrage`
 - **Domain:** `snare`
-- **Orbit Signature:** `[rope, tangled_rope, unknown]`
+- **Orbit Signature:** `[rope, tangled_rope]`
 - **Orbit Span:** `3`
 - **Gap Class:** `coordination_washing`
 - **Gap Pattern:** `snare_masked_as_rope`
@@ -8889,7 +8997,7 @@
 - **Suppression:** `0.45`
 - **Question:** Constraint big_data_astrophysics_arbitrage appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F010` (17 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -9042,16 +9150,16 @@
 - **Severity:** `high` (score: 0.630)
 - **Constraint:** `genie_ip_constraint`
 - **Domain:** `snare`
-- **Orbit Signature:** `[scaffold, snare, unknown]`
+- **Orbit Signature:** `[scaffold, snare, tangled_rope]`
 - **Orbit Span:** `3`
-- **Gap Class:** `powerless_blind`
+- **Gap Class:** `coordination_washing`
 - **Gap Pattern:** `snare_masked_as_rope`
 - **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
 - **Epsilon:** `0.60`
 - **Suppression:** `0.70`
 - **Question:** Constraint genie_ip_constraint appears extractive (Snare) to individuals but functional (Rope) to institutions...
-- **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F020` (7 members)
+- **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
+- **Family:** `F012` (12 members)
 
 ---
 
@@ -9123,7 +9231,7 @@
 - **Suppression:** `0.85`
 - **Question:** Constraint lula_hemisphere_2026 appears as mountain to individuals but snare to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F004` (53 members)
+- **Family:** `F005` (53 members)
 
 ---
 
@@ -9249,7 +9357,7 @@
 - **Suppression:** `0.78`
 - **Question:** Constraint bangladesh_july_national_charter appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F028` (5 members)
+- **Family:** `F012` (12 members)
 
 ---
 
@@ -9267,7 +9375,7 @@
 - **Suppression:** `0.72`
 - **Question:** Constraint ia_digital_preservation appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F028` (5 members)
+- **Family:** `F012` (12 members)
 
 ---
 
@@ -9276,16 +9384,16 @@
 - **Severity:** `high` (score: 0.626)
 - **Constraint:** `nsw_transmission_bottleneck`
 - **Domain:** `snare`
-- **Orbit Signature:** `[scaffold, snare, unknown]`
+- **Orbit Signature:** `[scaffold, snare, tangled_rope]`
 - **Orbit Span:** `3`
-- **Gap Class:** `powerless_blind`
+- **Gap Class:** `coordination_washing`
 - **Gap Pattern:** `snare_masked_as_rope`
 - **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
 - **Epsilon:** `0.58`
 - **Suppression:** `0.72`
 - **Question:** Constraint nsw_transmission_bottleneck appears extractive (Snare) to individuals but functional (Rope) to institutions...
-- **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F020` (7 members)
+- **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
+- **Family:** `F012` (12 members)
 
 ---
 
@@ -9294,7 +9402,7 @@
 - **Severity:** `high` (score: 0.625)
 - **Constraint:** `decision_latency_mismatch`
 - **Domain:** `snare`
-- **Orbit Signature:** `[rope, tangled_rope, unknown]`
+- **Orbit Signature:** `[rope, tangled_rope]`
 - **Orbit Span:** `3`
 - **Gap Class:** `coordination_washing`
 - **Gap Pattern:** `snare_masked_as_rope`
@@ -9303,7 +9411,7 @@
 - **Suppression:** `0.55`
 - **Question:** Constraint decision_latency_mismatch appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F010` (17 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -9312,7 +9420,7 @@
 - **Severity:** `high` (score: 0.625)
 - **Constraint:** `institutional_trust_decay`
 - **Domain:** `piton`
-- **Orbit Signature:** `[rope, tangled_rope, unknown]`
+- **Orbit Signature:** `[rope, tangled_rope]`
 - **Orbit Span:** `3`
 - **Gap Class:** `coordination_washing`
 - **Gap Pattern:** `snare_masked_as_rope`
@@ -9321,7 +9429,25 @@
 - **Suppression:** `0.55`
 - **Question:** Constraint institutional_trust_decay appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F038` (3 members)
+- **Family:** `F009` (17 members)
+
+---
+
+### `omega_extraction_blindness_rotation_seven_black_soil` [HIGH]
+
+- **Severity:** `high` (score: 0.625)
+- **Constraint:** `rotation_seven_black_soil`
+- **Domain:** `snare`
+- **Orbit Signature:** `[rope, tangled_rope]`
+- **Orbit Span:** `3`
+- **Gap Class:** `coordination_washing`
+- **Gap Pattern:** `snare_masked_as_rope`
+- **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+- **Epsilon:** `0.95`
+- **Suppression:** `0.10`
+- **Question:** Constraint rotation_seven_black_soil appears extractive (Snare) to individuals but functional (Rope) to institutions...
+- **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -9348,7 +9474,7 @@
 - **Severity:** `high` (score: 0.620)
 - **Constraint:** `college_admissions_market`
 - **Domain:** `snare`
-- **Orbit Signature:** `[rope, tangled_rope, unknown]`
+- **Orbit Signature:** `[rope, tangled_rope]`
 - **Orbit Span:** `3`
 - **Gap Class:** `coordination_washing`
 - **Gap Pattern:** `snare_masked_as_rope`
@@ -9357,7 +9483,7 @@
 - **Suppression:** `0.50`
 - **Question:** Constraint college_admissions_market appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F010` (17 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -9366,7 +9492,7 @@
 - **Severity:** `high` (score: 0.620)
 - **Constraint:** `factional_instability`
 - **Domain:** `snare`
-- **Orbit Signature:** `[rope, tangled_rope, unknown]`
+- **Orbit Signature:** `[rope, tangled_rope]`
 - **Orbit Span:** `3`
 - **Gap Class:** `coordination_washing`
 - **Gap Pattern:** `snare_masked_as_rope`
@@ -9375,7 +9501,7 @@
 - **Suppression:** `0.50`
 - **Question:** Constraint factional_instability appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F010` (17 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -9402,7 +9528,7 @@
 - **Severity:** `high` (score: 0.620)
 - **Constraint:** `hydra_game`
 - **Domain:** `snare`
-- **Orbit Signature:** `[rope, tangled_rope, unknown]`
+- **Orbit Signature:** `[rope, tangled_rope]`
 - **Orbit Span:** `3`
 - **Gap Class:** `coordination_washing`
 - **Gap Pattern:** `snare_masked_as_rope`
@@ -9411,7 +9537,7 @@
 - **Suppression:** `0.50`
 - **Question:** Constraint hydra_game appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F010` (17 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -9429,7 +9555,7 @@
 - **Suppression:** `0.70`
 - **Question:** Constraint mutual_defection_equilibrium appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F004` (53 members)
+- **Family:** `F005` (53 members)
 
 ---
 
@@ -9438,7 +9564,7 @@
 - **Severity:** `high` (score: 0.620)
 - **Constraint:** `temporal_scale_arbitrage`
 - **Domain:** `snare`
-- **Orbit Signature:** `[rope, tangled_rope, unknown]`
+- **Orbit Signature:** `[rope, tangled_rope]`
 - **Orbit Span:** `3`
 - **Gap Class:** `coordination_washing`
 - **Gap Pattern:** `snare_masked_as_rope`
@@ -9447,7 +9573,7 @@
 - **Suppression:** `0.40`
 - **Question:** Constraint temporal_scale_arbitrage appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F010` (17 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -9519,7 +9645,7 @@
 - **Suppression:** `0.80`
 - **Question:** Constraint arctic_geopolitical_flashpoint appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F004` (53 members)
+- **Family:** `F005` (53 members)
 
 ---
 
@@ -9645,7 +9771,7 @@
 - **Suppression:** `0.85`
 - **Question:** Constraint overton_window appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -9699,7 +9825,7 @@
 - **Suppression:** `0.85`
 - **Question:** Constraint shield_east_fortification appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F037` (3 members)
+- **Family:** `F030` (3 members)
 
 ---
 
@@ -9717,7 +9843,7 @@
 - **Suppression:** `0.80`
 - **Question:** Constraint starwars_evolutionary_mutation appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F004` (53 members)
+- **Family:** `F005` (53 members)
 
 ---
 
@@ -9735,7 +9861,7 @@
 - **Suppression:** `0.80`
 - **Question:** Constraint stoic_logos_governance appears as mountain to individuals but snare to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F004` (53 members)
+- **Family:** `F005` (53 members)
 
 ---
 
@@ -9762,7 +9888,7 @@
 - **Severity:** `high` (score: 0.615)
 - **Constraint:** `teaching_horses_to_sing`
 - **Domain:** `snare`
-- **Orbit Signature:** `[rope, tangled_rope, unknown]`
+- **Orbit Signature:** `[rope, tangled_rope]`
 - **Orbit Span:** `3`
 - **Gap Class:** `coordination_washing`
 - **Gap Pattern:** `snare_masked_as_rope`
@@ -9771,7 +9897,7 @@
 - **Suppression:** `0.40`
 - **Question:** Constraint teaching_horses_to_sing appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F010` (17 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -9780,7 +9906,7 @@
 - **Severity:** `high` (score: 0.615)
 - **Constraint:** `transformer_self_attention`
 - **Domain:** `snare`
-- **Orbit Signature:** `[rope, tangled_rope, unknown]`
+- **Orbit Signature:** `[rope, tangled_rope]`
 - **Orbit Span:** `3`
 - **Gap Class:** `coordination_washing`
 - **Gap Pattern:** `snare_masked_as_rope`
@@ -9789,7 +9915,7 @@
 - **Suppression:** `0.40`
 - **Question:** Constraint transformer_self_attention appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F010` (17 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -9807,7 +9933,7 @@
 - **Suppression:** `0.85`
 - **Question:** Constraint us_legal_standard_reasonable_doubt appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -9825,7 +9951,7 @@
 - **Suppression:** `0.90`
 - **Question:** Constraint visa_ipo_regulatory_compliance appears as tangled_rope to individuals but rope to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F006` (40 members)
+- **Family:** `F004` (72 members)
 
 ---
 
@@ -9861,7 +9987,7 @@
 - **Suppression:** `0.70`
 - **Question:** Constraint ancient_grudge_verona appears as mountain to individuals but snare to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F004` (53 members)
+- **Family:** `F005` (53 members)
 
 ---
 
@@ -9879,7 +10005,7 @@
 - **Suppression:** `0.70`
 - **Question:** Constraint metamorphosis_samsa appears as mountain to individuals but snare to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F004` (53 members)
+- **Family:** `F005` (53 members)
 
 ---
 
@@ -9897,7 +10023,7 @@
 - **Suppression:** `0.70`
 - **Question:** Constraint nasa_faster_better_cheaper appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F004` (53 members)
+- **Family:** `F005` (53 members)
 
 ---
 
@@ -9915,7 +10041,7 @@
 - **Suppression:** `0.70`
 - **Question:** Constraint qualified_immunity appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F004` (53 members)
+- **Family:** `F005` (53 members)
 
 ---
 
@@ -9933,7 +10059,7 @@
 - **Suppression:** `0.70`
 - **Question:** Constraint self_surpassing appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F004` (53 members)
+- **Family:** `F005` (53 members)
 
 ---
 
@@ -9951,7 +10077,7 @@
 - **Suppression:** `0.55`
 - **Question:** Constraint trump_critical_minerals appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -9969,7 +10095,7 @@
 - **Suppression:** `0.68`
 - **Question:** Constraint cognitive_energy_budget appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F004` (53 members)
+- **Family:** `F005` (53 members)
 
 ---
 
@@ -9978,16 +10104,16 @@
 - **Severity:** `high` (score: 0.605)
 - **Constraint:** `ai_scholar_citation_trap`
 - **Domain:** `snare`
-- **Orbit Signature:** `[scaffold, snare, unknown]`
+- **Orbit Signature:** `[scaffold, snare, tangled_rope]`
 - **Orbit Span:** `3`
-- **Gap Class:** `powerless_blind`
+- **Gap Class:** `coordination_washing`
 - **Gap Pattern:** `snare_masked_as_rope`
 - **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
 - **Epsilon:** `0.55`
 - **Suppression:** `0.70`
 - **Question:** Constraint ai_scholar_citation_trap appears extractive (Snare) to individuals but functional (Rope) to institutions...
-- **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F020` (7 members)
+- **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
+- **Family:** `F012` (12 members)
 
 ---
 
@@ -9996,7 +10122,7 @@
 - **Severity:** `high` (score: 0.605)
 - **Constraint:** `moltbook_agent_theater`
 - **Domain:** `piton`
-- **Orbit Signature:** `[rope, tangled_rope, unknown]`
+- **Orbit Signature:** `[rope, tangled_rope]`
 - **Orbit Span:** `3`
 - **Gap Class:** `coordination_washing`
 - **Gap Pattern:** `snare_masked_as_rope`
@@ -10005,7 +10131,7 @@
 - **Suppression:** `0.45`
 - **Question:** Constraint moltbook_agent_theater appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F038` (3 members)
+- **Family:** `F009` (17 members)
 
 ---
 
@@ -10014,16 +10140,16 @@
 - **Severity:** `high` (score: 0.605)
 - **Constraint:** `openai_api_access`
 - **Domain:** `snare`
-- **Orbit Signature:** `[scaffold, snare, unknown]`
+- **Orbit Signature:** `[scaffold, snare, tangled_rope]`
 - **Orbit Span:** `3`
-- **Gap Class:** `powerless_blind`
+- **Gap Class:** `coordination_washing`
 - **Gap Pattern:** `snare_masked_as_rope`
 - **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
 - **Epsilon:** `0.55`
 - **Suppression:** `0.70`
 - **Question:** Constraint openai_api_access appears extractive (Snare) to individuals but functional (Rope) to institutions...
-- **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F020` (7 members)
+- **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
+- **Family:** `F012` (12 members)
 
 ---
 
@@ -10032,16 +10158,16 @@
 - **Severity:** `high` (score: 0.605)
 - **Constraint:** `openai_codex_app_constraint`
 - **Domain:** `snare`
-- **Orbit Signature:** `[scaffold, snare, unknown]`
+- **Orbit Signature:** `[scaffold, snare, tangled_rope]`
 - **Orbit Span:** `3`
-- **Gap Class:** `powerless_blind`
+- **Gap Class:** `coordination_washing`
 - **Gap Pattern:** `snare_masked_as_rope`
 - **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
 - **Epsilon:** `0.55`
 - **Suppression:** `0.70`
 - **Question:** Constraint openai_codex_app_constraint appears extractive (Snare) to individuals but functional (Rope) to institutions...
-- **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F020` (7 members)
+- **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
+- **Family:** `F012` (12 members)
 
 ---
 
@@ -10050,16 +10176,16 @@
 - **Severity:** `high` (score: 0.605)
 - **Constraint:** `openscholar_peer_review`
 - **Domain:** `snare`
-- **Orbit Signature:** `[scaffold, snare, unknown]`
+- **Orbit Signature:** `[scaffold, snare, tangled_rope]`
 - **Orbit Span:** `3`
-- **Gap Class:** `powerless_blind`
+- **Gap Class:** `coordination_washing`
 - **Gap Pattern:** `snare_masked_as_rope`
 - **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
 - **Epsilon:** `0.55`
 - **Suppression:** `0.70`
 - **Question:** Constraint openscholar_peer_review appears extractive (Snare) to individuals but functional (Rope) to institutions...
-- **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F020` (7 members)
+- **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
+- **Family:** `F012` (12 members)
 
 ---
 
@@ -10077,7 +10203,7 @@
 - **Suppression:** `0.80`
 - **Question:** Constraint atrophied_optimization_piton appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F019` (8 members)
+- **Family:** `F009` (17 members)
 
 ---
 
@@ -10095,7 +10221,7 @@
 - **Suppression:** `0.80`
 - **Question:** Disentangling biological predisposition from algorithmic amplification in modern polarization.
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -10113,25 +10239,7 @@
 - **Suppression:** `0.80`
 - **Question:** Constraint confirmation_bias appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
-
----
-
-### `omega_extraction_blindness_gamblers_ruin_stochastic_extinction` [HIGH]
-
-- **Severity:** `high` (score: 0.600)
-- **Constraint:** `gamblers_ruin_stochastic_extinction`
-- **Domain:** `snare`
-- **Orbit Signature:** `[scaffold, unknown]`
-- **Orbit Span:** `0`
-- **Gap Class:** `powerless_blind`
-- **Gap Pattern:** `snare_masked_as_rope`
-- **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
-- **Epsilon:** `0.90`
-- **Suppression:** `0.50`
-- **Question:** Constraint gamblers_ruin_stochastic_extinction appears extractive (Snare) to individuals but functional (Rope) to institutions...
-- **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F024` (6 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -10149,7 +10257,7 @@
 - **Suppression:** `0.50`
 - **Question:** Constraint steinmetz_valuation_asymmetry appears as mountain to individuals but snare to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F004` (53 members)
+- **Family:** `F005` (53 members)
 
 ---
 
@@ -10167,7 +10275,7 @@
 - **Suppression:** `0.50`
 - **Question:** Constraint india_semi_mission appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -10185,7 +10293,7 @@
 - **Suppression:** `0.50`
 - **Question:** Constraint politeness_face_negotiation appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -10203,7 +10311,7 @@
 - **Suppression:** `0.50`
 - **Question:** Constraint shobies_existential_commitment appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -10221,7 +10329,7 @@
 - **Suppression:** `0.85`
 - **Question:** Constraint sm_addictive_design appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F004` (53 members)
+- **Family:** `F005` (53 members)
 
 ---
 
@@ -10239,7 +10347,7 @@
 - **Suppression:** `0.50`
 - **Question:** Constraint theory_of_visitors appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -10248,16 +10356,16 @@
 - **Severity:** `high` (score: 0.590)
 - **Constraint:** `absorbing_markov_chain_trap`
 - **Domain:** `snare`
-- **Orbit Signature:** `[scaffold, snare, unknown]`
+- **Orbit Signature:** `[scaffold, snare, tangled_rope]`
 - **Orbit Span:** `3`
-- **Gap Class:** `powerless_blind`
+- **Gap Class:** `coordination_washing`
 - **Gap Pattern:** `general_type_mismatch`
 - **Source Gap:** `gap(general_type_mismatch,snare,tangled_rope)`
 - **Epsilon:** `0.55`
 - **Suppression:** `0.65`
 - **Question:** Constraint absorbing_markov_chain_trap appears as snare to individuals but tangled_rope to institutions...
-- **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F020` (7 members)
+- **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
+- **Family:** `F012` (12 members)
 
 ---
 
@@ -10374,7 +10482,7 @@
 - **Severity:** `high` (score: 0.590)
 - **Constraint:** `tragedy_of_the_commons`
 - **Domain:** `snare`
-- **Orbit Signature:** `[rope, tangled_rope, unknown]`
+- **Orbit Signature:** `[rope, tangled_rope]`
 - **Orbit Span:** `3`
 - **Gap Class:** `coordination_washing`
 - **Gap Pattern:** `snare_masked_as_rope`
@@ -10383,7 +10491,7 @@
 - **Suppression:** `0.40`
 - **Question:** Constraint tragedy_of_the_commons appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F010` (17 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -10401,7 +10509,7 @@
 - **Suppression:** `0.75`
 - **Question:** Constraint board_of_peace_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -10419,7 +10527,7 @@
 - **Suppression:** `0.85`
 - **Question:** Constraint coinbase_crypto_volatility appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F006` (40 members)
+- **Family:** `F004` (72 members)
 
 ---
 
@@ -10437,7 +10545,7 @@
 - **Suppression:** `0.75`
 - **Question:** Constraint eu_renewable_energy_mandate appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -10455,7 +10563,7 @@
 - **Suppression:** `0.75`
 - **Question:** Constraint gpt_store_marketplace appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -10473,7 +10581,7 @@
 - **Suppression:** `0.75`
 - **Question:** Constraint nds_2022_pacing_challenge appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -10491,7 +10599,7 @@
 - **Suppression:** `0.75`
 - **Question:** Constraint omega1_patching_process appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -10509,7 +10617,7 @@
 - **Suppression:** `0.75`
 - **Question:** Constraint scientific_paradigm_lifecycle appears as snare to individuals but piton to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -10527,7 +10635,7 @@
 - **Suppression:** `0.75`
 - **Question:** Constraint tiktok_us_divestiture_mandate appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -10545,7 +10653,7 @@
 - **Suppression:** `0.75`
 - **Question:** Constraint ulysses_rocks_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F019` (8 members)
+- **Family:** `F009` (17 members)
 
 ---
 
@@ -10563,7 +10671,7 @@
 - **Suppression:** `0.75`
 - **Question:** Constraint us_tariffs_2025 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -10581,7 +10689,7 @@
 - **Suppression:** `0.45`
 - **Question:** Constraint adverse_possession appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -10599,7 +10707,7 @@
 - **Suppression:** `0.80`
 - **Question:** Constraint epstein_document_release_2026 appears as snare to individuals but tangled_rope to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F040` (2 members)
+- **Family:** `F031` (2 members)
 
 ---
 
@@ -10617,7 +10725,7 @@
 - **Suppression:** `0.75`
 - **Question:** Constraint lcdm_hubble_tension appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -10635,7 +10743,25 @@
 - **Suppression:** `0.45`
 - **Question:** Constraint rare_earth_seabed_mining appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
+
+---
+
+### `omega_extraction_blindness_regulatory_capture` [HIGH]
+
+- **Severity:** `high` (score: 0.580)
+- **Constraint:** `regulatory_capture`
+- **Domain:** `snare`
+- **Orbit Signature:** `[rope, tangled_rope]`
+- **Orbit Span:** `3`
+- **Gap Class:** `coordination_washing`
+- **Gap Pattern:** `snare_masked_as_rope`
+- **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+- **Epsilon:** `0.80`
+- **Suppression:** `0.20`
+- **Question:** Constraint regulatory_capture appears extractive (Snare) to individuals but functional (Rope) to institutions...
+- **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -10653,25 +10779,7 @@
 - **Suppression:** `0.72`
 - **Question:** Constraint eurozone_fragmentation_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
-
----
-
-### `omega_extraction_blindness_neural_interoperability` [HIGH]
-
-- **Severity:** `high` (score: 0.575)
-- **Constraint:** `neural_interoperability`
-- **Domain:** `snare`
-- **Orbit Signature:** `[rope, unknown]`
-- **Orbit Span:** `0`
-- **Gap Class:** `powerless_blind`
-- **Gap Pattern:** `snare_masked_as_rope`
-- **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
-- **Epsilon:** `0.85`
-- **Suppression:** `0.50`
-- **Question:** Constraint neural_interoperability appears extractive (Snare) to individuals but functional (Rope) to institutions...
-- **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F016` (11 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -10689,7 +10797,7 @@
 - **Suppression:** `0.65`
 - **Question:** Constraint perovskite_self_etching appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F028` (5 members)
+- **Family:** `F012` (12 members)
 
 ---
 
@@ -10707,7 +10815,7 @@
 - **Suppression:** `0.65`
 - **Question:** Constraint antifragility appears as snare to individuals but tangled_rope to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F004` (53 members)
+- **Family:** `F005` (53 members)
 
 ---
 
@@ -10725,7 +10833,7 @@
 - **Suppression:** `0.70`
 - **Question:** Constraint data_replication_paradox appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -10743,7 +10851,7 @@
 - **Suppression:** `0.50`
 - **Question:** Constraint em_clinical_guidelines appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -10761,7 +10869,7 @@
 - **Suppression:** `0.70`
 - **Question:** Long-term cryptographic security of the anonymity set against future state-level attacks.
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -10779,7 +10887,7 @@
 - **Suppression:** `0.70`
 - **Question:** Constraint eu_deforestation_regulation appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -10797,7 +10905,7 @@
 - **Suppression:** `0.50`
 - **Question:** Constraint genetic_predisposition appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -10815,7 +10923,7 @@
 - **Suppression:** `0.50`
 - **Question:** Constraint jevons_paradox appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -10833,7 +10941,7 @@
 - **Suppression:** `0.70`
 - **Question:** Constraint manga_distribution_duopoly appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -10851,7 +10959,7 @@
 - **Suppression:** `0.75`
 - **Question:** Constraint north_sea_wind_grid appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F006` (40 members)
+- **Family:** `F004` (72 members)
 
 ---
 
@@ -10869,7 +10977,7 @@
 - **Suppression:** `0.50`
 - **Question:** Constraint social_media_participation_threshold appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -10887,7 +10995,7 @@
 - **Suppression:** `0.70`
 - **Question:** Constraint ulysses_lotus_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F019` (8 members)
+- **Family:** `F009` (17 members)
 
 ---
 
@@ -10905,7 +11013,7 @@
 - **Suppression:** `0.50`
 - **Question:** Constraint union_protection_underperformance appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -10923,7 +11031,7 @@
 - **Suppression:** `0.40`
 - **Question:** Constraint pna appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -10941,7 +11049,7 @@
 - **Suppression:** `0.40`
 - **Question:** Constraint st_petersburg_paradox appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -10959,7 +11067,7 @@
 - **Suppression:** `0.40`
 - **Question:** Constraint trump_making_china_great_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -10977,7 +11085,7 @@
 - **Suppression:** `0.70`
 - **Question:** Constraint ulysses_eumaeus_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F019` (8 members)
+- **Family:** `F009` (17 members)
 
 ---
 
@@ -10995,7 +11103,25 @@
 - **Suppression:** `0.80`
 - **Question:** Constraint comitatus_bond appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F006` (40 members)
+- **Family:** `F004` (72 members)
+
+---
+
+### `omega_cut_safety_gs1_standardized_identification` [HIGH]
+
+- **Severity:** `high` (score: 0.560)
+- **Constraint:** `gs1_standardized_identification`
+- **Domain:** `rope`
+- **Orbit Signature:** `[rope, tangled_rope]`
+- **Orbit Span:** `3`
+- **Gap Class:** `coordination_washing`
+- **Gap Pattern:** `mountain_coordination_confusion`
+- **Source Gap:** `gap(mountain_coordination_confusion,mountain,rope)`
+- **Epsilon:** `0.40`
+- **Suppression:** `0.80`
+- **Question:** Constraint gs1_standardized_identification appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
+- **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
+- **Family:** `F010` (16 members)
 
 ---
 
@@ -11013,25 +11139,7 @@
 - **Suppression:** `0.80`
 - **Question:** Constraint magna_carta_liberties appears as mountain to individuals but snare to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F034` (4 members)
-
----
-
-### `omega_extraction_blindness_net_zero_stabilization` [HIGH]
-
-- **Severity:** `high` (score: 0.560)
-- **Constraint:** `net_zero_stabilization`
-- **Domain:** `snare`
-- **Orbit Signature:** `[rope, unknown]`
-- **Orbit Span:** `0`
-- **Gap Class:** `powerless_blind`
-- **Gap Pattern:** `snare_masked_as_rope`
-- **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
-- **Epsilon:** `0.85`
-- **Suppression:** `0.45`
-- **Question:** Constraint net_zero_stabilization appears extractive (Snare) to individuals but functional (Rope) to institutions...
-- **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F016` (11 members)
+- **Family:** `F010` (16 members)
 
 ---
 
@@ -11049,7 +11157,7 @@
 - **Suppression:** `0.90`
 - **Question:** Constraint ulysses_circe_1904 appears extractive (Snare) to individuals but unchangeable (Mountain) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F017` (10 members)
+- **Family:** `F015` (10 members)
 
 ---
 
@@ -11067,7 +11175,7 @@
 - **Suppression:** `0.95`
 - **Question:** Constraint ulysses_oxen_1904 appears extractive (Snare) to individuals but unchangeable (Mountain) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F017` (10 members)
+- **Family:** `F015` (10 members)
 
 ---
 
@@ -11076,16 +11184,16 @@
 - **Severity:** `high` (score: 0.559)
 - **Constraint:** `notary_ink_dependency`
 - **Domain:** `piton`
-- **Orbit Signature:** `[rope, tangled_rope, unknown]`
+- **Orbit Signature:** `[rope, tangled_rope]`
 - **Orbit Span:** `3`
-- **Gap Class:** `powerless_blind`
+- **Gap Class:** `coordination_washing`
 - **Gap Pattern:** `snare_masked_as_rope`
 - **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
 - **Epsilon:** `0.35`
 - **Suppression:** `0.88`
 - **Question:** Constraint notary_ink_dependency appears extractive (Snare) to individuals but functional (Rope) to institutions...
-- **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F052` (1 members)
+- **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
+- **Family:** `F009` (17 members)
 
 ---
 
@@ -11103,7 +11211,7 @@
 - **Suppression:** `0.78`
 - **Question:** Constraint path_dependence_lock_in appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F004` (53 members)
+- **Family:** `F005` (53 members)
 
 ---
 
@@ -11121,7 +11229,7 @@
 - **Suppression:** `0.65`
 - **Question:** Constraint ai_training_data_dependency appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -11139,7 +11247,7 @@
 - **Suppression:** `0.65`
 - **Question:** Constraint bnpl_payment_systems appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -11157,7 +11265,7 @@
 - **Suppression:** `0.65`
 - **Question:** Constraint burden_of_proof_scientific appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -11175,7 +11283,7 @@
 - **Suppression:** `0.65`
 - **Question:** Constraint capital_rotation_ai_narrative appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -11193,7 +11301,7 @@
 - **Suppression:** `0.65`
 - **Question:** Constraint coalition_disinfo_framework_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -11211,7 +11319,7 @@
 - **Suppression:** `0.65`
 - **Question:** Constraint cold_dark_matter_paradigm appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -11229,7 +11337,7 @@
 - **Suppression:** `0.65`
 - **Question:** Constraint djia_as_economic_barometer appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -11247,7 +11355,7 @@
 - **Suppression:** `0.65`
 - **Question:** Constraint dutch_minority_govt_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -11265,7 +11373,7 @@
 - **Suppression:** `0.65`
 - **Question:** Constraint eu_affordable_housing_initiative appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -11283,7 +11391,7 @@
 - **Suppression:** `0.65`
 - **Question:** Constraint eu_mercosur_trade_agreement appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F037` (3 members)
+- **Family:** `F030` (3 members)
 
 ---
 
@@ -11301,7 +11409,7 @@
 - **Suppression:** `0.65`
 - **Question:** Constraint evfta_trade_agreement appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -11319,7 +11427,7 @@
 - **Suppression:** `0.65`
 - **Question:** Constraint hershey_salt_strategy appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -11337,7 +11445,7 @@
 - **Suppression:** `0.60`
 - **Question:** Constraint hominin_evolutionary_bottleneck appears extractive (Snare) to individuals but unchangeable (Mountain) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F009` (23 members)
+- **Family:** `F008` (23 members)
 
 ---
 
@@ -11355,7 +11463,7 @@
 - **Suppression:** `0.65`
 - **Question:** Constraint indo_german_defense_pact appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F037` (3 members)
+- **Family:** `F030` (3 members)
 
 ---
 
@@ -11373,7 +11481,7 @@
 - **Suppression:** `0.65`
 - **Question:** Constraint israel_egypt_gas_deal appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -11391,7 +11499,7 @@
 - **Suppression:** `0.65`
 - **Question:** Constraint israel_electoral_threshold appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -11409,7 +11517,7 @@
 - **Suppression:** `0.65`
 - **Question:** Constraint labor_union_dues appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -11427,7 +11535,7 @@
 - **Suppression:** `0.65`
 - **Question:** Constraint med_diet_consensus_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -11445,7 +11553,7 @@
 - **Suppression:** `0.65`
 - **Question:** Constraint paxsilica_framework appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -11463,7 +11571,7 @@
 - **Suppression:** `0.65`
 - **Question:** Constraint trade_secret_law appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -11481,7 +11589,7 @@
 - **Suppression:** `0.65`
 - **Question:** The potential for the 'Inevitable Disclosure Doctrine' to transform trade secret law into a de-facto non-compete agreement.
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -11499,7 +11607,7 @@
 - **Suppression:** `0.65`
 - **Question:** Constraint uk_necc_formation appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -11517,7 +11625,7 @@
 - **Suppression:** `0.65`
 - **Question:** Constraint ukraine_tight_gas_pilot appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -11535,7 +11643,7 @@
 - **Suppression:** `0.65`
 - **Question:** Constraint ulysses_tower_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F019` (8 members)
+- **Family:** `F009` (17 members)
 
 ---
 
@@ -11553,7 +11661,7 @@
 - **Suppression:** `0.50`
 - **Question:** Constraint castration_longevity_choice appears extractive (Snare) to individuals but unchangeable (Mountain) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F004` (53 members)
+- **Family:** `F005` (53 members)
 
 ---
 
@@ -11571,7 +11679,25 @@
 - **Suppression:** `0.40`
 - **Question:** Constraint civilizational_maintenance_debt appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
+
+---
+
+### `omega_extraction_blindness_russells_paradox_self_reference` [HIGH]
+
+- **Severity:** `high` (score: 0.550)
+- **Constraint:** `russells_paradox_self_reference`
+- **Domain:** `snare`
+- **Orbit Signature:** `[scaffold, tangled_rope]`
+- **Orbit Span:** `2`
+- **Gap Class:** `coordination_washing`
+- **Gap Pattern:** `snare_masked_as_rope`
+- **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+- **Epsilon:** `0.70`
+- **Suppression:** `0.40`
+- **Question:** Constraint russells_paradox_self_reference appears extractive (Snare) to individuals but functional (Rope) to institutions...
+- **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
+- **Family:** `F018` (7 members)
 
 ---
 
@@ -11589,7 +11715,7 @@
 - **Suppression:** `0.58`
 - **Question:** Constraint neuroplasticity_plateau appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F004` (53 members)
+- **Family:** `F005` (53 members)
 
 ---
 
@@ -11607,7 +11733,7 @@
 - **Suppression:** `0.62`
 - **Question:** Constraint minimax_theorem_game_equilibrium appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -11625,43 +11751,7 @@
 - **Suppression:** `0.75`
 - **Question:** Constraint artificial_scarcity_scaffold appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F039` (2 members)
-
----
-
-### `omega_extraction_blindness_clawderberg_recursive_slop` [HIGH]
-
-- **Severity:** `high` (score: 0.545)
-- **Constraint:** `clawderberg_recursive_slop`
-- **Domain:** `piton`
-- **Orbit Signature:** `[rope, unknown]`
-- **Orbit Span:** `0`
-- **Gap Class:** `powerless_blind`
-- **Gap Pattern:** `snare_masked_as_rope`
-- **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
-- **Epsilon:** `0.85`
-- **Suppression:** `0.40`
-- **Question:** Constraint clawderberg_recursive_slop appears extractive (Snare) to individuals but functional (Rope) to institutions...
-- **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F026` (5 members)
-
----
-
-### `omega_extraction_blindness_cost_of_observation` [HIGH]
-
-- **Severity:** `high` (score: 0.545)
-- **Constraint:** `cost_of_observation`
-- **Domain:** `snare`
-- **Orbit Signature:** `[rope, unknown]`
-- **Orbit Span:** `0`
-- **Gap Class:** `powerless_blind`
-- **Gap Pattern:** `snare_masked_as_rope`
-- **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
-- **Epsilon:** `0.85`
-- **Suppression:** `0.40`
-- **Question:** Constraint cost_of_observation appears extractive (Snare) to individuals but functional (Rope) to institutions...
-- **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F016` (11 members)
+- **Family:** `F026` (4 members)
 
 ---
 
@@ -11679,7 +11769,7 @@
 - **Suppression:** `0.50`
 - **Question:** Constraint framing_effect appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -11697,7 +11787,7 @@
 - **Suppression:** `0.55`
 - **Question:** Constraint academic_peer_review_gatekeeping appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F004` (53 members)
+- **Family:** `F005` (53 members)
 
 ---
 
@@ -11715,7 +11805,7 @@
 - **Suppression:** `0.40`
 - **Question:** Constraint arrows_impossibility_theorem appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -11733,7 +11823,7 @@
 - **Suppression:** `0.60`
 - **Question:** Constraint champions_bass_fishing_exclusion appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -11751,7 +11841,7 @@
 - **Suppression:** `0.40`
 - **Question:** Constraint cobra_effect appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -11769,7 +11859,7 @@
 - **Suppression:** `1.00`
 - **Question:** Constraint hedonic_adaptation_baseline appears as mountain to individuals but snare to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F004` (53 members)
+- **Family:** `F005` (53 members)
 
 ---
 
@@ -11787,7 +11877,7 @@
 - **Suppression:** `0.75`
 - **Question:** Constraint private_credit_market_opacity appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F040` (2 members)
+- **Family:** `F031` (2 members)
 
 ---
 
@@ -11805,7 +11895,7 @@
 - **Suppression:** `0.96`
 - **Question:** Constraint ulysses_penelope_1904 appears extractive (Snare) to individuals but unchangeable (Mountain) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F017` (10 members)
+- **Family:** `F015` (10 members)
 
 ---
 
@@ -11823,7 +11913,7 @@
 - **Suppression:** `0.60`
 - **Question:** Constraint tsp_computational_complexity appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -11841,7 +11931,7 @@
 - **Suppression:** `0.60`
 - **Question:** Constraint ulysses_calypso_1904 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F019` (8 members)
+- **Family:** `F009` (17 members)
 
 ---
 
@@ -11859,7 +11949,7 @@
 - **Suppression:** `0.70`
 - **Question:** Distinguishing inherent biological cost from systemic exploitation in the availability heuristic.
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F006` (40 members)
+- **Family:** `F004` (72 members)
 
 ---
 
@@ -11877,7 +11967,7 @@
 - **Suppression:** `0.70`
 - **Question:** Constraint availability_heuristic appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F006` (40 members)
+- **Family:** `F004` (72 members)
 
 ---
 
@@ -11895,7 +11985,7 @@
 - **Suppression:** `0.45`
 - **Question:** Constraint gpt5_codex_dev_cycle appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -11913,7 +12003,7 @@
 - **Suppression:** `0.70`
 - **Question:** Constraint kjv_textual_authority appears as tangled_rope to individuals but rope to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F006` (40 members)
+- **Family:** `F004` (72 members)
 
 ---
 
@@ -11931,7 +12021,7 @@
 - **Suppression:** `0.70`
 - **Question:** Constraint landscape_of_fear_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F006` (40 members)
+- **Family:** `F004` (72 members)
 
 ---
 
@@ -11949,7 +12039,7 @@
 - **Suppression:** `0.70`
 - **Question:** Constraint qwerty_vs_dvorak appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F006` (40 members)
+- **Family:** `F004` (72 members)
 
 ---
 
@@ -11967,7 +12057,7 @@
 - **Suppression:** `0.70`
 - **Question:** The future relevance of keyboard layouts in the face of new input technologies.
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F006` (40 members)
+- **Family:** `F004` (72 members)
 
 ---
 
@@ -11985,7 +12075,7 @@
 - **Suppression:** `0.45`
 - **Question:** Constraint social_loafing appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -12003,7 +12093,7 @@
 - **Suppression:** `0.70`
 - **Question:** Constraint sorites_paradox appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F006` (40 members)
+- **Family:** `F004` (72 members)
 
 ---
 
@@ -12021,7 +12111,7 @@
 - **Suppression:** `0.95`
 - **Question:** Constraint ulysses_hades_1904 appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F017` (10 members)
+- **Family:** `F015` (10 members)
 
 ---
 
@@ -12039,7 +12129,7 @@
 - **Suppression:** `0.70`
 - **Question:** Constraint visa_judgment_sharing_agreement appears as tangled_rope to individuals but rope to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F006` (40 members)
+- **Family:** `F004` (72 members)
 
 ---
 
@@ -12057,7 +12147,7 @@
 - **Suppression:** `0.70`
 - **Question:** The fairness of the liability allocation formula, which is detailed in a confidential legal exhibit.
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F006` (40 members)
+- **Family:** `F004` (72 members)
 
 ---
 
@@ -12075,7 +12165,7 @@
 - **Suppression:** `0.70`
 - **Question:** Constraint wikipedia_notability_requirement_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F006` (40 members)
+- **Family:** `F004` (72 members)
 
 ---
 
@@ -12093,7 +12183,7 @@
 - **Suppression:** `0.55`
 - **Question:** Constraint armra_colostrum_regulation appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -12111,7 +12201,7 @@
 - **Suppression:** `0.55`
 - **Question:** Constraint beehiiv_platform_model appears as tangled_rope to individuals but rope to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -12129,7 +12219,7 @@
 - **Suppression:** `0.55`
 - **Question:** Distinguishing benevolent nudges from manipulative dark patterns based on intent vs. outcome.
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -12147,7 +12237,7 @@
 - **Suppression:** `0.55`
 - **Question:** Constraint choice_architecture_design appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -12165,7 +12255,7 @@
 - **Suppression:** `0.65`
 - **Question:** Constraint france_cordon_sanitaire_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F019` (8 members)
+- **Family:** `F009` (17 members)
 
 ---
 
@@ -12183,7 +12273,7 @@
 - **Suppression:** `0.45`
 - **Question:** Constraint global_stimulus_spree appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F047` (1 members)
+- **Family:** `F018` (7 members)
 
 ---
 
@@ -12201,7 +12291,7 @@
 - **Suppression:** `0.75`
 - **Question:** Constraint google_universal_commerce_protocol appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F048` (1 members)
+- **Family:** `F038` (1 members)
 
 ---
 
@@ -12219,7 +12309,7 @@
 - **Suppression:** `0.50`
 - **Question:** Constraint happiness_of_others appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F004` (53 members)
+- **Family:** `F005` (53 members)
 
 ---
 
@@ -12237,25 +12327,7 @@
 - **Suppression:** `0.55`
 - **Question:** Constraint hasbro_licensing_restriction appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
-
----
-
-### `omega_extraction_blindness_hegemonic_entropy_2026` [HIGH]
-
-- **Severity:** `high` (score: 0.525)
-- **Constraint:** `hegemonic_entropy_2026`
-- **Domain:** `piton`
-- **Orbit Signature:** `[rope, unknown]`
-- **Orbit Span:** `0`
-- **Gap Class:** `powerless_blind`
-- **Gap Pattern:** `snare_masked_as_rope`
-- **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
-- **Epsilon:** `0.72`
-- **Suppression:** `0.55`
-- **Question:** Constraint hegemonic_entropy_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
-- **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F026` (5 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -12273,7 +12345,7 @@
 - **Suppression:** `0.70`
 - **Question:** Constraint international_seabed_mining_regime appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Analyst cannot classify but affected population can. Collect ground-truth from affected populations. Test whether analytical abstraction obscures lived experience.
-- **Family:** `F041` (2 members)
+- **Family:** `F032` (2 members)
 
 ---
 
@@ -12291,7 +12363,7 @@
 - **Suppression:** `0.65`
 - **Question:** Constraint lcdm_small_scale_anomalies appears as tangled_rope to individuals but rope to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F006` (40 members)
+- **Family:** `F004` (72 members)
 
 ---
 
@@ -12309,7 +12381,7 @@
 - **Suppression:** `0.55`
 - **Question:** Constraint news_paywall_inequality appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -12327,7 +12399,7 @@
 - **Suppression:** `0.55`
 - **Question:** Constraint nfl_superbowl_halftime_exclusivity appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -12345,7 +12417,7 @@
 - **Suppression:** `0.55`
 - **Question:** Constraint ny_private_school_discount appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -12363,7 +12435,7 @@
 - **Suppression:** `0.55`
 - **Question:** Constraint plastic_asphalt_mandate appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -12381,7 +12453,7 @@
 - **Suppression:** `0.55`
 - **Question:** Constraint rare_earth_hydrogen_extraction appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -12399,7 +12471,7 @@
 - **Suppression:** `0.55`
 - **Question:** Constraint semiconductor_mission_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -12417,7 +12489,7 @@
 - **Suppression:** `0.70`
 - **Question:** Constraint trump_epa_greenhouse_gas_reversal appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Analyst cannot classify but affected population can. Collect ground-truth from affected populations. Test whether analytical abstraction obscures lived experience.
-- **Family:** `F041` (2 members)
+- **Family:** `F032` (2 members)
 
 ---
 
@@ -12435,7 +12507,7 @@
 - **Suppression:** `0.55`
 - **Question:** Constraint yc_equity_squeeze appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -12453,7 +12525,7 @@
 - **Suppression:** `0.55`
 - **Question:** Constraint knowledge_action_gap appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F004` (53 members)
+- **Family:** `F005` (53 members)
 
 ---
 
@@ -12471,7 +12543,7 @@
 - **Suppression:** `0.65`
 - **Question:** Constraint power_set_axiomatic_extraction appears as tangled_rope to individuals but rope to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F006` (40 members)
+- **Family:** `F004` (72 members)
 
 ---
 
@@ -12489,7 +12561,7 @@
 - **Suppression:** `0.90`
 - **Question:** Constraint proof_of_work_consensus appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F004` (53 members)
+- **Family:** `F005` (53 members)
 
 ---
 
@@ -12507,7 +12579,7 @@
 - **Suppression:** `0.52`
 - **Question:** Constraint us_labor_mobility appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -12525,7 +12597,7 @@
 - **Suppression:** `0.45`
 - **Question:** Constraint aging_longevity_tests appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -12543,7 +12615,7 @@
 - **Suppression:** `0.40`
 - **Question:** Constraint cmr_001 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -12561,7 +12633,7 @@
 - **Suppression:** `0.45`
 - **Question:** Constraint edelman_2026_developing_volatility appears as rope to individuals but snare to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -12579,7 +12651,7 @@
 - **Suppression:** `0.40`
 - **Question:** Constraint hanlons_razor appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -12597,7 +12669,7 @@
 - **Suppression:** `0.45`
 - **Question:** Constraint hp_liberalism appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -12615,7 +12687,7 @@
 - **Suppression:** `0.45`
 - **Question:** Constraint institutional_inertia_lock appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -12633,7 +12705,7 @@
 - **Suppression:** `0.40`
 - **Question:** Constraint ivt_accessibility_barrier appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -12651,7 +12723,7 @@
 - **Suppression:** `0.40`
 - **Question:** Constraint monetary_regime_transition appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -12669,7 +12741,7 @@
 - **Suppression:** `0.85`
 - **Question:** Constraint ulysses_proteus_1904 appears extractive (Snare) to individuals but unchangeable (Mountain) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F017` (10 members)
+- **Family:** `F015` (10 members)
 
 ---
 
@@ -12687,7 +12759,7 @@
 - **Suppression:** `0.45`
 - **Question:** Constraint mil_std_810f_tailoring appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -12705,7 +12777,7 @@
 - **Suppression:** `0.42`
 - **Question:** Constraint brazil_2026_general_elections appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -12714,16 +12786,16 @@
 - **Severity:** `high` (score: 0.505)
 - **Constraint:** `asce_7_22_seismic_design`
 - **Domain:** `tangled_rope`
-- **Orbit Signature:** `[rope, tangled_rope, unknown]`
+- **Orbit Signature:** `[rope, tangled_rope]`
 - **Orbit Span:** `3`
-- **Gap Class:** `powerless_blind`
+- **Gap Class:** `coordination_washing`
 - **Gap Pattern:** `snare_masked_as_rope`
 - **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
 - **Epsilon:** `0.35`
 - **Suppression:** `0.70`
 - **Question:** Constraint asce_7_22_seismic_design appears extractive (Snare) to individuals but functional (Rope) to institutions...
-- **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F008` (23 members)
+- **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
+- **Family:** `F004` (72 members)
 
 ---
 
@@ -12741,25 +12813,25 @@
 - **Suppression:** `0.65`
 - **Question:** Constraint climate_policy_extraction appears as rope to individuals but mountain to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F004` (53 members)
+- **Family:** `F005` (53 members)
 
 ---
 
-### `omega_extraction_blindness_rotation_seven_black_soil` [HIGH]
+### `omega_cut_safety_quantum_entanglement_protocol` [HIGH]
 
 - **Severity:** `high` (score: 0.505)
-- **Constraint:** `rotation_seven_black_soil`
-- **Domain:** `snare`
-- **Orbit Signature:** `[rope, unknown]`
-- **Orbit Span:** `0`
-- **Gap Class:** `powerless_blind`
-- **Gap Pattern:** `snare_masked_as_rope`
-- **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
-- **Epsilon:** `0.95`
-- **Suppression:** `0.10`
-- **Question:** Constraint rotation_seven_black_soil appears extractive (Snare) to individuals but functional (Rope) to institutions...
-- **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F016` (11 members)
+- **Constraint:** `quantum_entanglement_protocol`
+- **Domain:** `rope`
+- **Orbit Signature:** `[rope, tangled_rope]`
+- **Orbit Span:** `3`
+- **Gap Class:** `coordination_washing`
+- **Gap Pattern:** `mountain_coordination_confusion`
+- **Source Gap:** `gap(mountain_coordination_confusion,mountain,rope)`
+- **Epsilon:** `0.20`
+- **Suppression:** `0.95`
+- **Question:** Constraint quantum_entanglement_protocol appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
+- **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
+- **Family:** `F010` (16 members)
 
 ---
 
@@ -12777,7 +12849,7 @@
 - **Suppression:** `0.50`
 - **Question:** Constraint access_arbitrage appears as tangled_rope to individuals but rope to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F042` (1 members)
+- **Family:** `F033` (1 members)
 
 ---
 
@@ -12795,7 +12867,7 @@
 - **Suppression:** `0.45`
 - **Question:** Constraint ai_cognitive_diversity_arbitrage appears extractive (Snare) to individuals but unchangeable (Mountain) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F004` (53 members)
+- **Family:** `F005` (53 members)
 
 ---
 
@@ -12813,7 +12885,7 @@
 - **Suppression:** `0.45`
 - **Question:** Universality of the geometric principle for non-linear shapes (Barbier's Theorem).
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -12831,7 +12903,7 @@
 - **Suppression:** `0.45`
 - **Question:** Constraint buffons_needle_pi_estimation appears as tangled_rope to individuals but rope to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -12849,7 +12921,7 @@
 - **Suppression:** `0.45`
 - **Question:** Constraint cognitive_diversity_arbitrage appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F004` (53 members)
+- **Family:** `F005` (53 members)
 
 ---
 
@@ -12867,7 +12939,7 @@
 - **Suppression:** `0.55`
 - **Question:** Constraint linguistic_relativity_cultural_framing appears as tangled_rope to individuals but rope to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F006` (40 members)
+- **Family:** `F004` (72 members)
 
 ---
 
@@ -12885,7 +12957,7 @@
 - **Suppression:** `0.55`
 - **Question:** Constraint meta_nuclear_power_agreement appears as tangled_rope to individuals but rope to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F006` (40 members)
+- **Family:** `F004` (72 members)
 
 ---
 
@@ -12903,7 +12975,7 @@
 - **Suppression:** `0.45`
 - **Question:** Constraint nyc_metrocard_art_licensing appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -12921,7 +12993,7 @@
 - **Suppression:** `0.55`
 - **Question:** Constraint sa_renewable_price_differential appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F006` (40 members)
+- **Family:** `F004` (72 members)
 
 ---
 
@@ -12939,7 +13011,7 @@
 - **Suppression:** `0.50`
 - **Question:** Constraint transient_event_detection appears as mountain to individuals but snare to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F034` (4 members)
+- **Family:** `F010` (16 members)
 
 ---
 
@@ -12957,7 +13029,7 @@
 - **Suppression:** `0.85`
 - **Question:** Constraint us_canada_geopolitical_asymmetry appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F004` (53 members)
+- **Family:** `F005` (53 members)
 
 ---
 
@@ -12975,7 +13047,7 @@
 - **Suppression:** `0.40`
 - **Question:** Constraint compounding_logic appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -12993,7 +13065,7 @@
 - **Suppression:** `0.80`
 - **Question:** Constraint germline_regulation_threshold_2026 appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F004` (53 members)
+- **Family:** `F005` (53 members)
 
 ---
 
@@ -13011,7 +13083,7 @@
 - **Suppression:** `0.80`
 - **Question:** Constraint harm_principle_liberty appears extractive (Snare) to individuals but unchangeable (Mountain) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F004` (53 members)
+- **Family:** `F005` (53 members)
 
 ---
 
@@ -13029,7 +13101,7 @@
 - **Suppression:** `0.40`
 - **Question:** Constraint mil_std_461g_emi_control appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -13047,7 +13119,7 @@
 - **Suppression:** `0.40`
 - **Question:** Constraint parkinsons_law appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -13065,7 +13137,7 @@
 - **Suppression:** `0.48`
 - **Question:** Constraint satellite_d2m_standard appears as tangled_rope to individuals but rope to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F006` (40 members)
+- **Family:** `F004` (72 members)
 
 ---
 
@@ -13083,7 +13155,7 @@
 - **Suppression:** `0.42`
 - **Question:** Constraint noether_isomorphism_access appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -13101,7 +13173,43 @@
 - **Suppression:** `0.42`
 - **Question:** Constraint sovereignty_as_arbitrage appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
+
+---
+
+### `omega_extraction_blindness_cs_ecmo_bridge` [HIGH]
+
+- **Severity:** `high` (score: 0.485)
+- **Constraint:** `cs_ecmo_bridge`
+- **Domain:** `snare`
+- **Orbit Signature:** `[rope, tangled_rope]`
+- **Orbit Span:** `3`
+- **Gap Class:** `coordination_washing`
+- **Gap Pattern:** `snare_masked_as_rope`
+- **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+- **Epsilon:** `0.55`
+- **Suppression:** `0.30`
+- **Question:** Constraint cs_ecmo_bridge appears extractive (Snare) to individuals but functional (Rope) to institutions...
+- **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
+- **Family:** `F003` (122 members)
+
+---
+
+### `omega_perspectival_emergency_oversight_bureau` [HIGH]
+
+- **Severity:** `high` (score: 0.485)
+- **Constraint:** `emergency_oversight_bureau`
+- **Domain:** `tangled_rope`
+- **Orbit Signature:** `[rope, scaffold, tangled_rope]`
+- **Orbit Span:** `3`
+- **Gap Class:** `coordination_washing`
+- **Gap Pattern:** `general_type_mismatch`
+- **Source Gap:** `gap(general_type_mismatch,tangled_rope,rope)`
+- **Epsilon:** `0.28`
+- **Suppression:** `0.75`
+- **Question:** Constraint emergency_oversight_bureau appears as tangled_rope to individuals but rope to institutions...
+- **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
+- **Family:** `F035` (1 members)
 
 ---
 
@@ -13119,7 +13227,25 @@
 - **Suppression:** `0.55`
 - **Question:** Constraint faa_boeing_regulatory_capture appears as tangled_rope to individuals but rope to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F006` (40 members)
+- **Family:** `F004` (72 members)
+
+---
+
+### `omega_extraction_blindness_hoa_covenants` [HIGH]
+
+- **Severity:** `high` (score: 0.485)
+- **Constraint:** `hoa_covenants`
+- **Domain:** `piton`
+- **Orbit Signature:** `[rope, tangled_rope]`
+- **Orbit Span:** `3`
+- **Gap Class:** `coordination_washing`
+- **Gap Pattern:** `snare_masked_as_rope`
+- **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+- **Epsilon:** `0.55`
+- **Suppression:** `0.30`
+- **Question:** Constraint hoa_covenants appears extractive (Snare) to individuals but functional (Rope) to institutions...
+- **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
+- **Family:** `F009` (17 members)
 
 ---
 
@@ -13137,7 +13263,7 @@
 - **Suppression:** `0.55`
 - **Question:** Constraint un_high_seas_treaty_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F006` (40 members)
+- **Family:** `F004` (72 members)
 
 ---
 
@@ -13155,7 +13281,7 @@
 - **Suppression:** `0.42`
 - **Question:** Constraint israel_surplus_vote_agreements appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F003` (94 members)
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -13164,16 +13290,16 @@
 - **Severity:** `high` (score: 0.480)
 - **Constraint:** `blackstone_carried_interest_taxation`
 - **Domain:** `tangled_rope`
-- **Orbit Signature:** `[rope, tangled_rope, unknown]`
+- **Orbit Signature:** `[rope, tangled_rope]`
 - **Orbit Span:** `3`
-- **Gap Class:** `powerless_blind`
+- **Gap Class:** `coordination_washing`
 - **Gap Pattern:** `snare_masked_as_rope`
 - **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
 - **Epsilon:** `0.30`
 - **Suppression:** `0.70`
 - **Question:** Constraint blackstone_carried_interest_taxation appears extractive (Snare) to individuals but functional (Rope) to institutions...
-- **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F008` (23 members)
+- **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
+- **Family:** `F004` (72 members)
 
 ---
 
@@ -13182,16 +13308,88 @@
 - **Severity:** `high` (score: 0.480)
 - **Constraint:** `gs1_gln_identification`
 - **Domain:** `rope`
-- **Orbit Signature:** `[rope, tangled_rope, unknown]`
+- **Orbit Signature:** `[rope, tangled_rope]`
 - **Orbit Span:** `3`
-- **Gap Class:** `powerless_blind`
+- **Gap Class:** `coordination_washing`
 - **Gap Pattern:** `mountain_coordination_confusion`
 - **Source Gap:** `gap(mountain_coordination_confusion,mountain,rope)`
 - **Epsilon:** `0.30`
 - **Suppression:** `0.70`
 - **Question:** Constraint gs1_gln_identification appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
-- **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F049` (1 members)
+- **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
+- **Family:** `F010` (16 members)
+
+---
+
+### `omega_extraction_blindness_france_2027_presidential_election` [HIGH]
+
+- **Severity:** `high` (score: 0.474)
+- **Constraint:** `france_2027_presidential_election`
+- **Domain:** `snare`
+- **Orbit Signature:** `[rope, tangled_rope]`
+- **Orbit Span:** `3`
+- **Gap Class:** `coordination_washing`
+- **Gap Pattern:** `snare_masked_as_rope`
+- **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+- **Epsilon:** `0.48`
+- **Suppression:** `0.38`
+- **Question:** Constraint france_2027_presidential_election appears extractive (Snare) to individuals but functional (Rope) to institutions...
+- **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
+- **Family:** `F003` (122 members)
+
+---
+
+### `exoplanetary_habitability_arbitrage_omega_1` [HIGH]
+
+- **Severity:** `high` (score: 0.470)
+- **Constraint:** `exoplanetary_habitability_arbitrage`
+- **Domain:** `rope`
+- **Orbit Signature:** `[scaffold, tangled_rope]`
+- **Orbit Span:** `2`
+- **Gap Class:** `coordination_washing`
+- **Gap Pattern:** `unknown`
+- **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+- **Epsilon:** `0.45`
+- **Suppression:** `0.55`
+- **Question:** Is the research strategy driven by necessity or by funding incentives?
+- **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
+- **Family:** `F024` (5 members)
+
+---
+
+### `exoplanetary_habitability_arbitrage_omega_2` [HIGH]
+
+- **Severity:** `high` (score: 0.470)
+- **Constraint:** `exoplanetary_habitability_arbitrage`
+- **Domain:** `rope`
+- **Orbit Signature:** `[scaffold, tangled_rope]`
+- **Orbit Span:** `2`
+- **Gap Class:** `coordination_washing`
+- **Gap Pattern:** `unknown`
+- **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+- **Epsilon:** `0.45`
+- **Suppression:** `0.55`
+- **Question:** What is the true statistical frequency of solar systems like ours?
+- **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
+- **Family:** `F024` (5 members)
+
+---
+
+### `omega_extraction_blindness_exoplanetary_habitability_arbitrage` [HIGH]
+
+- **Severity:** `high` (score: 0.470)
+- **Constraint:** `exoplanetary_habitability_arbitrage`
+- **Domain:** `rope`
+- **Orbit Signature:** `[scaffold, tangled_rope]`
+- **Orbit Span:** `2`
+- **Gap Class:** `coordination_washing`
+- **Gap Pattern:** `snare_masked_as_rope`
+- **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+- **Epsilon:** `0.45`
+- **Suppression:** `0.55`
+- **Question:** Constraint exoplanetary_habitability_arbitrage appears extractive (Snare) to individuals but functional (Rope) to institutions...
+- **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
+- **Family:** `F024` (5 members)
 
 ---
 
@@ -13209,7 +13407,7 @@
 - **Suppression:** `0.50`
 - **Question:** Constraint fmeca_procedures_1980 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F034` (4 members)
+- **Family:** `F010` (16 members)
 
 ---
 
@@ -13227,7 +13425,7 @@
 - **Suppression:** `0.50`
 - **Question:** Constraint graph_coloring_complexity appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F006` (40 members)
+- **Family:** `F004` (72 members)
 
 ---
 
@@ -13245,7 +13443,7 @@
 - **Suppression:** `0.50`
 - **Question:** Constraint lorenz_attractor_dynamics appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F006` (40 members)
+- **Family:** `F004` (72 members)
 
 ---
 
@@ -13263,7 +13461,7 @@
 - **Suppression:** `0.50`
 - **Question:** Constraint mars_rovers_navigational_autonomy appears as tangled_rope to individuals but rope to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F006` (40 members)
+- **Family:** `F004` (72 members)
 
 ---
 
@@ -13281,7 +13479,7 @@
 - **Suppression:** `0.50`
 - **Question:** Constraint nato_arctic_defense_cooperation appears as tangled_rope to individuals but snare to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F006` (40 members)
+- **Family:** `F004` (72 members)
 
 ---
 
@@ -13299,7 +13497,7 @@
 - **Suppression:** `0.50`
 - **Question:** Constraint oscar_campaign_spending appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F006` (40 members)
+- **Family:** `F004` (72 members)
 
 ---
 
@@ -13317,25 +13515,7 @@
 - **Suppression:** `0.50`
 - **Question:** Constraint private_identity_integration appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F034` (4 members)
-
----
-
-### `omega_extraction_blindness_russells_paradox_self_reference` [HIGH]
-
-- **Severity:** `high` (score: 0.470)
-- **Constraint:** `russells_paradox_self_reference`
-- **Domain:** `snare`
-- **Orbit Signature:** `[scaffold, unknown]`
-- **Orbit Span:** `0`
-- **Gap Class:** `powerless_blind`
-- **Gap Pattern:** `snare_masked_as_rope`
-- **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
-- **Epsilon:** `0.70`
-- **Suppression:** `0.40`
-- **Question:** Constraint russells_paradox_self_reference appears extractive (Snare) to individuals but functional (Rope) to institutions...
-- **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F024` (6 members)
+- **Family:** `F010` (16 members)
 
 ---
 
@@ -13353,7 +13533,7 @@
 - **Suppression:** `0.50`
 - **Question:** Constraint sat_csp_complexity appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F006` (40 members)
+- **Family:** `F004` (72 members)
 
 ---
 
@@ -13371,7 +13551,7 @@
 - **Suppression:** `0.52`
 - **Question:** Constraint participatory_observer_hypothesis appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F006` (40 members)
+- **Family:** `F004` (72 members)
 
 ---
 
@@ -13389,7 +13569,7 @@
 - **Suppression:** `0.45`
 - **Question:** Constraint bgs_eigenvector_thermalization appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F006` (40 members)
+- **Family:** `F004` (72 members)
 
 ---
 
@@ -13407,7 +13587,7 @@
 - **Suppression:** `0.40`
 - **Question:** Constraint colombia_2026_presidential_election appears as tangled_rope to individuals but rope to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F006` (40 members)
+- **Family:** `F004` (72 members)
 
 ---
 
@@ -13425,7 +13605,7 @@
 - **Suppression:** `0.45`
 - **Question:** Constraint iterated_function_system_convergence appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F006` (40 members)
+- **Family:** `F004` (72 members)
 
 ---
 
@@ -13434,34 +13614,34 @@
 - **Severity:** `high` (score: 0.460)
 - **Constraint:** `germany_tennet_takeover`
 - **Domain:** `tangled_rope`
-- **Orbit Signature:** `[rope, tangled_rope, unknown]`
+- **Orbit Signature:** `[rope, tangled_rope]`
 - **Orbit Span:** `3`
-- **Gap Class:** `powerless_blind`
+- **Gap Class:** `coordination_washing`
 - **Gap Pattern:** `general_type_mismatch`
 - **Source Gap:** `gap(general_type_mismatch,tangled_rope,rope)`
 - **Epsilon:** `0.35`
 - **Suppression:** `0.55`
 - **Question:** Constraint germany_tennet_takeover appears as tangled_rope to individuals but rope to institutions...
-- **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F008` (23 members)
+- **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
+- **Family:** `F004` (72 members)
 
 ---
 
-### `omega_extraction_blindness_regulatory_capture` [HIGH]
+### `omega_perspectival_paris_municipal_reform_2026` [HIGH]
 
 - **Severity:** `high` (score: 0.460)
-- **Constraint:** `regulatory_capture`
+- **Constraint:** `paris_municipal_reform_2026`
 - **Domain:** `snare`
-- **Orbit Signature:** `[rope, unknown]`
-- **Orbit Span:** `0`
-- **Gap Class:** `powerless_blind`
-- **Gap Pattern:** `snare_masked_as_rope`
-- **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
-- **Epsilon:** `0.80`
-- **Suppression:** `0.20`
-- **Question:** Constraint regulatory_capture appears extractive (Snare) to individuals but functional (Rope) to institutions...
-- **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F016` (11 members)
+- **Orbit Signature:** `[rope, tangled_rope]`
+- **Orbit Span:** `3`
+- **Gap Class:** `coordination_washing`
+- **Gap Pattern:** `general_type_mismatch`
+- **Source Gap:** `gap(general_type_mismatch,rope,snare)`
+- **Epsilon:** `0.47`
+- **Suppression:** `0.35`
+- **Question:** Constraint paris_municipal_reform_2026 appears as rope to individuals but snare to institutions...
+- **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -13479,7 +13659,7 @@
 - **Suppression:** `0.45`
 - **Question:** Constraint constraint_yoneda appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F006` (40 members)
+- **Family:** `F004` (72 members)
 
 ---
 
@@ -13497,7 +13677,7 @@
 - **Suppression:** `0.45`
 - **Question:** Constraint cow_field_poop appears as snare to individuals but tangled_rope to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F006` (40 members)
+- **Family:** `F004` (72 members)
 
 ---
 
@@ -13515,7 +13695,25 @@
 - **Suppression:** `0.45`
 - **Question:** Constraint creative_commons_licensing appears as rope to individuals but tangled_rope to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F006` (40 members)
+- **Family:** `F004` (72 members)
+
+---
+
+### `omega_extraction_blindness_ergo_storage_rent` [HIGH]
+
+- **Severity:** `high` (score: 0.455)
+- **Constraint:** `ergo_storage_rent`
+- **Domain:** `snare`
+- **Orbit Signature:** `[rope, tangled_rope]`
+- **Orbit Span:** `3`
+- **Gap Class:** `coordination_washing`
+- **Gap Pattern:** `snare_masked_as_rope`
+- **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+- **Epsilon:** `0.55`
+- **Suppression:** `0.20`
+- **Question:** Constraint ergo_storage_rent appears extractive (Snare) to individuals but functional (Rope) to institutions...
+- **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -13533,7 +13731,7 @@
 - **Suppression:** `0.45`
 - **Question:** Constraint law_of_diminishing_returns appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F006` (40 members)
+- **Family:** `F004` (72 members)
 
 ---
 
@@ -13551,7 +13749,7 @@
 - **Suppression:** `0.60`
 - **Question:** Constraint network_effects appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F004` (53 members)
+- **Family:** `F005` (53 members)
 
 ---
 
@@ -13569,7 +13767,7 @@
 - **Suppression:** `0.60`
 - **Question:** Constraint planning_fallacy appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F004` (53 members)
+- **Family:** `F005` (53 members)
 
 ---
 
@@ -13587,11 +13785,29 @@
 - **Suppression:** `0.45`
 - **Question:** Constraint stable_marriage_coordination appears as tangled_rope to individuals but rope to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F006` (40 members)
+- **Family:** `F004` (72 members)
 
 ---
 
 ## MEDIUM (99)
+
+### `omega_extraction_blindness_artificial_snow_2026` [MEDIUM]
+
+- **Severity:** `medium` (score: 0.450)
+- **Constraint:** `artificial_snow_2026`
+- **Domain:** `piton`
+- **Orbit Signature:** `[rope, tangled_rope]`
+- **Orbit Span:** `3`
+- **Gap Class:** `coordination_washing`
+- **Gap Pattern:** `snare_masked_as_rope`
+- **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+- **Epsilon:** `0.48`
+- **Suppression:** `0.30`
+- **Question:** Constraint artificial_snow_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+- **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
+- **Family:** `F009` (17 members)
+
+---
 
 ### `omega_extraction_blindness_social_narrative_casting` [MEDIUM]
 
@@ -13607,7 +13823,7 @@
 - **Suppression:** `0.60`
 - **Question:** Constraint social_narrative_casting appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F056` (1 members)
+- **Family:** `F042` (1 members)
 
 ---
 
@@ -13616,16 +13832,16 @@
 - **Severity:** `medium` (score: 0.445)
 - **Constraint:** `constraint_riemann_mapping`
 - **Domain:** `tangled_rope`
-- **Orbit Signature:** `[rope, tangled_rope, unknown]`
+- **Orbit Signature:** `[rope, tangled_rope]`
 - **Orbit Span:** `3`
-- **Gap Class:** `powerless_blind`
+- **Gap Class:** `coordination_washing`
 - **Gap Pattern:** `general_type_mismatch`
 - **Source Gap:** `gap(general_type_mismatch,tangled_rope,rope)`
 - **Epsilon:** `0.35`
 - **Suppression:** `0.50`
 - **Question:** Constraint constraint_riemann_mapping appears as tangled_rope to individuals but rope to institutions...
-- **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F008` (23 members)
+- **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
+- **Family:** `F004` (72 members)
 
 ---
 
@@ -13634,16 +13850,16 @@
 - **Severity:** `medium` (score: 0.445)
 - **Constraint:** `matching_market_congestion_externality`
 - **Domain:** `tangled_rope`
-- **Orbit Signature:** `[rope, tangled_rope, unknown]`
+- **Orbit Signature:** `[rope, tangled_rope]`
 - **Orbit Span:** `3`
-- **Gap Class:** `powerless_blind`
+- **Gap Class:** `coordination_washing`
 - **Gap Pattern:** `general_type_mismatch`
 - **Source Gap:** `gap(general_type_mismatch,tangled_rope,rope)`
 - **Epsilon:** `0.35`
 - **Suppression:** `0.50`
 - **Question:** Constraint matching_market_congestion_externality appears as tangled_rope to individuals but rope to institutions...
-- **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F008` (23 members)
+- **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
+- **Family:** `F004` (72 members)
 
 ---
 
@@ -13652,16 +13868,16 @@
 - **Severity:** `medium` (score: 0.445)
 - **Constraint:** `olympic_medal_allocation`
 - **Domain:** `tangled_rope`
-- **Orbit Signature:** `[rope, tangled_rope, unknown]`
+- **Orbit Signature:** `[rope, tangled_rope]`
 - **Orbit Span:** `3`
-- **Gap Class:** `powerless_blind`
+- **Gap Class:** `coordination_washing`
 - **Gap Pattern:** `snare_masked_as_rope`
 - **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
 - **Epsilon:** `0.35`
 - **Suppression:** `0.50`
 - **Question:** Constraint olympic_medal_allocation appears extractive (Snare) to individuals but functional (Rope) to institutions...
-- **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F008` (23 members)
+- **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
+- **Family:** `F004` (72 members)
 
 ---
 
@@ -13670,16 +13886,16 @@
 - **Severity:** `medium` (score: 0.445)
 - **Constraint:** `publishing_embargo`
 - **Domain:** `tangled_rope`
-- **Orbit Signature:** `[rope, tangled_rope, unknown]`
+- **Orbit Signature:** `[rope, tangled_rope]`
 - **Orbit Span:** `3`
-- **Gap Class:** `powerless_blind`
+- **Gap Class:** `coordination_washing`
 - **Gap Pattern:** `general_type_mismatch`
 - **Source Gap:** `gap(general_type_mismatch,tangled_rope,rope)`
 - **Epsilon:** `0.35`
 - **Suppression:** `0.50`
 - **Question:** Constraint publishing_embargo appears as tangled_rope to individuals but rope to institutions...
-- **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F008` (23 members)
+- **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
+- **Family:** `F004` (72 members)
 
 ---
 
@@ -13697,7 +13913,7 @@
 - **Suppression:** `0.40`
 - **Question:** Constraint empty_tomb_transformation appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F006` (40 members)
+- **Family:** `F004` (72 members)
 
 ---
 
@@ -13715,7 +13931,7 @@
 - **Suppression:** `0.40`
 - **Question:** Constraint extraordinary_narrative_shift appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F006` (40 members)
+- **Family:** `F004` (72 members)
 
 ---
 
@@ -13733,25 +13949,7 @@
 - **Suppression:** `0.40`
 - **Question:** The empirical threshold at which novelty collapses into routine, affecting the constraint's stability.
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F006` (40 members)
-
----
-
-### `omega_cut_safety_gs1_standardized_identification` [MEDIUM]
-
-- **Severity:** `medium` (score: 0.440)
-- **Constraint:** `gs1_standardized_identification`
-- **Domain:** `rope`
-- **Orbit Signature:** `[rope, unknown]`
-- **Orbit Span:** `0`
-- **Gap Class:** `powerless_blind`
-- **Gap Pattern:** `mountain_coordination_confusion`
-- **Source Gap:** `gap(mountain_coordination_confusion,mountain,rope)`
-- **Epsilon:** `0.40`
-- **Suppression:** `0.80`
-- **Question:** Constraint gs1_standardized_identification appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
-- **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F015` (11 members)
+- **Family:** `F004` (72 members)
 
 ---
 
@@ -13760,16 +13958,16 @@
 - **Severity:** `medium` (score: 0.430)
 - **Constraint:** `alzheimers_levetiracetam`
 - **Domain:** `tangled_rope`
-- **Orbit Signature:** `[rope, tangled_rope, unknown]`
+- **Orbit Signature:** `[rope, tangled_rope]`
 - **Orbit Span:** `3`
-- **Gap Class:** `powerless_blind`
+- **Gap Class:** `coordination_washing`
 - **Gap Pattern:** `snare_masked_as_rope`
 - **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
 - **Epsilon:** `0.35`
 - **Suppression:** `0.45`
 - **Question:** Constraint alzheimers_levetiracetam appears extractive (Snare) to individuals but functional (Rope) to institutions...
-- **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F008` (23 members)
+- **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
+- **Family:** `F004` (72 members)
 
 ---
 
@@ -13778,16 +13976,16 @@
 - **Severity:** `medium` (score: 0.430)
 - **Constraint:** `constraint_lagrange_multipliers`
 - **Domain:** `tangled_rope`
-- **Orbit Signature:** `[rope, tangled_rope, unknown]`
+- **Orbit Signature:** `[rope, tangled_rope]`
 - **Orbit Span:** `3`
-- **Gap Class:** `powerless_blind`
+- **Gap Class:** `coordination_washing`
 - **Gap Pattern:** `general_type_mismatch`
 - **Source Gap:** `gap(general_type_mismatch,tangled_rope,rope)`
 - **Epsilon:** `0.35`
 - **Suppression:** `0.45`
 - **Question:** Constraint constraint_lagrange_multipliers appears as tangled_rope to individuals but rope to institutions...
-- **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F008` (23 members)
+- **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
+- **Family:** `F004` (72 members)
 
 ---
 
@@ -13796,16 +13994,16 @@
 - **Severity:** `medium` (score: 0.430)
 - **Constraint:** `gemini_scientific_advancement`
 - **Domain:** `tangled_rope`
-- **Orbit Signature:** `[rope, tangled_rope, unknown]`
+- **Orbit Signature:** `[rope, tangled_rope]`
 - **Orbit Span:** `3`
-- **Gap Class:** `powerless_blind`
+- **Gap Class:** `coordination_washing`
 - **Gap Pattern:** `general_type_mismatch`
 - **Source Gap:** `gap(general_type_mismatch,tangled_rope,rope)`
 - **Epsilon:** `0.35`
 - **Suppression:** `0.45`
 - **Question:** Constraint gemini_scientific_advancement appears as tangled_rope to individuals but rope to institutions...
-- **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F008` (23 members)
+- **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
+- **Family:** `F004` (72 members)
 
 ---
 
@@ -13814,16 +14012,16 @@
 - **Severity:** `medium` (score: 0.430)
 - **Constraint:** `gs_market_clearing`
 - **Domain:** `tangled_rope`
-- **Orbit Signature:** `[rope, tangled_rope, unknown]`
+- **Orbit Signature:** `[rope, tangled_rope]`
 - **Orbit Span:** `3`
-- **Gap Class:** `powerless_blind`
+- **Gap Class:** `coordination_washing`
 - **Gap Pattern:** `general_type_mismatch`
 - **Source Gap:** `gap(general_type_mismatch,tangled_rope,rope)`
 - **Epsilon:** `0.35`
 - **Suppression:** `0.45`
 - **Question:** Constraint gs_market_clearing appears as tangled_rope to individuals but rope to institutions...
-- **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F008` (23 members)
+- **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
+- **Family:** `F004` (72 members)
 
 ---
 
@@ -13832,16 +14030,16 @@
 - **Severity:** `medium` (score: 0.430)
 - **Constraint:** `jupiter_composition_knowledge_gap`
 - **Domain:** `tangled_rope`
-- **Orbit Signature:** `[rope, tangled_rope, unknown]`
+- **Orbit Signature:** `[rope, tangled_rope]`
 - **Orbit Span:** `3`
-- **Gap Class:** `powerless_blind`
+- **Gap Class:** `coordination_washing`
 - **Gap Pattern:** `general_type_mismatch`
 - **Source Gap:** `gap(general_type_mismatch,tangled_rope,rope)`
 - **Epsilon:** `0.35`
 - **Suppression:** `0.45`
 - **Question:** Constraint jupiter_composition_knowledge_gap appears as tangled_rope to individuals but rope to institutions...
-- **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F008` (23 members)
+- **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
+- **Family:** `F004` (72 members)
 
 ---
 
@@ -13850,16 +14048,16 @@
 - **Severity:** `medium` (score: 0.430)
 - **Constraint:** `keltner_relationship_evaluation`
 - **Domain:** `tangled_rope`
-- **Orbit Signature:** `[rope, tangled_rope, unknown]`
+- **Orbit Signature:** `[rope, tangled_rope]`
 - **Orbit Span:** `3`
-- **Gap Class:** `powerless_blind`
+- **Gap Class:** `coordination_washing`
 - **Gap Pattern:** `snare_masked_as_rope`
 - **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
 - **Epsilon:** `0.35`
 - **Suppression:** `0.45`
 - **Question:** Constraint keltner_relationship_evaluation appears extractive (Snare) to individuals but functional (Rope) to institutions...
-- **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F008` (23 members)
+- **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
+- **Family:** `F004` (72 members)
 
 ---
 
@@ -13877,7 +14075,7 @@
 - **Suppression:** `0.60`
 - **Question:** Constraint micro_robot_electronics_integration appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F004` (53 members)
+- **Family:** `F005` (53 members)
 
 ---
 
@@ -13895,7 +14093,61 @@
 - **Suppression:** `0.60`
 - **Question:** Whether off-board optical control constitutes a new dependency snare
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F004` (53 members)
+- **Family:** `F005` (53 members)
+
+---
+
+### `omega_extraction_blindness_rosen_bridge_protocol` [MEDIUM]
+
+- **Severity:** `medium` (score: 0.430)
+- **Constraint:** `rosen_bridge_protocol`
+- **Domain:** `snare`
+- **Orbit Signature:** `[rope, tangled_rope]`
+- **Orbit Span:** `3`
+- **Gap Class:** `coordination_washing`
+- **Gap Pattern:** `snare_masked_as_rope`
+- **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+- **Epsilon:** `0.50`
+- **Suppression:** `0.20`
+- **Question:** Constraint rosen_bridge_protocol appears extractive (Snare) to individuals but functional (Rope) to institutions...
+- **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
+- **Family:** `F003` (122 members)
+
+---
+
+### `omega_extraction_blindness_tcp_rfc9293_interoperability` [MEDIUM]
+
+- **Severity:** `medium` (score: 0.430)
+- **Constraint:** `tcp_rfc9293_interoperability`
+- **Domain:** `rope`
+- **Orbit Signature:** `[rope, tangled_rope]`
+- **Orbit Span:** `3`
+- **Gap Class:** `coordination_washing`
+- **Gap Pattern:** `snare_masked_as_rope`
+- **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+- **Epsilon:** `0.20`
+- **Suppression:** `0.70`
+- **Question:** Constraint tcp_rfc9293_interoperability appears extractive (Snare) to individuals but functional (Rope) to institutions...
+- **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
+- **Family:** `F010` (16 members)
+
+---
+
+### `omega_extraction_blindness_axiom_reasoner_2026` [MEDIUM]
+
+- **Severity:** `medium` (score: 0.425)
+- **Constraint:** `axiom_reasoner_2026`
+- **Domain:** `snare`
+- **Orbit Signature:** `[scaffold, tangled_rope]`
+- **Orbit Span:** `2`
+- **Gap Class:** `coordination_washing`
+- **Gap Pattern:** `snare_masked_as_rope`
+- **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+- **Epsilon:** `0.48`
+- **Suppression:** `0.35`
+- **Question:** Constraint axiom_reasoner_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+- **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
+- **Family:** `F018` (7 members)
 
 ---
 
@@ -13913,7 +14165,25 @@
 - **Suppression:** `0.45`
 - **Question:** Constraint isa_education_scaffold appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F039` (2 members)
+- **Family:** `F026` (4 members)
+
+---
+
+### `omega_extraction_blindness_platonic_coparenting_decoupling` [MEDIUM]
+
+- **Severity:** `medium` (score: 0.425)
+- **Constraint:** `platonic_coparenting_decoupling`
+- **Domain:** `snare`
+- **Orbit Signature:** `[scaffold, tangled_rope]`
+- **Orbit Span:** `2`
+- **Gap Class:** `coordination_washing`
+- **Gap Pattern:** `snare_masked_as_rope`
+- **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+- **Epsilon:** `0.48`
+- **Suppression:** `0.35`
+- **Question:** Constraint platonic_coparenting_decoupling appears extractive (Snare) to individuals but functional (Rope) to institutions...
+- **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
+- **Family:** `F018` (7 members)
 
 ---
 
@@ -13922,16 +14192,16 @@
 - **Severity:** `medium` (score: 0.421)
 - **Constraint:** `working_dog_training`
 - **Domain:** `tangled_rope`
-- **Orbit Signature:** `[rope, tangled_rope, unknown]`
+- **Orbit Signature:** `[rope, tangled_rope]`
 - **Orbit Span:** `3`
-- **Gap Class:** `powerless_blind`
+- **Gap Class:** `coordination_washing`
 - **Gap Pattern:** `general_type_mismatch`
 - **Source Gap:** `gap(general_type_mismatch,tangled_rope,rope)`
 - **Epsilon:** `0.35`
 - **Suppression:** `0.42`
 - **Question:** Constraint working_dog_training appears as tangled_rope to individuals but rope to institutions...
-- **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F008` (23 members)
+- **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
+- **Family:** `F004` (72 members)
 
 ---
 
@@ -13949,7 +14219,7 @@
 - **Suppression:** `0.60`
 - **Question:** Constraint ai_task_horizon_reliability appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F004` (53 members)
+- **Family:** `F005` (53 members)
 
 ---
 
@@ -13958,16 +14228,16 @@
 - **Severity:** `medium` (score: 0.420)
 - **Constraint:** `fnl_shadow_probe`
 - **Domain:** `tangled_rope`
-- **Orbit Signature:** `[rope, tangled_rope, unknown]`
+- **Orbit Signature:** `[rope, tangled_rope]`
 - **Orbit Span:** `3`
-- **Gap Class:** `powerless_blind`
+- **Gap Class:** `coordination_washing`
 - **Gap Pattern:** `general_type_mismatch`
 - **Source Gap:** `gap(general_type_mismatch,tangled_rope,rope)`
 - **Epsilon:** `0.30`
 - **Suppression:** `0.50`
 - **Question:** Constraint fnl_shadow_probe appears as tangled_rope to individuals but rope to institutions...
-- **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F008` (23 members)
+- **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
+- **Family:** `F004` (72 members)
 
 ---
 
@@ -14012,16 +14282,16 @@
 - **Severity:** `medium` (score: 0.420)
 - **Constraint:** `moores_law`
 - **Domain:** `tangled_rope`
-- **Orbit Signature:** `[rope, tangled_rope, unknown]`
+- **Orbit Signature:** `[rope, tangled_rope]`
 - **Orbit Span:** `3`
-- **Gap Class:** `powerless_blind`
+- **Gap Class:** `coordination_washing`
 - **Gap Pattern:** `general_type_mismatch`
 - **Source Gap:** `gap(general_type_mismatch,rope,snare)`
 - **Epsilon:** `0.30`
 - **Suppression:** `0.50`
 - **Question:** Constraint moores_law appears as rope to individuals but snare to institutions...
-- **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F008` (23 members)
+- **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
+- **Family:** `F004` (72 members)
 
 ---
 
@@ -14030,16 +14300,16 @@
 - **Severity:** `medium` (score: 0.415)
 - **Constraint:** `advice_as_dangerous_gift`
 - **Domain:** `tangled_rope`
-- **Orbit Signature:** `[rope, tangled_rope, unknown]`
+- **Orbit Signature:** `[rope, tangled_rope]`
 - **Orbit Span:** `3`
-- **Gap Class:** `powerless_blind`
+- **Gap Class:** `coordination_washing`
 - **Gap Pattern:** `unknown`
 - **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
 - **Epsilon:** `0.35`
 - **Suppression:** `0.40`
 - **Question:** Distinguishing inherent risk of advice from circumstantial risk.
-- **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F008` (23 members)
+- **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
+- **Family:** `F004` (72 members)
 
 ---
 
@@ -14048,16 +14318,16 @@
 - **Severity:** `medium` (score: 0.415)
 - **Constraint:** `advice_as_dangerous_gift`
 - **Domain:** `tangled_rope`
-- **Orbit Signature:** `[rope, tangled_rope, unknown]`
+- **Orbit Signature:** `[rope, tangled_rope]`
 - **Orbit Span:** `3`
-- **Gap Class:** `powerless_blind`
+- **Gap Class:** `coordination_washing`
 - **Gap Pattern:** `snare_masked_as_rope`
 - **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
 - **Epsilon:** `0.35`
 - **Suppression:** `0.40`
 - **Question:** Constraint advice_as_dangerous_gift appears extractive (Snare) to individuals but functional (Rope) to institutions...
-- **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F008` (23 members)
+- **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
+- **Family:** `F004` (72 members)
 
 ---
 
@@ -14066,16 +14336,16 @@
 - **Severity:** `medium` (score: 0.415)
 - **Constraint:** `china_africa_zero_tariff_2026`
 - **Domain:** `tangled_rope`
-- **Orbit Signature:** `[rope, tangled_rope, unknown]`
+- **Orbit Signature:** `[rope, tangled_rope]`
 - **Orbit Span:** `3`
-- **Gap Class:** `powerless_blind`
+- **Gap Class:** `coordination_washing`
 - **Gap Pattern:** `general_type_mismatch`
 - **Source Gap:** `gap(general_type_mismatch,tangled_rope,rope)`
 - **Epsilon:** `0.32`
 - **Suppression:** `0.45`
 - **Question:** Constraint china_africa_zero_tariff_2026 appears as tangled_rope to individuals but rope to institutions...
-- **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F008` (23 members)
+- **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
+- **Family:** `F004` (72 members)
 
 ---
 
@@ -14084,16 +14354,34 @@
 - **Severity:** `medium` (score: 0.415)
 - **Constraint:** `olympic_legacy_curling_investment`
 - **Domain:** `tangled_rope`
-- **Orbit Signature:** `[rope, tangled_rope, unknown]`
+- **Orbit Signature:** `[rope, tangled_rope]`
 - **Orbit Span:** `3`
-- **Gap Class:** `powerless_blind`
+- **Gap Class:** `coordination_washing`
 - **Gap Pattern:** `general_type_mismatch`
 - **Source Gap:** `gap(general_type_mismatch,tangled_rope,rope)`
 - **Epsilon:** `0.35`
 - **Suppression:** `0.40`
 - **Question:** Constraint olympic_legacy_curling_investment appears as tangled_rope to individuals but rope to institutions...
-- **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F008` (23 members)
+- **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
+- **Family:** `F004` (72 members)
+
+---
+
+### `omega_perspectival_education_unbundling_implementation` [MEDIUM]
+
+- **Severity:** `medium` (score: 0.410)
+- **Constraint:** `education_unbundling_implementation`
+- **Domain:** `tangled_rope`
+- **Orbit Signature:** `[rope, tangled_rope]`
+- **Orbit Span:** `3`
+- **Gap Class:** `coordination_washing`
+- **Gap Pattern:** `general_type_mismatch`
+- **Source Gap:** `gap(general_type_mismatch,rope,snare)`
+- **Epsilon:** `0.40`
+- **Suppression:** `0.30`
+- **Question:** Constraint education_unbundling_implementation appears as rope to individuals but snare to institutions...
+- **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
+- **Family:** `F004` (72 members)
 
 ---
 
@@ -14111,7 +14399,25 @@
 - **Suppression:** `0.45`
 - **Question:** Constraint emotional_cycles_2026 appears as snare to individuals but scaffold to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F004` (53 members)
+- **Family:** `F005` (53 members)
+
+---
+
+### `omega_perspectival_goodstein_theorem_finite_proof` [MEDIUM]
+
+- **Severity:** `medium` (score: 0.410)
+- **Constraint:** `goodstein_theorem_finite_proof`
+- **Domain:** `tangled_rope`
+- **Orbit Signature:** `[rope, tangled_rope]`
+- **Orbit Span:** `3`
+- **Gap Class:** `coordination_washing`
+- **Gap Pattern:** `general_type_mismatch`
+- **Source Gap:** `gap(general_type_mismatch,tangled_rope,rope)`
+- **Epsilon:** `0.40`
+- **Suppression:** `0.30`
+- **Question:** Constraint goodstein_theorem_finite_proof appears as tangled_rope to individuals but rope to institutions...
+- **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
+- **Family:** `F004` (72 members)
 
 ---
 
@@ -14133,21 +14439,21 @@
 
 ---
 
-### `omega_perspectival_emergency_oversight_bureau` [MEDIUM]
+### `omega_perspectival_shitty_feedback_handling` [MEDIUM]
 
-- **Severity:** `medium` (score: 0.405)
-- **Constraint:** `emergency_oversight_bureau`
-- **Domain:** `tangled_rope`
-- **Orbit Signature:** `[rope, scaffold, unknown]`
-- **Orbit Span:** `1`
-- **Gap Class:** `powerless_blind`
+- **Severity:** `medium` (score: 0.410)
+- **Constraint:** `shitty_feedback_handling`
+- **Domain:** `rope`
+- **Orbit Signature:** `[rope, tangled_rope]`
+- **Orbit Span:** `3`
+- **Gap Class:** `coordination_washing`
 - **Gap Pattern:** `general_type_mismatch`
-- **Source Gap:** `gap(general_type_mismatch,tangled_rope,rope)`
-- **Epsilon:** `0.28`
-- **Suppression:** `0.75`
-- **Question:** Constraint emergency_oversight_bureau appears as tangled_rope to individuals but rope to institutions...
-- **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F044` (1 members)
+- **Source Gap:** `gap(general_type_mismatch,snare,tangled_rope)`
+- **Epsilon:** `0.40`
+- **Suppression:** `0.30`
+- **Question:** Constraint shitty_feedback_handling appears as snare to individuals but tangled_rope to institutions...
+- **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
+- **Family:** `F010` (16 members)
 
 ---
 
@@ -14165,7 +14471,7 @@
 - **Suppression:** `0.75`
 - **Question:** Does AI/brain convergence reflect shared structure or AI mimicking brain output?
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F009` (23 members)
+- **Family:** `F008` (23 members)
 
 ---
 
@@ -14183,7 +14489,7 @@
 - **Suppression:** `0.75`
 - **Question:** Is layered meaning extraction a functional necessity or a biological limitation?
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F009` (23 members)
+- **Family:** `F008` (23 members)
 
 ---
 
@@ -14201,7 +14507,61 @@
 - **Suppression:** `0.75`
 - **Question:** Constraint layered_brain_processing appears extractive (Snare) to individuals but unchangeable (Mountain) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F009` (23 members)
+- **Family:** `F008` (23 members)
+
+---
+
+### `omega_extraction_blindness_recipe_scaling_ai` [MEDIUM]
+
+- **Severity:** `medium` (score: 0.400)
+- **Constraint:** `recipe_scaling_ai`
+- **Domain:** `snare`
+- **Orbit Signature:** `[scaffold, tangled_rope]`
+- **Orbit Span:** `2`
+- **Gap Class:** `coordination_washing`
+- **Gap Pattern:** `snare_masked_as_rope`
+- **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+- **Epsilon:** `0.49`
+- **Suppression:** `0.25`
+- **Question:** Constraint recipe_scaling_ai appears extractive (Snare) to individuals but functional (Rope) to institutions...
+- **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
+- **Family:** `F018` (7 members)
+
+---
+
+### `omega_perspectival_rfc9293_state_machine` [MEDIUM]
+
+- **Severity:** `medium` (score: 0.400)
+- **Constraint:** `rfc9293_state_machine`
+- **Domain:** `tangled_rope`
+- **Orbit Signature:** `[rope, tangled_rope]`
+- **Orbit Span:** `3`
+- **Gap Class:** `coordination_washing`
+- **Gap Pattern:** `general_type_mismatch`
+- **Source Gap:** `gap(general_type_mismatch,tangled_rope,rope)`
+- **Epsilon:** `0.20`
+- **Suppression:** `0.60`
+- **Question:** Constraint rfc9293_state_machine appears as tangled_rope to individuals but rope to institutions...
+- **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
+- **Family:** `F004` (72 members)
+
+---
+
+### `omega_perspectival_maha_recovery_2026` [MEDIUM]
+
+- **Severity:** `medium` (score: 0.395)
+- **Constraint:** `maha_recovery_2026`
+- **Domain:** `scaffold`
+- **Orbit Signature:** `[scaffold, tangled_rope]`
+- **Orbit Span:** `2`
+- **Gap Class:** `coordination_washing`
+- **Gap Pattern:** `general_type_mismatch`
+- **Source Gap:** `gap(general_type_mismatch,snare,scaffold)`
+- **Epsilon:** `0.42`
+- **Suppression:** `0.35`
+- **Question:** Constraint maha_recovery_2026 appears as snare to individuals but scaffold to institutions...
+- **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
+- **Family:** `F026` (4 members)
 
 ---
 
@@ -14219,7 +14579,25 @@
 - **Suppression:** `0.45`
 - **Question:** Constraint nash_equilibrium_coordination appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F004` (53 members)
+- **Family:** `F005` (53 members)
+
+---
+
+### `omega_extraction_blindness_repair_probe_incomplete` [MEDIUM]
+
+- **Severity:** `medium` (score: 0.395)
+- **Constraint:** `repair_probe_incomplete`
+- **Domain:** `snare`
+- **Orbit Signature:** `[rope, tangled_rope]`
+- **Orbit Span:** `3`
+- **Gap Class:** `coordination_washing`
+- **Gap Pattern:** `snare_masked_as_rope`
+- **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+- **Epsilon:** `0.55`
+- **Suppression:** `0.00`
+- **Question:** Constraint repair_probe_incomplete appears extractive (Snare) to individuals but functional (Rope) to institutions...
+- **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
+- **Family:** `F003` (122 members)
 
 ---
 
@@ -14237,61 +14615,25 @@
 - **Suppression:** `0.40`
 - **Question:** Constraint superbowl_advertising_extraction appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F004` (53 members)
+- **Family:** `F005` (53 members)
 
 ---
 
-### `exoplanetary_habitability_arbitrage_omega_1` [MEDIUM]
+### `omega_extraction_blindness_boltzmann_universality_2026` [MEDIUM]
 
 - **Severity:** `medium` (score: 0.390)
-- **Constraint:** `exoplanetary_habitability_arbitrage`
-- **Domain:** `rope`
-- **Orbit Signature:** `[scaffold, unknown]`
-- **Orbit Span:** `0`
-- **Gap Class:** `powerless_blind`
-- **Gap Pattern:** `unknown`
-- **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
-- **Epsilon:** `0.45`
-- **Suppression:** `0.55`
-- **Question:** Is the research strategy driven by necessity or by funding incentives?
-- **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F031` (5 members)
-
----
-
-### `exoplanetary_habitability_arbitrage_omega_2` [MEDIUM]
-
-- **Severity:** `medium` (score: 0.390)
-- **Constraint:** `exoplanetary_habitability_arbitrage`
-- **Domain:** `rope`
-- **Orbit Signature:** `[scaffold, unknown]`
-- **Orbit Span:** `0`
-- **Gap Class:** `powerless_blind`
-- **Gap Pattern:** `unknown`
-- **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
-- **Epsilon:** `0.45`
-- **Suppression:** `0.55`
-- **Question:** What is the true statistical frequency of solar systems like ours?
-- **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F031` (5 members)
-
----
-
-### `omega_extraction_blindness_exoplanetary_habitability_arbitrage` [MEDIUM]
-
-- **Severity:** `medium` (score: 0.390)
-- **Constraint:** `exoplanetary_habitability_arbitrage`
-- **Domain:** `rope`
-- **Orbit Signature:** `[scaffold, unknown]`
-- **Orbit Span:** `0`
-- **Gap Class:** `powerless_blind`
+- **Constraint:** `boltzmann_universality_2026`
+- **Domain:** `tangled_rope`
+- **Orbit Signature:** `[rope, tangled_rope]`
+- **Orbit Span:** `3`
+- **Gap Class:** `coordination_washing`
 - **Gap Pattern:** `snare_masked_as_rope`
 - **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
-- **Epsilon:** `0.45`
-- **Suppression:** `0.55`
-- **Question:** Constraint exoplanetary_habitability_arbitrage appears extractive (Snare) to individuals but functional (Rope) to institutions...
-- **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F031` (5 members)
+- **Epsilon:** `0.15`
+- **Suppression:** `0.65`
+- **Question:** Constraint boltzmann_universality_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+- **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
+- **Family:** `F004` (72 members)
 
 ---
 
@@ -14300,16 +14642,16 @@
 - **Severity:** `medium` (score: 0.390)
 - **Constraint:** `france_local_elections_march_2026`
 - **Domain:** `tangled_rope`
-- **Orbit Signature:** `[scaffold, tangled_rope, unknown]`
+- **Orbit Signature:** `[scaffold, tangled_rope]`
 - **Orbit Span:** `2`
-- **Gap Class:** `powerless_blind`
+- **Gap Class:** `coordination_washing`
 - **Gap Pattern:** `snare_masked_as_rope`
 - **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
 - **Epsilon:** `0.35`
 - **Suppression:** `0.45`
 - **Question:** Constraint france_local_elections_march_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
-- **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F046` (1 members)
+- **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
+- **Family:** `F037` (1 members)
 
 ---
 
@@ -14318,16 +14660,16 @@
 - **Severity:** `medium` (score: 0.390)
 - **Constraint:** `migration_decision_threshold`
 - **Domain:** `tangled_rope`
-- **Orbit Signature:** `[rope, tangled_rope, unknown]`
+- **Orbit Signature:** `[rope, tangled_rope]`
 - **Orbit Span:** `3`
-- **Gap Class:** `powerless_blind`
+- **Gap Class:** `coordination_washing`
 - **Gap Pattern:** `general_type_mismatch`
 - **Source Gap:** `gap(general_type_mismatch,tangled_rope,rope)`
 - **Epsilon:** `0.30`
 - **Suppression:** `0.40`
 - **Question:** Constraint migration_decision_threshold appears as tangled_rope to individuals but rope to institutions...
-- **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F008` (23 members)
+- **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
+- **Family:** `F004` (72 members)
 
 ---
 
@@ -14336,16 +14678,16 @@
 - **Severity:** `medium` (score: 0.390)
 - **Constraint:** `portugal_ad_stability_2026`
 - **Domain:** `scaffold`
-- **Orbit Signature:** `[scaffold, tangled_rope, unknown]`
+- **Orbit Signature:** `[scaffold, tangled_rope]`
 - **Orbit Span:** `2`
-- **Gap Class:** `powerless_blind`
+- **Gap Class:** `coordination_washing`
 - **Gap Pattern:** `snare_masked_as_rope`
 - **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
 - **Epsilon:** `0.35`
 - **Suppression:** `0.45`
 - **Question:** Constraint portugal_ad_stability_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
-- **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F053` (1 members)
+- **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
+- **Family:** `F026` (4 members)
 
 ---
 
@@ -14354,16 +14696,16 @@
 - **Severity:** `medium` (score: 0.390)
 - **Constraint:** `sadhu_integrity_protocol`
 - **Domain:** `tangled_rope`
-- **Orbit Signature:** `[rope, tangled_rope, unknown]`
+- **Orbit Signature:** `[rope, tangled_rope]`
 - **Orbit Span:** `3`
-- **Gap Class:** `powerless_blind`
+- **Gap Class:** `coordination_washing`
 - **Gap Pattern:** `snare_masked_as_rope`
 - **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
 - **Epsilon:** `0.30`
 - **Suppression:** `0.40`
 - **Question:** Constraint sadhu_integrity_protocol appears extractive (Snare) to individuals but functional (Rope) to institutions...
-- **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F008` (23 members)
+- **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
+- **Family:** `F004` (72 members)
 
 ---
 
@@ -14372,34 +14714,34 @@
 - **Severity:** `medium` (score: 0.390)
 - **Constraint:** `sadhu_integrity_protocol`
 - **Domain:** `tangled_rope`
-- **Orbit Signature:** `[rope, tangled_rope, unknown]`
+- **Orbit Signature:** `[rope, tangled_rope]`
 - **Orbit Span:** `3`
-- **Gap Class:** `powerless_blind`
+- **Gap Class:** `coordination_washing`
 - **Gap Pattern:** `unknown`
 - **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
 - **Epsilon:** `0.30`
 - **Suppression:** `0.40`
 - **Question:** Causality of advisor's internal state vs. narrative of their state on advisee compliance.
-- **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F008` (23 members)
+- **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
+- **Family:** `F004` (72 members)
 
 ---
 
-### `omega_cut_safety_quantum_entanglement_protocol` [MEDIUM]
+### `omega_perspectival_ship_of_theseus` [MEDIUM]
 
 - **Severity:** `medium` (score: 0.385)
-- **Constraint:** `quantum_entanglement_protocol`
-- **Domain:** `rope`
-- **Orbit Signature:** `[rope, unknown]`
-- **Orbit Span:** `0`
-- **Gap Class:** `powerless_blind`
-- **Gap Pattern:** `mountain_coordination_confusion`
-- **Source Gap:** `gap(mountain_coordination_confusion,mountain,rope)`
-- **Epsilon:** `0.20`
-- **Suppression:** `0.95`
-- **Question:** Constraint quantum_entanglement_protocol appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
-- **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F015` (11 members)
+- **Constraint:** `ship_of_theseus`
+- **Domain:** `piton`
+- **Orbit Signature:** `[rope, tangled_rope]`
+- **Orbit Span:** `3`
+- **Gap Class:** `coordination_washing`
+- **Gap Pattern:** `general_type_mismatch`
+- **Source Gap:** `gap(general_type_mismatch,tangled_rope,rope)`
+- **Epsilon:** `0.35`
+- **Suppression:** `0.30`
+- **Question:** Constraint ship_of_theseus appears as tangled_rope to individuals but rope to institutions...
+- **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
+- **Family:** `F009` (17 members)
 
 ---
 
@@ -14439,6 +14781,24 @@
 
 ---
 
+### `omega_extraction_blindness_omelet_perfection_complexity` [MEDIUM]
+
+- **Severity:** `medium` (score: 0.380)
+- **Constraint:** `omelet_perfection_complexity`
+- **Domain:** `rope`
+- **Orbit Signature:** `[rope, tangled_rope]`
+- **Orbit Span:** `3`
+- **Gap Class:** `coordination_washing`
+- **Gap Pattern:** `snare_masked_as_rope`
+- **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+- **Epsilon:** `0.25`
+- **Suppression:** `0.45`
+- **Question:** Constraint omelet_perfection_complexity appears extractive (Snare) to individuals but functional (Rope) to institutions...
+- **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
+- **Family:** `F010` (16 members)
+
+---
+
 ### `omega_learned_helplessness_dead_sea_effect` [MEDIUM]
 
 - **Severity:** `medium` (score: 0.370)
@@ -14453,7 +14813,7 @@
 - **Suppression:** `0.40`
 - **Question:** Constraint dead_sea_effect appears extractive (Snare) to individuals but unchangeable (Mountain) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F004` (53 members)
+- **Family:** `F005` (53 members)
 
 ---
 
@@ -14475,39 +14835,57 @@
 
 ---
 
-### `omega_extraction_blindness_cs_ecmo_bridge` [MEDIUM]
+### `omega_extraction_blindness_lindy_effect` [MEDIUM]
 
-- **Severity:** `medium` (score: 0.365)
-- **Constraint:** `cs_ecmo_bridge`
-- **Domain:** `snare`
-- **Orbit Signature:** `[rope, unknown]`
-- **Orbit Span:** `0`
-- **Gap Class:** `powerless_blind`
+- **Severity:** `medium` (score: 0.370)
+- **Constraint:** `lindy_effect`
+- **Domain:** `tangled_rope`
+- **Orbit Signature:** `[rope, tangled_rope]`
+- **Orbit Span:** `3`
+- **Gap Class:** `coordination_washing`
 - **Gap Pattern:** `snare_masked_as_rope`
 - **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
-- **Epsilon:** `0.55`
-- **Suppression:** `0.30`
-- **Question:** Constraint cs_ecmo_bridge appears extractive (Snare) to individuals but functional (Rope) to institutions...
-- **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F016` (11 members)
+- **Epsilon:** `0.20`
+- **Suppression:** `0.50`
+- **Question:** Constraint lindy_effect appears extractive (Snare) to individuals but functional (Rope) to institutions...
+- **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
+- **Family:** `F004` (72 members)
 
 ---
 
-### `omega_extraction_blindness_hoa_covenants` [MEDIUM]
+### `omega_lindy_effect` [MEDIUM]
 
-- **Severity:** `medium` (score: 0.365)
-- **Constraint:** `hoa_covenants`
-- **Domain:** `piton`
-- **Orbit Signature:** `[rope, unknown]`
-- **Orbit Span:** `0`
-- **Gap Class:** `powerless_blind`
+- **Severity:** `medium` (score: 0.370)
+- **Constraint:** `lindy_effect`
+- **Domain:** `tangled_rope`
+- **Orbit Signature:** `[rope, tangled_rope]`
+- **Orbit Span:** `3`
+- **Gap Class:** `coordination_washing`
+- **Gap Pattern:** `unknown`
+- **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+- **Epsilon:** `0.20`
+- **Suppression:** `0.50`
+- **Question:** Whether the Lindy Effect holds for rapidly iterating digital phenomena.
+- **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
+- **Family:** `F004` (72 members)
+
+---
+
+### `omega_extraction_blindness_trillion_bond_rush_2026` [MEDIUM]
+
+- **Severity:** `medium` (score: 0.370)
+- **Constraint:** `trillion_bond_rush_2026`
+- **Domain:** `snare`
+- **Orbit Signature:** `[scaffold, tangled_rope]`
+- **Orbit Span:** `2`
+- **Gap Class:** `coordination_washing`
 - **Gap Pattern:** `snare_masked_as_rope`
 - **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
-- **Epsilon:** `0.55`
-- **Suppression:** `0.30`
-- **Question:** Constraint hoa_covenants appears extractive (Snare) to individuals but functional (Rope) to institutions...
-- **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F026` (5 members)
+- **Epsilon:** `0.52`
+- **Suppression:** `0.10`
+- **Question:** Constraint trillion_bond_rush_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+- **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
+- **Family:** `F018` (7 members)
 
 ---
 
@@ -14525,7 +14903,7 @@
 - **Suppression:** `0.95`
 - **Question:** Constraint rafah_crossing_lifeline appears as mountain to individuals but scaffold to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F025` (6 members)
+- **Family:** `F020` (6 members)
 
 ---
 
@@ -14543,7 +14921,7 @@
 - **Suppression:** `0.85`
 - **Question:** Constraint ergo_autolykos_asic_resistance appears as mountain to individuals but snare to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F004` (53 members)
+- **Family:** `F005` (53 members)
 
 ---
 
@@ -14565,21 +14943,21 @@
 
 ---
 
-### `omega_extraction_blindness_france_2027_presidential_election` [MEDIUM]
+### `omega_extraction_blindness_astm_d638_tensile_testing` [MEDIUM]
 
-- **Severity:** `medium` (score: 0.354)
-- **Constraint:** `france_2027_presidential_election`
-- **Domain:** `snare`
-- **Orbit Signature:** `[rope, unknown]`
-- **Orbit Span:** `0`
-- **Gap Class:** `powerless_blind`
+- **Severity:** `medium` (score: 0.350)
+- **Constraint:** `astm_d638_tensile_testing`
+- **Domain:** `rope`
+- **Orbit Signature:** `[rope, tangled_rope]`
+- **Orbit Span:** `3`
+- **Gap Class:** `coordination_washing`
 - **Gap Pattern:** `snare_masked_as_rope`
 - **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
-- **Epsilon:** `0.48`
-- **Suppression:** `0.38`
-- **Question:** Constraint france_2027_presidential_election appears extractive (Snare) to individuals but functional (Rope) to institutions...
-- **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F016` (11 members)
+- **Epsilon:** `0.10`
+- **Suppression:** `0.60`
+- **Question:** Constraint astm_d638_tensile_testing appears extractive (Snare) to individuals but functional (Rope) to institutions...
+- **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
+- **Family:** `F010` (16 members)
 
 ---
 
@@ -14619,75 +14997,39 @@
 
 ---
 
-### `omega_extraction_blindness_axiom_reasoner_2026` [MEDIUM]
+### `omega_extraction_blindness_electrification_scale_2026` [MEDIUM]
 
 - **Severity:** `medium` (score: 0.345)
-- **Constraint:** `axiom_reasoner_2026`
-- **Domain:** `snare`
-- **Orbit Signature:** `[scaffold, unknown]`
-- **Orbit Span:** `0`
-- **Gap Class:** `powerless_blind`
+- **Constraint:** `electrification_scale_2026`
+- **Domain:** `tangled_rope`
+- **Orbit Signature:** `[rope, tangled_rope]`
+- **Orbit Span:** `3`
+- **Gap Class:** `coordination_washing`
 - **Gap Pattern:** `snare_masked_as_rope`
 - **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
-- **Epsilon:** `0.48`
-- **Suppression:** `0.35`
-- **Question:** Constraint axiom_reasoner_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
-- **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F024` (6 members)
+- **Epsilon:** `0.15`
+- **Suppression:** `0.50`
+- **Question:** Constraint electrification_scale_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+- **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
+- **Family:** `F004` (72 members)
 
 ---
 
-### `omega_extraction_blindness_platonic_coparenting_decoupling` [MEDIUM]
-
-- **Severity:** `medium` (score: 0.345)
-- **Constraint:** `platonic_coparenting_decoupling`
-- **Domain:** `snare`
-- **Orbit Signature:** `[scaffold, unknown]`
-- **Orbit Span:** `0`
-- **Gap Class:** `powerless_blind`
-- **Gap Pattern:** `snare_masked_as_rope`
-- **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
-- **Epsilon:** `0.48`
-- **Suppression:** `0.35`
-- **Question:** Constraint platonic_coparenting_decoupling appears extractive (Snare) to individuals but functional (Rope) to institutions...
-- **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F024` (6 members)
-
----
-
-### `omega_perspectival_paris_municipal_reform_2026` [MEDIUM]
-
-- **Severity:** `medium` (score: 0.340)
-- **Constraint:** `paris_municipal_reform_2026`
-- **Domain:** `snare`
-- **Orbit Signature:** `[rope, unknown]`
-- **Orbit Span:** `0`
-- **Gap Class:** `powerless_blind`
-- **Gap Pattern:** `general_type_mismatch`
-- **Source Gap:** `gap(general_type_mismatch,rope,snare)`
-- **Epsilon:** `0.47`
-- **Suppression:** `0.35`
-- **Question:** Constraint paris_municipal_reform_2026 appears as rope to individuals but snare to institutions...
-- **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F016` (11 members)
-
----
-
-### `omega_extraction_blindness_ergo_storage_rent` [MEDIUM]
+### `omega_extraction_blindness_guinea_worm_eradication` [MEDIUM]
 
 - **Severity:** `medium` (score: 0.335)
-- **Constraint:** `ergo_storage_rent`
-- **Domain:** `snare`
-- **Orbit Signature:** `[rope, unknown]`
-- **Orbit Span:** `0`
-- **Gap Class:** `powerless_blind`
+- **Constraint:** `guinea_worm_eradication`
+- **Domain:** `tangled_rope`
+- **Orbit Signature:** `[rope, tangled_rope]`
+- **Orbit Span:** `3`
+- **Gap Class:** `coordination_washing`
 - **Gap Pattern:** `snare_masked_as_rope`
 - **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
-- **Epsilon:** `0.55`
-- **Suppression:** `0.20`
-- **Question:** Constraint ergo_storage_rent appears extractive (Snare) to individuals but functional (Rope) to institutions...
-- **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F016` (11 members)
+- **Epsilon:** `0.25`
+- **Suppression:** `0.30`
+- **Question:** Constraint guinea_worm_eradication appears extractive (Snare) to individuals but functional (Rope) to institutions...
+- **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
+- **Family:** `F004` (72 members)
 
 ---
 
@@ -14705,25 +15047,7 @@
 - **Suppression:** `0.95`
 - **Question:** Constraint ice_memory_archive appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F029` (5 members)
-
----
-
-### `omega_extraction_blindness_artificial_snow_2026` [MEDIUM]
-
-- **Severity:** `medium` (score: 0.330)
-- **Constraint:** `artificial_snow_2026`
-- **Domain:** `piton`
-- **Orbit Signature:** `[rope, unknown]`
-- **Orbit Span:** `0`
-- **Gap Class:** `powerless_blind`
-- **Gap Pattern:** `snare_masked_as_rope`
-- **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
-- **Epsilon:** `0.48`
-- **Suppression:** `0.30`
-- **Question:** Constraint artificial_snow_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
-- **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F026` (5 members)
+- **Family:** `F022` (5 members)
 
 ---
 
@@ -14763,6 +15087,24 @@
 
 ---
 
+### `omega_cut_safety_unclos_2026` [MEDIUM]
+
+- **Severity:** `medium` (score: 0.330)
+- **Constraint:** `unclos_2026`
+- **Domain:** `rope`
+- **Orbit Signature:** `[rope, tangled_rope]`
+- **Orbit Span:** `3`
+- **Gap Class:** `coordination_washing`
+- **Gap Pattern:** `mountain_coordination_confusion`
+- **Source Gap:** `gap(mountain_coordination_confusion,mountain,rope)`
+- **Epsilon:** `0.30`
+- **Suppression:** `0.20`
+- **Question:** Constraint unclos_2026 appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
+- **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
+- **Family:** `F010` (16 members)
+
+---
+
 ### `omega_cinderella_midnight_deadline` [MEDIUM]
 
 - **Severity:** `medium` (score: 0.320)
@@ -14777,7 +15119,7 @@
 - **Suppression:** `0.90`
 - **Question:** Uncertainty over whether the deadline is a simple limitation (gift) or an engineered test of character (manipulation).
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F029` (5 members)
+- **Family:** `F022` (5 members)
 
 ---
 
@@ -14795,7 +15137,25 @@
 - **Suppression:** `0.90`
 - **Question:** Constraint cinderella_midnight_deadline appears as scaffold to individuals but rope to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F029` (5 members)
+- **Family:** `F022` (5 members)
+
+---
+
+### `omega_perspectival_erasmus_rejoining_scaffold` [MEDIUM]
+
+- **Severity:** `medium` (score: 0.320)
+- **Constraint:** `erasmus_rejoining_scaffold`
+- **Domain:** `scaffold`
+- **Orbit Signature:** `[rope, scaffold, tangled_rope]`
+- **Orbit Span:** `3`
+- **Gap Class:** `coordination_washing`
+- **Gap Pattern:** `general_type_mismatch`
+- **Source Gap:** `gap(general_type_mismatch,tangled_rope,scaffold)`
+- **Epsilon:** `0.28`
+- **Suppression:** `0.20`
+- **Question:** Constraint erasmus_rejoining_scaffold appears as tangled_rope to individuals but scaffold to institutions...
+- **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
+- **Family:** `F036` (1 members)
 
 ---
 
@@ -14813,25 +15173,7 @@
 - **Suppression:** `0.90`
 - **Question:** Constraint kidney_exchange_market appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F009` (23 members)
-
----
-
-### `omega_extraction_blindness_recipe_scaling_ai` [MEDIUM]
-
-- **Severity:** `medium` (score: 0.320)
-- **Constraint:** `recipe_scaling_ai`
-- **Domain:** `snare`
-- **Orbit Signature:** `[scaffold, unknown]`
-- **Orbit Span:** `0`
-- **Gap Class:** `powerless_blind`
-- **Gap Pattern:** `snare_masked_as_rope`
-- **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
-- **Epsilon:** `0.49`
-- **Suppression:** `0.25`
-- **Question:** Constraint recipe_scaling_ai appears extractive (Snare) to individuals but functional (Rope) to institutions...
-- **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F024` (6 members)
+- **Family:** `F008` (23 members)
 
 ---
 
@@ -14853,39 +15195,39 @@
 
 ---
 
-### `omega_perspectival_maha_recovery_2026` [MEDIUM]
+### `omega_cut_safety_glp1_payload_efficiency_pivot` [MEDIUM]
 
 - **Severity:** `medium` (score: 0.315)
-- **Constraint:** `maha_recovery_2026`
-- **Domain:** `scaffold`
-- **Orbit Signature:** `[scaffold, unknown]`
-- **Orbit Span:** `0`
-- **Gap Class:** `powerless_blind`
-- **Gap Pattern:** `general_type_mismatch`
-- **Source Gap:** `gap(general_type_mismatch,snare,scaffold)`
-- **Epsilon:** `0.42`
-- **Suppression:** `0.35`
-- **Question:** Constraint maha_recovery_2026 appears as snare to individuals but scaffold to institutions...
-- **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F050` (1 members)
+- **Constraint:** `glp1_payload_efficiency_pivot`
+- **Domain:** `rope`
+- **Orbit Signature:** `[scaffold, tangled_rope]`
+- **Orbit Span:** `2`
+- **Gap Class:** `coordination_washing`
+- **Gap Pattern:** `mountain_coordination_confusion`
+- **Source Gap:** `gap(mountain_coordination_confusion,mountain,rope)`
+- **Epsilon:** `0.35`
+- **Suppression:** `0.20`
+- **Question:** Constraint glp1_payload_efficiency_pivot appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
+- **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
+- **Family:** `F024` (5 members)
 
 ---
 
-### `omega_extraction_blindness_rosen_bridge_protocol` [MEDIUM]
+### `omega_extraction_blindness_somatic_focusing_awareness` [MEDIUM]
 
 - **Severity:** `medium` (score: 0.310)
-- **Constraint:** `rosen_bridge_protocol`
-- **Domain:** `snare`
-- **Orbit Signature:** `[rope, unknown]`
-- **Orbit Span:** `0`
-- **Gap Class:** `powerless_blind`
+- **Constraint:** `somatic_focusing_awareness`
+- **Domain:** `rope`
+- **Orbit Signature:** `[rope, tangled_rope]`
+- **Orbit Span:** `3`
+- **Gap Class:** `coordination_washing`
 - **Gap Pattern:** `snare_masked_as_rope`
 - **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
-- **Epsilon:** `0.50`
-- **Suppression:** `0.20`
-- **Question:** Constraint rosen_bridge_protocol appears extractive (Snare) to individuals but functional (Rope) to institutions...
-- **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F016` (11 members)
+- **Epsilon:** `0.20`
+- **Suppression:** `0.30`
+- **Question:** Constraint somatic_focusing_awareness appears extractive (Snare) to individuals but functional (Rope) to institutions...
+- **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
+- **Family:** `F010` (16 members)
 
 ---
 
@@ -14903,25 +15245,25 @@
 - **Suppression:** `0.95`
 - **Question:** Constraint sts86_ascent_checklist appears as tangled_rope to individuals but rope to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F033` (4 members)
+- **Family:** `F027` (4 members)
 
 ---
 
-### `omega_extraction_blindness_tcp_rfc9293_interoperability` [MEDIUM]
+### `omega_skills_based_hiring` [MEDIUM]
 
-- **Severity:** `medium` (score: 0.310)
-- **Constraint:** `tcp_rfc9293_interoperability`
+- **Severity:** `medium` (score: 0.305)
+- **Constraint:** `skills_based_hiring`
 - **Domain:** `rope`
-- **Orbit Signature:** `[rope, unknown]`
-- **Orbit Span:** `0`
-- **Gap Class:** `powerless_blind`
-- **Gap Pattern:** `snare_masked_as_rope`
-- **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
-- **Epsilon:** `0.20`
-- **Suppression:** `0.70`
-- **Question:** Constraint tcp_rfc9293_interoperability appears extractive (Snare) to individuals but functional (Rope) to institutions...
-- **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F015` (11 members)
+- **Orbit Signature:** `[rope, tangled_rope]`
+- **Orbit Span:** `3`
+- **Gap Class:** `coordination_washing`
+- **Gap Pattern:** `unknown`
+- **Source Gap:** `N/A`
+- **Epsilon:** `0.25`
+- **Suppression:** `0.20`
+- **Question:** Rate of skill obsolescence and its impact on the long-term extractiveness of continuous certification.
+- **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
+- **Family:** `F010` (16 members)
 
 ---
 
@@ -14939,7 +15281,7 @@
 - **Suppression:** `0.95`
 - **Question:** Constraint thai_article_112_mountain appears as snare to individuals but tangled_rope to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F033` (4 members)
+- **Family:** `F027` (4 members)
 
 ---
 
@@ -14979,93 +15321,39 @@
 
 ---
 
-### `omega_perspectival_education_unbundling_implementation` [MEDIUM]
+### `omega_extraction_blindness_fiscal_equalization_friction` [MEDIUM]
 
-- **Severity:** `medium` (score: 0.290)
-- **Constraint:** `education_unbundling_implementation`
-- **Domain:** `tangled_rope`
-- **Orbit Signature:** `[rope, unknown]`
-- **Orbit Span:** `0`
-- **Gap Class:** `powerless_blind`
-- **Gap Pattern:** `general_type_mismatch`
-- **Source Gap:** `gap(general_type_mismatch,rope,snare)`
-- **Epsilon:** `0.40`
-- **Suppression:** `0.30`
-- **Question:** Constraint education_unbundling_implementation appears as rope to individuals but snare to institutions...
-- **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F018` (9 members)
-
----
-
-### `omega_perspectival_goodstein_theorem_finite_proof` [MEDIUM]
-
-- **Severity:** `medium` (score: 0.290)
-- **Constraint:** `goodstein_theorem_finite_proof`
-- **Domain:** `tangled_rope`
-- **Orbit Signature:** `[rope, unknown]`
-- **Orbit Span:** `0`
-- **Gap Class:** `powerless_blind`
-- **Gap Pattern:** `general_type_mismatch`
-- **Source Gap:** `gap(general_type_mismatch,tangled_rope,rope)`
-- **Epsilon:** `0.40`
-- **Suppression:** `0.30`
-- **Question:** Constraint goodstein_theorem_finite_proof appears as tangled_rope to individuals but rope to institutions...
-- **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F018` (9 members)
-
----
-
-### `omega_perspectival_shitty_feedback_handling` [MEDIUM]
-
-- **Severity:** `medium` (score: 0.290)
-- **Constraint:** `shitty_feedback_handling`
+- **Severity:** `medium` (score: 0.285)
+- **Constraint:** `fiscal_equalization_friction`
 - **Domain:** `rope`
-- **Orbit Signature:** `[rope, unknown]`
-- **Orbit Span:** `0`
-- **Gap Class:** `powerless_blind`
-- **Gap Pattern:** `general_type_mismatch`
-- **Source Gap:** `gap(general_type_mismatch,snare,tangled_rope)`
-- **Epsilon:** `0.40`
-- **Suppression:** `0.30`
-- **Question:** Constraint shitty_feedback_handling appears as snare to individuals but tangled_rope to institutions...
-- **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F015` (11 members)
-
----
-
-### `omega_extraction_blindness_trillion_bond_rush_2026` [MEDIUM]
-
-- **Severity:** `medium` (score: 0.290)
-- **Constraint:** `trillion_bond_rush_2026`
-- **Domain:** `snare`
-- **Orbit Signature:** `[scaffold, unknown]`
-- **Orbit Span:** `0`
-- **Gap Class:** `powerless_blind`
+- **Orbit Signature:** `[scaffold, tangled_rope]`
+- **Orbit Span:** `2`
+- **Gap Class:** `coordination_washing`
 - **Gap Pattern:** `snare_masked_as_rope`
 - **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
-- **Epsilon:** `0.52`
-- **Suppression:** `0.10`
-- **Question:** Constraint trillion_bond_rush_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
-- **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F024` (6 members)
+- **Epsilon:** `0.32`
+- **Suppression:** `0.15`
+- **Question:** Constraint fiscal_equalization_friction appears extractive (Snare) to individuals but functional (Rope) to institutions...
+- **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
+- **Family:** `F024` (5 members)
 
 ---
 
-### `omega_perspectival_rfc9293_state_machine` [MEDIUM]
+### `omega_dexy_gold_protocol` [MEDIUM]
 
 - **Severity:** `medium` (score: 0.280)
-- **Constraint:** `rfc9293_state_machine`
+- **Constraint:** `dexy_gold_protocol`
 - **Domain:** `tangled_rope`
-- **Orbit Signature:** `[rope, unknown]`
-- **Orbit Span:** `0`
-- **Gap Class:** `powerless_blind`
-- **Gap Pattern:** `general_type_mismatch`
-- **Source Gap:** `gap(general_type_mismatch,tangled_rope,rope)`
+- **Orbit Signature:** `[rope, tangled_rope]`
+- **Orbit Span:** `3`
+- **Gap Class:** `coordination_washing`
+- **Gap Pattern:** `unknown`
+- **Source Gap:** `N/A`
 - **Epsilon:** `0.20`
-- **Suppression:** `0.60`
-- **Question:** Constraint rfc9293_state_machine appears as tangled_rope to individuals but rope to institutions...
-- **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F018` (9 members)
+- **Suppression:** `0.20`
+- **Question:** Resilience of redemption locks against sophisticated economic attacks.
+- **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
+- **Family:** `F004` (72 members)
 
 ---
 
@@ -15083,7 +15371,7 @@
 - **Suppression:** `0.60`
 - **Question:** Constraint solar_system_weirdness appears as mountain to individuals but snare to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F009` (23 members)
+- **Family:** `F008` (23 members)
 
 ---
 
@@ -15101,7 +15389,7 @@
 - **Suppression:** `0.60`
 - **Question:** Calibrating the statistical degree of the solar system anomaly.
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F009` (23 members)
+- **Family:** `F008` (23 members)
 
 ---
 
@@ -15119,43 +15407,7 @@
 - **Suppression:** `0.60`
 - **Question:** Distinguishing between survey bias and actual rarity of Earth-twins.
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F009` (23 members)
-
----
-
-### `omega_extraction_blindness_repair_probe_incomplete` [MEDIUM]
-
-- **Severity:** `medium` (score: 0.275)
-- **Constraint:** `repair_probe_incomplete`
-- **Domain:** `snare`
-- **Orbit Signature:** `[rope, unknown]`
-- **Orbit Span:** `0`
-- **Gap Class:** `powerless_blind`
-- **Gap Pattern:** `snare_masked_as_rope`
-- **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
-- **Epsilon:** `0.55`
-- **Suppression:** `0.00`
-- **Question:** Constraint repair_probe_incomplete appears extractive (Snare) to individuals but functional (Rope) to institutions...
-- **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F016` (11 members)
-
----
-
-### `omega_extraction_blindness_boltzmann_universality_2026` [MEDIUM]
-
-- **Severity:** `medium` (score: 0.270)
-- **Constraint:** `boltzmann_universality_2026`
-- **Domain:** `tangled_rope`
-- **Orbit Signature:** `[rope, unknown]`
-- **Orbit Span:** `0`
-- **Gap Class:** `powerless_blind`
-- **Gap Pattern:** `snare_masked_as_rope`
-- **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
-- **Epsilon:** `0.15`
-- **Suppression:** `0.65`
-- **Question:** Constraint boltzmann_universality_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
-- **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F018` (9 members)
+- **Family:** `F008` (23 members)
 
 ---
 
@@ -15177,21 +15429,21 @@
 
 ---
 
-### `omega_perspectival_ship_of_theseus` [MEDIUM]
+### `omega_cuban_missile_crisis_excomm_deliberation` [MEDIUM]
 
 - **Severity:** `medium` (score: 0.265)
-- **Constraint:** `ship_of_theseus`
-- **Domain:** `piton`
-- **Orbit Signature:** `[rope, unknown]`
-- **Orbit Span:** `0`
-- **Gap Class:** `powerless_blind`
-- **Gap Pattern:** `general_type_mismatch`
-- **Source Gap:** `gap(general_type_mismatch,tangled_rope,rope)`
-- **Epsilon:** `0.35`
-- **Suppression:** `0.30`
-- **Question:** Constraint ship_of_theseus appears as tangled_rope to individuals but rope to institutions...
-- **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F026` (5 members)
+- **Constraint:** `cuban_missile_crisis_excomm_deliberation`
+- **Domain:** `rope`
+- **Orbit Signature:** `[rope, tangled_rope]`
+- **Orbit Span:** `3`
+- **Gap Class:** `coordination_washing`
+- **Gap Pattern:** `unknown`
+- **Source Gap:** `N/A`
+- **Epsilon:** `0.20`
+- **Suppression:** `0.15`
+- **Question:** Uncertainty over Soviet command-and-control and response doctrine during the crisis.
+- **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
+- **Family:** `F010` (16 members)
 
 ---
 
@@ -15213,24 +15465,6 @@
 
 ---
 
-### `omega_extraction_blindness_omelet_perfection_complexity` [MEDIUM]
-
-- **Severity:** `medium` (score: 0.260)
-- **Constraint:** `omelet_perfection_complexity`
-- **Domain:** `rope`
-- **Orbit Signature:** `[rope, unknown]`
-- **Orbit Span:** `0`
-- **Gap Class:** `powerless_blind`
-- **Gap Pattern:** `snare_masked_as_rope`
-- **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
-- **Epsilon:** `0.25`
-- **Suppression:** `0.45`
-- **Question:** Constraint omelet_perfection_complexity appears extractive (Snare) to individuals but functional (Rope) to institutions...
-- **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F015` (11 members)
-
----
-
 ### `omega_perspectival_sig_usd_protocol` [MEDIUM]
 
 - **Severity:** `medium` (score: 0.260)
@@ -15245,7 +15479,7 @@
 - **Suppression:** `0.20`
 - **Question:** Constraint sig_usd_protocol appears as mountain to individuals but snare to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F009` (23 members)
+- **Family:** `F008` (23 members)
 
 ---
 
@@ -15263,7 +15497,7 @@
 - **Suppression:** `0.20`
 - **Question:** Integrity and manipulation-resistance of the ERG/USD price oracle.
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F009` (23 members)
+- **Family:** `F008` (23 members)
 
 ---
 
@@ -15281,7 +15515,7 @@
 - **Suppression:** `0.35`
 - **Question:** Constraint temporal_scarcity appears as piton to individuals but rope to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F035` (4 members)
+- **Family:** `F028` (4 members)
 
 ---
 
@@ -15299,7 +15533,7 @@
 - **Suppression:** `0.35`
 - **Question:** Uncertainty about the historical function (Scaffold vs. Piton) of rewarding publication speed.
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F035` (4 members)
+- **Family:** `F028` (4 members)
 
 ---
 
@@ -15317,7 +15551,7 @@
 - **Suppression:** `0.50`
 - **Question:** Constraint kjv_puritan_new_world_exit appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F009` (23 members)
+- **Family:** `F008` (23 members)
 
 ---
 
@@ -15335,47 +15569,11 @@
 - **Suppression:** `0.50`
 - **Question:** Whether the coercive potential of a re-indexed text remains latent or is permanently neutralized.
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F009` (23 members)
+- **Family:** `F008` (23 members)
 
 ---
 
-### `omega_extraction_blindness_lindy_effect` [MEDIUM]
-
-- **Severity:** `medium` (score: 0.250)
-- **Constraint:** `lindy_effect`
-- **Domain:** `tangled_rope`
-- **Orbit Signature:** `[rope, unknown]`
-- **Orbit Span:** `0`
-- **Gap Class:** `powerless_blind`
-- **Gap Pattern:** `snare_masked_as_rope`
-- **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
-- **Epsilon:** `0.20`
-- **Suppression:** `0.50`
-- **Question:** Constraint lindy_effect appears extractive (Snare) to individuals but functional (Rope) to institutions...
-- **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F018` (9 members)
-
----
-
-### `omega_lindy_effect` [MEDIUM]
-
-- **Severity:** `medium` (score: 0.250)
-- **Constraint:** `lindy_effect`
-- **Domain:** `tangled_rope`
-- **Orbit Signature:** `[rope, unknown]`
-- **Orbit Span:** `0`
-- **Gap Class:** `powerless_blind`
-- **Gap Pattern:** `unknown`
-- **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
-- **Epsilon:** `0.20`
-- **Suppression:** `0.50`
-- **Question:** Whether the Lindy Effect holds for rapidly iterating digital phenomena.
-- **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F018` (9 members)
-
----
-
-## LOW (107)
+## LOW (96)
 
 ### `omega_perspectival_viral_emergence_covid19_exemplar` [LOW]
 
@@ -15391,61 +15589,25 @@
 - **Suppression:** `0.30`
 - **Question:** Constraint viral_emergence_covid19_exemplar appears as snare to individuals but piton to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F057` (1 members)
+- **Family:** `F043` (1 members)
 
 ---
 
-### `omega_perspectival_erasmus_rejoining_scaffold` [LOW]
-
-- **Severity:** `low` (score: 0.240)
-- **Constraint:** `erasmus_rejoining_scaffold`
-- **Domain:** `scaffold`
-- **Orbit Signature:** `[rope, scaffold, unknown]`
-- **Orbit Span:** `1`
-- **Gap Class:** `powerless_blind`
-- **Gap Pattern:** `general_type_mismatch`
-- **Source Gap:** `gap(general_type_mismatch,tangled_rope,scaffold)`
-- **Epsilon:** `0.28`
-- **Suppression:** `0.20`
-- **Question:** Constraint erasmus_rejoining_scaffold appears as tangled_rope to individuals but scaffold to institutions...
-- **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F045` (1 members)
-
----
-
-### `omega_cut_safety_glp1_payload_efficiency_pivot` [LOW]
-
-- **Severity:** `low` (score: 0.235)
-- **Constraint:** `glp1_payload_efficiency_pivot`
-- **Domain:** `rope`
-- **Orbit Signature:** `[scaffold, unknown]`
-- **Orbit Span:** `0`
-- **Gap Class:** `powerless_blind`
-- **Gap Pattern:** `mountain_coordination_confusion`
-- **Source Gap:** `gap(mountain_coordination_confusion,mountain,rope)`
-- **Epsilon:** `0.35`
-- **Suppression:** `0.20`
-- **Question:** Constraint glp1_payload_efficiency_pivot appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
-- **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F031` (5 members)
-
----
-
-### `omega_extraction_blindness_astm_d638_tensile_testing` [LOW]
+### `omega_burden_of_proof_legal_criminal` [LOW]
 
 - **Severity:** `low` (score: 0.230)
-- **Constraint:** `astm_d638_tensile_testing`
+- **Constraint:** `burden_of_proof_legal_criminal`
 - **Domain:** `rope`
-- **Orbit Signature:** `[rope, unknown]`
-- **Orbit Span:** `0`
-- **Gap Class:** `powerless_blind`
-- **Gap Pattern:** `snare_masked_as_rope`
-- **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
+- **Orbit Signature:** `[rope, tangled_rope]`
+- **Orbit Span:** `3`
+- **Gap Class:** `coordination_washing`
+- **Gap Pattern:** `unknown`
+- **Source Gap:** `N/A`
 - **Epsilon:** `0.10`
-- **Suppression:** `0.60`
-- **Question:** Constraint astm_d638_tensile_testing appears extractive (Snare) to individuals but functional (Rope) to institutions...
-- **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F015` (11 members)
+- **Suppression:** `0.20`
+- **Question:** The objectivity vs. subjectivity of the "reasonable doubt" standard.
+- **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
+- **Family:** `F010` (16 members)
 
 ---
 
@@ -15463,25 +15625,7 @@
 - **Suppression:** `0.60`
 - **Question:** Constraint planetary_diet_constraint_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F033` (4 members)
-
----
-
-### `omega_extraction_blindness_electrification_scale_2026` [LOW]
-
-- **Severity:** `low` (score: 0.225)
-- **Constraint:** `electrification_scale_2026`
-- **Domain:** `tangled_rope`
-- **Orbit Signature:** `[rope, unknown]`
-- **Orbit Span:** `0`
-- **Gap Class:** `powerless_blind`
-- **Gap Pattern:** `snare_masked_as_rope`
-- **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
-- **Epsilon:** `0.15`
-- **Suppression:** `0.50`
-- **Question:** Constraint electrification_scale_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
-- **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F018` (9 members)
+- **Family:** `F027` (4 members)
 
 ---
 
@@ -15499,7 +15643,7 @@
 - **Suppression:** `0.45`
 - **Question:** Constraint fmt_oncology_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F023` (6 members)
+- **Family:** `F019` (6 members)
 
 ---
 
@@ -15517,25 +15661,7 @@
 - **Suppression:** `0.35`
 - **Question:** Constraint alternative_sovereignty_scaffold appears as rope to individuals but snare to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F023` (6 members)
-
----
-
-### `omega_extraction_blindness_guinea_worm_eradication` [LOW]
-
-- **Severity:** `low` (score: 0.215)
-- **Constraint:** `guinea_worm_eradication`
-- **Domain:** `tangled_rope`
-- **Orbit Signature:** `[rope, unknown]`
-- **Orbit Span:** `0`
-- **Gap Class:** `powerless_blind`
-- **Gap Pattern:** `snare_masked_as_rope`
-- **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
-- **Epsilon:** `0.25`
-- **Suppression:** `0.30`
-- **Question:** Constraint guinea_worm_eradication appears extractive (Snare) to individuals but functional (Rope) to institutions...
-- **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F018` (9 members)
+- **Family:** `F019` (6 members)
 
 ---
 
@@ -15553,7 +15679,7 @@
 - **Suppression:** `0.10`
 - **Question:** Constraint gold_piton_2026 appears as snare to individuals but piton to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F035` (4 members)
+- **Family:** `F028` (4 members)
 
 ---
 
@@ -15571,7 +15697,7 @@
 - **Suppression:** `0.20`
 - **Question:** Constraint gradient_descent_optimization appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F009` (23 members)
+- **Family:** `F008` (23 members)
 
 ---
 
@@ -15589,7 +15715,7 @@
 - **Suppression:** `0.45`
 - **Question:** Constraint narrative_engineering_2026 appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F023` (6 members)
+- **Family:** `F019` (6 members)
 
 ---
 
@@ -15607,43 +15733,7 @@
 - **Suppression:** `0.20`
 - **Question:** Constraint railway_gauge_standard appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F017` (10 members)
-
----
-
-### `omega_cut_safety_unclos_2026` [LOW]
-
-- **Severity:** `low` (score: 0.210)
-- **Constraint:** `unclos_2026`
-- **Domain:** `rope`
-- **Orbit Signature:** `[rope, unknown]`
-- **Orbit Span:** `0`
-- **Gap Class:** `powerless_blind`
-- **Gap Pattern:** `mountain_coordination_confusion`
-- **Source Gap:** `gap(mountain_coordination_confusion,mountain,rope)`
-- **Epsilon:** `0.30`
-- **Suppression:** `0.20`
-- **Question:** Constraint unclos_2026 appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
-- **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F015` (11 members)
-
----
-
-### `omega_extraction_blindness_fiscal_equalization_friction` [LOW]
-
-- **Severity:** `low` (score: 0.205)
-- **Constraint:** `fiscal_equalization_friction`
-- **Domain:** `rope`
-- **Orbit Signature:** `[scaffold, unknown]`
-- **Orbit Span:** `0`
-- **Gap Class:** `powerless_blind`
-- **Gap Pattern:** `snare_masked_as_rope`
-- **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
-- **Epsilon:** `0.32`
-- **Suppression:** `0.15`
-- **Question:** Constraint fiscal_equalization_friction appears extractive (Snare) to individuals but functional (Rope) to institutions...
-- **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F031` (5 members)
+- **Family:** `F015` (10 members)
 
 ---
 
@@ -15697,7 +15787,7 @@
 - **Suppression:** `0.05`
 - **Question:** Constraint climate_attribution_2026 appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 - **Resolution Strategy:** Investigate why analyst sees worse than affected population. Possible causes: information asymmetry, normalization of extraction, or genuine coordination value invisible to outsiders.
-- **Family:** `F030` (5 members)
+- **Family:** `F023` (5 members)
 
 ---
 
@@ -15751,7 +15841,7 @@
 - **Suppression:** `0.05`
 - **Question:** Constraint heuristic_optimization appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 - **Resolution Strategy:** Investigate why analyst sees worse than affected population. Possible causes: information asymmetry, normalization of extraction, or genuine coordination value invisible to outsiders.
-- **Family:** `F030` (5 members)
+- **Family:** `F023` (5 members)
 
 ---
 
@@ -15769,7 +15859,7 @@
 - **Suppression:** `0.05`
 - **Question:** Is the pursuit of theoretical optimality a practical goal or a theatrical one in complex systems?
 - **Resolution Strategy:** Investigate why analyst sees worse than affected population. Possible causes: information asymmetry, normalization of extraction, or genuine coordination value invisible to outsiders.
-- **Family:** `F030` (5 members)
+- **Family:** `F023` (5 members)
 
 ---
 
@@ -15787,7 +15877,7 @@
 - **Suppression:** `0.05`
 - **Question:** Constraint information_foraging_theory appears extractive (Snare) to individuals but unchangeable (Mountain) to institutions...
 - **Resolution Strategy:** Investigate why analyst sees worse than affected population. Possible causes: information asymmetry, normalization of extraction, or genuine coordination value invisible to outsiders.
-- **Family:** `F030` (5 members)
+- **Family:** `F023` (5 members)
 
 ---
 
@@ -15823,43 +15913,7 @@
 - **Suppression:** `0.30`
 - **Question:** Constraint cognitive_bicycle_scaffold appears as snare to individuals but scaffold to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F009` (23 members)
-
----
-
-### `omega_extraction_blindness_somatic_focusing_awareness` [LOW]
-
-- **Severity:** `low` (score: 0.190)
-- **Constraint:** `somatic_focusing_awareness`
-- **Domain:** `rope`
-- **Orbit Signature:** `[rope, unknown]`
-- **Orbit Span:** `0`
-- **Gap Class:** `powerless_blind`
-- **Gap Pattern:** `snare_masked_as_rope`
-- **Source Gap:** `gap(snare_masked_as_rope,snare,rope)`
-- **Epsilon:** `0.20`
-- **Suppression:** `0.30`
-- **Question:** Constraint somatic_focusing_awareness appears extractive (Snare) to individuals but functional (Rope) to institutions...
-- **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F015` (11 members)
-
----
-
-### `omega_skills_based_hiring` [LOW]
-
-- **Severity:** `low` (score: 0.185)
-- **Constraint:** `skills_based_hiring`
-- **Domain:** `rope`
-- **Orbit Signature:** `[rope, unknown]`
-- **Orbit Span:** `0`
-- **Gap Class:** `powerless_blind`
-- **Gap Pattern:** `unknown`
-- **Source Gap:** `N/A`
-- **Epsilon:** `0.25`
-- **Suppression:** `0.20`
-- **Question:** Rate of skill obsolescence and its impact on the long-term extractiveness of continuous certification.
-- **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F015` (11 members)
+- **Family:** `F008` (23 members)
 
 ---
 
@@ -15877,7 +15931,7 @@
 - **Suppression:** `0.40`
 - **Question:** Constraint coffee_cardiovascular_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F023` (6 members)
+- **Family:** `F019` (6 members)
 
 ---
 
@@ -15895,7 +15949,7 @@
 - **Suppression:** `0.10`
 - **Question:** Constraint mco_unit_system_discontinuity appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F017` (10 members)
+- **Family:** `F015` (10 members)
 
 ---
 
@@ -15913,7 +15967,7 @@
 - **Suppression:** `0.50`
 - **Question:** Constraint e2ee_digital_privacy_2026 appears as rope to individuals but snare to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F009` (23 members)
+- **Family:** `F008` (23 members)
 
 ---
 
@@ -15967,7 +16021,7 @@
 - **Suppression:** `0.15`
 - **Question:** Constraint canada_goose_realignment_2026 appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F023` (6 members)
+- **Family:** `F019` (6 members)
 
 ---
 
@@ -16021,7 +16075,7 @@
 - **Suppression:** `0.40`
 - **Question:** Constraint fair_use_doctrine appears extractive (Snare) to individuals but unchangeable (Mountain) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F025` (6 members)
+- **Family:** `F020` (6 members)
 
 ---
 
@@ -16057,25 +16111,7 @@
 - **Suppression:** `0.25`
 - **Question:** Constraint manganese_catalysis_2026 appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F023` (6 members)
-
----
-
-### `omega_dexy_gold_protocol` [LOW]
-
-- **Severity:** `low` (score: 0.160)
-- **Constraint:** `dexy_gold_protocol`
-- **Domain:** `tangled_rope`
-- **Orbit Signature:** `[rope, unknown]`
-- **Orbit Span:** `0`
-- **Gap Class:** `powerless_blind`
-- **Gap Pattern:** `unknown`
-- **Source Gap:** `N/A`
-- **Epsilon:** `0.20`
-- **Suppression:** `0.20`
-- **Question:** Resilience of redemption locks against sophisticated economic attacks.
-- **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F018` (9 members)
+- **Family:** `F019` (6 members)
 
 ---
 
@@ -16093,7 +16129,7 @@
 - **Suppression:** `0.05`
 - **Question:** Constraint milano_cortina_2026 appears as rope to individuals but piton to institutions...
 - **Resolution Strategy:** Map beneficiary flows. Interview affected populations to verify coordination claim. Test: who controls change mechanisms? If control is asymmetric, extraction is likely.
-- **Family:** `F035` (4 members)
+- **Family:** `F028` (4 members)
 
 ---
 
@@ -16111,7 +16147,7 @@
 - **Suppression:** `0.10`
 - **Question:** Constraint perseverance_ai_drive appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F009` (23 members)
+- **Family:** `F008` (23 members)
 
 ---
 
@@ -16129,7 +16165,7 @@
 - **Suppression:** `0.05`
 - **Question:** Constraint quine_self_replication appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 - **Resolution Strategy:** Investigate why analyst sees worse than affected population. Possible causes: information asymmetry, normalization of extraction, or genuine coordination value invisible to outsiders.
-- **Family:** `F054` (1 members)
+- **Family:** `F040` (1 members)
 
 ---
 
@@ -16147,7 +16183,7 @@
 - **Suppression:** `0.40`
 - **Question:** Constraint cancer_chronotherapy_timing appears as rope to individuals but scaffold to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F025` (6 members)
+- **Family:** `F020` (6 members)
 
 ---
 
@@ -16165,25 +16201,7 @@
 - **Suppression:** `0.05`
 - **Question:** Constraint click_chemistry_paradigm_2026 appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 - **Resolution Strategy:** Investigate why analyst sees worse than affected population. Possible causes: information asymmetry, normalization of extraction, or genuine coordination value invisible to outsiders.
-- **Family:** `F030` (5 members)
-
----
-
-### `omega_cuban_missile_crisis_excomm_deliberation` [LOW]
-
-- **Severity:** `low` (score: 0.145)
-- **Constraint:** `cuban_missile_crisis_excomm_deliberation`
-- **Domain:** `rope`
-- **Orbit Signature:** `[rope, unknown]`
-- **Orbit Span:** `0`
-- **Gap Class:** `powerless_blind`
-- **Gap Pattern:** `unknown`
-- **Source Gap:** `N/A`
-- **Epsilon:** `0.20`
-- **Suppression:** `0.15`
-- **Question:** Uncertainty over Soviet command-and-control and response doctrine during the crisis.
-- **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F015` (11 members)
+- **Family:** `F023` (5 members)
 
 ---
 
@@ -16237,7 +16255,7 @@
 - **Suppression:** `0.40`
 - **Question:** Constraint wikipedia_crowdsourcing_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F025` (6 members)
+- **Family:** `F020` (6 members)
 
 ---
 
@@ -16255,7 +16273,7 @@
 - **Suppression:** `0.05`
 - **Question:** Constraint axiom_of_choice appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F027` (5 members)
+- **Family:** `F021` (5 members)
 
 ---
 
@@ -16273,7 +16291,7 @@
 - **Suppression:** `0.05`
 - **Question:** Constraint damped_harmonics appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F027` (5 members)
+- **Family:** `F021` (5 members)
 
 ---
 
@@ -16291,7 +16309,7 @@
 - **Suppression:** `0.05`
 - **Question:** Constraint lln_convergence appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F027` (5 members)
+- **Family:** `F021` (5 members)
 
 ---
 
@@ -16309,7 +16327,7 @@
 - **Suppression:** `0.05`
 - **Question:** Constraint nonstandard_arithmetic_models appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F027` (5 members)
+- **Family:** `F021` (5 members)
 
 ---
 
@@ -16327,7 +16345,7 @@
 - **Suppression:** `0.05`
 - **Question:** Constraint peano_curve_mapping appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F027` (5 members)
+- **Family:** `F021` (5 members)
 
 ---
 
@@ -16345,7 +16363,7 @@
 - **Suppression:** `0.10`
 - **Question:** Constraint permissive_software_licensing appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F009` (23 members)
+- **Family:** `F008` (23 members)
 
 ---
 
@@ -16354,16 +16372,16 @@
 - **Severity:** `low` (score: 0.115)
 - **Constraint:** `base_pair_complementarity`
 - **Domain:** `mountain`
-- **Orbit Signature:** `[mountain, unknown]`
+- **Orbit Signature:** `[mountain]`
 - **Orbit Span:** `0`
-- **Gap Class:** `analytical_blind`
+- **Gap Class:** `consensus`
 - **Gap Pattern:** `unknown`
 - **Source Gap:** `N/A`
 - **Epsilon:** `0.20`
 - **Suppression:** `0.05`
 - **Question:** Whether tautomeric shifts allow alternative base pairings, introducing errors.
-- **Resolution Strategy:** Analyst cannot classify but affected population can. Collect ground-truth from affected populations. Test whether analytical abstraction obscures lived experience.
-- **Family:** `F007` (25 members)
+- **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
+- **Family:** `F007` (39 members)
 
 ---
 
@@ -16381,7 +16399,7 @@
 - **Suppression:** `0.25`
 - **Question:** Constraint decentralized_infrastructure_rope appears as rope to individuals but snare to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F033` (4 members)
+- **Family:** `F027` (4 members)
 
 ---
 
@@ -16390,16 +16408,16 @@
 - **Severity:** `low` (score: 0.115)
 - **Constraint:** `kirby_paris_theorem`
 - **Domain:** `mountain`
-- **Orbit Signature:** `[mountain, unknown]`
+- **Orbit Signature:** `[mountain]`
 - **Orbit Span:** `0`
-- **Gap Class:** `analytical_blind`
+- **Gap Class:** `consensus`
 - **Gap Pattern:** `unknown`
 - **Source Gap:** `N/A`
 - **Epsilon:** `0.20`
 - **Suppression:** `0.05`
 - **Question:** The relationship between formal transfinite methods and innate human mathematical intuition.
-- **Resolution Strategy:** Analyst cannot classify but affected population can. Collect ground-truth from affected populations. Test whether analytical abstraction obscures lived experience.
-- **Family:** `F007` (25 members)
+- **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
+- **Family:** `F007` (39 members)
 
 ---
 
@@ -16417,25 +16435,7 @@
 - **Suppression:** `0.20`
 - **Question:** Constraint berkshire_compounding_culture appears as rope to individuals but piton to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F025` (6 members)
-
----
-
-### `omega_burden_of_proof_legal_criminal` [LOW]
-
-- **Severity:** `low` (score: 0.110)
-- **Constraint:** `burden_of_proof_legal_criminal`
-- **Domain:** `rope`
-- **Orbit Signature:** `[rope, unknown]`
-- **Orbit Span:** `0`
-- **Gap Class:** `powerless_blind`
-- **Gap Pattern:** `unknown`
-- **Source Gap:** `N/A`
-- **Epsilon:** `0.10`
-- **Suppression:** `0.20`
-- **Question:** The objectivity vs. subjectivity of the "reasonable doubt" standard.
-- **Resolution Strategy:** Affected population cannot classify. Test whether opacity serves extraction (deliberate complexity) or coordination (legitimate technical barrier). Measure information asymmetry.
-- **Family:** `F015` (11 members)
+- **Family:** `F020` (6 members)
 
 ---
 
@@ -16453,7 +16453,7 @@
 - **Suppression:** `0.20`
 - **Question:** Constraint udhr_1948 appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F009` (23 members)
+- **Family:** `F008` (23 members)
 
 ---
 
@@ -16471,7 +16471,7 @@
 - **Suppression:** `0.20`
 - **Question:** The gap between declared rights and their practical enforcement.
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F009` (23 members)
+- **Family:** `F008` (23 members)
 
 ---
 
@@ -16489,7 +16489,7 @@
 - **Suppression:** `0.20`
 - **Question:** The debate over whether UDHR values are universal or culturally specific.
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F009` (23 members)
+- **Family:** `F008` (23 members)
 
 ---
 
@@ -16507,7 +16507,7 @@
 - **Suppression:** `0.10`
 - **Question:** Constraint ergo_lets_protocol appears extractive (Snare) to individuals but unchangeable (Mountain) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F009` (23 members)
+- **Family:** `F008` (23 members)
 
 ---
 
@@ -16525,7 +16525,7 @@
 - **Suppression:** `0.10`
 - **Question:** Constraint rogue_wave_control_2026 appears as tangled_rope to individuals but rope to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F055` (1 members)
+- **Family:** `F041` (1 members)
 
 ---
 
@@ -16543,7 +16543,7 @@
 - **Suppression:** `0.30`
 - **Question:** Constraint public_domain_commons appears as rope to individuals but mountain to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F009` (23 members)
+- **Family:** `F008` (23 members)
 
 ---
 
@@ -16561,7 +16561,7 @@
 - **Suppression:** `0.20`
 - **Question:** Constraint platform_cooperativism_governance appears as mountain to individuals but snare to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F009` (23 members)
+- **Family:** `F008` (23 members)
 
 ---
 
@@ -16579,7 +16579,7 @@
 - **Suppression:** `0.05`
 - **Question:** Constraint elencher_identity_transformation appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F012` (14 members)
+- **Family:** `F007` (39 members)
 
 ---
 
@@ -16597,7 +16597,7 @@
 - **Suppression:** `0.05`
 - **Question:** Constraint epigenetics_complexity_2026 appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F012` (14 members)
+- **Family:** `F007` (39 members)
 
 ---
 
@@ -16606,16 +16606,16 @@
 - **Severity:** `low` (score: 0.065)
 - **Constraint:** `indexical_relativity_core`
 - **Domain:** `mountain`
-- **Orbit Signature:** `[mountain, unknown]`
+- **Orbit Signature:** `[mountain]`
 - **Orbit Span:** `0`
-- **Gap Class:** `analytical_blind`
+- **Gap Class:** `consensus`
 - **Gap Pattern:** `unknown`
 - **Source Gap:** `N/A`
 - **Epsilon:** `0.10`
 - **Suppression:** `0.05`
 - **Question:** The latency of agent perception shifts following a change in their structural power or exit options.
-- **Resolution Strategy:** Analyst cannot classify but affected population can. Collect ground-truth from affected populations. Test whether analytical abstraction obscures lived experience.
-- **Family:** `F007` (25 members)
+- **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
+- **Family:** `F007` (39 members)
 
 ---
 
@@ -16624,16 +16624,16 @@
 - **Severity:** `low` (score: 0.065)
 - **Constraint:** `sturgeons_law`
 - **Domain:** `mountain`
-- **Orbit Signature:** `[mountain, unknown]`
+- **Orbit Signature:** `[mountain]`
 - **Orbit Span:** `0`
-- **Gap Class:** `analytical_blind`
+- **Gap Class:** `consensus`
 - **Gap Pattern:** `unknown`
 - **Source Gap:** `N/A`
 - **Epsilon:** `0.10`
 - **Suppression:** `0.05`
 - **Question:** Is the 90/10 quality distribution a natural law or a product of specific economic incentives?
-- **Resolution Strategy:** Analyst cannot classify but affected population can. Collect ground-truth from affected populations. Test whether analytical abstraction obscures lived experience.
-- **Family:** `F007` (25 members)
+- **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
+- **Family:** `F007` (39 members)
 
 ---
 
@@ -16651,7 +16651,7 @@
 - **Suppression:** `0.05`
 - **Question:** Constraint universal_mathematics_communication appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F012` (14 members)
+- **Family:** `F007` (39 members)
 
 ---
 
@@ -16660,16 +16660,16 @@
 - **Severity:** `low` (score: 0.055)
 - **Constraint:** `goldbach_conjecture`
 - **Domain:** `mountain`
-- **Orbit Signature:** `[mountain, unknown]`
+- **Orbit Signature:** `[mountain]`
 - **Orbit Span:** `0`
-- **Gap Class:** `analytical_blind`
+- **Gap Class:** `consensus`
 - **Gap Pattern:** `unknown`
 - **Source Gap:** `N/A`
 - **Epsilon:** `0.08`
 - **Suppression:** `0.05`
 - **Question:** The provability or independence of the conjecture within ZFC.
-- **Resolution Strategy:** Analyst cannot classify but affected population can. Collect ground-truth from affected populations. Test whether analytical abstraction obscures lived experience.
-- **Family:** `F007` (25 members)
+- **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
+- **Family:** `F007` (39 members)
 
 ---
 
@@ -16687,7 +16687,7 @@
 - **Suppression:** `0.05`
 - **Question:** Distinguishing a true ontological Mountain from a reified philosophical Piton.
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F012` (14 members)
+- **Family:** `F007` (39 members)
 
 ---
 
@@ -16705,7 +16705,7 @@
 - **Suppression:** `0.05`
 - **Question:** Constraint litany_of_the_real appears as rope to individuals but mountain to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F012` (14 members)
+- **Family:** `F007` (39 members)
 
 ---
 
@@ -16723,7 +16723,7 @@
 - **Suppression:** `0.05`
 - **Question:** Constraint newtons_method_convergence appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F012` (14 members)
+- **Family:** `F007` (39 members)
 
 ---
 
@@ -16741,7 +16741,7 @@
 - **Suppression:** `0.00`
 - **Question:** Constraint hamiltonian_path_complexity appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F012` (14 members)
+- **Family:** `F007` (39 members)
 
 ---
 
@@ -16759,7 +16759,7 @@
 - **Suppression:** `0.10`
 - **Question:** Constraint swift_piton_snap appears as mountain to individuals but snare to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F029` (5 members)
+- **Family:** `F022` (5 members)
 
 ---
 
@@ -16777,7 +16777,7 @@
 - **Suppression:** `0.02`
 - **Question:** Legal succession of Treaty obligations under international and constitutional law
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F012` (14 members)
+- **Family:** `F007` (39 members)
 
 ---
 
@@ -16786,16 +16786,16 @@
 - **Severity:** `low` (score: 0.040)
 - **Constraint:** `banach_tarski_paradox`
 - **Domain:** `mountain`
-- **Orbit Signature:** `[mountain, unknown]`
+- **Orbit Signature:** `[mountain]`
 - **Orbit Span:** `0`
-- **Gap Class:** `analytical_blind`
+- **Gap Class:** `consensus`
 - **Gap Pattern:** `unknown`
 - **Source Gap:** `N/A`
 - **Epsilon:** `0.05`
 - **Suppression:** `0.05`
 - **Question:** Is the Axiom of Choice a physical principle or a formal axiom?
-- **Resolution Strategy:** Analyst cannot classify but affected population can. Collect ground-truth from affected populations. Test whether analytical abstraction obscures lived experience.
-- **Family:** `F007` (25 members)
+- **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
+- **Family:** `F007` (39 members)
 
 ---
 
@@ -16804,16 +16804,16 @@
 - **Severity:** `low` (score: 0.040)
 - **Constraint:** `local_vs_global_optima`
 - **Domain:** `mountain`
-- **Orbit Signature:** `[mountain, unknown]`
+- **Orbit Signature:** `[mountain]`
 - **Orbit Span:** `0`
-- **Gap Class:** `analytical_blind`
+- **Gap Class:** `consensus`
 - **Gap Pattern:** `unknown`
 - **Source Gap:** `N/A`
 - **Epsilon:** `0.05`
 - **Suppression:** `0.05`
 - **Question:** Distinguishing structural extraction from strategic failure in a passive landscape.
-- **Resolution Strategy:** Analyst cannot classify but affected population can. Collect ground-truth from affected populations. Test whether analytical abstraction obscures lived experience.
-- **Family:** `F007` (25 members)
+- **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
+- **Family:** `F007` (39 members)
 
 ---
 
@@ -16831,7 +16831,7 @@
 - **Suppression:** `0.05`
 - **Question:** Constraint noethers_theorem_symmetry appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F012` (14 members)
+- **Family:** `F007` (39 members)
 
 ---
 
@@ -16849,7 +16849,7 @@
 - **Suppression:** `0.05`
 - **Question:** The existence of a perfect discrete analogue to Noether's theorem.
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F012` (14 members)
+- **Family:** `F007` (39 members)
 
 ---
 
@@ -16867,7 +16867,7 @@
 - **Suppression:** `0.02`
 - **Question:** Constraint dunbars_number appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F012` (14 members)
+- **Family:** `F007` (39 members)
 
 ---
 
@@ -16876,16 +16876,16 @@
 - **Severity:** `low` (score: 0.031)
 - **Constraint:** `heisenberg_uncertainty`
 - **Domain:** `mountain`
-- **Orbit Signature:** `[mountain, unknown]`
+- **Orbit Signature:** `[mountain]`
 - **Orbit Span:** `0`
-- **Gap Class:** `analytical_blind`
+- **Gap Class:** `consensus`
 - **Gap Pattern:** `unknown`
 - **Source Gap:** `N/A`
 - **Epsilon:** `0.05`
 - **Suppression:** `0.02`
 - **Question:** Whether quantum uncertainty is an intrinsic property of reality (ontic) or a limit on knowledge (epistemic).
-- **Resolution Strategy:** Analyst cannot classify but affected population can. Collect ground-truth from affected populations. Test whether analytical abstraction obscures lived experience.
-- **Family:** `F007` (25 members)
+- **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
+- **Family:** `F007` (39 members)
 
 ---
 
@@ -16903,7 +16903,7 @@
 - **Suppression:** `0.02`
 - **Question:** Constraint minimax_decision_rule appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F012` (14 members)
+- **Family:** `F007` (39 members)
 
 ---
 
@@ -16912,16 +16912,16 @@
 - **Severity:** `low` (score: 0.031)
 - **Constraint:** `no_cloning_theorem`
 - **Domain:** `mountain`
-- **Orbit Signature:** `[mountain, unknown]`
+- **Orbit Signature:** `[mountain]`
 - **Orbit Span:** `0`
-- **Gap Class:** `analytical_blind`
+- **Gap Class:** `consensus`
 - **Gap Pattern:** `unknown`
 - **Source Gap:** `N/A`
 - **Epsilon:** `0.05`
 - **Suppression:** `0.02`
 - **Question:** Determining the effective scale of the quantum-to-classical transition for information cloning.
-- **Resolution Strategy:** Analyst cannot classify but affected population can. Collect ground-truth from affected populations. Test whether analytical abstraction obscures lived experience.
-- **Family:** `F007` (25 members)
+- **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
+- **Family:** `F007` (39 members)
 
 ---
 
@@ -16930,16 +16930,16 @@
 - **Severity:** `low` (score: 0.031)
 - **Constraint:** `pareto_principle`
 - **Domain:** `mountain`
-- **Orbit Signature:** `[mountain, unknown]`
+- **Orbit Signature:** `[mountain]`
 - **Orbit Span:** `0`
-- **Gap Class:** `analytical_blind`
+- **Gap Class:** `consensus`
 - **Gap Pattern:** `unknown`
 - **Source Gap:** `N/A`
 - **Epsilon:** `0.05`
 - **Suppression:** `0.02`
 - **Question:** Is the Pareto distribution a fundamental law or a contingent outcome of system rules?
-- **Resolution Strategy:** Analyst cannot classify but affected population can. Collect ground-truth from affected populations. Test whether analytical abstraction obscures lived experience.
-- **Family:** `F007` (25 members)
+- **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
+- **Family:** `F007` (39 members)
 
 ---
 
@@ -16948,16 +16948,16 @@
 - **Severity:** `low` (score: 0.031)
 - **Constraint:** `reciprocity_laws_math`
 - **Domain:** `mountain`
-- **Orbit Signature:** `[mountain, unknown]`
+- **Orbit Signature:** `[mountain]`
 - **Orbit Span:** `0`
-- **Gap Class:** `analytical_blind`
+- **Gap Class:** `consensus`
 - **Gap Pattern:** `unknown`
 - **Source Gap:** `N/A`
 - **Epsilon:** `0.05`
 - **Suppression:** `0.02`
 - **Question:** Unproven status of the global Langlands correspondence.
-- **Resolution Strategy:** Analyst cannot classify but affected population can. Collect ground-truth from affected populations. Test whether analytical abstraction obscures lived experience.
-- **Family:** `F007` (25 members)
+- **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
+- **Family:** `F007` (39 members)
 
 ---
 
@@ -16975,7 +16975,7 @@
 - **Suppression:** `0.10`
 - **Question:** Constraint boundary_protocol appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F029` (5 members)
+- **Family:** `F022` (5 members)
 
 ---
 
@@ -16984,16 +16984,16 @@
 - **Severity:** `low` (score: 0.028)
 - **Constraint:** `brouwer_fixed_point`
 - **Domain:** `mountain`
-- **Orbit Signature:** `[mountain, unknown]`
+- **Orbit Signature:** `[mountain]`
 - **Orbit Span:** `0`
-- **Gap Class:** `analytical_blind`
+- **Gap Class:** `consensus`
 - **Gap Pattern:** `unknown`
 - **Source Gap:** `N/A`
 - **Epsilon:** `0.05`
 - **Suppression:** `0.01`
 - **Question:** The practical computational complexity of finding guaranteed fixed points in high dimensions.
-- **Resolution Strategy:** Analyst cannot classify but affected population can. Collect ground-truth from affected populations. Test whether analytical abstraction obscures lived experience.
-- **Family:** `F007` (25 members)
+- **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
+- **Family:** `F007` (39 members)
 
 ---
 
@@ -17002,16 +17002,16 @@
 - **Severity:** `low` (score: 0.028)
 - **Constraint:** `chaitins_omega_undecidability`
 - **Domain:** `mountain`
-- **Orbit Signature:** `[mountain, unknown]`
+- **Orbit Signature:** `[mountain]`
 - **Orbit Span:** `0`
-- **Gap Class:** `analytical_blind`
+- **Gap Class:** `consensus`
 - **Gap Pattern:** `unknown`
 - **Source Gap:** `N/A`
 - **Epsilon:** `0.05`
 - **Suppression:** `0.01`
 - **Question:** Whether physically realizable hyper-computation exists that could compute Ω.
-- **Resolution Strategy:** Analyst cannot classify but affected population can. Collect ground-truth from affected populations. Test whether analytical abstraction obscures lived experience.
-- **Family:** `F007` (25 members)
+- **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
+- **Family:** `F007` (39 members)
 
 ---
 
@@ -17020,16 +17020,16 @@
 - **Severity:** `low` (score: 0.028)
 - **Constraint:** `countable_infinity_cardinality`
 - **Domain:** `mountain`
-- **Orbit Signature:** `[mountain, unknown]`
+- **Orbit Signature:** `[mountain]`
 - **Orbit Span:** `0`
-- **Gap Class:** `analytical_blind`
+- **Gap Class:** `consensus`
 - **Gap Pattern:** `unknown`
 - **Source Gap:** `N/A`
 - **Epsilon:** `0.05`
 - **Suppression:** `0.01`
 - **Question:** The truth value of the Continuum Hypothesis is independent of ZFC axioms.
-- **Resolution Strategy:** Analyst cannot classify but affected population can. Collect ground-truth from affected populations. Test whether analytical abstraction obscures lived experience.
-- **Family:** `F007` (25 members)
+- **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
+- **Family:** `F007` (39 members)
 
 ---
 
@@ -17038,16 +17038,16 @@
 - **Severity:** `low` (score: 0.028)
 - **Constraint:** `halting_problem_undecidability`
 - **Domain:** `mountain`
-- **Orbit Signature:** `[mountain, unknown]`
+- **Orbit Signature:** `[mountain]`
 - **Orbit Span:** `0`
-- **Gap Class:** `analytical_blind`
+- **Gap Class:** `consensus`
 - **Gap Pattern:** `unknown`
 - **Source Gap:** `N/A`
 - **Epsilon:** `0.05`
 - **Suppression:** `0.01`
 - **Question:** Whether physical reality permits computational models that transcend Turing limits (hypercomputation).
-- **Resolution Strategy:** Analyst cannot classify but affected population can. Collect ground-truth from affected populations. Test whether analytical abstraction obscures lived experience.
-- **Family:** `F007` (25 members)
+- **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
+- **Family:** `F007` (39 members)
 
 ---
 
@@ -17056,16 +17056,16 @@
 - **Severity:** `low` (score: 0.028)
 - **Constraint:** `liar_paradox`
 - **Domain:** `mountain`
-- **Orbit Signature:** `[mountain, unknown]`
+- **Orbit Signature:** `[mountain]`
 - **Orbit Span:** `0`
-- **Gap Class:** `analytical_blind`
+- **Gap Class:** `consensus`
 - **Gap Pattern:** `unknown`
 - **Source Gap:** `N/A`
 - **Epsilon:** `0.05`
 - **Suppression:** `0.01`
 - **Question:** Whether logic is discovered (Platonic) or invented (Cognitive construct).
-- **Resolution Strategy:** Analyst cannot classify but affected population can. Collect ground-truth from affected populations. Test whether analytical abstraction obscures lived experience.
-- **Family:** `F007` (25 members)
+- **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
+- **Family:** `F007` (39 members)
 
 ---
 
@@ -17083,7 +17083,7 @@
 - **Suppression:** `0.01`
 - **Question:** Constraint p_vs_np appears extractive (Snare) to individuals but functional (Rope) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F012` (14 members)
+- **Family:** `F007` (39 members)
 
 ---
 
@@ -17092,16 +17092,16 @@
 - **Severity:** `low` (score: 0.028)
 - **Constraint:** `whitehead_problem_undecidability`
 - **Domain:** `mountain`
-- **Orbit Signature:** `[mountain, unknown]`
+- **Orbit Signature:** `[mountain]`
 - **Orbit Span:** `0`
-- **Gap Class:** `analytical_blind`
+- **Gap Class:** `consensus`
 - **Gap Pattern:** `unknown`
 - **Source Gap:** `N/A`
 - **Epsilon:** `0.05`
 - **Suppression:** `0.01`
 - **Question:** Whether a canonical "true" model of set theory exists to resolve the undecidability.
-- **Resolution Strategy:** Analyst cannot classify but affected population can. Collect ground-truth from affected populations. Test whether analytical abstraction obscures lived experience.
-- **Family:** `F007` (25 members)
+- **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
+- **Family:** `F007` (39 members)
 
 ---
 
@@ -17119,7 +17119,7 @@
 - **Suppression:** `0.04`
 - **Question:** Constraint legacy_system_technical_debt appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F017` (10 members)
+- **Family:** `F015` (10 members)
 
 ---
 
@@ -17128,16 +17128,16 @@
 - **Severity:** `low` (score: 0.025)
 - **Constraint:** `lowenheim_skolem_theorem`
 - **Domain:** `mountain`
-- **Orbit Signature:** `[mountain, unknown]`
+- **Orbit Signature:** `[mountain]`
 - **Orbit Span:** `0`
-- **Gap Class:** `analytical_blind`
+- **Gap Class:** `consensus`
 - **Gap Pattern:** `unknown`
 - **Source Gap:** `N/A`
 - **Epsilon:** `0.05`
 - **Suppression:** `0.00`
 - **Question:** The metaphysical status of an "intended model" of set theory, which determines whether the theorem reveals a flaw in language or a feature of reality.
-- **Resolution Strategy:** Analyst cannot classify but affected population can. Collect ground-truth from affected populations. Test whether analytical abstraction obscures lived experience.
-- **Family:** `F007` (25 members)
+- **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
+- **Family:** `F007` (39 members)
 
 ---
 
@@ -17146,16 +17146,16 @@
 - **Severity:** `low` (score: 0.025)
 - **Constraint:** `martian_signal_latency`
 - **Domain:** `mountain`
-- **Orbit Signature:** `[mountain, unknown]`
+- **Orbit Signature:** `[mountain]`
 - **Orbit Span:** `0`
-- **Gap Class:** `analytical_blind`
+- **Gap Class:** `consensus`
 - **Gap Pattern:** `unknown`
 - **Source Gap:** `N/A`
 - **Epsilon:** `0.05`
 - **Suppression:** `0.00`
 - **Question:** Possibility of FTL information transfer via exotic physics.
-- **Resolution Strategy:** Analyst cannot classify but affected population can. Collect ground-truth from affected populations. Test whether analytical abstraction obscures lived experience.
-- **Family:** `F007` (25 members)
+- **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
+- **Family:** `F007` (39 members)
 
 ---
 
@@ -17173,7 +17173,7 @@
 - **Suppression:** `0.05`
 - **Question:** Constraint spv_variations_us_cold appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F025` (6 members)
+- **Family:** `F020` (6 members)
 
 ---
 
@@ -17182,16 +17182,16 @@
 - **Severity:** `low` (score: 0.025)
 - **Constraint:** `suslin_hypothesis_undecidability`
 - **Domain:** `mountain`
-- **Orbit Signature:** `[mountain, unknown]`
+- **Orbit Signature:** `[mountain]`
 - **Orbit Span:** `0`
-- **Gap Class:** `analytical_blind`
+- **Gap Class:** `consensus`
 - **Gap Pattern:** `unknown`
 - **Source Gap:** `N/A`
 - **Epsilon:** `0.05`
 - **Suppression:** `0.00`
 - **Question:** Whether a 'natural' or 'true' model of set theory exists that would resolve the hypothesis.
-- **Resolution Strategy:** Analyst cannot classify but affected population can. Collect ground-truth from affected populations. Test whether analytical abstraction obscures lived experience.
-- **Family:** `F007` (25 members)
+- **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
+- **Family:** `F007` (39 members)
 
 ---
 
@@ -17209,7 +17209,7 @@
 - **Suppression:** `0.01`
 - **Question:** The practical limit of computability for the series due to floating-point error accumulation.
 - **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
-- **Family:** `F012` (14 members)
+- **Family:** `F007` (39 members)
 
 ---
 
@@ -17218,16 +17218,16 @@
 - **Severity:** `low` (score: 0.013)
 - **Constraint:** `church_turing_thesis`
 - **Domain:** `mountain`
-- **Orbit Signature:** `[mountain, unknown]`
+- **Orbit Signature:** `[mountain]`
 - **Orbit Span:** `0`
-- **Gap Class:** `analytical_blind`
+- **Gap Class:** `consensus`
 - **Gap Pattern:** `unknown`
 - **Source Gap:** `N/A`
 - **Epsilon:** `0.02`
 - **Suppression:** `0.01`
 - **Question:** Whether physical reality permits hypercomputation, violating the thesis.
-- **Resolution Strategy:** Analyst cannot classify but affected population can. Collect ground-truth from affected populations. Test whether analytical abstraction obscures lived experience.
-- **Family:** `F007` (25 members)
+- **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
+- **Family:** `F007` (39 members)
 
 ---
 
@@ -17236,16 +17236,16 @@
 - **Severity:** `low` (score: 0.013)
 - **Constraint:** `euler_characteristic_topology`
 - **Domain:** `mountain`
-- **Orbit Signature:** `[mountain, unknown]`
+- **Orbit Signature:** `[mountain]`
 - **Orbit Span:** `0`
-- **Gap Class:** `analytical_blind`
+- **Gap Class:** `consensus`
 - **Gap Pattern:** `unknown`
 - **Source Gap:** `N/A`
 - **Epsilon:** `0.02`
 - **Suppression:** `0.01`
 - **Question:** Whether topological invariants hold across physical phase transitions.
-- **Resolution Strategy:** Analyst cannot classify but affected population can. Collect ground-truth from affected populations. Test whether analytical abstraction obscures lived experience.
-- **Family:** `F007` (25 members)
+- **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
+- **Family:** `F007` (39 members)
 
 ---
 
@@ -17254,16 +17254,16 @@
 - **Severity:** `low` (score: 0.013)
 - **Constraint:** `kleene_recursion_theorem`
 - **Domain:** `mountain`
-- **Orbit Signature:** `[mountain, unknown]`
+- **Orbit Signature:** `[mountain]`
 - **Orbit Span:** `0`
-- **Gap Class:** `analytical_blind`
+- **Gap Class:** `consensus`
 - **Gap Pattern:** `unknown`
 - **Source Gap:** `N/A`
 - **Epsilon:** `0.02`
 - **Suppression:** `0.01`
 - **Question:** Does logical self-reference enable spontaneous goal-emergence in autonomous systems?
-- **Resolution Strategy:** Analyst cannot classify but affected population can. Collect ground-truth from affected populations. Test whether analytical abstraction obscures lived experience.
-- **Family:** `F007` (25 members)
+- **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
+- **Family:** `F007` (39 members)
 
 ---
 
@@ -17272,16 +17272,16 @@
 - **Severity:** `low` (score: 0.013)
 - **Constraint:** `pythagorean_geometric_constancy`
 - **Domain:** `mountain`
-- **Orbit Signature:** `[mountain, unknown]`
+- **Orbit Signature:** `[mountain]`
 - **Orbit Span:** `0`
-- **Gap Class:** `analytical_blind`
+- **Gap Class:** `consensus`
 - **Gap Pattern:** `unknown`
 - **Source Gap:** `N/A`
 - **Epsilon:** `0.02`
 - **Suppression:** `0.01`
 - **Question:** Is Euclidean geometry a fundamental or emergent property of physical reality?
-- **Resolution Strategy:** Analyst cannot classify but affected population can. Collect ground-truth from affected populations. Test whether analytical abstraction obscures lived experience.
-- **Family:** `F007` (25 members)
+- **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
+- **Family:** `F007` (39 members)
 
 ---
 
@@ -17290,20 +17290,20 @@
 - **Severity:** `low` (score: 0.008)
 - **Constraint:** `poincare_conjecture`
 - **Domain:** `mountain`
-- **Orbit Signature:** `[mountain, unknown]`
+- **Orbit Signature:** `[mountain]`
 - **Orbit Span:** `0`
-- **Gap Class:** `analytical_blind`
+- **Gap Class:** `consensus`
 - **Gap Pattern:** `unknown`
 - **Source Gap:** `N/A`
 - **Epsilon:** `0.01`
 - **Suppression:** `0.01`
 - **Question:** Distinction between mathematical truth as universal law vs. cognitive construct.
-- **Resolution Strategy:** Analyst cannot classify but affected population can. Collect ground-truth from affected populations. Test whether analytical abstraction obscures lived experience.
-- **Family:** `F007` (25 members)
+- **Resolution Strategy:** Both perspectives agree on classification. Verify via independent measurement if the omega was generated from a different perspective pair.
+- **Family:** `F007` (39 members)
 
 ---
 
-## Family Index (31 families with 5+ members)
+## Family Index (24 families with 5+ members)
 
 ### F001: [rope, snare] / coordination_washing / snare (265 members)
 
@@ -17729,14 +17729,16 @@
 - `wpl_scotland`
 - `yangtze_fishing_ban`
 
-### F003: [rope, tangled_rope] / coordination_washing / snare (94 members)
+### F003: [rope, tangled_rope] / coordination_washing / snare (122 members)
 
+- `abstraction_leakage`
 - `adverse_possession`
 - `aging_longevity_tests`
 - `ai_training_data_dependency`
 - `armra_colostrum_regulation`
 - `arrows_impossibility_theorem`
 - `beehiiv_platform_model`
+- `big_data_astrophysics_arbitrage`
 - `bnpl_payment_systems`
 - `board_of_peace_2026`
 - `brazil_2026_general_elections`
@@ -17748,34 +17750,45 @@
 - `choice_architecture_design`
 - `choice_architecture_design`
 - `civilizational_maintenance_debt`
+- `cma`
 - `cmr_001`
 - `coalition_disinfo_framework_2026`
 - `cobra_effect`
 - `cold_dark_matter_paradigm`
+- `college_admissions_market`
 - `compounding_logic`
 - `confirmation_bias`
 - `confirmation_bias`
+- `cost_of_observation`
+- `cs_ecmo_bridge`
 - `data_replication_paradox`
+- `decision_latency_mismatch`
 - `djia_as_economic_barometer`
 - `dutch_minority_govt_2026`
 - `edelman_2026_developing_volatility`
 - `em_clinical_guidelines`
 - `ergo_mixer_protocol`
+- `ergo_storage_rent`
 - `eu_affordable_housing_initiative`
 - `eu_deforestation_regulation`
 - `eu_renewable_energy_mandate`
 - `eurozone_fragmentation_2026`
 - `evfta_trade_agreement`
+- `factional_instability`
 - `framing_effect`
+- `france_2027_presidential_election`
 - `genetic_predisposition`
 - `gpt5_codex_dev_cycle`
 - `gpt_store_marketplace`
+- `grete_samsa_transition`
 - `hanlons_razor`
 - `hasbro_licensing_restriction`
 - `hershey_salt_strategy`
 - `hp_liberalism`
+- `hydra_game`
 - `india_semi_mission`
 - `institutional_inertia_lock`
+- `insult_wisdom_training`
 - `israel_egypt_gas_deal`
 - `israel_electoral_threshold`
 - `israel_surplus_vote_agreements`
@@ -17790,6 +17803,10 @@
 - `minimax_theorem_game_equilibrium`
 - `monetary_regime_transition`
 - `nds_2022_pacing_challenge`
+- `negative_emissions_arbitrage`
+- `net_zero_stabilization`
+- `neural_interoperability`
+- `neurodiversity_spectrum`
 - `news_paywall_inequality`
 - `nfl_superbowl_halftime_exclusivity`
 - `noether_isomorphism_access`
@@ -17797,6 +17814,7 @@
 - `nyc_metrocard_art_licensing`
 - `omega1_patching_process`
 - `overton_window`
+- `paris_municipal_reform_2026`
 - `parkinsons_law`
 - `paxsilica_framework`
 - `plastic_asphalt_mandate`
@@ -17804,17 +17822,27 @@
 - `politeness_face_negotiation`
 - `rare_earth_hydrogen_extraction`
 - `rare_earth_seabed_mining`
+- `regulatory_capture`
+- `repair_probe_incomplete`
+- `rosen_bridge_protocol`
+- `rotation_seven_black_soil`
+- `royal_navy_middle_east_withdrawal`
 - `scientific_paradigm_lifecycle`
 - `semiconductor_mission_2026`
 - `shobies_existential_commitment`
+- `smartphone_ubiquity`
 - `social_loafing`
 - `social_media_participation_threshold`
 - `sovereignty_as_arbitrage`
 - `st_petersburg_paradox`
+- `teaching_horses_to_sing`
+- `temporal_scale_arbitrage`
 - `theory_of_visitors`
 - `tiktok_us_divestiture_mandate`
 - `trade_secret_law`
 - `trade_secret_law`
+- `tragedy_of_the_commons`
+- `transformer_self_attention`
 - `trump_critical_minerals`
 - `trump_making_china_great_2026`
 - `tsp_computational_complexity`
@@ -17826,7 +17854,82 @@
 - `us_tariffs_2025`
 - `yc_equity_squeeze`
 
-### F004: [tangled_rope] / consensus / snare (53 members)
+### F004: [rope, tangled_rope] / coordination_washing / tangled_rope (72 members)
+
+- `advice_as_dangerous_gift`
+- `advice_as_dangerous_gift`
+- `alzheimers_levetiracetam`
+- `asce_7_22_seismic_design`
+- `availability_heuristic`
+- `availability_heuristic`
+- `bgs_eigenvector_thermalization`
+- `blackstone_carried_interest_taxation`
+- `boltzmann_universality_2026`
+- `china_africa_zero_tariff_2026`
+- `coinbase_crypto_volatility`
+- `colombia_2026_presidential_election`
+- `comitatus_bond`
+- `constraint_lagrange_multipliers`
+- `constraint_riemann_mapping`
+- `constraint_yoneda`
+- `cow_field_poop`
+- `creative_commons_licensing`
+- `dexy_gold_protocol`
+- `education_unbundling_implementation`
+- `electrification_scale_2026`
+- `empty_tomb_transformation`
+- `extraordinary_narrative_shift`
+- `extraordinary_narrative_shift`
+- `faa_boeing_regulatory_capture`
+- `fnl_shadow_probe`
+- `gemini_scientific_advancement`
+- `germany_tennet_takeover`
+- `goodstein_theorem_finite_proof`
+- `graph_coloring_complexity`
+- `gs_market_clearing`
+- `guinea_worm_eradication`
+- `iterated_function_system_convergence`
+- `jupiter_composition_knowledge_gap`
+- `keltner_relationship_evaluation`
+- `kjv_textual_authority`
+- `landscape_of_fear_2026`
+- `law_of_diminishing_returns`
+- `lcdm_small_scale_anomalies`
+- `lindy_effect`
+- `lindy_effect`
+- `linguistic_relativity_cultural_framing`
+- `lorenz_attractor_dynamics`
+- `mars_rovers_navigational_autonomy`
+- `matching_market_congestion_externality`
+- `meta_nuclear_power_agreement`
+- `migration_decision_threshold`
+- `moores_law`
+- `nato_arctic_defense_cooperation`
+- `north_sea_wind_grid`
+- `olympic_legacy_curling_investment`
+- `olympic_medal_allocation`
+- `oscar_campaign_spending`
+- `participatory_observer_hypothesis`
+- `power_set_axiomatic_extraction`
+- `publishing_embargo`
+- `qwerty_vs_dvorak`
+- `qwerty_vs_dvorak`
+- `rfc9293_state_machine`
+- `sa_renewable_price_differential`
+- `sadhu_integrity_protocol`
+- `sadhu_integrity_protocol`
+- `sat_csp_complexity`
+- `satellite_d2m_standard`
+- `sorites_paradox`
+- `stable_marriage_coordination`
+- `un_high_seas_treaty_2026`
+- `visa_ipo_regulatory_compliance`
+- `visa_judgment_sharing_agreement`
+- `visa_judgment_sharing_agreement`
+- `wikipedia_notability_requirement_2026`
+- `working_dog_training`
+
+### F005: [tangled_rope] / consensus / snare (53 members)
 
 - `academic_peer_review_gatekeeping`
 - `ai_cognitive_diversity_arbitrage`
@@ -17882,7 +17985,7 @@
 - `trojan_war_spoils`
 - `us_canada_geopolitical_asymmetry`
 
-### F005: [rope, snare] / coordination_washing / piton (47 members)
+### F006: [rope, snare] / coordination_washing / piton (47 members)
 
 - `academic_fashion_modernism_2026`
 - `adversarial_truth_decay`
@@ -17932,104 +18035,49 @@
 - `taxonomy_drift`
 - `world_factbook_sunset_2026`
 
-### F006: [rope, tangled_rope] / coordination_washing / tangled_rope (40 members)
-
-- `availability_heuristic`
-- `availability_heuristic`
-- `bgs_eigenvector_thermalization`
-- `coinbase_crypto_volatility`
-- `colombia_2026_presidential_election`
-- `comitatus_bond`
-- `constraint_yoneda`
-- `cow_field_poop`
-- `creative_commons_licensing`
-- `empty_tomb_transformation`
-- `extraordinary_narrative_shift`
-- `extraordinary_narrative_shift`
-- `faa_boeing_regulatory_capture`
-- `graph_coloring_complexity`
-- `iterated_function_system_convergence`
-- `kjv_textual_authority`
-- `landscape_of_fear_2026`
-- `law_of_diminishing_returns`
-- `lcdm_small_scale_anomalies`
-- `linguistic_relativity_cultural_framing`
-- `lorenz_attractor_dynamics`
-- `mars_rovers_navigational_autonomy`
-- `meta_nuclear_power_agreement`
-- `nato_arctic_defense_cooperation`
-- `north_sea_wind_grid`
-- `oscar_campaign_spending`
-- `participatory_observer_hypothesis`
-- `power_set_axiomatic_extraction`
-- `qwerty_vs_dvorak`
-- `qwerty_vs_dvorak`
-- `sa_renewable_price_differential`
-- `sat_csp_complexity`
-- `satellite_d2m_standard`
-- `sorites_paradox`
-- `stable_marriage_coordination`
-- `un_high_seas_treaty_2026`
-- `visa_ipo_regulatory_compliance`
-- `visa_judgment_sharing_agreement`
-- `visa_judgment_sharing_agreement`
-- `wikipedia_notability_requirement_2026`
-
-### F007: [mountain, unknown] / analytical_blind / mountain (25 members)
+### F007: [mountain] / consensus / mountain (39 members)
 
 - `banach_tarski_paradox`
 - `base_pair_complementarity`
+- `basel_problem_convergence`
 - `brouwer_fixed_point`
 - `chaitins_omega_undecidability`
 - `church_turing_thesis`
 - `countable_infinity_cardinality`
+- `dunbars_number`
+- `elencher_identity_transformation`
+- `epigenetics_complexity_2026`
 - `euler_characteristic_topology`
 - `goldbach_conjecture`
 - `halting_problem_undecidability`
+- `hamiltonian_path_complexity`
 - `heisenberg_uncertainty`
 - `indexical_relativity_core`
 - `kirby_paris_theorem`
 - `kleene_recursion_theorem`
 - `liar_paradox`
+- `litany_of_the_real`
+- `litany_of_the_real`
 - `local_vs_global_optima`
 - `lowenheim_skolem_theorem`
 - `martian_signal_latency`
+- `minimax_decision_rule`
+- `newtons_method_convergence`
 - `no_cloning_theorem`
+- `noethers_theorem_symmetry`
+- `noethers_theorem_symmetry`
+- `p_vs_np`
 - `pareto_principle`
 - `poincare_conjecture`
 - `pythagorean_geometric_constancy`
 - `reciprocity_laws_math`
 - `sturgeons_law`
 - `suslin_hypothesis_undecidability`
+- `treaty_land_entrenchment`
+- `universal_mathematics_communication`
 - `whitehead_problem_undecidability`
 
-### F008: [rope, tangled_rope, unknown] / powerless_blind / tangled_rope (23 members)
-
-- `advice_as_dangerous_gift`
-- `advice_as_dangerous_gift`
-- `alzheimers_levetiracetam`
-- `asce_7_22_seismic_design`
-- `blackstone_carried_interest_taxation`
-- `china_africa_zero_tariff_2026`
-- `constraint_lagrange_multipliers`
-- `constraint_riemann_mapping`
-- `fnl_shadow_probe`
-- `gemini_scientific_advancement`
-- `germany_tennet_takeover`
-- `gs_market_clearing`
-- `jupiter_composition_knowledge_gap`
-- `keltner_relationship_evaluation`
-- `matching_market_congestion_externality`
-- `migration_decision_threshold`
-- `moores_law`
-- `olympic_legacy_curling_investment`
-- `olympic_medal_allocation`
-- `publishing_embargo`
-- `sadhu_integrity_protocol`
-- `sadhu_integrity_protocol`
-- `working_dog_training`
-
-### F009: [tangled_rope] / consensus / rope (23 members)
+### F008: [tangled_rope] / consensus / rope (23 members)
 
 - `cognitive_bicycle_scaffold`
 - `e2ee_digital_privacy_2026`
@@ -18055,25 +18103,44 @@
 - `udhr_1948`
 - `udhr_1948`
 
-### F010: [rope, tangled_rope, unknown] / coordination_washing / snare (17 members)
+### F009: [rope, tangled_rope] / coordination_washing / piton (17 members)
 
-- `abstraction_leakage`
-- `big_data_astrophysics_arbitrage`
-- `cma`
-- `college_admissions_market`
-- `decision_latency_mismatch`
-- `factional_instability`
-- `grete_samsa_transition`
-- `hydra_game`
-- `insult_wisdom_training`
-- `negative_emissions_arbitrage`
-- `neurodiversity_spectrum`
-- `royal_navy_middle_east_withdrawal`
-- `smartphone_ubiquity`
-- `teaching_horses_to_sing`
-- `temporal_scale_arbitrage`
-- `tragedy_of_the_commons`
-- `transformer_self_attention`
+- `artificial_snow_2026`
+- `atrophied_optimization_piton`
+- `clawderberg_recursive_slop`
+- `france_cordon_sanitaire_2026`
+- `hegemonic_entropy_2026`
+- `hoa_covenants`
+- `institutional_trust_decay`
+- `moltbook_agent_theater`
+- `notary_ink_dependency`
+- `rule_update_failure`
+- `ship_of_theseus`
+- `ulysses_calypso_1904`
+- `ulysses_eumaeus_1904`
+- `ulysses_ithaca_1904`
+- `ulysses_lotus_1904`
+- `ulysses_rocks_1904`
+- `ulysses_tower_1904`
+
+### F010: [rope, tangled_rope] / coordination_washing / rope (16 members)
+
+- `astm_d638_tensile_testing`
+- `burden_of_proof_legal_criminal`
+- `cuban_missile_crisis_excomm_deliberation`
+- `fmeca_procedures_1980`
+- `gs1_gln_identification`
+- `gs1_standardized_identification`
+- `magna_carta_liberties`
+- `omelet_perfection_complexity`
+- `private_identity_integration`
+- `quantum_entanglement_protocol`
+- `shitty_feedback_handling`
+- `skills_based_hiring`
+- `somatic_focusing_awareness`
+- `tcp_rfc9293_interoperability`
+- `transient_event_detection`
+- `unclos_2026`
 
 ### F011: [tangled_rope] / consensus / tangled_rope (16 members)
 
@@ -18094,22 +18161,20 @@
 - `microbiome_symbiosis`
 - `microbiome_symbiosis`
 
-### F012: [mountain] / consensus / mountain (14 members)
+### F012: [scaffold, snare, tangled_rope] / coordination_washing / snare (12 members)
 
-- `basel_problem_convergence`
-- `dunbars_number`
-- `elencher_identity_transformation`
-- `epigenetics_complexity_2026`
-- `hamiltonian_path_complexity`
-- `litany_of_the_real`
-- `litany_of_the_real`
-- `minimax_decision_rule`
-- `newtons_method_convergence`
-- `noethers_theorem_symmetry`
-- `noethers_theorem_symmetry`
-- `p_vs_np`
-- `treaty_land_entrenchment`
-- `universal_mathematics_communication`
+- `absorbing_markov_chain_trap`
+- `ai_scholar_citation_trap`
+- `bangladesh_july_national_charter`
+- `emergency_bridge_scaffold`
+- `genie_ip_constraint`
+- `ia_digital_preservation`
+- `nsw_transmission_bottleneck`
+- `openai_api_access`
+- `openai_codex_app_constraint`
+- `openscholar_peer_review`
+- `perovskite_self_etching`
+- `project_vault_2026`
 
 ### F013: [mountain, scaffold] / protective_framing / mountain (12 members)
 
@@ -18141,35 +18206,7 @@
 - `ulysses_scylla_1904`
 - `ulysses_sirens_1904`
 
-### F015: [rope, unknown] / powerless_blind / rope (11 members)
-
-- `astm_d638_tensile_testing`
-- `burden_of_proof_legal_criminal`
-- `cuban_missile_crisis_excomm_deliberation`
-- `gs1_standardized_identification`
-- `omelet_perfection_complexity`
-- `quantum_entanglement_protocol`
-- `shitty_feedback_handling`
-- `skills_based_hiring`
-- `somatic_focusing_awareness`
-- `tcp_rfc9293_interoperability`
-- `unclos_2026`
-
-### F016: [rope, unknown] / powerless_blind / snare (11 members)
-
-- `cost_of_observation`
-- `cs_ecmo_bridge`
-- `ergo_storage_rent`
-- `france_2027_presidential_election`
-- `net_zero_stabilization`
-- `neural_interoperability`
-- `paris_municipal_reform_2026`
-- `regulatory_capture`
-- `repair_probe_incomplete`
-- `rosen_bridge_protocol`
-- `rotation_seven_black_soil`
-
-### F017: [tangled_rope] / consensus / piton (10 members)
+### F015: [tangled_rope] / consensus / piton (10 members)
 
 - `asymmetric_computational_difficulty`
 - `juvenile_underclass_2026`
@@ -18182,40 +18219,7 @@
 - `ulysses_penelope_1904`
 - `ulysses_proteus_1904`
 
-### F018: [rope, unknown] / powerless_blind / tangled_rope (9 members)
-
-- `boltzmann_universality_2026`
-- `dexy_gold_protocol`
-- `education_unbundling_implementation`
-- `electrification_scale_2026`
-- `goodstein_theorem_finite_proof`
-- `guinea_worm_eradication`
-- `lindy_effect`
-- `lindy_effect`
-- `rfc9293_state_machine`
-
-### F019: [rope, tangled_rope] / coordination_washing / piton (8 members)
-
-- `atrophied_optimization_piton`
-- `france_cordon_sanitaire_2026`
-- `ulysses_calypso_1904`
-- `ulysses_eumaeus_1904`
-- `ulysses_ithaca_1904`
-- `ulysses_lotus_1904`
-- `ulysses_rocks_1904`
-- `ulysses_tower_1904`
-
-### F020: [scaffold, snare, unknown] / powerless_blind / snare (7 members)
-
-- `absorbing_markov_chain_trap`
-- `ai_scholar_citation_trap`
-- `genie_ip_constraint`
-- `nsw_transmission_bottleneck`
-- `openai_api_access`
-- `openai_codex_app_constraint`
-- `openscholar_peer_review`
-
-### F021: [scaffold, snare] / coordination_washing / snare (7 members)
+### F016: [scaffold, snare] / coordination_washing / snare (7 members)
 
 - `ad_fus_coordination`
 - `alzheimers_nlrp3_inflammasome`
@@ -18225,7 +18229,7 @@
 - `toxoplasma_hub_2026`
 - `unrequited_love_protocol`
 
-### F022: [indexically_opaque, rope, snare] / powerless_blind / snare (7 members)
+### F017: [indexically_opaque, rope, snare] / powerless_blind / snare (7 members)
 
 - `ai_compute_capital_moat`
 - `digital_credentialing_verification`
@@ -18235,7 +18239,17 @@
 - `nvidia_cuda_ecosystem_lockin`
 - `us_embargo_cuba`
 
-### F023: [tangled_rope] / consensus / scaffold (6 members)
+### F018: [scaffold, tangled_rope] / coordination_washing / snare (7 members)
+
+- `axiom_reasoner_2026`
+- `gamblers_ruin_stochastic_extinction`
+- `global_stimulus_spree`
+- `platonic_coparenting_decoupling`
+- `recipe_scaling_ai`
+- `russells_paradox_self_reference`
+- `trillion_bond_rush_2026`
+
+### F019: [tangled_rope] / consensus / scaffold (6 members)
 
 - `alternative_sovereignty_scaffold`
 - `canada_goose_realignment_2026`
@@ -18244,16 +18258,7 @@
 - `manganese_catalysis_2026`
 - `narrative_engineering_2026`
 
-### F024: [scaffold, unknown] / powerless_blind / snare (6 members)
-
-- `axiom_reasoner_2026`
-- `gamblers_ruin_stochastic_extinction`
-- `platonic_coparenting_decoupling`
-- `recipe_scaling_ai`
-- `russells_paradox_self_reference`
-- `trillion_bond_rush_2026`
-
-### F025: [rope] / consensus / rope (6 members)
+### F020: [rope] / consensus / rope (6 members)
 
 - `berkshire_compounding_culture`
 - `cancer_chronotherapy_timing`
@@ -18262,15 +18267,7 @@
 - `spv_variations_us_cold`
 - `wikipedia_crowdsourcing_2026`
 
-### F026: [rope, unknown] / powerless_blind / piton (5 members)
-
-- `artificial_snow_2026`
-- `clawderberg_recursive_slop`
-- `hegemonic_entropy_2026`
-- `hoa_covenants`
-- `ship_of_theseus`
-
-### F027: [tangled_rope] / consensus / mountain (5 members)
+### F021: [tangled_rope] / consensus / mountain (5 members)
 
 - `axiom_of_choice`
 - `damped_harmonics`
@@ -18278,15 +18275,7 @@
 - `nonstandard_arithmetic_models`
 - `peano_curve_mapping`
 
-### F028: [scaffold, snare, tangled_rope] / coordination_washing / snare (5 members)
-
-- `bangladesh_july_national_charter`
-- `emergency_bridge_scaffold`
-- `ia_digital_preservation`
-- `perovskite_self_etching`
-- `project_vault_2026`
-
-### F029: [rope] / consensus / scaffold (5 members)
+### F022: [rope] / consensus / scaffold (5 members)
 
 - `boundary_protocol`
 - `cinderella_midnight_deadline`
@@ -18294,7 +18283,7 @@
 - `ice_memory_archive`
 - `swift_piton_snap`
 
-### F030: [mountain, scaffold] / protective_framing / rope (5 members)
+### F023: [mountain, scaffold] / protective_framing / rope (5 members)
 
 - `click_chemistry_paradigm_2026`
 - `climate_attribution_2026`
@@ -18302,7 +18291,7 @@
 - `heuristic_optimization`
 - `information_foraging_theory`
 
-### F031: [scaffold, unknown] / powerless_blind / rope (5 members)
+### F024: [scaffold, tangled_rope] / coordination_washing / rope (5 members)
 
 - `exoplanetary_habitability_arbitrage`
 - `exoplanetary_habitability_arbitrage`
@@ -18310,36 +18299,29 @@
 - `fiscal_equalization_friction`
 - `glp1_payload_efficiency_pivot`
 
-## Appendix: Small Families (26 families, 47 omegas, <5 members each)
+## Appendix: Small Families (19 families, 37 omegas, <5 members each)
 
 | Family | Orbit Signature | Gap Class | Domain | Count |
 |--------|----------------|-----------|--------|------:|
-| F032 | [indexically_opaque, rope, snare, tangled_rope] | powerless_blind | snare | 4 |
-| F033 | [rope] | consensus | tangled_rope | 4 |
-| F034 | [rope, tangled_rope] | coordination_washing | rope | 4 |
-| F035 | [piton, rope] | coordination_washing | piton | 4 |
-| F036 | [rope, snare] | coordination_washing | unknown_novel | 3 |
-| F037 | [indexically_opaque, rope, tangled_rope] | powerless_blind | snare | 3 |
-| F038 | [rope, tangled_rope, unknown] | coordination_washing | piton | 3 |
-| F039 | [scaffold, tangled_rope] | coordination_washing | scaffold | 2 |
-| F040 | [snare, tangled_rope] | consensus | snare | 2 |
-| F041 | [indexically_opaque, snare, tangled_rope] | analytical_blind | snare | 2 |
-| F042 | [rope, tangled_rope] | coordination_washing | unknown_novel | 1 |
-| F043 | [scaffold, snare] | coordination_washing | scaffold | 1 |
-| F044 | [rope, scaffold, unknown] | powerless_blind | tangled_rope | 1 |
-| F045 | [rope, scaffold, unknown] | powerless_blind | scaffold | 1 |
-| F046 | [scaffold, tangled_rope, unknown] | powerless_blind | tangled_rope | 1 |
-| F047 | [scaffold, tangled_rope] | coordination_washing | snare | 1 |
-| F048 | [indexically_opaque, snare, tangled_rope] | powerless_blind | snare | 1 |
-| F049 | [rope, tangled_rope, unknown] | powerless_blind | rope | 1 |
-| F050 | [scaffold, unknown] | powerless_blind | scaffold | 1 |
-| F051 | [scaffold, snare, unknown] | powerless_blind | scaffold | 1 |
-| F052 | [rope, tangled_rope, unknown] | powerless_blind | piton | 1 |
-| F053 | [scaffold, tangled_rope, unknown] | powerless_blind | scaffold | 1 |
-| F054 | [mountain, rope] | protective_framing | tangled_rope | 1 |
-| F055 | [tangled_rope] | consensus | unknown_novel | 1 |
-| F056 | [rope, tangled_rope] | consensus | tangled_rope | 1 |
-| F057 | [piton, rope] | coordination_washing | tangled_rope | 1 |
+| F025 | [indexically_opaque, rope, snare, tangled_rope] | powerless_blind | snare | 4 |
+| F026 | [scaffold, tangled_rope] | coordination_washing | scaffold | 4 |
+| F027 | [rope] | consensus | tangled_rope | 4 |
+| F028 | [piton, rope] | coordination_washing | piton | 4 |
+| F029 | [rope, snare] | coordination_washing | unknown_novel | 3 |
+| F030 | [indexically_opaque, rope, tangled_rope] | powerless_blind | snare | 3 |
+| F031 | [snare, tangled_rope] | consensus | snare | 2 |
+| F032 | [indexically_opaque, snare, tangled_rope] | analytical_blind | snare | 2 |
+| F033 | [rope, tangled_rope] | coordination_washing | unknown_novel | 1 |
+| F034 | [scaffold, snare] | coordination_washing | scaffold | 1 |
+| F035 | [rope, scaffold, tangled_rope] | coordination_washing | tangled_rope | 1 |
+| F036 | [rope, scaffold, tangled_rope] | coordination_washing | scaffold | 1 |
+| F037 | [scaffold, tangled_rope] | coordination_washing | tangled_rope | 1 |
+| F038 | [indexically_opaque, snare, tangled_rope] | powerless_blind | snare | 1 |
+| F039 | [scaffold, snare, tangled_rope] | coordination_washing | scaffold | 1 |
+| F040 | [mountain, rope] | protective_framing | tangled_rope | 1 |
+| F041 | [tangled_rope] | consensus | unknown_novel | 1 |
+| F042 | [rope, tangled_rope] | consensus | tangled_rope | 1 |
+| F043 | [piton, rope] | coordination_washing | tangled_rope | 1 |
 
 *Full member lists for small families available in `enriched_omega_data.json`.*
 
@@ -18347,11 +18329,11 @@
 
 | Domain | Count | Mean Score |
 |--------|------:|-----------:|
-| snare | 638 | 0.679 |
-| piton | 90 | 0.656 |
+| snare | 638 | 0.682 |
+| piton | 90 | 0.663 |
 | unknown_novel | 5 | 0.559 |
-| tangled_rope | 97 | 0.414 |
-| scaffold | 18 | 0.301 |
-| rope | 55 | 0.257 |
+| tangled_rope | 97 | 0.426 |
+| scaffold | 18 | 0.310 |
+| rope | 55 | 0.288 |
 | mountain | 56 | 0.078 |
 

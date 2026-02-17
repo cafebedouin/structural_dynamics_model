@@ -260,7 +260,7 @@ N/A
     *   **Institutional (Manager) View:** `scaffold`
     *   **Analytical View:** `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `[scaffold, unknown]`
+*   **Orbit Signature:** `[scaffold, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Generated Omega:** Constraint gamblers_ruin_stochastic_extinction appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -469,7 +469,7 @@ N/A
     *   **Institutional (Manager) View:** `scaffold`
     *   **Analytical View:** `snare`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `[scaffold, snare, unknown]`
+*   **Orbit Signature:** `[scaffold, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Generated Omega:** Constraint nsw_transmission_bottleneck appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -545,7 +545,7 @@ N/A
     *   **Institutional (Manager) View:** `scaffold`
     *   **Analytical View:** `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `[scaffold, unknown]`
+*   **Orbit Signature:** `[scaffold, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Generated Omega:** Constraint russells_paradox_self_reference appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -735,7 +735,7 @@ N/A
     *   **Institutional (Manager) View:** `scaffold`
     *   **Analytical View:** `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `[scaffold, unknown]`
+*   **Orbit Signature:** `[scaffold, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Generated Omega:** Constraint trillion_bond_rush_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -925,7 +925,7 @@ N/A
     *   **Institutional (Manager) View:** `scaffold`
     *   **Analytical View:** `snare`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `[scaffold, snare, unknown]`
+*   **Orbit Signature:** `[scaffold, snare, tangled_rope]`
 *   **Related Gap/Alert:** ! GAP: general_type_mismatch (powerless: snare, institutional: tangled_rope)
 *   **Generated Omega:** Constraint absorbing_markov_chain_trap appears as snare to individuals but tangled_rope to institutions...
 *   **Suggested Resolution Strategy:**

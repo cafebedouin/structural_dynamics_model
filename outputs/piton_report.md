@@ -165,7 +165,7 @@ N/A
     *   **Institutional (Manager) View:** `rope`
     *   **Analytical View:** `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `[rope, unknown]`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Generated Omega:** Constraint artificial_snow_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -336,7 +336,7 @@ N/A
     *   **Institutional (Manager) View:** `rope`
     *   **Analytical View:** `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `[rope, unknown]`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Generated Omega:** Constraint clawderberg_recursive_slop appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -583,7 +583,7 @@ N/A
     *   **Institutional (Manager) View:** `rope`
     *   **Analytical View:** `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `[rope, unknown]`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Generated Omega:** Constraint hegemonic_entropy_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -602,7 +602,7 @@ N/A
     *   **Institutional (Manager) View:** `rope`
     *   **Analytical View:** `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `[rope, unknown]`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Generated Omega:** Constraint hoa_covenants appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -697,7 +697,7 @@ N/A
     *   **Institutional (Manager) View:** `rope`
     *   **Analytical View:** `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `[rope, tangled_rope, unknown]`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Generated Omega:** Constraint institutional_trust_decay appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -868,7 +868,7 @@ N/A
     *   **Institutional (Manager) View:** `rope`
     *   **Analytical View:** `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `[rope, tangled_rope, unknown]`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Generated Omega:** Constraint moltbook_agent_theater appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -925,7 +925,7 @@ N/A
     *   **Institutional (Manager) View:** `rope`
     *   **Analytical View:** `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `[rope, tangled_rope, unknown]`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Generated Omega:** Constraint notary_ink_dependency appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -1039,7 +1039,7 @@ N/A
     *   **Institutional (Manager) View:** `rope`
     *   **Analytical View:** `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `[rope, tangled_rope, unknown]`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! ALERT: snare_masked_as_rope (powerless: snare, institutional: rope)
 *   **Generated Omega:** Constraint rule_update_failure appears extractive (Snare) to individuals but functional (Rope) to institutions...
 *   **Suggested Resolution Strategy:**
@@ -1626,7 +1626,7 @@ N/A
     *   **Institutional (Manager) View:** `rope`
     *   **Analytical View:** `tangled_rope`
 *   **Structural Signature Analysis:** false_ci_rope
-*   **Orbit Signature:** `[rope, unknown]`
+*   **Orbit Signature:** `[rope, tangled_rope]`
 *   **Related Gap/Alert:** ! GAP: general_type_mismatch (powerless: tangled_rope, institutional: rope)
 *   **Generated Omega:** Constraint ship_of_theseus appears as tangled_rope to individuals but rope to institutions...
 *   **Suggested Resolution Strategy:**

@@ -5,7 +5,7 @@
 ## Summary
 
 - **Constraints analyzed**: 1034
-- **Distinct shift patterns**: 36
+- **Distinct shift patterns**: 27
 
 ## Shift Pattern Families
 
@@ -38,86 +38,46 @@ Each family groups constraints with identical perspectival shift — same classi
 
 - `google_universal_commerce_protocol`
 
-### `shift(mountain, mountain, mountain, mountain)` — 32 constraints
-
-- `basel_problem_convergence`
-- `cantor_set_topology`
-- `cantors_diagonal_argument`
-- `constraint_borsuk_ulam`
-- `constraint_ftc`
-- `constraint_lorenz_sensitivity`
-- `constraint_nonstandard_arithmetic`
-- `constraint_pythagorean`
-- `constraint_sylow`
-- `continuum_hypothesis_undecidability`
-- `cosmological_evolution_alpha_omega`
-- `deep_earth_hydrogen_availability`
-- `dunbars_number`
-- `elencher_identity_transformation`
-- `epigenetics_complexity_2026`
-- `fossil_fuel_lock_in`
-- `hamiltonian_path_complexity`
-- `hilbert_hotel_infinite_capacity`
-- `hiv_prep_prevention_2026`
-- `large_cardinals_inaccessibility`
-- `litany_of_the_real`
-- `minimax_decision_rule`
-- `newtons_method_convergence`
-- `noether_theorem`
-- `noethers_theorem_symmetry`
-- `optimal_stopping_marriage`
-- `p_vs_np`
-- `suslin_hypothesis_proof_limits`
-- `three_body_problem_predictability_limit`
-- `treaty_land_entrenchment`
-- `universal_mathematics_communication`
-- `whitehead_incompleteness`
-
-### `shift(mountain, rope, rope, mountain)` — 1 constraints
-
-- `quine_self_replication`
-
-### `shift(mountain, scaffold, scaffold, mountain)` — 13 constraints
-
-- `biological_curiosity`
-- `burali_forti_paradox`
-- `click_chemistry_paradigm_2026`
-- `climate_attribution_2026`
-- `currys_paradox`
-- `endowment_effect`
-- `ergo_nipopows`
-- `galois_theory_symmetry`
-- `genetic_algorithms_evolution`
-- `heuristic_optimization`
-- `hilberts_hotel_infinity`
-- `information_foraging_theory`
-- `skolems_paradox`
-
-### `shift(mountain, unknown, unknown, mountain)` — 82 constraints
+### `shift(mountain, mountain, mountain, mountain)` — 114 constraints
 
 - `banach_fixed_point`
 - `banach_fixed_point_theorem`
 - `banach_tarski_paradox`
 - `base_pair_complementarity`
+- `basel_problem_convergence`
 - `bgs_spectral_universality`
 - `bh_merger_gravitational_infall`
 - `birthday_paradox_collision`
 - `brouwer_fixed_point`
 - `busy_beaver_noncomputability`
 - `c_physical_blue_wavelength`
+- `cantor_set_topology`
+- `cantors_diagonal_argument`
 - `cap_theorem`
 - `central_limit_theorem`
 - `chaitins_omega_undecidability`
 - `church_turing_thesis`
 - `clt_convergence_2026`
 - `collatz_conjecture_determinism`
+- `constraint_borsuk_ulam`
+- `constraint_ftc`
 - `constraint_galois_solvability`
+- `constraint_lorenz_sensitivity`
+- `constraint_nonstandard_arithmetic`
+- `constraint_pythagorean`
+- `constraint_sylow`
 - `constraint_tarski_undefinability`
 - `constraint_twin_prime_conjecture`
+- `continuum_hypothesis_undecidability`
 - `conways_game_of_life_dynamics`
+- `cosmological_evolution_alpha_omega`
 - `countable_infinity_cardinality`
+- `deep_earth_hydrogen_availability`
+- `dunbars_number`
 - `ehrenfest_barrier`
+- `elencher_identity_transformation`
 - `english_chinese_tense_structure`
+- `epigenetics_complexity_2026`
 - `euler_characteristic_topology`
 - `event_fragmentation`
 - `fast_growing_hierarchy`
@@ -125,6 +85,7 @@ Each family groups constraints with identical perspectival shift — same classi
 - `fermat_proof_barrier`
 - `fgh_hierarchy_2026`
 - `finite_simple_group_classification`
+- `fossil_fuel_lock_in`
 - `four_color_theorem_topological_bound`
 - `fundamental_theorem_of_algebra`
 - `gauss_bonnet_topology`
@@ -133,22 +94,33 @@ Each family groups constraints with identical perspectival shift — same classi
 - `goedels_incompleteness_theorems`
 - `goldbach_conjecture`
 - `halting_problem_undecidability`
+- `hamiltonian_path_complexity`
 - `hd101584_stellar_evolution`
 - `heine_borel`
 - `heisenberg_uncertainty`
+- `hilbert_hotel_infinite_capacity`
+- `hiv_prep_prevention_2026`
 - `indexical_relativity_core`
 - `kirby_paris_theorem`
 - `kleene_recursion_theorem`
 - `kolmogorov_complexity`
+- `large_cardinals_inaccessibility`
 - `liar_paradox`
+- `litany_of_the_real`
 - `lobs_theorem`
 - `local_vs_global_optima`
 - `lowenheim_skolem_theorem`
 - `lyapunov_stability`
 - `martian_signal_latency`
 - `material_tensile_strength`
+- `minimax_decision_rule`
 - `monty_hall_conditional_probability`
+- `newtons_method_convergence`
 - `no_cloning_theorem`
+- `noether_theorem`
+- `noethers_theorem_symmetry`
+- `optimal_stopping_marriage`
+- `p_vs_np`
 - `pancreatic_cancer_lethality_v1`
 - `pareto_principle`
 - `poincare_conjecture`
@@ -169,14 +141,39 @@ Each family groups constraints with identical perspectival shift — same classi
 - `star_formation_barrier_g0253`
 - `star_to_black_hole_observational_limit`
 - `sturgeons_law`
+- `suslin_hypothesis_proof_limits`
 - `suslin_hypothesis_undecidability`
 - `sylow_theorems_group_theory`
 - `terrain_inaccessibility_wheeled_vehicles`
 - `thermodynamics_entropy`
+- `three_body_problem_predictability_limit`
 - `three_body_unpredictability`
+- `treaty_land_entrenchment`
+- `universal_mathematics_communication`
 - `van_der_waerden_theorem`
 - `weierstrass_proof_limits`
+- `whitehead_incompleteness`
 - `whitehead_problem_undecidability`
+
+### `shift(mountain, rope, rope, mountain)` — 1 constraints
+
+- `quine_self_replication`
+
+### `shift(mountain, scaffold, scaffold, mountain)` — 13 constraints
+
+- `biological_curiosity`
+- `burali_forti_paradox`
+- `click_chemistry_paradigm_2026`
+- `climate_attribution_2026`
+- `currys_paradox`
+- `endowment_effect`
+- `ergo_nipopows`
+- `galois_theory_symmetry`
+- `genetic_algorithms_evolution`
+- `heuristic_optimization`
+- `hilberts_hotel_infinity`
+- `information_foraging_theory`
+- `skolems_paradox`
 
 ### `shift(piton, rope, rope, rope)` — 6 constraints
 
@@ -553,6 +550,42 @@ Each family groups constraints with identical perspectival shift — same classi
 - `toxoplasma_hub_2026`
 - `unrequited_love_protocol`
 
+### `shift(tangled_rope, rope, rope, rope)` — 18 constraints
+
+- `astm_d638_tensile_testing`
+- `boltzmann_universality_2026`
+- `burden_of_proof_legal_criminal`
+- `cuban_missile_crisis_excomm_deliberation`
+- `deferential_realism_framework`
+- `dexy_gold_protocol`
+- `dldr_information_policy`
+- `electrification_scale_2026`
+- `guinea_worm_eradication`
+- `lindy_effect`
+- `omelet_perfection_complexity`
+- `postman_survival_protocol`
+- `quantum_entanglement_protocol`
+- `rfc9293_state_machine`
+- `skills_based_hiring`
+- `somatic_focusing_awareness`
+- `tcp_rfc9293_interoperability`
+- `tsp_duplicate_elimination`
+
+### `shift(tangled_rope, rope, rope, tangled_rope)` — 7 constraints
+
+- `blackstone_carried_interest_taxation`
+- `fnl_shadow_probe`
+- `gs1_gln_identification`
+- `migration_decision_threshold`
+- `moores_law`
+- `sadhu_integrity_protocol`
+- `unclos_2026`
+
+### `shift(tangled_rope, rope, scaffold, tangled_rope)` — 2 constraints
+
+- `emergency_oversight_bureau`
+- `erasmus_rejoining_scaffold`
+
 ### `shift(tangled_rope, snare, rope, snare)` — 27 constraints
 
 - `ai_religion_regulation`
@@ -582,6 +615,10 @@ Each family groups constraints with identical perspectival shift — same classi
 - `us_iran_drone_conflict`
 - `us_sanctions_icc_israel_case`
 - `vienna_quantum_superposition_2026`
+
+### `shift(tangled_rope, snare, scaffold, snare)` — 1 constraints
+
+- `genie_ip_constraint`
 
 ### `shift(tangled_rope, snare, tangled_rope, snare)` — 1 constraints
 
@@ -735,20 +772,26 @@ Each family groups constraints with identical perspectival shift — same classi
 - `wpl_scotland`
 - `yangtze_fishing_ban`
 
-### `shift(tangled_rope, tangled_rope, rope, tangled_rope)` — 145 constraints
+### `shift(tangled_rope, tangled_rope, rope, tangled_rope)` — 203 constraints
 
+- `abstraction_leakage`
 - `access_arbitrage`
 - `adverse_possession`
+- `advice_as_dangerous_gift`
 - `aging_longevity_tests`
 - `ai_edu_decentralization`
 - `ai_training_data_dependency`
+- `alzheimers_levetiracetam`
 - `armra_colostrum_regulation`
 - `arrows_impossibility_theorem`
+- `artificial_snow_2026`
+- `asce_7_22_seismic_design`
 - `atrophied_optimization_piton`
 - `availability_heuristic`
 - `bayes_theorem_cognitive_bias`
 - `beehiiv_platform_model`
 - `bgs_eigenvector_thermalization`
+- `big_data_astrophysics_arbitrage`
 - `bnpl_payment_systems`
 - `board_of_peace_2026`
 - `brazil_2026_general_elections`
@@ -756,28 +799,39 @@ Each family groups constraints with identical perspectival shift — same classi
 - `burden_of_proof_scientific`
 - `capital_rotation_ai_narrative`
 - `champions_bass_fishing_exclusion`
+- `china_africa_zero_tariff_2026`
 - `choice_architecture_design`
 - `civilizational_maintenance_debt`
+- `clawderberg_recursive_slop`
+- `cma`
 - `cmr_001`
 - `coalition_disinfo_framework_2026`
 - `cobra_effect`
 - `coinbase_crypto_volatility`
 - `cold_dark_matter_paradigm`
+- `college_admissions_market`
 - `colombia_2026_presidential_election`
 - `comitatus_bond`
 - `compounding_logic`
 - `confirmation_bias`
+- `constraint_lagrange_multipliers`
+- `constraint_riemann_mapping`
 - `constraint_yoneda`
+- `cost_of_observation`
 - `cow_field_poop`
 - `creative_commons_licensing`
 - `crispr_genomic_rewrite_2026`
+- `cs_ecmo_bridge`
 - `data_replication_paradox`
+- `decision_latency_mismatch`
 - `djia_as_economic_barometer`
 - `dutch_minority_govt_2026`
 - `edelman_2026_developing_volatility`
+- `education_unbundling_implementation`
 - `em_clinical_guidelines`
 - `empty_tomb_transformation`
 - `ergo_mixer_protocol`
+- `ergo_storage_rent`
 - `eu_affordable_housing_initiative`
 - `eu_deforestation_regulation`
 - `eu_renewable_energy_mandate`
@@ -785,26 +839,41 @@ Each family groups constraints with identical perspectival shift — same classi
 - `evfta_trade_agreement`
 - `extraordinary_narrative_shift`
 - `faa_boeing_regulatory_capture`
+- `factional_instability`
 - `fmeca_procedures_1980`
 - `framing_effect`
+- `france_2027_presidential_election`
 - `france_cordon_sanitaire_2026`
 - `franchisee_corporate_squeeze`
+- `gemini_scientific_advancement`
 - `genetic_predisposition`
+- `germany_tennet_takeover`
+- `goodstein_theorem_finite_proof`
 - `gpt5_codex_dev_cycle`
 - `gpt_store_marketplace`
 - `graph_coloring_complexity`
+- `grete_samsa_transition`
+- `gs1_standardized_identification`
+- `gs_market_clearing`
 - `hanlons_razor`
 - `hasbro_licensing_restriction`
+- `hegemonic_entropy_2026`
 - `hershey_salt_strategy`
+- `hoa_covenants`
 - `hp_liberalism`
+- `hydra_game`
 - `india_semi_mission`
 - `institutional_inertia_lock`
+- `institutional_trust_decay`
+- `insult_wisdom_training`
 - `israel_egypt_gas_deal`
 - `israel_electoral_threshold`
 - `israel_surplus_vote_agreements`
 - `iterated_function_system_convergence`
 - `ivt_accessibility_barrier`
 - `jevons_paradox`
+- `jupiter_composition_knowledge_gap`
+- `keltner_relationship_evaluation`
 - `kjv_textual_authority`
 - `labor_union_dues`
 - `landscape_of_fear_2026`
@@ -817,23 +886,33 @@ Each family groups constraints with identical perspectival shift — same classi
 - `magna_carta_liberties`
 - `manga_distribution_duopoly`
 - `mars_rovers_navigational_autonomy`
+- `matching_market_congestion_externality`
 - `med_diet_consensus_2026`
 - `meta_nuclear_power_agreement`
 - `mil_std_461g_emi_control`
 - `mil_std_810f_tailoring`
 - `minimax_theorem_game_equilibrium`
+- `moltbook_agent_theater`
 - `monetary_regime_transition`
 - `nato_arctic_defense_cooperation`
 - `nds_2022_pacing_challenge`
+- `negative_emissions_arbitrage`
+- `net_zero_stabilization`
+- `neural_interoperability`
+- `neurodiversity_spectrum`
 - `news_paywall_inequality`
 - `nfl_superbowl_halftime_exclusivity`
 - `noether_isomorphism_access`
 - `north_sea_wind_grid`
+- `notary_ink_dependency`
 - `ny_private_school_discount`
 - `nyc_metrocard_art_licensing`
+- `olympic_legacy_curling_investment`
+- `olympic_medal_allocation`
 - `omega1_patching_process`
 - `oscar_campaign_spending`
 - `overton_window`
+- `paris_municipal_reform_2026`
 - `parkinsons_law`
 - `participatory_observer_hypothesis`
 - `paxsilica_framework`
@@ -842,24 +921,39 @@ Each family groups constraints with identical perspectival shift — same classi
 - `politeness_face_negotiation`
 - `power_set_axiomatic_extraction`
 - `private_identity_integration`
+- `publishing_embargo`
 - `qwerty_vs_dvorak`
 - `rare_earth_hydrogen_extraction`
 - `rare_earth_seabed_mining`
+- `regulatory_capture`
+- `repair_probe_incomplete`
+- `ritual_transition_scaffold`
+- `rosen_bridge_protocol`
+- `rotation_seven_black_soil`
+- `royal_navy_middle_east_withdrawal`
+- `rule_update_failure`
 - `sa_renewable_price_differential`
 - `sat_csp_complexity`
 - `satellite_d2m_standard`
 - `scientific_paradigm_lifecycle`
 - `semiconductor_mission_2026`
+- `ship_of_theseus`
+- `shitty_feedback_handling`
 - `shobies_existential_commitment`
+- `smartphone_ubiquity`
 - `social_loafing`
 - `social_media_participation_threshold`
 - `sorites_paradox`
 - `sovereignty_as_arbitrage`
 - `st_petersburg_paradox`
 - `stable_marriage_coordination`
+- `teaching_horses_to_sing`
+- `temporal_scale_arbitrage`
 - `theory_of_visitors`
 - `tiktok_us_divestiture_mandate`
 - `trade_secret_law`
+- `tragedy_of_the_commons`
+- `transformer_self_attention`
 - `transient_event_detection`
 - `trivial_topology_info_asymmetry`
 - `trump_critical_minerals`
@@ -881,42 +975,41 @@ Each family groups constraints with identical perspectival shift — same classi
 - `visa_ipo_regulatory_compliance`
 - `visa_judgment_sharing_agreement`
 - `wikipedia_notability_requirement_2026`
+- `working_dog_training`
 - `yc_equity_squeeze`
 
-### `shift(tangled_rope, tangled_rope, rope, unknown)` — 18 constraints
+### `shift(tangled_rope, tangled_rope, scaffold, snare)` — 12 constraints
 
-- `abstraction_leakage`
-- `big_data_astrophysics_arbitrage`
-- `college_admissions_market`
-- `decision_latency_mismatch`
-- `factional_instability`
-- `grete_samsa_transition`
-- `hydra_game`
-- `institutional_trust_decay`
-- `insult_wisdom_training`
-- `moltbook_agent_theater`
-- `neurodiversity_spectrum`
-- `royal_navy_middle_east_withdrawal`
-- `rule_update_failure`
-- `smartphone_ubiquity`
-- `teaching_horses_to_sing`
-- `temporal_scale_arbitrage`
-- `tragedy_of_the_commons`
-- `transformer_self_attention`
-
-### `shift(tangled_rope, tangled_rope, scaffold, snare)` — 5 constraints
-
+- `absorbing_markov_chain_trap`
+- `ai_scholar_citation_trap`
 - `bangladesh_july_national_charter`
 - `emergency_bridge_scaffold`
 - `ia_digital_preservation`
+- `mit_tfus_2026`
+- `nsw_transmission_bottleneck`
+- `openai_api_access`
+- `openai_codex_app_constraint`
+- `openscholar_peer_review`
 - `perovskite_self_etching`
 - `project_vault_2026`
 
-### `shift(tangled_rope, tangled_rope, scaffold, tangled_rope)` — 3 constraints
+### `shift(tangled_rope, tangled_rope, scaffold, tangled_rope)` — 15 constraints
 
 - `artificial_scarcity_scaffold`
+- `axiom_reasoner_2026`
+- `exoplanetary_habitability_arbitrage`
+- `fiscal_equalization_friction`
+- `france_local_elections_march_2026`
+- `gamblers_ruin_stochastic_extinction`
 - `global_stimulus_spree`
+- `glp1_payload_efficiency_pivot`
 - `isa_education_scaffold`
+- `maha_recovery_2026`
+- `platonic_coparenting_decoupling`
+- `portugal_ad_stability_2026`
+- `recipe_scaling_ai`
+- `russells_paradox_self_reference`
+- `trillion_bond_rush_2026`
 
 ### `shift(tangled_rope, tangled_rope, tangled_rope, snare)` — 1 constraints
 
@@ -1029,126 +1122,6 @@ Each family groups constraints with identical perspectival shift — same classi
 - `ulysses_proteus_1904`
 - `us_canada_geopolitical_asymmetry`
 
-### `shift(tangled_rope, unknown, rope, unknown)` — 2 constraints
-
-- `cma`
-- `negative_emissions_arbitrage`
-
-### `shift(unknown, rope, rope, rope)` — 18 constraints
-
-- `astm_d638_tensile_testing`
-- `boltzmann_universality_2026`
-- `burden_of_proof_legal_criminal`
-- `cuban_missile_crisis_excomm_deliberation`
-- `deferential_realism_framework`
-- `dexy_gold_protocol`
-- `dldr_information_policy`
-- `electrification_scale_2026`
-- `guinea_worm_eradication`
-- `lindy_effect`
-- `omelet_perfection_complexity`
-- `postman_survival_protocol`
-- `quantum_entanglement_protocol`
-- `rfc9293_state_machine`
-- `skills_based_hiring`
-- `somatic_focusing_awareness`
-- `tcp_rfc9293_interoperability`
-- `tsp_duplicate_elimination`
-
-### `shift(unknown, rope, rope, tangled_rope)` — 6 constraints
-
-- `blackstone_carried_interest_taxation`
-- `fnl_shadow_probe`
-- `gs1_gln_identification`
-- `migration_decision_threshold`
-- `moores_law`
-- `sadhu_integrity_protocol`
-
-### `shift(unknown, rope, rope, unknown)` — 1 constraints
-
-- `unclos_2026`
-
-### `shift(unknown, rope, scaffold, unknown)` — 2 constraints
-
-- `emergency_oversight_bureau`
-- `erasmus_rejoining_scaffold`
-
-### `shift(unknown, snare, scaffold, snare)` — 1 constraints
-
-- `genie_ip_constraint`
-
-### `shift(unknown, unknown, rope, tangled_rope)` — 18 constraints
-
-- `advice_as_dangerous_gift`
-- `alzheimers_levetiracetam`
-- `asce_7_22_seismic_design`
-- `china_africa_zero_tariff_2026`
-- `constraint_lagrange_multipliers`
-- `constraint_riemann_mapping`
-- `gemini_scientific_advancement`
-- `germany_tennet_takeover`
-- `gs_market_clearing`
-- `jupiter_composition_knowledge_gap`
-- `keltner_relationship_evaluation`
-- `matching_market_congestion_externality`
-- `notary_ink_dependency`
-- `olympic_legacy_curling_investment`
-- `olympic_medal_allocation`
-- `publishing_embargo`
-- `ritual_transition_scaffold`
-- `working_dog_training`
-
-### `shift(unknown, unknown, rope, unknown)` — 20 constraints
-
-- `artificial_snow_2026`
-- `clawderberg_recursive_slop`
-- `cost_of_observation`
-- `cs_ecmo_bridge`
-- `education_unbundling_implementation`
-- `ergo_storage_rent`
-- `france_2027_presidential_election`
-- `goodstein_theorem_finite_proof`
-- `gs1_standardized_identification`
-- `hegemonic_entropy_2026`
-- `hoa_covenants`
-- `net_zero_stabilization`
-- `neural_interoperability`
-- `paris_municipal_reform_2026`
-- `regulatory_capture`
-- `repair_probe_incomplete`
-- `rosen_bridge_protocol`
-- `rotation_seven_black_soil`
-- `ship_of_theseus`
-- `shitty_feedback_handling`
-
-### `shift(unknown, unknown, scaffold, snare)` — 7 constraints
-
-- `absorbing_markov_chain_trap`
-- `ai_scholar_citation_trap`
-- `mit_tfus_2026`
-- `nsw_transmission_bottleneck`
-- `openai_api_access`
-- `openai_codex_app_constraint`
-- `openscholar_peer_review`
-
-### `shift(unknown, unknown, scaffold, tangled_rope)` — 2 constraints
-
-- `france_local_elections_march_2026`
-- `portugal_ad_stability_2026`
-
-### `shift(unknown, unknown, scaffold, unknown)` — 10 constraints
-
-- `axiom_reasoner_2026`
-- `exoplanetary_habitability_arbitrage`
-- `fiscal_equalization_friction`
-- `gamblers_ruin_stochastic_extinction`
-- `glp1_payload_efficiency_pivot`
-- `maha_recovery_2026`
-- `platonic_coparenting_decoupling`
-- `recipe_scaling_ai`
-- `russells_paradox_self_reference`
-- `trillion_bond_rush_2026`
-
 ### `shift(unknown, unknown, unknown, unknown)` — 1 constraints
 
 - `catholic_church_1200`
@@ -1157,14 +1130,12 @@ Each family groups constraints with identical perspectival shift — same classi
 
 Constraints where changing scope (local vs national vs global) changes the classification type, holding power/time/exit constant.
 
-- **Scope-sensitive constraints**: 375 / 1034
+- **Scope-sensitive constraints**: 308 / 1034
 
-- `absorbing_markov_chain_trap`: local=unknown, national=unknown, global=snare
-- `abstraction_leakage`: local=tangled_rope, national=tangled_rope, global=unknown
-- `academic_fashion_modernism_2026`: local=unknown, national=snare, global=snare
-- `access_arbitrage`: local=unknown, national=tangled_rope, global=tangled_rope
-- `advice_as_dangerous_gift`: local=rope, national=unknown, global=tangled_rope
-- `agent_opt_2026`: local=unknown, national=snare, global=snare
+- `absorbing_markov_chain_trap`: local=tangled_rope, national=tangled_rope, global=snare
+- `academic_fashion_modernism_2026`: local=tangled_rope, national=snare, global=snare
+- `advice_as_dangerous_gift`: local=rope, national=tangled_rope, global=tangled_rope
+- `agent_opt_2026`: local=tangled_rope, national=snare, global=snare
 - `ai_adoption_stigma`: local=tangled_rope, national=tangled_rope, global=snare
 - `ai_auditability_gap`: local=tangled_rope, national=tangled_rope, global=snare
 - `ai_banal_capture`: local=tangled_rope, national=snare, global=snare
@@ -1172,25 +1143,22 @@ Constraints where changing scope (local vs national vs global) changes the class
 - `ai_performance_watermark`: local=tangled_rope, national=tangled_rope, global=snare
 - `ai_professional_displacement`: local=tangled_rope, national=snare, global=snare
 - `ai_religion_regulation`: local=tangled_rope, national=snare, global=snare
-- `ai_scholar_citation_trap`: local=unknown, national=unknown, global=snare
-- `ai_superpowers_2026`: local=unknown, national=snare, global=snare
+- `ai_scholar_citation_trap`: local=tangled_rope, national=tangled_rope, global=snare
+- `ai_superpowers_2026`: local=tangled_rope, national=snare, global=snare
 - `airbnb_str_regulation`: local=tangled_rope, national=snare, global=snare
 - `altruistic_misery_paradox_2026`: local=tangled_rope, national=snare, global=snare
-- `alzheimers_levetiracetam`: local=rope, national=unknown, global=tangled_rope
+- `alzheimers_levetiracetam`: local=rope, national=tangled_rope, global=tangled_rope
 - `ape_cognition_framework`: local=tangled_rope, national=tangled_rope, global=snare
 - `appropriations_brinkmanship`: local=tangled_rope, national=snare, global=snare
 - `arctic_maritime_control`: local=tangled_rope, national=tangled_rope, global=snare
 - `arg_ev_tariff`: local=tangled_rope, national=tangled_rope, global=snare
-- `asce_7_22_seismic_design`: local=rope, national=unknown, global=tangled_rope
+- `asce_7_22_seismic_design`: local=rope, national=tangled_rope, global=tangled_rope
 - `australia_social_ban_2026`: local=tangled_rope, national=snare, global=snare
-- `availability_heuristic`: local=unknown, national=tangled_rope, global=tangled_rope
 - `average_is_over_2026`: local=tangled_rope, national=snare, global=snare
 - `awareness_without_leverage`: local=tangled_rope, national=snare, global=snare
 - `bangladesh_july_national_charter`: local=tangled_rope, national=tangled_rope, global=snare
 - `belief_argument_conclusion`: local=tangled_rope, national=snare, global=snare
-- `bgs_eigenvector_thermalization`: local=unknown, national=tangled_rope, global=tangled_rope
-- `big_data_astrophysics_arbitrage`: local=tangled_rope, national=tangled_rope, global=unknown
-- `blackstone_carried_interest_taxation`: local=rope, national=rope, global=unknown
+- `blackstone_carried_interest_taxation`: local=rope, national=rope, global=tangled_rope
 - `boiled_pineapple_trend_2026`: local=tangled_rope, national=tangled_rope, global=snare
 - `brain_network_paradigm_2026`: local=tangled_rope, national=tangled_rope, global=snare
 - `bureaucratic_self_preservation`: local=tangled_rope, national=snare, global=snare
@@ -1202,7 +1170,7 @@ Constraints where changing scope (local vs national vs global) changes the class
 - `cb_far_beyond_human`: local=tangled_rope, national=snare, global=snare
 - `cfius_hiefo_emcore_divestment`: local=tangled_rope, national=snare, global=snare
 - `cg_israelgaza_20231012`: local=tangled_rope, national=snare, global=snare
-- `china_africa_zero_tariff_2026`: local=rope, national=unknown, global=tangled_rope
+- `china_africa_zero_tariff_2026`: local=rope, national=tangled_rope, global=tangled_rope
 - `china_ev_export_oversupply`: local=tangled_rope, national=tangled_rope, global=snare
 - `china_vactrain_standard`: local=tangled_rope, national=tangled_rope, global=snare
 - `cholesterol_pill_cost`: local=tangled_rope, national=snare, global=snare
@@ -1210,7 +1178,6 @@ Constraints where changing scope (local vs national vs global) changes the class
 - `cia_fbi_legal_wall`: local=tangled_rope, national=snare, global=snare
 - `circadian_decoupling_arbitrage`: local=tangled_rope, national=snare, global=snare
 - `climate_event_attribution`: local=tangled_rope, national=tangled_rope, global=snare
-- `cma`: local=tangled_rope, national=unknown, global=unknown
 - `cn_tech_decoupling_security_software`: local=tangled_rope, national=tangled_rope, global=snare
 - `codex_access`: local=tangled_rope, national=tangled_rope, global=snare
 - `coe_ukraine_reparations_register`: local=tangled_rope, national=snare, global=snare
@@ -1218,34 +1185,24 @@ Constraints where changing scope (local vs national vs global) changes the class
 - `cognitive_hacking_2026`: local=tangled_rope, national=snare, global=snare
 - `cognitive_induction_gap`: local=tangled_rope, national=snare, global=snare
 - `cognitive_surrender_to_system_3`: local=tangled_rope, national=snare, global=snare
-- `coinbase_crypto_volatility`: local=unknown, national=tangled_rope, global=tangled_rope
 - `coinbase_regulatory_uncertainty`: local=tangled_rope, national=snare, global=snare
-- `college_admissions_market`: local=tangled_rope, national=tangled_rope, global=unknown
-- `colombia_2026_presidential_election`: local=unknown, national=tangled_rope, global=tangled_rope
 - `colorado_sbe_decentralization_friction`: local=tangled_rope, national=snare, global=snare
-- `comitatus_bond`: local=unknown, national=tangled_rope, global=tangled_rope
 - `constitutional_consecration`: local=tangled_rope, national=snare, global=snare
 - `constitutional_supremacy`: local=tangled_rope, national=tangled_rope, global=snare
-- `constraint_lagrange_multipliers`: local=rope, national=unknown, global=tangled_rope
-- `constraint_riemann_mapping`: local=rope, national=unknown, global=tangled_rope
-- `constraint_yoneda`: local=unknown, national=tangled_rope, global=tangled_rope
+- `constraint_lagrange_multipliers`: local=rope, national=tangled_rope, global=tangled_rope
+- `constraint_riemann_mapping`: local=rope, national=tangled_rope, global=tangled_rope
 - `consumer_debt_slavery`: local=tangled_rope, national=snare, global=snare
 - `conversational_dogmas_interruption`: local=tangled_rope, national=tangled_rope, global=snare
 - `corporate_social_responsibility_theater`: local=tangled_rope, national=tangled_rope, global=snare
-- `cost_of_observation`: local=tangled_rope, national=unknown, global=unknown
 - `couples_residency_match`: local=tangled_rope, national=tangled_rope, global=snare
-- `cow_field_poop`: local=unknown, national=tangled_rope, global=tangled_rope
-- `creative_commons_licensing`: local=unknown, national=tangled_rope, global=tangled_rope
 - `credentialism_national_security`: local=tangled_rope, national=tangled_rope, global=snare
-- `crispr_genomic_rewrite_2026`: local=unknown, national=tangled_rope, global=tangled_rope
 - `crop_defense_dependency`: local=tangled_rope, national=snare, global=snare
 - `cultural_homogenization_social_media`: local=tangled_rope, national=tangled_rope, global=snare
-- `cultural_refragmentation_2026`: local=unknown, national=snare, global=snare
+- `cultural_refragmentation_2026`: local=tangled_rope, national=snare, global=snare
 - `cumbria_mine_rejection`: local=tangled_rope, national=snare, global=snare
 - `data_privacy_regulation`: local=tangled_rope, national=tangled_rope, global=snare
 - `debt_service_squeeze`: local=tangled_rope, national=snare, global=snare
 - `debt_trap_microfinance`: local=indexically_opaque, national=tangled_rope, global=tangled_rope
-- `decision_latency_mismatch`: local=tangled_rope, national=tangled_rope, global=unknown
 - `digital_credentialing_verification`: local=tangled_rope, national=snare, global=snare
 - `digital_euro_cbdc`: local=tangled_rope, national=tangled_rope, global=snare
 - `digital_identity_tether`: local=tangled_rope, national=tangled_rope, global=snare
@@ -1258,12 +1215,11 @@ Constraints where changing scope (local vs national vs global) changes the class
 - `edelman_2026_insularity`: local=tangled_rope, national=tangled_rope, global=snare
 - `elite_overproduction_instability`: local=tangled_rope, national=tangled_rope, global=snare
 - `elliq_ai_companion`: local=tangled_rope, national=tangled_rope, global=snare
-- `emergency_oversight_bureau`: local=scaffold, national=rope, global=unknown
-- `empty_tomb_transformation`: local=unknown, national=tangled_rope, global=tangled_rope
+- `emergency_oversight_bureau`: local=scaffold, national=rope, global=tangled_rope
 - `epstein_document_release_2026`: local=tangled_rope, national=snare, global=snare
-- `epstein_espionage_2026`: local=unknown, national=snare, global=snare
-- `epstein_files_2026`: local=unknown, national=snare, global=snare
-- `erasmus_rejoining_scaffold`: local=scaffold, national=rope, global=unknown
+- `epstein_espionage_2026`: local=tangled_rope, national=snare, global=snare
+- `epstein_files_2026`: local=tangled_rope, national=snare, global=snare
+- `erasmus_rejoining_scaffold`: local=scaffold, national=rope, global=tangled_rope
 - `erised_expectation`: local=tangled_rope, national=snare, global=snare
 - `eu_digital_services_act`: local=tangled_rope, national=tangled_rope, global=snare
 - `eu_ev_tariff_wall`: local=tangled_rope, national=tangled_rope, global=snare
@@ -1272,9 +1228,6 @@ Constraints where changing scope (local vs national vs global) changes the class
 - `evolutionary_knowledge`: local=tangled_rope, national=tangled_rope, global=snare
 - `expert_disempowerment`: local=tangled_rope, national=snare, global=snare
 - `exploration_vs_exploitation`: local=tangled_rope, national=tangled_rope, global=snare
-- `extraordinary_narrative_shift`: local=unknown, national=tangled_rope, global=tangled_rope
-- `faa_boeing_regulatory_capture`: local=unknown, national=tangled_rope, global=tangled_rope
-- `factional_instability`: local=tangled_rope, national=tangled_rope, global=unknown
 - `fcc_dji_covered_list`: local=tangled_rope, national=tangled_rope, global=snare
 - `fda_component_efficacy_standard`: local=tangled_rope, national=tangled_rope, global=snare
 - `fed_shutdown_2026`: local=tangled_rope, national=tangled_rope, global=snare
@@ -1282,41 +1235,37 @@ Constraints where changing scope (local vs national vs global) changes the class
 - `fiber_optic_chip_tech`: local=tangled_rope, national=tangled_rope, global=snare
 - `fine_particle_policy`: local=tangled_rope, national=tangled_rope, global=snare
 - `finnish_debt_adjustment`: local=tangled_rope, national=snare, global=snare
-- `fiscal_equalization_friction`: local=scaffold, national=unknown, global=unknown
+- `fiscal_equalization_friction`: local=scaffold, national=tangled_rope, global=tangled_rope
 - `fitts_law_industrial_application`: local=tangled_rope, national=snare, global=snare
 - `floating_wall_2026`: local=tangled_rope, national=snare, global=snare
-- `fmeca_procedures_1980`: local=unknown, national=tangled_rope, global=tangled_rope
-- `fnl_shadow_probe`: local=rope, national=rope, global=unknown
-- `france_cordon_sanitaire_2026`: local=unknown, national=tangled_rope, global=tangled_rope
-- `france_local_elections_march_2026`: local=rope, national=unknown, global=tangled_rope
+- `fnl_shadow_probe`: local=rope, national=rope, global=tangled_rope
+- `france_local_elections_march_2026`: local=rope, national=tangled_rope, global=tangled_rope
 - `fraser_river_salmon_regulation`: local=tangled_rope, national=tangled_rope, global=snare
 - `french_ag_land_concentration`: local=tangled_rope, national=tangled_rope, global=snare
 - `frontex_pushback_coordination`: local=tangled_rope, national=snare, global=snare
 - `future_dsm_integration`: local=tangled_rope, national=tangled_rope, global=snare
 - `g7_debt_trap`: local=tangled_rope, national=tangled_rope, global=snare
 - `gaza_border_control_rafah`: local=tangled_rope, national=tangled_rope, global=snare
-- `gemini_scientific_advancement`: local=rope, national=unknown, global=tangled_rope
-- `genie_ip_constraint`: local=unknown, national=snare, global=snare
+- `gemini_scientific_advancement`: local=rope, national=tangled_rope, global=tangled_rope
+- `genie_ip_constraint`: local=tangled_rope, national=snare, global=snare
 - `geopolitical_insularity_2026`: local=tangled_rope, national=snare, global=snare
-- `germany_tennet_takeover`: local=rope, national=unknown, global=tangled_rope
+- `germany_tennet_takeover`: local=rope, national=tangled_rope, global=tangled_rope
 - `glen_canyon_water_allocation`: local=tangled_rope, national=tangled_rope, global=snare
 - `global_digital_divide`: local=tangled_rope, national=tangled_rope, global=snare
-- `global_economic_anxiety_2026`: local=unknown, national=snare, global=snare
-- `glp1_payload_efficiency_pivot`: local=rope, national=unknown, global=unknown
+- `global_economic_anxiety_2026`: local=tangled_rope, national=snare, global=snare
+- `glp1_payload_efficiency_pivot`: local=rope, national=tangled_rope, global=tangled_rope
 - `gold_fomo_cycle`: local=tangled_rope, national=snare, global=snare
 - `goodharts_law`: local=tangled_rope, national=tangled_rope, global=snare
 - `google_ai_search_overview`: local=tangled_rope, national=tangled_rope, global=snare
 - `google_universal_commerce_protocol`: local=tangled_rope, national=tangled_rope, global=snare
 - `governance_overfitting`: local=tangled_rope, national=snare, global=snare
-- `graph_coloring_complexity`: local=unknown, national=tangled_rope, global=tangled_rope
 - `great_awakening_rekindling`: local=tangled_rope, national=tangled_rope, global=snare
 - `great_mongolian_road_economic_dependency`: local=tangled_rope, national=tangled_rope, global=snare
 - `greenland_defence_pact_2026`: local=tangled_rope, national=tangled_rope, global=snare
 - `greshams_law`: local=tangled_rope, national=snare, global=snare
-- `grete_samsa_transition`: local=tangled_rope, national=tangled_rope, global=unknown
-- `gs1_gln_identification`: local=rope, national=rope, global=unknown
-- `gs1_standardized_identification`: local=rope, national=unknown, global=unknown
-- `gs_market_clearing`: local=rope, national=unknown, global=tangled_rope
+- `gs1_gln_identification`: local=rope, national=rope, global=tangled_rope
+- `gs1_standardized_identification`: local=rope, national=tangled_rope, global=tangled_rope
+- `gs_market_clearing`: local=rope, national=tangled_rope, global=tangled_rope
 - `guano_wealth_extraction`: local=tangled_rope, national=tangled_rope, global=snare
 - `guinea_junta_legitimization_2024`: local=tangled_rope, national=snare, global=snare
 - `hammurabi_lex_talionis`: local=tangled_rope, national=tangled_rope, global=snare
@@ -1325,7 +1274,6 @@ Constraints where changing scope (local vs national vs global) changes the class
 - `hicbc_uk`: local=tangled_rope, national=snare, global=snare
 - `hu_2026_election_rules`: local=tangled_rope, national=tangled_rope, global=snare
 - `hub_short_form_tv_market_fragmentation`: local=tangled_rope, national=tangled_rope, global=snare
-- `hydra_game`: local=tangled_rope, national=tangled_rope, global=unknown
 - `ia_digital_preservation`: local=tangled_rope, national=tangled_rope, global=snare
 - `ibm_shield_2026`: local=tangled_rope, national=snare, global=snare
 - `ibm_shield_contract_2026`: local=tangled_rope, national=snare, global=snare
@@ -1335,83 +1283,61 @@ Constraints where changing scope (local vs national vs global) changes the class
 - `inner_model_confirmation_bias`: local=tangled_rope, national=tangled_rope, global=snare
 - `innovators_dilemma`: local=tangled_rope, national=tangled_rope, global=snare
 - `institutional_mutation_domestication`: local=tangled_rope, national=snare, global=snare
-- `institutional_trust_decay`: local=tangled_rope, national=tangled_rope, global=unknown
-- `insult_wisdom_training`: local=tangled_rope, national=tangled_rope, global=unknown
 - `international_seabed_mining_regime`: local=tangled_rope, national=tangled_rope, global=snare
 - `internet_evolution_lifecycle`: local=tangled_rope, national=snare, global=snare
 - `iron_law_of_oligarchy`: local=tangled_rope, national=snare, global=snare
 - `irreversible_policy_commitment`: local=tangled_rope, national=snare, global=snare
-- `isa_education_scaffold`: local=unknown, national=tangled_rope, global=tangled_rope
 - `israel_gaza_ceasefire_violation`: local=tangled_rope, national=snare, global=snare
 - `israel_norwegian_law`: local=tangled_rope, national=tangled_rope, global=snare
 - `israeli_settlement_policy_authority_restriction`: local=tangled_rope, national=tangled_rope, global=snare
 - `iss_ped_ban`: local=tangled_rope, national=tangled_rope, global=snare
-- `iterated_function_system_convergence`: local=unknown, national=tangled_rope, global=tangled_rope
 - `japanese_energy_scaffold_2025`: local=tangled_rope, national=tangled_rope, global=snare
 - `jp_eez_enforcement`: local=tangled_rope, national=tangled_rope, global=snare
 - `jp_nativist_politics`: local=tangled_rope, national=snare, global=snare
-- `jupiter_composition_knowledge_gap`: local=rope, national=unknown, global=tangled_rope
-- `keltner_relationship_evaluation`: local=rope, national=unknown, global=tangled_rope
+- `jupiter_composition_knowledge_gap`: local=rope, national=tangled_rope, global=tangled_rope
+- `keltner_relationship_evaluation`: local=rope, national=tangled_rope, global=tangled_rope
 - `kim_jong_un_succession`: local=tangled_rope, national=tangled_rope, global=snare
-- `kjv_textual_authority`: local=unknown, national=tangled_rope, global=tangled_rope
-- `landscape_of_fear_2026`: local=unknown, national=tangled_rope, global=tangled_rope
-- `law_of_diminishing_returns`: local=unknown, national=tangled_rope, global=tangled_rope
-- `lcdm_small_scale_anomalies`: local=unknown, national=tangled_rope, global=tangled_rope
-- `linguistic_relativity_cultural_framing`: local=unknown, national=tangled_rope, global=tangled_rope
-- `lorenz_attractor_dynamics`: local=unknown, national=tangled_rope, global=tangled_rope
-- `lsd_microdosing_professional_openness`: local=unknown, national=tangled_rope, global=tangled_rope
 - `lung_transplant_protocol`: local=tangled_rope, national=tangled_rope, global=snare
-- `magna_carta_liberties`: local=unknown, national=tangled_rope, global=tangled_rope
 - `marriage_market_asymmetry_2026`: local=tangled_rope, national=snare, global=snare
-- `mars_rovers_navigational_autonomy`: local=unknown, national=tangled_rope, global=tangled_rope
 - `mass_market_extinction_2026`: local=tangled_rope, national=snare, global=snare
-- `matching_market_congestion_externality`: local=rope, national=unknown, global=tangled_rope
+- `matching_market_congestion_externality`: local=rope, national=tangled_rope, global=tangled_rope
 - `max_flow_min_cut`: local=tangled_rope, national=tangled_rope, global=snare
 - `medical_residency_match`: local=tangled_rope, national=snare, global=snare
 - `medieval_church_hegemony`: local=tangled_rope, national=snare, global=snare
 - `meta_nda`: local=tangled_rope, national=snare, global=snare
-- `meta_nuclear_power_agreement`: local=unknown, national=tangled_rope, global=tangled_rope
 - `mexican_airline_merger`: local=tangled_rope, national=tangled_rope, global=snare
 - `microwave_weapon_1`: local=tangled_rope, national=snare, global=snare
-- `migration_decision_threshold`: local=rope, national=rope, global=unknown
+- `migration_decision_threshold`: local=rope, national=rope, global=tangled_rope
 - `minnesota_sovereignty_2026`: local=tangled_rope, national=snare, global=snare
-- `mit_tfus_2026`: local=unknown, national=unknown, global=snare
-- `moltbook_agent_theater`: local=tangled_rope, national=tangled_rope, global=unknown
-- `moltbook_breach_2026`: local=unknown, national=snare, global=snare
+- `mit_tfus_2026`: local=tangled_rope, national=tangled_rope, global=snare
+- `moltbook_breach_2026`: local=tangled_rope, national=snare, global=snare
 - `moltbot_religion`: local=tangled_rope, national=snare, global=snare
-- `moores_law`: local=rope, national=rope, global=unknown
+- `moores_law`: local=rope, national=rope, global=tangled_rope
 - `mrna_melanoma_therapy`: local=tangled_rope, national=tangled_rope, global=snare
-- `nato_arctic_defense_cooperation`: local=unknown, national=tangled_rope, global=tangled_rope
 - `ncaa_eligibility_rules`: local=tangled_rope, national=tangled_rope, global=snare
 - `necessary_day_job`: local=tangled_rope, national=snare, global=snare
-- `negative_emissions_arbitrage`: local=tangled_rope, national=unknown, global=unknown
-- `net_zero_stabilization`: local=tangled_rope, national=unknown, global=unknown
-- `neural_interoperability`: local=tangled_rope, national=unknown, global=unknown
 - `neural_substrate_2026`: local=tangled_rope, national=tangled_rope, global=snare
-- `neurodiversity_spectrum`: local=tangled_rope, national=tangled_rope, global=unknown
 - `new_start_expiration`: local=tangled_rope, national=snare, global=snare
 - `nfl_superbowl_marketing_regulation`: local=tangled_rope, national=tangled_rope, global=snare
 - `nine_day_buffer`: local=tangled_rope, national=tangled_rope, global=snare
-- `north_sea_wind_grid`: local=unknown, national=tangled_rope, global=tangled_rope
-- `notary_ink_dependency`: local=rope, national=unknown, global=tangled_rope
-- `nsw_transmission_bottleneck`: local=unknown, national=unknown, global=snare
+- `notary_ink_dependency`: local=rope, national=tangled_rope, global=tangled_rope
+- `nsw_transmission_bottleneck`: local=tangled_rope, national=tangled_rope, global=snare
 - `nuclear_order_2026`: local=tangled_rope, national=tangled_rope, global=snare
 - `nuclear_vacuum_2026`: local=tangled_rope, national=tangled_rope, global=snare
 - `nvidia_cuda_ecosystem_lockin`: local=tangled_rope, national=snare, global=snare
-- `olympic_legacy_curling_investment`: local=rope, national=unknown, global=tangled_rope
-- `olympic_medal_allocation`: local=rope, national=unknown, global=tangled_rope
-- `openai_api_access`: local=unknown, national=unknown, global=snare
-- `openai_codex_app_constraint`: local=unknown, national=unknown, global=snare
+- `olympic_legacy_curling_investment`: local=rope, national=tangled_rope, global=tangled_rope
+- `olympic_medal_allocation`: local=rope, national=tangled_rope, global=tangled_rope
+- `openai_api_access`: local=tangled_rope, national=tangled_rope, global=snare
+- `openai_codex_app_constraint`: local=tangled_rope, national=tangled_rope, global=snare
 - `openai_health_review`: local=tangled_rope, national=tangled_rope, global=snare
 - `openai_implicit_translator`: local=tangled_rope, national=tangled_rope, global=snare
 - `openai_prism_development`: local=tangled_rope, national=tangled_rope, global=snare
 - `openbsd_netiquette_protocol`: local=tangled_rope, national=snare, global=snare
 - `openclaw_data_lock_in`: local=tangled_rope, national=tangled_rope, global=snare
 - `openclaw_regulation`: local=tangled_rope, national=tangled_rope, global=snare
-- `openscholar_peer_review`: local=unknown, national=unknown, global=snare
+- `openscholar_peer_review`: local=tangled_rope, national=tangled_rope, global=snare
 - `opioid_political_realignment_2026`: local=tangled_rope, national=snare, global=snare
 - `oral_glp1_market_access`: local=tangled_rope, national=tangled_rope, global=snare
-- `oscar_campaign_spending`: local=unknown, national=tangled_rope, global=tangled_rope
 - `p_g_golden_pear_surveillance`: local=tangled_rope, national=tangled_rope, global=snare
 - `panama_canal_ports`: local=tangled_rope, national=snare, global=snare
 - `parable_fish_turtle`: local=tangled_rope, national=snare, global=snare
@@ -1422,45 +1348,34 @@ Constraints where changing scope (local vs national vs global) changes the class
 - `peter_principle`: local=tangled_rope, national=tangled_rope, global=snare
 - `platform_app_store_duopoly`: local=tangled_rope, national=tangled_rope, global=snare
 - `po_investigation_protocol_bias`: local=tangled_rope, national=tangled_rope, global=snare
-- `portugal_ad_stability_2026`: local=rope, national=unknown, global=tangled_rope
+- `portugal_ad_stability_2026`: local=rope, national=tangled_rope, global=tangled_rope
 - `portugal_polarization_threshold_2026`: local=tangled_rope, national=tangled_rope, global=snare
-- `power_set_axiomatic_extraction`: local=unknown, national=tangled_rope, global=tangled_rope
 - `prime_age_male_unwork`: local=tangled_rope, national=snare, global=snare
 - `private_credit_market_opacity`: local=tangled_rope, national=tangled_rope, global=snare
-- `private_identity_integration`: local=unknown, national=tangled_rope, global=tangled_rope
 - `procedural_compliance_theater`: local=tangled_rope, national=tangled_rope, global=snare
 - `project_vault_2026`: local=tangled_rope, national=tangled_rope, global=snare
 - `protocol_capture_eee`: local=tangled_rope, national=tangled_rope, global=snare
-- `publishing_embargo`: local=rope, national=unknown, global=tangled_rope
-- `qwerty_vs_dvorak`: local=unknown, national=tangled_rope, global=tangled_rope
+- `publishing_embargo`: local=rope, national=tangled_rope, global=tangled_rope
 - `raac_school_maintenance`: local=tangled_rope, national=tangled_rope, global=snare
 - `radiologic_diagnostic_threshold`: local=tangled_rope, national=snare, global=snare
 - `rare_earth_dependency`: local=tangled_rope, national=snare, global=snare
 - `rare_earth_export_restrictions`: local=tangled_rope, national=tangled_rope, global=snare
 - `regional_military_deterrence_mideast`: local=tangled_rope, national=snare, global=snare
-- `ritual_transition_scaffold`: local=rope, national=unknown, global=tangled_rope
-- `royal_navy_middle_east_withdrawal`: local=tangled_rope, national=tangled_rope, global=unknown
-- `rule_update_failure`: local=tangled_rope, national=tangled_rope, global=unknown
-- `sa_renewable_price_differential`: local=unknown, national=tangled_rope, global=tangled_rope
-- `sadhu_integrity_protocol`: local=rope, national=rope, global=unknown
+- `ritual_transition_scaffold`: local=rope, national=tangled_rope, global=tangled_rope
+- `sadhu_integrity_protocol`: local=rope, national=rope, global=tangled_rope
 - `sapir_whorf_hypothesis`: local=tangled_rope, national=tangled_rope, global=snare
-- `sat_csp_complexity`: local=unknown, national=tangled_rope, global=tangled_rope
-- `satellite_d2m_standard`: local=unknown, national=tangled_rope, global=tangled_rope
 - `seedance_export_restriction`: local=tangled_rope, national=tangled_rope, global=snare
 - `semantic_overload_friction`: local=tangled_rope, national=tangled_rope, global=snare
 - `semiconductor_fabrication_chokepoint`: local=tangled_rope, national=tangled_rope, global=snare
 - `shadow_fleet_sanctions_evasion`: local=tangled_rope, national=tangled_rope, global=snare
-- `ship_of_theseus`: local=rope, national=unknown, global=unknown
+- `ship_of_theseus`: local=rope, national=tangled_rope, global=tangled_rope
 - `silklink_2026`: local=scaffold, national=scaffold, global=rope
 - `sk_ai_act_2026`: local=tangled_rope, national=tangled_rope, global=snare
 - `sludge_bureaucratic_friction`: local=tangled_rope, national=snare, global=snare
-- `smartphone_ubiquity`: local=tangled_rope, national=tangled_rope, global=unknown
-- `social_narrative_casting`: local=rope, national=rope, global=unknown
+- `social_narrative_casting`: local=rope, national=rope, global=tangled_rope
 - `soe_property_bailout`: local=tangled_rope, national=tangled_rope, global=snare
-- `sorites_paradox`: local=unknown, national=tangled_rope, global=tangled_rope
 - `south_china_sea_arbitration_2016_2026`: local=tangled_rope, national=tangled_rope, global=snare
 - `spain_digital_offensive_2026`: local=tangled_rope, national=snare, global=snare
-- `stable_marriage_coordination`: local=unknown, national=tangled_rope, global=tangled_rope
 - `start_treaty`: local=tangled_rope, national=tangled_rope, global=snare
 - `statecraft_virtu`: local=tangled_rope, national=snare, global=snare
 - `sti_clinical_testing_bottleneck`: local=tangled_rope, national=tangled_rope, global=snare
@@ -1476,15 +1391,10 @@ Constraints where changing scope (local vs national vs global) changes the class
 - `taiwan_grand_bargain`: local=tangled_rope, national=snare, global=snare
 - `taiwan_ids_program`: local=tangled_rope, national=tangled_rope, global=snare
 - `taiwan_university_application_system`: local=tangled_rope, national=tangled_rope, global=snare
-- `teaching_horses_to_sing`: local=tangled_rope, national=tangled_rope, global=unknown
 - `technocratic_overreach`: local=tangled_rope, national=snare, global=snare
-- `temporal_scale_arbitrage`: local=tangled_rope, national=tangled_rope, global=unknown
 - `texas_insurance_market_instability`: local=tangled_rope, national=tangled_rope, global=snare
 - `thai_senate_veto_2026`: local=tangled_rope, national=snare, global=snare
 - `tractarian_logic_limit`: local=tangled_rope, national=snare, global=snare
-- `tragedy_of_the_commons`: local=tangled_rope, national=tangled_rope, global=unknown
-- `transformer_self_attention`: local=tangled_rope, national=tangled_rope, global=unknown
-- `transient_event_detection`: local=unknown, national=tangled_rope, global=tangled_rope
 - `traveling_salesperson_problem`: local=tangled_rope, national=snare, global=snare
 - `trump_epa_greenhouse_gas_reversal`: local=tangled_rope, national=tangled_rope, global=snare
 - `trump_indian_tariffs_2026`: local=tangled_rope, national=tangled_rope, global=snare
@@ -1498,9 +1408,8 @@ Constraints where changing scope (local vs national vs global) changes the class
 - `ulysses_lestrygonians_1904`: local=tangled_rope, national=tangled_rope, global=snare
 - `ulysses_scylla_1904`: local=tangled_rope, national=tangled_rope, global=snare
 - `ulysses_sirens_1904`: local=tangled_rope, national=tangled_rope, global=snare
-- `un_high_seas_treaty_2026`: local=unknown, national=tangled_rope, global=tangled_rope
-- `unclos_2026`: local=rope, national=rope, global=unknown
-- `unrequited_love_protocol`: local=unknown, national=snare, global=snare
+- `unclos_2026`: local=rope, national=rope, global=tangled_rope
+- `unrequited_love_protocol`: local=tangled_rope, national=snare, global=snare
 - `us_arms_transfer_policy`: local=tangled_rope, national=tangled_rope, global=snare
 - `us_china_chip_tariffs_v2`: local=tangled_rope, national=tangled_rope, global=snare
 - `us_debt_ceiling`: local=tangled_rope, national=tangled_rope, global=snare
@@ -1523,17 +1432,14 @@ Constraints where changing scope (local vs national vs global) changes the class
 - `value_alignment_drift`: local=tangled_rope, national=snare, global=snare
 - `vienna_quantum_superposition_2026`: local=tangled_rope, national=snare, global=snare
 - `viral_transmission_rates`: local=tangled_rope, national=snare, global=snare
-- `visa_ipo_regulatory_compliance`: local=unknown, national=tangled_rope, global=tangled_rope
-- `visa_judgment_sharing_agreement`: local=unknown, national=tangled_rope, global=tangled_rope
 - `visibility_bias_governance`: local=tangled_rope, national=tangled_rope, global=snare
 - `vns_implant_for_trd`: local=tangled_rope, national=tangled_rope, global=snare
-- `wikipedia_notability_requirement_2026`: local=unknown, national=tangled_rope, global=tangled_rope
 - `winners_curse`: local=tangled_rope, national=snare, global=snare
-- `working_dog_training`: local=rope, national=unknown, global=tangled_rope
+- `working_dog_training`: local=rope, national=tangled_rope, global=tangled_rope
 - `world_factbook_sunset_2026`: local=tangled_rope, national=snare, global=snare
 - `wpl_scotland`: local=tangled_rope, national=tangled_rope, global=snare
 - `yangtze_fishing_ban`: local=tangled_rope, national=tangled_rope, global=snare
-- `zombie_reasoning_2026`: local=unknown, national=snare, global=snare
+- `zombie_reasoning_2026`: local=tangled_rope, national=snare, global=snare
 ## Metric Zone Distribution
 
 ### Extraction Zones
@@ -1558,37 +1464,28 @@ Maps shift pattern families to gauge orbit signatures.
 - `shift(indexically_opaque, tangled_rope, rope, snare)` (4 constraints): orbit `[indexically_opaque,rope,snare,tangled_rope]`
 - `shift(indexically_opaque, tangled_rope, rope, tangled_rope)` (3 constraints): orbit `[indexically_opaque,rope,tangled_rope]`
 - `shift(indexically_opaque, tangled_rope, tangled_rope, snare)` (1 constraints): orbit `[indexically_opaque,snare,tangled_rope]`
-- `shift(mountain, mountain, mountain, mountain)` (32 constraints): orbit `[mountain]`
+- `shift(mountain, mountain, mountain, mountain)` (114 constraints): orbit `[mountain]`
 - `shift(mountain, rope, rope, mountain)` (1 constraints): orbit `[mountain,rope]`
 - `shift(mountain, scaffold, scaffold, mountain)` (13 constraints): orbit `[mountain,scaffold]`
-- `shift(mountain, unknown, unknown, mountain)` (82 constraints): orbit `[mountain,unknown]`
 - `shift(piton, rope, rope, rope)` (6 constraints): orbit `[piton,rope]`
 - `shift(rope, rope, rope, rope)` (26 constraints): orbit `[rope]`
 - `shift(rope, rope, rope, tangled_rope)` (1 constraints): orbit `[rope,tangled_rope]`
 - `shift(scaffold, scaffold, scaffold, rope)` (1 constraints): orbit `[rope,scaffold]`
 - `shift(snare, snare, rope, snare)` (315 constraints): orbit `[rope,snare]`
 - `shift(snare, snare, scaffold, snare)` (8 constraints): orbit `[scaffold,snare]`
+- `shift(tangled_rope, rope, rope, rope)` (18 constraints): orbit `[rope,tangled_rope]`
+- `shift(tangled_rope, rope, rope, tangled_rope)` (7 constraints): orbit `[rope,tangled_rope]`
+- `shift(tangled_rope, rope, scaffold, tangled_rope)` (2 constraints): orbit `[rope,scaffold,tangled_rope]`
 - `shift(tangled_rope, snare, rope, snare)` (27 constraints): orbit `[rope,snare,tangled_rope]`
+- `shift(tangled_rope, snare, scaffold, snare)` (1 constraints): orbit `[scaffold,snare,tangled_rope]`
 - `shift(tangled_rope, snare, tangled_rope, snare)` (1 constraints): orbit `[snare,tangled_rope]`
 - `shift(tangled_rope, tangled_rope, indexically_opaque, snare)` (2 constraints): orbit `[indexically_opaque,snare,tangled_rope]`
 - `shift(tangled_rope, tangled_rope, rope, snare)` (140 constraints): orbit `[rope,snare,tangled_rope]`
-- `shift(tangled_rope, tangled_rope, rope, tangled_rope)` (145 constraints): orbit `[rope,tangled_rope]`
-- `shift(tangled_rope, tangled_rope, rope, unknown)` (18 constraints): orbit `[rope,tangled_rope,unknown]`
-- `shift(tangled_rope, tangled_rope, scaffold, snare)` (5 constraints): orbit `[scaffold,snare,tangled_rope]`
-- `shift(tangled_rope, tangled_rope, scaffold, tangled_rope)` (3 constraints): orbit `[scaffold,tangled_rope]`
+- `shift(tangled_rope, tangled_rope, rope, tangled_rope)` (203 constraints): orbit `[rope,tangled_rope]`
+- `shift(tangled_rope, tangled_rope, scaffold, snare)` (12 constraints): orbit `[scaffold,snare,tangled_rope]`
+- `shift(tangled_rope, tangled_rope, scaffold, tangled_rope)` (15 constraints): orbit `[scaffold,tangled_rope]`
 - `shift(tangled_rope, tangled_rope, tangled_rope, snare)` (1 constraints): orbit `[snare,tangled_rope]`
 - `shift(tangled_rope, tangled_rope, tangled_rope, tangled_rope)` (104 constraints): orbit `[tangled_rope]`
-- `shift(tangled_rope, unknown, rope, unknown)` (2 constraints): orbit `[rope,tangled_rope,unknown]`
-- `shift(unknown, rope, rope, rope)` (18 constraints): orbit `[rope,unknown]`
-- `shift(unknown, rope, rope, tangled_rope)` (6 constraints): orbit `[rope,tangled_rope,unknown]`
-- `shift(unknown, rope, rope, unknown)` (1 constraints): orbit `[rope,unknown]`
-- `shift(unknown, rope, scaffold, unknown)` (2 constraints): orbit `[rope,scaffold,unknown]`
-- `shift(unknown, snare, scaffold, snare)` (1 constraints): orbit `[scaffold,snare,unknown]`
-- `shift(unknown, unknown, rope, tangled_rope)` (18 constraints): orbit `[rope,tangled_rope,unknown]`
-- `shift(unknown, unknown, rope, unknown)` (20 constraints): orbit `[rope,unknown]`
-- `shift(unknown, unknown, scaffold, snare)` (7 constraints): orbit `[scaffold,snare,unknown]`
-- `shift(unknown, unknown, scaffold, tangled_rope)` (2 constraints): orbit `[scaffold,tangled_rope,unknown]`
-- `shift(unknown, unknown, scaffold, unknown)` (10 constraints): orbit `[scaffold,unknown]`
 - `shift(unknown, unknown, unknown, unknown)` (1 constraints): orbit `[unknown]`
 ---
 *End of fingerprint report*
