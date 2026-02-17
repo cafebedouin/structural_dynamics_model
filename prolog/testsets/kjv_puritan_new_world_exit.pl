@@ -38,7 +38,8 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:omega_variable/3.
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -88,6 +89,7 @@ narrative_ontology:constraint_metric(kjv_puritan_new_world_exit, resistance, 0.1
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(kjv_puritan_new_world_exit, rope).
+narrative_ontology:human_readable(kjv_puritan_new_world_exit, "The Puritan Textual Re-Indexing (KJV in the New World)").
 
 % --- Binary flags ---
 % The social contract around the KJV required active teaching, preaching, and

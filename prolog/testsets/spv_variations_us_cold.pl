@@ -42,7 +42,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3.
+    constraint_indexing:directionality_override/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -88,6 +89,7 @@ narrative_ontology:constraint_metric(spv_variations_us_cold, theater_ratio, 0.05
 % The claim is 'rope', reflecting that the primary human-interaction layer is the
 % coordination model built on top of the physical law.
 narrative_ontology:constraint_claim(spv_variations_us_cold, rope).
+narrative_ontology:human_readable(spv_variations_us_cold, "Stratospheric Polar Vortex Variations (US Cold Outbreaks)").
 
 % --- Structural relationships (REQUIRED for non-mountain constraints) ---
 % Who benefits from this constraint existing? (i.e., the predictive model)

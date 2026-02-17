@@ -43,7 +43,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3.
+    constraint_indexing:directionality_override/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -103,6 +104,7 @@ narrative_ontology:constraint_metric(cap_theorem, resistance, 0.0).
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(cap_theorem, mountain).
+narrative_ontology:human_readable(cap_theorem, "CAP Theorem (Brewer's Theorem)").
 
 % --- Emergence flag (required for mountain constraints) ---
 % The theorem is a discovered property of distributed systems, not a human construct.

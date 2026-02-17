@@ -43,7 +43,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3.
+    constraint_indexing:directionality_override/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -108,6 +109,7 @@ narrative_ontology:constraint_metric(nonstandard_arithmetic_models, resistance, 
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(nonstandard_arithmetic_models, mountain).
+narrative_ontology:human_readable(nonstandard_arithmetic_models, "Existence of Nonstandard Models of Arithmetic").
 
 % --- Binary flags ---
 % This constraint is a feature of logic itself and requires no enforcement.

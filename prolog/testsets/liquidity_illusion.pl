@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -69,6 +70,7 @@ narrative_ontology:constraint_metric(liquidity_illusion, theater_ratio, 0.92).
 
 % The constraint claims to be a coordination mechanism for efficient markets.
 narrative_ontology:constraint_claim(liquidity_illusion, tangled_rope).
+narrative_ontology:human_readable(liquidity_illusion, "The Exit Door Mirage").
 
 % Binary flags and structural properties for Tangled Rope classification.
 domain_priors:requires_active_enforcement(liquidity_illusion). % Enforcement via automated market rules and permissive regulation.

@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -71,6 +72,7 @@ narrative_ontology:constraint_metric(nuclear_order_2026, theater_ratio, 0.72).
 % Constraint self-claim (what does the constraint claim to be?)
 % It claims to be a mechanism of enforcement (deterrence).
 narrative_ontology:constraint_claim(nuclear_order_2026, piton).
+narrative_ontology:human_readable(nuclear_order_2026, "Post-New START Strategic Ambiguity").
 
 % Binary flags
 narrative_ontology:has_sunset_clause(nuclear_order_2026).      % For the Scaffold perspective on shadow talks.

@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -71,6 +72,7 @@ narrative_ontology:constraint_metric(adaptive_lag_trap, theater_ratio, 0.89).
 % Constraint self-claim (what does the constraint claim to be?)
 % It claims to be a coordination mechanism for stability and safety.
 narrative_ontology:constraint_claim(adaptive_lag_trap, tangled_rope).
+narrative_ontology:human_readable(adaptive_lag_trap, "The Velocity Mismatch Anchor").
 
 % Binary flags and structural properties for Tangled Rope classification
 domain_priors:requires_active_enforcement(adaptive_lag_trap). % Legal mandates require active enforcement.

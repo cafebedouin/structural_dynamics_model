@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -76,6 +77,7 @@ narrative_ontology:constraint_metric(finite_pool_of_worry, theater_ratio, 0.15).
 % Constraint self-claim (what does the constraint claim to be?)
 % It is presented as a fundamental, unchangeable aspect of human psychology.
 narrative_ontology:constraint_claim(finite_pool_of_worry, tangled_rope).
+narrative_ontology:human_readable(finite_pool_of_worry, "The Finite Pool of Worry Hypothesis").
 
 % Structural property derivation hooks:
 % Beneficiary: Immediate Crisis Management (receives all the attention/worry).

@@ -26,7 +26,8 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -63,6 +64,7 @@ narrative_ontology:constraint_metric(academic_peer_review_gatekeeping, theater_r
 
 % Constraint classification claim
 narrative_ontology:constraint_claim(academic_peer_review_gatekeeping, tangled_rope).
+narrative_ontology:human_readable(academic_peer_review_gatekeeping, "Academic Peer Review and Journal Gatekeeping").
 
 % Constraint metric facts
 domain_priors:requires_active_enforcement(academic_peer_review_gatekeeping).

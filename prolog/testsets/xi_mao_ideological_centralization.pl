@@ -26,7 +26,8 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -79,6 +80,7 @@ narrative_ontology:constraint_metric(xi_mao_ideological_centralization, theater_
 % --- Constraint claim (must match analytical perspective type) ---
 % The analytical view, based on high extraction and suppression, is a Snare.
 narrative_ontology:constraint_claim(xi_mao_ideological_centralization, snare).
+narrative_ontology:human_readable(xi_mao_ideological_centralization, "Ideological Centralization and the Leadership Core").
 
 % --- Binary flags ---
 % Required for Tangled Rope classification of the Party Cadre perspective.

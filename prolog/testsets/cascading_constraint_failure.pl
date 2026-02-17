@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -69,6 +70,7 @@ narrative_ontology:constraint_metric(cascading_constraint_failure, theater_ratio
 % Constraint self-claim (what does the constraint claim to be?)
 % The system is presented as a pure coordination mechanism for efficiency.
 narrative_ontology:constraint_claim(cascading_constraint_failure, tangled_rope).
+narrative_ontology:human_readable(cascading_constraint_failure, "The Dominos of Systemic Collapse").
 
 % Binary flags
 % Required for Tangled Rope: The system's efficiency relies on enforcing

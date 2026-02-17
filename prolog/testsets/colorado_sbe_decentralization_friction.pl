@@ -24,7 +24,8 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
-    narrative_ontology:coordination_type/2.
+    narrative_ontology:coordination_type/2,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -61,6 +62,7 @@ narrative_ontology:constraint_metric(colorado_sbe_decentralization_friction, the
 % Constraint self-claim (what does the constraint claim to be?)
 % The SBE claims its regulations are for coordination (ensuring quality standards).
 narrative_ontology:constraint_claim(colorado_sbe_decentralization_friction, tangled_rope).
+narrative_ontology:human_readable(colorado_sbe_decentralization_friction, "Colorado SBE Institutional Preservation (Educational Decentralization Friction)").
 
 % Binary flags
 domain_priors:requires_active_enforcement(colorado_sbe_decentralization_friction). % The SBE must actively audit, license, and mandate testing.

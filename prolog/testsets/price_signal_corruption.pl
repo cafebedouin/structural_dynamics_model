@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -69,6 +70,7 @@ narrative_ontology:constraint_metric(price_signal_corruption, theater_ratio, 0.8
 % Constraint self-claim (what does the constraint claim to be?)
 % The beneficiaries claim it is a necessary tool for stability.
 narrative_ontology:constraint_claim(price_signal_corruption, tangled_rope).
+narrative_ontology:human_readable(price_signal_corruption, "The Hall of Economic Mirrors").
 
 % Binary flags
 % The system requires active enforcement (e.g., regulatory capture, algorithmic

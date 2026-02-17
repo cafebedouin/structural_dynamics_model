@@ -44,7 +44,8 @@
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
-    narrative_ontology:omega_variable/3.
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -92,6 +93,7 @@ narrative_ontology:constraint_metric(biological_curiosity, resistance, 0.05).
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(biological_curiosity, mountain).
+narrative_ontology:human_readable(biological_curiosity, "Curiosity (The Information-Seeking Drive)").
 
 % --- Binary flags ---
 % narrative_ontology:has_sunset_clause(biological_curiosity).

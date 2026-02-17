@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -73,6 +74,7 @@ narrative_ontology:constraint_metric(clawderberg_recursive_slop, theater_ratio, 
 % It is a constructed system, but its operators may claim it's a form of coordination
 % for "synthetic data generation".
 narrative_ontology:constraint_claim(clawderberg_recursive_slop, piton).
+narrative_ontology:human_readable(clawderberg_recursive_slop, "The Recursive Slop Loop").
 
 % Structural property derivation hooks:
 narrative_ontology:constraint_beneficiary(clawderberg_recursive_slop, current_ai_training_algorithms).

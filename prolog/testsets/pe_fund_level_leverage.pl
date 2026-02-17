@@ -43,7 +43,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1.
+    domain_priors:emerges_naturally/1,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -88,6 +89,7 @@ narrative_ontology:constraint_metric(pe_fund_level_leverage, theater_ratio, 0.40
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(pe_fund_level_leverage, tangled_rope).
+narrative_ontology:human_readable(pe_fund_level_leverage, "\"Shadow Leverage\" via fund-level debt in Private Equity").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(pe_fund_level_leverage). % Required for Tangled Rope

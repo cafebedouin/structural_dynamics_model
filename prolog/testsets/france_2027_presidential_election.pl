@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -78,6 +79,7 @@ narrative_ontology:constraint_metric(france_2027_presidential_election, theater_
 
 % Constraint self-claim (what does the constraint claim to be?)
 narrative_ontology:constraint_claim(france_2027_presidential_election, tangled_rope).
+narrative_ontology:human_readable(france_2027_presidential_election, "2027 French Presidential Election Framework").
 
 % Binary flags
 domain_priors:requires_active_enforcement(france_2027_presidential_election).

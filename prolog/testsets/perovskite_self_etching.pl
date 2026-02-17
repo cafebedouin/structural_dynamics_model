@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -70,6 +71,7 @@ narrative_ontology:constraint_metric(perovskite_self_etching, theater_ratio, 0.1
 % Constraint self-claim (what does the constraint claim to be?)
 % The incumbent industry presents the limitations as an unavoidable physical law.
 narrative_ontology:constraint_claim(perovskite_self_etching, tangled_rope).
+narrative_ontology:human_readable(perovskite_self_etching, "The 2D Perovskite Machinability Constraint").
 
 % Binary flags
 domain_priors:requires_active_enforcement(perovskite_self_etching). % Required for Tangled Rope. Represents IP protection and supply chain control.

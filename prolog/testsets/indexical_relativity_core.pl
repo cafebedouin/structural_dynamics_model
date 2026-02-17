@@ -44,7 +44,8 @@
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
-    narrative_ontology:omega_variable/3.
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -92,6 +93,7 @@ narrative_ontology:constraint_metric(indexical_relativity_core, resistance, 0.05
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(indexical_relativity_core, mountain).
+narrative_ontology:human_readable(indexical_relativity_core, "The Law of Indexical Relativity").
 
 % --- Binary flags ---
 % No active enforcement needed for a logical principle.

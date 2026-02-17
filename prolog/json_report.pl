@@ -72,6 +72,16 @@ write_pipeline_json(S, Constraints, CorpusSize) :-
     % Section 3: validation
     format(S, '  "validation": ', []),
     write_validation_object(S, Constraints),
+    format(S, ',~n', []),
+
+    % Section 4: config
+    format(S, '  "config": ', []),
+    write_config_object(S),
+    format(S, ',~n', []),
+
+    % Section 5: type_hierarchy
+    format(S, '  "type_hierarchy": ', []),
+    write_type_hierarchy_object(S),
     format(S, '~n', []),
 
     format(S, '}~n', []).
@@ -96,6 +106,15 @@ write_per_constraint_entry(S, C, Comma) :-
     % id
     format(S, '      "id": ', []),
     write_json_string(S, C),
+    format(S, ',~n', []),
+
+    % human_readable
+    (   narrative_ontology:human_readable(C, HumanTitle)
+    ->  true
+    ;   HumanTitle = null
+    ),
+    format(S, '      "human_readable": ', []),
+    write_json_string(S, HumanTitle),
     format(S, ',~n', []),
 
     % claimed_type
@@ -204,7 +223,40 @@ write_per_constraint_entry(S, C, Comma) :-
     write_json_string_array(S, UVics),
     format(S, ',~n', []),
 
-    % resolution_strategy — deferred to Step 2
+    % emerges_naturally
+    (   catch(drl_core:emerges_naturally(C), _, fail)
+    ->  EmNat = true
+    ;   EmNat = false
+    ),
+    format(S, '      "emerges_naturally": ~w,~n', [EmNat]),
+
+    % requires_active_enforcement
+    (   catch(drl_core:requires_active_enforcement(C), _, fail)
+    ->  ReqEnf = true
+    ;   ReqEnf = false
+    ),
+    format(S, '      "requires_active_enforcement": ~w,~n', [ReqEnf]),
+
+    % classifications
+    findall(classification(CType, CP, CT, CE, CSc),
+            constraint_indexing:constraint_classification(C, CType,
+                context(agent_power(CP), time_horizon(CT),
+                        exit_options(CE), spatial_scope(CSc))),
+            Classifications),
+    format(S, '      "classifications": ', []),
+    write_classification_array(S, Classifications),
+    format(S, ',~n', []),
+
+    % domain
+    (   catch(domain_priors:category_of(C, Domain), _, fail)
+    ->  true
+    ;   Domain = null
+    ),
+    format(S, '      "domain": ', []),
+    write_json_string(S, Domain),
+    format(S, ',~n', []),
+
+    % resolution_strategy — deferred
     format(S, '      "resolution_strategy": null~n', []),
 
     % Close object
@@ -276,14 +328,14 @@ collect_omegas(C, Omegas) :-
     findall(omega(OID, OType, Question, Sev),
             (   report_generator:detect_gap_pattern(C, Gap),
                 report_generator:omega_from_gap(C, Gap, OID, OType, Question),
-                omega_severity_inline(OID, Sev)
+                report_generator:omega_severity(OID, Sev)
             ),
             GapOmegas),
     % Testset-declared omegas (omega_variable/3 facts)
     findall(omega(OID, OType, Desc, Sev),
             (   narrative_ontology:omega_variable(OID, OType, Desc),
                 omega_for_constraint(OID, C),
-                omega_severity_inline(OID, Sev)
+                report_generator:omega_severity(OID, Sev)
             ),
             DeclaredOmegas),
     append(GapOmegas, DeclaredOmegas, AllOmegas),
@@ -294,30 +346,6 @@ collect_omegas(C, Omegas) :-
 omega_for_constraint(OID, C) :-
     atom(OID), atom(C),
     sub_atom(OID, _, _, _, C).
-
-%% omega_severity_inline(+OmegaID, -Severity)
-%  Inlined severity logic (mirrors report_generator:omega_severity/2).
-omega_severity_inline(OID, critical) :-
-    atom(OID),
-    (   sub_atom(OID, _, _, _, extraction_blindness)
-    ;   (   narrative_ontology:omega_variable(OID, _, Desc),
-            atom(Desc),
-            (sub_atom(Desc, _, _, _, coercion)
-            ; sub_atom(Desc, _, _, _, trap)))
-    ), !.
-omega_severity_inline(OID, high) :-
-    atom(OID),
-    (   sub_atom(OID, _, _, _, learned_helplessness)
-    ;   sub_atom(OID, _, _, _, cut_safety)
-    ;   narrative_ontology:omega_variable(OID, conceptual, _)
-    ), !.
-omega_severity_inline(OID, moderate) :-
-    atom(OID),
-    narrative_ontology:omega_variable(OID, empirical, _), !.
-omega_severity_inline(OID, low) :-
-    atom(OID),
-    narrative_ontology:omega_variable(OID, preference, _), !.
-omega_severity_inline(_, unknown).
 
 /* ================================================================
    DIAGNOSTIC OBJECT
@@ -420,6 +448,73 @@ write_validation_object(S, Constraints) :-
     format(S, '  }', []).
 
 /* ================================================================
+   CONFIG OBJECT
+   ================================================================ */
+
+%% write_config_object(+Stream)
+%  Emits all config:param/2 facts as a flat JSON object.
+write_config_object(S) :-
+    findall(Name-Value, config:param(Name, Value), Pairs),
+    format(S, '{~n', []),
+    write_config_pairs(S, Pairs),
+    format(S, '~n  }', []).
+
+write_config_pairs(_, []).
+write_config_pairs(S, [Name-Value]) :-
+    !,
+    format(S, '    "~w": ', [Name]),
+    write_json_param_value(S, Value).
+write_config_pairs(S, [Name-Value|Rest]) :-
+    format(S, '    "~w": ', [Name]),
+    write_json_param_value(S, Value),
+    format(S, ',~n', []),
+    write_config_pairs(S, Rest).
+
+%% write_json_param_value(+Stream, +Value)
+%  Numbers as JSON numbers, atoms as JSON strings.
+write_json_param_value(S, V) :-
+    number(V), !,
+    write_json_number(S, V).
+write_json_param_value(S, V) :-
+    write_json_string(S, V).
+
+/* ================================================================
+   TYPE HIERARCHY OBJECT
+   ================================================================ */
+
+%% write_type_hierarchy_object(+Stream)
+%  Emits type metadata for all 6 constraint types.
+write_type_hierarchy_object(S) :-
+    Types = [mountain, rope, scaffold, piton, tangled_rope, snare],
+    format(S, '{~n', []),
+    write_type_hierarchy_entries(S, Types),
+    format(S, '~n  }', []).
+
+write_type_hierarchy_entries(_, []).
+write_type_hierarchy_entries(S, [Type]) :-
+    !,
+    write_single_type_entry(S, Type).
+write_type_hierarchy_entries(S, [Type|Rest]) :-
+    write_single_type_entry(S, Type),
+    format(S, ',~n', []),
+    write_type_hierarchy_entries(S, Rest).
+
+write_single_type_entry(S, Type) :-
+    report_generator:type_severity(Type, Sev),
+    report_generator:type_description(Type, Desc),
+    report_generator:type_strategy(Type, Strat),
+    report_generator:type_color(Type, Color),
+    format(S, '    "~w": {', [Type]),
+    format(S, '"severity": ~w, ', [Sev]),
+    format(S, '"description": ', []),
+    write_json_string(S, Desc),
+    format(S, ', "strategy": ', []),
+    write_json_string(S, Strat),
+    format(S, ', "color": ', []),
+    write_json_string(S, Color),
+    format(S, '}', []).
+
+/* ================================================================
    TALLY HELPERS
    ================================================================ */
 
@@ -478,7 +573,7 @@ tally_drift_severities(Constraints, Pairs) :-
 tally_omega_severities(OmegaIDs, Pairs) :-
     findall(Sev,
             (   member(OID, OmegaIDs),
-                omega_severity_inline(OID, Sev)),
+                report_generator:omega_severity(OID, Sev)),
             Sevs),
     msort(Sevs, Sorted),
     run_length_encode(Sorted, Pairs).
@@ -640,3 +735,37 @@ write_gap_items(S, [gap(GT, TP, TI)|Rest]) :-
     write_json_string(S, TI),
     format(S, '},~n', []),
     write_gap_items(S, Rest).
+
+/* ================================================================
+   CLASSIFICATION ARRAY
+   ================================================================ */
+
+%% write_classification_array(+Stream, +Classifications)
+%  Writes [{"type": ..., "context": {...}}, ...].
+write_classification_array(S, []) :- !, format(S, '[]', []).
+write_classification_array(S, Cls) :-
+    format(S, '[~n', []),
+    write_classification_items(S, Cls),
+    format(S, '~n      ]', []).
+
+write_classification_items(_, []).
+write_classification_items(S, [classification(Type, P, T, E, Sc)]) :-
+    !,
+    write_single_classification(S, Type, P, T, E, Sc).
+write_classification_items(S, [classification(Type, P, T, E, Sc)|Rest]) :-
+    write_single_classification(S, Type, P, T, E, Sc),
+    format(S, ',~n', []),
+    write_classification_items(S, Rest).
+
+write_single_classification(S, Type, P, T, E, Sc) :-
+    format(S, '        {"type": ', []),
+    write_json_string(S, Type),
+    format(S, ', "context": {"agent_power": ', []),
+    write_json_string(S, P),
+    format(S, ', "time_horizon": ', []),
+    write_json_string(S, T),
+    format(S, ', "exit_options": ', []),
+    write_json_string(S, E),
+    format(S, ', "spatial_scope": ', []),
+    write_json_string(S, Sc),
+    format(S, '}}', []).

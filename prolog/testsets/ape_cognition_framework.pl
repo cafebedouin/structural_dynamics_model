@@ -38,7 +38,8 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
-    narrative_ontology:coordination_type/2.
+    narrative_ontology:coordination_type/2,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -83,6 +84,7 @@ narrative_ontology:constraint_metric(ape_cognition_framework, theater_ratio, 0.4
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(ape_cognition_framework, tangled_rope).
+narrative_ontology:human_readable(ape_cognition_framework, "The scientific and ethical framework defining the limits of ape cognition.").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(ape_cognition_framework). % Required for Tangled Rope

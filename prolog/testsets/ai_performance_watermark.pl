@@ -39,7 +39,8 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -85,6 +86,7 @@ narrative_ontology:constraint_metric(ai_performance_watermark, theater_ratio, 0.
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(ai_performance_watermark, tangled_rope).
+narrative_ontology:human_readable(ai_performance_watermark, "Mandatory Watermarking for Synthetic Media").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(ai_performance_watermark). % Required for Tangled Rope

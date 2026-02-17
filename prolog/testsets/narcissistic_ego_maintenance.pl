@@ -25,7 +25,8 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -63,6 +64,7 @@ narrative_ontology:constraint_metric(narcissistic_ego_maintenance, theater_ratio
 
 % Constraint classification claim
 narrative_ontology:constraint_claim(narcissistic_ego_maintenance, piton).
+narrative_ontology:human_readable(narcissistic_ego_maintenance, "The Mirror Trap").
 
 % Binary flags
 domain_priors:requires_active_enforcement(narcissistic_ego_maintenance).

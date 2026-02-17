@@ -21,7 +21,8 @@
     narrative_ontology:has_sunset_clause/1,
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_claim/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -58,6 +59,7 @@ narrative_ontology:constraint_metric(ai_auditability_gap, theater_ratio, 0.75).
 
 % Constraint classification claim
 narrative_ontology:constraint_claim(ai_auditability_gap, tangled_rope).
+narrative_ontology:human_readable(ai_auditability_gap, "The Black Box Impasse").
 
 % Constraint metric facts used by classification engine v3.4
 domain_priors:requires_active_enforcement(ai_auditability_gap).

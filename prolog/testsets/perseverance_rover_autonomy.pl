@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -66,6 +67,7 @@ narrative_ontology:constraint_metric(perseverance_rover_autonomy, theater_ratio,
 % Constraint self-claim (what does the constraint claim to be?)
 % Values: natural_law, coordination, constructed, enforcement
 narrative_ontology:constraint_claim(perseverance_rover_autonomy, rope).
+narrative_ontology:human_readable(perseverance_rover_autonomy, "Perseverance Rover Autonomy").
 
 % Structural property derivation hooks:
 %   has_coordination_function/1 is DERIVED from constraint_beneficiary/2

@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -69,6 +70,7 @@ narrative_ontology:constraint_metric(governance_latency_gap, theater_ratio, 0.75
 % Constraint self-claim (what does the constraint claim to be?)
 % It claims to be a necessary condition for innovation, a form of coordination.
 narrative_ontology:constraint_claim(governance_latency_gap, tangled_rope).
+narrative_ontology:human_readable(governance_latency_gap, "The Velocity Mismatch").
 
 % Binary flags
 % The structure relies on the *potential* for future regulation, which innovators

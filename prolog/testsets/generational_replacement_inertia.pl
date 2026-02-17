@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -76,6 +77,7 @@ narrative_ontology:constraint_metric(generational_replacement_inertia, theater_r
 % Constraint self-claim (what does the constraint claim to be?)
 % It claims to be an immutable law of human social dynamics.
 narrative_ontology:constraint_claim(generational_replacement_inertia, snare).
+narrative_ontology:human_readable(generational_replacement_inertia, "Generational Cognitive Inertia").
 
 % Structural property derivation hooks:
 % The process benefits future generations at the cost of the current one's potential.

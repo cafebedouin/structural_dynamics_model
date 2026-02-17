@@ -44,7 +44,8 @@
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
-    narrative_ontology:omega_variable/3.
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -100,6 +101,7 @@ narrative_ontology:constraint_metric(gradient_descent_optimization, resistance, 
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(gradient_descent_optimization, rope).
+narrative_ontology:human_readable(gradient_descent_optimization, "Gradient Descent Iterative Optimization").
 
 % --- Emergence flag (required for mountain constraints) ---
 % The update rule emerges from the laws of multivariate calculus.

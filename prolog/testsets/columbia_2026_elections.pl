@@ -38,7 +38,8 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:omega_variable/3.
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -92,6 +93,7 @@ narrative_ontology:constraint_metric(colombia_2026_presidential_election, theate
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(colombia_2026_presidential_election, tangled_rope).
+narrative_ontology:human_readable(colombia_2026_presidential_election, "2026 Colombian Presidential Election Structure").
 
 % --- Binary flags ---
 % The electoral structure is maintained by the National Electoral Council (CNE)

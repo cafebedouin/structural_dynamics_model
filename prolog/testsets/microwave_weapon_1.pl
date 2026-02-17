@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -65,6 +66,7 @@ narrative_ontology:constraint_metric(microwave_weapon_1, theater_ratio, 0.2).
 % Constraint self-claim (what does the constraint claim to be?)
 % Values: natural_law, coordination, constructed, enforcement
 narrative_ontology:constraint_claim(microwave_weapon_1, tangled_rope).
+narrative_ontology:human_readable(microwave_weapon_1, "Chinese Anti-Satellite Microwave Weapon").
 
 % Binary flags
 % narrative_ontology:has_sunset_clause(microwave_weapon_1).      % Mandatory if Scaffold

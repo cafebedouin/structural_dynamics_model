@@ -25,7 +25,8 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:coordination_type/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -61,6 +62,7 @@ narrative_ontology:constraint_metric(steinmetz_valuation_asymmetry, theater_rati
 
 % Constraint self-claim (what does the constraint claim to be?)
 narrative_ontology:constraint_claim(steinmetz_valuation_asymmetry, tangled_rope).
+narrative_ontology:human_readable(steinmetz_valuation_asymmetry, "The Steinmetz Chalk Mark (Knowledge Valuation Asymmetry)").
 
 % Binary flags
 domain_priors:requires_active_enforcement(steinmetz_valuation_asymmetry). % The value is only realized via the itemized invoice.

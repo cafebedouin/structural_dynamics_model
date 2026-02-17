@@ -26,7 +26,8 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:omega_variable/3,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -78,6 +79,7 @@ narrative_ontology:constraint_metric(belief_argument_conclusion, theater_ratio, 
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(belief_argument_conclusion, snare).
+narrative_ontology:human_readable(belief_argument_conclusion, "The Futility of Arguing Against Instinctive Belief").
 
 % --- Binary flags ---
 % The process requires active engagement (enforcement) from the participants.

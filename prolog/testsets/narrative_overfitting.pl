@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -71,6 +72,7 @@ narrative_ontology:constraint_metric(narrative_overfitting, theater_ratio, 0.94)
 % Constraint self-claim (what does the constraint claim to be?)
 % It claims to be a coordination tool for making sense of the world.
 narrative_ontology:constraint_claim(narrative_overfitting, tangled_rope).
+narrative_ontology:human_readable(narrative_overfitting, "The Procrustean Plot").
 
 % Binary flags and structural properties for Tangled Rope classification
 domain_priors:requires_active_enforcement(narrative_overfitting). % Algorithmic amplification and social pressure enforce the narrative.

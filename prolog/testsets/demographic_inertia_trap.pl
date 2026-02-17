@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -70,6 +71,7 @@ narrative_ontology:constraint_metric(demographic_inertia_trap, theater_ratio, 0.
 % Constraint self-claim (what does the constraint claim to be?)
 % It claims to be a social contract for elder care.
 narrative_ontology:constraint_claim(demographic_inertia_trap, tangled_rope).
+narrative_ontology:human_readable(demographic_inertia_trap, "The Generational Wealth Siphon").
 
 % Binary flags
 % This system of transfers requires tax collection and pension distribution,

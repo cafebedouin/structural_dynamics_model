@@ -38,7 +38,8 @@
     narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3,
     domain_priors:emerges_naturally/1,
-    narrative_ontology:omega_variable/3.
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -105,6 +106,7 @@ narrative_ontology:constraint_metric(quine_self_replication, resistance, 0.0).
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(quine_self_replication, tangled_rope).
+narrative_ontology:human_readable(quine_self_replication, "Quines (Computational Self-Replication)").
 
 % --- Binary flags ---
 % The logic requires a compiler/interpreter to execute it.

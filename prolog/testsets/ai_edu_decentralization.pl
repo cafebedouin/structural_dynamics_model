@@ -18,7 +18,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -53,6 +54,7 @@
 % Required for structural identification
 narrative_ontology:interval(ai_edu_decentralization, 0, 10).
 narrative_ontology:constraint_claim(ai_edu_decentralization, rope).
+narrative_ontology:human_readable(ai_edu_decentralization, "The AI-Education Decoupling").
 
 % Base Properties
 domain_priors:base_extractiveness(ai_edu_decentralization, 0.50). 

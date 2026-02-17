@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -71,6 +72,7 @@ narrative_ontology:constraint_metric(portuguese_presidential_term_limits, theate
 
 % Constraint self-claim: It claims to be a coordination mechanism for democratic turnover.
 narrative_ontology:constraint_claim(portuguese_presidential_term_limits, tangled_rope).
+narrative_ontology:human_readable(portuguese_presidential_term_limits, "Portuguese Constitutional Term Limits (Article 123)").
 
 % Binary flags
 domain_priors:requires_active_enforcement(portuguese_presidential_term_limits).

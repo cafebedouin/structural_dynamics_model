@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -74,6 +75,7 @@ narrative_ontology:constraint_metric(nuclear_vacuum_2026, theater_ratio, 0.42).
 
 % Constraint self-claim: The new state of ambiguity is enforced by mutual threat.
 narrative_ontology:constraint_claim(nuclear_vacuum_2026, tangled_rope).
+narrative_ontology:human_readable(nuclear_vacuum_2026, "The New START Expiration (Post-Arms Control Era)").
 
 % Binary flags: The new "stability" requires the active threat of retaliation.
 domain_priors:requires_active_enforcement(nuclear_vacuum_2026).

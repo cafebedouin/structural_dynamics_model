@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -71,6 +72,7 @@ narrative_ontology:constraint_metric(systemic_blindspot, theater_ratio, 0.82).
 % Constraint self-claim (what does the constraint claim to be?)
 % The institution claims its framework is for coordination and safety.
 narrative_ontology:constraint_claim(systemic_blindspot, tangled_rope).
+narrative_ontology:human_readable(systemic_blindspot, "The Incalculable Tail-Risk").
 
 % Binary flags
 % Enforcement is the institutional pressure to conform to the limited metrics.

@@ -20,7 +20,8 @@
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -53,6 +54,7 @@
 
 narrative_ontology:interval(kidney_exchange_market, 0, 10).
 narrative_ontology:constraint_claim(kidney_exchange_market, rope).
+narrative_ontology:human_readable(kidney_exchange_market, "Kidney Exchange Cycles/Chains").
 
 % Base extractiveness: 0.1.
 % There is no "profit" extraction; the system is designed for maximum life-saving.

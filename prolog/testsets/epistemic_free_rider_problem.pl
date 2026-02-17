@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -70,6 +71,7 @@ narrative_ontology:constraint_metric(epistemic_free_rider_problem, theater_ratio
 % Constraint self-claim (what does the constraint claim to be?)
 % The system of content aggregation and synthesis claims to be a coordination mechanism.
 narrative_ontology:constraint_claim(epistemic_free_rider_problem, tangled_rope).
+narrative_ontology:human_readable(epistemic_free_rider_problem, "The Truth-Mining Exhaustion").
 
 % Binary flags
 % Enforcement is algorithmic: search rankings, platform policies, and slow copyright systems.

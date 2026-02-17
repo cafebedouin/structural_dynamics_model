@@ -42,7 +42,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3.
+    constraint_indexing:directionality_override/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -87,6 +88,7 @@ narrative_ontology:constraint_metric(public_domain_commons, theater_ratio, 0.08)
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(public_domain_commons, rope).
+narrative_ontology:human_readable(public_domain_commons, "The Public Domain as a Cultural Commons").
 
 % --- Binary flags ---
 % The existence of the commons must be actively defended against encroachment

@@ -37,7 +37,8 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:omega_variable/3,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -101,6 +102,7 @@ narrative_ontology:constraint_metric(layered_brain_processing, resistance, 0.05)
 % --- Constraint claim (must match analytical perspective type) ---
 % The analytical perspective (neuroscientist) sees a functional coordination mechanism.
 narrative_ontology:constraint_claim(layered_brain_processing, rope).
+narrative_ontology:human_readable(layered_brain_processing, "Layered Contextual Meaning Construction").
 
 % --- Emergence flag (required for mountain constraints) ---
 % The constraint is a biological process that emerges naturally.

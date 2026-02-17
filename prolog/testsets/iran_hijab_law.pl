@@ -39,7 +39,8 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -83,6 +84,7 @@ narrative_ontology:constraint_metric(iran_hijab_law, theater_ratio, 0.20).
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(iran_hijab_law, tangled_rope).
+narrative_ontology:human_readable(iran_hijab_law, "Mandatory Hijab Law in Iran").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(iran_hijab_law). % Required for Tangled Rope

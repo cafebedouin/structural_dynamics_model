@@ -38,7 +38,8 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
-    narrative_ontology:coordination_type/2.
+    narrative_ontology:coordination_type/2,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -81,6 +82,7 @@ narrative_ontology:constraint_metric(ai_nonconsensual_content_facilitation, thea
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(ai_nonconsensual_content_facilitation, tangled_rope).
+narrative_ontology:human_readable(ai_nonconsensual_content_facilitation, "Facilitation of AI-Generated Non-Consensual Sexual Content on Social Media Platforms").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(ai_nonconsensual_content_facilitation). % Required for Tangled Rope. The platform's stated goal of being a safe public square requires enforcement, which is failing.

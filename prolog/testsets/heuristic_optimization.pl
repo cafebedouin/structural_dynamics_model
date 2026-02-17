@@ -44,7 +44,8 @@
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
-    narrative_ontology:omega_variable/3.
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -91,6 +92,7 @@ narrative_ontology:constraint_metric(heuristic_optimization, resistance, 0.05).
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(heuristic_optimization, rope).
+narrative_ontology:human_readable(heuristic_optimization, "Heuristic Optimization (\"Good Enough\" Solutions)").
 
 % --- Emergence flag (required for mountain constraints) ---
 % Heuristics emerge naturally from cognitive and computational scarcity.

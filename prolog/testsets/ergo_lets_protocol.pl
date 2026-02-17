@@ -24,7 +24,8 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:omega_variable/3,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -82,6 +83,7 @@ narrative_ontology:constraint_metric(ergo_lets_protocol, resistance, 0.05).
 % --- Constraint claim (must match analytical perspective type) ---
 % While it has Mountain-like properties, its primary function is coordination.
 narrative_ontology:constraint_claim(ergo_lets_protocol, rope).
+narrative_ontology:human_readable(ergo_lets_protocol, "Ergo Local Exchange Trading System (LETS)").
 
 % --- Emergence flag (required for mountain constraints) ---
 % The "Sum = 0" rule is a mathematical property that emerges from the

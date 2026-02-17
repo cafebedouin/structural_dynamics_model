@@ -43,7 +43,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1.
+    domain_priors:emerges_naturally/1,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -88,6 +89,7 @@ narrative_ontology:constraint_metric(cn_tech_decoupling_security_software, theat
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(cn_tech_decoupling_security_software, tangled_rope).
+narrative_ontology:human_readable(cn_tech_decoupling_security_software, "Mandate for Chinese SOEs to replace US security software").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(cn_tech_decoupling_security_software). % Required for Tangled Rope

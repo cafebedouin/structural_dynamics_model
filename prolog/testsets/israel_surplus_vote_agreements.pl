@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -71,6 +72,7 @@ narrative_ontology:constraint_metric(israel_surplus_vote_agreements, theater_rat
 
 % Constraint self-claim: The system is publicly framed as a tool for efficient coordination.
 narrative_ontology:constraint_claim(israel_surplus_vote_agreements, tangled_rope).
+narrative_ontology:human_readable(israel_surplus_vote_agreements, "Surplus-Vote Agreements (Bader-Ofer Method)").
 
 % Binary flags
 domain_priors:requires_active_enforcement(israel_surplus_vote_agreements). % The Central Elections Committee must enforce the calculations.

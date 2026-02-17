@@ -44,7 +44,8 @@
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
-    narrative_ontology:omega_variable/3.
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -97,6 +98,7 @@ narrative_ontology:constraint_metric(brouwer_fixed_point, resistance, 0.0).
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(brouwer_fixed_point, mountain).
+narrative_ontology:human_readable(brouwer_fixed_point, "Brouwer Fixed Point Theorem").
 
 % --- Emergence flag (required for mountain constraints) ---
 % The theorem emerges from the axioms of topology and continuity without human enforcement.

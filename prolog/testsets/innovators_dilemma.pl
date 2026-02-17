@@ -25,7 +25,8 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:coordination_type/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -65,6 +66,7 @@ narrative_ontology:constraint_metric(innovators_dilemma, theater_ratio, 0.10).
 % Constraint self-claim (what does the constraint claim to be?)
 % The internal logic of the firm frames its resource allocation as rational coordination.
 narrative_ontology:constraint_claim(innovators_dilemma, tangled_rope).
+narrative_ontology:human_readable(innovators_dilemma, "The Innovator's Dilemma").
 
 % Binary flags
 % The dilemma is enforced by the firm's own rational processes.

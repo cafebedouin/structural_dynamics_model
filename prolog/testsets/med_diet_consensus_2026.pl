@@ -39,7 +39,8 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:omega_variable/3,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -94,6 +95,7 @@ narrative_ontology:constraint_metric(med_diet_consensus_2026, theater_ratio, 0.1
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(med_diet_consensus_2026, tangled_rope).
+narrative_ontology:human_readable(med_diet_consensus_2026, "Mediterranean Diet Scientific Hegemony").
 
 % --- Binary flags ---
 % Rationale: The consensus is actively maintained by journals, universities,

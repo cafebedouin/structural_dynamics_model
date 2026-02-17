@@ -27,7 +27,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -67,6 +68,7 @@ narrative_ontology:constraint_metric(the_wall_procedural_barrier, theater_ratio,
 % Constraint self-claim (what does the constraint claim to be?)
 % It claimed to be a necessary coordination mechanism to protect legal purity.
 narrative_ontology:constraint_claim(the_wall_procedural_barrier, snare).
+narrative_ontology:human_readable(the_wall_procedural_barrier, "The Intelligence/Law Enforcement Information Sharing Barrier (\"The Wall\")").
 
 % Binary flags
 domain_priors:requires_active_enforcement(the_wall_procedural_barrier).

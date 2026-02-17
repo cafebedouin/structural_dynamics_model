@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -73,6 +74,7 @@ narrative_ontology:constraint_metric(harm_principle_liberty, theater_ratio, 0.10
 
 % Constraint self-claim: The principle claims to be a pure coordination rule for liberty.
 narrative_ontology:constraint_claim(harm_principle_liberty, tangled_rope).
+narrative_ontology:human_readable(harm_principle_liberty, "Mill's Harm Principle as a Social Constraint").
 
 % Binary flags
 % Enforcement is required both by law (for direct harm) and "moral repression"

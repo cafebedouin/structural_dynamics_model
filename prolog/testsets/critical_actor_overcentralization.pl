@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -70,6 +71,7 @@ narrative_ontology:constraint_metric(critical_actor_overcentralization, theater_
 
 % Constraint self-claim (what does the constraint claim to be?)
 narrative_ontology:constraint_claim(critical_actor_overcentralization, tangled_rope).
+narrative_ontology:human_readable(critical_actor_overcentralization, "The Single Point of Failure").
 
 % Binary flags and structural properties
 domain_priors:requires_active_enforcement(critical_actor_overcentralization). % Required for Tangled Rope

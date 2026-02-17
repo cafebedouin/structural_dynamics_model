@@ -24,7 +24,8 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:interval/3,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -72,6 +73,7 @@ narrative_ontology:constraint_metric(world_factbook_sunset_2026, theater_ratio, 
 
 % Constraint self-claim (analytical classification)
 narrative_ontology:constraint_claim(world_factbook_sunset_2026, piton).
+narrative_ontology:human_readable(world_factbook_sunset_2026, "CIA World Factbook Termination").
 
 narrative_ontology:constraint_beneficiary(world_factbook_sunset_2026, agency_resource_consolidation).
 narrative_ontology:constraint_victim(world_factbook_sunset_2026, public_knowledge_access).

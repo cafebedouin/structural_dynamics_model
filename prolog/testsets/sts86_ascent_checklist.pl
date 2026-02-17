@@ -20,7 +20,8 @@
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -52,6 +53,7 @@
 
 narrative_ontology:interval(sts86_ascent_checklist, 0, 10).
 narrative_ontology:constraint_claim(sts86_ascent_checklist, tangled_rope).
+narrative_ontology:human_readable(sts86_ascent_checklist, "Space Shuttle Ascent/Abort Procedural Matrix").
 
 % Base extractiveness: 0.05.
 % NASA gains nothing from crew failure. 

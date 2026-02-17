@@ -25,7 +25,8 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -61,6 +62,7 @@ narrative_ontology:constraint_metric(openai_api_access, theater_ratio, 0.10).
 
 % Constraint classification claim
 narrative_ontology:constraint_claim(openai_api_access, tangled_rope).
+narrative_ontology:human_readable(openai_api_access, "OpenAI API Access Controls").
 
 % Binary flags
 % narrative_ontology:has_sunset_clause(openai_api_access).      % Mandatory if Scaffold

@@ -44,7 +44,8 @@
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
-    narrative_ontology:omega_variable/3.
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -99,6 +100,7 @@ narrative_ontology:constraint_metric(genetic_algorithms_evolution, resistance, 0
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(genetic_algorithms_evolution, mountain).
+narrative_ontology:human_readable(genetic_algorithms_evolution, "Genetic Algorithms (Search by Selection)").
 
 % --- Emergence flag (required for mountain constraints) ---
 % The selection pressure emerges naturally from the fitness function and

@@ -25,7 +25,8 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -73,6 +74,7 @@ narrative_ontology:constraint_metric(riot_incentive_loop_2026, theater_ratio, 0.
 
 % Constraint classification claim
 narrative_ontology:constraint_claim(riot_incentive_loop_2026, piton).
+narrative_ontology:human_readable(riot_incentive_loop_2026, "The Riot-Incentive Loop (State-Managed Chaos)").
 
 % Requires active enforcement by federal tactical units (CBP, ICE, DHS).
 domain_priors:requires_active_enforcement(riot_incentive_loop_2026).

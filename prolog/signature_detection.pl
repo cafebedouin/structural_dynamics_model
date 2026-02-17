@@ -616,11 +616,15 @@ integrate_signature_with_modal(C, ModalType, AdjustedType) :-
 %  at the metric layer, preserve the metric-based classification.
 %  Uniform classification despite varying χ is genuinely suspicious.
 %  Perspectival differentiation is evidence the system is working.
+%  Exception: never preserve "unknown" — it is an absence of classification,
+%  not a valid perspectival result. Variance between a real type and unknown
+%  is evidence the metric layer partially failed, not that indexing works.
 resolve_with_perspectival_check(C, ModalType, false_ci_rope, AdjustedType) :-
     !,
-    (   has_metric_perspectival_variance(C)
+    (   ModalType \= unknown,
+        has_metric_perspectival_variance(C)
     ->  AdjustedType = ModalType    % Preserve: indexical differentiation detected
-    ;   AdjustedType = tangled_rope % Override: uniform classification is suspicious
+    ;   AdjustedType = tangled_rope % Override: uniform or unknown classification
     ).
 resolve_with_perspectival_check(_C, ModalType, Signature, AdjustedType) :-
     resolve_modal_signature_conflict(ModalType, Signature, AdjustedType).

@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -68,6 +69,7 @@ narrative_ontology:constraint_metric(rational_inertia_trap, theater_ratio, 0.72)
 % Constraint self-claim (what does the constraint claim to be?)
 % The incumbent claims the legacy protocol is just a coordination standard.
 narrative_ontology:constraint_claim(rational_inertia_trap, tangled_rope).
+narrative_ontology:human_readable(rational_inertia_trap, "The Legacy Protocol Lock-in").
 
 % Binary flags
 % Enforcement is through network effects, proprietary APIs, and high switching costs.

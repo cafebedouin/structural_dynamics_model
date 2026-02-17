@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -71,6 +72,7 @@ narrative_ontology:constraint_metric(epistemic_overload_collapse, theater_ratio,
 
 % Constraint self-claim (what does the constraint claim to be?)
 narrative_ontology:constraint_claim(epistemic_overload_collapse, tangled_rope).
+narrative_ontology:human_readable(epistemic_overload_collapse, "The Signal-Drowning Vortex").
 
 % Binary flags
 domain_priors:requires_active_enforcement(epistemic_overload_collapse). % Required for Tangled Rope

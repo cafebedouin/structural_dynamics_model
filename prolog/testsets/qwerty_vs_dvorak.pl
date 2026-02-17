@@ -39,7 +39,8 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:omega_variable/3,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -92,6 +93,7 @@ narrative_ontology:constraint_metric(qwerty_vs_dvorak, theater_ratio, 0.12).
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(qwerty_vs_dvorak, tangled_rope).
+narrative_ontology:human_readable(qwerty_vs_dvorak, "QWERTY vs. Dvorak (Technological Lock-in)").
 
 % --- Binary flags ---
 % The lock-in is not a law of nature; it is maintained by the continuous,

@@ -25,7 +25,8 @@
     narrative_ontology:measurement/5,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -65,6 +66,7 @@
 % ID Binding - Mandatory for 2026 DR-Audit Suite
 narrative_ontology:interval(authoritarian_power_paradox, 0, 10).
 narrative_ontology:constraint_claim(authoritarian_power_paradox, snare).
+narrative_ontology:human_readable(authoritarian_power_paradox, "The Paradox of Authoritarian Centralization").
 
 % Base Properties
 domain_priors:base_extractiveness(authoritarian_power_paradox, 0.80).

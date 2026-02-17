@@ -44,7 +44,8 @@
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
-    narrative_ontology:omega_variable/3.
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -106,6 +107,7 @@ narrative_ontology:constraint_metric(pythagorean_geometric_constancy, resistance
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(pythagorean_geometric_constancy, mountain).
+narrative_ontology:human_readable(pythagorean_geometric_constancy, "The Pythagorean Theorem").
 
 % --- Emergence flag (required for mountain constraints) ---
 % The theorem emerges naturally from the axioms of Euclidean geometry without

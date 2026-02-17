@@ -25,7 +25,8 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -71,6 +72,7 @@ narrative_ontology:constraint_metric(axiom_reasoner_2026, theater_ratio, 0.08).
 
 % Constraint classification claim
 narrative_ontology:constraint_claim(axiom_reasoner_2026, tangled_rope).
+narrative_ontology:human_readable(axiom_reasoner_2026, "Axiom's Self-Improving Superintelligent Reasoner").
 domain_priors:requires_active_enforcement(axiom_reasoner_2026).
 
 % Primary keys for the classification engine

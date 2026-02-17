@@ -26,7 +26,8 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -61,6 +62,7 @@ narrative_ontology:constraint_metric(japanese_energy_scaffold_2025, theater_rati
 
 % Constraint self-claim (what does the constraint claim to be?)
 narrative_ontology:constraint_claim(japanese_energy_scaffold_2025, tangled_rope).
+narrative_ontology:human_readable(japanese_energy_scaffold_2025, "The Japanese Energy Self-Sufficiency Scaffold").
 
 % Binary flags
 domain_priors:requires_active_enforcement(japanese_energy_scaffold_2025). % Requires NRA safety checks, GX bond issuance, and zoning laws.

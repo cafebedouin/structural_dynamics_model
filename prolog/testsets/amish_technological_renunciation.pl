@@ -19,7 +19,8 @@
     domain_priors:suppression_score/2,
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -56,6 +57,7 @@
 % ID Binding - Mandatory for 2026 DR-Audit Suite
 narrative_ontology:interval(amish_technological_renunciation, 0, 10).
 narrative_ontology:constraint_claim(amish_technological_renunciation, snare).
+narrative_ontology:human_readable(amish_technological_renunciation, "The Television Test (Amish Renunciation)").
 
 % Base Properties
 % Rationale: High extraction (0.8). Mass technology siphons volitional agency 

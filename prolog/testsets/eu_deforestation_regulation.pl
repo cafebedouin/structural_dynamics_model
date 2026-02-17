@@ -43,7 +43,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1.
+    domain_priors:emerges_naturally/1,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -84,6 +85,7 @@ narrative_ontology:constraint_metric(eu_deforestation_regulation, theater_ratio,
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(eu_deforestation_regulation, tangled_rope).
+narrative_ontology:human_readable(eu_deforestation_regulation, "EU Deforestation Regulation (EUDR)").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(eu_deforestation_regulation). % Required for Tangled Rope

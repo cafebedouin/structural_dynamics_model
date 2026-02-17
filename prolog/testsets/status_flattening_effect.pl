@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -70,6 +71,7 @@ narrative_ontology:constraint_metric(status_flattening_effect, theater_ratio, 0.
 
 % The platform claims this is a necessary coordination tool for legibility.
 narrative_ontology:constraint_claim(status_flattening_effect, tangled_rope).
+narrative_ontology:human_readable(status_flattening_effect, "The Algorithmic Leveler").
 
 % Binary flags and structural properties for Tangled Rope classification
 domain_priors:requires_active_enforcement(status_flattening_effect). % Algorithmic ranking actively enforces the flattened metric.

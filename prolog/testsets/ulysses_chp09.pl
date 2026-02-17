@@ -25,7 +25,8 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -65,6 +66,7 @@ narrative_ontology:constraint_metric(ulysses_scylla_1904, theater_ratio, 0.90).
 
 % Constraint classification claim
 narrative_ontology:constraint_claim(ulysses_scylla_1904, piton).
+narrative_ontology:human_readable(ulysses_scylla_1904, "The Hamlet Algebra (National Library)").
 
 % Structural Property Declarations
 narrative_ontology:constraint_beneficiary(ulysses_scylla_1904, dublin_intelligentsia). % Coordination of culture[cite: 7948].

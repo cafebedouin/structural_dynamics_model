@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -68,6 +69,7 @@ narrative_ontology:constraint_metric(global_protocol_entrenchment, theater_ratio
 
 % Constraint self-claim: The protocol presents itself as a pure public good.
 narrative_ontology:constraint_claim(global_protocol_entrenchment, tangled_rope).
+narrative_ontology:human_readable(global_protocol_entrenchment, "The Universal Standard Lock").
 
 % Binary flags and structural properties for Tangled Rope classification.
 domain_priors:requires_active_enforcement(global_protocol_entrenchment).

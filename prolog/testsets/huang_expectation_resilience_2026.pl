@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -75,6 +76,7 @@ narrative_ontology:constraint_metric(huang_expectation_resilience_2026, theater_
 % Constraint self-claim (what does the constraint claim to be?)
 % The system of elite education claims to be a constructed pathway to success.
 narrative_ontology:constraint_claim(huang_expectation_resilience_2026, piton).
+narrative_ontology:human_readable(huang_expectation_resilience_2026, "The Stanford Expectation Trap (Resilience Scarcity)").
 
 % Structural property derivation hooks:
 narrative_ontology:constraint_beneficiary(huang_expectation_resilience_2026, industry_requiring_resilience).

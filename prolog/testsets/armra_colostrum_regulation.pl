@@ -39,7 +39,8 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:omega_variable/3.
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -77,6 +78,7 @@ narrative_ontology:constraint_metric(armra_colostrum_regulation, theater_ratio, 
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(armra_colostrum_regulation, tangled_rope).
+narrative_ontology:human_readable(armra_colostrum_regulation, "Regulatory Oversight of ARMRA Colostrum Supplement Claims").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(armra_colostrum_regulation). % Required for Tangled Rope

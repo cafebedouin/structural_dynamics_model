@@ -19,7 +19,8 @@
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -53,6 +54,7 @@
 
 narrative_ontology:interval(tcp_rfc9293_interoperability, 0, 10).
 narrative_ontology:constraint_claim(tcp_rfc9293_interoperability, rope).
+narrative_ontology:human_readable(tcp_rfc9293_interoperability, "TCP Interoperability & Reliability Requirements").
 
 % Base extractiveness: 0.2. 
 % (Header overhead, TCB memory, and processing "tax" for reliability).

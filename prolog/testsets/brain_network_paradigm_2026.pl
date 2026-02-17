@@ -39,7 +39,8 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -81,6 +82,7 @@ narrative_ontology:constraint_metric(brain_network_paradigm_2026, theater_ratio,
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(brain_network_paradigm_2026, tangled_rope).
+narrative_ontology:human_readable(brain_network_paradigm_2026, "Distributed Brain Network Scientific Paradigm").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(brain_network_paradigm_2026). % Required for Tangled Rope

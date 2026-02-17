@@ -43,7 +43,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1.
+    domain_priors:emerges_naturally/1,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -92,6 +93,7 @@ narrative_ontology:constraint_metric(un_high_seas_treaty_2026, theater_ratio, 0.
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(un_high_seas_treaty_2026, tangled_rope).
+narrative_ontology:human_readable(un_high_seas_treaty_2026, "UN High Seas Treaty for Marine Biodiversity (BBNJ)").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(un_high_seas_treaty_2026). % Required for Tangled Rope

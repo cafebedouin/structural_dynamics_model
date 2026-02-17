@@ -25,7 +25,8 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:coordination_type/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -66,6 +67,7 @@ narrative_ontology:constraint_metric(utopia_apocalypse_fragility, theater_ratio,
 % Constraint self-claim (what does the constraint claim to be?)
 % Analytically, the stochastic nature of existence is claimed as an unchangeable law.
 narrative_ontology:constraint_claim(utopia_apocalypse_fragility, tangled_rope).
+narrative_ontology:human_readable(utopia_apocalypse_fragility, "The Utopia-Apocalypse Cliff-Edge").
 
 % Binary flags
 % The maintenance of "Utopia" requires constant, active effort to prevent the slide.

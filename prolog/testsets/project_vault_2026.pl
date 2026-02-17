@@ -25,7 +25,8 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -68,6 +69,7 @@ narrative_ontology:constraint_metric(project_vault_2026, theater_ratio, 0.65).
 
 % Constraint classification claim
 narrative_ontology:constraint_claim(project_vault_2026, tangled_rope).
+narrative_ontology:human_readable(project_vault_2026, "Project Vault Strategic Mineral Reserve").
 
 % Scaffold/Tangled Rope Requirements
 domain_priors:requires_active_enforcement(project_vault_2026). % Mandatory buy-in contracts.

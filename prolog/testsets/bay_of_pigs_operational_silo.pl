@@ -25,7 +25,8 @@
     narrative_ontology:measurement/5,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -62,6 +63,7 @@
 % ID Binding - Fixed ID to match constraint for drift detection
 narrative_ontology:interval(bay_of_pigs_operational_silo, 0, 10).
 narrative_ontology:constraint_claim(bay_of_pigs_operational_silo, snare).
+narrative_ontology:human_readable(bay_of_pigs_operational_silo, "The CIA-Pentagon Intelligence/Action Silo (Operation Zapata)").
 
 % Base Properties
 % Rationale: 0.90 extraction of life and political capital.

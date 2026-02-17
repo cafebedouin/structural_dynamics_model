@@ -41,7 +41,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3.
+    constraint_indexing:directionality_override/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -100,6 +101,7 @@ narrative_ontology:constraint_metric(logistic_map_dynamics, theater_ratio, 0.0).
 % (predictability in stable regimes) while also containing an asymmetric
 % extractive component (information destruction in chaotic regimes).
 narrative_ontology:constraint_claim(logistic_map_dynamics, tangled_rope).
+narrative_ontology:human_readable(logistic_map_dynamics, "The Logistic Map (Bifurcation and Chaos)").
 
 % --- Binary flags ---
 % Required for Tangled Rope. The "enforcement" is the mathematical rule itself,

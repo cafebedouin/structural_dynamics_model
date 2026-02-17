@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -68,6 +69,7 @@ narrative_ontology:constraint_metric(cloudflare_dual_class_asymmetry, theater_ra
 % Constraint self-claim (what does the constraint claim to be?)
 % It is presented as a necessary legal structure for long-term stability.
 narrative_ontology:constraint_claim(cloudflare_dual_class_asymmetry, tangled_rope).
+narrative_ontology:human_readable(cloudflare_dual_class_asymmetry, "Cloudflare Dual-Class Voting Control").
 
 % Binary flags
 domain_priors:requires_active_enforcement(cloudflare_dual_class_asymmetry). % Required for Tangled Rope

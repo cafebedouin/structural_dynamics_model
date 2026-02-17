@@ -43,7 +43,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1.
+    domain_priors:emerges_naturally/1,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -92,6 +93,7 @@ narrative_ontology:constraint_metric(kim_jong_un_succession, theater_ratio, 0.30
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(kim_jong_un_succession, tangled_rope).
+narrative_ontology:human_readable(kim_jong_un_succession, "Kim Jong-un's Succession Plan").
 
 % --- Binary flags ---
 % narrative_ontology:has_sunset_clause(kim_jong_un_succession).      % Mandatory if Scaffold

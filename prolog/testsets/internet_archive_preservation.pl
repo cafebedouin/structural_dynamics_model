@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -70,6 +71,7 @@ narrative_ontology:constraint_metric(ia_digital_preservation, theater_ratio, 0.2
 % Constraint self-claim (what does the constraint claim to be?)
 % The IA frames its mission as a public good and coordination effort.
 narrative_ontology:constraint_claim(ia_digital_preservation, tangled_rope).
+narrative_ontology:human_readable(ia_digital_preservation, "The Internet Archive Preservation-Copyright Conflict").
 
 % Binary flags
 % The DWeb backup's role as a scaffold sunsets if the central IA's legal status is secured.

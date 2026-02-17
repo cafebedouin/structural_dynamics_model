@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -72,6 +73,7 @@ narrative_ontology:constraint_metric(meta_model_lock_in, theater_ratio, 0.88).
 % Constraint self-claim (what does the constraint claim to be?)
 % It claims to be a coordination tool for global semantic interoperability.
 narrative_ontology:constraint_claim(meta_model_lock_in, tangled_rope).
+narrative_ontology:human_readable(meta_model_lock_in, "The Ontological Cage").
 
 % Binary flags and structural properties for Tangled Rope
 domain_priors:requires_active_enforcement(meta_model_lock_in). % Enforcement via API deprecation, incompatibility, and network effects.

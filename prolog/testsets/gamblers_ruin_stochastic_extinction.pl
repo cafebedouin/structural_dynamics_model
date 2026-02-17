@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -79,6 +80,7 @@ narrative_ontology:constraint_metric(gamblers_ruin_stochastic_extinction, theate
 % Constraint self-claim (what does the constraint claim to be?)
 % It is presented as an immutable law of mathematics/nature.
 narrative_ontology:constraint_claim(gamblers_ruin_stochastic_extinction, snare).
+narrative_ontology:human_readable(gamblers_ruin_stochastic_extinction, "Gambler's Ruin").
 
 % Structural property derivation hooks:
 narrative_ontology:constraint_beneficiary(gamblers_ruin_stochastic_extinction, casino_operators).

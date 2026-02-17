@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -69,6 +70,7 @@ narrative_ontology:constraint_metric(litchfield_sensitive_locations_2026, theate
 % Constraint self-claim (what does the constraint claim to be?)
 % Values: natural_law, coordination, constructed, enforcement
 narrative_ontology:constraint_claim(litchfield_sensitive_locations_2026, piton).
+narrative_ontology:human_readable(litchfield_sensitive_locations_2026, "Litchfield School Perimeter Crisis").
 
 % Binary flags
 domain_priors:requires_active_enforcement(litchfield_sensitive_locations_2026).

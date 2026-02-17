@@ -39,7 +39,8 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -108,6 +109,7 @@ narrative_ontology:constraint_metric(strange_attractor_dynamics, theater_ratio, 
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(strange_attractor_dynamics, snare).
+narrative_ontology:human_readable(strange_attractor_dynamics, "Strange Attractor Dynamics (Sensitive Dependence)").
 
 % --- Binary flags ---
 % Rationale: The system's own governing equations (e.g., Lorenz equations)

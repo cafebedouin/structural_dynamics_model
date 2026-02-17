@@ -41,7 +41,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -81,6 +82,7 @@ narrative_ontology:constraint_metric(germany_tennet_takeover, theater_ratio, 0.1
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(germany_tennet_takeover, tangled_rope).
+narrative_ontology:human_readable(germany_tennet_takeover, "German Government Stake in TenneT Germany").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(germany_tennet_takeover). % Required for Tangled Rope. The state's legal/financial framework enforces the monopoly.

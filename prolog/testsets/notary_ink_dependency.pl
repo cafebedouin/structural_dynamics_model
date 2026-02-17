@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -68,6 +69,7 @@ narrative_ontology:constraint_metric(notary_ink_dependency, theater_ratio, 0.92)
 
 % Constraint self-claim (what does the constraint claim to be?)
 narrative_ontology:constraint_claim(notary_ink_dependency, piton).
+narrative_ontology:human_readable(notary_ink_dependency, "The Notary/Wet-Ink Persistence").
 
 % Binary flags
 narrative_ontology:has_sunset_clause(notary_ink_dependency).      % Mandatory if Scaffold. Assumed for e-governance transitions.

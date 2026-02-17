@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -73,6 +74,7 @@ narrative_ontology:constraint_metric(responsibility_without_power, theater_ratio
 % Constraint self-claim (what does the constraint claim to be?)
 % It claims to be an enforcement mechanism for compliance, but is a constructed trap.
 narrative_ontology:constraint_claim(responsibility_without_power, tangled_rope).
+narrative_ontology:human_readable(responsibility_without_power, "The Scapegoat Architecture").
 
 % Binary flags
 domain_priors:requires_active_enforcement(responsibility_without_power). % Required for Tangled Rope

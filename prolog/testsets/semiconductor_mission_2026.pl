@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -65,6 +66,7 @@ narrative_ontology:constraint_metric(semiconductor_mission_2026, theater_ratio, 
 % Constraint self-claim (what does the constraint claim to be?)
 % Values: natural_law, coordination, constructed, enforcement
 narrative_ontology:constraint_claim(semiconductor_mission_2026, tangled_rope).
+narrative_ontology:human_readable(semiconductor_mission_2026, "Indian Semiconductor Mission 2.0").
 
 % Binary flags
 % narrative_ontology:has_sunset_clause(semiconductor_mission_2026).      % Mandatory if Scaffold

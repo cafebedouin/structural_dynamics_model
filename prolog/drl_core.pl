@@ -259,9 +259,8 @@ classify_from_metrics(C, BaseEps, _Chi, Supp, Context, mountain) :-
     emerges_naturally(C),
     constraint_indexing:effective_immutability_for_context(Context, mountain), !.
 
-classify_from_metrics(C, _BaseEps, _Chi, _Supp, _Context, snare) :-
-    natural_law_without_beneficiary(C), !, fail.     % Block snare for natural laws
-classify_from_metrics(_C, BaseEps, Chi, Supp, Context, snare) :-
+classify_from_metrics(C, BaseEps, Chi, Supp, Context, snare) :-
+    \+ natural_law_without_beneficiary(C),            % Block snare for natural laws
     config:param(snare_chi_floor, ChiFloor),
     Chi >= ChiFloor,
     config:param(snare_epsilon_floor, EpsFloor),
@@ -289,9 +288,8 @@ classify_from_metrics(C, BaseEps, Chi, _Supp, Context, rope) :-
     ;   emerges_naturally(C)  % Domain-invariant: bypass power-indexed immutability
     ), !.
 
-classify_from_metrics(C, _BaseEps, _Chi, _Supp, _Context, tangled_rope) :-
-    natural_law_without_beneficiary(C), !, fail.     % Block tangled_rope for natural laws
 classify_from_metrics(C, BaseEps, Chi, Supp, _Context, tangled_rope) :-
+    \+ natural_law_without_beneficiary(C),            % Block tangled_rope for natural laws
     config:param(tangled_rope_chi_floor, ChiFloor),
     config:param(tangled_rope_chi_ceil, ChiCeil),
     Chi >= ChiFloor,

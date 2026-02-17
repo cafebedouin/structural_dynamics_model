@@ -38,7 +38,8 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
-    narrative_ontology:coordination_type/2.
+    narrative_ontology:coordination_type/2,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -82,6 +83,7 @@ narrative_ontology:constraint_metric(coe_ukraine_reparations_register, theater_r
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(coe_ukraine_reparations_register, tangled_rope).
+narrative_ontology:human_readable(coe_ukraine_reparations_register, "Council of Europe's Register of Damage for Ukraine").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(coe_ukraine_reparations_register). % Required for Tangled Rope

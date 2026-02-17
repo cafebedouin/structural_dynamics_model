@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -67,6 +68,7 @@ narrative_ontology:constraint_metric(nasa_faster_better_cheaper, theater_ratio, 
 % Constraint self-claim (what does the constraint claim to be?)
 % FBC was presented as a pure coordination mechanism for efficiency.
 narrative_ontology:constraint_claim(nasa_faster_better_cheaper, snare).
+narrative_ontology:human_readable(nasa_faster_better_cheaper, "The \"Faster, Better, Cheaper\" (FBC) Management Paradigm").
 
 % Binary flags
 % Requires active enforcement via strict budgetary audits and schedule-driven performance reviews.

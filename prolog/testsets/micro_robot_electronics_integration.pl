@@ -40,7 +40,8 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:omega_variable/3,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -95,6 +96,7 @@ narrative_ontology:constraint_metric(micro_robot_electronics_integration, resist
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(micro_robot_electronics_integration, tangled_rope).
+narrative_ontology:human_readable(micro_robot_electronics_integration, "The Structural Barrier to Microrobot Electronics Integration").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(micro_robot_electronics_integration).

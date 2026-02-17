@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -66,6 +67,7 @@ narrative_ontology:constraint_metric(dead_sea_effect, theater_ratio, 0.10).
 % Values: natural_law, coordination, constructed, enforcement
 % Management often frames this as a natural, unavoidable process.
 narrative_ontology:constraint_claim(dead_sea_effect, snare).
+narrative_ontology:human_readable(dead_sea_effect, "The Dead Sea Effect (Talent Evaporation)").
 
 % Structural property derivation hooks:
 % The effect extracts value from the institution and its remaining employees,

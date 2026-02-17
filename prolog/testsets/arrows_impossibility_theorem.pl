@@ -42,7 +42,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3.
+    constraint_indexing:directionality_override/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -94,6 +95,7 @@ narrative_ontology:constraint_metric(arrows_impossibility_theorem, theater_ratio
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(arrows_impossibility_theorem, tangled_rope).
+narrative_ontology:human_readable(arrows_impossibility_theorem, "Arrow's Impossibility Theorem (as a political justification)").
 
 % --- Binary flags ---
 % The political enforcement of "no perfect system exists" requires active

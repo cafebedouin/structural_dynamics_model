@@ -25,7 +25,8 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -67,6 +68,7 @@ narrative_ontology:constraint_metric(ulysses_penelope_1904, theater_ratio, 0.97)
 
 % Constraint classification claim
 narrative_ontology:constraint_claim(ulysses_penelope_1904, piton).
+narrative_ontology:human_readable(ulysses_penelope_1904, "The Penelopean Affirmation (7 Eccles Street)").
 
 % Structural Property Declarations
 narrative_ontology:constraint_beneficiary(ulysses_penelope_1904, biological_affirmation).

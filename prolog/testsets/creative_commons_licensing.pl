@@ -39,7 +39,8 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:omega_variable/3.
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -82,6 +83,7 @@ narrative_ontology:constraint_metric(creative_commons_licensing, theater_ratio, 
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(creative_commons_licensing, tangled_rope).
+narrative_ontology:human_readable(creative_commons_licensing, "Creative Commons Licensing Framework").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(creative_commons_licensing). % Required for Tangled Rope

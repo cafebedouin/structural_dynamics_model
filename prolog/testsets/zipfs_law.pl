@@ -28,7 +28,8 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -66,6 +67,7 @@ narrative_ontology:constraint_metric(zipfs_law, theater_ratio, 0.65).
 
 % Constraint classification claim
 narrative_ontology:constraint_claim(zipfs_law, tangled_rope).
+narrative_ontology:human_readable(zipfs_law, "Zipf's Law (The Power Law of Information)").
 
 % Constraint metric facts — primary keys used by the classification engine.
 % Resolved MISSING_TEMPORAL_DATA by anchoring metrics for drift detection.

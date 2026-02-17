@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -69,6 +70,7 @@ narrative_ontology:constraint_metric(brazil_2026_general_elections, theater_rati
 % Constraint self-claim (what does the constraint claim to be?)
 % Values: natural_law, coordination, constructed, enforcement
 narrative_ontology:constraint_claim(brazil_2026_general_elections, tangled_rope).
+narrative_ontology:human_readable(brazil_2026_general_elections, "2026 Brazilian General Election Structure").
 
 % Binary flags
 domain_priors:requires_active_enforcement(brazil_2026_general_elections). % Required for Tangled Rope

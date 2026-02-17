@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -69,6 +70,7 @@ narrative_ontology:constraint_metric(cbdc_implementation, theater_ratio, 0.10).
 % Constraint self-claim (what does the constraint claim to be?)
 % It is framed as a public good for coordinating economic activity.
 narrative_ontology:constraint_claim(cbdc_implementation, tangled_rope).
+narrative_ontology:human_readable(cbdc_implementation, "Central Bank Digital Currency (CBDC) Implementation").
 
 % Binary flags
 domain_priors:requires_active_enforcement(cbdc_implementation). % Ledger rules are automatically and actively enforced.

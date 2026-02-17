@@ -43,7 +43,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1.
+    domain_priors:emerges_naturally/1,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -85,6 +86,7 @@ narrative_ontology:constraint_metric(seedance_export_restriction, theater_ratio,
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(seedance_export_restriction, tangled_rope).
+narrative_ontology:human_readable(seedance_export_restriction, "US Export Restrictions on ByteDance's SeeDance AI").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(seedance_export_restriction).

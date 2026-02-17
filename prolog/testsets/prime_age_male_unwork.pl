@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3.
+    constraint_indexing:directionality_override/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -70,6 +71,7 @@ narrative_ontology:constraint_metric(prime_age_male_unwork, theater_ratio, 0.15)
 
 % --- Constraint claim (matches analytical perspective) ---
 narrative_ontology:constraint_claim(prime_age_male_unwork, snare).
+narrative_ontology:human_readable(prime_age_male_unwork, "The \"New Misery\" of Prime-Age Male Labor Force Exit").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(prime_age_male_unwork). % Regulatory welfare cliffs/legal barriers

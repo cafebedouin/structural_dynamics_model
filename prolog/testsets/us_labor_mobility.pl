@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3.
+    constraint_indexing:directionality_override/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -70,6 +71,7 @@ narrative_ontology:constraint_metric(us_labor_mobility, theater_ratio, 0.25).
 
 % --- Constraint claim (matches analytical perspective) ---
 narrative_ontology:constraint_claim(us_labor_mobility, tangled_rope).
+narrative_ontology:human_readable(us_labor_mobility, "US Geographic and Professional Labor Mobility").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(us_labor_mobility). % State licensing/zoning enforcement

@@ -22,7 +22,8 @@
     narrative_ontology:constraint_metric/3,
     narrative_ontology:interval/3,
     narrative_ontology:constraint_claim/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -60,6 +61,7 @@ narrative_ontology:constraint_metric(asymmetric_computational_difficulty, theate
 
 % Constraint classification claim
 narrative_ontology:constraint_claim(asymmetric_computational_difficulty, piton).
+narrative_ontology:human_readable(asymmetric_computational_difficulty, "Proof-of-Work Zero-Day").
 
 % Constraint metric facts — primary keys used by the classification engine.
 % Required for extraction > 0.46

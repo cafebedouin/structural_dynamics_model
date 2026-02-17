@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -66,6 +67,7 @@ narrative_ontology:constraint_metric(governance_overfitting, theater_ratio, 0.45
 
 % Constraint self-claim (what does the constraint claim to be?)
 narrative_ontology:constraint_claim(governance_overfitting, tangled_rope).
+narrative_ontology:human_readable(governance_overfitting, "Hyper-Specific Compliance Lock-in").
 
 % Binary flags and structural properties for Tangled Rope
 domain_priors:requires_active_enforcement(governance_overfitting). % Required for Tangled Rope

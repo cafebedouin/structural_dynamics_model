@@ -43,7 +43,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1.
+    domain_priors:emerges_naturally/1,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -87,6 +88,7 @@ narrative_ontology:constraint_metric(fermat_proof_barrier, resistance, 0.10).
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(fermat_proof_barrier, mountain).
+narrative_ontology:human_readable(fermat_proof_barrier, "The Difficulty of Proving Fermat's Last Theorem").
 
 % --- Binary flags ---
 % narrative_ontology:has_sunset_clause(fermat_proof_barrier).      % Mandatory if Scaffold

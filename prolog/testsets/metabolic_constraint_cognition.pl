@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -71,6 +72,7 @@ narrative_ontology:constraint_metric(metabolic_constraint_cognition, theater_rat
 % The system claims the limit is a natural law, masking the constructed
 % nature of its exploitation.
 narrative_ontology:constraint_claim(metabolic_constraint_cognition, tangled_rope).
+narrative_ontology:human_readable(metabolic_constraint_cognition, "The ATP Ceiling as an Exploitable Limit").
 
 % Required for Tangled Rope: The system requires active enforcement through
 % interface design (e.g., infinite scroll, notification barrages) to

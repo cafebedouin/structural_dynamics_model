@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -69,6 +70,7 @@ narrative_ontology:constraint_metric(cognitive_bicycle_scaffold, theater_ratio, 
 % Constraint self-claim (what does the constraint claim to be?)
 % Values: natural_law, coordination, constructed, enforcement
 narrative_ontology:constraint_claim(cognitive_bicycle_scaffold, rope).
+narrative_ontology:human_readable(cognitive_bicycle_scaffold, "The Bicycle of the Mind").
 
 % Binary flags
 % This classification requires a sunset clause: eventually, the 'training

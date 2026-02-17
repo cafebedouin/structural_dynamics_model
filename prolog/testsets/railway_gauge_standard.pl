@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -68,6 +69,7 @@ narrative_ontology:constraint_metric(railway_gauge_standard, theater_ratio, 0.75
 
 % Constraint self-claim (what does the constraint claim to be?)
 narrative_ontology:constraint_claim(railway_gauge_standard, piton).
+narrative_ontology:human_readable(railway_gauge_standard, "The Standard Railway Gauge (4 ft 8.5 in / 1435 mm)").
 
 % Structural property derivation hooks:
 narrative_ontology:constraint_beneficiary(railway_gauge_standard, interconnected_logistics_operators).

@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -68,6 +69,7 @@ narrative_ontology:constraint_metric(stoic_logos_governance, theater_ratio, 0.10
 % Constraint self-claim (what does the constraint claim to be?)
 % Stoicism claims to be alignment with universal reason, i.e., natural law.
 narrative_ontology:constraint_claim(stoic_logos_governance, tangled_rope).
+narrative_ontology:human_readable(stoic_logos_governance, "The Stoic Logos as an Imperial Governance Framework").
 
 % Binary flags
 domain_priors:requires_active_enforcement(stoic_logos_governance). % Requires constant self-discipline and state power.

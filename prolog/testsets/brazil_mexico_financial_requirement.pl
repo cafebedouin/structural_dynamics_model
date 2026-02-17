@@ -39,7 +39,8 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -86,6 +87,7 @@ narrative_ontology:constraint_metric(brazil_mexico_financial_requirement, theate
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(brazil_mexico_financial_requirement, tangled_rope).
+narrative_ontology:human_readable(brazil_mexico_financial_requirement, "Mexican Financial Proof Requirement for Brazilian Travelers").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(brazil_mexico_financial_requirement). % Required for Tangled Rope

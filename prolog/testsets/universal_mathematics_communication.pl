@@ -44,7 +44,8 @@
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
-    narrative_ontology:omega_variable/3.
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -105,6 +106,7 @@ narrative_ontology:constraint_metric(universal_mathematics_communication, resist
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(universal_mathematics_communication, mountain).
+narrative_ontology:human_readable(universal_mathematics_communication, "Mathematics as a Universal Communication Constraint").
 
 % --- Emergence flag (required for mountain constraints) ---
 % Emerges naturally as a consequence of intelligence and physical reality.

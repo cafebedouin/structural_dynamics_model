@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -69,6 +70,7 @@ narrative_ontology:constraint_metric(policy_lag_catastrophe, theater_ratio, 0.82
 
 % The constraint claims to be a necessary coordination mechanism for social stability.
 narrative_ontology:constraint_claim(policy_lag_catastrophe, piton).
+narrative_ontology:human_readable(policy_lag_catastrophe, "The Inertial Collision").
 
 % Binary flags and structural properties for Tangled Rope classification
 domain_priors:requires_active_enforcement(policy_lag_catastrophe).

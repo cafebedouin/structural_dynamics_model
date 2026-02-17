@@ -42,7 +42,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    narrative_ontology:omega_variable/3.
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -102,6 +103,7 @@ narrative_ontology:constraint_metric(hilberts_hotel_infinity, resistance, 0.0).
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(hilberts_hotel_infinity, mountain).
+narrative_ontology:human_readable(hilberts_hotel_infinity, "Hilbert's Paradox of the Grand Hotel").
 
 % --- Emergence flag (required for mountain constraints) ---
 % Emerges naturally from the axioms of Set Theory (ZFC).

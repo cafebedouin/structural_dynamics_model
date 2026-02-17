@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -74,6 +75,7 @@ narrative_ontology:constraint_metric(bushman_money_magic, theater_ratio, 0.10).
 % Constraint self-claim (what does the constraint claim to be?)
 % The scam is a constructed reality, not a natural law or a coordination tool.
 narrative_ontology:constraint_claim(bushman_money_magic, tangled_rope).
+narrative_ontology:human_readable(bushman_money_magic, "The Trickster's Asymmetric Scam").
 
 % Binary flags
 % The scam requires Jackal's active performance to maintain the illusion.

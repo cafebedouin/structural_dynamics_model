@@ -23,7 +23,8 @@
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:constraint_beneficiary/2,
-    narrative_ontology:constraint_victim/2.
+    narrative_ontology:constraint_victim/2,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -61,6 +62,7 @@
 % ID Binding for DR-Audit Suite
 narrative_ontology:interval(arctic_geopolitical_flashpoint, 0, 10).
 narrative_ontology:constraint_claim(arctic_geopolitical_flashpoint, snare).
+narrative_ontology:human_readable(arctic_geopolitical_flashpoint, "The Melting Ice and the Scramble for Greenland").
 
 % Base Properties
 domain_priors:base_extractiveness(arctic_geopolitical_flashpoint, 0.75).

@@ -44,7 +44,8 @@
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
-    narrative_ontology:omega_variable/3.
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -100,6 +101,7 @@ narrative_ontology:constraint_metric(euler_characteristic_topology, resistance, 
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(euler_characteristic_topology, mountain).
+narrative_ontology:human_readable(euler_characteristic_topology, "Euler Characteristic (Topological Invariance)").
 
 % --- Emergence flag (required for mountain constraints) ---
 % Emerges naturally from the axioms of topology and geometry without human design.

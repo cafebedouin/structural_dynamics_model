@@ -44,7 +44,8 @@
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
-    narrative_ontology:omega_variable/3.
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -103,6 +104,7 @@ narrative_ontology:constraint_metric(whitehead_problem_undecidability, resistanc
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(whitehead_problem_undecidability, mountain).
+narrative_ontology:human_readable(whitehead_problem_undecidability, "The Whitehead Problem (Group Theory Undecidability)").
 
 % --- Emergence flag (required for mountain constraints) ---
 % Emerges naturally from the axioms of ZFC and the rules of logic.

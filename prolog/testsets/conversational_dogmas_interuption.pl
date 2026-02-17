@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -69,6 +70,7 @@ narrative_ontology:constraint_metric(conversational_dogmas_interruption, theater
 % Constraint self-claim (what does the constraint claim to be?)
 % The beneficiaries see it as a pure coordination mechanism.
 narrative_ontology:constraint_claim(conversational_dogmas_interruption, tangled_rope).
+narrative_ontology:human_readable(conversational_dogmas_interruption, "Conversational Dogmas (Interruption vs. Strong Civility)").
 
 % Binary flags
 % Enforcement is not formal but is active via social sanction and correction.

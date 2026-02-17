@@ -42,7 +42,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3.
+    constraint_indexing:directionality_override/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -87,6 +88,7 @@ narrative_ontology:constraint_metric(south_china_sea_arbitration_2016_2026, thea
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(south_china_sea_arbitration_2016_2026, tangled_rope).
+narrative_ontology:human_readable(south_china_sea_arbitration_2016_2026, "The 2016 South China Sea Arbitral Award (2016-2026)").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(south_china_sea_arbitration_2016_2026). % Required for Tangled Rope

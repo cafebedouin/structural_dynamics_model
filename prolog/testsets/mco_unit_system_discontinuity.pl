@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -81,6 +82,7 @@ narrative_ontology:constraint_metric(mco_unit_system_discontinuity, theater_rati
 % Constraint self-claim (what does the constraint claim to be?)
 % It claims to be a valid coordination standard, a constructed system.
 narrative_ontology:constraint_claim(mco_unit_system_discontinuity, piton).
+narrative_ontology:human_readable(mco_unit_system_discontinuity, "Persistence of Imperial Units in a Metric World").
 
 % Structural property derivation hooks:
 narrative_ontology:constraint_beneficiary(mco_unit_system_discontinuity, us_aerospace_legacy_tooling).

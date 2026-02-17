@@ -42,7 +42,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    narrative_ontology:omega_variable/3.
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -90,6 +91,7 @@ narrative_ontology:constraint_metric(burali_forti_paradox, resistance, 0.0).
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(burali_forti_paradox, mountain).
+narrative_ontology:human_readable(burali_forti_paradox, "Burali-Forti Paradox").
 
 % --- Emergence flag (required for mountain constraints) ---
 % The paradox emerges naturally from the definitions of ordinals and well-ordering.

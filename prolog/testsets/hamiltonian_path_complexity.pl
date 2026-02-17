@@ -43,7 +43,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1.
+    domain_priors:emerges_naturally/1,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -101,6 +102,7 @@ narrative_ontology:constraint_metric(hamiltonian_path_complexity, resistance, 0.
 % --- Constraint claim (must match analytical perspective type) ---
 % Analytically, this is a Mountain of computational complexity.
 narrative_ontology:constraint_claim(hamiltonian_path_complexity, mountain).
+narrative_ontology:human_readable(hamiltonian_path_complexity, "Computational Complexity of the Hamiltonian Path Problem").
 
 % --- Emergence flag (required for mountain constraints) ---
 % This constraint emerges naturally from the structure of mathematics and

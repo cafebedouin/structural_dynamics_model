@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -68,6 +69,7 @@ narrative_ontology:constraint_metric(hoa_covenants, theater_ratio, 0.75).
 % Constraint self-claim (what does the constraint claim to be?)
 % HOAs claim to be a coordination mechanism for preserving property values.
 narrative_ontology:constraint_claim(hoa_covenants, piton).
+narrative_ontology:human_readable(hoa_covenants, "HOA Architectural Review and Restrictive Covenants").
 
 % Binary flags
 domain_priors:requires_active_enforcement(hoa_covenants). % Fines and liens are used for enforcement.

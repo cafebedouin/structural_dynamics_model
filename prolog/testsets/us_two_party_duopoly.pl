@@ -25,7 +25,8 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:coordination_type/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -75,6 +76,7 @@ narrative_ontology:constraint_metric(us_two_party_duopoly, theater_ratio, 0.15).
 % Constraint self-claim: The system is presented as a necessary mechanism for
 % stable governance and preventing fragmentation.
 narrative_ontology:constraint_claim(us_two_party_duopoly, tangled_rope).
+narrative_ontology:human_readable(us_two_party_duopoly, "The U.S. Two-Party Political Duopoly").
 
 % Binary flags
 domain_priors:requires_active_enforcement(us_two_party_duopoly). % Ballot access laws, FEC regulations.

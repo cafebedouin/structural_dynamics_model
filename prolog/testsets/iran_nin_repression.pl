@@ -43,7 +43,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1.
+    domain_priors:emerges_naturally/1,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -88,6 +89,7 @@ narrative_ontology:constraint_metric(iran_nin_repression, theater_ratio, 0.15).
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(iran_nin_repression, snare).
+narrative_ontology:human_readable(iran_nin_repression, "Iran's National Information Network (State-Controlled Intranet)").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(iran_nin_repression).

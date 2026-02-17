@@ -25,7 +25,8 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -71,6 +72,7 @@ narrative_ontology:constraint_metric(cultural_refragmentation_2026, theater_rati
 
 % Constraint classification claim
 narrative_ontology:constraint_claim(cultural_refragmentation_2026, piton).
+narrative_ontology:human_readable(cultural_refragmentation_2026, "The Re-Fragmentation Snare (Interesting Times)").
 
 % Primary keys for the classification engine
 % High-extraction stakeholders

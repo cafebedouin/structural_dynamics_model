@@ -20,7 +20,8 @@
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -52,6 +53,7 @@
 
 narrative_ontology:interval(platform_cooperativism_governance, 0, 10).
 narrative_ontology:constraint_claim(platform_cooperativism_governance, rope).
+narrative_ontology:human_readable(platform_cooperativism_governance, "Democratic Worker Governance in Platform Cooperativism").
 
 % Base extractiveness score: 0.05 (Very Low)
 % Rationale: By design, extraction is minimized as the surplus is returned 

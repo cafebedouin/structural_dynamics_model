@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -64,6 +65,7 @@ narrative_ontology:constraint_metric(hanlons_razor, theater_ratio, 0.10).
 % Constraint self-claim (what does the constraint claim to be?)
 % It claims to be a tool for rational coordination.
 narrative_ontology:constraint_claim(hanlons_razor, tangled_rope).
+narrative_ontology:human_readable(hanlons_razor, "Hanlon's Razor (\"Never attribute to malice that which is adequately explained by stupidity.\")").
 
 % Binary flags
 domain_priors:requires_active_enforcement(hanlons_razor). % Required for Tangled Rope. Enforcement is social/cultural pressure.

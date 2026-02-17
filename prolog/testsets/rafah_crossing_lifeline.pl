@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -70,6 +71,7 @@ narrative_ontology:constraint_metric(rafah_crossing_lifeline, theater_ratio, 0.4
 
 % Constraint self-claim: It is presented as a necessary coordination mechanism.
 narrative_ontology:constraint_claim(rafah_crossing_lifeline, rope).
+narrative_ontology:human_readable(rafah_crossing_lifeline, "The Rafah Medical Bottleneck").
 
 % Binary flags
 domain_priors:requires_active_enforcement(rafah_crossing_lifeline).

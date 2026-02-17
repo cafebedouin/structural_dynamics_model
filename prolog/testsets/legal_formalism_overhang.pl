@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -69,6 +70,7 @@ narrative_ontology:constraint_metric(legal_formalism_overhang, theater_ratio, 0.
 % Constraint self-claim (what does the constraint claim to be?)
 % It claims to be a mechanism for stable, predictable coordination.
 narrative_ontology:constraint_claim(legal_formalism_overhang, piton).
+narrative_ontology:human_readable(legal_formalism_overhang, "The Ghost of Statutes Past").
 
 % Binary flags and structural properties required for Tangled Rope
 domain_priors:requires_active_enforcement(legal_formalism_overhang).

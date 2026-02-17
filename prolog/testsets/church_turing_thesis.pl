@@ -43,7 +43,8 @@
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
-    narrative_ontology:omega_variable/3.
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -106,6 +107,7 @@ narrative_ontology:constraint_metric(church_turing_thesis, resistance, 0.02).
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(church_turing_thesis, mountain).
+narrative_ontology:human_readable(church_turing_thesis, "Church-Turing Thesis (Computability Boundary)").
 
 % --- Emergence flag (required for mountain constraints) ---
 % Emerges naturally from the axioms of logic and set theory.

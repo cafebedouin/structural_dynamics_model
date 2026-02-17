@@ -28,7 +28,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -77,6 +78,7 @@ narrative_ontology:constraint_metric(future_dsm_integration, theater_ratio, 0.40
 % Constraint self-claim (what does the constraint claim to be?)
 % The APA frames this as a coordination effort to standardize diagnostic criteria.
 narrative_ontology:constraint_claim(future_dsm_integration, tangled_rope).
+narrative_ontology:human_readable(future_dsm_integration, "Future DSM Strategic Vision (SCE-DoH & Intersectionality)").
 
 % Binary flags
 % Required for Tangled Rope classification. The diagnostic framework requires

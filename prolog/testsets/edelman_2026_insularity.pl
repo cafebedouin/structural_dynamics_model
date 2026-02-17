@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -70,6 +71,7 @@ narrative_ontology:constraint_metric(edelman_2026_insularity, theater_ratio, 0.4
 % Constraint self-claim (what does the constraint claim to be?)
 % It presents as a natural social condition but is a constructed reality.
 narrative_ontology:constraint_claim(edelman_2026_insularity, tangled_rope).
+narrative_ontology:human_readable(edelman_2026_insularity, "The Insular Trust Mindset").
 
 % Binary flags
 % Enforcement is social and economic (e.g., hiring bias, social exclusion), which is active.

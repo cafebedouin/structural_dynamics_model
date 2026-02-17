@@ -25,7 +25,8 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -61,6 +62,7 @@ narrative_ontology:constraint_metric(ai_scholar_citation_trap, theater_ratio, 0.
 
 % Constraint classification claim
 narrative_ontology:constraint_claim(ai_scholar_citation_trap, tangled_rope).
+narrative_ontology:human_readable(ai_scholar_citation_trap, "AI Scholarly Citation System").
 
 % Binary flags
 % narrative_ontology:has_sunset_clause(ai_scholar_citation_trap).      % Mandatory if Scaffold

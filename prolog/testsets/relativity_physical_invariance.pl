@@ -43,7 +43,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3.
+    constraint_indexing:directionality_override/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -99,6 +100,7 @@ narrative_ontology:constraint_metric(relativity_physical_invariance, resistance,
 % --- Constraint claim (must match analytical perspective type) ---
 % As a fundamental law of nature, this is a canonical Mountain.
 narrative_ontology:constraint_claim(relativity_physical_invariance, mountain).
+narrative_ontology:human_readable(relativity_physical_invariance, "Physical Invariance (General Relativity)").
 
 % --- Emergence flag (required for mountain constraints) ---
 % This flag is required for the mountain metric gate: without this,

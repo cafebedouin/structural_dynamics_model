@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -68,6 +69,7 @@ narrative_ontology:constraint_metric(cia_fbi_legal_wall, theater_ratio, 0.10).
 % Constraint self-claim (what does the constraint claim to be?)
 % The institutional justification was that it was a necessary coordination rule.
 narrative_ontology:constraint_claim(cia_fbi_legal_wall, tangled_rope).
+narrative_ontology:human_readable(cia_fbi_legal_wall, "The CIA/FBI Intelligence-Criminal \"Wall\" (pre-PATRIOT Act)").
 
 % Binary flags
 domain_priors:requires_active_enforcement(cia_fbi_legal_wall). % Enforced by DOJ OIPR and FISA court precedent.

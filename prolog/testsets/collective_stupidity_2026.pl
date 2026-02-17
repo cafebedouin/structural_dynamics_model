@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -70,6 +71,7 @@ narrative_ontology:constraint_metric(collective_stupidity_2026, theater_ratio, 0
 % Values: natural_law, coordination, constructed, enforcement
 % It is framed as an immutable law of human nature, but its metrics reveal a Snare.
 narrative_ontology:constraint_claim(collective_stupidity_2026, snare).
+narrative_ontology:human_readable(collective_stupidity_2026, "The Cipolla-Galloway Stupidity Snare").
 
 % Structural property derivation hooks:
 % High-extraction stakeholders

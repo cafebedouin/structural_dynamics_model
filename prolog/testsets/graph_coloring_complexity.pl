@@ -39,7 +39,8 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -97,6 +98,7 @@ narrative_ontology:constraint_metric(graph_coloring_complexity, theater_ratio, 0
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(graph_coloring_complexity, tangled_rope).
+narrative_ontology:human_readable(graph_coloring_complexity, "Application of Graph Coloring to Resource Allocation").
 
 % --- Binary flags ---
 % Rationale: The rules of coloring must be actively enforced by the system

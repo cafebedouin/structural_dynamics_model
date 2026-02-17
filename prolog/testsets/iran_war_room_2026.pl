@@ -24,7 +24,8 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:interval/3,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -70,6 +71,7 @@ narrative_ontology:constraint_metric(iran_war_room_2026, theater_ratio, 0.65).
 
 % Constraint self-claim (analytical classification)
 narrative_ontology:constraint_claim(iran_war_room_2026, tangled_rope).
+narrative_ontology:human_readable(iran_war_room_2026, "The IRGC \"Active War Room\" Snare").
 domain_priors:requires_active_enforcement(iran_war_room_2026).
 
 narrative_ontology:constraint_beneficiary(iran_war_room_2026, irgc_strategic_deterrence).

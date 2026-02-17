@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -73,6 +74,7 @@ narrative_ontology:constraint_metric(network_effects, theater_ratio, 0.1).
 % Constraint self-claim (what does the constraint claim to be?)
 % Often framed as an inevitable, natural law of markets (Metcalfe's Law).
 narrative_ontology:constraint_claim(network_effects, tangled_rope).
+narrative_ontology:human_readable(network_effects, "Network Effects (Demand-Side Economies of Scale)").
 
 % Binary flags
 % Enforcement is required to maintain the lock-in, e.g., by preventing data portability.

@@ -43,7 +43,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1.
+    domain_priors:emerges_naturally/1,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -92,6 +93,7 @@ narrative_ontology:constraint_metric(silver_scarcity_2026, resistance, 0.02). % 
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(silver_scarcity_2026, mountain).
+narrative_ontology:human_readable(silver_scarcity_2026, "The Silver Physical Scarcity Mountain").
 
 % --- Emergence flag (required for mountain constraints) ---
 % This constraint emerges from geology and physics, not human design.

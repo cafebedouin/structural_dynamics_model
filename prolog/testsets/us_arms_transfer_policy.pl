@@ -43,7 +43,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1.
+    domain_priors:emerges_naturally/1,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -89,6 +90,7 @@ narrative_ontology:constraint_metric(us_arms_transfer_policy, theater_ratio, 0.3
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(us_arms_transfer_policy, tangled_rope).
+narrative_ontology:human_readable(us_arms_transfer_policy, "US Arms Transfer Policy").
 
 % --- Binary flags ---
 % narrative_ontology:has_sunset_clause(us_arms_transfer_policy).      % Mandatory if Scaffold

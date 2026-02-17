@@ -20,7 +20,8 @@
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -55,6 +56,7 @@
 
 narrative_ontology:interval(fair_use_doctrine, 0, 10).
 narrative_ontology:constraint_claim(fair_use_doctrine, rope).
+narrative_ontology:human_readable(fair_use_doctrine, "Fair Use (The Expression Safety Valve)").
 
 % Base extractiveness: Low (0.1).
 % It is designed to *prevent* extraction by allowing free use for 

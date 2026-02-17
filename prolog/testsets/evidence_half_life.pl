@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -70,6 +71,7 @@ narrative_ontology:constraint_metric(evidence_half_life, theater_ratio, 0.81).
 % Constraint self-claim (what does the constraint claim to be?)
 % The system claims to be a necessary coordination mechanism for a high-velocity market.
 narrative_ontology:constraint_claim(evidence_half_life, tangled_rope).
+narrative_ontology:human_readable(evidence_half_life, "The Epistemic Decay Constant").
 
 % Binary flags
 % Enforcement is active through algorithmic promotion of novelty and deprecation of old data.

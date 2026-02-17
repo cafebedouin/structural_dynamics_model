@@ -36,7 +36,8 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:omega_variable/3.
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -95,6 +96,7 @@ narrative_ontology:constraint_metric(exoplanetary_habitability_arbitrage, theate
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(exoplanetary_habitability_arbitrage, rope).
+narrative_ontology:human_readable(exoplanetary_habitability_arbitrage, "Exoplanetary Habitability Arbitrage Strategy").
 
 % --- Structural relationships (REQUIRED for non-mountain constraints) ---
 % Who benefits from this constraint existing?

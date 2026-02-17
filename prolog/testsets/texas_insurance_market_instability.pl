@@ -43,7 +43,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1.
+    domain_priors:emerges_naturally/1,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -89,6 +90,7 @@ narrative_ontology:constraint_metric(texas_insurance_market_instability, theater
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(texas_insurance_market_instability, tangled_rope).
+narrative_ontology:human_readable(texas_insurance_market_instability, "Texas Insurance Market Instability").
 
 % --- Binary flags ---
 % narrative_ontology:has_sunset_clause(texas_insurance_market_instability).      % Mandatory if Scaffold

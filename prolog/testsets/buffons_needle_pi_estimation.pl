@@ -39,7 +39,8 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:omega_variable/3.
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -94,6 +95,7 @@ narrative_ontology:constraint_metric(buffons_needle_pi_estimation, theater_ratio
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(buffons_needle_pi_estimation, tangled_rope).
+narrative_ontology:human_readable(buffons_needle_pi_estimation, "Buffon's Needle as a Pi Estimation Method").
 
 % --- Binary flags ---
 % Rationale: Required for Tangled Rope. The "enforcement" is not by a human

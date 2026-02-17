@@ -25,7 +25,8 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -61,6 +62,7 @@ narrative_ontology:constraint_metric(canal_panama_influence, theater_ratio, 0.3)
 
 % Constraint classification claim
 narrative_ontology:constraint_claim(canal_panama_influence, tangled_rope).
+narrative_ontology:human_readable(canal_panama_influence, "Geopolitical Influence over Panama Canal").
 
 % Binary flags
 % narrative_ontology:has_sunset_clause(canal_panama_influence).      % Mandatory if Scaffold

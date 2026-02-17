@@ -23,7 +23,8 @@
     narrative_ontology:interval/3,
     narrative_ontology:measurement/5,
     narrative_ontology:constraint_claim/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -60,6 +61,7 @@ narrative_ontology:constraint_metric(communal_narcissism_social_trap, theater_ra
 
 % Constraint classification claim
 narrative_ontology:constraint_claim(communal_narcissism_social_trap, piton).
+narrative_ontology:human_readable(communal_narcissism_social_trap, "The Altruistic Extraction Snare").
 
 % Binary flags
 domain_priors:requires_active_enforcement(communal_narcissism_social_trap).

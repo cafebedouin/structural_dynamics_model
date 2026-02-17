@@ -29,7 +29,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    narrative_ontology:omega_variable/3.
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -87,6 +88,7 @@ narrative_ontology:constraint_metric(newtons_method_convergence, resistance, 0.0
 % --- Constraint claim (must match analytical perspective type) ---
 % The underlying reality is a fixed mathematical law.
 narrative_ontology:constraint_claim(newtons_method_convergence, mountain).
+narrative_ontology:human_readable(newtons_method_convergence, "Newton's Method Convergence Guarantee").
 
 % --- Emergence flag (required for mountain constraints) ---
 % The convergence guarantee emerges from the laws of calculus and geometry.

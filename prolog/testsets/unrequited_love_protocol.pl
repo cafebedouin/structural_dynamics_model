@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3.
+    constraint_indexing:directionality_override/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -74,6 +75,7 @@ narrative_ontology:constraint_metric(unrequited_love_protocol, theater_ratio, 0.
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(unrequited_love_protocol, snare).
+narrative_ontology:human_readable(unrequited_love_protocol, "The Limerence Negotiation Protocol").
 
 % --- Structural relationships ---
 % The recipient benefits from the "Status Quo" of the protocol.

@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -69,6 +70,7 @@ narrative_ontology:constraint_metric(risk_socialization_threshold, theater_ratio
 
 % Constraint self-claim: It claims to be a coordination mechanism for stability.
 narrative_ontology:constraint_claim(risk_socialization_threshold, tangled_rope).
+narrative_ontology:human_readable(risk_socialization_threshold, "The Asymmetric Liability Trap").
 
 % Binary flags
 domain_priors:requires_active_enforcement(risk_socialization_threshold). % Required for Tangled Rope. Bailouts are enforced by law.

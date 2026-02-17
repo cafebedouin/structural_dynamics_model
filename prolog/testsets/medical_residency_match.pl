@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -68,6 +69,7 @@ narrative_ontology:constraint_metric(medical_residency_match, theater_ratio, 0.1
 % Constraint self-claim (what does the constraint claim to be?)
 % It claims to be a fair coordination mechanism to solve a market failure.
 narrative_ontology:constraint_claim(medical_residency_match, tangled_rope).
+narrative_ontology:human_readable(medical_residency_match, "The NRMP Medical Residency Match").
 
 % Binary flags
 domain_priors:requires_active_enforcement(medical_residency_match). % Required for Tangled Rope.

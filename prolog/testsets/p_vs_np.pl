@@ -43,7 +43,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1.
+    domain_priors:emerges_naturally/1,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -100,6 +101,7 @@ domain_priors:emerges_naturally(p_vs_np).
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(p_vs_np, mountain).
+narrative_ontology:human_readable(p_vs_np, "The P versus NP Problem").
 
 % --- Binary flags ---
 % No enforcement needed; it's a property of logic.

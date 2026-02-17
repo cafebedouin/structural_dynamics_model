@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    [RESOLVED MANDATROPHY]
@@ -85,6 +86,7 @@ narrative_ontology:constraint_metric(mandatrophy_systemic_collapse, theater_rati
 % Constraint self-claim (what does the constraint claim to be?)
 % Values: natural_law, coordination, constructed, enforcement
 narrative_ontology:constraint_claim(mandatrophy_systemic_collapse, tangled_rope).
+narrative_ontology:human_readable(mandatrophy_systemic_collapse, "Mandatrophy (Systemic Resilience Wasting)").
 
 % Binary flags
 domain_priors:requires_active_enforcement(mandatrophy_systemic_collapse). % Required for Tangled Rope

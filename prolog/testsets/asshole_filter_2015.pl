@@ -23,7 +23,8 @@
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:constraint_beneficiary/2,
-    narrative_ontology:constraint_victim/2.
+    narrative_ontology:constraint_victim/2,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -63,6 +64,7 @@
 % ID Binding - Mandatory for 2026 DR-Audit Suite
 narrative_ontology:interval(asshole_filter_2015, 0, 10).
 narrative_ontology:constraint_claim(asshole_filter_2015, snare).
+narrative_ontology:human_readable(asshole_filter_2015, "The Asshole Filter").
 
 % Base Properties
 domain_priors:base_extractiveness(asshole_filter_2015, 0.75).

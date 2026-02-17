@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -67,6 +68,7 @@ narrative_ontology:constraint_metric(consumer_debt_slavery, theater_ratio, 0.45)
 % Constraint self-claim (what does the constraint claim to be?)
 % The system is framed as a necessary tool for economic liquidity and growth.
 narrative_ontology:constraint_claim(consumer_debt_slavery, tangled_rope).
+narrative_ontology:human_readable(consumer_debt_slavery, "The Interest Trap (Act Your Wage)").
 
 % Binary flags
 domain_priors:requires_active_enforcement(consumer_debt_slavery). % Required for Tangled Rope (e.g., credit reporting, collections)

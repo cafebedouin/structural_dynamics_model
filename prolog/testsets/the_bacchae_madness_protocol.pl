@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -76,6 +77,7 @@ narrative_ontology:constraint_metric(the_bacchae_madness_protocol, theater_ratio
 % Constraint self-claim (what does the constraint claim to be?)
 % Dionysus presents his power not as a choice but as a fundamental, divine law of nature.
 narrative_ontology:constraint_claim(the_bacchae_madness_protocol, tangled_rope).
+narrative_ontology:human_readable(the_bacchae_madness_protocol, "The Dionysian Mandate of Ecstasy").
 
 % Binary flags
 % The mandate requires active enforcement by Dionysus (divine influence) and the Maenads (physical violence).

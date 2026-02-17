@@ -37,7 +37,8 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:omega_variable/3.
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -86,6 +87,7 @@ narrative_ontology:constraint_metric(skills_based_hiring, theater_ratio, 0.11).
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(skills_based_hiring, rope).
+narrative_ontology:human_readable(skills_based_hiring, "Skills-Based Hiring (De-credentialing)").
 
 % --- Binary flags ---
 % The shift requires active enforcement by HR departments and hiring platforms

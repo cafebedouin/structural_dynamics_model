@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -71,6 +72,7 @@ narrative_ontology:constraint_metric(multi_planetary_latency_lock, theater_ratio
 
 % The system claims to be a necessary coordination mechanism for interplanetary stability.
 narrative_ontology:constraint_claim(multi_planetary_latency_lock, tangled_rope).
+narrative_ontology:human_readable(multi_planetary_latency_lock, "Earth-Centric Interplanetary Clearing").
 
 % Binary flags
 domain_priors:requires_active_enforcement(multi_planetary_latency_lock). % Required for Tangled Rope

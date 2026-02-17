@@ -37,7 +37,8 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -82,6 +83,7 @@ narrative_ontology:constraint_metric(visa_ipo_regulatory_compliance, theater_rat
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(visa_ipo_regulatory_compliance, tangled_rope).
+narrative_ontology:human_readable(visa_ipo_regulatory_compliance, "SEC S-1 Registration Framework for Initial Public Offerings").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(visa_ipo_regulatory_compliance).

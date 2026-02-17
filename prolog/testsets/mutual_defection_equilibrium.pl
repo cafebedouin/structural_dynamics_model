@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -69,6 +70,7 @@ narrative_ontology:constraint_metric(mutual_defection_equilibrium, theater_ratio
 
 % The constraint claims to be a form of coordination, providing stability.
 narrative_ontology:constraint_claim(mutual_defection_equilibrium, tangled_rope).
+narrative_ontology:human_readable(mutual_defection_equilibrium, "The Infinite Prisoner's Dilemma Stalemate").
 
 % The logic of the prisoner's dilemma itself enforces the equilibrium.
 % Any agent attempting to cooperate is immediately punished. This is required for Tangled Rope.

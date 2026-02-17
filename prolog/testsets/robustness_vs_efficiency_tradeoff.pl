@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -69,6 +70,7 @@ narrative_ontology:constraint_metric(robustness_vs_efficiency_tradeoff, theater_
 % Constraint self-claim (what does the constraint claim to be?)
 % It claims to be a pure coordination mechanism for efficiency.
 narrative_ontology:constraint_claim(robustness_vs_efficiency_tradeoff, tangled_rope).
+narrative_ontology:human_readable(robustness_vs_efficiency_tradeoff, "The Lean Systems Fragility").
 
 % Binary flags
 % The market pressure to adopt hyper-efficient, fragile systems is a form of enforcement.

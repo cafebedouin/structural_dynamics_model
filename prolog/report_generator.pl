@@ -6,7 +6,13 @@
     cross_domain_audit/0,
     forensic_audit_false_mountains/0,
     generate_omega_resolution_scenarios/0,
-    generate_omega_triage/0
+    generate_omega_triage/0,
+    omega_severity/2,
+    type_description/2,
+    type_strategy/2,
+    type_color/2,
+    type_severity/2,
+    detect_gap_pattern/2
 ]).
 
 :- use_module(library(lists)).
@@ -65,6 +71,19 @@ type_color(rope, green).
 type_color(tangled_rope, orange).  % Orange for hybrid nature
 type_color(snare, red).
 type_color(piton, gray).
+
+type_description(scaffold, 'Temporary support - low extraction coordination with a defined sunset clause').
+type_strategy(scaffold, 'Monitor sunset - Ensure transition mechanisms are in place, remove when no longer needed').
+type_color(scaffold, yellow).
+
+%% type_severity(?Type, ?Severity)
+%  Numeric severity ordering for constraint types (matches conflict_map.py SEVERITY dict).
+type_severity(mountain, 0).
+type_severity(rope, 1).
+type_severity(scaffold, 2).
+type_severity(piton, 3).
+type_severity(tangled_rope, 4).
+type_severity(snare, 5).
 
 /* ============================================================================
    1. EXECUTIVE SUMMARY (MAIN ENTRY)

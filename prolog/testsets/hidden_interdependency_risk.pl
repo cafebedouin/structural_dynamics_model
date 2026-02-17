@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -70,6 +71,7 @@ narrative_ontology:constraint_metric(hidden_interdependency_risk, theater_ratio,
 % Constraint self-claim (what does the constraint claim to be?)
 % It claims to be a healthy, competitive market, which is a coordination mechanism.
 narrative_ontology:constraint_claim(hidden_interdependency_risk, tangled_rope).
+narrative_ontology:human_readable(hidden_interdependency_risk, "The Shadow Foundation Trap").
 
 % Binary flags
 % Enforcement is through network effects and standardization, making alternatives non-viable.

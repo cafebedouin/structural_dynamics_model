@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -69,6 +70,7 @@ narrative_ontology:constraint_metric(cobra_effect, theater_ratio, 0.10).
 % Constraint self-claim (what does the constraint claim to be?)
 % The bounty program was presented as a coordination mechanism to solve a public problem.
 narrative_ontology:constraint_claim(cobra_effect, tangled_rope).
+narrative_ontology:human_readable(cobra_effect, "The Cobra Effect (Perverse Bounty Incentive)").
 
 % Binary flags
 domain_priors:requires_active_enforcement(cobra_effect). % Required for Tangled Rope. The bounty must be actively paid out.

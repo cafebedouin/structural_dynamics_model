@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -68,6 +69,7 @@ narrative_ontology:constraint_metric(civilizational_maintenance_debt, theater_ra
 % Constraint self-claim (what does the constraint claim to be?)
 % It's often framed as a necessary, unavoidable consequence of physical laws (entropy).
 narrative_ontology:constraint_claim(civilizational_maintenance_debt, tangled_rope).
+narrative_ontology:human_readable(civilizational_maintenance_debt, "The Crumbling Foundation").
 
 % Binary flags
 domain_priors:requires_active_enforcement(civilizational_maintenance_debt). % Enforcement via regulation, fee structures, and fiscal policy.

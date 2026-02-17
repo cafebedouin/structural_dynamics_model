@@ -26,7 +26,8 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -65,6 +66,7 @@ narrative_ontology:constraint_metric(ad_synaptic_deficit, theater_ratio, 0.1).
 
 % Constraint classification claim
 narrative_ontology:constraint_claim(ad_synaptic_deficit, tangled_rope).
+narrative_ontology:human_readable(ad_synaptic_deficit, "Synaptic Liquidation (Neuro-Degenerative Debt)").
 
 % Mandatory keys for classification engine v3.4
 % These resolve the [FAIL] Schema mismatch by anchoring the measurement keys.

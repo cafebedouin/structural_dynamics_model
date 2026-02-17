@@ -9132,7 +9132,59 @@ N/A
 
 ---
 
-### 703. Omega: `exoplanetary_habitability_arbitrage_omega_1`
+### 703. Omega: `omega_great_awakening_rekindling`
+
+*   **Severity:** `critical`
+*   **Associated Constraint:** `great_awakening_rekindling`
+*   **Source Gap:** `gap(general_type_mismatch,rope,snare)`
+*   **Question:** Distinguishing between intent and consequence in the extraction of institutional authority.
+*   **Suggested Resolution Strategy:**
+    ```
+N/A
+    ```
+
+---
+
+### 704. Omega: `omega_layered_brain_processing_2`
+
+*   **Severity:** `critical`
+*   **Associated Constraint:** `layered_brain_processing`
+*   **Source Gap:** `gap(snare_mountain_confusion,snare,mountain)`
+*   **Question:** Is layered meaning extraction a functional necessity or a biological limitation?
+*   **Suggested Resolution Strategy:**
+    ```
+N/A
+    ```
+
+---
+
+### 705. Omega: `omega_local_vs_global_optima`
+
+*   **Severity:** `critical`
+*   **Associated Constraint:** `local_vs_global_optima`
+*   **Source Gap:** `N/A`
+*   **Question:** Distinguishing structural extraction from strategic failure in a passive landscape.
+*   **Suggested Resolution Strategy:**
+    ```
+N/A
+    ```
+
+---
+
+### 706. Omega: `omega_micro_robot_electronics_integration`
+
+*   **Severity:** `critical`
+*   **Associated Constraint:** `micro_robot_electronics_integration`
+*   **Source Gap:** `gap(mountain_coordination_confusion,mountain,rope)`
+*   **Question:** Whether off-board optical control constitutes a new dependency snare
+*   **Suggested Resolution Strategy:**
+    ```
+N/A
+    ```
+
+---
+
+### 707. Omega: `exoplanetary_habitability_arbitrage_omega_1`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `exoplanetary_habitability_arbitrage`
@@ -9145,7 +9197,7 @@ N/A
 
 ---
 
-### 704. Omega: `exoplanetary_habitability_arbitrage_omega_2`
+### 708. Omega: `exoplanetary_habitability_arbitrage_omega_2`
 
 *   **Severity:** `moderate`
 *   **Associated Constraint:** `exoplanetary_habitability_arbitrage`
@@ -9158,7 +9210,7 @@ N/A
 
 ---
 
-### 705. Omega: `omega_advice_as_dangerous_gift`
+### 709. Omega: `omega_advice_as_dangerous_gift`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `advice_as_dangerous_gift`
@@ -9171,7 +9223,7 @@ N/A
 
 ---
 
-### 706. Omega: `omega_availability_heuristic`
+### 710. Omega: `omega_availability_heuristic`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `availability_heuristic`
@@ -9184,7 +9236,7 @@ N/A
 
 ---
 
-### 707. Omega: `omega_banach_tarski_paradox`
+### 711. Omega: `omega_banach_tarski_paradox`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `banach_tarski_paradox`
@@ -9197,7 +9249,7 @@ N/A
 
 ---
 
-### 708. Omega: `omega_base_pair_complementarity`
+### 712. Omega: `omega_base_pair_complementarity`
 
 *   **Severity:** `moderate`
 *   **Associated Constraint:** `base_pair_complementarity`
@@ -9210,7 +9262,7 @@ N/A
 
 ---
 
-### 709. Omega: `omega_basel_problem_convergence`
+### 713. Omega: `omega_basel_problem_convergence`
 
 *   **Severity:** `moderate`
 *   **Associated Constraint:** `basel_problem_convergence`
@@ -9223,7 +9275,7 @@ N/A
 
 ---
 
-### 710. Omega: `omega_biological_curiosity`
+### 714. Omega: `omega_biological_curiosity`
 
 *   **Severity:** `moderate`
 *   **Associated Constraint:** `biological_curiosity`
@@ -9236,7 +9288,7 @@ N/A
 
 ---
 
-### 711. Omega: `omega_brouwer_fixed_point`
+### 715. Omega: `omega_brouwer_fixed_point`
 
 *   **Severity:** `moderate`
 *   **Associated Constraint:** `brouwer_fixed_point`
@@ -9249,7 +9301,7 @@ N/A
 
 ---
 
-### 712. Omega: `omega_buffons_needle_pi_estimation`
+### 716. Omega: `omega_buffons_needle_pi_estimation`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `buffons_needle_pi_estimation`
@@ -9262,7 +9314,7 @@ N/A
 
 ---
 
-### 713. Omega: `omega_burali_forti_paradox`
+### 717. Omega: `omega_burali_forti_paradox`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `burali_forti_paradox`
@@ -9275,7 +9327,7 @@ N/A
 
 ---
 
-### 714. Omega: `omega_burden_of_proof_legal_criminal`
+### 718. Omega: `omega_burden_of_proof_legal_criminal`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `burden_of_proof_legal_criminal`
@@ -9288,7 +9340,7 @@ N/A
 
 ---
 
-### 715. Omega: `omega_chaitins_omega_undecidability`
+### 719. Omega: `omega_chaitins_omega_undecidability`
 
 *   **Severity:** `moderate`
 *   **Associated Constraint:** `chaitins_omega_undecidability`
@@ -9301,7 +9353,7 @@ N/A
 
 ---
 
-### 716. Omega: `omega_choice_architecture_design`
+### 720. Omega: `omega_choice_architecture_design`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `choice_architecture_design`
@@ -9314,7 +9366,7 @@ N/A
 
 ---
 
-### 717. Omega: `omega_church_turing_thesis`
+### 721. Omega: `omega_church_turing_thesis`
 
 *   **Severity:** `moderate`
 *   **Associated Constraint:** `church_turing_thesis`
@@ -9327,7 +9379,7 @@ N/A
 
 ---
 
-### 718. Omega: `omega_cinderella_midnight_deadline`
+### 722. Omega: `omega_cinderella_midnight_deadline`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `cinderella_midnight_deadline`
@@ -9340,7 +9392,7 @@ N/A
 
 ---
 
-### 719. Omega: `omega_climate_target_one_point_five`
+### 723. Omega: `omega_climate_target_one_point_five`
 
 *   **Severity:** `moderate`
 *   **Associated Constraint:** `climate_target_one_point_five`
@@ -9353,7 +9405,7 @@ N/A
 
 ---
 
-### 720. Omega: `omega_confirmation_bias`
+### 724. Omega: `omega_confirmation_bias`
 
 *   **Severity:** `moderate`
 *   **Associated Constraint:** `confirmation_bias`
@@ -9366,7 +9418,7 @@ N/A
 
 ---
 
-### 721. Omega: `omega_copyright_protection`
+### 725. Omega: `omega_copyright_protection`
 
 *   **Severity:** `moderate`
 *   **Associated Constraint:** `copyright_protection`
@@ -9379,7 +9431,7 @@ N/A
 
 ---
 
-### 722. Omega: `omega_countable_infinity_cardinality`
+### 726. Omega: `omega_countable_infinity_cardinality`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `countable_infinity_cardinality`
@@ -9392,7 +9444,7 @@ N/A
 
 ---
 
-### 723. Omega: `omega_cuban_missile_crisis_excomm_deliberation`
+### 727. Omega: `omega_cuban_missile_crisis_excomm_deliberation`
 
 *   **Severity:** `moderate`
 *   **Associated Constraint:** `cuban_missile_crisis_excomm_deliberation`
@@ -9405,7 +9457,7 @@ N/A
 
 ---
 
-### 724. Omega: `omega_currys_paradox`
+### 728. Omega: `omega_currys_paradox`
 
 *   **Severity:** `moderate`
 *   **Associated Constraint:** `currys_paradox`
@@ -9418,7 +9470,7 @@ N/A
 
 ---
 
-### 725. Omega: `omega_cut_safety_academic_peer_review_gatekeeping`
+### 729. Omega: `omega_cut_safety_academic_peer_review_gatekeeping`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `academic_peer_review_gatekeeping`
@@ -9431,7 +9483,7 @@ N/A
 
 ---
 
-### 726. Omega: `omega_cut_safety_ai_task_horizon_reliability`
+### 730. Omega: `omega_cut_safety_ai_task_horizon_reliability`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `ai_task_horizon_reliability`
@@ -9444,7 +9496,7 @@ N/A
 
 ---
 
-### 727. Omega: `omega_cut_safety_authoritarian_power_paradox`
+### 731. Omega: `omega_cut_safety_authoritarian_power_paradox`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `authoritarian_power_paradox`
@@ -9457,7 +9509,7 @@ N/A
 
 ---
 
-### 728. Omega: `omega_cut_safety_axiom_of_choice`
+### 732. Omega: `omega_cut_safety_axiom_of_choice`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `axiom_of_choice`
@@ -9470,7 +9522,7 @@ N/A
 
 ---
 
-### 729. Omega: `omega_cut_safety_bay_of_pigs_operational_silo`
+### 733. Omega: `omega_cut_safety_bay_of_pigs_operational_silo`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `bay_of_pigs_operational_silo`
@@ -9483,7 +9535,7 @@ N/A
 
 ---
 
-### 730. Omega: `omega_cut_safety_boundary_protocol`
+### 734. Omega: `omega_cut_safety_boundary_protocol`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `boundary_protocol`
@@ -9496,7 +9548,7 @@ N/A
 
 ---
 
-### 731. Omega: `omega_cut_safety_canada_goose_realignment_2026`
+### 735. Omega: `omega_cut_safety_canada_goose_realignment_2026`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `canada_goose_realignment_2026`
@@ -9509,7 +9561,7 @@ N/A
 
 ---
 
-### 732. Omega: `omega_cut_safety_china_taiwan_reunification_mandate`
+### 736. Omega: `omega_cut_safety_china_taiwan_reunification_mandate`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `china_taiwan_reunification_mandate`
@@ -9522,7 +9574,7 @@ N/A
 
 ---
 
-### 733. Omega: `omega_cut_safety_click_chemistry_paradigm_2026`
+### 737. Omega: `omega_cut_safety_click_chemistry_paradigm_2026`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `click_chemistry_paradigm_2026`
@@ -9535,7 +9587,7 @@ N/A
 
 ---
 
-### 734. Omega: `omega_cut_safety_climate_attribution_2026`
+### 738. Omega: `omega_cut_safety_climate_attribution_2026`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `climate_attribution_2026`
@@ -9548,7 +9600,7 @@ N/A
 
 ---
 
-### 735. Omega: `omega_cut_safety_copyright_protection`
+### 739. Omega: `omega_cut_safety_copyright_protection`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `copyright_protection`
@@ -9561,7 +9613,7 @@ N/A
 
 ---
 
-### 736. Omega: `omega_cut_safety_damped_harmonics`
+### 740. Omega: `omega_cut_safety_damped_harmonics`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `damped_harmonics`
@@ -9574,7 +9626,7 @@ N/A
 
 ---
 
-### 737. Omega: `omega_cut_safety_dunbars_number`
+### 741. Omega: `omega_cut_safety_dunbars_number`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `dunbars_number`
@@ -9587,7 +9639,7 @@ N/A
 
 ---
 
-### 738. Omega: `omega_cut_safety_epigenetics_complexity_2026`
+### 742. Omega: `omega_cut_safety_epigenetics_complexity_2026`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `epigenetics_complexity_2026`
@@ -9600,7 +9652,7 @@ N/A
 
 ---
 
-### 739. Omega: `omega_cut_safety_faint_blue_neural_bifurcation`
+### 743. Omega: `omega_cut_safety_faint_blue_neural_bifurcation`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `faint_blue_neural_bifurcation`
@@ -9613,7 +9665,7 @@ N/A
 
 ---
 
-### 740. Omega: `omega_cut_safety_frankenstein_creation_hubris`
+### 744. Omega: `omega_cut_safety_frankenstein_creation_hubris`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `frankenstein_creation_hubris`
@@ -9626,7 +9678,7 @@ N/A
 
 ---
 
-### 741. Omega: `omega_cut_safety_galois_theory_symmetry`
+### 745. Omega: `omega_cut_safety_galois_theory_symmetry`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `galois_theory_symmetry`
@@ -9639,7 +9691,7 @@ N/A
 
 ---
 
-### 742. Omega: `omega_cut_safety_germline_regulation_threshold_2026`
+### 746. Omega: `omega_cut_safety_germline_regulation_threshold_2026`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `germline_regulation_threshold_2026`
@@ -9652,7 +9704,7 @@ N/A
 
 ---
 
-### 743. Omega: `omega_cut_safety_gilgamesh_mortality_limit`
+### 747. Omega: `omega_cut_safety_gilgamesh_mortality_limit`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `gilgamesh_mortality_limit`
@@ -9665,7 +9717,7 @@ N/A
 
 ---
 
-### 744. Omega: `omega_cut_safety_global_hoarding_scaling_laws`
+### 748. Omega: `omega_cut_safety_global_hoarding_scaling_laws`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `global_hoarding_scaling_laws`
@@ -9678,7 +9730,7 @@ N/A
 
 ---
 
-### 745. Omega: `omega_cut_safety_global_protocol_entrenchment`
+### 749. Omega: `omega_cut_safety_global_protocol_entrenchment`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `global_protocol_entrenchment`
@@ -9691,7 +9743,7 @@ N/A
 
 ---
 
-### 746. Omega: `omega_cut_safety_glp1_payload_efficiency_pivot`
+### 750. Omega: `omega_cut_safety_glp1_payload_efficiency_pivot`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `glp1_payload_efficiency_pivot`
@@ -9704,7 +9756,7 @@ N/A
 
 ---
 
-### 747. Omega: `omega_cut_safety_golden_handcuffs`
+### 751. Omega: `omega_cut_safety_golden_handcuffs`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `golden_handcuffs`
@@ -9717,7 +9769,7 @@ N/A
 
 ---
 
-### 748. Omega: `omega_cut_safety_gs1_gln_identification`
+### 752. Omega: `omega_cut_safety_gs1_gln_identification`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `gs1_gln_identification`
@@ -9730,7 +9782,7 @@ N/A
 
 ---
 
-### 749. Omega: `omega_cut_safety_gs1_standardized_identification`
+### 753. Omega: `omega_cut_safety_gs1_standardized_identification`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `gs1_standardized_identification`
@@ -9743,7 +9795,7 @@ N/A
 
 ---
 
-### 750. Omega: `omega_cut_safety_hamiltonian_path_complexity`
+### 754. Omega: `omega_cut_safety_hamiltonian_path_complexity`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `hamiltonian_path_complexity`
@@ -9756,7 +9808,7 @@ N/A
 
 ---
 
-### 751. Omega: `omega_cut_safety_happiness_of_others`
+### 755. Omega: `omega_cut_safety_happiness_of_others`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `happiness_of_others`
@@ -9769,7 +9821,7 @@ N/A
 
 ---
 
-### 752. Omega: `omega_cut_safety_heuristic_optimization`
+### 756. Omega: `omega_cut_safety_heuristic_optimization`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `heuristic_optimization`
@@ -9782,7 +9834,7 @@ N/A
 
 ---
 
-### 753. Omega: `omega_cut_safety_hilberts_hotel_infinity`
+### 757. Omega: `omega_cut_safety_hilberts_hotel_infinity`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `hilberts_hotel_infinity`
@@ -9795,7 +9847,7 @@ N/A
 
 ---
 
-### 754. Omega: `omega_cut_safety_ice_memory_archive`
+### 758. Omega: `omega_cut_safety_ice_memory_archive`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `ice_memory_archive`
@@ -9808,7 +9860,7 @@ N/A
 
 ---
 
-### 755. Omega: `omega_cut_safety_inner_model_theory_constraints`
+### 759. Omega: `omega_cut_safety_inner_model_theory_constraints`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `inner_model_theory_constraints`
@@ -9821,7 +9873,7 @@ N/A
 
 ---
 
-### 756. Omega: `omega_cut_safety_juvenile_underclass_2026`
+### 760. Omega: `omega_cut_safety_juvenile_underclass_2026`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `juvenile_underclass_2026`
@@ -9834,7 +9886,7 @@ N/A
 
 ---
 
-### 757. Omega: `omega_cut_safety_kjv_puritan_new_world_exit`
+### 761. Omega: `omega_cut_safety_kjv_puritan_new_world_exit`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `kjv_puritan_new_world_exit`
@@ -9847,7 +9899,7 @@ N/A
 
 ---
 
-### 758. Omega: `omega_cut_safety_knowledge_action_gap`
+### 762. Omega: `omega_cut_safety_knowledge_action_gap`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `knowledge_action_gap`
@@ -9860,7 +9912,7 @@ N/A
 
 ---
 
-### 759. Omega: `omega_cut_safety_large_cardinal_foundations`
+### 763. Omega: `omega_cut_safety_large_cardinal_foundations`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `large_cardinal_foundations`
@@ -9873,7 +9925,7 @@ N/A
 
 ---
 
-### 760. Omega: `omega_cut_safety_legacy_system_technical_debt`
+### 764. Omega: `omega_cut_safety_legacy_system_technical_debt`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `legacy_system_technical_debt`
@@ -9886,7 +9938,7 @@ N/A
 
 ---
 
-### 761. Omega: `omega_cut_safety_lln_convergence`
+### 765. Omega: `omega_cut_safety_lln_convergence`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `lln_convergence`
@@ -9899,7 +9951,7 @@ N/A
 
 ---
 
-### 762. Omega: `omega_cut_safety_manganese_catalysis_2026`
+### 766. Omega: `omega_cut_safety_manganese_catalysis_2026`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `manganese_catalysis_2026`
@@ -9912,7 +9964,7 @@ N/A
 
 ---
 
-### 763. Omega: `omega_cut_safety_mco_unit_system_discontinuity`
+### 767. Omega: `omega_cut_safety_mco_unit_system_discontinuity`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `mco_unit_system_discontinuity`
@@ -9925,7 +9977,7 @@ N/A
 
 ---
 
-### 764. Omega: `omega_cut_safety_micro_robot_electronics_integration`
+### 768. Omega: `omega_cut_safety_micro_robot_electronics_integration`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `micro_robot_electronics_integration`
@@ -9938,7 +9990,7 @@ N/A
 
 ---
 
-### 765. Omega: `omega_cut_safety_minimax_decision_rule`
+### 769. Omega: `omega_cut_safety_minimax_decision_rule`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `minimax_decision_rule`
@@ -9951,7 +10003,7 @@ N/A
 
 ---
 
-### 766. Omega: `omega_cut_safety_mutual_defection_equilibrium`
+### 770. Omega: `omega_cut_safety_mutual_defection_equilibrium`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `mutual_defection_equilibrium`
@@ -9964,7 +10016,7 @@ N/A
 
 ---
 
-### 767. Omega: `omega_cut_safety_narrative_engineering_2026`
+### 771. Omega: `omega_cut_safety_narrative_engineering_2026`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `narrative_engineering_2026`
@@ -9977,7 +10029,7 @@ N/A
 
 ---
 
-### 768. Omega: `omega_cut_safety_nasa_faster_better_cheaper`
+### 772. Omega: `omega_cut_safety_nasa_faster_better_cheaper`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `nasa_faster_better_cheaper`
@@ -9990,7 +10042,7 @@ N/A
 
 ---
 
-### 769. Omega: `omega_cut_safety_nash_equilibrium_coordination`
+### 773. Omega: `omega_cut_safety_nash_equilibrium_coordination`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `nash_equilibrium_coordination`
@@ -10003,7 +10055,7 @@ N/A
 
 ---
 
-### 770. Omega: `omega_cut_safety_neuroplasticity_plateau`
+### 774. Omega: `omega_cut_safety_neuroplasticity_plateau`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `neuroplasticity_plateau`
@@ -10016,7 +10068,7 @@ N/A
 
 ---
 
-### 771. Omega: `omega_cut_safety_newtons_method_convergence`
+### 775. Omega: `omega_cut_safety_newtons_method_convergence`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `newtons_method_convergence`
@@ -10029,7 +10081,7 @@ N/A
 
 ---
 
-### 772. Omega: `omega_cut_safety_nonstandard_arithmetic_models`
+### 776. Omega: `omega_cut_safety_nonstandard_arithmetic_models`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `nonstandard_arithmetic_models`
@@ -10042,7 +10094,7 @@ N/A
 
 ---
 
-### 773. Omega: `omega_cut_safety_path_dependence_lock_in`
+### 777. Omega: `omega_cut_safety_path_dependence_lock_in`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `path_dependence_lock_in`
@@ -10055,7 +10107,7 @@ N/A
 
 ---
 
-### 774. Omega: `omega_cut_safety_peano_curve_mapping`
+### 778. Omega: `omega_cut_safety_peano_curve_mapping`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `peano_curve_mapping`
@@ -10068,7 +10120,7 @@ N/A
 
 ---
 
-### 775. Omega: `omega_cut_safety_permissive_software_licensing`
+### 779. Omega: `omega_cut_safety_permissive_software_licensing`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `permissive_software_licensing`
@@ -10081,7 +10133,7 @@ N/A
 
 ---
 
-### 776. Omega: `omega_cut_safety_perseverance_ai_drive`
+### 780. Omega: `omega_cut_safety_perseverance_ai_drive`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `perseverance_ai_drive`
@@ -10094,7 +10146,7 @@ N/A
 
 ---
 
-### 777. Omega: `omega_cut_safety_proof_of_work_consensus`
+### 781. Omega: `omega_cut_safety_proof_of_work_consensus`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `proof_of_work_consensus`
@@ -10107,7 +10159,7 @@ N/A
 
 ---
 
-### 778. Omega: `omega_cut_safety_quantum_entanglement_protocol`
+### 782. Omega: `omega_cut_safety_quantum_entanglement_protocol`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `quantum_entanglement_protocol`
@@ -10120,7 +10172,7 @@ N/A
 
 ---
 
-### 779. Omega: `omega_cut_safety_quine_self_replication`
+### 783. Omega: `omega_cut_safety_quine_self_replication`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `quine_self_replication`
@@ -10133,7 +10185,7 @@ N/A
 
 ---
 
-### 780. Omega: `omega_cut_safety_railway_gauge_standard`
+### 784. Omega: `omega_cut_safety_railway_gauge_standard`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `railway_gauge_standard`
@@ -10146,7 +10198,7 @@ N/A
 
 ---
 
-### 781. Omega: `omega_cut_safety_rogers_commission_institutional_analysis`
+### 785. Omega: `omega_cut_safety_rogers_commission_institutional_analysis`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `rogers_commission_institutional_analysis`
@@ -10159,7 +10211,7 @@ N/A
 
 ---
 
-### 782. Omega: `omega_cut_safety_self_surpassing`
+### 786. Omega: `omega_cut_safety_self_surpassing`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `self_surpassing`
@@ -10172,7 +10224,7 @@ N/A
 
 ---
 
-### 783. Omega: `omega_cut_safety_spv_variations_us_cold`
+### 787. Omega: `omega_cut_safety_spv_variations_us_cold`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `spv_variations_us_cold`
@@ -10185,7 +10237,7 @@ N/A
 
 ---
 
-### 784. Omega: `omega_cut_safety_starwars_evolutionary_mutation`
+### 788. Omega: `omega_cut_safety_starwars_evolutionary_mutation`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `starwars_evolutionary_mutation`
@@ -10198,7 +10250,7 @@ N/A
 
 ---
 
-### 785. Omega: `omega_cut_safety_superbowl_advertising_extraction`
+### 789. Omega: `omega_cut_safety_superbowl_advertising_extraction`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `superbowl_advertising_extraction`
@@ -10211,7 +10263,7 @@ N/A
 
 ---
 
-### 786. Omega: `omega_cut_safety_taiwan_strait_hegemony_shift`
+### 790. Omega: `omega_cut_safety_taiwan_strait_hegemony_shift`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `taiwan_strait_hegemony_shift`
@@ -10224,7 +10276,7 @@ N/A
 
 ---
 
-### 787. Omega: `omega_cut_safety_technological_point_of_no_return`
+### 791. Omega: `omega_cut_safety_technological_point_of_no_return`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `technological_point_of_no_return`
@@ -10237,7 +10289,7 @@ N/A
 
 ---
 
-### 788. Omega: `omega_cut_safety_the_wall_procedural_barrier`
+### 792. Omega: `omega_cut_safety_the_wall_procedural_barrier`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `the_wall_procedural_barrier`
@@ -10250,7 +10302,7 @@ N/A
 
 ---
 
-### 789. Omega: `omega_cut_safety_trojan_war_spoils`
+### 793. Omega: `omega_cut_safety_trojan_war_spoils`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `trojan_war_spoils`
@@ -10263,7 +10315,7 @@ N/A
 
 ---
 
-### 790. Omega: `omega_cut_safety_udhr_1948`
+### 794. Omega: `omega_cut_safety_udhr_1948`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `udhr_1948`
@@ -10276,7 +10328,7 @@ N/A
 
 ---
 
-### 791. Omega: `omega_cut_safety_ulysses_hades_1904`
+### 795. Omega: `omega_cut_safety_ulysses_hades_1904`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `ulysses_hades_1904`
@@ -10289,7 +10341,7 @@ N/A
 
 ---
 
-### 792. Omega: `omega_cut_safety_unclos_2026`
+### 796. Omega: `omega_cut_safety_unclos_2026`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `unclos_2026`
@@ -10302,7 +10354,7 @@ N/A
 
 ---
 
-### 793. Omega: `omega_cut_safety_universal_mathematics_communication`
+### 797. Omega: `omega_cut_safety_universal_mathematics_communication`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `universal_mathematics_communication`
@@ -10315,7 +10367,7 @@ N/A
 
 ---
 
-### 794. Omega: `omega_cut_safety_us_canada_geopolitical_asymmetry`
+### 798. Omega: `omega_cut_safety_us_canada_geopolitical_asymmetry`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `us_canada_geopolitical_asymmetry`
@@ -10328,7 +10380,7 @@ N/A
 
 ---
 
-### 795. Omega: `omega_dexy_gold_protocol`
+### 799. Omega: `omega_dexy_gold_protocol`
 
 *   **Severity:** `moderate`
 *   **Associated Constraint:** `dexy_gold_protocol`
@@ -10341,7 +10393,7 @@ N/A
 
 ---
 
-### 796. Omega: `omega_endowment_effect`
+### 800. Omega: `omega_endowment_effect`
 
 *   **Severity:** `moderate`
 *   **Associated Constraint:** `endowment_effect`
@@ -10354,7 +10406,7 @@ N/A
 
 ---
 
-### 797. Omega: `omega_ergo_mixer_protocol`
+### 801. Omega: `omega_ergo_mixer_protocol`
 
 *   **Severity:** `moderate`
 *   **Associated Constraint:** `ergo_mixer_protocol`
@@ -10367,7 +10419,7 @@ N/A
 
 ---
 
-### 798. Omega: `omega_euler_characteristic_topology`
+### 802. Omega: `omega_euler_characteristic_topology`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `euler_characteristic_topology`
@@ -10380,7 +10432,7 @@ N/A
 
 ---
 
-### 799. Omega: `omega_extraordinary_narrative_shift`
+### 803. Omega: `omega_extraordinary_narrative_shift`
 
 *   **Severity:** `moderate`
 *   **Associated Constraint:** `extraordinary_narrative_shift`
@@ -10393,7 +10445,7 @@ N/A
 
 ---
 
-### 800. Omega: `omega_genetic_algorithms_evolution`
+### 804. Omega: `omega_genetic_algorithms_evolution`
 
 *   **Severity:** `moderate`
 *   **Associated Constraint:** `genetic_algorithms_evolution`
@@ -10406,7 +10458,7 @@ N/A
 
 ---
 
-### 801. Omega: `omega_goldbach_conjecture`
+### 805. Omega: `omega_goldbach_conjecture`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `goldbach_conjecture`
@@ -10419,20 +10471,7 @@ N/A
 
 ---
 
-### 802. Omega: `omega_great_awakening_rekindling`
-
-*   **Severity:** `high`
-*   **Associated Constraint:** `great_awakening_rekindling`
-*   **Source Gap:** `gap(general_type_mismatch,rope,snare)`
-*   **Question:** Distinguishing between intent and consequence in the extraction of institutional authority.
-*   **Suggested Resolution Strategy:**
-    ```
-N/A
-    ```
-
----
-
-### 803. Omega: `omega_halting_problem_undecidability`
+### 806. Omega: `omega_halting_problem_undecidability`
 
 *   **Severity:** `moderate`
 *   **Associated Constraint:** `halting_problem_undecidability`
@@ -10445,7 +10484,7 @@ N/A
 
 ---
 
-### 804. Omega: `omega_hawthorne_effect`
+### 807. Omega: `omega_hawthorne_effect`
 
 *   **Severity:** `moderate`
 *   **Associated Constraint:** `hawthorne_effect`
@@ -10458,7 +10497,7 @@ N/A
 
 ---
 
-### 805. Omega: `omega_heisenberg_uncertainty`
+### 808. Omega: `omega_heisenberg_uncertainty`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `heisenberg_uncertainty`
@@ -10471,7 +10510,7 @@ N/A
 
 ---
 
-### 806. Omega: `omega_helsinki_bus_theory`
+### 809. Omega: `omega_helsinki_bus_theory`
 
 *   **Severity:** `moderate`
 *   **Associated Constraint:** `helsinki_bus_theory`
@@ -10484,7 +10523,7 @@ N/A
 
 ---
 
-### 807. Omega: `omega_heuristic_optimization`
+### 810. Omega: `omega_heuristic_optimization`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `heuristic_optimization`
@@ -10497,7 +10536,7 @@ N/A
 
 ---
 
-### 808. Omega: `omega_indexical_relativity_core`
+### 811. Omega: `omega_indexical_relativity_core`
 
 *   **Severity:** `moderate`
 *   **Associated Constraint:** `indexical_relativity_core`
@@ -10510,7 +10549,7 @@ N/A
 
 ---
 
-### 809. Omega: `omega_kirby_paris_theorem`
+### 812. Omega: `omega_kirby_paris_theorem`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `kirby_paris_theorem`
@@ -10523,7 +10562,7 @@ N/A
 
 ---
 
-### 810. Omega: `omega_kjv_puritan_new_world_exit`
+### 813. Omega: `omega_kjv_puritan_new_world_exit`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `kjv_puritan_new_world_exit`
@@ -10536,7 +10575,7 @@ N/A
 
 ---
 
-### 811. Omega: `omega_kleene_recursion_theorem`
+### 814. Omega: `omega_kleene_recursion_theorem`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `kleene_recursion_theorem`
@@ -10549,7 +10588,7 @@ N/A
 
 ---
 
-### 812. Omega: `omega_layered_brain_processing_1`
+### 815. Omega: `omega_layered_brain_processing_1`
 
 *   **Severity:** `moderate`
 *   **Associated Constraint:** `layered_brain_processing`
@@ -10562,20 +10601,7 @@ N/A
 
 ---
 
-### 813. Omega: `omega_layered_brain_processing_2`
-
-*   **Severity:** `moderate`
-*   **Associated Constraint:** `layered_brain_processing`
-*   **Source Gap:** `gap(snare_mountain_confusion,snare,mountain)`
-*   **Question:** Is layered meaning extraction a functional necessity or a biological limitation?
-*   **Suggested Resolution Strategy:**
-    ```
-N/A
-    ```
-
----
-
-### 814. Omega: `omega_learned_helplessness_ai_cognitive_diversity_arbitrage`
+### 816. Omega: `omega_learned_helplessness_ai_cognitive_diversity_arbitrage`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `ai_cognitive_diversity_arbitrage`
@@ -10588,7 +10614,7 @@ N/A
 
 ---
 
-### 815. Omega: `omega_learned_helplessness_castration_longevity_choice`
+### 817. Omega: `omega_learned_helplessness_castration_longevity_choice`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `castration_longevity_choice`
@@ -10601,7 +10627,7 @@ N/A
 
 ---
 
-### 816. Omega: `omega_learned_helplessness_dead_sea_effect`
+### 818. Omega: `omega_learned_helplessness_dead_sea_effect`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `dead_sea_effect`
@@ -10614,7 +10640,7 @@ N/A
 
 ---
 
-### 817. Omega: `omega_learned_helplessness_ergo_lets_protocol`
+### 819. Omega: `omega_learned_helplessness_ergo_lets_protocol`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `ergo_lets_protocol`
@@ -10627,7 +10653,7 @@ N/A
 
 ---
 
-### 818. Omega: `omega_learned_helplessness_fair_use_doctrine`
+### 820. Omega: `omega_learned_helplessness_fair_use_doctrine`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `fair_use_doctrine`
@@ -10640,7 +10666,7 @@ N/A
 
 ---
 
-### 819. Omega: `omega_learned_helplessness_harm_principle_liberty`
+### 821. Omega: `omega_learned_helplessness_harm_principle_liberty`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `harm_principle_liberty`
@@ -10653,7 +10679,7 @@ N/A
 
 ---
 
-### 820. Omega: `omega_learned_helplessness_hominin_evolutionary_bottleneck`
+### 822. Omega: `omega_learned_helplessness_hominin_evolutionary_bottleneck`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `hominin_evolutionary_bottleneck`
@@ -10666,7 +10692,7 @@ N/A
 
 ---
 
-### 821. Omega: `omega_learned_helplessness_information_foraging_theory`
+### 823. Omega: `omega_learned_helplessness_information_foraging_theory`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `information_foraging_theory`
@@ -10679,7 +10705,7 @@ N/A
 
 ---
 
-### 822. Omega: `omega_learned_helplessness_layered_brain_processing`
+### 824. Omega: `omega_learned_helplessness_layered_brain_processing`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `layered_brain_processing`
@@ -10692,7 +10718,7 @@ N/A
 
 ---
 
-### 823. Omega: `omega_learned_helplessness_ulysses_circe_1904`
+### 825. Omega: `omega_learned_helplessness_ulysses_circe_1904`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `ulysses_circe_1904`
@@ -10705,7 +10731,7 @@ N/A
 
 ---
 
-### 824. Omega: `omega_learned_helplessness_ulysses_oxen_1904`
+### 826. Omega: `omega_learned_helplessness_ulysses_oxen_1904`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `ulysses_oxen_1904`
@@ -10718,7 +10744,7 @@ N/A
 
 ---
 
-### 825. Omega: `omega_learned_helplessness_ulysses_penelope_1904`
+### 827. Omega: `omega_learned_helplessness_ulysses_penelope_1904`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `ulysses_penelope_1904`
@@ -10731,7 +10757,7 @@ N/A
 
 ---
 
-### 826. Omega: `omega_learned_helplessness_ulysses_proteus_1904`
+### 828. Omega: `omega_learned_helplessness_ulysses_proteus_1904`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `ulysses_proteus_1904`
@@ -10744,7 +10770,7 @@ N/A
 
 ---
 
-### 827. Omega: `omega_liar_paradox`
+### 829. Omega: `omega_liar_paradox`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `liar_paradox`
@@ -10757,7 +10783,7 @@ N/A
 
 ---
 
-### 828. Omega: `omega_lindy_effect`
+### 830. Omega: `omega_lindy_effect`
 
 *   **Severity:** `moderate`
 *   **Associated Constraint:** `lindy_effect`
@@ -10770,7 +10796,7 @@ N/A
 
 ---
 
-### 829. Omega: `omega_litany_of_the_real_1`
+### 831. Omega: `omega_litany_of_the_real_1`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `litany_of_the_real`
@@ -10783,20 +10809,7 @@ N/A
 
 ---
 
-### 830. Omega: `omega_local_vs_global_optima`
-
-*   **Severity:** `high`
-*   **Associated Constraint:** `local_vs_global_optima`
-*   **Source Gap:** `N/A`
-*   **Question:** Distinguishing structural extraction from strategic failure in a passive landscape.
-*   **Suggested Resolution Strategy:**
-    ```
-N/A
-    ```
-
----
-
-### 831. Omega: `omega_lowenheim_skolem_theorem`
+### 832. Omega: `omega_lowenheim_skolem_theorem`
 
 *   **Severity:** `high`
 *   **Associated Constraint:** `lowenheim_skolem_theorem`
@@ -10809,25 +10822,12 @@ N/A
 
 ---
 
-### 832. Omega: `omega_martian_signal_latency`
+### 833. Omega: `omega_martian_signal_latency`
 
 *   **Severity:** `moderate`
 *   **Associated Constraint:** `martian_signal_latency`
 *   **Source Gap:** `N/A`
 *   **Question:** Possibility of FTL information transfer via exotic physics.
-*   **Suggested Resolution Strategy:**
-    ```
-N/A
-    ```
-
----
-
-### 833. Omega: `omega_micro_robot_electronics_integration`
-
-*   **Severity:** `moderate`
-*   **Associated Constraint:** `micro_robot_electronics_integration`
-*   **Source Gap:** `gap(mountain_coordination_confusion,mountain,rope)`
-*   **Question:** Whether off-board optical control constitutes a new dependency snare
 *   **Suggested Resolution Strategy:**
     ```
 N/A

@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -67,6 +68,7 @@ narrative_ontology:constraint_metric(cuba_mandatrophic_collapse, theater_ratio, 
 % Constraint self-claim (what does the constraint claim to be?)
 % The state claims this is a necessary structure for economic survival (enforcement/coordination).
 narrative_ontology:constraint_claim(cuba_mandatrophic_collapse, snare).
+narrative_ontology:human_readable(cuba_mandatrophic_collapse, "Cuban Mandatrophy (The GAESA-Infrastructure Divergence)").
 
 % Binary flags
 % Requires heavy active enforcement (CIMEX dollar-stores, military oversight of finance, and police crackdowns).

@@ -4580,7 +4580,23 @@ N/A
 
 ---
 
-### 287. False Mountain: `greenland_defence_pact_2026`
+### 287. False Mountain: `great_awakening_rekindling`
+
+*   **Severity:** `critical`
+*   **Orbit Signature:** `N/A`
+*   **Gap Detected:** ! GAP: general_type_mismatch (powerless: rope, institutional: snare)
+*   **Perspectival Mismatch:**
+    *   **Powerless View:** `rope`
+    *   **Institutional View:** `snare`
+*   **Generated Omega:** omega_great_awakening_rekindling (conceptual)
+*   **Suggested Resolution Strategy:**
+    ```
+N/A
+    ```
+
+---
+
+### 288. False Mountain: `greenland_defence_pact_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -4596,7 +4612,7 @@ N/A
 
 ---
 
-### 288. False Mountain: `greenland_seizure_trade_war`
+### 289. False Mountain: `greenland_seizure_trade_war`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -4612,7 +4628,7 @@ N/A
 
 ---
 
-### 289. False Mountain: `grete_samsa_transition`
+### 290. False Mountain: `grete_samsa_transition`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope, unknown]`
@@ -4628,7 +4644,7 @@ N/A
 
 ---
 
-### 290. False Mountain: `grievance_stack_overflow`
+### 291. False Mountain: `grievance_stack_overflow`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -4644,7 +4660,7 @@ N/A
 
 ---
 
-### 291. False Mountain: `guano_wealth_extraction`
+### 292. False Mountain: `guano_wealth_extraction`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -4660,7 +4676,7 @@ N/A
 
 ---
 
-### 292. False Mountain: `guinea_junta_legitimization_2024`
+### 293. False Mountain: `guinea_junta_legitimization_2024`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -4676,7 +4692,7 @@ N/A
 
 ---
 
-### 293. False Mountain: `guinea_worm_eradication`
+### 294. False Mountain: `guinea_worm_eradication`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, unknown]`
@@ -4692,7 +4708,7 @@ N/A
 
 ---
 
-### 294. False Mountain: `guthrie_kidnapping_2026`
+### 295. False Mountain: `guthrie_kidnapping_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -4708,7 +4724,7 @@ N/A
 
 ---
 
-### 295. False Mountain: `hammurabi_lex_talionis`
+### 296. False Mountain: `hammurabi_lex_talionis`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `N/A`
@@ -4724,7 +4740,7 @@ N/A
 
 ---
 
-### 296. False Mountain: `hanlons_razor`
+### 297. False Mountain: `hanlons_razor`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -4740,7 +4756,7 @@ N/A
 
 ---
 
-### 297. False Mountain: `hasbro_licensing_restriction`
+### 298. False Mountain: `hasbro_licensing_restriction`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -4756,7 +4772,7 @@ N/A
 
 ---
 
-### 298. False Mountain: `hawthorne_effect`
+### 299. False Mountain: `hawthorne_effect`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -4772,7 +4788,7 @@ N/A
 
 ---
 
-### 299. False Mountain: `hegemonic_entropy_2026`
+### 300. False Mountain: `hegemonic_entropy_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, unknown]`
@@ -4788,7 +4804,7 @@ N/A
 
 ---
 
-### 300. False Mountain: `help_to_buy_uk`
+### 301. False Mountain: `help_to_buy_uk`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -4804,7 +4820,7 @@ N/A
 
 ---
 
-### 301. False Mountain: `helsinki_bus_theory`
+### 302. False Mountain: `helsinki_bus_theory`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -4820,7 +4836,7 @@ N/A
 
 ---
 
-### 302. False Mountain: `hershey_salt_strategy`
+### 303. False Mountain: `hershey_salt_strategy`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -4836,7 +4852,7 @@ N/A
 
 ---
 
-### 303. False Mountain: `hhs_fetal_tissue_research_ban_2019`
+### 304. False Mountain: `hhs_fetal_tissue_research_ban_2019`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -4852,7 +4868,7 @@ N/A
 
 ---
 
-### 304. False Mountain: `hicbc_uk`
+### 305. False Mountain: `hicbc_uk`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -4868,7 +4884,7 @@ N/A
 
 ---
 
-### 305. False Mountain: `hidden_interdependency_risk`
+### 306. False Mountain: `hidden_interdependency_risk`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -4884,7 +4900,7 @@ N/A
 
 ---
 
-### 306. False Mountain: `hoa_covenants`
+### 307. False Mountain: `hoa_covenants`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, unknown]`
@@ -4900,7 +4916,7 @@ N/A
 
 ---
 
-### 307. False Mountain: `hollow_state_syndrome`
+### 308. False Mountain: `hollow_state_syndrome`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -4916,7 +4932,7 @@ N/A
 
 ---
 
-### 308. False Mountain: `horizon_liability_contract`
+### 309. False Mountain: `horizon_liability_contract`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -4932,7 +4948,7 @@ N/A
 
 ---
 
-### 309. False Mountain: `hp_liberalism`
+### 310. False Mountain: `hp_liberalism`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `N/A`
@@ -4948,7 +4964,7 @@ N/A
 
 ---
 
-### 310. False Mountain: `hu_2026_election_rules`
+### 311. False Mountain: `hu_2026_election_rules`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `N/A`
@@ -4964,7 +4980,7 @@ N/A
 
 ---
 
-### 311. False Mountain: `huang_expectation_resilience_2026`
+### 312. False Mountain: `huang_expectation_resilience_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -4980,7 +4996,7 @@ N/A
 
 ---
 
-### 312. False Mountain: `hub_short_form_tv_market_fragmentation`
+### 313. False Mountain: `hub_short_form_tv_market_fragmentation`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -4996,7 +5012,7 @@ N/A
 
 ---
 
-### 313. False Mountain: `hydra_game`
+### 314. False Mountain: `hydra_game`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope, unknown]`
@@ -5012,7 +5028,7 @@ N/A
 
 ---
 
-### 314. False Mountain: `hypercompression_of_time_horizons`
+### 315. False Mountain: `hypercompression_of_time_horizons`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -5028,7 +5044,7 @@ N/A
 
 ---
 
-### 315. False Mountain: `hypernormie_equilibrium`
+### 316. False Mountain: `hypernormie_equilibrium`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -5044,7 +5060,7 @@ N/A
 
 ---
 
-### 316. False Mountain: `ia_digital_preservation`
+### 317. False Mountain: `ia_digital_preservation`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `N/A`
@@ -5060,7 +5076,7 @@ N/A
 
 ---
 
-### 317. False Mountain: `ibm_shield_2026`
+### 318. False Mountain: `ibm_shield_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -5076,7 +5092,7 @@ N/A
 
 ---
 
-### 318. False Mountain: `ibm_shield_contract_2026`
+### 319. False Mountain: `ibm_shield_contract_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -5092,7 +5108,7 @@ N/A
 
 ---
 
-### 319. False Mountain: `ice_raids_minnesota_2026`
+### 320. False Mountain: `ice_raids_minnesota_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -5108,7 +5124,7 @@ N/A
 
 ---
 
-### 320. False Mountain: `ice_safe_departure`
+### 321. False Mountain: `ice_safe_departure`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -5124,7 +5140,7 @@ N/A
 
 ---
 
-### 321. False Mountain: `identity_stack_incompatibility`
+### 322. False Mountain: `identity_stack_incompatibility`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -5140,7 +5156,7 @@ N/A
 
 ---
 
-### 322. False Mountain: `incentive_surface_warping`
+### 323. False Mountain: `incentive_surface_warping`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -5156,7 +5172,7 @@ N/A
 
 ---
 
-### 323. False Mountain: `incumbent_steel_production`
+### 324. False Mountain: `incumbent_steel_production`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -5172,7 +5188,7 @@ N/A
 
 ---
 
-### 324. False Mountain: `india_nuclear_liability_act_2010`
+### 325. False Mountain: `india_nuclear_liability_act_2010`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -5188,7 +5204,7 @@ N/A
 
 ---
 
-### 325. False Mountain: `india_semi_mission`
+### 326. False Mountain: `india_semi_mission`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -5204,7 +5220,7 @@ N/A
 
 ---
 
-### 326. False Mountain: `indian_import_tariffs_eu`
+### 327. False Mountain: `indian_import_tariffs_eu`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -5220,7 +5236,7 @@ N/A
 
 ---
 
-### 327. False Mountain: `individual_revolution_autonomy`
+### 328. False Mountain: `individual_revolution_autonomy`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -5236,7 +5252,7 @@ N/A
 
 ---
 
-### 328. False Mountain: `indo_german_defense_pact`
+### 329. False Mountain: `indo_german_defense_pact`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[indexically_opaque, rope, tangled_rope]`
@@ -5252,7 +5268,7 @@ N/A
 
 ---
 
-### 329. False Mountain: `indonesia_penal_code_2023`
+### 330. False Mountain: `indonesia_penal_code_2023`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[indexically_opaque, rope, snare]`
@@ -5268,7 +5284,7 @@ N/A
 
 ---
 
-### 330. False Mountain: `inference_cost_scaling_law`
+### 331. False Mountain: `inference_cost_scaling_law`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -5284,7 +5300,7 @@ N/A
 
 ---
 
-### 331. False Mountain: `informational_time_2026`
+### 332. False Mountain: `informational_time_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -5300,7 +5316,7 @@ N/A
 
 ---
 
-### 332. False Mountain: `infrastructure_interoperability_decay`
+### 333. False Mountain: `infrastructure_interoperability_decay`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -5316,7 +5332,7 @@ N/A
 
 ---
 
-### 333. False Mountain: `innovators_dilemma`
+### 334. False Mountain: `innovators_dilemma`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -5332,7 +5348,7 @@ N/A
 
 ---
 
-### 334. False Mountain: `institutional_inertia_lock`
+### 335. False Mountain: `institutional_inertia_lock`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -5348,7 +5364,7 @@ N/A
 
 ---
 
-### 335. False Mountain: `institutional_memory_loss`
+### 336. False Mountain: `institutional_memory_loss`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -5364,7 +5380,7 @@ N/A
 
 ---
 
-### 336. False Mountain: `institutional_mutation_domestication`
+### 337. False Mountain: `institutional_mutation_domestication`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -5380,7 +5396,7 @@ N/A
 
 ---
 
-### 337. False Mountain: `institutional_mutation_without_selection`
+### 338. False Mountain: `institutional_mutation_without_selection`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -5396,7 +5412,7 @@ N/A
 
 ---
 
-### 338. False Mountain: `institutional_trust_decay`
+### 339. False Mountain: `institutional_trust_decay`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope, unknown]`
@@ -5412,7 +5428,7 @@ N/A
 
 ---
 
-### 339. False Mountain: `insult_wisdom_training`
+### 340. False Mountain: `insult_wisdom_training`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope, unknown]`
@@ -5428,7 +5444,7 @@ N/A
 
 ---
 
-### 340. False Mountain: `integrated_digital_governance_stack`
+### 341. False Mountain: `integrated_digital_governance_stack`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -5444,7 +5460,7 @@ N/A
 
 ---
 
-### 341. False Mountain: `interface_contract_breakdown`
+### 342. False Mountain: `interface_contract_breakdown`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -5460,7 +5476,7 @@ N/A
 
 ---
 
-### 342. False Mountain: `international_seabed_mining_regime`
+### 343. False Mountain: `international_seabed_mining_regime`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[indexically_opaque, snare, tangled_rope]`
@@ -5476,7 +5492,7 @@ N/A
 
 ---
 
-### 343. False Mountain: `internet_evolution_lifecycle`
+### 344. False Mountain: `internet_evolution_lifecycle`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -5492,7 +5508,7 @@ N/A
 
 ---
 
-### 344. False Mountain: `interpretive_frame_fragmentation`
+### 345. False Mountain: `interpretive_frame_fragmentation`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -5508,7 +5524,7 @@ N/A
 
 ---
 
-### 345. False Mountain: `intertemporal_responsibility_gap`
+### 346. False Mountain: `intertemporal_responsibility_gap`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -5524,7 +5540,7 @@ N/A
 
 ---
 
-### 346. False Mountain: `invisible_infrastructure_dependency`
+### 347. False Mountain: `invisible_infrastructure_dependency`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -5540,7 +5556,7 @@ N/A
 
 ---
 
-### 347. False Mountain: `iran_guardian_council_vetting`
+### 348. False Mountain: `iran_guardian_council_vetting`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -5556,7 +5572,7 @@ N/A
 
 ---
 
-### 348. False Mountain: `iran_hijab_law`
+### 349. False Mountain: `iran_hijab_law`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -5572,7 +5588,7 @@ N/A
 
 ---
 
-### 349. False Mountain: `iran_mandatrophic_collapse`
+### 350. False Mountain: `iran_mandatrophic_collapse`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -5588,7 +5604,7 @@ N/A
 
 ---
 
-### 350. False Mountain: `iran_nin_repression`
+### 351. False Mountain: `iran_nin_repression`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -5604,7 +5620,7 @@ N/A
 
 ---
 
-### 351. False Mountain: `iran_war_room_2026`
+### 352. False Mountain: `iran_war_room_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -5620,7 +5636,7 @@ N/A
 
 ---
 
-### 352. False Mountain: `iron_law_of_oligarchy`
+### 353. False Mountain: `iron_law_of_oligarchy`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -5636,7 +5652,7 @@ N/A
 
 ---
 
-### 353. False Mountain: `irreversible_policy_commitment`
+### 354. False Mountain: `irreversible_policy_commitment`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -5652,7 +5668,7 @@ N/A
 
 ---
 
-### 354. False Mountain: `isa_education_scaffold`
+### 355. False Mountain: `isa_education_scaffold`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[scaffold, tangled_rope]`
@@ -5668,7 +5684,7 @@ N/A
 
 ---
 
-### 355. False Mountain: `israel_egypt_gas_deal`
+### 356. False Mountain: `israel_egypt_gas_deal`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -5684,7 +5700,7 @@ N/A
 
 ---
 
-### 356. False Mountain: `israel_electoral_threshold`
+### 357. False Mountain: `israel_electoral_threshold`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -5700,7 +5716,7 @@ N/A
 
 ---
 
-### 357. False Mountain: `israel_gaza_ceasefire_violation`
+### 358. False Mountain: `israel_gaza_ceasefire_violation`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -5716,7 +5732,7 @@ N/A
 
 ---
 
-### 358. False Mountain: `israel_norwegian_law`
+### 359. False Mountain: `israel_norwegian_law`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -5732,7 +5748,7 @@ N/A
 
 ---
 
-### 359. False Mountain: `israel_override_clause`
+### 360. False Mountain: `israel_override_clause`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -5748,7 +5764,7 @@ N/A
 
 ---
 
-### 360. False Mountain: `israel_surplus_vote_agreements`
+### 361. False Mountain: `israel_surplus_vote_agreements`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -5764,7 +5780,7 @@ N/A
 
 ---
 
-### 361. False Mountain: `iterated_function_system_convergence`
+### 362. False Mountain: `iterated_function_system_convergence`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `N/A`
@@ -5780,7 +5796,7 @@ N/A
 
 ---
 
-### 362. False Mountain: `ivt_accessibility_barrier`
+### 363. False Mountain: `ivt_accessibility_barrier`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `N/A`
@@ -5796,7 +5812,7 @@ N/A
 
 ---
 
-### 363. False Mountain: `japanese_energy_scaffold_2025`
+### 364. False Mountain: `japanese_energy_scaffold_2025`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -5812,7 +5828,7 @@ N/A
 
 ---
 
-### 364. False Mountain: `jevons_paradox`
+### 365. False Mountain: `jevons_paradox`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -5828,7 +5844,7 @@ N/A
 
 ---
 
-### 365. False Mountain: `job_hunt_volume_system_2026`
+### 366. False Mountain: `job_hunt_volume_system_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -5844,7 +5860,7 @@ N/A
 
 ---
 
-### 366. False Mountain: `jp_eez_enforcement`
+### 367. False Mountain: `jp_eez_enforcement`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -5860,7 +5876,7 @@ N/A
 
 ---
 
-### 367. False Mountain: `jp_nativist_politics`
+### 368. False Mountain: `jp_nativist_politics`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[indexically_opaque, rope, snare]`
@@ -5876,7 +5892,7 @@ N/A
 
 ---
 
-### 368. False Mountain: `keltner_relationship_evaluation`
+### 369. False Mountain: `keltner_relationship_evaluation`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope, unknown]`
@@ -5892,7 +5908,7 @@ N/A
 
 ---
 
-### 369. False Mountain: `khantivadin_radical_patience`
+### 370. False Mountain: `khantivadin_radical_patience`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -5908,7 +5924,7 @@ N/A
 
 ---
 
-### 370. False Mountain: `kidney_exchange_market`
+### 371. False Mountain: `kidney_exchange_market`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -5924,7 +5940,7 @@ N/A
 
 ---
 
-### 371. False Mountain: `kim_jong_un_succession`
+### 372. False Mountain: `kim_jong_un_succession`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -5940,7 +5956,7 @@ N/A
 
 ---
 
-### 372. False Mountain: `labor_union_dues`
+### 373. False Mountain: `labor_union_dues`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `N/A`
@@ -5956,7 +5972,7 @@ N/A
 
 ---
 
-### 373. False Mountain: `landscape_of_fear_2026`
+### 374. False Mountain: `landscape_of_fear_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -5972,7 +5988,7 @@ N/A
 
 ---
 
-### 374. False Mountain: `latent_goal_activation`
+### 375. False Mountain: `latent_goal_activation`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -5988,7 +6004,7 @@ N/A
 
 ---
 
-### 375. False Mountain: `latent_regulatory_bomb`
+### 376. False Mountain: `latent_regulatory_bomb`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -6004,7 +6020,7 @@ N/A
 
 ---
 
-### 376. False Mountain: `lavender_ai_targeting`
+### 377. False Mountain: `lavender_ai_targeting`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -6020,7 +6036,7 @@ N/A
 
 ---
 
-### 377. False Mountain: `law_of_diminishing_returns`
+### 378. False Mountain: `law_of_diminishing_returns`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -6036,7 +6052,23 @@ N/A
 
 ---
 
-### 378. False Mountain: `lcdm_hubble_tension`
+### 379. False Mountain: `layered_brain_processing`
+
+*   **Severity:** `critical`
+*   **Orbit Signature:** `[tangled_rope]`
+*   **Gap Detected:** ! GAP: snare_mountain_confusion (powerless: snare, institutional: mountain)
+*   **Perspectival Mismatch:**
+    *   **Powerless View:** `snare`
+    *   **Institutional View:** `mountain`
+*   **Generated Omega:** omega_layered_brain_processing_1 (empirical)
+*   **Suggested Resolution Strategy:**
+    ```
+N/A
+    ```
+
+---
+
+### 380. False Mountain: `lcdm_hubble_tension`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -6052,7 +6084,7 @@ N/A
 
 ---
 
-### 379. False Mountain: `legal_formalism_overhang`
+### 381. False Mountain: `legal_formalism_overhang`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -6068,7 +6100,7 @@ N/A
 
 ---
 
-### 380. False Mountain: `legibility_trap`
+### 382. False Mountain: `legibility_trap`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -6084,7 +6116,7 @@ N/A
 
 ---
 
-### 381. False Mountain: `legitimacy_without_capacity`
+### 383. False Mountain: `legitimacy_without_capacity`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -6100,7 +6132,7 @@ N/A
 
 ---
 
-### 382. False Mountain: `legitimacy_without_effectiveness`
+### 384. False Mountain: `legitimacy_without_effectiveness`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -6116,7 +6148,7 @@ N/A
 
 ---
 
-### 383. False Mountain: `lehman_repo_105`
+### 385. False Mountain: `lehman_repo_105`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -6132,7 +6164,7 @@ N/A
 
 ---
 
-### 384. False Mountain: `lindy_effect`
+### 386. False Mountain: `lindy_effect`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, unknown]`
@@ -6148,7 +6180,7 @@ N/A
 
 ---
 
-### 385. False Mountain: `liquidity_illusion`
+### 387. False Mountain: `liquidity_illusion`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -6164,7 +6196,7 @@ N/A
 
 ---
 
-### 386. False Mountain: `litchfield_sensitive_locations_2026`
+### 388. False Mountain: `litchfield_sensitive_locations_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -6180,7 +6212,7 @@ N/A
 
 ---
 
-### 387. False Mountain: `logistic_map_dynamics`
+### 389. False Mountain: `logistic_map_dynamics`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -6196,7 +6228,7 @@ N/A
 
 ---
 
-### 388. False Mountain: `lorenz_attractor_dynamics`
+### 390. False Mountain: `lorenz_attractor_dynamics`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -6212,7 +6244,7 @@ N/A
 
 ---
 
-### 389. False Mountain: `lung_transplant_protocol`
+### 391. False Mountain: `lung_transplant_protocol`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -6228,7 +6260,7 @@ N/A
 
 ---
 
-### 390. False Mountain: `maintenance_capacity_shortfall`
+### 392. False Mountain: `maintenance_capacity_shortfall`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -6244,7 +6276,7 @@ N/A
 
 ---
 
-### 391. False Mountain: `maladaptive_selection_process`
+### 393. False Mountain: `maladaptive_selection_process`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -6260,7 +6292,7 @@ N/A
 
 ---
 
-### 392. False Mountain: `mandatrophic_margin_collapse`
+### 394. False Mountain: `mandatrophic_margin_collapse`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -6276,7 +6308,7 @@ N/A
 
 ---
 
-### 393. False Mountain: `mandatrophy_systemic_collapse`
+### 395. False Mountain: `mandatrophy_systemic_collapse`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `N/A`
@@ -6292,7 +6324,7 @@ N/A
 
 ---
 
-### 394. False Mountain: `manga_distribution_duopoly`
+### 396. False Mountain: `manga_distribution_duopoly`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -6308,7 +6340,7 @@ N/A
 
 ---
 
-### 395. False Mountain: `marriage_market_asymmetry_2026`
+### 397. False Mountain: `marriage_market_asymmetry_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -6324,7 +6356,7 @@ N/A
 
 ---
 
-### 396. False Mountain: `mass_market_extinction_2026`
+### 398. False Mountain: `mass_market_extinction_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -6340,7 +6372,7 @@ N/A
 
 ---
 
-### 397. False Mountain: `matching_markets_general`
+### 399. False Mountain: `matching_markets_general`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -6356,7 +6388,7 @@ N/A
 
 ---
 
-### 398. False Mountain: `max_flow_min_cut`
+### 400. False Mountain: `max_flow_min_cut`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `N/A`
@@ -6372,7 +6404,7 @@ N/A
 
 ---
 
-### 399. False Mountain: `med_diet_consensus_2026`
+### 401. False Mountain: `med_diet_consensus_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -6388,7 +6420,7 @@ N/A
 
 ---
 
-### 400. False Mountain: `medical_residency_match`
+### 402. False Mountain: `medical_residency_match`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -6404,7 +6436,7 @@ N/A
 
 ---
 
-### 401. False Mountain: `medieval_church_hegemony`
+### 403. False Mountain: `medieval_church_hegemony`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -6420,7 +6452,7 @@ N/A
 
 ---
 
-### 402. False Mountain: `memetic_fitness_vs_truth`
+### 404. False Mountain: `memetic_fitness_vs_truth`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -6436,7 +6468,7 @@ N/A
 
 ---
 
-### 403. False Mountain: `meta_governance_overload`
+### 405. False Mountain: `meta_governance_overload`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -6452,7 +6484,7 @@ N/A
 
 ---
 
-### 404. False Mountain: `meta_model_lock_in`
+### 406. False Mountain: `meta_model_lock_in`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -6468,7 +6500,7 @@ N/A
 
 ---
 
-### 405. False Mountain: `meta_pay_or_okay_model`
+### 407. False Mountain: `meta_pay_or_okay_model`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[indexically_opaque, rope, snare]`
@@ -6484,7 +6516,7 @@ N/A
 
 ---
 
-### 406. False Mountain: `metabolic_constraint_cognition`
+### 408. False Mountain: `metabolic_constraint_cognition`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -6500,7 +6532,7 @@ N/A
 
 ---
 
-### 407. False Mountain: `mexican_airline_merger`
+### 409. False Mountain: `mexican_airline_merger`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -6516,7 +6548,23 @@ N/A
 
 ---
 
-### 408. False Mountain: `microbiome_symbiosis`
+### 410. False Mountain: `micro_robot_electronics_integration`
+
+*   **Severity:** `critical`
+*   **Orbit Signature:** `[tangled_rope]`
+*   **Gap Detected:** ! GAP: mountain_coordination_confusion (powerless: mountain, institutional: rope)
+*   **Perspectival Mismatch:**
+    *   **Powerless View:** `mountain`
+    *   **Institutional View:** `rope`
+*   **Generated Omega:** omega_cut_safety_micro_robot_electronics_integration (conceptual)
+*   **Suggested Resolution Strategy:**
+    ```
+N/A
+    ```
+
+---
+
+### 411. False Mountain: `microbiome_symbiosis`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -6532,7 +6580,7 @@ N/A
 
 ---
 
-### 409. False Mountain: `microwave_weapon_1`
+### 412. False Mountain: `microwave_weapon_1`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -6548,7 +6596,7 @@ N/A
 
 ---
 
-### 410. False Mountain: `mil_std_461g_emi_control`
+### 413. False Mountain: `mil_std_461g_emi_control`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -6564,7 +6612,7 @@ N/A
 
 ---
 
-### 411. False Mountain: `mil_std_810f_tailoring`
+### 414. False Mountain: `mil_std_810f_tailoring`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -6580,7 +6628,7 @@ N/A
 
 ---
 
-### 412. False Mountain: `minimax_theorem_game_equilibrium`
+### 415. False Mountain: `minimax_theorem_game_equilibrium`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `N/A`
@@ -6596,7 +6644,7 @@ N/A
 
 ---
 
-### 413. False Mountain: `minnesota_sovereignty_2026`
+### 416. False Mountain: `minnesota_sovereignty_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -6612,7 +6660,7 @@ N/A
 
 ---
 
-### 414. False Mountain: `misunderstanding_as_mismatch`
+### 417. False Mountain: `misunderstanding_as_mismatch`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -6628,7 +6676,7 @@ N/A
 
 ---
 
-### 415. False Mountain: `mit_tfus_2026`
+### 418. False Mountain: `mit_tfus_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `N/A`
@@ -6644,7 +6692,7 @@ N/A
 
 ---
 
-### 416. False Mountain: `model_autonomy_creep`
+### 419. False Mountain: `model_autonomy_creep`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -6660,7 +6708,7 @@ N/A
 
 ---
 
-### 417. False Mountain: `model_collapse_feedback_loop`
+### 420. False Mountain: `model_collapse_feedback_loop`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -6676,7 +6724,7 @@ N/A
 
 ---
 
-### 418. False Mountain: `model_of_models_regression`
+### 421. False Mountain: `model_of_models_regression`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -6692,7 +6740,7 @@ N/A
 
 ---
 
-### 419. False Mountain: `moltbook_agent_theater`
+### 422. False Mountain: `moltbook_agent_theater`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope, unknown]`
@@ -6708,7 +6756,7 @@ N/A
 
 ---
 
-### 420. False Mountain: `moltbook_breach_2026`
+### 423. False Mountain: `moltbook_breach_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -6724,7 +6772,7 @@ N/A
 
 ---
 
-### 421. False Mountain: `moltbot_religion`
+### 424. False Mountain: `moltbot_religion`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `N/A`
@@ -6740,7 +6788,7 @@ N/A
 
 ---
 
-### 422. False Mountain: `monetary_regime_transition`
+### 425. False Mountain: `monetary_regime_transition`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -6756,7 +6804,7 @@ N/A
 
 ---
 
-### 423. False Mountain: `moral_outsourcing`
+### 426. False Mountain: `moral_outsourcing`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -6772,7 +6820,7 @@ N/A
 
 ---
 
-### 424. False Mountain: `mrna_melanoma_therapy`
+### 427. False Mountain: `mrna_melanoma_therapy`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -6788,7 +6836,7 @@ N/A
 
 ---
 
-### 425. False Mountain: `multi_agent_reward_hacking`
+### 428. False Mountain: `multi_agent_reward_hacking`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -6804,7 +6852,7 @@ N/A
 
 ---
 
-### 426. False Mountain: `multi_planetary_latency_lock`
+### 429. False Mountain: `multi_planetary_latency_lock`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -6820,7 +6868,7 @@ N/A
 
 ---
 
-### 427. False Mountain: `naming_as_control`
+### 430. False Mountain: `naming_as_control`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -6836,7 +6884,7 @@ N/A
 
 ---
 
-### 428. False Mountain: `narcissistic_ego_maintenance`
+### 431. False Mountain: `narcissistic_ego_maintenance`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -6852,7 +6900,7 @@ N/A
 
 ---
 
-### 429. False Mountain: `narrative_capacity_exhaustion`
+### 432. False Mountain: `narrative_capacity_exhaustion`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -6868,7 +6916,7 @@ N/A
 
 ---
 
-### 430. False Mountain: `narrative_overfitting`
+### 433. False Mountain: `narrative_overfitting`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -6884,7 +6932,7 @@ N/A
 
 ---
 
-### 431. False Mountain: `ncaa_eligibility_rules`
+### 434. False Mountain: `ncaa_eligibility_rules`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -6900,7 +6948,7 @@ N/A
 
 ---
 
-### 432. False Mountain: `nds_2022_pacing_challenge`
+### 435. False Mountain: `nds_2022_pacing_challenge`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -6916,7 +6964,7 @@ N/A
 
 ---
 
-### 433. False Mountain: `necessary_day_job`
+### 436. False Mountain: `necessary_day_job`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -6932,7 +6980,7 @@ N/A
 
 ---
 
-### 434. False Mountain: `negative_emissions_arbitrage`
+### 437. False Mountain: `negative_emissions_arbitrage`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope, unknown]`
@@ -6948,7 +6996,7 @@ N/A
 
 ---
 
-### 435. False Mountain: `net_zero_stabilization`
+### 438. False Mountain: `net_zero_stabilization`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, unknown]`
@@ -6964,7 +7012,7 @@ N/A
 
 ---
 
-### 436. False Mountain: `network_effects`
+### 439. False Mountain: `network_effects`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -6980,7 +7028,7 @@ N/A
 
 ---
 
-### 437. False Mountain: `neural_interoperability`
+### 440. False Mountain: `neural_interoperability`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, unknown]`
@@ -6996,7 +7044,7 @@ N/A
 
 ---
 
-### 438. False Mountain: `neural_substrate_2026`
+### 441. False Mountain: `neural_substrate_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -7012,7 +7060,7 @@ N/A
 
 ---
 
-### 439. False Mountain: `neurodiversity_spectrum`
+### 442. False Mountain: `neurodiversity_spectrum`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope, unknown]`
@@ -7028,7 +7076,7 @@ N/A
 
 ---
 
-### 440. False Mountain: `new_start_expiration`
+### 443. False Mountain: `new_start_expiration`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -7044,7 +7092,7 @@ N/A
 
 ---
 
-### 441. False Mountain: `news_paywall_inequality`
+### 444. False Mountain: `news_paywall_inequality`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -7060,7 +7108,7 @@ N/A
 
 ---
 
-### 442. False Mountain: `nfl_superbowl_halftime_exclusivity`
+### 445. False Mountain: `nfl_superbowl_halftime_exclusivity`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -7076,7 +7124,7 @@ N/A
 
 ---
 
-### 443. False Mountain: `nfl_superbowl_marketing_regulation`
+### 446. False Mountain: `nfl_superbowl_marketing_regulation`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -7092,7 +7140,7 @@ N/A
 
 ---
 
-### 444. False Mountain: `nine_day_buffer`
+### 447. False Mountain: `nine_day_buffer`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -7108,7 +7156,7 @@ N/A
 
 ---
 
-### 445. False Mountain: `noether_isomorphism_access`
+### 448. False Mountain: `noether_isomorphism_access`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `N/A`
@@ -7124,7 +7172,7 @@ N/A
 
 ---
 
-### 446. False Mountain: `noethers_theorem_symmetry`
+### 449. False Mountain: `noethers_theorem_symmetry`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[mountain]`
@@ -7140,7 +7188,7 @@ N/A
 
 ---
 
-### 447. False Mountain: `non_compete_agreements`
+### 450. False Mountain: `non_compete_agreements`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -7156,7 +7204,7 @@ N/A
 
 ---
 
-### 448. False Mountain: `norm_erosion_threshold`
+### 451. False Mountain: `norm_erosion_threshold`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -7172,7 +7220,7 @@ N/A
 
 ---
 
-### 449. False Mountain: `north_korea_songun_mandatrophy`
+### 452. False Mountain: `north_korea_songun_mandatrophy`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -7188,7 +7236,7 @@ N/A
 
 ---
 
-### 450. False Mountain: `north_sea_wind_grid`
+### 453. False Mountain: `north_sea_wind_grid`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -7204,7 +7252,7 @@ N/A
 
 ---
 
-### 451. False Mountain: `notary_ink_dependency`
+### 454. False Mountain: `notary_ink_dependency`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope, unknown]`
@@ -7220,7 +7268,7 @@ N/A
 
 ---
 
-### 452. False Mountain: `nsl_hk`
+### 455. False Mountain: `nsl_hk`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -7236,7 +7284,7 @@ N/A
 
 ---
 
-### 453. False Mountain: `nsw_transmission_bottleneck`
+### 456. False Mountain: `nsw_transmission_bottleneck`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[scaffold, snare, unknown]`
@@ -7252,7 +7300,7 @@ N/A
 
 ---
 
-### 454. False Mountain: `nuclear_vacuum_2026`
+### 457. False Mountain: `nuclear_vacuum_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -7268,7 +7316,7 @@ N/A
 
 ---
 
-### 455. False Mountain: `nvidia_cuda_ecosystem_lockin`
+### 458. False Mountain: `nvidia_cuda_ecosystem_lockin`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[indexically_opaque, rope, snare]`
@@ -7284,7 +7332,7 @@ N/A
 
 ---
 
-### 456. False Mountain: `ny_private_school_discount`
+### 459. False Mountain: `ny_private_school_discount`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -7300,7 +7348,7 @@ N/A
 
 ---
 
-### 457. False Mountain: `nyc_metrocard_art_licensing`
+### 460. False Mountain: `nyc_metrocard_art_licensing`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -7316,7 +7364,7 @@ N/A
 
 ---
 
-### 458. False Mountain: `olympic_medal_allocation`
+### 461. False Mountain: `olympic_medal_allocation`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope, unknown]`
@@ -7332,7 +7380,7 @@ N/A
 
 ---
 
-### 459. False Mountain: `omega1_patching_process`
+### 462. False Mountain: `omega1_patching_process`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `N/A`
@@ -7348,7 +7396,7 @@ N/A
 
 ---
 
-### 460. False Mountain: `omelet_perfection_complexity`
+### 463. False Mountain: `omelet_perfection_complexity`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, unknown]`
@@ -7364,7 +7412,7 @@ N/A
 
 ---
 
-### 461. False Mountain: `openai_api_access`
+### 464. False Mountain: `openai_api_access`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[scaffold, snare, unknown]`
@@ -7380,7 +7428,7 @@ N/A
 
 ---
 
-### 462. False Mountain: `openai_codex_app_constraint`
+### 465. False Mountain: `openai_codex_app_constraint`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[scaffold, snare, unknown]`
@@ -7396,7 +7444,7 @@ N/A
 
 ---
 
-### 463. False Mountain: `openai_health_review`
+### 466. False Mountain: `openai_health_review`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -7412,7 +7460,7 @@ N/A
 
 ---
 
-### 464. False Mountain: `openai_implicit_translator`
+### 467. False Mountain: `openai_implicit_translator`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -7428,7 +7476,7 @@ N/A
 
 ---
 
-### 465. False Mountain: `openai_prism_development`
+### 468. False Mountain: `openai_prism_development`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[indexically_opaque, rope, snare, tangled_rope]`
@@ -7444,7 +7492,7 @@ N/A
 
 ---
 
-### 466. False Mountain: `openbsd_netiquette_protocol`
+### 469. False Mountain: `openbsd_netiquette_protocol`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -7460,7 +7508,7 @@ N/A
 
 ---
 
-### 467. False Mountain: `openclaw_data_lock_in`
+### 470. False Mountain: `openclaw_data_lock_in`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -7476,7 +7524,7 @@ N/A
 
 ---
 
-### 468. False Mountain: `openclaw_regulation`
+### 471. False Mountain: `openclaw_regulation`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -7492,7 +7540,7 @@ N/A
 
 ---
 
-### 469. False Mountain: `openscholar_peer_review`
+### 472. False Mountain: `openscholar_peer_review`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[scaffold, snare, unknown]`
@@ -7508,7 +7556,7 @@ N/A
 
 ---
 
-### 470. False Mountain: `opioid_political_realignment_2026`
+### 473. False Mountain: `opioid_political_realignment_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -7524,7 +7572,7 @@ N/A
 
 ---
 
-### 471. False Mountain: `optimization_fragility`
+### 474. False Mountain: `optimization_fragility`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -7540,7 +7588,7 @@ N/A
 
 ---
 
-### 472. False Mountain: `oral_glp1_market_access`
+### 475. False Mountain: `oral_glp1_market_access`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -7556,7 +7604,7 @@ N/A
 
 ---
 
-### 473. False Mountain: `orbital_data_center_2026`
+### 476. False Mountain: `orbital_data_center_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -7572,7 +7620,7 @@ N/A
 
 ---
 
-### 474. False Mountain: `oscar_campaign_spending`
+### 477. False Mountain: `oscar_campaign_spending`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -7588,7 +7636,7 @@ N/A
 
 ---
 
-### 475. False Mountain: `other_peoples_troubles_2026`
+### 478. False Mountain: `other_peoples_troubles_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -7604,7 +7652,7 @@ N/A
 
 ---
 
-### 476. False Mountain: `overfitting_to_frameworks`
+### 479. False Mountain: `overfitting_to_frameworks`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -7620,7 +7668,7 @@ N/A
 
 ---
 
-### 477. False Mountain: `overton_window`
+### 480. False Mountain: `overton_window`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -7636,7 +7684,7 @@ N/A
 
 ---
 
-### 478. False Mountain: `p_g_golden_pear_surveillance`
+### 481. False Mountain: `p_g_golden_pear_surveillance`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -7652,7 +7700,7 @@ N/A
 
 ---
 
-### 479. False Mountain: `p_vs_np`
+### 482. False Mountain: `p_vs_np`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[mountain]`
@@ -7668,7 +7716,7 @@ N/A
 
 ---
 
-### 480. False Mountain: `panama_canal_ports`
+### 483. False Mountain: `panama_canal_ports`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -7684,7 +7732,7 @@ N/A
 
 ---
 
-### 481. False Mountain: `parable_fish_turtle`
+### 484. False Mountain: `parable_fish_turtle`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -7700,7 +7748,7 @@ N/A
 
 ---
 
-### 482. False Mountain: `parkinsons_law`
+### 485. False Mountain: `parkinsons_law`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -7716,7 +7764,7 @@ N/A
 
 ---
 
-### 483. False Mountain: `participatory_observer_hypothesis`
+### 486. False Mountain: `participatory_observer_hypothesis`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -7732,7 +7780,7 @@ N/A
 
 ---
 
-### 484. False Mountain: `paxsilica_framework`
+### 487. False Mountain: `paxsilica_framework`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -7748,7 +7796,7 @@ N/A
 
 ---
 
-### 485. False Mountain: `pe_fund_level_leverage`
+### 488. False Mountain: `pe_fund_level_leverage`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -7764,7 +7812,7 @@ N/A
 
 ---
 
-### 486. False Mountain: `pe_rental_market_lockin`
+### 489. False Mountain: `pe_rental_market_lockin`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -7780,7 +7828,7 @@ N/A
 
 ---
 
-### 487. False Mountain: `perovskite_self_etching`
+### 490. False Mountain: `perovskite_self_etching`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[scaffold, snare, tangled_rope]`
@@ -7796,7 +7844,7 @@ N/A
 
 ---
 
-### 488. False Mountain: `peter_principle`
+### 491. False Mountain: `peter_principle`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -7812,7 +7860,7 @@ N/A
 
 ---
 
-### 489. False Mountain: `pla_loyalty_purge`
+### 492. False Mountain: `pla_loyalty_purge`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -7828,7 +7876,7 @@ N/A
 
 ---
 
-### 490. False Mountain: `planetary_boundaries`
+### 493. False Mountain: `planetary_boundaries`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -7844,7 +7892,7 @@ N/A
 
 ---
 
-### 491. False Mountain: `planetary_diet_constraint_2026`
+### 494. False Mountain: `planetary_diet_constraint_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope]`
@@ -7860,7 +7908,7 @@ N/A
 
 ---
 
-### 492. False Mountain: `planning_fallacy`
+### 495. False Mountain: `planning_fallacy`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -7876,7 +7924,7 @@ N/A
 
 ---
 
-### 493. False Mountain: `plastic_asphalt_mandate`
+### 496. False Mountain: `plastic_asphalt_mandate`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -7892,7 +7940,7 @@ N/A
 
 ---
 
-### 494. False Mountain: `platform_app_store_duopoly`
+### 497. False Mountain: `platform_app_store_duopoly`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -7908,7 +7956,7 @@ N/A
 
 ---
 
-### 495. False Mountain: `platonic_coparenting_decoupling`
+### 498. False Mountain: `platonic_coparenting_decoupling`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[scaffold, unknown]`
@@ -7924,7 +7972,7 @@ N/A
 
 ---
 
-### 496. False Mountain: `pna`
+### 499. False Mountain: `pna`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `N/A`
@@ -7940,7 +7988,7 @@ N/A
 
 ---
 
-### 497. False Mountain: `po_investigation_protocol_bias`
+### 500. False Mountain: `po_investigation_protocol_bias`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -7956,7 +8004,7 @@ N/A
 
 ---
 
-### 498. False Mountain: `poetic_verse_and_past`
+### 501. False Mountain: `poetic_verse_and_past`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -7972,7 +8020,7 @@ N/A
 
 ---
 
-### 499. False Mountain: `policy_lag_catastrophe`
+### 502. False Mountain: `policy_lag_catastrophe`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -7988,7 +8036,7 @@ N/A
 
 ---
 
-### 500. False Mountain: `politeness_face_negotiation`
+### 503. False Mountain: `politeness_face_negotiation`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -8004,7 +8052,7 @@ N/A
 
 ---
 
-### 501. False Mountain: `portugal_ad_stability_2026`
+### 504. False Mountain: `portugal_ad_stability_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `N/A`
@@ -8020,7 +8068,7 @@ N/A
 
 ---
 
-### 502. False Mountain: `portugal_polarization_threshold_2026`
+### 505. False Mountain: `portugal_polarization_threshold_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -8036,7 +8084,7 @@ N/A
 
 ---
 
-### 503. False Mountain: `power_without_responsibility`
+### 506. False Mountain: `power_without_responsibility`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -8052,7 +8100,7 @@ N/A
 
 ---
 
-### 504. False Mountain: `prestige_signal_inflation`
+### 507. False Mountain: `prestige_signal_inflation`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -8068,7 +8116,7 @@ N/A
 
 ---
 
-### 505. False Mountain: `price_signal_corruption`
+### 508. False Mountain: `price_signal_corruption`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -8084,7 +8132,7 @@ N/A
 
 ---
 
-### 506. False Mountain: `prime_age_male_unwork`
+### 509. False Mountain: `prime_age_male_unwork`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -8100,7 +8148,7 @@ N/A
 
 ---
 
-### 507. False Mountain: `private_credit_market_opacity`
+### 510. False Mountain: `private_credit_market_opacity`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[snare, tangled_rope]`
@@ -8116,7 +8164,7 @@ N/A
 
 ---
 
-### 508. False Mountain: `private_identity_integration`
+### 511. False Mountain: `private_identity_integration`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -8132,7 +8180,7 @@ N/A
 
 ---
 
-### 509. False Mountain: `procedural_compliance_theater`
+### 512. False Mountain: `procedural_compliance_theater`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -8148,7 +8196,7 @@ N/A
 
 ---
 
-### 510. False Mountain: `procedural_legitimacy_decay`
+### 513. False Mountain: `procedural_legitimacy_decay`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -8164,7 +8212,7 @@ N/A
 
 ---
 
-### 511. False Mountain: `project_vault_extraction_2026`
+### 514. False Mountain: `project_vault_extraction_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -8180,7 +8228,7 @@ N/A
 
 ---
 
-### 512. False Mountain: `protocol_capture_eee`
+### 515. False Mountain: `protocol_capture_eee`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `N/A`
@@ -8196,7 +8244,7 @@ N/A
 
 ---
 
-### 513. False Mountain: `protocol_drift_accumulation`
+### 516. False Mountain: `protocol_drift_accumulation`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -8212,7 +8260,7 @@ N/A
 
 ---
 
-### 514. False Mountain: `qualified_immunity`
+### 517. False Mountain: `qualified_immunity`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -8228,7 +8276,7 @@ N/A
 
 ---
 
-### 515. False Mountain: `quellcrist_falconer_justice`
+### 518. False Mountain: `quellcrist_falconer_justice`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -8244,7 +8292,7 @@ N/A
 
 ---
 
-### 516. False Mountain: `qwerty_vs_dvorak`
+### 519. False Mountain: `qwerty_vs_dvorak`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -8260,7 +8308,7 @@ N/A
 
 ---
 
-### 517. False Mountain: `raac_school_maintenance`
+### 520. False Mountain: `raac_school_maintenance`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -8276,7 +8324,7 @@ N/A
 
 ---
 
-### 518. False Mountain: `radiologic_diagnostic_threshold`
+### 521. False Mountain: `radiologic_diagnostic_threshold`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -8292,7 +8340,7 @@ N/A
 
 ---
 
-### 519. False Mountain: `rare_earth_dependency`
+### 522. False Mountain: `rare_earth_dependency`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -8308,7 +8356,7 @@ N/A
 
 ---
 
-### 520. False Mountain: `rare_earth_export_restrictions`
+### 523. False Mountain: `rare_earth_export_restrictions`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -8324,7 +8372,7 @@ N/A
 
 ---
 
-### 521. False Mountain: `rare_earth_hydrogen_extraction`
+### 524. False Mountain: `rare_earth_hydrogen_extraction`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -8340,7 +8388,7 @@ N/A
 
 ---
 
-### 522. False Mountain: `rare_earth_seabed_mining`
+### 525. False Mountain: `rare_earth_seabed_mining`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -8356,7 +8404,7 @@ N/A
 
 ---
 
-### 523. False Mountain: `rational_inertia_trap`
+### 526. False Mountain: `rational_inertia_trap`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -8372,7 +8420,7 @@ N/A
 
 ---
 
-### 524. False Mountain: `recipe_scaling_ai`
+### 527. False Mountain: `recipe_scaling_ai`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[scaffold, unknown]`
@@ -8388,7 +8436,7 @@ N/A
 
 ---
 
-### 525. False Mountain: `regional_military_deterrence_mideast`
+### 528. False Mountain: `regional_military_deterrence_mideast`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -8404,7 +8452,7 @@ N/A
 
 ---
 
-### 526. False Mountain: `regulatory_capture`
+### 529. False Mountain: `regulatory_capture`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, unknown]`
@@ -8420,7 +8468,7 @@ N/A
 
 ---
 
-### 527. False Mountain: `rent_seeking_equilibrium`
+### 530. False Mountain: `rent_seeking_equilibrium`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -8436,7 +8484,7 @@ N/A
 
 ---
 
-### 528. False Mountain: `repair_probe_incomplete`
+### 531. False Mountain: `repair_probe_incomplete`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, unknown]`
@@ -8452,7 +8500,7 @@ N/A
 
 ---
 
-### 529. False Mountain: `reputational_cascade_failure`
+### 532. False Mountain: `reputational_cascade_failure`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -8468,7 +8516,7 @@ N/A
 
 ---
 
-### 530. False Mountain: `responsibility_dilution`
+### 533. False Mountain: `responsibility_dilution`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -8484,7 +8532,7 @@ N/A
 
 ---
 
-### 531. False Mountain: `responsibility_without_power`
+### 534. False Mountain: `responsibility_without_power`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -8500,7 +8548,7 @@ N/A
 
 ---
 
-### 532. False Mountain: `riot_incentive_loop_2026`
+### 535. False Mountain: `riot_incentive_loop_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -8516,7 +8564,7 @@ N/A
 
 ---
 
-### 533. False Mountain: `risk_socialization_threshold`
+### 536. False Mountain: `risk_socialization_threshold`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -8532,7 +8580,7 @@ N/A
 
 ---
 
-### 534. False Mountain: `ritual_without_belief`
+### 537. False Mountain: `ritual_without_belief`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -8548,7 +8596,7 @@ N/A
 
 ---
 
-### 535. False Mountain: `robustness_vs_efficiency_tradeoff`
+### 538. False Mountain: `robustness_vs_efficiency_tradeoff`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -8564,7 +8612,7 @@ N/A
 
 ---
 
-### 536. False Mountain: `rosen_bridge_protocol`
+### 539. False Mountain: `rosen_bridge_protocol`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `N/A`
@@ -8580,7 +8628,7 @@ N/A
 
 ---
 
-### 537. False Mountain: `rotation_seven_black_soil`
+### 540. False Mountain: `rotation_seven_black_soil`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, unknown]`
@@ -8596,7 +8644,7 @@ N/A
 
 ---
 
-### 538. False Mountain: `rotation_seven_isolation`
+### 541. False Mountain: `rotation_seven_isolation`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -8612,7 +8660,7 @@ N/A
 
 ---
 
-### 539. False Mountain: `rotation_seven_kubo_ranking`
+### 542. False Mountain: `rotation_seven_kubo_ranking`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -8628,7 +8676,7 @@ N/A
 
 ---
 
-### 540. False Mountain: `royal_navy_middle_east_withdrawal`
+### 543. False Mountain: `royal_navy_middle_east_withdrawal`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope, unknown]`
@@ -8644,7 +8692,7 @@ N/A
 
 ---
 
-### 541. False Mountain: `rule_update_failure`
+### 544. False Mountain: `rule_update_failure`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope, unknown]`
@@ -8660,7 +8708,7 @@ N/A
 
 ---
 
-### 542. False Mountain: `rules_based_international_order`
+### 545. False Mountain: `rules_based_international_order`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -8676,7 +8724,7 @@ N/A
 
 ---
 
-### 543. False Mountain: `russells_paradox_self_reference`
+### 546. False Mountain: `russells_paradox_self_reference`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[scaffold, unknown]`
@@ -8692,7 +8740,7 @@ N/A
 
 ---
 
-### 544. False Mountain: `russian_war_cannibalization`
+### 547. False Mountain: `russian_war_cannibalization`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -8708,7 +8756,7 @@ N/A
 
 ---
 
-### 545. False Mountain: `sa_renewable_price_differential`
+### 548. False Mountain: `sa_renewable_price_differential`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -8724,7 +8772,7 @@ N/A
 
 ---
 
-### 546. False Mountain: `sadhu_integrity_protocol`
+### 549. False Mountain: `sadhu_integrity_protocol`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope, unknown]`
@@ -8740,7 +8788,7 @@ N/A
 
 ---
 
-### 547. False Mountain: `sapir_whorf_hypothesis`
+### 550. False Mountain: `sapir_whorf_hypothesis`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -8756,7 +8804,7 @@ N/A
 
 ---
 
-### 548. False Mountain: `sat_csp_complexity`
+### 551. False Mountain: `sat_csp_complexity`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -8772,7 +8820,7 @@ N/A
 
 ---
 
-### 549. False Mountain: `scam_compound_2026`
+### 552. False Mountain: `scam_compound_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `N/A`
@@ -8788,7 +8836,7 @@ N/A
 
 ---
 
-### 550. False Mountain: `scurvy_maritime_extraction`
+### 553. False Mountain: `scurvy_maritime_extraction`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -8804,7 +8852,7 @@ N/A
 
 ---
 
-### 551. False Mountain: `second_order_unintended_consequences`
+### 554. False Mountain: `second_order_unintended_consequences`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -8820,7 +8868,7 @@ N/A
 
 ---
 
-### 552. False Mountain: `seedance_export_restriction`
+### 555. False Mountain: `seedance_export_restriction`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -8836,7 +8884,7 @@ N/A
 
 ---
 
-### 553. False Mountain: `semantic_attack_surface`
+### 556. False Mountain: `semantic_attack_surface`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -8852,7 +8900,7 @@ N/A
 
 ---
 
-### 554. False Mountain: `semantic_overload_friction`
+### 557. False Mountain: `semantic_overload_friction`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -8868,7 +8916,7 @@ N/A
 
 ---
 
-### 555. False Mountain: `semiconductor_fabrication_chokepoint`
+### 558. False Mountain: `semiconductor_fabrication_chokepoint`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[indexically_opaque, rope, snare, tangled_rope]`
@@ -8884,7 +8932,7 @@ N/A
 
 ---
 
-### 556. False Mountain: `semiconductor_mission_2026`
+### 559. False Mountain: `semiconductor_mission_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -8900,7 +8948,7 @@ N/A
 
 ---
 
-### 557. False Mountain: `shadow_fleet_sanctions_evasion`
+### 560. False Mountain: `shadow_fleet_sanctions_evasion`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -8916,7 +8964,7 @@ N/A
 
 ---
 
-### 558. False Mountain: `shadow_pricing_failure`
+### 561. False Mountain: `shadow_pricing_failure`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -8932,7 +8980,7 @@ N/A
 
 ---
 
-### 559. False Mountain: `shield_east_fortification`
+### 562. False Mountain: `shield_east_fortification`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[indexically_opaque, rope, tangled_rope]`
@@ -8948,7 +8996,7 @@ N/A
 
 ---
 
-### 560. False Mountain: `shobies_existential_commitment`
+### 563. False Mountain: `shobies_existential_commitment`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -8964,7 +9012,7 @@ N/A
 
 ---
 
-### 561. False Mountain: `shock_propagation_asymmetry`
+### 564. False Mountain: `shock_propagation_asymmetry`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -8980,7 +9028,7 @@ N/A
 
 ---
 
-### 562. False Mountain: `signal_without_control`
+### 565. False Mountain: `signal_without_control`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -8996,7 +9044,7 @@ N/A
 
 ---
 
-### 563. False Mountain: `silent_dependency_activation`
+### 566. False Mountain: `silent_dependency_activation`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -9012,7 +9060,7 @@ N/A
 
 ---
 
-### 564. False Mountain: `silicon_lexicon_overload`
+### 567. False Mountain: `silicon_lexicon_overload`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -9028,7 +9076,7 @@ N/A
 
 ---
 
-### 565. False Mountain: `sk_ai_act_2026`
+### 568. False Mountain: `sk_ai_act_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -9044,7 +9092,7 @@ N/A
 
 ---
 
-### 566. False Mountain: `sleep_debt_externality`
+### 569. False Mountain: `sleep_debt_externality`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -9060,7 +9108,7 @@ N/A
 
 ---
 
-### 567. False Mountain: `slow_crisis_invisibility`
+### 570. False Mountain: `slow_crisis_invisibility`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -9076,7 +9124,7 @@ N/A
 
 ---
 
-### 568. False Mountain: `sludge_bureaucratic_friction`
+### 571. False Mountain: `sludge_bureaucratic_friction`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -9092,7 +9140,7 @@ N/A
 
 ---
 
-### 569. False Mountain: `sm_addictive_design`
+### 572. False Mountain: `sm_addictive_design`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -9108,7 +9156,7 @@ N/A
 
 ---
 
-### 570. False Mountain: `smartphone_ubiquity`
+### 573. False Mountain: `smartphone_ubiquity`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope, unknown]`
@@ -9124,7 +9172,7 @@ N/A
 
 ---
 
-### 571. False Mountain: `social_credit_architecture`
+### 574. False Mountain: `social_credit_architecture`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -9140,7 +9188,7 @@ N/A
 
 ---
 
-### 572. False Mountain: `social_loafing`
+### 575. False Mountain: `social_loafing`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -9156,7 +9204,7 @@ N/A
 
 ---
 
-### 573. False Mountain: `social_media_participation_threshold`
+### 576. False Mountain: `social_media_participation_threshold`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -9172,7 +9220,7 @@ N/A
 
 ---
 
-### 574. False Mountain: `social_narrative_casting`
+### 577. False Mountain: `social_narrative_casting`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -9188,7 +9236,7 @@ N/A
 
 ---
 
-### 575. False Mountain: `soe_property_bailout`
+### 578. False Mountain: `soe_property_bailout`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -9204,7 +9252,7 @@ N/A
 
 ---
 
-### 576. False Mountain: `soft_authoritarian_drift`
+### 579. False Mountain: `soft_authoritarian_drift`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -9220,7 +9268,7 @@ N/A
 
 ---
 
-### 577. False Mountain: `somatic_focusing_awareness`
+### 580. False Mountain: `somatic_focusing_awareness`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, unknown]`
@@ -9236,7 +9284,7 @@ N/A
 
 ---
 
-### 578. False Mountain: `sorites_paradox`
+### 581. False Mountain: `sorites_paradox`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -9252,7 +9300,7 @@ N/A
 
 ---
 
-### 579. False Mountain: `south_china_sea_arbitration_2016_2026`
+### 582. False Mountain: `south_china_sea_arbitration_2016_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -9268,7 +9316,7 @@ N/A
 
 ---
 
-### 580. False Mountain: `sovereignty_as_arbitrage`
+### 583. False Mountain: `sovereignty_as_arbitrage`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -9284,7 +9332,7 @@ N/A
 
 ---
 
-### 581. False Mountain: `spain_digital_offensive_2026`
+### 584. False Mountain: `spain_digital_offensive_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -9300,7 +9348,7 @@ N/A
 
 ---
 
-### 582. False Mountain: `st_petersburg_paradox`
+### 585. False Mountain: `st_petersburg_paradox`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -9316,7 +9364,7 @@ N/A
 
 ---
 
-### 583. False Mountain: `start_treaty`
+### 586. False Mountain: `start_treaty`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -9332,7 +9380,7 @@ N/A
 
 ---
 
-### 584. False Mountain: `statecraft_virtu`
+### 587. False Mountain: `statecraft_virtu`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -9348,7 +9396,7 @@ N/A
 
 ---
 
-### 585. False Mountain: `status_flattening_effect`
+### 588. False Mountain: `status_flattening_effect`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -9364,7 +9412,7 @@ N/A
 
 ---
 
-### 586. False Mountain: `sti_clinical_testing_bottleneck`
+### 589. False Mountain: `sti_clinical_testing_bottleneck`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -9380,7 +9428,7 @@ N/A
 
 ---
 
-### 587. False Mountain: `strait_coercion_2025`
+### 590. False Mountain: `strait_coercion_2025`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `N/A`
@@ -9396,7 +9444,7 @@ N/A
 
 ---
 
-### 588. False Mountain: `strange_attractor_dynamics`
+### 591. False Mountain: `strange_attractor_dynamics`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -9412,7 +9460,7 @@ N/A
 
 ---
 
-### 589. False Mountain: `strange_attractor_systemic_risk`
+### 592. False Mountain: `strange_attractor_systemic_risk`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `N/A`
@@ -9428,7 +9476,7 @@ N/A
 
 ---
 
-### 590. False Mountain: `strategic_deep_sea_rare_earth_mining`
+### 593. False Mountain: `strategic_deep_sea_rare_earth_mining`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -9444,7 +9492,7 @@ N/A
 
 ---
 
-### 591. False Mountain: `streaming_bundling_mandate`
+### 594. False Mountain: `streaming_bundling_mandate`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -9460,7 +9508,7 @@ N/A
 
 ---
 
-### 592. False Mountain: `structural_extraction_without_actor`
+### 595. False Mountain: `structural_extraction_without_actor`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -9476,7 +9524,7 @@ N/A
 
 ---
 
-### 593. False Mountain: `student_loan_default_cliff`
+### 596. False Mountain: `student_loan_default_cliff`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -9492,7 +9540,7 @@ N/A
 
 ---
 
-### 594. False Mountain: `student_loan_interest_accrual`
+### 597. False Mountain: `student_loan_interest_accrual`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -9508,7 +9556,7 @@ N/A
 
 ---
 
-### 595. False Mountain: `suanne_coup_of_peace`
+### 598. False Mountain: `suanne_coup_of_peace`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -9524,7 +9572,7 @@ N/A
 
 ---
 
-### 596. False Mountain: `suanne_face_restoration`
+### 599. False Mountain: `suanne_face_restoration`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -9540,7 +9588,7 @@ N/A
 
 ---
 
-### 597. False Mountain: `sunk_cost_fallacy`
+### 600. False Mountain: `sunk_cost_fallacy`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -9556,7 +9604,7 @@ N/A
 
 ---
 
-### 598. False Mountain: `swift_legacy_piton`
+### 601. False Mountain: `swift_legacy_piton`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -9572,7 +9620,7 @@ N/A
 
 ---
 
-### 599. False Mountain: `synthetic_data_feedback_loop`
+### 602. False Mountain: `synthetic_data_feedback_loop`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -9588,7 +9636,7 @@ N/A
 
 ---
 
-### 600. False Mountain: `systemic_blindspot`
+### 603. False Mountain: `systemic_blindspot`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -9604,7 +9652,7 @@ N/A
 
 ---
 
-### 601. False Mountain: `tail_risk_compression`
+### 604. False Mountain: `tail_risk_compression`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -9620,7 +9668,7 @@ N/A
 
 ---
 
-### 602. False Mountain: `taiwan_existential_sovereignty`
+### 605. False Mountain: `taiwan_existential_sovereignty`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -9636,7 +9684,7 @@ N/A
 
 ---
 
-### 603. False Mountain: `taiwan_grand_bargain`
+### 606. False Mountain: `taiwan_grand_bargain`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -9652,7 +9700,7 @@ N/A
 
 ---
 
-### 604. False Mountain: `taiwan_storm_2026`
+### 607. False Mountain: `taiwan_storm_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -9668,7 +9716,7 @@ N/A
 
 ---
 
-### 605. False Mountain: `taiwan_university_application_system`
+### 608. False Mountain: `taiwan_university_application_system`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -9684,7 +9732,7 @@ N/A
 
 ---
 
-### 606. False Mountain: `taliban_slavery_law_2024`
+### 609. False Mountain: `taliban_slavery_law_2024`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -9700,7 +9748,7 @@ N/A
 
 ---
 
-### 607. False Mountain: `taxonomy_drift`
+### 610. False Mountain: `taxonomy_drift`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -9716,7 +9764,7 @@ N/A
 
 ---
 
-### 608. False Mountain: `tcp_rfc9293_interoperability`
+### 611. False Mountain: `tcp_rfc9293_interoperability`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `N/A`
@@ -9732,7 +9780,7 @@ N/A
 
 ---
 
-### 609. False Mountain: `teaching_horses_to_sing`
+### 612. False Mountain: `teaching_horses_to_sing`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope, unknown]`
@@ -9748,7 +9796,7 @@ N/A
 
 ---
 
-### 610. False Mountain: `tear_gas_repression_2026`
+### 613. False Mountain: `tear_gas_repression_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -9764,7 +9812,7 @@ N/A
 
 ---
 
-### 611. False Mountain: `technocratic_overreach`
+### 614. False Mountain: `technocratic_overreach`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -9780,7 +9828,7 @@ N/A
 
 ---
 
-### 612. False Mountain: `temporal_scale_arbitrage`
+### 615. False Mountain: `temporal_scale_arbitrage`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope, unknown]`
@@ -9796,7 +9844,7 @@ N/A
 
 ---
 
-### 613. False Mountain: `texas_insurance_market_instability`
+### 616. False Mountain: `texas_insurance_market_instability`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -9812,7 +9860,7 @@ N/A
 
 ---
 
-### 614. False Mountain: `thai_senate_veto_2026`
+### 617. False Mountain: `thai_senate_veto_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -9828,7 +9876,7 @@ N/A
 
 ---
 
-### 615. False Mountain: `the_bacchae_madness_protocol`
+### 618. False Mountain: `the_bacchae_madness_protocol`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -9844,7 +9892,7 @@ N/A
 
 ---
 
-### 616. False Mountain: `the_calm_protocol_suppression`
+### 619. False Mountain: `the_calm_protocol_suppression`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -9860,7 +9908,7 @@ N/A
 
 ---
 
-### 617. False Mountain: `the_churn_systemic_upheaval`
+### 620. False Mountain: `the_churn_systemic_upheaval`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -9876,7 +9924,7 @@ N/A
 
 ---
 
-### 618. False Mountain: `theory_of_visitors`
+### 621. False Mountain: `theory_of_visitors`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -9892,7 +9940,7 @@ N/A
 
 ---
 
-### 619. False Mountain: `tiktok_us_divestiture_mandate`
+### 622. False Mountain: `tiktok_us_divestiture_mandate`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -9908,7 +9956,7 @@ N/A
 
 ---
 
-### 620. False Mountain: `toxic_social_infection`
+### 623. False Mountain: `toxic_social_infection`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -9924,7 +9972,7 @@ N/A
 
 ---
 
-### 621. False Mountain: `toxoplasma_hub_2026`
+### 624. False Mountain: `toxoplasma_hub_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[scaffold, snare]`
@@ -9940,7 +9988,7 @@ N/A
 
 ---
 
-### 622. False Mountain: `tractarian_logic_limit`
+### 625. False Mountain: `tractarian_logic_limit`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -9956,7 +10004,7 @@ N/A
 
 ---
 
-### 623. False Mountain: `trade_secret_law`
+### 626. False Mountain: `trade_secret_law`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -9972,7 +10020,7 @@ N/A
 
 ---
 
-### 624. False Mountain: `tragedy_of_the_commons`
+### 627. False Mountain: `tragedy_of_the_commons`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope, unknown]`
@@ -9988,7 +10036,7 @@ N/A
 
 ---
 
-### 625. False Mountain: `transformer_self_attention`
+### 628. False Mountain: `transformer_self_attention`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope, unknown]`
@@ -10004,7 +10052,7 @@ N/A
 
 ---
 
-### 626. False Mountain: `traveling_salesperson_problem`
+### 629. False Mountain: `traveling_salesperson_problem`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -10020,7 +10068,7 @@ N/A
 
 ---
 
-### 627. False Mountain: `trillion_bond_rush_2026`
+### 630. False Mountain: `trillion_bond_rush_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[scaffold, unknown]`
@@ -10036,7 +10084,7 @@ N/A
 
 ---
 
-### 628. False Mountain: `trump_critical_minerals`
+### 631. False Mountain: `trump_critical_minerals`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -10052,7 +10100,7 @@ N/A
 
 ---
 
-### 629. False Mountain: `trump_epa_greenhouse_gas_reversal`
+### 632. False Mountain: `trump_epa_greenhouse_gas_reversal`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[indexically_opaque, snare, tangled_rope]`
@@ -10068,7 +10116,7 @@ N/A
 
 ---
 
-### 630. False Mountain: `trump_indian_tariffs_2026`
+### 633. False Mountain: `trump_indian_tariffs_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -10084,7 +10132,7 @@ N/A
 
 ---
 
-### 631. False Mountain: `trump_making_china_great_2026`
+### 634. False Mountain: `trump_making_china_great_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -10100,7 +10148,7 @@ N/A
 
 ---
 
-### 632. False Mountain: `trump_second_term_authoritarianism_2026`
+### 635. False Mountain: `trump_second_term_authoritarianism_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `N/A`
@@ -10116,7 +10164,7 @@ N/A
 
 ---
 
-### 633. False Mountain: `tsp_computational_complexity`
+### 636. False Mountain: `tsp_computational_complexity`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `N/A`
@@ -10132,7 +10180,7 @@ N/A
 
 ---
 
-### 634. False Mountain: `tx_hispanic_pivot`
+### 637. False Mountain: `tx_hispanic_pivot`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `N/A`
@@ -10148,7 +10196,7 @@ N/A
 
 ---
 
-### 635. False Mountain: `ua_mobilization_protector_cert`
+### 638. False Mountain: `ua_mobilization_protector_cert`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -10164,7 +10212,7 @@ N/A
 
 ---
 
-### 636. False Mountain: `ua_wartime_mobilization`
+### 639. False Mountain: `ua_wartime_mobilization`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -10180,7 +10228,7 @@ N/A
 
 ---
 
-### 637. False Mountain: `uk_graduate_visa_salary_threshold`
+### 640. False Mountain: `uk_graduate_visa_salary_threshold`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -10196,7 +10244,7 @@ N/A
 
 ---
 
-### 638. False Mountain: `uk_help_to_buy_scheme`
+### 641. False Mountain: `uk_help_to_buy_scheme`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -10212,7 +10260,7 @@ N/A
 
 ---
 
-### 639. False Mountain: `uk_hicbc_trap`
+### 642. False Mountain: `uk_hicbc_trap`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -10228,7 +10276,7 @@ N/A
 
 ---
 
-### 640. False Mountain: `uk_necc_formation`
+### 643. False Mountain: `uk_necc_formation`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -10244,7 +10292,7 @@ N/A
 
 ---
 
-### 641. False Mountain: `uk_unpaid_care_system`
+### 644. False Mountain: `uk_unpaid_care_system`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -10260,7 +10308,7 @@ N/A
 
 ---
 
-### 642. False Mountain: `ukr_mobilization`
+### 645. False Mountain: `ukr_mobilization`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -10276,7 +10324,7 @@ N/A
 
 ---
 
-### 643. False Mountain: `ukraine_tight_gas_pilot`
+### 646. False Mountain: `ukraine_tight_gas_pilot`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -10292,7 +10340,7 @@ N/A
 
 ---
 
-### 644. False Mountain: `ulysses_aeolus_1904`
+### 647. False Mountain: `ulysses_aeolus_1904`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `N/A`
@@ -10308,7 +10356,7 @@ N/A
 
 ---
 
-### 645. False Mountain: `ulysses_calypso_1904`
+### 648. False Mountain: `ulysses_calypso_1904`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `N/A`
@@ -10324,7 +10372,7 @@ N/A
 
 ---
 
-### 646. False Mountain: `ulysses_cyclops_1904`
+### 649. False Mountain: `ulysses_cyclops_1904`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `N/A`
@@ -10340,7 +10388,7 @@ N/A
 
 ---
 
-### 647. False Mountain: `ulysses_eumaeus_1904`
+### 650. False Mountain: `ulysses_eumaeus_1904`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `N/A`
@@ -10356,7 +10404,7 @@ N/A
 
 ---
 
-### 648. False Mountain: `ulysses_ithaca_1904`
+### 651. False Mountain: `ulysses_ithaca_1904`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `N/A`
@@ -10372,7 +10420,7 @@ N/A
 
 ---
 
-### 649. False Mountain: `ulysses_lestrygonians_1904`
+### 652. False Mountain: `ulysses_lestrygonians_1904`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `N/A`
@@ -10388,7 +10436,7 @@ N/A
 
 ---
 
-### 650. False Mountain: `ulysses_lotus_1904`
+### 653. False Mountain: `ulysses_lotus_1904`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `N/A`
@@ -10404,7 +10452,7 @@ N/A
 
 ---
 
-### 651. False Mountain: `ulysses_nausicaa_1904`
+### 654. False Mountain: `ulysses_nausicaa_1904`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `N/A`
@@ -10420,7 +10468,7 @@ N/A
 
 ---
 
-### 652. False Mountain: `ulysses_rocks_1904`
+### 655. False Mountain: `ulysses_rocks_1904`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `N/A`
@@ -10436,7 +10484,7 @@ N/A
 
 ---
 
-### 653. False Mountain: `ulysses_school_1904`
+### 656. False Mountain: `ulysses_school_1904`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `N/A`
@@ -10452,7 +10500,7 @@ N/A
 
 ---
 
-### 654. False Mountain: `ulysses_scylla_1904`
+### 657. False Mountain: `ulysses_scylla_1904`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `N/A`
@@ -10468,7 +10516,7 @@ N/A
 
 ---
 
-### 655. False Mountain: `ulysses_sirens_1904`
+### 658. False Mountain: `ulysses_sirens_1904`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `N/A`
@@ -10484,7 +10532,7 @@ N/A
 
 ---
 
-### 656. False Mountain: `ulysses_tower_1904`
+### 659. False Mountain: `ulysses_tower_1904`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `N/A`
@@ -10500,7 +10548,7 @@ N/A
 
 ---
 
-### 657. False Mountain: `un_high_seas_treaty_2026`
+### 660. False Mountain: `un_high_seas_treaty_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -10516,7 +10564,7 @@ N/A
 
 ---
 
-### 658. False Mountain: `union_protection_underperformance`
+### 661. False Mountain: `union_protection_underperformance`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -10532,7 +10580,7 @@ N/A
 
 ---
 
-### 659. False Mountain: `unrequited_love_protocol`
+### 662. False Mountain: `unrequited_love_protocol`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[scaffold, snare]`
@@ -10548,7 +10596,7 @@ N/A
 
 ---
 
-### 660. False Mountain: `unrwa_eviction_order`
+### 663. False Mountain: `unrwa_eviction_order`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -10564,7 +10612,7 @@ N/A
 
 ---
 
-### 661. False Mountain: `us_arms_transfer_policy`
+### 664. False Mountain: `us_arms_transfer_policy`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -10580,7 +10628,7 @@ N/A
 
 ---
 
-### 662. False Mountain: `us_china_chip_tariffs_v2`
+### 665. False Mountain: `us_china_chip_tariffs_v2`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -10596,7 +10644,7 @@ N/A
 
 ---
 
-### 663. False Mountain: `us_debt_ceiling`
+### 666. False Mountain: `us_debt_ceiling`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -10612,7 +10660,7 @@ N/A
 
 ---
 
-### 664. False Mountain: `us_employer_health_insurance`
+### 667. False Mountain: `us_employer_health_insurance`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -10628,7 +10676,7 @@ N/A
 
 ---
 
-### 665. False Mountain: `us_greenland_envoy`
+### 668. False Mountain: `us_greenland_envoy`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -10644,7 +10692,7 @@ N/A
 
 ---
 
-### 666. False Mountain: `us_iran_drone_conflict`
+### 669. False Mountain: `us_iran_drone_conflict`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -10660,7 +10708,7 @@ N/A
 
 ---
 
-### 667. False Mountain: `us_isolationism_policy_2026`
+### 670. False Mountain: `us_isolationism_policy_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -10676,7 +10724,7 @@ N/A
 
 ---
 
-### 668. False Mountain: `us_israel_faa_502b_nonenforcement`
+### 671. False Mountain: `us_israel_faa_502b_nonenforcement`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -10692,7 +10740,7 @@ N/A
 
 ---
 
-### 669. False Mountain: `us_labor_mobility`
+### 672. False Mountain: `us_labor_mobility`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -10708,7 +10756,7 @@ N/A
 
 ---
 
-### 670. False Mountain: `us_legal_standard_reasonable_doubt`
+### 673. False Mountain: `us_legal_standard_reasonable_doubt`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -10724,7 +10772,7 @@ N/A
 
 ---
 
-### 671. False Mountain: `us_sanctions_icc_israel_case`
+### 674. False Mountain: `us_sanctions_icc_israel_case`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -10740,7 +10788,7 @@ N/A
 
 ---
 
-### 672. False Mountain: `us_sdf_alliance_abandonment_2026`
+### 675. False Mountain: `us_sdf_alliance_abandonment_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -10756,7 +10804,7 @@ N/A
 
 ---
 
-### 673. False Mountain: `us_suburban_zoning_2025`
+### 676. False Mountain: `us_suburban_zoning_2025`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -10772,7 +10820,7 @@ N/A
 
 ---
 
-### 674. False Mountain: `us_taiwan_arms_sales`
+### 677. False Mountain: `us_taiwan_arms_sales`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -10788,7 +10836,7 @@ N/A
 
 ---
 
-### 675. False Mountain: `us_tariffs_2025`
+### 678. False Mountain: `us_tariffs_2025`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -10804,7 +10852,7 @@ N/A
 
 ---
 
-### 676. False Mountain: `us_two_party_duopoly`
+### 679. False Mountain: `us_two_party_duopoly`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -10820,7 +10868,7 @@ N/A
 
 ---
 
-### 677. False Mountain: `us_usmca_china_leverage`
+### 680. False Mountain: `us_usmca_china_leverage`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[indexically_opaque, rope, snare, tangled_rope]`
@@ -10836,7 +10884,7 @@ N/A
 
 ---
 
-### 678. False Mountain: `us_vaccine_recommendation_dismantling_2026`
+### 681. False Mountain: `us_vaccine_recommendation_dismantling_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -10852,7 +10900,7 @@ N/A
 
 ---
 
-### 679. False Mountain: `us_venezuela_blockade`
+### 682. False Mountain: `us_venezuela_blockade`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -10868,7 +10916,7 @@ N/A
 
 ---
 
-### 680. False Mountain: `us_venezuela_oil_pressure`
+### 683. False Mountain: `us_venezuela_oil_pressure`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -10884,7 +10932,7 @@ N/A
 
 ---
 
-### 681. False Mountain: `us_venezuela_plausible_deniability_2025`
+### 684. False Mountain: `us_venezuela_plausible_deniability_2025`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -10900,7 +10948,7 @@ N/A
 
 ---
 
-### 682. False Mountain: `us_visa_lottery`
+### 685. False Mountain: `us_visa_lottery`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -10916,7 +10964,7 @@ N/A
 
 ---
 
-### 683. False Mountain: `usc_26_469_passive_loss`
+### 686. False Mountain: `usc_26_469_passive_loss`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -10932,7 +10980,7 @@ N/A
 
 ---
 
-### 684. False Mountain: `utopia_apocalypse_fragility`
+### 687. False Mountain: `utopia_apocalypse_fragility`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -10948,7 +10996,7 @@ N/A
 
 ---
 
-### 685. False Mountain: `value_alignment_drift`
+### 688. False Mountain: `value_alignment_drift`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -10964,7 +11012,7 @@ N/A
 
 ---
 
-### 686. False Mountain: `value_extraction_plateau`
+### 689. False Mountain: `value_extraction_plateau`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -10980,7 +11028,7 @@ N/A
 
 ---
 
-### 687. False Mountain: `venezuela_oil_privatization_v1`
+### 690. False Mountain: `venezuela_oil_privatization_v1`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -10996,7 +11044,7 @@ N/A
 
 ---
 
-### 688. False Mountain: `vienna_quantum_superposition_2026`
+### 691. False Mountain: `vienna_quantum_superposition_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -11012,7 +11060,7 @@ N/A
 
 ---
 
-### 689. False Mountain: `viral_transmission_rates`
+### 692. False Mountain: `viral_transmission_rates`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -11028,7 +11076,7 @@ N/A
 
 ---
 
-### 690. False Mountain: `visibility_bias_governance`
+### 693. False Mountain: `visibility_bias_governance`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -11044,7 +11092,7 @@ N/A
 
 ---
 
-### 691. False Mountain: `vns_implant_for_trd`
+### 694. False Mountain: `vns_implant_for_trd`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -11060,7 +11108,7 @@ N/A
 
 ---
 
-### 692. False Mountain: `wikipedia_crowdsourcing_2026`
+### 695. False Mountain: `wikipedia_crowdsourcing_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope]`
@@ -11076,7 +11124,7 @@ N/A
 
 ---
 
-### 693. False Mountain: `wikipedia_notability_requirement_2026`
+### 696. False Mountain: `wikipedia_notability_requirement_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -11092,7 +11140,7 @@ N/A
 
 ---
 
-### 694. False Mountain: `winners_curse`
+### 697. False Mountain: `winners_curse`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -11108,7 +11156,7 @@ N/A
 
 ---
 
-### 695. False Mountain: `world_factbook_sunset_2026`
+### 698. False Mountain: `world_factbook_sunset_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -11124,7 +11172,7 @@ N/A
 
 ---
 
-### 696. False Mountain: `wpl_scotland`
+### 699. False Mountain: `wpl_scotland`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -11140,7 +11188,7 @@ N/A
 
 ---
 
-### 697. False Mountain: `xi_mao_ideological_centralization`
+### 700. False Mountain: `xi_mao_ideological_centralization`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -11156,7 +11204,7 @@ N/A
 
 ---
 
-### 698. False Mountain: `yangtze_fishing_ban`
+### 701. False Mountain: `yangtze_fishing_ban`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -11172,7 +11220,7 @@ N/A
 
 ---
 
-### 699. False Mountain: `yc_equity_squeeze`
+### 702. False Mountain: `yc_equity_squeeze`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `N/A`
@@ -11188,7 +11236,7 @@ N/A
 
 ---
 
-### 700. False Mountain: `yt_ai_slop_incentive`
+### 703. False Mountain: `yt_ai_slop_incentive`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -11204,7 +11252,7 @@ N/A
 
 ---
 
-### 701. False Mountain: `zipfs_law`
+### 704. False Mountain: `zipfs_law`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -11220,7 +11268,7 @@ N/A
 
 ---
 
-### 702. False Mountain: `zombie_reasoning_2026`
+### 705. False Mountain: `zombie_reasoning_2026`
 
 *   **Severity:** `critical`
 *   **Orbit Signature:** `[rope, snare]`
@@ -11236,7 +11284,7 @@ N/A
 
 ---
 
-### 703. False Mountain: `absorbing_markov_chain_trap`
+### 706. False Mountain: `absorbing_markov_chain_trap`
 
 *   **Severity:** `unknown`
 *   **Orbit Signature:** `N/A`
@@ -11252,7 +11300,7 @@ N/A
 
 ---
 
-### 704. False Mountain: `academic_peer_review_gatekeeping`
+### 707. False Mountain: `academic_peer_review_gatekeeping`
 
 *   **Severity:** `high`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -11268,7 +11316,7 @@ N/A
 
 ---
 
-### 705. False Mountain: `access_arbitrage`
+### 708. False Mountain: `access_arbitrage`
 
 *   **Severity:** `unknown`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -11284,7 +11332,7 @@ N/A
 
 ---
 
-### 706. False Mountain: `ai_cognitive_diversity_arbitrage`
+### 709. False Mountain: `ai_cognitive_diversity_arbitrage`
 
 *   **Severity:** `high`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -11300,7 +11348,7 @@ N/A
 
 ---
 
-### 707. False Mountain: `ai_task_horizon_reliability`
+### 710. False Mountain: `ai_task_horizon_reliability`
 
 *   **Severity:** `high`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -11316,7 +11364,7 @@ N/A
 
 ---
 
-### 708. False Mountain: `alternative_sovereignty_scaffold`
+### 711. False Mountain: `alternative_sovereignty_scaffold`
 
 *   **Severity:** `unknown`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -11332,7 +11380,7 @@ N/A
 
 ---
 
-### 709. False Mountain: `ancient_grudge_verona`
+### 712. False Mountain: `ancient_grudge_verona`
 
 *   **Severity:** `unknown`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -11348,7 +11396,7 @@ N/A
 
 ---
 
-### 710. False Mountain: `antifragility`
+### 713. False Mountain: `antifragility`
 
 *   **Severity:** `unknown`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -11364,7 +11412,7 @@ N/A
 
 ---
 
-### 711. False Mountain: `asymmetric_computational_difficulty`
+### 714. False Mountain: `asymmetric_computational_difficulty`
 
 *   **Severity:** `unknown`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -11380,7 +11428,7 @@ N/A
 
 ---
 
-### 712. False Mountain: `authoritarian_power_paradox`
+### 715. False Mountain: `authoritarian_power_paradox`
 
 *   **Severity:** `high`
 *   **Orbit Signature:** `[rope, snare]`
@@ -11396,7 +11444,7 @@ N/A
 
 ---
 
-### 713. False Mountain: `axiom_of_choice`
+### 716. False Mountain: `axiom_of_choice`
 
 *   **Severity:** `high`
 *   **Orbit Signature:** `N/A`
@@ -11412,7 +11460,7 @@ N/A
 
 ---
 
-### 714. False Mountain: `bay_of_pigs_operational_silo`
+### 717. False Mountain: `bay_of_pigs_operational_silo`
 
 *   **Severity:** `high`
 *   **Orbit Signature:** `[rope, snare]`
@@ -11428,7 +11476,7 @@ N/A
 
 ---
 
-### 715. False Mountain: `bedouin_sedentary_transition`
+### 718. False Mountain: `bedouin_sedentary_transition`
 
 *   **Severity:** `unknown`
 *   **Orbit Signature:** `[rope, snare]`
@@ -11444,7 +11492,7 @@ N/A
 
 ---
 
-### 716. False Mountain: `beehiiv_platform_model`
+### 719. False Mountain: `beehiiv_platform_model`
 
 *   **Severity:** `unknown`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -11460,7 +11508,7 @@ N/A
 
 ---
 
-### 717. False Mountain: `berkshire_compounding_culture`
+### 720. False Mountain: `berkshire_compounding_culture`
 
 *   **Severity:** `unknown`
 *   **Orbit Signature:** `[rope]`
@@ -11476,7 +11524,7 @@ N/A
 
 ---
 
-### 718. False Mountain: `berkshire_compounding_culture`
+### 721. False Mountain: `berkshire_compounding_culture`
 
 *   **Severity:** `unknown`
 *   **Orbit Signature:** `[rope]`
@@ -11492,7 +11540,7 @@ N/A
 
 ---
 
-### 719. False Mountain: `boundary_protocol`
+### 722. False Mountain: `boundary_protocol`
 
 *   **Severity:** `high`
 *   **Orbit Signature:** `N/A`
@@ -11508,7 +11556,7 @@ N/A
 
 ---
 
-### 720. False Mountain: `broke_vs_poor_grocery_math`
+### 723. False Mountain: `broke_vs_poor_grocery_math`
 
 *   **Severity:** `unknown`
 *   **Orbit Signature:** `[rope, snare]`
@@ -11524,7 +11572,7 @@ N/A
 
 ---
 
-### 721. False Mountain: `buffons_needle_pi_estimation`
+### 724. False Mountain: `buffons_needle_pi_estimation`
 
 *   **Severity:** `high`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -11540,7 +11588,7 @@ N/A
 
 ---
 
-### 722. False Mountain: `canada_goose_realignment_2026`
+### 725. False Mountain: `canada_goose_realignment_2026`
 
 *   **Severity:** `high`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -11556,7 +11604,7 @@ N/A
 
 ---
 
-### 723. False Mountain: `cancer_chronotherapy_timing`
+### 726. False Mountain: `cancer_chronotherapy_timing`
 
 *   **Severity:** `unknown`
 *   **Orbit Signature:** `[rope]`
@@ -11572,7 +11620,7 @@ N/A
 
 ---
 
-### 724. False Mountain: `castration_longevity_choice`
+### 727. False Mountain: `castration_longevity_choice`
 
 *   **Severity:** `high`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -11588,7 +11636,7 @@ N/A
 
 ---
 
-### 725. False Mountain: `cb_far_beyond_human`
+### 728. False Mountain: `cb_far_beyond_human`
 
 *   **Severity:** `unknown`
 *   **Orbit Signature:** `[rope, snare]`
@@ -11604,7 +11652,7 @@ N/A
 
 ---
 
-### 726. False Mountain: `china_africa_zero_tariff_2026`
+### 729. False Mountain: `china_africa_zero_tariff_2026`
 
 *   **Severity:** `unknown`
 *   **Orbit Signature:** `[rope, tangled_rope, unknown]`
@@ -11620,7 +11668,7 @@ N/A
 
 ---
 
-### 727. False Mountain: `china_taiwan_reunification_mandate`
+### 730. False Mountain: `china_taiwan_reunification_mandate`
 
 *   **Severity:** `high`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -11636,7 +11684,7 @@ N/A
 
 ---
 
-### 728. False Mountain: `cinderella_midnight_deadline`
+### 731. False Mountain: `cinderella_midnight_deadline`
 
 *   **Severity:** `high`
 *   **Orbit Signature:** `[rope]`
@@ -11652,7 +11700,7 @@ N/A
 
 ---
 
-### 729. False Mountain: `click_chemistry_paradigm_2026`
+### 732. False Mountain: `click_chemistry_paradigm_2026`
 
 *   **Severity:** `high`
 *   **Orbit Signature:** `[mountain, scaffold]`
@@ -11668,7 +11716,7 @@ N/A
 
 ---
 
-### 730. False Mountain: `climate_attribution_2026`
+### 733. False Mountain: `climate_attribution_2026`
 
 *   **Severity:** `high`
 *   **Orbit Signature:** `[mountain, scaffold]`
@@ -11684,7 +11732,7 @@ N/A
 
 ---
 
-### 731. False Mountain: `climate_policy_extraction`
+### 734. False Mountain: `climate_policy_extraction`
 
 *   **Severity:** `unknown`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -11700,7 +11748,7 @@ N/A
 
 ---
 
-### 732. False Mountain: `climate_target_one_point_five`
+### 735. False Mountain: `climate_target_one_point_five`
 
 *   **Severity:** `moderate`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -11716,7 +11764,7 @@ N/A
 
 ---
 
-### 733. False Mountain: `coe_ukraine_reparations_register`
+### 736. False Mountain: `coe_ukraine_reparations_register`
 
 *   **Severity:** `unknown`
 *   **Orbit Signature:** `[rope, snare]`
@@ -11732,7 +11780,7 @@ N/A
 
 ---
 
-### 734. False Mountain: `cognac_geopolitical_risk`
+### 737. False Mountain: `cognac_geopolitical_risk`
 
 *   **Severity:** `unknown`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -11748,7 +11796,7 @@ N/A
 
 ---
 
-### 735. False Mountain: `cognac_geopolitical_risk`
+### 738. False Mountain: `cognac_geopolitical_risk`
 
 *   **Severity:** `unknown`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -11764,7 +11812,7 @@ N/A
 
 ---
 
-### 736. False Mountain: `cognitive_bicycle_scaffold`
+### 739. False Mountain: `cognitive_bicycle_scaffold`
 
 *   **Severity:** `unknown`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -11780,7 +11828,7 @@ N/A
 
 ---
 
-### 737. False Mountain: `collective_stupidity_2026`
+### 740. False Mountain: `collective_stupidity_2026`
 
 *   **Severity:** `unknown`
 *   **Orbit Signature:** `[rope, snare]`
@@ -11796,7 +11844,7 @@ N/A
 
 ---
 
-### 738. False Mountain: `colombia_2026_presidential_election`
+### 741. False Mountain: `colombia_2026_presidential_election`
 
 *   **Severity:** `unknown`
 *   **Orbit Signature:** `N/A`
@@ -11812,7 +11860,7 @@ N/A
 
 ---
 
-### 739. False Mountain: `constraint_lagrange_multipliers`
+### 742. False Mountain: `constraint_lagrange_multipliers`
 
 *   **Severity:** `unknown`
 *   **Orbit Signature:** `N/A`
@@ -11828,7 +11876,7 @@ N/A
 
 ---
 
-### 740. False Mountain: `constraint_riemann_mapping`
+### 743. False Mountain: `constraint_riemann_mapping`
 
 *   **Severity:** `unknown`
 *   **Orbit Signature:** `N/A`
@@ -11844,7 +11892,7 @@ N/A
 
 ---
 
-### 741. False Mountain: `copyright_protection`
+### 744. False Mountain: `copyright_protection`
 
 *   **Severity:** `high`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -11860,7 +11908,7 @@ N/A
 
 ---
 
-### 742. False Mountain: `cow_field_poop`
+### 745. False Mountain: `cow_field_poop`
 
 *   **Severity:** `unknown`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -11876,7 +11924,7 @@ N/A
 
 ---
 
-### 743. False Mountain: `creative_commons_licensing`
+### 746. False Mountain: `creative_commons_licensing`
 
 *   **Severity:** `unknown`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -11892,7 +11940,7 @@ N/A
 
 ---
 
-### 744. False Mountain: `damped_harmonics`
+### 747. False Mountain: `damped_harmonics`
 
 *   **Severity:** `high`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -11908,7 +11956,7 @@ N/A
 
 ---
 
-### 745. False Mountain: `dead_sea_effect`
+### 748. False Mountain: `dead_sea_effect`
 
 *   **Severity:** `high`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -11924,7 +11972,7 @@ N/A
 
 ---
 
-### 746. False Mountain: `decentralized_infrastructure_rope`
+### 749. False Mountain: `decentralized_infrastructure_rope`
 
 *   **Severity:** `unknown`
 *   **Orbit Signature:** `N/A`
@@ -11940,7 +11988,7 @@ N/A
 
 ---
 
-### 747. False Mountain: `dunbars_number`
+### 750. False Mountain: `dunbars_number`
 
 *   **Severity:** `high`
 *   **Orbit Signature:** `[mountain]`
@@ -11956,7 +12004,7 @@ N/A
 
 ---
 
-### 748. False Mountain: `e2ee_digital_privacy_2026`
+### 751. False Mountain: `e2ee_digital_privacy_2026`
 
 *   **Severity:** `unknown`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -11972,7 +12020,7 @@ N/A
 
 ---
 
-### 749. False Mountain: `ec_meta_manus_block`
+### 752. False Mountain: `ec_meta_manus_block`
 
 *   **Severity:** `unknown`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -11988,7 +12036,7 @@ N/A
 
 ---
 
-### 750. False Mountain: `edelman_2026_developing_volatility`
+### 753. False Mountain: `edelman_2026_developing_volatility`
 
 *   **Severity:** `unknown`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -12004,7 +12052,7 @@ N/A
 
 ---
 
-### 751. False Mountain: `education_unbundling_implementation`
+### 754. False Mountain: `education_unbundling_implementation`
 
 *   **Severity:** `unknown`
 *   **Orbit Signature:** `N/A`
@@ -12020,7 +12068,7 @@ N/A
 
 ---
 
-### 752. False Mountain: `emergency_oversight_bureau`
+### 755. False Mountain: `emergency_oversight_bureau`
 
 *   **Severity:** `unknown`
 *   **Orbit Signature:** `[rope, scaffold, unknown]`
@@ -12036,7 +12084,7 @@ N/A
 
 ---
 
-### 753. False Mountain: `emotional_cycles_2026`
+### 756. False Mountain: `emotional_cycles_2026`
 
 *   **Severity:** `unknown`
 *   **Orbit Signature:** `N/A`
@@ -12052,7 +12100,7 @@ N/A
 
 ---
 
-### 754. False Mountain: `epigenetics_complexity_2026`
+### 757. False Mountain: `epigenetics_complexity_2026`
 
 *   **Severity:** `high`
 *   **Orbit Signature:** `[mountain]`
@@ -12068,7 +12116,7 @@ N/A
 
 ---
 
-### 755. False Mountain: `epstein_document_release_2026`
+### 758. False Mountain: `epstein_document_release_2026`
 
 *   **Severity:** `unknown`
 *   **Orbit Signature:** `[snare, tangled_rope]`
@@ -12084,7 +12132,7 @@ N/A
 
 ---
 
-### 756. False Mountain: `erasmus_rejoining_scaffold`
+### 759. False Mountain: `erasmus_rejoining_scaffold`
 
 *   **Severity:** `unknown`
 *   **Orbit Signature:** `[rope, scaffold, unknown]`
@@ -12100,7 +12148,7 @@ N/A
 
 ---
 
-### 757. False Mountain: `erasmus_rejoining_scaffold`
+### 760. False Mountain: `erasmus_rejoining_scaffold`
 
 *   **Severity:** `unknown`
 *   **Orbit Signature:** `[rope, scaffold, unknown]`
@@ -12116,7 +12164,7 @@ N/A
 
 ---
 
-### 758. False Mountain: `ergo_autolykos_asic_resistance`
+### 761. False Mountain: `ergo_autolykos_asic_resistance`
 
 *   **Severity:** `unknown`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -12132,7 +12180,7 @@ N/A
 
 ---
 
-### 759. False Mountain: `ergo_lets_protocol`
+### 762. False Mountain: `ergo_lets_protocol`
 
 *   **Severity:** `high`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -12148,7 +12196,7 @@ N/A
 
 ---
 
-### 760. False Mountain: `erised_expectation`
+### 763. False Mountain: `erised_expectation`
 
 *   **Severity:** `unknown`
 *   **Orbit Signature:** `N/A`
@@ -12164,7 +12212,7 @@ N/A
 
 ---
 
-### 761. False Mountain: `eu_digital_services_act`
+### 764. False Mountain: `eu_digital_services_act`
 
 *   **Severity:** `unknown`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -12180,7 +12228,7 @@ N/A
 
 ---
 
-### 762. False Mountain: `eu_digital_services_act`
+### 765. False Mountain: `eu_digital_services_act`
 
 *   **Severity:** `unknown`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -12196,7 +12244,7 @@ N/A
 
 ---
 
-### 763. False Mountain: `faa_boeing_regulatory_capture`
+### 766. False Mountain: `faa_boeing_regulatory_capture`
 
 *   **Severity:** `unknown`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -12212,7 +12260,7 @@ N/A
 
 ---
 
-### 764. False Mountain: `faint_blue_neural_bifurcation`
+### 767. False Mountain: `faint_blue_neural_bifurcation`
 
 *   **Severity:** `high`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -12228,7 +12276,7 @@ N/A
 
 ---
 
-### 765. False Mountain: `fair_use_doctrine`
+### 768. False Mountain: `fair_use_doctrine`
 
 *   **Severity:** `high`
 *   **Orbit Signature:** `[rope]`
@@ -12244,7 +12292,7 @@ N/A
 
 ---
 
-### 766. False Mountain: `family_succession_system`
+### 769. False Mountain: `family_succession_system`
 
 *   **Severity:** `unknown`
 *   **Orbit Signature:** `N/A`
@@ -12260,7 +12308,7 @@ N/A
 
 ---
 
-### 767. False Mountain: `fed_shutdown_2026`
+### 770. False Mountain: `fed_shutdown_2026`
 
 *   **Severity:** `unknown`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -12276,7 +12324,7 @@ N/A
 
 ---
 
-### 768. False Mountain: `fnl_shadow_probe`
+### 771. False Mountain: `fnl_shadow_probe`
 
 *   **Severity:** `unknown`
 *   **Orbit Signature:** `[rope, tangled_rope, unknown]`
@@ -12292,7 +12340,7 @@ N/A
 
 ---
 
-### 769. False Mountain: `frankenstein_creation_hubris`
+### 772. False Mountain: `frankenstein_creation_hubris`
 
 *   **Severity:** `high`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -12308,7 +12356,7 @@ N/A
 
 ---
 
-### 770. False Mountain: `galois_theory_symmetry`
+### 773. False Mountain: `galois_theory_symmetry`
 
 *   **Severity:** `high`
 *   **Orbit Signature:** `[mountain, scaffold]`
@@ -12324,7 +12372,7 @@ N/A
 
 ---
 
-### 771. False Mountain: `gemini_scientific_advancement`
+### 774. False Mountain: `gemini_scientific_advancement`
 
 *   **Severity:** `unknown`
 *   **Orbit Signature:** `[rope, tangled_rope, unknown]`
@@ -12340,7 +12388,7 @@ N/A
 
 ---
 
-### 772. False Mountain: `germany_tennet_takeover`
+### 775. False Mountain: `germany_tennet_takeover`
 
 *   **Severity:** `unknown`
 *   **Orbit Signature:** `[rope, tangled_rope, unknown]`
@@ -12356,7 +12404,7 @@ N/A
 
 ---
 
-### 773. False Mountain: `germline_regulation_threshold_2026`
+### 776. False Mountain: `germline_regulation_threshold_2026`
 
 *   **Severity:** `high`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -12372,7 +12420,7 @@ N/A
 
 ---
 
-### 774. False Mountain: `gilgamesh_mortality_limit`
+### 777. False Mountain: `gilgamesh_mortality_limit`
 
 *   **Severity:** `high`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -12388,7 +12436,7 @@ N/A
 
 ---
 
-### 775. False Mountain: `global_hoarding_scaling_laws`
+### 778. False Mountain: `global_hoarding_scaling_laws`
 
 *   **Severity:** `high`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -12404,7 +12452,7 @@ N/A
 
 ---
 
-### 776. False Mountain: `global_protocol_entrenchment`
+### 779. False Mountain: `global_protocol_entrenchment`
 
 *   **Severity:** `high`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -12420,7 +12468,7 @@ N/A
 
 ---
 
-### 777. False Mountain: `glp1_payload_efficiency_pivot`
+### 780. False Mountain: `glp1_payload_efficiency_pivot`
 
 *   **Severity:** `high`
 *   **Orbit Signature:** `[scaffold, unknown]`
@@ -12436,7 +12484,7 @@ N/A
 
 ---
 
-### 778. False Mountain: `gold_piton_2026`
+### 781. False Mountain: `gold_piton_2026`
 
 *   **Severity:** `unknown`
 *   **Orbit Signature:** `[piton, rope]`
@@ -12452,7 +12500,7 @@ N/A
 
 ---
 
-### 779. False Mountain: `golden_handcuffs`
+### 782. False Mountain: `golden_handcuffs`
 
 *   **Severity:** `high`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -12468,7 +12516,7 @@ N/A
 
 ---
 
-### 780. False Mountain: `goodstein_theorem_finite_proof`
+### 783. False Mountain: `goodstein_theorem_finite_proof`
 
 *   **Severity:** `unknown`
 *   **Orbit Signature:** `N/A`
@@ -12484,23 +12532,7 @@ N/A
 
 ---
 
-### 781. False Mountain: `great_awakening_rekindling`
-
-*   **Severity:** `high`
-*   **Orbit Signature:** `N/A`
-*   **Gap Detected:** ! GAP: general_type_mismatch (powerless: rope, institutional: snare)
-*   **Perspectival Mismatch:**
-    *   **Powerless View:** `rope`
-    *   **Institutional View:** `snare`
-*   **Generated Omega:** omega_great_awakening_rekindling (conceptual)
-*   **Suggested Resolution Strategy:**
-    ```
-N/A
-    ```
-
----
-
-### 782. False Mountain: `great_mongolian_road_economic_dependency`
+### 784. False Mountain: `great_mongolian_road_economic_dependency`
 
 *   **Severity:** `unknown`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -12516,7 +12548,7 @@ N/A
 
 ---
 
-### 783. False Mountain: `greshams_law`
+### 785. False Mountain: `greshams_law`
 
 *   **Severity:** `unknown`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -12532,7 +12564,7 @@ N/A
 
 ---
 
-### 784. False Mountain: `gs1_gln_identification`
+### 786. False Mountain: `gs1_gln_identification`
 
 *   **Severity:** `high`
 *   **Orbit Signature:** `[rope, tangled_rope, unknown]`
@@ -12548,7 +12580,7 @@ N/A
 
 ---
 
-### 785. False Mountain: `gs1_standardized_identification`
+### 787. False Mountain: `gs1_standardized_identification`
 
 *   **Severity:** `high`
 *   **Orbit Signature:** `[rope, unknown]`
@@ -12564,7 +12596,7 @@ N/A
 
 ---
 
-### 786. False Mountain: `gs_market_clearing`
+### 788. False Mountain: `gs_market_clearing`
 
 *   **Severity:** `unknown`
 *   **Orbit Signature:** `N/A`
@@ -12580,7 +12612,7 @@ N/A
 
 ---
 
-### 787. False Mountain: `hamiltonian_path_complexity`
+### 789. False Mountain: `hamiltonian_path_complexity`
 
 *   **Severity:** `high`
 *   **Orbit Signature:** `[mountain]`
@@ -12596,7 +12628,7 @@ N/A
 
 ---
 
-### 788. False Mountain: `happiness_of_others`
+### 790. False Mountain: `happiness_of_others`
 
 *   **Severity:** `high`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -12612,7 +12644,7 @@ N/A
 
 ---
 
-### 789. False Mountain: `harm_principle_liberty`
+### 791. False Mountain: `harm_principle_liberty`
 
 *   **Severity:** `high`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -12628,7 +12660,7 @@ N/A
 
 ---
 
-### 790. False Mountain: `hedonic_adaptation_baseline`
+### 792. False Mountain: `hedonic_adaptation_baseline`
 
 *   **Severity:** `unknown`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -12644,7 +12676,7 @@ N/A
 
 ---
 
-### 791. False Mountain: `heuristic_optimization`
+### 793. False Mountain: `heuristic_optimization`
 
 *   **Severity:** `high`
 *   **Orbit Signature:** `[mountain, scaffold]`
@@ -12660,7 +12692,7 @@ N/A
 
 ---
 
-### 792. False Mountain: `hilberts_hotel_infinity`
+### 794. False Mountain: `hilberts_hotel_infinity`
 
 *   **Severity:** `high`
 *   **Orbit Signature:** `[mountain, scaffold]`
@@ -12676,7 +12708,7 @@ N/A
 
 ---
 
-### 793. False Mountain: `hominin_evolutionary_bottleneck`
+### 795. False Mountain: `hominin_evolutionary_bottleneck`
 
 *   **Severity:** `high`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -12692,7 +12724,7 @@ N/A
 
 ---
 
-### 794. False Mountain: `ice_memory_archive`
+### 796. False Mountain: `ice_memory_archive`
 
 *   **Severity:** `high`
 *   **Orbit Signature:** `[rope]`
@@ -12708,7 +12740,7 @@ N/A
 
 ---
 
-### 795. False Mountain: `information_foraging_theory`
+### 797. False Mountain: `information_foraging_theory`
 
 *   **Severity:** `high`
 *   **Orbit Signature:** `[mountain, scaffold]`
@@ -12724,7 +12756,7 @@ N/A
 
 ---
 
-### 796. False Mountain: `inner_model_theory_constraints`
+### 798. False Mountain: `inner_model_theory_constraints`
 
 *   **Severity:** `high`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -12740,7 +12772,7 @@ N/A
 
 ---
 
-### 797. False Mountain: `israeli_settlement_policy_authority_restriction`
+### 799. False Mountain: `israeli_settlement_policy_authority_restriction`
 
 *   **Severity:** `unknown`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -12756,7 +12788,7 @@ N/A
 
 ---
 
-### 798. False Mountain: `iss_ped_ban`
+### 800. False Mountain: `iss_ped_ban`
 
 *   **Severity:** `unknown`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -12772,7 +12804,7 @@ N/A
 
 ---
 
-### 799. False Mountain: `jupiter_composition_knowledge_gap`
+### 801. False Mountain: `jupiter_composition_knowledge_gap`
 
 *   **Severity:** `unknown`
 *   **Orbit Signature:** `[rope, tangled_rope, unknown]`
@@ -12788,7 +12820,7 @@ N/A
 
 ---
 
-### 800. False Mountain: `juvenile_underclass_2026`
+### 802. False Mountain: `juvenile_underclass_2026`
 
 *   **Severity:** `high`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -12804,7 +12836,7 @@ N/A
 
 ---
 
-### 801. False Mountain: `kjv_puritan_new_world_exit`
+### 803. False Mountain: `kjv_puritan_new_world_exit`
 
 *   **Severity:** `high`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -12820,7 +12852,7 @@ N/A
 
 ---
 
-### 802. False Mountain: `kjv_textual_authority`
+### 804. False Mountain: `kjv_textual_authority`
 
 *   **Severity:** `unknown`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -12836,7 +12868,7 @@ N/A
 
 ---
 
-### 803. False Mountain: `knowledge_action_gap`
+### 805. False Mountain: `knowledge_action_gap`
 
 *   **Severity:** `high`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -12852,7 +12884,7 @@ N/A
 
 ---
 
-### 804. False Mountain: `large_cardinal_foundations`
+### 806. False Mountain: `large_cardinal_foundations`
 
 *   **Severity:** `high`
 *   **Orbit Signature:** `N/A`
@@ -12868,23 +12900,7 @@ N/A
 
 ---
 
-### 805. False Mountain: `layered_brain_processing`
-
-*   **Severity:** `high`
-*   **Orbit Signature:** `[tangled_rope]`
-*   **Gap Detected:** ! GAP: snare_mountain_confusion (powerless: snare, institutional: mountain)
-*   **Perspectival Mismatch:**
-    *   **Powerless View:** `snare`
-    *   **Institutional View:** `mountain`
-*   **Generated Omega:** omega_layered_brain_processing_1 (empirical)
-*   **Suggested Resolution Strategy:**
-    ```
-N/A
-    ```
-
----
-
-### 806. False Mountain: `lcdm_small_scale_anomalies`
+### 807. False Mountain: `lcdm_small_scale_anomalies`
 
 *   **Severity:** `unknown`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -12900,7 +12916,7 @@ N/A
 
 ---
 
-### 807. False Mountain: `legacy_system_technical_debt`
+### 808. False Mountain: `legacy_system_technical_debt`
 
 *   **Severity:** `high`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -12916,7 +12932,7 @@ N/A
 
 ---
 
-### 808. False Mountain: `linguistic_relativity_cultural_framing`
+### 809. False Mountain: `linguistic_relativity_cultural_framing`
 
 *   **Severity:** `unknown`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -12932,7 +12948,7 @@ N/A
 
 ---
 
-### 809. False Mountain: `litany_of_the_real`
+### 810. False Mountain: `litany_of_the_real`
 
 *   **Severity:** `high`
 *   **Orbit Signature:** `[mountain]`
@@ -12948,7 +12964,7 @@ N/A
 
 ---
 
-### 810. False Mountain: `lln_convergence`
+### 811. False Mountain: `lln_convergence`
 
 *   **Severity:** `high`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -12964,7 +12980,7 @@ N/A
 
 ---
 
-### 811. False Mountain: `lula_hemisphere_2026`
+### 812. False Mountain: `lula_hemisphere_2026`
 
 *   **Severity:** `unknown`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -12980,7 +12996,7 @@ N/A
 
 ---
 
-### 812. False Mountain: `magna_carta_liberties`
+### 813. False Mountain: `magna_carta_liberties`
 
 *   **Severity:** `unknown`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -12996,7 +13012,7 @@ N/A
 
 ---
 
-### 813. False Mountain: `maha_recovery_2026`
+### 814. False Mountain: `maha_recovery_2026`
 
 *   **Severity:** `unknown`
 *   **Orbit Signature:** `[scaffold, unknown]`
@@ -13012,7 +13028,7 @@ N/A
 
 ---
 
-### 814. False Mountain: `manganese_catalysis_2026`
+### 815. False Mountain: `manganese_catalysis_2026`
 
 *   **Severity:** `high`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -13028,7 +13044,7 @@ N/A
 
 ---
 
-### 815. False Mountain: `mars_rovers_navigational_autonomy`
+### 816. False Mountain: `mars_rovers_navigational_autonomy`
 
 *   **Severity:** `unknown`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -13044,7 +13060,7 @@ N/A
 
 ---
 
-### 816. False Mountain: `matching_market_congestion_externality`
+### 817. False Mountain: `matching_market_congestion_externality`
 
 *   **Severity:** `unknown`
 *   **Orbit Signature:** `N/A`
@@ -13060,7 +13076,7 @@ N/A
 
 ---
 
-### 817. False Mountain: `mco_unit_system_discontinuity`
+### 818. False Mountain: `mco_unit_system_discontinuity`
 
 *   **Severity:** `high`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -13076,7 +13092,7 @@ N/A
 
 ---
 
-### 818. False Mountain: `meta_nda`
+### 819. False Mountain: `meta_nda`
 
 *   **Severity:** `unknown`
 *   **Orbit Signature:** `[rope, snare, tangled_rope]`
@@ -13092,7 +13108,7 @@ N/A
 
 ---
 
-### 819. False Mountain: `meta_nuclear_power_agreement`
+### 820. False Mountain: `meta_nuclear_power_agreement`
 
 *   **Severity:** `unknown`
 *   **Orbit Signature:** `[rope, tangled_rope]`
@@ -13108,7 +13124,7 @@ N/A
 
 ---
 
-### 820. False Mountain: `metamorphosis_samsa`
+### 821. False Mountain: `metamorphosis_samsa`
 
 *   **Severity:** `unknown`
 *   **Orbit Signature:** `[tangled_rope]`
@@ -13117,22 +13133,6 @@ N/A
     *   **Powerless View:** `mountain`
     *   **Institutional View:** `snare`
 *   **Generated Omega:** omega_perspectival_metamorphosis_samsa (conceptual)
-*   **Suggested Resolution Strategy:**
-    ```
-N/A
-    ```
-
----
-
-### 821. False Mountain: `micro_robot_electronics_integration`
-
-*   **Severity:** `high`
-*   **Orbit Signature:** `[tangled_rope]`
-*   **Gap Detected:** ! GAP: mountain_coordination_confusion (powerless: mountain, institutional: rope)
-*   **Perspectival Mismatch:**
-    *   **Powerless View:** `mountain`
-    *   **Institutional View:** `rope`
-*   **Generated Omega:** omega_cut_safety_micro_robot_electronics_integration (conceptual)
 *   **Suggested Resolution Strategy:**
     ```
 N/A

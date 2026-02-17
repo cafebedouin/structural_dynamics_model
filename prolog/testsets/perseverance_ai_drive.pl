@@ -25,7 +25,8 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -61,6 +62,7 @@ narrative_ontology:constraint_metric(perseverance_ai_drive, theater_ratio, 0.05)
 
 % Constraint classification claim
 narrative_ontology:constraint_claim(perseverance_ai_drive, rope).
+narrative_ontology:human_readable(perseverance_ai_drive, "AI-Driven Martian Rover Autonomy").
 
 % Binary flags
 % narrative_ontology:has_sunset_clause(perseverance_ai_drive).      % Mandatory if Scaffold

@@ -25,7 +25,8 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:coordination_type/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -65,6 +66,7 @@ narrative_ontology:constraint_metric(compounding_logic, theater_ratio, 0.05).
 % Constraint self-claim (what does the constraint claim to be?)
 % It claims to be a neutral, mathematical law of nature.
 narrative_ontology:constraint_claim(compounding_logic, tangled_rope).
+narrative_ontology:human_readable(compounding_logic, "The Law of Compounding Returns").
 
 % Binary flags
 domain_priors:requires_active_enforcement(compounding_logic). % Requires a stable currency, property rights, and contract law to function.

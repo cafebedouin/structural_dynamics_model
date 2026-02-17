@@ -43,7 +43,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3.
+    constraint_indexing:directionality_override/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -106,6 +107,7 @@ narrative_ontology:constraint_metric(conways_game_of_life_dynamics, resistance, 
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(conways_game_of_life_dynamics, mountain).
+narrative_ontology:human_readable(conways_game_of_life_dynamics, "Conway's Game of Life Dynamics").
 
 % --- Emergence flag (required for mountain constraints) ---
 % The rules emerge from mathematical logic, not human design or enforcement.

@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -66,6 +67,7 @@ narrative_ontology:constraint_metric(feedback_loop_desynchronization, theater_ra
 
 % Constraint self-claim: It presents itself as a necessary buffer for market stability.
 narrative_ontology:constraint_claim(feedback_loop_desynchronization, tangled_rope).
+narrative_ontology:human_readable(feedback_loop_desynchronization, "Decoupled Ecological-Economic Signaling").
 
 % Binary flags and structural properties for Tangled Rope classification.
 % Enforcement is the active maintenance of market rules that exclude real-time ecological data.

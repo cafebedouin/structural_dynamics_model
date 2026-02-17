@@ -20,7 +20,8 @@
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -54,6 +55,7 @@
 
 narrative_ontology:interval(ergo_storage_rent_mechanism, 0, 10).
 narrative_ontology:constraint_claim(ergo_storage_rent_mechanism, tangled_rope).
+narrative_ontology:human_readable(ergo_storage_rent_mechanism, "Ergo Storage Rent (Demurrage)").
 
 % Base extractiveness: 0.15.
 % Small fee (approx 0.13 ERG every 4 years) prevents total loss 

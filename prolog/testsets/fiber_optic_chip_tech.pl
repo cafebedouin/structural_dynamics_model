@@ -43,7 +43,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1.
+    domain_priors:emerges_naturally/1,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -91,6 +92,7 @@ narrative_ontology:constraint_metric(fiber_optic_chip_tech, theater_ratio, 0.10)
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(fiber_optic_chip_tech, tangled_rope).
+narrative_ontology:human_readable(fiber_optic_chip_tech, "Strategic Control over Fiber-Optic Chip Technology").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(fiber_optic_chip_tech). % Enforcement via patents, industrial policy, and export controls.

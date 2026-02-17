@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -64,6 +65,7 @@ narrative_ontology:constraint_metric(family_estrangement_ratio, theater_ratio, 0
 % Constraint self-claim (what does the constraint claim to be?)
 % It claims to be a mechanism for social cohesion and support.
 narrative_ontology:constraint_claim(family_estrangement_ratio, tangled_rope).
+narrative_ontology:human_readable(family_estrangement_ratio, "The \"Family is Forever\" Dogma").
 
 % Binary flags
 domain_priors:requires_active_enforcement(family_estrangement_ratio). % Enforced by family members pushing for reconciliation and judging silence.

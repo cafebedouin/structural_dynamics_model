@@ -27,7 +27,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -66,6 +67,7 @@ narrative_ontology:constraint_metric(rotation_seven_black_soil, theater_ratio, 0
 % Constraint self-claim (what does the constraint claim to be?)
 % The institutional framing is that this is an unchangeable fact of nature.
 narrative_ontology:constraint_claim(rotation_seven_black_soil, tangled_rope).
+narrative_ontology:human_readable(rotation_seven_black_soil, "R7 Black Soil Toxicity").
 domain_priors:requires_active_enforcement(rotation_seven_black_soil).
 
 % Structural property derivation hooks:

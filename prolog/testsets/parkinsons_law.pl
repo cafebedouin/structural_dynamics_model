@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -64,6 +65,7 @@ narrative_ontology:constraint_metric(parkinsons_law, theater_ratio, 0.10).
 % Constraint self-claim (what does the constraint claim to be?)
 % The bureaucracy claims its processes are necessary for coordination.
 narrative_ontology:constraint_claim(parkinsons_law, tangled_rope).
+narrative_ontology:human_readable(parkinsons_law, "Parkinson's Law").
 
 % Binary flags
 domain_priors:requires_active_enforcement(parkinsons_law). % Required for Tangled Rope. Enforced via HR policies, performance reviews, etc.

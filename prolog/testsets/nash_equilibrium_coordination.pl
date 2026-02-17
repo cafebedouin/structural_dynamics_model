@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -64,6 +65,7 @@ narrative_ontology:constraint_metric(nash_equilibrium_coordination, theater_rati
 % Constraint self-claim (what does the constraint claim to be?)
 % It is often presented as an inescapable law of rational behavior.
 narrative_ontology:constraint_claim(nash_equilibrium_coordination, tangled_rope).
+narrative_ontology:human_readable(nash_equilibrium_coordination, "Nash Equilibrium").
 
 % Binary flags
 % The equilibrium is "enforced" by the rational calculations of the agents themselves.

@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -68,6 +69,7 @@ narrative_ontology:constraint_metric(geopolitical_insularity_2026, theater_ratio
 
 % Constraint self-claim: The system claims to be an enforcement mechanism for national values and security.
 narrative_ontology:constraint_claim(geopolitical_insularity_2026, tangled_rope).
+narrative_ontology:human_readable(geopolitical_insularity_2026, "Geopolitical Nationalist Insularity").
 
 % Binary flags and structural properties
 domain_priors:requires_active_enforcement(geopolitical_insularity_2026). % Required for Tangled Rope

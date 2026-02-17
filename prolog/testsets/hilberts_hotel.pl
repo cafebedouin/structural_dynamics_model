@@ -43,7 +43,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1.
+    domain_priors:emerges_naturally/1,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -91,6 +92,7 @@ narrative_ontology:constraint_metric(hilbert_hotel_infinite_capacity, resistance
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(hilbert_hotel_infinite_capacity, mountain).
+narrative_ontology:human_readable(hilbert_hotel_infinite_capacity, "Hilbert's Hotel Infinite Capacity Accommodation").
 
 % --- Binary flags ---
 % narrative_ontology:has_sunset_clause(hilbert_hotel_infinite_capacity).      % Mandatory if Scaffold

@@ -42,7 +42,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3.
+    constraint_indexing:directionality_override/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -87,6 +88,7 @@ narrative_ontology:constraint_metric(openai_prism_development, theater_ratio, 0.
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(openai_prism_development, tangled_rope).
+narrative_ontology:human_readable(openai_prism_development, "Information Asymmetry in Frontier AI Model Development (OpenAI's \"Prism\"/GPT-5)").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(openai_prism_development). % Required for Tangled Rope

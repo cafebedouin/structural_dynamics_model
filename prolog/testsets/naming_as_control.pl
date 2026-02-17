@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -69,6 +70,7 @@ narrative_ontology:constraint_metric(naming_as_control, theater_ratio, 0.55).
 % Constraint self-claim (what does the constraint claim to be?)
 % The authority claims this is a necessary tool for social order.
 narrative_ontology:constraint_claim(naming_as_control, tangled_rope).
+narrative_ontology:human_readable(naming_as_control, "The Ontological Hegemony").
 
 % Binary flags & Structural properties for Tangled Rope
 % Enforcement is social, legal, and economic; using unapproved terms

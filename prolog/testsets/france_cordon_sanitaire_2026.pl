@@ -21,7 +21,8 @@ domain_priors:requires_active_enforcement/1,
 narrative_ontology:has_sunset_clause/1,
     narrative_ontology:constraint_metric/3,
 constraint_indexing:constraint_classification/3,
-narrative_ontology:interval/3.
+narrative_ontology:interval/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
 
@@ -86,6 +87,7 @@ narrative_ontology:constraint_metric(france_cordon_sanitaire_2026, theater_ratio
 
 % Constraint classification claim
 narrative_ontology:constraint_claim(france_cordon_sanitaire_2026, piton).
+narrative_ontology:human_readable(france_cordon_sanitaire_2026, "The \"Front Républicain\" (Republican Front) Cordon Sanitaire").
 
 domain_priors:requires_active_enforcement(france_cordon_sanitaire_2026).
 

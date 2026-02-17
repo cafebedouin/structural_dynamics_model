@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -71,6 +72,7 @@ narrative_ontology:constraint_metric(semantic_attack_surface, theater_ratio, 0.9
 % Constraint self-claim (what does the constraint claim to be?)
 % It claims to be a coordination layer for information, but functions as an enforcement mechanism.
 narrative_ontology:constraint_claim(semantic_attack_surface, tangled_rope).
+narrative_ontology:human_readable(semantic_attack_surface, "The Meaning Manipulation Horizon").
 
 % Binary flags
 domain_priors:requires_active_enforcement(semantic_attack_surface). % Required for Tangled Rope

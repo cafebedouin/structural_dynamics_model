@@ -25,7 +25,8 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:coordination_type/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -64,6 +65,7 @@ narrative_ontology:constraint_metric(politeness_face_negotiation, theater_ratio,
 % Constraint self-claim (what does the constraint claim to be?)
 % Politeness presents itself as a pure coordination mechanism for social harmony.
 narrative_ontology:constraint_claim(politeness_face_negotiation, tangled_rope).
+narrative_ontology:human_readable(politeness_face_negotiation, "The Face Negotiation Constraint (Politeness Theory)").
 
 % Binary flags
 domain_priors:requires_active_enforcement(politeness_face_negotiation). % Required for Tangled Rope

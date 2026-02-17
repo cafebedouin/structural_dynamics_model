@@ -25,7 +25,8 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:coordination_type/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -65,6 +66,7 @@ narrative_ontology:constraint_metric(planetary_boundaries, theater_ratio, 0.10).
 % Constraint self-claim (what does the constraint claim to be?)
 % It claims to be an objective, unchangeable feature of reality.
 narrative_ontology:constraint_claim(planetary_boundaries, tangled_rope).
+narrative_ontology:human_readable(planetary_boundaries, "Planetary Boundaries Framework").
 
 % Binary flags
 domain_priors:requires_active_enforcement(planetary_boundaries). % Required for Tangled Rope

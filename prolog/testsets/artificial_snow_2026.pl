@@ -23,7 +23,8 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:interval/3,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -71,6 +72,7 @@ narrative_ontology:constraint_metric(artificial_snow_2026, theater_ratio, 0.85).
 
 % Constraint self-claim (analytical classification)
 narrative_ontology:constraint_claim(artificial_snow_2026, piton).
+narrative_ontology:human_readable(artificial_snow_2026, "Olympic Artificial Snow Dependency").
 
 narrative_ontology:constraint_beneficiary(artificial_snow_2026, olympic_brand_continuity).
 narrative_ontology:constraint_victim(artificial_snow_2026, regional_water_reserves).

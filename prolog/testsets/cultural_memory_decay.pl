@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -68,6 +69,7 @@ narrative_ontology:constraint_metric(cultural_memory_decay, theater_ratio, 0.72)
 
 % Constraint self-claim: The system claims to be a coordination mechanism for information.
 narrative_ontology:constraint_claim(cultural_memory_decay, tangled_rope).
+narrative_ontology:human_readable(cultural_memory_decay, "The Digital Dark Age Siphon").
 
 % Binary flags and structural properties for Tangled Rope classification.
 domain_priors:requires_active_enforcement(cultural_memory_decay). % Enforcement via proprietary formats, ToS, and network effects.

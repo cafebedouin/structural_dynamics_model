@@ -26,7 +26,8 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -62,6 +63,7 @@ narrative_ontology:constraint_metric(transformer_self_attention, theater_ratio, 
 % Constraint self-claim (what does the constraint claim to be?)
 % It presents itself as a superior coordination mechanism for processing information.
 narrative_ontology:constraint_claim(transformer_self_attention, tangled_rope).
+narrative_ontology:human_readable(transformer_self_attention, "The Transformer Self-Attention Architecture").
 
 % Binary flags
 domain_priors:requires_active_enforcement(transformer_self_attention). % Requires massive computational infrastructure and data pipelines to maintain dominance.

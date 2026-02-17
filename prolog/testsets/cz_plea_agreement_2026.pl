@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -74,6 +75,7 @@ narrative_ontology:constraint_metric(cz_plea_agreement_2026, theater_ratio, 0.25
 
 % Constraint self-claim: The plea deal is an enforcement action claiming to coordinate AML standards.
 narrative_ontology:constraint_claim(cz_plea_agreement_2026, tangled_rope).
+narrative_ontology:human_readable(cz_plea_agreement_2026, "CZ and Binance Global Regulatory Settlement").
 
 % Binary flags
 domain_priors:requires_active_enforcement(cz_plea_agreement_2026). % Required for Tangled Rope

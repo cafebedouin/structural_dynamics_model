@@ -43,7 +43,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1.
+    domain_priors:emerges_naturally/1,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -88,6 +89,7 @@ narrative_ontology:constraint_metric(shannon_source_coding, resistance, 0.02).
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(shannon_source_coding, mountain).
+narrative_ontology:human_readable(shannon_source_coding, "Shannon's Source Coding Theorem (Achievable Compression Limit)").
 
 % --- Binary flags ---
 % narrative_ontology:has_sunset_clause(shannon_source_coding).

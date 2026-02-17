@@ -43,7 +43,8 @@
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
-    narrative_ontology:omega_variable/3.
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -91,6 +92,7 @@ narrative_ontology:constraint_metric(burden_of_proof_legal_criminal, theater_rat
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(burden_of_proof_legal_criminal, rope).
+narrative_ontology:human_readable(burden_of_proof_legal_criminal, "\"Beyond a Reasonable Doubt\" (Criminal Legal Burden)").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(burden_of_proof_legal_criminal). % Judges must instruct juries, appellate courts review.

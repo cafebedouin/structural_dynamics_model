@@ -25,7 +25,8 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
-    narrative_ontology:coordination_type/2.
+    narrative_ontology:coordination_type/2,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -61,6 +62,7 @@ narrative_ontology:constraint_metric(insult_wisdom_training, theater_ratio, 0.05
 % Constraint self-claim (what does the constraint claim to be?)
 % It is a constructed pedagogical tool, not a natural law.
 narrative_ontology:constraint_claim(insult_wisdom_training, tangled_rope).
+narrative_ontology:human_readable(insult_wisdom_training, "The Odd Assignment (Paying for Insults)").
 
 % Binary flags
 domain_priors:requires_active_enforcement(insult_wisdom_training). % The Master's command must be obeyed.

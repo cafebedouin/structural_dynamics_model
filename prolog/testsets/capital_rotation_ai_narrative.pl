@@ -39,7 +39,8 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -81,6 +82,7 @@ narrative_ontology:constraint_metric(capital_rotation_ai_narrative, theater_rati
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(capital_rotation_ai_narrative, tangled_rope).
+narrative_ontology:human_readable(capital_rotation_ai_narrative, "Market Narrative: US AI Stock Unsustainability").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(capital_rotation_ai_narrative). % Required for Tangled Rope

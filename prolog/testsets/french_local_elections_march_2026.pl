@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -80,6 +81,7 @@ narrative_ontology:constraint_metric(france_local_elections_march_2026, theater_
 % Constraint self-claim: The system is presented as a necessary constructed
 % framework for democratic representation.
 narrative_ontology:constraint_claim(france_local_elections_march_2026, tangled_rope).
+narrative_ontology:human_readable(france_local_elections_march_2026, "March 2026 French Municipal Elections").
 
 % Binary flags
 narrative_ontology:has_sunset_clause(france_local_elections_march_2026).

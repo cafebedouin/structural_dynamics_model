@@ -25,7 +25,8 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -63,6 +64,7 @@ narrative_ontology:constraint_metric(visibility_bias_governance, theater_ratio, 
 
 % Constraint classification claim
 narrative_ontology:constraint_claim(visibility_bias_governance, tangled_rope).
+narrative_ontology:human_readable(visibility_bias_governance, "The Dashboard Delusion").
 
 % Mandatory keys for classification engine v3.4
 domain_priors:requires_active_enforcement(visibility_bias_governance).

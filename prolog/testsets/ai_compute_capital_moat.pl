@@ -43,7 +43,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1.
+    domain_priors:emerges_naturally/1,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -86,6 +87,7 @@ narrative_ontology:constraint_metric(ai_compute_capital_moat, theater_ratio, 0.1
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(ai_compute_capital_moat, tangled_rope).
+narrative_ontology:human_readable(ai_compute_capital_moat, "The AI Compute & Capital Moat").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(ai_compute_capital_moat). % Required for Tangled Rope

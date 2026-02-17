@@ -43,7 +43,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1.
+    domain_priors:emerges_naturally/1,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -91,6 +92,7 @@ narrative_ontology:constraint_metric(us_sdf_alliance_abandonment_2026, theater_r
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(us_sdf_alliance_abandonment_2026, tangled_rope).
+narrative_ontology:human_readable(us_sdf_alliance_abandonment_2026, "US Strategic Alliance Abandonment (Syria 2026)").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(us_sdf_alliance_abandonment_2026). % Required for Tangled Rope

@@ -43,7 +43,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1.
+    domain_priors:emerges_naturally/1,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -81,6 +82,7 @@ narrative_ontology:constraint_metric(gemini_scientific_advancement, theater_rati
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(gemini_scientific_advancement, tangled_rope).
+narrative_ontology:human_readable(gemini_scientific_advancement, "Google Gemini Enhancing Scientific Problem Solving").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(gemini_scientific_advancement). % Required for Tangled Rope. Enforcement is via API terms, data ownership policies, and the massive R&D spend that suppresses viable competition.

@@ -37,7 +37,8 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:coordination_type/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -90,6 +91,7 @@ narrative_ontology:constraint_metric(large_cardinal_foundations, theater_ratio, 
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(large_cardinal_foundations, tangled_rope).
+narrative_ontology:human_readable(large_cardinal_foundations, "Large Cardinal Axioms as a Foundational System").
 
 % --- Binary flags ---
 % Required for Tangled Rope. "Enforcement" in this domain is the intellectual

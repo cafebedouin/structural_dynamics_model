@@ -20,7 +20,8 @@
     domain_priors:requires_active_enforcement/1,
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_claim/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -59,6 +60,7 @@ narrative_ontology:constraint_metric(atrophied_optimization_piton, theater_ratio
 
 % Constraint classification claim
 narrative_ontology:constraint_claim(atrophied_optimization_piton, piton).
+narrative_ontology:human_readable(atrophied_optimization_piton, "The Ghost in the Habit").
 
 % Mandatory keys for classification engine v3.4
 % Binary flags

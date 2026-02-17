@@ -43,7 +43,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1.
+    domain_priors:emerges_naturally/1,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -87,6 +88,7 @@ narrative_ontology:constraint_metric(eu_unanimity_rule_foreign_policy, theater_r
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(eu_unanimity_rule_foreign_policy, tangled_rope).
+narrative_ontology:human_readable(eu_unanimity_rule_foreign_policy, "EU Unanimity Requirement for Foreign Policy and Financial Decisions").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(eu_unanimity_rule_foreign_policy). % Required for Tangled Rope

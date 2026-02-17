@@ -25,7 +25,8 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -61,6 +62,7 @@ narrative_ontology:constraint_metric(meta_nda, theater_ratio, 0.2).
 
 % Constraint classification claim
 narrative_ontology:constraint_claim(meta_nda, tangled_rope).
+narrative_ontology:human_readable(meta_nda, "Meta's Non-Disclosure Agreements for Undercover Testers").
 
 % Binary flags
 % narrative_ontology:has_sunset_clause(meta_nda).      % Mandatory if Scaffold

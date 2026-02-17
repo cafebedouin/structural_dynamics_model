@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -73,6 +74,7 @@ narrative_ontology:constraint_metric(fragile_middle_layer_collapse, theater_rati
 % Constraint self-claim (what does the constraint claim to be?)
 % The platform claims this is a necessary coordination mechanism for efficiency.
 narrative_ontology:constraint_claim(fragile_middle_layer_collapse, tangled_rope).
+narrative_ontology:human_readable(fragile_middle_layer_collapse, "The Intermediary Decay").
 
 % Binary flags
 % Proprietary locks and restrictive terms of service require active enforcement.

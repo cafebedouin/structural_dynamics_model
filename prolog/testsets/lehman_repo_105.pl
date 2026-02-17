@@ -29,7 +29,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    narrative_ontology:omega_variable/5.
+    narrative_ontology:omega_variable/5,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -69,6 +70,7 @@ narrative_ontology:constraint_metric(lehman_repo_105, theater_ratio, 0.10).
 % Constraint self-claim (what does the constraint claim to be?)
 % It was presented as a legitimate financial coordination tool.
 narrative_ontology:constraint_claim(lehman_repo_105, tangled_rope).
+narrative_ontology:human_readable(lehman_repo_105, "Lehman Brothers Repo 105 Accounting Maneuver").
 
 % Binary flags
 domain_priors:requires_active_enforcement(lehman_repo_105). % Required legal opinions and internal processes to execute.

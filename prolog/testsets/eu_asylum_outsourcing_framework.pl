@@ -43,7 +43,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1.
+    domain_priors:emerges_naturally/1,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -90,6 +91,7 @@ narrative_ontology:constraint_metric(eu_asylum_outsourcing_framework, theater_ra
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(eu_asylum_outsourcing_framework, tangled_rope).
+narrative_ontology:human_readable(eu_asylum_outsourcing_framework, "EU framework for outsourcing asylum procedures to third countries").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(eu_asylum_outsourcing_framework). % Requires diplomatic deals, border enforcement, and transfer logistics.

@@ -34,7 +34,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -78,6 +79,7 @@ narrative_ontology:constraint_metric(north_korea_songun_mandatrophy, theater_rat
 
 % Constraint self-claim (what does the constraint claim to be?)
 narrative_ontology:constraint_claim(north_korea_songun_mandatrophy, snare).
+narrative_ontology:human_readable(north_korea_songun_mandatrophy, "North Korean \"Songun\" (Military-First) Policy").
 
 % Binary flags
 domain_priors:requires_active_enforcement(north_korea_songun_mandatrophy).

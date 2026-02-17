@@ -43,7 +43,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1.
+    domain_priors:emerges_naturally/1,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -89,6 +90,7 @@ narrative_ontology:constraint_metric(ai_training_data_dependency, theater_ratio,
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(ai_training_data_dependency, tangled_rope).
+narrative_ontology:human_readable(ai_training_data_dependency, "AI Training Data Dependency").
 
 % --- Binary flags ---
 % narrative_ontology:has_sunset_clause(ai_training_data_dependency).      % Mandatory if Scaffold

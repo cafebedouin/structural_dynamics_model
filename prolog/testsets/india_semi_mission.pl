@@ -25,7 +25,8 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -61,6 +62,7 @@ narrative_ontology:constraint_metric(india_semi_mission, theater_ratio, 0.20).
 
 % Constraint classification claim
 narrative_ontology:constraint_claim(india_semi_mission, tangled_rope).
+narrative_ontology:human_readable(india_semi_mission, "India Semiconductor Mission 2.0").
 
 % Binary flags
 domain_priors:requires_active_enforcement(india_semi_mission). % Required for Tangled Rope

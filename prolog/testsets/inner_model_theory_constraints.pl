@@ -42,7 +42,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3.
+    constraint_indexing:directionality_override/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -97,6 +98,7 @@ narrative_ontology:constraint_metric(inner_model_theory_constraints, theater_rat
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(inner_model_theory_constraints, tangled_rope).
+narrative_ontology:human_readable(inner_model_theory_constraints, "The Axiom of Constructibility (V=L)").
 
 % --- Binary flags ---
 % Enforcement is definitional; accepting V=L requires enforcing its consequences.

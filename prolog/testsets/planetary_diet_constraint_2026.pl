@@ -19,7 +19,8 @@
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -54,6 +55,7 @@
 
 narrative_ontology:interval(planetary_diet_constraint_2026, 0, 10).
 narrative_ontology:constraint_claim(planetary_diet_constraint_2026, tangled_rope).
+narrative_ontology:human_readable(planetary_diet_constraint_2026, "Planetary Boundary Dietary Alignment").
 
 % Base extractiveness: 0.1 (Very Low)
 % The benefit is largely communal/existential (planetary health). 

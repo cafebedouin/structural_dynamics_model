@@ -25,7 +25,8 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:coordination_type/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -67,6 +68,7 @@ narrative_ontology:constraint_metric(second_order_unintended_consequences, theat
 
 % Constraint self-claim (what does the constraint claim to be?)
 narrative_ontology:constraint_claim(second_order_unintended_consequences, piton).
+narrative_ontology:human_readable(second_order_unintended_consequences, "The Cobra Effect Trap").
 
 % Binary flags and structural properties for Tangled Rope classification
 domain_priors:requires_active_enforcement(second_order_unintended_consequences).

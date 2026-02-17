@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -79,6 +80,7 @@ narrative_ontology:constraint_metric(average_is_over_2026, theater_ratio, 0.42).
 % Constraint self-claim (what does the constraint claim to be?)
 % It claims to be a pure meritocratic coordination mechanism.
 narrative_ontology:constraint_claim(average_is_over_2026, tangled_rope).
+narrative_ontology:human_readable(average_is_over_2026, "The AI-Talent Barbell Economy").
 
 % Binary flags
 % The market dynamics and credentialing systems that enforce this barbell

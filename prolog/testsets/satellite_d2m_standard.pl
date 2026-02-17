@@ -38,7 +38,8 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
-    narrative_ontology:coordination_type/2.
+    narrative_ontology:coordination_type/2,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -83,6 +84,7 @@ narrative_ontology:constraint_metric(satellite_d2m_standard, theater_ratio, 0.15
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(satellite_d2m_standard, tangled_rope).
+narrative_ontology:human_readable(satellite_d2m_standard, "Direct-to-Mobile (D2M) Satellite Communication Standard").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(satellite_d2m_standard). % Requires constant satellite maintenance, spectrum licensing, and billing systems.

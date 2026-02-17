@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -67,6 +68,7 @@ narrative_ontology:constraint_metric(path_dependence_lock_in, theater_ratio, 0.4
 
 % Constraint self-claim (what does the constraint claim to be?)
 narrative_ontology:constraint_claim(path_dependence_lock_in, tangled_rope).
+narrative_ontology:human_readable(path_dependence_lock_in, "The QWERTY Inertia Trap").
 
 % Binary flags
 domain_priors:requires_active_enforcement(path_dependence_lock_in). % Required for Tangled Rope. Enforcement is economic/structural, not physical.

@@ -43,7 +43,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1.
+    domain_priors:emerges_naturally/1,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -81,6 +82,7 @@ narrative_ontology:constraint_metric(nato_arctic_defense_cooperation, theater_ra
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(nato_arctic_defense_cooperation, tangled_rope).
+narrative_ontology:human_readable(nato_arctic_defense_cooperation, "NATO Arctic Defense Cooperation").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(nato_arctic_defense_cooperation). % Required for Tangled Rope

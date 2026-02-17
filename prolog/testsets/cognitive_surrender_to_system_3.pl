@@ -25,7 +25,8 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:coordination_type/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -70,6 +71,7 @@ narrative_ontology:constraint_metric(cognitive_surrender_to_system_3, theater_ra
 % The system is presented as a coordination/efficiency tool, but its effect is
 % enforcement of a new cognitive pattern.
 narrative_ontology:constraint_claim(cognitive_surrender_to_system_3, tangled_rope).
+narrative_ontology:human_readable(cognitive_surrender_to_system_3, "Cognitive Surrender to External AI Reasoning Systems").
 
 % Binary flags
 % The constraint is maintained by algorithmic design (fluency, confidence)

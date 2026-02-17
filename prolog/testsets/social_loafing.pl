@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -69,6 +70,7 @@ narrative_ontology:constraint_metric(social_loafing, theater_ratio, 0.1).
 % The system of group-based rewards claims to be a coordination mechanism, but
 % its effect is one of enforcement of a collective outcome, masking extraction.
 narrative_ontology:constraint_claim(social_loafing, tangled_rope).
+narrative_ontology:human_readable(social_loafing, "Social Loafing (The Ringelmann Effect)").
 
 % Binary flags
 % The group structure that enables loafing requires the "enforcement" of a

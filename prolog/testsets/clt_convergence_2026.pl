@@ -43,7 +43,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3.
+    constraint_indexing:directionality_override/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -96,6 +97,7 @@ narrative_ontology:constraint_metric(clt_convergence_2026, resistance, 0.0).
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(clt_convergence_2026, mountain).
+narrative_ontology:human_readable(clt_convergence_2026, "The Central Limit Theorem").
 
 % --- Emergence flag (required for mountain constraints) ---
 % The CLT is a mathematical truth that emerges from logical structure, not human design.

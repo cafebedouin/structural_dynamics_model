@@ -39,7 +39,8 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -88,6 +89,7 @@ narrative_ontology:constraint_metric(nvidia_cuda_ecosystem_lockin, theater_ratio
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(nvidia_cuda_ecosystem_lockin, tangled_rope).
+narrative_ontology:human_readable(nvidia_cuda_ecosystem_lockin, "Nvidia CUDA Ecosystem Lock-in").
 
 % --- Binary flags ---
 % Required for Tangled Rope. Enforcement is not legal, but economic and

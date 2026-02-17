@@ -35,7 +35,8 @@
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3,
-    omega_variable/5.
+    omega_variable/5,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -87,6 +88,7 @@ narrative_ontology:constraint_metric(fast_growing_hierarchy, resistance, 0.0).
 % --- Constraint claim (must match analytical perspective type) ---
 % As a mathematical theorem, its claim is to be a natural law of its domain.
 narrative_ontology:constraint_claim(fast_growing_hierarchy, mountain).
+narrative_ontology:human_readable(fast_growing_hierarchy, "The Fast-Growing Hierarchy (FGH)").
 
 % --- Emergence flag (required for mountain constraints) ---
 % The hierarchy emerges naturally from the axioms of arithmetic and set theory.

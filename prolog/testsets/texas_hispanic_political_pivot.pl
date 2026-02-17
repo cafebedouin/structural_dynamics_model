@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -73,6 +74,7 @@ narrative_ontology:constraint_metric(tx_hispanic_pivot, theater_ratio, 0.15).
 % Constraint self-claim (what does the constraint claim to be?)
 % Values: natural_law, coordination, constructed, enforcement
 narrative_ontology:constraint_claim(tx_hispanic_pivot, tangled_rope).
+narrative_ontology:human_readable(tx_hispanic_pivot, "The Texas Hispanic Voting Block Volatility (2024-2026)").
 
 % Binary flags
 domain_priors:requires_active_enforcement(tx_hispanic_pivot). % Required for Tangled Rope

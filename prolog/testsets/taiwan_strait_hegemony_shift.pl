@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -77,6 +78,7 @@ narrative_ontology:constraint_metric(taiwan_strait_hegemony_shift, theater_ratio
 % Constraint self-claim (what does the constraint claim to be?)
 % The hegemon claims this is a necessary mechanism for regional stability.
 narrative_ontology:constraint_claim(taiwan_strait_hegemony_shift, tangled_rope).
+narrative_ontology:human_readable(taiwan_strait_hegemony_shift, "The Taiwan Strait Energy & Logistics Chokepoint").
 
 % Binary flags
 % Requires active enforcement (naval patrols, ADIZ control, etc.).

@@ -43,7 +43,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1.
+    domain_priors:emerges_naturally/1,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -99,6 +100,7 @@ narrative_ontology:constraint_metric(gpt_store_marketplace, theater_ratio, 0.15)
 % --- Constraint claim (must match analytical perspective type) ---
 % The structure has both a genuine coordination function and asymmetric extraction.
 narrative_ontology:constraint_claim(gpt_store_marketplace, tangled_rope).
+narrative_ontology:human_readable(gpt_store_marketplace, "The OpenAI GPT Store Marketplace").
 
 % --- Binary flags ---
 % The platform's rules (content moderation, revenue splits, API access)

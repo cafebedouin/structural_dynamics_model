@@ -24,7 +24,8 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -67,6 +68,7 @@ narrative_ontology:constraint_metric(epstein_honeytrap, theater_ratio, 0.82).
 
 % Constraint classification claim
 narrative_ontology:constraint_claim(epstein_honeytrap, piton).
+narrative_ontology:human_readable(epstein_honeytrap, "The Kompromat Siphon").
 
 domain_priors:requires_active_enforcement(epstein_honeytrap).
 

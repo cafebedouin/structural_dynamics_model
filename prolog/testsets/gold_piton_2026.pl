@@ -25,7 +25,8 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -64,6 +65,7 @@ narrative_ontology:constraint_metric(gold_piton_2026, theater_ratio, 0.94).
 
 % Constraint classification claim
 narrative_ontology:constraint_claim(gold_piton_2026, piton).
+narrative_ontology:human_readable(gold_piton_2026, "The $5,000 Gold Barrier / Precious Metals Stampede").
 
 % Identification of extraction asymmetry during "Flash Crashes"
 narrative_ontology:constraint_beneficiary(gold_piton_2026, institutional_wealth).

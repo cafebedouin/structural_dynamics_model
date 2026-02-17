@@ -44,7 +44,8 @@
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
-    narrative_ontology:omega_variable/3.
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -104,6 +105,7 @@ narrative_ontology:constraint_metric(prime_number_theorem, resistance, 0.0).
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(prime_number_theorem, mountain).
+narrative_ontology:human_readable(prime_number_theorem, "Prime Number Theorem (Asymptotic Density)").
 
 % --- Emergence flag (required for mountain constraints) ---
 % The theorem emerges naturally from the structure of the integers without

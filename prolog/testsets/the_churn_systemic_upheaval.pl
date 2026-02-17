@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -64,6 +65,7 @@ narrative_ontology:constraint_metric(the_churn_systemic_upheaval, theater_ratio,
 % Constraint self-claim (what does the constraint claim to be?)
 % Rationale: It is presented as an inevitable force of nature ("Like water's wet. Sky's up").
 narrative_ontology:constraint_claim(the_churn_systemic_upheaval, snare).
+narrative_ontology:human_readable(the_churn_systemic_upheaval, "The Churn (Systemic Collapse and Rebirth)").
 
 % Structural property derivation hooks:
 % The beneficiary is the new system that emerges, and the victims are those consumed by the process.

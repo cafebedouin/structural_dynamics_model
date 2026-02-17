@@ -43,7 +43,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1.
+    domain_priors:emerges_naturally/1,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -91,6 +92,7 @@ narrative_ontology:constraint_metric(us_isolationism_policy_2026, theater_ratio,
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(us_isolationism_policy_2026, snare).
+narrative_ontology:human_readable(us_isolationism_policy_2026, "US Withdrawal from International Organizations under \"America First\" Doctrine").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(us_isolationism_policy_2026). % Withdrawal requires continuous policy action and defiance of international norms.

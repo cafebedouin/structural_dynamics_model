@@ -38,7 +38,8 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:omega_variable/3,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -96,6 +97,7 @@ narrative_ontology:constraint_metric(helsinki_bus_theory, resistance, 0.10).
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(helsinki_bus_theory, tangled_rope).
+narrative_ontology:human_readable(helsinki_bus_theory, "The Helsinki Bus Station Theory (Creative Persistence)").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(helsinki_bus_theory).

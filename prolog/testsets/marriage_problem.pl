@@ -39,7 +39,8 @@
     narrative_ontology:constraint_claim/2,
     constraint_indexing:constraint_classification/3,
     domain_priors:emerges_naturally/1,
-    narrative_ontology:omega_variable/3.
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -98,6 +99,7 @@ narrative_ontology:constraint_metric(optimal_stopping_marriage, resistance, 0.02
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(optimal_stopping_marriage, mountain).
+narrative_ontology:human_readable(optimal_stopping_marriage, "The 37% Rule (Optimal Stopping Problem)").
 
 % --- Emergence flag (required for mountain constraints) ---
 % The constraint emerges naturally from the logic of probability theory.

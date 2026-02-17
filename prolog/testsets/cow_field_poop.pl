@@ -24,7 +24,8 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
-    narrative_ontology:omega_variable/3.
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -71,6 +72,7 @@ narrative_ontology:constraint_metric(cow_field_poop, theater_ratio, 0.10).
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(cow_field_poop, tangled_rope).
+narrative_ontology:human_readable(cow_field_poop, "The Cow Field Hazard (Pragmatic Avoidance)").
 
 % --- Binary flags ---
 % The norms and rules for managing public spaces require active enforcement

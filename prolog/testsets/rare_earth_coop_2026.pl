@@ -25,7 +25,8 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -65,6 +66,7 @@ narrative_ontology:constraint_metric(rare_earth_coop_2026, theater_ratio, 0.20).
 
 % Constraint classification claim
 narrative_ontology:constraint_claim(rare_earth_coop_2026, rope).
+narrative_ontology:human_readable(rare_earth_coop_2026, "Manufacturer-Owned Rare Earth Cooperative (MOREC)").
 
 % Rope Structural Property Declarations
 % A Rope is characterized by the agent being their own beneficiary.

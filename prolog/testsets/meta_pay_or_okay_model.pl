@@ -39,7 +39,8 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -85,6 +86,7 @@ narrative_ontology:constraint_metric(meta_pay_or_okay_model, theater_ratio, 0.15
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(meta_pay_or_okay_model, snare).
+narrative_ontology:human_readable(meta_pay_or_okay_model, "Meta's \"Pay or Okay\" Data Monetization Model in the EU").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(meta_pay_or_okay_model). % Enforced via technical access controls.

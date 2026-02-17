@@ -25,7 +25,8 @@
     narrative_ontology:measurement/5,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -60,6 +61,7 @@
 % ID Binding - Mandatory for 2026 DR-Audit Suite
 narrative_ontology:interval(bedouin_sedentary_transition, 0, 10).
 narrative_ontology:constraint_claim(bedouin_sedentary_transition, snare).
+narrative_ontology:human_readable(bedouin_sedentary_transition, "The Bedouin Sedentary Transition").
 
 % Base Properties
 % Rationale: 0.75 extraction reflects the liquidation of traditional survival 

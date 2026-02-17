@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -69,6 +70,7 @@ narrative_ontology:constraint_metric(coinbase_regulatory_uncertainty, theater_ra
 
 % The regulatory framework claims to be a mechanism for investor protection and market stability.
 narrative_ontology:constraint_claim(coinbase_regulatory_uncertainty, tangled_rope).
+narrative_ontology:human_readable(coinbase_regulatory_uncertainty, "Crypto-Regulatory Ambiguity (Howey Test Application)").
 
 % Binary flags
 domain_priors:requires_active_enforcement(coinbase_regulatory_uncertainty).

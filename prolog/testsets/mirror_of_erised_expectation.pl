@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -74,6 +75,7 @@ narrative_ontology:constraint_metric(erised_expectation, theater_ratio, 0.85).
 % Constraint self-claim (what does the constraint claim to be?)
 % It claims to be a coordinating principle for achieving success.
 narrative_ontology:constraint_claim(erised_expectation, piton).
+narrative_ontology:human_readable(erised_expectation, "The Erised Career/Stability Mirror").
 
 % Binary flags
 % The belief system is self-enforcing through cognitive dissonance and social reinforcement.

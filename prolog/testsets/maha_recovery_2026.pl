@@ -25,7 +25,8 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -68,6 +69,7 @@ narrative_ontology:constraint_metric(maha_recovery_2026, theater_ratio, 0.65).
 
 % Constraint classification claim
 narrative_ontology:constraint_claim(maha_recovery_2026, scaffold).
+narrative_ontology:human_readable(maha_recovery_2026, "The MAHA Initiative (Great American Recovery)").
 
 % Scaffold Classification Requirements
 narrative_ontology:has_sunset_clause(maha_recovery_2026).

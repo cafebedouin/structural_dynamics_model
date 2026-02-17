@@ -43,7 +43,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1.
+    domain_priors:emerges_naturally/1,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -88,6 +89,7 @@ narrative_ontology:constraint_metric(taliban_slavery_law_2024, theater_ratio, 0.
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(taliban_slavery_law_2024, snare).
+narrative_ontology:human_readable(taliban_slavery_law_2024, "Taliban Criminal Code Re-legalizing Slavery").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(taliban_slavery_law_2024).

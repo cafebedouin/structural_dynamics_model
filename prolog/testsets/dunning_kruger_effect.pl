@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -68,6 +69,7 @@ narrative_ontology:constraint_metric(dunning_kruger_effect, theater_ratio, 0.05)
 % Constraint self-claim (what does the constraint claim to be?)
 % It is a constructed feature of human cognition, not a natural law of physics.
 narrative_ontology:constraint_claim(dunning_kruger_effect, tangled_rope).
+narrative_ontology:human_readable(dunning_kruger_effect, "Dunning-Kruger Effect (Cognitive Bias of Self-Assessment)").
 
 % Binary flags
 % The "enforcement" is the cognitive architecture itself, reinforced by social

@@ -42,7 +42,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3.
+    constraint_indexing:directionality_override/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -93,6 +94,7 @@ narrative_ontology:constraint_metric(asce_7_22_seismic_design, theater_ratio, 0.
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(asce_7_22_seismic_design, tangled_rope).
+narrative_ontology:human_readable(asce_7_22_seismic_design, "ASCE 7-22 Seismic Design Requirements").
 
 % --- Binary flags ---
 % Required for Tangled Rope classification. The code is enforced by local

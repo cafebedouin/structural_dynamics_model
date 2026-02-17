@@ -43,7 +43,8 @@
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
-    narrative_ontology:omega_variable/3.
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -96,6 +97,7 @@ narrative_ontology:constraint_metric(cuban_missile_crisis_excomm_deliberation, t
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(cuban_missile_crisis_excomm_deliberation, rope).
+narrative_ontology:human_readable(cuban_missile_crisis_excomm_deliberation, "The ExComm Multi-Channel Deliberation Protocol").
 
 % --- Binary flags ---
 domain_priors:requires_active_enforcement(cuban_missile_crisis_excomm_deliberation). % JFK intentionally absent from meetings to encourage dissent.

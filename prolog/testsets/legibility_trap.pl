@@ -28,7 +28,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -70,6 +71,7 @@ narrative_ontology:constraint_metric(legibility_trap, theater_ratio, 0.92).
 % Constraint self-claim (what does the constraint claim to be?)
 % The system claims to be a necessary tool for coordination and governance.
 narrative_ontology:constraint_claim(legibility_trap, tangled_rope).
+narrative_ontology:human_readable(legibility_trap, "The Grid-Map Displacement").
 
 % Binary flags
 domain_priors:requires_active_enforcement(legibility_trap). % Mandatory for Tangled Rope

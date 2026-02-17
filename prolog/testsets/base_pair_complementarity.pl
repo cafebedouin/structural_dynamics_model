@@ -42,7 +42,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    narrative_ontology:omega_variable/3.
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -93,6 +94,7 @@ narrative_ontology:constraint_metric(base_pair_complementarity, resistance, 0.0)
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(base_pair_complementarity, mountain).
+narrative_ontology:human_readable(base_pair_complementarity, "Specific Base-Pair Pairing in DNA").
 
 % --- Binary flags ---
 % No sunset clause. Not a scaffold.

@@ -20,7 +20,8 @@
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -59,6 +60,7 @@
 
 narrative_ontology:interval(ergo_autolykos_asic_resistance, 0, 10).
 narrative_ontology:constraint_claim(ergo_autolykos_asic_resistance, snare).
+narrative_ontology:human_readable(ergo_autolykos_asic_resistance, "Autolykos PoW Algorithm (ASIC Resistance)").
 
 % Base extractiveness score (0.0 = no extraction, 1.0 = full extraction)
 % Rationale: Low direct extraction; however, it extracts energy and requires 

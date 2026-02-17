@@ -43,7 +43,8 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1.
+    domain_priors:emerges_naturally/1,
+    narrative_ontology:human_readable/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -105,6 +106,7 @@ narrative_ontology:constraint_metric(cantor_set_topology, resistance, 0.0).
 
 % --- Constraint claim (must match analytical perspective type) ---
 narrative_ontology:constraint_claim(cantor_set_topology, mountain).
+narrative_ontology:human_readable(cantor_set_topology, "Topological Properties of the Cantor Ternary Set").
 
 % --- Binary flags ---
 % No active enforcement or sunset clause is needed for a mathematical truth.
